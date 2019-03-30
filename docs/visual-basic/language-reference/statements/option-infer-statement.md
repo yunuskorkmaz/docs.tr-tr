@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 38c60245ff2c0b08ee731da6c1f88c30e1af8e3f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 43ac5bc9e32892541ed2f9b0410b6e0ef10558a6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965834"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654334"
 ---
 # <a name="option-infer-statement"></a>Option Infer Deyimi
 Bildirme değişkenleri olarak yerel tür çıkarımı kullanımını etkinleştirir.  
@@ -39,15 +39,17 @@ Option Infer { On | Off }
   
  Ayarladığınızda `Option Infer` için `On`, açıkça bir veri türü bildirmeden yerel değişkenleri bildirebilirsiniz. Derleyici, veri türü bir değişkenin kendi başlatma ifadesinin türünden çıkarır.  
   
- Aşağıdaki çizimde, `Option Infer` açıktır. Değişken bildiriminde `Dim someVar = 2` tür çıkarımı tarafından bir tamsayı olarak bildirilir.  
+ Aşağıdaki çizimde, `Option Infer` açıktır. Değişken bildiriminde `Dim someVar = 2` tür çıkarımı tarafından bir tamsayı olarak bildirilir.
+
+ Option Infer açık olduğunda IntelliSense aşağıdaki ekran gösterilir: 
   
- ![Bildirimin IntelliSense görüntüleyin. ](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
-Option Infer açık olduğunda IntelliSense  
+ ![Option Infer açık olduğunda, IntelliSense görünümü gösteren ekran görüntüsü.](./media/option-infer-statement/option-infer-as-integer-on.png)  
   
  Aşağıdaki çizimde, `Option Infer` devre dışıdır. Değişken bildiriminde `Dim someVar = 2` olarak bildirilen bir `Object` tür çıkarımı tarafından. Bu örnekte, **Option Strict** ayarı **kapalı** üzerinde [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
- ![Bildirimin IntelliSense görüntüleyin. ](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
-Option Infer devre dışıyken IntelliSense  
+ Option Infer devre dışıyken IntelliSense aşağıdaki ekran görüntüsünde gösterilmektedir:
+ 
+ ![Option Infer devre dışıyken IntelliSense görünümü gösteren ekran görüntüsü.](./media/option-infer-statement/option-infer-as-object-off.png)  
   
 > [!NOTE]
 >  Ne zaman bir değişken bildirimi olarak bir `Object`, program çalışırken çalışma zamanı türünü değiştirebilirsiniz. Visual Basic adlı işlemler gerçekleştirdiğinde *kutulama* ve *kutudan çıkarma* arasında dönüştürmek için bir `Object` ve daha yavaş yürütme getiren bir değer türü. Kutulama ve kutudan çıkarma hakkında daha fazla bilgi için bkz. [Visual Basic dil belirtimi](~/_vblang/spec/conversions.md#value-type-conversions).

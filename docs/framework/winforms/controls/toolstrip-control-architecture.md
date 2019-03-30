@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 6e0c5a426f05590523c178f4b56d07ee98b39d7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719396"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654776"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip Denetim Mimarisi
 <xref:System.Windows.Forms.ToolStrip> Ve <xref:System.Windows.Forms.ToolStripItem> sınıfları, araç, durum ve menü öğeleri görüntülemek için esnek, Genişletilebilir bir sistem sağlar. Bu sınıfların tümü bulunur <xref:System.Windows.Forms> ad alanı ve bunların tümü genellikle adlandırılır "ToolStrip" ön ekine sahip (gibi <xref:System.Windows.Forms.ToolStripOverflow>) veya "Şeridinde" soneki ile (gibi <xref:System.Windows.Forms.MenuStrip>).  
@@ -19,8 +19,7 @@ ms.locfileid: "57719396"
   
  <xref:System.Windows.Forms.ToolStrip> soyut temel sınıf için <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, ve <xref:System.Windows.Forms.ContextMenuStrip>. Aşağıdaki nesne modeli gösterir <xref:System.Windows.Forms.ToolStrip> Devralma Hiyerarşisi.  
   
- ![ToolStrip nesne modeli](./media/toolstripobjectmodel.gif "ToolStripObjectModel")  
-ToolStrip nesne modeli  
+ ![ToolStrip nesne modelini gösteren diyagram.](./media/toolstrip-control-architecture/toolstrip-object-model.gif)  
   
  Tüm öğeleri erişebileceğiniz bir <xref:System.Windows.Forms.ToolStrip> aracılığıyla <xref:System.Windows.Forms.ToolStrip.Items%2A> koleksiyonu. Tüm öğeleri erişebileceğiniz bir <xref:System.Windows.Forms.ToolStripDropDownItem> aracılığıyla <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> koleksiyonu. Türetilen bir sınıfta <xref:System.Windows.Forms.ToolStrip>, ayrıca <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> görüntülenmekte olan öğelere erişmek için özelliği. Bu bir taşma menüde olmayan bilgilerdir.  
   
@@ -251,8 +250,7 @@ ToolStrip nesne modeli
   
  <xref:System.Windows.Forms.ToolStripItem> tarihinden itibaren tüm öğeler için soyut temel sınıf bir <xref:System.Windows.Forms.ToolStrip>. Aşağıdaki nesne modeli gösterir <xref:System.Windows.Forms.ToolStripItem> Devralma Hiyerarşisi.  
   
- ![ToolStripItem nesne modeli](./media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
-ToolStripItem nesne modeli  
+ ![ToolStripItem nesne modelini gösteren diyagram.](./media/toolstrip-control-architecture/toolstripitem-object-model.gif)  
   
  <xref:System.Windows.Forms.ToolStripItem> doğrudan ya da devralma sınıfları <xref:System.Windows.Forms.ToolStripItem>, ya da dolaylı olarak devralındığı <xref:System.Windows.Forms.ToolStripItem> aracılığıyla <xref:System.Windows.Forms.ToolStripControlHost> veya <xref:System.Windows.Forms.ToolStripDropDownItem>.  
   

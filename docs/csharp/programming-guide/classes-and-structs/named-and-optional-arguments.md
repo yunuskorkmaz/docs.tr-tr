@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: d31cec602516b7cf3e4b358fa4b3f10e167e6e17
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 751f8a0745322e7e8573d392a504ea02cb18572e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202744"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654035"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler (C# Programlama Kılavuzu)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] adlandırılmış ve isteğe bağlı bağımsız değişkenler tanıtır. *Adlandırılmış bağımsız değişkenler* bağımsız değişken parametre adı yerine parametre listesinde parametrenin konumu ile ilişkilendirerek belirli bir parametre için bir bağımsız değişken belirtmenize olanak verir. *İsteğe bağlı bağımsız değişkenlere* bazı parametrelerin bağımsız değişkenleri atlamak sağlar. Her iki tekniği, yöntemleri, Dizinleyicileri, Oluşturucular ve temsilciler ile kullanılabilir.  
@@ -86,10 +86,9 @@ ms.locfileid: "57202744"
   
  `anExample.ExampleMethod(3, optionalint: 4);`  
   
- IntelliSense ayraçlar isteğe bağlı parametreleri belirtmek için aşağıdaki çizimde gösterildiği gibi kullanır.  
+ IntelliSense ayraçlar isteğe bağlı parametreleri belirtmek için aşağıdaki çizimde gösterildiği gibi kullanır:  
   
- ![Hızlı bilgi ExampleMethod yöntemi için IntelliSense. ](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
-ExampleMethod isteğe bağlı parametreler  
+ ![ExampleMethod yöntemi için hızlı bilgi IntelliSense gösteren ekran görüntüsü.](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
 >  .NET kullanarak isteğe bağlı parametreler bildirebilirsiniz <xref:System.Runtime.InteropServices.OptionalAttribute> sınıfı. `OptionalAttribute` parametre bir varsayılan değer gerektirmez.  
@@ -102,10 +101,9 @@ ExampleMethod isteğe bağlı parametreler
 ## <a name="com-interfaces"></a>COM arabirimleri  
  Adlandırılmış ve isteğe bağlı bağımsız değişkenler, dinamik nesneleri ve diğer geliştirmeler desteği yanı sıra Office Otomasyon API'leri gibi COM API'leri ile birlikte çalışabilirlik büyük ölçüde geliştirebilirsiniz.  
   
- Örneğin, <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> Microsoft Office Excel yönteminde <xref:Microsoft.Office.Interop.Excel.Range> arabirimi tümü isteğe bağlı olan yedi parametreleri vardır. Bu parametreler aşağıdaki çizimde gösterilmektedir.  
+ Örneğin, <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> Microsoft Office Excel yönteminde <xref:Microsoft.Office.Interop.Excel.Range> arabirimi tümü isteğe bağlı olan yedi parametreleri vardır. Bu parametreler, aşağıdaki çizimde gösterilmiştir:  
   
- ![AutoFormat yöntemi için hızlı bilgi IntelliSense. ](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
-AutoFormat parametreleri  
+ ![AutoFormat yöntemi için hızlı bilgi IntelliSense gösteren ekran görüntüsü.](./media/named-and-optional-arguments/autoformat-method-parameters.png)  
   
  C# 3.0 ve önceki sürümlerde, bağımsız değişken aşağıdaki örnekte gösterildiği gibi her parametre için gereklidir.  
   

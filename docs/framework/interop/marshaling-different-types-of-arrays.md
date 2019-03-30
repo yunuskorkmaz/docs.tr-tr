@@ -1,5 +1,5 @@
 ---
-title: Farklı Dizi Türlerini Sıralama
+title: Farklı Dizi Türlerini Hazırlama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 147c22758c68bd3b48ab1c5cf8e26ed0afdbce09
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219470"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654620"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Farklı Dizi Türlerini Hazırlama
 Bir dizi aynı türden bir veya daha fazla öğe içeriyor, yönetilen kodda bir başvuru türüdür. Diziler başvuru türleri olsa da, olduğu gibi parametreleri yönetilmeyen bir işleve geçirilir. Bu davranış, In/Out parametreleri olan yönetilen nesnelere, yönetilen diziler geçirilen yolu ile tutarsız. Ek ayrıntılar için bkz. [kopyalama ve sabitleme](copying-and-pinning.md).  
@@ -29,7 +29,7 @@ Bir dizi aynı türden bir veya daha fazla öğe içeriyor, yönetilen kodda bir
 |Tamsayılar değeriyle (iki boyutlu).|Matris tamsayı bir giriş parametresi olarak geçirir.|  
 |Değere göre dizeleri.|Dizelerden oluşan bir dizi bir giriş parametresi olarak geçirir.|  
 |Yapıları ile tamsayı.|Bir dizi bir giriş parametresi olarak tamsayılar içeren yapılarını geçirir.|  
-|Yapıları dizeler.|Bir dizi yalnızca tamsayı içeren bir ın/Out parametresi olarak yapılarını geçirir. Dizi üyelerinin değiştirilebilir.|  
+|Yapıları dizeler.|Yalnızca dizelere bir ın/Out parametresi olarak içeren yapılarını dizisi geçirir. Dizi üyelerinin değiştirilebilir.|  
   
 ## <a name="example"></a>Örnek  
  Bu örnek, dizileri aşağıdaki türleri nasıl gösterir:  

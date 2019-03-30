@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 801970ec05fc88587a5b45b5bb3a855d1a81afb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de79ad6447fe67afc596783eff3fa3e6a02b600c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356097"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654594"
 ---
 # <a name="wsfederation"></a>\<wsFederation >
 İçin yapılandırma sağlar <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -52,7 +52,7 @@ ms.locfileid: "57356097"
 |---------------|-----------------|  
 |authenticationType|Kimlik doğrulaması türünü belirten bir URI. WS-Federasyon oturum açma isteği wauth parametre ayarlar. İsteğe bağlı. Varsayılan istekte wauth parametresi dahil edilmediğinden belirtir. boş bir dizedir.|  
 |yenilik|İstenen yaş üst sınırını kimlik doğrulama isteklerini, dakikalar içinde. WS-Federasyon oturum açma isteği wfresh parametre ayarlar. İsteğe bağlı. Varsayılan değer sıfırdır. İsteğe bağlı. **Uyarı:**  Sonraki .NET Framework 4.5 sürümünde `freshness` özniteliği, türü olacaktır `xs:string` ve varsayılan değerine `null`.|  
-|homeRealm|Ana Bölge kimlik doğrulaması için kullanılacak kimlik sağlayıcısının (IP). WS-Federasyon oturum açma isteği whr parametre ayarlar. İsteğe bağlı. Varsayılan istekte whr parametresi dahil edilmediğinden belirtir. boş bir dizedir.|  
+|homeRealm|Kimlik sağlayıcısının (IDP) kimlik doğrulaması için kullanılacak ana bölge. WS-Federasyon oturum açma isteği whr parametre ayarlar. İsteğe bağlı. Varsayılan istekte whr parametresi dahil edilmediğinden belirtir. boş bir dizedir.|  
 |yayınlayan|Hedeflenen belirteç vericisinin URI. Temel URL, WS-Federasyon oturum açma istekleri ve oturum kapatma istekleri gerekli ayarlar.|  
 |persistentCookiesOnPassiveRedirects|Kalıcı tanımlama bilgileri kimlik doğrulaması verilen olup olmadığını belirtir. İsteğe bağlı. Varsayılan "false", tanımlama bilgileri verilmedi.|  
 |passiveRedirectEnabled|WSFAM otomatik olarak yetkisiz istekleri bir STS'ye yönlendirmek için etkinleştirilip etkinleştirilmeyeceğini belirtir. İsteğe bağlı. Varsayılan değer "true" ise, yetkisiz istekleri otomatik olarak yönlendirilir.|  
@@ -68,7 +68,7 @@ ms.locfileid: "57356097"
 |signOutReply|Pasif WS-Federation protokolü ile oturum kapatma sırasında istemci güvenlik belirteci hizmeti (STS) tarafından yönlendirilmelidir URL'sini belirtir. Wreply parametresi bir WS-Federasyon oturum kapatma isteği ayarlar. İsteğe bağlı. Varsayılan ek parametre isteğinde bulunması belirtir. boş bir dizedir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

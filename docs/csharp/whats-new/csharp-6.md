@@ -2,18 +2,18 @@
 title: C# 6 - C# Kılavuzu yenilikler nelerdir?
 description: C# sürüm 6'daki yeni özelliklerin öğrenin
 ms.date: 12/12/2018
-ms.openlocfilehash: d7e3392412ad6f01cd150e31cec43aa99c42b437
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084686"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654581"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 yenilikleri
 
 C# 6.0 sürüm, geliştiriciler için üretkenliği artıran birçok özellik içeriyor. Bu özellikler genel etkisini de daha okunabilir daha kısa kod yazma ' dir. Birçok ortak uygulamalar için daha az seremoni söz dizimi içeriyor. Tasarım hedefi ile daha az seremoni görmek daha kolaydır. Bu özellikler de öğrenin ve daha üretken ve daha okunabilir bir kod yazma. Daha özellikleri dil yapıları üzerinde odaklanabilirsiniz.
 
-Bu makalenin geri kalanında her bir özellik keşfetmek için bir bağlantı ile bu özelliklerin her biri bir bakış sağlar. Özellikleri da keşfedebilirsiniz bir [etkileşimli öğretici C# 6](../tutorials/exploration/csharp-6.yml) öğreticiler bölümünde.
+Bu makalenin geri kalanında her bir özellik keşfetmek için bir bağlantı ile bu özelliklerin her biri bir bakış sağlar. Özellikleri da keşfedebilirsiniz bir [üzerinde etkileşimli incelenmesi C# 6](../tutorials/exploration/csharp-6.yml) öğreticiler bölümünde.
 
 ## <a name="read-only-auto-properties"></a>Salt okunur otomatik özellikleri
 

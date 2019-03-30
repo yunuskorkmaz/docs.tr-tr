@@ -2,12 +2,12 @@
 title: Sorgu İfadeleri
 description: Sorgu ifadesi içinde LINQ desteği hakkında bilgi edinin F# programlama dilidir.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8fd3e2d4cfbbe890fe3b04b2676eb1d5bbc087a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463234"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654828"
 ---
 # <a name="query-expressions"></a>Sorgu İfadeleri
 
@@ -60,7 +60,7 @@ Tablo 1 kullanılabilir sorgu işleçlerine gösterir. Ayrıca, SQL sorguları v
 
 Bu tablo aşağıdaki biçimde bir veritabanı varsayılır:
 
-![Örnek veritabanı diyagramı](../media/StudentCourseDB.png)
+![Örnek veritabanı gösteren diyagram.](./media/query-expressions/student-course-database.png)
 
 Aşağıdaki tablolarda kod ayrıca aşağıdaki veritabanı bağlantı kodu varsayar. Projeleri System.Data System.Data.Linq ve FSharp.Data.TypeProviders derlemesine ilişkin başvurular eklemeniz gerekir. Bu veritabanı oluşturan kodu, bu konunun sonunda dahildir.
 

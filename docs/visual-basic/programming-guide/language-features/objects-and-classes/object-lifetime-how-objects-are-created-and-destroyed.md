@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: e6274f470e042fa5d581a574d13bd67ae8e8d6e9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 582988c9eed19fe49bc86e75e7a9d80bbf2a6d59
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979469"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654542"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne ömrü: Nesneler nasıl oluşturulur ve yok (Visual Basic)
 Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcüğü. Bunlar kullanılmadan önce başlatma görevleri genellikle yeni nesneler üzerinde gerçekleştirilmelidir. Genel başlangıç görevleri, veritabanlarına bağlanma ve kayıt defteri anahtarlarının okumanızı dosyalarını açma içerir. Visual Basic denetimleri adı verilen yordamları kullanarak yeni nesnelerin başlatılmasını *oluşturucular* (başlatma denetime izin veren özel yöntemleri).  
@@ -70,11 +70,11 @@ Bir sınıf, bir nesne örneği kullanılarak oluşturulan `New` anahtar sözcü
   
  Türetilmiş bir sınıfın bir örneği oluşturulduğunda `Sub New` temel sınıfın Oluşturucusu yürütülmeden önce türetilen sınıflardaki oluşturucular tarafından izlenen. Çünkü böyle ilk kod satırı bir `Sub New` Oluşturucusu sözdizimini kullanan `MyBase.New()`hemen kendisi üzerinde sınıfının oluşturucusu, sınıf hiyerarşisini, çağırmak için. `Sub New` Oluşturucusu sonra çağrılır sınıf hiyerarşisindeki her sınıf için oluşturucu kadar için temel sınıf ulaşıldı. Bu noktada, temel sınıf yürütür için Oluşturucudaki kod her Oluşturucu tüm türetilmiş sınıflarda kodda ardından ve en çok türetilen sınıfları kodda son yürütülür.  
   
- ![Oluşturucular ve devralma](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance.gif "vaConstructorsInheritance")  
+ ![Sınıf hiyerarşisi oluşturucuları ve devralma gösteren ekran görüntüsü.](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)  
   
  CLR nesne artık gerekmediğinde çağırır <xref:System.Object.Finalize%2A> kendi bellek boşaltma önce bu nesne için yöntemi. <xref:System.Object.Finalize%2A> Yöntemi çağrıldığında bir `destructor` durumu bilgilerini kaydetme gibi temizleme görevlerini gerçekleştirdiğinden, dosyalar ve veritabanları ve nesneyi serbest bırakmadan önce gerçekleştirilmesi gereken diğer görevlere bağlantılar kapatma.  
   
- ![Oluşturucular Inheritance2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance_2.gif "vaConstructorsInheritance_2")  
+ ![Finalize yöntemi yok Edicisi gösteren ekran görüntüsü.](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)  
   
 ## <a name="idisposable-interface"></a>IDisposable arabirimi  
  Sınıf örneği, genellikle Windows tanıtıcıları ve veritabanı bağlantıları gibi CLR tarafından yönetilmeyen kaynakları denetler. Bu kaynaklar, içinde çıkarılması gerekir `Finalize` sınıfının yöntemi böylece nesnenin çöp toplayıcısı tarafından kaldırıldığında bunlar kullanıma sunulacaktır. Ancak, CLR daha fazla bellek gerektiğinde çöp toplayıcısı nesneleri yok eder. Bu nesne kapsam dışına uzun süre geçtikten sonra kaynakları kadar serbest bırakılmayabilir olduğunu anlamına gelir.  

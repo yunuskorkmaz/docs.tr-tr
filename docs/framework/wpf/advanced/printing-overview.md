@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 9e7cc41602e7e86d328767db257e6dbaa7e8fed1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c009d86deada690f673736e0e35eb710e25f7781
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370507"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654386"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uygulama geliştiricilerin yeni zengin bir yazdırma ve yazdırma sistemi yönetimi sahip [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bazı bu yazdırma sistemi geliştirmeler de oluşturma geliştiricilere sunulan [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamaların ve geliştiricilerin kullanarak yönetilmeyen kod. Bu yeni işlevselliği özünde yenilikler [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi ve [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazdırma yolu.  
@@ -64,9 +64,9 @@ Microsoft .NET Framework ile Windows Presentation Foundation (WPF) kullanarak uy
   
  XPSDrv tabanlı yazıcılar tarafından kullanımını etkinleştirmek için [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve Windows Forms uygulamaları [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) yazıcı sürücüsü dönüştürülmesini destekler [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] biçimi. XPSDrv modeli için bir dönüştürücü de sağlar. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] için [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] biçimi böylece [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamaları yazdırabilirsiniz [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] belgeleri. İçin [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamaları, dönüştürme [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] için [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] biçimi tarafından otomatik olarak yapılır <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemlerinin <xref:System.Windows.Xps.XpsDocumentWriter> yazma işleminin hedef yazdırma sırasını olmayan her sınıfı bir XPSDrv sürücüsü. (Windows Forms uygulamaları olamaz yazdırma [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] belgeler.)  
   
- Aşağıdaki çizim yazdırma alt sistemi gösterir ve tarafından sağlanan bölümleri tanımlar [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]ve yazılım ve donanım satıcıları tarafından tanımlanan bölümleri.  
+ Aşağıdaki çizim yazdırma alt sistemi gösterir ve tarafından sağlanan bölümleri tanımlar [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]ve yazılım ve donanım satıcıları tarafından tanımlanan bölümleri:  
   
- ![XPS yazdırma sistemi](./media/xpsprint.PNG "XPSPrint")  
+ ![Ekran görüntüsü, XPS yazdırma sistemi gösterir.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>Temel XPS yazdırma  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Her iki temel tanımlar ve Gelişmiş [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Kapsamlı gerektirmeyen bu uygulamaları özelleştirme ve tam erişim yazdırmak için [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] özellik kümesi, temel yazdırma destek sunulmaktadır. En az yapılandırma gerektirir ve bir bilinen özellikleri bir yazdırma iletişim kutusu denetim temel yazdırma desteği kullanıma sunulan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Birçok [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] özellikleri bu Basitleştirilmiş yazdırma model kullanılarak kullanılabilir.  

@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f29d6d5e3942296905088eb250d09f3a5ace1fa4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3c70382b0d74e830610d1cd7746fd14244b829a0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708359"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654568"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework ve Bant Dışı Yayınlar
 
@@ -44,7 +44,7 @@ ms.locfileid: "57708359"
 
 4.  Sağ bölmede, kullanmak **arama** kutusunu kullanmak istediğiniz paketi bulmak için. Bazı Microsoft paketleri, Microsoft .NET Framework logosu ile tanımlanır ve tümü Microsoft'u yayımcı olarak tanımlar.
 
- ![NuGet Paket Yöneticisi](../../../docs/framework/get-started/media/clrnugetdialog.png "clrNugetDialog")
+ ![NuGet Paket Yöneticisi'ni gösteren ekran görüntüsü.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 
  Daha önce belirtildiği gibi, OOB paketi kullanan bir uygulamayı dağıttığınızda OOB derlemeleri, uygulama paketinizle birlikte sevk edilir.
 

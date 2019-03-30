@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 4263b81b0917b544f37c55299b1e394e5fbaa6ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359724"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654230"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms bileşik denetimini barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir en az yeniden daha etkili kodda bazıları, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama yerine baştan yeniden. Mevcut Windows Forms denetimleri olduğunda en yaygın senaryodur. Bazı durumlarda, bile bu denetimleri için kaynak koduna erişim olmayabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibi denetimleri barındırma için basit bir yordam sağlar bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Örneğin, kullanabileceğiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çoğu barındırırken, programlama için <xref:System.Windows.Forms.DataGridView> kontrol eder.  
@@ -36,9 +36,10 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Windows Forms bileşik denetimini uygulama  
  Bu örnekte kullanılan Windows Forms bileşik denetimini basit veri girişi biçimidir. Bu form kullanıcının adı ve adresi alır ve ana bilgisayar için bu bilgileri döndürmek için bir özel olay kullanır. İşlenen denetimi aşağıda gösterilmektedir.  
-  
- ![Basit bir Windows Forms denetimi](./media/wfcontrol.gif "WFControl")  
-Windows Forms bileşik denetimini  
+
+ Aşağıdaki resimde, bir Windows Forms bileşik denetimini gösterir:  
+
+ ![Basit bir Windows Forms denetimi gösteren ekran görüntüsü.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-forms-control.gif)  
   
 ### <a name="creating-the-project"></a>Projeyi Oluşturma  
  Proje başlatmak için:  
@@ -128,7 +129,9 @@ Windows Forms bileşik denetimini
 ## <a name="implementing-the-wpf-host-application"></a>WPF ana bilgisayar uygulaması uygulama
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulamanız tarafından kullanılan ana <xref:System.Windows.Forms.Integration.WindowsFormsHost> barındırmak için `MyControl1`. Uygulama işleyen `OnButtonClick` denetimden verileri almak için olay. Ayrıca denetimin özelliklerinden bazıları değiştirebilmek için seçenek düğmeleri koleksiyonu vardır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Aşağıdaki resimde tamamlanmış uygulama gösterilir.
 
- ![Bir denetim katıştırılmış bir WPF sayfasında](./media/avalonhost.gif "AvalonHost") tüm uygulamanın denetimi gösteren WPF uygulamasında katıştırılmış
+Aşağıdaki görüntüde, WPF uygulamasında katıştırılmış denetime dahil olmak üzere tüm uygulamanın gösterilmektedir:
+
+ ![Bir denetimi gösteren ekran görüntüsü, bir WPF sayfasındaki katıştırılmış.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
 
 ### <a name="creating-the-project"></a>Projeyi Oluşturma
  Proje başlatmak için:

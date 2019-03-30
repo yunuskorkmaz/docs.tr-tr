@@ -4,12 +4,12 @@ description: Mobil arka uçlar ve ETL işlem hatları için gelen görüntü iş
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 177fb1d7f79a0067ab185e520778b593d4b8eaf6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153793"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653905"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Sunucusuz iş senaryoları ve kullanım örnekleri
 
@@ -61,7 +61,7 @@ Tüm geçiş anlatan bir videoyu görüntüleyebilirsiniz: [Lift- and -shift ile
 
 Ayıklama, dönüştürme ve yükleme (ETL), farklı sistemleri tümleştiren bir ortak iş işlevidir. Geleneksel yaklaşım genellikle ayrılmış FTP sunucuları kurma sonra dosyalarını ayrıştırmak ve kurumsal kullanım için çevirmek için zamanlanmış işleri dağıtma içerir. Sunucusuz mimari dosya yüklendiğinde bir tetikleyiciyi harekete geçirmek çünkü iş kolaylaştırır. Azure işlevleri Associates görevleri, belirli bir soruna odaklanmak küçük kod parçalarını ideal, oluşumunu aracılığıyla ETL ister.
 
-![ETL mimarisi](./media/csvimport.png)
+![İşlem ayrıştırma csv gösteren ekran görüntüsü.](./media/serverless-business-scenarios/csv-parse-database-import.png)
 
 Kaynak kodu ve uygulamalı bir laboratuvara için bkz: [CSV içe Laboratuvar](https://github.com/JeremyLikness/azure-fn-file-process-hol).
 

@@ -1,0 +1,132 @@
+### YamlMime:Tutorial
+title: Keşfedin C# 7.0 - C# etkileşimli öğretici
+metadata:
+  title: Keşfedin C# 7.0 - yeni özellikleri deneyin C# 7.0 etkileşimli olarak tarayıcınızı kullanarak
+  description: Bu öğreticide keşfetmek için tarayıcınızı kullanacaksınız C# 7.0 etkileşimli olarak. İle birlikte kullanabileceğiniz yeni deyimleri hakkında bilgi edineceksiniz C# daha kısa süren ve okunabilir bir kod etkinleştirme 7.0.
+  audience: Developer
+  level: intermediate
+  ms.date: 03/20/2019
+  displayType: two-column
+  interactive: csharp
+  ms.openlocfilehash: f488d6c05a8be1b2e6ad73d241533ac23b65b9ce
+  ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 03/29/2019
+  ms.locfileid: "58655539"
+items:
+- durationInMinutes: 1
+  content: >
+    Bu öğretici sayesinde keşfedin C# yazmak için tarayıcınızı kullanarak 7.0 etkileşimli özellikleri C# ve derleyerek ve çalıştırarak kodunuzun sonuçlarını göreceksiniz. Bir dizi Ders daha önce değiştiren içerdiği C# yeni, daha kısa kullanmak için uygulamaları C# 7.0 özellikleri. Bu makalenin geri kalanında her bir özellik keşfetmek için bir bağlantı ile bu özelliklerin her biri bir bakış sağlar.
+- title: Atama konumda değişken bildirimleri
+  durationInMinutes: 2
+  content: "Destekleyen varolan sözdizimi `out` parametreleri bu sürümde geliştirildi. Tıklayın *odak moduna girin* bu sayfanın alt kısmında düğmesine ve ardından etkileşimli pencerede aşağıdaki kodu deneyin: \n\n[!code-csharp[OutVariableOldStyle](~/samples/snippets/csharp/new-in-7/program.cs#OutVariableOldStyle \"classic out variable declaration\")]\n\nArtık bildirebilirsiniz `out` ayrı bildirim deyimindeki yazmak yerine bir yöntem çağrısının bağımsız değişken listesinde değişkenler. Yöntem çağrısına bildirimi taşıyabilirsiniz. Etkileşimli pencerenin altına aşağıdaki kodu ekleyin:\n\n[!code-csharp[OutVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVariableDeclarations \"Out variable declarations\")]\n\nDeğiştirebileceğiniz `int` bildirimine bir `var` bildirimi. Etkileşimli pencereye aşağıdaki kodu ekleyin:\n\n[!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations \"Implicitly typed Out variable\")]\n\nYeni sözdizimi mevcut söz dizimi iki önemli avantaj sağlar:\n\n* Kodu daha kolay. \n    - Out değişkeni da değil başka bir satırda yukarıdaki kullandığınız bildirdiğiniz.\n* Bir başlangıç değeri atamanız gerekmez.\n    - Bildirmek `out` bunu atanmadan önce değişken bir yöntem çağrısında kullanıldığı yanlışlıkla kullanamazsınız.\n\nBildirilen değişkenin kapsamı kapsamdır kapsayan `if` deyimi. Bu, daha sonra değişkeni kullanmanıza olanak sağlar. Son değiştirme `if` aşağıdaki kod parçacığında gösterildiği gibi engelleyin.\n\n```csharp\nif (!int.TryParse(input, out int result))\n{    \n    return null;\n}\n\nConsole.WriteLine(result);\n```\n"
+- title: Basit veri yapılarını diziler oluşturma
+  durationInMinutes: 1
+  content: "Diziler veri üyelerini temsil etmek için birden fazla alan içeren basit veri yapılarıdır. Alanlar yok doğrulanır ve kendi yöntemlerini tanımlanamaz.\n\n> [!NOTE]\n> Diziler C# 7.0 önce kullanılabilir, ancak verimsiz ve dil desteği yok vardı. Bu dizi öğeleri yalnızca olarak başvurulan geliyordu `Item1`, `Item2` ve benzeri. C#7.0 yeni daha verimli tanımlama grubu türleri kullanarak bir kayıt düzeni alanlarını anlam adlarını sağlayan diziler için dil desteği sunar.\n\nBir değer adlandırılmış her üyesine atayarak bir tanımlama grubu oluşturabilirsiniz:\n\n[!code-csharp[NamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#NamedTuple \"Named tuple\")]\n\n`namedLetters` Tanımlama grubu olarak adlandırılan alanları içeren `Alpha` ve `Beta`. Bu adları, yalnızca derleme zamanında mevcut ve çalışma zamanında (örneğin, yansıma kullanarak tanımlama grubu incelenirken) korunmaz.\n\nBir tanımlama grubu atamasını alanların adlarını atamada sağ tarafta da belirtebilirsiniz: \n\n[!code-csharp[ImplicitNamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#ImplicitNamedTuple \"Implicitly named tuple\")]\n\nHer iki sol ve sağ tarafında atama alanların adlarını belirtebilirsiniz, ancak işlecin sağ tarafındaki adları yok sayılır.\n\nDiziler için dönüş türleri olarak faydalı `private` ve `internal` yöntemleri. Diziler, birden çok ayrı değer döndürmek bu yöntemleri için basit bir söz dizimi sağlar.\n\nBir demet oluşturma, daha verimli ve daha üretken bir sınıf veya yapı oluşturmak bağlıdır. Bu, birden fazla değer taşıyan bir veri yapısını tanımlamak için daha basit ve basit bir söz dizimine sahiptir. Aşağıdaki örnek yöntemi, bir tamsayı dizisinde bulunan minimum ve maksimum değerleri döndürür:\n\n[!code-csharp[TupleReturningMethod](~/samples/snippets/csharp/new-in-7/program.cs#TupleReturningMethod \"Tuple returning method\")]\n\nYöntemden döndürülen bir tanımlama grubu üyelerinin açmak istediğinizde zamanlar olabilir.  Dizideki değerlerin her biri için ayrı değişkenleri bildirerek bunu yapabilirsiniz. Bu adlandırılır *ayrıştırma* tanımlama grubu. Tarayıcınızda denemek için aşağıdaki kodu ekleyin:\n\n[!code-csharp[CallingWithDeconstructor](~/samples/snippets/csharp/new-in-7/program.cs#CallingWithDeconstructor \"Deconstructing a tuple\")]\n\nTanımlama grubu ile çalışırken, genellikle tüm üyelerin bir tanımlama grubu sonucunun kullanmayın bulabilirsiniz. Bu durum oluştuğunda, bir veya daha fazla döndürülen değerleri kullanarak atabilirsiniz `_` yerine bir değişken. Tarayıcınızda denemek için aşağıdaki kodu ekleyin:\n\n[!code-csharp[DiscardTupleMember](~/samples/snippets/csharp/new-in-7/program.cs#DiscardMember \"Discard a tuple member\")]\n\nDiziler hakkında daha da ayrıntılı bilgi edinebilirsiniz [diziler makale](../../tuples.md).\nİçinde iptali hakkında daha fazla bilgi [atar makale](../../discards.md).\n"
+- title: Tür deseni kullanan ifadesi
+  durationInMinutes: 2
+  content: >
+    `is` Desen ifadesi genişletir bilinen [ `is` işleci](../../language-reference/keywords/is.md#pattern-matching-with-is) bir nesne türünü ötesinde sorgulamak için.
+
+
+    Tarayıcı pencerenizde aşağıdaki kodu deneyin:
+
+
+    [!code-csharp[SimpleIs](~/samples/snippets/csharp/new-in-7/patternmatch.cs#SimpleIsPattern "Simple Is pattern")]
+
+
+    Bunun yerine, değişken bildirimi bir dizeye değiştirin:
+
+
+    ```csharp
+
+    object count = "5";
+
+    ```
+
+
+    Şimdi, `is` ifade false, böylece `else` dal yürütülür. Değiştirmeye `count` için `number` başka dal:
+
+
+    ```csharp
+
+    Console.WriteLine($"{number} is not an integer");
+
+    ```
+
+
+    Yukarıdaki çünkü derlenemeyecektir `number` içinde atanmamış `else` dal. İçinde yalnızca atanan `true` dalı `if` deyimi.
+
+
+    > [!NOTE]
+
+    > Var olan bir [sorunu](https://github.com/dotnet/try/issues/175) burada alabilirsiniz yanlış çıkış önceki örnekte.
+
+
+    `is` İfade türü deseni, türlerine karşı test etmek için az sayıda olduğunda yararlıdır. Genellikle, birden çok test gerekebilir. Desen eşleştirme gerektiren `switch` deyimi.
+- title: Switch deyimi içinde desen
+  durationInMinutes: 2
+  content: >
+    *Eşleşen ifade* sahip temel tanıdık bir söz dizimi `switch` ifadesi C# dilinin zaten parçası. Göre küçük bir örnek ile başlayalım `is` önceki sayfada incelediniz ifadesi söz dizimi:
+
+
+    [!code-csharp[SimpleSwitch](~/samples/snippets/csharp/new-in-7/patternmatch.cs#SimpleSwitchPattern "simple switch")]
+
+
+    Yukarıdaki kod denetleyen bir `int` veya `null`. Her bir türün varsayılan durumda ulaşıldı. Davranış doğrulamak için aşağıdaki iki satırı ekleyin:
+
+
+    [!code-csharp[AddLongCase](~/samples/snippets/csharp/new-in-7/patternmatch.cs#TestLong "Add a case for long")]
+
+
+    `switch` İfade karşılık gelen türü için boş değer atanabilir bir tür dönüştürme. Doğrulamak için aşağıdakileri ekleyin:
+
+
+    [!code-csharp[NullableCase](~/samples/snippets/csharp/new-in-7/patternmatch.cs#NullableSwitch "Add a nullable case")]
+
+
+    Switch deyimleri için diğer tür deseni ifadeleri herhangi bir sayıda ekleyebilirsiniz. Önce ekleme `null` çalışması:
+
+
+    [!code-csharp[MoreTypeCases](~/samples/snippets/csharp/new-in-7/patternmatch.cs#MoreCases "Add more type cases")]
+
+
+    Bu iş şu testler ekleyerek emin olun:
+
+
+    [!code-csharp[AddMoreTests](~/samples/snippets/csharp/new-in-7/patternmatch.cs#MoreTests "Add more type tests")]
+
+
+    Eşleşme ifadeleri sabitleri de destekler. Bu basit durumlar hesaba katacak şekilde tarafından zamandan tasarruf edebilirsiniz:
+
+
+    [!code-csharp[ConstantCase](~/samples/snippets/csharp/new-in-7/patternmatch.cs#ConstantCase "Add a constant case")]
+
+
+    Önceki durum eklemelisiniz *önce* `case int:` ifade. Bu durumda sonra eklerseniz, derleyici, zaten önceki bir case tarafından işlendiğini sizi uyarır.
+
+
+    Ekleyebileceğiniz bir `when` herhangi bir desen yan tümcesini case böylece bir türü veya bir sabit değer dışında diğer koşulları test edebilirsiniz. Genel yukarıda aşağıdaki durum ekleyerek deneyin `string` çalışması:
+
+
+    [!code-csharp[WhenClause](~/samples/snippets/csharp/new-in-7/patternmatch.cs#WhenClause "Add a when clause")]
+
+
+    Aşağıdaki kod gibi bir şeyle test edin:
+
+
+    [!code-csharp[TestWhenClause](~/samples/snippets/csharp/new-in-7/patternmatch.cs#TestWhenClause "Test the when clause")]
+
+
+    Desen eşleştirme ifadelerinde yeni sözdizimi, bir nesnenin türü veya diğer özelliklere göre kısa ve anlaşılır bir söz dizimi kullanılarak dağıtım algoritmalar oluşturmak kolaylaştırır. Desen eşleştirme ifadeleri, bu yapıları tarafından devralma ilişkisiz veri türlerinde etkinleştirin.
+
+
+    Adanmış makaledeki desen hakkında daha fazla bilgi [içinde desen C# ](../../pattern-matching.md).
+- title: Ref yerel değerleri ve dönüşleri kullanarak bellek depolama en iyi duruma getirme
+  durationInMinutes: 2
+  content: "Bu özelliği kullanın ve başka bir yerde tanımlanan değişkenleri başvuruları dönüş algoritmalar sağlar. Büyük matrisler ve belirli özelliklere sahip tek bir konum bulma ile bir örnek verilebilir. Bir yöntemi iki indeks matriste tek bir konum döndürür:\n\n```csharp\npublic class Program\n{\n    private static (int i, int j) Find(int[,] matrix, Func<int, bool> predicate)\n    {\n        for (int i = 0; i < matrix.GetLength(0); i++)\n            for (int j = 0; j < matrix.GetLength(1); j++)\n                if (predicate(matrix[i, j]))\n                    return (i, j);\n        return (-1, -1); // Not found\n    }\n\n    public static void Main()\n    {\n        int[,] sourceMatrix = new int[10, 10];\n        for (int x = 0; x < 10; x++)\n            for (int y = 0; y < 10; y++)\n                sourceMatrix[x, y] = x * 10 + y;\n\n        var indices = Find(sourceMatrix, (val) => val == 42);\n        Console.WriteLine(indices);\n        sourceMatrix[indices.i, indices.j] = 24;        \n    }\n\n}\n```\n\n\nBu `Find` yöntemi Matristeki öğenin dizinleri döndürür. Bu başvuru matrisi ve bir öğeyi değiştirmek için bu dizinleri kullanan kod yazmak için çağıranlar yol açar. Döndüren bir yöntem yerine yazmak istediğiniz bir *başvuru* değiştirmek istediğiniz matris öğesine.\n\nŞimdi bir dizi değişikliği ref yerel özelliği göstermek ve dahili depolama başvuru döndüren bir yöntem oluşturma işlemini göstermek için yol. Bu doğrultuda, bunu kötüye yanlışlıkla koruma kuralları ref dönüş ve ref yerel özellik öğreneceksiniz.\n\nBaşlangıç değiştirerek `Find` BT'nin döndürecek şekilde yöntem bildiriminde bir `ref int` yerine bir tanımlama grubu.\n\n```csharp\nprivate static ref int Find(int[,] matrix, Func<int, bool> predicate)\n```\n\nDoğru dizinleri öğe döndürmek için dönüş deyimi değiştirin:\n\n```csharp\nreturn matrix[i,j];\n```\n\nBunun yerine bir özel durum için son dönüş değiştirin:\n\n```csharp\nthrow new InvalidOperationException(\"Not found\");\n```\n\nBu derlenemeyecektir unutmayın. Yöntem bildiriminde gösteren bir `ref` dönüş ancak dönüş deyimi bir dönüş değeri belirtir. Eklemelisiniz `ref` her iade bildirimde anahtar sözcüğü. Başvuru ile dönüş gösterir ve daha sonra kodu okuyan yardımcı geliştiriciler yöntemi başvuru ile döndürülen unutmayın:\n\n```csharp\nreturn ref matrix[i,j];\n```\n\nYöntem matriste tamsayı değerine bir başvuru döndürür, burada çağrılır değiştirmeniz gerekir. `var` Bildirimi anlamına `valItem` artık bir `int` yerine bir tanımlama grubu. Arama kodda değişiklik `Main` aşağıdaki yöntemi:\n\n```csharp\nvar valItem = Find(matrix, (val) => val == 42);\nConsole.WriteLine(valItem);\nvalItem = 24;\nConsole.WriteLine(matrix[4, 2]);\n```\n\nİkinci `WriteLine` yukarıdaki örnekte deyimi yazdırır değerini `42`değil `24`. Değişken `valItem` olduğu bir `int`değil bir `ref int`. `var` Anahtar sözcüğü türü belirtmek derleyiciyi etkinleştirir, ancak değil örtük olarak ekleyecek `ref` değiştiricisi. Bunun yerine, değeri adlandırılan tarafından `ref return` olduğu *kopyalanan* atamanın sol tarafı değişkenine. Değişken değil bir `ref` yerel.\n\nEklemenize gerek döndürülen başvuru değiştirmek için `ref` çağırmadan önce yerel değişken bildirimi için değiştiricisinin `Find` dönüş değeri bir başvuru değişkeni başvuru yapmak için. Değiştirme `Main` aşağıdaki ile eşleşecek şekilde tarayıcınızda yöntemi:\n\n```csharp\npublic static void Main()\n{\n    int[,] sourceMatrix = new int[10, 10];\n    for (int x = 0; x < 10; x++)\n        for (int y = 0; y < 10; y++)\n            sourceMatrix[x, y] = x * 10 + y;\n\n    ref var item = ref Find(sourceMatrix, (val) => val == 42);\n    Console.WriteLine(item);\n    item = 24;\n    Console.WriteLine(sourceMatrix[4, 2]);\n}\n```\n\nŞimdi, ikinci `WriteLine` yukarıdaki örnekte deyimi yazdırır değerini `24`, Matristeki depolama değiştirilmiş olduğunu gösteren. Yerel değişken ile bildirilen `ref` değiştiricisi ve alacağınız bir `ref` döndürür. Başlatması gerekir bir `ref` değişkeni bildirildiğinde; bildirim ve başlatma bölünemiyor.\n\nC# dili kötüye kullanmasının korumak üç kuralları sahip `ref` yerel değerleri ve Dönüşleri:\n\n* Standart bir yöntem dönüş değerine atanamaz bir `ref` yerel değişken.\n* Döndüremezsiniz bir `ref` ömürlerinin yönteminin yürütülmesi genişletmiyoruz bir değişkene.\n* `ref` yerel değerleri ve dönüşleri zaman uyumsuz yöntemlerle kullanılamaz.\n\nRef yerel ayarlar ve ref değerleri kopyalama veya birden çok kez başvurusunu kaldırma işlemlerini gerçekleştirme önleyerek daha verimlidir etkinleştir algoritmaları döndürür.\n\nDaha fazla bilgi için [ref anahtar sözcüğü](../../language-reference/keywords/ref.md) makalesi.\n"
+- title: Yerel işlevleri ile kod erişimi en aza indirin
+  durationInMinutes: 2
+  content: "Şimdi diğer işlevleri içe yerel işlevler bildirebilirsiniz. Bu, bu işlevler görünürlüğünü en aza indirmek sağlar. Yerel işlevler için üç belirgin kullanım örnekleri vardır:\n\n- Özyinelemeli işlevler.\n- Yineleyici yöntemleri.\n- Zaman uyumsuz yöntemler.\n\nÖzyinelemeli yöntemleriyle başlayalım. Tarayıcıda hesaplamak için aşağıdaki kodu deneyin `6!` (faktöriyelini):\n\n```csharp\nint LocalFunctionFactorial(int n)\n{\n    return nthFactorial(n);\n\n    int nthFactorial(int number) => (number < 2) ? \n        1 : number * nthFactorial(number - 1);\n}\n\nConsole.WriteLine(LocalFunctionFactorial(6));\n```\n\nYerel İşlevler, yinelemeli algoritmalar uygulamak için harika bir yoludur. Diğer sık kullanımlar genel yineleyici yöntemleri ve genel zaman uyumsuz yöntemler içindir. Her iki yöntem tür hataları programcılar beklenebilir daha sonra rapor kod oluşturur. Yineleyici metotları olması durumunda, yalnızca özel durumların gözlemlenen döndürülen dizi numaralandırır kod çağırırken. Söz konusu olduğunda zaman uyumsuz yöntemler, özel durumların yalnızca zaman uyulması gereken döndürülen `Task` beklenir.\n\nYineleyici yöntemleri tarayıcıda keşfedin, şimdi de bu araştırma kullanmak daha kolaydır. Tarayıcınızda bir yineleyici yöntemini çağıran aşağıdaki kodu deneyin:\n\n[!code-csharp[IteratorMethod](~/samples/snippets/csharp/new-in-7/Iterator.cs#SnippetIteratorMethod \"Iterator method\")]\n\nKodu çalıştırın. Kod ikinci sonuç kümesi yineleme başladığında, özel durumun dikkat edin. İlk sonuç kümesinde yinelenen kodu zaten çalıştırıldı. Bu örnek, her ikisi de olan küçük ve tüm veri yapılarını dso zararsız ve düzeltmek kolay bir değişiklik yapmaz. Ancak, büyük bir programın, burada iki yineleyici nesnesi oluşturulabilir farklı alt yöntemleri kök nedeni bulmak zor olabilir. İlk yineleyici yöntem veri durum değiştiyse, hatta veri bozulmasına neden olabilir. Herhangi bir çalışma yapılmadan önce hemen, özel durum oluştu tercih edebilir. Böylece tüm bağımsız değişkenler ve numaralandırma gerçekleştiren bir yerel işlev genel yöntem doğrulama kodu yeniden düzenleyebilirsiniz:\n\n[!code-csharp[IteratorMethodRefactored](~/samples/snippets/csharp/new-in-7/Iterator.cs#IteratorMethodLocalInteractive \"Iterator method refactored\")]\n\nÖnceki sürüm Temizle yerel yöntemi başvurulan yalnızca dış yöntem bağlamında kolaylaştırır. Yerel işlevleri için kurallar ayrıca bir geliştirici yanlışlıkla sınıfında başka bir konumdan yerel işlev çağrısı veya bağımsız değişken doğrulama atlama emin emin olun.\n\nAynı yöntem ile işe `async` zaman uyumsuz işler başlamadan önce bağımsız değişken doğrulama doğan özel durumlar emin olmak için yöntemleri.\n\n> [!NOTE]\n> Yerel işlevleri tarafından desteklenen tasarımları bazılarını da kullanarak sağlayabilirsiniz *lambda ifadeleri*. Bu ilgi olabilir [farklar hakkında daha fazla](../../local-functions-vs-lambdas.md).\n"
+- content: Başlıca yeni özelliklerini inceleme tamamladınız C# 7. Şimdi kendiniz uygulamalarınızda deneyebilir. Tam listesinde görebileceğiniz [yenilikler C# 7](../../whats-new/csharp-7.md) makalesi.

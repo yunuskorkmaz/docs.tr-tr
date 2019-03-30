@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9cbfd608f52a11f267ade25f80bc60bdfcd89364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 6db8f5914a325a276872ff804f679f8b3e0745a0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221233"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653931"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Kaynakları Alma
 .NET Framework masaüstü uygulamalarında yerelleştirilmiş kaynaklar ile çalışırken, ideal olarak kaynaklar için varsayılan veya bağımsız kültür ile ana derleme paketi ve her bir dil veya uygulamanızın desteklediği kültür için bir ayrı uydu derleme oluşturma gerekir. Ardından <xref:System.Resources.ResourceManager> adlandırılmış kaynaklara erişmek için sonraki bölümde açıklandığı gibi sınıf. Kaynaklarınızı ana derlemeyi ve uydu derlemeler içinde değil eklemek isterseniz da ikili .resources dosyalarına doğrudan bölümünde açıklandığı gibi erişebilirsiniz [.resources dosyalarındaki kaynaklar alınıyor](#from_file) daha sonra bu makale.  İçindeki kaynakları almak için [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar, [oluşturma ve Windows Store uygulamalarında kaynakları alma](https://go.microsoft.com/fwlink/p/?LinkID=241674) Windows geliştirme Merkezi'nde.  
@@ -149,10 +149,11 @@ GetObject.exe
  Kaynakları uydu derlemelerinde dağıtma kullanmayı tercih ederseniz kullanmaya devam edebilirsiniz bir <xref:System.Resources.ResourceManager> erişim kaynaklara nesneden .resources dosyaları doğrudan. Bunu yapmak için .resources dosyaları doğru dağıtmanız gerekir. Kullanmanız <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> örneklemek için yöntemi bir <xref:System.Resources.ResourceManager> nesne ve tek başına .resources dosyalarını içeren dizini belirtin.  
   
 ### <a name="deploying-resources-files"></a>.Resources dosyalarını dağıtma  
- Bir uygulama derleme ve uydu derlemeler içinde .resources dosyaları eklediğinizde, her bir uydu derlemesini, aynı dosya adına sahip ancak uydu bütünleştirilmiş kodun kültürü yansıtan bir alt dizinine yerleştirilir. Buna karşılık, .resources dosyaları doğrudan kaynaklara erişirken tek bir dizinde, genellikle uygulama dizininin bir alt .resources dosyaları yerleştirebilirsiniz. Uygulamanın varsayılan .resources dosyasının adı (örneğin, strings.resources) kültürü herhangi bir gösterge ile yalnızca bir kök adı oluşur. Kaynaklar için her bir yerelleştirilmiş kültür adı (örneğin, strings.ja.resources veya strings.de-DE.resources) kültürü tarafından izlenen kök adı oluşan bir dosyada depolanır. Aşağıdaki çizimde gösterildiği dizin yapısında kaynak dosyaları nerede yerleştirilmelidir.  
-  
- ![Uygulamanız için ana dizin](../../../docs/framework/resources/media/resappdir.gif "resappdir")  
-Dizin yapısı ve .resources dosyaları için adlandırma kuralları  
+ Bir uygulama derleme ve uydu derlemeler içinde .resources dosyaları eklediğinizde, her bir uydu derlemesini, aynı dosya adına sahip ancak uydu bütünleştirilmiş kodun kültürü yansıtan bir alt dizinine yerleştirilir. Buna karşılık, .resources dosyaları doğrudan kaynaklara erişirken tek bir dizinde, genellikle uygulama dizininin bir alt .resources dosyaları yerleştirebilirsiniz. Uygulamanın varsayılan .resources dosyasının adı (örneğin, strings.resources) kültürü herhangi bir gösterge ile yalnızca bir kök adı oluşur. Kaynaklar için her bir yerelleştirilmiş kültür adı (örneğin, strings.ja.resources veya strings.de-DE.resources) kültürü tarafından izlenen kök adı oluşan bir dosyada depolanır. 
+ 
+ Aşağıdaki çizimde gösterildiği dizin yapısında kaynak dosyaları nerede yerleştirilmelidir. Ayrıca adlandırma kuralları için .resource dosyaları sağlar.  
+
+ ![Uygulamanız için ana dizin gösteren şekil.](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
   
 ### <a name="using-the-resource-manager"></a>Kaynak Yöneticisi'ni kullanma  
  Kaynaklarınızı oluşturduktan sonra bunları uygun dizine yerleştirilir, oluşturun bir <xref:System.Resources.ResourceManager> çağırarak kaynakları kullanmak için nesne <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> yöntemi. İlk parametre (örneğin önceki bölümde "dize" olacaktır) uygulamanın varsayılan .resources dosyasının kök adı belirtir. İkinci parametre (önceki örnek "Kaynaklar") kaynakların konumunu belirtir. Üçüncü parametre belirtir <xref:System.Resources.ResourceSet> kullanılacak uygulama. Üçüncü parametre ise `null`, varsayılan çalışma zamanı <xref:System.Resources.ResourceSet> kullanılır.  

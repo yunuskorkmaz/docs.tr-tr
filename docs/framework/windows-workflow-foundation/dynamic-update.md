@@ -2,12 +2,12 @@
 title: Dinamik güncelleştirme
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724486"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653892"
 ---
 # <a name="dynamic-update"></a>Dinamik güncelleştirme
 
@@ -101,7 +101,7 @@ using (FileStream fs = System.IO.File.Open(@"C:\WorkflowDefinitions\MortgageWork
 }
 ```
 
-Zaman <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> döndürür, kopyalanan iş akışı tanımı ve çağrıda eklenen diğer dinamik güncelleştirme bilgilerini <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> kaldırılır ve değiştirilen iş akışı tanımı sürdürme güncelleştirildiğinde daha sonra kullanılabilir kaydedilmesi hazır İş akışı örnekleri. Aşağıdaki örnekte, değiştirilen iş akışı tanımı için kaydedilen `MortgageWorkflow_v2.xaml`.
+Zaman <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> döndürür, kopyalanan iş akışı tanımı ve çağrıda eklenen diğer dinamik güncelleştirme bilgilerini <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> kaldırılır ve değiştirilen iş akışı tanımı sürdürme güncelleştirildiğinde daha sonra kullanılabilir kaydedilmesi hazır İş akışı örnekleri. Aşağıdaki örnekte, değiştirilen iş akışı tanımı için kaydedilen `MortgageWorkflow_v1.1.xaml`.
 
 ```csharp
 // Save the modified workflow definition.

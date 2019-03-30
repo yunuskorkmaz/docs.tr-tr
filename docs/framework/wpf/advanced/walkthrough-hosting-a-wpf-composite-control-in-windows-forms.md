@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 257462cea4d4926ce5ad22a9d97a3a56e1d6c2a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d38a9c67edb5df89554e9e02274410a825b3384b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368278"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654555"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir mevcut BT'nizi genişletin daha etkili [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ile uygulama [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerine baştan yeniden. Sık karşılaşılan bir senaryodur birini eklemek istediğiniz ya da daha fazla denetim ile uygulanan olduğunda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , Windows Forms uygulaması içinde. WPF denetimleri özelleştirme hakkında daha fazla bilgi için bkz. [denetimi özelleştirme](../controls/control-customization.md).  
@@ -31,10 +31,12 @@ ms.locfileid: "57368278"
 Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.  
   
 ## <a name="implementing-the-wpf-composite-control"></a>WPF bileşik denetimini uygulama  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu örnekte kullanılan bileşik denetimdir kullanıcının adını ve adresini alan bir basit veri girişi formuna. Kullanıcı görevi tamamlandığını göstermek için iki düğme tıkladığında denetim konağa bu bilgileri döndürmek için özel bir olay başlatır. İşlenen denetimi aşağıda gösterilmektedir.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu örnekte kullanılan bileşik denetimdir kullanıcının adını ve adresini alan bir basit veri girişi formuna. Kullanıcı görevi tamamlandığını göstermek için iki düğme tıkladığında denetim konağa bu bilgileri döndürmek için özel bir olay başlatır. İşlenen denetimi aşağıda gösterilmektedir. 
+
+ Aşağıdaki görüntüde, WPF bileşik denetimini gösterir: 
+
   
- ![Basit WPF denetim](./media/avaloncontrol.png "AvalonControl")  
-WPF bileşik denetimini  
+ ![Basit WPF denetimi gösteren ekran görüntüsü.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-presentation-foundation-composite-control.png)  
   
 ### <a name="creating-the-project"></a>Projeyi Oluşturma  
  Proje başlatmak için:  
@@ -180,9 +182,10 @@ namespace MyControls
 <a name="winforms_host_section"></a>   
 ## <a name="implementing-the-windows-forms-host-application"></a>Windows Forms konak uygulamanın uygulama  
  Windows Forms ana bilgisayar, uygulamanız tarafından kullanılan bir <xref:System.Windows.Forms.Integration.ElementHost> konak nesnesine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bileşik denetim. Uygulama işleyen `OnButtonClick` bileşik denetim verileri almak için olay. Uygulama ayrıca bir dizi denetimin görünümünü değiştirmek için kullanabileceğiniz seçenek düğmesi vardır. Aşağıdaki çizim, uygulamayı gösterir.  
-  
- ![Windows Form Avalon Denetimi Barındırma](./media/wfhost.png "WFHost")  
-WPF bileşik denetimini Windows Forms uygulaması'nda barındırılan  
+
+Aşağıdaki resimde, bir Windows Forms uygulamasında barındırılan bir WPF bileşik denetimini gösterir"  
+
+ ![Bir Windows Form barındırma Avalon denetiminde Scteenshot.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>Projeyi Oluşturma  
  Proje başlatmak için:  

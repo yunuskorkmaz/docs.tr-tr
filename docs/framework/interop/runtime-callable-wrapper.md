@@ -10,20 +10,22 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3abce6ef7cb1d3287d9c8b7ceb9333f209e75ad
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219535"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654139"
 ---
 # <a name="runtime-callable-wrapper"></a>Çalışma Zamanı Aranabilir Sarmalayıcısı
 Ortak dil çalışma zamanı, COM nesneleri çalışma zamanı çağrılabilir sarmalayıcı (RCW) adlı bir ara sunucu aracılığıyla kullanıma sunar. RCW, .NET istemcileri için normal bir nesne görünmesine karşın, birincil bir .NET istemcisi ve COM nesnesi arasındaki çağrıların sıralamakta işlevidir.  
   
  Çalışma zamanı, nesne üzerinde mevcut başvuruları sayısından bağımsız olarak her bir COM nesnesi için tam olarak bir RCW oluşturur. Çalışma zamanı, her nesne için işlem başına tek bir RCW tutar.  Bir uygulama etki alanı veya grup bir RCW oluşturun ve ardından başka bir uygulama etki alanı ya da grup bir başvuru geçirin, ilk nesneye bir ara sunucu kullanılır.  Aşağıdaki çizimde gösterildiği gibi yönetilen istemcilerin herhangi bir sayıda INew ve INewer arabirimler sunun COM nesnelerine başvuru barındırabilir.  
-  
- ![RCW](./media/rcw.gif "rcw")  
-Çalışma zamanı çağrılabilir sarmalayıcı COM nesnelere erişme  
+
+Aşağıdaki görüntüde, çalışma zamanı çağrılabilir sarmalayıcı COM nesnelerine erişme işlemi gösterilmektedir:
+
+ ![COM nesneleri throug RCW erişme işlemi.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
+   
   
  Türetilmiş bir tür kitaplığından meta verileri kullanarak, çalışma zamanı hem çağrılan COM nesnesi hem de bu nesne için bir sarmalayıcı oluşturur. Her RCW arabirim işaretçilerini sarmalar ve RCW artık gerekli olmadığında, başvuru COM nesnesi üzerinde serbest COM nesne üzerinde bir önbelleğini korur. Çalışma zamanı üzerinde RCW atık toplama gerçekleştirir.  
   
@@ -32,10 +34,11 @@ Ortak dil çalışma zamanı, COM nesneleri çalışma zamanı çağrılabilir s
  Standart sarmalayıcı yerleşik sıralama kuralları zorlar. Örneğin, bir .NET istemci yönetilmeyen bir nesneye bağımsız değişken bir parçası olarak bir dize türü geçtiğinde sarmalayıcı dize bir BSTR türüne dönüştürür. COM nesnesinin yönetilen arayanına BSTR döndürmelidir, çağıran bir dize alır. İstemci ve sunucu gönderin ve onlara alışkın olduğu veri alın. Diğer türleri dönüştürme gerektirir. Örneğin, standart bir sarmalayıcı türü dönüştürme olmadan yönetilen ve yönetilmeyen kod arasındaki her zaman bir 4 baytlık tamsayı geçer.  
   
 ## <a name="marshaling-selected-interfaces"></a>Seçilen arabirimleri sıralama  
- Birincil amacı [çalışma zamanı çağrılabilir sarmalayıcı](runtime-callable-wrapper.md) (RCW) yönetilen ve yönetilmeyen programlama modelleri arasındaki farkları Gizle etmektir. Sorunsuz bir geçiş oluşturmak için RCW Seçili COM arabirimleri .NET istemciye sokmadan aşağıdaki çizimde gösterildiği gibi kullanır.  
+ Birincil amacı [çalışma zamanı çağrılabilir sarmalayıcı](runtime-callable-wrapper.md) (RCW) yönetilen ve yönetilmeyen programlama modelleri arasındaki farkları Gizle etmektir. Sorunsuz bir geçiş oluşturmak için RCW Seçili COM arabirimleri .NET istemciye sokmadan aşağıdaki çizimde gösterildiği gibi kullanır. 
+
+ Aşağıdaki görüntüde, COM arabirimlerinde ve çalışma zamanı çağrılabilir sarmalayıcı gösterilmektedir: 
   
- ![RCW ile arabirimleri](./media/rcwwithinterfaces.gif "rcwwithinterfaces")  
-COM arabirimlerinde ve çalışma zamanı aranabilir sarmalayıcısı  
+ ![Çalışma zamanı çağrılabilir sarmalayıcı arabirimleri ile ekran görüntüsü.](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   
  RCW bir erken bağlanan nesne olarak oluşturduğunuzda, belirli bir türdür. Bu, COM nesnesi uygular ve yöntemler, özellikler ve olaylar nesnenin arabirimlerinden sunan arabirimlerini uygular. Çizimde, RCW INew arabirimini kullanıma sunar ancak tüketir **IUnknown** ve **IDispatch** arabirimleri. Ayrıca, RCW, .NET istemci INew arabirimin tüm üyeleri ortaya koyar.  
   

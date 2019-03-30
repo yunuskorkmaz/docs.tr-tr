@@ -10,20 +10,19 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: b72eef632b4564abc69e6ebef43b940eb0950e9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523395"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654373"
 ---
 # <a name="loop-structures-visual-basic"></a>Çevrim Yapıları (Visual Basic)
 Visual Basic döngü yapıları, bir veya daha fazla kod satırlarını art arda çalıştırmanıza olanak tanır. Bir koşul olana kadar döngü yapısı deyimlerinde yineleyebilirsiniz `True`, bir koşul olana kadar `False`, belirtilen numarası sayısı veya bir kez her öğe için bir koleksiyon.  
   
- Aşağıdaki çizimde, bir koşul true olana kadar bir dizi ifadeleri çalıştırılan bir döngü yapısı gösterilmektedir.  
+ Aşağıdaki resimde, bir koşul true olana kadar bir dizi ifadeleri çalıştırılan bir döngü yapısı gösterilmektedir:  
   
- ![Bir akış çizelgesi... Until döngüsü](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")  
-Bir koşul true olana kadar bir deyimler çalışan  
+ ![Do gösteren akış çizelgesi... Döngü kadar.](./media/loop-structures/do-until-loop-true-condition.gif)  
   
 ## <a name="while-loops"></a>While döngülerini  
  `While`... `End While` oluşturma deyimleri bir dizi koşul içinde belirtilen sürece çalıştırır `While` deyimi `True`. Daha fazla bilgi için [sırada... End While deyimi](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  

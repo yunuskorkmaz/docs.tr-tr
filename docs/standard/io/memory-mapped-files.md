@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b4c1b075d54189d195ea38d421463ea6b9e6161
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835362"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654360"
 ---
 # <a name="memory-mapped-files"></a>Bellek Eşlemeli Dosyalar
 Bir bellek işlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu dosya ve bellek alanı eşlemesini okuma ve yazma doğrudan bellek tarafından dosyasını değiştirmek birden çok işlem dahil olmak üzere bir uygulama sağlar. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yönetilen kod bellek eşlemeli dosyalar açıklandığı gibi aynı şekilde access bellek eşlemeli dosyalar, yerel Windows işlevlerine erişmek için kullanabileceğiniz [Managing Memory-Mapped dosyaları](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
@@ -42,10 +42,11 @@ Bir bellek işlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu 
   
  Dosya otomatik olarak bir dizi sayfa bölümlenmiş ve gerektiğinde erişilen bellek eşlemeli dosyalar işletim sisteminin bellek yöneticisi erişilir. Bellek yönetimi kendiniz işlemek zorunda değildir.  
   
- Çakışan aynı anda aynı bellek eşlemeli dosya görünümleri ve aşağıdaki çizimde nasıl birden çok işlem olabilir birden çok gösterir.  
+ Çakışan aynı anda aynı bellek eşlemeli dosya görünümleri ve aşağıdaki çizimde nasıl birden çok işlem olabilir birden çok gösterir.
+
+ Aşağıdaki görüntüde, birden çok gösterir ve bir bellek işlemeli dosya görünümlerine çakışan:  
   
- ![Bellek görünümleri gösterir&#45;dosya eşlenmiş. ](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
-Birden çok ve çakışan bir bellek işlemeli dosya görünümleri  
+ ![Bellek görünümleri gösteren ekran görüntüsü&#45;dosya eşlenmiş.](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>Bellek eşlemeli dosyalar ile programlama  
  Aşağıdaki tabloda, bellekle eşlenen dosya nesneleri ve üyeleri kullanmak için bir kılavuz sağlar.  

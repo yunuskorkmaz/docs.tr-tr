@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 6a93124789d629b1d1a953345d4b0b02a8c6ffa6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977259"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654672"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic'de Ad Alanları
 Ad alanları, bir derlemede tanımlanan nesneler düzenleyin. Derlemeleri diğer ad alanlarında sırayla içerebilen birden çok ad alanları içerebilir. Ad alanları belirsizlik önlemek ve büyük nesne grupları gibi sınıf kitaplıkları kullanırken başvuruları basitleştirin.  
@@ -37,9 +37,9 @@ Ad alanları, bir derlemede tanımlanan nesneler düzenleyin. Derlemeleri diğer
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- Her iki içeren adlı bir nesne iki ad alanı hiyerarşileri, aşağıdaki çizimde `ListBox`.  
+ Her iki içeren adlı bir nesne iki ad alanı hiyerarşileri, aşağıdaki çizimde `ListBox`:  
   
- ![Namespace Hierarchy](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
+ ![İki ad alanı hiyerarşi gösteren ekran görüntüsü.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
  Varsayılan olarak, Visual Basic ile oluşturduğunuz her bir yürütülebilir dosya projeniz gibi aynı ada sahip bir ad alanı içerir. Örneğin, bir nesne adlı bir proje içinde tanımlarsanız `ListBoxProject`, yürütülebilir dosyayı ListBoxProject.exe adlı bir ad alanı içeren `ListBoxProject`.  
   

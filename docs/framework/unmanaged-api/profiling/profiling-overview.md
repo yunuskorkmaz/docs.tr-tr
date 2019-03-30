@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862322"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654100"
 ---
 # <a name="profiling-overview"></a>Profil Oluşturmaya Genel Bakış
 <a name="top"></a> Bir profil oluşturucu başka bir uygulamanın yürütülmesini izleyen bir araçtır. Ortak dil çalışma zamanı (CLR) Profil Oluşturucu, ileti almak ve CLR Profil oluşturma API'ı kullanarak göndermek işlevlerini içeren bir dinamik bağlantı kitaplığı (DLL) ' dir. Profil Oluşturucu DLL çalışma zamanında CLR tarafından yüklenir.  
@@ -78,8 +78,7 @@ ms.locfileid: "43862322"
   
  Aşağıdaki resimde, profil oluşturucu DLL'nin profili oluşturulan uygulama ve CLR ile nasıl etkileşim kurduğu gösterilmektedir.  
   
- ![Profil oluşturma mimarisi](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")  
-Profil oluşturma mimarisi  
+ ![Profil oluşturma mimarisi gösteren ekran görüntüsü.](./media/profiling-overview/profiling-architecture.png)  
   
 ### <a name="the-notification-interfaces"></a>Bildirim arabirimleri  
  [Icorprofilercallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) ve [Icorprofilercallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) bildirim arabirimleri olarak düşünülebilir. Bu arabirimler yöntemleri gibi oluşur [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), ve [Jıtcompilationstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Her zaman CLR yükler veya bir sınıf yüklemesini kaldırdığında, bir işlev derler ve bu şekilde karşılık gelen yöntemini profil oluşturucunun çağırır `ICorProfilerCallback` veya `ICorProfilerCallback2` arabirimi.  
