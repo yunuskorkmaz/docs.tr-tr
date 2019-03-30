@@ -1,19 +1,14 @@
 ---
-title: 'Sunucusuz uygulamalar: mimarisi, desenler ve Azure uygulama'
-description: Sunucusuz bir mimari Kılavuzu. Neden ve ne zaman, öğrenin, kurumsal uygulamalar için sunucusuz bir mimari (aksine, bir hizmet [Iaas] veya [PaaS] hizmet olarak Platform olarak altyapı) uygulamak için.
+title: 'Sunucusuz uygulamalar: Azure uygulama mimarisi ve desenleri'
+description: 'Sunucusuz bir mimari Kılavuzu. Neden ve ne zaman, öğrenin, kurumsal uygulamalar için sunucusuz bir mimari (aksine, bir hizmet [Iaas] veya [PaaS] hizmet olarak Platform olarak altyapı) uygulamak için.'
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
-ms.translationtype: MT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745322"
 ---
-# <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Sunucusuz uygulamalar: mimarisi, desenler ve Azure uygulama
 
-![](./media/Cover.jpg)
+# <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Sunucusuz uygulamalar: Azure uygulama mimarisi ve desenleri
+
+![Sunucusuz uygulamalar e-kitap kapak gösteren ekran görüntüsü.](./media/index/serverless-apps-cover.jpg)
 
 > İNDİRME bulunabilir: <https://aka.ms/serverless-ebook>
 
@@ -43,7 +38,7 @@ Diğer tüm işaretleri ve logoları sahiplerinin özelliği var.
 
 Yazar:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)**, üst düzey Bulut Geliştirici Danışmanı, TEPE, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)**, üst düzey bulut Geliştirici Danışmanı, TEPE, Microsoft Corp.
 
 Katkıda bulunan:
 

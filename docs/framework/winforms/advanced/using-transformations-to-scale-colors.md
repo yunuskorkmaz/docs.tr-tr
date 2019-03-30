@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9255dd4adba19bfef1332e5e3dfa463ee96f43f0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707436"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653996"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Renkleri Ölçeklendirmek için Dönüştürmeleri Kullanma
 Ölçekleme dönüşümü bir veya daha fazla bir sayıyla dört renk bileşenlerine çarpar. Ölçeklendirme temsil eden renk matrisi girişleri aşağıdaki tabloda verilmiştir.  
@@ -31,9 +31,9 @@ ms.locfileid: "57707436"
  [!code-csharp[System.Drawing.RecoloringImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.RecoloringImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
- Aşağıdaki çizimde, sol taraftaki özgün görüntü ve ölçeklendirilmiş görüntü sağ tarafta gösterir.  
+ Aşağıdaki resimde, sağ tarafta sol taraftaki özgün görüntü ve ölçeklendirilmiş görüntü gösterilmektedir:  
   
- ![Renkleri ölçeklendirmek](./media/colortrans3.png "colortrans3")  
+ ![Özgün ve ölçeklendirilmiş renkleri karşılaştıran ekran görüntüsü.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
  Aşağıdaki tabloda önceki ve sonraki mavi ölçeklendirme dört Çubuklar için rengi vektörleri listeler. Dördüncü renk çubuğu mavi bileşeni 0.8 0,6 için gönderilmediğine dikkat edin. Çünkü [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sonucu yalnızca kesirli kısmını korur. Örneğin, (2)(0.8) 1.6, = ve kesirli 1.6 0,6 parçasıdır. Yalnızca kesirli bölümü koruma sonucu her zaman [0, 1] aralığında olmasını sağlar.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "57707436"
  [!code-csharp[System.Drawing.RecoloringImages#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.RecoloringImages#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
- Aşağıdaki çizimde, sol taraftaki özgün görüntü ve ölçeklendirilmiş görüntü sağ tarafta gösterir.  
+ Aşağıdaki resimde, sağ tarafta sol taraftaki özgün görüntü ve ölçeklendirilmiş görüntü gösterilmektedir:  
   
- ![Renkleri ölçeklendirmek](./media/colortrans4.png "colortrans4")  
+ ![Özgün ve ölçeklendirilmiş renkleri karşılaştıran ekran görüntüsü.](./media/using-transformations-to-scale-colors/four-bar-scale-multiple-colors.png)  
   
  Aşağıdaki tabloda dört Çubuklar için rengi vektörleri önce ve sonra kırmızı, yeşil ve mavi ölçeklendirme listeler.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705352"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653801"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Nasıl yapılır: Otomatik ölçeklendirmeyi önleyerek performansı artırma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Hangi performans azalır, çizin, görüntüyü otomatik olarak ölçeklendirme. Alternatif olarak, hedef dikdörtgenin boyutlarına geçirerek görüntüsü ölçeklendirme denetleyebilirsiniz <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi.  
@@ -30,9 +30,9 @@ ms.locfileid: "57705352"
  Ekran çözünürlüğünü 96 inç başına nokta farklı olsa bile [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 96 inç başına nokta ekran çözünürlüğü gibi ölçek görüntü görür. Çünkü bir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> nesnesi bir cihaz bağlamı ile ilişkili olan ve ne zaman [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ekran çözünürlüğü, sonuç için cihaz bağlamı olan genellikle gerçek ekran çözünürlüğü ne olursa olsun, 96 sorguları. Hedef dikdörtgenin belirterek bir otomatik ölçeklendirme kaçınabilirsiniz <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki kez aynı resim çizer. İlk durumda, hedef dikdörtgenin yüksekliğini ve genişliğini belirtilmeyen ve otomatik olarak ölçeklendirilir. İkinci durumda, genişlik ve yükseklik (piksel cinsinden ölçülür) hedef dikdörtgenin genişliğini ve yüksekliğini orijinal görüntünün aynı olacak şekilde belirtilir. Aşağıdaki çizimde, iki kez işlenmiş görüntü gösterir.  
+ Aşağıdaki örnek, iki kez aynı resim çizer. İlk durumda, hedef dikdörtgenin yüksekliğini ve genişliğini belirtilmeyen ve otomatik olarak ölçeklendirilir. İkinci durumda, genişlik ve yükseklik (piksel cinsinden ölçülür) hedef dikdörtgenin genişliğini ve yüksekliğini orijinal görüntünün aynı olacak şekilde belirtilir. Aşağıdaki çizimde, iki kez çizilir görüntüde gösterilmektedir:  
   
- ![Ölçeği doku](./media/csscaledtexture1.png "csscaledtexture1")  
+ ![Ölçeklendirilmiş doku ile görüntüleri gösteren ekran görüntüsü.](./media/how-to-improve-performance-by-avoiding-automatic-scaling/two-scaled-texture-images.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  

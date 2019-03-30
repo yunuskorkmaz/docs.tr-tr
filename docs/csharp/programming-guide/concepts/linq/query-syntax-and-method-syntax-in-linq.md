@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978665"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654048"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ'te Sorgu Sözdizimi ve Yöntem Sözdizimi (C#)
 Çoğu sorgularda tanıtım dil ile tümleşik sorgu ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) belgeleri LINQ Sorgu bildirim temelli söz dizimini kullanarak yazılır. Ancak, kod yeniden derlendiğinde sorgu söz dizimi yöntem çağrıları için .NET ortak dil çalışma zamanı (CLR) içine çevrilmelidir. Bu yöntem çağrıları gibi adlara sahip standart sorgu işleçleri çağırma `Where`, `Select`, `GroupBy`, `Join`, `Max`, ve `Average`. Sorgu söz dizimi yerine doğrudan yöntem sözdizimini kullanarak bunları çağırabilirsiniz.  
@@ -26,7 +26,7 @@ ms.locfileid: "56978665"
   
  Metot tabanlı sorgu anlamak için bunu daha yakından inceleyelim. İfade sağ tarafında dikkat `where` yan tümcesi artık ifade bir örnek yöntemi `numbers` geri çağırma, aynı nesne türü olan `IEnumerable<int>`. Genel ile biliyorsanız <xref:System.Collections.Generic.IEnumerable%601> arabirimi, tanıdığınız değil sahip bir `Where` yöntemi. Ancak, Visual Studio IDE içindeki IntelliSense tamamlanma listesi çağırmak, göreceğiniz yalnızca bir `Where` yöntemi, ancak diğer birçok yöntem gibi `Select`, `SelectMany`, `Join`, ve `Orderby`. Tüm standart sorgu işleçleri şunlardır.  
   
- ![Standart sorgu işleçleri IntelliSense içinde](../../../../csharp/programming-guide/concepts/linq/media/standardqueryops.png "StandardQueryOps")  
+ ![Tüm standart sorgu işleçleri Intellisense'te gösteren ekran görüntüsü.](./media/query-syntax-and-method-syntax-in-linq/standard-query-operators.png)  
   
  Görünüyor ancak gibi <xref:System.Collections.Generic.IEnumerable%601> bu değildir durum aslında bu ek yöntemleri içerecek şekilde tanımlandı. Standart sorgu işleçleri yöntemi olarak adlandırılan yeni bir tür olarak uygulanan *genişletme yöntemleri*. Uzantı yöntemleri "Varolan türü genişletmesi"; türün örnek yöntemleri değilmiş gibi bunlar çağrılabilir. Standart sorgu işleçlerini genişletme <xref:System.Collections.Generic.IEnumerable%601> ve diğer bir deyişle neden yazabilirsiniz `numbers.Where(...)`.  
   
