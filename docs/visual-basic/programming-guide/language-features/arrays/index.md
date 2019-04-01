@@ -56,7 +56,7 @@ Aşağıdaki çizimde gösterildiği `students` dizisi. Dizinin her öğesi içi
 
 - Öğesi içinde yer alan değer o derecedeki Öğrenci sayısını temsil eder.
 
-![Öğrencilerin sayısını gösteren bir dizi resmini](../../language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool") "Öğrenciler" dizisinin öğeleri
+![Öğrenciler sayıdan oluşan bir diziyi gösteren diyagram](./media/index/students-array-elements.gif)
 
 Aşağıdaki örnek, bir dizi oluşturur ve Visual Basic kodu içerir:
 

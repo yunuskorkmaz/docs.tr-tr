@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364833"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634563"
 ---
 # <a name="data-binding-overview"></a>Veri Bağlamaya Genel Bakış
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama sunmak ve verilerle etkileşimde bulunmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynaklarından biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.ItemsControl>s gibi <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.ListView> esnek tek veri öğelerini stilini veya koleksiyonları etkinleştirmek için yerleşik bir işlevselliğe sahiptir. Sıralama, filtreleme ve Grup görünümleri, veri üzerinde oluşturulabilir.  
@@ -61,7 +61,7 @@ ms.locfileid: "57364833"
   
  Öğeye ne olursa olsun, bağlama ve veri kaynağınızın yapısı, her bağlamanın aşağıdaki şekilde gösterilen modelini kullanır:  
   
- ![Temel veri bağlama diyagramı](./media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![Temel veri bağlama modelini gösteren diyagram.](./media/data-binding-overview/basic-data-binding-diagram.png)  
   
  Yukarıdaki şekilde gösterildiği gibi veri bağlama temelde, bağlama hedefi ile bağlama kaynağınız arasında köprü ' dir. Aşağıdaki temel şekil gösterir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] veri bağlama Kavramları:  
   
@@ -101,7 +101,7 @@ ms.locfileid: "57364833"
   
  Ancak, kaynak değeri metin düzenlerken veya metin düzenlenmesini tamamlamayı ve farenizi uzağa metin kutusunun üzerine getirin sonra güncelleştirilmiş olur mu? <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Bağlama özelliğini belirler ne kaynağının güncelleştirmesini tetikler. Rolünü aşağıdaki şekilde sağ okları noktaları gösteren <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> özelliği:  
   
- ![UpdateSourceTrigger diyagramı](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![Rol UpdateSourceTrigger özelliğinin gösteren diyagram.](./media/data-binding-overview/data-binding-updatesource-trigger.png)  
   
  Varsa <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değer <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, ardından değeri işaret edilen tarafından sağ oku <xref:System.Windows.Data.BindingMode.TwoWay> veya <xref:System.Windows.Data.BindingMode.OneWayToSource> bağlamalar hedef özellik değişiklikleri olan en kısa sürede güncelleştirilir. Ancak, varsa <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değer <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>, hedef özelliği odağı kaybettiğinde bu değer yalnızca yeni değeri ile güncelleştirilir.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "57364833"
   
  Biz bu bizim temel diyagramı örneği uygularsanız, sonuçta elde edilen şekilde aşağıdaki gibi görünür. Bu bir <xref:System.Windows.Data.BindingMode.OneWay> arka plan özelliği desteklediğinden bağlama <xref:System.Windows.Data.BindingMode.OneWay> varsayılan bağlama.  
   
- ![Veri bağlama diyagramı](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![Veri bağlama arka plan özelliği gösteren diyagram.](./media/data-binding-overview/data-binding-button-background-example.png)  
   
  Neden olsa bile çalıştığını merak ediyor olabilirsiniz *ColorName* özelliktir sırasında dize türündeki <xref:System.Windows.Controls.Control.Background%2A> özelliği türüdür <xref:System.Windows.Media.Brush>. Bu işte varsayılan tür dönüştürme ve içinde ele alınmıştır [veri dönüştürme](#data_conversion) bölümü.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "57364833"
   
  Şekilde, bu bilgiyi eklemek için [bağlama oluşturma](#creating_a_binding) bölümünde diyagramı aşağıdaki gibi görünür:  
   
- ![Veri bağlama diyagramı](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![Veri bağlama varsayılan özelliği gösteren diyagram.](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
  Ancak, ne tür dizesi, kaynak ensnede bir özelliği olan yerine bir *renk* türünün özelliği <xref:System.Windows.Media.Color>? Bu durumda, sırayla çalışmak bağlama için ilk Aç gerekir *renk* değerlerinizden özellik değeri, <xref:System.Windows.Controls.Control.Background%2A> özelliği kabul eder. Özel bir dönüştürücü uygulayarak oluşturmanız gerekecektir <xref:System.Windows.Data.IValueConverter> arabirimi, aşağıdaki örnekte olduğu gibi:  
   
@@ -196,7 +196,7 @@ ms.locfileid: "57364833"
   
  Artık özel dönüştürücü varsayılan dönüştürme yerine kullanılır ve bizim diyagram şöyle görünür:  
   
- ![Veri bağlama diyagramı](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![Veri bağlama özel dönüştürücü gösteren diyagram.](./media/data-binding-overview/data-binding-converter-color-example.png)  
   
  Yinelemek için varsayılan dönüştürmeler bağlanan türünde bulunan tür dönüştürücüleri nedeniyle bulunabilir. Bu davranış, hangi tür dönüştürücüleri hedefte kullanılabilir olduğuna bağlıdır. Bu konuda şüpheleriniz varsa kendi dönüştürücü oluşturun.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "57364833"
   
  Neyse ki, bizim temel diyagram hala geçerlidir. Bağlıyorsanız bir <xref:System.Windows.Controls.ItemsControl> bir koleksiyon için diyagram şöyle görünür:  
   
- ![Veri bağlama ItemsControl diyagramı](./media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![Veri bağlama ItemsControl nesneyi gösteren diyagram.](./media/data-binding-overview/data-binding-itemscontrol.png)  
   
  Bağlamak için bu diyagramda gösterildiği gibi bir <xref:System.Windows.Controls.ItemsControl> bir koleksiyon nesnesine <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> kullanılacak özellik bir özelliktir. Düşünebilirsiniz <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliği içeriği olarak <xref:System.Windows.Controls.ItemsControl>. Bağlama olduğuna dikkat edin <xref:System.Windows.Data.BindingMode.OneWay> çünkü <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> özelliği destekleyen <xref:System.Windows.Data.BindingMode.OneWay> varsayılan bağlama.  
   
@@ -340,7 +340,7 @@ ms.locfileid: "57364833"
 ## <a name="data-templating"></a>Veri şablonu oluşturma  
  Veri şablonları, uygulamamız kullanmadan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] içinde [veri bağlama nedir?](#what_is_data_binding) bölümü, aşağıdaki gibi görünür:  
   
- ![Veri bağlama olmadan veri şablonları Tanıtıma](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![Veri olmadan veri şablonları Tanıtıma bağlama](./media/data-binding-overview/data-binding-demo-templates.png)  
   
  Önceki bölümdeki örnekte gösterildiği gibi hem <xref:System.Windows.Controls.ListBox> denetimi ve <xref:System.Windows.Controls.ContentControl> tüm koleksiyon nesnesi (veya daha açık belirtmek gerekirse koleksiyon nesnesi üzerinden Görünüm) bağlı *Highlight*s. Veri koleksiyonunun nasıl görüntüleneceği hakkında belirli yönergeler olmadan <xref:System.Windows.Controls.ListBox> temel alınan koleksiyon içindeki her bir nesnenin dize gösterimini görüntüler ve <xref:System.Windows.Controls.ContentControl> bağlı için nesnenin dize gösterimini görüntüler.  
   

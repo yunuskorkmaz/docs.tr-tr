@@ -4,12 +4,12 @@ description: Mevcut bir .NET Framework konsol uygulamasını alıp Windows Docke
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126090"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633848"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Windows kapsayıcıları içinde çalışan konsol uygulamaları
 
@@ -55,7 +55,9 @@ Docker için Windows, sürüm 1.12 desteklemek için Beta 26 veya üzeri Windows
 ## <a name="building-the-application"></a>Uygulama oluşturma
 Yükleyici, FTP veya dosya paylaşımı konsol uygulamaları genellikle dağıtılmış dağıtım. Bir kapsayıcıya dağıtılırken varlıkları derlenir ve Docker görüntüsü oluşturulduğunda kullanılabilecek bir konuma aşamalı gerekir.
 
-İçinde *build.ps1*, betikte [MSBuild](/visualstudio/msbuild/msbuild) varlıkları oluşturma görevini tamamlamak için bir uygulama derlemek için. Gerekli varlıkları sonlandırmak için MSBuild'e geçirilen birkaç parametre yok. Proje dosyası veya derlenecek çözüm, konum adı için çıktı ve son olarak yapılandırma (yayınlama veya hata ayıklama).
+Örnek uygulamayı şu şekildedir: [ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
+
+İçinde *build.ps1*<sup>[[kaynak]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup>, betikte [MSBuild](/visualstudio/msbuild/msbuild) varlıkları oluşturma görevini tamamlamak için bir uygulama derlemek için. Gerekli varlıkları sonlandırmak için MSBuild'e geçirilen birkaç parametre yok. Proje dosyası veya derlenecek çözüm, konum adı için çıktı ve son olarak yapılandırma (yayınlama veya hata ayıklama).
 
 Çağrısında `Invoke-MSBuild` `OutputPath` ayarlanır **yayımlama** ve `Configuration` kümesine **yayın**. 
 
