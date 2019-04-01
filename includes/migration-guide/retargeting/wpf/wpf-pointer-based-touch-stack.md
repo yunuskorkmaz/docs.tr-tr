@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a620028a4e286799a6762c57145264ac0e2dbaf9
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760362"
+---
 ### <a name="wpf-pointer-based-touch-stack"></a>WPF işaretçi tabanlı Touch yığını
 
 |   |   |
@@ -6,5 +14,5 @@
 |Öneri|Bu yığın etkinleştirmek istediğiniz geliştiriciler ekleyin/kendi uygulamanın App.config dosyasına aşağıdaki birleştirme:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Input.Stylus.EnablePointerSupport=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Bu kaldırma veya değerini false olarak ayarlayarak bu isteğe bağlı bir yığın kapanır. Bu yığın yalnızca Windows 10 Creators Update ve üzerinde kullanılabilir olduğunu unutmayın.|
 |Kapsam|Kenar|
 |Sürüm|4.7|
-|Tür|Yeniden hedefleme|
+|Tür|Yeniden Hedefleme|
 

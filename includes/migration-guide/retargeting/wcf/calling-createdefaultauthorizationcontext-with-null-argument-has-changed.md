@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a29f0ca6d235250ac1f41e686178b2d6affcd8a0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761176"
+---
 ### <a name="calling-createdefaultauthorizationcontext-with-a-null-argument-has-changed"></a>Null bir bağımsız değişkenle CreateDefaultAuthorizationContext arama değişti
 
 |   |   |

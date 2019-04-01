@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a3f54bec98f220af48e932e6485d06732a4c6ddd
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761420"
+---
 ### <a name="calling-attributegetcustomattributes-on-an-indexer-property-no-longer-throws-ambiguousmatchexception-if-the-ambiguity-can-be-resolved-by-indexs-type"></a>Dizinin türüyle belirsizlik çözümlenebiliyorsa AmbiguousMatchException Attribute.GetCustomAttributes bir dizin oluşturucu özelliği artık çağırma oluşturur
 
 |   |   |

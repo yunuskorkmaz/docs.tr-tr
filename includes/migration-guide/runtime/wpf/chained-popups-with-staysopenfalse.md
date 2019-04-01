@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2bb40294685c987de84138ee889e6b88f7184bb0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "50746863"
+---
 ### <a name="chained-popups-with-staysopenfalse"></a>Açılan pencereler StaysOpen ile zincirleme = False
 
 |   |   |
@@ -6,5 +14,5 @@
 |Kapsam|Kenar|
 |Sürüm|4.7.1|
 |Tür|Çalışma zamanı|
-|Etkilenen API'leri|<ul><li><xref:System.Windows.Controls.Primitives.Popup.StaysOpen?displayProperty=nameWithType></li></ul>|
+|Etkilenen API’ler|<ul><li><xref:System.Windows.Controls.Primitives.Popup.StaysOpen?displayProperty=nameWithType></li></ul>|
 
