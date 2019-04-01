@@ -1,0 +1,61 @@
+items:
+- name: Dinamik Programlama
+  href: index.md
+  items:
+  - name: Yansıma
+    href: reflection.md
+    items:
+    - name: Tür Bilgilerini Görüntüleme
+      href: viewing-type-information.md
+    - name: Yansıma ve Genel Türler
+      href: reflection-and-generic-types.md
+    - name: 'Nasıl yapılır: Yansıma ile Genel Türleri İnceleme ve Örnek Oluşturma'
+      href: how-to-examine-and-instantiate-generic-types-with-reflection.md
+    - name: Yansımayla İlgili Güvenlik Konuları
+      href: security-considerations-for-reflection.md
+    - name: Dinamik Olarak Yükleme ve Türleri Kullanma
+      href: dynamically-loading-and-using-types.md
+    - name: 'Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme'
+      href: how-to-load-assemblies-into-the-reflection-only-context.md
+    - name: Özel Özniteliklere Erişim
+      href: accessing-custom-attributes.md
+    - name: Tam Olarak Nitelenmiş Tür Adlarını Belirtme
+      href: specifying-fully-qualified-type-names.md
+    - name: 'Nasıl yapılır: Yansıma Kullanarak Temsilci Bağlama'
+      href: how-to-hook-up-a-delegate-using-reflection.md
+    - name: Windows Mağazası Uygulamaları için .NET Framework'te Yansıma
+      href: reflection-for-windows-store-apps.md
+  - name: Dinamik Yöntemleri ve Derlemeleri Yayma
+    href: emitting-dynamic-methods-and-assemblies.md
+    items:
+    - name: Yansıma Yaymadaki Güvenlik Sorunları
+      href: security-issues-in-reflection-emit.md
+    - name: 'İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma'
+      href: walkthrough-emitting-code-in-partial-trust-scenarios.md
+    - name: 'Nasıl yapılır: Dinamik Yöntemleri Tanımlama ve Yürütme'
+      href: how-to-define-and-execute-dynamic-methods.md
+    - name: 'Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama'
+      href: how-to-define-a-generic-type-with-reflection-emit.md
+    - name: 'Nasıl yapılır: Yansıma Yayma ile Genel Yöntem Tanımlama'
+      href: how-to-define-a-generic-method-with-reflection-emit.md
+    - name: Dinamik tür oluşturma için toplanabilir derlemeler
+      href: collectible-assemblies.md
+  - name: Dinamik Dil Çalışma Zamanına Genel Bakış
+    href: dynamic-language-runtime-overview.md
+  - name: Dinamik Kaynak Kodu Oluşturma ve Derleme
+    href: dynamic-source-code-generation-and-compilation.md
+    items:
+    - name: CodeDOM'yi Kullanma
+      href: using-the-codedom.md
+    - name: CodeDOM Grafiğinden Kaynak Kodu Oluşturma ve Derleme
+      href: generating-and-compiling-source-code-from-a-codedom-graph.md
+    - name: 'Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma'
+      href: how-to-create-an-xml-documentation-file-using-codedom.md
+    - name: 'Nasıl yapılır: CodeDOM Kullanarak Sınıf Oluşturma'
+      href: how-to-create-a-class-using-codedom.md
+ms.openlocfilehash: 00d24c89f04d5bfb257fa3e7835741190c8fcbdc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471651"

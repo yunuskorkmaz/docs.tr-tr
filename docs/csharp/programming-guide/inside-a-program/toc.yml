@@ -1,0 +1,18 @@
+items:
+- name: C# Programı İçinde
+  href: index.md
+  items:
+  - name: Merhaba Dünya -- İlk Programınız
+    href: hello-world-your-first-program.md
+  - name: C# Programının Genel Yapısı
+    href: general-structure-of-a-csharp-program.md
+  - name: Tanımlayıcı adları
+    href: identifier-names.md
+  - name: C# Kodlama Kuralları
+    href: coding-conventions.md
+ms.openlocfilehash: 1772c8e85b53055cddffa4ffc2cac15f3cd32c77
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471834"

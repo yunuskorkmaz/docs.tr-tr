@@ -1,0 +1,28 @@
+items:
+- name: Authenticode
+  href: index.md
+  items:
+  - name: _AxlGetIssuerPublicKeyHash İşlevi
+    href: axlgetissuerpublickeyhash-function.md
+  - name: _AxlPublicKeyBlobToPublicKeyToken İşlevi
+    href: axlpublickeyblobtopublickeytoken-function.md
+  - name: _AxlRSAKeyValueToPublicKeyToken İşlevi
+    href: axlrsakeyvaluetopublickeytoken-function.md
+  - name: CertFreeAuthenticodeSignerInfo İşlevi
+    href: certfreeauthenticodesignerinfo-function.md
+  - name: CertFreeAuthenticodeTimestamperInfo İşlevi
+    href: certfreeauthenticodetimestamperinfo-function.md
+  - name: CertTimestampAuthenticodeLicense İşlevi
+    href: certtimestampauthenticodelicense-function.md
+  - name: CertVerifyAuthenticodeLicense İşlevi
+    href: certverifyauthenticodelicense-function.md
+  - name: AXL_AUTHENTICODE_SIGNER_INFO Yapısı
+    href: axl-authenticode-signer-info-structure.md
+  - name: AXL_AUTHENTICODE_TIMESTAMPER_INFO Yapısı
+    href: axl-authenticode-timestamper-info-structure.md
+ms.openlocfilehash: 2ef9b3d6a038f9e57375b7c99ab82f00547af726
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471693"

@@ -1,0 +1,57 @@
+items:
+- name: Visual Basic'de Dizeler
+  href: index.md
+  items:
+  - name: Dizelere Giriş
+    href: introduction-to-strings.md
+    items:
+    - name: Dize Temelleri
+      href: string-basics.md
+    - name: Visual Basic'te Dize Düzenleme Yöntemlerinin Türleri
+      href: types-of-string-manipulation-methods.md
+    - name: Nothing ve Dizeler
+      href: nothing-and-strings.md
+    - name: Kültürün Visual Basic'te Dizelere Etkisi
+      href: how-culture-affects-strings.md
+    - name: Ara değerli dizeler
+      href: interpolated-strings.md
+    - name: Sıfır Tabanlı ve Tek Tabanlı Dize Erişimi Karşılaştırması
+      href: zero-based-vs-one-based-string-access.md
+  - name: 'Nasıl yapılır: StringBuilder Kullanarak Dize Oluşturma'
+    href: how-to-create-strings-using-a-stringbuilder.md
+  - name: 'Nasıl yapılır: Dize İçinde Arama'
+    href: how-to-search-within-a-string.md
+  - name: Dizeler ve Diğer Veri Türleri Arasında Dönüştürme
+    href: converting-between-strings-and-other-data-types.md
+    items:
+    - name: 'Nasıl yapılır: Bayt Dizisini Dizeye Dönüştürme'
+      href: how-to-convert-an-array-of-bytes-into-a-string.md
+    - name: 'Nasıl yapılır: Dizeleri Bir Bayt Dizisine Dönüştürme'
+      href: how-to-convert-strings-into-an-array-of-bytes.md
+    - name: 'Nasıl yapılır: Karakter Değerleri Dizisinden Bir Dize Oluşturma'
+      href: how-to-create-a-string-from-an-array-of-char-values.md
+    - name: 'Nasıl yapılır: Onaltılık Dizeleri Sayılara Dönüştürme'
+      href: how-to-convert-hexadecimal-strings-to-numbers.md
+    - name: 'Nasıl yapılır: Bir Dizeyi Karakter Dizilerine Dönüştürme'
+      href: how-to-convert-a-string-to-an-array-of-characters.md
+    - name: 'Nasıl yapılır: Dizelerdeki Karakterlere Erişme'
+      href: how-to-access-characters-in-strings.md
+  - name: Dizeleri Doğrulama
+    href: validating-strings.md
+    items:
+    - name: 'Nasıl yapılır: Dosya Adlarını ve Yollarını Doğrulama'
+      href: how-to-validate-file-names-and-paths.md
+    - name: 'Nasıl yapılır: Tarihleri veya Saatleri Temsil Eden Dizeleri Doğrulama'
+      href: how-to-validate-strings-that-represent-dates-or-times.md
+    - name: Normal İfadeleri MaskedTextBox Denetimi ile Kullanma
+      href: using-regular-expressions-with-the-maskedtextbox-control.md
+    - name: 'İzlenecek yol: Parolaların Karmaşık Olduğunu Doğrulama'
+      href: walkthrough-validating-that-passwords-are-complex.md
+  - name: 'İzlenecek yol: Dize Şifreleme ve Şifresini Çözme'
+    href: walkthrough-encrypting-and-decrypting-strings.md
+ms.openlocfilehash: 2c148e2d34ef032785f1ccd723fb1d8aad136332
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471875"

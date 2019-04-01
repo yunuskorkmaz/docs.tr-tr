@@ -1,0 +1,103 @@
+items:
+- name: Windows Identity Foundation
+  href: index.md
+  items:
+  - name: Windows Identity Foundation 4.5'teki Yenilikler
+    href: whats-new-in-wif.md
+  - name: Windows Identity Foundation 4.5’e Genel Bakış
+    href: wif-overview.md
+    items:
+    - name: Talep Tabanlı Kimlik Modeli
+      href: claims-based-identity-model.md
+    - name: WIF Kullanarak Talep Tabanlı Yetkilendirme
+      href: claims-based-authorization-using-wif.md
+    - name: WIF Talep Programlama Modeli
+      href: wif-claims-programming-model.md
+  - name: WIF Kullanmaya Başlama
+    href: getting-started-with-wif.md
+    items:
+    - name: Talep Kullanan İlk ASP.NET Web Uygulamamı Derleme
+      href: building-my-first-claims-aware-aspnet-web-app.md
+    - name: Talep Kullanan İlk WCF Hizmetimi Derleme
+      href: building-my-first-claims-aware-wcf-service.md
+  - name: WIF Özellikleri
+    href: wif-features.md
+    items:
+    - name: Özel Belirteç İşleyicileri
+      href: custom-token-handlers.md
+    - name: Visual Studio 2012 için Kimlik ve Erişim Aracı
+      href: identity-and-access-tool-for-vs.md
+    - name: WIF Oturum Yönetimi
+      href: wif-session-management.md
+    - name: WIF ve Web Grupları
+      href: wif-and-web-farms.md
+    - name: WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
+      href: wsfederation-authentication-module-overview.md
+    - name: WSTrustChannelFactory ve WSTrustChannel
+      href: wstrustchannelfactory-and-wstrustchannel.md
+  - name: WIF Nasıl Yapılır Dizini
+    href: wif-how-tos-index.md
+    items:
+    - name: 'Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET MVC Web Uygulaması Derleme'
+      href: how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md
+    - name: 'Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET Web Forms Uygulaması Derleme'
+      href: how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md
+    - name: 'Nasıl yapılır: Forms Tabanlı Kimlik Doğrulaması Kullanarak Talep Kullanan ASP.NET Uygulaması Derleme'
+      href: claims-aware-aspnet-app-forms-authentication.md
+    - name: 'Nasıl yapılır: Windows Kimlik Doğrulaması Kullanarak Talep Kullanan ASP.NET Uygulaması Derleme'
+      href: how-to-build-claims-aware-aspnet-app-using-windows-authentication.md
+    - name: 'Nasıl yapılır: WIF İzleme Kullanarak Talep Kullanan Uygulama ve Hizmetlerde Hata Ayıklama'
+      href: how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md
+    - name: 'Nasıl yapılır: WIF Kullanarak Oturum Açmış Durumu Gösterme'
+      href: how-to-display-signed-in-status-using-wif.md
+    - name: 'Nasıl yapılır: WIF İzlemeyi Etkinleştirme'
+      href: how-to-enable-wif-tracing.md
+    - name: 'Nasıl yapılır: Belirteç Yeniden Yürütme Algılamasını Etkinleştirme'
+      href: how-to-enable-token-replay-detection.md
+    - name: 'Nasıl yapılır: WCF Web Hizmeti Uygulaması için WIF Etkinleştirme'
+      href: how-to-enable-wif-for-a-wcf-web-service-application.md
+    - name: 'Nasıl yapılır: Gelen Talepleri Dönüştürme'
+      href: how-to-transform-incoming-claims.md
+  - name: WIF Yönergeleri
+    href: wif-guidelines.md
+    items:
+    - name: WIF 3.5 Kullanılarak Derlenmiş bir Uygulamayı WIF 4.5’e Geçirme Yönergeleri
+      href: guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md
+    - name: WIF 3.5 ile WIF 4.5 Arasında Ad Alanı Eşleme
+      href: namespace-mapping-between-wif-3-5-and-wif-4-5.md
+  - name: WIF Kod Örneği Dizini
+    href: wif-code-sample-index.md
+  - name: WIF Uzantıları
+    href: wif-extensions.md
+    items:
+    - name: JSON Web Belirteci İşleyicisi
+      href: json-web-token-handler.md
+      items:
+      - name: JSON Web Belirteci İşleyicisi Paketini İndirme
+        href: downloading-the-json-web-token-handler-package.md
+      - name: API Başvurusu
+        href: json-web-token-handler-api-reference.md
+    - name: Yayınlayıcı Adı Kaydını Doğrulama
+      href: validating-issuer-name-registry.md
+      items:
+      - name: Yayınlayıcı Adı Kaydı Paketini Doğrulamayı İndirme
+        href: downloading-the-validating-issuer-name-registry-package.md
+      - name: API Başvurusu
+        href: validating-issuer-name-registry-api-reference.md
+  - name: WIF API Başvurusu
+    href: wif-api-reference.md
+  - name: WIF Yapılandırma Başvurusu
+    href: wif-configuration-reference.md
+    items:
+    - name: WIF Yapılandırma Şeması Kuralları
+      href: wif-configuration-schema-conventions.md
+- name: Güvenlik Değişiklikleri
+  href: security-changes.md
+- name: Yönetilmeyen Kod İçin Güvenli Kodlama Yönergeleri
+  href: secure-coding-guidelines-for-unmanaged-code.md
+ms.openlocfilehash: 4f8faea87ecbc2f3cc379aa9ed2eb7c912387e11
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471617"

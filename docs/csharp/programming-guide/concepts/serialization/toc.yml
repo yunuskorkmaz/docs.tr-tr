@@ -1,0 +1,16 @@
+items:
+- name: Serileştirme (C# )
+  href: index.md
+  items:
+  - name: 'Nasıl yapılır: Nesne Verilerini bir XML Dosyasına Yazma'
+    href: how-to-write-object-data-to-an-xml-file.md
+  - name: 'Nasıl yapılır: Nesne Verilerini bir XML Dosyasından Okuma'
+    href: how-to-read-object-data-from-an-xml-file.md
+  - name: 'İzlenecek yol: Visual Studio’da Bir Nesneyi Kalıcı Kılma'
+    href: walkthrough-persisting-an-object-in-visual-studio.md
+ms.openlocfilehash: ccf7c795b437ff2c4046b6005ec7b05528aa884f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471786"

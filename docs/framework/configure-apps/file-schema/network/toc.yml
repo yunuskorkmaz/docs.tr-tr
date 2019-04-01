@@ -1,0 +1,106 @@
+items:
+- name: Ağ Ayarları Şeması
+  href: index.md
+  items:
+  - name: <system.Net> Öğesi (Ağ Ayarları)
+    href: system-net-element-network-settings.md
+    items:
+    - name: <authenticationModules> Öğesi (Ağ Ayarları)
+      href: authenticationmodules-element-network-settings.md
+      items:
+      - name: authenticationModules için <add> Öğesi (Ağ Ayarları)
+        href: add-element-for-authenticationmodules-network-settings.md
+      - name: authenticationModules için <remove> Öğesi (Ağ Ayarları)
+        href: remove-element-for-authenticationmodules-network-settings.md
+      - name: authenticationModules için <clear> Öğesi (Ağ Ayarları)
+        href: clear-element-for-authenticationmodules-network-settings.md
+    - name: <connectionManagement> Öğesi (Ağ Ayarları)
+      href: connectionmanagement-element-network-settings.md
+      items:
+      - name: connectionManagement için <add> Öğesi (Ağ Ayarları)
+        href: add-element-for-connectionmanagement-network-settings.md
+      - name: connectionManagement için <clear> Öğesi (Ağ Ayarları)
+        href: clear-element-for-connectionmanagement-network-settings.md
+      - name: connectionManagement için <remove> Öğesi (Ağ Ayarları)
+        href: remove-element-for-connectionmanagement-network-settings.md
+    - name: <defaultProxy> Öğesi (Ağ Ayarları)
+      href: defaultproxy-element-network-settings.md
+      items:
+      - name: <bypasslist> Öğesi (Ağ Ayarları)
+        href: bypasslist-element-network-settings.md
+        items:
+        - name: bypasslist için <add> Öğesi (Ağ Ayarları)
+          href: add-element-for-bypasslist-network-settings.md
+        - name: bypasslist için <clear> Öğesi (Ağ Ayarları)
+          href: clear-element-for-bypasslist-network-settings.md
+        - name: bypasslist için <remove> Öğesi (Ağ Ayarları)
+          href: remove-element-for-bypasslist-network-settings.md
+      - name: <module> Öğesi (Ağ Ayarları)
+        href: module-element-network-settings.md
+      - name: <proxy> Öğesi (Ağ Ayarları)
+        href: proxy-element-network-settings.md
+    - name: <mailSettings> Öğesi (Ağ Ayarları)
+      href: mailsettings-element-network-settings.md
+      items:
+      - name: <smtp> Öğesi (Ağ Ayarları)
+        href: smtp-element-network-settings.md
+        items:
+        - name: <specifiedPickupDirectory> Öğesi (Ağ Ayarları)
+          href: specifiedpickupdirectory-element-network-settings.md
+        - name: <network> Öğesi (Ağ Ayarları)
+          href: network-element-network-settings.md
+    - name: <requestCaching> Öğesi (Ağ Ayarları)
+      href: requestcaching-element-network-settings.md
+      items:
+      - name: <defaultHttpCachePolicy> Öğesi (Ağ Ayarları)
+        href: defaulthttpcachepolicy-element-network-settings.md
+      - name: <defaultFtpCachePolicy> Öğesi (Ağ Ayarları)
+        href: defaultftpcachepolicy-element-network-settings.md
+    - name: <settings> Öğesi (Ağ Ayarları)
+      href: settings-element-network-settings.md
+      items:
+      - name: <httpWebRequest> Öğesi (Ağ Ayarları)
+        href: httpwebrequest-element-network-settings.md
+      - name: <ipv6> Öğesi (Ağ Ayarları)
+        href: ipv6-element-network-settings.md
+      - name: <performanceCounter> Öğesi (Ağ Ayarları)
+        href: performancecounter-element-network-settings.md
+      - name: <servicePointManager> Öğesi (Ağ Ayarları)
+        href: servicepointmanager-element-network-settings.md
+      - name: <socket> Öğesi (Ağ Ayarları)
+        href: socket-element-network-settings.md
+      - name: <webProxyScript> Öğesi (Ağ Ayarları)
+        href: webproxyscript-element-network-settings.md
+      - name: <httpListener> Öğesi (Ağ Ayarları)
+        href: httplistener-element-network-settings.md
+    - name: <webRequestModules> Öğesi (Ağ Ayarları)
+      href: webrequestmodules-element-network-settings.md
+      items:
+      - name: webRequestModules için <add> Öğesi (Ağ Ayarları)
+        href: add-element-for-webrequestmodules-network-settings.md
+      - name: webRequestModules için <remove> Öğesi (Ağ Ayarları)
+        href: remove-element-for-webrequestmodules-network-settings.md
+      - name: webRequestModules için <clear> Öğesi (Ağ Ayarları)
+        href: clear-element-for-webrequestmodules-network-settings.md
+  - name: <Uri> Öğesi (Uri Ayarları)
+    href: uri-element-uri-settings.md
+    items:
+    - name: <idn> Öğesi (Uri Ayarları)
+      href: idn-element-uri-settings.md
+    - name: <iriParsing> Öğesi (Uri Ayarları)
+      href: iriparsing-element-uri-settings.md
+    - name: <schemeSettings> Öğesi (Uri Ayarları)
+      href: schemesettings-element-uri-settings.md
+      items:
+      - name: schemeSettings için <add> Öğesi (Uri Ayarları)
+        href: add-element-for-schemesettings-uri-settings.md
+      - name: schemeSettings için <clear> Öğesi (Uri Ayarları)
+        href: clear-element-for-schemesettings-uri-settings.md
+      - name: schemeSettings için <remove> Öğesi (Uri Ayarları)
+        href: remove-element-for-schemesettings-uri-settings.md
+ms.openlocfilehash: fb6762a20d1c5210e860b9720a62c200f3109ddd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471717"

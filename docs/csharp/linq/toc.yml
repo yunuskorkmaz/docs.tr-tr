@@ -1,0 +1,48 @@
+items:
+- name: Dil ile Tümleşik Sorgu (LINQ)
+  href: index.md
+  items:
+  - name: Sorgu ifadesi temelleri
+    href: query-expression-basics.md
+  - name: C# üzerinde LINQ
+    href: linq-in-csharp.md
+  - name: C# içinde LINQ sorguları yazma
+    href: write-linq-queries.md
+  - name: Nesneler koleksiyonunu sorgulama
+    href: query-a-collection-of-objects.md
+  - name: Yöntemden sorgu döndürme
+    href: return-a-query-from-a-method.md
+  - name: Bellekte sorgunun sonuçlarını depolama
+    href: store-the-results-of-a-query-in-memory.md
+  - name: Sorgu sonuçlarını gruplandırma
+    href: group-query-results.md
+  - name: İç içe geçmiş grup oluşturma
+    href: create-a-nested-group.md
+  - name: Gruplandırma işleminde alt sorgu gerçekleştirme
+    href: perform-a-subquery-on-a-grouping-operation.md
+  - name: Sonuçları bitişik anahtarlara göre gruplama
+    href: group-results-by-contiguous-keys.md
+  - name: Çalışma zamanında koşul filtrelerini dinamik olarak belirtme
+    href: dynamically-specify-predicate-filters-at-runtime.md
+  - name: İç birleşimler gerçekleştirme
+    href: perform-inner-joins.md
+  - name: Gruplanmış birleşimler gerçekleştirme
+    href: perform-grouped-joins.md
+  - name: Sol dış birleşimler gerçekleştirme
+    href: perform-left-outer-joins.md
+  - name: Join yan tümcesinin sonuçlarını sıralama
+    href: order-the-results-of-a-join-clause.md
+  - name: Bileşik anahtarlar kullanarak birleştirme
+    href: join-by-using-composite-keys.md
+  - name: Özel birleştirme işlemleri gerçekleştirme
+    href: perform-custom-join-operations.md
+  - name: Sorgu ifadelerinde boş değerler işleme
+    href: handle-null-values-in-query-expressions.md
+  - name: Sorgu ifadelerinde özel durumları işleme
+    href: handle-exceptions-in-query-expressions.md
+ms.openlocfilehash: 1bc1fb625c7627abe63db2b69071df1ef1b7d11c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471614"

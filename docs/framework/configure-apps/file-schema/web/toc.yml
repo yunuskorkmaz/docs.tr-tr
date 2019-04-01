@@ -1,0 +1,15 @@
+items:
+- name: Web Ayarları Şeması
+  href: index.md
+  items:
+  - name: <system.web> Öğesi (Web Ayarları)
+    href: system-web-element-web-settings.md
+    items:
+    - name: <applicationPool> Öğesi (Web Ayarları)
+      href: applicationpool-element-web-settings.md
+ms.openlocfilehash: d47abec64d32f6b285c4d3494c169bc19114063b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471625"

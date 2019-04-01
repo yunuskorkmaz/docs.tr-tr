@@ -1,0 +1,42 @@
+items:
+- name: Bildirilen Öğeler
+  href: index.md
+  items:
+  - name: Bildirilen Öğe Adları
+    href: declared-element-names.md
+  - name: Bildirilen Öğe Özellikleri
+    href: declared-element-characteristics.md
+    items:
+    - name: Ömür
+      href: lifetime.md
+    - name: Kapsam
+      href: scope.md
+      items:
+      - name: 'Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme'
+        href: how-to-control-the-scope-of-a-variable.md
+      - name: Tür Yükseltme
+        href: type-promotion.md
+    - name: Erişim Düzeyleri
+      href: access-levels.md
+      items:
+      - name: 'Nasıl yapılır: Bir Değişkenin Kullanılabilirliğini Denetleme'
+        href: how-to-control-the-availability-of-a-variable.md
+    - name: Bildirilmiş Öğelere Başvurular
+      href: references-to-declared-elements.md
+    - name: Gölge Kullanım
+      href: shadowing.md
+      items:
+      - name: Gölgeleme ve Geçersiz Kılma Arasındaki Farklar
+        href: differences-between-shadowing-and-overriding.md
+      - name: 'Nasıl yapılır: Değişkeninizle Aynı Adı Taşıyan Bir Değişkeni Gizleme'
+        href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
+      - name: 'Nasıl yapılır: Devralınmış Değişkeni Gizleme'
+        href: how-to-hide-an-inherited-variable.md
+      - name: 'Nasıl yapılır: Türetilmiş Sınıf Tarafından Gizlenen Bir Değişkene Erişme'
+        href: how-to-access-a-variable-hidden-by-a-derived-class.md
+ms.openlocfilehash: d747436df2e7ad7187e39808ea19d64ac1b082fc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471647"

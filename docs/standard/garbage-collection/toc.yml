@@ -1,0 +1,38 @@
+items:
+- name: Bellek Yönetimi ve Atık Toplama
+  href: memory-management-and-gc.md
+  items:
+  - name: Yönetilmeyen Kaynakları Temizleme
+    href: unmanaged.md
+    items:
+    - name: Dispose Yöntemi Uygulama
+      href: implementing-dispose.md
+    - name: IDisposable Uygulayan Nesneler Kullanma
+      href: using-objects.md
+  - name: Çöp Toplama
+    href: index.md
+    items:
+    - name: Çöp Toplamanın Temelleri
+      href: fundamentals.md
+    - name: Büyük Nesne Yığını
+      href: large-object-heap.md
+    - name: Çöp Toplama ve Performans
+      href: performance.md
+    - name: Uyarılmış Koleksiyonlar
+      href: induced.md
+    - name: Gecikme Modları
+      href: latency.md
+    - name: Paylaşılan Web Barındırma için İyileştirme
+      href: optimization-for-shared-web-hosting.md
+    - name: Çöp Toplama Bildirimleri
+      href: notifications.md
+    - name: Uygulama Etki Alanı Kaynak İzleme
+      href: app-domain-resource-monitoring.md
+    - name: Zayıf Başvurular
+      href: weak-references.md
+ms.openlocfilehash: ad426c53df40be9a5222bd0e5a6292d8f1ec8e30
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471998"

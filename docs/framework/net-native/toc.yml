@@ -1,0 +1,87 @@
+items:
+- name: .NET Yerel ile Uygulama Derleme
+  href: index.md
+  items:
+  - name: .NET Yerel ve Derleme
+    href: net-native-and-compilation.md
+  - name: Başlarken
+    href: getting-started-with-net-native.md
+    items:
+    - name: 'Örnek: Dinamik Programlama Sorunlarını Giderme'
+      href: example-troubleshooting-dynamic-programming.md
+    - name: 'Örnek: Veri Bağlama Sırasında Özel Durum İşleme'
+      href: example-handling-exceptions-when-binding-data.md
+    - name: .NET Native Uygulamalarında Çalışma Zamanı Özel Durumları
+      href: runtime-exceptions-in-net-native-apps.md
+  - name: .NET Yerel ile Başlangıç İyileştirmesini Hesaplama
+    href: measuring-startup-improvement-with-net-native.md
+  - name: Yansıma ve .NET Yerel
+    href: reflection-and-net-native.md
+    items:
+    - name: Yansıma kullanan API'ler
+      href: apis-that-rely-on-reflection.md
+    - name: Yansıma API'si Başvurusu
+      href: net-native-reflection-api-reference.md
+      items:
+      - name: MissingInteropDataException Sınıfı
+        href: missinginteropdataexception-class-net-native.md
+      - name: MissingMetadataException Sınıfı
+        href: missingmetadataexception-class-net-native.md
+      - name: MissingRuntimeArtifactException Sınıfı
+        href: missingruntimeartifactexception-class-net-native.md
+    - name: Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu
+      href: runtime-directives-rd-xml-configuration-file-reference.md
+      items:
+      - name: Çalışma Zamanı Yönerge Öğeleri
+        href: runtime-directive-elements.md
+        items:
+        - name: <Application> Öğesi
+          href: application-element-net-native.md
+        - name: <Assembly> Öğesi
+          href: assembly-element-net-native.md
+        - name: <AttributeImplies> Öğesi
+          href: attributeimplies-element-net-native.md
+        - name: <Directives> Öğesi
+          href: directives-element-net-native.md
+        - name: <Event> Öğesi
+          href: event-element-net-native.md
+        - name: <Field> Öğesi
+          href: field-element-net-native.md
+        - name: <GenericParameter> Öğesi
+          href: genericparameter-element-net-native.md
+        - name: <ImpliesType> Öğesi
+          href: impliestype-element-net-native.md
+        - name: <Library> Öğesi
+          href: library-element-net-native.md
+        - name: <Method> Öğesi
+          href: method-element-net-native.md
+        - name: <MethodInstantiation> Öğesi
+          href: methodinstantiation-element-net-native.md
+        - name: <Namespace> Öğesi
+          href: namespace-element-net-native.md
+        - name: <Parameter> Öğesi
+          href: parameter-element-net-native.md
+        - name: <Property> Öğesi
+          href: property-element-net-native.md
+        - name: <Subtypes> Öğesi
+          href: subtypes-element-net-native.md
+        - name: <Type> Öğesi
+          href: type-element-net-native.md
+        - name: <TypeInstantiation> Öğesi
+          href: typeinstantiation-element-net-native.md
+        - name: <TypeParameter> Öğesi
+          href: typeparameter-element-net-native.md
+      - name: Çalışma Zamanı Yönerge İlkesi Ayarları
+        href: runtime-directive-policy-settings.md
+  - name: Serileştirme ve Meta Veriler
+    href: serialization-and-metadata.md
+  - name: Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
+    href: migrating-your-windows-store-app-to-net-native.md
+  - name: .NET Yerel Genel Sorun Giderme
+    href: net-native-general-troubleshooting.md
+ms.openlocfilehash: 85d8306c93d50cc595fcd3bcbf9ee404a84e7ab2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471750"

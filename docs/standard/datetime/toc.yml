@@ -1,0 +1,48 @@
+items:
+- name: Tarihler, saatler ve saat dilimleri
+  href: index.md
+  items:
+  - name: Saat dilimine genel bakış
+    href: time-zone-overview.md
+  - name: 'DateTime, DateTimeOffset, TimeSpan ve TimeZoneInfo arasında seçim yapma '
+    href: choosing-between-datetime.md
+  - name: Yerel sistemde tanımlanan saat dilimlerini bulma
+    href: finding-the-time-zones-on-local-system.md
+  - name: 'Nasıl yapılır: Bir bilgisayarda mevcut saat dilimlerini numaralandırma'
+    href: enumerate-time-zones.md
+  - name: 'Nasıl yapılır: Ön tanımlı UTC ve yerel saat dilimi nesnelerine erişim'
+    href: access-utc-and-local.md
+  - name: 'Nasıl yapılır: Bir TimeZoneInfo nesnesinin örneğini oluşturma'
+    href: instantiate-time-zone-info.md
+  - name: Bir DateTimeOffset nesnesinin örneğini oluşturma
+    href: instantiating-a-datetimeoffset-object.md
+  - name: 'Nasıl yapılır: Ayarlama kuralları olmadan saat dilimleri oluşturma'
+    href: create-time-zones-without-adjustment-rules.md
+  - name: 'Nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma'
+    href: create-time-zones-with-adjustment-rules.md
+  - name: Saat dilimlerini kaydetme ve geri yükleme
+    href: saving-and-restoring-time-zones.md
+  - name: 'Nasıl yapılır: Saat dilimlerini eklenmiş kaynağa kaydetme'
+    href: save-time-zones-to-an-embedded-resource.md
+  - name: 'Nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme'
+    href: restore-time-zones-from-an-embedded-resource.md
+  - name: Takvimlerle çalışma
+    href: working-with-calendars.md
+  - name: Tarih ve saatlerle aritmetik işlemler gerçekleştirme
+    href: performing-arithmetic-operations.md
+  - name: 'Nasıl yapılır: Tarih ve saat aritmetiğinde saat dilimlerini kullanma'
+    href: use-time-zones-in-arithmetic.md
+  - name: DateTime ve DateTimeOffset arasında dönüştürme
+    href: converting-between-datetime-and-offset.md
+  - name: Saatleri saat dilimleri arasında dönüştürme
+    href: converting-between-time-zones.md
+  - name: 'Nasıl yapılır: Belirsiz saatleri çözme'
+    href: resolve-ambiguous-times.md
+  - name: 'Nasıl yapılır: Kullanıcıların belirsiz saatleri çözmelerine izin verme'
+    href: let-users-resolve-ambiguous-times.md
+ms.openlocfilehash: 302dc3e44cacb3148ae0e246220721ccfda44d98
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471753"

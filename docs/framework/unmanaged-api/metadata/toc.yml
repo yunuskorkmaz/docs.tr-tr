@@ -1,0 +1,598 @@
+items:
+- name: Meta Veriler
+  href: index.md
+  items:
+  - name: Meta Veri Arabirimleri
+    href: metadata-interfaces.md
+    items:
+    - name: ICeeGen Arabirimi
+      href: iceegen-interface.md
+      items:
+      - name: AddSectionReloc Yöntemi
+        href: iceegen-addsectionreloc-method.md
+      - name: AllocateMethodBuffer Yöntemi
+        href: iceegen-allocatemethodbuffer-method.md
+      - name: ComputePointer Yöntemi
+        href: iceegen-computepointer-method.md
+      - name: EmitString Yöntemi
+        href: iceegen-emitstring-method.md
+      - name: GenerateCeeFile Yöntemi
+        href: iceegen-generateceefile-method.md
+      - name: GenerateCeeMemoryImage Yöntemi
+        href: iceegen-generateceememoryimage-method.md
+      - name: GetIlSection Yöntemi
+        href: iceegen-getilsection-method.md
+      - name: GetIMapTokenIface Yöntemi
+        href: iceegen-getimaptokeniface-method.md
+      - name: GetMethodBuffer Yöntemi
+        href: iceegen-getmethodbuffer-method.md
+      - name: GetSectionBlock Yöntemi
+        href: iceegen-getsectionblock-method.md
+      - name: GetSectionCreate Yöntemi
+        href: iceegen-getsectioncreate-method.md
+      - name: GetSectionDataLen Yöntemi
+        href: iceegen-getsectiondatalen-method.md
+      - name: GetString Yöntemi
+        href: iceegen-getstring-method.md
+      - name: GetStringSection Yöntemi
+        href: iceegen-getstringsection-method.md
+      - name: TruncateSection Yöntemi
+        href: iceegen-truncatesection-method.md
+    - name: IHostFilter Arabirimi
+      href: ihostfilter-interface.md
+      items:
+      - name: MarkToken Yöntemi
+        href: ihostfilter-marktoken-method.md
+    - name: IMapToken Arabirimi
+      href: imaptoken-interface.md
+      items:
+      - name: Map Yöntemi
+        href: imaptoken-map-method.md
+    - name: IMetaDataAssemblyEmit Arabirimi
+      href: imetadataassemblyemit-interface.md
+      items:
+      - name: DefineAssembly Yöntemi
+        href: imetadataassemblyemit-defineassembly-method.md
+      - name: DefineAssemblyRef Yöntemi
+        href: imetadataassemblyemit-defineassemblyref-method.md
+      - name: DefineExportedType Yöntemi
+        href: imetadataassemblyemit-defineexportedtype-method.md
+      - name: DefineFile Yöntemi
+        href: imetadataassemblyemit-definefile-method.md
+      - name: DefineManifestResource Yöntemi
+        href: imetadataassemblyemit-definemanifestresource-method.md
+      - name: SetAssemblyProps Yöntemi
+        href: imetadataassemblyemit-setassemblyprops-method.md
+      - name: SetAssemblyRefProps Yöntemi
+        href: imetadataassemblyemit-setassemblyrefprops-method.md
+      - name: SetExportedTypeProps Yöntemi
+        href: imetadataassemblyemit-setexportedtypeprops-method.md
+      - name: SetFileProps Yöntemi
+        href: imetadataassemblyemit-setfileprops-method.md
+      - name: SetManifestResourceProps Yöntemi
+        href: imetadataassemblyemit-setmanifestresourceprops-method.md
+    - name: IMetaDataAssemblyImport Arabirimi
+      href: imetadataassemblyimport-interface.md
+      items:
+      - name: CloseEnum Yöntemi
+        href: imetadataassemblyimport-closeenum-method.md
+      - name: EnumAssemblyRefs Yöntemi
+        href: imetadataassemblyimport-enumassemblyrefs-method.md
+      - name: EnumExportedTypes Yöntemi
+        href: imetadataassemblyimport-enumexportedtypes-method.md
+      - name: EnumFiles Yöntemi
+        href: imetadataassemblyimport-enumfiles-method.md
+      - name: EnumManifestResources Yöntemi
+        href: imetadataassemblyimport-enummanifestresources-method.md
+      - name: FindAssembliesByName Yöntemi
+        href: imetadataassemblyimport-findassembliesbyname-method.md
+      - name: FindExportedTypeByName Yöntemi
+        href: imetadataassemblyimport-findexportedtypebyname-method.md
+      - name: FindManifestResourceByName Yöntemi
+        href: imetadataassemblyimport-findmanifestresourcebyname-method.md
+      - name: GetAssemblyFromScope Yöntemi
+        href: imetadataassemblyimport-getassemblyfromscope-method.md
+      - name: GetAssemblyProps Yöntemi
+        href: imetadataassemblyimport-getassemblyprops-method.md
+      - name: GetAssemblyRefProps Yöntemi
+        href: imetadataassemblyimport-getassemblyrefprops-method.md
+      - name: GetExportedTypeProps Yöntemi
+        href: imetadataassemblyimport-getexportedtypeprops-method.md
+      - name: GetFileProps Yöntemi
+        href: imetadataassemblyimport-getfileprops-method.md
+      - name: GetManifestResourceProps Yöntemi
+        href: imetadataassemblyimport-getmanifestresourceprops-method.md
+    - name: IMetaDataConverter Arabirimi
+      href: imetadataconverter-interface.md
+      items:
+      - name: GetMetaDataFromTypeInfo Yöntemi
+        href: imetadataconverter-getmetadatafromtypeinfo-method.md
+      - name: GetMetaDataFromTypeLib Yöntemi
+        href: imetadataconverter-getmetadatafromtypelib-method.md
+      - name: GetTypeLibFromMetaData Yöntemi
+        href: imetadataconverter-gettypelibfrommetadata-method.md
+    - name: IMetaDataDispenser Arabirimi
+      href: imetadatadispenser-interface.md
+      items:
+      - name: DefineScope Yöntemi
+        href: imetadatadispenser-definescope-method.md
+      - name: OpenScope Yöntemi
+        href: imetadatadispenser-openscope-method.md
+      - name: OpenScopeOnMemory Yöntemi
+        href: imetadatadispenser-openscopeonmemory-method.md
+    - name: IMetaDataDispenserEx Arabirimi
+      href: imetadatadispenserex-interface.md
+      items:
+      - name: FindAssembly Yöntemi
+        href: imetadatadispenserex-findassembly-method.md
+      - name: FindAssemblyModule Yöntemi
+        href: imetadatadispenserex-findassemblymodule-method.md
+      - name: GetCORSystemDirectory Yöntemi
+        href: imetadatadispenserex-getcorsystemdirectory-method.md
+      - name: GetOption Yöntemi
+        href: imetadatadispenserex-getoption-method.md
+      - name: OpenScopeOnITypeInfo Yöntemi
+        href: imetadatadispenserex-openscopeonitypeinfo-method.md
+      - name: SetOption Yöntemi
+        href: imetadatadispenserex-setoption-method.md
+    - name: IMetaDataEmit Arabirimi
+      href: imetadataemit-interface.md
+      items:
+      - name: ApplyEditAndContinue Yöntemi
+        href: imetadataemit-applyeditandcontinue-method.md
+      - name: DefineCustomAttribute Yöntemi
+        href: imetadataemit-definecustomattribute-method.md
+      - name: DefineEvent Yöntemi
+        href: imetadataemit-defineevent-method.md
+      - name: DefineField Yöntemi
+        href: imetadataemit-definefield-method.md
+      - name: DefineImportMember Yöntemi
+        href: imetadataemit-defineimportmember-method.md
+      - name: DefineImportType Yöntemi
+        href: imetadataemit-defineimporttype-method.md
+      - name: DefineMemberRef Yöntemi
+        href: imetadataemit-definememberref-method.md
+      - name: DefineMethod Yöntemi
+        href: imetadataemit-definemethod-method.md
+      - name: DefineMethodImpl Yöntemi
+        href: imetadataemit-definemethodimpl-method.md
+      - name: DefineModuleRef Yöntemi
+        href: imetadataemit-definemoduleref-method.md
+      - name: DefineNestedType Yöntemi
+        href: imetadataemit-definenestedtype-method.md
+      - name: DefineParam Yöntemi
+        href: imetadataemit-defineparam-method.md
+      - name: DefinePermissionSet Yöntemi
+        href: imetadataemit-definepermissionset-method.md
+      - name: DefinePinvokeMap Yöntemi
+        href: imetadataemit-definepinvokemap-method.md
+      - name: DefineProperty Yöntemi
+        href: imetadataemit-defineproperty-method.md
+      - name: DefineSecurityAttributeSet Yöntemi
+        href: imetadataemit-definesecurityattributeset-method.md
+      - name: DefineTypeDef Yöntemi
+        href: imetadataemit-definetypedef-method.md
+      - name: DefineTypeRefByName Yöntemi
+        href: imetadataemit-definetyperefbyname-method.md
+      - name: DefineUserString Yöntemi
+        href: imetadataemit-defineuserstring-method.md
+      - name: DeleteClassLayout Yöntemi
+        href: imetadataemit-deleteclasslayout-method.md
+      - name: DeleteFieldMarshal Yöntemi
+        href: imetadataemit-deletefieldmarshal-method.md
+      - name: DeletePinvokeMap Yöntemi
+        href: imetadataemit-deletepinvokemap-method.md
+      - name: DeleteToken Yöntemi
+        href: imetadataemit-deletetoken-method.md
+      - name: GetSaveSize Yöntemi
+        href: imetadataemit-getsavesize-method.md
+      - name: GetTokenFromSig Yöntemi
+        href: imetadataemit-gettokenfromsig-method.md
+      - name: GetTokenFromTypeSpec Yöntemi
+        href: imetadataemit-gettokenfromtypespec-method.md
+      - name: Merge Yöntemi
+        href: imetadataemit-merge-method.md
+      - name: MergeEnd Yöntemi
+        href: imetadataemit-mergeend-method.md
+      - name: Save Yöntemi
+        href: imetadataemit-save-method.md
+      - name: SaveToMemory Yöntemi
+        href: imetadataemit-savetomemory-method.md
+      - name: SaveToStream Yöntemi
+        href: imetadataemit-savetostream-method.md
+      - name: SetClassLayout Yöntemi
+        href: imetadataemit-setclasslayout-method.md
+      - name: SetCustomAttributeValue Yöntemi
+        href: imetadataemit-setcustomattributevalue-method.md
+      - name: SetEventProps Yöntemi
+        href: imetadataemit-seteventprops-method.md
+      - name: SetFieldMarshal Yöntemi
+        href: imetadataemit-setfieldmarshal-method.md
+      - name: SetFieldProps Yöntemi
+        href: imetadataemit-setfieldprops-method.md
+      - name: SetFieldRVA Yöntemi
+        href: imetadataemit-setfieldrva-method.md
+      - name: SetHandler Yöntemi
+        href: imetadataemit-sethandler-method.md
+      - name: SetMethodImplFlags Yöntemi
+        href: imetadataemit-setmethodimplflags-method.md
+      - name: SetMethodProps Yöntemi
+        href: imetadataemit-setmethodprops-method.md
+      - name: SetModuleProps Yöntemi
+        href: imetadataemit-setmoduleprops-method.md
+      - name: SetParamProps Yöntemi
+        href: imetadataemit-setparamprops-method.md
+      - name: SetParent Yöntemi
+        href: imetadataemit-setparent-method.md
+      - name: SetPermissionSetProps Yöntemi
+        href: imetadataemit-setpermissionsetprops-method.md
+      - name: SetPinvokeMap Yöntemi
+        href: imetadataemit-setpinvokemap-method.md
+      - name: SetPropertyProps Yöntemi
+        href: imetadataemit-setpropertyprops-method.md
+      - name: SetRVA Yöntemi
+        href: imetadataemit-setrva-method.md
+      - name: SetTypeDefProps Yöntemi
+        href: imetadataemit-settypedefprops-method.md
+      - name: TranslateSigWithScope Yöntemi
+        href: imetadataemit-translatesigwithscope-method.md
+    - name: IMetaDataEmit2 Arabirimi
+      href: imetadataemit2-interface.md
+      items:
+      - name: DefineGenericParam Yöntemi
+        href: imetadataemit2-definegenericparam-method.md
+      - name: DefineMethodSpec Yöntemi
+        href: imetadataemit2-definemethodspec-method.md
+      - name: GetDeltaSaveSize Yöntemi
+        href: imetadataemit2-getdeltasavesize-method.md
+      - name: ResetENCLog Yöntemi
+        href: imetadataemit2-resetenclog-method.md
+      - name: SaveDelta Yöntemi
+        href: imetadataemit2-savedelta-method.md
+      - name: SaveDeltaToMemory Yöntemi
+        href: imetadataemit2-savedeltatomemory-method.md
+      - name: SaveDeltaToStream Yöntemi
+        href: imetadataemit2-savedeltatostream-method.md
+      - name: SetGenericParamProps Yöntemi
+        href: imetadataemit2-setgenericparamprops-method.md
+    - name: IMetaDataError Arabirimi
+      href: imetadataerror-interface.md
+      items:
+      - name: OnError Yöntemi
+        href: imetadataerror-onerror-method.md
+    - name: IMetaDataFilter Arabirimi
+      href: imetadatafilter-interface.md
+      items:
+      - name: IsTokenMarked Yöntemi
+        href: imetadatafilter-istokenmarked-method.md
+      - name: MarkToken Yöntemi
+        href: imetadatafilter-marktoken-method.md
+      - name: UnmarkAll Yöntemi
+        href: imetadatafilter-unmarkall-method.md
+    - name: IMetaDataImport Arabirimi
+      href: imetadataimport-interface.md
+      items:
+      - name: CloseEnum Yöntemi
+        href: imetadataimport-closeenum-method.md
+      - name: CountEnum Yöntemi
+        href: imetadataimport-countenum-method.md
+      - name: EnumCustomAttributes Yöntemi
+        href: imetadataimport-enumcustomattributes-method.md
+      - name: EnumEvents Yöntemi
+        href: imetadataimport-enumevents-method.md
+      - name: EnumFields Yöntemi
+        href: imetadataimport-enumfields-method.md
+      - name: EnumFieldsWithName Yöntemi
+        href: imetadataimport-enumfieldswithname-method.md
+      - name: EnumInterfaceImpls Yöntemi
+        href: imetadataimport-enuminterfaceimpls-method.md
+      - name: EnumMemberRefs Yöntemi
+        href: imetadataimport-enummemberrefs-method.md
+      - name: EnumMembers Yöntemi
+        href: imetadataimport-enummembers-method.md
+      - name: EnumMembersWithName Yöntemi
+        href: imetadataimport-enummemberswithname-method.md
+      - name: EnumMethodImpls Yöntemi
+        href: imetadataimport-enummethodimpls-method.md
+      - name: EnumMethods Yöntemi
+        href: imetadataimport-enummethods-method.md
+      - name: EnumMethodSemantics Yöntemi
+        href: imetadataimport-enummethodsemantics-method.md
+      - name: EnumMethodsWithName Yöntemi
+        href: imetadataimport-enummethodswithname-method.md
+      - name: EnumModuleRefs Yöntemi
+        href: imetadataimport-enummodulerefs-method.md
+      - name: EnumParams Yöntemi
+        href: imetadataimport-enumparams-method.md
+      - name: EnumPermissionSets Yöntemi
+        href: imetadataimport-enumpermissionsets-method.md
+      - name: EnumProperties Yöntemi
+        href: imetadataimport-enumproperties-method.md
+      - name: EnumSignatures Yöntemi
+        href: imetadataimport-enumsignatures-method.md
+      - name: EnumTypeDefs Yöntemi
+        href: imetadataimport-enumtypedefs-method.md
+      - name: EnumTypeRefs Yöntemi
+        href: imetadataimport-enumtyperefs-method.md
+      - name: EnumTypeSpecs Yöntemi
+        href: imetadataimport-enumtypespecs-method.md
+      - name: EnumUnresolvedMethods Yöntemi
+        href: imetadataimport-enumunresolvedmethods-method.md
+      - name: EnumUserStrings Yöntemi
+        href: imetadataimport-enumuserstrings-method.md
+      - name: FindField Yöntemi
+        href: imetadataimport-findfield-method.md
+      - name: FindMember Yöntemi
+        href: imetadataimport-findmember-method.md
+      - name: FindMemberRef Yöntemi
+        href: imetadataimport-findmemberref-method.md
+      - name: FindMethod Yöntemi
+        href: imetadataimport-findmethod-method.md
+      - name: FindTypeDefByName Yöntemi
+        href: imetadataimport-findtypedefbyname-method.md
+      - name: FindTypeRef Yöntemi
+        href: imetadataimport-findtyperef-method.md
+      - name: GetClassLayout Yöntemi
+        href: imetadataimport-getclasslayout-method.md
+      - name: GetCustomAttributeByName Yöntemi
+        href: imetadataimport-getcustomattributebyname-method.md
+      - name: GetCustomAttributeProps Yöntemi
+        href: imetadataimport-getcustomattributeprops-method.md
+      - name: GetEventProps Yöntemi
+        href: imetadataimport-geteventprops-method.md
+      - name: GetFieldMarshal Yöntemi
+        href: imetadataimport-getfieldmarshal-method.md
+      - name: GetFieldProps Yöntemi
+        href: imetadataimport-getfieldprops-method.md
+      - name: GetInterfaceImplProps Yöntemi
+        href: imetadataimport-getinterfaceimplprops-method.md
+      - name: GetMemberProps Yöntemi
+        href: imetadataimport-getmemberprops-method.md
+      - name: GetMemberRefProps Yöntemi
+        href: imetadataimport-getmemberrefprops-method.md
+      - name: GetMethodProps Yöntemi
+        href: imetadataimport-getmethodprops-method.md
+      - name: GetMethodSemantics Yöntemi
+        href: imetadataimport-getmethodsemantics-method.md
+      - name: GetModuleFromScope Yöntemi
+        href: imetadataimport-getmodulefromscope-method.md
+      - name: GetModuleRefProps Yöntemi
+        href: imetadataimport-getmodulerefprops-method.md
+      - name: GetNameFromToken Yöntemi
+        href: imetadataimport-getnamefromtoken-method.md
+      - name: GetNativeCallConvFromSig Yöntemi
+        href: imetadataimport-getnativecallconvfromsig-method.md
+      - name: GetNestedClassProps Yöntemi
+        href: imetadataimport-getnestedclassprops-method.md
+      - name: GetParamForMethodIndex Yöntemi
+        href: imetadataimport-getparamformethodindex-method.md
+      - name: GetParamProps Yöntemi
+        href: imetadataimport-getparamprops-method.md
+      - name: GetPermissionSetProps Yöntemi
+        href: imetadataimport-getpermissionsetprops-method.md
+      - name: GetPinvokeMap
+        href: imetadataimport-getpinvokemap-method.md
+      - name: GetPropertyProps Yöntemi
+        href: imetadataimport-getpropertyprops-method.md
+      - name: GetRVA Yöntemi
+        href: imetadataimport-getrva-method.md
+      - name: GetScopeProps Yöntemi
+        href: imetadataimport-getscopeprops-method.md
+      - name: GetSigFromToken Yöntemi
+        href: imetadataimport-getsigfromtoken-method.md
+      - name: GetTypeDefProps Yöntemi
+        href: imetadataimport-gettypedefprops-method.md
+      - name: GetTypeRefProps Yöntemi
+        href: imetadataimport-gettyperefprops-method.md
+      - name: GetTypeSpecFromToken Yöntemi
+        href: imetadataimport-gettypespecfromtoken-method.md
+      - name: GetUserString Yöntemi
+        href: imetadataimport-getuserstring-method.md
+      - name: IsGlobal Yöntemi
+        href: imetadataimport-isglobal-method.md
+      - name: IsValidToken Yöntemi
+        href: imetadataimport-isvalidtoken-method.md
+      - name: ResetEnum Yöntemi
+        href: imetadataimport-resetenum-method.md
+      - name: ResolveTypeRef Yöntemi
+        href: imetadataimport-resolvetyperef-method.md
+    - name: IMetaDataImport2 Arabirimi
+      href: imetadataimport2-interface.md
+      items:
+      - name: EnumGenericParamConstraints Yöntemi
+        href: imetadataimport2-enumgenericparamconstraints-method.md
+      - name: EnumGenericParams Yöntemi
+        href: imetadataimport2-enumgenericparams-method.md
+      - name: EnumMethodSpecs Yöntemi
+        href: imetadataimport2-enummethodspecs-method.md
+      - name: GetGenericParamConstraintProps Yöntemi
+        href: imetadataimport2-getgenericparamconstraintprops-method.md
+      - name: GetGenericParamProps Yöntemi
+        href: imetadataimport2-getgenericparamprops-method.md
+      - name: GetMethodSpecProps Yöntemi
+        href: imetadataimport2-getmethodspecprops-method.md
+      - name: GetPEKind Yöntemi
+        href: imetadataimport2-getpekind-method.md
+      - name: GetVersionString Yöntemi
+        href: imetadataimport2-getversionstring-method.md
+    - name: IMetaDataInfo Arabirimi
+      href: imetadatainfo-interface.md
+      items:
+      - name: GetFileMapping Yöntemi
+        href: imetadatainfo-getfilemapping-method.md
+    - name: IMetaDataTables Arabirimi
+      href: imetadatatables-interface.md
+      items:
+      - name: GetBlob Yöntemi
+        href: imetadatatables-getblob-method.md
+      - name: GetBlobHeapSize Yöntemi
+        href: imetadatatables-getblobheapsize-method.md
+      - name: GetCodedTokenInfo Yöntemi
+        href: imetadatatables-getcodedtokeninfo-method.md
+      - name: GetColumn Yöntemi
+        href: imetadatatables-getcolumn-method.md
+      - name: GetColumnInfo Yöntemi
+        href: imetadatatables-getcolumninfo-method.md
+      - name: GetGuid Yöntemi
+        href: imetadatatables-getguid-method.md
+      - name: GetGuidHeapSize Yöntemi
+        href: imetadatatables-getguidheapsize-method.md
+      - name: GetNextBlob Yöntemi
+        href: imetadatatables-getnextblob-method.md
+      - name: GetNextGuid Yöntemi
+        href: imetadatatables-getnextguid-method.md
+      - name: GetNextString Yöntemi
+        href: imetadatatables-getnextstring-method.md
+      - name: GetNextUserString Yöntemi
+        href: imetadatatables-getnextuserstring-method.md
+      - name: GetNumTables Yöntemi
+        href: imetadatatables-getnumtables-method.md
+      - name: GetRow Yöntemi
+        href: imetadatatables-getrow-method.md
+      - name: GetString Yöntemi
+        href: imetadatatables-getstring-method.md
+      - name: GetStringHeapSize Yöntemi
+        href: imetadatatables-getstringheapsize-method.md
+      - name: GetTableIndex Yöntemi
+        href: imetadatatables-gettableindex-method.md
+      - name: GetTableInfo Yöntemi
+        href: imetadatatables-gettableinfo-method.md
+      - name: GetUserString Yöntemi
+        href: imetadatatables-getuserstring-method.md
+      - name: GetUserStringHeapSize Yöntemi
+        href: imetadatatables-getuserstringheapsize-method.md
+    - name: IMetaDataTables2 Arabirimi
+      href: imetadatatables2-interface.md
+      items:
+      - name: GetMetaDataStorage Yöntemi
+        href: imetadatatables2-getmetadatastorage-method.md
+      - name: GetMetaDataStreamInfo Yöntemi
+        href: imetadatatables2-getmetadatastreaminfo-method.md
+    - name: IMetaDataValidate Arabirimi
+      href: imetadatavalidate-interface.md
+      items:
+      - name: ValidateMetaData Yöntemi
+        href: imetadatavalidate-validatemetadata-method.md
+      - name: ValidatorInit Yöntemi
+        href: imetadatavalidate-validatorinit-method.md
+  - name: Meta Veri Genel Statik İşlevleri
+    href: metadata-global-static-functions.md
+  - name: Meta Veri Numaralandırmalar
+    href: metadata-enumerations.md
+    items:
+    - name: AssemblyFlags Numaralandırması
+      href: assemblyflags-enumeration.md
+    - name: AssemblyRefFlags Numaralandırması
+      href: assemblyrefflags-enumeration.md
+    - name: CeeSectionAttr Numaralandırması
+      href: ceesectionattr-enumeration.md
+    - name: CeeSectionRelocType Numaralandırması
+      href: ceesectionreloctype-enumeration.md
+    - name: COINITICOR Numaralandırması
+      href: coiniticor-enumeration.md
+    - name: COINITIEE Numaralandırması
+      href: coinitiee-enumeration.md
+    - name: CorArgType Numaralandırması
+      href: corargtype-enumeration.md
+    - name: CorAssemblyFlags Numaralandırması
+      href: corassemblyflags-enumeration.md
+    - name: CorAttributeTargets Numaralandırması
+      href: corattributetargets-enumeration.md
+    - name: CorCallingConvention Numaralandırması
+      href: corcallingconvention-enumeration.md
+    - name: CorCheckDuplicatesFor Numaralandırması
+      href: corcheckduplicatesfor-enumeration.md
+    - name: CorDeclSecurity Numaralandırması
+      href: cordeclsecurity-enumeration.md
+    - name: CorElementType Sabit Listesi1
+      href: corelementtype-enumeration.md
+    - name: CorErrorIfEmitOutOfOrder Numaralandırması
+      href: corerrorifemitoutoforder-enumeration.md
+    - name: CorEventAttr Numaralandırması
+      href: coreventattr-enumeration.md
+    - name: CorFieldAttr Numaralandırması
+      href: corfieldattr-enumeration.md
+    - name: CorFileFlags Numaralandırması
+      href: corfileflags-enumeration.md
+    - name: CorFileMapping Numaralandırması
+      href: corfilemapping-enumeration.md
+    - name: CorGenericParamAttr Numaralandırması
+      href: corgenericparamattr-enumeration.md
+    - name: CorImportOptions Numaralandırması
+      href: corimportoptions-enumeration.md
+    - name: CorLinkerOptions Numaralandırması
+      href: corlinkeroptions-enumeration.md
+    - name: CorLocalRefPreservation Sabit Listesi
+      href: corlocalrefpreservation-enumeration.md
+    - name: CorManifestResourceFlags Numaralandırması
+      href: cormanifestresourceflags-enumeration.md
+    - name: CorMethodAttr Numaralandırması
+      href: cormethodattr-enumeration.md
+    - name: CorMethodImpl Numaralandırması
+      href: cormethodimpl-enumeration.md
+    - name: CorMethodSemanticsAttr Numaralandırması
+      href: cormethodsemanticsattr-enumeration.md
+    - name: CorNativeLinkFlags Numaralandırması
+      href: cornativelinkflags-enumeration.md
+    - name: CorNativeLinkType Numaralandırması
+      href: cornativelinktype-enumeration.md
+    - name: CorNativeType Numaralandırması
+      href: cornativetype-enumeration.md
+    - name: CorNotificationForTokenMovement Numaralandırması
+      href: cornotificationfortokenmovement-enumeration.md
+    - name: CorOpenFlags Numaralandırması
+      href: coropenflags-enumeration.md
+    - name: CorParamAttr Numaralandırması
+      href: corparamattr-enumeration.md
+    - name: CorPEKind Numaralandırması
+      href: corpekind-enumeration.md
+    - name: CorPinvokeMap Numaralandırması
+      href: corpinvokemap-enumeration.md
+    - name: CorPropertyAttr Numaralandırması
+      href: corpropertyattr-enumeration.md
+    - name: CorRefToDefCheck Numaralandırması
+      href: correftodefcheck-enumeration.md
+    - name: CorRegFlags Numaralandırması
+      href: corregflags-enumeration.md
+    - name: CorSaveSize Numaralandırması
+      href: corsavesize-enumeration.md
+    - name: CorSerializationType Numaralandırması
+      href: corserializationtype-enumeration.md
+    - name: CorSetENC Numaralandırması
+      href: corsetenc-enumeration.md
+    - name: CorThreadSafetyOptions Numaralandırması
+      href: corthreadsafetyoptions-enumeration.md
+    - name: CorTokenType Numaralandırması
+      href: cortokentype-enumeration.md
+    - name: CorTypeAttr Numaralandırması
+      href: cortypeattr-enumeration.md
+    - name: CorUnmanagedCallingConvention Numaralandırması
+      href: corunmanagedcallingconvention-enumeration.md
+    - name: CorValidatorModuleType Numaralandırması
+      href: corvalidatormoduletype-enumeration.md
+    - name: COUNINITIEE Numaralandırması
+      href: couninitiee-enumeration.md
+  - name: Meta Veri Yapıları
+    href: metadata-structures.md
+    items:
+    - name: ASSEMBLYMETADATA Yapısı
+      href: assemblymetadata-structure.md
+    - name: COR_FIELD_OFFSET Yapısı
+      href: cor-field-offset-structure.md
+    - name: COR_NATIVE_LINK Yapısı
+      href: cor-native-link-structure.md
+    - name: CVStruct Yapısı
+      href: cvstruct-structure.md
+    - name: OSINFO Yapısı
+      href: osinfo-structure.md
+  - name: Meta Veri Birleşmeleri
+    href: metadata-unions.md
+    items:
+    - name: CeeSectionRelocExtra Birleşimi
+      href: ceesectionrelocextra-union.md
+ms.openlocfilehash: d6f0c7ae4251db28a509e9b3323db2cfa0c2d655
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58472074"

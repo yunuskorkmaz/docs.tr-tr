@@ -1,0 +1,118 @@
+items:
+- name: Çalışma Zamanı Ayarları Şeması
+  href: index.md
+  items:
+  - name: <runtime> Öğesi
+    href: runtime-element.md
+    items:
+    - name: <alwaysFlowImpersonationPolicy> Öğesi
+      href: alwaysflowimpersonationpolicy-element.md
+    - name: <AppContextSwitchOverrides> Öğesi
+      href: appcontextswitchoverrides-element.md
+    - name: <appDomainManagerAssembly> Öğesi
+      href: appdomainmanagerassembly-element.md
+    - name: <appDomainManagerType> Öğesi
+      href: appdomainmanagertype-element.md
+    - name: <appDomainResourceMonitoring> Öğesi
+      href: appdomainresourcemonitoring-element.md
+    - name: <assemblyBinding> Öğesi
+      href: assemblybinding-element-for-runtime.md
+      items:
+      - name: <dependentAssembly> Öğesi
+        href: dependentassembly-element.md
+        items:
+        - name: <assemblyIdentity> Öğesi
+          href: assemblyidentity-element-for-runtime.md
+        - name: <bindingRedirect> Öğesi
+          href: bindingredirect-element.md
+        - name: <codeBase> Öğesi
+          href: codebase-element.md
+      - name: <probing> Öğesi
+        href: probing-element.md
+      - name: <publisherPolicy> Öğesi
+        href: publisherpolicy-element.md
+      - name: <qualifyAssembly> Öğesi
+        href: qualifyassembly-element.md
+    - name: <bypassTrustedAppStrongNames> Öğesi
+      href: bypasstrustedappstrongnames-element.md
+    - name: <CompatSortNLSVersion> Öğesi
+      href: compatsortnlsversion-element.md
+    - name: <developmentMode> Öğesi
+      href: developmentmode-element.md
+    - name: <disableCachingBindingFailures> Öğesi
+      href: disablecachingbindingfailures-element.md
+    - name: <disableCommitThreadStack> Öğesi
+      href: disablecommitthreadstack-element.md
+    - name: <disableFusionUpdatesFromADManager> Öğesi
+      href: disablefusionupdatesfromadmanager-element.md
+    - name: <EnableAmPmParseAdjustment> Öğesi
+      href: enableampmparseadjustment-element.md
+    - name: <enforceFIPSPolicy> Öğesi
+      href: enforcefipspolicy-element.md
+    - name: <etwEnable> Öğesi
+      href: etwenable-element.md
+    - name: <forcePerformanceCounterUniqueSharedMemoryReads> Öğesi
+      href: forceperformancecounteruniquesharedmemoryreads-element.md
+    - name: <gcAllowVeryLargeObjects> Öğesi
+      href: gcallowverylargeobjects-element.md
+    - name: <gcConcurrent> Öğesi
+      href: gcconcurrent-element.md
+    - name: <GCCpuGroup> Öğesi
+      href: gccpugroup-element.md
+    - name: <gcServer> Öğesi
+      href: gcserver-element.md
+    - name: <generatePublisherEvidence> Öğesi
+      href: generatepublisherevidence-element.md
+    - name: <legacyCorruptedStateExceptionsPolicy> Öğesi
+      href: legacycorruptedstateexceptionspolicy-element.md
+    - name: <legacyImpersonationPolicy> Öğesi
+      href: legacyimpersonationpolicy-element.md
+    - name: <loadFromRemoteSources>
+      href: loadfromremotesources-element.md
+    - name: <NetFx40_LegacySecurityPolicy> Öğesi
+      href: netfx40-legacysecuritypolicy-element.md
+    - name: <NetFx40_PInvokeStackResilience> Öğesi
+      href: netfx40-pinvokestackresilience-element.md
+    - name: <NetFx45_CultureAwareComparerGetHashCode_LongStrings> Öğesi
+      href: netfx45-cultureawarecomparergethashcode-longstrings-element.md
+    - name: <PreferComInsteadOfManagedRemoting> Öğesi
+      href: prefercominsteadofmanagedremoting-element.md
+    - name: <relativeBindForResources> Öğesi
+      href: relativebindforresources-element.md
+    - name: <shadowCopyVerifyByTimestamp> Öğesi
+      href: shadowcopyverifybytimestamp-element.md
+    - name: <supportPortability> Öğesi
+      href: supportportability-element.md
+    - name: <system.runtime.caching> Öğesi (Önbellek Ayarları)
+      href: system-runtime-caching-element-cache-settings.md
+      items:
+      - name: <memoryCache> Öğesi (Önbellek Ayarları)
+        href: memorycache-element-cache-settings.md
+        items:
+        - name: <namedCaches> Öğesi (Önbellek Ayarları)
+          href: namedcaches-element-cache-settings.md
+          items:
+          - name: <namedCaches> için <add> Öğesi
+            href: add-element-for-namedcaches.md
+          - name: <namedCaches> için <clear> Öğesi
+            href: clear-element-for-namedcaches.md
+          - name: <namedCaches> için <remove> Öğesi
+            href: remove-element-for-namedcaches.md
+    - name: <Thread_UseAllCpuGroups> Öğesi
+      href: thread-useallcpugroups-element.md
+    - name: <ThrowUnobservedTaskExceptions> Öğesi
+      href: throwunobservedtaskexceptions-element.md
+    - name: <TimeSpan_LegacyFormatMode> Öğesi
+      href: timespan-legacyformatmode-element.md
+    - name: <useLegacyJit> Öğesi
+      href: uselegacyjit-element.md
+    - name: <UseRandomizedStringHashAlgorithm> Öğesi
+      href: userandomizedstringhashalgorithm-element.md
+    - name: <UseSmallInternalThreadStacks> Öğesi
+      href: usesmallinternalthreadstacks-element.md
+ms.openlocfilehash: eb118bcc739543a13b512d481cbaa04883095582
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471827"

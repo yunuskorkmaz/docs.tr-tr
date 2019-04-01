@@ -1,0 +1,162 @@
+items:
+- name: DataSets, DataTables ve DataViews
+  href: index.md
+  items:
+  - name: DataSet Oluşturma
+    href: creating-a-dataset.md
+  - name: DataSet’e DataTable Ekleme
+    href: adding-a-datatable-to-a-dataset.md
+  - name: DataRelations Ekleme
+    href: adding-datarelations.md
+  - name: DataRelations İçinde Gezinme
+    href: navigating-datarelations.md
+  - name: DataSet İçeriklerini Birleştirme
+    href: merging-dataset-contents.md
+  - name: DataSet İçeriklerini Kopyalama
+    href: copying-dataset-contents.md
+  - name: DataSet Olaylarını İşleme
+    href: handling-dataset-events.md
+  - name: Türü Belirtilmiş DataSets
+    href: typed-datasets.md
+    items:
+    - name: Kesin Türü Belirtilmiş DataSets Oluşturma
+      href: generating-strongly-typed-datasets.md
+    - name: Türü Belirtilmiş DataSets için Yorum Ekleme
+      href: annotating-typed-datasets.md
+  - name: DataTables
+    href: datatables.md
+    items:
+    - name: DataTable Oluşturma
+      href: creating-a-datatable.md
+    - name: DataTable Şema Tanımı
+      href: datatable-schema-definition.md
+      items:
+      - name: DataTable’a Sütun Ekleme
+        href: adding-columns-to-a-datatable.md
+      - name: İfade Sütunları Oluşturma
+        href: creating-expression-columns.md
+      - name: AutoIncrement Sütunları Oluşturma
+        href: creating-autoincrement-columns.md
+      - name: Birincil Anahtarlar Tanımlama
+        href: defining-primary-keys.md
+      - name: DataTable Kısıtlamaları
+        href: datatable-constraints.md
+    - name: DataTable Verilerini Düzenleme
+      href: manipulating-data-in-a-datatable.md
+      items:
+      - name: DataTable’a Veri Ekleme
+        href: adding-data-to-a-datatable.md
+      - name: DataTable’daki Verileri Görüntüleme
+        href: viewing-data-in-a-datatable.md
+      - name: Load Yöntemi
+        href: the-load-method.md
+      - name: DataTable Düzenlemeleri
+        href: datatable-edits.md
+      - name: Satır Durumları ve Satır Sürümleri
+        href: row-states-and-row-versions.md
+      - name: DataRow Silme
+        href: datarow-deletion.md
+      - name: Satır Hatası Bilgileri
+        href: row-error-information.md
+      - name: AcceptChanges ve RejectChanges
+        href: acceptchanges-and-rejectchanges.md
+    - name: DataTable Olaylarını İşleme
+      href: handling-datatable-events.md
+  - name: DataTableReaders
+    href: datatablereaders.md
+    items:
+    - name: DataReader Oluşturma
+      href: creating-a-datareader.md
+    - name: DataTable İçinde Gezinme
+      href: navigating-datatables.md
+  - name: DataViews
+    href: dataviews.md
+    items:
+    - name: DataView Oluşturma
+      href: creating-a-dataview.md
+    - name: Verileri Sıralama ve Filtreleme
+      href: sorting-and-filtering-data.md
+    - name: DataRows ve DataRowViews
+      href: datarows-and-datarowviews.md
+    - name: Satırları Bulma
+      href: finding-rows.md
+    - name: ChildViews ve İlişkileri
+      href: childviews-and-relations.md
+    - name: DataView Değiştirme
+      href: modifying-dataviews.md
+    - name: DataView Olaylarını İşleme
+      href: handling-dataview-events.md
+    - name: DataView Yönetme
+      href: managing-dataviews.md
+    - name: DataView’dan DataTable Oluşturma
+      href: creating-a-datatable-from-a-dataview.md
+  - name: DataSet içinde XML kullanma
+    href: using-xml-in-a-dataset.md
+    items:
+    - name: DiffGrams
+      href: diffgrams.md
+    - name: XML’den DataSet Yükleme
+      href: loading-a-dataset-from-xml.md
+    - name: XML Verileri Olarak DataSet İçeriği Yazma
+      href: writing-dataset-contents-as-xml-data.md
+    - name: XML’den DataSet Schema Bilgilerini Yükleme
+      href: loading-dataset-schema-information-from-xml.md
+    - name: XSD Olarak DataSet Schema Bilgilerini Yazma
+      href: writing-dataset-schema-information-as-xsd.md
+    - name: DataSet ve XmlDataDocument Eşitlemesi
+      href: dataset-and-xmldatadocument-synchronization.md
+      items:
+      - name: DataSet’i bir XmlDataDocument ile Eşitleme
+        href: synchronizing-a-dataset-with-an-xmldatadocument.md
+      - name: DataSet Üzerinde XPath Sorgusu Gerçekleştirme
+        href: performing-an-xpath-query-on-a-dataset.md
+      - name: DataSet’e XSLT Dönüşümü Uygulama
+        href: applying-an-xslt-transform-to-a-dataset.md
+    - name: DataRelations’ı İç İçe Yerleştirme
+      href: nesting-datarelations.md
+    - name: XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme
+      href: deriving-dataset-relational-structure-from-xml-schema-xsd.md
+      items:
+      - name: XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
+        href: mapping-xml-schema-xsd-constraints-to-dataset-constraints.md
+        items:
+        - name: Benzersiz XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
+          href: map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md
+        - name: Anahtar XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
+          href: map-key-xml-schema-xsd-constraints-to-dataset-constraints.md
+        - name: Keyref XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
+          href: map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md
+      - name: XML Şemasından (XSD) DataSet İlişkileri Oluşturma
+        href: generating-dataset-relations-from-xml-schema-xsd.md
+        items:
+        - name: İç İçe Geçmiş Şema Öğeleri Arasında Örtük İlişkileri Eşleme
+          href: map-implicit-relations-between-nested-schema-elements.md
+        - name: İç İçe Geçmiş Öğeler için Belirtilen İlişkileri Eşleme
+          href: map-relations-specified-for-nested-elements.md
+        - name: İç İçe Yerleştirme İçermeyen Öğeler Arasındaki İlişkileri Belirtme
+          href: specify-relations-between-elements-with-no-nesting.md
+      - name: XML Şema Kısıtlamaları ve İlişkileri
+        href: xml-schema-constraints-and-relationships.md
+    - name: XML’den DataSet İlişkisel Yapısını Çıkarma
+      href: inferring-dataset-relational-structure-from-xml.md
+      items:
+      - name: DataSet Şema Çıkarımı İşleminin Özeti
+        href: summary-of-the-dataset-schema-inference-process.md
+      - name: Tabloların Çıkarımını Yapma
+        href: inferring-tables.md
+      - name: Sütunların Çıkarımını Yapma
+        href: inferring-columns.md
+      - name: İlişkilerin Çıkarımını Yapma
+        href: inferring-relationships.md
+      - name: Öğe Metni Çıkarımını Yapma
+        href: inferring-element-text.md
+      - name: Çıkarım Sınırlamaları
+        href: inference-limitations.md
+  - name: XML Web Hizmetinden DataSet Kullanma
+    href: consuming-a-dataset-from-an-xml-web-service.md
+ms.openlocfilehash: 739874c03720eac9e49db2f1e80a8bcafd28d1f8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471620"

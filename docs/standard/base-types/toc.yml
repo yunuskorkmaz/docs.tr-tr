@@ -1,0 +1,140 @@
+items:
+- name: Temel Türler
+  href: index.md
+  items:
+  - name: Ortak Tür Sistemi
+    href: common-type-system.md
+  - name: .NET içinde Tür Dönüştürme
+    href: type-conversion.md
+    items:
+    - name: Tür Dönüştürme Tabloları
+      href: conversion-tables.md
+  - name: Biçimlendirme Türleri
+    href: formatting-types.md
+    items:
+    - name: Standart Sayısal Biçim Dizeleri
+      href: standard-numeric-format-strings.md
+    - name: Özel Sayısal Biçim Dizeleri
+      href: custom-numeric-format-strings.md
+    - name: Standart Tarih ve Saat Biçim Dizeleri
+      href: standard-date-and-time-format-strings.md
+    - name: Özel Tarih ve Saat Biçim Dizeleri
+      href: custom-date-and-time-format-strings.md
+    - name: Standart TimeSpan Biçim Dizeleri
+      href: standard-timespan-format-strings.md
+    - name: Özel TimeSpan Biçim Dizeleri
+      href: custom-timespan-format-strings.md
+    - name: Numaralandırma Biçimi Dizeleri
+      href: enumeration-format-strings.md
+    - name: Bileşik Biçimlendirme
+      href: composite-formatting.md
+    - name: Biçimlendirme İşlemlerini Gerçekleştirme
+      href: performing-formatting-operations.md
+      items:
+      - name: 'Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma'
+        href: how-to-pad-a-number-with-leading-zeros.md
+      - name: 'Nasıl yapılır: Belirli bir Tarihten Haftanın Gününü Çıkarma'
+        href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
+      - name: 'Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma'
+        href: how-to-define-and-use-custom-numeric-format-providers.md
+      - name: 'Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri'
+        href: how-to-round-trip-date-and-time-values.md
+      - name: 'Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme'
+        href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
+      - name: 'Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme'
+        href: how-to-display-localized-date-and-time-information-to-web-users.md
+      - name: 'Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme'
+        href: how-to-display-milliseconds-in-date-and-time-values.md
+      - name: 'Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme'
+        href: how-to-display-dates-in-non-gregorian-calendars.md
+  - name: Dizeleri Düzenleme
+    href: manipulating-strings.md
+    items:
+    - name: Dizeleri Kullanmak için En İyi Uygulamalar
+      href: best-practices-strings.md
+    - name: Temel Dize İşlemleri
+      href: basic-string-operations.md
+      items:
+      - name: Yeni Dizeler Oluşturma
+        href: creating-new.md
+      - name: Karakterleri Kırpma ve Kaldırma
+        href: trimming.md
+      - name: Dizeleri Doldurma
+        href: padding.md
+      - name: Dizeleri Karşılaştırma
+        href: comparing.md
+      - name: Büyük/Küçük Harf Değiştirme
+        href: changing-case.md
+      - name: StringBuilder Sınıfını Kullanma
+        href: stringbuilder.md
+      - name: 'Nasıl yapılır: Temel Dize İşlemeleri Gerçekleştirme'
+        href: basic-manipulations.md
+    - name: .NET içinde Normal İfadeler
+      href: regular-expressions.md
+      items:
+      - name: Normal İfade Dili - Hızlı Başvuru
+        href: regular-expression-language-quick-reference.md
+        items:
+        - name: Karakter Çıkışları
+          href: character-escapes-in-regular-expressions.md
+        - name: Karakter Sınıfları
+          href: character-classes-in-regular-expressions.md
+        - name: Tutturucular
+          href: anchors-in-regular-expressions.md
+        - name: Gruplandırma Yapıları
+          href: grouping-constructs-in-regular-expressions.md
+        - name: Miktar Niceleyiciler
+          href: quantifiers-in-regular-expressions.md
+        - name: Yeniden Başvuru Yapıları
+          href: backreference-constructs-in-regular-expressions.md
+        - name: Değişim Yapıları
+          href: alternation-constructs-in-regular-expressions.md
+        - name: Değişimler
+          href: substitutions-in-regular-expressions.md
+        - name: Normal İfade Seçenekleri
+          href: regular-expression-options.md
+        - name: Çeşitli Yapılar
+          href: miscellaneous-constructs-in-regular-expressions.md
+      - name: Normal İfadeler için En İyi Uygulamalar
+        href: best-practices.md
+      - name: Normal İfade Nesnesi Modeli
+        href: the-regular-expression-object-model.md
+      - name: Normal İfade Davranışının Ayrıntıları
+        href: details-of-regular-expression-behavior.md
+        items:
+        - name: Geri Dönüş
+          href: backtracking-in-regular-expressions.md
+        - name: Derleme ve Yeniden Kullanma
+          href: compilation-and-reuse-in-regular-expressions.md
+        - name: İş Parçacığı Güvenliği
+          href: thread-safety-in-regular-expressions.md
+      - name: Normal İfade Örnekleri
+        href: regular-expression-examples.md
+        items:
+        - name: 'Örnek: HREF Tarama'
+          href: regular-expression-example-scanning-for-hrefs.md
+        - name: 'Örnek: Tarih Biçimlerini Değiştirme'
+          href: regular-expression-example-changing-date-formats.md
+        - name: "Nasıl yapılır: Bir URL'den Protokol ve Bağlantı Noktası Numarası Çıkarma"
+          href: how-to-extract-a-protocol-and-port-number-from-a-url.md
+        - name: 'Nasıl yapılır: Dizeden Geçersiz Karakterleri Çıkartma'
+          href: how-to-strip-invalid-characters-from-a-string.md
+        - name: 'Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama'
+          href: how-to-verify-that-strings-are-in-valid-email-format.md
+    - name: .NET içinde Karakter Kodlaması
+      href: character-encoding.md
+  - name: Dizeleri Ayrıştırma
+    href: parsing-strings.md
+    items:
+    - name: Sayısal Dizeleri Ayrıştırma
+      href: parsing-numeric.md
+    - name: Tarih ve Saat Dizelerini Ayrıştırma
+      href: parsing-datetime.md
+    - name: Diğer Dizeleri Ayrıştırma
+      href: parsing-other.md
+ms.openlocfilehash: 893959894168d56c05f525a167773ee9e69e9f1b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471616"
