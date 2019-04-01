@@ -1,0 +1,58 @@
+items:
+- name: Zaman Uyumsuz Programlama Desenleri
+  href: index.md
+  items:
+  - name: Görev Tabanlı Zaman Uyumsuz Desen (TAP)
+    href: task-based-asynchronous-pattern-tap.md
+    items:
+    - name: Görev Tabanlı Zaman Uyumsuz Deseni Uygulama
+      href: implementing-the-task-based-asynchronous-pattern.md
+    - name: Görev Tabanlı Zaman Uyumsuz Desen Kullanma
+      href: consuming-the-task-based-asynchronous-pattern.md
+    - name: Diğer Zaman Uyumsuz Desen ve Türlerle Birlikte Çalışma
+      href: interop-with-other-asynchronous-patterns-and-types.md
+  - name: Olay Tabanlı Zaman Uyumsuz Desen (EAP)
+    href: event-based-asynchronous-pattern-eap.md
+    items:
+    - name: Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
+      href: event-based-asynchronous-pattern-overview.md
+    - name: Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
+      href: implementing-the-event-based-asynchronous-pattern.md
+    - name: Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler
+      href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
+    - name: Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme
+      href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
+    - name: 'Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama'
+      href: component-that-supports-the-event-based-asynchronous-pattern.md
+    - name: 'Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Desenin İstemcisini Uygulama'
+      href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
+    - name: 'Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma'
+      href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
+  - name: Zaman Uyumsuz Programlama Modeli (APM)
+    href: asynchronous-programming-model-apm.md
+    items:
+    - name: 'IAsyncResult Kullanarak Zaman Uyumsuz Yöntemleri Çağırma '
+      href: calling-asynchronous-methods-using-iasyncresult.md
+      items:
+      - name: Bir AsyncWaitHandle Kullanarak Uygulamanın Yürütülmesini Engelleme
+        href: blocking-application-execution-using-an-asyncwaithandle.md
+      - name: Zaman Uyumsuz bir İşlemi Sonlandırarak Uygulama Yürütmesini Engelleme
+        href: blocking-application-execution-by-ending-an-async-operation.md
+      - name: Zaman Uyumsuz Bir İşlemin Durumu için Yoklama
+        href: polling-for-the-status-of-an-asynchronous-operation.md
+      - name: Zaman Uyumsuz Bir İşlemi Sonlandırmak için Bir AsyncCallback Temsilcisi Kullanma
+        href: using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md
+        items:
+        - name: Bir AsyncCallback Temsilcisi ve Durum Nesnesi Kullanma
+          href: using-an-asynccallback-delegate-and-state-object.md
+    - name: Temsilcileri Kullanarak Zaman Uyumsuz Programlama
+      href: asynchronous-programming-using-delegates.md
+      items:
+      - name: Zaman Uyumlu Metotları Zaman Uyumsuz Olarak Çağırma
+        href: calling-synchronous-methods-asynchronously.md
+ms.openlocfilehash: 2f93abd762516ade20948cceb3b2a1617af04885
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471729"

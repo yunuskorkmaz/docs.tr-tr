@@ -1,0 +1,127 @@
+items:
+- name: Sınıflar ve Yapılar
+  href: index.md
+  items:
+  - name: Sınıflar
+    href: classes.md
+  - name: Nesneler
+    href: objects.md
+  - name: Yapılar
+    href: structs.md
+    items:
+    - name: Yapıları Kullanma
+      href: using-structs.md
+  - name: Devralma
+    href: inheritance.md
+  - name: Çok Biçimlilik
+    href: polymorphism.md
+    items:
+    - name: Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma
+      href: versioning-with-the-override-and-new-keywords.md
+    - name: Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme
+      href: knowing-when-to-use-override-and-new-keywords.md
+    - name: 'Nasıl yapılır: ToString Yöntemini Geçersiz Kılma'
+      href: how-to-override-the-tostring-method.md
+  - name: Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri
+    href: abstract-and-sealed-classes-and-class-members.md
+    items:
+    - name: 'Nasıl yapılır: Soyut Özellikleri Tanımlama'
+      href: how-to-define-abstract-properties.md
+  - name: Statik Sınıflar ve Statik Sınıf Üyeleri
+    href: static-classes-and-static-class-members.md
+  - name: Üyeler
+    href: members.md
+  - name: Erişim Değiştiricileri
+    href: access-modifiers.md
+  - name: Alanlar
+    href: fields.md
+  - name: Sabitler
+    href: constants.md
+    items:
+    - name: 'Nasıl yapılır: C# İçinde Sabitleri Tanımlama'
+      href: how-to-define-constants.md
+  - name: Özellikler
+    href: properties.md
+    items:
+    - name: Özellikleri Kullanma
+      href: using-properties.md
+    - name: Arabirim Özellikleri
+      href: interface-properties.md
+    - name: Erişimci Erişilebilirliğini Kısıtlama
+      href: restricting-accessor-accessibility.md
+    - name: 'Nasıl yapılır: Okuma Yazma Özellikleri Bildirme ve Kullanma'
+      href: how-to-declare-and-use-read-write-properties.md
+    - name: Otomatik Uygulanan Özellikler
+      href: auto-implemented-properties.md
+    - name: 'Nasıl yapılır: Otomatik Uygulanan Özelliklerle Hafif bir Sınıf Uygulama'
+      href: how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
+  - name: Yöntemler
+    href: methods.md
+    items:
+    - name: Yerel işlevler
+      href: local-functions.md
+    - name: Ref dönüşler ve ref yerel ayarlar
+      href: ref-returns.md
+    - name: Parametreleri Geçirme
+      href: passing-parameters.md
+      items:
+      - name: Değer Türü Parametrelerini Geçirme
+        href: passing-value-type-parameters.md
+      - name: Başvuru Türü Parametreleri Geçirme
+        href: passing-reference-type-parameters.md
+      - name: 'Nasıl yapılır: Yapı Geçirme ile Yönteme Sınıf Başvurusu Geçirme Arasındaki Farkı Bilme'
+        href: how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
+    - name: Örtülü Olarak Yazılan Yerel Değişkenler
+      href: implicitly-typed-local-variables.md
+      items:
+      - name: 'Nasıl yapılır: Sorgu İfadesinde Türü Örtük Olarak Belirlenmiş Yerel Değişkenleri ve Dizileri Kullanma'
+        href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+    - name: Genişletme Yöntemleri
+      href: extension-methods.md
+      items:
+      - name: 'Nasıl yapılır: Özel bir Genişletme Yöntemi Uygulama ve Arama'
+        href: how-to-implement-and-call-a-custom-extension-method.md
+      - name: 'Nasıl yapılır: Sabit Listesi için Yeni bir Yöntem Oluşturma'
+        href: how-to-create-a-new-method-for-an-enumeration.md
+    - name: Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler
+      href: named-and-optional-arguments.md
+      items:
+      - name: 'Nasıl yapılır: Office Programlamada Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenleri Kullanma'
+        href: how-to-use-named-and-optional-arguments-in-office-programming.md
+  - name: Oluşturucular
+    href: constructors.md
+    items:
+    - name: Oluşturucuları Kullanma
+      href: using-constructors.md
+    - name: Örnek Oluşturucuları
+      href: instance-constructors.md
+    - name: Özel Oluşturucular
+      href: private-constructors.md
+    - name: Statik Oluşturucular
+      href: static-constructors.md
+    - name: 'Nasıl yapılır: Kopya Oluşturucu Yazma'
+      href: how-to-write-a-copy-constructor.md
+  - name: Sonlandırıcılar
+    href: destructors.md
+  - name: Nesne ve Koleksiyon Başlatıcıları
+    href: object-and-collection-initializers.md
+    items:
+    - name: 'Nasıl yapılır: Nesne Başlatıcı Kullanarak Nesneleri Başlatma'
+      href: how-to-initialize-objects-by-using-an-object-initializer.md
+    - name: 'Nasıl yapılır: Koleksiyon Başlatıcısı ile bir Sözlük Başlatma'
+      href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
+  - name: İç içe Geçmiş Türler
+    href: nested-types.md
+  - name: Parçalı Sınıflar ve Yöntemler
+    href: partial-classes-and-methods.md
+  - name: Anonim Türler
+    href: anonymous-types.md
+    items:
+    - name: 'Nasıl yapılır: Bir Sorguda Öğe Özelliklerinin Alt Kümelerini Döndürme'
+      href: how-to-return-subsets-of-element-properties-in-a-query.md
+ms.openlocfilehash: ab61eea92fcbfb960038eb09b6e83c31d55eb24e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471742"

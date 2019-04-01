@@ -1,0 +1,43 @@
+items:
+- name: Dağıtım
+  href: index.md
+  items:
+  - name: .NET Framework'ü dağıtma
+    href: deploying-the-net-framework.md
+    items:
+    - name: Geliştiriciler için Dağıtım Kılavuzu
+      href: deployment-guide-for-developers.md
+    - name: Yöneticiler için Dağıtım Kılavuzu
+      href: guide-for-administrators.md
+    - name: .NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma
+      href: reducing-system-restarts.md
+    - name: 'Nasıl yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma'
+      href: how-to-get-progress-from-the-dotnet-installer.md
+    - name: '.NET Framework Başlatma Hataları: Kullanıcı Deneyimini Yönetme'
+      href: initialization-errors-managing-the-user-experience.md
+    - name: 'Nasıl yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama'
+      href: how-to-debug-clr-activation-issues.md
+  - name: .NET Framework Uygulamalarını Dağıtma
+    href: net-framework-applications.md
+    items:
+    - name: Çalışma Zamanının Derlemelerin Konumunu Bulması
+      href: how-the-runtime-locates-assemblies.md
+    - name: Derleme Yükleme için En İyi Yöntemler
+      href: best-practices-for-assembly-loading.md
+  - name: .NET Framework İstemci Profili
+    href: client-profile.md
+  - name: Yan Yana Yürütme
+    href: side-by-side-execution.md
+    items:
+    - name: Derleme Bağlama Yönlendirmesini Yapılandırma
+      href: configuring-assembly-binding-redirection.md
+    - name: Yan Yana Yürütme için Bileşen Oluşturma Yönergeleri
+      href: guidelines-for-creating-components-for-side-by-side-execution.md
+    - name: Devam Eden Yan Yana Yürütme
+      href: in-process-side-by-side-execution.md
+ms.openlocfilehash: 73f101fc5031c1ae97a626025d6b16c5729a2568
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471762"

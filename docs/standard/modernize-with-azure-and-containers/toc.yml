@@ -1,0 +1,51 @@
+items:
+- name: Giriş
+  href: index.md
+  items:
+  - name: Mevcut uygulamaları Azure Iaas’ye lift-and-shift ile taşıma
+    href: lift-and-shift-existing-apps-azure-iaas.md
+  - name: İlişkisel veritabanlarınızı Azure'a geçirme
+    href: migrate-your-relational-databases-to-azure.md
+  - name: Mevcut .NET uygulamalarını Bulut için İyileştirilmiş olarak modernize etme
+    href: ./modernize-existing-apps-to-cloud-optimized/index.md
+    items:
+    - name: Mevcut .NET uygulamalarını Bulut için İyileştirilmiş olarak modernize etme nedenleri
+      href: ./modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md
+    - name: Bulut için İyileştirilmiş uygulamalardaki Microsoft teknolojileri
+      href: ./modernize-existing-apps-to-cloud-optimized/microsoft-technologies-in-cloud-optimized-applications.md
+    - name: Bulutta Yerel uygulamalar nedir?
+      href: ./modernize-existing-apps-to-cloud-optimized/what-about-cloud-native-applications.md
+    - name: Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
+      href: ./modernize-existing-apps-to-cloud-optimized/deploy-existing-net-apps-as-windows-containers.md
+    - name: Windows Kapsayıcıları ne zaman dağıtılmaz?
+      href: ./modernize-existing-apps-to-cloud-optimized/when-not-to-deploy-to-windows-containers.md
+    - name: Şirket içi IaaS VM altyapınızda Windows Kapsayıcıları ne zaman dağıtılmalıdır?
+      href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md
+    - name: Azure VM’lere (IaaS bulutu) Windows Kapsayıcıları ne zaman dağıtılmalıdır?
+      href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md
+    - name: Windows Kapsayıcıları, Azure Container Instances’a (ACI) ne zaman dağıtılmalıdır?
+      href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-instances-ACI.md
+    - name: Service Fabric’e Windows Kapsayıcıları ne zaman dağıtılmalıdır?
+      href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md
+    - name: Windows Kapsayıcıları, Azure Container Service’e (ACS-Kubernetes) ne zaman dağıtılmalıdır?
+      href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md
+    - name: Kapsayıcı tabanlı uygulamalar için Azure işlem platformları seçme
+      href: ./modernize-existing-apps-to-cloud-optimized/choosing-azure-compute-options-for-container-based-applications.md
+    - name: 'Bulut için hazır olan dayanıklı hizmetler derleme: Buluttaki geçici hataları benimseme'
+      href: ./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md
+    - name: İzleme ve telemetri ile uygulamalarınızı modernleştirme
+      href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md
+    - name: Bulutta CI/CD işlem hatları ve DevOps araçları ile uygulama yaşam döngüsünü modernleştirme
+      href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md
+    - name: Karma bulut senaryolarına geçiş
+      href: ./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md
+  - name: İzlenecek yollar ve teknik başlangıca genel bakış
+    href: walkthroughs-technical-get-started-overview.md
+  - name: Sonuçlar
+    href: conclusions.md
+ms.openlocfilehash: f88e21a8b7769b34b365d0bfcef46736bf5732c1
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471694"

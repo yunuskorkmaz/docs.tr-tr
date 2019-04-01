@@ -1,0 +1,36 @@
+items:
+- name: Genel Türler
+  href: index.md
+  items:
+  - name: Genel Türlere Giriş
+    href: introduction-to-generics.md
+  - name: Genel Türlerin Yararları
+    href: benefits-of-generics.md
+  - name: Genel Tür Parametreleri
+    href: generic-type-parameters.md
+  - name: Tür Parametrelerindeki Kısıtlamalar
+    href: constraints-on-type-parameters.md
+  - name: Genel Sınıflar
+    href: generic-classes.md
+  - name: Genel Arabirimler
+    href: generic-interfaces.md
+  - name: Genel Yöntemler
+    href: generic-methods.md
+  - name: Genel Türler ve Diziler
+    href: generics-and-arrays.md
+  - name: Genel Temsilciler
+    href: generic-delegates.md
+  - name: C++ Şablonları ve C# Genel Türleri Arasındaki Farklar
+    href: differences-between-cpp-templates-and-csharp-generics.md
+  - name: Çalışma Zamanındaki Genel Türler
+    href: generics-in-the-run-time.md
+  - name: Genel Türler ve Yansıma
+    href: generics-and-reflection.md
+  - name: Genel Türler ve Öznitelikler
+    href: generics-and-attributes.md
+ms.openlocfilehash: daccd9dc4b0c808750866aacad6dacffc1282f6e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471680"

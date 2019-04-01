@@ -1,0 +1,79 @@
+items:
+- name: Güvenlik
+  href: index.md
+  items:
+  - name: Temel Güvenlik Kavramları
+    href: key-security-concepts.md
+  - name: Rol Tabanlı Güvenlik
+    href: role-based-security.md
+    items:
+    - name: Asıl ve Kimlik Nesneleri
+      href: principal-and-identity-objects.md
+    - name: 'Nasıl yapılır: WindowsPrincipal Nesnesi Oluşturma'
+      href: how-to-create-a-windowsprincipal-object.md
+    - name: 'Nasıl yapılır: GenericPrincipal ve GenericIdentity Nesneleri Oluşturma'
+      href: how-to-create-genericprincipal-and-genericidentity-objects.md
+    - name: Asıl Nesneyi Değiştirme
+      href: replacing-a-principal-object.md
+    - name: Kimliğe Bürünme ve Geri Alma
+      href: impersonating-and-reverting.md
+  - name: Şifreleme Modeli
+    href: cryptography-model.md
+    items:
+    - name: Şifreleme Hizmetleri
+      href: cryptographic-services.md
+    - name: Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma
+      href: generating-keys-for-encryption-and-decryption.md
+    - name: 'Nasıl yapılır: Bir Anahtar Kapsayıcısında Asimetrik Anahtarlar Depolama'
+      href: how-to-store-asymmetric-keys-in-a-key-container.md
+    - name: Veri Şifreleme
+      href: encrypting-data.md
+    - name: Verilerin Şifresini Çözme
+      href: decrypting-data.md
+    - name: Şifreleme İmzası
+      href: cryptographic-signatures.md
+    - name: Karma Kodlarla Veri Bütünlüğünü Sağlama
+      href: ensuring-data-integrity-with-hash-codes.md
+    - name: Şifreleme Düzeni Oluşturma
+      href: creating-a-cryptographic-scheme.md
+    - name: 'Nasıl yapılır: XML Öğelerini Simetrik Anahtarlarla Şifreleme'
+      href: how-to-encrypt-xml-elements-with-symmetric-keys.md
+    - name: 'Nasıl yapılır: XML Öğelerinin Şifresini Simetrik Anahtarlarla Çözme'
+      href: how-to-decrypt-xml-elements-with-symmetric-keys.md
+    - name: 'Nasıl yapılır: XML Öğelerini Asimetrik Anahtarlarla Şifreleme'
+      href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
+    - name: 'Nasıl yapılır: XML Öğelerinin Şifresini Asimetrik Anahtarlarla Çözme'
+      href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
+    - name: 'Nasıl yapılır: XML Öğelerini X.509 Sertifikalarıyla Şifreleme'
+      href: how-to-encrypt-xml-elements-with-x-509-certificates.md
+    - name: 'Nasıl yapılır: XML Öğelerinin Şifresini X.509 Sertifikalarıyla Çözme'
+      href: how-to-decrypt-xml-elements-with-x-509-certificates.md
+    - name: 'Nasıl yapılır: XML Belgelerini Dijital İmzalarla imzalama'
+      href: how-to-sign-xml-documents-with-digital-signatures.md
+    - name: 'Nasıl yapılır: XML Belgelerinin Dijital İmzalarını Doğrulama'
+      href: how-to-verify-the-digital-signatures-of-xml-documents.md
+    - name: 'Nasıl yapılır: Veri Korumayı Kullanma'
+      href: how-to-use-data-protection.md
+    - name: 'Nasıl yapılır: Donanım Şifreleme Cihazlarına Erişim'
+      href: how-to-access-hardware-encryption-devices.md
+    - name: 'İzlenecek yol: Şifreleme Uygulaması Oluşturma'
+      href: walkthrough-creating-a-cryptographic-application.md
+  - name: Güvenli Kodlama Yönergeleri
+    href: secure-coding-guidelines.md
+    items:
+    - name: Durum Verilerinin Güvenliğini Sağlama
+      href: securing-state-data.md
+    - name: Güvenlik ve Kullanıcı Girdisi
+      href: security-and-user-input.md
+    - name: Güvenlik ve Yarış Durumları
+      href: security-and-race-conditions.md
+    - name: Güvenlik ve Çalışma Sırasında Kod Oluşturma
+      href: security-and-on-the-fly-code-generation.md
+    - name: Doldurmayı kullanarak CBC modunda simetrik şifre çözmedeki zamanlama açıkları
+      href: vulnerabilities-cbc-mode.md
+ms.openlocfilehash: bf0a409f88486c4fb5ca476ab5f96be6e1aa823d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471891"

@@ -1,0 +1,32 @@
+items:
+- name: İşleçler ve İfadeler
+  href: index.md
+  items:
+  - name: İşleçlerle Yapılan Genel Görevler
+    href: common-tasks-performed-with-visual-basic-operators.md
+  - name: Aritmetik İşleçler
+    href: arithmetic-operators.md
+  - name: Karşılaştırma İşleçleri
+    href: comparison-operators.md
+  - name: 'Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Test Etme'
+    href: how-to-test-whether-two-objects-are-the-same.md
+  - name: 'Nasıl yapılır: Bir Dizeyi Belirli Bir Desene Göre Eşleştirme'
+    href: how-to-match-a-string-against-a-pattern.md
+  - name: Birleştirme İşleçleri
+    href: concatenation-operators.md
+  - name: Mantıksal ve Bit Düzeyinde İşleçler
+    href: logical-and-bitwise-operators.md
+  - name: İşleçlerin Etkili Bileşimi
+    href: efficient-combination-of-operators.md
+  - name: 'Nasıl yapılır: Sayısal Değerleri Hesaplama'
+    href: how-to-calculate-numeric-values.md
+  - name: Değer Karşılaştırmaları
+    href: value-comparisons.md
+  - name: Boole İfadeleri
+    href: boolean-expressions.md
+ms.openlocfilehash: b16598c335031cf099e0549d491adfc204fc6d35
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471733"

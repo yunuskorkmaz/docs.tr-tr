@@ -1,0 +1,122 @@
+items:
+- name: Yönetilmeyen Kod ile Birlikte Çalışma
+  href: index.md
+  items:
+  - name: COM Bileşenlerini .NET Framework'te Gösterme
+    href: exposing-com-components.md
+    items:
+    - name: Tür Kitaplığını Derleme Olarak İçeri Aktarma
+      href: importing-a-type-library-as-an-assembly.md
+    - name: 'Nasıl yapılır: Tür Kitaplıklarına Başvurular Ekleme'
+      href: how-to-add-references-to-type-libraries.md
+    - name: 'Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Derlemeleri Oluşturma'
+      href: how-to-generate-interop-assemblies-from-type-libraries.md
+    - name: Birlikte Çalışma Projesi Derleme
+      href: compiling-an-interop-project.md
+    - name: Birlikte Çalışma Uygulamasını Dağıtma
+      href: deploying-an-interop-application.md
+    - name: 'COM Birlikte Çalışma Örneği: .NET İstemcisi ve COM Sunucusu'
+      href: com-interop-sample-net-client-and-com-server.md
+  - name: .NET Framework Bileşenlerini COM'da Gösterme
+    href: exposing-dotnet-components-to-com.md
+    items:
+    - name: Birlikte Çalışma için Niteleyici .NET Türleri
+      href: qualifying-net-types-for-interoperation.md
+    - name: Birlikte Çalışma Özniteliklerini Uygulama
+      href: applying-interop-attributes.md
+    - name: COM için Derlemeyi Paketleme
+      href: packaging-an-assembly-for-com.md
+    - name: Derlemeleri COM ile Kaydetme
+      href: registering-assemblies-with-com.md
+    - name: "Nasıl yapılır: COM'dan .NET Türlerine Başvurma"
+      href: how-to-reference-net-types-from-com.md
+    - name: 'COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu'
+      href: com-interop-sample-com-client-and-net-server.md
+  - name: Yönetilmeyen DLL İşlevlerini Kullanma
+    href: consuming-unmanaged-dll-functions.md
+    items:
+    - name: DLL'lerde İşlevleri Tanımlama
+      href: identifying-functions-in-dlls.md
+    - name: DLL İşlevleri için bir Sınıf Oluşturma
+      href: creating-a-class-to-hold-dll-functions.md
+    - name: Yönetilen Kodda Prototipler Oluşturma
+      href: creating-prototypes-in-managed-code.md
+      items:
+      - name: Giriş Noktası Belirtme
+        href: specifying-an-entry-point.md
+      - name: Karakter Kümesi Belirtme
+        href: specifying-a-character-set.md
+      - name: Platform Çağırma Örnekleri
+        href: platform-invoke-examples.md
+    - name: DLL İşlevini Çağırma
+      href: calling-a-dll-function.md
+      items:
+      - name: Yapıları Geçirme
+        href: passing-structures.md
+      - name: Geri Çağırma İşlevleri
+        href: callback-functions.md
+      - name: 'Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama'
+        href: how-to-implement-callback-functions.md
+  - name: Birlikte Çalışma Hazırlama
+    href: interop-marshaling.md
+    items:
+    - name: Varsayılan Sıralama Davranışı
+      href: default-marshaling-behavior.md
+      items:
+      - name: Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler
+        href: blittable-and-non-blittable-types.md
+      - name: Kopyalama ve Sabitleme
+        href: copying-and-pinning.md
+      - name: Diziler için Varsayılan Sıralama
+        href: default-marshaling-for-arrays.md
+      - name: Nesneler için Varsayılan Hazırlama
+        href: default-marshaling-for-objects.md
+      - name: Dizeler için Varsayılan Hazırlama
+        href: default-marshaling-for-strings.md
+    - name: Platform Çağırma ile Veri Sıralama
+      href: marshaling-data-with-platform-invoke.md
+      items:
+      - name: Dizeleri Hazırlama
+        href: marshaling-strings.md
+      - name: MsgBox Örneği
+        href: msgbox-sample.md
+      - name: Sınıflar, Yapılar ve Birleşimleri Hazırlama
+        href: marshaling-classes-structures-and-unions.md
+      - name: Farklı Dizi Türlerini Hazırlama
+        href: marshaling-different-types-of-arrays.md
+      - name: Geri Çağırma Yöntemi Olarak Bir Temsilci Hazırlama
+        href: marshaling-a-delegate-as-a-callback-method.md
+    - name: COM Birlikte Çalışma ile Verileri Sıralama
+      href: marshaling-data-with-com-interop.md
+      items:
+      - name: 'Nasıl yapılır: Sarmalayıcıları Elle Oluşturma'
+        href: how-to-create-wrappers-manually.md
+      - name: 'Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme'
+        href: how-to-migrate-managed-code-dcom-to-wcf.md
+  - name: 'Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme'
+    href: how-to-map-hresults-and-exceptions.md
+  - name: COM Sarmalayıcıları
+    href: com-wrappers.md
+    items:
+    - name: Çalışma Zamanı Aranabilir Sarmalayıcısı
+      href: runtime-callable-wrapper.md
+    - name: COM Aranabilir Sarmalayıcısı
+      href: com-callable-wrapper.md
+    - name: 'Nasıl yapılır: COM Sarmalayıcıları Oluşturma'
+      href: how-to-create-com-wrappers.md
+  - name: Tür Eşdeğerliği ve Katıştırılmış Birlikte Çalışma Türleri
+    href: type-equivalence-and-embedded-interop-types.md
+  - name: 'Nasıl yapılır: Tlbimp.exe Kullanarak Birincil Birlikte Çalışma Derlemeleri Oluşturma'
+    href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
+  - name: 'Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme'
+    href: how-to-register-primary-interop-assemblies.md
+  - name: Kayıtsız COM Birlikte Çalışma
+    href: registration-free-com-interop.md
+  - name: 'Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma'
+    href: configure-net-framework-based-com-components-for-reg.md
+ms.openlocfilehash: be9d4bcdaeb8b7389d72bddfa36e1594b5149ce4
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471626"

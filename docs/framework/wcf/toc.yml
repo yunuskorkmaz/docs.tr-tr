@@ -1,0 +1,256 @@
+items:
+- name: WCF ile Hizmet Odaklı Uygulamalar
+  href: index.md
+  items:
+  - name: Windows Communication Foundation 4.5'teki Yenilikler
+    href: whats-new.md
+  - name: WCF Kolaylaştırma Özellikleri
+    href: wcf-simplification-features.md
+  - name: Belgeler için Kılavuz
+    href: guide-to-the-documentation.md
+  - name: Kavramsal Genel Bakış
+    href: conceptual-overview.md
+    items:
+    - name: Windows Communication Foundation nedir?
+      href: whats-wcf.md
+    - name: Temel Windows Communication Foundation Kavramları
+      href: fundamental-concepts.md
+    - name: Windows Communication Foundation Mimarisi
+      href: architecture.md
+    - name: WCF ve .NET Framework İstemci Profili
+      href: wcf-and-net-framework-client-profile.md
+  - name: Başlangıç Öğreticisi
+    href: getting-started-tutorial.md
+    items:
+    - name: Bir Hizmet Anlaşması Tanımlama
+      href: how-to-define-a-wcf-service-contract.md
+    - name: Bir Hizmet Anlaşmasını Uygulama
+      href: how-to-implement-a-wcf-contract.md
+    - name: Temel Bir Hizmet Barındırma ve Çalıştırma
+      href: how-to-host-and-run-a-basic-wcf-service.md
+    - name: İstemci Oluşturma
+      href: how-to-create-a-wcf-client.md
+    - name: İstemci Kullanma
+      href: how-to-use-a-wcf-client.md
+    - name: Başlangıç Öğreticisi için Sorun Giderme
+      href: troubleshooting-the-getting-started-tutorial.md
+  - name: Temel WCF Programlama
+    href: basic-wcf-programming.md
+    items:
+    - name: Temel Programlama Yaşam Döngüsü
+      href: basic-programming-lifecycle.md
+    - name: Hizmetleri Tasarlama ve Uygulama
+      href: designing-and-implementing-services.md
+      items:
+      - name: Hizmet Sözleşmeleri Tasarlama
+        href: designing-service-contracts.md
+        items:
+        - name: Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme
+          href: specifying-and-handling-faults-in-contracts-and-services.md
+          items:
+          - name: Hataları Tanımlama ve Belirtme
+            href: defining-and-specifying-faults.md
+            items:
+            - name: 'Nasıl yapılır: Hizmet Sözleşmelerinde Hata Bildirme'
+              href: how-to-declare-faults-in-service-contracts.md
+          - name: Hataları Gönderme ve Alma
+            href: sending-and-receiving-faults.md
+        - name: Oturumları Kullanma
+          href: using-sessions.md
+        - name: Zaman Uyumlu ve Zaman Uyumsuz İşlemler
+          href: synchronous-and-asynchronous-operations.md
+          items:
+          - name: 'Nasıl yapılır: Zaman Uyumsuz Bir Hizmet İşlemi Uygulama'
+            href: how-to-implement-an-asynchronous-service-operation.md
+        - name: Güvenilir Hizmetler
+          href: reliable-services.md
+        - name: Hizmetler ve İşlemler
+          href: services-and-transactions.md
+      - name: Hizmet Sözleşmelerini Uygulama
+        href: implementing-service-contracts.md
+        items:
+        - name: Hizmet Çalışma Zamanı Davranışını Belirtme
+          href: specifying-service-run-time-behavior.md
+    - name: Hizmetleri Yapılandırma
+      href: configuring-services.md
+      items:
+      - name: Basitleştirilmiş Yapılandırma
+        href: simplified-configuration.md
+      - name: Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
+        href: configuring-services-using-configuration-files.md
+      - name: WCF Hizmetlerini Kodda Yapılandırma
+        href: configuring-wcf-services-in-code.md
+      - name: Bağlamalar
+        href: bindings.md
+        items:
+        - name: WCF Bağlamalarına Genel Bakış
+          href: bindings-overview.md
+        - name: Sistem Tarafından Sağlanan Bağlamalar
+          href: system-provided-bindings.md
+        - name: Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma
+          href: using-bindings-to-configure-services-and-clients.md
+          items:
+          - name: 'Nasıl yapılır: Kodda İstemci Bağlama Belirtme'
+            href: how-to-specify-a-client-binding-in-code.md
+          - name: 'Nasıl yapılır: Yapılandırmada İstemci Bağlama Belirtme'
+            href: how-to-specify-a-client-binding-in-configuration.md
+          - name: 'Nasıl yapılır: Kodda Hizmet Bağlama Belirtme'
+            href: how-to-specify-a-service-binding-in-code.md
+          - name: 'Nasıl yapılır: Yapılandırmada Hizmet Bağlama Belirtme'
+            href: how-to-specify-a-service-binding-in-configuration.md
+        - name: Hizmetler için Bağlamaları Yapılandırma
+          href: configuring-bindings-for-wcf-services.md
+      - name: Uç Noktalar
+        href: endpoints.md
+        items:
+        - name: Uç Noktası Oluşturma Genel Bakış
+          href: endpoint-creation-overview.md
+        - name: Bir Uç Noktası Adresi Belirtme
+          href: specifying-an-endpoint-address.md
+        - name: Meta Veri Uç Noktalarını Yayımlama
+          href: publishing-metadata-endpoints.md
+      - name: Hizmetleri Güvenli Hale Getirme
+        href: securing-services.md
+        items:
+        - name: 'Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme'
+          href: how-to-secure-a-service-with-windows-credentials.md
+        - name: 'Nasıl yapılır: Güvenlik Modunu Ayarlama'
+          href: how-to-set-the-security-mode.md
+        - name: 'Nasıl yapılır: İstemci Kimlik Bilgileri Türünü Belirtme'
+          href: how-to-specify-the-client-credential-type.md
+        - name: 'Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama'
+          href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
+        - name: 'Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme'
+          href: how-to-impersonate-a-client-on-a-service.md
+        - name: 'Nasıl yapılır: Güvenlik Bağlamını İnceleme'
+          href: how-to-examine-the-security-context.md
+        - name: Koruma Düzeylerini Anlama
+          href: understanding-protection-level.md
+        - name: 'Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama'
+          href: how-to-set-the-protectionlevel-property.md
+      - name: WS-I Temel Profil 1.1 Birlikte Çalışabilir Hizmetler Oluşturma
+        href: creating-ws-i-basic-profile-1-1-interoperable-services.md
+    - name: Barındırma Hizmetleri
+      href: hosting-services.md
+      items:
+      - name: 'Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma'
+        href: how-to-host-a-wcf-service-in-a-managed-application.md
+      - name: 'Nasıl yapılır: .NET Framework 4 Altında Çalışan IIS .NET Framework 3.5 ile Yazılmış Bir WCF Hizmetini Barındırma'
+        href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
+    - name: İstemci Derleme
+      href: building-clients.md
+      items:
+      - name: WCF İstemcisi Genel Bakış
+        href: wcf-client-overview.md
+      - name: WCF İstemcisi Kullanarak Hizmetlere Erişme
+        href: accessing-services-using-a-wcf-client.md
+        items:
+        - name: Taşınabilir Alt Küme Projesine Hizmet Başvurusu Ekle
+          href: add-service-reference-in-a-portable-subset-project.md
+        - name: İstemci Çalışma Zamanı Davranışını Belirtme
+          href: specifying-client-run-time-behavior.md
+        - name: İstemci Davranışlarını Yapılandırma
+          href: configuring-client-behaviors.md
+      - name: İstemcileri Güvenli Hale Getirme
+        href: securing-clients.md
+        items:
+        - name: 'Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme'
+          href: how-to-specify-client-credential-values.md
+    - name: Genişletilebilirlik Genel Bakış
+      href: introduction-to-extensibility.md
+    - name: WCF Sorun Giderme Hızlı Başlangıç
+      href: wcf-troubleshooting-quickstart.md
+    - name: WCF Hata İşleme
+      href: wcf-error-handling.md
+    - name: WCF ve ASP.NET Web API
+      href: wcf-and-aspnet-web-api.md
+  - name: WCF Özellik Ayrıntıları
+    href: feature-details/
+  - name: WCF'yi Genişletme
+    href: extending/
+  - name: Yönergeler ve En İyi Yöntemler
+    href: guidelines-and-best-practices.md
+    items:
+    - name: 'En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma'
+      href: best-practices-data-contract-versioning.md
+    - name: 'En İyi Yöntemler: Aracılar'
+      href: best-practices-intermediaries.md
+    - name: Hizmet Sürümü Oluşturma
+      href: service-versioning.md
+    - name: YükDengeleme
+      href: load-balancing.md
+    - name: Kaynak Tüketimini Denetleme ve Performansı Geliştirme
+      href: controlling-resource-consumption-and-improving-performance.md
+    - name: ClickOnce ile WCF Uygulamaları Dağıtma
+      href: deploying-wcf-applications-with-clickonce.md
+  - name: Yönetim ve Tanılama
+    href: diagnostics/
+  - name: Sistem Gereksinimleri
+    href: wcf-system-requirements.md
+  - name: WCF Tarafından Gerektirilen İşletim Sistemi Kaynakları
+    href: operating-system-resources-required-by-wcf.md
+  - name: Kurulum Sorunlarını Giderme
+    href: troubleshooting-setup-issues.md
+  - name: .NET Uzaktan İletişimden WCF'ye Taşınma
+    href: migrating-from-net-remoting-to-wcf.md
+  - name: WCF Geliştirme Araçlarını Kullanma
+    href: using-the-wcf-development-tools.md
+    items:
+    - name: WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
+      href: wcf-service-host-wcfsvchost-exe.md
+    - name: WCF Test İstemcisi (WcfTestClient.exe)
+      href: wcf-test-client-wcftestclient-exe.md
+    - name: WCF Visual Studio Şablonları
+      href: wcf-vs-templates.md
+    - name: WCF Hizmet Yayımlama
+      href: wcf-service-publishing.md
+    - name: Bir WCF Hizmetini Yeniden Adlandırma
+      href: renaming-a-wcf-service.md
+    - name: Bir WCF Kitaplık Projesini Dağıtma
+      href: deploying-a-wcf-library-project.md
+    - name: WCF Hizmet Konağının Otomatik Olarak Başlatılmasını Denetleme
+      href: controlling-auto-launching-of-wcf-service-host.md
+    - name: XML'den Veri Türü Sınıfları Oluşturma
+      href: generating-data-type-classes-from-xml.md
+  - name: Windows Communication Foundation Araçları
+    href: tools.md
+    items:
+    - name: ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)
+      href: servicemodel-metadata-utility-tool-svcutil-exe.md
+    - name: Find Private Key Aracı (FindPrivateKey.exe)
+      href: find-private-key-tool-findprivatekey-exe.md
+    - name: ServiceModel Kayıt Aracı (ServiceModelReg.exe)
+      href: servicemodelreg-exe.md
+    - name: Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
+      href: service-trace-viewer-tool-svctraceviewer-exe.md
+    - name: Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)
+      href: configuration-editor-tool-svcconfigeditor-exe.md
+    - name: COM+ Hizmet Modeli Yapılandırma Aracı (ComSvcConfig.exe)
+      href: com-service-model-configuration-tool-comsvcconfig-exe.md
+    - name: WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)
+      href: ws-atomictransaction-configuration-utility-wsatconfig-exe.md
+      items:
+      - name: wsatConfig.exe Tarafından Döndürülen Hata Kodlarını Yorumlama
+        href: interpreting-error-codes-returned-by-wsatconfig-exe.md
+    - name: WS-AtomicTransaction Yapılandırması MMC Ek Bileşeni
+      href: ws-atomictransaction-configuration-mmc-snap-in.md
+    - name: WorkFlow Hizmet Kayıt Aracı (WFServicesReg.exe)
+      href: workflow-service-registration-tool-wfservicesreg-exe.md
+    - name: Önce Anlaşma Aracı
+      href: contract-first-tool.md
+  - name: Windows Communication Foundation Örnekleri
+    href: samples/
+  - name: Windows Communication Foundation Sözlüğü
+    href: glossary.md
+  - name: Genel Başvuru
+    href: general-reference.md
+  - name: Geri Bildirim ve Topluluk
+    href: feedback-and-community.md
+  - name: Gizlilik Bilgileri
+    href: privacy-information.md
+ms.openlocfilehash: 4bd93b468fb7f077fc070053745d8ac6b2abb810
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471947"

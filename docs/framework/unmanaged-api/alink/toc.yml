@@ -1,0 +1,113 @@
+items:
+- name: ALink API
+  href: index.md
+  items:
+  - name: AssemblyAttributesGoHere
+    href: assemblyattributesgohere.md
+  - name: AssemblyAttributesGoHereM
+    href: assemblyattributesgoherem.md
+  - name: AssemblyAttributesGoHereS
+    href: assemblyattributesgoheres.md
+  - name: AssemblyAttributesGoHereSM
+    href: assemblyattributesgoheresm.md
+  - name: AssemblyOptions Numaralandırması
+    href: assemblyoptions-enumeration.md
+  - name: CreateALink İşlevi
+    href: createalink-function.md
+  - name: GetALinkMessageDll İşlevi
+    href: getalinkmessagedll-function.md
+  - name: IALink Arabirimi
+    href: ialink-interface.md
+    items:
+    - name: Init Yöntemi
+      href: init-method.md
+    - name: ImportFile Metodu
+      href: importfile-method.md
+    - name: SetAssemblyFile Yöntemi
+      href: setassemblyfile-method.md
+    - name: AddFile Metodu
+      href: addfile-method.md
+    - name: AddImport Metodu
+      href: addimport-method.md
+    - name: GetScope Metodu
+      href: getscope-method.md
+    - name: GetAssemblyRefHash Yöntemi
+      href: getassemblyrefhash-method.md
+    - name: ImportTypes Yöntemi
+      href: importtypes-method.md
+    - name: EnumCustomAttributes Yöntemi
+      href: enumcustomattributes-method.md
+    - name: EnumImportTypes Yöntemi
+      href: enumimporttypes-method.md
+    - name: CloseEnum Yöntemi
+      href: closeenum-method.md
+    - name: ExportType Yöntemi
+      href: exporttype-method.md
+    - name: ExportNestedType Yöntemi
+      href: exportnestedtype-method.md
+    - name: EmbedResource Yöntemi
+      href: embedresource-method.md
+    - name: LinkResource Yöntemi
+      href: linkresource-method.md
+    - name: GetResolutionScope Metodu
+      href: getresolutionscope-method.md
+    - name: SetAssemblyProps Yöntemi
+      href: setassemblyprops-method.md
+    - name: EmitAssemblyCustomAttribute Yöntemi
+      href: emitassemblycustomattribute-method.md
+    - name: GetWin32ResBlob Metodu
+      href: getwin32resblob-method.md
+    - name: FreeWin32ResBlob Yöntemi
+      href: freewin32resblob-method.md
+    - name: EmitManifest Yöntemi
+      href: emitmanifest-method.md
+    - name: PreCloseAssembly Yöntemi
+      href: precloseassembly-method.md
+    - name: CloseAssembly Yöntemi
+      href: closeassembly-method.md
+    - name: EndMerge Yöntemi
+      href: endmerge-method.md
+    - name: SetNonAssemblyFlags Yöntemi
+      href: setnonassemblyflags-method.md
+    - name: ImportFile2 Yöntemi
+      href: importfile2-method.md
+    - name: ExportTypeForwarder Yöntemi
+      href: exporttypeforwarder-method.md
+    - name: ExportNestedTypeForwarder Metodu
+      href: exportnestedtypeforwarder-method.md
+  - name: IALink2 Arabirimi
+    href: ialink2-interface.md
+    items:
+    - name: SetAssemblyFile2 Yöntemi
+      href: setassemblyfile2-method.md
+    - name: AddFile2 Yöntemi
+      href: addfile2-method.md
+    - name: GetScope2 Metodu
+      href: getscope2-method.md
+    - name: ImportTypes2 Yöntemi
+      href: importtypes2-method.md
+    - name: GetFileDef Yöntemi
+      href: getfiledef-method.md
+    - name: GetPublicKeyToken Metodu
+      href: getpublickeytoken-method.md
+    - name: EmitInternalExportedTypes Yöntemi
+      href: emitinternalexportedtypes-method.md
+    - name: ImportFileEx Yöntemi
+      href: importfileex-method.md
+    - name: ImportFileEx2 Yöntemi
+      href: importfileex2-method.md
+    - name: SetPEKind Yöntemi
+      href: setpekind-method.md
+    - name: EmitAssembly Yöntemi
+      href: emitassembly-method.md
+  - name: IALink3 Arabirimi
+    href: ialink3-interface.md
+    items:
+    - name: SetManifestFile Yöntemi
+      href: setmanifestfile-method.md
+ms.openlocfilehash: c4c5d53634a8585c80f60aa77a3511440a77b9b3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471874"

@@ -1,0 +1,117 @@
+items:
+- name: Windows İş Akışı Örnekleri
+  href: index.md
+  items:
+  - name: Uygulama
+    href: application.md
+    items:
+    - name: Belge Onay İşlemi
+      href: document-approval-process.md
+    - name: Şirket Satın Alma İşlemi
+      href: corporate-purchase-process.md
+    - name: İşe Alma İşlemi
+      href: hiring-process.md
+    - name: Görsel İş Akışı İzleme
+      href: visual-workflow-tracking.md
+    - name: Askıya Alınmış Örnek Yönetimi
+      href: suspended-instance-management.md
+  - name: Temel
+    href: basic.md
+    items:
+    - name: Yerleşik Etkinlikler
+      href: built-in-activities.md
+      items:
+      - name: TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme
+        href: fault-handling-in-a-flowchart-activity-using-trycatch.md
+      - name: XAML’den Yükleme
+        href: load-from-xaml.md
+      - name: InvokeMethod Etkinliği Kullanma
+        href: using-the-invokemethod-activity.md
+      - name: Pick Etkinliği Kullanma
+        href: using-the-pick-activity.md
+    - name: Özel Etkinlikler
+      href: custom-activities.md
+      items:
+      - name: Kod Gövdeli
+        href: code-bodied.md
+        items:
+        - name: Native Etkinliği Kullanan Özel Bileşik
+          href: custom-composite-using-native-activity.md
+      - name: Özel Etkinlik Tasarımcıları
+        href: custom-activity-designers.md
+        items:
+        - name: Özel Bileşik Tasarımcılar - İş Akışı Öğesi Sunucu
+          href: custom-composite-designers-workflow-item-presenter.md
+        - name: Özel Bileşik Tasarımcılar - İş Akışı Öğeleri Sunucu
+          href: custom-composite-designers-workflow-items-presenter.md
+        - name: Özel Etkinlik Tasarımcısında ExpressionTextBox Kullanma
+          href: using-the-expressiontextbox-in-a-custom-activity-designer.md
+        - name: Düzenleme Kapsamını Kullanma
+          href: using-editing-scope.md
+    - name: Tasarımcı
+      href: designer.md
+      items:
+      - name: Tasarımcının bir XAML Dosyasına Eklediği Görünüm Durumunu Kaldırma
+        href: removing-the-view-state-the-designer-adds-to-an-xaml-file.md
+      - name: Programlama Modeli Öğe Ağacı
+        href: programming-model-item-tree.md
+      - name: Özellik Kılavuzu Genişletilebilirliği
+        href: property-grid-extensibility.md
+    - name: Tasarımcıyı Yeniden Barındırma
+      href: designer-rehosting.md
+    - name: Yürütme
+      href: execution.md
+      items:
+      - name: İş Akışı Örneği Oluşturma ve Çalıştırma
+        href: creating-and-running-a-workflow-instance.md
+      - name: WorkflowHostingEndpoint Sürdürme Yer İşareti
+        href: workflowhostingendpoint-resume-bookmark.md
+      - name: WorkflowHostingEndpoint için Yer İşareti Çözümleyici
+        href: bookmark-resolver-for-workflowhostingendpoint.md
+    - name: İzleme
+      href: tracking.md
+      items:
+      - name: Özel İzleme
+        href: custom-tracking.md
+      - name: Windows'ta Olay İzleme ile Olayları İzleme
+        href: tracking-events-into-event-tracing-in-windows.md
+      - name: SQL İzleme
+        href: sql-tracking.md
+  - name: Senaryo
+    href: scenario.md
+    items:
+    - name: Etkinlik Kitaplığı
+      href: activity-library.md
+      items:
+      - name: SendMail Özel Etkinliği
+        href: sendmail-custom-activity.md
+      - name: Kısıtlanmış Paralel ForEach
+        href: throttled-parallel-foreach.md
+      - name: Veritabanı Erişimi Etkinlikleri
+        href: database-access-activities.md
+      - name: .NET Framework 4.5’te Dış İlke Etkinliği
+        href: externalized-policy-activity-in-net-framework-4-5.md
+      - name: Genel Olmayan ForEach
+        href: non-generic-foreach.md
+      - name: Genel Olmayan ParallelForEach
+        href: non-generic-parallelforeach.md
+      - name: WorkflowInstanceId Alma
+        href: get-workflowinstanceid.md
+    - name: Hizmetler
+      items:
+      - name: OperationContext Erişimi
+        href: accessing-operationcontext.md
+      - name: LINQ İleti Kuyruğu Bağıntısı
+        href: linq-message-query-correlation.md
+      - name: Zaman Uyumsuz İletişim
+        href: asynchronous-communication.md
+    - name: XAML içinde WPF ve WF tümleştirmesi
+      href: wpf-and-wf-integration-in-xaml.md
+    - name: Dış Kural Kümesi Araç Seti
+      href: external-ruleset-toolkit.md
+ms.openlocfilehash: 19369f2096ca3e9a15d514d88faec40d861dc752
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471907"

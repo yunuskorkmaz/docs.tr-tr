@@ -1,0 +1,32 @@
+items:
+- name: Uygulamadan Günlüğe Bilgi Kaydetme
+  href: index.md
+  items:
+  - name: 'Nasıl yapılır: Günlük İletileri Yazma'
+    href: how-to-write-log-messages.md
+  - name: 'Nasıl yapılır: Özel Durumları Günlüğe Kaydetme'
+    href: how-to-log-exceptions.md
+  - name: 'Nasıl yapılır: Uygulama Başlarken veya Kapanırken İletileri Günlüğe Kaydetme'
+    href: how-to-log-messages-when-the-application-starts-or-shuts-down.md
+  - name: 'Nasıl yapılır: Uygulama Olay Günlüğüne Yazma'
+    href: how-to-write-to-an-application-event-log.md
+  - name: 'Nasıl yapılır: Olay Bilgilerini Metin Dosyasına Yazma'
+    href: how-to-write-event-information-to-a-text-file.md
+  - name: Uygulama Günlükleriyle Çalışma
+    href: working-with-application-logs.md
+  - name: 'İzlenecek yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme'
+    href: walkthrough-determining-where-my-application-log-writes-information.md
+  - name: 'İzlenecek yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme'
+    href: walkthrough-changing-where-my-application-log-writes-information.md
+  - name: 'İzlenecek yol: My.Application.Log Çıktısını Filtreleme'
+    href: walkthrough-filtering-my-application-log-output.md
+  - name: 'İzlenecek yol: Özel Günlük Dinleyicileri Oluşturma'
+    href: walkthrough-creating-custom-log-listeners.md
+  - name: 'Sorun Giderme: Günlük Dinleyicileri'
+    href: troubleshooting-log-listeners.md
+ms.openlocfilehash: 9b1d9ae3a2fdda80723180e7eef1b31aa06a28ea
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471835"

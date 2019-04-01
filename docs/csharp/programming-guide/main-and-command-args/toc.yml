@@ -1,0 +1,18 @@
+items:
+- name: Ana() ve komut satırı bağımsız değişkenleri
+  href: index.md
+  items:
+  - name: Komut Satırı Bağımsız Değişkenleri
+    href: command-line-arguments.md
+  - name: 'Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme'
+    href: how-to-display-command-line-arguments.md
+  - name: 'Nasıl yapılır: foreach Kullanarak Komut Satırı Bağımsız Değişkenlerine Erişme'
+    href: how-to-access-command-line-arguments-using-foreach.md
+  - name: Ana() Dönüş Değerleri
+    href: main-return-values.md
+ms.openlocfilehash: f46f240118ac595dc8d933ecd5f7efbf16cb25ab
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471787"

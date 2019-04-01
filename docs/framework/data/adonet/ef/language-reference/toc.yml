@@ -1,0 +1,281 @@
+items:
+- name: Dil Başvurusu
+  href: index.md
+  items:
+  - name: LINQ - Varlıklar
+    href: linq-to-entities.md
+    items:
+    - name: LINQ to Entities Sorguları
+      href: queries-in-linq-to-entities.md
+      items:
+      - name: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Projeksiyon'
+        href: method-based-query-syntax-examples-projection.md
+      - name: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Filtreleme'
+        href: method-based-query-syntax-examples-filtering.md
+      - name: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Sıralama'
+        href: method-based-query-syntax-examples-ordering.md
+      - name: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Toplama İşleçleri'
+        href: method-based-query-syntax-examples-aggregate-operators.md
+      - name: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Bölümlendirme'
+        href: method-based-query-syntax-examples-partitioning.md
+      - name: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Dönüştürme'
+        href: method-based-query-syntax-examples-conversion.md
+      - name: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Birleşim İşleçleri'
+        href: method-based-query-syntax-examples-join-operators.md
+      - name: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Öğe İşleçleri'
+        href: method-based-query-syntax-examples-element-operators.md
+      - name: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Gruplandırma'
+        href: method-based-query-syntax-examples-grouping.md
+      - name: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: İlişkilerde Geziniliyor'
+        href: method-based-query-syntax-examples-navigating-relationships.md
+      - name: 'Sorgu İfadesi Söz Dizimi Örnekleri: Projeksiyon'
+        href: query-expression-syntax-examples-projection.md
+      - name: 'Sorgu İfadesi Söz Dizimi Örnekleri: Filtreleme'
+        href: query-expression-syntax-examples-filtering.md
+      - name: 'Sorgu İfadesi Söz Dizimi Örnekleri: Sıralama'
+        href: query-expression-syntax-examples-ordering.md
+      - name: 'Sorgu İfadesi Söz Dizimi Örnekleri: Toplama İşleçleri'
+        href: query-expression-syntax-examples-aggregate-operators.md
+      - name: 'Sorgu İfadesi Söz Dizimi Örnekleri: Bölümlendirme'
+        href: query-expression-syntax-examples-partitioning.md
+      - name: 'Sorgu İfadesi Söz Dizimi Örnekleri: Birleşim İşleçleri'
+        href: query-expression-syntax-examples-join-operators.md
+      - name: 'Sorgu İfadesi Söz Dizimi Örnekleri: Öğe İşleçleri'
+        href: query-expression-syntax-examples-element-operators.md
+      - name: 'Sorgu İfadesi Söz Dizimi Örnekleri: Gruplandırma'
+        href: query-expression-syntax-examples-grouping.md
+      - name: 'Sorgu İfadesi Söz Dizimi Örnekleri: İlişkilerde Geziniliyor'
+        href: query-expression-syntax-examples-navigating-relationships.md
+    - name: LINQ to Entities Sorgu İfadeleri
+      href: expressions-in-linq-to-entities-queries.md
+      items:
+      - name: Sabit İfadeler
+        href: constant-expressions.md
+      - name: Karşılaştırma İfadeleri
+        href: comparison-expressions.md
+      - name: Null Karşılaştırmalar
+        href: null-comparisons.md
+      - name: Başlatma İfadeleri
+        href: initialization-expressions.md
+    - name: LINQ to Entities Sorgularında Çağırma İşlevleri
+      href: calling-functions-in-linq-to-entities-queries.md
+      items:
+      - name: 'Nasıl yapılır: Kurallı İşlevleri Çağırma'
+        href: how-to-call-canonical-functions.md
+      - name: 'Nasıl yapılır: Veritabanı İşlevleri Çağırma'
+        href: how-to-call-database-functions.md
+      - name: 'Nasıl yapılır: Özel Veritabanı İşlevleri Çağırma'
+        href: how-to-call-custom-database-functions.md
+      - name: 'Nasıl yapılır: Sorgularda Model Tanımlı İşlevler Çağırma'
+        href: how-to-call-model-defined-functions-in-queries.md
+      - name: 'Nasıl yapılır: Model Tanımlı İşlevleri Nesne Yöntemleri Olarak Çağırma'
+        href: how-to-call-model-defined-functions-as-object-methods.md
+    - name: Derlenmiş Sorgular (LINQ to Entities)
+      href: compiled-queries-linq-to-entities.md
+    - name: Sorgu Yürütme
+      href: query-execution.md
+    - name: Sorgu Sonuçları
+      href: query-results.md
+    - name: LINQ to Entities Sorgularında Standart Sorgu İşleçleri
+      href: standard-query-operators-in-linq-to-entities-queries.md
+    - name: CLR Yöntemini Kurallı İşlev ile Eşleme
+      href: clr-method-to-canonical-function-mapping.md
+    - name: Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)
+      href: supported-and-unsupported-linq-methods-linq-to-entities.md
+    - name: LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler
+      href: known-issues-and-considerations-in-linq-to-entities.md
+  - name: Entity SQL Dili
+    href: entity-sql-language.md
+    items:
+    - name: Entity SQL’e Genel Bakış
+      href: entity-sql-overview.md
+      items:
+      - name: Entity SQL ile Transact-SQL Arasındaki Farklar
+        href: how-entity-sql-differs-from-transact-sql.md
+      - name: Entity SQL Hızlı Başvurusu
+        href: entity-sql-quick-reference.md
+      - name: Tür Sistemi
+        href: type-system-entity-sql.md
+      - name: Tür Tanımları
+        href: type-definitions-entity-sql.md
+      - name: Oluşturma Türleri
+        href: constructing-types-entity-sql.md
+      - name: Sorgu Planını Önbelleğe Alma
+        href: query-plan-caching-entity-sql.md
+      - name: Ad Alanları
+        href: namespaces-entity-sql.md
+      - name: Tanımlayıcılar
+        href: identifiers-entity-sql.md
+      - name: Parametreler
+        href: parameters-entity-sql.md
+      - name: Değişkenler
+        href: variables-entity-sql.md
+      - name: Desteklenmeyen İfadeler
+        href: unsupported-expressions-entity-sql.md
+      - name: Sabit değerler
+        href: literals-entity-sql.md
+      - name: Null Değişmez Değerler ve Tür Çıkarımı
+        href: null-literals-and-type-inference-entity-sql.md
+      - name: Giriş Karakter Kümesi
+        href: input-character-set-entity-sql.md
+      - name: Sorgu İfadeleri
+        href: query-expressions-entity-sql.md
+      - name: İşlevler
+        href: functions-entity-sql.md
+        items:
+        - name: Kullanıcı Tanımlı İşlevler
+          href: user-defined-functions-entity-sql.md
+        - name: İşlev Aşırı Yükleme Çözümü
+          href: function-overload-resolution-entity-sql.md
+        - name: Toplama İşlevleri
+          href: aggregate-functions-entity-sql.md
+      - name: İşleç Önceliği
+        href: operator-precedence-entity-sql.md
+      - name: Disk Belleği
+        href: paging-entity-sql.md
+      - name: Karşılaştırma Semantiği
+        href: comparison-semantics-entity-sql.md
+      - name: İç İçe Geçmiş Entity SQL Sorguları Oluşturma
+        href: composing-nested-entity-sql-queries.md
+      - name: Null Değer Atanabilir Yapılandırılmış Türler
+        href: nullable-structured-types-entity-sql.md
+    - name: Entity SQL Başvurusu
+      href: entity-sql-reference.md
+      items:
+      - name: + (Ekle)
+        href: add.md
+      - name: + (Dize Birleştirme)
+        href: string-concatenation-entity-sql.md
+      - name: '- (Negatif)'
+        href: negative-entity-sql.md
+      - name: '- (Çıkar)'
+        href: subtract-entity-sql.md
+      - name: '* (Çarp)'
+        href: multiply-entity-sql.md
+      - name: (Böl)
+        href: divide-entity-sql.md
+      - name: Yüzde (Mod)
+        href: modulo-entity-sql.md
+      - name: '&& (VE)'
+        href: and-entity-sql.md
+      - name: '|| (VEYA)'
+        href: or-entity-sql.md
+      - name: '! (DEĞİL)'
+        href: not-entity-sql.md
+      - name: = (Eşittir)
+        href: equals-entity-sql.md
+      - name: '> (Büyüktür)'
+        href: greater-than-entity-sql.md
+      - name: '>= (Büyüktür veya Eşittir)'
+        href: greater-than-or-equal-to-entity-sql.md
+      - name: < (Küçüktür)
+        href: less-than-entity-sql.md
+      - name: <= (Küçüktür veya Eşittir)
+        href: less-than-or-equal-to-entity-sql.md
+      - name: '!= (Eşit Değildir)'
+        href: not-equal-to-entity-sql.md
+      - name: biçimindeki telefon numarasıdır. (Üye Erişimi)
+        href: member-access-entity-sql.md
+      - name: -- (Yorum)
+        href: comment-entity-sql.md
+      - name: ANYELEMENT
+        href: anyelement-entity-sql.md
+      - name: BETWEEN
+        href: between-entity-sql.md
+      - name: CASE
+        href: case-entity-sql.md
+      - name: CAST
+        href: cast-entity-sql.md
+      - name: COLLECTION
+        href: collection-entity-sql.md
+      - name: CREATEREF
+        href: createref-entity-sql.md
+      - name: DEREF
+        href: deref-entity-sql.md
+      - name: EXCEPT
+        href: except-entity-sql.md
+      - name: EXISTS
+        href: exists-entity-sql.md
+      - name: FLATTEN
+        href: flatten-entity-sql.md
+      - name: FROM
+        href: from-entity-sql.md
+      - name: FUNCTION
+        href: function-entity-sql.md
+      - name: GROUP BY
+        href: group-by-entity-sql.md
+      - name: GROUPPARTITION
+        href: grouppartition-entity-sql.md
+      - name: HAVING
+        href: having-entity-sql.md
+      - name: KEY
+        href: key-entity-sql.md
+      - name: IN
+        href: in-entity-sql.md
+      - name: INTERSECT
+        href: intersect-entity-sql.md
+      - name: ISNULL
+        href: isnull-entity-sql.md
+      - name: ISOF
+        href: isof-entity-sql.md
+      - name: LIKE
+        href: like-entity-sql.md
+      - name: LIMIT
+        href: limit-entity-sql.md
+      - name: MULTISET
+        href: multiset-entity-sql.md
+      - name: Adlandırılmış Tür Oluşturucu
+        href: named-type-constructor-entity-sql.md
+      - name: NAVIGATE
+        href: navigate-entity-sql.md
+      - name: OFTYPE
+        href: oftype-entity-sql.md
+      - name: SIRALAMA ÖLÇÜTÜ
+        href: order-by-entity-sql.md
+      - name: OVERLAPS
+        href: overlaps-entity-sql.md
+      - name: REF
+        href: ref-entity-sql.md
+      - name: ROW
+        href: row-entity-sql.md
+      - name: SEÇ
+        href: select-entity-sql.md
+      - name: SET
+        href: set-entity-sql.md
+      - name: SKIP
+        href: skip-entity-sql.md
+      - name: THEN
+        href: then-entity-sql.md
+      - name: TOP
+        href: top-entity-sql.md
+      - name: TREAT
+        href: treat-entity-sql.md
+      - name: UNION
+        href: union-entity-sql.md
+      - name: USING
+        href: using-entity-sql.md
+      - name: WHERE
+        href: where-entity-sql.md
+  - name: Kurallı İşlevler
+    href: canonical-functions.md
+    items:
+    - name: Toplu Kurallı İşlevler
+      href: aggregate-canonical-functions.md
+    - name: Kurallı Matematik İşlevleri
+      href: math-canonical-functions.md
+    - name: Kurallı Dize İşlevleri
+      href: string-canonical-functions.md
+    - name: Kurallı Tarih ve Saat İşlevleri
+      href: date-and-time-canonical-functions.md
+    - name: Bit Düzeyinde Kurallı İşlevler
+      href: bitwise-canonical-functions.md
+    - name: Uzamsal İşlevler
+      href: spatial-functions.md
+    - name: Diğer Kurallı İşlevler
+      href: other-canonical-functions.md
+ms.openlocfilehash: 5886642c5f0074893aa960333fa4d85aa5fa1e46
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471669"

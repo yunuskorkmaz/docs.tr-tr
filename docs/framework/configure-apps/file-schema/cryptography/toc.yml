@@ -1,0 +1,26 @@
+items:
+- name: Şifreleme Ayarları Şeması
+  href: index.md
+  items:
+  - name: <cryptoClasses> Öğesi
+    href: cryptoclasses-element.md
+  - name: <cryptoClass> Öğesi
+    href: cryptoclass-element.md
+  - name: <cryptographySettings> Öğesi
+    href: cryptographysettings-element.md
+  - name: <cryptoNameMapping> Öğesi
+    href: cryptonamemapping-element.md
+  - name: Şifreleme Ayarları için <mscorlib> Öğesi
+    href: mscorlib-element-for-cryptography-settings.md
+  - name: <nameEntry> Öğesi
+    href: nameentry-element.md
+  - name: <oidEntry> Öğesi
+    href: oidentry-element.md
+  - name: <oidMap> Öğesi
+    href: oidmap-element.md
+ms.openlocfilehash: 71237984ce59000cbef102480f7610f5a7b1bc43
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58472031"

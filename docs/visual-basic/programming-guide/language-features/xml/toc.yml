@@ -1,0 +1,49 @@
+items:
+- name: Visual Basic'de XML
+  href: index.md
+  items:
+  - name: LINQ to XML’e Genel Bakış
+    href: overview-of-linq-to-xml.md
+  - name: XML oluşturma
+    href: creating-xml.md
+    items:
+    - name: XML Değişmez Değerlerine Genel Bakış
+      href: xml-literals-overview.md
+    - name: XML'de Katıştırılmış İfadeler
+      href: embedded-expressions-in-xml.md
+    - name: Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları
+      href: names-of-declared-xml-elements-and-attributes.md
+    - name: XML Değişmez Değerleri ve XML 1.0 Belirtimi
+      href: xml-literals-and-the-xml-1-0-specification.md
+    - name: XML Değişmez Değerlerinde Boşluk
+      href: white-space-in-xml-literals.md
+    - name: 'Nasıl yapılır: XML Değişmez Değerleri Oluşturma'
+      href: how-to-create-xml-literals.md
+    - name: 'Nasıl yapılır: XML Değişmez Değerlerine İfade Katıştırma'
+      href: how-to-embed-expressions-in-xml-literals.md
+  - name: XML düzenleme
+    href: manipulating-xml.md
+    items:
+    - name: 'Nasıl yapılır: Dosya, Dize veya Akıştan XML Yükleme'
+      href: how-to-load-xml-from-a-file-string-or-stream.md
+    - name: "Nasıl yapılır: XML'i LINQ Kullanarak Dönüştürme"
+      href: how-to-transform-xml-by-using-linq.md
+    - name: 'Nasıl yapılır: XML Değişmez Değerlerini Değiştirme'
+      href: how-to-modify-xml-literals.md
+  - name: XML'e erişme
+    href: accessing-xml.md
+    items:
+    - name: 'Nasıl yapılır: XML Bağımlı Öğelerine Erişme'
+      href: how-to-access-xml-descendant-elements.md
+    - name: 'Nasıl yapılır: XML Alt Öğelerine Erişme'
+      href: how-to-access-xml-child-elements.md
+    - name: 'Nasıl yapılır: XML Özniteliklerine Erişme'
+      href: how-to-access-xml-attributes.md
+    - name: 'Nasıl yapılır: XML Ad Alanı Öneklerini Bildirme ve Kullanma'
+      href: how-to-declare-and-use-xml-namespace-prefixes.md
+ms.openlocfilehash: 7d2d931b5f88e9af9a2cdef92168d907e3fd6ce6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471774"

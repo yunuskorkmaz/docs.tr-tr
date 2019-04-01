@@ -1,0 +1,35 @@
+items:
+- name: Geçiş Kılavuzu
+  href: index.md
+  items:
+  - name: Uygulama Uyumluluğu
+    href: application-compatibility.md
+    items:
+    - name: Çalışma Zamanı Değişiklikleri
+      href: runtime/index.md
+    - name: Yeniden Hedefleme Değişiklikleri
+      href: retargeting/index.md
+  - name: Sürüm Uyumluluğu
+    href: version-compatibility.md
+  - name: Sürümler ve Bağımlılıklar
+    href: versions-and-dependencies.md
+    items:
+    - name: 'Nasıl yapılır: Hangi .NET Framework Sürümlerinin Yüklü Olduğunu Belirleme'
+      href: how-to-determine-which-versions-are-installed.md
+      items:
+      - name: .NET Framework yayın anahtarları ve Windows işletim sistemi sürümleri
+        href: release-keys-and-os-versions.md
+    - name: 'Nasıl yapılır: Hangi .NET Framework Güncelleştirmelerinin Yüklü Olduğunu Belirleme'
+      href: how-to-determine-which-net-framework-updates-are-installed.md
+  - name: 'Nasıl yapılır: Uygulamayı .NET Framework 4 veya sonraki sürümleri destekleyecek şekilde yapılandırma'
+    href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
+  - name: .NET Framework 1.1'den Geçiş
+    href: migrating-from-the-net-framework-1-1.md
+  - name: .NET Framework 4 geçiş sorunları
+    href: net-framework-4-migration-issues.md
+ms.openlocfilehash: c46b7ac4680e6aa988e39055cb51c80a4bb0e8b4
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471843"

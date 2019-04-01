@@ -1,0 +1,66 @@
+items:
+- name: Yapılandırma Dosyası Şeması
+  href: index.md
+  items:
+  - name: <configuration> Öğesi
+    href: configuration-element.md
+  - name: <assemblyBinding> Öğesi
+    href: assemblybinding-element-for-configuration.md
+  - name: <linkedConfiguration> Öğesi
+    href: linkedconfiguration-element.md
+  - name: <configSections> Öğesi
+    href: configsections-element-for-configuration.md
+  - name: <configSections> için <clear> Öğesi
+    href: clear-element-for-configsections.md
+  - name: <configSections> için <remove> Öğesi
+    href: remove-element-for-configsections.md
+  - name: <sectionGroup> Öğesi
+    href: sectiongroup-element-for-configsections.md
+  - name: SingleTagSectionHandler Özel Öğesi
+    href: custom-element-1.md
+  - name: NameValueSectionHandler ve DictionarySectionHandler Özel Öğesi
+    href: custom-element-2.md
+  - name: <add> Öğesi
+    href: add-element-for-custom-2.md
+  - name: NameValueSectionHandler ve DictionarySectionHandler için <clear> Öğesi
+    href: clear-element-for-custom-2.md
+  - name: NameValueSectionHandler ve DictionarySectionHandler için <remove> Öğesi
+    href: remove-element-for-custom-2.md
+  - name: <section> Öğe
+    href: section-element.md
+  - name: Uygulama Ayarları Şeması
+    href: appsettings/index.md
+  - name: Uygulama Ayarları Şeması
+    href: application-settings-schema.md
+  - name: Derleyici ve Dil Sağlayıcısı Ayarları Şeması
+    href: compiler/index.md
+  - name: Yapılandırma Bölümleri Şeması
+    href: configuration-sections-schema.md
+  - name: Şifreleme Ayarları Şeması
+    href: cryptography/index.md
+  - name: Ağ Ayarları Şeması
+    href: network/index.md
+  - name: Çalışma Zamanı Ayarları Şeması
+    href: runtime/index.md
+  - name: Başlangıç Ayarları Şeması
+    href: startup/index.md
+  - name: İzleme ve Hata Ayıklama Ayarları Şeması
+    href: trace-debug/index.md
+  - name: Web Ayarları Şeması
+    href: web/index.md
+  - name: WCF Yapılandırma Şeması
+    href: wcf/index.md
+  - name: WCF Yönerge Söz Dizimi
+    href: wcf-directive/index.md
+  - name: WIF Yapılandırma Şeması
+    href: windows-identity-foundation/index.md
+  - name: Windows Forms Yapılandırma Bölümü
+    href: winforms/index.md
+  - name: Windows Workflow Foundation Yapılandırma Şeması
+    href: windows-workflow-foundation/index.md
+ms.openlocfilehash: 69b0e7862ab6c9a7540469f79d6870a8f9976f14
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471602"

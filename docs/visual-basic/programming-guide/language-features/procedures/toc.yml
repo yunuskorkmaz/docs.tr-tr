@@ -1,0 +1,121 @@
+items:
+- name: Visual Basic'de Yordamlar
+  href: index.md
+  items:
+  - name: 'Nasıl yapılır: Yordam Oluşturma'
+    href: how-to-create-a-procedure.md
+  - name: Alt Yordamlar
+    href: sub-procedures.md
+    items:
+    - name: 'Nasıl yapılır: Değer Döndürmeyen Bir Yordam Çağırma'
+      href: how-to-call-a-procedure-that-does-not-return-a-value.md
+    - name: 'Nasıl yapılır: Olay İşleyicisi Çağırma'
+      href: how-to-call-an-event-handler.md
+  - name: İşlev Yordamları
+    href: function-procedures.md
+    items:
+    - name: 'Nasıl yapılır: Değer Döndüren Bir Yordam Oluşturma'
+      href: how-to-create-a-procedure-that-returns-a-value.md
+    - name: 'Nasıl yapılır: Bir Yordamdan Değer Döndürme'
+      href: how-to-return-a-value-from-a-procedure.md
+    - name: 'Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma'
+      href: how-to-call-a-procedure-that-returns-a-value.md
+  - name: Özellik Yordamları
+    href: property-procedures.md
+    items:
+    - name: Otomatik Uygulanan Özellikler
+      href: auto-implemented-properties.md
+    - name: Özellikler ile Değişkenler Arasındaki Farklar
+      href: differences-between-properties-and-variables.md
+    - name: 'Nasıl yapılır: Özellik Oluşturma'
+      href: how-to-create-a-property.md
+    - name: 'Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme'
+      href: how-to-declare-a-property-with-mixed-access-levels.md
+    - name: 'Nasıl yapılır: Bir Özellik Yordamı Çağırma'
+      href: how-to-call-a-property-procedure.md
+    - name: 'Nasıl yapılır: Varsayılan Bir Özelliği Bildirme ve Çağırma'
+      href: how-to-declare-and-call-a-default-property.md
+    - name: 'Nasıl yapılır: Bir Özelliğe Değer Ekleme'
+      href: how-to-put-a-value-in-a-property.md
+    - name: 'Nasıl yapılır: Bir Özellikten Değer Alma'
+      href: how-to-get-a-value-from-a-property.md
+  - name: İşleç Yordamları
+    href: operator-procedures.md
+    items:
+    - name: 'Nasıl yapılır: İşleç Tanımlama'
+      href: how-to-define-an-operator.md
+    - name: 'Nasıl yapılır: Dönüştürme İşleci Tanımlama'
+      href: how-to-define-a-conversion-operator.md
+    - name: 'Nasıl yapılır: Bir İşleç Yordamı Çağırma'
+      href: how-to-call-an-operator-procedure.md
+    - name: 'Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma'
+      href: how-to-use-a-class-that-defines-operators.md
+  - name: Yordam Parametreleri ve Bağımsız Değişkenleri
+    href: procedure-parameters-and-arguments.md
+    items:
+    - name: Parametreler ve Bağımsız Değişkenler Arasındaki Farklar
+      href: differences-between-parameters-and-arguments.md
+    - name: 'Nasıl yapılır: Bir Yordamın Parametresini Tanımlama'
+      href: how-to-define-a-parameter-for-a-procedure.md
+    - name: 'Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme'
+      href: how-to-pass-arguments-to-a-procedure.md
+    - name: Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme
+      href: passing-arguments-by-value-and-by-reference.md
+      items:
+      - name: Değiştirilebilir ve Değiştirilemez Bağımsız Değişkenler Arasındaki Farklar
+        href: differences-between-modifiable-and-nonmodifiable-arguments.md
+      - name: Değere ve Başvuruya Göre Bağımsız Değişken Geçirme Arasındaki Farklar
+        href: differences-between-passing-an-argument-by-value-and-by-reference.md
+      - name: 'Nasıl yapılır: Bir Yordam Bağımsız Değişkeninin Değerini Değiştirme'
+        href: how-to-change-the-value-of-a-procedure-argument.md
+      - name: 'Nasıl yapılır: Bir Yordam Bağımsız Değişkenini Değer Değişikliklerine Karşı Koruma'
+        href: how-to-protect-a-procedure-argument-against-value-changes.md
+      - name: 'Nasıl yapılır: Bağımsız Değişkeni Değere Göre Geçirilecek Şekilde Zorlama'
+        href: how-to-force-an-argument-to-be-passed-by-value.md
+    - name: Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme
+      href: passing-arguments-by-position-and-by-name.md
+    - name: İsteğe Bağlı Parametreler
+      href: optional-parameters.md
+    - name: Parametre Dizileri
+      href: parameter-arrays.md
+  - name: Başvuru dönüş değerleri
+    href: ref-return-values.md
+  - name: Özyinelemeli Yordamlar
+    href: recursive-procedures.md
+  - name: Yordam Aşırı Yüklemesi
+    href: procedure-overloading.md
+    items:
+    - name: 'Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama'
+      href: how-to-define-multiple-versions-of-a-procedure.md
+    - name: 'Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma'
+      href: how-to-call-an-overloaded-procedure.md
+    - name: 'Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme'
+      href: how-to-overload-a-procedure-that-takes-optional-parameters.md
+    - name: 'Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme'
+      href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
+    - name: Yordamları Aşırı Yüklemeye İlişkin Düşünceler
+      href: considerations-in-overloading-procedures.md
+    - name: Aşırı Yükleme Çözümü
+      href: overload-resolution.md
+  - name: Yordam Sorunlarını Giderme
+    href: troubleshooting-procedures.md
+  - name: Genişletme Yöntemleri
+    href: extension-methods.md
+    items:
+    - name: 'Nasıl yapılır: Genişletme Yöntemi Yazma'
+      href: how-to-write-an-extension-method.md
+    - name: 'Nasıl yapılır: Genişletme Yöntemi Çağırma'
+      href: how-to-call-an-extension-method.md
+  - name: Lambda İfadeleri
+    href: lambda-expressions.md
+    items:
+    - name: 'Nasıl yapılır: Lambda İfadesi Oluşturma'
+      href: how-to-create-a-lambda-expression.md
+  - name: Kısmi Yöntemler
+    href: partial-methods.md
+ms.openlocfilehash: 56cc10bf082515dcf646f005522162b4c9e3bdf0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471671"

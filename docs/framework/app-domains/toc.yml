@@ -1,0 +1,105 @@
+items:
+- name: Uygulama Etki Alanları ve Derlemeler
+  href: index.md
+  items:
+  - name: Ortak Dil Çalışma Zamanındaki Derlemeler
+    href: assemblies-in-the-common-language-runtime.md
+    items:
+    - name: Derleme İçerikleri
+      href: assembly-contents.md
+    - name: Derleme Bildirimi
+      href: assembly-manifest.md
+    - name: Genel Derleme Önbelleği
+      href: gac.md
+    - name: Tanımlayıcı Adlı Derlemeler
+      href: strong-named-assemblies.md
+    - name: Derleme Güvenliği Konuları
+      href: assembly-security-considerations.md
+    - name: Derleme Sürümü Oluşturma
+      href: assembly-versioning.md
+    - name: Derleme Yerleştirme
+      href: assembly-placement.md
+    - name: Derlemeler ve Yan Yana Yürütme
+      href: assemblies-and-side-by-side-execution.md
+  - name: Uygulama Etki Alanları
+    href: application-domains.md
+  - name: Uygulama Etki Alanları ve Derlemeler Nasıl Yapılır Konuları
+    href: application-domains-and-assemblies-how-to-topics.md
+  - name: Uygulama Etki Alanlarını Kullanma
+    href: use.md
+    items:
+    - name: 'Nasıl yapılır: Uygulama Etki Alanı Oluşturma'
+      href: how-to-create-an-application-domain.md
+    - name: 'Nasıl yapılır: Uygulama Etki Alanını Boşaltma'
+      href: how-to-unload-an-application-domain.md
+    - name: 'Nasıl yapılır: Uygulama Etki Alanını Yapılandırma'
+      href: how-to-configure-an-application-domain.md
+    - name: Bir Uygulama Etki Alanından Kurulum Bilgilerini Alma
+      href: retrieve-setup-information.md
+    - name: 'Nasıl yapılır: Uygulama Etki Alanına Derlemeler Yükleme'
+      href: how-to-load-assemblies-into-an-application-domain.md
+    - name: 'Nasıl yapılır: Bir Derlemeden Tür ve Üye Bilgilerini Alma'
+      href: how-to-obtain-type-and-member-information-from-an-assembly.md
+    - name: Gölge Kopyalama Derlemeleri
+      href: shadow-copy-assemblies.md
+    - name: 'Nasıl yapılır: İlk Fırsat Özel Durum Bildirimleri Alma'
+      href: how-to-receive-first-chance-exception-notifications.md
+    - name: Derleme Yüklerini Çözme
+      href: resolve-assembly-loads.md
+  - name: Derlemelerle Programlama
+    href: programming-with-assemblies.md
+    items:
+    - name: Derlemeler Oluşturma
+      href: create-assemblies.md
+    - name: Derleme Adları
+      href: assembly-names.md
+    - name: 'Nasıl yapılır: Bir Derlemenin Tam Olarak Nitelenmiş Adını Belirleme'
+      href: how-to-determine-assembly-fully-qualified-name.md
+    - name: İntranet Uygulamalarını Tam Güvende Çalıştırma
+      href: running-intranet-applications-in-full-trust.md
+    - name: Derleme Konumu
+      href: assembly-location.md
+    - name: 'Nasıl yapılır: Tek Dosyalı Derleme Oluşturma'
+      href: how-to-build-a-single-file-assembly.md
+    - name: Birden Çok Dosya Derlemeleri
+      href: multifile-assemblies.md
+    - name: 'Nasıl yapılır: Birden Fazla Dosya Derlemesi Oluşturma'
+      href: how-to-build-a-multifile-assembly.md
+    - name: Derleme Özniteliklerini Ayarlama
+      href: set-assembly-attributes.md
+    - name: Tanımlayıcı Adlı Derlemeler Oluşturma ve Kullanma
+      href: create-and-use-strong-named-assemblies.md
+      items:
+      - name: 'Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma'
+        href: how-to-create-a-public-private-key-pair.md
+      - name: 'Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama'
+        href: how-to-sign-an-assembly-with-a-strong-name.md
+      - name: Güçlü Adlandırmayı İyileştirme
+        href: enhanced-strong-naming.md
+      - name: 'Nasıl yapılır: Tanımlayıcı Adlı Bir Derlemeye Başvurma'
+        href: how-to-reference-a-strong-named-assembly.md
+      - name: 'Nasıl yapılır: Tanımlayıcı Adlı Atlama Özelliğini Devre Dışı Bırakma'
+        href: how-to-disable-the-strong-name-bypass-feature.md
+    - name: Derleme İmzalamayı Geciktirme
+      href: delay-sign-assembly.md
+    - name: Derlemeler ve Genel Derleme Önbelleği ile Çalışma
+      href: working-with-assemblies-and-the-gac.md
+      items:
+      - name: 'Nasıl yapılır: Bir Bütünleştirilmiş Kodu Genel Derleme Önbelleğine Yükleme'
+        href: how-to-install-an-assembly-into-the-gac.md
+      - name: 'Nasıl yapılır: Genel Derleme Önbelleğinin İçeriğini Görüntüleme'
+        href: how-to-view-the-contents-of-the-gac.md
+      - name: 'Nasıl yapılır: Bir Derlemeyi Genel Derleme Önbelleğinden Kaldırma'
+        href: how-to-remove-an-assembly-from-the-gac.md
+      - name: Genel Derleme Önbelleği ile Hizmet Verilen Bileşenleri Kullanma
+        href: use-serviced-components-with-the-gac.md
+    - name: 'Nasıl yapılır: Derleme İçeriklerini Görüntüleme'
+      href: how-to-view-assembly-contents.md
+    - name: Ortak Dil Çalışma Zamanında Tür İletme
+      href: type-forwarding-in-the-common-language-runtime.md
+ms.openlocfilehash: 8a928eda090b144daf61c768fb5d8b8de079af16
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471702"
