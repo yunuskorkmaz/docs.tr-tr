@@ -1,0 +1,143 @@
+items:
+- name: Paralel Programlama
+  href: index.md
+  items:
+  - name: Görev Paralel Kitaplığı (TPL)
+    href: task-parallel-library-tpl.md
+    items:
+    - name: Veri Paralelliği
+      href: data-parallelism-task-parallel-library.md
+      items:
+      - name: 'Nasıl yapılır: Basit bir Parallel.For Döngüsü Yazma'
+        href: how-to-write-a-simple-parallel-for-loop.md
+      - name: 'Nasıl yapılır: Basit bir Parallel.ForEach Döngüsü Yazma'
+        href: how-to-write-a-simple-parallel-foreach-loop.md
+      - name: 'Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma'
+        href: how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+      - name: 'Nasıl yapılır: Bölüm Yerel Değişkenleriyle bir Parallel.ForEach Döngüsü Yazma'
+        href: how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+      - name: 'Nasıl yapılır: Bir Parallel.For veya ForEach Döngüsünü İptal Etme'
+        href: how-to-cancel-a-parallel-for-or-foreach-loop.md
+      - name: 'Nasıl yapılır: Paralel Döngülerde Özel Durumları İşleme'
+        href: how-to-handle-exceptions-in-parallel-loops.md
+      - name: 'Nasıl yapılır: Küçük Döngü Gövdelerini Hızlandırma'
+        href: how-to-speed-up-small-loop-bodies.md
+      - name: 'Nasıl yapılır: Paralel Sınıfla Dosya Dizinlerini Yineleme'
+        href: how-to-iterate-file-directories-with-the-parallel-class.md
+    - name: Görev Tabanlı Zaman Uyumsuz Desen
+      href: task-based-asynchronous-programming.md
+      items:
+      - name: Devamlılık Görevlerini Kullanarak Görevleri Birbirine Bağlama
+        href: chaining-tasks-by-using-continuation-tasks.md
+      - name: Eklenen ve Ayrılan Alt Görevler
+        href: attached-and-detached-child-tasks.md
+      - name: Görev iptali
+        href: task-cancellation.md
+      - name: Özel Durum İşleme
+        href: exception-handling-task-parallel-library.md
+      - name: 'Nasıl yapılır: Paralel İşlemleri Yürütmek için parallel_invoke Kullanma'
+        href: how-to-use-parallel-invoke-to-execute-parallel-operations.md
+      - name: 'Nasıl yapılır: Bir Görevden Değer Döndürme'
+        href: how-to-return-a-value-from-a-task.md
+      - name: 'Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme'
+        href: how-to-cancel-a-task-and-its-children.md
+      - name: 'Nasıl yapılır: Önceden Hesaplanan Görevler Oluşturma'
+        href: how-to-create-pre-computed-tasks.md
+      - name: 'Nasıl yapılır: Paralel Görevler İçeren Bir İkili Ağacı Gezme'
+        href: how-to-traverse-a-binary-tree-with-parallel-tasks.md
+      - name: 'Nasıl yapılır: İç İçe Geçmiş Bir Görevi Sarmalamadan Çıkarma'
+        href: how-to-unwrap-a-nested-task.md
+      - name: 'Nasıl yapılır: Alt Görevin Üst Göreve Eklenmesini Önleme'
+        href: how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+    - name: Veri akışı
+      href: dataflow-task-parallel-library.md
+      items:
+      - name: 'Nasıl yapılır: Veri Akışı Bloğuna İletiler Yazma ve Veri Akışı Bloğundan İletiler Okuma'
+        href: how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+      - name: 'Nasıl yapılır: Üretici-Tüketici Veri Akışı Düzeni Uygulama'
+        href: how-to-implement-a-producer-consumer-dataflow-pattern.md
+      - name: 'Nasıl yapılır: Veri Akışı Bloğu Veri Aldığında İşlem Gerçekleştirme'
+        href: how-to-perform-action-when-a-dataflow-block-receives-data.md
+      - name: 'İzlenecek yol: Veri Akışı Ardışık Düzeni Oluşturma'
+        href: walkthrough-creating-a-dataflow-pipeline.md
+      - name: 'Nasıl yapılır: Veri Akışı Bloklarının Bağlantısını Kaldırma'
+        href: how-to-unlink-dataflow-blocks.md
+      - name: "İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma"
+        href: walkthrough-using-dataflow-in-a-windows-forms-application.md
+      - name: 'Nasıl yapılır: Veri Akışı Bloğunu İptal Etme'
+        href: how-to-cancel-a-dataflow-block.md
+      - name: 'İzlenecek yol: Özel bir Veri Akışı Blok Türü Oluşturma'
+        href: walkthrough-creating-a-custom-dataflow-block-type.md
+      - name: "Nasıl yapılır: Birden Fazla Kaynaktan Okumak için JoinBlock'u Kullanma"
+        href: how-to-use-joinblock-to-read-data-from-multiple-sources.md
+      - name: 'Nasıl yapılır: Veri Akışı Bloğunda Paralellik Derecesini Belirtme'
+        href: how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+      - name: 'Nasıl yapılır: Veri Akışı Bloğunda Görev Zamanlayıcı Belirtme'
+        href: how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+      - name: "İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock'u Kullanma"
+        href: walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+    - name: Diğer Zaman Uyumsuz Desenlerle TPL Kullanma
+      href: using-tpl-with-other-asynchronous-patterns.md
+      items:
+      - name: TPL ve Geleneksel .NET Framework Zaman Uyumsuz Programlama
+        href: tpl-and-traditional-async-programming.md
+      - name: 'Nasıl yapılır: Bir Görevde EAP Desenlerini Sarmalama'
+        href: how-to-wrap-eap-patterns-in-a-task.md
+    - name: Veri ve Görev Paralelliğinde Olası Tuzaklar
+      href: potential-pitfalls-in-data-and-task-parallelism.md
+  - name: Paralel LINQ (PLINQ)
+    href: parallel-linq-plinq.md
+    items:
+    - name: PLINQ'e Giriş
+      href: introduction-to-plinq.md
+    - name: PLINQ'te Hızlandırmayı Anlama
+      href: understanding-speedup-in-plinq.md
+    - name: PLINQ'te Sıra Koruma
+      href: order-preservation-in-plinq.md
+    - name: PLINQ'te Birleştirme Seçenekleri
+      href: merge-options-in-plinq.md
+    - name: PLINQ'te Olası Tuzaklar
+      href: potential-pitfalls-with-plinq.md
+    - name: 'Nasıl yapılır: Basit bir PLINQ Sorgusu Oluşturma ve Yürütme'
+      href: how-to-create-and-execute-a-simple-plinq-query.md
+    - name: 'Nasıl yapılır: PLINQ Sorgusunda Sıralama Denetimi'
+      href: how-to-control-ordering-in-a-plinq-query.md
+    - name: 'Nasıl yapılır: Paralel ve Sıralı LINQ Sorgularını Birleştirme'
+      href: how-to-combine-parallel-and-sequential-linq-queries.md
+    - name: 'Nasıl yapılır: PLINQ Sorgusunda Özel Durumları İşleme'
+      href: how-to-handle-exceptions-in-a-plinq-query.md
+    - name: 'Nasıl yapılır: PLINQ Sorgusunu İptal Etme'
+      href: how-to-cancel-a-plinq-query.md
+    - name: 'Nasıl yapılır: Özel Bir PLINQ Toplama İşlevi Yazma'
+      href: how-to-write-a-custom-plinq-aggregate-function.md
+    - name: "Nasıl yapılır: PLINQ'te Yürütme Modunu Belirtme"
+      href: how-to-specify-the-execution-mode-in-plinq.md
+    - name: "Nasıl yapılır: PLINQ'te Birleştirme Seçeneklerini Belirtme"
+      href: how-to-specify-merge-options-in-plinq.md
+    - name: 'Nasıl yapılır: PLINQ ile Dosya Dizinlerini Yineleme'
+      href: how-to-iterate-file-directories-with-plinq.md
+    - name: 'Nasıl yapılır: PLINQ Sorgu Performansını Ölçme'
+      href: how-to-measure-plinq-query-performance.md
+    - name: PLINQ Veri Örneği
+      href: plinq-data-sample.md
+  - name: Paralel Programlama için Veri Yapıları
+    href: data-structures-for-parallel-programming.md
+  - name: Paralel Tanılama Araçları
+    href: parallel-diagnostic-tools.md
+  - name: PLINQ ve TPL için Özel Bölümleyiciler
+    href: custom-partitioners-for-plinq-and-tpl.md
+    items:
+    - name: 'Nasıl yapılır: Dinamik Bölümleri Uygulama'
+      href: how-to-implement-dynamic-partitions.md
+    - name: 'Nasıl yapılır: Statik Bölümleme için bir Bölümleyici Uygulama'
+      href: how-to-implement-a-partitioner-for-static-partitioning.md
+  - name: PLINQ ve TPL'deki Lambda İfadeleri
+    href: lambda-expressions-in-plinq-and-tpl.md
+  - name: Daha Fazla Bilgi İçin
+    href: for-further-reading-parallel-programming.md
+ms.openlocfilehash: b4b7cd0e6e93175d223cbd076712fe3b9fe436f2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471934"

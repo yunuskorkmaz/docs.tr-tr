@@ -1,0 +1,235 @@
+items:
+- name: .NET Framework'te Ağ Programlaması
+  href: index.md
+  items:
+  - name: Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları
+    href: network-programming-how-to-topics.md
+  - name: Takılabilir Protokollere Giriş
+    href: introducing-pluggable-protocols.md
+  - name: Veri İsteme
+    href: requesting-data.md
+    items:
+    - name: İnternet İstekleri Oluşturma
+      href: creating-internet-requests.md
+    - name: 'Nasıl yapılır: Web Sayfası İsteme ve Sonuçları Akış Olarak Alma'
+      href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
+    - name: 'Nasıl yapılır: WebRequest Sınıfını Kullanarak Veri İsteme'
+      href: how-to-request-data-using-the-webrequest-class.md
+    - name: 'Nasıl yapılır: WebRequest Sınıfını Kullanarak Veri Gönderme'
+      href: how-to-send-data-using-the-webrequest-class.md
+    - name: 'Nasıl yapılır: WebRequest ile Eşleşen Protokole Özgü WebResponse Alma'
+      href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
+    - name: Ağda Akışları Kullanma
+      href: using-streams-on-the-network.md
+    - name: Zaman Uyumsuz İstekler Yapma
+      href: making-asynchronous-requests.md
+    - name: Hataları İşleme
+      href: handling-errors.md
+  - name: Takılabilir Protokoller Programlama
+    href: programming-pluggable-protocols.md
+    items:
+    - name: 'Nasıl yapılır: WebRequest Kullanarak Özel Protokolü Kaydetme'
+      href: how-to-register-a-custom-protocol-using-webrequest.md
+    - name: 'Nasıl yapılır: WebRequest Türü Atayarak Protokole Özgü Özelliklere Erişim'
+      href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
+    - name: WebRequest’ten Türetme
+      href: deriving-from-webrequest.md
+    - name: WebResponse’tan Türetme
+      href: deriving-from-webresponse.md
+  - name: Uygulama Protokolleri Kullanma
+    href: using-application-protocols.md
+    items:
+    - name: HTTP
+      href: http.md
+      items:
+      - name: HttpListener
+        href: httplistener.md
+    - name: 'Nasıl yapılır: HTTP’ye Özgü Özelliklere Erişim'
+      href: how-to-access-http-specific-properties.md
+    - name: Bağlantıları Yönetme
+      href: managing-connections.md
+      items:
+      - name: Bağlantı Gruplandırma
+        href: connection-grouping.md
+      - name: 'Nasıl yapılır: Bağlantıları Gruplandırmak için Kullanıcı Bilgileri Atama'
+        href: how-to-assign-user-information-to-group-connections.md
+    - name: TCP-UDP
+      href: tcp-udp.md
+      items:
+      - name: TCP Hizmetleri Kullanma
+        href: using-tcp-services.md
+      - name: UDP Hizmetleri Kullanma
+        href: using-udp-services.md
+    - name: Yuvalar
+      href: sockets.md
+      items:
+      - name: 'Nasıl yapılır: Yuva Oluşturma'
+        href: how-to-create-a-socket.md
+      - name: İstemci Yuvaları Kullanma
+        href: using-client-sockets.md
+        items:
+        - name: Zaman Uyumlu İstemci Yuvası Kullanma
+          href: using-a-synchronous-client-socket.md
+        - name: Zaman Uyumsuz İstemci Yuvası Kullanma
+          href: using-an-asynchronous-client-socket.md
+      - name: Yuvalarla Dinleme
+        href: listening-with-sockets.md
+        items:
+        - name: Zaman Uyumlu Sunucu Yuvası Kullanma
+          href: using-a-synchronous-server-socket.md
+        - name: Zaman Uyumsuz Sunucu Yuvası Kullanma
+          href: using-an-asynchronous-server-socket.md
+      - name: Yuva Kod Örnekleri
+        href: socket-code-examples.md
+        items:
+        - name: Zaman Uyumlu İstemci Yuvası Örneği
+          href: synchronous-client-socket-example.md
+        - name: Zaman Uyumlu Sunucu Yuvası Örneği
+          href: synchronous-server-socket-example.md
+        - name: Zaman Uyumsuz İstemci Yuvası Örneği
+          href: asynchronous-client-socket-example.md
+        - name: Zaman Uyumsuz Sunucu Yuvası Örneği
+          href: asynchronous-server-socket-example.md
+    - name: FTP
+      href: ftp.md
+      items:
+      - name: 'Nasıl yapılır: FTP ile Dosya İndirme'
+        href: how-to-download-files-with-ftp.md
+      - name: 'Nasıl yapılır: FTP ile Dosya Yükleme'
+        href: how-to-upload-files-with-ftp.md
+      - name: 'Nasıl yapılır: FTP ile Dizin İçeriğini Listeleme'
+        href: how-to-list-directory-contents-with-ftp.md
+    - name: WebRequest Sorunlarını ve Özel Durumları Anlama
+      href: understanding-webrequest-problems-and-exceptions.md
+  - name: İnternet Protokolü Sürüm 6
+    href: internet-protocol-version-6.md
+    items:
+    - name: IPv6 Adresleme
+      href: ipv6-addressing.md
+    - name: IPv6 Yönlendirme
+      href: ipv6-routing.md
+    - name: IPv6 Otomatik Yapılandırma
+      href: ipv6-auto-configuration.md
+    - name: IPv6 Etkinleştirme ve Devre Dışı Bırakma
+      href: enabling-and-disabling-ipv6.md
+    - name: 'Nasıl yapılır: IPv6 Desteğini Etkinleştirmek için Bilgisayar Yapılandırma Dosyasını Değiştirme'
+      href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
+  - name: İnternet Uygulamalarını Yapılandırma
+    href: configuring-internet-applications.md
+  - name: .NET Framework'te Ağ İzleme
+    href: network-tracing.md
+    items:
+    - name: Ağ İzlemeyi Yorumlama
+      href: interpreting-network-tracing.md
+    - name: Ağ İzlemeyi Etkinleştirme
+      href: enabling-network-tracing.md
+    - name: 'Nasıl yapılır: Ağ İzlemeyi Yapılandırma'
+      href: how-to-configure-network-tracing.md
+  - name: Ağ Uygulamaları için Önbellek Yönetimi
+    href: cache-management-for-network-applications.md
+    items:
+    - name: Önbellek İlkesi
+      href: cache-policy.md
+    - name: Konum Temelli Önbellek İlkeleri
+      href: location-based-cache-policies.md
+    - name: Saat Temelli Önbellek İlkeleri
+      href: time-based-cache-policies.md
+      items:
+      - name: Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Fazla Eskime
+        href: cache-policy-interaction-maximum-age-and-maximum-staleness.md
+      - name: Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Az Eskime
+        href: cache-policy-interaction-maximum-age-and-minimum-freshness.md
+    - name: Ağ Uygulamalarında Önbelleğe Almayı Yapılandırma
+      href: configuring-caching-in-network-applications.md
+      items:
+      - name: 'Nasıl yapılır: Uygulama için Konum Temelli Önbellek İlkesi Ayarlama'
+        href: how-to-set-a-location-based-cache-policy-for-an-application.md
+      - name: 'Nasıl yapılır: Uygulama için Varsayılan Saat Temelli Önbellek İlkesi Ayarlama'
+        href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
+      - name: 'Nasıl yapılır: Saat Temelli Önbellek İlkesini Özelleştirme'
+        href: how-to-customize-a-time-based-cache-policy.md
+      - name: 'Nasıl yapılır: İstek için Önbellek İlkesi Ayarlama'
+        href: how-to-set-cache-policy-for-a-request.md
+  - name: Ağ Programlama Güvenliği
+    href: security-in-network-programming.md
+    items:
+    - name: Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar
+      href: tls.md
+    - name: Güvenli Yuva Katmanı Kullanma
+      href: using-secure-sockets-layer.md
+      items:
+      - name: Sertifika Seçimi ve Doğrulama
+        href: certificate-selection-and-validation.md
+    - name: İnternet Kimlik Doğrulaması
+      href: internet-authentication.md
+      items:
+      - name: Temel ve Özet Kimlik Doğrulaması
+        href: basic-and-digest-authentication.md
+      - name: NTLM ve Kerberos Kimlik Doğrulaması
+        href: ntlm-and-kerberos-authentication.md
+    - name: Web ve Yuva İzinleri
+      href: web-and-socket-permissions.md
+  - name: System.Net Sınıfları için En İyi Yöntemler
+    href: best-practices-for-system-net-classes.md
+  - name: Ara Sunucu Üzerinden İnternet Erişimi
+    href: accessing-the-internet-through-a-proxy.md
+    items:
+    - name: Ara Sunucu Yapılandırma
+      href: proxy-configuration.md
+    - name: Otomatik Ara Sunucu Algılama
+      href: automatic-proxy-detection.md
+    - name: 'Nasıl yapılır: İnternet ile İletişim Kurmak Üzere Ara Sunucu Kullanan bir WebRequest’i Etkinleştirme'
+      href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
+    - name: 'Nasıl yapılır: Genel Ara Sunucu Seçimini Geçersiz Kılma'
+      href: how-to-override-a-global-proxy-selection.md
+  - name: NetworkInformation
+    href: networkinformation.md
+    items:
+    - name: 'Nasıl yapılır: Ağ Kullanılabilirliğini Algılama ve Adres Değişiklikleri'
+      href: how-to-detect-network-availability-and-address-changes.md
+    - name: 'Nasıl yapılır: Arabirim ve Protokol Bilgilerini Alma'
+      href: how-to-get-interface-and-protocol-information.md
+    - name: 'Nasıl yapılır: Konağa Ping Yapma'
+      href: how-to-ping-a-host.md
+  - name: System.Uri ad alanında sürüm 2.0’da yapılan değişiklikler
+    href: changes-to-the-system-uri-namespace-in-version-2-0.md
+  - name: System.Uri’de Uluslararası Kaynak Tanımlayıcı Desteği
+    href: international-resource-identifier-support-in-system-uri.md
+  - name: Sürüm 3.5’teki Yuva Performansı Geliştirmeleri
+    href: socket-performance-enhancements-in-version-3-5.md
+  - name: Eş Adı Çözümleme Protokolü
+    href: peer-name-resolution-protocol.md
+    items:
+    - name: Eş Adları ve PNRP Kimlikleri
+      href: peer-names-and-pnrp-ids.md
+    - name: Eş Adı Yayını ve Çözümleme
+      href: peer-name-publication-and-resolution.md
+    - name: PNRP Bulutları
+      href: pnrp-clouds.md
+    - name: PNRP Önbellekleri
+      href: pnrp-caches.md
+    - name: Uygulama Geliştirmede PNRP
+      href: pnrp-in-application-development.md
+  - name: Eşler Arası İş Birliği
+    href: peer-to-peer-collaboration.md
+    items:
+    - name: System.Net.PeerToPeer.Collaboration Ad Alanı Hakkında
+      href: about-the-system-net-peertopeer-collaboration-namespace.md
+    - name: Eşler Arası Ağ Oluşturma Senaryoları
+      href: peer-to-peer-networking-scenarios.md
+  - name: Sürüm 3.5 SP1’de HttpWebRequest için NTLM kimlik doğrulamasındaki değişiklikler
+    href: changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md
+  - name: Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması
+    href: integrated-windows-authentication-with-extended-protection.md
+  - name: IPv6 ve Teredo kullanarak NAT Geçişi
+    href: nat-traversal-using-ipv6-and-teredo.md
+  - name: Windows Mağazası Uygulamaları için Ağ Yalıtımı
+    href: network-isolation-for-windows-store-apps.md
+  - name: Ağ Programlama Örnekleri
+    href: network-programming-samples.md
+ms.openlocfilehash: 9f44403f015f28fe92aed3309584abc51156db3a
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471607"

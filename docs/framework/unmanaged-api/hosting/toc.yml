@@ -1,0 +1,1007 @@
+items:
+- name: Barındırma
+  href: index.md
+  items:
+  - name: Barındırma Yardımcı Sınıfları
+    href: hosting-coclasses.md
+    items:
+    - name: CLRRuntimeHost Coclass’ı
+      href: clrruntimehost-coclass.md
+    - name: ComCallUnmarshal Coclass’ı
+      href: comcallunmarshal-coclass.md
+    - name: CorRuntimeHost Ortak Sınıfı
+      href: corruntimehost-coclass.md
+    - name: TypeNameFactory Coclass’ı
+      href: typenamefactory-coclass.md
+  - name: Barındırma Numaralandırmaları
+    href: hosting-enumerations.md
+    items:
+    - name: CLSID_RESOLUTION_FLAGS Numaralandırması
+      href: clsid-resolution-flags-enumeration.md
+    - name: COR_GC_STAT_TYPES Numaralandırması
+      href: cor-gc-stat-types-enumeration.md
+    - name: COR_GC_THREAD_STATS_TYPES Numaralandırması
+      href: cor-gc-thread-stats-types-enumeration.md
+    - name: EApiCategories Numaralandırması
+      href: eapicategories-enumeration.md
+    - name: EBindPolicyLevels Numaralandırması
+      href: ebindpolicylevels-enumeration.md
+    - name: ECLRAssemblyIdentityFlags Numaralandırması
+      href: eclrassemblyidentityflags-enumeration.md
+    - name: EClrEvent Numaralandırması
+      href: eclrevent-enumeration.md
+    - name: EClrFailure Numaralandırması
+      href: eclrfailure-enumeration.md
+    - name: EClrOperation Numaralandırması
+      href: eclroperation-enumeration.md
+    - name: EClrUnhandledException Numaralandırması
+      href: eclrunhandledexception-enumeration.md
+    - name: EContextType Numaralandırması
+      href: econtexttype-enumeration.md
+    - name: ECustomDumpFlavor Numaralandırması
+      href: ecustomdumpflavor-enumeration.md
+    - name: ECustomDumpItemKind Numaralandırması
+      href: ecustomdumpitemkind-enumeration.md
+    - name: EHostApplicationPolicy Numaralandırması
+      href: ehostapplicationpolicy-enumeration.md
+    - name: EHostBindingPolicyModifyFlags Numaralandırması
+      href: ehostbindingpolicymodifyflags-enumeration.md
+    - name: EInitializeNewDomainFlags Numaralandırması
+      href: einitializenewdomainflags-enumeration.md
+    - name: EMemoryAvailable Numaralandırması
+      href: ememoryavailable-enumeration.md
+    - name: EMemoryCriticalLevel Numaralandırması
+      href: ememorycriticallevel-enumeration.md
+    - name: EPolicyAction Numaralandırması
+      href: epolicyaction-enumeration.md
+    - name: ESymbolReadingPolicy Numaralandırması
+      href: esymbolreadingpolicy-enumeration.md
+    - name: ETaskType Numaralandırması
+      href: etasktype-enumeration.md
+    - name: HOST_TYPE Numaralandırması
+      href: host-type-enumeration.md
+    - name: MALLOC_TYPE Numaralandırması
+      href: malloc-type-enumeration.md
+    - name: METAHOST_CONFIG_FLAGS Numaralandırması
+      href: metahost-config-flags-enumeration.md
+    - name: METAHOST_POLICY_FLAGS Numaralandırması
+      href: metahost-policy-flags-enumeration.md
+    - name: RUNTIME_INFO_FLAGS Numaralandırması
+      href: runtime-info-flags-enumeration.md
+    - name: StackOverflowType Numaralandırması
+      href: stackoverflowtype-enumeration.md
+    - name: STARTUP_FLAGS Numaralandırması
+      href: startup-flags-enumeration.md
+    - name: ValidatorFlags Numaralandırması
+      href: validatorflags-enumeration.md
+    - name: WAIT_OPTION Numaralandırması
+      href: wait-option-enumeration.md
+  - name: Barındırma Genel Statik İşlevleri
+    href: hosting-global-static-functions.md
+    items:
+    - name: .NET Framework 4 Barındırma Genel Statik İşlevleri
+      href: net-framework-4-hosting-global-static-functions.md
+      items:
+      - name: CLRCreateInstance İşlevi
+        href: clrcreateinstance-function.md
+    - name: Kullanım Dışı CLR Barındırma İşlevleri
+      href: deprecated-clr-hosting-functions.md
+      items:
+      - name: _CorDllMain İşlevi
+        href: cordllmain-function.md
+      - name: _CorExeMain İşlevi
+        href: corexemain-function.md
+      - name: _CorExeMain2 İşlevi
+        href: corexemain2-function.md
+      - name: _CorImageUnloading İşlevi
+        href: corimageunloading-function.md
+      - name: _CorValidateImage İşlevi
+        href: corvalidateimage-function.md
+      - name: CallFunctionShim İşlevi
+        href: callfunctionshim-function.md
+      - name: ClrCreateManagedInstance İşlevi
+        href: clrcreatemanagedinstance-function.md
+      - name: CoEEShutDownCOM İşlevi
+        href: coeeshutdowncom-function.md
+      - name: CoInitializeCor İşlevi
+        href: coinitializecor-function.md
+      - name: CoInitializeEE İşlevi
+        href: coinitializeee-function.md
+      - name: CorBindToCurrentRuntime İşlevi
+        href: corbindtocurrentruntime-function.md
+      - name: CorBindToRuntime İşlevi
+        href: corbindtoruntime-function.md
+      - name: CorBindToRuntimeByCfg İşlevi
+        href: corbindtoruntimebycfg-function.md
+      - name: CorBindToRuntimeEx İşlevi
+        href: corbindtoruntimeex-function.md
+      - name: CorBindToRuntimeHost İşlevi
+        href: corbindtoruntimehost-function.md
+      - name: CorExitProcess İşlevi
+        href: corexitprocess-function.md
+      - name: CorLaunchApplication İşlevi
+        href: corlaunchapplication-function.md
+      - name: CorMarkThreadInThreadPool İşlevi
+        href: cormarkthreadinthreadpool-function.md
+      - name: CoUninitializeCor İşlevi
+        href: couninitializecor-function.md
+      - name: CoUninitializeEE İşlevi
+        href: couninitializeee-function.md
+      - name: CreateDebuggingInterfaceFromVersion İşlevi
+        href: createdebugginginterfacefromversion-function.md
+      - name: CreateICeeFileGen İşlevi
+        href: createiceefilegen-function.md
+      - name: DestroyICeeFileGen İşlevi
+        href: destroyiceefilegen-function.md
+      - name: FExecuteInAppDomainCallback İşlev İşaretçisi
+        href: fexecuteinappdomaincallback-function-pointer.md
+      - name: FLockClrVersionCallback İşlev İşaretçisi
+        href: flockclrversioncallback-function-pointer.md
+      - name: GetCLRIdentityManager İşlevi
+        href: getclridentitymanager-function.md
+      - name: GetCORRequiredVersion İşlevi
+        href: getcorrequiredversion-function.md
+      - name: GetCORSystemDirectory İşlevi
+        href: getcorsystemdirectory-function.md
+      - name: GetCORVersion İşlevi
+        href: getcorversion-function.md
+      - name: GetFileVersion İşlevi
+        href: getfileversion-function.md
+      - name: GetRealProcAddress İşlevi
+        href: getrealprocaddress-function.md
+      - name: GetRequestedRuntimeInfo İşlevi
+        href: getrequestedruntimeinfo-function.md
+      - name: GetRequestedRuntimeVersion İşlevi
+        href: getrequestedruntimeversion-function.md
+      - name: GetRequestedRuntimeVersionForCLSID İşlevi
+        href: getrequestedruntimeversionforclsid-function.md
+      - name: GetVersionFromProcess İşlevi
+        href: getversionfromprocess-function.md
+      - name: LoadLibraryShim İşlevi
+        href: loadlibraryshim-function.md
+      - name: LoadStringRC İşlevi
+        href: loadstringrc-function.md
+      - name: LoadStringRCEx İşlevi
+        href: loadstringrcex-function.md
+      - name: LockClrVersion İşlevi
+        href: lockclrversion-function.md
+      - name: LPOVERLAPPED_COMPLETION_ROUTINE İşlev İşaretçisi
+        href: lpoverlapped-completion-routine-function-pointer.md
+      - name: LPTHREAD_START_ROUTINE İşlev İşaretçisi
+        href: lpthread-start-routine-function-pointer.md
+      - name: RunDll32ShimW İşlevi
+        href: rundll32shimw-function.md
+      - name: WAITORTIMERCALLBACK İşlev İşaretçisi
+        href: waitortimercallback-function-pointer.md
+  - name: Barındırma Arabirimleri
+    href: hosting-interfaces.md
+    items:
+    - name: Kullanım Dışı CLR Barındırma Arabirimleri ve Yardımcı Sınıfları
+      href: deprecated-clr-hosting-interfaces-and-coclasses.md
+      items:
+      - name: IAppDomainSetup Arabirimi
+        href: iappdomainsetup-interface.md
+      - name: ICeeFileGen Sınıfı
+        href: iceefilegen-class.md
+      - name: ICorRuntimeHost Arabirimi
+        href: icorruntimehost-interface.md
+        items:
+        - name: CloseEnum Yöntemi
+          href: icorruntimehost-closeenum-method.md
+        - name: CreateDomain Yöntemi
+          href: icorruntimehost-createdomain-method.md
+        - name: CreateDomainSetup Yöntemi
+          href: icorruntimehost-createdomainsetup-method.md
+        - name: CreateDomainEx Yöntemi
+          href: icorruntimehost-createdomainex-method.md
+        - name: CreateEvidence Yöntemi
+          href: icorruntimehost-createevidence-method.md
+        - name: CreateLogicalThreadState Yöntemi
+          href: icorruntimehost-createlogicalthreadstate-method.md
+        - name: CurrentDomain Yöntemi
+          href: icorruntimehost-currentdomain-method.md
+        - name: DeleteLogicalThreadState Yöntemi
+          href: icorruntimehost-deletelogicalthreadstate-method.md
+        - name: EnumDomains Yöntemi
+          href: icorruntimehost-enumdomains-method.md
+        - name: GetConfiguration Yöntemi
+          href: icorruntimehost-getconfiguration-method.md
+        - name: GetDefaultDomain Yöntemi
+          href: icorruntimehost-getdefaultdomain-method.md
+        - name: LocksHeldByLogicalThread Yöntemi
+          href: icorruntimehost-locksheldbylogicalthread-method.md
+        - name: MapFile Yöntemi
+          href: icorruntimehost-mapfile-method.md
+        - name: NextDomain Yöntemi
+          href: icorruntimehost-nextdomain-method.md
+        - name: Start Yöntemi
+          href: icorruntimehost-start-method.md
+        - name: Stop Yöntemi
+          href: icorruntimehost-stop-method.md
+        - name: SwitchInLogicalThreadState Yöntemi
+          href: icorruntimehost-switchinlogicalthreadstate-method.md
+        - name: SwitchOutLogicalThreadState Yöntemi
+          href: icorruntimehost-switchoutlogicalthreadstate-method.md
+        - name: UnloadDomain Yöntemi
+          href: icorruntimehost-unloaddomain-method.md
+    - name: CLR Barındırma Arabirimleri
+      href: clr-hosting-interfaces.md
+      items:
+      - name: IActionOnCLREvent Arabirimi
+        href: iactiononclrevent-interface.md
+        items:
+        - name: OnEvent Yöntemi
+          href: iactiononclrevent-onevent-method.md
+      - name: IApartmentCallback Arabirimi
+        href: iapartmentcallback-interface.md
+        items:
+        - name: DoCallback Yöntemi
+          href: iapartmentcallback-docallback-method.md
+      - name: IAppDomainBinding Arabirimi
+        href: iappdomainbinding-interface.md
+        items:
+        - name: OnAppDomain Yöntemi
+          href: iappdomainbinding-onappdomain-method.md
+      - name: ICatalogServices Arabirimi
+        href: icatalogservices-interface.md
+        items:
+        - name: Autodone Yöntemi
+          href: icatalogservices-autodone-method.md
+        - name: NotAutodone Yöntemi
+          href: icatalogservices-notautodone-method.md
+      - name: ICLRAssemblyIdentityManager Arabirimi
+        href: iclrassemblyidentitymanager-interface.md
+        items:
+        - name: GetBindingIdentityFromFile Yöntemi
+          href: iclrassemblyidentitymanager-getbindingidentityfromfile-method.md
+        - name: GetBindingIdentityFromStream Yöntemi
+          href: iclrassemblyidentitymanager-getbindingidentityfromstream-method.md
+        - name: GetCLRAssemblyReferenceList Yöntemi
+          href: iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md
+        - name: GetProbingAssembliesFromReference Yöntemi
+          href: iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md
+        - name: GetReferencedAssembliesFromFile Yöntemi
+          href: iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md
+        - name: GetReferencedAssembliesFromStream Yöntemi
+          href: iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md
+        - name: IsStronglyNamed Yöntemi
+          href: iclrassemblyidentitymanager-isstronglynamed-method.md
+      - name: ICLRAssemblyReferenceList Arabirimi
+        href: iclrassemblyreferencelist-interface.md
+        items:
+        - name: IsAssemblyReferenceInList Yöntemi
+          href: iclrassemblyreferencelist-isassemblyreferenceinlist-method.md
+        - name: IsStringAssemblyReferenceInList Yöntemi
+          href: iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md
+      - name: ICLRControl Arabirimi
+        href: iclrcontrol-interface.md
+        items:
+        - name: GetCLRManager Yöntemi
+          href: iclrcontrol-getclrmanager-method.md
+        - name: SetAppDomainManagerType Yöntemi
+          href: iclrcontrol-setappdomainmanagertype-method.md
+      - name: ICLRDebugManager Arabirimi
+        href: iclrdebugmanager-interface.md
+        items:
+        - name: BeginConnection Yöntemi
+          href: iclrdebugmanager-beginconnection-method.md
+        - name: EndConnection Yöntemi
+          href: iclrdebugmanager-endconnection-method.md
+        - name: GetDacl Yöntemi
+          href: iclrdebugmanager-getdacl-method.md
+        - name: IsDebuggerAttached Yöntemi
+          href: iclrdebugmanager-isdebuggerattached-method.md
+        - name: SetConnectionTasks Yöntemi
+          href: iclrdebugmanager-setconnectiontasks-method.md
+        - name: SetDacl Yöntemi
+          href: iclrdebugmanager-setdacl-method.md
+        - name: SetSymbolReadingPolicy Yöntemi
+          href: iclrdebugmanager-setsymbolreadingpolicy-method.md
+      - name: ICLRErrorReportingManager Arabirimi
+        href: iclrerrorreportingmanager-interface.md
+        items:
+        - name: BeginCustomDump Yöntemi
+          href: iclrerrorreportingmanager-begincustomdump-method.md
+        - name: EndCustomDump Yöntemi
+          href: iclrerrorreportingmanager-endcustomdump-method.md
+        - name: GetBucketParametersForCurrentException Yöntemi
+          href: iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md
+      - name: ICLRGCManager Arabirimi
+        href: iclrgcmanager-interface.md
+        items:
+        - name: Collect Yöntemi
+          href: iclrgcmanager-collect-method.md
+        - name: GetStats Yöntemi
+          href: iclrgcmanager-getstats-method.md
+        - name: SetGCStartupLimits Yöntemi
+          href: iclrgcmanager-setgcstartuplimits-method.md
+      - name: ICLRHostBindingPolicyManager Arabirimi
+        href: iclrhostbindingpolicymanager-interface.md
+        items:
+        - name: EvaluatePolicy Yöntemi
+          href: iclrhostbindingpolicymanager-evaluatepolicy-method.md
+        - name: ModifyApplicationPolicy Yöntemi
+          href: iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md
+      - name: ICLRHostProtectionManager Arabirimi
+        href: iclrhostprotectionmanager-interface.md
+        items:
+        - name: SetEagerSerializeGrantSets
+          href: iclrhostprotectionmanager-seteagerserializegrantsets-method.md
+        - name: SetProtectedCategories Yöntemi
+          href: iclrhostprotectionmanager-setprotectedcategories-method.md
+      - name: ICLRIoCompletionManager Arabirimi
+        href: iclriocompletionmanager-interface.md
+        items:
+        - name: OnComplete Yöntemi
+          href: iclriocompletionmanager-oncomplete-method.md
+      - name: ICLRMemoryNotificationCallback Arabirimi
+        href: iclrmemorynotificationcallback-interface.md
+        items:
+        - name: OnMemoryNotification Yöntemi
+          href: iclrmemorynotificationcallback-onmemorynotification-method.md
+      - name: ICLROnEventManager Arabirimi
+        href: iclroneventmanager-interface.md
+        items:
+        - name: RegisterActionOnEvent Yöntemi
+          href: iclroneventmanager-registeractiononevent-method.md
+        - name: UnregisterActionOnEvent Yöntemi
+          href: iclroneventmanager-unregisteractiononevent-method.md
+      - name: ICLRPolicyManager Arabirimi
+        href: iclrpolicymanager-interface.md
+        items:
+        - name: SetActionOnFailure Yöntemi
+          href: iclrpolicymanager-setactiononfailure-method.md
+        - name: SetActionOnTimeout Yöntemi
+          href: iclrpolicymanager-setactionontimeout-method.md
+        - name: SetDefaultAction Yöntemi
+          href: iclrpolicymanager-setdefaultaction-method.md
+        - name: SetTimeout Yöntemi
+          href: iclrpolicymanager-settimeout-method.md
+        - name: SetTimeoutAndAction Yöntemi
+          href: iclrpolicymanager-settimeoutandaction-method.md
+        - name: SetUnhandledExceptionPolicy Yöntemi
+          href: iclrpolicymanager-setunhandledexceptionpolicy-method.md
+      - name: ICLRProbingAssemblyEnum Arabirimi
+        href: iclrprobingassemblyenum-interface.md
+        items:
+        - name: Get Yöntemi
+          href: iclrprobingassemblyenum-get-method.md
+      - name: ICLRReferenceAssemblyEnum Arabirimi
+        href: iclrreferenceassemblyenum-interface.md
+        items:
+        - name: Get Yöntemi
+          href: iclrreferenceassemblyenum-get-method.md
+      - name: ICLRRuntimeHost Arabirimi
+        href: iclrruntimehost-interface.md
+        items:
+        - name: ExecuteApplication Yöntemi
+          href: iclrruntimehost-executeapplication-method.md
+        - name: ExecuteInAppDomain Yöntemi
+          href: iclrruntimehost-executeinappdomain-method.md
+        - name: ExecuteInDefaultAppDomain Yöntemi
+          href: iclrruntimehost-executeindefaultappdomain-method.md
+        - name: GetCLRControl Yöntemi
+          href: iclrruntimehost-getclrcontrol-method.md
+        - name: GetCurrentAppDomainId Yöntemi
+          href: iclrruntimehost-getcurrentappdomainid-method.md
+        - name: SetHostControl Yöntemi
+          href: iclrruntimehost-sethostcontrol-method.md
+        - name: Start Yöntemi
+          href: iclrruntimehost-start-method.md
+        - name: Stop Yöntemi
+          href: iclrruntimehost-stop-method.md
+        - name: UnloadAppDomain Yöntemi
+          href: iclrruntimehost-unloadappdomain-method.md
+      - name: ICLRSyncManager Arabirimi
+        href: iclrsyncmanager-interface.md
+        items:
+        - name: CreateRWLockOwnerIterator Yöntemi
+          href: iclrsyncmanager-createrwlockowneriterator-method.md
+        - name: DeleteRWLockOwnerIterator Yöntemi
+          href: iclrsyncmanager-deleterwlockowneriterator-method.md
+        - name: GetMonitorOwner Yöntemi
+          href: iclrsyncmanager-getmonitorowner-method.md
+        - name: GetRWLockOwnerNext Yöntemi
+          href: iclrsyncmanager-getrwlockownernext-method.md
+      - name: ICLRTask Arabirimi
+        href: iclrtask-interface.md
+        items:
+        - name: Abort Yöntemi
+          href: iclrtask-abort-method.md
+        - name: ExitTask Yöntemi
+          href: iclrtask-exittask-method.md
+        - name: GetMemStats Yöntemi
+          href: iclrtask-getmemstats-method.md
+        - name: LocksHeld Yöntemi
+          href: iclrtask-locksheld-method.md
+        - name: NeedsPriorityScheduling Yöntemi
+          href: iclrtask-needspriorityscheduling-method.md
+        - name: Reset Yöntemi
+          href: iclrtask-reset-method.md
+        - name: RudeAbort Yöntemi
+          href: iclrtask-rudeabort-method.md
+        - name: SetTaskIdentifier Yöntemi
+          href: iclrtask-settaskidentifier-method.md
+        - name: SwitchIn Yöntemi
+          href: iclrtask-switchin-method.md
+        - name: SwitchOut Yöntemi
+          href: iclrtask-switchout-method.md
+        - name: YieldTask Yöntemi
+          href: iclrtask-yieldtask-method.md
+      - name: ICLRTaskManager Arabirimi
+        href: iclrtaskmanager-interface.md
+        items:
+        - name: CreateTask Yöntemi
+          href: iclrtaskmanager-createtask-method.md
+        - name: GetCurrentTask Yöntemi
+          href: iclrtaskmanager-getcurrenttask-method.md
+        - name: GetCurrentTaskType Yöntemi
+          href: iclrtaskmanager-getcurrenttasktype-method.md
+        - name: SetLocale Yöntemi
+          href: iclrtaskmanager-setlocale-method.md
+        - name: SetUILocale Yöntemi
+          href: iclrtaskmanager-setuilocale-method.md
+      - name: ICLRValidator Arabirimi
+        href: iclrvalidator-interface.md
+        items:
+        - name: FormatEventInfo Yöntemi
+          href: iclrvalidator-formateventinfo-method.md
+        - name: Validate Yöntemi
+          href: iclrvalidator-validate-method.md
+      - name: ICorConfiguration Arabirimi
+        href: icorconfiguration-interface.md
+        items:
+        - name: AddDebuggerSpecialThread Yöntemi
+          href: icorconfiguration-adddebuggerspecialthread-method.md
+        - name: SetDebuggerThreadControl Yöntemi
+          href: icorconfiguration-setdebuggerthreadcontrol-method.md
+        - name: SetGCHostControl Yöntemi
+          href: icorconfiguration-setgchostcontrol-method.md
+        - name: SetGCThreadControl Yöntemi
+          href: icorconfiguration-setgcthreadcontrol-method.md
+      - name: ICorThreadpool Arabirimi
+        href: icorthreadpool-interface.md
+        items:
+        - name: CorBindIoCompletionCallback Yöntemi
+          href: icorthreadpool-corbindiocompletioncallback-method.md
+        - name: CorCallOrQueueUserWorkItem Yöntemi
+          href: icorthreadpool-corcallorqueueuserworkitem-method.md
+        - name: CorChangeTimer Yöntemi
+          href: icorthreadpool-corchangetimer-method.md
+        - name: CorCreateTimer Yöntemi
+          href: icorthreadpool-corcreatetimer-method.md
+        - name: CorDeleteTimer Yöntemi
+          href: icorthreadpool-cordeletetimer-method.md
+        - name: CorGetAvailableThreads Yöntemi
+          href: icorthreadpool-corgetavailablethreads-method.md
+        - name: CorGetMaxThreads Yöntemi
+          href: icorthreadpool-corgetmaxthreads-method.md
+        - name: CorQueueUserWorkItem Yöntemi
+          href: icorthreadpool-corqueueuserworkitem-method.md
+        - name: CorRegisterWaitForSingleObject Yöntemi
+          href: icorthreadpool-corregisterwaitforsingleobject-method.md
+        - name: CorSetMaxThreads Yöntemi
+          href: icorthreadpool-corsetmaxthreads-method.md
+        - name: CorUnregisterWait Yöntemi
+          href: icorthreadpool-corunregisterwait-method.md
+      - name: IDebuggerInfo Arabirimi
+        href: idebuggerinfo-interface.md
+        items:
+        - name: IsDebuggerAttached Yöntemi
+          href: idebuggerinfo-isdebuggerattached-method.md
+      - name: IDebuggerThreadControl Arabirimi
+        href: idebuggerthreadcontrol-interface.md
+        items:
+        - name: ReleaseAllRuntimeThreads Yöntemi
+          href: idebuggerthreadcontrol-releaseallruntimethreads-method.md
+        - name: StartBlockingForDebugger Yöntemi
+          href: idebuggerthreadcontrol-startblockingfordebugger-method.md
+        - name: ThreadIsBlockingForDebugger Yöntemi
+          href: idebuggerthreadcontrol-threadisblockingfordebugger-method.md
+      - name: IGCHost Arabirimi
+        href: igchost-interface.md
+        items:
+        - name: Collect Yöntemi
+          href: igchost-collect-method.md
+        - name: GetStats Yöntemi
+          href: igchost-getstats-method.md
+        - name: GetThreadStats Yöntemi
+          href: igchost-getthreadstats-method.md
+        - name: SetGCStartupLimits Yöntemi
+          href: igchost-setgcstartuplimits-method.md
+        - name: SetVirtualMemLimit Yöntemi
+          href: igchost-setvirtualmemlimit-method.md
+      - name: IGCHost2 Arabirimi
+        href: igchost2-interface.md
+        items:
+        - name: SetGCStartupLimitsEx Yöntemi
+          href: igchost2-setgcstartuplimitsex-method.md
+      - name: IGCHostControl Arabirimi
+        href: igchostcontrol-interface.md
+        items:
+        - name: RequestVirtualMemLimit Yöntemi
+          href: igchostcontrol-requestvirtualmemlimit-method.md
+      - name: IGCThreadControl Arabirimi
+        href: igcthreadcontrol-interface.md
+        items:
+        - name: SuspensionEnding Yöntemi
+          href: igcthreadcontrol-suspensionending-method.md
+        - name: SuspensionStarting Yöntemi
+          href: igcthreadcontrol-suspensionstarting-method.md
+        - name: ThreadIsBlockingForSuspension Yöntemi
+          href: igcthreadcontrol-threadisblockingforsuspension-method.md
+      - name: IHostAssemblyManager Arabirimi
+        href: ihostassemblymanager-interface.md
+        items:
+        - name: GetAssemblyStore Yöntemi
+          href: ihostassemblymanager-getassemblystore-method.md
+        - name: GetNonHostStoreAssemblies Yöntemi
+          href: ihostassemblymanager-getnonhoststoreassemblies-method.md
+      - name: IHostAssemblyStore Arabirimi
+        href: ihostassemblystore-interface.md
+        items:
+        - name: ProvideAssembly Yöntemi
+          href: ihostassemblystore-provideassembly-method.md
+        - name: ProvideModule Yöntemi
+          href: ihostassemblystore-providemodule-method.md
+      - name: IHostAutoEvent Arabirimi
+        href: ihostautoevent-interface.md
+        items:
+        - name: Set Yöntemi
+          href: ihostautoevent-set-method.md
+        - name: Wait Yöntemi
+          href: ihostautoevent-wait-method.md
+      - name: IHostControl Arabirimi
+        href: ihostcontrol-interface.md
+        items:
+        - name: GetHostManager Yöntemi
+          href: ihostcontrol-gethostmanager-method.md
+        - name: SetAppDomainManager Yöntemi
+          href: ihostcontrol-setappdomainmanager-method.md
+      - name: IHostCrst Arabirimi
+        href: ihostcrst-interface.md
+        items:
+        - name: Enter Yöntemi
+          href: ihostcrst-enter-method.md
+        - name: Leave Yöntemi
+          href: ihostcrst-leave-method.md
+        - name: SetSpinCount Yöntemi
+          href: ihostcrst-setspincount-method.md
+        - name: TryEnter Yöntemi
+          href: ihostcrst-tryenter-method.md
+      - name: IHostGCManager Arabirimi
+        href: ihostgcmanager-interface.md
+        items:
+        - name: SuspensionEnding Yöntemi
+          href: ihostgcmanager-suspensionending-method.md
+        - name: SuspensionStarting Yöntemi
+          href: ihostgcmanager-suspensionstarting-method.md
+        - name: ThreadIsBlockingForSuspension Yöntemi
+          href: ihostgcmanager-threadisblockingforsuspension-method.md
+      - name: IHostIoCompletionManager Arabirimi
+        href: ihostiocompletionmanager-interface.md
+        items:
+        - name: Bind Yöntemi
+          href: ihostiocompletionmanager-bind-method.md
+        - name: CloseIoCompletionPort Yöntemi
+          href: ihostiocompletionmanager-closeiocompletionport-method.md
+        - name: CreateIoCompletionPort Yöntemi
+          href: ihostiocompletionmanager-createiocompletionport-method.md
+        - name: GetAvailableThreads Yöntemi
+          href: ihostiocompletionmanager-getavailablethreads-method.md
+        - name: GetHostOverlappedSize Yöntemi
+          href: ihostiocompletionmanager-gethostoverlappedsize-method.md
+        - name: GetMaxThreads Yöntemi
+          href: ihostiocompletionmanager-getmaxthreads-method.md
+        - name: GetMinThreads Yöntemi
+          href: ihostiocompletionmanager-getminthreads-method.md
+        - name: InitializeHostOverlapped Yöntemi
+          href: ihostiocompletionmanager-initializehostoverlapped-method.md
+        - name: SetCLRIoCompletionManager Yöntemi
+          href: ihostiocompletionmanager-setclriocompletionmanager-method.md
+        - name: SetMaxThreads Yöntemi
+          href: ihostiocompletionmanager-setmaxthreads-method.md
+        - name: SetMinThreads Yöntemi
+          href: ihostiocompletionmanager-setminthreads-method.md
+      - name: IHostMalloc Arabirimi
+        href: ihostmalloc-interface.md
+        items:
+        - name: Alloc Yöntemi
+          href: ihostmalloc-alloc-method.md
+        - name: DebugAlloc Yöntemi
+          href: ihostmalloc-debugalloc-method.md
+        - name: Free Yöntemi
+          href: ihostmalloc-free-method.md
+      - name: IHostManualEvent Arabirimi
+        href: ihostmanualevent-interface.md
+        items:
+        - name: Reset Yöntemi
+          href: ihostmanualevent-reset-method.md
+        - name: Set Yöntemi
+          href: ihostmanualevent-set-method.md
+        - name: Wait Yöntemi
+          href: ihostmanualevent-wait-method.md
+      - name: IHostMemoryManager Arabirimi
+        href: ihostmemorymanager-interface.md
+        items:
+        - name: AcquiredVirtualAddressSpace Yöntemi
+          href: ihostmemorymanager-acquiredvirtualaddressspace-method.md
+        - name: CreateMAlloc Yöntemi
+          href: ihostmemorymanager-createmalloc-method.md
+        - name: GetMemoryLoad Yöntemi
+          href: ihostmemorymanager-getmemoryload-method.md
+        - name: NeedsVirtualAddressSpace Yöntemi
+          href: ihostmemorymanager-needsvirtualaddressspace-method.md
+        - name: RegisterMemoryNotificationCallback Yöntemi
+          href: ihostmemorymanager-registermemorynotificationcallback-method.md
+        - name: ReleasedVirtualAddressSpace Yöntemi
+          href: ihostmemorymanager-releasedvirtualaddressspace-method.md
+        - name: VirtualAlloc Yöntemi
+          href: ihostmemorymanager-virtualalloc-method.md
+        - name: VirtualFree Yöntemi
+          href: ihostmemorymanager-virtualfree-method.md
+        - name: VirtualProtect Yöntemi
+          href: ihostmemorymanager-virtualprotect-method.md
+        - name: VirtualQuery Yöntemi
+          href: ihostmemorymanager-virtualquery-method.md
+      - name: IHostPolicyManager Arabirimi
+        href: ihostpolicymanager-interface.md
+        items:
+        - name: OnDefaultAction Yöntemi
+          href: ihostpolicymanager-ondefaultaction-method.md
+        - name: OnFailure Yöntemi
+          href: ihostpolicymanager-onfailure-method.md
+        - name: OnTimeout Yöntemi
+          href: ihostpolicymanager-ontimeout-method.md
+      - name: IHostSecurityContext Arabirimi
+        href: ihostsecuritycontext-interface.md
+        items:
+        - name: Capture Yöntemi
+          href: ihostsecuritycontext-capture-method.md
+      - name: IHostSecurityManager Arabirimi
+        href: ihostsecuritymanager-interface.md
+        items:
+        - name: GetSecurityContext Yöntemi
+          href: ihostsecuritymanager-getsecuritycontext-method.md
+        - name: ImpersonateLoggedOnUser Yöntemi
+          href: ihostsecuritymanager-impersonateloggedonuser-method.md
+        - name: OpenThreadToken Yöntemi
+          href: ihostsecuritymanager-openthreadtoken-method.md
+        - name: RevertToSelf Yöntemi
+          href: ihostsecuritymanager-reverttoself-method.md
+        - name: SetSecurityContext Yöntemi
+          href: ihostsecuritymanager-setsecuritycontext-method.md
+        - name: SetThreadToken Yöntemi
+          href: ihostsecuritymanager-setthreadtoken-method.md
+      - name: IHostSemaphore Arabirimi
+        href: ihostsemaphore-interface.md
+        items:
+        - name: ReleaseSemaphore Yöntemi
+          href: ihostsemaphore-releasesemaphore-method.md
+        - name: Wait Yöntemi
+          href: ihostsemaphore-wait-method.md
+      - name: IHostSyncManager Arabirimi
+        href: ihostsyncmanager-interface.md
+        items:
+        - name: CreateAutoEvent Yöntemi
+          href: ihostsyncmanager-createautoevent-method.md
+        - name: CreateCrst Yöntemi
+          href: ihostsyncmanager-createcrst-method.md
+        - name: CreateCrstWithSpinCount Yöntemi
+          href: ihostsyncmanager-createcrstwithspincount-method.md
+        - name: CreateManualEvent Yöntemi
+          href: ihostsyncmanager-createmanualevent-method.md
+        - name: CreateMonitorEvent Yöntemi
+          href: ihostsyncmanager-createmonitorevent-method.md
+        - name: CreateRWLockReaderEvent Yöntemi
+          href: ihostsyncmanager-createrwlockreaderevent-method.md
+        - name: CreateRWLockWriterEvent Yöntemi
+          href: ihostsyncmanager-createrwlockwriterevent-method.md
+        - name: CreateSemaphore Yöntemi
+          href: ihostsyncmanager-createsemaphore-method.md
+        - name: SetCLRSyncManager Yöntemi
+          href: ihostsyncmanager-setclrsyncmanager-method.md
+      - name: IHostTask Arabirimi
+        href: ihosttask-interface.md
+        items:
+        - name: Alert Yöntemi
+          href: ihosttask-alert-method.md
+        - name: GetPriority Yöntemi
+          href: ihosttask-getpriority-method.md
+        - name: Join Yöntemi
+          href: ihosttask-join-method.md
+        - name: SetCLRTask Yöntemi
+          href: ihosttask-setclrtask-method.md
+        - name: SetPriority Yöntemi
+          href: ihosttask-setpriority-method.md
+        - name: Start Yöntemi
+          href: ihosttask-start-method.md
+      - name: IHostTaskManager Arabirimi
+        href: ihosttaskmanager-interface.md
+        items:
+        - name: BeginDelayAbort Yöntemi
+          href: ihosttaskmanager-begindelayabort-method.md
+        - name: BeginThreadAffinity Yöntemi
+          href: ihosttaskmanager-beginthreadaffinity-method.md
+        - name: CallNeedsHostHook Yöntemi
+          href: ihosttaskmanager-callneedshosthook-method.md
+        - name: CreateTask Yöntemi
+          href: ihosttaskmanager-createtask-method.md
+        - name: EndDelayAbort Yöntemi
+          href: ihosttaskmanager-enddelayabort-method.md
+        - name: EndThreadAffinity Yöntemi
+          href: ihosttaskmanager-endthreadaffinity-method.md
+        - name: EnterRuntime Yöntemi
+          href: ihosttaskmanager-enterruntime-method.md
+        - name: GetCurrentTask Yöntemi
+          href: ihosttaskmanager-getcurrenttask-method.md
+        - name: GetStackGuarantee Yöntemi
+          href: ihosttaskmanager-getstackguarantee-method.md
+        - name: LeaveRuntime Yöntemi
+          href: ihosttaskmanager-leaveruntime-method.md
+        - name: ReverseEnterRuntime Yöntemi
+          href: ihosttaskmanager-reverseenterruntime-method.md
+        - name: ReverseLeaveRuntime Yöntemi
+          href: ihosttaskmanager-reverseleaveruntime-method.md
+        - name: SetCLRTaskManager Yöntemi
+          href: ihosttaskmanager-setclrtaskmanager-method.md
+        - name: SetLocale Yöntemi
+          href: ihosttaskmanager-setlocale-method.md
+        - name: SetStackGuarantee Yöntemi
+          href: ihosttaskmanager-setstackguarantee-method.md
+        - name: SetUILocale Yöntemi
+          href: ihosttaskmanager-setuilocale-method.md
+        - name: Sleep Yöntemi
+          href: ihosttaskmanager-sleep-method.md
+        - name: SwitchToTask Yöntemi
+          href: ihosttaskmanager-switchtotask-method.md
+      - name: IHostThreadPoolManager Arabirimi
+        href: ihostthreadpoolmanager-interface.md
+        items:
+        - name: GetAvailableThreads Yöntemi
+          href: ihostthreadpoolmanager-getavailablethreads-method.md
+        - name: GetMaxThreads Yöntemi
+          href: ihostthreadpoolmanager-getmaxthreads-method.md
+        - name: GetMinThreads Yöntemi
+          href: ihostthreadpoolmanager-getminthreads-method.md
+        - name: QueueUserWorkItem Yöntemi
+          href: ihostthreadpoolmanager-queueuserworkitem-method.md
+        - name: SetMaxThreads Yöntemi
+          href: ihostthreadpoolmanager-setmaxthreads-method.md
+        - name: SetMinThreads Yöntemi
+          href: ihostthreadpoolmanager-setminthreads-method.md
+      - name: IManagedObject Arabirimi
+        href: imanagedobject-interface.md
+        items:
+        - name: GetObjectIdentity Yöntemi
+          href: imanagedobject-getobjectidentity-method.md
+        - name: GetSerializedBuffer Yöntemi
+          href: imanagedobject-getserializedbuffer-method.md
+      - name: IObjectHandle Arabirimi
+        href: iobjecthandle-interface.md
+        items:
+        - name: Unwrap Yöntemi
+          href: iobjecthandle-unwrap-method.md
+      - name: ITypeName Arabirimi
+        href: itypename-interface.md
+        items:
+        - name: GetAssemblyName Yöntemi
+          href: itypename-getassemblyname-method.md
+        - name: GetModifierLength Yöntemi
+          href: itypename-getmodifierlength-method.md
+        - name: GetModifiers Yöntemi
+          href: itypename-getmodifiers-method.md
+        - name: GetNameCount Yöntemi
+          href: itypename-getnamecount-method.md
+        - name: GetNames Yöntemi
+          href: itypename-getnames-method.md
+        - name: GetTypeArgumentCount Yöntemi
+          href: itypename-gettypeargumentcount-method.md
+        - name: GetTypeArguments Yöntemi
+          href: itypename-gettypearguments-method.md
+      - name: ITypeNameBuilder Arabirimi
+        href: itypenamebuilder-interface.md
+        items:
+        - name: AddArray Yöntemi
+          href: itypenamebuilder-addarray-method.md
+        - name: AddAssemblySpec Yöntemi
+          href: itypenamebuilder-addassemblyspec-method.md
+        - name: AddByRef Yöntemi
+          href: itypenamebuilder-addbyref-method.md
+        - name: AddName Yöntemi
+          href: itypenamebuilder-addname-method.md
+        - name: AddPointer Yöntemi
+          href: itypenamebuilder-addpointer-method.md
+        - name: AddSzArray Yöntemi
+          href: itypenamebuilder-addszarray-method.md
+        - name: Clear Yöntemi
+          href: itypenamebuilder-clear-method.md
+        - name: CloseGenericArgument Yöntemi
+          href: itypenamebuilder-closegenericargument-method.md
+        - name: CloseGenericArguments Yöntemi
+          href: itypenamebuilder-closegenericarguments-method.md
+        - name: OpenGenericArgument Yöntemi
+          href: itypenamebuilder-opengenericargument-method.md
+        - name: OpenGenericArguments Yöntemi
+          href: itypenamebuilder-opengenericarguments-method.md
+        - name: ToString Yöntemi
+          href: itypenamebuilder-tostring-method.md
+      - name: ITypeNameFactory Arabirimi
+        href: itypenamefactory-interface.md
+        items:
+        - name: GetTypeNameBuilder Yöntemi
+          href: itypenamefactory-gettypenamebuilder-method.md
+        - name: ParseTypeName Yöntemi
+          href: itypenamefactory-parsetypename-method.md
+      - name: IValidator Arabirimi
+        href: ivalidator-interface.md
+        items:
+        - name: FormatEventInfo Yöntemi
+          href: ivalidator-formateventinfo-method.md
+        - name: Validate Yöntemi
+          href: ivalidator-validate-method.md
+    - name: .NET Framework 4 ve 4.5'e Eklenen CLR Barındırma Arabirimleri
+      href: clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md
+      items:
+      - name: ICLRAppDomainResourceMonitor Arabirimi
+        href: iclrappdomainresourcemonitor-interface.md
+        items:
+        - name: GetCurrentAllocated Yöntemi
+          href: iclrappdomainresourcemonitor-getcurrentallocated-method.md
+        - name: GetCurrentSurvived Yöntemi
+          href: iclrappdomainresourcemonitor-getcurrentsurvived-method.md
+        - name: GetCurrentCpuTime Yöntemi
+          href: iclrappdomainresourcemonitor-getcurrentcputime-method.md
+      - name: ICLRDomainManager Arabirimi
+        href: iclrdomainmanager-interface.md
+        items:
+        - name: SetAppDomainManagerType Yöntemi
+          href: iclrdomainmanager-setappdomainmanagertype-method.md
+        - name: SetPropertiesForDefaultAppDomain Yöntemi
+          href: iclrdomainmanager-setpropertiesfordefaultappdomain-method.md
+      - name: ICLRGCManager2 Arabirimi
+        href: iclrgcmanager2-interface.md
+        items:
+        - name: SetGCStartupLimitsEx Yöntemi
+          href: iclrgcmanager2-setgcstartuplimitsex-method.md
+      - name: ICLRMetaHost Arabirimi
+        href: iclrmetahost-interface.md
+        items:
+        - name: EnumerateInstalledRuntimes Yöntemi
+          href: iclrmetahost-enumerateinstalledruntimes-method.md
+        - name: EnumerateLoadedRuntimes Yöntemi
+          href: iclrmetahost-enumerateloadedruntimes-method.md
+        - name: ExitProcess Yöntemi
+          href: iclrmetahost-exitprocess-method.md
+        - name: GetRuntime Yöntemi
+          href: iclrmetahost-getruntime-method.md
+        - name: GetVersionFromFile Yöntemi
+          href: iclrmetahost-getversionfromfile-method.md
+        - name: QueryLegacyV2RuntimeBinding Yöntemi
+          href: iclrmetahost-querylegacyv2runtimebinding-method.md
+        - name: RequestRuntimeLoadedNotification Yöntemi
+          href: iclrmetahost-requestruntimeloadednotification-method.md
+      - name: ICLRMetaHostPolicy Arabirimi
+        href: iclrmetahostpolicy-interface.md
+        items:
+        - name: GetRequestedRuntime Yöntemi
+          href: iclrmetahostpolicy-getrequestedruntime-method.md
+      - name: ICLRRuntimeInfo Arabirimi
+        href: iclrruntimeinfo-interface.md
+        items:
+        - name: BindAsLegacyV2Runtime Yöntemi
+          href: iclrruntimeinfo-bindaslegacyv2runtime-method.md
+        - name: GetDefaultStartupFlags Yöntemi
+          href: iclrruntimeinfo-getdefaultstartupflags-method.md
+        - name: GetInterface Yöntemi
+          href: iclrruntimeinfo-getinterface-method.md
+        - name: GetProcAddress Yöntemi
+          href: iclrruntimeinfo-getprocaddress-method.md
+        - name: GetRuntimeDirectory Yöntemi
+          href: iclrruntimeinfo-getruntimedirectory-method.md
+        - name: GetVersionString Yöntemi
+          href: iclrruntimeinfo-getversionstring-method.md
+        - name: IsLoadable Yöntemi
+          href: iclrruntimeinfo-isloadable-method.md
+        - name: IsLoaded Yöntemi
+          href: iclrruntimeinfo-isloaded-method.md
+        - name: IsStarted Yöntemi
+          href: iclrruntimeinfo-isstarted-method.md
+        - name: LoadErrorString Yöntemi
+          href: iclrruntimeinfo-loaderrorstring-method.md
+        - name: LoadLibrary Yöntemi
+          href: iclrruntimeinfo-loadlibrary-method.md
+        - name: SetDefaultStartupFlags Yöntemi
+          href: iclrruntimeinfo-setdefaultstartupflags-method.md
+      - name: ICLRStrongName Arabirimi
+        href: iclrstrongname-interface.md
+        items:
+        - name: GetHashFromAssemblyFile Yöntemi
+          href: iclrstrongname-gethashfromassemblyfile-method.md
+        - name: GetHashFromAssemblyFileW Yöntemi
+          href: iclrstrongname-gethashfromassemblyfilew-method.md
+        - name: GetHashFromBlob Yöntemi
+          href: iclrstrongname-gethashfromblob-method.md
+        - name: GetHashFromFile Yöntemi
+          href: iclrstrongname-gethashfromfile-method.md
+        - name: GetHashFromFileW Yöntemi
+          href: iclrstrongname-gethashfromfilew-method.md
+        - name: GetHashFromHandle Yöntemi
+          href: iclrstrongname-gethashfromhandle-method.md
+        - name: StrongNameCompareAssemblies Yöntemi
+          href: iclrstrongname-strongnamecompareassemblies-method.md
+        - name: StrongNameFreeBuffer Yöntemi
+          href: iclrstrongname-strongnamefreebuffer-method.md
+        - name: StrongNameGetBlob Yöntemi
+          href: iclrstrongname-strongnamegetblob-method.md
+        - name: StrongNameGetBlobFromImage Yöntemi
+          href: iclrstrongname-strongnamegetblobfromimage-method.md
+        - name: StrongNameGetPublicKey Yöntemi
+          href: iclrstrongname-strongnamegetpublickey-method.md
+        - name: StrongNameHashSize Yöntemi
+          href: iclrstrongname-strongnamehashsize-method.md
+        - name: StrongNameKeyDelete Yöntemi
+          href: iclrstrongname-strongnamekeydelete-method.md
+        - name: StrongNameKeyGen Yöntemi
+          href: iclrstrongname-strongnamekeygen-method.md
+        - name: StrongNameKeyGenEx Yöntemi
+          href: iclrstrongname-strongnamekeygenex-method.md
+        - name: StrongNameKeyInstall Yöntemi
+          href: iclrstrongname-strongnamekeyinstall-method.md
+        - name: StrongNameSignatureGeneration Yöntemi
+          href: iclrstrongname-strongnamesignaturegeneration-method.md
+        - name: StrongNameSignatureGenerationEx Yöntemi
+          href: iclrstrongname-strongnamesignaturegenerationex-method.md
+        - name: StrongNameSignatureSize Yöntemi
+          href: iclrstrongname-strongnamesignaturesize-method.md
+        - name: StrongNameSignatureVerification Yöntemi
+          href: iclrstrongname-strongnamesignatureverification-method.md
+        - name: StrongNameSignatureVerificationEx Yöntemi
+          href: iclrstrongname-strongnamesignatureverificationex-method.md
+        - name: StrongNameSignatureVerificationFromImage Yöntemi
+          href: iclrstrongname-strongnamesignatureverificationfromimage-method.md
+        - name: StrongNameTokenFromAssembly Yöntemi
+          href: iclrstrongname-strongnametokenfromassembly-method.md
+        - name: StrongNameTokenFromAssemblyEx Yöntemi
+          href: iclrstrongname-strongnametokenfromassemblyex-method.md
+        - name: StrongNameTokenFromPublicKey Yöntemi
+          href: iclrstrongname-strongnametokenfrompublickey-method.md
+      - name: ICLRStrongName2 Arabirimi
+        href: iclrstrongname2-interface.md
+        items:
+        - name: StrongNameGetPublicKeyEx Yöntemi
+          href: strongnamegetpublickeyex-method.md
+        - name: StrongNameSignatureVerificationEx2 Yöntemi
+          href: strongnamesignatureverificationex2-method.md
+      - name: ICLRTask2 Arabirimi
+        href: iclrtask2-interface.md
+        items:
+        - name: BeginPreventAsyncAbort Yöntemi
+          href: iclrtask2-beginpreventasyncabort-method.md
+        - name: EndPreventAsyncAbort Yöntemi
+          href: iclrtask2-endpreventasyncabort-method.md
+  - name: Barındırma Yapıları
+    href: hosting-structures.md
+    items:
+    - name: AssemblyBindInfo Yapısı
+      href: assemblybindinfo-structure.md
+    - name: BucketParameters Yapısı
+      href: bucketparameters-structure.md
+    - name: COR_GC_STATS Yapısı
+      href: cor-gc-stats-structure.md
+    - name: COR_GC_THREAD_STATS Yapısı
+      href: cor-gc-thread-stats-structure.md
+    - name: CustomDumpItem Yapısı
+      href: customdumpitem-structure.md
+    - name: MDAInfo Yapısı
+      href: mdainfo-structure.md
+    - name: ModuleBindInfo Yapısı
+      href: modulebindinfo-structure.md
+    - name: StackOverflowInfo Yapısı
+      href: stackoverflowinfo-structure.md
+ms.openlocfilehash: c00bee82be09f0c49877ccc8aa4105e64a47f2df
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58472026"
