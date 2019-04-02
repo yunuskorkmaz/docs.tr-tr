@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d00f86c492a7d32344b1067a48c8e53aa2a43426
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761418"
+---
 ### <a name="reflection-objects-can-no-longer-be-passed-from-managed-code-to-out-of-process-dcom-clients"></a>Yansıma nesneleri artık yönetilen koddan işlem dışı DCOM istemcilere geçirilebilir
 
 |   |   |
