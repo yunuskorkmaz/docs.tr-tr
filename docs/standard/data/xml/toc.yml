@@ -1,0 +1,288 @@
+items:
+- name: XML Belgeleri ve Verileri
+  href: index.md
+  items:
+  - name: XML İşleme Seçenekleri
+    href: xml-processing-options.md
+  - name: XML Verilerini Bellek İçinde İşleme
+    href: processing-xml-data-in-memory.md
+    items:
+    - name: DOM Modelini Kullanarak XML Verilerini İşleme
+      href: process-xml-data-using-the-dom-model.md
+      items:
+      - name: XML Belge Nesne Modeli (DOM)
+        href: xml-document-object-model-dom.md
+      - name: XML Düğüm Türleri
+        href: types-of-xml-nodes.md
+      - name: XML Belge Nesne Modeli (DOM) Hiyerarşisi
+        href: xml-document-object-model-dom-hierarchy.md
+      - name: XML Verilerine Nesne Hiyerarşisi Eşleme
+        href: mapping-the-object-hierarchy-to-xml-data.md
+      - name: XML Belgesi Oluşturma
+        href: xml-document-creation.md
+      - name: DOM’da XML Belgesi Okuma
+        href: reading-an-xml-document-into-the-dom.md
+        items:
+        - name: Belgeye Katıştırılmış Stil Sayfası Yönergeleri
+          href: style-sheet-directives-embedded-in-a-document.md
+        - name: Okuyucudan Veri Yükleme
+          href: load-data-from-a-reader.md
+        - name: DOM Yüklerken Boşluk ve Önemli Boşluk İşleme
+          href: white-space-and-significant-white-space-handling-when-loading-the-dom.md
+        - name: DOM Özniteliklerine Erişim
+          href: accessing-attributes-in-the-dom.md
+        - name: DOM’da Varlık Bildirimleri ve Varlık Başvuruları Okuma
+          href: reading-entity-declarations-and-entity-references-into-the-dom.md
+        - name: Varlık Başvuruları Korunur
+          href: entity-references-are-preserved.md
+        - name: Varlık Başvuruları Genişletilir ve Korunmaz
+          href: entity-references-are-expanded-and-not-preserved.md
+      - name: XML Belgesine Düğüm Ekleme
+        href: inserting-nodes-into-an-xml-document.md
+        items:
+        - name: DOM’da Yeni Düğümler Oluşturma
+          href: create-new-nodes-in-the-dom.md
+          items:
+          - name: DOM Öğeleri için Yeni Öznitelikler Oluşturma
+            href: creating-new-attributes-for-elements-in-the-dom.md
+          - name: Yeni Düğümler Oluştururken XML Öğesi ve Öznitelik Adı Doğrulaması
+            href: xml-element-and-attribute-name-verification-when-creating-new-nodes.md
+          - name: Yeni Öğe Başvuruları Oluşturma
+            href: creating-new-entity-references.md
+          - name: Öğe ve Öznitelikler İçeren Yeni Düğümler için Varlık Başvurusu Genişlemesine Ad Alanı Etkisi
+            href: namespace-affect-on-entity-ref-expansion-for-new-nodes.md
+        - name: Var Olan Düğümleri Kopyalama
+          href: copy-existing-nodes.md
+        - name: Var Olan Düğümleri Bir Belgeden Diğerine Kopyalama
+          href: copying-existing-nodes-from-one-document-to-another.md
+        - name: Belge Parçalarını Kopyalama
+          href: copying-document-fragments.md
+      - name: Bir XML Belgesinden Düğümleri, İçeriği ve Değerleri Kaldırma
+        href: removing-nodes-content-and-values-from-an-xml-document.md
+        items:
+        - name: DOM’dan Düğümleri Kaldırma
+          href: removing-nodes-from-the-dom.md
+        - name: DOM’da Bir Öğe Düğümünden Öznitelikleri Kaldırma
+          href: removing-attributes-from-an-element-node-in-the-dom.md
+        - name: DOM’daki Düğüm İçeriğini Kaldırma
+          href: removing-node-content-in-the-dom.md
+      - name: Bir XML Belgesindeki Düğüm, İçerik ve Değerleri Değiştirme
+        href: modifying-nodes-content-and-values-in-an-xml-document.md
+      - name: DOM’da XML Belgesi Doğrulama
+        href: validating-an-xml-document-in-the-dom.md
+      - name: Belge Kaydetme ve Yazma
+        href: saving-and-writing-a-document.md
+      - name: XPath Gezintisi Kullanarak Düğüm Seçme
+        href: select-nodes-using-xpath-navigation.md
+      - name: Dış Kaynakları Çözümleme
+        href: resolving-external-resources.md
+      - name: XmlNameTable Kullanarak Nesne Karşılaştırma
+        href: object-comparison-using-xmlnametable.md
+      - name: NamedNodeMaps ve NodeLists İçindeki Düğüm Koleksiyonları
+        href: node-collections-in-namednodemaps-and-nodelists.md
+        items:
+        - name: Ada veya Dizine Göre Sırasız Düğüm Alma
+          href: unordered-node-retrieval-by-name-or-index.md
+        - name: Dizine Göre Sıralı Düğüm Alma
+          href: ordered-node-retrieval-by-index.md
+      - name: NodeLists ve NamedNodeMaps Dinamik Güncelleştirmeleri
+        href: dynamic-updates-to-nodelists-and-namednodemaps.md
+      - name: DOM Ad Alanı Desteği
+        href: namespace-support-in-the-dom.md
+        items:
+        - name: DOM Ad Alanları ve DTD’ler
+          href: namespaces-and-dtds-in-the-dom.md
+        - name: Bir XML Belgesindeki Ad Alanı Bildirimlerini Değiştirme
+          href: changing-namespace-declarations-in-an-xml-document.md
+        - name: Ad Alanı Ön Ek Özelliklerini Değiştirme
+          href: changing-namespace-prefix-properties.md
+      - name: Bir XML Belgesinde XmlNodeChangedEventArgs Kullanarak Olay İşleme
+        href: event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md
+      - name: DOM Genişletme
+        href: extending-the-dom.md
+    - name: XPath Veri Modelini Kullanarak XML Verilerini İşleme
+      href: process-xml-data-using-the-xpath-data-model.md
+      items:
+      - name: XPathDocument ve XmlDocument Kullanarak XML Verilerini Okuma
+        href: reading-xml-data-using-xpathdocument-and-xmldocument.md
+      - name: XPathNavigator Kullanarak XML Verileri Seçme, Değerlendirme ve Eşleştirme
+        href: selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md
+        items:
+        - name: XPathNavigator Kullanarak XML Verileri Seçme
+          href: select-xml-data-using-xpathnavigator.md
+        - name: XPathNavigator Kullanarak XPath İfadelerini Değerlendirme
+          href: evaluate-xpath-expressions-using-xpathnavigator.md
+        - name: XPathNavigator Kullanarak Düğümleri Eşleştirme
+          href: matching-nodes-using-xpathnavigator.md
+        - name: XPath Sorguları ile Tanınan Düğüm Türleri
+          href: node-types-recognized-with-xpath-queries.md
+        - name: XPath Sorguları ve Ad Alanları
+          href: xpath-queries-and-namespaces.md
+        - name: Derlenmiş XPath İfadeleri
+          href: compiled-xpath-expressions.md
+        - name: XPath Ad Alanı Gezintisi
+          href: xpath-namespace-navigation.md
+      - name: XPathNavigator Kullanarak XML Verilerine Erişme
+        href: accessing-xml-data-using-xpathnavigator.md
+        items:
+        - name: XPathNavigator Kullanarak Düğüm Kümesinde Gezinme
+          href: node-set-navigation-using-xpathnavigator.md
+        - name: XPathNavigator Kullanarak Öznitelik ve Ad Alanı Düğümünde Gezinme
+          href: attribute-and-namespace-node-navigation-using-xpathnavigator.md
+        - name: XPathNavigator Kullanarak XML Verilerini Ayıklama
+          href: extract-xml-data-using-xpathnavigator.md
+        - name: XPathNavigator Kullanarak Türü Kesin Olarak Belirtilmiş XML Verilerine Erişme
+          href: accessing-strongly-typed-xml-data-using-xpathnavigator.md
+        - name: Kullanıcı Tanımlı İşlevler ve Değişkenler
+          href: user-defined-functions-and-variables.md
+      - name: XPathNavigator Kullanarak XML Verilerini Düzenleme
+        href: editing-xml-data-using-xpathnavigator.md
+        items:
+        - name: XPathNavigator Kullanarak XML Verileri Ekleme
+          href: insert-xml-data-using-xpathnavigator.md
+        - name: XPathNavigator Kullanarak XML Verilerini Değiştirme
+          href: modify-xml-data-using-xpathnavigator.md
+        - name: XPathNavigator Kullanarak XML Verilerini Kaldırma
+          href: remove-xml-data-using-xpathnavigator.md
+      - name: XPathNavigator Kullanarak Şema Doğrulama
+        href: schema-validation-using-xpathnavigator.md
+    - name: LINQ to XML Kullanarak XML Verilerini İşleme
+      href: process-xml-data-using-linq-to-xml.md
+  - name: XSLT Dönüşümleri
+    href: xslt-transformations.md
+    items:
+    - name: XslCompiledTransform Sınıfını Kullanma
+      href: using-the-xslcompiledtransform-class.md
+      items:
+      - name: XslCompiledTransform Sınıfına Girişler
+        href: inputs-to-the-xslcompiledtransform-class.md
+      - name: XslCompiledTransform Sınıfındaki Çıkış Seçenekleri
+        href: output-options-on-the-xslcompiledtransform-class.md
+      - name: XSLT İşleme Sırasında Dış Kaynakları Çözümleme
+        href: resolving-external-resources-during-xslt-processing.md
+      - name: XSLT Stil Sayfalarını Genişletme
+        href: extending-xslt-style-sheets.md
+        items:
+        - name: XSLT Genişletme Nesneleri
+          href: xslt-extension-objects.md
+        - name: XSLT Parametreleri
+          href: xslt-parameters.md
+        - name: msxsl:script Kullanan Betik Blokları
+          href: script-blocks-using-msxsl-script.md
+      - name: Kurtarılabilir XSLT Hataları
+        href: recoverable-xslt-errors.md
+      - name: 'Nasıl yapılır: Düğüm Parçasını Dönüştürme'
+        href: how-to-transform-a-node-fragment.md
+    - name: XslTransform Sınıfından Geçirme
+      href: migrating-from-the-xsltransform-class.md
+      items:
+      - name: 'Nasıl yapılır: XslTransform Kodunuzu Geçirme'
+        href: how-to-migrate-your-xsltransform-code.md
+    - name: XSLT Güvenlik Konuları
+      href: xslt-security-considerations.md
+    - name: XSLT Derleyicisi (xsltc.exe)
+      href: xslt-compiler-xsltc-exe.md
+      items:
+      - name: 'Nasıl yapılır: Derleme Kullanarak XSLT Dönüşümü Gerçekleştirme'
+        href: how-to-perform-an-xslt-transformation-by-using-an-assembly.md
+    - name: XslTransform Sınıfı ile XSLT Dönüşümleri
+      href: xslt-transformations-with-the-xsltransform-class.md
+      items:
+      - name: XslTransform Sınıfında İsteğe Bağlı Davranışların Uygulanması
+        href: implementation-of-discretionary-behaviors-in-the-xsltransform-class.md
+      - name: XslTransform Sınıfı XSLT İşlemcisini Uygular
+        href: xsltransform-class-implements-the-xslt-processor.md
+        items:
+        - name: XslTransform Çıkışları
+          href: outputs-from-an-xsltransform.md
+        - name: Farklı Mağazalarda XSLT Dönüşümleri
+          href: xslt-transformations-over-different-stores.md
+        - name: Dış XSLT Stil Sayfaları ile Belgelerini Çözümleme
+          href: resolving-external-xslt-style-sheets-and-documents.md
+        - name: Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList
+          href: xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md
+        - name: <msxsl:script> Kullanarak XSLT Stil Sayfası Betiğini Oluşturma
+          href: xslt-stylesheet-scripting-using-msxsl-script.md
+        - name: msxsl:node-set() İşlevi Desteği
+          href: support-for-the-msxsl-node-set-function.md
+        - name: Dönüşümlerdeki Düğüm Kümeleri
+          href: node-sets-in-transformations.md
+        - name: Dönüşümlerdeki Sonuç Ağacı Parçası
+          href: result-tree-fragment-in-transformations.md
+      - name: Dönüşümlerde XPathNavigator
+        href: xpathnavigator-in-transformations.md
+      - name: Dönüşümlerde XPathNodeIterator
+        href: xpathnodeiterator-in-transformations.md
+      - name: XslTransform’a XPathDocument Girişi
+        href: xpathdocument-input-to-xsltransform.md
+      - name: XslTransform’a XmlDataDocument Girişi
+        href: xmldatadocument-input-to-xsltransform.md
+      - name: XslTransform’a XmlDocument Girişi
+        href: xmldocument-input-to-xsltransform.md
+  - name: XML Şemalarıyla Çalışma
+    href: working-with-xml-schemas.md
+    items:
+    - name: XML Şema Nesne Modeli (SOM)
+      href: xml-schema-object-model-som.md
+      items:
+      - name: XML Şema Nesne Modeline (SOM) Genel Bakış
+        href: xml-schema-object-model-overview.md
+      - name: XML Şemaları Okuma ve Yazma
+        href: reading-and-writing-xml-schemas.md
+      - name: XML Şemaları Derleme
+        href: building-xml-schemas.md
+      - name: XML Şemalarını Çapraz Geçirme
+        href: traversing-xml-schemas.md
+      - name: XML Şemalarını Düzenleme
+        href: editing-xml-schemas.md
+      - name: XML Şemalarını Dahil Etme veya İçeri Aktarma
+        href: including-or-importing-xml-schemas.md
+    - name: Şema Derleme için XmlSchemaSet
+      href: xmlschemaset-for-schema-compilation.md
+      items:
+      - name: Şema Derleme Sonrası Bilgi Kümesi
+        href: post-schema-compilation-infoset.md
+      - name: XmlSchemaSet ile XML Şeması (XSD) Doğrulaması
+        href: xml-schema-xsd-validation-with-xmlschemaset.md
+      - name: XmlSchemaCollection Şema Derlemesi
+        href: xmlschemacollection-schema-compilation.md
+        items:
+        - name: XmlSchemaCollection ile XDR Doğrulaması
+          href: xdr-validation-with-xmlschemacollection.md
+        - name: XmlSchemaCollection ile XML Şeması (XSD) Doğrulaması
+          href: xml-schema-xsd-validation-with-xmlschemacollection.md
+    - name: XmlSchemaValidator Gönderim Temelli Doğrulaması
+      href: xmlschemavalidator-push-based-validation.md
+    - name: XML Şemasından Çıkarım Yapma
+      href: inferring-an-xml-schema.md
+      items:
+      - name: XML Belgelerinden Şema Çıkarımı Yapma
+        href: inferring-schemas-from-xml-documents.md
+      - name: Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları
+        href: rules-for-inferring-schema-node-types-and-structure.md
+      - name: Basit Türlerin Çıkarımını Yapma Kuralları
+        href: rules-for-inferring-simple-types.md
+  - name: İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
+    href: xml-integration-with-relational-data-and-adonet.md
+  - name: XML Belgesinde Ad Alanlarını Yönetme
+    href: managing-namespaces-in-an-xml-document.md
+  - name: System.Xml Sınıflarında Tür Desteği
+    href: type-support-in-the-system-xml-classes.md
+    items:
+    - name: XML Veri Türlerini CLR Türleriyle Eşleme
+      href: mapping-xml-data-types-to-clr-types.md
+    - name: XML Tür Desteği Uygulama Notları
+      href: xml-type-support-implementation-notes.md
+    - name: XML Veri Türlerini Dönüştürme
+      href: conversion-of-xml-data-types.md
+      items:
+      - name: .NET Framework Veri Türleri için Dizeleri Dönüştürme
+        href: converting-strings-to-dotnet-data-types.md
+      - name: .NET Framework Türlerini Dizelere Dönüştürme
+        href: converting-dotnet-types-to-strings.md
+ms.openlocfilehash: da588944eecde3fd6e05e765797648c3c48ff46d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471987"

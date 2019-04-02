@@ -1,0 +1,422 @@
+items:
+- name: Windows Forms Uygulamalarını Geliştirme
+  href: index.md
+  items:
+  - name: Windows Formlarında Grafikler ve Çizim
+    href: graphics-and-drawing-in-windows-forms.md
+    items:
+    - name: Grafiklere Genel Bakış
+      href: graphics-overview-windows-forms.md
+      items:
+      - name: Grafiklere Genel Bakış
+        href: overview-of-graphics.md
+      - name: Üç Grafik Hizmeti Kategorisi
+        href: three-categories-of-graphics-services.md
+      - name: Grafik Arabiriminin Yapısı
+        href: structure-of-the-graphics-interface.md
+    - name: GDI+ Yönetilen Kodu Hakkında
+      href: about-gdi-managed-code.md
+      items:
+      - name: Çizgiler, Eğriler ve Şekiller
+        href: lines-curves-and-shapes.md
+        items:
+        - name: Vektör Grafiklerine Genel Bakış
+          href: vector-graphics-overview.md
+        - name: GDI+'da Kalemler, Çizgiler ve Dikdörtgenler
+          href: pens-lines-and-rectangles-in-gdi.md
+        - name: GDI+'da Elipsler ve Yaylar
+          href: ellipses-and-arcs-in-gdi.md
+        - name: GDI+'daki Çokgenler
+          href: polygons-in-gdi.md
+        - name: GDI+'daki Ana Eğri Cetvelleri
+          href: cardinal-splines-in-gdi.md
+        - name: GDI+ içinde Bézier Eğrileri
+          href: bezier-splines-in-gdi.md
+        - name: GDI+'da Grafik Yolları
+          href: graphics-paths-in-gdi.md
+        - name: GDI+'da Fırçalar ve Dolgulu Şekiller
+          href: brushes-and-filled-shapes-in-gdi.md
+        - name: GDI+'da Açık ve Kapalı Eğriler
+          href: open-and-closed-curves-in-gdi.md
+        - name: GDI+'daki Bölgeler
+          href: regions-in-gdi.md
+        - name: GDI+'da Çizim Yüzeyini Sınırlandırma
+          href: restricting-the-drawing-surface-in-gdi.md
+        - name: 'Nasıl yapılır: Çizgiler ve Eğrilerle Düzgünleştirme'
+          href: antialiasing-with-lines-and-curves.md
+      - name: Resimler, Bit Eşlemler ve Meta Dosyaları
+        href: images-bitmaps-and-metafiles.md
+        items:
+        - name: Bit Eşlem Türleri
+          href: types-of-bitmaps.md
+        - name: GDI+'da Meta Dosyaları
+          href: metafiles-in-gdi.md
+        - name: GDI+'da Görüntü Çizme, Konumlandırma ve Kopyalama
+          href: drawing-positioning-and-cloning-images-in-gdi.md
+        - name: GDI+'da Görüntü Kırpma ve Ölçeklendirme
+          href: cropping-and-scaling-images-in-gdi.md
+      - name: Koordinat Sistemleri ve Dönüştürmeler
+        href: coordinate-systems-and-transformations.md
+        items:
+        - name: Koordinat Sistemi Türleri
+          href: types-of-coordinate-systems.md
+        - name: Dönüşümlerin Matrisle Temsili
+          href: matrix-representation-of-transformations.md
+        - name: Genel ve Yerel Dönüştürmeler
+          href: global-and-local-transformations.md
+    - name: Yönetilen Grafik Sınıflarını Kullanma
+      href: using-managed-graphics-classes.md
+      items:
+      - name: Grafik Programlamaya Başlarken
+        href: getting-started-with-graphics-programming.md
+        items:
+        - name: 'Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma'
+          href: how-to-create-graphics-objects-for-drawing.md
+        - name: 'Nasıl yapılır: Kalem Oluşturma'
+          href: how-to-create-a-pen.md
+        - name: 'Nasıl yapılır: Bir Kalemin Rengini Ayarlama'
+          href: how-to-set-the-color-of-a-pen.md
+        - name: 'Nasıl yapılır: Düz Fırça Oluşturma'
+          href: how-to-create-a-solid-brush.md
+        - name: 'Nasıl yapılır: Windows Formunda Çizgi Çizme'
+          href: how-to-draw-a-line-on-a-windows-form.md
+        - name: 'Nasıl yapılır: Anahatlı Şekil Çizme'
+          href: how-to-draw-an-outlined-shape.md
+        - name: 'Nasıl yapılır: Bir Windows Formunda Doldurulmuş Dikdörtgen Çizme'
+          href: how-to-draw-a-filled-rectangle-on-a-windows-form.md
+        - name: 'Nasıl yapılır: Bir Windows Formunda Doldurulmuş Elips Çizme'
+          href: how-to-draw-a-filled-ellipse-on-a-windows-form.md
+        - name: 'Nasıl yapılır: Bir Windows Formunda Metin Çizme'
+          href: how-to-draw-text-on-a-windows-form.md
+        - name: 'Nasıl yapılır: Bir Windows Formunda Dikey Metin Çizme'
+          href: how-to-draw-vertical-text-on-a-windows-form.md
+        - name: 'Nasıl yapılır: GDI+ ile Resim İşleme'
+          href: how-to-render-images-with-gdi.md
+        - name: 'Nasıl yapılır: Şekilli Windows Formu Oluşturma'
+          href: how-to-create-a-shaped-windows-form.md
+        - name: 'Nasıl yapılır: Windows Forms’da Titreşimi Azaltmak için Piksel Kopyalama'
+          href: how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md
+      - name: Çizgiler ve Şekiller Çizmek için Kalem Kullanma
+        href: using-a-pen-to-draw-lines-and-shapes.md
+        items:
+        - name: 'Nasıl yapılır: Çizgi Çizmek için Kalem Kullanma'
+          href: how-to-use-a-pen-to-draw-lines.md
+        - name: 'Nasıl yapılır: Dikdörtgen Çizmek için Kalem Kullanma'
+          href: how-to-use-a-pen-to-draw-rectangles.md
+        - name: 'Nasıl yapılır: Kalem Genişliği ve Hizalamasını Ayarlama'
+          href: how-to-set-pen-width-and-alignment.md
+        - name: 'Nasıl yapılır: Çizgi Uçlarıyla Çizgi Çizme'
+          href: how-to-draw-a-line-with-line-caps.md
+        - name: 'Nasıl yapılır: Satırları Birleştirme'
+          href: how-to-join-lines.md
+        - name: 'Nasıl yapılır: Özel Kesikli Çizgi Çizme'
+          href: how-to-draw-a-custom-dashed-line.md
+        - name: 'Nasıl yapılır: Bir Dokuyla Doldurulmuş Çizgi Çizme'
+          href: how-to-draw-a-line-filled-with-a-texture.md
+      - name: Şekilleri Doldurmak için Fırça Kullanma
+        href: using-a-brush-to-fill-shapes.md
+        items:
+        - name: 'Nasıl yapılır: Bir Şekli Düz Renk ile Doldurma'
+          href: how-to-fill-a-shape-with-a-solid-color.md
+        - name: 'Nasıl yapılır: Bir Şekli Tarama Deseniyle Doldurma'
+          href: how-to-fill-a-shape-with-a-hatch-pattern.md
+        - name: 'Nasıl yapılır: Bir Şekli Resim Dokusuyla Doldurma'
+          href: how-to-fill-a-shape-with-an-image-texture.md
+        - name: 'Nasıl yapılır: Bir Şekli Bir Resimle Döşeme'
+          href: how-to-tile-a-shape-with-an-image.md
+      - name: Şekilleri Doldurmak için Gradyan Fırçası Kullanma
+        href: using-a-gradient-brush-to-fill-shapes.md
+        items:
+        - name: 'Nasıl yapılır: Doğrusal Gradyan Oluşturma'
+          href: how-to-create-a-linear-gradient.md
+        - name: 'Nasıl yapılır: Yol Gradyanı Oluşturma'
+          href: how-to-create-a-path-gradient.md
+        - name: 'Nasıl yapılır: Bir Gradyana Gama Düzeltmesi Uygulama'
+          href: how-to-apply-gamma-correction-to-a-gradient.md
+      - name: Resimler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma
+        href: working-with-images-bitmaps-icons-and-metafiles.md
+        items:
+        - name: 'Nasıl yapılır: Ekrana Mevcut bir Bit Eşlemi Çizme'
+          href: how-to-draw-an-existing-bitmap-to-the-screen.md
+        - name: 'Nasıl yapılır: Meta Dosyalarını Yükleme ve Görüntüleme'
+          href: how-to-load-and-display-metafiles.md
+        - name: 'Nasıl yapılır: Görüntü Kırpma ve Ölçeklendirme'
+          href: how-to-crop-and-scale-images.md
+        - name: 'Nasıl yapılır: Görüntüleri Döndürme, Yansıtma ve Eğme'
+          href: how-to-rotate-reflect-and-skew-images.md
+        - name: 'Nasıl yapılır: Ölçeklendirme Sırasında Görüntü Kalitesini Denetlemek için İlişkilendirme Modunu Kullanma'
+          href: how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md
+        - name: 'Nasıl yapılır: Küçük Resimler Oluşturma'
+          href: how-to-create-thumbnail-images.md
+        - name: 'Nasıl yapılır: Otomatik Ölçeklendirmeyi Önleyerek Performansı Artırma'
+          href: how-to-improve-performance-by-avoiding-automatic-scaling.md
+        - name: 'Nasıl yapılır: Görüntü Meta Verilerini Okuma'
+          href: how-to-read-image-metadata.md
+        - name: 'Nasıl yapılır: Çalışma Zamanında Bit Eşlem Oluşturma'
+          href: how-to-create-a-bitmap-at-run-time.md
+        - name: 'Nasıl yapılır: Windows Forms’da Bir Dosyayla İlişkili Simgeyi Çıkarma'
+          href: how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md
+      - name: Çizgi ve Dolgularda Alfa Karışım Kullanma
+        href: alpha-blending-lines-and-fills.md
+        items:
+        - name: 'Nasıl yapılır: Donuk ve Yarı Saydam Çizgiler Çizme'
+          href: how-to-draw-opaque-and-semitransparent-lines.md
+        - name: 'Nasıl yapılır: Donuk ve Yarı Saydam Fırçalarla Çizme'
+          href: how-to-draw-with-opaque-and-semitransparent-brushes.md
+        - name: 'Nasıl yapılır: Alfa Karışım Kullanmayı Denetlemek için Birleştirme Modunu Kullanma'
+          href: how-to-use-compositing-mode-to-control-alpha-blending.md
+        - name: 'Nasıl yapılır: Görüntülerdeki Alfa Değerleri Ayarlamak için Renk Matrisi Kullanma'
+          href: how-to-use-a-color-matrix-to-set-alpha-values-in-images.md
+      - name: Yazı Tipleri ve Metin Kullanma
+        href: using-fonts-and-text.md
+        items:
+        - name: 'Nasıl yapılır: Yazı Tipi Aileleri ve Yazı Tipleri Oluşturma'
+          href: how-to-construct-font-families-and-fonts.md
+        - name: 'Nasıl yapılır: Belirtilen bir Konuma Metin Çizme'
+          href: how-to-draw-text-at-a-specified-location.md
+        - name: 'Nasıl yapılır: Dikdörtgende Sarmalanmış Metin'
+          href: how-to-draw-wrapped-text-in-a-rectangle.md
+        - name: 'Nasıl yapılır: GDI ile Metin Çizme'
+          href: how-to-draw-text-with-gdi.md
+        - name: 'Nasıl yapılır: Çizilmiş Metni Hizalama'
+          href: how-to-align-drawn-text.md
+        - name: 'Nasıl yapılır: Dikey Metin Oluşturma'
+          href: how-to-create-vertical-text.md
+        - name: 'Nasıl yapılır: Çizilmiş Metinde Sekme Durakları Ayarlama'
+          href: how-to-set-tab-stops-in-drawn-text.md
+        - name: 'Nasıl yapılır: Yüklü Yazı Tiplerini Numaralandırma'
+          href: how-to-enumerate-installed-fonts.md
+        - name: 'Nasıl yapılır: Özel Yazı Tipi Koleksiyonu Oluşturma'
+          href: how-to-create-a-private-font-collection.md
+        - name: 'Nasıl yapılır: Yazı Tipi Ölçümleri Alma'
+          href: how-to-obtain-font-metrics.md
+        - name: 'Nasıl yapılır: Metinle Düzgünleştirme Kullanma'
+          href: how-to-use-antialiasing-with-text.md
+      - name: Eğriler Oluşturma ve Çizme
+        href: constructing-and-drawing-curves.md
+        items:
+        - name: 'Nasıl yapılır: Ana Eğriler Çizme'
+          href: how-to-draw-cardinal-splines.md
+        - name: 'Nasıl yapılır: Tek Bir Bézier Eğrisi Çizme'
+          href: how-to-draw-a-single-bezier-spline.md
+        - name: 'Nasıl yapılır: Bir Sıra Bézier Eğrisi Çizme'
+          href: how-to-draw-a-sequence-of-bezier-splines.md
+      - name: Yollar Oluşturma ve Çizme
+        href: constructing-and-drawing-paths.md
+        items:
+        - name: 'Nasıl yapılır: Çizgiler, Eğriler ve Şekillerden Şekiller Oluşturma'
+          href: how-to-create-figures-from-lines-curves-and-shapes.md
+        - name: 'Nasıl yapılır: Açık Şekilleri Doldurma'
+          href: how-to-fill-open-figures.md
+        - name: 'Nasıl yapılır: Eğik bir Yolu Düzleştirerek Çizgiye Dönüştürme'
+          href: how-to-flatten-a-curved-path-into-a-line.md
+      - name: Yönetilen GDI+'da Dönüştürmeleri Kullanma
+        href: using-transformations-in-managed-gdi.md
+        items:
+        - name: Gerçek Koordinat Dönüştürmesini Kullanma
+          href: using-the-world-transformation.md
+        - name: Dönüştürme Sırası Neden Önemlidir
+          href: why-transformation-order-is-significant.md
+      - name: Grafik Kapsayıcıları Kullanma
+        href: using-graphics-containers.md
+        items:
+        - name: Bir Grafik Nesnesinin Durumunu Yönetme
+          href: managing-the-state-of-a-graphics-object.md
+        - name: İç İçe Grafik Kapsayıcılarını Kullanma
+          href: using-nested-graphics-containers.md
+      - name: Bölgeleri Kullanma
+        href: using-regions.md
+        items:
+        - name: 'Nasıl yapılır: Bir Bölgeyle Vuruş Sınaması Kullanma'
+          href: how-to-use-hit-testing-with-a-region.md
+        - name: 'Nasıl yapılır: Bir Bölgeyle Kırpma Kullanma'
+          href: how-to-use-clipping-with-a-region.md
+      - name: Resimleri Yeniden Renklendirme
+        href: recoloring-images.md
+        items:
+        - name: 'Nasıl yapılır: Tek Bir Rengi Dönüştürmek için Renk Matrisi Kullanma'
+          href: how-to-use-a-color-matrix-to-transform-a-single-color.md
+        - name: 'Nasıl yapılır: Görüntü Renklerini Çevirme'
+          href: how-to-translate-image-colors.md
+        - name: Renkleri Ölçeklendirmek için Dönüştürmeleri Kullanma
+          href: using-transformations-to-scale-colors.md
+        - name: 'Nasıl yapılır: Renkleri Döndürme'
+          href: how-to-rotate-colors.md
+        - name: 'Nasıl yapılır: Renkleri Bükme'
+          href: how-to-shear-colors.md
+        - name: 'Nasıl yapılır: Yeniden Renk Eşleme Tablosu Kullanma'
+          href: how-to-use-a-color-remap-table.md
+      - name: Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma
+        href: using-image-encoders-and-decoders-in-managed-gdi.md
+        items:
+        - name: 'Nasıl yapılır: Yüklenen Kodlayıcıları Listeleme'
+          href: how-to-list-installed-encoders.md
+        - name: 'Nasıl yapılır: Yüklenen Kod Çözücüleri Listeleme'
+          href: how-to-list-installed-decoders.md
+        - name: 'Nasıl yapılır: Bir Kodlayıcı Tarafından Desteklenen Parametreleri Belirleme'
+          href: how-to-determine-the-parameters-supported-by-an-encoder.md
+        - name: 'Nasıl yapılır: BMP Resmini PNG Resmine Dönüştürme'
+          href: how-to-convert-a-bmp-image-to-a-png-image.md
+        - name: 'Nasıl yapılır: JPEG Sıkıştırma Düzeyini Ayarlama'
+          href: how-to-set-jpeg-compression-level.md
+      - name: İki Kez Arabelleğe Almayı Kullanma
+        href: using-double-buffering.md
+        items:
+        - name: İki Kez Arabelleğe Alınan Grafikler
+          href: double-buffered-graphics.md
+        - name: 'Nasıl yapılır: Formlar ve Denetimler için İki Kez Arabelleğe Alma ile Grafik Titreşimini Azaltma'
+          href: how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md
+        - name: 'Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle Yönetme'
+          href: how-to-manually-manage-buffered-graphics.md
+        - name: 'Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle İşleme'
+          href: how-to-manually-render-buffered-graphics.md
+  - name: Windows Forms için Uygulama Ayarları
+    href: application-settings-for-windows-forms.md
+    items:
+    - name: Uygulama Ayarlarına Genel Bakış
+      href: application-settings-overview.md
+    - name: Uygulama Ayarları Mimarisi
+      href: application-settings-architecture.md
+    - name: Uygulama Ayarları Öznitelikleri
+      href: application-settings-attributes.md
+    - name: Özel Denetimler için Uygulama Ayarları
+      href: application-settings-for-custom-controls.md
+    - name: Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma
+      href: using-application-settings-and-user-settings.md
+      items:
+      - name: 'Nasıl yapılır: Tasarım Zamanında Yeni Ayar Oluşturma'
+        href: how-to-create-a-new-setting-at-design-time.md
+      - name: 'Nasıl yapılır: Tasarım Zamanında Mevcut Bir Ayarın Değerini Değiştirme'
+        href: how-to-change-the-value-of-an-existing-setting-at-design-time.md
+      - name: 'Nasıl yapılır: Uygulama Oturumları Arasında Bir Ayarın Değerini Değiştirme'
+        href: how-to-change-the-value-of-a-setting-between-application-sessions.md
+      - name: 'Nasıl yapılır: Çalışma Zamanında C# ile Ayarları Okuma'
+        href: how-to-read-settings-at-run-time-with-csharp.md
+      - name: 'Nasıl yapılır: Çalışma Zamanında C# ile Kullanıcı Ayarlarını Yazma'
+        href: how-to-write-user-settings-at-run-time-with-csharp.md
+      - name: "Nasıl yapılır: Uygulamanıza C#'de Birden Çok Ayar Kümesi Ekleme"
+        href: how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md
+    - name: 'Nasıl yapılır: Uygulama Ayarları Oluşturma'
+      href: how-to-create-application-settings.md
+    - name: 'Nasıl yapılır: Uygulama Ayarlarını Doğrulama'
+      href: how-to-validate-application-settings.md
+  - name: Windows Forms Yazdırma Desteği
+    href: windows-forms-print-support.md
+    items:
+    - name: 'Nasıl yapılır: Standart Windows Forms Yazdırma İşleri Oluşturma'
+      href: how-to-create-standard-windows-forms-print-jobs.md
+    - name: "Nasıl yapılır: Bir PrintDialog'dan Çalışma Zamanında Kullanıcı Girdisi Yakalama"
+      href: how-to-capture-user-input-from-a-printdialog-at-run-time.md
+    - name: "Nasıl yapılır: Windows Forms'da Bir Kullanıcının Bilgisayarına Bağlanan Yazıcıları Seçme"
+      href: how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md
+    - name: "Nasıl yapılır: Windows Forms'da Grafik Yazdırma"
+      href: how-to-print-graphics-in-windows-forms.md
+    - name: "Nasıl yapılır: Windows Forms'da Çok Sayfalı Metin Dosyası Yazdırma"
+      href: how-to-print-a-multi-page-text-file-in-windows-forms.md
+    - name: 'Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama'
+      href: how-to-complete-windows-forms-print-jobs.md
+    - name: 'Nasıl yapılır: Bir Windows Formunu Yazdırma'
+      href: how-to-print-a-windows-form.md
+    - name: "Nasıl yapılır: Windows Forms'da Baskı Önizlemeyi Kullanarak Yazdırma"
+      href: how-to-print-in-windows-forms-using-print-preview.md
+  - name: Sürükle ve Bırak İşlemleri ve Pano Desteği
+    href: drag-and-drop-operations-and-clipboard-support.md
+    items:
+    - name: "İzlenecek yol: Windows Forms'da Sürükle ve Bırak İşlemi Gerçekleştirme"
+      href: walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md
+    - name: 'Nasıl yapılır: Uygulamalar Arasında Sürükle ve Bırak İşlemleri Gerçekleştirme'
+      href: how-to-perform-drag-and-drop-operations-between-applications.md
+    - name: 'Nasıl yapılır: Panoya Veri Ekleme'
+      href: how-to-add-data-to-the-clipboard.md
+    - name: 'Nasıl yapılır: Panodan Veri Alma'
+      href: how-to-retrieve-data-from-the-clipboard.md
+  - name: Windows Forms Uygulamalarında Ağ İletişimi
+    href: networking-in-windows-forms-applications.md
+  - name: Windows Forms’u Genelleştirme
+    href: globalizing-windows-forms.md
+    items:
+    - name: Kodlama ve Windows Forms Genelleştirme
+      href: encoding-and-windows-forms-globalization.md
+    - name: Windows Forms ve Denetimlerindeki Uluslararası Yazı Tipleri
+      href: international-fonts-in-windows-forms-and-controls.md
+    - name: Windows Forms Uygulamalarında İki Yönlü Destek
+      href: bi-directional-support-for-windows-forms-applications.md
+    - name: ImeMode Özelliğiyle Asya Karakterlerinin Görüntülenmesi
+      href: display-of-asian-characters-with-the-imemode-property.md
+  - name: Windows Forms ve Yönetilmeyen Uygulamalar
+    href: windows-forms-and-unmanaged-applications.md
+    items:
+    - name: Windows Forms ve Yönetilmeyen Uygulamalara Genel Bakış
+      href: windows-forms-and-unmanaged-applications-overview.md
+    - name: 'Nasıl yapılır: Her Windows Formunu Kendi İş Parçacığında Görüntüleyerek COM Birlikte Çalışmasını Destekleme'
+      href: how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md
+    - name: 'Nasıl yapılır: ShowDialog Yöntemi ile bir Windows Formunu Görüntüleyerek COM Birlikte Çalışmasını Destekleme'
+      href: com-interop-by-displaying-a-windows-form-shadow.md
+  - name: Sistem Bilgileri ve Windows Forms
+    href: system-information-and-windows-forms.md
+  - name: Windows Forms'ta Güç Yönetimi
+    href: power-management-in-windows-forms.md
+  - name: Windows Forms Uygulamalarındaki Yardım Sistemleri
+    href: help-systems-in-windows-forms-applications.md
+  - name: Windows Forms Görsel Devralma
+    href: windows-forms-visual-inheritance.md
+    items:
+    - name: 'Nasıl yapılır: Windows Formlarını Devralma'
+      href: how-to-inherit-windows-forms.md
+    - name: 'Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma'
+      href: how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md
+    - name: Taban Formun Görünüşünü Değiştirmenin Etkileri
+      href: effects-of-modifying-base-form-appearance.md
+    - name: 'İzlenecek yol: Görsel Devralmayı Gösterme'
+      href: walkthrough-demonstrating-visual-inheritance.md
+    - name: 'Nasıl yapılır: Değiştiricileri ve GenerateMember Özelliklerini Kullanma'
+      href: how-to-use-the-modifiers-and-generatemember-properties.md
+  - name: Çoklu Belge Arabirimi (MDI) Uygulamaları
+    href: multiple-document-interface-mdi-applications.md
+    items:
+    - name: 'Nasıl yapılır: MDI Üst Formları Oluşturma'
+      href: how-to-create-mdi-parent-forms.md
+    - name: 'Nasıl yapılır: MDI Alt Formları Oluşturma'
+      href: how-to-create-mdi-child-forms.md
+    - name: 'Nasıl yapılır: Etkin MDI Alt Öğesini Belirleme'
+      href: how-to-determine-the-active-mdi-child.md
+    - name: 'Nasıl yapılır: Etkin MDI Alt Öğesine Veri Gönderme'
+      href: how-to-send-data-to-the-active-mdi-child.md
+    - name: 'Nasıl yapılır: MDI Alt Formlarını Düzenleme'
+      href: how-to-arrange-mdi-child-forms.md
+  - name: Windows Forms'ta Kullanıcı Yardımını Tümleştirme
+    href: integrating-user-help-in-windows-forms.md
+    items:
+    - name: 'Nasıl yapılır: Bir Windows Uygulamasında Yardım Sağlama'
+      href: how-to-provide-help-in-a-windows-application.md
+    - name: 'Nasıl yapılır: Açılır Yardımı Görüntüleme'
+      href: how-to-display-pop-up-help.md
+    - name: ToolTips Kullanarak Denetim Yardımı
+      href: control-help-using-tooltips.md
+  - name: Windows Forms Erişilebilirliği
+    href: windows-forms-accessibility.md
+    items:
+    - name: 'İzlenecek yol: Erişilebilir bir Windows Tabanlı Uygulama Oluşturma'
+      href: walkthrough-creating-an-accessible-windows-based-application.md
+      items:
+      - name: Windows Forms Denetimlerinde Erişilebilirlik Yönergelerini Destekleyen Özellikler
+        href: properties-on-windows-forms-controls-that-support-accessibility-guidelines.md
+  - name: WPF Denetimlerini Kullanma
+    href: using-wpf-controls.md
+    items:
+    - name: 'Nasıl yapılır: Tasarım Zamanında bir ElementHost Denetimini Kopyalayıp Yapıştırma'
+      href: how-to-copy-and-paste-an-elementhost-control-at-design-time.md
+    - name: "İzlenecek yol: Windows Forms'da Tasarım Zamanında WPF İçeriğini Düzenleme"
+      href: walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md
+    - name: "İzlenecek yol: Windows Forms'da Tasarım Zamanında Yeni WPF İçeriği Oluşturma"
+      href: walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md
+    - name: "İzlenecek yol: Windows Forms'da Tasarım Zamanında WPF İçeriği Atama"
+      href: walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md
+    - name: 'İzlenecek yol: WPF İçeriği için Stil Oluşturma'
+      href: walkthrough-styling-wpf-content.md
+ms.openlocfilehash: 59e8cc574aa2fd90e3c79385865aacd75c63fa08
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471959"

@@ -1,0 +1,349 @@
+items:
+- name: ADO.NET
+  href: index.md
+- name: ADO.NET’teki Yenilikler
+  href: whats-new.md
+- name: ADO.NET’e Genel Bakış
+  href: ado-net-overview.md
+  items:
+  - name: ADO.NET Mimarisi
+    href: ado-net-architecture.md
+  - name: ADO.NET Teknoloji Seçenekleri ve Yönergeleri
+    href: ado-net-technology-options-and-guidelines.md
+  - name: LINQ ve ADO.NET
+    href: linq-and-ado-net.md
+  - name: .NET Framework Veri Sağlayıcıları
+    href: data-providers.md
+  - name: ADO.NET Veri Kümeleri
+    href: ado-net-datasets.md
+  - name: ADO.NET’te Yan Yana Yürütme
+    href: side-by-side-execution.md
+  - name: ADO.NET Kod Örnekleri
+    href: ado-net-code-examples.md
+- name: ADO.NET Uygulamalarının Güvenliğini Sağlama
+  href: securing-ado-net-applications.md
+  items:
+  - name: Güvenlik Genel Bakış
+    href: security-overview.md
+  - name: Güvenli Veri Erişimi
+    href: secure-data-access.md
+  - name: Güvenli İstemci Uygulamaları
+    href: secure-client-applications.md
+  - name: Kod Erişimi Güvenliği ve ADO.NET
+    href: code-access-security.md
+  - name: Gizlilik ve Veri Güvenliği
+    href: privacy-and-data-security.md
+- name: ADO.NET’te Veri Türü Eşlemeleri
+  href: data-type-mappings-in-ado-net.md
+  items:
+  - name: SQL Server Veri Türü Eşlemeleri
+    href: sql-server-data-type-mappings.md
+  - name: OLE DB Veri Türü Eşlemeleri
+    href: ole-db-data-type-mappings.md
+  - name: ODBC Veri Türü Eşlemeleri
+    href: odbc-data-type-mappings.md
+  - name: Oracle Veri Türü Eşlemeleri
+    href: oracle-data-type-mappings.md
+  - name: Kayan Noktalı Sayılar
+    href: floating-point-numbers.md
+- name: ADO.NET’te Veri Alma ve Değiştirme
+  href: retrieving-and-modifying-data.md
+  items:
+  - name: Veri Kaynağına Bağlanma
+    href: connecting-to-a-data-source.md
+    items:
+    - name: Bağlantı Kurma
+      href: establishing-the-connection.md
+    - name: Bağlantı Olayları
+      href: connection-events.md
+  - name: Bağlantı Dizeleri
+    href: connection-strings.md
+    items:
+    - name: Bağlantı Dizesi Oluşturucular
+      href: connection-string-builders.md
+    - name: Bağlantı Dizeleri ve Yapılandırma Dosyaları
+      href: connection-strings-and-configuration-files.md
+    - name: Bağlantı Dizesi Söz Dizimi
+      href: connection-string-syntax.md
+    - name: Bağlantı Bilgilerini Koruma
+      href: protecting-connection-information.md
+  - name: Bağlantı Havuzu
+    href: connection-pooling.md
+    items:
+    - name: SQL Server Bağlantı Havuzu (ADO.NET)
+      href: sql-server-connection-pooling.md
+    - name: OLE DB, ODBC ve Oracle Bağlantı Havuzu
+      href: ole-db-odbc-and-oracle-connection-pooling.md
+  - name: Komutlar ve Parametreler
+    href: commands-and-parameters.md
+    items:
+    - name: Komut Yürütme
+      href: executing-a-command.md
+    - name: Parametreleri ve Parametre Veri Türlerini Yapılandırma
+      href: configuring-parameters-and-parameter-data-types.md
+    - name: CommandBuilders ile Komut Oluşturma
+      href: generating-commands-with-commandbuilders.md
+    - name: Veritabanından Tek Değer Alma
+      href: obtaining-a-single-value-from-a-database.md
+    - name: Verileri Değiştirmek için Komutları Kullanma
+      href: using-commands-to-modify-data.md
+      items:
+      - name: Bir Veri Kaynağındaki Verileri Güncelleştirme
+        href: updating-data-in-a-data-source.md
+      - name: Katalog İşlemleri Gerçekleştirme
+        href: performing-catalog-operations.md
+  - name: DataAdapters ve DataReaders
+    href: dataadapters-and-datareaders.md
+    items:
+    - name: DataReader Kullanarak Veri Alma
+      href: retrieving-data-using-a-datareader.md
+    - name: DataAdapter’dan bir DataSet Doldurma
+      href: populating-a-dataset-from-a-dataadapter.md
+    - name: DataAdapter Parametreleri
+      href: dataadapter-parameters.md
+    - name: DataSet’e Var Olan Kısıtlamaları Ekleme
+      href: adding-existing-constraints-to-a-dataset.md
+    - name: DataAdapter DataTable ve DataColumn Eşlemeleri
+      href: dataadapter-datatable-and-datacolumn-mappings.md
+    - name: Sorgu Sonucunu Sayfalama
+      href: paging-through-a-query-result.md
+    - name: Veri Kaynaklarını DataAdapters ile Güncelleştirme
+      href: updating-data-sources-with-dataadapters.md
+    - name: DataAdapter Olaylarını İşleme
+      href: handling-dataadapter-events.md
+    - name: DataAdapters Kullanarak Toplu İşlemleri Gerçekleştirme
+      href: performing-batch-operations-using-dataadapters.md
+  - name: İşlemler ve Eşzamanlılık
+    href: transactions-and-concurrency.md
+    items:
+    - name: Yerel İşlemler
+      href: local-transactions.md
+    - name: Dağıtılmış İşlemler
+      href: distributed-transactions.md
+    - name: SQL Server ile System.Transactions Tümleştirmesi
+      href: system-transactions-integration-with-sql-server.md
+    - name: İyimser Eşzamanlılık
+      href: optimistic-concurrency.md
+  - name: Kimliği veya Otomatik Sayı Değerlerini Alma
+    href: retrieving-identity-or-autonumber-values.md
+  - name: İkili Verileri Alma
+    href: retrieving-binary-data.md
+  - name: Saklı Yordamlarla Verileri Değiştirme
+    href: modifying-data-with-stored-procedures.md
+  - name: Veritabanı Şema Bilgilerini Alma
+    href: retrieving-database-schema-information.md
+    items:
+    - name: GetSchema ve Şema Koleksiyonları
+      href: getschema-and-schema-collections.md
+    - name: Şema Kısıtlamaları
+      href: schema-restrictions.md
+    - name: Ortak Şema Koleksiyonları
+      href: common-schema-collections.md
+    - name: SQL Server Şema Koleksiyonları
+      href: sql-server-schema-collections.md
+    - name: Oracle Şema Koleksiyonları
+      href: oracle-schema-collections.md
+    - name: ODBC Şema Koleksiyonları
+      href: odbc-schema-collections.md
+    - name: OLE DB Şema Koleksiyonları
+      href: ole-db-schema-collections.md
+  - name: DbProviderFactories
+    href: dbproviderfactories.md
+    items:
+    - name: Fabrika Modeline Genel Bakış
+      href: factory-model-overview.md
+    - name: DbProviderFactory Alma
+      href: obtaining-a-dbproviderfactory.md
+    - name: DbConnection, DbCommand ve DbException
+      href: dbconnection-dbcommand-and-dbexception.md
+    - name: DbDataAdapter ile Verileri Değiştirme
+      href: modifying-data-with-a-dbdataadapter.md
+  - name: ADO.NET’te Veri İzleme
+    href: data-tracing.md
+  - name: Performans Sayaçları
+    href: performance-counters.md
+  - name: Zaman Uyumsuz Programlama
+    href: asynchronous-programming.md
+  - name: SqlClient Akış Desteği
+    href: sqlclient-streaming-support.md
+  - name: LINQ - DataSet
+    href: linq-to-dataset.md
+    items:
+    - name: Başlarken
+      href: getting-started-linq-to-dataset.md
+      items:
+      - name: LINQ to DataSet Genel Bakış
+        href: linq-to-dataset-overview.md
+      - name: DataSet’e Veri Yükleme
+        href: loading-data-into-a-dataset.md
+      - name: Örnek Veritabanları İndirme
+        href: downloading-sample-databases-linq-to-dataset.md
+      - name: "Nasıl yapılır: Visual Studio'da bir LINQ to DataSet Projesi Oluşturma"
+        href: how-to-create-a-linq-to-dataset-project-in-vs.md
+    - name: Programlama Kılavuzu
+      href: programming-guide-linq-to-dataset.md
+      items:
+      - name: LINQ to DataSet Sorguları
+        href: queries-in-linq-to-dataset.md
+      - name: DataSet’leri Sorgulama
+        href: querying-datasets-linq-to-dataset.md
+        items:
+        - name: Tek Tablolu Sorgular
+          href: single-table-queries-linq-to-dataset.md
+        - name: Tablolar Arası Sorgular
+          href: cross-table-queries-linq-to-dataset.md
+        - name: Türü Belirtilmiş DataSet’leri Sorgulama
+          href: querying-typed-datasets.md
+      - name: DataRow Karşılaştırma
+        href: comparing-datarows-linq-to-dataset.md
+      - name: Sorgudan DataTable Oluşturma
+        href: creating-a-datatable-from-a-query-linq-to-dataset.md
+      - name: 'Nasıl yapılır: T Genel Türünün DataRow Olmadığı<T> CopyToDataTable İşlemini Uygulama'
+        href: implement-copytodatatable-where-type-not-a-datarow.md
+      - name: Genel Alan ve SetField Yöntemleri
+        href: generic-field-and-setfield-methods-linq-to-dataset.md
+      - name: Veri Bağlama ve LINQ to DataSet
+        href: data-binding-and-linq-to-dataset.md
+        items:
+        - name: DataView Nesnesi Oluşturma
+          href: creating-a-dataview-object-linq-to-dataset.md
+        - name: DataView ile Filtreleme
+          href: filtering-with-dataview-linq-to-dataset.md
+        - name: DataView ile Sıralama
+          href: sorting-with-dataview-linq-to-dataset.md
+        - name: DataView’da DataRowView Koleksiyonunu Sorgulama
+          href: querying-the-datarowview-collection-in-a-dataview.md
+        - name: DataView Performansı
+          href: dataview-performance.md
+        - name: 'Nasıl yapılır: Windows Forms DataGridView Denetimine DataView Nesnesi Bağlama'
+          href: how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md
+      - name: LINQ to DataSet Sorgularında Hata Ayıklama
+        href: debugging-linq-to-dataset-queries.md
+      - name: Güvenlik
+        href: security-linq-to-dataset.md
+      - name: LINQ to DataSet Örnekleri
+        href: linq-to-dataset-examples.md
+        items:
+        - name: Sorgu İfadesi Örnekleri
+          href: query-expression-examples-linq-to-dataset.md
+          items:
+          - name: Projeksiyon
+            href: query-expression-syntax-examples-projection-linq-to-dataset.md
+          - name: Kısıtlama
+            href: query-expression-syntax-examples-restriction-linq-to-dataset.md
+          - name: Bölümlendirme
+            href: query-expression-syntax-examples-partitioning.md
+          - name: Sıralama
+            href: query-expression-syntax-examples-ordering-linq-to-dataset.md
+          - name: Öğe İşleçleri
+            href: query-expression-syntax-examples-element-operators.md
+          - name: Toplama İşleçleri
+            href: query-expression-syntax-examples-aggregate-operators.md
+          - name: Birleşim İşleçleri
+            href: query-expression-syntax-examples-join-operators.md
+        - name: Yöntem Tabanlı Sorgu Örnekleri
+          href: method-based-query-examples-linq-to-dataset.md
+          items:
+          - name: Projeksiyon
+            href: method-based-query-syntax-examples-projection.md
+          - name: Bölümlendirme
+            href: method-based-query-syntax-examples-partitioning-linq.md
+          - name: Sıralama
+            href: method-based-query-syntax-examples-ordering-linq-to-dataset.md
+          - name: Ayarlama İşleçleri
+            href: method-based-query-syntax-examples-set-operators.md
+          - name: Dönüşüm İşleçleri
+            href: method-based-query-syntax-examples-conversion-operators.md
+          - name: Öğe İşleçleri
+            href: method-based-query-syntax-examples-element-operators.md
+          - name: Toplama İşleçleri
+            href: method-based-query-syntax-examples-aggregate-operators.md
+          - name: Birleştirme
+            href: method-based-query-syntax-examples-join-linq-to-dataset.md
+        - name: DataSet’e Özgü İşleç Örnekleri
+          href: dataset-specific-operator-examples-linq-to-dataset.md
+- name: Varlık Veri Modeli
+  href: entity-data-model.md
+  items:
+  - name: Varlık Veri Modeli Temel Kavramları
+    href: entity-data-model-key-concepts.md
+  - name: 'Varlık Veri Modeli: Ad Alanları'
+    href: entity-data-model-namespaces.md
+  - name: 'Varlık Veri Modeli: Basit Veri Türleri'
+    href: entity-data-model-primitive-data-types.md
+  - name: 'Varlık Veri Modeli: Devralma'
+    href: entity-data-model-inheritance.md
+  - name: association end
+    href: association-end.md
+  - name: association end multiplicity
+    href: association-end-multiplicity.md
+  - name: association set
+    href: association-set.md
+  - name: association set end
+    href: association-set-end.md
+  - name: association type
+    href: association-type.md
+  - name: complex type
+    href: complex-type.md
+  - name: entity container
+    href: entity-container.md
+  - name: entity key
+    href: entity-key.md
+  - name: entity set
+    href: entity-set.md
+  - name: entity type
+    href: entity-type.md
+  - name: facet
+    href: facet.md
+  - name: foreign key property
+    href: foreign-key-property.md
+  - name: model-declared function
+    href: model-declared-function.md
+  - name: model-defined function
+    href: model-defined-function.md
+  - name: navigation property
+    href: navigation-property.md
+  - name: özellik
+    href: property.md
+  - name: referential integrity constraint
+    href: referential-integrity-constraint.md
+- name: Oracle ve ADO.NET
+  href: oracle-and-adonet.md
+  items:
+  - name: Sistem Gereksinimleri
+    href: system-requirements-for-the-dotnet-data-provider-for-oracle.md
+  - name: Oracle BFILE
+    href: oracle-bfiles.md
+  - name: Oracle LOB
+    href: oracle-lobs.md
+  - name: Oracle REF CURSOR
+    href: oracle-ref-cursors.md
+    items:
+    - name: REF CURSOR Örnekleri
+      href: ref-cursor-examples.md
+    - name: OracleDataReader’da REF CURSOR Parametreleri
+      href: ref-cursor-parameters-in-an-oracledatareader.md
+    - name: OracleDataReader Kullanarak Birden Çok REF CURSOR’dan Veri Alma
+      href: retrieving-data-from-multiple-ref-cursors.md
+    - name: Bir veya daha fazla REF CURSOR Kullanarak DataSet Doldurma
+      href: filling-a-dataset-using-one-or-more-ref-cursors.md
+  - name: OracleTypes
+    href: oracletypes.md
+  - name: Oracle Dizileri
+    href: oracle-sequences.md
+  - name: Oracle Veri Türü Eşlemeleri
+    href: oracle-data-type-mappings.md
+  - name: Oracle Dağıtılmış İşlemleri
+    href: oracle-distributed-transactions.md
+- name: ADO.NET Entity Framework
+  href: ef/
+- name: SQL Server ve ADO.NET
+  href: sql/
+- name: DataSets, DataTables ve DataViews
+  href: dataset-datatable-dataview/
+ms.openlocfilehash: 53eb24e8a320ec9d6b3cce0acfde59facc8b1511
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58472063"
