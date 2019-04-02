@@ -24,7 +24,7 @@ Ayarları kullanan özel yapılandırma bölümleri tanımlar <xref:System.Confi
 
 ## <a name="attributes"></a>Öznitelikler
 
-Hiçbiri
+Yok.
 
 ## <a name="parent-element"></a>Üst öğe
 
