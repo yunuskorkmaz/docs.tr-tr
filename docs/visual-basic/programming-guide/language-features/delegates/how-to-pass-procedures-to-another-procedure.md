@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: e9e6165414db00e7d7182e204d86d23debfbf4f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c2305cd18cfaaa67355dfb342f22e39d37ae0e79
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967744"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818481"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de başka bir yordama yordam geçirin
 Bu örnek, temsilciler başka bir yordama yordam geçirme için nasıl kullanılacağını gösterir.  
@@ -46,6 +46,7 @@ Bu örnek, temsilciler başka bir yordama yordam geçirme için nasıl kullanıl
      Zaman `Test` olan çağrılır, ilk sonucunu görüntüler `AddNumbers` üzerinde yürüten `5` ve `3`, 8 olduğu. Ardından sonucunu `SubtractNumbers` üzerinde çalışan `9` ve `3` görüntülenir, 6.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [AddressOf İşleci](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Delegate Deyimi](../../../../visual-basic/language-reference/statements/delegate-statement.md)

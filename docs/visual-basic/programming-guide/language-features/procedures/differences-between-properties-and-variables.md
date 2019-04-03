@@ -14,12 +14,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: f2388f091278d398b5e8f3b82f147ab69937f2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689529"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842908"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic'de Özellikler ve Değişkenler Arasındaki Farklar
 Değişkenleri ve özellikleri erişebileceğiniz değerleri temsil eder. Ancak, depolama ve uygulama farklılıklar vardır.  
@@ -38,13 +38,14 @@ Değişkenleri ve özellikleri erişebileceğiniz değerleri temsil eder. Ancak,
 |Bildirim|Tek bildirimde deyimi|Bir kod bloğu içindeki deyimler serisini|  
 |Uygulama|Tek bir depolama konumu|Yürütülebilir kod (özellik yordamları)|  
 |Depolama|Doğrudan değişkenin değeriyle ilişkili|Genellikle iç depolama alanına özelliğin içeren sınıfı veya modülü dışında kullanılamaz sahip<br /><br /> Özelliğin değerini olabilir veya depolanmış bir öğe olarak mevcut olmayabilir <sup>1</sup>|  
-|Yürütülebilir kod|Hiçbiri|En az bir yordam olmalıdır|  
+|Yürütülebilir kod|Yok.|En az bir yordam olmalıdır|  
 |Okuma ve yazma erişimi|Okuma/yazma veya salt okunur|Okuma/yazma, salt okunur veya salt yazılır|  
 |(Ek olarak kabul etme veya değer döndürme) özel eylemler|Olası değil|Özellik değerini alma veya ayarlama kapsamında gerçekleştirilebilir|  
   
  <sup>1</sup> depolama doğrudan tek bir öğe için bir değişken, bir özelliğin değerini karşılık gelmeyebilir. Depolama, kolaylık veya güvenlik için parçalara bölmek veya değeri bir şifrelenmiş biçimde depolanabilir. Bu gibi durumlarda `Get` yordamı veya parçaları bir araya getirin, depolanmış değerin şifresi ve `Set` yordamı yeni değer şifrelenemedi mi bağlı depolama alanına bölün. Bir özellik değeri, bu durumda, günün bir saati gibi geçici olabilir `Get` yordamı hesaplamak, çalışma sırasında özellik erişim her zaman.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)

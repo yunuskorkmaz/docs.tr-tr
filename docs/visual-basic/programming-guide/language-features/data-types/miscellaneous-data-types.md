@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 7e32bf158b91c23c32028eb6877bd0089a9019b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4808d87322d5b21b70ec38e2eb31b2b204938745
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655055"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821771"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Çeşitli Veri Türleri (Visual Basic)
 Visual Basic, sayı veya karakterlerden doğru yönlendirilmiş olmayan çeşitli veri türleri sağlar. Bunun yerine, bunlar özelleştirilmiş verilerle gibi Evet/Hayır değerleri, tarih/saat değerleri ve nesne adresleri ilgilenir.  
@@ -31,6 +31,7 @@ Visual Basic, sayı veya karakterlerden doğru yönlendirilmiş olmayan çeşitl
  Avantajı `Object` veri türüdür, bunu herhangi bir veri türü, verileri depolamak için kullanabileceğiniz. Olumsuz yönüyse yürütme daha uzun sürer ve uygulamanızın daha yavaş gerçekleştirmek ek işlemler tabi olur. Kullanıyorsanız bir `Object` değer türleri için değişken ücretler *kutulama* ve *kutudan çıkarma*. Başvuru türleri için kullanıyorsanız ücretler *geç bağlama*.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Sayısal Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)

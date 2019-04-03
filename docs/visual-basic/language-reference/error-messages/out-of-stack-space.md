@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25905e65e74b11d167d3ce2ad258599fb958eb88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655497"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814607"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Yığın için ayrılan alan doldu (Visual Basic)
 Büyür ve küçülür bellek dinamik olarak yürütülen programınızın talepleri olan bir çalışma alanı yığınıdır. Kendi sınırları aşıldı.  
@@ -29,4 +29,5 @@ Büyür ve küçülür bellek dinamik olarak yürütülen programınızın talep
 6.  Bir "olay cascade" olay yordamı zaten yığında çağıran olarak olay tetiklemeyi tarafından neden olmadı emin olun. Bir olay cascade Sonlandırılmamış özyinelemeli yordam çağrısı benzer, ancak kod içinde açık çağrı yerine, Visual Basic çağrı yapıldığından daha az belirgin. Kullanım `Calls` hangi yordamların yığında etkin görünüme iletişim kutusu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bellek Pencereleri](/visualstudio/debugger/memory-windows)

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: be7dc6d28c6f176108e33a5c783863fdfc5aed81
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 58137a1bca93c0281424ba457569631a4b513a55
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845953"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843779"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: (XPath-LINQ to XML) ilgili öğeleri bulma (Visual Basic)
 Bu konu, başka bir öğenin değeri tarafından başvurulan öznitelik seçerek bir öğenin nasıl gösterir.  
@@ -74,4 +74,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to XML için XPath kullanıcıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

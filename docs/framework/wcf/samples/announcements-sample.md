@@ -2,12 +2,12 @@
 title: Duyuru Örnekleri
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 775a56f322636664b5a0ced19df7bba347002e38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91422d9b625339236e3d8d09683deba18a24c9d4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568575"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814217"
 ---
 # <a name="announcements-sample"></a>Duyuru Örnekleri
 Bu örnek bulma özelliğinin duyuru işlevini nasıl kullanacağınızı gösterir. Duyurular hizmeti hakkında meta veriler içeren bir Duyurunun ileti göndermek için izin verin. Varsayılan olarak, hizmet başlatıldığı ve hizmet kapatıldığında bye duyuru gönderilir hello duyuru gönderilir. Bu duyurular çok noktaya yayın veya noktadan noktaya gönderilebilir. Bu örnek, iki proje hizmeti ve istemci oluşur.  
@@ -87,4 +87,3 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
   
-## <a name="see-also"></a>Ayrıca bkz.

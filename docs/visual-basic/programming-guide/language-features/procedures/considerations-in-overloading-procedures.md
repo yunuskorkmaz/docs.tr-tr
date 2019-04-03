@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 8dfee8a8678fb00fcded4b7da57c3b200ef64d69
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979547"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815602"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Yordamları Aşırı Yüklemeye İlişkin Düşünceler (Visual Basic)
 Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı yüklü her sürüm için. Bu, genellikle her sürüm başka bir parametre listesi belirtmelisiniz anlamına gelir. Daha fazla bilgi için bkz: "Farklı imza" [yordam aşırı yüklemesi](./procedure-overloading.md).  
@@ -122,6 +122,7 @@ Bir yordamı aşırı yükleme, farklı bir kullanmalısınız *imza* aşırı y
 -   Derleyici çağıran kod yordamı desteklemediği bir veri türü geçerse hata sinyali vermek olamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](./index.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Yordam Sorunlarını Giderme](./troubleshooting-procedures.md)

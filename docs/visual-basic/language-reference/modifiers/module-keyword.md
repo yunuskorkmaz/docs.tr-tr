@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: fa798e8a2c82bdf204edb1812b0020f874b1e978
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f6ded1184aedf1702f4b6e5eebb85709cf8e39f4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257713"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814282"
 ---
 # <a name="module-keyword-visual-basic"></a>Modül \<anahtar sözcüğü > (Visual Basic)
 Bir kaynak dosyasının başında bir öznitelik için geçerli derleme modülü geçerli olduğunu belirtir.  
@@ -26,7 +26,7 @@ Bir kaynak dosyasının başında bir öznitelik için geçerli derleme modülü
  `Module` Değiştiricisi ile aynı değil [Module deyimi](../../../visual-basic/language-reference/statements/module-statement.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
 - [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)
 - [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-

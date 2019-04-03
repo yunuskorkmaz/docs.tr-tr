@@ -2,9 +2,15 @@
 title: Visual Basic'te Programlama
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'programming [Visual Basic], Visual Basic'
-  - programming
+- programming [Visual Basic], Visual Basic
+- programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
+ms.openlocfilehash: 09bc9254c880d58ffed22971d3ff96ba341fdf83
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819066"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic'te Programlama
 Bu bölüm, Visual Basic uygulamasında oluşturma hakkında daha fazla bilgi için isteyebilirsiniz programlama görevlerini açıklar.  
@@ -32,6 +38,7 @@ Bu bölüm, Visual Basic uygulamasında oluşturma hakkında daha fazla bilgi i�
  Kullanarak dosya sistemini erişim hakkında belgeleri içerir `My.Computer.FileSystem` nesne.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic dil özellikleri](../../../visual-basic/programming-guide/language-features/index.md)
 - [Programlama Kavramları](../../../visual-basic/programming-guide/concepts/index.md)
 - [Koleksiyonlar](../../../visual-basic/programming-guide/concepts/collections.md)

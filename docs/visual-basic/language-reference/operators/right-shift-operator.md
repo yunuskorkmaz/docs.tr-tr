@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 46bc87c653742c8469ffaff1decb9549a29feaeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972085"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816973"
 ---
 # <a name="-operator-visual-basic"></a>>> İşleci (Visual Basic)
 Bir bit desenine aritmetik sağa kaydırma uygular.  
@@ -87,6 +87,7 @@ result = pattern >> amount
 -   `negresult2` -1 (imza biti yayılır) olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bit Kaydırma İşleçleri](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [>>= İşleci](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - decision structures [Visual Basic]
 ms.assetid: 6885d426-fa87-4e1c-881f-f0e9ec8d98af
-ms.openlocfilehash: e7757614ac0c3a098b140c1ca6a838c2d3808c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3884f99a79a66ed8f8b25975b25a110c7341849
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505766"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813613"
 ---
 # <a name="control-flow-summary-visual-basic"></a>Denetim Akışı Özeti (Visual Basic)
 Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaç tarafından düzenlenir ve kullanın.  
@@ -23,5 +23,6 @@ Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyele
 |Yordamları kullanın.|[Çağrı](../../../visual-basic/language-reference/statements/call-statement.md), [işlevi](../../../visual-basic/language-reference/statements/function-statement.md), [özelliği](../../../visual-basic/language-reference/statements/property-statement.md), [alt](../../../visual-basic/language-reference/statements/sub-statement.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)

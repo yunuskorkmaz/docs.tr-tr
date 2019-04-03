@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: e74b4c7298a80f724031cc4ac1feb49ebae8f7cb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 832d56f5c51aea87185f36ec306c3fec036a40e0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975621"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825553"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Anonim Tür Tanımı (Visual Basic)
 Anonim bir türün bir örneği bildirimine yanıt olarak, derleyicinin türü için belirtilen özellikleri içeren yeni bir sınıf tanımı oluşturur.  
@@ -82,5 +82,6 @@ End Class
 >  Anonim türde bildirimlerden, yalnızca aynı bütünleştirilmiş kodda ortaya özelliklerini aynı ada sahip ve aynı tür çıkarımı yapılan, özellikler aynı sırada bildirilir ve aynı özellikleri anahtar özellikler işaretlendi, anonim türdeki oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Nasıl yapılır: Özellik adları ve türleri anonim türde bildirimlerden çıkarma](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

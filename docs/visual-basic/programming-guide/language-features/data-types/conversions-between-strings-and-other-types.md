@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 292ec8c76695427ab00110d83502f7d16c6504b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719748"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821667"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Dizeler ve Diğer Türleri Arasında Dönüştürmeler (Visual Basic)
 Bir sayısal dönüştürebilirsiniz `Boolean`, veya tarih/saat değerine bir `String`. Ters yönde de dönüştürebilirsiniz: sayısal bir dize değerinden `Boolean`, veya `Date` — sağlanan dizenin içeriği hedef veri türünün geçerli bir değer olarak yorumlanabilir. Desteklemiyorlarsa, bir çalışma zamanı hatası oluşur.  
@@ -41,6 +41,7 @@ Str = "The total count is " & count
  Visual Basic sayısal değer bir dize dönüştürür, kullandığı **Bölgesel Seçenekler** Windows içinde belirtilen ayarları **Denetim Masası** binlik yorumlamak için ayırıcısı, ondalık ayırıcı, ve para birimi simgesi. Başka bir deyişle, altında bir ayarı ancak başka bir dönüştürme başarısız olabilir. Örneğin, `"$14.20"` kabul edilebilir İngilizce (Amerika Birleşik Devletleri) yerel ayarında ancak Fransızca herhangi bir yerel ayar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

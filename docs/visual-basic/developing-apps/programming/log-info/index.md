@@ -2,13 +2,19 @@
 title: Uygulamadan Günlüğe Bilgi Kaydetme (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - Log object
-  - My.Log object
-  - 'applications [Visual Basic], logging information from'
-  - logging
-  - My.Application.Log object
-  - 'examples [Visual Basic], logging application information'
+- Log object
+- My.Log object
+- applications [Visual Basic], logging information from
+- logging
+- My.Application.Log object
+- examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
+ms.openlocfilehash: 3202bdb2c4274e6d3127537b7cae661ba6e63a35
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820002"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Uygulamadan Günlüğe Bilgi Kaydetme (Visual Basic)
 Bu bölümde, uygulama kullanımından bilgileri günlüğe kaydetmek nasıl kapsayan konuları içerir `My.Application.Log` veya `My.Log` nesne ve uygulamanın günlüğe kaydetme özellikleri genişletme.  
@@ -32,6 +38,7 @@ Bu bölümde, uygulama kullanımından bilgileri günlüğe kaydetmek nasıl kap
 |Çıktısını Filtrele `My.Application.Log` günlükleri.|[İzlenecek yol: My.Application.Log çıktısını filtreleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [Sorun giderme: Günlük dinleyicileri](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

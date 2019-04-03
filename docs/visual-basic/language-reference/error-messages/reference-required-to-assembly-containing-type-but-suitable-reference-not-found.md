@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 2c74ed916e43bee6857df819c19ab03bef80b3c4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3cfdf8150c8ccd9e1b4f047cd1ce8ee4ad6bbc1a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285200"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813411"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Derlemesine başvuru gereklidir '\<assemblyIdentity >' türünü içeren '\<typename >', ancak proje arasındaki belirsizlik nedeniyle uygun bir başvuru bulunamadı\<projectname1 >' ve '\< projectname2 >'
 Sınıfı, yapıyı, arabirimi, sabit listesi veya projenizin dışında tanımlı temsilci, gibi bir tür bir ifade kullanır. Ancak, birden fazla derleme türü tanımlayan proje başvurularına sahip.  
@@ -30,6 +30,7 @@ Sınıfı, yapıyı, arabirimi, sabit listesi veya projenizin dışında tanıml
 2.  Proje özelliklerinizi kullanmakta olduğunuz türü tanımlayan bir derlemeyi içeren dosyaya bir başvuru ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)
 - [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 

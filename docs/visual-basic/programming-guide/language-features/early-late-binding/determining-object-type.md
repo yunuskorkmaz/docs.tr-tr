@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: becbbef008e8a474db198748d45f260fcb90c758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966781"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842635"
 ---
 # <a name="determining-object-type-visual-basic"></a>Nesne Türünü Belirleme (Visual Basic)
 Genel nesne değişkenleri (diğer bir deyişle, değişkenleri olarak bildirdiğiniz `Object`) herhangi bir sınıftan nesneleri içerebilir. Türü değişkenlerindeki kullanırken `Object`, nesnenin sınıfına göre farklı eylemlerde gerekebilir; örneğin, bazı nesneler belirli bir özelliği veya yöntemi desteklemiyor olabilir. Visual Basic nesne türü bir nesne değişkenine depolandığını belirleyen iki yol sunar: `TypeName` işlevi ve `TypeOf...Is` işleci.  
@@ -45,6 +45,7 @@ Genel nesne değişkenleri (diğer bir deyişle, değişkenleri olarak bildirdi�
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Bir Dize Adı Kullanarak Bir Özelliği veya Yöntemi Çağırma](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
 - [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)

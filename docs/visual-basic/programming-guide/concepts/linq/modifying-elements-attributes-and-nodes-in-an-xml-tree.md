@@ -2,14 +2,14 @@
 title: Öğe, öznitelik ve düğümleri bir XML Tree1 değiştirme
 ms.date: 07/20/2015
 ms.assetid: 865cf54e-f8ac-4871-863b-a3e6fc61a4b9
-ms.openlocfilehash: c3863f52976303407cbad3d0bacc9bd0b2ec1d31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d548e6f5912437e5c5df27f55fcdb28990e92c8d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547546"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814906"
 ---
-# <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>Öğe, öznitelik ve düğümleri bir XML ağacı değiştirme
+# <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>XML Ağacındaki Öğe, Öznitelik ve Düğümleri Değiştirme
 Bir öğe, alt öğelerini ve özniteliklerini değiştirmek için kullanabileceğiniz özellikler ve yöntemler aşağıdaki tabloda özetlenmiştir.  
   
  Aşağıdaki yöntemlerden değiştirme bir <xref:System.Xml.Linq.XElement>.  
@@ -46,4 +46,5 @@ Bir öğe, alt öğelerini ve özniteliklerini değiştirmek için kullanabilece
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A?displayProperty=nameWithType>|Alt düğüm, yeni içerikle değiştirir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [(LINQ to XML) XML ağaçlarını değiştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

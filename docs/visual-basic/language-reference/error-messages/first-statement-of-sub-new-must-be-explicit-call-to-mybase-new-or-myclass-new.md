@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 31f92d1e52e50b2a87fd6a6af6e3c87292f4437f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 737f9119814e784ebabcbb4629ab6948ce164168
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268802"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814100"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>Bu 'Sub New' öğesinin ilk deyimi 'MyBase.New' veya 'MyClass.New' için açık çağrı olmalıdır, çünkü '\<constructorname >' temel sınıfındaki\<baseclassname >', '\<derivedclassname >' kullanılmıyor biçiminde işaretlendiğinden: '\< ErrorMessage >'
 Bir sınıf oluşturucusu bir temel sınıf oluşturucu açıkça çağırmaz ve örtük temel sınıf oluşturucusu ile işaretlenmiş <xref:System.ObsoleteAttribute> özniteliği ve hata olarak değerlendirilecek yönergesi.  
@@ -30,5 +30,5 @@ Bir sınıf oluşturucusu bir temel sınıf oluşturucu açıkça çağırmaz ve
 2.  Bir çağrı ekleyin `MyBase.New()` veya `MyClass.New()` ilk deyimi olarak `Sub New` türetilen sınıfta.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 
+- [Öznitelikler genel bakış](../../../visual-basic/programming-guide/concepts/attributes/index.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 7a1411daf446cbf06cd57b4e002c2c3cd77166af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507167"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813905"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>İsteğe bağlı parametre türleri olarak kullanılan genel parametreler üzerinde sınıf kısıtlaması olmalıdır
 Bir yordam kullanan bir başvuru türü olması zorunlu değildir bir tür parametresi isteğe bağlı bir parametre ile bildirilir.  
@@ -28,6 +28,7 @@ Bir yordam kullanan bir başvuru türü olması zorunlu değildir bir tür param
 -   Tür parametresi yalnızca bir başvuru türü kabul edecek şekilde sınırlamak veya isteğe bağlı parametresi için kullanmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Tür Listesi](../../../visual-basic/language-reference/statements/type-list.md)
 - [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: f1fdc5f69b8552ee10131c7408673457fffe16ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2b2c43811cbb3a06ed1e8c092ca42e50a4d037c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976856"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816089"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Nasıl yapılır: İki nesnenin aynı (Visual Basic) olup olmadığını belirleme
 Visual Basic'te, her iki değişken için aynı sınıf örneği bellekte gelirseniz iki değişken başvuruları kendi işaretçileri aynıysa, diğer bir deyişle, aynı kabul edilir. Örneğin, bir Windows Forms uygulamasında belirlemek için bir karşılaştırma yapmak isteyebileceğiniz olup olmadığını geçerli örneğini (`Me`) belirli bir örneği aynı olduğu gibi `Form2`.  
@@ -51,6 +51,7 @@ Visual Basic'te, her iki değişken için aynı sınıf örneği bellekte gelirs
  `objA identical to objC? True`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

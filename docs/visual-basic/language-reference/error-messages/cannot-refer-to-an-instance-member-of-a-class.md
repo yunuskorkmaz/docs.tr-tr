@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: da3aa17c55a4ccc95e5f4c98d0f12712ef77d5c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729229"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822581"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>Bir sınıfın örnek üyesine paylaştırılmış yöntem veya paylaştırılmış üye başlatıcıdan, sınıfın açık bir örneği olmadan başvurulamaz
 Paylaşılan bir yordam içinde bir sınıftan paylaşılmayan üyesi başvurmak çalıştınız. Aşağıdaki örnekte, böyle bir durum gösterilmektedir.  
@@ -44,4 +44,5 @@ End Class
 3.  Her örnek kendi ayrı üye kopyasına sahip istiyorsanız belirtmeyin `Shared` üye bildirimi için. Kaldırma `Shared` yordam bildirimi from anahtar sözcüğü.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)

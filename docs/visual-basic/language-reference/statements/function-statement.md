@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 947507cb813437facc2b2343ff6f1a5d50f4dd98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dffe67d1c31b0fe7c037839ba0588793a461f276
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971643"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818468"
 ---
 # <a name="function-statement-visual-basic"></a>Function Deyimi (Visual Basic)
 Adı, parametreleri ve kodu tanımlayan bildirir bir `Function` yordamı.  
@@ -255,6 +255,7 @@ End Function
  [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sub Deyimi](sub-statement.md)
 - [İşlev Yordamları](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
 - [Parametre Listesi](parameter-list.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: 873defb025ff02e6af2572d8d2587f86e5228ca0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e45de705eb25d58857239cc549125c524765aaa5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968800"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816583"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Nasıl yapılır: Başka bir dizine Visual Basic'te bir dizini kopyalama
 Kullanım <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> başka bir dizini kopyalama için yöntemi. Bu yöntem, dizini ve bunun yanı sıra dizin içeriğini kopyalar. Hedef dizin yoksa, oluşturulur. Hedef konumda aynı adda bir dizin olup olmadığını ve `overwrite` ayarlanır `False`, iki dizin içeriğini birleştirilir. İşlem sırasında dizini için yeni bir ad belirtebilirsiniz.  
@@ -61,6 +61,7 @@ Kullanım <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> başka
 -   Bir hedef dosya var, ancak erişilemez (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
 - [Nasıl yapılır: Belirli bir desendeki alt dizinleri bulma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
 - [Nasıl yapılır: Bir dizindeki dosya koleksiyonunu alma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

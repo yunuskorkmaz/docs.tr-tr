@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 1e7d767b1ba370ac7303abfd8aa3606a43c33de9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3a09657ee7a79b7f590adba0e4fb0c04a8e89043
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973294"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843649"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir işleci tanımlama
 Bir sınıf veya yapı tanımladıysanız, standart bir işleç davranışını tanımlayın (gibi `*`, `<>`, veya `And`) bir veya iki işlenenden olduğunda sınıf veya yapı türü.  
@@ -38,6 +38,7 @@ Bir sınıf veya yapı tanımladıysanız, standart bir işleç davranışını 
   
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İşleç Yordamları](./operator-procedures.md)
 - [Nasıl yapılır: Bir dönüşüm işleci tanımlama](./how-to-define-a-conversion-operator.md)
 - [Nasıl yapılır: Bir işleç yordamı çağırma](./how-to-call-an-operator-procedure.md)

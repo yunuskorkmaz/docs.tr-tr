@@ -2,12 +2,12 @@
 title: Lınq'ye giriş (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: dd457ec59659743bc7cd153fb6b9cef8d99a4a0a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 2900cade8bc4166cccb62baf4381cb926cdff5f8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410192"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822329"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>Lınq'ye giriş (Visual Basic)
 Dil ile tümleşik sorgu (LINQ), bir yenilik .NET Framework sürüm 3.5 bir birine bağlayan dünyanın nesnelerin ve verilerin dünyasında arasındaki boşluk sunulan ' dir.  
@@ -34,4 +34,5 @@ Dil ile tümleşik sorgu (LINQ), bir yenilik .NET Framework sürüm 3.5 bir biri
 -   .NET koleksiyonları, dosyaları, dizeleri ve bu şekilde devam eder: [LINQ to Objects'in (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

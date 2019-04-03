@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626491"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824669"
 ---
 # <a name="double-data-type-visual-basic"></a>Double Veri Türü (Visual Basic)
 Ayrı tutma değeri - 1.79769313486231570E + 308 - aracılığıyla aralığındaki IEEE 64-bit (8 bayt) çift duyarlıklı kayan noktalı sayıların imzalı 4.94065645841246544E-324 negatif değerleri ve 4.94065645841246544E-324 1.79769313486231570E + 308 aracılığıyla pozitif değerler. Çift duyarlıklı sayılar yaklaşık bir gerçek sayı olarak depolar.  
@@ -56,6 +56,7 @@ Ayrı tutma değeri - 1.79769313486231570E + 308 - aracılığıyla aralığınd
 -   **Çerçeve türü.** .NET Framework içinde karşılık gelen türü <xref:System.Double?displayProperty=nameWithType> yapısı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Double?displayProperty=nameWithType>
 - [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
 - [Decimal Veri Türü](../../../visual-basic/language-reference/data-types/decimal-data-type.md)

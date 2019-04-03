@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [Visual Basic], control flow
 - control structures [Visual Basic]
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
-ms.openlocfilehash: a383d0c95de5286cce722c05bd8888d5acffb173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c42070ce2ea866e59e1b2e190f7c05e1ee7cc922
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590006"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819326"
 ---
 # <a name="other-control-structures-visual-basic"></a>Diğer Denetim Yapıları (Visual Basic)
 Visual Basic yardımcı denetim yapıları bir kaynağını atma veya bir nesne başvurusu yinelemek zorunda sayısını azaltmak sağlar.  
@@ -22,6 +22,7 @@ Visual Basic yardımcı denetim yapıları bir kaynağını atma veya bir nesne 
  `With...End With` Yapım bir nesne başvurusu bir kez belirtmenize olanak sağlar ve bir dizi üyelerine erişmek deyimleri çalıştırın. Bu, kodunuzu basitleştirerek ve Visual Basic başvurusu eriştiği her deyim için yeniden oluşturmak sahip olmadığından performansı. Daha fazla bilgi için [ile... End With deyimi](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Karar Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

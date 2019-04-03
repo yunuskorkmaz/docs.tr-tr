@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nowin32manifest compiler option [Visual Basic]
 - -nowin32manifest compiler option [Visual Basic]
 ms.assetid: c0528aae-83b3-4425-99f0-19448e9843e3
-ms.openlocfilehash: d0a51b2af8b1d8fcf9f0df8dae457a0d3b570a1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d14da2d0c24f3bd833503c73374d26ee73c5629
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744732"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815842"
 ---
 # <a name="-nowin32manifest-visual-basic"></a>-nowin32manifest (Visual Basic)
 Herhangi bir uygulama bildirimi yürütülebilir dosyasına katıştırma değil derleyicinin sağlar.  
@@ -28,5 +28,6 @@ Herhangi bir uygulama bildirimi yürütülebilir dosyasına katıştırma değil
  Bildirim oluşturma hakkında daha fazla bilgi için bkz. [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

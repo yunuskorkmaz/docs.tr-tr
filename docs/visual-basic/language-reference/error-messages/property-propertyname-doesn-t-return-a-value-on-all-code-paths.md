@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: 1788d06aa5236d4cfc33999df86ad72c420b41df
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a535a6b951dc9872109527f78d7de5f3fcdd3292
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269009"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821887"
 ---
 # <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>Özellik '\<propertyname >' bütün kod yollarında değer döndürmüyor
 Özellik '\<propertyname >' bütün kod yollarında değer döndürmüyor. Sonuç kullanıldığında çalışma zamanında null başvurusu özel durumu oluşabilir.  
@@ -40,6 +40,7 @@ ms.locfileid: "55269009"
      Her zaman kullanırsanız her iade yordamdan gelen bir değer döndürür garanti daha kolaydır `Return` deyimi. Bu, son deyim önce yaparsanız `End Get` olmalıdır bir `Return` deyimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Özellik Yordamları](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
 - [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Get Deyimi](../../../visual-basic/language-reference/statements/get-statement.md)

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (Visual Basic) komut satırını kullanarak derlemeler oluşturma ve kullanma'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: cbfccfc80c683dfd49739e680587ca40e6ca24f3
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: eecd644a7b91492f0a78cf969cfa71ae927609ab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746396"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819410"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Nasıl yapılır: (Visual Basic) komut satırını kullanarak derlemeler oluşturma ve kullanma
 Bir derleme veya dinamik bağlantı kitaplığı (DLL), programınız için çalışma zamanında bağlıdır. Oluşturma ve bir DLL kullanarak göstermek için aşağıdaki senaryoyu göz önünde bulundurun:  
@@ -118,6 +118,7 @@ vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb
  Komut satırından oluşturma hakkında daha fazla bilgi için bkz ve [komut satırından derleme](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Programlama Kavramları](../../../../visual-basic/programming-guide/concepts/index.md)
-- [.NET derlemeleri](../../../../standard/assembly/index.md)
+- [.NET’te bütünleştirilmiş kodlar](../../../../standard/assembly/index.md)
 - [DLL İşlevleri için bir Sınıf Oluşturma](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

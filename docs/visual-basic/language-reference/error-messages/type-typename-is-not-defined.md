@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 80a3d31a8a46ce616be2dd2ab27faf0af04876f2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c2675d61307d92da1710368668f43af3559060a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275087"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825046"
 ---
 # <a name="type-typename-is-not-defined"></a>Türü '\<typename >' tanımlı değil
 İfade tanımlanmadı bir türe başvuru yaptı. Bir bildirim deyiminde gibi bir tür tanımlayabilirsiniz `Enum`, `Structure`, `Class`, veya `Interface`.  
@@ -32,6 +32,7 @@ ms.locfileid: "55275087"
 -   Türü hedeflenen .NET Framework profilinin bir parçası olan bir derlemede olduğundan emin olun. Daha fazla bilgi için [.NET Framework hedefleme hataları giderme](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Enum Deyimi](../../../visual-basic/language-reference/statements/enum-statement.md)
 - [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: e1a6cecdf724603b8f4617fe4e8b5ef2c0acdeff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75d118ee2bd4918c3a936cb341864ddc5315726b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624567"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826619"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 Bir veya daha fazla bildirilmiş üye değişkenleri, olayları tetikleyebilen bir sınıf örneğine başvurduğunu belirtir.  
@@ -33,6 +33,7 @@ Bir veya daha fazla bildirilmiş üye değişkenleri, olayları tetikleyebilen b
  `WithEvents` Bu bağlamda değiştirici kullanılabilir: [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İşleme](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
 - [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)

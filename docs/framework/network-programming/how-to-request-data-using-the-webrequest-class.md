@@ -11,12 +11,12 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: 1b71327d007e66cc217f6d69e11122c481e5118f
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: df61b533801abc4c826d3e711228305c9452498a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634043"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819565"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme
 Aşağıdaki yordamda, bir Web sayfası veya bir dosya gibi bir kaynak sunucudan istemek için adımlar açıklanmaktadır. Kaynak URI tarafından tanımlanması gerekir.  
@@ -93,90 +93,9 @@ Aşağıdaki yordamda, bir Web sayfası veya bir dosya gibi bir kaynak sunucudan
 
 Aşağıdaki kod örneği, bir web sunucusu için bir istek oluşturun ve kendi yanıt verileri okumak gösterilmektedir:  
   
-```csharp  
-using System;  
-using System.IO;  
-using System.Net;  
-using System.Text;  
-  
-namespace Examples.System.Net  
-{  
-    public class WebRequestGetExample  
-    {  
-        public static void Main()  
-        {  
-            // Create a request for the URL.   
-            WebRequest request = WebRequest.Create(  
-              "http://www.contoso.com/default.html");  
-            // If required by the server, set the credentials.  
-            request.Credentials = CredentialCache.DefaultCredentials;  
+[!code-csharp[RequestDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/RequestDataUsingWebRequest/cs/WebRequestGetExample.cs)]
+[!code-vb[RequestDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/RequestDataUsingWebRequest/vb/WebRequestGetExample.vb)]
 
-            // Get the response.  
-            WebResponse response = request.GetResponse();  
-            // Display the status.  
-            Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
-
-            // Get the stream containing content returned by the server.  
-            Stream dataStream = response.GetResponseStream();  
-            // Open the stream by using a StreamReader for easy access.  
-            StreamReader reader = new StreamReader(dataStream);  
-
-            // Read the content.  
-            string responseFromServer = reader.ReadToEnd();  
-            // Display the content.  
-            Console.WriteLine(responseFromServer);  
-
-            // Clean up the response.  
-            reader.Close();  
-            response.Close();  
-        }  
-    }  
-}  
-```  
-  
-```vb  
-Imports System  
-Imports System.IO  
-Imports System.Net  
-Imports System.Text  
-
-Namespace Examples.System.Net 
-
-    Public Class WebRequestGetExample  
-
-        Public Shared Sub Main()  
-
-            ' Create a request for the URL.   
-            Dim request As WebRequest = _  
-              WebRequest.Create("http://www.contoso.com/default.html")  
-            ' If required by the server, set the credentials.  
-            request.Credentials = CredentialCache.DefaultCredentials  
-
-            ' Get the response.  
-            Dim response As WebResponse = request.GetResponse()  
-            ' Display the status.  
-            Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)  
-
-            ' Get the stream containing content returned by the server.  
-            Dim dataStream As Stream = response.GetResponseStream()  
-            ' Open the stream by using a StreamReader for easy access.  
-            Dim reader As New StreamReader(dataStream)  
-
-            ' Read the content.  
-            Dim responseFromServer As String = reader.ReadToEnd()  
-            ' Display the content.  
-            Console.WriteLine(responseFromServer)  
-
-            ' Clean up the response.  
-            reader.Close()  
-            response.Close() 
-
-        End Sub   
-
-    End Class  
- 
-End Namespace  
-```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İnternet istekleri oluşturma](creating-internet-requests.md)

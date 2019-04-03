@@ -2,12 +2,12 @@
 title: Oturumlar ve Kuyruklar
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: 386221949e35a7e70fff7b62bb081b525bc9a358
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4aa8aea2e829f89714ad9fa946121d4ebab21c4c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642262"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814529"
 ---
 # <a name="sessions-and-queues"></a>Oturumlar ve Kuyruklar
 Bu örnek, göndermek ve bir dizi ilgili ileti kuyruğa alınan iletişim Message Queuing (MSMQ) aktarma üzerinden almak nasıl gösterir. Bu örnekte `netMsmqBinding` bağlama. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır.  
@@ -269,4 +269,3 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
     > [!NOTE]
     >  İçin güvenlik modunu ayarlama `None` ayarlamakla eşdeğerdir <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, ve `Message` güvenlik `None`.  
   
-## <a name="see-also"></a>Ayrıca bkz.

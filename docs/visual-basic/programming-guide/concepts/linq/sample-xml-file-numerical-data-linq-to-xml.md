@@ -1,15 +1,15 @@
 ---
-title: 'Örnek XML dosyası: Sayısal veriler (LINQ to XML)'
+title: 'Örnek XML Dosyası: Sayısal Veriler (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5faef812-0006-4d84-9cf2-5746070e7fbf
-ms.openlocfilehash: 23f5388aeb5cdd97d33423d2d150ccefbae25a52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 578ec2de69ae549e255fdafb98d3483f6330ce5d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495792"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842687"
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Örnek XML dosyası: Sayısal veriler (LINQ to XML)
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Örnek XML Dosyası: Sayısal Veriler (LINQ to XML)
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosya, birleşimi, ortalama ve Gruplama için sayısal veriler içerir.  
   
 ## <a name="dataxml"></a>Data.xml  
@@ -56,4 +56,5 @@ Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecx
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Örnek XML Belgeleri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

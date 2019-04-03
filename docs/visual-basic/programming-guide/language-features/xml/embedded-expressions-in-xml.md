@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: feb0168c216b23ff02ca9350f868e091fefca689
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965793"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827581"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML'de Katıştırılmış İfadeler (Visual Basic)
 Katıştırılmış ifadeler, çalışma zamanında değerlendirilen bir ifade içeren bir XML sabit değerleri oluşturmanıza olanak sağlar. Katıştırılmış bir ifade sözdizimi `<%=` `expression` `%>`, olduğu aynı söz dizimi içinde kullanılan [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -81,6 +81,7 @@ Katıştırılmış ifadeler, çalışma zamanında değerlendirilen bir ifade i
 >  Kullanarak bir XML ad alanı öneki bildirdiğinizde `xmlns` namespace özniteliği, öznitelik değeri bir sabit dize olmalıdır. Bu bağlamda kullanarak `xmlns` özniteliktir kullanma gibi `Imports` deyimi bir XML ad alanı bildirmek için. XML ad alanı değeri belirtmek için bir katıştırılmış deyim kullanamazsınız.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML Belgesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [XML Öğesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

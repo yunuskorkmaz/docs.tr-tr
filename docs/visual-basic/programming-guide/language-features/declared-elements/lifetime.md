@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976050"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824929"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic'de Ömür
 *Ömrü* bir bildirilen süre sırasında hangi BT kullanıma açık öğesidir. Değişkenleri ömürlü yalnızca öğelerdir. Bu amaçla, derleyici parametreler değerlendirir ve değişkenlerin özel durumlar işlevi döndürür. Bir değişkenin ömrü değeri biriken içerebileceği süreyi temsil eder. Yaşam süresi boyunca değerini değiştirebilirsiniz, ancak her zaman belirli bir değeri tutar.  
@@ -72,6 +72,7 @@ ms.locfileid: "56976050"
  Önceki örnekte, aynı yaşam bildirerek üretebilir `applesSold` Modül düzeyinde. Ancak, bu şekilde bir değişkenin kapsamını değiştirdiyseniz, yordam artık bu özel kullanım erişimi yoktur. Diğer yordamlar erişemiyor çünkü `applesSold` ve değerini değiştirmek, değişen toplamı güvenilir olabilir ve kod korumak daha zor olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

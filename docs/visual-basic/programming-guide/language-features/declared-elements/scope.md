@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 38dd9d6d40780c25f06a35cf1ffbe4743b7da4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537255"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823551"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic'de Kapsam
 *Kapsam* bildirilen bir öğenin adını nitelendirme veya aracılığıyla kullanılabilir hale getirme olmadan başvurduğu tüm kod kümesidir. bir [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Bir öğe kapsamı aşağıdaki düzeylerde birine sahip olabilir:  
@@ -135,6 +135,7 @@ Public strMsg As String
  Genel olarak, herhangi bir değişken veya sabit bildirdiğinizde, kapsam olarak dar yapmak alışkanlıktır (blok kapsamı olan en düşük). Bu işlem, bellek korunmasına yardımcı olur ve kodunuzu deneyebileceğinizi hatalı değişkenine başvuran olasılığını en aza indirir. Benzer şekilde, olması için bir değişken bildirmelidir [statik](../../../../visual-basic/language-reference/modifiers/static.md) yalnızca zaman değerini yordam çağrıları arasında korumak gereklidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Nasıl yapılır: Bir değişkenin kapsamını denetleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Visual Basic'de ömür](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

@@ -2,12 +2,12 @@
 title: LINQ ve dizeler (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 0ffff11243b96d46cfd9424502ec43ed2319136d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e0ebe64494182191dafa033ecbc38bad17180be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569998"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818962"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ ve dizeler (Visual Basic)
 LINQ Sorgu dizeleri ve dizelerden oluşan koleksiyonları dönüştürmek için kullanılabilir. Metin dosyalarında yarı yapısal verilerle özellikle yararlı olabilir. LINQ sorguları, geleneksel dize işlevleri ve normal ifadeler ile birleştirilebilir. Örneğin, kullanabileceğiniz <xref:System.String.Split%2A> veya <xref:System.Text.RegularExpressions.Regex.Split%2A> sonra sorgulayabilir veya LINQ kullanarak değiştirme dizeleri bir dizi oluşturmak için yöntemi. Kullanabileceğiniz <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> yönteminde `where` bir LINQ sorgu yan tümcesi. LINQ Sorgu veya değiştirmek için kullanabileceğiniz <xref:System.Text.RegularExpressions.MatchCollection> normal bir ifade tarafından döndürülen sonuç.  
@@ -60,5 +60,6 @@ LINQ Sorgu dizeleri ve dizelerden oluşan koleksiyonları dönüştürmek için 
  Metin verileri .csv dosyalarındaki matematiksel hesaplamalar gerçekleştirmek nasıl gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](index.md)
 - [Nasıl yapılır: CSV dosyalarından XML oluşturma](how-to-generate-xml-from-csv-files.md)

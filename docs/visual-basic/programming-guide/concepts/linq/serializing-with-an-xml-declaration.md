@@ -2,12 +2,12 @@
 title: Serileştirmek bir XML bildirimi (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-ms.openlocfilehash: d0d6ccfdffa76de61c36e4cdb3f68f7cf85f1e68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f51dacb0f89e1042ba9875bec10a0cb1fe25f889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558481"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814126"
 ---
 # <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serileştirmek bir XML bildirimi (Visual Basic)
 Bu konuda, serileştirme bir XML bildirimi oluşturup oluşturmayacağını denetlemek nasıl açıklanmaktadır.  
@@ -17,7 +17,7 @@ Bu konuda, serileştirme bir XML bildirimi oluşturup oluşturmayacağını dene
   
  Kullanarak bir dize cricheditdoc::m_brtf `ToString` elde edilen XML yöntemi, bir XML bildirimi içermez.  
   
-### <a name="serializing-with-an-xml-declaration"></a>Bir XML bildirimi ile serileştirme  
+### <a name="serializing-with-an-xml-declaration"></a>XML Bildirimi ile Serileştirme  
  Aşağıdaki örnek, oluşturur bir <xref:System.Xml.Linq.XElement>, belgeyi bir dosyaya kaydeder ve sonra dosyanın konsola yazdırır:  
   
 ```vb  
@@ -62,4 +62,5 @@ Console.WriteLine(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [(Visual Basic) XML ağaçlarını serileştirme](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

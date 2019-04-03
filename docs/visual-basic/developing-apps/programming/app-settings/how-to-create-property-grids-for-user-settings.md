@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: c528b2a0ada0f638f2f901ba7638771e0f4b3dda
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 20c475fd7bd4b2cec6c6e10182a88a43fa7c56f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969056"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843052"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te kullanıcı ayarları için özellik kılavuzu oluşturma
 Kullanıcı ayarları için bir özellik kılavuzunda doldurarak oluşturabileceğiniz bir <xref:System.Windows.Forms.PropertyGrid> kullanıcı ayarı özelliklerini denetimiyle `My.Settings` nesne.  
@@ -50,6 +50,7 @@ Kullanıcı ayarları için bir özellik kılavuzunda doldurarak oluşturabilece
  Uygulama kapatıldığında kullanıcı ayarlarını uygulamayı kaydeder. Hemen ayarları kaydetmek için çağrı `My.Settings.Save` yöntemi. Daha fazla bilgi için [nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı yapma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [My.Settings Nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)

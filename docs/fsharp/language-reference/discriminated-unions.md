@@ -2,12 +2,12 @@
 title: Ayrılmış Birleşimler
 description: Nasıl kullanacağınızı öğrenin F# ayrılmış birleşimler.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611873"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821432"
 ---
 # <a name="discriminated-unions"></a>Ayrılmış Birleşimler
 
@@ -156,7 +156,7 @@ Ayrılmış birleşimler, yani birleşim kendi başına bir veya daha fazla tür
 
 Önceki kodda, `resultSumTree` 10 değerine sahiptir. Ağaç yapısı için aşağıdaki çizimde `myTree`.
 
-![MyTree için ağaç yapısı](../media/TreeStructureDiagram.png)
+![MyTree için ağaç yapısı gösteren diyagram.](../media/discriminated-unions/tree-structure-mytree.png)
 
 Ayrılmış birleşimler Ağaçtaki düğümler heterojen iyi çalışır. Aşağıdaki kodda, türü `Expression` toplanmasını ve çarpılmasını sayıların ve değişkenlerin destekler basit bir programlama dili, bir ifadenin soyut sözdizimi ağacını temsil eder. Bazı birleşim durumları özyinelemeli değildir ve sayıları temsil eder (`Number`) veya değişkenler (`Variable`). Diğer durumlarda özyinelemelidir ve işlemleri temsil etmekte (`Add` ve `Multiply`), işlenenlerin de ifadeleri olduğu. `Evaluate` İşlevi sözdizimi ağacını yinelemeli olarak işlemek için bir eşleme ifadesi kullanılır.
 

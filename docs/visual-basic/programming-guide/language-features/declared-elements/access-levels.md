@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203632"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843108"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic'de Erişim Düzeyleri
 *Erişim düzeyi* bildirilen bir öğenin erişim olanağı kapsamını, başka bir deyişle, hangi kod dosyayı okuma veya yazma izni yoktur. Bu, yalnızca öğenin kendisinin nasıl bildirdiğiniz tarafından aynı zamanda öğenin kapsayıcı erişim düzeyine göre belirlenir. Bir kapsayıcı öğe erişemiyor kod herhangi birini kendi içerilen öğelerin erişemez, bile olarak bildirilen `Public`. Örneğin, bir `Public` değişkeninde bir `Private` yapısı erişilebilir değil, ancak yapı içeren bir sınıf içinde o sınıf dışında.  
@@ -115,6 +115,7 @@ Erişim düzeyini sağlayacaklarını anahtar sözcükleri adlı *erişim deği�
 |`Private Protected`|Özel bir korumalı öğe bildirir bir sınıftaki kod veya bas sınıf olarak aynı derlemede bulunan türetilmiş bir sınıf içinde kod.|Arabirimler<br /><br /> Sınıflar<br /><br /> Yapılar<br /><br /> Yordamlar<br /><br /> Özellikler<br /><br /> Üye değişkenleri<br /><br /> Sabitler<br /><br /> Numaralandırmalar<br /><br /> Olaylar<br /><br /> Dış bildirimler<br /><br /> Temsilciler|örneği|
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Dim Deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Static](../../../../visual-basic/language-reference/modifiers/static.md)
 - [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

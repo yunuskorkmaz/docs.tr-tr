@@ -12,12 +12,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 88597e5cfa1db46e147b829c8ffc634697cecc7e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: c92a94cd6223aad8e4ea3da86a8dd37bd71aad2c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739494"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821003"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ (Visual Basic) kullanarak bir veritabanındaki verileri değiştirme
 Dil ile tümleşik sorgu (LINQ) sorguları Veritabanı bilgilerine erişmek ve veritabanını değerleri değiştirmek kolaylaştırır.  
@@ -161,6 +161,7 @@ Dil ile tümleşik sorgu (LINQ) sorguları Veritabanı bilgilerine erişmek ve v
 7.  Projenizi çalıştırmak için F5 tuşuna basın. Tıklayın **Ekle** yeni bir kayıt eklemek için. Tıklayın **güncelleştirme** yeni bir kaydı değiştirmek için. Tıklayın **Sil** yeni kaydı silinemedi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

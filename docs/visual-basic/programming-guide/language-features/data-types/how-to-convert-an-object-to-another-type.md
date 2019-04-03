@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 81ac65ad34ad6afdfb89a750fef39b121aabd644
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611351"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814386"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Nasıl yapılır: Bir nesneyi Visual Basic'de başka bir türe dönüştürme
 Dönüştürmeniz bir `Object` başka bir veri türüne dönüştürme anahtar sözcüğü gibi kullanarak değişken [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md).  
@@ -34,6 +34,7 @@ End Sub
 -   Bir başvuru <xref:System?displayProperty=nameWithType> ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Object>
 - [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

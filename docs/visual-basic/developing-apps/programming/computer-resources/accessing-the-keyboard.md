@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: f4b719727f3264886f8c4c313d4e1154f0d04728
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00cdf18d057ca8a5c59cde02759b5c8c572a8bba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549270"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823577"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Klavyeye Erişme (Visual Basic)
 `My.Computer.Keyboard` Sağlayan özellikleri hangi anahtarlar gibi klavye geçerli durumuna erişmek için şu anda basılı nesne ve gönderme tuş vuruşları etkin pencereyi bir yöntem sağlar.  
@@ -31,5 +31,6 @@ ms.locfileid: "54549270"
 |Uygulama başlatma ve gönderme tuş vuruşları|[Nasıl yapılır: Uygulama başlatma ve gönderme tuş vuruşları (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.Devices.Keyboard>
 - <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>

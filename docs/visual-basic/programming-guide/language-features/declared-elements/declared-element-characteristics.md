@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: c34175a90c2c9c247a37ac186a415a585d1d7e97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582274"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821303"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Bildirilen Öğe Özellikleri (Visual Basic)
 A *karakteristik* bildirilen bir öğe kod ile nasıl etkileşim kurabileceğine etkiler o öğenin bir parçasıdır. Bildirilen her öğe bir veya daha fazla ilişkili aşağıdaki özelliklere sahiptir:  
@@ -54,6 +54,7 @@ A *karakteristik* bildirilen bir öğe kod ile nasıl etkileşim kurabileceğine
  <sup>1</sup> kapsam bazen olarak adlandırılır *görünürlük*.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bildirilen Öğeler](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e76fcb891e0b258d261208f7cb9173c49899ba11
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974269"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814503"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ'i Destekleyen Visual Basic Özellikleri
 Adı [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Visual Basic'de sorgu söz dizimi destekler ve doğrudan dilinde diğer dil yapıları teknoloji ifade eder. İle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], dış veri kaynağına karşı sorgu için yeni bir dil öğrenmek gerekmez. İlişkisel veritabanlarını, XML depoları veya nesneleri verilere karşı Visual Basic kullanarak sorgulayabilirsiniz. Sorgu dili özellikleri, bu tümleştirme, sözdizimi hataları ve tür güvenliği için derleme zamanı denetimi sağlar. Visual Basic'te, çeşitli zengin sorguları yazma bilmek zorunda çoğunu zaten bildiğiniz Bu tümleştirme de sağlar.  
@@ -94,6 +94,7 @@ Adı [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Visual Basic'de sor
  Daha fazla bilgi için [Lambda ifadeleri](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ ve dizeler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

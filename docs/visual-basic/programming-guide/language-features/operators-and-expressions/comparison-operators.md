@@ -15,12 +15,12 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: cd7ee90e749be76012cf7143787bc6f1d096da03
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d08974a929a723d4037300f9d72ae03c072d47fa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969381"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826164"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Visual Basic'de Karşılaştırma İşleçleri
 Karşılaştırma işleçleri iki ifadeden karşılaştırın ve dönüş bir `Boolean` değerleri arasındaki ilişkiyi gösteren bir değer. Sayısal değerler için dizeleri Karşılaştırma işleçleri ve nesneleri Karşılaştırma işleçleri karşılaştırmak için işleci vardır. Üç tür işleç tüm burada ele alınmıştır.  
@@ -89,6 +89,7 @@ Karşılaştırma işleçleri iki ifadeden karşılaştırın ve dönüş bir `B
  Daha fazla bilgi için [TypeOf işleci](../../../../visual-basic/language-reference/operators/typeof-operator.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Değer Karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Karşılaştırma İşleçleri](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [İşleçler](../../../../visual-basic/language-reference/operators/index.md)

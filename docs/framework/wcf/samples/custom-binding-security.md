@@ -2,12 +2,12 @@
 title: Özel Bağlama Güvenliği
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 7f4162b26dc64f3108ab77bf7f7587cfdc24339f
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 444e9fc1b9a1543ab22c112468929efa2621db03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333449"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814425"
 ---
 # <a name="custom-binding-security"></a>Özel Bağlama Güvenliği
 Bu örnek, özel bir bağlama kullanarak güvenlik yapılandırma işlemi gösterilmektedir. Bu, özel bağlama güvenli aktarım birlikte ileti düzeyi güvenliği etkinleştirmek için nasıl kullanılacağını gösterir. Bu hizmet ve istemci arasında ileti aktarmaya güvenli aktarım gereklidir ve iletileri ileti düzeyi üzerinde aynı anda güvenli olmalıdır yararlı olur. Bu yapılandırma, sistem tarafından sağlanan bağlamalar tarafından desteklenmiyor.
@@ -185,5 +185,3 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 ### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için
 
 -   Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.
-
-## <a name="see-also"></a>Ayrıca bkz.

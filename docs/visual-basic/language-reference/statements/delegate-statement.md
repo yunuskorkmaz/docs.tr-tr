@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: c0fb524961cd04b73a8b83094880d5eaa206fe9c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 880b4cf75d518506d2bcf788ad8460274dcccefc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965806"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821322"
 ---
 # <a name="delegate-statement"></a>Delegate Deyimi
 Bir temsilci bildirmek için kullanılır. Temsilci başvurduğu bir başvuru türüdür bir `Shared` türü veya bir nesnenin bir örnek yöntemi için yöntem. Parametre ve dönüş türleri eşleşen her türlü yordam, bu temsilci sınıfı örneğini oluşturmak için kullanılabilir. Yordamı, temsilci örneği aracılığıyla sonra bir daha sonra çağrılabilir.  
@@ -65,6 +65,7 @@ Bir temsilci bildirmek için kullanılır. Temsilci başvurduğu bir başvuru t�
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [AddressOf İşleci](../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [,](../../../visual-basic/language-reference/statements/of-clause.md)
 - [Temsilciler](../../../visual-basic/programming-guide/language-features/delegates/index.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981458"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817210"
 ---
 # <a name="string-functions-visual-basic"></a>Dize İşlevleri (Visual Basic)
 Aşağıdaki tabloda, Visual Basic dizeleri arama ve işleme için sağladığı işlevleri listeler.  
@@ -82,6 +82,7 @@ Aşağıdaki tabloda, Visual Basic dizeleri arama ve işleme için sağladığı
  [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Dize Düzenleme Özeti](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

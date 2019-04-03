@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: 899c33e6615e2979ba7abe0f537dbe05fd104beb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05b4b1cb29abff97c44c33d462375fc4d5ab159d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965572"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818585"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değer döndürmeyen bir yordam çağırma
 A `Sub` yordamın çağrıldığı koda bir değer döndürmüyor. Bunu açıkça çağıran bir tek başına deyimiyle çağırmanız. Bir ifade içinde adını kullanarak çağrılamıyor.  
@@ -29,6 +29,7 @@ A `Sub` yordamın çağrıldığı koda bir değer döndürmüyor. Bunu açıkç
      [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
 - [Yordamlar](./index.md)

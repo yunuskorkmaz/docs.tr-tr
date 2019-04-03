@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-ms.openlocfilehash: e33d396dac8ae5f9afd057a27f27bee700092f71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2221f2677183cf360fa82a4d73a679a8b68927d1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634356"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819690"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Bildirilmiş XML Öğeleri ve Özniteliklerinin Adları (Visual Basic)
 Bu konu, XML öğeleri ve özniteliklerinin XML değişmez değerlerinde adlandırmak için Visual Basic yönergeler sağlar.  XML değişmez değer, yerel adı veya tam ad belirtebilirsiniz. Bir tam adı, bir XML ad alanı öneki, bir iki nokta üst üste ve yerel ad oluşur. XML ad alanı öneklerini hakkında daha fazla bilgi için bkz: [XML öğesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
@@ -45,5 +45,6 @@ Bu konu, XML öğeleri ve özniteliklerinin XML değişmez değerlerinde adland�
  Bir XML öğesi değişmez değeri oluştururken, XML ad alanı öneki öğe adı belirtebilirsiniz. Daha fazla bilgi için [XML öğesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML Öğesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

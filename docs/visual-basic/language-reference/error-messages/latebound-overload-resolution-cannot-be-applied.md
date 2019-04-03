@@ -8,12 +8,12 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272662"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814061"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Geç bağlanan aşırı yükleme çözünürlüğü uygulanamaz '\<procedurename >' örnek bir arabirim türü olduğundan
 Derleyici bir aşırı yüklenmiş özellik veya yordamı başvuru çözmeye çalışıyor, ancak başvuru türünde bir bağımsız değişken olduğu için başarısız `Object` ve başvurulan nesne bir arabirim için veri türüne sahip. `Object` Bağımsız değişken başvuru geç bağlama olarak çözümlemek için derleyici zorlar.  
@@ -65,6 +65,7 @@ refer.s1(CType(o1, Double))
  Her biri önceki kod satırlarını açıkça bıraktığı `Object` değişkeni `o1` biri aşırı yüklemeleri için tanımlanmış bir parametre türleri olarak.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordam Aşırı Yüklemesi](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
 - [Aşırı Yükleme Çözümü](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
 - [CType İşlevi](../../../visual-basic/language-reference/functions/ctype-function.md)

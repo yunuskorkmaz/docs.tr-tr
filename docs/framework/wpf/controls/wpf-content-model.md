@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: bd9dc7a441987b2089f0f21c81311a628ae3cdfa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cbb13fdcba2cf014c4c31a5dc5b21fe2721b214
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373104"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816921"
 ---
 # <a name="wpf-content-model"></a>WPF İçerik Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] birçok denetimleri ve farklı içerik türlerini görüntülemek için birincil amacı olan denetim-like türleri sağlayan bir sunu platformudur. Hangi denetimi kullanmak için veya türetmek için hangi denetimi belirlemek için belirli bir denetimi en iyi görüntüleyebilirsiniz nesne türlerini anlamanız gerekir.  
@@ -38,9 +38,9 @@ ms.locfileid: "57373104"
 |<xref:System.Windows.Controls.ItemsControl>|Rastgele nesneleri koleksiyonu.|  
 |<xref:System.Windows.Controls.HeaderedItemsControl>|Üstbilgi ve tümü isteğe bağlı nesneleri olan öğelerin bir koleksiyonu.|  
   
- Bu sınıflardan devralmasına denetimleri, aynı içerik türünü içerir ve içerik aynı şekilde davranma. Aşağıdaki çizimde, bir görüntü içeren her bir içerik modeli ve bazı metin bir denetimi gösterir.  
+ Bu sınıflardan devralmasına denetimleri, aynı içerik türünü içerir ve içerik aynı şekilde davranma. Aşağıdaki resimde, bir görüntü içeren her bir içerik modeli ve bazı metinler denetiminden gösterilmektedir:  
   
- ![Düğme, Grup, Listbax, TreeViewItem](./media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
+ ![İçerik modeli her birinden dört farklı denetim gösteren ekran görüntüsü.](./media/wpf-content-model/control-content-model-image-text.png)  
   
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>Tek bir rasgele nesne içeren denetimler  
  <xref:System.Windows.Controls.ContentControl> Sınıfı, rastgele içeriği tek bir parçasını içerir. İçerik özelliği olan <xref:System.Windows.Controls.ContentControl.Content%2A>. Aşağıdaki denetimler devralınacak <xref:System.Windows.Controls.ContentControl> ve kendi içerik modelini kullanın:  
@@ -85,10 +85,9 @@ ms.locfileid: "57373104"
   
 -   <xref:System.Windows.Window>  
   
- Aşağıdaki resimde dört düğme gösterilmektedir <xref:System.Windows.Controls.ContentControl.Content%2A> bir dize olarak ayarlanmış bir <xref:System.DateTime> nesnesi bir <xref:System.Windows.Shapes.Rectangle>ve <xref:System.Windows.Controls.Panel> içeren bir <xref:System.Windows.Shapes.Ellipse> ve <xref:System.Windows.Controls.TextBlock>.  
+ Aşağıdaki resimde dört düğme gösterilmektedir <xref:System.Windows.Controls.ContentControl.Content%2A> bir dize olarak ayarlanmış bir <xref:System.DateTime> nesnesi bir <xref:System.Windows.Shapes.Rectangle>ve <xref:System.Windows.Controls.Panel> içeren bir <xref:System.Windows.Shapes.Ellipse> ve <xref:System.Windows.Controls.TextBlock>:  
   
- ![Dört düğme](./media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
-İçerik türleri farklı olan dört düğme  
+ ![Farklı içerik türleri ile dört düğme gösteren ekran görüntüsü.](./media/wpf-content-model/control-content-model-buttons.png)  
   
  Ayarlama örneği için <xref:System.Windows.Controls.ContentControl.Content%2A> özelliği bkz <xref:System.Windows.Controls.ContentControl>.  
   
@@ -105,8 +104,7 @@ ms.locfileid: "57373104"
   
  Aşağıdaki iki resimde <xref:System.Windows.Controls.TabItem> nesneleri. İlk <xref:System.Windows.Controls.TabItem> sahip <xref:System.Windows.UIElement> olarak nesneleri <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> ve <xref:System.Windows.Controls.ContentControl.Content%2A>. <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> Ayarlanmış bir <xref:System.Windows.Controls.StackPanel> içeren bir <xref:System.Windows.Shapes.Ellipse> ve <xref:System.Windows.Controls.TextBlock>. <xref:System.Windows.Controls.ContentControl.Content%2A> Ayarlanmış bir <xref:System.Windows.Controls.StackPanel> içeren bir <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Controls.Label>. İkinci <xref:System.Windows.Controls.TabItem> cinsinden bir dize olan <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> ve <xref:System.Windows.Controls.TextBlock> içinde <xref:System.Windows.Controls.ContentControl.Content%2A>.  
   
- ![TabControl](./media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
-Farklı üst bilgi özelliği kullanan TabControl  
+ ![Farklı üst bilgi özelliği kullanan TabControl.](./media/wpf-content-model/control-content-model-tab.png)  
   
  Nasıl oluşturulacağına dair bir örnek <xref:System.Windows.Controls.TabItem> nesneleri bkz <xref:System.Windows.Controls.HeaderedContentControl>.  
   
@@ -147,8 +145,7 @@ Farklı üst bilgi özelliği kullanan TabControl
   
 -   A <xref:System.Windows.Controls.Panel> içeren bir <xref:System.Windows.Shapes.Ellipse> ve <xref:System.Windows.Controls.TextBlock>.  
   
- ![Dört tür içerikle ListBox](./media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
-Birden çok nesne içeren bir liste kutusu  
+ ![Dört tür içerikle ListBox gösteren ekran görüntüsü.](./media/wpf-content-model/control-content-model-listbox.png)  
   
 ### <a name="controls-that-contain-a-header-and-a-collection-of-arbitrary-objects"></a>Üst bilgi ve rastgele nesnelerinin bir koleksiyonunu içeren denetimler  
  <xref:System.Windows.Controls.HeaderedItemsControl> Sınıfının devraldığı <xref:System.Windows.Controls.ItemsControl> ve dizeler, nesneler veya diğer öğeleri ve bir üst bilgisi gibi birden çok öğe içerebilir. Devralır <xref:System.Windows.Controls.ItemsControl> içerik özellikleri, <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>, ve <xref:System.Windows.Controls.ItemsControl.Items%2A>, ve tanımladığı <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> özelliği rastgele bir nesne olabilir.  

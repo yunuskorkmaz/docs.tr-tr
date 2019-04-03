@@ -8,12 +8,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 0f356b52304110299ed0af9bbccd5d03893f31a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596364"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824916"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic Sınırlamaları
 Visual Basic'in önceki sürümlerindeki kodda, uzunluğu, değişkeni adları, modülleri ve modül boyutu izin verilen değişken sayısı gibi sınırlar zorunlu. Visual Basic. NET'te, bu kısıtlamalar, yazmak ve kodunuzu düzenleme büyük özgürlüğünü esnek.  
@@ -33,5 +33,6 @@ Visual Basic'in önceki sürümlerindeki kodda, uzunluğu, değişkeni adları, 
 -   **Ortam dize uzunluğu.** En fazla bir komut satırı bağımsız değişken olarak kullanılan herhangi bir ortam dize için 32.768 karakter yoktur. Bu tüm platformlarda sınırlamasıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

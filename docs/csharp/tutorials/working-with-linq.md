@@ -3,12 +3,12 @@ title: LINQ ile çalışma
 description: Bu öğreticide LINQ ile dizileri oluşturmak, yöntemleri kullanmak için LINQ sorguları yazma ve eager ve geç değerlendirme arasında ayrım öğretir.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679664"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815594"
 ---
 # <a name="working-with-linq"></a>LINQ ile çalışma
 
@@ -115,7 +115,7 @@ Derleyici, eşdeğer yöntemi çağrısı sözdizimine sorgu sözdizimi kullanı
 
 Devam edip bu noktada derlediğiniz örneği çalıştırın. Tüm 52 kartları deste içinde görüntüler. Gözlemlemek için hata ayıklayıcı altında bu örneği çalıştırmak çok yararlı bulabilirsiniz nasıl `Suits()` ve `Ranks()` bir yöntem yürütülemez. Yalnızca gerektiği gibi her bir dizideki her bir dizenin oluşturulan açıkça görebilirsiniz.
 
-![52 kartları yazma uygulamayı gösteren konsol penceresi](./media/working-with-linq/console.png)
+![52 kartları yazma uygulamayı gösteren bir konsol penceresi.](./media/working-with-linq/console-52-card-application.png)
 
 ## <a name="manipulating-the-order"></a>Sipariş işleme
 

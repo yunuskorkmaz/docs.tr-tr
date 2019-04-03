@@ -2,12 +2,12 @@
 title: Önce Anlaşma Aracı
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: ef19843d6c8a9de0b926dd8512f5a58a5966e1bf
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846187"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819625"
 ---
 # <a name="contract-first-tool"></a>Önce Anlaşma Aracı
 Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], veri sözleşme sınıfları oluşturulabilir otomatik olarak önce anlaşma aracı kullanarak mevcut hizmetlerden. Önce anlaşma aracı kullanmak için XML şema tanımı dosyası (XSD) yerel olarak indirilmelidir; aracın HTTP üzerinden uzak veri sözleşmeleri içeri aktarılamıyor.
@@ -61,11 +61,11 @@ Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. İ
 ## <a name="configuring-contract-first-options"></a>Önce anlaşma seçeneklerini yapılandırma
  Sözleşme öncelikli seçenekler WCF proje özellikleri menüsünde yapılandırılabilir. Sözleşme ilk geliştirmesi etkinleştirmek için seçin **etkinleştirme XSD türü tanım dili olarak** onay kutusuna WCF sayfası, Proje Özellikleri penceresi.
 
- ![WCF proje seçenekleri gösteren sözleşme&#45;ilk](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")
+ ![Sözleşme ilk geliştirmesi etkin ile WCF seçeneklerinin ekran görüntüsü.](./media/contract-first-tool/contract-first-options.png)
 
  Gelişmiş özelliklerini yapılandırmak için Gelişmiş düğmesine tıklayın.
 
- ![Gelişmiş sözleşme&#45;ilk özellikleri](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")
+ ![Gelişmiş sözleşme kodu oluşturma ayarları iletişim kutusu.](./media/contract-first-tool/advanced-contract-settings.png)
 
  Gelişmiş ayarlar aşağıdaki anlaşmalarından alınan kod oluşturma için yapılandırılabilir. Ayarlar, yalnızca tüm proje dosyaları için yapılandırılabilir; ayarları tek tek dosyalar için şu anda yapılandırılamaz.
 
@@ -118,9 +118,9 @@ Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. İ
 using MyProjectNamespace.ContractTypes;
 ```
 
- Hizmet sözleşmesi içerisinde tanımlanan türleri ardından aşağıda gösterildiği gibi proje çözümlenebilir olacaktır.
+ Hizmet sözleşmesi içerisinde tanımlanan türleri aşağıda gösterildiği gibi proje çözümlenebilir gibi olur:
 
- ![Türetilmiş bir servis sözleşmesi türleri kullanarak](../../../docs/framework/wcf/media/contractfirsttypes.png "ContractFirstTypes")
+ ![İlk birkaç harfini yazdıktan sonra Intellisense'te gösteren SearchRequest sınıfı.](./media/contract-first-tool/service-contract-types.png)
 
  Araç tarafından oluşturulan türler GeneratedXSDTypes.cs dosyasında oluşturulur. Bir dosya oluşturulur \<proje dizini > /obj/\<derleme yapılandırması > Varsayılan olarak /XSDGeneratedCode/ dizin. Bu konunun başında örnek şeması şu şekilde dönüştürülür:
 

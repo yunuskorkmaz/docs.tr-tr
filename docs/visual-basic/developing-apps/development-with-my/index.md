@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 2758dc847d6549689d688ef4742bb334b1968988
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720229"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830324"
 ---
 # <a name="development-with-my-visual-basic"></a>My Özelliğiyle Geliştirme (Visual Basic)
 Visual Basic, verimlilik ve güç göndermeye çalışırken kullanım kolaylığı artırmak hızlı uygulama geliştirmeye yönelik yeni özellikler sağlar. Olarak adlandırılan, bu özelliklerden birini `My`, uygulama ve onun çalışma zamanı ortamı ilgili nesne örneklerini bilgi ve varsayılan erişim sağlar. Bu bilgiler, IntelliSense aracılığıyla bulunabilir ve kullanıma göre sonuçları mantıksal bir biçimde düzenlenmiştir.  
@@ -23,7 +23,7 @@ Visual Basic, verimlilik ve güç göndermeye çalışırken kullanım kolaylı�
   
  Bu tabloda, en üst düzey gösterilmektedir `My` nesneleri ve bunların birbirlerine.  
   
- ![Nesne modeli için benim](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")  
+ ![Diyagram için nesne modeli gösterilmektedir benim.](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [My.Application, My.Computer ve My.User ile Görev Gerçekleştirme](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
@@ -42,6 +42,7 @@ Visual Basic, verimlilik ve güç göndermeye çalışırken kullanım kolaylı�
  Üzerinde ayrıntılarını verir `My` özellikleri farklı proje türlerinde kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>

@@ -2,12 +2,12 @@
 title: (Visual Basic) XML ağacına öğe, öznitelik ve düğümleri ekleme
 ms.date: 07/20/2015
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
-ms.openlocfilehash: 5b15a3a943425a7443ad0986d8d91973d0090ed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35d3bdb27342dd7a871778ad4749db4d6849bd60
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669347"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814325"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>(Visual Basic) XML ağacına öğe, öznitelik ve düğümleri ekleme
 Varolan bir XML ağacına içeriği (öğe, öznitelik, yorumlar, işleme yönergeleri, metin ve CDATA) ekleyebilirsiniz.  
@@ -81,4 +81,5 @@ Console.WriteLine(xmlTree)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [(LINQ to XML) XML ağaçlarını değiştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

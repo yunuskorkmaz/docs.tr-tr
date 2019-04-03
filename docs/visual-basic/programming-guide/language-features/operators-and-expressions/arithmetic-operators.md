@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981276"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820782"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic'de Aritmetik İşleçler
 Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, işlevi ve özellik çağrılarını ve sabitleri tarafından temsil edilen sayısal değerleri hesaplama ilgili alışık olduğunuz aritmetik işlemleri çoğunu gerçekleştirmek için kullanılır. Ayrıca aritmetik sınıflandırılmış işlenenden tek bit düzeyinde işlem ve bunların bit düzenleri sola veya sağa kaydırma bit kaydırma işleçleri şunlardır.  
@@ -95,6 +95,7 @@ Aritmetik işleçler değişmez değerleri, değişkenleri, diğer ifadeler, iş
  Ayarlarsanız `Option Strict Off`, ancak beklenmeyen veri veya duyarlık kaybına neden olabilir, ancak Visual Basic, gerçekleşmesi örtük daraltma dönüştürmelerini tanır. Bu nedenle, kullandığınız olan öneririz `Option Strict On` üretim kodu yazarken. Daha fazla bilgi için [Widening ve daraltma dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Aritmetik İşleçler](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Bit Kaydırma İşleçleri](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

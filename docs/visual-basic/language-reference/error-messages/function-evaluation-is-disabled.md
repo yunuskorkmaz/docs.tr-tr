@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: 6c3b0d3b86e871228c4bf3b30f0871015641a730
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d024420fbbc3efbd3d19bb58c9379eacbafac5d3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718279"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820743"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>Önceki bir işlev değerlendirmesi zaman aşımına uğradığından işlev değerlendirmesi devre dışı bırakıldı
 Bir önceki İşlev değerlendirmesi zaman aşımına uğradığından İşlev değerlendirmesi devre dışı bırakıldı. İşlev değerlendirmesi yeniden etkinleştirmek için adım yeniden veya hata ayıklamayı yeniden başlatın.  
@@ -32,5 +32,6 @@ Bir önceki İşlev değerlendirmesi zaman aşımına uğradığından İşlev d
 2.  Hata ayıklayıcıyı yeniden adım veya sonlandırır ve hata ayıklamayı yeniden başlatın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio)
 - [Hata Ayıklayıcısı ile Kodlarda gezinme](/visualstudio/debugger/navigating-through-code-with-the-debugger)

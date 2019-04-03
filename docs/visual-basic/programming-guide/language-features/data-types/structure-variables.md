@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640608"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816336"
 ---
 # <a name="structure-variables-visual-basic"></a>Yapı Değişkenleri (Visual Basic)
 Bir yapı oluşturulduktan sonra bu türü olarak yordam ve Modül düzeyinde değişkenleri bildirebilirsiniz. Örneğin, bir bilgisayar sistemi ilgili bilgileri kaydeden bir yapısı oluşturabilirsiniz. Aşağıdaki örnekte bu gösterir.  
@@ -53,6 +53,7 @@ yourSystem = mySystem
  Yapı öğesi bir başvuru türü olduğu gibi bir `String`, `Object`, ya da veri işaretçisine diziye kopyalanır. Önceki örnekte, `systemInfo` sonra kopyalanan işaretçisinden önceki örnekte bir nesne değişkeninin dahil `mySystem` için `yourSystem`, ve bir değişiklik nesne verilerinin bir yapısı üzerinden erişildiğinde yürürlükte olur diğer yapısı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

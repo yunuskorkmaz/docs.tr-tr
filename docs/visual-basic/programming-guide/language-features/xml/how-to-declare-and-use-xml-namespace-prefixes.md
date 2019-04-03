@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML namespace prefixes
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
-ms.openlocfilehash: 699bb05fd0c1c38cc0919fbf881e6bd628f01393
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 244329058624bebb03440961c1dda4a50b4efb8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965741"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818670"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Nasıl yapılır: XML Namespace öneklerini (Visual Basic) bildirme ve kullanma
 Bu örnek, XML ad alanı öneki içeri aktarma gösterir `ns` ve bir XML değişmez değeri ve XML eksen özelliklerini kullanın.  
@@ -24,6 +24,7 @@ Bu örnek, XML ad alanı öneki içeri aktarma gösterir `ns` ve bir XML değiş
 -   Bir başvuru <xref:System.Xml.Linq> ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
 - [Imports Deyimi (XML Ad Alanı)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
 - [XML Özniteliği Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)

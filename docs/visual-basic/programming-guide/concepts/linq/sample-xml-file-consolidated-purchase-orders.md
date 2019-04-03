@@ -1,15 +1,15 @@
 ---
-title: 'Örnek XML dosyası: Birleştirilmiş satın alma Orders3'
+title: 'Örnek XML Dosyası: Birleştirilmiş satın alma Orders3'
 ms.date: 07/20/2015
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
-ms.openlocfilehash: 2cfd996c088f29766b3878c3c5ad1fc48c69e2dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edeb1381b674ee9f6fba45f14c7b6f12b363a37a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503694"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824747"
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a>Örnek XML dosyası: Birleştirilmiş satın alma siparişleri
+# <a name="sample-xml-file-consolidated-purchase-orders"></a>Örnek XML Dosyası: Birleştirilmiş Satın Alma Siparişleri
 Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgeleri. Bu dosyayı, birden çok şirketlerin farklı şekiller ile satın alma siparişleri kümesidir. Her bir şirketten satın alma siparişleri ayrı ad alanlarında ' dir.  
   
 ## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  
@@ -145,4 +145,5 @@ Aşağıdaki XML dosyasını çeşitli örneklerde kullanılan [!INCLUDE[sqltecx
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Örnek XML Belgeleri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: dd5fadb9c9f248b5fb4f289bb2d24f1b085a79a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78bf5b1f19db3a4f39e263cfd71283f0f7718631
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503735"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817194"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Nasıl yapılır: (Visual Basic) komut satırı derleyicisini çağırma
 Komut satırına, MS-DOS İstemi olarak da bilinen yürütülebilir dosyasının adını yazarak komut satırı derleyicisini çağırabilirsiniz. Windows komut istemi varsayılan derleme yaparsanız, yürütülebilir dosyanın tam yolunu yazmanız gerekir. Bu varsayılan davranışı geçersiz kılmak için Visual Studio için geliştirici komut istemi kullanın veya yol ortam değişkenine değiştirin. Her ikisi de, derleme adını yazarak herhangi bir dizinden derleme olanak tanır.  
@@ -58,5 +58,6 @@ Komut satırına, MS-DOS İstemi olarak da bilinen yürütülebilir dosyasının
      Örneğin, kaynak kodunuzu adlı dizinde depolanan `SourceFiles`, türü ve komut istemi açmak `cd SourceFiles` bu dizine gidin. Dizin adlı bir kaynak dosyası içeriyorsa `Source.vb`, yazarak derleme `vbc.exe Source.vb`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

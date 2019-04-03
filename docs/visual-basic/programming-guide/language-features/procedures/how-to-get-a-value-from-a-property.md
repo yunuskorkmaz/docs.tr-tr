@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7dbc9d926ae937dd032c0c054bde440037ab9f0d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964779"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842921"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Nasıl yapılır: Değer bir özelliği (Visual Basic) alma
 Bir özelliğin değeri, özellik adı bir ifade dahil ederek alın.  
@@ -24,7 +24,7 @@ Bir özelliğin değeri, özellik adı bir ifade dahil ederek alın.
   
 1.  Özellik adı bir ifade bir değişken adı kullanacağınız aynı şekilde kullanın. Bir özellik kullanabileceğiniz bir değişken veya sabit her yerde kullanabilirsiniz.  
   
-     -veya-  
+     veya  
   
      Eşit aşağıdaki özellik adını kullanın (`=`) bir atama ifadesinde oturum açın.  
   
@@ -39,6 +39,7 @@ Bir özelliğin değeri, özellik adı bir ifade dahil ederek alın.
  İfade bir değişken gibi bir özelliğin değerini katıldığı sabiti misiniz veya değişken veya özellik atama ifadesi sol tarafında depolanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](./index.md)
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)

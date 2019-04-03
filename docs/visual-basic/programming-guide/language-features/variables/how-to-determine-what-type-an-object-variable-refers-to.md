@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 149af116f2b848082367b33d826bace8345cee05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571184"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816414"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Nasıl yapılır: Bir nesne değişkeninin (Visual Basic) hangi türe başvurduğunu belirleme
 Bir nesne değişkeni başka bir yere depolanmış veriler için bir işaretçi içerir. Çalışma zamanı sırasında bu veri türünü değiştirebilirsiniz. Herhangi bir anda kullanabileceğiniz <xref:System.Type.GetTypeCode%2A> geçerli çalışma zamanı türü belirlemek için yöntemi veya [TypeOf işleci](../../../../visual-basic/language-reference/operators/typeof-operator.md) geçerli olmadığını anlamak için çalışma zamanı türü belirtilen bir tür ile uyumludur.  
@@ -53,6 +53,7 @@ Bir nesne değişkeni başka bir yere depolanmış veriler için bir işaretçi 
  Belirtilen türde bir değişkenin veya ifadenin olamayacağını unutmayın. Bu sınıf, yapı veya arabirim gibi tanımlanan bir tür adı olmalıdır. Bu gibi iç türleri içerir `Integer` ve `String`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.GetTypeCode%2A>

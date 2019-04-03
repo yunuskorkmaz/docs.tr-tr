@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 56d753c9bb4e3585049eb98929774ac810d8ed40
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2361a42ececbe12b5f61833e5a40607c8215a65d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978182"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821068"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>İzlenecek yol: .NET Framework yöntemleri (Visual Basic) kullanarak dosyaları düzenleme
 Bu izlenecek yol, açın ve kullanarak bir dosyayı okumak gösterilmiştir <xref:System.IO.StreamReader> sınıfı, bir dosya erişilebilir olmadığını kontrol edin, bir dize örneği ile okuma dosya içindeki arama <xref:System.IO.StreamReader> sınıfı ve kullanarak bir dosyaya yazma <xref:System.IO.StreamWriter> sınıfı.  
@@ -148,6 +148,7 @@ Bu izlenecek yol, açın ve kullanarak bir dosyayı okumak gösterilmiştir <xre
  Kodunuzu test etmek için uygulamayı derlemek üzere F5 tuşuna basın. Tıklayın **Girişleri Al**bir girişi seçin ve ardından **görünen**. Giriş belirir `DisplayEntry` <xref:System.Windows.Forms.TextBox>. Tıklayın **Düzenle giriş**. Giriş belirir `Entry` <xref:System.Windows.Forms.TextBox>. Girişi düzenlemek `Entry` <xref:System.Windows.Forms.TextBox> tıklatıp **gönderme Düzenle**. Açık `MyDiary.txt` düzeltmenizi onaylamak için dosya. Artık bir girişi seçin ve tıklayın **girdiyi Sil**. Zaman <xref:System.Windows.Forms.MessageBox> onay istekleri tıklayın **Tamam**. Uygulamayı kapatın ve açın `MyDiary.txt` silme işlemini onaylamak için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
 - [İzlenecek Yollar](../../../../visual-basic/walkthroughs.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276620"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817168"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' parametresinin değeri kopyalama '\<parametername >' eşleşen bağımsız değişkene geri türüne daralan '\<typename1 >' türü için '\<typename2 >'
 Bir yordam bağımsız değişken için karşılık gelen parametre türü widens çağrılır ve bağımsız değişken parametre dönüştürme daraltma.  
@@ -34,6 +34,7 @@ Bir yordam bağımsız değişken için karşılık gelen parametre türü widen
 -   Çağırma bağımsız değişkeni bir değer döndürmesi gerekiyorsa, geriye doğru dönüştürme işleci olarak tanımlama [Widening](../../../visual-basic/language-reference/modifiers/widening.md), mümkünse.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 66c576df7499c90ae29399ab9b0bd93f0fda6cb2
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 846d033c62d0168bab4661b9ab2b71a2139e2fcb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738987"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823525"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Alfabetik listelenmiş Visual Basic derleyici seçenekleri
 Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamından (IDE) programları derleme alternatif olarak sağlanır. Alfabetik olarak sıralanmış Visual Basic derleyici komut satırı seçeneklerinin listesi verilmiştir.  
@@ -81,5 +81,6 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Bir Win32 kaynağı çıktı dosyasına ekler.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
 - [Proje ve çözüm özelliklerini yönetme](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

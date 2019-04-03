@@ -1,15 +1,15 @@
 ---
-title: Varlık veri modeli temel kavramları
+title: Varlık Veri Modeli Temel Kavramları
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: 0a79143f8927a8368eaba1224c27f453ca81bdf7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574332"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825670"
 ---
-# <a name="entity-data-model-key-concepts"></a>Varlık veri modeli temel kavramları
+# <a name="entity-data-model-key-concepts"></a>Varlık Veri Modeli Temel Kavramları
 Verilerin yapısını tanımlamak için üç temel kavramları varlık veri modeli (EDM) kullanır: *varlık türü*, *ilişkilendirme türü*, ve *özelliği*. Bu EDM herhangi bir uygulamada verilerin yapısını açıklayan en önemli kavramlar ücretlerdir.  
   
 ## <a name="entity-type"></a>Varlık türü  
@@ -32,7 +32,7 @@ Verilerin yapısını tanımlamak için üç temel kavramları varlık veri mode
 ## <a name="representations-of-a-conceptual-model"></a>Kavramsal Model gösterimleri  
  A *kavramsal model* belirli bir gösterimiyse bazı verilerin yapısını, varlıkları ve ilişkileri. Kavramsal bir modeli temsil eden bir diyagram ile yoludur. Aşağıdaki diyagramda üç varlık türleri ile kavramsal bir modeli temsil eder (`Book`, `Publisher`, ve `Author`) ve iki ilişkilendirmelerini (`PublishedBy` ve `WrittenBy`):  
   
- ![Gezinti özellikleri ile model](../../../../docs/framework/data/adonet/media/modelwithnavprops.gif "ModelWithNavProps")  
+ ![Kavramsal bir modelle üç varlık türlerini gösteren diyagram.](./media/entity-data-model-key-concepts/conceptual-model-entity-types-associations.gif)  
   
  Modelle ilgili bazı ayrıntılar iletmek için söz konusu olduğunda bu gösterim, ancak bazı eksiklikleri vardır. Örneğin, özellik türü ve varlık kümesi bilgileri değil ilettiği diyagramda. Kavramsal model zenginliğine daha net bir şekilde bir etki alanına özgü dil (DSL) iletilmesi. [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) adlı bir XML tabanlı DSL kullanan *kavramsal şema tanım dili* ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Yukarıdaki diyagramda kavramsal modelde CSDL tanımı aşağıda verilmiştir:  
   
