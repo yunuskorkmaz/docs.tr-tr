@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: XmlSerializer (Visual Basic) kullanarak seri hale getirme'
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: 0c57c7a1b24a77485684e9ab5d0feaea1416286e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582688"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821471"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="8e4fd-102">Nasıl yapılır: XmlSerializer (Visual Basic) kullanarak seri hale getirme</span><span class="sxs-lookup"><span data-stu-id="8e4fd-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
-<span data-ttu-id="8e4fd-103">Bu konuda serileştirir ve kullanarak çıkarır bir örnek gösterilmektedir <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="8e4fd-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="37118-102">Nasıl yapılır: XmlSerializer (Visual Basic) kullanarak seri hale getirme</span><span class="sxs-lookup"><span data-stu-id="37118-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
+<span data-ttu-id="37118-103">Bu konuda serileştirir ve kullanarak çıkarır bir örnek gösterilmektedir <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="37118-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8e4fd-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="8e4fd-104">Example</span></span>  
- <span data-ttu-id="8e4fd-105">Aşağıdaki örnek, bir sayı içeren bir nesne oluşturur. <xref:System.Xml.Linq.XElement> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="8e4fd-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="8e4fd-106">Ardından bunları bir bellek akışa serileştirir ve bunları bellek akıştan serisini kaldırır.</span><span class="sxs-lookup"><span data-stu-id="8e4fd-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
+## <a name="example"></a><span data-ttu-id="37118-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="37118-104">Example</span></span>  
+ <span data-ttu-id="37118-105">Aşağıdaki örnek, bir sayı içeren bir nesne oluşturur. <xref:System.Xml.Linq.XElement> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="37118-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="37118-106">Ardından bunları bir bellek akışa serileştirir ve bunları bellek akıştan serisini kaldırır.</span><span class="sxs-lookup"><span data-stu-id="37118-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```vb  
 Imports System  
@@ -69,7 +69,7 @@ Public Class XLinqTest
 End Class  
 ```  
   
- <span data-ttu-id="8e4fd-107">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="8e4fd-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="37118-107">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="37118-107">This example produces the following output:</span></span>  
   
 ```  
 Testing for type: XElementNullContainer  
@@ -80,5 +80,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8e4fd-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8e4fd-108">See also</span></span>
-- [<span data-ttu-id="8e4fd-109">(Visual Basic) XElement nesneleri içeren nesne grafiklerini serileştirme</span><span class="sxs-lookup"><span data-stu-id="8e4fd-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a><span data-ttu-id="37118-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="37118-108">See also</span></span>
+
+- [<span data-ttu-id="37118-109">(Visual Basic) XElement nesneleri içeren nesne grafiklerini serileştirme</span><span class="sxs-lookup"><span data-stu-id="37118-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

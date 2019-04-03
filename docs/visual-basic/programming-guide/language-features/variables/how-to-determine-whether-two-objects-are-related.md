@@ -6,28 +6,28 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 62c0280e3773d2e3ff15bc164d9e0e6cacb7bd4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4ff7c8e616c9126eae11a23e001c219dcbc0907
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544594"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819209"
 ---
-# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a><span data-ttu-id="9968a-102">Nasıl yapılır: İki nesnenin ilgili olup olmadığını belirleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9968a-102">How to: Determine Whether Two Objects Are Related (Visual Basic)</span></span>
-<span data-ttu-id="9968a-103">İki nesne varsa, oluşturuldukları sınıflar arasındaki ilişkileri belirlemek için karşılaştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9968a-103">You can compare two objects to determine the relationship, if any, between the classes from which they are created.</span></span> <span data-ttu-id="9968a-104"><xref:System.Type.IsInstanceOfType%2A> Yöntemi <xref:System.Type?displayProperty=nameWithType> sınıfı döndürür `True` belirtilen sınıf geçerli sınıfından devralan veya geçerli türü belirtilen sınıfı tarafından desteklenen bir arabirimdir.</span><span class="sxs-lookup"><span data-stu-id="9968a-104">The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.</span></span>  
+# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a><span data-ttu-id="130c7-102">Nasıl yapılır: İki nesnenin ilgili olup olmadığını belirleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="130c7-102">How to: Determine Whether Two Objects Are Related (Visual Basic)</span></span>
+<span data-ttu-id="130c7-103">İki nesne varsa, oluşturuldukları sınıflar arasındaki ilişkileri belirlemek için karşılaştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="130c7-103">You can compare two objects to determine the relationship, if any, between the classes from which they are created.</span></span> <span data-ttu-id="130c7-104"><xref:System.Type.IsInstanceOfType%2A> Yöntemi <xref:System.Type?displayProperty=nameWithType> sınıfı döndürür `True` belirtilen sınıf geçerli sınıfından devralan veya geçerli türü belirtilen sınıfı tarafından desteklenen bir arabirimdir.</span><span class="sxs-lookup"><span data-stu-id="130c7-104">The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.</span></span>  
   
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a><span data-ttu-id="9968a-105">Bir nesne başka bir nesnenin sınıfı veya arabirimi devralır belirlemek için</span><span class="sxs-lookup"><span data-stu-id="9968a-105">To determine if one object inherits from another object's class or interface</span></span>  
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a><span data-ttu-id="130c7-105">Bir nesne başka bir nesnenin sınıfı veya arabirimi devralır belirlemek için</span><span class="sxs-lookup"><span data-stu-id="130c7-105">To determine if one object inherits from another object's class or interface</span></span>  
   
-1.  <span data-ttu-id="9968a-106">Düşündüğünüz nesnesinde, temel türünde, çağırma <xref:System.Object.GetType%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9968a-106">On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.</span></span>  
+1.  <span data-ttu-id="130c7-106">Düşündüğünüz nesnesinde, temel türünde, çağırma <xref:System.Object.GetType%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="130c7-106">On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.</span></span>  
   
-2.  <span data-ttu-id="9968a-107">Üzerinde <xref:System.Type?displayProperty=nameWithType> tarafından döndürülen nesne <xref:System.Object.GetType%2A>, çağırma <xref:System.Type.IsInstanceOfType%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9968a-107">On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
+2.  <span data-ttu-id="130c7-107">Üzerinde <xref:System.Type?displayProperty=nameWithType> tarafından döndürülen nesne <xref:System.Object.GetType%2A>, çağırma <xref:System.Type.IsInstanceOfType%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="130c7-107">On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
   
-3.  <span data-ttu-id="9968a-108">Bağımsız değişken listesinde <xref:System.Type.IsInstanceOfType%2A>, düşündüğünüz nesne, türetilmiş bir tür olabilir belirtin.</span><span class="sxs-lookup"><span data-stu-id="9968a-108">In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.</span></span>  
+3.  <span data-ttu-id="130c7-108">Bağımsız değişken listesinde <xref:System.Type.IsInstanceOfType%2A>, düşündüğünüz nesne, türetilmiş bir tür olabilir belirtin.</span><span class="sxs-lookup"><span data-stu-id="130c7-108">In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.</span></span>  
   
-     <span data-ttu-id="9968a-109"><xref:System.Type.IsInstanceOfType%2A> döndürür `True` bağımsız değişken türünü öğesinden devralıyorsa <xref:System.Type?displayProperty=nameWithType> nesne türü.</span><span class="sxs-lookup"><span data-stu-id="9968a-109"><xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.</span></span>  
+     <span data-ttu-id="130c7-109"><xref:System.Type.IsInstanceOfType%2A> döndürür `True` bağımsız değişken türünü öğesinden devralıyorsa <xref:System.Type?displayProperty=nameWithType> nesne türü.</span><span class="sxs-lookup"><span data-stu-id="130c7-109"><xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9968a-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="9968a-110">Example</span></span>  
- <span data-ttu-id="9968a-111">Aşağıdaki örnek, bir nesne başka bir nesnenin sınıfından türetilen bir sınıf temsil edip etmediğini belirler.</span><span class="sxs-lookup"><span data-stu-id="9968a-111">The following example determines whether one object represents a class derived from another object's class.</span></span>  
+## <a name="example"></a><span data-ttu-id="130c7-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="130c7-110">Example</span></span>  
+ <span data-ttu-id="130c7-111">Aşağıdaki örnek, bir nesne başka bir nesnenin sınıfından türetilen bir sınıf temsil edip etmediğini belirler.</span><span class="sxs-lookup"><span data-stu-id="130c7-111">The following example determines whether one object represents a class derived from another object's class.</span></span>  
   
 ```  
 Public Class baseClass  
@@ -45,13 +45,14 @@ Public Class testTheseClasses
 End Class  
 ```  
   
- <span data-ttu-id="9968a-112">İki nesne değişkenleri aramasında beklenmeyen yerleşimini unutmayın <xref:System.Type.IsInstanceOfType%2A>.</span><span class="sxs-lookup"><span data-stu-id="9968a-112">Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>.</span></span> <span data-ttu-id="9968a-113">Beklenen temel türünü oluşturmak için kullanılan <xref:System.Type?displayProperty=nameWithType> sınıfı ve beklenen türetilmiş bir tür bağımsız değişkeni olarak geçirilir <xref:System.Type.IsInstanceOfType%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9968a-113">The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
+ <span data-ttu-id="130c7-112">İki nesne değişkenleri aramasında beklenmeyen yerleşimini unutmayın <xref:System.Type.IsInstanceOfType%2A>.</span><span class="sxs-lookup"><span data-stu-id="130c7-112">Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>.</span></span> <span data-ttu-id="130c7-113">Beklenen temel türünü oluşturmak için kullanılan <xref:System.Type?displayProperty=nameWithType> sınıfı ve beklenen türetilmiş bir tür bağımsız değişkeni olarak geçirilir <xref:System.Type.IsInstanceOfType%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="130c7-113">The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9968a-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9968a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="130c7-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="130c7-114">See also</span></span>
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [<span data-ttu-id="9968a-115">Object Veri Türü</span><span class="sxs-lookup"><span data-stu-id="9968a-115">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [<span data-ttu-id="9968a-116">Nesne Değişkenleri</span><span class="sxs-lookup"><span data-stu-id="9968a-116">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="9968a-117">Nesne Değişkeni Değerleri</span><span class="sxs-lookup"><span data-stu-id="9968a-117">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [<span data-ttu-id="9968a-118">Nasıl yapılır: İki nesnenin aynı olup olmadığını belirleme</span><span class="sxs-lookup"><span data-stu-id="9968a-118">How to: Determine Whether Two Objects Are Identical</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [<span data-ttu-id="130c7-115">Object Veri Türü</span><span class="sxs-lookup"><span data-stu-id="130c7-115">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [<span data-ttu-id="130c7-116">Nesne Değişkenleri</span><span class="sxs-lookup"><span data-stu-id="130c7-116">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="130c7-117">Nesne Değişkeni Değerleri</span><span class="sxs-lookup"><span data-stu-id="130c7-117">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [<span data-ttu-id="130c7-118">Nasıl yapılır: İki nesnenin aynı olup olmadığını belirleme</span><span class="sxs-lookup"><span data-stu-id="130c7-118">How to: Determine Whether Two Objects Are Identical</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

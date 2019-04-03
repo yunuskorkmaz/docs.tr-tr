@@ -2,24 +2,24 @@
 title: 'Nasıl yapılır: Filtreleme (XPath-LINQ to XML) öznitelik (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: ac494b2e453d48a40c2a9be6505d5deebc4a1235
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0803fe7a5527a86fcb85abfc160abf34bb32fbb2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535872"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822745"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="925ec-102">Nasıl yapılır: Filtreleme (XPath-LINQ to XML) öznitelik (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="925ec-102">How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="925ec-103">Bu konu, belirtilen ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğeleri almak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="925ec-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="99675-102">Nasıl yapılır: Filtreleme (XPath-LINQ to XML) öznitelik (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99675-102">How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="99675-103">Bu konu, belirtilen ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğeleri almak nasıl gösterir.</span><span class="sxs-lookup"><span data-stu-id="99675-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- <span data-ttu-id="925ec-104">XPath ifadesidir:</span><span class="sxs-lookup"><span data-stu-id="925ec-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="99675-104">XPath ifadesidir:</span><span class="sxs-lookup"><span data-stu-id="99675-104">The XPath expression is:</span></span>  
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a><span data-ttu-id="925ec-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="925ec-105">Example</span></span>  
- <span data-ttu-id="925ec-106">Bu örnek, tüm alt öğeleri adıyla öğeleri bulur. `Address`ile bir `Type` "Gönderim" değerine sahip öznitelik.</span><span class="sxs-lookup"><span data-stu-id="925ec-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
+## <a name="example"></a><span data-ttu-id="99675-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="99675-105">Example</span></span>  
+ <span data-ttu-id="99675-106">Bu örnek, tüm alt öğeleri adıyla öğeleri bulur. `Address`ile bir `Type` "Gönderim" değerine sahip öznitelik.</span><span class="sxs-lookup"><span data-stu-id="99675-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
   
- <span data-ttu-id="925ec-107">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="925ec-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="99675-107">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Birden fazla satın alma siparişi (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="99675-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -45,7 +45,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="925ec-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="925ec-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="99675-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="99675-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -75,5 +75,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="925ec-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="925ec-109">See also</span></span>
-- [<span data-ttu-id="925ec-110">LINQ to XML için XPath kullanıcıları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="925ec-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="99675-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="99675-109">See also</span></span>
+
+- [<span data-ttu-id="99675-110">LINQ to XML için XPath kullanıcıları (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99675-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

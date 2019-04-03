@@ -7,36 +7,37 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: 047b8b148e616c8ad94f55844f8bc4063a9e5cd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4093e98738cf6e41cd450229d82e3672fe9687ec
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528933"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819469"
 ---
-# <a name="-refonly-visual-basic"></a><span data-ttu-id="00a86-102">-refonly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="00a86-102">-refonly (Visual Basic)</span></span>
+# <a name="-refonly-visual-basic"></a><span data-ttu-id="decdb-102">-refonly (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="decdb-102">-refonly (Visual Basic)</span></span>
 
-<span data-ttu-id="00a86-103">**- Refonly** seçeneği gösteren derlemenin birincil çıkışının yerine bir uygulama derlemeye bir başvuru bütünleştirilmiş kodu olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="00a86-103">The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly.</span></span> <span data-ttu-id="00a86-104">`-refonly` Parametre sessiz bir şekilde devre dışı bırakır pdb, çıktısı olarak başvuru bütünleştirilmiş kodları yürütülemez.</span><span class="sxs-lookup"><span data-stu-id="00a86-104">The `-refonly` parameter silently disables outputting PDBs, as reference assemblies cannot be executed.</span></span>
+<span data-ttu-id="decdb-103">**- Refonly** seçeneği gösteren derlemenin birincil çıkışının yerine bir uygulama derlemeye bir başvuru bütünleştirilmiş kodu olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="decdb-103">The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly.</span></span> <span data-ttu-id="decdb-104">`-refonly` Parametre sessiz bir şekilde devre dışı bırakır pdb, çıktısı olarak başvuru bütünleştirilmiş kodları yürütülemez.</span><span class="sxs-lookup"><span data-stu-id="decdb-104">The `-refonly` parameter silently disables outputting PDBs, as reference assemblies cannot be executed.</span></span>
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
-## <a name="syntax"></a><span data-ttu-id="00a86-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="00a86-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="decdb-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="decdb-105">Syntax</span></span>
 
 ```console
 -refonly
 ```
 
-## <a name="remarks"></a><span data-ttu-id="00a86-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="00a86-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="decdb-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="decdb-106">Remarks</span></span>
 
-<span data-ttu-id="00a86-107">Visual Basic destekler `-refout` 15.3 sürümünden başlayarak geçin.</span><span class="sxs-lookup"><span data-stu-id="00a86-107">Visual Basic supports the `-refout` switch starting with version 15.3.</span></span>
+<span data-ttu-id="decdb-107">Visual Basic destekler `-refout` 15.3 sürümünden başlayarak geçin.</span><span class="sxs-lookup"><span data-stu-id="decdb-107">Visual Basic supports the `-refout` switch starting with version 15.3.</span></span>
 
-<span data-ttu-id="00a86-108">Başvuru bütünleştirilmiş kodları meta verileri ancak hiçbir uygulama kodu içeren yalnızca meta veri derlemelerdir.</span><span class="sxs-lookup"><span data-stu-id="00a86-108">Reference assemblies are metadata-only assemblies that contain metadata but no implementation code.</span></span> <span data-ttu-id="00a86-109">Bunlar, anonim türler dışında her şeyi için tür ve üye bilgilerini içerir.</span><span class="sxs-lookup"><span data-stu-id="00a86-109">They include type and member information for everything except anonymous types.</span></span> <span data-ttu-id="00a86-110">Kullanılmasının nedeni `throw null` gövdeleri (aksine, gövde yok) olan PEVerify çalışmasını ve (Bu nedenle meta veri bütünlüğünü doğrulama) geçirin.</span><span class="sxs-lookup"><span data-stu-id="00a86-110">The reason for using `throw null` bodies (as opposed to no bodies) is so that PEVerify could run and pass (thus validating the completeness of the metadata).</span></span>
+<span data-ttu-id="decdb-108">Başvuru bütünleştirilmiş kodları meta verileri ancak hiçbir uygulama kodu içeren yalnızca meta veri derlemelerdir.</span><span class="sxs-lookup"><span data-stu-id="decdb-108">Reference assemblies are metadata-only assemblies that contain metadata but no implementation code.</span></span> <span data-ttu-id="decdb-109">Bunlar, anonim türler dışında her şeyi için tür ve üye bilgilerini içerir.</span><span class="sxs-lookup"><span data-stu-id="decdb-109">They include type and member information for everything except anonymous types.</span></span> <span data-ttu-id="decdb-110">Kullanılmasının nedeni `throw null` gövdeleri (aksine, gövde yok) olan PEVerify çalışmasını ve (Bu nedenle meta veri bütünlüğünü doğrulama) geçirin.</span><span class="sxs-lookup"><span data-stu-id="decdb-110">The reason for using `throw null` bodies (as opposed to no bodies) is so that PEVerify could run and pass (thus validating the completeness of the metadata).</span></span>
 
-<span data-ttu-id="00a86-111">Başvuru derlemelerini içeren bir derleme düzeyi [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) özniteliği.</span><span class="sxs-lookup"><span data-stu-id="00a86-111">Reference assemblies include an assembly-level [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) attribute.</span></span> <span data-ttu-id="00a86-112">Bu özniteliği, kaynakta belirtilebilir (sonra derleyici bu sentezlemek gerekmez).</span><span class="sxs-lookup"><span data-stu-id="00a86-112">This attribute may be specified in source (then the compiler won't need to synthesize it).</span></span> <span data-ttu-id="00a86-113">Bu öznitelik nedeniyle yürütme için başvuru derlemeleri yüklemeye çalışma zamanları reddeder (ancak bunlar yine de salt yansıma bir bağlamda yüklenmiş olabilir).</span><span class="sxs-lookup"><span data-stu-id="00a86-113">Because of this attribute, runtimes will refuse to load reference assemblies for execution (but they can still be loaded in a reflection-only context).</span></span> <span data-ttu-id="00a86-114">Bunlar salt yansıma olarak başvuru derlemelerini yüklemek emin olmak derlemelerini yansıtan araçları gerekir; Aksi takdirde, çalışma zamanı oluşturur bir <xref:System.BadImageFormatException>.</span><span class="sxs-lookup"><span data-stu-id="00a86-114">Tools that reflect on assemblies need to ensure they load reference assemblies as reflection-only; otherwise, the runtime throws a <xref:System.BadImageFormatException>.</span></span>
+<span data-ttu-id="decdb-111">Başvuru derlemelerini içeren bir derleme düzeyi [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) özniteliği.</span><span class="sxs-lookup"><span data-stu-id="decdb-111">Reference assemblies include an assembly-level [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) attribute.</span></span> <span data-ttu-id="decdb-112">Bu özniteliği, kaynakta belirtilebilir (sonra derleyici bu sentezlemek gerekmez).</span><span class="sxs-lookup"><span data-stu-id="decdb-112">This attribute may be specified in source (then the compiler won't need to synthesize it).</span></span> <span data-ttu-id="decdb-113">Bu öznitelik nedeniyle yürütme için başvuru derlemeleri yüklemeye çalışma zamanları reddeder (ancak bunlar yine de salt yansıma bir bağlamda yüklenmiş olabilir).</span><span class="sxs-lookup"><span data-stu-id="decdb-113">Because of this attribute, runtimes will refuse to load reference assemblies for execution (but they can still be loaded in a reflection-only context).</span></span> <span data-ttu-id="decdb-114">Bunlar salt yansıma olarak başvuru derlemelerini yüklemek emin olmak derlemelerini yansıtan araçları gerekir; Aksi takdirde, çalışma zamanı oluşturur bir <xref:System.BadImageFormatException>.</span><span class="sxs-lookup"><span data-stu-id="decdb-114">Tools that reflect on assemblies need to ensure they load reference assemblies as reflection-only; otherwise, the runtime throws a <xref:System.BadImageFormatException>.</span></span>
 
-<span data-ttu-id="00a86-115">`-refonly` Ve [ `-refout` ](refout-compiler-option.md) seçenekleri karşılıklı olarak birbirini dışlar.</span><span class="sxs-lookup"><span data-stu-id="00a86-115">The `-refonly` and [`-refout`](refout-compiler-option.md) options are mutually exclusive.</span></span>
+<span data-ttu-id="decdb-115">`-refonly` Ve [ `-refout` ](refout-compiler-option.md) seçenekleri karşılıklı olarak birbirini dışlar.</span><span class="sxs-lookup"><span data-stu-id="decdb-115">The `-refonly` and [`-refout`](refout-compiler-option.md) options are mutually exclusive.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="00a86-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="00a86-116">See also</span></span>
-- [<span data-ttu-id="00a86-117">-refout</span><span class="sxs-lookup"><span data-stu-id="00a86-117">-refout</span></span>](refout-compiler-option.md)
-- [<span data-ttu-id="00a86-118">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="00a86-118">Visual Basic Command-Line Compiler</span></span>](index.md)
-- [<span data-ttu-id="00a86-119">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="00a86-119">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="decdb-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="decdb-116">See also</span></span>
+
+- [<span data-ttu-id="decdb-117">-refout</span><span class="sxs-lookup"><span data-stu-id="decdb-117">-refout</span></span>](refout-compiler-option.md)
+- [<span data-ttu-id="decdb-118">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="decdb-118">Visual Basic Command-Line Compiler</span></span>](index.md)
+- [<span data-ttu-id="decdb-119">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="decdb-119">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)
