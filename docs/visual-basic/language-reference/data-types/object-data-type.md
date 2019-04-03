@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 5a37b571e0600927e0e50fdb1a63bcf8ef194d72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 616110145db2796e05509094b1c023daacd68f03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617544"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835576"
 ---
 # <a name="object-data-type"></a>Nesne Veri Türü
 Nesnelere atıfta adresleri tutar. Herhangi bir başvuru türü (dize, dizi, sınıf veya arabirim) atayabileceğiniz bir `Object` değişkeni. Bir `Object` değişkeni ayrıca herhangi bir değer türünün veri başvuru (sayısal, `Boolean`, `Char`, `Date`, yapı ya da numaralandırma).  
@@ -67,6 +67,7 @@ objDb = myCollection.Item(1)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Object>
 - [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)
 - [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

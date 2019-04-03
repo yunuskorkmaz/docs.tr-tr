@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic]
 ms.assetid: 2557da60-c6dc-4e99-8128-fceb6f8a0736
-ms.openlocfilehash: abce728a595000af7c917488da783c6f4298a3f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6df4a446e5dbd5ae73c860c86b5a881225d8be1c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611976"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826650"
 ---
 # <a name="errors-summary-visual-basic"></a>Hatalara İlişkin Özet (Visual Basic)
 Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaç tarafından düzenlenir ve kullanın.  
@@ -24,5 +24,6 @@ Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyele
 |Sistem hata kodunu sağlayın.|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)

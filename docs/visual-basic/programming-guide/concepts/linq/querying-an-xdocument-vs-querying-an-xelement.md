@@ -1,15 +1,15 @@
 ---
-title: XDocument sorgulama. (Visual Basic) XElement sorgulama karşılaştırması
+title: XDocument Sorgulama ve (Visual Basic) XElement sorgulama karşılaştırması
 ms.date: 07/20/2015
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-ms.openlocfilehash: 8d13276b6d66d0ec3768182df7b4324678174fae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 500b1e58663ef6aca052850ad7994687e2cc36f4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579855"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817727"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>XDocument sorgulama. (Visual Basic) XElement sorgulama karşılaştırması
+# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>XDocument Sorgulama ve (Visual Basic) XElement sorgulama karşılaştırması
 Bir belge aracılığıyla yüklediğinizde <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, sorguları aracılığıyla yüklediğinizde biraz farklı yazma olduğunu fark edeceksiniz <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>XDocument.Load ve XElement.Load karşılaştırması  
@@ -113,4 +113,5 @@ Querying tree loaded with XDocument.Load
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Temel sorgular (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

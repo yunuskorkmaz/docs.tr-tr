@@ -2,12 +2,12 @@
 title: Performans (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 155557f6-5d7e-4784-9d00-f42092a28857
-ms.openlocfilehash: 4a9353aa1dfeae749664d1ea69b0196e5f202235
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c58bcecbe196f32c0a6ce885929292490b37e052
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594791"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824825"
 ---
 # <a name="performance-linq-to-xml-visual-basic"></a>Performans (LINQ to XML) (Visual Basic)
 Bu bölümde performansı hakkında bilgiler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], özellikle işlevsel oluşturma ve sorgu performansını.  
@@ -26,4 +26,5 @@ Bu bölümde performansı hakkında bilgiler [!INCLUDE[sqltecxlinq](~/includes/s
  Ayrıştırma ve bir XPath ifade değerlendiricisi tarafından gerçekleştirilen işleme aksine, statik olarak derlenmiş sorgular hakkında performans bilgileri sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Programlama Kılavuzu (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

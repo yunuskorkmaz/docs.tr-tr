@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464105"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819768"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic Uygulama Modeline Genel Bakış
 Visual Basic, Windows Forms uygulamalarının davranışını denetlemek için iyi tanımlanmış bir modeli sağlar: Visual Basic uygulama modeli. Bu model, uygulama başlatma ve kapatma yanı çalýþýrçalýþma yakalama işlenmeyen özel durum olaylarını işlemek için olaylarını içerir. Tek örnek uygulamalar geliştirmeye yönelik destek de sağlar. Uygulama modeli Genişletilebilir olduğundan daha fazla denetim gerektiren geliştiriciler kendi geçersiz kılınabilir yöntemleri özelleştirebilirsiniz.  
@@ -55,6 +55,7 @@ Visual Basic, Windows Forms uygulamalarının davranışını denetlemek için i
  Varsayılan olarak, Visual Basic uygulama modeli, Windows Forms projeleri için kullanılabilir. Farklı başlangıç nesnesi kullanmak için uygulamayı yapılandırma veya uygulama kodu ile özel bir başlangıç `Sub Main`, nesne veya sınıf bir uygulamasını sağlamak üzere gerekebilir <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> uygulama modelini kullanmak için sınıf. Başlangıç nesnesi değiştirme hakkında daha fazla bilgi için bkz: [uygulama sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>

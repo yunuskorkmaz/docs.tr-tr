@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: 1c10fd5fe3d6aa5566976b08db6c26ee49521850
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98f81bfb4a49bbac2a1e07533e1584d7c2b23302
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491265"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842024"
 ---
 # <a name="xml-literals-visual-basic"></a>XML Değişmez Değerleri (Visual Basic)
 Bu bölümdeki konular, Visual Basic'te XML sabit değerleri söz dizimi belgeleyin. XML değişmez değer sözdizimi, kodunuzda doğrudan XML eklemenizi sağlar.  
@@ -30,4 +30,5 @@ Bu bölümdeki konular, Visual Basic'te XML sabit değerleri söz dizimi belgele
 |[XML İşleme Talimatı Değişmez Değeri](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|Temsil eden sabit değerleri için söz dizimini açıklar <xref:System.Xml.Linq.XProcessingInstruction> nesneleri.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

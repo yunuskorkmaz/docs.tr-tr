@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: e394459e7d25d38e27e78f10dd547cb9ebd6230d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261353"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833535"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >' (birden fazla dosya başvurusu)
 Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'. Bir dosya başvurusu karışması tür uyuşmazlığı olabilir '\<filepath1 >' projesindeki '\<projectname1 >' için bir dosya başvurusu ile '\<filepath2 >' projesindeki '\<projectname2 >'. İki derleme de aynıysa, bu başvuruları her iki başvuru aynı konumdan olacak şekilde değiştirmeyi deneyin.  
@@ -32,6 +32,6 @@ Türünün değeri '\<typename1 >' olarak değiştirilemez '\<typename2 >'. Bir 
 -   Başvurulan derlemeler aynı derleme kimliği yoksa, diğer bir tür için tür dönüştürme denemez sonra kodunuzu değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Bir projedeki başvuruları yönetme](/visualstudio/ide/managing-references-in-a-project)
-

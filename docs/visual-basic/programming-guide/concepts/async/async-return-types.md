@@ -2,12 +2,12 @@
 title: Zaman uyumsuz dönüş türleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 87ddab62543fae5442a15fc5f200ef914ab8d859
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352587"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838358"
 ---
 # <a name="async-return-types-visual-basic"></a>Zaman uyumsuz dönüş türleri (Visual Basic)
 Zaman uyumsuz yöntemler üç olası dönüş türüne sahiptir: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>ve void. Visual Basic'te, void dönüş türü olarak yazılmış bir [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordamı. Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -293,6 +293,7 @@ End Sub
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Zaman uyumsuz programlarda (Visual Basic) denetim akışı](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)

@@ -2,12 +2,12 @@
 title: Gruplandırma veri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: 14b114906a0e04a4d11c323f80b070603a7286c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c658ac5c46baec1bfa976074b78ac86d791b6515
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576976"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842063"
 ---
 # <a name="grouping-data-visual-basic"></a>Gruplandırma veri (Visual Basic)
 Gruplandırma, böylece ortak bir özniteliği her gruptaki öğe paylaştırmak gruplar halinde veri yerleştirme işlemi için ifade eder.  
@@ -23,7 +23,7 @@ Gruplandırma, böylece ortak bir özniteliği her gruptaki öğe paylaştırmak
 |Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Gruplandırma ölçütü|Sık kullanılan bir özniteliği paylaşan öğeleri gruplandırır. Her grubu tarafından temsil edilen bir <xref:System.Linq.IGrouping%602> nesne.|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|ToLookup|İçine bir öğe ekler; bir <xref:System.Linq.Lookup%602> (bire çok bir sözlük) tabanlı bir anahtar Seçici işlevdir.|Uygulanamaz.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|ToLookup|İçine bir öğe ekler; bir <xref:System.Linq.Lookup%602> (bire çok bir sözlük) tabanlı bir anahtar Seçici işlevdir.|Geçerli değildir.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Sorgu ifade sözdizimi örneği  
  Aşağıdaki kod örneğinde `Group By` yan tümcesi bir liste çift veya tek sayı olup olmadıkları göre grup dizisidir.  
@@ -64,6 +64,7 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Linq>
 - [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Group By Yan Tümcesi](../../../../visual-basic/language-reference/queries/group-by-clause.md)

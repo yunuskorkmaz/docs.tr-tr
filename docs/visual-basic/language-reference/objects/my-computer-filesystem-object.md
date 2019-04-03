@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 515c12a87ddab6c616f98325624e7fd31ea926d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ebdf2ac42ddd4e6e201559d9fc6711b19cbdd60
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642928"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827594"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem Nesnesi
 Özellikler ve sürücüleri, dosyalar ve dizinler ile çalışmak için yöntemler sağlar.  
@@ -38,5 +38,6 @@ ms.locfileid: "54642928"
  **Derleme:** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [My.Computer.FileSystem.SpecialDirectories Nesnesi](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)
 - [My.Computer Nesnesi](../../../visual-basic/language-reference/objects/my-computer-object.md)

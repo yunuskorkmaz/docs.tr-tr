@@ -1,19 +1,19 @@
 ---
-title: 'Sorun giderme: Günlük dinleyicileri (Visual Basic)'
+title: 'Sorun Giderme: Günlük dinleyicileri (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, troubleshooting
 - troubleshooting Visual Basic, event logs
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
-ms.openlocfilehash: f2dba14ed883b428e47b71533bcb51506167fd49
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f1201262fd09145679a9f70cd742294d248fedb3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979014"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831702"
 ---
-# <a name="troubleshooting-log-listeners-visual-basic"></a>Sorun giderme: Günlük dinleyicileri (Visual Basic)
+# <a name="troubleshooting-log-listeners-visual-basic"></a>Sorun Giderme: Günlük dinleyicileri (Visual Basic)
 Kullanabileceğiniz `My.Application.Log` ve `My.Log` gerçekleşen olaylar hakkında bilgileri, uygulamanızda oturum nesneleri.  
   
  Hangi günlük dinleyicileri bu iletileri almak belirlemek için bkz: [izlenecek yol: My.Application.log günlüğünün bilgileri nereye yazdığını belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
@@ -39,6 +39,7 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` gerçekleşen olaylar hakk�
      Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [İzlenecek yol: My.Application.log günlüğünün bilgileri nereye yazdığını belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

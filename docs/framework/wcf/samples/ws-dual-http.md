@@ -2,12 +2,12 @@
 title: WS İkili Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: d5c6309a183c0bf0b666fd39aea3d760eb7008ad
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: d1ff5150db4406ceaf95459f76d9a8563da76b7a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332162"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827711"
 ---
 # <a name="ws-dual-http"></a>WS İkili Http
 İkili Http örnek nasıl yapılandırılacağını gösteren `WSDualHttpBinding` bağlama. Bu örnek, bir istemci konsol program (.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet, çift yönlü sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculatorDuplex` matematik işlemlerinden sunan arabirimi (ekleme, çıkarma, çarpma ve bölme). Bu örnekte `ICalculatorDuplex` oturumu üzerinden çalışan bir sonuç hesaplama matematik işlemlerini gerçekleştirmek üzere istemci arabirimi sağlar. Bağımsız olarak, hizmet üzerinde sonuçları döndüren `ICalculatorDuplexCallback` arabirimi. Hizmet ve istemci arasında gönderilen ileti kümesini ilişkilendirmek için bir bağlamı yeniden kurulması için çift yönlü sözleşme bir oturumu gerektirir. `WSDualHttpBinding` Bağlama, çift yönlü iletişimi destekler.  
@@ -104,4 +104,3 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     </wsDualHttpBinding>  
     ```  
   
-## <a name="see-also"></a>Ayrıca bkz.

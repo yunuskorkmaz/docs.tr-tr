@@ -1,18 +1,18 @@
 ---
-title: İşlevsel programlama ve Kesin programlama karşılaştırması (Visual Basic)
+title: İşlevsel Programlama ve Kesin programlama karşılaştırması (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 762889717d2b20d5a06848ebaa41f3e066a8c061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579816"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827347"
 ---
-# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>İşlevsel programlama ve Kesin programlama karşılaştırması (Visual Basic)
+# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>İşlevsel Programlama ve Kesin programlama karşılaştırması (Visual Basic)
 Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel buyurgan (yordamsal) programlamaya ile karşılaştırır.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>İşlevsel programlama ve Kesin programlama karşılaştırması  
+## <a name="functional-programming-vs-imperative-programming"></a>İşlevsel Programlama ve Kesin Programlama Karşılaştırması  
  *İşlevsel programlama* paradigma sorunu çözmek için saf işlevsel yaklaşım desteklemek için açıkça oluşturuldu. İşlevsel programlama, çeşit *bildirime dayalı programlama*. Buna karşılık, nesne odaklı programlama (OOP) dilleri gibi C#, Visual Basic, C++ ve Java dahil olmak üzere çoğu temel dil öncelikle desteklemek için tasarlanmış *kesinlik temelli* (yordamsal) programlamaya.  
   
  Kesinlik temelli bir yaklaşım ile bir geliştirici açıklayan kod ayrıntı kesin bilgisayar ve hedefe ulaşmak için gerçekleştirmeniz gereken adımlar yazar. Bu bazen olarak adlandırılır *algoritmik* programlama. Buna karşılık, işlevsel bir yaklaşım sorun yürütülecek işlevler bir dizi oluşturmayı kapsar. Her işlev girişi ve her hangi bir işlevi döndürür dikkatli bir şekilde tanımlarsınız. Aşağıdaki tabloda, bu iki yaklaşımı genel farklılıklardan bazıları açıklanmaktadır.  
@@ -51,6 +51,7 @@ Bu konuda karşılaştırır ve işlevsel programlama daha geleneksel buyurgan (
  Neyse ki, hem zorunlu hem de işlevsel programlama yaklaşımları desteklediğinden, Visual Basic için işlevsel programlama, tam artık gerektirmez. Bir geliştirici, hangi yaklaşımın belirli bir senaryo için en uygun seçebilirsiniz. Aslında, programlar genellikle iki yaklaşımı birleştirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Saf işlevsel dönüşümlere (Visual Basic) giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [XSLT Dönüşümleri](../../../../standard/data/xml/xslt-transformations.md)
 - [(Visual Basic) saf işlevler halinde yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

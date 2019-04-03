@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: abee69d9959e899259aff8b8a49caea6bcd997fb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e7d909563ca7e991a51c2f921b5248aa587a83d7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975244"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823590"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma
 Bir kullanıcı ayarı üzerinde ayarın özelliğine erişerek edinebilirsiniz `My.Settings` nesne.  
@@ -26,6 +26,7 @@ Bir kullanıcı ayarı üzerinde ayarın özelliğine erişerek edinebilirsiniz 
  Bu örneğin çalışması, uygulamanız olmalıdır bir `Nickname` biriminin türü `String`. Daha fazla bilgi için [uygulama ayarlarını yönetme (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [My.Settings Nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
 - [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı yapma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)

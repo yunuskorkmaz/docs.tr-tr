@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: dc7cba394f623ae94a0d9ca8285fc12af8f0dacf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600342"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831572"
 ---
 # <a name="error-types-visual-basic"></a>Hata Türleri (Visual Basic)
 Visual Basic'te, hataları (olarak da adlandırılan *özel durumları*) üç kategoriden birine girer: söz dizimi hatalarını, çalışma zamanı hataları ve mantık hataları.  
@@ -33,5 +33,6 @@ Visual Basic'te, hataları (olarak da adlandırılan *özel durumları*) üç ka
  *Mantık hataları* uygulama kullanımda olduğunda görüntülenen olanlardır. Yanıt olarak kullanıcı eylemlerini çoğu genellikle istenmeyen veya beklenmeyen sonuçlar değildirler. Örneğin, yanlış yazılan bir anahtar veya diğer dış etkisi, uygulamanızın beklenen parametrelerin içinde çalışmayı durdurmasına neden olabilir veya tamamen. Mantık hataları genellikle, her zaman burada kaynaklanan NET olmadığından, düzeltmek için uygulamalarınızdaki türüdür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Try...Catch...Finally Deyimi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Hata Ayıklayıcısı Temel Bilgileri](/visualstudio/debugger/debugger-basics)

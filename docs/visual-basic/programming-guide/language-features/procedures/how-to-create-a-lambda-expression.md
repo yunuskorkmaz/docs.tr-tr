@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 35df64848c0506a1c0a97bd8cd34f158f9febcd7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8754049e493ab23b1e7b01d0f315b00bdebf0378
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970174"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841426"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Nasıl yapılır: Bir Lambda ifadesi (Visual Basic) oluşturma
 A *lambda ifadesi* bir işlev veya bir ada sahip bir alt yordam. Bir lambda ifadesi, bir temsilci türü geçerli olduğu her yerde kullanılabilir.  
@@ -105,6 +105,7 @@ A *lambda ifadesi* bir işlev veya bir ada sahip bir alt yordam. Bir lambda ifad
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Linq.Enumerable>
 - [Lambda İfadeleri](./lambda-expressions.md)
 - [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)

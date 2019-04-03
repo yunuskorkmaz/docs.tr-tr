@@ -11,12 +11,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: c7243108d0b7c06f48a21f343321322bb2cc2946
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560288"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833821"
 ---
 # <a name="composite-data-types-visual-basic"></a>Bileşik Veri Türleri (Visual Basic)
 Başlangıç veri türleri Visual Basic kaynakları'na ek olarak, öğeleri oluşturmak için farklı türde de toplayabilir *bileşik veri türleri* yapılar, diziler ve sınıflar gibi. Bileşik veri türleri, temel türleri ve diğer bileşik türler oluşturabilirsiniz. Örneğin, yapı öğeleri bir dizi veya bir yapı dizi üyeleri ile tanımlayabilirsiniz.  
@@ -62,6 +62,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
  Sınıflar hakkında daha fazla bilgi için bkz. [nesneler ve sınıflar](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Başlangıç Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Visual Basic'de genel türler](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

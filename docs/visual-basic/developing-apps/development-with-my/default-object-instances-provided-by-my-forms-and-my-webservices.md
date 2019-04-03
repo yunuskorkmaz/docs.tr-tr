@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: 5a81cde63de258f0996c3ddbc99e0102d58d79b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ca31e1c40c77bf7f42d246019d81f4ffaed646e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973918"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839372"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>My.Forms ve My.WebServices ile Sağlanan Varsayılan Nesne Örnekleri (Visual Basic)
 [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) ve [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) nesneleri, forms, veri kaynakları ve uygulamanız tarafından kullanılan XML Web Hizmetleri erişim sağlar. Koleksiyonları sağlayarak bunu *varsayılan örnekleri* bu nesnelerin her biri.  
@@ -27,6 +27,7 @@ ms.locfileid: "56973918"
  `My.Forms` Nesnesi için varsayılan örneklerinin bir koleksiyonunu döndürür her `Form` projenizde var. sınıfı. Benzer şekilde, `My.WebServices` uygulamanızda bir başvuru oluşturduğunuz her Web hizmeti proxy sınıfın varsayılan bir örnek sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.WebServices Nesnesi](../../../visual-basic/language-reference/objects/my-webservices-object.md)
 - [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

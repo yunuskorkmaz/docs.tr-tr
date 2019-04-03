@@ -2,12 +2,12 @@
 title: Özel İleti Kesici
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 3b24535c67c1d16da63ec3b282d456e65ff8dd95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 789b3a2003ab96a9658eab7c092067e6110a46cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733278"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824786"
 ---
 # <a name="custom-message-interceptor"></a>Özel İleti Kesici
 Bu örnek, kanal genişletilebilirlik modeli kullanımını gösterir. Özellikle, kanal fabrikaları ve tüm gelen ve giden iletileri çalışma zamanı yığını olarak belirli bir noktada ele alınması için kanal dinleyicileri oluşturan özel bağlama öğesinin uygulanması gösterilmektedir. Örnek, bir istemci ve sunucu bu özel fabrikaları kullanımını gösteren de içerir.  
@@ -161,4 +161,3 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 5.  Client.exe çalıştırın ve her iki konsol penceresi çıktısı için izleme Service.exe çalıştırın.  
   
-## <a name="see-also"></a>Ayrıca bkz.

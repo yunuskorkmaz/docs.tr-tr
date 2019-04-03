@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: e840c83d7969eeb0322034f0f274fb19ca2b8e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622851"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832183"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Nasıl yapılır: (Visual Basic) türetilmiş sınıf tarafından gizlenen bir değişkene erişme
 Kod türetilen bir sınıfta bir değişken eriştiğinde, derleyici en yakın erişilebilir sürüme, yani erişilebilir sürümü başvuru normalde az derivational adımlardan geriye dönük erişen sınıf çözümler. Değişken türetilmiş sınıf içinde tanımlanmış olması durumunda, kod normalde bu tanımı erişir.  
@@ -50,6 +50,7 @@ Kod türetilen bir sınıfta bir değişken eriştiğinde, derleyici en yakın e
  Gölgeli bir değişkenin istenmeyen bir sürüme başvuran riskini azaltmak için tam olarak gölgeli bir değişken tüm başvuruları kazanabilir. Gölgeleme, bir değişken aynı ada sahip birden fazla sürümünü tanıtır. Kod açıklaması değişken adıdır, derleyici başvurusu açığını giderir sürüm kod açıklaması konumunu ve uygun bir dize varlığını gibi faktörlere bağlıdır. Bu değişkeni yanlış sürümüne başvuran riskini artırabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Gölgeleme ve Geçersiz Kılma Arasındaki Farklar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

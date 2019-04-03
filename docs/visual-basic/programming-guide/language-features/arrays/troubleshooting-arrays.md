@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 81817af230298528a766aa6494899538c35da7bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707628"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833379"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Dizilerle İlgili Sorun Giderme (Visual Basic)
 Bu sayfada dizilerle çalışırken ortaya çıkabilecek bazı yaygın sorunlar listelenir.  
@@ -58,5 +58,6 @@ Bu sayfada dizilerle çalışırken ortaya çıkabilecek bazı yaygın sorunlar 
  Çok boyutlu bir dizinin sınırları belirlerken, boyut nasıl belirttiğiniz ilgileniriz. `dimension` Parametrelerinin <xref:System.Array.GetLowerBound%2A> ve <xref:System.Array.GetUpperBound%2A> yöntemleri 0 tabanlıdır; çalışırken `Rank` Visual Basic parametrelerinin <xref:Microsoft.VisualBasic.Information.LBound%2A> ve <xref:Microsoft.VisualBasic.Information.UBound%2A> işlevleri 1 tabanlı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

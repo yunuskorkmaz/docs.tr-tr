@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Bir Namespace (XPath-LINQ to XML) içindeki öğeleri bulma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 3e8220c1dc34a56306d78db5d90ab5697ba5f632
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f48ae0a03d625a3510b2280aa6361e2a731e5afe
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714795"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825371"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: Bir Namespace (XPath-LINQ to XML) içindeki öğeleri bulma (Visual Basic)
 XPath ifadeleri düğüm, belirli bir ad alanında bulabilirsiniz. XPath ifadeleri, ad alanı öneklerini ad alanları belirtmek için kullanın. Ad alanı öneklerini içeren bir XPath ifadesi ayrıştırılamadı XPath yöntemlere uygulayan bir nesne geçmelidir. <xref:System.Xml.IXmlNamespaceResolver>. Bu örnekte <xref:System.Xml.XmlNamespaceManager>.  
@@ -81,4 +81,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to XML için XPath kullanıcıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

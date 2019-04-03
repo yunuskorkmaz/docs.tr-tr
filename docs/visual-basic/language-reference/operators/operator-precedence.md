@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: a87407fe863569ff961f4a2dc320e73719ed4d9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601772"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830038"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic'de İşleç Önceliği
 Çeşitli işlemler bir ifadede, her parça değerlendirilir ve adlı belirlenmiş bir sırayla çözümlenen *İşleç önceliği*.  
@@ -61,7 +61,7 @@ ms.locfileid: "54601772"
 ### <a name="comparison-operators"></a>Karşılaştırma İşleçleri  
  Tüm Karşılaştırma işleçleri (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)  
   
-### <a name="logical-and-bitwise-operators"></a>Mantıksal ve bit düzeyinde işleçler  
+### <a name="logical-and-bitwise-operators"></a>Mantıksal ve Bit Düzeyinde İşleçler  
  Değilleme (`Not`)  
   
  Birlikte (`And`, `AndAlso`)  
@@ -112,6 +112,7 @@ g = (a - (b + c)) / (d * e)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [= İşleci](../../../visual-basic/language-reference/operators/assignment-operator.md)
 - [Is İşleci](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot İşleci](../../../visual-basic/language-reference/operators/isnot-operator.md)

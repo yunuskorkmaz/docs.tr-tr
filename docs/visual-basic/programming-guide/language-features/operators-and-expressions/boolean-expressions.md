@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965546"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825540"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean İfadeleri (Visual Basic)
 A *Boole ifadesi* değeri olarak değerlendirilen bir ifade olan [Boole veri türü](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` veya `False`. `Boolean` ifadeler çeşitli biçimlerde olabilir. Basit doğrudan karşılaştırma değeri olan bir `Boolean` değişkenini bir `Boolean` sabit değer, aşağıdaki örnekte gösterildiği gibi.  
@@ -67,6 +67,7 @@ A *Boole ifadesi* değeri olarak değerlendirilen bir ifade olan [Boole veri tü
  Boolean ifadelerin değerlendirilme sırasını denetlemek için parantez kullanabilirsiniz. İlk olarak parantez ifadeleri değerlendirin. Birden çok iç içe geçme düzeyi için en derin iç içe geçmiş ifadeler için öncelik verilir. Parantezler içinde İşleç önceliği kurallarına göre değerlendirme devam eder. Daha fazla bilgi için [Visual Basic'de İşleç önceliği](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [Değer Karşılaştırmaları](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Deyimler](../../../../visual-basic/programming-guide/language-features/statements.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 843ea95cded81aa7870f8a7bef20df586c4085a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361206"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814169"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic'te My Ad Alanını Genişletme
 `My` Visual Basic'de ad alanı özellikleri ve kolayca .NET Framework'ün gücünden yararlanmak sağlayan yöntemler sunar. `My` Ad alanı genellikle zor bir görev için tek bir kod satırının azaltma ortak programlama sorunlarını basitleştirir. Ayrıca, `My` davranışını özelleştirebilmeniz için ad alanı tam olarak Genişletilebilir `My` ve belirli bir uygulama gereksinimlerine uyum sağlamak için hiyerarşi için yeni hizmet ekleyin. Her ikisi de bu konu açıklar nasıl özelleştirileceğini mevcut üyeleri `My` ad alanı ve kendi özel sınıflar için ekleme `My` ad alanı.  
@@ -101,6 +101,7 @@ ms.locfileid: "57361206"
  Nasıl dağıtılacağı hakkındaki ayrıntılar için `My` ad alanı uzantılarını görmek [paketleme ve dağıtma özel My uzantılarını](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [My Uzantılarını Paketleme ve Dağıtma](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
 - [Visual Basic Uygulama Modelini Genişletme](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
 - [My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

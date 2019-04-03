@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (Visual Basic) ifade ağaçlarını yürütme'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: fde681905cded0e4043f52c5f2a29cee74b91209
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cccb0b301e1da6d82c616d56604ad46dfde83e2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729359"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837526"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>Nasıl yapılır: (Visual Basic) ifade ağaçlarını yürütme
 Bu konu nasıl bir ifade ağacı çalıştırılacağını gösterir. İfade ağacı yürütülürken bir değer döndürebilir veya sadece bir yöntemi gibi bir eylem gerçekleştirebilir.  
@@ -49,5 +49,6 @@ MsgBox(result)
 -   System.Linq.Expressions ad alanı içerir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İfade ağaçları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [Nasıl yapılır: (Visual Basic) ifade ağaçlarını değiştirme](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

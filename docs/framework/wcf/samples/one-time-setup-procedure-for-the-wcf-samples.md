@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 705314c1eb0318fe7da53108d51f9dc985a3fdfa
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 76cf2c7ec7edbfaaa186b45f4b810c7d4c0b1d47
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333462"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825189"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Services (IIS) barındırılan ve genel sanal dizinden çalıştırın. Bu tek seferlik Kurulum yordamı diskte bir klasörü oluşturur; Ayrıca IIS adlı bir sanal dizin ekler **ServiceModelSamples**.
@@ -85,5 +85,3 @@ Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Se
     >  Message Queuing gerektiren örnek çalıştırmadan önce MSMQ hizmeti başlatmak emin olun.
 
 15. Bazı örnekler sertifikaları gerektirir. Bkz: [Internet Information Services (IIS) sunucu sertifikası yükleme yönergeleri](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).
-
-## <a name="see-also"></a>Ayrıca bkz.

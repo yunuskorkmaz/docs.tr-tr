@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 4b35985aa67cea7b58ddf05611cf4e0813a2d442
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977467"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837474"
 ---
 # <a name="partial-methods-visual-basic"></a>Kısmi Yöntemler (Visual Basic)
 Kısmi yöntemler, koda Özel mantık eklemek geliştiricilerin sağlar. Genellikle, kod tasarımcı tarafından oluşturulan bir sınıf parçasıdır. Kısmi yöntemler bir kod Oluşturucu tarafından oluşturulan bir kısmi sınıf tanımlanır ve bunlar genellikle bir şey değiştirildiğini bildirim sağlamak için kullanılır. Bunlar Geliştirici değişikliğe yanıt özel davranışını belirtmek etkinleştirin.  
@@ -71,6 +71,7 @@ End Sub
  `Quantity was changed to 100`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Alt Yordamlar](./sub-procedures.md)
 - [İsteğe Bağlı Parametreler](./optional-parameters.md)

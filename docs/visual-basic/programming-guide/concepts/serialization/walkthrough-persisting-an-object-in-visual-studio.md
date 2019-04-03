@@ -2,12 +2,12 @@
 title: (Visual Basic) Visual Studio'da bir nesneyi kalıcı kılma
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 002c5470765b33d038ab0fd463fcc6ccfdf6f109
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690442"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841587"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>İzlenecek yol: (Visual Basic) Visual Studio'da bir nesneyi kalıcı kılma
 Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasarım zamanında olsa da, çalışma zamanında girilen değerleri kaybedilir. Seri hale getirme, bir nesnenin veri değerleri depolamak ve bunları nesnesi örneği başlatıldığında almanıza imkan tanıyan örnekler arasında kalıcı hale getirmek için kullanabilirsiniz.  
@@ -216,5 +216,6 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
  Bu noktada, yeniden derleyebilir ve uygulamayı çalıştırın. Başlangıçta, varsayılan değerleri metin kutularında görüntülenir. Deneyin değerleri değiştirmek ve dördüncü metin kutusuna bir ad girin. Uygulamayı kapatın ve yeniden çalıştırın. Yeni değerler artık metin kutularına göründüğüne dikkat edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Seri hale getirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)

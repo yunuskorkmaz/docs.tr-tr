@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 47db8c9dc0562f8eb527eda65bb56404dc1ea8c8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 71e0ffc7f03a27a878aeb48eda9fbc58e5faae82
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971331"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839879"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By Tümcesi (Visual Basic)
 Bir sorgu sonucunun öğelerini gruplandırır. Ayrıca her grup için toplama işlevleri uygulamak için kullanılabilir. Gruplandırma işlemi, bir veya daha fazla anahtarlar üzerinde temel alır.  
@@ -51,7 +51,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
     Into Group  
     ```  
   
-     -veya-  
+     veya  
   
     ```  
     Into <alias> = Group  
@@ -70,6 +70,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Sorgular](../../../visual-basic/language-reference/queries/index.md)
 - [Select Yan Tümcesi](../../../visual-basic/language-reference/queries/select-clause.md)

@@ -2,19 +2,19 @@
 title: Filtre verileri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: d65b9941ceffa7ea23c4ead192ec6b97b7b4ead8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a673126d928a97bf522783e73fc254debe2a9de8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527841"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837453"
 ---
 # <a name="filtering-data-visual-basic"></a>Filtre verileri (Visual Basic)
 Filtreleme işlemi yalnızca belirli bir koşulu karşılayan öğeleri içeren sonuç kısıtlama ifade eder. Olarak da bilinir, seçim değildir.  
   
  Aşağıdaki çizimde bir karakter dizisi filtreleme sonuçlarını gösterir. Filtreleme işlemi için koşulu karakter 'A' olması gerektiğini belirtir.  
   
- ![Filtreleme işlemi LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_filter.png "LINQ_Filter")  
+ ![Filtreleme işlemi bir LINQ gösteren diyagram](./media/filtering-data/linq-filter-operation.png)  
   
  Seçimi gerçekleştirmek standart sorgu işleci yöntemleri aşağıdaki bölümünde listelenir.  
   
@@ -22,7 +22,7 @@ Filtreleme işlemi yalnızca belirli bir koşulu karşılayan öğeleri içeren 
   
 |Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|OfType|Değerleri belirtilen bir türe yayınlanması için kendi yeteneği bağlı olarak seçer.|Uygulanamaz.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|OfType|Değerleri belirtilen bir türe yayınlanması için kendi yeteneği bağlı olarak seçer.|Geçerli değildir.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
 |Where|Bir koşul işlevini temel alan değerleri seçer.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Sorgu ifade sözdizimi örneği  
@@ -50,6 +50,7 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Linq>
 - [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Where Yan Tümcesi](../../../../visual-basic/language-reference/queries/where-clause.md)

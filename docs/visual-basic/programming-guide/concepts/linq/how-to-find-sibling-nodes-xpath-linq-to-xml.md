@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (XPath-LINQ to XML) eşdüzey düğümleri bulma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: 740123077c24dd27fe1a4810d0cb45c4775894aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dad211c9c3716f760d28e4a18a61c885fc4dd58f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622643"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842115"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: (XPath-LINQ to XML) eşdüzey düğümleri bulma (Visual Basic)
 Belirli bir ada sahip tüm bir düğümün eşdüzey bulmak isteyebilirsiniz. Bağlam düğümünün belirli bir ada sahipse, sonuçta elde edilen koleksiyon bağlam düğümünün içerebilir.  
@@ -68,4 +68,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to XML için XPath kullanıcıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: d60d668c97019418b30b89147e86f7beea1c31f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640697"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827932"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Gölgeleme ve Geçersiz Kılma Arasındaki Farklar (Visual Basic)
 Bir temel sınıftan devralınan bir sınıf tanımladığınızda, bazen bir veya daha fazla türetilmiş sınıf içinde temel sınıf öğe yeniden tanımlamak istersiniz. Gölgeleme ve geçersiz kılma ikisi de bu amaç için olan.  
@@ -22,7 +22,7 @@ Bir temel sınıftan devralınan bir sınıf tanımladığınızda, bazen bir ve
   
 ||||  
 |---|---|---|  
-|Karşılaştırma noktası|Gölgeleme|Geçersiz kılma|  
+|Karşılaştırma noktası|Gölge Kullanım|Geçersiz kılma|  
 |Amaç|Türetilen bir sınıfta zaten tanımlanmış bir üye tanıtan sonraki bir temel sınıf değişikliği karşı korur|Bir yordam veya özellik ile aynı çağrı sırası farklı uygulamalarını tanımlayarak çok biçimlilik başarır<sup>1</sup>|  
 |Yeniden tanımlanan öğe|Herhangi bir öğe türü bildirilen|Yalnızca bir yordam (`Function`, `Sub`, veya `Operator`) veya özellik|  
 |Öğe yeniden tanımlama|Herhangi bir öğe türü bildirilen|Yalnızca bir yordam veya özellik ile aynı çağrı sırası<sup>1</sup>|  
@@ -52,6 +52,7 @@ Bir temel sınıftan devralınan bir sınıf tanımladığınızda, bazen bir ve
 -   Öğe türü değiştirme veya arama sırası isterler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Nasıl yapılır: Değişkeninizle aynı ada sahip bir değişkeni gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: 62e9e68eafe55c4d4c3fb2bba05d54f55df74114
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc0071d1fddf99bd712ebe8aea5c61bbc3522f93
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671637"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839364"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>Güvenlik ve Kayıt Defteri (Visual Basic)
 Bu sayfa verileri kayıt defterinde depolama güvenlikle ilgili etkileri anlatılmaktadır.  
@@ -39,5 +39,6 @@ Bu sayfa verileri kayıt defterinde depolama güvenlikle ilgili etkileri anlatı
 >  Kayıt defterinde bir Web uygulamasından okurken, geçerli kullanıcının kimliğini kimlik doğrulama ve Web uygulamasında gerçekleştirilen kimliğe bürünme bağlıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - [Kayıt Defterinden Okuma ve Kayıt Defterine Yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (LINQ to XML) tek bir öznitelik alma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: 73f5a252bd207edaa14aead42a6f122c3320423e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f56bdf86e4b63bc952c1d139aac9ee619b5a5f6c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704687"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837149"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Nasıl yapılır: (LINQ to XML) tek bir öznitelik alma (Visual Basic)
 Bu konu nasıl tek bir öznitelik, bir öğenin özniteliği adı verilir alınacağını açıklar. Bu, belirli bir özniteliği olan bir öğeyi bulmak istediğiniz sorgu ifadeleri yazmak için yararlıdır.  
@@ -93,4 +93,5 @@ work
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

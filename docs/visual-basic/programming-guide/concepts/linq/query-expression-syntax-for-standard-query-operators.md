@@ -2,12 +2,12 @@
 title: Standart sorgu işleçleri (Visual Basic) için sorgu ifade sözdizimi
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-ms.openlocfilehash: 49a0b9d70022ee655d87b34a3bb044e1f60b308d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdbca93d5898e363ccf62b13231163573e2ba972
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549684"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832521"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Standart sorgu işleçleri (Visual Basic) için sorgu ifade sözdizimi
 Bazı daha sık kullanılan standart sorgu işleçlerinin bir parçası olarak çağrılacak etkinleştirir Visual Basic dil anahtar sözcüğü söz dizimine adanmış bir *sorgu ifadesi*. Sorgu ifadesi ifade değerinden bir sorgu, farklı, daha okunabilir bir form olan kendi *yöntemi tabanlı* eşdeğer. Sorgu ifadesi tümceleri sorgu yöntemlere yapılan çağrılar derleme zamanında çevrilir.  
@@ -25,7 +25,7 @@ Bazı daha sık kullanılan standart sorgu işleçlerinin bir parçası olarak �
 |<xref:System.Linq.Enumerable.Distinct%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|`Distinct`<br /><br /> (Daha fazla bilgi için [Distinct tümcesi](../../../../visual-basic/language-reference/queries/distinct-clause.md).)|  
 |<xref:System.Linq.Enumerable.GroupBy%2A>|`Group … By … Into …`<br /><br /> (Daha fazla bilgi için [Group yan tümcesi tarafından](../../../../visual-basic/language-reference/queries/group-by-clause.md).)|  
 |<xref:System.Linq.Enumerable.GroupJoin%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2C%60%603%7D%29>|`Group Join … In … On …`<br /><br /> (Daha fazla bilgi için [Group JOIN yan tümcesi](../../../../visual-basic/language-reference/queries/group-join-clause.md).)|  
-|<xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%29>|`From x In …, y In … Where x.a = b.a`<br /><br /> -veya-<br /><br /> `Join … [As …]In … On …`<br /><br /> (Daha fazla bilgi için [JOIN yan tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md).)|  
+|<xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%29>|`From x In …, y In … Where x.a = b.a`<br /><br /> veya<br /><br /> `Join … [As …]In … On …`<br /><br /> (Daha fazla bilgi için [JOIN yan tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md).)|  
 |<xref:System.Linq.Enumerable.LongCount%2A>|`Aggregate … In … Into LongCount()`<br /><br /> (Daha fazla bilgi için [Aggregate tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md).)|  
 |<xref:System.Linq.Enumerable.Max%2A>|`Aggregate … In … Into Max()`<br /><br /> (Daha fazla bilgi için [Aggregate tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md).)|  
 |<xref:System.Linq.Enumerable.Min%2A>|`Aggregate … In … Into Min()`<br /><br /> (Daha fazla bilgi için [Aggregate tümcesi](../../../../visual-basic/language-reference/queries/aggregate-clause.md).)|  
@@ -43,6 +43,7 @@ Bazı daha sık kullanılan standart sorgu işleçlerinin bir parçası olarak �
 |<xref:System.Linq.Enumerable.Where%2A>|`Where`<br /><br /> (Daha fazla bilgi için [Where yan tümcesi](../../../../visual-basic/language-reference/queries/where-clause.md).)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

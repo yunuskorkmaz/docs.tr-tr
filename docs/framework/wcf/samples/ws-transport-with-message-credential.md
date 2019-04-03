@@ -2,12 +2,12 @@
 title: İleti Kimlik Bilgileri ile WS Aktarma
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: fb923fd4d7271f7f364d24743c3f9f6393ef8f9f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 31c1ed5d4b62c0f0b4c0c149629bb84a7dab6f01
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200591"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826216"
 ---
 # <a name="ws-transport-with-message-credential"></a>İleti Kimlik Bilgileri ile WS Aktarma
 Bu örnek, iletide taşınmasına istemci kimlik bilgileri ile birlikte SSL Aktarım güvenliği kullanımını gösterir. Bu örnekte `wsHttpBinding` bağlama.  
@@ -97,4 +97,3 @@ Press <ENTER> to terminate client.
   
 4.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Ayrıca bkz.

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Bulma (XPath-LINQ to XML) bir alt öğesi (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
-ms.openlocfilehash: 8472a3d9e90aa117c936c4314204f70d2ab33487
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96ad54d6f89aefd004a7803baef855d656b8a82d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495818"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821536"
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-visual-basic"></a>Nasıl yapılır: Bulma (XPath-LINQ to XML) bir alt öğesi (Visual Basic)
 Bu konu XPath alt öğe eksene karşılaştırır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> yöntemi.  
@@ -47,4 +47,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to XML için XPath kullanıcıları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

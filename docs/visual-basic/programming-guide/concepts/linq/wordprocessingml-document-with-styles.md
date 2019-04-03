@@ -2,14 +2,14 @@
 title: WordprocessingML belgesinin Styles2 ile
 ms.date: 07/20/2015
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
-ms.openlocfilehash: 685e32373f864b9e8cc04b0da5250bd96efd23c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 977de8e4272ca7cea004127adcf1b15726dcc211
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729329"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839736"
 ---
-# <a name="wordprocessingml-document-with-styles"></a>Stillerle WordprocessingML belgesi
+# <a name="wordprocessingml-document-with-styles"></a>Stillerle WordprocessingML Belgesi
 Daha karmaşık WordprocessingML belgelerinin stilleri ile biçimlendirilmiş paragrafları vardır.  
   
  WordprocessingML belgelerinin düzenini ilgili birkaç Not yararlı olur. WordprocessingML belgelerinin paketlerinde depolanır. Paketleriniz varsa birden fazla bölümü (bölümden paketleri bağlamında kullanıldığında açık bir anlamı; bir paket oluşturmak üzere birlikte sıkıştırılmış dosyalar esas olarak, bazı bölümleri). Bir belge stilleri ile biçimlendirilmiş paragrafları içeriyorsa, stil uygulanmış olan paragraf içeren bir belge bölümü olacaktır. Belgeye göre adlandırılır stilleri içeren bir stil bölümü olacaktır.  
@@ -138,4 +138,5 @@ Daha karmaşık WordprocessingML belgelerinin stilleri ile biçimlendirilmiş pa
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ayrıntılar Office Open XML WordprocessingML belgelerinin (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [Visual Basic], strings
 - arrays [Visual Basic], converting to strings
 ms.assetid: d0dc8317-9ab3-4324-99f7-3f5788c0e72a
-ms.openlocfilehash: cd091d743b04ef9d9709bde2b5a1205f3d7ae292
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f0676548bea2d4037f66fb15498c175b2d110d8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979521"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826752"
 ---
 # <a name="how-to-convert-an-array-of-bytes-into-a-string-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te bir dizeyi bir bayt dizisi dönüştürün
 Bu konuda, bayt bayt dizisinden bir dizeye dönüştürmek gösterilmektedir.  
@@ -39,6 +39,7 @@ Bu konuda, bayt bayt dizisinden bir dizeye dönüştürmek gösterilmektedir.
 -   <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Bir kodlama için UTF-8 biçiminde alır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetString%2A>
 - [Nasıl yapılır: Visual Basic'de bir bayt dizisi dizeleri dönüştürme](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-strings-into-an-array-of-bytes.md)

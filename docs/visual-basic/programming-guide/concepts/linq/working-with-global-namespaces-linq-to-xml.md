@@ -2,12 +2,12 @@
 title: Genel ad alanları (Visual Basic) (LINQ to XML) ile çalışma
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 0922c6973baeb3e0ca51d984b332fd7a3e0b13f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8e74e949815d36f06f522460cc31ca6c3ccabb3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733915"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827386"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Genel ad alanları (Visual Basic) (LINQ to XML) ile çalışma
 Visual Basic'de XML değişmez değerlerini anahtar özelliklerinden biridir özelliği XML ad alanlarını kullanarak bildirme `Imports` deyimi. Bu özelliği kullanarak, bir ön ekini kullanan bir XML ad alanı bildirebilir veya varsayılan XML ad alanı bildirebilirsiniz.  
@@ -198,4 +198,5 @@ http://www.adventure-works.com
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

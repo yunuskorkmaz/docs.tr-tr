@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b84bf20acaaa912e47102973b0484d635f1aa244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679428"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833679"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic'de Ana Yordam
 Her Visual Basic uygulama çağrılan yordam içermelidir `Main`. Bu yordamı başlangıç noktası ve uygulamanız için genel denetimi olarak işlev görür. .NET Framework çağrıları, `Main` uygulamanızı yüklendikten ve denetim geçirmeye hazır olduğunda yordamı. Bir Windows Forms uygulaması oluşturmakta olduğunuz sürece, yazmanız gereken `Main` yordamı kendi çalışan uygulamalar için.  
@@ -109,6 +109,7 @@ Her Visual Basic uygulama çağrılan yordam içermelidir `Main`. Bu yordamı ba
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>

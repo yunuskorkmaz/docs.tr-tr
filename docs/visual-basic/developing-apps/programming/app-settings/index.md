@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-ms.openlocfilehash: d14f53003320bb4c3b71134af324961c7565cebf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56bce47aa37b536c494e43d26bead3114e7dcfa1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535469"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822777"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>(Visual Basic) uygulama ayarlarına erişme
 Bu bölüm açıklayan konular içerir `My.Settings` nesne ve görevleri, gerçekleştirmenize olanak tanır.  
@@ -31,5 +31,6 @@ Bu bölüm açıklayan konular içerir `My.Settings` nesne ve görevleri, gerçe
 |Kullanıcı ayarları değerlerini belirlemek|[Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Uygulama Ayarlarını Yönetme](/visualstudio/ide/managing-application-settings-dotnet)
 - [My.Settings Nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md)

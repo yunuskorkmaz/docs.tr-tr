@@ -2,12 +2,12 @@
 title: Öznitelikler genel bakış (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 282788f9aa5a1ac8c4ede95f04b45c26b9f56588
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559304"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827698"
 ---
 # <a name="attributes-overview-visual-basic"></a>Öznitelikler genel bakış (Visual Basic)
 Öznitelikler (derlemeler, türler, yöntemler, özellikler ve benzeri) koduyla ilişkili bir meta veriler ya da tanımlayıcı bilgileri, güçlü bir yöntem sağlar. Öznitelik, bir program varlıkla ilişkilendirilen sonra öznitelik çalışma zamanında olarak adlandırılan tekniği kullanarak sorgulanabilir *yansıma*. Daha fazla bilgi için [yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -143,6 +143,7 @@ Module: CLSCompliant(True)>
 -   [Arayan bilgileri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
 - [Yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [Öznitelikler](../../../../standard/attributes/index.md)

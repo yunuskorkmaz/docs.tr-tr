@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (LINQ to XML) öğe adlarını filtreleme (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-ms.openlocfilehash: 6b685da79f149298df14db0d0793130325aa95d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 868647ba9536886ea84fa10d94738ff0f29d8f02
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578711"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836395"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>Nasıl yapılır: (LINQ to XML) öğe adlarını filtreleme (Visual Basic)
 Çağırdığınızda döndüren yöntemler birini <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement>, öğeyi adına göre filtre uygulayabilirsiniz.  
@@ -79,4 +79,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

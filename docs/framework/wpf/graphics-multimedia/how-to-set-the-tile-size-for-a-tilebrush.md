@@ -5,12 +5,12 @@ helpviewer_keywords:
 - TileBrush [WPF], size of tile properties
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: ecac41b0ca40abf59dfcba1efffc076687c2f1ff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 80b5dfc668464df829db593668bea8a9a4ec09e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502234"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839703"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Nasıl yapılır: TileBrush için Döşeme Boyutunu Ayarlama
 
@@ -22,17 +22,17 @@ Bu örnek için döşeme boyutunu ayarlama işlemi gösterilmektedir bir <xref:S
 
 Aşağıdaki örnekte bir <xref:System.Windows.Media.ImageBrush>, bir tür <xref:System.Windows.Media.TileBrush>kutucuklar içeren bir dikdörtgen boyamak için. Örnek her kutucuk yüzde 50 ' (dikdörtgen) çıktı alanının yüzde 50 ayarlar. Sonuç olarak, dikdörtgeni görüntünün dört projeksiyonlar ile boyanır.
 
-Örneğin oluşturduğu çıktı aşağıda gösterilmiştir.
+Örneğin oluşturduğu çıktı aşağıda gösterilmiştir:
 
-![Resim fırçası ile döşeme](./media/0.png "0")
+![Resim fırçası ile döşeme gösteren dört cherries bir dikdörtgen.](./media/how-to-set-the-tile-size-for-a-tilebrush/rectangle-tile-image-brush.png)
 
 [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]
 
 Sonraki örnek, oluşturur bir <xref:System.Windows.Media.ImageBrush>, ayarlar, <xref:System.Windows.Media.TileBrush.Viewport%2A> için `0,0,25,25` ve kendi <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> için <xref:System.Windows.Media.BrushMappingMode.Absolute>ve başka bir dikdörtgen boyamak için kullanır. Sonuç olarak, fırça 25 piksel genişliği ve yüksekliği 25 piksel kutucukları üretir.
 
-Örneğin oluşturduğu çıktı aşağıda gösterilmiştir.
+Örneğin oluşturduğu çıktı aşağıda gösterilmiştir:
 
-![A döşenmiş bir 0,0,0,25,0,25 TileBrush](./media/25x25viewport.png "25x25viewport")
+![Kırk sekiz cherries döşenmiş TileBrush ile görünüm penceresini gösteren bir dikdörtgen.](./media/how-to-set-the-tile-size-for-a-tilebrush/25-x-25-viewport-tilebrush.png)
 
 [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]
 

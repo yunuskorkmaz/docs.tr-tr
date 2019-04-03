@@ -9,12 +9,12 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: 269a4c0f069b3837959b04f8463f96e7c5d5fdf7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 00ca0ad24231128b25a988921386d6bd3265e9a0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970156"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843719"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While Deyimi (Visual Basic)
 Belirli bir koşul olduğu sürece bir deyimler serisini çalıştırır `True`.  
@@ -82,6 +82,7 @@ End While
  [!code-vb[VbVbalrStatements#173](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#173)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Döngü Yapıları](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Do...Loop Deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [For...Next Deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md)

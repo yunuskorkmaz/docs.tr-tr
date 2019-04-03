@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: d56515093020a4c987d132491957ce6db9e21683
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287800"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843459"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Bir 'Select Case' deyiminin ilk ifadesinde lambda ifadeleri geçerli değildir
 Bir lambda ifadesi içindeki test ifade kullanamazsınız bir `Select Case` deyimi. Lambda ifadesi tanımlarına dönüş işlevleri ve test ifadesi bir `Select Case` deyimi, bir başlangıç veri türünde olmalıdır.  
@@ -41,6 +41,7 @@ End Select
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [If...Then...Else Deyimi](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [Select...Case Deyimi](../../../visual-basic/language-reference/statements/select-case-statement.md)

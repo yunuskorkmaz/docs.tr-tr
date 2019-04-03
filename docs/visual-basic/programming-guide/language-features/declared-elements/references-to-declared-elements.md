@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 16f4fb28ab030ccebed2a8d1b93a3a6c29d075c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501262"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821458"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Bildirilmiş Öğelere Başvurular (Visual Basic)
 Kodunuz için bildirilen bir öğe başvurduğunda, Visual Basic Derleyicisi, adı uygun bildirimi, başvuru adı eşleşir. Aynı ada sahip birden fazla öğe bildirilmişse, bu öğeleri tarafından başvurulan olan denetleyebilirsiniz *uygun* adı.  
@@ -185,15 +185,16 @@ Dim xDoc As xD.XmlDocument
   
  Ayrıca `Imports` modülleri, sınıflar, yapılar ve sabit listeleri içeri aktarma deyimi. Daha sonra içeri aktarılan tür öğeleri nitelik olmadan üyeleri de kullanabilirsiniz. Ancak, sınıfları ve yapıları bir değişken veya sınıf veya yapının örneği için değerlendirilen bir ifade ile paylaşılmayan üyelerinin her zaman nitelemeniz gerekir.  
   
-## <a name="naming-guidelines"></a>Adlandırma kuralları  
+## <a name="naming-guidelines"></a>Adlandırma Kuralları  
  Aynı ada sahip iki veya daha fazla programlama öğeleri tanımlarken bir *ad belirsizliği* derleyici bir başvuru adı çözümlemeye çalışırken neden olabilir. Kapsam içinde birden çok bir tanım ise veya hiçbir tanımı kapsamları dahilinde olması durumunda, çözümlenemeyen başvurudur. Örneğin, "Tam başvuru örnek" Bu Yardım sayfasında bakın.  
   
  Tüm öğeleri benzersiz adlar sağlayarak ad belirsizliği önleyebilirsiniz. Daha sonra bir ad alanı, modül veya sınıfı adıyla nitelemeniz gerek kalmadan herhangi bir öğeye başvuru yapabilirsiniz. Ayrıca, yanlışlıkla yanlış öğesine başvuran olasılığını de azaltır.  
   
-## <a name="shadowing"></a>Gölgeleme  
+## <a name="shadowing"></a>Gölge Kullanım  
  Bunlardan biri, iki programlama öğeleri aynı adı paylaşan, gizleyebilirsiniz, veya *gölge*, diğerinde. Gölgeli öğe için başvuru kullanılabilir değil; Bunun yerine, kodunuzu gölgeli öğe adı kullandığında, Visual Basic Derleyicisi, gölgelendirme öğesine çözümler. Örnekleri içeren daha ayrıntılı bir açıklaması için bkz: [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bildirilen Öğe Adları](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Bildirilen Öğe Özellikleri](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

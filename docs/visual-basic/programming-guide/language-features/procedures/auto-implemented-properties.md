@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: 56ea9bac1326ebab7ef44fb5541c05be8bc855e7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967210"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841293"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Otomatik Uygulanan Özellikler (Visual Basic)
 *Otomatik uygulanan Özellikler* hızlı bir şekilde kod yazmak zorunda kalmadan bir sınıfın bir özelliği belirtmenize olanak verir `Get` ve `Set` özelliği. Otomatik uygulanan bir özellik için kod yazdığınızda, Visual Basic Derleyicisi ilişkili oluşturmaya ek olarak özellik değişkeni depolamak için özel bir alan otomatik olarak oluşturur. `Get` ve `Set` yordamları.  
@@ -94,6 +94,7 @@ End Class
  Otomatik uygulanan bir özellik içeren bir genişletilmiş özelliğe Dönüştür varsa bir `Get` veya `Set` yordamı, Visual Basic Kod Düzenleyicisi oluşturabileceği otomatik olarak `Get` ve `Set` yordamlar ve `End Property`özelliği için deyimi. İmleç bir boş satır şu koyarsanız kod oluşturulur `Property` deyimi, bir `G` (için `Get`) veya bir `S` (için `Set`) ve ENTER tuşuna basın. Visual Basic Kod Düzenleyicisi'ni otomatik olarak oluşturduğu `Get` veya `Set` yordamın sonunda ENTER tuşuna bastığınızda, salt okunur ve salt yazılır özellikler için bir `Property` deyimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nasıl yapılır: Bildirme ve Visual Basic'te bir varsayılan özelliğini çağırın](./how-to-declare-and-call-a-default-property.md)
 - [Nasıl yapılır: Bir özelliği karışık erişim düzeyleriyle bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)

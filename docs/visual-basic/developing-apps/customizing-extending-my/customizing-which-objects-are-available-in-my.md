@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: caa9c2cadb9194161756f89b5acb16da0a955485
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 74be338cd6f704174d89032fb7f9e859215c2bc3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543727"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843545"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme (Visual Basic)
 Bu konuda, nasıl denetleyebileceğiniz açıklanmaktadır `My` nesneleri projenizin ayarlayarak etkin `_MYTYPE` koşullu derleme sabiti. Visual Studio tümleşik geliştirme ortamı (IDE) tutar `_MYTYPE` koşullu derleme sabiti için projenin tipini ile eşitlenmiş bir proje.  
@@ -70,6 +70,7 @@ Bu konuda, nasıl denetleyebileceğiniz açıklanmaktadır `My` nesneleri projen
 |`_MYTYPE`|Sağlar `My.Log`, `My.Request`, ve `My.Response`, "Web" sabittir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.Logging.Log>

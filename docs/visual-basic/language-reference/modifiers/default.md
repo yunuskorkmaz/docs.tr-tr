@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: b63fa66c9cda1e439e3917ca62377f68028fc049
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f78ffe42a9d618d44da2a50c0de831396576430c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497847"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836733"
 ---
 # <a name="default-visual-basic"></a>Varsayılan (Visual Basic)
 Bir özellik için varsayılan özelliği, sınıf, yapı veya arabirim tanımlar.  
@@ -36,5 +36,6 @@ Bir özellik için varsayılan özelliği, sınıf, yapı veya arabirim tanımla
  [Property Deyimi](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nasıl yapılır: Bildirme ve Visual Basic'te bir varsayılan özelliğini çağırın](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

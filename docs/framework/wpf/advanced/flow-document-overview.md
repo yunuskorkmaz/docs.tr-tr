@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: a396bede9e0004c9f0681e3399af95f31592a0b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361414"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828478"
 ---
 # <a name="flow-document-overview"></a>Akış Belgesine Genel Bakış
 Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanmıştır. Önceden tanımlanmış bir düzene ayarlanıyor, yerine akış belgeleri dinamik olarak ayarlama ve çalışma zamanı değişkenleri isteğe bağlı kullanıcı tercihlerini pencere boyutunu ve cihaz çözünürlüğü gibi temel alarak kendi içerik yeniden akışı. Ayrıca, akış belgeleri sayfalandırma ve sütunlar gibi gelişmiş belge özellikleri sunar. Bu konu, akış belgeleri ve bunların nasıl oluşturulacağı hakkında genel bir bakış sağlar.  
@@ -128,9 +128,9 @@ Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanm
   
  [!code-xaml[SpanSnippets#_BlockUIXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
   
- Aşağıdaki şekil, bu örneğin nasıl işlediğini gösterir.  
+ Bu örneğin nasıl işlediğini aşağıdaki şekilde gösterilmiştir:  
   
- ![Ekran: UIElement akış içeriğindeki gömülü](./media/blockuicontainer.png "BlockUIContainer")  
+ ![Akış içeriği bir UIElement gösteren ekran görüntüsü katıştırılmış.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
  **Liste**  
   

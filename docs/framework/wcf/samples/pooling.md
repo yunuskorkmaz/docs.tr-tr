@@ -2,12 +2,12 @@
 title: Biriktirme
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 655ef32c039014f446850376e0fe021e79c577c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91fdb34a82446aab1528835132efd31e2858191c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536338"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832443"
 ---
 # <a name="pooling"></a>Biriktirme
 Bu örnek nasıl genişleteceğinizi nesne havuzu desteklemek için Windows Communication Foundation (WCF) gösterir. Örnek sözdizimi ve anlamsal olarak benzer bir öznitelik oluşturmak nasıl gösterir `ObjectPoolingAttribute` Enterprise Hizmetleri işlevselliğinin özniteliği. Nesne havuzu bir uygulamanın performansı çarpıcı bir boost sağlayabilir. Ancak, düzgün bir şekilde kullanılmıyorsa karşı etkili sahip olabilir. Nesne havuzu kapsamlı başlatma gerektiren sık kullanılan nesnelerin yeniden yükünü azaltmanıza yardımcı olur. Havuza alınmış bir nesne üzerinde bir yönteme bir çağrı önemli miktarda zaman alıyorsa, maksimum havuz boyutuna ulaştı hemen sonra ancak nesne havuzu ek istekler kuyruğa alır. Bu nedenle bazı nesne oluşturma isteklerinin bir zaman aşımı özel durum tarafından hizmet başarısız olabilir.  
@@ -255,4 +255,3 @@ Press <ENTER> to exit.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Pooling`  
   
-## <a name="see-also"></a>Ayrıca bkz.

@@ -2,12 +2,12 @@
 title: Ertelenmiş yürütme ve geç değerlendirme LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
-ms.openlocfilehash: dc1676070488a75186def3327a84ec8b5ea5415f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5c3e2a484aa16df22742ddf77d6438ec2a699bb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492446"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839046"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>Ertelenmiş yürütme ve geç değerlendirme LINQ to XML (Visual Basic)
 Sorgu ve eksen işlemleri genellikle ertelenmiş yürütme kullanmak için uygulanır. Bu konuda, ertelenmiş yürütme ve bazı uygulama konuları avantajları ve gereksinimleri açıklanmaktadır.  
@@ -32,6 +32,7 @@ Sorgu ve eksen işlemleri genellikle ertelenmiş yürütme kullanmak için uygul
 -   [Ertelenmiş yürütme örneği (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Öğretici: Ertelenmiş yürütme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
 - [Kavramlar ve terimler (işlevsel dönüşüm) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
 - [Toplama işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)

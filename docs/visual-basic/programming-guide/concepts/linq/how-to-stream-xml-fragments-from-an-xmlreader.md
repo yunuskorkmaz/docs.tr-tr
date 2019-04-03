@@ -2,12 +2,12 @@
 title: "Nasıl yapılır: Stream parçalarını xmlreader'dan (Visual Basic)"
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
-ms.openlocfilehash: dfc5dfd6d861992861cd9a5b4bd7266d7d24af75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c5aa1afff983f3763bbf7c74268eba622df7751
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564649"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833600"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Nasıl yapılır: Stream parçalarını xmlreader'dan (Visual Basic)
 Büyük XML dosyalarını işlemek varsa, tüm XML ağacının belleğe yüklemek için uygun olmayabilir. Bu konuda gösterir kullanarak parçalarının akışını yapma hakkında bir <xref:System.Xml.XmlReader>.  
@@ -146,5 +146,6 @@ ccc
  Bu örnekte, kaynak belge çok küçüktür. Ancak, milyonlarca olsa bile `Child` öğeleri, bu örnekte küçük bellek Ayak izi yine de sahip.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İzlenecek yol: Visual Basic'te IEnumerable(Of T) uygulama](../../../../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)
 - [Ayrıştırma XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

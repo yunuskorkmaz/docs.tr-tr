@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: f7ccd47b8778aa3a374ee102b39038e8df475e9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c22e8046a8b88890f25bc6b671825eb6d68ec6b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731926"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814009"
 ---
 # <a name="file-encodings-visual-basic"></a>Dosya Kodlamaları (Visual Basic)
 Dosya kodlamaları olarak da bilinen karakter kodlamalarını temsil etmek nasıl belirtin ne zaman karakter metin işleme. Unicode genellikle tercih edilir olsa da bir kodlama başka hangi dil karakterlerini açısından olabilir veya işleyemez, tercih edilebilir.  
@@ -36,5 +36,6 @@ Dosya kodlamaları olarak da bilinen karakter kodlamalarını temsil etmek nası
 |<xref:System.Text.UTF8Encoding>|UTF-8 kodlamalı Unicode karakterini temsil eder.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Dosyalardan Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [Dosyalara Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

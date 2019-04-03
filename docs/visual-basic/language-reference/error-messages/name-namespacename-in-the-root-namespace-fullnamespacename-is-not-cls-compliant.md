@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: c5afdcc98b7acb1927c9b0735a69fbe64c3d8e60
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268723"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841543"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Adı \<namespacename > kök ad alanındaki \<fullnamespacename > CLS uyumlu değil
 Bir derleme olarak işaretlenmiş `<CLSCompliant(True)>`, ancak bir öğe kök ad alanı adının alt çizgi ile başlar (`_`).  
@@ -34,10 +34,10 @@ Bir derleme olarak işaretlenmiş `<CLSCompliant(True)>`, ancak bir öğe kök a
 -   Ad alanı adı değişmeden kalmasını gerektiriyorsa, ardından kaldırın <xref:System.CLSCompliantAttribute> derlemesinden veya olarak işaretlemek `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [/rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)
 - [Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Bildirilen Öğe Adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-

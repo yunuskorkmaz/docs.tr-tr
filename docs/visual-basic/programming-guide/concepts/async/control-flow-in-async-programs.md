@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlarda (Visual Basic) denetim akışı
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 24a3ece8393fd739ff76fbe759a5572414ce5748
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57c83021551ab386f62c8d22b90db8da8054df7f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532532"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837435"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Zaman uyumsuz programlarda (Visual Basic) denetim akışı
 Yazma ve zaman uyumsuz programları daha kolay kullanarak koruduğunuz `Async` ve `Await` anahtar sözcükleri. Ancak, nasıl programınızı anlamazsanız sonuçlar sizi şaşırtabilir. Bu konu, her zaman denetimi başka bir ve hangi bilgileri bir yöntemden diğerine taşır. göstermek için basit bir zamanuyumsuz program aracılığıyla denetim akışını aktarılır izler.  
@@ -359,6 +359,7 @@ Dim contentLength As Integer = Await getLengthTask
  ![ALTI adım](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace altı")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
 - [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

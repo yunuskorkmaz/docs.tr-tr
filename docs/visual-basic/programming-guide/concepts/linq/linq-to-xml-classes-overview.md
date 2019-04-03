@@ -2,12 +2,12 @@
 title: LINQ to XML sınıflarına genel bakış (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-ms.openlocfilehash: 0b95a3f4411e20390962a2eccf28b8cfad4b8e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd6990c387da3c687335561d1e13b7ec62fb5b84
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570128"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822836"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML sınıflarına genel bakış (Visual Basic)
 Bu konu bir listesini sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sınıfları <xref:System.Xml.Linq> ad alanını ve her kısa bir açıklaması.  
@@ -87,4 +87,5 @@ Bu konu bir listesini sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.m
  <xref:System.Xml.Linq.XText> bir metin düğümü temsil eder. Çoğu durumda, bu sınıfı kullanmanız gerekmez. Bu sınıf, öncelikle karışık içerik için kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to XML programlamaya genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: ce38089e91b25cf50e738d956881f3a44bfa3306
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588743"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840399"
 ---
 # <a name="object-variable-values-visual-basic"></a>Nesne Değişkeni Değerleri (Visual Basic)
 Bir değişken [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md) herhangi bir türde veri başvurabilir. Değerin, depolamanın bir `Object` değişkeni tutulur başka bir yerde bellekte değişken bir işaretçi verileri tutan sırada.  
@@ -67,6 +67,7 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
  Bildirme ve bir dizi kullanın `Object` değişkenleri. Çeşitli veri türleri ve nesne sınıflarını işlemek gerektiğinde bu faydalıdır. Bir dizideki tüm öğeler aynı bildirilen veri türüne sahip olmalıdır. Bu veri türü olarak bildirme `Object` , nesneleri depolamak ve diğer veri türleri dizisi birlikte örnekleri sınıfı sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Nesne Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [Nesne Değişkeni Ataması](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)

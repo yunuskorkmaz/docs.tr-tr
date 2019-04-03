@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: a11bfe261ffb8ded95f2e513aaddf00aa00f702e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a974df5d2305b88946981d0d258a8088b23d3fc3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266643"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813294"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>XML açıklama özel durumunda 'cref' özniteliği olmalıdır
 \<Özel durum > etiketi yöntemi tarafından oluşturulan özel durumları belge için bir yol sağlar. Gerekli `cref` öznitelik belgeleri Oluşturucu tarafından denetlenir bir üyenin adını belirtir. Üye varsa, kurallı öğe adı belgeleri dosyasına çevrilir.  
@@ -28,6 +28,7 @@ ms.locfileid: "55266643"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<Özel Durum >](../../../visual-basic/language-reference/xmldoc/exception.md)
 - [Nasıl yapılır: XML belgesi oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)

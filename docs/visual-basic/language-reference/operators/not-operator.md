@@ -14,12 +14,12 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: db88b61518a52a70553c037fdd95f9a135dcb268
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4e54fdca9123ad5595eb9a8c5e2ac5bc303a8f6a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981224"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824219"
 ---
 # <a name="not-operator-visual-basic"></a>Not İşleci (Visual Basic)
 Mantıksal değilleme gerçekleştiren bir `Boolean` ifadesi veya sayısal bir ifadenin bit tabanlı değil işlecini uygular.  
@@ -76,6 +76,7 @@ result = Not expression
  Yukarıdaki örnekte sırasıyla –11 –9 ve –7, sonuçları üretir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Mantıksal/bit düzeyinde işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

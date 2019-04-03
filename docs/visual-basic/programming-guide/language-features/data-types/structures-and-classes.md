@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 78c1d529053a10fc208ee5499b759623c227cb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681822"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841621"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Yapılar ve Sınıflar (Visual Basic)
 Visual Basic, yapılar ve sınıflar, her iki varlık aynı özelliklerin çoğunu destekler sonucuyla sözdizimi birleştirir. Ancak, ayrıca önemli farklar vardır yapılar ve sınıflar arasında.  
@@ -87,6 +87,7 @@ Visual Basic, yapılar ve sınıflar, her iki varlık aynı özelliklerin çoğu
 -   **Eşitlik.** İki yapıları eşitlik testi ile bir öğeye göre test gerçekleştirilmesi gerekir. İki nesne değişkenini kullanarak karşılaştırılabilir <xref:System.Object.Equals%2A> yöntemi. <xref:System.Object.Equals%2A> iki değişken aynı örneğine kılınmayacağını gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

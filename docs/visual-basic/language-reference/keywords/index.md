@@ -2,14 +2,20 @@
 title: Anahtar Sözcükler (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'reserved keywords, Visual Basic'
-  - 'keywords [Visual Basic]'
-  - 'Members [Visual Basic], Visual Basic run-time'
-  - 'Visual Basic code, keywords'
-  - 'Visual Basic, language reference'
-  - 'reserved words, Visual Basic keywords'
-  - 'Visual Basic, keywords'
+- reserved keywords, Visual Basic
+- keywords [Visual Basic]
+- Members [Visual Basic], Visual Basic run-time
+- Visual Basic code, keywords
+- Visual Basic, language reference
+- reserved words, Visual Basic keywords
+- Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
+ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814981"
 ---
 # <a name="keywords-visual-basic"></a>Anahtar Sözcükler (Visual Basic)
 Aşağıdaki tablolar, tüm Visual Basic dili anahtar sözcükleri listeler.  
@@ -56,7 +62,7 @@ Aşağıdaki tablolar, tüm Visual Basic dili anahtar sözcükleri listeler.
 |[ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|[REM](../../../visual-basic/language-reference/statements/rem-statement.md)|[RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[döndürülecek](../../../visual-basic/language-reference/statements/return-statement.md)|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|[Seçin](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Ayarlayın](../../../visual-basic/language-reference/statements/set-statement.md)|  
 |[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|[Shared](../../../visual-basic/language-reference/modifiers/shared.md)|[kısa](../../../visual-basic/language-reference/data-types/short-data-type.md)|[Tek](../../../visual-basic/language-reference/data-types/single-data-type.md)|  
-|[Static](../../../visual-basic/language-reference/modifiers/static.md)|[Step](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[dize](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
+|[Static](../../../visual-basic/language-reference/modifiers/static.md)|[Step](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Stop](../../../visual-basic/language-reference/statements/stop-statement.md)|[Dize](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |[Structure kısıtlaması](../../../visual-basic/language-reference/statements/type-list.md)|[Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)|[alt](../../../visual-basic/language-reference/statements/sub-statement.md)|[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)|  
 |[Ardından](../../../visual-basic/language-reference/statements/then-statement.md)|[Throw](../../../visual-basic/language-reference/statements/throw-statement.md)|[Alıcı](../../../visual-basic/language-reference/statements/for-next-statement.md)|[TRUE](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|  
 |[deneyin](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|[TryCast](../../../visual-basic/language-reference/operators/trycast-operator.md)|[TypeOf... Olduğu](../../../visual-basic/language-reference/operators/typeof-operator.md)|[Uınteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|  
@@ -112,4 +118,5 @@ Aşağıdaki tablolar, tüm Visual Basic dili anahtar sözcükleri listeler.
 |[Dize Düzenleme Özeti](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Dizeleri işlemek için kullanılan işlevleri listeler.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)

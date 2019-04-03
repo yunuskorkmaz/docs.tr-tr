@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654373"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833332"
 ---
 # <a name="loop-structures-visual-basic"></a>Çevrim Yapıları (Visual Basic)
 Visual Basic döngü yapıları, bir veya daha fazla kod satırlarını art arda çalıştırmanıza olanak tanır. Bir koşul olana kadar döngü yapısı deyimlerinde yineleyebilirsiniz `True`, bir koşul olana kadar `False`, belirtilen numarası sayısı veya bir kez her öğe için bir koleksiyon.  
@@ -37,6 +37,7 @@ Visual Basic döngü yapıları, bir veya daha fazla kod satırlarını art arda
  `For Each`... `Next` oluşturma bir koleksiyondaki her öğe için bir kez ifadeler kümesi çalıştırır. Döngü denetim değişkeni belirtin, ancak başlangıç veya bitiş değerlerinin de belirlemek zorunda değilsiniz. Nesne, salt okunur.[For Each...Next Deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Karar Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Diğer Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

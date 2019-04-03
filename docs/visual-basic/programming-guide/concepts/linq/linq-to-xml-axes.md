@@ -2,12 +2,12 @@
 title: LINQ to XML eksenleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ecd3bd00-28e5-4517-a59f-53bff39fd478
-ms.openlocfilehash: 2b785dd43feece816675d36064b2b4218ab94cd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a04c15357b5630de06dc0743523e5a98c91745e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684898"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832001"
 ---
 # <a name="linq-to-xml-axes-visual-basic"></a>LINQ to XML eksenleri (Visual Basic)
 Bir XML ağacı oluşturduğunuz veya bir XML belgesi bir XML ağacına yüklenen sonra öğeler ve öznitelikler bulun ve bunların değerlerini almak için sorgulayabilirsiniz.  
@@ -31,4 +31,5 @@ Bir XML ağacı oluşturduğunuz veya bir XML belgesi bir XML ağacına yüklene
 |[Dille tümleşik eksenler (LINQ to XML) Visual Basic'te](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|Visual Basic tümleşik eksenler özetler.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Programlama Kılavuzu (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

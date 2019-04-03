@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 64c175216cf21b7947462cf79e4b88ab6fcd6d86
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245654"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834718"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic Uygulama Modelini Genişletme
 Uygulama modeli için geçersiz kılarak işlevler ekleyebilirsiniz `Overridable` üyeleri <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> sınıfı. Bu teknik, uygulama modeli davranışını özelleştirip uygulama başlatıldığında ve kapanırken kendi yöntemlere yapılan çağrılar ekleyin sağlar.  
@@ -19,13 +19,13 @@ Uygulama modeli için geçersiz kılarak işlevler ekleyebilirsiniz `Overridable
   
  Aşağıdaki grafikte, normal bir Visual Basic Windows Forms uygulaması'nda uygulama modeli çağrı dizisini gösterir. Dizisi başlatılır `Sub Main` yordam çağrılarını <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> yöntemi.  
   
- ![Visual Basic uygulama modeli &#45; &#45; çalıştırma](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Uygulama modeli çağrı sırası gösteren diyagram.](./media/extending-the-visual-basic-application-model/application-model-call-sequence.gif)  
   
  Visual Basic uygulama modeli de sağlar <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> ve <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> olayları. Aşağıdaki grafik, bu olayları oluşturma mekanizması gösterir.  
   
- ![Visual Basic uygulama modeli &#45; &#45; sonraki örnek](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![StartupNextInstance olayı OnStartupNextInstance yöntemi gösteren diyagram.](./media/extending-the-visual-basic-application-model/raise-startupnextinstance-event.gif)  
   
- ![Visual Basic uygulama modeli işlenmeyen özel durum](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
+ ![OnUnhandledException yöntemin UnhandledException olayı gösteren diyagram.](./media/extending-the-visual-basic-application-model/raise-unhandledexception-event.gif)  
   
 ## <a name="overriding-the-base-methods"></a>Taban yöntemleri geçersiz  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> Yöntemi tanımlar sırası içinde `Application` yöntemleri çalıştırın. Varsayılan olarak, `Sub Main` bir Windows Forms uygulaması için yordam çağrıları <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> yöntemi.  
@@ -90,13 +90,14 @@ Uygulama modeli için geçersiz kılarak işlevler ekleyebilirsiniz `Overridable
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|Uygulamadan çıkar zaman uygulama otomatik olarak uygulamanın kullanıcı ayarları değişiklikleri kaydeder|**My.Settings kapanışında Kaydet** onay kutusu|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|Hangi uygulamanın başlangıç formu kapattığı zaman veya ne zaman son formu kapatır gibi sonlandırılmasına neden olur.|**Kapatma** listesi|  
   
-## <a name="see-also"></a>Ayrıca Bkz.  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- [Visual Basic Uygulama Modeline Genel Bakış](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- [Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+## <a name="see-also"></a>Ayrıca bkz.
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- [Visual Basic Uygulama Modeline Genel Bakış](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+- [Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

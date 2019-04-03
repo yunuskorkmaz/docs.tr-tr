@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412038"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819586"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF Genelleştirmesi ve Yerelleştirmesine Genel Bakış
 
@@ -94,9 +94,9 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  Aşağıdaki grafikte, XAML bir BAML formu temel alan bir yerelleştirme tipik iş akışı gösterilmektedir. Bu diyagram, geliştirici bir uygulama İngilizce olarak yazar. varsayar. Geliştirici oluşturur ve WPF uygulaması globalizes. Projede Geliştirici ayarlar dosyası `<UICulture>en-US</UICulture>` derleme üzerinde dil nötr ana derleme bir uydu ile oluşturulan. tüm yerelleştirilebilir kaynakları içeren resources.dll. Alternatif olarak, WPF yerelleştirme API ana derleme ayıklama desteklediğinden bir kaynak dili ana derlemede tutun. Derleme işleminden sonra XAML derlenmiş BAML. Duyarlıymış nötr MyDialog.exe.resources.dll İngilizce konuşan müşteriye sevk.  
   
- ![Yerelleştirme iş akışı](./media/localizationworkflow.png "LocalizationWorkflow")  
+ ![Yerelleştirme iş akışını gösteren diyagram.](./media/wpf-globalization-and-localization-overview/localization-workflow.png)  
   
- ![İş akışı yerelleştirilmemiş](./media/localizationworkflow2.png "LocalizationWorkflow2")  
+ ![Yerelleştirilmemiş iş akışını gösteren diyagram.](./media/wpf-globalization-and-localization-overview/unlocalized-workflow.png)  
   
 ## <a name="examples-of-wpf-localization"></a>WPF yerelleştirme örnekleri
 
@@ -108,11 +108,11 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  **İngilizce:**  
   
- ![Çalıştır iletişim kutusu](./media/rundialogenglish.PNG "RunDialogEnglish")  
+ ![Bir İngilizce Çalıştır iletişim kutusunu gösteren ekran görüntüsü.](./media/wpf-globalization-and-localization-overview/run-dialog-box-english.png)  
   
  **Almanca:**  
   
- ![Almanca Çalıştır iletişim kutusu](./media/rundialoggerman.PNG "RunDialogGerman")  
+ ![Bir Almanca Çalıştır iletişim kutusunu gösteren ekran görüntüsü.](./media/wpf-globalization-and-localization-overview/run-dialog-box-german.png)  
   
  **Bir genel çalıştırma iletişim kutusu tasarlama**  
   
@@ -226,13 +226,13 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  **İngilizce:**  
   
- ![İngilizce sayfayı](./media/englishhomepage.jpg "EnglishHomepage")  
+ ![İngilizce bir giriş sayfasını gösteren ekran görüntüsü.](./media/wpf-globalization-and-localization-overview/english-home-page-sample.jpg)  
   
  **Arapça:**  
   
- ![Arapça sayfa](./media/arabichomepage.jpg "ArabicHomepage")  
+ ![Arapça bir giriş sayfasını gösteren ekran görüntüsü.](./media/wpf-globalization-and-localization-overview/arabic-home-page-sample.jpg)  
   
-### <a name="designing-a-global-microsoft-homepage"></a>Genel bir Microsoft giriş tasarlama  
+### <a name="designing-a-global-microsoft-home-page"></a>Genel Microsoft giriş sayfasında tasarlama  
  Bu sahte ayarlama, Microsoft web sitesi RightToLeft diller için sağlanan Genelleştirme özellikleri gösterilmiştir Arabistan. İbranice ve Arapça gibi dillerde mevcuttur sağdan sola okuma düzeni kadar düzenini [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] genellikle düzenlenmelidir İngilizce gibi sağdan sola diller olacaktır oldukça farklı. Sağdan sola dil ya da tam tersi bir soldan sağa dili yerelleştirme oldukça zor olabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu tür yerelleştirmeler çok daha kolay hale getirmek için tasarlanmıştır.  
   
  **FlowDirection**  
@@ -247,11 +247,11 @@ Yerelleştirme işlemi yerelleştirilmemiş sonra başlar `MyDialog.resources.dl
   
  **FlowDirection="LeftToRight"**  
   
- ![Akış soldan sağa](./media/lefttoright.PNG "LeftToRight")  
+ ![Soldan sağa gradyan akışını gösteren ekran görüntüsü.](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)  
   
  **FlowDirection="RightToLeft"**  
   
- ![Sağdan sola akış](./media/righttoleft.PNG "RightToLeft")  
+ ![Sağdan sola gradyan akışını gösteren ekran görüntüsü.](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)  
   
  **Sabit boyutlar paneller ve denetimler için kullanmaktan kaçının**  
   

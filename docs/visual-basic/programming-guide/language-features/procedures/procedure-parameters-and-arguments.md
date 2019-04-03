@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654243"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825462"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Yordam Parametreleri ve Bağımsız Değişkenler (Visual Basic)
 Çoğu durumda, bir yordam içinde bunu çağrıldıktan koşullar hakkında bazı bilgiler gerekiyor. Yinelenen veya paylaşılan görevleri gerçekleştiren bir yordam her çağrı için farklı bilgileri kullanır. Bu bilgiler, değişkenleri, sabitleri ve onu çağırdığınızda yordama geçirdiğiniz ifadeleri oluşur.  
@@ -59,6 +59,7 @@ ms.locfileid: "58654243"
  A *genel yordam* ayrıca bir veya daha fazla tanımlar *tür parametrelerindeki* normal parametrelerini yanı sıra. Çağıran kod, veri türleri için her bir çağrıyı gereksinimlerini karşılayacak hale getirebilirsiniz şekilde yordamı, çağırdığı her zaman geçiş farklı veri türleri genel bir yordam sağlar. Bkz: [Visual Basic'de genel yordamlar](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](./index.md)
 - [Alt Yordamlar](./sub-procedures.md)
 - [İşlev Yordamları](./function-procedures.md)

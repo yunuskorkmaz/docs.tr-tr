@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634173"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836941"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Visual Basic'de Dizi Boyutları
 A *boyut* içinde değişebilir bir dizinin öğelerin belirtimini yön olduğundan. Ayın her günü için toplam satış tutan bir dizi bir boyut (ayın gününü) sahiptir. Satış toplam departmana göre ayın her günü için tutan bir dizi iki boyutlu (bölüm numarası ve ayın günü) sahiptir. Sahip bir dizi boyut sayısını çağrılır, *derece*.  
@@ -87,5 +87,6 @@ Dim salesAmounts(4, 11, 30) As Double
 >  Kullanmadan bir dizi oluşturabilirsiniz `Dim` deyimi veya `New` yan tümcesi. Örneğin, çağırabilirsiniz <xref:System.Array.CreateInstance%2A> yöntemi veya başka bir bileşen geçirebilirsiniz kodunuzu bu şekilde oluşturulan bir dizi. Böyle bir dizi alt sınırı 0'dan farklı olabilir. Bir boyut için alt sınırı kullanarak her zaman test edebilirsiniz <xref:System.Array.GetLowerBound%2A> yöntemi veya `LBound` işlevi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

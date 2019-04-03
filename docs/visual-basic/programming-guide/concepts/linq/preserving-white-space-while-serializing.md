@@ -2,14 +2,14 @@
 title: While Serializing2 boşluk koruma
 ms.date: 07/20/2015
 ms.assetid: 2d7abbd4-37f4-422b-89dd-0a694b5edc17
-ms.openlocfilehash: 8a69916627c25e4c90131e5eb9a1939bb6dea207
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a8903268f5ae1c2bc6c71a0998ba7d932f01e0ec
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374004"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814477"
 ---
-# <a name="preserving-white-space-while-serializing"></a>Serileştirirken boşlukları koruma
+# <a name="preserving-white-space-while-serializing"></a>Serileştirirken Boşlukları Koruma
 Bu konuda, bir XML ağacı serileştirilirken boşluk denetlemek nasıl açıklanmaktadır.  
   
  Sık karşılaşılan bir senaryodur girintili XML oku, herhangi bir boşluk metin düğümleri (diğer bir deyişle, beyaz boşluk olmayan koruma) olmadan bir bellek içi XML ağacı oluşturmak, bazı XML işlemleri ve XML girintilemeli kaydedin sağlamaktır. Biçimlendirme ile XML serileştirme, yalnızca önemli boşluk XML ağacındaki korunur. Varsayılan davranışı budur [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -32,4 +32,5 @@ Bu konuda, bir XML ağacı serileştirilirken boşluk denetlemek nasıl açıkla
  Yöntem alırsanız <xref:System.Xml.Linq.SaveOptions> bağımsız değişken olarak, ardından yöntemi olmayan biçimlendirme belirtebilirsiniz (Girinti) serileştirilmiş XML. Bu durumda, XML ağacındaki tüm boşluk korunur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [(Visual Basic) XML ağaçlarını serileştirme](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

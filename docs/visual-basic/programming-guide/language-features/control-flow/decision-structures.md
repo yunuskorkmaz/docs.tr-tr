@@ -9,12 +9,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 4aabb1eef717b06222696980d4cbce7a781fb567
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735253"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825384"
 ---
 # <a name="decision-structures-visual-basic"></a>Karar Yapıları (Visual Basic)
 Visual Basic koşulları test etmeye ve test sonuçlarına bağlı olarak farklı işlemler gerçekleştirmek olanak sağlar. True veya false, bir ifadenin çeşitli değerleri için veya bir deyimler serisini çalıştırdığınızda oluşturulan çeşitli özel durumlar için olan bir koşul için test edebilirsiniz.  
@@ -47,6 +47,7 @@ Bir koşul true ve false olduğunda olduğunda farklı eylemler alma
 >  Bir anahtar sözcük tıkladığınızda birçok denetim yapıları için anahtar sözcükleri yapısındaki tüm vurgulanır. Örneği için tıkladığınızda `If` içinde bir `If...Then...Else` oluşturma, tüm örneklerini `If`, `Then`, `ElseIf`, `Else`, ve `End If` yapısında vurgulanır. Sonraki veya önceki vurgulanan anahtar taşımak için CTRL + SHIFT + Aşağı Ok veya CTRL + SHIFT + Yukarı Ok tuşuna basın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Diğer Denetim Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

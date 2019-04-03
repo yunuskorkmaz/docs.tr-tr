@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 6cf45b12bebc254a0d96516ab262d7aae3d70746
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691261"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842518"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Nasıl yapılır: (Visual Basic) devralınmış değişkeni gizleme
 Türetilmiş bir sınıf kendi temel sınıfının tüm tanımları devralır. Bir öğe temel sınıf aynı adı kullanarak bir değişkeni tanımlamak istiyorsanız, gizleyebilirsiniz, veya *gölge*, türetilen sınıfta Değişkeninizi tanımladığınızda, temel sınıf öğesi. Bunu yaparsanız, türetilmiş sınıftaki kod açıkça gölgeleme mekanizması atlar sürece Değişkeninizi erişir.  
@@ -56,6 +56,7 @@ Türetilmiş bir sınıf kendi temel sınıfının tüm tanımları devralır. B
  Gölgeleme, bir değişken aynı ada sahip birden fazla sürümünü tanıtır. Kod açıklaması değişken adıdır, derleyici başvurusu açığını giderir sürüm kod açıklaması konumunu ve uygun bir dize varlığını gibi faktörlere bağlıdır. Bu gölgeli bir değişkenin istenmeyen bir sürüme başvuran riskini artırabilir. Bu riski tam olarak gölgeli bir değişken tüm başvurularını uygun tarafından düşürebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Gölgeleme ve Geçersiz Kılma Arasındaki Farklar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: b03dcba7675793070c54bdadaf6ec418f8896b7d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965717"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831130"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Visual Basic'de Değişkenlerle İlgili Sorun Giderme
 Bu sayfada Visual Basic'te değişkenler ile çalışırken oluşabilecek bazı yaygın sorunlar listelenir.  
@@ -48,6 +48,7 @@ Bu sayfada Visual Basic'te değişkenler ile çalışırken oluşabilecek bazı 
  Aynı ada ancak farklı kapsam değişkenleri kullanmaktan kaçının. Diğer derlemeleri veya projeleri kullanıyorsanız, bu dış bileşenleri mümkün olduğunca tanımlanan herhangi bir adı kullanarak kaçının. Aynı ada sahip birden fazla değişken varsa, her başvuru uygun emin olun. Daha fazla bilgi için [bildirilmiş öğelere başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-ms.openlocfilehash: f8eda72f72a1d152030aef620a4e3868573b7244
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 98c35e3fc7e2ef5ab5ff06de751f05ab17e2662c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971656"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829908"
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te seri bağlantı noktalarına ekli modemleri çevirme
 Bu konu nasıl kullanılacağını açıklar `My.Computer.Ports` Visual Basic'te bir modem çevirmek için.  
@@ -52,6 +52,7 @@ Bu konu nasıl kullanılacağını açıklar `My.Computer.Ports` Visual Basic'te
  Bu örnekte, uygulama modem çevirir sonra seri bağlantı noktası bağlantısını keser. Gerçekçi olarak, modem gelen ve giden veri aktarımı isteyeceksiniz. Daha fazla bilgi için [nasıl yapılır: Seri bağlantı noktalarından dize alma](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
 - [Nasıl yapılır: Seri bağlantı noktalarına dizeler gönderme](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)

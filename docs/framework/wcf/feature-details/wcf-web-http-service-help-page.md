@@ -2,21 +2,21 @@
 title: WCF Web HTTP Hizmeti Yardım Sayfası
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: f803d2046684bc1aa148e78b6325f26a8ec5c427
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121213"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826840"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP Hizmeti Yardım Sayfası
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] WCF WEB HTTP Hizmetleri için bir otomatik yardım sayfasına sağlar. Bu Yardım sayfası, her işlem, istek ve yanıt formatları ve şemalar açıklamasını listeler. Bu işlev varsayılan olarak kapalıdır. Ne zaman bir kullanıcı bir WCF WEB HTTP hizmetine gider ve ekler "/ Help" Örneğin URL'SİNİN sonuna açın `http://localhost:8000/Customers/Help`, aşağıda gösterilen gibi bir Yardım sayfası.  
   
- ![WCF REST Yardım sayfası](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
+ ![Bir tarayıcı ile WCF REST Yardım sayfasını açın.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  Yardım sayfasında listelenen herhangi bir yöntem kullanıcı ardından ve bu işlem için ayrıntılı bir sayfaya gösteren ileti biçimleri ve örnek yanıtlar dahil olmak üzere bu yöntemi hakkında daha fazla bilgi görüntülenir. Aşağıdaki resimde, bir yöntem için bir Yardım sayfası örneğidir.  
   
- ![WCF REST Yardım sayfası ayrıntıları](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
+ ![WCF REST Yardım sayfası ayrıntılarıyla GetCustomers yöntemi için bir tarayıcı açın.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>WCF Web HTTP Yardım sayfasını kullanarak  
  WCF WEB HTTP Yardım sayfasını kullanarak bir tane belirtin sağlanan her işlem için kısa bir açıklama görüntüler <xref:System.ComponentModel.DescriptionAttribute>. Bu öznitelik için uygulanan işlem kısa bir açıklamasını içeren bir dize alır. Örneğin, aşağıdaki kod nasıl kullanılacağını gösterir <xref:System.ComponentModel.DescriptionAttribute> kısa bir açıklama.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: 4ecb0b4a8fc154a179bc5d9d74ce9821cf4fea75
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56982173"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836291"
 ---
 # <a name="parameter-list-visual-basic"></a>Parametre Listesi (Visual Basic)
 Bir yordam çağrıldığında bu bekliyor parametreleri belirtir. Birden çok parametre, virgüllerle ayrılır. Bir parametre için sözdizimi aşağıdadır.  
@@ -87,6 +87,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
  [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub Deyimi](../../../visual-basic/language-reference/statements/sub-statement.md)

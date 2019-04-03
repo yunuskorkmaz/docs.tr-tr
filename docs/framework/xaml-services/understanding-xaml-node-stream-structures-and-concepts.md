@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034749"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824435"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama
 
@@ -218,7 +218,7 @@ Aşağıdaki liste notları tüm durumlarda bir yönerge XAML üye düğümünü
 
 - **Bilinmeyen içeriği:** Bu üye düğümün adı `_UnknownContent`. NET olarak söylemek gerekirse, olan bir <xref:System.Xaml.XamlDirective>, XAML dili XAML ad alanında tanımlanır. Bu yönerge, burada kaynak XAML İçerik XAML nesne öğesi içeriyor, ancak hiçbir içerik özelliği şu anda kullanılabilir XAML şema içeriği altında belirlenebilir durumlarda bir sentinel kullanılır. XAML düğümü akışı bu durumda adlı üye için kontrol ederek algılayabilir `_UnknownContent`. Bir yükleme yolu XAML düğüm akış varsayılan başka hiçbir işlem yapılmazsa <xref:System.Xaml.XamlObjectWriter> denenen oluşturur `WriteEndObject` karşılaştığında `_UnknownContent` herhangi bir nesne üzerinde üyesi. Varsayılan <xref:System.Xaml.XamlXmlWriter> oluşturmaz ve üyeyi örtük olarak değerlendirir. Statik bir varlık için alabilirsiniz `_UnknownContent` gelen <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.
 
-- **Koleksiyon özelliği bir koleksiyonun:** destekleyen CLR türünü XAML için genellikle kullanılan bir koleksiyon sınıfının özel koleksiyon öğelerini tutan adlı olsa da, bu özellik türü yedekleme önce bir XAML tür sistemi bilinen bir durum Çözüm. Bunun yerine, XAML düğümü akışı tanıtır bir `Items` yer tutucu XAML türü koleksiyonunun bir üyesi olarak. Bu yönerge, .NET Framework XAML hizmetlerinde uygulamasında adı / düğüm stream'de üyesidir `_Items`. Bu yönerge için bir sabit örneğinden alınabilen <xref:System.Xaml.XamlLanguage.Items%2A>.
+- **Bir koleksiyonun koleksiyon özelliği:** Destekleyen CLR türünü XAML için genellikle kullanılan bir koleksiyon sınıfının özel koleksiyon öğelerini tutan adlı olsa da, bu özellik için tür çözümlemesi yedekleme önce bir XAML tür sistemi bilinmiyor. Bunun yerine, XAML düğümü akışı tanıtır bir `Items` yer tutucu XAML türü koleksiyonunun bir üyesi olarak. Bu yönerge, .NET Framework XAML hizmetlerinde uygulamasında adı / düğüm stream'de üyesidir `_Items`. Bu yönerge için bir sabit örneğinden alınabilen <xref:System.Xaml.XamlLanguage.Items%2A>.
 
     XAML düğümü akışı ayrıştırılabilir olmaması kapatma öğeleri içeren bir Items özelliğini içerebilir yedekleme tür çözümlemesi ve XAML şema içeriği göre unutmayın. Örneğin,
 

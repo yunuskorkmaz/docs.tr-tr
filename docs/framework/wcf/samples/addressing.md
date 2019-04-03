@@ -2,12 +2,12 @@
 title: Adres Ayarlama
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 721b010fa8e1d8955515e003d14e1f0778e35a87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3de6c3556ce2a11e1ebcfba179c08a45d87bea6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642967"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835056"
 ---
 # <a name="addressing"></a>Adres Ayarlama
 Adresleme örnek çeşitli yönleri ve uç nokta adresleri özelliklerini gösterir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Bu örnekte hizmet kendiliğinden barındırılır. Hem hizmet hem de istemci konsol uygulamalardır. Hizmetin göreli ve mutlak uç nokta adresleri bir birleşimini kullanarak birden fazla uç nokta tanımlar.  
@@ -136,4 +136,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   
-## <a name="see-also"></a>Ayrıca bkz.

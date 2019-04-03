@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: a30b037b5a918f9b760ff0ab5b704dceb280d33f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f546498e5282bcf58d07a06968bb4303e4e6d7b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980223"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838150"
 ---
 # <a name="module-statement"></a>Module Deyimi
 Bir modülün adını bildirir ve değişkenleri, özellikleri, olayları ve modülü oluşturan yordamların tanımını tanıtır.  
@@ -97,6 +97,7 @@ End Module
  [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: 2b24cfe3357bfe5be213464facd9f9db0a5e27e0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 377a14a76f67e938f24c973b5946abd63f851bfd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978000"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842544"
 ---
 # <a name="-operator"></a>\\= İşleci
 Bir değişken veya özellik değeri tarafından bir ifadenin değerine böler ve tamsayı sonuç değişken veya özellik atar.  
@@ -50,6 +50,7 @@ variableorproperty \= expression
  [!code-vb[VbVbalrOperators#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#19)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
 - [/ = İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)

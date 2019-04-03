@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 06f3009d984f7a303a0ee6e8d529a3ff60900fbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498693"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826671"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Değiştirilebilir ve Değiştirilemez Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
 Bir yordamı çağırdığınızda, genellikle bir veya daha fazla bağımsız değişken geçirin. Her bir bağımsız değişkenin temel alınan bir programlama öğesine karşılık gelir. Temel alınan öğeleri hem bağımsız değiştirilebilir veya değiştirilemez olabilir.  
@@ -38,6 +38,7 @@ Bir yordamı çağırdığınızda, genellikle bir veya daha fazla bağımsız d
  Değişiklik, temel alınan öğe çağıran koddaki etkilemez ancak bu, çağrılan yordam değiştirilemez bir bağımsız değişken yerel kopyasına değiştirebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](./index.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)

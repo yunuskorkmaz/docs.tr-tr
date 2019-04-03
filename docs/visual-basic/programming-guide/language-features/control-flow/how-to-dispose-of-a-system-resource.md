@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 798650bbefc0c5b2ac097b87ab44a2b380117939
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523226"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829921"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir sistem kaynağını atma
 Kullanabileceğiniz bir `Using` kodunuzun blok çıktığında sistemin bir kaynağın siler güvence altına almak için blok. Bu, büyük miktarda bellek tüketen veya diğer bileşenleri de kullanmak istediğiniz bir sistem kaynağını kullanıyorsanız yararlı olur.  
@@ -45,6 +45,7 @@ Kullanabileceğiniz bir `Using` kodunuzun blok çıktığında sistemin bir kayn
      Bir dosya tanıtıcısı veya COM sarmalayıcı gibi bir sistem kaynağına aynı tekniği kullanabilirsiniz. Kullandığınız bir `Using` block emin olmak için çıkılana sonra diğer bileşenleri için kullanılabilen kaynak bırakmak istediğinizde `Using` blok.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.SqlClient.SqlConnection>
 - [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Karar Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)

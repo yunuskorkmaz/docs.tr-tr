@@ -2,8 +2,14 @@
 title: Visual Basic'de LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'what''s new [Visual Basic]'
+- what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
+ms.openlocfilehash: 286e6266ef8f11a7a09a9e9fe898276a6734a96d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824864"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic'de LINQ
 Bu bölümde genel bakış, örnekler ve anlamak ve Visual Basic kullanmanıza yardımcı olacak bilgiler içerir ve [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
@@ -40,6 +46,7 @@ Bu bölümde genel bakış, örnekler ve anlamak ve Visual Basic kullanmanıza y
  Anonim bir tür olarak yerine belirli bir tür olarak bir LINQ sorgusunun sonuçları döndürmek nasıl bir örnek sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ (dil ile tümleşik sorgu)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ to XML Visual Basic'de genel bakış](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [LINQ to DataSet Genel Bakış](../../../../framework/data/adonet/linq-to-dataset-overview.md)

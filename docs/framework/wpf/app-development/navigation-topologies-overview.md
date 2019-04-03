@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 16ce791c300c431b7349293d00648c881f97c372
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356786"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819599"
 ---
 # <a name="navigation-topologies-overview"></a>Gezinti Topolojilerine Genel Bakış
 <a name="introduction"></a> Bu genel bakış içindeki gezinti topolojilerine tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Daha sonra örnek, üç genel gezinti topolojileri ele alınmıştır.  
@@ -46,7 +46,7 @@ ms.locfileid: "57356786"
   
  Bu konuda üç genel gezinti topolojileri kapsar: *sabit doğrusal*, *sabit hiyerarşik*, ve *dinamik olarak üretilen*. Her Gezinti topolojisine sahip olan bir örnek gösterilmiştir bir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aşağıdaki şekilde gösterilen bir ister:  
   
- ![Görev veri öğeleri sayfalarıyla](./media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
+ ![Veri öğeleri ve Gezinti düğmelerinin sayfalarıyla görev.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
 <a name="Structured_Navigation_Topologies"></a>   
 ## <a name="structured-navigation-topologies"></a>Yapılandırılmış gezinti topolojileri  
@@ -60,9 +60,9 @@ ms.locfileid: "57356786"
   
 <a name="Navigation_over_a_Fixed_Linear_Topology"></a>   
 ## <a name="navigation-over-a-fixed-linear-topology"></a>Sabit doğrusal topoloji içinde gezinme  
- Sabit doğrusal topoloji, sabit bir sırayla gitme bir veya daha fazla sihirbaz sayfasına sahip bir sihirbaz yapısına benzer. Aşağıdaki şekilde bir sihirbazın sabit doğrusal topoloji ile akış ve üst düzey yapısını gösterir.  
+ Sabit doğrusal topoloji, sabit bir sırayla gitme bir veya daha fazla sihirbaz sayfasına sahip bir sihirbaz yapısına benzer. Aşağıdaki şekilde bir sihirbazın sabit doğrusal topoloji ile akış ve üst düzey yapısını gösterir:  
   
- ![Gezinti topoloji diyagramı](./media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
+ ![Sabit doğrusal topoloji gösteren diyagram.](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
   
  Sabit doğrusal topoloji üzerinde gezinme için tipik davranışları şunları içerir:  
   
@@ -84,13 +84,13 @@ ms.locfileid: "57356786"
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Sabit hiyerarşik topoloji üzerinde dinamik Gezinti  
- Bazı uygulamalarda, sayfaları aşağıdaki resimde gösterildiği gibi iki veya daha fazla diğer sayfalarına yönelik gezinme olanak verir.  
+ Bazı uygulamalarda, sayfaları aşağıdaki resimde gösterildiği gibi iki veya daha fazla diğer sayfalarına yönelik gezinme izin ver: 
   
- ![Birden çok sayfasına gidebilirsiniz bir sayfa](./media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
+ ![Birden çok sayfasına gidebilirsiniz sayfasını gösteren diyagram.](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
   
- Bu yapı sabit hiyerarşik topoloji bilinir ve uygulama veya kullanıcı tarafından hangi hiyerarşinin geçirildiği sırası genellikle çalışma zamanında belirlenir. Çalışma zamanında, iki veya daha fazla diğer sayfalarına yönelik gezinme sağlar hiyerarşide her sayfasına gitmek için hangi sayfa belirlemek için gereken verileri toplar. Aşağıdaki şekilde bir önceki şekle bağlı birkaç olası gezinti sıralarının gösterilmektedir.  
+ Bu yapı sabit hiyerarşik topoloji bilinir ve uygulama veya kullanıcı tarafından hangi hiyerarşinin geçirildiği sırası genellikle çalışma zamanında belirlenir. Çalışma zamanında, iki veya daha fazla diğer sayfalarına yönelik gezinme sağlar hiyerarşide her sayfasına gitmek için hangi sayfa belirlemek için gereken verileri toplar. Aşağıdaki şekilde bir önceki şekle bağlı birkaç olası gezinti sıralarının gösterilmektedir:  
   
- ![Gezinti topoloji diyagramı](./media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
+ ![Olası gezinti sırasını gösteren diyagram.](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
   
  Sabit hiyerarşik bir yapıda sayfaları gitme sırasını çalışma zamanında belirlenir olsa bile, kullanıcı deneyimini sabit doğrusal topoloji için kullanıcı deneyimi aynıdır:  
   
@@ -114,13 +114,13 @@ ms.locfileid: "57356786"
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>Dinamik olarak oluşturulan topoloji üzerinde Gezinti  
- Bazı uygulamalarda, iki veya daha fazla sayfaya gitme sırasını yalnızca çalışma zamanında kullanıcı, uygulama veya dış veri olup olmadığını tarafından belirlenebilir. Aşağıdaki şekilde bir belirlenmemiş Gezinti diziyle sayfalar kümesi gösterilmektedir.  
+ Bazı uygulamalarda, iki veya daha fazla sayfaya gitme sırasını yalnızca çalışma zamanında kullanıcı, uygulama veya dış veri olup olmadığını tarafından belirlenebilir. Aşağıdaki şekilde bir belirlenmemiş Gezinti diziyle sayfalar kümesi gösterilmektedir:  
   
- ![Gezinti topoloji diyagramı](./media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
+ ![Bir belirlenmemiş Gezinti diziyle sayfalar kümesi.](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
   
- Şekilde, çalışma zamanında kullanıcı tarafından seçilen bir gezinti sırasını gösterilmektedir.  
+ Aşağıdaki şekilde, çalışma zamanında kullanıcı tarafından seçilen bir gezinti sırasını gösterilmektedir:  
   
- ![Gezinti diyagramı](./media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
+ ![Gezinti sırasında çalışma zamanında seçilen gösteren diyagram.](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
   
  Gezinti sırasında dinamik olarak oluşturulan topoloji bilinir. Önceki Topolojileri için olduğu gibi kullanıcının olarak başka gezinme topolojileri ile kullanıcı deneyimini aynıdır:  
   

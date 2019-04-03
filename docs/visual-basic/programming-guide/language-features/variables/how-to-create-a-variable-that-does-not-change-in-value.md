@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 626b46123e3047b391cd67d3e85c25c5432b2a69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640205"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823330"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) değeri değişmeyen bir değişken oluşturma
 Bir değişkenin değerini değiştirmez kavramımız çelişkili görünebilir. Ancak bazı durumlarda bir sabit uygun olmadığı durumlarda ve sabit bir değere sahip bir değişken sağlamak kullanışlıdır. Böyle bir durumda olan bir üye değişkeni tanımlayabilirsiniz [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğü.  
@@ -44,5 +44,6 @@ Bir değişkenin değerini değiştirmez kavramımız çelişkili görünebilir.
      Değer derleme zamanında bilmiyorsanız veya tek bir deyimde derleme zamanında hesaplayamıyor, yine de uygulamayı çalışma zamanında bir oluşturucuda atayabilirsiniz. Bunu yapmak için size bildirmelidir `ReadOnly` sınıf veya yapı düzeyinde değişken. Bu sınıf veya yapı için oluşturucu, sabit değişkenin değerini hesaplamak ve oluşturucudan döndürmeden önce değişkene atayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
 - [Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)

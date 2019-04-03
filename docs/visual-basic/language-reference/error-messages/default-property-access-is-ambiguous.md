@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270595"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836356"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Devralınan üyelerin arasında varsayılan özellik erişimi belirsiz\<defaultpropertyname >' arabiriminin '\<interfacename1 >' ve '\<defaultpropertyname >' arabiriminin '\< interfacename2 >'
 Her biri aynı ada sahip varsayılan bir özelliği bildirir, iki arabirim bir arabirimi devralır. Derleyici, nitelik olmadan bu varsayılan özellik için bir erişim çözümlenemiyor. Aşağıdaki örnek bunu göstermektedir.  
@@ -47,7 +47,7 @@ End Class
     Dim testObj As Iface1  
     ```  
   
-     -veya-  
+     veya  
   
 -   Bir sınıfta devralan arabirim uygular. Ardından, her biri farklı adlara sahip devralınan özellikler uygulayabilirsiniz. Ancak, yalnızca bir tanesi uygulayan sınıfın varsayılan özelliği olabilir. Aşağıdaki örnek bunu göstermektedir.  
   
@@ -64,4 +64,5 @@ End Class
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Arabirimler](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

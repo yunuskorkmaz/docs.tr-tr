@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Yeni bir tür (LINQ to XML) proje (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
-ms.openlocfilehash: 5d0679c3c6f1fa26408905799f5b7a5d0cef6266
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a94180705674c8aee3ce45607f89fdbba1c873b7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592104"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834666"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Nasıl yapılır: Yeni bir tür (LINQ to XML) proje (Visual Basic)
 Bu bölümdeki diğer örnekler, sonuç olarak döndüren sorgular gösterilmesini <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> , `string`, ve <xref:System.Collections.Generic.IEnumerable%601> , `int`. Bunlar ortak sonuç türleri, ancak her senaryo için uygun değildir. Çoğu durumda sorgularınızın döndürülecek isteyeceksiniz bir <xref:System.Collections.Generic.IEnumerable%601> başka bir tür.  
@@ -53,4 +53,5 @@ Baby Monitor:2
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Projeksiyonlar ve Dönüşümler (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974919"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837510"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Nasıl yapılır: Bir yordam bağımsız değişkeninin (Visual Basic) değerini değiştirme
 Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken yordamda tanımlanan parametrelerin birine karşılık gelir. Bazı durumlarda çağıran koddaki bağımsız değişken temel değer yordamının kodunu değiştirebilirsiniz. Diğer durumlarda, yordam bir bağımsız değişken yalnızca yerel kopyasına değiştirebilirsiniz.  
@@ -48,7 +48,7 @@ Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken
   
 1.  Yordam bildiriminde belirtin [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) için argument'ine karşılık gelen parametre.  
   
-     -veya-  
+     veya  
   
      Çağıran kod içinde bağımsız değişken bağımsız değişken listesinde parantez içinde alın. Karşılık gelen parametre belirtse dahi, bu bağımsız değişkeni değere göre geçirilecek Visual Basic zorlar `ByRef`.  
   
@@ -78,6 +78,7 @@ Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken
  Her zaman bir olası riski yoktur çağıran koddaki bağımsız değişken temel değeri değiştirmek bir yordam vermek. Bu değer, değiştirilmesi ve kullanmadan önce geçerliliğini denetlemek için hazırlanması beklediğiniz emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](./index.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)

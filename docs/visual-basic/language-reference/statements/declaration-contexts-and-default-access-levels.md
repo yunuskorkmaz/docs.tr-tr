@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-ms.openlocfilehash: 75c5b16164e9ecb6558e445c59e4a312158ff4f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580817"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821705"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Bildirim Bağlamları ve Varsayılan Erişim Düzeyleri (Visual Basic)
 Bu konuda, hangi Visual Basic türleri, hangi bir tür içinde bildirilebilir ve hangi kullanıcıların erişim düzeylerini varsayılan belirtilmezse açıklanmaktadır.  
@@ -52,6 +52,7 @@ Bu konuda, hangi Visual Basic türleri, hangi bir tür içinde bildirilebilir ve
  Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)

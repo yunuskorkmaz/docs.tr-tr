@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712480"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826606"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 <a name="top"></a> Ortak dil çalışma zamanı (CLR), çöp toplayıcı otomatik bellek yöneticisi görev yapar. Bunu, aşağıdaki avantajları sağlar:  
@@ -261,21 +261,19 @@ Eş zamanlı çöp toplama
   
  Arka plan çöp toplama sırasında kısa ömürlü çöp toplamalar oluşabileceğinden arka plan çöp toplama, eşzamanlı çöp toplamadan kaynaklanan ayırma kısıtlamalarını kaldırır. Başka bir deyişle, arka plan atık toplama ölü nesneleri kısa ömürlü nesillerde kaldırabilir ve Öbek kuşaktaki 1 atık toplama sırasında gerekirse genişletebilirsiniz.  
   
- Aşağıdaki çizimde, bir iş istasyonunda ayrı adanmış iş parçacığı üzerinde gerçekleştirilen arka plan atık toplama gösterir.  
+Aşağıdaki resimde bir iş istasyonunda ayrı adanmış iş parçacığı üzerinde gerçekleştirilen arka plan atık toplama gösterilmektedir:
   
- ![Arka plan iş istasyonu çöp toplama](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
-Arka plan iş istasyonu çöp toplama  
-  
+ ![Arka plan iş istasyonu çöp toplama gösteren diyagram.](./media/fundamentals/background-workstation-garbage-collection.png)
+   
  [Başa dön](#top)  
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>Arka plan sunucusu çöp toplama  
  .NET Framework 4.5 ile başlayarak, arka plan sunucusu çöp toplama için varsayılan sunucu çöp toplama moddur. Bu modu seçmek için ayarlanmış `enabled` özniteliği [ \<gcServer > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) için `true` çalışma zamanı yapılandırma şemasında. Bu modu işlevlerine benzer şekilde arka plan iş istasyonu çöp toplama, önceki bölümde açıklanan, ancak bazı farklar vardır. Arka plan iş istasyonu atık toplama arka plan sunucusu çöp toplama, genellikle bir adanmış iş parçacığı her mantıksal işlemci için birden çok iş parçacığı kullanan bir adanmış arka plan çöp toplama iş parçacığı kullanır. İş istasyonu arka plan çöp toplama iş parçacığının tersine, bu iş parçacıkları zamanaşımına uğramaz.  
   
- Aşağıdaki çizimde, bir sunucuda ayrı adanmış iş parçacığı üzerinde gerçekleştirilen arka plan atık toplama gösterir.  
+ Aşağıdaki resimde, bir sunucuda ayrı adanmış iş parçacığı üzerinde gerçekleştirilen arka plan atık toplama gösterilmektedir:  
   
- ![Arka plan sunucusu çöp toplama](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
-Arka plan sunucusu çöp toplama  
+ ![Arka plan sunucusu çöp toplama gösteren diyagram.](./media/fundamentals/background-server-garbage-collection.png)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

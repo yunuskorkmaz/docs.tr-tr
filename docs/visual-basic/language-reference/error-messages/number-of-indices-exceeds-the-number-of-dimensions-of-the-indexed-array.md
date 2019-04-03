@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: b113860366ccbe47fed8ef13abb90a540dc88b33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01659205f271b089fe4e8aa87cf7a8c44e7a4000
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710657"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838000"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>Dizin sayısı, sıralı dizinin boyut sayısını aşıyor
 Bir dizi öğesine erişmek için kullanılan dizinlerin sayısı tam olarak diğer bir deyişle, boyut için bildirilen sayısını dizinin boyut ile aynı olmalıdır.  
@@ -36,4 +36,5 @@ Bir dizi öğesine erişmek için kullanılan dizinlerin sayısı tam olarak di�
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Diziler](../../../visual-basic/programming-guide/language-features/arrays/index.md)

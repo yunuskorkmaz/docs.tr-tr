@@ -1,15 +1,15 @@
 ---
-title: Dış kural kümesi Araç Seti
+title: Dış Kural Kümesi Araç Seti
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c453c6137beeae8eee0e356734a1f9cdf8d8568b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710049"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840243"
 ---
-# <a name="external-ruleset-toolkit"></a>Dış kural kümesi Araç Seti
+# <a name="external-ruleset-toolkit"></a>Dış Kural Kümesi Araç Seti
 
 Bir iş akışı uygulama içinde kuralları kullanıldığında, normal derlemenin parçası kurallardır. Bazı senaryolarda, yeniden oluşturma ve iş akışı derleme dağıtılmadan güncelleştirilebilir ayrı olarak derlemesinden RuleSets sağlamak isteyebilirsiniz. Bu örnek ve bir veritabanında RuleSets düzenleyin ve çalışma zamanında bir iş akışından bu RuleSets erişimi yönetmesine olanak tanır. Bu kural kümesi değişiklikleri otomatik olarak birleştirmek çalışan iş akışı örnekleri sağlar.
 
@@ -28,11 +28,9 @@ Bu örnek Ekle bileşenlerinin:
 
 - Bir `ExternalPolicy` RuleSet hizmetinden bir RuleSet istekleri ve RuleSet karşı iş akışını çalıştıran etkinlik.
 
-Şekil 1'de bileşenlerin etkileşimi gösterilmektedir. Aşağıdaki bölümlerde, her bir bileşeni açıklar.
+Aşağıdaki görüntüde bileşenleri etkileşimi gösterilmektedir. Aşağıdaki bölümlerde, her bir bileşeni açıklar.
 
-![Dış kural kümesi örnek kavramsal genel bakış](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
-
-Şekil 1: Örnek genel bakış
+![Dış kural kümesi Araç Seti örneğine genel bakış gösteren diyagram.](./media/external-ruleset-toolkit/ruleset-toolkit-overview.gif)
 
 > [!IMPORTANT]
 > Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.
@@ -45,19 +43,15 @@ Bu örnek Ekle bileşenlerinin:
 
 ## <a name="ruleset-tool"></a>Kural kümesi araç
 
-Şekil 2'de bir RuleSet aracı ekran görüntüsü gösterilmektedir. Gelen **kural Store** menüsünde kullanılabilir RuleSets veritabanından yükleyin ve değiştirilen RuleSets depoya kaydedin. Uygulama yapılandırma dosyası bir veritabanı bağlantı dizesi için RuleSet veritabanı sağlar. Aracı'nı başlattığınızda, yapılandırılmış veritabanından otomatik olarak RuleSets yükler.
+RuleSet aracının ekran görüntüsüdür. Gelen **kural Store** menüsünde kullanılabilir RuleSets veritabanından yükleyin ve değiştirilen RuleSets depoya kaydedin. Uygulama yapılandırma dosyası bir veritabanı bağlantı dizesi için RuleSet veritabanı sağlar. Aracı'nı başlattığınızda, yapılandırılmış veritabanından otomatik olarak RuleSets yükler.
 
-![Dış kural kümesi Araç Seti örnek çıktı](./media/rulesetbrowser.gif "RuleSetBrowser")
-
-Şekil 2: RuleSet tarayıcı
+![RuleSet tarayıcı gösteren ekran görüntüsü.](./media/external-ruleset-toolkit/ruleset-browser-dialog.gif)
 
 Kural kümesi araç aynı anda korumak ve (araç kilitleme veya diğer yapılandırma sürümü oluşturma yeteneğine ek yönetim özellikleri sağlar) birden çok sürümlerini depolamanıza olanak tanıyan RuleSets büyük ve küçük sürüm numaralarına uygular. Aracı'nı kullanarak yeni RuleSet sürümler oluşturabilir veya mevcut sürümleri silin. Tıkladığınızda **yeni**, aracı yeni bir kural kümesi adı oluşturur ve sürüm 1.0 için geçerlidir. Bir sürüm kopyaladığınızda, aracın kapsanan kuralları dahil olmak üzere seçili RuleSet sürümünün bir kopyasını oluşturur ve yeni, benzersiz sürüm numaraları atar. Bu sürüm numaralarını üzerinde mevcut RuleSets sürüm numaralarını temel alır. Formda ilişkili alanlarını kullanarak RuleSet adını ve sürüm numaralarını değiştirebilirsiniz.
 
-Tıkladığınızda **kurallarını Düzenle**, Şekil 3'te gösterildiği gibi kural kümesi Düzenleyicisi'ni başlatır.
+Tıkladığınızda **kurallarını Düzenle**, kural kümesi Düzenleyicisi'ni başlatır, aşağıdaki görüntüde gösterildiği gibi:
 
-![Dış kural kümesi Araç Seti örnek çıktı](./media/ruleseteditor.gif "RuleSetEditor")
-
-Şekil 3: Kural kümesi Düzenleyicisi
+![Kural kümesi Düzenleyici gösteren ekran görüntüsü.](./media/external-ruleset-toolkit/ruleset-editor-dialog.gif)
 
 Bir Windows Workflow Foundation için Visual Studio eklentisinin bir parçası olan Düzenleyicisi iletişim yeniden barındırma budur. Bu, IntelliSense desteği dahil olmak üzere aynı işlevselliği sağlar. Kurallar, araç kümesinde ile ilişkili olan bir hedef türü (örneğin, bir iş akışı) karşı yazılan; tıkladığınızda **Gözat** ana aracı iletişim kutusunda **türündeki iş akışı Seçici** Şekil 4'te gösterildiği gibi iletişim kutusu görünür.
 
@@ -69,21 +63,17 @@ Kullanabileceğiniz **türündeki iş akışı Seçici** iletişim bir derleme v
 
 Derleme dosya ve tür yolu `name are stored with the` RuleSet veritabanındaki zaman RuleSet veritabanından alınır böylece aracı çalışır hedef türü otomatik olarak yüklenecek.
 
-Tıkladığınızda **Tamam** içinde **türündeki iş akışı Seçici** iletişim kutusunda, seçili türü hedef türü kurallar tarafından başvurulan tüm üyeleri olduğundan emin olmak için RuleSet karşı doğrular. Hatalar gösterilir bir **doğrulama hatalarını** iletişim (bkz: Şekil 5). Hataları rağmen değişiklik ile devam edin veya seçebileceğiniz **iptal**. Gelen **Araçları** menüsünde ana aracı iletişim kutusunda, tıklayabilirsiniz **doğrulama** hedef etkinlik karşı RuleSet sürümü yeniden doğrulamak için.
+Tıkladığınızda **Tamam** içinde **türündeki iş akışı Seçici** iletişim kutusunda, seçili türü hedef türü kurallar tarafından başvurulan tüm üyeleri olduğundan emin olmak için RuleSet karşı doğrular. Hatalar gösterilir bir **doğrulama hatalarını** iletişim. Hataları rağmen değişiklik ile devam edin veya seçebileceğiniz **iptal**. Gelen **Araçları** menüsünde ana aracı iletişim kutusunda, tıklayabilirsiniz **doğrulama** hedef etkinlik karşı RuleSet sürümü yeniden doğrulamak için.
 
-![Doğrulama hataları dış RuleSet örnekten](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
-
-Şekil 5: Doğrulama hataları
+![Doğrulama hataları iletişim kutusunu gösteren ekran görüntüsü.](./media/external-ruleset-toolkit/validation-errors-dialog.png)
 
 Gelen **veri** menü aracında içeri ve dışarı aktarma RuleSets. Tıkladığınızda **alma**, bir dosya Seçici iletişim kutusu görünürse, .rules dosya seçin. Bu olabilir veya başlangıçta Visual Studio'da oluşturulan bir dosya olabilir. .Rules dosya seri hale getirilmiş bir içermelidir `RuleDefinitions` koşulların koleksiyonunu ve RuleSets koleksiyonunu içeren örneği. Koşulları koleksiyonu Aracı'nı kullanmaz, ancak kullanmak `RuleDefinitions` Visual Studio ortamını etkileşime izin vermek için .rules biçimi.
 
-.Rules dosyayı seçtikten sonra bir **RuleSet Seçici** iletişim kutusu görünür (bkz. Şekil 6). İletişim kutusu içeri aktarmak istediğiniz dosyasından RuleSets seçmek için kullanabilirsiniz (varsayılan, tüm RuleSets belirtir). WF projedeki kendi sürüm oluşturma derlemenin sürümü ile aynı olduğundan RuleSets .rules dosyasında sürüm numaralarının yok. İçeri aktarma işlemi sırasında Aracı'nı (içeri aktardıktan sonra değiştirebilirsiniz) sonraki kullanılabilir ana sürüm numarası otomatik olarak atar; atanan sürüm numaraları gördüğünüz **RuleSet Seçici** listesi.
+.Rules dosyayı seçtikten sonra bir **RuleSet Seçici** iletişim kutusu görüntülenir. İletişim kutusu içeri aktarmak istediğiniz dosyasından RuleSets seçmek için kullanabilirsiniz (varsayılan, tüm RuleSets belirtir). WF projedeki kendi sürüm oluşturma derlemenin sürümü ile aynı olduğundan RuleSets .rules dosyasında sürüm numaralarının yok. İçeri aktarma işlemi sırasında Aracı'nı (içeri aktardıktan sonra değiştirebilirsiniz) sonraki kullanılabilir ana sürüm numarası otomatik olarak atar; atanan sürüm numaraları gördüğünüz **RuleSet Seçici** listesi.
 
-Bunu aktarır her kural kümesi için aracı denemeleri .rules dosyasının (varsa) konumu altında bin\Debug klasöründen ilişkili türünü bulun temel kümesinde kullanılan üyeler. Aracın birden çok eşleşen türleri bulur .rules dosya adı ve tür adı arasında bir eşleşme göre bir türü seçmek çalışır (örneğin, `Workflow1` Workflow1.rules için karşılık gelen türü). Birden çok eşleşme varsa, türü seçmek için istenir. Eşleşen bir derleme veya tür bulmak bu otomatik kimlik mekanizması başarısız durumunda tıklayabilirsiniz içeri aktardıktan sonra **Gözat** ilişkili türe gitmek için ana aracı iletişim.
+Bunu aktarır her kural kümesi için aracı denemeleri .rules dosyasının (varsa) konumu altında bin\Debug klasöründen ilişkili türünü bulun temel kümesinde kullanılan üyeler. Aracın birden çok eşleşen türleri bulur .rules dosya adı ve tür adı arasında bir eşleşme göre bir türü seçmek çalışır (örneğin, `Workflow1` Workflow1.rules için karşılık gelen türü). Birden çok eşleşme varsa, türü seçmek için istenir. Eşleşen bir derleme veya tür bulmak bu otomatik kimlik mekanizması başarısız durumunda tıklayabilirsiniz içeri aktardıktan sonra **Gözat** ilişkili türe gitmek için ana aracı iletişim. Aşağıdaki görüntüde RuleSet Seçici gösterilmektedir:
 
-![Kural kümesi Seçici](./media/rulesetselector.gif "RuleSetSelector")
-
-Şekil 6: Kural kümesi Seçici
+![Kural kümesi Seçici iletişim kutusunu gösteren ekran görüntüsü.](./media/external-ruleset-toolkit/ruleset-selector-dialog.gif)
 
 Tıkladığınızda **verileri dışarı aktarma** ana aracı menüsünden **RuleSet Seçici** verilmeli veritabanından RuleSets belirlemek iletişim yeniden görünür. Tıkladığınızda **Tamam**, **dosyayı Kaydet** iletişim kutusu açılır, sonuçta elde edilen .rules dosyasının konumunu ve adını belirtebilirsiniz. .Rules dosya sürüm bilgisi içermediğinden, yalnızca belirli bir RuleSet ada sahip bir kural kümesi sürümü seçebilirsiniz.
 

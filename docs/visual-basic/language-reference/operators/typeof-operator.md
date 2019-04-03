@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 27fdef4012d4724d45b4e990ce449bdfe09feaa6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7162fcc24595bbb16d268d5d9e1ea4d82f6e67fb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965065"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829869"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf İşleci (Visual Basic)
 Bir veri türü için bir nesne başvuru değişkenini karşılaştırır.  
@@ -63,6 +63,7 @@ result = TypeOf objectexpression IsNot typename
  Değişken `refInteger` bir çalışma zamanı türü `Integer`. İle uyumlu `Integer` bilgisayardı `Double`. Değişken `refForm` bir çalışma zamanı türü <xref:System.Windows.Forms.Form>. İle uyumlu <xref:System.Windows.Forms.Form> ile kendi türü olduğu için <xref:System.Windows.Forms.Control> çünkü <xref:System.Windows.Forms.Form> devraldığı <xref:System.Windows.Forms.Control>ile <xref:System.ComponentModel.IComponent> çünkü <xref:System.Windows.Forms.Form> devralan <xref:System.ComponentModel.Component>, uygulayan<xref:System.ComponentModel.IComponent>. Ancak, `refForm` ile uyumlu olmayan <xref:System.Windows.Forms.Label>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Is İşleci](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot İşleci](../../../visual-basic/language-reference/operators/isnot-operator.md)
 - [Visual Basic'de Karşılaştırma işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972007"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830142"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Yordam Sorunlarını Giderme (Visual Basic)
 Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar listelenir.  
@@ -124,6 +124,7 @@ Bu sayfada yordamlarla çalışırken oluşabilecek bazı yaygın sorunlar liste
  Son parametre bildirilen dışında aynı imzaya bir yordamın iki aşırı yükleme varsa [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) birinde ve [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) diğerinde derleyici Bu yordam çağrısı çözümler en yakın eşleşme göre. Daha fazla bilgi için [aşırı yükleme çözünürlüğü](./overload-resolution.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](./index.md)
 - [Alt Yordamlar](./sub-procedures.md)
 - [İşlev Yordamları](./function-procedures.md)

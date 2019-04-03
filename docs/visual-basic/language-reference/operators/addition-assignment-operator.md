@@ -10,12 +10,12 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: 7fdf5cd422cf2a4081372bc14e74ed7463393520
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b8f36397d0f52866ebe9fa188d6b163364aeffc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979859"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839028"
 ---
 # <a name="-operator-visual-basic"></a>+= İşleci (Visual Basic)
 Sayısal bir ifadenin değerini sayısal değişken veya özellik değerine ekler ve sonucu değişken veya özellik atar. Birleştirmek için de kullanılabilir bir `String` ifade bir `String` değişken veya özellik ve ata değişken veya özellik sonucu.  
@@ -58,6 +58,7 @@ variableorproperty += expression
  Değerini `num1` 13 ve değerini sunulmuştur `str1` "103" sunulmuştur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [+ İşleci](../../../visual-basic/language-reference/operators/addition-operator.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Aritmetik İşleçler](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

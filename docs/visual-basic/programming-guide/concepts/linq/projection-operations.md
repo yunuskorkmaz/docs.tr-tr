@@ -2,12 +2,12 @@
 title: Projeksiyon işlemleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: f7f1ba7b595d5ea63468aaa2d4fdda62cb9d0693
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408957"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820990"
 ---
 # <a name="projection-operations-visual-basic"></a>Projeksiyon işlemleri (Visual Basic)
 Projeksiyon bir nesne, genellikle daha sonra kullanılacak olan bu özelliklerini içeren yeni bir biçime dönüştürme işlemini ifade eder. Yansıtma kullanarak her nesneden yerleşik yeni bir türünü oluşturabilirsiniz. Proje bir özelliği ve bir matematiksel işlev üzerinde gerçekleştirin. Ayrıca, değişiklik yapmadan özgün nesneye yansıtabilirsiniz.  
@@ -171,6 +171,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Linq>
 - [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Select Yan Tümcesi](../../../../visual-basic/language-reference/queries/select-clause.md)

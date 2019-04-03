@@ -2,12 +2,12 @@
 title: Dosya bir bayt dizisine okunamayacak kadar büyük
 ms.date: 07/20/2015
 ms.assetid: 686630a6-a439-46c7-8d7b-34613ae4c5d8
-ms.openlocfilehash: 90db5214ff26cfacf3a832c904d742c9caf853d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c7d35e08eeb42e35c4c40e47434a64393d829b1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728944"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831520"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a>Dosya bir bayt dizisine okunamayacak kadar büyük
 4 GB bir bayt dizisine okunamayacak kadar çalıştığınız dosya boyutunu aşıyor. `My.Computer.FileSystem.ReadAllBytes` Yöntemi, bu boyutu aşan bir dosya okunamıyor.  
@@ -17,6 +17,7 @@ ms.locfileid: "54728944"
 -   Kullanım bir <xref:System.IO.StreamReader> dosyası okunamıyor. Daha fazla bilgi için [temelleri, .NET Framework dosyası g/ç ve dosya sistemi (Visual Basic)](../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:System.IO.StreamReader>
 - [Visual Basic ile Dosya Erişimi](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)

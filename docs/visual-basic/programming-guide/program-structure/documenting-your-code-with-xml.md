@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML comments, Visual Basic
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
-ms.openlocfilehash: d3658076b994ae0f7aedb64e8d45f7d6b366018c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b53b73afb9c6b793597c00fd2eb029b18bf1f9a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552300"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831585"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>XML ile Kodunuzu Belgeleme (Visual Basic)
 Visual Basic'te XML kullanarak kodunuzu belgeleme  
@@ -47,5 +47,6 @@ Visual Basic'te XML kullanarak kodunuzu belgeleme
 -   [Visual Studio'daki XML Araçları](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)
 - [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)

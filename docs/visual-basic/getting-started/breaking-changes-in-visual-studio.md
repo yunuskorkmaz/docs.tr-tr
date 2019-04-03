@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - breaking changes [Visual Basic]
 ms.assetid: 708fb176-35eb-4cbc-a6e7-a04c6e3bdaff
-ms.openlocfilehash: 630715927d2a3d9f124d321021ddb9dbea143182
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 847034503f2797cf16a944478ebf9587a6985e82
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596754"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834016"
 ---
 # <a name="visual-basic-breaking-changes-in-visual-studio"></a>Visual Basic Visual Studio'da bozucu değişiklikler
 Visual Studio 2017 ile ilgili en son belgeler için bkz. [Visual Studio 2017 Belgeleri](https://docs.microsoft.com/visualstudio/).
@@ -17,6 +17,7 @@ Visual Studio 2017 ile ilgili en son belgeler için bkz. [Visual Studio 2017 Bel
 Visual Studio 2015'te Visual Basic'te değişiklik derlemeden oluşturulan Visual Studio 2013'te Visual Basic'te bir uygulamanın derlenmesini veya bu tür bir uygulama çalışma zamanı davranışını değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Diziler](../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Lambda İfadeleri](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

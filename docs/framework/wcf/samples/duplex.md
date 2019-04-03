@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: adc26caaf1d3cebb8c8887ba94a1b4412378994c
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 246c5f489f4cc0076303de8383506898fe053ae5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332084"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843160"
 ---
 # <a name="duplex"></a>Çift Yönlü
 Çift yönlü örnek tanımlaması ve çift yönlü sözleşme nasıl gösterir. Bir istemci bir hizmeti ile bir oturumu oluşturur ve hizmet üzerinde hizmet istemciye iletileri gönderebilir bir kanal sağlar. çift yönlü iletişim gerçekleşir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Çift yönlü sözleşme çifti arabirimleri tanımlanan — birincil arabirim istemciden hizmete ve hizmetten geri çağırma arabirimi istemciye. Bu örnekte `ICalculatorDuplex` sonucu bir oturumu üzerinden hesaplama matematik işlemlerini gerçekleştirmek üzere istemci arabirimi sağlar. Sonuçlar döndürüyor hizmet `ICalculatorDuplexCallback` arabirimi. Hizmet ve istemci arasında gönderilen ileti kümesini ilişkilendirmek için bir bağlamı yeniden kurulması için çift yönlü sözleşme bir oturumu gerektirir.  
@@ -194,4 +194,3 @@ client.Close();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`  
   
-## <a name="see-also"></a>Ayrıca bkz.

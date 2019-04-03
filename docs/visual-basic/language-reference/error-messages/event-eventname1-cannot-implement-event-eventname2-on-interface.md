@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-ms.openlocfilehash: 3ec3e7bb2f28bf8c4dd38bc71e11193456860021
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9581168fa86f8f0715e004b60c2eb2a813cd38ab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379763"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840529"
 ---
 # <a name="event-eventname1-cannot-implement-event-eventname2-on-interface-interface-because-their-delegate-types-delegate1-and-delegate2-do-not-match"></a>Olay '\<eventname1 >' olayını uygulayamaz '\<eventname2 >' arabiriminde '\<arabirimi >' için temsilci türleri\<delegate1 >' ve '\<delegate2 >' eşleşmiyor
 Visual Basic olaya uygulanamıyor arabirimdeki olayın temsilci türü olay temsilci türü eşleşmiyor. Bu hata, bir arabirimde birden çok olayı tanımlayın ve bunları aynı olay ile birlikte uygulama girişimi oluşabilir. Bir olay iki uygulayabilir veya yalnızca tüm olayları uygulanırsa, daha fazla olay kullanılarak bildirilen `As` söz dizimi ve aynı temsilci türünü belirtin.  
@@ -28,6 +28,7 @@ Visual Basic olaya uygulanamıyor arabirimdeki olayın temsilci türü olay tems
 -   Arabirimi kullanarak olayları tanımlamanız `As` söz dizimi ve aynı temsilci türünü belirtin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Event Deyimi](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Delegate Deyimi](../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Olaylar](../../../visual-basic/programming-guide/language-features/events/index.md)

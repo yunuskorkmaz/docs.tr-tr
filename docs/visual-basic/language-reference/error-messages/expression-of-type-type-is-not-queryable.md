@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 06b2a7f5c6bd838d09fd39f31778462c364fb8bd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7f74d56b47629ff76f9b935d26278ace8df4c353
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261262"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842336"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>Türündeki ifade \<türü > sorgulanabilir değil
 Türündeki ifade \<türü > sorgulanabilir değil. Bir derleme başvurusunun ve/veya ad alanı alma LINQ sağlayıcısı için eksik olmadığından emin olun.  
@@ -34,6 +34,7 @@ Türündeki ifade \<türü > sorgulanabilir değil. Bir derleme başvurusunun ve
 2.  Sorgulanabilir tür kaynak sorgunuzun olduğu gibi belirlediğiniz türü emin olun. Diğer bir deyişle, uygulayan bir tür <xref:System.Collections.Generic.IEnumerable%601> veya <xref:System.Linq.IQueryable%601>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Linq>
 - <xref:System.Data.Linq>
 - <xref:System.Xml.Linq>

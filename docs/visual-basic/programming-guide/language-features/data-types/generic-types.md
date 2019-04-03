@@ -36,20 +36,19 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978507"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831442"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
 A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçekleştirmek için tek bir programlama öğesi. Bir genel sınıf ya da yordamın tanımladığınızda, kendisi için bu işlevi gerçekleştirmek isteyebileceğiniz her veri türü için ayrı bir sürüm tanımlamak zorunda değildir.  
   
  Benzetme ile çıkarılabilir heads tornavida ' dir. Kapat ve bu Sarmal doğru yönelin seçin Sarmal inceleyin (yarıklı, çapraz, yıldızlı). Doğru baş tornavida tutamacın ekledikten sonra tam aynı işlevi tornavida ile yani Sarmal kapatma gerçekleştirir.  
   
- ![Genel bir araç olarak tornavida diyagramı](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")  
-Tornavida genel bir araç olarak ayarlayın  
+ ![İle farklı heads tornavida diyagramı.](./media/generic-types/generic-screwdriver-set.gif)  
   
  Genel tür tanımlama, bir veya daha fazla veri türleriyle parametreleştirin. Kullanarak böylece veri türleri için kendi gereksinimlerine uygun hale getirmek için kod. Kodunuzu genel öğe, her biri farklı veri türleri kümesi üzerinde çalışan birkaç farklı programlama öğeleri bildirebilirsiniz. Ancak tüm bildirilen öğeler hangi veri türlerini kullandıkları ne olursa olsun aynı mantığı uygulayın.  
   

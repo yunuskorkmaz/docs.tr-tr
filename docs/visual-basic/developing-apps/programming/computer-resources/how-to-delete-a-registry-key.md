@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: 7ff6ba8e31638b64fa7100b1807303c61a454c81
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fdb61fee8a790000c53b6c9a0188999bc0cb09ae
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981679"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840339"
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te kayıt defteri anahtarını silme
 <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> Ve <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> yöntemleri, kayıt defteri anahtarlarını silmek için kullanılabilir.  
@@ -46,6 +46,7 @@ ms.locfileid: "56981679"
  Kayıt defteri çağrıları başarısız yeterli ya da çalışma zamanı izinler verilmezse (<xref:System.Security.Permissions.RegistryPermission>) veya kullanıcı oluşturma veya ayarlarına yazma için doğru erişim (ACL'ler tarafından belirlendiği şekilde) sahip değil. Örneğin, kod erişim güvenlik izni olan yerel bir uygulama işletim sistemi izniniz olmayabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>

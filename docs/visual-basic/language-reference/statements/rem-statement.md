@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: b25910f5215585914094b7bc4420f537a400934b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968013"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817025"
 ---
 # <a name="rem-statement-visual-basic"></a>REM Deyimi (Visual Basic)
 Bir program kaynak kodunda açıklayıcı açıklamalar eklemek için kullanılır.  
@@ -48,5 +48,6 @@ REM comment
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Code’daki Açıklamalar](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
 - [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

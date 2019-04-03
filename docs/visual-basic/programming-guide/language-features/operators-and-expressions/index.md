@@ -2,14 +2,20 @@
 title: Visual Basic'de İşleçler ve İfadeler
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'operators [Visual Basic], operands'
-  - 'operators [Visual Basic]'
-  - 'operands [Visual Basic], definition'
-  - 'Visual Basic code, operators'
-  - 'Visual Basic code, expressions'
-  - operands
-  - 'expressions [Visual Basic]'
+- operators [Visual Basic], operands
+- operators [Visual Basic]
+- operands [Visual Basic], definition
+- Visual Basic code, operators
+- Visual Basic code, expressions
+- operands
+- expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
+ms.openlocfilehash: 8de4eeaa22f83392bcb6bb79a1fea327281dfec9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843753"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic'de İşleçler ve İfadeler
 Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir işlem gerçekleştiren bir kod öğedir. Değişkenleri, sabitleri, sabit değerleri, özellikleri, değeri öğeleri dahil döndürür `Function` ve `Operator` yordamları ve ifadeler.  
@@ -58,6 +64,7 @@ Bir *işleci* değerlerini tutan bir veya daha fazla kod öğeleri üzerinde bir
   
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İşleçler](../../../../visual-basic/language-reference/operators/index.md)
 - [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
 - [Deyimler](../../../../visual-basic/language-reference/statements/index.md)

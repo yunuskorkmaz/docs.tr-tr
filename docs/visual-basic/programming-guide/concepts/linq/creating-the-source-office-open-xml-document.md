@@ -2,12 +2,12 @@
 title: Kaynak Office Open XML belgesi (Visual Basic) oluşturma
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 124f22e3a4b3e43dd454aca9389691a89debcf6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dad832aeef4d6519c272589033acc6d2fe3c2676
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617453"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838865"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Kaynak Office Open XML belgesi (Visual Basic) oluşturma
 Bu konu, diğer bu öğreticideki örneklerde Office Open XML WordprocessingML belgesi nasıl oluşturacağınızı gösterir. Bu yönergeleri izleyin, çıkış her örnekte sağlanan çıkış eşleşir.  
@@ -54,4 +54,5 @@ Bu konu, diğer bu öğreticideki örneklerde Office Open XML WordprocessingML b
     >  Microsoft Word 2003 kullanıyorsanız **Word 2007 belgesi** içinde **farklı kaydetme türü** aşağı açılan listesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

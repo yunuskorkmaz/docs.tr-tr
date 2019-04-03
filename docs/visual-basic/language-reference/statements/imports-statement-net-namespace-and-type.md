@@ -16,12 +16,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 93b299ffd8d2be1b1fabfd752e75d18ef87714b2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4574bab62ca6d095ab66c17bf186da5f3d79bfb7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974386"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826528"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports Deyimi (.NET Ad Alanı ve Türü)
 Etkinleştirir, ad alanı nitelenmeden başvurulmak üzere adlarını yazın.  
@@ -99,6 +99,7 @@ Imports [ aliasname = ] namespace.element
  [!code-vb[VbVbalrStatements#158](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#158)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [References ve Imports Deyimi](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 9902333b892c6961a93bb3be6918c042cb72d70c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8338d04382e77c231232ca2080c21e8732a683b7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672168"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836135"
 ---
 # <a name="impersonating-the-client"></a>İstemci Kimliğine Bürünme
 Kimliğe bürünme örneği, hizmet adına çağıran sistem kaynaklarına erişebilmesi çağıran uygulama hizmetine bürünülecek gösterilmiştir.  
@@ -125,4 +125,3 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
 5.  İstemci çalıştırdığınızda, önce ve sonra onu farklı kimlik bilgileri ile çalıştırma kimliğini not edin.  
   
-## <a name="see-also"></a>Ayrıca bkz.

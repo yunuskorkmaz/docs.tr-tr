@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: İsteğe bağlı bir öğe (Visual Basic) üzerinde filtreleme'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: feb7c3fbf40db81835ef132c52a2d9f2af1229be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2a1c7d4091af80e79a6758bcede8f4ccc753f03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552430"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820671"
 ---
 # <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Nasıl yapılır: İsteğe bağlı bir öğe (Visual Basic) üzerinde filtreleme
 Bazen, XML belgesinde varolduğundan emin olmadığınız halde bir öğe için filtrelemek istersiniz. Arama, böylece belirli bir öğenin alt öğesi yoksa, bir null başvurusu özel durumu için filtreleyerek tetiklemez yürütülmelidir. Aşağıdaki örnekte, `Child5` öğesi yok bir `Type` alt öğesi, ancak sorgu hala yürütür doğru.  
@@ -107,6 +107,7 @@ Child Four Text
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>

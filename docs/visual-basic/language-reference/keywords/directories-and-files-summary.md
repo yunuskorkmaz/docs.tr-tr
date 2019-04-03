@@ -6,12 +6,12 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: 2c2a48e99f99e3e00aca61fdcf688798affa214f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7d21c3e29cb59f2d2690ab9797c6c50e7d3009b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507310"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832482"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Dizinler ve Dosyalar Özeti (Visual Basic)
 Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaç tarafından düzenlenir ve kullanın.  
@@ -34,6 +34,7 @@ Visual Basic dili anahtar sözcükleri ve çalışma zamanı kitaplığı üyele
 |Dosya öznitelik bilgileri ayarlayın.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Dosyalardan Okuma](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

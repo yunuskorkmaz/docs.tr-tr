@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 8340d05b18c4fb19e9ba8f8ecffa5657b7febd79
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201761"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835173"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Kutulama ve Kutudan Çıkarma (C# Programlama Kılavuzu)
 Kutulama dönüştürme işlemi olan bir [değer türü](../../../csharp/language-reference/keywords/value-types.md) türüne `object` ya da bu değer türü tarafından uygulanan herhangi bir arabirim türüne. CLR bir değer türünü kutu, değeri içinde bir System.Object nesnesiyle sarar ve Yönetilen öbekte depolar. Kutudan çıkarma, değer türünü nesneden çıkarır. Örtük kutulama; kutudan çıkarma açıktır. Kutulama ve kutudan çıkarma kavramı, C# birleştirilmiş görünümünü herhangi bir türde bir değer bir nesne işlenebilir tür sistemi vurgular.  
@@ -46,10 +46,9 @@ Kutulama dönüştürme işlemi olan bir [değer türü](../../../csharp/languag
   
  [!code-csharp[csProgGuideTypes#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#18)]  
   
- Bu ifade sonucu, bir nesne başvurusu oluşturur `o`, stack türünde bir değer başvuran `int`, yığında. Bu değer değişkenine atanan değer türü değerinin bir kopyasıdır `i`. İki değişken arasındaki farkı `i` ve `o`, aşağıdaki şekilde gösterilmiştir.  
+ Bu ifade sonucu, bir nesne başvurusu oluşturur `o`, stack türünde bir değer başvuran `int`, yığında. Bu değer değişkenine atanan değer türü değerinin bir kopyasıdır `i`. İki değişken arasındaki farkı `i` ve `o`, paketleme dönüştürmesi, aşağıdaki görüntüde gösterilmiştir:  
   
- ![BoxingConversion grafiği](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")  
-Paketleme dönüştürmesi  
+ ![İ o arasındaki farkı gösteren grafik değişkenleri.](./media/boxing-and-unboxing/boxing-operation-i-o-variables.gif)    
   
  Aşağıdaki örnekte olduğu gibi açıkça kutulama gerçekleştirmek mümkündür, ancak açık kutulama hiçbir zaman gerekli değildir:  
   
@@ -72,10 +71,9 @@ Paketleme dönüştürmesi
   
  [!code-csharp[csProgGuideTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#21)]  
   
- Aşağıdaki şekil önceki deyimlerin sonucunu göstermektedir.  
+ Aşağıdaki şekil önceki deyimlerin sonucunu göstermektedir: 
   
- ![Kutudan çıkarma dönüştürme grafik](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")  
-Kutudan çıkarma dönüştürme  
+ ![Bir paketi açma dönüştürmesi gösteren grafik.](./media/boxing-and-unboxing/unboxing-conversion-operation.gif)
   
  Çalışma zamanında başarılı olması için değer türlerinin kaydıyla kutudan çıkarmak için kutulanarak öğe kutulama, değer türünün bir örneği tarafından daha önce oluşturulmuş bir nesneye bir başvuru olmalıdır. Açmaya `null` neden olan bir <xref:System.NullReferenceException>. Türüne neden uyumsuz bir değere bir başvuru açmaya bir <xref:System.InvalidCastException>.  
   

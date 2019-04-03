@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Kümesi kalem genişliği ve hizalamasını'
+title: 'Nasıl yapılır: Kalem Genişliği ve Hizalamasını Ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: e82f406b4fdca93df7a811eea5506846d56fda28
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b01482c059906d76ad9e506b593d580431f0ec09
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703055"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828205"
 ---
-# <a name="how-to-set-pen-width-and-alignment"></a>Nasıl yapılır: Kümesi kalem genişliği ve hizalamasını
+# <a name="how-to-set-pen-width-and-alignment"></a>Nasıl yapılır: Kalem Genişliği ve Hizalamasını Ayarlama
 Oluştururken bir <xref:System.Drawing.Pen>, kalem genişliği oluşturucusuna bağımsız değişkenlerden biri olarak sağlayabilirsiniz. Kalem genişliği ile de değiştirebileceğiniz <xref:System.Drawing.Pen.Width%2A> özelliği <xref:System.Drawing.Pen> sınıfı.  
   
  Teorik bir çizgi genişliği 0 ' var. 1 piksel genişliğinde bir çizgi çizdiğinizde, piksel teorik satırında ortalanır. Birden fazla piksel genişliğinde bir çizgi çizin, piksel teorik satırında ya da ortalanır veya teorik satırın bir tarafında görünür. Kalem hizalamayı özelliğini ayarlayabilirsiniz bir <xref:System.Drawing.Pen> teorik satırlara, kalem ile çizilen piksel nasıl yerleştirileceğini belirlemek için.  
@@ -28,7 +28,7 @@ Oluştururken bir <xref:System.Drawing.Pen>, kalem genişliği oluşturucusuna b
   
 -   Değerini <xref:System.Drawing.Pen.Alignment%2A> özelliğini <xref:System.Drawing.Drawing2D.PenAlignment.Center> (yeşil kalem ile çizilen piksel teorik satırında ortalanacağını belirtmek için varsayılan). Sonuçta elde edilen satırı aşağıda gösterilmiştir.  
   
-     ![Kalemler](./media/pens1a.gif "pens1A")  
+     ![Yeşil vurgu ile siyah bir ölçülü kaynak satırı.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
      Aşağıdaki kod örneği iki kez bir dikdörtgen çizer: siyah kalem genişliği 1 ile bir kez ve yeşil bir kalem genişliği 10 ile bir kez.  
   
@@ -39,9 +39,9 @@ Oluştururken bir <xref:System.Drawing.Pen>, kalem genişliği oluşturucusuna b
   
 -   Değerini <xref:System.Drawing.Pen.Alignment%2A> özelliğini <xref:System.Drawing.Drawing2D.PenAlignment.Center> yeşil kalem ile çizilen piksel dikdörtgenin sınırında ortalanacağını belirtmek için.  
   
-     Aşağıdaki çizimde, sonuçta elde edilen dikdörtgen gösterir.  
+     Sonuçta elde edilen dikdörtgen aşağıda gösterilmiştir:
   
-     ![Kalemler](./media/pens2.gif "pens2")  
+     ![Yeşil vurgu siyah ölçülü kaynak satırıyla ile çizilen bir dikdörtgen.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-rectangle.gif)  
   
      [!code-csharp[System.Drawing.UsingAPen#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#42)]
      [!code-vb[System.Drawing.UsingAPen#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#42)]  
@@ -53,9 +53,9 @@ Oluştururken bir <xref:System.Drawing.Pen>, kalem genişliği oluşturucusuna b
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  
   
-     Artık geniş yeşil çizginin piksellerde dikdörtgenin iç, aşağıdaki çizimde gösterildiği gibi görüntülenir.  
+     Artık geniş yeşil çizginin piksellerde dikdörtgenin iç aşağıdaki çizimde gösterildiği gibi görünür:
   
-     ![Kalemler](./media/pens3.gif "pens3")  
+     ![Siyah satır içinde geniş yeşil bir çizgi ile çizilen bir dikdörtgen.](./media/how-to-set-pen-width-and-alignment/green-pixels-inside-rectangle.gif)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](using-a-pen-to-draw-lines-and-shapes.md)

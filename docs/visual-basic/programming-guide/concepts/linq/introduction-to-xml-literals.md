@@ -2,12 +2,12 @@
 title: Görsel Basic2 XML değişmez değerlerine giriş
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: b6c4773236c3af83603033c74e2e12e9f47a86b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624034"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841309"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic'de XML değişmez değerlerine giriş
 Bu bölümde, Visual Basic'te XML ağaçları oluşturma hakkında bilgi sağlar.  
@@ -16,7 +16,7 @@ Bu bölümde, Visual Basic'te XML ağaçları oluşturma hakkında bilgi sağlar
   
  Visual Basic'de XML değişmez değerleri hakkında daha fazla bilgi için bkz. [XML Visual Basic'te LINQ genel bakış](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
-## <a name="creating-xml-trees"></a>XML ağaçları oluşturma  
+## <a name="creating-xml-trees"></a>XML Ağaçları Oluşturma  
  Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Xml.Linq.XElement>, bu durumda `contacts`:  
   
 ```vb  
@@ -157,7 +157,7 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>Kopyalama ve Ekleme  
+### <a name="cloning-vs-attaching"></a>Kopyalama ve Ekleme Karşılaştırması  
  Var olan düğümleri arasındaki shapemap zaten varsa var olan düğümleri (öğeler dahil) ve öznitelikler yeni bir XML ağacına eklemek için bir katıştırılmış deyim kullanırsanız, daha önce belirtildiği gibi düğümler kopyalanır ve yeni kopyalanan düğümleri yeni XML ağacına eklenir. Var olan düğümleri arasındaki shapemap değil, bunlar yalnızca yeni XML ağacına eklenir.  
   
 ```vb  
@@ -196,4 +196,5 @@ Child2 was attached
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML ağaçları (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

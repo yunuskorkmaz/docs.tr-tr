@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 0757c3ce0528f76eab5607e20ebca2e66a903900
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974152"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840932"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olaylarını işleme (Visual Basic)
 Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [izlenecek yol: Olayları bildirmek ve yükseltmeyi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), bildirmek ve olaylarını gösterir. Bu bölümde, bu izlenecek yol sınıf ve form bunlar gerçekleştiğinde olayların nasıl işleneceğini göstermek için kullanılır.  
@@ -117,5 +117,6 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
 >  Çok bildirebilirsiniz `WithEvents` yazarken değişkenleri gerekir, dizileri `WithEvents` değişkenleri desteklenmiyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İzlenecek yol: Olay bildirme ve oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)

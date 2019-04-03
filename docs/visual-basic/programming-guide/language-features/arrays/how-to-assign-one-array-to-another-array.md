@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: f2617d270caf5ed4ade68934486fee6afb6c413f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572727"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835290"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Nasıl yapılır: Bir diziyi başka diziye (Visual Basic) atama
 Diziler nesneler olduğundan atama deyimleri diğer nesne türleri gibi kullanabilirsiniz. Bir dizi değişkenini dizi öğeleri ve boyut sayısı ve uzunluk bilgileri oluşturan veri için bir işaretçi tutar ve bu işaretçi atama kopyalar.  
@@ -43,6 +43,7 @@ Diziler nesneler olduğundan atama deyimleri diğer nesne türleri gibi kullanab
  Derleyici, veri türleri uyumlu değilse, yukarıdaki kuralları, örneğin ihlal bir hata veya sıralamalara sahip eşit bildirir. Hata işleme kodunuzda ödev denemeden önce diziler uyumlu olduğundan emin olmak için ekleyebilirsiniz. Ayrıca [TryCast işleci](../../../../visual-basic/language-reference/operators/trycast-operator.md) bir özel durum kaçınmak istiyorsanız anahtar sözcüğü.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum Deyimi](../../../../visual-basic/language-reference/statements/enum-statement.md)

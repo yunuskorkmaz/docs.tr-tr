@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30036
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
-ms.openlocfilehash: 881ca8040f79bdb91dad2b909685400e17af4d26
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4a5cb5ec0d1d4b3ad72ad6ccbced44fbef3f8d7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545861"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816739"
 ---
 # <a name="overflow-visual-basic-error"></a>Taşma (Visual Basic Hatası)
 Bir sabit değer veri türünün olduğu, atandığı sınırları dışında bir değeri temsil eder.  
@@ -24,4 +24,5 @@ Bir sabit değer veri türünün olduğu, atandığı sınırları dışında bi
 -   Değer aralığı için hedef veri türüne dönüştürün ve bu aralığa uymak için değişmez değerin yeniden bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)

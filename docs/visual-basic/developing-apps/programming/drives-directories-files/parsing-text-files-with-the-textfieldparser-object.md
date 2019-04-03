@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], parsing files
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
-ms.openlocfilehash: e1368e3bcf91026abf4928ab554ff970331f86ec
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 70848e2d53ec4bdb031f73286f2c5be9a7e19387
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969745"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813502"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>(Visual Basic) TextFieldParser nesnesiyle metin dosyalarını ayrıştırma
 `TextFieldParser` Ayrıştırmak için ve günlük dosyaları veya eski bir veritabanı bilgileri gibi bir metin ayrılmış genişlikte sütun olarak yapılandırılmış çok büyük bir dosya işlem nesnesi sağlar. Bir metin dosyası ayrıştırma `TextFieldParser` parse metodunu metin alanlarını ayıklamak için kullanılan ayrılmış dizeleri simgeleştirilecek dize işleme yöntemlerini benzer olmakla birlikte, bir metin dosyası içinde yineleme için benzer.  
@@ -33,6 +33,7 @@ ms.locfileid: "56969745"
  `PeekChars` Yöntemi `TextFieldParser` nesnesi, her bir alan, böylece alanları için birden çok biçimde tanımlamak ve uygun şekilde tepki okumadan önce denetlemek için kullanılabilir. Daha fazla bilgi için [nasıl yapılır: Birden çok biçimli metin dosyalarını okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>

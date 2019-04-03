@@ -1,18 +1,18 @@
 ---
-title: İlişkisel veriler ve ADO.NET ile XML tümleştirmesi
+title: İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d86c590f2d5fe6bc970c2f8ac6de43d3e8485650
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183151"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831988"
 ---
-# <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel veriler ve ADO.NET ile XML tümleştirmesi
+# <a name="xml-integration-with-relational-data-and-adonet"></a>İlişkisel Veriler ve ADO.NET ile XML Tümleştirmesi
 **XmlDataDocument** , türetilmiş bir sınıfı **XmlDocument**ve XML verileri içerir. Avantajı **XmlDataDocument** ilişkisel ve hiyerarşik veriler arasında bir köprü sağlar. Bu bir **XmlDocument** için bağlanabilir bir **veri kümesi** ve hem sınıflarını iki sınıflarında bulunan verilere yapılan değişiklikleri eşitleyebilirsiniz. Bir **XmlDocument** bağlanan bir **veri kümesi** ilişkisel veriler ile tümleştirmek XML verir ve verilerinizin ya da XML olarak veya bir biçimde temsil gerekmez. Her ikisini de yapabilirsiniz ve tek bir veri temsilini için kısıtlı olabilir değil.  
   
  Verilerin iki görünümlerde kullanılabilir olduğu avantajları şunlardır:  
@@ -29,9 +29,9 @@ ms.locfileid: "44183151"
   
  Çünkü **XmlDataDocument** devralınan bir **XmlDocument**, W3C yerli uygulaması sağlar Olgu, **XmlDataDocument** ilişkili olduğu ve depolar, içinde verilerin bir alt kümesini bir **veri kümesi** değil erişimi kısıtlamak veya kullanımını alter bir **XmlDocument** herhangi bir şekilde. Kodu kullanmak için yazılan bir **XmlDocument** works değiştirilmeden karşı bir **XmlDataDocument**. **Veri kümesi** tablolar, sütunlar, ilişkiler ve kısıtlamalar tanımlayarak aynı verilerin ilişkisel görünümünü sağlar ve tek başına, bellek içi kullanıcı veri deposudur.  
   
- XML verileri ile olduğunu farklı ilişkilendirmeleri aşağıda gösterilmiştir **veri kümesi** ve **XmlDataDocument**.  
+ XML verileri ile olduğunu farklı ilişkilendirmeleri aşağıda gösterilmiştir **veri kümesi** ve **XmlDataDocument**: 
   
- ![XML veri kümesi](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")  
+ ![XML veri kümesi ile farklı ilişkileri gösteren diyagram.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
  XML verileri doğrudan içine yüklenemez çizimin gösterdiği bir **veri kümesi**, ilişkisel bir biçimde XML doğrudan düzenlenmesini sağlar. Veya, XML, türetilmiş bir sınıf olan DOM yüklenebilir **XmlDataDocument**, daha sonra yüklenen ve eşitlenmiş **veri kümesi**. Çünkü **veri kümesi** ve **XmlDataDocument** tek bir küme üzerinde eşitlenir verilerinin diğer deposunda bir depo verilerde yapılan değişiklikler yansıtılır.  
   

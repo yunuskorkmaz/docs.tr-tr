@@ -1,5 +1,5 @@
 ---
-title: 'Nesne başlatıcıları: Adlandırılmış ve anonim türler (Visual Basic)'
+title: 'Nesne Başlatıcıları: Adlandırılmış ve anonim türler (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ObjectInitializer
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: d4f82cab8bcdeb3e0553649f8a569ae24bafc707
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974360"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821381"
 ---
-# <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Nesne başlatıcıları: Adlandırılmış ve anonim türler (Visual Basic)
+# <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Nesne Başlatıcıları: Adlandırılmış ve anonim türler (Visual Basic)
 Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesnenin özelliklerini belirtmek etkinleştirin. Örnekleri adlandırılmış türler ve anonim türler oluşturmak için kullanılabilir.  
   
 ## <a name="declarations"></a>Bildirimler  
@@ -128,6 +128,7 @@ Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesnenin özell
      Anonim türleri özellikleri tanımlamaya yönelik seçenekler hakkında daha fazla bilgi için bkz. [nasıl yapılır: Özellik adları ve türleri anonim türde bildirimlerden çıkarma](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

@@ -2,12 +2,12 @@
 title: LINQ to XML için XPath kullanıcıları (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: 598acfa41d9644a07a553a2f6e8948bbf2fe3b77
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 13c23eec1261700b15bea7f92f6c50e9231e900a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066276"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824253"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML için XPath kullanıcıları (Visual Basic)
 
@@ -38,6 +38,7 @@ Bu konu başlıkları birkaç XPath ifadeleri gösterir ve bunların [!INCLUDE[s
 |[Nasıl yapılır: Önceki eşdüzeyi (XPath-LINQ to XML) bulunamadı (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|XPath kullanarak bir düğümün önceki eşdüzeyi bulma karşılaştırır ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> İlgili XPath ifadesidir:`"preceding-sibling::*[1]"`|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Xml.XPath?displayProperty=nameWithType>
 - [(Visual Basic) XML ağaçlarını sorgulama](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
 - [XPath Veri Modelini Kullanarak XML Verilerini İşleme](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Taşıma: WSE 3.0 TCP birlikte çalışabilirliği'
+title: 'Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 870a0de493a4e60404d11115de58735e5fbb968f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 342c9c39eaa755363615dd83933cf00480e01c91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653014"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842362"
 ---
-# <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP birlikte çalışabilirliği
+# <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik
 WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek bir TCP çift yönlü oturumu özel bir Windows Communication Foundation (WCF) aktarım olarak uygulamak nasıl gösterir. Kanal katmanını genişletilmesinde arabirimine dağıtılan var olan sistemlerle kablo üzerinden nasıl kullanabileceğinizi gösterir. Aşağıdaki adımlar bu özel WCF taşıma yapı işlemini gösterir:  
   
 1.  Bir TCP yuva ile başlayarak, istemci ve sunucu uygulamaları oluşturma <xref:System.ServiceModel.Channels.IDuplexSessionChannel> ayıklanmış çerçeveleme DIME iletisi sınırları ayırmak için.  
@@ -195,4 +195,3 @@ Symbols:
   
     8.  TCP aktarımı test istemcisinin yeni bir konsolda başlatır. İstemci, hisse senedi fiyatlarını hizmetten ister ve ardından sonuçları, konsol penceresinde görüntüler.  
   
-## <a name="see-also"></a>Ayrıca bkz.

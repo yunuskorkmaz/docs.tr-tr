@@ -7,12 +7,12 @@ helpviewer_keywords:
 - descendent axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: aabfa258-4112-4e7e-bab9-403f96072ef7
-ms.openlocfilehash: 1edbbc052bbf319d91f1f944451312e7d67594ca
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bfbf849bd296f639f03580346e4a9c52ce000abd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973866"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832222"
 ---
 # <a name="how-to-access-xml-descendant-elements-visual-basic"></a>Nasıl yapılır: Erişim XML bağımlı öğelerine (Visual Basic)
 Bu örnek, bir descendant axis özelliği bir XML öğesi altında yer alır ve belirtilen ada sahip olan tüm XML öğelerine erişmek için nasıl kullanılacağını gösterir. Özellikle, kullandığı `Value` özelliğini koleksiyondaki ilk öğenin değerini alma `name` descendant axis özelliği döndürür. `name` Descendant axis özelliği adlı tüm öğeleri alır `name` içerdiği `contacts` nesne. Bu örnekte ayrıca `phone` adlı tüm alt öğeleri erişmeye descendant axis özelliği `phone` içerdiği `contacts` nesne.  
@@ -26,6 +26,7 @@ Bu örnek, bir descendant axis özelliği bir XML öğesi altında yer alır ve 
 -   Bir başvuru <xref:System.Xml.Linq> ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>
 - [XML Descendant Axis Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
 - [XML Value Özelliği](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

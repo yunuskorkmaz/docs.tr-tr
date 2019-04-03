@@ -2,12 +2,12 @@
 title: Kullanıcı Kodu İzleri Yayma
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eadfe1a77f815f904fb54b8bab51440f3d9f5532
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492670"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831785"
 ---
 # <a name="emitting-user-code-traces"></a>Kullanıcı Kodu İzleri Yayma
 Windows Communication Foundation (WCF) tarafından oluşturulan izleme verilerini toplamak için yapılandırma izleme etkinleştirmeye ek olarak, kullanıcı kodunda programlı olarak izlemeleri gönderebilir. Bu şekilde, tanılama amacıyla daha sonra tekrar kullanmanıza ölçümlü izleme verilerini proaktif bir şekilde oluşturabilirsiniz. Bu konuda, bunu nasıl yapabileceğiniz açıklanır.  
@@ -126,15 +126,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![İzleme görüntüleyicisini: Kullanıcı yayma&#45;kodu izlemeleri](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Oluşturma zamanı (sol paneli) tarafından etkinliklerinin listesini ve bunların iç içe geçmiş etkinliklerini (sağ paneli)  
   
- Hizmet kodu (örneğin istemci isteğine yanıt almadı yanı,) throw istemciye neden olan bir özel durum oluşturursa, hem hizmet ve istemci uyarı veya hata iletileri aynı etkinlik için doğrudan bağıntı oluşur. Aşağıdaki diyagramda, hizmet "kullanıcı kodunda bu isteği işlemek hizmet reddeder." bildiren bir özel durum oluşturur. İstemci de "sunucu bir iç hata nedeniyle isteği işleyemedi." bildiren bir özel durum oluşturur.  
+ Hizmet kodu (örneğin istemci isteğine yanıt almadı yanı,) throw istemciye neden olan bir özel durum oluşturursa, hem hizmet ve istemci uyarı veya hata iletileri aynı etkinlik için doğrudan bağıntı oluşur. Aşağıdaki görüntüde hizmet, "kullanıcı kodunda bu isteği işlemek hizmet reddeder." bildiren bir özel durum oluşturur. İstemci de "sunucu bir iç hata nedeniyle isteği işleyemedi." bildiren bir özel durum oluşturur.
+ 
+ Aşağıdaki resimlerde isteğin etkinlik kimliği yayıldığı, hataları belirli bir istek için uç noktalar arasında aynı etkinliğin göründüğünü gösterir:       
   
- ![Kullanıcı yaymak için izleme görüntüleyicisini kullanma&#45;kodu izlemeleri](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
-İsteğin etkinlik kimliği yayıldığı aynı etkinliğin hataları belirli bir istek için uç noktalar arasında görünür  
+ ![Belirli bir istek için uç noktalar arasında hataları gösteren ekran görüntüsü.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)  
   
- Çift birden çok kez izlemelerini ile aşağıdaki grafikte Sol paneldeki etkinliği gösterir katılan her işlem için etkinlik çarpın. Bir uyarı olduğu için istek işlenemedi istemcide ardından uyarıları ve hataları hizmeti (özel durum oluştu), ilk oluştu görebiliriz. Bu nedenle, biz uç noktalar arasında nedensel hata ilişkisine işaret ve hatanın nedenini türetilir.  
+ Çift birden çok kez izlemelerini ile aşağıdaki grafikte Sol paneldeki etkinliği gösterir katılan her işlem için etkinlik çarpın. Bir uyarı olduğu için istek işlenemedi istemcide ardından uyarıları ve hataları hizmeti (özel durum oluştu), ilk oluştu görebiliriz. Bu nedenle, biz uç noktalar arasında nedensel hata ilişkisine işaret ve hatanın nedenini türetilir. 
+
+ Aşağıdaki görüntüde bağıntı hata bir grafik görünümü gösterilmektedir:    
   
- ![Kullanıcı yaymak için izleme görüntüleyicisini kullanma&#45;kodu izlemeleri](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
-Graf görünümünü hata bağıntı  
+ ![Graf görünümünü hata bağıntı gösteren ekran görüntüsü.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)  
   
  Önceki izlemeleri almak için ayarladığımız `ActivityTracing` kullanıcı izleme kaynakları için ve `propagateActivity=true` için `System.ServiceModel` izleme kaynağı. Biz ayarlanmamış `ActivityTracing` için `System.ServiceModel` kullanıcı kodu Etkinlik yayma kullanıcı kodu etkinleştirmek için izleme kaynağı. (ServiceModel Etkinlik izleme etkin olduğunda, istemci tanımlanan etkinlik kimliği tüm hizmet kullanıcı koduna dağıtılmaz; Aktarımları, Bununla birlikte, hizmet ve istemci kullanıcı kodu etkinlikleri Ara WCF etkinliklere ilişkilendirin.)  
   

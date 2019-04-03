@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32005
 ms.assetid: 4039f51b-e0ee-4789-a89b-45d06de06b5d
-ms.openlocfilehash: 0cee52f0ca00395d93c469aae6498fd3793f1085
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 85573099ec0a3f8a23c17bdf384c4c105f9157df
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266328"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825800"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-if-statement"></a>Deyim, bir satır 'If' deyimi dışında blok sona erdiremez
 Tek satırlı `If` deyimi biri olan virgülle (:) ayırarak çeşitli deyimleri içeren bir `End` deyim için bir denetim bloğu tek satır dışında `If`. Tek satırlı `If` deyimleri kullanmayın `End If` deyimi.  
@@ -24,4 +24,5 @@ Tek satırlı `If` deyimi biri olan virgülle (:) ayırarak çeşitli deyimleri 
 -   Tek satırlı taşıma `If` içeren denetim bloğu dışında bir deyim `End If` deyimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [If...Then...Else Deyimi](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

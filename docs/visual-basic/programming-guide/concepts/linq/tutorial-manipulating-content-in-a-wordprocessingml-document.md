@@ -2,12 +2,12 @@
 title: 'Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme'
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-ms.openlocfilehash: e36e76f03476bf0504590dfcae1c7dd8fa203312
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0a400a19dbe863490e5b2e34ec367e61a413a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556278"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834965"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme
 Bu öğreticide, işlevsel dönüşümsel yaklaşımını ve LINQ, XML XML belgeleri işlemek için uygulanacak gösterilmektedir. Visual Basic örnekleri sorgulamak ve Microsoft Word tarafından kaydedilen Office Open XML WordprocessingML belgelerde bilgiyi işleyebilir.  
@@ -30,5 +30,6 @@ Bu öğreticide, işlevsel dönüşümsel yaklaşımını ve LINQ, XML XML belge
 |[Ayrıntılar Office Open XML WordprocessingML belgelerinin (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Bazı Office Open XML WordprocessingML belgelerinin ayrıntıları sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Saf işlevsel dönüşümlere XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
 - [Saf işlevsel dönüşümlere (Visual Basic) giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981432"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826099"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Herhangi bir veri türünün varsayılan değerini temsil eder. Başvuru türleri için varsayılan değerdir `null` başvuru. Değer türleri için varsayılan değer, değer türü null olmasına göre değişir.  
@@ -51,6 +51,7 @@ Herhangi bir veri türünün varsayılan değerini temsil eder. Başvuru türler
  `Nothing` farklıdır <xref:System.DBNull> başlatılmayan bir değişken veya var olmayan bir veritabanı sütunu temsil eden nesne.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Dim Deyimi](../../visual-basic/language-reference/statements/dim-statement.md)
 - [Nesne ömrü: Nesnelerin nasıl oluşturulduğunu ve yok](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Visual Basic'de ömür](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

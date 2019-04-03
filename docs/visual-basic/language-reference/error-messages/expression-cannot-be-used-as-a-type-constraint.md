@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: 02d5035daa1ff3da4d7d3bac7c95ef8e8379b3f7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8dbf510d7c6ee80e2dcd2f9d2552bc870413cbab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264680"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838111"
 ---
 # <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<ifadesi >' tür kısıtlaması olarak kullanılamaz
 Bir kısıtlama listesi geçerli bir tür parametresi kısıtlaması göstermiyor bir ifade içerir.  
@@ -44,7 +44,7 @@ Bir kısıtlama listesi geçerli bir tür parametresi kısıtlaması göstermiyo
 -   İfade bir arabirimin veya sınıfın başvuruyorsa, derleyici bu arabirimin veya sınıfın erişimi olduğunu doğrulayın. Adıyla nitelemeniz gerekebilir ve projenize bir başvuru eklemeniz gerekebilir. Daha fazla bilgi için bkz: "Projeler için başvurular" [bildirilmiş öğelere başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic'de genel türler](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Değer Türleri ve Başvuru Türleri](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-

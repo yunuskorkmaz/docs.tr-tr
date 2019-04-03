@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 435ba13b6d0b2a7d272c7f2bbea7ec410dd3d5e7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678830"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832287"
 ---
 # <a name="overload-resolution-visual-basic"></a>Aşırı Yükleme Çözümü (Visual Basic Başvurusu)
 Visual Basic Derleyicisi aşırı yüklenmiş sürümlerinde tanımlanan bir yordam çağrısı karşılaştığında derleyici çağırmak için aşırı yüklemeleri, karar vermeniz gerekir. Bunu aşağıdaki adımları uygulayarak yapar:  
@@ -59,6 +59,7 @@ Visual Basic Derleyicisi aşırı yüklenmiş sürümlerinde tanımlanan bir yor
 |(Boş bir dizi dahil) herhangi bir uzunlukta bir dizi|`ParamArray`|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İsteğe Bağlı Parametreler](./optional-parameters.md)
 - [Parametre Dizileri](./parameter-arrays.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)

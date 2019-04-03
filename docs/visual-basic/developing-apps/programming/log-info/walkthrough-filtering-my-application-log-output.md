@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 9f1f0efd6190ac0ced0f83db747e3c4eb81c4975
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978325"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829401"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>İzlenecek yol: (Visual Basic) My.Application.Log çıktısını filtreleme
 Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir `My.Application.Log` hangi bilgilerin gelen geçirilen denetlemek için nesne `Log` nesnesine dinleyicileri ve hangi bilgilerin dinleyicileri tarafından yazılır. Yapılandırma bilgileri uygulamanın yapılandırma dosyasında depolandığından uygulama oluşturduktan sonra bile günlüğe kaydetme davranışını değiştirebilirsiniz.  
@@ -73,7 +73,7 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
 1.  App.config dosyasında sağ **Çözüm Gezgini** seçip **açık**.  
   
-     -veya-  
+     veya  
   
      App.config dosyası yoksa:  
   
@@ -148,7 +148,7 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
 1.  App.config dosyasında sağ **Çözüm Gezgini** ve **açık**.  
   
-     -veya-  
+     veya  
   
      App.config dosyası yoksa:  
   
@@ -248,6 +248,7 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
  Dağıtımdan sonra günlük ayarlarını değiştirme hakkında daha fazla bilgi için bkz. [uygulama günlükleriyle çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İzlenecek yol: My.Application.log günlüğünün bilgileri nereye yazdığını belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
 - [İzlenecek yol: My.Application.Log günlüğünün bilgileri yazdığı yeri değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
 - [İzlenecek yol: Özel günlük dinleyicileri oluşturma](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)

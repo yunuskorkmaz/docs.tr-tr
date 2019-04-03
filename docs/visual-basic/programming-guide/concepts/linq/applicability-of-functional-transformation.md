@@ -2,12 +2,12 @@
 title: (Visual Basic) işlev dönüşümün uygulanabilirliği
 ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-ms.openlocfilehash: 01ebc25e77e7098d0aad5ec612e57d7f6b078d4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7efeab82dafc284f64a950eb7f5e4a6ee3f2e73d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699408"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827620"
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a>(Visual Basic) işlev dönüşümün uygulanabilirliği
 Saf işlevsel dönüşümlere çok çeşitli durumlarda geçerlidir.  
@@ -33,6 +33,7 @@ Saf işlevsel dönüşümlere çok çeşitli durumlarda geçerlidir.
  Yeniden uygulamanız için en iyi tasarım öğelerinin her ikisi de bir araya getirebilir için Visual Basic hem zorunlu hem de işlevsel yaklaşım desteklediğini unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Saf işlevsel dönüşümlere (Visual Basic) giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [(Visual Basic) XML işlevsel dönüşümü](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)
 - [(Visual Basic) saf işlevler halinde yeniden düzenleme](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

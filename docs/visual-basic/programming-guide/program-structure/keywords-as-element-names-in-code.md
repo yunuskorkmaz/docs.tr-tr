@@ -7,12 +7,12 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 053149334118d69e5e85bdbd0f9a45e855e3d4dd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c247ada67f6554362f287cf252dd49856c4995da
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980106"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841153"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Kodda Öğe Adları Olarak Anahtar Sözcükler (Visual Basic)
 Herhangi bir program öğesi — bir değişkeni, sınıf veya üye gibi — kısıtlı bir anahtar sözcüğü ile aynı ada sahip olabilir. Örneğin, adında bir değişken oluşturabilirsiniz `Loop`. Ancak, sürümü için başvuruda bulunmak için — kısıtlı aynı ada sahip `Loop` anahtar sözcüğü — tam nitelenmiş dizesiyle önünde veya köşeli parantez içine (`[ ]`), aşağıdaki örnekte gösterildiği gibi.  
@@ -31,6 +31,7 @@ Herhangi bir program öğesi — bir değişkeni, sınıf veya üye gibi — kı
 >  Programınız, ayrıca diğer başvurulan derlemelerde tarafından sağlanan öğe adları içerebilir. Bu adlar sınırlı anahtar sözcüklerle arasında çakışma varsa, daha sonra bunları köşeli ayraç yerleştirme tanımlanmış, öğelerin yorumlamaya Visual Basic neden olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)

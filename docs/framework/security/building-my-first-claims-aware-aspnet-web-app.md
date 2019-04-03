@@ -1,17 +1,17 @@
 ---
-title: İlk talep kullanan ASP.NET Web uygulamamı derleme
+title: Talep Kullanan İlk ASP.NET Web Uygulamamı Derleme
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 67489b2bb93719d8182159fbc91703399d5e8bc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588970"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838137"
 ---
-# <a name="building-my-first-claims-aware-aspnet-web-application"></a>İlk talep kullanan ASP.NET Web uygulamamı derleme
-## <a name="applies-to"></a>Uygulandığı öğe:  
+# <a name="building-my-first-claims-aware-aspnet-web-application"></a>Talep Kullanan İlk ASP.NET Web Uygulamamı Derleme
+## <a name="applies-to"></a>Uygulanan Öğe  
   
 -   Windows Identity Foundation (WIF)  
   
@@ -19,7 +19,7 @@ ms.locfileid: "54588970"
   
  Bu konuda, WIF kullanarak talep kullanan ASP.NET web uygulamaları oluşturma senaryosu açıklanmaktadır. Talep kullanan uygulama senaryosunda genellikle üç katılımcı vardır: uygulamanın kendisi, son kullanıcı ve Güvenlik Belirteci Hizmeti (STS). Aşağıdaki şekilde bu senaryo anlatılmaktadır:  
   
- ![WIF temel Web uygulaması](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")  
+ ![WIF temel Web uygulaması bileşenleri gösteren diyagram.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1.  Talep kullanan uygulama, kimliği doğrulanmamış istekleri tanımlamak ve bunları STS'ye yönlendirmek için WIF kullanır.  
   

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 9e84ac90054e4ac3d32bb436fc0756248e84fcd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fdbeb2b77e88f144bc541d01ee2e904f8a84678
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705329"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832534"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Dosya Sistemi ve .NET Framework Dosyası G/Ç'de Kullanılan Sınıflar (Visual Basic)
 .NET Framework dosyası g/ç, dosya g/ç sınıfları, akışları oluşturmak için kullanılan sınıfları ve okuma ve akışlara yazmak için kullanılan sınıfları kategorilere için yaygın olarak kullanılan sınıfları aşağıdaki tablolarda listelenmiştir.  
@@ -57,6 +57,7 @@ ms.locfileid: "54705329"
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Karakterler için yazar bir `String`. Çıkış kodlaması herhangi bir ya da akış olabilir veya `String`.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Akışlar Oluşturma](../../../../standard/io/composing-streams.md)
 - [Dosya ve Akış G/Ç'si](../../../../standard/io/index.md)
 - [Zaman Uyumsuz Dosya G/Ç](../../../../standard/io/asynchronous-file-i-o.md)

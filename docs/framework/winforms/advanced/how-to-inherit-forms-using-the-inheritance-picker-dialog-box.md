@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Devralma Seçici iletişim kutusunu kullanarak form devralma'
+title: 'Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719368"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841172"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici iletişim kutusunu kullanarak form devralma
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma
 Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici** iletişim kutusu. Bununla, diğer çözümlere önceden oluşturduğunuz kodu veya kullanıcı arabirimi (UI) avantajlarından yararlanabilirsiniz.  
   
 > [!NOTE]
@@ -41,7 +41,7 @@ Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici
   
 6.  Bileşeni seçin.  
   
-     İçinde **Çözüm Gezgini**, bileşen projenize eklenir. Bir kullanıcı Arabirimi varsa, devralınmış bir form parçası olan denetimler bir simge ile işaretlenir (![VisualBasicInheritanceSymbol ekran](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")), ve seçili olduğunda, belirten bir kenarlık üst sınıf formda bir denetim olan güvenlik düzeyi. Aşağıdaki tabloda farklı güvenlik düzeylerine karşılık gelen davranışlar listelenmektedir.  
+     İçinde **Çözüm Gezgini**, bileşen projenize eklenir. Bir kullanıcı Arabirimi varsa, devralınmış bir form parçası olan denetimler bir simge ile işaretlenir (![ekran görüntüsü Visual Basic kalıtımı sembol.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)) ve seçili olduğunda, denetimin sahip güvenlik düzeyini gösteren bir kenarlığa sahip üst formu. Aşağıdaki tabloda farklı güvenlik düzeylerine karşılık gelen davranışlar listelenmektedir.  
   
     |Denetim için güvenlik düzeyi|Kullanılabilir etkileşiminin Tasarımcısı ve form devralınmış Kod Düzenleyicisi|  
     |-------------------------------|--------------------------------------------------------------------------------|  

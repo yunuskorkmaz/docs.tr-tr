@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 5e91f1b99a17f4bbdc65a77ab26050ee57e96ac4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724849"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819663"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Nasıl yapılır: Erişim üyeleri bir nesnenin (Visual Basic)
 Bir nesneye başvuruda bulunan bir nesne değişkeni varsa, genellikle o nesnenin yöntemler, özellikler, alanlar ve olaylar gibi üyeleri birlikte çalışmak istediğiniz. Örneğin, bir kez oluşturduğunuz yeni bir <xref:System.Windows.Forms.Form> nesne ayarlamak isteyebilirsiniz, <xref:System.Windows.Forms.Control.Text%2A> özelliği veya çağrı kendi <xref:System.Windows.Forms.Control.Focus%2A> yöntemi.  
@@ -71,6 +71,7 @@ Bir nesneye başvuruda bulunan bir nesne değişkeni varsa, genellikle o nesneni
      Nesne değişkenine atayın herhangi bir nesnenin üyeleri erişebilmesi için ayarlamalısınız `Option Strict Off`. Bunu yaptığınızda, derleyici belirli bir üye değişkenine atayın nesnesi tarafından kullanıma sunulduğunu garanti edemez. Nesne girişiminde erişmek için üye sunmuyorsa bir <xref:System.MemberAccessException> özel durum oluşur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>

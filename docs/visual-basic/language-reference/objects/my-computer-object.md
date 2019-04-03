@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: bd44b6332ae9971eca60677f6bceba9645f2b7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0fbd2a795d90cb88a4b185669a6393c5ef22752
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640465"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829973"
 ---
 # <a name="mycomputer-object"></a>My.Computer Nesnesi
 Ses, saat, klavye, dosya sistemi ve benzeri gibi bilgisayar bileşenlerini yönetmek için gereken özellikleri sağlar.  
@@ -25,6 +25,7 @@ Ses, saat, klavye, dosya sistemi ve benzeri gibi bilgisayar bileşenlerini yöne
  **Derleme:** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [My.Computer.Audio Nesnesi](../../../visual-basic/language-reference/objects/my-computer-audio-object.md)
 - [My.Computer.Clipboard Nesnesi](../../../visual-basic/language-reference/objects/my-computer-clipboard-object.md)
 - [My.Computer.Clock Nesnesi](../../../visual-basic/language-reference/objects/my-computer-clock-object.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: aeacc49faad6198a9341a1ec7d010f1cd173912d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dbffe2bd196e798b90104aebb74269387660c794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288983"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840464"
 ---
 # <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>CLS uyumlu olmayan \<membername > CLS uyumlu arabirimde izin verilmez
 Bir özellik, yordam veya bir arabirim olay olarak işaretlenmiş `<CLSCompliant(True)>` olarak arabirimi işaretlendiğinde `<CLSCompliant(False)>` veya hiçbir işaret konulmadıysa.  
@@ -36,5 +36,5 @@ Bir özellik, yordam veya bir arabirim olay olarak işaretlenmiş `<CLSCompliant
 -   Bu üye, geçerli arabirimi içinde kalmasını gerektiriyorsa, kaldırma <xref:System.CLSCompliantAttribute> kendi tanımından veya olarak işaretlemek `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)
 
+- [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)

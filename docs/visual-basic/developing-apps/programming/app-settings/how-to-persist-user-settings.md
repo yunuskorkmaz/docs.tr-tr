@@ -6,12 +6,12 @@ helpviewer_keywords:
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: 45d5fbf6fda34407d8b7eb3f959f215e7621f1c5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 35997db52a59aeaff5a2c404ea83b15639ea23a0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966951"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825187"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını kalıcı yapma
 Kullanabileceğiniz `My.Settings.Save` kullanıcı ayarlarında yapılan değişiklikleri kalıcı hale getirmek için yöntemi.  
@@ -31,6 +31,7 @@ Kullanabileceğiniz `My.Settings.Save` kullanıcı ayarlarında yapılan değiş
  Bu örneğin çalışması, uygulamanız olmalıdır bir `LastChanged` türü kullanıcı ayarı `Date`. Daha fazla bilgi için [uygulama ayarlarını yönetme (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [My.Settings Nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)

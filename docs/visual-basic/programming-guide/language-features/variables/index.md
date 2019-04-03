@@ -2,9 +2,15 @@
 title: Visual Basic'de Değişkenler
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'variables [Visual Basic]'
-  - 'values [Visual Basic], storing'
+- variables [Visual Basic]
+- values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
+ms.openlocfilehash: 9a39c53ea2d57bca379297897d6d4d1b9f7a1a9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840387"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic'de Değişkenler
 Genellikle hesaplamalar Visual Basic ile zaman değerlerini depolamak sahiptir. Örneğin, çeşitli değerleri hesaplama, aralarında karşılaştırma ve üzerinde karşılaştırmanın sonucuna bağlı olarak farklı işlemler gerçekleştirmek isteyebilirsiniz. Bunları karşılaştırmak istiyorsanız değerlerini korumak sahip.  
@@ -28,6 +34,7 @@ Genellikle hesaplamalar Visual Basic ile zaman değerlerini depolamak sahiptir. 
  Bir değişken gibi bir *özelliği* erişebileceğiniz bir değeri temsil eder. Ancak, bir değişken daha karmaşık olur. Bir özelliğin değerini almak ve ayarlamak biçimini denetleyen kod blokları kullanır. Daha fazla bilgi için [arasındaki farklar özelliklerini ve Visual Basic'te değişkenler](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Değişkenlerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 7a04f0a9862927f8588a895c7f0f099509aa4d8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512898"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834107"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Onluk Veri Türü (Visual Basic)
 Ayrı tutma 128-bit (16 baytlık) değerler tarafından 10 değişken güç ölçeği 96 bit (12-bayt) tamsayıları temsil eden imzalı. Ölçeklendirme çarpanı ondalık noktasının sağındaki basamak sayısını belirtir; 0 ile 28 arasında çeşitlilik gösterir. İle bir ölçek 0 (ondalık basamak) 79,228,162,514,264,337,593,543,950,335 +/-olası en büyük değer olan (7 +/-.9228162514264337593543950335E + 28). 28 ondalık basamakları olan en büyük değeri 7.9228162514264337593543950335 +/-, ise sıfır olmayan en küçük değeri +/-0.0000000000000000000000000001 (+/-1E-28).  
@@ -79,6 +79,7 @@ Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
  İçin `bigDec3`, değişmez değer türü karakteri `D` değişmez değer olarak yorumlamak üzere zorlayarak sorunu çözer bir `Decimal` yerine olarak bir `Long`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Decimal?displayProperty=nameWithType>
 - <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>
 - <xref:System.Math.Round%2A?displayProperty=nameWithType>

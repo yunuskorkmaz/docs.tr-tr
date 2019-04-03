@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 262812f5e18bb9c46ea5ec573adab914f19eef43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bae420e88a74fbe3f7e8ad3592133fdcaf191029
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979489"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839005"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Nasıl yapılır: Bir belirsiz sayıda parametre (Visual Basic) isteyen bir yordamı aşırı yükleme
 Bir yordam varsa bir [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametresi, parametre dizisi için tek boyutlu bir dizi alan aşırı yüklenmiş bir sürümünü tanımlayamaz. Daha fazla bilgi için bkz: "Örtük aşırı yüklemeleri için bir ParamArray parametresiyle" [aşırı yükleme yordamları Hususlarına](./considerations-in-overloading-procedures.md).  
@@ -54,6 +54,7 @@ Bir yordam varsa bir [ParamArray](../../../../visual-basic/language-reference/mo
  Süresiz olarak büyük olabilecek bir dizi işlem olduğunda, uygulamanızın bazı iç kapasite taşmasını riski yoktur. Bir parametre dizisi kabul ederseniz, çağıran kodun geçirilen dizinin uzunluğunu test etmek ve uygulamanız için çok büyük ise, uygulamanız gereken adımlar gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](./index.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [İsteğe Bağlı Parametreler](./optional-parameters.md)

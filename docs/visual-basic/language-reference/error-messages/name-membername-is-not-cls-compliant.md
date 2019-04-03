@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: 74b625cc3a60e591417530c6a6229c01666038e2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271258"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824630"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>Adı \<membername > CLS uyumlu değil
 Bir derleme olarak işaretlenmiş `<CLSCompliant(True)>` ancak bir alt çizgi ile başlayan bir ada sahip bir üye sunar (`_`).  
@@ -34,6 +34,6 @@ Bir derleme olarak işaretlenmiş `<CLSCompliant(True)>` ancak bir alt çizgi il
 -   Üye adı değişmeden kalmasını gerektiriyorsa, kaldırma <xref:System.CLSCompliantAttribute> kendi tanımından veya olarak işaretlemek `<CLSCompliant(False)>`. Yine de derleme olarak işaretleyebilirsiniz `<CLSCompliant(True)>`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bildirilen Öğe Adları](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-

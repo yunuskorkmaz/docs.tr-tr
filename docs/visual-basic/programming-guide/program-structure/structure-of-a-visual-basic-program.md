@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746529"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828127"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Bir Visual Basic Programının Yapısı
 Bir Visual Basic programını standart yapı taşlarından oluşturulmuştur. A *çözüm* bir veya daha fazla proje içerir. A *proje* sırayla bir veya daha fazla içerebilir. Her *derleme* bir veya daha fazla kaynak dosyalarından derlenir. A *kaynak dosyası* tanımı ve sınıflar, yapılar, modülleri ve sonuç olarak, kodunuzu içeren arabirimleri uygulamasını sağlar.  
@@ -93,6 +93,7 @@ Bir Visual Basic programını standart yapı taşlarından oluşturulmuştur. A 
  Bu yordam en sık kullanılan çeşitli olan `Sub Main()`. Daha fazla bilgi için [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
 - [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Visual Basic sınırlamaları](../../../visual-basic/programming-guide/program-structure/limitations.md)

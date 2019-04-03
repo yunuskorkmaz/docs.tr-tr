@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: a43d09be53eb5a04d154e482f9388e2ca480118a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967184"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837747"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Nasıl yapılır: (Visual Basic) kodda deyimleri bölme ve birleştirme
 Kodunuzu yazarken, bazen Kod Düzenleyicisi'nde yatay kaydırma başlatılmalarını uzun ifadeleri oluşturabilirsiniz. Bu şekilde etkilememesine rağmen kodunuz, bunu siz veya başka hiç kimse izleyicide göründüğü gibi kod okumanız için için zorlaştırır. Böyle durumlarda, birkaç satıra tek uzun deyim sonu düşünmelisiniz.  
@@ -59,5 +59,6 @@ Kodunuzu yazarken, bazen Kod Düzenleyicisi'nde yatay kaydırma başlatılmalar�
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Deyimler](../../../visual-basic/programming-guide/language-features/statements.md)

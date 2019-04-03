@@ -2,12 +2,12 @@
 title: Standart sorgu işleçlerinin yöntemine göre sınıflandırılması yürütme (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: 5e4204c3fa80acced42649e76abfa2be05f35d82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595181"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823227"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Standart sorgu işleçlerinin yöntemine göre sınıflandırılması yürütme (Visual Basic)
 Standart sorgu işleci yöntemleri nesneleri uygulamalarına LINQ iki ana yoldan biriyle yürütün: hemen veya ertelenmiş. Ertelenmiş yürütme kullanan sorgu işleçler ek olarak iki kategoriye ayrılabilir: akış ve akış dışı. Nasıl farklı sorgu işleçlerinin yürütme biliyorsanız, belirli bir sorgudan Al sonuçları anlamanıza yardımcı olabilir. Bu veri kaynağı değiştiğinde veya başka bir sorgu üzerinde bir sorgu oluşturuyorsanız özellikle doğrudur. Bu konuda, standart sorgu işleçlerinin yürütme kendi şekilde göre sınıflandırır.  
@@ -88,6 +88,7 @@ Standart sorgu işleci yöntemleri nesneleri uygulamalarına LINQ iki ana yoldan
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Linq.Enumerable>
 - [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Standart sorgu işleçleri (Visual Basic) için sorgu ifade sözdizimi](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)

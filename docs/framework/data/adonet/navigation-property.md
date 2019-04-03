@@ -2,12 +2,12 @@
 title: Gezinme özelliğinin - ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: 6729b22dbc012d5ccfabd64cd83b710833fe1b9d
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: b57ecf9329aa9ea8afc07507613c9e3961bfd0a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857950"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836606"
 ---
 # <a name="navigation-property"></a>Gezinme özelliği
 
@@ -29,7 +29,7 @@ Veri türü bir gezinti özelliği tarafından belirlenir [çoğulluk](associati
 
 Varlık üç kavramsal bir modelle Aşağıdaki diyagramda gösterilmektedir: `Book`, `Publisher`, ve `Author`. Gezinti özellikleri `Publisher` ve `Authors`, kitap varlık türünde tanımlanır. Gezinti özelliği `Books` hem Yayımcı varlık türü üzerinde tanımlanan ve `Author` varlık türü.
 
-![Gezinti özellikleri ile model](/media/modelwithnavprops.gif "ModelWithNavProps")
+ ![Kavramsal bir modelle üç varlık türlerini gösteren diyagram.](./media/navigation-property/conceptual-model-entity-types-associations.gif)  
 
 [ADO.NET Entity Framework](./ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](./ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Aşağıdaki CSDL tanımlar `Book` Yukarıdaki diyagramda gösterilen varlık türü:
 

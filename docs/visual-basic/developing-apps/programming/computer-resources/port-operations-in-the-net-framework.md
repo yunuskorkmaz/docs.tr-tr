@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - ports, Visual Basic
 ms.assetid: 1eba223b-7bd3-401a-b097-982bce96df1b
-ms.openlocfilehash: 3e8dd3bf387f7b4bd99d979de9fa8a9f93f1cc67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33298fd9840630fbfd6f7f9d883cc2397a459843
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529154"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826450"
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>Visual Basic ile .NET Framework'te Bağlantı Noktası İşlemleri
 Bilgisayarınızın seri bağlantı noktaları üzerinden erişebildiğiniz [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sınıfları <xref:System.IO.Ports?displayProperty=nameWithType> ad alanı. En önemli sınıfı <xref:System.IO.Ports.SerialPort>, zaman uyumlu ve olay odaklı g/ç, erişim için PIN ve kesme durumları ve seri sürücü özelliklere erişim için bir çerçeve sunar. İçinde sarmalanabilir bir <xref:System.IO.Stream> nesnesi üzerinden erişilebilir <xref:System.IO.Ports.SerialPort.BaseStream> özelliği. Sarmalama <xref:System.IO.Ports.SerialPort> içinde bir <xref:System.IO.Stream> nesne akışları kullanan sınıfları tarafından erişilecek seri bağlantı noktası sağlar. Ad alanı, seri bağlantı denetimi basitleştiren sabit listeleri içerir.  
@@ -32,5 +32,6 @@ Bilgisayarınızın seri bağlantı noktaları üzerinden erişebildiğiniz [!IN
 |<xref:System.IO.Ports.StopBits>|Kullanılan Dur bitleri belirtir <xref:System.IO.Ports.SerialPort> nesne.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - [Bilgisayar Bağlantı Noktalarına Erişme](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)

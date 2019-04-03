@@ -30,12 +30,12 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 17b5fcc2be2730abfd7ee0090f9f34053e81c5f8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 65fcd10521742e287c7934080b3352a06668df7a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971903"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835563"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Kod'da Özel Karakterler (Visual Basic)
 Bazen özel karakterler kodunuzda, diğer bir deyişle, alfabetik veya sayısal olmayan karakterler kullanmak gerekir. Noktalama işaretleri ve özel karakterler Visual temel karakter kümesinde derleyici veya derlenmiş programın gerçekleştirdiği görevler tanımlama program metni düzenleme gelen çeşitli kullanımlar sahip. Gerçekleştirilecek bir işlemi belirtmeyin.  
@@ -88,5 +88,6 @@ Bazen özel karakterler kodunuzda, diğer bir deyişle, alfabetik veya sayısal 
  `!` Karakter olarak kullanılan ayrıca `Single` karakter yazın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Tür Karakterleri](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

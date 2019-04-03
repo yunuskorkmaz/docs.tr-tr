@@ -2,12 +2,12 @@
 title: XElement sınıfına genel bakış (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
-ms.openlocfilehash: fe2a91d2b286061453e41870d68c04424417c6ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fbe1cc484ea3482bc455c161783bd7a4513d0bd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628825"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830715"
 ---
 # <a name="xelement-class-overview-visual-basic"></a>XElement sınıfına genel bakış (Visual Basic)
 <xref:System.Xml.Linq.XElement> Sınıfın temel sınıflarında biridir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Bu, bir XML öğesi temsil eder. Bu sınıf, öğeleri oluşturmak için kullanabilirsiniz; öğenin içeriğini değiştirmek; ekleme, değiştirme veya alt öğeleri silin; öznitelik, bir öğeye ekleyin; ya da metin biçiminde bir öğenin içeriği seri hale getirme. İçindeki diğer sınıflarla çalışabilirler <xref:System.Xml?displayProperty=nameWithType>, gibi <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, ve <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -78,7 +78,7 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-### <a name="serializing-xml-trees"></a>XML ağaçlarını serileştirme  
+### <a name="serializing-xml-trees"></a>XML Ağaçlarını Serileştirme  
  XML ağacına serileştirebilen bir <xref:System.IO.File>, <xref:System.IO.TextWriter>, veya bir <xref:System.Xml.XmlWriter>.  
   
  Daha fazla bilgi için [XML ağaçlarını serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md).  
@@ -88,7 +88,7 @@ Console.WriteLine(xmlTree)
   
  Daha fazla bilgi için [LINQ to XML eksenleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md).  
   
-### <a name="querying-xml-trees"></a>XML ağaçlarını sorgulama  
+### <a name="querying-xml-trees"></a>XML Ağaçlarını Sorgulama  
  Yazabileceğiniz [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] XML ağacından verileri ayıklamak sorgular.  
   
  Daha fazla bilgi için [XML ağaçlarını sorgulama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md).  
@@ -99,4 +99,5 @@ Console.WriteLine(xmlTree)
  Daha fazla bilgi için [XML ağaçlarını değiştirme (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to XML programlamaya genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

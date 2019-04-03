@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 97cceb833da0ef6f9ee4e3dab5abb1f2ba73a94e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969329"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832391"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Özyinelemeli Yordamlar (Visual Basic)
 A *özyinelemeli* yordam, kendi kendini çağıran bir kullanılır. Genel olarak, Visual Basic kod yazmak için en etkili yolu değil.  
@@ -38,6 +38,7 @@ A *özyinelemeli* yordam, kendi kendini çağıran bir kullanılır. Genel olara
  **Test**. Bir özyinelemeli yordam yazarsanız, bu çok dikkatli bir şekilde her zaman bir sınırlama bazı koşullar karşıladığından emin olmak için test etmelisiniz. Ayrıca, özyinelemeli çağrı sayısı çok fazla olması nedeniyle bellek yetersiz çalıştıramazsınız emin olmalısınız.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.StackOverflowException>
 - [Yordamlar](./index.md)
 - [Alt Yordamlar](./sub-procedures.md)

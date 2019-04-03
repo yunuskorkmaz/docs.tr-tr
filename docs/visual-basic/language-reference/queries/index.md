@@ -2,9 +2,15 @@
 title: Sorgular (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'queries [Visual Basic]'
-  - 'LINQ, queries'
+- queries [Visual Basic]
+- LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
+ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836903"
 ---
 # <a name="queries-visual-basic"></a>Sorgular (Visual Basic)
 Visual Basic oluşturmanıza olanak sağlar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] kodunuzda ifadeler.  
@@ -53,5 +59,6 @@ Visual Basic oluşturmanıza olanak sağlar [!INCLUDE[vbteclinqext](~/includes/v
  Açıklar `Where` yan tümcesi bir sorgu için filtreleme koşulunu belirtir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic'de LINQ'e giriş](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

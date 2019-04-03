@@ -2,12 +2,12 @@
 title: Birleştirme işlemleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 06f46e55545f669214f4a14775252df1a86b2008
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90e848b21c79278f81507831025045224c4cf634
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501275"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834120"
 ---
 # <a name="concatenation-operations-visual-basic"></a>Birleştirme işlemleri (Visual Basic)
 Birleştirme, bir dizi sonuna ekleme işlemini ifade eder.  
@@ -22,9 +22,10 @@ Birleştirme, bir dizi sonuna ekleme işlemini ifade eder.
   
 |Yöntem adı|Açıklama|Visual Basic sorgu ifade sözdizimi|Daha fazla bilgi|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|concat|Bir dizi oluşturmak için iki diziyi sıralar.|Uygulanamaz.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
+|concat|Bir dizi oluşturmak için iki diziyi sıralar.|Geçerli değildir.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Linq>
 - [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Nasıl yapılır: Birleştirme ve karşılaştırma (LINQ) (Visual Basic) dize koleksiyonları](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

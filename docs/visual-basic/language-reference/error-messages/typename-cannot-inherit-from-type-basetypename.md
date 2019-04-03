@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: 226c85f887ecc706a5cb554c2163742f10896141
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269828"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838956"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename >' öğesinden devralamaz \<türü > '\<basetypename >' temelinin erişimini genişlettiğinden \<türü > derleme dışından
 Bir sınıf veya arabirim bir temel sınıftan devraldığı veya arabirimi ancak daha az kısıtlayıcı bir erişim düzeyi yok.  
@@ -25,11 +25,12 @@ Bir sınıf veya arabirim bir temel sınıftan devraldığı veya arabirimi anca
   
 -   Türetilmiş bir sınıf veya arabirim en az olabildiğince kısıtlayıcı, temel sınıf veya arabirim erişim düzeyini değiştirin.  
   
-     -veya-  
+     veya  
   
 -   Daha az kısıtlayıcı erişim düzeyi gerekiyorsa, kaldırma `Inherits` deyimi. Bir daha kısıtlı bir temel sınıfı veya arabirimi devralınamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Interface Deyimi](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Inherits Deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)

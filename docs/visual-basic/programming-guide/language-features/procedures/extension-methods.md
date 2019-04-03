@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970555"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822082"
 ---
 # <a name="extension-methods-visual-basic"></a>Uzantı Yöntemleri (Visual Basic)
 Genişletme yöntemleri, geliştiricilerin zaten yeni bir türetilmiş tür oluşturmadan tanımlanan veri türlerine özel işlevsellik eklemek sağlar. Genişletme yöntemleri mevcut türü bir örnek yöntemi gibi çağrılabilen bir yöntem yazmaktır mümkün kılar.  
@@ -175,6 +175,7 @@ End Module
  Öncelik belirsizliği, kaldırmazsa çağırdığınız yöntemi belirtmek için tam nitelikli adı kullanabilirsiniz. Varsa `Print` yöntemi önceki örnekte bulunan adında bir modülde tanımlanan `StringExtensions`, tam nitelikli ad `StringExtensions.Print(example)` yerine `example.Print()`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [Genişletme Yöntemleri](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

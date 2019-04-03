@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 5d6d56e4a1eddcb687fe042568509ba489aa8bb3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973476"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840373"
 ---
 # <a name="mysettings-object"></a>My.Settings Nesnesi
 Özellikler ve uygulama ayarlarının erişmek için yöntemler sağlar.  
@@ -60,6 +60,7 @@ ms.locfileid: "56973476"
  Bu örneğin çalışması, uygulamanız olmalıdır bir `Nickname` biriminin türü `String`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [Nasıl yapılır: Visual Basic'te uygulama ayarlarını okuma](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [Nasıl yapılır: Visual Basic'te kullanıcı ayarlarını değiştirme](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)

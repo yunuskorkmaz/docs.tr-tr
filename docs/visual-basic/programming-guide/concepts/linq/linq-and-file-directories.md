@@ -2,12 +2,12 @@
 title: LINQ ve dosya dizinleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-ms.openlocfilehash: bd6889c087f9347c2c056ed10356ae2a55565a4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56967a82bf63d8421d34af48dcc6384ded85e2ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566872"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825124"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ ve dosya dizinleri (Visual Basic)
 Çok sayıda dosya sistemi işlemleri temelde sorgular ve bu nedenle LINQ yaklaşım için çok uygundur.  
@@ -41,4 +41,5 @@ ms.locfileid: "54566872"
  Bir veri kaynağı doğru bir şekilde dosya sistemi içeriğini temsil eder ve düzgün bir şekilde özel durumları işler oluşturmak için gerekli olan bazı karmaşıklığı yoktur. Bu bölümdeki örneklerde, bir anlık görüntü koleksiyonunu oluşturmak <xref:System.IO.FileInfo> belirtilen kök klasör altındaki tüm dosyaları ve tüm alt klasörlerindeki temsil eden nesneleri. Her gerçek durumuyla <xref:System.IO.FileInfo> ne zaman başlar ve son Sorguyu yürüten arasında zaman içinde değişebilir. Örneğin, bir listesini oluşturabilirsiniz <xref:System.IO.FileInfo> veri kaynağı olarak kullanılacak nesne. Erişmeye çalışırsanız `Length` özelliği bir sorgu <xref:System.IO.FileInfo> nesne değerini güncelleştirmek üzere dosya sisteminde erişmeye çalışır `Length`. Dosya artık mevcut değilse, erişmenizi sağlayacak bir <xref:System.IO.FileNotFoundException> sorgunuzda, olsa bile, yok sorguladığınız dosya sistemi doğrudan. Bu bölümde bazı sorgular, bu belirli özel durumları, bazı durumlarda tüketen ayrı bir yöntem kullanın. Başka bir seçeneği kullanarak dinamik olarak güncelleştirilen veri kaynağınız tutmaktır <xref:System.IO.FileSystemWatcher>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to Objects'in (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: 78c5303461ecf25a1487e072f4f6be25bde98dca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b872eda97d1e349ad781b12810e4b166d6e46fe1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587469"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837318"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme (Visual Basic)
 Çağırdığınızda bir `Sub` veya `Function` yordamı, bağımsız değişkenleri iletebilir *konuma göre* — yordam tanımında göründükleri sırayla — veya geçirebileceğiniz gibi *ada göre*, olmadan konuma haklısın.  
@@ -95,6 +95,7 @@ Gerekli bağımsız değişkenler girmekten kaçınmak için ada göre bağıms�
 Ada göre bir parametre dizisi geçiremezsiniz. Bu yordamı çağırdığınızda, belirsiz sayıda parametre dizisi virgülle ayrılmış bağımsız değişkenleri sağlayın ve derleyicinin tek bir ada sahip birden fazla bağımsız değişken ilişkilendirilemiyor olmasıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](./index.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)

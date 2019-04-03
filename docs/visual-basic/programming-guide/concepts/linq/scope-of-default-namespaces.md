@@ -2,12 +2,12 @@
 title: Visual Basic'de varsayılan ad alanlarının kapsamı
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: 8c48273f3788e20e24832be8bf2013af22419fac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e33505dd8e8ad94e3c758f15f245d0cbaf6987bc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527022"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836720"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Visual Basic'de varsayılan ad alanlarının kapsamı
 XML ağacı içinde gösterilen varsayılan ad alanı, sorgular için kapsamda değildir. Yine de belirtmesi gerekir, varsayılan bir ad alanı XML varsa, bir <xref:System.Xml.Linq.XNamespace> değişkeni, sorguda kullanılan bir tam adı yerel adı ile birleştirebilirsiniz.  
@@ -100,4 +100,5 @@ End of result set
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML ad alanları (Visual Basic) ile çalışma](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

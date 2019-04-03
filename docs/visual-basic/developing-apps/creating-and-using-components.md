@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 7a0b513e5045db609550133e20c20ef65f17844c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca336e2ffa3831167088d92bfca017ce2226d8a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551928"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828088"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic'te Bileşenler Oluşturma ve Kullanma
 A *bileşen* uygulayan bir sınıf <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> arabirimi ya da uygulayan bir sınıftan türetilen doğrudan veya dolaylı olarak <xref:System.ComponentModel.IComponent>. A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] yeniden kullanılabilir, diğer nesnelerle etkileşim kurabilir ve dış kaynaklara ve tasarım zamanı desteği üzerinde denetim sağlayan bir nesne bir bileşendir.  
@@ -63,5 +63,5 @@ A *bileşen* uygulayan bir sınıf <xref:System.ComponentModel.IComponent?displa
  Sık karşılaşılan sorunları düzeltmek açıklanmaktadır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Windows Forms'ta erişim tasarım zamanı desteği](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
 
+- [Nasıl yapılır: Windows Forms'ta erişim tasarım zamanı desteği](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

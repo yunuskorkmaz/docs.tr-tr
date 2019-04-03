@@ -9,12 +9,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 784a848b02e75d2ae9a6c6530141e69a05a9041b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ba6479852f7a78fb26743a04fd08adea07c1ffff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973502"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835875"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Nasıl yapılır: Bir LINQ Sorgu sonucunu belirli bir türü (Visual Basic) döndürme
 Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları yürütmek kolaylaştırır. Varsayılan olarak, LINQ sorguları anonim bir tür nesnelerin bir listesini döndürür. Sorgu kullanarak belirli bir türün bir liste döndürme belirtebilirsiniz `Select` yan tümcesi.  
@@ -76,6 +76,7 @@ Dil ile tümleşik sorgu (LINQ), Veritabanı bilgilerine erişmek ve sorguları 
 5.  Projenizi çalıştırma ve sonuçları görüntülemek için F5 tuşuna basın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

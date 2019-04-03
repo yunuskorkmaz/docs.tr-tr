@@ -2,12 +2,12 @@
 title: Özel Bağlama Güvenilir Oturum
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: d8f58a425fd2cef078954f9805f47fc1376889d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d970f4a84f51755db16d84d22178c343624de03f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623994"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824773"
 ---
 # <a name="custom-binding-reliable-session"></a>Özel Bağlama Güvenilir Oturum
 Özel bağlama ayrık bağlama öğelerinin sıralı bir listesi tanımlanır. Bu örnek, çeşitli taşıma ve kodlama öğeleri, özellikle de güvenilir oturumlar etkinleştirme ileti özel bağlama yapılandırma işlemi gösterilmektedir.  
@@ -123,4 +123,3 @@ Press <ENTER> to terminate client.
     <compositeDuplex clientBaseAddress="http://client_machine_name:8000/myClient/" />  
     ```  
   
-## <a name="see-also"></a>Ayrıca bkz.

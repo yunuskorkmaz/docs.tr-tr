@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çizilmiş metinde sekme durakları ayarlama'
+title: 'Nasıl yapılır: Çizilmiş Metinde Sekme Durakları Ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-ms.openlocfilehash: 2b3d019db1fd3e9eeb9def1c18b54d293e5faca9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 76431d34504b40a299200693735a0a989127d683
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722431"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832313"
 ---
-# <a name="how-to-set-tab-stops-in-drawn-text"></a>Nasıl yapılır: Çizilmiş metinde sekme durakları ayarlama
+# <a name="how-to-set-tab-stops-in-drawn-text"></a>Nasıl yapılır: Çizilmiş Metinde Sekme Durakları Ayarlama
 Metin için sekme durakları çağırarak ayarlayabilirsiniz <xref:System.Drawing.StringFormat.SetTabStops%2A> yöntemi bir <xref:System.Drawing.StringFormat> nesnesi ve ardından geçirmeden <xref:System.Drawing.StringFormat> nesnesini <xref:System.Drawing.Graphics.DrawString%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı.  
   
 > [!NOTE]
@@ -24,9 +24,9 @@ Metin için sekme durakları çağırarak ayarlayabilirsiniz <xref:System.Drawin
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, 150, 250 ve 350 sekme durakları ayarlar. Ardından, kod adları ve test puanlarını sekmeli listesini görüntüler.  
   
- Aşağıdaki çizim sekmeli metni gösterir.  
+ Sekmeli metin aşağıda gösterilmiştir:  
   
- ![Yazı tipleri metin](./media/fontstext4.png "fontstext4")  
+ ![Ad ve puanlar sekmeli listesini gösteren ekran görüntüsü.](./media/how-to-set-tab-stops-in-drawn-text/tab-list-names-test-scores.png)  
   
  Aşağıdaki kod iki bağımsız değişken geçirir <xref:System.Drawing.StringFormat.SetTabStops%2A> yöntemi. İkinci bağımsız değişkeni sekmesini uzaklıkları içeren bir dizidir. Geçirilen ilk bağımsız değişken <xref:System.Drawing.StringFormat.SetTabStops%2A> dizideki ilk uzaklığını konumu 0, sınırlayıcı dikdörtgenini sol kenarı ölçülür belirten, 0'dır.  
   

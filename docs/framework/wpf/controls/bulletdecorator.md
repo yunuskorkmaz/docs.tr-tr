@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], BulletDecorator
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
-ms.openlocfilehash: 38efb1ba0ed9ed34d256418ae60b863fccc8eaf1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5839a75434f71ff6dd91b86474aeab2e8b0ad64
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377342"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824994"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> İçerik iki özelliğe sahiptir: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> ve <xref:System.Windows.Controls.Decorator.Child%2A>. <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> Özelliği tanımlar <xref:System.Windows.UIElement> madde işareti olarak kullanılacak. <xref:System.Windows.Controls.Decorator.Child%2A> Özelliği tanımlayan bir <xref:System.Windows.UIElement> madde işareti ile görsel olarak hizalar.  
   
  Örnek olarak kullanan denetimler aşağıdaki çizimde bir <xref:System.Windows.Controls.Primitives.BulletDecorator>.  
   
- ![3 BulletDecorators: Onay kutusu, Ortala radyo düğmesi, metin kutusu](./media/bulletdecorator.png "BulletDecorator")  
+ ![Metin madde işareti dekoratör bir onay kutusu ve bir RadioButton örneği.](./media/bulletdecorator/three-bullet-decorators.png)  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Controls.Primitives.BulletDecorator>

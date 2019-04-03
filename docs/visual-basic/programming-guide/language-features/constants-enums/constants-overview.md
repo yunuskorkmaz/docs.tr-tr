@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 34f3dee4edba58375c5c84b579e39a8a29ebc1bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737695"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841308"
 ---
 # <a name="constants-overview-visual-basic"></a>Sabitlere Genel Bakış (Visual Basic)
 Bir sayı veya dize değişmez yerini alır, anlamlı bir ad bir sabittir. Sabitler adından da anlaşılacağı gibi bir uygulamanın yürütülmesini boyunca değişmez değerlerini depolar. Büyük ölçüde kodunuzun okunabilirliği geliştirmek ve sabitleri kullanarak korumak üzere kolaylaştırır. Bunları yeniden değerleri içeren kodda kullanın veya, belirgin bir anlamı yoktur veya unutmayın zor olan belirli numaralarını bağlıdır.  
@@ -45,5 +45,6 @@ Bir sayı veya dize değişmez yerini alır, anlamlı bir ad bir sabittir. Sabit
 |[Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Açıklar `Option Strict` deyimi ve kullanımı.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

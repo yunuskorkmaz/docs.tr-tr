@@ -9,20 +9,21 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: 489c60aff7b431617477a381161e1c8f587947e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b6413c8481a021afa34b7de228df14c109a50889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703315"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834237"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator Denetimine Genel Bakış (Windows Forms)
 Kullanabileceğiniz <xref:System.Windows.Forms.BindingNavigator> aramak ve bir Windows Form üzerinde verileri değiştirmek kullanıcılar için standartlaştırılmış bir yol oluşturmak için denetimi. Sık kullandığınız <xref:System.Windows.Forms.BindingNavigator> ile <xref:System.Windows.Forms.BindingSource> kullanıcıların bir form üzerinde veri Kayıtlarda gezinmek ve kayıtlarla etkileşimde etkinleştirmek için bileşen.  
   
 ## <a name="how-the-bindingnavigator-works"></a>BindingNavigator nasıl çalışır?  
- <xref:System.Windows.Forms.BindingNavigator> Denetim oluşan bir <xref:System.Windows.Forms.ToolStrip> bir dizi <xref:System.Windows.Forms.ToolStripItem> nesneler için ortak verilerle ilgili işlemlerin çoğu: veri ekleme, verileri silme ve verilerine gezinme. Varsayılan olarak, <xref:System.Windows.Forms.BindingNavigator> denetimi bu standart düğmeleri içerir. Aşağıdaki ekran görüntüsünde gösterildiği <xref:System.Windows.Forms.BindingNavigator> form denetimi.  
+
+ <xref:System.Windows.Forms.BindingNavigator> Denetim oluşan bir <xref:System.Windows.Forms.ToolStrip> bir dizi <xref:System.Windows.Forms.ToolStripItem> nesneler için ortak verilerle ilgili işlemlerin çoğu: veri ekleme, verileri silme ve verilerine gezinme. Varsayılan olarak, <xref:System.Windows.Forms.BindingNavigator> denetimi bu standart düğmeleri içerir. Aşağıdaki ekran görüntüsü gösterildiği <xref:System.Windows.Forms.BindingNavigator> form denetimi:
   
- ![BindingNavigator denetimi](./media/cpdatacontainerctrl.gif "cpDataContainerCtrl")  
+ ![BindingNavigator denetimi gösteren ekran görüntüsü.](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
   
  Aşağıdaki tablo, denetimleri listeler ve bunların işlevleri açıklanır.  
   

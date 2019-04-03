@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: ec7c92975bc056fd740033b602b15cd1611c44d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694041"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838982"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Parametreler ve Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
 Çoğu durumda, bir yordam içinde bunu çağrıldıktan koşullar hakkında bazı bilgiler olması gerekir. Yinelenen veya paylaşılan görevleri gerçekleştiren bir yordam her çağrı için farklı bilgileri kullanır. Bu bilgiler, değişkenleri, sabitleri ve onu çağırdığınızda yordama geçirdiğiniz ifadeleri oluşur.  
@@ -38,6 +38,7 @@ ms.locfileid: "54694041"
  Parametre tanımında aksine, bağımsız değişken adları yok. Her bağımsız değişkeni sıfır veya daha fazla değişkenler, sabitler ve sabit değerleri içeren bir ifade ' dir. Değerlendirilmiş ifadeyi veri türüne karşılık gelen parametre için tanımlanan veri türü genellikle eşleşmesi gerekir ve her durumda parametre türüne dönüştürülebilir olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](./index.md)
 - [Alt Yordamlar](./sub-procedures.md)
 - [İşlev Yordamları](./function-procedures.md)

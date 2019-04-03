@@ -2,17 +2,23 @@
 title: Erken ve Geç Bağlama (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'early binding [Visual Basic]'
-  - 'objects [Visual Basic], late-bound'
-  - 'objects [Visual Basic], early-bound'
-  - 'objects [Visual Basic], late bound'
-  - 'early binding [Visual Basic], Visual Basic compiler'
-  - 'binding [Visual Basic], late and early'
-  - 'objects [Visual Basic], early bound'
-  - 'Visual Basic compiler, early and late binding'
-  - 'late binding [Visual Basic]'
-  - 'late binding [Visual Basic], Visual Basic compiler'
+- early binding [Visual Basic]
+- objects [Visual Basic], late-bound
+- objects [Visual Basic], early-bound
+- objects [Visual Basic], late bound
+- early binding [Visual Basic], Visual Basic compiler
+- binding [Visual Basic], late and early
+- objects [Visual Basic], early bound
+- Visual Basic compiler, early and late binding
+- late binding [Visual Basic]
+- late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
+ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824799"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Erken ve Geç Bağlama (Visual Basic)
 Visual Basic Derleyicisi adlı bir işlem gerçekleştirir `binding` bir nesne bir nesne değişkenine atanan zaman. Bir nesnenin *erken bağlama* onu bir değişkene atandığında bildirilen belirli nesne türünde olması. Erken bağlama nesnelerine derleyicinin bellek ayırma ve uygulama yürütülmeden önce diğer iyileştirmeler gerçekleştirmek izin verin. Örneğin, aşağıdaki kod parçası, türünde bir değişkeni bildirir <xref:System.IO.FileStream>:  
@@ -32,6 +38,7 @@ Visual Basic Derleyicisi adlı bir işlem gerçekleştirir `binding` bir nesne b
 >  Geç bağlama yalnızca olarak bildirilen tür üyelerine erişmek için kullanılabilir `Public`. Olarak bildirilen üyelere erişme `Friend` veya `Protected Friend` bir çalışma zamanı hatası oluşur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
 - [Nesne ömrü: Nesnelerin nasıl oluşturulduğunu ve yok](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)

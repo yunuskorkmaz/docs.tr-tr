@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 6b079db3ccc07494bdfdf7dba49c27fe14dca4e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5fc0105cffb5606f9382aca7b55d6544d04f9fe7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973944"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838163"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>İzlenecek yol: Visual Basic ile COM nesneleri oluşturma
 Yeni uygulama veya bileşenler oluştururken, .NET Framework derlemeleri oluşturmak idealdir. Ancak, Visual Basic ayrıca, bir .NET Framework bileşenini vystavit kullanıma sunmak kolaylaştırır Bu yeni bileşenler için COM bileşenlerini gerektiren önceki uygulama paketlerini vermenizi sağlar. Bu izlenecek yol göstermek için Visual Basic kullanmayı gösteren [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] nesneler COM nesneleri, hem ile hem de olmadan COM sınıf şablonu olarak.  
@@ -91,6 +91,7 @@ Yeni uygulama veya bileşenler oluştururken, .NET Framework derlemeleri oluştu
     >  COM nesneleri doğru olmadığı için Visual Basic ile oluşturduğunuz COM nesneleri başka bir Visual Basic uygulama tarafından kullanılamaz. Bu tür COM nesnelerine başvurular ekleme girişimleri hata oluşturur. Ayrıntılar için bkz [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
 - [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)

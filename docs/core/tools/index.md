@@ -3,12 +3,12 @@ title: .NET core komut satırı arabirimi (CLI) araçları
 description: .NET Core komut satırı arabirimi (CLI) araçları ve özellikleri genel bakış.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 5af0dfa01763aaa2ec35576ff30117d458ca7f7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565806"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826320"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET core komut satırı arabirimi (CLI) araçlarını
 
@@ -122,11 +122,17 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Sürücü
 
-Sürücü adlı [dotnet](dotnet.md) ve iki sorumlulukları, ya da çalışan bir [framework bağımlı uygulama](../deploying/index.md) veya bir komut yürütülüyor. Yalnızca bir kez `dotnet` bir uygulamayı başlatmak için kullanıldığında bir komuttur olmadan kullanılır.
+Sürücü adlı [dotnet](dotnet.md) ve iki sorumlulukları, ya da çalışan bir [framework bağımlı uygulama](../deploying/index.md) veya bir komut yürütülüyor. 
 
-Framework bağımlı uygulamayı çalıştırın, sonra sürücüsü, örneğin, uygulamayı belirtmek için `dotnet /path/to/my_app.dll`. Uygulamanın DLL bulunduğu klasörün komutu yürütülürken, yalnızca yürütme `dotnet my_app.dll`.
+Framework bağımlı uygulamayı çalıştırın, sonra sürücüsü, örneğin, uygulamayı belirtmek için `dotnet /path/to/my_app.dll`. Uygulamanın DLL bulunduğu klasörün komutu yürütülürken, yalnızca yürütme `dotnet my_app.dll`. Belirli bir .NET Core çalışma zamanı sürümünü kullanmak istiyorsanız, kullanın `--fx-version <VERSION>` seçeneği (bkz [dotnet komut](dotnet.md) başvuru).
 
-Sürücü komut sağladığında `dotnet.exe` CLI komut yürütme işlemi başlatır. İlk olarak, sürücü kullanmak için SDK'sı sürümünü belirler. Komut seçenekleri sürüm belirtilmezse, sürücü kullanılabilir en son sürümünü kullanır. En son yüklenen sürüm dışında bir sürümünü belirtmek için kullanın `--fx-version <VERSION>` seçeneği (bkz [dotnet komut](dotnet.md) başvuru). SDK sürümü belirlendikten sonra sürücü komutu yürütür.
+Sürücü komut sağladığında `dotnet.exe` CLI komut yürütme işlemi başlatır. Örneğin:
+
+```bash
+> dotnet build
+```
+
+İlk olarak, sürücü kullanmak için SDK'sı sürümünü belirler. Yoksa hiçbir ['global.json'](global-json.md), kullanılabilir SDK'sının en son sürümü kullanılır. Bu bir önizleme veya kararlı bir sürüm makinede en son nedir bağlı olarak, olabilir.  SDK sürümü belirlendikten sonra komutu yürütür.
 
 ### <a name="command-verb"></a>Komut ("eylem")
 

@@ -2,12 +2,12 @@
 title: Akış
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: c16f12e6fb122fbba7dc46abb26859be49c08f74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca6c4a2f8bfd87982bc1b8574c65c5d5a2282a93
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662601"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828101"
 ---
 # <a name="stream"></a>Akış
 Stream örnek aktarım modu iletişim akış kullanımını gösterir. Hizmet, akışları gönderip birkaç işlemini kullanıma sunar. Bu örnek kendiliğinden barındırılır. Hem istemci hem de hizmet Konsolu programlardır.  
@@ -185,4 +185,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
   
-## <a name="see-also"></a>Ayrıca bkz.

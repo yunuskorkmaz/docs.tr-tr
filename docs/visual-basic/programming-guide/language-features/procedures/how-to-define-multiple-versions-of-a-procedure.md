@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980782"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841179"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Nasıl yapılır: Bir yordam (Visual Basic) birden fazla sürümünü tanımlama
 Bir yordam tarafından birden çok sürümü tanımlayabilirsiniz *aşırı yükleme* , her sürüm için aynı ada ancak farklı parametre listesini kullanarak. Aşırı yükleme amacı, ada göre ayırmak zorunda kalmadan bir yordamın birden fazla yakından ilgili sürümünü tanımlamaktır.  
@@ -43,6 +43,7 @@ Bir yordam tarafından birden çok sürümü tanımlayabilirsiniz *aşırı yük
  Her aşırı yüklü sürümü farklı parametre listesi ancak aynı yordam adı olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](./index.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Yordam Sorunlarını Giderme](./troubleshooting-procedures.md)

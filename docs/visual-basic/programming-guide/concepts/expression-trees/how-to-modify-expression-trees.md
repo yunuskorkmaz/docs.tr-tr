@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: (Visual Basic) ifade ağaçlarını değiştirme'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: 41af4ba3933931eb62f85cd4ad69eb1b8cc50ac2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c53983c6dfc601a7e8e32ad020f5f7feb66cfe04
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603541"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834341"
 ---
 # <a name="how-to-modify-expression-trees-visual-basic"></a>Nasıl yapılır: (Visual Basic) ifade ağaçlarını değiştirme
 Bu konu nasıl bir ifade ağacı değiştirileceğini gösterir. İfade ağaçları değişmezse, yani bunlar doğrudan değiştirilemez. İfade ağacı değiştirmek için var olan bir ifade ağacı bir kopyasını oluşturun ve bir kopya oluşturduğunuzda gerekli değişiklikleri yapın. Kullanabileceğiniz <xref:System.Linq.Expressions.ExpressionVisitor> var olan bir ifade ağacı gezme ve onu ziyaret her düğüm kopyalamak için bir sınıf.  
@@ -71,5 +71,6 @@ Bu konu nasıl bir ifade ağacı değiştirileceğini gösterir. İfade ağaçla
 6.  Derleme ve uygulamayı çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nasıl yapılır: (Visual Basic) ifade ağaçlarını yürütme](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [İfade ağaçları (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

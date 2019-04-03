@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: 84f0cc34e5de0634eff2edecead08aae3a143068
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32a81ba462eccfc6f4ba2a694793895810074b7e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554172"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817042"
 ---
 # <a name="session"></a>Oturum
 Oturum örnek bir oturum gerektiren bir sözleşmesini uygulama gösterilmiştir. Oturum, birden çok işlemi gerçekleştirmek için bağlam sağlar. Önceki bir işlemin durumunu sonraki işlemleri kullanabilir bu durum belirli bir oturum ile ilişkilendirmek bir hizmet sağlar. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), hesaplayıcı hizmet uygular. `ICalculator` Sözleşme, çalışan bir sonuç tutarken gerçekleştirilecek aritmetik işlemler kümesi izin verecek şekilde değiştirildi. Bu işlev tarafından tanımlanan `ICalculatorSession` sözleşme. Birden çok hizmet işlemleri bir hesaplama gerçekleştirmek için adlandırıldığı gibi hizmet için bir istemci durumu korur. İstemci, çağırarak geçerli sonucu alabilirsiniz `Result()` çağırarak sıfır sonucu temizleyin `Clear()`.  
@@ -92,4 +92,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Session`  
   
-## <a name="see-also"></a>Ayrıca bkz.

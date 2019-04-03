@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: ef6ce3fe62bd45716184ccbbb0f5a29f18e7477f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 061782dbd0ac54286a6c0da74fe769d98848f118
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514809"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828725"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic Çalışma Süresi Kitaplık Üyeleri
 `Microsoft.VisualBasic` Ad alanı, sınıflar, modüller, sabitleri ve Visual Basic çalışma zamanı kitaplığı oluşturur numaralandırmaları içerir. Bu kitaplık üyeleri, yordamlar, özellikleri ve kodunuzda kullanabileceğiniz sabit değerler sağlayın. Her bir modül ve sınıf işlevinin belirli bir kategoriye temsil eder.  
@@ -194,5 +194,6 @@ ms.locfileid: "54514809"
  `Microsoft.VisualBasic` Ad alanı, Visual Basic çalışma zamanı kitaplığının bir parçası sabitler ve numaralandırmalar sağlar. Kodunuzda bu sabit değerleri kullanabilirsiniz. Her numaralandırmanın işlevinin belirli bir kategoriye temsil eder. Daha fazla bilgi için [sabitler ve numaralandırmalar](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sabitler ve Sabit Listeleri](../../visual-basic/language-reference/constants-and-enumerations.md)
 - [Anahtar Sözcükler](../../visual-basic/language-reference/keywords/index.md)

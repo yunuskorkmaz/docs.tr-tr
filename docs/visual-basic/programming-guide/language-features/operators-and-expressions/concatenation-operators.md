@@ -9,12 +9,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: 5151265235868c2a7991bee61b26a4a0da09f901
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 124f0ca0cd01d7fd218fd89dfb78e70fe8aad9e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978104"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835732"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Visual Basic'de Birleştirme İşleçleri
 Birleştirme işleçleri, tek bir dize olarak birden çok dizeyi katılın. İki birleştirme işleçleri vardır `+` ve `&`. Her ikisi de, aşağıdaki örnekte gösterildiği gibi temel birleştirme işleminin yürütülmesi.  
@@ -38,6 +38,7 @@ Dim y As String = "Mic" + "ro" + "soft"
  Çok sayıda değişiklik, birleştirmeler ve silme gibi bir dizesini işlemeleri yaparsanız performansınızı gelen kar <xref:System.Text.StringBuilder> sınıfını <xref:System.Text> ad alanı. Oluşturma ve başlatma için fazladan bir yönerge alır bir <xref:System.Text.StringBuilder> nesnesi ve son değerine dönüştürmek için başka bir yönerge bir `String`, ancak bu kez kurtarma <xref:System.Text.StringBuilder> daha hızlı bir şekilde gerçekleştirebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Visual Basic'de dize düzenleme yöntemlerinin türleri](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
 - [Visual Basic'de aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

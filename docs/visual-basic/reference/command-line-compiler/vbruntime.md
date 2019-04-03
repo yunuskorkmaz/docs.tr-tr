@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-ms.openlocfilehash: 31323f3d5b3eed01c56476353d621cfa8fe03a12
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a1988fcd19c6629d85ae0e739681fd39fe033c0d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719123"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843870"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 Derleyici, Visual Basic çalışma zamanı kitaplığı veya bir belirli çalışma zamanı kitaplık başvurusu olan bir başvuru olmadan derlemesi gerektiğini belirtir.  
@@ -95,6 +95,7 @@ vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Basic çekirdek – Visual Studio 2010 SP1'de yeni derleme modu](https://devblogs.microsoft.com/vbteam/vb-core-new-compilation-mode-in-visual-studio-2010-sp1/)
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: 96b1677e301d3e83df400472bfa06e921f991bd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544659"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837657"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Nesne Değişken Bildirimi (Visual Basic)
 Bir normal bir bildirim deyiminin bir nesne değişkenini bildirmek için kullanın. Veri türü için ya da belirttiğiniz `Object` (diğer bir deyişle, [nesne veri türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)) veya nesne olduğu oluşturulacak daha belirli bir sınıf.  
@@ -126,6 +126,7 @@ Dim anyForm As System.Windows.Forms.Form
  Türetilen sınıflar için bir taban sınıfın tüm üyeleri kullanılabilir, ancak ek üyeler türetilmiş bir sınıfın temel sınıf için kullanılamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Nesne Değişkeni Ataması](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

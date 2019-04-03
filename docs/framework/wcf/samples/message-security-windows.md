@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-ms.openlocfilehash: a39d43084457d07a1b2064d80226c1186e42686a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49d7e74b908f0acfd13b6cd30c710034e71d667f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585178"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838592"
 ---
 # <a name="message-security-windows"></a>İleti Güvenliği Windows
 Bu örnek nasıl yapılandırılacağını gösteren bir <xref:System.ServiceModel.WSHttpBinding> ileti düzeyi güvenliği Windows kimlik doğrulaması ile kullanılacak bağlama. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Bu örnekte, Internet Information Services (IIS) barındırılan hizmetin ve bir konsol uygulaması (.exe) istemcidir.  
@@ -80,4 +80,3 @@ public string GetCallerIdentity()
   
 3.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Ayrıca bkz.

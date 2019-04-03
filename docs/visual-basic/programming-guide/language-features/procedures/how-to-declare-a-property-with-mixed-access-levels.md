@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa0c71621b72d01067db0749a0678b706d13fbfa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972592"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832131"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Nasıl yapılır: Bir özelliği karışık erişim düzeyleri (Visual Basic) bildirme
 İsterseniz `Get` ve `Set` yordamları farklı erişim düzeylerine sahip bir özellik üzerinde daha fazla izin veremez düzeyinde kullanabilirsiniz `Property` deyimi ve ya da daha kısıtlayıcı düzeyinde `Get` veya `Set` deyimi. Belirli bölümlerini özelliğin değerini almak kod ve belirli bir değeri değiştirmek kod bölümlerini istediğinizde bir özelliği karışık erişim düzeyleriyle kullanın.  
@@ -35,6 +35,7 @@ ms.locfileid: "56972592"
      Önceki örnekte, `Get` yordamı sahip aynı `Protected` özellik kendisine erişim sırasında `Set` yordamı sahip `Private` erişim. Öğesinden türetilen bir sınıf `employee` okuyabilirsiniz `salary` değeri, ancak yalnızca `employee` sınıf ayarlayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yordamlar](./index.md)
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)

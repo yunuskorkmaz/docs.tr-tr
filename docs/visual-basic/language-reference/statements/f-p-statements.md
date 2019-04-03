@@ -2,12 +2,12 @@
 title: F-P deyimleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cdce7ab0-c52e-4d33-a29b-bf32cdacc79f
-ms.openlocfilehash: 478ee051b3f8ac668d3115b69fa579c474cce85c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5f1ed4f9d16bb9687e874c97364777494ca6052
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579270"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842323"
 ---
 # <a name="f-p-statements"></a>F-P Deyimleri
 Aşağıdaki tabloda, Visual Basic dili ifadelerini listesini içerir.  
@@ -22,6 +22,7 @@ Aşağıdaki tabloda, Visual Basic dili ifadelerini listesini içerir.
 |[Katı tanımlama seçeneği](../../../visual-basic/language-reference/statements/option-strict-statement.md)|[Özelliği](../../../visual-basic/language-reference/statements/property-statement.md)|||  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [A-E Deyimleri](../../../visual-basic/language-reference/statements/a-e-statements.md)
 - [Q-Z Deyimleri](../../../visual-basic/language-reference/statements/q-z-statements.md)
 - [Visual Basic Dili Başvurusu](../../../visual-basic/language-reference/index.md)

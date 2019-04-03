@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 522526392dd12ede729fe8b96677029c05af57c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 437107bb522e1635dffa4a2de88c5d10d6707592
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665701"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825150"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Boş Değer Atanabilen Değer Türleri (Visual Basic)
 Bazen belirli durumlarda tanımlı bir değer olmayan bir değer türü ile çalışır. Örneğin, bir veritabanı bir alana atanan bir değere sahip değil ve anlamlı atanan bir değere sahip arasında ayırt etmek olabilir. Değer türleri, normal değerlerini veya null değeri olması için genişletilebilir. Böyle bir uzantı olarak adlandırılan bir *boş değer atanabilir tür*.  
@@ -98,6 +98,7 @@ Bazen belirli durumlarda tanımlı bir değer olmayan bir değer türü ile çal
  Boş değer atanabilir türler kullanmak için en önemli yerlerden biri bir veritabanı hizmetidir. Tüm veritabanı nesneleri şu anda boş değer atanabilir türler desteklese de, tasarımcı tarafından oluşturulan tablo bağdaştırıcıları yapın. "Boş değer atanabilir türler için TableAdapter desteği" bölümüne bakın [TableAdapter genel bakışı](/visualstudio/data-tools/tableadapter-overview).
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [Boş Değer Atanabilir Tipleri Kullanma](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

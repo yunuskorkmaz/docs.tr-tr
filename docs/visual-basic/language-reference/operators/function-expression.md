@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 6cecc7fc2356a265ca4a3d57c837298ec33efc60
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965845"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839694"
 ---
 # <a name="function-expression-visual-basic"></a>İşlev İfadesi (Visual Basic)
 Parametreleri işlevi lambda ifadesi tanımlayan ve kodu bildirir.  
@@ -88,6 +88,7 @@ Dim londonCusts = db.Customers.
  Sorgu yöntemleri hakkında daha fazla bilgi için bkz. [sorguları](../../../visual-basic/language-reference/queries/index.md). Standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [standart sorgu işleçlerine genel bakış](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Function Deyimi](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Lambda İfadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

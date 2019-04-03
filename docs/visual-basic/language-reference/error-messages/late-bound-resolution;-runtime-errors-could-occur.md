@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: 9caf02907e4b6de4c2bd8de778d4ad7a9320a82b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fe79c74b6ff634223a4f10d8c5dc54bb77571cc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690585"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822303"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>Sonradan bağlanma çözümlemesi; çalışma zamanı hataları oluşabilir
 Bir nesne olması için bildirilen bir değişkene atanır [nesne veri türü](../../../visual-basic/language-reference/data-types/object-data-type.md).  
@@ -30,5 +30,6 @@ Bir nesne olması için bildirilen bir değişkene atanır [nesne veri türü](.
 -   Mümkünse, belirli bir türde olması değişkeni bildirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
 - [Nesne Değişken Bildirimi](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
