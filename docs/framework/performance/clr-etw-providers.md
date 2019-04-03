@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fd1a4d41e65ea4d39f1cfee33aa5e166eec71ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628558"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890520"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW Sağlayıcılar
 Ortak dil çalışma zamanı (CLR) iki sağlayıcıları vardır: çalışma zamanı sağlayıcısı ve Özet sağlayıcı.  
@@ -84,7 +84,7 @@ Ortak dil çalışma zamanı (CLR) iki sağlayıcıları vardır: çalışma zam
 4.  Tek bir günlük dosyası oluşturmak üzere profilleri birleştirme:  
   
     ```  
-    xperf -merge -d clr1.etl clr2.etl merged.etl  
+    xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   
      Merged.etl dosyası çalışma zamanı ve özeti sağlayıcısı oturumlarından gelen olayları içerir.  
@@ -92,4 +92,4 @@ Ortak dil çalışma zamanı (CLR) iki sağlayıcıları vardır: çalışma zam
  Adım 2 ve 3 (bir Özet oturumunun başlatılması ve ardından profil oluşturma sonlandırma) hemen bir kullanıcı profili oluşturma devre dışı kapatmak yerine bir aracı yürütebilir durdurulması için profil oluşturma isteği. Bir aracı, 4. adım olarak ayrıca yürütebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Ortak Dil Çalışma Zamanında ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

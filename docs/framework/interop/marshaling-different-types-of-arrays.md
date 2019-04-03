@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: ef5c9acab6fd8fa852b619eeeee150eb33b69507
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654620"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890442"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Farklı Dizi Türlerini Hazırlama
 Bir dizi aynı türden bir veya daha fazla öğe içeriyor, yönetilen kodda bir başvuru türüdür. Diziler başvuru türleri olsa da, olduğu gibi parametreleri yönetilmeyen bir işleve geçirilir. Bu davranış, In/Out parametreleri olan yönetilen nesnelere, yönetilen diziler geçirilen yolu ile tutarsız. Ek ayrıntılar için bkz. [kopyalama ve sabitleme](copying-and-pinning.md).  
@@ -86,7 +86,7 @@ Bir dizi aynı türden bir veya daha fazla öğe içeriyor, yönetilen kodda bir
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) daha önce listelenen işlevlerin ve iki yapı değişkenleri için uygulamaları içeren özel bir yönetilmeyen kitaplıktır **MYPOINT** ve **MYPERSON**. Yapılar aşağıdaki öğeleri içerir:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) daha önce listelenen işlevlerin ve iki yapı değişkenleri için uygulamaları içeren özel bir yönetilmeyen kitaplıktır **MYPOINT** ve **MYPERSON**. Yapılar aşağıdaki öğeleri içerir:  
   
 ```  
 typedef struct _MYPOINT  

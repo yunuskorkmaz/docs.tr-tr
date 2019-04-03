@@ -5,18 +5,20 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: 74be338cd6f704174d89032fb7f9e859215c2bc3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843545"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890377"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My Özelliklerinde Hangi Nesnelerin Kullanılabilir Olduğunu Özelleştirme (Visual Basic)
+
 Bu konuda, nasıl denetleyebileceğiniz açıklanmaktadır `My` nesneleri projenizin ayarlayarak etkin `_MYTYPE` koşullu derleme sabiti. Visual Studio tümleşik geliştirme ortamı (IDE) tutar `_MYTYPE` koşullu derleme sabiti için projenin tipini ile eşitlenmiş bir proje.  
   
-## <a name="predefined-mytype-values"></a>Önceden tanımlanmış _MYTYPE değerleri  
- Kullanmalısınız `/define` ayarlamak için derleyici seçeneği `_MYTYPE` koşullu derleme sabiti. Kendi değerinizi belirtirken `_MYTYPE` sabiti, dize değeri ters eğik çizgi/tırnak işareti içine almanız gerekir (\\") dizileri. Örneğin, aşağıdaki kullanabilirsiniz:  
+## <a name="predefined-mytype-values"></a>Önceden tanımlanmış \_MYTYPE değerleri  
+
+Kullanmalısınız `/define` ayarlamak için derleyici seçeneği `_MYTYPE` koşullu derleme sabiti. Kendi değerinizi belirtirken `_MYTYPE` sabiti, dize değeri ters eğik çizgi/tırnak işareti içine almanız gerekir (\\") dizileri. Örneğin, aşağıdaki kullanabilirsiniz:  
   
 ```  
 /define:_MYTYPE=\"WindowsForms\"  
@@ -24,7 +26,7 @@ Bu konuda, nasıl denetleyebileceğiniz açıklanmaktadır `My` nesneleri projen
   
  Bu tabloda neler gösterilir `_MYTYPE` koşullu derleme sabiti ayarlandığında birkaç proje türleri için.  
   
-|Proje türü|_MYTYPE değeri|  
+|Proje türü|\_MYTYPE değeri|  
 |------------------|--------------------|  
 |Sınıf Kitaplığı|"Windows"|  
 |Konsol Uygulaması|"Konsol"|  
@@ -37,12 +39,13 @@ Bu konuda, nasıl denetleyebileceğiniz açıklanmaktadır `My` nesneleri projen
 |boş|"Boş"|  
   
 > [!NOTE]
->  Tüm koşullu derleme dize karşılaştırmaları bağımsız olarak nasıl, küçük harf duyarlıdır `Option Compare` deyimi ayarlanır.  
+> Tüm koşullu derleme dize karşılaştırmaları bağımsız olarak nasıl, küçük harf duyarlıdır `Option Compare` deyimi ayarlanır.  
   
-## <a name="dependent-my-compilation-constants"></a>Bağımlı _MY derleme sabitleri  
- `_MYTYPE` Koşullu derleme sabitini birkaç farklı değerleri sırayla denetler `_MY` derleme sabitleri:  
+## <a name="dependent-my-compilation-constants"></a>Bağımlı \_MY derleme sabitleri  
+
+`_MYTYPE` Koşullu derleme sabitini birkaç farklı değerleri sırayla denetler `_MY` derleme sabitleri:  
   
-|_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
+|\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
 |"Konsol"|"Konsol"|"Windows"|Tanımlanmadı|"Windows"|TRUE|  
 |"Özel"|Tanımlanmadı|Tanımlanmadı|Tanımlanmadı|Tanımlanmadı|Tanımlanmadı|  
@@ -56,7 +59,7 @@ Bu konuda, nasıl denetleyebileceğiniz açıklanmaktadır `My` nesneleri projen
  Varsayılan olarak, tanımsız koşullu derleme sabitleri çözümlemek için `FALSE`. Varsayılan davranışı geçersiz kılmak için proje derlenirken tanımlanmamış sabit değerleri belirtebilirsiniz.  
   
 > [!NOTE]
->  Zaman `_MYTYPE` ayarlanmış "Özel", projeyi içeren `My` ad alanı, ancak hiçbir nesne içerir. Ancak, ayarı `_MYTYPE` için "Boş" engeller derleyici eklemesini `My` ad alanı ve nesneleri.  
+> Zaman `_MYTYPE` ayarlanmış "Özel", projeyi içeren `My` ad alanı, ancak hiçbir nesne içerir. Ancak, ayarı `_MYTYPE` için "Boş" engeller derleyici eklemesini `My` ad alanı ve nesneleri.  
   
  Bu tablo önceden tanımlanmış değerler etkilerini açıklar `_MY` derleme sabitleri.  
   
@@ -77,7 +80,7 @@ Bu konuda, nasıl denetleyebileceğiniz açıklanmaktadır `My` nesneleri projen
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
 - [My Özellikleri Proje Türüne Nasıl Bağımlıdır](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 - [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [My.Forms Nesnesi](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.Request Nesnesi](../../../visual-basic/language-reference/objects/my-request-object.md)
 - [My.Response Nesnesi](../../../visual-basic/language-reference/objects/my-response-object.md)

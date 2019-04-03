@@ -4,12 +4,12 @@ description: Oluşturma ve C# Visual Studio Code kullanarak ilk .NET Core uygula
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788342"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890559"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# ve Visual Studio Code kullanmaya başlama
 
@@ -50,7 +50,7 @@ ms.locfileid: "57788342"
 
 4. "Hello World" programı çalıştır:
 
-    * Türü `dotnet run`
+    * `dotnet run`yazın.
 
       ![Dotnet komutu çalıştırın](media/with-visual-studio-code/dotnet-run-command.png)
 
@@ -91,14 +91,14 @@ ms.locfileid: "57788342"
 ## <a name="add-a-class"></a>Bir sınıf ekleyin
 
 1. Yeni bir sınıf sağ tıklatın VSCode Gezgini'nde ekleyin ve seçmek için **yeni dosya**. Bu, VSCode içinde açtığınız klasöre yeni bir dosya ekler.
-2. Dosyanızın adı `Class1.cs`. İle kaydetmelisiniz bir `.cs` uzantısı için bir csharp dosyası olarak tanınması için sonunda.
+2. Dosyanızın adı `MyClass.cs`. İle kaydetmelisiniz bir `.cs` uzantısı için bir csharp dosyası olarak tanınması için sonunda.
 3. İlk sınıfınıza oluşturmak için aşağıdaki kodu ekleyin. Buradan başvurabilmeniz için doğru ad alanını eklediğinizden emin olun, `Program.cs` dosya.
 ``` csharp
 using System;
 
 namespace HelloWorld
 {
-    public class Class1
+    public class MyClass
     {
         public string ReturnMessage()
         {
@@ -119,7 +119,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Class1 c1 = new Class1();
+            MyClass c1 = new MyClass();
             Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
         }
     }

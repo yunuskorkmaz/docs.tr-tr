@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a4461d14299264a35f36133480cb11709c346ce
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c481b6889c1f10124465a4e851adfb25a1ba2eff
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221283"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890299"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Sınıflar, Yapılar ve Birleşimleri Hazırlama
 .NET Framework sınıfları ve yapıları benzerdir. Hem alanlar, özellikler ve olaylar olabilir. Bunlar, ayrıca statik ve statik olmayan yöntemleri olabilir. Bir önemli fark, yapılar değer türüdür ve sınıflar, başvuru türleridir ' dir.  
@@ -68,7 +68,7 @@ ms.locfileid: "56221283"
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) uygulamaları için daha önce listelenen işlevlerin ve dört yapıları içeren özel bir yönetilmeyen kitaplıktır: **MYPERSON**, **MYPERSON2**, **MYPERSON3**, ve **MYARRAYSTRUCT**. Bu yapılar aşağıdaki öğeleri içerir:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) uygulamaları için daha önce listelenen işlevlerin ve dört yapıları içeren özel bir yönetilmeyen kitaplıktır: **MYPERSON**, **MYPERSON2**, **MYPERSON3**, ve **MYARRAYSTRUCT**. Bu yapılar aşağıdaki öğeleri içerir:  
   
 ```  
 typedef struct _MYPERSON  
@@ -182,7 +182,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) daha önce listelenen işlev ve iki birleşimler için bir uygulama içeren özel bir yönetilmeyen kitaplıktır **MYUNION** ve **MYUNION2**. Birleşimler aşağıdaki öğeleri içerir:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) daha önce listelenen işlev ve iki birleşimler için bir uygulama içeren özel bir yönetilmeyen kitaplıktır **MYUNION** ve **MYUNION2**. Birleşimler aşağıdaki öğeleri içerir:  
   
 ```  
 union MYUNION  
@@ -254,7 +254,7 @@ typedef struct _SYSTEMTIME {
   
  Bu örnek kullanarak yerel bir işlev çağırmayı göstermektedir <xref:System.Runtime.InteropServices.Marshal> sınıfı ve güvenli olmayan kod kullanarak.  
   
- Bu örnek bir sarmalayıcı işlevleri kullanır ve platform çağırır tanımlanan [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)), da sağlanan kaynak dosyalarında. Kullandığı `TestOutArrayOfStructs` işlevi ve `MYSTRSTRUCT2` yapısı. Yapı aşağıdaki öğeleri içerir:  
+ Bu örnek bir sarmalayıcı işlevleri kullanır ve platform çağırır tanımlanan [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll), da sağlanan kaynak dosyalarında. Kullandığı `TestOutArrayOfStructs` işlevi ve `MYSTRSTRUCT2` yapısı. Yapı aşağıdaki öğeleri içerir:  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -289,6 +289,6 @@ typedef struct _MYSTRSTRUCT2
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Platform Çağırma ile Veri Hazırlama](marshaling-data-with-platform-invoke.md)
+- [Platform Çağırma ile Veri Sıralama](marshaling-data-with-platform-invoke.md)
 - [Dizeleri Hazırlama](marshaling-strings.md)
 - [Farklı Dizi Türlerini Hazırlama](marshaling-different-types-of-arrays.md)
