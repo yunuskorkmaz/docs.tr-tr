@@ -11,19 +11,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: 589b5f94358cf9ce58e47a8a0eaec187aface98d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d6326bb44d6a84c455c972fcbd191dc957844b74
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964753"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830103"
 ---
-# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a><span data-ttu-id="86754-102">Nasıl yapılır: Visual Basic'te birden çok biçimli metin dosyalarını okuma</span><span class="sxs-lookup"><span data-stu-id="86754-102">How to: Read From Text Files with Multiple Formats in Visual Basic</span></span>
-<span data-ttu-id="86754-103"><xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Nesneyi kolayca ve verimli bir şekilde günlükleri gibi yapılandırılmış metin dosyalarını ayrıştırmak için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="86754-103">The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object provides a way to easily and efficiently parse structured text files, such as logs.</span></span> <span data-ttu-id="86754-104">Birden çok biçimli bir dosya kullanarak işleyebilir `PeekChars` dosyasını ayrıştırma gibi her satırın biçimini belirlemek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="86754-104">You can process a file with multiple formats by using the `PeekChars` method to determine the format of each line as you parse through the file.</span></span>  
+# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a><span data-ttu-id="caa64-102">Nasıl yapılır: Visual Basic'te birden çok biçimli metin dosyalarını okuma</span><span class="sxs-lookup"><span data-stu-id="caa64-102">How to: Read From Text Files with Multiple Formats in Visual Basic</span></span>
+<span data-ttu-id="caa64-103"><xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Nesneyi kolayca ve verimli bir şekilde günlükleri gibi yapılandırılmış metin dosyalarını ayrıştırmak için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="caa64-103">The <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object provides a way to easily and efficiently parse structured text files, such as logs.</span></span> <span data-ttu-id="caa64-104">Birden çok biçimli bir dosya kullanarak işleyebilir `PeekChars` dosyasını ayrıştırma gibi her satırın biçimini belirlemek için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="caa64-104">You can process a file with multiple formats by using the `PeekChars` method to determine the format of each line as you parse through the file.</span></span>  
   
-### <a name="to-parse-a-text-file-with-multiple-formats"></a><span data-ttu-id="86754-105">Birden çok biçimli metin dosyası ayrıştırılamıyor</span><span class="sxs-lookup"><span data-stu-id="86754-105">To parse a text file with multiple formats</span></span>  
+### <a name="to-parse-a-text-file-with-multiple-formats"></a><span data-ttu-id="caa64-105">Birden çok biçimli metin dosyası ayrıştırılamıyor</span><span class="sxs-lookup"><span data-stu-id="caa64-105">To parse a text file with multiple formats</span></span>  
   
-1.  <span data-ttu-id="86754-106">Projenize testfile.txt adında bir metin dosyası ekleyin.</span><span class="sxs-lookup"><span data-stu-id="86754-106">Add a text file named testfile.txt to your project.</span></span> <span data-ttu-id="86754-107">Aşağıdaki içeriği metin dosyasına ekleyin.</span><span class="sxs-lookup"><span data-stu-id="86754-107">Add the following content to the text file.</span></span>  
+1.  <span data-ttu-id="caa64-106">Projenize testfile.txt adında bir metin dosyası ekleyin.</span><span class="sxs-lookup"><span data-stu-id="caa64-106">Add a text file named testfile.txt to your project.</span></span> <span data-ttu-id="caa64-107">Aşağıdaki içeriği metin dosyasına ekleyin.</span><span class="sxs-lookup"><span data-stu-id="caa64-107">Add the following content to the text file.</span></span>  
   
     ```  
     Err  1001 Cannot access resource.  
@@ -34,47 +34,48 @@ ms.locfileid: "56964753"
     Acc  10/04/2009User2      Standard user.  
     ```  
   
-2.  <span data-ttu-id="86754-108">Beklenen biçim ve bir hata bildirildiğinde kullanılan biçimini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="86754-108">Define the expected format and the format used when an error is reported.</span></span> <span data-ttu-id="86754-109">Her dizi son girişi -1, bu nedenle son alan değişken genişliği olarak kabul edilir.</span><span class="sxs-lookup"><span data-stu-id="86754-109">The last entry in each array is -1, therefore the last field is assumed to be of variable width.</span></span> <span data-ttu-id="86754-110">Dizideki son girişin 0'a eşit veya daha az olduğunda gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="86754-110">This occurs when the last entry in the array is less than or equal to 0.</span></span>  
+2.  <span data-ttu-id="caa64-108">Beklenen biçim ve bir hata bildirildiğinde kullanılan biçimini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="caa64-108">Define the expected format and the format used when an error is reported.</span></span> <span data-ttu-id="caa64-109">Her dizi son girişi -1, bu nedenle son alan değişken genişliği olarak kabul edilir.</span><span class="sxs-lookup"><span data-stu-id="caa64-109">The last entry in each array is -1, therefore the last field is assumed to be of variable width.</span></span> <span data-ttu-id="caa64-110">Dizideki son girişin 0'a eşit veya daha az olduğunda gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="caa64-110">This occurs when the last entry in the array is less than or equal to 0.</span></span>  
   
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
   
-3.  <span data-ttu-id="86754-111">Yeni bir <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> genişlik ve biçimini tanımlayan nesne.</span><span class="sxs-lookup"><span data-stu-id="86754-111">Create a new <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object, defining the width and format.</span></span>  
+3.  <span data-ttu-id="caa64-111">Yeni bir <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> genişlik ve biçimini tanımlayan nesne.</span><span class="sxs-lookup"><span data-stu-id="caa64-111">Create a new <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> object, defining the width and format.</span></span>  
   
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
   
-4.  <span data-ttu-id="86754-112">Satırları okuma önce biçimi için test etme, döngü.</span><span class="sxs-lookup"><span data-stu-id="86754-112">Loop through the rows, testing for format before reading.</span></span>  
+4.  <span data-ttu-id="caa64-112">Satırları okuma önce biçimi için test etme, döngü.</span><span class="sxs-lookup"><span data-stu-id="caa64-112">Loop through the rows, testing for format before reading.</span></span>  
   
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
   
-5.  <span data-ttu-id="86754-113">Konsola yazma hatası.</span><span class="sxs-lookup"><span data-stu-id="86754-113">Write errors to the console.</span></span>  
+5.  <span data-ttu-id="caa64-113">Konsola yazma hatası.</span><span class="sxs-lookup"><span data-stu-id="caa64-113">Write errors to the console.</span></span>  
   
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
   
-## <a name="example"></a><span data-ttu-id="86754-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="86754-114">Example</span></span>  
- <span data-ttu-id="86754-115">Dosyadan okur tam bir örnek aşağıdadır `testfile.txt`.</span><span class="sxs-lookup"><span data-stu-id="86754-115">Following is the complete example that reads from the file `testfile.txt`.</span></span>  
+## <a name="example"></a><span data-ttu-id="caa64-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="caa64-114">Example</span></span>  
+ <span data-ttu-id="caa64-115">Dosyadan okur tam bir örnek aşağıdadır `testfile.txt`.</span><span class="sxs-lookup"><span data-stu-id="caa64-115">Following is the complete example that reads from the file `testfile.txt`.</span></span>  
   
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="86754-116">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="86754-116">Robust Programming</span></span>  
- <span data-ttu-id="86754-117">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="86754-117">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="caa64-116">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="caa64-116">Robust Programming</span></span>  
+ <span data-ttu-id="caa64-117">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="caa64-117">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="86754-118">Belirtilen biçimi kullanarak bir satır ayrıştırılamıyor (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span><span class="sxs-lookup"><span data-stu-id="86754-118">A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span></span> <span data-ttu-id="86754-119">Özel durum iletisi satırı belirtir. özel durum neden, while <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> özelliği satırda bulunan metin atanır.</span><span class="sxs-lookup"><span data-stu-id="86754-119">The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.</span></span>  
+-   <span data-ttu-id="caa64-118">Belirtilen biçimi kullanarak bir satır ayrıştırılamıyor (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span><span class="sxs-lookup"><span data-stu-id="caa64-118">A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span></span> <span data-ttu-id="caa64-119">Özel durum iletisi satırı belirtir. özel durum neden, while <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> özelliği satırda bulunan metin atanır.</span><span class="sxs-lookup"><span data-stu-id="caa64-119">The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.</span></span>  
   
--   <span data-ttu-id="86754-120">Belirtilen dosya yok (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="86754-120">The specified file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
+-   <span data-ttu-id="caa64-120">Belirtilen dosya yok (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="caa64-120">The specified file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
   
--   <span data-ttu-id="86754-121">Bir kısmi güven durum kullanıcının dosyaya erişmek için yeterli izinleri yok.</span><span class="sxs-lookup"><span data-stu-id="86754-121">A partial-trust situation in which the user does not have sufficient permissions to access the file.</span></span> <span data-ttu-id="86754-122">(<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="86754-122">(<xref:System.Security.SecurityException>).</span></span>  
+-   <span data-ttu-id="caa64-121">Bir kısmi güven durum kullanıcının dosyaya erişmek için yeterli izinleri yok.</span><span class="sxs-lookup"><span data-stu-id="caa64-121">A partial-trust situation in which the user does not have sufficient permissions to access the file.</span></span> <span data-ttu-id="caa64-122">(<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="caa64-122">(<xref:System.Security.SecurityException>).</span></span>  
   
--   <span data-ttu-id="86754-123">Yol çok uzun (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="86754-123">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>  
+-   <span data-ttu-id="caa64-123">Yol çok uzun (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="caa64-123">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   <span data-ttu-id="86754-124">Kullanıcının dosyaya erişmek için yeterli izinlere sahip değil (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="86754-124">The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).</span></span>  
+-   <span data-ttu-id="caa64-124">Kullanıcının dosyaya erişmek için yeterli izinlere sahip değil (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="caa64-124">The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86754-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="86754-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="caa64-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="caa64-125">See also</span></span>
+
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>
 - <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [<span data-ttu-id="86754-126">Nasıl yapılır: Virgülle ayrılmış metin dosyalarından okuma</span><span class="sxs-lookup"><span data-stu-id="86754-126">How to: Read From Comma-Delimited Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [<span data-ttu-id="86754-127">Nasıl yapılır: Sabit genişlikli metin dosyalarından okuma</span><span class="sxs-lookup"><span data-stu-id="86754-127">How to: Read From Fixed-width Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [<span data-ttu-id="86754-128">TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma</span><span class="sxs-lookup"><span data-stu-id="86754-128">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+- [<span data-ttu-id="caa64-126">Nasıl yapılır: Virgülle ayrılmış metin dosyalarından okuma</span><span class="sxs-lookup"><span data-stu-id="caa64-126">How to: Read From Comma-Delimited Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [<span data-ttu-id="caa64-127">Nasıl yapılır: Sabit genişlikli metin dosyalarından okuma</span><span class="sxs-lookup"><span data-stu-id="caa64-127">How to: Read From Fixed-width Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [<span data-ttu-id="caa64-128">TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma</span><span class="sxs-lookup"><span data-stu-id="caa64-128">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

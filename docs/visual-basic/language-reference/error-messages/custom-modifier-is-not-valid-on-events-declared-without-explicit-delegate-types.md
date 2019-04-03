@@ -7,40 +7,41 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: c50cee530cab0d5d164d930678651f302ddc7f09
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0fc645671eb899faff0dbb5c6d745ba23faf4557
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980769"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827230"
 ---
-# <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a><span data-ttu-id="0df1b-102">'Custom' değiştiricisi açık temsilci türleri olmadan bildirilen olaylarda geçerli değil</span><span class="sxs-lookup"><span data-stu-id="0df1b-102">'Custom' modifier is not valid on events declared without explicit delegate types</span></span>
-<span data-ttu-id="0df1b-103">Bir özel dışı olay aksine bir `Custom Event` bildirimi gerektirir bir `As` olayı için temsilci türünü açıkça belirten bir olay adından yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="0df1b-103">Unlike a non-custom event, a `Custom Event` declaration requires an `As` clause following the event name that explicitly specifies the delegate type for the event.</span></span>  
+# <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a><span data-ttu-id="19284-102">'Custom' değiştiricisi açık temsilci türleri olmadan bildirilen olaylarda geçerli değil</span><span class="sxs-lookup"><span data-stu-id="19284-102">'Custom' modifier is not valid on events declared without explicit delegate types</span></span>
+<span data-ttu-id="19284-103">Bir özel dışı olay aksine bir `Custom Event` bildirimi gerektirir bir `As` olayı için temsilci türünü açıkça belirten bir olay adından yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="19284-103">Unlike a non-custom event, a `Custom Event` declaration requires an `As` clause following the event name that explicitly specifies the delegate type for the event.</span></span>  
   
- <span data-ttu-id="0df1b-104">Özel olmayan olaylar olabilir ile tanımlanmış bir `As` yan tümcesi ve açık bir temsilci türü veya bir parametre listesinde hemen aşağıdaki olay adı.</span><span class="sxs-lookup"><span data-stu-id="0df1b-104">Non-custom events can be defined either with an `As` clause and an explicit delegate type, or with a parameter list immediately following the event name.</span></span>  
+ <span data-ttu-id="19284-104">Özel olmayan olaylar olabilir ile tanımlanmış bir `As` yan tümcesi ve açık bir temsilci türü veya bir parametre listesinde hemen aşağıdaki olay adı.</span><span class="sxs-lookup"><span data-stu-id="19284-104">Non-custom events can be defined either with an `As` clause and an explicit delegate type, or with a parameter list immediately following the event name.</span></span>  
   
- <span data-ttu-id="0df1b-105">**Hata Kimliği:** BC31122</span><span class="sxs-lookup"><span data-stu-id="0df1b-105">**Error ID:** BC31122</span></span>  
+ <span data-ttu-id="19284-105">**Hata Kimliği:** BC31122</span><span class="sxs-lookup"><span data-stu-id="19284-105">**Error ID:** BC31122</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="0df1b-106">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="0df1b-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="19284-106">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="19284-106">To correct this error</span></span>  
   
-1.  <span data-ttu-id="0df1b-107">Özel olay olarak aynı parametre listesiyle bir temsilci tanımlar.</span><span class="sxs-lookup"><span data-stu-id="0df1b-107">Define a delegate with the same parameter list as the custom event.</span></span>  
+1.  <span data-ttu-id="19284-107">Özel olay olarak aynı parametre listesiyle bir temsilci tanımlar.</span><span class="sxs-lookup"><span data-stu-id="19284-107">Define a delegate with the same parameter list as the custom event.</span></span>  
   
-     <span data-ttu-id="0df1b-108">Örneğin, varsa `Custom Event` tarafından tanımlanan `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, karşılık gelen temsilci şu şekilde olacaktır.</span><span class="sxs-lookup"><span data-stu-id="0df1b-108">For example, if the `Custom Event` was defined by `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, then the corresponding delegate would be the following.</span></span>  
+     <span data-ttu-id="19284-108">Örneğin, varsa `Custom Event` tarafından tanımlanan `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, karşılık gelen temsilci şu şekilde olacaktır.</span><span class="sxs-lookup"><span data-stu-id="19284-108">For example, if the `Custom Event` was defined by `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, then the corresponding delegate would be the following.</span></span>  
   
      [!code-vb[VbVbalrEventError#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#18)]  
   
-2.  <span data-ttu-id="0df1b-109">Özel olay ile parametre listesini değiştirin bir `As` temsilci türünü belirleme yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="0df1b-109">Replace the parameter list of the custom event with an `As` clause specifying the delegate type.</span></span>  
+2.  <span data-ttu-id="19284-109">Özel olay ile parametre listesini değiştirin bir `As` temsilci türünü belirleme yan tümcesi.</span><span class="sxs-lookup"><span data-stu-id="19284-109">Replace the parameter list of the custom event with an `As` clause specifying the delegate type.</span></span>  
   
-     <span data-ttu-id="0df1b-110">Örneğiyle devam etmesini `Custom Event` bildirimi yazılan gibi.</span><span class="sxs-lookup"><span data-stu-id="0df1b-110">Continuing with the example, `Custom Event` declaration would be rewritten as follows.</span></span>  
+     <span data-ttu-id="19284-110">Örneğiyle devam etmesini `Custom Event` bildirimi yazılan gibi.</span><span class="sxs-lookup"><span data-stu-id="19284-110">Continuing with the example, `Custom Event` declaration would be rewritten as follows.</span></span>  
   
      [!code-vb[VbVbalrEventError#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#19)]  
   
-## <a name="example"></a><span data-ttu-id="0df1b-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="0df1b-111">Example</span></span>  
- <span data-ttu-id="0df1b-112">Bu örnek bildirir bir `Custom Event` ve gerekli belirtir `As` yan tümcesi bir temsilci türüne sahip.</span><span class="sxs-lookup"><span data-stu-id="0df1b-112">This example declares a `Custom Event` and specifies the required `As` clause with a delegate type.</span></span>  
+## <a name="example"></a><span data-ttu-id="19284-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="19284-111">Example</span></span>  
+ <span data-ttu-id="19284-112">Bu örnek bildirir bir `Custom Event` ve gerekli belirtir `As` yan tümcesi bir temsilci türüne sahip.</span><span class="sxs-lookup"><span data-stu-id="19284-112">This example declares a `Custom Event` and specifies the required `As` clause with a delegate type.</span></span>  
   
  [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="0df1b-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0df1b-113">See also</span></span>
-- [<span data-ttu-id="0df1b-114">Event Deyimi</span><span class="sxs-lookup"><span data-stu-id="0df1b-114">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
-- [<span data-ttu-id="0df1b-115">Delegate Deyimi</span><span class="sxs-lookup"><span data-stu-id="0df1b-115">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="0df1b-116">Olaylar</span><span class="sxs-lookup"><span data-stu-id="0df1b-116">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="19284-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="19284-113">See also</span></span>
+
+- [<span data-ttu-id="19284-114">Event Deyimi</span><span class="sxs-lookup"><span data-stu-id="19284-114">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="19284-115">Delegate Deyimi</span><span class="sxs-lookup"><span data-stu-id="19284-115">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="19284-116">Olaylar</span><span class="sxs-lookup"><span data-stu-id="19284-116">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

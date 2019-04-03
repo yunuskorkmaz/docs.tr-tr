@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: Gruplar (LINQ) (Visual Basic) kullanarak bir dosyayı birden çok dosyaya bölme'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 806a1f6c5674e670402d3d612f169582df5e0155
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa96fb4042d9469fb6ffc5b0dc14a01e492f39a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616985"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828556"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="053ac-102">Nasıl yapılır: Gruplar (LINQ) (Visual Basic) kullanarak bir dosyayı birden çok dosyaya bölme</span><span class="sxs-lookup"><span data-stu-id="053ac-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="053ac-103">Bu örnekte, iki dosya içeriklerini birleştirme ve ardından yeni bir şekilde verileri düzenleme yeni dosyaları bir dizi oluşturmak için yollarından biri gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="053ac-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="769fd-102">Nasıl yapılır: Gruplar (LINQ) (Visual Basic) kullanarak bir dosyayı birden çok dosyaya bölme</span><span class="sxs-lookup"><span data-stu-id="769fd-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="769fd-103">Bu örnekte, iki dosya içeriklerini birleştirme ve ardından yeni bir şekilde verileri düzenleme yeni dosyaları bir dizi oluşturmak için yollarından biri gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="769fd-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="053ac-104">Veri dosyaları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="053ac-104">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="769fd-104">Veri dosyaları oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="769fd-104">To create the data files</span></span>  
   
-1.  <span data-ttu-id="053ac-105">Bu adlar names1.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin:</span><span class="sxs-lookup"><span data-stu-id="053ac-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1.  <span data-ttu-id="769fd-105">Bu adlar names1.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin:</span><span class="sxs-lookup"><span data-stu-id="769fd-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "54616985"
     Garcia, Debra  
     ```  
   
-2.  <span data-ttu-id="053ac-106">Bu adlar names2.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin: İki dosyayı bazı adları ortak gerektiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="053ac-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2.  <span data-ttu-id="769fd-106">Bu adlar names2.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin: İki dosyayı bazı adları ortak gerektiğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="769fd-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -44,7 +44,7 @@ ms.locfileid: "54616985"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="053ac-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="053ac-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="769fd-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="769fd-107">Example</span></span>  
   
 ```vb  
 Class SplitWithGroups  
@@ -113,11 +113,12 @@ End Class
 '    Toyoshima, Tim  
 ```  
   
- <span data-ttu-id="053ac-108">Program, veri dosyaları aynı klasörde her grup için ayrı bir dosyaya yazar.</span><span class="sxs-lookup"><span data-stu-id="053ac-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="769fd-108">Program, veri dosyaları aynı klasörde her grup için ayrı bir dosyaya yazar.</span><span class="sxs-lookup"><span data-stu-id="769fd-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="053ac-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="053ac-109">Compiling the Code</span></span>  
- <span data-ttu-id="053ac-110">.NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.</span><span class="sxs-lookup"><span data-stu-id="053ac-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="769fd-109">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="769fd-109">Compiling the Code</span></span>  
+ <span data-ttu-id="769fd-110">.NET Framework sürüm 3.5 veya daha yüksek bir System.Core.dll başvurusu ile hedefleyen bir proje oluşturun ve bir `Imports` System.Linq ad alanı bildirimi.</span><span class="sxs-lookup"><span data-stu-id="769fd-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="053ac-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="053ac-111">See also</span></span>
-- [<span data-ttu-id="053ac-112">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="053ac-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="053ac-113">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="053ac-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="769fd-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="769fd-111">See also</span></span>
+
+- [<span data-ttu-id="769fd-112">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="769fd-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="769fd-113">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="769fd-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

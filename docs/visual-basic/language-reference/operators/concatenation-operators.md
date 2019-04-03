@@ -5,22 +5,23 @@ helpviewer_keywords:
 - operators [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: d787368b-3713-47ff-bce8-f112720a673a
-ms.openlocfilehash: 6d3f16cd61ed4ad7452d74e46ba7a7aa3a4e20bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22a50fc26108d879d1dcdcce02078b5c41aad4f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709786"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819555"
 ---
-# <a name="concatenation-operators-visual-basic"></a><span data-ttu-id="2de0d-102">Birleştirme İşleçleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2de0d-102">Concatenation Operators (Visual Basic)</span></span>
-<span data-ttu-id="2de0d-103">Visual Basic içinde tanımlanan birleştirme işleçleri şunlardır:</span><span class="sxs-lookup"><span data-stu-id="2de0d-103">The following are the concatenation operators defined in Visual Basic.</span></span>  
+# <a name="concatenation-operators-visual-basic"></a><span data-ttu-id="b5bf1-102">Birleştirme İşleçleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b5bf1-102">Concatenation Operators (Visual Basic)</span></span>
+<span data-ttu-id="b5bf1-103">Visual Basic içinde tanımlanan birleştirme işleçleri şunlardır:</span><span class="sxs-lookup"><span data-stu-id="b5bf1-103">The following are the concatenation operators defined in Visual Basic.</span></span>  
   
- [<span data-ttu-id="2de0d-104">& İşleci</span><span class="sxs-lookup"><span data-stu-id="2de0d-104">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [<span data-ttu-id="b5bf1-104">& İşleci</span><span class="sxs-lookup"><span data-stu-id="b5bf1-104">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
   
- [<span data-ttu-id="2de0d-105">+ İşleci</span><span class="sxs-lookup"><span data-stu-id="2de0d-105">+ Operator</span></span>](../../../visual-basic/language-reference/operators/addition-operator.md)  
+ [<span data-ttu-id="b5bf1-105">+ İşleci</span><span class="sxs-lookup"><span data-stu-id="b5bf1-105">+ Operator</span></span>](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
-## <a name="see-also"></a><span data-ttu-id="2de0d-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2de0d-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5bf1-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b5bf1-106">See also</span></span>
+
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
-- [<span data-ttu-id="2de0d-107">Visual Basic'de İşleç önceliği</span><span class="sxs-lookup"><span data-stu-id="2de0d-107">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="2de0d-108">Visual Basic'de birleştirme işleçleri</span><span class="sxs-lookup"><span data-stu-id="2de0d-108">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [<span data-ttu-id="b5bf1-107">Visual Basic'de İşleç önceliği</span><span class="sxs-lookup"><span data-stu-id="b5bf1-107">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="b5bf1-108">Visual Basic'de birleştirme işleçleri</span><span class="sxs-lookup"><span data-stu-id="b5bf1-108">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

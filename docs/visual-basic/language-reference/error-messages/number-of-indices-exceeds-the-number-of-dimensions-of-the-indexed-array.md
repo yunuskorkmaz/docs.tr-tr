@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: b113860366ccbe47fed8ef13abb90a540dc88b33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01659205f271b089fe4e8aa87cf7a8c44e7a4000
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710657"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838000"
 ---
-# <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a><span data-ttu-id="6a51f-102">Dizin sayısı, sıralı dizinin boyut sayısını aşıyor</span><span class="sxs-lookup"><span data-stu-id="6a51f-102">Number of indices exceeds the number of dimensions of the indexed array</span></span>
-<span data-ttu-id="6a51f-103">Bir dizi öğesine erişmek için kullanılan dizinlerin sayısı tam olarak diğer bir deyişle, boyut için bildirilen sayısını dizinin boyut ile aynı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="6a51f-103">The number of indices used to access an array element must be exactly the same as the rank of the array, that is, the number of dimensions declared for it.</span></span>  
+# <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a><span data-ttu-id="51bb1-102">Dizin sayısı, sıralı dizinin boyut sayısını aşıyor</span><span class="sxs-lookup"><span data-stu-id="51bb1-102">Number of indices exceeds the number of dimensions of the indexed array</span></span>
+<span data-ttu-id="51bb1-103">Bir dizi öğesine erişmek için kullanılan dizinlerin sayısı tam olarak diğer bir deyişle, boyut için bildirilen sayısını dizinin boyut ile aynı olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="51bb1-103">The number of indices used to access an array element must be exactly the same as the rank of the array, that is, the number of dimensions declared for it.</span></span>  
   
- <span data-ttu-id="6a51f-104">**Hata Kimliği:** BC30106</span><span class="sxs-lookup"><span data-stu-id="6a51f-104">**Error ID:** BC30106</span></span>  
+ <span data-ttu-id="51bb1-104">**Hata Kimliği:** BC30106</span><span class="sxs-lookup"><span data-stu-id="51bb1-104">**Error ID:** BC30106</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="6a51f-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="6a51f-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="51bb1-105">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="51bb1-105">To correct this error</span></span>  
   
--   <span data-ttu-id="6a51f-106">Dizi boyut sayısını toplam alt simgeler eşittir kadar alt simgeler dizi başvuruyu kaldırın.</span><span class="sxs-lookup"><span data-stu-id="6a51f-106">Remove subscripts from the array reference until the total number of subscripts equals the rank of the array.</span></span> <span data-ttu-id="6a51f-107">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="6a51f-107">For example:</span></span>  
+-   <span data-ttu-id="51bb1-106">Dizi boyut sayısını toplam alt simgeler eşittir kadar alt simgeler dizi başvuruyu kaldırın.</span><span class="sxs-lookup"><span data-stu-id="51bb1-106">Remove subscripts from the array reference until the total number of subscripts equals the rank of the array.</span></span> <span data-ttu-id="51bb1-107">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="51bb1-107">For example:</span></span>  
   
     ```vb  
     Dim gameBoard(3, 3) As String  
@@ -35,5 +35,6 @@ ms.locfileid: "54710657"
     gameBoard(1, 0) = "O"  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="6a51f-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6a51f-108">See also</span></span>
-- [<span data-ttu-id="6a51f-109">Diziler</span><span class="sxs-lookup"><span data-stu-id="6a51f-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a><span data-ttu-id="51bb1-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="51bb1-108">See also</span></span>
+
+- [<span data-ttu-id="51bb1-109">Diziler</span><span class="sxs-lookup"><span data-stu-id="51bb1-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

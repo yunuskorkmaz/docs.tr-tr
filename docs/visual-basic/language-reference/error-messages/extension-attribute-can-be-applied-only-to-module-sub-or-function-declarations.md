@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: e2e2c41d713b0b04b8bc7208a83d059f0d16bf06
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a4561359e4d7cb0f6ebe44a5deb09b3374556ed8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278726"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826190"
 ---
-# <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a><span data-ttu-id="1cd8f-102">'Extension' özniteliği yalnızca 'Module', 'Sub' veya 'Function' bildirimlerine uygulanabilir</span><span class="sxs-lookup"><span data-stu-id="1cd8f-102">'Extension' attribute can be applied only to 'Module', 'Sub', or 'Function' declarations</span></span>
-<span data-ttu-id="1cd8f-103">Visual Basic'te bir veri türü genişletmek için tek bir standart modül içinde bir genişletme yöntemi tanımlamak için yoludur.</span><span class="sxs-lookup"><span data-stu-id="1cd8f-103">The only way to extend a data type in Visual Basic is to define an extension method inside a standard module.</span></span> <span data-ttu-id="1cd8f-104">Genişletme yöntemi olabilir bir `Sub` yordamı veya `Function` yordamı.</span><span class="sxs-lookup"><span data-stu-id="1cd8f-104">The extension method can be a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="1cd8f-105">Tüm uzantı yöntemleri uzantı özniteliğiyle işaretlenmelidir `<Extension()>`, gelen <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="1cd8f-105">All extension methods must be marked with the extension attribute, `<Extension()>`, from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="1cd8f-106">İsteğe bağlı olarak, bir uzantı yöntemini içeren modül aynı şekilde işaretlenmiş olabilir.</span><span class="sxs-lookup"><span data-stu-id="1cd8f-106">Optionally, a module that contains an extension method may be marked in the same way.</span></span> <span data-ttu-id="1cd8f-107">Herhangi bir kullanıma uzantısı özniteliği geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="1cd8f-107">No other use of the extension attribute is valid.</span></span>  
+# <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a><span data-ttu-id="ebeb2-102">'Extension' özniteliği yalnızca 'Module', 'Sub' veya 'Function' bildirimlerine uygulanabilir</span><span class="sxs-lookup"><span data-stu-id="ebeb2-102">'Extension' attribute can be applied only to 'Module', 'Sub', or 'Function' declarations</span></span>
+<span data-ttu-id="ebeb2-103">Visual Basic'te bir veri türü genişletmek için tek bir standart modül içinde bir genişletme yöntemi tanımlamak için yoludur.</span><span class="sxs-lookup"><span data-stu-id="ebeb2-103">The only way to extend a data type in Visual Basic is to define an extension method inside a standard module.</span></span> <span data-ttu-id="ebeb2-104">Genişletme yöntemi olabilir bir `Sub` yordamı veya `Function` yordamı.</span><span class="sxs-lookup"><span data-stu-id="ebeb2-104">The extension method can be a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="ebeb2-105">Tüm uzantı yöntemleri uzantı özniteliğiyle işaretlenmelidir `<Extension()>`, gelen <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="ebeb2-105">All extension methods must be marked with the extension attribute, `<Extension()>`, from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="ebeb2-106">İsteğe bağlı olarak, bir uzantı yöntemini içeren modül aynı şekilde işaretlenmiş olabilir.</span><span class="sxs-lookup"><span data-stu-id="ebeb2-106">Optionally, a module that contains an extension method may be marked in the same way.</span></span> <span data-ttu-id="ebeb2-107">Herhangi bir kullanıma uzantısı özniteliği geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="ebeb2-107">No other use of the extension attribute is valid.</span></span>  
   
- <span data-ttu-id="1cd8f-108">**Hata Kimliği:** BC36550</span><span class="sxs-lookup"><span data-stu-id="1cd8f-108">**Error ID:** BC36550</span></span>  
+ <span data-ttu-id="ebeb2-108">**Hata Kimliği:** BC36550</span><span class="sxs-lookup"><span data-stu-id="ebeb2-108">**Error ID:** BC36550</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1cd8f-109">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="1cd8f-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ebeb2-109">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="ebeb2-109">To correct this error</span></span>  
   
--   <span data-ttu-id="1cd8f-110">Uzantı özniteliğine kaldırın.</span><span class="sxs-lookup"><span data-stu-id="1cd8f-110">Remove the extension attribute.</span></span>  
+-   <span data-ttu-id="ebeb2-110">Uzantı özniteliğine kaldırın.</span><span class="sxs-lookup"><span data-stu-id="ebeb2-110">Remove the extension attribute.</span></span>  
   
--   <span data-ttu-id="1cd8f-111">Uzantınızı kapsayan bir modülde tanımlanmış bir yöntem olarak yeniden tasarlayın.</span><span class="sxs-lookup"><span data-stu-id="1cd8f-111">Redesign your extension as a method, defined in an enclosing module.</span></span>  
+-   <span data-ttu-id="ebeb2-111">Uzantınızı kapsayan bir modülde tanımlanmış bir yöntem olarak yeniden tasarlayın.</span><span class="sxs-lookup"><span data-stu-id="ebeb2-111">Redesign your extension as a method, defined in an enclosing module.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1cd8f-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="1cd8f-112">Example</span></span>  
- <span data-ttu-id="1cd8f-113">Aşağıdaki örnekte tanımlayan bir `Print` yöntemi `String` veri türü.</span><span class="sxs-lookup"><span data-stu-id="1cd8f-113">The following example defines a `Print` method for the `String` data type.</span></span>  
+## <a name="example"></a><span data-ttu-id="ebeb2-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="ebeb2-112">Example</span></span>  
+ <span data-ttu-id="ebeb2-113">Aşağıdaki örnekte tanımlayan bir `Print` yöntemi `String` veri türü.</span><span class="sxs-lookup"><span data-stu-id="ebeb2-113">The following example defines a `Print` method for the `String` data type.</span></span>  
   
 ```  
 Imports StringUtility  
@@ -42,7 +42,8 @@ Namespace StringUtility
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1cd8f-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1cd8f-114">See also</span></span>
-- [<span data-ttu-id="1cd8f-115">Öznitelikler genel bakış</span><span class="sxs-lookup"><span data-stu-id="1cd8f-115">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [<span data-ttu-id="1cd8f-116">Genişletme Yöntemleri</span><span class="sxs-lookup"><span data-stu-id="1cd8f-116">Extension Methods</span></span>](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
-- [<span data-ttu-id="1cd8f-117">Module Deyimi</span><span class="sxs-lookup"><span data-stu-id="1cd8f-117">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)
+## <a name="see-also"></a><span data-ttu-id="ebeb2-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ebeb2-114">See also</span></span>
+
+- [<span data-ttu-id="ebeb2-115">Öznitelikler genel bakış</span><span class="sxs-lookup"><span data-stu-id="ebeb2-115">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [<span data-ttu-id="ebeb2-116">Genişletme Yöntemleri</span><span class="sxs-lookup"><span data-stu-id="ebeb2-116">Extension Methods</span></span>](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [<span data-ttu-id="ebeb2-117">Module Deyimi</span><span class="sxs-lookup"><span data-stu-id="ebeb2-117">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)

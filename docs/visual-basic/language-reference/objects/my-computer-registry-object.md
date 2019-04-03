@@ -5,30 +5,31 @@ helpviewer_keywords:
 - DeleteSetting function [Visual Basic], increasing performance
 - My.Computer.Registry object
 ms.assetid: afd9edf9-ef9b-438b-a390-d71a02dc8203
-ms.openlocfilehash: d3a736cb4ff274382a4ce881928e284a8e632e02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d388d349755e0847b9b1374c043c3de45e0de800
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656056"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840880"
 ---
-# <a name="mycomputerregistry-object"></a><span data-ttu-id="a87af-102">My.Computer.Registry Nesnesi</span><span class="sxs-lookup"><span data-stu-id="a87af-102">My.Computer.Registry Object</span></span>
-<span data-ttu-id="a87af-103">Özellikler ve kayıt defterini düzenlemek için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="a87af-103">Provides properties and methods for manipulating the registry.</span></span>  
+# <a name="mycomputerregistry-object"></a><span data-ttu-id="4f778-102">My.Computer.Registry Nesnesi</span><span class="sxs-lookup"><span data-stu-id="4f778-102">My.Computer.Registry Object</span></span>
+<span data-ttu-id="4f778-103">Özellikler ve kayıt defterini düzenlemek için yöntemler sağlar.</span><span class="sxs-lookup"><span data-stu-id="4f778-103">Provides properties and methods for manipulating the registry.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a87af-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a87af-104">Remarks</span></span>  
- <span data-ttu-id="a87af-105">Yöntemleri ve özellikleri hakkında bilgi için `My.Computer.Registry` nesne, bkz: <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</span><span class="sxs-lookup"><span data-stu-id="a87af-105">For information about the methods and properties of the `My.Computer.Registry` object, see <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4f778-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4f778-104">Remarks</span></span>  
+ <span data-ttu-id="4f778-105">Yöntemleri ve özellikleri hakkında bilgi için `My.Computer.Registry` nesne, bkz: <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</span><span class="sxs-lookup"><span data-stu-id="4f778-105">For information about the methods and properties of the `My.Computer.Registry` object, see <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</span></span>  
   
- <span data-ttu-id="a87af-106">Daha fazla bilgi için [okuma ve kayıt defterine yazma](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).</span><span class="sxs-lookup"><span data-stu-id="a87af-106">For more information, see [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).</span></span>  
+ <span data-ttu-id="4f778-106">Daha fazla bilgi için [okuma ve kayıt defterine yazma](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).</span><span class="sxs-lookup"><span data-stu-id="4f778-106">For more information, see [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a87af-107">Yöntemlerinden birini kullanarak kayıt defterini işleyebileceğiniz <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="a87af-107">You can also manipulate the registry by using methods of the <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> class.</span></span>  
+>  <span data-ttu-id="4f778-107">Yöntemlerinden birini kullanarak kayıt defterini işleyebileceğiniz <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="4f778-107">You can also manipulate the registry by using methods of the <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> class.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a87af-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a87af-108">Requirements</span></span>  
- <span data-ttu-id="a87af-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="a87af-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="4f778-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4f778-108">Requirements</span></span>  
+ <span data-ttu-id="4f778-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="4f778-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- <span data-ttu-id="a87af-110">**Sınıf:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (erişim sağlayan <xref:Microsoft.Win32.Registry>)</span><span class="sxs-lookup"><span data-stu-id="a87af-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)</span></span>  
+ <span data-ttu-id="4f778-110">**Sınıf:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (erişim sağlayan <xref:Microsoft.Win32.Registry>)</span><span class="sxs-lookup"><span data-stu-id="4f778-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)</span></span>  
   
- <span data-ttu-id="a87af-111">**Derleme:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a87af-111">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
+ <span data-ttu-id="4f778-111">**Derleme:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f778-111">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a87af-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a87af-112">See also</span></span>
-- [<span data-ttu-id="a87af-113">My.Computer Nesnesi</span><span class="sxs-lookup"><span data-stu-id="a87af-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="4f778-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4f778-112">See also</span></span>
+
+- [<span data-ttu-id="4f778-113">My.Computer Nesnesi</span><span class="sxs-lookup"><span data-stu-id="4f778-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

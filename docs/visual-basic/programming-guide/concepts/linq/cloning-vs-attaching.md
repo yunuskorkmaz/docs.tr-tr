@@ -2,18 +2,18 @@
 title: Kopyalama ve Düğmelere (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-ms.openlocfilehash: 063af1561be1f4584814339600be621a91c14486
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59ffedfdbb2820683f1e6cc232154688f5c29fc8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653846"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832300"
 ---
-# <a name="cloning-vs-attaching-visual-basic"></a><span data-ttu-id="bd44e-102">Kopyalama ve Düğmelere (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bd44e-102">Cloning vs. Attaching (Visual Basic)</span></span>
-<span data-ttu-id="bd44e-103">Eklerken <xref:System.Xml.Linq.XNode> (dahil olmak üzere <xref:System.Xml.Linq.XElement>) veya <xref:System.Xml.Linq.XAttribute> yeni içerik üstü yoksa, nesneleri yalnızca bağlı XML ağacına yeni bir ağaç nesneleri.</span><span class="sxs-lookup"><span data-stu-id="bd44e-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="bd44e-104">Yeni içerik zaten üst öğe ve başka bir XML ağacının bir parçası ise, yeni içerik kopyalanmış olan.</span><span class="sxs-lookup"><span data-stu-id="bd44e-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="bd44e-105">Yeni kopyalanan içeriği sonra XML ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="bd44e-105">The newly cloned content is then attached to the XML tree.</span></span>  
+# <a name="cloning-vs-attaching-visual-basic"></a><span data-ttu-id="358c7-102">Kopyalama ve Düğmelere (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="358c7-102">Cloning vs. Attaching (Visual Basic)</span></span>
+<span data-ttu-id="358c7-103">Eklerken <xref:System.Xml.Linq.XNode> (dahil olmak üzere <xref:System.Xml.Linq.XElement>) veya <xref:System.Xml.Linq.XAttribute> yeni içerik üstü yoksa, nesneleri yalnızca bağlı XML ağacına yeni bir ağaç nesneleri.</span><span class="sxs-lookup"><span data-stu-id="358c7-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="358c7-104">Yeni içerik zaten üst öğe ve başka bir XML ağacının bir parçası ise, yeni içerik kopyalanmış olan.</span><span class="sxs-lookup"><span data-stu-id="358c7-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="358c7-105">Yeni kopyalanan içeriği sonra XML ağacına eklenir.</span><span class="sxs-lookup"><span data-stu-id="358c7-105">The newly cloned content is then attached to the XML tree.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bd44e-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="bd44e-106">Example</span></span>  
- <span data-ttu-id="bd44e-107">Aşağıdaki kod, bir ağaca üst öğeye sahip bir öğe eklediğinizde ve bir ağaca hiçbir üst öğesi ile bir öğe eklediğinizde davranış gösterir.</span><span class="sxs-lookup"><span data-stu-id="bd44e-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="358c7-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="358c7-106">Example</span></span>  
+ <span data-ttu-id="358c7-107">Aşağıdaki kod, bir ağaca üst öğeye sahip bir öğe eklediğinizde ve bir ağaca hiçbir üst öğesi ile bir öğe eklediğinizde davranış gösterir.</span><span class="sxs-lookup"><span data-stu-id="358c7-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -43,12 +43,13 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- <span data-ttu-id="bd44e-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="bd44e-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="358c7-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="358c7-108">This example produces the following output:</span></span>  
   
 ```  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bd44e-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bd44e-109">See also</span></span>
-- [<span data-ttu-id="bd44e-110">XML ağaçları (Visual Basic) oluşturma</span><span class="sxs-lookup"><span data-stu-id="bd44e-110">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="358c7-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="358c7-109">See also</span></span>
+
+- [<span data-ttu-id="358c7-110">XML ağaçları (Visual Basic) oluşturma</span><span class="sxs-lookup"><span data-stu-id="358c7-110">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
