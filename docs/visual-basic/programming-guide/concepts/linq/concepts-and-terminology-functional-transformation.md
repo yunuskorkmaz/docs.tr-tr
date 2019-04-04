@@ -2,12 +2,12 @@
 title: Kavramlar ve terimler (işlevsel dönüşüm) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: e98e24bb60dd2a5b6e84195120429fac0b8832e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651870"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820808"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Kavramlar ve terimler (işlevsel dönüşüm) (Visual Basic)
 Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri dönüştürme işlevsel dönüşüm yaklaşım genellikle programa daha ifadesel ve daha kolay hata ayıklaması ve bakımı daha geleneksel, zorunlu programlama daha hızlı kod üretir.  
@@ -51,7 +51,7 @@ Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri 
   
  Hakkında daha fazla bilgi için bkz: [Lambda ifadeleri](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- koleksiyon  
+  koleksiyonu  
  Veri, genellikle bir Tekdüzen türü yapılandırılmış bir dizi. LINQ ile uyumlu olacak şekilde bir koleksiyon uygulamalıdır <xref:System.Collections.IEnumerable> arabirimi veya <xref:System.Linq.IQueryable> arabirimi (veya genel karşılıkları <xref:System.Collections.Generic.IEnumerator%601> veya <xref:System.Linq.IQueryable%601>).  
   
  Tanımlama grubu (anonim türler)  
@@ -72,5 +72,6 @@ Bu konu, saf işlevsel dönüşümlere terimleri ve kavramları tanıtır. Veri 
  Kod örnekleri bu bölümü boyunca bu dil özellikleri kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Saf işlevsel dönüşümlere (Visual Basic) giriş](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [İşlevsel Programlama ve Kesin programlama karşılaştırması (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

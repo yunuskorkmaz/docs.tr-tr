@@ -42,7 +42,7 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
- **\<SectionName >** öğedir tarafından tanımlanan özel bir öğe bir  **\<bölüm >** içindeki  **\<configSections >** öğesi.
+ **\<SectionName>** öğedir tarafından tanımlanan özel bir öğe bir **\<bölüm>** içindeki **\<configSections>** öğesi.
 
 Aşağıdaki tabloda, her yapılandırma bölümü işleyicisi için ConfigurationSettings.GetConfig yöntemi nesnenin türü döndürür gösterilmektedir:
 
