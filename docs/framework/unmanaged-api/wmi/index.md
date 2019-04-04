@@ -4,8 +4,13 @@ description: .NET Framework özetler yönetilmeyen API için WMI ve performans s
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377462"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Yönetim Araçları (WMI) ve performans sayaçları (yönetilmeyen API Başvurusu)
 
 .NET Framework WMI ve performans sayaçları yönetilmeyen API çağrılar sarmalama işlevler kümesi oluşur [yerel Windows Yönetim Araçları'nı API](/windows/desktop/WmiSdk/com-api-for-wmi). Araçları ve kitaplıklarını yönetme ve izleme uzak bilgisayar sistemleri geliştirmenizi sağlar.

@@ -4,12 +4,12 @@ description: .NET core Windows, Linux ve Mac uygulamaları oluşturmak için .NE
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030288"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920629"
 ---
 # <a name="net-core-guide"></a>.NET Core Kılavuzu
 
@@ -21,7 +21,7 @@ Kullanıma [.NET Core öğreticilerini](tutorials/index.md) basit bir .NET Core 
 
 ## <a name="download-net-core-22"></a>.NET Core 2.2 indirin
 
-İndirme [.NET Core 2.2 SDK](https://www.microsoft.com/net/download) .NET Core Windows, macOS veya Linux makinenizde denemek için. Ziyaret [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) Docker kapsayıcılarını kullanmayı tercih ederseniz.
+İndirme [.NET Core 2.2 SDK](https://www.microsoft.com/net/download) .NET Core Windows, macOS veya Linux makinenizde denemek için. Ziyaret [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) Docker kapsayıcılarını kullanmayı tercih ederseniz.
 
 Tüm .NET Core sürümleri kullanılabilir [.NET Core indirir](https://www.microsoft.com/net/download/archives) için başka bir .NET Core sürümünün düşürmek istiyorsanız.
 

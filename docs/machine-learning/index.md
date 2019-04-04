@@ -3,12 +3,12 @@ title: ML.NET Content Guide
 description: Özel yapay ZEKA çözümleri oluşturmanıza ve bunları ML.NET kullanarak .NET uygulamalarınızla tümleştirin öğrenin.
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826290"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920772"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET Content Guide
 
@@ -27,25 +27,25 @@ Temel bilgileri anlamak için bkz: [ML.NET eğitim modeli için temel kavramlar]
 
 ## <a name="tutorials"></a>Öğreticiler
 
-[İkili sınıflandırma modelinde düşüncelerini çözümleme](tutorials/sentiment-analysis.md) yaklaşım pozitif veya negatif olup olmadığını belirleyen bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
+[İkili sınıflandırma modelinde düşüncelerini çözümleme](./tutorials/sentiment-analysis.md) yaklaşım pozitif veya negatif olup olmadığını belirleyen bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
 
-[Sınıflandırma bir çok sınıflı sınıflandırma modeli kullanarak GitHub sorunları](tutorials/github-issue-classification.md) bir GitHub sorunu alan etiketini belirleyen bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
+[Sınıflandırma bir çok sınıflı sınıflandırma modeli kullanarak GitHub sorunları](./tutorials/github-issue-classification.md) bir GitHub sorunu alan etiketini belirleyen bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
 
-[Bir regresyon modeli kullanarak fiyatları tahmin etmeye](tutorials/taxi-fare.md) faktörlerden geçmiş verilerden yanıt belirlemek için kullandığı Tahmine dayalı bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
+[Bir regresyon modeli kullanarak fiyatları tahmin etmeye](./tutorials/taxi-fare.md) faktörlerden geçmiş verilerden yanıt belirlemek için kullandığı Tahmine dayalı bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
 
-[Iris çiçek sınıflandırma özellikleri tarafından](tutorials/iris-clustering.md) kullanarak Iris veri kümesini analiz etmek için bir kümeleme modeli kullanmayı gösterir. 
+[Iris çiçek sınıflandırma özellikleri tarafından](./tutorials/iris-clustering.md) kullanarak Iris veri kümesini analiz etmek için bir kümeleme modeli kullanmayı gösterir. 
 
 ## <a name="how-to-guide"></a>Nasıl Kılavuzu
 
-[Infer.NET ve olasılığa dayalı programlama ile bir oyun eşleşme yukarı listesi uygulaması derleme](how-to-guides/matchup-app-infer-net.md) bir Xbox oyun göreceğiniz gibi bir eşleşme yukarı uygulaması basitleştirilmiş bir sürümünü oluşturma işlemi gösterilmektedir.
+[Infer.NET ve olasılığa dayalı programlama ile bir oyun eşleşme yukarı listesi uygulaması derleme](./how-to-guides/matchup-app-infer-net.md) bir Xbox oyun göreceğiniz gibi bir eşleşme yukarı uygulaması basitleştirilmiş bir sürümünü oluşturma işlemi gösterilmektedir.
 
 ## <a name="resources"></a>Kaynaklar
 
-[Machine learning sözlüğü](resources/glossary.md) önemli terimleri tanımlar.
+[Machine learning sözlüğü](./resources/glossary.md) önemli terimleri tanımlar.
 
-[Makine öğrenimi görevlerini](resources/tasks.md) sınıflandırma ve anomali algılama gibi görevleri açıklar. 
+[Makine öğrenimi görevlerini](./resources/tasks.md) sınıflandırma ve anomali algılama gibi görevleri açıklar. 
 
-[Veri Dönüşümleri](resources/transforms.md) ML.NET veri hazırlama özelliklerinde açıklar.
+[Veri Dönüşümleri](./resources/transforms.md) ML.NET veri hazırlama özelliklerinde açıklar.
 
 
 ## <a name="api-reference"></a>API başvurusu

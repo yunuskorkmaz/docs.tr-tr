@@ -2,11 +2,17 @@
 title: Arabirimler (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, interfaces'
-  - 'interfaces [Visual Basic], Visual Basic'
-  - interfaces
-  - 'interfaces [Visual Basic]'
+- Visual Basic code, interfaces
+- interfaces [Visual Basic], Visual Basic
+- interfaces
+- interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
+ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972396"
 ---
 # <a name="interfaces-visual-basic"></a>Arabirimler (Visual Basic)
 *Arabirimleri* özellikleri, yöntemleri ve sınıfları uygulayan olayları tanımlayın. Arabirim Özellikleri yakından ilgili özellikleri, yöntemleri ve olayları küçük gruplar olarak tanımlamanızı sağlar; Varolan kodu tehlikeye atmadan, arabirimler için geliştirilmiş uygulamalar geliştirebilirsiniz çünkü bu uyumluluk sorunları azaltır. Ek arabirimleri ve uygulamalar geliştirerek, herhangi bir zamanda yeni özellikler ekleyebilirsiniz.  

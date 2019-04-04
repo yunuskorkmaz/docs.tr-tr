@@ -1,9 +1,14 @@
 ---
-title: 'Nasıl yapılır makaleleri (C# Kılavuzu)'
-description: 'Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu'
+title: Nasıl yapılır makaleleri (C# Kılavuzu)
+description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202346"
 ---
-
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
 C# Kılavuzu bölümünü nasıl sık sorulan sorulara hızlı yanıtlar bulabilirsiniz. Bazı durumlarda, makaleler birden çok bölümlerinde listelenen. Birden çok arama yolunu bulmayı kolaylaştırmak istedik. 

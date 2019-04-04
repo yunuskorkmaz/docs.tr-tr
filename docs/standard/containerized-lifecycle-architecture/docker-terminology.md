@@ -4,12 +4,12 @@ description: Docker ile çalışırken, her gün kullanılan bazı temel termino
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 79b1c6e01c96a906925e5b81b8ea14f988becd7c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677194"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920655"
 ---
 # <a name="docker-terminology"></a>Docker terimleri
 
@@ -33,7 +33,7 @@ Bu bölümde, terimleri ve tanımları Docker derin almadan önce bilmeniz liste
 
 **Kayıt defteri**: Depolarına erişimi sağlayan bir hizmet. Varsayılan kayıt defteri en genel görüntülerde [Docker Hub](https://hub.docker.com/) (kuruluş olarak Docker tarafından sahip olunan). Bir kayıt defteri, genellikle birden çok takımı depolarından içerir. Şirketler genellikle oluşturmuş olduğunuz görüntülerini depolayıp yönetin için özel kayıt defterleri sahiptir. Azure Container Registry, başka bir örnektir.
 
-**Çok yay görüntü**: Çok mimari için uygun görüntü seçimi basitleştiren bir Docker çalıştığı, örneğin, bir Dockerfile temel görüntü istediğinde platforma göre özelliktir **`FROM microsoft/dotnet:2.1-sdk`** kayıt defterinden Aslında alır **`2.1-sdk-nanoserver-1709`**, **`2.1-sdk-nanoserver-1803`** veya **`2.1-sdk-alpine`**, Docker çalıştığı sürümü ve işletim sistemine bağlı olarak.
+**Çok yay görüntü**: Çok mimari için uygun görüntü seçimi basitleştiren bir Docker çalıştığı, örneğin, bir Dockerfile temel görüntü istediğinde platforma göre özelliktir **`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** kayıt defterinden Aslında alır **`2.1-nanoserver-1709`**, **`2.1-nanoserver-1803`**, **`2.1-nanoserver-1809`** veya **`2.1-stretch`**, işletim sistemi ve Docker'ın çalıştığı sürümüne bağlı olarak.
 
 **Docker Hub**: Görüntüleri karşıya yüklemek ve bunlarla çalışmak için ortak bir kayıt. Docker Hub, Docker görüntüsünü barındıran, genel veya özel kayıt defterleri, yapı tetikleyicilerini ve web kancaları ve GitHub ve Bitbucket ile tümleştirme sağlar.
 

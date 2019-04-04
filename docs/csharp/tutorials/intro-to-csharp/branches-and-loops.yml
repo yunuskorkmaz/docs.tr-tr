@@ -9,14 +9,14 @@ metadata:
   ms.date: 08/24/2018
   displayType: two-column
   interactive: csharp
-  nextTutorialHref: interpolated-strings.yml
-  nextTutorialTitle: C# dize ilişkilendirme
-  ms.openlocfilehash: bb539fe50ee6cc2d45a44e3742072059a990c2aa
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  nextTutorialHref: list-collection.yml
+  nextTutorialTitle: Liste koleksiyonu
+  ms.openlocfilehash: 49fec69db0d3ae08b4f4904838be8bd5a2df3b10
+  ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54030236"
+  ms.lasthandoff: 04/04/2019
+  ms.locfileid: "58921071"
 items:
 - durationInMinutes: 1
   content: >
@@ -217,4 +217,4 @@ items:
 
     > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: Tebrikler!
-  content: "\"Dallar ve döngüler\" Etkileşimli öğreticisini tamamladınız. Tıklayabilirsiniz **Ara değerli dizeler** etkileşimli bir sonraki öğreticiye başlatmak için aşağıdaki bağlantı ya da ziyaret edebilirsiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. \"Öğrenme tut\" adımı bu öğreticilere geri getirir.\n\nAşağıdaki konulardan Bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:\n\n- [Varsa ve else deyimi](../../language-reference/keywords/if-else.md)\n- [while deyimi](../../language-reference/keywords/while.md)\n- [do deyimi](../../language-reference/keywords/do.md)\n- [For deyimi](../../language-reference/keywords/for.md)"
+  content: "\"Dallar ve döngüler\" Etkileşimli öğreticisini tamamladınız. Tıklayabilirsiniz **Ara değerli dizeler** etkileşimli bir sonraki öğreticiye başlatmak için aşağıdaki bağlantı ya da ziyaret edebilirsiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. \"Öğrenme tut\" adımı bu öğreticilere geri getirir.\n\nAşağıdaki konulardan Bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:\n\n- [Varsa ve else deyimi](../../language-reference/keywords/if-else.md)\n- [While deyimi](../../language-reference/keywords/while.md)\n- [Do deyimi](../../language-reference/keywords/do.md)\n- [For deyimi](../../language-reference/keywords/for.md)"

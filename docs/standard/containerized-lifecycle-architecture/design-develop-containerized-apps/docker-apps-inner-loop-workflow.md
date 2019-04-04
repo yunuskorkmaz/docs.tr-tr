@@ -4,12 +4,12 @@ description: Docker uygulamaları geliştirmek için "İç döngü" iş akışı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676674"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920915"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -105,7 +105,7 @@ Docker uzantısını yüklemek için Ctrl + Shift + P tuşlarına basın yazın 
 
 **Şekil 4-24**. Docker dosyaları kullanılarak eklenen **çalışma komut Docker ekleme dosyaları**
 
-Bir DockerFile eklediğinizde, kullanıyor hangi temel Docker görüntüsüne belirtin (kullanma gibi `FROM microsoft/aspnetcore`). Özel görüntünüzü herhangi bir resmi deponun aldığınız bir temel görüntünün üstüne genellikle oluşturacaksınız [Docker Hub kayıt defterinde](https://hub.docker.com/) (gibi bir [.NET Core için görüntü](https://hub.docker.com/r/microsoft/dotnet/) veya [Node.jsiçin](https://hub.docker.com/_/node/)).
+Bir DockerFile eklediğinizde, kullanıyor hangi temel Docker görüntüsüne belirtin (kullanma gibi `FROM mcr.microsoft.com/dotnet/core/aspnet`). Özel görüntünüzü herhangi bir resmi deponun aldığınız bir temel görüntünün üstüne genellikle oluşturacaksınız [Docker Hub kayıt defterinde](https://hub.docker.com/) (gibi bir [.NET Core için görüntü](https://hub.docker.com/_/microsoft-dotnet-core/) veya [Node.jsiçin](https://hub.docker.com/_/node/)).
 
 ***Var olan resmi bir Docker görüntüsü kullanma***
 
@@ -115,7 +115,7 @@ DockerFile'bir .NET Core kapsayıcı için bir örnek verilmiştir:
 
 ```Dockerfile
 # Base Docker image to use  
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-Bu durumda, görüntü resmi ASP.NET Core Docker görüntü (Linux ve Windows için çok arch), satır başına 2.1 sürümünü dayalı `FROM microsoft/dotnet:2.1-aspnetcore-runtime`. (Bu konu hakkında daha fazla bilgi için bkz. [ASP.NET Core, Docker görüntüsü](https://hub.docker.com/r/microsoft/aspnetcore/) sayfası ve [.NET Core, Docker görüntüsü](https://hub.docker.com/r/microsoft/dotnet/) sayfası).
+Bu durumda, görüntü resmi ASP.NET Core Docker görüntü (Linux ve Windows için çok arch), satır başına 2.1 sürümünü dayalı `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`. (Bu konu hakkında daha fazla bilgi için bkz. [ASP.NET Core, Docker görüntüsü](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) sayfası ve [.NET Core, Docker görüntüsü](https://hub.docker.com/_/microsoft-dotnet-core/) sayfası).
 
 DockerFile içinde Docker çalışma zamanında (örneğin, bağlantı noktası 80) kullanan TCP bağlantı noktası dinleyecek şekilde bildirebilirsiniz.
 
@@ -143,9 +143,9 @@ Dil ve çerçeve kullanmakta olduğunuz bağlı olarak bir Dockerfile içinde ek
 
 **Çok yay görüntü depolar**
 
-Bir tek bir görüntü adı bir depoda bir Linux görüntüsü ve bir Windows görüntüsünü gibi platformu çeşitleri içerebilir. Bu özellik, birden çok Platformu (diğer bir deyişle, Linux ve Windows) karşılamak için tek bir depo oluşturmak Microsoft (temel Görüntü Oluşturucu) gibi satıcıları sağlar. Örneğin, [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) Docker Hub kayıt defterinde depo, görüntü adının aynısını kullanarak Linux ve Windows Nano sunucu için destek sağlar.
+Bir tek bir görüntü adı bir depoda bir Linux görüntüsü ve bir Windows görüntüsünü gibi platformu çeşitleri içerebilir. Bu özellik, birden çok Platformu (diğer bir deyişle, Linux ve Windows) karşılamak için tek bir depo oluşturmak Microsoft (temel Görüntü Oluşturucu) gibi satıcıları sağlar. Örneğin, [dotnet/çekirdek/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Docker Hub kayıt defterinde depo, görüntü adının aynısını kullanarak Linux ve Windows Nano sunucu için destek sağlar.
 
-Çekme [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) görüntüyü Windows konaktan, görüntü adının aynısını, bir Linux ana bilgisayarından alınan Linux değişken çeker ise Windows değişken çeker.
+Çekme [dotnet/çekirdek/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Windows konaktan görüntüyü, Linux değişken aynı görüntü adı, bir Linux ana bilgisayarından alınan çeker ise Windows değişken çeker.
 
 ***Temel görüntünüzü sıfırdan oluşturma***
 

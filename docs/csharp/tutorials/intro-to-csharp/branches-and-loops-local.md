@@ -3,12 +3,12 @@ title: Dallar ve döngüler - Giriş C# Öğreticisi
 description: Dallar ve döngüler hakkındaki Bu öğreticide, yazdığınız C# koşullu dallar ve döngüler deyimleri tekrar tekrar yürütmenin destekleyen dili sözdizimi keşfetmek için kod.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677792"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920954"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dal ve döngü deyimleriyle koşullu mantık öğrenin
 
@@ -249,11 +249,11 @@ Kendiniz deneyin. Ardından olup olmadığınıza bakın. 63 için bir yanıt al
 
 "Dallar ve döngüler" öğreticisini tamamladınız.
 
-İle devam edebilir [dize ilişkilendirme](interpolated-strings-local.md) kendi geliştirme ortamınızda öğretici.
+İle devam edebilir [diziler ve Koleksiyonlar](arrays-and-collections.md) kendi geliştirme ortamınızda öğretici.
 
 Aşağıdaki konulardan Bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:
 
 - [Varsa ve else deyimi](../../language-reference/keywords/if-else.md)
-- [while deyimi](../../language-reference/keywords/while.md)
-- [do deyimi](../../language-reference/keywords/do.md)
+- [While deyimi](../../language-reference/keywords/while.md)
+- [Do deyimi](../../language-reference/keywords/do.md)
 - [For deyimi](../../language-reference/keywords/for.md)

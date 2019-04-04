@@ -3,6 +3,12 @@ title: Windows Identity Foundation Yapılandırma Şeması
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
+ms.openlocfilehash: 9c8009b4d95e5aa2c3d9bb8a8958040127a9e628
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441196"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation Yapılandırma Şeması
 Bu bölümdeki konularda, Windows Identity Foundation (WIF) yapılandırma şeması hakkında bilgi sağlar. Ayrıca, bir uygulamayı WIF sınıfları framework tarafından kullanıma sunulan aracılığıyla kullanmak için yapılandırabilirsiniz. Bu sınıfları, ilgili öğeleri şemada kabul bölümlerde belirtilmiştir. WIF yapılandırma şeması tarafından kullanıma sunulan yapısı aşağıdaki gösterildiği temel XML etiketi. Öznitelikleri göz ardı edilir. Vurgulanan açıklamaları şema ana bileşenleri gösterir.  

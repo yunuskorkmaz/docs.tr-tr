@@ -2,13 +2,18 @@
 title: Visual Basic'de Diziler
 ms.date: 12/06/2017
 f1_keywords:
-  - vb.Array
+- vb.Array
 helpviewer_keywords:
-  - 'arrays [Visual Basic]'
-  - 'Visual Basic, arrays'
+- arrays [Visual Basic]
+- Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
+ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675971"
 ---
-
 # <a name="arrays-in-visual-basic"></a>Visual Basic'de Diziler
 
 Bir dizi terimiyle gösterilen değerler kümesidir *öğeleri*, mantıksal olarak ilgili arasındaki ilişki. Örneğin, bir dizi, dilbilgisi okulundaki her sınıfta Öğrenciler sayısının oluşabilir; dizinin her öğesi tek bir sınıf Öğrenci sayısıdır. Benzer şekilde, bir sınıf için bir öğrenci derece, bir dizi oluşabilir; dizinin her öğesi, bir tek sınıf hizmetidir.

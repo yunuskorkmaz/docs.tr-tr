@@ -1,11 +1,16 @@
 ---
 title: .NET örnekler ve öğreticiler
-description: '.NET Core, ASP.NET Core için örnekler ve öğreticiler hakkında bilgi ve C# yardımcı dil .NET hakkında bilgi edinin.'
+description: .NET Core, ASP.NET Core için örnekler ve öğreticiler hakkında bilgi ve C# yardımcı dil .NET hakkında bilgi edinin.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558966"
 ---
-
 # <a name="net-samples-and-tutorials"></a>.NET örnekler ve öğreticiler
 
 .NET belgeleri hakkında daha fazla .NET öğretmek öğreticileri ve örnekleri içerir. Bu konu, bulma, görüntüleme ve .NET Core, ASP.NET Core, indirme açıklar ve C# örnekler ve öğreticiler. Bilgi edinmek için kaynakları bulmak F# üzerinde programlama dilini [ F# Foundation'ın site](https://fsharp.org/learn.html). Keşfetmeye içinde ilgileniyorsanız C# başlayın bir çevrimiçi Kod Düzenleyicisi'ni kullanarak [bu etkileşimli öğreticisini](https://www.microsoft.com/net/learn/in-browser-tutorial/1) ve devam et [ C# etkileşimli öğreticisini](../csharp/tutorials/intro-to-csharp/index.md). Görüntüleme ve örnek kodu indirdikten hakkında yönergeler için bkz: [görüntüleme ve örneklerini indirerek](#viewing-and-downloading-samples) bölümü.

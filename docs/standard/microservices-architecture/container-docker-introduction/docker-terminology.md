@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 2229599ab2fdc008c1668fb317f6cbe7dae95380
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 9cfb8ceb4fa1b95603ccc9aa006dd6ee3e8e8b3a
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480003"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920980"
 ---
 # <a name="docker-terminology"></a>Docker terimleri
 
@@ -33,7 +33,7 @@ Bu bölümde, terimleri ve tanımları Docker derin almadan önce bilmeniz liste
 
 **Kayıt defteri**: Depolarına erişimi sağlayan bir hizmet. Varsayılan kayıt defteri en genel görüntülerde [Docker Hub](https://hub.docker.com/) (kuruluş olarak Docker tarafından sahip olunan). Bir kayıt defteri, genellikle birden çok takımı depolarından içerir. Şirketler genellikle oluşturmuş olduğunuz görüntülerini depolayıp yönetin için özel kayıt defterleri sahiptir. Azure Container Registry, başka bir örnektir.
 
-**Çok yay görüntü**: Birden fazla mimari için uygun görüntü seçimi basitleştiren bir özelliktir Docker çalıştırdığı platforma göre örneğin bir Dockerfile istediğinde bir temel görüntü **microsoft gelen / dotnet:2.2-sdk** gelen kayıt defteri gerçekten alır **2.2-sdk-nanoserver-1709**, **2.2-sdk-nanoserver-1803**, **2.2-sdk-nanoserver-1809** veya **2.2-sdk-alpine**, Docker çalıştığı sürümü ve işletim sistemine bağlı olarak.
+**Çok yay görüntü**: Birden fazla mimari için uygun görüntü seçimi basitleştiren bir özelliktir Docker çalıştırdığı platforma göre örneğin bir Dockerfile istediğinde bir temel görüntü **mcr.microsoft.com/dotnet/core/sdk:2.2gelen**gerçekten alır kayıt defterinden **2.2-sdk-nanoserver-1709**, **2.2-sdk-nanoserver-1803**, **2.2-sdk-nanoserver-1809** veya **2.2 - SDK'sı-esnetme**, Docker çalıştığı sürümü ve işletim sistemine bağlı olarak.
 
 **Docker Hub**: Görüntüleri karşıya yüklemek ve bunlarla çalışmak için ortak bir kayıt. Docker Hub, Docker görüntüsünü barındıran, genel veya özel kayıt defterleri, yapı tetikleyicilerini ve web kancaları ve GitHub ve Bitbucket ile tümleştirme sağlar.
 

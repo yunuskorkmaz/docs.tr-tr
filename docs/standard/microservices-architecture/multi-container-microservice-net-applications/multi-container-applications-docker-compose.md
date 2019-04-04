@@ -1,17 +1,17 @@
 ---
-title: Docker-compose.yml ile çok Kapsayıcılı uygulamanızı tanımlama
+title: docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 description: Docker-compose.yml ile çok kapsayıcılı bir uygulama için mikro hizmetler oluşturmaya belirleme konusunda.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: df185950d8155d61b60c9b54e3a8751ec3980408
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4f4918a6f26a617fad38c7955415c4ff559a9187
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463533"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920785"
 ---
-# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Docker-compose.yml ile çok Kapsayıcılı uygulamanızı tanımlama
+# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml ile çok kapsayıcılı uygulamanızı tanımlama
 
 Bu kılavuzdaki [docker-compose.yml](https://docs.docker.com/compose/compose-file/) dosya bölümünde tanıtılmıştır [4. adım. Çok kapsayıcılı Docker uygulaması oluştururken, hizmetlerinizi docker-compose.yml tanımlamak](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application). Ancak, daha ayrıntılı olarak incelenmesi yararlı olan docker-compose dosyaları kullanmak için ek yolu vardır.
 
@@ -433,7 +433,7 @@ Docker-compose bekliyor biçiminde bir .env dosyasında her satırı \<değişke
 Internet kaynaklarında Docker ve .NET Core araştırıyorsanız, Basitlik, bir kapsayıcıya kaynağınızı kopyalayarak bir Docker görüntüsü oluşturma gösteren dockerfile'ları bulabilirsiniz. Bu örnekler, basit bir yapılandırma öğesini kullanarak bir Docker görüntüsü, uygulamanızla birlikte paketlenmiş ortamıyla sağlayabilirsiniz önerin. Aşağıdaki örnek, basit bir Dockerfile içinde bu damarlı gösterir.
 
 ```Dockerfile
-FROM microsoft/dotnet
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -446,7 +446,7 @@ Böyle bir Dockerfile çalışır. Ancak, özellikle de üretim görüntülerini
 
 Kapsayıcı ve mikro hizmetler modeli sürekli kapsayıcıları başlıyor. Kapsayıcıları kullanarak normal şekilde kapsayıcı atılabilir olduğundan Uyuyan bir kapsayıcı yeniden başlatmaz. Düzenleyiciler (gibi Kubernetes ve Azure Service Fabric) yalnızca görüntüleri yeni bir örneğini oluşturun. Ne bu örnekleme işlemi daha hızlı olacak şekilde nasıl yapılandırıldığında, uygulama ön derleme tarafından en iyi duruma getirme gerektiğini anlamına gelir. Kapsayıcı başlatıldığında, çalıştırmaya hazır olmalıdır. Olmayan geri yükleme ve çalışma zamanında derleme kullandığınızdan `dotnet restore` ve `dotnet build` dotnet CLI komutları bu, .NET Core ve Docker birçok blog gönderileri gördüğünüz gibi.
 
-.NET ekibi .NET Core ve ASP.NET Core kapsayıcı iyileştirilmiş bir çerçeve yapmak için önemli işleri yapmak. Yalnızca .NET Core küçük bellek Ayak izi ile basit bir çerçeve olan; Takım üç ana senaryo için en iyi duruma getirilmiş Docker görüntüleri odaklanan ve bunları Docker Hub kayıt defterinde yayımlanan *microsoft/dotnet*, sürüm 2.1 ile başlangıç:
+.NET ekibi .NET Core ve ASP.NET Core kapsayıcı iyileştirilmiş bir çerçeve yapmak için önemli işleri yapmak. Yalnızca .NET Core küçük bellek Ayak izi ile basit bir çerçeve olan; Takım üç ana senaryo için en iyi duruma getirilmiş Docker görüntüleri odaklanan ve bunları Docker Hub kayıt defterinde yayımlanan *dotnet/core*, sürüm 2.1 ile başlangıç:
 
 1. **Geliştirme**: Burada öncelik hızla tekrarlayabilir ve değişiklikleri hata ayıklama olanağı ve burada boyutu ikincil.
 
@@ -454,11 +454,12 @@ Kapsayıcı ve mikro hizmetler modeli sürekli kapsayıcıları başlıyor. Kaps
 
 3. **Üretim**: Burada odağı hızlı dağıtma ve bu görüntüleri ikili dosyaları ve uygulamayı çalıştırmak için gerekli içeriklere sınırlı olacak şekilde kapsayıcılar, başlatılıyor.
 
-Bunu başarmak için .NET ekibi üç temel çeşitlere sağlayan [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (en Docker hub'ı):
+Bunu başarmak için .NET ekibi dört temel çeşitlere sağlayan [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (en Docker hub'ı):
 
-1. **SDK'sı**: geliştirme ve derleme senaryolar için.
-2. **çalışma zamanı**: üretim senaryosu için ve
-3. **çalışma zamanı deps**: üretim bir senaryo için [kendi içindeki uygulamaları](../../../core/deploying/index.md#self-contained-deployments-scd).
+1. **SDK'sı**: geliştirme ve derleme senaryoları
+1. **ASP.NET**: ASP.NET üretim senaryoları için
+1. **çalışma zamanı**: .NET üretim senaryoları için
+1. **çalışma zamanı deps**: üretim senaryoları için [kendi içindeki uygulamaları](../../../core/deploying/index.md#self-contained-deployments-scd).
 
 Hızlı Başlangıç için çalışma zamanı görüntüleri aspnetcore da otomatik olarak ayarlamak\_URL'ler 80 numaralı bağlantı noktası ve Ngen bir yerel görüntü önbelleğinde derlemeleri oluşturmak için kullanın.
 

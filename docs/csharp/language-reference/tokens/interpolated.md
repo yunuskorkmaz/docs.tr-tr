@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307181"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920902"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - dize ilişkilendirme (C# Başvurusu)
 
@@ -87,7 +87,7 @@ Aşağıdaki örnek örtük olarak dönüştürülmesine kullanır <xref:System.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-Dize ilişkilendirme için yeni başlıyorsanız bkz [dize ilişkilendirme, C# ](../../tutorials/intro-to-csharp/interpolated-strings.yml) etkileşimli öğretici. Ya da deneyebilirsiniz [dize ilişkilendirme, C# ](../../tutorials/string-interpolation.md) makinenizde yerel olarak öğretici.
+Dize ilişkilendirme için yeni başlıyorsanız bkz [dize ilişkilendirme, C# ](../../tutorials/exploration/interpolated-strings.yml) etkileşimli öğretici. Ya da deneyebilirsiniz [dize ilişkilendirme, C# ](../../tutorials/string-interpolation.md) makinenizde yerel olarak öğretici.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -99,4 +99,4 @@ Dize ilişkilendirme için yeni başlıyorsanız bkz [dize ilişkilendirme, C# ]
 - [Dizeler](../../programming-guide/strings/index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Özel Karakterleri](index.md)
-- [C# başvurusu](../index.md)
+- [C# Başvurusu](../index.md)

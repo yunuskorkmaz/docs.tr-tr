@@ -1,10 +1,16 @@
 ---
 title: .NET core öğreticileri
-description: 'Mac, Linux ve Windows uygulamaları ve kitaplıkları oluşturmak için .NET Core öğrenmek için öğreticileri izleyin.'
+description: Mac, Linux ve Windows uygulamaları ve kitaplıkları oluşturmak için .NET Core öğrenmek için öğreticileri izleyin.
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
+ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788303"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Bu öğreticileri keşfederek .NET Core ve .NET Core SDK Araçları edinin
 

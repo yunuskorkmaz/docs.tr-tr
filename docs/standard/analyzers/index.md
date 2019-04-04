@@ -5,8 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
+ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634251"
 ---
-
 # <a name="the-roslyn-based-analyzers"></a>Roslyn Çözümleyicilerini tabanlı
 
 Roslyn tabanlı Çözümleyicileri, sorunları bulup düzeltme Öner projenizin kaynak kodunu analiz etmek için .NET derleyici SDK'sı (Roslyn API'leri) kullanın. Farklı Çözümleyicileri sorunları, güvenlik konuları API'sini uyumluluk hataları neden olabilecek uygulamalar arasında değişen farklı sınıflardaki arayın.

@@ -2,10 +2,16 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms
-  - user interface
-  - 'user interface [Windows Forms], forms'
+- Windows Forms
+- user interface
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
+ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723120"
 ---
 # <a name="windows-forms"></a>Windows Forms
 Formları, uygulamanızın temel birim olduğundan, işlevi ve tasarım bazı düşünce vermek önemlidir. Sonuçta bir kullanıcı arabirimi oluşturmak için denetimleri ile verileri işlemek için kod, bir geliştirici olarak geliştirmek, boş bir maskeleme görüntüsü biçimidir. Bu nedenle, Visual Studio ile yazılmış bir zengin denetiminin yanı sıra bir tümleşik geliştirme ortamı (IDE) kod yazmada yardımcı olmak üzere sağlar [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Bu denetimlerin işlevleri, kodunuzu tamamlarken, olarak kolayca ve hızla, ihtiyacınız olan çözümleri geliştirin.  

@@ -1,7 +1,13 @@
 ---
-title: 'Kullanmaya başlayınF#'
-description: 'Nasıl kullanmaya başlayacağınızı öğrenmek F# programlama dilidir.'
+title: Kullanmaya başlayınF#
+description: Nasıl kullanmaya başlayacağınızı öğrenmek F# programlama dilidir.
 ms.date: 12/08/2018
+ms.openlocfilehash: df966d6537731650a5f2fcd795ad638ace1b059f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971422"
 ---
 # <a name="get-started-with-f"></a>F ile çalışmaya başlama\#
 

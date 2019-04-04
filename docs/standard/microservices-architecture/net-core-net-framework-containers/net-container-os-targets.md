@@ -1,17 +1,17 @@
 ---
-title: Hedef .NET kapsayıcıları ile hangi işletim sistemi
+title: .NET kapsayıcıları ile hangi işletim sistemi hedeflenmelidir?
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Hedef .NET kapsayıcıları ile hangi işletim sistemi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 9e1d07e48d88376efb5fbdbdadc999c8dcd5082d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14a0fb7cd9ecb8dfd5369da6f6bd5b47b4aea37a
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374914"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921305"
 ---
-# <a name="what-os-to-target-with-net-containers"></a>Hedef .NET kapsayıcıları ile hangi işletim sistemi
+# <a name="what-os-to-target-with-net-containers"></a>.NET kapsayıcıları ile hangi işletim sistemi hedeflenmelidir?
 
 Docker ve .NET Framework ve .NET Core arasındaki farklar tarafından desteklenen işletim sistemleri yelpazesi göz önünde bulundurulduğunda, belirli bir işletim sistemi ve kullanmakta olduğunuz framework bağlı olarak belirli sürümlerini hedefleyen.
 
@@ -38,20 +38,20 @@ Görüntü adı, Dockerfile dosyasına eklediğinizde, işletim sistemi ve sür�
 </thead>
 <tbody>
 <tr>
-<td>Microsoft / dotnet:2.2-çalışma zamanı</td>
+<td>MCR.microsoft.com/dotnet/Core/Runtime:2.2</td>
 <td>.NET core 2.2 çok mimarisi: Docker konağı bağlı olarak, Linux ve Windows Nano sunucu destekler.</td>
 </tr>
 <tr class="odd">
-<td>Microsoft / dotnet:2.2-aspnetcore-çalışma zamanı</td>
+<td>MCR.microsoft.com/dotnet/Core/ASPNET:2.2</td>
 <td><p>ASP.NET Core 2.2 çok mimarisi: Docker konağı bağlı olarak, Linux ve Windows Nano sunucu destekler.</p>
 <p>ASP.NET Core için birkaç en iyi duruma getirme aspnetcore görüntüsü vardır.</p></td>
 </tr>
 <tr class="even">
-<td>Microsoft / dotnet:2.2-aspnetcore-çalışma zamanı-alpine</td>
+<td>MCR.microsoft.com/dotnet/Core/ASPNET:2.2-Alpine</td>
 <td>.NET core 2.2 Alpine Linux distro'üzerinde salt çalışma zamanı</td>
 </tr>
 <tr class="odd">
-<td>Microsoft / dotnet:2.2-aspnetcore-çalışma zamanı-nanoserver-1803</td>
+<td>MCR.microsoft.com/dotnet/Core/ASPNET:2.2-nanoserver-1803</td>
 <td>.NET core 2.2 (Windows Server sürümü 1803) Windows Nano Sunucu'da salt çalışma zamanı</td>
 </tr>
 </tbody>

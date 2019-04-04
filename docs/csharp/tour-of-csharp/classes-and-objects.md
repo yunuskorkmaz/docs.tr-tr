@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler C# -Turu C# dil
 description: Yeni C#? Bu sınıflar, nesneleri ve devralma bakış okuyun
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: a4276e214bbb6edb3fb1b75c21c26f18bb9fdc25
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 6f06a43b60a1101e5583ffa85bd948c69679943b
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466264"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921253"
 ---
 # <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
@@ -18,11 +18,11 @@ Yeni sınıflar, sınıf bildirimi kullanarak oluşturulur. Bir sınıf bildirim
 
 Adlı basit bir sınıf bildirimi verilmiştir `Point`:
 
-[!code-csharp[PointClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
+[!code-csharp[PointClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
 
 Sınıfların örneklerini kullanılarak oluşturulur `new` yeni bir örneği için bellek ayırır, işleci örneği başlatmak için bir oluşturucu çağırır ve örneğe bir başvuru döndürür. Aşağıdaki deyimleri, iki nokta nesneleri oluşturmak ve bu nesnelere başvurular iki değişken depolamak:
 
-[!code-csharp[PointExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
+[!code-csharp[PointExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
 
 Nesnenin artık erişilebilir olduğunda otomatik olarak bir nesnenin kapladığı belleği geri kazanılır. Bu, gerekli veya C# nesneler açıkça serbest mümkün olur.
 
@@ -74,12 +74,12 @@ Bir sınıfın her üyesine erişebilir üyeyi program metni bölümlerine denet
 
 Bir sınıf tanımı, sınıf adı türü parametre adları listesini çevreleyen açılı ayraçlar ile izleyerek tür parametrelerinin kümesi belirtebilirsiniz. Tür parametreleri daha sonra sınıf bildirimi gövdesinde sınıf üyelerini tanımlamak için kullanılabilir. Aşağıdaki örnekte, tür parametreleri `Pair` olan `TFirst` ve `TSecond`:
 
-[!code-csharp[Pair](../../../samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]
+[!code-csharp[Pair](~/samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]
 
 Tür parametreleri gerçekleştirilecek bildirildiği bir sınıf türü olarak adlandırılan bir *genel bir sınıf türü*. Yapı, arabirim ve temsilci türlerinin genel olabilir.
 Genel sınıf kullanıldığında, tür bağımsız değişkenleri her tür parametreleri için sağlanmalıdır:
 
-[!code-csharp[PairExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]
+[!code-csharp[PairExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]
 
 Sağlanan gibi tür bağımsız değişkenleri ile genel tür `Pair<int,string>` yukarıda adlandırılan bir *oluşturulan türü*.
 
@@ -87,13 +87,13 @@ Sağlanan gibi tür bağımsız değişkenleri ile genel tür `Pair<int,string>`
 
 Sınıf bildiriminin bir temel sınıf, bir iki nokta üst üste ve temel sınıfın adını sınıf adı ve türü parametreleri izleyerek belirtebilirsiniz. Bir temel sınıf belirtimini atlama aynıdır türünden türetme `object`. Aşağıdaki örnekte, temel sınıfını `Point3D` olduğu `Point`ve temel sınıfını `Point` olduğu `object`:
 
-[!code-csharp[Point3DClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
+[!code-csharp[Point3DClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
 
 Bir sınıf, taban sınıfı üyelerini devralır. Devralma, bir sınıf dolaylı temel sınıfı, örneği ve statik oluşturucular ve sonlandırıcılar taban sınıfın dışındaki tüm üyeleri içeren anlamına gelir. Türetilmiş bir sınıf devralır bu yeni üyeler ekleyebilirsiniz, ancak devralınan bir üyeyi tanımını kaldırılamaz. Önceki örnekte, `Point3D` devralan `x` ve `y` alanlarını `Point`ve her `Point3D` örneğini içeren üç alan `x`, `y`, ve `z`.
 
 Temel sınıf türlerinden birinin bir sınıf türünden örtük bir dönüştürme yok. Bu nedenle, bir sınıf türünün bir değişkeni, bu sınıfın bir örneğini veya türetilmiş bir sınıf örneği başvuruda bulunabilir. Örneğin, önceki bir sınıf bildirimleri, türünde bir değişken verilen `Point` ya da başvurabilirsiniz bir `Point` veya `Point3D`:
 
-[!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
+[!code-csharp[Point3DExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
 ## <a name="fields"></a>Alanlar
 
@@ -105,7 +105,7 @@ Statik değiştirici bildirilen bir alan bir örnek alanıyla tanımlar. Bir sı
 
 Aşağıdaki örnekte, her bir örneği `Color` sınıfına sahip ayrı bir kopyasını `r`, `g`, ve `b` örnek alanları, ancak yalnızca bir kopyası `Black`, `White`, `Red`, `Green`, ve `Blue` statik alanlar:
 
-[!code-csharp[ColorClass](../../../samples/snippets/csharp/tour/classes-and-objects/Color.cs#L3-L17)]
+[!code-csharp[ColorClass](~/samples/snippets/csharp/tour/classes-and-objects/Color.cs#L3-L17)]
 
 Önceki örnekte gösterilen şekilde *salt okunur alanları* ile bildirilebilir bir `readonly` değiştiricisi. Atama bir `readonly` alan alanın bildirimin veya aynı sınıftaki bir oluşturucunun parçası olarak yalnızca oluşabilir.
 
@@ -129,23 +129,23 @@ Böylece karşılık gelen bağımsız değişken atlanırsa, varsayılan bir de
 
 A *parametre başvurusunu* başvuruya göre bağımsız değişkenleri geçirme kullanılır. Bir başvuru parametresi için geçirilen bağımsız değişken kesin bir değere sahip bir değişken olmalıdır ve yöntemin yürütülmesi sırasında aynı depolama konumu olarak bir bağımsız değişken başvuru parametresi temsil eder. Bir başvuru parametresi ile bildirilen `ref` değiştiricisi. Aşağıdaki örnek kullanımını gösterir `ref` parametreleri.
 
-[!code-csharp[swapExample](../../../samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
+[!code-csharp[swapExample](~/samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
 
 Bir *çıkış parametresi* başvuruya göre bağımsız değişkenleri geçirme kullanılır. Değeri açıkça çağıran tarafından sağlanan bağımsız değişkene atayın gerektirmeyen dışında her bir başvuru parametresi için de benzer. Çıkış parametresi ile bildirilen `out` değiştiricisi. Aşağıdaki örnek kullanımını gösterir `out` sürümünde söz dizimini kullanarak parametreleri C# 7.
 
-[!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
+[!code-csharp[OutExample](~/samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
 A *parametre dizisi* bir yönteme iletilecek bağımsız değişken bir sayı verir. Bir parametre dizisi ile bildirilen `params` değiştiricisi. Bir yöntem yalnızca son parametresi bir parametre dizisi olabilir ve bir parametre dizisi türünde tek boyutlu dizi türü olmalıdır. Yazma ve WriteLine yöntemlerini <xref:System.Console?displayProperty=nameWithType> sınıfı iyi parametre dizisi kullanımı örnekleri verilmiştir. Bunlar aşağıdaki gibi bildirilir.
 
-[!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
+[!code-csharp[ConsoleExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
 Parametre dizisi, bir parametre dizisi kullanan bir yöntem içinde bir dizi türünde tam olarak normal bir parametre gibi davranır. Ancak, bir parametre dizisi olan bir yöntem çağrısını içinde parametresi dizi türünde tek bir bağımsız değişken veya herhangi bir sayıda öğe türü parametre dizisi bağımsız değişkenleri geçirmek mümkündür. İkinci durumda, bir dizi örneği otomatik olarak oluşturulur ve belirtilen bağımsız değişkenler ile başlatıldı. Bu örnek
 
-[!code-csharp[StringFormat](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]
+[!code-csharp[StringFormat](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]
 
 Aşağıdaki yazmaya eşdeğerdir.
 
-[!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
+[!code-csharp[StringFormat2](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
 
 ### <a name="method-body-and-local-variables"></a>Yöntem gövdesini ve yerel değişkenler
 
@@ -153,7 +153,7 @@ Bir yöntemin gövdesi yöntemi çağrıldığında çalıştırılacak deyimler
 
 Bir yöntem gövdesi yöntemi çağırmayı için özel değişkenleri bildirebilirsiniz. Bu tür değişkenleri olarak adlandırılmasının *yerel değişkenler*. Yerel bir değişken bildirimi bir tür adı, bir değişken adı ve büyük olasılıkla bir başlangıç değeri belirtir. Aşağıdaki örnek, yerel bir değişken bildirir `i` bir başlangıç değeri sıfır ve yerel bir değişken ile `j` ile başlangıç değeri yok.
 
-[!code-csharp[Squares](../../../samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]
+[!code-csharp[Squares](~/samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]
 
 C# olarak yerel bir değişken gerektirir *kesinlikle atanan* önce değeri elde edilebilir. Örneğin, önceki bildirimi `i` bir başlangıç değeri içermesi gerekmez, derleyici bir hata sonraki kullanımlar için rapor `i` çünkü `i` kesinlikle noktalarda program atanır değil.
 
@@ -167,7 +167,7 @@ Statik değiştirici olmayan bir yöntem olarak bildirilen bir *örnek yöntemi*
 
 Aşağıdaki `Entity` sınıfında statik ve örnek üyeleri.
 
-[!code-csharp[Entity](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]
+[!code-csharp[Entity](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]
 
 Her `Entity` örneği seri numarası (ve burada gösterilmez büyük olasılıkla bazı diğer bilgileri içerir). `Entity` (Olan bir örnek yöntemi gibi) bir oluşturucu sonraki kullanılabilir seri numarasına sahip yeni örneğini başlatır. Oluşturucu bir örnek üyesi olduğundan, her ikisi de erişmesine izin verilen `serialNo` örnek alan ve `nextSerialNo` statik alan.
 
@@ -175,7 +175,7 @@ Her `Entity` örneği seri numarası (ve burada gösterilmez büyük olasılıkl
 
 Aşağıdaki örnek, varlık sınıfının kullanımı gösterilmektedir.
 
-[!code-csharp[EntityExample](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
+[!code-csharp[EntityExample](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
 
 Unutmayın `SetNextSerialNo` ve `GetNextSerialNo` statik yöntemler, sınıf üzerinde çağrılır, ancak `GetSerialNo` sınıf örnekleri üzerinde örnek yöntemi çağrılır.
 
@@ -191,11 +191,11 @@ Bir *yöntemi soyut* uygulama içermeyen sanal bir yöntemdir. Soyut bir yöntem
 
 Aşağıdaki örnek, bir soyut sınıfı bildirir `Expression`, bir ifade ağacı düğümünü temsil eder ve üç türetilmiş sınıfları `Constant`, `VariableReference`, ve `Operation`, sabitler, değişken için ifade ağaç düğümleri uygulayın başvurular ve aritmetik işlemler. (Bu ifade ağacı türleriyle karıştırılmamalıdır ancak, benzer).
 
-[!code-csharp[ExpressionClass](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
+[!code-csharp[ExpressionClass](~/samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
 
 Önceki dört sınıfları, aritmetik ifadeler modellemek için kullanılabilir. Örneğin, ifade bu sınıfların örnekleri kullanarak `x + 3` şu şekilde temsil edilebilir.
 
-[!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
+[!code-csharp[ExpressionExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
 
 `Evaluate` Yöntemi bir `Expression` örneği belirtilen ifadeyi değerlendirir ve üretmek için çağrıldığında bir `double` değeri. Yöntem alır bir `Dictionary` (anahtar olarak girişlerinin) değişken adları ve değerleri (olarak girdilerinin değerlerini) içeren bir bağımsız değişken. Çünkü `Evaluate` soyut bir yöntem, türetilen soyut olmayan sınıflar `Expression` kılmalı `Evaluate`.
 
@@ -203,13 +203,13 @@ A `Constant`'s uygulaması `Evaluate` yalnızca saklı sabiti döndürür. A `Va
 
 Aşağıdaki program kullanan `Expression` ifadeyi değerlendiren şeyde sınıfları `x * (y + 2)` farklı değerler için `x` ve `y`.
 
-[!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
+[!code-csharp[ExpressionUsage](~/samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
 
 ### <a name="method-overloading"></a>Yöntemi aşırı yüklemesi
 
 Yöntemi *aşırı yükleme* aynı sınıfta benzersiz imzaları sahip oldukları sürece aynı ada sahip birden çok yöntem izin verir. Aşırı yüklenmiş yöntem çağrısından derlerken, derleyicinin kullandığı *aşırı yükleme çözümlemesi* çağrılacak belirli yöntemi belirlemek için. En iyi eşleşen bağımsız değişkenler veya tek en iyi eşleşme bulunamazsa, bir hata raporları bir yöntemi aşırı yükleme çözünürlüğü bulur. Aşağıdaki örnek, aşırı yükleme çözünürlüğü geçerli gösterir. Her bir çağrıda yorum `UsageExample` yöntemi gösterir hangi yöntemi gerçekten çağrılır.
 
-[!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
+[!code-csharp[OverloadUsage](~/samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 
 Örnekte gösterildiği gibi belirli bir yöntem her zaman tam parametre türleri bağımsız değişkenleri açıkça atama ve/veya tür bağımsız değişkenleri açıkça sağlama tarafından seçilebilir.
 
@@ -217,9 +217,12 @@ Yöntemi *aşırı yükleme* aynı sınıfta benzersiz imzaları sahip olduklar�
 
 Yürütülebilir kod içeren bir üye olarak bilinir topluca *işlev üyeleri* bir sınıf. Birincil işlev üyeleri türü olan yöntemler, önceki bölümde açıklanmaktadır. Bu bölümde bir işlev üyeleri tarafından desteklenen tür açıklanmaktadır C#: Oluşturucular, özellikleri, Dizinleyicileri, olayları, işleçler ve sonlandırıcılar.
 
-Aşağıdaki liste adlı bir genel sınıf gösterir\<T >, growable nesnelerin listesini uygular. Sınıf işlev üyeleri en yaygın tür çeşitli örneklerini içerir.
+Adlı bir genel sınıf aşağıdaki gösterir `MyList<T>`, growable nesnelerin listesini uygular. Sınıf işlev üyeleri en yaygın tür çeşitli örneklerini içerir.
 
-[!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
+> [!NOTE]
+> Bu örnekte bir `MyList` .NET standard ile aynı değil, sınıf <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Bu turda gerekli kavramları göstermek, ancak o sınıf için yerine geçmez.
+
+[!code-csharp[ListClass](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 
 ### <a name="constructors"></a>Oluşturucular
 
@@ -227,9 +230,9 @@ C# örneği hem de statik oluşturucular destekler. Bir *örnek oluşturucusu* u
 
 Bir oluşturucu dönüş türü ve kapsayan sınıfı aynı ada sahip bir yöntemi gibi bildirilir. Statik değiştirici Oluşturucu bildirimi içeriyorsa, bir statik Oluşturucu bildirir. Aksi takdirde, bir örnek oluşturucusu bildirir.
 
-Örnek oluşturucuları aşırı yüklenebilir ve isteğe bağlı parametreler olabilir. Örneğin, `List<T>` sınıfı bildirir, bir parametre ve süren iki örnek oluşturucuları bir `int` parametresi. Örnek oluşturucuları kullanarak çağrılır `new` işleci. Aşağıdaki deyimleri iki ayırma `List<string>` Oluşturucusu kullanarak örneği `List` sınıfı ile ve isteğe bağlı bağımsız değişken olmadan.
+Örnek oluşturucuları aşırı yüklenebilir ve isteğe bağlı parametreler olabilir. Örneğin, `MyList<T>` sınıfı bildirir, bir parametre ve süren iki örnek oluşturucuları bir `int` parametresi. Örnek oluşturucuları kullanarak çağrılır `new` işleci. Aşağıdaki deyimleri iki ayırma `MyList<string>` Oluşturucusu kullanarak örneği `MyList` sınıfı ile ve isteğe bağlı bağımsız değişken olmadan.
 
-[!code-csharp[ListExample1](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
+[!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 
 Diğer üyeleri farklı olarak örnek oluşturucuları olmayan devralınır ve sınıfı, bu gerçekte bildirilen dışında hiçbir örnek oluşturucuları bir sınıfa sahip. Hiçbir örnek oluşturucusu için bir sınıf sağlanırsa, sonra boş bir parametre olmadan otomatik olarak sağlanır.
 
@@ -243,9 +246,9 @@ Bir alma erişimcisi, dönüş değeri, özellik türü olan bir parametresiz y�
 
 Ayarlama erişimcisine değeri ve dönüş türü olarak adlandırılan tek bir parametre ile bir yönteme karşılık gelir. Ne zaman bir özelliği başvuru atama hedefi veya işleneni olarak ++ veya--, set erişimcisine yeni değer sağlayan bağımsız değişkenlerle çağrılır.
 
-`List<T>` Sınıfı iki özellik, salt okunur ve okuma-yazma, sırasıyla sayısı ve kapasite bildirir. Bu özelliklerin kullanımı bir örnek verilmiştir.
+`MyList<T>` Sınıfı bildirir iki özellik `Count` ve `Capacity`, olan salt okunur ve okuma-yazma, sırasıyla. Bu özelliklerin kullanımı bir örnek verilmiştir:
 
-[!code-csharp[ListExample2](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
+[!code-csharp[ListExample2](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
 
 Benzer şekilde, alanlar ve yöntemler, C# örnek özelliklerini hem statik özelliklerini destekler. Statik özellikler statik değiştiricisi ile bildirilir ve örnek özelliklerini olmadan bildirilir.
 
@@ -255,9 +258,9 @@ Bir özelliğin accessor(s) sanal olabilir. Ne zaman bir özellik bildirimi içe
 
 Bir *dizin oluşturucu* nesneleri dizisi olarak aynı şekilde dizinlenmesini sağlar bir üyesidir. Üyenin adını bu sınırlayıcılar arasında yazılmış bir parametre listesi ardından olması dışında dizin oluşturucu bir özellik gibi bildirilir `[` ve `]`. Parametreler, dizin oluşturucunun accessor(s) içinde kullanılabilir. Benzer şekilde, özellikler, dizin oluşturucular okuma-yazma, salt okunur ve salt yazılır olabilir ve bir dizin oluşturucu accessor(s) sanal olabilir.
 
-`List` Sınıfı bildirir gereken tek bir okuma-yazma dizin oluşturucu bir `int` parametresi. Dizin oluşturucunun, dizin mümkün kılar `List` ile örnekler `int` değerleri. Örneğin:
+`MyList<T>` Sınıfı bildirir gereken tek bir okuma-yazma dizin oluşturucu bir `int` parametresi. Dizin oluşturucunun, dizin mümkün kılar `MyList<T>` ile örnekler `int` değerleri. Örneğin:
 
-[!code-csharp[ListExample3](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
+[!code-csharp[ListExample3](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
 
 Dizin Oluşturucular, sayı veya kendi parametre türleri farklı olduğu sürece bir sınıfın birden çok dizin oluşturucu bildirebilirsiniz anlamına gelen aşırı yüklenebilir.
 
@@ -267,11 +270,11 @@ Bir *olay* bir sınıf veya nesne bildirimleri sağlamak için sağlayan bir üy
 
 (Olay soyut değil ve erişimcileri bildirmiyor sağlanan) bir olay üyesi bildiren bir sınıf içinde olay yalnızca bir temsilci türüne bir alan gibi davranır. Olaya eklenmiş olan olay işleyicilerini temsil eden bir temsilci bir başvuru alan depolar. Hiçbir olay işleyicileri varsa alandır `null`.
 
-`List<T>` Sınıfı olarak adlandırılan tek bir olay üyesi bildirir `Changed`, yeni bir öğe listesine eklendiğini gösterir. Değiştirilen olay tarafından gerçekleştirilen `OnChanged` hangi ilk olay olup olmadığını denetler, sanal bir yöntem `null` (hiçbir işleyicileri bulunduğunu anlamına gelir). Olay bildirmek, kavram olay tarafından temsil edilen temsilci çağırmak için tam olarak eşittir; Bu nedenle, olayları oluşturma için hiçbir özel dil yapıları vardır.
+`MyList<T>` Sınıfı olarak adlandırılan tek bir olay üyesi bildirir `Changed`, yeni bir öğe listesine eklendiğini gösterir. Değiştirilen olay tarafından gerçekleştirilen `OnChanged` hangi ilk olay olup olmadığını denetler, sanal bir yöntem `null` (hiçbir işleyicileri bulunduğunu anlamına gelir). Olay bildirmek, kavram olay tarafından temsil edilen temsilci çağırmak için tam olarak eşittir; Bu nedenle, olayları oluşturma için hiçbir özel dil yapıları vardır.
 
-İstemciler react ile olayları *olay işleyicileri*. Olay işleyicileri kullanılarak eklenen `+=` işleci ve kaldırılan kullanarak `-=` işleci. Aşağıdaki örnek bir olay işleyicisi ekler `Changed` olayı bir `List<string>`.
+İstemciler react ile olayları *olay işleyicileri*. Olay işleyicileri kullanılarak eklenen `+=` işleci ve kaldırılan kullanarak `-=` işleci. Aşağıdaki örnek bir olay işleyicisi ekler `Changed` olayı bir `MyList<string>`.
 
-[!code-csharp[EventExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]
+[!code-csharp[EventExample](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]
 
 Denetim bir olay temel alınan depolamanın istenen burada Gelişmiş senaryolar için bir olay bildirimi açıkça sağlayabilir `add` ve `remove` biraz benzerdir erişimcileri `set` özellik erişimcisi.
 
@@ -279,11 +282,11 @@ Denetim bir olay temel alınan depolamanın istenen burada Gelişmiş senaryolar
 
 Bir *işleci* belirli ifade işleci bir sınıfın bir örneği için uygulama ne anlama geldiğini tanımlayan bir üyesidir. Üç tür işleç tanımlanabilir: Birli işleçler, ikili işleçler ve dönüştürme işleçleri. Tüm işleçler olarak bildirilmelidir `public` ve `static`.
 
-`List<T>` Sınıfı bildirir iki işleç `operator ==` ve `operator !=`ve bu nedenle bu işleçleri için geçerli ifadeler için yeni anlamı verir `List` örnekleri. Özellikle, iki eşitlik işleçleri tanımlama `List<T>` örnekleri her biri kendi eşittir yöntemlerini kullanarak kapsanan nesneleri karşılaştırma olarak. Aşağıdaki örnekte `==` karşılaştırmak için işleci `List<int>` örnekleri.
+`MyList<T>` Sınıfı bildirir iki işleç `operator ==` ve `operator !=`ve bu nedenle bu işleçleri için geçerli ifadeler için yeni anlamı verir `MyList` örnekleri. Özellikle, iki eşitlik işleçleri tanımlama `MyList<T>` örnekleri her biri kendi eşittir yöntemlerini kullanarak kapsanan nesneleri karşılaştırma olarak. Aşağıdaki örnekte `==` karşılaştırmak için işleci `MyList<int>` örnekleri.
 
-[!code-csharp[OperatorExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L121-L129)]
+[!code-csharp[OperatorExample](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L121-L129)]
 
-İlk `Console.WriteLine` çıkarır `True` listelerini nesneleri aynı sırada aynı değerlerle aynı sayıda içerdiğinden. Vardı `List<T>` tanımlanmamış `operator ==`, ilk `Console.WriteLine` çıkış `False` çünkü `a` ve `b` başvuru farklı `List<int>` örnekleri.
+İlk `Console.WriteLine` çıkarır `True` listelerini nesneleri aynı sırada aynı değerlerle aynı sayıda içerdiğinden. Vardı `MyList<T>` tanımlanmamış `operator ==`, ilk `Console.WriteLine` çıkış `False` çünkü `a` ve `b` başvuru farklı `MyList<int>` örnekleri.
 
 ### <a name="finalizers"></a>Sonlandırıcılar
 
