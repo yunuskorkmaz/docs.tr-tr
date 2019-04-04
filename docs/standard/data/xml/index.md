@@ -5,6 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: 1edd267ed388f630cc332caa278d5c47a40d77d5
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835128"
 ---
 # <a name="xml-documents-and-data"></a><span data-ttu-id="7bd99-102">XML Belgeleri ve Verileri</span><span class="sxs-lookup"><span data-stu-id="7bd99-102">XML Documents and Data</span></span>
 <span data-ttu-id="7bd99-103">.NET Framework XML algılayan uygulamaları kolayca oluşturmanıza olanak tanıyan sınıf kapsamlı ve tümleşik kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="7bd99-103">The .NET Framework provides a comprehensive and integrated set of classes that enable you to build XML-aware apps easily.</span></span> <span data-ttu-id="7bd99-104">Aşağıdaki ad alanındaki sınıflar, ayrıştırma ve XML, bellek, veri doğrulama ve XSLT dönüşümü XML verilerini düzenleme yazma desteği.</span><span class="sxs-lookup"><span data-stu-id="7bd99-104">The classes in the following namespaces support parsing and writing XML, editing XML data in memory, data validation, and XSLT transformation.</span></span>  

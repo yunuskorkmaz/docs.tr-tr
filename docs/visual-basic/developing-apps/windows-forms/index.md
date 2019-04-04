@@ -2,9 +2,15 @@
 title: Windows Forms Uygulaması Temelleri (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - Windows applications
-  - 'Windows Forms, Visual Basic'
+- Windows applications
+- Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
+ms.openlocfilehash: 99aa61d921217ab5638172a54697054e8421fd5c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972683"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a><span data-ttu-id="9fad0-102">Windows Forms Uygulaması Temelleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9fad0-102">Windows Forms Application Basics (Visual Basic)</span></span>
 <span data-ttu-id="9fad0-103">Visual Basic önemli bir parçası, kullanıcıların bilgisayarlarında yerel olarak çalışan Windows Forms uygulamaları oluşturmak için olanağıdır.</span><span class="sxs-lookup"><span data-stu-id="9fad0-103">An important part of Visual Basic is the ability to create Windows Forms applications that run locally on users' computers.</span></span> <span data-ttu-id="9fad0-104">Visual Studio, Windows formları kullanarak uygulama ve kullanıcı arabirimi oluşturmak için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9fad0-104">You can use Visual Studio to create the application and user interface using Windows Forms.</span></span> <span data-ttu-id="9fad0-105">Bir Windows Forms uygulaması sınıflardan geliştirilmiştir <xref:System.Windows.Forms> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="9fad0-105">A Windows Forms application is built on classes from the <xref:System.Windows.Forms> namespace.</span></span>  

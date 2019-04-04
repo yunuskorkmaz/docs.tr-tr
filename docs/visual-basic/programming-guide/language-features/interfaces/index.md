@@ -2,11 +2,17 @@
 title: Arabirimler (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, interfaces'
-  - 'interfaces [Visual Basic], Visual Basic'
-  - interfaces
-  - 'interfaces [Visual Basic]'
+- Visual Basic code, interfaces
+- interfaces [Visual Basic], Visual Basic
+- interfaces
+- interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
+ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972396"
 ---
 # <a name="interfaces-visual-basic"></a><span data-ttu-id="8a983-102">Arabirimler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a983-102">Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="8a983-103">*Arabirimleri* özellikleri, yöntemleri ve sınıfları uygulayan olayları tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="8a983-103">*Interfaces* define the properties, methods, and events that classes can implement.</span></span> <span data-ttu-id="8a983-104">Arabirim Özellikleri yakından ilgili özellikleri, yöntemleri ve olayları küçük gruplar olarak tanımlamanızı sağlar; Varolan kodu tehlikeye atmadan, arabirimler için geliştirilmiş uygulamalar geliştirebilirsiniz çünkü bu uyumluluk sorunları azaltır.</span><span class="sxs-lookup"><span data-stu-id="8a983-104">Interfaces allow you to define features as small groups of closely related properties, methods, and events; this reduces compatibility problems because you can develop enhanced implementations for your interfaces without jeopardizing existing code.</span></span> <span data-ttu-id="8a983-105">Ek arabirimleri ve uygulamalar geliştirerek, herhangi bir zamanda yeni özellikler ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8a983-105">You can add new features at any time by developing additional interfaces and implementations.</span></span>  

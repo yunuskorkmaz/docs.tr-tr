@@ -2,17 +2,23 @@
 title: .NET uygulamalarında kaynakları
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203369"
 ---
 # <a name="resources-in-net-apps"></a><span data-ttu-id="9019a-102">.NET uygulamalarında kaynakları</span><span class="sxs-lookup"><span data-stu-id="9019a-102">Resources in .NET Apps</span></span>
 <span data-ttu-id="9019a-103">Üretim kalitesindeki neredeyse tüm uygulamaların kaynakları kullanması gerekir.</span><span class="sxs-lookup"><span data-stu-id="9019a-103">Nearly every production-quality app has to use resources.</span></span> <span data-ttu-id="9019a-104">Bir kaynak, mantıksal olarak bir uygulamayla dağıtılan yürütülemez herhangi bir veridir.</span><span class="sxs-lookup"><span data-stu-id="9019a-104">A resource is any nonexecutable data that is logically deployed with an app.</span></span> <span data-ttu-id="9019a-105">Bir kaynak, bir uygulamada hata iletileri veya kullanıcı arabiriminin bir parçası olarak görüntülenebilir.</span><span class="sxs-lookup"><span data-stu-id="9019a-105">A resource might be displayed in an app as error messages or as part of the user interface.</span></span> <span data-ttu-id="9019a-106">Kaynaklar ve kalıcı nesneler formlar, dizeler, görüntüler dahil olmak üzere çeşitli verileri içerebilir.</span><span class="sxs-lookup"><span data-stu-id="9019a-106">Resources can contain data in a number of forms, including strings, images, and persisted objects.</span></span> <span data-ttu-id="9019a-107">(Kalıcı nesneleri bir kaynak dosyasına yazmak için, nesnelerin seri hale getirilebilir olması gerekir.) Verilerinizi bir kaynak dosyasında depolamak bütün uygulamanızı yeniden derlemeden bu verileri değiştirmenize olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="9019a-107">(To write persisted objects to a resource file, the objects must be serializable.) Storing your data in a resource file enables you to change the data without recompiling your entire app.</span></span> <span data-ttu-id="9019a-108">Ayrıca verileri tek bir konumda depolamanızı sağlar ve çoklu konumlarda depolanan sabit kodlanmış verilerin kullanılması gereğini ortadan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="9019a-108">It also enables you to store data in a single location, and eliminates the need to rely on hard-coded data that is stored in multiple locations.</span></span>  

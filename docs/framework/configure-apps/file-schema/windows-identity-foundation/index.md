@@ -3,6 +3,12 @@ title: Windows Identity Foundation Yapılandırma Şeması
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
+ms.openlocfilehash: 9c8009b4d95e5aa2c3d9bb8a8958040127a9e628
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441196"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a><span data-ttu-id="52795-102">Windows Identity Foundation Yapılandırma Şeması</span><span class="sxs-lookup"><span data-stu-id="52795-102">Windows Identity Foundation Configuration Schema</span></span>
 <span data-ttu-id="52795-103">Bu bölümdeki konularda, Windows Identity Foundation (WIF) yapılandırma şeması hakkında bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="52795-103">The topics in this section provide information about the Windows Identity Foundation (WIF) configuration schema.</span></span> <span data-ttu-id="52795-104">Ayrıca, bir uygulamayı WIF sınıfları framework tarafından kullanıma sunulan aracılığıyla kullanmak için yapılandırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="52795-104">You can also configure an application to use WIF through classes exposed by the framework.</span></span> <span data-ttu-id="52795-105">Bu sınıfları, ilgili öğeleri şemada kabul bölümlerde belirtilmiştir.</span><span class="sxs-lookup"><span data-stu-id="52795-105">These classes are noted in the sections that treat relevant elements in the schema.</span></span> <span data-ttu-id="52795-106">WIF yapılandırma şeması tarafından kullanıma sunulan yapısı aşağıdaki gösterildiği temel XML etiketi.</span><span class="sxs-lookup"><span data-stu-id="52795-106">The following shows the basic XML tag structure exposed by the WIF configuration schema.</span></span> <span data-ttu-id="52795-107">Öznitelikleri göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="52795-107">Attributes are omitted.</span></span> <span data-ttu-id="52795-108">Vurgulanan açıklamaları şema ana bileşenleri gösterir.</span><span class="sxs-lookup"><span data-stu-id="52795-108">Highlighted comments indicate major components of the schema.</span></span>  

@@ -1,10 +1,15 @@
 ---
-title: 'Turu C# - C# Kılavuzu'
-description: 'Yeni C#? Dilinin temellerini öğrenin.'
+title: Turu C# - C# Kılavuzu
+description: Yeni C#? Dilinin temellerini öğrenin.
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
+ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843435"
 ---
-
 # <a name="a-tour-of-the-c-language"></a><span data-ttu-id="bc7bf-104">Turu C# dil</span><span class="sxs-lookup"><span data-stu-id="bc7bf-104">A Tour of the C# Language</span></span>
 
 <span data-ttu-id="bc7bf-105">C# (okunur "Bkz Sharp") bir basit, modern, nesne yönelimli ve tür kullanımı uyumlu programlama dilidir.</span><span class="sxs-lookup"><span data-stu-id="bc7bf-105">C# (pronounced "See Sharp") is a simple, modern, object-oriented, and type-safe programming language.</span></span> <span data-ttu-id="bc7bf-106">C#kendi kökleri dilleri C ailesinde vardır ve C, C++, Java ve JavaScript programcıları için hemen tanıdık gelecektir.</span><span class="sxs-lookup"><span data-stu-id="bc7bf-106">C# has its roots in the C family of languages and will be immediately familiar to C, C++, Java, and JavaScript programmers.</span></span>

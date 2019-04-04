@@ -2,11 +2,16 @@
 title: WCF Veri Hizmetleri 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Astoria
-  - 'WCF Data Services, getting started'
+- Astoria
+- WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
+ms.openlocfilehash: 6910bfbc94f69292bb8c2a52bf3ebef8fcfb3a8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500245"
 ---
-
 # <a name="wcf-data-services-45"></a><span data-ttu-id="0db3d-102">WCF Veri Hizmetleri 4.5</span><span class="sxs-lookup"><span data-stu-id="0db3d-102">WCF Data Services 4.5</span></span>
 
 <span data-ttu-id="0db3d-103">WCF Veri Hizmetleri (eski adıyla "ADO.NET Data Services" da bilinir) kullanan hizmetler oluşturmanıza olanak tanıyan .NET Framework'ün bir bileşenidir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] semantiği kullanarak Web veya intranet üzerinden verileri kullanır ve [ temsili durum aktarımı (REST)](https://go.microsoft.com/fwlink/?LinkId=113919).</span><span class="sxs-lookup"><span data-stu-id="0db3d-103">WCF Data Services (formerly known as "ADO.NET Data Services") is a component of the .NET Framework that enables you to create services that use the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] to expose and consume data over the Web or intranet by using the semantics of [representational state transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919).</span></span> <span data-ttu-id="0db3d-104">OData veri tarafından bir URI'leri adreslenebilir kaynakları olarak kullanıma sunar.</span><span class="sxs-lookup"><span data-stu-id="0db3d-104">OData exposes data as resources that are addressable by URIs.</span></span> <span data-ttu-id="0db3d-105">Veri erişim ve GET, PUT, POST ve DELETE, standart HTTP fiillerini kullanarak değiştirildi.</span><span class="sxs-lookup"><span data-stu-id="0db3d-105">Data is accessed and changed by using standard HTTP verbs of GET, PUT, POST, and DELETE.</span></span> <span data-ttu-id="0db3d-106">OData varlık ilişkisi kuralları kullanan [varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md) kaynakları ilişkilendirmeleri ilgili varlık kümeleri olarak kullanıma sunmak için.</span><span class="sxs-lookup"><span data-stu-id="0db3d-106">OData uses the entity-relationship conventions of the [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) to expose resources as sets of entities that are related by associations.</span></span>

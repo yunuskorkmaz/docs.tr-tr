@@ -1,10 +1,15 @@
 ---
 title: .NET derleyici Platformu SDK'sı (Roslyn API'leri)
-description: '.NET derleyici Platformu (Roslyn API''leri olarak da bilinir) SDK .NET kod, hataların, anlamak ve bu hataları düzeltmek için kullanmayı öğrenin.'
+description: .NET derleyici Platformu (Roslyn API'leri olarak da bilinir) SDK .NET kod, hataların, anlamak ve bu hataları düzeltmek için kullanmayı öğrenin.
 ms.date: 10/10/2017
 ms.custom: mvc
+ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185850"
 ---
-
 # <a name="the-net-compiler-platform-sdk"></a><span data-ttu-id="ab6c6-103">.NET derleyici Platformu SDK'sı</span><span class="sxs-lookup"><span data-stu-id="ab6c6-103">The .NET Compiler Platform SDK</span></span>
 
 <span data-ttu-id="ab6c6-104">Söz dizimi ve kodun semantik doğrulama gibi derleyicileri uygulama kodu daha ayrıntılı bir modelini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="ab6c6-104">Compilers build a detailed model of application code as they validate the syntax and semantics of that code.</span></span> <span data-ttu-id="ab6c6-105">Bunlar yürütülebilir çıkışı kaynak kodu oluşturmak için bu modeli kullanır.</span><span class="sxs-lookup"><span data-stu-id="ab6c6-105">They use this model to build the executable output from the source code.</span></span> <span data-ttu-id="ab6c6-106">.NET derleyici Platformu SDK'sı, bu model erişim sağlar.</span><span class="sxs-lookup"><span data-stu-id="ab6c6-106">The .NET Compiler Platform SDK provides access to this model.</span></span> <span data-ttu-id="ab6c6-107">Gittikçe, biz tümleşik geliştirme ortamı (IDE) özelliklerini kullanan yeniden düzenleme, IntelliSense, akıllı yeniden adlandırma, "tüm başvuruları Bul" ve "Tanıma Git" gibi bizim üretkenliği artırmak için.</span><span class="sxs-lookup"><span data-stu-id="ab6c6-107">Increasingly, we rely on integrated development environment (IDE) features such as IntelliSense, refactoring, intelligent rename, "Find all references," and "Go to definition" to increase our productivity.</span></span> <span data-ttu-id="ab6c6-108">Biz, bizim kod kalitesini ve uygulama oluşturma, yardımcı olmak için kod oluşturucuları geliştirmek için kod çözümleme araçları dayanır.</span><span class="sxs-lookup"><span data-stu-id="ab6c6-108">We rely on code analysis tools to improve our code quality, and code generators to aid in application construction.</span></span> <span data-ttu-id="ab6c6-109">Bu araçlar daha akıllıca kararlar alın gibi daha fazla ve daha fazla uygulama kodu işlemek gibi yalnızca derleyiciler oluşturduğunuz modelin erişim.</span><span class="sxs-lookup"><span data-stu-id="ab6c6-109">As these tools get smarter, they need access to more and more of the model that only compilers create as they process application code.</span></span> <span data-ttu-id="ab6c6-110">Roslyn API'leri çekirdek görev budur: siyah kutularını açan açarak ve araçları ve zengin bilgi derleyiciler içinde paylaşmak için son kullanıcılara izin vererek kodumuz hakkında sahip.</span><span class="sxs-lookup"><span data-stu-id="ab6c6-110">This is the core mission of the Roslyn APIs: opening up the black boxes and allowing tools and end users to share in the wealth of information compilers have about our code.</span></span>

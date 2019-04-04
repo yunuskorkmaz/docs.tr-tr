@@ -1,11 +1,17 @@
 ---
-title: 'Dizeleri - C# Programlama Kılavuzu'
+title: Dizeleri - C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, strings'
-  - 'strings [C#]'
+- C# language, strings
+- strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
+ms.openlocfilehash: 9561393a78ffbf9c2bec98c849c389b92227db78
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373458"
 ---
 # <a name="strings-c-programming-guide"></a><span data-ttu-id="f2d84-102">Dizeler (C# Programlama Kılavuzu)</span><span class="sxs-lookup"><span data-stu-id="f2d84-102">Strings (C# Programming Guide)</span></span>
 <span data-ttu-id="f2d84-103">Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan.</span><span class="sxs-lookup"><span data-stu-id="f2d84-103">A string is an object of type <xref:System.String> whose value is text.</span></span> <span data-ttu-id="f2d84-104">Metin sıralı salt okunur bir koleksiyonu dahili olarak depolanan <xref:System.Char> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="f2d84-104">Internally, the text is stored as a sequential read-only collection of <xref:System.Char> objects.</span></span> <span data-ttu-id="f2d84-105">Bir C# dizenin sonuna kadar hiçbir null Sonlandırıcı karakter yoktur; Bu nedenle bir C# dize herhangi bir sayıda gömülü null karakterleri ('\0') içerebilir.</span><span class="sxs-lookup"><span data-stu-id="f2d84-105">There is no null-terminating character at the end of a C# string; therefore a C# string can contain any number of embedded null characters ('\0').</span></span> <span data-ttu-id="f2d84-106"><xref:System.String.Length%2A> Bir dize özelliğini sayısını temsil eden `Char` içerdiği, Unicode karakter sayısını nesneleri.</span><span class="sxs-lookup"><span data-stu-id="f2d84-106">The <xref:System.String.Length%2A> property of a string represents the number of `Char` objects it contains, not the number of Unicode characters.</span></span> <span data-ttu-id="f2d84-107">Bir dizedeki tek Unicode kod noktaları erişmek için <xref:System.Globalization.StringInfo> nesne.</span><span class="sxs-lookup"><span data-stu-id="f2d84-107">To access the individual Unicode code points in a string, use the <xref:System.Globalization.StringInfo> object.</span></span>  

@@ -1,11 +1,16 @@
 ---
 title: 'Sunucusuz uygulamalar: Azure uygulama mimarisi ve desenleri'
-description: 'Sunucusuz bir mimari Kılavuzu. Neden ve ne zaman, öğrenin, kurumsal uygulamalar için sunucusuz bir mimari (aksine, bir hizmet [Iaas] veya [PaaS] hizmet olarak Platform olarak altyapı) uygulamak için.'
+description: Sunucusuz bir mimari Kılavuzu. Neden ve ne zaman, öğrenin, kurumsal uygulamalar için sunucusuz bir mimari (aksine, bir hizmet [Iaas] veya [PaaS] hizmet olarak Platform olarak altyapı) uygulamak için.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
+ms.openlocfilehash: a44af1fc76b54ec9be0d8e3b3ba2e54f3e3b220b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653944"
 ---
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a><span data-ttu-id="e0b0d-104">Sunucusuz uygulamalar: Azure uygulama mimarisi ve desenleri</span><span class="sxs-lookup"><span data-stu-id="e0b0d-104">Serverless apps: Architecture, patterns, and Azure implementation</span></span>
 
 ![Sunucusuz uygulamalar e-kitap kapak gösteren ekran görüntüsü.](./media/index/serverless-apps-cover.jpg)

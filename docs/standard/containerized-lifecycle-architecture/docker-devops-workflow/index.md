@@ -4,8 +4,13 @@ description: Microsoft araçları ile Microsoft Platformu ve araçları DevOps i
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663931"
 ---
-
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a><span data-ttu-id="63eac-103">Microsoft araçları ile docker uygulaması DevOps iş akışı</span><span class="sxs-lookup"><span data-stu-id="63eac-103">Docker application DevOps workflow with Microsoft tools</span></span>
 
 <span data-ttu-id="63eac-104">*Microsoft Visual Studio, Azure DevOps Services, Team Foundation Server ve Application Insights, geliştirme ve takım projeleri yönetme ve hızlı bir şekilde oluşturun, test etmek ve dağıtmak için Araçlar verir BT işlemleri için kapsamlı bir ekosistem sağlar Kapsayıcılı uygulamaları.*</span><span class="sxs-lookup"><span data-stu-id="63eac-104">*Microsoft Visual Studio, Azure DevOps Services, Team Foundation Server, and Application Insights provide a comprehensive ecosystem for development and IT operations that give your team the tools to manage projects and rapidly build, test, and deploy containerized applications.*</span></span>

@@ -2,6 +2,12 @@
 title: .NET derlemeleri
 ms.date: 07/10/2018
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
+ms.openlocfilehash: 4a92eea623abc8aaad170dafc4bc3c917a36a474
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464716"
 ---
 # <a name="assemblies-in-net"></a><span data-ttu-id="79446-102">.NET derlemeleri</span><span class="sxs-lookup"><span data-stu-id="79446-102">Assemblies in .NET</span></span>
 

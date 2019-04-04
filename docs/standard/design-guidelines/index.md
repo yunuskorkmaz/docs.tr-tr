@@ -3,11 +3,17 @@ title: Çerçeve Tasarım Yönergeleri
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - 'libraries, .NET Framework class library'
-  - 'class library design guidelines [.NET Framework], about'
-  - 'class library design guidelines [.NET Framework]'
+- libraries, .NET Framework class library
+- class library design guidelines [.NET Framework], about
+- class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
+ms.openlocfilehash: c20430f9cdcd71cc2e178d38aeed48f9fa4e75c5
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834904"
 ---
 # <a name="framework-design-guidelines"></a><span data-ttu-id="5fae4-102">Çerçeve Tasarım Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="5fae4-102">Framework Design Guidelines</span></span>
 <span data-ttu-id="5fae4-103">Bu bölüm, genişleten ve .NET Framework ile etkileşim kitaplıklar tasarlama için yönergeler sağlar.</span><span class="sxs-lookup"><span data-stu-id="5fae4-103">This section provides guidelines for designing libraries that extend and interact with the .NET Framework.</span></span> <span data-ttu-id="5fae4-104">Bağımsız geliştirme için kullanılan programlama dili olan birleşik bir programlama modeli sağlayarak API tutarlığı ve kullanım kolaylığı sağlamak kitaplığı tasarımcıları yardımcı olmaktır.</span><span class="sxs-lookup"><span data-stu-id="5fae4-104">The goal is to help library designers ensure API consistency and ease of use by providing a unified programming model that is independent of the programming language used for development.</span></span> <span data-ttu-id="5fae4-105">Sınıfları ve genişleten .NET Framework bileşenleri geliştirirken bu tasarım ilkelerine uyun öneririz.</span><span class="sxs-lookup"><span data-stu-id="5fae4-105">We recommend that you follow these design guidelines when developing classes and components that extend the .NET Framework.</span></span> <span data-ttu-id="5fae4-106">Tutarsız kitaplığı tasarım olumsuz geliştirici üretkenliğinizi etkiler ve benimseme gerçekleştirilmesini önler.</span><span class="sxs-lookup"><span data-stu-id="5fae4-106">Inconsistent library design adversely affects developer productivity and discourages adoption.</span></span>  

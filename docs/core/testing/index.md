@@ -1,12 +1,17 @@
 ---
 title: .NET Core ve .NET standart birim testi
-description: 'Bu makalede, birim testi .NET Core ve .NET Standard projeleri için kısa bir genel bakış sağlar.'
+description: Bu makalede, birim testi .NET Core ve .NET Standard projeleri için kısa bir genel bakış sağlar.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185512"
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a><span data-ttu-id="2beb3-103">.NET Core ve .NET standart birim testi</span><span class="sxs-lookup"><span data-stu-id="2beb3-103">Unit testing in .NET Core and .NET Standard</span></span>
 
 <span data-ttu-id="2beb3-104">.NET core birim testleri oluşturmayı kolay hale getirir.</span><span class="sxs-lookup"><span data-stu-id="2beb3-104">.NET Core makes it easy to create unit tests.</span></span> <span data-ttu-id="2beb3-105">Bu makalede, birim testleri tanıtır ve diğer tür testlerin farkı göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="2beb3-105">This article introduces unit tests and illustrates how they differ from other kinds of tests.</span></span> <span data-ttu-id="2beb3-106">Sayfanın alt kısmındaki bağlı kaynaklar, bir test projesi çözümünüze ekleyin gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="2beb3-106">The linked resources near the bottom of the page show you how to add a test project to your solution.</span></span> <span data-ttu-id="2beb3-107">Test projenizin ayarladıktan sonra komut satırında veya Visual Studio kullanarak birim testleri çalıştırmak mümkün olacaktır.</span><span class="sxs-lookup"><span data-stu-id="2beb3-107">After you set up your test project, you will be able to run your unit tests using the command line or Visual Studio.</span></span>

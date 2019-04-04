@@ -2,6 +2,12 @@
 title: Seri hale getirme (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
+ms.openlocfilehash: 947b38e8166ba05d871aafbaba5766aa9dab21f4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409711"
 ---
 # <a name="serialization-visual-basic"></a><span data-ttu-id="7b937-102">Seri hale getirme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b937-102">Serialization (Visual Basic)</span></span>
 <span data-ttu-id="7b937-103">Serileştirme bir nesneyi depolamak veya bellek, bir veritabanı veya dosya aktarmak için bayt akışı bir nesne dönüştürme işlemidir.</span><span class="sxs-lookup"><span data-stu-id="7b937-103">Serialization is the process of converting an object into a stream of bytes in order to store the object or transmit it to memory, a database, or a file.</span></span> <span data-ttu-id="7b937-104">Ana amacı, gerektiğinde yeniden oluşturmak için bir nesnenin durumu kaydetmektir.</span><span class="sxs-lookup"><span data-stu-id="7b937-104">Its main purpose is to save the state of an object in order to be able to recreate it when needed.</span></span> <span data-ttu-id="7b937-105">Seri durumundan çıkarma ters işlem çağrılır.</span><span class="sxs-lookup"><span data-stu-id="7b937-105">The reverse process is called deserialization.</span></span>  

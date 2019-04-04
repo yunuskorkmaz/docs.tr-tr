@@ -2,15 +2,21 @@
 title: Windows Hizmet Uygulamaları Geliştirme
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'ServiceInstaller class, Windows Service applications'
-  - 'Service class, Windows Service applications'
-  - Windows Service applications
-  - Windows NT services
-  - 'ServiceProcessInstaller class, Windows Service applications'
-  - services
-  - '.NET applications, Windows applications'
+- ServiceInstaller class, Windows Service applications
+- Service class, Windows Service applications
+- Windows Service applications
+- Windows NT services
+- ServiceProcessInstaller class, Windows Service applications
+- services
+- .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
+ms.openlocfilehash: 32aa2c1c4cd31e4591c9fa30c05ebe61058f94c5
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442639"
 ---
 # <a name="develop-windows-service-apps"></a><span data-ttu-id="8273d-102">Windows hizmet uygulamaları geliştirme</span><span class="sxs-lookup"><span data-stu-id="8273d-102">Develop Windows service apps</span></span>
 

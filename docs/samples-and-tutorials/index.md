@@ -1,11 +1,16 @@
 ---
 title: .NET örnekler ve öğreticiler
-description: '.NET Core, ASP.NET Core için örnekler ve öğreticiler hakkında bilgi ve C# yardımcı dil .NET hakkında bilgi edinin.'
+description: .NET Core, ASP.NET Core için örnekler ve öğreticiler hakkında bilgi ve C# yardımcı dil .NET hakkında bilgi edinin.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558966"
 ---
-
 # <a name="net-samples-and-tutorials"></a><span data-ttu-id="8bb67-103">.NET örnekler ve öğreticiler</span><span class="sxs-lookup"><span data-stu-id="8bb67-103">.NET samples and tutorials</span></span>
 
 <span data-ttu-id="8bb67-104">.NET belgeleri hakkında daha fazla .NET öğretmek öğreticileri ve örnekleri içerir.</span><span class="sxs-lookup"><span data-stu-id="8bb67-104">The .NET documentation contains a set of samples and tutorials that teach you about .NET.</span></span> <span data-ttu-id="8bb67-105">Bu konu, bulma, görüntüleme ve .NET Core, ASP.NET Core, indirme açıklar ve C# örnekler ve öğreticiler.</span><span class="sxs-lookup"><span data-stu-id="8bb67-105">This topic describes how to find, view, and download .NET Core, ASP.NET Core, and C# samples and tutorials.</span></span> <span data-ttu-id="8bb67-106">Bilgi edinmek için kaynakları bulmak F# üzerinde programlama dilini [ F# Foundation'ın site](https://fsharp.org/learn.html).</span><span class="sxs-lookup"><span data-stu-id="8bb67-106">Find resources to learn the F# programming language on the [F# Foundation's site](https://fsharp.org/learn.html).</span></span> <span data-ttu-id="8bb67-107">Keşfetmeye içinde ilgileniyorsanız C# başlayın bir çevrimiçi Kod Düzenleyicisi'ni kullanarak [bu etkileşimli öğreticisini](https://www.microsoft.com/net/learn/in-browser-tutorial/1) ve devam et [ C# etkileşimli öğreticisini](../csharp/tutorials/intro-to-csharp/index.md).</span><span class="sxs-lookup"><span data-stu-id="8bb67-107">If you're interested in exploring C# using an online code editor, start with [this interactive tutorial](https://www.microsoft.com/net/learn/in-browser-tutorial/1) and continue with [C# interactive tutorial](../csharp/tutorials/intro-to-csharp/index.md).</span></span> <span data-ttu-id="8bb67-108">Görüntüleme ve örnek kodu indirdikten hakkında yönergeler için bkz: [görüntüleme ve örneklerini indirerek](#viewing-and-downloading-samples) bölümü.</span><span class="sxs-lookup"><span data-stu-id="8bb67-108">For instructions on how to view and download sample code, see the [Viewing and downloading samples](#viewing-and-downloading-samples) section.</span></span>

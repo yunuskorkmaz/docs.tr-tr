@@ -1,9 +1,14 @@
 ---
-title: 'Nasıl yapılır makaleleri (C# Kılavuzu)'
-description: 'Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu'
+title: Nasıl yapılır makaleleri (C# Kılavuzu)
+description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202346"
 ---
-
 # <a name="how-to-c"></a><span data-ttu-id="38d76-103">Nasıl yapılır (C#)</span><span class="sxs-lookup"><span data-stu-id="38d76-103">How to (C#)</span></span>
 
 <span data-ttu-id="38d76-104">C# Kılavuzu bölümünü nasıl sık sorulan sorulara hızlı yanıtlar bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="38d76-104">In the How to section of the C# Guide you can find quick answers to common questions.</span></span> <span data-ttu-id="38d76-105">Bazı durumlarda, makaleler birden çok bölümlerinde listelenen.</span><span class="sxs-lookup"><span data-stu-id="38d76-105">In some cases, articles may be listed in multiple sections.</span></span> <span data-ttu-id="38d76-106">Birden çok arama yolunu bulmayı kolaylaştırmak istedik.</span><span class="sxs-lookup"><span data-stu-id="38d76-106">We wanted to make them easy to find for multiple search paths.</span></span> 

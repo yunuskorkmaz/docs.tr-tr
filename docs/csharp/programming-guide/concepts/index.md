@@ -1,7 +1,13 @@
 ---
-title: 'Programlama Kavramları (C#)'
+title: Programlama Kavramları (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
+ms.openlocfilehash: bfe4046d6d54693867ebe5d8529a4744b9e69c3b
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748251"
 ---
 # <a name="programming-concepts-c"></a><span data-ttu-id="d841d-102">Programlama Kavramları (C#)</span><span class="sxs-lookup"><span data-stu-id="d841d-102">Programming Concepts (C#)</span></span>
 <span data-ttu-id="d841d-103">Bu bölümde, C# dilinde programlama kavramları açıklanmıştır.</span><span class="sxs-lookup"><span data-stu-id="d841d-103">This section explains programming concepts in the C# language.</span></span>  

@@ -2,13 +2,18 @@
 title: Visual Basic'de Diziler
 ms.date: 12/06/2017
 f1_keywords:
-  - vb.Array
+- vb.Array
 helpviewer_keywords:
-  - 'arrays [Visual Basic]'
-  - 'Visual Basic, arrays'
+- arrays [Visual Basic]
+- Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
+ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675971"
 ---
-
 # <a name="arrays-in-visual-basic"></a><span data-ttu-id="52058-102">Visual Basic'de Diziler</span><span class="sxs-lookup"><span data-stu-id="52058-102">Arrays in Visual Basic</span></span>
 
 <span data-ttu-id="52058-103">Bir dizi terimiyle gösterilen değerler kümesidir *öğeleri*, mantıksal olarak ilgili arasındaki ilişki.</span><span class="sxs-lookup"><span data-stu-id="52058-103">An array is a set of values, which are termed *elements*, that are logically related to each other.</span></span> <span data-ttu-id="52058-104">Örneğin, bir dizi, dilbilgisi okulundaki her sınıfta Öğrenciler sayısının oluşabilir; dizinin her öğesi tek bir sınıf Öğrenci sayısıdır.</span><span class="sxs-lookup"><span data-stu-id="52058-104">For example, an array may consist of the number of students in each grade in a grammar school; each element of the array is the number of students in a single grade.</span></span> <span data-ttu-id="52058-105">Benzer şekilde, bir sınıf için bir öğrenci derece, bir dizi oluşabilir; dizinin her öğesi, bir tek sınıf hizmetidir.</span><span class="sxs-lookup"><span data-stu-id="52058-105">Similarly, an array may consist of a student's grades for a class; each element of the array is a single grade.</span></span>

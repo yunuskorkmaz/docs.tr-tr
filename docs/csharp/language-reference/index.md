@@ -1,13 +1,19 @@
 ---
-title: 'C# Başvurusu'
+title: C# Başvurusu
 ms.date: 02/14/2017
 helpviewer_keywords:
-  - 'Visual C#, language reference'
-  - 'language reference [C#]'
-  - 'Programmer''s Reference for C#'
-  - 'C# language, reference'
-  - 'reference, C# language'
+- Visual C#, language reference
+- language reference [C#]
+- Programmer's Reference for C#
+- C# language, reference
+- reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
+ms.openlocfilehash: 6862ae72b235653d4576915605f14c9e4de92bce
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845424"
 ---
 # <a name="c-reference"></a><span data-ttu-id="713b2-102">C# Başvurusu</span><span class="sxs-lookup"><span data-stu-id="713b2-102">C# Reference</span></span>
 <span data-ttu-id="713b2-103">Bu bölümde, ilgili başvuru malzemesi sağlar. C# anahtar sözcükleri, işleçler, özel karakterler, önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve Uyarıları.</span><span class="sxs-lookup"><span data-stu-id="713b2-103">This section provides reference material about C# keywords, operators, special characters, preprocessor directives, compiler options, and compiler errors and warnings.</span></span>  

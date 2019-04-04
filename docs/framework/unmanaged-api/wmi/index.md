@@ -4,8 +4,13 @@ description: .NET Framework özetler yönetilmeyen API için WMI ve performans s
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377462"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a><span data-ttu-id="3c64b-103">Windows Yönetim Araçları (WMI) ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="3c64b-103">Windows Management Instrumentation (WMI) and Performance Counters (Unmanaged API Reference)</span></span>
 
 <span data-ttu-id="3c64b-104">.NET Framework WMI ve performans sayaçları yönetilmeyen API çağrılar sarmalama işlevler kümesi oluşur [yerel Windows Yönetim Araçları'nı API](/windows/desktop/WmiSdk/com-api-for-wmi).</span><span class="sxs-lookup"><span data-stu-id="3c64b-104">The .NET Framework WMI and Performance Counters unmanaged API consists of a set of functions that wrap calls to the [native Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi).</span></span> <span data-ttu-id="3c64b-105">Araçları ve kitaplıklarını yönetme ve izleme uzak bilgisayar sistemleri geliştirmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="3c64b-105">It allows you to develop tools and libraries that manage and monitor remote computer systems.</span></span>

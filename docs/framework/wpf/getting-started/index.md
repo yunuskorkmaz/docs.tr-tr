@@ -2,10 +2,16 @@
 title: Başlarken (WPF)
 ms.date: 01/26/2018
 helpviewer_keywords:
-  - 'getting started [WPF]'
-  - 'introduction [WPF]'
-  - 'WPF [WPF], getting started'
+- getting started [WPF]
+- introduction [WPF]
+- WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
+ms.openlocfilehash: 0717536912802461e6d03e240b22d3e05d535f86
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371150"
 ---
 # <a name="getting-started-wpf"></a><span data-ttu-id="ca108-102">Başlarken (WPF)</span><span class="sxs-lookup"><span data-stu-id="ca108-102">Getting Started (WPF)</span></span>
 <span data-ttu-id="ca108-103">Windows Presentation Foundation (WPF) masaüstü istemci uygulamalar oluşturan bir kullanıcı Arabirimi çerçevedir.</span><span class="sxs-lookup"><span data-stu-id="ca108-103">Windows Presentation Foundation (WPF) is a UI framework that creates desktop client applications.</span></span> <span data-ttu-id="ca108-104">WPF geliştirme platformu, çok sayıda uygulama modeli, kaynaklar, denetimler, grafik, düzen, veri bağlama, belgeleri ve güvenlik dahil olmak üzere uygulama geliştirme özellikleri destekler.</span><span class="sxs-lookup"><span data-stu-id="ca108-104">The WPF development platform supports a broad set of application development features, including an application model, resources, controls, graphics, layout, data binding, documents, and security.</span></span> <span data-ttu-id="ca108-105">.NET Framework'ün bir alt kümesi olan şekilde, daha önce uygulamaları .NET Framework ile ASP.NET veya Windows Forms kullanarak oluşturduysanız, bir programlama deneyimi hakkında bilgi sahibi olmanız.</span><span class="sxs-lookup"><span data-stu-id="ca108-105">It is a subset of the .NET Framework, so if you have previously built applications with the .NET Framework using ASP.NET or Windows Forms, the programming experience should be familiar.</span></span> <span data-ttu-id="ca108-106">WPF Extensible Application Markup Language (XAML) uygulama programlama için bildirime dayalı bir modeli sağlamak için kullanır.</span><span class="sxs-lookup"><span data-stu-id="ca108-106">WPF uses the Extensible Application Markup Language (XAML) to provide a declarative model for application programming.</span></span> <span data-ttu-id="ca108-107">Bu bölümde tanıtır ve WPF ile çalışmaya başlamanıza yardımcı konuları bulunur.</span><span class="sxs-lookup"><span data-stu-id="ca108-107">This section has topics that introduce and help you get started with WPF.</span></span>  

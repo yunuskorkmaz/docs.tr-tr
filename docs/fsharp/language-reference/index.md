@@ -1,7 +1,13 @@
 ---
-title: 'F# Dili Başvurusu'
-description: 'Bulma F# dili belirteçleri, kavramları, türleri, ifadeler ve derleyici tarafından desteklenen yapı konular bu başvuruyu dil özellik bilgileri.'
+title: F# Dili Başvurusu
+description: Bulma F# dili belirteçleri, kavramları, türleri, ifadeler ve derleyici tarafından desteklenen yapı konular bu başvuruyu dil özellik bilgileri.
 ms.date: 05/16/2016
+ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846642"
 ---
 # <a name="f-language-reference"></a><span data-ttu-id="bed84-103">F# Dili Başvurusu</span><span class="sxs-lookup"><span data-stu-id="bed84-103">F# Language Reference</span></span>
 
