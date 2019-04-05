@@ -7,26 +7,26 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362233"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055059"
 ---
-# <a name="listbox"></a><span data-ttu-id="4b514-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="4b514-102">ListBox</span></span>
-<span data-ttu-id="4b514-103">A <xref:System.Windows.Controls.ListBox> seçilebilir öğe listesi kullanıcılara denetim sağlar.</span><span class="sxs-lookup"><span data-stu-id="4b514-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="872cf-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="872cf-102">ListBox</span></span>
+<span data-ttu-id="872cf-103">A <xref:System.Windows.Controls.ListBox> seçilebilir öğe listesi kullanıcılara denetim sağlar.</span><span class="sxs-lookup"><span data-stu-id="872cf-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="4b514-104">Aşağıdaki şekilde, tipik bir gösterilmektedir <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="4b514-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="872cf-104">Aşağıdaki şekilde, tipik bir gösterilmektedir <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="872cf-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="4b514-105">![ListBox ekran](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="4b514-105">![ListBox screen shot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="4b514-106">Tipik bir liste kutusu</span><span class="sxs-lookup"><span data-stu-id="4b514-106">Typical ListBox</span></span>  
+ <span data-ttu-id="872cf-105">![ListBox ekran](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="872cf-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="872cf-106">Tipik bir liste kutusu</span><span class="sxs-lookup"><span data-stu-id="872cf-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4b514-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="4b514-107">In This Section</span></span>  
- [<span data-ttu-id="4b514-108">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="4b514-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="872cf-107">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="872cf-107">In This Section</span></span>  
+ [<span data-ttu-id="872cf-108">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="872cf-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="4b514-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="4b514-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="872cf-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="872cf-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="4b514-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="4b514-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="872cf-110">İlgili Bölümler</span><span class="sxs-lookup"><span data-stu-id="872cf-110">Related Sections</span></span>
