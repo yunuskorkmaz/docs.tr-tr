@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 9561393a78ffbf9c2bec98c849c389b92227db78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: HT
+ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373458"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920694"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin sıralı salt okunur bir koleksiyonu dahili olarak depolanan <xref:System.Char> nesneleri. Bir C# dizenin sonuna kadar hiçbir null Sonlandırıcı karakter yoktur; Bu nedenle bir C# dize herhangi bir sayıda gömülü null karakterleri ('\0') içerebilir. <xref:System.String.Length%2A> Bir dize özelliğini sayısını temsil eden `Char` içerdiği, Unicode karakter sayısını nesneleri. Bir dizedeki tek Unicode kod noktaları erişmek için <xref:System.Globalization.StringInfo> nesne.  
@@ -74,7 +74,7 @@ Türünde bir nesne bir dizedir <xref:System.String> metin değeri olan. Metin s
  Bir biçim dizesi, içerikleri, çalışma zamanında dinamik olarak belirlenir bir dizedir. Biçim dizeleri ekleyerek oluşturulur *ilişkilendirilmiş ifade* veya küme ayraçları içinde bir dize içinde yer tutucular. Küme ayraçları içinde her şeyi (`{...}`) olarak biçimlendirilmiş bir dize çalışma zamanında bir değer ve çıkış çözülmüş olacaktır. Biçim dizesi oluşturmak için iki yöntem vardır: İlişkilendirme ve bileşik biçimlendirme dizesi.
 
 ### <a name="string-interpolation"></a>Dize ilişkilendirme
-Kullanılabilir C# 6.0 ve üzeri, [ *ilişkilendirilmiş dizeler* ](../../language-reference/tokens/interpolated.md) tarafından tanımlanan `$` özel karakter ve küme ayraçları içine ilişkilendirilmiş ifadeler içerir. Dize ilişkilendirme için yeni başlıyorsanız bkz [dize ilişkilendirme - C# etkileşimli öğreticisini](../../tutorials/intro-to-csharp/interpolated-strings.yml) hızlı bir genel bakış.
+Kullanılabilir C# 6.0 ve üzeri, [ *ilişkilendirilmiş dizeler* ](../../language-reference/tokens/interpolated.md) tarafından tanımlanan `$` özel karakter ve küme ayraçları içine ilişkilendirilmiş ifadeler içerir. Dize ilişkilendirme için yeni başlıyorsanız bkz [dize ilişkilendirme - C# etkileşimli öğreticisini](../../tutorials/exploration/interpolated-strings.yml) hızlı bir genel bakış.
 
 Dize ilişkilendirme, kodunuzun Bakım ve okunabilirliği geliştirmek için kullanın. Dize ilişkilendirme olarak aynı sonuçlar elde `String.Format` yöntemi, ancak kullanın ve satır içi netlik kolaylığı artırır.
 
@@ -133,7 +133,7 @@ string s = String.Empty;
 |[Nasıl yapılır: Birden çok dizeyi birleştirme](../../how-to/concatenate-multiple-strings.md)|Bir alana birden çok dizeyi birleştirme için çeşitli yollar gösterir.|
 |[Nasıl yapılır: String.Split kullanarak dizeleri ayrıştırma](../../how-to/parse-strings-using-split.md)|Nasıl kullanılacağını örneklendiren kod örnekleri içeren `String.Split` dizelerini ayrıştırmak için yöntemi.|  
 |[Nasıl yapılır: Dizeleri arama](../../how-to/search-strings.md)|Dizelerde arama belirli bir metin veya düzenleri için kullanmayı açıklar.|  
-|[Nasıl yapılır: Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Güvenli bir şekilde geçerli bir sayısal değer olup olmadığını görmek için bir dizeyi ayrıştırma işlemi gösterilmektedir.|  
+|[Nasıl yapılır: Bir Dizenin Sayısal bir Değeri Temsil Edip Etmediğini Belirleme](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Güvenli bir şekilde geçerli bir sayısal değer olup olmadığını görmek için bir dizeyi ayrıştırma işlemi gösterilmektedir.|  
 |[Dize ilişkilendirme](../../language-reference/tokens/interpolated.md)|Biçim dizelerine bir sözdizimindeki sağlayan dize ilişkilendirme özelliğini açıklar.|
 |[Temel Dize İşlemleri](../../../../docs/standard/base-types/basic-string-operations.md)|Kullanan konulara bağlantılar sağlar <xref:System.String?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder?displayProperty=nameWithType> temel dize işlemleri gerçekleştirmek için yöntemleri.|  
 |[Dizeleri Ayrıştırma](../../../standard/base-types/parsing-strings.md)|Temel türler .NET dize temsillerini türleri ve karşılık gelen örneklerine dönüştürüleceğini açıklar.|  
