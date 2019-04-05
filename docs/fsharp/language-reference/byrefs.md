@@ -2,12 +2,12 @@
 title: Zkratka
 description: Byref ve byref-like türleri hakkında F#, alt düzey programlama için kullanılır.
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976557"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055371"
 ---
 # <a name="byrefs"></a>Zkratka
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 İşaretçiyi kullanarak yazmak için bir `outref<'T>` veya `byref<'T>`, almak için bir işaretçi değeri de yapmalısınız `mutable`.
@@ -84,7 +85,7 @@ f &dt
 Aşağıdaki kodu göz önünde bulundurun:
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 Anlamsal olarak, bu aşağıdaki gelir:
@@ -111,17 +112,17 @@ C# destekler `in ref` ve `out ref` yanı sıra anahtar sözcükleri `ref` dönd�
 
 |C# yapısı|F#algılar|
 |------------|---------|
-|`ref` Dönüş değeri|`outref<'T>`|
-|`ref readonly` Dönüş değeri|`inref<'T>`|
-|`in ref` Parametre|`inref<'T>`|
-|`out ref` Parametre|`outref<'T>`|
+|`ref` dönüş değeri|`outref<'T>`|
+|`ref readonly` dönüş değeri|`inref<'T>`|
+|`in ref` parametre|`inref<'T>`|
+|`out ref` parametre|`outref<'T>`|
 
 Aşağıdaki tabloda neler gösterilmektedir F# gösterir:
 
 |F#yapısı|Yayılan yapısı|
 |------------|-----------------|
 |`inref<'T>` Bağımsız değişken|`[In]` bağımsız değişken özniteliği|
-|`inref<'T>` döndürülecek|`modreq` öznitelik değeri|
+|`inref<'T>` return|`modreq` öznitelik değeri|
 |`inref<'T>` soyut yuvası veya uygulama|`modreq` bağımsız değişken veya dönüş|
 |`outref<'T>` Bağımsız değişken|`[Out]` bağımsız değişken özniteliği|
 

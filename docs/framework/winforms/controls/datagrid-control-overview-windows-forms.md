@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: cdf2f9aebaac09ed3e03148fdf1bc899f1e1fc45
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722002"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055215"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid Denetimine Genel Bakış (Windows Forms)
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "57722002"
   
  Varsa <xref:System.Windows.Forms.DataGrid> birden çok veri bağlı ilgili tabloları ve gezinti Kılavuzu'nun etkinleştirilirse, kılavuz Genişleticileri her satır görüntülenir. İle bir genişletici, kullanıcı, üst tablodan alt tabloya taşıyabilirsiniz. Bir düğüm tıklayarak alt tablo ve geri düğmesine tıklayarak özgün üst tablo görüntüler. Bu şekilde, kılavuz tablolar arasındaki hiyerarşik ilişkileri görüntüler.  
   
- Aşağıdaki ekran görüntüsünde, birden fazla tabloyu verilerle bir DataGrid bağlı gösterir.  
+ Bir DataGrid birden fazla tabloyu verilerle ilişkili aşağıdaki ekran gösterilir.  
   
  ![Bir DataGrid birden fazla tabloyu verilerle ilişkili](./media/vbcontrol1.gif "vbControl1")  
 Bir DataGrid birden fazla tablo ile verilere bağlı  
@@ -58,13 +58,13 @@ Bir DataGrid birden fazla tablo ile verilere bağlı
   
  Geçerli veri kaynakları için <xref:System.Windows.Forms.DataGrid> içerir:  
   
--   <xref:System.Data.DataTable> Sınıfı  
+-   <xref:System.Data.DataTable> sınıf  
   
--   <xref:System.Data.DataView> Sınıfı  
+-   <xref:System.Data.DataView> sınıf  
   
--   <xref:System.Data.DataSet> Sınıfı  
+-   <xref:System.Data.DataSet> sınıf  
   
--   <xref:System.Data.DataViewManager> Sınıfı  
+-   <xref:System.Data.DataViewManager> sınıf  
   
  Kaynak veri kümesi ise veri kümesi biçiminde bir nesne veya forma bir XML Web hizmeti tarafından geçirilen nesne olabilir. Yazılmış veya yazılmamış veri kümelerine bağlayabilirsiniz.  
   
@@ -141,7 +141,7 @@ Aşağıdaki çizim DataGrid denetiminde bulunan nesneleri gösterir.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [DataGrid Denetimi](datagrid-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [Nasıl yapılır: Windows Forms DataGrid denetimine tablolar ve sütunlar ekleme](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Nasıl yapılır: Silme veya Windows Forms DataGrid denetiminde sütunları gizleme](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [Nasıl yapılır: Windows Forms DataGrid denetimini biçimlendirme](how-to-format-the-windows-forms-datagrid-control.md)
+- [Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Nasıl yapılır: Windows Forms DataGrid Denetimine Tablo ve Sütun Ekleme](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Nasıl yapılır: Windows Forms DataGrid Denetiminde Sütunları Silme veya Gizleme](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Nasıl yapılır: Windows Forms DataGrid Denetimini Biçimlendirme](how-to-format-the-windows-forms-datagrid-control.md)

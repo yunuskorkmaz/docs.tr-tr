@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme'
-ms.date: 03/18/2019
+ms.date: 04/02/2019
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 570cbd49fd8a8ea42d1c43ebe067a0d2d3f9dc27
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504437"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055241"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme
 
@@ -68,17 +68,13 @@ Bir bilgisayarda yüklü CLR sürümlerin listesini almak için bir aracı veya 
 2. Kayıt Defteri Düzenleyicisi'nde, aşağıdaki alt anahtarı açın: **Hkey_local_machıne\software\microsoft\net Framework Setup\NDP\v4\Full**. Varsa **tam** alt hazır değilse, ardından .NET Framework 4.5 yoksa veya sonraki bir sürümü yüklü.
 
     > [!NOTE]
-    > **NET Framework Kurulum** klasörünü noktayla başlayan değil.
+    > **NET Framework Kurulum** klasörünü mu *değil* bir noktayla başlar.
 
 3. Adlı bir DWORD girişini denetleyin **yayın**. Varsa, ardından, .NET Framework 4.5 veya sonraki bir sürümünün yüklü olması. Değerini belirli bir .NET Framework sürümüne karşılık gelen bir yayın anahtardır. Aşağıdaki şekilde, örneğin değerini **yayın** girdidir *378389*, .NET Framework 4.5 için yayın anahtar olduğu. 
 
      ![.NET Framework 4.5 için kayıt defteri girişi](media/clr-installdir.png ".NET Framework 4.5 için kayıt defteri girişi")
 
-Aşağıdaki tabloda en küçük değerini **yayın** her .NET Framework sürümü için giriş. Bu değerleri şu şekilde kullanabilirsiniz:
-
-- Bir en düşük .NET Framework sürümü mevcut olup olmadığını belirlemek için test olmadığını **yayın** DWORD değeri kayıt defterinde bulundu *büyüktür veya eşittir* değeri tabloda listelenen. Örneğin, uygulamanız .NET Framework 4.7 veya üzeri gerektiriyorsa, en düşük sürüm anahtar değeri için test *460798*.
-
-- Birden çok sürümü için test etmek için en son .NET Framework sürümü ile başlayın ve ardından her art arda gelen önceki sürümü için test.
+Değeri aşağıdaki tabloda **yayın** DWORD tek işletim sistemlerinde .NET Framework 4.5 ve sonraki sürümler için.
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
@@ -86,18 +82,23 @@ Aşağıdaki tabloda en küçük değerini **yayın** her .NET Framework sürüm
 
 |.NET Framework sürümü|Yayın DWORD değeri|
 |--------------------------------|-------------|
-|.NET Framework 4.5|378389|
-|.NET Framework 4.5.1|378675|
-|.NET Framework 4.5.2|379893|
-|.NET Framework 4.6|393295|
-|.NET Framework 4.6.1|394254|
-|.NET Framework 4.6.2|394802|
-|.NET framework 4.7|460798|
-|.NET framework 4.7.1|461308|
-|.NET Framework 4.7.2|461808|
+|.NET Framework 4.5|Tüm Windows işletim sistemleri: 378389|
+|.NET Framework 4.5.1|Windows 8.1 ve Windows Server 2012 R2 üzerinde: 378675<br />Diğer Windows üzerinde işletim sistemleri: 378758|
+|.NET Framework 4.5.2|Tüm Windows işletim sistemleri: 379893|
+|.NET Framework 4.6|Windows 10: 393295<br />Diğer Windows üzerinde işletim sistemleri: 393297|
+|.NET Framework 4.6.1|Windows 10 Kasım güncelleştirmesi sistemlerinde: 394254<br />Diğer Windows üzerinde işletim sistemleri (Windows 10 dahil): 394271|
+|.NET Framework 4.6.2|Windows 10 Yıldönümü güncelleştirmesi ve Windows Server 2016 üzerinde: 394802<br />Diğer Windows üzerinde işletim sistemleri (dahil diğer Windows 10 işletim sistemleri): 394806|
+|.NET framework 4.7|Üzerinde Windows 10 Creators güncelleştirmesi: 460798<br />Diğer Windows üzerinde işletim sistemleri (dahil diğer Windows 10 işletim sistemleri): 460805| 
+|.NET framework 4.7.1|Windows 10 Fall Creators Update ve Windows Server 1709 sürümü: 461308<br/>Diğer Windows üzerinde işletim sistemleri (dahil diğer Windows 10 işletim sistemleri): 461310|
+|.NET Framework 4.7.2|Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, 1803 sürüm: 461808<br/>Windows 10 Nisan 2018 dışındaki tüm Windows işletim sistemlerinde güncelleştirmesi ve Windows Server, 1803 sürüm: 461814|  
 
-.NET Framework belirli Windows işletim sistemi sürümleri için yayın anahtar tam bir tablo için bkz. [.NET Framework sürüm anahtarları ve Windows işletim sistemi sürümleri](release-keys-and-os-versions.md).
+Bu değerleri şu şekilde kullanabilirsiniz:
 
+- Belirli bir Windows işletim sistemi sürümü, .NET Framework'ün belirli bir sürümü yüklü olup olmadığını belirlemek için test olmadığını **yayın** DWORD değeri *eşit* listelenen değeri Tablo. Örneğin, .NET Framework 4.6 bir Windows 10 sistemde mevcut olup olmadığını belirlemek için test bir **yayın** değeri olan *eşit* 393295.
+
+- .NET Framework'ün en düşük bir sürüm mevcut olup olmadığını belirlemek için küçük kullanın **yayın** DWORD değeri bu sürümü için. Uygulamanız .NET Framework 4.6 veya sonraki bir sürümü altında çalışıyorsa, örneğin, test bir **yayın** DWORD değeri *büyüktür veya eşittir* 393295. Yalnızca en düşük listeleyen bir tablo için **yayın** her .NET Framework sürümü için DWORD değerini görmek [en düşük .NET Framework 4.5 ve sonraki sürümleri için yayın DWORD değerlerini](minimum-release-dword.md).
+
+- Birden çok sürümü için test etmek için bir değer için test ederek başlamak *büyüktür veya eşittir* daha küçük bir DWORD değeri için en son .NET Framework sürümü ve her biri için değer daha küçük bir DWORD değeri ile karşılaştırmak art arda gelen önceki sürümü. İçin test ederek uygulamanızın gerektirdiği .NET Framework 4.7 veya üzeri ve mevcut .NET Framework'ün belirli sürümü belirlemek istiyorsanız, örneğin, başlangıç bir **yayın** DWORD değeri *değerinden büyük veya eşittir*  461808 (.NET Framework 4.7.2 için daha küçük DWORD değerini) için. Ardından karşılaştırma **yayın** DWORD değerini daha sonra her .NET Framework sürümü için daha küçük değerine sahip. Yalnızca en düşük listeleyen bir tablo için **yayın** her .NET Framework sürümü için DWORD değerini görmek [en düşük .NET Framework 4.5 ve sonraki sürümleri için yayın DWORD değerlerini](minimum-release-dword.md).
 
 <a name="net_d"></a> 
 ### <a name="find-net-framework-versions-45-and-later-with-code"></a>.NET Framework sürüm 4.5 ve sonraki kodu bulun

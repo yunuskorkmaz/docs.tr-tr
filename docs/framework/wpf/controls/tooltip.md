@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367576"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054994"
 ---
 # <a name="tooltip"></a>ToolTip
 Kullanıcı fare işaretçisini bir öğenin üzerinden, gibi üzerinde durakladığında görüntülenen küçük bir açılır pencere bir araç ipucu olan bir <xref:System.Windows.Controls.Button>.  
@@ -25,7 +25,7 @@ Kullanıcı fare işaretçisini bir öğenin üzerinden, gibi üzerinde duraklad
  ![Araç İpucu ekran](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Araç İpucuna Genel Bakış](tooltip-overview.md)  
+ [ToolTip Genel Bakışı](tooltip-overview.md)  
   [Nasıl Yapılır Konuları](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  
@@ -34,5 +34,5 @@ Kullanıcı fare işaretçisini bir öğenin üzerinden, gibi üzerinde duraklad
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Açılan Pencereye Genel Bakış](popup-overview.md)  
+ [Açılır Pencereye Genel Bakış](popup-overview.md)  
   [Nasıl Yapılır Konuları](popup-how-to-topics.md)

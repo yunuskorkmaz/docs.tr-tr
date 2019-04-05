@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 9287656349f2a10619bfe76a36ee7855d3861cba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376110"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055345"
 ---
 # <a name="data-templating-overview"></a>Veri Şablonu Oluşturmaya Genel Bakış
 WPF veri şablonu oluşturma modeli, verilerinizin sunumu tanımlamak için büyük esneklik sağlar. WPF denetimleri verilerini sunumu özelleştirmeyi desteklemek için yerleşik işlevselliğe sahiptir. Bu konu öncelikle nasıl tanımlanacağını gösterir bir <xref:System.Windows.DataTemplate> ve ardından özel mantığı ve hiyerarşik veri görüntüleme desteği göre şablonları seçimini gibi diğer veri şablonu oluşturma özellikleri sunar.  
@@ -41,7 +41,7 @@ WPF veri şablonu oluşturma modeli, verilerinizin sunumu tanımlamak için büy
 ### <a name="without-a-datatemplate"></a>DataTemplate  
  Olmadan bir <xref:System.Windows.DataTemplate>, bizim <xref:System.Windows.Controls.ListBox> şu anda şöyle görünür:  
   
- ![Veri şablonu oluşturmaya örnek ekran görüntüsünde](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
+ ![Veri şablonu oluşturmaya örnek ekran](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
   
  Herhangi bir özel yönergeler olan neler olduğunu <xref:System.Windows.Controls.ListBox> varsayılan çağrılar tarafından `ToString` koleksiyondaki nesneleri görüntülemek çalışırken. Bu nedenle, `Task` Nesne geçersiz kılmaları `ToString` yöntemi, ardından <xref:System.Windows.Controls.ListBox> temel koleksiyon içindeki her kaynak nesnenin dize gösterimini görüntüler.  
   
@@ -52,7 +52,7 @@ WPF veri şablonu oluşturma modeli, verilerinizin sunumu tanımlamak için büy
   
  Ardından <xref:System.Windows.Controls.ListBox> aşağıdaki gibi görünür:  
   
- ![Veri şablonu oluşturmaya örnek ekran görüntüsünde](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
+ ![Veri şablonu oluşturmaya örnek ekran](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
  Ancak, sınırlama ve faaliyetini olmasıdır. Ayrıca, için bağlıyorsanız [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verileri, mıydı devre dışı `ToString`.  
   
@@ -66,7 +66,7 @@ WPF veri şablonu oluşturma modeli, verilerinizin sunumu tanımlamak için büy
   
  Artık bizim <xref:System.Windows.Controls.ListBox> aşağıdaki gibi görünür:  
   
- ![Veri şablonu oluşturmaya örnek ekran görüntüsünde](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
+ ![Veri şablonu oluşturmaya örnek ekran](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
   
 <a name="defining_datatemplate_as_a_resource"></a>   
 ### <a name="creating-the-datatemplate-as-a-resource"></a>Bir kaynak olarak DataTemplate oluşturma  
@@ -103,7 +103,7 @@ WPF veri şablonu oluşturma modeli, verilerinizin sunumu tanımlamak için büy
   
  Aşağıdaki ekran görüntüsü gösterildiği <xref:System.Windows.Controls.ListBox> bu değişiklik <xref:System.Windows.DataTemplate>:  
   
- ![Veri şablonu oluşturmaya örnek ekran görüntüsünde](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
+ ![Veri şablonu oluşturmaya örnek ekran](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
   
  Biz ayarlayabilirsiniz <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> için <xref:System.Windows.HorizontalAlignment.Stretch> üzerinde <xref:System.Windows.Controls.ListBox> öğelerin genişliğini tüm yer alan emin olmak için:  
   
@@ -111,7 +111,7 @@ WPF veri şablonu oluşturma modeli, verilerinizin sunumu tanımlamak için büy
   
  İle <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> özelliğini <xref:System.Windows.HorizontalAlignment.Stretch>, <xref:System.Windows.Controls.ListBox> artık şöyle görünür:  
   
- ![Veri şablonu oluşturmaya örnek ekran görüntüsünde](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
+ ![Veri şablonu oluşturmaya örnek ekran](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
   
 <a name="DataTrigger_to_Apply_Property_Values"></a>   
 ### <a name="use-datatriggers-to-apply-property-values"></a>Özellik değerleri uygulamak için DataTriggers kullanın  
@@ -125,7 +125,7 @@ WPF veri şablonu oluşturma modeli, verilerinizin sunumu tanımlamak için büy
   
  Uygulamamızı artık aşağıdaki gibi görünür. Giriş görevleri ile bir sarı kenarlık görünür ve office görevlerini Deniz Mavisi bir kenarlık görünür:  
   
- ![Veri şablonu oluşturmaya örnek ekran görüntüsünde](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
+ ![Veri şablonu oluşturmaya örnek ekran](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
   
  Bu örnekte <xref:System.Windows.DataTrigger> kullanan bir <xref:System.Windows.Setter> özellik değerini ayarlamak için. Tetikleyici sınıfları de <xref:System.Windows.TriggerBase.EnterActions%2A> ve <xref:System.Windows.TriggerBase.ExitActions%2A> animasyonları gibi eylemleri bir dizi Başlat olanak tanıyan özellikler. Ayrıca, de mevcuttur bir <xref:System.Windows.MultiDataTrigger> değişiklikleri uygulamak sağlar sınıfını tabanlı birden fazla veriye bağlı özellik değerlerine göre.  
   
@@ -165,7 +165,7 @@ WPF veri şablonu oluşturma modeli, verilerinizin sunumu tanımlamak için büy
   
  Şablon seçiciyi bir yerde ile <xref:System.Windows.Controls.ListBox> artık aşağıdaki gibi görünür:  
   
- ![Veri şablonu oluşturmaya örnek ekran görüntüsünde](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
+ ![Veri şablonu oluşturmaya örnek ekran](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
 
 Bu örnekte bizim tartışılması, burada sona eriyor. Tam bir örnek için bkz. [veri şablonu oluşturmaya örnek giriş](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
 
@@ -191,11 +191,11 @@ Bu örnekte bizim tartışılması, burada sona eriyor. Tam bir örnek için bkz
   
  Kullanımını gösteren örnek <xref:System.Windows.HierarchicalDataTemplate>, diğer listeleri içeren liste verilerini kolayca görüntüleyebilirsiniz. Örneğin bir ekran görüntüsü aşağıda verilmiştir.  
   
- ![HierarchicalDataTemplate örnek ekran görüntüsünde](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
+ ![Örnek ekran HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Veri Bağlama](../advanced/optimizing-performance-data-binding.md)
 - [DataTemplate ile Oluşturulan Öğeleri Bulma](how-to-find-datatemplate-generated-elements.md)
 - [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
-- [GridView Sütun Üst Bilgi Stil ve Şablonlarına Genel Bakış](../controls/gridview-column-header-styles-and-templates-overview.md)
+- [GridView Sütun Üstbilgi Stil ve Şablonlarına Genel Bakış](../controls/gridview-column-header-styles-and-templates-overview.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 580eb2c7efd00382f7fff24984f0ce6f6d8fa027
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370728"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055332"
 ---
 # <a name="styling-and-templating"></a>Stil ve Şablon Oluşturma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Stil ve şablon oluşturma özellikleri içeren bir paketi, geliştiricilerin ve tasarımcıların görsel açıdan ilgi çekici efektleri oluşturun ve kendi ürün için tutarlı bir görünüm oluşturmak için izin ver (stiller, şablonlar, tetikleyiciler ve görsel Taslaklar) bakın. Tasarımcılar ve geliştiriciler bir uygulama tarafından uygulama temelinde Java'da görünümünü özelleştirebilirsiniz olsa da, güçlü bir stil ve şablon oluşturma modeli Bakım ve görünümü içinde ve uygulamalar arasında paylaşılmasına izin vermek gereklidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Bu modeli sağlar.  
@@ -45,7 +45,7 @@ ms.locfileid: "57370728"
   
  [!code-xaml[StylingIntroSample_snippet#TextBlocks](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#textblocks)]  
   
- ![Stil örnek ekran görüntüsünde](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
+ ![Stil örnek ekran](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
   
  Özelliklerini ayarlayarak varsayılan görünümünü değiştirebilirsiniz <xref:System.Windows.Controls.Control.FontSize%2A> ve <xref:System.Windows.Controls.Control.FontFamily%2A>, her <xref:System.Windows.Controls.TextBlock> doğrudan öğesi. Ancak isterseniz, <xref:System.Windows.Controls.TextBlock> bazı özellikler paylaşmak için öğeleri oluşturabileceğiniz bir <xref:System.Windows.Style> içinde `Resources` bölümünü, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] burada gösterildiği gibi dosya:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "57370728"
   
  Artık <xref:System.Windows.Controls.TextBlock> öğeleri şu şekilde görünür:  
   
- ![Stil örnek ekran görüntüsünde](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
+ ![Stil örnek ekran](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
   
 ### <a name="extending-styles"></a>Stilleri genişletme  
  Belki de iki istediğiniz <xref:System.Windows.Controls.TextBlock> bazı özellik değerleri gibi paylaşmak için öğeleri <xref:System.Windows.Controls.Control.FontFamily%2A> ve ortalanmış <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, ancak ayrıca bazı ek özellikler sağlamak için "My resimleri" metin istediğiniz. Burada gösterildiği gibi ilk stiline göre yeni bir stil oluşturarak bunu yapabilirsiniz:  
@@ -107,7 +107,7 @@ ms.locfileid: "57370728"
  Şu ana kadar bu genel bakış yalnızca özellik değerini ayarlamak için ayarlayıcılar kullanımını açıklar. Bir style'nın olay işleyicileri de belirtebilirsiniz. Daha fazla bilgi için bkz. <xref:System.Windows.EventSetter>.  
   
 <a name="styling_datatemplates"></a>   
-## <a name="data-templates"></a>Veri şablonları  
+## <a name="data-templates"></a>Veri Şablonları  
  Bu örnek uygulamasında var. bir <xref:System.Windows.Controls.ListBox> fotoğraf listesine bağlı denetimi:  
   
  [!code-xaml[StylingIntroSnippet#UIListBox](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#uilistbox)]  
@@ -135,7 +135,7 @@ ms.locfileid: "57370728"
  Şablon oluşturma isteyebileceğimiz diğer özellikleri sağlar. Kullanarak diğer koleksiyonları içeren bir koleksiyon verisi görüntülüyorsunuz. Örneğin, bir <xref:System.Windows.Controls.HeaderedItemsControl> türünün bir <xref:System.Windows.Controls.Menu> veya <xref:System.Windows.Controls.TreeView>, yoktur <xref:System.Windows.HierarchicalDataTemplate>. Başka bir veri şablonu oluşturma özelliği <xref:System.Windows.Controls.DataTemplateSelector>, seçmenize olanak tanıyan bir <xref:System.Windows.DataTemplate> göre özel mantığı kullanılacak. Daha fazla bilgi için [veri şablonu oluşturmaya genel bakış](../data/data-templating-overview.md), farklı veri şablonu oluşturmaya özelliklerin daha ayrıntılı bir tartışma sağlar.  
   
 <a name="styling_controltemplates"></a>   
-## <a name="control-templates"></a>Denetim şablonları  
+## <a name="control-templates"></a>Denetim Şablonları  
  İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Controls.ControlTemplate> bir denetimin denetimin görünümünü tanımlar. Yeni bir tanımlayarak yapısı ve denetiminin görünümünü değiştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate> denetimi. Kendi Özek denetimlerinizi yazmanız gerekmez, çoğu durumda bu, yeterli esneklik sağlar. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
   
 <a name="styling_triggers"></a>   
@@ -165,7 +165,7 @@ ms.locfileid: "57370728"
   
  Aşağıdaki çizimde, fare üçüncü öğesine işaret ediyor:  
   
- ![Stil örnek ekran görüntüsünde](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![Stil örnek ekran](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers DataTriggers ve MultiDataTriggers  
  Ek olarak <xref:System.Windows.Trigger> ve <xref:System.Windows.EventTrigger>, diğer türde Tetikleyiciler vardır. <xref:System.Windows.MultiTrigger> birden çok koşullara göre özellik değerlerini ayarlamanıza olanak tanır. Kullandığınız <xref:System.Windows.DataTrigger> ve <xref:System.Windows.MultiDataTrigger> koşulunuzu özelliğini verilere bağlı olduğunda.  
@@ -198,5 +198,5 @@ ms.locfileid: "57370728"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - [WPF İçinde URI'leri Paketleme](../app-development/pack-uris-in-wpf.md)
-- [Nasıl yapılır: ControlTemplate ile oluşturulan öğeleri bulma](how-to-find-controltemplate-generated-elements.md)
+- [Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma](how-to-find-controltemplate-generated-elements.md)
 - [DataTemplate ile Oluşturulan Öğeleri Bulma](../data/how-to-find-datatemplate-generated-elements.md)
