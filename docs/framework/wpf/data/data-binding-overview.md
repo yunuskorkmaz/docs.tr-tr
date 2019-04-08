@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634563"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055358"
 ---
 # <a name="data-binding-overview"></a>Veri Bağlamaya Genel Bakış
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama sunmak ve verilerle etkileşimde bulunmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynaklarından biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.ItemsControl>s gibi <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.ListView> esnek tek veri öğelerini stilini veya koleksiyonları etkinleştirmek için yerleşik bir işlevselliğe sahiptir. Sıralama, filtreleme ve Grup görünümleri, veri üzerinde oluşturulabilir.  
@@ -33,7 +33,7 @@ ms.locfileid: "58634563"
   
  Veri bağlama örneği için aşağıdaki uygulama göz atın [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] gelen [veri bağlama tanıtım](https://go.microsoft.com/fwlink/?LinkID=163703):  
   
- ![Veri bağlama örnek ekran görüntüsünde](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
+ ![Veri bağlama örnek ekran](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
   
  Yukarıdaki olan [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eksiltme öğeleri listesini görüntüleyen bir uygulama. Uygulama, veri bağlama, aşağıdaki özellikleri gösterir:  
   
@@ -431,7 +431,7 @@ ms.locfileid: "58634563"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Windows.Controls.DataErrorValidationRule>
-- [WPF Sürüm 4.5'teki Yenilikler](../getting-started/whats-new.md)
+- [WPF Sürüm 4.5'te Yenilikler](../getting-started/whats-new.md)
 - [LINQ Sorgusunun Sonuçlarına Bağlama](how-to-bind-to-the-results-of-a-linq-query.md)
 - [Veri Bağlama](../advanced/optimizing-performance-data-binding.md)
 - [Veri bağlama Tanıtımı](https://go.microsoft.com/fwlink/?LinkID=163703)

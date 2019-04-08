@@ -1,26 +1,26 @@
 ---
 title: Takvimlerle çalışma
-ms.date: 02/23/2019
+ms.date: 04/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], calendars
+- globalization [.NET], calendars
 - calendars, global applications
 - global applications, calendars
 - world-ready applications, calendars
-- international applications [.NET Framework], calendars
+- international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bc41f6881c8a876e77ac385c715a5517b95842c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845992"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921357"
 ---
 # <a name="working-with-calendars"></a>Takvimlerle çalışma
 
@@ -138,13 +138,16 @@ Ancak, önemli bir istisna vardır. Varsayılan (örneklenmemiş) değeri bir <x
 Takvimler genellikle tarihleri dönemlere ayırır. Ancak, <xref:System.Globalization.Calendar> .NET sınıflarda, bir takvim ve çoğu tarafından tanımlanan her dönemi desteklemez <xref:System.Globalization.Calendar> sınıfları yalnızca bir dönemi destekler. Yalnızca <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar> sınıfları birden çok dönemi destekler.
 
 > [!IMPORTANT]
->  Yeni bir dönemde bir <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar> 1 Mayıs 2019 üzerinde başlar. Bu değişiklik bu takvimler kullanan tüm uygulamaları etkiler. Bkz: [.NET Japonca takviminde yeni bir dönemi işleme](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/) daha fazla bilgi ve uygulamalarınızı etkilenip etkilenmediğini belirlemek için. Bkz: [uygulamanızı Japonca era değiştirmek için hazırlama](/windows/uwp/design/globalizing/japanese-era-change) era değiştirmek için kendi hazırlık emin olmak için Windows üzerinde uygulamalarınızı test etme hakkında bilgi.
+>  Reiwa dönemi, yeni bir dönemde <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar>, 1 Mayıs 2019 üzerinde başlar. Bu değişiklik bu takvimler kullanan tüm uygulamaları etkiler. Daha fazla bilgi için aşağıdaki makalelere bakın:
+> - [. NET'te Japonca takvimde yeni bir dönemi işleme](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), hangi desteklemek için. NET'e eklenen özellikler belgeleri ile birden çok dönemi takvimler ve birden çok dönemi takvimler işlerken kullanılacak en iyi uygulamalar ele alınmaktadır.
+> - [Uygulamanız için Japonca era değişikliği hazırlama](/windows/uwp/design/globalizing/japanese-era-change), dönem değiştirmek için kendi hazırlık emin olmak için Windows üzerinde uygulamalarınızı test etme hakkında bilgi sağlar.
+> - [Yeni Japonca dönemi özeti için .NET Framework güncelleştirmeleri](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework), yeni Japonca takvimi dönemi ilgili ayrı Windows sürümleri için .NET Framework güncelleştirmeleri listeleyen birden çok dönemi desteği için .NET Framework yenilikleri notlar ve içerir uygulamalarınızı test etme aranacak şeyler.
 
-Çoğu takvimler bir dönemde son derece uzun bir süre gösterir. Gregoryen takvimindeki, örneğin, birden fazla iki millenia geçerli dönem yayılır. İçin <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar>, birden çok dönemi destekleyen iki takvimler, bu durum geçerli değildir. Bir dönem için bir ın İmparatorluk dönemin karşılık gelir. Geçerli dönem sayısı üst sınırı bilinmeyen olduğunda özellikle birden çok dönemi için destek, özel zorlukları doğurur. 
+Çoğu takvimler bir dönemde son derece uzun bir süre gösterir. Gregoryen takvimindeki, örneğin, birden fazla iki bin geçerli dönem yayılır. İçin <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar>, birden çok dönemi destekleyen iki takvimler, bu durum geçerli değildir. Bir dönem için bir ın İmparatorluk dönemin karşılık gelir. Geçerli dönem sayısı üst sınırı bilinmeyen olduğunda özellikle birden çok dönemi için destek, özel zorlukları doğurur. 
 
 ### <a name="eras-and-era-names"></a>Dönemler ve dönem adları
 
-. NET'te, belirli bir takvim uygulamasıyla desteklenen dönemleri gösteren tamsayılar ters sırada depolanır <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> dizisi. Geçerli dönem dizin ve içindir <xref:System.Globalization.Calendar> destekleyen birden çok dönemi, art arda gelen her dizin sınıfları önceki dönemi yansıtır. Statik <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> özelliği geçerli dönemin dizinini tanımlar <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> dizi; bir sabit değeri olan her zaman sıfır olan. Tek tek <xref:System.Globalization.Calendar> sınıfları da geçerli dönemin değerini döndüren statik alanlar içerir. Bunlar aşağıdaki tabloda listelenmiştir.
+. NET'te, belirli bir takvim uygulamasıyla desteklenen dönemleri gösteren tamsayılar ters sırada depolanır <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> dizisi. (Aynı dönemi en son zaman aralığı ile) geçerli dönem dizin ve içindir <xref:System.Globalization.Calendar> destekleyen birden çok dönemi, art arda gelen her dizin sınıfları önceki dönemi yansıtır. Statik <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> özelliği geçerli dönemin dizinini tanımlar <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> dizi; bir sabit değeri olan her zaman sıfır olan. Tek tek <xref:System.Globalization.Calendar> sınıfları da geçerli dönemin değerini döndüren statik alanlar içerir. Bunlar aşağıdaki tabloda listelenmiştir.
 
 | Takvim sınıfı                                        | Geçerli dönem alanı                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -162,8 +165,8 @@ Takvimler genellikle tarihleri dönemlere ayırır. Ancak, <xref:System.Globaliz
 
 Belirli bir dönem numarasına karşılık gelen ad dönem numarası geçirilerek alınabilir <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> veya <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> yöntemi. Aşağıdaki örnek dönem desteğiyle ilgili bilgileri almak için bu yöntemler çağrılmaktadır <xref:System.Globalization.GregorianCalendar> sınıfı.
 
-[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
-[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
+[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
+[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
 
 Ek olarak, "g" özel tarih ve saat biçimi dizisi, bir tarih ve saatin dize gösteriminde bir takvimin dönem adını içerir. Daha fazla bilgi için [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
 
@@ -197,7 +200,7 @@ Ancak, dönemi değişirse, bu kodun amacı belirsiz hale gelir. Tarih, iki yıl
 > [!TIP]
 > Birden çok dönemi destekleyen takvimlerle çalışırken *her zaman* bir tarihi örneklemek için Miladi kullanın veya ne zaman örneği bir tarih ve saat o takvime dayalı dönemi belirtin.
 
-Bir döneme belirtilirken <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> yöntem, takvimin dönem dizinini sağlamak <xref:System.Globalization.Calendar.Eras> özelliği. Takvimler, dönemleri değişikliğe tabi olduğu için ancak bu dizinleri sabit değerlerdir değil; Geçerli dönem dizin 0 olduğundan ve eski dönemi dizindeki `Eras.Length - 1`. Takvime yeni bir dönemi eklendiğinde, önceki dönemleri dizinleri birer birer artırır. İlgili dönem dizin şu şekilde belirtebilirsiniz:
+Bir dönem için belirtilirken <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> yöntem, takvimin dönem dizinini sağlamak <xref:System.Globalization.Calendar.Eras> özelliği. Takvimler, dönemleri değişikliğe tabi olduğu için ancak bu dizinleri sabit değerlerdir değil; Geçerli dönem dizin 0 olduğundan ve eski dönemi dizindeki `Eras.Length - 1`. Takvime yeni bir dönemi eklendiğinde, önceki dönemleri dizinleri birer birer artırır. İlgili dönem dizin şu şekilde belirtebilirsiniz:
 
 - Geçerli dönem içinde tarihler için her zaman Takvim kullanın <xref:System.Globalization.Calendar.CurrentEra> özelliği.
 
@@ -205,7 +208,7 @@ Bir döneme belirtilirken <xref:System.Globalization.Calendar.ToDateTime(System.
 
 ### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>Takvimleri, dönemleri ve tarih aralıkları: Gevşek aralığı denetimleri
 
-Çok fazla bağımsız takvimler tarih aralıkları desteklenen gibi dönemi içinde <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar> sınıfları de aralık desteklenen. Daha önce .NET katı dönem dönem özel tarih aralığı bu dönem içinde olduğunu emin olmak için aralığı denetler kullanılır. Bir aralık dışı tarih alanlarına bir .NET Framework, gevşek aralıklı varsayılan denetimini kullanır. Diğer bir deyişle, bir tarih belirtilen dönem aralığının dışında ise çağırılıyorsa yöntem bir <xref:System.ArgumentOutOfRangeException>. Tüm sürümlerinde sunulan .NET Framework'ün era rahat güncelleştirmeleri denetimleri aralığı; Aşağıdaki dönemi ve hiçbir özel durum "taşma" belirtilen dönem aralığının dışında bir dönem özgü tarih örneği girişimi oluşturulur.
+Çok fazla bağımsız takvimler tarih aralıkları desteklenen gibi dönemi içinde <xref:System.Globalization.JapaneseCalendar> ve <xref:System.Globalization.JapaneseLunisolarCalendar> sınıfları de aralık desteklenen. Daha önce .NET katı dönem dönem özel tarih aralığı bu dönem içinde olduğunu emin olmak için aralığı denetler kullanılır. Diğer bir deyişle, bir tarih belirtilen dönem aralığının dışında ise çağırılıyorsa yöntem bir <xref:System.ArgumentOutOfRangeException>. Şu anda .NET gevşek aralıklı varsayılan denetimini kullanır. Tüm .NET sürümlerini gevşek era sunulan güncelleştirmeler denetimleri aralığı; örneğini belirtilen dönem aralığının dışında bir dönem özgü tarih girişimi "aşağıdaki dönemi taşmaları" ve hiçbir özel durum.
 
 Aşağıdaki örnek, bir tarihi 25 aralık 1926 üzerinde başladı ve 7 Ocak 1989 sonlandı Showa dönemi 65th yılında örneklemek çalışır. Bu tarihin 9 Ocak 1990 için karşılık gelen Showa dönem aralığının dışında olan <xref:System.Globalization.JapaneseCalendar>. Örneğin çıktısında gösterildiği gibi örnek tarafından görüntülenen 9 Ocak 1990 Heisei dönemi ikinci yılında tarihtir.
 
@@ -361,3 +364,4 @@ Tarih ve saat ayrıştırma işlemlerinde, "1" veya Gannen olarak yıl içeren d
 
 - [Nasıl yapılır: Miladi olmayan takvimlerde tarihleri görüntüleme](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
 - [Örnek: Takvim haftası aralığının yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [Takvim sınıfı](xref:System.Globalization.Calendar)
