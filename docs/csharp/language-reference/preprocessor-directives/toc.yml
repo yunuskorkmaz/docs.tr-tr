@@ -14,21 +14,21 @@ items:
     href: preprocessor-define.md
   - name: '#undef'
     href: preprocessor-undef.md
-  - name: '#uyarı'
+  - name: '#warning'
     href: preprocessor-warning.md
   - name: '#error'
     href: preprocessor-error.md
   - name: '#line'
     href: preprocessor-line.md
-  - name: '#bölge'
+  - name: '#region'
     href: preprocessor-region.md
   - name: '#endregion'
     href: preprocessor-endregion.md
-  - name: '#pragması'
+  - name: '#pragma'
     href: preprocessor-pragma.md
-  - name: '#pragma uyarısı'
+  - name: '#pragma warning'
     href: preprocessor-pragma-warning.md
-  - name: '#pragma sağlama toplamı'
+  - name: '#pragma checksum'
     href: preprocessor-pragma-checksum.md
 ms.openlocfilehash: 7f5b2be869494beee89b3f697aaebe7186ce0aea
 ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
