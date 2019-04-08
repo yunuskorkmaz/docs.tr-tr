@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
-ms.translationtype: HT
+ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921357"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055319"
 ---
 # <a name="working-with-calendars"></a>Takvimlerle çalışma
 
@@ -163,7 +163,7 @@ Takvimler genellikle tarihleri dönemlere ayırır. Ancak, <xref:System.Globaliz
 | <xref:System.Globalization.ThaiBuddhistCalendar>      | <xref:System.Globalization.ThaiBuddhistCalendar.ThaiBuddhistEra>  |
 | <xref:System.Globalization.UmAlQuraCalendar>          | <xref:System.Globalization.UmAlQuraCalendar.UmAlQuraEra>          |
 
-Belirli bir dönem numarasına karşılık gelen ad dönem numarası geçirilerek alınabilir <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> veya <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> yöntemi. Aşağıdaki örnek dönem desteğiyle ilgili bilgileri almak için bu yöntemler çağrılmaktadır <xref:System.Globalization.GregorianCalendar> sınıfı.
+Belirli bir dönem numarasına karşılık gelen ad dönem numarası geçirilerek alınabilir <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> veya <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> yöntemi. Aşağıdaki örnek dönem desteğiyle ilgili bilgileri almak için bu yöntemler çağrılmaktadır <xref:System.Globalization.GregorianCalendar> sınıfı. Bu, 1 Ocak ikinci yılın her bir desteklenen Japonca takvimi dönemde, karşılık gelen Gregoryen takvim tarihi yanı sıra, 1 Ocak ikinci yılın geçerli dönemin karşılık gelen Gregoryen takvim tarihi görüntüler.
 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
@@ -172,7 +172,7 @@ Ek olarak, "g" özel tarih ve saat biçimi dizisi, bir tarih ve saatin dize gös
 
 ### <a name="instantiating-a-date-with-an-era"></a>Bir tarihi bir dönemle örnekleme
 
-İki <xref:System.Globalization.Calendar> birden çok dönemi destekleyen sınıflar, bir belirli bir yıl, ay ve gün, ay değeri içeren bir tarih belirsiz olabilir. Örneğin, tarafından desteklenen tüm Arial <xref:System.Globalization.JapaneseCalendar> yıllar numarası 1'dir. Normalde, bir dönem belirtilmezse, tarih ve saat ve takvim yöntemleri değerlerin geçerli döneme ait olduğunu varsayar. Bu doğru <xref:System.DateTime.%23ctor%2A> ve <xref:System.DateTimeOffset.%23ctor%2A> parametreleri türü oluşturucuları <xref:System.Globalization.Calendar>, hem de [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) ve [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) yöntemleri. Aşağıdaki örnek, belirtilmeyen bir dönem, ikinci yılın 1 Ocak temsil eden bir tarih oluşturur. Örnekte gösterildiği çıktısı, tarih, ikinci yılın Heisei dönemi, bu örnekte yürütülmesi zaman geçerli dönem olarak yorumlanır. Tarafından döndürülen dizede yıl Çağ, 平成, önündeki <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> yöntemi ve 1 Ocak 1990 için de Gregoryen takvimindeki karşılık gelir. (Heisei dönemi aralığını 1989, Gregoryen takvimindeki 2019 sağlamaktır.)
+İki <xref:System.Globalization.Calendar> birden çok dönemi destekleyen sınıflar, bir belirli bir yıl, ay ve gün, ay değeri içeren bir tarih belirsiz olabilir. Örneğin, tarafından desteklenen tüm Arial <xref:System.Globalization.JapaneseCalendar> yıllar numarası 1'dir. Normalde, bir dönem belirtilmezse, tarih ve saat ve takvim yöntemleri değerlerin geçerli döneme ait olduğunu varsayar. Bu doğru <xref:System.DateTime.%23ctor%2A> ve <xref:System.DateTimeOffset.%23ctor%2A> parametreleri türü oluşturucuları <xref:System.Globalization.Calendar>, hem de [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) ve [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) yöntemleri. Aşağıdaki örnek, belirtilmeyen bir dönem, ikinci yılın 1 Ocak temsil eden bir tarih oluşturur. Geçerli dönem Reiwa dönemi olduğunda örnek çalışırsa tarih Reiwa dönemi ikinci yıl olarak yorumlanır. Tarafından döndürülen dizede yıl Çağ, 令和, önündeki <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> yöntemi ve 1 Ocak 2020 için de Gregoryen takvimindeki karşılık gelir. (Reiwa dönemi Gregoryen takvim yılı 2019 içinde başlar.)
 
 [!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
 [!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]
