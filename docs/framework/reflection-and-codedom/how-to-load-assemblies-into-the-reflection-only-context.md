@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Salt yansıma bağlamına derlemeleri yükleme'
+title: 'Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eeef33745ebc8209fc7f69a9337af4093c1e8a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f61640687447550ee853e0c233c2dfc615ba3c9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122206"
 ---
-# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Nasıl yapılır: Salt yansıma bağlamına derlemeleri yükleme
+# <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme
 Yalnızca yansıma yükleme bağlamı, diğer platformlar için veya .NET Framework'ün diğer sürümleri için derlenmiş derlemeleri incelemenize olanak tanır. Bu bağlamı yüklenen kodunu yalnızca incelenebilir; yürütülemez. Oluşturucular yürütülemiyor çünkü bu nesneler oluşturulamayacağını, anlamına gelir. Kod olarak yürütülemiyor çünkü bağımlılıkları otomatik olarak yüklenmez. Bunları incelemeniz gerekiyorsa, bunları kendiniz yüklemelisiniz.  
   
 ### <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>Yük salt yansıma bağlamına bir derlemeyi yüklemek için  
@@ -53,6 +53,7 @@ Yalnızca yansıma yükleme bağlamı, diğer platformlar için veya .NET Framew
  [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - <xref:System.Reflection.Assembly.ReflectionOnly%2A>
 - <xref:System.Reflection.CustomAttributeData>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: edf3927fb9fdbd9855561b32aec2a425d7ee0638
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cb67a30ca5453142f906be918b891ac959cdaf2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180028"
 ---
 # <a name="hosting-in-internet-information-services"></a>Internet Information Services'te Barındırma
 Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seçenek, içinde bir Internet Information Services (IIS) uygulamasıdır. Bu barındırma modeli tarafından kullanılan bir Modeli'ne benzer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve ASP.NET Web hizmeti (ASMX) Web Hizmetleri.  
@@ -57,6 +57,7 @@ Windows Communication Foundation (WCF) hizmetlerini barındırmak için bir seç
  WCF hizmetleri olabilir ya da yan yana ile barındırılan [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] veya [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uyumluluk Hizmetleri tarafından sağlanan özelliklerden tam anlamıyla gerçekleştirebileceğiniz modu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması platformu. Bu özellikler için bkz [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ServiceHostFactory Kullanarak Barındırmayı Genişletme](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
 - [Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
 - [WCF Hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

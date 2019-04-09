@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 732c47b03c2769a6147c3c812ddd6e81dab11a55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90d9409d7e41ddda99caf24ebe0e249ee04723d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095899"
 ---
 # <a name="forward-compatible-data-contracts"></a>İleri Uyumlu Veri Sözleşmeleri
 Bir özellik, Windows Communication Foundation (veri sözleşme sistem sözleşmelerin WCF) zaman içindeki bölünemez şekilde geliştirebilirsiniz. Diğer bir deyişle, bir istemci bir veri anlaşması daha eski bir sürümüyle aynı veri anlaşması bir sürüme sahip bir hizmet ile iletişim kurabilir veya bir istemci bir veri anlaşması'nın daha yeni bir sürümü ile aynı veri anlaşması daha eski bir sürümü ile iletişim kurabilir. Daha fazla bilgi için [en iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -42,7 +42,8 @@ Bir özellik, Windows Communication Foundation (veri sözleşme sistem sözleşm
  Gidiş dönüşü özelliğini ayarlayarak ya da kapalı `ignoreExtensionDataObject` için `true` içinde <xref:System.Runtime.Serialization.DataContractSerializer> Oluşturucusu veya ayarlayarak <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> özelliğini `true` üzerinde <xref:System.ServiceModel.ServiceBehaviorAttribute>. Bu özelliği devre dışıyken seri durumdan çıkarıcı değil doldurmak <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> özelliği ve seri hale getirici ktıları özelliğinin içeriği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
-- [Veri Anlaşması Sürümü Oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [En iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Veri Sözleşmesi Sürümü Oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)

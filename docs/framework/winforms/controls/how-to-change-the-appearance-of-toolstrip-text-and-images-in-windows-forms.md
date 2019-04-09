@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: ToolStrip metni ve görüntülerinin Windows Forms'ta görünüşünü değiştirme"
+title: "Nasıl yapılır: Windows Forms'da ToolStrip Metni ve Resimlerinin Görünüşünü Değiştirme"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-ms.openlocfilehash: cd15e581e646f53ed56af654917c7543bf18617e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5c326c8f6a56c934d317305f85f4c88e95e75f8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088489"
 ---
-# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Nasıl yapılır: ToolStrip metni ve görüntülerinin Windows Forms'ta görünüşünü değiştirme
+# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da ToolStrip Metni ve Resimlerinin Görünüşünü Değiştirme
 Metin ve görüntüleri üzerinde görüntülenip görüntülenmeyeceğini denetleyebileceğiniz bir <xref:System.Windows.Forms.ToolStripItem> ve nasıl birbirlerine göreli hizalandığını ve <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>Üzerinde ToolStripItem görüntülenenleri tanımlamak için  
@@ -76,7 +76,8 @@ Metin ve görüntüleri üzerinde görüntülenip görüntülenmeyeceğini denet
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip Denetimine Genel Bakış](toolstrip-control-overview-windows-forms.md)
-- [ToolStrip Denetim, Mimarisi](toolstrip-control-architecture.md)
-- [ToolStrip Teknoloji Özeti](toolstrip-technology-summary.md)
+- [ToolStrip Denetim Mimarisi](toolstrip-control-architecture.md)
+- [ToolStrip Teknoloiji Özeti](toolstrip-technology-summary.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Birden çok sonuç şekli için eşlenmiş saklı yordamlar kullanma'
+title: 'Nasıl yapılır: Birden Çok Sonuç Şekli İçin Eşlenmiş Saklı Yordamlar Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 6ea318e89cf91dcbf16747117b8000dfa3f9571d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 406e44a0ee3b086ceb47b25a80c4fd0ff5a92607
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164677"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Nasıl yapılır: Birden çok sonuç şekli için eşlenmiş saklı yordamlar kullanma
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Nasıl yapılır: Birden Çok Sonuç Şekli İçin Eşlenmiş Saklı Yordamlar Kullanma
 Bir saklı yordam birden çok sonuç şekli döndüğünüzde dönüş türü kesin bir tek projeksiyon şekle yazılamaz. Ancak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tüm olası yansıtma türleri oluşturabilirsiniz, siparişin bunlar döndürülecek bilemezsiniz.  
   
  Bu senaryo ile sıralı olarak birden çok sonuç şekli oluşturan saklı yordamları karşılaştırın. Daha fazla bilgi için [nasıl yapılır: Sıralı sonuç şekilleri için eşlenmiş saklı yordamlar kullanma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).  
@@ -44,4 +44,5 @@ else if(@shape = 2)
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

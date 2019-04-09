@@ -1,141 +1,140 @@
 ---
 title: Temsilciler için ortak desenler
-description: Temsilciler kodunuzda güçlü bileşeniniz arasında Kaçın kullanmayı için ortak desenler hakkında bilgi edinin.
+description: Güçlü bir bağ bileşenleriniz arasındaki önlemek için kodunuzda temsilcileri kullanma için ortak desenler hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095704"
 ---
 # <a name="common-patterns-for-delegates"></a>Temsilciler için ortak desenler
 
 [Önceki](delegates-strongly-typed.md)
 
-Temsilciler bileşenler arasındaki en az bağlantı içeren yazılım tasarımları sağlayan bir mekanizma sağlar.
+Temsilciler, bileşenler arasındaki en az bir bağlantı içeren yazılım tasarımı sağlayan bir mekanizma sağlar.
 
-Bu tür bir tasarım için mükemmel bir örnek LINQ ' dir. LINQ Sorgu ifade deseni özelliklerinin tümünü temsilcileri kullanır. Bu basit örnekte göz önünde bulundurun:
+Bu tür bir tasarım için mükemmel örnek LINQ verilebilir. LINQ Sorgu ifade deseninin tüm özellikleri için temsilcileri kullanır. Bu basit örnek göz önünde bulundurun:
 
 ```csharp
 var smallNumbers = numbers.Where(n => n < 10);
 ```
 
-Bu, yalnızca değerinden 10 sayılara dizisini filtreler.
-`Where` Yöntemi kullanan bir dizi hangi öğeleri filtre geçip belirler bir temsilci. LINQ sorgu oluşturduğunuzda, bu belirli bir amaca yönelik temsilci uyarlamasını sağlayın.
+Bu, yalnızca'den az değerin 10 sayılara dizisini filtreler.
+`Where` Filtre hangi öğelerin bir dizisi geçirin belirleyen bir temsilci yöntemi kullanır. Bir LINQ sorgu oluşturduğunuzda, bu belirli bir amaca yönelik temsilci uygulamasını sağlayın.
 
-Prototip yerdir yöntemi için:
+Prototip için Where yöntemdir:
 
 ```csharp
 public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> source, Func<TSource, bool> predicate);
 ```
 
-Bu örnek LINQ parçası olan tüm yöntemleri ile yinelenir. Tüm temsilcileri belirli sorgu yönetir kodu güvenirler. Bu API tasarım deseni öğrenin ve anlamak için çok güçlü bir adrestir.
+Bu örnekte, LINQ parçası olan tüm yöntemleri ile tekrarlanır. Bunların tümü, özel bir sorgu tarafından yönetilen kod için temsilciler dayanır. Bu API tasarım öğrenin ve anlaşılmasını çok güçlü bir desendir.
 
-Bu basit örnekte, nasıl temsilciler bileşenleri arasında çok az bağlantı gerektiren gösterilmektedir. Belirli bir taban sınıftan türeyen bir sınıf oluşturmanız gerekmez. Belirli bir arabirim uygulamanız gerekmez.
-Tek gereksinim elinizdeki için temel bir yöntemin kullanımı sağlamaktır.
+Bu basit örnekte, nasıl temsilciler bileşenleri arasında çok az bağlantı gerektiren gösterilmektedir. Belirli bir taban sınıftan türetilen bir sınıf oluşturmanız gerekmez. Belirli bir arabirim uygulamak gerekmez.
+Eldeki göreve temel bir yöntemin uygulanmasını sağlamak için tek gereksinim olmasıdır.
 
-## <a name="building-your-own-components-with-delegates"></a>Temsilcileri kendi bileşenleriyle oluşturma
+## <a name="building-your-own-components-with-delegates"></a>Temsilciler ile kendi bileşenleri oluşturma
 
-Şimdi bu örneğinde yetkililer güvenen bir tasarım kullanarak bir bileşeni oluşturarak oluşturun.
+Temsilciler üzerinde dayanan bir tasarım kullanarak bir bileşen oluşturarak bu örneği temel oluşturalım.
 
-Şimdi, büyük bir sistemde günlüğü iletileri için kullanılabilecek bir bileşen tanımlayın. Kitaplığı bileşenlerini birden çok farklı platformlarda birçok farklı ortamlarda kullanılabilir. Birçok ortak özellik günlüklerini yönetir bileşeninde vardır. Sistemde herhangi bir bileşenin gelen iletileri kabul etmesi gerekir. Bu iletiler çekirdek bileşeni yönetebilirsiniz farklı önceliklere sahip olur. İletileri zaman damgaları kendi son arşivlenmiş biçiminde olması gerekir. Daha Gelişmiş senaryolar için kaynak bileşen tarafından iletileri filtre uygulayabilirsiniz.
+Günlük iletileri için büyük bir sistemde kullanılabilir bir bileşen tanımlayalım. Kitaplığı bileşenlerini birden çok farklı platformlarda birçok farklı ortamlarda kullanılabiliyordu. Birçok ortak özellik günlükleri yöneten bileşende vardır. Sistemde bir bileşenden alınan iletileri kabul etmek gerekir. Bu iletileri çekirdek bileşeni yönetebilirsiniz farklı önceliklere sahip olur. İletileri zaman damgası, son arşivlenmiş biçiminde olması gerekir. Daha Gelişmiş senaryolar için kaynak bileşen tarafından iletileri filtre uygulayabilirsiniz.
 
-Genellikle değiştirecek özelliği tek bir yönüne yoktur: iletileri yazıldığı. Bazı ortamlarda, bunlar hata konsola yazılabilir. Bazı durumlarda, bir dosya. Diğer olasılıklar veritabanı depolama, işletim sistemi olay günlüklerini veya başka bir belge depolama içerir.
+Sık sık değişen özelliği tek bir yönüne yoktur: iletileri yazıldığı. Bazı ortamlarda oldukları hata konsola yazılabilir. Bazı durumlarda, bir dosya. Veritabanı depolama, işletim sistemi olay günlüklerini veya başka bir belge depolama diğer olanaklar içerir.
 
-Farklı senaryolarda kullanılabilir çıktı birleşimlerini vardır. İletilerini konsola ve bir dosyaya yazmak isteyebilirsiniz.
+Farklı senaryolarda kullanılabilecek çıkış birleşimleri de vardır. İletileri konsola ve bir dosyaya yazmak isteyebilirsiniz.
 
-Temsilciler üzerinde temel tasarım esneklik büyük bir bölümünü sağlayın ve gelecekte eklenebilir destek depolama mekanizmaları kolaylaştırır.
+Temsilciler hakkında temel bir tasarım büyük ölçüde esneklik sağlar ve gelecekte eklenebilir destek depolama mekanizmasını kolaylaştırır.
 
-Bu tasarım altında birincil günlük bileşeni bir sanal olmayan, hatta sınıf korumalı olabilir. Farklı depolama ortamına ileti yazmak için temsilciler kümesinden ekleyebilirsiniz. Çok noktaya yayın temsilcileri için yerleşik destek iletileri birden fazla konuma (bir dosya ve bir konsol) burada yazılmalıdır destek senaryoları kolay hale getirir.
+Bu tasarım, bir sanal olmayan, hatta sınıfı korumalı birincil günlük bileşeni olabilir. Herhangi bir kümesi için farklı depolama medyası ileti yazmak için temsilciler takabilirsiniz. Çok noktaya yayın temsilcileri için yerleşik destek, iletileri birden fazla konuma (dosya ve bir konsoldan) burada yazılmalıdır destek senaryoları kolaylaştırır.
 
 ## <a name="a-first-implementation"></a>İlk uygulama
 
-Küçük başlayalım: ilk uygulama yeni iletileri kabul edin ve herhangi bir ekli temsilci kullanarak bunları yazma. İletilerini konsola yazar bir temsilci ile başlatabilirsiniz.
+Küçük başlayalım: ilk uygulama yeni iletileri kabul edin ve herhangi bir ekli temsilci kullanarak bunları yazın. İletileri konsola bir temsilci ile başlayabilirsiniz.
 
 [!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
-Yukarıdaki statik sınıf çalışabileceği en basit bir şeydir. İletilerini konsola yazar yöntemi için tek uygulama yazmak ihtiyacımız var: 
+Yukarıdaki statik sınıf çalışabileceği en basit bir şeydir. İletileri konsola yazar yöntemi için tek uygulama yazmak gerekir: 
 
 [!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
 
-Son olarak, temsilci Günlükçü bildirilen WriteMessage ekleyerek temsilci bağlama gerekir:
+Son olarak, temsilci temsilcinin Günlükçü içinde bildirilen WriteMessage ekleyerek bağlama yapmanız gerekir:
 
 [!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
-## <a name="practices"></a>Yöntemler
+## <a name="practices"></a>Uygulamalar
 
-Bizim örnek kadarki de oldukça basittir, ancak bunu hala temsilciler içeren tasarımları için önemli yönergeleri bazılarını göstermektedir.
+Örneğimizi şimdiye de oldukça basittir, ancak bu yine de temsilciler içeren tasarımları için önemli yönergeleri bazılarını gösterir.
 
-Çekirdek çerçevesinde tanımlanan temsilci türleri, temsilci ile çalışmak kullanıcıların kolaylaştırır. Yeni türlerini tanımlamak üzere gerekmez ve yeni, özelleştirilmiş temsilci türleri öğrenmek kitaplığınızın kullanan geliştiriciler gerekmez.
+Çekirdek Framework'te tanımlanan temsilci türleri, temsilciler ile çalışmak kullanıcıların kolaylaştırır. Yeni türleri tanımlamanız gerekmez ve kitaplığınızı kullanan geliştiriciler yeni, özelleştirilmiş temsilci türleri öğrenmek gerekmez.
 
-Kullanılan arabirimlere olarak minimal ve kadar esnek: yeni bir çıkış Günlükçü oluşturmak için bir yöntem oluşturmanız gerekir. Bu yöntem, bir statik yöntem veya örnek yöntemi olabilir. Herhangi bir erişim olabilir.
+En düşük düzeyde ve kadar esnek kullanılan arabirimlere şunlardır: Yeni bir çıktı Günlükçü oluşturmak için bir yöntem oluşturmanız gerekir. Bu yöntem, statik bir yöntem veya bir örnek yöntemi olabilir. Bu erişime sahip olabilir.
 
-## <a name="formatting-output"></a>Çıktı biçimlendirmesi
+## <a name="formatting-output"></a>Çıktı biçimlendirme
 
-Bu ilk sürüm bir bit daha sağlam ve diğer günlük mekanizmaları oluşturma başlatın olalım.
+Bu ilk sürümü bit daha sağlam ve diğer günlük mekanizmaları oluşturmayı başlatın olalım.
 
-Ardından, birkaç bağımsız değişkenleri ekleyelim `LogMessage()` yöntemi günlük sınıfınıza daha fazla yapılandırılmış ileti oluşturur, böylece:
+Ardından, bazı bağımsız değişkenler ekleyelim `LogMessage()` yöntemi, böylece günlük sınıfınıza daha fazla yapılandırılmış iletileri oluşturur:
 
 [!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
 [!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
-Ardından, olalım kullanan `Severity` animasyonun günlüğüne gönderilen iletilere filtre uygulamak için bağımsız değişken çıktı. 
+Ardından, olalım kullanan `Severity` ' ına gönderilen iletileri filtrelemek için bağımsız değişken çıkış. 
 
 [!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
 
-## <a name="practices"></a>Yöntemler
+## <a name="practices"></a>Uygulamalar
 
-Günlük altyapısı yeni özellik ekledik. Günlükçü bileşeni çok herhangi bir çıktı mekanizma gevşek için herhangi bir Günlükçü temsilci uygulama kodu hiçbir etkisi olmadan bu yeni özellikler eklenebilir.
+Günlük kaydı altyapısı için yeni özellikler ekledik. Günlükçü bileşen herhangi bir çıktı mekanizma gevşek çok sıkı bağlı olduğundan, bu yeni özellikleri, herhangi bir Günlükçü temsilci uygulayan kod herhangi bir etkisi eklenebilir.
 
-Bu derleme tutmak gibi daha fazla örnekleri bu gevşek bağlantı herhangi bir değişiklik yapılmadan sitesinin bölümlerini başka konumlara güncelleştirme esneklik nasıl sağladığını görürsünüz. Aslında, daha büyük bir uygulamanın Günlükçü çıktı sınıfları farklı bir derlemede olması ve bile yeniden oluşturulması gerekir.
+Bu oluşturmaya devam etmek gibi daha fazla örnek nasıl bu sıkı bağ sitenin herhangi bir değişiklik yapmadan bölümlerini diğer konumlara güncelleştirme esneklik sağladığını görürsünüz. Aslında, daha büyük bir uygulamada Günlükçü çıktı sınıfları farklı bir derlemede olması ve bile yeniden derlenmesi gerekiyor.
 
-## <a name="building-a-second-output-engine"></a>İkinci bir çıktı altyapısı oluşturma
+## <a name="building-a-second-output-engine"></a>İkinci bir çıkış altyapısı oluşturma
 
-Günlük bileşeni iyi geliyor. İletiler bir dosyaya kaydeder bir daha fazla çıkış altyapısı ekleyelim. Bu biraz daha karmaşık bir çıkış altyapısı olacaktır. Dosya işlemleri yalıtır ve dosyayı her zaman sonra her bir yazma kapalı sağlar bir sınıf olacaktır. Sağlar, tüm verileri Temizlenen her ileti oluşturulduktan sonra disk.
+Günlük bileşeni de kullanıma sunulacaktır. İletiler bir dosyaya kaydeden bir daha fazla çıkış altyapısı ekleyelim. Bu işlem biraz daha karmaşık bir çıkış altyapısı olacaktır. Bu dosya işlemlerini kapsüller ve sağlar dosyanın her zaman her Yazımdan sonra kapalı sınıf olacaktır. Sağlar, tüm veri Temizlenen her ileti oluşturulduktan sonra diske.
 
-Bu dosya tabanlı Günlükçü şöyledir:
+Bu dosya tabanlı Günlükçü şu şekildedir:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
-
-Bu sınıf oluşturduktan sonra örneğini oluşturabilir ve kendi LogMessage yöntemi Günlükçü bileşenine ekler:
+Bu sınıf oluşturduktan sonra örneği oluşturabilir ve bunu kendi LogMessage yöntemi Günlükçü bileşenine ekler:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
-Bu iki birbirini dışlamaz. Her iki günlük yöntemleri ekleyin ve iletileri konsolu ve bir dosya oluşturmak:
+Bu iki birbirini dışlamaz. Her iki günlük yöntemlerini ve iletileri konsolu ve bir dosya oluşturur:
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
 Logger.WriteMessage += LogToConsole;
 ```
 
-Daha sonra bile aynı uygulamada sisteme herhangi bir sorun olmadan temsilcileri birini kaldırabilirsiniz:
+Daha sonra aynı uygulamada bile sisteme herhangi bir sorun olmadan temsilcileri birini kaldırabilirsiniz:
 
 ```csharp
 Logger.WriteMessage -= LogToConsole;
 ```
 
-## <a name="practices"></a>Yöntemler
+## <a name="practices"></a>Uygulamalar
 
-Şimdi, günlük alt sistemi için ikinci bir çıktı işleyici ekledik.
-Bunun doğru dosya sistemi desteklemek için biraz daha fazla altyapı gerekir. Temsilci bir örnek yöntemidir. Bu da özel bir yöntemdir.
-Temsilci altyapısını temsilcileri bağlanabildiğinden büyük erişilebilirlik gerek yoktur.
+Şimdi, günlük alt sistemi için ikinci bir çıkış işleyicisi ekledik.
+Bu bir dosya sistemi doğru desteklemek için biraz daha fazla altyapı gerekir. Bir örnek yöntemi temsilcisidir. Bu aynı zamanda özel bir yöntemdir.
+Temsilci altyapıyı temsilcileri bağlanabilir olduğundan daha büyük düzeyde erişilebilirlik için gerek yoktur.
 
-İkinci olarak, temsilci tabanlı tasarım herhangi bir ek kod olmadan birden çok çıktı yöntemlerini sağlar. Birden çok çıktı yöntemlerini desteklemek için herhangi bir ek altyapı yapılandırmanız gerekmez. Bunlar yalnızca başka bir yöntem çağırma listesinde haline gelir.
+İkinci olarak, temsilci tabanlı tasarım, ek bir kod olmadan birden çok çıktı yöntemlerini sağlar. Birden çok çıktı yöntemlerini desteklemek için ek altyapı oluşturmanız gerekmez. Bunlar yalnızca başka bir yöntemi çağırma listesi haline gelir.
 
-Özel çıkış yöntemi günlük dosyasındaki kodu dikkat edin. Özel durumlar oluşturmadığını emin olmak için kodlanmıştır. Bu her zaman kesinlikle gerekli olmasa da, genellikle iyi bir uygulama olur. Temsilci yöntemlerinden birini bir özel durum oluşturursa, çağrısının olan kalan temsilcileri çağrılan olmaz.
+Özel kodu çıktı yöntemi günlük dosyasında dikkat edin. Özel durumlar oluşturmadığını emin olmak için kodlanmıştır. Bu her zaman kesinlikle gerekli olmasa da, bunu genellikle iyi bir uygulamadır. Temsilci yöntemlerine ya da bir özel durum oluşturursa, çağrıda bulunan kalan temsilcileri çağrılan olmaz.
 
-Son Not Dosya Günlükçü, açma ve kapama dosyanın her günlüğü iletisine göre kaynaklarını yönetmeniz gerekir. Dosya açık tutmak ve size tamamlandığında dosyasını kapatmaya IDisposable uygulayan tercih edebilirsiniz.
-Her iki yöntem, avantajları ve dezavantajları vardır. Her ikisi de sınıflar arasında biraz daha fazla bağlantı oluşturun.
+Son Not olarak, dosya günlükçüsünün, açma ve kapatma dosyada her günlük iletisi tarafından kaynaklarını yönetmeniz gerekir. Dosya açık tutmak ve dosyanın, tamamlandığında kapatmak için IDisposable seçebilirsiniz.
+Her iki yöntem kendi avantajları ve dezavantajları vardır. Her ikisi de, sınıflar arasında biraz daha fazla bağlantı oluşturun.
 
 Günlükçü sınıfı kodda hiçbiri, her iki senaryoyu desteklemek için güncelleştirilmesi gerekir.
 
 ## <a name="handling-null-delegates"></a>İşleme Null temsilciler
 
-Son olarak, böylece hiçbir çıktı mekanizması seçildiğinde bu gibi durumlarda sağlam şimdi LogMessage yöntemi güncelleştirin. Geçerli uygulama özel durum oluşturacak bir `NullReferenceException` zaman `WriteMessage` temsilci bağlı bir çağrı listesi yok.
-Hiçbir yöntemi eklendiğinde sessizce devam bir tasarım tercih edebilirsiniz. Bu birlikte null koşullu işlecini kullanarak kolaydır `Delegate.Invoke()` yöntemi:
+Son olarak, böylece bir mekanizma bulunmadığından çıktı seçildiğinde bu gibi durumlarda sağlam LogMessage yöntemi güncelleştirelim. Geçerli uygulama oluşturmaz bir `NullReferenceException` olduğunda `WriteMessage` temsilci bağlı çağrı listesine sahip değil.
+Yöntemlerin hiçbiri eklendiğinde sessizce devam eder tasarım tercih edebilirsiniz. Bu birlikte null koşullu işleci kullanılarak kolaydır `Delegate.Invoke()` yöntemi:
 
 ```csharp
 public static void LogMessage(string msg)
@@ -144,14 +143,14 @@ public static void LogMessage(string msg)
 }
 ```
 
-Null koşullu işleç (`?.`) ne zaman short-circuits sol işleneni (`WriteMessage` bu durumda) herhangi bir deneme yapılır bir ileti günlüğe anlamına gelir null.
+Null koşullu işleci (`?.`) ne zaman short-circuits sol işleneni (`WriteMessage` bu durumda) çalışılmayacak bir iletiyi günlüğe kaydetmek için yapıldığı anlamına gelir, null.
 
-Bulamaz `Invoke()` yöntemi listelenen belgelerindeki `System.Delegate` veya `System.MulticastDelegate`. Tür uyumlu derleyici oluşturur `Invoke` yöntemi herhangi temsilci bildirilen türü. Bu örnekte, yani `Invoke` tek bir alan `string` bağımsız değişkeni, ve geçersiz bir dönüş türüne sahip.
+Arama yapmaz `Invoke()` yöntemi listelenen belgelerindeki `System.Delegate` veya `System.MulticastDelegate`. Derleyici, tür güvenli oluşturur `Invoke` herhangi metodunuza aşağıdakini bildirilen türü. Bu örnekte, yani `Invoke` tek bir alan `string` bağımsız değişken ve void dönüş türüne sahip.
 
-## <a name="summary-of-practices"></a>Yöntemler özeti
+## <a name="summary-of-practices"></a>Uygulamaların özeti
 
-Genişletilemiyor günlük bileşeni beginnings diğer yazarlar ve diğer özellikleri ile gördünüz. Tasarımda temsilciler kullanarak farklı bu bileşenlerin çok gevşek. Bu, birkaç avantaj sağlar. Yeni çıkış mekanizmaları oluşturmak ve bunları sisteme eklemek çok kolaydır. Bu diğer mekanizmalar yalnızca bir yöntem gerekir: günlük iletisi Yazar yöntemi. Bu yeni özellikler eklendiğinde çok esnek bir tasarımdır. Tüm yazan bir yöntem uygulamak için gereken sözleşme. Bu yöntem, bir statik olarak veya yöntemi örneği. Genel, özel veya herhangi bir yasal erişim olabilir.
+Bir günlük bileşeninin genişletilemiyor beginnings diğer Yazıcılar ve diğer özellikleri ile gördünüz. Tasarımı, temsilciler kullanılarak bu farklı bileşenlerden çok birbirine sıkı şekilde bağlı. Bu, çeşitli avantajlar sağlar. Yeni çıkış mekanizmaları oluşturup bunları sisteme eklemek çok kolaydır. Bu diğer mekanizmalar yalnızca bir yöntem gerekir: yöntemin günlük iletisi yazar. Bu yeni özellikler eklendiğinde, çok esnek bir tasarım olur. Herhangi bir yazıcı için gereken yöntemini uygulamak için sözleşmedir. Bu yöntem, statik olması veya yöntemi örneği. Genel, özel veya herhangi bir yasal erişimi olabilir.
 
-Günlükçü sınıfı, önemli değişiklikler oluşturmaksızın herhangi bir sayıda yenilikleri veya değişiklikleri yapabilirsiniz. Herhangi bir sınıf gibi önemli değişiklikler riski olmadan ortak API değiştiremezsiniz. Ancak, Günlükçü ve herhangi bir çıktı motorları arasında bağ yalnızca temsilci olduğundan (arabirimleri veya temel sınıflar gibi) diğer türü yok ilgilidir. Bağ olabildiğince küçük.
+Günlükçü sınıfı, bozucu değişiklikleri oluşturmaksızın herhangi bir sayıda yenilikleri veya değişiklikleri yapabilirsiniz. Herhangi bir sınıf gibi genel API riskini önemli değişiklikler olmadan değiştirilemiyor. Ancak, yalnızca temsilci Günlükçü herhangi bir çıktı altyapıları arasındaki bağ olduğundan, hiçbir diğer türleri (gibi arabirimler veya temel sınıflar) ilgilidir. Eşleştirmeye kadar küçük.
 
 [Next](events-overview.md)

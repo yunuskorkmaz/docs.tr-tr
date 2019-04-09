@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 3bde9a5f718dcc7bdf31f84369546d530dca38d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187648"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Tek tablolu sorgular (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] İş sorguları, uygulayan veri kaynaklarında <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. <xref:System.Data.DataTable> Çağırmanız gerekir böylece sınıf ya da arabirimi uygulamıyor <xref:System.Data.DataTableExtensions.AsEnumerable%2A> kullanmak istiyorsanız yöntemi <xref:System.Data.DataTable> kaynağı olarak `From` yan tümcesi bir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu.  
@@ -31,6 +31,7 @@ ms.locfileid: "54637268"
  Genel parametre içinde belirtilen veri türü Not `T` , <xref:System.Data.DataRowExtensions.Field%2A> yöntemi ve <xref:System.Data.DataRowExtensions.SetField%2A> yöntemi, temel alınan değerinin türü eşleşmelidir veya bir <xref:System.InvalidCastException> oluşturulur. Belirtilen sütun adı bir sütun adını da ayrıca eşleşmelidir <xref:System.Data.DataSet> veya <xref:System.ArgumentException> oluşturulur. Sorgu yürütülürken her iki durumda da, çalışma zamanı veri numaralandırma sırasında özel durum oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Tablolar Arası Sorgular](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
 - [Türü Belirtilmiş DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
 - [Genel Alan ve SetField Yöntemleri](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

@@ -1,18 +1,18 @@
 ---
-title: DataTable içinde gezinme
+title: DataTable İçinde Gezinme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 202026a1-ec79-435e-b507-12a77f5011b2
-ms.openlocfilehash: 710e4bdaeafc483510c4102dc9ac0f6ffaaafce9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91db42acb0e09b8fc99b0ee710a60800d40938ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112859"
 ---
-# <a name="navigating-datatables"></a>DataTable içinde gezinme
+# <a name="navigating-datatables"></a>DataTable İçinde Gezinme
 <xref:System.Data.DataTableReader> Bir veya daha fazla içeriğini alır <xref:System.Data.DataTable> nesneleri formunda bir veya daha fazla salt okunur, salt iletme sonuç kümeleri.  
   
  A <xref:System.Data.DataTableReader> kullanarak oluşturulursa, birden çok sonuç kümesi içerebilir <xref:System.Data.DataSet.CreateDataReader%2A> yöntemi. Birden fazla sonuç kümesi olduğunda <xref:System.Data.DataTableReader.NextResult%2A> yöntemi imleci sonraki sonuç kümesine ilerler. Bu yalnızca iletme bir işlemdir. Bir önceki sonuç kümesi için döndürülecek mümkün değildir.  
@@ -24,5 +24,6 @@ ms.locfileid: "54528088"
  [!code-vb[DataWorks DataTableReader.NextResult#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.NextResult/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

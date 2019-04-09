@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 10cea133651739df8bb8e27c58221b34067782f5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188441"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Nasıl yapılır: ObservableCollection Oluşturma ve Bağlama
 Bu örnekte, oluşturma ve türeyen bir koleksiyona bağlama işlemi gösterilmektedir <xref:System.Collections.ObjectModel.ObservableCollection%601> bildirimleri öğeleri eklendiğinde veya kaldırıldığında sağlayan bir koleksiyon sınıf olan sınıf.  
@@ -141,6 +141,7 @@ End Class
  Daha fazla bilgi için bkz koleksiyonları bölümüne bağlama [Data Binding Overview](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görünümde Verileri Sıralama](how-to-sort-data-in-a-view.md)
 - [Görünümde Veri Filtreleme](how-to-filter-data-in-a-view.md)
 - [XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama](how-to-sort-and-group-data-using-a-view-in-xaml.md)

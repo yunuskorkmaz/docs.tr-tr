@@ -1,5 +1,5 @@
 ---
-title: Internet Protokolü sürüm 6
+title: İnternet Protokolü Sürüm 6
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IPv6, improvements
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 6cd35ae50d76ec2276fdd08760d088cf6be1658e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 135d87f126dcdb9689c23adbaaa4786bc69a3e09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182331"
 ---
-# <a name="internet-protocol-version-6"></a>Internet Protokolü sürüm 6
+# <a name="internet-protocol-version-6"></a>İnternet Protokolü Sürüm 6
 Internet Protokolü sürüm 6 (IPv6) yeni bir Internet'e ağ katmanı standart protokoller paketidir. IPv6 adres tükenmesi, güvenlik, otomatik yapılandırma, genişletilebilirlik ve benzeri için haklısın ile birçok (IPv4 olarak bilinir) Internet Protokolü paketinin geçerli sürümü, sorunu çözmek için tasarlanmıştır. IPv6, yeni türde uygulamalar, eşler arası ile mobil uygulamalar dahil olmak üzere etkinleştirmek için yeteneklerini genişletir. Geçerli IPv4 protokolünün ana sorunlar şunlardır:  
   
 -   Hızlı tükenmesi adres alanı.  
@@ -58,6 +58,7 @@ Internet Protokolü sürüm 6 (IPv6) yeni bir Internet'e ağ katmanı standart p
  Üzerinde IPv6 ilgili bilgiler bulabilirsiniz [IP sürüm 6 (IPv6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IPv6 yuva örnek](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
 - [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Yuvalar](../../../docs/framework/network-programming/sockets.md)

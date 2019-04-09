@@ -1,15 +1,15 @@
 ---
-title: Eş adı yayını ve çözümleme
+title: Eş Adı Yayını ve Çözümleme
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c55b2f1294c055a873278147ff549aa19e33179
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120776"
 ---
-# <a name="peer-name-publication-and-resolution"></a>Eş adı yayını ve çözümleme
+# <a name="peer-name-publication-and-resolution"></a>Eş Adı Yayını ve Çözümleme
 
 ## <a name="publishing-a-peer-name"></a>Bir eş ad yayımlama  
 
@@ -48,4 +48,5 @@ Sonunda PNRP kimliği kayıtlı düğümü bulunurken isteyen eş ardışık yin
  İçinde <xref:System.Net.PeerToPeer> ad arasında bir çoktan çoğa ilişki <xref:System.Net.PeerToPeer.PeerName> uç noktaları ve PNRP Bulutları veya içinde iletişim kurarlar kafesleri içeren kayıt. Eş aynı ada sahip birden çok düğüm veya yinelenen ya da eski girişleri olduğunda, PNRP düğümleri geçerli bilgileri kullanarak elde edebilirsiniz <xref:System.Net.PeerToPeer.PeerNameResolver> sınıfı. <xref:System.Net.PeerToPeer.PeerNameResolver> Yöntemleri bir eş çok eş ad kayıtlarını perspektife ve pek çok bulutunuz için aynı bir eş basitleştirmek için çoklu eş adını kullanın. Bu, bir ilişkisel tabloya birleşim kullanılarak gerçekleştirilen bir sorguya benzer. İşlemin başarıyla tamamlanmasından sonra çözümleyici nesnesi döndüren bir <xref:System.Net.PeerToPeer.PeerNameRecordCollection> belirtilen Eş adı.  Örneğin, bir eş ad koleksiyondaki tüm eş ad kayıtlarındaki oluşacak bulut tarafından sıralı. Bu destek verisini PNRP tabanlı bir uygulama tarafından istenebilir Eş adı örnekleridir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.PeerToPeer>

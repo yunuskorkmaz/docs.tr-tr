@@ -2,12 +2,12 @@
 title: WCF'de Kuyruğa Alma
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: fcdd38cf02157829bdc476cc289ea89ff8767487
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128771"
 ---
 # <a name="queuing-in-wcf"></a>WCF'de Kuyruğa Alma
 Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim kullanmayı açıklar.  
@@ -105,9 +105,9 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
 ### <a name="sample-code"></a>Örnek Kod  
  WCF yazmaya yönelik adım adım yönergeler için MSMQ kullanan hizmetler aşağıdaki konulara bakın:  
   
--   [Nasıl yapılır: WCF uç noktaları ve ileti uygulamaları ile Exchange ileti](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Nasıl yapılır: WCF uç noktaları ile kuyruğa alınmış iletiler gönderip alır](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Wcf'de MSMQ kullanımını gösteren tamamlanmış kod örneği için aşağıdaki konulara bakın:  
   
@@ -123,8 +123,9 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [Message Queuing Üzerinden İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+-   [İleti Kuyruğa Alma ile İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hizmet Uç Noktaları ve Kuyruk İşleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
 - [Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

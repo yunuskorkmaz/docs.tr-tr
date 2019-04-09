@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d329b811e0c1377cb2d7555b3e7e30b52071eca8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098188"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Profil Oluşturma Ortamını Ayarlama
 > [!NOTE]
@@ -96,4 +96,5 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
  Bu teknik, her CLR işleminin profilinin oluşturulmasına da yol açar. Profil Oluşturucu mantık eklemelidir kendi [Icorprofilercallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) geçerli işlemin ilgili olup olmadığını algılamak için geri çağırma. Yüklü değilse, profil oluşturucu başlatmayı gerçekleştirmeden geri çağırma başarısız olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Profil Oluşturmaya Genel Bakış](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

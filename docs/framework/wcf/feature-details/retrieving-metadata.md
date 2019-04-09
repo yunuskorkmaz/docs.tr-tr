@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
-ms.openlocfilehash: 72a9b8445a83af3cbda15c5f4580a1c1df859339
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb415d88c2bae75cb16aa137bdf867eb463afa63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152405"
 ---
 # <a name="retrieving-metadata"></a>Meta Verileri Alma
 Meta veri alımı isteme ve WS-MetadataExchange (MEX) meta veri uç noktası veya bir HTTP/GET meta veri uç noktası gibi bir meta veri uç noktasından meta verilerini alma işlemidir.  
@@ -23,14 +23,15 @@ Meta veri alımı isteme ve WS-MetadataExchange (MEX) meta veri uç noktası vey
  Varsayılan olarak, bir <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> örneği için tek bir bağlı <xref:System.ServiceModel.ChannelFactory> örneği. Değiştirin veya değiştirebileceğiniz <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> örneği tarafından kullanılan bir <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> kılarak <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> sanal yöntem. Benzer şekilde, değiştirin veya değiştirebileceğiniz <xref:System.Net.HttpWebRequest> örneği tarafından kullanılan bir <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> geçersiz kılarak HTTP/GET isteğinde bulunmak için <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> sanal yöntem.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Meta veri belgelerini indirmek için svcutil.exe kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
+ [Nasıl yapılır: Meta Veri Belgelerini İndirmek için Svcutil.exe Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
  Meta veri belgelerini indirmek için svcutil.exe kullanma işlemi gösterilmektedir.  
   
- [Nasıl yapılır: Dinamik olarak meta verilerini almak için MetadataResolver kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
+ [Nasıl yapılır: Bağlama Meta Verilerini Dinamik Olarak Almak için MetadataResolver Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
  Nasıl kullanılacağını gösteren <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> zamanında dinamik olarak bağlama meta verilerini edinmek için.  
   
- [Nasıl yapılır: Meta verileri almak için MetadataExchangeClient kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
+ [Nasıl yapılır: Meta Verileri Almak için MetadataExchangeClient Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
  Nasıl kullanılacağını gösteren <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> sınıfı içine meta veri dosyaları indirmek için bir <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> içeren nesne <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> dosyaları veya diğer kullanımlar için yazılacak nesne.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description.MetadataExchangeClient>

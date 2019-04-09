@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175025"
 ---
 # <a name="operator-procedures-visual-basic"></a>İşleç Yordamları (Visual Basic)
 Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basic deyimleri bir dizisidir (gibi `*`, `<>`, veya `And`) bir sınıf veya yapı tanımladığınız üzerinde. Bu da adlandırılır *İşleç aşırı yüklemesi*.  
@@ -44,7 +44,7 @@ Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basi
 ## <a name="declaration-syntax"></a>Bildirim Sözdizimi  
  Bir işleç yordamı bildirmek için sözdizimi aşağıdaki gibidir:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *işlecin* `(` *işlenen1*`[,`*işlenen2* `]) As` *veri türü*  
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *işlecin* `(` *işlenen1*`[,`*işlenen2* `]) As` *veri türü*   
   
  `' Statements of the operator procedure.`  
   
@@ -68,7 +68,7 @@ Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basi
   
  `Dim testStruct As`  *structurename*  
   
- `Dim testNewStruct As`  *structurename*`= testStruct`*işlecin*  `10`  
+ `Dim testNewStruct As`  *structurename*`= testStruct`*işlecin*   `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı gösterimi  
  Aşağıdaki yapıya bağlı yüksek ve düşük düzey parçaları olarak 128-bit imzalı bir tamsayı değeri depolar. Tanımladığı `+` işleci iki eklemek için `veryLong` değerleri ve bir sonuç üretmek `veryLong` değeri.  
@@ -78,8 +78,7 @@ Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basi
  Aşağıdaki örnek, tipik bir çağrı gösterir `+` tanımlanan işleci `veryLong`.  
   
  [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
-  
-  
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yordamlar](./index.md)
@@ -88,7 +87,7 @@ Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basi
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Operator Deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Nasıl yapılır: Bir işleci tanımlama](./how-to-define-an-operator.md)
-- [Nasıl yapılır: Bir dönüşüm işleci tanımlama](./how-to-define-a-conversion-operator.md)
-- [Nasıl yapılır: Bir işleç yordamı çağırma](./how-to-call-an-operator-procedure.md)
-- [Nasıl yapılır: İşleçleri tanımlayan bir sınıf kullanma](./how-to-use-a-class-that-defines-operators.md)
+- [Nasıl yapılır: İşleç Tanımlama](./how-to-define-an-operator.md)
+- [Nasıl yapılır: Dönüştürme İşleci Tanımlama](./how-to-define-a-conversion-operator.md)
+- [Nasıl yapılır: Bir İşleç Yordamı Çağırma](./how-to-call-an-operator-procedure.md)
+- [Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma](./how-to-use-a-class-that-defines-operators.md)

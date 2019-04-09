@@ -2,12 +2,12 @@
 title: < (Küçüktür) (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
-ms.openlocfilehash: a7762696405bbd9aa4637b4e3d91414ad38723e1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 0373dc2d066252d76cd3d4408790404ca70ab701
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284784"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105176"
 ---
 # <a name="-less-than-entity-sql"></a>\< (Küçüktür) (Varlık SQL)
 Sol ifade sağ ifade'den küçük bir değere sahip olup olmadığını belirlemek için iki deyim karşılaştırır.  
@@ -35,4 +35,5 @@ expression < expression
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

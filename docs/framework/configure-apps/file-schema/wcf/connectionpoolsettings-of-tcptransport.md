@@ -2,12 +2,12 @@
 title: <connectionPoolSettings> , <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 4828357f392089be14ee04bc672acce0c0973300
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 93363c5ff1753ff02956404da7697780078c9839
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129980"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<Namedpipetransport >, \<Connectionpoolsettings >
 TCP aktarımı için ek bağlantı havuzu ayarlarını belirtir.  
@@ -50,6 +50,7 @@ TCP aktarımı için ek bağlantı havuzu ayarlarını belirtir.
 |[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Adlandırılmış kanalları kullanarak ileti aktarılması bir kanal neden olan bir taşıma tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>
 - <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>

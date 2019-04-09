@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: ad5436a60b5cd82b44931713d863eaeed791e264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a42bf12e6ee8275814898a0158348f56bfb2688e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112872"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 Bu örnek nasıl serileştirme ve seri durumundan çıkarma işlemleri kullanarak özelleştirilebilir gösterir <xref:System.Runtime.Serialization.DataContractResolver> sınıfı. Bu örnek bir xsi: type temsili serileştirme ve seri durumundan çıkarma sırasında gelen ve CLR Türleri eşleştirmek için bir DataContractResolver kullanmayı gösterir.
@@ -166,4 +166,5 @@ class MyDataContractResolver : DataContractResolver
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Veri Anlaşması Çözümleyici Kullanma](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)
+
+- [Veri Sözleşmesi Çözücü Kullanma](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)

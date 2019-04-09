@@ -15,12 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132307"
 ---
 # <a name="styling-and-templating"></a>Stil ve Şablon Oluşturma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Stil ve şablon oluşturma özellikleri içeren bir paketi, geliştiricilerin ve tasarımcıların görsel açıdan ilgi çekici efektleri oluşturun ve kendi ürün için tutarlı bir görünüm oluşturmak için izin ver (stiller, şablonlar, tetikleyiciler ve görsel Taslaklar) bakın. Tasarımcılar ve geliştiriciler bir uygulama tarafından uygulama temelinde Java'da görünümünü özelleştirebilirsiniz olsa da, güçlü bir stil ve şablon oluşturma modeli Bakım ve görünümü içinde ve uygulamalar arasında paylaşılmasına izin vermek gereklidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Bu modeli sağlar.  
@@ -197,6 +197,7 @@ ms.locfileid: "59055332"
  Sizin için bir tema özel denetim oluşturuyorsanız, dış denetim kitaplığı bölümüne bakın. [denetim yazmaya genel bakış](control-authoring-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF İçinde URI'leri Paketleme](../app-development/pack-uris-in-wpf.md)
 - [Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma](how-to-find-controltemplate-generated-elements.md)
 - [DataTemplate ile Oluşturulan Öğeleri Bulma](../data/how-to-find-datatemplate-generated-elements.md)

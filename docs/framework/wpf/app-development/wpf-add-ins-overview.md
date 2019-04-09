@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091622"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
 <a name="Introduction"></a> .NET Framework, geliştiricilerin eklentiyi genişletilebilirlik destekleyen uygulamalar oluşturmak için kullanabileceğiniz bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirin ve uygulama işlevselliğini genişleten eklentileri oluşturulmasına izin verir. Bazı senaryolarda uygulamalar eklenti tarafından sağlanan kullanıcı arabirimlerini görüntülemek de gerekir. Bu konuda, WPF bu senaryolar, mimarisi, aboneliğin avantajları ve kısıtlamalarını arkasında etkinleştirmek için .NET Framework eklenti modeli nasıl artırmaktadır gösterilmektedir.  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
  .NET Framework eklenti modeli konusunda gereklidir. Daha fazla bilgi için [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
@@ -283,6 +281,7 @@ ms.locfileid: "57365847"
  Birden çok uygulama etki alanı kullanıldığında, varsayılan olarak, her uygulama için gereken çeşitli .NET Framework derlemeleri tüm uygulamanın etki alanına yüklenir. Sonuç olarak, yeni uygulama etki alanları oluşturma ve uygulamalar bunları başlatmak için gereken süreyi performansını etkileyebilir. Ancak, .NET Framework uygulamaları zaten yüklü olduğundan, derlemeleri uygulama etki alanları arasında paylaşmak için yönlendirerek başlangıç zamanı azaltmak bir yol sağlar. Kullanarak bunu <xref:System.LoaderOptimizationAttribute> giriş noktası yöntemi için uygulanması gereken özniteliği (`Main`). Bu durumda, uygulama tanımınız uygulamak için yalnızca kod kullanmanız gerekir (bkz [uygulama yönetimine genel bakış](application-management-overview.md)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.LoaderOptimizationAttribute>
 - [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Uygulama Etki Alanları](../../app-domains/application-domains.md)

@@ -1,15 +1,15 @@
 ---
-title: ADO.NET'te yan yana yürütme
+title: ADO.NET’te Yan Yana Yürütme
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 122cb33f4cca203f09104c5a40a1ad5d13326c57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136766"
 ---
-# <a name="side-by-side-execution-in-adonet"></a>ADO.NET'te yan yana yürütme
+# <a name="side-by-side-execution-in-adonet"></a>ADO.NET’te Yan Yana Yürütme
 Yan yana yürütme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] birden çok sürümü olan bir bilgisayarda bir uygulama yürüttüklerinde olanağı [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yüklü, uygulamanın derlendiği sürümü özel olarak kullanma. Yan yana yürütme yapılandırma hakkında ayrıntılı bilgi için bkz: [yan yana yürütme](../../../../docs/framework/deployment/side-by-side-execution.md).  
   
  Uygulamanın bir sürümünü kullanarak derlenmiş [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] farklı bir sürümü üzerinde çalıştırabilirsiniz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Ancak, bir sürümü yüklü her sürümü için derleme öneririz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]ve bunları ayrı ayrı çalıştırın. Her iki durumda da, değişikliklerin farkında olmalısınız [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ileriye dönük ya da geriye dönük uyumluluk, uygulamanızın etkileyebilir sürümler arasında.  
@@ -65,6 +65,7 @@ SET NOCOUNT OFF;
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-ms.openlocfilehash: 041e7d0170bc98797278e209fd86cff0f82db9fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff23cbfa78b803d4526e7a7c389fd5d458a967c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195013"
 ---
 # <a name="soundplayer-class-overview"></a>SoundPlayer Sınıfına Genel Bakış
 <xref:System.Media.SoundPlayer> Sınıfı sesleri uygulamalarınıza kolayca dahil etmenize imkan sağlar.  
@@ -24,16 +24,17 @@ ms.locfileid: "54690698"
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Media.SoundPlayer.SoundLocation%2A> Özelliği|Dosya yolu veya ses Web adresi. Kabul edilebilir değerler, UNC veya HTTP olabilir.|  
-|<xref:System.Media.SoundPlayer.LoadTimeout%2A> Özelliği|Programınızı ses önceki yükleme için bekleyeceği milisaniye sayısını, özel durum oluşturur. Varsayılan değer 10 saniyedir.|  
-|<xref:System.Media.SoundPlayer.IsLoadCompleted%2A> Özelliği|Ses yüklenmesini tamamladı gösteren bir Boole değeri.|  
-|<xref:System.Media.SoundPlayer.Load%2A> Yöntemi|Ses zaman uyumlu olarak yükler.|  
-|<xref:System.Media.SoundPlayer.LoadAsync%2A> Yöntemi|Zaman uyumsuz ses yükleme başlar. Yükleme tamamlandığında, bilmemektedir <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> olay.|  
-|<xref:System.Media.SoundPlayer.Play%2A> Yöntemi|Belirtilen ses çalar <xref:System.Media.SoundPlayer.SoundLocation%2A> veya <xref:System.Media.SoundPlayer.Stream%2A> yeni bir dizi özelliği.|  
-|<xref:System.Media.SoundPlayer.PlaySync%2A> Yöntemi|Belirtilen ses çalar <xref:System.Media.SoundPlayer.SoundLocation%2A> veya <xref:System.Media.SoundPlayer.Stream%2A> geçerli iş parçacığındaki özelliği.|  
-|<xref:System.Media.SoundPlayer.Stop%2A> Yöntemi|Şu anda yürütülen herhangi bir sesi durdurur.|  
-|<xref:System.Media.SoundPlayer.LoadCompleted> Olay|Ses yükünü denendikten sonra oluşturulur.|  
+|<xref:System.Media.SoundPlayer.SoundLocation%2A> özellik|Dosya yolu veya ses Web adresi. Kabul edilebilir değerler, UNC veya HTTP olabilir.|  
+|<xref:System.Media.SoundPlayer.LoadTimeout%2A> özellik|Programınızı ses önceki yükleme için bekleyeceği milisaniye sayısını, özel durum oluşturur. Varsayılan değer 10 saniyedir.|  
+|<xref:System.Media.SoundPlayer.IsLoadCompleted%2A> özellik|Ses yüklenmesini tamamladı gösteren bir Boole değeri.|  
+|<xref:System.Media.SoundPlayer.Load%2A> yöntemi|Ses zaman uyumlu olarak yükler.|  
+|<xref:System.Media.SoundPlayer.LoadAsync%2A> yöntemi|Zaman uyumsuz ses yükleme başlar. Yükleme tamamlandığında, bilmemektedir <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> olay.|  
+|<xref:System.Media.SoundPlayer.Play%2A> yöntemi|Belirtilen ses çalar <xref:System.Media.SoundPlayer.SoundLocation%2A> veya <xref:System.Media.SoundPlayer.Stream%2A> yeni bir dizi özelliği.|  
+|<xref:System.Media.SoundPlayer.PlaySync%2A> yöntemi|Belirtilen ses çalar <xref:System.Media.SoundPlayer.SoundLocation%2A> veya <xref:System.Media.SoundPlayer.Stream%2A> geçerli iş parçacığındaki özelliği.|  
+|<xref:System.Media.SoundPlayer.Stop%2A> yöntemi|Şu anda yürütülen herhangi bir sesi durdurur.|  
+|<xref:System.Media.SoundPlayer.LoadCompleted> olay|Ses yükünü denendikten sonra oluşturulur.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>

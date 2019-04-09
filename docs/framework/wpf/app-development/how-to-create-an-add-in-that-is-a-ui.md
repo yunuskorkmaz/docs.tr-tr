@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100307"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Nasıl yapılır: UI Olan Eklenti Oluşturma
 Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama tarafından barındırılan WPF) olan bir eklenti oluşturma işlemi gösterilmektedir.  
@@ -31,8 +31,7 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
   
 ## <a name="example"></a>Örnek  
  Bir WPF UI olan eklenti oluşturmak için her işlem hattı segment, eklenti ve ana bilgisayar uygulaması için özel kod gerektirir.  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Sözleşme ardışık düzen segmentini uygulama  
  Sözleşme eklenti için bir eklentiyi bir UI olduğunda uygulamalıdır <xref:System.AddIn.Contract.INativeHandleContract>. Örnekte, `IWPFAddInContract` uygulayan <xref:System.AddIn.Contract.INativeHandleContract>aşağıdaki kodda gösterildiği gibi.  
@@ -63,17 +62,13 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
 <a name="HostViewPipeline"></a>   
 ## <a name="implementing-the-host-view-pipeline-segment"></a>Ana görünüm ardışık düzen segmentini uygulama  
  Bu modelde, ana bilgisayar uygulaması genellikle ana görünümünde olmasını bekliyor. bir <xref:System.Windows.FrameworkElement> öğesinin alt sınıfı. Konak tarafı bağdaştırıcısı dönüştürmelisiniz <xref:System.AddIn.Contract.INativeHandleContract> için bir <xref:System.Windows.FrameworkElement> sonra <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı aştığında. Bir yöntem almak için konak uygulama tarafından çağrılmadığından <xref:System.Windows.FrameworkElement>, "ana görünümünde döndürmelidir" <xref:System.Windows.FrameworkElement> içererek. Sonuç olarak, ana görünümünde öğesinin türetilmelidir <xref:System.Windows.FrameworkElement> , diğer içerebilir [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], gibi <xref:System.Windows.Controls.UserControl>. Aşağıdaki kod olarak uygulanan sözleşme ana görünümünde gösterir `WPFAddInHostView` sınıfı.  
-  
-  
-  
+
 <a name="HostSideAdapter"></a>   
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Konak tarafı bağdaştırıcısı işlem hattı segmentini uygulama  
  Sözleşme olsa da bir <xref:System.AddIn.Contract.INativeHandleContract>, ana bilgisayar uygulaması bekliyor bir <xref:System.Windows.Controls.UserControl> (ana görünümünde tarafından belirtildiği gibi). Sonuç olarak, <xref:System.AddIn.Contract.INativeHandleContract> dönüştürülmelidir bir <xref:System.Windows.FrameworkElement> ana görünümünde içeriği olarak ayarlamadan önce yalıtım sınırı geçmesinden sonra (öğesinden türetildiğini <xref:System.Windows.Controls.UserControl>).  
   
  Bu iş, aşağıdaki kodda gösterildiği gibi konak tarafı bağdaştırıcı tarafından gerçekleştirilir.  
-  
-  
-  
+
  Gördüğünüz gibi konak tarafı bağdaştırıcısını alır <xref:System.AddIn.Contract.INativeHandleContract> Ekle tarafı bağdaştırıcının çağırarak <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> yöntemi (Bu noktadır burada <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı aştığında).  
   
  Ardından konak tarafı bağdaştırıcısı dönüştürür <xref:System.AddIn.Contract.INativeHandleContract> için bir <xref:System.Windows.FrameworkElement> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Son olarak, <xref:System.Windows.FrameworkElement> ana görünümünde içeriği olarak ayarlanır.  
@@ -81,29 +76,24 @@ Bu örnek, bir Windows Presentation Foundation (WPF tek başına uygulama taraf�
 <a name="AddIn"></a>   
 ## <a name="implementing-the-add-in"></a>Eklenti uygulama  
  Ekle tarafı bağdaştırıcısı ve eklenti görünümü yerinde eklenti eklenti görünümünden türetilerek aşağıdaki kodda gösterildiği gibi uygulanabilir.  
-  
-  
-  
-  
-  
+
  Bu örnekte, bir ilgi çekici Bu modelin avantajı görebileceğiniz: eklenti, geliştiricilerin yalnızca gerekir (kullanıcı Arabirimi de olduğundan) eklentisi, yerine hem bir eklenti sınıfı ve eklentinin kullanıcı Arabirimi uygulamak.  
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Konak uygulamanın uygulama  
  Konak tarafı bağdaştırıcısı ile oluşturulan ana görünümünde, ana bilgisayar uygulaması kullanabileceğiniz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] işlem hattı açıp eklentiyi bir ana bilgisayar görünümü elde eklenti modeli. Aşağıdaki kodda adımları gösterilmektedir.  
-  
-  
-  
+
  Konak uygulamanın tipik .NET Framework eklenti modeli kodu örtük olarak ana bilgisayar uygulamasına ana görünümünde döndüren, eklentiyi etkinleştirmek için kullanır. Konak uygulama sonradan ana görünümünde görüntüler (olduğu bir <xref:System.Windows.Controls.UserControl>) gelen bir <xref:System.Windows.Controls.Grid>.  
   
  Eklentinin kullanıcı Arabirimi ile etkileşim işlemek için kod eklentinin uygulama etki alanında çalışır. Bu etkileşimlerin şunları içerir:  
   
--   İşleme <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
+-   İşleme <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
   
 -   Gösteren <xref:System.Windows.MessageBox>.  
   
  Bu etkinlik ana bilgisayar uygulamasını tamamen yalıtılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [WPF Eklentilerine Genel Bakış](wpf-add-ins-overview.md)

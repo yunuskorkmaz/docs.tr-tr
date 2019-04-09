@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d6a5673c2aaf287131274b0c590f00a69c64fed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a78a4b82d0b2064c90c938a8614b0c7594f7856
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182279"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra Birleşimi
 Tarafından kullanılan bir adres farkı gösteren [Iceegen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) bir bölümün dışında yeniden konumlandırmakta arabirimi.  
@@ -50,4 +50,5 @@ typedef union  {
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Meta Veri Birleşimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)
+
+- [Meta Veri Birleşmeleri](../../../../docs/framework/unmanaged-api/metadata/metadata-unions.md)

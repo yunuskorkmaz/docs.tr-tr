@@ -2,12 +2,12 @@
 title: POCO Desteği
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: 8d94d6a9700c38014aa53ee9910b53239fc28b0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f81db536e3b57f733494283bbaaa9644ec4dac9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112703"
 ---
 # <a name="poco-support"></a>POCO Desteği
 Bu örnek, işaretsiz türleri için serileştirme destek gösterir; diğer bir deyişle, türleri, serileştirme öznitelikleri uygulanmadı, bazen ifade türleri olarak düz eski CLR nesnesi (POCO). <xref:System.Runtime.Serialization.DataContractSerializer> Varsayılan bir oluşturucuya sahip tüm genel işaretsiz türleri için bir veri anlaşması algılar. Veri sözleşmeleri, yapılandırılmış veriler için ve hizmetlerden geçmesine izin verin. İşaretsiz türleri hakkında daha fazla bilgi için bkz. [Serializable türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
@@ -57,5 +57,6 @@ public class ComplexNumber
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\POCO`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - [Seri Hale Getirilebilir Türler](../../../../docs/framework/wcf/feature-details/serializable-types.md)

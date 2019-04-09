@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379581"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167173"
 ---
 # <a name="timing-events-overview"></a>Zamanlama Olaylarına Genel Bakış
 Bu konu başlığı altında kullanılabilir beş zamanlama olayları kullanmayı açıklar <xref:System.Windows.Media.Animation.Timeline> ve <xref:System.Windows.Media.Animation.Clock> nesneleri.  
@@ -77,6 +77,7 @@ Bu konu başlığı altında kullanılabilir beş zamanlama olayları kullanmay�
  İçin kaydolduğunuzda <xref:System.Windows.Media.Animation.Timeline.Completed> olay bir zaman çizelgesi üzerinde örneğin, gerçekten söyleyen kaydolmak için sistem <xref:System.Windows.Media.Animation.Clock.Completed> oluşturulan her zaman çizelgesi saati olayı. Kod içinde bu olayın önce kaydetmeniz gerekir <xref:System.Windows.Media.Animation.Clock> ; bu zaman çizelgesi için oluşturulan Aksi takdirde, bildirim almazsınız. Bu otomatik olarak gerçekleşir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; ayrıştırıcının önce olayı için otomatik olarak kaydeder. <xref:System.Windows.Media.Animation.Clock> oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Animasyon ve Zamanlama Sistemine Genel Bakış](animation-and-timing-system-overview.md)
 - [Animasyona Genel bakış](animation-overview.md)
 - [Zamanlama Davranışlarına Genel Bakış](timing-behaviors-overview.md)

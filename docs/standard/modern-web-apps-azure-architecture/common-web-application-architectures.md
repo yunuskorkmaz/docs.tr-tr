@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122700"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
@@ -48,7 +48,7 @@ Katmanlı bir mimari ile uygulamaları katman diğer katmanlarla kurabilir kıs�
 
 Katmanları (ve saklama) işlevselliği uygulamadaki değiştirmek çok daha kolay olun. Örneğin, bir uygulama başlangıçta kendi SQL Server veritabanı için Kalıcılık kullanabilirsiniz, ancak daha sonra bir bulut tabanlı süreklilik stratejisi ya da bir web API'si arkasında kullanmayı seçebilirsiniz. Uygulama düzgün şekilde Kalıcılık uygulanması mantıksal katman içinde kapsüllenmiş, bu SQL Server belirli katman aynı genel arabirimi uygulayan yeni bir tane tarafından değiştirilebilir.
 
-Gelecekteki gereksinimlerdeki değişikliklere yanıt uygulamalarında kullanıma takas olası ek olarak, uygulama katmanları Ayrıca, test amaçlı uygulamalarını takas etmek kolaylaştırabilir. Gerçek veri katmanı veya uygulama UI yerleşiminde karşı çalışan testler yazmak zorunda kalmak yerine bu Katmanlar test zaman isteklerine bilinen yanıtlar sağlayan sahte uygulamaları ile değiştirilebilir. Bu genellikle testleri yazmak çok daha kolay ve daha hızlı hale getirir çalışıyor karşılaştırıldığında testlerinin yeniden uygulamanın gerçek altyapı.
+Gelecekteki gereksinimlerdeki değişikliklere yanıt uygulamalarında kullanıma takas olası ek olarak, uygulama katmanları Ayrıca, test amaçlı uygulamalarını takas etmek kolaylaştırabilir. Gerçek veri katmanı veya uygulama UI yerleşiminde karşı çalışan testler yazmak zorunda kalmak yerine bu Katmanlar test zaman isteklerine bilinen yanıtlar sağlayan sahte uygulamaları ile değiştirilebilir. Bu genellikle testleri yazmak çok daha kolay ve testleri uygulamanın gerçek altyapı karşı çalışmaya kıyasla çalıştırmak için çok daha hızlı hale getirir.
 
 Mantıksal katman kuruluşun kurumsal yazılım uygulamaları kod iyileştirmeye yönelik yaygın bir tekniktir ve kod katmanlara düzenlenebilir birkaç yolu vardır.
 

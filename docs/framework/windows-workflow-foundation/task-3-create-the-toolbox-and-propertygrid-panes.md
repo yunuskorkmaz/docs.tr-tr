@@ -1,15 +1,15 @@
 ---
-title: '3. Görev: Araç kutusu ve PropertyGrid bölmeleri oluşturma'
+title: 'Görev 3: Araç Kutusu ve PropertyGrid Bölmeleri Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175051"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>3. Görev: Araç kutusu ve PropertyGrid bölmeleri oluşturma
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Görev 3: Araç Kutusu ve PropertyGrid Bölmeleri Oluşturma
 Bu görevde, oluşturacağınız **araç kutusu** ve **PropertyGrid** bölmeleri ve bunları yeniden barındırılan için ekleme [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
  Başvuru için üç tamamladıktan sonra MainWindow.xaml.cs dosyasında olmalıdır kodu görevleri de [iş akışı tasarımcısını yeniden barındırma](rehosting-the-workflow-designer.md) konuları dizi, bu konunun sonunda sağlanır.  
@@ -213,6 +213,7 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İş Akışı Tasarımcısını Yeniden Barındırma](rehosting-the-workflow-designer.md)
-- [1. Görev: Yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md)
-- [2. Görev: İş akışı tasarımcısını barındırma](task-2-host-the-workflow-designer.md)
+- [Görev 1: Yeni Bir Windows Presentation Foundation Uygulaması Oluşturma](task-1-create-a-new-wpf-app.md)
+- [Görev 2: İş Akışı Tasarımcısını Barındırma](task-2-host-the-workflow-designer.md)

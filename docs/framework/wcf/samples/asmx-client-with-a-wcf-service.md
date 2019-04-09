@@ -2,12 +2,12 @@
 title: WCF Hizmeti ile ASMX İstemcisi
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 63938f866083dac56d6ef43fdd8757c60b9a2f2b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e8cf536d93337986882a0a5136194a3ad4a03b58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139561"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF Hizmeti ile ASMX İstemcisi
 Bu örnek, Windows Communication Foundation (WCF) kullanan bir hizmet oluşturmak ve ardından ASMX istemcisi gibi bir WCF olmayan istemciden hizmete erişmek nasıl gösterir.  
@@ -148,4 +148,3 @@ Press <ENTER> to terminate client.
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
-  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tool area [Windows Forms]
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-ms.openlocfilehash: 9982d7b1edde083d546681b37966358d2aac23bd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8dc45e1cedca6a4c73ada057168e0d3194bef741
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192283"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel Denetimi
 `ToolStripPanel` denetimi sağlar, düzenleme ve Yuvalandığında araç alanı içinde yatay veya dikey boşluk paylaşımını <xref:System.Windows.Forms.ToolStrip> merkezi panelinin ve dört panel gerektiğinde değil denetleyen bir <xref:System.Windows.Forms.ToolStripContainer>.  
@@ -24,10 +24,10 @@ ms.locfileid: "57718499"
  [ToolStripPanel Denetimine Genel Bakış](toolstrippanel-control-overview.md)  
  Amacı ve Windows Forms ana kavramları açıklayan konuları sağlar <xref:System.Windows.Forms.ToolStripContainer> denetimi.  
   
- [Nasıl yapılır: ToolStripPanels katılın](how-to-join-toolstrippanels.md)  
+ [Nasıl yapılır: ToolStripPanels'ni birleştirme](how-to-join-toolstrippanels.md)  
  Ekleme gösterir <xref:System.Windows.Forms.ToolStrip> için denetimleri bir `ToolStripPanel`.  
   
- [Nasıl yapılır: MDI için ToolStripPanels kullanma](how-to-use-toolstrippanels-for-mdi.md)  
+ [Nasıl yapılır: MDI için ToolStripPanels Kullanma](how-to-use-toolstrippanels-for-mdi.md)  
  Tarafından gösterilen esneklik gösterir `ToolStripPanel` denetimlerinde Çoklu belge arayüzü uygulaması.  
   
 ## <a name="reference"></a>Başvuru  
@@ -35,4 +35,5 @@ ms.locfileid: "57718499"
  İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.ToolStripPanel> denetimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

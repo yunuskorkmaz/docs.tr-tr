@@ -2,12 +2,12 @@
 title: <issuer> , <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: 411fd1addb41822043d72de1edffee9f8733bc08
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 690ab14ea33ba9bef29788b2eb35f86ed945ce2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113548"
 ---
 # <a name="issuer-of-issuedtokenparameters"></a>\<veren >, \<İssuermetadata >
 Güvenlik belirteci hizmeti (güvenlik belirteçlerini çıkartan STS) belirtir.  
@@ -49,6 +49,7 @@ Güvenlik belirteci hizmeti (güvenlik belirteçlerini çıkartan STS) belirtir.
 |[\<İssuermetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Geçerli verilen belirteç belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.AdditionalRequestParameters%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.AdditionalRequestParameters%2A>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -60,5 +61,5 @@ Güvenlik belirteci hizmeti (güvenlik belirteçlerini çıkartan STS) belirtir.
 - [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

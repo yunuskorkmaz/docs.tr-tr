@@ -2,12 +2,12 @@
 title: <msmqTransportSecurity>
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-ms.openlocfilehash: a5832d0117c6560d527706443d4966ce34bb3748
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: fece74e76f879eff51f154eab8c8edea2c27119e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180134"
 ---
 # <a name="msmqtransportsecurity"></a>\<msmqTransportSecurity>
 Özel bağlama için MSMQ taşıma güvenlik ayarlarını belirtir.  
@@ -55,6 +55,7 @@ ms.locfileid: "58018955"
  Aktarım güvenliği hakkında daha fazla bilgi için bkz. [aktarım güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>
 - <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -65,4 +66,4 @@ ms.locfileid: "58018955"
 - [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Aktarım Güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Taşıma Güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md)

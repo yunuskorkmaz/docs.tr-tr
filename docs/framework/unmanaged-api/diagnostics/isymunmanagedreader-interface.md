@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d3c05715ffb4f7a366e3b3c9951ab68477c5c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0782533f773b69eeeb0b89175e5b22c61e822ed9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147218"
 ---
 # <a name="isymunmanagedreader-interface"></a>ISymUnmanagedReader Arabirimi
 Belgeler, yöntemler ve değişkenler bir sembol deposundaki erişim sağlayan bir sembol okuyucu temsil eder.  
@@ -52,5 +52,6 @@ Belgeler, yöntemler ve değişkenler bir sembol deposundaki erişim sağlayan b
  **Üst bilgi:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedReader2 Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+
+- [Tanılama Sembol Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedReader2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

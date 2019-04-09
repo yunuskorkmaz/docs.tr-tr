@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9f2f2a31247bae19d3cbb3dc667007c1cbc8acb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32f27d6c15a99282eee20d2563a4ca741238d846
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187413"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>ICLRReferenceAssemblyEnum Arabirimi
 Bir dosya veya akışı oluşturmak veya kimliklerle anlamanıza gerek kalmadan iç ortak dil çalışma zamanı (CLR), derleme kimlik verilerini kullanarak tarafından başvurulan derlemeler kümesini işlemek için ana sağlayan yöntemler sağlar.  
@@ -42,6 +42,7 @@ Bir dosya veya akışı oluşturmak veya kimliklerle anlamanıza gerek kalmadan 
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICLRAssemblyIdentityManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
 - [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

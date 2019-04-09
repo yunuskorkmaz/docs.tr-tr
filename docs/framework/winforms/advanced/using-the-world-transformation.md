@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], world transformation
 - world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-ms.openlocfilehash: cc6bcca42e84580199f75c64087af6d98f476d4b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f40d7e8cb814344365e8b88c2659751903b79d77
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139964"
 ---
 # <a name="using-the-world-transformation"></a>Gerçek Koordinat Dönüştürmesini Kullanma
 Gerçek koordinat dönüştürmesini parçasıdır <xref:System.Drawing.Graphics> sınıfı. Gerçek koordinat dönüştürmesini belirtin sayıları depolanan bir <xref:System.Drawing.Drawing2D.Matrix> 3 × 3 matrisi temsil eden nesne. <xref:System.Drawing.Drawing2D.Matrix> Ve <xref:System.Drawing.Graphics> sınıflarının sayıları dünya dönüşümü matriste ayarlamak için çeşitli yöntemler vardır.  
@@ -42,6 +42,7 @@ Gerçek koordinat dönüştürmesini parçasıdır <xref:System.Drawing.Graphics
  [!code-vb[System.Drawing.MiscLegacyTopics#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Drawing2D.Matrix>
 - [Koordinat Sistemleri ve Dönüştürmeler](coordinate-systems-and-transformations.md)
 - [Yönetilen GDI+'da Dönüştürmeleri Kullanma](using-transformations-in-managed-gdi.md)

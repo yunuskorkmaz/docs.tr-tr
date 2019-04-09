@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197660"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework Çözümleyicisi
 
@@ -114,7 +114,6 @@ Güvenli olmayan kullanırsanız <xref:System.Xml.XmlReaderSettings.DtdProcessin
 
 Ek bilgiler: [A3075: XML işleme güvensiz DTD](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-
 ### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: Zayıf şifreleme algoritmaları kullanmayın
 
 Şifreleme algoritmaları, saldırıları daha gelişmiş hale olarak zaman içinde düşürebilir. Tür ve bu şifreleme algoritmasının uygulama bağlı olarak, kendi şifreleme gücünü performansında enciphered iletileri okumak, enciphered iletilerle değiştirmesine, dijital imzalar forge, karma içerikle değiştirmesine saldırganlar daha fazla izin verebilir veya Aksi takdirde bu algoritmadan yola çıkılarak herhangi cryptosystem tehlikeye. Şifreleme için AES algoritması kullanın (AES-256'yı, AES-192 ve AES-128 kabul edilebilir) büyüktür veya eşittir 128 bit anahtar uzunluğu. Karma işlevi için bir karma işlevi olarak gibi SHA-2 512, SHA-2 384 ve SHA-2 256, SHA-2 ailesini kullanın.
@@ -134,5 +133,3 @@ Bu algoritma ayırmak için bilgisayarlarda mümkündür yapmadan bir saldırı 
 **Önem derecesi:** Uyarı
 
 Ek bilgi: [CA5351:: Bozuk şifreleme algoritmaları kullanmayın](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
-
-

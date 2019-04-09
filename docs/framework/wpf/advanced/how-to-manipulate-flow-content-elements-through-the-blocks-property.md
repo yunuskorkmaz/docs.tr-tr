@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-ms.openlocfilehash: a988f47b6b147b0db285af1928a4260c5deba542
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150143"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Nasıl yapılır: Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme
 Akış içeriği öğelerini gerçekleştirilebilir daha yaygın işlemlerin bazıları bu örneklerde görüldüğü **blokları** özelliği. Bu özellik öğesinden öğeleri eklemek ve kaldırmak için kullanılan <xref:System.Windows.Documents.BlockCollection>. Akış içerik öğeleri bu özellik bir **blokları** özellik içerir:  
@@ -63,6 +63,7 @@ Akış içeriği öğelerini gerçekleştirilebilir daha yaygın işlemlerin baz
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Documents.BlockCollection>
 - <xref:System.Windows.Documents.InlineCollection>
 - <xref:System.Windows.Documents.ListItemCollection>

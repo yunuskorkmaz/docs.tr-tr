@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097557"
 ---
 # <a name="data-templating-overview"></a>Veri Şablonu Oluşturmaya Genel Bakış
 WPF veri şablonu oluşturma modeli, verilerinizin sunumu tanımlamak için büyük esneklik sağlar. WPF denetimleri verilerini sunumu özelleştirmeyi desteklemek için yerleşik işlevselliğe sahiptir. Bu konu öncelikle nasıl tanımlanacağını gösterir bir <xref:System.Windows.DataTemplate> ve ardından özel mantığı ve hiyerarşik veri görüntüleme desteği göre şablonları seçimini gibi diğer veri şablonu oluşturma özellikleri sunar.  
@@ -194,6 +194,7 @@ Bu örnekte bizim tartışılması, burada sona eriyor. Tam bir örnek için bkz
  ![Örnek ekran HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Bağlama](../advanced/optimizing-performance-data-binding.md)
 - [DataTemplate ile Oluşturulan Öğeleri Bulma](how-to-find-datatemplate-generated-elements.md)
 - [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)

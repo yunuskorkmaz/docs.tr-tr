@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125165"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData İç XAML Türü
 XAML üretim içinde XML veri Adaları yerleşimini sağlar. XML öğeleri içinde `x:XData` veya herhangi bir XAML ad acting varsayılan XAML ad alanı bir parçası olmaları durumunda gibi XAML işlemcileri tarafından değerlendirilmesi gerektiğini değil. `x:XData` rastgele iyi biçimlendirilmiş bir XML içerebilir.  
@@ -50,6 +50,7 @@ XAML üretim içinde XML veri Adaları yerleşimini sağlar. XML öğeleri için
  Teknik olarak `x:XData` içeriğini türünde herhangi bir özelliği kullanılabilir <xref:System.Xml.Serialization.IXmlSerializable>. Ancak, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> yalnızca tanınmış bir uygulamasıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Veri Bağlamaya Genel Bakış](../wpf/data/data-binding-overview.md)
-- [İşaretleme Uzantısı Bağlama](../wpf/advanced/binding-markup-extension.md)
+- [Biçimlendirme Uzantısı Bağlama](../wpf/advanced/binding-markup-extension.md)

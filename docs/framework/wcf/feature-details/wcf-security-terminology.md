@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 53b6abc41dda0ebbbe28afc5b631efcfc0a60668
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158749"
 ---
 # <a name="wcf-security-terminology"></a>WCF Güvenlik Terimleri
 Bazı güvenlik ele alınırken kullanılan terminolojiyi bilinmiyor olabilir. Bu konu başlığı altında güvenlik terimlerden bazılarının açıklamaları kısa sağlar, ancak her öğe için kapsamlı bilgi sağlamak için tasarlanmamıştır.  
@@ -182,6 +182,7 @@ Bazı güvenlik ele alınırken kullanılan terminolojiyi bilinmiyor olabilir. B
  Kendi gerekli bölümlerini tanımlayan bir uluslararası olarak tanınan standart sertifikaları.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Temel Windows Communication Foundation Kavramları](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

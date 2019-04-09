@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Özel depolama alanları belirtme'
+title: 'Nasıl yapılır: Özel Depolama Alanları Belirtme'
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
-ms.openlocfilehash: d127de889fdaa2eb2d03a96dae5aa3d856efe32a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: e0928b2f2e817c8cc936f7aa1190229842a121a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195442"
 ---
-# <a name="how-to-specify-private-storage-fields"></a>Nasıl yapılır: Özel depolama alanları belirtme
+# <a name="how-to-specify-private-storage-fields"></a>Nasıl yapılır: Özel Depolama Alanları Belirtme
 Kullanım [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> özelliği <xref:System.Data.Linq.Mapping.DataAttribute> bir temel alınan depolama alanı adını belirtmek için özniteliği.  
   
  Kod örnekleri için bkz: <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
@@ -21,5 +21,6 @@ Kullanım [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <x
 2.  Alanın adı değeri olarak atama <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> özelliği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to SQL Nesne Modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Nasıl yapılır: Kod Düzenleyicisi'ni kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Nasıl yapılır: Kod Düzenleyicisini Kullanarak Varlık Sınıflarını Özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

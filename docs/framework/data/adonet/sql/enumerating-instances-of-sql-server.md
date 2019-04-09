@@ -1,18 +1,18 @@
 ---
-title: SQL Server (ADO.NET) numaralandırma örnekleri
+title: SQL Server (ADO.NET) Numaralandırma Örnekleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: c168fc2ceddde0f8d104ec5e562f92c9c9e487d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a723679fe18352e115df78af72975097dc28b617
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162861"
 ---
-# <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server (ADO.NET) numaralandırma örnekleri
+# <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server (ADO.NET) Numaralandırma Örnekleri
 SQL Server, geçerli ağ içinde SQL Server örneklerini bulmak için uygulamaların izin verir. <xref:System.Data.Sql.SqlDataSourceEnumerator> Sınıfı sağlayarak uygulama geliştiricisi, bu bilgileri sunan bir <xref:System.Data.DataTable> görünür olan tüm sunucular hakkında bilgiler içeren. Bu tablo, ağ üzerinde yer alan bir kullanıcı yeni bir bağlantı oluşturmak çalıştığında sağlanan listesiyle eşleşen ve üzerinde kullanılabilen tüm sunucuları içeren aşağı açılan liste genişletir kullanılabilir sunucu örneklerinin bir listesini içeren döndürülen **bağlantı Özellikleri** iletişim kutusu. Görüntülenen sonuçlar her zaman eksiksiz değildir.  
   
 > [!NOTE]
@@ -45,7 +45,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
 |Sütun|Açıklama|  
 |------------|-----------------|  
-|**SunucuAdı**|Sunucusunun adı.|  
+|**ServerName**|Sunucusunun adı.|  
 |**InstanceName**|Sunucu örneğinin adı. Sunucu varsayılan örnek olarak çalışıyorsa boş.|  
 |**IsClustered**|Sunucu bir kümenin parçası olup olmadığını belirtir.|  
 |**Sürüm**|Sunucu sürümü. Örneğin:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-   10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx (SQL Server 2012)|  
@@ -125,5 +125,6 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,15 +1,15 @@
 ---
-title: Genişletilmiş koruma ile tümleşik Windows kimlik doğrulaması
+title: Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 71e4359686ea2a6b1ae3e8ec840bf25af644a369
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146828"
 ---
-# <a name="integrated-windows-authentication-with-extended-protection"></a>Genişletilmiş koruma ile tümleşik Windows kimlik doğrulaması
+# <a name="integrated-windows-authentication-with-extended-protection"></a>Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması
 Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etkileyen yapıldı <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, ve ilgili sınıflar <xref:System.Net> ve ilgili ad alanları. Güvenliği geliştirmek genişletilmiş koruma için destek eklendi.  
   
  Bu değişiklikler, tümleşik Windows kimlik doğrulaması kullanıldığı web isteklerinde bulunmak ve yanıt almak için bu sınıfları kullanan uygulamaları etkileyebilir. Bu değişiklik, ayrıca web sunucuları ve tümleşik Windows kimlik doğrulaması kullanmak üzere yapılandırılmış istemci uygulamaları etkileyebilir.  
@@ -128,7 +128,7 @@ Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etk
   
 3.  İstemci doğru kanal bağlama belirtir veya sunucunun genişletilmiş koruma İlkesi ile yapılandırılmış olduğundan bir kanal bağlama belirtmeden bağlanmasına izin <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> istek işleme için uygulamaya döndürülür. Hiçbir hizmet adı denetimi otomatik olarak gerçekleştirilir. Kendi hizmet adı doğrulama kullanarak gerçekleştirmek bir uygulama seçebilirsiniz <xref:System.Net.HttpListenerRequest.ServiceName%2A> özelliği, ancak şu durumlarda yedekli.  
   
- Bir uygulamayı sürekli bir HTTP isteğinin gövdesi içinde geçirilen BLOB'ları temel kimlik doğrulaması gerçekleştirmek için kendi SSPI çağrıları yapar ve kanal bağlamayı desteklemek istediği, beklenen kanal bağlama kullanarakdışgüvenlikanaldanalmakgerekiyor<xref:System.Net.HttpListener> yerel Win32'ye geçirmek için [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) işlevi. Bunu yapmak için <xref:System.Net.HttpListenerRequest.TransportContext%2A> özelliği ve çağrı <xref:System.Net.TransportContext.GetChannelBinding%2A> CBT almak için yöntemi. Yalnızca endpoint bağlamaları desteklenir. Herhangi bir şey varsa diğer <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> belirtilen bir <xref:System.NotSupportedException> oluşturulur. Temel işletim sistemi kanal bağlama destekliyorsa <xref:System.Net.TransportContext.GetChannelBinding%2A> yöntemi döndürür bir <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> <xref:System.Runtime.InteropServices.SafeHandle> bir kanal iletilecek uygun bağlama bir işaretçi sarmalama [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) işlevi bir SecBuffer yapının üyesi pvBuffer geçirilen `pInput` parametresi. <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> , Bayt cinsinden uzunluğu kanal bağlama özelliği içerir. Temel işletim sistemi kanal bağlamaları desteklemiyor ise, işlev döndürür `null`.  
+ Bir uygulamayı sürekli bir HTTP isteğinin gövdesi içinde geçirilen BLOB'ları temel kimlik doğrulaması gerçekleştirmek için kendi SSPI çağrıları yapar ve kanal bağlamayı desteklemek istediği, beklenen kanal bağlama kullanarakdışgüvenlikanaldanalmakgerekiyor<xref:System.Net.HttpListener> yerel Win32'ye geçirmek için [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) işlevi. Bunu yapmak için <xref:System.Net.HttpListenerRequest.TransportContext%2A> özelliği ve çağrı <xref:System.Net.TransportContext.GetChannelBinding%2A> CBT almak için yöntemi. Yalnızca endpoint bağlamaları desteklenir. Herhangi bir şey varsa diğer <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> belirtilen bir <xref:System.NotSupportedException> oluşturulur. Temel işletim sistemi kanal bağlama destekliyorsa <xref:System.Net.TransportContext.GetChannelBinding%2A> yöntemi döndürür bir <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> bir kanal iletilecek uygun bağlama bir işaretçi sarmalama [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) pvBuffer işlevi üye SecBuffer yapısı geçirilen `pInput` parametresi. <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> , Bayt cinsinden uzunluğu kanal bağlama özelliği içerir. Temel işletim sistemi kanal bağlamaları desteklemiyor ise, işlev döndürür `null`.  
   
  Başka bir olası senaryo proxy'leri kullanılmadığı HTTP:// ön ekleri için genişletilmiş koruma etkinleştirmektir. Bu durumda <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> için bir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> ile <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> kümesine <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> veya <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, ve <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> kümesine <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected> değerini <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> koyar <xref:System.Net.HttpListener> sırasındakısmensağlamlaştırılmışmodda<xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> tam olarak sağlamlaştırılmış moduna karşılık gelir.  
   
@@ -149,5 +149,6 @@ Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etk
  İsteklerin ve güvenilen proxy'leri kullanıldığında diğer türleri ile kimlik doğrulaması için bu genişletilmiş koruma özellikleri de sunucu uygulamaları tarafından kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>

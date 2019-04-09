@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: 81ac17c9f78baa71d005883c9dd928e398b10a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842349"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130266"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView Denetimi Mimarisi (Windows Forms)
 <xref:System.Windows.Forms.DataGridView> Denetimi ve ilişkili sınıflarının görüntüleme ve düzenleme sekmeli veri için esnek, Genişletilebilir bir sistem için tasarlanmıştır. Bu sınıfların tümü bulunur <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı ve tüm adlandırılmış "DataGridView" ön ekine sahip.  
@@ -137,6 +137,7 @@ ms.locfileid: "58842349"
  Etkinleştirirseniz <xref:System.Windows.Forms.DataGridView> denetimin <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliği, yeni satır eklemek için özel bir satır son satırı görünür. Bu satırı parçasıdır <xref:System.Windows.Forms.DataGridView.Rows%2A> koleksiyonu, ancak ilgilenmenizi gerektiren özel işlevler sahiptir. Daha fazla bilgi için [Windows Forms DataGridView denetiminde yeni kayıtlar için satır kullanma](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataGridView Denetimine Genel Bakış](datagridview-control-overview-windows-forms.md)
 - [Windows Forms DataGridView Denetimini Özelleştirme](customizing-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

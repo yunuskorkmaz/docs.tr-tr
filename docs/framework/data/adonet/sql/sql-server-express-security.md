@@ -2,14 +2,14 @@
 title: SQL Server Express Security
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 73f94d25e90197ade5e27ab6d9ff13602a5c854f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174557"
 ---
-# <a name="sql-server-express-security"></a>SQL Server Express Security
+# <a name="sql-server-express-security"></a>SQL Server Express Güvenliği
 Microsoft SQL Server Express Edition (SQL Server Express), Microsoft SQL Sunucusu'nu temel alır ve Veritabanı Altyapısı'nın özelliklerinin birçoğunu destekler. Önemsiz özellik ve ağ bağlantısı varsayılan olarak kapalı olan şekilde tasarlanmıştır. Bu saldırı kötü niyetli bir kullanıcı tarafından kullanılabilir yüzey alanını azaltır.  
   
  SQL Server Express, genellikle adlandırılmış bir örneği yüklenir. Örneğin varsayılan addır `SQLExpress`. Adlandırılmış bir örnek, bilgisayarın ağ adı yanı sıra, yükleme sırasında belirttiğiniz örnek adı tarafından tanımlanır.  
@@ -36,6 +36,7 @@ Microsoft SQL Server Express Edition (SQL Server Express), Microsoft SQL Sunucus
 |[SQL Server Express Kullanıcı Örnekleri](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Bir ADO.NET uygulamasında kullanıcı örneği yeteneklerini açıklar. Bir kullanıcı örneği etkinleştirmek için bir kullanıcı örneği kullanarak bağlanma hakkında bilgi sağlayan bir <xref:System.Data.SqlClient.SqlConnection>, kullanıcı örneği ömrünü ve kullanıcı örneği senaryoları.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [SQL Server Express Kullanıcı Örnekleri](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

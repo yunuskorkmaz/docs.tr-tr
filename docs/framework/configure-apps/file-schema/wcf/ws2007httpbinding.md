@@ -2,12 +2,12 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 01b8f20607de1cdd9c6b1ad9fc030c1d050ed749
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9caba8dfc848a2463b1fa482ccaf55288d96af29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182155"
 ---
 # <a name="ws2007httpbinding"></a>\<ws2007HttpBinding>
 Doğru sürümleri için destek sağlayan bir birlikte çalışabilen bağlama tanımlar <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, ve <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> bağlama öğeleri.  
@@ -136,6 +136,7 @@ Doğru sürümleri için destek sağlayan bir birlikte çalışabilen bağlama t
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.WS2007HttpBinding>
 - <xref:System.ServiceModel.Configuration.WS2007HttpBindingElement>
 - [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)

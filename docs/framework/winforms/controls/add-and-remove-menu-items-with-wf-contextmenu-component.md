@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ContextMenu bileşeni ile menü öğelerini ekleyip'
+title: 'Nasıl yapılır: Windows Forms ContextMenu Bileşeni ile Menü Öğesi Ekleme ve Kaldırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 8b63182bdb37e47a71bee2d22500263cd4889ac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e02a187edc1392f15fe98354bb2e5c43843e430c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725070"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094469"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Nasıl yapılır: Windows Forms ContextMenu bileşeni ile menü öğelerini ekleyip
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Nasıl yapılır: Windows Forms ContextMenu Bileşeni ile Menü Öğesi Ekleme ve Kaldırma
 Kısayol menüsü öğelerini Windows Forms'ta ekleyip açıklanmaktadır.  
   
  Windows Forms <xref:System.Windows.Forms.ContextMenu> bileşeni menüsü seçili nesne için uygun olan sık kullanılan komutlar sağlar. Ekleyerek öğeler için kısayol menüsünü ekleyebilirsiniz <xref:System.Windows.Forms.MenuItem> nesneleri için <xref:System.Windows.Forms.Menu.MenuItems%2A> koleksiyonu.  
@@ -75,6 +75,7 @@ Kısayol menüsü öğelerini Windows Forms'ta ekleyip açıklanmaktadır.
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ContextMenu>
 - [ContextMenu Bileşeni](contextmenu-component-windows-forms.md)
 - [ContextMenu Bileşenine Genel Bakış](contextmenu-component-overview-windows-forms.md)

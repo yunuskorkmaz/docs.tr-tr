@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d504e694810bfa1b9f3258f75e307bfb60d4ad7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a340086be042c790ae7bf750759ff80f7c9eaf23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122622"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 Arabirimi
 Dinamik modül için simge okuyucu oluşturur.  
@@ -61,6 +61,7 @@ interface ICorDebugModule3 : IUnknown
  **.NET framework sürümleri:** 4.5, 4, 3.5 SP1
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICorDebugRemoteTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
 - [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

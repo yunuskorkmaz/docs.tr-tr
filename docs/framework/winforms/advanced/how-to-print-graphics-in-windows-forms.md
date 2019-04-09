@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'ta grafik yazdırma"
+title: "Nasıl yapılır: Windows Forms'da Grafik Yazdırma"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: cb8c9f291103915c82fb31af5c6668fbd0648f66
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ab2a230b7c6e303d712df058f450334b50c8a676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167212"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta grafik yazdırma
+# <a name="how-to-print-graphics-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da Grafik Yazdırma
 Genellikle, Windows tabanlı uygulamanızdaki grafik yazdırma isteyeceksiniz. <xref:System.Drawing.Graphics> Sınıfı bir aygıta bir ekran veya yazıcı gibi çizim nesneleri için yöntemler sağlar.  
   
 ### <a name="to-print-graphics"></a>Grafik yazdırma  
@@ -67,6 +67,7 @@ Genellikle, Windows tabanlı uygulamanızdaki grafik yazdırma isteyeceksiniz. <
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
 - [Windows Forms Yazdırma Desteği](windows-forms-print-support.md)

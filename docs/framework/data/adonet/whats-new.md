@@ -1,15 +1,15 @@
 ---
-title: ADO.NET'teki yenilikler
+title: ADO.NET’teki Yenilikler
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 2acbd6a766d91e31db71ce193bcc4081e5f32c9d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 90352d3e3d52430d515460cdcc9b6d177976c0b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191469"
 ---
-# <a name="whats-new-in-adonet"></a>ADO.NET'teki yenilikler
+# <a name="whats-new-in-adonet"></a>ADO.NET’teki Yenilikler
 Aşağıdaki özellikleri yeni [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] içinde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="sqlclient-data-provider"></a>SqlClient veri sağlayıcısı  
@@ -51,6 +51,7 @@ Aşağıdaki özellikleri yeni [!INCLUDE[vstecado](../../../../includes/vstecado
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] Entity Framework 5.0 ile çalışırken yeni senaryolar sağlayan API'leri ekler. Geliştirmeleri ve Entity Framework 5.0 eklenen özellikler hakkında daha fazla bilgi için aşağıdaki konulara bakın: [Yenilikler](https://go.microsoft.com/fwlink/?LinkID=251106) ve [Entity Framework sürümleri ve sürüm oluşturma](https://go.microsoft.com/fwlink/?LinkId=234899).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)

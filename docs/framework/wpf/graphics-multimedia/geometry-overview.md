@@ -8,17 +8,16 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: e002c07953320ac5e7c0854fe521896c3bca225c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180004"
 ---
 # <a name="geometry-overview"></a>Geometriye Genel Bakış
 Bu genel bakışta nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> şekiller açıklamak için sınıflar. Bu konuda ayrıca arasındaki farkları karşılaştırır <xref:System.Windows.Media.Geometry> nesneleri ve <xref:System.Windows.Shapes.Shape> öğeleri.  
-  
-  
+
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## <a name="what-is-a-geometry"></a>Geometri nedir?  
  <xref:System.Windows.Media.Geometry> Sınıfı ve gibi kendisinden türetilen sınıflar <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, ve <xref:System.Windows.Media.CombinedGeometry>, geometri 2B şeklin tanımlamak olanak tanır. Bu geometrik açıklamalar pek çok kullanımı, böyle bir şekil ekrana boyama tanımlama veya isabet testi ve kırpma bölgeleri tanımlama vardır. Hatta geometri animasyon yolunu tanımlamak için de kullanabilirsiniz.  
@@ -217,13 +216,14 @@ PathGeometry birden çok şekil ile
  Bkz: <xref:System.Windows.Media.Geometry> yöntemlerinin tam listesi için sınıf.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Geometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
 - [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Yol İşaretleme Söz Dizimi](path-markup-syntax.md)
+- [Yol Biçimlendirme Sözdizimi](path-markup-syntax.md)
 - [Nasıl Yapılır Konuları](geometries-how-to-topics.md)
 - [Animasyona Genel bakış](animation-overview.md)
-- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Çizim Nesnelerine Genel Bakış](drawing-objects-overview.md)

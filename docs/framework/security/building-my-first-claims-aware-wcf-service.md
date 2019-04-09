@@ -3,12 +3,12 @@ title: Talep Kullanan İlk WCF Hizmetimi Derleme
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: c982fae4fdbdd4963c92b17b609d517056c34b95
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 82ce5441463989507872750eb025899b8f80adee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144475"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Talep Kullanan İlk WCF Hizmetimi Derleme
 ## <a name="applies-to"></a>Uygulanan Öğe  
@@ -41,4 +41,5 @@ ms.locfileid: "58825774"
  WIF kullanarak ilk talep kullanan WCF hizmetinizi oluşturmak için bkz: [nasıl yapılır: WCF Web hizmeti uygulaması için WIF etkinleştirme](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WIF Kullanmaya Başlama](../../../docs/framework/security/getting-started-with-wif.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Forms uygulamaları Windows baskı önizlemede görüntüleme'
+title: 'Nasıl yapılır: Windows Forms Uygulamalarında Baskı Önizlemede Görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 22247c941eff575f0f3e5683e46376054ba13bb5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154368"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Nasıl yapılır: Forms uygulamaları Windows baskı önizlemede görüntüleme
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Nasıl yapılır: Windows Forms Uygulamalarında Baskı Önizlemede Görüntüleme
 Kullanabileceğiniz <xref:System.Windows.Forms.PrintPreviewDialog> yazdırılması için önce bir belge genellikle görüntüleme olanağı denetimi.  
   
  Bunu yapmak için örneği belirtmeniz gerekir <xref:System.Drawing.Printing.PrintDocument> sınıfı; yazdırılması için belgeyi budur. Baskı Önizleme ile kullanma hakkında daha fazla bilgi için <xref:System.Drawing.Printing.PrintDocument> bileşeni Bkz [nasıl yapılır: Windows Forms'ta baskı önizlemeyi kullanarak yazdırma](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
@@ -82,6 +82,7 @@ Kullanabileceğiniz <xref:System.Windows.Forms.PrintPreviewDialog> yazdırılmas
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [PrintDocument Bileşeni](printdocument-component-windows-forms.md)
 - [PrintPreviewDialog Denetimi](printpreviewdialog-control-windows-forms.md)
 - [Windows Forms Yazdırma Desteği](../advanced/windows-forms-print-support.md)

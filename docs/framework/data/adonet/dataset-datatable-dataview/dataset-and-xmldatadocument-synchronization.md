@@ -1,18 +1,18 @@
 ---
-title: DataSet ve XmlDataDocument eşitlemesi
+title: DataSet ve XmlDataDocument Eşitlemesi
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 5360a7bce1b5470271bc6b512484964ebb9fd8d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587784"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164742"
 ---
-# <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet ve XmlDataDocument eşitlemesi
+# <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet ve XmlDataDocument Eşitlemesi
 ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar. Hiyerarşik veri erişimi için .NET Framework XML sınıfları kullanabilirsiniz. Tarihsel olarak, bu iki verilerini sunumu ayrı olarak kullanılmış. Ancak, .NET Framework verilerine ilişkisel ve hiyerarşik temsillerini gerçek zamanlı, zaman uyumlu erişiminizi sağlar **veri kümesi** nesne ve <xref:System.Xml.XmlDataDocument> nesne, sırasıyla.  
   
  Olduğunda bir **veri kümesi** ile eşitlenen bir **XmlDataDocument**, her iki nesne tek bir veri kümesiyle çalıştığınız. Bunun anlamı bir değişiklik yapılırsa **veri kümesi**, değişiklik yansıtılır **XmlDataDocument**ve bunun tersi de geçerlidir. Arasındaki ilişkiyi **veri kümesi** ve **XmlDataDocument** büyük esneklik yerleşik hizmetler tüm paketini erişmek için tek bir veri kümesini kullanarak tek bir uygulama vererek oluşturur. geçici bir çözüm **veri kümesi** (örneğin, Web Forms ve Windows Forms denetimleri ve Visual Studio .NET tasarımcıları), Genişletilebilir Stil Sayfası Dili (XSL), XSLT Dönüşümleri (XSLT) ve XML Path gibi XML Hizmetleri paketi yanı sıra Dil (XPath). Hedef uygulama ile Hizmetleri ayarladığı vermeyeceklerini yoktur; her ikisi de kullanılabilir.  
@@ -113,4 +113,5 @@ ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar
  Hakkında başvuru bilgileri içerir **XmlDataDocument** sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

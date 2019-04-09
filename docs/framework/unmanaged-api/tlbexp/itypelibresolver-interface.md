@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbd8e15b7f708df628f75dc9812eca0f84f36434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa3135465673bedea1c6827da622903279d1bcf1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179690"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver Arabirimi
 Sağlar [ResolveTypeLib yöntemi](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), bir tür kitaplığı dosyasının yolu çözümler.  
@@ -42,5 +42,6 @@ Sağlar [ResolveTypeLib yöntemi](../../../../docs/framework/unmanaged-api/tlbex
  **.NET framework sürümü:** 4, 3.5, 3.0, 2.0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Tlbexp Yardımcı İşlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
 - [LoadTypeLibEx işlevi](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

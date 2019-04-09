@@ -9,18 +9,16 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139613"
 ---
 # <a name="flow-document-overview"></a>Akış Belgesine Genel Bakış
 Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanmıştır. Önceden tanımlanmış bir düzene ayarlanıyor, yerine akış belgeleri dinamik olarak ayarlama ve çalışma zamanı değişkenleri isteğe bağlı kullanıcı tercihlerini pencere boyutunu ve cihaz çözünürlüğü gibi temel alarak kendi içerik yeniden akışı. Ayrıca, akış belgeleri sayfalandırma ve sütunlar gibi gelişmiş belge özellikleri sunar. Bu konu, akış belgeleri ve bunların nasıl oluşturulacağı hakkında genel bir bakış sağlar.  
-  
 
-  
 <a name="what_is_a_flow_document"></a>   
 ## <a name="what-is-a-flow-document"></a>Bir akış belge nedir  
  Akış belgesi, "yeniden akış içerik" pencere boyutu, cihaz çözüm ve diğer ortam değişkenlerine bağlı olarak tasarlanmıştır. Ayrıca, akış belge özelliklerini görüntüleme okunabilirlik ve boyutunu ve yazı tipleri görünümünü değiştirme özelliği en iyi duruma modları, arama da dahil olmak üzere yerleşik bir dizi mevcuttur. Kolay okunması birincil belge tüketimi senaryo olduğunda akış belgeleri en iyi şekilde kullanılır. Buna karşılık, sabit belgeleri, statik bir sunu sağlamak için tasarlanmıştır. Sabit belgeleri, kaynak içerik kalitesini gerekli olduğunda yararlıdır. Bkz: [WPF'deki Belgeler](documents-in-wpf.md) farklı belge türleri hakkında daha fazla bilgi için.  
@@ -132,7 +130,7 @@ Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanm
   
  ![Akış içeriği bir UIElement gösteren ekran görüntüsü katıştırılmış.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **Liste**  
+ **List**  
   
  <xref:System.Windows.Documents.List> Madde işaretli veya sayısal bir liste oluşturmak için kullanılır. Ayarlama <xref:System.Windows.Documents.List.MarkerStyle%2A> özelliğini bir <xref:System.Windows.TextMarkerStyle> liste stilini belirlemek için sabit listesi değeri. Aşağıdaki örnek, basit bir listesi oluşturma işlemi gösterilmektedir.  
   
@@ -349,11 +347,12 @@ Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanm
  Bkz: [WPF'de tipografi](typography-in-wpf.md) tipografi hakkında daha fazla bilgi için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Metin](optimizing-performance-text.md)
 - [WPF'de Tipografi](typography-in-wpf.md)
 - [Nasıl Yapılır Konuları](flow-content-elements-how-to-topics.md)
 - [TextElement İçerik Modeline Genel Bakış](textelement-content-model-overview.md)
-- [RichTextBox Genel Bakış](../controls/richtextbox-overview.md)
+- [RichTextBox Genel Bakışı](../controls/richtextbox-overview.md)
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Tabloya Genel Bakış](table-overview.md)
-- [Ek Açıklamalara Genel Bakış](annotations-overview.md)
+- [Ek açıklamalara Genel Bakış](annotations-overview.md)

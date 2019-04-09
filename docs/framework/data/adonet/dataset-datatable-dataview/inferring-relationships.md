@@ -1,15 +1,15 @@
 ---
-title: İlişkilerin çıkarımını yapma
+title: İlişkilerin Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 2d25160b8dae8b8dc883abb589551782925ca325
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8a9aba493dfe82466608ea60932ddfec5ef64f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127887"
 ---
-# <a name="inferring-relationships"></a>İlişkilerin çıkarımını yapma
+# <a name="inferring-relationships"></a>İlişkilerin Çıkarımını Yapma
 Tablo olarak ortaya çıkan bir öğe ayrıca bir tablo olarak ortaya çıkan bir alt öğe varsa bir <xref:System.Data.DataRelation> iki tablo arasında oluşturulur. Yeni bir sütun adıyla **ParentTableName_Id** üst öğe için oluşturulan tabloyu hem alt öğe için oluşturulan tabloyu eklenir. **Columnmapping'in** bu kimlik sütununun özellik ayarlanacak **MappingType.Hidden**. Sütun üst tablo için otomatik artırma birincil anahtarı olacaktır ve kullanılacak **DataRelation** iki tablo arasında. Eklenen kimlik sütununun veri türünün **System.Int32**, veri türü diğer tüm çıkarsanan sütun olduğu **System.String**. A <xref:System.Data.ForeignKeyConstraint> ile **DeleteRule** = **Cascade** ayrıca yeni bir sütun üst ve alt tablolarında kullanılarak oluşturulur.  
   
  Örneğin, aşağıdaki XML göz önünde bulundurun:  
@@ -67,9 +67,10 @@ Tablo olarak ortaya çıkan bir öğe ayrıca bir tablo olarak ortaya çıkan bi
   
  **DeleteRule:** Basamakla  
   
- **AcceptRejectRule:** Hiçbiri  
+ **AcceptRejectRule:** Yok.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
 - [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [XML’den DataSet Schema Bilgilerini Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)

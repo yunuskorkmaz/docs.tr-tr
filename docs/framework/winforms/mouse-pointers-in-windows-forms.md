@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122791"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows Forms'ta Fare İşaretçileri
 Fare *işaretçi*, fare ile kullanıcı girişi için ekrandaki bir odak noktası belirten bir bit eşlem olduğundan, bazen bir imleç adlandırılır. Bu konu, Windows Forms'ta fare işaretçisi genel bir bakış sağlar ve bazı değiştirebilir ve fare işaretçisini denetim yolları açıklanmaktadır.  
@@ -31,6 +31,7 @@ Fare *işaretçi*, fare ile kullanıcı girişi için ekrandaki bir odak noktas�
  Fare işaretçisi değiştirmek için birincil ayarlayarak yoludur <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> veya <xref:System.Windows.Forms.Control.DefaultCursor%2A> denetiminin yeni bir özellik <xref:System.Windows.Forms.Cursor>. Fare işaretçisi değiştirme örnekleri görmek için aşağıdaki kod örneğinde <xref:System.Windows.Forms.Cursor> sınıfı. Ayrıca, <xref:System.Windows.Forms.Cursors> sınıfı bir dizi gösterir <xref:System.Windows.Forms.Cursor> işaretçileri, bir yandan benzer bir işaretçi gibi birçok farklı türde nesneleri. Fare işaretçisini denetim üzerinde olduğunda, bir kum saati benzeyen, bekleme işaretçisi görüntülemek için kullanın <xref:System.Windows.Forms.Control.UseWaitCursor%2A> özelliği <xref:System.Windows.Forms.Control> sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Cursor>
 - [Bir Windows Forms Uygulamasında Fare Girdisi](mouse-input-in-a-windows-forms-application.md)
 - [Windows Forms'ta Sürükle ve Bırak İşlevi](drag-and-drop-functionality-in-windows-forms.md)

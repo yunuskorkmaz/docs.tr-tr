@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uygulama ayarları oluşturma'
+title: 'Nasıl yapılır: Uygulama Ayarları Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166406"
 ---
-# <a name="how-to-create-application-settings"></a>Nasıl yapılır: Uygulama ayarları oluşturma
+# <a name="how-to-create-application-settings"></a>Nasıl yapılır: Uygulama Ayarları Oluşturma
 Yönetilen kod kullanarak, yeni uygulama ayarları oluşturma ve böylece bu ayarlar yüklenir ve çalışma zamanında otomatik olarak kaydedilir bunları özelliklerine formunuza veya form denetimlerinde bağlayın.  
   
  Aşağıdaki yordamda, el ile türetilen bir sarmalayıcı sınıfı oluşturmanız <xref:System.Configuration.ApplicationSettingsBase>. Bu sınıf için kullanıma sunmak istediğiniz her uygulama ayarı için ortak olarak erişilebilen bir özellik ekleyin.  
@@ -47,7 +47,8 @@ Yönetilen kod kullanarak, yeni uygulama ayarları oluşturma ve böylece bu aya
  Varsayılan ayar sağlayıcısı <xref:System.Configuration.LocalFileSettingsProvider>, yapılandırma dosyalarındaki bilgileri düz metin olarak kalıcıdır. Bu, geçerli kullanıcı için işletim sistemi tarafından sağlanan dosya erişim güvenliği için güvenlik sınırlar. Bu nedenle dikkatli yapılandırma dosyalarında depolanan bilgileri alınması gerekir. Örneğin, bir uygulama ayarları uygulamanın veri deposuna işaret eden bağlantı dizeleri depolamak için kullanılır. Ancak, güvenlik kaygıları nedeniyle, parolalar gibi dizeleri içermemelidir. Bağlantı dizeleri hakkında daha fazla bilgi için bkz. <xref:System.Configuration.SpecialSetting>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Uygulama Ayarlarına Genel Bakış](application-settings-overview.md)
-- [Nasıl yapılır: Uygulama ayarlarını doğrulama](how-to-validate-application-settings.md)
+- [Nasıl yapılır: Uygulama Ayarlarını Doğrulama](how-to-validate-application-settings.md)

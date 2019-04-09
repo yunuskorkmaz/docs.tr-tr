@@ -2,12 +2,12 @@
 title: (WCF Veri Hizmetleri) veri hizmeti bağlamını yönetme
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-ms.openlocfilehash: d339826cabc83d2e0cecb5451ba5b950e7f02321
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184749"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>(WCF Veri Hizmetleri) veri hizmeti bağlamını yönetme
 <xref:System.Data.Services.Client.DataServiceContext> Sınıfı belirtilen veri hizmeti karşı desteklenen işlemler kapsüller. Ancak [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Hizmetleri durum bilgisiz, içeriği değil. Bu nedenle, kullanabileceğiniz <xref:System.Data.Services.Client.DataServiceContext> değişiklik yönetimi gibi özellikleri desteklemek için veri hizmeti ile etkileşim arasında istemci durumunu korumak üzere sınıfı. Bu sınıf ayrıca kimlikleri yöneten ve değişiklikleri izler.  
@@ -37,6 +37,7 @@ ms.locfileid: "54631798"
  Varsayılan olarak, istemci kitaplığı gönderir oluşturma, okuma, güncelleştirme ve silme istekleri için bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmet POST, GET, PUT/Birleştir/düzeltme eki karşılık gelen HTTP yöntemleri kullanılarak ve SİLİN. Temel ilkeler, temsili durum aktarımı (REST) olarak bunu anlayışına. Ancak, her Web sunucusu uygulaması HTTP yöntemleri kümesini destekler. Bazı durumlarda, desteklenen yöntemlerden yalnızca almak ve sonrası için kısıtlı olabilir. Bir güvenlik duvarı gibi bir aracı belirli yöntemlerle istekleri engellediğinde bu durum oluşabilir. GET ve POST yöntemleri genellikle desteklenmediğinden [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] desteklenmeyen HTTP yöntemleri bir POST isteği kullanarak yürütmek için bir yol kullanır. Olarak bilinen *Tünelleme* veya *POST tünel*, böylece özel belirtilen gerçek yöntemi ile bir POST isteği göndermek bir istemci `X-HTTP-Method` başlığı. POST istekleri için tüneli etkinleştirmek için ayarlayın <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> özelliği <xref:System.Data.Services.Client.DataServiceContext> için örnek `true`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Veri Hizmetini Güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)
 - [Zaman Uyumsuz İşlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)

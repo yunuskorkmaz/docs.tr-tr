@@ -4,18 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164997"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters ve XAML
 Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tanıtır. .NET Framework'teki <xref:System.ComponentModel.TypeConverter> sınıfı XAML öznitelik kullanımı bir özellik değeri olarak kullanılabilecek özel bir yönetilen sınıf uygulamasını bir parçası olarak belirli bir amaca hizmet. Özel bir sınıf yazma ve XAML ayarlanabilir öznitelik değeri olarak kullanılabilmesi için bir sınıfın örneklerini istiyorsanız uygulamak ihtiyacınız olabilecek bir <xref:System.ComponentModel.TypeConverterAttribute> sınıfınıza, özel bir yazma <xref:System.ComponentModel.TypeConverter> sınıfı veya her ikisini de.  
-  
 
-  
 ## <a name="type-conversion-concepts"></a>Tür dönüştürme kavramları  
   
 ### <a name="xaml-and-string-values"></a>XAML ve dize değerleri  
@@ -110,7 +108,8 @@ Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tan
  Özellik başına temelinde bir tür dönüştürücüsü de sağlayabilirsiniz. Uygulama yerine bir [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> isteğe bağlı olarak sınıf tanımının bir özellik tanımı için geçerlidir (ana tanım değil `get` / `set` içindeki uygulamaları). Özelliğin türü, özel bir tür dönüştürücüsü tarafından işlenen türüyle eşleşmelidir. Bu özniteliği uygulandı, ile bir XAMLprocessor bu özellik değerlerini işlediğinde, bu işlem giriş dizesi ve nesne örneği döndürür. Özellik başına türü dönüştürücü özellik türü Microsoft .NET Framework veya sınıf tanımı kontrol ve uygulanamıyor burada bazı diğer kitaplığı kullanmayı tercih ederseniz özellikle kullanışlı bir tekniktir bir <xref:System.ComponentModel.TypeConverterAttribute> vardır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ComponentModel.TypeConverter>
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
-- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Biçimlendirme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [Ayrıntılı XAML Sözdizimi](xaml-syntax-in-detail.md)

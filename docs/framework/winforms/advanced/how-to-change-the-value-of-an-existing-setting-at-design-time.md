@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Tasarım zamanında mevcut bir ayarın değerini değiştirme'
+title: 'Nasıl yapılır: Tasarım Zamanında Mevcut Bir Ayarın Değerini Değiştirme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: f9a7f5aefc07bb9700e0b0b59684e5882d7109b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 00c1a58bd58b67f35d6e5782f53eb15693485ca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194246"
 ---
-# <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Nasıl yapılır: Tasarım zamanında mevcut bir ayarın değerini değiştirme
+# <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Nasıl yapılır: Tasarım Zamanında Mevcut Bir Ayarın Değerini Değiştirme
 Visual Studio, projenizdeki mevcut ayarların değerlerini düzenlemek için kullanabilirsiniz.  
   
 ### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>C'de, tasarım zamanında mevcut bir ayarın değerini değiştirmek için\#
@@ -32,6 +32,7 @@ Visual Studio, projenizdeki mevcut ayarların değerlerini düzenlemek için kul
 3.  Ayarlar Tasarımcısı'nda değeri değiştirin ve yeni değer değer sütununa yazmak istediğiniz ayarını bulun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma](using-application-settings-and-user-settings.md)
-- [Nasıl yapılır: Tasarım zamanında yeni ayar oluşturma](how-to-create-a-new-setting-at-design-time.md)
+- [Nasıl yapılır: Tasarım Zamanında Yeni Ayar Oluşturma](how-to-create-a-new-setting-at-design-time.md)
 - [Uygulama Ayarlarına Genel Bakış](application-settings-overview.md)

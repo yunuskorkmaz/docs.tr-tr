@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b4e501629198c9bac627979547a5603d3e7866a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 15b42bb72975fad4c1830a961f83d9e3065d055b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187466"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL Yöntemi
 Tekdüzen Kaynak Konum Belirleyicisi (URL)'için bu belgeyi döndürür.  
@@ -50,4 +50,5 @@ HRESULT GetURL(
  Yöntem başarılı olursa S_OK; Aksi takdirde bir hata kodu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ISymUnmanagedDocument Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

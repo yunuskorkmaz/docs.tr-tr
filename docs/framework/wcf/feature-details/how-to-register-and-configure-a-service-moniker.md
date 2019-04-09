@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Kaydetme ve hizmet bilinen adı yapılandırma'
+title: 'Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 2f8f19e70b3345b61f1f5caba2fc6f764b58cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141927"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>Nasıl yapılır: Kaydetme ve hizmet bilinen adı yapılandırma
+# <a name="how-to-register-and-configure-a-service-moniker"></a>Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma
 Yazılı sözleşme ile Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamasından kullanmadan önce gerekli öznitelik türleri COM ile kaydetme ve COM uygulaması ve ad gerekli bağlama ile yapılandırmanız gerekir yapılandırma.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Gerekli öznitelik türleri COM ile kaydetmek için  
@@ -89,7 +89,7 @@ Yazılı sözleşme ile Windows Communication Foundation (WCF) hizmet bilinen ad
     > [!NOTE]
     >  : Bilinen ad hatalı veya hizmet kullanılamıyor durumunda çağrısı `GetObject` "Söz dizimi geçersiz" hatası döndürür. Bu hata iletisini alırsanız kullandığınız ad doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
   
-     Bu konu hizmet bilinen adı VB 6.0 koddan kullanmaya odaklanmıştır olsa da, diğer dillerdeki hizmet bilinen adı kullanabilirsiniz. C++ içinden bir takma ad'ı kullanarak kod olduğunda oluşturulan Svcutil.exe derleme aşağıdaki kodda gösterildiği gibi "ile no_namespace named_guids raw_interfaces_only" aktarılmalıdır.  
+     Bu konu hizmet bilinen adı VB 6.0 koddan kullanmaya odaklanmıştır olsa da, diğer dillerdeki hizmet bilinen adı kullanabilirsiniz. Bir bilinen ad alanından kullanırken C++ oluşturulan derleme aşağıdaki kodda gösterildiği gibi "ile no_namespace named_guids raw_interfaces_only" aktarılacaksa Svcutil.exe kod.  
   
     ```  
     #import "ComTestProxy.tlb" no_namespace named_guids  
@@ -98,4 +98,5 @@ Yazılı sözleşme ile Windows Communication Foundation (WCF) hizmet bilinen ad
      Tüm yöntemler döndürür, bu içeri aktarılan Arabirim tanımları değiştirir bir `HResult`. Herhangi bir dönüş değeri, out parametreleri içine dönüştürülür. Genel yöntemler yürütülmesini aynı kalır. Bu proxy üzerinde bir yöntemi çağırırken özel durumun nedenini belirlemenize olanak sağlar. Bu işlev, yalnızca C++ kodundan kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+
+- [ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

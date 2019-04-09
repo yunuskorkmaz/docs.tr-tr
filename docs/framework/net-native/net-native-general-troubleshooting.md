@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7717aba0fd3b3039dd77d301b10b044b5a044254
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81ff8a347235ab1a765b4f41051dab2da786b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596663"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150780"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET Yerel Genel Sorun Giderme
 Bu konu ile uygulamalar geliştirirken karşılaşabileceğiniz olası sorunların nasıl giderileceği açıklanmaktadır [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
@@ -43,4 +43,5 @@ Bu konu ile uygulamalar geliştirirken karşılaşabileceğiniz olası sorunlar�
      Daha fazla bilgi için [yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Mağazası Uygulamanızı .NET Native'e Taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+
+- [Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

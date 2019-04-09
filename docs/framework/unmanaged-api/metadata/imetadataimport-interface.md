@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4241f2057ce77713f91e969eda7765739613333
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180407"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport Arabirimi
 İçeri aktarma ve taşınabilir yürütülebilir (PE) dosya veya bir tür kitaplığı veya tek başına, çalışma zamanı meta verileri ikili gibi başka bir kaynağı var olan meta verileri işlemek için yöntemler sağlar.  
@@ -114,5 +114,6 @@ ms.locfileid: "54732849"
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

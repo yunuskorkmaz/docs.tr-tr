@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: WorkflowServiceHost ile kalıcılığı yapılandırma'
+title: 'Nasıl yapılır: WorkflowServiceHost ile Kalıcılığı Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 2b340a46d10ef517d46a6e85fdb2f8e332cd0b46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8485cfdfb3a8f62f04fc488ad28df86e609e17ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086669"
 ---
-# <a name="how-to-configure-persistence-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile kalıcılığı yapılandırma
+# <a name="how-to-configure-persistence-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile Kalıcılığı Yapılandırma
 Bu konu, barındırılan iş akışları için kalıcılığını sağlamak için SQL iş akışı örneği Store özelliği yapılandırmayı açıklar <xref:System.ServiceModel.Activities.WorkflowServiceHost> bir yapılandırma dosyası kullanarak. SQL iş akışı örneği Store özelliği kullanmadan önce iş akışı örneği kalıcı hale getirmek için kullanılan bir SQL veritabanı oluşturmanız gerekir. Daha fazla bilgi için [nasıl yapılır: İş akışları ve iş akışı hizmetleri için SQL kalıcılığını](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>SQL iş akışı örneği Store yapılandırmasında yapılandırmak için  
@@ -60,6 +60,7 @@ Bu konu, barındırılan iş akışları için kalıcılığını sağlamak içi
      Program aracılığıyla kalıcılığı yapılandırma örneği için bkz. [nasıl yapılır: İş akışları ve iş akışı hizmetleri için kalıcılığı etkinleştir](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [İş Akışı Kalıcılığı](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
 - [Windows Server AppFabric kalıcılığı](https://go.microsoft.com/fwlink/?LinkId=193121)

@@ -2,12 +2,12 @@
 title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-ms.openlocfilehash: 746f98b54285f95bb63e15136508909327c0d140
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 12ac8d9a7b0ed584fb1308e56d197a03b1c53e51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174934"
 ---
 # <a name="endpointextensions"></a>\<endpointExtensions >
 Bu bölümde, bir makine uzantıları bölümünde yeni bir standart uç nokta kaydeder veya uygulama yapılandırma dosyası. Kullanarak, bu koleksiyona bir standart uç nokta ekleyebilirsiniz `add` anahtar sözcüğü ve ayarı `type` uç nokta türü için bir öğenin özniteliği hem de `name` öznitelik standart bitiş noktası adını.  
@@ -44,4 +44,3 @@ Bu bölümde, bir makine uzantıları bölümünde yeni bir standart uç nokta k
   </standardEndpoints>
 </system.serviceModel>
 ```  
-  

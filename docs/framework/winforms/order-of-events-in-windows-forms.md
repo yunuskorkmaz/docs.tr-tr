@@ -9,12 +9,12 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: a88fd7b912063af5961a2bb366b42b0f67411f5f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 24d48a9dfdf10601099333e52073bb7fa3579beb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193063"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows Forms'ta Olayların Sırası
 Windows Forms uygulamalarında olayları ortaya çıkar geliştiriciler bu olayların her biri sırayla işleme ile ilgili belirli ilgilenilen sırasıdır. Bir durum için olayların ne zaman formun parçalarını yeniden gibi gözlemlemenize işleme çağırdığında bir farkındalık olaylar çalışma zamanında oluşturulur kesin siparişin gereklidir. Bu konu, uygulamalar ve denetimleri ömrünü birkaç önemli aşamaları sırasında olayları bazında bazı ayrıntılar sağlar. Fare giriş olayları sırası hakkında belirli Ayrıntılar için bkz [Windows Forms'ta fare olayları](mouse-events-in-windows-forms.md). Windows Forms'ta olayların genel bakış için bkz. [olaylara genel bakış](events-overview-windows-forms.md). Olay işleyicileri düzenini hakkında daha fazla ayrıntı için bkz: [olay işleyicilerine genel bakış](event-handlers-overview-windows-forms.md).  
@@ -81,4 +81,5 @@ Windows Forms uygulamalarında olayları ortaya çıkar geliştiriciler bu olayl
 -   <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms'ta Olay İşleyicileri Oluşturma](creating-event-handlers-in-windows-forms.md)

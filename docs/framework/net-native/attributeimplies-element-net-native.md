@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be5412e323b1c4930d7e17d09faa174885611884
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d59f1f48be19a21ccc7ee5bb73cebfffc387fec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165067"
 ---
 # <a name="attributeimplies-element-net-native"></a>\<Attributeımplies > öğesi (.NET yerel)
 Kod öğeleri içeren öznitelik uygulandığı ilkesini tanımlar.  
@@ -68,6 +68,7 @@ Kod öğeleri içeren öznitelik uygulandığı ilkesini tanımlar.
  En az biri mevcut olmalıdır ancak yansıma, seri hale getirme ve birlikte çalışma özniteliklerini tümü isteğe bağlıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<Türü > öğesi](../../../docs/framework/net-native/type-element-net-native.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)

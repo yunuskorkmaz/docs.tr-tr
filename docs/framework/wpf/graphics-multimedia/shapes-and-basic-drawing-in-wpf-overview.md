@@ -12,19 +12,18 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 9852c811b00ee7f8d86b7c1daaaa28f28fa5a89f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189141"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler
 Bu konu ile nasıl genel bir fikir veren <xref:System.Windows.Shapes.Shape> nesneleri. A <xref:System.Windows.Shapes.Shape> bir tür <xref:System.Windows.UIElement> ekrana bir şekil çizme olanak sağlar. Kullanıcı Arabirimi öğeleri olduklarından <xref:System.Windows.Shapes.Shape> nesneleri içinde kullanılabilir <xref:System.Windows.Controls.Panel> öğeleri ve çoğu denetim.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] birkaç grafik ve işleme hizmetlerine erişim katmanı sunar. En üst katmanında <xref:System.Windows.Shapes.Shape> nesneleri düzen ve katılım gibi birçok yararlı özellik sağlar ve kullanmak kolay [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] olay sistemi.  
-  
-  
+
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>Şekil nesneleri  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çok sayıda kullanıma hazır sunar <xref:System.Windows.Shapes.Shape> nesneleri.  Tüm şekil nesneleri devralınacak <xref:System.Windows.Shapes.Shape> sınıfı. Kullanılabilir şekil nesneleri dahil etme <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, ve <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> nesneleri, aşağıdaki genel özellikleri paylaşır.  
@@ -215,8 +214,9 @@ myPolygon.StrokeThickness = 2;
  Önceki örneklerde, her şekil nesnesi için tek bir dönüştürme uygulandı. Bir şekil (veya başka bir kullanıcı Arabirimi öğesi) birden çok dönüşüm uygulamak için bir <xref:System.Windows.Media.TransformGroup>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](painting-with-solid-colors-and-gradients-overview.md)
 - [Geometriye Genel Bakış](geometry-overview.md)
-- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [İzlenecek yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Animasyona Genel bakış](animation-overview.md)

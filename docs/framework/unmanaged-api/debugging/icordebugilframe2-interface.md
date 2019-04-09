@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e82238fbd617d56feb5c71c6161b6fd206b8b5b6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a4f57f27ec92e7977b46ebfa5967b0590674d2a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113444"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2 Arabirimi
 
@@ -49,4 +49,5 @@ Icordebugılframe arabirimi öğesinin mantıksal uzantısı.
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

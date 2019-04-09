@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-ms.openlocfilehash: 351c1e42bb775331cbe0e2005b6bea284716de75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124156"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Bir Windows Forms Uygulamasında Kullanıcı Girdisi
 Windows Forms'ta kullanıcı girdisi uygulamaları Windows iletilerini biçiminde gönderilir. Geçersiz kılınabilir yöntemleri bir dizi, form, uygulama bu iletileri işlemek ve düzeyini denetleyebilirsiniz. Bu yöntemler, fare ve klavye mesajlarının aldığınızda, bunlar giriş klavye veya fare hakkında bilgi almak için işlenen olaylar da oluşturur. Çoğu durumda, Windows Forms uygulamaları bu olayları işleyerek tüm kullanıcı girişini işlemek mümkün olacaktır. Diğer durumlarda, bir uygulama belirli bir iletiyi uygulama, form veya denetim alınmadan önce ıntercept iletileri işleyen yöntemi geçersiz kılmanız gerekebilir.  
@@ -31,6 +31,7 @@ Windows Forms'ta kullanıcı girdisi uygulamaları Windows iletilerini biçimind
  Klavye ve fare iletileri de bu iletileri türlerine özgü geçersiz kılınabilir yöntemleri ek kümesi tarafından işlenir. Daha fazla bilgi için [nasıl klavye girişi çalışır](how-keyboard-input-works.md) ve [nasıl Windows Forms'ta fare girdisi çalışır](how-mouse-input-works-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms'ta Kullanıcı Girdisi](user-input-in-windows-forms.md)
 - [Bir Windows Forms Uygulamasında Klavye Girdisi](keyboard-input-in-a-windows-forms-application.md)
 - [Bir Windows Forms Uygulamasında Fare Girdisi](mouse-input-in-a-windows-forms-application.md)

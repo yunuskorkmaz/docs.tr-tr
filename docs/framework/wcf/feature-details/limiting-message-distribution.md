@@ -2,12 +2,12 @@
 title: İleti Dağıtımını Sınırlandırma
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130227"
 ---
 # <a name="limiting-message-distribution"></a>İleti Dağıtımını Sınırlandırma
 Eş kanal yayın kafes tasarım gereğidir. Bu ağ, diğer tüm üyelerine kafes herhangi bir üyesi tarafından gönderilen her ileti dağıtma kendi temel flooding modelini içerir. Bu, her ileti bir üyesi tarafından oluşturulan tüm diğer üyeler için (örneğin, bir sohbet odası) ilgili ve faydalı olduğu durumlarda idealdir. Ancak, birçok uygulama için ileti dağıtımını sınırlandırma bir nadiren ihtiyaç vardır. Yeni bir üye kafes birleştirir ve ağ gönderilen son ileti almayı isteyen, örneğin, bu isteği kafes her üyesi için yığılma olması gerekmez. Yerel olarak oluşturulmuş iletileri filtrelenebilen veya istek Komşuları neredeyse sınırlı olabilir. İletileri kafes tek bir düğümde da gönderilebilir. Bu konu, iletileri kafes nasıl iletilen denetlemek için atlama sayısı, ileti yayma filtresini, yerel bir filtre veya doğrudan bir bağlantı kullanarak açıklar ve bir yaklaşım seçme için genel yönergeleri sağlar.  
@@ -65,4 +65,5 @@ Eş kanal yayın kafes tasarım gereğidir. Bu ağ, diğer tüm üyelerine kafes
     -   *Düşük*:  Büyük olasılıkla gerekli herhangi biri doğrudan bağlantı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Eş Kanal Uygulaması Oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

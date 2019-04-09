@@ -1,21 +1,21 @@
 ---
-title: F# kodlama kuralları
-description: Genel yönergeler ve deyimler F# kodu yazarken öğrenin.
+title: F#kodlama kuralları
+description: Genel yönergeler ve deyimleri yazılırken öğrenin F# kod.
 ms.date: 05/14/2018
-ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "49087394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186751"
 ---
-# <a name="f-coding-conventions"></a>F# kodlama kuralları
+# <a name="f-coding-conventions"></a>F#kodlama kuralları
 
-Aşağıdaki kurallar büyük F# ile çalışma deneyiminden şeklide çıkabilirsiniz. [Beş iyi F# kodu prensipleri](index.md#five-principles-of-good-f-code) önerilerin temelidir. İlişkili oldukları [F# bileşeni tasarım yönergeleri](component-design-guidelines.md), ancak tüm F# kodu, kütüphane gibi değil yalnızca bileşenleri için geçerlidir.
+Aşağıdaki kurallar ile büyük çalışma deneyiminden şeklide F# çıkabilirsiniz. [Beş iyi prensipleri F# kod](index.md#five-principles-of-good-f-code) önerilerin temelidir. İlişkili oldukları [ F# bileşen tasarım yönergeleri](component-design-guidelines.md), ancak için geçerli olan F# kod, kütüphane gibi değil yalnızca bileşenleri.
 
 ## <a name="organizing-code"></a>Kod düzenleme
 
-F# kodu düzenlemek için iki temel yol özellikleri: modüller ve ad alanları. Bunlar, benzer, ancak kıyasla aşağıdaki farklılıklar vardır:
+F#kod düzenlemek için iki temel yol özellikleri: modüller ve ad alanları. Bunlar, benzer, ancak kıyasla aşağıdaki farklılıklar vardır:
 
 * Ad alanları, .NET ad alanları derlenir. Modüller, statik sınıflar derlenir.
 * Ad alanları, her zaman en üst düzey olur. Modüller, üst düzey ve diğer modüller içinde iç içe olabilir.
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-Üst düzey bir modül kullanarak görüntülenmeyebilir yalnızca F#'tan çağrıldığında farklı, ancak C# Tüketiciler için çağıranlar nitelemek sağlayarak sürprizle `MyClass` ile `MyCode` modülü.
+Üst düzey bir modül kullanarak görüntülenmeyebilir yalnızca çağrıldığında farklı F#, ancak C# Tüketiciler, Arayanların surprised nitelemek sağlayarak `MyClass` ile `MyCode` modülü.
 
 ```fsharp
 // Bad!
@@ -48,7 +48,7 @@ type MyClass() =
 
 ### <a name="carefully-apply-autoopen"></a>Dikkatli bir şekilde uygulama `[<AutoOpen>]`
 
-`[<AutoOpen>]` Yapısı arayanlara kullanılabilir kapsamını pollute ve burada bir şey geldiği için yanıt "Sihirli". Bu genellikle iyi bir şey değildir. (Bu da bir bit tartışmalı gerçeğidir rağmen) bu kural için bir özel F# çekirdek kitaplığının kendisi ' dir.
+`[<AutoOpen>]` Yapısı arayanlara kullanılabilir kapsamını pollute ve burada bir şey geldiği için yanıt "Sihirli". Bu genellikle iyi bir şey değildir. Bu kuralın istisnası F# çekirdek kitaplığının kendisi (ancak bu durum ayrıca biraz tartışmalı).
 
 Ancak, düzenlemek için ayrı olarak bu genel API istediğiniz genel API için yardımcı işlevini varsa bir kullanışlı olur.
 
@@ -58,7 +58,6 @@ module MyAPI =
     module private Helpers =
         let helper1 x y z =
             ...
-
 
     let myFunction1 x =
         let y = ...
@@ -90,13 +89,13 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>Sıralama `open` deyimleri topologically
 
-F#'ta bildirimleri sırası önemlidir, dahil olmak üzere `open` deyimleri. Bu C#, burada etkisini `using` ve `using static` Bu deyimler bir dosyada sıralamasını bağımsızdır.
+İçinde F#, bildirimleri önemli olan konuya, dahil olmak üzere sırasını `open` deyimleri. Bu C#, burada etkisini `using` ve `using static` Bu deyimler bir dosyada sıralamasını bağımsızdır.
 
-F#'ta bir kapsama açılır öğe zaten mevcut bir diğer gölge. Yani bu yeniden sıralama `open` deyimleri kod anlamını alter. Sonuç olarak, tüm sıralama her rastgele `open` deyimleri (örneğin, alfasayısal olarak) genellikle önerilmez, bekleyebileceğiniz farklı bir davranış oluşturmak ekleyin.
+İçinde F#, bir kapsama açılır öğe zaten mevcut bir diğer gölge. Yani bu yeniden sıralama `open` deyimleri kod anlamını alter. Sonuç olarak, tüm sıralama her rastgele `open` deyimleri (örneğin, alfasayısal olarak) genellikle önerilmez, bekleyebileceğiniz farklı bir davranış oluşturmak ekleyin.
 
 Bunun yerine, bunları sıralama öneririz [topologically](https://en.wikipedia.org/wiki/Topological_sorting); diğer bir deyişle, sipariş, `open` sırayı deyimlerinde _katmanları_ sisteminizi tanımlanır. Alfasayısal içindeki farklı topolojik katmanları sıralama yapmak da düşünülebilir.
 
-Örneğin, işte sıralama topolojik F# derleyici hizmeti ortak API dosyası için:
+Örneğin, işte topolojik sıralama için F# derleyici hizmeti ortak API dosyası:
 
 ```fsharp
 namespace Microsoft.FSharp.Compiler.SourceCodeServices
@@ -190,7 +189,7 @@ Hata Yönetimi sistemlerinde büyük olan karmaşık ve incelikli bir çaba ve s
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Hata durumları ve etki alanınızı iç türleri geçersiz durumda temsil eder
 
-İle [ayırt edici birleşimler](../language-reference/discriminated-unions.md), F# tür sisteminizdeki hatalı program durumunu göstermek için yeteneği sağlar. Örneğin:
+İle [ayırt edici birleşimler](../language-reference/discriminated-unions.md), F# hatalı program durumunu temsil eden tür sisteminizdeki olanağı sağlar. Örneğin:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -219,11 +218,11 @@ Bu sorun genel olarak, farklı şekilde modelleyebilir, yapabilirsiniz **başar�
 
 ### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>Hata türleri ile gösterilemez durumlarda özel durumları kullanın
 
-Bir sorun etki alanındaki tüm hataları temsil edilebilir. Bu türde hataları *olağanüstü* yapısı, bu nedenle yükseltmek ve F# dilinde özel durumları yakalama olanağı.
+Bir sorun etki alanındaki tüm hataları temsil edilebilir. Bu türde hataları *olağanüstü* yapısı, bu nedenle yükseltmek ve özel durumları yakalama olanağı F#.
 
-İlk olarak, okumanızı önerilir [özel tasarım yönergeleri](../../standard/design-guidelines/exceptions.md). Bu da F# için geçerlidir.
+İlk olarak, okumanızı önerilir [özel tasarım yönergeleri](../../standard/design-guidelines/exceptions.md). Bu da geçerli olan F#.
 
-F#'ta kullanılabilir özel durumlarını oluşturma amacıyla ana yapıları, aşağıdaki tercih sırasına göre bulundurulmalıdır:
+Ana bulunan yapıları F# özel durumlarını oluşturma amacıyla aşağıdaki tercih sırasına göre değerlendirilmesi için:
 
 | İşlev | Sözdizimi | Amaç |
 |----------|--------|---------|
@@ -240,7 +239,7 @@ Kullanım `nullArg`, `invalidArg` ve `invalidOp` durum için bir mekanizma olara
 
 ### <a name="using-exception-handling-syntax"></a>Özel durum işleme sözdizimini kullanarak
 
-F# aracılığıyla özel durum düzenini destekler `try...with` söz dizimi:
+F#özel durum desenleri aracılığıyla destekler `try...with` söz dizimi:
 
 ```fsharp
 try
@@ -317,15 +316,15 @@ let tryReadAllTextIfPresent (path : string) =
 
 Bir dosya bulunamadı ve bu anlamı atamak için bir dönüş catch tümünü olarak çalışması için yerine, bu işlev artık düzgün şekilde çalışması işler. Bu dönüş değeri, bağlamsal bilgileri atılıyor veya bu noktada kod içinde ilgili olmayabilir bir servis talebi uğraşmanız çağıranlar zorlama sırasında bu hata çalışmasına eşleyebilirsiniz.
 
-Gibi türleri `Result<'Success, 'Error>` burada iç içe olmayan ve F# isteğe bağlı türler mükemmel bir şey olabilir ya da dönüş olduğunda temsil etmek için temel işlemleri için uygun *bir şey* veya *hiçbir şey*. Bunlar özel durumlar yerine değil ve bir özel durum değiştirmek için kullanılmamalıdır. Bunun yerine, bunlar bozacağından adresi belirli yönlerini özel durum ve hata yönetimi ilkesi için hedeflenen şekilde uygulanmalıdır.
+Gibi türleri `Result<'Success, 'Error>` nerede bunlar iç içe değil, temel işlemleri için uygun olan ve F# zamanı temsil eden bir şey olabilir ya da iade için isteğe bağlı türler mükemmel *bir şey* veya *hiçbirşey*. Bunlar özel durumlar yerine değil ve bir özel durum değiştirmek için kullanılmamalıdır. Bunun yerine, bunlar bozacağından adresi belirli yönlerini özel durum ve hata yönetimi ilkesi için hedeflenen şekilde uygulanmalıdır.
 
 ## <a name="partial-application-and-point-free-programming"></a>Kısmi uygulama ve programlama noktası-ücretsiz
 
-F# kısmi uygulama ve bu nedenle, program için çeşitli yollar noktası içermeyen bir stilde destekler. Bu modül veya bir şeyin uygulama içinde kodun yeniden yararlı olabilir, ancak genellikle genel olarak kullanıma sunmak için bir şey değildir. Genel olarak, noktası ücretsiz programlama içinde ve kendisinin bir virtue değil ve bilişsel ciddi bir engel stilde sarmalanmış şekilde olmayan kişiler için ekleyebilirsiniz.
+F#Kısmi uygulama ve bu nedenle, program için çeşitli yollar noktası içermeyen bir stilde destekler. Bu modül veya bir şeyin uygulama içinde kodun yeniden yararlı olabilir, ancak genellikle genel olarak kullanıma sunmak için bir şey değildir. Genel olarak, noktası ücretsiz programlama içinde ve kendisinin bir virtue değil ve bilişsel ciddi bir engel stilde sarmalanmış şekilde olmayan kişiler için ekleyebilirsiniz.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Kısmi uygulama ve genel API'ler currying kullanmayın
 
-Az özel durumla ortak API'lerde kısmi uygulama kullanımını Tüketiciler için kafa karıştırıcı olabilir. Genellikle, `let`-F# kodu ilişkili değerler **değerleri**değil **işlev değerleri**. Değerleri ve işlev değerleri birlikte karıştırma sonuçlanabilir bilişsel ek yükü, olayın lisanslarınıza kod satırlarını az sayıda kaydedilirken gibi özellikle işleçleri ile birleştirildiğinde `>>` işlevleri oluşturmak için.
+Az özel durumla ortak API'lerde kısmi uygulama kullanımını Tüketiciler için kafa karıştırıcı olabilir. Genellikle, `let`-bağlı değerleri F# kodu **değerleri**değil **işlev değerleri**. Değerleri ve işlev değerleri birlikte karıştırma sonuçlanabilir bilişsel ek yükü, olayın lisanslarınıza kod satırlarını az sayıda kaydedilirken gibi özellikle işleçleri ile birleştirildiğinde `>>` işlevleri oluşturmak için.
 
 ### <a name="consider-the-tooling-implications-for-point-free-programming"></a>Programlama noktası ücretsiz araçları etkilerini göz önünde bulundurun
 
@@ -418,7 +417,7 @@ Bu teknik tüm kod temelinizde yapılan Evrensel uygulanmamalıdır ancak karma�
 
 ## <a name="access-control"></a>Erişim denetimi
 
-F# için birden çok seçenek vardır [erişim denetimi](../language-reference/access-control.md), .NET çalışma zamanı'nda kullanılabilir öğesinden devralınan. Bunlar yalnızca türleri için kullanılabilir değildir - bunları işlevleri için de kullanabilirsiniz.
+F#için birden çok seçenek vardır [erişim denetimi](../language-reference/access-control.md), .NET çalışma zamanı'nda kullanılabilir öğesinden devralınan. Bunlar yalnızca türleri için kullanılabilir değildir - bunları işlevleri için de kullanabilirsiniz.
 
 * Tercih ettiğiniz olmayan`public` türler ve üyeler kadar genel olarak kullanılabilir olması gerekir. Bu, hangi tüketicilerin birkaç için de azaltır.
 * Tüm yardımcı işlevini tutun `private`.
@@ -426,7 +425,7 @@ F# için birden çok seçenek vardır [erişim denetimi](../language-reference/a
 
 ## <a name="type-inference-and-generics"></a>Tür çıkarımı ve genel türler
 
-Tür çıkarımı, çok sayıda standart yazmasını kaydedebilirsiniz. Ve F# derleyicisinde otomatik Genelleştirme bulunmanıza neredeyse hiçbir ekstra çaba daha genel kod yazmanıza yardımcı olabilir. Ancak, bu özellikler Evrensel iyi değildir.
+Tür çıkarımı, çok sayıda standart yazmasını kaydedebilirsiniz. Ve de otomatik Genelleştirme F# derleyici bulunmanıza neredeyse hiçbir ekstra çaba daha genel kod yazmanıza yardımcı olabilir. Ancak, bu özellikler Evrensel iyi değildir.
 
 * Bağımsız değişken adları açık türlerinde ortak API'ler ile etiketleme göz önünde bulundurun ve bunun için tür çıkarımı güvenmeyin.
 
@@ -440,17 +439,17 @@ Tür çıkarımı, çok sayıda standart yazmasını kaydedebilirsiniz. Ve F# de
 
     Bu, .NET, şeyler PascalCase yerine snake_case veya camelCase kullanmanız önerilir Bunu yapmak için genel yoludur.
 
-Son olarak, otomatik Genelleştirme her zaman bir boon F# veya büyük bir kod temelinde için yeni olan kişiler değil. Genel olarak bileşenleri kullanarak bilişsel yükü yoktur. Ayrıca, varsa, otomatik olarak genelleştirilmiş işlevleri farklı giriş türleri (sağlar, bu nedenle kullanılacak yönelikse tek başına) ile kullanılmaz sonra bunlara zamandaki o noktada genel olan gerçek hiçbir avantajı yoktur. Her zaman yazdığınız kodu gerçekten genel yüklenmesini Kurum için avantaj sağlayacaktır olmadığını göz önünde bulundurun.
+Son olarak, otomatik Genelleştirme her zaman bir boon yeni olan kişiler değil F# veya büyük bir kod temelinde. Genel olarak bileşenleri kullanarak bilişsel yükü yoktur. Ayrıca, varsa, otomatik olarak genelleştirilmiş işlevleri farklı giriş türleri (sağlar, bu nedenle kullanılacak yönelikse tek başına) ile kullanılmaz sonra bunlara zamandaki o noktada genel olan gerçek hiçbir avantajı yoktur. Her zaman yazdığınız kodu gerçekten genel yüklenmesini Kurum için avantaj sağlayacaktır olmadığını göz önünde bulundurun.
 
 ## <a name="performance"></a>Performans
 
-Belirli sınıfları (özellikle bu ilgili eşzamanlılık ve paralellik) hataları önlemek izin veren varsayılan olarak, F# değerler sabittir. Ancak, bazı durumlarda, yürütme zamanı bellek ayırmaları ve en iyi (veya hatta makul) verimlilik elde etmek için bir yayılma iş en iyi durumu yerinde Mutasyon kullanarak uygulanabilir. Bu bir katılım temel ile F# ile de mümkündür `mutable` anahtar sözcüğü.
+F#belirli sınıfları (özellikle bu ilgili eşzamanlılık ve paralellik) hataları önlemek izin veren varsayılan olarak, sabit değerlerdir. Ancak, bazı durumlarda, yürütme zamanı bellek ayırmaları ve en iyi (veya hatta makul) verimlilik elde etmek için bir yayılma iş en iyi durumu yerinde Mutasyon kullanarak uygulanabilir. Bu katılımı temeli ile de mümkündür F# ile `mutable` anahtar sözcüğü.
 
-Ancak, kullanım `mutable` F# işlevsel saflığa at odds with düşünüyor. Bu beklentileri saflığa için gelen ayarlarsanız ince [başvuru saydamlık](https://en.wikipedia.org/wiki/Referential_transparency). Başvuru saydamlık - saflığa değil - son F# işlevleri yazarken hedeftir. Bu performans kritik kod için Mutasyon tabanlı bir uygulama üzerinde işlevsel bir arabirim yazmanıza olanak sağlar.
+Ancak, kullanım `mutable` içinde F# at odds with işlevsel saflığa düşünüyor. Bu beklentileri saflığa için gelen ayarlarsanız ince [başvuru saydamlık](https://en.wikipedia.org/wiki/Referential_transparency). Başvuru saydamlık - saflığa değil - yazarken son hedefi olduğu F# işlevleri. Bu performans kritik kod için Mutasyon tabanlı bir uygulama üzerinde işlevsel bir arabirim yazmanıza olanak sağlar.
 
 ### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Sabit arabirimler değişebilir kod Kaydır
 
-Bir hedef olarak başvuru saydamlığı olan performans açısından kritik işlevler değişebilir underbelly kullanıma sunmuyor kod yazmak için önemlidir. Örneğin, aşağıdaki uygulayan kod `Array.contains` F# çekirdek kitaplığı işlevinde:
+Bir hedef olarak başvuru saydamlığı olan performans açısından kritik işlevler değişebilir underbelly kullanıma sunmuyor kod yazmak için önemlidir. Örneğin, aşağıdaki uygulayan kod `Array.contains` işlevi F# çekirdek kitaplığı:
 
 ```fsharp
 [<CompiledName("Contains")>]
@@ -546,7 +545,7 @@ Diğer tüm kod lambda ifadesi ortasında Mutasyon yanı sıra tek noktası doku
 
 ## <a name="object-programming"></a>Nesne programlama
 
-F# nesneleri ve nesne yönelimli kavramları (Paylaşımlarınızda) için tam destek sunar. Birçok Paylaşımlarınızda kavramları güçlü ve kullanışlı olsa da, bunların hepsi kullanmak idealdir. Aşağıdaki listeler, yüksek bir düzeyde Paylaşımlarınızda özelliklerinin kategorileri hakkında rehberlik sunar.
+F#nesneleri ve nesne yönelimli kavramları (Paylaşımlarınızda) için tam destek sunar. Birçok Paylaşımlarınızda kavramları güçlü ve kullanışlı olsa da, bunların hepsi kullanmak idealdir. Aşağıdaki listeler, yüksek bir düzeyde Paylaşımlarınızda özelliklerinin kategorileri hakkında rehberlik sunar.
 
 **Çoğu durumda bu özellikleri kullanmaya göz önünde bulundurun:**
 
@@ -578,7 +577,7 @@ F# nesneleri ve nesne yönelimli kavramları (Paylaşımlarınızda) için tam d
 
 ### <a name="prefer-composition-over-inheritance"></a>Devralma bileşim tercih et
 
-[Devralma üzerinden bileşim](https://en.wikipedia.org/wiki/Composition_over_inheritance) iyi F# kodu uyması değindiği bir deyim olduğu. Temel olmayan bir taban sınıfı ve gerekir işlevselliğine sahip olmak için o temel sınıftan devralınan çağrı yapanların zorlamak emin ilkesidir.
+[Devralma üzerinden bileşim](https://en.wikipedia.org/wiki/Composition_over_inheritance) değindiği deyim bu kadar iyidir F# kod uyması için. Temel olmayan bir taban sınıfı ve gerekir işlevselliğine sahip olmak için o temel sınıftan devralınan çağrı yapanların zorlamak emin ilkesidir.
 
 ### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>Bir sınıf gerekmiyorsa arayüzleri uygulamak için Nesne ifadeleri kullanma
 

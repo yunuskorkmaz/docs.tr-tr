@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 21172ccda5f5f8070d81726d5f4dc6f9d80ab071
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 223b86310d90c877df15a99c90a0a72ea780734a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076269"
 ---
 # <a name="claims-and-tokens"></a>Beyanlar ve Belirteçler
 Bu konu, Windows Communication Foundation (WCF) desteklediği varsayılan belirteçleri oluşturan çeşitli talep türlerini açıklar.  
@@ -65,8 +65,9 @@ Bu konu, Windows Communication Foundation (WCF) desteklediği varsayılan belirt
  Hiçbiri `ClaimSet` istemci kimlik bilgileri kaynaklanan nesneleri içeren bir talep ile bir `Right` , `Identity,` sonra <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> özelliği döndürür `true`. Bir veya daha fazla tür talep varsa `IsAnonymous` özelliği döndürür `false`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>
-- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

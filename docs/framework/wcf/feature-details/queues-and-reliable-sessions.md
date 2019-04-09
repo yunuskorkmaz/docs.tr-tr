@@ -2,12 +2,12 @@
 title: Kuyruklar ve Güvenilir Oturumlar
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: 2f79e1eac469dc1d9d775cbca0f06046f10dfb20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1fb7d7db36aa51c63789b6daf0ac3689c87ace5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196833"
 ---
 # <a name="queues-and-reliable-sessions"></a>Kuyruklar ve Güvenilir Oturumlar
 Kuyruklar ve güvenilir oturumlar güvenilir Mesajlaşma uygulayan Windows Communication Foundation (WCF) özellikleridir. Bu bölümdeki konular, WCF güvenilir Mesajlaşma ele alınmaktadır.  
@@ -39,7 +39,8 @@ Kuyruklar ve güvenilir oturumlar güvenilir Mesajlaşma uygulayan Windows Commu
  Kuyruklar arasında güvenilir ileti aktarımları ile birlikte ayırma, güvenilir bir şekilde iletişim kurmak için gevşek uygulamalar sağlar. Güvenilir oturumlar, kaynak ve hedef aynı anda çalıştırılması gerekmez. Bu senaryo ileti üretim kaynağı tarafından oranını ve hedef iletiyi tüketimi oranını arasında bir uyuşmazlık olduğunda kuyrukları aslında bir Yük Dengeleme mekanizması olarak kullanıldığı örtük olarak sağlar. Kuyruklar hakkında daha fazla bilgi için bkz: [wcf'de kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF'de Kuyruklar](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Güvenilir Oturumlar](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
-- [Güvenilir Oturumlara Genel Bakış](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+- [Güvenilir oturumlar](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Güvenilir Oturumlar Genel Bakış](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

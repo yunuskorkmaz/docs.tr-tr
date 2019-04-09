@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Dinamik olarak meta verilerini almak için MetadataResolver kullanma'
+title: 'Nasıl yapılır: Bağlama Meta Verilerini Dinamik Olarak Almak için MetadataResolver Kullanma'
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: 9887f74902a1f324f57e39a61a48b5826127cba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d8efe2522d17829cc42d8ed1304983f6da46fb58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111208"
 ---
-# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>Nasıl yapılır: Dinamik olarak meta verilerini almak için MetadataResolver kullanma
+# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>Nasıl yapılır: Bağlama Meta Verilerini Dinamik Olarak Almak için MetadataResolver Kullanma
 Bu konu nasıl kullanılacağını gösterir <xref:System.ServiceModel.Description.MetadataResolver> dinamik olarak bağlama meta verilerini almak için sınıf.  
   
 ### <a name="to-dynamically-obtain-binding-metadata"></a>Dinamik olarak bağlama meta verilerini almak için  
@@ -46,4 +46,5 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.ServiceModel.Descripti
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)

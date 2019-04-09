@@ -1,13 +1,13 @@
 ---
-title: <schemeSettings> Öğesi (Uri Ayarları)
+title: <schemeSettings> Öğesi (Uri ayarları)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 06cb07b1620a603f0c0cf67a9236be143c2ec4a2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094242"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > öğesi (Uri ayarları)
 Belirtir nasıl bir <xref:System.Uri> belirli düzenleri için ayrıştırılacak.  
@@ -27,14 +27,14 @@ Belirtir nasıl bir <xref:System.Uri> belirli düzenleri için ayrıştırılaca
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Hiçbiri  
+ None  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Düzen adı için bir düzen ayarı ekler.|  
-|[Temizle](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Tüm mevcut düzeni ayarlarını temizler.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Tüm mevcut düzeni ayarlarını temizler.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Düzen adı için bir düzen ayarı kaldırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -84,6 +84,7 @@ Belirtir nasıl bir <xref:System.Uri> belirli düzenleri için ayrıştırılaca
 |Boş olabilir.||  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

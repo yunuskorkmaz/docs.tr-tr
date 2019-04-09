@@ -2,12 +2,12 @@
 title: ServiceDescription ve WSDL Başvurusu
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182890"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription ve WSDL Başvurusu
 Bu konuda ve ondan Windows Communication Foundation (WCF) Web Hizmetleri Açıklama Dili (WSDL) belgeleri nasıl eşlendiğini açıklayan <xref:System.ServiceModel.Description.ServiceDescription> örnekleri.  
@@ -152,4 +152,5 @@ Bu konuda ve ondan Windows Communication Foundation (WCF) Web Hizmetleri Açıkl
 |`Name, ContractDescription.Name, OperationDescription.Name,`|Türetmek için kullanılan `wsdl:message` /@name hata iletisi için değer.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description>

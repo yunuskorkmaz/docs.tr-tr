@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 8a306fe648c42e1e94126f10b0d4c92f9dfc8831
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678087"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174960"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI Otomasyonu Değer Denetim Düzenini Uygulama
 > [!NOTE]
@@ -49,9 +49,9 @@ Renk örneği dize eşleme örneği
   
 |Gerekli üyeleri|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Yöntem|Hiçbiri|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Özellik|None|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Yöntem|None|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  
@@ -64,9 +64,10 @@ Renk örneği dize eşleme örneği
 |<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -Girişimini etkin bir denetim işlemek için yapılır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+
+- [UI Otomasyon Denetim Düzenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [UI Otomasyon Sağlayıcısında Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [İstemciler İçin UI Otomasyon Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Metin örnek ValuePattern'ı Ekle](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI Otomasyonda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

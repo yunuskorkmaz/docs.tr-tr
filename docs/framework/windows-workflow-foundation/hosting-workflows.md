@@ -1,17 +1,17 @@
 ---
-title: İş akışları barındırma
+title: İş Akışları Barındırma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
-ms.openlocfilehash: dc7c94bc3031a2c4c0330bd36a6b7e493ad8ce5d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3b3b7b94c94096d916efb9399c82ad6ddf8b8b1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709087"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137754"
 ---
-# <a name="hosting-workflows"></a>İş akışları barındırma
+# <a name="hosting-workflows"></a>İş Akışları Barındırma
 Bu bölümdeki konular, barındırma iş akışları tartışın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
@@ -31,6 +31,7 @@ Bu bölümdeki konular, barındırma iş akışları tartışın.
  Nasıl kullanılacağını açıklar `WorkflowIdentity` bir iş akışı yan yana birden çok sürümünü barındırmak için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Workflow Foundation Programlama](programming.md)
 - [İş Akışları Tasarlama](designing-workflows.md)
 - [Windows Workflow Foundation Veri Modeli](data-model.md)

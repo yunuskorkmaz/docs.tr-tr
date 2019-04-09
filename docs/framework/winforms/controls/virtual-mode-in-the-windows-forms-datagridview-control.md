@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-ms.openlocfilehash: 92b45f026470f312fe788ed30e4ff8d172735a98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f284835578221ad1fe859f260e37bb829cd64b2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124728"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sanal Mod
 Arasındaki etkileşimi yönetebileceğiniz ile sanal modu, <xref:System.Windows.Forms.DataGridView> denetimi ve bir özel veri önbelleği. Sanal modu uygulamak için ayarlanmış <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özelliğini `true` ve bir veya daha fazla bu konuda açıklanan olayları işler. Genellikle işleyecek en az `CellValueNeeded` değerleri önbellekteki denetimi arama sağlayan bir olay.  
@@ -63,9 +63,10 @@ Arasındaki etkileşimi yönetebileceğiniz ile sanal modu, <xref:System.Windows
  Büyük miktarda veriyi verimli bir şekilde çalışması için sanal mod uyguluyorsanız, ayrıca verimli bir şekilde çalıştığınız emin olmak isteyeceksiniz <xref:System.Windows.Forms.DataGridView> denetiminin kendisini. Hücre stilleri, otomatik boyutlandırma, seçim ve satır paylaşma verimli kullanımı hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimini ölçeklendirme için en iyi yöntemler](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - [Windows Forms DataGridView Denetiminde Performans Ayarlaması](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [İzlenecek yol: Windows Forms DataGridView denetiminde sanal modu uygulama](implementing-virtual-mode-wf-datagridview-control.md)
+- [İzlenecek yol: Windows Forms DataGridView Denetiminde Sanal Modu Uygulama](implementing-virtual-mode-wf-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Zamanında Veri Yükleme ile Sanal Modu Uygulama](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

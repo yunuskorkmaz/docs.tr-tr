@@ -10,21 +10,19 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: e66841fe72281bf0562b2ce50925a5c3a6bb9b54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123805"
 ---
 # <a name="packaging-fonts-with-applications"></a>Uygulamalarla Yazı Tiplerini Paketleme
 Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama.  
   
 > [!NOTE]
 >  Çoğu yazılım türleri gibi yazı tipi dosyalarını lisanslı satılan yerine. Yazı tipleri yöneten lisansları satıcı satıcı ancak genel olarak yazı tiplerini dahil olmak üzere çoğu lisansları farklılık [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] uygulamalarla sağlar ve [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], yazı tiplerini uygulamalar içinde gömülü veya aksi izin verme yeniden dağıtılabilir. İçinde bir uygulama veya başka türlü redıstrıbute ekleme herhangi bir yazı tipi için gerekli lisans haklarına sahip olmak sizin sorumluluğunuzdadır olduğundan bu nedenle, bir geliştirici olarak.  
-  
 
-  
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Giriş yazı tiplerini paketleme  
  İçinde kaynaklar olarak yazı tiplerini kolayca paketleyebilir, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik tabanlı uygulamaları kullanıcı arabirimi metinlerini ve diğer türde metin görüntüler. Yazı tiplerinin ayrı veya eklenen uygulamanın derleme dosyaları içinde olabilir. Ayrıca, uygulamanızın başvurabileceği bir yalnızca kaynak yazı tipi kitaplığı oluşturabilirsiniz.  
@@ -173,6 +171,7 @@ Bu konuda paket yazı tipleri ile nasıl genel bir bakış sağlar, [!INCLUDE[TL
 -   Durumlarda hatalı bir başvuru olduğunda, uygulama yeniden kullanılabilir bir yazı tipi kullanarak döner.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
 - [Microsoft tipografi: Bağlantılar, haber ve kişiler](https://docs.microsoft.com/typography/)

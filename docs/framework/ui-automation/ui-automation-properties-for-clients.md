@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 0bfd07788bd8d2ebf028865478b0db6fb86c2f46
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116369"
 ---
 # <a name="ui-automation-properties-for-clients"></a>İstemciler İçin UI Otomasyon Özellikleri
 > [!NOTE]
@@ -104,6 +104,7 @@ ms.locfileid: "57677298"
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(Statik özelliği) Kök <xref:System.Windows.Automation.AutomationElement>.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [UI Otomasyonu İstemcilerinde Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+
+- [UI Otomasyonda Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [UI Otomasyon Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

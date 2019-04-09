@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f28facc8acb430de4aa255208a62c5fc61f12cd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10942541b781d367820301588656b2f1fc2fd006
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184424"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit Arabirimi
 Oluşturabilir, değiştirebilir ve şu anda tanımlanmış kapsamda derleme hakkındaki meta verileri kaydetmek için yöntemler sağlar. Meta veriler, bellekte veya diske kaydedilmiş.  
@@ -90,5 +90,6 @@ Oluşturabilir, değiştirebilir ve şu anda tanımlanmış kapsamda derleme hak
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataEmit2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

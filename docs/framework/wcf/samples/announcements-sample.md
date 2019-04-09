@@ -2,12 +2,12 @@
 title: Duyuru Örnekleri
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 91422d9b625339236e3d8d09683deba18a24c9d4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7506dcc2b73ce2ee3437020c958f480fb521f4f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094560"
 ---
 # <a name="announcements-sample"></a>Duyuru Örnekleri
 Bu örnek bulma özelliğinin duyuru işlevini nasıl kullanacağınızı gösterir. Duyurular hizmeti hakkında meta veriler içeren bir Duyurunun ileti göndermek için izin verin. Varsayılan olarak, hizmet başlatıldığı ve hizmet kapatıldığında bye duyuru gönderilir hello duyuru gönderilir. Bu duyurular çok noktaya yayın veya noktadan noktaya gönderilebilir. Bu örnek, iki proje hizmeti ve istemci oluşur.  
@@ -86,4 +86,3 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
-  

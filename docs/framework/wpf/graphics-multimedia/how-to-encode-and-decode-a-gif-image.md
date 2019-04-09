@@ -13,12 +13,12 @@ helpviewer_keywords:
 - GIF decoding [WPF]
 - GIF encoding [WPF]
 ms.assetid: 9cdd9ec7-71eb-444b-b9e3-991958461163
-ms.openlocfilehash: 245cc2db2c3cd0187c17bc992343eb8ab30da2ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 35bd08f0d5e4d2ee9b8731706c9f1d770d67f633
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124747"
 ---
 # <a name="how-to-encode-and-decode-a-gif-image"></a>Nasıl yapılır: Bir GIF Görüntüsünü Kodlama ve Kodunu Çözme
 Aşağıdaki örnekler nasıl kodlanacağını ve bir [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] belirli kullanarak görüntü <xref:System.Windows.Media.Imaging.GifBitmapDecoder> ve <xref:System.Windows.Media.Imaging.GifBitmapEncoder> nesneleri.  
@@ -38,4 +38,5 @@ Aşağıdaki örnekler nasıl kodlanacağını ve bir [!INCLUDE[TLA#tla_gif](../
  [!code-vb[GifBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GifBitmapDecoderEncoder/VB/GifEncoderDecoder.vb#4)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görüntülemeye Genel Bakış](imaging-overview.md)

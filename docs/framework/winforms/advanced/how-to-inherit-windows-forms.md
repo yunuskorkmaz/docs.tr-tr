@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Form devralma'
+title: 'Nasıl yapılır: Windows Formlarını Devralma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112755"
 ---
-# <a name="how-to-inherit-windows-forms"></a>Nasıl yapılır: Windows Form devralma
+# <a name="how-to-inherit-windows-forms"></a>Nasıl yapılır: Windows Formlarını Devralma
 Temel forms devralarak yeni Windows form oluşturmaya, ihtiyaç duyduğunuz her zaman bir form tamamen yeniden işlemine geçmeden çabalarınıza çoğaltmak için kullanışlı bir yoldur.  
   
  Formları kullanarak tasarım zaman devralma hakkında daha fazla bilgi için **devralma Seçici** iletişim kutusu ve görsel olarak güvenlik düzeyleri arasında ayrım yapmak nasıl devralınan denetimler için bkz: [nasıl yapılır: Devralma Seçici iletişim kutusunu kullanarak form devralma](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
@@ -41,8 +41,9 @@ Temel forms devralarak yeni Windows form oluşturmaya, ihtiyaç duyduğunuz her 
  Forms devralınırken her olay hem temel sınıfını hem de devralınan bir sınıf tarafından işlenmediğinden oluşabilecek sorunları iki kez çağrılan olay işleyicileri ile ilgili göz önünde bulundurun. Bu sorunu önlemek yapma hakkında daha fazla bilgi için bkz. [sorun giderme devralınmış olay işleyicileri Visual Basic'te](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Inherits Deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [kullanma](~/docs/csharp/language-reference/keywords/using.md)
 - [Taban Formun Görünüşünü Değiştirmenin Etkileri](effects-of-modifying-base-form-appearance.md)
 - [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)

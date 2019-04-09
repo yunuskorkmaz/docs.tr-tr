@@ -2,12 +2,12 @@
 title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: f5955c20326cb9eaac77faae0b0d338660975a31
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 71b8255b9feda9854b0257528dcad85f6cf08d6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354875"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086032"
 ---
 # <a name="webhttpbinding"></a>\<webHttpBinding>
 SOAP iletileri yerine HTTP isteklerine yanıt Windows Communication Foundation (WCF) Web Hizmetleri için uç noktası yapılandırmak için kullanılan bir bağlama öğesi tanımlar.  
@@ -91,6 +91,7 @@ SOAP iletileri yerine HTTP isteklerine yanıt Windows Communication Foundation (
  WCF'de, dağıtım ve ASP desteği. AJAX tümleştirme hem de yerleşiktir üzerine Web programlama modeli. Modeli hakkında daha fazla bilgi için bkz. [WCF Web HTTP programlama modeli](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
 - [WCF Web HTTP Programlama Modeli](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

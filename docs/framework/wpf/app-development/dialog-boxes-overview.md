@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177417"
 ---
 # <a name="dialog-boxes-overview"></a>İletişim Kutularına Genel Bakış
 Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışır ve aracılığıyla bu verileri işlemek için işlevselliği kullanıma sunma ana verileri görüntüler ana pencere sahip [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mekanizmaları menü çubukları, araç çubuklarını ve durum çubukları ister. Önemsiz olmayan bir uygulama, ayrıca aşağıdakileri yapmak için ek windows görüntülenebilir:  
@@ -33,9 +33,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
  A *geçici* iletişim kutusu, diğer taraftan, engellemez kullanıcı açıkken diğer windows etkinleştirme. Örneğin, bir kullanıcı bir belgedeki belirli bir sözcüğün oluşumlarını bulmak isterse, ana pencere genellikle aradıklarını hangi word kullanıcıdan bir iletişim kutusu açılır. Bu yana bulma bir word belgesi düzenlemesini kullanıcı engellemez, ancak iletişim kutusunun kalıcı olması gerekmez. En az bir modsuz iletişim kutusu sağlayan bir **kapatmak** iletişim kutusunu kapatmak için düğme ve ek düğmeler gibi belirli İşlevler, yürütülecek sağlayabilir bir **Sonrakini Bul** Sonrakini Bul düğmesini, word bulma ölçütleri sözcük araması eşleşir.  
   
  Windows Presentation Foundation (WPF), birden fazla ileti kutuları, ortak iletişim kutuları ve özel iletişim kutuları gibi iletişim kutularına oluşturmanıza olanak sağlar. Bu konu, her açıklar ve [iletişim kutusu örnek](https://go.microsoft.com/fwlink/?LinkID=159984) eşleşen örnekler sağlar.  
-  
- 
-  
+
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>İleti kutuları  
  A *ileti kutusu* metinsel bilgilerini görüntülemek ve kullanıcıların düğmelerle kararlar izin vermek için kullanılan bir iletişim kutusudur. Aşağıdaki şekil, metin tabanlı bilgiler görüntüler, soru soran ve kullanıcının soruyu yanıtlamak için üç düğme sağlayan bir ileti kutusu gösterir.  
@@ -47,7 +45,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Bir ileti kutusu görüntülemek için çağrı `static` <xref:System.Windows.MessageBox.Show%2A> yöntemi, aşağıdaki kodda gösterildiği gibi.  
+ Bir ileti kutusu görüntülemek için çağrı `static`<xref:System.Windows.MessageBox.Show%2A> yöntemi, aşağıdaki kodda gösterildiği gibi.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -345,6 +343,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Açılan Pencereye Genel Bakış](../controls/popup-overview.md)
+
+- [Açılır Pencereye Genel Bakış](../controls/popup-overview.md)
 - [İletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984)
 - [ColorPicker özel denetim örneği](https://go.microsoft.com/fwlink/?LinkID=159977)

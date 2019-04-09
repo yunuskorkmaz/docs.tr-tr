@@ -17,18 +17,16 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172113"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi
 Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olayı işaretleyebilirsiniz. Olay işleme rotayı verimli kısaltır. Sınıf işleme yönlendirilmiş olaylar tarafından desteklenen programlama bir kavramdır. İşleyicisi sınıfı sınıfın bir örneği üzerinde herhangi bir örnek işleyici önce çağrılan bir işleyici ile bir sınıf düzeyinde belirli gönderilmiş bir olayı işleme fırsatına sahiptir.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu konu başlığı altında tanıtılan kavramları üzerinde elaborates [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).  
@@ -99,7 +97,8 @@ Yönlendirilmiş olay işleyicileri içinde olay verilerini işlenen olayı işa
  İkinci yöntem yalnızca giriş olayları yönlendirilmiş olay tünel ve tırmanma sürümlerini nereden eşleştirilmiş durumda çalışır. Bu yönlendirilmiş olaylar için bunun yerine Önizleme/tünel eşdeğer işleyicileri yönlendirilmiş olay ekleyebilirsiniz. Bu yönlendirilmiş olayı işleme kodunu button sınıfı, uygulamanın öğe ağacında bazı üst öğe düzeyinde işleyicisinin bağlı pek fazla ıntercept değil şekilde kökünden başlayarak rota üzerinden tünel. Bu yaklaşımı kullanın, işlenen herhangi bir Önizleme olay işaretleme hakkında dikkatli olun. İle verilen örneğin <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> olay olarak işaretliyse, kök öğe işlenen <xref:System.Windows.RoutedEventArgs.Handled%2A> gerçekten bastırır işleyici uygulamasında <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay. Bu genellikle istenen davranışı değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.EventManager>
 - [Önizleme Olayları](preview-events.md)
 - [Özel Yönlendirilmiş Olay Oluşturma](how-to-create-a-custom-routed-event.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)

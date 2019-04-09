@@ -1,17 +1,17 @@
 ---
-title: Oracledatareader'da REF CURSOR parametreleri
+title: OracleDataReader’da REF CURSOR Parametreleri
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-ms.openlocfilehash: 95bfb544ea02a8a44d010d08c491234fffaf3689
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c949f0d1ed43b66f72afc4059014c92293f3d75
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121855"
 ---
-# <a name="ref-cursor-parameters-in-an-oracledatareader"></a>Oracledatareader'da REF CURSOR parametreleri
+# <a name="ref-cursor-parameters-in-an-oracledatareader"></a>OracleDataReader’da REF CURSOR Parametreleri
 Bu Microsoft Visual Basic örnek REF CURSOR parametresiyle döndürür ve olarak değeri okuyan bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.  
   
 ```vb  
@@ -44,5 +44,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

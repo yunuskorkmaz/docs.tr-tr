@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: b384e3dde3f2f6ba75feef7954dc9872bd3e3cd5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9da2f125b7b373d81014150c0d67a1422c932516
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196365"
 ---
 # <a name="ui-automation-events-for-clients"></a>İstemciler İçin UI Otomasyon Olayları
 > [!NOTE]
@@ -58,7 +58,8 @@ ms.locfileid: "57676388"
  Örnek kod için bkz: [UI Otomasyon olaylarına abone olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+
+- [UI Otomasyon Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
 - [UI Otomasyonu Olaylarına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [UI Otomasyonu Özelliklerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
+- [UI Otomasyon Özelliklerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
 - [TrackFocus örnek](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

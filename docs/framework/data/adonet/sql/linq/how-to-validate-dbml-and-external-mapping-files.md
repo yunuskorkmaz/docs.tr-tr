@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: DBML ve dış eşleme dosyalarını doğrulama'
+title: 'Nasıl yapılır: DBML ve Dış Eşleme Dosyalarını Doğrulama'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 42cba5b9b686f5f94d4ebf8f889461e1bab009b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b01bcf98bba185b7a4b1802f470a585371980177
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078739"
 ---
-# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Nasıl yapılır: DBML ve dış eşleme dosyalarını doğrulama
+# <a name="how-to-validate-dbml-and-external-mapping-files"></a>Nasıl yapılır: DBML ve Dış Eşleme Dosyalarını Doğrulama
 Dış eşleme dosyalarını ve değişiklik .dbml dosyalarını, karşılık gelen şema tanımlarının karşı doğrulanmalıdır. Bu konu, doğrulama işlemini uygulamak için Visual Studio kullanıcılarıyla adımları sağlar.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -71,4 +71,5 @@ Dış eşleme dosyalarını ve değişiklik .dbml dosyalarını, karşılık gel
 7.  İçinde **dosya adı** kutusunda, bir .xsd uzantısı ile adlı bir dosya oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

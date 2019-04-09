@@ -159,12 +159,12 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 983d7b9a89346a89a89b5e8de23049287f719026
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99fa84b8dea326bc7a32ff4f3c3187acc9883748
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121647"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe Hata İletileri
 Yapı işleminin çağırdığı [Winmdexp.exe (Windows çalışma zamanı meta verileri dışarı aktarma aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) kullandığınızda  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] bileşen** 2012'de Visual Studio içinde Winmdexp.exe hata iletileri görünecek şekilde şablonu **Hata listesi**. Winmdexp.exe çalışır ile derlenmiş bir modülde `/target:winmdobj` seçeneği. Giriş olarak derlenmiş bir modül gerektiğinden, derleme başarılı sürece, hata iletileri görünmez.  
@@ -174,5 +174,6 @@ Yapı işleminin çağırdığı [Winmdexp.exe (Windows çalışma zamanı meta 
  Hata bu makalede ele alınmamıştır ve ileti sorunu gidermek için yeterli bilgi içermiyor düşünüyorsanız, lütfen bu makalede geri bildirim bağlantısını kullanın ve hata iletisini içerir. Bir hata, alternatif olarak, dosya [Microsoft Connect Web sitesi](https://go.microsoft.com/fwlink/p/?LinkId=251130). Ayrıca daha fazla bilgi için bakabilirsiniz [Microsoft Forums](https://go.microsoft.com/fwlink/p/?LinkId=251129).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
 - [Windows çalışma zamanı bileşeni hata durumları tanılama](https://go.microsoft.com/fwlink/p/?LinkId=251127)

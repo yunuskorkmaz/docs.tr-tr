@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0182de9b998b7eb88a3bd003543bee876398633
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ec893c898a6cd4abffd525056ed0d0169fcbb288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184788"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost Arabirimi
 Ortak dil çalışma zamanı (CLR) oluşturma ve uygulama etki alanları, varsayılan etki alanına ve işlemde çalışan tüm etki alanları listelemek için yapılandırma açıkça durdurmak ve başlatmak konak olanak tanıyan yöntemler sağlar.  
@@ -62,9 +62,10 @@ Ortak dil çalışma zamanı (CLR) oluşturma ve uygulama etki alanları, varsay
  **.NET framework sürümleri:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.AppDomain>
 - [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
 - [ICLRRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
-- [Çalışma zamanı ana bilgisayarları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
+- [Çalışma Zamanı Ana Bilgisayarları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
 - [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [CorRuntimeHost Ortak Sınıfı](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 30836f7f1cbf742c621254ef92314d20a4fffd83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715083"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185698"
 ---
 # <a name="data-member-default-values"></a>Veri Üyesi Varsayılan Değerler
 İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], türlerine sahip bir kavramı *varsayılan değerler*. Örneğin, varsayılan değer: bir başvuru türü için `null`, ve isteğe bağlı olarak bir tamsayı türü için sıfır ise. Seri hale getirilmiş verilerden veri üyesi varsayılan değerine ayarlandığında atlamak için zaman zaman istenen bir durumdur. Varsayılan değer üyesine sahip olduğundan, gerçek bir değer seri hale yok; Bu, bir performans avantajı vardır.  
@@ -57,5 +57,6 @@ ms.locfileid: "54715083"
  Şema içeri aktarma, <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> otomatik olarak ayarlanırsa `false` bahsedilen WCF özgü açıklama daha önce algılanır. Ayrıca ayarlanmış `false` olan başvuru türleri için `nillable` özelliğini `false` tüketildiğinde sık gerçekleşen belirli bir birlikte çalışabilirlik senaryolarını desteklemek üzere [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

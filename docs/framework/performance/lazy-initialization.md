@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac921bbe6250b039aba8527a1b9b5203af0972e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182305"
 ---
 # <a name="lazy-initialization"></a>Yavaş Başlatma
 *Yavaş başlatma* nesnenin anlamına gelir oluşturulduktan önce kullanılana kadar ertelenir. (Bu konu için koşulları *yavaş başlatma* ve *yavaş oluşturmada* eşanlamlıdır.) Yavaş başlatma, öncelikle performansı iyileştirmek için kısıp hesaplama önlemek ve program bellek gereksinimlerini azaltmak için kullanılır. En yaygın senaryolar şunlardır:  
@@ -75,11 +75,11 @@ ms.locfileid: "54492955"
   
  Bazı <xref:System.Lazy%601> oluşturuculara sahip bir <xref:System.Threading.LazyThreadSafetyMode> adlı parametre `mode`. Bu oluşturucular bir ek iş parçacığı güvenlik modu sağlar. Aşağıdaki tabloda nasıl, iş parçacığı güvenliği bir <xref:System.Lazy%601> nesne iş parçacığı güvenliği belirtin Oluşturucusu parametrelerin etkilenir. Her Oluşturucu en fazla bir tür parametresi vardır.  
   
-|Nesne iş parçacığı güvenliği|`LazyThreadSafetyMode` `mode` Parametre|Boole `isThreadSafe` parametresi|İş parçacığı güvenliği parametre yok|  
+|Nesne iş parçacığı güvenliği|`LazyThreadSafetyMode` `mode` parametre|Boole `isThreadSafe` parametresi|İş parçacığı güvenliği parametre yok|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Tam iş parçacığı açısından güvenli; aynı anda yalnızca tek bir iş parçacığı değeriyle dener.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Evet.|  
-|İş parçacığı-güvenli değildir.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Uygulanamaz.|  
-|Tam iş parçacığı açısından güvenli; iş parçacıkları yarış'değeri başlatılamadı.|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|Uygulanamaz.|Uygulanamaz.|  
+|İş parçacığı-güvenli değildir.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Geçerli değildir.|  
+|Tam iş parçacığı açısından güvenli; iş parçacıkları yarış'değeri başlatılamadı.|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|Geçerli değildir.|Geçerli değildir.|  
   
  Tablonun gösterdiği gibi belirtme <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> için `mode` parametre belirtmekle aynı olan `true` için `isThreadSafe` parametresi ve belirterek <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> belirtmekle aynı `false`.  
   
@@ -153,7 +153,8 @@ ms.locfileid: "54492955"
  Bu örnekte, başlatma yordamı döngünün her yinelenişinde çağrılan dikkat edin. Çok iş parçacıklı senaryolarda başlatma yordamı çağırmak için ilk iş parçacığında değeri tüm iş parçacıkları tarafından görülen bir bileşendir. Sonraki iş parçacığı da başlatma yordamı çağırmak, ancak sonuçları kullanılmaz. Bu tür bir yarış durumu olası kabul edilebilir değilse, aşırı yüklemesini kullanın <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> bir Boole bağımsız değişkeni ve bir eşitleme nesnesi alır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)
 - [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)
 - [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Nasıl yapılır: Nesnelerin geç başlatılmasını gerçekleştirme](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

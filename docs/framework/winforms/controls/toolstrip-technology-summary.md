@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: c32b14e1394004b68247d4d7bf2d0fcc8870b730
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120971"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip Teknoloiji Özeti
 Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullanımını destekleyen sınıflar.  
@@ -63,26 +63,26 @@ Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullan�
 ### <a name="task-dialog-boxes"></a>Görev iletişim kutuları  
  Visual Studio'da bir denetim Tasarımcısı'nda akıllı etiketine tıkladığınızda kolay erişim için bir görev listesi çok sık kullanılan komutlar için görüntüler.  
   
--   [MenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+-   [MenuStrip Görevleri İletişim Kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [ToolStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
+-   [ToolStrip Görevleri İletişim Kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [ContextMenuStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
+-   [ContextMenuStrip Görevleri İletişim Kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [StatusStrip görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
+-   [StatusStrip Görevleri İletişim Kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [ToolStripContainer görevleri iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
+-   [ToolStripContainer Görevleri İletişim Kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Öğeler Koleksiyonu Düzenleyicisi  
  Visual Studio'da tıkladığınızda, **öğe düzenleme** görev listesinde veya seçin ve denetim sağ tıklayın **öğe düzenleme** Koleksiyonu Düzenleyicisi denetimi için kısayol menüsünde görüntülenir. Koleksiyon düzenleyiciler, ekleme, kaldırma ve denetimi içeren öğeleri yeniden sıralamak olanak tanır. Ayrıca, görüntüleyebilir ve denetimi ve denetimin öğeleri özelliklerini değiştirin.  
   
--   [MenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+-   [MenuStrip Öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [StatusStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
+-   [StatusStrip Öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [ContextMenuStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
+-   [ContextMenuStrip Öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [ToolStrip öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
+-   [ToolStrip Öğeler Koleksiyonu Düzenleyicisi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Denetimleri barındırma  
  <xref:System.Windows.Forms.ToolStripControlHost> Sınıfı için yerleşik sarmalayıcıları sağlar <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, ve <xref:System.Windows.Forms.ToolStripProgressBar> kontrol eder. Başka var veya COM denetiminde de barındırabilir bir <xref:System.Windows.Forms.ToolStripControlHost>.  
@@ -119,5 +119,6 @@ Bu konu hakkında bilgiler için özetlenmiştir `ToolStrip` denetimi ve kullan�
  <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, Ve <xref:System.Windows.Forms.StatusStrip> öğeleri taşma olanak tanır. Benzer şekilde, Microsoft Office araç çubuklarında bu öğelere davranış budur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ToolStrip Denetimine Genel Bakış](toolstrip-control-overview-windows-forms.md)
-- [ToolStrip Denetim, Mimarisi](toolstrip-control-architecture.md)
+- [ToolStrip Denetim Mimarisi](toolstrip-control-architecture.md)

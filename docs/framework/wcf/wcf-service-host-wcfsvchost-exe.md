@@ -1,15 +1,15 @@
 ---
-title: WCF Hizmet Konağı (WcfSvcHost.exe)
+title: WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505646"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193024"
 ---
-# <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Konağı (WcfSvcHost.exe)
+# <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) hizmet ana bilgisayarı (WcfSvcHost.exe), Visual Studio hata ayıklayıcıyı otomatik olarak ana bilgisayar ve uyguladıysanız bir hizmeti test etmek için (F5) başlatmak sağlar. Sonra hizmeti bulun ve olası hataları düzeltmek için WCF Test İstemcisi (WcfTestClient.exe) veya kendi istemci kullanarak test edebilirsiniz.  
   
 ## <a name="wcf-service-host"></a>WCF hizmet konağı  
@@ -111,4 +111,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Netsh.exe hakkında daha fazla bilgi için bkz. "[Netsh.exe aracı ve komut satırı anahtarları nasıl kullanılacağını](https://go.microsoft.com/fwlink/?LinkId=97877)".  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

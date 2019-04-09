@@ -1,18 +1,18 @@
 ---
-title: Bir XML Web hizmetinden DataSet kullanma
+title: XML Web Hizmetinden DataSet Kullanma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: dbb45b890ddfab3f771d4b4a8932f970036b346d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: e07fd6598d6b2d1bbd52e5e6735264821b8986bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180251"
 ---
-# <a name="consuming-a-dataset-from-an-xml-web-service"></a>Bir XML Web hizmetinden DataSet kullanma
+# <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web Hizmetinden DataSet Kullanma
 <xref:System.Data.DataSet> Kısmen Internet üzerinden veri uygun taşıma kolaylaştırmak için bağlantısı kesik bir tasarım ile için tasarlanmıştır. **Veri kümesi** girdi olarak belirlenebilir veya ek kodlamaya gerek kalmadan, XML Web Hizmetleri çıktısını gerekli içeriğini akışını sağlamak için "seri hale getirilebilir" olan **veri kümesi** bir XML Web hizmeti bir istemci ve arka. **Veri kümesi** örtük olarak biçimini kullanarak bir XML akışı dönüştürülür, ağ üzerinden gönderilen ve ardından XML Akışı'ndan reconstructed bir **veri kümesi** alan uçta. Bu, basit ve esnek bir yöntem iletme ve XML Web Hizmetleri kullanarak ilişkisel verileri döndürmek için sağlar. Biçimini hakkında daha fazla bilgi için bkz: [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
   
  Aşağıdaki örnek, bir XML Web hizmeti ve Kullan istemci oluşturma işlemi gösterilmektedir **veri kümesi** (değiştirilen veriler dahil) ilişkisel verilerin taşınması ve güncelleştirmelerden özgün veri kaynağına geri çözmek için.  
@@ -260,6 +260,7 @@ ms.locfileid: "55828299"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
 - [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)

@@ -6,17 +6,16 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172061"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klavye odağı aldığında, bir denetimin görünümünü değiştirmek için iki paralel mekanizmaları sağlar. Gibi özellikler için özellik ayarlayıcılarına kullanılacak ilk mekanizmadır <xref:System.Windows.UIElement.IsKeyboardFocused%2A> stil veya denetime uygulanan şablon içinde. Değeri olarak ayrı bir stil sağlamak için ikinci mekanizmadır <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> özelliği; "odak görsel stili" denetimi, üstünde denetimi veya diğer kullanıcı Arabirimi görsel ağacını değiştirmek yerine çizen donatıcı için ayrı bir görsel ağaç oluşturur Bunu değiştirerek öğesi. Bu konuda, bu mekanizmaların her biri uygun olduğu senaryolar açıklanmaktadır.  
-   
-  
+
 <a name="Purpose"></a>   
 ## <a name="the-purpose-of-focus-visual-style"></a>Odak görsel stili amacı  
  Odak görsel stili özelliği, klavye ile gezinme herhangi bir kullanıcı Arabirimi öğesi için temel görsel kullanıcı geri bildirim tanıtımı için ortak bir "nesne modeli" sağlar. Bu, yeni şablonu denetime uygulamak veya belirli bir şablon oluşturmayı bilmeden olmadan mümkün olur.  
@@ -77,6 +76,7 @@ ms.locfileid: "57377053"
  Görsel bir davranış üretmek için odak değiştirme tüm olası nedenlerini istiyorsanız, temel bir ayarlayıcı veya tetiklenecek <xref:System.Windows.UIElement.IsFocused%2A> bağımlılık özelliği veya alternatif olarak üzerinde <xref:System.Windows.UIElement.GotFocus> veya <xref:System.Windows.UIElement.LostFocus> olaylar için kullanılan bir <xref:System.Windows.EventSetter>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)
 - [Odağa Genel Bakış](focus-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 6ab7b4d8fe8366a214d70cd73e7e33cafcc584f8
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139535"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms'ta Ek Güvenlik Konuları
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] güvenlik ayarları, uygulamanızın farklı bir kısmi güven ortamında yerel bilgisayarınızda çalıştırılmasına neden olabilir. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Dosya sistemi, ağ ve diğer özelliklerin yanı sıra yönetilmeyen API gibi önemli yerel kaynaklara erişimi kısıtlar. Güvenlik ayarları, Microsoft Windows API veya güvenlik sistemi tarafından doğrulanan diğer API'lerini çağırma özelliği etkiler. Güvenlik dahil dosya ve veri erişimini ve yazdırma uygulamanızın diğer yönlerini de etkiler. Kısmi güven ortamında dosya ve veri erişimi hakkında daha fazla bilgi için bkz. [daha fazla güvenli dosya ve veri erişimi Windows Forms'ta](more-secure-file-and-data-access-in-windows-forms.md). Kısmi güven ortamında yazdırma hakkında daha fazla bilgi için bkz. [daha güvenli yazdırma Windows Forms'ta](more-secure-printing-in-windows-forms.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "58409399"
 |<xref:System.Windows.Forms.Control>|-Başlarken <xref:System.Windows.Forms.Control.Parent%2A> özelliği.<br />-Ayarlama `Region` özelliği.<br />-Çağırma <xref:System.Windows.Forms.Control.FindForm%2A> , <xref:System.Windows.Forms.Control.Focus%2A>, <xref:System.Windows.Forms.Control.FromChildHandle%2A> ve <xref:System.Windows.Forms.Control.FromHandle%2A>, <xref:System.Windows.Forms.Control.PreProcessMessage%2A>, <xref:System.Windows.Forms.Control.ReflectMessage%2A>, veya <xref:System.Windows.Forms.Control.SetTopLevel%2A> yöntemi.<br />-Çağırma <xref:System.Windows.Forms.Control.GetChildAtPoint%2A> denetim döndürdüyse yöntemi çağıran denetiminin alt değil.<br />-Bir kapsayıcı denetimi içinde denetim odağı değiştirin.|  
 |<xref:System.Windows.Forms.Cursor>|-Ayarlama <xref:System.Windows.Forms.Cursor.Clip%2A> özelliği.<br />-Çağırma <xref:System.Windows.Forms.Control.Hide%2A> yöntemi.|  
 |<xref:System.Windows.Forms.DataGrid>|-Çağırma <xref:System.Windows.Forms.ContainerControl.ProcessTabKey%2A> yöntemi.|  
-|<xref:System.Windows.Forms.Form>|-Başlarken <xref:System.Windows.Forms.Form.ActiveForm%2A> veya <xref:System.Windows.Forms.Form.MdiParent%2A> özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, veya <xref:System.Windows.Forms.Form.TopMost%2A> özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.Opacity%2A> % 50 aşağıda özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.WindowState%2A> özelliğini <xref:System.Windows.Forms.FormWindowState.Minimized> programlı olarak.<br />-Çağırma <xref:System.Windows.Forms.Form.Activate%2A> yöntemi.<br />-Kullanarak <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, ve <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow> <xref:System.Windows.Forms.FormBorderStyle> sabit listesi değerleri.|  
+|<xref:System.Windows.Forms.Form>|-Başlarken <xref:System.Windows.Forms.Form.ActiveForm%2A> veya <xref:System.Windows.Forms.Form.MdiParent%2A> özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, veya <xref:System.Windows.Forms.Form.TopMost%2A> özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.Opacity%2A> % 50 aşağıda özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.WindowState%2A> özelliğini <xref:System.Windows.Forms.FormWindowState.Minimized> programlı olarak.<br />-Çağırma <xref:System.Windows.Forms.Form.Activate%2A> yöntemi.<br />-Kullanarak <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, ve <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow><xref:System.Windows.Forms.FormBorderStyle> sabit listesi değerleri.|  
 |<xref:System.Windows.Forms.NotifyIcon>|-Kullanarak <xref:System.Windows.Forms.NotifyIcon> bileşen tamamen kısıtlıdır.|  
   
  <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> Değeri sınırlar aşağıdaki tabloda, tarafından uygulanan kısıtlamalara ek olarak listelenen eylemleri <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> değeri.  
@@ -89,6 +89,7 @@ ms.locfileid: "58409399"
  Yönetilmeyen kod çağırmak için izin en herhangi bir şey gerçekleştirmek uygulamaya izin verir. Bu nedenle, yönetilmeyen kod çağırmak için izin güvenilir bir kaynaktan gelen uygulamaların yalnızca verilmelidir. Alternatif olarak, uygulamaya bağlı olarak, isteğe bağlı ya da yalnızca tam güven ortamında etkin yönetilmeyen koda çağrı yapan uygulamanın işlevsellik parçası olabilir. Tehlikeli izinler hakkında daha fazla bilgi için bkz: [tehlikeli izinler ve ilke yönetimi](../misc/dangerous-permissions-and-policy-administration.md). Yükseltme yaptığınıza izinler hakkında daha fazla bilgi için bkz. [Genel Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi](more-secure-file-and-data-access-in-windows-forms.md)
 - [Windows Forms'ta Daha Güvenli Yazdırma](more-secure-printing-in-windows-forms.md)
 - [Windows Forms'ta Güvenliğe Genel Bakış](security-in-windows-forms-overview.md)

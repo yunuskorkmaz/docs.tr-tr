@@ -1,16 +1,16 @@
 ---
-title: <clear> için <namedCaches> Öğesi
+title: <clear> öğe için <namedCaches>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: aaf5c2360b53a1cd6e5775a195c89c96ed6440a3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: eb0a50919e163a795abc70d132bd45f1d05192ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146867"
 ---
 # <a name="clear-element-for-namedcaches"></a>\<Temizle > öğesi için \<namedCaches >
 Tüm temizler `namedCache` girişleri `namedCaches` koleksiyonu için bir önbellek.  
@@ -51,4 +51,5 @@ Tüm temizler `namedCache` girişleri `namedCaches` koleksiyonu için bir önbel
  `clear` Öğesi tümünü temizler `namedCache` girişleri adlandırılmış önbelleği koleksiyondaki bir önbellek. Kullanabileceğiniz `clear` kullanmadan önce öğesi `add` vardır başka hiçbir emin olmak için yeni bir adlandırılmış önbellek girdisi eklemek için öğesi adlı önbellekler koleksiyondaki.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<namedCaches > öğesi (önbellek ayarları)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

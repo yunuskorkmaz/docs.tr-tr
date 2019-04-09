@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
-ms.openlocfilehash: 67c9277ba4a7ae0ee802c536699a765669ddf508
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 707375230acea3558b060f398add919370d352b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160725"
 ---
 # <a name="viewbox"></a>Viewbox
 <xref:System.Windows.Controls.Viewbox> Denetimi uzatma veya bir alt öğe ölçeklendirme için kullanılır.  
@@ -28,4 +28,5 @@ ms.locfileid: "57361921"
  <xref:System.Windows.Controls.Image>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF denetimleri Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160053)

@@ -1,16 +1,16 @@
 ---
-title: WIF yapılandırma şeması kuralları
+title: WIF Yapılandırma Şeması Kuralları
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: acdce1f0ae35713dd4955e1353e0a83000898408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39ed32bb7e926f275e996b09e746c879c6d3fe9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120880"
 ---
-# <a name="wif-configuration-schema-conventions"></a>WIF yapılandırma şeması kuralları
+# <a name="wif-configuration-schema-conventions"></a>WIF Yapılandırma Şeması Kuralları
 Bu konu, Windows Identity Foundation (WIF) yapılandırma konuları kullanılan kuralları açıklar ve bazı ortak özelliklerini açıklar ve kullanılan öznitelikler [ \<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) ve [ \<System.IdentityModel.Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) bölümler.  
   
 <a name="BKMK_Modes"></a>   
@@ -45,5 +45,6 @@ Bu konu, Windows Identity Foundation (WIF) yapılandırma konuları kullanılan 
  Özel türler belirtilen türden türetilmiş ve sağlamaları gerekir bir `public` varsayılan (0 bağımsız değişkeni) Oluşturucu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [\<System.IdentityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
+
+- [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
 - [\<System.IdentityModel.Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)

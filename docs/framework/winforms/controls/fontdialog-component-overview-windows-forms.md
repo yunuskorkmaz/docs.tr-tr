@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Font dialog box
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-ms.openlocfilehash: 26bfb561c1050438b78c4ae0a3e6e8da32458cdd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7f140807bf4b42e530302190042e729c59248e7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098565"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>FontDialog Bileşenine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FontDialog> bileşendir standart Windows olan bir önceden yapılandırılmış bir iletişim kutusu **yazı tipi** sistemde yüklü yazı tiplerini kullanıma sunmak için kullanılan iletişim kutusu. Basit bir çözüm olarak, Windows tabanlı uygulama içindeki yazı tipi seçimi yerine kendi iletişim kutusu yapılandırmak için kullanın.  
@@ -24,5 +24,6 @@ Windows Forms <xref:System.Windows.Forms.FontDialog> bileşendir standart Window
  Bileşen bir dizi görünümünü Yapılandırma özelliği vardır. İletişim kutusu seçimleri ayarlama özellikleri <xref:System.Windows.Forms.FontDialog.Font%2A> ve <xref:System.Windows.Forms.FontDialog.Color%2A>. <xref:System.Windows.Forms.FontDialog.Font%2A> Özelliğini ayarlar yazı tipini, stili, boyutunu, betik ve etkiler; Örneğin, `Arial, 10pt, style=Italic, Strikeout`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.FontDialog>
 - [FontDialog Bileşeni](fontdialog-component-windows-forms.md)

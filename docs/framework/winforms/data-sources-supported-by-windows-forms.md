@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124624"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms Tarafından Desteklenen Veri Kaynakları
 Geleneksel olarak, veri bağlama uygulamalarda, veritabanlarında depolanan verilerin yararlanmak için kullanıldı. Belirli en düşük gereksinimleri karşılanmadığı sürece Windows Forms veri bağlama ile veritabanları ve bunun yanı sıra diğer yapıları, diziler ve Koleksiyonlar gibi verileri verilere erişebilir.  
@@ -47,17 +47,18 @@ Geleneksel olarak, veri bağlama uygulamalarda, veritabanlarında depolanan veri
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] veri nesneleri  
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] bağlama için uygun olan veri yapıları sayısı sağlar. Her karmaşıklığı ve Gelişmiş algoritmaların içinde değişir.  
   
--   <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> temel yapı bloğu olduğu bir <xref:System.Data.DataTable>bu sütun sayısı bir tablo oluşturur. Her <xref:System.Data.DataColumn> sahip bir <xref:System.Data.DataColumn.DataType%2A> veri sütununu ayrı tutma (örneğin, otomobiller açıklayan bir tablodaki bir otomobilin yap) türünü belirleyen özelliği. Basit bir denetim bağlamak (aşağıdaki gibi bir <xref:System.Windows.Forms.TextBox> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliği) bir sütuna veri tablosu içinde.  
+-   <xref:System.Data.DataColumn>biçimindeki telefon numarasıdır. A <xref:System.Data.DataColumn> temel yapı bloğu olduğu bir <xref:System.Data.DataTable>bu sütun sayısı bir tablo oluşturur. Her <xref:System.Data.DataColumn> sahip bir <xref:System.Data.DataColumn.DataType%2A> veri sütununu ayrı tutma (örneğin, otomobiller açıklayan bir tablodaki bir otomobilin yap) türünü belirleyen özelliği. Basit bir denetim bağlamak (aşağıdaki gibi bir <xref:System.Windows.Forms.TextBox> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliği) bir sütuna veri tablosu içinde.  
   
--   <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> satırları ve sütunları içeren bir tablo olarak gösterimidir [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Veri tablosu içeren iki koleksiyona: <xref:System.Data.DataColumn>, (Bu sonuç olarak bu tabloya girilen veri türlerini belirlemek) belirli bir tabloda veri sütunlarını temsil eden ve <xref:System.Data.DataRow>, bir tablodaki veri satırlarının temsil eden. Karmaşık bir denetim için bir veri tablosunda yer alan bilgileri bağlamak (bağlama gibi <xref:System.Windows.Forms.DataGridView> veri tablosu denetimi). Ancak, bağladığınızda için bir <xref:System.Data.DataTable>, gerçekten bağlama tablonun varsayılan görünüme olan.  
+-   <xref:System.Data.DataTable>biçimindeki telefon numarasıdır. A <xref:System.Data.DataTable> satırları ve sütunları içeren bir tablo olarak gösterimidir [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Veri tablosu içeren iki koleksiyona: <xref:System.Data.DataColumn>, (Bu sonuç olarak bu tabloya girilen veri türlerini belirlemek) belirli bir tabloda veri sütunlarını temsil eden ve <xref:System.Data.DataRow>, bir tablodaki veri satırlarının temsil eden. Karmaşık bir denetim için bir veri tablosunda yer alan bilgileri bağlamak (bağlama gibi <xref:System.Windows.Forms.DataGridView> veri tablosu denetimi). Ancak, bağladığınızda için bir <xref:System.Data.DataTable>, gerçekten bağlama tablonun varsayılan görünüme olan.  
   
--   <xref:System.Data.DataView>. A <xref:System.Data.DataView> filtre veya sıralanmış bir tek veri tablo özelleştirilmiş bir görünümüdür. Veri Görünümü "snapshot" karmaşık veriye bağlı denetimler tarafından kullanılan verilerdir. Basit-bağlama veya veri görünümündeki verileri karmaşık bağlamak ancak bir sabit "resim" temiz ve güncelleştirme veri kaynağı yerine veri bağlama unutmayın.  
+-   <xref:System.Data.DataView>biçimindeki telefon numarasıdır. A <xref:System.Data.DataView> filtre veya sıralanmış bir tek veri tablo özelleştirilmiş bir görünümüdür. Veri Görünümü "snapshot" karmaşık veriye bağlı denetimler tarafından kullanılan verilerdir. Basit-bağlama veya veri görünümündeki verileri karmaşık bağlamak ancak bir sabit "resim" temiz ve güncelleştirme veri kaynağı yerine veri bağlama unutmayın.  
   
--   <xref:System.Data.DataSet>. A <xref:System.Data.DataSet> tablolarını, ilişkileri ve bir veritabanındaki verilere kısıtlamaları oluşan bir koleksiyondur. Basit veya karmaşık bağlamak için bir veri kümesindeki verileri, ancak varsayılan bağlama duyarlı <xref:System.Data.DataViewManager> için <xref:System.Data.DataSet> (sonraki noktaya bakın).  
+-   <xref:System.Data.DataSet>biçimindeki telefon numarasıdır. A <xref:System.Data.DataSet> tablolarını, ilişkileri ve bir veritabanındaki verilere kısıtlamaları oluşan bir koleksiyondur. Basit veya karmaşık bağlamak için bir veri kümesindeki verileri, ancak varsayılan bağlama duyarlı <xref:System.Data.DataViewManager> için <xref:System.Data.DataSet> (sonraki noktaya bakın).  
   
--   <xref:System.Data.DataViewManager>. A <xref:System.Data.DataViewManager> tüm özelleştirilmiş bir görünümü olan <xref:System.Data.DataSet>, benzer bir <xref:System.Data.DataView>, ancak dahil ilişkileri. İle bir <xref:System.Data.DataViewManager.DataViewSettings%2A> koleksiyonu ayarlayabileceğiniz varsayılan filtreler ve görünümler için sıralama seçeneklerinde, <xref:System.Data.DataViewManager> için belirli bir tabloya sahiptir.  
+-   <xref:System.Data.DataViewManager>biçimindeki telefon numarasıdır. A <xref:System.Data.DataViewManager> tüm özelleştirilmiş bir görünümü olan <xref:System.Data.DataSet>, benzer bir <xref:System.Data.DataView>, ancak dahil ilişkileri. İle bir <xref:System.Data.DataViewManager.DataViewSettings%2A> koleksiyonu ayarlayabileceğiniz varsayılan filtreler ve görünümler için sıralama seçeneklerinde, <xref:System.Data.DataViewManager> için belirli bir tabloya sahiptir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms Veri Bağlamada Bildirimi Değiştirme](change-notification-in-windows-forms-data-binding.md)
 - [Veri Bağlama ve Windows Forms](data-binding-and-windows-forms.md)
 - [Windows Forms Veri Bağlama](windows-forms-data-binding.md)

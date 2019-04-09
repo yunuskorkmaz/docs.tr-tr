@@ -1,15 +1,15 @@
 ---
-title: İş akışı yürütme özellikleri
+title: İş Akışı Yürütme Özellikleri
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 96f5057986e256f485f60221d1c6ad3d2494be55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193908"
 ---
-# <a name="workflow-execution-properties"></a>İş akışı yürütme özellikleri
+# <a name="workflow-execution-properties"></a>İş Akışı Yürütme Özellikleri
 İş parçacığı yerel depolama ile (TLS), her iş parçacığı için bir yürütme bağlamı CLR tutar. Bu yürütme bağlamı iş parçacığı kimliği, ortam işlem gibi bilinen iş parçacığı özellikleri yönetir ve geçerli izin ayrıca gibi kullanıcı tanımlı bir iş parçacığı özellikleri kümesine yuvaları adlı.  
   
  Doğrudan CLR'yi hedefleyen programlar farklı olarak, iş akışı hiyerarşik olarak kapsamlı bir iş parçacığı geçişte sorun yaşamaz ortamında yürütme etkinlikleri ağaçları programlardır. Bu, standart TLS mekanizmaları hangi bağlam belirli iş öğesi için kapsamda olduğunu belirlemek için doğrudan kullanılamaz anlamına gelir. Örneğin, farklı işlem yürütme iki paralel dallarından kullanabilir henüz Zamanlayıcı, aynı CLR iş parçacığı üzerinde yürütülmesi ayırma değeri.  
@@ -162,6 +162,7 @@ End default text.
  İş akışı yürütme özellikleri özel etkinlik yazarları tarafından kullanılabilir ve ayrıca tanıtıcısı yönetimi etkinlikleri için bir mekanizma gibi sağlarlar <xref:System.ServiceModel.Activities.CorrelationScope> ve <xref:System.Activities.Statements.TransactionScope> etkinlikler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Activities.IExecutionProperty>
 - <xref:System.Activities.IPropertyRegistrationCallback>
 - <xref:System.Activities.RegistrationContext>

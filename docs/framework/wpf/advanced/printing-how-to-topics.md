@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: b17ebd3d9128bff40274d905606f1265afd0207d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170189"
 ---
 # <a name="printing-how-to-topics"></a>Yazdırma ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, yazdırma kullanımını göstermektedir ve yazdırma sistemi yönetimi özellikleri bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanı sıra yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] yazdırma yolu.  
@@ -44,6 +44,7 @@ Bu bölümdeki konular, yazdırma kullanımını göstermektedir ve yazdırma si
  Bir yazdırma bileti geçerli olduğunu ve bunu yazıcı tarafından desteklenmeyen herhangi bir şey istenmediğini denetimi yönelik yönergeler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Printing>
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.Interop>

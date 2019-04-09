@@ -8,18 +8,16 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197392"
 ---
 # <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları
 İşleme katmanı bir grafik donanım özelliği ve çalıştıran bir cihaz için performans düzeyi tanımlayan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
-  
 
-  
 <a name="graphics_hardware"></a>   
 ## <a name="graphics-hardware"></a>Grafik donanımı  
  En çok katmanı işleme düzeyleri etkileyen grafik donanımının özellikleri şunlardır:  
@@ -58,7 +56,7 @@ ms.locfileid: "57357527"
   
 |Özellik|Katman 1|Katman 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm|Büyüktür veya eşittir 9.0 olmalıdır.|Büyüktür veya eşittir 9.0 olmalıdır.|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] sürüm|Büyüktür veya eşittir 9.0 olmalıdır.|Büyüktür veya eşittir 9.0 olmalıdır.|  
 |Video RAM|Büyüktür veya eşittir 60 MB olmalıdır.|Büyüktür veya eşittir 120 MB olmalıdır.|  
 |Piksel gölgelendirici|Büyüktür veya eşittir 2.0 için sürüm düzeyi gerekir.|Büyüktür veya eşittir 2.0 için sürüm düzeyi gerekir.|  
 |Köşe gölgelendirici|Gereksinimi yoktur.|Büyüktür veya eşittir 2.0 için sürüm düzeyi gerekir.|  
@@ -130,9 +128,10 @@ ms.locfileid: "57357527"
 DirectX Tanılama Aracı ana penceresi  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
-- [WPF Performans paketi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
+- [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [Grafik İşleme Kayıt Defteri Ayarları](../graphics-multimedia/graphics-rendering-registry-settings.md)
 - [Animasyon İpuçları ve Püf Noktaları](../graphics-multimedia/animation-tips-and-tricks.md)

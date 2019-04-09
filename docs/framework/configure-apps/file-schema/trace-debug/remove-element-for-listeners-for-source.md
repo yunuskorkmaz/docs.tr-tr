@@ -1,5 +1,5 @@
 ---
-title: <remove> için <listeners> için <source> Öğesi
+title: <remove> Öğe için <listeners> için <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-ms.openlocfilehash: 522319c64ddff6eb6872584937d540a8955b7c8f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4809c471deb51e0560b438b5a2c8849daad34ca0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120139"
 ---
 # <a name="remove-element-for-listeners-for-source"></a>\<kaldırma > öğesi için \<dinleyicileri > için \<kaynak >
 Bir dinleyicisinden kaldırır `Listeners` koleksiyonu için bir izleme kaynağı.  
@@ -80,8 +80,9 @@ Bir dinleyicisinden kaldırır `Listeners` koleksiyonu için bir izleme kaynağ�
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Diagnostics.TraceSource.Listeners%2A>
 - <xref:System.Diagnostics.TraceSource>
 - [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [\<Temizleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)
-- [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [İz Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

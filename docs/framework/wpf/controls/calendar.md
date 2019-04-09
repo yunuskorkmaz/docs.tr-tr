@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: d2332f5d11e60a45e4da5d62ef7beed7aa14dfa7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9a64c6cd6fc1cc53383f2617f7a7a78959e87c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359412"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124793"
 ---
 # <a name="calendar"></a>Takvim
 Bir takvim görsel bir takvim görünümünü kullanarak bir tarih seçmek üzere bir kullanıcı etkinleştirir.  
@@ -52,5 +52,6 @@ Takvim denetimleri
 |BOŞLUK veya ENTER|<xref:System.Windows.Controls.CalendarMode.Year> veya <xref:System.Windows.Controls.CalendarMode.Decade>|Anahtarları <xref:System.Windows.Controls.Calendar.DisplayMode%2A> için <xref:System.Windows.Controls.CalendarMode.Month> veya <xref:System.Windows.Controls.CalendarMode.Year> odaklanmış öğesi tarafından temsil edilir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Denetimler](index.md)
 - [Stil ve Şablon Oluşturma](styling-and-templating.md)

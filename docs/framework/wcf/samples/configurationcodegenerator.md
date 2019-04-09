@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7625060cd0512bb7498a931d7b93a731e52c9f00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195195"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator yapılandırma sistemi için özel kanal uygulamaları göstermek için kullanabileceğiniz bir araçtır. Bu, kanalınızı yalnızca bunlar sistem tarafından sağlanan gibi bağlama yapılandırırsınız .config dosyasını kullanarak yapılandırmak, kullanıcıların, özel bir kanal sağlar `NetTcpBinding` veya özel bir bağlama kullanarak `TcpTransportBindingElement`.  
@@ -49,4 +49,3 @@ ConfigurationCodeGenerator yapılandırma sistemi için özel kanal uygulamalar�
          /Sb belirtilmişse: CodeToAddTo seçeneği\<*YourStdBinding*> .cs standart bağlamanız uygulayan bir sınıf içinde el ile eklemelisiniz koduna sahip.  
   
      SampleConfig.xml dosya önceki adımda 1 veya 2 tanımlı işleyicileri kaydeden yapılandırma dosyasına eklemeniz gereken yapılandırma kodunu içerir.  
-  

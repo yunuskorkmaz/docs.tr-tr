@@ -1,15 +1,15 @@
 ---
-title: SQL Server'da saklı yordam imzalama
+title: SQL Server'da Saklı Yordam İmzalama
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: da7b21d725d301006288245c940e4367c3ce8568
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606828"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094625"
 ---
-# <a name="signing-stored-procedures-in-sql-server"></a>SQL Server'da saklı yordam imzalama
+# <a name="signing-stored-procedures-in-sql-server"></a>SQL Server'da Saklı Yordam İmzalama
  İmzalayan özel anahtarla şifrelenmiş veri Özet bir dijital imzadır. Özel anahtar, dijital imza, taşıyıcı veya sahibi benzersiz olmasını sağlar. Saklı yordamları, işlevleri (satır içi tablo değerli işlevler dışında) tetikleyiciler ve derlemeleri oturum açabilirsiniz.  
   
  Bir saklı yordam bir sertifika veya asimetrik anahtar ile oturum açabilirsiniz. Sahiplik zinciri aracılığıyla izinleri devralınamaz veya sahiplik zinciri, dinamik SQL gibi ihlal edildiğinde bu senaryoları için tasarlanmıştır. Bir kullanıcı sertifikası için eşlenmiş saklı yordamı erişmesi nesnelerinde kullanıcı izinlerini sertifika verme sonra oluşturabilirsiniz.  
@@ -55,6 +55,7 @@ Ek sunucu düzeyi izinleri modülü ihtiyacı varsa:
 |[Saklı yordamlarla bir sertifika imzalama](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) SQL Server Çevrimiçi Kitapları'nda|Bir saklı yordam bir sertifika ile imzalamak için bir öğretici sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

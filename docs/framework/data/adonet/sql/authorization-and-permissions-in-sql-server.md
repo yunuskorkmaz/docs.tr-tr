@@ -1,15 +1,15 @@
 ---
-title: Yetkilendirme ve SQL Server izinleri
+title: SQL Server’da Yetkilendirme ve İzinler
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185867"
 ---
-# <a name="authorization-and-permissions-in-sql-server"></a>Yetkilendirme ve SQL Server izinleri
+# <a name="authorization-and-permissions-in-sql-server"></a>SQL Server’da Yetkilendirme ve İzinler
 Veritabanı nesneleri oluşturma, açıkça kullanıcılar için erişilebilir hale getirmek için izinleri vermeniz gerekir. Tüm güvenli kılınabilir nesne izni deyimleri kullanarak sorumlu için verilen izinleri vardır.  
   
 ## <a name="the-principle-of-least-privilege"></a>En düşük öncelik ilkesini  
@@ -59,6 +59,7 @@ Veritabanı nesneleri oluşturma, açıkça kullanıcılar için erişilebilir h
 |[İzinler](/sql/relational-databases/security/permissions-database-engine)|İzinleri hiyerarşi, Katalog görünümleri ve sabit sunucu ve veritabanı rolleri, izinler açıklayan konuları içerir.|
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [SQL Server’da Kimlik Doğrulaması](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

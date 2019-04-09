@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34a2ca5b505c504115af47402c3d92a05ec0676f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 310915ce84819a2a5a2d5e1f22356b61c16e7ec7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190502"
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE Numaralandırması
 Bir statik alandır ve statik kalite bu durumda, alana uygulanan olup olmadığını gösterir. Bu değerler alan birden çok olduğunu belirtmek için bit düzeyinde OR işlemi kullanılarak birleştirilebilir. farklı bir statik kalitelerini.  
@@ -58,4 +58,5 @@ typedef enum {
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+
+- [Profil Oluşturma Numaralandırmaları](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

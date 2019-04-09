@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: WCF uç noktaları ve ileti uygulamaları ile Exchange ileti'
+title: 'Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-ms.openlocfilehash: f0bfb966026d7588de63bef38eb289bb33a7a688
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7fdcebe7ab9ee82a7283add9e0200af2ea5c94bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198978"
 ---
-# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Nasıl yapılır: WCF uç noktaları ve ileti uygulamaları ile Exchange ileti
+# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme
 MSMQ iletileri gelen WCF iletileri ve dönüştürmek için MSMQ tümleştirme bağlama kullanarak Windows Communication Foundation (WCF) uygulamaları ile Message Queuing (MSMQ) uygulamalara tümleştirebilirsiniz. Bu, yanı sıra WCF istemcileri MSMQ alıcı uygulamalardan çağırmak WCF hizmetleri içine MSMQ gönderen uygulamalarından çağırmaları sağlar.  
   
  Bu bölümde, biz nasıl kullanılacağını açıklayan <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> (1) bir WCF istemcisi System.Messaging ve (2) bir MSMQ uygulama istemcisi ve bir WCF Hizmeti kullanılarak yazılmış bir MSMQ uygulama hizmeti arasındaki kuyruğa alınan iletişim için.  
@@ -34,13 +34,9 @@ MSMQ iletileri gelen WCF iletileri ve dönüştürmek için MSMQ tümleştirme b
      [!code-vb[S_MsmqToWcf#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#2)]  
   
 3.  Belirten yapılandırma dosyası oluşturma <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
-  
-  
-  
+
 4.  Örneği bir <xref:System.ServiceModel.ServiceHost> yapılandırılmış bağlama kullanan nesne.  
-  
-  
-  
+
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>Bir MSMQ alıcı uygulamasına ileti gönderen bir WCF istemcisi oluşturma  
   
 1.  Aşağıdaki örnek kodda gösterildiği gibi kuyruğa alınmış iletileri MSMQ alıcısına gönderir WCF istemcisi için hizmet sözleşmesini tanımlayan bir arabirim tanımlayın.  
@@ -63,9 +59,10 @@ MSMQ iletileri gelen WCF iletileri ve dönüştürmek için MSMQ tümleştirme b
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Nasıl yapılır: WCF uç noktaları ile kuyruğa alınmış iletiler gönderip alır](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Windows Communication Foundation'dan Message Queuing’e](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
-- [Message Queuing (MSMQ) Yükleme](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
-- [Message Queuing’den Windows Communication Foundation'a](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
-- [Message Queuing Üzerinden İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+
+- [Kuyruklar Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Windows Communication Foundation'dan İleti Kuyruğuna](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
+- [İleti Kuyruğa Alma Yükleme (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [Windows Communication Foundation'a İleti Kuyruğa Alma](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
+- [İleti Kuyruğa Alma ile İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

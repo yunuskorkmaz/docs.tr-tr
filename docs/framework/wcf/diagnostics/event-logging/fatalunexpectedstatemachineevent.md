@@ -2,12 +2,12 @@
 title: FatalUnexpectedStateMachineEvent
 ms.date: 03/30/2017
 ms.assetid: 57714066-921f-4ced-90a7-5fdd3dd79552
-ms.openlocfilehash: d2bb12d8adc9a205683a13f247143de53c15bc33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4ca8dccbba135c7749cd4a189862e88aabe4147
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076334"
 ---
 # <a name="fatalunexpectedstatemachineevent"></a>FatalUnexpectedStateMachineEvent
 Kimliği: 137  
@@ -20,5 +20,6 @@ Kimliği: 137
  Bu olay, bir Durum makinesi beklenmeyen bir olay işleme oluşmaya çalıştığını belirtir. Olay önemli kabul. İşlem kimliği, durum makine, geçerli durumu, geçmiş, olay adı, olay ayrıntıları, işlem adı ve işlem kimliği, olay listeler  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+
+- [Etkinlikleri Günlüğe Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

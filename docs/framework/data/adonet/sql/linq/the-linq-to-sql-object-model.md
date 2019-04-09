@@ -1,18 +1,18 @@
 ---
-title: LINQ to SQL nesne modeli
+title: LINQ to SQL Nesne Modeli
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 7a424f289bb4ffba102d1023909b139ac2a70c33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110799"
 ---
-# <a name="the-linq-to-sql-object-model"></a>LINQ to SQL nesne modeli
+# <a name="the-linq-to-sql-object-model"></a>LINQ to SQL Nesne Modeli
 İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], geliştiricinin programlama dilinde ifade nesne modeli, ilişkisel veritabanı ve veri modelini eşlendi. Veriler üzerinde işlemler sonra nesne modeline göre yürütülür.  
   
  Bu senaryoda, veritabanı komutlarını dağıttığınız değil (örneğin, `INSERT`) veritabanı. Bunun yerine, değerleri değiştirin ve, nesne modeli içinde bir yöntem yürütülemez. Değiştirirse, gönderme ve veritabanını sorgulamak istediğiniz zaman [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] isteklerinizi doğru SQL komutlara çevirir ve söz konusu komutları veritabanına gönderir.  
@@ -81,5 +81,6 @@ ms.locfileid: "54503748"
  Daha fazla bilgi için işlev özniteliği ve depolanan yordam öznitelik parametre özniteliği bölümlerine bakın [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) ve [saklı yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Öznitelik Tabanlı Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

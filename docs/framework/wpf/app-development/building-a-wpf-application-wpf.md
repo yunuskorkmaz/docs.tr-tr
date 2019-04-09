@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184489"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları olarak derlenebilir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir (.exe) kütüphaneler (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar ve anahtar derleme işlemindeki adımları açıklar.  
-  
-  
+
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## <a name="building-a-wpf-application"></a>WPF Uygulaması Oluşturma  
  WPF uygulaması aşağıdaki yollarla derlenebilir:  
@@ -167,6 +166,7 @@ End Sub
 -   (Projede olmadıysa) hiçbir şey derlenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Uygulaması Dağıtma](deploying-a-wpf-application-wpf.md)
 - [WPF MSBuild Başvurusu](/visualstudio/msbuild/wpf-msbuild-reference)
 - [WPF İçinde URI'leri Paketleme](pack-uris-in-wpf.md)

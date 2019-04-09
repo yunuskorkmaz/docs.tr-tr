@@ -1,15 +1,15 @@
 ---
-title: Oracle Bfıle
+title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 825cb9eb4bdb54509c8ca3c20db4dade8b3ece73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142395"
 ---
-# <a name="oracle-bfiles"></a>Oracle Bfıle
+# <a name="oracle-bfiles"></a>Oracle BFILE
 Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.OracleClient.OracleBFile> Oracle ile çalışmak için kullanılan sınıfı <xref:System.Data.OracleClient.OracleType.BFile> veri türü.  
   
  Oracle **BDOSYA** veri türü olan Oracle **LOB** boyut sınırı 4 gigabayt ikili verilerle bir başvuru içeren veri türü. Oracle **BDOSYA** diğer Oracle'dan farklı **LOB** veri türlerini içeren, veriler işletim sistemi yerine fiziksel bir dosya sunucusunda depolanır. Unutmayın **BDOSYA** veri türü veri salt okunur erişim sağlar.  
@@ -87,5 +87,6 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

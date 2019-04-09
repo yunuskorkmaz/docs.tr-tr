@@ -1,5 +1,5 @@
 ---
-title: webRequestModules için <add> Öğesi (Ağ Ayarları)
+title: <add> WebRequestModules (ağ ayarları) için
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: ff564571f3f606ac526c5b9efdb904d237348ffe
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4c1116c088c12ad3859714c8d75704d0156c12f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188259"
 ---
 # <a name="add-element-for-webrequestmodules-network-settings"></a>\<Ekle > webRequestModules (ağ ayarları) için
 Uygulamaya özel bir Web isteği modülü ekler.  
@@ -82,5 +82,6 @@ Uygulamaya özel bir Web isteği modülü ekler.
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.WebRequest>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

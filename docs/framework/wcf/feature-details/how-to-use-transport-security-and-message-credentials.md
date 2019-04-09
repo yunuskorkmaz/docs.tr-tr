@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Kullanım taşıma Güveniği ve ileti kimlik bilgileri'
+title: 'Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ea57012f9c09394824b7dbf919930c22fc17bd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186823"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Nasıl yapılır: Kullanım taşıma Güveniği ve ileti kimlik bilgileri
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma
 Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme en iyi şekilde hem aktarım hem de ileti güvenlik modu Windows Communication Foundation (WCF) kullanır. İleti düzeyi güvenlik katı taşıma güvenlik mekanizmaları ile mümkün olmayan kimlik bilgilerini çeşitli sağlarken, toplamda bütünlüğü ve gizliliği, Aktarım Katmanı Güvenliği sağlar. Bu konu, ileti kimlik bilgilerini kullanarak aktarım uygulamak için temel adımları gösterir. <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.NetTcpBinding> bağlar. Güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Güvenlik modunu ayarlama zaman `TransportWithMessageCredential`, aktarım düzeyi güvenlik sağlayan gerçek mekanizması taşıma belirler. HTTP için Güvenli Yuva Katmanı (SSL) HTTP (HTTPS) üzerinden mekanizmadır; TCP için SSL TCP veya Windows üzerinde değil.  
@@ -161,6 +161,7 @@ Hem aktarım hem de ileti kimlik bilgileri ile bir hizmeti güvenli hale getirme
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Güvenlik modunu ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+
+- [Nasıl yapılır: Güvenlik Modunu Ayarlama](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [Hizmetleri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-services.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

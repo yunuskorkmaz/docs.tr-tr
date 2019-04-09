@@ -6,12 +6,12 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: cb78514540f5f44b07b1fdd16283d26c647a3ac4
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 8fff4d62e07bdfd4ecc27d2692c391251afdd6d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190697"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod Yönergesi
 XAML işlemci yedekleme türünü çözdükten sonra nesneyi başlatmak için kullanması gereken bir oluşturucu dışında bir yöntem belirtir.  
@@ -57,4 +57,5 @@ XAML işlemci yedekleme türünü çözdükten sonra nesneyi başlatmak için ku
  `x:FactoryMethod` herhangi bir öğeyi diğer bir özelliği öğelerden önce gelmelidir gibi gelmelidir `x:Arguments` ayrıca öğeleri olarak sağlanan ve herhangi bir içeriği/iç metin/başlatma metin gelmelidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [x:Arguments Yönergesi](x-arguments-directive.md)

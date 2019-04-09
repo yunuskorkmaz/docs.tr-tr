@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Açık şekilleri doldurun'
+title: 'Nasıl yapılır: Açık Şekilleri Doldurma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-ms.openlocfilehash: c7d193fdad554048ecd0f2cca5a83cfccbc2a403
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: addcf959e429974b9306353abb743bb2bb3114e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654087"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174570"
 ---
-# <a name="how-to-fill-open-figures"></a>Nasıl yapılır: Açık şekilleri doldurun
+# <a name="how-to-fill-open-figures"></a>Nasıl yapılır: Açık Şekilleri Doldurma
 Geçirerek bir yol doldurmak için bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesnesini <xref:System.Drawing.Graphics.FillPath%2A> yöntemi. <xref:System.Drawing.Graphics.FillPath%2A> Yöntemi doldurur yolun dolgu mod (diğer veya sargı) göre şu anda yolunu ayarlayın. Yolun herhangi bir açık şekilleri varsa, bu değerleri gibi kapalıyken yolu doldurulur. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bir şekil için başlangıç noktası, bitiş noktasından düz bir çizgi çizerek kapatır.  
   
 ## <a name="example"></a>Örnek  
@@ -32,5 +32,6 @@ Geçirerek bir yol doldurmak için bir <xref:System.Drawing.Drawing2D.GraphicsPa
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
 - [GDI+'da Grafik Yolları](graphics-paths-in-gdi.md)
