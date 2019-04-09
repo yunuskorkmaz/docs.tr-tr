@@ -1,15 +1,15 @@
 ---
-title: ADO.NET veri kümeleri
+title: ADO.NET Veri Kümeleri
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: f9821f07aae8a761a3890e93347f9cf727f8bdd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190944"
 ---
-# <a name="adonet-datasets"></a>ADO.NET veri kümeleri
+# <a name="adonet-datasets"></a>ADO.NET Veri Kümeleri
 <xref:System.Data.DataSet> Dağıtılmış veri senaryoları ile bağlantı kesildi, nesne Destek Merkezi [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. **Veri kümesi** bir veri kaynağını bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan veri bellekte gösterimidir. Birden çok ile kullanılabilir ve farklı veri kaynakları, XML verileriyle veya uygulamaya yerel verileri yönetmek için. **Veri kümesi** ilgili tabloları, kısıtlamalar ve tablolar arasındaki ilişkiler dahil eksiksiz bir kümesini temsil eder. Aşağıdaki çizimde gösterildiği **veri kümesi** nesne modeli.  
   
  ![ADO.Net grafik](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
@@ -46,6 +46,7 @@ Veri kümesi nesne modeli
  Daha fazla bilgi için [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

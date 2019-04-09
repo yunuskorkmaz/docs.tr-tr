@@ -5,12 +5,12 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200374"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>ML.NET ve Machine Learning temel bilgileri nasıl anlıyorum nedir?
 
@@ -24,7 +24,6 @@ ML.NET özel makine öğrenimi çözümleri oluşturmanıza ve bunları .NET uyg
 Makine öğrenimi; bilgisayarların var olan verileri kullanarak gelecekteki davranışları, sonuçları ve eğilimleri öngörmelerini sağlayan bir veri bilimi tekniğidir. Bilgisayarlar, makine öğrenimini kullanarak açıkça programlamaya gerek kalmadan öğrenir.
 
 Makine öğreniminin öngörüleri veya tahminleri, uygulama ve cihazları daha akıllı hale getirir. Çevrimiçi alışveriş yaparken makine öğrenimi, ne, satın aldıklarınızı temel alarak beğenebileceğiniz diğer ürünleri önermede yardımcı olur. Kredi kartınız sahtekarlıkların, makine öğrenimi işlemleri veritabanına işlemi karşılaştırır ve sahtekarlık algılamaya yardımcı olur. Elektrikli süpürge robotunuz bir odayı temizlediğinde, makine öğrenimi, işin tamamlanıp tamamlanmadığına karar vermenize yardımcı olur.
-
 
 ## <a name="short-videos-on-data-science"></a>Veri bilimi kısa videoları 
 

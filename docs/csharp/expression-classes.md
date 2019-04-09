@@ -3,12 +3,12 @@ title: İfade ağaçlarını destekleyen çerçeve türleri
 description: İfade ağaçlarını destekleyen çerçeve türleri ifade ağaçları ve ifade ağacı API'leri ile çalışmaya yönelik teknikleri oluşturma hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198471"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>İfade ağaçlarını destekleyen çerçeve türleri
 
@@ -18,7 +18,7 @@ ms.locfileid: "45972565"
 Tam listesini görebilirsiniz <xref:System.Linq.Expressions>.
 Tam bir listesi çalıştırmak yerine framework sınıfları nasıl tasarladık bakalım.
 
-Dil tasarımında, bir ifade değerlendirir ve bir değer döndüren kod gövdesidir. İfadeleri çok basit: sabit ifade `1` sabit 1 değerini döndürür. Daha karmaşık olabilir: ifade `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` bir dereceden eşitlik (Denklemin bir çözümü sahip olduğu durumda) için bir kök dizinini döndürür.  
+Dil tasarımında, bir ifade değerlendirir ve bir değer döndüren kod gövdesidir. İfadeleri çok basit: sabit ifade `1` sabit 1 değerini döndürür. Bunlar, daha karmaşık olabilir: İfade `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` bir dereceden eşitlik (Denklemin bir çözümü sahip olduğu durumda) için bir kök dizinini döndürür.  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>Tüm System.Linq.Expression ile başlar
 
@@ -65,4 +65,3 @@ Neredeyse tüm C# dilinin söz dizimi öğeleri için eşleme ifadesi düğüm t
 Üç bu alanların her şekilde daha fazla ara bulabilirsiniz. Neredeyse şaşmaz biçimde, bu üç adımı biriyle başlattığınızda gerekenler bulabilirsiniz.
  
  [Sonraki--İfade ağaçlarını yürütme](expression-trees-execution.md)
- 

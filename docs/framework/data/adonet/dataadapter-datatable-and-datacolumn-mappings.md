@@ -1,18 +1,18 @@
 ---
-title: DataAdapter DataTable ve DataColumn eşlemeleri
+title: DataAdapter DataTable ve DataColumn Eşlemeleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 6aaaa126a0b19300abc2c10b88b0e4ff39a3ad66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54af7c2f449f8eb289841fb3eca357c6916404aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201214"
 ---
-# <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable ve DataColumn eşlemeleri
+# <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable ve DataColumn Eşlemeleri
 A **DataAdapter** sıfır veya daha fazla koleksiyonu içeren <xref:System.Data.Common.DataTableMapping> nesneler, **TableMappings** özelliği. A **DataTableMapping** verileri arasındaki ana eşlemeyi döndürülen bir veri kaynağında bir sorgudan sağlar ve bir <xref:System.Data.DataTable>. **DataTableMapping** adı yerine geçirilebilir **DataTable** için ad **dolgu** yöntemi **DataAdapter**. Aşağıdaki örnek, oluşturur bir **DataTableMapping** adlı **AuthorsMapping** için **yazarlar** tablo.  
   
 ```vb  
@@ -98,6 +98,7 @@ adapter.Fill(customersDataSet, "Customers")
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

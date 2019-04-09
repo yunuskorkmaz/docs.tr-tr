@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Dinamik güncelleştirme'
+title: 'Nasıl yapılır: Dinamik Güncelleştirme'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: a021e6b550baf8fb7034a163179e0626bf42cfb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3ae446da5e19b0c4c0c121d44892e4a13ec70dd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190996"
 ---
-# <a name="how-to-dynamic-update"></a>Nasıl yapılır: Dinamik güncelleştirme
+# <a name="how-to-dynamic-update"></a>Nasıl yapılır: Dinamik Güncelleştirme
 Bu konuda, oluşturmak ve dinamik yönlendirme yapılandırmasını güncelleştirmek için gerekli temel adımlar açıklanmaktadır. Bu örnekte, ilk yönlendirme yapılandırması yapılandırma dosyasından alınır ve tüm iletileri regularCalc hesaplayıcı hizmete yönlendirir; Ancak, bu program aracılığıyla roundingCalc service hedef uç noktası değiştirmek üzere güncelleştirilir.  
   
 > [!NOTE]
@@ -297,4 +297,5 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönlendirme Hizmetleri](../../../../docs/framework/wcf/samples/routing-services.md)

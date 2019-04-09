@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Toolstripmenuıtems'a geliştirmeler ekleme"
+title: "Nasıl yapılır: ToolStripMenuItems'e Geliştirmeler Ekleme"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 68a926eba184d12d58e537d8db0a5baefb0fbe95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 458347df7e17aabc1e9e21d66ad1b5a96200fe28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198562"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Nasıl yapılır: Toolstripmenuıtems'a geliştirmeler ekleme
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Nasıl yapılır: ToolStripMenuItems'e Geliştirmeler Ekleme
 Kitaplığın kullanılabilirliğini geliştirebilirsiniz <xref:System.Windows.Forms.MenuStrip> ve <xref:System.Windows.Forms.ContextMenuStrip> aşağıdaki yollarla denetimler:  
   
 -   Cetvel bir kelime işleme uygulaması kenar boşluğu görüntülenip görüntülenmeyeceğini gibi bir özellik üzerinde açık olup olmadığını belirlemek için ya da hangi dosyaların listesini dosyasında itibariyle gösterilen, bu tür belirtmek için onay işaretleri ekleme bir **penceresi** menüsü.  
@@ -114,6 +114,7 @@ Kitaplığın kullanılabilirliğini geliştirebilirsiniz <xref:System.Windows.F
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [MenuStrip Denetimine Genel Bakış](menustrip-control-overview-windows-forms.md)

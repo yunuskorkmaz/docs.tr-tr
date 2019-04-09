@@ -1,5 +1,5 @@
 ---
-title: Proxy yapılandırması
+title: Ara Sunucu Yapılandırma
 ms.date: 06/18/2018
 helpviewer_keywords:
 - Networking
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 30b61a662170b87a557a1a2ea094301ba6401742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608696"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200551"
 ---
-# <a name="proxy-configuration"></a>Proxy yapılandırması
+# <a name="proxy-configuration"></a>Ara Sunucu Yapılandırma
 Bir proxy sunucu kaynakları için istemci isteklerini işler. Bir proxy önbelleğinden istenen kaynak döndürebilen veya kaynağının bulunduğu sunucu isteği iletir. Proxy, uzak sunucuya gönderilen istek sayısını azaltarak ağ performansını iyileştirebilir. Proxy'leri, kaynaklara erişimi kısıtlamak için de kullanılabilir.  
   
 ## <a name="adaptive-proxies"></a>Uyarlamalı proxy'ler  
@@ -76,6 +76,7 @@ Bir proxy sunucu kaynakları için istemci isteklerini işler. Bir proxy önbell
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
 - [Otomatik Ara Sunucu Algılama](../../../docs/framework/network-programming/automatic-proxy-detection.md)

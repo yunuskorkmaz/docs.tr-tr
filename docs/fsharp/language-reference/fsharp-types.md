@@ -2,17 +2,16 @@
 title: F# Türleri
 description: Kullanılan türleri hakkında bilgi edinin F# ve nasıl F# türleri adlı ve açıklanmıştır.
 ms.date: 05/16/2016
-ms.openlocfilehash: bdbb89dc751970ac31fe102df009f0bff6388e52
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33565595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193596"
 ---
 # <a name="f-types"></a>F# Türleri
 
 Bu konuda kullanılan türleri açıklayan F# ve nasıl F# türleri adlı ve açıklanmıştır.
-
 
 ## <a name="summary-of-f-types"></a>Özeti F# türleri
 Bazı türler olarak kabul edilir *ilkel türler*, Boole türü gibi `bool` ve bayt ve karakter türleri dahil çeşitli boyutlardaki integral ve kayan nokta türleri. Bu tür açıklanan [ilkel türler](primitive-types.md).
@@ -27,13 +26,10 @@ Ayrıca, F# kod adlandırıldığı gibi diğer ad tanımlayabilirsiniz *tür k�
 
 F#işlevsel programlama aklınızda tasarlanmış yararlı koleksiyon türleri sağlar. Bu koleksiyon türleri kullanarak stilinde daha işlevsel kod yazmanıza yardımcı olur. Daha fazla bilgi için [ F# koleksiyon türleri](fsharp-collection-types.md).
 
-
 ## <a name="syntax-for-types"></a>Türleri için söz dizimi
 İçinde F# kod, genellikle zorunda türlerinin adlarını yazın. Formu sözdizimsel her türünde ve bu tür ek açıklamaları, soyut yöntem bildirimleri, temsilci bildirimleri, imzalar ve diğer yapıları söz dizimsel formlarında kullanın. Yorumlayıcısı içinde yeni bir program yapısı bildirmek her yorumlayıcı türü için yapısı ve söz dizimi adı yazdırır. Bu sözdizimi yalnızca kullanıcı tanımlı bir tür için bir tanımlayıcı ya da bir yerleşik tanımlayıcı olarak böyle olabilir `int` veya `string`, ancak daha karmaşık türler için söz dizimi daha karmaşıktır.
 
 Aşağıdaki tablo türü sözdizimi yönlerini gösterir F# türleri.
-
-
 
 |Tür|Tür söz dizimi|Örnekler|
 |----|-----------|--------|
@@ -44,17 +40,16 @@ Aşağıdaki tablo türü sözdizimi yönlerini gösterir F# türleri.
 |dizi|*tür adı*[] veya<br /><br />*tür adı* dizi|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |iki boyutlu dizi|*tür adı*[,]|`int[,]`<br /><br />`float[,]`|
 |üç boyutlu dizi|*tür adı*[,]|`float[,,]`|
-|Tanımlama grubu|*tür name1* &#42; *türü name2* ...|Örneğin, `(1,'b',3)` türüne sahip `int * char * int`|
+|tuple|*tür name1* &#42; *türü name2* ...|Örneğin, `(1,'b',3)` türüne sahip `int * char * int`|
 |genel tür|*tür-parametresi* *genel tür adı*<br /><br />veya<br /><br />*genel tür adı*&lt;*tür parametresi listesi*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |oluşturulan türü (sağlanan belirli tür bağımsız değişkeni olan genel bir tür)|*tür bağımsız değişkeni* *genel tür adı*<br /><br />veya<br /><br />*genel tür adı*&lt;*türü bağımsız değişken listesi*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
 |tek bir parametre içeren işlev türü|*parametre type1*  - &gt; *dönüş türü*|Alan bir işlev bir `int` ve döndüren bir `string` türüne sahip `int -> string`|
-|birden çok parametre içeren işlev türü|*parametre type1*  - &gt; *parametresi type2*  - &gt; ... -&gt; *dönüş türü*|Alan bir işlev bir `int` ve `float` ve döndüren bir `string` türüne sahip `int -> float -> string`|
+|birden çok parametre içeren işlev türü|*parameter-type1* -&gt; *parameter-type2* -&gt; ... -&gt; *return-type*|Alan bir işlev bir `int` ve `float` ve döndüren bir `string` türüne sahip `int -> float -> string`|
 |daha yüksek sıralı işlev bir parametre olarak|(*işlev türü*)|`List.map` türüne sahip `('a -> 'b) -> 'a list -> 'b list`|
 |temsilci|Temsilci *işlev türü*|`delegate of unit -> int`|
 |Esnek türü|#*tür adı*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>İlgili Konular
-
 
 |Konu|Açıklama|
 |-----|-----------|
@@ -72,6 +67,6 @@ Aşağıdaki tablo türü sözdizimi yönlerini gösterir F# türleri.
 |[Yapılar](structures.md)|Açıklar `struct` türü, bir .NET değer türüne karşılık gelen bir nesne türü. `struct` Türü genellikle veri küçük bir toplamasını temsil eder.|
 |[Arabirimler](interfaces.md)|Bazı işlevler sağlar, ancak hiçbir veri içeren üyelerin kümesini temsil eden türler arabirim türleri açıklanmaktadır. Bir arabirim türü kullanışlı olması için bir nesne türüne göre uygulanmalıdır.|
 |[Temsilciler](delegates.md)|Bir işlev nesnesi olarak temsil eden bir temsilci türü açıklar.|
-|[Sabit Listeleri](enumerations.md)|Numaralandırma türleri, değerleri bir adlandırılmış değerler kümesine ait açıklar.|
+|[Numaralandırmalar](enumerations.md)|Numaralandırma türleri, değerleri bir adlandırılmış değerler kümesine ait açıklar.|
 |[Öznitelikler](attributes.md)|Başka bir türü için meta verilerini belirtmek için kullanılan öznitelikleri açıklanmaktadır.|
 |[Özel Durum Türleri](exception-handling/exception-types.md)|Hata bilgilerini belirten özel durumlar açıklanmaktadır.|

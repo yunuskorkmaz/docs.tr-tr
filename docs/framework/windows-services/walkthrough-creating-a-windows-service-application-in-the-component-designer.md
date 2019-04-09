@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 7952256d1b225fe22cd189833a046590cdf0a9f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200681"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Öğretici: Bir Windows hizmeti uygulaması oluşturma
 
@@ -58,7 +58,6 @@ Hizmet Yeniden Adlandır **Service1** için **MyNewService**.
     ![Hizmet Özellikleri](media/windows-service-properties.png "Windows hizmet özellikleri")
 
 3. Seçin **Tümünü Kaydet** gelen **dosya** menüsü.
-
 
 ## <a name="add-features-to-the-service"></a>Hizmete özellik ekleme
 
@@ -141,7 +140,6 @@ Basit bir yoklama mekanizması kurmak için kullanın <xref:System.Timers.Timer?
 
 2. Ekleme bir `using` ifadesine **MyNewService.cs**, veya bir `Imports` ifadesine **MyNewService.vb**, için <xref:System.Timers?displayProperty=nameWithType> ad alanı:
 
-
    ```csharp
    using System.Timers;
    ```
@@ -149,7 +147,6 @@ Basit bir yoklama mekanizması kurmak için kullanın <xref:System.Timers.Timer?
    ```vb
    Imports System.Timers
    ```
-
 
 3. İçinde `MyNewService` sınıfı, ekleme `OnTimer` işlemek için gereken yöntemini <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> olay:
 
@@ -200,13 +197,11 @@ Aşağıdaki kodda gösterildiği nasıl geçersiz kılmanıza da olanak <xref:S
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-
 ## <a name="set-service-status"></a>Hizmet durumunu ayarla
 
 Hizmetleri, kendi durumunu rapor [Hizmet Denetimi Yöneticisi](/windows/desktop/Services/service-control-manager) böylece bir kullanıcı bir hizmet doğru şekilde çalışıp çalışmadığını söyleyebilirsiniz. Varsayılan olarak, bir hizmet öğesinden devralan <xref:System.ServiceProcess.ServiceBase> SERVICE_STOPPED SERVICE_PAUSED ve SERVICE_RUNNING durumu ayarları, sınırlı sayıda raporlar. Bir hizmetin başlatılması biraz zaman alır, SERVICE_START_PENDING durumunu raporlamak kullanışlıdır. 
 
 Windows çağıran kod ekleyerek SERVICE_START_PENDING ve SERVICE_STOP_PENDING durum ayarlarını uygulayabilirsiniz [artırılmış](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) işlevi.
-
 
 ### <a name="implement-service-pending-status"></a>Hizmet durumu bekleyen ekleme
 
@@ -493,7 +488,6 @@ Her bir Windows hizmeti altında kayıt defteri girdisini sahip **HKEY_LOCAL_MAC
    ```
 
    Genellikle, bu değer, Windows hizmeti için yürütülebilir dosyanın tam yolunu içerir. Hizmet doğru bir şekilde kullanıcı yolu ve tek tek her parametre için tırnak işaretleri sağlamanız gerekir. Bir kullanıcının parametrelerini değiştirip **ImagePath** Windows hizmeti için başlangıç parametreleri değiştirmek için kayıt defteri girişi. Ancak, değeri program aracılığıyla değiştirme ve işlevi kullanımı kolay bir şekilde gibi bir yönetim veya yapılandırma yardımcı programını kullanarak ortaya çıkarmak için daha iyi bir yolu olan.
-
 
 ## <a name="build-the-service"></a>Derleme hizmeti
 

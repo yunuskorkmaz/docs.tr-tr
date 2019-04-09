@@ -7,12 +7,12 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: 20a25b36857a7116f3599e3fbbbe4b438540f782
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193323"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML'de xml:space İşleme
 `xml:space` Özniteliği olan bir nesne öğesi içinde önemli boşluk işleme davranışını bildiren XML tanımlı öznitelik. Bu öğe içinde bulunan tüm içeriği (iç metni) ilgili, davranıştır burada `xml:space` bildirilmiş ve aynı zamanda kapsamları alt öğeleri için.  
@@ -41,5 +41,6 @@ ms.locfileid: "58037047"
  Boşluk işleme XAML içinde tam bir açıklaması için bkz: [boşluk XAML içinde işleme](whitespace-processing-in-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Boşluk XAML içinde işleme](whitespace-processing-in-xaml.md)
+
+- [XAML'de Boşluk İşleme](whitespace-processing-in-xaml.md)
 - [XAML'ye Genel Bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md)

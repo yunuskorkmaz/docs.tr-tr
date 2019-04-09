@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 21f1f948e0bcd088cbe14316760708e10285124b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195884"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Veri Sözleşmelerinde Numaralandırma Türleri
 Numaralandırmalar veri sözleşme modelindeki ifade edilebilir. Bu konuda bir programlama modeli açıklayan birkaç örneklerle size yol gösterir.  
@@ -97,6 +97,7 @@ Numaralandırmalar veri sözleşme modelindeki ifade edilebilir. Bu konuda bir p
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Veri Sözleşmelerini Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Hizmet Sözleşmelerinde Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

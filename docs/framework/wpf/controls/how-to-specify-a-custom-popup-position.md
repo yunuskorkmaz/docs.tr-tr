@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Özel Açılan Pencerenin Konumunu Belirtin'
+title: 'Nasıl yapılır: Özel Açılan Pencere Konumu Belirtme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: 2ffba3d1a0fee236f803dd5877d541084192418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dc516f0eb1cfcbac6662497eb4019041eefec2a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200590"
 ---
-# <a name="how-to-specify-a-custom-popup-position"></a>Nasıl yapılır: Özel Açılan Pencerenin Konumunu Belirtin
+# <a name="how-to-specify-a-custom-popup-position"></a>Nasıl yapılır: Özel Açılan Pencere Konumu Belirtme
 Bu örnek için özel bir konum belirtmek nasıl gösterir bir <xref:System.Windows.Controls.Primitives.Popup> denetimi <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> özelliği <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  
   
 ## <a name="example"></a>Örnek  
@@ -33,6 +33,7 @@ Bu örnek için özel bir konum belirtmek nasıl gösterir bir <xref:System.Wind
  Tam bir örnek için bkz. [açılan pencere yerleştirme örnek](https://go.microsoft.com/fwlink/?LinkID=160032).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.Primitives.Popup>
-- [Açılan Pencereye Genel Bakış](popup-overview.md)
+- [Açılır Pencereye Genel Bakış](popup-overview.md)
 - [Nasıl Yapılır Konuları](popup-how-to-topics.md)

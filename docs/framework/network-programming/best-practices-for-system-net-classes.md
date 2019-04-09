@@ -1,5 +1,5 @@
 ---
-title: System.Net sınıfları için en iyi uygulamalar
+title: System.Net Sınıfları için En İyi Yöntemler
 ms.date: 03/30/2017
 helpviewer_keywords:
 - sending data, best practices
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 0ed97626d86b380565453191f7840c1d1a180dfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bb3ac545613da68d5f370fefbf94b674b70fe64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689084"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200954"
 ---
-# <a name="best-practices-for-systemnet-classes"></a>System.Net sınıfları için en iyi uygulamalar
+# <a name="best-practices-for-systemnet-classes"></a>System.Net Sınıfları için En İyi Yöntemler
 Aşağıdaki öneriler içinde bulunan sınıfları kullanmanıza yardımcı olacak <xref:System.Net> en iyi kendi lehlerine için:  
   
 -   Aktarım Katmanı Güvenliği (TLS) en iyi yöntemler için bkz: [Aktarım Katmanı Güvenliği (TLS) en iyi yöntemler .NET Framework ile](tls.md).
@@ -33,4 +33,5 @@ Aşağıdaki öneriler içinde bulunan sınıfları kullanmanıza yardımcı ola
 -   Kimlik bilgileri gerektiren siteleri erişirken <xref:System.Net.CredentialCache> bunları her istekle sağlama yerine kimlik bilgileri önbellek oluşturmak için sınıf. **CredentialCache** sınıfı önbellek oluşturma ve sunma URL'sini temel alarak kimlik bilgileri sorumluluğu, yoğun bir istekle sunmak için uygun kimlik bilgilerini bulmak için arama yapar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)

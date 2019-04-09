@@ -1,17 +1,17 @@
 ---
-title: İzleme ve izleme iş akışı
+title: İş Akışı Takip ve İzleme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: d7bbaf8ac68e7078735a2b2a6f08db2e6f3a9216
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: dbc5c0b51024c7b88b8c6cd9a052addd74e6f7e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191035"
 ---
-# <a name="workflow-tracking-and-tracing"></a>İzleme ve izleme iş akışı
+# <a name="workflow-tracking-and-tracing"></a>İş Akışı Takip ve İzleme
 Windows iş akışı izleme bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] özelliği iş akışının yürütülmesini görünürlük sağlayacak şekilde tasarlanmıştır. Bu, bir iş akışı örneği yürütülmesini izlemek için izleme altyapısı sağlar. İzleme WF altyapısının şeffaf bir şekilde yürütme sırasında anahtar olayları yansıtan kayıtları yaymak için bir iş akışı Instruments. Bu işlev varsayılan olarak tüm kullanılabilir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. Herhangi bir değişiklik için yapılması gereken bir [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] gerçekleşmesi izleme iş akışını. Bu, almak istediğiniz izleme veri miktarını karar adımlarından oluşur. Bir iş akışı örneği başlatıldığında veya izleme işleme tamamlandıktan kayıtları yayılan. İzleme, iş akışı değişkenleri ile ilişkili iş ilgili verileri de ayıklayabilirsiniz. İş akışı sistem işleme bir sırayı temsil ediyorsa, örneğin, sipariş kimliği ile birlikte ayıklanabileceği <xref:System.Activities.Tracking.TrackingRecord> nesne. Genel olarak, izleme WF etkinleştirme Tanılama veya İş analizi verilerini bir iş akışı yürütülmesini erişilecek kolaylaştırır.  
   
  Bu bileşenleri izleme izleme hizmetinde eşdeğer [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]. İçinde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]programlama modeli WF izleme özelliği için Basitleştirilmiş ve performansı İyileştirildi. İzleme çalışma zamanı iş akışı yaşam döngüsü, iş akışı etkinlikleri ve özel olaylar ile ilgili olayları yaymak için bir iş akışı örneği kullanır.  
@@ -52,4 +52,5 @@ Windows iş akışı izleme bir [!INCLUDE[netfx_current_long](../../../includes/
  Bir iş akışı hata ayıklama izlemeyi etkinleştirmek için iki şekilde açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL İzleme](./samples/sql-tracking.md)

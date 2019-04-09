@@ -4,12 +4,12 @@ description: En iyi yöntem önerileri paketleme için NuGet ile .NET kitaplıkl
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204619"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198185"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -119,7 +119,6 @@ Sembol dosyaları ekleme dezavantajı, bunlar yaklaşık %30 SDK stili projeleri
 > Sembol paketleri (`*.snupkg`) ana paket boyutu fazla büyümesini olmadan geliştiricilere iyi bir isteğe bağlı hata ayıklama deneyimi sağlar ve geri yükleme için NuGet paketini hata ayıklamak için düşünmüyorsanız bu performansı etkileyen.
 >
 > Uyarı, bunlar bulun ve sembol dosyaları almak için NuGet sembol sunucusu, IDE'de (bir kerelik kurulum) yapılandırmak gerekir ' dir. NuGet.org sembol sunucusu hazır seçeneklerden biri olarak sağlamak Visual Studio 2019 planlamaktadır. 
-
 
 >[!div class="step-by-step"]
 >[Önceki](strong-naming.md)

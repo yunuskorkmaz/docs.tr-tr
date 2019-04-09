@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 1704a7a86e89685763da7bf49a67c1fe8373124a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200993"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları
 Tür dönüştürücülerinde ve İşaretleme uzantılarında Nesne grafiği bileşenleri oluşturmak için XAML türü sistemleri ve XAML yazarları kullanan iki tekniklerdir. Farklı bazı özellikleri paylaşır olsa da, tür dönüştürücüleri ve İşaretleme uzantılarında XAML düğümü akışı temsil edilir. Bu belgede kümesi, tür dönüştürücüleri, biçimlendirme uzantılarını ve benzer yapıları bazen topluca için değer dönüştürücüler adlandırılır.  
@@ -66,8 +66,9 @@ Tür dönüştürücülerinde ve İşaretleme uzantılarında Nesne grafiği bil
  Bir değer dönüştürücü uyguladığınızda, genellikle değer dönüştürücü uygulandığı bir bağlam erişimi gerekir. Bu bağlam, hizmet bağlamı bilinir. Hizmet bağlamı etkin XAML şema içeriği gibi bilgileri ekleyin, XAML şema içeriği ve XAML nesne yazıcısı sağlayan ve benzeri türü eşleme sistemine erişebilir. Bir değer dönüştürücü ve nasıl bir hizmet bağlamı sağlayabilir hizmetlere erişmek için kullanılabilir hizmet bağlamları hakkında daha fazla bilgi için bkz: [tür dönüştürücüleri ve İşaretleme uzantıları için hizmet bağlamı kullanılabilir](service-contexts-available-to-type-converters-and-markup-extensions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [XAML İşaretleme Uzantılarına Genel Bakış](markup-extensions-for-xaml-overview.md)
+- [XAML Biçimlendirme Uzantılarına Genel Bakış](markup-extensions-for-xaml-overview.md)
 - [XAML Tür Dönüştürücülerine Genel Bakış](type-converters-for-xaml-overview.md)
 - [Tür Dönüştürücülerinde ve İşaretleme Uzantılarında Kullanılabilir Hizmet Bağlamları](service-contexts-available-to-type-converters-and-markup-extensions.md)

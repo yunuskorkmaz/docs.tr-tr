@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], MultiBinding
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
-ms.openlocfilehash: 77c832c1460749ced58e7a20af333c5ed9dd1555
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c2ec5ff26c89649294df266e790445e5aa5d08ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200525"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Nasıl yapılır: Bağımlı Öğeler Listesine Göre Değer Üretme
 <xref:System.Windows.Data.MultiBinding> bir bağlama hedefi özelliği kaynak özellikleri listesine bağlayın ve sonra verilen girişleri bir değerle bağlamanıza olanak sağlar. Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Data.MultiBinding>.  
@@ -31,9 +31,10 @@ ms.locfileid: "57368131"
  [!code-csharp[MultiBinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/NameConverter.cs#3)]
  [!code-vb[MultiBinding#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MultiBinding/VisualBasic/NameConverter.vb#3)]  
   
- `NameConverter` uygulayan <xref:System.Windows.Data.IMultiValueConverter> arabirimi. `NameConverter` değerleri tek tek bağlamaları alır ve değerleri nesne dizide saklar. Bir sırayı <xref:System.Windows.Data.Binding> öğeleri görünür altında <xref:System.Windows.Data.MultiBinding> öğedir sırası dizideki değerleri depolanır. Değerini <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> özniteliği parametre bağımsız değişkeni tarafından başvurulan <xref:System.Windows.Data.MultiBinding.Converter%2A> parametrenin adını biçimlendirmek nasıl belirlemek için bir anahtar gerçekleştiren yöntemi.  
+ `NameConverter` Implements <xref:System.Windows.Data.IMultiValueConverter> arabirimi. `NameConverter` değerleri tek tek bağlamaları alır ve değerleri nesne dizide saklar. Bir sırayı <xref:System.Windows.Data.Binding> öğeleri görünür altında <xref:System.Windows.Data.MultiBinding> öğedir sırası dizideki değerleri depolanır. Değerini <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> özniteliği parametre bağımsız değişkeni tarafından başvurulan <xref:System.Windows.Data.MultiBinding.Converter%2A> parametrenin adını biçimlendirmek nasıl belirlemek için bir anahtar gerçekleştiren yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağımlı Veri Dönüştürme](how-to-convert-bound-data.md)
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

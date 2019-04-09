@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme"
+title: "İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], walkthroughs
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: fdb92a1ec9aa349c8768b5dc4ddf3d403297cf7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4ab2ca5530c87775e28951de8c1c3ebd056291dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195689"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme
 Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içeriği boyutu değiştikçe uygun şekilde düzenler bir düzene sahip bir form gerektirir. Ne zaman dinamik bir düzen gerekir ve işlemek istemediğiniz <xref:System.Windows.Forms.Control.Layout> açıkça kodunuzda olayları, Düzen panelini kullanma göz önünde bulundurun.  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> Denetimi ve <xref:System.Windows.Forms.TableLayoutPanel> denetimi, form üzerinde denetimleri düzenlemek için sezgisel yolu sağlayın. Her ikisini birden içerdiği alt denetimler göreli konumlarını denetlemek için otomatik, yapılandırılabilir bir yeteneği sağlar ve yeniden boyutlandırma ve alt denetimler üst formun boyutları yeniden konumlandırmak için hem de çalışma zamanında dinamik düzen özelliklerini size değiştirin. Düzen bölmeleri, gelişmiş kullanıcı arabirimleri gerçekleştirme etkinleştirmek için Düzen panelleri içinde yuvalanabilir.  
@@ -188,12 +188,13 @@ Bazı uygulamalar, kendisini formu yeniden boyutlandırıldığından veya içer
 -   Ayarlama <xref:System.Windows.Forms.Control.Visible%2A> özelliği denetimlere birinin `false` ve Not nasıl <xref:System.Windows.Forms.FlowLayoutPanel> yanıt olarak yeniden akış.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [İzlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Microsoft Windows kullanıcı deneyimi, kullanıcı arabirimi geliştiricileri ve tasarımcıları için resmi yönergeleri. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
 - [AutoSize Özelliğine Genel Bakış](autosize-property-overview.md)
-- [Nasıl yapılır: Windows Forms'da denetimleri yerleştirme](how-to-dock-controls-on-windows-forms.md)
-- [Nasıl yapılır: Windows Forms'da denetimleri](how-to-anchor-controls-on-windows-forms.md)
-- [İzlenecek yol: Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile düzenleme](windows-forms-controls-padding-autosize.md)
+- [Nasıl yapılır: Windows Forms'a Denetimler Yerleştirme](how-to-dock-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows Forms’da Denetimleri Bağlama](how-to-anchor-controls-on-windows-forms.md)
+- [İzlenecek yol: Doldurma, Kenar Boşlukları ve AutoSize Özelliği ile Windows Forms Denetimlerini Düzenleme](windows-forms-controls-padding-autosize.md)

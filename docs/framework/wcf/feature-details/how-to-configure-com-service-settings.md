@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: COM + hizmet ayarlarını yapılandırma'
+title: 'Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 8deb7be51cdf3273a57d6777b103123636a2d2f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd5625fd3f2c0cc2e1e2a261b091a029cd4226ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195845"
 ---
-# <a name="how-to-configure-com-service-settings"></a>Nasıl yapılır: COM + hizmet ayarlarını yapılandırma
+# <a name="how-to-configure-com-service-settings"></a>Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma
 Bir uygulama arabirimi eklendi veya kaldırıldı COM + hizmet yapılandırması aracını kullanarak, Web hizmeti yapılandırması uygulamanın yapılandırma dosyası içinde güncelleştirilir. COM + barındırılan modunda Application.config dosya uygulamanın kök dizinine yerleştirilir (%PROGRAMFILES%\ComPlus uygulamaları\\{AppID} varsayılan değerdir). Ya da Web barındırılan modları, Web.config dosyasının vroot belirtilen dizine yerleştirilir.  
   
 > [!NOTE]
@@ -97,4 +97,5 @@ public interface IFinancesContract : IDisposable
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [COM+ Uygulamaları ile Tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+
+- [COM Uygulamaları ile Tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

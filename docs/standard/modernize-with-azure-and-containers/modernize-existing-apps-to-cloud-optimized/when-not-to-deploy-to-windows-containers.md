@@ -1,17 +1,17 @@
 ---
-title: Windows kapsayıcıları için dağıtma zamanı
+title: Windows Kapsayıcıları ne zaman dağıtılmaz?
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Windows kapsayıcıları için dağıtma zamanı
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 940e94b45dcfb4e301b095cbe4ef5bcaf6752c4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 75db31a8f4599e9681c2c4156d93db5416d2ca96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200746"
 ---
-# <a name="when-not-to-deploy-to-windows-containers"></a>Windows kapsayıcıları için dağıtma zamanı
+# <a name="when-not-to-deploy-to-windows-containers"></a>Windows Kapsayıcıları ne zaman dağıtılmaz?
 
 Bazı Windows teknolojileri ile Windows kapsayıcıları desteklenmez. Bu gibi durumlarda, yine de genellikle yalnızca Windows ve IIS ile standartları vm'lerine geçirmek gerekir.
 
@@ -34,7 +34,6 @@ Bazı Windows teknolojileri ile Windows kapsayıcıları desteklenmez. Bu gibi d
 -   Kullanıcı Arabirimi uygulama (istemci uygulamalar bir görsel kullanıcı arabirimiyle) desteklenen bir senaryo değildir.
 
 -   Windows altyapısı rollerinin (DNS, DHCP, DC, NTP, yazdırma, dosya sunucusu, IAM vb.) desteklenen bir senaryo değildir.
-
 
 Ek desteklenmeyen senaryolar ve topluluktan gelen istekleri için UserVoice forumumuzu Windows kapsayıcıları için bkz: <https://windowsserver.uservoice.com/forums/304624-containers>.
 

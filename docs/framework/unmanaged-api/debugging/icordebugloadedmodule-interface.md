@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 34be6369-2e75-4a95-a538-3b29ac97cf6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8f3a881a1beceb7d4aa35e2bd9a5e9e5419a391
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e91dda9cbc5957768e98db2b2a9e1026d94c03e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200759"
 ---
 # <a name="icordebugloadedmodule-interface"></a>ICorDebugLoadedModule Arabirimi
 Yüklenen bir modülün hakkında bilgi sağlar.  
@@ -38,5 +38,6 @@ Yüklenen bir modülün hakkında bilgi sağlar.
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
