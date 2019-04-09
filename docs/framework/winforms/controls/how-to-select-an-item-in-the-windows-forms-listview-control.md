@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ListView denetiminde bir öğe seçin'
+title: 'Nasıl yapılır: Windows Forms ListView Denetiminde Öğe Seçme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - selection [Windows Forms], in list views
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
-ms.openlocfilehash: 09ec0b60e5d591f4cc66cf5ed454576203afa473
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b3cfcc6c2873dfb0eb95cf7950adc6b2bb73e74c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143188"
 ---
-# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Nasıl yapılır: Windows Forms ListView denetiminde bir öğe seçin
+# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Nasıl yapılır: Windows Forms ListView Denetiminde Öğe Seçme
 Bu örnek program aracılığıyla bir Windows Formları öğeyi seçmek nasıl gösterir <xref:System.Windows.Forms.ListView> denetimi. Program aracılığıyla bir öğe seçtiğinizde otomatik olarak değişmez odağı <xref:System.Windows.Forms.ListView> denetimi. Bu nedenle, genellikle de öğesi bir öğeyi seçerken odaklı olarak ayarlamak istersiniz.  
   
 ## <a name="example"></a>Örnek  
@@ -32,5 +32,6 @@ Bu örnek program aracılığıyla bir Windows Formları öğeyi seçmek nasıl 
 -   Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanları.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>

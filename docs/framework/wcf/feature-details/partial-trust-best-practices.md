@@ -2,12 +2,12 @@
 title: Kısmi Güven En İyi Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184086"
 ---
 # <a name="partial-trust-best-practices"></a>Kısmi Güven En İyi Uygulamaları
 Bu konu, Windows Communication Foundation (WCF) bir kısmi güven ortamında çalışırken en iyi uygulamaları açıklar.  
@@ -66,5 +66,6 @@ Bu konu, Windows Communication Foundation (WCF) bir kısmi güven ortamında ça
  En iyi uygulama, iş parçacığına özgü izni bağlam çağırarak oluşturmamaya özen gösterin <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A>, veya <xref:System.Security.PermissionSet.Deny%2A>. Bunun yerine, vermek ya da uygulamanın kendisini ayrıcalık reddetmek için hiçbir <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.Deny%2A>, veya <xref:System.Security.PermissionSet.PermitOnly%2A> gereklidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>

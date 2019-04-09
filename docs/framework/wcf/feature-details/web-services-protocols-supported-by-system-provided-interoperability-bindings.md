@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 0aa75fe4812553ecbf00542da37f232aca32c1a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caf9a66e8c42fb80955539aa9d3eb32179309004
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157462"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
 Windows Communication Foundation (WCF) Web hizmetleri belirtimleri bilinen özellikleri kümesi destekleyen Web Hizmetleri ile çalışmak için yerleşik olarak bulunur. Birlikte çalışabilirlik en iyi uygulamalar için hizmet yapılandırması basitleştirmek için birlikte üç sistem tarafından sağlanan bağlamalar WCF sunar: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, ve <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. İlerletme, yapılandırılmış bilgi standartları (OASIS) standartları için kuruluş birlikte çalışabilirlik için birlikte çalışabilen bir sistem tarafından sağlanan bağlama WCF içerir: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Meta veri yayımlama için WCF iki birlikte çalışabilen sistem tarafından sağlanan bağlamalar içerir: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) ve [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Bu konu, sistem tarafından sağlanan birlikte çalışabilen bağlama desteği özellikleri listeler.  
@@ -109,6 +109,7 @@ Windows Communication Foundation (WCF) Web hizmetleri belirtimleri bilinen özel
 |Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF XML Şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
 - [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

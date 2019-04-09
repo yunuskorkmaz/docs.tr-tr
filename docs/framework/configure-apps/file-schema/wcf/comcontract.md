@@ -2,12 +2,12 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 63383fbd711f3725748e85fcf12e06b185bf30d1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8694f83a731363f83cb09de43214eb4b211ef5ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145073"
 ---
 # <a name="comcontract"></a>\<comContract >
 Bir COM + tümleştirme hizmet sözleşmesi belirler.  
@@ -89,9 +89,10 @@ Bir COM + tümleştirme hizmet sözleşmesi belirler.
  Hizmet başlatıldığında sözleşmesi adları ve belirtilen ad alanları için oluşturulan hizmet açıklamaları uygulanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [COM+ Uygulamaları ile Tümleştirme](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
+- [COM Uygulamaları ile Tümleştirme](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -3,12 +3,12 @@ title: Talep Kullanan İlk ASP.NET Web Uygulamamı Derleme
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: b6be3d84a292e5f14e1cdc70a181e8fd2c065a68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151378"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>Talep Kullanan İlk ASP.NET Web Uygulamamı Derleme
 ## <a name="applies-to"></a>Uygulanan Öğe  
@@ -41,11 +41,12 @@ ms.locfileid: "58838137"
   
  WIF kullanarak ilk talep kullanan ASP.NET uygulamanızı oluşturmak için aşağıdakilerden birinde yer alan yönergeleri uygulayın:  
   
--   [Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET MVC Web uygulaması derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET MVC Web Uygulaması Derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET Web Forms uygulaması derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET Web Forms Uygulaması Derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Nasıl yapılır: Form tabanlı kimlik doğrulaması kullanarak talep kullanan ASP.NET uygulaması derleme](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [Nasıl yapılır: Forms Tabanlı Kimlik Doğrulaması Kullanarak Talep Kullanan ASP.NET Uygulaması Derleme](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WIF Kullanmaya Başlama](../../../docs/framework/security/getting-started-with-wif.md)

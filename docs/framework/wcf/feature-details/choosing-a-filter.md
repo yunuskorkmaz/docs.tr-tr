@@ -2,12 +2,12 @@
 title: Filtre Seçme
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: f634363a3f8b69b38fd4d313c42de4d742d94acc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174037"
 ---
 # <a name="choosing-a-filter"></a>Filtre Seçme
 Yönlendirme hizmeti yapılandırırken, doğru ileti filtreleri seçin ve bunları tam eşleşme aldığınız mesajlarına karşı yapmanıza izin verecek şekilde yapılandırmak önemlidir. Seçtiğiniz filtreler kendi eşleşmelerin aşırı geniş kapsamlı veya yanlış yapılandırılırsa, iletiler yanlış yönlendirilir. Filtreleri çok fazla kısıtlayıcıysa, kullanılabilir tüm geçerli rotalar iletilerinizi bazıları için sahip olmayabilir.  
@@ -136,5 +136,6 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
  XPath sorguları tasarlama hakkında daha fazla bilgi için bkz. [XPath sözdizimi](https://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İleti Filtreleri](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [Nasıl yapılır: Filtreleri kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [Nasıl yapılır: Filtreleri Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

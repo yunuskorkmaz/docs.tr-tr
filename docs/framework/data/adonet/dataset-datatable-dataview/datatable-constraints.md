@@ -1,18 +1,18 @@
 ---
-title: DataTable kısıtlamaları
+title: DataTable Kısıtlamaları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: d0b3bd649da301c563a19450d7d9b42e9d0b29e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165184"
 ---
-# <a name="datatable-constraints"></a>DataTable kısıtlamaları
+# <a name="datatable-constraints"></a>DataTable Kısıtlamaları
 Kısıtlamaları verileri kısıtlamalarını uygulamak için kullanabileceğiniz bir <xref:System.Data.DataTable>, veri bütünlüğünü korumak için. Bir sınırlamadır uygulanan otomatik bir kural, bir sütun veya ilgili sütunlar için belirleyen kursu eyleminin bir satırın değerini şekilde değiştirildiğinde. Kısıtlamaları zorunlu olduğunda `System.Data.DataSet.EnforceConstraints` özelliği <xref:System.Data.DataSet> olduğu **true**. Nasıl ayarlanacağı gösteren kod örneği için `EnforceConstraints` özelliği bkz <xref:System.Data.DataSet.EnforceConstraints%2A> başvuru konusu.  
   
  ADO.NET'te kısıtlamaları iki tür vardır: <xref:System.Data.ForeignKeyConstraint> ve <xref:System.Data.UniqueConstraint>. Ekleyerek en az iki tablo arasında bir ilişki oluşturduğunuzda varsayılan olarak, her iki kısıtlamalar otomatik olarak oluşturulan bir <xref:System.Data.DataRelation> için **veri kümesi**. Ancak, bu davranışı belirtilerek devre dışı bırakabilirsiniz **createConstraints** = **false** ilişki oluştururken.  
@@ -61,7 +61,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 |Kural ayarı|Açıklama|  
 |------------------|-----------------|  
 |**Basamakla**|Veya alt satırlara değişiklikler reddedebilirsiniz.|  
-|**Yok.**|Alt satırlar üzerinde eylem yok. Bu varsayılandır.|  
+|**None**|Alt satırlar üzerinde eylem yok. Bu varsayılandır.|  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnek, oluşturur bir <xref:System.Data.ForeignKeyConstraint>, birkaç dahil olmak üzere özellikleri ayarlar <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>ve bu gruba ekler <xref:System.Data.ConstraintCollection> , bir <xref:System.Data.DataTable> nesne.  
@@ -93,6 +93,7 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.DataRelation>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.ForeignKeyConstraint>

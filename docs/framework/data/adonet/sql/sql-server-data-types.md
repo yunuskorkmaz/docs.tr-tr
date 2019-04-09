@@ -1,15 +1,15 @@
 ---
-title: SQL Server veri türleri ve ADO.NET
+title: SQL Server Veri Türleri ve ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 14a3c8b2f520efce96667b2028405ca36ed17a28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 90589f54728ad5e887b96f37f96ff31928c680ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168421"
 ---
-# <a name="sql-server-data-types-and-adonet"></a>SQL Server veri türleri ve ADO.NET
+# <a name="sql-server-data-types-and-adonet"></a>SQL Server Veri Türleri ve ADO.NET
 SQL Server ve .NET Framework, olası veri kaybına neden farklı tür sistemlerde temel alır. SQL Server için .NET Framework veri sağlayıcısı veri bütünlüğünü korumak için (<xref:System.Data.SqlClient>) SQL Server verilerle çalışmak için belirlenmiş erişimci yöntemlerini sağlar. Numaralandırmalara kullanabileceğiniz <xref:System.Data.SqlDbType> belirtmek için sınıflar <xref:System.Data.SqlClient.SqlParameter> veri türleri.  
   
  Daha fazla bilgi ve SQL Server ve .NET Framework veri türleri arasında veri türü eşlemeleri açıklayan bir tablo için bkz: [SQL Server veri türü eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
@@ -18,7 +18,7 @@ SQL Server ve .NET Framework, olası veri kaybına neden farklı tür sistemlerd
   
  Uygulamanızda kullanmak için mevcut SQL Server veri türleri, kullanmakta olduğunuz SQL Server'ın sürümüne bağlıdır. SQL Server Books Online'nın ilgili sürümü aşağıdaki tabloda daha fazla bilgi için bkz.  
   
- **SQL Server Çevrimiçi Kitapları**  
+ **SQL Server Çevrimiçi Kitaplar**  
   
 1.  [Veri türleri (veritabanı altyapısı)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
@@ -55,6 +55,7 @@ SQL Server ve .NET Framework, olası veri kaybına neden farklı tür sistemlerd
  Açıklar `DbType` numaralandırma ve tüm üyeleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Tablo Değerli Parametreler](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)

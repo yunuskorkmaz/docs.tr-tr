@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: 50097ef86fb6bc5341d7ea16ccee441b89823401
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160985"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi
 Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hem teknolojiler uygun klavye giriş işleme sahip olmasını gerektirir. Bu konuda, bu teknolojiler, klavye ve karma uygulamalarda kesintisiz birlikte çalışabilirliği etkinleştirmek için işlenen ileti nasıl uygulamak açıklanmaktadır.  
@@ -129,10 +129,11 @@ Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../..
  İletileri yalnızca gönderildiği <xref:System.Windows.Forms.Integration.ElementHost> etkin formdaki denetimleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [İzlenecek yol: WPF'de Windows Forms bileşik denetimini barındırma](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [İzlenecek yol: WPF bileşik denetimini Windows Forms içinde barındırma](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [İzlenecek yol: WPF Bileşik Denetimini Windows Forms İçinde Barındırma](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [WPF ve Win32 Birlikte Çalışması](wpf-and-win32-interoperation.md)

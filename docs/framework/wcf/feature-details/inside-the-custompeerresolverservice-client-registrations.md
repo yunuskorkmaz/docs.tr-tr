@@ -1,15 +1,15 @@
 ---
-title: 'CustomPeerResolverService içinde: İstemci kayıtları'
+title: 'CustomPeerResolverService İçinde: İstemci Kayıtları'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 90d40eb11dbfebf4a19ba4c42e0fd4b45a2b1e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095795"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService içinde: İstemci kayıtları
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService İçinde: İstemci Kayıtları
 Uç nokta bilgilerini ağı içindeki her bir düğümün çözümleyicisini yayımlar `Register` işlevi. Çözümleyicisini bu bilgileri bir kayıt depolar. Bu kayıt, benzersiz tanımlayıcı (RegistrationId) ve düğüm (PeerNodeAddress) uç noktası bilgilerini içerir.  
   
 ## <a name="stale-records-and-expiration-time"></a>Eskimiş kayıtları ve süre sonu  
@@ -34,4 +34,5 @@ Uç nokta bilgilerini ağı içindeki her bir düğümün çözümleyicisini yay
  Bir düğüm ile çözümleyicisini kaydettiğinde, aldığı bir <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> hizmetinden nesne. Bu nesneye sahip bir `RegistrationLifetime` düğüme ne kadar zaman önce kayıt sahip süresi dolar ve çözümleyici hizmet tarafından kaldırılır gösteren özellik. Eğer, örneğin, `RegistrationLifetime` 2 dakika, düğüm çağırmayı gerektiren `Refresh` kaydı yeni kalır ve silinmediğinden emin olmak için altında 2 dakika içinde. Çözümleyicisini aldığında bir `Refresh` istek, kaydı arar ve sona erme zamanını sıfırlar. Yenileme döndürür bir <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> nesnesi ile bir `RegistrationLifetime` özelliği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Eş Çözücüler](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

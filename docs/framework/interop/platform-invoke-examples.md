@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 612cd108e37d6f072bafed919c14532498352e4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37a864083fa7cfbea16614a94454571f31deed3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136714"
 ---
 # <a name="platform-invoke-examples"></a>Platform Çağırma Örnekleri
 Aşağıdaki örnekler çağırmak nasıl gösterir **MessageBox** User32.dll, basit bir dize bağımsız değişken geçirme işlevi. Örneklerde, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> ayarlanmış **otomatik** karakter genişliği belirlemek ve dize sıralama hedef platform izin vermek için.  
@@ -32,6 +32,7 @@ Aşağıdaki örnekler çağırmak nasıl gösterir **MessageBox** User32.dll, b
  Diğer örnekler için [Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [Karakter Kümesi Belirtme](../../../docs/framework/interop/specifying-a-character-set.md)

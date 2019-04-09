@@ -6,12 +6,12 @@ helpviewer_keywords:
 - image sources [WPF], drawings
 - drawings [WPF], as image sources
 ms.assetid: dcf71c7b-9e86-4b8e-8e39-0d0ce0389ef4
-ms.openlocfilehash: 07659463a3fec9b962f7b4bb255ed065d544d954
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d4b91a6495e1c54400d5fbfe43b6311d908565a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351742"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097866"
 ---
 # <a name="how-to-use-a-drawing-as-an-image-source"></a>Nasıl yapılır: Çizimi Görüntü Kaynağı Olarak Kullanma
 Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Media.Drawing> olarak <xref:System.Windows.Controls.Image.Source%2A> için bir <xref:System.Windows.Controls.Image> denetimi. Görüntülenecek bir <xref:System.Windows.Media.Drawing> ile bir <xref:System.Windows.Controls.Image> denetlemek, kullanmak bir <xref:System.Windows.Media.DrawingImage> olarak <xref:System.Windows.Controls.Image> denetimin <xref:System.Windows.Controls.Image.Source%2A> ve <xref:System.Windows.Media.DrawingImage> nesnenin <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> görüntülemek istediğiniz çizim özelliğini.  
@@ -26,6 +26,7 @@ DrawingImage
  [!code-xaml[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingImageExample.xaml#drawingimageexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Freezable.Freeze%2A>
 - [ImageDrawing Kullanarak Görüntü Çizme](how-to-draw-an-image-using-imagedrawing.md)
 - [Çizim Nesnelerine Genel Bakış](drawing-objects-overview.md)

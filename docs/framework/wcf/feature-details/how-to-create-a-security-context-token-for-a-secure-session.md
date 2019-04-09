@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Oluşturma bir güvenlik bağlamı belirteci güvenli bir oturum için'
+title: 'Nasıl yapılır: Güvenli Bir Oturum için Güvenlik Bağlamı Belirteci Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 3d37d3894f7e6a1146cc4f04f53512ef06911ac7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189349"
 ---
-# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Nasıl yapılır: Oluşturma bir güvenlik bağlamı belirteci güvenli bir oturum için
+# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Nasıl yapılır: Güvenli Bir Oturum için Güvenlik Bağlamı Belirteci Oluşturma
 Güvenli bir oturumda bir durum bilgisi olan güvenlik bağlamı belirteci (SCT) kullanarak oturum dönüştürüldüğü hizmet dayanabilir. Örneği için bir durum bilgisi olmayan SCT güvenli bir oturumda kullanılır ve Internet Information Services (IIS) sıfırlama, ardından hizmeti ile ilişkili oturum veriler kaybolur. Bu oturum verileri SCT belirteç önbelleği içerir. SCT ile ilişkili anahtarı alınamıyor çünkü bu nedenle, sonraki açışınızda bir istemci hizmeti bir durum bilgisi olmayan SCT gönderir. hata, döndürülür. Ancak, bir durum bilgisi olan SCT kullanılıyorsa, SCT ile ilişkili anahtar SCT içinde yer alır. Anahtar SCT içinde yer alan ve bu nedenle ileti içinde yer alan olduğundan, güvenli oturum dönüştürüldüğü hizmeti tarafından etkilenmez. Varsayılan olarak, Windows Communication Foundation (WCF), durum bilgisiz SCTs güvenli bir oturumda kullanır. Bu konu, güvenli bir oturumda durum bilgisi olan SCTs kullanma işlemi açıklanmaktadır.  
   
 > [!NOTE]
@@ -110,4 +110,5 @@ Güvenli bir oturumda bir durum bilgisi olan güvenlik bağlamı belirteci (SCT)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

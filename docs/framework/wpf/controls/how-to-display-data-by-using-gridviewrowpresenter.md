@@ -5,12 +5,12 @@ helpviewer_keywords:
 - displaying data with GridViewRowPresenter [WPF]
 - GridViewRowPresenter [WPF]
 ms.assetid: bdb785a5-a262-44d5-a517-ea14383e5f70
-ms.openlocfilehash: f05e1bd67d37d21a010562c7be5db5ca594f36db
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0e471df3ab6fd10417fc58ece4cdb8ff1c457c95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149155"
 ---
 # <a name="how-to-display-data-by-using-gridviewrowpresenter"></a>Nasıl yapılır: GridViewRowPresenter Kullanarak Veri Görüntüleme
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.GridViewRowPresenter> ve <xref:System.Windows.Controls.GridViewHeaderRowPresenter> sütunlardaki verileri görüntülemek için nesne.  
@@ -21,7 +21,8 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.Gri
  [!code-xaml[GridViewRowPresenterSample#GridViewRowPresenter](~/samples/snippets/csharp/VS_Snippets_Wpf/GridViewRowPresenterSample/CS/Window1.xaml#gridviewrowpresenter)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewColumnCollection>
-- [GridView Genel Bakış](gridview-overview.md)
+- [GridView Genel Bakışı](gridview-overview.md)

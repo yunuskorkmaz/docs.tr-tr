@@ -1,18 +1,18 @@
 ---
-title: Satır durumları ve satır sürümleri
+title: Satır Durumları ve Satır Sürümleri
 ms.date: 07/19/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 38166addf95679083932a4369d19b75421a64665
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559586"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092909"
 ---
-# <a name="row-states-and-row-versions"></a>Satır durumları ve satır sürümleri
+# <a name="row-states-and-row-versions"></a>Satır Durumları ve Satır Sürümleri
 ADO.NET, tablolardaki satır durumları ve sürümlerini kullanarak satır yönetir. Bir satır durumu, bir satır durumunu gösterir; Satır sürümleri, geçerli ve özgün varsayılan değerleri dahil olmak üzere değişiklik gibi bir satır depolanan değerleri korur. Örneğin, bir satırda bir sütun için bir değişiklik yaptıktan sonra satır satır durumunu olur `Modified`, ve iki satır sürümleri: `Current`, geçerli satır değerleri içeren ve `Original`, sütun öncesinde satır değerleri içerir değiştirilmiş.  
   
  Her <xref:System.Data.DataRow> nesnesinin bir <xref:System.Data.DataRow.RowState%2A> satırın geçerli durumunu belirlemek için inceleyebilirsiniz özelliği. Aşağıdaki tabloda her kısa bir açıklaması verilmektedir `RowState` numaralandırma değeri.  
@@ -95,6 +95,7 @@ foreach (DataRow delRow in delRows)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [DataAdapters ve DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)

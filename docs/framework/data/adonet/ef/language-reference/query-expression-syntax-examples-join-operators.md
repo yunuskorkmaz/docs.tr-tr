@@ -1,18 +1,18 @@
 ---
-title: 'Sorgu ifadesi söz dizimi örnekleri: Birleşim işleçleri'
+title: 'Sorgu İfadesi Söz Dizimi Örnekleri: Birleşim İşleçleri'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 343e8dda-70b2-409d-9334-ce9a880c3cea
-ms.openlocfilehash: 3384eb98c8e58563f879b55054077ef801c0ebc7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: da583ed207a8c4fc9e061d517895ca0f2fea2f5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168824"
 ---
-# <a name="query-expression-syntax-examples-join-operators"></a>Sorgu ifadesi söz dizimi örnekleri: Birleşim işleçleri
+# <a name="query-expression-syntax-examples-join-operators"></a>Sorgu İfadesi Söz Dizimi Örnekleri: Birleşim İşleçleri
 Birleştirme, birbiriyle gezilebilir hiçbir ilişki ilişkisel veritabanı tabloları gibi veri kaynakları hedef sorgularda önemli bir işlemdir. İki veri kaynaklarının bir birleştirme nesnelerin bir veri kaynağı ile bir veri kaynağındaki ortak bir özniteliği paylaşan nesnelerin ilişkidir. Daha fazla bilgi için [standart sorgu işleçlerine genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
  Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.GroupJoin%2A> ve <xref:System.Linq.Enumerable.Join%2A> sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://archive.codeplex.com/?p=msftdbprodsamples) sorgu ifadesi söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
@@ -45,4 +45,5 @@ Birleştirme, birbiriyle gezilebilir hiçbir ilişki ilişkisel veritabanı tabl
  [!code-vb[DP L2E Examples#Join](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#join)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

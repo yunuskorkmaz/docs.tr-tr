@@ -1,18 +1,18 @@
 ---
-title: Kesin türü belirtilmiş DataSets oluşturma
+title: Kesin Türü Belirtilmiş DataSets Oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: d0a22a4ec4ed508a06e385d954a8ed5b9e9ff6a9
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 25883b7be10c68e527e4e04182b7162574b994d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149636"
 ---
-# <a name="generating-strongly-typed-datasets"></a>Kesin türü belirtilmiş DataSets oluşturma
+# <a name="generating-strongly-typed-datasets"></a>Kesin Türü Belirtilmiş DataSets Oluşturma
 XML şemasından XML şeması tanım dili ile (XSD) standart uyumlu göz önünde bulundurulduğunda, türü kesin belirlenmiş oluşturabileceğiniz <xref:System.Data.DataSet> ile sağlanan XSD.exe'nin aracını kullanarak [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].  
   
  (Bir xsd veritabanı tabloları oluşturmak için bkz <xref:System.Data.DataSet.WriteXmlSchema%2A> veya [Visual Studio'da veri kümeleriyle çalışma](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
@@ -95,6 +95,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
 - [Türü Belirtilmiş DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)

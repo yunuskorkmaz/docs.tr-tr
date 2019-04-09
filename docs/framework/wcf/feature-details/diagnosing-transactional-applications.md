@@ -2,12 +2,12 @@
 title: İşlemsel Uygulamaları Tanılama
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: f4cc42e7ac6847d8320b96fce5198d55df303de2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101718"
 ---
 # <a name="diagnosing-transactional-applications"></a>İşlemsel Uygulamaları Tanılama
 Bu konuda, bir işlem uygulama sorunlarını gidermek için Windows Communication Foundation (WCF) yönetim ve Tanılama özelliğini kullanmayı açıklar.  
@@ -95,7 +95,7 @@ Bu konuda, bir işlem uygulama sorunlarını gidermek için Windows Communicatio
   
      WS-AtomicTransaction izlemeyi kullanarak etkinleştirilebilir [WS-AtomicTransaction yapılandırma yardımcı programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Bu izleme, işlemler ve katılımcıları içinde bir sistem durumu hakkında Öngörüler sağlar. Ayrıca iç hizmet modeli izlemeyi etkinleştirmek için ayarlayabileceğiniz `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` kayıt defteri anahtarı geçerli değerini <xref:System.Diagnostics.SourceLevels> sabit listesi. İleti günlüğe kaydetme diğer WCF uygulamaları aynı şekilde etkinleştirebilirsiniz.  
   
--   `System.Transactions` İzleme  
+-   `System.Transactions` izleme  
   
      OleTransactions protokolünü kullanırken, protokol iletileri izlenemez. İzleme desteği <xref:System.Transactions> altyapı sağlar (OleTransactions kullanır) kullanıcılar hareketlerle gerçekleşen olayları görüntülemek izin verir. İzlemeyi etkinleştirmek için bir <xref:System.Transactions> uygulama, aşağıdaki kodda dahil `App.config` yapılandırma dosyası.  
   
@@ -121,6 +121,7 @@ Bu konuda, bir işlem uygulama sorunlarını gidermek için Windows Communicatio
      WCF de yararlanır gibi bu WCF izleme sağlar <xref:System.Transactions> altyapı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönetim ve Tanılama](../../../../docs/framework/wcf/diagnostics/index.md)
 - [İzlemeyi Yapılandırma](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

@@ -1,15 +1,15 @@
 ---
-title: 'İzlenecek yol: SQL oluşturma'
+title: 'İzlenecek yol: SQL Üretimi'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d88916b06dd1fc01f10889fc94d5bcf8c571c228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164586"
 ---
-# <a name="walkthrough-sql-generation"></a>İzlenecek yol: SQL oluşturma
+# <a name="walkthrough-sql-generation"></a>İzlenecek yol: SQL Üretimi
 Bu konu başlığı altında SQL oluşturma nasıl meydana gösterir [örnek sağlayıcısı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). Aşağıdaki varlık SQL sorgusunu örnek sağlayıcısında modeli kullanır:  
   
 ```  
@@ -200,4 +200,5 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
  İkinci aşama sonunda, son SQL deyimi oluşturuldu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Örnek Sağlayıcısında SQL Oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

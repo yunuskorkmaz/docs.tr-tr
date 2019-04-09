@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: 09941ce5fcf33380cbf3455866e63918edd2ea20
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7ec407209a94f96700773884aa3645b313c6c6ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132229"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Özel Bağlama Taşıma ve Kodlama
 Özel bağlama ayrık bağlama öğelerinin sıralı bir listesi tanımlanır. Bu örnek, çeşitli taşıma ve kodlama öğeleri ileti özel bağlama yapılandırma işlemi gösterilmektedir.  
@@ -85,4 +85,3 @@ client.Close()
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  
-  

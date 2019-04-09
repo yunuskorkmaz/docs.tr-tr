@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 4b2988314afbe501623fd050a989876842f68601
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194077"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI Otomasyon ve Ekran Ölçeklendirme
 > [!NOTE]
@@ -76,4 +76,5 @@ ms.locfileid: "57674542"
  Uygulamanız ile olmayan doğrudan işlem içi iletişimi gerçekleştirir, [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-uyumlu uygulamalarla sahip dönüştürmeniz kullanarak mantıksal ve fiziksel koordinatları arasında [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevleri `PhysicalToLogicalPoint` ve `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Vurgulayıcısı ile ilgili örnek](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

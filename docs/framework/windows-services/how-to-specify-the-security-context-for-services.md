@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Hizmetler için güvenlik içeriği belirtme'
+title: 'Nasıl yapılır: Hizmetler için Güvenlik İçeriği Belirtme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 9adcb39504cc2b5189f0c65cc5603c149d1483f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0b011497d04a1da3764b75c4d8c5d7084ff110bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154056"
 ---
-# <a name="how-to-specify-the-security-context-for-services"></a>Nasıl yapılır: Hizmetler için güvenlik içeriği belirtme
+# <a name="how-to-specify-the-security-context-for-services"></a>Nasıl yapılır: Hizmetler için Güvenlik İçeriği Belirtme
 Varsayılan olarak, hizmetler, oturum açan kullanıcının farklı güvenlik bağlamında çalışır. Varsayılan sistem hesabına ait içerikte çalıştırmasına Hizmetleri olarak adlandırılır `LocalSystem`, sağlayan farklı erişim ayrıcalığı kullanıcı dışındaki sistem kaynaklarına. Hizmetinizin altında çalıştırılması farklı bir kullanıcı hesabı belirtmek için bu davranışı değiştirebilirsiniz.  
   
  İşleyerek güvenlik bağlamını ayarlayın <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> hizmet içinde çalıştığı işlemin özelliği. Bu özellik hizmet dört hesap türünden biri olarak ayarlamanıza olanak sağlar:  
@@ -45,6 +45,7 @@ Varsayılan olarak, hizmetler, oturum açan kullanıcının farklı güvenlik ba
 3.  İçinde **özellikleri** penceresinde <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> uygun değere.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [Nasıl yapılır: Windows Hizmetleri oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+
+- [Windows Hizmet Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Nasıl yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Nasıl yapılır: Windows Hizmetleri Oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)

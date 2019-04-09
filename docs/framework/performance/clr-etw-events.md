@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d64ee6942d9397ceb45b812ef3c26179fac9b2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb7520518497b244be8be3751ca8a3063a02717a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540305"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135869"
 ---
 # <a name="clr-etw-events"></a>CLR ETW Olayları
 Bu bölümdeki konularda, Windows (ETW) olayları için olay izleme açıklanmaktadır. İlişkili bir anahtar sözcüğü her olayda ve düzeyi, açıklanan olduğu [CLR ETW anahtar sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) konu. CLR olayları için iki sağlayıcıları vardır:  
@@ -62,9 +62,10 @@ Bu bölümdeki konularda, Windows (ETW) olayları için olay izleme açıklanmak
  Bir olay tetiklenir sonra yığın izlemelerini oluşturmak için kullanılan diğer olaylarla bilgileri yakalar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata ayıklama artırmak ve ETW ile performans ayarlama](https://go.microsoft.com/fwlink/?LinkId=179696)
 - [Windows Performans blogu](https://go.microsoft.com/fwlink/?LinkId=179509)
 - [.NET Framework Günlük Kaydını Denetleme](../../../docs/framework/performance/controlling-logging.md)
 - [CLR ETW Sağlayıcılar](../../../docs/framework/performance/clr-etw-providers.md)
 - [CLR ETW Anahtar Sözcükleri ve Düzeyler](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)
-- [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Ortak Dil Çalışma Zamanında ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

@@ -1,15 +1,15 @@
 ---
-title: OLE DB şema koleksiyonları
+title: OLE DB Şema Koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164690"
 ---
-# <a name="ole-db-schema-collections"></a>OLE DB şema koleksiyonları
+# <a name="ole-db-schema-collections"></a>OLE DB Şema Koleksiyonları
 Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıları için şema koleksiyonu desteğini açıklar.  
   
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server'ı OLE DB sağlayıcısı  
@@ -23,7 +23,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
   
 -   ProcedureParameters  
   
--   Kataloğu  
+-   Katalog  
   
 -   Dizinleri  
   
@@ -76,7 +76,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
 |COLUMN_LCID|Int32|  
 |COLUMN_COMPFLAGS|Int32|  
 |COLUMN_SORTID|Int32|  
-|COLUMN_TDSCOLLATION|Bayt]|  
+|COLUMN_TDSCOLLATION|Byte[]|  
 |IS_COMPUTED|Boole değeri|  
   
 ### <a name="procedures"></a>Yordamlar  
@@ -114,7 +114,7 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
 |TYPE_NAME|Dize|  
 |LOCAL_TYPE_NAME|Dize|  
   
-### <a name="catalog"></a>Kataloğu  
+### <a name="catalog"></a>Katalog  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
@@ -412,4 +412,5 @@ Bu bölümde, Microsoft SQL Server, Oracle ve Microsoft Jet OLE DB sağlayıcıl
 |TÜMLEŞİK|Boole değeri|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

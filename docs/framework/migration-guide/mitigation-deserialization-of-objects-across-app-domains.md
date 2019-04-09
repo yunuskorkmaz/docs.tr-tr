@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5424eac20992d87542bd8a9a27d5775483d64a60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bbb123ccdf29143d53317bd709da7c1e5959d917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118046"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Azaltma: Uygulama etki alanlarında nesneleri seri durumdan çıkarma
 Bazı durumlarda, bir uygulama farklı uygulama temeli kullanan iki veya daha fazla uygulama etki alanı kullandığında, uygulama etki alanları arasında nesnelerin mantıksal çağrı bağlamında serisini kaldırma girişimi özel bir durum oluşturur.  
@@ -49,4 +49,5 @@ Bazı durumlarda, bir uygulama farklı uygulama temeli kullanan iki veya daha fa
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çalışma Zamanı Değişiklikleri](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)

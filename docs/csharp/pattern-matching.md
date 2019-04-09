@@ -3,12 +3,12 @@ title: Desen eşleştirme C# Kılavuzu
 description: Desen eşleştirme ifadelerinde C# öğrenin
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3bd5144d2ecb65c762dfa81e205982b99d901022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969990"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191607"
 ---
 # <a name="pattern-matching"></a>Desen Eşleştirme
 
@@ -129,10 +129,9 @@ Herhangi bir varsayılan olmayan çalışması için tercih edilen olduğundan `
 
 Bu bir yere göz önünde bulundurun isteyebilirsiniz örnektir bir `var` case farklı ifade bir `default` ifade.
 
-## <a name="conclusions"></a>Sonuçları
+## <a name="conclusions"></a>Sonuçlar
 
 *Eşleşen yapıları desen* denetim akışı farklı değişkenler ve devralma hiyerarşisi tarafından ilgili olmayan türler arasında kolayca yönetmenize olanak sağlar. Değişkenin üzerine her türlü koşul test kullanılacak mantıksal de denetleyebilirsiniz. Ancak, desenler ve deyimler veri ve bu verileri işleyen yöntemler ayrı olduğu daha dağıtılmış uygulamalar oluşturmak daha sık ihtiyaç duyacağınız etkinleştirir. Bu örnekte kullanılan şekli yapılar herhangi bir yöntem içermediğini fark edeceksiniz yalnızca salt okunur özellikler.
 Herhangi bir veri türü ile Works desen. Nesne İnceleme ifadeler yazabilirsiniz ve bu koşullara göre denetim akışı kararlar.
 
 Bu örnek için bir soyut bir sınıf hiyerarşisi oluşturmaktan izlenir tasarımı ile koddan karşılaştırma `Shape` ve türetilen özel şekiller her alanı hesaplamak için sanal bir yöntem, kendi uygulama. Genellikle, verilerle çalışma ve veri depolama endişelere yer bırakmadan davranışı endişelere yer bırakmadan ayırmak istediğiniz desen eşleştirme ifadeleri çok kullanışlı bir aracı olabilir bulabilirsiniz.
-

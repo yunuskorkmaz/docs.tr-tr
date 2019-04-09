@@ -1,18 +1,18 @@
 ---
-title: DbProviderFactory alma
+title: DbProviderFactory Alma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: 1099d8ec8e9d516b2269232857c695f9ff04d99c
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c84229dc1c32217099eb7ed8b90accc04cc66148
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904589"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097414"
 ---
-# <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory alma
+# <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory Alma
 Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> geçirme için bir veri sağlayıcısı hakkında bilgi içerir <xref:System.Data.Common.DbProviderFactories> sınıfı. Bu bilgilere göre <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> yöntemi, kesin türü belirtilmiş sağlayıcı üreteci oluşturur. Örneğin, oluşturmak için bir <xref:System.Data.SqlClient.SqlClientFactory>, geçirebilirsiniz `GetFactory` "System.Data.SqlClient" Belirtilen sağlayıcı adı olan bir dize. Bir aşırı yüklemesini `GetFactory` götüren bir <xref:System.Data.DataRow>. Sağlayıcı üreteci oluşturduktan sonra ek nesneler oluşturmak için yöntemlerini kullanabilirsiniz. Yöntemlerinin bazılarını bir `SqlClientFactory` dahil <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>, ve <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
   
 > [!NOTE]
@@ -96,6 +96,7 @@ Alma işlemi bir <xref:System.Data.Common.DbProviderFactory> geçirme için bir 
  [!code-vb[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Yapılandırma sınıflarını kullanma](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))

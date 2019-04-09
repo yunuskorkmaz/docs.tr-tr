@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d90b3c23af39125d888824dbfabf798a3e73985
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: 70189fad6d979d0e0ff6ad5d936d8a5b6142eea4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218742"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149272"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>.NET Framework Bileşenlerini COM'da Gösterme
 .NET türüne yazma ve bu tür, yönetilmeyen koddan kullanan geliştiriciler için ayrı etkinliklerdir. Bu bölümde, COM istemcileri ile birlikte çalışan yönetilen kod yazma için bazı ipuçları açıklanmaktadır:  
@@ -51,5 +51,6 @@ ms.locfileid: "56218742"
      Bir katı adlı derleme genel derleme önbelleğinde yüklü ve yayımcısını imzasının gerektirir. İstemci uygulama dizininde olmayan kesin adlı derlemeler yüklenmesi gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../../docs/framework/interop/index.md)
-- [COM birlikte çalışma örneği: COM istemcisi ve .NET sunucusu](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

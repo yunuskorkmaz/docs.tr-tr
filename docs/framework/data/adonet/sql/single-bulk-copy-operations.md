@@ -1,18 +1,18 @@
 ---
-title: Tekil toplu kopyalama işlemleri
+title: Tekil Toplu Kopyalama İşlemleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 286199a595e7b34c25fcc13d37c5c913f269304d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4fdd578f1537e3521093fd12655a452feaa5a38d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112079"
 ---
-# <a name="single-bulk-copy-operations"></a>Tekil toplu kopyalama işlemleri
+# <a name="single-bulk-copy-operations"></a>Tekil Toplu Kopyalama İşlemleri
 Bir SQL Server toplu kopyalama işlemi gerçekleştirmek için en kolay yaklaşım, bir veritabanında tek bir işlem gerçekleştirmektir. Varsayılan olarak, toplu kopyalama işlemi yalıtılmış bir işlem olarak gerçekleştirilir: yedekleme, geri fırsat ile işlem temelli olmayan bir şekilde, kopyalama işlemi gerçekleşir.  
   
 > [!NOTE]
@@ -80,5 +80,6 @@ command.ExecuteNonQuery();
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server’da Toplu Kopyalama İşlemleri](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

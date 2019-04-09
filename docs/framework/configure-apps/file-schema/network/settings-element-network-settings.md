@@ -1,5 +1,5 @@
 ---
-title: <settings> Öğesi (Ağ Ayarları)
+title: <settings> Öğesi (ağ ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: 839907d9339d459070fff12dbca22d3c2df5b020
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260625"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096933"
 ---
 # <a name="settings-element-network-settings"></a>\<Ayarlar > öğesi (ağ ayarları)
 Temel ağ seçeneklerini yapılandırır <xref:System.Net?displayProperty=nameWithType> ad alanı.  
@@ -51,7 +51,7 @@ Temel ağ seçeneklerini yapılandırır <xref:System.Net?displayProperty=nameWi
 |[IPv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Internet Protokolü sürüm 6 (IPv6) sağlayan destekler.|  
 |[\<performanceCounter > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Ağ performans sayaçları sağlar.|  
 |[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Ağ kaynaklarına bağlantılarını yapılandırır.|  
-|[Yuva](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Yuva işlemleri tamamlama bağlantı noktalarını kullanıp kullanmadığını belirtir.|  
+|[yuva](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Yuva işlemleri tamamlama bağlantı noktalarını kullanıp kullanmadığını belirtir.|  
 |[\<webProxyScript > öğesi (ağ ayarları)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Web proxy'leri bulmak için kullanılan komut dosyası özelliklerini yapılandırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -66,5 +66,6 @@ Temel ağ seçeneklerini yapılandırır <xref:System.Net?displayProperty=nameWi
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net?displayProperty=nameWithType>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 58e65ee9d95329c3583515b99db47b87b3749c8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145983"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows Forms DataGrid Denetimi için Klavye Kısayolları
 > [!NOTE]
@@ -51,5 +51,6 @@ ms.locfileid: "57711778"
 |Girin bir <xref:System.DBNull.Value?displayProperty=nameWithType> değerini bir hücre düzenleme modunda dönüştürür.|CTRL+0|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataGrid Denetimine Genel Bakış](datagrid-control-overview-windows-forms.md)
 - [DataGrid Denetimi](datagrid-control-windows-forms.md)

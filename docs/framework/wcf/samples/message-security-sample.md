@@ -2,12 +2,12 @@
 title: İleti Güvenliği Örneği
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: 23304ba3be88e327f84943daf0dcd751d564d5f7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: a4835f8f276786aa87506bc2be2a2bba534f4166
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112482"
 ---
 # <a name="message-security-sample"></a>İleti Güvenliği Örneği
 Bu örnek kullanan bir uygulamanın nasıl uygulanacağını gösterir `basicHttpBinding` güvenlik iletisi. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan.  
@@ -178,4 +178,3 @@ Press <ENTER> to terminate client.
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  
-  

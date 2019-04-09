@@ -2,12 +2,12 @@
 title: İzleme
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 4165dbb68ac962737c9dcc99e984248c668bb1b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093403"
 ---
 # <a name="tracing"></a>İzleme
 Windows Communication Foundation (WCF), hata izleme ve analiz için uygulama izleme ve tanılama verilerini sağlar. Bir hata ayıklayıcı yerine izleme, bir uygulamanın nasıl davrandığını veya neden hataları anlamak için kullanabilirsiniz. Hataları ve işleme bir uçtan uca deneyim sağlamak üzere bileşenlerinde ilişkilendirebilirsiniz.  
@@ -40,4 +40,5 @@ Windows Communication Foundation (WCF), hata izleme ve analiz için uygulama izl
  Bu konu, WCF tarafından oluşturulan tüm izlemeleri listeler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

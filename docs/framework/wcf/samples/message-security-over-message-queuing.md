@@ -2,12 +2,12 @@
 title: İleti Kuyruğa Alma ile İleti Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: ec79309b9959faa131ee13ff589a10ee1054f27d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 9ef2ecfa1dd8557b601fdd6abdc3aba94d20d46c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100424"
 ---
 # <a name="message-security-over-message-queuing"></a>İleti Kuyruğa Alma ile İleti Güvenliği
 Bu örnek X.509v3 sertifika kimlik doğrulaması için istemci ile WS-güvenlik kullanan ve üzerinde MSMQ sunucusunun X.509v3 sertifikasını kullanarak kimlik doğrulaması gerektiren bir uygulamanın nasıl uygulanacağını gösterir. Güvenlik bazen MSMQ depodaki ileti şifrelenmiş kalmasını sağlamak için daha fazla tercih ve uygulama ileti iletinin kendi kimlik doğrulaması gerçekleştirebilirsiniz.
@@ -344,4 +344,3 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
-  

@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 1ab7058d8667344197e8bc1ddc59cc7200f22270
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142850"
 ---
 # <a name="servicedebug"></a>\<serviceDebug >
 Bir Windows Communication Foundation (WCF) hizmeti için hata ayıklama ve Yardım bilgileri özelliklerini belirtir.  
@@ -71,6 +71,7 @@ Bir Windows Communication Foundation (WCF) hizmeti için hata ayıklama ve Yard�
  İsteğe bağlı `httpHelpPageBinding` ve `httpHelpPageBinding` öznitelikleri izin, hizmet web sayfasına erişmek için kullanılan bağlamaları yapılandırmak. Bunlar belirtilmezse, varsayılan bağlamaları (`HttpTransportBindingElement`, HTTP söz konusu olduğunda ve `HttpsTransportBindingElement`, HTTPS söz konusu olduğunda) uygun şekilde hizmet yardım sayfasına erişim için kullanılır. Bu öznitelikler yerleşik WCF bağlamaları ile kullanamazsınız dikkat edin. Xref:System.ServiceModel.Channels.IReplyChannel destekleyen iç bağlama öğeleri içeren bağlamaları yalnızca > desteklenecektir. Ayrıca, <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> bağlama özelliğini olmalıdır <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.ServiceDebugElement>
 - <xref:System.ServiceModel.Description.ServiceDebugBehavior>
 - [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

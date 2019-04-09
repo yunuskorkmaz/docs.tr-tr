@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
-ms.openlocfilehash: f2a45cf48c1d0cc097cea956d22fed2079e657a8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3afee770e36b7daea754775f64dd7f1030659267
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096245"
 ---
 # <a name="geometries-how-to-topics"></a>Geometriler ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Windows.Media.Geometry> uygulamanızdaki nesneleri.  
@@ -34,7 +34,8 @@ Bu bölümdeki konular, nasıl kullanılacağını gösteren <xref:System.Window
  [RectangleGeometry'nin Köşelerini Yuvarlama](how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Grafikler ve Multimedya](index.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
-ms.openlocfilehash: 2a515609feff343b6e917bf420a06cfb9dc468df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fa8e9d66fa89eb058aafd1e74164097b7f5c3a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614230"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157865"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Nasıl yapılır: Var olan bir varlığa (WCF Veri Hizmetleri) Dataservicecontext'e ekleme
 Bir varlık içinde veri hizmeti, zaten mevcut olduğunda [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı sağlar, doğrudan varlığı temsil eden bir nesne iliştirmek <xref:System.Data.Services.Client.DataServiceContext> ilk bir sorgu yürütme. Daha fazla bilgi için [veri hizmetini güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
@@ -26,4 +26,5 @@ Bir varlık içinde veri hizmeti, zaten mevcut olduğunda [!INCLUDE[ssAstoria](.
  [!code-vb[Astoria Northwind Client#AttachObject](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#attachobject)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: 8cc84dfac4492b6d4182048b61b96e463f914a63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d821ca499e0b0e9151a724de5149f35bb815861
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143266"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Nasıl yapılır: (WCF Veri Hizmetleri) istemci isteğinde üst bilgileri Ayarla
 Kullanırken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] destekleyen bir veri hizmetine erişmek için İstemci Kitaplığı [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], istemci kitaplığının veri hizmetine gönderilen istek iletilerinin gerekli HTTP üst bilgilerini otomatik olarak ayarlar. Ancak, veri hizmeti talep tabanlı kimlik doğrulaması veya tanımlama bilgileri gerektirdiğinde gibi bazı durumlarda, gerekli ileti üstbilgileri ayarlamak için istemci kitaplığı bilmez. Daha fazla bilgi için [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication). Gönderilmeden önce bu gibi durumlarda el ile ileti üstbilgileri istek iletisinde ayarlamanız gerekir. Bu konudaki örnek nasıl işleneceğini gösterir <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> veri hizmetine gönderilmeden önce yeni bir üst bilgisi için istek iletisi eklemek için olay.  
@@ -35,5 +35,6 @@ Kullanırken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] destekl
  [!code-vb[Astoria Northwind Client#OnSendingRequest](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onsendingrequest)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetlerinin Güvenliğini Sağlama](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

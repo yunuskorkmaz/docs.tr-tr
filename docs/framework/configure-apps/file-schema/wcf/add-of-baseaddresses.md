@@ -2,12 +2,12 @@
 title: <add> , <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-ms.openlocfilehash: d66be51fa2626283063c250905efdb7d47babfb0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fbcb3a07bf40c96a4cd1b2ec87277b6fefdfb89d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164482"
 ---
 # <a name="add-of-baseaddresses"></a>\<Ekle >, \<baseAddresses >
 Hizmet ana bilgisayarı tarafından kullanılan tabanı belirten bir yapılandırma öğesini temsil eder.  
@@ -47,6 +47,7 @@ Hizmet ana bilgisayarı tarafından kullanılan tabanı belirten bir yapılandı
 |[\<baseAddresses >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)|Bir koleksiyonu `baseAddress` öğeleri.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
 - <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>

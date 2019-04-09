@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataContractSerializer
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-ms.openlocfilehash: 1b4fd959d5e522150751d2e9b8be8c5b2252bf27
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b635f03d1e4a6628a76d678f7366482717276376
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254957"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116395"
 ---
 # <a name="datacontractserializer"></a>\<dataContractSerializer >
 İçin yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContractSerializer>. Bu öğe, iki farklı hiyerarşilere gerçekleşir. Bir listelenir aşağıdaki şema hiyerarşisini bölümü ve diğer açıklamalar bölümünde listelenir.  
@@ -60,8 +60,9 @@ ms.locfileid: "55254957"
  Bilinen türler hakkında daha fazla bilgi için bkz: <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Veri Sözleşmesi Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [Veri Aktarma ve Seri Hale Getirme](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

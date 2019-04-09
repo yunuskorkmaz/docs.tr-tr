@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c481b6889c1f10124465a4e851adfb25a1ba2eff
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113730"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Sınıflar, Yapılar ve Birleşimleri Hazırlama
 .NET Framework sınıfları ve yapıları benzerdir. Hem alanlar, özellikler ve olaylar olabilir. Bunlar, ayrıca statik ve statik olmayan yöntemleri olabilir. Bir önemli fark, yapılar değer türüdür ve sınıflar, başvuru türleridir ' dir.  
@@ -289,6 +289,7 @@ typedef struct _MYSTRSTRUCT2
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Platform Çağırma ile Veri Sıralama](marshaling-data-with-platform-invoke.md)
 - [Dizeleri Hazırlama](marshaling-strings.md)
 - [Farklı Dizi Türlerini Hazırlama](marshaling-different-types-of-arrays.md)

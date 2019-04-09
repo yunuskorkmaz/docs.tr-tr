@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir görsel stilde öğe işleme'
+title: 'Nasıl yapılır: Görsel Stilde Öğe İşleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 33c73bf8faa9dfafe5f4889875887dc3aef5985c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 44218ee1f3879a3f9ac5a1e1b049c28a5463820e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099839"
 ---
-# <a name="how-to-render-a-visual-style-element"></a>Nasıl yapılır: Bir görsel stilde öğe işleme
+# <a name="how-to-render-a-visual-style-element"></a>Nasıl yapılır: Görsel Stilde Öğe İşleme
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Ad alanı sunan <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> arabirimi (UI) öğeleri görsel stilleri tarafından desteklenen Windows kullanıcı temsil eden nesneleri. Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> sınıf, işlenecek <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> temsil eden **Oturumu Kapat** ve **Kapat** başlangıç menüsünde düğmeleri.  
   
 ### <a name="to-render-a-visual-style-element"></a>Bir görsel stilde öğe işleme için  
@@ -44,4 +44,5 @@ ms.locfileid: "57714118"
 -   Başvurular <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, ve <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> ad alanları.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Denetimleri Görsel Stilde İşleme](rendering-controls-with-visual-styles.md)

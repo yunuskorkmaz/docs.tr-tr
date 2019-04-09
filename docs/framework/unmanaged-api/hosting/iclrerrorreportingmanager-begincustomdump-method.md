@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af752ae52956ae1d97fb14ec3b494effdaed35c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8cb6cd8d31e01ea2f1749a6cb4d17173679f0c06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104123"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump Yöntemi
 Hata bildirimi için özel bir yığın dökümlerini yapılandırmasını belirtir.  
@@ -78,6 +78,7 @@ HRESULT BeginCustomDump (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [CustomDumpItem Yapısı](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)
-- [ECustomDumpFlavor Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)
+- [ECustomDumpFlavor Numaralandırması](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)
 - [ICLRErrorReportingManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)

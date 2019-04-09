@@ -5,18 +5,16 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162429"
 ---
 # <a name="read-only-dependency-properties"></a>Salt Okunur Bağımlılık Özellikleri
 Bu konuda, var olan salt okunur bağımlılık özellikleri senaryoları ve özel salt okunur bağımlılık özelliği oluşturmaya yönelik teknikleri dahil olmak üzere, salt okunur bağımlılık özellikleri açıklanmaktadır.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu konu başlığı altında bağımlılık özelliği ve özel bağımlılık özelliği için meta verileri nasıl uygulanacağını uygulama temel senaryolar anladığınızı varsayar. Bkz: [özel bağımlılık özellikleri](custom-dependency-properties.md) ve [bağımlılık özelliği meta verisi](dependency-property-metadata.md) bağlamı için.  
@@ -44,6 +42,7 @@ Bu konuda, var olan salt okunur bağımlılık özellikleri senaryoları ve öze
  Çünkü <xref:System.Windows.DependencyPropertyKey> özeldir ve dağıtılmadığı kodunuz dışında özellik sistemi tarafından salt okunur bağımlılık özelliği salt okunur bağımlılık özelliği iyi güvenlik ayarına sahip. Bir salt okunur bağımlılık özelliği için açık veya örtük olarak genel tanımlayıcı alan ve bu nedenle özelliği yaygın olarak ayarlanabilir. Daha fazla ayrıntı için bkz. [bağımlılık özelliği güvenliği](dependency-property-security.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
 - [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)
 - [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)

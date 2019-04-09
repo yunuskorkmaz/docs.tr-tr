@@ -1,5 +1,5 @@
 ---
-title: Otomatik Proxy algılama
+title: Otomatik Ara Sunucu Algılama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 5f79f25e879df85fed7b6e402d47d98f047dd562
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3de9b67d687d23e9f31c3060f5af6ef90d45f217
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164768"
 ---
-# <a name="automatic-proxy-detection"></a>Otomatik Proxy algılama
+# <a name="automatic-proxy-detection"></a>Otomatik Ara Sunucu Algılama
 Otomatik proxy algılama, bir Web proxy sunucusu sistem tarafından tanımlanan ve istemci adına istek göndermek için kullanılan bir işlemdir. Bu özellik Web Proxy Otomatik Bulma (WPAD) de denir. Otomatik proxy algılama etkinleştirildiğinde, istek için kullanılan proxy kümesini döndürmekten sorumlu bir proxy yapılandırma betiğini bulmak sistem çalışır. Proxy yapılandırma betiği bulunursa, betik indirilen, derlenmiş ve kullandığı bir istek için proxy bilgilerini, istek akışı veya yanıt alındığında yerel bilgisayarda çalıştırmak bir <xref:System.Net.WebProxy> örneği.  
   
  Otomatik proxy algılama tarafından gerçekleştirilir <xref:System.Net.WebProxy> sınıfı ve istek düzeyi ayarları, yapılandırma dosyalarındaki ayarlar ve Internet Explorer'ı kullanarak belirtilen ayarları dağıtabileceklerinizle **yerel alan ağı (LAN)** iletişim kutusu.  
@@ -68,6 +68,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
  Bir ara sunucu olmayan istekleri kullanılabilir uygulama etki alanının varsayılan proxy kullanmak <xref:System.Net.WebRequest.DefaultWebProxy%2A> özelliği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
 - [\<system.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

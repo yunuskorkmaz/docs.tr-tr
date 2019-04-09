@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Kullanıcı tanımlı satır içi işlevleri çağırma'
+title: 'Nasıl yapılır: Kullanıcı Tanımlı Satır İçi İşlevleri Çağırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 76a41ded52ac29b4a8b597188171333a888be5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692775"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163715"
 ---
-# <a name="how-to-call-user-defined-functions-inline"></a>Nasıl yapılır: Kullanıcı tanımlı satır içi işlevleri çağırma
+# <a name="how-to-call-user-defined-functions-inline"></a>Nasıl yapılır: Kullanıcı Tanımlı Satır İçi İşlevleri Çağırma
 Kullanıcı tanımlı satır içi işlevleri çağırabilir olsa da, sorgu yürütülene kadar olan yürütme ertelenmiştir bir sorguya dahil işlevleri yürütülmez. Daha fazla bilgi için [(C#) LINQ sorgularına giriş](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
  Bir sorgu dışında aynı işlev çağırdığınızda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yöntemi çağrısı ifadesinden basit bir sorgu oluşturur. SQL sözdizimi verilmiştir (parametre `@p0` geçirilen sabiti bağlıdır):  
@@ -39,4 +39,5 @@ FROM [Customers] AS [t0]
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Kullanıcı Tanımlı İşlevler](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

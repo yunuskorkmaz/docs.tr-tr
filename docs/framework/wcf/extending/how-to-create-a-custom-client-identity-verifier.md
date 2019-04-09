@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı oluşturma'
+title: 'Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 19be92acb16ffb5e98eb39ba36a406d66e58d97b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c7aede448fa0a759035380c533f2a9457a534bd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165834"
 ---
-# <a name="how-to-create-a-custom-client-identity-verifier"></a>Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı oluşturma
+# <a name="how-to-create-a-custom-client-identity-verifier"></a>Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma
 *Kimlik* Windows Communication Foundation (WCF) özelliği, beklenen hizmet kimliğini önceden belirtmek bir istemci sağlar. Bir sunucu kendisini istemciye doğruladığında kimliği beklenen kimliğini karşı denetlenir. (Kimlik ve nasıl çalıştığı bir açıklaması için bkz: [kimlik doğrulama ile hizmet kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
   
  Gerekirse, doğrulama, bir özel kimlik doğrulama kullanılarak özelleştirilebilir. Örneğin, ek hizmet kimlik doğrulama denetimleri gerçekleştirebilirsiniz. Bu örnekte, özel bir kimlik doğrulayıcı sunucusundan döndürülen X.509 sertifikasındaki ek talep denetler. Örnek bir uygulama için bkz: [hizmet kimliği örneği](../../../../docs/framework/wcf/samples/service-identity-sample.md).  
@@ -82,6 +82,7 @@ ms.locfileid: "58464027"
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>

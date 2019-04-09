@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Windows Forms GroupBox denetimiyle denetimleri gruplandırma'
+title: 'Nasıl yapılır: Windows Forms GroupBox Denetimiyle Denetimleri Gruplandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 14c832251a76eaff21611c88179c4d2ffa7ab738
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 706655c8cb2c2548b393b6ad731c13e47fd9381a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179641"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Nasıl yapılır: Windows Forms GroupBox denetimiyle denetimleri gruplandırma
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Nasıl yapılır: Windows Forms GroupBox Denetimiyle Denetimleri Gruplandırma
 Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri başka denetimler gruplandırmak için kullanılır. Grup denetimleri için üç neden vardır:  
   
 -   Görsel gruplandırılmasını ilgili form öğeleri için açık kullanıcı arabirimi oluşturmak için.  
@@ -33,5 +33,6 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri başka denetimler
 3.  Ayarlama <xref:System.Windows.Forms.GroupBox.Text%2A> grup kutusu için uygun bir açıklamalı alt yazı özelliği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.GroupBox>
 - [GroupBox Denetimi](groupbox-control-windows-forms.md)

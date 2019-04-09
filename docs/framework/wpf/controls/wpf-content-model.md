@@ -11,20 +11,18 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: 6cbb13fdcba2cf014c4c31a5dc5b21fe2721b214
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f866e0366a7781c287b3ebae7b668c2b296a5cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134614"
 ---
 # <a name="wpf-content-model"></a>WPF İçerik Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] birçok denetimleri ve farklı içerik türlerini görüntülemek için birincil amacı olan denetim-like türleri sağlayan bir sunu platformudur. Hangi denetimi kullanmak için veya türetmek için hangi denetimi belirlemek için belirli bir denetimi en iyi görüntüleyebilirsiniz nesne türlerini anlamanız gerekir.  
   
  İçerik modeli için bu konuda özetlenir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimi ve denetim-like türleri. İçerik modeli, hangi içerik denetimi kullanılabileceğini anlatmaktadır. Bu konu, ayrıca her bir içerik modeli için içerik özellikleri listeler. İçerik özelliği bir nesnenin içeriğini depolamak için kullanılan bir özelliktir.  
-  
- 
-  
+
 <a name="classes_that_contain_arbitrary_content"></a>   
 ## <a name="classes-that-contain-arbitrary-content"></a>Rasgele içerik içeren sınıflar  
  Bazı denetimler, dize gibi herhangi bir türde bir nesne içerebilir bir <xref:System.DateTime> nesnesi veya bir <xref:System.Windows.UIElement> ek öğeler için diğer bir deyişle bir kapsayıcı. Örneğin, bir <xref:System.Windows.Controls.Button> görüntü ve metin; içerebilir veya <xref:System.Windows.Controls.CheckBox> değerini içerebilir <xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
@@ -250,4 +248,5 @@ Bir kenarlığa sahip bir TextBlock
  <xref:System.Windows.Documents.TextElement> ve ilişkili sınıflarının metni biçimlendirmek izin verir. <xref:System.Windows.Documents.TextElement> nesneler içerir ve metni biçimlendirebilir <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument> nesneleri. İki birincil türlerini <xref:System.Windows.Documents.TextElement> nesneler <xref:System.Windows.Documents.Block> öğeleri ve <xref:System.Windows.Documents.Inline> öğeleri. A <xref:System.Windows.Documents.Block> öğesi, paragraf ya da liste gibi bir metin bloğu temsil eder. Bir <xref:System.Windows.Documents.Inline> öğesi bir blok içinde metnin bir bölümünü temsil eder. Birçok <xref:System.Windows.Documents.Inline> sınıfları için bunlar uygulandığı metin biçimlendirme belirtin. Her <xref:System.Windows.Documents.TextElement> kendi içerik modeli vardır. Daha fazla bilgi için [TextElement içerik modeline genel bakış](../advanced/textelement-content-model-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Gelişmiş](../advanced/index.md)

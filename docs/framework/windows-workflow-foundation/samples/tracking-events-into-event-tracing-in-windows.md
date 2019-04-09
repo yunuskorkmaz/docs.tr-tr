@@ -1,15 +1,15 @@
 ---
-title: Olaya içinde Windows izleme olayları izleme
+title: Windows'ta Olay İzleme ile Olayları İzleme
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166536"
 ---
-# <a name="tracking-events-into-event-tracing-in-windows"></a>Olaya içinde Windows izleme olayları izleme
+# <a name="tracking-events-into-event-tracing-in-windows"></a>Windows'ta Olay İzleme ile Olayları İzleme
 Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti izleme etkinleştirme ve izleme olayları, olay izleme için Windows (ETW) yayma gösterir. Örnek iş akışı ETW kayıtları izleme yaymak için ETW İzleme katılımcı kullanır (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
 
  Örnek iş akışında bir istek alırsa, giriş verilerinin karşıtını giriş değişkenine atar ve istemciye karşılıklı geri döndürür. Giriş verilerini 0 olduğunda sıfır özel durum ile bir bölme, işlenmemiş oluşan iptal etmek iş akışının sağlar. Etkin izleme ile hata izleme kaydının daha sonra hata gidermenize yardımcı olacak ETW yayılır. ETW İzleme katılımcı abone izleme kayıtları için bir izleme profili ile yapılandırılır. İzleme profili Web.config dosyasında tanımlanır ve ETW İzleme katılımcı için bir yapılandırma parametresi sağlanan. ETW İzleme katılımcı iş akışı hizmetinin Web.config dosyasında yapılandırılmış ve hizmeti bir hizmet davranışı olarak uygulanır. Bu örnekte, Olay Görüntüleyicisi'ni kullanarak olay günlüğüne izleme olayları görüntüleyin.
@@ -150,4 +150,5 @@ Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti izleme etkinle�
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

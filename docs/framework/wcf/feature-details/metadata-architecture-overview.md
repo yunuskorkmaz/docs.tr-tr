@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111481"
 ---
 # <a name="metadata-architecture-overview"></a>Meta Veri Mimarisi Genel Bakış
 Windows Communication Foundation (WCF) hizmet meta verileri içeri dışarı aktarma, yayımlama, alma ve zengin bir altyapı sağlar. WCF hizmetleri, böylece Svcutil.exe gibi araçları otomatik olarak hizmete erişim için istemci kodu oluşturmak hizmet uç noktaları ile etkileşim kurmayı açıklamak için meta verileri kullanın.  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) hizmet meta verileri içeri dışarı akt
  Uç nokta için bağlama değişiklikleri olay, hizmet uç noktası için bir kanal oluşturmak için kullandığınız bağlama dinamik olarak güncelleştir veya aynı anlaşmaya kullanan, ancak farklı bir bağlama sahip bir uç nokta için bir kanal oluşturmak istiyorsunuz. Kullanabileceğiniz <xref:System.ServiceModel.Description.MetadataResolver> almak ve çalışma zamanında belirli sözleşmesini uygulama hizmet uç noktaları için meta verileri içeri aktarmak için statik sınıf. Daha sonra içeri aktarılan kullanabilirsiniz <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> nesneleri istenen uç noktası için bir istemci veya kanal fabrikası oluşturursunuz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description>
 - [Meta Veri Biçimleri](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
 - [Meta Verileri Dışarı ve İçeri Aktarma](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

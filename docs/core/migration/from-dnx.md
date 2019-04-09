@@ -3,12 +3,12 @@ title: .NET Core CLI ile DNX'ten geçiş
 description: .NET Core CLI araçları için araç DNX geçiş.
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 006e909be03ec3d090135f32f7ba13311201f81e
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160842"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>.NET Core CLI (project.json) için DNX'ten geçiş
 
@@ -46,7 +46,6 @@ Bir çalışma zamanı başvurusu, `project.json` bağımlılıklarınızı içi
 DNX kullandıysanız, bazı komutlar, üç birinden kullanılan bölümleri (DNX, DNU veya DNVM). CLI ile bu komutlardan bazıları değiştirmek, bazı kullanılamıyor ve bazı aynıdır, ancak biraz farklı semantiğe sahip.
 
 Aşağıdaki tabloda DNX/DNU komutlar ve CLI karşılıkları arasındaki eşlemeyi gösterir.
-
 
 | DNX komutu                    | CLI komutu    | Açıklama                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|

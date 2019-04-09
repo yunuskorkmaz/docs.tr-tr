@@ -2,15 +2,21 @@
 title: .NET Framework ve Uygulamaları Dağıtma
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], packaging'
-  - 'deploying applications [.NET Framework]'
-  - 'deploying applications [.NET Framework], features'
-  - 'deploying applications [.NET Framework], distribution'
-  - '.NET Framework, deploying'
-  - .NET Framework application deployment
+- deploying applications [.NET Framework], packaging
+- deploying applications [.NET Framework]
+- deploying applications [.NET Framework], features
+- deploying applications [.NET Framework], distribution
+- .NET Framework, deploying
+- .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: 0ff426f051b37830b0161cd0e0e4368a5750c664
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124782"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework ve Uygulamaları Dağıtma
 Bu makalede, uygulamanızla birlikte .NET Framework'ü dağıtma başlamanıza yardımcı olur. İlgili bilgilerin çoğunu geliştiriciler, OEM'ler ve kuruluş yöneticileri için tasarlanmıştır. Kendi bilgisayarlarına .NET Framework'ü yüklemek isteyen kullanıcıların kimler [.NET Framework yükleme](~/docs/framework/install/index.md).  
@@ -149,16 +155,17 @@ Bu makalede, uygulamanızla birlikte .NET Framework'ü dağıtma başlamanıza y
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Ortak dil çalışma zamanının hangi derleme bağlama isteğini yerine getirmek için kullanılacak etiketleneceğini nasıl açıklar.|  
-|[Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Yol açabilir türü kimliği sorunları önlemek için yollar ele alınmaktadır <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hataları.|  
+|[Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Ortak dil çalışma zamanının hangi derleme bağlama isteğini yerine getirmek için kullanılacak etiketleneceğini nasıl açıklar.|  
+|[Derleme Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Yol açabilir türü kimliği sorunları önlemek için yollar ele alınmaktadır <xref:System.InvalidCastException>, <xref:System.MissingMethodException>ve diğer hataları.|  
 |[.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)|Yeniden başlatma Yöneticisi önleyen mümkün olduğunda yeniden başlatır ve .NET Framework yükleme uygulamaları bu Avantajdan nasıl alabilir açıklanmaktadır.|  
 |[Yöneticiler için Dağıtım Kılavuzu](../../../docs/framework/deployment/guide-for-administrators.md)|Nasıl bir Sistem Yöneticisi .NET Framework ve sistem bağımlılıklarını bir ağ üzerinden System Center Configuration Manager (SCCM) kullanarak dağıtılacağı açıklanmaktadır.|  
 |[Geliştiriciler için Dağıtım Kılavuzu](../../../docs/framework/deployment/deployment-guide-for-developers.md)|Geliştiriciler uygulamalarını ile kullanıcıların bilgisayarlarına .NET Framework nasıl yükleyebilirsiniz açıklar.|  
 |[Uygulamaları, Hizmetleri ve Bileşenleri Dağıtma](/visualstudio/deployment/deploying-applications-services-and-components)|ClickOnce ve Windows Installer teknolojilerini kullanarak uygulama yayımlama yönergeleri de dahil olmak üzere Visual Studio dağıtım seçenekleri ele alınmaktadır.| 
 |[ClickOnce Uygulamalarını Yayımlama](/visualstudio/deployment/publishing-clickonce-applications)|Bir Windows Forms uygulaması'nı paketlemek ve ağdaki istemci bilgisayarları ile ClickOnce dağıtma işlemini açıklamaktadır.|  
-|[Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Paketleme ve dağıtma kaynakları için kullandığı .NET Framework merkez ve ışınsal modelini açıklar; Kaynak adlandırma kuralları, geri dönüş işlemi ve paketleme seçenekleri ele alınmaktadır.|  
+|[Paketleme ve Dağıtma Kaynakları](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Paketleme ve dağıtma kaynakları için kullandığı .NET Framework merkez ve ışınsal modelini açıklar; Kaynak adlandırma kuralları, geri dönüş işlemi ve paketleme seçenekleri ele alınmaktadır.|  
 |[Birlikte Çalışma Uygulamasını Dağıtma](../../../docs/framework/interop/deploying-an-interop-application.md)|Gönderin ve genellikle bir .NET Framework istemci bütünleştirilmiş kodu ayrı bir COM tür kitaplıkları temsil eden bir veya daha fazla birlikte çalışma derlemelerini içeren, birlikte çalışma uygulamaları ve bir veya daha fazla kayıtlı COM bileşenlerini yüklemek açıklanmaktadır.|  
-|[Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Sessizce başlatmak ve kendi görünüm Kurulum sürecinizin gösterirken .NET Framework Kurulum sürecini izlemek açıklar.|  
+|[Nasıl yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Sessizce başlatmak ve kendi görünüm Kurulum sürecinizin gösterirken .NET Framework Kurulum sürecini izlemek açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)

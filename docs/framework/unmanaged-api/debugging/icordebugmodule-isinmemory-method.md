@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f057896d9dd65a850c0b07e4084bc263e804d20
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d79a8b0c3c56ffe2b8f57ec26f5942ee0d681194
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187596"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory Yöntemi
 Bu modül yalnızca bellekte var olup olmadığını belirten bir değer alır.  
@@ -52,5 +52,3 @@ HRESULT IsInMemory(
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-
-

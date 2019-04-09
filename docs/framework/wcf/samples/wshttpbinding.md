@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Profile binding
 ms.assetid: 22d85b19-0135-4141-9179-a0e9c343ad73
-ms.openlocfilehash: 4e2a985fdca6c03a2df1f8657d8d809d77e83b19
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 4e79d294f91bcb21a01b1abd86737dbe48b9dc71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814230"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157189"
 ---
 # <a name="wshttpbinding"></a>WSHttpBinding
 Bu örnek, tipik bir hizmet ve Windows Communication Foundation (WCF) kullanan tipik bir istemciye uygulamak nasıl gösterir. Bu örnek, bir istemci konsol programı'nı (client.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı oluşur. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculator` matematik işlemlerinden sunan arabirimi (ekleme, çıkarma, çarpma ve bölme). İstemci verilen matematik işlemi ve hizmet yanıt sonucu zaman uyumlu istekleri yapar. İstemci etkinliği konsol penceresinde görünür.  
@@ -90,4 +90,3 @@ Press <ENTER> to terminate client.
 3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

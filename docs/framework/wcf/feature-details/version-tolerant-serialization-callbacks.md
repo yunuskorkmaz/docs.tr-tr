@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-ms.openlocfilehash: fdd9108417068204b6d7ec2e4cc9ae54a160d7fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da13f9989b427da047c4a94f77907847ed2ae4d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616354"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124637"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları
 Veri sözleşmesi programlama modeli tam sürüme dayanıklı serileştirme geri çağırma yöntemleri destekler, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> destek sınıfları.  
@@ -42,6 +42,7 @@ Veri sözleşmesi programlama modeli tam sürüme dayanıklı serileştirme geri
  [!code-vb[C_DataContract#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#9)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.OnSerializingAttribute>
 - <xref:System.Runtime.Serialization.OnSerializedAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>

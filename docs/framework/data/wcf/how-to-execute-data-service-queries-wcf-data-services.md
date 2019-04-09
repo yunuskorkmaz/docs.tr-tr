@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: aac0e4c71ae2752d4f56ae5eadb5f0a8d381d5fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b68595285eb5ec06be86c771733f7bb9036c9f21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154979"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Nasıl yapılır: Veri Hizmeti sorguları (WCF Veri Hizmetleri) yürütme
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] oluşturulan istemci veri hizmeti sınıfları kullanarak bir .NET Framework tabanlı istemci uygulamadan bir veri hizmetini sorgulama olanak tanır. Aşağıdaki yöntemlerden birini kullanarak sorgu yürütebilirsiniz:  
@@ -48,4 +48,5 @@ ms.locfileid: "54623293"
  [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersexplicit)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bir veri hizmeti sorgusuna sorgu seçenekleri ekleme](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+
+- [Nasıl yapılır: Veri Hizmeti Sorgusuna Sorgu Seçenekleri Ekleme](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)

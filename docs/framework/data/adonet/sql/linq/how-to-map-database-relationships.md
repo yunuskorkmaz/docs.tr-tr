@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Veritabanı ilişkileri eşleme'
+title: 'Nasıl yapılır: Veritabanı İlişkilerini Eşleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 907ed58e9828921585135f2319d0db9559b606d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152886"
 ---
-# <a name="how-to-map-database-relationships"></a>Nasıl yapılır: Veritabanı ilişkileri eşleme
+# <a name="how-to-map-database-relationships"></a>Nasıl yapılır: Veritabanı İlişkilerini Eşleme
 Her zaman aynı olacak herhangi bir veri ilişkileri varlık sınıfınızda özelliğine başvuruyor şifreleyebilirsiniz. Northwind örnek veritabanındaki gibi müşteriler genellikle, sipariş olduğundan her zaman bir ilişki yoktur modelinde müşterilerin ve siparişlerinin arasında.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tanımlayan bir <xref:System.Data.Linq.Mapping.AssociationAttribute> tür ilişkilerini temsil eden yardımcı olması için öznitelik. Bu öznitelik ile birlikte kullanılan <xref:System.Data.Linq.EntitySet%601> ve <xref:System.Data.Linq.EntityRef%601> türleri temsil eden bir veritabanındaki yabancı anahtar ilişkisi olması. Daha fazla bilgi için ilişkilendirme özniteliği bölümüne bakın. [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
@@ -54,5 +54,6 @@ Her zaman aynı olacak herhangi bir veri ilişkileri varlık sınıfınızda öz
  [!code-vb[DLinqCustomize#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Kod Düzenleyicisi'ni kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+
+- [Nasıl yapılır: Kod Düzenleyicisini Kullanarak Varlık Sınıflarını Özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
 - [LINQ to SQL Nesne Modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

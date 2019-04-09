@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme'
+title: 'Nasıl yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 3316f3b292f6a9597b62a802b489459ee2f0a952
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ec20068e2cc920048b2d831db75ea2b4deb3f888
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151456"
 ---
-# <a name="how-to-add-installers-to-your-service-application"></a>Nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme
+# <a name="how-to-add-installers-to-your-service-application"></a>Nasıl yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme
 Visual Studio hizmet uygulamalarınızla ilişkili kaynakları yükleyebilmek için Yükleme bileşenleri ile birlikte gelir. Yükleme bileşenleri olarak yüklendiği ve Hizmet Denetim Yöneticisi hizmetinin var olduğunu bilmek istiyorum sistemdeki tek tek bir hizmeti kaydedin. Bir hizmet uygulaması ile çalışırken, Özellikler penceresinde otomatik olarak uygun yükleyicileri projenize eklemek için bağlantıyı seçebilirsiniz.  
   
 > [!NOTE]
@@ -61,7 +61,8 @@ Visual Studio hizmet uygulamalarınızla ilişkili kaynakları yükleyebilmek i�
     >  Projenizdeki her ek hizmet için ek bir eklemelisiniz <xref:System.ServiceProcess.ServiceInstaller> projenin bileşen `ProjectInstaller` sınıfı. <xref:System.ServiceProcess.ServiceProcessInstaller> Üç adımda eklediğiniz bileşen bireysel hizmet yükleyiciler projedeki tüm ile birlikte çalışır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
-- [Nasıl yapılır: Başlangıç Hizmetleri](../../../docs/framework/windows-services/how-to-start-services.md)
-- [Nasıl yapılır: Hizmetler için güvenlik içeriği belirtme](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+
+- [Windows Hizmet Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Nasıl yapılır: Hizmetleri Yükleme ve Kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Nasıl yapılır: Hizmetleri Başlatma](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Nasıl yapılır: Hizmetler için Güvenlik İçeriği Belirtme](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

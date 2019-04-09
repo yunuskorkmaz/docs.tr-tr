@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9b434edc10a7c11d738bd3fc10402ef3f83d9dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134686"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes Yöntemi
 Uzak bir bilgisayarda çalışan belirtilen işlemdeki ortak dil çalışma zamanlarını (CLRs) numaralandırır.  
@@ -75,4 +75,5 @@ HRESULT EnumRuntimes (
  **.NET framework sürümleri:** 3.5 SP1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICoreClrDebugTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

@@ -1,15 +1,15 @@
 ---
-title: SQL-CLR özel tür eşlemeleri
+title: SQL-CLR Özel Tür Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: 36763be3cd4845fbbd027b448098d0dafb9e448a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140419"
 ---
-# <a name="sql-clr-custom-type-mappings"></a>SQL-CLR özel tür eşlemeleri
+# <a name="sql-clr-custom-type-mappings"></a>SQL-CLR Özel Tür Eşlemeleri
 SQLMetal komut satırı aracı, Object Relational Designer (O/R Tasarımcısı) kullandığınızda, ortak dil çalışma zamanı (CLR) ile SQL Server arasında eşleme türü otomatik olarak belirtilir.  
   
  Özelleştirilmiş hiçbir eşleme gerçekleştirildiğinde, bu araçlar varsayılan türü eşlemeleri açıklandığı atama [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md). Bu varsayılan alanından farklı eşlemeleri yazmak istiyorsanız, bazı türü eşlemelerini özelleştirme yapmanız gerekir.  
@@ -32,5 +32,6 @@ SQLMetal komut satırı aracı, Object Relational Designer (O/R Tasarımcısı) 
  Ne zaman veritabanı değişikliklerinizi DBML dosyanızı o değişiklikleri yansıtacak şekilde güncelleştirmeniz gerekir. Yapmanın bir yolu otomatik olarak yeni bir DBML dosyasının oluşturulacağı budur ve tür eşlemesi özelleştirmelerinizi yeniden yapın. Alternatif olarak, yeni DBML dosyasını ve özelleştirilmiş DBML dosyanızı arasındaki farkları karşılaştırmak ve özel DBML dosyanızı el ile veritabanı değişikliği yansıtacak şekilde güncelleştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [LINQ to SQL’de Kod Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

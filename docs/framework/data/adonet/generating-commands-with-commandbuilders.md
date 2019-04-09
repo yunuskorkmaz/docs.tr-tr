@@ -1,18 +1,18 @@
 ---
-title: CommandBuilders ile komut oluşturma
+title: CommandBuilders ile Komut Oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: f2aff8d5d8779e3c99644238ae54d30a13f00304
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42463249a6636e625729f90fc31fa7589ef7ef74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120035"
 ---
-# <a name="generating-commands-with-commandbuilders"></a>CommandBuilders ile komut oluşturma
+# <a name="generating-commands-with-commandbuilders"></a>CommandBuilders ile Komut Oluşturma
 Zaman `SelectCommand` gibi bir metinsel komutu kullanıcıdan alan bir sorgu aracı, uygun belirlemek mümkün olmayabilir özelliği çalışma zamanında dinamik olarak belirtilen `InsertCommand`, `UpdateCommand`, veya `DeleteCommand` tasarım zamanında. Varsa, <xref:System.Data.DataTable> eşler veya oluşturulan bir tek veritabanı tablosundan avantajlarından yararlanabilirsiniz <xref:System.Data.Common.DbCommandBuilder> otomatik olarak oluşturmak için nesne `DeleteCommand`, `InsertCommand`, ve `UpdateCommand` , <xref:System.Data.Common.DbDataAdapter>.  
   
  Bir en düşük gereksinim ayarlamalısınız `SelectCommand` sırayla çalışması otomatik komut oluşturma özelliği. Tablo şeması alınamıyor tarafından `SelectCommand` özelliği otomatik olarak oluşturulan bir INSERT, UPDATE ve DELETE deyimleri söz dizimi belirler.  
@@ -113,6 +113,7 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Komut Yürütme](../../../../docs/framework/data/adonet/executing-a-command.md)
 - [DbConnection, DbCommand ve DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)

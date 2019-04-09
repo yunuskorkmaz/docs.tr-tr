@@ -11,18 +11,16 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: 5548292480f07fa192985800931f9d0262f2b791
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137442"
 ---
 # <a name="optimizing-performance-object-behavior"></a>Performansı iyileştirme: Nesne Davranışı
 İç davranışını anlamak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nesneleri işlevi ve performans arasında doğru avantajları yapmanıza yardımcı olur.  
-  
 
-  
 <a name="Not_Removing_Event_Handlers"></a>   
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Olay işleyicileri nesneler üzerinde nesneleri canlı olabilir  
  Bir nesne için kendi olay geçirdiği temsilci etkili bir şekilde bu nesneye bir başvurudur. Bu nedenle, olay işleyicileri nesneleri canlı beklenenden daha uzun tutabilirsiniz. Bir nesnenin olayına dinlemek için kayıtlı olan bir nesne temizleme gerçekleştirirken nesneyi serbest bırakmadan önce bu temsilciyi kaldırmak için gereklidir. Gereksiz nesneleri canlı tutma uygulamanın bellek kullanımı artırır. Bu, özellikle nesne mantıksal ağaç veya görsel ağaç kökünde olduğunda geçerlidir.  
@@ -67,7 +65,7 @@ ms.locfileid: "57352691"
   
  Dondurma bir <xref:System.Windows.Freezable> değişiklik bildirimleri koruma şirket kaynakları harcaması artık gerektiğinden, performansı geliştirebilir. Aşağıdaki tablo basit bir boyutunu gösterir <xref:System.Windows.Media.SolidColorBrush> olduğunda kendi <xref:System.Windows.Freezable.IsFrozen%2A> özelliği `true`, edilmediğinde karşılaştırıldığında. Bu uygulama için bir fırça varsayar <xref:System.Windows.Shapes.Shape.Fill%2A> on özelliği <xref:System.Windows.Shapes.Rectangle> nesneleri.  
   
-|**State**|**Boyutu**|  
+|**Durum**|**Boyut**|  
 |---------------|--------------|  
 |Dondurulmuş <xref:System.Windows.Media.SolidColorBrush>|212 bayt|  
 |Olmayan dondurulmuş <xref:System.Windows.Media.SolidColorBrush>|972 bayt|  
@@ -111,6 +109,7 @@ ms.locfileid: "57352691"
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
 - [Uygulama Performansını Planlama](planning-for-application-performance.md)
 - [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)

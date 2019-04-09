@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-ms.openlocfilehash: 351974786b9f4748499279d29202e2051d9268fd
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: a87542513ffeeec7efc526d4218f921d1b7579a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184853"
 ---
 # <a name="xarguments-directive"></a>x:Arguments Yönergesi
 Paketleri yapım bağımsız XAML varsayılan olmayan bir oluşturucu nesne öğe bildiriminde ya da bir fabrika yöntemi nesne bildirimi.  
@@ -43,7 +43,7 @@ Paketleri yapım bağımsız XAML varsayılan olmayan bir oluşturucu nesne öğ
 |`oneOrMoreObjectElements`|Yedekleme varsayılan olmayan oluşturucu veya Fabrika yöntemine geçirilecek bağımsız değişkenleri belirten bir veya daha fazla nesne öğeler.<br /><br /> Tipik kullanım gerçek bağımsız değişken değerlerini belirtmek için nesne öğelerini başlatma metinde kullanmaktır. Örnekler bölümüne bakın.<br /><br /> Öğelerin sırasını büyük/küçük harf önemlidir. XAML türleri sırayla, türlerinin eşleşmesi ve yedekleme Oluşturucusu veya Fabrika yöntemi aşırı yüklemesini sırasını yazın.|  
 |`methodName`|Tüm işlemelisiniz Üreteç yöntemi adını `x:Arguments` bağımsız değişkenler.|  
   
-## <a name="dependencies"></a>Bağımlılıkları  
+## <a name="dependencies"></a>Bağımlılıklar  
  `x:FactoryMethod` kapsam ve davranışını değiştirebilirsiniz burada `x:Arguments` uygular.  
   
  Hayır ise `x:FactoryMethod` belirtilen `x:Arguments` yedekleme oluşturucular alternatif (varsayılan olmayan) imzalar için geçerlidir.  
@@ -107,5 +107,6 @@ public Food TryLookupFood(string name)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama](defining-custom-types-for-use-with-net-framework-xaml-services.md)
 - [XAML'ye Genel Bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md)

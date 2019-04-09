@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: aa91646a46807f26053b3d0df28c412bcc5a2f21
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3bbb2e046054e35cf01fe223318a3bf560ef7253
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180732"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET kod örnekleri
 Bu konudaki kod listeleri aşağıdaki ADO.NET teknolojileri kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir:
@@ -27,13 +27,13 @@ Bu konudaki kod listeleri aşağıdaki ADO.NET teknolojileri kullanarak bir veri
 
 - ADO.NET varlık çerçevesi:
 
-  - [LINQ to Entities](#linq-to-entities)
+  - [LINQ - Varlıklar](#linq-to-entities)
 
   - [Türü belirlenmiş ObjectQuery](#typed-objectquery)
 
   - [EntityClient](#entityclient) (`System.Data.EntityClient`)
 
-- [LINQ to SQL](#linq-to-sql)
+- [LINQ - SQL](#linq-to-sql)
 
 ## <a name="adonet-data-provider-examples"></a>ADO.NET veri sağlayıcı örneği
 Aşağıdaki kod listeleri ADO.NET veri sağlayıcıları kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir. Veriler içerisinde geri dönmemiş ise bir `DataReader`. Daha fazla bilgi için [alma verileri kullanarak bir DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
@@ -344,9 +344,10 @@ End Class
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Veri uygulamaları oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [Veri Uygulamaları Oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
 - [Bir varlık veri modeli (varlık çerçevesi görevler) sorgulama](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
 - [Nasıl yapılır: Anonim türdeki nesneleri döndüren bir sorgu yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: c4e238cbc3b99209e88bb56c73097f25e56ccdfb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2af89515ffdf6caa6281082721f713107f08a089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181252"
 ---
 # <a name="ws-reliable-session"></a>WS Güvenilir Oturum
 Bu örnek, güvenilir oturumlar kullanımını gösterir. Güvenilir oturumlar, güvenilir Mesajlaşma ve oturumlar için destek sağlıyor. Güvenilir Mesajlaşma iletişimi hatasında yeniden deneme sayısı ve teslim Güvenceleri gibi iletilerin sıralı varış belirtilmesini sağlar. Oturumlarının çağrıları arasında istemcilerin zachovat stav relace Örnek oturumları, istemci durum koruma için uygular ve sıralı teslim Güvenceleri belirtir.  
@@ -84,4 +84,3 @@ Press <ENTER> to terminate client.
 3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

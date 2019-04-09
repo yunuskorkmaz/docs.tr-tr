@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164378"
 ---
 # <a name="specifying-client-run-time-behavior"></a>İstemci Çalışma Zamanı Davranışını Belirtme
 Windows Communication Foundation (WCF) Hizmetleri gibi Windows Communication Foundation (WCF) istemciler, istemci uygulaması uyacak şekilde çalışma zamanı davranışını değiştirmek için yapılandırılabilir. Üç öznitelikler, istemci çalışma zamanı davranışını belirtmek için kullanılabilir. Çift yönlü istemci geri çağırma nesnelerinin kullanabileceğiniz <xref:System.ServiceModel.CallbackBehaviorAttribute> ve <xref:System.ServiceModel.Description.CallbackDebugBehavior> kendi çalışma zamanı davranışını değiştirmek için öznitelikler. Başka bir öznitelik <xref:System.ServiceModel.Description.ClientViaBehavior>, hemen bir ağ hedef mantıksal hedef ayırmak için kullanılabilir. Ayrıca, çift yönlü istemci geri çağırma türlerini bazı hizmet tarafı davranışları kullanabilirsiniz. Daha fazla bilgi için [hizmet çalışma zamanı davranışını belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -44,4 +44,5 @@ Windows Communication Foundation (WCF) Hizmetleri gibi Windows Communication Fou
  Kullanabileceğiniz <xref:System.ServiceModel.Description.ClientViaBehavior> davranışını taşıma kanalının oluşturulmalıdır Tekdüzen Kaynak tanımlayıcısını belirtin. Anlık ağ hedef iletinin hedeflenen işlemci olmadığında bu davranışı kullanın. Bu çoklu atlamalı yapılan görüşmeler arama uygulaması ultimate hedef emin değilseniz ne zaman veya zaman sağlar hedef `Via` üst bilgisi bir adres değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hizmet Çalışma Zamanı Davranışını Belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

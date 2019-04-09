@@ -2,12 +2,12 @@
 title: Tek Yönlü
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: e4b8a805fdbe4f330496233d5234abc0169b8c6e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 53718b6523bb76e30233540323d5f4f87d466fed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131332"
 ---
 # <a name="one-way"></a>Tek Yönlü
 Bu örnek, bir hizmet sözleşmesi ile tek yönlü hizmet işlemleri gösterir. İstemci, hizmet işlemlerini çift yönlü hizmet işlemleri ile olduğu gibi tamamlanması için beklemez. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve kullandığı `wsHttpBinding` bağlama. Bu örnekte, alan ve istekleri işleyen hizmet gözlemleyin sağlamak için şirket içinde barındırılan bir konsol uygulaması hizmetidir. İstemci ayrıca bir konsol uygulamasıdır.  
@@ -105,4 +105,3 @@ Processing Divide(22,7) - result: 3.14285714285714
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
-  

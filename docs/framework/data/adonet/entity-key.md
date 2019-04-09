@@ -1,15 +1,15 @@
 ---
-title: Varlık anahtarı
+title: entity key
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 0c3a809884fc7b7c1f188af9881f784527fa87ba
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140120"
 ---
-# <a name="entity-key"></a>Varlık anahtarı
+# <a name="entity-key"></a>entity key
 Bir *Varlık anahtarı* olduğu bir [özelliği](../../../../docs/framework/data/adonet/property.md) veya özellikleri kümesi bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) kimliğini belirlemek için kullanılır. Bir varlık anahtarı oluşturan özelliklerini tasarım zamanında seçilir. Varlık anahtar özelliklerin değerlerini içinde bir varlık türü örneği benzersiz şekilde tanımlamalıdır bir [varlık kümesi](../../../../docs/framework/data/adonet/entity-set.md) çalışma zamanında. Bir varlık kümesindeki örneklerin benzersizliği garanti etmek için bir varlık anahtarı oluşturan özellikleri seçilmelidir.  
   
  Bir varlık anahtarı için bir özellikler kümesini için gereksinimleri şunlardır:  
@@ -40,5 +40,6 @@ Bir *Varlık anahtarı* olduğu bir [özelliği](../../../../docs/framework/data
  Kullanarak `Name` ve `Address` çünkü aynı adlı iki yazarları aynı adresindeki live olasılığının düşük olduğu varlık için makul bir seçim anahtardır. Ancak, bu seçenek bir varlık anahtarı için bir varlık kümesindeki benzersiz varlık anahtarları kesinlikle garanti etmez. Bir özellik gibi ekleme `AuthorId`, benzersiz şekilde tanımlamak için kullanılabilir bir yazar önerilen bu durumda.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

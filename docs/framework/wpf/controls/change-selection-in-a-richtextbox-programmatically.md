@@ -8,12 +8,12 @@ helpviewer_keywords:
 - changing selections in a text box [WPF]
 - changing selections in a RichTextBox [WPF]
 ms.assetid: f1213205-1ad7-4cd2-b115-460173cc5aa3
-ms.openlocfilehash: a85dc4baa8a59d25f577996c541a422bbe2af24e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b8acfe7cde1fe5dae96cd6324f75c5b146be9ec9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096233"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>RichTextBox İçinde Program Aracılığıyla Seçimi Değiştirme
 Bu örnek program aracılığıyla geçerli seçimi değiştirme işlemini gösterir. bir <xref:System.Windows.Controls.RichTextBox>. Kullanıcı arabirimini kullanarak içerik kullanıcı seçili gibi bu seçim aynıdır.  
@@ -30,5 +30,6 @@ Bu örnek program aracılığıyla geçerli seçimi değiştirme işlemini göst
  [!code-vb[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/ChangeSelectionProgrammaticaly.xaml.vb#changeselectionprogrammaticalycodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [RichTextBox Genel Bakış](richtextbox-overview.md)
-- [TextBox Genel Bakış](textbox-overview.md)
+
+- [RichTextBox Genel Bakışı](richtextbox-overview.md)
+- [TextBox Genel Bakışı](textbox-overview.md)

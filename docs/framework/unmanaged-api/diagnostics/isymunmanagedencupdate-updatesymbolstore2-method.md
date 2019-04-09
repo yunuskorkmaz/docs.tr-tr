@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a4bcc4e6994f06fabf69e5548ad6922343b7dd5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 82f2f335299cfd3041dcecc7d176cb77ce54ae96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172139"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 Yöntemi
 Satır bilgilerini gereksinimlerini karşılayan program veritabanı (PDB) akışından değiştirilmiş işlevleri atlamak bir derleyici sağlar. Doğru satır bilgilerini eski PDB satır bilgileri ve tüm satırları işlevi için bir delta ile belirlenebilir.  
@@ -53,4 +53,5 @@ HRESULT UpdateSymbolStore2(
  **Üst bilgi:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ISymUnmanagedENCUpdate Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

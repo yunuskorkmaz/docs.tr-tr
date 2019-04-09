@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: WPF içinde Win32 denetimini barındırma'
+title: 'İzlenecek yol: WPF içinde Win32 Denetimini Barındırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,18 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160699"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>İzlenecek yol: WPF içinde Win32 denetimini barındırma
+# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>İzlenecek yol: WPF içinde Win32 Denetimini Barındırma
 Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir ortam sağlar. Win32 kodu önemli ölçüde yatırımınız varsa, ancak bu en az bazılarını yeniden daha etkili olabilir, söz konusu kodu WPF uygulamanızda yerine tamamen yeniden yazın. WPF WPF sayfasında bir Win32 penceresinde barındırma için basit bir mekanizma sağlar.  
   
  Bu konu size uygulama [örnek WPF içinde Win32 ListBox denetimi barındırma](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), konakları Win32 liste kutusu denetimi. Bu genel yordam herhangi bir Win32 penceresinde barındırma için genişletilebilir.  
-  
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Gereksinimler  
  Bu konu, hem WPF hem de Windows API programlama temel olarak bilindiğini varsayar. WPF programlama temel bir giriş için bkz: [Başlarken](../getting-started/index.md). Windows API programlamaya giriş için çok sayıda kitaplardan herhangi birine konuyla ilgili özellikle bkz *Windows programlama* Charles Petzold ile.  
@@ -154,6 +153,7 @@ Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir
  Son olarak, ayarlama `handled` için `true` iletinin işlendiğini göstermek için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Interop.HwndHost>
 - [WPF ve Win32 Birlikte Çalışması](wpf-and-win32-interoperation.md)
-- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [İzlenecek yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Metot tabanlı sorgu söz dizimi örnekleri: Partitioning (LINQ'
+title: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Partitioning (LINQ'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a582c53f-f203-44ae-a797-d7f169a4fbb5
-ms.openlocfilehash: 05ca7defa3e070933d4c24f105fdb6fec423dc71
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: bfc26835258606ff20dd066ecb6e4c874d0be2f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116720"
 ---
-# <a name="method-based-query-syntax-examples-partitioning-linq"></a>Metot tabanlı sorgu söz dizimi örnekleri: Partitioning (LINQ
+# <a name="method-based-query-syntax-examples-partitioning-linq"></a>Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Partitioning (LINQ
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Skip%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>, <xref:System.Linq.Enumerable.Take%2A>, ve <xref:System.Linq.Enumerable.TakeWhile%2A> sorgulamak için yöntemleri bir <xref:System.Data.DataSet> sorgu ifadesi söz dizimini kullanarak.  
   
  `FillDataSet` Bu örneklerde kullanılan yöntemi belirtilen [verileri bir DataSet içine Yükleniyor](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
@@ -71,6 +71,7 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
  [!code-vb[DP LINQ to DataSet Examples#TakeWhileSimple_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#takewhilesimple_mq)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataSet’e Veri Yükleme](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Standart sorgu işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

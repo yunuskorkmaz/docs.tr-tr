@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115082"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32 ve WPF Arasında İleti Döngüleri Paylaşma
 Bu konu ile birlikte çalışabilirlik için bir ileti döngüsü uygulanacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], varolan kullanılarak ileti döngüsü <xref:System.Windows.Threading.Dispatcher> veya üzerinde ayrı bir ileti döngüsü oluşturarak [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodunuzun tarafında.  
@@ -62,6 +62,7 @@ Bu konu ile birlikte çalışabilirlik için bir ileti döngüsü uygulanacağı
  Kullanarak kancaları eklediyseniz klavye havuzuna giden bir ileti için HWND gönderilmeyebilir <xref:System.Windows.Interop.HwndSource.AddHook%2A> yöntemi. İletiyi doğrudan gönderilen ileti pompası düzeyinde işlenen `DispatchMessage` işlevi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
 - [WPF ve Win32 Birlikte Çalışması](wpf-and-win32-interoperation.md)

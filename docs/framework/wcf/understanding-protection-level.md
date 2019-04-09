@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 8ca003257f9e16075262a715aec4941d9aa4073b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096055"
 ---
 # <a name="understanding-protection-level"></a>Koruma Düzeylerini Anlama
 `ProtectionLevel` Özelliği bulunan birçok farklı sınıflarında gibi <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> sınıfları. Özellik, bir ileti bölümü (veya tam) nasıl korunduğunu denetler. Bu konuda, Windows Communication Foundation (WCF) özelliği ve nasıl çalıştığı açıklanmaktadır.  
@@ -28,11 +28,11 @@ ms.locfileid: "54564639"
   
 -   Herhangi bir ileti bölümü için üç temel koruma düzeyleri vardır. (Her yerde gerçekleşir) özelliği, birine ayarlanmış <xref:System.Net.Security.ProtectionLevel> sabit listesi değerleri. Koruma artan düzende içerirler:  
   
-    -   `None`.  
+    -   `None`biçimindeki telefon numarasıdır.  
   
-    -   `Sign`. Korunan bölümün dijital olarak imzalanır. Bu, herhangi bir korumalı iletiyi bölümüyle değiştirme algılama sağlar.  
+    -   `Sign`biçimindeki telefon numarasıdır. Korunan bölümün dijital olarak imzalanır. Bu, herhangi bir korumalı iletiyi bölümüyle değiştirme algılama sağlar.  
   
-    -   `EncryptAndSign`. İleti bölümü, kapatmadan önce gizlilik emin olmak için şifrelenir.  
+    -   `EncryptAndSign`biçimindeki telefon numarasıdır. İleti bölümü, kapatmadan önce gizlilik emin olmak için şifrelenir.  
   
 -   Yalnızca koruma gereksinimlerini ayarlayabilirsiniz *uygulama verileri* bu özellik. Örneğin, WS-Addressing üst bilgileri altyapı verilerdir ve bu nedenle, etkilenmez `ProtectionLevel`.  
   
@@ -95,6 +95,7 @@ ms.locfileid: "54564639"
  İstemci çağırdığında `Price` yöntemi, bir özel durum, hizmetten bir yanıt aldığında atar. İstemci belirttiğinde bu kaynaklanır bir `ProtectionLevel` üzerinde `ServiceContractAttribute`, ve bu nedenle varsayılan istemci kullanır (<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>) dahil olmak üzere tüm yöntemleri için `Price` yöntemi. Ancak değerini kullanarak hizmeti döndürür <xref:System.Net.Security.ProtectionLevel.Sign> hizmet sözleşmesi ayarlamak, koruma düzeyi içeren tek bir yöntem tanımladığından düzey <xref:System.Net.Security.ProtectionLevel.Sign>. Bu durumda, istemci hizmetinden gelen yanıt doğrulanırken bir hata atar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>
@@ -103,6 +104,6 @@ ms.locfileid: "54564639"
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
 - <xref:System.Net.Security.ProtectionLevel>
 - [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)
-- [Nasıl yapılır: ProtectionLevel özelliğini ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [İleti Anlaşmaları Kullanma](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [İleti Sözleşmeleri Kullanılıyor](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

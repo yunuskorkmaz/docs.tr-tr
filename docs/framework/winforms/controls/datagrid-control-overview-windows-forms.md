@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189319"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid Denetimine Genel Bakış (Windows Forms)
 > [!NOTE]
@@ -140,6 +140,7 @@ Aşağıdaki çizim DataGrid denetiminde bulunan nesneleri gösterir.
  Ortak yanı sıra gibi olayları kontrol <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter>, ve <xref:System.Windows.Forms.DataGrid.Scroll>, <xref:System.Windows.Forms.DataGrid> denetimi, düzenleme ve gezinti kılavuzda ile ilişkili olayları destekler. <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> Özellik, hangi hücresi seçili belirler. <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> Olayı kullanıcı yeni bir hücre geçtiğinde oluşturulur. Kullanıcı yeni bir tablo üst/alt ilişkilerini gittiğinde <xref:System.Windows.Forms.DataGrid.Navigate> olayı oluşturulur. <xref:System.Windows.Forms.DataGrid.BackButtonClick> Olayı, kullanıcı bir alt tabloda görüntülerken kullanıcı geri düğmesine tıkladığında oluşturulur ve <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> olayı Göster/Gizle üst satırları simgesine tıklandığında oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataGrid Denetimi](datagrid-control-windows-forms.md)
 - [Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Nasıl yapılır: Windows Forms DataGrid Denetimine Tablo ve Sütun Ekleme](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

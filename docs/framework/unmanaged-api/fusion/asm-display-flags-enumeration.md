@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0871a06c6e27089d9e8fea6726d1d7b37fb75120
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbcff46b1932f3293fba4fda922e78f3b9ac37b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148856"
 ---
 # <a name="asmdisplayflags-enumeration"></a>ASM_DISPLAY_FLAGS Numaralandırması
 Sürüm, derleme, kültür, imza ve benzeri, derlemenin görünen adı tarafından alınabilir gösterir [Iassemblyname::getdisplayname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md) yöntemi.  
@@ -64,5 +64,6 @@ typedef enum {
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion Sabit Listeleri](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Fusion Numaralandırmaları](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

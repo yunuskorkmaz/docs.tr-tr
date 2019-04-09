@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Tasarım zamanında Windows Forms WPF içeriği atama'
+title: "İzlenecek yol: Windows Forms'da Tasarım Zamanında WPF İçeriği Atama"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 364cfe521a1e141bdfcfb3cfc47170714d010a87
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 781eaaabb7306018366450c013c227fe5a1fef78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108686"
 ---
-# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Tasarım zamanında Windows Forms WPF içeriği atama
+# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Forms'da Tasarım Zamanında WPF İçeriği Atama
 Bu izlenecek yol, formu görüntülemek istediğiniz Windows Presentation Foundation (WPF) denetim türlerini seçmek nasıl gösterir. Projenize dahil tüm WPF denetim türlerini seçebilirsiniz.
 
  Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
@@ -97,6 +97,7 @@ Bu izlenecek yol, formu görüntülemek istediğiniz Windows Presentation Founda
 9. `elementHost2` Denetimi artık bir örneğini barındıran `UserControl1` türü.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Geçiş ve Birlikte Çalışabilirlik](../../wpf/advanced/migration-and-interoperability.md)

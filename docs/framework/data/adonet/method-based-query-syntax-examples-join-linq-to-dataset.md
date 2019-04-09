@@ -1,18 +1,18 @@
 ---
-title: 'Metot tabanlı sorgu söz dizimi örnekleri: Birleştirme (LINQ to DataSet)'
+title: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Birleştirme (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4fd5ed2c-b03a-4054-a3ed-3ddb380d7d9d
-ms.openlocfilehash: bfa163e11415a0e389f9d1ce0b0b847097328223
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 84bd5f48c993dc5b15104b70081f739a1bec2e5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152483"
 ---
-# <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>Metot tabanlı sorgu söz dizimi örnekleri: Birleştirme (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-join-linq-to-dataset"></a>Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Birleştirme (LINQ to DataSet)
 Birleştirme, birbiriyle gezilebilir hiçbir ilişki ilişkisel veritabanı tabloları gibi veri kaynakları hedef sorgularda önemli bir işlemdir. İki veri kaynaklarının bir birleştirme nesnelerin bir veri kaynağı ile bir veri kaynağındaki ortak bir özniteliği paylaşan nesnelerin ilişkidir. Daha fazla bilgi için [standart sorgu işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [standart sorgu işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Join%2A> sorgu yöntemine bir <xref:System.Data.DataSet> yöntemi sorgu söz dizimini kullanarak.  
@@ -43,6 +43,7 @@ Birleştirme, birbiriyle gezilebilir hiçbir ilişki ilişkisel veritabanı tabl
  [!code-vb[DP LINQ to DataSet Examples#JoinWithGroupedResults_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#joinwithgroupedresults_mq)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataSet’e Veri Yükleme](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Standart sorgu işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

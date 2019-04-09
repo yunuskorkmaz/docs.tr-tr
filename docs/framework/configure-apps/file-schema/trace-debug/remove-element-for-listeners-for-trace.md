@@ -1,5 +1,5 @@
 ---
-title: <remove> için <listeners> için <trace> Öğesi
+title: <remove> Öğe için <listeners> için <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: 5a6b94756cb1b451d40229674dd887dd9f84676b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: adf00394bc0bfe808836e74214003cd2078204e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164261"
 ---
 # <a name="remove-element-for-listeners-for-trace"></a>\<kaldırma > öğesi için \<dinleyicileri > için \<İzleme >
 Bir dinleyicisinden kaldırır **dinleyicileri** koleksiyonu.  
@@ -36,7 +36,7 @@ Bir dinleyicisinden kaldırır **dinleyicileri** koleksiyonu.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**Adı**|Gerekli öznitelik.<br /><br /> Dinleyiciyi kaldırmak için adını **dinleyicileri** koleksiyonu.|  
+|**name**|Gerekli öznitelik.<br /><br /> Dinleyiciyi kaldırmak için adını **dinleyicileri** koleksiyonu.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -71,6 +71,7 @@ Bir dinleyicisinden kaldırır **dinleyicileri** koleksiyonu.
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>

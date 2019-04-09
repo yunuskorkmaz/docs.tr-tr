@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: 354c524924794cd240a230e325a4f0eee58cdc50
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108764"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular
 Windows Forms ana bilgisayar Windows Forms denetimleri için optimize edilmiştir ancak ActiveX denetimlerini kullanmaya devam edebilirsiniz. ActiveX denetimlerini kullanan bir uygulamayı planlarken, aşağıdaki konuları göz önünde bulundurun:  
@@ -29,8 +29,9 @@ Windows Forms ana bilgisayar Windows Forms denetimleri için optimize edilmişti
     >  ActiveX denetiminin bir üyesinin adı içinde tanımlanan bir adla eşleşirse [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ActiveX denetim içeri Aktarıcı üye adı ile ön ek sonra **Ctl** oluşturduğunda, <xref:System.Windows.Forms.AxHost> türetilmiş sınıf. Örneğin, ActiveX denetiminizin adlı bir üyesi varsa **Düzen**, yeniden adlandırıldığında **CtlLayout** AxHost türetilen sınıfında çünkü **Düzen** olay içinde tanımlanmıştır [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](how-to-add-activex-controls-to-windows-forms.md)
-- [Kod erişimi güvenliği](../../misc/code-access-security.md)
-- [Denetimler ve programlanabilir nesneler çeşitli dillerde ve kitaplıklarda karşılaştırılan](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [Windows Forms’a Denetimler Yerleştirme](putting-controls-on-windows-forms.md)
+
+- [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](how-to-add-activex-controls-to-windows-forms.md)
+- [Kod Erişimi Güvenliği](../../misc/code-access-security.md)
+- [Çeşitli Dillerde ve Kitaplıklarda Karşılaştırılan Denetimler ve Programlanabilir Nesneler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
+- [Windows Formlarına Denetimler Koyma](putting-controls-on-windows-forms.md)
 - [Windows Forms Denetimleri](index.md)

@@ -1,18 +1,18 @@
 ---
-title: 'İstemci: Kanal fabrikaları ve kanallar'
+title: 'İstemci: Kanal Fabrikaları ve Kanallar'
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 71ed9f9cbef35d14597ce6452d65bfca994dc23e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfa5d2478d5c12f16c2d9531de02e1c868eab560
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166263"
 ---
-# <a name="client-channel-factories-and-channels"></a>İstemci: Kanal fabrikaları ve kanallar
+# <a name="client-channel-factories-and-channels"></a>İstemci: Kanal Fabrikaları ve Kanallar
 Bu konu, kanal fabrikaları ve kanallar oluşturulmasını açıklar.  
   
-## <a name="channel-factories-and-channels"></a>Kanal fabrikaları ve kanallar  
+## <a name="channel-factories-and-channels"></a>Kanal Fabrikaları ve Kanallar  
  Kanal fabrikaları kanallar oluşturmak için sorumludur. Kanal fabrikaları tarafından oluşturulan Kanallar, ileti göndermek için kullanılır. Bu Kanallar, katmandan ileti alma, gerekli işlemleri gerçekleştirip ve ardından katmana ileti gönderilirken sorumludur. Aşağıdaki grafikte, bu işlemi göstermektedir.  
   
  ![İstemci fabrikaları ve kanallar](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure2highlevelfactgoriesc.gif "wcfc_WCFChannelsigure2HIghLevelFactgoriesc")  
@@ -74,4 +74,5 @@ this.socket.SendTo(
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Geliştirme Kanalları](../../../../docs/framework/wcf/extending/developing-channels.md)

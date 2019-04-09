@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ListView denetimine sütun ekleme'
+title: 'Nasıl yapılır: Windows Forms ListView Denetimine Sütun Ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - columns [Windows Forms], adding to ListView controls
 - list views [Windows Forms], adding columns
 ms.assetid: 79174274-12ee-4a5d-80db-6ec02976d010
-ms.openlocfilehash: 4937c31da5dd54cb96090c573e7bdba7a0c7d834
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 59137deeb645fd50a7884c196e55317f776d9cf1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103345"
 ---
-# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>Nasıl yapılır: Windows Forms ListView denetimine sütun ekleme
+# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>Nasıl yapılır: Windows Forms ListView Denetimine Sütun Ekleme
 Ayrıntılar görünümünde <xref:System.Windows.Forms.ListView> denetimi, her bir liste öğesi için birden fazla sütun görüntüleyebilirsiniz. Her liste öğesi hakkında bilgi türlerinden kullanıcıya görüntülenecek sütunları kullanabilirsiniz. Örneğin, dosya adı, dosya türü, boyutu ve dosyanın en son değiştirildiği tarih dosyaların listesini görüntüleyebilirsiniz. Oluşturulduktan sonra sütun doldurma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Görüntü denetimiyle Windows sütunlardaki alt öğeleri Forms ListView denetiminde](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  
   
 ### <a name="to-add-columns-programmatically"></a>Program aracılığıyla sütunlar eklemek için  
@@ -29,6 +29,7 @@ Ayrıntılar görünümünde <xref:System.Windows.Forms.ListView> denetimi, her 
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ListView>
 - [ListView Denetimi](listview-control-windows-forms.md)
 - [ListView Denetimine Genel Bakış](listview-control-overview-windows-forms.md)

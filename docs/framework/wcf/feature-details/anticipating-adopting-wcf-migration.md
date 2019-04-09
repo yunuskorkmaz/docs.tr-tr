@@ -1,15 +1,15 @@
 ---
-title: "Windows Communication Foundation'ı benimsemeyi bekleme: Gelecekteki taşınmayı kolaylaştırma"
+title: "Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Geçişi Kolaylaştırma"
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 41deb6cb982e65b2af054840cdcb84e3d1db3451
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4492626c2cb0958f8aa79fa2b511d9aa9e90b16a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176390"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation'ı benimsemeyi bekleme: Gelecekteki taşınmayı kolaylaştırma
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Geçişi Kolaylaştırma
 Yeni ASP.NET uygulamalarını wcf'ye TAŞIMA daha kolay gelecekteki geçişini sağlamak için yukarıdaki öneriler ve bunun yanı sıra aşağıdaki önerileri uygulayın.  
   
 ## <a name="protocols"></a>Protokolleri  
@@ -125,4 +125,5 @@ throw new SoapException(
 -   Bir hizmetin kaynaklara erişim yetkisi vermek için ASP.NET 2.0 rol sağlayıcıları kullanmayı düşünün.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Communication Foundation'ı benimsemeyi bekleme: Gelecekteki tümleştirmeyi kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+
+- [Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

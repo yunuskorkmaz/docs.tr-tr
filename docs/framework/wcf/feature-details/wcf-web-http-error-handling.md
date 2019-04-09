@@ -2,12 +2,12 @@
 title: WCF Web HTTP Hata İşleme
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: c331d70a69740a9830cafb5cafdfcf1de14b541b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152704"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP Hata İşleme
 Windows Communication Foundation (WCF) Web HTTP hata işleme hataları, HTTP durum kodu belirtin ve dönüş hata ayrıntıları (örneğin, XML veya JSON) işlem olarak aynı biçimi kullanarak WCF Web HTTP hizmetinden döndürmenizi sağlar.  
@@ -50,6 +50,7 @@ Public string Operation2()
  <xref:System.ServiceModel.Web.WebFaultException> olan bir <xref:System.ServiceModel.FaultException> ve bu nedenle hata özel durum programlama modeli SOAP uç noktalarını kullanıma yanı sıra HTTP uç noktalarını web hizmetleri için kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [WCF Web HTTP Biçimlendirme](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
 - [Hataları Tanımlama ve Belirtme](../../../../docs/framework/wcf/defining-and-specifying-faults.md)

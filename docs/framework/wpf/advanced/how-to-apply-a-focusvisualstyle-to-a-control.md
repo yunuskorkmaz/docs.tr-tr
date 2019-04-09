@@ -5,12 +5,12 @@ helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-ms.openlocfilehash: c4b379d3c57b6d0ae29952c23a35d7cc2cdf7f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133555"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Nasıl yapılır: Denetime FocusVisualStyle Uygulama
 Bu örnek nasıl odak görsel stili kaynakları oluşturup bir denetime stil uygulama gösterir kullanarak <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> özelliği.  
@@ -27,6 +27,7 @@ Bu örnek nasıl odak görsel stili kaynakları oluşturup bir denetime stil uyg
  Odak görsel stilleri kullanılmalıdır tutarlı bir şekilde bir tema veya bir kullanıcı Arabirimi odaklanabilir her öğe için farklı bir kullanmak yerine. Ayrıntılar için bkz [denetimleri ve FocusVisualStyle odak için stil oluşturma](styling-for-focus-in-controls-and-focusvisualstyle.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)
 - [Denetimlerde Odak için Stil Oluşturma ve FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)

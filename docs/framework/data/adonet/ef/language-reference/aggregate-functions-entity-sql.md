@@ -2,12 +2,12 @@
 title: Toplama işlevleri (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: e606d0e355bb715cfa0536ad9e33f08f5f692951
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104929"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Toplama işlevleri (varlık SQL)
 Toplama, bir skaler bir koleksiyona bir grup işleminin bir parçası olarak basit bir dil yapıdır. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iki biçimde toplamlar gelir:  
@@ -43,4 +43,5 @@ Toplama, bir skaler bir koleksiyona bir grup işleminin bir parçası olarak bas
  WHERE yan tümcesi ifade görünür olur aynı ad çözümleme kapsamı kullanarak GROUP BY yan tümcesinde kullanılan ifadeler değerlendirilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

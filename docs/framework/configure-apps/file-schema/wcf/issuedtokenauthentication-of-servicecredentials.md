@@ -2,12 +2,12 @@
 title: <issuedTokenAuthentication> , <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: c195791250831897b8bc9d09782d17609272e146
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d093b45269b230b4ff074d07a66290ab09592f60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178574"
 ---
 # <a name="issuedtokenauthentication-of-servicecredentials"></a>\<ServiceCredentials >, \<issuedTokenAuthentication >
 Bir hizmet kimlik bilgisi olarak verilen özel bir simge belirtir.  
@@ -67,7 +67,7 @@ Bir hizmet kimlik bilgisi olarak verilen özel bir simge belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Hizmet ve istemci kimlik doğrulama ile ilgili ayarlarda kullanılan kimlik bilgisini belirtir.|  
+|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Hizmet ve istemci kimlik doğrulama ile ilgili ayarlarda kullanılan kimlik bilgisini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Verilen belirteç senaryo üç aşamadan oluşur. Bir istemci bir hizmeti erişmeye ilk aşamada, başvurulan bir *güvenli belirteç hizmeti*. Güvenli belirteç hizmeti daha sonra istemci kimliğini doğrular ve bundan sonra istemci genellikle bir güvenlik onaylama işaretleme dili (SAML) belirteci bir belirteç verir. İstemci, ardından belirteci ile hizmetine döndürür. Belirteç için belirteç ve bu nedenle istemci kimliğini doğrulamak hizmet veren bir veri hizmeti inceler. Belirteç kimlik doğrulaması için sertifika hizmete güvenli belirteç hizmeti kullandığı olarak bilinmesi gerekir.  
@@ -90,6 +90,7 @@ Bir hizmet kimlik bilgisi olarak verilen özel bir simge belirtir.
  Bu yapılandırma öğesi kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>
@@ -98,4 +99,4 @@ Bir hizmet kimlik bilgisi olarak verilen özel bir simge belirtir.
 - <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

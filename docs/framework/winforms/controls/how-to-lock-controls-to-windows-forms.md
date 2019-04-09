@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Windows Forms denetimleri kilitleme'
+title: "Nasıl yapılır: Windows Forms'a Denetimleri Kilitleme"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: cff3b0a3ba547c15e7b1c896bde49931a6a3c742
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702652"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117929"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms denetimleri kilitleme
+# <a name="how-to-lock-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms'a Denetimleri Kilitleme
 Windows uygulamanızın kullanıcı arabirimini (UI) tasarlarken, böylece istemeden taşıdığınızda veya diğer özellikleri ayarlarken yeniden boyutlandırabilir, doğru konumlandırılır sonra denetimleri kilitleyebilirsiniz.  
   
  Ayrıca, kilitlemek ve tüm form üzerinde denetimleri pek çok denetimi olan formlarda yardımcı olan tek bir seferde kilidini veya tek denetimleri kilidini açabilirsiniz. Tüm denetimleri form üzerinde istediğiniz yere yerleştirdikten sonra bunları hatalı hareketini önlemek için tüm kilitleme.  
@@ -47,8 +47,9 @@ Windows uygulamanızın kullanıcı arabirimini (UI) tasarlarken, böylece istem
 1.  İçinde **özellikleri** penceresinde tıklayın **kilitli** özelliğini tıklatın ve `false`. (Adına çift özellik ayarı değiştirir.)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms Denetimleri](index.md)
-- [Windows Forms’da Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
+- [Windows Formlarında Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
 - [Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
-- [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [İşlevlere Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)

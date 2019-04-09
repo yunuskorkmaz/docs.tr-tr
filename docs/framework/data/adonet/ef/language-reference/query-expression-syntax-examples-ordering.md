@@ -1,18 +1,18 @@
 ---
-title: 'Sorgu ifadesi söz dizimi örnekleri: Sıralama'
+title: 'Sorgu İfadesi Söz Dizimi Örnekleri: Sıralama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
-ms.openlocfilehash: e7591e68490bf1ac35b56d5f483d1838a0a7d0c2
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ea9e7cb61facb880a050fbfae3aa9b07c03361fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164157"
 ---
-# <a name="query-expression-syntax-examples-ordering"></a>Sorgu ifadesi söz dizimi örnekleri: Sıralama
+# <a name="query-expression-syntax-examples-ordering"></a>Sorgu İfadesi Söz Dizimi Örnekleri: Sıralama
 Bu konudaki örnekler nasıl kullanılacağını gösteren `OrderBy` ve `OrderByDescending` sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://archive.codeplex.com/?p=msftdbprodsamples) sorgu ifadesi söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
   
  Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
@@ -59,4 +59,5 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren `OrderBy` ve `OrderBy
  [!code-vb[DP L2E Examples#ThenByDescendingSimple](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#thenbydescendingsimple)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

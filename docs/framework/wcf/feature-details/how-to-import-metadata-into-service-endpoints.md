@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Hizmet uç noktalarına meta verileri alma'
+title: 'Nasıl yapılır: Hizmet Uç Noktalarına Meta Verileri İçe Aktarma'
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: 5a6375f0a0b0f657401a1ac2254be942d4e618aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 05106295448c4682f07dd17295574ecdc39bf903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126873"
 ---
-# <a name="how-to-import-metadata-into-service-endpoints"></a>Nasıl yapılır: Hizmet uç noktalarına meta verileri alma
+# <a name="how-to-import-metadata-into-service-endpoints"></a>Nasıl yapılır: Hizmet Uç Noktalarına Meta Verileri İçe Aktarma
 Bu konu başlığında, tanımlanan hizmet meta verileri, hizmet uç noktaları bir koleksiyona içe aktarma ve açıklanmaktadır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Bu konuda hizmet ve çağrıları meta veri aktaran bir istemci uygulamanın nasıl oluşturulacağını gösterir `Add` hizmette yöntemi.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>Hizmet uç noktalarına meta verileri içeri aktarmak için  
@@ -38,5 +38,6 @@ Bu konu başlığında, tanımlanan hizmet meta verileri, hizmet uç noktaları 
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)

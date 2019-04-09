@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102784"
 ---
 # <a name="popup-overview"></a>Açılır Pencereye Genel Bakış
 <xref:System.Windows.Controls.Primitives.Popup> Denetimi geçerli uygulama penceresi göre belirlenen bir öğe veya Ekran koordinatı üzerinde gezinen ayrı bir pencerede içeriği görüntülemek için bir yol sağlar. Bu konu tanıtır <xref:System.Windows.Controls.Primitives.Popup> denetlemek ve kullanımı hakkında bilgi sağlar.  
-  
- 
-  
+
 <a name="What_Is_a_Popup_"></a>   
 ## <a name="what-is-a-popup"></a>Açılan pencere nedir?  
  A <xref:System.Windows.Controls.Primitives.Popup> denetim ekranda bir öğe veya göreli ayrı bir pencerede içeriğini görüntüler. Zaman <xref:System.Windows.Controls.Primitives.Popup> görünür durumda <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> özelliği `true`.  
@@ -36,13 +34,13 @@ ms.locfileid: "57358476"
 ## <a name="controls-that-implement-a-popup"></a>Açılan pencere uygulama denetimleri  
  Oluşturabileceğinizi <xref:System.Windows.Controls.Primitives.Popup> diğer denetimlere denetimleri. Aşağıdaki denetimler uygulamak <xref:System.Windows.Controls.Primitives.Popup> denetimi belirli kullanımlar için:  
   
--   <xref:System.Windows.Controls.ToolTip>. Bir öğe için bir araç ipucu oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ToolTip> ve <xref:System.Windows.Controls.ToolTipService> sınıfları. Daha fazla bilgi için [ToolTip genel bakışı](tooltip-overview.md).  
+-   <xref:System.Windows.Controls.ToolTip>biçimindeki telefon numarasıdır. Bir öğe için bir araç ipucu oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ToolTip> ve <xref:System.Windows.Controls.ToolTipService> sınıfları. Daha fazla bilgi için [ToolTip genel bakışı](tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Bir öğe için bir bağlam menüsü oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ContextMenu> denetimi. Daha fazla bilgi için [ContextMenu genel bakış](contextmenu-overview.md).  
+-   <xref:System.Windows.Controls.ContextMenu>biçimindeki telefon numarasıdır. Bir öğe için bir bağlam menüsü oluşturmak istediğiniz kullanırsanız <xref:System.Windows.Controls.ContextMenu> denetimi. Daha fazla bilgi için [ContextMenu genel bakış](contextmenu-overview.md).  
   
--   <xref:System.Windows.Controls.ComboBox>. Gösterilen veya gizlenen, kullanım olabilir bir açılan liste kutusu olan bir seçim denetim oluşturmak istiyorsanız <xref:System.Windows.Controls.ComboBox> denetimi.  
+-   <xref:System.Windows.Controls.ComboBox>biçimindeki telefon numarasıdır. Gösterilen veya gizlenen, kullanım olabilir bir açılan liste kutusu olan bir seçim denetim oluşturmak istiyorsanız <xref:System.Windows.Controls.ComboBox> denetimi.  
   
--   <xref:System.Windows.Controls.Expander>. İçerik görüntüleyen daraltılabilir bir alana sahip bir üstbilgi görüntüleyen bir denetimi oluşturmak istiyorsanız, kullanın <xref:System.Windows.Controls.Expander> denetimi. Daha fazla bilgi için [genişleticiye genel bakış](expander-overview.md).  
+-   <xref:System.Windows.Controls.Expander>biçimindeki telefon numarasıdır. İçerik görüntüleyen daraltılabilir bir alana sahip bir üstbilgi görüntüleyen bir denetimi oluşturmak istiyorsanız, kullanın <xref:System.Windows.Controls.Expander> denetimi. Daha fazla bilgi için [genişleticiye genel bakış](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Açılan pencere davranışı ve görünümü  
@@ -89,6 +87,7 @@ ms.locfileid: "57358476"
  <xref:System.Windows.Controls.Primitives.Popup> Denetimi bir başvuru tutar, <xref:System.Windows.Controls.Primitives.Popup.Child%2A> mantıksal alt öğe olarak içerik. Yeni pencere oluşturulduğunda, içeriğini <xref:System.Windows.Controls.Primitives.Popup> görsel alt pencerenin olur ve mantıksal alt kalan <xref:System.Windows.Controls.Primitives.Popup>. Buna karşılık, <xref:System.Windows.Controls.Primitives.Popup> mantıksal üst kalır, <xref:System.Windows.Controls.Primitives.Popup.Child%2A> içeriği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.Primitives.Popup>
 - <xref:System.Windows.Controls.Primitives.PopupPrimaryAxis>
 - <xref:System.Windows.Controls.Primitives.PlacementMode>

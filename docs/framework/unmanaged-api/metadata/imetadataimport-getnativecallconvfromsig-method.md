@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1002aa9e01fedaacf80622952bbba82caa7081c1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ef1ac83b383a9f6bbee7f55441d2abfcb081afa6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122752"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig Yöntemi
 Yerel bir belirtilen imza işaretçi tarafından temsil edilen yöntem için çağırma alır.  
@@ -57,6 +57,7 @@ HRESULT GetNativeCallConvFromSig (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.InteropServices.CallingConvention>
 - [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

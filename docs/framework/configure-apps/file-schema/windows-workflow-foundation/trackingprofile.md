@@ -3,12 +3,12 @@ title: <trackingProfile>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 154830ff-ddd3-4397-a3b5-5b334907777f
-ms.openlocfilehash: ff5bf2b4140665e7af8f8ec0103c32fe2e8a3142
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 747660df58604dd9384abefccb51ea665f97e2e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139678"
 ---
 # <a name="trackingprofile"></a>\<trackingProfile>
 İş akışı izleme katılımcı kayıtlarında izleme aboneliği oluşturmak için bir yapılandırma bölümünü temsil eder. Bir izleme profili çalışma zamanında bir iş akışı örneği durumu değiştiğinde yayılan iş akışı olayları abone olmak için izleme katılımcı izin izleme sorguları içerir. Tanımlanan sorguları izleme profilinde bölümü abonelik tarafından döndürülen olayları tür tanımlamak.  
@@ -126,6 +126,7 @@ ms.locfileid: "55267865"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>
 - <xref:System.Activities.Tracking.TrackingProfile>
 - [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

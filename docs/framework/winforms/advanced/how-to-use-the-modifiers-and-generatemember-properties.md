@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Değiştiricileri ve GenerateMember özelliklerini kullanma'
+title: 'Nasıl yapılır: Değiştiricileri ve GenerateMember Özelliklerini Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 277d2bdebc1d3b85efb70510b8acd34ed3a91087
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 612d323305c2dbd4698c6d687fb19ec36983bde4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143916"
 ---
-# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Nasıl yapılır: Değiştiricileri ve GenerateMember özelliklerini kullanma
+# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Nasıl yapılır: Değiştiricileri ve GenerateMember Özelliklerini Kullanma
 Bir Windows formunda bir bileşen yerleştirdiğinizde, iki özellik tasarım ortamı tarafından sağlanan: `GenerateMember` ve `Modifiers`. `GenerateMember` Özellik belirtir, Windows Form Tasarımcısı ' bileşeni için bir üye değişkeni oluşturur. `Modifiers` Özelliğidir, bu üye değişkenine atanan erişim değiştiricisi. Varsa değerini `GenerateMember` özelliği `false`, değerini `Modifiers` özelliğinin hiçbir etkisi.  
   
 > [!NOTE]
@@ -60,7 +60,8 @@ Bir Windows formunda bir bileşen yerleştirdiğinizde, iki özellik tasarım or
 >  Varsayılan olarak, Windows Form Tasarımcısı atar `private` (`Friend` Visual Basic) değiştirici gibi kapsayıcı denetimlere <xref:System.Windows.Forms.Panel>. Varsa tabanınızı <xref:System.Windows.Forms.UserControl> veya <xref:System.Windows.Forms.Form> bir kapsayıcı denetimi sahip devralınan denetimler ve formları yeni alt öğe kabul etmez. Temel bir kapsayıcı denetimin değiştiricisini çözümüdür `protected` veya `public`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Button>
 - [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)
-- [İzlenecek yol: Görsel devralmayı gösterme](walkthrough-demonstrating-visual-inheritance.md)
-- [Nasıl yapılır: Windows Form devralma](how-to-inherit-windows-forms.md)
+- [İzlenecek yol: Görsel Devralmayı Gösterme](walkthrough-demonstrating-visual-inheritance.md)
+- [Nasıl yapılır: Windows Formlarını Devralma](how-to-inherit-windows-forms.md)

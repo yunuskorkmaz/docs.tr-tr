@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 2435d5c4592de60e07b60f1bf749f2421c798535
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303625"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156513"
 ---
 # <a name="configuring-wcf-services"></a>WCF hizmetlerini yapılandırma
 
@@ -52,11 +52,12 @@ Tasarlanmış ve hizmet sözleşmeniz uygulanan sonra hizmetinizin yapılandırm
   
  [İstemci Derleme](../../../docs/framework/wcf/building-clients.md)  
   
- [Genişletilebilirliğe Genel Bakış](../../../docs/framework/wcf/introduction-to-extensibility.md)  
+ [Genişletilebilirlik Genel Bakış](../../../docs/framework/wcf/introduction-to-extensibility.md)  
   
  [Yönetim ve Tanılama](../../../docs/framework/wcf/diagnostics/index.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Kavramsal Genel Bakış](../../../docs/framework/wcf/conceptual-overview.md)
 - [WCF Özellik Ayrıntıları](../../../docs/framework/wcf/feature-details/index.md)

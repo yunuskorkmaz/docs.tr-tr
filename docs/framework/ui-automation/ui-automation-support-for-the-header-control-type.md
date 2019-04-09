@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Header control type
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
-ms.openlocfilehash: e7876bf593ba76fc0173734f8dc31b5ee43bfc23
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 8a7fe7fb8ec3e4b33ff4814859afe7d1d8de9c60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160127"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Başlık Denetim Türü İçin UI Otomasyon Desteği
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "57674364"
   
 |Denetim Görünüm|İçerik görünümü|  
 |------------------|------------------|  
-|Üstbilgi<br /><br /> -Headerıtem (1 veya daha fazla)|Hiçbiri|  
+|Üstbilgi<br /><br /> -Headerıtem (1 veya daha fazla)|Yok.|  
   
  Üstbilgi denetimleriyle denetim görünümünde her zaman 1 veya daha fazla alt sahip [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç.  
   
@@ -39,14 +39,14 @@ ms.locfileid: "57674364"
 ## <a name="required-ui-automation-properties"></a>Gerekli UI Otomasyon özellikleri  
  Aşağıdaki tabloda [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , değer veya tanımı üstbilgi denetimleri için özellikle ilgili özellikler. Hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri görmek [istemciler için UI Otomasyon özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Özelliği|Değer|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Özellik|Değer|Notlar|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Notlara bakın.|Bu özelliğin değerini bir uygulamadaki tüm denetimler arasında benzersiz olması gerekir.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Notlara bakın.|Tam denetimi içeren en dıştaki dikdörtgen.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Notlara bakın.|Sınırlayıcı bir dikdörtgen ise desteklenir. Değilse dikdörtgen içinde her bir nokta tıklanabilir ve özelleştirilmiş isabet sınaması, gerçekleştirmek sonra geçersiz kılmak ve tıklanabilir bir nokta sağlayamaz.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Notlara bakın.|Denetimin klavye odağı alamıyorsa, bu özelliği desteklemesi gerekir.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Birden fazla satır üst bilgisi ya da birden fazla sütun başlığı ise üstbilgi denetimi bir adı olmalıdır. Bu, üst bilgisi içindeki bilgileri tanımlar.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`.|Üstbilgi denetimleriyle statik etiket yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`biçimindeki telefon numarasıdır.|Üstbilgi denetimleriyle statik etiket yok.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Üstbilgi|Bu değer için aynı olan [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] çerçeveleri.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"başlığı"|Bu değer için aynı olan [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] çerçeveleri.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Yatay|Bir satır veya sütun başlığındaki olup bu özelliğin değeri üstbilgi denetimi - konumunu gösterir.|  
@@ -67,13 +67,14 @@ ms.locfileid: "57674364"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Olay|Destek|Notlar|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> özellik değişti olayı.|Gerekli|Hiçbiri|  
-|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> özellik değişti olayı.|Gerekli|Hiçbiri|  
-|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> özellik değişti olayı.|Gerekli|Hiçbiri|  
-|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Gerekli|Hiçbiri|  
-|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Gerekli|Hiçbiri|  
+|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> özellik değişti olayı.|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> özellik değişti olayı.|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> özellik değişti olayı.|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Gerekli|Yok.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Automation.ControlType.Header>
-- [UI Otomasyonu Denetim Türlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [UI Otomasyon Denetim Türlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [UI Otomasyonuna Genel Bakış](../../../docs/framework/ui-automation/ui-automation-overview.md)

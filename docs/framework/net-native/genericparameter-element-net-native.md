@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111663"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > öğesi (.NET yerel)
 İlke bir genel tür veya yöntemin parametre türü için geçerlidir.  
@@ -87,6 +87,7 @@ ms.locfileid: "55257778"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<Yöntem > öğesi](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<Türü > öğesi](../../../docs/framework/net-native/type-element-net-native.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

@@ -2,12 +2,12 @@
 title: Seri Hale Getirilebilir Türler
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 0fe29d2eb2b50d2515d71745bc062255dbfb60ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160855"
 ---
 # <a name="serializable-types"></a>Seri Hale Getirilebilir Türler
 Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> tüm herkese görünür türler seri hale getirir. Tüm ortak okuma/yazma özellikleri ve türünde alanlar serileştirilir.  
@@ -39,8 +39,9 @@ Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> t
  İşaretsiz türleri (olmadan türleri <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği) bu özniteliği olan türlerinden devraldığına; ancak tersi izin verilmez: öznitelik türleriyle işaretsiz türlerden devralamaz. Bu kural öncelikle'nın önceki sürümlerinde yazılan kod ile geriye dönük uyumluluk sağlamak için zorunlu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: fc6d6857e912ba14fca382eb49373655004534d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115316"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+'da Fırçalar ve Dolgulu Şekiller
 Kapalı şekil, bir elips ya da dikdörtgen gibi bir anahat ve bir iç oluşur. Ana hat kalem ile çizilir ve iç fırça ile doldurulur. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kapalı şekiller evin içindekiler doldurmak için birkaç fırça sınıfları sağlar: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, ve <xref:System.Drawing.Drawing2D.PathGradientBrush>. Bu sınıfların tümü devralınacak <xref:System.Drawing.Brush> sınıfı. Aşağıdaki çizimde, bir dikdörtgen ile düz fırça doldurulmuş ve elips tarama fırça ile doldurulmuş gösterir.  
@@ -77,10 +77,11 @@ Kapalı şekil, bir elips ya da dikdörtgen gibi bir anahat ve bir iç oluşur. 
  ![Şekil doldurulmuş](./media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
-- [Nasıl yapılır: Bir Windows formunda doldurulmuş dikdörtgen çizme](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [Nasıl yapılır: Bir Windows formunda doldurulmuş elips çizme](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [Nasıl yapılır: Bir Windows Formunda Doldurulmuş Dikdörtgen Çizme](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Nasıl yapılır: Bir Windows Formunda Doldurulmuş Elips Çizme](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

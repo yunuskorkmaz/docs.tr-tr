@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: c34a923d70c9079a3736732d6815df0329dfd557
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715903"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162730"
 ---
 # <a name="extending-dispatchers"></a>Dağıtıcıları Genişletme
 Dağıtıcıları çağırana geri göndererek arka plandaki kanal gelen iletileri çekerek ve bunları yöntem çağrıları uygulama kodunda içine çevirme yükümlü olursunuz. Dağıtıcı uzantıları, bu işleme değiştirmenize olanak sağlar.  İnceleme veya değiştirme iletileri ya da parametreler içeriğini ileti veya parametre denetçiler uygulayabilirsiniz.  İletileri işlemleri yönlendirilir veya başka bir işlevsellik sağlayan biçimini değiştirebilirsiniz.  
@@ -128,8 +128,9 @@ Dağıtıcıları çağırana geri göndererek arka plandaki kanal gelen iletile
 -   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> Özelliği inceleyin veya değiştirme parametreleri ve dönüş değerleri için kullanabileceğiniz bir özel parametre denetçisi eklemenizi sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Nasıl yapılır: Hizmette iletileri denetleme ve değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [Nasıl yapılır: Parametreleri inceleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [Nasıl yapılır: Enterprise uç noktalarını kilitleme](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [Nasıl yapılır: Hizmette İletileri Denetleme ve Değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
+- [Nasıl yapılır: Parametreleri İnceleme veya Değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

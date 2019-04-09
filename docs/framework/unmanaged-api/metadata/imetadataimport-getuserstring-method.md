@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d610385cfbfcb6a625e0e1893f97525f6f5430c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 358346af540c8b6b7ee1523e763bebbacf8cd2bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127822"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString Metodu
 Belirtilen meta veri belirteci tarafından temsil edilen sabit dizesini alır.  
@@ -61,5 +61,6 @@ HRESULT GetUserString (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

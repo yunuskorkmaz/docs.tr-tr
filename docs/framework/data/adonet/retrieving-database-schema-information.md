@@ -1,15 +1,15 @@
 ---
-title: Veritabanı şema bilgilerini alma
+title: Veritabanı Şema Bilgilerini Alma
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: 8a076ca792ee1b4b2194b778c51fefbd0bb19bd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 885d3c9ad61c9099c960ddb0c0f77fa8a98dbefa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133711"
 ---
-# <a name="retrieving-database-schema-information"></a>Veritabanı şema bilgilerini alma
+# <a name="retrieving-database-schema-information"></a>Veritabanı Şema Bilgilerini Alma
 Veritabanı şema bilgilerini alma şema bulma işlemi ile gerçekleştirilir. Şema bulma sağlayan yönetilen sağlayıcıları bulun ve veritabanı şeması hakkında bilgi döndürür olarak da bilinen istemek uygulamaları *meta verileri*, belirli bir veritabanı. Tablolar, sütunlar ve saklı yordamlar gibi farklı veritabanı şeması öğeleri şema koleksiyonları sunulur. Şema bilgileri kullanılan sağlayıcıya özgü çeşitli her şema koleksiyonu içerir.  
   
  Her .NET Framework yönetilen sağlayıcıları uygulama **GetSchema** yönteminde **bağlantı** sınıfı ve öğesinden döndürülen şema bilgileri **GetSchema**yöntemi gelen biçiminde bir <xref:System.Data.DataTable>. **GetSchema** döndürmek için şema koleksiyonu belirtme ve döndürülen bilgi tutarını sınırlamak için isteğe bağlı parametreler sağlayan aşırı yüklenmiş yöntem yöntemidir.  
@@ -22,7 +22,7 @@ Veritabanı şema bilgilerini alma şema bulma işlemi ile gerçekleştirilir. �
  [GetSchema ve Şema Koleksiyonları](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
  Açıklar **GetSchema** yöntemi ve nasıl, almak ve şema bilgilerini veritabanından kısıtlamak için kullanılabilir.  
   
- Şema kısıtlamaları  
+ Şema Kısıtlamaları  
  İle kullanılan şema kısıtlamaları açıklamaktadır **GetSchema**.  
   
  [Ortak Şema Koleksiyonları](../../../../docs/framework/data/adonet/common-schema-collections.md)  
@@ -72,5 +72,6 @@ Veritabanı şema bilgilerini alma şema bulma işlemi ile gerçekleştirilir. �
  Açıklar **GetSchemaTable** yöntemi <xref:System.Data.SqlClient.SqlDataReader> sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

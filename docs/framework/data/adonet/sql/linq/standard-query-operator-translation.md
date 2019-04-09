@@ -1,18 +1,18 @@
 ---
-title: Standart sorgu işleci çevirisi
+title: Standart Sorgu İşleci Çevirisi
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 48c95411d08aefc3ecb7d8a7041ac47d44e6b9ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127952"
 ---
-# <a name="standard-query-operator-translation"></a>Standart sorgu işleci çevirisi
+# <a name="standard-query-operator-translation"></a>Standart Sorgu İşleci Çevirisi
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Standart sorgu işleçleri SQL komutlara çevirir. Sorgu işlemcisi veritabanının SQL çeviri yürütme semantikleri belirler.  
   
  Standart sorgu işleçleri karşı tanımlanmış *dizileri*. Bir sıra *sıralı* ve dizinin her öğesi için başvuru kimliği kullanır. Daha fazla bilgi için [standart sorgu işleçlerine genel bakış (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
@@ -144,7 +144,7 @@ ORDER BY [t0].[CustomerID]
 |ToInteger|ToUInteger|ToLong|ToULong|  
 |ToShort|ToUShort|ToSingle|ToString|  
   
-## <a name="inheritance-support"></a>Devralma desteği  
+## <a name="inheritance-support"></a>Devralma Desteği  
   
 ### <a name="inheritance-mapping-restrictions"></a>Devralma eşleme kısıtlamaları  
  Daha fazla bilgi için [nasıl yapılır: Devralma hiyerarşilerini eşleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
@@ -200,7 +200,7 @@ ORDER BY [t0].[CustomerID]
 ### <a name="skip-and-take-operators"></a>Skip ve Take işleçleri  
  <xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A> sorguları içinde kullanıldığında belirli sınırlamaları vardır [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. "Atla ve SQL Server 2000'de özel durumlar'ı Al" girdisinde daha fazla bilgi için bkz. [sorun giderme](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
-## <a name="object-materialization"></a>Nesne gerçekleştirme  
+## <a name="object-materialization"></a>Nesne Gerçekleştirme  
  Materialization bir veya daha fazla SQL sorguları tarafından döndürülen satırlar CLR nesnesi oluşturur.  
   
 -   Aşağıdaki çağrıları *yerel olarak yürütüldüğü* materialization bir parçası olarak:  
@@ -226,6 +226,7 @@ ORDER BY [t0].[CustomerID]
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Dizideki Öğeleri Döndürme veya Atlama](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
 - [İki Diziyi Birleştirme](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)

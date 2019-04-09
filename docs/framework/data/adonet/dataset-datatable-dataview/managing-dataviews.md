@@ -1,18 +1,18 @@
 ---
-title: DataView yönetme
+title: DataView Yönetme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: 847829f6b131a33cc5ff1ca77b10f7e756da920f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df03c68193a1068b4bdf0b6ed0923b3bbb8a046a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127718"
 ---
-# <a name="managing-dataviews"></a>DataView yönetme
+# <a name="managing-dataviews"></a>DataView Yönetme
 Kullanabileceğiniz bir <xref:System.Data.DataViewManager> tüm tablolarda görünüm ayarlarını yönetmek için bir <xref:System.Data.DataView>. Gibi bir kılavuz için birden fazla tabloyu bağlamak istediğiniz bir denetim varsa, ilişkileri varlıklardan bir **DataViewManager** idealdir.  
   
  **DataViewManager** koleksiyonunu içeren <xref:System.Data.DataViewSetting> tablo görünüm ayarını ayarlamak için kullanılan nesneleri <xref:System.Data.DataSet>. <xref:System.Data.DataViewSettingCollection> İçerir <xref:System.Data.DataViewSetting> nesne her tablo için bir **veri kümesi**. Varsayılan ayarlayabilirsiniz **ApplyDefaultSort**, **sıralama**, **RowFilter**, ve **RowStateFilter** tarafından başvurulan tablo özellikleri kullanarak kendi **DataViewSetting**. Başvurabileceğiniz **DataViewSetting** ad veya sıra başvuru tarafından veya o belirli tabloyu nesnesine bir başvuru geçirerek belirli bir tablo için. Koleksiyonu erişebileceğiniz **DataViewSetting** nesneler bir **DataViewManager** kullanarak **DataViewSettings** özelliği.  
@@ -120,6 +120,7 @@ grid.SetDataBinding(viewManager, "Customers");
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataViewManager>
 - <xref:System.Data.DataViewSetting>

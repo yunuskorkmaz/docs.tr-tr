@@ -1,18 +1,18 @@
 ---
-title: "İzlenecek yol: WPF'de Direct3D9 içeriği barındırma"
+title: 'İzlenecek yol: Direct3D9 İçeriğini WPF’de Barındırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: e588118e995694ea899b73d238e00f63e92feea4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 90d0c578c6797342c667f16afdb523b1b4ad6685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145918"
 ---
-# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>İzlenecek yol: WPF'de Direct3D9 içeriği barındırma
+# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>İzlenecek yol: Direct3D9 İçeriğini WPF’de Barındırma
 Bu izlenecek yol, bir Windows Presentation Foundation (WPF) uygulamasındaki Direct3D9 içeriği barındırma işlemi gösterilmektedir.  
   
  Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:  
@@ -72,5 +72,6 @@ Bu izlenecek yol, bir Windows Presentation Foundation (WPF) uygulamasındaki Dir
      Direct3D9 içeriği WPF uygulaması içinde görünür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

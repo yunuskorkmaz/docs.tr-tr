@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: cf67f3c68acc4cd8838be56d7c814f9e287ce62c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099995"
 ---
 # <a name="elevation-of-privilege"></a>Ayrıcalık Yükseltme
 *Ayrıcalık yükseltme* izinleri bu başlangıçta verilen ötesinde bir saldırgan yetkilendirme vermesine neden olur. Örneğin, bir ayrıcalık kümesi "salt okunur" izinlere sahip bir saldırgan kümesi "okuma ve yazma" eklenecek şekilde yükseltir  
@@ -83,8 +83,9 @@ ms.locfileid: "54658058"
  Bunu azaltmak için başvuru X.509 sertifika kullanma gibi başka bir deyişle, <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+
+- [Güvenlik Değerlendirmeleri](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Bilgileri Açıklama](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)

@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 1fddbfd84164a95505cff1783e241ea9001231f5
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157306"
 ---
 # <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Basic ve Visual Studio 2017'de .NET Core SDK'sı ile bir .NET Standard kitaplığı derleme
 
@@ -62,8 +62,6 @@ Sınıf kitaplığı projenizi oluşturun:
 1. Menü çubuğunda, seçin **derleme** > **Çözümü Derle**. Projenin hatasız derlemeniz gerekir.
 
    ![Derleme başarılı olduğunu gösteren çıkış bölmesi](./media/library-with-visual-studio/output-pane-successful-build.png)
-
-
 
 ## <a name="next-step"></a>Sonraki adım
 

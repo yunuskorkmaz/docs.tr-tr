@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], progress bars
 - progress controls [Windows Forms]
 ms.assetid: cb3eb0a8-60b1-483e-a03f-93b0b1351dae
-ms.openlocfilehash: 3b56d31cab84a43a488499748710355671980ad0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03f078da96a48ed0f53697661cb2add1d6c01901
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158970"
 ---
 # <a name="toolstripprogressbar-control"></a>ToolStripProgressBar Denetimi
 <xref:System.Windows.Forms.ToolStripProgressBar> Birleştirir <xref:System.Windows.Forms.ToolStrip> işleme ve özellikleri, tipik işlem izleme işlevselliğini radye.  
@@ -29,4 +29,5 @@ ms.locfileid: "57711893"
  İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.ToolStripProgressBar> denetimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

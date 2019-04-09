@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172815"
 ---
 # <a name="configuring-system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamaları Yapılandırma
 Bir uç noktaya konuşurken kullanın ve bir uç noktaya bağlanmak nasıl göstermek için iletişim mekanizması bağlantılarını belirtin. Bağlamaları nasıl Windows Communication Foundation (WCF) kanalları yukarı gerekli iletişime özellikleri katmanlıdır tanımlayan öğeleri oluşur. Bir bağlama üç öğe türleri içerir:  
@@ -44,8 +44,8 @@ Bir uç noktaya konuşurken kullanın ve bir uç noktaya bağlanmak nasıl göst
 |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Bir güvenli ve en iyi duruma getirilmiş bağlama WCF uygulamalar arasında çapraz makine haberleşmesi için uygundur.|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Makinede, WCF uygulamalar arasında iletişim için uygun olan güvenli, güvenilir ve iyileştirilmiş bir bağlama.|  
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Sıraya alınan bir bağlama WCF uygulamalar arasında çapraz makine haberleşmesi için uygundur.|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Güvenli, çok makineli iletişimi sağlayan bir bağlama.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|SOAP iletileri yerine HTTP istekleri aracılığıyla kullanıma sunulan WCF Web Hizmetleri için uç noktası yapılandırmak için kullanılan bir bağlama.|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Güvenli, çok makineli iletişimi sağlayan bir bağlama.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|SOAP iletileri yerine HTTP istekleri aracılığıyla kullanıma sunulan WCF Web Hizmetleri için uç noktası yapılandırmak için kullanılan bir bağlama.|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<MsmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|WCF uygulaması ve mevcut Message Queuing (MSMQ olarak da bilinir) arasında çapraz makine haberleşmesi için uygun bir bağlama uygulamalar.|  
   
 ## <a name="binding-features"></a>Bağlama özellikleri  
@@ -78,6 +78,7 @@ Bir uç noktaya konuşurken kullanın ve bir uç noktaya bağlanmak nasıl göst
 |Akış|İleti akış desteklenip desteklenmediğini belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+
+- [Uç Noktası Oluşturma Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)

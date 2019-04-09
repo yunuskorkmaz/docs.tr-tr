@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144579"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> denetimi ve ilişkili sınıflarının sağlayan ortak bir çerçeve kullanıcı arabirimi öğeleri araç çubukları, durum çubukları ve menüler birleştirmek için. <xref:System.Windows.Forms.ToolStrip> denetimleri yatay veya dikey boşluk paylaşma olanağı, araç çubuklarının olduğu yerinde etkinleştirme ve düzenleme, özel düzen ve radye, içeren zengin bir tasarım zamanı deneyimi sunar.  
@@ -80,6 +80,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> denetimi ve ilişkili sını
  Daha fazla bilgi için [ToolStrip teknoloji özeti](toolstrip-technology-summary.md) ve [ToolStrip denetim mimarisi](toolstrip-control-architecture.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

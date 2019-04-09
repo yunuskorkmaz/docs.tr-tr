@@ -1,15 +1,15 @@
 ---
-title: System.Object yöntemleri
+title: System.Object Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 5397fca0-689e-443e-802f-e1cbdc866427
-ms.openlocfilehash: cae06286b77e23718facfc5be2b0ac2d27381ad3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a52f081f1c0c6e6c5218550009c736d0ed60514
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713424"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097674"
 ---
-# <a name="systemobject-methods"></a>System.Object yöntemleri
+# <a name="systemobject-methods"></a>System.Object Yöntemleri
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] şunları desteklemektedir <xref:System.Object> yöntemleri.  
   
 |||  
@@ -29,4 +29,5 @@ ms.locfileid: "54713424"
  Çıkışı <xref:System.Object.ToString?displayProperty=nameWithType> çift SQL kullanan `CONVERT`(NVARCHAR(30), @x, 2) SQL üzerinde. SQL her zaman 16 basamak ve bilimsel gösterim bu durumda (örneğin, "0.000000000000000e + 000" 0) kullanır. Sonuç olarak, <xref:System.Object.ToString?displayProperty=nameWithType> dönüştürme aynı dizeyle oluşturmuyor <xref:System.Convert.ToString%2A?displayProperty=nameWithType> .NET Framework'teki.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Model tanımlı işlevleri nesne yöntemleri çağırma'
+title: 'Nasıl yapılır: Model Tanımlı İşlevleri Nesne Yöntemleri Olarak Çağırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 3b145c3d2b262729fae9a03b7930b286f7641d36
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 2b3e25187d2865a8e754c553f8057c3c8e3cff37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151235"
 ---
-# <a name="how-to-call-model-defined-functions-as-object-methods"></a>Nasıl yapılır: Model tanımlı işlevleri nesne yöntemleri çağırma
+# <a name="how-to-call-model-defined-functions-as-object-methods"></a>Nasıl yapılır: Model Tanımlı İşlevleri Nesne Yöntemleri Olarak Çağırma
 Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bir <xref:System.Data.Objects.ObjectContext> nesne veya özel bir sınıf üzerinde bir statik yöntem olarak. A *model tanımlı işlev* kavramsal modelde tanımlı bir işlev değil. Bu konudaki yordamlar, bunları Entities sorgularında LINQ çağırmak yerine doğrudan bu işlevleri çağırmak nasıl açıklar. LINQ to Entities sorgularında çağırma model tanımlı işlevleri hakkında daha fazla bilgi için bkz: [nasıl yapılır: Sorgularda model tanımlı işlevler çağırma](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
   
  Model tanımlı bir işlevi çağırmak bir <xref:System.Data.Objects.ObjectContext> yöntemi veya özel bir sınıf üzerinde bir statik yöntem, ilk yöntem model tanımlı işlevi ile eşlenmelidir bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Ancak tanımladığınızda bir yöntem üzerinde <xref:System.Data.Objects.ObjectContext> sınıfını kullanmalısınız <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> statik bir yöntem üzerinde özel bir sınıf tanımladığınızda, kullanmanız gerekir ancak LINQ sağlayıcısı kullanıma sunmak için özellik <xref:System.Linq.IQueryable.Provider%2A> LINQ sağlayıcısı kullanıma sunmak için özellik. Daha fazla bilgi için aşağıdaki yordamlar aşağıdaki örneklere bakın.  
@@ -106,6 +106,7 @@ Bu konu, bir yöntem olarak model tanımlı bir işlevi çağırmak açıklar bi
  [!code-vb[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.edmx dosyasını genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [LINQ to Entities Sorgularında Çağırma İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

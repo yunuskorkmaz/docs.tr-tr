@@ -10,12 +10,12 @@ helpviewer_keywords:
 - aligning [WPF], TileBrushes
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-ms.openlocfilehash: d18e4a9fe4f99c1947402c252082e1580a0b22cc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149194"
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Nasıl yapılır: TileBrush Yatay ve Dikey Hizalamasını Ayarlama
 Bu örnek, bir döşeme içindeki içeriği yatay ve dikey hizalamasını denetlemek nasıl gösterir. Yatay ve dikey hizalamasını denetlemek için bir <xref:System.Windows.Media.TileBrush>, kullanma, <xref:System.Windows.Media.TileBrush.AlignmentX%2A> ve <xref:System.Windows.Media.TileBrush.AlignmentY%2A> özellikleri.  
@@ -73,6 +73,7 @@ Hizalanan kutucuk deseni içeriği temel kutucuğunda sağ alt
  Örneklerde <xref:System.Windows.Media.DrawingBrush> göstermek için nesneleri nasıl <xref:System.Windows.Media.TileBrush.AlignmentX%2A> ve <xref:System.Windows.Media.TileBrush.AlignmentY%2A> özellikleri kullanılır. Bu özellikler için tüm Döşeme fırçaları aynı şekilde davranır: <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.ImageBrush>, ve <xref:System.Windows.Media.VisualBrush>. Kutucuk Fırçalar hakkında daha fazla bilgi için bkz. [görüntüler, çizimler ve görsellerle boyama](painting-with-images-drawings-and-visuals.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.VisualBrush>

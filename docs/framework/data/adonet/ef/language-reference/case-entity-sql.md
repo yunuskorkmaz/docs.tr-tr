@@ -2,12 +2,12 @@
 title: Durum (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 9f41c99ab40a74a2c17e8dac207cc7887c77ba91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 65d038564683e0a97939cabc7081be3341f4542d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162808"
 ---
 # <a name="case-entity-sql"></a>Durum (varlık SQL)
 Bir dizi olarak değerlendirilir `Boolean` sonucu belirlemek için ifadeler.  
@@ -28,7 +28,7 @@ END
  `n`  
  Bu çoklu gösteren bir yer tutucudur, `Boolean_expression` ARDINDAN `result_expression` yan tümceleri kullanılabilir.  
   
- ARDINDAN `result_expression`  
+ THEN `result_expression`  
  İfade olduğunda döndürülen `Boolean_expression` değerlendiren `true`. `result expression` Herhangi bir geçerli ifade var.  
   
  ELSE `else_result_expression`  
@@ -57,6 +57,7 @@ END
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
+- [SEÇ](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
 - [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

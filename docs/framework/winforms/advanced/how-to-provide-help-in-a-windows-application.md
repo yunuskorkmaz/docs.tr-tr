@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows uygulamasında Yardım sağlama'
+title: 'Nasıl yapılır: Bir Windows Uygulamasında Yardım Sağlama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows applications
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129486"
 ---
-# <a name="how-to-provide-help-in-a-windows-application"></a>Nasıl yapılır: Bir Windows uygulamasında Yardım sağlama
+# <a name="how-to-provide-help-in-a-windows-application"></a>Nasıl yapılır: Bir Windows Uygulamasında Yardım Sağlama
 Kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> Yardım konuları için bir Yardım dosyası içinde Windows Forms özel denetimlerinde eklemeye bileşeni. Yardım dosyasında, HTML veya HTMLHelp olabilir 1.x veya büyük biçimi.  
   
 > [!NOTE]
@@ -56,7 +56,8 @@ Kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> Yardım konuları i
  Ayrıca <xref:System.Windows.Forms.HelpProvider> açılır Yardım, Yardım dosyaları, Windows Forms'da denetimleri için görüntüleyecek şekilde yapılandırılmış olsa bile göstermek için bileşeni. Daha fazla bilgi için [nasıl yapılır: Açılır Yardımı görüntüleme](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Açılır Yardımı görüntüleme](how-to-display-pop-up-help.md)
+
+- [Nasıl yapılır: Açılır Yardımı Görüntüleme](how-to-display-pop-up-help.md)
 - [ToolTips Kullanarak Denetim Yardımı](control-help-using-tooltips.md)
 - [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

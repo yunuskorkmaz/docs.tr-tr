@@ -8,18 +8,16 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2007ee7680707cd1cc9628cc3900ca1068db8678
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4b0a37814e22260eaaa655dddca278a1f30af09e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171866"
 ---
 # <a name="control-authoring-overview"></a>Denetim Yazımına Genel Bakış
 Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetimi modeli, yeni bir denetim oluşturmak için gereken önemli ölçüde azaltır. Ancak, bazı durumlarda, yine de özel bir denetim oluşturmak gerekebilir. Bu konuda bir özel denetim oluşturup farklı denetim modellerinde yazma gereksiniminizi en aza özellikleri anlatılmaktadır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Bu konuda ayrıca yeni bir denetimin nasıl oluşturulacağını gösterir.  
-  
- 
-  
+
 <a name="when_to_write_a_new_control"></a>   
 ## <a name="alternatives-to-writing-a-new-control"></a>Yeni bir denetim yazmak için alternatifleri  
  Varolan bir denetimden özelleştirilmiş bir deneyim almak istediyseniz, tarihsel olarak, denetimin arka plan renk ve kenarlık genişliği yazı tipi boyutu gibi standart özelliklerini değiştirme ile sınırlıydı. Görünümünü veya davranışını bir denetimin önceden tanımlanmış bu parametreleri ötesine genişletmek istediğinizde, yeni bir denetim, varolan bir denetimden devralan ve denetimi çizmek için sorumlu yöntemini geçersiz kılma tarafından genellikle oluşturmanız gerekir.  Bu seçenek, hala olsa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zengin içerik modeli, stiller, şablonlar ve Tetikleyicileri kullanarak mevcut denetimleri özelleştirmenizi, sağlar. Aşağıdaki listede, bu özellikleri yeni bir denetim oluşturmak zorunda kalmadan, özel ve tutarlı deneyimler oluşturmak için nasıl kullanılabileceğini örnekler verilmektedir.  
@@ -174,7 +172,7 @@ Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
 ### <a name="design-for-designers"></a>Tasarımcılarına yönelik tasarım  
  Özel bir WPF denetimlerindeki destek almak için [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] (örneğin, özelliğin Özellikler penceresi ile düzenleme), aşağıdaki yönergeleri izleyin.  Geliştirme hakkında daha fazla bilgi için [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)], bkz: [Visual Studio'da XAML tasarım](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
-#### <a name="dependency-properties"></a>Bağımlılık özellikleri  
+#### <a name="dependency-properties"></a>Bağımlılık Özellikleri  
  Uygulamak mutlaka [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] `get` ve `set` "Kullanımı bağımlılık özelliklerini." daha önce açıklandığı erişimcileri Tasarımcıları gibi bir bağımlılık özelliği, ancak bunun varolup olmadığını algılamak için sarmalayıcı kullanabilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve denetimin istemciler alma veya ayarlama özelliğini ayarlarken erişimcileri çağrı için gerekli değildir.  
   
 #### <a name="attached-properties"></a>Ekli Özellikler  
@@ -184,7 +182,7 @@ Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 -   Bir çift uygulamak `public` `static` adlı CLR yöntemlerinde `Set` *PropertyName* ve `Get` *PropertyName*. Her iki yöntem, türetilen bir sınıf kabul etmelidir <xref:System.Windows.DependencyProperty> , ilk bağımsız değişken olarak. `Set` *PropertyName* yöntemi de türü özelliği için kayıtlı veri türü ile eşleşen bir bağımsız değişkeni kabul eder. `Get` *PropertyName* yöntemi, aynı türde bir değer döndürmelidir. Varsa `Set` *PropertyName* yöntemi eksik, özellik salt okunur olarak işaretlenir.  
   
--   `Set` *PropertyName* ve `Get` *PropertyName* doğrudan yönlendirmesi gerekirse <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> hedef bağımlılık yöntemlerde nesnesi, sırasıyla. Tasarımcılar tarafından yöntemi sarmalayıcı çağrı yapma veya bir hedef bağımlılık nesneye doğrudan çağırmak ekli özellik erişebilir.  
+-   `Set` **PropertyName* ve `Get` *PropertyName* doğrudan yönlendirmesi gerekirse <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> hedef bağımlılık yöntemlerde nesnesi, sırasıyla.DTasarımcılar tarafından yöntemi sarmalayıcı çağrı yapma veya bir hedef bağımlılık nesneye doğrudan çağırmak ekli özellik erişebilir.  
   
  Ekli özellikler hakkında daha fazla bilgi için bkz. [ekli özelliklere genel bakış](../advanced/attached-properties-overview.md).  
   
@@ -269,6 +267,7 @@ Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
  [!code-vb[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [WPF İçinde URI'leri Paketleme](../app-development/pack-uris-in-wpf.md)
 - [Denetim Özelleştirme](control-customization.md)

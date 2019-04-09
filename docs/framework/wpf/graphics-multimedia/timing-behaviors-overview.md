@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129603"
 ---
 # <a name="timing-behaviors-overview"></a>Zamanlama Davranışlarına Genel Bakış
 Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır <xref:System.Windows.Media.Animation.Timeline> nesneleri.  
@@ -123,6 +123,7 @@ Bu konuda, animasyonları ve diğer zamanlama davranışları açıklanmaktadır
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Yüzdesini belirtir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> yavaşlatma bir zaman çizelgesi harcanan. Bir örnek için bkz [nasıl yapılır: Bir animasyonu hızlandırma veya Yavaşlatma](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Animasyona Genel bakış](animation-overview.md)
 - [Animasyon ve Zamanlama Sistemine Genel Bakış](animation-and-timing-system-overview.md)
 - [Zamanlama Olaylarına Genel Bakış](timing-events-overview.md)

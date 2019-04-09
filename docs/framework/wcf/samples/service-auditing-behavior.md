@@ -2,12 +2,12 @@
 title: Hizmet Denetleme Davranışı
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: e92f50005870b1c02571cebe0f532bd1810a40dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5fdc213551b5a7b3474321551d7c2cb149ca978d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151430"
 ---
 # <a name="service-auditing-behavior"></a>Hizmet Denetleme Davranışı
 Bu örnek nasıl kullanılacağını gösterir <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleştirme. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet ve istemci kullanarak yapılandırılmış [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). `mode` Özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) ayarlanmış `Message` ve `clientCredentialType` ayarlanmış `Windows`. Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
@@ -51,5 +51,6 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.ServiceModel.Descrip
 3.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Nasıl yapılır: Güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Nasıl yapılır: Güvenlik Olaylarını Denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)

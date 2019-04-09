@@ -2,12 +2,12 @@
 title: Keşif Güvenliği Örneği
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: c77bedbea3d9002b24556d240d5b788fe6c53d67
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: b0999b51d5e371c4167bf4712781b3a229119fd0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160770"
 ---
 # <a name="discovery-security-sample"></a>Keşif Güvenliği Örneği
 Bulma belirtimi olmasını bulma işlemine katılmasını uç noktalarını güvenli gerektirmez. Bulma iletileri ile güvenlik geliştirme azaltır çeşitli türdeki saldırıları (ileti değişikliğinin, hizmet reddi, yeniden yürütme, kimlik sahtekarlığı). Bu örnek, işlem ve (WS-bulma belirtiminin bölüm 8.2 içinde açıklanmıştır) compact imza biçimini kullanarak ileti imzaları doğrulamak özel kanallar uygular. Örnek her ikisini de destekler [2005 bulma belirtimi](https://go.microsoft.com/fwlink/?LinkId=177912) ve [1.1 sürümü](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -74,4 +74,3 @@ Bulma belirtimi olmasını bulma işlemine katılmasını uç noktalarını güv
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
-  

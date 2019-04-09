@@ -1,5 +1,5 @@
 ---
-title: <qualifyAssembly> Öğesi
+title: <qualifyAssembly> Öğe
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#qualifyAssembly
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec72b1a1e3a2526dfb52f562be9fe92c677747ec
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 6a4741c6a4745bdba00fdb525b39b70d0b15e005
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109454"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly > öğesi
 Kısmi bir adı kullanıldığında dinamik olarak yüklenmesi gereken bütünleştirilmiş kodun tam adını belirtir.  
@@ -76,6 +76,7 @@ Kısmi bir adı kullanıldığında dinamik olarak yüklenmesi gereken bütünle
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Kısmi derleme başvuruları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Kısmi Derleme Başvuruları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

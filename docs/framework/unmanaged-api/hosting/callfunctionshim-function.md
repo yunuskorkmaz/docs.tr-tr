@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44f343fa6d9f620145c707e5987ecaedf17dcba8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7aeb813cafbf5b18739c4574c386398ac3c7a77b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180485"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim İşlevi
 Belirtilen kitaplık içinde belirtilen ad ve parametreler içeren işleve bir çağrı yapar.  
@@ -70,4 +70,5 @@ HRESULT CallFunctionShim (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Kullanım Dışı CLR Barındırma İşlevleri](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

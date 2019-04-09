@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: ff68a8bee17b55f7865d6f6c289ba514729be70d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155941"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Bir veri hizmeti istemci uygulaması (WCF Veri Hizmetleri) kullanma
 Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bir URI ile bir Web tarayıcısı sağlanarak akış. Bir kaynak adresi URI sağlar ve istek iletilerinin erişmek veya kaynak temsil eden temel alınan verileri değiştirmek için bu adrese gönderilir. Tarayıcı bir HTTP GET komutu çalıştırır ve istenen kaynak olarak döndüren bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için [bir Web tarayıcısından hizmete erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -52,5 +52,6 @@ Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../
  Programlama kitaplığı kullanmak için kullanabileceğiniz bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] diğer türde istemci uygulamalar akış. Daha fazla bilgi için [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Hizmeti Kaynaklarına Erişme](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
 - [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

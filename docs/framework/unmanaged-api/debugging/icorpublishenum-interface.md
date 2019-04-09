@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5206b7cd07acd76237ab72268b492782ac6e49ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1eac0b9fe252e476f8ff781f2181a203886d3beb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160144"
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum Arabirimi
 Yayımlama işlemleri ve uygulama etki alanları hakkında bilgilerin kullanılan numaralandırıcılar için soyut temel arayüz görev yapar.  
@@ -52,5 +52,6 @@ Yayımlama işlemleri ve uygulama etki alanları hakkında bilgilerin kullanıla
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+
+- [CorpubPublish Ortak Sınıfı](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

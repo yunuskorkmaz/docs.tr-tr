@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61c67e074fc32098fa0d8326ea2f0ecfb1efa952
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6f3948e45b991e667ea90c7846ee0d6fd630c0db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165808"
 ---
 # <a name="icorpublishprocessgetprocessid-method"></a>ICorPublishProcess::GetProcessID Yöntemi
 Bu işlem için işletim sistemi tanımlayıcısını alır.  
@@ -49,4 +49,5 @@ HRESULT GetProcessID (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICorPublishProcess Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

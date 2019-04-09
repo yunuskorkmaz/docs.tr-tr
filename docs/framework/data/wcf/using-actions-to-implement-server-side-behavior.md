@@ -2,12 +2,12 @@
 title: Sunucu tarafı davranışı uygulamak için eylemleri kullanma
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: fdff4f87e0c22baeb92ee844e0dae1fa9bef8302
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092130"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144124"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Sunucu tarafı davranışı uygulamak için eylemleri kullanma
 
@@ -81,6 +81,7 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
  Yukarıdaki kod parçacığında `MoviesModel` sınıfı, WCF veri hizmetine hizmet başvurusu eklemek için Visual Studio kullanılarak oluşturuldu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md)
 - [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [WCF Veri Hizmetleri Geliştirme ve Dağıtma](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)

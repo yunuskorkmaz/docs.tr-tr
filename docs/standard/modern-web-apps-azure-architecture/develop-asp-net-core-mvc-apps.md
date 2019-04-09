@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern Web uygulamaları tasarlama | ASP.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128394"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC geliştirme uygulamaları
 
@@ -319,7 +319,7 @@ Daha fazla uygulama filtreleri ve MSDN makalesi, bir çalışma örneği indirin
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine – ASP.NET Core MVC özellik dilimleri**  
 >   <https://msdn.microsoft.com/magazine/mt763233.aspx>
-> - **Filtreler**  
+> - **FilTReleri**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – gerçek ASP.NET Core MVC filtreleri**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>
@@ -425,7 +425,6 @@ Kendi kimlik doğrulama hizmetinizi oluşturun, Azure AD ile tümleştirmek ve O
 #### <a name="custom-security"></a>Özel güvenlik
 
 "Çalışırken kendi" uygulama şifreleme, kullanıcı üyeliğini veya belirteç oluşturma sistemi hakkında özellikle dikkatli olun. Özel bir uygulama daha iyi bir güvenlik neredeyse kesindir sahip olacak çok sayıda ticari ve açık kaynaklı alternatifleri kullanılabilir vardır.
-
 
 > ### <a name="references--security"></a>Başvurular: güvenlik
 >

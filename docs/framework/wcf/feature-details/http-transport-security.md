@@ -2,12 +2,12 @@
 title: HTTP Taşıma Güvenliği
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 26d72bf234e66ccbf60305d7681f181077589ed0
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113808"
 ---
 # <a name="http-transport-security"></a>HTTP Taşıma Güvenliği
 HTTP taşıma kullanırken, güvenlik, Güvenli Yuva Katmanı (SSL) uygulaması tarafından sağlanır. SSL yaygın olarak Internet'te bir hizmete istemcinin kimliğini doğrulamak için kullanılır ve kanala gizliliği (şifreleme) sağlamak için. Bu konuda, SSL nasıl çalıştığını ve Windows Communication Foundation (WCF) nasıl uygulandığı açıklanmaktadır.  
@@ -53,5 +53,6 @@ HTTP taşıma kullanırken, güvenlik, Güvenli Yuva Katmanı (SSL) uygulaması 
  X.509 sertifikası ile bir bağlantı ayarlamak için HttpCfg.exe aracını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security.md)
+
+- [Taşıma Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Hizmet verilerini bölümlendirme'
+title: 'Nasıl yapılır: Hizmet Verilerini Bölümlendirme'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3755a9ecb61148bcc426e9d510dc2eab1c34eeb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c5cfd56943c97b70ef12276f1bae47fa870366a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150104"
 ---
-# <a name="how-to-service-data-partitioning"></a>Nasıl yapılır: Hizmet verilerini bölümlendirme
+# <a name="how-to-service-data-partitioning"></a>Nasıl yapılır: Hizmet Verilerini Bölümlendirme
 Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için gerekli temel adımlar açıklanmaktadır. Hizmet verilerini bölümlendirme, genellikle daha iyi hizmet kalitesini sağlamak için bir hizmeti ölçeklendirmek gerektiğinde veya farklı müşterilerden gelen istekleri belirli bir şekilde işlemek üzere gerektiğinde kullanılır. Örneğin, yüksek bir değer veya "Altın" müşteriler gelen iletileri, standart bir müşteri iletilerden daha yüksek bir önceliğe işlenecek gerekebilir.  
   
  Bu örnekte, iletilerin regularCalc hizmetin iki örneği birine yönlendirilir. Her iki hizmetin örneklerini aynıdır; ancak yüksek değerli müşterilerden hesaplayıcı 2 uç nokta calculator1 uç nokta işlemleri iletiler tarafından temsil edilen hizmet diğer müşterilerden gelen iletileri işleme alınan  
@@ -174,4 +174,5 @@ Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için g
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönlendirme Hizmetleri](../../../../docs/framework/wcf/samples/routing-services.md)

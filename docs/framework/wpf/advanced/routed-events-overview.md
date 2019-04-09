@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171164"
 ---
 # <a name="routed-events-overview"></a>Gönderilmiş Olaylara Genel Bakış
 Bu konuda yönlendirilmiş olaylar kavramını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Konu yönlendirilmiş olaylar terminolojisini, açıklar yönlendirilmiş olaylar öğe ağacındaki yönlendirilir nasıl nasıl işleyeceğinizi özetler ve kendi özel gönderilmiş olay oluşturma kullanıma sunar.
@@ -245,10 +245,11 @@ Giriş olayı Tırmanma ve tünel oluşturma
  Bu konuda, temel kavramları açıklayan ve yönergeler konusunda ve yanıtlamak için zaten yönlendirilmiş olaylar çeşitli temel öğeler ve denetimlerin olduğunda sunan perspektifinden yönlendirilmiş olaylar çoğunlukla anlatılmaktadır. Ancak, tüm gerekli desteğiyle birlikte, özel olay veri sınıfları ve temsilciler gibi özel sınıfınıza kendi yönlendirilmiş olay oluşturabilirsiniz. Yönlendirilmiş olay sahibi herhangi bir sınıf olabilir, ancak yönlendirilmiş olaylar tarafından gerçekleştirilen ve tarafından işlenen <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement> faydalı olması için türetilmiş sınıflar. Özel olaylar hakkında daha fazla bilgi için bkz. [özel yönlendirilmiş olay oluşturma](how-to-create-a-custom-routed-event.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
-- [Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](marking-routed-events-as-handled-and-class-handling.md)
+- [Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](marking-routed-events-as-handled-and-class-handling.md)
 - [Girişe Genel Bakış](input-overview.md)
 - [Komut Vermeye Genel Bakış](commanding-overview.md)
 - [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)

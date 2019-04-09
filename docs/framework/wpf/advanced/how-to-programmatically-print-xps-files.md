@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: c00a12000dd10ba32bd550186377547b3ef72d25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f113516fd96b88ea04b5ee155f808200dd2c893d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372730"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114302"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Nasıl yapılır: Program Aracılığıyla XPS Dosyalarını Yazdırma
 Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.AddJob%2A> yazdırmak için yöntemi [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] açmadan dosyaları bir <xref:System.Windows.Controls.PrintDialog> veya İlkesi, tüm [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] hiç.  
@@ -59,13 +59,14 @@ Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.Add
  **Not** kolaylık sağlamak için yukarıdaki örnekte varlığını kullanan bir \*.xps uzantısı bir dosya, test olarak [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Ancak, [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] bu uzantıya sahip dosya yok. [İsXPS.exe (isXPS uyumluluk aracı)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) bir testi için bir dosya yolu [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] geçerlilik.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.AddJob%2A>
 - <xref:System.Threading.ApartmentState>
 - <xref:System.STAThreadAttribute>
 - [XPS belgeleri](/windows/desktop/printdocs/documents)
 - [XPS Belge yazdırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
-- [Yönetilen ve yönetilmeyen iş parçacığı oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
-- [isXPS.exe (isXPS uyumluluk aracı)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+- [Yönetilen ve Yönetilmeyen İş Parçacığı Oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [isXPS.exe (isXPS Uyumluluk Aracı)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Yazdırmaya Genel Bakış](printing-overview.md)

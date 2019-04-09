@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Özel veritabanı işlevleri çağırma'
+title: 'Nasıl yapılır: Özel Veritabanı İşlevleri Çağırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: cdb7b5c90e98f299f37cd09fc83ddfdcca31effd
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 4558a5b26903fb53c60fccf3df806f7cf67f9845
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119671"
 ---
-# <a name="how-to-call-custom-database-functions"></a>Nasıl yapılır: Özel veritabanı işlevleri çağırma
+# <a name="how-to-call-custom-database-functions"></a>Nasıl yapılır: Özel Veritabanı İşlevleri Çağırma
 Bu konu, veritabanı içinde LINQ to Entities sorgularında tanımlanan özel işlevleri çağırmak açıklar.  
   
  Entities sorgularında LINQ çağrılan veritabanı işlevleri veritabanında yürütülür. İşlevler veritabanında yürütmek, uygulama performansını iyileştirebilir.  
@@ -61,5 +61,6 @@ Bu konu, veritabanı içinde LINQ to Entities sorgularında tanımlanan özel i�
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.edmx dosyasını genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

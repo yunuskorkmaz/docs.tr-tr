@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 6afa68295c0119cd77b91185abcf2fb9cb407590
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114276"
 ---
 # <a name="using-keyboard-events"></a>Klavye Olaylarını Kullanma
 Çoğu Windows Forms program klavye girdisi klavye olaylarını işleme göre işleyin. Bu konu, klavye olayları zaman her bir olay ve sağlanan verileri her olay için kullanılacağı hakkında ayrıntılar dahil olmak üzere, genel bir bakış sağlar.  Ayrıca bkz: [olay işleyicilerine genel bakış (Windows Forms)](event-handlers-overview-windows-forms.md) ve [olaylara genel bakış (Windows Forms)](events-overview-windows-forms.md).  
@@ -39,6 +39,7 @@ ms.locfileid: "57719344"
 |<xref:System.Windows.Forms.Control.KeyUp>|Bir kullanıcı bir fiziksel anahtar yayımlandığında bu olay tetiklenir.|İşleyici için <xref:System.Windows.Forms.Control.KeyUp> alır:<br /><br /> <ul><li>A <xref:System.Windows.Forms.KeyEventArgs> parametresi:<br /><br /> <ul><li>Sağlayan <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (bir fiziksel klavye düğmeyi belirtir) özelliği.</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Özelliği (SHIFT, CTRL ya da ALT).</li><li><xref:System.Globalization.SortKey.KeyData%2A> (Değiştiricisi ve anahtar kodu birleştirir) özelliği.</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bir Windows Forms Uygulamasında Klavye Girdisi](keyboard-input-in-a-windows-forms-application.md)
 - [Klavye Girdisi Nasıl Çalışır](how-keyboard-input-works.md)
 - [Bir Windows Forms Uygulamasında Fare Girdisi](mouse-input-in-a-windows-forms-application.md)

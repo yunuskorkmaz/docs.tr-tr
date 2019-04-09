@@ -2,12 +2,12 @@
 title: <localClientSettings> öğesi
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: e43a03258f4a76c1d19c7bdcff99fcb1d1db19ac
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5caf183e37edda6efc79ec81f1628180379fd46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163104"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings > öğesi
 Bu bağlama için yerel bir istemci güvenlik ayarlarını belirtir.  
@@ -56,7 +56,7 @@ Bu bağlama için yerel bir istemci güvenlik ayarlarını belirtir.
 |`timestampValidityDuration`|Bir pozitif <xref:System.TimeSpan> zaman damgası olan geçerli süresini belirtir. Varsayılan değer "00: 15:00".|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -69,6 +69,7 @@ Bu bağlama için yerel bir istemci güvenlik ayarlarını belirtir.
  Ayarlar yerel ayarları hizmeti güvenlik ilkesinden türetilmiş olmadıklarını anlamında gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>
@@ -78,5 +79,5 @@ Bu bağlama için yerel bir istemci güvenlik ayarlarını belirtir.
 - [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

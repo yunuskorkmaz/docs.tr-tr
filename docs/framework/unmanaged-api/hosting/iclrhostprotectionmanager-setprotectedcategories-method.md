@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 642d807fe7cb0cadb4d6fc5d8c390bf83f65d165
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 63b6e85b6abe20e9e1f0b00648a06a31735e63c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183631"
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a>ICLRHostProtectionManager::SetProtectedCategories Yöntemi
 Yönetilen türler ve üyeler kategorilerini kısmen güvenilen bir kod çalıştırmasını engellenmesi gerektiğini belirtir.  
@@ -63,8 +63,9 @@ HRESULT SetProtectedCategories (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Security.Permissions.HostProtectionAttribute>
 - <xref:System.Security.Permissions.HostProtectionResource>
-- [EApiCategories Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)
+- [EApiCategories Numaralandırması](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)
 - [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRHostProtectionManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)

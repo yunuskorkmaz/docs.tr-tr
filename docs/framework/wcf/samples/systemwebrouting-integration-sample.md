@@ -2,12 +2,12 @@
 title: SystemWebRouting Tümleştirme Örneği
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 1724fee816ddd210ffba73159596529bd4bc803e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 244a7b7b73217086864b16945bc1521a3383aeac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147816"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting Tümleştirme Örneği
 Bu örnek, sınıflarda barındırma katmanın tümleştirmesiyle gösterir <xref:System.Web.Routing> ad alanı. Sınıflarda <xref:System.Web.Routing> ad alanı, doğrudan fiziksel kaynağa karşılık gelmeyen URL'lerini kullanacak şekilde bir uygulama izin verin. Web yönlendirme kullanarak geri gerçek WCF hizmetleri ardından eşlenen HTTP sanal adresleri oluşturmak Geliştirici sağlar. Bu, bir WCF hizmeti bir fiziksel dosya ya da kaynağa gerek kalmadan barındırılması gerekir veya hizmetleri gibi .html veya .aspx dosyaları içermeyen URL'lerle erişilmesi gerektiğinde kullanışlıdır. Bu örnek nasıl kullanılacağını gösterir <xref:System.Web.Routing.RouteTable> global.asax dosyasında tanımlanmış hizmetleri çalıştırmak için eşlenen sanal bir URI'leri oluşturmak için sınıf. 
@@ -84,4 +84,5 @@ Bu örnek, bilgisayarınızda zaten yüklü. Devam etmeden önce şu (varsayıla
 >  Varsayılan uygulama havuzu sürüme güncelleştirmelisiniz [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] sürüm 2 ayarlarsanız.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)

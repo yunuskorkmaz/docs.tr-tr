@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ed9bae4fde96f0878e40ed73b81cc8776571ada5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 05ac8efed8c0a905d2cfad433348a99fe578eeae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153185"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps Metodu
 Meta veri değerleri tarafından belirtilen ParamDef başvurulan parametresi için belirteç alır.  
@@ -89,5 +89,6 @@ Sıralı değerleri `pulSequence` parametreleri için 1 ile başlar. Dönüş de
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

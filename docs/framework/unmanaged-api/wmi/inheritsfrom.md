@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 078950b4e46ea587c2f39986963ec129f4ec1f1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158437"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom işlevi
 Geçerli sınıf veya örnek belirtilen üst sınıftan türetilen olup olmadığını belirler.
@@ -71,4 +71,5 @@ Bu işlev bir çağrı sarılır [IWbemClassObject::InheritsFrom](/windows/deskt
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

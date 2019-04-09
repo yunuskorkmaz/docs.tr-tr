@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Durum çubuğu panellerinin boyutunu ayarlama'
+title: 'Nasıl yapılır: Durum Çubuğu Panellerinin Boyutunu Ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: 5b78463ca273f089f036166f5339977be435ccc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c6c9d6570e9b5c2f6d4eee0262c3d90e29e4b493
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131068"
 ---
-# <a name="how-to-set-the-size-of-status-bar-panels"></a>Nasıl yapılır: Durum çubuğu panellerinin boyutunu ayarlama
+# <a name="how-to-set-the-size-of-status-bar-panels"></a>Nasıl yapılır: Durum Çubuğu Panellerinin Boyutunu Ayarlama
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStripStatusLabel> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.StatusBar> denetler; ancak, <xref:System.Windows.Forms.StatusBar> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
   
@@ -66,8 +66,9 @@ ms.locfileid: "57711947"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [İzlenecek yol: Çalışma zamanında durum çubuğu bilgilerini güncelleştirme](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [İzlenecek yol: Çalışma Zamanında Durum Çubuğu Bilgilerini Güncelleştirme](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Nasıl yapılır: Windows Forms StatusBar Denetiminde Hangi Panele Tıklandığını Belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar Denetimine Genel Bakış](statusbar-control-overview-windows-forms.md)

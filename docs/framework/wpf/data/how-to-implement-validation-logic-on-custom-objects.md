@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implementing validation logic on custom objects [WPF]
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
-ms.openlocfilehash: e183d286e4b9cd037c352126203b1ecdcca89ebb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8520504757e9e9ec9557b84ca2608b4cb99daf62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085928"
 ---
 # <a name="how-to-implement-validation-logic-on-custom-objects"></a>Nasıl yapılır: Özel Nesneler Üzerinde Doğrulama Mantığı Uygulama
 Bu örnekte, özel bir nesne üzerinde doğrulama mantığı uygulama ve ona bağlama gösterilmektedir.  
@@ -33,6 +33,7 @@ Bu örnekte, özel bir nesne üzerinde doğrulama mantığı uygulama ve ona ba�
  Alternatif olarak, kullanmak yerine <xref:System.Windows.Controls.DataErrorValidationRule>, ayarlayabileceğiniz <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> özelliğini `true`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.ExceptionValidationRule>
 - [Bağlama Doğrulaması Uygulama](how-to-implement-binding-validation.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

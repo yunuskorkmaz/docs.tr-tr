@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Özel ToolStripRenderer uygulama'
+title: 'Nasıl yapılır: Özel ToolStripRenderer Uygulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
-ms.openlocfilehash: c6150b23cf8390a31c6b77ae3c56cfb898eded4b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151924"
 ---
-# <a name="how-to-implement-a-custom-toolstriprenderer"></a>Nasıl yapılır: Özel ToolStripRenderer uygulama
+# <a name="how-to-implement-a-custom-toolstriprenderer"></a>Nasıl yapılır: Özel ToolStripRenderer Uygulama
 Görünümünü özelleştirebileceğiniz bir <xref:System.Windows.Forms.ToolStrip> türetildiği bir sınıf uygulama Denetim <xref:System.Windows.Forms.ToolStripRenderer>. Bu size sağlanan görünümü farklı bir görünüm oluşturmak için esneklik <xref:System.Windows.Forms.ToolStripProfessionalRenderer> ve <xref:System.Windows.Forms.ToolStripSystemRenderer> sınıfları.  
   
 ## <a name="example"></a>Örnek  
@@ -27,7 +27,7 @@ Görünümünü özelleştirebileceğiniz bir <xref:System.Windows.Forms.ToolStr
   
 -   <xref:System.Windows.Forms.ToolStripButton> Kenarlık  
   
--   <xref:System.Windows.Forms.ToolStripButton> Görüntü  
+-   <xref:System.Windows.Forms.ToolStripButton> görüntü  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  
@@ -40,6 +40,7 @@ Görünümünü özelleştirebileceğiniz bir <xref:System.Windows.Forms.ToolStr
  Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripRenderer>

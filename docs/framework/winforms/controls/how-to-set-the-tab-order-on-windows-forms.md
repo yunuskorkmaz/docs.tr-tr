@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows formlarında sekme sırasını ayarlama'
+title: 'Nasıl yapılır: Windows Forms’da Sekme Sırasını Ayarlama'
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 3f566dfb5dbc118c5a6be7f874b5b4857756075a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cd86757d43d7d57dc7777422086a7b7a96b6611e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162130"
 ---
-# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Nasıl yapılır: Windows formlarında sekme sırasını ayarlama
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Nasıl yapılır: Windows Forms’da Sekme Sırasını Ayarlama
 Sekme sırası, kullanıcı odak bir denetimden başka SEKME tuşuna basarak hareket sırasıdır. Her form kendi sekme sırasını sahiptir. Varsayılan olarak, sekme sırasını denetimleri oluşturduğunuz sırada ile aynıdır. Sekme sırası numaralandırma sıfır ile başlar.  
   
 > [!NOTE]
@@ -55,7 +55,8 @@ Sekme sırası, kullanıcı odak bir denetimden başka SEKME tuşuna basarak har
     >  Bir radyo düğmesi grubunda, çalışma zamanında Durdur tek bir sekmesi vardır. Seçilen düğmesini (diğer bir deyişle, düğmeyi kendi <xref:System.Windows.Forms.RadioButton.Checked%2A> özelliğini `true`) sahip kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliği otomatik olarak ayarlayın `true`, diğer düğmeleri açıkken kendi <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini `false`. Gruplama hakkında daha fazla bilgi için <xref:System.Windows.Forms.RadioButton> denetimlerini, [gruplandırma Windows Forms RadioButton denetimlerini küme işlevi görecek](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms Denetimleri](index.md)
-- [Windows Forms’da Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
-- [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)
+- [Windows Formlarında Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [İşlevlere Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)

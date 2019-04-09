@@ -9,17 +9,16 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 935d86195acaca94b0115a8cdcf7289c23613f7f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125126"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement İçerik Modeline Genel Bakış
 Bu içerik modeline genel bakış desteklenen içeriğini açıklayan bir <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Sınıfı, bir tür <xref:System.Windows.Documents.TextElement>. İçerik modeli, diğer hangi nesneleri/öğeleri bulunabilir açıklar. Bu genel bakışta öğesinden türetilen nesneler için kullanılan içerik modeli özetler <xref:System.Windows.Documents.TextElement>. Daha fazla bilgi için [akış belgesine genel bakış](flow-document-overview.md).  
-  
-  
+
 <a name="text_element_classes"></a>   
 ## <a name="content-model-diagram"></a>İçerik modeli diyagramı  
  Türetilmiş sınıflar için aşağıdaki diyagramda içerik modeli özetlenmektedir <xref:System.Windows.Documents.TextElement> yanı sıra diğer nasıl olmayan `TextElement` sınıfları Bu modele uyar.  
@@ -102,6 +101,7 @@ Bu içerik modeline genel bakış desteklenen içeriğini açıklayan bir <xref:
  Bkz: [WPF içerik modeli](../controls/wpf-content-model.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [FlowDocument'ı Blokların Özelliği ile Düzenleme](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
 - [FlowDocument'ı Blokların Özelliği ile Düzenleme](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)

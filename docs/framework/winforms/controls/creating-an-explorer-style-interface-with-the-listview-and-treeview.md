@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: ListView ve tasarımcı kullanarak TreeView denetimleri ile Gezgin stilinde bir arabirim oluşturma'
+title: 'İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: a849eae086c3507bbaf7050afd2e0496ab5a970e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 21a3f7f687f72fe6e73b5d2420675634ff834d2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117994"
 ---
-# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>İzlenecek yol: ListView ve tasarımcı kullanarak TreeView denetimleri ile Gezgin stilinde bir arabirim oluşturma
+# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma
 Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünümlü Windows Forms uygulamaları oluşturmak için olanağıdır. Sık karşılaşılan bir senaryodur ile bir kullanıcı arabirimi (UI) oluşturma <xref:System.Windows.Forms.ListView> ve <xref:System.Windows.Forms.TreeView> Windows işletim sistemlerinin Windows Explorer özelliğine benzer kontrol eder. Windows Gezgini, bir kullanıcının bilgisayarında dosyaları ve klasörleri hiyerarşik yapısını görüntüler.  
   
 > [!NOTE]
@@ -94,16 +94,17 @@ Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünüml
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu uygulama, örnek olarak kullanabileceğiniz bir yol sunar <xref:System.Windows.Forms.TreeView> ve <xref:System.Windows.Forms.ListView> birlikte denetler. Bu denetimler hakkında daha fazla bilgi için aşağıdaki konulara bakın:  
   
--   [Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme](how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [Nasıl yapılır: ListView Denetimine Arama Yetenekleri Ekleme](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [Nasıl yapılır: TreeView düğümüne ShortCut menüsü ekleme](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+-   [Nasıl yapılır: TreeView Düğümüne ShortCut Menüsü Ekleme](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
 - [ListView Denetimi](listview-control-windows-forms.md)
-- [Nasıl yapılır: Ekleme ve Windows Forms TreeView denetimi ile düğüm kaldırma](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetimine sütun ekleme](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms TreeView Denetimi ile Düğüm Ekleme ve Kaldırma](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Nasıl yapılır: Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView Denetimine Sütun Ekleme](how-to-add-columns-to-the-windows-forms-listview-control.md)

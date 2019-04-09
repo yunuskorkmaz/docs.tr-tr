@@ -10,17 +10,16 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 20d90f96647989be35bf2c9cdf6243e8e868cd1e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169617"
 ---
 # <a name="documents-in-wpf"></a>WPF'deki Belgeler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çok çeşitli daha kolay erişilebilen ve önceki nesil içinde salt okunur olacak şekilde tasarlanan yüksek kaliteli içeriğinin oluşturulmasını belge özellikleri sunan [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Gelişmiş Özellikler ve kalite, ek olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge görüntüleme, paketleme ve güvenlik için tümleşik hizmetleri de sağlar. Bu konuda tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge türleri ve belge paketleme.  
-  
-  
+
 <a name="types_of_documents"></a>   
 ## <a name="types-of-documents"></a>Belge türleri  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belgeleri, kullanım amaçlarına göre iki geniş kategoriye ayırır; Bu Belge kategorileri "sabit" ve "flow belgeler." olarak adlandırılır  
@@ -135,6 +134,7 @@ ms.locfileid: "57361375"
 -   Yönlendirme belgeleri doğrudan bir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-uyumlu yazıcı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-ms.openlocfilehash: 0731595dc25b1afb4b3dbcc7eedbfb92ef32d267
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ebb53e7df979a553ed4a44deba34345c9ecac772
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171684"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>Nasıl yapılır: Tek bir B çizmek&#233;zier eğri
 Bézier eğri dört noktaları tarafından tanımlanır: bir başlangıç noktası, iki denetim noktalarını ve uç nokta.  
@@ -32,6 +32,7 @@ Bézier eğri dört noktaları tarafından tanımlanır: bir başlangıç noktas
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
-- [GDI+'daki Bézier Eğrileri](bezier-splines-in-gdi.md)
-- [Nasıl yapılır: Bir dizi Bézier eğrileri çizme](how-to-draw-a-sequence-of-bezier-splines.md)
+- [GDI+ içinde Bézier Eğrileri](bezier-splines-in-gdi.md)
+- [Nasıl yapılır: Bir Sıra Bézier Eğrisi Çizme](how-to-draw-a-sequence-of-bezier-splines.md)

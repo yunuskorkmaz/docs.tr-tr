@@ -2,12 +2,12 @@
 title: Sözleşmeleri Yönlendirme
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-ms.openlocfilehash: 593c7a328aba82c35f5876e6e325844c829c08c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 660652caa804b8c19f6dd18bcba51bf4abc3ba12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145359"
 ---
 # <a name="routing-contracts"></a>Sözleşmeleri Yönlendirme
 Yönlendirme sözleşmeleri yönlendirme hizmeti işleyebileceği ileti desenlerini tanımlayın.  Her sözleşme türsüz ve ileti Şeması veya eylem bilgisi olmadan bir ileti almak hizmet verir. Bu, genel temel alınan iletileri yönlendirilmek özellikleri için ek yapılandırma olmadan iletileri yönlendirmek yönlendirme hizmeti sağlar.  
@@ -19,7 +19,7 @@ Yönlendirme sözleşmeleri yönlendirme hizmeti işleyebileceği ileti desenler
   
  Yönlendirme hizmeti tarafından sağlanan sözleşmeleri bulunan <xref:System.ServiceModel.Routing> çalıştırdığınız ve ad alanı aşağıdaki tabloda açıklanan.  
   
-|Daralma|Şekil|Kanal şekli|  
+|Sözleşme|Şekil|Kanal şekli|  
 |--------------|-----------|-------------------|  
 |<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode SessionMode.Allowed =<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputChannel IOutputChannel ->|  
 |<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|Sessionmode'u SessionMode.Required =<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputSessionChannel IOutputSessionChannel ->|  
@@ -27,5 +27,6 @@ Yönlendirme sözleşmeleri yönlendirme hizmeti işleyebileceği ileti desenler
 |<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|Da IDuplexSessionChannel öğelerini da IDuplexSessionChannel öğelerini ->|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönlendirme Hizmeti](../../../../docs/framework/wcf/feature-details/routing-service.md)
 - [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

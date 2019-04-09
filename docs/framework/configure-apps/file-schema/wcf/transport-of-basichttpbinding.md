@@ -2,12 +2,12 @@
 title: <transport> , <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 3d305c90233e4af7dde2a0b80e79e2adbe85c356
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5d1ef059f8fde7c41e333571d1c025a9c0c7e03f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170644"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<Aktarım >, \<basicHttpBinding >
 HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri tanımlar.  
@@ -56,7 +56,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Hiçbiri|İleti aktarımı sırasında sağlanmaz.|  
+|None|İleti aktarımı sırasında sağlanmaz.|  
 |Temel|Temel kimlik doğrulaması belirtir.|  
 |Özet|Özet kimlik doğrulaması belirtir.|  
 |NTLM|Mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa, NTLM kimlik doğrulaması belirtir.|  
@@ -66,7 +66,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Hiçbiri|-Sıradaki iletiler, aktarım sırasında sağlanmaz.|  
+|None|-Sıradaki iletiler, aktarım sırasında sağlanmaz.|  
 |Temel|Temel kimlik doğrulaması, RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlanan belirtir: Temel ve Özet kimlik doğrulama.|  
 |Özet|Özet kimlik doğrulaması, RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlanan belirtir: Temel ve Özet kimlik doğrulama.|  
 |NTLM|Mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa, NTLM kimlik doğrulaması belirtir.|  
@@ -74,7 +74,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
 |Sertifika|Bir sertifika kullanarak bir istemci kimlik doğrulaması gerçekleştirir. Bu seçenek yalnızca çalışır `Mode` üst öğenin özniteliğini `security` öğe taşıma imkanı kullanılarak ayarlanır ve TransportCredentialOnly için ayarlanmışsa çalışmaz.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ None  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -118,6 +118,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: d215d4b8adcf3e4892c00be1629f92b657496780
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bedf35544454a32ff13856a072779cd70723e989
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129629"
 ---
 # <a name="data-contract-known-types"></a>Veri Sözleşmesi Bilinen Türler
 <xref:System.Runtime.Serialization.KnownTypeAttribute> Sınıfı, öncelikli seri durumundan çıkarma sırasında göz önünde bulundurmanız için dahil edilmesi gereken türleri belirtmenize olanak verir. Çalışan bir örnek için bkz. [bilinen türleri](../../../../docs/framework/wcf/samples/known-types.md) örnek.  
@@ -168,11 +168,12 @@ ms.locfileid: "54705316"
  Önceki yapılandırma dosyası adlı bir veri anlaşması türü `MyCompany.Library.Shape` için bildirilen `MyCompany.Library.Circle` bilinen türü.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.KnownTypeAttribute>
 - <xref:System.Collections.Hashtable>
 - <xref:System.Object>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>
 - [Bilinen Türler](../../../../docs/framework/wcf/samples/known-types.md)
-- [Veri Anlaşması Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Veri Sözleşmesi Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Hizmet Sözleşmeleri Tasarlama](../../../../docs/framework/wcf/designing-service-contracts.md)

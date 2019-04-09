@@ -2,12 +2,12 @@
 title: <add> , <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: 84ad745e7789fc2de8dcc23f3607b63702af05a1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c71a58b13e89bedb5eed24d784c82fb1525f7625
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126730"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<Ekle >, \<transportConfigurationType >
 Belirli bir türünü tanımlayan bir anahtar/değer çifti öğesidir.  
@@ -39,7 +39,7 @@ Belirli bir türünü tanımlayan bir anahtar/değer çifti öğesidir.
 |transportConfigurationType|Belirli taşıma uygulayan türü içeren bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -59,6 +59,7 @@ Belirli bir türünü tanımlayan bir anahtar/değer çifti öğesidir.
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>

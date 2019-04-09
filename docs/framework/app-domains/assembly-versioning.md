@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: 841420e609ece83d77bb82f0493d625231d86ec7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170930"
 ---
 # <a name="assembly-versioning"></a>Derleme Sürümü Oluşturma
 Ortak dil çalışma zamanını kullanan tüm derlemelerin sürüm oluşturma işlemi, derleme düzeyinde gerçekleşir. Bir derlemenin belirli sürümü ve bağımlı derlemelerin sürümleri, derlemenin bildirimine kaydedilir. Çalışma zamanı için varsayılan sürüm ilkesi, yapılandırma dosyalarındaki sürüm ilkelerinde açıkça geçersiz kılınmadığı sürece (uygulama yapılandırma dosyası, yayımcı ilke dosyası ve bilgisayar yöneticisinin yapılandırma dosyası) uygulamaların yalnızca yapılandırıldığı ve test edildiği sürümlerle çalışmasıdır.  
@@ -70,7 +70,8 @@ Ortak dil çalışma zamanını kullanan tüm derlemelerin sürüm oluşturma i�
  Bilgilendirme sürümü <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> özel özniteliği kullanılarak temsil edilir. Bilgilendirme sürümü özniteliği hakkında daha fazla bilgi için bkz. [derleme özniteliklerini ayarlama](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Uygulamaları Yapılandırma](../../../docs/framework/configure-apps/index.md)
-- [Bütünleştirilmiş Kod Özniteliklerini Ayarlama](../../../docs/framework/app-domains/set-assembly-attributes.md)
-- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Derleme Özniteliklerini Ayarlama](../../../docs/framework/app-domains/set-assembly-attributes.md)
+- [Ortak Dil Çalışma Zamanındaki Derlemeler](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

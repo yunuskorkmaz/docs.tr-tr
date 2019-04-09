@@ -1,15 +1,15 @@
 ---
-title: 'İzlenecek yol: İlişkilerde sorgulama (C#)'
+title: 'İzlenecek yol: İlişkilerde Sorgulama (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a24d96c9d138f0dcd2f162dad474da01f49e45d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184892"
 ---
-# <a name="walkthrough-querying-across-relationships-c"></a>İzlenecek yol: İlişkilerde sorgulama (C#)
+# <a name="walkthrough-querying-across-relationships-c"></a>İzlenecek yol: İlişkilerde Sorgulama (C#)
 Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ilişkilendirmeleri* veritabanında yabancı anahtar ilişkileri göstermek için.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -89,4 +89,5 @@ Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../..
  Sonraki izlenecek ([izlenecek yol: Verileri düzenleme (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) verileri işlemek nasıl gösterir. Bu izlenecek yol, iki izlenecek yollar zaten tamamladığınız bu dizide Kaydet gerektirmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İzlenecek Yollarla Öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

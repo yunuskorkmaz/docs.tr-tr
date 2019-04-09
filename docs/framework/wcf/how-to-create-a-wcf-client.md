@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 0f7f622221e6612ecdb0ea04084d81e923218a5c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634069"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174375"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>Öğretici: Bir Windows Communication Foundation istemcisi oluşturma
 
@@ -30,7 +30,6 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
 > - Oluşturun ve bir konsol uygulama projesi için WCF istemcisini yapılandırın.
 > - Bir proxy sınıfı ve yapılandırma dosyaları oluşturmak için WCF hizmetine hizmet başvurusu ekleyin.
-
 
 ## <a name="create-a-windows-communication-foundation-client"></a>Bir Windows Communication Foundation istemcisi oluşturma
 
@@ -67,7 +66,6 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
    3. Seçin **CalculatorService** genişletmek ve hizmeti tarafından uygulanan hizmet sözleşmelerini görüntülemek için. Varsayılan değeri bırakın **Namespace** ve **Tamam**.
 
       Visual Studio altında yeni bir öğe ekler **bağlı hizmetler** klasöründe **GettingStartedClient** proje. 
-
 
 ### <a name="servicemodel-metadata-utility-tool"></a>ServiceModel meta veri yardımcı programracı
 
@@ -129,5 +127,3 @@ Oluşturulan istemciyi kullanma hakkında bilgi edinmek için sonraki öğretici
 
 > [!div class="nextstepaction"]
 > [Öğretici: WCF istemci kullanma](how-to-use-a-wcf-client.md)
-
-

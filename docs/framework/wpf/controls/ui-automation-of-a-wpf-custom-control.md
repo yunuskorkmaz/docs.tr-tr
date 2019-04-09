@@ -10,20 +10,18 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 2587a3b4e38aed507688cc86f0e179b3acbb1672
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0d663acc195b36fdc95c196f2233ae997fbd9195
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132775"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF Özel Denetiminin UI Otomasyonu
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] istemciler, platformlar ve altyapıları çeşitli kullanıcı arabirimleri başlatılmayabilir veya incelemek için kullanabilir, Otomasyon tek, genelleştirilmiş bir arabirim sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] Kalite güvencesi (test) kod hem kullanıcı arabirimi öğeleri incelenir ve diğer koddan onlarla kullanıcı etkileşiminin benzetimini ekran okuyucular gibi erişilebilirlik uygulamaları etkinleştirir. Hakkında bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] erişilebilirlik tüm platformlarda bakın.  
   
  Bu konu, bir WPF uygulamasında çalışan özel bir denetim için sunucu tarafı UI Otomasyonu sağlayıcıyı uygulama açıklar. WPF destekler [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] ağacı kullanıcı arabirimi öğelerinin parallels eş Otomasyon nesne ağacının aracılığıyla. Test kodu ve erişilebilirlik özellikleri (işlem içi kodunu) doğrudan Otomasyon eş nesneleri kullanabilirsiniz sağlayan uygulamalar veya sağlanan genelleştirilmiş arabirimi aracılığıyla [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)].  
-  
- 
-  
+
 <a name="AutomationPeerClasses"></a>   
 ## <a name="automation-peer-classes"></a>Otomasyon eş sınıfları  
  WPF denetimlerini Destek [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] eş sınıfların türetilmesi ağacı yoluyla <xref:System.Windows.Automation.Peers.AutomationPeer>. Kural olarak, eş sınıf adları denetim sınıfı adı ile başlayan ve "AutomationPeer" ile bitmelidir. Örneğin, <xref:System.Windows.Automation.Peers.ButtonAutomationPeer> eş sınıfı olan <xref:System.Windows.Controls.Button> denetim sınıfı. Eş sınıflardır kabaca [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] denetim türlerinin ancak özgü [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] öğeleri. WPF uygulamaları aracılığıyla erişen otomasyon kodunuzu [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] arabirimi Otomasyon eşleri doğrudan kullanmaz, ancak aynı işlem alanında Otomasyon kodunu kullanabilir Otomasyon eşleri doğrudan.  
@@ -155,6 +153,7 @@ End Class
  [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [UI Otomasyonuna Genel Bakış](../../ui-automation/ui-automation-overview.md)
 - [NumericUpDown özel denetim teması ve UI Otomasyon desteği örneği](https://go.microsoft.com/fwlink/?LinkID=160025)
-- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](../../ui-automation/server-side-ui-automation-provider-implementation.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145632"
 ---
 # <a name="service-identity-and-authentication"></a>Kimlik Doğrulama ile Hizmet Kimliği
 Bir hizmetin *uç noktası kimlik* oluşturulan Web Hizmetleri Açıklama Dili (WSDL) hizmetinden bir değerdir. Herhangi bir istemciye yayılır. Bu değer, hizmet kimlik doğrulaması için kullanılır. İstemci bir uç nokta için bir iletişim başlatır ve hizmeti kendisi için istemci kimlik doğrulaması sonra istemci uç noktası kimlik değeri uç nokta kimlik doğrulama işlemi döndürdü gerçek değerle karşılaştırır. Eşleşiyorlarsa istemci beklenen hizmet uç noktası başvurduğunu sağlanmıştır. Bu olarak karşı koruma işlev *kimlik avı* bir istemcinin kötü amaçlı bir hizmeti tarafından barındırılan bir uç noktaya yönlendirilmesini engelleyerek.  
@@ -54,13 +54,9 @@ Bir hizmetin *uç noktası kimlik* oluşturulan Web Hizmetleri Açıklama Dili (
   
 ## <a name="using-the-identity-element-in-configuration"></a>Kullanarak \<kimlik > yapılandırma öğesi  
  Daha önce gösterilen bağlamasında istemci kimlik bilgileri türünü değiştirirseniz `Certificate,` oluşturulan WSDL seri hale getirilmiş bir Base64 içeriyorsa aşağıdaki kodda gösterildiği gibi kimlik değeri için X.509 sertifikası. Windows dışındaki tüm istemci kimlik bilgisi türleri için varsayılan değer budur.  
-  
-  
-  
+
  Varsayılan hizmet kimliği değerini değiştirin ya da kullanarak kimlik türünü değiştirme `<identity>` öğesi yapılandırma veya kod kimliği ayarlama. Bir etki alanı adı sistemi (DNS) kimlik değerine sahip aşağıdaki yapılandırma kodunu ayarlar `contoso.com`.  
-  
-  
-  
+
 ## <a name="setting-identity-programmatically"></a>Kimlik programlı olarak ayarlama  
  WCF formu otomatik olarak belirlediğinden hizmetiniz bir kimlik açıkça belirtmek yok. Ancak, WCF, bir kimlik bir uç nokta belirtmek gerekirse sağlar. Aşağıdaki kod, belirli bir DNS kimliği ile yeni bir hizmet uç noktası ekler.  
   
@@ -69,16 +65,12 @@ Bir hizmetin *uç noktası kimlik* oluşturulan Web Hizmetleri Açıklama Dili (
   
 ## <a name="specifying-identity-at-the-client"></a>İstemci kimliğini belirtme  
  Tasarım zamanında, bir istemci geliştiricisinin genellikle kullanan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci yapılandırması oluşturmak için. Oluşturulan yapılandırma dosyası (hedeflenen istemci tarafından kullanılmak üzere), sunucunun kimliğini içerir. Örneğin, aşağıdaki kod önceki örnekte gösterildiği gibi bir DNS kimliğini belirten bir hizmetten oluşturulur. İstemci uç noktası kimlik değeri hizmet eşleşmesini unutmayın. Bu durumda, istemci hizmeti için Windows (Kerberos) kimlik bilgilerini aldığında, değerin olmasını bekler `contoso.com`.  
-  
-  
-  
+
  Windows, yerine hizmeti bir sertifika istemci kimlik bilgileri türünü belirtir ve sertifikanın DNS özelliği değeri olması beklenir, `contoso.com`. (Veya DNS özelliği ise `null`, sertifikanın konu adı olmalıdır `contoso.com`.)  
   
 #### <a name="using-a-specific-value-for-identity"></a>Kimlik için belirli bir değer kullanma  
  Aşağıdaki istemci yapılandırma dosyası, hizmetin kimliğini nasıl belirli bir değer olması bekleniyorsa gösterir. Aşağıdaki örnekte, istemci iki uç noktaları ile iletişim kurabilir. Birinci, ikinci bir sertifika parmak izi ile bir sertifika RSA anahtarıyla tanımlanır. Diğer bir deyişle, yalnızca bir genel anahtar/özel içeren bir sertifika anahtar çiftini ancak güvenilir bir yetkili tarafından verilmemiş.  
-  
-  
-  
+
 ## <a name="identity-checking-at-run-time"></a>Çalışma zamanında kimlik  
  Tasarım zamanında, bir istemci geliştiricisinin sunucunun kimliği ile meta verilerini belirler. Çalışma zamanında, hizmette uç çağırmadan önce kimlik denetimi gerçekleştirilir.  
   
@@ -113,11 +105,12 @@ Bir hizmetin *uç noktası kimlik* oluşturulan Web Hizmetleri Açıklama Dili (
  Yığın bağlama hakkında daha fazla bilgi için öğeler doğru özel bağlama için bkz [Creating User-Defined bağlamaları](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). Özel bağlama ile oluşturma hakkında daha fazla bilgi için <xref:System.ServiceModel.Channels.SecurityBindingElement>, bkz: [nasıl yapılır: Belirtilen kimlik doğrulama modu için SecurityBindingElement oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Nasıl yapılır: Belirtilen kimlik doğrulama modu için SecurityBindingElement oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
-- [Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Nasıl yapılır: Belirtilen Bir Kimlik Doğrulama Modu için SecurityBindingElement Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [Kimlik Bilgisi Türü Seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Kullanıcı Tanımlı Bağlamalar Oluşturma](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
-- [Nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

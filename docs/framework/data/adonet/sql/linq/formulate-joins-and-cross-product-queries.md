@@ -1,18 +1,18 @@
 ---
-title: Birleşimler ve çapraz ürün sorguları düzenleme
+title: Birleşimler ve Çapraz Ürün Sorguları Düzenleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-ms.openlocfilehash: a06c7d451d9ad2856092910065f1195a86c737ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0037f56947a86627ee9ea84369527aec859a0f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180517"
 ---
-# <a name="formulate-joins-and-cross-product-queries"></a>Birleşimler ve çapraz ürün sorguları düzenleme
+# <a name="formulate-joins-and-cross-product-queries"></a>Birleşimler ve Çapraz Ürün Sorguları Düzenleme
 Aşağıdaki örnekler nasıl birden çok tablodan sonuçlar birleştirileceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
@@ -80,4 +80,5 @@ Aşağıdaki örnekler nasıl birden çok tablodan sonuçlar birleştirileceğin
  [!code-vb[DLinqQueryExamples#56](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#56)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sorgu Örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

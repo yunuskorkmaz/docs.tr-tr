@@ -2,12 +2,12 @@
 title: Kanal Fabrikası
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: dd95417ba084e69bc14ce3380a57d44fd8dd3e88
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 8e04dd762e0abad7796d90aff5615134ba22539c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819612"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119736"
 ---
 # <a name="channel-factory"></a>Kanal Fabrikası
 Bu örnek, bir istemci uygulaması ile bir kanalı nasıl oluşturacağınızı gösterir. <xref:System.ServiceModel.ChannelFactory> yerine oluşturulmuş istemci sınıfı. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan.  
@@ -80,4 +80,3 @@ Press <ENTER> to terminate client.
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ChannelFactory`  
-  

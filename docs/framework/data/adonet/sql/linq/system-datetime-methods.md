@@ -1,15 +1,15 @@
 ---
-title: System.DateTime yöntemleri
+title: System.DateTime Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: edc1631536e1e30a324a0fdf0e7690b13639d7e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85af6f252362b811356d68a3ae220df2bb813882
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106333"
 ---
-# <a name="systemdatetime-methods"></a>System.DateTime yöntemleri
+# <a name="systemdatetime-methods"></a>System.DateTime Yöntemleri
 LINQ to SQL sorguları kullanmak, aşağıdaki LINQ to SQL desteklenen yöntem, işleçler ve özellikleri kullanılabilir. Yöntemi, işleci veya özelliği desteklenmeyen olduğunda, LINQ to SQL üyesi için SQL Server üzerinde yürütme çeviremez. Kodunuzda bu üyeleri kullanabilir, Transact-SQL veya veritabanından sonuçları alındıktan sonra sorgu çevrilir önce ancak bunlar değerlendirilmelidir.  
   
 ## <a name="supported-systemdatetime-members"></a>Desteklenen System.DateTime üyeleri  
@@ -65,6 +65,7 @@ LINQ to SQL sorguları kullanmak, aşağıdaki LINQ to SQL desteklenen yöntem, 
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

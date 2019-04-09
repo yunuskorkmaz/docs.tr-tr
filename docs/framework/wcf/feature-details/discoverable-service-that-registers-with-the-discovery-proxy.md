@@ -1,15 +1,15 @@
 ---
-title: "Nasıl yapılır: Keşif proxy'sine bir bulunabilir hizmet ekleme"
+title: "Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme"
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: c708942265ae39ee6e4f198118741068a37512ba
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
-ms.translationtype: MT
+ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177833"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Nasıl yapılır: Keşif proxy'sine bir bulunabilir hizmet ekleme
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme
 Bu konuda, Keşif proxy'si uygulama anlatılmaktadır dört konuları saniyedir. Önceki konu [nasıl yapılır: Keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Keşif proxy'si uygulanır. Bu konu başlığında, duyuru iletiler gönderen bir WCF hizmeti oluşturma (`Hello` ve `Bye`) kaydetmek ve kendisi ile keşif proxy'si kaydını silmek keşif proxy'si için neden olur.
 
 ### <a name="to-define-the-service-contract"></a>Hizmet sözleşmesini tanımlama
@@ -290,6 +290,7 @@ namespace Microsoft.Samples.Discovery
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WCF Bulma](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [Nasıl yapılır: Keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Nasıl yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulama](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+
+- [WCF Keşfetme](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [Nasıl yapılır: Keşif Proxy'si Uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipses
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-ms.openlocfilehash: 9f6969f9ad838ae913f049c4fc65d987e1aff9fa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8bbc2eda6450128eac55576259880e83f07099ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117462"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>GDI+'da Elipsler ve Yaylar
 Elipsler ve yaylar kullanarak kolayca çizebilirsiniz <xref:System.Drawing.Graphics.DrawEllipse%2A> ve <xref:System.Drawing.Graphics.DrawArc%2A> yöntemlerinin <xref:System.Drawing.Graphics> sınıfı.  
@@ -48,9 +48,10 @@ Elipsler ve yaylar kullanarak kolayca çizebilirsiniz <xref:System.Drawing.Graph
  ![Elipsler ve yaylar](./media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
-- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md)
-- [Nasıl yapılır: Kalem oluşturma](how-to-create-a-pen.md)
-- [Nasıl yapılır: Anahatlı şekil çizme](how-to-draw-an-outlined-shape.md)
+- [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](how-to-create-graphics-objects-for-drawing.md)
+- [Nasıl yapılır: Kalem Oluşturma](how-to-create-a-pen.md)
+- [Nasıl yapılır: Anahatlı Şekil Çizme](how-to-draw-an-outlined-shape.md)

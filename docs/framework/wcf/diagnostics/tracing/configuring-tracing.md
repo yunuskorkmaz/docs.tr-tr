@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162887"
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve küme izleme düzeylerini kümesi Etkinlik izleme ve uçtan uca izleme bağıntı desteklemek için yayma yaymak için izleme kaynakları yapılandırabilir ve izlemeleri erişmek için izleme dinleyicilerine ayarlama açıklanmaktadır.  
@@ -181,7 +181,8 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve küme izleme düzeyleri
  Kullanamazsınız `propagateActivity` özniteliği kullanıcı tanımlı izleme kaynakları ile. Kullanıcı kodu etkinlik kimliği yayma için ServiceModel ayarlamayın emin `ActivityTracing`, ServiceModel ilgili sorun yaşamaya devam ederken `propagateActivity` özniteliğini `true`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Nasıl yapılır: Oluşturma ve izleme dinleyicilerini başlatma](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Nasıl yapılır: İz Dinleyicileri Oluşturma ve Başlatma](https://go.microsoft.com/fwlink/?LinkId=94648)
 - [Özel TraceListener oluşturma](https://go.microsoft.com/fwlink/?LinkId=96239)

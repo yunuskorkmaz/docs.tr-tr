@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: a69118be-63b0-445c-9fb6-ab8cc958e531
-ms.openlocfilehash: 6d665052811cbcea7703fe33903b5713d910d1a2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d83833a0f18f94f3aa590896f0a1eb4c53dc16d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168408"
 ---
 # <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a>SetFakeActiveWindow işlevi (WPF yönetilmeyen API Başvurusu)
 Bu API Windows Presentation Foundation (WPF) altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
@@ -40,4 +40,5 @@ void __stdcall SetFakeActiveWindow(
  **.NET framework sürümü:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Yönetilmeyen API Başvurusu](wpf-unmanaged-api-reference.md)

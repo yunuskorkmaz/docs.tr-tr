@@ -2,12 +2,12 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: c8dfd6824877d6f9e5b089a538cce35ffe51320b
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: ce9f282ea1101befe3bf99762efa61e9b47b74cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674288"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109908"
 ---
 # <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding>
 Bir karakter kodlamasını belirtmek için seçeneği ile bayt akışı olarak kodlamasını belirtir.  
@@ -46,6 +46,7 @@ Bir karakter kodlamasını belirtmek için seçeneği ile bayt akışı olarak k
 |[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>

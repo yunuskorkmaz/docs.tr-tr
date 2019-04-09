@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, traversing
 - traversing text
 ms.assetid: 3ddb3b7b-1d6b-4dba-8678-5a68e868aadb
-ms.openlocfilehash: 11f1b189d16d572ac1661e2b175f15ecae2f039f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d73ae4ca11d6f5417bb5cb768eae4e586538bd92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154797"
 ---
 # <a name="traverse-text-using-ui-automation"></a>UI Otomasyonunu Kullanarak Çapraz Geçiş Yapma
 > [!NOTE]
@@ -38,8 +38,9 @@ ms.locfileid: "57678208"
  Herhangi bir yöntemi kullanarak <xref:System.Windows.Automation.Text.TextUnit> sonraki erteler en büyük <xref:System.Windows.Automation.Text.TextUnit> desteklenen if verilen <xref:System.Windows.Automation.Text.TextUnit> denetim tarafından desteklenmiyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [UI Otomasyonu TextPattern Öğesine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
+
+- [UI Otomasyon TextPattern Öğesine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
 - [UI Otomasyonu Kullanarak Metin Kutusuna İçerik Ekleme](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
 - [UI Otomasyonunu Kullanarak Metin Bulma ve Vurgulama](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
-- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [UI Otomasyon Denetim Düzenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [İstemciler İçin UI Otomasyon Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

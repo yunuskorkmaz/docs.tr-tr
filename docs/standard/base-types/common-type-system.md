@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096270"
 ---
 # <a name="common-type-system"></a>Ortak Tür Sistemi
 Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışma zamanı'nda yönetilen tanımlar ve çalışma zamanının diller arası tümleştirme desteğinin önemli bir bölümü de olan. Ortak tür sistemi şu işlevleri gerçekleştirir:  
@@ -61,7 +61,7 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
 -   [Yapılar](#Structures)  
   
--   [Sabit Listeleri](#Enumerations)  
+-   [Numaralandırmalar](#Enumerations)  
   
 -   [Arabirimler](#Interfaces)  
   
@@ -165,11 +165,9 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
 > [!NOTE]
 >  Bu diller için ekleme ve kaldırma olay işleyicileri söz dizimi sağladığından C#, C++ ve Visual Basic olay işleyicisi temsilcileri için bu yöntemleri kullanmak gerekli değildir.  
-  
- 
-  
+
 <a name="type_definitions"></a>   
-## <a name="type-definitions"></a>Tür tanımları  
+## <a name="type-definitions"></a>Tür Tanımları  
  Bir tür tanımı aşağıdakileri içerir:  
   
 -   Tür üzerinde tanımlı herhangi bir öznitelik.  
@@ -226,11 +224,9 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
  Bir tür değerleri ve davranışları başka türden devralabilir. Ortak tür sistemi, türleri, birden fazla temel tür devralmasına izin vermez.  
   
  Bir tür herhangi bir sayıda arabirim uygulayabilir. Bir arabirim uygulamak için bir tür o arabirimin tüm sanal üyelerini uygulamalıdır. Sanal bir yöntem, türetilmiş bir tür tarafından uygulanabilir ve statik veya dinamik olarak çağrılabilir.  
-  
-  
-  
+
 <a name="type_members"></a>   
-## <a name="type-members"></a>Tür üyeleri  
+## <a name="type-members"></a>Tür Üyeleri  
  Çalışma zamanı türünün durumunu ve davranışını belirtir, türün üyeleri tanımlamanıza olanak sağlar. Tür üyeleri şunları içerir:  
   
 -   [Alanlar](#Fields)  
@@ -290,9 +286,7 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
  İç içe türü başka bir tür üyesi olan bir türdür. İç içe geçmiş türler, içeren türlerine sıkı şekilde bağlı ve genel amaçlı bir tür olarak yararlı olmaması gerekir. İç içe geçmiş türler bildirim türü kullanır ve iç içe türün örneklerini oluşturur ve iç içe türün kullanımı ortak üyelerde gösterilmez yararlıdır.  
   
  İç içe türler bazı geliştiriciler için kafa karıştırıcı olabilir ve bir zorunlu bir neden olmadıkça herkese görünür olmamalıdır. İyi tasarımlanmış bir kitaplıkta geliştiriciler, iç içe geçmiş türler nesneler oluşturmak veya değişkenleri bildirmek için kullanılacak nadiren olmalıdır.  
-  
-  
-  
+
 <a name="characteristics_of_type_members"></a>   
 ## <a name="characteristics-of-type-members"></a>Tür üye özellikleri  
  Tür üyelerinin çeşitli özelliklere sahip ortak tür sistemi sağlar; ancak dillerin tüm bu özellikleri desteklemesi gerekmez. Aşağıdaki tabloda üye özellikleri açıklanmıştır.  
@@ -324,6 +318,6 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET API tarayıcısı](/dotnet/api)
-- [Ortak dil çalışma zamanı](../../../docs/standard/clr.md)
+- [.NET API Tarayıcısı](/dotnet/api)
+- [Ortak Dil Çalışma Zamanı](../../../docs/standard/clr.md)
 - [.NET içinde Tür Dönüştürme](../../../docs/standard/base-types/type-conversion.md)

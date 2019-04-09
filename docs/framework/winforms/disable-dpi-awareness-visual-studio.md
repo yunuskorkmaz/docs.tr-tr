@@ -1,21 +1,24 @@
 ---
 title: Visual Studio'da DPI tanıma devre dışı bırak
-description: Windows Form Tasarımcısı HDPI monitörlerde Visual Studio, DPI kullanmayan bir işlem olarak çalıştırmayı öğrenin ve sınırlamalar açıklanır.
-ms.date: 03/19/2019
+description: Windows Form Tasarımcısı'nın HDPI izleyiciler kısıtlamaları ve Visual Studio, DPI kullanmayan bir işlem olarak çalıştırmak nasıl ele alır.
+ms.date: 04/05/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.custom: seoapril2019
+ms.openlocfilehash: e52debea382033417afe0bd47f899af1666192bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181392"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio'da DPI tanıma devre dışı bırak
 
 Visual Studio otomatik olarak görünen ölçekler anlamına gelir inç (DPI) kullanan uygulama başına bir nokta var. Uygulamanın DPI kullanan geçersiz olduğunu belirtiyor, işletim sistemi uygulamayı bir bit eşlem olarak ölçeklendirir. Bu davranış, DPI sanallaştırma olarak da adlandırılır. Uygulamayı hala % 100 ölçeklendirme veya 96 DPI çalışır olduğunu düşünüyor.
+
+Bu makalede, Windows Form Tasarımcısı'nın HDPI izleyiciler kısıtlamaları ve Visual Studio, DPI kullanmayan bir işlem olarak çalıştırma açıklanmaktadır.
 
 ## <a name="windows-forms-designer-on-hdpi-monitors"></a>HDPI monitörde Windows Form Tasarımcısı
 
@@ -32,11 +35,15 @@ Ndaki bir forma açtığınızda **Windows Form Tasarımcısı** HDPI İzleyicis
 > [!NOTE]
 > Bu bilgi çubuğunda Visual Studio 2017 sürüm 15,8 sunulmuştur.
 
-Tasarımcıda çalışmayan ve formunuzu düzenleme gerekmez bilgi çubuğu yoksay ve Kod Düzenleyicisi'ni veya diğer türde tasarımcıları çalışma devam edin. (Ayrıca [bildirimleri devre dışı bırak](#disable-notifications) böylece bilgi çubuğu görünmeye devam etmez.) Yalnızca **Windows Form Tasarımcısı** etkilenir. Çalışmak ihtiyacınız varsa **Windows Form Tasarımcısı**, sonraki bölümde yardımcı [sorununu](#to-resolve-the-problem).
+Tasarımcıda çalışmayan ve formunuzu düzenleme gerekmez bilgi çubuğu yoksay ve Kod Düzenleyicisi'ni veya diğer türde tasarımcıları çalışma devam edin. (Ayrıca [bildirimleri devre dışı bırak](#disable-notifications) böylece bilgi çubuğu görünmeye devam etmez.) Yalnızca **Windows Form Tasarımcısı** etkilenir. Çalışmak ihtiyacınız varsa **Windows Form Tasarımcısı**, sonraki bölümde yardımcı [sorununu](#to-resolve-the-display-problem).
 
-## <a name="to-resolve-the-problem"></a>Bu sorunu gidermek için
+## <a name="to-resolve-the-display-problem"></a>Görüntüleme sorunu gidermek için
 
-Görünen bu sorunu gidermek için kullanabileceğiniz üç seçenek vardır.
+Görünen bu sorunu gidermek için kullanabileceğiniz üç seçenek vardır:
+
+1. [DPI kullanmayan bir işlem olarak Visual Studio'yu yeniden başlatın](#restart-visual-studio-as-a-dpi-unaware-process)
+2. [Bir kayıt defteri girdisini ekleyin](#add-a-registry-entry)
+3. [Ekranınıza ayarı % 100 ölçeklendirme ayarlayın](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>DPI kullanmayan bir işlem olarak Visual Studio'yu yeniden başlatın
 

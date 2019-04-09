@@ -8,24 +8,24 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: d07af0df30f46d272b81042b009fca9661bbcbe5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181360"
 ---
 # <a name="guidelines-and-best-practices"></a>Yönergeler ve En İyi Yöntemler
 Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmak için yönergeleri sağlayan konuları içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [En iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Nasıl ve ne zaman açıklayan yeni sürümler oluşturulduğunda, kesintiye uğratmadığından veri sözleşmeleri oluşturmak için.  
   
  [Hizmet Sürümü Oluşturma](../../../docs/framework/wcf/service-versioning.md)  
  Wcf'de sürüm kullanmayı açıklar. Dağıtımdan sonra Hizmetleri (ve bunlar ortaya uç noktaları) gerekebilir, örneğin değiştirilmesi, karşılamak için iş gereksinimlerini veya BT gereksinimlerini veya sorunlarını düzeltmek için. Her değişikliği hizmetinin yeni bir sürümünü içeriyor.  
   
- [Yük Dengeleme](../../../docs/framework/wcf/load-balancing.md)  
+ [YükDengeleme](../../../docs/framework/wcf/load-balancing.md)  
  İle bir Web grubu Yük Dengelemesi için yönergeleri listeler.  
   
  [Kaynak Tüketimini Denetleme ve Performansı Geliştirme](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
@@ -45,6 +45,7 @@ Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmak iç
  [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Communication Foundation nedir?](../../../docs/framework/wcf/whats-wcf.md)
 - [Windows Communication Foundation (WCF) örnekleri](./samples/index.md)
 - [Kavramsal Genel Bakış](../../../docs/framework/wcf/conceptual-overview.md)

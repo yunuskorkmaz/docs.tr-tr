@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2da802d410dd16381a86c8fdc358949eefe1d78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86d59c86df88bc1c17e27ad020aa2db10d3fae67
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144228"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling Arabirimi
 Sağlar [Iclrprofiling::attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) yöntemi bir profil oluşturucunun bir çalışan işleme sağlar.  
@@ -44,5 +44,6 @@ Sağlar [Iclrprofiling::attachprofiler](../../../../docs/framework/unmanaged-api
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

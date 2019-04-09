@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 29ea308ee5147cfb18df312887e933615e349803
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: 80c55b45067405b1204cad0435b46b376f783c57
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677540"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151495"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Nasıl yapılır: .NET Core için bir WPF masaüstü uygulaması bağlantı noktası
 
@@ -36,7 +36,6 @@ Bu makalede, çeşitli adlar, geçiş için kullanılan dosya türlerini tanıml
 - Çalışan WPF projesi oluşturan ve sorun çalışır bir çözümde.
 - İçinde projenizin kodlanmasını C#. 
 - Son yükleme [.NET Core 3.0](https://aka.ms/netcore3download) Önizleme.
-
 
 >[!NOTE]
 >**Visual Studio 2017** .NET Core 3.0 projeleri desteklemiyor. **Visual Studio 2019 Önizleme/RC** .NET Core 3.0 projeleri destekler ancak görsel tasarımcı için .NET Core 3.0 WPF projeleri henüz desteklememektedir. Görsel tasarımcıyı kullanmak için çözümünüzdeki ile .NET Core proje dosyaları paylaşan bir .NET WPF projesi olması gerekir.

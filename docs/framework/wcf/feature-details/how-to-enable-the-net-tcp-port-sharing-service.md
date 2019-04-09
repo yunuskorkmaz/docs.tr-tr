@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Net.TCP bağlantı noktası hizmetini etkinleştirme'
+title: 'Nasıl yapılır: Net.TCP Bağlantı Noktası Payalaşım Hizmetini Etkinleştirme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 490c0d8c4c95eeb2b1cd9b43134720c9e44467ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 77d1d983da87b37c6267cc38a16db446782797f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130656"
 ---
-# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Nasıl yapılır: Net.TCP bağlantı noktası hizmetini etkinleştirme
+# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Nasıl yapılır: Net.TCP Bağlantı Noktası Payalaşım Hizmetini Etkinleştirme
 Windows Communication Foundation (WCF) Net.TCP bağlantı noktası paylaşma hizmeti adlı bir Windows hizmeti TCP bağlantı noktaları arasında birden çok işlem paylaşımını kolaylaştırmak için kullanır. Bu hizmet WCF'nin bir parçası yüklenir, ancak hizmet bir güvenlik önlemi olarak varsayılan olarak etkin değildir ve bu nedenle el ile ilk kullanımda önce etkinleştirilmesi gerekir. Bu konuda, Net TCP bağlantı noktası Microsoft Yönetim Konsolu (MMC) ek bileşenini kullanarak paylaşım hizmetinin nasıl yapılandırılacağı açıklanmaktadır.  
   
  Net.TCP bağlantı noktası paylaşım hizmetini etkinleştirme ve el ile başlatın, sonra bakın [nasıl yapılır: Bağlantı noktası paylaşımı kullanmak üzere bir WCF hizmetini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) bu hizmeti kullanmak için hizmetinizi yapılandırma hakkında daha fazla bilgi için.  
@@ -34,5 +34,6 @@ Windows Communication Foundation (WCF) Net.TCP bağlantı noktası paylaşma hiz
 ## <a name="example"></a>Örnek  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Net.TCP Bağlantı Noktası Paylaşımı](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
 - [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

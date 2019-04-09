@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: f07bdacddfbaa35b17821d2a8a0191fef86e38f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2ee7abb2fa709c6d49b049d69882b2fd6b7f3a0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088333"
 ---
 # <a name="windows-service-host"></a>Windows Hizmet Konağı
 Bu örnek, yönetilen bir Windows hizmetinde barındırılan Windows Communication Foundation (WCF) hizmet gösterir. Windows Hizmetleri içindeki Hizmetler uygulamasını kullanarak denetlenir **Denetim Masası** ve sonra sistemi yeniden başlatma otomatik olarak başlatılmasını yapılandırılabilir. Örnek, bir istemci programı ve bir Windows hizmet programı oluşur. Hizmet bir .exe programı olarak uygulanır ve kendi barındırma kodunu içerir. Windows İşlem Etkinleştirme Hizmetleri (WAS) veya Internet Information Services (IIS) gibi diğer barındırma ortamlarında yazmak için gerekli değildir kod barındırma.
@@ -64,4 +64,5 @@ Bu örnek, yönetilen bir Windows hizmetinde barındırılan Windows Communicati
 4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)

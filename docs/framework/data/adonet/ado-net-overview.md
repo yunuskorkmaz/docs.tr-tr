@@ -1,15 +1,15 @@
 ---
-title: ADO.NET'e genel bakış
+title: ADO.NET’e Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170071"
 ---
-# <a name="adonet-overview"></a>ADO.NET'e genel bakış
+# <a name="adonet-overview"></a>ADO.NET’e Genel Bakış
 ADO.NET veri kaynağına OLE DB ve ODBC kullanıma sunulan ve SQL Server ve XML gibi veri kaynaklarına tutarlı erişimi sağlar. Veri paylaşımı tüketici uygulamaları, ADO.NET, bu veri kaynağına bağlanın ve almak, işlemek ve içerdikleri verileri güncelleştirmek için kullanabilirsiniz.  
   
  ADO.NET veri erişimi veri işleme ayrı olarak veya art arda kullanılan ayrık bileşenlere ayırır. ADO.NET, bir veritabanına bağlanma, komutları çalıştırarak ve sonuçları almak için .NET Framework veri sağlayıcıları içerir. Sonuçları ya da doğrudan bir ADO.NET yerleştirilen işlenir <xref:System.Data.DataSet> kullanıcıya geçici bir biçimde açığa için nesne birden çok kaynaktan alınan verilerle birlikte veya Katmanlar arasında geçirilen. `DataSet` Nesne de uygulamanın yerel verileri yönetmek için bir .NET Framework veri sağlayıcısı bağımsız olarak kullanılabilir veya XML'den kaynaklanan.  
@@ -58,6 +58,7 @@ ADO.NET veri kaynağına OLE DB ve ODBC kullanıma sunulan ve SQL Server ve XML 
  Bir veri kaynağına bağlanmak, verileri almak ve verileri değiştirme işlemini açıklamaktadır. Bu içerir `DataReaders` ve `DataAdapters`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Visual Studio'da verilere erişime](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Visual Studio'da verilere erişme](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

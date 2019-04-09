@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: JPEG sıkıştırma düzeyini ayarlama'
+title: 'Nasıl yapılır: JPEG Sıkıştırma Düzeyini Ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 678e89eaa240cbe3a396c1ee3d6c18e7ceca17ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130682"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a>Nasıl yapılır: JPEG sıkıştırma düzeyini ayarlama
+# <a name="how-to-set-jpeg-compression-level"></a>Nasıl yapılır: JPEG Sıkıştırma Düzeyini Ayarlama
 Dosya boyutu en aza indirmek ve yazılımınızın kalitesini iyileştirmek için diske görüntüyü kaydederken görüntü parametrelerini değiştirmek isteyebilirsiniz. Bir JPEG görüntüsünü kalitesini, sıkıştırma düzeyi değiştirerek ayarlayabilirsiniz. Bir JPEG görüntüsünü kaydettiğinizde sıkıştırma düzeyini belirtmek için oluşturmalısınız bir <xref:System.Drawing.Imaging.EncoderParameters> nesne ve geçirin <xref:System.Drawing.Image.Save%2A> yöntemi <xref:System.Drawing.Image> sınıfı. Başlatma <xref:System.Drawing.Imaging.EncoderParameters> BT'nin aşağıdakilerden birini oluşturan bir dizi bu nesne <xref:System.Drawing.Imaging.EncoderParameter>. Oluştururken <xref:System.Drawing.Imaging.EncoderParameter>, belirtin <xref:System.Drawing.Imaging.Encoder.Quality> Kodlayıcısı ve istenen sıkıştırma düzeyi.  
   
 ## <a name="example"></a>Örnek  
@@ -130,6 +130,7 @@ End Function
 -   Adlı bir resim dosyası `TestPhoto.jpg` ve konumunda bulunan **c:\\**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bir kodlayıcı tarafından desteklenen parametreleri belirleme](how-to-determine-the-parameters-supported-by-an-encoder.md)
+
+- [Nasıl yapılır: Bir Kodlayıcı Tarafından Desteklenen Parametreleri Belirleme](how-to-determine-the-parameters-supported-by-an-encoder.md)
 - [Bit Eşlem Türleri](types-of-bitmaps.md)
 - [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](using-image-encoders-and-decoders-in-managed-gdi.md)

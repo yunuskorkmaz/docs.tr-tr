@@ -3,12 +3,12 @@ title: <workflowInstanceQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fe7ce85-cf9a-4dbf-a8f7-bc9b1fc2fe35
-ms.openlocfilehash: 6db5b2c821037b81f293daeed78cd4767ab48688
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e54f98c980f60d02377e38d53d9d0eb48581eec0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290036"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132489"
 ---
 # <a name="workflowinstancequeries"></a>\<Workflowınstancequeries >
 Başlatılmamış veya tamamlanmış olay gibi iş akışı örneği yaşam döngüsü değişiklikleri izleme yapılandırma öğelerinin bir koleksiyonunu temsil eder.  
@@ -84,6 +84,7 @@ Başlatılmamış veya tamamlanmış olay gibi iş akışı örneği yaşam dön
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
 - [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

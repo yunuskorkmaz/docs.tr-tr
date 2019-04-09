@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Kayıtsız etkinleştirme için .NET Framework tabanlı COM bileşenlerini yapılandırma'
+title: 'Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: 03098126985abc898b8911f98013662632d56e35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093547"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176520"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız etkinleştirme için .NET Framework tabanlı COM bileşenlerini yapılandırma
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma
 Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca COM bileşenleri için olandan biraz daha karmaşık. Kurulum, iki bildirimleri gerektirir:  
   
 -   COM uygulamaları yönetilen bileşen tanımlamak için bir Win32 stili bildiriminin olması gerekir.  
@@ -173,7 +173,8 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
      Yeniden `myresource.res` gömülü kaynak içeren kaynak dosyasının adıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Kayıtsız COM Birlikte Çalışma](registration-free-com-interop.md)
-- [Kayıtsız COM birlikte çalışma için gereksinimler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [Kayıtsız etkinleştirme için COM bileşenlerini yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [Kayıtsız COM Birlikte Çalışma için Gereksinimler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [Kayıtsız Etkinleştirme için COM Bileşenlerini Yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
 - [Kayıtsız etkinleştirme. AĞ tabanlı bileşenler: İzlenecek yollar](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

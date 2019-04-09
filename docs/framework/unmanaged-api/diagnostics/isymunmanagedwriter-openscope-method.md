@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ccaaee614b1ec4d03271e70338fff82d629a7c28
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5ea6ce91e0651e09fb908d8b8b35811349ac8845
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089438"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>ISymUnmanagedWriter::OpenScope Yöntemi
 Yeni bir sözcük kapsamı geçerli yöntemde açılır. Kapsam, yeni geçerli kapsam haline gelir ve kapsamlarının bir yığın itilir. Kapsamları bir hiyerarşi oluşturması gerekir. Eşdüzey çakıştırmayı izin verilmez.  
@@ -52,4 +52,5 @@ HRESULT OpenScope(
  **Üst bilgi:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ISymUnmanagedWriter Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

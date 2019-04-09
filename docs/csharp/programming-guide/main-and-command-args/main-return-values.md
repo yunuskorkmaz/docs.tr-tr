@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: e41b92239f0ba1a94190262c337f09eedaddab31
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f515268af13ef95b8b6d9a79f71c49d5d4a98d05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149844"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Ana() dönüş değerleri (C# programlama Kılavuzu)
 
@@ -94,8 +94,9 @@ Uygulama giriş noktası döndürdüğünde bir `Task` veya `Task<int>`, derleyi
 >Örnekleri kullandıysanız `async` değiştiricisi `Main` yöntemi, derleyici aynı kodu üretir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# başvurusu](../index.md)
-- [Ana() ve Komut Satırı Bağımsız Değişkenleri](index.md)
-- [Nasıl yapılır: Komut satırı bağımsız değişkenlerini görüntüleme](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Nasıl yapılır: Erişim foreach kullanarak komut satırı bağımsız değişkenleri](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [C# Başvurusu](../index.md)
+- [Ana() ve komut satırı bağımsız değişkenleri](index.md)
+- [Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Nasıl yapılır: foreach Kullanarak Komut Satırı Bağımsız Değişkenlerine Erişme](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)

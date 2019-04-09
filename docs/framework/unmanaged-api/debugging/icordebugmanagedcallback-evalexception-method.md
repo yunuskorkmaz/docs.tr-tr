@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e3ab185f1ca5571656ed9b4aa4352a007da4151
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 602bcd12d1fd4c5806de6db81252731baa447b7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120022"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a>ICorDebugManagedCallback::EvalException Yöntemi
 Hata ayıklayıcı, bir değerlendirme işlenmeyen bir özel durumla sona erdi bildirir.  
@@ -57,4 +57,5 @@ HRESULT EvalException (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

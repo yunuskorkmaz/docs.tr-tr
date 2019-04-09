@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96c2081e5ff5b716c2645fa44a24f12beaa0f8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57f34ed1796f6fa411d31fca83baeff693f85d70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137364"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager Arabirimi
 Standart Win32 sanal bellek işlevleri kullanmak yerine, ortak dil çalışma zamanı (CLR) ana bilgisayar üzerinden sanal bellek isteğinde bulunmak için izin yöntemleri sağlar.  
@@ -54,5 +54,6 @@ Standart Win32 sanal bellek işlevleri kullanmak yerine, ortak dil çalışma za
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IHostMalloc Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
 - [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

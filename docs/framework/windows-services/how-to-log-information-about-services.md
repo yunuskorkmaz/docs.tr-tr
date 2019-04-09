@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Günlük bilgilerini hizmetleri hakkında'
+title: 'Nasıl yapılır: Hizmet Bilgilerini Günlüğe Kaydetme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: ff3eb0dd27f097899fc19f57142034ffd2bb382a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c739aa5073052a8af545b745339270d3a9806135
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136948"
 ---
-# <a name="how-to-log-information-about-services"></a>Nasıl yapılır: Günlük bilgilerini hizmetleri hakkında
+# <a name="how-to-log-information-about-services"></a>Nasıl yapılır: Hizmet Bilgilerini Günlüğe Kaydetme
 Varsayılan olarak, tüm Windows Service projeleri uygulama olay günlüğü ile etkileşimli ve bilgi ve özel durumlar yazma olanağı vardır. Kullandığınız <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> uygulamanızda bu işlevi isteyip istemediğinizi belirtmek için özelliği. Varsayılan olarak, Windows hizmeti proje şablonu ile oluşturduğunuz herhangi bir hizmeti için günlüğe kaydetme açıktır. Statik bir formu kullanabilirsiniz <xref:System.Diagnostics.EventLog> sınıfı örneğini oluşturmak zorunda kalmadan hizmet bilgilerini günlüğe yazılacak bir <xref:System.Diagnostics.EventLog> bileşen veya el ile bir kaynak kaydı.  
   
  Hizmetiniz için yükleyici, projenizdeki her hizmet günlüğe kaydetme açık olduğunda, hizmet, yüklü olduğu geçerli bir kaynak bilgisayardaki Uygulama günlüğünü içeren olayların sayısını otomatik olarak kaydeder. Hizmet, hizmet çalışmaya, durdurulmuş, duraklatılmış, sürdürüldü, yüklü veya her saat bilgilerini günlüğe kaydeder. Ayrıca, oluşan tüm hataları kaydeder. Varsayılan davranış kullanırken girişleri günlüğüne yazmak için kod yazmanız gerekmez; Hizmet bunu sizin için otomatik olarak yönetir.  
@@ -70,4 +70,5 @@ Varsayılan olarak, tüm Windows Service projeleri uygulama olay günlüğü ile
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+
+- [Windows Hizmet Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

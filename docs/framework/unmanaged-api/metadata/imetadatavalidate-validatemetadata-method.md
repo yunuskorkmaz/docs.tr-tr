@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4eeadadee181a8a726cb0b7a16425d68a112aae4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc2e400d487596dc6c41aff54cae2386a040cfc1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517727"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116197"
 ---
 # <a name="imetadatavalidatevalidatemetadata-method"></a>IMetaDataValidate::ValidateMetaData Yöntemi
 Geçerli meta veri kapsamda nesnelerin meta verilerini imzaları doğrular.  
@@ -43,4 +43,5 @@ HRESULT ValidateMetaData ();
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IMetaDataValidate Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

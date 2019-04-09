@@ -1,18 +1,18 @@
 ---
-title: 'Metot tabanlı sorgu söz dizimi örnekleri: İlişkilerde gezinme'
+title: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: İlişkilerde Geziniliyor'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: a65b71378b18397e138f88f9b23669e7818feea4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 87f8132fc8bc9d64fb02a78bc38d1261db032b5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827454"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138809"
 ---
-# <a name="method-based-query-syntax-examples-navigating-relationships"></a>Metot tabanlı sorgu söz dizimi örnekleri: İlişkilerde gezinme
+# <a name="method-based-query-syntax-examples-navigating-relationships"></a>Metot Tabanlı Sorgu Söz Dizimi Örnekleri: İlişkilerde Geziniliyor
 Gezinti özellikleri [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] ilişkilendirme ucunda varlıkları bulmak için kullanılan kısayol özellik. Bir varlıktan diğerine giderler veya ilgili varlıkları ilişkilendirme aracılığıyla tek bir varlık kümesi bir kullanıcı Gezinti özellikleri sağlar. Metot tabanlı sorgu söz dizimi örnekleri Gezinti özellikleri ile ilişkilerde gezinme konusunda bu konuda sunmaktadır [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular.  
   
  Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
@@ -53,5 +53,6 @@ Gezinti özellikleri [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-m
  [!code-vb[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İlişkiler, gezinti özellikleri ve yabancı anahtarlar](/ef/ef6/fundamentals/relationships)
 - [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

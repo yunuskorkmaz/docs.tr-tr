@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms], about StatusStrip control
 - status bars [Windows Forms], about status bars
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
-ms.openlocfilehash: 2558c9c89bc296a3a92512a7d1a0ee7110dbcc21
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f6f2d4b19b7ec91c964c72e3aca85e0253c7cc22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129720"
 ---
 # <a name="statusstrip-control-overview"></a>StatusStrip Denetimine Genel Bakış
 A <xref:System.Windows.Forms.StatusStrip> denetimi, görüntülenmekte olan bir nesneyle ilgili bilgileri görüntüler bir <xref:System.Windows.Forms.Form>, nesnenin bileşenlerini veya nesnenin işlemi uygulamanız içinde ilgili bağlamsal bilgi. Genellikle, bir <xref:System.Windows.Forms.StatusStrip> denetim oluşur <xref:System.Windows.Forms.ToolStripStatusLabel> nesneleri, metin, simge ya da her ikisini de her biri görüntüler. <xref:System.Windows.Forms.StatusStrip> De içerebilir <xref:System.Windows.Forms.ToolStripDropDownButton>, <xref:System.Windows.Forms.ToolStripSplitButton>, ve <xref:System.Windows.Forms.ToolStripProgressBar> kontrol eder.  
@@ -42,6 +42,7 @@ A <xref:System.Windows.Forms.StatusStrip> denetimi, görüntülenmekte olan bir 
 |<xref:System.Windows.Forms.ToolStripProgressBar>|Bir işlemi tamamlama durumunu görüntüler.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.StatusStrip>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>

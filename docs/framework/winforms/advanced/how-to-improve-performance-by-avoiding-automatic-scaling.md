@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Otomatik ölçeklendirmeyi önleyerek performansı artırma'
+title: 'Nasıl yapılır: Otomatik Ölçeklendirmeyi Önleyerek Performansı Artırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163598"
 ---
-# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Nasıl yapılır: Otomatik ölçeklendirmeyi önleyerek performansı artırma
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Nasıl yapılır: Otomatik Ölçeklendirmeyi Önleyerek Performansı Artırma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Hangi performans azalır, çizin, görüntüyü otomatik olarak ölçeklendirme. Alternatif olarak, hedef dikdörtgenin boyutlarına geçirerek görüntüsü ölçeklendirme denetleyebilirsiniz <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi.  
   
  Aşağıdaki örnek, çağrısı <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi bir sol üst köşesinde belirtir (50, 30) ancak hedef dikdörtgene belirtmiyor.  
@@ -41,5 +41,6 @@ ms.locfileid: "58653801"
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Bir görüntü adı ve sisteminize göre geçerli yolu texture.jpg değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
-- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)
+
+- [Resimler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
+- [Resimler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)

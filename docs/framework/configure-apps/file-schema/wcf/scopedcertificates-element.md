@@ -1,13 +1,13 @@
 ---
-title: <scopedCertificates> Öğesi
+title: <scopedCertificates> Öğe
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: de85b3230461e876ec48e98887805d767e981e0f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 73e78a6ca27ed45e1eadc7121987b75f79bc6aa5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270411"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145206"
 ---
 # <a name="scopedcertificates-element"></a>\<scopedCertificates > öğesi
 Belirli hizmetler (kapsamlı kimlik doğrulaması için) tarafından sağlanan X.509 Sertifika koleksiyonunu temsil eder. Bu koleksiyon, genellikle hizmet sertifikaları için güvenlik belirteci hizmetlerine federe bir senaryoda belirtmek için kullanılır.  
@@ -74,13 +74,14 @@ endpointBehaviors bölümü
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
 - [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Nasıl yapılır: Federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Nasıl yapılır: Federe İstemci Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
 - [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

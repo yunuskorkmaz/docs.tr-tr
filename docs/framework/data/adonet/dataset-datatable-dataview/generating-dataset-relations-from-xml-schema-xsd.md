@@ -1,15 +1,15 @@
 ---
-title: XML şemasından (XSD) DataSet ilişkileri oluşturma
+title: XML Şemasından (XSD) DataSet İlişkileri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: b74c992c4569512a8692b70663002fd609d3501e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546146"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170228"
 ---
-# <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XML şemasından (XSD) DataSet ilişkileri oluşturma
+# <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XML Şemasından (XSD) DataSet İlişkileri Oluşturma
 İçinde bir <xref:System.Data.DataSet>, bir üst-alt ilişkisi oluşturarak iki veya daha fazla sütunu arasında bir ilişki oluşturur. Göstermek için üç yol vardır bir **veri kümesi** ilişkisi içinde bir XML Şeması Tanım Dili (XSD) şeması:  
   
 -   Karmaşık iç içe geçmiş türler belirtin.  
@@ -98,4 +98,5 @@ msdata:childkey="" />
  Benzersiz ve yabancı anahtar kısıtlamalarını oluşturmak için kullanılan XML Şeması öğeleri açıklar bir **veri kümesi**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

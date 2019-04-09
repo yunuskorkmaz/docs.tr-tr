@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Renkleri döndürme'
+title: 'Nasıl yapılır: Renkleri Döndürme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-ms.openlocfilehash: d3fa49e6129c93df93378fb2b607a87a5a0be087
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175545"
 ---
-# <a name="how-to-rotate-colors"></a>Nasıl yapılır: Renkleri döndürme
+# <a name="how-to-rotate-colors"></a>Nasıl yapılır: Renkleri Döndürme
 Four-dimensional renk alanı dönüş görselleştirmek zordur. Biz, renk bileşenlerinden sabit tutmak kabul ederek döndürme görselleştirmek kolaylaştırabilir. 1 sabit alfa bileşeni (tam opak) tutun kabul varsayalım. Ardından şu üç boyutlu renk alanı kırmızı, yeşil ve mavi eksenli aşağıdaki çizimde gösterildiği gibi görselleştirebilirsiniz.  
   
  ![Kırmızı, yeşil ve mavi eksenli döndürme gösteren şekil.](./media/how-to-rotate-colors/rotation-red-green-blue-axes.gif)  
@@ -45,10 +45,11 @@ Four-dimensional renk alanı dönüş görselleştirmek zordur. Biz, renk bileş
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Değiştirin `RotationInput.bmp` bir resim dosyası adı ve yolu sisteminize göre geçerli.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs>`e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Değiştirin `RotationInput.bmp` bir resim dosyası adı ve yolu sisteminize göre geçerli.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
-- [Görüntüleri Yeniden Renklendirme](recoloring-images.md)
+- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Resimleri Yeniden Renklendirme](recoloring-images.md)

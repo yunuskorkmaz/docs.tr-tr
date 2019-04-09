@@ -13,12 +13,12 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6f625f76e230b7d6bf0488bfa75c227de31a5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166211"
 ---
 # <a name="property-change-events"></a>Özellik Değiştirme Olayları
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] başlatılan çeşitli olaylara yanıt olarak bir değişiklik bir özelliğinin değerini tanımlar. Genellikle bir bağımlılık özelliği özelliğidir. Olay bazen gönderilmiş bir olay ve bazı durumlarda standart [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] olay. Diğer özellik değişiklikleri genellikle ise bazı özellik değişiklikleri daha uygun bir öğe ağacı ile yönlendirilen çünkü olayının tanımı senaryoya bağlı olarak değişir. yalnızca birisi ağdır burada özelliği değiştirilmiş nesne.  
@@ -62,5 +62,6 @@ ms.locfileid: "57352002"
  Özellik tetikleyicileri hakkında daha fazla bilgi için bkz: [stil ve şablon oluşturma](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)

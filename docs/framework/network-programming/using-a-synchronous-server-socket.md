@@ -1,5 +1,5 @@
 ---
-title: Zaman uyumlu sunucu yuvası kullanma
+title: Zaman Uyumlu Sunucu Yuvası Kullanma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: 2a4fd2f903f96a14d4a256ea68240e942ccd59eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43e1d54d4e74b49fdf1a8997d1cc89492c9412bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117258"
 ---
-# <a name="using-a-synchronous-server-socket"></a>Zaman uyumlu sunucu yuvası kullanma
+# <a name="using-a-synchronous-server-socket"></a>Zaman Uyumlu Sunucu Yuvası Kullanma
 Yuva bağlantısı isteği alınana kadar zaman uyumlu sunucu yuva uygulamanın yürütülmesini askıya alın. Zaman uyumlu sunucu yuva ağ kullanımı yoğun uygulamalar, işlemi için uygun değildir, ancak Basit Ağ uygulamaları için uygun olabilir.  
   
  Sonra bir <xref:System.Net.Sockets.Socket> kullanarak bir uç noktası dinleyecek şekilde ayarlanır <xref:System.Net.Sockets.Socket.Bind%2A> ve <xref:System.Net.Sockets.Socket.Listen%2A> yöntemleri, gelen bağlantı isteklerini kullanarak kabul etmeye hazır <xref:System.Net.Sockets.Socket.Accept%2A> yöntemi. Bir bağlantı isteği alınana kadar uygulamanın askıya olduğunda **kabul** yöntemi çağrılır.  
@@ -76,6 +76,7 @@ handler.Close();
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Zaman Uyumsuz Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
 - [Zaman Uyumlu Sunucu Yuvası Örneği](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
 - [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)

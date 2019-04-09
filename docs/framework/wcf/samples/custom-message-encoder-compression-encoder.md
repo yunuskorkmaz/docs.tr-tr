@@ -2,12 +2,12 @@
 title: 'Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: a7dd172920e88e5da51fbb9965409d1d5a03accf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 9dd1e2eb25b2f400ba42b6cee75f8563c4d52c31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140692"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı
 Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak özel bir kodlayıcı uygulamak nasıl gösterir.  
@@ -354,4 +354,3 @@ Press <ENTER> to terminate client.
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
-  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91d893c0df13fbcb44c66df7f268cffdffb5fff6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e823911280f52e16c745c9c77fe17b49bd35dc0b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129837"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase Yöntemi
 Belirtilen görüntü temel bellek adresini alır.  
@@ -56,4 +56,5 @@ HRESULT GetImageBase (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICLRDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: <httpWebRequest> Öğesi (Ağ Ayarları)
+title: <httpWebRequest> Öğesi (ağ ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: f19c39922105cebe179dd9f26fdc6beac8ddc0ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 722b2f726c9085f6dee6bad82044da3011b98702
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169305"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest > öğesi (ağ ayarları)
 Web isteği parametreleri özelleştirir.  
@@ -53,7 +53,7 @@ Web isteği parametreleri özelleştirir.
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
+|[ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Varsayılan olarak, .NET Framework kesinlikle RFC 2616'urı ayrıştırmak için zorlar. Bazı sunucu yanıtları neden olur, izin verilmeyen alanlarına bir denetim karakteri içerebilir <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> yönteminin bir <xref:System.Net.WebException>. Varsa **useUnsafeHeaderParsing** ayarlanır **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> oluşturmayacaksa bu durumda; ancak, uygulamanız URI saldırıları ayrıştırma birkaç biçimlerinin savunmasız olacaktır. En uygun çözümü sunucu yanıt denetim karakterleri içermeyen şekilde değiştirmektir.  
@@ -77,5 +77,6 @@ Web isteği parametreleri özelleştirir.
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

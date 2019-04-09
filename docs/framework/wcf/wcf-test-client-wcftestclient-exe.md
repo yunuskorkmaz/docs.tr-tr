@@ -2,12 +2,12 @@
 title: WCF Test İstemcisi (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106775"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
 Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kullanıcılara test parametreleri giriş, hizmete girdi gönderme olanağı sağlar ve hizmet geri gönderir yanıtı görüntüleyin bir GUI araçtır. Bu test WCF hizmet konağı ile birleştirildiğinde deneyimi sorunsuz bir hizmet sağlar.  
@@ -41,7 +41,7 @@ Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kull
 ## <a name="wcf-test-client-user-interface"></a>WCF Test istemcisi kullanıcı arabirimi  
  WCF Test istemcisi, tek bir hizmeti veya birden çok hizmetlerle kullanabilirsiniz.  
   
-### <a name="service-operations"></a>Hizmet işlemleri  
+### <a name="service-operations"></a>Hizmet İşlemleri  
  WCF Test İstemcisi ana pencerenin sol bölmesinde, tüm kullanılabilir hizmetler, ilgili uç noktaları ve işlemleri birlikte listeler.  
   
  Bir işlem çift tıkladığınızda, işlem adı ile yeni bir sekme içinde sağ bölmede içeriği görüntüleyebilirsiniz.  
@@ -166,4 +166,5 @@ Windows Communication Foundation (WCF) Test İstemcisi (WcfTestClient.exe), kull
 -   Sağ **WCF hizmet konağı** bildirim alanına ve ardından simge **çıkış.** Bu işlem, WCF hizmeti otomatik konağı ve WCF Test İstemcisi aşağı kapatır ve Visual Studio hata ayıklama işlemi durdurur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+
+- [WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

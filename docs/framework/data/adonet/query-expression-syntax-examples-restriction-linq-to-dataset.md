@@ -1,18 +1,18 @@
 ---
-title: 'Sorgu ifadesi söz dizimi örnekleri: Kısıtlama (LINQ to DataSet)'
+title: 'Sorgu İfadesi Söz Dizimi Örnekleri: Kısıtlama (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1daf42c2-c9f4-4cda-b291-7641b9c6d3fe
-ms.openlocfilehash: 91334da13a2c80daaede357349f1cd28a1ccc9a3
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0c711a2d9edbc3b462048272dd7dd138fd934a89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160582"
 ---
-# <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>Sorgu ifadesi söz dizimi örnekleri: Kısıtlama (LINQ to DataSet)
+# <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>Sorgu İfadesi Söz Dizimi Örnekleri: Kısıtlama (LINQ to DataSet)
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Where%2A> sorgu yöntemine bir <xref:System.Data.DataSet> sorgu ifadesi söz dizimini kullanarak.  
   
  `FillDataSet` Bu örneklerde kullanılan yöntemi belirtilen [verileri bir DataSet içine Yükleniyor](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
@@ -52,6 +52,7 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
  [!code-vb[DP LINQ to DataSet Examples#WhereDrillDown](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#wheredrilldown)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataSet’e Veri Yükleme](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Standart sorgu işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

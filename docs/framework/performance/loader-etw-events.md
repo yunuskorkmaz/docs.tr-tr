@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141537"
 ---
 # <a name="loader-etw-events"></a>Yükleyici ETW Olayları
 <a name="top"></a> Bu olaylar, yükleme ve kaldırma uygulama etki alanları, derlemeler ve modüller için ilgili bilgileri toplayın.  
@@ -37,7 +37,7 @@ ms.locfileid: "54579010"
   
 |Olayı için anahtar sözcüğü|Olay|Düzey|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` ve `AppDomainUnLoad_V1`|Bilgilendirici (4)|  
+|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` and `AppDomainUnLoad_V1`|Bilgilendirici (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Bilgilendirici (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Bilgilendirici (4)|  
   
@@ -68,7 +68,7 @@ ms.locfileid: "54579010"
   
 |Olayı için anahtar sözcüğü|Olay|Düzey|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AssemblyLoad` ve `AssemblyUnload`|Bilgilendirici (4)|  
+|`LoaderKeyword` (0x8)|`AssemblyLoad` and `AssemblyUnload`|Bilgilendirici (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Bilgilendirici (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Bilgilendirici (4)|  
   
@@ -100,7 +100,7 @@ ms.locfileid: "54579010"
   
 |Olayı için anahtar sözcüğü|Olay|Düzey|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`ModuleLoad_V2` ve `ModuleUnload_V2`|Bilgilendirici (4)|  
+|`LoaderKeyword` (0x8)|`ModuleLoad_V2` and `ModuleUnload_V2`|Bilgilendirici (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Bilgilendirici (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Bilgilendirici (4)|  
 ||||  
@@ -213,4 +213,5 @@ ms.locfileid: "54579010"
  Modülü aralık olaylarını altında herhangi bir ETW düzeyi en az 4 tetiklenir ve bilgilendirici bir olay olarak sınıflandırılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)

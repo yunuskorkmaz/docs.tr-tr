@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115771"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms'ta Daha Güvenli Dosya ve Veri Erişimi
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Kaynakları ve veri korumaya yardımcı olmak için izinleri kullanır. Burada, uygulamanızın Okuma veya veri yazma uygulamaya verilen izinler bağlıdır. Uygulamanızı bir kısmi güven ortamında çalıştığında, verilerinize erişimi olmayabilir veya verilere erişme şeklini değiştirmek gerekebilir.  
@@ -359,9 +359,10 @@ public void Write()
  Kısmi güven altında kayıt defteri erişemediği için diğer yöntemleri, verilerinizi depolamaya gerekebilir. Uygulama ayarlarını depolamak, yalıtılmış depolama yerine kayıt defterini kullanın. Yalıtılmış Depolama, diğer uygulamaya özgü dosyaları depolamak için de kullanılabilir. Varsayılan olarak, uygulamanın kendi kaynak site erişim hakkı verilir çünkü sunucu veya site kaynak, genel uygulama bilgilerini da depolayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms'ta Daha Güvenli Yazdırma](more-secure-printing-in-windows-forms.md)
 - [Windows Forms'ta Ek Güvenlik Konuları](additional-security-considerations-in-windows-forms.md)
 - [Windows Forms'ta Güvenliğe Genel Bakış](security-in-windows-forms-overview.md)
 - [Windows Forms Güvenliği](windows-forms-security.md)
-- [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Mage.exe (Bildirim Üretme ve Düzenleme Aracı)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

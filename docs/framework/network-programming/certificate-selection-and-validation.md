@@ -1,15 +1,15 @@
 ---
-title: Sertifika seçimi ve doğrulama
+title: Sertifika Seçimi ve Doğrulama
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 6d2c5470856f09d3da3bcae890717757c598a4c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2f28e9b77abbd53200ecf8128c942ce6348a7460
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111351"
 ---
-# <a name="certificate-selection-and-validation"></a>Sertifika seçimi ve doğrulama
+# <a name="certificate-selection-and-validation"></a>Sertifika Seçimi ve Doğrulama
 <xref:System.Net> Sınıfları seçin ve doğrulamak için birkaç yol destekler <xref:System.Security.Cryptography.X509Certificates> Güvenli Yuva Katmanı (SSL) bağlantıları için. Bir istemci, kendisi için bir sunucu kimliğini doğrulamak için bir veya daha fazla sertifikaları seçebilirsiniz. Bir istemci sertifikası kimlik doğrulaması için bir veya daha fazla belirli özniteliklere sahip bir sunucu gerektirebilir.  
   
 ## <a name="definition"></a>Tanım  
@@ -53,5 +53,6 @@ ms.locfileid: "54666676"
  Bu araçların yanı sıra <xref:System.Security.Cryptography.X509Certificates.X509Certificate> ve <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> sınıfları dosya sisteminden bir sertifika yüklemek için yöntemler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)

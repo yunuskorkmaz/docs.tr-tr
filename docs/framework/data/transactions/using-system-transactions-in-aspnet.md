@@ -1,15 +1,15 @@
 ---
-title: ASP.NET'te System.Transactions kullanma
+title: ASP.NET’te System.Transactions kullanma
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 96ec8481bd43702058a435ab480a7e9d6a868072
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: df9a9f1878b2268d1d6bc3d9b05d0ad8d7bcc3f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134602"
 ---
-# <a name="using-systemtransactions-in-aspnet"></a>ASP.NET'te System.Transactions kullanma
+# <a name="using-systemtransactions-in-aspnet"></a>ASP.NET’te System.Transactions kullanma
 Bu konu, başarılı bir şekilde nasıl kullanabileceğinizi açıklar <xref:System.Transactions> içinde bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama.  
   
 ## <a name="enable-distributedtransactionpermission-in-aspnet"></a>ASP.NET DistributedTransactionPermission etkinleştir  
@@ -60,6 +60,7 @@ Bu konu, başarılı bir şekilde nasıl kullanabileceğinizi açıklar <xref:Sy
  Daha fazla bilgi için [derlemeler için derleme (ASP.NET Settings Schema) öğesi ekleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/37e2zyhb(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ASP.NET güven düzeylerini ve ilke dosyaları](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100))
 - [securityPolicy öğesi (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))
 - [İşlem Yönetimi Yükseltme](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

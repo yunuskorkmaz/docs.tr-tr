@@ -8,12 +8,12 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 844e03891cce41566300409ad1bec67c875718a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129512"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelinde Gösterilmeyen Öğelere Erişme
 Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:System.Windows.Forms.HtmlElement> özellikleri, yöntemleri ve tüm HTML öğeleri ortak olan olayları gösterir. Bazı durumlarda, ancak yönetilen arabirimi doğrudan kullanıma üyelere erişim ihtiyacınız olacak. Bu konuda da dahil olmak üzere gösterilmeyen üyelere erişim için iki şekilde inceler [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] ve tanımlanmış bir Web sayfası VBScript işlevleri.  
@@ -72,4 +72,5 @@ Yönetilen HTML belgesi nesne modeli (DOM) adlı bir sınıf içerir <xref:Syste
  Tanımladığınız bir HTML sayfasını kullanarak içinde herhangi bir betik işlevleri çağırabilir <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> yöntemi. Komut dosyası yöntemi HTML öğesi döndürürse, bu dönüş sonuç dönüştürmek için bir yayın kullanabilirsiniz bir <xref:System.Windows.Forms.HtmlElement>. Ayrıntıları ve örnek kod için bkz: <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönetilen HTML Belgesi Nesne Modelini Kullanma](using-the-managed-html-document-object-model.md)

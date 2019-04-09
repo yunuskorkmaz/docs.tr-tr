@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9071f8b5c4569ace53b13f7b9b7282bf8e87c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143773"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Yönetilmeyen Kod İçin Güvenli Kodlama Yönergeleri
 Yönetilmeyen kod (örneğin, yerel kod API'leri, Win32 gibi) çağırmak bazı kitaplık kodu gerekiyor. Bu son yönetilen kod için güvenlik çevresi dışarıya gitme anlamına gelir çünkü dikkat gerekiyor. Tarafsız güvenlik kodunuz ise hem kodunuz hem de onu çağıran herhangi bir kod kod iznini yönetilmeyen gerekir (<xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> belirtilmiş işareti).  
@@ -48,8 +48,9 @@ Yönetilmeyen kod (örneğin, yerel kod API'leri, Win32 gibi) çağırmak bazı 
 |Anahtar sözcüğü|Güvenlik konuları|  
 |-------------|-----------------------------|  
 |**Güvenli**|Tamamen herhangi kod için çağrılacak bile kötü amaçlı kod zararsız. Yalnızca diğer yönetilen kod gibi kullanılabilir. Örneğin, günün saatini alır bir işlev genellikle güvenlidir.|  
-|**Yerel**|Güvenlik-nötr; diğer bir deyişle, gerektiren yönetilmeyen kod çağırmak için kod iznini yönetilmeyen. Güvenlik, yetkisiz bir çağıranın vermemeye denetlenir.|  
+|**yerel**|Güvenlik-nötr; diğer bir deyişle, gerektiren yönetilmeyen kod çağırmak için kod iznini yönetilmeyen. Güvenlik, yetkisiz bir çağıranın vermemeye denetlenir.|  
 |**unsafe**|Giriş noktasıyla gizlenen güvenlik tehlikeli yönetilmeyen kod. Geliştiricilerin en dikkat gibi yönetilmeyen kod kullanarak başka bir güvenlik açığını önlemek için korumaların emin emin kullanması gerekir. Bu anahtar sözcük güvenlik sistemi geçersiz kılar. geliştiriciler sorumlu olması gerekir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

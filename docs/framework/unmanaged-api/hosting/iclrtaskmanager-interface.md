@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9012a38271afdef5e00e9e69eb9b2730834be2fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19ef7cb78791496de76e5741f8254ee88563c776
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134667"
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager Arabirimi
 Ortak dil çalışma zamanı (CLR) açıkça istemek üzere konağın izin yöntemleri yeni bir görev oluşturma, şu anda yürütülmekte olan görevi Al ve coğrafi dil ve kültür için bir görev kümesi sağlar.  
@@ -49,6 +49,7 @@ Ortak dil çalışma zamanı (CLR) açıkça istemek üzere konağın izin yönt
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
 - [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

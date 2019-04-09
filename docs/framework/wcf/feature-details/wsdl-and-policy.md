@@ -2,12 +2,12 @@
 title: WSDL ve İlke
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151911"
 ---
 # <a name="wsdl-and-policy"></a>WSDL ve İlke
 Bu konu, Windows Communication Foundation (WCF) WSDL 1.1, uygulama ayrıntıları, WS-Policy ve WS-PolicyAttachment yanı sıra ek WS-Policy onaylar ve WCF tarafından sunulan WSDL 1.1 uzantılar içerir.  
@@ -73,6 +73,7 @@ Bu konu, Windows Communication Foundation (WCF) WSDL 1.1, uygulama ayrıntılar�
 |mssp:RequireClientCertificate|İç içe geçmiş|Bu isteğe bağlı öğe TLSNEGO protokolünün bir parçası sağlanması için bir istemci sertifikası için bir gereksinim belirtir. Bu onay varsa, bir istemci sertifikası sağlanmalıdır. Bu onay mevcut değilse, bir istemci sertifikası verilmemelidir. Bu onay mssp:SslContextToken dışında kullanılmamalıdır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Özel WSDL Yayımı](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Nasıl yapılır: Özel WSDL dışarı aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Nasıl yapılır: Özel WSDL içeri aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Nasıl yapılır: Özel WSDL Dışarı Aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Nasıl yapılır: Özel WSDL İçeri Aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

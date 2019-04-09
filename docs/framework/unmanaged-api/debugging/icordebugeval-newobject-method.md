@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97217421d30ee4065aa1b2500e9486405e438902
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9c2d6a66eca080b480b508afea36c33b3e0aeec0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471374"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178236"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject Yöntemi
 Yeni bir nesne örneğini tahsis eder ve belirtilen yapıcı yöntemini çağırır.  
@@ -59,4 +59,5 @@ HRESULT NewObject (
  **.NET framework sürümleri:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [NewParameterizedObject Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)

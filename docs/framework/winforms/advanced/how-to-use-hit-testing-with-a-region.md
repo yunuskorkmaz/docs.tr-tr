@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Test bir bölgeyle vuruş kullanma'
+title: 'Nasıl yapılır: Bir Bölgeyle Vuruş Sınaması Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hit tests [Windows Forms], using regions
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
-ms.openlocfilehash: a9435724e7674fd196ad70bdfd0ab43808a53058
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 136f15f1364fb2aed791b4a61d0f11411b055967
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150507"
 ---
-# <a name="how-to-use-hit-testing-with-a-region"></a>Nasıl yapılır: Test bir bölgeyle vuruş kullanma
+# <a name="how-to-use-hit-testing-with-a-region"></a>Nasıl yapılır: Bir Bölgeyle Vuruş Sınaması Kullanma
 İsabet sınaması amacı, imleci üzerine bir simge veya düğmesi gibi belirli bir nesne olup olmadığını belirlemektir.  
   
 ## <a name="example"></a>Örnek  
@@ -28,6 +28,7 @@ ms.locfileid: "57709759"
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Region>
 - [GDI+'daki Bölgeler](regions-in-gdi.md)
-- [Nasıl yapılır: Bir bölgeyle kırpma kullanma](how-to-use-clipping-with-a-region.md)
+- [Nasıl yapılır: Bir Bölgeyle Kırpma Kullanma](how-to-use-clipping-with-a-region.md)

@@ -5,17 +5,16 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 711d55e46fb548787976a1f966c9fbf6dc7f12d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105334"
 ---
 # <a name="toolbar-overview"></a>ToolBar Genel Bakışı
 <xref:System.Windows.Controls.ToolBar> denetimler, genellikle kendi işlevleriyle ilgili komutlar veya denetimler grubu için kapsayıcılardır. A <xref:System.Windows.Controls.ToolBar> genellikle komutları çağırır düğmeler içerir.  
-  
-  
+
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>ToolBar Denetimi  
  <xref:System.Windows.Controls.ToolBar> Denetim çubuğu benzeri düzenlemeleri düğmeler veya diğer denetimlerin bir tek bir satır veya sütun adını alır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> denetimleri sağlar, doğal olarak bir boyut ile sınırlandırılmış içinde uymayan herhangi bir öğesi yerleştiren taşması mekanizması <xref:System.Windows.Controls.ToolBar> özel taşma alana. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> denetimleri genellikle kullanılan ile ilgili <xref:System.Windows.Controls.ToolBarTray> denetimi, kullanıcı tarafından başlatılan boyutlandırma ve araç çubuklarını düzenleme için özel bir düzen davranışı ve bunun yanı sıra destek sağlar.  
@@ -41,6 +40,7 @@ ms.locfileid: "58464963"
  [ToolBar stilleri ve şablonları](toolbar-styles-and-templates.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
 - [Araç Çubuğundaki Stil Denetimleri](how-to-style-controls-on-a-toolbar.md)

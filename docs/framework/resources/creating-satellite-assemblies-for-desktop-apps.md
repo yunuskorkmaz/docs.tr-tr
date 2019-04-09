@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ff0e51ad0d0e12c944c996a4262541fb980efe05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138014"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Masaüstü Uygulamaları için Uydu Derlemeleri Oluşturma
 Kaynak dosyaları, yerelleştirilmiş uygulamalar olarak merkezi bir rol oynar. Bunlar, bir uygulama kullanıcının kendi dil ve kültür dizeler, görüntüler ve diğer verileri görüntüler ve kullanıcının kendi dil veya kültür için kaynaklar kullanılamıyorsa, alternatif veri sağlamak için etkinleştirin. .NET Framework, bulun ve yerelleştirilmiş kaynakları almak için bir hub-and-spoke modelini kullanır. Yerelleştirilemeyen yürütülebilir kod ve nötr olarak adlandırılan tek bir kültür için kaynakları içeren ana derleme hub'ı olan veya varsayılan kültür. Geri dönüş kültürü uygulamanın varsayılan kültürüdür; hiçbir yerelleştirilmiş kaynaklar kullanılabilir olduğunda kullanılır. Kullandığınız <xref:System.Resources.NeutralResourcesLanguageAttribute> kültürü uygulamanın varsayılan kültürünü belirtmek için özniteliği. Her bir uçtaki tek bir yerelleştirilmiş kültür için kaynaklar içeriyor ancak hiçbir kod içermiyor bir uydu derlemeye bağlanır. Uydu derlemeleri ana derlemenin parçası olmadığından, kolayca güncelleştirmek veya uygulamanın ana derlemesini değiştirmeden belirli bir kültüre karşılık gelen kaynakları değiştirin.  
@@ -309,9 +309,10 @@ gacutil -i:StringLibrary.resources.dll
 14. Example.exe çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Bütünleştirilmiş Kod İmzalamayı Geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md)
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+
+- [Paketleme ve Dağıtma Kaynakları](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Derleme İmzalamayı Geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md)
+- [Al.exe (Derleme Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
 - [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)

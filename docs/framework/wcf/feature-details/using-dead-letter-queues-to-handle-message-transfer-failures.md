@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: b8dae094655e7bf2a52848d449a5f604f846e052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174622"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma
 Kuyruğa alınmış iletiler teslim başarısız olabilir. Bu başarısız iletileri teslim edilemeyen kuyrukta kaydedilir. Ağ hataları, silinen bir kuyruk, dolu bir sıra, kimlik doğrulama hatası veya zamanında sunmak için bir hata gibi nedenlerle başarısız teslim neden olabilir.  
@@ -61,19 +61,16 @@ Kuyruğa alınmış iletiler teslim başarısız olabilir. Bu başarısız ileti
  [!code-vb[S_DeadLetter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/client.vb#1)]  
   
  İstemci yapılandırma dosyası için kodu verilmiştir.  
-  
-  
-  
+
  Teslim edilemeyen bir kuyruktan ileti işleme bir hizmet için kod aşağıda verilmiştir.  
   
  [!code-csharp[S_DeadLetter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/dlservice.cs#3)]
  [!code-vb[S_DeadLetter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/dlservice.vb#3)]  
   
  Eski ileti sırası hizmeti yapılandırma dosyası için kodu verilmiştir.  
-  
-  
-  
+
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Nasıl yapılır: WCF uç noktaları ile kuyruğa alınmış iletiler gönderip alır](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+
+- [Kuyruklar Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f27385fadd872d2ff6f84cabe079811142008df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143656"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework'te Sürüm Uyumluluğu
 Geriye dönük uyumluluk, bir platformun belirli bir sürümü için geliştirilen bir uygulamanın o platformun sonraki sürümlerinde çalışır anlamına gelir. .NET Framework, geriye dönük uyumluluğu en üst düzeye çıkarmaya çalışır: .NET Framework'ün sonraki sürümlerinde .NET Framework sürümü için yazılan kaynak kodu derlemeniz gerekir ve .NET Framework'ün sonraki sürümlerinde .NET Framework sürümünde çalışan ikili dosyaları aynı şekilde davranır.  
@@ -66,6 +66,7 @@ Geriye dönük uyumluluk, bir platformun belirli bir sürümü için geliştiril
  Yönelik uygun geçici bir çözüm bulamazsanız, .NET Framework 4.5 (veya onun nokta sürümleri biri) 1.1, 2.0 ve 3.5 sürümleri ile yan yana çalışır ve sürüm 4 yerini alan bir yerinde güncelleştirme olduğunu unutmayın. 1.1, 2.0 ve 3.5 sürümlerini hedefleyen uygulamalar için uygulamayı en iyi ortamında çalıştırmak amacıyla hedef makineye .NET Framework'ün uygun sürümünü yükleyebilirsiniz. Yan yana yürütme hakkında daha fazla bilgi için bkz. [yan yana yürütme](../../../docs/framework/deployment/side-by-side-execution.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yenilikler](../../../docs/framework/whats-new/index.md)
 - [Sınıf Kitaplığında Artık Kullanılmayanlar](../../../docs/framework/whats-new/whats-obsolete.md)
 - [Uygulama Uyumluluğu](../../../docs/framework/migration-guide/application-compatibility.md)

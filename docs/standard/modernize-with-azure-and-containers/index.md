@@ -4,12 +4,12 @@ description: Kaldırma ve kaydırma ve bu e-kitap kapsayıcılarla ve Azure bulu
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 68d5ce7ad71fae5ed3e1460c56581dd69c3925f3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: ed291309d04e3e5bfed6c73cdf8a67b79431a363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156396"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme (2 sürümü)
 
@@ -97,7 +97,7 @@ Tablo 1-1, başlıca avantajları ve her geçiş veya modernizasyonu yaklaşım�
 | Azure'da sanal makineler için dağıtılan uygulamalar | Tek parça veya kapsayıcılar, Azure Service Fabric ve AKS (Azure Kubernetes hizmeti) ile Azure App Service, Azure Container örneği (ACI), Vm'leri dağıtılan N katmanlı uygulamalar | Kapsayıcılı mikro hizmetler Azure Kubernetes Service (AKS), Service Fabric ve/veya Azure işlevleri temel sunucusuz mikro hizmetler. |
 | **Verileri hedefi** |
 | SQL veya bir VM üzerinde herhangi bir ilişkisel veritabanı | Azure SQL veritabanı yönetilen örneğine veya başka bir yönetilen veritabanı bulutta. | Azure SQL veritabanı, Azure Cosmos DB veya başka bir yönetilen veritabanı bulut tabanlı bir mikro hizmet, başına fined dilimi veritabanı |
-| **Avantajlar**|
+| **Yararları**|
 | <li>Hiçbir bütçeden, yeni kodu <li> Hızlı geçiş için en az çaba <li> Azure'da desteklenen en küçük ortak paydası <li> Temel kullanılabilirliği garanti eder <li> Buluta taşıdıktan sonra bunu daha da fazla modernleştirin kolaydır | <li> Hiçbir bütçeden <li> Çok az kod/yapılandırma değişiklikleri <li> Geliştirilmiş dağıtım ve DevOps çevikliği kapsayıcıları nedeniyle serbest bırakmak için <li> Yoğunluğu ve dağıtım maliyetlerini düşürün <li> Uygulamalar ve bağımlılıklar için taşınabilirlik <li> Ana hedef esneklik: Yaklaşım PaaS veya Iaas | <li> Mimarı bulut için buluttan en iyi avantajlarından yararlanın, ancak yeni kodu gereklidir <li> Mikro hizmetler bulutta yerel yaklaşımları <li> Modern iş açısından kritik uygulamalar, dayanıklı bulut ölçeklenebilir <li> Tam olarak yönetilen hizmetler <li> Ölçek için en iyi duruma getirilmiş <li> Alt sistemi tarafından otonom Çeviklik için en iyi duruma getirilmiş <li> Dağıtım ve DevOps üzerinde oluşturulmuş |
 | **Zorlukları** |
 | <li> Shift gider işletim ya da veri merkezleri kapatma dışında daha küçük bulut değer <li> Az yönetilir: Hiçbir işletim sistemi veya bir ara yazılım düzeltme eki uygulama; Terraform, Spinnaker veya Puppet gibi altyapı çözümlerini kullanıyor olabilir | <li> Kapsayıcılı hale getirmek geliştiricilerin ve BT işlemleri için öğrenme eğrisini içinde ek bir adım olduğunu <li> DevOps ve CI/CD işlem hatları 'şart' Bu yaklaşım genellikle olur. Aksi takdirde şu anda kuruluşun kültüründeki varsa, ek bir zorluğu olması olabilir| <li> Bulutta yerel uygulamalar ve mikro hizmet mimarileri için rearchitecture gerektirir ve genellikle yeniden düzenleme ya da modernleştirme olduğunda yeniden yazma önemli kod (daha fazla zaman ve bütçe) gerektirir <li> DevOps ve CI/CD işlem hatları 'şart' Bu yaklaşım genellikle olur. Aksi takdirde şu anda kuruluşun kültüründeki varsa, ek bir zorluğu olması olabilir|
@@ -154,7 +154,6 @@ Ardından, geçirmek, çok sayıda mevcut .NET Framework uygulamaları için ide
 > **Şekil 1-6.** Windows kapsayıcıları ve yönetilen Hizmetleri ile örnek uygulamaları bulut için iyileştirilmiş senaryo
 
 Daha da ileri giderek, belirli senaryolar için birkaç mikro hizmetler ekleyerek mevcut bulut için iyileştirilmiş uygulamanızı genişletebilirsiniz. Bu kısmen odaklandığı mevcut kılavuzunun değil bulutta yerel modelinin düzeyine taşıyabilir.
-
 
 ## <a name="what-this-guide-does-not-cover"></a>Ne bu kılavuzda ele alınmamaktadır
 

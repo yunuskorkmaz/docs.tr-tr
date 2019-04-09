@@ -1,18 +1,18 @@
 ---
-title: Birden çok etkin sonuç kümesini etkinleştirme
+title: Birden Çok Etkin Sonuç Kümesini Etkinleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147556"
 ---
-# <a name="enabling-multiple-active-result-sets"></a>Birden çok etkin sonuç kümesini etkinleştirme
+# <a name="enabling-multiple-active-result-sets"></a>Birden Çok Etkin Sonuç Kümesini Etkinleştirme
 Birden çok etkin sonuç kümesi (MARS) tek bir bağlantı üzerinde birden çok toplu iş yürütme izin vermek için SQL Server ile birlikte çalışan bir özelliktir. SQL Server ile kullanmak için MARS etkinleştirilmişse kullanılan her komut nesnesi bir oturum bağlantı ekler.  
   
 > [!NOTE]
@@ -67,7 +67,7 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="thread-safety"></a>İş Parçacığı Güvenliği  
  MARS işlemleri, iş parçacığı açısından güvenli değildir.  
   
-### <a name="connection-pooling"></a>Bağlantı havuzu  
+### <a name="connection-pooling"></a>Bağlantı Havuzu  
  MARS etkin bağlantı, herhangi bir bağlantı gibi havuza eklenir. Uygulama etkin MARS biri diğeri devre dışı MARS ile iki bağlantı açarsa, iki ayrı havuzlarında bağlantılardır. Daha fazla bilgi için [SQL Server Connection Pooling (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>SQL Server toplu yürütme ortamı  
@@ -112,5 +112,6 @@ string connectionString = "Data Source=MSSQL1;" +
  MARS okuyarak desteği için bir uygulama denetleyebilirsiniz `SqlConnection.ServerVersion` değeri. Birincil numara 9 için SQL Server 2005 ve SQL Server 2008 için 10 olması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Birden Çok Etkin Sonuç Kümesi (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

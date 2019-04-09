@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 5ceda723ad982fc788e8d0b81e6cf92975790682
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 61ced27ed80adf8ac5d543584f71794b9ee59676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188753"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Nasıl yapılır: Koleksiyona Bağlama ve Seçime Göre Bilgi Görüntüleme
 Basit bir ana öğe-ayrıntı senaryosunda elinizdeki verilere bağlı <xref:System.Windows.Controls.ItemsControl> gibi bir <xref:System.Windows.Controls.ListBox>. Kullanıcı seçimine göre seçili öğe hakkında daha fazla bilgi görüntüler. Bu örnek, bu senaryonun nasıl uygulanacağını gösterir.  
@@ -46,6 +46,7 @@ Basit bir ana öğe-ayrıntı senaryosunda elinizdeki verilere bağlı <xref:Sys
  [!code-vb[CollectionBinding#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hiyerarşik Veriler ile Ana Öğe-Ayrıntı Desenini Kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [Hiyerarşik XML Verileri ile Ana Öğe-Ayrıntı Desenini Kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)

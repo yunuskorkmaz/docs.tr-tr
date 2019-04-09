@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextPointer objects [WPF]
 - text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
-ms.openlocfilehash: c93a1c7542a4ddb33b3880de423c256adcc3f1c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ea9850c8490ec37032d4565c6b3375e3116d4313
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169591"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>Nasıl yapılır: Metne Program Aracılığıyla Öğe Ekleme
 Aşağıdaki örnek nasıl kullanacağınızı gösterir <xref:System.Windows.Documents.TextPointer> metinde uygulamak için bir aralık belirtmek için nesneleri bir <xref:System.Windows.Documents.Span> öğesi.  
@@ -30,4 +30,5 @@ Aşağıdaki örnek nasıl kullanacağınızı gösterir <xref:System.Windows.Do
  ![Bir metin aralığı için uygulanan bir Span öğesi](./media/flow-insertelementintotextprogrammatically.png "Flow_InsertElementIntoTextProgrammatically")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Akış Belgesine Genel Bakış](flow-document-overview.md)

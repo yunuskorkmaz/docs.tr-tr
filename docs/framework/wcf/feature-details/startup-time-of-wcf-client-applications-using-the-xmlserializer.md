@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Başlangıç zamanı, WCF istemci XmlSerializer kullanarak uygulamaları geliştirin'
+title: 'Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: fb98919fe6d0ec67e5fea8c483e4993f2632267f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: dfc3dc8247a25442511d422192fea4f49bee5d92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169812"
 ---
-# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Nasıl yapılır: Başlangıç zamanı, WCF istemci XmlSerializer kullanarak uygulamaları geliştirin
+# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme
 Hizmetler ve seri hale getirilebilir kullanarak veri türlerini kullanan istemci uygulamalar <xref:System.Xml.Serialization.XmlSerializer> oluşturmak ve yavaş başlatma performansı düşürebilir çalışma zamanında bu veri türleri için serileştirme kodu derleyin.  
   
 > [!NOTE]
@@ -87,4 +87,5 @@ svcutil /t:xmlserializer myContractLibrary.exe
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+
+- [ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

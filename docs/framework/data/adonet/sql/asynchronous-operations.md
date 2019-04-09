@@ -1,15 +1,15 @@
 ---
-title: Zaman uyumsuz işlemler
+title: Zaman Uyumsuz İşlemler
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: b1c6646f666ca1d931ab8caa8cd0a2e0c6a6722f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72c2cc33185cb7fba5b8c8ce8d3805a6bb76f8d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116044"
 ---
-# <a name="asynchronous-operations"></a>Zaman uyumsuz işlemler
+# <a name="asynchronous-operations"></a>Zaman Uyumsuz İşlemler
 Komut yürütme gibi bazı veritabanı işlemleri tamamlamak için önemli zaman alabilir. Böyle bir durumda, tek iş parçacıklı uygulamalar diğer işlemleri engelleyin ve kendi işlemleri devam etmeden önce tamamlanması komutunun bitmesini bekleyin gerekir. Buna karşılık, bir arka plan iş parçacığı uzun süredir çalışan işlem atamak için ön plan iş parçacığı işlemi kalmasına izin verir. Bir Windows uygulamasında, örneğin, bir arka plan iş parçacığı için uzun süredir çalışan işlem için temsilci seçme işlemi yürütülürken yanıt verebilir durumda kalması kullanıcı arabirimi iş parçacığı sağlar.  
   
  .NET Framework, geliştiricilerin arka plan iş parçacığı avantajlarından yararlanın ve kullanıcı arabirimi veya diğer işlemleri tamamlamak için yüksek öncelikli iş parçacıkları yer açmak için kullanabileceğiniz birkaç standart zaman uyumsuz tasarım desenleri sağlar. ADO.NET içinde aynı bu tasarım desenleri destekler, <xref:System.Data.SqlClient.SqlCommand> sınıfı. Özellikle, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, ve <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> yöntemleri ile eşleştirilmiş <xref:System.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A>, ve <xref:System.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> yöntemler, zaman uyumsuz destek sağlar.  
@@ -30,6 +30,7 @@ Komut yürütme gibi bazı veritabanı işlemleri tamamlamak için önemli zaman
  Bir konsol uygulamasında zaman uyumsuz komut yürütme işleminin tamamlanmasını beklemek için yoklama kullanımını gösteren bir örnek sağlar. Bu yöntem ayrıca bir sınıf kitaplığı veya başka bir uygulama kullanıcı arabirimi olmadan geçerli değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Zaman Uyumlu Metotları Zaman Uyumsuz Olarak Çağırma](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

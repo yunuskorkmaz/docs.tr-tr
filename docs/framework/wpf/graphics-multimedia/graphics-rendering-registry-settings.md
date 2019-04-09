@@ -8,18 +8,16 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375356"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135544"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Grafik İşleme Kayıt Defteri Ayarları
 Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik etkileyen kayıt defteri ayarları oluşturma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
-  
 
-  
 <a name="overview"></a>   
 ## <a name="when-to-use-graphics-rendering-registry-settings"></a>Grafik işleme kayıt defteri ayarları kullanmak ne zaman  
  Bu kayıt defteri ayarları, sorun giderme, hata ayıklama ve ürün destek amaçları için sağlanır. Kayıt defterindeki değişiklikleri tüm etkilediğinden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar, uygulamanız hiçbir zaman alter bu kayıt defteri anahtarları otomatik olarak veya yükleme sırasında.  
@@ -98,5 +96,6 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
  **Başvuru tarayıcısını seçeneği kullanma** bir DWORD değeri alır. 0 değeri, görüntüleyiciye kullanılmadığını gösterir. Diğer bir sıfır olmayan bir değer zorlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görüntüleyiciye kullanılacak.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Grafik İşleme Katmanları](../advanced/graphics-rendering-tiers.md)
 - [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)

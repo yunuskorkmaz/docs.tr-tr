@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: d62c0081c128693861a9fd21360f09f65d485a79
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a60c415427a1be994f8081725f20e867dca66aa1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101887"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListView> denetim simgeler ile öğeler bir listesini görüntüler. Bir liste görünümü sağ bölme Windows Explorer'ın gibi bir kullanıcı arabirimi oluşturmak için kullanabilirsiniz. Denetim dört görünüm modu vardır: LargeIcon, SmallIcon, liste ve ayrıntılar.  
@@ -29,17 +29,17 @@ Windows Forms <xref:System.Windows.Forms.ListView> denetim simgeler ile öğeler
   
 |ListView üyesi|Görüntüle|  
 |---------------------|----------|  
-|<xref:System.Windows.Forms.ListView.Alignment%2A> Özelliği|<xref:System.Windows.Forms.View.SmallIcon> veya <xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.AutoArrange%2A> Özelliği|<xref:System.Windows.Forms.View.SmallIcon> veya <xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> Yöntemi|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.Columns%2A> Özelliği|<xref:System.Windows.Forms.View.Details> veya <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.DrawSubItem> Olay|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> Yöntemi|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>, veya <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.FindNearestItem%2A> Yöntemi|<xref:System.Windows.Forms.View.SmallIcon> veya <xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.GetItemAt%2A> Yöntemi|<xref:System.Windows.Forms.View.Details> veya <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A> Özelliği|Dışındaki tüm görünümler <xref:System.Windows.Forms.View.List>|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> Özelliği|<xref:System.Windows.Forms.View.Details>.|  
-|<xref:System.Windows.Forms.ListView.InsertionMark%2A> Özelliği|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>, veya <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.Alignment%2A> özellik|<xref:System.Windows.Forms.View.SmallIcon> veya <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.AutoArrange%2A> özellik|<xref:System.Windows.Forms.View.SmallIcon> veya <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> yöntemi|<xref:System.Windows.Forms.View.Details>|  
+|<xref:System.Windows.Forms.ListView.Columns%2A> özellik|<xref:System.Windows.Forms.View.Details> veya <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.DrawSubItem> olay|<xref:System.Windows.Forms.View.Details>|  
+|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> yöntemi|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>, veya <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.FindNearestItem%2A> yöntemi|<xref:System.Windows.Forms.View.SmallIcon> veya <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.GetItemAt%2A> yöntemi|<xref:System.Windows.Forms.View.Details> veya <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.Groups%2A> özellik|Dışındaki tüm görünümler <xref:System.Windows.Forms.View.List>|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> özellik|<xref:System.Windows.Forms.View.Details>biçimindeki telefon numarasıdır.|  
+|<xref:System.Windows.Forms.ListView.InsertionMark%2A> özellik|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>, veya <xref:System.Windows.Forms.View.Tile>|  
   
  Anahtar özelliği <xref:System.Windows.Forms.ListView> denetimi <xref:System.Windows.Forms.ListView.Items%2A>, denetimi tarafından görüntülenen öğeler içerir. <xref:System.Windows.Forms.ListView.SelectedItems%2A> Özelliği şu anda denetiminde seçilen öğelerin bir koleksiyonunu içerir. Kullanıcının çeşitli öğeleri sürükleyip başka bir denetime bir zaman, örneğin, birden çok öğe seçebileceği <xref:System.Windows.Forms.ListView.MultiSelect%2A> özelliği `true`. <xref:System.Windows.Forms.ListView> Denetimi, öğelerin yanındaki onay kutularını görüntüleyebilir, varsa <xref:System.Windows.Forms.ListView.CheckBoxes%2A> özelliği `true`.  
   
@@ -48,15 +48,16 @@ Windows Forms <xref:System.Windows.Forms.ListView> denetim simgeler ile öğeler
  <xref:System.Windows.Forms.ListView> Denetimi ayrıca görsel stilleri ve diğer özelliklerin gruplandırma, kutucuk görünümü ve ekleme işaretleri dahil olmak üzere Windows XP platformunda destekler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ListView>
 - [ListView Denetimi](listview-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetimine sütun ekleme](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetimi için simgeler görüntüleme](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetimiyle sütunlardaki alt öğeleri görüntüleme](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Windows Forms ListView denetiminde bir öğe seçin](how-to-select-an-item-in-the-windows-forms-listview-control.md)
-- [Nasıl yapılır: Bir Windows Forms ListView denetimi içinde öğeleri gruplandırma](how-to-group-items-in-a-windows-forms-listview-control.md)
-- [Nasıl yapılır: Bir Windows Forms ListView denetiminde ekleme işareti görüntüleme](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
-- [Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme](how-to-add-search-capabilities-to-a-listview-control.md)
-- [Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme](add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [Nasıl yapılır: Windows Forms ile çok bölmeli kullanıcı arabirimi oluşturma](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Nasıl yapılır: Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView Denetimine Sütun Ekleme](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView Denetimi için Simgeler Görüntüleme](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView Denetimiyle Sütunlardaki Alt Öğeleri Görüntüleme](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView Denetiminde Öğe Seçme](how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView Denetimindeki Öğeleri Gruplama](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView Denetiminde Ekleme İşareti Görüntüleme](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [Nasıl yapılır: ListView Denetimine Arama Yetenekleri Ekleme](how-to-add-search-capabilities-to-a-listview-control.md)
+- [Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Nasıl yapılır: Windows Forms'da Çok Bölmeli Kullanıcı Arabirimi Oluşturma](how-to-create-a-multipane-user-interface-with-windows-forms.md)

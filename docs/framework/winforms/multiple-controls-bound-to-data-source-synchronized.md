@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Birden çok denetimin eşitlenmiş kalmasını aynı veri kaynağına bağlama'
+title: 'Nasıl yapılır: Aynı Veri Kaynağına Bağlanan Birden Çok Denetimin Eşitlenmiş Kalmasını Sağlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170345"
 ---
-# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Nasıl yapılır: Birden çok denetimin eşitlenmiş kalmasını aynı veri kaynağına bağlama
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Nasıl yapılır: Aynı Veri Kaynağına Bağlanan Birden Çok Denetimin Eşitlenmiş Kalmasını Sağlama
 Windows Forms veri bağlama ile önerilmesine çalışırken, birden çok denetim aynı veri kaynağına bağlanır. Bazı durumlarda, bağlı denetimlerin özelliklerini birbirine ve veri kaynağı ile eşitlenmiş kalmasını sağlamak için ek adımlar gerekebilir. Bu adımlar, iki durumda gereklidir:  
   
 -   Veri kaynağı uygulamazsa <xref:System.ComponentModel.IBindingList>ve bu nedenle <xref:System.ComponentModel.IBindingList.ListChanged> türünde olayları <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
@@ -41,7 +41,8 @@ Windows Forms veri bağlama ile önerilmesine çalışırken, birden çok deneti
 -   Bir formla <xref:System.Windows.Forms.Form.Load> işlenen olay ve çağrı `InitializeControlsAndDataSource` formun örnekten yönteminde <xref:System.Windows.Forms.Form.Load> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bağlı veri BindingSource bileşenini kullanarak formlar arasında paylaşma](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+
+- [Nasıl yapılır: BindingSource Bileşenini Kullanarak Bağlı Verileri Formlar Arasında Paylaşma](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
 - [Windows Forms Veri Bağlamada Bildirimi Değiştirme](change-notification-in-windows-forms-data-binding.md)
 - [Veri Bağlama ile İlgili Arabirimler](interfaces-related-to-data-binding.md)
 - [Windows Forms Veri Bağlama](windows-forms-data-binding.md)

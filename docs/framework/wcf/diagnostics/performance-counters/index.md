@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: c2bb9d2f67cfc0bf0a28492f77c16fdb39b07fe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087865"
 ---
 # <a name="wcf-performance-counters"></a>WCF Performans Sayaçları
 Çok sayıda performans sayaçları, uygulamanızın performansını ölçmek amacıyla Windows Communication Foundation (WCF) içerir.  
@@ -139,4 +139,5 @@ ServiceName@ServiceBaseAddress
  Sayaçları programlama yoluyla erişim hakkında daha fazla bilgi için bkz. [performans sayacı programlama mimarisi](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)

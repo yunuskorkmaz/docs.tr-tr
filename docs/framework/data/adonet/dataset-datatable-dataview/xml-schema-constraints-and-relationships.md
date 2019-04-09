@@ -1,15 +1,15 @@
 ---
-title: XML şema kısıtlamaları ve ilişkileri
+title: XML Şema Kısıtlamaları ve İlişkileri
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: aea0efc51adb5a81f479cad41a7fb8d145ceb869
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 990ae2eef8d9fbd28472494c989ae9ecca34251d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119788"
 ---
-# <a name="xml-schema-constraints-and-relationships"></a>XML şema kısıtlamaları ve ilişkileri
+# <a name="xml-schema-constraints-and-relationships"></a>XML Şema Kısıtlamaları ve İlişkileri
 Bir XML Şeması Tanım Dili (XSD) şemasında kısıtlamaları belirtebilirsiniz (benzersiz anahtar ve keyref kısıtlamaları) ve ilişkileri (kullanarak **msdata:Relationship** ek açıklama). Bu konu, kısıtlamaları ve bir XML şemasında belirtilen ilişkileri oluşturmak için nasıl yorumlanır açıklar <xref:System.Data.DataSet>.  
   
  Genel olarak, bir XML şeması içinde belirttiğiniz **msdata:Relationship** yalnızca ilişkileri oluşturmak istiyorsanız ek açıklama **veri kümesi**. Daha fazla bilgi için [gelen XML Şeması (XSD) DataSet ilişkileri oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md). Kısıtlamaları belirtin (benzersiz anahtar ve keyref) kısıtlamalarını oluşturmak istiyorsanız **veri kümesi**. Anahtar ve keyref kısıtlamaları da ilişkiler oluşturmak için bu konunun ilerleyen kısımlarında açıklandığı gibi kullanıldığını unutmayın.  
@@ -187,5 +187,6 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
  İç içe geçmiş tablosuna başvuran keyref kısıtlama içerip içermediğini **msdata:IsNested = "true"** ek açıklama, **veri kümesi** keyref kısıtlaması dayalı tek bir iç içe geçmiş ilişkisi oluşturmanız gerekir ve ilgili benzersiz/key kısıtlaması.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

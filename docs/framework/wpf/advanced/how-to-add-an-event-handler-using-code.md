@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 05eaae0f5b893f42d421717ac73373d4c79004c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129369"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Nasıl yapılır: Kod Kullanarak bir Olay İşleyicisi Ekleme
 Bu örnek kod kullanarak bir öğe için bir olay işleyicisi eklemek nasıl gösterir.  
@@ -38,5 +38,6 @@ Bu örnek kod kullanarak bir öğe için bir olay işleyicisi eklemek nasıl gö
 >  Olay işleyici başlangıçta ayrıştırılmış ekleme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfası çok basittir. Olay işleyicisi eklemek istediğiniz nesne öğesi içinde kullanmak istediğiniz olay adıyla eşleşen bir öznitelik ekleyin. Bu özniteliğin değeri arka plan kod dosyasında tanımlanan olay işleyicisi yönteminin adı belirtmezseniz [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfası. Daha fazla bilgi için [XAML genel bakış (WPF)](xaml-overview-wpf.md) veya [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
 - [Nasıl Yapılır Konuları](events-how-to-topics.md)

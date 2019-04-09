@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 20b4df2a663bdc584b5f350c95c8c533f1cc7c8e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: e44b695a07c0f304e1c995f240d9fa387195358d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177027"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Yönetilen Profil Temelli İyileştirme Aracı)
 
@@ -127,6 +127,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ngen.exe (Yerel Görüntü Oluşturucu)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [Masaüstü uygulamaları için başlatma performansını iyileştirme](https://go.microsoft.com/fwlink/p/?LinkId=248943)

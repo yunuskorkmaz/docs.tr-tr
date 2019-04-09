@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77bae0de732fc8847650b9ce03f8228111a76334
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: eb4096b0ae083e0b6c0598ea18cc8b33c2fdfe3e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116301"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses Yöntemi
 Bu bilgisayar üzerinde çalışan yönetilen işlemler için bir numaralandırıcı alır.  
@@ -58,4 +58,5 @@ HRESULT EnumProcesses (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICorPublish Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)

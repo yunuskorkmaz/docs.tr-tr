@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: bc5fe149050ad0a4784d90d370dfcd3f99663b38
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119125"
 ---
 # <a name="securing-wcf-data-services"></a>WCF Veri Hizmetlerinin Güvenliğini Sağlama
 Bu konuda, geliştirme, dağıtma ve WCF Veri Hizmetleri ve uygulamaları, açık veri Protokolü (OData) destekleyen, erişim Hizmetleri'ni çalıştırmak için belirli güvenlik konuları açıklanmaktadır. Güvenli .NET Framework uygulamaları oluşturmaya yönelik önerileri de izlemelidir.  
@@ -111,5 +111,6 @@ OData HTTP protokolünü temel alır. HTTP iletisinde, üstbilgi veri hizmeti ta
 -   İstemci uygulamalarının her zaman kullanıcı girişini ve güvenilmeyen hizmetlerden kabul edilen verileri doğrulamasını öneririz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

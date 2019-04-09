@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4bb4072c574edeac1c531978fac75595c252e0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 17ba15553d2e7dcd2090870eaab54b4c680631f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481605"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163091"
 ---
 # <a name="icordebugcontrollerenumeratethreads-method"></a>ICorDebugController::EnumerateThreads Yöntemi
 Bir numaralandırıcı işlemde etkin yönetilen iş parçacıkları için alır.  
@@ -52,4 +52,3 @@ HRESULT EnumerateThreads (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-

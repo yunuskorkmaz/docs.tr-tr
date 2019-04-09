@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111416"
 ---
 # <a name="typography-in-wpf"></a>WPF'de Tipografi
 Bu konu, ana tipografik özelliklerini tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Geliştirilmiş kalitesini ve metin işleme performansını bu özellikler [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipografi destek, Gelişmiş uluslararası metin yazı tipi desteği geliştirilmiştir ve yeni metin uygulama programlama arabirimleri (API).  
@@ -149,6 +149,7 @@ ClearType y yönünde düzgünleştirme ile metin
  Özel metin düzenini oluşturma hakkında daha fazla ayrıntı için bkz. [Gelişmiş metin biçimlendirme](advanced-text-formatting.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>
 - [ClearType Genel Bakışı](cleartype-overview.md)

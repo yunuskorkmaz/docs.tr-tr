@@ -10,12 +10,12 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-ms.openlocfilehash: bc78077be45f22826eaa23a746dcf272601d51b4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165119"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>GDI+'da Açık ve Kapalı Eğriler
 İki eğriye aşağıda gösterilmiştir: bir açık ve biri kapalı.  
@@ -49,9 +49,10 @@ ms.locfileid: "57711466"
  ![Bir yol dizesindeki](./media/aboutgdip02-art26.gif "Aboutgdip02_art26")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
-- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md)
+- [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](how-to-create-graphics-objects-for-drawing.md)
 - [Yollar Oluşturma ve Çizme](constructing-and-drawing-paths.md)

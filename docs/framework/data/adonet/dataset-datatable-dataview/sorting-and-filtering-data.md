@@ -1,18 +1,18 @@
 ---
-title: Verileri sıralama ve filtreleme
+title: Verileri Sıralama ve Filtreleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 8733a9552787f7286ae76c77091b9833804478d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166250"
 ---
-# <a name="sorting-and-filtering-data"></a>Verileri sıralama ve filtreleme
+# <a name="sorting-and-filtering-data"></a>Verileri Sıralama ve Filtreleme
 <xref:System.Data.DataView> İçindeki verileri sıralama ve filtreleme çeşitli yollarını sağlar bir <xref:System.Data.DataTable>:  
   
 -   Kullanabileceğiniz <xref:System.Data.DataView.Sort%2A> tek belirtmek için özelliği veya sıralama düzenlerine ve ASC (artan) ve (Azalan) DESC parametreleri içeren birden çok sütunu.  
@@ -31,10 +31,10 @@ ms.locfileid: "54661223"
     |------------------------------|-----------------|  
     |**CurrentRows**|**Geçerli** satır sürümü tüm **Unchanged**, **eklenen**, ve **değiştirilen** satır. Bu varsayılandır.|  
     |**Eklendi**|**Geçerli** satır sürümü tüm **eklenen** satır.|  
-    |**silindi**|**Özgün** satır sürümü tüm **silinmiş** satır.|  
+    |**Silindi**|**Özgün** satır sürümü tüm **silinmiş** satır.|  
     |**ModifiedCurrent**|**Geçerli** satır sürümü tüm **değiştirilen** satır.|  
     |**ModifiedOriginal**|**Özgün** satır sürümü tüm **değiştirilen** satır.|  
-    |**Yok.**|Satır yok.|  
+    |**None**|Satır yok.|  
     |**OriginalRows**|**Özgün** satır sürümü tüm **Unchanged**, **değiştirilen**, ve **silinmiş** satır.|  
     |**değişmedi**|**Geçerli** satır sürümü tüm **Unchanged** satır.|  
   
@@ -57,6 +57,7 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>

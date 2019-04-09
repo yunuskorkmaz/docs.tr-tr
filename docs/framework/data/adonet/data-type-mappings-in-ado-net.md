@@ -1,15 +1,15 @@
 ---
-title: ADO.NET'te veri türü eşlemeleri
+title: ADO.NET’te Veri Türü Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 302ccd7b2a05dabc5f13e6f821404a8527951741
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 1db427424e48d5b94e6c158e1d9967626297f4aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178704"
 ---
-# <a name="data-type-mappings-in-adonet"></a>ADO.NET'te veri türü eşlemeleri
+# <a name="data-type-mappings-in-adonet"></a>ADO.NET’te Veri Türü Eşlemeleri
 .NET Framework nasıl türleri bildirilen kullanılan ve çalışma zamanı'nda yönetilen tanımlar ortak tür sisteminin temel alır. Hem değer türleri ve türetilen tüm, başvuru türleri oluşur <xref:System.Object> temel türü. Bir veri kaynağı ile çalışırken, veri türü, açıkça belirtilmezse, veri sağlayıcısı'ndan algılanır. Örneğin, bir <xref:System.Data.DataSet> nesnedir herhangi belirli bir veri kaynağından bağımsız. Verileri bir `DataSet` bir veri kaynağından alınan ve değişiklikleri veri kaynağına geri kullanarak kaldı bir `DataAdapter`. Yani bir `DataAdapter` dolduran bir <xref:System.Data.DataTable> içinde bir `DataSet` sütunların sonuçta elde edilen veri türleri gibi veri kaynağından alınan değerlerle `DataTable` olan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri, özel türler yerine [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri veri kaynağına bağlanmak için kullanılan sağlayıcı.  
   
  Benzer şekilde, bir `DataReader` döndürür, sonuç değerini bir veri kaynağından bir değer olan bir yerel değişkende depolanan bir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü. Her ikisi için de `Fill` işlemlerini `DataAdapter` ve `Get` yöntemlerinin `DataReader`, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] döndürülen değerin türü çıkarılan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcısı.  
@@ -36,6 +36,7 @@ ms.locfileid: "55827922"
  Geliştiriciler kayan nokta sayıları ile çalışırken sık karşılaştığınız sorunları açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server Veri Türleri ve ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)

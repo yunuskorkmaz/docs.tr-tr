@@ -1,16 +1,16 @@
 ---
-title: WIF ve Web grupları
+title: WIF ve Web Grupları
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 85fbebcd210e7df17212d39b8e3aca9bf76bfb67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135362"
 ---
-# <a name="wif-and-web-farms"></a>WIF ve Web grupları
+# <a name="wif-and-web-farms"></a>WIF ve Web Grupları
 Bağlı olan bir taraf (RP) uygulamasının bir web grubunda dağıtılan kaynakların güvenliğini sağlamak için Windows Identity Foundation (WIF) kullandığınızda, WIF üzerinde çalışan farklı RP uygulaması örneğini belirteçleri işleyebildiğinden emin olmak için bazı adımları uygulamanız gerekir gruptaki bilgisayarların. Oturum belirteci imzalar, şifreleme doğrulama Bu işleme içerir ve oturumu simgelerin şifresini, oturumu belirteçlerini önbelleğe alma ve algılama güvenlik belirteçleri yeniden yürütülmesi.  
   
  RP tek bir bilgisayara veya bir web grubundaki--çalışıyor olsun, WIF RP uygulamanın – kaynakları güvenli hale getirmek için kullanıldığında, tipik durumlarda, bir oturum güvenlik belirteci hizmeti (STS) edinilen güvenlik belirtecine bağlı olarak istemciye ile oluşturulur. Bu, STS WIF kullanarak korunan her uygulama kaynağı için kimlik doğrulaması istemcinin zorlama önlemek içindir. WIF oturum nasıl işlediği hakkında daha fazla bilgi için bkz. [WIF oturum yönetimi](../../../docs/framework/security/wif-session-management.md).  
@@ -251,6 +251,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>

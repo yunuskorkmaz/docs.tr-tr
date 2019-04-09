@@ -1,18 +1,18 @@
 ---
-title: 'Metot tabanlı sorgu söz dizimi örnekleri: Öğe işleçleri (LINQ to DataSet)'
+title: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Öğe işleçleri (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
-ms.openlocfilehash: 5c29d800123b29ebb11c35e87647f920de54d357
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 49a2665240f5f35e0d4937e55c39eccf04b1444d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157254"
 ---
-# <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Metot tabanlı sorgu söz dizimi örnekleri: Öğe işleçleri (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Öğe işleçleri (LINQ to DataSet)
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.First%2A> ve <xref:System.Linq.Enumerable.ElementAt%2A> almak için yöntemleri <xref:System.Data.DataRow> öğelerden bir <xref:System.Data.DataSet> sorgu ifadesi söz dizimini kullanarak.  
   
  `FillDataSet` Bu örneklerde kullanılan yöntemi belirtilen [verileri bir DataSet içine Yükleniyor](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
@@ -43,6 +43,7 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
 [!code-vb[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#firstsimple)] 
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataSet’e Veri Yükleme](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Standart sorgu işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Tasarımcı kullanarak Windows Forms ListView denetimi içinde öğeleri gruplandırma'
+title: 'Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetimindeki Öğeleri Gruplandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView control [Windows Forms], grouping items
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 4c3e20ad7a09cc21e6c1d2a6d8fbbc47d11c903d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 223c2a639fdb7a05506eca333a44ca31c0dae75f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136662"
 ---
-# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı kullanarak Windows Forms ListView denetimi içinde öğeleri gruplandırma
+# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetimindeki Öğeleri Gruplandırma
 Gruplandırma özelliğini de <xref:System.Windows.Forms.ListView> gruplarında öğe ilgili kümeleri görüntülemek, denetim olanağı sağlar. Bu grupları ekranda grup başlıklarını içeren yatay grup üstbilgileri tarafından ayrılır. Kullanabileceğiniz <xref:System.Windows.Forms.ListView> öğeleri alfabetik olarak tarih veya diğer bir mantıksal gruplama gruplandırarak büyük listeler daha kolay gezinme olmak için grupları. Aşağıdaki resimde, bazı gruplandırılmış öğeler gösterilir.  
   
  ![ListView grupları](./media/listviewgroups.gif "ListViewGroups")  
@@ -46,9 +46,10 @@ Gruplandırma özelliğini de <xref:System.Windows.Forms.ListView> gruplarında 
 3.  Seçin <xref:System.Windows.Forms.ListViewItem.Group%2A> özelliği ve aşağı açılan listeden bir grubu seçin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>
 - <xref:System.Windows.Forms.ListViewGroup>
 - [ListView Denetimi](listview-control-windows-forms.md)
 - [ListView Denetimine Genel Bakış](listview-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6c48a7ae62155dc558fb4a62b3e2573bea77594
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 625609d8632f1f73ee2ec01e3b2e0e1af7e4a134
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085720"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals Metodu
 Bu kapsam içinde tanımlanan yerel değişkenler alır.  
@@ -54,4 +54,5 @@ HRESULT GetLocals(
  **Üst bilgi:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ISymUnmanagedScope Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

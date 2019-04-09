@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 88c304d5-edaa-4c0e-a8e1-144e8a76877e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8b3b25c5e6e80b45ffc97e116c8649078f00861
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9bf09c01d24315c3f239911326f1844a0b2cc101
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111273"
 ---
 # <a name="icordebugloadedmodulegetname-method"></a>ICorDebugLoadedModule::GetName Yöntemi
 Yüklenen bir modülün adını alır.  
@@ -50,5 +50,6 @@ HRESULT GetName(
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICorDebugLoadedModule Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

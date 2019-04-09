@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708853"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174817"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar Denetimine Genel Bakış (Windows Forms)
 > [!NOTE]
@@ -31,8 +31,9 @@ ms.locfileid: "57708853"
  <xref:System.Windows.Forms.ToolBar> Denetimi ekleyerek araç çubukları oluşturmanıza imkan tanır <xref:System.Windows.Forms.Button> nesneleri için bir <xref:System.Windows.Forms.ToolBar.Buttons%2A> koleksiyonu. Düğme eklemek için koleksiyon düzenleyicisini kullanma bir <xref:System.Windows.Forms.ToolBar> denetimi; her <xref:System.Windows.Forms.Button> nesne olmalıdır metin veya atanan görüntü ancak her ikisini de atayabilirsiniz. Sağlanan görüntü ile ilişkili bir [ImageList](imagelist-component-windows-forms.md) bileşeni. Çalışma zamanında ekleme veya kaldırma düğmelerden <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> kullanarak <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> ve <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> yöntemleri. Düğmeler, programı için bir <xref:System.Windows.Forms.ToolBar>, kodu ekleyin <xref:System.Windows.Forms.ToolBar.ButtonClick> olayları <xref:System.Windows.Forms.ToolBar>kullanarak <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> özelliği <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> hangi düğmesine tıklandığını belirleme için sınıf.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar Denetimi](toolbar-control-windows-forms.md)
-- [Nasıl yapılır: Bir ToolBar denetimine düğme ekleme](how-to-add-buttons-to-a-toolbar-control.md)
-- [Nasıl yapılır: ToolBar düğmesi için simge tanımlama](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Nasıl yapılır: Araç çubuğu düğmeleri için menü olaylarını tetikleme](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Nasıl yapılır: Bir ToolBar Denetimine Düğme Ekleme](how-to-add-buttons-to-a-toolbar-control.md)
+- [Nasıl yapılır: ToolBar Düğmesi için Simge Tanımlama](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Nasıl yapılır: Araç Çubuğu Düğmeleri için Menü Olaylarını Tetikleme](how-to-trigger-menu-events-for-toolbar-buttons.md)

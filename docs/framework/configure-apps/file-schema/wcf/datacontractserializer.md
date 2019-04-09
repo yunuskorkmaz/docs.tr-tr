@@ -2,12 +2,12 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 933d49092c392fa293468d546e521bf7ed858376
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ba16d9cc30b07d3e6b0924e6013ec01443867d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139054"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 İçin yapılandırma verilerini içeren <xref:System.Runtime.Serialization.DataContractSerializer>.  
@@ -51,8 +51,9 @@ ms.locfileid: "54539850"
 >  `<dataContractSerializer>` Davranış öğesi (varsa) önce her zaman görünmelidir `<enableWebScript>` yapılandırma dosyasındaki davranış öğesi. Aksi takdirde, sonuçta ortaya çıkan davranış tanımsızdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Veri Sözleşmesi Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [Veri Aktarma ve Seri Hale Getirme](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

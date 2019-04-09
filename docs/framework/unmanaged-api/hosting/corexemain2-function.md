@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef51ad511d1b7d8064d4bd141e2952bf723afff7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f968d84ae695eb1da127538ebdc5e4f55d6ebf39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183163"
 ---
 # <a name="corexemain2-function"></a>_CorExeMain2 İşlevi
 Belirtilen bellek eşlemeli kod içinde giriş noktasını yürütür. Bu işlev, işletim sistemi yükleyicisi tarafından çağrılır.  
@@ -64,4 +64,5 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Meta Veri Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

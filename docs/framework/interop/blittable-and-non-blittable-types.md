@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115381"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler
 Çoğu veri türleri, hem yönetilen hem de yönetilmeyen bellekte bir ortak gösterilmesi ve birlikte çalışma sıralayıcısı ile özel işlem gerektirmez. Bu tür adında *türlerse* arasında geçirildiğinde, dönüştürme gerektirmediği için yönetilen ve yönetilmeyen kod.  
@@ -74,4 +74,5 @@ ms.locfileid: "56093040"
  Sınıf ve nesne türleri yalnızca COM birlikte çalışma tarafından desteklenir. Karşılık gelen türler için [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#ve C++ bkz [sınıf kitaplığına genel bakış](../../../docs/standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Varsayılan Hazırlama Davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)
+
+- [Varsayılan Sıralama Davranışı](../../../docs/framework/interop/default-marshaling-behavior.md)

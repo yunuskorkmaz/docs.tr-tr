@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Harita HRESULTs ve özel durumları'
+title: 'Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 609f7f6e5460bf315b87725405496e95abbfdd95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102771"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: Harita HRESULTs ve özel durumları
+# <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme
 COM yöntemleri HRESULTs döndürerek hata raporu; .NET yöntemleri bunları özel durumları atma tarafından rapor. Çalışma zamanı, ikisi arasındaki geçişi işler. .NET Framework içindeki her bir özel durum sınıfı için HRESULT eşler.  
   
  Kullanıcı tanımlı özel durum sınıfları HRESULT uygun ne olursa olsun belirtebilirsiniz. Bu özel durum sınıfları dinamik olarak ayarlayarak özel durum oluşturulduğunda döndürülecek HRESULT değiştirebilirsiniz **HResult** alanına özel durum nesnesi. Özel durum hakkında ek bilgi istemcisi üzerinden sağlanan **IErrorInfo** yönetilmeyen işleminde .NET nesne üzerinde uygulanan arabirimi.  
@@ -75,10 +75,10 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**özel durum**|  
+|**COR_E_EXCEPTION**|**Özel Durum**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
-|**COR_E_FILENOTFOUND veya ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
+|**COR_E_FILENOTFOUND veya ERROR_FILE_NOT_FOUND**|**Derleme işlemi FileNotFoundException**|  
 |**COR_E_FORMAT**|**FormatException**|  
 |**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
 |**COR_E_INVALIDCAST veya e_noınterface**|**InvalidCastException**|  
@@ -132,16 +132,17 @@ CMyClass::MethodThatThrows
   
 |Özel alan|COM bilgisi kaynağı|  
 |---------------------|------------------------------------|  
-|**hata kodu**|Çağrıdan HRESULT döndürdü.|  
+|**ErrorCode**|Çağrıdan HRESULT döndürdü.|  
 |**HelpLink**|Varsa **IErrorInfo -> HelpContext** olan sıfır değilse, dize birleştirerek biçimlendirilmiş **IErrorInfo GetHelpFile ->** ve "#" ve **IErrorInfo -> GetHelpContext**. Aksi takdirde dize öğesinden döndürülen **IErrorInfo -> GetHelpFile**.|  
 |**InnerException**|Her zaman null başvuru (**hiçbir şey** Visual Basic'te).|  
 |**İleti**|Döndürülen dize **IErrorInfo -> GetDescription**.|  
 |**Kaynak**|Döndürülen dize **IErrorInfo -> GetSource**.|  
-|**StackTrace**|Yığın izleme.|  
+|**Yığın izleme**|Yığın izleme.|  
 |**TARGETSITE**|Başarısız olan döndürülen yöntemin adını HRESULT.|  
   
  Gibi özel alanları **ileti**, **kaynak**, ve **StackTrace** kullanılamaz **StackOverflowException**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+
+- [Gelişmiş COM Birlikte Çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Özel Durumlar](../../standard/exceptions/index.md)

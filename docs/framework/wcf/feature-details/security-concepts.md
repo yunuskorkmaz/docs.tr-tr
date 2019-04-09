@@ -2,12 +2,12 @@
 title: Güvenlik Kavramları
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-ms.openlocfilehash: 61e993e8491a380410ffe772baa4d9f817f8cb23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d23ef86c2ccf315300a9290c3055388469df2e0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135154"
 ---
 # <a name="security-concepts"></a>Güvenlik Kavramları
 Bu bölümde, Windows Communication Foundation (WCF) güvenlik ile ilgili kavramları kısaca açıklanmaktadır.  
@@ -37,6 +37,7 @@ Bu bölümde, Windows Communication Foundation (WCF) güvenlik ile ilgili kavram
  [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

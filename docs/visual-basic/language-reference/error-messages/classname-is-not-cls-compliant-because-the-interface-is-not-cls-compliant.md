@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-ms.openlocfilehash: 6743a0decebb9711a4e44d09b03fe32f88ff2f72
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 063c42249abbfb506fd15311659599b4777d397f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101321"
 ---
 # <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>'\<SınıfAdı >' CLS uyumlu olmadığından, arabirim '\<InterfaceName >', uygular, CLS uyumlu değil
 Bir sınıf veya arabirim olarak işaretlenmiş `<CLSCompliant(True)>` ne zaman türetilen veya olarak işaretlenmiş bir türün uyguladığı `<CLSCompliant(False)>` veya hiçbir işaret konulmadıysa.  
@@ -32,5 +32,3 @@ Bir sınıf veya arabirim olarak işaretlenmiş `<CLSCompliant(True)>` ne zaman 
 -   CLS uyumluluğu gerektiriyorsa, bu tür içinde farklı bir devralma hiyerarşisi veya uygulama düzeni tanımlayın.  
   
 -   Bu tür, geçerli bir devralma hiyerarşisi veya uygulama düzeni içinde kalmasını gerektiriyorsa, kaldırma <xref:System.CLSCompliantAttribute> kendi tanımından veya olarak işaretlemek `<CLSCompliant(False)>`.  
-  
- 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 028ff1048813ccbc845d5ad3e7f522b492348f87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90f59f4d593a8aa077a6710cc0f5c1747ac1a3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103772"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
 `memberInfoCacheCreation` Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilmiş olduğunda bir <xref:System.Reflection.MemberInfo> önbellek oluşturulur. Bu güçlü bir gösterge yapan bir programın, kaynak açısından pahalı yansıma özelliklerini kullanın.  
@@ -65,5 +65,6 @@ public class Exe
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Reflection.MemberInfo>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

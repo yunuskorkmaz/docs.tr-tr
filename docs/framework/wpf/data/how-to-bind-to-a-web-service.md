@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: b2ef0cce293913fc7bd9d59baa91bd875823cbe2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098587"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Nasıl yapılır: Web Hizmetine Bağlama
 Bu örnekte, Web hizmeti yöntem çağrıları tarafından döndürülen nesnelere bağlama gösterilmektedir.  
@@ -46,6 +46,7 @@ Bu örnekte, Web hizmeti yöntem çağrıları tarafından döndürülen nesnele
  Yapısı hakkında bilgi için **getContentResponse**, bkz: [içerik hizmeti belgeleri](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
-- [Bağlama Kaynaklarına Genel Bakış](binding-sources-overview.md)
+- [Kaynakların Bağlanmasına Genel Bakış](binding-sources-overview.md)
 - [XAML'de Bağlama için Veriyi Kullanılabilir Yapma](how-to-make-data-available-for-binding-in-xaml.md)

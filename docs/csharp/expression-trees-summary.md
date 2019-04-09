@@ -1,28 +1,27 @@
 ---
 title: İfade ağaçları özeti
-description: Kodu verileri olarak yorumlar ve o koduna göre yeni işlevsellik yapı dinamik programlar oluşturmak için ifade ağaçları nasıl kullanabileceğiniz özetleri.
+description: Kod veri olarak yorumlar ve yapı bu koduna göre yeni işlevselliği dinamik programlar oluşturmak için ifade ağaçları nasıl kullanabileceğiniz hakkında bilgiler bulabilirsiniz.
 ms.date: 06/20/2016
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: e0d46aa67b61fd4e1d2bcc20b4a567524bb00301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99b9463df096d3aada19ed7995b04ef4bd41c179
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148635"
 ---
 # <a name="expression-trees-summary"></a>İfade ağaçları özeti
 
-[Önceki--İfadeleri çevirme](expression-trees-translating.md)
+[Önceki--İfade çevirme](expression-trees-translating.md)
 
-Bu dizide nasıl kullanacağınızı gördünüz *ifade ağaçları* kodu verileri olarak yorumlar ve o koduna göre yeni işlevsellik yapı dinamik programları oluşturma.
+Bu seride, nasıl kullanacağınızı öğrendiniz *ifade ağaçları* kod veri olarak yorumlar ve yapı bu koduna göre yeni işlevselliği dinamik programlar oluşturmak için.
 
-Bir algoritma amacı anlamak için ifade ağaçları inceleyebilirsiniz. Yalnızca bu kodu inceleyebilirsiniz değil. Özgün kod değiştirilmiş sürümlerini temsil eden yeni ifade ağaçları oluşturabilirsiniz.
+Bir algoritma amacı anlamak için ifade ağaçları inceleyebilirsiniz. Yalnızca bu kodu inceleyebilirsiniz değil. Özgün koda değiştirilmiş sürümlerini temsil yeni ifade ağaçları oluşturabilirsiniz.
 
-Bir algoritma aramak için ifade ağaçları kullanma ve başka bir dil veya ortamla bu algoritmayı çevir. 
+Ayrıca, bir algoritma aramak için ifade ağaçları kullanma ve başka bir dil ya da ortam bu algoritmayı çevirir. 
 
 ## <a name="limitations"></a>Sınırlamalar
 
-İyi ifade ağaçlara Çevir olmayan bazı yeni C# dil öğeleri vardır. İfade ağaçları içeremez `await` ifadelerini veya `async` lambda ifadeleri. C# 6 sürümde eklenen özelliklerin tam olarak ifade ağaçlarında yazılmış gibi görünmüyor. Bunun yerine, ifade ağaçları eşdeğer, önceki sözdiziminde daha yeni özellikleri sunulur. Bu düşündüğünüzden gibi sınırlandırılmasıdır kadar olmayabilir. Aslında, bu yeni dil özellikleri sunulduğunda ifade ağaçları yorumlar kodunuzu hala olasılıkla aynı çalışacağını anlamına gelir.
+Vardır bazı yeni C# iyi ifade ağaçları Çevir olmayan dil öğeleri. İfade ağaçları içeremez `await` ifadelerini veya `async` lambda ifadeleri. İçinde eklenen özelliklerin birçoğu C# 6 yayın tam olarak ifade ağaçlarında olarak yazılmış görünmez. Bunun yerine, eşdeğer, eski sözdizimi ifade ağaçlarında yeni özellikler sunulur. Bu gibi düşünebilirsiniz ilişkin bir sınırlama kadar olmayabilir. Aslında, yeni dil özellikleri sunulduğunda ifade ağaçları yorumlar kodunuzu yine de büyük olasılıkla aynı çalışacağını anlamına gelir.
 
-Bu kısıtlamalarla bile ifade ağaçları yorumlama ve veri yapısı olarak temsil edilir kodu değiştirme dayanan dinamik algoritmaları oluşturmanızı sağlar. Güçlü bir araçtır ve ne yaptıklarını gerçekleştirmek için Entity Framework gibi zengin kitaplıkları sağlar .NET ekosistemi özelliklerini biridir.
-
+Bu kısıtlamalarla bile ifade ağaçları yorumlama ve bir veri yapısı olarak temsil edilen kod değiştirme dayanan dinamik algoritmaları oluşturmanıza olanak sağlar. Güçlü bir araçtır ve ne yaptıkları gerçekleştirmek için Entity Framework gibi zengin kitaplıkları sağlar .NET ekosisteminin özelliklerinden biridir.

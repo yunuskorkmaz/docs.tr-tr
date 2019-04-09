@@ -1,18 +1,18 @@
 ---
-title: 'Metot tabanlı sorgu söz dizimi örnekleri: Dönüştürme'
+title: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Dönüştürme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
-ms.openlocfilehash: e51e7b00b96a36cc05d2b436a4fbf265af0bff85
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: bf6c889fff2635cd50597e72151c46fbb4d9b97d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150624"
 ---
-# <a name="method-based-query-syntax-examples-conversion"></a>Metot tabanlı sorgu söz dizimi örnekleri: Dönüştürme
+# <a name="method-based-query-syntax-examples-conversion"></a>Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Dönüştürme
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> ve <xref:System.Linq.Enumerable.ToList%2A> sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://archive.codeplex.com/?p=msftdbprodsamples) metot tabanlı sorgu söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
   
  Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
@@ -45,4 +45,5 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
  [!code-vb[DP L2E Examples#ToList](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#tolist)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

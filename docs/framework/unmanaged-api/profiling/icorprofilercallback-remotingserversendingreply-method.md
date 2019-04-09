@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 655b2af2efcaba82af46e92ae94abf3a4adc349c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 024b1f3f7e08dc21582789de7f3899e8e44d5e39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162691"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply Yöntemi
 Profil Oluşturucu işlemi bir uzak yöntem çağırma isteği işlemeyi tamamladıktan ve yanıt bir kanal üzerinden iletilmek üzere olduğunu bildirir.  
@@ -60,4 +60,5 @@ HRESULT RemotingServerSendingReply(
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICorProfilerCallback Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

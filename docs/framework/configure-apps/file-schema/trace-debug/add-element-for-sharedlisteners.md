@@ -1,5 +1,5 @@
 ---
-title: <add> için <sharedListeners> Öğesi
+title: <add> öğe için <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: cbce115c6a485c5642a60528614480324e3e5665
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095639"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<Ekle > öğesi için \<sharedListeners >
 Bir ekler `sharedListeners` koleksiyonu. `sharedListeners` dinleyicileri herhangi bir koleksiyonudur [ \<kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) veya [ \<İzleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) başvurabilirsiniz.  Varsayılan olarak, dinleyicileri `sharedListeners` koleksiyon yerleştirildiğinde değil bir `Listeners` koleksiyonu. Ada göre eklenmelidir [ \<kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) veya [ \<İzleme >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Dinleyiciler almak mümkün değildir `sharedListeners` çalışma zamanında kod koleksiyonu.  
@@ -80,7 +80,7 @@ Bir ekler `sharedListeners` koleksiyonu. `sharedListeners` dinleyicileri herhang
  Bu öğe, makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `<add>` eklemek için öğeleri <xref:System.Diagnostics.TextWriterTraceListener> `textListener` için `sharedListeners` koleksiyonu.   `textListener` adına tarafından eklenen `Listeners` iz kaynağı için koleksiyon `TraceSourceApp`. `textListener` Dinleyici için dosya myListener.log izleme çıktısına yazar.  
+ Aşağıdaki örnek nasıl kullanılacağını gösterir `<add>` eklemek için öğeleri <xref:System.Diagnostics.TextWriterTraceListener>`textListener` için `sharedListeners` koleksiyonu.   `textListener` adına tarafından eklenen `Listeners` iz kaynağı için koleksiyon `TraceSourceApp`. `textListener` Dinleyici için dosya myListener.log izleme çıktısına yazar.  
   
 ```xml  
 <configuration>  
@@ -109,7 +109,8 @@ Bir ekler `sharedListeners` koleksiyonu. `sharedListeners` dinleyicileri herhang
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
 - [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [İz Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

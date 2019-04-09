@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: 81abc4cd3d9f5be3ca461754f9f84287ffe2f752
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: f0d4996a7ea8ab49df780635127f39064b1050c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119151"
 ---
 # <a name="concurrency"></a>Eşzamanlılık
 Eşzamanlılık örneği kullanmayı gösterir <xref:System.ServiceModel.ServiceBehaviorAttribute> ile <xref:System.ServiceModel.ConcurrencyMode> sabit listesi bir hizmet örneği sırayla veya aynı anda iletileri işleyen olup olmadığını denetler. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), uygulayan `ICalculator` hizmet sözleşmesi. Bu örnek yeni bir sözleşme tanımlayan `ICalculatorConcurrency`, işlevinden devralan `ICalculator`, hizmet eşzamanlılık durumunu incelemek için iki ek işlemler sağlar. Eş zamanlılık ayarı değiştirerek istemci çalıştırarak davranış değişikliği görebilirsiniz.  
@@ -111,4 +111,3 @@ public class CalculatorService : ICalculatorConcurrency
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Concurrency`  
-  

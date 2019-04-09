@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: Bir sertifikanın parmak izini alma'
+title: 'Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: 3b0eb6c528741ab0de0c43f5dd680dfd8ada058c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 751c75a69fb93e1ff0ba30dd3b2cfbcea0b94824
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122570"
 ---
-# <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Nasıl yapılır: Bir sertifikanın parmak izini alma
+# <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma
 Kimlik doğrulaması için bir X.509 sertifikası kullanan bir Windows Communication Foundation (WCF) uygulaması yazarken genellikle talep sertifika içinde bulunan belirtmek gereklidir. Örneğin, kullanırken bir parmak izi talep sağlamalısınız <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> numaralandırmada <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi. Talep değeri bulmak için iki adım gerekir. İlk olarak, sertifikalar Microsoft Yönetim Konsolu (MMC) ek bileşenini açın. (Bkz [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) İkinci olarak, aşağıda açıklandığı gibi uygun bir sertifikayı bulun ve parmak izi (veya diğer talep değerleri) kopyalayın.  
   
  Hizmet kimlik doğrulaması için bir sertifika kullanıyorsanız, değerini not edin önemlidir **çıkarılan** sütun (konsolda ilk sütun). Tekdüzen Kaynak Tanımlayıcısı (URI) bir hizmet için bir aktarım güvenliği, yapılan ilk denetimler birini temel karşılaştırmak için olduğu gibi Güvenli Yuva Katmanı (SSL) kullanarak adres **çıkarılan** değeri. Değerlerin eşleşmesi gerekir ya da kimlik doğrulama işlemi durdurulur.  
@@ -39,8 +39,9 @@ Kimlik doğrulaması için bir X.509 sertifikası kullanan bir Windows Communica
 9. Onaltılık karakter kutusundan kopyalayın. Bu parmak izi kodu kullanılırsa `X509FindType`, onaltılık sayı arasındaki boşlukları Kaldır. Örneğin, parmak izi "a9 09 50 2B d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" code "a909502dd82ae41433e6f83886b00d4277a32a7b" olarak belirtilmelidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>
-- [Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)
-- [Nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+- [Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Nasıl yapılır: MMC Ek Bileşeni ile Sertifikaları Görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

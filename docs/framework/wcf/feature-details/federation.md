@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: f05d4a9348c12a29dc3cd7b93334ab1134eeb1a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114048"
 ---
 # <a name="federation"></a>Federasyon
 Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayrıca, Federasyon güvenlik mimariyi dağıtmak için Windows Communication Foundation (WCF) desteği açıklanmaktadır. Federasyon gösteren örnek bir uygulama için bkz. [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -290,4 +290,5 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  Birleşik güvenliği sorumluluk temiz bir bölme sağlar ve güvenli, ölçeklenebilir hizmet mimarisi oluşturmak için yardımcı olur. Dağıtılmış uygulama oluşturup dağıtırken için bir platform, WCF, Federasyon güvenlik uygulamak için yerel destek sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)

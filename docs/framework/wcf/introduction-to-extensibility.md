@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 78a0410876016ef2d5249fe3b6a667cacc432320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147049"
 ---
 # <a name="introduction-to-extensibility"></a>Genişletilebilirlik Genel Bakış
 Windows Communication Foundation (WCF) uygulama modeli, iletişimi gereksinimleri herhangi bir dağıtılmış uygulamanın büyük kısmını çözmek için tasarlanmıştır. Ancak, sistem tarafından sağlanan uygulamaları ve varsayılan uygulama modelini desteklemeyen senaryoları her zaman vardır. WCF genişletilebilirlik modeli, tüm uygulama modelini değiştirme noktasına bile her düzeyde sistemi davranışını değiştirmek sağlayarak özel senaryoları desteklemek üzere tasarlanmıştır. Bu konu, uzantı çeşitli alanlarına özetler ve her hakkında daha fazla bilgi için işaret eder.  
@@ -53,4 +53,5 @@ Windows Communication Foundation (WCF) uygulama modeli, iletişimi gereksinimler
  Uygulama etki alanı barındırma ve hizmet ana bilgisayarı arasındaki ilişkiyi değiştirmek için genişletmelidir <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> sınıfı. Daha fazla bilgi için [genişletme barındırma ServiceHostFactory kullanarak](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF'yi Genişletme](../../../docs/framework/wcf/extending/index.md)

@@ -2,12 +2,12 @@
 title: UriTemplate ve UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 3fd60325d2264a2ddeaabef7b0998844ca8c8cd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722614"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130253"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable
 Web geliştiricileri şekil ve hizmetlerini yanıt bir URI'leri düzenini açıklayan olanağına sahip olmalıdır. Windows Communication Foundation (WCF), geliştiricilerin kendi bir URI'leri denetiminin kendilerinde olmasına iki yeni sınıflar eklendi. <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI tabanlı dağıtım altyapısı WCF'de temelini oluşturur. Bu sınıflar, bir WCF Hizmeti uygulamadan kendi şablonlarını ve URI yararlanmak geliştiricilerin eşleme mekanizmasını de kullanılabilir.  
@@ -329,6 +329,7 @@ Ne zaman bir değişkeni verilir varsayılan değerini `null` bazı ek kısıtla
 > Karakter á ve Á bir URI yolu bir parçası olarak görünürler, farklı karakterler olarak değerlendirilir veya <xref:System.UriTemplate> yol kesimi değişmez değer (ancak karakterler a ve A ile aynı olarak kabul edilir). Karakter á ve Á bir parçası olarak görünürler, aynı karakterler olarak değerlendirilir <xref:System.UriTemplate> {variableName} ya da bir sorgu dizesi (ve a ve bir de kabul edilir aynı karakterler olabilir).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
 - [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
 - [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)

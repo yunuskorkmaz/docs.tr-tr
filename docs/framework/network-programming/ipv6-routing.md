@@ -1,15 +1,15 @@
 ---
-title: IPv6 yönlendirme
+title: IPv6 Yönlendirme
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: dabf17f85330b884918d5c6e1bc9832a7a0dbd02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f0fbce84caf096770e49ab47fb1de5b23b44b33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136688"
 ---
-# <a name="ipv6-routing"></a>IPv6 yönlendirme
+# <a name="ipv6-routing"></a>IPv6 Yönlendirme
 Yönlendirme için esnek bir mekanizma, IPv6'ın bir avantajdır. IPv4 ağ kimlikleri olan ve ayrılan, büyük yönlendirme tabloları yöntemi nedeniyle üzerinde Internet omurgalarından yönlendirici tarafından saklanması gerekir. Bu yönlendiriciler, potansiyel olarak Internet'te herhangi bir düğüme yönlendirilir paketlerini iletmek için tüm yolları bilmeniz gerekir. Güncelleyebileceği toplama adreslerine IPv6 esnek adresleme sağlar ve yönlendirme tablolarını boyutunu önemli ölçüde azaltır. Bu yeni adresleme mimaride Ara yönlendiriciler, iletilerin uygun şekilde iletmek için yalnızca yerel bölümü, ağ izlemeyi tutmanız gerekir.  
   
 ## <a name="neighbor-discovery"></a>Komşu bulma  
@@ -34,5 +34,6 @@ Yönlendirme için esnek bir mekanizma, IPv6'ın bir avantajdır. IPv4 ağ kimli
 -   Yeniden yönlendirme. Belirli bir hedefe gönderen düğüm için daha iyi bir sonraki atlama adresini göstermek için yönlendiricileri tarafından gönderilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İnternet Protokolü Sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Yuvalar](../../../docs/framework/network-programming/sockets.md)

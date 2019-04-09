@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tıklamalar ve çift tıklamaları birbirinden ayırma'
+title: 'Nasıl yapılır: Tıklamalar ve Çift Tıklamaları Birbirinden Ayırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-ms.openlocfilehash: 2d02e8faac1dd55e2a7e64b00137df011c931f32
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 26b3a64533747e80c7b9270918030da76d5e00c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707502"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139405"
 ---
-# <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Nasıl yapılır: Tıklamalar ve çift tıklamaları birbirinden ayırma
+# <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Nasıl yapılır: Tıklamalar ve Çift Tıklamaları Birbirinden Ayırma
 Genellikle, tek bir *tıklayın* bir kullanıcı arabirimi (UI) eylemi başlatır ve *çift* eylemi genişletir. Örneğin, tek bir tıklamayla, genellikle bir öğe seçer ve bir öğeye çift düzenler. Ancak, Windows Forms tıklama olayları bağlı bir eylem olduğundan kolayca burada bir tıklayın ve bir çift gerçekleştirmek uyumsuz eylemleri bir senaryo karşılayacak değil <xref:System.Windows.Forms.Control.Click> veya <xref:System.Windows.Forms.Control.MouseClick> olay için bağlıeylemindenöncegerçekleştirilir<xref:System.Windows.Forms.Control.DoubleClick>veya <xref:System.Windows.Forms.Control.MouseDoubleClick> olay. Bu konuda, bu sorunun iki çözümü gösterilir. Tek bir çözüm, çift tıklama olayı işlemek ve eylemleri click olay işlemede geri alma oluşturmaktır. Nadir durumlarda, tıklayın benzetimini gerçekleştirmek ve davranışı işleyerek çift gerekebilir <xref:System.Windows.Forms.Control.MouseDown> olay ve kullanarak <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> ve <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> özelliklerini <xref:System.Windows.Forms.SystemInformation> sınıfı. Tıklama ve ikinci tıklama önce değerini oluşursa arasındaki süreyi ölçmek <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> ulaşıldığında ve tıklayarak tarafından tanımlanan dikdörtgen içindeki <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, çift tıklatma eylemi gerçekleştirir; Aksi takdirde, tıklatma eylemi gerçekleştirin.  
   
 ### <a name="to-roll-back-a-click-action"></a>Bir tıklatma eylemi geri almak için  
@@ -43,4 +43,5 @@ Genellikle, tek bir *tıklayın* bir kullanıcı arabirimi (UI) eylemi başlatı
  Bu örnekler komut satırından Visual Basic veya Visual C# için oluşturma hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Bu örneklerde Visual Studio kodu yeni projelere yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bir Windows Forms Uygulamasında Fare Girdisi](mouse-input-in-a-windows-forms-application.md)

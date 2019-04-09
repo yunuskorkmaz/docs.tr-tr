@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 6bc2d5c45ef6f8626e51f9f760ec299db19627d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171580"
 ---
 # <a name="how-to-localize-an-application"></a>Nasıl yapılır: Bir Uygulamayı Yerelleştirme
 Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşturulacağını açıklar.  
@@ -152,8 +152,8 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
    |BAML adı|Kaynak anahtarı|Kategori|Okunabilirlik|Modifiability'e göre|Açıklamalar|Değer|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp.g.en US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Yoksayma|FALSE|FALSE||#Text1;#Text2|
-   |HelloApp.g.en US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Hiçbiri|TRUE|TRUE||Merhaba Dünya|
-   |HelloApp.g.en US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Hiçbiri|TRUE|TRUE||Güle güle World|
+   |HelloApp.g.en US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Merhaba Dünya|
+   |HelloApp.g.en US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Yok.|TRUE|TRUE||Güle güle World|
   
    Dikkat tüm değerler için **açıklamaları** alanın değer içermesi; bir alan bir değer yoksa boş. Ayrıca ilk satırda öğe okunabilir ve değiştirilebilir ve "Yoksay" sahip olarak dikkat edin, **kategori** değeri, her biri olmadığını değeri yerelleştirilebilir olduğunu belirtir.  
   
@@ -210,5 +210,6 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
  Artık LocBaml aracı kullanmak nasıl temel bir anlayışa sahipsiniz.  Uıd'leri içeren bir dosya olmak. LocBaml aracı kullanarak, yerelleştirilebilir içerik ayıklamak için dosyayı ayrıştırılacak erişebileceğinizi ve içerik çevrilebilir sonra üretmeden olmalıdır bir. resources.dll dosyasını çevrilen içeriğin birleştirir. Bu konu, her olası ayrıntı içermez, ancak artık uygulamalarınızı yerelleştirme için LocBaml kullanmak için gerekli bilgi vardır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF için Genelleştirme](globalization-for-wpf.md)
 - [Otomatik Düzen Kullanımına Genel Bakış](use-automatic-layout-overview.md)

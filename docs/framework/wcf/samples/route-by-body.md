@@ -2,12 +2,12 @@
 title: Gövdeye göre Yönlendir
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: fe201161ebed66b8444c23229a6907be329d3641
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3f6be962db2d07bef3a7adc714e9f4e72d621d37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172322"
 ---
 # <a name="route-by-body"></a>Gövdeye göre Yönlendir
 Bu örnek nasıl herhangi bir SOAP eylemi ileti nesneleri kabul eden bir hizmet uygulanacağı gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan. Tek bir hizmeti uygulayan `Calculate` kabul eden bir işlem bir <xref:System.ServiceModel.Channels.Message> istek parametresi ve döndürür bir <xref:System.ServiceModel.Channels.Message> yanıt.  
@@ -72,4 +72,3 @@ Press <ENTER> to terminate client.
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
-  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ece12247e48a0a005fd542bf76a32a1c6eeaa7cb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a85dc586b0c08fabdd34c018e82314c9003eeded
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171021"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map Yöntemi
 Meta verileri imza kullanma derlemeler arasında bir ilişki eşler.  
@@ -56,4 +56,5 @@ HRESULT Map (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IMapToken Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

@@ -4,12 +4,12 @@ description: ML.NET içinde desteklenen özellik Mühendisliği bileşenleri ke�
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f7a143fcce23c9043e6cc62ac9986122e71da0b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194779"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Machine learning veri dönüşümleri - ML.NET
 
@@ -66,7 +66,6 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | Belirli bir metin ngrams (ardışık bir kelimelerin dizileri) sayısı, bir paket oluşturur. Bunu ngrams sözlüğü oluşturmak ve paketi dizin olarak sözlükte kimliğini kullanarak yapar. |
 | <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | Belirli bir metin ngrams (uzunluğu 1-n ardışık bir kelimelerin dizileri) sayısı, bir paket oluşturur. Bunu her ngram karma ve paketi dizin olarak karma değeri kullanarak yapar. |
 | <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | Ayırıcı karakterler kullanarak sözcüklere metin böler. |
-
 
 ## <a name="image-model-featurizers"></a>Görüntü modeli featurizers
 
@@ -126,7 +125,6 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 | <xref:Microsoft.ML.Transforms.SkipTakeFilter> | İsteğe bağlı bir uzaklık konumunda satır kümesini giriş sınırlama sağlar. Veri sayfalama uygulama için kullanılabilir. İle oluşturulduğunda SkipTakeFilter.SkipArguments gibi davranır `SkipFilter`.
 | <xref:Microsoft.ML.Transforms.TakeFilter> | Alt satır kümesine giriş N ilk satırları yararlanarak sınırlama sağlar. |
 
-
 ## <a name="schema"></a>Şema
 
 | Dönüştürme | Tanım |
@@ -154,7 +152,7 @@ Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında b
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | Değerleri ağırlıklı ortalamasını alır: ExpAvg(y_t) = bir * y_t + (1-a) * ExpAvg(y_(t-1)). |
+| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | Değerleri ağırlıklı ortalamasını alır: ExpAvg(y_t) = bir \* y_t + (1-a) \* ExpAvg(y_(t-1)). |
 | <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | Bir i.i.d. değişiklik noktası algılayıcısı dönüşümün uygular Uyarlamalı çekirdek yoğunluğu tahmini ve martingales göre sırası (rastgele örnek). |
 | <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | Implements depo algılayıcısı dönüştürmek için bir i.i.d. dizisi üzerinde Uyarlamalı çekirdek yoğunluğu Tahmine dayalı (rastgele örnek). |
 | <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | Kayan pencere değerleri ağırlıklı ortalamasını sağlar. |

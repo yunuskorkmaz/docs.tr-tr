@@ -1,5 +1,5 @@
 ---
-title: Hataları işleme
+title: Hataları İşleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -31,14 +31,14 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097167"
 ---
-# <a name="handling-errors"></a>Hataları işleme
+# <a name="handling-errors"></a>Hataları İşleme
 <xref:System.Net.WebRequest> Ve <xref:System.Net.WebResponse> sınıflar her iki sistem özel durumlarını throw (gibi <xref:System.ArgumentException>) ve Web özel durumlar (hangi <xref:System.Net.WebException> tarafından oluşturulan <xref:System.Net.WebRequest.GetResponse%2A> yöntemi).  
   
  Her **WebException** içeren bir <xref:System.Net.WebException.Status%2A> arasında bir değer içeren özellik <xref:System.Net.WebExceptionStatus> sabit listesi. İnceleyebilirsiniz **durumu** özelliği oluşan hata belirlemek ve hatayı gidermek için uygun adımları atın.  
@@ -168,5 +168,6 @@ End Try
  Olduğunda bir **SocketException** oluşturulur, **SocketException** sınıf kümelerini <xref:System.Net.Sockets.SocketException.ErrorCode%2A> özelliğini gerçekleşen son işletim sistemi Yuva hatası. Yuva hata kodları hakkında daha fazla bilgi için MSDN'de Winsock 2.0 API'sine hata kodu belgelerine bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Özel durum işleme temelleri](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+
+- [Özel Durum İşleme Temelleri](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
 - [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)

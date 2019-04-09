@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a13e750029fed2f2261064dd69d6c1d800d59989
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7abcb7b69d0f0f2c53cd236c9b4092a94e0f421c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110683"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources Yöntemi
 Bir işaretçi geçerli derleme bildiriminde atıf yapılan kaynakları için bir numaralandırıcı alır.  
@@ -68,4 +68,5 @@ HRESULT EnumManifestResources (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IMetaDataAssemblyImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: 4bde008661e78fc85c428fa5100f81483936b460
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 1f0241b65c915dd5703ceea97dd5b07f88832003
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113067"
 ---
 # <a name="web-settings-schema"></a>Web Ayarları Şeması
 Web ayarları, CPU ve katman barındırma ASP.NET tarafından yönetilen işlem genelinde davranışı uygulamak yürütme düzeyinde ASP.NET ayarlarını belirtin. Bu ayarlar, ASP.NET uygulamasının Web.config dosyasında belirtilen uygulama etki alanı türü ayarları farklıdır.  
@@ -37,4 +37,5 @@ Web ayarları, CPU ve katman barındırma ASP.NET tarafından yönetilen işlem 
 |[\<ApplicationPool >](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|CPU ve katman barındırma ASP.NET tarafından yönetilen işlem genelinde davranışı uygulamak yürütme düzeyinde ASP.NET ayarlarını belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)

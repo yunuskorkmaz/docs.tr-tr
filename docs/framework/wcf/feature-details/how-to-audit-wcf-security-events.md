@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dd025b8b7adc97420699eb2f5099ab1ee75b820
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125768"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Nasıl yapılır: Windows Communication Foundation güvenlik olaylarını denetleme
 Windows Communication Foundation (WCF), güvenlik olaylarını Windows olay, Windows Olay Görüntüleyicisi'ni kullanarak görüntüleyebileceğiniz, günlüğüne olanak tanır. Bu konu başlığı altında güvenlik olayları kaydeder, böylece uygulama ayarlama açıklanmaktadır. WCF denetimi hakkında daha fazla bilgi için bkz. [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF), güvenlik olaylarını Windows olay, Win
  Varsa <xref:System.ServiceModel.AuditLogLocation> özelliği <xref:System.ServiceModel.AuditLogLocation.Security> ve **Nesne erişimini denetle** ayarlanmadı **yerel güvenlik ilkesi**, denetim olayları güvenlik günlüğüne değil yazılır. Hiçbir hata döndürdü, ancak denetim girişleri güvenlik günlüğüne yazılmaz unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>

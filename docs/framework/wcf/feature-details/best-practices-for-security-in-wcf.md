@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166133"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF'de Güvenlik için En İyi Uygulamalar
 Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanan güvenli uygulamalar oluştururken dikkate alınması gereken en iyi yöntemler listelenmiştir. Güvenlik hakkında daha fazla bilgi için bkz: [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), ve [meta veriler hakkında güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -57,6 +57,7 @@ Aşağıdaki bölümlerde Windows Communication Foundation (WCF) kullanan güven
  Özel bağlama oluşturduğunuzda ayarlamalısınız <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> için `true`. Aksi takdirde <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> ayarlanır `false`, ve bir asimetrik anahtar tabanlı belirteci x X509 gibi istemcinin kullandığı sertifika, ileti imzalanmamış.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+
+- [Güvenlik Değerlendirmeleri](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Veriler için Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
 - [Meta Veriler Hakkında Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

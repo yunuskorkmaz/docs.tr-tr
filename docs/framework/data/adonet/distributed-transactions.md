@@ -1,15 +1,15 @@
 ---
-title: Dağıtılmış işlemler
+title: Dağıtılmış İşlemler
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150208"
 ---
-# <a name="distributed-transactions"></a>Dağıtılmış işlemler
+# <a name="distributed-transactions"></a>Dağıtılmış İşlemler
 Bir işlem (kaydetme) başarılı ya da başka şeylerin yanında bir birim olarak başarısız oluyor (iptal için) ilgili görevleri kümesidir. A *dağıtılmış işlem* çeşitli kaynaklar etkileyen bir işlemdir. İşlemek dağıtılmış işlem için tüm katılımcıları veri herhangi bir değişiklik kalıcı olmasını garanti gerekir. Sistem kilitlenme veya diğer öngörülemeyen olayları rağmen değişiklikleri kalıcı gerekir. Bu garanti yapmak tek bir katılımcı başarısız olursa, tüm işlemi başarısız olur ve işlem kapsamında değişiklikler geri alınır.  
   
 > [!NOTE]
@@ -48,6 +48,7 @@ Bir işlem (kaydetme) başarılı ya da başka şeylerin yanında bir birim olar
  Dağıtılmış işlemler kullanmak için ağ üzerinden MS DTC etkinleştirmeniz gerekebilir. Windows varsa Güvenlik Duvarı etkin, ağ veya MS DTC bağlantı noktasını açmak MS DTC hizmetinin izin vermeniz gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [SQL Server ile System.Transactions Tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

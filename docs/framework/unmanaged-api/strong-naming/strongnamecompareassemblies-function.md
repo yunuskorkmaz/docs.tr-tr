@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd3813d977f94db4168da8c888485b323f4072ad
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191386"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies İşlevi
 İki derlemenin yalnızca tanımlayıcı ad imzaları tarafından farklı olup olmadığını belirler.  
@@ -72,5 +72,6 @@ BOOLEAN StrongNameCompareAssemblies (
  Varsa `StrongNameCompareAssemblies` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [StrongNameCompareAssemblies Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
 - [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

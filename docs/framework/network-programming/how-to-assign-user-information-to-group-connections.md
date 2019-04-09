@@ -1,20 +1,19 @@
 ---
-title: 'Nasıl yapılır: Bağlantıları gruplandırmak için kullanıcı bilgileri atama'
+title: 'Nasıl yapılır: Bağlantıları Gruplandırmak için Kullanıcı Bilgileri Atama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5608f6543cf3a9d123eda4dd64a83085f1e1317c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095067"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>Nasıl yapılır: Bağlantıları gruplandırmak için kullanıcı bilgileri atama
+# <a name="how-to-assign-user-information-to-group-connections"></a>Nasıl yapılır: Bağlantıları Gruplandırmak için Kullanıcı Bilgileri Atama
 
-  
  Aşağıdaki örnek, uygulama değişkenleri ayarlayan varsayılarak grup bağlantıları için kullanıcı bilgilerini atamak gösterilmiştir *kullanıcıadı*, *SecurelyStoredPassword*, ve  *Etki alanı* kodun bu bölümünü çağrılmadan önce ve *kullanıcıadı* benzersizdir.  
   
 ### <a name="to-assign-user-information-to-a-group-connection"></a>Bir grubu bağlantısı için kullanıcı bilgilerini atamak için  
@@ -109,5 +108,6 @@ MyWebResponse.Close()
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağlantıları Yönetme](../../../docs/framework/network-programming/managing-connections.md)
 - [Bağlantı Gruplandırma](../../../docs/framework/network-programming/connection-grouping.md)

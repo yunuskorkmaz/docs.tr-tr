@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme'
+title: 'Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 40ac3fb3a148c351cf5acca235569e2a1a439a3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 15533b2b1fb13ad43bba645d3f52dbad53b17033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188942"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Nasıl yapılır: Bir TreeView veya ListView denetimi (Windows Forms) özel bilgi ekleme
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)
 Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Windows.Forms.TreeView> denetimi veya türetilmiş bir öğede bir <xref:System.Windows.Forms.ListView> denetimi. Türetme yanı sıra özel yöntemleri ve bunları işlemek için oluşturucuları, gerekli tüm alanlar eklemenize olanak sağlar. Bu özellik bir kullanımı, her ağaç düğümü veya liste öğesi için bir müşteri nesnesi eklemektir. Buradaki örnekler için olan bir <xref:System.Windows.Forms.TreeView> için denetimi, ancak aynı yaklaşımı kullanılabilir bir <xref:System.Windows.Forms.ListView> denetimi.  
   
 ### <a name="to-derive-a-tree-node"></a>Bir ağaç düğümü türetmek için  
@@ -131,5 +131,6 @@ Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Wind
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [TreeView Denetimi](treeview-control-windows-forms.md)
 - [ListView Denetimi](listview-control-windows-forms.md)

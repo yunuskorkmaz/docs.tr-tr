@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], simplifying by child timelines
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-ms.openlocfilehash: 933ba2dff86b99bddd8d8f75bafcd94833b2e066
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096400"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Nasıl yapılır: Alt Öğe Zaman Çizelgelerini Kullanarak Animasyonları Basitleştirme
 Bu örnekte alt kullanarak animasyonları basitleştirme gösterilmektedir <xref:System.Windows.Media.Animation.ParallelTimeline> nesneleri. A <xref:System.Windows.Media.Animation.Storyboard> bir tür <xref:System.Windows.Media.Animation.Timeline> içerdiği zaman çizelgeleri için hedefleme bilgileri sağlar. Kullanım bir <xref:System.Windows.Media.Animation.Storyboard> nesne ve özellik bilgiler dahil bilgilerin hedefleyen zaman çizelgesi sağlamak için.  
@@ -26,5 +26,6 @@ Bu örnekte alt kullanarak animasyonları basitleştirme gösterilmektedir <xref
  [!code-xaml[Timelines_snip#ParallelTimelineWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Animasyona Genel bakış](animation-overview.md)
 - [Görsel Taslak Animasyonları Arasında HandoffBehavior Belirtme](how-to-specify-handoffbehavior-between-storyboard-animations.md)

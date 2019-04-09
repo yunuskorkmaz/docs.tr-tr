@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: a09cbbe8b77523184a3e75b8fd4301ca956d5cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b0b189db8f51e0cccb6ee0516fc4cc53556ccf51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174128"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Bir İşlemde Toplu İleti İşleme
 Sıraya alınan uygulamaları, doğruluk ve iletilerin güvenilir teslim emin olmak için işlem kullanır. İşlem, ancak pahalı işlemlerdir ve ileti aktarım hızı önemli ölçüde azaltabilir. İleti işleme hızı artırmak için bir yol, okuma ve tek bir işlemde birden çok iletiyi bir uygulamaya sahip olmaktır. Performans ve kurtarma dengedir: toplu ileti sayısı arttıkça, bu nedenle gerekli işlemler geri alınacak olursa kurtarma iş yapar. Toplu işlem ve oturumları ileti işleme arasındaki farka dikkat edin önemlidir. A *oturumu* tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen ilgili iletiler bir gruplandırmasıdır. Oturumları ilgili iletiler grubunu birlikte işlenmesi gereken genel olarak kullanılır. Buna örnek olarak çevrimiçi bir alışveriş Web sitesidir. *Toplu* ilgisi olmayan iletileri arttıkça aktarım hızı ileti şekilde, birden fazla işlemek için kullanılır. Oturumlar hakkında daha fazla bilgi için bkz. [gruplandırma kuyruğa alınan iletileri bir oturumda](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Toplu iletiler de tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen, ancak toplu işlem iletileri arasında hiçbir ilişkisi olabilir. Bir işlemde toplu ileti işleme uygulamanın nasıl çalıştığını değişmez bir optimizasyondur.  
@@ -20,11 +20,11 @@ Sıraya alınan uygulamaları, doğruluk ve iletilerin güvenilir teslim emin ol
 ## <a name="committing-a-transaction"></a>Bir işlemi yürütülüyor  
  Toplu işlem taahhüt aşağıdakilere bağlıdır:  
   
--   `MaxBatchSize`. Bir özelliği <xref:System.ServiceModel.Description.TransactedBatchingBehavior> davranışı. Bu özellik, bir toplu iş içine yerleştirilmesi iletileri maksimum sayısını belirler. Bu sayıya ulaşıldığında, toplu işlem taahhüt eder. Bu değeri kesin bir sınır değil, bu ileti sayısı almadan önce bir toplu iş yürütme mümkündür.  
+-   `MaxBatchSize`biçimindeki telefon numarasıdır. Bir özelliği <xref:System.ServiceModel.Description.TransactedBatchingBehavior> davranışı. Bu özellik, bir toplu iş içine yerleştirilmesi iletileri maksimum sayısını belirler. Bu sayıya ulaşıldığında, toplu işlem taahhüt eder. Bu değeri kesin bir sınır değil, bu ileti sayısı almadan önce bir toplu iş yürütme mümkündür.  
   
--   `Transaction Timeout`. İşlem zaman aşımı yüzde 80'i geçtikten sonra toplu işlem taahhüt eder ve yeni bir toplu iş oluşturulur. Yüzde 20, yani veya küçük bir hareketi tamamlamak verilen zaman olarak kalır, toplu işlem taahhüt eder.  
+-   `Transaction Timeout`biçimindeki telefon numarasıdır. İşlem zaman aşımı yüzde 80'i geçtikten sonra toplu işlem taahhüt eder ve yeni bir toplu iş oluşturulur. Yüzde 20, yani veya küçük bir hareketi tamamlamak verilen zaman olarak kalır, toplu işlem taahhüt eder.  
   
--   `TransactionScopeRequired`. Toplu iletiler, WCF, içeren bulursa işlerken `TransactionScopeRequired`  =  `false`, toplu işleme ve ilk iletinin alınması üzerine yeni bir batch açana `TransactionScopeRequired`  =  `true` ve `TransactionAutoComplete`  = `true`.  
+-   `TransactionScopeRequired`biçimindeki telefon numarasıdır. Toplu iletiler, WCF, içeren bulursa işlerken `TransactionScopeRequired`  =  `false`, toplu işleme ve ilk iletinin alınması üzerine yeni bir batch açana `TransactionScopeRequired`  =  `true` ve `TransactionAutoComplete`  = `true`.  
   
 -   Daha fazla ileti kuyrukta kayıtlı sonra geçerli toplu kararlıdır bile `MaxBatchSize` değil ulaşıldı veya işlem zaman aşımı yüzde 80'i değil geçti.  
   
@@ -83,5 +83,6 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+
+- [Kuyruklar Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

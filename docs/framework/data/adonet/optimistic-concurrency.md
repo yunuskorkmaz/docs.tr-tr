@@ -1,18 +1,18 @@
 ---
-title: İyimser eşzamanlılık
+title: İyimser Eşzamanlılık
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: cd8aeeb1ed56acfca0d57cb3c2c56cabab184683
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126223"
 ---
-# <a name="optimistic-concurrency"></a>İyimser eşzamanlılık
+# <a name="optimistic-concurrency"></a>İyimser Eşzamanlılık
 Çok kullanıcılı bir ortamda, bir veritabanındaki verileri güncelleştirmek için iki modeli vardır: iyimser eşzamanlılık ve kötümser eşzamanlılık. <xref:System.Data.DataSet> Nesne iyimser eşzamanlılık uzak veri ve veriler ile etkileşim kurmanın gibi uzun süre çalışan etkinlikler için kullanılmasını teşvik için tasarlanmıştır.  
   
  Kötümser eşzamanlılık, diğer kullanıcıların geçerli kullanıcıyı etkileyen bir biçimde veri değiştirmesini önlemek için veri kaynağında satırları kilitleme gerektirir. Bir kullanıcı uygulanacak kilit neden olan bir eylem gerçekleştirdiğinde kötümser modelinde, diğer kullanıcıların kilit sahibi bırakmadan, kilidiyle çakışıyor eylemi gerçekleştiremezsiniz. Bu model, öncelikle ortamlarda kullanılır bulunduğu ağır Çekişme verisi için böylece kilit ile verileri koruma maliyeti eşzamanlılık çakışma olursa işlemleri geri maliyeti'dan küçük.  
@@ -207,6 +207,7 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Satır Hatası Bilgileri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)

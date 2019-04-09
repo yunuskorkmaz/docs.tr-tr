@@ -7,17 +7,16 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 22ac109c06659741c673681ad9bfcf3e1dcc5b2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117767"
 ---
 # <a name="dependency-property-value-precedence"></a>Bağımlılık Özelliği Değer Önceliği
 <a name="introduction"></a> Bu konu açıklar nasıl işleyişini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi bir bağımlılık özelliğinin değeri etkileyebilir ve hangi yönlerini özelliği tarafından sistemi geçerli etkili bir özelliğinin değerini için öncelik açıklar.  
-    
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu konu, üzerinde bir tüketici mevcut bağımlılık özellikleri perspektifinden bağımlılık özellikleri anladığınızı varsayar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sınıfları ve okuma [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md). Bu konudaki örnekleri izlemek için de anlamanız gereken [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve nasıl yazıldığını bilmeniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
@@ -127,6 +126,7 @@ ms.locfileid: "57367948"
  <xref:System.Windows.DependencyObject.ClearValue%2A> Yöntemi bir expedient anlamına gelir yerel olarak uygulanan herhangi bir öğede ayarlanan bir bağımlılık özelliği değerini temizlemek sağlar. Ancak, çağırma <xref:System.Windows.DependencyObject.ClearValue%2A> meta verilerinde özelliği kayıt sırasında belirlenen varsayılan yeni geçerli değerini olduğuna dair bir garanti değildir. Hala etkin olan tüm diğer katılımcıları değer önceliği. Yalnızca yerel olarak ayarlanan değer öncelik dizisinden kaldırıldı. Örneğin, eğer <xref:System.Windows.DependencyObject.ClearValue%2A> özellikte burada bu özellik ayrıca bir tema stili tarafından ayarlanır ve ardından değeri meta verileri alarak varsayılan yerine yeni bir değer olarak uygulanır. İşlemin dışında tüm özellik değeri katılımcıları alabilir ve kayıtlı meta verileri varsayılan değer ayarlamak istiyorsanız, bağımlılık özelliği meta verisi ve ardından sorgulama tarafından kesin bir şekilde varsayılan değeri varsayılan değere yerel olarak kullanabileceğiniz edinebilirsiniz özelliğini çağrısıyla <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: MDI alt formları oluştur'
+title: 'Nasıl yapılır: MDI Alt Formları Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 02e19470aaac76e7bcab5a324138bb50dedb212f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124533"
 ---
-# <a name="how-to-create-mdi-child-forms"></a>Nasıl yapılır: MDI alt formları oluştur
+# <a name="how-to-create-mdi-child-forms"></a>Nasıl yapılır: MDI Alt Formları Oluşturma
 MDI alt formlarını olan önemli bir öğesidir [Çok Belgeli Arabirim (MDI) uygulamaları](multiple-document-interface-mdi-applications.md), bu formları kullanıcı etkileşimi merkezi olarak.  
   
  Aşağıdaki yordamda görüntüler MDI alt formu oluşturur. bir <xref:System.Windows.Forms.RichTextBox> denetimi en sözcük uygulamalarına benzer. Değiştirerek <xref:System.Windows.Forms> diğer denetimlerle denetimini <xref:System.Windows.Forms.DataGridView> denetim veya denetimlerin bir karışımını sağlar, MDI alt pencereleri oluşturmak (ve uzantısı, MDI uygulamaları) ile çeşitli olanaklar.  
@@ -107,8 +107,9 @@ MDI alt formlarını olan önemli bir öğesidir [Çok Belgeli Arabirim (MDI) uy
     >  MDI alt formu olduğunda bir <xref:System.Windows.Forms.MainMenu> (sahip, genellikle bir menüsü yapısı menü öğelerinin) bileşen ve onu içeren MDI üst formu içinde açılır bir <xref:System.Windows.Forms.MainMenu> (sahip, genellikle bir menüsü yapısı menü öğelerinin) bileşen, menü öğeleri otomatik olarak birleştirilir ayarladıysanız <xref:System.Windows.Forms.MenuItem.MergeType%2A> özelliği (ve isteğe bağlı olarak <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> özelliği). Ayarlama <xref:System.Windows.Forms.MenuItem.MergeType%2A> her iki özellik <xref:System.Windows.Forms.MainMenu> bileşenlerini ve tüm alt formun menü öğelerinin <xref:System.Windows.Forms.MenuMerge.MergeItems>. Ayrıca, olarak <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> özelliği hem menülerden menü öğelerini böylece istenen sırada görünür. Ayrıca, MDI üst formu kapatın, her bir MDI alt harekete geçirirse forms akılda tutulması bir <xref:System.Windows.Forms.Form.Closing> olayından önce <xref:System.Windows.Forms.Form.Closing> MDI üst olayı oluşturulur. Bir MDI çocuk iptal <xref:System.Windows.Forms.Form.Closing> olay MDI üst öğenin engellemez <xref:System.Windows.Forms.Form.Closing> gerçekleştirilen; gelen olay ancak <xref:System.ComponentModel.CancelEventArgs> MDI üst öğenin için bağımsız değişken <xref:System.Windows.Forms.Form.Closing> olay artık ayarlanır `true`. MDI ve tüm MDI alt formlarını ayarlayarak kapanmaya zorlayabilir <xref:System.ComponentModel.CancelEventArgs> bağımsız değişkeni `false`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok Belgeli Arabirim (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)
-- [Nasıl yapılır: MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md)
-- [Nasıl yapılır: Etkin MDI alt öğesini belirleme](how-to-determine-the-active-mdi-child.md)
-- [Nasıl yapılır: Etkin MDI alt öğesine veri gönderme](how-to-send-data-to-the-active-mdi-child.md)
-- [Nasıl yapılır: MDI alt formlarını düzenleme](how-to-arrange-mdi-child-forms.md)
+
+- [Çoklu Belge Arabirimi (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)
+- [Nasıl yapılır: MDI Üst Formları Oluşturma](how-to-create-mdi-parent-forms.md)
+- [Nasıl yapılır: Etkin MDI Alt Öğesini Belirleme](how-to-determine-the-active-mdi-child.md)
+- [Nasıl yapılır: Etkin MDI Alt Öğesine Veri Gönderme](how-to-send-data-to-the-active-mdi-child.md)
+- [Nasıl yapılır: MDI Alt Formlarını Düzenleme](how-to-arrange-mdi-child-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yansıma ile genel tür tanımlama yayma'
+title: 'Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: 54eb0bf5c364faa4f6c0f2a8d14490137e4ea442
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101228"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Nasıl yapılır: Yansıma ile genel tür tanımlama yayma
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama
 Bu konu iki tür parametreleri ile basit bir genel tür oluşturma için tür parametreleri sınıf kısıtlamaları, arabirim kısıtlamasını ve özel kısıtlamalar uygulamak nasıl ve sınıf türü parametreler parametre türleri olarak kullanan üyeleri oluşturma işlemini gösterir. ve dönüş türleri.  
   
 > [!IMPORTANT]
@@ -136,6 +136,7 @@ Bu konu iki tür parametreleri ile basit bir genel tür oluşturma için tür pa
 -   Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
-- [Yansıma yaymanın](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
-- [Yansıma yayma dinamik derleme senaryoları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))
+- [Yansıma Yaymanın Kullanımı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [Yansıma Yayma Dinamik Derleme Senaryoları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

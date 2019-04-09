@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88006703ba4a491ae458868a1431be618d37252a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0c6279c790e9b28e5f3bac93d5d0fdd411dd8c0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127276"
 ---
 # <a name="importfile2-method"></a>ImportFile2 Yöntemi
 Derlemeler ve bağlantısız modülleri içeri aktarır. Bu yöntem benzer [ImportFile yöntemi](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), ancak içeri aktarılan dosyanın diskte mevcut değilse bile çalışır.  
@@ -69,6 +69,7 @@ HRESULT ImportFile2(
  ALink.h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

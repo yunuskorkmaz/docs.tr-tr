@@ -2,12 +2,12 @@
 title: 'Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 342c9c39eaa755363615dd83933cf00480e01c91
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 9b2fcc2e7d96d2cfbb3b55934fa19ec24487bce7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162182"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Taşıma: WSE 3.0 TCP Birlikte Çalışabilirlik
 WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek bir TCP çift yönlü oturumu özel bir Windows Communication Foundation (WCF) aktarım olarak uygulamak nasıl gösterir. Kanal katmanını genişletilmesinde arabirimine dağıtılan var olan sistemlerle kablo üzerinden nasıl kullanabileceğinizi gösterir. Aşağıdaki adımlar bu özel WCF taşıma yapı işlemini gösterir:  
@@ -23,7 +23,7 @@ WSE 3.0 TCP birlikte çalışabilirlik aktarım örnek bir TCP çift yönlü otu
 5.  Bir kanal yığınına özel taşıma ekleyen bir bağlama öğesi ekleyin. [Bir bağlama öğesi ekleme] daha fazla bilgi için bkz.  
   
 ## <a name="creating-iduplexsessionchannel"></a>Da IDuplexSessionChannel öğelerini oluşturma  
- WSE 3.0 TCP birlikte çalışabilirlik aktarım yazma ilk adımı uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IDuplexSessionChannel> üst kısmındaki bir <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` öğesinden türetilen <xref:System.ServiceModel.Channels.ChannelBase>. Bir ileti gönderme mantığı iki ana parçalarını oluşur: (1) bayt ve (2) bu baytlardan çerçeveleme ve kablo göndererek, ileti kodlama.  
+ WSE 3.0 TCP birlikte çalışabilirlik aktarım yazma ilk adımı uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IDuplexSessionChannel> üst kısmındaki bir <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` Öğesinden türetilen <xref:System.ServiceModel.Channels.ChannelBase>. Bir ileti gönderme mantığı iki ana parçalarını oluşur: (1) bayt ve (2) bu baytlardan çerçeveleme ve kablo göndererek, ileti kodlama.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -194,4 +194,3 @@ Symbols:
     7.  TCP aktarımı örneği başlatmak için F5 tuşuna basın.  
   
     8.  TCP aktarımı test istemcisinin yeni bir konsolda başlatır. İstemci, hisse senedi fiyatlarını hizmetten ister ve ardından sonuçları, konsol penceresinde görüntüler.  
-  

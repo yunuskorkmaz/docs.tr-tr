@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Denetim sınıfından devralma'
+title: 'Nasıl yapılır: Control Sınıfından Devralma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: cf1b3c7d7d530710c4c7e0fbd137667c3598500a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b173f322018921ef1c0fec6aa785ae6c9d9e6957
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141992"
 ---
-# <a name="how-to-inherit-from-the-control-class"></a>Nasıl yapılır: Denetim sınıfından devralma
+# <a name="how-to-inherit-from-the-control-class"></a>Nasıl yapılır: Control Sınıfından Devralma
 Bir Windows formunda kullanmak için tamamen özel bir denetim oluşturmak istiyorsanız, gelen alması gerektiğini <xref:System.Windows.Forms.Control> sınıfı. Öğesinden devralan çalışırken <xref:System.Windows.Forms.Control> daha fazla planlama ve uygulama gerçekleştirmek, ayrıca, en büyük çeşitli seçenekleri sağlar sınıfını gerektirir. Gelen devralınırken <xref:System.Windows.Forms.Control>, iş denetimleri yapar çok temel işlevleri devralır. Doğal olarak işlevselliğini <xref:System.Windows.Forms.Control> sınıf klavye ve fare kullanıcı girişini işleme sınırları ve denetimin boyutunu tanımlar, windows tanıtıcı sağlar ve ileti işleme ve güvenlik sağlar. Grafik arabiriminin denetimin gerçek işleme Bu durumda olan tüm boyama birleşmez ya da herhangi bir belirli bir kullanıcı etkileşimi işlevi dahil etmez. Tüm özel kod aracılığıyla bu görünüşler sağlamanız gerekir.  
   
 > [!NOTE]
@@ -44,9 +44,10 @@ Bir Windows formunda kullanmak için tamamen özel bir denetim oluşturmak istiy
 8.  Kaydet ve denetim test edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)
-- [Nasıl yapılır: UserControl sınıfından devralma](how-to-inherit-from-the-usercontrol-class.md)
-- [Nasıl yapılır: Mevcut Windows Formları denetimlerinden devralma](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Nasıl yapılır: Windows Forms için yazar denetimleri](how-to-author-controls-for-windows-forms.md)
-- [Basic'de devralınmış olay işleyicileri Visual Basic sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Nasıl yapılır: UserControl Sınıfından Devralma](how-to-inherit-from-the-usercontrol-class.md)
+- [Nasıl yapılır: Mevcut Windows Forms Denetimlerinden Devralma](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Nasıl yapılır: Windows Forms için Denetimler Yazma](how-to-author-controls-for-windows-forms.md)
+- [Visual Basic'de Devralınmış Olay İşleyicileri İle İlgili Sorun Giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](developing-windows-forms-controls-at-design-time.md)

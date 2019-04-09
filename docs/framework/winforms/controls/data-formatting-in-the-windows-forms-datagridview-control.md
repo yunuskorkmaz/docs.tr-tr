@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data [Windows Forms], formatting in grids
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-ms.openlocfilehash: 60fc567a700bdfc8cfe088f4d31a68fd5de9aa29
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158653"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Veri Biçimleri
 <xref:System.Windows.Forms.DataGridView> Denetim hücre değerlerini ve üst sütunlarını görüntüleyen veri türleri arasında otomatik dönüştürme sağlar. Metin kutusu sütunları, örneğin, tarih, saat, sayı ve numaralandırma değerlerinin dize temsillerini görüntülemek ve veri deposu tarafından gerekli olan türleri için kullanıcı tarafından girilen dize değerlerini dönüştürmek.  
@@ -32,9 +32,10 @@ ms.locfileid: "57722054"
  Varsayılan kullanıcı tarafından belirtilen değerleri ayrıştırma gereksinimlerinizi karşılamıyorsa işleyebilir <xref:System.Windows.Forms.DataGridView.CellParsing> olayı <xref:System.Windows.Forms.DataGridView> özel ayrıştırma sağlamak için denetimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetimindeki Hücre Stilleri](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Verileri biçimlendirme Windows Forms DataGridView denetimi](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde veri biçimlendirmeyi özelleştirme](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Verileri Biçimlendirme](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Veri Biçimlendirmeyi Özelleştirme](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

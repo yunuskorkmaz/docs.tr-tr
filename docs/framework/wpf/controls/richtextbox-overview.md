@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-ms.openlocfilehash: 689094bda355f095c30d6cc2a462e6d0e630753b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162717"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox Genel Bakışı
 <xref:System.Windows.Controls.RichTextBox> Paragraflar, görüntüleri, tablolar ve benzeri akış içeriği düzenlemek veya görüntülemek, denetim olanağı sağlar. Bu konu tanıtır <xref:System.Windows.Controls.TextBox> sınıfı ve her ikisinde de kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve C#.  
-  
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox veya RichTextBox?  
  Her ikisi de <xref:System.Windows.Controls.RichTextBox> ve <xref:System.Windows.Controls.TextBox> metnini düzenlemek kullanıcılara izin ver, ancak iki denetimleri farklı senaryolarda kullanılır. A <xref:System.Windows.Controls.RichTextBox> kullanıcı biçimlendirilmiş metin, resimler, tablolar veya diğer zengin içerik düzenlemek gerekli olduğunda daha iyi bir seçimdir. Örneğin, bir belge, makale veya biçimlendirme, gerektiren blog düzenleme görüntüleri, vb., kullanarak en iyi şekilde gerçekleştirilir bir <xref:System.Windows.Controls.RichTextBox>. A <xref:System.Windows.Controls.TextBox> daha az sistem kaynağı gerektiren bir <xref:System.Windows.Controls.RichTextBox> yalnızca düz metin gerekiyor olabilir (yani kullanım Forms'ta) düzenlendiğinde idealdir. Bkz: [TextBox genel bakışı](textbox-overview.md) hakkında daha fazla bilgi için <xref:System.Windows.Controls.TextBox>. Aşağıdaki tabloda bulunan temel özellikler özetlenmektedir <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.RichTextBox>.  
@@ -95,5 +94,6 @@ ms.locfileid: "57378203"
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nasıl Yapılır Konuları](richtextbox-how-to-topics.md)
-- [TextBox Genel Bakış](textbox-overview.md)
+- [TextBox Genel Bakışı](textbox-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Doğrusal gradyan oluşturma'
+title: 'Nasıl yapılır: Doğrusal Gradyan Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: e47707d040cd7bf67008fab33ac482706963ce39
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125027"
 ---
-# <a name="how-to-create-a-linear-gradient"></a>Nasıl yapılır: Doğrusal gradyan oluşturma
+# <a name="how-to-create-a-linear-gradient"></a>Nasıl yapılır: Doğrusal Gradyan Oluşturma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Yatay, dikey ve Çapraz doğrusal gradyanlar sağlar. Varsayılan olarak, aynı şekilde doğrusal gradyan rengi değişir. Ancak, Tekdüzen olmayan biçimde rengini değiştirir, böylece doğrusal gradyan özelleştirebilirsiniz.  
   
  Aşağıdaki örnek, bir satır, bir elips ve dikdörtgen Yatay doğrusal gradyan fırçası ile doldurur.  
@@ -78,5 +78,6 @@ ms.locfileid: "57725252"
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Şekilleri Doldurmak için Gradyan Fırçası Kullanma](using-a-gradient-brush-to-fill-shapes.md)
-- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)

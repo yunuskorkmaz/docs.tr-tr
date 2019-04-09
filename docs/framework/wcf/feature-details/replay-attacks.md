@@ -2,12 +2,12 @@
 title: Yeniden Yürütme Saldırıları
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: bceaa1bb723144ee4e3b534aa1537acdc7f65fc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712083"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186764"
 ---
 # <a name="replay-attacks"></a>Yeniden Yürütme Saldırıları
 A *tekrarlama saldırı* bir saldırgan, iki taraflar arasında iletileri akışını kopyalar ve bir veya daha fazla taraflar akışa başlayarak yeniden oynatılır oluşur. Saldırı bilgisayarların akış azaltılabilir sürece, sonuçta hatalı sonuçları, bir öğenin yedekli siparişler gibi çeşitli yasal iletileri olarak işleyin.  
@@ -37,9 +37,10 @@ A *tekrarlama saldırı* bir saldırgan, iki taraflar arasında iletileri akış
 -   Hizmetini aktarım düzeyi güvenlik kullanacak şekilde yapılandırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+
+- [Güvenlik Değerlendirmeleri](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Bilgileri Açıklama](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Ayrıcalık Yükseltme](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

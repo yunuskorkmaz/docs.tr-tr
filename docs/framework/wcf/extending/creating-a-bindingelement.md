@@ -2,12 +2,12 @@
 title: BindingElement Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 8c4f3b4b3f9a3e4694ece814de691c07ef88ec5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 600bf9b394078ffc1b1bc97390bd0de406d64338
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115173"
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement Oluşturma
 Bağlamalar ve bağlama öğeleri (genişletirler <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> ve <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>sırasıyla) Windows Communication Foundation (WCF) uygulama modeli olduğu kanal fabrikaları ve kanal dinleyicileri ile ilişkili yerdir. Bağlamaları kullanarak özel kanallar kanal düzeyi programlama açıklandığı gerektirir [hizmet kanal düzeyi programlama](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) ve [istemci kanal düzeyi programlama](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Bu konuda, WCF, geliştirme sürecini kanalınızı kullanarak etkinleştirmek için en düşük gereksinim ele alınmaktadır bir <xref:System.ServiceModel.Channels.BindingElement> kanal ve etkinleştirme kullanımdan 4 adımda açıklandığı gibi uygulama için [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -59,11 +59,11 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="encoding-binding-elements"></a>Kodlama bağlama öğeleri  
  Yeni kodlama bağlama öğeleri oluşturmak için başlangıç genişleterek <xref:System.ServiceModel.Channels.BindingElement> sınıfı ve uygulama <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType> sınıfı. En azından, ardından uygulamalıdır <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> yöntemleri ve <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType> özelliği.  
   
--   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. Bu bağlama öğesi yeni bir kopyasını döndürür. En iyi uygulama, bu bağlama öğesi Uygulama yazarlarına olan öneririz <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> temel Kopyala oluşturucusunu çağırır bir kopya Oluşturucu kullanarak, ardından bu sınıftaki herhangi bir ek alanlar kopyalar.  
+-   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>biçimindeki telefon numarasıdır. Bu bağlama öğesi yeni bir kopyasını döndürür. En iyi uygulama, bu bağlama öğesi Uygulama yazarlarına olan öneririz <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> temel Kopyala oluşturucusunu çağırır bir kopya Oluşturucu kullanarak, ardından bu sınıftaki herhangi bir ek alanlar kopyalar.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. Döndürür bir <xref:System.ServiceModel.Channels.MessageEncoderFactory>, gerçek sınıfı için bir tanıtıcı, sağlayan yeni kodlayıcınız ve hangi genişletmelidir uygulayan <xref:System.ServiceModel.Channels.MessageEncoder>. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Channels.MessageEncoderFactory> ve <xref:System.ServiceModel.Channels.MessageEncoder>.  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>biçimindeki telefon numarasıdır. Döndürür bir <xref:System.ServiceModel.Channels.MessageEncoderFactory>, gerçek sınıfı için bir tanıtıcı, sağlayan yeni kodlayıcınız ve hangi genişletmelidir uygulayan <xref:System.ServiceModel.Channels.MessageEncoder>. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Channels.MessageEncoderFactory> ve <xref:System.ServiceModel.Channels.MessageEncoder>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. Döndürür <xref:System.ServiceModel.Channels.MessageVersion> bu kodlama kullanıldığında, temsil eden SOAP ve WS-Addressing sürümlerini kullanılıyor.  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>biçimindeki telefon numarasıdır. Döndürür <xref:System.ServiceModel.Channels.MessageVersion> bu kodlama kullanıldığında, temsil eden SOAP ve WS-Addressing sürümlerini kullanılıyor.  
   
  İsteğe bağlı yöntemler ve özellikler kullanıcı tanımlı kodlama bağlama öğeleri için tam bir listesi için bkz. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
@@ -72,6 +72,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  Bir bağlama öğesi için kanalınızı oluşturduktan sonra dönmek [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md) olup, bağlama öğeniz için yapılandırma dosyası desteği eklemek istiyorsanız ve meta veri yayımlama desteği ekleme görmek için konu ve olup olmadığını ve ne kadar bağlama öğesi kullanan kullanıcı tanımlı bir bağlama oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Channels.BindingElement>
 - [Geliştirme Kanalları](../../../../docs/framework/wcf/extending/developing-channels.md)
 - [Taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

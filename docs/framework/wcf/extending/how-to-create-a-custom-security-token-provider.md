@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Özel güvenlik belirteci sağlayıcı oluşturma'
+title: 'Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: 1a81f6eac5648406f50d9600b030828551b21c56
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: dd9b53b50f76ec80232a5fb8624e2b1701f9760d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140172"
 ---
-# <a name="how-to-create-a-custom-security-token-provider"></a>Nasıl yapılır: Özel güvenlik belirteci sağlayıcı oluşturma
+# <a name="how-to-create-a-custom-security-token-provider"></a>Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma
 Bu konu, yeni belirteç türleri ile özel güvenlik belirteci sağlayıcı oluşturma ve sağlayıcı bir özel güvenlik belirteci yöneticisi ile tümleştirmek nasıl gösterir.  
   
 > [!NOTE]
@@ -53,9 +53,10 @@ Bu konu, yeni belirteç türleri ile özel güvenlik belirteci sağlayıcı olu�
  [!code-vb[c_CustomTokenProvider#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IdentityModel.Selectors.SecurityTokenProvider>
 - <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.IdentityModel.Tokens.X509SecurityToken>
-- [İzlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)

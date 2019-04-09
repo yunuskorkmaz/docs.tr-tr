@@ -1,15 +1,15 @@
 ---
-title: SQL Server güvenliğine genel bakış
+title: SQL Server Güvenliğine Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 8000e88de70706c7bb8ec39a05beea4605208b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148596"
 ---
-# <a name="overview-of-sql-server-security"></a>SQL Server güvenliğine genel bakış
+# <a name="overview-of-sql-server-security"></a>SQL Server Güvenliğine Genel Bakış
 Güvenlik katmanları örtüşen derinlemesine savunma stratejisi, sayaç güvenlik tehditleri için en iyi yoludur. SQL Server veritabanı yöneticilerinin ve geliştiricilerin güvenli veritabanı uygulamaları ve sayaç tehditleri oluşturmak izin vermek için tasarlanmış bir güvenlik mimarisi sağlar. Her SQL Server sürümü, SQL Server'ın önceki sürümlerinde yeni özellikleri ve işlevleri tanıtımıyla geliştirdi. Ancak, güvenlik kutuya gelmez. Her uygulama, güvenlik gereksinimleri açısından benzersizdir. Geliştiriciler hangi özellik bileşimi anlamak gerekir ve işlevselliği için en uygun sayaç bilinen tehditlere ve gelecekte oluşabilecek tehditleri beklenir.  
   
  Bir SQL Server örneği ile sunucu başlangıç varlıkların hiyerarşik bir koleksiyonunu içerir. Her sunucu birden çok veritabanını, ve her veritabanı güvenliği sağlanabilir nesnelerin bir koleksiyonunu içerir. Güvenli kılınabilir her SQL Server ilişkili *izinleri* için verilebilir bir *asıl*, tek tek, bir grup olduğu veya SQL Server'a erişim verilen işlem. SQL Server güvenlik çerçevesi güvenli kılınabilir varlıklara erişimi yöneten *kimlik doğrulaması* ve *yetkilendirme*.  
@@ -40,6 +40,7 @@ Güvenlik katmanları örtüşen derinlemesine savunma stratejisi, sayaç güven
  CLR tümleştirme güvenliği kaynaklarına bağlantılar sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

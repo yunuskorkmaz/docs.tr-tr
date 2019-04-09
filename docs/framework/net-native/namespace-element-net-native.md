@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 647b1807957b611b9ba75ee90a7ac2257246d14c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150754"
 ---
 # <a name="namespace-element-net-native"></a>\<Namespace > öğesi (.NET yerel)
 Çalışma zamanı yansıma ilkesini belirtilen bir ad alanındaki tüm türleri için geçerlidir.  
@@ -84,6 +84,7 @@ ms.locfileid: "55261587"
  Bir alt öğesi olduğunda [ \<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md) öğesi `<Namespace>` öğesi tarafından tanımlanan çalışma zamanı yansıma ilkesini geçersiz kılar [ \<derleme >](../../../docs/framework/net-native/assembly-element-net-native.md) öğesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)

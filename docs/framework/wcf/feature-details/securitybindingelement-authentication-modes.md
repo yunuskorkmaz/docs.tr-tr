@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: b09b50d2db277d6aec325fb9305890f8e5be581c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9c8b2cb0417db6481ce0171d85b225ef3a784c1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119762"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement Kimlik Doğrulama Modları
 Windows Communication Foundation (WCF) tarafından istemcileri ve Hizmetleri birbirine kimlik doğrulaması birkaç modu sağlar. Güvenlik bağlama öğeleri bu kimlik doğrulama modları için statik yöntemler kullanarak oluşturabileceğiniz <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı veya yapılandırma yoluyla. Bu konuda, 18 kimlik doğrulama modları kısaca açıklanmaktadır.  
@@ -121,5 +121,6 @@ Windows Communication Foundation (WCF) tarafından istemcileri ve Hizmetleri bir
  Bu kimlik doğrulama modu ile görüntülenen bir kullanıcı adı belirteci SOAP katmanında imzalı destekleme belirteci kullanarak istemcinin kimliğini doğrular; diğer bir deyişle, ileti imzası tarafından imzalı bir belirteç. Aktarım katmanında bir X.509 sertifikası kullanarak hizmet kimlik doğrulaması yapılır. Güvenlik bağlama öğesi bir `TransportSecurityBindingElement` tarafından döndürülen <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A> yöntemi. Alternatif olarak, kümesinin `authenticationMode` özniteliğini `UserNameOverTransport`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [Nasıl yapılır: Belirtilen kimlik doğrulama modu için SecurityBindingElement oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Nasıl yapılır: Belirtilen Bir Kimlik Doğrulama Modu için SecurityBindingElement Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

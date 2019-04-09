@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114701"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework'teki eski türler
 <a name="introduction"></a> Bu makaledeki tablolar, artık kullanılmayan türler listesinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ve [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], derleme tarafından düzenlenmiş. Eski türler ve önerilen alternatifleri her derlemede bir listesini görmek için aşağıdaki bağlantıları kullanın. Bu tür geçersiz olduğundan, tüm üyeleri de artık kullanılmıyor. .NET Framework Sınıf Kitaplığı'nda ek eski üyeler listesi için bkz. [eski üyeler](obsolete-members.md).
@@ -779,5 +779,6 @@ Visual Basic 6'dan geçiş hakkında daha fazla bilgi için bkz: [Visual Basic 6
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll eski bir derleme ve yalnızca geriye dönük uyumluluk bulunmaktadır.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sınıf Kitaplığında Artık Kullanılmayanlar](whats-obsolete.md)
 - [Eski Üyeler](obsolete-members.md)
