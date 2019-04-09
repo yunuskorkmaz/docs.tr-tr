@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5543313a8d7a5589e115d609923aa0e75d3e275
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 143b11f0a99081b7d49bfbb68b635d92cf1e9ba3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163884"
 ---
-# <a name="imetadataimportresetenum-method"></a><span data-ttu-id="20aeb-102">IMetaDataImport::ResetEnum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="20aeb-102">IMetaDataImport::ResetEnum Method</span></span>
-<span data-ttu-id="20aeb-103">Belirtilen Numaralandırıcı belirtilen konuma sıfırlar.</span><span class="sxs-lookup"><span data-stu-id="20aeb-103">Resets the specified enumerator to the specified position.</span></span>  
+# <a name="imetadataimportresetenum-method"></a><span data-ttu-id="c3662-102">IMetaDataImport::ResetEnum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c3662-102">IMetaDataImport::ResetEnum Method</span></span>
+<span data-ttu-id="c3662-103">Belirtilen Numaralandırıcı belirtilen konuma sıfırlar.</span><span class="sxs-lookup"><span data-stu-id="c3662-103">Resets the specified enumerator to the specified position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20aeb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="20aeb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3662-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c3662-104">Syntax</span></span>  
   
 ```  
 HRESULT ResetEnum (  
@@ -36,22 +36,23 @@ HRESULT ResetEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="20aeb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="20aeb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3662-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c3662-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="20aeb-106">[in] Sıfırlamak için bir numaralandırıcı.</span><span class="sxs-lookup"><span data-stu-id="20aeb-106">[in] The enumerator to reset.</span></span>  
+ <span data-ttu-id="c3662-106">[in] Sıfırlamak için bir numaralandırıcı.</span><span class="sxs-lookup"><span data-stu-id="c3662-106">[in] The enumerator to reset.</span></span>  
   
  `ulPos`  
- <span data-ttu-id="20aeb-107">[in] Numaralandırıcı yerleştirileceği en yeni konumu.</span><span class="sxs-lookup"><span data-stu-id="20aeb-107">[in] The new position at which to place the enumerator.</span></span>  
+ <span data-ttu-id="c3662-107">[in] Numaralandırıcı yerleştirileceği en yeni konumu.</span><span class="sxs-lookup"><span data-stu-id="c3662-107">[in] The new position at which to place the enumerator.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20aeb-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="20aeb-108">Requirements</span></span>  
- <span data-ttu-id="20aeb-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20aeb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3662-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c3662-108">Requirements</span></span>  
+ <span data-ttu-id="c3662-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3662-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="20aeb-110">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="20aeb-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c3662-110">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c3662-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="20aeb-111">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="20aeb-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c3662-111">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="c3662-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="20aeb-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20aeb-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="c3662-112">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="c3662-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="20aeb-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="20aeb-113">See also</span></span>
-- [<span data-ttu-id="20aeb-114">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="20aeb-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="20aeb-115">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="20aeb-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c3662-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c3662-113">See also</span></span>
+
+- [<span data-ttu-id="c3662-114">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c3662-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="c3662-115">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c3662-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

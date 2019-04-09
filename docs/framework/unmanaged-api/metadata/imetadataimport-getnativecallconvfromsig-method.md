@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1002aa9e01fedaacf80622952bbba82caa7081c1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ef1ac83b383a9f6bbee7f55441d2abfcb081afa6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122752"
 ---
-# <a name="imetadataimportgetnativecallconvfromsig-method"></a><span data-ttu-id="13501-102">IMetaDataImport::GetNativeCallConvFromSig Yöntemi</span><span class="sxs-lookup"><span data-stu-id="13501-102">IMetaDataImport::GetNativeCallConvFromSig Method</span></span>
-<span data-ttu-id="13501-103">Yerel bir belirtilen imza işaretçi tarafından temsil edilen yöntem için çağırma alır.</span><span class="sxs-lookup"><span data-stu-id="13501-103">Gets the native calling convention for the method that is represented by the specified signature pointer.</span></span>  
+# <a name="imetadataimportgetnativecallconvfromsig-method"></a><span data-ttu-id="ac9e9-102">IMetaDataImport::GetNativeCallConvFromSig Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ac9e9-102">IMetaDataImport::GetNativeCallConvFromSig Method</span></span>
+<span data-ttu-id="ac9e9-103">Yerel bir belirtilen imza işaretçi tarafından temsil edilen yöntem için çağırma alır.</span><span class="sxs-lookup"><span data-stu-id="ac9e9-103">Gets the native calling convention for the method that is represented by the specified signature pointer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="13501-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="13501-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac9e9-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ac9e9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNativeCallConvFromSig (  
@@ -37,26 +37,27 @@ HRESULT GetNativeCallConvFromSig (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="13501-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="13501-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ac9e9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ac9e9-105">Parameters</span></span>  
  `pvSig`  
- <span data-ttu-id="13501-106">[in] Çağırma kuralının döndürmek için yöntemin meta veri imzası bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="13501-106">[in] A pointer to the metadata signature of the method to return the calling convention for.</span></span>  
+ <span data-ttu-id="ac9e9-106">[in] Çağırma kuralının döndürmek için yöntemin meta veri imzası bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ac9e9-106">[in] A pointer to the metadata signature of the method to return the calling convention for.</span></span>  
   
  `cbSig`  
- <span data-ttu-id="13501-107">[in] Bayt cinsinden boyutu `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="13501-107">[in] The size in bytes of `pvSig`.</span></span>  
+ <span data-ttu-id="ac9e9-107">[in] Bayt cinsinden boyutu `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="ac9e9-107">[in] The size in bytes of `pvSig`.</span></span>  
   
  `pCallConv`  
- <span data-ttu-id="13501-108">[out] Yerel çağrı kuralı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="13501-108">[out] A pointer to the native calling convention.</span></span>  
+ <span data-ttu-id="ac9e9-108">[out] Yerel çağrı kuralı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ac9e9-108">[out] A pointer to the native calling convention.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="13501-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="13501-109">Requirements</span></span>  
- <span data-ttu-id="13501-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13501-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac9e9-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ac9e9-109">Requirements</span></span>  
+ <span data-ttu-id="ac9e9-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac9e9-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="13501-111">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="13501-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ac9e9-111">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="ac9e9-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="13501-112">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="13501-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ac9e9-112">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="ac9e9-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="13501-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13501-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="ac9e9-113">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="ac9e9-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="13501-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="13501-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac9e9-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ac9e9-114">See also</span></span>
+
 - <xref:System.Runtime.InteropServices.CallingConvention>
-- [<span data-ttu-id="13501-115">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="13501-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="13501-116">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="13501-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="ac9e9-115">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ac9e9-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="ac9e9-116">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ac9e9-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

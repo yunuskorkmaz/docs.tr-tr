@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fad069a15cb4079dac2b4ee65ca3d9669a53cac0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 452104939acf5de7bb151cba00d65fb6631c98d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124091"
 ---
-# <a name="getversionfromprocess-function"></a><span data-ttu-id="fcc43-102">GetVersionFromProcess İşlevi</span><span class="sxs-lookup"><span data-stu-id="fcc43-102">GetVersionFromProcess Function</span></span>
-<span data-ttu-id="fcc43-103">Belirtilen işlem tanımlayıcısıyla ilişkili olan ortak dil çalışma zamanı (CLR) sürüm numarasını alır.</span><span class="sxs-lookup"><span data-stu-id="fcc43-103">Gets the version number of the common language runtime (CLR) that is associated with the specified process handle.</span></span>  
+# <a name="getversionfromprocess-function"></a><span data-ttu-id="33ada-102">GetVersionFromProcess İşlevi</span><span class="sxs-lookup"><span data-stu-id="33ada-102">GetVersionFromProcess Function</span></span>
+<span data-ttu-id="33ada-103">Belirtilen işlem tanımlayıcısıyla ilişkili olan ortak dil çalışma zamanı (CLR) sürüm numarasını alır.</span><span class="sxs-lookup"><span data-stu-id="33ada-103">Gets the version number of the common language runtime (CLR) that is associated with the specified process handle.</span></span>  
   
- <span data-ttu-id="fcc43-104">Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fcc43-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="33ada-104">Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="33ada-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fcc43-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fcc43-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33ada-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="33ada-105">Syntax</span></span>  
   
 ```  
 HRESULT GetVersionFromProcess (  
@@ -40,39 +40,40 @@ HRESULT GetVersionFromProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fcc43-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="fcc43-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="33ada-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="33ada-106">Parameters</span></span>  
  `hProcess`  
- <span data-ttu-id="fcc43-107">[in] Bir işlem için bir tanıtıcı.</span><span class="sxs-lookup"><span data-stu-id="fcc43-107">[in] A handle to a process.</span></span>  
+ <span data-ttu-id="33ada-107">[in] Bir işlem için bir tanıtıcı.</span><span class="sxs-lookup"><span data-stu-id="33ada-107">[in] A handle to a process.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="fcc43-108">[out] Yöntemi başarıyla tamamlanmasından sonra sürüm numarası dizesi içeren bir arabelleği.</span><span class="sxs-lookup"><span data-stu-id="fcc43-108">[out] A buffer that contains the version number string upon successful completion of the method.</span></span>  
+ <span data-ttu-id="33ada-108">[out] Yöntemi başarıyla tamamlanmasından sonra sürüm numarası dizesi içeren bir arabelleği.</span><span class="sxs-lookup"><span data-stu-id="33ada-108">[out] A buffer that contains the version number string upon successful completion of the method.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="fcc43-109">[in] Sürüm arabellek uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="fcc43-109">[in] The length of the version buffer.</span></span>  
+ <span data-ttu-id="33ada-109">[in] Sürüm arabellek uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="33ada-109">[in] The length of the version buffer.</span></span>  
   
  `pdwLength`  
- <span data-ttu-id="fcc43-110">[out] Sürüm numarası dizenin uzunluğu bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="fcc43-110">[out] A pointer to the length of the version number string.</span></span>  
+ <span data-ttu-id="33ada-110">[out] Sürüm numarası dizenin uzunluğu bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="33ada-110">[out] A pointer to the length of the version number string.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fcc43-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="fcc43-111">Return Value</span></span>  
- <span data-ttu-id="fcc43-112">Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları, ek olarak aşağıdaki değerleri Wınerror içinde tanımlanan döndürür.</span><span class="sxs-lookup"><span data-stu-id="fcc43-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="33ada-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="33ada-111">Return Value</span></span>  
+ <span data-ttu-id="33ada-112">Bu yöntem standart Bileşen Nesne Modeli (COM) hata kodları, ek olarak aşağıdaki değerleri Wınerror içinde tanımlanan döndürür.</span><span class="sxs-lookup"><span data-stu-id="33ada-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="fcc43-113">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="fcc43-113">Return code</span></span>|<span data-ttu-id="fcc43-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="fcc43-114">Description</span></span>|  
+|<span data-ttu-id="33ada-113">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="33ada-113">Return code</span></span>|<span data-ttu-id="33ada-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="33ada-114">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="fcc43-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="fcc43-115">S_OK</span></span>|<span data-ttu-id="fcc43-116">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="fcc43-116">The method completed successfully.</span></span>|  
-|<span data-ttu-id="fcc43-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="fcc43-117">E_INVALIDARG</span></span>|<span data-ttu-id="fcc43-118">`pVersion` NULL ve `cchBuffer` null değil veya bunun tersi de geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="fcc43-118">`pVersion` is null and `cchBuffer` is not null, or vice versa.</span></span><br /><br /> <span data-ttu-id="fcc43-119">-veya-</span><span class="sxs-lookup"><span data-stu-id="fcc43-119">-or-</span></span><br /><br /> <span data-ttu-id="fcc43-120">`hProcess` bir işlem için geçerli bir tanıtıcı değil.</span><span class="sxs-lookup"><span data-stu-id="fcc43-120">`hProcess` is not a valid handle to a process.</span></span><br /><br /> <span data-ttu-id="fcc43-121">-veya-</span><span class="sxs-lookup"><span data-stu-id="fcc43-121">-or-</span></span><br /><br /> <span data-ttu-id="fcc43-122">CLR yüklü değil.</span><span class="sxs-lookup"><span data-stu-id="fcc43-122">The CLR is not loaded.</span></span>|  
-|<span data-ttu-id="fcc43-123">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="fcc43-123">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="fcc43-124">`cchBuffer` null veya sürüm dizesinin uzunluğunu değerinden küçük değil.</span><span class="sxs-lookup"><span data-stu-id="fcc43-124">`cchBuffer` is null or less than the length of the version string.</span></span>|  
-|<span data-ttu-id="fcc43-125">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="fcc43-125">E_NOTIMPL</span></span>|<span data-ttu-id="fcc43-126">Bu yöntem, Microsoft Windows 95, Windows 98 Microsoft veya Microsoft Windows Millennium Edition işletim sisteminde kullanılabilir değil.</span><span class="sxs-lookup"><span data-stu-id="fcc43-126">This method is not available on the Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows Millennium Edition operating system.</span></span>|  
+|<span data-ttu-id="33ada-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="33ada-115">S_OK</span></span>|<span data-ttu-id="33ada-116">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="33ada-116">The method completed successfully.</span></span>|  
+|<span data-ttu-id="33ada-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="33ada-117">E_INVALIDARG</span></span>|`pVersion` <span data-ttu-id="33ada-118">NULL ve `cchBuffer` null değil veya bunun tersi de geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="33ada-118">is null and `cchBuffer` is not null, or vice versa.</span></span><br /><br /> <span data-ttu-id="33ada-119">-veya-</span><span class="sxs-lookup"><span data-stu-id="33ada-119">-or-</span></span><br /><br /> `hProcess` <span data-ttu-id="33ada-120">bir işlem için geçerli bir tanıtıcı değil.</span><span class="sxs-lookup"><span data-stu-id="33ada-120">is not a valid handle to a process.</span></span><br /><br /> <span data-ttu-id="33ada-121">-veya-</span><span class="sxs-lookup"><span data-stu-id="33ada-121">-or-</span></span><br /><br /> <span data-ttu-id="33ada-122">CLR yüklü değil.</span><span class="sxs-lookup"><span data-stu-id="33ada-122">The CLR is not loaded.</span></span>|  
+|<span data-ttu-id="33ada-123">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="33ada-123">ERROR_INSUFFICIENT_BUFFER</span></span>|`cchBuffer` <span data-ttu-id="33ada-124">null veya sürüm dizesinin uzunluğunu değerinden küçük değil.</span><span class="sxs-lookup"><span data-stu-id="33ada-124">is null or less than the length of the version string.</span></span>|  
+|<span data-ttu-id="33ada-125">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="33ada-125">E_NOTIMPL</span></span>|<span data-ttu-id="33ada-126">Bu yöntem, Microsoft Windows 95, Windows 98 Microsoft veya Microsoft Windows Millennium Edition işletim sisteminde kullanılabilir değil.</span><span class="sxs-lookup"><span data-stu-id="33ada-126">This method is not available on the Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows Millennium Edition operating system.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="fcc43-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fcc43-127">Requirements</span></span>  
- <span data-ttu-id="fcc43-128">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fcc43-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="33ada-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="33ada-127">Requirements</span></span>  
+ <span data-ttu-id="33ada-128">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33ada-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fcc43-129">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fcc43-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="33ada-129">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="33ada-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="fcc43-130">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fcc43-130">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="33ada-130">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="33ada-130">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fcc43-131">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fcc43-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="33ada-131">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="33ada-131">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="fcc43-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fcc43-132">See also</span></span>
-- [<span data-ttu-id="fcc43-133">GetRequestedRuntimeInfo İşlevi</span><span class="sxs-lookup"><span data-stu-id="fcc43-133">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
-- [<span data-ttu-id="fcc43-134">GetRequestedRuntimeVersion İşlevi</span><span class="sxs-lookup"><span data-stu-id="fcc43-134">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
-- [<span data-ttu-id="fcc43-135">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="fcc43-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="33ada-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="33ada-132">See also</span></span>
+
+- [<span data-ttu-id="33ada-133">GetRequestedRuntimeInfo İşlevi</span><span class="sxs-lookup"><span data-stu-id="33ada-133">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [<span data-ttu-id="33ada-134">GetRequestedRuntimeVersion İşlevi</span><span class="sxs-lookup"><span data-stu-id="33ada-134">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [<span data-ttu-id="33ada-135">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="33ada-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

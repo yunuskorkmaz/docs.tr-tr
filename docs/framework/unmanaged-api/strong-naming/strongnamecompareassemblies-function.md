@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd3813d977f94db4168da8c888485b323f4072ad
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191386"
 ---
-# <a name="strongnamecompareassemblies-function"></a><span data-ttu-id="e24b5-102">StrongNameCompareAssemblies İşlevi</span><span class="sxs-lookup"><span data-stu-id="e24b5-102">StrongNameCompareAssemblies Function</span></span>
-<span data-ttu-id="e24b5-103">İki derlemenin yalnızca tanımlayıcı ad imzaları tarafından farklı olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="e24b5-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
+# <a name="strongnamecompareassemblies-function"></a><span data-ttu-id="c4141-102">StrongNameCompareAssemblies İşlevi</span><span class="sxs-lookup"><span data-stu-id="c4141-102">StrongNameCompareAssemblies Function</span></span>
+<span data-ttu-id="c4141-103">İki derlemenin yalnızca tanımlayıcı ad imzaları tarafından farklı olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="c4141-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  
   
- <span data-ttu-id="e24b5-104">Bu işlev kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="e24b5-104">This function has been deprecated.</span></span> <span data-ttu-id="e24b5-105">Kullanım [Iclrstrongname::strongnamecompareassemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="e24b5-105">Use the [ICLRStrongName::StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) method instead.</span></span>  
+ <span data-ttu-id="c4141-104">Bu işlev kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="c4141-104">This function has been deprecated.</span></span> <span data-ttu-id="c4141-105">Kullanım [Iclrstrongname::strongnamecompareassemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="c4141-105">Use the [ICLRStrongName::StrongNameCompareAssemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e24b5-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e24b5-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4141-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c4141-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameCompareAssemblies (  
@@ -38,39 +38,40 @@ BOOLEAN StrongNameCompareAssemblies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e24b5-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e24b5-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c4141-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c4141-107">Parameters</span></span>  
  `wszAssembly1`  
- <span data-ttu-id="e24b5-108">[in] İlk bütünleştirilmiş kod yolu.</span><span class="sxs-lookup"><span data-stu-id="e24b5-108">[in] The path to the first assembly.</span></span>  
+ <span data-ttu-id="c4141-108">[in] İlk bütünleştirilmiş kod yolu.</span><span class="sxs-lookup"><span data-stu-id="c4141-108">[in] The path to the first assembly.</span></span>  
   
  `wszAssembly2`  
- <span data-ttu-id="e24b5-109">[in] İkinci bütünleştirilmiş kod yolu.</span><span class="sxs-lookup"><span data-stu-id="e24b5-109">[in] The path to the second assembly.</span></span>  
+ <span data-ttu-id="c4141-109">[in] İkinci bütünleştirilmiş kod yolu.</span><span class="sxs-lookup"><span data-stu-id="c4141-109">[in] The path to the second assembly.</span></span>  
   
  `pdwResult`  
- <span data-ttu-id="e24b5-110">[out] Aşağıdaki değerlerden biri:</span><span class="sxs-lookup"><span data-stu-id="e24b5-110">[out] One of the following values:</span></span>  
+ <span data-ttu-id="c4141-110">[out] Aşağıdaki değerlerden biri:</span><span class="sxs-lookup"><span data-stu-id="c4141-110">[out] One of the following values:</span></span>  
   
--   <span data-ttu-id="e24b5-111">`SN_CMP_DIFFERENT` (0) - derlemeleri farklı veri içerdiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="e24b5-111">`SN_CMP_DIFFERENT` (0) - Specifies that the assemblies contain different data.</span></span>  
+-   `SN_CMP_DIFFERENT` <span data-ttu-id="c4141-111">(0) - derlemeleri farklı veri içerdiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="c4141-111">(0) - Specifies that the assemblies contain different data.</span></span>  
   
--   <span data-ttu-id="e24b5-112">`SN_CMP_IDENTICAL` (1) - derlemeleri tam olarak aynı kendi imzaları ve sağlama toplamı dahil olmak üzere olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="e24b5-112">`SN_CMP_IDENTICAL` (1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
+-   `SN_CMP_IDENTICAL` <span data-ttu-id="c4141-112">(1) - derlemeleri tam olarak aynı kendi imzaları ve sağlama toplamı dahil olmak üzere olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="c4141-112">(1) - Specifies that the assemblies are exactly the same, including their signatures and checksum.</span></span>  
   
--   <span data-ttu-id="e24b5-113">`SN_CMP_SIGONLY` (2) - derlemeler yalnızca imza ve sağlama toplamı farklı olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="e24b5-113">`SN_CMP_SIGONLY` (2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
+-   `SN_CMP_SIGONLY` <span data-ttu-id="c4141-113">(2) - derlemeler yalnızca imza ve sağlama toplamı farklı olduğunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="c4141-113">(2) - Specifies that the assemblies differ only by signature and checksum.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e24b5-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e24b5-114">Return Value</span></span>  
- <span data-ttu-id="e24b5-115">`true` başarıyla tamamlandığında; Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="e24b5-115">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c4141-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c4141-114">Return Value</span></span>  
+ `true` <span data-ttu-id="c4141-115">başarıyla tamamlandığında; Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="c4141-115">on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e24b5-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e24b5-116">Requirements</span></span>  
- <span data-ttu-id="e24b5-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e24b5-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4141-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c4141-116">Requirements</span></span>  
+ <span data-ttu-id="c4141-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4141-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e24b5-118">**Üst bilgi:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="e24b5-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="c4141-118">**Üst bilgi:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="c4141-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="e24b5-119">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="e24b5-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c4141-119">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="c4141-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e24b5-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e24b5-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="c4141-120">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="c4141-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="remarks"></a><span data-ttu-id="e24b5-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e24b5-121">Remarks</span></span>  
- <span data-ttu-id="e24b5-122">Bir derlemenin tanımlayıcı ad imzası, derlemenin metin adı, sürüm, kültür ve ortak anahtar belirteci oluşur.</span><span class="sxs-lookup"><span data-stu-id="e24b5-122">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c4141-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c4141-121">Remarks</span></span>  
+ <span data-ttu-id="c4141-122">Bir derlemenin tanımlayıcı ad imzası, derlemenin metin adı, sürüm, kültür ve ortak anahtar belirteci oluşur.</span><span class="sxs-lookup"><span data-stu-id="c4141-122">The strong name signature of an assembly consists of the assembly's text name, version, culture, and public key token.</span></span>  
   
- <span data-ttu-id="e24b5-123">Varsa `StrongNameCompareAssemblies` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.</span><span class="sxs-lookup"><span data-stu-id="e24b5-123">If the `StrongNameCompareAssemblies` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="c4141-123">Varsa `StrongNameCompareAssemblies` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.</span><span class="sxs-lookup"><span data-stu-id="c4141-123">If the `StrongNameCompareAssemblies` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e24b5-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e24b5-124">See also</span></span>
-- [<span data-ttu-id="e24b5-125">StrongNameCompareAssemblies Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e24b5-125">StrongNameCompareAssemblies Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
-- [<span data-ttu-id="e24b5-126">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e24b5-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c4141-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c4141-124">See also</span></span>
+
+- [<span data-ttu-id="c4141-125">StrongNameCompareAssemblies Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c4141-125">StrongNameCompareAssemblies Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [<span data-ttu-id="c4141-126">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c4141-126">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

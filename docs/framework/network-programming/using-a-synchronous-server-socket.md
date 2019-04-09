@@ -1,5 +1,5 @@
 ---
-title: Zaman uyumlu sunucu yuvası kullanma
+title: Zaman Uyumlu Sunucu Yuvası Kullanma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: 2a4fd2f903f96a14d4a256ea68240e942ccd59eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43e1d54d4e74b49fdf1a8997d1cc89492c9412bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117258"
 ---
-# <a name="using-a-synchronous-server-socket"></a><span data-ttu-id="72059-102">Zaman uyumlu sunucu yuvası kullanma</span><span class="sxs-lookup"><span data-stu-id="72059-102">Using a Synchronous Server Socket</span></span>
-<span data-ttu-id="72059-103">Yuva bağlantısı isteği alınana kadar zaman uyumlu sunucu yuva uygulamanın yürütülmesini askıya alın.</span><span class="sxs-lookup"><span data-stu-id="72059-103">Synchronous server sockets suspend the execution of the application until a connection request is received on the socket.</span></span> <span data-ttu-id="72059-104">Zaman uyumlu sunucu yuva ağ kullanımı yoğun uygulamalar, işlemi için uygun değildir, ancak Basit Ağ uygulamaları için uygun olabilir.</span><span class="sxs-lookup"><span data-stu-id="72059-104">Synchronous server sockets are not suitable for applications that make heavy use of the network in their operation, but they can be suitable for simple network applications.</span></span>  
+# <a name="using-a-synchronous-server-socket"></a><span data-ttu-id="a8168-102">Zaman Uyumlu Sunucu Yuvası Kullanma</span><span class="sxs-lookup"><span data-stu-id="a8168-102">Using a Synchronous Server Socket</span></span>
+<span data-ttu-id="a8168-103">Yuva bağlantısı isteği alınana kadar zaman uyumlu sunucu yuva uygulamanın yürütülmesini askıya alın.</span><span class="sxs-lookup"><span data-stu-id="a8168-103">Synchronous server sockets suspend the execution of the application until a connection request is received on the socket.</span></span> <span data-ttu-id="a8168-104">Zaman uyumlu sunucu yuva ağ kullanımı yoğun uygulamalar, işlemi için uygun değildir, ancak Basit Ağ uygulamaları için uygun olabilir.</span><span class="sxs-lookup"><span data-stu-id="a8168-104">Synchronous server sockets are not suitable for applications that make heavy use of the network in their operation, but they can be suitable for simple network applications.</span></span>  
   
- <span data-ttu-id="72059-105">Sonra bir <xref:System.Net.Sockets.Socket> kullanarak bir uç noktası dinleyecek şekilde ayarlanır <xref:System.Net.Sockets.Socket.Bind%2A> ve <xref:System.Net.Sockets.Socket.Listen%2A> yöntemleri, gelen bağlantı isteklerini kullanarak kabul etmeye hazır <xref:System.Net.Sockets.Socket.Accept%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="72059-105">After a <xref:System.Net.Sockets.Socket> is set to listen on an endpoint using the <xref:System.Net.Sockets.Socket.Bind%2A> and <xref:System.Net.Sockets.Socket.Listen%2A> methods, it is ready to accept incoming connection requests using the <xref:System.Net.Sockets.Socket.Accept%2A> method.</span></span> <span data-ttu-id="72059-106">Bir bağlantı isteği alınana kadar uygulamanın askıya olduğunda **kabul** yöntemi çağrılır.</span><span class="sxs-lookup"><span data-stu-id="72059-106">The application is suspended until a connection request is received when the **Accept** method is called.</span></span>  
+ <span data-ttu-id="a8168-105">Sonra bir <xref:System.Net.Sockets.Socket> kullanarak bir uç noktası dinleyecek şekilde ayarlanır <xref:System.Net.Sockets.Socket.Bind%2A> ve <xref:System.Net.Sockets.Socket.Listen%2A> yöntemleri, gelen bağlantı isteklerini kullanarak kabul etmeye hazır <xref:System.Net.Sockets.Socket.Accept%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="a8168-105">After a <xref:System.Net.Sockets.Socket> is set to listen on an endpoint using the <xref:System.Net.Sockets.Socket.Bind%2A> and <xref:System.Net.Sockets.Socket.Listen%2A> methods, it is ready to accept incoming connection requests using the <xref:System.Net.Sockets.Socket.Accept%2A> method.</span></span> <span data-ttu-id="a8168-106">Bir bağlantı isteği alınana kadar uygulamanın askıya olduğunda **kabul** yöntemi çağrılır.</span><span class="sxs-lookup"><span data-stu-id="a8168-106">The application is suspended until a connection request is received when the **Accept** method is called.</span></span>  
   
- <span data-ttu-id="72059-107">Bir bağlantı isteği alındığında **kabul** yeni bir **yuva** bağlanan istemcinin ile ilişkili olan örneği.</span><span class="sxs-lookup"><span data-stu-id="72059-107">When a connection request is received, **Accept** returns a new **Socket** instance that is associated with the connecting client.</span></span> <span data-ttu-id="72059-108">Aşağıdaki örnek istemciden gelen verileri okur, konsolda görüntüler ve istemcisine verileri görüntülemektedir.</span><span class="sxs-lookup"><span data-stu-id="72059-108">The following example reads data from the client, displays it on the console, and echoes the data back to the client.</span></span> <span data-ttu-id="72059-109">**Yuva** herhangi bir Mesajlaşma protokolü, bu nedenle belirtmiyor dize "\<EOF >" ileti verileri sonunu işaretler.</span><span class="sxs-lookup"><span data-stu-id="72059-109">The **Socket** does not specify any messaging protocol, so the string "\<EOF>" marks the end of the message data.</span></span> <span data-ttu-id="72059-110">Olduğunu varsayar bir **yuva** adlı `listener` başlatılır ve bir uç noktasına bağlı.</span><span class="sxs-lookup"><span data-stu-id="72059-110">It assumes that a **Socket** named `listener` has been initialized and bound to an endpoint.</span></span>  
+ <span data-ttu-id="a8168-107">Bir bağlantı isteği alındığında **kabul** yeni bir **yuva** bağlanan istemcinin ile ilişkili olan örneği.</span><span class="sxs-lookup"><span data-stu-id="a8168-107">When a connection request is received, **Accept** returns a new **Socket** instance that is associated with the connecting client.</span></span> <span data-ttu-id="a8168-108">Aşağıdaki örnek istemciden gelen verileri okur, konsolda görüntüler ve istemcisine verileri görüntülemektedir.</span><span class="sxs-lookup"><span data-stu-id="a8168-108">The following example reads data from the client, displays it on the console, and echoes the data back to the client.</span></span> <span data-ttu-id="a8168-109">**Yuva** herhangi bir Mesajlaşma protokolü, bu nedenle belirtmiyor dize "\<EOF >" ileti verileri sonunu işaretler.</span><span class="sxs-lookup"><span data-stu-id="a8168-109">The **Socket** does not specify any messaging protocol, so the string "\<EOF>" marks the end of the message data.</span></span> <span data-ttu-id="a8168-110">Olduğunu varsayar bir **yuva** adlı `listener` başlatılır ve bir uç noktasına bağlı.</span><span class="sxs-lookup"><span data-stu-id="a8168-110">It assumes that a **Socket** named `listener` has been initialized and bound to an endpoint.</span></span>  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  
@@ -75,7 +75,8 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="72059-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="72059-111">See also</span></span>
-- [<span data-ttu-id="72059-112">Zaman Uyumsuz Sunucu Yuvası Kullanma</span><span class="sxs-lookup"><span data-stu-id="72059-112">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [<span data-ttu-id="72059-113">Zaman Uyumlu Sunucu Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="72059-113">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [<span data-ttu-id="72059-114">Yuvalarla Dinleme</span><span class="sxs-lookup"><span data-stu-id="72059-114">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)
+## <a name="see-also"></a><span data-ttu-id="a8168-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a8168-111">See also</span></span>
+
+- [<span data-ttu-id="a8168-112">Zaman Uyumsuz Sunucu Yuvası Kullanma</span><span class="sxs-lookup"><span data-stu-id="a8168-112">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [<span data-ttu-id="a8168-113">Zaman Uyumlu Sunucu Yuvası Örneği</span><span class="sxs-lookup"><span data-stu-id="a8168-113">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
+- [<span data-ttu-id="a8168-114">Yuvalarla Dinleme</span><span class="sxs-lookup"><span data-stu-id="a8168-114">Listening with Sockets</span></span>](../../../docs/framework/network-programming/listening-with-sockets.md)

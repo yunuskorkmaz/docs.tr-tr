@@ -2,24 +2,25 @@
 title: Saniyede Hatalı Çağrı
 ms.date: 03/30/2017
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
-ms.openlocfilehash: dd35e4096ab4e2740c638903975af085b01a1fbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b7569b6a00757fbb863b90b25b44815a349ab07
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115524"
 ---
-# <a name="calls-faulted-per-second"></a><span data-ttu-id="538a7-102">Saniyede Hatalı Çağrı</span><span class="sxs-lookup"><span data-stu-id="538a7-102">Calls Faulted Per Second</span></span>
-<span data-ttu-id="538a7-103">Sayaç adı: Saniyede Hatalı Çağrı</span><span class="sxs-lookup"><span data-stu-id="538a7-103">Counter Name: Calls Faulted Per Second</span></span>  
+# <a name="calls-faulted-per-second"></a><span data-ttu-id="d1ccd-102">Saniyede Hatalı Çağrı</span><span class="sxs-lookup"><span data-stu-id="d1ccd-102">Calls Faulted Per Second</span></span>
+<span data-ttu-id="d1ccd-103">Sayaç adı: Saniyede Hatalı Çağrı</span><span class="sxs-lookup"><span data-stu-id="d1ccd-103">Counter Name: Calls Faulted Per Second</span></span>  
   
-## <a name="description"></a><span data-ttu-id="538a7-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="538a7-104">Description</span></span>  
- <span data-ttu-id="538a7-105">Döndürmüş bu işleme bir saniye içinde çağrı sayısı.</span><span class="sxs-lookup"><span data-stu-id="538a7-105">Number of calls that returned faults to this operation in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="d1ccd-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="d1ccd-104">Description</span></span>  
+ <span data-ttu-id="d1ccd-105">Döndürmüş bu işleme bir saniye içinde çağrı sayısı.</span><span class="sxs-lookup"><span data-stu-id="d1ccd-105">Number of calls that returned faults to this operation in a second.</span></span>  
   
- <span data-ttu-id="538a7-106">Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="538a7-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="d1ccd-106">Bu sayaç performans sayacı türüdür [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), değeri aşağıdaki formül kullanılarak hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="d1ccd-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="538a7-107">(1 - N 0 N) / ((D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="538a7-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
+ <span data-ttu-id="d1ccd-107">(1 - N 0 N) / ((D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="d1ccd-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>  
   
- <span data-ttu-id="538a7-108">Windows Communication Foundation (WCF) uygulamaları, hizmet yöntemleri işleme hata bilgilerini SOAP hata iletileri kullanarak iletişim kurar.</span><span class="sxs-lookup"><span data-stu-id="538a7-108">In Windows Communication Foundation (WCF) applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="538a7-109">SOAP hatalarının bir hizmet işlemi için meta veriler bulunur ve bu nedenle istemcilerin yürütülmesi daha sağlam ve etkileşimli hale getirmek için kullanabileceği bir hataya sözleşmesi oluşturma iletisi türleridir.</span><span class="sxs-lookup"><span data-stu-id="538a7-109">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their execution more robust or interactive.</span></span> <span data-ttu-id="538a7-110">SOAP hataları XML formundaki istemcilere ifade olduğundan, yüksek düzeyde birlikte çalışabilir.</span><span class="sxs-lookup"><span data-stu-id="538a7-110">Since SOAP faults are expressed to clients in XML form, they are highly interoperable.</span></span>  
+ <span data-ttu-id="d1ccd-108">Windows Communication Foundation (WCF) uygulamaları, hizmet yöntemleri işleme hata bilgilerini SOAP hata iletileri kullanarak iletişim kurar.</span><span class="sxs-lookup"><span data-stu-id="d1ccd-108">In Windows Communication Foundation (WCF) applications, service methods communicate processing error information using SOAP fault messages.</span></span> <span data-ttu-id="d1ccd-109">SOAP hatalarının bir hizmet işlemi için meta veriler bulunur ve bu nedenle istemcilerin yürütülmesi daha sağlam ve etkileşimli hale getirmek için kullanabileceği bir hataya sözleşmesi oluşturma iletisi türleridir.</span><span class="sxs-lookup"><span data-stu-id="d1ccd-109">SOAP faults are message types that are included in the metadata for a service operation and therefore create a fault contract that clients can use to make their execution more robust or interactive.</span></span> <span data-ttu-id="d1ccd-110">SOAP hataları XML formundaki istemcilere ifade olduğundan, yüksek düzeyde birlikte çalışabilir.</span><span class="sxs-lookup"><span data-stu-id="d1ccd-110">Since SOAP faults are expressed to clients in XML form, they are highly interoperable.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="538a7-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="538a7-111">See also</span></span>
-- [<span data-ttu-id="538a7-112">Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme</span><span class="sxs-lookup"><span data-stu-id="538a7-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="d1ccd-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d1ccd-111">See also</span></span>
+
+- [<span data-ttu-id="d1ccd-112">Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme</span><span class="sxs-lookup"><span data-stu-id="d1ccd-112">Specifying and Handling Faults in Contracts and Services</span></span>](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

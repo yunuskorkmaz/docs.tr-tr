@@ -19,17 +19,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9b434edc10a7c11d738bd3fc10402ef3f83d9dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134686"
 ---
-# <a name="icoreclrdebugtargetenumruntimes-method"></a><span data-ttu-id="03146-102">ICoreClrDebugTarget::EnumRuntimes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="03146-102">ICoreClrDebugTarget::EnumRuntimes Method</span></span>
-<span data-ttu-id="03146-103">Uzak bir bilgisayarda çalışan belirtilen işlemdeki ortak dil çalışma zamanlarını (CLRs) numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="03146-103">Enumerates the common language runtimes (CLRs) in the specified process that is running on a remote computer.</span></span>  
+# <a name="icoreclrdebugtargetenumruntimes-method"></a><span data-ttu-id="23787-102">ICoreClrDebugTarget::EnumRuntimes Yöntemi</span><span class="sxs-lookup"><span data-stu-id="23787-102">ICoreClrDebugTarget::EnumRuntimes Method</span></span>
+<span data-ttu-id="23787-103">Uzak bir bilgisayarda çalışan belirtilen işlemdeki ortak dil çalışma zamanlarını (CLRs) numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="23787-103">Enumerates the common language runtimes (CLRs) in the specified process that is running on a remote computer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03146-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="03146-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23787-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="23787-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumRuntimes (  
@@ -39,40 +39,41 @@ HRESULT EnumRuntimes (
     );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="03146-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="03146-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23787-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="23787-105">Parameters</span></span>  
  `dwInternalProcessID`  
- <span data-ttu-id="03146-106">[in] Çalışma zamanları numaralandırmak kullanmak istediğiniz işlemi iç işlem kimliği.</span><span class="sxs-lookup"><span data-stu-id="03146-106">[in] The internal process ID of the process for which you want to enumerate runtimes.</span></span> <span data-ttu-id="03146-107">Bu `m_dwInternalID` öğelerinden karşılık gelen [Coreclrdebugprocınfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).</span><span class="sxs-lookup"><span data-stu-id="03146-107">This will be `m_dwInternalID` from the corresponding [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).</span></span>  
+ <span data-ttu-id="23787-106">[in] Çalışma zamanları numaralandırmak kullanmak istediğiniz işlemi iç işlem kimliği.</span><span class="sxs-lookup"><span data-stu-id="23787-106">[in] The internal process ID of the process for which you want to enumerate runtimes.</span></span> <span data-ttu-id="23787-107">Bu `m_dwInternalID` öğelerinden karşılık gelen [Coreclrdebugprocınfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).</span><span class="sxs-lookup"><span data-stu-id="23787-107">This will be `m_dwInternalID` from the corresponding [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md).</span></span>  
   
  `pcRuntimes`  
- <span data-ttu-id="03146-108">[out] Döndürülen çalışma zamanları sayısını `ppRuntimes`.</span><span class="sxs-lookup"><span data-stu-id="03146-108">[out] The number of runtimes returned in `ppRuntimes`.</span></span> <span data-ttu-id="03146-109">Bu değer, 0 (sıfır) olabilir.</span><span class="sxs-lookup"><span data-stu-id="03146-109">This value can be 0 (zero).</span></span>  
+ <span data-ttu-id="23787-108">[out] Döndürülen çalışma zamanları sayısını `ppRuntimes`.</span><span class="sxs-lookup"><span data-stu-id="23787-108">[out] The number of runtimes returned in `ppRuntimes`.</span></span> <span data-ttu-id="23787-109">Bu değer, 0 (sıfır) olabilir.</span><span class="sxs-lookup"><span data-stu-id="23787-109">This value can be 0 (zero).</span></span>  
   
  `ppRuntimes`  
- <span data-ttu-id="03146-110">[out] Bir dizi [Coreclrdebugruntimeınfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) çalışma zamanları temsil eden yapılar uzak hedef işleminde yüklendi.</span><span class="sxs-lookup"><span data-stu-id="03146-110">[out] An array of [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) structures that represent the runtimes loaded in the remote target process.</span></span>  
+ <span data-ttu-id="23787-110">[out] Bir dizi [Coreclrdebugruntimeınfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) çalışma zamanları temsil eden yapılar uzak hedef işleminde yüklendi.</span><span class="sxs-lookup"><span data-stu-id="23787-110">[out] An array of [CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md) structures that represent the runtimes loaded in the remote target process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="03146-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="03146-111">Return Value</span></span>  
- <span data-ttu-id="03146-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="03146-112">S_OK</span></span>  
- <span data-ttu-id="03146-113">Başarılı.</span><span class="sxs-lookup"><span data-stu-id="03146-113">Success.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="23787-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="23787-111">Return Value</span></span>  
+ <span data-ttu-id="23787-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="23787-112">S_OK</span></span>  
+ <span data-ttu-id="23787-113">Başarılı.</span><span class="sxs-lookup"><span data-stu-id="23787-113">Success.</span></span>  
   
- <span data-ttu-id="03146-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="03146-114">S_FALSE</span></span>  
- <span data-ttu-id="03146-115">`dwInternalProcessID` işlemin sonlandırıldığından, bilgisayarda çalışan herhangi bir işlem büyük olasılıkla eşleşmiyor.</span><span class="sxs-lookup"><span data-stu-id="03146-115">`dwInternalProcessID` does not match any process that is running on the computer, probably because the process was terminated.</span></span> <span data-ttu-id="03146-116">`pcRuntimes` ve `ppRuntimes` null olacaktır.</span><span class="sxs-lookup"><span data-stu-id="03146-116">`pcRuntimes` and `ppRuntimes` will be null.</span></span>  
+ <span data-ttu-id="23787-114">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="23787-114">S_FALSE</span></span>  
+ `dwInternalProcessID` <span data-ttu-id="23787-115">işlemin sonlandırıldığından, bilgisayarda çalışan herhangi bir işlem büyük olasılıkla eşleşmiyor.</span><span class="sxs-lookup"><span data-stu-id="23787-115">does not match any process that is running on the computer, probably because the process was terminated.</span></span> `pcRuntimes` <span data-ttu-id="23787-116">ve `ppRuntimes` null olacaktır.</span><span class="sxs-lookup"><span data-stu-id="23787-116">and `ppRuntimes` will be null.</span></span>  
   
- <span data-ttu-id="03146-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="03146-117">E_OUTOFMEMORY</span></span>  
- <span data-ttu-id="03146-118">Yeterli bellek ayrılamıyor `ppRuntimes`.</span><span class="sxs-lookup"><span data-stu-id="03146-118">Unable to allocate enough memory for `ppRuntimes`.</span></span>  
+ <span data-ttu-id="23787-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="23787-117">E_OUTOFMEMORY</span></span>  
+ <span data-ttu-id="23787-118">Yeterli bellek ayrılamıyor `ppRuntimes`.</span><span class="sxs-lookup"><span data-stu-id="23787-118">Unable to allocate enough memory for `ppRuntimes`.</span></span>  
   
- <span data-ttu-id="03146-119">E_FAIL (veya diğer E_ dönüş kodları)</span><span class="sxs-lookup"><span data-stu-id="03146-119">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="03146-120">Diğer hatalar.</span><span class="sxs-lookup"><span data-stu-id="03146-120">Other failures.</span></span>  
+ <span data-ttu-id="23787-119">E_FAIL (veya diğer E_ dönüş kodları)</span><span class="sxs-lookup"><span data-stu-id="23787-119">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="23787-120">Diğer hatalar.</span><span class="sxs-lookup"><span data-stu-id="23787-120">Other failures.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="03146-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="03146-121">Remarks</span></span>  
- <span data-ttu-id="03146-122">Bu yöntem tarafından ayrılmış olan belleği boşaltmak için çağrı [Icoreclrdebugtarget::freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="03146-122">To free the memory that was allocated by this method, call the [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="23787-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="23787-121">Remarks</span></span>  
+ <span data-ttu-id="23787-122">Bu yöntem tarafından ayrılmış olan belleği boşaltmak için çağrı [Icoreclrdebugtarget::freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="23787-122">To free the memory that was allocated by this method, call the [ICoreClrDebugTarget::FreeMemory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03146-123">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="03146-123">Requirements</span></span>  
- <span data-ttu-id="03146-124">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03146-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23787-123">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="23787-123">Requirements</span></span>  
+ <span data-ttu-id="23787-124">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23787-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03146-125">**Üst bilgi:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="03146-125">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="23787-125">**Üst bilgi:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="23787-125">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="03146-126">**Library:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="03146-126">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="23787-126">**Library:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="23787-126">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="03146-127">**.NET framework sürümleri:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="03146-127">**.NET Framework Versions:** 3.5 SP1</span></span>  
+ <span data-ttu-id="23787-127">**.NET framework sürümleri:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="23787-127">**.NET Framework Versions:** 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03146-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="03146-128">See also</span></span>
-- [<span data-ttu-id="03146-129">ICoreClrDebugTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="03146-129">ICoreClrDebugTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="23787-128">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="23787-128">See also</span></span>
+
+- [<span data-ttu-id="23787-129">ICoreClrDebugTarget Arabirimi</span><span class="sxs-lookup"><span data-stu-id="23787-129">ICoreClrDebugTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

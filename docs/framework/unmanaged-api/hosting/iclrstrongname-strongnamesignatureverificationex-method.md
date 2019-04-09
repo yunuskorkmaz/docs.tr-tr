@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ce72f46b4cfc6098a95c4eb4b403e38a294a004
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b36e1d34b874f47f1edb0e1ffe3dc2fe2d87ddcc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124299"
 ---
-# <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a><span data-ttu-id="ca32c-102">ICLRStrongName::StrongNameSignatureVerificationEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ca32c-102">ICLRStrongName::StrongNameSignatureVerificationEx Method</span></span>
-<span data-ttu-id="ca32c-103">Sağlanan yol, derleme bildirimi tanımlayıcı ad imzası içerip içermediğini gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="ca32c-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature.</span></span>  
+# <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a><span data-ttu-id="a9379-102">ICLRStrongName::StrongNameSignatureVerificationEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a9379-102">ICLRStrongName::StrongNameSignatureVerificationEx Method</span></span>
+<span data-ttu-id="a9379-103">Sağlanan yol, derleme bildirimi tanımlayıcı ad imzası içerip içermediğini gösteren bir değer alır.</span><span class="sxs-lookup"><span data-stu-id="a9379-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca32c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ca32c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9379-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a9379-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureVerificationEx (  
@@ -37,31 +37,32 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ca32c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ca32c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a9379-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a9379-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="ca32c-106">[in] Taşınabilir yürütülebilir (.exe veya .dll) dosyası doğrulanması derleme yolu.</span><span class="sxs-lookup"><span data-stu-id="ca32c-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
+ <span data-ttu-id="a9379-106">[in] Taşınabilir yürütülebilir (.exe veya .dll) dosyası doğrulanması derleme yolu.</span><span class="sxs-lookup"><span data-stu-id="a9379-106">[in] The path to the portable executable (.exe or .dll) file for the assembly to be verified.</span></span>  
   
  `fForceVerification`  
- <span data-ttu-id="ca32c-107">[in] `true` , olsa bile gerekli kayıt defteri ayarlarını geçersiz kılmak; Aksi takdirde, doğrulamanın `false`.</span><span class="sxs-lookup"><span data-stu-id="ca32c-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
+ <span data-ttu-id="a9379-107">[in] `true` , olsa bile gerekli kayıt defteri ayarlarını geçersiz kılmak; Aksi takdirde, doğrulamanın `false`.</span><span class="sxs-lookup"><span data-stu-id="a9379-107">[in] `true` to perform verification, even if it is necessary to override registry settings; otherwise, `false`.</span></span>  
   
  `pfWasVerified`  
- <span data-ttu-id="ca32c-108">[out] `true` tanımlayıcı ad imzası, doğrulanmış; Aksi takdirde `false`.</span><span class="sxs-lookup"><span data-stu-id="ca32c-108">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> <span data-ttu-id="ca32c-109">`pfWasVerified` Ayrıca kümesine `false` kayıt defteri ayarları nedeniyle doğrulama başarılı olursa.</span><span class="sxs-lookup"><span data-stu-id="ca32c-109">`pfWasVerified` is also set to `false` if the verification was successful due to registry settings.</span></span>  
+ <span data-ttu-id="a9379-108">[out] `true` tanımlayıcı ad imzası, doğrulanmış; Aksi takdirde `false`.</span><span class="sxs-lookup"><span data-stu-id="a9379-108">[out] `true` if the strong name signature was verified; otherwise, `false`.</span></span> `pfWasVerified` <span data-ttu-id="a9379-109">Ayrıca kümesine `false` kayıt defteri ayarları nedeniyle doğrulama başarılı olursa.</span><span class="sxs-lookup"><span data-stu-id="a9379-109">is also set to `false` if the verification was successful due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ca32c-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ca32c-110">Return Value</span></span>  
- <span data-ttu-id="ca32c-111">`S_OK` doğrulama başarılı olduysa; Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="ca32c-111">`S_OK` if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a9379-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a9379-110">Return Value</span></span>  
+ `S_OK` <span data-ttu-id="a9379-111">doğrulama başarılı olduysa; Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="a9379-111">if the verification was successful; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ca32c-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ca32c-112">Remarks</span></span>  
- <span data-ttu-id="ca32c-113">[Iclrstrongname::strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) yöntemi benzer bir yetenek sağlar [Iclrstrongname::strongnamesignatureverification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="ca32c-113">The [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) method provides a capability similar to the [ICLRStrongName::StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) method.</span></span> <span data-ttu-id="ca32c-114">Ancak, giriş parametresi ve çıkış parametresi için ikinci [Iclrstrongname::strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) türü `BOOLEAN` yerine `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="ca32c-114">However, the second input parameter and the output parameter for [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) are of type `BOOLEAN` instead of `DWORD`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a9379-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a9379-112">Remarks</span></span>  
+ <span data-ttu-id="a9379-113">[Iclrstrongname::strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) yöntemi benzer bir yetenek sağlar [Iclrstrongname::strongnamesignatureverification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="a9379-113">The [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) method provides a capability similar to the [ICLRStrongName::StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) method.</span></span> <span data-ttu-id="a9379-114">Ancak, giriş parametresi ve çıkış parametresi için ikinci [Iclrstrongname::strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) türü `BOOLEAN` yerine `DWORD`.</span><span class="sxs-lookup"><span data-stu-id="a9379-114">However, the second input parameter and the output parameter for [ICLRStrongName::StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) are of type `BOOLEAN` instead of `DWORD`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ca32c-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ca32c-115">Requirements</span></span>  
- <span data-ttu-id="ca32c-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca32c-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9379-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a9379-115">Requirements</span></span>  
+ <span data-ttu-id="a9379-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9379-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca32c-117">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="ca32c-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="a9379-117">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a9379-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="ca32c-118">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="ca32c-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a9379-118">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="a9379-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ca32c-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca32c-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="a9379-119">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="a9379-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ca32c-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ca32c-120">See also</span></span>
-- [<span data-ttu-id="ca32c-121">StrongNameSignatureVerification Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ca32c-121">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [<span data-ttu-id="ca32c-122">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ca32c-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a9379-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a9379-120">See also</span></span>
+
+- [<span data-ttu-id="a9379-121">StrongNameSignatureVerification Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a9379-121">StrongNameSignatureVerification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [<span data-ttu-id="a9379-122">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a9379-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

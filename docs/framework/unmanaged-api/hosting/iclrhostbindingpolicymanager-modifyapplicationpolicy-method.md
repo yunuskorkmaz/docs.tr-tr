@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da21cda0872080272e6b2c2fda32bef2bf9f1f7d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 07a4998f86958e21fffc8ba8657ec9f2a170f43e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494538"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112443"
 ---
-# <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a><span data-ttu-id="ab094-102">ICLRHostBindingPolicyManager::ModifyApplicationPolicy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ab094-102">ICLRHostBindingPolicyManager::ModifyApplicationPolicy Method</span></span>
-<span data-ttu-id="ab094-103">Belirtilen derleme için bağlama ilkesi değiştirir ve ilke yeni bir sürümünü oluşturur.</span><span class="sxs-lookup"><span data-stu-id="ab094-103">Modifies the binding policy for the specified assembly, and creates a new version of the policy.</span></span>  
+# <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a><span data-ttu-id="bc0d7-102">ICLRHostBindingPolicyManager::ModifyApplicationPolicy Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bc0d7-102">ICLRHostBindingPolicyManager::ModifyApplicationPolicy Method</span></span>
+<span data-ttu-id="bc0d7-103">Belirtilen derleme için bağlama ilkesi değiştirir ve ilke yeni bir sürümünü oluşturur.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-103">Modifies the binding policy for the specified assembly, and creates a new version of the policy.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab094-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ab094-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc0d7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bc0d7-104">Syntax</span></span>  
   
 ```  
 HRESULT  ModifyApplicationPolicy (  
@@ -41,52 +41,53 @@ HRESULT  ModifyApplicationPolicy (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ab094-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ab094-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bc0d7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bc0d7-105">Parameters</span></span>  
  `pwzSourceAssemblyIdentity`  
- <span data-ttu-id="ab094-106">[in] Değiştirilecek derleme kimliği.</span><span class="sxs-lookup"><span data-stu-id="ab094-106">[in] The identity of the assembly to modify.</span></span>  
+ <span data-ttu-id="bc0d7-106">[in] Değiştirilecek derleme kimliği.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-106">[in] The identity of the assembly to modify.</span></span>  
   
  `pwzTargetAssemblyIdentity`  
- <span data-ttu-id="ab094-107">[in] Değiştirilen derlemenin yeni kimliği.</span><span class="sxs-lookup"><span data-stu-id="ab094-107">[in] The new identity of the modified assembly.</span></span>  
+ <span data-ttu-id="bc0d7-107">[in] Değiştirilen derlemenin yeni kimliği.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-107">[in] The new identity of the modified assembly.</span></span>  
   
  `pbApplicationPolicy`  
- <span data-ttu-id="ab094-108">[in] Değiştirilecek derleme için bağlama ilkesi verileri içeren arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ab094-108">[in] A pointer to a buffer that contains the binding policy data for the assembly to modify.</span></span>  
+ <span data-ttu-id="bc0d7-108">[in] Değiştirilecek derleme için bağlama ilkesi verileri içeren arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-108">[in] A pointer to a buffer that contains the binding policy data for the assembly to modify.</span></span>  
   
  `cbAppPolicySize`  
- <span data-ttu-id="ab094-109">[in] Değiştirilecek bağlama ilkesi boyutu.</span><span class="sxs-lookup"><span data-stu-id="ab094-109">[in] The size of the binding policy to be replaced.</span></span>  
+ <span data-ttu-id="bc0d7-109">[in] Değiştirilecek bağlama ilkesi boyutu.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-109">[in] The size of the binding policy to be replaced.</span></span>  
   
  `dwPolicyModifyFlags`  
- <span data-ttu-id="ab094-110">[in] Bir mantıksal OR kombinasyonudur [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) yeniden yönlendirme denetimini gösteren değer.</span><span class="sxs-lookup"><span data-stu-id="ab094-110">[in] A logical OR combination of [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) values, indicating control of redirection.</span></span>  
+ <span data-ttu-id="bc0d7-110">[in] Bir mantıksal OR kombinasyonudur [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) yeniden yönlendirme denetimini gösteren değer.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-110">[in] A logical OR combination of [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) values, indicating control of redirection.</span></span>  
   
  `pbNewApplicationPolicy`  
- <span data-ttu-id="ab094-111">[out] Yeni veri bağlama ilkesi içeren arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ab094-111">[out] A pointer to a buffer that contains the new binding policy data.</span></span>  
+ <span data-ttu-id="bc0d7-111">[out] Yeni veri bağlama ilkesi içeren arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-111">[out] A pointer to a buffer that contains the new binding policy data.</span></span>  
   
  `pcbNewAppPolicySize`  
- <span data-ttu-id="ab094-112">[out içinde] Yeni bağlama ilkesi arabellek boyutu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ab094-112">[in, out] A pointer to the size of the new binding policy buffer.</span></span>  
+ <span data-ttu-id="bc0d7-112">[out içinde] Yeni bağlama ilkesi arabellek boyutu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-112">[in, out] A pointer to the size of the new binding policy buffer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ab094-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ab094-113">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bc0d7-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="bc0d7-113">Return Value</span></span>  
   
-|<span data-ttu-id="ab094-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ab094-114">HRESULT</span></span>|<span data-ttu-id="ab094-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ab094-115">Description</span></span>|  
+|<span data-ttu-id="bc0d7-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bc0d7-114">HRESULT</span></span>|<span data-ttu-id="bc0d7-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bc0d7-115">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="ab094-116">S_OK</span><span class="sxs-lookup"><span data-stu-id="ab094-116">S_OK</span></span>|<span data-ttu-id="ab094-117">İlke başarıyla değiştirildi.</span><span class="sxs-lookup"><span data-stu-id="ab094-117">The policy was modified successfully.</span></span>|  
-|<span data-ttu-id="ab094-118">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="ab094-118">E_INVALIDARG</span></span>|<span data-ttu-id="ab094-119">`pwzSourceAssemblyIdentity` veya `pwzTargetAssemblyIdentity` null başvuru oluştu.</span><span class="sxs-lookup"><span data-stu-id="ab094-119">`pwzSourceAssemblyIdentity` or `pwzTargetAssemblyIdentity` was a null reference.</span></span>|  
-|<span data-ttu-id="ab094-120">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="ab094-120">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="ab094-121">`pbNewApplicationPolicy` çok küçüktür.</span><span class="sxs-lookup"><span data-stu-id="ab094-121">`pbNewApplicationPolicy` is too small.</span></span>|  
-|<span data-ttu-id="ab094-122">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ab094-122">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ab094-123">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="ab094-123">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="ab094-124">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ab094-124">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ab094-125">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="ab094-125">The call timed out.</span></span>|  
-|<span data-ttu-id="ab094-126">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ab094-126">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ab094-127">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="ab094-127">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="ab094-128">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ab094-128">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ab094-129">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="ab094-129">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="ab094-130">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ab094-130">E_FAIL</span></span>|<span data-ttu-id="ab094-131">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="ab094-131">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ab094-132">CLR, artık E_FAIL bir yöntemin dönüşünün ardından, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="ab094-132">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ab094-133">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="ab094-133">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="bc0d7-116">S_OK</span><span class="sxs-lookup"><span data-stu-id="bc0d7-116">S_OK</span></span>|<span data-ttu-id="bc0d7-117">İlke başarıyla değiştirildi.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-117">The policy was modified successfully.</span></span>|  
+|<span data-ttu-id="bc0d7-118">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="bc0d7-118">E_INVALIDARG</span></span>|`pwzSourceAssemblyIdentity` <span data-ttu-id="bc0d7-119">veya `pwzTargetAssemblyIdentity` null başvuru oluştu.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-119">or `pwzTargetAssemblyIdentity` was a null reference.</span></span>|  
+|<span data-ttu-id="bc0d7-120">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="bc0d7-120">ERROR_INSUFFICIENT_BUFFER</span></span>|`pbNewApplicationPolicy` <span data-ttu-id="bc0d7-121">çok küçüktür.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-121">is too small.</span></span>|  
+|<span data-ttu-id="bc0d7-122">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="bc0d7-122">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="bc0d7-123">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-123">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="bc0d7-124">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="bc0d7-124">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="bc0d7-125">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-125">The call timed out.</span></span>|  
+|<span data-ttu-id="bc0d7-126">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="bc0d7-126">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="bc0d7-127">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-127">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="bc0d7-128">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="bc0d7-128">HOST_E_ABANDONED</span></span>|<span data-ttu-id="bc0d7-129">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-129">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="bc0d7-130">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="bc0d7-130">E_FAIL</span></span>|<span data-ttu-id="bc0d7-131">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-131">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="bc0d7-132">CLR, artık E_FAIL bir yöntemin dönüşünün ardından, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-132">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="bc0d7-133">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-133">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ab094-134">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ab094-134">Remarks</span></span>  
- <span data-ttu-id="ab094-135">`ModifyApplicationPolicy` Yöntemi iki kez çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="ab094-135">The `ModifyApplicationPolicy` method can be called twice.</span></span> <span data-ttu-id="ab094-136">İlk çağrı için bir null değer sağlamanız `pbNewApplicationPolicy` parametresi.</span><span class="sxs-lookup"><span data-stu-id="ab094-136">The first call should supply a null value for the `pbNewApplicationPolicy` parameter.</span></span> <span data-ttu-id="ab094-137">Bu çağrı için gerekli olan değerle döndüreceği `pcbNewAppPolicySize`.</span><span class="sxs-lookup"><span data-stu-id="ab094-137">This call will return with the necessary value for `pcbNewAppPolicySize`.</span></span> <span data-ttu-id="ab094-138">Bu değer için yapılan ikinci çağrı sunmalıdır `pcbNewAppPolicySize`ve bu boyut için bir arabellek işaret `pbNewApplicationPolicy`.</span><span class="sxs-lookup"><span data-stu-id="ab094-138">The second call should supply this value for `pcbNewAppPolicySize`, and point to a buffer of that size for `pbNewApplicationPolicy`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bc0d7-134">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bc0d7-134">Remarks</span></span>  
+ <span data-ttu-id="bc0d7-135">`ModifyApplicationPolicy` Yöntemi iki kez çağrılabilir.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-135">The `ModifyApplicationPolicy` method can be called twice.</span></span> <span data-ttu-id="bc0d7-136">İlk çağrı için bir null değer sağlamanız `pbNewApplicationPolicy` parametresi.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-136">The first call should supply a null value for the `pbNewApplicationPolicy` parameter.</span></span> <span data-ttu-id="bc0d7-137">Bu çağrı için gerekli olan değerle döndüreceği `pcbNewAppPolicySize`.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-137">This call will return with the necessary value for `pcbNewAppPolicySize`.</span></span> <span data-ttu-id="bc0d7-138">Bu değer için yapılan ikinci çağrı sunmalıdır `pcbNewAppPolicySize`ve bu boyut için bir arabellek işaret `pbNewApplicationPolicy`.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-138">The second call should supply this value for `pcbNewAppPolicySize`, and point to a buffer of that size for `pbNewApplicationPolicy`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab094-139">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ab094-139">Requirements</span></span>  
- <span data-ttu-id="ab094-140">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab094-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bc0d7-139">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bc0d7-139">Requirements</span></span>  
+ <span data-ttu-id="bc0d7-140">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bc0d7-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab094-141">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ab094-141">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bc0d7-141">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bc0d7-141">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ab094-142">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="ab094-142">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bc0d7-142">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="bc0d7-142">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ab094-143">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab094-143">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="bc0d7-143">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="bc0d7-143">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ab094-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ab094-144">See also</span></span>
-- [<span data-ttu-id="ab094-145">ICLRHostBindingPolicyManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ab094-145">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bc0d7-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bc0d7-144">See also</span></span>
+
+- [<span data-ttu-id="bc0d7-145">ICLRHostBindingPolicyManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bc0d7-145">ICLRHostBindingPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

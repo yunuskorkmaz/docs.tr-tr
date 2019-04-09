@@ -2,32 +2,33 @@
 title: İleti Günlüğe Kaydetme
 ms.date: 03/30/2017
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-ms.openlocfilehash: 405b29bc68773400f1ece06c01794d24f40b1c3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e189b6c2997c7d4d7422e61fa22be95678aeb911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154459"
 ---
-# <a name="message-logging"></a><span data-ttu-id="b3590-102">İleti Günlüğe Kaydetme</span><span class="sxs-lookup"><span data-stu-id="b3590-102">Message Logging</span></span>
-<span data-ttu-id="b3590-103">Windows Communication Foundation (WCF) çevrimdışı kullanım için gelen ve giden iletileri günlüğe yeteneği sağlar.</span><span class="sxs-lookup"><span data-stu-id="b3590-103">Windows Communication Foundation (WCF) provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="b3590-104">İleti günlüğe kaydetme, hangi iletisi ve ileti gövdesi aşağıdaki gibi görünür görmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="b3590-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="b3590-105">Bu tür bir günlük bağımsız değişken olarak geçirildi ve nasıl XML olarak ifade edilen bağımsız değişkenleri alan uç noktası gördüğünüz menüsünü genişletmeniz halinde özellikle yararlı olur.</span><span class="sxs-lookup"><span data-stu-id="b3590-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="b3590-106">Ayrıca, aldığı gibi ileti günlüğe kaydetme, nasıl iletinin geldiği görmek için yanlış biçimlendirilmiş iletiler de tanılama sağlar.</span><span class="sxs-lookup"><span data-stu-id="b3590-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="b3590-107">Ayrıca, güvenlik inceleyebilirsiniz kullanılan belirteçleri, bölümleri şifrelenir ve imzalanmış ve bölümleri değişmeden.</span><span class="sxs-lookup"><span data-stu-id="b3590-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
+# <a name="message-logging"></a><span data-ttu-id="b6b48-102">İleti Günlüğe Kaydetme</span><span class="sxs-lookup"><span data-stu-id="b6b48-102">Message Logging</span></span>
+<span data-ttu-id="b6b48-103">Windows Communication Foundation (WCF) çevrimdışı kullanım için gelen ve giden iletileri günlüğe yeteneği sağlar.</span><span class="sxs-lookup"><span data-stu-id="b6b48-103">Windows Communication Foundation (WCF) provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="b6b48-104">İleti günlüğe kaydetme, hangi iletisi ve ileti gövdesi aşağıdaki gibi görünür görmenizi sağlar.</span><span class="sxs-lookup"><span data-stu-id="b6b48-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="b6b48-105">Bu tür bir günlük bağımsız değişken olarak geçirildi ve nasıl XML olarak ifade edilen bağımsız değişkenleri alan uç noktası gördüğünüz menüsünü genişletmeniz halinde özellikle yararlı olur.</span><span class="sxs-lookup"><span data-stu-id="b6b48-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="b6b48-106">Ayrıca, aldığı gibi ileti günlüğe kaydetme, nasıl iletinin geldiği görmek için yanlış biçimlendirilmiş iletiler de tanılama sağlar.</span><span class="sxs-lookup"><span data-stu-id="b6b48-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="b6b48-107">Ayrıca, güvenlik inceleyebilirsiniz kullanılan belirteçleri, bölümleri şifrelenir ve imzalanmış ve bölümleri değişmeden.</span><span class="sxs-lookup"><span data-stu-id="b6b48-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b3590-108">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b3590-108">In This Section</span></span>  
- [<span data-ttu-id="b3590-109">İleti Akışına Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b3590-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b6b48-108">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b6b48-108">In This Section</span></span>  
+ [<span data-ttu-id="b6b48-109">İleti Akışı Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b6b48-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
   
- <span data-ttu-id="b3590-110">Bu konu, olay günlüğü iletilerini istemci ve hizmet olaylarını nasıl ilişkilendirileceğini açıklar.</span><span class="sxs-lookup"><span data-stu-id="b3590-110">This topic describes how event log messages correspond to client and service events.</span></span>  
+ <span data-ttu-id="b6b48-110">Bu konu, olay günlüğü iletilerini istemci ve hizmet olaylarını nasıl ilişkilendirileceğini açıklar.</span><span class="sxs-lookup"><span data-stu-id="b6b48-110">This topic describes how event log messages correspond to client and service events.</span></span>  
   
- [<span data-ttu-id="b3590-111">Günlüğe İleti Kaydetmeyi Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="b3590-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
+ [<span data-ttu-id="b6b48-111">İleti Günlüğe Kaydetmeyi Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="b6b48-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
   
- <span data-ttu-id="b3590-112">Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandırılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="b3590-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
+ <span data-ttu-id="b6b48-112">Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandırılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="b6b48-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
   
- [<span data-ttu-id="b3590-113">İleti Günlüklerini Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="b3590-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
+ [<span data-ttu-id="b6b48-113">İleti Günlüklerini Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="b6b48-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
   
- <span data-ttu-id="b3590-114">Bu konu, ileti günlüklerini görüntüleme biçimini açıklar.</span><span class="sxs-lookup"><span data-stu-id="b3590-114">This topic describes how you can view message logs.</span></span>  
+ <span data-ttu-id="b6b48-114">Bu konu, ileti günlüklerini görüntüleme biçimini açıklar.</span><span class="sxs-lookup"><span data-stu-id="b6b48-114">This topic describes how you can view message logs.</span></span>  
   
- [<span data-ttu-id="b3590-115">Günlüğe İleti Kaydetme ile İlgili Güvenlik Konuları</span><span class="sxs-lookup"><span data-stu-id="b3590-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
+ [<span data-ttu-id="b6b48-115">İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları</span><span class="sxs-lookup"><span data-stu-id="b6b48-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
   
- <span data-ttu-id="b3590-116">Bu konu, ileti günlüğe kaydetmeyi tarafından oluşturulan olayları yanı sıra ileti günlüklerini sunulan hassas verilerinizi nasıl koruyabilirsiniz açıklar.</span><span class="sxs-lookup"><span data-stu-id="b3590-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
+ <span data-ttu-id="b6b48-116">Bu konu, ileti günlüğe kaydetmeyi tarafından oluşturulan olayları yanı sıra ileti günlüklerini sunulan hassas verilerinizi nasıl koruyabilirsiniz açıklar.</span><span class="sxs-lookup"><span data-stu-id="b6b48-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3590-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b3590-117">See also</span></span>
-- [<span data-ttu-id="b3590-118">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="b3590-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b6b48-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b6b48-117">See also</span></span>
+
+- [<span data-ttu-id="b6b48-118">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="b6b48-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)

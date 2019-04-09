@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb38c61e8dbd29a0ff87165b5daf49e733b34047
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 76e2ebbd47a5e36a722fce33ba67d7efb4db8675
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115940"
 ---
-# <a name="imetadataimportgetinterfaceimplprops-method"></a><span data-ttu-id="79206-102">IMetaDataImport::GetInterfaceImplProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="79206-102">IMetaDataImport::GetInterfaceImplProps Method</span></span>
-<span data-ttu-id="79206-103">Meta veri belirteçleri için bir işaretçi alır <xref:System.Type> belirtilen yöntemini uygulayan ve arabirim için bu yöntem bildirir.</span><span class="sxs-lookup"><span data-stu-id="79206-103">Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.</span></span>
+# <a name="imetadataimportgetinterfaceimplprops-method"></a><span data-ttu-id="6da27-102">IMetaDataImport::GetInterfaceImplProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6da27-102">IMetaDataImport::GetInterfaceImplProps Method</span></span>
+<span data-ttu-id="6da27-103">Meta veri belirteçleri için bir işaretçi alır <xref:System.Type> belirtilen yöntemini uygulayan ve arabirim için bu yöntem bildirir.</span><span class="sxs-lookup"><span data-stu-id="6da27-103">Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.</span></span>
   
-## <a name="syntax"></a><span data-ttu-id="79206-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="79206-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6da27-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6da27-104">Syntax</span></span>  
   
 ```  
 HRESULT GetInterfaceImplProps (  
@@ -37,52 +37,53 @@ HRESULT GetInterfaceImplProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="79206-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="79206-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6da27-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6da27-105">Parameters</span></span>  
  `iiImpl`  
- <span data-ttu-id="79206-106">[in] Sınıf ve arabirim belirteçleri için döndürülecek yöntemi temsil eden meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="79206-106">[in] The metadata token representing the method to return the class and interface tokens for.</span></span>  
+ <span data-ttu-id="6da27-106">[in] Sınıf ve arabirim belirteçleri için döndürülecek yöntemi temsil eden meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="6da27-106">[in] The metadata token representing the method to return the class and interface tokens for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="79206-107">[out] Yöntemini uygulayan bir sınıfı temsil eden meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="79206-107">[out] The metadata token representing the class that implements the method.</span></span>  
+ <span data-ttu-id="6da27-107">[out] Yöntemini uygulayan bir sınıfı temsil eden meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="6da27-107">[out] The metadata token representing the class that implements the method.</span></span>  
   
  `ptkIface`  
- <span data-ttu-id="79206-108">[out] Uygulanan yöntemi tanımlar arabirimi temsil eden meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="79206-108">[out] The metadata token representing the interface that defines the implemented method.</span></span>  
+ <span data-ttu-id="6da27-108">[out] Uygulanan yöntemi tanımlar arabirimi temsil eden meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="6da27-108">[out] The metadata token representing the interface that defines the implemented method.</span></span>  
 
-## <a name="remarks"></a><span data-ttu-id="79206-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="79206-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="6da27-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6da27-109">Remarks</span></span>
 
- <span data-ttu-id="79206-110">Değeri elde `iImpl` çağırarak [Enumınterfaceımpls](imetadataimport-enuminterfaceimpls-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="79206-110">You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.</span></span>
+ <span data-ttu-id="6da27-110">Değeri elde `iImpl` çağırarak [Enumınterfaceımpls](imetadataimport-enuminterfaceimpls-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="6da27-110">You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.</span></span>
  
- <span data-ttu-id="79206-111">Örneğin, bir sınıf olduğunu varsayalım. bir `mdTypeDef` belirteç 0x02000007 değeri ile eşleşen türleri belirteçleri sahip üç arabirimi uygular:</span><span class="sxs-lookup"><span data-stu-id="79206-111">For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens:</span></span> 
+ <span data-ttu-id="6da27-111">Örneğin, bir sınıf olduğunu varsayalım. bir `mdTypeDef` belirteç 0x02000007 değeri ile eşleşen türleri belirteçleri sahip üç arabirimi uygular:</span><span class="sxs-lookup"><span data-stu-id="6da27-111">For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens:</span></span> 
 
-- <span data-ttu-id="79206-112">0x02000003 (TypeDef)</span><span class="sxs-lookup"><span data-stu-id="79206-112">0x02000003 (TypeDef)</span></span>
-- <span data-ttu-id="79206-113">0x0100000A (TypeRef)</span><span class="sxs-lookup"><span data-stu-id="79206-113">0x0100000A (TypeRef)</span></span>
-- <span data-ttu-id="79206-114">0x0200001C (TypeDef)</span><span class="sxs-lookup"><span data-stu-id="79206-114">0x0200001C (TypeDef)</span></span>
+- <span data-ttu-id="6da27-112">0x02000003 (TypeDef)</span><span class="sxs-lookup"><span data-stu-id="6da27-112">0x02000003 (TypeDef)</span></span>
+- <span data-ttu-id="6da27-113">0x0100000A (TypeRef)</span><span class="sxs-lookup"><span data-stu-id="6da27-113">0x0100000A (TypeRef)</span></span>
+- <span data-ttu-id="6da27-114">0x0200001C (TypeDef)</span><span class="sxs-lookup"><span data-stu-id="6da27-114">0x0200001C (TypeDef)</span></span>
 
-<span data-ttu-id="79206-115">Kavramsal olarak, bu bilgileri, bir arabirim uygulaması tablosuna depolanır:</span><span class="sxs-lookup"><span data-stu-id="79206-115">Conceptually, this information is stored into an interface implementation table as:</span></span>
+<span data-ttu-id="6da27-115">Kavramsal olarak, bu bilgileri, bir arabirim uygulaması tablosuna depolanır:</span><span class="sxs-lookup"><span data-stu-id="6da27-115">Conceptually, this information is stored into an interface implementation table as:</span></span>
 
-| <span data-ttu-id="79206-116">Satır numarası</span><span class="sxs-lookup"><span data-stu-id="79206-116">Row number</span></span> | <span data-ttu-id="79206-117">Sınıf simgesi</span><span class="sxs-lookup"><span data-stu-id="79206-117">Class token</span></span> | <span data-ttu-id="79206-118">Belirteç arabirimi</span><span class="sxs-lookup"><span data-stu-id="79206-118">Interface token</span></span> |
+| <span data-ttu-id="6da27-116">Satır numarası</span><span class="sxs-lookup"><span data-stu-id="6da27-116">Row number</span></span> | <span data-ttu-id="6da27-117">Sınıf simgesi</span><span class="sxs-lookup"><span data-stu-id="6da27-117">Class token</span></span> | <span data-ttu-id="6da27-118">Belirteç arabirimi</span><span class="sxs-lookup"><span data-stu-id="6da27-118">Interface token</span></span> |
 |------------|-------------|-----------------|
-| <span data-ttu-id="79206-119">4</span><span class="sxs-lookup"><span data-stu-id="79206-119">4</span></span>          |             |                 |
-| <span data-ttu-id="79206-120">5</span><span class="sxs-lookup"><span data-stu-id="79206-120">5</span></span>          | <span data-ttu-id="79206-121">02000007</span><span class="sxs-lookup"><span data-stu-id="79206-121">02000007</span></span>    | <span data-ttu-id="79206-122">02000003</span><span class="sxs-lookup"><span data-stu-id="79206-122">02000003</span></span>        |
-| <span data-ttu-id="79206-123">6</span><span class="sxs-lookup"><span data-stu-id="79206-123">6</span></span>          | <span data-ttu-id="79206-124">02000007</span><span class="sxs-lookup"><span data-stu-id="79206-124">02000007</span></span>    | <span data-ttu-id="79206-125">0100000A</span><span class="sxs-lookup"><span data-stu-id="79206-125">0100000A</span></span>        |
-| <span data-ttu-id="79206-126">7</span><span class="sxs-lookup"><span data-stu-id="79206-126">7</span></span>          |             |                 |
-| <span data-ttu-id="79206-127">8</span><span class="sxs-lookup"><span data-stu-id="79206-127">8</span></span>          | <span data-ttu-id="79206-128">02000007</span><span class="sxs-lookup"><span data-stu-id="79206-128">02000007</span></span>    | <span data-ttu-id="79206-129">0200001C</span><span class="sxs-lookup"><span data-stu-id="79206-129">0200001C</span></span>        |
+| <span data-ttu-id="6da27-119">4</span><span class="sxs-lookup"><span data-stu-id="6da27-119">4</span></span>          |             |                 |
+| <span data-ttu-id="6da27-120">5</span><span class="sxs-lookup"><span data-stu-id="6da27-120">5</span></span>          | <span data-ttu-id="6da27-121">02000007</span><span class="sxs-lookup"><span data-stu-id="6da27-121">02000007</span></span>    | <span data-ttu-id="6da27-122">02000003</span><span class="sxs-lookup"><span data-stu-id="6da27-122">02000003</span></span>        |
+| <span data-ttu-id="6da27-123">6</span><span class="sxs-lookup"><span data-stu-id="6da27-123">6</span></span>          | <span data-ttu-id="6da27-124">02000007</span><span class="sxs-lookup"><span data-stu-id="6da27-124">02000007</span></span>    | <span data-ttu-id="6da27-125">0100000A</span><span class="sxs-lookup"><span data-stu-id="6da27-125">0100000A</span></span>        |
+| <span data-ttu-id="6da27-126">7</span><span class="sxs-lookup"><span data-stu-id="6da27-126">7</span></span>          |             |                 |
+| <span data-ttu-id="6da27-127">8</span><span class="sxs-lookup"><span data-stu-id="6da27-127">8</span></span>          | <span data-ttu-id="6da27-128">02000007</span><span class="sxs-lookup"><span data-stu-id="6da27-128">02000007</span></span>    | <span data-ttu-id="6da27-129">0200001C</span><span class="sxs-lookup"><span data-stu-id="6da27-129">0200001C</span></span>        |
 
-<span data-ttu-id="79206-130">Geri çağırırsanız, belirteç bir 4 baytlık değerdir:</span><span class="sxs-lookup"><span data-stu-id="79206-130">Recall, the token is a 4-byte value:</span></span>
+<span data-ttu-id="6da27-130">Geri çağırırsanız, belirteç bir 4 baytlık değerdir:</span><span class="sxs-lookup"><span data-stu-id="6da27-130">Recall, the token is a 4-byte value:</span></span>
 
-- <span data-ttu-id="79206-131">Daha düşük 3 baytlar satır numarasına tutun veya RID.</span><span class="sxs-lookup"><span data-stu-id="79206-131">The lower 3 bytes hold the row number, or RID.</span></span>
-- <span data-ttu-id="79206-132">Belirteç türü – 0x09 için üst bayt tutar `mdtInterfaceImpl`.</span><span class="sxs-lookup"><span data-stu-id="79206-132">The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.</span></span>
+- <span data-ttu-id="6da27-131">Daha düşük 3 baytlar satır numarasına tutun veya RID.</span><span class="sxs-lookup"><span data-stu-id="6da27-131">The lower 3 bytes hold the row number, or RID.</span></span>
+- <span data-ttu-id="6da27-132">Belirteç türü – 0x09 için üst bayt tutar `mdtInterfaceImpl`.</span><span class="sxs-lookup"><span data-stu-id="6da27-132">The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.</span></span>
 
-<span data-ttu-id="79206-133">`GetInterfaceImplProps` bilgi tutulan belirteç tarafınıza sıradaki döndürür `iImpl` bağımsız değişken.</span><span class="sxs-lookup"><span data-stu-id="79206-133">`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument.</span></span> 
+`GetInterfaceImplProps` <span data-ttu-id="6da27-133">bilgi tutulan belirteç tarafınıza sıradaki döndürür `iImpl` bağımsız değişken.</span><span class="sxs-lookup"><span data-stu-id="6da27-133">returns the information held in the row whose token you provide in the `iImpl` argument.</span></span> 
   
-## <a name="requirements"></a><span data-ttu-id="79206-134">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="79206-134">Requirements</span></span>  
- <span data-ttu-id="79206-135">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79206-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6da27-134">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6da27-134">Requirements</span></span>  
+ <span data-ttu-id="6da27-135">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6da27-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79206-136">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="79206-136">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6da27-136">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="6da27-136">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="79206-137">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="79206-137">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6da27-137">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="6da27-137">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="79206-138">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79206-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="6da27-138">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="6da27-138">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="79206-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="79206-139">See also</span></span>
-- [<span data-ttu-id="79206-140">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="79206-140">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="79206-141">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="79206-141">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6da27-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6da27-139">See also</span></span>
+
+- [<span data-ttu-id="6da27-140">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6da27-140">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="6da27-141">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6da27-141">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

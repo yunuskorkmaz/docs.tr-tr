@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0361a4cd048f0b3be6bce47e52dd44ba3cea3475
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121621"
 ---
-# <a name="icorprofilerinfo4getrejitids-method"></a><span data-ttu-id="f19d6-102">ICorProfilerInfo4::GetReJITIDs Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f19d6-102">ICorProfilerInfo4::GetReJITIDs Method</span></span>
-<span data-ttu-id="f19d6-103">Yine de atanan tüm JIT yeniden derlenen sürümlerini belirtilen işlev tanımlamak kimlikleri dizisi döndürür.</span><span class="sxs-lookup"><span data-stu-id="f19d6-103">Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated.</span></span> <span data-ttu-id="f19d6-104">Bu, daha sonra geri döndürüldü, ancak (örneğin, geri döndürülen işlevi içeren uygulama etki alanı hala kullanımda olduğunda) henüz serbest işlevlerin JIT yeniden derlenen sürümleri içerir.</span><span class="sxs-lookup"><span data-stu-id="f19d6-104">This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).</span></span>  
+# <a name="icorprofilerinfo4getrejitids-method"></a><span data-ttu-id="61fe8-102">ICorProfilerInfo4::GetReJITIDs Yöntemi</span><span class="sxs-lookup"><span data-stu-id="61fe8-102">ICorProfilerInfo4::GetReJITIDs Method</span></span>
+<span data-ttu-id="61fe8-103">Yine de atanan tüm JIT yeniden derlenen sürümlerini belirtilen işlev tanımlamak kimlikleri dizisi döndürür.</span><span class="sxs-lookup"><span data-stu-id="61fe8-103">Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated.</span></span> <span data-ttu-id="61fe8-104">Bu, daha sonra geri döndürüldü, ancak (örneğin, geri döndürülen işlevi içeren uygulama etki alanı hala kullanımda olduğunda) henüz serbest işlevlerin JIT yeniden derlenen sürümleri içerir.</span><span class="sxs-lookup"><span data-stu-id="61fe8-104">This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f19d6-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f19d6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61fe8-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="61fe8-105">Syntax</span></span>  
   
 ```  
 HRESULT GetReJITIDs (  
@@ -37,32 +37,33 @@ HRESULT GetReJITIDs (
      [out, size_is(cReJitIds), length_is(*pcReJitIds)]   ReJITID        reJitIds[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f19d6-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f19d6-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="61fe8-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="61fe8-106">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="f19d6-107">[in] `FunctionID` Hangi sürümleri Numaralandırılacak işlevi örneği.</span><span class="sxs-lookup"><span data-stu-id="f19d6-107">[in] The `FunctionID` of the function instance for which to enumerate versions.</span></span>  
+ <span data-ttu-id="61fe8-107">[in] `FunctionID` Hangi sürümleri Numaralandırılacak işlevi örneği.</span><span class="sxs-lookup"><span data-stu-id="61fe8-107">[in] The `FunctionID` of the function instance for which to enumerate versions.</span></span>  
   
  `cReJitIds`  
- <span data-ttu-id="f19d6-108">[in] JIT yeniden derlenen kimlikleri ayrıldığı sayısı `reJitIds` dizisi.</span><span class="sxs-lookup"><span data-stu-id="f19d6-108">[in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.</span></span>  
+ <span data-ttu-id="61fe8-108">[in] JIT yeniden derlenen kimlikleri ayrıldığı sayısı `reJitIds` dizisi.</span><span class="sxs-lookup"><span data-stu-id="61fe8-108">[in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.</span></span>  
   
  `pcReJitIds`  
- <span data-ttu-id="f19d6-109">[out] JIT yeniden derlenen kimlikleri gerçek sayısı.</span><span class="sxs-lookup"><span data-stu-id="f19d6-109">[out] The actual number of JIT-recompiled IDs.</span></span>  
+ <span data-ttu-id="61fe8-109">[out] JIT yeniden derlenen kimlikleri gerçek sayısı.</span><span class="sxs-lookup"><span data-stu-id="61fe8-109">[out] The actual number of JIT-recompiled IDs.</span></span>  
   
  `reJitIds`  
- <span data-ttu-id="f19d6-110">[out] Belirtilen işlev için JIT yeniden derlenen kimlikleri içeren bir arayan tarafından ayrılmış dizi.</span><span class="sxs-lookup"><span data-stu-id="f19d6-110">[out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.</span></span>  
+ <span data-ttu-id="61fe8-110">[out] Belirtilen işlev için JIT yeniden derlenen kimlikleri içeren bir arayan tarafından ayrılmış dizi.</span><span class="sxs-lookup"><span data-stu-id="61fe8-110">[out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f19d6-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f19d6-111">Remarks</span></span>  
- <span data-ttu-id="f19d6-112">`GetReJITIDs` verilen işlevin örneği için etkin JIT yeniden derlenen kimlikleri numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="f19d6-112">`GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance.</span></span> <span data-ttu-id="f19d6-113">Diğer olarak aynı kullanım deseni izler `ICorProfilerInfo` arayana ayrılan arabellekler kabul işlevleri.</span><span class="sxs-lookup"><span data-stu-id="f19d6-113">It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="61fe8-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="61fe8-111">Remarks</span></span>  
+ `GetReJITIDs` <span data-ttu-id="61fe8-112">verilen işlevin örneği için etkin JIT yeniden derlenen kimlikleri numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="61fe8-112">enumerates the active JIT-recompiled IDs for a given function instance.</span></span> <span data-ttu-id="61fe8-113">Diğer olarak aynı kullanım deseni izler `ICorProfilerInfo` arayana ayrılan arabellekler kabul işlevleri.</span><span class="sxs-lookup"><span data-stu-id="61fe8-113">It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f19d6-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f19d6-114">Requirements</span></span>  
- <span data-ttu-id="f19d6-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f19d6-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61fe8-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="61fe8-114">Requirements</span></span>  
+ <span data-ttu-id="61fe8-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="61fe8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f19d6-116">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f19d6-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="61fe8-116">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="61fe8-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="f19d6-117">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f19d6-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="61fe8-117">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="61fe8-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f19d6-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f19d6-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="61fe8-118">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="61fe8-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f19d6-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f19d6-119">See also</span></span>
-- [<span data-ttu-id="f19d6-120">ICorProfilerInfo4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f19d6-120">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [<span data-ttu-id="f19d6-121">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="f19d6-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="f19d6-122">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f19d6-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="61fe8-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="61fe8-119">See also</span></span>
+
+- [<span data-ttu-id="61fe8-120">ICorProfilerInfo4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="61fe8-120">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [<span data-ttu-id="61fe8-121">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="61fe8-121">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="61fe8-122">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="61fe8-122">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

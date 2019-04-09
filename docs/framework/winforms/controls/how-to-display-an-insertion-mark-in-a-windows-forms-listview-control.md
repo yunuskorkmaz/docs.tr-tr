@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms ListView denetiminde ekleme işareti görüntüleme'
+title: 'Nasıl yapılır: Windows Forms ListView Denetiminde Ekleme İşareti Görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,41 +11,42 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: 1c588053f9603a796d74fd706254ea150d21573a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 60b775408f5c43ff08fc5c7de72a8302b20b2264
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654165"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145619"
 ---
-# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a><span data-ttu-id="69cd5-102">Nasıl yapılır: Bir Windows Forms ListView denetiminde ekleme işareti görüntüleme</span><span class="sxs-lookup"><span data-stu-id="69cd5-102">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>
-<span data-ttu-id="69cd5-103">Ekleme işareti <xref:System.Windows.Forms.ListView> denetim noktası sürüklenen öğeler burada eklenecek kullanıcıları gösterir.</span><span class="sxs-lookup"><span data-stu-id="69cd5-103">The insertion mark in the <xref:System.Windows.Forms.ListView> control shows users the point where dragged items will be inserted.</span></span> <span data-ttu-id="69cd5-104">Bir kullanıcı bir öğeyi bir noktaya diğer iki öğe sürüklediğinde ekleme işareti öğenin beklenen yeni konumu gösterir.</span><span class="sxs-lookup"><span data-stu-id="69cd5-104">When a user drags an item to a point between two other items, the insertion mark shows the item's expected new location.</span></span>  
+# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a><span data-ttu-id="8cc0b-102">Nasıl yapılır: Windows Forms ListView Denetiminde Ekleme İşareti Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="8cc0b-102">How to: Display an Insertion Mark in a Windows Forms ListView Control</span></span>
+<span data-ttu-id="8cc0b-103">Ekleme işareti <xref:System.Windows.Forms.ListView> denetim noktası sürüklenen öğeler burada eklenecek kullanıcıları gösterir.</span><span class="sxs-lookup"><span data-stu-id="8cc0b-103">The insertion mark in the <xref:System.Windows.Forms.ListView> control shows users the point where dragged items will be inserted.</span></span> <span data-ttu-id="8cc0b-104">Bir kullanıcı bir öğeyi bir noktaya diğer iki öğe sürüklediğinde ekleme işareti öğenin beklenen yeni konumu gösterir.</span><span class="sxs-lookup"><span data-stu-id="8cc0b-104">When a user drags an item to a point between two other items, the insertion mark shows the item's expected new location.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="69cd5-105">Yalnızca ekleme işareti özellik kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanızı çağırdığında <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="69cd5-105">The insertion mark feature is available only on [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] when your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="69cd5-106">Önceki işletim sistemlerinde ekleme işareti için ilgili herhangi bir kod etkiye sahip değildir ve ekleme işareti görüntülenmez.</span><span class="sxs-lookup"><span data-stu-id="69cd5-106">On earlier operating systems, any code relating to the insertion mark has no effect and the insertion mark will not appear.</span></span> <span data-ttu-id="69cd5-107">Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListViewInsertionMark>.</span><span class="sxs-lookup"><span data-stu-id="69cd5-107">For more information, see <xref:System.Windows.Forms.ListViewInsertionMark>.</span></span>  
+>  <span data-ttu-id="8cc0b-105">Yalnızca ekleme işareti özellik kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanızı çağırdığında <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="8cc0b-105">The insertion mark feature is available only on [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] when your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="8cc0b-106">Önceki işletim sistemlerinde ekleme işareti için ilgili herhangi bir kod etkiye sahip değildir ve ekleme işareti görüntülenmez.</span><span class="sxs-lookup"><span data-stu-id="8cc0b-106">On earlier operating systems, any code relating to the insertion mark has no effect and the insertion mark will not appear.</span></span> <span data-ttu-id="8cc0b-107">Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListViewInsertionMark>.</span><span class="sxs-lookup"><span data-stu-id="8cc0b-107">For more information, see <xref:System.Windows.Forms.ListViewInsertionMark>.</span></span>  
   
- <span data-ttu-id="69cd5-108">Aşağıdaki görüntüde ekleme işareti gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="69cd5-108">The following image shows an insertion mark:</span></span>  
+ <span data-ttu-id="8cc0b-108">Aşağıdaki görüntüde ekleme işareti gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="8cc0b-108">The following image shows an insertion mark:</span></span>  
   
- <span data-ttu-id="69cd5-109">![Bir ListView ekleme işareti gösteren ekran görüntüsü. ](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")</span><span class="sxs-lookup"><span data-stu-id="69cd5-109">![Screenshot that shows a ListView insertion mark.](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")</span></span>  
+ <span data-ttu-id="8cc0b-109">![Bir ListView ekleme işareti gösteren ekran görüntüsü. ](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")</span><span class="sxs-lookup"><span data-stu-id="8cc0b-109">![Screenshot that shows a ListView insertion mark.](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")</span></span>  
   
- <span data-ttu-id="69cd5-110">Aşağıdaki kod örneği, bu özelliğin nasıl kullanılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="69cd5-110">The following code example demonstrates how to use this feature.</span></span>  
+ <span data-ttu-id="8cc0b-110">Aşağıdaki kod örneği, bu özelliğin nasıl kullanılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="8cc0b-110">The following code example demonstrates how to use this feature.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="69cd5-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="69cd5-111">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8cc0b-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="8cc0b-111">Example</span></span>  
  [!code-cpp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#1)]
  [!code-csharp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CS/listviewinsertionmarkexample.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="69cd5-112">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="69cd5-112">Compiling the Code</span></span>  
- <span data-ttu-id="69cd5-113">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="69cd5-113">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="8cc0b-112">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="8cc0b-112">Compiling the Code</span></span>  
+ <span data-ttu-id="8cc0b-113">Bu örnek gerektirir:</span><span class="sxs-lookup"><span data-stu-id="8cc0b-113">This example requires:</span></span>  
   
--   <span data-ttu-id="69cd5-114">Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.</span><span class="sxs-lookup"><span data-stu-id="69cd5-114">References to the System and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="8cc0b-114">Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.</span><span class="sxs-lookup"><span data-stu-id="8cc0b-114">References to the System and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="69cd5-115">Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="69cd5-115">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="69cd5-116">Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="69cd5-116">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="8cc0b-115">Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="8cc0b-115">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="8cc0b-116">Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="8cc0b-116">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69cd5-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="69cd5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8cc0b-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8cc0b-117">See also</span></span>
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListViewInsertionMark>
-- [<span data-ttu-id="69cd5-118">ListView Denetimi</span><span class="sxs-lookup"><span data-stu-id="69cd5-118">ListView Control</span></span>](listview-control-windows-forms.md)
-- [<span data-ttu-id="69cd5-119">ListView Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="69cd5-119">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)
-- [<span data-ttu-id="69cd5-120">İzlenecek yol: Windows Forms'ta sürükle ve bırak işlemi gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="69cd5-120">Walkthrough: Performing a Drag-and-Drop Operation in Windows Forms</span></span>](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [<span data-ttu-id="8cc0b-118">ListView Denetimi</span><span class="sxs-lookup"><span data-stu-id="8cc0b-118">ListView Control</span></span>](listview-control-windows-forms.md)
+- [<span data-ttu-id="8cc0b-119">ListView Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8cc0b-119">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)
+- [<span data-ttu-id="8cc0b-120">İzlenecek yol: Windows Forms'da Sürükle ve Bırak İşlemi Gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="8cc0b-120">Walkthrough: Performing a Drag-and-Drop Operation in Windows Forms</span></span>](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

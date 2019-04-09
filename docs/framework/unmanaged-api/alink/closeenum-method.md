@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 145f92badf39b6456a82df8f7de23f1784d2ce50
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: fd7d63596690e2a5d0bc26448884ec09ecd63231
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129525"
 ---
-# <a name="closeenum-method"></a><span data-ttu-id="61876-102">CloseEnum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="61876-102">CloseEnum Method</span></span>
-<span data-ttu-id="61876-103">Belirtilen numaralandırma kapatır ve ilişkili kaynakları serbest bırakır.</span><span class="sxs-lookup"><span data-stu-id="61876-103">Closes the indicated enumeration and frees associated resources.</span></span>  
+# <a name="closeenum-method"></a><span data-ttu-id="9fc2d-102">CloseEnum Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9fc2d-102">CloseEnum Method</span></span>
+<span data-ttu-id="9fc2d-103">Belirtilen numaralandırma kapatır ve ilişkili kaynakları serbest bırakır.</span><span class="sxs-lookup"><span data-stu-id="9fc2d-103">Closes the indicated enumeration and frees associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61876-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="61876-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9fc2d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9fc2d-104">Syntax</span></span>  
   
 ```  
 HRESULT CloseEnum(  
@@ -35,17 +35,18 @@ HRESULT CloseEnum(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="61876-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="61876-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9fc2d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9fc2d-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="61876-106">Kapatılan numaralandırma tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="61876-106">Handle of enumeration to be closed.</span></span>  
+ <span data-ttu-id="9fc2d-106">Kapatılan numaralandırma tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="9fc2d-106">Handle of enumeration to be closed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="61876-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="61876-107">Return Value</span></span>  
- <span data-ttu-id="61876-108">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="61876-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9fc2d-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="9fc2d-107">Return Value</span></span>  
+ <span data-ttu-id="9fc2d-108">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="9fc2d-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="61876-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="61876-109">Requirements</span></span>  
- <span data-ttu-id="61876-110">ALink.h gerektirir</span><span class="sxs-lookup"><span data-stu-id="61876-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9fc2d-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9fc2d-109">Requirements</span></span>  
+ <span data-ttu-id="9fc2d-110">ALink.h gerektirir</span><span class="sxs-lookup"><span data-stu-id="9fc2d-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61876-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="61876-111">See also</span></span>
-- [<span data-ttu-id="61876-112">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="61876-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="61876-113">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="61876-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="61876-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="61876-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="9fc2d-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9fc2d-111">See also</span></span>
+
+- [<span data-ttu-id="9fc2d-112">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9fc2d-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="9fc2d-113">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9fc2d-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="9fc2d-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="9fc2d-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

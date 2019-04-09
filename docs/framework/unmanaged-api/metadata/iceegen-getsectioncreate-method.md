@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03de69d51b520ae2d8be6c7f450f0541c52c36a2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9768dfd43b6b60df1660c48cb6d6f498b049e256
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103318"
 ---
-# <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="304c9-102">ICeeGen::GetSectionCreate Yöntemi</span><span class="sxs-lookup"><span data-stu-id="304c9-102">ICeeGen::GetSectionCreate Method</span></span>
-<span data-ttu-id="304c9-103">Oluşturur ve belirtilen ada ve bayrak değerini kullanarak bir kod bölümü alır.</span><span class="sxs-lookup"><span data-stu-id="304c9-103">Generates and gets a code section using the specified name and flag values.</span></span>  
+# <a name="iceegengetsectioncreate-method"></a><span data-ttu-id="c6830-102">ICeeGen::GetSectionCreate Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c6830-102">ICeeGen::GetSectionCreate Method</span></span>
+<span data-ttu-id="c6830-103">Oluşturur ve belirtilen ada ve bayrak değerini kullanarak bir kod bölümü alır.</span><span class="sxs-lookup"><span data-stu-id="c6830-103">Generates and gets a code section using the specified name and flag values.</span></span>  
   
- <span data-ttu-id="304c9-104">Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="304c9-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="c6830-104">Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="c6830-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="304c9-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="304c9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6830-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c6830-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSectionCreate (  
@@ -39,27 +39,28 @@ HRESULT GetSectionCreate (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="304c9-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="304c9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c6830-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c6830-106">Parameters</span></span>  
  `name`  
- <span data-ttu-id="304c9-107">[in] Oluşturulacak bölümün adını belirten bir dize işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="304c9-107">[in] A pointer to a string that specifies the name of the section to be created.</span></span>  
+ <span data-ttu-id="c6830-107">[in] Oluşturulacak bölümün adını belirten bir dize işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="c6830-107">[in] A pointer to a string that specifies the name of the section to be created.</span></span>  
   
  `flags`  
- <span data-ttu-id="304c9-108">[in] Seçeneklerini belirten bayraklar.</span><span class="sxs-lookup"><span data-stu-id="304c9-108">[in] Flags that specify options.</span></span>  
+ <span data-ttu-id="c6830-108">[in] Seçeneklerini belirten bayraklar.</span><span class="sxs-lookup"><span data-stu-id="c6830-108">[in] Flags that specify options.</span></span>  
   
  `section`  
- <span data-ttu-id="304c9-109">[out] Yeni oluşturulan kod bölümüne yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="304c9-109">[out] A pointer to the newly created code section.</span></span>  
+ <span data-ttu-id="c6830-109">[out] Yeni oluşturulan kod bölümüne yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c6830-109">[out] A pointer to the newly created code section.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="304c9-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="304c9-110">Remarks</span></span>  
- <span data-ttu-id="304c9-111">Çağrı `GetSectionCreate` yalnızca diğer yöntemler tarafından işlenmemiş özel bölümü gereksinimleriniz varsa.</span><span class="sxs-lookup"><span data-stu-id="304c9-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c6830-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c6830-110">Remarks</span></span>  
+ <span data-ttu-id="c6830-111">Çağrı `GetSectionCreate` yalnızca diğer yöntemler tarafından işlenmemiş özel bölümü gereksinimleriniz varsa.</span><span class="sxs-lookup"><span data-stu-id="c6830-111">Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="304c9-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="304c9-112">Requirements</span></span>  
- <span data-ttu-id="304c9-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="304c9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6830-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c6830-112">Requirements</span></span>  
+ <span data-ttu-id="c6830-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6830-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="304c9-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="304c9-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c6830-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c6830-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="304c9-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="304c9-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c6830-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="c6830-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="304c9-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="304c9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="c6830-116">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="c6830-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="304c9-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="304c9-117">See also</span></span>
-- [<span data-ttu-id="304c9-118">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="304c9-118">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c6830-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c6830-117">See also</span></span>
+
+- [<span data-ttu-id="c6830-118">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c6830-118">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

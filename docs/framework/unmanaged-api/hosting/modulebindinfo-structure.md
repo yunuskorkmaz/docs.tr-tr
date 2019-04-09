@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bc1e788f6a55fa6441592141d3a2236a7a0e2d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f14d3dcaad1cc8cac11599b1647d61df3a793301
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124455"
 ---
-# <a name="modulebindinfo-structure"></a><span data-ttu-id="5f030-102">ModuleBindInfo Yapısı</span><span class="sxs-lookup"><span data-stu-id="5f030-102">ModuleBindInfo Structure</span></span>
-<span data-ttu-id="5f030-103">Başvurulan modül ve onu içeren derleme hakkında ayrıntılı bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="5f030-103">Provides detailed information about the referenced module and the assembly that contains it.</span></span>  
+# <a name="modulebindinfo-structure"></a><span data-ttu-id="704cd-102">ModuleBindInfo Yapısı</span><span class="sxs-lookup"><span data-stu-id="704cd-102">ModuleBindInfo Structure</span></span>
+<span data-ttu-id="704cd-103">Başvurulan modül ve onu içeren derleme hakkında ayrıntılı bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="704cd-103">Provides detailed information about the referenced module and the assembly that contains it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f030-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5f030-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="704cd-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="704cd-104">Syntax</span></span>  
   
 ```  
 typedef struct _ModuleBindInfo {  
@@ -36,29 +36,30 @@ typedef struct _ModuleBindInfo {
 } ModuleBindInfo;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="5f030-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="5f030-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="704cd-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="704cd-105">Members</span></span>  
   
-|<span data-ttu-id="5f030-106">Üye</span><span class="sxs-lookup"><span data-stu-id="5f030-106">Member</span></span>|<span data-ttu-id="5f030-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5f030-107">Description</span></span>|  
+|<span data-ttu-id="704cd-106">Üye</span><span class="sxs-lookup"><span data-stu-id="704cd-106">Member</span></span>|<span data-ttu-id="704cd-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="704cd-107">Description</span></span>|  
 |------------|-----------------|  
-|`dwAppDomainId`|<span data-ttu-id="5f030-108">İçin benzersiz bir tanımlayıcı `IStream` bir çağrı tarafından döndürülen [Ihostassemblystore::providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) içinden başvurulan modül yüklenecek yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5f030-108">A unique identifier for the `IStream` that is returned by a call to the [IHostAssemblyStore::ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) method from which the referenced module is to be loaded.</span></span>|  
-|`lpAssemblyIdentity`|<span data-ttu-id="5f030-109">Başvurulan modül içeren derleme için benzersiz bir tanımlayıcı.</span><span class="sxs-lookup"><span data-stu-id="5f030-109">A unique identifier for the assembly that contains the referenced module.</span></span>|  
-|`lpModuleName`|<span data-ttu-id="5f030-110">Başvurulan modül adı.</span><span class="sxs-lookup"><span data-stu-id="5f030-110">The name of the referenced module.</span></span>|  
+|`dwAppDomainId`|<span data-ttu-id="704cd-108">İçin benzersiz bir tanımlayıcı `IStream` bir çağrı tarafından döndürülen [Ihostassemblystore::providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) içinden başvurulan modül yüklenecek yöntemi.</span><span class="sxs-lookup"><span data-stu-id="704cd-108">A unique identifier for the `IStream` that is returned by a call to the [IHostAssemblyStore::ProvideModule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) method from which the referenced module is to be loaded.</span></span>|  
+|`lpAssemblyIdentity`|<span data-ttu-id="704cd-109">Başvurulan modül içeren derleme için benzersiz bir tanımlayıcı.</span><span class="sxs-lookup"><span data-stu-id="704cd-109">A unique identifier for the assembly that contains the referenced module.</span></span>|  
+|`lpModuleName`|<span data-ttu-id="704cd-110">Başvurulan modül adı.</span><span class="sxs-lookup"><span data-stu-id="704cd-110">The name of the referenced module.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5f030-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5f030-111">Remarks</span></span>  
- <span data-ttu-id="5f030-112">`ModuleBindInfo` bir parametre olarak geçirilen `IHostAssemblyStore::ProvideModule`.</span><span class="sxs-lookup"><span data-stu-id="5f030-112">`ModuleBindInfo` is passed as a parameter to `IHostAssemblyStore::ProvideModule`.</span></span> <span data-ttu-id="5f030-113">Benzersiz tanımlayıcı ana bilgisayar kaynakları `dwAppDomainId` ortak dil çalışma zamanı (CLR).</span><span class="sxs-lookup"><span data-stu-id="5f030-113">The host supplies the unique identifier `dwAppDomainId` to the common language runtime (CLR).</span></span> <span data-ttu-id="5f030-114">Çağrısı yapıldıktan sonra [Ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) yöntemi döndürür, çalışma belirlemek için tanımlayıcı kullandığı olmadığını içeriğini `IStream` eşlendi.</span><span class="sxs-lookup"><span data-stu-id="5f030-114">After a call to the [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) method returns, the runtime uses the identifier to determine whether the contents of the `IStream` have been mapped.</span></span> <span data-ttu-id="5f030-115">Bu durumda, çalışma zamanı akış yeniden eşleme yerine var olan kopyasını yükler.</span><span class="sxs-lookup"><span data-stu-id="5f030-115">If so, the runtime loads the existing copy rather than remapping the stream.</span></span> <span data-ttu-id="5f030-116">Çalışma zamanı bu tanımlayıcıyı ayrıca çağrılardan döndürülen akışlar için arama anahtar olarak kullanır `IHostAssemblyStore::ProvideAssembly` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5f030-116">The runtime also uses this identifier as a lookup key for streams that are returned from calls to the `IHostAssemblyStore::ProvideAssembly` method.</span></span> <span data-ttu-id="5f030-117">Bu nedenle, tanımlayıcı için derleme isteklerini de modülü istekleri için benzersiz olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="5f030-117">Therefore, the identifier must be unique for module requests as well as for assembly requests.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="704cd-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="704cd-111">Remarks</span></span>  
+ `ModuleBindInfo` <span data-ttu-id="704cd-112">bir parametre olarak geçirilen `IHostAssemblyStore::ProvideModule`.</span><span class="sxs-lookup"><span data-stu-id="704cd-112">is passed as a parameter to `IHostAssemblyStore::ProvideModule`.</span></span> <span data-ttu-id="704cd-113">Benzersiz tanımlayıcı ana bilgisayar kaynakları `dwAppDomainId` ortak dil çalışma zamanı (CLR).</span><span class="sxs-lookup"><span data-stu-id="704cd-113">The host supplies the unique identifier `dwAppDomainId` to the common language runtime (CLR).</span></span> <span data-ttu-id="704cd-114">Çağrısı yapıldıktan sonra [Ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) yöntemi döndürür, çalışma belirlemek için tanımlayıcı kullandığı olmadığını içeriğini `IStream` eşlendi.</span><span class="sxs-lookup"><span data-stu-id="704cd-114">After a call to the [IHostAssemblyStore::ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) method returns, the runtime uses the identifier to determine whether the contents of the `IStream` have been mapped.</span></span> <span data-ttu-id="704cd-115">Bu durumda, çalışma zamanı akış yeniden eşleme yerine var olan kopyasını yükler.</span><span class="sxs-lookup"><span data-stu-id="704cd-115">If so, the runtime loads the existing copy rather than remapping the stream.</span></span> <span data-ttu-id="704cd-116">Çalışma zamanı bu tanımlayıcıyı ayrıca çağrılardan döndürülen akışlar için arama anahtar olarak kullanır `IHostAssemblyStore::ProvideAssembly` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="704cd-116">The runtime also uses this identifier as a lookup key for streams that are returned from calls to the `IHostAssemblyStore::ProvideAssembly` method.</span></span> <span data-ttu-id="704cd-117">Bu nedenle, tanımlayıcı için derleme isteklerini de modülü istekleri için benzersiz olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="704cd-117">Therefore, the identifier must be unique for module requests as well as for assembly requests.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f030-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5f030-118">Requirements</span></span>  
- <span data-ttu-id="5f030-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f030-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="704cd-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="704cd-118">Requirements</span></span>  
+ <span data-ttu-id="704cd-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="704cd-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5f030-120">**Üst bilgi:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="5f030-120">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="704cd-120">**Üst bilgi:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="704cd-120">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="5f030-121">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="5f030-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="704cd-121">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="704cd-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5f030-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5f030-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="704cd-122">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="704cd-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="5f030-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5f030-123">See also</span></span>
-- [<span data-ttu-id="5f030-124">Barındırma Yapıları</span><span class="sxs-lookup"><span data-stu-id="5f030-124">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [<span data-ttu-id="5f030-125">AssemblyBindInfo Yapısı</span><span class="sxs-lookup"><span data-stu-id="5f030-125">AssemblyBindInfo Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)
-- [<span data-ttu-id="5f030-126">ICLRAssemblyIdentityManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5f030-126">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="5f030-127">ICLRAssemblyReferenceList Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5f030-127">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="5f030-128">IHostAssemblyManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5f030-128">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="704cd-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="704cd-123">See also</span></span>
+
+- [<span data-ttu-id="704cd-124">Barındırma Yapıları</span><span class="sxs-lookup"><span data-stu-id="704cd-124">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="704cd-125">AssemblyBindInfo Yapısı</span><span class="sxs-lookup"><span data-stu-id="704cd-125">AssemblyBindInfo Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)
+- [<span data-ttu-id="704cd-126">ICLRAssemblyIdentityManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="704cd-126">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="704cd-127">ICLRAssemblyReferenceList Arabirimi</span><span class="sxs-lookup"><span data-stu-id="704cd-127">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="704cd-128">IHostAssemblyManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="704cd-128">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)

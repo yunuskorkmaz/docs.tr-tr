@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf52f74c38b479664ad7e015180b26e0a53c235e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5998ce684726b2386d8f1e05eb7eaeccf455747c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110462"
 ---
-# <a name="bucketparameters-structure"></a><span data-ttu-id="2a4da-102">BucketParameters Yapısı</span><span class="sxs-lookup"><span data-stu-id="2a4da-102">BucketParameters Structure</span></span>
-<span data-ttu-id="2a4da-103">Olay ile ilişkili olan geçerli bir özel durum için bir olay ve parametreleri türü adını depolar.</span><span class="sxs-lookup"><span data-stu-id="2a4da-103">Stores the type name of an event and the parameters for the current exception that is associated with the event.</span></span>  
+# <a name="bucketparameters-structure"></a><span data-ttu-id="e1a62-102">BucketParameters Yapısı</span><span class="sxs-lookup"><span data-stu-id="e1a62-102">BucketParameters Structure</span></span>
+<span data-ttu-id="e1a62-103">Olay ile ilişkili olan geçerli bir özel durum için bir olay ve parametreleri türü adını depolar.</span><span class="sxs-lookup"><span data-stu-id="e1a62-103">Stores the type name of an event and the parameters for the current exception that is associated with the event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2a4da-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2a4da-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1a62-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e1a62-104">Syntax</span></span>  
   
 ```  
 typedef struct _BucketParameters {  
@@ -36,20 +36,21 @@ typedef struct _BucketParameters {
 } BucketParameters;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="2a4da-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="2a4da-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e1a62-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="e1a62-105">Members</span></span>  
   
-|<span data-ttu-id="2a4da-106">Üye</span><span class="sxs-lookup"><span data-stu-id="2a4da-106">Member</span></span>|<span data-ttu-id="2a4da-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2a4da-107">Description</span></span>|  
+|<span data-ttu-id="e1a62-106">Üye</span><span class="sxs-lookup"><span data-stu-id="e1a62-106">Member</span></span>|<span data-ttu-id="e1a62-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e1a62-107">Description</span></span>|  
 |------------|-----------------|  
-|`fInited`|<span data-ttu-id="2a4da-108">`true`, bu yapının rest geçerliyse; Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="2a4da-108">`true`, if the rest of this structure is valid; otherwise, `false`.</span></span>|  
-|`pszEventTypeName`|<span data-ttu-id="2a4da-109">Olay türü adı.</span><span class="sxs-lookup"><span data-stu-id="2a4da-109">Name of the event type.</span></span>|  
-|`pszParams`|<span data-ttu-id="2a4da-110">Her biri için geçerli özel olayla ilişkili bir parametre belirtir bir dizi dizeleri.</span><span class="sxs-lookup"><span data-stu-id="2a4da-110">An array of strings, each of which specifies a parameter for the current exception associated with the event.</span></span>|  
+|`fInited`|`true`<span data-ttu-id="e1a62-108">, bu yapının rest geçerliyse; Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="e1a62-108">, if the rest of this structure is valid; otherwise, `false`.</span></span>|  
+|`pszEventTypeName`|<span data-ttu-id="e1a62-109">Olay türü adı.</span><span class="sxs-lookup"><span data-stu-id="e1a62-109">Name of the event type.</span></span>|  
+|`pszParams`|<span data-ttu-id="e1a62-110">Her biri için geçerli özel olayla ilişkili bir parametre belirtir bir dizi dizeleri.</span><span class="sxs-lookup"><span data-stu-id="e1a62-110">An array of strings, each of which specifies a parameter for the current exception associated with the event.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2a4da-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2a4da-111">Requirements</span></span>  
- <span data-ttu-id="2a4da-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2a4da-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e1a62-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e1a62-111">Requirements</span></span>  
+ <span data-ttu-id="e1a62-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1a62-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2a4da-113">**Üst bilgi:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="2a4da-113">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="e1a62-113">**Üst bilgi:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="e1a62-113">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="2a4da-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2a4da-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="e1a62-114">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="e1a62-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="2a4da-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2a4da-115">See also</span></span>
-- [<span data-ttu-id="2a4da-116">Barındırma Yapıları</span><span class="sxs-lookup"><span data-stu-id="2a4da-116">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a><span data-ttu-id="e1a62-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e1a62-115">See also</span></span>
+
+- [<span data-ttu-id="e1a62-116">Barındırma Yapıları</span><span class="sxs-lookup"><span data-stu-id="e1a62-116">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

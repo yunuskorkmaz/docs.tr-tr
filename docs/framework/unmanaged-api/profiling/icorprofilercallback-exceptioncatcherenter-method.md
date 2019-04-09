@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91a149a33dcf283f9ab4fedafbff53c8b46c503e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a9b47e1d1bfa1d8f6c970e95fe25f62a690d3b91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143877"
 ---
-# <a name="icorprofilercallbackexceptioncatcherenter-method"></a><span data-ttu-id="96cf4-102">ICorProfilerCallback::ExceptionCatcherEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="96cf4-102">ICorProfilerCallback::ExceptionCatcherEnter Method</span></span>
-<span data-ttu-id="96cf4-103">Denetimi uygun geçirilen profil oluşturucu bildirir `catch` blok.</span><span class="sxs-lookup"><span data-stu-id="96cf4-103">Notifies the profiler that control is being passed to the appropriate `catch` block.</span></span>  
+# <a name="icorprofilercallbackexceptioncatcherenter-method"></a><span data-ttu-id="99cfd-102">ICorProfilerCallback::ExceptionCatcherEnter Yöntemi</span><span class="sxs-lookup"><span data-stu-id="99cfd-102">ICorProfilerCallback::ExceptionCatcherEnter Method</span></span>
+<span data-ttu-id="99cfd-103">Denetimi uygun geçirilen profil oluşturucu bildirir `catch` blok.</span><span class="sxs-lookup"><span data-stu-id="99cfd-103">Notifies the profiler that control is being passed to the appropriate `catch` block.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="96cf4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="96cf4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99cfd-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="99cfd-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionCatcherEnter(  
@@ -35,29 +35,30 @@ HRESULT ExceptionCatcherEnter(
     [in] ObjectID   objectId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="96cf4-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="96cf4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="99cfd-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="99cfd-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="96cf4-106">[in] İşlevi içeren tanımlayıcısı `catch` blok.</span><span class="sxs-lookup"><span data-stu-id="96cf4-106">[in] The identifier of the function containing the `catch` block.</span></span>  
+ <span data-ttu-id="99cfd-106">[in] İşlevi içeren tanımlayıcısı `catch` blok.</span><span class="sxs-lookup"><span data-stu-id="99cfd-106">[in] The identifier of the function containing the `catch` block.</span></span>  
   
  `objectId`  
- <span data-ttu-id="96cf4-107">[in] İşlenen özel durum tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="96cf4-107">[in] The identifier of the exception being handled.</span></span>  
+ <span data-ttu-id="99cfd-107">[in] İşlenen özel durum tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="99cfd-107">[in] The identifier of the exception being handled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="96cf4-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="96cf4-108">Remarks</span></span>  
- <span data-ttu-id="96cf4-109">`ExceptionCatcherEnter` Yöntemi, yalnızca catch noktası just-in-time (JIT) derleyici ile derlenmiş kod olduğunda çağrılır.</span><span class="sxs-lookup"><span data-stu-id="96cf4-109">The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="96cf4-110">Yönetilmeyen kod veya çalışma zamanı iç kod yakalanan bir özel durum, bu bildirim çağırmayacaktır.</span><span class="sxs-lookup"><span data-stu-id="96cf4-110">An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification.</span></span> <span data-ttu-id="96cf4-111">`objectId` Değeri bir çöp toplama bu yana nesne taşındı olduğundan yeniden geçirilir `ExceptionThrown` bildirim.</span><span class="sxs-lookup"><span data-stu-id="96cf4-111">The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="99cfd-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="99cfd-108">Remarks</span></span>  
+ <span data-ttu-id="99cfd-109">`ExceptionCatcherEnter` Yöntemi, yalnızca catch noktası just-in-time (JIT) derleyici ile derlenmiş kod olduğunda çağrılır.</span><span class="sxs-lookup"><span data-stu-id="99cfd-109">The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="99cfd-110">Yönetilmeyen kod veya çalışma zamanı iç kod yakalanan bir özel durum, bu bildirim çağırmayacaktır.</span><span class="sxs-lookup"><span data-stu-id="99cfd-110">An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification.</span></span> <span data-ttu-id="99cfd-111">`objectId` Değeri bir çöp toplama bu yana nesne taşındı olduğundan yeniden geçirilir `ExceptionThrown` bildirim.</span><span class="sxs-lookup"><span data-stu-id="99cfd-111">The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.</span></span>  
   
- <span data-ttu-id="96cf4-112">Yığın atık toplama izin veren bir durumda olmayabilir çünkü profil oluşturucu bu yöntemin uygulanması Engellemesi gereken değil ve bu nedenle preemptive çöp toplama etkinleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="96cf4-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="96cf4-113">Burada profil oluşturucu engellerse ve çöp toplama denenir, çalışma zamanı, bu geri dönene kadar engeller.</span><span class="sxs-lookup"><span data-stu-id="96cf4-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
+ <span data-ttu-id="99cfd-112">Yığın atık toplama izin veren bir durumda olmayabilir çünkü profil oluşturucu bu yöntemin uygulanması Engellemesi gereken değil ve bu nedenle preemptive çöp toplama etkinleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="99cfd-112">The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled.</span></span> <span data-ttu-id="99cfd-113">Burada profil oluşturucu engellerse ve çöp toplama denenir, çalışma zamanı, bu geri dönene kadar engeller.</span><span class="sxs-lookup"><span data-stu-id="99cfd-113">If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.</span></span>  
   
- <span data-ttu-id="96cf4-114">Bu yöntemin uygulanmasını profil oluşturucunun yönetilen koda veya herhangi bir yönetilen bellek ayırma yol neden çağırmalıdır değil.</span><span class="sxs-lookup"><span data-stu-id="96cf4-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
+ <span data-ttu-id="99cfd-114">Bu yöntemin uygulanmasını profil oluşturucunun yönetilen koda veya herhangi bir yönetilen bellek ayırma yol neden çağırmalıdır değil.</span><span class="sxs-lookup"><span data-stu-id="99cfd-114">The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="96cf4-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="96cf4-115">Requirements</span></span>  
- <span data-ttu-id="96cf4-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96cf4-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="99cfd-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="99cfd-115">Requirements</span></span>  
+ <span data-ttu-id="99cfd-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99cfd-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="96cf4-117">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="96cf4-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="99cfd-117">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="99cfd-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="96cf4-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="96cf4-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="99cfd-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="99cfd-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="96cf4-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="96cf4-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="99cfd-119">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="99cfd-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="96cf4-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="96cf4-120">See also</span></span>
-- [<span data-ttu-id="96cf4-121">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="96cf4-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="96cf4-122">ExceptionCatcherLeave Yöntemi</span><span class="sxs-lookup"><span data-stu-id="96cf4-122">ExceptionCatcherLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)
+## <a name="see-also"></a><span data-ttu-id="99cfd-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="99cfd-120">See also</span></span>
+
+- [<span data-ttu-id="99cfd-121">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="99cfd-121">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="99cfd-122">ExceptionCatcherLeave Yöntemi</span><span class="sxs-lookup"><span data-stu-id="99cfd-122">ExceptionCatcherLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)
