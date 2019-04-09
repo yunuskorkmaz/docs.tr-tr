@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama'
+title: 'Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 4704a310e49246bdc8fff54abe6841f2e8482ed5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2bbdcc8e5a55f9d2cdbb80bf83443f0ad8850452
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105293"
 ---
-# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama
+# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama
 Bir Windows etki alanı bilgisayardaki kaynaklara erişimi denetleme temel güvenlik bir görevdir. Örneğin, yalnızca belirli kullanıcılara bordro bilgilerini gibi hassas verilerin görüntülemeniz mümkün olması gerekir. Bu konu, zorlu bir yöntemi kullanıcının, önceden tanımlanmış bir gruba ait erişimini kısıtlamak nasıl açıklar. Çalışma örnek için bkz: [hizmet işlemlerine erişimi yetkilendirme](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
   
  Görev, iki ayrı yordamlardan oluşmaktadır. İlk grubu oluşturur ve kullanıcıları ile doldurur. İkinci uygular <xref:System.Security.Permissions.PrincipalPermissionAttribute> grubu belirtmek için sınıf.  
@@ -85,10 +85,11 @@ Bir Windows etki alanı bilgisayardaki kaynaklara erişimi denetleme temel güve
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
 - [Hizmet İşlemlerine Erişimi Yetkilendirme](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Hizmet Anlaşmalarını Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [Güvenlik Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Hizmet Sözleşmelerini Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)

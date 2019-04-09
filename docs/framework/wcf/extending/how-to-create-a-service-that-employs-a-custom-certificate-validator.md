@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma'
+title: 'Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7c2eb820a7e087d99ebd2c463db6e10595f7c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119632"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Nasıl yapılır: Özel bir sertifika Doğrulayıcı kullanan bir hizmet oluşturma
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma
 Bu konuda, özel bir sertifika Doğrulayıcı uygulama ve varsayılan sertifika doğrulama mantığı ile özel bir sertifika Doğrulayıcı değiştirmek için istemci veya hizmet kimlik bilgilerinin nasıl yapılandırılacağı gösterilmektedir.  
   
  X.509 Sertifika bir istemci veya hizmetin kimliğini doğrulamak için kullanılıyorsa, Windows Communication Foundation (WCF) varsayılan olarak Windows sertifika deposu ve şifreleme API'si günlük kaydını güvenilir olduğundan emin olun ve sertifikayı doğrulamak için kullanır. Bazen yerleşik sertifika doğrulama işlevselliği yeterli değildir ve değiştirilmesi gerekir. WCF özel bir sertifika Doğrulayıcı ekleme olanak tanıyarak Doğrulama mantığı değiştirmek için kolay bir yol sağlar. Özel bir sertifika Doğrulayıcı belirtilirse, WCF yerleşik Sertifika Doğrulama mantığı kullanmaz, ancak bunun yerine özel doğrulayıcısındaki kullanır.  
@@ -130,4 +130,5 @@ Bu konuda, özel bir sertifika Doğrulayıcı uygulama ve varsayılan sertifika 
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IdentityModel.Selectors.X509CertificateValidator>

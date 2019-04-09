@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132068"
 ---
 # <a name="distributed-application-security"></a>Dağıtılan Uygulama Güvenliği
 Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanları bozuk: güvenlik, erişim denetimi ve denetim aktarın. Aktarım güvenliği, kimlik doğrulaması bütünlüğü ve gizliliği sağlar. Aktarım güvenliği aşağıdakilerden biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential`.  
@@ -40,7 +40,7 @@ Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanlar�
   
 |Mod|Açıklama|  
 |----------|-----------------|  
-|Hiçbiri|Güvenlik aktarım katmanında veya ileti katmanında sağlanır. Önceden tanımlanmış bağlamaları hiçbiri dışında varsayılan olarak bu modu kullanın [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) öğesi veya kodun kullanırken <xref:System.ServiceModel.BasicHttpBinding> sınıfı.|  
+|None|Güvenlik aktarım katmanında veya ileti katmanında sağlanır. Önceden tanımlanmış bağlamaları hiçbiri dışında varsayılan olarak bu modu kullanın [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) öğesi veya kodun kullanırken <xref:System.ServiceModel.BasicHttpBinding> sınıfı.|  
 |Taşıma|HTTPS gibi güvenli aktarım bütünlüğü, gizliliği ve karşılıklı kimlik doğrulaması için kullanır.|  
 |İleti|SOAP ileti güvenliği bütünlüğü, gizliliği ve karşılıklı kimlik doğrulaması için kullanır. SOAP iletilerini göre WS-güvenlik standartları güvenlidir.|  
 |Karma mod|Kullanan bütünlüğü, gizliliği ve sunucu kimlik doğrulaması için güvenlik taşıma. Güvenlik (WS-güvenlik ve diğer standartların) istemci kimlik doğrulaması için kullandığı ileti.<br /><br /> (Bu modu için bu numaralandırma `TransportWithMessageCredential`.)|  
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanlar�
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|Hiçbiri|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
+|None|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
 |Temel|Temel kimlik doğrulaması belirtir.  RFC2617, ek bilgi için bkz. "[HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulama](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
 |Özet|Özet kimlik doğrulaması belirtir.  RFC2617, ek bilgi için bkz. "[HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulama](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
 |NTLM|Bir Windows etki alanında SSPI anlaşması kullanılarak Windows kimlik doğrulaması belirtir.<br /><br /> SSPI anlaşması Kerberos protokolü veya NT LanMan (NTLM) kullanarak sonuçlanır.|  
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanlar�
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|Hiçbiri|Anonim istemci ile etkileşim kurmak hizmet sağlar.|  
+|None|Anonim istemci ile etkileşim kurmak hizmet sağlar.|  
 |Windows|SOAP ileti alışverişlerinde Windows kimlik bilgisi kimliği doğrulanmış bağlamı altında gerçekleşmesini sağlar. Kerberos protokolü veya NTLM kimlik doğrulama hizmeti olarak çekmek için SSPI anlaşması mekanizması kullanır.|  
 |Kullanıcı adı|Bir kullanıcı adı kimlik bilgisi ile istemcinin kimliğinin doğrulanmasını gerektiren hizmet sağlar. WCF kullanıcı adıyla bir imza oluşturma veya verileri şifreleme gibi şifreleme işlemleri izin vermediğini unutmayın. Bu nedenle, WCF aktarma kullanıcı adı kimlik bilgilerini kullanarak güvenli zorlar.|  
 |Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir sertifika.|  
@@ -95,7 +95,8 @@ Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanlar�
  İleti güvenlik modunu hizmeti kimlik bilgileri istemcinin bir başlangıç anlaşmasının bir parçası değiştirilir aktarım güvenliği gerçekleştirmenizi sağlar. Anlaşma etkinleştirmek için <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> özelliğini `true`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+
+- [Uç Noktası Oluşturma Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

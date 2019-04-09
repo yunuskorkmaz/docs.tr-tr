@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Visual Basic ile Windows Forms Denetimi'nden devralma"
+title: "İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden Devralma"
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 479e1a652c442651375c687288923f8abb60fd61
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c7e4f49fa5bd4de1e15e8f3cf39b95779c33ef94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087072"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>İzlenecek yol: Visual Basic ile Windows Forms Denetimi'nden devralma
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden Devralma
 Visual Basic ile aracılığıyla güçlü özel denetimler oluşturabilirsiniz *devralma*. Devralma üzerinden tüm standart Windows Forms denetimleri devralınan işlevlerini korur, ancak özel işlevler de dahil denetimleri oluşturabilirsiniz. Bu izlenecek yolda, adlı basit bir devralınan denetim oluşturacaksınız `ValueButton`. Bu düğme, standart Windows Forms işlevselliği devralır <xref:System.Windows.Forms.Button> denetlemek ve adlı bir özel özellik açığa çıkarır `ButtonValue`.  
   
 > [!NOTE]
@@ -147,7 +147,8 @@ Visual Basic ile aracılığıyla güçlü özel denetimler oluşturabilirsiniz 
      '5' sayısal görüntülenen `Label1`elde, `ButtonValue` devralınan denetim özelliği için geçirilmiş `Label1` aracılığıyla `ValueButton1_Click` yöntemi. Bu nedenle, `ValueButton` denetimi, standart Windows Forms düğmesini tüm işlevlerini devralır, ancak ek, özel bir özellik sunar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: Visual Basic ile bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Nasıl yapılır: Bir denetimi görüntüleme araç kutusu öğelerini Seç iletişim kutusu](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+
+- [İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Nasıl yapılır: Araç Kutusu Öğelerini Seç İletişim Kutusunda bir Denetimi Görüntüleme](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)
 - [Devralma temelleri (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

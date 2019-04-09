@@ -1,18 +1,18 @@
 ---
-title: Tablo değerli Parametreler
+title: Tablo Değerli Parametreler
 ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 130b5338b14bc7c1f36feb620d549295867ef64e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1d52e048ee54ce967215ad134d5bcff2983103e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113626"
 ---
-# <a name="table-valued-parameters"></a>Tablo değerli Parametreler
+# <a name="table-valued-parameters"></a>Tablo Değerli Parametreler
 Tablo değerli parametreler birden çok gidiş dönüş veya özel sunucu tarafı mantık verilerin işlenmesi için gerek kalmadan birden çok SQL Server için bir istemci uygulamasından veri satırı sıralama için kolay bir yol sağlar. Bir istemci uygulamasında veri satırı kapsüllemek ve tek bir Parametreli komutu sunucuda veri göndermek için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları sonra üzerinde kullanarak işletilebilir bir tablo değişkeninde depolanan [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
   
  Sütun değerleri tablo değerli parametreleri standardını kullanarak erişilebilir [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] SELECT deyimleri. Tablo değerli parametre kesin olarak belirlenmiştir ve yapılarını otomatik olarak doğrulanır. Tablo değerli parametre boyutunu, yalnızca sunucu bellekle sınırlıdır.  
@@ -273,6 +273,7 @@ insertCommand.ExecuteNonQuery()
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Komutlar ve Parametreler](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [DataAdapter Parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)

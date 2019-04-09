@@ -9,12 +9,12 @@ helpviewer_keywords:
 - states [WPF], Expander
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
-ms.openlocfilehash: ba31543a21b13817bfd7ea5740d15afcae25fdeb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c5f805c251d3f6b256035e568798cd6d252ea9a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115446"
 ---
 # <a name="expander-styles-and-templates"></a>Genişletici Stilleri ve Şablonları
 Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.Expander> denetimi. Varsayılan değiştirebileceğiniz <xref:System.Windows.Controls.ControlTemplate> denetim benzersiz bir görünüm sağlamak için. Daha fazla bilgi için [ControlTemplate oluşturarak varolan denetimin görünümünü özelleştirme](customizing-the-appearance-of-an-existing-control.md).  
@@ -54,6 +54,7 @@ Bu konu için şablonları ve stilleri açıklar <xref:System.Windows.Controls.E
  Tam bir örnek için bkz. [ControlTemplates örneği ile stillendirme](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Denetim Stilleri ve Şablonları](control-styles-and-templates.md)

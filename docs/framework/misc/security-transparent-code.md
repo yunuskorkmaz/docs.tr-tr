@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01427e8f90cebca5297e21d54d29c08cf1eab75c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075944"
 ---
 # <a name="security-transparent-code"></a>Güvenliği Saydam Kod
 <a name="top"></a>
@@ -25,11 +25,11 @@ ms.locfileid: "54510123"
   
  Bu konuda, saydamlık modeli daha ayrıntılı açıklanmaktadır. Aşağıdaki bölümleri içerir:  
   
--   [Saydamlık modelinin amacı](#purpose)  
+-   [Saydamlık Modelinin Amacı](#purpose)  
   
--   [Saydamlık düzeyini belirtme](#level)  
+-   [Saydamlık Düzeyini Belirtme](#level)  
   
--   [Saydamlığı zorlama](#enforcement)  
+-   [Saydamlığı Zorlama](#enforcement)  
   
 <a name="purpose"></a>   
 ## <a name="purpose-of-the-transparency-model"></a>Saydamlık Modelinin Amacı  
@@ -107,5 +107,6 @@ ms.locfileid: "54510123"
  Saydamlık kuralları saydamlık hesaplanana kadar zorlanmaz. O zaman bir <xref:System.InvalidOperationException> saydamlık kuralı ihlal edilirse oluşturulur. Saydamlığın hesaplandığı zaman pek çok unsura bağlıdır ve tahmin edilemez. En geç hesaplanır. İçinde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], montaj düzeyi saydamlık hesaplaması .NET Framework 2.0 sürümünde vermiyor daha çabuk ortaya çıkar. Tek garanti, saydamlık hesaplama gerekli olduğu zamana göre gerçekleşmesidir. Bu, nasıl just-ın-time (JIT) derleyici noktası bir yöntem derlendiğinde ve bu yöntemde herhangi bir hata algılandığında değiştirmesine benzer. Saydamlık hesaplama kodunuzu saydamlık hatası yoksa görünmez durumdadır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Güvenliği saydam kod, düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [Güvenliği saydam kod, Düzey 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Güvenliği Saydam Kod, 2. Düzey](../../../docs/framework/misc/security-transparent-code-level-2.md)

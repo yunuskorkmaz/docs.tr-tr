@@ -1,5 +1,5 @@
 ---
-title: Zaman uyumlu istemci yuvası kullanma
+title: Zaman Uyumlu İstemci Yuvası Kullanma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: a368048f83540bf5bb9cd43a0a88c40641eb7e94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 339f9c9d8b25f6deef4cc77f60c26b7b5d017ce0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105787"
 ---
-# <a name="using-a-synchronous-client-socket"></a>Zaman uyumlu istemci yuvası kullanma
+# <a name="using-a-synchronous-client-socket"></a>Zaman Uyumlu İstemci Yuvası Kullanma
 Ağ işlemi tamamlanırken bir zaman uyumlu istemci yuvası uygulama programı askıya alır. Eşzamanlı yuva kendi işlemleri için ağ ağır olarak kullanan uygulamalar için uygun değildir, ancak bunlar diğer uygulamalar için Ağ Hizmetleri için basit erişim sağlar.  
   
  Veri göndermek için bir bayt dizisi birine geçmesi <xref:System.Net.Sockets.Socket> sınıfın veri gönderme yöntemleri (<xref:System.Net.Sockets.Socket.Send%2A> ve <xref:System.Net.Sockets.Socket.SendTo%2A>). Aşağıdaki örnek bir dizeyi bir bayt dizisi kullanarak arabellek kodlar <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> özelliği ve ardından ağ aygıtıyla arabellek iletir **Gönder** yöntemi. **Gönder** yöntem ağ cihazına gönderilen bayt sayısını döndürür.  
@@ -71,6 +71,7 @@ s.Close();
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Zaman Uyumsuz İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
 - [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)
 - [Zaman Uyumlu İstemci Yuvası Örneği](../../../docs/framework/network-programming/synchronous-client-socket-example.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Ekrana mevcut bir bit eşlemi çizme'
+title: 'Nasıl yapılır: Ekrana Mevcut bir Bit Eşlemi Çizme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], loading in Windows Forms applications
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
-ms.openlocfilehash: d2e06aa382bc2b01a4308f99735ca533e7a9a3ea
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 90511adf9caffe7952e270d6fe32dd85162a29d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653827"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089185"
 ---
-# <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Nasıl yapılır: Ekrana mevcut bir bit eşlemi çizme
+# <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Nasıl yapılır: Ekrana Mevcut bir Bit Eşlemi Çizme
 Bu gibi durumlarda, mevcut bir görüntüyü kolayca ekranda çizebilirsiniz. İlk oluşturmak gereken bir <xref:System.Drawing.Bitmap> nesnesi alan bir dosya adı, bit eşlem Oluşturucu <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>. Bu oluşturucu, BMP, GIF, JPEG, PNG ve TIFF gibi birçok farklı dosya biçimleri görüntülerle kabul eder. Oluşturduktan sonra <xref:System.Drawing.Bitmap> nesne, bu geçirmek <xref:System.Drawing.Bitmap> nesnesini <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi bir <xref:System.Drawing.Graphics> nesne.  
   
 ## <a name="example"></a>Örnek  
@@ -33,5 +33,6 @@ Bu gibi durumlarda, mevcut bir görüntüyü kolayca ekranda çizebilirsiniz. İ
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
-- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)
+
+- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Resimler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)

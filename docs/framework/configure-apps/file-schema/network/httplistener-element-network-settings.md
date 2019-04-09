@@ -1,13 +1,13 @@
 ---
-title: <httpListener> Öğesi (Ağ Ayarları)
+title: <httpListener> Öğesi (ağ ayarları)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: ff5e4ad2788ab3df621beb52b1703647df068a7f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099751"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > öğesi (ağ ayarları)
 Tarafından kullanılan parametreler özelleştirir <xref:System.Net.HttpListener> sınıfı.  
@@ -43,7 +43,7 @@ Tarafından kullanılan parametreler özelleştirir <xref:System.Net.HttpListene
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
+|[ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  **UnescapeRequestUrl** özniteliği gösterir <xref:System.Net.HttpListener> ham atlanmayan URI burada herhangi bir yüzde olarak kodlanmış değerler dönüştürülür ve diğer normalleştirme adımları alınır dönüştürülmüş URI yerine kullanır.  
@@ -138,6 +138,7 @@ Tarafından kullanılan parametreler özelleştirir <xref:System.Net.HttpListene
 |Boş olabilir.||  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.Configuration.HttpListenerElement>
 - <xref:System.Net.HttpListener>
 - <xref:System.Net.HttpListenerRequest.Url%2A>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], DataGridView control compared
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
-ms.openlocfilehash: b7d97431bfdbdafd5e87bfbfb9c5badd9ba273ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6802ef375d8d15826725e68f5065317192523178
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095678"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows Forms DataGridView ve DataGrid Denetimleri Arasındaki Farklar
 <xref:System.Windows.Forms.DataGridView> Denetimidir yerini alan yeni bir denetim <xref:System.Windows.Forms.DataGrid> denetimi. <xref:System.Windows.Forms.DataGridView> Denetim eksik olan çok sayıda temel ve gelişmiş özellikler sağlar <xref:System.Windows.Forms.DataGrid> denetimi. Ayrıca, mimarisi <xref:System.Windows.Forms.DataGridView> denetimi yapar, genişletmek ve daha özelleştirmek çok daha kolay <xref:System.Windows.Forms.DataGrid> denetimi.  
@@ -33,6 +33,7 @@ ms.locfileid: "57720494"
  Çünkü <xref:System.Windows.Forms.DataGridView> kontrolünde yepyeni bir mimari, kullanmanızı sağlayacak basit dönüştürme yolu yoktur <xref:System.Windows.Forms.DataGrid> özelleştirmelerle <xref:System.Windows.Forms.DataGridView> denetimi. Birçok <xref:System.Windows.Forms.DataGrid> özelleştirmeler ile gereksiz <xref:System.Windows.Forms.DataGridView> ancak, yeni denetimde bulunan yerleşik özellikler nedeniyle denetimi. Özel sütun türleri için oluşturduysanız <xref:System.Windows.Forms.DataGrid> ile kullanmak istediğiniz denetim <xref:System.Windows.Forms.DataGridView> denetimi, bunları yeniden yeni mimarisini kullanarak uygulama gerekir. Daha fazla bilgi için [Windows Forms DataGridView denetimini özelleştirme](customizing-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Windows.Forms.BindingSource>
@@ -42,7 +43,7 @@ ms.locfileid: "57720494"
 - [Windows Forms DataGridView Denetiminde Sütun Türleri](column-types-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetimindeki Hücre Stilleri](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları](data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView Denetiminde Veri Biçimlendirme](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetimindeki Veri Biçimleri](data-formatting-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri](sizing-options-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Sütun Sıralama Modları](column-sort-modes-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetimindeki Seçim Modları](selection-modes-in-the-windows-forms-datagridview-control.md)

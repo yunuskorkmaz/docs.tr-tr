@@ -10,12 +10,12 @@ helpviewer_keywords:
 - paths [Windows Forms], drawing
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-ms.openlocfilehash: b6f0ebd500aa3503c0c0d473ebe21a61f4438862
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140510"
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+'da Grafik Yolları
 Yolları çizgiler, dikdörtgenler ve basit eğrileri birleştirerek oluşturulur. Geri çekilemedi [vektör grafiklerine genel bakış](vector-graphics-overview.md) resimler çizmek için en kullanışlı olması için aşağıdaki temel yapı taşlarını kanıtladıktan:  
@@ -67,8 +67,9 @@ Yolları çizgiler, dikdörtgenler ve basit eğrileri birleştirerek oluşturulu
  ![Paths](./media/aboutgdip02-art16.gif "Aboutgdip02_Art16")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
-- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md)
+- [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](how-to-create-graphics-objects-for-drawing.md)
 - [Yollar Oluşturma ve Çizme](constructing-and-drawing-paths.md)

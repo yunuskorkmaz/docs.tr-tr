@@ -1,15 +1,15 @@
 ---
-title: Uygulamalarda sorun giderme için izleme kullanma
+title: Uygulamalarda Sorun Giderme için İzleme Kullanma
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: 1ed95a26f682fcdb609b410251fdb3f8b647016a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142070"
 ---
-# <a name="using-tracking-to-troubleshoot-applications"></a>Uygulamalarda sorun giderme için izleme kullanma
+# <a name="using-tracking-to-troubleshoot-applications"></a>Uygulamalarda Sorun Giderme için İzleme Kullanma
 Windows Workflow Foundation (WF), Windows Workflow Foundation uygulama veya hizmet yürütülmesini ayrıntı vermek için iş akışı ile ilgili bilgileri izlemenize olanak sağlar. Bir iş akışı örneği yürütülürken iş akışı olaylarını yakalamak Windows Workflow Foundation konakları gösterebilmektedir. İş akışınızı hataları veya özel durum oluşturursa, Windows Workflow Foundation ayrıntıları işlemesi sorun giderme için izleme kullanabilirsiniz.  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>İzleme WF kullanarak bir WF sorunlarını giderme  
@@ -52,5 +52,6 @@ Windows Workflow Foundation (WF), Windows Workflow Foundation uygulama veya hizm
  ETW İzleme katılımcı kullanarak izleme etkinse bir ETW oturumu hata olaylar gönderilir. Olaylar, Olay Görüntüleyicisi'ni Olay Görüntüleyicisi'ni kullanarak görüntülenebilir. Bu düğümü altında bulunabilir **Olay Görüntüleyicisi -> uygulamalar ve hizmet günlükleri -> Microsoft -> Windows -> Uygulama uygulamalarının** analitik kanal.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)

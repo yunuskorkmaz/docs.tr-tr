@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 3a17d6cd5b723dcde4d8dc7059c9f416308f73db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082665"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Nasıl yapılır: Hiyerarşik Veriler ile Ana Öğe-Ayrıntı Desenini Kullanma
 Bu örnek, ana öğe-ayrıntı senaryonun nasıl uygulanacağını gösterir.  
@@ -34,6 +34,7 @@ Bu örnek, ana öğe-ayrıntı senaryonun nasıl uygulanacağını gösterir.
  Kullanırken tekniği biraz daha farklı olmasına [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri. Bir örnek için bkz. [hiyerarşik XML verileri ile ana öğe-ayrıntı desenini kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.HierarchicalDataTemplate>
 - [Koleksiyona Bağlama ve Seçime Göre Bilgi Görüntüleme](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)

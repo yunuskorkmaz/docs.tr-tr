@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 7b6afebbf6ac2dda0f8eb9932630da9a273f972e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080091"
 ---
 # <a name="opacity-masks-overview"></a>Opaklık Maskelerine Genel Bakış
 Opaklık maskeleri saydam veya saydam kısmen bölümleri bir öğe veya görselin yapmanızı sağlar. Geçirgenlik maskesi oluşturma için geçerli bir <xref:System.Windows.Media.Brush> için <xref:System.Windows.UIElement.OpacityMask%2A> özelliği bir öğe veya <xref:System.Windows.Media.Visual>.  Fırça öğeye veya görsel eşlenir ve her fırça piksel geçirgenlik değeri elde edilen opaklık öğe veya görselin karşılık gelen her pikselin belirlemek için kullanılır.  
@@ -116,5 +116,6 @@ DrawingBrush opaklık maskeleme örneği
  [!code-xaml[OpacityMasksSnippet#TiledDrawingasOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)
 - [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](painting-with-solid-colors-and-gradients-overview.md)

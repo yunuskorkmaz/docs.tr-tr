@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: a3bcca1e7d031a9351881a5192370bead18aa7bb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104487"
 ---
 # <a name="opentype-font-features"></a>OpenType Yazı Tipi Özellikleri
 
@@ -161,8 +161,7 @@ Bu konu anahtar özelliklerinden bazılarını gösteren bir genel bakış sağl
  Süsler genellikle calligraphy ile ilişkili ayrıntılı süsleme kullanan dekoratif karakterlerdir. Standart ve dalgalı karakterleri Palatino yazı tipi için aşağıdaki metni görüntüler.  
   
  ![OpenType standart ve swash karakterleri kullanarak metin](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "OpenType standart ve swash karakterleri kullanarak metin")  
-  
-  
+
  Süsler genellikle olay duyuruları gibi kısa deyimlerin dekoratif öğeleri olarak kullanılır. Aşağıdaki metni süsler olay adının büyük harf vurgulamak için kullanır.  
   
  ![OpenType süsler kullanarak metin](./media/opentype-font-features/opentype-swashes.gif "OpenType süsler kullanarak metin")  
@@ -185,8 +184,7 @@ Bu konu anahtar özelliklerinden bazılarını gösteren bir genel bakış sağl
  Alternatifleri için standart bir karakter yerine kullanılabileceği karakterlerdir. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri, aşağıdaki örneklerde kullanılan Pericles yazı tipi gibi metin için farklı görünümler oluşturmak için kullanabileceğiniz diğer karakterleri içerebilir. Standart karakterleri Pericles yazı tipi için aşağıdaki metni görüntüler.  
   
  ![OpenType standart karakterleri kullanarak metin](./media/opentype-font-features/opentype-standard-glyphs.gif "OpenType standart karakterleri kullanarak metin")  
-  
-  
+
  Pericles [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi standart karakter kümesini biçimsel alternatifler sağlayan ek karakterleri içerir. Aşağıdaki metni diğer biçimsel görüntüler.  
   
  ![OpenType diğer biçimsel kullanarak metin](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "OpenType diğer biçimsel kullanarak metin")  
@@ -338,6 +336,7 @@ Bu konu anahtar özelliklerinden bazılarını gösteren bir genel bakış sağl
 |<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Documents.Typography>
 - [OpenType Belirtimi](https://go.microsoft.com/fwlink/?LinkId=96731)
 - [WPF'de Tipografi](typography-in-wpf.md)

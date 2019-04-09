@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dc5c3425672dd71359edf61c5f8625d96ad09ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 34c1843873e2f6a9a4ad78ed860a0115e0f02e7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102433"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Nasıl yapılır: Komut satırından bir Windows Forms uygulaması oluşturma
 Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygulaması çalıştırmak için tamamlamanız gereken temel adımlarda açıklar. Visual Studio'da bu yordamları için kapsamlı desteği yoktur.  Ayrıca bkz: [izlenecek yol: WPF içinde Forms Denetimi'ne bir Windows barındırma](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -65,7 +65,7 @@ Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygul
   
     -   Visual Basic kullanıyorsanız yazın: `vbc form1.vb`  
   
-3.  Komut isteminde aşağıdakini yazın: `Form1.exe`  
+3.  Komut isteminde, şunları yazın: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Denetim ekleme ve bir olay işleme  
  Önceki yordamdaki adımları yalnızca derleyen ve çalışan temel bir Windows Form oluşturma gösterilmektedir. Sonraki yordam oluşturmak ve forma denetim ekleme ve denetim için bir olayı işlemek nasıl gösterir. Windows Forms ekleyebileceğiniz denetimler hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri](./controls/index.md).  
@@ -114,8 +114,9 @@ Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygul
 -   Kodu derlemek için derlemek ve uygulamayı çalıştırmak nasıl açıklayan devam etmeden yordam yönergeleri izleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [Windows Forms’un Görünüşünü Değiştirme](changing-the-appearance-of-windows-forms.md)
+- [Windows Formlarının Görünüşünü Değiştirme](changing-the-appearance-of-windows-forms.md)
 - [Windows Forms Uygulamalarını Geliştirme](./advanced/index.md)
 - [Windows Forms'a Başlarken](getting-started-with-windows-forms.md)

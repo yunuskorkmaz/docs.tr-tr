@@ -2,12 +2,12 @@
 title: Hata İşleme ve Bildirme Denetimini Genişletme
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 8a6064d5ebc8f80eb5fe3cba309c0eb1c71ee020
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 520a939c5527fa341a6c3a609297c69ec05dd7ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094118"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Hata İşleme ve Bildirme Denetimini Genişletme
 Bu örnek nasıl hata işleme ve hata raporlama kullanarak bir Windows Communication Foundation (WCF) hizmet üzerinde denetim genişletileceğini gösterir <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimi. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hataları işlemek için hizmetine eklenen bazı ek kod. İstemci, birden çok hata koşulları zorlar. Hizmet hataları yakalar ve bunları bir dosyaya kaydeder.  
@@ -157,4 +157,3 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
-  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132580"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma
 Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini yapılandırma uç noktası sağlama esnekliği sunar ve hizmet davranışı veri yerine dağıtım noktasında tasarım. Bu konu, birincil teknikleri açıklar.  
@@ -74,22 +74,22 @@ Bir yapılandırma dosyası bir Windows Communication Foundation (WCF) hizmetini
 ### <a name="the-service-element"></a>\<Hizmet > öğesi  
  Her hizmet bu özniteliklere sahiptir:  
   
--   `name`. Bir hizmet sözleşmesinin bir uygulaması sağlayan bir tür belirtir. Bu ad, nokta ve tür adı sonra oluşan tam bir addır. Örneğin `"MyNameSpace.myServiceType"`.  
+-   `name`biçimindeki telefon numarasıdır. Bir hizmet sözleşmesinin bir uygulaması sağlayan bir tür belirtir. Bu ad, nokta ve tür adı sonra oluşan tam bir addır. Örneğin `"MyNameSpace.myServiceType"`.  
   
--   `behaviorConfiguration`. Birinin adını belirten `behavior` öğeleri bulunan `behaviors` öğesi. Belirtilen davranışını hizmete bürünme izin verip gibi eylemleri yönetir. Öğenin değeri adı boş veya yok ise `behaviorConfiguration` hizmet davranışları varsayılan kümesi için hizmet eklendikten sonra sağlanır.  
+-   `behaviorConfiguration`biçimindeki telefon numarasıdır. Birinin adını belirten `behavior` öğeleri bulunan `behaviors` öğesi. Belirtilen davranışını hizmete bürünme izin verip gibi eylemleri yönetir. Öğenin değeri adı boş veya yok ise `behaviorConfiguration` hizmet davranışları varsayılan kümesi için hizmet eklendikten sonra sağlanır.  
   
 -   [\<Hizmet >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>\<Uç noktası > öğesi  
  Bir adresi, bağlama ve bir sözleşme aşağıdaki öznitelikleri tarafından temsil edilen her uç nokta gerektirir:  
   
--   `address`. Hizmetin Tekdüzen Kaynak Tanımlayıcısı (URI), mutlak bir adres veya hizmetin taban adresi göre verilen bir olabilen belirtir. Boş dize olarak ayarlanırsa, bu uç nokta oluşturulurken belirtilen temel adresinde kullanılabilir olduğunu gösterir, <xref:System.ServiceModel.ServiceHost> hizmeti.  
+-   `address`biçimindeki telefon numarasıdır. Hizmetin Tekdüzen Kaynak Tanımlayıcısı (URI), mutlak bir adres veya hizmetin taban adresi göre verilen bir olabilen belirtir. Boş dize olarak ayarlanırsa, bu uç nokta oluşturulurken belirtilen temel adresinde kullanılabilir olduğunu gösterir, <xref:System.ServiceModel.ServiceHost> hizmeti.  
   
--   `binding`. Genellikle gibi sistem tarafından sağlanan bir bağlamayı belirtir <xref:System.ServiceModel.WSHttpBinding>, ancak kullanıcı tanımlı bir bağlama de belirtebilirsiniz. Belirtilen bağlama türü taşıma, güvenlik ve kodlamayı belirler ve olup güvenilir oturumlar, işlemler veya akış desteklenen etkin veya.  
+-   `binding`biçimindeki telefon numarasıdır. Genellikle gibi sistem tarafından sağlanan bir bağlamayı belirtir <xref:System.ServiceModel.WSHttpBinding>, ancak kullanıcı tanımlı bir bağlama de belirtebilirsiniz. Belirtilen bağlama türü taşıma, güvenlik ve kodlamayı belirler ve olup güvenilir oturumlar, işlemler veya akış desteklenen etkin veya.  
   
--   `bindingConfiguration`. Bağlama varsayılan değerlerinin değiştirilmesi gerekir, bu uygun yapılandırarak yapılabilir `binding` öğesinde `bindings` öğesi. Bu öznitelik aynı değere verilmelidir `name` özniteliği `binding` varsayılan değerleri değiştirmek için kullanılan bir öğe. Ad belirtilmezse, ya da hiç `bindingConfiguration` bağlamasında belirtilen bağlama türü varsayılan bağlamasının uç noktasında kullanılır.  
+-   `bindingConfiguration`biçimindeki telefon numarasıdır. Bağlama varsayılan değerlerinin değiştirilmesi gerekir, bu uygun yapılandırarak yapılabilir `binding` öğesinde `bindings` öğesi. Bu öznitelik aynı değere verilmelidir `name` özniteliği `binding` varsayılan değerleri değiştirmek için kullanılan bir öğe. Ad belirtilmezse, ya da hiç `bindingConfiguration` bağlamasında belirtilen bağlama türü varsayılan bağlamasının uç noktasında kullanılır.  
   
--   `contract`. Sözleşme tanımlayan arabirimi belirtir. Bu tarafından belirtilen ortak dil çalışma zamanı (CLR) türüne uygulanan arabirimidir `name` özniteliği `service` öğesi.  
+-   `contract`biçimindeki telefon numarasıdır. Sözleşme tanımlayan arabirimi belirtir. Bu tarafından belirtilen ortak dil çalışma zamanı (CLR) türüne uygulanan arabirimidir `name` özniteliği `service` öğesi.  
   
 -   [\<uç noktası >](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
@@ -263,6 +263,7 @@ Hizmetler ve istemcileri yapılandırma hakkında daha fazla bilgi için bkz. [y
  Bir alt davranışı koleksiyon üst davranışı koleksiyonda zaten var. bir davranış içeriyorsa, üst alt davranışı geçersiz kılar. Üst davranışı koleksiyonu varsa bunu `<serviceMetadata httpGetEnabled="False" />` ve alt davranışı koleksiyonunu `<serviceMetadata httpGetEnabled="True" />`, alt davranışı, davranış koleksiyondaki üst öğe davranışı geçersiz kılarsınız ve de "true" olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Basitleştirilmiş Yapılandırma](../../../docs/framework/wcf/simplified-configuration.md)
 - [WCF hizmetlerini yapılandırma](configuring-services.md)
 - [\<Hizmet >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
-ms.openlocfilehash: 89a4d1c244e69098971e87957f308f9a30ade6d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50dc004a94669411c9030f142fc63d154bcde63f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676646"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095548"
 ---
 # <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a>Nasıl yapılır: Bir zaman uyumsuz Windows Presentation Framework uygulaması (WCF Veri Hizmetleri) oluşturma
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bir Windows Presentation Framework (WPF) uygulamasının kullanıcı Arabirimi öğesi için bir veri hizmetinden alınan verileri bağlayabilirsiniz. Daha fazla bilgi için [denetimlere veri bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md). Veri Hizmeti üzerinde işlemler için veri hizmeti isteği bir yanıt beklerken yanıt vermeye devam uygulamanın sağlar zaman uyumsuz olarak yürütebilirsiniz. Silverlight uygulamaları, veri hizmetini zaman uyumsuz olarak erişmek için gereklidir. Daha fazla bilgi için [zaman uyumsuz işlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
@@ -31,4 +31,5 @@ ms.locfileid: "54676646"
  [!code-vb[Astoria Northwind Client#WpfDataBindingAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerordersasync.xaml.vb#wpfdatabindingasync)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

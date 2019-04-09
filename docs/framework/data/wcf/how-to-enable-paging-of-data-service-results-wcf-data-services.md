@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: be5bd41494c27724a360b785b8706b618447e7de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77dbeba89b352fa470ab0523a830db9175a1a21a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122908"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Nasıl yapılır: (WCF Veri Hizmetleri) veri hizmeti sonuçlarını sayfalamayı etkinleştirme
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir veri hizmeti sorgu tarafından döndürülen varlık sayısını sınırlamak sağlar. Sayfa sınırlarını hizmeti başlatılır ve ayrı olarak her varlık kümesi için ayarlanabilir çağrılan yöntem tanımlanır.  
@@ -29,5 +29,6 @@ ms.locfileid: "54523461"
      [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ertelenmiş İçerik Yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)
-- [Nasıl yapılır: Disk belleği sonuçları](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)
+- [Nasıl yapılır: Sayfalanmış Sonuçları Yükleme](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)

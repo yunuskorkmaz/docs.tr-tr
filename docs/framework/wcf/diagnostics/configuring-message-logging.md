@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f57385b930ce533de3ff12b0dbd363690f04082d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636020"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112092"
 ---
 # <a name="configuring-message-logging"></a>İleti Günlüğe Kaydetmeyi Yapılandırma
 Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandırılacağını açıklar.  
@@ -164,6 +164,7 @@ Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandı
  Bilmeniz gereken, `type` öznitelik türü için bir koşullu derleme adı ayarlanmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
-- [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [İleti Günlüğe Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

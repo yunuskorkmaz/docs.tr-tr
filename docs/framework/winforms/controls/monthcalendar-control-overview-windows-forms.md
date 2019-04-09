@@ -8,12 +8,12 @@ helpviewer_keywords:
 - calendar controls [Windows Forms], Windows Forms
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
-ms.openlocfilehash: a081c4e6d8210a6bb65fa14b31d12d4295931d53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106242"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>MonthCalendar Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi görüntülemek ve tarih bilgisini ayarlamak kullanıcılar için sezgisel bir grafik arabirim sağlar. Bir Takvim denetimi görüntüler: ayın sütunlarındaki haftanın günlerini seçili vurgulanmış tarih aralığı ile altında düzenlenmiş numaralı gün içeren bir kılavuz. Farklı bir ay, aylık resim yazısı her iki tarafındaki oka düğmelere tıklayarak seçebilirsiniz. Benzer aksine <xref:System.Windows.Forms.DateTimePicker> denetimi, bu denetimi ile birden fazla tarih seçebilirsiniz. Hakkında daha fazla bilgi için <xref:System.Windows.Forms.DateTimePicker> denetlemek için bkz: [DateTimePicker denetimi](datetimepicker-control-windows-forms.md).  
@@ -26,5 +26,6 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetimi görüntülemek
  Anahtar özelliği <xref:System.Windows.Forms.MonthCalendar> denetimi <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, denetim içinde seçilen tarih aralığı. <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> Kümesinde seçilebilir gün sayısı değeri aşamaz <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> özelliği. Kullanıcı seçebilir erken ve en son tarihlerini tarafından belirlenen <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> ve <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> özellikleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.MonthCalendar>
 - [MonthCalendar Denetimi](monthcalendar-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Güvenlik Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089867"
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
 Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. Hiçbir zaman bir geliştirici gelecekteki saldırıları yeni teknolojileri tür zekadan yararlanabilmesini tahmin etmek mümkün olduğundan, uygulamanın tüm saldırılara karşı güvenli olduğu garanti edebilir bir noktası olacaktır. Buna karşılık, hiç kimse sahip olduğu bir sistemde henüz bulunan (veya yayımlanmış) güvenlik açıkları gelmez hiçbiri mevcut veya var olabilir. Yanı sıra proje tasarım aşaması sırasında güvenlik için planlama, uygulama ömrü boyunca güvenlik nasıl korunur planlamak gerekir.  
@@ -67,7 +67,7 @@ Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. H
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Kod Erişimi Güvenliği ve ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Kod erişimi güvenliği, rol tabanlı güvenlik ve ADO.NET uygulamanın perspektifinden kısmen güvenilir ortamlar arasındaki etkileşimler açıklanmaktadır.|  
-|[Kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md)|.NET Framework'teki CAS açıklayan ek konulara bağlantılar içerir.|  
+|[Kod Erişimi Güvenliği](../../../../docs/framework/misc/code-access-security.md)|.NET Framework'teki CAS açıklayan ek konulara bağlantılar içerir.|  
   
 ## <a name="database-security"></a>Veritabanı güvenliği  
  En düşük öncelik ilkesini veri kaynağınız için de geçerlidir. Veritabanı güvenliği için bazı genel yönergeleri içerir:  
@@ -102,6 +102,7 @@ Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. H
 |[Güvenlik İlkesi en iyi uygulamalar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Güvenlik ilkesini yönetmek nasıl açıklayan bağlantılar sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [.NET içinde güvenlik](../../../standard/security/index.md)
 - [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)

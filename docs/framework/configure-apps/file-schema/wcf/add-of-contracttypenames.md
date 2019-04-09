@@ -2,12 +2,12 @@
 title: <add> , <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: fa67d2ec21494bb3d84861f4c2e2e39151aac28f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 856298cb0639cf19b941f326b5b9a25aa6663088
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55253726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091323"
 ---
 # <a name="add-of-contracttypenames"></a>\<Ekle >, \<contractTypeNames >
 Sözleşme adı Aranan Hizmetleri ve genellikle bir hizmet için ararken kullanılan ölçütü belirtir bir yapılandırma öğesi. Birden fazla sözleşme adı belirtilmezse, yalnızca hizmet uç noktaları tüm sözleşmelerin eşleşen gönderecektir. Windows Communication Foundation (WCF), bir uç nokta yalnızca bir sözleşme destekleyebileceğini unutmayın.  
@@ -52,7 +52,7 @@ Sözleşme adı Aranan Hizmetleri ve genellikle bir hizmet için ararken kullan�
 |ad alanı|Sözleşme türünün ad alanını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ None  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -61,6 +61,7 @@ Sözleşme adı Aranan Hizmetleri ve genellikle bir hizmet için ararken kullan�
 |[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Sözleşme türü adları koleksiyonu.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Discovery.FindCriteria>
 - <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
 - <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b027d26292b5d810d91932bac4ec8dee4b77661d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf9cca10a580af7991889de6993e931347fc27ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120970"
 ---
 # <a name="clone-function"></a>Clone işlevi
 Geçerli nesnenin tam bir kopyası olan yeni bir nesne döndürür.   
@@ -74,4 +74,5 @@ Kopyalanan nesne başvuru sayısı 1 olan bir COM nesnesidir.
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

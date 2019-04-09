@@ -2,12 +2,12 @@
 title: XMLSerializer Örneği
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 12d11bc0da231f78909b79376cb51e7ab12fe2cd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: eb422e937eb0aeffbaa1ec4288001c5bdb2bdda6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088645"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
 Bu örnek ile uyumlu olan türler seri hale getrime ve yapmayı gösteren <xref:System.Xml.Serialization.XmlSerializer>. Windows Communication Foundation (WCF) varsayılan biçimlendiricidir <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı seri hale getirmek ve seri halinden dağıtmak için kullanılabilir olduğunda türleri <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz. XML üzerinde kesin denetim gibi - gerektiğinde bir XML özniteliği ve bir XML öğesi bir veri parçasını olması gerekiyorsa genellikle böyledir. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak olmayan WCF hizmetleri için istemci oluşturulurken seçilir.  
@@ -133,4 +133,3 @@ Press <ENTER> to terminate client.
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
-  

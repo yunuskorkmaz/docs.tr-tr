@@ -1,5 +1,5 @@
 ---
-title: <listeners> için <source> Öğesi
+title: <listeners> öğe için <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 34085d06ec3f3b91e5efdba6220d79032baaea52
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089659"
 ---
 # <a name="listeners-element-for-source"></a>\<dinleyicileri > öğesi için \<kaynak >
 Ekler veya kaldırır, dinleyicileri <xref:System.Diagnostics.TraceSource.Listeners%2A> koleksiyonu için bir <xref:System.Diagnostics.TraceSource>. Dinleyici günlük, pencere veya metin dosyası gibi uygun bir hedef izleme çıkışa yönlendirir.  
@@ -88,6 +88,7 @@ Ekler veya kaldırır, dinleyicileri <xref:System.Diagnostics.TraceSource.Listen
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Diagnostics.TraceListener>
 - [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [İz Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

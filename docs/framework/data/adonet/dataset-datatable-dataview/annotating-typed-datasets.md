@@ -1,18 +1,18 @@
 ---
-title: Türü belirtilmiş DataSets için yorum ekleme
+title: Türü Belirtilmiş DataSets için Yorum Ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085135"
 ---
-# <a name="annotating-typed-datasets"></a>Türü belirtilmiş DataSets için yorum ekleme
+# <a name="annotating-typed-datasets"></a>Türü Belirtilmiş DataSets için Yorum Ekleme
 Ek açıklamalar, belirlenmiş öğelerin adlarını değiştirmek etkinleştirme <xref:System.Data.DataSet> arka plandaki şema değiştirmeden. Temel alınan şemadaki öğelerin adlarını değiştirme neden belirlenmiş **veri kümesi** değil veri kaynağında mevcut yanı sıra veri kaynağında bulunan nesnelere başvuru kaybetmek nesneleri başvurmak için.  
   
  Ek açıklamalarını kullanma, nesnelerin adlarını, belirlenmiş özelleştirebileceğiniz **veri kümesi** daha anlamlı adlar ile kod daha okunabilir ve, belirlenmiş yapmadan **veri kümesi** bırakarak kullanmak istemcileri için daha kolay arka plandaki şema sağlam. Örneğin, aşağıdaki şema öğesi için **müşteriler** tablosu **Northwind** veritabanı sonuçlanır bir **DataRow** nesne adını  **CustomersRow** ve <xref:System.Data.DataRowCollection> adlı **müşteriler**.  
@@ -49,7 +49,7 @@ Ek açıklamalar, belirlenmiş öğelerin adlarını değiştirmek etkinleştirm
 |**typedPlural**|Nesne koleksiyonu adı.|  
 |**typedParent**|Üst ilişkisi içinde başvurulan nesne adı.|  
 |**typedChildren**|Bir alt ilişkisi nesneleri döndürmek için yöntemin adı.|  
-|**nullvalue &**|Temeldeki değeri ise değer **DBNull**. İçin aşağıdaki tabloya bakın **; nullvalue &** ek açıklamalar. Varsayılan değer **_throw**.|  
+|**nullValue**|Temeldeki değeri ise değer **DBNull**. İçin aşağıdaki tabloya bakın **; nullvalue &** ek açıklamalar. Varsayılan değer **_throw**.|  
   
  Aşağıdaki tablo için belirtilen değerleri gösterir **; nullvalue &** ek açıklama.  
   
@@ -69,7 +69,7 @@ Ek açıklamalar, belirlenmiş öğelerin adlarını değiştirmek etkinleştirm
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Özelliği**|ÖzellikAdı|typedName|  
+|**Özellik**|ÖzellikAdı|typedName|  
 |**Alt** erişimcisi|GetChildTableNameRows|typedChildren|  
 |**Üst** erişimcisi|TableNameRow|typedParent|  
 |**Veri kümesi** olayları|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
@@ -223,6 +223,7 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
 - [Türü Belirtilmiş DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)

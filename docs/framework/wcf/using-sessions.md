@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442730"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095873"
 ---
 # <a name="using-sessions"></a>Oturumları Kullanma
 Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grubunu bir konuşma ile ilişkilendirir. WCF oturumları bulunan oturum nesnesi değerinden farklı [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamaları, farklı davranışları desteklemek ve farklı yollarla denetlenir. Bu konuda WCF'de oturumları sağlayan özellikleri açıklar uygulamaları ve bunların nasıl kullanıldığı.  
@@ -146,5 +146,6 @@ Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grub
 >  Kullanılabilir tek bir "oturum" olduğundan MaxConcurrentSessions bu durumda hiçbir etkisi yoktur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

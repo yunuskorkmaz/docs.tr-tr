@@ -9,12 +9,12 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087969"
 ---
 # <a name="vector-graphics-overview"></a>Vektör Grafiklerine Genel Bakış
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizgiler ve dikdörtgenler diğer şekiller üzerinde bir koordinat sistemi çizer. Koordinat sistemleri çeşitli arasından seçim yapabilirsiniz, ancak varsayılan koordinat sistemi kaynağını sağa ve aşağı işaret eden y ekseni işaret eden x ekseni ile sol üst köşedeki sahiptir. Piksel varsayılan koordinat sisteminde ölçü birimidir.  
@@ -57,7 +57,8 @@ ms.locfileid: "57720416"
  [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
-- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md)
+- [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](how-to-create-graphics-objects-for-drawing.md)

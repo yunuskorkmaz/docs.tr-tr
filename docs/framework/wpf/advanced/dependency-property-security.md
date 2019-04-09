@@ -10,17 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364820"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077478"
 ---
 # <a name="dependency-property-security"></a>Bağımlılık Özelliği Güvenliği
 Bağımlılık özellikleri genellikle ortak özellikleri olarak düşünülmelidir. Doğasını [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi bir bağımlılık özelliği değer hakkında güvenlik Güvenceleri yapma yeteneğini engeller.  
-  
-  
+
 <a name="AccessSecurity"></a>   
 ## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>Erişim ve güvenlik sarmalayıcılar ve bağımlılık özellikleri  
  Bağımlılık özellikleri "sarmalayıcı" ile birlikte bu genellikle, uygulanan [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] bir örnekten özelliğini ayarlamanın ya kolaylaştıran özellikler. Ancak sarmalayıcılar temel alınan uygulayan yalnızca gerçekten kullanışlı yöntemler <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> bağımlılık özellikleri ile etkileşim kurulurken kullanılan statik çağrıları. Bunu, başka bir yolla düşünürsek, özellikleri olarak sunulan [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] bağımlılık özelliği yerine özel bir alan tarafından yedeklenmek için özellikleri. Sarmalayıcıları için uygulanan güvenlik mekanizmaları özellik sistemi davranışı ve temel alınan bağımlılık özelliğinin erişim paralel değil. Sarmalayıcı üzerinde bir güvenlik talebi yerleştirmeyi yalnızca kolaylık yöntemi kullanımını engeller ancak çağrıları önlemez <xref:System.Windows.DependencyObject.GetValue%2A> veya <xref:System.Windows.DependencyObject.SetValue%2A>. Benzer şekilde, yerleştirme korumalı veya özel erişim düzeyi sarmalayıcıları üzerinde herhangi bir geçerli güvenlik sağlamaz.  
@@ -40,4 +39,5 @@ Bağımlılık özellikleri genellikle ortak özellikleri olarak düşünülmeli
  İsteğe bağlı olarak uygulayarak bir <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> ve özellik ayarlanmasını önlemek için bir istek başarısız doğrulama hatası bekleniyor yeterli güvenlik mekanizması değil. Set-değer geçersiz kılma zorlanan aracılığıyla <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> bu Arayanların uygulama etki alanı içinde çalışıyorsanız zararlı çağıranlar tarafından da bastırılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)

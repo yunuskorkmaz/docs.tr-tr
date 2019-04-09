@@ -1,18 +1,18 @@
 ---
-title: CommittableTransaction kullanarak belirtik işlem uygulama
+title: CommittableTransaction Kullanarak Belirtik İşlem Uygulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 078102da95222d45bec82269edf1eb8e40866408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713147"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105423"
 ---
-# <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>CommittableTransaction kullanarak belirtik işlem uygulama
+# <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>CommittableTransaction Kullanarak Belirtik İşlem Uygulama
 <xref:System.Transactions.CommittableTransaction> Sınıfı sağlar sınıfını kullanarak bir işlem kullanmak uygulamalar için açık bir yol <xref:System.Transactions.TransactionScope> örtülü olarak sınıf. Birden fazla işlev çağrıları veya birden çok iş parçacığı çağrı aynı işlem kullanmak istediğiniz uygulamalar için yararlıdır. Farklı <xref:System.Transactions.TransactionScope> sınıfı, uygulama yazıcı gerekiyor özellikle çağrılacak <xref:System.Transactions.CommittableTransaction.Commit%2A> ve <xref:System.Transactions.Transaction.Rollback%2A> tamamlama veya işlem iptal için yöntemleri.  
   
 ## <a name="overview-of-the-committabletransaction-class"></a>CommittableTransaction sınıfı genel bakış  
@@ -86,5 +86,6 @@ void OnCommitted(IAsyncResult asyncResult)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İşlem Kapsamı Kullanarak Örtük İşlem Uygulama](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
 - [İşlem Gerçekleştirme](../../../../docs/framework/data/transactions/index.md)

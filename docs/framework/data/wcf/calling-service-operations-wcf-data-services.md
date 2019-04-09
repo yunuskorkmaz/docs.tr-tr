@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: c11fe4176ee770e39abcab612e26e496aa2a1457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ef00861624531e68ad5b8a3b080810040ae3ff6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109479"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Hizmet işlemleri çağırma (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Veri hizmeti için hizmet işlemleri tanımlar. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bu işlemler veri hizmetinde yöntemler olarak tanımlamanızı sağlar. Diğer veri hizmeti kaynaklarına gibi bu hizmet işlemleri URI'ler kullanarak ele alınır. Bir hizmet işlemi, ilkel türler, tamsayı ve dize gibi varlık türleri ve tek bir varlık türü örnekleri koleksiyonunu döndürebilir. Bir hizmet işlemi ayrıca döndürebilir `null` (`Nothing` Visual Basic'te). [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı, HTTP GET isteklerini destekleyen hizmet işlemlerine erişimi için kullanılabilir. Bu tür hizmet işlemleri sahip yöntemler olarak adlandırılır <xref:System.ServiceModel.Web.WebGetAttribute> uygulanır. Daha fazla bilgi için [hizmet işlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -125,4 +125,5 @@ ms.locfileid: "54543519"
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

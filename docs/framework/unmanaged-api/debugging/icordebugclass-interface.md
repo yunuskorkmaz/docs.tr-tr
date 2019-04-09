@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9beb8930143cbb0cc7dd8dd68a65b42d92563e31
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7e1ad830e728fbe764085a5808a48e4cacedc595
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133633"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass Arabirimi
 
@@ -53,4 +53,5 @@ Basit veya karmaşık (yani kullanıcı tarafından tanımlanmış) olabilecek b
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

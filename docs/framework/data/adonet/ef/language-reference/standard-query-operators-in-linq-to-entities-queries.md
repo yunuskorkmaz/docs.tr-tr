@@ -1,15 +1,15 @@
 ---
-title: LINQ to Entities sorgularında standart sorgu işleçleri
+title: LINQ to Entities Sorgularında Standart Sorgu İşleçleri
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 558ee35c433475bf3b2d5a3cdb4b24b612197c13
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118150"
 ---
-# <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities sorgularında standart sorgu işleçleri
+# <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities Sorgularında Standart Sorgu İşleçleri
 Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu, ayrıca nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtebilirsiniz. LINQ sorguda kullanabileceğiniz standart sorgu yöntem sunmaktadır. Bu yöntemlerin çoğu dizileri üzerinde çalışır; Bu bağlamda türü uygulayan bir nesne dizisidir <xref:System.Collections.Generic.IEnumerable%601> arabirimi veya <xref:System.Linq.IQueryable%601> arabirimi. Standart sorgu işleçleri sorgu işlevselliği, filtreleme, projeksiyon, toplama, sıralama, gruplandırma, sayfalama ve daha fazlasını içerir. Bazıları, standart sorgu işleçleri anahtar sözcüğü sözdizimi adanmış böylece sorgu ifade sözdizimi kullanılarak çağrılabilir sık kullanılır. Bir sorgu ifadesinde, bir sorgu yöntemi tabanlı eşdeğer daha ifade etmek için farklı, daha okunabilir bir yoludur. Sorgu ifadesi tümceleri sorgu yöntemlere yapılan çağrılar derleme zamanında çevrilir. Eşdeğer sorgu ifadesi tümceleri sahip standart sorgu işleçleri bir listesi için bkz. [standart sorgu işleçlerine genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
  Standart sorgu işleçlerinin tüm desteklenen [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. Daha fazla bilgi için [desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Bu konuda özgü standart sorgu işleçleri hakkında bilgi sağlanır [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Bilinen sorunlar hakkında daha fazla bilgi için [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgularını görmek [bilinen sorunlar ve dikkat edilmesi gerekenler LINQ to Entities'de](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
@@ -77,5 +77,6 @@ Bir sorgu, veri kaynağından almak istediğiniz bilgileri belirtin. Bir sorgu, 
  Disk belleği yöntemlerinin sayısı, söz konusu veri kaynağına veya olmaması veri kaynağındaki ayarlar örtük sıralama işlevleri eşlemek için ya da son desteklenmez. Varsayılan bir değer döndüren yöntemler kavramsal model ilkel türler ve null Varsayılanları başvuru türleriyle kısıtlanır. Boş bir dizi üzerinde yürütülen disk belleği yöntemlerinin null döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
 - [Standart Sorgu İşleçlerine Genel Bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

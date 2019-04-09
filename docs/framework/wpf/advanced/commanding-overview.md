@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 1e756aa633ddf87267baa1fc52343a0b7570f753
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379087"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139041"
 ---
 # <a name="commanding-overview"></a>Komut Vermeye Genel Bakış
 <a name="introduction"></a> Komut vermeye genel olan bir giriş mekanizmasında [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] cihaz girişi daha fazla anlam düzeyinde işleme giriş sağlar. Komut örneklerindendir **kopyalama**, **Kes**, ve **Yapıştır** operations birçok uygulama üzerinde bulunamadı.  
@@ -184,12 +184,13 @@ ms.locfileid: "57379087"
  Özel bir oluşturma örneği için <xref:System.Windows.Input.RoutedCommand>, bkz: [örnek bir özel RoutedCommand oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Input.RoutedCommand>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Input.InputBinding>
 - <xref:System.Windows.Input.CommandManager>
 - [Girişe Genel Bakış](input-overview.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
 - [ICommandSource Uygulama](how-to-implement-icommandsource.md)
 - [Nasıl yapılır: MenuItem için bir komut ekleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
 - [Örnek bir özel RoutedCommand oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

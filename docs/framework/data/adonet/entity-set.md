@@ -1,15 +1,15 @@
 ---
-title: Varlık kümesi
+title: entity set
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: d75002d4a5ac55538f76e6bace0fc16095a9ef74
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7fcaa2cb9bac02271940a712d4d044df25d7d4cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126626"
 ---
-# <a name="entity-set"></a>Varlık kümesi
+# <a name="entity-set"></a>entity set
 Bir *varlık kümesi* için mantıksal bir kapsayıcıdır örneklerini bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) ve bu varlık türünden türetilmiş herhangi bir tür örneği. (Türetilen türleri hakkında daha fazla bilgi için bkz. [varlık veri modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Bir varlık türü ve bir varlık kümesi arasındaki ilişki, satır ve ilişkisel bir veritabanındaki bir tablo arasındaki ilişkiyi benzerdir: Bir satır gibi bir varlık türü, veri yapısını açıklar ve bir tablo gibi belirli bir yapının örneği bir varlık kümesini içerir. Bir varlık kümesindeki bir veri yapısı modelleme değil; verilerin yapısını açıklamaz. Bir veri deposuna eşlenebilir bunun yerine, bir varlık kümesindeki bir yapısı (örneğin, ortak dil çalışma zamanı veya bir SQL Server veritabanı) barındıran veya depolama ortamı için Grup varlık türü örneklerine sağlar.  
   
  Bir varlık kümesi içinde tanımlanan bir [varlık kapsayıcısı](../../../../docs/framework/data/adonet/entity-container.md), varlık kümelerini mantıksal bir gruplandırması olan ve [ilişki Setleri](../../../../docs/framework/data/adonet/association-set.md).  
@@ -45,5 +45,6 @@ Bir *varlık kümesi* için mantıksal bir kapsayıcıdır örneklerini bir [var
  [!code-xml[EDM_Example_Model#MESTExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#mestexample)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

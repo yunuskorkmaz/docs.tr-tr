@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Kısmi güven senaryolarında kod yayma'
+title: 'İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0e9e4aaef8e5f9ece88f56350065b2b688ba2a93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101568"
 ---
-# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>İzlenecek yol: Kısmi güven senaryolarında kod yayma
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma
 Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak bazı özellikler kısmen güvenilen kodda özel izinler gerektirir. Ayrıca, yansıma yayılımı, güvenlikli saydam derlemeler tarafından kısmi güven ile kullanılmak üzere tasarlanmış bir özelliği, anonim olarak barındırılan dinamik yöntemler vardır.  
   
 > [!NOTE]
@@ -212,5 +212,6 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
 -   Bu kod örneği Visual Studio'da derleme yaparsanız, kendisine geçirdiğiniz ad alanını katmak için sınıf adını değiştirmeniz gerekir <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> yöntemi. Varsayılan olarak, ad alanı projenin adıdır. Örneğin, proje "PartialTrust" ise, sınıf adı "PartialTrust.Worker" olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yansıma Yaymadaki Güvenlik Sorunları](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

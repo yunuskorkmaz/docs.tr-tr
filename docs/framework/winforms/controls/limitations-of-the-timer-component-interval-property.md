@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: f564a4ce7fa2d9b8ea5446f2cf6bd016db054dd9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 54782c4e0460ba1ba9b8a870b8f60f08a76340b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125178"
 ---
 # <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Windows Forms Süreölçer Bileşeninin Aralık Özelliğiyle İlgili Sınırlamalar
 Windows Forms <xref:System.Windows.Forms.Timer> bileşeniyse bir <xref:System.Windows.Forms.Timer.Interval%2A> özelliği bir süreölçer olayı ve sonraki arasında geçen milisaniye sayısını belirtir. Bileşen devre dışı bırakılmadığı sürece, bir zamanlayıcı almaya devam ettiğinden <xref:System.Windows.Forms.Timer.Tick> zaman kabaca eşit aralıklarla olay.  
@@ -29,6 +29,7 @@ Windows Forms <xref:System.Windows.Forms.Timer> bileşeniyse bir <xref:System.Wi
 -   Duyarlığını <xref:System.Windows.Forms.Timer.Interval%2A> milisaniye cinsinden bir özelliktir. Bazı bilgisayarlar, bir milisaniyeden daha yüksek çözünürlüğe sahip yüksek çözünürlüklü bir sayaç belirtin. Böyle bir sayaç kullanılabilirliğini bilgisayarınızın işlemci donanımda bağlıdır.
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Timer>
 - [Süreölçer Bileşeni](timer-component-windows-forms.md)
 - [Süreölçer Bileşenine Genel Bakış](timer-component-overview-windows-forms.md)

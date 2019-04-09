@@ -2,12 +2,12 @@
 title: Performansla ilgili önemli noktalar (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 4b6d3d4dbf801a7b0cc378482ad4d0d29a915be3
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
-ms.translationtype: MT
+ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087956"
 ---
 # <a name="performance-considerations-entity-framework"></a>Performansla ilgili önemli noktalar (varlık çerçevesi)
 Bu konu, ADO.NET varlık çerçevesi performans özelliklerini açıklar ve Entity Framework uygulamalarının performansını artırmak için bazı değerlendirmeleri sağlar.  
@@ -111,7 +111,7 @@ Bu konu, ADO.NET varlık çerçevesi performans özelliklerini açıklar ve Enti
 ### <a name="saving-changes"></a>Değişiklikler kaydediliyor  
  Çağırdığınızda <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> metodunda bir <xref:System.Data.Objects.ObjectContext>, ayrı create, update veya delete komutu her eklenen, güncelleştirilen veya silinen nesnenin bağlamında oluşturulur. Bu komutlar, tek bir işlemde veri kaynağı üzerinde yürütülür. Sorgularla performansını oluşturma, güncelleştirme ve silme işlemleri gibi kavramsal model eşlemede karmaşıklığına bağlıdır.  
   
-### <a name="distributed-transactions"></a>Dağıtılmış işlemler  
+### <a name="distributed-transactions"></a>Dağıtılmış İşlemler  
  Dağıtılmış İşlem Düzenleyicisi (DTC) tarafından yönetilen kaynaklara gerektiren işlem açık bir işlemde DTC gerektirmeyen benzer bir işlem çok daha pahalı olur. DTC yükseltmesine aşağıdaki durumlarda oluşur:  
   
 -   Her zaman bir işlem bir SQL Server 2000 veritabanı veya başka bir veri kaynağı ile açık bir işlem DTC için açık işlemleri tanıtın.  
@@ -154,4 +154,5 @@ Bu konu, ADO.NET varlık çerçevesi performans özelliklerini açıklar ve Enti
 -   [ADO.NET Entity Framework performans karşılaştırması](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Geliştirme ve Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], creating with RectangleGeometry class
 ms.assetid: e40b8a8e-54b8-416b-a9f2-be6dca9fdf0b
-ms.openlocfilehash: bd42aca2541d67469173f63655ada18a12eb692c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 146ca7017ee38ad5c1065e59662ac441e7bfbfe2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075802"
 ---
 # <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>Nasıl yapılır: RectangleGeometry Kullanarak Dikdörtgen Tanımlama
 Bu örnek nasıl kullanılacağını açıklar <xref:System.Windows.Media.RectangleGeometry> dikdörtgen açıklamak için sınıf.  
@@ -34,6 +34,7 @@ RectangleGeometry
  Diğer basit geometri sınıfları <xref:System.Windows.Media.LineGeometry> ve <xref:System.Windows.Media.EllipseGeometry>. Daha karmaşık olanları yanı sıra bu geometriler ayrıca kullanılarak oluşturulabilir bir <xref:System.Windows.Media.PathGeometry> veya <xref:System.Windows.Media.StreamGeometry>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Geometriye Genel Bakış](geometry-overview.md)
 - [Bileşik Şekil Oluşturma](how-to-create-a-composite-shape.md)
 - [PathGeometry Kullanarak Şekil Oluşturma](how-to-create-a-shape-by-using-a-pathgeometry.md)

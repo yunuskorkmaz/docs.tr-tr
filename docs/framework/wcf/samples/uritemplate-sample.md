@@ -2,12 +2,12 @@
 title: UriTemplate Örneği
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
-ms.openlocfilehash: 565e01fd591149e7eefb7e125b917ddb9acccbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0d0fa339cb4c8feab3c8341b4508826ca75d4259
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083783"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate Örneği
 <xref:System.UriTemplate> Sınıfı, ortak bir yapıya sahiptir URI'ler kümesi ile çalışmak için yöntemler sağlar. Bu örnek, ilgili aşağıdaki temel kavramları gösterir `UriTemplate`:  
@@ -34,5 +34,6 @@ ms.locfileid: "54735483"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplate`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [UriTemplate Tablosu](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
 - [UriTemplate Tablosu Dağıtıcısı](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

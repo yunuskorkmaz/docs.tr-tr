@@ -1,18 +1,18 @@
 ---
-title: Bir dosyadan görüntü ekleme
+title: Dosyadan Görüntü Ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 8df63cb425f8e113a73fee1b0a6bd61683ed27ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116236"
 ---
-# <a name="inserting-an-image-from-a-file"></a>Bir dosyadan görüntü ekleme
+# <a name="inserting-an-image-from-a-file"></a>Dosyadan Görüntü Ekleme
 İkili büyük nesne (BLOB), bir veritabanına veri kaynağınızın alanına türüne bağlı olarak ikili veya karakter verileri olarak yazabilirsiniz. Blobudur başvurduğu genel bir terim `text`, `ntext`, ve `image` genellikle belgeler ve resimler içeren veri türleri.  
   
  Veritabanınız için bir BLOB değeri yazmak için uygun INSERT nebo UPDATE deyimi yayımlayın ve giriş parametresi olarak BLOB değeri geçirin (bkz [yapılandırma parametreleri ve parametre veri türlerini](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). SQL Server gibi bir metin olarak BLOBUNUZA depolanıyorsa `text` alan, bir dize parametresi BLOB iletebilir. SQL Server gibi ikili biçimde BLOB depolanıyorsa `image` alan, bir dizi türü iletebilir `byte` ikili bir parametre olarak.  
@@ -131,6 +131,7 @@ public static byte[] GetPhoto(string filePath)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Verileri Değiştirmek için Komutları Kullanma](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
 - [İkili Verileri Alma](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
 - [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)

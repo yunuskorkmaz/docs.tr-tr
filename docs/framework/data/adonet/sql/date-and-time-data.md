@@ -1,25 +1,25 @@
 ---
-title: Tarih ve saat verileri
+title: Tarih ve Saat Verileri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127120"
 ---
-# <a name="date-and-time-data"></a>Tarih ve saat verileri
+# <a name="date-and-time-data"></a>Tarih ve Saat Verileri
 SQL Server 2008, tarih ve saat bilgilerini işlemek için yeni veri türlerini tanıtır. Yeni veri türleri, tarih ve saat için farklı türler ve büyük aralığı, hassasiyet ve saat dilimini tanıma ile genişletilmiş veri türleri içerir. İle .NET Framework sürüm 3.5 Service Pack 1, SQL Server için .NET Framework veri sağlayıcısı (SP) Başlangıç (<xref:System.Data.SqlClient>) SQL Server 2008 veritabanı altyapısı için yeni özellikler hakkında tam destek sağlar. .NET Framework 3.5 SP1'i yüklemeniz gerekir (veya üzeri) ile SqlClient bu yeni özellikleri kullanmak için.  
   
  İki veri türü yalnızca olduğu tarih ve saat değerleri ile çalışmak için SQL Server 2008'den önceki SQL Server sürümleri: `datetime` ve `smalldatetime`. Bu iki veri türü, hem tarih değeri hem de yalnızca tarih veya saat değerleri ile çalışmak zorlaştırır bir saat değeri içerir. Ayrıca, bu veri türlerini, yalnızca giriş Gregoryen takviminin İngiltere'deki 1753 sonra gerçekleşen tarihleri destekler. Bu eski veri türleri saat dilimi olmayan başka bir sınırlamadır kullanan, birden çok zaman bölgelerinden kaynaklanan verilerle çalışmak zorlaştıran.  
   
  SQL Server veri türleri için kapsamlı belgeler, SQL Server Books Online içinde kullanılabilir. Aşağıdaki tablo, tarih ve saat verileri için sürüme özgü giriş düzeyi konuları listeler.  
   
- **SQL Server Çevrimiçi Kitapları**  
+ **SQL Server Çevrimiçi Kitaplar**  
   
 1.  [Tarih ve saat verilerini kullanma](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
@@ -99,7 +99,7 @@ Veri türünü belirleyebileceğiniz bir <xref:System.Data.SqlClient.SqlParamete
 >  Sıfır veya daha büyük veya eşittir 24 saat daha az zaman değerler oluşturur bir <xref:System.ArgumentException>.  
   
 ### <a name="creating-parameters"></a>Parametreleri oluşturma  
- Oluşturabileceğiniz bir <xref:System.Data.SqlClient.SqlParameter> nesnesi oluşturucusuna kullanarak ya da ekleyerek bir <xref:System.Data.SqlClient.SqlCommand> <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> çağırarak koleksiyonu `Add` yöntemi <xref:System.Data.SqlClient.SqlParameterCollection>. `Add` Yöntemi olarak alacağınız oluşturucu bağımsız değişkenleri veya var olan bir parametre nesnesi girin.  
+ Oluşturabileceğiniz bir <xref:System.Data.SqlClient.SqlParameter> nesnesi oluşturucusuna kullanarak ya da ekleyerek bir <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> çağırarak koleksiyonu `Add` yöntemi <xref:System.Data.SqlClient.SqlParameterCollection>. `Add` Yöntemi olarak alacağınız oluşturucu bağımsız değişkenleri veya var olan bir parametre nesnesi girin.  
   
  Bu konunun sonraki bölümlerinde, tarih ve saat parametreleri belirtmek örnekler sağlar. Parametreler ile çalışmaya ilişkin ek örnekler için bkz. [yapılandırma parametreleri ve parametre veri türlerini](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) ve [DataAdapter parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
@@ -191,7 +191,7 @@ command.Parameters.AddWithValue( _
 |CLR türü|Çıkarsanan SqlDbType|  
 |--------------|------------------------|  
 |DateTime|SqlDbType.DateTime|  
-|Zaman aralığı|SqlDbType.Time|  
+|TimeSpan|SqlDbType.Time|  
 |DateTimeOffset|SqlDbType.DateTimeOffset|  
   
 ## <a name="retrieving-date-and-time-data"></a>Tarih ve saat verilerini alma  
@@ -240,6 +240,7 @@ command.Parameters.AddWithValue( _
 |[Veri türleri (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008 sistem veri türlerini tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [SQL Server Veri Türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: d67da4cedc4bd9bad468197db4a2ad60d054894a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 34abe6b07cebc446324785bde1061c7aa2b04e4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115927"
 ---
 # <a name="wcf-client-overview"></a>WCF İstemcisi Genel Bakış
 Bu bölümde, istemci uygulamaları neler, yapılandırma, oluşturma ve bir Windows Communication Foundation (WCF) istemci kullanın ve istemci uygulamalarının güvenliğini nasıl açıklanmaktadır.  
@@ -131,7 +131,7 @@ End Interface
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
-## <a name="handling-errors"></a>Hataları işleme  
+## <a name="handling-errors"></a>Hataları İşleme  
  Özel durumlar, bir istemci uygulamasında gerçekleşebilir, temel alınan istemcinin açma kanal olduğunda (açıkça veya otomatik olarak bir işlem çağırarak), işlemleri çağırmak için istemci veya kanal nesnesini kullanarak ya da temel alınan istemci Kanal kapatılırken. En azından uygulamaları olası işlemek beklemeniz önerilir <xref:System.TimeoutException?displayProperty=nameWithType> ve <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> herhangi ek olarak özel durumlar <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> işlemleri tarafından dönen SOAP hatalarının sonucu olarak oluşturulan nesneleri. İstemci uygulamalar için işlem sözleşmede belirtilen SOAP hataları oluştuğunda bir <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> tür parametresi, bir SOAP hatası ayrıntı türü olduğu. Bir istemci uygulamasında hata koşullarını işleme hakkında daha fazla bilgi için bkz. [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md). Bir istemci hataları işlemek nasıl gösterir eksiksiz bir örnek için bkz: [beklenen özel durumlar](../../../docs/framework/wcf/samples/expected-exceptions.md).  
   
 ## <a name="configuring-and-securing-clients"></a>Yapılandırma ve istemcileri güvenli hale getirme  
@@ -172,5 +172,6 @@ End Interface
  WCF istemci türleri genişleten <xref:System.ServiceModel.ClientBase%601>, kendisi türetilir <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> arka plandaki kanal sistem kullanıma sunmak için arabirim. Hedef hizmet söyleşmesi kullanarak Hizmetleri çağırabilirsiniz <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> sınıfı. Ayrıntılar için bkz [WCF istemci mimarisi](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

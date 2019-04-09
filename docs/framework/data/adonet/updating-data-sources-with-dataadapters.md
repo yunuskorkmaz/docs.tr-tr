@@ -1,18 +1,18 @@
 ---
-title: Veri kaynaklarını DataAdapters ile güncelleştirme
+title: Veri Kaynaklarını DataAdapters ile Güncelleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 6989204fac64fc18cae547e272f6d52004c3af69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153601"
 ---
-# <a name="updating-data-sources-with-dataadapters"></a>Veri kaynaklarını DataAdapters ile güncelleştirme
+# <a name="updating-data-sources-with-dataadapters"></a>Veri Kaynaklarını DataAdapters ile Güncelleştirme
 `Update` Yöntemi <xref:System.Data.Common.DataAdapter> değişikliklerden çözümlemek için çağrılan bir <xref:System.Data.DataSet> veri kaynağına geri dönün. `Update` Yöntemi gibi `Fill` yöntemi örneği bağımsız değişken olarak alan bir `DataSet`ve isteğe bağlı <xref:System.Data.DataTable> nesne veya `DataTable` adı. `DataSet` Örneği `DataSet` yapılmış, değişiklikleri içeren ve `DataTable` değişiklikleri alınacak tabloyu tanımlar. Hayır ise `DataTable` belirtilirse, ilk `DataTable` içinde `DataSet` kullanılır.  
   
  Çağırdığınızda `Update` yöntemi `DataAdapter` yapmış olduğunuz değişiklikleri analiz eder ve (INSERT, UPDATE veya DELETE) uygun komutu yürütür. Zaman `DataAdapter` değişiklik karşılaştığında bir <xref:System.Data.DataRow>, kullandığı <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, veya <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> değişiklik işlemek için. Bu sayede tasarım zamanında komut sözdizimi belirtilerek ADO.NET uygulamanızın performansını en üst düzeye çıkarmak ve mümkün olduğunda, saklı yordamları kullanarak. Açıkça çağırmadan önce komutları ayarlanmalıdır `Update`. Varsa `Update` çağrılır ve uygun komutu için belirli bir güncelleştirmenin mevcut değil (örneğin, Hayır `DeleteCommand` silinen satırları), bir özel durum oluşturulur.  
@@ -369,6 +369,7 @@ class Program {
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Satır Durumları ve Satır Sürümleri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
 - [AcceptChanges ve RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)

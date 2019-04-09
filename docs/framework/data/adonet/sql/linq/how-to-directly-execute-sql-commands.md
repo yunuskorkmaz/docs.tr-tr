@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Doğrudan SQL komutları yürütme'
+title: 'Nasıl yapılır: Doğrudan SQL Komutları Yürütme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 04671bb0-40c0-4465-86e5-77986f454661
-ms.openlocfilehash: 0ca62c0affc282140eb36979baafb8e3f9c89c35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eeac6272f176ac8e780b72b0076d032ad9e8f108
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078908"
 ---
-# <a name="how-to-directly-execute-sql-commands"></a>Nasıl yapılır: Doğrudan SQL komutları yürütme
+# <a name="how-to-directly-execute-sql-commands"></a>Nasıl yapılır: Doğrudan SQL Komutları Yürütme
 Varsayılarak bir <xref:System.Data.Linq.DataContext> kullanabileceğiniz bağlantısı <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> nesneleri döndürmeyen SQL komutları yürütmek için.  
   
 ## <a name="example"></a>Örnek  
@@ -22,5 +22,6 @@ Varsayılarak bir <xref:System.Data.Linq.DataContext> kullanabileceğiniz bağla
  [!code-vb[DLinqCommunicatingWithDatabase#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Doğrudan SQL sorguları yürütme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)
+
+- [Nasıl yapılır: Doğrudan SQL Sorguları Yürütme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)
 - [Veritabanı ile İletişim Kurma](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)

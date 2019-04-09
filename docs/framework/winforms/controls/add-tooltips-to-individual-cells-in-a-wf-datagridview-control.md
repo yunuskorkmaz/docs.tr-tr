@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms DataGridView denetiminde ayrı hücrelere ToolTips ekleme'
+title: 'Nasıl yapılır: Bir Windows Forms DataGridView Denetiminde Ayrı Hücrelere ToolTips Ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-ms.openlocfilehash: 5198bec11142e31d60f9127ecebc4ffc8ee8b8ec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3307c92a13e5730de6dce0fe45b924e44b7af554
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119645"
 ---
-# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Nasıl yapılır: Bir Windows Forms DataGridView denetiminde ayrı hücrelere ToolTips ekleme
+# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Nasıl yapılır: Bir Windows Forms DataGridView Denetiminde Ayrı Hücrelere ToolTips Ekleme
 Varsayılan olarak, araç ipuçları değerlerini görüntülemek için kullanılan <xref:System.Windows.Forms.DataGridView> tüm içerikleri göstermek için çok küçük hücreleri. Ancak, tek tek hücrelere araç ipucu metin değerlerini ayarlamak için bu davranış, kılabilirsiniz. Bu, kullanıcıların bir hücre hakkında ek bilgi görüntülemek veya kullanıcılara hücre içeriğini başka bir açıklamasını sağlamak için kullanışlıdır. Örneğin, durum simgelerini görüntüleyen bir satır varsa, araç ipuçlarını kullanarak metin açıklamaları sağlamak isteyebilirsiniz.  
   
  Ayarlayarak da hücre düzeyinde araç ipuçlarının görüntülenmesini devre dışı bırakabilirsiniz <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType> özelliğini `false`.  
@@ -42,6 +42,7 @@ Varsayılan olarak, araç ipuçları değerlerini görüntülemek için kullanı
  Bağladığınızda <xref:System.Windows.Forms.DataGridView> denetlemek için bir dış veri kaynağına veya sanal modu uygulama tarafından kendi veri kaynağı sağlamak için performans sorunlarıyla karşılaşabilirsiniz. Büyük miktarlarda veri ile çalışırken, bir performans cezasını önlemek için tanıtıcı <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> ayar yerine olay <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> birden çok hücre özelliği. Ne zaman ele bu olay bir hücrenin değerini alma <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> özelliği olayını başlatır ve değerini döndürür <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> özelliği olarak belirtilen olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded?displayProperty=nameWithType>

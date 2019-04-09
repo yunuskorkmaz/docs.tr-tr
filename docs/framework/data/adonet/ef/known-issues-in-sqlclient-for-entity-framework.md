@@ -1,15 +1,15 @@
 ---
-title: Entity Framework için sqlclient'ta bilinen sorunlar
+title: Entity Framework için SqlClient’ta Bilinen Sorunlar
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 112c11edd3955f2bdc6d2b0510e385d4560b80ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073812"
 ---
-# <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework için sqlclient'ta bilinen sorunlar
+# <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework için SqlClient’ta Bilinen Sorunlar
 Bu bölümde, .NET Framework veri sağlayıcısı için SQL Server (SqlClient) ilgili bilinen sorunlar açıklanmaktadır.  
   
 ## <a name="trailing-spaces-in-string-functions"></a>Dize işlevleri boşluk  
@@ -60,5 +60,6 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Destekleyen sunucu tarafından oluşturulan GUID türü kimlik değerleri, ancak sağlayıcı desteklemelidir bir satır takıldıktan sonra sunucu tarafından oluşturulan kimlik değeri döndürüyor. SQL Server 2005 ile başlayarak, bir SQL Server veritabanında sunucu tarafından oluşturulan GUID türü döndürebilir [OUTPUT yan tümcesi](https://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
 - [LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

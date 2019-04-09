@@ -1,5 +1,5 @@
 ---
-title: Zaman uyumsuz istemci yuvası kullanma
+title: Zaman Uyumsuz İstemci Yuvası Kullanma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 54a8209c7dee2d1c26b4a66223b5f727d7765c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d7020b6bc5049101ec08329d53d966771e38035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497452"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168902"
 ---
-# <a name="using-an-asynchronous-client-socket"></a>Zaman uyumsuz istemci yuvası kullanma
+# <a name="using-an-asynchronous-client-socket"></a>Zaman Uyumsuz İstemci Yuvası Kullanma
 Zaman uyumsuz istemci yuvası ağ işlemlerinin tamamlanması beklenirken uygulama askıya almaz. Bunun yerine, ağ bağlantısı bir iş parçacığı üzerinde uygulama özgün iş parçacığı üzerinde çalışmaya devam ederken işlemek için standart .NET Framework zaman uyumsuz programlama modeli kullanır. Zaman uyumsuz yuva, ağ kullanımı yoğun oluşturan veya devam etmeden önce tamamlamak ağ işlemleri için sabırsızlanıyoruz uygulamalar için uygundur.  
   
  <xref:System.Net.Sockets.Socket> Sınıfı aşağıdaki gibi .NET Framework adlandırma deseni için zaman uyumsuz yöntemler; Örneğin, zaman uyumlu <xref:System.Net.Sockets.Socket.Receive%2A> yöntemi karşılık gelen için zaman uyumsuz <xref:System.Net.Sockets.Socket.BeginReceive%2A> ve <xref:System.Net.Sockets.Socket.EndReceive%2A> yöntemleri.  
@@ -286,6 +286,7 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Zaman Uyumlu İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)
 - [Zaman Uyumsuz İstemci Yuvası Örneği](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)

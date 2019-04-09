@@ -1,13 +1,13 @@
 ---
-title: <certificateReference> için <identity>
+title: <certificateReference> for <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 44bfb2fd77c4f4db6f7fede296b1cdb74e8d5e7c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b7779ac00c2fca6300c12ac18ff2d5f6b868424
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138820"
 ---
 # <a name="certificatereference-for-identity"></a>\<certificateReference > için \<kimliği >
 X.509 Sertifika doğrulama ayarlarını belirtir. Bu kimlik ile bir uç noktayı bağlayan güvenli bir Windows Communication Foundation (WCF) istemci, sunucu tarafından sunulan istemlerin, bu kimliği oluşturmak için kullanılan kimlik talebi içerdiğini doğrular.  
@@ -49,6 +49,7 @@ X.509 Sertifika doğrulama ayarlarını belirtir. Bu kimlik ile bir uç noktayı
 |[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Onunla mesaj alışverişleri diğer uç noktalar tarafından bir uç nokta kimlik doğrulaması etkinleştiren ayarları belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.CertificateReferenceElement>
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>

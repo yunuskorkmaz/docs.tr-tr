@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 0529f112192fa64746d8c6dc7a49433b33bafbf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133792"
 ---
 # <a name="schema-import-and-export"></a>Şema İçeri ve Dışarı Aktarma
 Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve XML (her iki yönde). Serileştirici kendisini ek olarak, WCF, ilişkili şema içeri ve dışarı aktarma mekanizması şema içerir. *Şema* seri hale getirici üretir veya seri durumdan çıkarıcı erişip XML şeklini resmi, kesin ve makine tarafından okunabilir bir açıklaması. WCF World Wide Web Consortium (W3C) XML Şeması Tanım Dili (XSD) çok sayıda üçüncü taraf platformlarıyla çalışabilen yaygın olarak, şema gösterimi olarak kullanır.  
@@ -60,8 +60,9 @@ Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <
  Kullanma hakkında daha fazla bilgi için <xref:System.Runtime.Serialization.XsdDataContractExporter>, bkz: [sınıflardan Şemaları dışarı aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
-- [Sınıf Oluşturmak için Şemayı İçeri Aktarma](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
-- [Sınıflardan Şemaları Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [Sınıf Oluşturmak için Şemayı İçe Aktarma](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
+- [Sınıflardan Şemaları Dışa Aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)

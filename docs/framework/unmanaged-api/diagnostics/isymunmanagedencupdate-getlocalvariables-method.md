@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedENCUpdate::GetLocalVariables Metodu
+title: ISymUnmanagedENCUpdate::GetLocalVariables Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedENCUpdate.GetLocalVariables
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44b30d571e6786ad840308a21fb185270c6e5ae7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16e91a0c748e5b148e79dc73cf213b03c68c5021
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103759"
 ---
-# <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables Metodu
+# <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables Yöntemi
 Yerel değişkenlerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -58,4 +58,5 @@ HRESULT GetLocalVariables(
  **Üst bilgi:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ISymUnmanagedENCUpdate Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

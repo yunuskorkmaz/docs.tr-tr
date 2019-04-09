@@ -2,12 +2,12 @@
 title: Eş Kanalı Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
-ms.openlocfilehash: 09979cee48522355631c79e0bdf4c0fba6be782e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129460"
 ---
 # <a name="peer-channel-security"></a>Eş Kanalı Güvenliği
 Eş kanalı, çeşitli misyonumuz mesajlaşmayı bağlı olan dağıtılmış uygulama türleri sağlar. Burada güvenilen bir kaynak içerik (örneğin, medya veya yazılım güncelleştirmeleri) dağıtır, Internet ölçekli içerik dağıtımı bazı örnekler bir arkadaş grubuyla exchange müzik ve fotoğraf veya iş arkadaşlarınız, takım işbirliği içinde bir belgeyi Düzenle. Bu senaryoların her biri, benzersiz güvenlik modeli gerektirir. Eş kanal güvenlik modeli, bu senaryoları için tasarlanan ve ilgili farklı kimlik, kimlik doğrulama ve yetkilendirme modeli ihtiyaçları için bir güvenlik modeli sağlar.  
@@ -34,6 +34,7 @@ Eş kanalı, çeşitli misyonumuz mesajlaşmayı bağlı olan dağıtılmış uy
  Uygulama belirteci desteklenen türlerden biri seçtiği sürece eş kanallı belirli kimlik modeli gerektirmez. Uygulamalar bu kimlikler ve kimlik doğrulama kararları yaşam döngüsünü tamamen aittir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Eş Kanalı Uygulamalarını Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
 - [Eş Kanal Kavramları](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
 - [Eş Kanal Uygulaması Oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

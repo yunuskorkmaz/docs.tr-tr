@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], rounding corners of RectangleGeometry objects [WPF]
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
-ms.openlocfilehash: f00d7a7cd6117318efb17645bbb9df279c97adff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb2f173bedb903e12b2795264c684524cfa09825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089139"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Nasıl yapılır: RectangleGeometry'nin Köşelerini Yuvarlama
 Köşelerini yuvarlatmak için bir <xref:System.Windows.Media.RectangleGeometry>ayarlayın, <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> ve <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> sıfırdan büyük bir değere özellikleri. Daha büyük değerler, yuvarlaklaşır dikdörtgenin köşelerini.  
@@ -26,6 +26,7 @@ Köşelerini yuvarlatmak için bir <xref:System.Windows.Media.RectangleGeometry>
 Yuvarlak köşeli dikdörtgen  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Geometriye Genel Bakış](geometry-overview.md)
 - [Bileşik Şekil Oluşturma](how-to-create-a-composite-shape.md)
 - [PathGeometry Kullanarak Şekil Oluşturma](how-to-create-a-shape-by-using-a-pathgeometry.md)

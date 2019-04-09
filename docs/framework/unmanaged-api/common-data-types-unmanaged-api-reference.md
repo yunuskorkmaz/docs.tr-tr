@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98b83abce36b6e8a66ec3580af109b66b7ae09d8
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131176"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Ortak Veri Türleri (Yönetilmeyen API Başvurusu)
 Bu konu yönetilmeyen API'ları tarafından kullanılan .NET Framework için C/C++ tarafından tanımlanan basit veri türleri listeler `typedef` deyimleri. Bu veri türleri, genellikle C/C++ ilkel veri türleri diğer adlarıdır. Genellikle, bu veri türlerinin donuk değerlerdir; Böylece diğer işlevleri veya yöntemleri yapmadan geçirilebilir diğer bir deyişle, bunlar belirli bir işlevi veya yöntemi tarafından döndürülür.  
@@ -40,4 +40,5 @@ Bu konu yönetilmeyen API'ları tarafından kullanılan .NET Framework için C/C
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Yönetilen iş parçacığı tanıtıcısı.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönetilmeyen API Başvurusu](../../../docs/framework/unmanaged-api/index.md)

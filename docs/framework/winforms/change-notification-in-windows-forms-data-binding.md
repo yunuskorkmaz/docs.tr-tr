@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: cea6cab76a12d6dbfdc741b426b67859e0e5141e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097583"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows Forms Veri Bağlamada Bildirimi Değiştirme
 Bir Windows Forms veri bağlamanın en önemli kavramları *bildirimi değiştirme*. Bağlama denetimleri ve veri kaynağı her zaman en son veri sağlamak için veri bağlama için değişiklik bildirimi eklemeniz gerekir. Özellikle ilişkili denetimler, veri kaynağına yapılan değişikliklerin bildirilmesini güvence altına almak istediğiniz ve veri kaynağına bağlı bir denetim özelliklerine yapılan değişiklikler, bildirilir.  
@@ -33,6 +33,7 @@ Bir Windows Forms veri bağlamanın en önemli kavramları *bildirimi değiştir
  Denetim taraftan, son olarak ortaya koymalıdır bir *PropertyName*verilere bağlı için tasarlanmış her bir özellik için değiştirilen olay. Denetim özelliği değişiklikleri daha sonra bağlı veri kaynağına yayılır. Daha fazla bilgi için [nasıl yapılır: PropertyNameChanged desenini uygulama](how-to-apply-the-propertynamechanged-pattern.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>

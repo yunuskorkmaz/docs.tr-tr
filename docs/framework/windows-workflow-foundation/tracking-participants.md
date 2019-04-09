@@ -1,18 +1,18 @@
 ---
-title: İzleme katılımcıları
+title: İzleme Katılımcıları
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138833"
 ---
-# <a name="tracking-participants"></a>İzleme katılımcıları
+# <a name="tracking-participants"></a>İzleme Katılımcıları
 İzleme katılımcıları erişmek bir iş akışı Geliştirici tanıyan genişletilebilirlik noktaları olan <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> nesneleri ve bunları işlem. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan standart izleme katılımcı içerir. Gereksinimlerinizi karşılamıyorsa, özel izleme katılımcı de yazabilirsiniz.  
   
-## <a name="tracking-participants"></a>İzleme katılımcıları  
+## <a name="tracking-participants"></a>İzleme Katılımcıları  
  Katılımcı bir kayıt alt kümesi için abone olabilirsiniz, izleme altyapısı üzerinde giden izleme kayıtları bir filtre uygulamayı sağlar. Bir filtre uygulamak için bir izleme profili mekanizmadır.  
   
  Windows Workflow Foundation (WF) [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] izleme kayıtları bir ETW oturumu Yazar izleme katılımcı sağlar. Katılımcı bir iş akışı hizmeti yapılandırma dosyasında bir izleme özgü davranışı ekleyerek yapılandırılır. Etkinleştirme bir ETW İzleme katılımcı olacak şekilde kayıtları izleme Olay Görüntüleyicisi'görüntülemesini sağlar. ETW tabanlı izleme için SDK'sı örneği ile tabanlı ETW İzleme katılımcı kullanarak WF izleme hakkında bilgi edinmek için iyi bir yoludur.  
@@ -141,5 +141,6 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)

@@ -1,18 +1,18 @@
 ---
-title: Dizideki öğeleri grubu
+title: Dizideki Öğeleri Gruplama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 352951c4ee6a96e0bf91b583ad61b431f490a624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d812ae9b5fd0a796588d3366b8546ef84c982c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089930"
 ---
-# <a name="group-elements-in-a-sequence"></a>Dizideki öğeleri grubu
+# <a name="group-elements-in-a-sequence"></a>Dizideki Öğeleri Gruplama
 <xref:System.Linq.Enumerable.GroupBy%2A> İşleci bir dizi öğelerini gruplandırır. Aşağıdaki örnekler, Northwind veritabanı kullanır.  
   
 > [!NOTE]
@@ -73,5 +73,6 @@ ms.locfileid: "54518481"
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sorgu Örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
 - [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

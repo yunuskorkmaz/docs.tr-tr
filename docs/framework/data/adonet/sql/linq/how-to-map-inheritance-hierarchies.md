@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Devralma hiyerarşilerini eşleme'
+title: 'Nasıl yapılır: Devralma Hiyerarşilerini Eşleme'
 ms.date: 03/30/2017
 ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: ad945cfe476441a92e8af9527b08e66f3e6e52c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f75c7fe701c4a2fab1f993517828b38e5a26e2bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138092"
 ---
-# <a name="how-to-map-inheritance-hierarchies"></a>Nasıl yapılır: Devralma hiyerarşilerini eşleme
+# <a name="how-to-map-inheritance-hierarchies"></a>Nasıl yapılır: Devralma Hiyerarşilerini Eşleme
 Devralma eşlemede uygulamak için [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], öznitelikler ve öznitelik özellikleri devralma hiyerarşisinin kök sınıfında aşağıdaki adımlarda açıklandığı şekilde belirtmeniz gerekir. Visual Studio kullanan geliştiricilerin kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] devralma hiyerarşilerini eşleme için. Bkz: [nasıl yapılır: O/R Tasarımcısı kullanarak devralmayı yapılandırma](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
   
 > [!NOTE]
@@ -51,5 +51,6 @@ Devralma eşlemede uygulamak için [!INCLUDE[vbteclinq](../../../../../../includ
  [!code-vb[DLinqCustomize#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#4)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Devralma Desteği](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)
-- [Nasıl yapılır: Kod Düzenleyicisi'ni kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Nasıl yapılır: Kod Düzenleyicisini Kullanarak Varlık Sınıflarını Özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

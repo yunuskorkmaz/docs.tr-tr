@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d45a8bdebb296a33862f018308a7ef876e0cd64c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105748"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW Anahtar Sözcükleri ve Düzeyler
 <a name="top"></a> Windows (ETW) olayları için olay izleme kategorisi ve düzeyi tarafından filtrelenebilir. Olay [CLR ETW anahtar sözcükleri](#keywords) olayları kategoriye göre filtreleme etkinleştirin; bunlar için çalışma zamanı ve Özet sağlayıcılarını bileşimlerde kullanılır. [Olay düzeyleri](#levels) bayrakları tarafından tanımlanır.  
@@ -84,9 +84,9 @@ ms.locfileid: "54572363"
 |`LoaderKeyword`|Yükleme ve kaldırma olayları.|Yok.|Yok.|  
 |`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` herhangi bir şey eklemez)|Yok.|Olayları yükleyin.|Yükleme ve kaldırma olayları.|  
 |`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Yok.|Yükleme ve kaldırma olayları.|Yükleme ve kaldırma olayları.|  
-|`NGenKeyword`|Yok.|Yok.|Uygulanamaz.|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Yok.|Olayları yükleyin.|Uygulanamaz.|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Yok.|Olayları kaldırın.|Uygulanamaz.|  
+|`NGenKeyword`|Yok.|Yok.|Geçerli değildir.|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Yok.|Olayları yükleyin.|Geçerli değildir.|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Yok.|Olayları kaldırın.|Geçerli değildir.|  
   
  [Başa dön](#top)  
   
@@ -123,6 +123,7 @@ ms.locfileid: "54572363"
  0x0 - LogAlways  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [CLR ETW Sağlayıcılar](../../../docs/framework/performance/clr-etw-providers.md)
 - [CLR ETW Olayları](../../../docs/framework/performance/clr-etw-events.md)
-- [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Ortak Dil Çalışma Zamanında ETW Olayları](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

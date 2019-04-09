@@ -1,5 +1,5 @@
 ---
-title: Zaman uyumlu sunucu yuvası örneği
+title: Zaman Uyumlu Sunucu Yuvası Örneği
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: c908568f2297d5f4f6e8c3d1c924a4a0f653d5a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 637301385562247ef9c3dee4d01da319c0cd4d37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095455"
 ---
-# <a name="synchronous-server-socket-example"></a>Zaman uyumlu sunucu yuvası örneği
+# <a name="synchronous-server-socket-example"></a>Zaman Uyumlu Sunucu Yuvası Örneği
 Aşağıdaki örnek program istemcilerinden gelen bağlantı istekleri alan bir sunucu oluşturur. Sunucu, istemci bir bağlantı beklerken sunucu uygulamasının yürütülmesini askıya alınmış şekilde zaman uyumlu bir yuva ile oluşturulmuştur. Uygulama istemciden bir dize alır, dize konsolda görüntüler ve ardından istemcisine dize görüntülemektedir. İstemciden gelen dize, dize içermelidir "\<EOF >" iletisinin son sinyal.  
   
 ```vb  
@@ -156,6 +156,7 @@ public class SynchronousSocketListener {
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Zaman Uyumlu İstemci Yuvası Örneği](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
 - [Zaman Uyumlu Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Yuva Kod Örnekleri](../../../docs/framework/network-programming/socket-code-examples.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b635dcbbb3a78948a2d1d1e9d4feca6f4d2ee76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa44090e589e7a2a70b8fb7dbd8d5e6967c1ed19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126651"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Derlemeler ve Yan Yana Yürütme
 Yan yana yürütme, aynı bilgisayarda bir uygulama veya bileşenin birden çok sürümünü saklama ve yürütme olanağıdır. Bu da ortak dil çalışma zamanı sürümünün birden çok sürümünün ve çalışma zamanının bir sürümünü kullanan uygulama ve bileşenlerin birden çok sürümünün bir bilgisayar üzerinde aynı anda bulunabileceği anlamına gelir. Yan yana yürütme olanağı, bir uygulamanın bir bileşenin hangi sürümüne bağlanacağını ve bir uygulamanın hangi çalışma zamanını kullanacağı konusunda daha fazla denetim sağlar.  
@@ -22,5 +22,6 @@ Yan yana yürütme, aynı bilgisayarda bir uygulama veya bileşenin birden çok 
  Çalışma zamanı size yan yana uygulamalar oluşturma olanağı sağlasa da yan yana yürütme otomatik değildir. Yan yana yürütme için uygulamalar oluşturma hakkında daha fazla bilgi için bkz. [yan yana yürütme için bileşenleri oluşturma için yönergeler](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Ortak Dil Çalışma Zamanındaki Derlemeler](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

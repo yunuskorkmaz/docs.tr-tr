@@ -1,18 +1,18 @@
 ---
-title: Bir DataTable tablosuna veri ekleme
+title: DataTable’a Veri Ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: adf2378cead054efcef10a73bfd00ef541940949
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec4ad84a39afe21ef77507732e5e0e417d45f3e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104292"
 ---
-# <a name="adding-data-to-a-datatable"></a>Bir DataTable tablosuna veri ekleme
+# <a name="adding-data-to-a-datatable"></a>DataTable’a Veri Ekleme
 Oluşturduktan sonra bir <xref:System.Data.DataTable> ve sütunları ve kısıtlamaları kullanarak yapısını tanımlamak, tabloya yeni satır veri ekleyin. Yeni bir satır eklemek için yeni bir değişken türü olarak bildirin <xref:System.Data.DataRow>. Yeni bir **DataRow** çağırdığınızda nesnesi döndürülen <xref:System.Data.DataTable.NewRow%2A> yöntemi. **DataTable** oluşturur sonra **DataRow** nesne temel tablosunun yapısı üzerinde tarafından tanımlanan <xref:System.Data.DataColumnCollection>.  
   
  Aşağıdaki örnek yeni bir satır çağırarak denetlediği oluşturma işlemini gösterir **NewRow** yöntemi.  
@@ -86,6 +86,7 @@ for (int i = 0; i <= 9; i++)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>

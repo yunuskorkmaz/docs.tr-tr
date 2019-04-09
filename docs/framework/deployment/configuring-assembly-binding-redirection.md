@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d2552b71ac13ef6d352b229d2ad965d0f989c7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5df468b87c62f454f6a42fa7a80d92e5ec199fd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151547"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Derleme Bağlama Yönlendirmesini Yapılandırma
 Varsayılan olarak, uygulamalar, uygulama derlemek için kullanılan çalışma zamanı sürümü ile birlikte .NET Framework derlemeleri kümesini kullanın. Kullanabileceğiniz **appliesTo** özniteliği [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) derleme bağlama başvurularının nasıl belirli bir .NET sürümünü yeniden yönlendirmek için bir uygulama yapılandırma dosyasında öğesi Framework derlemeleri. İsteğe bağlı bu öznitelik, bir .NET Framework sürüm numarası geçerli hangi sürüm olduğunu belirlemek için kullanır. Hayır ise **appliesTo** özniteliği belirtilirse,  **\<assemblyBinding >** öğe tüm .NET Framework sürümleri için geçerlidir.  
@@ -58,4 +58,5 @@ Varsayılan olarak, uygulamalar, uygulama derlemek için kullanılan çalışma 
  Derleme bağlama yeniden yönlendirmeleri gerçekleşen olup olmadığını bir yapılandırma dosyası belirleyerek kullanılıp kullanılmadığını belirleyebilirsiniz. Kullanım [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) hangi derlemelerin yüklenen görmek için. Tüm derleme bağlamalarını öğrenmek için bir giriş ayarlamak **ForceLog** kayıt defteri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Otomatik bağlama yeniden yönlendirmesini devre dışı bırakma ve etkinleştirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+
+- [Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

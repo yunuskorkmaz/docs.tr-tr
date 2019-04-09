@@ -1,15 +1,15 @@
 ---
-title: N katmanı ve uzak uygulamalarla LINQ-SQL
+title: LINQ to SQL ile N Katmanı ve Uzak Uygulamalar
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 32035720992a679457f11414ab282f949b450082
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7741368896b0bf5a2508d9b727fad386cce6177d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075193"
 ---
-# <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>N katmanı ve uzak uygulamalarla LINQ-SQL
+# <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>LINQ to SQL ile N Katmanı ve Uzak Uygulamalar
 Kullanan n katmanlı veya çok katmanlı uygulamaları oluşturabileceğiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Genellikle, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veri bağlamı, varlık sınıfları ve sorgu oluşturma mantığı bulunur Orta katmanda veri erişim katmanı (DAL). İş mantığı ve kalıcı olmayan herhangi bir veri tamamen kısmi sınıflar ve yöntemler varlıkları ve veri bağlamı uygulanabilir veya ayrı sınıflarda uygulanabilir.
 
  İstemci ya da sunum katmanı Orta katmanın uzak arabirimdeki yöntemleri çağırır ve bu katmanda DAL sorguları veya için eşlenmiş saklı yordamlar çalıştırır <xref:System.Data.Linq.DataContext> yöntemleri. Orta katman veri istemcilere genellikle XML temsillerini varlıklar veya proxy nesneleri döndürür.
@@ -32,4 +32,5 @@ Kullanan n katmanlı veya çok katmanlı uygulamaları oluşturabileceğiniz [!I
  ADO.NET veri kümeleri kullanan n katmanlı uygulamalar hakkında daha fazla bilgi için bkz: [n katmanlı uygulamalarda veri kümeleriyle çalışmak](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

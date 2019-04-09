@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb2c560f8f906f20de752e5dfad995e2082caaea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102992"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB Yapısı
 Tek bir öznitelik bir derlemede hakkında bilgiler içerir ve üç oluşur `DWORD`s. Her `DWORD` bir uzaklık tarafından üretilen bir karakter arabelleğine `CurrentIntoBuffer` yöntemi [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) arabirimi  
@@ -243,6 +243,7 @@ Exit:
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IReferenceIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
 - [IEnumIDENTITY_ATTRIBUTE Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
 - [IDENTITY_ATTRIBUTE Yapısı](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faa8e28297aa96ab199e80b476783295173f51b5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 079c48a9975861646f1d28338d02dab8e4775031
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101243"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (Yazılım Yayımcısı Sertifika Test Aracı)
 Yazılım Yayımcı Sertifikası Test aracı, bir veya daha fazla X.509 sertifikasından bir Yazılım Yayımcısı Sertifikası (SPC) oluşturur. Cert2spc.exe, yalnızca test amaçlıdır. VeriSign ya da Thawte gibi bir Sertifika Yetkilisi'nden geçerli bir SPC edinebilirsiniz. X.509 sertifikaları oluşturma hakkında daha fazla bilgi için bkz. [Makecert.exe (sertifika oluşturma aracı)](/windows/desktop/SecCrypto/makecert).  
@@ -56,6 +56,7 @@ cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Araçlar](../../../docs/framework/tools/index.md)
-- [MakeCert.exe (sertifika oluşturma aracı)](/windows/desktop/SecCrypto/makecert)
+- [Makecert.exe (Sertifika Oluşturma Aracı)](/windows/desktop/SecCrypto/makecert)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

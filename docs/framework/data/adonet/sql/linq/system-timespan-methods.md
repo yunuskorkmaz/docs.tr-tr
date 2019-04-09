@@ -1,15 +1,15 @@
 ---
-title: System.TimeSpan yöntemleri
+title: System.TimeSpan Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: a3f3c82f9f8db4b72588f165ed4d897b974eb076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126951"
 ---
-# <a name="systemtimespan-methods"></a>System.TimeSpan yöntemleri
+# <a name="systemtimespan-methods"></a>System.TimeSpan Yöntemleri
 Üye desteği <xref:System.TimeSpan?displayProperty=nameWithType> kullanmakta olduğunuz bir Microsoft SQL Server ve .NET Framework sürümlerinde büyük ölçüde bağlıdır.  
   
  Bir yöntemi, işleci veya özelliği desteklenmiyor.; LINQ to SQL üyesi için SQL Server üzerinde yürütme çeviremez anlamına gelir. Hala kodunuzda bu üyeleri kullanmanız mümkün olabilir. Ancak, sorgu Transact-SQL veya veritabanından sonuçları alındıktan sonra çevrilir önce bunlar değerlendirilmelidir.  
@@ -37,6 +37,7 @@ ms.locfileid: "54539915"
  Ancak CLR <xref:System.TimeSpan?displayProperty=nameWithType> türü, toplama ve çıkarma, SQL desteklemez `TIME` türü yenilenmez. SQL eşleştirildiğinde toplama ve çıkarma bunlar çalışırsanız, bu nedenle, LINQ to SQL sorgularında hata oluşturur `TIME` türü. Diğer değerlendirmeler SQL tarih ve saat türleri ile çalışmak için bulabilirsiniz [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

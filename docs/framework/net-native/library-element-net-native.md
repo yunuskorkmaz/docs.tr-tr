@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f2de27152200ed07e5f82b5dc08613451c7aa25
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: eda4f8d3819af05b022e0633d6883cca940f67e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100268"
 ---
 # <a name="library-element-net-native"></a>\<Kitaplık > öğesi (.NET yerel)
 Türler ve tür üyeleri olan meta verilerini yansıma çalışma zamanında kullanılabilir içeren derlemeyi tanımlar.  
@@ -69,6 +69,7 @@ Türler ve tür üyeleri olan meta verilerini yansıma çalışma zamanında kul
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<Uygulama > öğesi](../../../docs/framework/net-native/application-element-net-native.md)
 - [\<Yönergeleri > öğesi](../../../docs/framework/net-native/directives-element-net-native.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

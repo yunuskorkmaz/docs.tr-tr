@@ -1,5 +1,5 @@
 ---
-title: VariableLocationType sabit listesi
+title: VariableLocationType Sabit Listesi
 ms.date: 03/30/2017
 api_name:
 - VariableLocationType
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd1a622faa095836a3d5c22c7a18084482074c2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 392254efcd099aca60e58b3cc0bc61ca85aa2c66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099956"
 ---
-# <a name="variablelocationtype-enumeration"></a>VariableLocationType sabit listesi
+# <a name="variablelocationtype-enumeration"></a>VariableLocationType Sabit Listesi
 Bir değişken yerel konum türünü belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -58,4 +58,5 @@ typedef enum VariableLocationType
  **.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+
+- [Hata Ayıklama Numaralandırmaları](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

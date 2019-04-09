@@ -1,5 +1,5 @@
 ---
-title: AddImport Yöntemi
+title: AddImport Metodu
 ms.date: 03/30/2017
 api_name:
 - AddImport
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 261d80caa43ec478d3a3a33acdebcc1bfcfde8cf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bbe8a43f44d59249abc713c95fce31f1fb9a5993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148674"
 ---
-# <a name="addimport-method"></a>AddImport Yöntemi
+# <a name="addimport-method"></a>AddImport Metodu
 İçeri aktarmalar derlemesine ekler.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -58,6 +58,7 @@ HRESULT AddImport(
  ALink.h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

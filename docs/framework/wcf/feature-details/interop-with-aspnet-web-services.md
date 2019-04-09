@@ -2,12 +2,12 @@
 title: ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: 3d4416a67d467f60fa381abc648c3a7ea0b9ada1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6fec1d520cd251473d8840b7b1afe879002a04c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108582"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
 Birlikte çalışabilirliği [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web Hizmetleri ve Windows Communication Foundation (WCF) Web hizmetleri hem teknolojiler kullanılarak uygulanan Hizmetleri WS uygun sağlayarak gerçekleştirilebilir-ı Basic Profile 1.1 belirtimi. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web için WS uygun Hizmetleri-ı Basic Profile 1.1 ile WCF istemcileri birlikte çalışabilen WCF sistem tarafından sağlanan bağlama kullanarak <xref:System.ServiceModel.BasicHttpBinding>.  
@@ -56,4 +56,5 @@ public class Service : IEcho
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: WCF hizmetini ASP.NET Web hizmeti istemcileriyle birlikte çalışmak için yapılandırma](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+
+- [Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)

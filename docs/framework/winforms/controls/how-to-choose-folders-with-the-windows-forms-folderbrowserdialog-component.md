@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms FolderBrowserDialog bileşeni ile klasörleri seçin'
+title: 'Nasıl yapılır: Windows Forms FolderBrowserDialog Bileşeni ile Klasörleri Seçme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: ea5fdc9708d8e896eb66fa42f64cac672baff08b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2bff105d5c97a8b98d094a1ce3a4f033aa5971be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116083"
 ---
-# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Nasıl yapılır: Windows Forms FolderBrowserDialog bileşeni ile klasörleri seçin
+# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Nasıl yapılır: Windows Forms FolderBrowserDialog Bileşeni ile Klasörleri Seçme
 Genellikle, Windows, içinde oluşturduğunuz uygulamalar, en sık dosya kümesini kaydetmek için bir klasör seçmek için kullanıcılara sor gerekecektir. Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> bileşen kolayca bu görevi gerçekleştirmek sağlar.  
   
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>FolderBrowserDialog bileşeni ile klasörleri seçme  
@@ -67,6 +67,7 @@ Genellikle, Windows, içinde oluşturduğunuz uygulamalar, en sık dosya kümesi
  Dosyaları kaydetme hakkında daha fazla bilgi için bkz: [nasıl yapılır: SaveFileDialog bileşenini kullanarak dosyaları kaydetme](how-to-save-files-using-the-savefiledialog-component.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.FolderBrowserDialog>
 - [FolderBrowserDialog Bileşenine Genel Bakış (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
 - [FolderBrowserDialog Bileşeni](folderbrowserdialog-component-windows-forms.md)

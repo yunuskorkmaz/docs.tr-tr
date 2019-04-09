@@ -1,15 +1,15 @@
 ---
-title: Secure SQL Server'da Dynamic SQL yazma
+title: SQL Server’da Secure Dynamic SQL Yazma
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 446a9f6a49b376f04d1c82d45463d567d89116d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745616"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107360"
 ---
-# <a name="writing-secure-dynamic-sql-in-sql-server"></a>Secure SQL Server'da Dynamic SQL yazma
+# <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server’da Secure Dynamic SQL Yazma
 SQL ekleme, kötü niyetli bir kullanıcının geçerli giriş yerine Transact-SQL deyimleriyle girer işlemidir. Girişi doğrulanması gereken olmadan doğrudan sunucuya iletilmezse ve uygulama yanlışlıkla eklenen kodu yürütür, saldırı zarar verebilecek veya verileri yok olasılığına sahiptir.  
   
  SQL Server sözdizimsel olarak geçerli olan aldığı tüm sorguları yürüttüğü için SQL deyimleri oluşturan her türlü yordam, ekleme güvenlik açıklarına karşı gözden geçirilmelidir. Hatta parametreli veri nitelikli ve belirlenen bir saldırgan tarafından işlenebilir. Dinamik SQL kullanırsanız, Komutlarınızın Parametreleştirme emin olun ve hiçbir zaman doğrudan sorgu dizesine parametre değerlerini içerir.  
@@ -67,6 +67,7 @@ SQL ekleme, kötü niyetli bir kullanıcının geçerli giriş yerine Transact-S
 |[Saklı yordamları](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) ve [SQL ekleme](/sql/relational-databases/security/sql-injection) SQL Server Çevrimiçi Kitapları'nda|Konular, saklı yordamlar oluşturma ve SQL ekleme nasıl çalıştığını açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

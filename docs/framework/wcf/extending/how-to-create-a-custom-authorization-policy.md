@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Özel yetkilendirme ilkesi oluşturma'
+title: 'Nasıl yapılır: Özel Yetkilendirme İlkesi Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78cc77a5491e50d718a53efff1c6f99acf23cf27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115394"
 ---
-# <a name="how-to-create-a-custom-authorization-policy"></a>Nasıl yapılır: Özel yetkilendirme ilkesi oluşturma
+# <a name="how-to-create-a-custom-authorization-policy"></a>Nasıl yapılır: Özel Yetkilendirme İlkesi Oluşturma
 Windows Communication Foundation (WCF) kimlik modeli altyapısı, bir talep tabanlı yetkilendirme modelini destekler. Talep belirteçleri ayıklanan, isteğe bağlı olarak özel yetkilendirme ilkesi tarafından işlenen ve ardından yerleştirilip bir <xref:System.IdentityModel.Policy.AuthorizationContext> , ardından incelenebilir yetkilendirme kararları vermek için. Özel bir ilke, uygulama tarafından beklenen talep gelen belirteçleri gelen talepleri dönüştürmek için kullanılabilir. Bu şekilde, uygulama katmanı WCF desteklediği farklı belirteç türleri tarafından sunulan farklı talepleri ayrıntılarından yalıtılmış. Bu konuda, bir hizmet tarafından kullanılan ilkeleri koleksiyonunu Bu ilkeyi ekleme ve özel yetkilendirme ilkesi uygulamak nasıl gösterir.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Özel yetkilendirme ilkesi uygulamak için  
@@ -76,7 +76,8 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı, bir talep taba
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Nasıl yapılır: Talepleri karşılaştırma](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Nasıl yapılır: Talepleri Karşılaştırma](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Yetkilendirme İlkesi](../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -1,13 +1,13 @@
 ---
-title: <peerAuthentication> Öğesi
+title: <peerAuthentication> Öğe
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 7607f5bab6083c190303fd0a9121ffab55c620c3
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 1e99f6d117604f9ba2672972a4b09e7fe9f96792
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092974"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication > öğesi
 Eşler arası istemcilerin kimlik doğrulama seçeneklerini belirtir.  
@@ -101,6 +101,7 @@ Eşler arası istemcilerin kimlik doğrulama seçeneklerini belirtir.
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>

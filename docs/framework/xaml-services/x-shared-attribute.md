@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125750"
 ---
 # <a name="xshared-attribute"></a>x:Shared Özniteliği
 Ayarlandığında `false`, böylece tüm istekler için aynı örneğini paylaşmak yerine, her istek için yeni bir örneği oluşturma isteği öznitelikli kaynağı için WPF kaynak alma davranışını değiştirir.  
@@ -50,6 +50,7 @@ Ayarlandığında `false`, böylece tüm istekler için aynı örneğini paylaş
 -   <xref:System.Windows.ResourceDictionary> Öğelerini içeren başka içinde iç içe olmamalıdır değil <xref:System.Windows.ResourceDictionary>. Örneğin, kullanamazsınız `x:Shared` öğeleri için bir <xref:System.Windows.ResourceDictionary> içinde olan bir <xref:System.Windows.Style> zaten olan bir <xref:System.Windows.ResourceDictionary> öğesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.ResourceDictionary>
 - [XAML Kaynakları](../wpf/advanced/xaml-resources.md)
 - [Temel Öğeler](../wpf/advanced/base-elements.md)

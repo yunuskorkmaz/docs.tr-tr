@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 3c15e24fbe2a131435fe71782c8a55f416f71d62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129330"
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Sıralama Davranışı
 Birlikte çalışma hazırlama kurallar arasında yönetilen ve yönetilmeyen bellek geçerken yöntem parametreleri ile ilişkili verileri nasıl davranacağını bu dikte çalışır. Yerleşik kurallar bir çağrılan geçirilen verileri değiştirebilir ve bu değişiklikleri çağırana döndürmesi ve performans iyileştirmelerini sağlayıp altında Sıralayıcı koşulda veri türü dönüşümleri olarak sıralama gibi etkinlikler denetler.  
@@ -378,8 +378,8 @@ interface _Graphics {
   
 |Sistem değer türü|IDL türü|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**TARİH**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**ONDALIK**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
 |<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
@@ -440,8 +440,9 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](blittable-and-non-blittable-types.md)
 - [Kopyalama ve Sabitleme](copying-and-pinning.md)
-- [Diziler için Varsayılan Hazırlama](default-marshaling-for-arrays.md)
+- [Diziler için Varsayılan Sıralama](default-marshaling-for-arrays.md)
 - [Nesneler için Varsayılan Hazırlama](default-marshaling-for-objects.md)
 - [Dizeler için Varsayılan Hazırlama](default-marshaling-for-strings.md)

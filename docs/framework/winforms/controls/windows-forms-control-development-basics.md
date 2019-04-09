@@ -6,12 +6,12 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: 6a7009ead6ceba58c17579835d03254f259f8e51
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086448"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Forms Denetimi Geliştirmenin Esasları
 Bir Windows Forms denetimi doğrudan veya dolaylı olarak türetildiği bir sınıf olan <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Aşağıdaki listede, Windows Forms denetimleri geliştirme ile ilgili yaygın senaryolar açıklanmaktadır:  
@@ -31,7 +31,8 @@ Bir Windows Forms denetimi doğrudan veya dolaylı olarak türetildiği bir sın
  Windows Forms denetimleri için taban sınıf <xref:System.Windows.Forms.Control>, istemci tarafında Windows tabanlı uygulamalarda visual görüntülemek için gerekli ayarlamaları sağlar. <xref:System.Windows.Forms.Control> bir pencere tutucu sağlayan, ileti yönlendirme işler ve fare ve klavye olaylarını ve bunun yanı sıra diğer birçok kullanıcı arabirimi olayları sağlar. Gelişmiş düzeni sağlar ve görsel görüntüsüne özgü özellikleri vardır <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>ve diğer birçok. Ayrıca, güvenlik, iş parçacığı oluşturma desteği ve ActiveX denetimleri ile birlikte çalışabilirlik sağlar. Çok altyapısının temel sınıfı tarafından sağlandığından, kendi Windows Forms denetimleri geliştirme oldukça kolaydır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](how-to-develop-a-simple-windows-forms-control.md)
+
+- [Nasıl yapılır: Basit Bir Windows Forms Denetimi Geliştirme](how-to-develop-a-simple-windows-forms-control.md)
 - [Bileşik Windows Forms Denetimi Geliştirme](developing-a-composite-windows-forms-control.md)
-- [Nasıl yapılır: İlerleme durumunu gösteren Windows Forms denetimi oluşturma](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Nasıl yapılır: İlerleme Durumunu Gösteren Windows Forms Denetimi Oluşturma](how-to-create-a-windows-forms-control-that-shows-progress.md)
 - [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 0d7baacb9525e0c268ae53b0c3617324ecd0772f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6aecad3719fff98a2e834cff6eee9cfe39a699aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548995"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106541"
 ---
 # <a name="endpoint-creation-overview"></a>Uç Noktası Oluşturma Genel Bakış
 Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerde üzerinden gerçekleşir *uç noktaları* hizmeti. Uç noktaları, istemcilerin bir WCF hizmeti sunan işlevine erişim sağlar. Bu bölümde, bir uç nokta yapısını açıklar ve bir uç nokta yapılandırması ve kodda nasıl tanımlanacağını açıklar.  
@@ -199,4 +199,5 @@ serviceHost.Open()
  Uç noktalar açıkça verdiyse, varsayılan uç noktaları hala çağırarak eklenebilir <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> üzerinde <xref:System.ServiceModel.ServiceHost> çağırmadan önce <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Varsayılan uç noktaları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hizmet Anlaşmalarını Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)
+
+- [Hizmet Sözleşmelerini Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)

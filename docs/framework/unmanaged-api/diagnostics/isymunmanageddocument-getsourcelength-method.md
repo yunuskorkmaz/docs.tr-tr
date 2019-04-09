@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11ab9f8077a4b2a9e97c321c6edbe629dc0de19d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2717a279abf7fb1b704a769d54654d97949cc0a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136909"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength Yöntemi
 Katıştırılmış kaynak bayt cinsinden uzunluğunu alır.  
@@ -42,4 +42,5 @@ HRESULT GetSourceLength(
  Yöntem başarılı olursa S_OK.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ISymUnmanagedDocument Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

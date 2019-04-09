@@ -2,12 +2,12 @@
 title: Örnek Veritabanları (LINQ to DataSet) indirme
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: f0fc3e8d447f82c89b3b558d95b45120db0a876d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a022380bf266997c82de43e103e7d56348447cfc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104916"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Örnek Veritabanları (LINQ to DataSet) indirme
 Örnekler ve izlenecek yollarında [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri AdventureWorks örnek veritabanını kullanın. Bu ürün ücretsiz olarak Microsoft Yükleme sitesinden indirebilirsiniz. Örnekler ve izlenecek yollarında [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] belgeleri, SQL Server veri deposu olarak kullanın. SQL Server Express ücret kullanılabilir Edition, SQL Server yerine veri deposu olarak da kullanılabilir.  
@@ -74,4 +74,5 @@ ms.locfileid: "54573350"
 3.  Web sitesi yükleme yönergelerini izleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Başlarken](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

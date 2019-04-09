@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 084a31ec008d1651bb66f7d59731a21d4ef0ece7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29ce9b165c3823d7d06008431294f67716ccf8e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105449"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer Sınıfını Kullanma
 Windows Communication Foundation (WCF), istemciler ve hizmetler, serileştirme adlı bir işlem arasında aktarılır XML içinde uygulamanızda veri kapatmak için iki farklı bir seri hale getirme teknolojilerini kullanabilirsiniz.  
@@ -206,10 +206,11 @@ Windows Communication Foundation (WCF), istemciler ve hizmetler, serileştirme a
 >  `<xmlSerializer useLegacySerializerGeneration="true"/>` Anahtarı yalnızca .NET Framework 4.5 veya sonraki sürümünü çalıştıran bir makinede çalışır. Yukarıdaki `appSettings` yaklaşım tüm .NET Framework sürümlerinde çalışır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.DataContractFormatAttribute>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.ServiceModel.MessageHeaderArrayAttribute>
-- [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
-- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Nasıl yapılır: Başlangıç zamanı, WCF istemci XmlSerializer kullanarak uygulamaları geliştirin](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Hizmet Sözleşmelerinde Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Veri Sözleşmelerini Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

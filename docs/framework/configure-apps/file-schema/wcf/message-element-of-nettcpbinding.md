@@ -2,12 +2,12 @@
 title: <message> öğesi <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 09ff567e73791151350288f6e5ddb5f9aff36e80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161024"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<İleti > öğesi \<netTcpBinding >
 İleti düzeyi güvenliği gereksinimleri ile yapılandırılmış bir uç nokta türünü tanımlayan [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -61,14 +61,14 @@ ms.locfileid: "55276932"
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Hiçbiri|Bu, anonim istemcilerle etkileşime geçmek bir hizmet sağlar. Hizmette, bu hizmeti herhangi bir istemci kimlik bilgilerini gerektirmeyeceğini belirtir. İstemcide, istemcinin bir istemci kimlik bilgileri sağlamaz gösterir.|  
+|None|Bu, anonim istemcilerle etkileşime geçmek bir hizmet sağlar. Hizmette, bu hizmeti herhangi bir istemci kimlik bilgilerini gerektirmeyeceğini belirtir. İstemcide, istemcinin bir istemci kimlik bilgileri sağlamaz gösterir.|  
 |Windows|SOAP değişimleri, Windows kimlik bilgisi kimliği doğrulanmış bağlamı altında olmasını sağlar.|  
 |UserName|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir kullanıcı adı kimlik bilgisi. WCF parola özeti gönderme veya parola ve ileti güvenliği için bu anahtarları kullanarak anahtarlar türetme desteklemez. Bu nedenle, WCF aktarma UserName kimlik bilgileri kullanırken, güvenli olduğundan emin zorlar. Bu kimlik bilgisi modu birlikte çalışabilen bir exchange ya da temel bir birlikte çalışabilen olmayan anlaşma sonuçlanır `negotiateServiceCredential` özniteliği.|  
 |Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir sertifika. İleti güvenlik modunu kullanılıyorsa ve `negotiateServiceCredential` özniteliği `false`, istemci ile hizmet sertifikası sağlanması gerekir.|  
 |IssuedToken|Genellikle bir güvenlik belirteci hizmeti (STS) tarafından verilen bir özel simgeyi belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ None  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -80,6 +80,7 @@ ms.locfileid: "55276932"
  İleti, ileti düzeyi güvenliği karşılıklı kimlik doğrulaması iletişim eş yanı sıra, SOAP ileti gizliliği ve bütünlük için kullanılır. Üzerindeki bir bağlamaya bu güvenlik modunu seçtiyseniz, kanal yığın ile ileti güvenliği bağlama öğeleri yapılandırılır ve SOAP iletilerini uyduğunuzu WS güvenliği-güvenlik * standartları.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.MessageSecurityOverTcp>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Message%2A>

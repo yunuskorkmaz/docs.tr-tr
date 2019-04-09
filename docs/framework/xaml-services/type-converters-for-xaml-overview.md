@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 62e92a0bf537bd5a15b71751b3d62755c6b12dfa
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095730"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML Tür Dönüştürücülerine Genel Bakış
 XAML biçimlendirmede bir dizeden belirli nesneleri bir nesne grafiğinin dönüştürür bir nesne yazıcısı için tür dönüştürücüleri tedarik mantığı. .NET Framework XAML hizmetlerinde tür dönüştürücüsünü türetildiği bir sınıf olmalıdır <xref:System.ComponentModel.TypeConverter>. Bazı dönüştürücüler ayrıca XAML kaydetme yolu desteklemek ve Serileştirme biçimlendirme dizesi forma bir nesneyi serileştirmek için kullanılan. Bu konu nasıl ve ne zaman XAML içinde tür dönüştürücüleri çağrılır ve, metot geçersiz kılmaları uygulama önerileri sağlar açıklar <xref:System.ComponentModel.TypeConverter>.  
@@ -108,6 +108,7 @@ XAML biçimlendirmede bir dizeden belirli nesneleri bir nesne grafiğinin dönü
  XAML düğümü akışı ile çalışıyorsanız, bir tür dönüştürücüsü nihai sonucu ve eylem henüz yürütülmez. Bir yükleme yolu sonunda yüklemek için türüne dönüştürülmesi gereken öznitelik dizesini bir metin değerinin başlangıç üyesi ve son üye olarak kalır. Bu işlemi kullanarak belirlenebilir için sonuçta gerekli tür dönüştürücüsünü <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> özelliği. Ancak, geçerli bir değer elde etme <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> açık olması gibi bilgileri temel alınan üye veya üyeyi kullanan nesne değeri türü erişebileceğiniz bir XAML şema içeriği kullanır. Tür dönüştürme davranışını çağırma ayrıca gerektirir XAML şema içeriği tür eşlemesi gerektirdiği için ve bir dönüştürücü örneği oluşturma.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ComponentModel.TypeConverterAttribute>
 - [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](type-converters-and-markup-extensions-for-xaml.md)
 - [XAML'ye Genel Bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md)

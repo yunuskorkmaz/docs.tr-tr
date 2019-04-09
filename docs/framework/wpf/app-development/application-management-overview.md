@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: 395077b7c82ee54a51b8086df0c59f731e3a2b70
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100086"
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan işlevselliği sahip eğilimindedir. Bu konuda işlevleri genel bakışını sağlar <xref:System.Windows.Application> oluşturma ve uygulamaları yönetmek için sınıf.  
-   
-  
+
 ## <a name="the-application-class"></a>Uygulama sınıfı  
  WPF içinde ortak uygulama kapsamlı işlevsellik içinde kapsüllenir <xref:System.Windows.Application> sınıfı. <xref:System.Windows.Application> Sınıfı aşağıdaki işlevleri içerir:  
   
@@ -106,7 +105,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Geçerli uygulamanın başlama  
- Çünkü işlevselliğini <xref:System.Windows.Application> sınıfı bir uygulama arasında paylaşılan, yalnızca bir örneği olabilir <xref:System.Windows.Application> başına sınıfı <xref:System.AppDomain>. Bunu zorlamak için <xref:System.Windows.Application> sınıfı bir singleton sınıfı uygulanır (bkz [C# uygulama tekil](https://go.microsoft.com/fwlink/?LinkId=100567)), tek bir örneğini oluşturur ve sunar ile erişimi paylaşılan `static` <xref:System.Windows.Application.Current%2A> özellik.  
+ Çünkü işlevselliğini <xref:System.Windows.Application> sınıfı bir uygulama arasında paylaşılan, yalnızca bir örneği olabilir <xref:System.Windows.Application> başına sınıfı <xref:System.AppDomain>. Bunu uygulamak <xref:System.Windows.Application> sınıfı bir singleton sınıfı uygulanır (bkz [uygulama Singleton olarak C# ](https://go.microsoft.com/fwlink/?LinkId=100567)), tek bir örneğini oluşturur ve sunar ile erişimi paylaşılan `static`<xref:System.Windows.Application.Current%2A> özelliği.  
   
  Aşağıdaki kod, bir başvuru almak gösterilmektedir <xref:System.Windows.Application> geçerli nesne <xref:System.AppDomain>.  
   
@@ -125,8 +124,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
 <a name="Application_Lifetime"></a>   
 ## <a name="application-lifetime"></a>Uygulama ömrü  
  WPF uygulaması ömrünü tarafından gerçekleştirilen çeşitli olayları tarafından işaretlenen <xref:System.Windows.Application> uygulamanızın ne zaman başlayıp, size bildirmek için etkin ve devre dışı ve kapatıldı.  
-  
-  
+
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Giriş Ekranı  
  İtibariyle [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], başlangıç penceresinde, kullanılacak bir görüntü belirtebilirsiniz veya *giriş ekranı*. <xref:System.Windows.SplashScreen> Sınıfı, uygulama yüklenirken bir başlangıç penceresini görüntülemek kolaylaştırır. <xref:System.Windows.SplashScreen> Penceresi oluşturulur ve önce gösterilen <xref:System.Windows.Application.Run%2A> çağrılır. Daha fazla bilgi için [uygulama başlangıç zamanı](../advanced/application-startup-time.md) ve [WPF uygulamasına giriş ekranı ekleme](how-to-add-a-splash-screen-to-a-wpf-application.md).  
@@ -357,6 +355,7 @@ Tüm uygulamalar, ortak bir uygulama uygulamayı ve yönetimi için uygulanan i�
  ![XBAP &#45; uygulama nesnesi olayları](./media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Application>
 - [WPF Windows'a Genel Bakış](wpf-windows-overview.md)
 - [Gezintiye Genel Bakış](navigation-overview.md)

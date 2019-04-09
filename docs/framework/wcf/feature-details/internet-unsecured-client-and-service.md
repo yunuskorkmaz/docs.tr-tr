@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 480242d519fee6ddabac3b39ff21f8e1b76827f0
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ca6b028ef20095d6faeb125151772eedf1500fa0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133763"
 ---
 # <a name="internet-unsecured-client-and-service"></a>İnternet Güvenli Olmayan Hizmet ve İstemci
 Aşağıdaki çizimde, bir genel, güvenli olmayan Windows Communication Foundation (WCF) istemci ve hizmet örneği gösterilmektedir:  
@@ -19,13 +19,13 @@ Aşağıdaki çizimde, bir genel, güvenli olmayan Windows Communication Foundat
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik modu|Yok.|  
+|Güvenlik modu|None|  
 |Taşıma|HTTP|  
 |Bağlama|<xref:System.ServiceModel.BasicHttpBinding> kodda veya [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) yapılandırma öğesi.|  
 |Birlikte Çalışabilirlik|Mevcut Web hizmeti istemcileri ve Hizmetleri ile|  
 |Kimlik doğrulaması|Yok.|  
 |Bütünlüğü|Yok.|  
-|Gizliliği|Yok.|  
+|Gizliliği|None|  
   
 ## <a name="service"></a>Hizmet  
  Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
@@ -110,6 +110,7 @@ Aşağıdaki çizimde, bir genel, güvenli olmayan Windows Communication Foundat
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

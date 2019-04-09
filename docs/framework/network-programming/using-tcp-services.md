@@ -1,5 +1,5 @@
 ---
-title: TCP Hizmetleri kullanma
+title: TCP Hizmetleri Kullanma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 552fb69910d7186321d834e4bc36abc867a31658
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c792c8d819d17d1fc32fedeeacdacbbb1624d95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125625"
 ---
-# <a name="using-tcp-services"></a>TCP Hizmetleri kullanma
+# <a name="using-tcp-services"></a>TCP Hizmetleri Kullanma
 <xref:System.Net.Sockets.TcpClient> Sınıfı veri TCP kullanarak bir Internet kaynaktan ister. Özellikleri ve yöntemleri **TcpClient** oluşturmak için ayrıntıları soyut bir <xref:System.Net.Sockets.Socket> istemek ve TCP kullanarak veri alma. Uzak cihazla bağlantı bir akış olarak temsil edilir çünkü veri okumak ve .NET Framework akış işleme teknikleri ile yazılır.  
   
  TCP protokolü, uzak uç noktası ile bağlantı kurar ve veri paket göndermek ve almak için bu bağlantıyı kullanır. TCP veri paketleri uç noktaya gönderdi ve doğru sırada ulaştığında bir araya getirilen sağlamaktan sorumludur.  
@@ -195,4 +195,3 @@ public class TcpTimeServer {
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-

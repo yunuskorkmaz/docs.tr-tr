@@ -11,12 +11,12 @@ helpviewer_keywords:
 - properties [WPF], RenderTransform
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-ms.openlocfilehash: c14f746846943d3fa5150fbee405a62249dee9c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126444"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Nasıl yapılır: Bir Olay Oluştuğunda Öğeye Dönüşüm Uygulama
 Bu örnek nasıl uygulanacağını gösterir. bir <xref:System.Windows.Media.ScaleTransform> bir olay gerçekleştiğinde. Burada gösterilen diğer tür dönüştürmeleri uygulamak için kullandığınız aynı kavramdır. Dönüşümlerin kullanılabilir türleri hakkında daha fazla bilgi için bkz. <xref:System.Windows.Media.Transform> sınıfı veya [dönüştüren genel bakış](transforms-overview.md).  
@@ -36,8 +36,9 @@ Bu örnek nasıl uygulanacağını gösterir. bir <xref:System.Windows.Media.Sca
  [!code-vb[ButtonTransform#1cb](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [Dönüşümlere Genel Bakış](transforms-overview.md)
 - [Nasıl Yapılır Konuları](transformations-how-to-topics.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](../advanced/routed-events-overview.md)
+- [Gönderilmiş Olaylara Genel Bakış](../advanced/routed-events-overview.md)

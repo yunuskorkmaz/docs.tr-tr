@@ -6,12 +6,12 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: ca7bef8bf68b80015128619336db9fc6a8f5c237
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da49c6f0b44ab0eefbd338963a744a11502f75da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130474"
 ---
 # <a name="accessibility-levels-c-reference"></a>Erişilebilirlik Düzeyleri (C# Başvurusu)
 
@@ -38,9 +38,9 @@ Erişim değiştiricileri kullanma `public`, `protected`, `internal`, veya `priv
   
 |Üyeleri|Varsayılan üye erişilebilirliği|İzin verilen, üyenin bildirilen erişilebilirliği|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|Hiçbiri|  
+|`enum`|`public`|Yok.|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|Hiçbiri|  
+|`interface`|`public`|None|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
  İç içe türün erişilebilirliği bağlıdır, [erişilebilirlik etki alanı](../../../csharp/language-reference/keywords/accessibility-domain.md), üyenin bildirilen erişilebilirliği ve hemen içeren türün erişilebilirlik etki alanı tarafından belirlenir. Ancak, iç içe türün erişilebilirlik etki alanı, kapsayan türdeki aşamaz.  
@@ -49,7 +49,8 @@ Erişim değiştiricileri kullanma `public`, `protected`, `internal`, veya `priv
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C# başvurusu](../../../csharp/language-reference/index.md)
+
+- [C# Başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
 - [Erişim Değiştiricileri](../../../csharp/language-reference/keywords/access-modifiers.md)

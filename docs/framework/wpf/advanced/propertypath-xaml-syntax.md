@@ -5,17 +5,16 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122921"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML Sözdizimi
 <xref:System.Windows.PropertyPath> Nesne destekleyen karmaşık bir satır içi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ele çeşitli özelliklerini ayarlamak için söz dizimi <xref:System.Windows.PropertyPath> değerlerine türü. Bu konu belgeleri <xref:System.Windows.PropertyPath> bağlama ve animasyon sözdizimleri için uygulanan sözdizimi.  
-    
-  
+
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>PropertyPath kullanıldığı  
  <xref:System.Windows.PropertyPath> çeşitli kullanılan ortak bir nesnedir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellikleri. Yaygın rağmen <xref:System.Windows.PropertyPath> her kullanımları özellik yolu bilgileri iletmek için alan özelliği olduğu <xref:System.Windows.PropertyPath> farklı bir tür olarak kullanılır. Bu nedenle, özellik başına temelinde sözdizimleri belge daha yararlı olur.  
@@ -197,6 +196,7 @@ or
  Genel olarak, <xref:System.Windows.PropertyPath> iki farklı Oluşturucu, bir bağlama kullanımları ve basit animasyon kullanımları için ve biri karmaşık animasyon kullanımları için kullanmak üzere tasarlanmıştır. Kullanım <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> imza nesnesinin bir dize olduğu kullanımları, bağlama için. Kullanım <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> tek adımlı animasyon yolları, nesne olduğu için imza bir <xref:System.Windows.DependencyProperty>. Kullanım <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> karmaşık animasyonları imzası. Bu ikinci oluşturucu, ilk parametre ve bir özellik yolu ilişki tanımlamak için belirteç dizesinde konumları dolduracak nesnelerinin bir dizisi için bir belirteç dizesini kullanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.PropertyPath>
 - [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
 - [Görsel Taslaklara Genel Bakış](../graphics-multimedia/storyboards-overview.md)

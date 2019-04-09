@@ -1,18 +1,18 @@
 ---
-title: Karşılaştırma ifadeleri
+title: Karşılaştırma İfadeleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: cca909e67464d08c0bb4ff8a0d0186d9d600ce18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a37e7e3d0759cb3cf17d2b4cbd3dd2e4877ff6c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125651"
 ---
-# <a name="comparison-expressions"></a>Karşılaştırma ifadeleri
+# <a name="comparison-expressions"></a>Karşılaştırma İfadeleri
 Bir karşılaştırma ifadesi bir sabit değeri, özellik değeri veya yöntem sonucu eşit, değil eşittir, büyüktür veya başka bir değerden daha az olup olmadığını denetler. Belirli bir karşılaştırma için geçerli değilse [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], bir özel durum oluşturulur. Örtük ve açık, tüm karşılaştırmalar, veri kaynağındaki tüm bileşenleri karşılaştırılabilir olmalarını gerektirir. Karşılaştırma ifadeleri sık sık kullanılır `Where` sorgu sonuçları kısıtlamak için yan tümceler.  
   
  Sorgu ifadesi söz dizimi aşağıdaki örnekte sipariş numarası "SO43663 için" eşit olduğu sonuçları döndüren bir sorgu gösterir:  
@@ -54,4 +54,5 @@ Bir karşılaştırma ifadesi bir sabit değeri, özellik değeri veya yöntem s
  [!code-vb[DP L2E Conceptual Examples#MethodAsConstantFails](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodasconstantfails)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to Entities Sorgu İfadeleri](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

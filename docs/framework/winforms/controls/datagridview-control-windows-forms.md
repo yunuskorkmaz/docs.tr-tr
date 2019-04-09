@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 52ff12df7de7dc43c9cea2f36d3780fd0dd6ae3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124325"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView Denetimi (Windows Forms)
 `DataGridView` Denetimi verileri tablo biçiminde görüntülemek için güçlü ve esnek bir yol sağlar. Kullanabileceğiniz `DataGridView` az miktarda veriniz salt okunur görünümlerini göstermek için denetim ya da çok büyük veri kümelerini düzenlenebilir görünümlerini göstermek için ölçeklendirilebilir.  
@@ -52,7 +52,7 @@ ms.locfileid: "57722343"
  [Windows Forms DataGridView Denetimindeki Verileri Sıralama](sorting-data-in-the-windows-forms-datagridview-control.md)  
  Denetiminde sıralama özellikleri açıklayan konuları sağlar.  
   
- [Windows Forms DataGridView Denetiminde Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetimindeki Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)  
  Kullanıcıların değiştirme açıklayan konulara ekleyin ve denetimi veri değiştirme sağlar.  
   
  [Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
@@ -83,4 +83,5 @@ ms.locfileid: "57722343"
  İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.BindingSource> bileşeni. <xref:System.Windows.Forms.DataGridView> Denetimi ve <xref:System.Windows.Forms.BindingSource> bileşen yakından birlikte çalışmak üzere tasarlanmıştır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: bf69a22f60724513122b5f17c5dd55bffc1fe561
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115758"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Nasıl yapılır: UI Döndüren Eklenti Oluşturma
 Bu örnek, bir Windows Presentation Foundation (WPF) bir konak WPF tek başına uygulama döndüren bir eklenti oluşturma işlemi gösterilmektedir.  
@@ -31,8 +31,7 @@ Bu örnek, bir Windows Presentation Foundation (WPF) bir konak WPF tek başına 
   
 ## <a name="example"></a>Örnek  
  Bir WPF UI döndüren eklenti oluşturmak için her işlem hattı segment, eklenti ve ana bilgisayar uygulaması için özel kod gerektirir.  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Sözleşme ardışık düzen segmentini uygulama  
  Bir yöntem tarafından bir kullanıcı Arabirimi döndürmek için anlaşma tanımlanmalıdır ve dönüş değerinin türü olmalıdır <xref:System.AddIn.Contract.INativeHandleContract>. Bu tarafından gösterilmiştir `GetAddInUI` yöntemi `IWPFAddInContract` aşağıdaki kodda.  
@@ -90,5 +89,6 @@ Bu örnek, bir Windows Presentation Foundation (WPF) bir konak WPF tek başına 
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Eklentiler ve Genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [WPF Eklentilerine Genel Bakış](wpf-add-ins-overview.md)

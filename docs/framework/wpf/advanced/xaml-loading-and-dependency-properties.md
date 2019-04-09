@@ -9,17 +9,16 @@ helpviewer_keywords:
 - dependency properties [WPF], XAML loading and
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-ms.openlocfilehash: ed608a658b5077a20ed56419c4ac731641610e3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083844"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>XAML Yükleme ve Bağımlılık Özellikleri
 Geçerli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamasını kendi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işleyicisidir kendiliğinden bağımlılık özelliği kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] İşlemci ikili yüklerken bu özelliği sistemi yöntemleri bağımlılık özellikleri için kullanan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve bağımlılık özellikleri özniteliklerini işleme. Bu özellik sarmalayıcıları etkili bir şekilde atlar. Özel bağımlılık özellikleri uyguladığınızda, bu davranışı dikkate almalı ve, özellik sarmalayıcı yöntem özelliği sistem dışında herhangi bir kod yerleştirmekten kaçınmalısınız <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A>.  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu konuda bağımlılık özellikleri hem de tüketici ve yazarı olarak anlamak ve okuduğunuz varsayılır [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md) ve [özel bağımlılık özellikleri](custom-dependency-properties.md). Ayrıca okuma [XAML genel bakış (WPF)](xaml-overview-wpf.md) ve [içinde XAML söz dizimi ayrıntı](xaml-syntax-in-detail.md).  
@@ -42,6 +41,7 @@ Geçerli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclie
  [!code-vb[WPFAquariumSln#AGWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
 - [Bağımlılık Özelliği Meta Verisi](dependency-property-metadata.md)

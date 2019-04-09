@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb7a3100e1f0839b50e0430c16a02879f1b8988
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a50a799c625c647aa275994bc92738b8a4267eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135583"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote Arabirimi
 Yönetilen bir hata ayıklayıcıyı uzak hedef işleminde başlatma veya ekleme özelliği sağlar.  
@@ -78,6 +78,7 @@ interface ICorDebugRemote : IUnknown
  **.NET framework sürümleri:** 4.5, 4, 3.5 SP1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICorDebugRemoteTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
 - [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

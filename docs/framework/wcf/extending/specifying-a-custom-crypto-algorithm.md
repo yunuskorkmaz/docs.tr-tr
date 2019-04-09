@@ -2,12 +2,12 @@
 title: Özel Bir Şifreleme Algoritması Belirtme
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c92ce463f885e9784913b07eb11941ecd7d78d09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113717"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Özel Bir Şifreleme Algoritması Belirtme
 WCF kullanmak üzere özel bir şifreleme algoritması belirtmenize olanak verir veri şifrelemek veya bilgi işlem dijital imzalar. Bu, aşağıdaki adımlarla gerçekleştirilir:  
@@ -126,7 +126,8 @@ WSHttpBinding binding = new WSHttpBinding();
  Tam kod örneği için bkz: [WCF güvenliğinde şifreleme çevikliği](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) örnek.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Hizmetleri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-services.md)
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)

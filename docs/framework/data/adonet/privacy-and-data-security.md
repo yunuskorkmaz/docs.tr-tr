@@ -1,15 +1,15 @@
 ---
-title: Gizlilik ve veri güvenliği
+title: Gizlilik ve Veri Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: ed408cedbd686efd29472f6f7d19ec03390164f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3852e6034ff78b362bd67a05bd828d3033731a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662146"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081859"
 ---
-# <a name="privacy-and-data-security"></a>Gizlilik ve veri güvenliği
+# <a name="privacy-and-data-security"></a>Gizlilik ve Veri Güvenliği
 Bir ADO.NET uygulamasında hassas bilgilerini yönetme ve koruma, temel alınan ürünleri ve oluşturmak için kullanılan teknolojileri bağlıdır. ADO.NET Hizmetleri güvenli hale getirme veya verileri şifrelemek için doğrudan sağlamaz.  
   
 ## <a name="cryptography-and-hash-codes"></a>Şifreleme ve karma kodları  
@@ -28,6 +28,7 @@ Bir ADO.NET uygulamasında hassas bilgilerini yönetme ve koruma, temel alınan 
  <xref:System.Security.SecureString> Sınıfı bellekte veri koruma API'si (DPAPI) kullanarak metin şifrelemek için yöntemler sağlar. Artık gerekli değilse, dize ardından bellekten silinir. Var olan hiçbir `ToString` hızla içeriğini okumak için yöntem bir <xref:System.Security.SecureString>. Yeni bir örneğini başlatabilir `SecureString` herhangi bir değer ile veya bir dizi için bir işaretçi geçirme <xref:System.Char> nesneleri. Ardından, dizeyle çalışmak için sınıfının çeşitli yöntemler kullanabilirsiniz. Daha fazla bilgi için indirme [SecureString örnek uygulama](https://go.microsoft.com/fwlink/?LinkId=120418), nasıl kullanılacağını gösterir `SecureString` gelen sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

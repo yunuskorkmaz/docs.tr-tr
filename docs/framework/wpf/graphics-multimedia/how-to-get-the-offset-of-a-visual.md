@@ -10,12 +10,12 @@ helpviewer_keywords:
 - visual objects [WPF], retrieving offset values from
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-ms.openlocfilehash: ea03f7b9c3fefde0efa3fa0daaa07a537618f37a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4787b771c7e59a8b033b9267079c068a5845a1e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093416"
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a>Nasıl yapılır: Görselin Sapmasını Alma
 Bu örnekler bir görsel nesnesinin veya tüm üst veya alt öğesi üst göre bir uzaklık değeri almak nasıl gösterir.  
@@ -66,6 +66,7 @@ Bu örnekler bir görsel nesnesinin veya tüm üst veya alt öğesi üst göre b
  Uzaklık dikkate <xref:System.Windows.FrameworkElement.Margin%2A> tüm nesneleri için değerler. Bu durumda, <xref:System.Windows.Vector.X%2A> -4, ve <xref:System.Windows.Vector.Y%2A> -4'tür. Uzaklık değerleri negatif değerler olduğundan üst nesne olumsuz kendi alt nesneye göre uzaklığı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)

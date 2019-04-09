@@ -1,18 +1,18 @@
 ---
-title: DataSet içeriklerini kopyalama
+title: DataSet İçeriklerini Kopyalama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: b4edc1bbf1448fc86df76ed9f790a924a563647b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077776"
 ---
-# <a name="copying-dataset-contents"></a>DataSet içeriklerini kopyalama
+# <a name="copying-dataset-contents"></a>DataSet İçeriklerini Kopyalama
 Bir kopyasını oluşturabilirsiniz bir <xref:System.Data.DataSet> böylece özgün veriler etkilenmeden verileri ile çalışma veya iş verilerin bir alt kümesi ile bir **veri kümesi**. Kopyalama işlemi sırasında bir **veri kümesi**, şunları yapabilirsiniz:  
   
 -   Tam bir kopyasını oluşturma **veri kümesi**şema, veri, satır durum bilgilerini ve satır sürümleri dahil olmak üzere.  
@@ -95,6 +95,7 @@ foreach (DataRow copyRow in copyRows)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing with double buffering
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-ms.openlocfilehash: 71463d7db6ae18a3dd21d6a467f3963d836fc086
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103447"
 ---
 # <a name="double-buffered-graphics"></a>İki Kez Arabelleğe Alınan Grafikler
 Titreşim yaygın grafik programlamada bir sorundur. Birden çok karmaşık boyama işlem gerektiren bir grafik işlem Titreşim veya aksi halde kabul edilemez bir görünüme sahip gibi görünüyor işlenmiş görüntülere neden olabilir. Bu sorunları gidermek için .NET Framework iki kez arabelleğe alma erişim sağlar.  
@@ -33,10 +33,11 @@ Titreşim yaygın grafik programlamada bir sorundur. Birden çok karmaşık boya
  Kullanma hakkında daha fazla bilgi için <xref:System.Drawing.BufferedGraphics> sınıfı [el ile arabelleğe alınan grafikleri oluşturma](how-to-manually-render-buffered-graphics.md). Grafik işleme hakkında daha fazla bilgi için bkz. [grafikler ve çizim Windows Forms](graphics-and-drawing-in-windows-forms.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [Nasıl yapılır: Arabelleğe alınan grafikleri elle işleme](how-to-manually-render-buffered-graphics.md)
-- [Nasıl yapılır: Formlar ve denetimler için çift arabelleğe alma ile grafik titreşimini azaltma](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [Nasıl yapılır: Arabelleğe alınan grafikleri elle yönetme](how-to-manually-manage-buffered-graphics.md)
-- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle İşleme](how-to-manually-render-buffered-graphics.md)
+- [Nasıl yapılır: Formlar ve Denetimler için İki Kez Arabelleğe Alma ile Grafik Titreşimini Azaltma](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle Yönetme](how-to-manually-manage-buffered-graphics.md)
+- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)

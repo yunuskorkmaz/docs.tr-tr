@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama'
+title: 'Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 81bf7db9ec25ae112127712dcd0443d3e045bc10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2aa85aa9682f1f5f4b6c13465034000bb01f0e62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075209"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Nasıl yapılır: Bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama
 Bu, bir Windows Communication Foundation (WCF) hizmet için meta verileri yayımlama gösteren iki nasıl yapılır konuları biridir. Hizmet yapılandırma dosyasını ve kod kullanarak meta verileri nasıl yayımlamalısınız belirtmenin iki yolu vardır. Bu konuda, bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama gösterilmektedir.  
   
 > [!CAUTION]
@@ -93,21 +93,13 @@ namespace Metadata.Samples
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Uygulama yapılandırma dosyası kullanarak bir WCF hizmeti için meta verileri yayımlama  
   
 1.  App.config dosyasında Kapanıştan sonra `</services>` öğesi oluşturmak bir `<behaviors>` öğesi.  
-  
-  
-  
+
 2.  İçinde `<behaviors>` öğe, Ekle bir `<serviceBehaviors>` öğesi.  
-  
-  
-  
+
 3.  Ekleme bir `<behavior>` öğesine `<serviceBehaviors>` öğesi için bir değer belirtin `name` özniteliği `<behavior>` öğesi.  
-  
-  
-  
+
 4.  Ekleme bir `<serviceMetadata>` öğesine `<behavior>` öğesi. Ayarlama `httpGetEnabled` özniteliğini `true` ve `policyVersion` Policy15 için özniteliği. `httpGetEnabled` bir HTTP GET isteği tarafından yapılan meta veri isteklerine hizmet verir. `policyVersion` Hizmet meta verilerini oluştururken için WS-Policy 1.5 uyacak şekilde söyler.  
-  
-  
-  
+
 5.  Ekleme bir `behaviorConfiguration` özniteliğini `<service>` öğe belirtin `name` özniteliği `<behavior>` adım 1'de aşağıdaki kod örneğinde gösterildiği gibi eklenen öğe.  
   
     ```xml  
@@ -262,9 +254,10 @@ namespace Metadata.Samples
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [Nasıl yapılır: Yönetilen bir uygulamada bir WCF Hizmeti barındırma](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [Kendini Barındırma](../../../../docs/framework/wcf/samples/self-host.md)
-- [Meta Veri Mimarisine Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [Meta Veri Mimarisi Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Nasıl yapılır: Kod kullanarak bir hizmet için meta verileri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Nasıl yapılır: Kod Kullanarak Bir Hizmet için Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

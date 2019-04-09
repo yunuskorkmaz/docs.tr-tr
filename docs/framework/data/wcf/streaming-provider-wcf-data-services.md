@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087904"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Data Services)
 Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikili veriler, video ve ses akışları, görüntüleri, belge dosyaları ya da diğer ikili medya türleri temsil edebilir. Bir varlık veri Modeli'nde bir veya daha fazla ikili özellikleri içerdiğinde, bu ikili veri akışı yanıt giriş içinde base 64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme, performansı etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlığı bağımsız ikili verileri almak için bir mekanizma tanımlar. Bu işlem, ikili veri varlıktan bir veya daha fazla veri akışlarını ayrılarak gerçekleştirilir.  
@@ -81,18 +81,14 @@ Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikil
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Büyük ikili akışlar barındırma ortamında etkinleştirme  
  Bir veri hizmeti oluşturduğunuzda, bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web uygulaması, Windows Communication Foundation (WCF) HTTP protokolü uygulamasını sağlamak amacıyla kullanılır. Varsayılan olarak, WCF HTTP iletileri yalnızca 65 K bayt boyutunu sınırlar. Büyük ikili veri akışı için ve veri hizmetinden kullanabilmek için Web uygulaması büyük ikili dosyaları etkinleştirmek ve aktarım için akışları kullanmak için yapılandırmanız gerekir. Bunu yapmak için aşağıdaki ekleyin `<configuration />` uygulamanın Web.config dosyasının öğe:  
-  
-  
-  
+
 > [!NOTE]
 >  Kullanmanız gereken bir <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> istek ve yanıt iletilerindeki ikili veri akışı ve WCF tarafından arabelleğe değil emin olmak için aktarım modu.  
   
  Daha fazla bilgi için [ileti aktarma akışı](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) ve [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
  Varsayılan olarak, Internet Information Services (IIS) istekleri 4 MB boyutunu da sınırlar. Veri hizmetinizi IIS üzerinde çalışan akışlar 4 MB'tan büyük alma etkinleştirmek için de ayarlamalısınız `maxRequestLength` özniteliği [httpRuntime öğesi (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) içinde `<system.web />` yapılandırma bölümü olarak Aşağıdaki örnekte gösterilen:  
-  
-  
-  
+
 ## <a name="using-data-streams-in-a-client-application"></a>Bir istemci uygulamasında veri akışlarını kullanma  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci Kitaplığı hem alma hem de istemcide ikili akış olarak sunulan bu kaynakları güncelleştirme olanak sağlar. Daha fazla bilgi için [ikili verilerle çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
@@ -130,6 +126,7 @@ Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikil
  Daha fazla bilgi için [veri hizmeti sürümü oluşturma](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Özel Veri Hizmeti Sağlayıcıları](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
 - [İkili Verilerle Çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

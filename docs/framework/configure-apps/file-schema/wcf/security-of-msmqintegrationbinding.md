@@ -2,12 +2,12 @@
 title: <security> , <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: ceda00615ae579edb0360006bb70acd11716ce6a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8d79523db2a1567283b934abbd3de1adbbe6b0b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125794"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<Güvenlik >, \<MsmqIntegrationBinding >
 Message Queuing (MSMQ) tümleştirme kanal taşıma güvenlik ayarlarını tanımlar.  
@@ -58,6 +58,7 @@ msmqIntegrationBinding
 |[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Bağlama öğesi [ \<MsmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security%2A>

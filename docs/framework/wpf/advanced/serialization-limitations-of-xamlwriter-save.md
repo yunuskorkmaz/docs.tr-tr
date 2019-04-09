@@ -6,40 +6,38 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: cbe8d517b8794f6aae7190457a077422d235acb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113288"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>XamlWriter.Save'in Serileştirme Sınırlamaları
-[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> İçeriğini serileştirmek için kullanılan bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] olarak uygulama bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyası. Ancak, ne tam olarak serileştirilmiş içinde bazı önemli sınırlamalar vardır. Bu sınırlamaların ve bazı genel konular bu konuda belgelenmiştir.  
-  
- 
-  
+[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> İçeriğini serileştirmek için kullanılan bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulama olarak bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosya. Ancak, tam olarak ne serileştirildiği, bazı önemli sınırlamaları vardır. Bu sınırlamaların ve bazı genel konular, bu konuda belgelenmiştir.  
+
 <a name="Run_Time__Not_Design_Time_Representation"></a>   
-## <a name="run-time-not-design-time-representation"></a>Çalışma zamanı, tasarım zamanında gösterimi  
- Bir çağrı tarafından sıralanmış olan temel felsefesi <xref:System.Windows.Markup.XamlWriter.Save%2A> sonucu, çalışma zamanında serileştirilen nesnenin gösterimi bulabilirsiniz. Birçok tasarım zamanı özellikleri özgün [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyası zaten en iyi duruma getirilmiş olabilir veya kaybedilmiş, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bellek içi nesneler olarak yüklenir ve çağırdığınızda korunmaz <xref:System.Windows.Markup.XamlWriter.Save%2A> seri hale getirilemedi. Uygulamanın, ancak özgün yapılandırılmış mantıksal ağacının etkili bir gösterimidir serileştirilmiş sonucudur [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] onu üreten. Bu sorunları kullanmak oldukça zor hale <xref:System.Windows.Markup.XamlWriter.Save%2A> kapsamlı bir parçası olarak serileştirme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tasarım yüzeyi.  
+## <a name="run-time-not-design-time-representation"></a>Çalışma zamanı, tasarım zamanı gösterimi  
+ Bir çağrı tarafından sıralanmış olan temel felsefesi <xref:System.Windows.Markup.XamlWriter.Save%2A> sonucu, çalışma zamanında serileştirilmekte olan nesnenin gösterimini olacaktır. Özgün birçok tasarım zamanı özelliklerini [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya zaten en iyi duruma getirilmiş veya kaybedilmiş, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bellek içi nesneler olarak yüklenir ve çağırdığınızda korunmaz <xref:System.Windows.Markup.XamlWriter.Save%2A> serileştirmek için. Uygulamanın, ancak bu şart değildir özgün oluşturulmuş mantıksal ağacı etkili bir temsilini serileştirilmiş sonucudur [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , üretilen. Bu sorunları kullanmayı son derece zor hale <xref:System.Windows.Markup.XamlWriter.Save%2A> kapsamlı bir parçası olarak seri hale getirme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tasarım yüzeyi.  
   
 <a name="Serialization_is_Self_Contained"></a>   
-## <a name="serialization-is-self-contained"></a>Serileştirme kendi içinde bulunan  
- Seri hale getirilmiş çıktısı <xref:System.Windows.Markup.XamlWriter.Save%2A> kendi içinde yer alan; serileştirilen herşey içindedir bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tek bir kök öğe ve dış başvuru dışında ile tek sayfa [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]. Sayfanız uygulama kaynaklarından kaynakları başvurulan, örneği için bu serileştirilen sayfanın bileşeninin oldukları gibi görünür.  
+## <a name="serialization-is-self-contained"></a>Seri hale getirme müstakil  
+ Seri hale getirilmiş çıktısını <xref:System.Windows.Markup.XamlWriter.Save%2A> ; bağımsızdır serileştirilmiş her şeyi içindedir bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tek bir kök öğe ve dışındaki dış başvuru ile tek sayfalı [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]. Sayfanız kaynakları uygulama kaynaklarından başvurulan, örneği için bu sayfanın serileştirilmekte olan bir bileşen oldukları gibi görünür.  
   
 <a name="Extension_References_are_Dereferenced"></a>   
 ## <a name="extension-references-are-dereferenced"></a>Uzantı Başvurular geri alınır.  
- Nesnelere gibi çeşitli biçimlendirme uzantısı biçimleri tarafından yapılan ortak başvurular `StaticResource` veya `Binding`, serileştirme işlemi tarafından alınacaktır. Bunlar, bellek içi nesneler uygulama çalışma zamanı tarafından oluşturulduğu zaman çoktan geri alınmıştır ve <xref:System.Windows.Markup.XamlWriter.Save%2A> mantığı değil yeniden ziyaret özgün [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bu başvuruları serileştirilen çıktıya geri yüklemek için. Bu büyük olasılıkla herhangi bir veriye bağlı veya böyle bir değer yerel olarak ayarlanmış başka bir değerden ayırt etmek için yalnızca sınırlı ya da dolaylı yeteneği olan son çalışma zamanı gösterimi tarafından kullanılan değer olacak şekilde değeri elde kaynak donuyor. Görüntüleri de serileştirilir görüntüleri nesne başvuruları ne olursa olsun, dosya adı, özgün kaynak başvuruları olarak değil, projeye var veya [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] ilk olarak başvuruldu. Aynı sayfa içinde bildirilen bile kaynaklar burada bunlar, bir kaynak koleksiyonu anahtar olarak korunur yerine başvurulan noktasına serileştirilmiş görülür.  
+ Ortak nesneler gibi çeşitli biçimlendirme uzantısı biçimleri tarafından yapılan başvurular `StaticResource` veya `Binding`, seri hale getirme işlemi tarafından alınacaktır. Bu, bellek içi nesneler uygulama çalışma zamanı tarafından oluşturulan zaman çoktan geri alınmıştır ve <xref:System.Windows.Markup.XamlWriter.Save%2A> mantıksal değil yeniden ziyaret özgün [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] gibi seri hale getirilmiş çıktı başvuruları geri yüklemek için. Bu, büyük olasılıkla herhangi bir sınırlama veya kaynaktan elde edilen son ile yerel olarak ayarlanmış başka bir değerden bir değeri ayırmak için yalnızca sınırlı ya da dolaylı özelliği çalışma zamanı gösterimi tarafından kullanılan bir değer olmasını değeri donuyor. Görüntüleri de serileştirilme görüntüleri nesne başvuruları ne olursa olsun, dosya adı, özgün kaynak başvuruları olarak değil, projede var veya [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] başlangıçta başvuruldu. Aynı sayfa içinde kaynaklar nerede bunlar, bir kaynak koleksiyonu anahtar olarak korunur yerine başvurulan noktasına serileştirilmiş görülür.  
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
 ## <a name="event-handling-is-not-preserved"></a>Olay işleme korunmuş değildir  
- Zaman üzerinden eklenen olay işleyicileri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olan seri, bunlar korunmaz. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arka plan kodu olmadan (ve ayrıca ilgili x: Code mekanizması olmadan) çalışma zamanı yordamsal mantığını seri hale getirilirken bir yolu yoktur. Seri hale getirme bağımsızdır ve mantıksal ağacının sınırlı olduğu için olay işleyicileri depolamak için hiçbir olanak yoktur. Sonuç olarak, olay işleyicisi öznitelikleri, özniteliğin kendisi ve işleyiciye ad dize değeri çıktısından kaldırılır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Zaman aracılığıyla eklenen olay işleyicileri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olan seri, bunlar korunmaz. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arka plan kod (Ayrıca olmadan ve ilgili x: Code mekanizması) yordam çalışma zamanı mantığını serileştirilirken bir yolu yoktur. Serileştirme bağımsızdır ve mantıksal ağaç sınırlı olduğundan, olay işleyicileri depolamak için hiçbir olanak yoktur. Sonuç olarak, olay işleyicisi öznitelikleri, öznitelik hem işleyici, adları dize değeri çıktısı kaldırılır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
-## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>XamlWriter.Save kullanımı için gerçekçi senaryolar  
- Listelenen sınırlamalar İşte oldukça, hala kullanmaya yönelik çeşitli uygun senaryolar vardır <xref:System.Windows.Markup.XamlWriter.Save%2A> seri hale getirme.  
+## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>XamlWriter.Save'in gerçekçi senaryolar  
+ Listelenen sınırlamalar burada oldukça, yine de kullanmak için uygun çeşitli senaryolar vardır <xref:System.Windows.Markup.XamlWriter.Save%2A> seri hale getirme.  
   
--   Vektör veya grafik çıktısı: işlenen bölgenin çıktısı aynı vektör veya yeniden zaman grafikleri yeniden oluşturmak için kullanılabilir.  
+-   Vektör veya grafik çıktısı: İşlenen alan çıktısı, aynı vektör veya yeniden, grafik yeniden oluşturmak için kullanılabilir.  
   
--   Zengin metin ve akış belgeleri: metin ve içindeki tüm öğesi biçimlendirme ve öğesi kapsama çıktıda korunur. Bu Pano işlevselliğini yaklaşık mekanizmalar için yararlı olabilir.  
+-   Zengin metin ve akış belgeleri: Metin ve içindeki tüm öğesi biçimlendirme ve öğeyi kapsama çıktısında korunur. Bu Pano işlevselliği yaklaşık mekanizmaları için yararlı olabilir.  
   
--   İş nesnesi veri koruma:, veri özel öğeler, gibi depoladığınız varsa [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] verileri, iş nesnelerinizi temel izleyin kadar uzun süre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özel oluşturucular ve dönüştürme başvuru tarafından özellik değerleri için sağlama gibi kuralları Bu iş nesneleri serileştirme üzerinden etmesindeki.
+-   İş nesnesi veri koruma: Veri, özel öğeler gibi depoladığınız varsa [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri, iş nesnelerinizi temel izleyin sürede [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özel oluşturucular ve başvuruya göre özellik değerlerini dönüştürme sağlamak gibi kuralları, bu iş nesneleri olabilir Serileştirme yöntemiyle perpetuated.

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 06db09ac66164886b1dc99a37129201543c5ce4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8373ed288ff3e8e3f7992729e57b366a4c0043a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126756"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework İstemci Profili
 Bir alt kümesi ile birlikte sağlanan .NET Framework'ün .NET istemci profilidir [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ve önceki sürümleriyle ve istemci uygulamaları için hale getirilmiş. .NET Framework, Windows, Windows Phone ve Microsoft Azure için bir geliştirme platformudur ve yönetilen uygulama yürütme ortamı ve .NET Framework sınıf kitaplığı sağlar. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] Ve önceki sürümlerde iki dağıtım seçeneği sağlanıyordu: tam .NET Framework ve istemci profili. İstemci Profili daha hızlı dağıtım ve daha küçük uygulama yükleme paketlerini tam .NET Framework'ten etkinleştirdi.  
@@ -28,6 +28,7 @@ Bir alt kümesi ile birlikte sağlanan .NET Framework'ün .NET istemci profilidi
  Yüklediğinizde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4 istemci profili .NET Framework'ün tam sürümüne güncellenir. Yükleme hakkında daha fazla bilgi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], bkz: [geliştiriciler için .NET Framework yükleme](../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.NET framework istemci profili (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Visual Studio Çoklu Sürüm Desteğine Genel Bakış](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [.NET Framework Hedefleme Hatalarının Sorunlarını Giderme](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)

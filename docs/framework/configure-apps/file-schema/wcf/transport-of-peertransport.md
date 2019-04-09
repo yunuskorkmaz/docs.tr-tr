@@ -2,12 +2,12 @@
 title: <transport> , <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 3dbeda5d418c30f378515fa83979eaca289370f9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076009"
 ---
 # <a name="transport-of-peertransport"></a>\<Aktarım >, \<peerTransport >
 Bu bağlama ile yapılandırılan eşleri tarafından gönderilen güvenli iletiler için aktarım türünü belirtir.  
@@ -45,7 +45,7 @@ Bu bağlama ile yapılandırılan eşleri tarafından gönderilen güvenli ileti
 |Parola|Eş kanal kimlik doğrulaması için doğru parola gereklidir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -57,11 +57,12 @@ Bu bağlama ile yapılandırılan eşleri tarafından gönderilen güvenli ileti
  Bu öğe yalnızca ayarlama modu öznitelik [ \<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) ayarlanır `Transport` veya `TransportWithMessageCredential`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Aktarım Güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Taşıma Güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)
 - [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)

@@ -2,12 +2,12 @@
 title: NetHttpBinding Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: 47a4da6dd709c300b62a7380e6e0754e31782dd8
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 5090cfdfeb068acda1e1092e408f3cd747c574c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121023"
 ---
 # <a name="using-the-nethttpbinding"></a>NetHttpBinding Kullanma
 <xref:System.ServiceModel.NetHttpBinding> HTTP veya WebSocket hizmetlerini kullanma için tasarlanmış bir bağlama ve ikili kodlama varsayılan olarak kullanır. <xref:System.ServiceModel.NetHttpBinding> İstek-yanıt anlaşması veya çift yönlü sözleşme ile kullanılan olup olmadığını algılar ve davranışını eşleşecek şekilde değiştirmesine - HTTP istek-yanıt sözleşmeleriyle ve WebSockets için çift yönlü sözleşmeler için kullanır. Bu davranış kullanılarak geçersiz kılınabilir <xref:System.ServiceModel.Channels.WebSocketTransportUsage> ayarı:  
@@ -59,6 +59,7 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hizmetler için Bağlamaları Yapılandırma](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)
 - [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)

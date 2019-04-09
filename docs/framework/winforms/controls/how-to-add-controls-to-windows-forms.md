@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'a denetimler ekleme"
+title: 'Nasıl yapılır: Windows Forms’a Denetimler Ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 31820775d4f7fb981599e806aa5e27655039e6ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 72b5931a79284a93a4e0fdf3cb2cc3b03157f5f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106489"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms'a denetimler ekleme
+# <a name="how-to-add-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms’a Denetimler Ekleme
 Çoğu forms formunun yüzeyine denetimler ekleyerek, bir kullanıcı arabirimi (UI) tanımlamak için tasarlanmıştır. A *denetimi* bilgilerini görüntülemek veya kullanıcı girişi kabul etmek için kullanılan bir form üzerinde bir bileşendir. Denetimleri hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri](index.md).  
   
 > [!NOTE]
@@ -90,8 +90,9 @@ ms.locfileid: "57720780"
     >  Yerel bir güvenlik riski ağ üzerinden bilgisayarınıza bir kötü amaçlı başvurarak sunabileceğinize `UserControl`. Bu, yalnızca, yanlışlıkla bunu projenize ekleyerek ardından zararlı olabilecek özel bir denetim oluşturulamaz kötü amaçlı bir kişinin söz konusu olduğunda önemli hale gelir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms Denetimleri](index.md)
-- [Windows Forms’da Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
-- [Nasıl yapılır: Windows Forms'da denetimleri yeniden boyutlandırma](how-to-resize-controls-on-windows-forms.md)
-- [Nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Formlarında Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows Forms’da Denetimleri Yeniden Boyutlandırma](how-to-resize-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

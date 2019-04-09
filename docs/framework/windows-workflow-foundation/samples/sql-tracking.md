@@ -1,15 +1,15 @@
 ---
-title: SQL izleme
+title: SQL İzleme
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: e2cb86a92e075d9117f2fe208f2044d4bc30dac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6d3974cbf181734f2a3cab0fbc7d8f32c16699bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710023"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146347"
 ---
-# <a name="sql-tracking"></a>SQL izleme
+# <a name="sql-tracking"></a>SQL İzleme
 Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bir SQL veritabanı'na izleme kayıtları yazar. Windows Workflow Foundation (WF) iş akışı yürütme iş akışı örneğinin görünürlük elde etmek için izleme sağlar. İzleme çalışma zamanı iş akışı iş akışı yürütülürken kayıtları izleme yayar. İş akışı izleme hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](../workflow-tracking-and-tracing.md).
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
@@ -60,4 +60,5 @@ Bu örnek nasıl yazılacağını özel SQL izleme katılımcı gösterir, bu bi
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -1,18 +1,18 @@
 ---
-title: XML verileri olarak DataSet içeriği yazma
+title: XML Verileri Olarak DataSet İçeriği Yazma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: 9e4ef54321acec508aac787329cb911e083317bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158958"
 ---
-# <a name="writing-dataset-contents-as-xml-data"></a>XML verileri olarak DataSet içeriği yazma
+# <a name="writing-dataset-contents-as-xml-data"></a>XML Verileri Olarak DataSet İçeriği Yazma
 ADO.NET içinde bir XML temsilini yazabileceğiniz bir <xref:System.Data.DataSet>, ile veya olmadan şeması. XML ile satır içi şema bilgileri ise XML Şeması Tanım Dili (XSD) kullanarak yazılır. Tablo tanımları şema içeriyor <xref:System.Data.DataSet> ilişki ve kısıtlama tanımları yanı sıra.  
   
  Olduğunda bir <xref:System.Data.DataSet> XML verileri, satır olarak yazılır <xref:System.Data.DataSet> geçerli sürümlerine yazılır. Ancak, <xref:System.Data.DataSet> böylece hem geçerli hem de satır özgün değerlerine dahil edilecek bir DiffGram da yazılabilir.  
@@ -71,9 +71,10 @@ xmlSW.Close();
 |**Öğe**|Bu varsayılandır. Sütun, burada ColumnName öğe adı, sütunun içeriğine öğenin metin olarak yazılmış bir XML öğesi olarak yazılır. Örneğin:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**Öznitelik**|Sütun XML öğesi geçerli satıra burada ColumnName özniteliğin adını ve sütun içeriğini öznitelik değeri olarak yazılmış bir XML özniteliği olarak yazılır. Örneğin:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
 |**SimpleContent**|Bir sütunun içeriğine metin XML öğesi geçerli satır olarak yazılır. Örneğin:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Unutmayın **SimpleContent** sahip bir tablo için bir sütun ayarlanamaz **öğesi** sütunları veya iç içe geçmiş ilişkileri.|  
-|**Gizli**|Sütun XML çıktısında yazılmaz.|  
+|**Hidden**|Sütun XML çıktısında yazılmaz.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
 - [DataRelations’ı İç İçe Yerleştirme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)

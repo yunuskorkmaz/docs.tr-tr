@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ProtectionLevel özelliğini ayarlama'
+title: 'Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 13e07d06ed795bc50822d95cdd1ab44c6c336d2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ce9fc8549218db5a1446026421f1a7ba1e5a23aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089854"
 ---
-# <a name="how-to-set-the-protectionlevel-property"></a>Nasıl yapılır: ProtectionLevel özelliğini ayarlama
+# <a name="how-to-set-the-protectionlevel-property"></a>Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama
 Uygun bir öznitelik uygulamak ve özelliğini ayarlayarak, koruma düzeyini ayarlayabilirsiniz. Her bir iletinin tüm bölümlerinde etkilemek için hizmet düzeyinde koruma ayarlayabilirsiniz veya yöntemlerinden message bölümleri için giderek daha ayrıntılı bir düzeyde koruma ayarlayabilirsiniz. Hakkında daha fazla bilgi için `ProtectionLevel` özelliğine bakın [anlama koruma düzeyi](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
@@ -89,6 +89,7 @@ Uygun bir öznitelik uygulamak ve özelliğini ayarlayarak, koruma düzeyini aya
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>

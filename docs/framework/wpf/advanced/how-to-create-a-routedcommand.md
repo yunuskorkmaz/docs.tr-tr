@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
-ms.openlocfilehash: 4119a762bd0db63108d08a9db9367e367adb6b58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372093"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109050"
 ---
 # <a name="how-to-create-a-routedcommand"></a>Nasıl yapılır: RoutedCommand Oluşturma
 Bu örnekte, özel bir oluşturma işlemi gösterilmektedir <xref:System.Windows.Input.RoutedCommand> ve özel komut oluşturarak uygulamak nasıl bir <xref:System.Windows.Input.ExecutedRoutedEventHandler> ve <xref:System.Windows.Input.CanExecuteRoutedEventHandler> ve bunlara ekleyerek bir <xref:System.Windows.Input.CommandBinding>.  Komut vermeye genel ile ilgili daha fazla bilgi için bkz: [komut vermeye genel genel bakış](commanding-overview.md).  
@@ -48,5 +48,6 @@ Bu örnekte, özel bir oluşturma işlemi gösterilmektedir <xref:System.Windows
  Düğme tıklandığında <xref:System.Windows.Input.RoutedCommand.Execute%2A> özel metodunda <xref:System.Windows.Input.RoutedCommand> çağrılır.  <xref:System.Windows.Input.RoutedCommand> Başlatır <xref:System.Windows.Input.CommandManager.PreviewExecuted> ve <xref:System.Windows.Input.CommandManager.Executed> yönlendirilmiş olaylar.  Bu olayları aranırken öğesi ağacı gezme bir <xref:System.Windows.Input.CommandBinding> bu belirli komutu.  Varsa bir <xref:System.Windows.Input.CommandBinding> bulunursa <xref:System.Windows.Input.ExecutedRoutedEventHandler> ilişkili <xref:System.Windows.Input.CommandBinding> çağrılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Input.RoutedCommand>
 - [Komut Vermeye Genel Bakış](commanding-overview.md)

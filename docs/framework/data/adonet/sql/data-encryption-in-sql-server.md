@@ -1,15 +1,15 @@
 ---
-title: SQL Server'da veri şifreleme
+title: SQL Server’da Veri Şifreleme
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 4b421d2cb5a44ee164a73ea1367a79d81fb37c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102173"
 ---
-# <a name="data-encryption-in-sql-server"></a>SQL Server'da veri şifreleme
+# <a name="data-encryption-in-sql-server"></a>SQL Server’da Veri Şifreleme
 SQL Server şifrelemek ve bir sertifika, asimetrik anahtar veya simetrik anahtar kullanarak verilerin şifresini çözmek için işlevler sağlar. Tüm bunların bir iç sertifika deposunda yönetir. Depolama ve sertifikaları anahtarlar üzerindeki katman hiyerarşideki bir düzeyde bir şifreleme hiyerarşisi kullanır. Bu özellik alanı SQL Server'ın, gizli depolama olarak adlandırılır.  
   
  Hızlı şifreleme işlevleri tarafından desteklenen şifreleme simetrik anahtar şifreleme modudur. Bu mod, büyük miktarda veriyi işlemek için uygundur. Simetrik anahtarlar, sertifikalar, parolalar veya diğer simetrik anahtarlar tarafından şifrelenebilir.  
@@ -30,6 +30,7 @@ SQL Server şifrelemek ve bir sertifika, asimetrik anahtar veya simetrik anahtar
 |[Şifreleme hiyerarşisi](/sql/relational-databases/security/encryption/encryption-hierarchy)|SQL Server şifreleme genel bir bakış sağlar. Bu konu, ek makalelere bağlantılar sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [SQL Server’da Kimlik Doğrulaması](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

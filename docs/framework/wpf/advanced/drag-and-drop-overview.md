@@ -12,17 +12,16 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 67c332b4fd4d2937f3a455353f3a5353dde10ef5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139223"
 ---
 # <a name="drag-and-drop-overview"></a>Sürükleme ve Bırakmaya Genel Bakış
 Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Sürükle ve bırak fare (veya başka bir işaretleme cihazı) bir veya birden çok nesne seçmek için bu nesneleri sürükleyerek üzerinden bazı istenen bırakma hedefi kullanılmasına veri aktarım yöntemi için yaygın olarak başvuruyor [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]ve onları bırakma.  
-  
-  
+
 <a name="Drag_and_Drop_Support"></a>   
 ## <a name="drag-and-drop-support-in-wpf"></a>WPF sürükle ve bırak desteği  
  Sürükle ve bırak işlemleri genellikle iki taraf da içerir: sürükleme kaynağı, sürüklenen nesnenin kaynaklanan ve bir bırakma hedefi bırakılan nesnesini alır.  Sürükleme kaynağı ve bırakma hedefi, aynı veya farklı bir uygulama kullanıcı Arabirimi öğeleri olabilir.  
@@ -217,7 +216,8 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
  [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Clipboard>
-- [İzlenecek yol: Sürükleme ve bırakmayı kullanıcı denetiminde etkinleştirme](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
 - [Nasıl Yapılır Konuları](drag-and-drop-how-to-topics.md)
 - [Sürükleme ve Bırakma](drag-and-drop.md)

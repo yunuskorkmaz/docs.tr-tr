@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ControlTemplate ile oluşturulan öğeleri bulma'
+title: 'Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ControlTemplates [WPF], finding elements
 - finding ControlTemplate elements [WPF]
 ms.assetid: d7b25447-ceff-4bb4-9be5-fd7c40ef00af
-ms.openlocfilehash: 9a6609d70a6b863f16533aac81ffce4daf171bcf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 426f6c93433711ac72fe67eff2ee3006aa4d9166
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092134"
 ---
-# <a name="how-to-find-controltemplate-generated-elements"></a>Nasıl yapılır: ControlTemplate ile oluşturulan öğeleri bulma
+# <a name="how-to-find-controltemplate-generated-elements"></a>Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma
 Bu örnek tarafından oluşturulan öğeleri bulma işlemini gösterir. bir <xref:System.Windows.Controls.ControlTemplate>.  
   
 ## <a name="example"></a>Örnek  
@@ -29,6 +29,7 @@ Bu örnek tarafından oluşturulan öğeleri bulma işlemini gösterir. bir <xre
  [!code-vb[FindGeneratedItems#CTFindElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#ctfindelement)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataTemplate ile Oluşturulan Öğeleri Bulma](../data/how-to-find-datatemplate-generated-elements.md)
 - [Stil ve Şablon Oluşturma](styling-and-templating.md)
 - [WPF XAML Ad Kapsamları](../advanced/wpf-xaml-namescopes.md)

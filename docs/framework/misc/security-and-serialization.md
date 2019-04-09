@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 996231ae035e6518aaceac0ba75b3de3b52a0a22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4deadc175bd4cc3635a6c8d8d8b80100b5a9938
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151794"
 ---
 # <a name="security-and-serialization"></a>Güvenlik ve Serileştirme
 Serileştirme bakın veya erişilemez Aksi durumda olacak nesne örneği verileri değiştirmek başka bir kod izin vermek için özel bir izin serileştirme gerçekleştiren kod gereklidir: <xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> bayrağı belirtilmiş. Varsayılan ilkesi altında çok Internet karşıdan bu izin verilmez veya intranet kodu; yalnızca yerel bilgisayarda kod bu izin verilir.  
@@ -48,4 +48,5 @@ Serileştirme bakın veya erişilemez Aksi durumda olacak nesne örneği veriler
 -   Serileştirme için kullanılan özel bir oluşturucu ayrıca kapsamlı giriş doğrulaması gerçekleştirmeniz ve kötü amaçlı kod tarafından kötüye karşı korumaya yardımcı olmak için özel veya korumalı olmalıdır. Aynı güvenlik denetimleri ve açıkça sınıfı oluşturma veya Fabrika tür üzerinden dolaylı olarak oluşturma gibi diğer araçları, böyle bir sınıfın bir örneği elde etmek için gerekli izinler uygulaması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

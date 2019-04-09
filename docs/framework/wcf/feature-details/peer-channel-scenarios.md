@@ -2,12 +2,12 @@
 title: Eş Kanal Senaryoları
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 05fe7f632b286876dfee36b7d5d22a77c0ae11e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 610668e5f3625c638fc1e814e0116df87970773b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147062"
 ---
 # <a name="peer-channel-scenarios"></a>Eş Kanal Senaryoları
 Eş kanal API'leri aşağıdaki geliştirme senaryolarını destekler.  
@@ -25,4 +25,5 @@ Eş kanal API'leri aşağıdaki geliştirme senaryolarını destekler.
  Eş kanalı kullanarak, uygulama geliştiricilerin sunucusuz oyun taşır burada ve için gönderilen bir eşler arası mekanizması yerine bir merkezi sunucu üzerinden diğer ouyncularla eşitlenmiş oyunlarını sürümleri oluşturabilirsiniz. Küçük ISV'ler için bu dağıtımı, Bakımı ve merkezi sunucuların bakımı ile ilgili işletim maliyetlerini kaldırmaya yardımcı olur. Eşler arası mimari kullanılarak yazılmış oyunlar, Internet üzerinden veya kablolu veya kablosuz yerel ağ çalınabilir. Giriş ve oyun içi sohbet gibi ikincil oyun etkinlikleri bir eşler arası ağ ile geliştirilmiş olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Eş Kanal Kavramları](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

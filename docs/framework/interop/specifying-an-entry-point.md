@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 787406b1fa7e5beb59ff3f8715c1215a734ed895
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086071"
 ---
 # <a name="specifying-an-entry-point"></a>Giriş Noktası Belirtme
 Bir giriş noktası, bir işlevin bir DLL içindeki konumunu tanımlar. Yönetilen bir proje içinde, bir hedef işlevin özgün adı veya sıra giriş noktası, birlikte çalışabilirlik sınırında bu işlevi tanımlar. Ayrıca, işlemi etkin şekilde yeniden adlandırarak giriş noktasını farklı bir adla eşleyebilirsiniz.  
@@ -95,7 +95,8 @@ extern "C" int MsgBox(
 ```
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [Platform Çağırma Örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Platform Çağırma ile Veri Hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [Platform Çağırma ile Veri Sıralama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)

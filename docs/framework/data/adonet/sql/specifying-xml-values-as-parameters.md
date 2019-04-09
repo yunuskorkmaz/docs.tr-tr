@@ -1,18 +1,18 @@
 ---
-title: Parametre olarak XML değerleri belirtme
+title: Parametre Olarak XML Değerleri Belirtme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 23c594fc57b74ea4c40a95d18b060bc6ccee46ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159256"
 ---
-# <a name="specifying-xml-values-as-parameters"></a>Parametre olarak XML değerleri belirtme
+# <a name="specifying-xml-values-as-parameters"></a>Parametre Olarak XML Değerleri Belirtme
 Sorgu değeri bir XML dizesi olan bir parametre gerektiriyorsa, geliştiricilerin bir örneğini kullanarak bu değeri sağlayabilir **SqlXml** veri türü. Gerçekten vardır hiçbir püf noktaları; SQL Server'da XML sütunları, diğer veri türleri ile aynı şekilde parametre değerleri kabul edin.  
   
 ## <a name="example"></a>Örnek  
@@ -160,6 +160,7 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.SqlTypes.SqlXml>
 - [SQL Server'da XML Verileri](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

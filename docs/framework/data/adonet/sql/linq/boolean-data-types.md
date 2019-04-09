@@ -1,15 +1,15 @@
 ---
-title: Boole veri türleri
+title: Boole Veri Türleri
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: f0709b78408f348b84926a92b6b404e2be952a12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1ecd01902c1b38552561a56521f91fa1580ffade
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091219"
 ---
-# <a name="boolean-data-types"></a>Boole veri türleri
+# <a name="boolean-data-types"></a>Boole Veri Türleri
 Boole işleçleri, davranış kısa devre yapılmamış dışında ortak dil çalışma zamanı içinde (CLR), beklendiği gibi çalışır. Örneğin, Visual Basic `AndAlso` işleci davranacağını gibi `And` işleci. C# `&&` İşleci davranacağını gibi `&` işleci.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Aşağıdaki işleçleri destekler.  
@@ -21,7 +21,8 @@ Boole işleçleri, davranış kısa devre yapılmamış dışında ortak dil ça
 |[Or İşleci](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124; Operator](~/docs/csharp/language-reference/operators/or-operator.md)|  
 |[OrElse İşleci](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124;&#124;İşleci](~/docs/csharp/language-reference/operators/conditional-or-operator.md)|  
 |[Xor İşleci](~/docs/visual-basic/language-reference/operators/xor-operator.md)|[^ İşleci](~/docs/csharp/language-reference/operators/xor-operator.md)|  
-|[Not İşleci](~/docs/visual-basic/language-reference/operators/not-operator.md)|[\! İşleci](~/docs/csharp/language-reference/operators/logical-negation-operator.md)|  
+|[Not İşleci](~/docs/visual-basic/language-reference/operators/not-operator.md)|[\! İşleç](~/docs/csharp/language-reference/operators/logical-negation-operator.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

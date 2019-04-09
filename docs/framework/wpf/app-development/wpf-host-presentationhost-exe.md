@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 8275777c58363c31d981f46172ad2f3f18e34861
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 586d306d0f375241c9382e1e24cf1af75b990ba9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122869"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF Konağı (PresentationHost.exe)
 Windows Presentation Foundation (WPF) Konağı (PresentationHost.exe) sağlayan bir uygulama olan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uyumlu tarayıcılarda uygulamaları (dahil olmak üzere [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] ve üzeri). Varsayılan olarak, Windows Presentation Foundation (WPF) konak olarak kabuğa kayıtlı ve [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] işleyicisi için tarayıcıda barındırılan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] içeriği olarak da içerir:  
@@ -37,7 +37,7 @@ Windows Presentation Foundation (WPF) Konağı (PresentationHost.exe) sağlayan 
 |Parametre|Açıklama|  
 |---------------|-----------------|  
 |filename|Etkinleştirilecek dosyasının yolu. Ayrıca olabilir bir [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].|  
-|-hata ayıklama|Bir uygulama etkinleştirilirken bırakmaz için işleme veya mağaza'dan çalıştırın. Bu, yalnızca yerel bir dosyaya etkinleştirildiğinde çalışır.|  
+|-debug|Bir uygulama etkinleştirilirken bırakmaz için işleme veya mağaza'dan çalıştırın. Bu, yalnızca yerel bir dosyaya etkinleştirildiğinde çalışır.|  
 |-debugSecurityZoneURL \<URL'si >|İle kullanılan bir [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] PresentationHost.exe için gibi dağıtıldıysa uygulamanın hata ayıklaması belirtmek için değer belirtilen [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]. Bu dağıtım bölgesi hem kaynak siteyi belirler.|  
 |-ekleme|OLE için gereklidir. Varsa `-event` veya `-debug` parametresi belirtilirse, belirtmek gerekli değil `-embedding` parametresi, çünkü bu parametre, dahili olarak ayarlanır.|  
 |-olay \<eventname >|Bu ada sahip olayı açın ve PresentationHost.exe konak başlatıldı ve hazır olduğunda sinyal [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] içeriği. PresentationHost.exe sonlandırılacak olay açılırken bir hata olduğunda, IF gibi onu değil zaten oluşturuldu.|  
@@ -58,4 +58,5 @@ Windows Presentation Foundation (WPF) Konağı (PresentationHost.exe) sağlayan 
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Güvenlik](../security-wpf.md)

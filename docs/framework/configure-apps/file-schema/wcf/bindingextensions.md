@@ -2,12 +2,12 @@
 title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: 6eed4e8c549bccb06d8d425b084554a2ec7a1183
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ed55701e45d8580e37cf4776de6b9c5241e0548c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113041"
 ---
 # <a name="bindingextensions"></a>\<bindingExtensions >
 Bu bölümde, kullanıcı tanımlı bir makineden bağlama kullanımını etkinleştirir veya uygulama yapılandırma dosyası. Kullanıcı tanımlı kullanılarak bu koleksiyona bağlama ekleyebileceğiniz `add` anahtar sözcüğü ve ayarı `type` özniteliği kullanıcı tanımlı bağlama, öğenin yanı sıra `name` tanımlanan bağlama kullanıcı adı özniteliği.  
@@ -42,4 +42,5 @@ Bu bölümde, kullanıcı tanımlı bir makineden bağlama kullanımını etkinl
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)

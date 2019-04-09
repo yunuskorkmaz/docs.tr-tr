@@ -2,12 +2,12 @@
 title: Varlık Veri Modeli Temel Kavramları
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2efa54b6bd656129812cc9dd7c2ce38a4fb2a89a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074462"
 ---
 # <a name="entity-data-model-key-concepts"></a>Varlık Veri Modeli Temel Kavramları
 Verilerin yapısını tanımlamak için üç temel kavramları varlık veri modeli (EDM) kullanır: *varlık türü*, *ilişkilendirme türü*, ve *özelliği*. Bu EDM herhangi bir uygulamada verilerin yapısını açıklayan en önemli kavramlar ücretlerdir.  
@@ -39,4 +39,5 @@ Verilerin yapısını tanımlamak için üç temel kavramları varlık veri mode
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

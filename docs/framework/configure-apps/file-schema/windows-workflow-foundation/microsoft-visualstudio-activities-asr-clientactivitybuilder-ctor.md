@@ -9,12 +9,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6b44b13c-7a23-4df2-8f9f-45e2b1430002
-ms.openlocfilehash: b44b20a83068278fb35345220f45051a7c4177f2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0ce9be30182f9181bcb6449529d9b9796aadbc2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133542"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderctor"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
 Örneği oluşturur [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md) sınıfı.  
@@ -41,4 +41,5 @@ public ClientActivityBuilder(OperationDescription operationDescription, string c
  İşlem için hizmet ad alanını belirtir. Bu parametrenin değeri ya da olmamalıdır **null** veya boş. Bu koşullar tatmin edici değil, oluşturucuya ve diğer bu sınıftaki yöntemleri kullanılarak çalışma zamanı sonucu tanımlanmamış.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)

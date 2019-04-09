@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], regions
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
-ms.openlocfilehash: 31c0e4b1509c478786d075b127f0b181d5cdd1c6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 33d4f4ecca7b9d777fa4eab5b6d031de10f03ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076035"
 ---
 # <a name="regions-in-gdi"></a>GDI+'daki Bölgeler
 Bir bölge, bir çıktı cihazına görüntü alanının bölümüdür. Bölgeler (tek bir dikdörtgen) basit veya karmaşık (çokgenler ve kapalı Eğriler birleşimi) olabilir. Aşağıdaki resimde iki bölgeleri gösterir: bir bir dikdörtgen oluşturulur ve diğer bir yolu oluşturulur.  
@@ -40,6 +40,7 @@ Bir bölge, bir çıktı cihazına görüntü alanının bölümüdür. Bölgele
  [!code-vb[LinesCurvesAndShapes#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#61)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Region?displayProperty=nameWithType>
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
 - [Bölgeleri Kullanma](using-regions.md)

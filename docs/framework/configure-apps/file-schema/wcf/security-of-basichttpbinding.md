@@ -2,12 +2,12 @@
 title: <security> , <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 964f2bf9571cd3c3b8668c7ab5306fab89de2ab0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f1e166bec2254ed6d2c306eaccfa13e9fba1d70d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118059"
 ---
 # <a name="security-of-basichttpbinding"></a>\<Güvenlik >, \<basicHttpBinding >
 Güvenlik yeteneklerini tanımlar [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -43,7 +43,7 @@ Güvenlik yeteneklerini tanımlar [ \<basicHttpBinding >](../../../../../docs/fr
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Hiçbiri|-Sıradaki iletiler, aktarım sırasında sağlanmaz.|  
+|Yok.|-Sıradaki iletiler, aktarım sırasında sağlanmaz.|  
 |Taşıma|HTTPS aktarımı kullanarak güvenliği sağlanır. SOAP iletilerini HTTPS kullanılarak güvenli hale getirilir. Hizmet, hizmetin X.509 sertifikası kullanarak istemci kimlik doğrulaması yapılır. İstemci tarafından sağlanan ClientCredentialType kullanarak kimlik doğrulaması yapılır. Bkz: [ \<aktarım >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md).|  
 |İleti|SOAP ileti güveliği kullanarak güvenliği sağlanır. Varsayılan olarak, gövde imzalı ve şifrelenir. Bu bağlama için sistem sunucu sertifikası istemciyi bant dışından sağlanmasını gerektirir. Yalnızca geçerli `ClientCredentialType` Bu bağlama için `Certificate`.|  
 |TransportWithMessageCredential|Bütünlüğü, gizliliği ve sunucu kimlik doğrulaması ile Aktarım güvenliği sağlanır. İstemci kimlik doğrulaması yoluyla SOAP ileti güvenliği sağlanır. Bu mod, kullanıcının kullanıcı adı/parola kullanarak kimlik doğrulaması ve ileti aktarım güvenliğini sağlamak için var olan bir HTTP dağıtım olduğunda geçerlidir.|  
@@ -66,6 +66,7 @@ Güvenlik yeteneklerini tanımlar [ \<basicHttpBinding >](../../../../../docs/fr
  Varsayılan olarak, SOAP ileti güvenli olmadığından ve istemci kimliği doğrulanmamış. Bu öğe için ek güvenlik ayarları yapılandırmanızı sağlar `basicHttpBinding` öğesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.BasicHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>

@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 3589ba1d13c4ec57cfcec8c52b61556344e8def2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144033"
 ---
 # <a name="drawing-objects-overview"></a>Çizim Nesnelerine Genel Bakış
 Bu konu tanıtır <xref:System.Windows.Media.Drawing> nesneleri ve bunları şekiller, bit eşlemler, metin ve medya verimli bir şekilde çizmek için kullanmayı açıklar. Kullanma <xref:System.Windows.Media.Drawing> küçük resim, oluşturduğunuz nesneleri boyama ile bir <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.Visual> nesneleri.  
-  
- 
-  
+
 <a name="whatisadrawingsection"></a>   
 ## <a name="what-is-a-drawing-object"></a>Çizim nesnesi nedir?  
  A <xref:System.Windows.Media.Drawing> nesne gibi bir şekil, bit eşlem, görüntü veya metin satırı görünür içeriği açıklar. Farklı türde çizimler içeriği farklı türleri açıklanmaktadır. Çizim nesneleri farklı türlerinin bir listesi verilmiştir.  
@@ -234,12 +232,13 @@ GeometryDrawing DrawingBrush ile kullanılan
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
 - [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)
 - [Geometriye Genel Bakış](geometry-overview.md)
-- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
 - [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)
 - [Freezable Nesnelerine Genel Bakış](../advanced/freezable-objects-overview.md)
 - [Nasıl Yapılır Konuları](drawings-how-to-topics.md)

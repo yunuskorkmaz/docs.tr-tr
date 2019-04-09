@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir saat temelli önbellek ilkesini özelleştirme'
+title: 'Nasıl yapılır: Saat Temelli Önbellek İlkesini Özelleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 9d1eef073588f45e70170fcf46766b53f99bed8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4a35882d99a87ca5bf22fb386a87158e3c2d664
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154576"
 ---
-# <a name="how-to-customize-a-time-based-cache-policy"></a>Nasıl yapılır: Bir saat temelli önbellek ilkesini özelleştirme
+# <a name="how-to-customize-a-time-based-cache-policy"></a>Nasıl yapılır: Saat Temelli Önbellek İlkesini Özelleştirme
 Bir saat temelli önbellek ilkesi oluştururken en uzun geçerlilik süresi, en az eskime, en fazla eskime veya önbellek eşitleme tarih değerleri belirtilerek, önbelleğe alma davranışını özelleştirebilirsiniz. <xref:System.Net.Cache.HttpRequestCachePolicy> Nesnesi, bu değerleri geçerli birleşimleri belirtmek olanak tanıyan birkaç Oluşturucusu sağlar.  
   
 ### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Bir önbellek eşitleme tarihi kullanan bir saat temelli önbellek ilkesi oluşturmak için  
@@ -115,6 +115,7 @@ Level:Default MaxAge:36000 MinFresh:18000
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Önbellek İlkesi](../../../docs/framework/network-programming/cache-policy.md)
 - [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)

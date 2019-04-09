@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], XML namespaces
 - namespaces [WPF], XML
 ms.assetid: a47c832f-dc84-48f2-96d5-cde18fc4284b
-ms.openlocfilehash: 190bf22544bd17cb215870728333211795040294
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 38bf6e8f88b0325193d49148cd6c33031f7b0a6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150000"
 ---
 # <a name="how-to-use-xml-namespaces-in-data-binding"></a>Nasıl yapılır: XML Ad Alanlarını Kullanarak Veri Bağlama
 ## <a name="example"></a>Örnek  
@@ -30,6 +30,7 @@ ms.locfileid: "57377338"
  Bu örnekte, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veriler bir web hizmetinden gelir ancak <xref:System.Windows.Data.XmlNamespaceMapping> öğesi, satır içi ile de çalışır [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veya [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] katıştırılmış dosyasındaki verileri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

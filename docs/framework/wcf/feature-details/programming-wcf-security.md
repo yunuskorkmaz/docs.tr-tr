@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b49031b0001ddba01a888806206360c1cbdbacb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 41157d12f1133878e133895ed0f803bc7018af51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087813"
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
 Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluşturmak için kullanılan temel programlama görevlerini açıklar. Bu konu, yalnızca kimlik doğrulaması, gizliliği ve bütünlük, toplu olarak bilinen içermektedir *aktarım güvenliği*. Bu konuda, yetkilendirme (kaynaklarına veya hizmetlerine erişim denetimi); içermez Yetkilendirme hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -102,5 +102,6 @@ Bu konu, güvenli bir Windows Communication Foundation (WCF) uygulaması oluştu
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

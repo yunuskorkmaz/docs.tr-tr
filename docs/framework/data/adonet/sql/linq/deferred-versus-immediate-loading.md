@@ -1,18 +1,18 @@
 ---
-title: Ertelenmiş ve hemen yükleme karşılaştırması
+title: Ertelenmiş ve Hemen Yükleme Karşılaştırması
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: c78f608225d64a428b768fbc8d03f71a393d980d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096998"
 ---
-# <a name="deferred-versus-immediate-loading"></a>Ertelenmiş ve hemen yükleme karşılaştırması
+# <a name="deferred-versus-immediate-loading"></a>Ertelenmiş ve Hemen Yükleme Karşılaştırması
 Bir nesne için sorgularken, yalnızca istediğiniz nesneyi gerçekten alın. *İlgili* nesneleri olmayan otomatik olarak getirilen aynı anda. (Daha fazla bilgi için [sorgulama arasında ilişkiler](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Bunları erişme denemesi bunları alır bir istek oluşturur çünkü ilgili nesneler zaten olmayan olgu yüklenmiş göremez.  
   
  Örneğin, siparişler belirli bir kümesini sorgulamak ve bir e-posta bildirimi belirli müşterilere nadiren göndermek isteyebilirsiniz. Mutlaka Başlangıçta tüm müşteri verilerine her sipariş almak zorunda kalmaz. Ertelenen yükleme kesinlikle zorunda kadar ek bilgilerin alınmasını ertelemek için kullanabilirsiniz. Aşağıdaki örnek göz önünde bulundurun:  
@@ -34,4 +34,5 @@ Bir nesne için sorgularken, yalnızca istediğiniz nesneyi gerçekten alın. *�
 -   <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> Yöntemine filtre nesneleri için belirli bir ilişkinin alınır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

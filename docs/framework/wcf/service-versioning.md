@@ -2,12 +2,12 @@
 title: Hizmet Sürümü Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 62c8641e69ea461c3bf56b911c25b4894f63abe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122414"
 ---
 # <a name="service-versioning"></a>Hizmet Sürümü Oluşturma
 İlk dağıtım ve potansiyel olarak kendi ömürlerine sırasında birkaç kez sonra Hizmetleri (ve bunlar ortaya uç noktaları) için çeşitli iş gereksinimlerini, bilgi teknolojisi gereksinimlerini değiştirme gibi nedenlerle, değiştirilmesi veya diğer adres gerekebilir sorun. Her değişikliği hizmetinin yeni bir sürümünü içeriyor. Bu konu, Windows Communication Foundation (WCF) sürüm oluşturmayı göz önünde bulundurun açıklanmaktadır.  
@@ -176,6 +176,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  Hizmet sözleşmesi açısından yazılan yeni işlemleri içerecek şekilde güncelleştirilmesi `PurchaseOrderV2`. Var olan iş mantığındaki açısından yazılan `IPurchaseOrderV1` için çalışmaya devam eder `PurchaseOrderV2` ve gereken yeni iş mantığı `OrderDate` özelliği de yazılabilir `IPurchaseOrderV2`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
@@ -186,5 +187,5 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Veri Anlaşması Eşitliği](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Veri Sözleşmesi Eşitliği](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

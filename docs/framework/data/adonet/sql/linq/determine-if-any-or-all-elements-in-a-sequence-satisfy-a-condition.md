@@ -1,18 +1,18 @@
 ---
-title: Bir dizideki tüm öğeler bir koşulu karşılayıp karşılamadığını belirleme
+title: Dizideki Öğelerin Herhangi Birinin veya Tümünün Bir Koşulu Karşılayıp Karşılamadığını Belirleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
-ms.openlocfilehash: d3c343d3cf5068e473efbd62de019a25cf19dc10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1bc8e18f2e3b0c67b98713e67fc261649a6a0e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128342"
 ---
-# <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>Bir dizideki tüm öğeler bir koşulu karşılayıp karşılamadığını belirleme
+# <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>Dizideki Öğelerin Herhangi Birinin veya Tümünün Bir Koşulu Karşılayıp Karşılamadığını Belirleme
 <xref:System.Linq.Enumerable.All%2A> İşleci döndürür `true` bir dizideki tüm öğeler koşulu karşılaması durumunda.  
   
  <xref:System.Linq.Queryable.Any%2A> İşleci döndürür `true` bir dizideki herhangi bir öğenin bir koşulu karşılıyorsa.  
@@ -34,4 +34,5 @@ ms.locfileid: "54702580"
  [!code-csharp[DLinqQueryExamples#38](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#38)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sorgu Örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

@@ -1,15 +1,15 @@
 ---
-title: Entity Framework veri sağlayıcıları
+title: Entity Framework Veri Sağlayıcıları
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-ms.openlocfilehash: 502bfce39a9e645f36b9be13775a0357307d6c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 897afcd606a9b9b6c3b316d03dd5cb8e2adedbc0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142005"
 ---
-# <a name="entity-framework-data-providers"></a>Entity Framework veri sağlayıcıları
+# <a name="entity-framework-data-providers"></a>Entity Framework Veri Sağlayıcıları
 Bu bölümde destekleyen veri sağlayıcıları bilgi [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
@@ -27,4 +27,5 @@ Bu bölümde destekleyen veri sağlayıcıları bilgi [!INCLUDE[adonet_ef](../..
  Entity Framework için şu anda kullanılabilir olan üçüncü taraf veri sağlayıcıları listesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Sağlayıcılarıyla Çalışma](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

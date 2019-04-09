@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 3d6f4190a5b5c8410a6be01d2645df9c123f9ac4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410621"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100970"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Nasıl yapılır: Geometriyi Parametre Olarak Kullanan Tıklama Testi
 Bu örnek gösterir kullanarak visual nesne üzerinde bir isabet testi gerçekleştirmek nasıl bir <xref:System.Windows.Media.Geometry> parametre isabet testi.  
@@ -38,5 +38,6 @@ Bu örnek gösterir kullanarak visual nesne üzerinde bir isabet testi gerçekle
 >  <xref:System.Windows.Media.HitTestResult> Kesişimi ayrıntı olduğunda geri çağırma çağırılmalıdır <xref:System.Windows.Media.IntersectionDetail.Empty>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görsel Katmanda Tıklama Testi](hit-testing-in-the-visual-layer.md)
 - [Görselde Tıklama Testi Geometrisi](how-to-hit-test-geometry-in-a-visual.md)

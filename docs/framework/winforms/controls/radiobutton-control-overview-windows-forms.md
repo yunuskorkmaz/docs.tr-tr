@@ -9,12 +9,12 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], determining state
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-ms.openlocfilehash: cc511a79cf70bb8df8980c8703b1ad49d15516aa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704548"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129122"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RadioButton> denetimleri kullanıcıya iki veya daha fazla birbirini dışlayan seçenekleri kümesi sunar. Radyo düğmeleri ve onay kutularını benzer şekilde çalışması için görünebilse de önemli bir fark yoktur: kullanıcı bir radyo düğmesini seçtiğinde, aynı gruptaki diğer radyo düğmeleri de seçilemez. Buna karşılık, herhangi bir sayıda onay kutularını seçilebilir. Kullanıcı bir radyo düğmesi grubunda tanımlama söyler, ", yalnızca tek seçim yapabileceğiniz bir seçenek kümesi aşağıdadır."  
@@ -25,11 +25,12 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> denetimleri kullanıcıya 
  <xref:System.Windows.Forms.RadioButton> Denetim, varsa seçtiyseniz, basılı göründüğünden ve komut düğmesi gibi görünebilir <xref:System.Windows.Forms.RadioButton.Appearance%2A> özelliği <xref:System.Windows.Forms.Appearance.Button>. Radyo düğmeleri kullanarak görüntüleri de görüntüleyebilir <xref:System.Windows.Forms.ButtonBase.Image%2A> ve <xref:System.Windows.Forms.ButtonBase.ImageList%2A> özellikleri. Daha fazla bilgi için [nasıl yapılır: Tarafından görüntülenen resmi ayarlama bir Windows Forms denetimi](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.RadioButton>
 - [Panel Denetimine Genel Bakış](panel-control-overview-windows-forms.md)
 - [GroupBox Denetimine Genel Bakış](groupbox-control-overview-windows-forms.md)
 - [CheckBox Denetimine Genel Bakış](checkbox-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms denetimleri için erişim tuşları oluşturma](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Nasıl yapılır: Grup Windows Forms RadioButton denetimlerini küme işlevi görecek](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Nasıl yapılır: Windows Forms Denetimleri için Erişim Tuşları Oluşturma](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Nasıl yapılır: Windows Forms RadioButton Denetimlerini Küme İşlevi Görecek Şekilde Gruplama](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton Denetimi](radiobutton-control-windows-forms.md)

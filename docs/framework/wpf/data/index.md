@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: 26c9297586df18bb89d1f769c5457eae12e3b211
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077738"
 ---
 # <a name="data"></a>Veri
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama sunmak ve verilerle etkileşimde bulunmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynaklarından biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca, sürükle ve bırak işlemleri üzerinden veri aktarımı için bir mekanizma sağlar.  
@@ -39,5 +39,6 @@ ms.locfileid: "57353978"
  [Veri Bağlama](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+
+- [İzlenecek yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

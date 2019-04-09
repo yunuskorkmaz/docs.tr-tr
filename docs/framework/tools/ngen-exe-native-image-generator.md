@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8451cecc204e8795b7a073422b34c623bce172c2
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 34fc8fb78a1dcd2637ff9ce0d0de8e7c1509bd3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116275"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 Yerel Görüntü Oluşturucusu (Ngen.exe), yönetilen uygulamaların performansını artıran bir araçtır. Ngen.exe, işlemciye özel derlenmiş makine kodu içeren dosyalar olan yerel görüntüler oluşturur ve bunları yerel bilgisayarın yerel görüntü önbelleğine yükler. Çalışma zamanı orijinal derlemeyi derlemek için anlık (JIT) derleyiciyi kullanmak yerine önbellekteki yerel görüntüleri kullanabilir.  
@@ -112,8 +112,8 @@ ngen /? | /help
   
 |Yapılandırma|Açıklama|  
 |-------------------|-----------------|  
-|`/ExeConfig:``exePath`|Belirtilen çalıştırılabilir derlemesinin yapılandırmasını kullan.<br /><br /> Ngen.exe, bağımlılıklara bağlarken yükleyici ile aynı kararları almalıdır. Paylaşılan bir bileşen çalışma zamanında yüklendiğinde kullanarak <xref:System.Reflection.Assembly.Load%2A> yöntemi, uygulamanın yapılandırma dosyası paylaşılan bileşen için yüklenen bağımlılıkları belirler — örneğin, yüklenen bir bağımlılığın sürümü. `/ExeConfig` Anahtar üzerinde bağımlılıkları yüklenemeyen çalışma zamanında Ngen.exe rehberlik sağlar.|  
-|`/AppBase:``directoryPath`|Bağımlılıkları bulurken, uygulama tabanı olarak belirtilen dizini kullan.|  
+|`/ExeConfig:` `exePath`|Belirtilen çalıştırılabilir derlemesinin yapılandırmasını kullan.<br /><br /> Ngen.exe, bağımlılıklara bağlarken yükleyici ile aynı kararları almalıdır. Paylaşılan bir bileşen çalışma zamanında yüklendiğinde kullanarak <xref:System.Reflection.Assembly.Load%2A> yöntemi, uygulamanın yapılandırma dosyası paylaşılan bileşen için yüklenen bağımlılıkları belirler — örneğin, yüklenen bir bağımlılığın sürümü. `/ExeConfig` Anahtar üzerinde bağımlılıkları yüklenemeyen çalışma zamanında Ngen.exe rehberlik sağlar.|  
+|`/AppBase:` `directoryPath`|Bağımlılıkları bulurken, uygulama tabanı olarak belirtilen dizini kullan.|  
   
 <a name="OptionTable"></a>   
 ## <a name="options"></a>Seçenekler  
@@ -181,7 +181,7 @@ ngen /? | /help
   
 -   [Sorun giderme](#Troubleshooting)  
   
-    -   [Derleme bağlaması Günlük Görüntüleyici](#Fusion)  
+    -   [Derleme Bağlaması Günlük Görüntüleyici](#Fusion)  
   
     -   [Jıtcompilationstart yönetilen hata ayıklama Yardımcısı](#MDA)  
   
@@ -585,7 +585,8 @@ ngen executeQueuedItems
  .NET Framework sürüm 2. 0'da, yerel görüntü hizmeti ilgili tek etkileşim komut satırı Ngen.exe aracıdır. Komut satırı aracı kuyruğu eylemlerini yükleme betikleri yerel görüntü hizmeti ve hizmetiyle etkileşim kurmak için kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Araçlar](../../../docs/framework/tools/index.md)
 - [Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

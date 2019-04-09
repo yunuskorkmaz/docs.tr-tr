@@ -3,12 +3,12 @@ title: Null başvuru türleri için Tasarım
 description: Gelişmiş Bu öğretici, bir null başvuru türlerine giriş sağlar. Tasarımınız ne zaman başvuru değeri null ve boş olamaz yürüttüğünde derleyici sahip hedefi express öğreneceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 12fb4d0cc3cad8600906610c262f3a745472c064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077517"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: Tasarım amacınızla daha net bir şekilde boş değer atanabilir ve NULL olmayan bir başvuru türleri için express
 
@@ -45,7 +45,6 @@ Visual Studio veya komut satırı kullanarak yeni bir konsol uygulaması oluştu
 
 > [!NOTE]
 > Zaman C# 8 (değil önizleme modunda), yayımlanan `NullableContextOptions` öğesi yeni proje şablonları tarafından eklenir. O zamana kadar el ile eklemeniz gerekir.
-
 
 ### <a name="design-the-types-for-the-application"></a>Uygulama türleri tasarımı
 

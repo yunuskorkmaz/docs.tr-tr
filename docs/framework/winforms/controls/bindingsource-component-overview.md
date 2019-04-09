@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: fcec2fd81bfb9a662fc98c811ab69ffde5949916
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098643"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource Bileşenine Genel Bakış
 <xref:System.Windows.Forms.BindingSource> Bileşen denetimleri temel alınan veri kaynağına bağlama işlemini basitleştirmek üzere tasarlanmıştır. <xref:System.Windows.Forms.BindingSource> Bileşen bir conduit hem bağlamak diğer denetimler için bir veri kaynağı olarak görev yapar. Bu, temel alınan veri listesine komutları geçirme sırasında veri bağlantısının formunuzun bir Özet sağlar. Bileşen işlevlerinin veri kaynağı olarak ayrıca, verileri doğrudan, ekleyebilirsiniz.  
@@ -40,28 +40,29 @@ ms.locfileid: "57724481"
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Current%2A> Özelliği|Veri kaynağının geçerli öğeyi alır.|  
-|<xref:System.Windows.Forms.BindingSource.Position%2A> Özelliği|Alır veya ayarlar temel listesi geçerli konumu.|  
-|<xref:System.Windows.Forms.BindingSource.List%2A> Özelliği|Değerlendirme listesinde alır <xref:System.Windows.Forms.BindingSource.DataSource%2A> ve <xref:System.Windows.Forms.BindingSource.DataMember%2A> değerlendirme. Varsa <xref:System.Windows.Forms.BindingSource.DataMember%2A> ayarlı değil, tarafından belirtilen bir liste döndürür <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
-|<xref:System.Windows.Forms.BindingSource.Insert%2A> Yöntemi|Belirtilen dizindeki listedeki bir öğe ekler.|  
-|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> Yöntemi|Geçerli öğeyi listeden kaldırır.|  
-|<xref:System.Windows.Forms.BindingSource.EndEdit%2A> Yöntemi|Bekleyen değişiklikler temel alınan veri kaynağına uygular.|  
-|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> Yöntemi|Geçerli düzenleme işlemi iptal eder.|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A> Yöntemi|Yeni bir öğe temel alınan listesine ekler. Veri kaynağı uygulayan <xref:System.ComponentModel.IBindingList> ve bir öğe döndürür <xref:System.Windows.Forms.BindingSource.AddingNew> olayı, bu öğe ekler. Aksi takdirde isteği listenin geçirilir <xref:System.ComponentModel.IBindingList.AddNew%2A> yöntemi. Arka plandaki liste değilse bir <xref:System.ComponentModel.IBindingList>, öğenin kendi ortak varsayılan oluşturucusu otomatik olarak oluşturulur.|  
+|<xref:System.Windows.Forms.BindingSource.Current%2A> özellik|Veri kaynağının geçerli öğeyi alır.|  
+|<xref:System.Windows.Forms.BindingSource.Position%2A> özellik|Alır veya ayarlar temel listesi geçerli konumu.|  
+|<xref:System.Windows.Forms.BindingSource.List%2A> özellik|Değerlendirme listesinde alır <xref:System.Windows.Forms.BindingSource.DataSource%2A> ve <xref:System.Windows.Forms.BindingSource.DataMember%2A> değerlendirme. Varsa <xref:System.Windows.Forms.BindingSource.DataMember%2A> ayarlı değil, tarafından belirtilen bir liste döndürür <xref:System.Windows.Forms.BindingSource.DataSource%2A>.|  
+|<xref:System.Windows.Forms.BindingSource.Insert%2A> yöntemi|Belirtilen dizindeki listedeki bir öğe ekler.|  
+|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> yöntemi|Geçerli öğeyi listeden kaldırır.|  
+|<xref:System.Windows.Forms.BindingSource.EndEdit%2A> yöntemi|Bekleyen değişiklikler temel alınan veri kaynağına uygular.|  
+|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> yöntemi|Geçerli düzenleme işlemi iptal eder.|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A> yöntemi|Yeni bir öğe temel alınan listesine ekler. Veri kaynağı uygulayan <xref:System.ComponentModel.IBindingList> ve bir öğe döndürür <xref:System.Windows.Forms.BindingSource.AddingNew> olayı, bu öğe ekler. Aksi takdirde isteği listenin geçirilir <xref:System.ComponentModel.IBindingList.AddNew%2A> yöntemi. Arka plandaki liste değilse bir <xref:System.ComponentModel.IBindingList>, öğenin kendi ortak varsayılan oluşturucusu otomatik olarak oluşturulur.|  
   
 ## <a name="sorting-and-filtering"></a>Sıralama ve Filtreleme  
  Genellikle, bir veri kaynağı sıralı veya filtrelenmiş görünümü ile çalışması gerekir. Üyeleri aşağıdaki tabloda gösterilmektedir <xref:System.Windows.Forms.BindingSource> bileşen veri kaynağı sağlar.  
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> Özelliği|Veri kaynağı ise bir <xref:System.ComponentModel.IBindingList>sıralama ve sipariş bilgilerini sıralama için kullanılan sütun adını ayarlar veya alır. Veri kaynağı ise bir <xref:System.ComponentModel.IBindingListView> ve sıralama, Gelişmiş destekler, sıralama ve sipariş bilgilerini sıralama için kullanılan birden fazla sütun adlarını alır|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A> Özelliği|Veri kaynağı ise bir <xref:System.ComponentModel.IBindingListView>hangi satırların görüntülenen filtrelemek için kullanılan ifade ayarlar veya alır.|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> özellik|Veri kaynağı ise bir <xref:System.ComponentModel.IBindingList>sıralama ve sipariş bilgilerini sıralama için kullanılan sütun adını ayarlar veya alır. Veri kaynağı ise bir <xref:System.ComponentModel.IBindingListView> ve sıralama, Gelişmiş destekler, sıralama ve sipariş bilgilerini sıralama için kullanılan birden fazla sütun adlarını alır|  
+|<xref:System.Windows.Forms.BindingSource.Filter%2A> özellik|Veri kaynağı ise bir <xref:System.ComponentModel.IBindingListView>hangi satırların görüntülenen filtrelemek için kullanılan ifade ayarlar veya alır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [BindingSource Bileşeni Mimarisi](bindingsource-component-architecture.md)
 - [BindingSource Bileşeni](bindingsource-component.md)
 - [BindingNavigator Denetimi](bindingnavigator-control-windows-forms.md)
 - [Windows Forms Veri Bağlama](../windows-forms-data-binding.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

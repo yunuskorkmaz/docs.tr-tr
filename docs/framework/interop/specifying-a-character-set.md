@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0146d3617f5a4aff2a76d2b2f4777b18a0e9c2ab
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 798fcacab5bd74dbd6569a68a3b598c0bb63a0a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087748"
 ---
 # <a name="specifying-a-character-set"></a>Karakter Kümesi Belirtme
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alan denetimleri dize sıralama ve platform çağırma DLL'de bulur işlev adlarını nasıl belirler. Bu konuda, hem davranışları açıklanmaktadır.  
@@ -26,11 +26,11 @@ ms.locfileid: "58410825"
   
 -   **MessageBoxA**  
   
-     1-bayt karakter ANSI biçimlendirme, "A" giriş noktası adına göre ayırt sağlar. Çağrılar **MessageBoxA** , Windows 95 ve Windows 98 platformlarında yaygın olarak bulunur, ANSI dizelerini sıralama her zaman biçimlendirme.  
+     1-bayt karakter ANSI biçimlendirme, "A" giriş noktası adına göre ayırt sağlar. Çağrılar **MessageBoxA** her zaman dizeleri ANSI biçimde hazırlama.  
   
 -   **MessageBoxW**  
   
-     2-bayt karakter Unicode biçimlendirme, "W" giriş noktası adına göre ayırt sağlar. Çağrılar **MessageBoxW** her zaman Windows NT, Windows 2000 ve Windows XP platformlarında yaygın olduğu gibi Unicode biçiminde dizeleri sıralama.  
+     2-bayt karakter Unicode biçimlendirme, "W" giriş noktası adına göre ayırt sağlar. Çağrılar **MessageBoxW** her zaman dizeleri Unicode biçiminde hazırlama.  
   
 ## <a name="string-marshaling-and-name-matching"></a>Dize sıralama ve adı ile eşleşen  
  `CharSet` Alan aşağıdaki değerleri kabul eder:  
@@ -149,7 +149,8 @@ extern "C" int MessageBox(
 ```
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [Platform Çağırma Örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Platform Çağırma ile Veri Hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [Platform Çağırma ile Veri Sıralama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)

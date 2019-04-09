@@ -1,15 +1,15 @@
 ---
-title: TryCatch kullanarak akış çizelgesi etkinliğine hata işleme
+title: TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 3f45d4a60de3201a3100fba3af6cc15484a1fbf0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119814"
 ---
-# <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>TryCatch kullanarak akış çizelgesi etkinliğine hata işleme
+# <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme
 Bu örnek, gösterir nasıl <xref:System.Activities.Statements.TryCatch> etkinliği bir karmaşık denetim akışı etkinliği içinde kullanılabilir.
 
  Bu örnekte, bir promosyon kodu ve alt öğe sayısı için değişkenleri olarak geçirilen bir <xref:System.Activities.Statements.Flowchart> promosyon kodunu için karşılık gelen formüllerini temel bir hesaplar etkinlik. Örnek, kesinlik temelli kod ve iş akışı Tasarımcısı sürümleri örneği içerir.
@@ -47,5 +47,6 @@ Bu örnek, gösterir nasıl <xref:System.Activities.Statements.TryCatch> etkinli
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Akış Çizelgesi İş Akışları](../flowchart-workflows.md)
 - [Özel Durumlar](../exceptions.md)

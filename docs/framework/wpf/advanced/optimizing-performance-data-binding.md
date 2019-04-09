@@ -5,20 +5,18 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352028"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087839"
 ---
 # <a name="optimizing-performance-data-binding"></a>Performansı iyileştirme: Veri Bağlama
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama sunmak ve verilerle etkileşimde bulunmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynaklarından biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
   
  Bu konu, veri bağlama performans önerileri sağlar.  
-  
 
-  
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## <a name="how-data-binding-references-are-resolved"></a>Veri bağlama başvuruları nasıl çözümlenir  
  Veri bağlama performans sorunlarını ele almadan önce keşfetmek için faydalı olduğu nasıl [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama altyapısı nesne başvuru bağlamasının giderir.  
@@ -74,6 +72,7 @@ ms.locfileid: "57352028"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] veri bağlama için verir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içerik; ancak, veri bağlama [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] içeriktir veri bağlama daha yavaş [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] nesneleri. Dönüştürme işlemini [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] tek amacı, veri bağlama için ise XML veri nesnesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
 - [Uygulama Performansını Planlama](planning-for-application-performance.md)
 - [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)
@@ -84,4 +83,4 @@ ms.locfileid: "57352028"
 - [Metin](optimizing-performance-text.md)
 - [Diğer Performans Önerileri](optimizing-performance-other-recommendations.md)
 - [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
-- [İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](walkthrough-caching-application-data-in-a-wpf-application.md)

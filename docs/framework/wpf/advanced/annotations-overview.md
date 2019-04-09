@@ -9,19 +9,18 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: a0c6260eee10487034655b5e4abbfa1f1a7bce71
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122453"
 ---
 # <a name="annotations-overview"></a>Ek açıklamalara Genel Bakış
 Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul ederiz, bir tür bir sıradan etkinlik olduğundan. Bu Notlar ya da yorumlarınız "ek açıklamalar", bir belgeye bilgi bayrağı veya daha sonra başvurmak için ilgi öğelerini vurgulamak için ekleriz. Kolay ve sıradan Yazdırılan belgeleri Not yazma olmasına karşın, elektronik belgeleri kişisel açıklamalar ekleme yeteneği genellikle kullanılabilir olsa çok sınırlıdır.  
   
  Bu konu, ek açıklamalarını, özellikle Yapışkan Notlar ve vurgular, çeşitli genel türleri inceler ve gösterir nasıl [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] bu uygulamalar Windows Presentation Foundation (WPF) belgenin aracılığıyla ek açıklamalarda tür kolaylaştırır görüntüleme denetimleri.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ek açıklamaları destekleyen belge görüntüleme denetimleri dahil <xref:System.Windows.Controls.FlowDocumentReader> ve <xref:System.Windows.Controls.FlowDocumentScrollViewer>, yanı sıra denetimleri türetilen <xref:System.Windows.Controls.Primitives.DocumentViewerBase> gibi <xref:System.Windows.Controls.DocumentViewer> ve <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
-  
-  
+
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Yapışkan Notlar  
  Tipik bir Yapışkan Not, bir küçük kağıda ardından "belgeye takılmış" renkli yazılan bilgileri içerir. Dijital Yapışkan Notlar benzer bir işlevsellik elektronik belgeleri, ancak diğer birçok içerik türleri gibi eklemek için eklenen esnekliğiyle yazılı metni, el yazısı notları sağlayın (örneğin, [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] "mürekkep" strokes), veya Web bağlantıları.  
@@ -65,6 +64,7 @@ Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul
  Başka bir örnek senaryo, exchange e-posta ile belge okuyucular arasında Yapışkan Notlar ve ek açıklamalar sağlayan uygulamaları içerir. Bu özellik okuyucu ek açıklama, değiştirilen içeren sayfasına gitmek bu uygulamalar sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
@@ -72,7 +72,7 @@ Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Annotations.IAnchorInfo>
 - [Ek Açıklamalar Şeması](annotations-schema.md)
-- [ContextMenu Genel Bakış](../controls/contextmenu-overview.md)
+- [ContextMenu Genel Bakışı](../controls/contextmenu-overview.md)
 - [Komut Vermeye Genel Bakış](commanding-overview.md)
 - [Akış Belgesine Genel Bakış](flow-document-overview.md)
 - [Nasıl yapılır: MenuItem için bir komut ekleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

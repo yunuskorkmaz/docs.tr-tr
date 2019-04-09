@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b85739f0f9b6771b204f0e0297ab025cd112a12
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 73645265821d5854776e412f8eb0f33b36db00d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130500"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize Yöntemi
 Hedef işlemin kullandığı işaretçi türünün bayt cinsinden boyutunu alır. Bu yöntem, ortak dil çalışma zamanı veri erişim Hizmetleri tarafından çağrılır.  
@@ -52,4 +52,5 @@ HRESULT GetPointerSize (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICLRDataTarget Arabirimi](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -2,12 +2,12 @@
 title: Zehirli İleti İşleme
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ec7603e547c065b4b86f2c81650c6e8a2ce09e6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146529"
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
 A *zehirli ileti* uygulama teslim denemesi üst sınırını aşan bir ileti. Kuyruk tabanlı bir uygulama hataları nedeniyle bir ileti işleyemediğinde bu durum ortaya çıkabilir. Güvenilirlik taleplerini karşılamak üzere kuyruğa alınan bir uygulamayı bir işlem altında iletileri alır. İletinin yeni bir işlem altında yeniden kuyruğa alınan iletinin alındığı işlem iptal ediliyor iletinin kuyrukta bırakır, böylece. Durdurulacak işlemin neden olan sorun düzeltilmezse alıcı uygulama alma ve teslim denemesi sayısı aşıldı kadar aynı iletiyi iptal ediliyor. döngü ve zehirli ileti sonuçları tıkanıp.  
@@ -19,13 +19,13 @@ A *zehirli ileti* uygulama teslim denemesi üst sınırını aşan bir ileti. Ku
 ## <a name="handling-poison-messages"></a>Zehirli ileti işleme  
  WCF'de, zehirli ileti işleme uğraşmanız uygulamaya gönderilen iletileri veya bu uygulamaya gönderilir ancak uygulamaya özgü nedeniyle işlem başarısız iletileri alan bir uygulama için bir mekanizma sağlar. nedenleri. Zehirli ileti işleme, aşağıdaki özellikler kullanılabilir sıraya alınan bağlamalarının her tarafından yapılandırılır:  
   
--   `ReceiveRetryCount`. En fazla ileti uygulama teslimini uygulama kuyruğu'ndan yeniden deneme sayısını belirten bir tamsayı değeri. Varsayılan değer 5'tir. Bu, burada hemen yeniden sorun gibi bir veritabanı geçici karşılıklı bir kilitlenme ile düzeltmeleri durumlarda yeterlidir.  
+-   `ReceiveRetryCount`biçimindeki telefon numarasıdır. En fazla ileti uygulama teslimini uygulama kuyruğu'ndan yeniden deneme sayısını belirten bir tamsayı değeri. Varsayılan değer 5'tir. Bu, burada hemen yeniden sorun gibi bir veritabanı geçici karşılıklı bir kilitlenme ile düzeltmeleri durumlarda yeterlidir.  
   
--   `MaxRetryCycles`. En fazla yeniden deneme döngüsü sayısını belirten bir tamsayı değeri. Bir ileti uygulama kuyruktan yeniden deneme iletiler alt kuyruğuna ve yeniden deneme subqueue geri uygulama kuyruğuna teslim deneyin'den yapılandırılabilir bir gecikmeden sonra aktarma bir yeniden deneme döngüsü oluşur. Varsayılan değer 2'dir. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], ileti denenir en fazla (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) süreleri. `MaxRetryCycles` üzerinde göz ardı edilir [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+-   `MaxRetryCycles`biçimindeki telefon numarasıdır. En fazla yeniden deneme döngüsü sayısını belirten bir tamsayı değeri. Bir ileti uygulama kuyruktan yeniden deneme iletiler alt kuyruğuna ve yeniden deneme subqueue geri uygulama kuyruğuna teslim deneyin'den yapılandırılabilir bir gecikmeden sonra aktarma bir yeniden deneme döngüsü oluşur. Varsayılan değer 2'dir. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], ileti denenir en fazla (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) süreleri. `MaxRetryCycles` üzerinde göz ardı edilir [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   `RetryCycleDelay`. Yeniden deneme döngüleri arasındaki gecikme süresi. Varsayılan değer 30 dakikadır. `MaxRetryCycles` ve `RetryCycleDelay` birlikte düzenli bir gecikmeden sonra bir yeniden deneme sorununu giderir burada sorunu gidermek için bir mekanizma sağlar. Örneğin, işlem yürütme bekleniyor SQL Server'da ayarlanan kilitli bir satır işler.  
+-   `RetryCycleDelay`biçimindeki telefon numarasıdır. Yeniden deneme döngüleri arasındaki gecikme süresi. Varsayılan değer 30 dakikadır. `MaxRetryCycles` ve `RetryCycleDelay` birlikte düzenli bir gecikmeden sonra bir yeniden deneme sorununu giderir burada sorunu gidermek için bir mekanizma sağlar. Örneğin, işlem yürütme bekleniyor SQL Server'da ayarlanan kilitli bir satır işler.  
   
--   `ReceiveErrorHandling`. Yeniden deneme sayısı çalıştı sonra teslim başarısız bir ileti için gerçekleştirilecek eylemi belirten bir sabit listesi. Değerleri, hata, Drop Reddet olabilir ve taşıyın. Hata varsayılan seçenektir.  
+-   `ReceiveErrorHandling`biçimindeki telefon numarasıdır. Yeniden deneme sayısı çalıştı sonra teslim başarısız bir ileti için gerçekleştirilecek eylemi belirten bir sabit listesi. Değerleri, hata, Drop Reddet olabilir ve taşıyın. Hata varsayılan seçenektir.  
   
 -   Hata. Bu seçenek bir hataya neden olan bir dinleyici için gönderir `ServiceHost` hata için. Uygulama kuyruktan iletileri işleme devam etmeden önce uygulama kuyruktan ileti bazı dış mekanizması tarafından kaldırılmalıdır.  
   
@@ -52,9 +52,9 @@ A *zehirli ileti* uygulama teslim denemesi üst sınırını aşan bir ileti. Ku
   
  WCF iki standart sıraya alınan bağlamalarını sunar:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları ile kuyruğa tabanlı iletişim gerçekleştirmek için uygun bağlama.  
+-   <xref:System.ServiceModel.NetMsmqBinding>biçimindeki telefon numarasıdır. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] diğer WCF uç noktaları ile kuyruğa tabanlı iletişim gerçekleştirmek için uygun bağlama.  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Message Queuing var olan uygulamalarla iletişim kurmak için uygun olan bir bağlama.  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>biçimindeki telefon numarasıdır. Message Queuing var olan uygulamalarla iletişim kurmak için uygun olan bir bağlama.  
   
 > [!NOTE]
 >  WCF hizmeti gereksinimlerine göre bu bağlamaları özelliklerini değiştirebilirsiniz. Tüm zehirli ileti işleme mekanizması, alıcı uygulamaya yereldir. Alıcı uygulama nihai olarak durdurur ve gönderene negatif bir bildirim gönderir sürece gönderen uygulamaya görünmeyen bir işlemdir. Bu durumda, iletiyi gönderenin eski ileti sırası için taşınır.  
@@ -77,9 +77,7 @@ A *zehirli ileti* uygulama teslim denemesi üst sınırını aşan bir ileti. Ku
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
 4.  Hizmetinizi zehirli davranışı özniteliği ile açıklanıyor emin olun.  
-  
-  
-  
+
  Ayrıca, varsa `ReceiveErrorHandling` ayarlanır `Fault`, `ServiceHost` zehirli ileti ile karşılaşıldığında hataları. Hatalı olaya bağlama ve hizmeti Kapat düzeltme girişimlerinde bulunun ve yeniden başlatın. Örneğin, `LookupId` içinde <xref:System.ServiceModel.MsmqPoisonMessageException> yayılır `IErrorHandler` dikkat edilmesi ve hizmet ana bilgisayar hataları kullandığınızda `System.Messaging` kullanarak kuyruk iletisi için API `LookupId` iletiden kaldırmak için Kuyruk ve bazı dış deposunda veya başka bir kuyruğa ileti deposu. Daha sonra yeniden başlatabilirsiniz `ServiceHost` normal işleme devam etmek için. [Zehirli ileti işleme MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) Bu davranış gösterir.  
   
 ## <a name="transaction-time-out-and-poison-messages"></a>İşlem zaman aşımı ve zehirli iletiler  
@@ -106,6 +104,7 @@ A *zehirli ileti* uygulama teslim denemesi üst sınırını aşan bir ileti. Ku
 -   Message Queuing [!INCLUDE[wv](../../../../includes/wv-md.md)] ileti teslimi sürelerini sayısını tutan bir ileti özelliği denenir destekler. Bu durdurma sayısı özelliği kullanılabilir değil [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Aynı gruptaki birden fazla WCF hizmeti tarafından okunduğunda bu özelliği doğru bir değer içeremez mümkündür WCF durdurma sayısı, bellekte saklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+
+- [Kuyruklar Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
 - [Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

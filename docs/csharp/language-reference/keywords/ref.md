@@ -1,19 +1,19 @@
 ---
 title: ref anahtar sözcüğü - C# başvurusu
 ms.custom: seodec18
-ms.date: 10/24/2018
+ms.date: 03/26/2019
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726656"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116262"
 ---
 # <a name="ref-c-reference"></a>ref (C# Başvurusu)
 
@@ -24,10 +24,9 @@ ms.locfileid: "54726656"
 - Bir üye gövdesinde çağıran değiştirme amaçlayan bir başvuru olarak yerel veya genel olarak, bir başvuru dönüş değeri depolanır belirtmek için bir yerel değişkeni başka bir değer başvuruya göre erişir. Daha fazla bilgi için [Ref yerel ayarlar](#ref-locals).
 - İçinde bir `struct` bildirmek için bildirimi bir `ref struct` veya `ref readonly struct`. Daha fazla bilgi için [ref struct türlerini](#ref-struct-types).
 
-
 ## <a name="passing-an-argument-by-reference"></a>Başvuruya göre bağımsız değişken geçirme
 
-Bir yöntemin parametre listesinde kullanıldığında `ref` anahtar sözcüğü gösterir bir bağımsız değişken başvuruya göre değil değere göre geçirilir. Başvuruya göre geçirme çağrılan yöntem değişkeninde herhangi bir değişiklik çağıran yöntemin yansıtılır etkisidir. Örneğin, çağıran bir yerel değişken ifade veya bir dizi öğe erişimi ifadesi geçerse ve çağrılan yöntemin hangi ref parametresi başvuruyor, sonra çağıran yerel nesne değiştirir değişkeni ya da dizi öğesini şimdi yeni nesneye başvuran olduğunda yöntemi döndürür.
+Bir yöntemin parametre listesinde kullanıldığında `ref` anahtar sözcüğü gösterir bir bağımsız değişken başvuruya göre değil değere göre geçirilir. `ref` Anahtar sözcüğü bir değişken olmalıdır bağımsız değişkeni için bir diğer ad biçimsel parametre sağlar. Diğer bir deyişle, herhangi bir işlem parametresinde bağımsız değişken üzerinde yapılır. Örneğin, çağıran bir yerel değişken ifade veya bir dizi öğe erişimi ifadesi geçerse ve çağrılan yöntemin hangi ref parametresi başvuruyor, sonra çağıran yerel nesne değiştirir değişkeni ya da dizi öğesini şimdi yeni nesneye başvuran olduğunda yöntemi döndürür.
 
 > [!NOTE]
 > Başvuru türlerinin kavramıyla başvuruya göre geçirme kavramını karıştırmayın. İki konsepti aynı değildir. Bir yöntem parametresi tarafından değiştirilebilir `ref` bir değer türü veya bir başvuru türü olmasına bakılmaksızın. Başvuruya göre geçildiğinde bir değer türünün hiçbir kutulama yoktur.  
@@ -160,6 +159,6 @@ Bir yapı olarak bildirmek için değiştiriciler birleştirebilirsiniz `readonl
 - [başvuru atama işleci](../operators/assignment-operator.md#ref-assignment-operator)
 - [Parametreleri Geçirme](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Yöntem Parametreleri](method-parameters.md)
-- [C# başvurusu](../index.md)
+- [C# Başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)

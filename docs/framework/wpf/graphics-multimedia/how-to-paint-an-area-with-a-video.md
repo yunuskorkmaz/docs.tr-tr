@@ -9,12 +9,12 @@ helpviewer_keywords:
 - video [WPF], painting with
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
-ms.openlocfilehash: 0756a9e87840648b55ecad4b3f1ce6e0e5452eb7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151183"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Nasıl yapılır: Video ile bir Alanı Boyama
 Bu örnekte, medya ile bir alanı boyama gösterilmektedir. Medya ile bir alanı boyama tek bir yolu bir <xref:System.Windows.Controls.MediaElement> ile birlikte bir <xref:System.Windows.Media.VisualBrush>. Kullanma <xref:System.Windows.Controls.MediaElement> yük medya yürütme ve ayarlamak için kullanın <xref:System.Windows.Media.VisualBrush.Visual%2A> özelliği <xref:System.Windows.Media.VisualBrush>. Ardından <xref:System.Windows.Media.VisualBrush> yüklenen medyanın ile bir alanı boyama için.  
@@ -38,7 +38,8 @@ Bu örnekte, medya ile bir alanı boyama gösterilmektedir. Medya ile bir alanı
  Uygulamanız için bir medya dosyası gibi bir içerik dosyası ekleme hakkında daha fazla bilgi için bkz. [WPF Uygulama kaynağı, içerik ve veri dosyalarını](../app-development/wpf-application-resource-content-and-data-files.md). Bir medya dosyası eklediğinizde, onu eklemeniz gerekir kaynak dosyası olarak değil bir içerik dosyası olarak.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.VisualBrush>
 - [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)
-- [TileBrush’a Genel Bakış](tilebrush-overview.md)
+- [TileBrush Genel Bakışı](tilebrush-overview.md)
 - [Multimedyaya Genel Bakış](multimedia-overview.md)

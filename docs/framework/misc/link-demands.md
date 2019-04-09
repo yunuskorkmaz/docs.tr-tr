@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2f55e282309d21b78c0aad9e7ada687f23628379
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ba3172b1a82c0a9f624a49eb63a193dd29faac1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166997"
 ---
 # <a name="link-demands"></a>Bağlantı Talepleri
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -55,5 +55,6 @@ public static string ReadData()
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Öznitelikler](../../../docs/standard/attributes/index.md)
-- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)
+- [Kod Erişimi Güvenliği](../../../docs/framework/misc/code-access-security.md)

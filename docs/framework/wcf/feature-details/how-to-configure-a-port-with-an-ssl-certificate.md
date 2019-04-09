@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma'
+title: 'Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 533c329bed7b1cb9b07805032c839d3f5ff10634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521727"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139821"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
 Şirket içinde barındırılan Windows Communication Foundation (WCF) hizmet ile oluşturulurken <xref:System.ServiceModel.WSHttpBinding> sınıfı bu kullanımları aktarım güvenliği, ayrıca bir X.509 sertifikası ile bir bağlantı noktası yapılandırmanız gerekir. Şirket içinde barındırılan bir hizmet oluşturmuyorsanız, hizmetinizi Internet Information Services (IIS) üzerinde barındırabilirsiniz. Daha fazla bilgi için [HTTP aktarım güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Bir bağlantı noktasını yapılandırmak için kullandığınız araç makinenizde çalışan işletim sistemine bağlıdır.  
@@ -130,4 +130,5 @@ ms.locfileid: "54521727"
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [HTTP Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+
+- [HTTP Taşıma Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

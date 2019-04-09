@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Tasarımcı kullanarak Windows Forms ListView denetimi döşeme görünümünü etkinleştirme'
+title: 'Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetiminde Döşeme Görünümünü Etkinleştirme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 2b075cdb4ec9910e81c7baa7c714c5c155a8586d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7f7e3f0fadeccafc867c49d76f6f6cf11300fddc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102485"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı kullanarak Windows Forms ListView denetimi döşeme görünümünü etkinleştirme
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetiminde Döşeme Görünümünü Etkinleştirme
 Döşeme görünümü özelliği <xref:System.Windows.Forms.ListView> , grafik ve metinsel bilgileri arasında görsel bir denge sağlamak denetim olanağı sağlar. Kutucuk görünümde bir öğe için görüntülenen metin tabanlı bilgiler tanımlanan ayrıntı görünümü için sütun bilgileri ile aynıdır. Kutucuk görünümü işlevleri gruplandırma veya ekleme ile birlikte özellikleri işaretle <xref:System.Windows.Forms.ListView> denetimi.  
   
  Kutucuk görünümü 32 x 32 bir simge ve birkaç satırlık metin, aşağıdaki görüntüde gösterildiği gibi kullanır.  
@@ -36,5 +36,6 @@ Döşeme görünümü özelliği <xref:System.Windows.Forms.ListView> , grafik v
 2.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.ListView.View%2A> özelliği ve **kutucuk**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [ListView Denetimine Genel Bakış](listview-control-overview-windows-forms.md)

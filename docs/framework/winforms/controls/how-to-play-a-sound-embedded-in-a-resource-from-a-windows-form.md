@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows formundan kaynağa yerleştirilmiş sesi çalma'
+title: 'Nasıl yapılır: Bir Windows Formundan Kaynağa Yerleştirilmiş Ses Çalma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], from resources
 - SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
-ms.openlocfilehash: f52cac4ca16adee232fae6fe2c1540bf5d3cb8cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 49235f9cb035c5a09c26b427f855fc00e818fe1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078583"
 ---
-# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>Nasıl yapılır: Bir Windows formundan kaynağa yerleştirilmiş sesi çalma
+# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>Nasıl yapılır: Bir Windows Formundan Kaynağa Yerleştirilmiş Ses Çalma
 Kullanabileceğiniz <xref:System.Media.SoundPlayer> sınıfın katıştırılmış bir kaynaktan bir ses çal.  
   
 ## <a name="example"></a>Örnek  
@@ -34,6 +34,7 @@ Kullanabileceğiniz <xref:System.Media.SoundPlayer> sınıfın katıştırılmı
  Değiştirme "\<AssemblyName >" ile ses dosyasının gömüldüğü derlemenin adı. ".Dll" soneki içermez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Media.SoundPlayer>
-- [Nasıl yapılır: Bir Windows formdan ses çalma](how-to-play-a-sound-from-a-windows-form.md)
-- [Nasıl yapılır: Sesi döngü olarak çalma bir Windows formunda](how-to-loop-a-sound-playing-on-a-windows-form.md)
+- [Nasıl yapılır: Bir Windows Formdan Ses Çalma](how-to-play-a-sound-from-a-windows-form.md)
+- [Nasıl yapılır: Windows Form Üzerinde Bir Çalma Sesini Döngüye Alma](how-to-loop-a-sound-playing-on-a-windows-form.md)

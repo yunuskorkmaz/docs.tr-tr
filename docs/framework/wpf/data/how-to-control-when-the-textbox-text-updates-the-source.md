@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 28c1e0e23247cfaf48343bf10bb79c4862623fb6
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143279"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Nasıl yapılır: TextBox Metni Kaynağı Güncelleştirdiğinde Denetleme
 Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> zamanlamasını bağlama kaynağı güncelleştirmeleri denetlemek için özellik. Konu kullanır <xref:System.Windows.Controls.TextBox> örnek olarak denetimi.  
@@ -46,4 +46,5 @@ Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Data.Binding.U
 >  <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Özelliği kaynak güncelleştirmeleriyle ilgilenir ve bu nedenle yalnızca ilgili <xref:System.Windows.Data.BindingMode.TwoWay> veya <xref:System.Windows.Data.BindingMode.OneWayToSource> bağlar. İçin <xref:System.Windows.Data.BindingMode.TwoWay> ve <xref:System.Windows.Data.BindingMode.OneWayToSource> çalışmak için özellik değişikliği bildirimleri sağlamak için kaynak nesnesi gereksinimlerini bağlamalar. Daha fazla bilgi için bu konuda bahsedilen örnekleri başvurabilirsiniz. Ayrıca, bakabilirsiniz [özellik değişikliği bildirimi uygulama](how-to-implement-property-change-notification.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

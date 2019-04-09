@@ -2,12 +2,12 @@
 title: Akış
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: ca6c4a2f8bfd87982bc1b8574c65c5d5a2282a93
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e4e70a3bf4137169afa94a122225f27c25909713
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127315"
 ---
 # <a name="stream"></a>Akış
 Stream örnek aktarım modu iletişim akış kullanımını gösterir. Hizmet, akışları gönderip birkaç işlemini kullanıma sunar. Bu örnek kendiliğinden barındırılır. Hem istemci hem de hizmet Konsolu programlardır.  
@@ -66,7 +66,7 @@ public interface IStreamingSample
 ## <a name="processing-data-as-it-is-streamed"></a>Bu akış olarak veri işleme  
  İşlemleri `GetStream`, `UploadStream` ve `EchoStream` tüm baş doğrudan bir dosyadan veri gönderen veya alınan verileri bir dosyaya kaydetme. Bazı durumlarda, yoktur ancak göndermek veya büyük miktarlarda veri almak ve olarak bazı veri öbekleri üzerinde işlem yapmak için bir gereksinim gönderilen veya alınan. Bu tür senaryolara yollarından biri olan özel bir akış yazmak için (türetildiği bir sınıf <xref:System.IO.Stream>) olarak okunabilir veya yazılabilir veri işlemler. `GetReversedStream` İşlemi ve `ReverseStream` sınıfı bunun bir örneği bulunur.  
   
- `GetReversedStream` oluşturur ve yeni bir örneğini döndürür `ReverseStream`. Sistem, okuduğu gerçek işleme olur `ReverseStream` nesne. `ReverseStream.Read` Uygulama bayt öbeğini temel alınan dosyadan okur, bunları tersine çevirir ve sonra ters bayt sayısını döndürür. Bu, tüm dosya içeriğini ters; bir kerede bir bayt bir öbek tersine çevirir. Bir örnek içerik olarak akış işlemede nasıl gerçekleştirebileceğinizi gösterir gelen ve akış yazılamaz veya okunamaz.  
+ `GetReversedStream` Oluşturur ve yeni bir örneğini döndürür `ReverseStream`. Sistem, okuduğu gerçek işleme olur `ReverseStream` nesne. `ReverseStream.Read` Uygulama bayt öbeğini temel alınan dosyadan okur, bunları tersine çevirir ve sonra ters bayt sayısını döndürür. Bu, tüm dosya içeriğini ters; bir kerede bir bayt bir öbek tersine çevirir. Bir örnek içerik olarak akış işlemede nasıl gerçekleştirebileceğinizi gösterir gelen ve akış yazılamaz veya okunamaz.  
   
 ```csharp
 class ReverseStream : Stream  
@@ -184,4 +184,3 @@ Press <ENTER> to terminate client.
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
-  

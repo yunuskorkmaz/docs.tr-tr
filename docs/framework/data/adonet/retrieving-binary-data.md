@@ -1,18 +1,18 @@
 ---
-title: İkili verileri alma
+title: İkili Verileri Alma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 7b0cfb9273603850d2451245b81f1bb651f16d56
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 068b84e8704b54e6aea148ec5fc5bf9f0c4cb958
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085980"
 ---
-# <a name="retrieving-binary-data"></a>İkili verileri alma
+# <a name="retrieving-binary-data"></a>İkili Verileri Alma
 Varsayılan olarak, **DataReader** satırın tamamını veri kullanılabilir hemen sonra gelen verileri bir satır olarak yükler. Tek bir satırda bulunan verileri gigabayt içerdiğinden ikili büyük nesne (BLOB) ancak farklı işlenmesi gerekir. **Command.ExecuteReader** has sürecek bir aşırı yükleme yöntemi bir <xref:System.Data.CommandBehavior> varsayılan davranışını değiştirmek için bağımsız değişken **DataReader**. Geçirebilirsiniz <xref:System.Data.CommandBehavior.SequentialAccess> için **ExecuteReader** varsayılan davranışını değiştirmek için yöntem **DataReader** böylece alınan veri satırı yükleme yerine, verileri sıralı olarak yüklenir. Bu, BLOB veya diğer büyük veri yapılarını yüklemek için idealdir. Bu davranış, veri kaynağında değişebilir unutmayın. Örneğin, bir BLOB Microsoft Access'ten döndüren alınan belleğe yerine sıralı olarak yüklenen tüm BLOB yükler.  
   
  Ayarlarken **DataReader** kullanılacak **SequentialAccess**, döndürülen alanlarla erişim sırası dikkate almak önemlidir. Varsayılan davranışını **DataReader**, kullanılabilir duruma geldiği satırın tamamını yükleyen sonraki satırda okuma kadar herhangi bir sırada döndürülen alanlarına erişmek olanak tanır. Kullanırken **SequentialAccess** tarafından döndürülen alanlarla erişmeniz gerekir ancak **DataReader** sırayla. Örneğin, sorgunuz, üçüncü bir BLOB ise üç sütun döndürürse, üçüncü alanında BLOB verilere erişmeden önce birinci ve ikinci alanların değerlerini döndürmesi gerekir. Önce ilk veya ikinci alanlarını alan erişirseniz, birinci ve ikinci alan değerlerini artık kullanılamaz. Bunun nedeni, **SequentialAccess** değiştirdi **DataReader** veri sırası ve veri döndürmek için kullanılabilir değil sonra **DataReader** okuma izni.  
@@ -154,5 +154,6 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server İkili ve Büyük Değerli Veriler](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

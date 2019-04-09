@@ -1,18 +1,18 @@
 ---
-title: Özel bileşik tasarımcılar - iş akışı öğeleri sunucu
+title: Özel Bileşik Tasarımcılar - İş Akışı Öğeleri Sunucu
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 13d1a76779877bc2ab6d1cbd9c892bf14781e788
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118111"
 ---
-# <a name="custom-composite-designers---workflow-items-presenter"></a>Özel bileşik tasarımcılar - iş akışı öğeleri sunucu
+# <a name="custom-composite-designers---workflow-items-presenter"></a>Özel Bileşik Tasarımcılar - İş Akışı Öğeleri Sunucu
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Düzenlemek kapsanan öğelerin koleksiyonunu için izin veren WF Tasarımcı programlama modeli içinde bir anahtar türü. Bu örnek, düzenlenebilir bir koleksiyon ortaya çıkarır bir etkinlik Tasarımcısı oluşturma gösterilmektedir.
 
  Bu örnek gösterir:
@@ -158,5 +158,6 @@ End Sub
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
-- [İş Akışı Tasarımcısı ile Uygulama Geliştirme](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [İş Akışı Tasarımcısı ile uygulama geliştirme](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

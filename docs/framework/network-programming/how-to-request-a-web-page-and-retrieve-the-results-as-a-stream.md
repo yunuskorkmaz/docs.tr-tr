@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Web sayfası isteme ve sonuçları bir Stream alma'
+title: 'Nasıl yapılır: Web Sayfası İsteme ve Sonuçları Akış Olarak Alma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d32b7f35-29d8-4fb7-ad71-d219edc5e359
-ms.openlocfilehash: 5ef1867d84b619c58a7b3e29ed0f81f9db0c07a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23c094f0a3f528750c9589dbc99a0ada86236967
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097206"
 ---
-# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Nasıl yapılır: Web sayfası isteme ve sonuçları bir Stream alma
+# <a name="how-to-request-a-web-page-and-retrieve-the-results-as-a-stream"></a>Nasıl yapılır: Web Sayfası İsteme ve Sonuçları Akış Olarak Alma
 Bu örnek, bir Web sayfası isteme ve sonuçları bir akış alma gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
@@ -37,4 +37,5 @@ response.Close()
 -   Başvurular <xref:System.IO> ve <xref:System.Net> ad alanları.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)

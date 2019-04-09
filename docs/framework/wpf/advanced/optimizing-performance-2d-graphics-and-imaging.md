@@ -12,17 +12,16 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 6ec03775f42e7f7a60d182eba134f9e1f7ba8466
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074995"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Performansı iyileştirme: 2B Grafikleri ve Görüntüleme
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulamanızın gereksinimleri için çok sayıda 2B grafikleri ve iyileştirilebilir görüntü işlevselliği sağlar. Bu konu, bu alanlarda performansı en iyi duruma getirme hakkında bilgi sağlar.  
-  
-  
+
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>Çizim ve şekiller  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hem de <xref:System.Windows.Media.Drawing> ve <xref:System.Windows.Shapes.Shape> grafik çizim içeriğini temsil eden nesneleri. Ancak, <xref:System.Windows.Media.Drawing> nesnelerdir daha basit yapıları <xref:System.Windows.Shapes.Shape> nesneleri ve daha iyi performans özellikleri sağlar.  
@@ -100,6 +99,7 @@ ms.locfileid: "57371404"
  [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
 - [Uygulama Performansını Planlama](planning-for-application-performance.md)
 - [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)

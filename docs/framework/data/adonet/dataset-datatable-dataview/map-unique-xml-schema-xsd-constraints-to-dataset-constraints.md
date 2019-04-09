@@ -1,15 +1,15 @@
 ---
-title: Benzersiz XML Şeması (XSD) kısıtlamalarını DataSet kısıtlamaları ile eşleme
+title: Benzersiz XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: c35dcadfb40fcb73104af7ee7456e64a68c9e023
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 650cd6b8b8149529f115f22a11d19178fbd6d302
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677084"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108231"
 ---
-# <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Benzersiz XML Şeması (XSD) kısıtlamalarını DataSet kısıtlamaları ile eşleme
+# <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Benzersiz XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 Bir XML Şeması Tanım Dili (XSD) şemaya içinde **benzersiz** öğe, öğe veya öznitelik benzersizlik kısıtlamasını belirtir. Bir XML şeması bir ilişkisel şemasına çevirme sürecinde, benzersiz bir kısıtlamaya bir öğe veya öznitelik XML şemasında belirtilen UNIQUE kısıtlaması eşlenir <xref:System.Data.DataTable> karşılık gelen <xref:System.Data.DataSet> , oluşturulur.  
   
  Aşağıdaki tabloda ana hatlarını **msdata** belirleyebilirsiniz öznitelikleri **benzersiz** öğesi.  
@@ -94,6 +94,7 @@ ConstraintName: SomeName
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

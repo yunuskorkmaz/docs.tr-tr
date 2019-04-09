@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yetkilendirirken meta veri isteklerine izin verme'
+title: 'Nasıl yapılır: Yetkilendirirken Meta Veri İsteklerine İzin Verme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 820725e22c8f07c10212f434e377d5b039cc75e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4d549bb953ecdcbddd0ea4730a766538b2205d0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082678"
 ---
-# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Nasıl yapılır: Yetkilendirirken meta veri isteklerine izin verme
+# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Nasıl yapılır: Yetkilendirirken Meta Veri İsteklerine İzin Verme
 Özel yetkilendirme sırasında işlenecek meta veri isteği izin vermek gerekli olabilir. Aşağıdaki konuda bu tür bir istek doğrulamak için adımlarda size yol gösterir.  
   
  Windows Communication Foundation (WCF) yetkilendirme hakkında daha fazla bilgi için bkz: [yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -36,6 +36,7 @@ ms.locfileid: "54591917"
  [!code-vb[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

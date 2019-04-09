@@ -4,12 +4,12 @@ ms.date: 05/10/2018
 helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
-ms.openlocfilehash: 1858411e5543448e6d822c97b6e5c18da4a6c11e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 331c63dc290d4096e8158f265ee869b47743a273
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151781"
 ---
 # <a name="protected-friend-visual-basic"></a>Korumalı arkadaş (Visual Basic)
 
@@ -22,14 +22,13 @@ ms.locfileid: "54639607"
 
 - **Bildirim bağlamı.** Kullanabileceğiniz `Protected Friend` yalnızca sınıf düzeyinde. Bildirim bağlamı başka bir deyişle bir `Protected` öğesi bir sınıf olması gerekir ve bir kaynak dosyası, ad alanı, arabirim, modülü, yapı veya yordamı olamaz. 
 
-
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
-- [Friend](friend.md)
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)
-- [Private Protected](./private-protected.md)
+- [Ortak](../../../visual-basic/language-reference/modifiers/public.md)
+- [Korumalı](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Arkadaş](friend.md)
+- [Özel](../../../visual-basic/language-reference/modifiers/private.md)
+- [Özel korumalı](./private-protected.md)
 - [Visual Basic'de erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Yapılar](../../../visual-basic/programming-guide/language-features/data-types/structures.md)

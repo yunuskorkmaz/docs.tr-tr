@@ -2,12 +2,12 @@
 title: WCF Uzantısı için Özel Meta Verileri İçe Aktarma
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: b99d7fbab08c5edabe3a08baf89dd267c3f9fa25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090075"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF Uzantısı için Özel Meta Verileri İçe Aktarma
 Windows Communication Foundation (WCF) meta verileri alma, meta verilerinden bir hizmet veya bileşen parçalarından soyut bir temsilini oluşturma işlemidir. Örneğin, WCF aktarabilirsiniz <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri <xref:System.ServiceModel.Channels.Binding> örnekleri veya <xref:System.ServiceModel.Description.ContractDescription> bir WSDL örneklerden belge için bir hizmet. WCF hizmet meta verileri içeri aktarmak için uygulaması kullanmak <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> soyut sınıf. Öğesinden türetilen türler <xref:System.ServiceModel.Description.MetadataImporter> WS-Policy yararlanan alma meta veri biçimleri WCF mantığı içeri aktarmak için sınıf uygulama desteği.  
@@ -49,6 +49,7 @@ Windows Communication Foundation (WCF) meta verileri alma, meta verilerinden bir
 >  Geçersiz ya da yanlış meta veri alma için geçirilebilir. Özel ımporters için tüm form XML sağlam olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Özel WSDL içeri aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
-- [Nasıl yapılır: Özel ilke onaylamalarını içe aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
-- [Nasıl yapılır: ServiceContractGenerator için uzantı yazma](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+
+- [Nasıl yapılır: Özel WSDL İçeri Aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Nasıl yapılır: Özel İlke Onaylamalarını İçeri Aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Nasıl yapılır: ServiceContractGenerator için Uzantı Yazma](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

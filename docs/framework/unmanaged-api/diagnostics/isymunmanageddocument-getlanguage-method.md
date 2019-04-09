@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fe5686f516f967ffd182788add643387cb8af9a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 05ce47953358b7025e30080fbbaf288a6c0e879d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104604"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage Metodu
 Bu belgenin dil tanımlayıcısını alır  
@@ -42,4 +42,5 @@ HRESULT GetLanguage(
  Yöntem başarılı olursa S_OK.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ISymUnmanagedDocument Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

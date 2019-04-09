@@ -2,12 +2,12 @@
 title: <serviceCertificate> , <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: bd2d59218ce40639ac04aa7c5cc157fe37eb9937
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 086b700b94198aa36e61289178ebbed75d33da98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173569"
 ---
 # <a name="servicecertificate-of-servicecredentials"></a>\<serviceCertificate >, \<issuedTokenAuthentication >
 İstemcilere ileti güvenlik modunu kullanarak hizmet kimlik doğrulaması için kullanılan bir X.509 sertifikası belirtin.  
@@ -41,13 +41,13 @@ ms.locfileid: "57373809"
 |`x509FindType`|Yürütülecek X.509 arama türünü tanımlar. Geçerli değerler şunlardır:<br /><br /> -FindByThumbprint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-   FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-   FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Bulunan tür `findValue` öznitelik belirtilen X509FindType gereksinimlerini karşılaması gerekir.<br /><br /> FindBySubjectDistinguishedName varsayılan değerdir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Hizmet kimlik doğrulaması olarak kullanılacak kimlik bilgisini belirtir ve istemci kimlik bilgileri doğrulaması ilgili ayarları.|  
+|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Hizmet kimlik doğrulaması olarak kullanılacak kimlik bilgisini belirtir ve istemci kimlik bilgileri doğrulaması ilgili ayarları.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  İstemcilere ileti güvenlik modunu kullanarak hizmet kimlik doğrulaması için kullanılan bir X.509 sertifikasını belirtmek için bu öğeyi kullanırsınız. Ardından, düzenli aralıklarla yenilenmesi bir sertifika kullanıyorsanız, parmak izi değişecektir. Bu durumda, konu adı olarak kullanmak `x509FindType` sertifika ile aynı konu adı verilmesi için.  
@@ -55,9 +55,10 @@ ms.locfileid: "57373809"
  Öğe kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>
-- [Nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

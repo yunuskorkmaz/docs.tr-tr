@@ -10,18 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077465"
 ---
 # <a name="collection-type-dependency-properties"></a>Koleksiyon Türü Bağımlılık Özellikleri
 Bu konuda, rehberlik ve özellik türü bir koleksiyon türü olduğu bir bağımlılık özelliği uygulama öğrenmek için önerilen desenler sağlar.  
-  
- 
-  
+
 <a name="implementing"></a>   
 ## <a name="implementing-a-collection-type-dependency-property"></a>Koleksiyon türü bağımlılık özelliği uygulama  
  Genel olarak, bir bağımlılık özelliği için tanımladığınız takip ettiğiniz uygulama düzeni olan bir [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] özelliği sarmalayıcı, burada bu özellik destekli bir <xref:System.Windows.DependencyProperty> tanımlayıcısı yerine bir alan veya diğer yapı. Bir koleksiyon türü özelliği uyguladığınızda bu aynı deseni izleyin. Ancak koleksiyonda bulunan tür kendisini olduğunda koleksiyon türü özelliği düzeni karmaşıklık getirir bir <xref:System.Windows.DependencyObject> veya <xref:System.Windows.Freezable> türetilmiş sınıf.  
@@ -57,6 +55,7 @@ Bu konuda, rehberlik ve özellik türü bir koleksiyon türü olduğu bir bağı
  Alt özellik bağlamasını bağımlılık nesne koleksiyonundaki etkinleştirmek için koleksiyon özelliği türü olarak oluşturma <xref:System.Windows.FreezableCollection%601>, o koleksiyon herhangi bir tür kısıtlaması ile <xref:System.Windows.DependencyObject> türetilmiş sınıf.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.FreezableCollection%601>
 - [WPF için XAML ve Özel Sınıflar](xaml-and-custom-classes-for-wpf.md)
 - [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)

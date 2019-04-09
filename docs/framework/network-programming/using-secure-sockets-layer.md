@@ -1,5 +1,5 @@
 ---
-title: Güvenli Yuva Katmanı kullanma
+title: Güvenli Yuva Katmanı Kullanma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 5d095d4cd6d8ee204b6d05a7674dee67c35e46c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0af2fa8bbe2efb2dc4fb3d1177c4950dcec87cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135813"
 ---
-# <a name="using-secure-sockets-layer"></a>Güvenli Yuva Katmanı kullanma
+# <a name="using-secure-sockets-layer"></a>Güvenli Yuva Katmanı Kullanma
 <xref:System.Net> Sınıfları, çeşitli ağ protokolleri için bağlantıyı şifrelemek için Güvenli Yuva Katmanı (SSL) kullanın.  
   
  Http bağlantılarında <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıfları SSL destekleyen web konaklarla iletişim kurması için SSL kullanın. SSL karar tarafından yapılan <xref:System.Net.WebRequest> verilen URI üzerinde temel sınıf. URI ile başlıyorsa "https:", SSL kullanılır; URI ile başlıyorsa "http:", şifrelenmemiş bir bağlantı kullanılır.  
@@ -63,6 +63,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 -   Başvurular **System.Net** ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
 - [Sertifika Seçimi ve Doğrulama](../../../docs/framework/network-programming/certificate-selection-and-validation.md)

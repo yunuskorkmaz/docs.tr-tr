@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows ile belirli günleri kalın olarak görüntüleme Forms MonthCalendar denetimi'
+title: 'Nasıl yapılır: Windows Forms MonthCalendar Denetimi ile Belirli Günleri Kalın Olarak Görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: c27037a166d147df51731c5d59fd42f73294c7ad
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cf3ec21aa0272f60599f5659d78214120bcfcaf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073708"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Nasıl yapılır: Windows ile belirli günleri kalın olarak görüntüleme Forms MonthCalendar denetimi
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Nasıl yapılır: Windows Forms MonthCalendar Denetimi ile Belirli Günleri Kalın Olarak Görüntüleme
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetim görüntüleyebilir gün kalın yazı tipinde tekil bir tarih veya yinelenen aralıklarla. Dikkat çekmek tatiller ve hafta sonları gibi özel bir tarih için bunu yapabilirsiniz.  
   
  Üç özellikleri bu özellik denetler. <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> Özelliği tek tarihleri içerir. <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> Özelliği her yıl kalın görüntülenen tarihler bulunur. <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> Özelliği, her ay kalın görüntülenen tarihler içerir. Bu özelliklerin her biri bir dizi içeren <xref:System.DateTime> nesneleri. Ekleme veya bu listelerden birine bir tarih kaldırmak için ekleyebilir veya kaldırabilirsiniz bir <xref:System.DateTime> nesne.  
@@ -128,7 +128,8 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetim görüntüleyebi
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [MonthCalendar Denetimi](monthcalendar-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms MonthCalendar denetiminde tarih aralığı seçin](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Nasıl yapılır: Windows Forms MonthCalendar denetiminin görünüşünü değiştirme](how-to-change-monthcalendar-control-appearance.md)
-- [Nasıl yapılır: Windows Forms MonthCalendar denetiminde birden fazla ay görüntüleme](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Nasıl yapılır: Windows Forms MonthCalendar Denetiminde Tarih Aralığı Seçme](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Nasıl yapılır: Windows Forms MonthCalendar Denetiminin Görünüşünü Değiştirme](how-to-change-monthcalendar-control-appearance.md)
+- [Nasıl yapılır: Windows Forms MonthCalendar Denetiminde Birden Fazla Ay Görüntüleme](display-more-than-one-month-wf-monthcalendar-control.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 0bc4b2a11927bd2551dc322c5a856ade9a85c8b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132099"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary Biçimlendirme Uzantısı
 Özel denetim yazarlar veya üçüncü taraf denetimleri temaya özgü kaynak sözlükleri bir denetime stil içinde kullanmak için yüklenecek tümleşen uygulamaları için bir yol sağlar.  
@@ -64,7 +64,8 @@ ms.locfileid: "57364807"
  `ThemeDictionary` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kuralına göre kendi öznitelik sözdizimi içinde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin bir işaretleme uzantısı özniteliği işlemesi gerekir. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
-- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Biçimlendirme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları](../app-development/wpf-application-resource-content-and-data-files.md)

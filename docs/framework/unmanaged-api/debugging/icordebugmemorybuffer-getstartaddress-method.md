@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f804d9ab-8c88-44f0-b278-5fcca7f87726
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f4f51c087112053aa7b76bff1f7c55016c8ff57
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 58649a0fc12ce63a1307af5d831dbf5e0d5a776a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474754"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136987"
 ---
 # <a name="icordebugmemorybuffergetstartaddress-method"></a>ICorDebugMemoryBuffer::GetStartAddress yöntemi
 Bellek arabelleği başlangıç adresini alır.  
@@ -41,5 +41,6 @@ HRESULT GetStartAddress(
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICorDebugMemoryBuffer Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

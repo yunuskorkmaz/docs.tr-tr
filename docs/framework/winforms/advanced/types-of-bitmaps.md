@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089179"
 ---
 # <a name="types-of-bitmaps"></a>Bit Eşlem Türleri
 Bir bit eşlem piksel dikdörtgen bir dizi her piksel rengi belirtin BITS dizisidir. Tek bir piksele şekillendiriyorsa bit sayısı kadar bu piksele atanabilir renk sayısını belirler. Her piksel 4 BITS tarafından temsil edilir, örneğin, ardından belirli bir pikselin 16 farklı renkler birini atanabilir (2 ^ 4 = 16). Aşağıdaki tabloda, BITS, verilen sayıda tarafından temsil edilen bir piksele atanabilir renklerin sayısı birkaç örnek gösterilmektedir.  
@@ -86,8 +86,9 @@ Bir bit eşlem piksel dikdörtgen bir dizi her piksel rengi belirtin BITS dizisi
  TIFF çok çeşitli platformları ve görüntü işleme uygulamaları tarafından desteklenen esnek ve Genişletilebilir bir biçimidir. TIFF dosyaları sıkıştırma algoritmaları çeşitli dağıtabileceklerinizle ve tercihe bağlı sayıda piksel başına bit görüntüleri depolayabilirsiniz. Birkaç görüntüyü tek ve birden çok sayfalı TIFF dosyası depolanabilir. Görüntü (tarayıcı olun, ana bilgisayar, sıkıştırma, yönlendirme, piksel ve benzeri başına örnek türü) ilgili bilgileri dosyasında depolanan ve etiketleri kullanılarak düzenlenir. TIFF biçimi, yeni etiketleri eklenmesi ve onay gerektiği şekilde genişletilebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
-- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)
+- [Resimler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
+- [Resimler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)

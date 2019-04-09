@@ -1,5 +1,5 @@
 ---
-title: <enforceFIPSPolicy> Öğesi
+title: <enforceFIPSPolicy> Öğe
 ms.date: 03/30/2017
 helpviewer_keywords:
 - enforceFIPSPolicy element
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a4e5ba5ac1a5a3c08c351531efc84291925ba4b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b1aa958e15449949a1b7ca740198fff71295b2ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114839"
 ---
 # <a name="enforcefipspolicy-element"></a>\<Enforcefıpspolicy > öğesi
 Şifreleme algoritmaları Federal Bilgi işleme standartları (FIPS ile) uyması gereken bir bilgisayar yapılandırma gereksinimini zorlanıp zorlanmayacağını belirtir.  
@@ -72,6 +72,7 @@ ms.locfileid: "55267475"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Şifreleme Modeli](../../../../../docs/standard/security/cryptography-model.md)

@@ -1,15 +1,15 @@
 ---
-title: Desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)
+title: Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: e805eba7cc14b322b4d3dafe9036691b51ecec02
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077081"
 ---
-# <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Desteklenen ve desteklenmeyen LINQ yöntemleri (LINQ to Entities)
+# <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Desteklenen ve Desteklenmeyen LINQ Yöntemleri (LINQ to Entities)
 Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) standart sorgu işleçleri hakkında bilgi [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular. LINQ standart sorgu işleçlerinin çoğu, tamsayı bağımsız değişken kabul eden aşırı yüklenmiş bir sürümü vardır. Tamsayı bağımsız değişkeni sıfır tabanlı bir dizin üzerinde çalıştırılan dizisindeki karşılık gelen bir <xref:System.Collections.Generic.IEqualityComparer%601>, veya <xref:System.Collections.Generic.IComparer%601>. Aksi belirtilmediği sürece, bu aşırı yüklenmiş sürümleri LINQ standart sorgu işleçlerinin desteklenmez ve kullanılmaya çalışılırsa, bir özel durum oluşturur.  
   
 ## <a name="projection-and-restriction-methods"></a>Öngörü ve kısıtlama yöntemi  
@@ -179,4 +179,5 @@ Bu bölümde desteklenen veya desteklenmeyen, dil ile tümleşik sorgu (LINQ) st
 |<xref:System.Linq.Queryable.TakeWhile%2A>|Desteklenmez|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to Entities Sorgularında Standart Sorgu İşleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Talepleri karşılaştırma'
+title: 'Nasıl yapılır: Talepleri Karşılaştırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: b375251e1ff083a527249da51dfe12ae9165dd55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c6230d7618b7885d72ddfebc67157bb48ff9cb38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122024"
 ---
-# <a name="how-to-compare-claims"></a>Nasıl yapılır: Talepleri karşılaştırma
+# <a name="how-to-compare-claims"></a>Nasıl yapılır: Talepleri Karşılaştırma
 Windows Communication Foundation (WCF) kimlik modeli altyapısı, yetkilendirme denetimi gerçekleştirmek için kullanılır. Bu nedenle, genel istenen eylemi gerçekleştirmek veya istenen kaynağa erişim için gerekli talep için talep yetkilendirme bağlamında karşılaştırılacak bir görevdir. Bu konu, yerleşik ve özel talep türleri dahil olmak üzere, talep Karşılaştırılacak açıklar. Kimlik modeli altyapısı hakkında daha fazla bilgi için bkz. [yönetme beyanlar ve yetkilendirmeyi kimlik modeliyle](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  Bir talep (tür, sağa ve kaynak) eşit olup olmadığını görmek için başka bir talep aynı bölümlerinde karşı üç parçaları karşılaştırmak talep karşılaştırma gerektirir. Aşağıdaki örnekte bakın.  
@@ -71,5 +71,6 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı, yetkilendirme 
  [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Nasıl yapılır: Özel talep oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+
+- [Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Nasıl yapılır: Özel Talep Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

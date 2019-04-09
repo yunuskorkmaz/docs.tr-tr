@@ -1,18 +1,18 @@
 ---
-title: DataView değiştirme
+title: DataView Değiştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: f892a371ed23a810f71ef5a51393de4145478c10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e340b9b72735598650d2eefa6e19ab40fffc2e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111559"
 ---
-# <a name="modifying-dataviews"></a>DataView değiştirme
+# <a name="modifying-dataviews"></a>DataView Değiştirme
 Kullanabileceğiniz <xref:System.Data.DataView> eklemek, silmek veya temel tablodaki veri satırlarının değiştirin. Kullanabilme **DataView** temel tablodaki verileri değiştirmek için üç Boole özelliklerinden birini ayarlayarak denetlenir **DataView**. Bu özellikleri <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A>, ve <xref:System.Data.DataView.AllowDelete%2A>. Bunlar ayarlandığından **true** varsayılan olarak.  
   
  Varsa **AllowNew** olduğu **true**, kullanabileceğiniz <xref:System.Data.DataView.AddNew%2A> yöntemi **DataView** yeni bir <xref:System.Data.DataRowView>. Yeni bir satır olmadığına dikkat edin, aslında eklenen temel alınan <xref:System.Data.DataTable> kadar <xref:System.Data.DataRowView.EndEdit%2A> yöntemi **DataRowView** çağrılır. Varsa <xref:System.Data.DataRowView.CancelEdit%2A> yöntemi **DataRowView** olan çağrılır, yeni satır atılır. Ayrıca tek düzen unutmayın **DataRowView** birer güncelleştirir. Eğer **AddNew** veya **BeginEdit** yöntemi **DataRowView** bekleyen satır bulunduğu sürece **EndEdit** üzerinde örtük olarak çağırılamaz Bekleyen satır. Zaman **EndEdit** olan çağrılır, değişiklikler temel alınan uygulanır **DataTable** ve daha sonra olabilir kaydedilmiş veya kullanarak **AcceptChanges** veya  **RejectChanges** yöntemlerinin **DataTable**, **veri kümesi**, veya **DataRow** nesne. Varsa **AllowNew** olduğu **false**, eğer bir özel durum **AddNew** yöntemi **DataRowView**.  
@@ -52,6 +52,7 @@ newDRV.EndEdit();
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>

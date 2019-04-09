@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: ca013c939e3db2136ffa1504ae0eedd7b870d773
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073851"
 ---
 # <a name="bindings-and-binding-elements"></a>Bağlamalar ve Bağlama Öğeleri
 Bağlamaları değil olarak adlandırılan özel yapılandırma öğelerinin koleksiyonları *bağlama öğelerinin*hizmet uç noktası çağrılamadığından veya hizmet çalışma zamanı tarafından bir istemci olduğunda değerlendirilir. Bir bağlama içinde bağlama öğelerin sırasını ve türünü, seçim ve uç noktanın kanal yığınında protokolü ve taşıma kanalları yığınlama sırasını belirler.  
@@ -23,13 +23,12 @@ Bağlamaları değil olarak adlandırılan özel yapılandırma öğelerinin kol
   
 -   Yeni bir bağlama öğesi (örneğin, bir yeni taşıma, kodlama veya protokolü bağlama öğesi) kullanmak için bu bağlama öğesi içeren yeni bir bağlama oluşturmanız gerekir. Örneğin, özel bir eklediyseniz `UdpTransportBindingElement` UDP taşıma için yapmak için yeni bir bağlama oluşturmanız gerekir kullanın. Kullanarak bu davranışı gerçekleştirme hakkında bilgi için <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> yazın, bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
--   Var olan bağlama öğeleri bir şekilde yapılandırmak için ortak özellik açığa çıkarmamak için sistem tarafından sağlanan bağlamalar. Örneğin, hangi imzalama ve şifreleme işlemleri gerçekleştirilir sırasını değiştirmek için yeni bir bağlama oluşturmanız gerekir. Bu davranış gerçekleştirme hakkında daha fazla bilgi için bkz: [nasıl yapılır: bağlama System-Provided özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+-   Var olan bağlama öğeleri bir şekilde yapılandırmak için ortak özellik açığa çıkarmamak için sistem tarafından sağlanan bağlamalar. Örneğin, hangi imzalama ve şifreleme işlemleri gerçekleştirilir sırasını değiştirmek için yeni bir bağlama oluşturmanız gerekir. Bu davranış gerçekleştirme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Sistem tarafından sağlanan bir bağlamayı özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
 -   Yalnızca belirli yapılandırma seçenekleri sunan Kurumsal standart bağlantıları kurmak için. Örneğin, şirketiniz için bir değişken oluşturmak için <xref:System.ServiceModel.WSHttpBinding> hangi güvenlik devre dışı bırakılamaz, şirketinizin gibi davranan bir yeni bağlama oluşturmasını <xref:System.ServiceModel.WSHttpBinding>, ancak her zaman açık güvenlik. Ayrıntılar için bkz [Creating User-Defined bağlamaları](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 -   Bazı özelleştirme meta verileri, genellikle gerçekleştirmek için ancak mutlaka yapılandırmak veya bazı özel bağlama öğesini kullanmak için. Bağlamalar ve bağlama öğeleri için meta veri desteği sağlama hakkında daha fazla bilgi için bkz. [yapılandırma ve meta veri desteği](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
-  
-  
+
 ## <a name="channels-bindings-and-binding-elements"></a>Kanallar, bağlamalar ve bağlama öğeleri  
  Bağlamalar ve bağlama öğeleri öznitelikleri ve davranışlar içerir, uygulama programlama modelini fabrikaları ve dinleyiciler, ileti Kodlayıcı ve taşıma ve protokolü içerir kanal modeli arasında bağlantı olduğundan uygulamaları. Genellikle, bağlama öğeleri ve bağlamaları kanalları uygulama katmanı tarafından kullanılmak üzere etkinleştirmek için uygulanır.  
   

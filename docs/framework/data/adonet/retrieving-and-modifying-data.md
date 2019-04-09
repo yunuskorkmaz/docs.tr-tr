@@ -1,15 +1,15 @@
 ---
-title: Alma ve ADO.NET veri değiştirme
+title: ADO.NET’te Veri Alma ve Değiştirme
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: ab6aa30708140aed2f5f325c3dae9f543937fac8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097634"
 ---
-# <a name="retrieving-and-modifying-data-in-adonet"></a>Alma ve ADO.NET veri değiştirme
+# <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET’te Veri Alma ve Değiştirme
 Herhangi bir veritabanı uygulama birincil işlevi bir veri kaynağına bağlanmak ve içerdiği veriler alınıyor. ADO.NET, .NET Framework veri sağlayıcıları kullanarak veri almak için de komutları yürütmek olanak tanıyan bir uygulama ve bir veri kaynağı arasında bir köprü olarak hizmet verecek bir **DataReader** veya **DataAdapter** . Herhangi bir veritabanı uygulama anahtar işlevi veritabanında depolanan verileri güncelleştirmek için olanağıdır. ADO.NET ile veri güncelleştirme kullanılmasına **DataAdapter** ve <xref:System.Data.DataSet>, ve **komut** nesneler; ve bu da gerektirebilir işlemleri kullanma.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
@@ -52,13 +52,14 @@ Herhangi bir veritabanı uygulama birincil işlevi bir veri kaynağına bağlanm
  [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)  
  İçin kullanılabilen performans sayaçlarının açıklar `SqlClient` ve `OracleClient`.  
   
- [Zaman uyumsuz programlama](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
+ [Zaman Uyumsuz Programlama](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
  Açıklar [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zaman uyumsuz programlama için destek.  
   
  [SqlClient Akış Desteği](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  SQL Server'dan veri akışı, tam olarak belleğe zorunda kalmadan uygulamaları yazmak nasıl ele alınmaktadır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
 - [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

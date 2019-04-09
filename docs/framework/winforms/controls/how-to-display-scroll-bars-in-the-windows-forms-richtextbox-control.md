@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Kaydırma çubukları görüntüleme Windows Forms RichTextBox denetimi'
+title: 'Nasıl yapılır: Windows Forms RichTextBox Denetiminde Kaydırma Çubukları Görüntüleme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes [Windows Forms], displaying scroll bars
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 119cf736dfa7b8b8fce57b7e8fcb24dd09f01ce0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 52c33239524e76bc26b9b2375578aa46bff51bf6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142564"
 ---
-# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Kaydırma çubukları görüntüleme Windows Forms RichTextBox denetimi
+# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetiminde Kaydırma Çubukları Görüntüleme
 Varsayılan olarak, Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi gerektiği gibi yatay ve dikey kaydırma çubukları görüntülenir. Yedi olası değerleri vardır <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> özelliği <xref:System.Windows.Forms.RichTextBox> denetimi, aşağıdaki tabloda açıklanmıştır.  
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>RichTextBox denetiminde kaydırma çubukları görüntülemek için  
@@ -40,7 +40,8 @@ Varsayılan olarak, Windows Forms <xref:System.Windows.Forms.RichTextBox> deneti
     |`true` (varsayılan)|Denetimdeki metnin, denetiminin genişliğini sığacak şekilde otomatik olarak ayarlanır. Yatay kaydırma çubuğu görüntülenmez. Dikey kaydırma çubukları veya hiçbiri, yukarıdaki bir veya daha fazla paragraflar görüntülenecek seçerseniz, bu değeri kullanın.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox Denetimi](richtextbox-control-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

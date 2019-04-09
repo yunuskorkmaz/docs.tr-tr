@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a7b754ce3fb77314539e6391376b188fe9b15859
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091414"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource Biçimlendirme Uzantısı
 İçin herhangi bir değer sağlar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] özellik özniteliği tarafından tanımlanan kaynağına başvuru olması için bu değeri erteleniyor. Bu kaynak için arama davranışı için çalışma zamanı arama benzerdir.  
@@ -73,10 +73,11 @@ ms.locfileid: "57369779"
  `DynamicResource` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kuralına göre kendi öznitelik sözdizimi içinde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin bir işaretleme uzantısı özniteliği işlemesi gerekir. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XAML Kaynakları](xaml-resources.md)
 - [Kaynaklar ve Kod](resources-and-code.md)
 - [x:Key Yönergesi](../../xaml-services/x-key-directive.md)
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
-- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
-- [StaticResource İşaretleme Uzantısı](staticresource-markup-extension.md)
-- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Biçimlendirme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [StaticResource Biçimlendirme Uzantısı](staticresource-markup-extension.md)
+- [Biçimlendirme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)

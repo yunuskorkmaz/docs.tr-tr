@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], subpaths
 - subpaths [WPF]
 ms.assetid: 104a862c-dde2-4e62-ac87-80660dd1681c
-ms.openlocfilehash: 0b57d0441c1aa9d5972af1f1c6b989aacba7f87f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 286075448cd6a343f8a7b15b2b5005f840f68e1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111754"
 ---
 # <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a>Nasıl yapılır: Bir PathGeometry İçinde Birden Çok Alt Yol Oluşturma
 Bu örnek, birden çok alt yol oluşturma işlemini gösterir bir <xref:System.Windows.Media.PathGeometry>. Birden çok alt yol oluşturma için oluşturduğunuz bir <xref:System.Windows.Media.PathFigure> için her alt yol.  
@@ -28,4 +28,5 @@ Bu örnek, birden çok alt yol oluşturma işlemini gösterir bir <xref:System.W
  (Aslında bu öznitelik sözdizimi oluşturan Not bir <xref:System.Windows.Media.StreamGeometry>, daha basit sürümü bir <xref:System.Windows.Media.PathGeometry>. Daha fazla bilgi için [yol işaretleme söz dizimi](path-markup-syntax.md) sayfası.)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Geometriye Genel Bakış](geometry-overview.md)

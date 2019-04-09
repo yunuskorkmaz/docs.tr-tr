@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bc72b9c5687654c17a01ee9b4fa9d31dcf50b56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df57cd5a2121c216fc23b9c608de091b002147e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101770"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion Numaralandırması
 Bir arabirim, .NET Framework sürümünü veya bir arabirim içinde tanıtılan .NET Framework sürümünü belirtir.  
@@ -151,7 +151,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugAssembly`|[Icordebugassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)|1.0|  
 |`ver_ICorDebugProcess`|[Icordebugprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)|1.0|  
 |`ver_ICorDebugBreakpoint`|[Icordebugbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-interface.md)|1.0|  
-|`ver_ICorDebugFunctionBreakpoint`|[ICorDebugFunctionBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-interface.md)|1.0|  
+|`ver_ICorDebugFunctionBreakpoint`|[Icordebugfunctionbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-interface.md)|1.0|  
 |`ver_ICorDebugModuleBreakpoint`|[Icordebugmodulebreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-interface.md)|1.0|  
 |`ver_ICorDebugValueBreakpoint`|[Icordebugvaluebreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-interface.md)|1.0|  
 |`ver_ICorDebugStepper`|[ICorDebugStepper](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-interface.md)|1.0|  
@@ -217,7 +217,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugValue3`|[Icordebugvalue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)|4|  
 |`ver_ICorDebugComObjectValue`|[Icordebugcomobjectvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)|4,5|  
 |`ver_ICorDebugAppDomain3`|[Icordebugappdomain3](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)|4,5|  
-|`ver_ICorDebugCode3`|[Icordebugcode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)|4,5|  
+|`ver_ICorDebugCode3`|[ICorDebugCode3](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)|4,5|  
 |`ver_ICorDebugILFrame3`|[Icordebugılframe3](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)|4,5|  
 |`CorDebugLatestVersion`|Tüm hizmet paketleri de dahil olmak üzere .NET Framework'ün en son sürümü sürümüdür.|-|  
   
@@ -247,4 +247,5 @@ typedef enum CorDebugInterfaceVersion {
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+
+- [Hata Ayıklama Numaralandırmaları](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

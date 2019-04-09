@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: c93c00ca939bcb6c3c7feea4e6b6234f738298dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ef334f6d200e75f29e22a9586f4538309797942
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605538"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095990"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed Deyimi (C# Başvurusu)
 
@@ -63,7 +63,6 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-
 Güvenli olmayan modda, burada tabi atık koleksiyonu olması gerekmez ve bu nedenle sabitlenmiş gerekmez yığında bellek ayırabilirsiniz. Daha fazla bilgi için [stackalloc](stackalloc.md).
 
 [!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#4)]
@@ -74,7 +73,7 @@ Güvenli olmayan modda, burada tabi atık koleksiyonu olması gerekmez ve bu ned
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C# Başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [unsafe](unsafe.md)

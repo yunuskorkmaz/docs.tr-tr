@@ -1,18 +1,18 @@
 ---
-title: DataTable düzenlemeleri
+title: DataTable Düzenlemeleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 473ea9963ce192f42e418bebc8e38971019350e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0300ceab16d9a94bd04468f7acd105e69d13e643
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150949"
 ---
-# <a name="datatable-edits"></a>DataTable düzenlemeleri
+# <a name="datatable-edits"></a>DataTable Düzenlemeleri
 Sütun değerlerine değişiklikler yaptığınızda bir <xref:System.Data.DataRow>, değişiklikleri hemen satırın geçerli durumda yerleştirilir. <xref:System.Data.DataRowState> Sonra ayarlanır **değiştirilen**, değişiklikleri kabul edildiğini veya kullanarak <xref:System.Data.DataRow.AcceptChanges%2A> veya <xref:System.Data.DataRow.RejectChanges%2A> yöntemlerinin **DataRow**. **DataRow** de onu düzenlerken satır durumunu askıya almak için kullanabileceğiniz üç yöntem sunar. Bu yöntemler <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A>, ve <xref:System.Data.DataRow.CancelEdit%2A>.  
   
  Sütun değerleri değiştirdiğinizde bir **DataRow** doğrudan **DataRow** kullanarak sütun değerleri yönetir **geçerli**, **varsayılan**, ve **Özgün** satır sürümleri. Bu satır sürümleri yanı sıra **BeginEdit**, **EndEdit**, ve **CancelEdit** Dördüncü satır sürümü yöntemleri kullanın: **Önerilen**. Satır sürümleri hakkında daha fazla bilgi için bkz: [satır durumları ve satır sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
@@ -87,6 +87,7 @@ protected static void OnColumnChanged(
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataRowVersion>

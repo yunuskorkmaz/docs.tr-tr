@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a105ca8838820b62e81dae4c0149734339bed7a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5904083be66d4bd6dc69729bebc28db8a800e77
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089244"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 Arabirimi
 Icordebugprocess arabirimi, yönetilen nesnelerin Çöp toplaması hakkında bilgi sağlamak için yönetilen yığına erişimi desteklemek için genişletir ve bir hata ayıklayıcı olup olmadığını belirlemek için uygulama yerel görüntü önbelleğinden görüntüleri yükler.  
@@ -37,7 +37,7 @@ Icordebugprocess arabirimi, yönetilen nesnelerin Çöp toplaması hakkında bil
 |[EnumerateHeapRegions Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md)|Yönetilen yığının bölgeler için bir numaralandırıcı alır.|  
 |[GetArrayLayout Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)|Bellekte bir dizinin düzeni hakkındaki bilgileri alır.|  
 |[GetGCHeapInformation Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)|Bir işaretçi alır bir [cor_heapınfo](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) yönetilen yığında atık olarak toplanmış olacak nesneler hakkında bilgi içeren yapısı.|  
-|[GetObject Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)|Bir işaretçi, yönetilen yığındaki bir nesneyi alır.|  
+|[GetObject Metodu](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)|Bir işaretçi, yönetilen yığındaki bir nesneyi alır.|  
 |[GetTypeFields Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)|Kendi tür tanımlayıcısına göre bir türü için alan bilgileri içeren bir dizi için bir işaretçi alır.|  
 |[GetTypeForTypeID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)|Kendi tür tanımlayıcıları hakkında temel bir nesne hakkında bilgi sağlayan bir tür nesnesi alır.|  
 |[GetTypeID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypeid-method.md)|Tür tanımlayıcı nesne için belirli bir adreste alır.|  
@@ -59,5 +59,6 @@ Icordebugprocess arabirimi, yönetilen nesnelerin Çöp toplaması hakkında bil
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: LINQ sorguları (Visual Basic) için özel yöntemler'
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: a58ced83a01e41be707f2483cabe9c8e867e2c1a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f61db6c17fa3ead1e9dbc47c172a2cef91c042eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123311"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Nasıl yapılır: LINQ sorguları (Visual Basic) için özel yöntemler
 İçin genişletme yöntemleri ekleyerek LINQ sorguları için kullanabileceğiniz yöntemleri kümesini genişletebilirsiniz <xref:System.Collections.Generic.IEnumerable%601> arabirimi. Örneğin, standart ortalama veya en fazla işlem ek olarak, değerler dizisinin tek bir değeri hesaplamak için özel bir toplama yöntemi oluşturabilirsiniz. Özel bir filtre veya belirli veri dönüştürme için değerler olarak çalışır ve yeni bir dizisini döndüren bir yöntemi de oluşturabilirsiniz. Bu tür yöntemler örnekler <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>, ve <xref:System.Linq.Enumerable.Reverse%2A>.  
@@ -68,7 +68,6 @@ Console.WriteLine("Double: Median = " & query1)
 '  
 ' Double: Median = 4.85  
 ```  
-  
 
 ### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>Çeşitli türleri kabul etmek için bir toplama yöntemi aşırı yüklemesi  
  Böylece dizileri çeşitli türlerde kabul ettiğiniz toplama yöntemi aşırı yüklenebilir. Standart bir yaklaşım, her tür için bir aşırı oluşturmaktır. Başka bir yaklaşım genel bir tür olması ve temsilci kullanarak belirli bir türe dönüştürme aşırı oluşturmaktır. Ayrıca, iki yaklaşımı birleştirebilirsiniz.  
@@ -108,8 +107,7 @@ Console.WriteLine("Integer: Median = " & query2)
 ' Double: Median = 4.85  
 ' Integer: Median = 3  
 ```  
-  
- 
+
 #### <a name="to-create-a-generic-overload"></a>Genel bir aşırı yükleme oluşturmak için  
  Genel nesneler dizisi kabul eden bir aşırı yüklemeyi de oluşturabilirsiniz. Bu aşırı yükleme, bir temsilci bir parametre olarak alır ve genel bir türün nesnelerinin bir dizisi belirli bir türe dönüştürmek için kullanır.  
   

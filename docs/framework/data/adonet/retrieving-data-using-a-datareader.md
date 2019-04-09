@@ -1,16 +1,16 @@
 ---
-title: DataReader kullanarak veri alma
+title: DataReader Kullanarak Veri Alma
 ms.date: 10/29/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: ff1869ab17761645321d803f0f7db4bb39c992bc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128693"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader kullanarak veri alma
 Kullanarak verileri almak için bir **DataReader**, bir örneğini oluşturmak **komut** nesne ve oluşturup bir **DataReader** çağırarak **Command.ExecuteReader**  satırları bir veri kaynağından almak için. **DataReader** arabellekten çıkarılan bir yordam mantığı verimli bir şekilde bir veri kaynağından sonuçları sıralı olarak işlediğinden sağlayan veri akışını sağlar. **DataReader** verileri bellek içinde önbelleğe alınmamış çünkü büyük miktarlarda veri alınırken iyi bir seçimdir.
@@ -258,6 +258,7 @@ adapter.Fill(ds);
 >  Önlemek için bir **OverflowException**, değer depolanmadan önce her türünden dönüştürme Oracle numarası geçerli bir .NET Framework türü de ele öneririz bir <xref:System.Data.DataRow>. Kullanabileceğiniz <xref:System.Data.Common.DataAdapter.FillError> belirlemek için olay bir **OverflowException** oluştu. Daha fazla bilgi için <xref:System.Data.Common.DataAdapter.FillError> olay bkz [DataAdapter olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)

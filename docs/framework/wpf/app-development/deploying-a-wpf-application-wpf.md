@@ -5,17 +5,16 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: f0d01dffe0f8dad2b1e9af75d6642c68be3ee0f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 35515d37756c46d7d38ca272d76da3126fde385f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132367"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunların dağıtılması gerekir. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve .NET Framework çeşitli dağıtım teknolojileri içerir. Dağıtım teknolojisi dağıtmak için kullanılan bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama uygulama türüne bağlıdır. Bu konu, her dağıtım teknolojisi kısa bir genel bakış ve her dağıtım gereksinimleri ile birlikte nasıl kullanıldığını sağlar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama türü.  
-  
-   
+
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Dağıtım teknolojileri  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve .NET Framework dahil olmak üzere çeşitli dağıtım teknolojileri şunları içerir:  
@@ -70,7 +69,7 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
   
 -   Yalnızca işaretleme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulamalar.  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]biçimindeki telefon numarasıdır.  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Tek başına uygulamaları dağıtma  
@@ -124,5 +123,6 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
  Daha fazla bilgi için [.NET Framework ve uygulamaları dağıtma](../../deployment/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WPF Uygulaması Derleme](building-a-wpf-application-wpf.md)
+
+- [WPF Uygulaması Oluşturma](building-a-wpf-application-wpf.md)
 - [Güvenlik](../security-wpf.md)

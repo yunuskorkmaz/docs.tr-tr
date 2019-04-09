@@ -1,15 +1,15 @@
 ---
-title: System.String yöntemleri
+title: System.String Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 569010c36296e18487eb52527d3df0cc0b97cf06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160504"
 ---
-# <a name="systemstring-methods"></a>System.String yöntemleri
+# <a name="systemstring-methods"></a>System.String Yöntemleri
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] şunları desteklemez <xref:System.String> yöntemleri.  
   
 ## <a name="unsupported-systemstring-methods-in-general"></a>System.String yöntemleri genel desteklenmiyor  
@@ -56,4 +56,5 @@ ms.locfileid: "54618144"
 -   Çünkü birçok yöntem gibi `Replace`, `ToLower`, `ToUpper`ve geçerli çeviri için sahip karakter dizin oluşturucu `TEXT` veya `NTEXT` sütunları ve XML `SqlExceptions` normalde çevrilmiş ortaya. Bu davranışı Bu türleri için kabul edilebilir olarak kabul edilir. Ancak, tüm dize işlemleri için ortak dil çalışma zamanı (CLR) semantiği eşleşmelidir `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, ve `NVARCHAR(max)`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

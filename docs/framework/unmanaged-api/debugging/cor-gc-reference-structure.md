@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0375fdd6f86ae89171545cfdcb44ac37074084e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093663"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE Yapısı
 Atık olarak toplanmış olacak bir nesneyle ilgili bilgileri içerir.  
@@ -57,11 +57,11 @@ typedef struct _COR_GC_REFERENCE {
   
  `extraData` Alanı başvuru kaynağı (veya tür) bağlı olarak ek veri içeriyor. Olası değerler şunlardır:  
   
--   `DependentSource`. Varsa `type` olduğu `CorGCREferenceType.CorHandleStrongDependent`, bu alan, etkin değilse, atık olarak toplanmış alınacak nesneyi kökleri nesnedir `COR_GC_REFERENCE.Location`.  
+-   `DependentSource`biçimindeki telefon numarasıdır. Varsa `type` olduğu `CorGCREferenceType.CorHandleStrongDependent`, bu alan, etkin değilse, atık olarak toplanmış alınacak nesneyi kökleri nesnedir `COR_GC_REFERENCE.Location`.  
   
--   `RefCount`. Varsa `type` olduğu `CorGCREferenceType.CorHandleStrongRefCount`, tanıtıcı başvurusu sayısı bu alandır.  
+-   `RefCount`biçimindeki telefon numarasıdır. Varsa `type` olduğu `CorGCREferenceType.CorHandleStrongRefCount`, tanıtıcı başvurusu sayısı bu alandır.  
   
--   `Size`. Varsa `type` olduğu `CorGCREferenceType.CorHandleStrongSizedByref`, bu alan atık toplayıcı nesne kökleri hesaplanan nesne ağacının son boyutudur. Bu hesaplama mutlaka güncel olmadığını unutmayın.  
+-   `Size`biçimindeki telefon numarasıdır. Varsa `type` olduğu `CorGCREferenceType.CorHandleStrongSizedByref`, bu alan atık toplayıcı nesne kökleri hesaplanan nesne ağacının son boyutudur. Bu hesaplama mutlaka güncel olmadığını unutmayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
@@ -73,5 +73,6 @@ typedef struct _COR_GC_REFERENCE {
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

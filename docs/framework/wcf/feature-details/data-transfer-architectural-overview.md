@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 217da219dc49c588a7f6bc8d32048553f179d67f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528036"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127466"
 ---
 # <a name="data-transfer-architectural-overview"></a>Veri Aktarımı Mimarisi Genel Bakış
 Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünülebilir. Bu iletileri almak, bunları işlemek ve bunları başka bir eylem için kullanıcı kodu için gönderme veya kullanıcı kodu tarafından verilen veri iletileri oluşturmak ve bunları bir hedefe sunun. İleri düzey geliştiriciler için tasarlanmıştır, bu konu, iletileri ve içerdiği veri işleme mimarisini açıklar. Veri göndermek ve almak nasıl daha basit, görev odaklı görünümü için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -273,4 +273,5 @@ Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünüle
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> ve <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> işlem davranışları için ileti biçimlendiriciler takma için sorumlu olan `DataContractSerializer` ve `XmlSerializer`sırasıyla. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> Davranışı ile türetilen seri hale getirici gerçekten çalışabilir <xref:System.Runtime.Serialization.XmlObjectSerializer>de dahil olmak üzere <xref:System.Runtime.Serialization.NetDataContractSerializer> (tek başına serileştirme kullanarak ayrıntılı açıklanmıştır). Davranış birini çağırır `CreateSerializer` serileştiriciyi almak için sanal bir yöntem aşırı yüklemeleri. Farklı bir serileştirici takmak için yeni bir oluşturma <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> alt sınıf ve geçersiz kılma `CreateSerializer` aşırı yüklemeleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+
+- [Hizmet Sözleşmelerinde Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

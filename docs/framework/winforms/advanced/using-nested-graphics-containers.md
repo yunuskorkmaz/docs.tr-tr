@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: a66edd0297b723b81c31675c9b0e6b6def9ed10a
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104305"
 ---
 # <a name="using-nested-graphics-containers"></a>İç İçe Grafik Kapsayıcılarını Kullanma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] geçici olarak değiştirin ya da durumda parçası genişletmek için kullanabileceğiniz kapsayıcılar sağlayarak bir <xref:System.Drawing.Graphics> nesne. Bir kapsayıcı oluşturmanız <xref:System.Drawing.Graphics.BeginContainer%2A> yöntemi bir <xref:System.Drawing.Graphics> nesne. Çağırabilirsiniz <xref:System.Drawing.Graphics.BeginContainer%2A> sürekli olarak iç içe geçmiş kapsayıcılar oluşturmak için. Her çağrı <xref:System.Drawing.Graphics.BeginContainer%2A> bir çağrı ile eşleştirilmelidir <xref:System.Drawing.Graphics.EndContainer%2A>.  
@@ -57,5 +57,6 @@ ms.locfileid: "58125869"
  ![İç içe geçmiş kapsayıcılardan çizilmiş dizeleri gösteren şekil.](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Graphics>
 - [Bir Grafik Nesnesinin Durumunu Yönetme](managing-the-state-of-a-graphics-object.md)

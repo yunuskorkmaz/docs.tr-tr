@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110064"
 ---
 # <a name="base-elements-overview"></a>Temel Öğelere Genel Bakış
 Sınıflarda yüksek miktarda [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sık başvurulan dört sınıflardan türetilmiş [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] temel öğe sınıfları belgeler. Bu sınıflar <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, ve <xref:System.Windows.FrameworkContentElement>. <xref:System.Windows.DependencyObject> Sınıfı da ilgili, çünkü bu iki genel bir temel sınıf <xref:System.Windows.UIElement> ve <xref:System.Windows.ContentElement>  
- 
-  
+
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>WPF sınıf içinde temel öğe API'leri  
  Her ikisi de <xref:System.Windows.UIElement> ve <xref:System.Windows.ContentElement> türetilmiştir <xref:System.Windows.DependencyObject>, biraz farklı yollarla. Bu düzeyde bölme ile nasıl ilgileneceğini bir <xref:System.Windows.UIElement> veya <xref:System.Windows.ContentElement> bir kullanıcı arabirimi ve bir uygulamada verdikleri ne amaçla kullanılır. <xref:System.Windows.UIElement> Ayrıca <xref:System.Windows.Media.Visual> kendi sınıf hiyerarşisinde olduğu alt düzey grafik temel destek gösteren bir sınıf [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. <xref:System.Windows.Media.Visual> bağımsız bir dikdörtgen ekran bölgeleri tanımlayarak bir işleme çerçevesi sağlar. Uygulamada, <xref:System.Windows.UIElement> daha büyük bir nesne modelini destekleyen öğeler için oluşturulacak amaçlayan ve dikdörtgen ekran bölgeleri olarak tanımlanabilen ve içerik modeli olduğu farklı izin vermek için kasıtlı olarak daha açık, bölgeleri öğeleri birleşimleri. <xref:System.Windows.ContentElement> türünden türemez <xref:System.Windows.Media.Visual>; kendi modelini olan bir <xref:System.Windows.ContentElement> okuyucu veya sonra öğeleri yorumlama ve tam üretmek Görüntüleyicisi gibi başka bir şey tarafından tüketilen <xref:System.Windows.Media.Visual> için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kullanmak için. Belirli <xref:System.Windows.UIElement> sınıfları, içerik ana bilgisayar olacak şekilde yöneliktir: barındırma ve işleme için bir veya daha fazla sağladıkları <xref:System.Windows.ContentElement> sınıfları (<xref:System.Windows.Controls.DocumentViewer> bu tür bir sınıfının bir örneğidir). <xref:System.Windows.ContentElement> içinde biraz daha küçük nesne modellerine sahip öğeleri için temel sınıf ve daha fazla bilgi, metin, adres veya belge içeriğini barındırılabilir olarak kullanılan bir <xref:System.Windows.UIElement>.  
@@ -98,6 +97,7 @@ Sınıflarda yüksek miktarda [!INCLUDE[TLA#tla_winclient](../../../../includes/
  <xref:System.Windows.Controls.Control> teknolojiye bir denetim veya bileşen teknolojisi bağlı olarak ifade edilen nesne türü için hedeflenen temel sınıftır. Genel olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetim sınıfları, doğrudan bir UI denetimini temsil eden veya yakından denetim bileşiminin katılan sınıflardır. Birincil işlevselliği, <xref:System.Windows.Controls.Control> olan denetim şablonu oluşturma etkinleştirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.Control>
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
 - [Denetim Yazımına Genel Bakış](../controls/control-authoring-overview.md)

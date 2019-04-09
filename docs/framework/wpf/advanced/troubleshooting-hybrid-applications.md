@@ -9,18 +9,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079681"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Karma Uygulama Sorunlarını Giderme
 <a name="introduction"></a> Bu konuda kullanan karma uygulamalar yazma olduğunda oluşabilecek bazı yaygın sorunlar listelenmiştir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] teknolojileri.  
-  
 
-  
 <a name="overlapping_controls"></a>   
 ## <a name="overlapping-controls"></a>Örtüşen Denetimler  
  Beklediğiniz gibi denetimleri çakışmaması. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Her denetim için ayrı bir HWND kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir sayfadaki tüm içerik için bir HWND kullanır. Bu uygulama farkı çakışan beklenmeyen davranışlara neden olur.  
@@ -115,12 +113,13 @@ ms.locfileid: "57370104"
  WPF denetimleri barındırılan bir <xref:System.Windows.Forms.Integration.ElementHost> şu anda desteklemediği <xref:System.Windows.Forms.Control.ImeMode%2A> özelliği. Değişikliklerini <xref:System.Windows.Forms.Control.ImeMode%2A> barındırılan denetimler tarafından göz ardı edilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF Tasarımcısı'nda birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
 - [Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi](windows-forms-and-wpf-interoperability-input-architecture.md)
-- [Nasıl yapılır: Karma uygulamada görsel stilleri etkinleştirme](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Nasıl yapılır: Karma Uygulamada Görsel Stilleri Etkinleştirme](how-to-enable-visual-styles-in-a-hybrid-application.md)
 - [WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar](layout-considerations-for-the-windowsformshost-element.md)
 - [Windows Forms ve WPF Özelliğini Eşleme](windows-forms-and-wpf-property-mapping.md)
-- [Windows Forms Tasarımcısında Tasarım Zamanı Hataları](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Windows Formları Tasarımcısında Tasarım Zamanı Hataları](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
 - [Geçiş ve Birlikte Çalışabilirlik](migration-and-interoperability.md)

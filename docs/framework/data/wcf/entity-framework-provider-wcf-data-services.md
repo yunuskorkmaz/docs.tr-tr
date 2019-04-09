@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 94a708ca33aa94c7a0143d195803d17d49be4bdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a09c81b2d0f052884e8e54c899653a6f0e038aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086253"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework sağlayıcısı (WCF Data Services)
 Gibi [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.NET varlık çerçevesi varlık verilerini bir tür varlık ilişkisi modeli olan modeli üzerinde temel alır. Entity Framework uygulaması çağrılır varlık veri modeli üzerinde işlemler çevirir *kavramsal model*, bir veri kaynağına karşı eşdeğer işlemler. Bu ideal bir sağlayıcı ilişkisel verilere dayalı Veri Hizmetleri için Entity Framework sağlar ve Entity Framework destekleyen bir veri sağlayıcısı sahip herhangi bir veritabanı ile birlikte kullanılabilir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Entity Framework destekleyen veri kaynaklarının listesi için bkz. [Entity Framework için üçüncü taraf sağlayıcılar](https://go.microsoft.com/fwlink/?LinkId=143699).  
@@ -21,6 +21,7 @@ Gibi [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.NET varlı
  Varlık çerçevesi hakkında daha fazla bilgi için bkz: [Entity Framework'e Genel Bakış](../../../../docs/framework/data/adonet/ef/overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Yansıma Sağlayıcısı](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
 - [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

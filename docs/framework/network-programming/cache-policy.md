@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: fd0321debc4aeee782c782b7e31fb8518aae2e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33043652e11beb374843d43c9683ff4b7928eb3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112807"
 ---
 # <a name="cache-policy"></a>Önbellek İlkesi
 Önbellek İlkesi, istenen kaynak önbelleğe alınmış bir kopyasını kullanarak bir istek memnun olup olmadığını belirlemek için kullanılan kuralları tanımlar. Uygulamalar için yenilik istemci önbellek gereksinimleri belirtin, ancak etkili önbellek ilkesini, istemci önbellek gereksinimleri, sunucunun içerik sona erme gereksinimleri ve sunucunun yeniden doğrulama gereksinimlerini göre belirlenir. En yeni içerik istemci uygulamaya döndürülür sağlamaya yardımcı olmak için en koruyucu önbellek İlkesi etkileşimi istemci önbellek İlkesi ve sunucu gereksinimleri her zaman sonuçlanır.  
@@ -39,6 +39,7 @@ ms.locfileid: "54740898"
  Önbellek ilkeleri oluşturma ve kullanma gösteren kod örnekleri için bkz: [ağ uygulamalarında önbelleğe yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Konum Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/location-based-cache-policies.md)
 - [Saat Temelli Önbellek İlkeleri](../../../docs/framework/network-programming/time-based-cache-policies.md)

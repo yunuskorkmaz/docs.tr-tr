@@ -1,15 +1,15 @@
 ---
-title: SQL iş akışı örneği Store
+title: SQL İş Akışı Örnek Deposu
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 926b50ee00743f6a84f48c6ccae976daf49b3d9a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086578"
 ---
-# <a name="sql-workflow-instance-store"></a>SQL iş akışı örneği Store
+# <a name="sql-workflow-instance-store"></a>SQL İş Akışı Örnek Deposu
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Bir SQL Server 2005 veya SQL Server 2008 veritabanına iş akışı durumlarda hakkındaki durum bilgilerini kalıcı hale getirmek iş akışlarını tanır SQL iş akışı örneği Store ile birlikte gelir. Bu özellik öncelikle biçiminde uygulanan <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Özet türetilen sınıfı <xref:System.Runtime.DurableInstancing.InstanceStore> Kalıcılık framework'ün sınıfı. SQL iş akışı örneği Store özelliği bir somut sürekliliğin uygulanmasını Kalıcılık komutları depoya göndermek için bir ana bilgisayar kullanan bir SQL Kalıcılık sağlayıcısı oluşturur.  
   
  SQL iş akışı örneği Store hem şirket içinde barındırılan iş akışları veya kullanan iş akışı hizmetleri destekleyen <xref:System.Activities.WorkflowApplication> veya <xref:System.ServiceModel.WorkflowServiceHost> barındırılan hizmetleri yanı sıra kullanarak <xref:System.ServiceModel.WorkflowServiceHost>. Özelliği tarafından sunulan nesne modelini kullanarak, şirket içinde barındırılan hizmetleri için SQL iş akışı örneği Store özelliği programlı bir şekilde yapılandırabilirsiniz. Bu özellik tarafından barındırılan hizmetler için yapılandırabileceğiniz <xref:System.ServiceModel.WorkflowServiceHost> nesne modelini kullanarak program aracılığıyla hem de bir XML yapılandırma dosyasını kullanarak.  
@@ -24,7 +24,7 @@ ms.locfileid: "57715678"
   
 -   [SQL İş Akışı Örnek Deposunun Özellikleri](properties-of-sql-workflow-instance-store.md)  
   
--   [Nasıl yapılır: İş akışları ve iş akışı hizmetleri için SQL kalıcılığını etkinleştirme](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Nasıl yapılır: İş Akışları ve İş Akışı Hizmetleri için SQL Kalıcılığını Etkinleştirme](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 -   [Örnek Etkinleştirme](instance-activation.md)  
   
@@ -37,4 +37,5 @@ ms.locfileid: "57715678"
 -   [SQL Server Kalıcılık Veritabanı](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkID=177735)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Özel belirteç oluşturma'
+title: 'Nasıl yapılır: Özel Belirteç Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 3367a75fc0532e3eaa312400221c662bb35146bf
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 4f2f2d3a1d4263dfc068193f832369b0d82e69fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095665"
 ---
-# <a name="how-to-create-a-custom-token"></a>Nasıl yapılır: Özel belirteç oluşturma
+# <a name="how-to-create-a-custom-token"></a>Nasıl yapılır: Özel Belirteç Oluşturma
 Bu konuda, kullanarak bir özel güvenlik belirteci oluşturma işlemi gösterilmektedir <xref:System.IdentityModel.Tokens.SecurityToken> sınıfı ve bir özel güvenlik belirteci sağlayıcı ve authenticator ile tümleştirmeyi öğreneceksiniz. Tam kod örneği için bkz. [özel belirteç](../../../../docs/framework/wcf/samples/custom-token.md) örnek.  
   
  A *güvenlik belirteci* temelde Windows Communication Foundation (WCF) güvenlik çerçevesi tarafından SOAP iletisi içinde bir gönderici talepleri belirtmek için kullanılan bir XML öğesi. WCF güvenlik sistem tarafından sağlanan kimlik doğrulama modları için çeşitli belirteçleri sağlar. Örnekler tarafından temsil edilen bir X.509 sertifikası güvenlik belirteci <xref:System.IdentityModel.Tokens.X509SecurityToken> sınıf veya bir kullanıcı adı güvenlik belirteci temsil ettiği <xref:System.IdentityModel.Tokens.UserNameSecurityToken> sınıfı.  
@@ -149,6 +149,7 @@ Bu konuda, kullanarak bir özel güvenlik belirteci oluşturma işlemi gösteril
  Bu konuda, uygulamak ve özel bir belirteç kullanmak gerekli kod çeşitli parçaları gösterilmektedir. İlişkin eksiksiz bir örnek görmek için bkz: Bu kod tüm parçaları bir araya getireceğinizi [özel belirteç](../../../../docs/framework/wcf/samples/custom-token.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IdentityModel.Tokens.SecurityToken>
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>
 - <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>
@@ -160,6 +161,6 @@ Bu konuda, kullanarak bir özel güvenlik belirteci oluşturma işlemi gösteril
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [İzlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Nasıl yapılır: Özel güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)

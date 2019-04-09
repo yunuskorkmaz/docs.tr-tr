@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 3c96275f3e5db24446b030ec007f23e9035242c8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095496"
 ---
 # <a name="data-binding-and-windows-forms"></a>Veri Bağlama ve Windows Forms
 Windows Forms'ta yalnızca geleneksel veri kaynaklarına da bağlayabilirsiniz, ancak Ayrıca verileri içeren neredeyse her yapı için. Çalışma zamanında hesaplamak, bir dosyadan okunan veya diğer denetimlerin değerleri türetilen değerler dizisi bağlayabilirsiniz.  
@@ -54,7 +54,8 @@ Windows Forms'ta yalnızca geleneksel veri kaynaklarına da bağlayabilirsiniz, 
 |Arama tablosu|Başka bir ortak veri sunu/işleme tablosu aramasında bir senaryodur. Genellikle, daha büyük bir veri görünen bir parçası olarak bir <xref:System.Windows.Forms.ComboBox> denetimi görüntülemek ve veri işlemek için kullanılır. İçinde görüntülenen verileri anahtardır <xref:System.Windows.Forms.ComboBox> denetimidir veritabanına yazılan veriler farklı. Örneğin, bir <xref:System.Windows.Forms.ComboBox> öğeleri görüntüleyen bir denetimi Market kullanılabilir, büyük olasılıkla ürünlerin (ekmek, sütlü, örneğin sucuklu) adlarını görmek istediğiniz. Ancak, veritabanı içinde ve veritabanı normalleştirmesi için bilgi alma kolaylaştırmak için büyük olasılıkla bilgi belirli bir sırada belirli öğeler için öğesi numaraları saklayacağından (#501, #603 vb.). Bu nedenle, Market öğesinde "kolay adı" arasında örtük bir bağlantı yoktur <xref:System.Windows.Forms.ComboBox> formunuza ve bir sırada mevcut olan ilgili öğe numarası üzerinde denetim. Bu tablo arama olduğu. Daha fazla bilgi için [nasıl yapılır: Windows Forms BindingSource bileşeniyle arama tablosu oluşturma](./controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md).|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Binding>
 - [Windows Forms Veri Bağlama](windows-forms-data-binding.md)
-- [Nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [BindingSource Bileşeni](./controls/bindingsource-component.md)

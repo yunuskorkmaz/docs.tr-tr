@@ -1,18 +1,18 @@
 ---
-title: İşlem kapsamı kullanarak örtük işlem uygulama
+title: İşlem Kapsamı Kullanarak Örtük İşlem Uygulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120984"
 ---
-# <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>İşlem kapsamı kullanarak örtük işlem uygulama
+# <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>İşlem Kapsamı Kullanarak Örtük İşlem Uygulama
 <xref:System.Transactions.TransactionScope> Sınıfı bir işlem ile etkileşime gerek kalmadan bir işlemde katılan olarak kod bloğu işaretlemek için basit bir yol sağlar. İşlem kapsamı seçebilir ve ortam işlem otomatik olarak yönetir. Kendi kullanım kolaylığı ve verimliliği nedeniyle, kullanmanız önerilir <xref:System.Transactions.TransactionScope> sınıfı bir işlem uygulama geliştirirken.  
   
  Ayrıca, işlem açıkça kaynaklarla listeleme gerekmez. Tüm <xref:System.Transactions> Kaynak Yöneticisi (örneğin, SQL Server 2005) kapsam tarafından oluşturulan bir ortam hareket varlığını algılayabilir ve otomatik olarak listeleme.  
@@ -121,7 +121,7 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- Örnek kod bloğu yeni bir kapsam oluşturma ortam işlem gösterir (`scope1`) ile <xref:System.Transactions.TransactionScopeOption.Required>. Kapsam `scope1` (bir işlem) yeni bir işlem oluşturur ve işlem yapar gibi bir kök kapsamı olan ortam işlem. `Scope1`Daha sonra her farklı bir ile üç daha fazla nesne oluşturur <xref:System.Transactions.TransactionScopeOption> değeri. Örneğin, `scope2` ile oluşturulan <xref:System.Transactions.TransactionScopeOption.Required>, ve bir ortam işlem olduğundan, onu oluşturan ilk işlem birleştirir `scope1`. Unutmayın `scope3` yeni bir işlem ve kök kapsamı `scope4` ortam hiçbir işlem sahiptir.  
+ Örnek kod bloğu yeni bir kapsam oluşturma ortam işlem gösterir (`scope1`) ile <xref:System.Transactions.TransactionScopeOption.Required>. Kapsam `scope1` (bir işlem) yeni bir işlem oluşturur ve işlem yapar gibi bir kök kapsamı olan ortam işlem. `Scope1` Daha sonra her farklı bir ile üç daha fazla nesne oluşturur <xref:System.Transactions.TransactionScopeOption> değeri. Örneğin, `scope2` ile oluşturulan <xref:System.Transactions.TransactionScopeOption.Required>, ve bir ortam işlem olduğundan, onu oluşturan ilk işlem birleştirir `scope1`. Unutmayın `scope3` yeni bir işlem ve kök kapsamı `scope4` ortam hiçbir işlem sahiptir.  
   
  Değerini varsayılan ve en sık kullanılan olsa da <xref:System.Transactions.TransactionScopeOption> olan <xref:System.Transactions.TransactionScopeOption.Required>, her diğer değerlerinin benzersiz amacı vardır.  
   
@@ -169,5 +169,6 @@ using(TransactionScope scope1 = new TransactionScope())
  Yeni bir oluşturduğunuzda <xref:System.Transactions.TransactionScope> kullanabileceğiniz örnek <xref:System.Transactions.EnterpriseServicesInteropOption> oluşturucular nasıl etkileşime COM + ile belirlemek için bir sabit listesi. Bunun hakkında daha fazla bilgi için bkz. [Kurumsal Hizmetler ve COM + işlemleri ile birlikte çalışabilirlik](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Transactions.Transaction.Clone%2A>
 - <xref:System.Transactions.TransactionScope>

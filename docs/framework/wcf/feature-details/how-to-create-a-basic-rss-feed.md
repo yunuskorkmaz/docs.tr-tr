@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Temel bir RSS akışı oluşturma'
+title: 'Nasıl yapılır: Temel Bir RSS Akışı Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 1de8d252be4740ad2a23ce1074d772364529eecf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7b1ff72295332be072d7c664a546ed6e4d998ac8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073838"
 ---
-# <a name="how-to-create-a-basic-rss-feed"></a>Nasıl yapılır: Temel bir RSS akışı oluşturma
+# <a name="how-to-create-a-basic-rss-feed"></a>Nasıl yapılır: Temel Bir RSS Akışı Oluşturma
 Windows Communication Foundation (WCF), bir dağıtım akışı hizmetidir oluşturmanıza olanak sağlar. Bu konu, bir RSS dağıtım akışı sunan bir dağıtım hizmetinin nasıl oluşturulduğunu açıklar.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Temel Sendikasyon hizmeti oluşturmak için  
@@ -95,5 +95,6 @@ Windows Communication Foundation (WCF), bir dağıtım akışı hizmetidir oluş
  Yukarıdaki kod derlenirken System.ServiceModel.dll ve System.ServiceModel.Web.dll başvuru.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

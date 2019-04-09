@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb537950ce240d77282551f847b637a77792a264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1017a0326691c2e0f01e2a16df5db566786ee688
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083627"
 ---
 # <a name="accessing-custom-attributes"></a>Özel Özniteliklere Erişim
 Öznitelikleri program öğelerle ilişkili eklendikten sonra yansıma olmaları ve uygulanmaları değerlerini sorgulamak için kullanılabilir. .NET Framework 1.0 ve 1.1 sürümlerinde, özel öznitelikler yürütme bağlamında incelenir. .NET Framework 2.0 sürümünde yeni bir yükleme bağlamı, yürütme için yüklenemiyor kodu incelemek için kullanılan salt yansıma bağlam sağlar.  
@@ -73,6 +73,7 @@ public class LocalizationExtenderProvider
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

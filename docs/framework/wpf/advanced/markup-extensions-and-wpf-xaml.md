@@ -15,17 +15,16 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e678dcf9606c3ad545e93a4389bccb3d49423dec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148103"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Biçimlendirme Uzantıları ve WPF XAML
 Bu konu, kendi sözdizimi kurallarını, amacı ve bunları altını sınıfı nesne modeli de dahil olmak üzere XAML için biçimlendirme uzantıları kavramı tanıtır. Biçimlendirme uzantıları bir XAML dili ve .NET uygulamasının XAML hizmetleri genel özelliğidir. Bu konuda özellikle kullanılmak üzere WPF XAML biçimlendirme uzantıları ayrıntıları.  
-  
-  
+
 <a name="XAML_Processors_and_Markup_Extensions"></a>   
 ## <a name="xaml-processors-and-markup-extensions"></a>XAML işlemci ve İşaretleme uzantıları  
  Genel olarak bakıldığında, XAML ayrıştırıcı bir ilkel dönüştürülebilir veya bazı durumlarda bir nesneye dönüştürmek değişmez değer dize olarak ya da bir öznitelik değeri yorumlayabilir. Bir tür dönüştürücüsü başvurarak olduğu gibi bir anlamına gelir; Bu konu başlığı altında belgelenen [TypeConverters ve XAML](typeconverters-and-xaml.md). Ancak, farklı bir davranış gerekli olduğu senaryolar da vardır. Örneğin, bir öznitelik değeri içinde yeni bir nesne grafiğinin sonuçlanması gerektiğini değil bir XAML işlemci sağlanabilir. Bunun yerine, öznitelik grafiğin başka bir parçası olarak zaten oluşturulmuş bir nesne veya statik nesne başvuru sağlayan bir nesne grafiğinin neden. XAML işlemci oluşturucusuna bir nesnenin varsayılan olmayan bağımsız değişkenleri sağlayan bir söz dizimini kullanacak şekilde sağlanabilir başka bir senaryodur. Bu işaretleme uzantısı çözümü burada sağlayabilir senaryoları türleridir.  
@@ -118,10 +117,11 @@ Bu konu, kendi sözdizimi kurallarını, amacı ve bunları altını sınıfı n
  Nesne öğesi sözdiziminde, bir özellik öğesi doldurmak için kullanılan çoğu biçimlendirme uzantıları içinde içerik ya da daha fazla özellik öğesi sözdizimine sahip olmaz. Bu nedenle nesne öğesi etiketi kapatın ve hiçbir alt öğeleri sağlamak. Herhangi bir nesne öğesi bir XAML işlemcisi tarafından karşılaşıldığında ayrıştırılmış öğeden oluşturulan nesne başlatır, o sınıf için oluşturucu çağrılır. İşaretleme uzantısı sınıfı farklı değildir: biçimlendirme uzantınızı nesne öğesi sözdiziminde kullanılabilir olmasını istiyorsanız, varsayılan bir oluşturucu sağlamanız gerekir. Var olan bazı biçimlendirme uzantıları etkili başlatma için belirtilen en az bir gerekli özellik değerine sahip. Bu durumda, bu özellik değeri bir özellik özniteliğini nesne öğede genellikle verilir. İçinde [XAML Namespace (x:) Dil özellikleri](../../xaml-services/xaml-namespace-x-language-features.md) ve [WPF XAML uzantıları](wpf-xaml-extensions.md) başvuru sayfalarına, biçimlendirme gerekli özellikleri (ve gerekli özelliklerin adları) uzantıları not ettiğiniz. Nesne öğesi sözdizimi veya öznitelik sözdizimi belirli işaretleme uzantılarına izin verilmeyen, başvuru sayfaları da fark edeceksiniz. Önemli bir durumdur [x: Array işaretleme uzantısı](../../xaml-services/x-array-markup-extension.md), hangi destekleyemez öznitelik sözdizimi içeriği o dizinin içinde etiketleme içeriği olarak belirtilmesi gerektiğinden. Dizi içerikleri, genel nesneler olarak işlenir, bu yüzden hiçbir öznitelik için varsayılan tür dönüştürücüsü mantıklı olur. Ayrıca, [x: Array işaretleme uzantısı](../../xaml-services/x-array-markup-extension.md) gerektiren bir `type` parametresi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
-- [XAML Namespace (x:) Dil özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML Ad Alanı (x:) Dil Özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML Uzantıları](wpf-xaml-extensions.md)
-- [StaticResource İşaretleme Uzantısı](staticresource-markup-extension.md)
-- [İşaretleme Uzantısı Bağlama](binding-markup-extension.md)
-- [DynamicResource İşaretleme Uzantısı](dynamicresource-markup-extension.md)
+- [StaticResource Biçimlendirme Uzantısı](staticresource-markup-extension.md)
+- [Biçimlendirme Uzantısı Bağlama](binding-markup-extension.md)
+- [DynamicResource Biçimlendirme Uzantısı](dynamicresource-markup-extension.md)
 - [x:Type İşaretleme Uzantısı](../../xaml-services/x-type-markup-extension.md)

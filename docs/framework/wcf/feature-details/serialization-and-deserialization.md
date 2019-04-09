@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 7ddad36c05d9972b9fc613403b68b7c793b6701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101822"
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
 Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <xref:System.Runtime.Serialization.DataContractSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> Arasında çevirir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] nesneleri ve her iki yönde de XML. Bu konu, seri hale getirici nasıl çalıştığını açıklar.  
@@ -261,8 +261,9 @@ Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <
  Ayrıca, `NetDataContractSerializer` tam çıktısının [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Nesne grafiği her düğüm için tür ve derleme adı. Bu, yalnızca belirsiz olduğu için bu bilgileri çıkarır. Diğer bir deyişle, kök nesne düzeyinde ve çok biçimli herhangi bir servis talebi için çıkarır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>
 - <xref:System.Runtime.Serialization.XmlObjectSerializer>
 - [İkili Serileştirme](../../../../docs/standard/serialization/binary-serialization.md)
-- [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

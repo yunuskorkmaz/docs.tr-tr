@@ -1,18 +1,18 @@
 ---
-title: Bağlantı dizeleri ve yapılandırma dosyaları
+title: Bağlantı Dizeleri ve Yapılandırma Dosyaları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088840"
 ---
-# <a name="connection-strings-and-configuration-files"></a>Bağlantı dizeleri ve yapılandırma dosyaları
+# <a name="connection-strings-and-configuration-files"></a>Bağlantı Dizeleri ve Yapılandırma Dosyaları
 Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve Bakım sorunlarına yol açabilir. Bir uygulamanın kaynak kodunda JIT şifrelenmemiş bir bağlantı dizeleri kullanarak görüntülenebilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) aracı. Ayrıca, bağlantı dizesini hiç olmadığı kadar değişirse, uygulamanızı derlenmelidir. Bu nedenle, bir uygulama yapılandırma dosyasında bağlantı dizelerini depolamanızı öneririz.  
   
 ## <a name="working-with-application-configuration-files"></a>Uygulama yapılandırma dosyaları ile çalışma  
@@ -170,6 +170,7 @@ Bağlantı dizelerini uygulamanızın kodunda ekleme güvenlik açıklarına ve 
  ASP.NET uygulamalarının güvenliğini sağlama hakkında daha fazla bilgi için bkz. [güvenli hale getirme ASP.NET web siteleri](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Yapılandırma sınıflarını kullanma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))

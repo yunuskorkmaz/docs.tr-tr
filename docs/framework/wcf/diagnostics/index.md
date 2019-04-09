@@ -9,12 +9,12 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-ms.openlocfilehash: 8ec59ef316bfa19046082a8ee0a4052c69d5c323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092286"
 ---
 # <a name="administration-and-diagnostics"></a>Yönetim ve Tanılama
 Windows Communication Foundation (WCF) zengin bir uygulamanın ömrü farklı aşamalarında izlemenize yardımcı olacak işlevler sunar. Örneğin, yapılandırma, hizmetler ve istemcileri dağıtımı ayarlamak için kullanabilirsiniz. WCF performans sayaçları, uygulamanızın performansını ölçmek amacıyla büyük bir kümesini içerir. WCF ayrıca İnceleme veri hizmetinin çalışma zamanında WCF Windows Yönetim Araçları (WMI) sağlayıcısı üzerinden kullanıma sunar. Uygulama bir hatayla karşılaştığında veya hatalı davranan başlatır, önemli şey gerçekleşip gerçekleşmediğini görmek için olay günlüğünü kullanabilirsiniz. İleti günlüğe kaydetme ve izleme gerçekleşmesini için uçtan uca, uygulamanızda hangi olayların olduğunu görmek için kullanabilirsiniz. Bu özellikler, geliştiricilerin ve BT uzmanlarının düzgün çalışmıyorsa, bir WCF uygulamada sorun gidermek için yardımcı olur.  
@@ -40,15 +40,16 @@ Windows Communication Foundation (WCF) zengin bir uygulamanın ömrü farklı a�
  WCF oluşturmanıza, dağıtmanıza ve WCF uygulamalarını yönetmek kolaylaştırmak için çeşitli GUI ve komut satırı araçlar da sağlar. Daha fazla bilgi için [Windows Communication Foundation Araçları](../../../../docs/framework/wcf/tools.md). Örneğin, kullanabileceğiniz [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) oluşturmak ve XML düzenleme yerine doğrudan bir Sihirbazı'nı kullanarak WCF yapılandırma ayarlarını düzenlemek için. Ayrıca [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) görüntülemek, Grup ve tanılamak izleme iletileri filtre için onarın ve WCF hizmetleri ile ilgili sorunlar doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Uygulamanızı Yapılandırma](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
-- [Hizmet Dağıtma](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
+- [Dağıtma Hizmetleri](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [Özel Durum Başvurusu](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
-- [Günlüğe Olay Kaydetme](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Etkinlikleri Günlüğe Kaydetme](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [İleti Günlüğe Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [ServiceModel Kayıt Aracı](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [İzleme](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Tanılama için Windows Yönetim Araçlarını Kullanma](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Tanılama için Windows Yönetim İzlemesini Kullanma](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
 - [Performans Sayaçları](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
 - [Windows Communication Foundation Araçları](../../../../docs/framework/wcf/tools.md)

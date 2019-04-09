@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646925"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118033"
 ---
 # <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma
 Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri sözleşmeleri Hizmetleri kullanın. Bu konu açıklar nasıl sürüm veri anlaşmaları. Bu konuda, veri sözleşmesi sürümü oluşturma mekanizmaları açıklanmaktadır. Eksiksiz bir genel bakış ve öngörücü sürüm oluşturma yönergeleri için bkz: [en iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -116,6 +116,7 @@ Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri s
 Doğal olarak, içeriğinin (örneğin, bir dize listesi tamsayılar listesinden değiştirme) bir koleksiyon veri anlaşması değiştirme bölünmesi farklıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
@@ -125,7 +126,7 @@ Doğal olarak, içeriğinin (örneğin, bir dize listesi tamsayılar listesinden
 - <xref:System.Runtime.Serialization.SerializationException>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
-- [En iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
-- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Veri Anlaşması Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [İleri Uyumlu Veri Anlaşmaları](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Veri Sözleşmelerini Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Sözleşmesi Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [İleri Uyumlu Veri Sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

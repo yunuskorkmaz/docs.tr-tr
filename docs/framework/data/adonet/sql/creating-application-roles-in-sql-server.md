@@ -1,15 +1,15 @@
 ---
-title: SQL Server'da uygulama rolleri oluşturma
+title: SQL Server’da Uygulama Rolleri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 4d3ee759a11417d5f4d36a295f20c7f7886d30d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100385"
 ---
-# <a name="creating-application-roles-in-sql-server"></a>SQL Server'da uygulama rolleri oluşturma
+# <a name="creating-application-roles-in-sql-server"></a>SQL Server’da Uygulama Rolleri Oluşturma
 Uygulama rolleri, bir veritabanı rolü ya da kullanıcı yerine bir uygulama için izinler atamak için bir yol sağlar. Kullanıcılar veritabanına bağlanmak, uygulama rolü etkinleştirmek ve uygulamaya verilen izinler varsayılır. Uygulama rolü için verilen izinler bağlantı süresi boyunca yürürlükte değil.  
   
 > [!IMPORTANT]
@@ -59,6 +59,7 @@ Uygulama rolleri, bir veritabanı rolü ya da kullanıcı yerine bir uygulama i�
 |[Uygulama rolleri](/sql/relational-databases/security/authentication-access/application-roles)|SQL Server 2008'de uygulama rolleri oluşturma ve açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

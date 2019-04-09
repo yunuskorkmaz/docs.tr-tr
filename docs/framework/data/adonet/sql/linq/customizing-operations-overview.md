@@ -1,15 +1,15 @@
 ---
-title: 'İşlemleri özelleştirme: Genel Bakış'
+title: 'İşlemleri Özelleştirme: Genel Bakış'
 ms.date: 03/30/2017
 ms.assetid: a3546296-1443-4b88-aa6e-d41011041ba7
-ms.openlocfilehash: 4f13bed76ad2814d669f487b57ae9acbdc08eb74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29fb75271b7bc324d462078e94e4a28534986fba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075983"
 ---
-# <a name="customizing-operations-overview"></a>İşlemleri özelleştirme: Genel Bakış
+# <a name="customizing-operations-overview"></a>İşlemleri Özelleştirme: Genel Bakış
 Varsayılan olarak, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dinamik SQL ekleme, güncelleştirme ve silme işlemleri eşlemesini göre oluşturur. Ancak, uygulamada genellikle güvenlik, doğrulama ve benzeri sağlamak için kendi iş mantıklarını eklemesini istersiniz.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Bu işlemler özelleştirmeye yönelik teknikler arasında şunlar yer alır.  
@@ -24,4 +24,5 @@ Varsayılan olarak, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] saklı yordamları ve kullanıcı tanımlı işlevleri destekler. Saklı yordamlar, sık sık operations özelleştirmek için kullanılır. Daha fazla bilgi için [saklı yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Insert, Update ve Delete İşlemlerini Özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

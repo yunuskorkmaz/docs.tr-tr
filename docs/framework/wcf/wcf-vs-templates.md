@@ -2,12 +2,12 @@
 title: WCF Visual Studio Şablonları
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 72239f9e0e6d7882e6a29222c0b68f3bfd5d89d5
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130903"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio Şablonları
 Windows Communication Foundation (WCF) Visual Studio önceden tanımlanmış proje ve öğe şablonlarını Visual Studio'da WCF hizmetleri ve kapsayıcı uygulamaları hızlıca oluşturmak için kullanabileceğiniz şablonlardır.  
@@ -83,5 +83,6 @@ Windows Communication Foundation (WCF) Visual Studio önceden tanımlanmış pro
 >  Silverlight özellikli bir WCF hizmeti sunan bir `basicHttpBinding` güvenlik ayarlarını etkinleştirmeden uç noktası. Bu nedenle, hizmeti hakkında bilgi için bu hizmeti bağlanan tüm istemciler tarafından alınabilir. Hizmet ve istemci arasında alınıp verilen iletileri imzalanmış veya şifrelenmiş da güncelleştirilmez. Uç nokta düzgün güvenliğini sağlamak için ASP.NET kimlik doğrulaması, HTTPS veya başka mekanizmalar kullanmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+
+- [WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
 - [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

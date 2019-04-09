@@ -1,15 +1,15 @@
 ---
-title: LINQ to SQL'de güvenlik
+title: LINQ to SQL’de Güvenlik
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-ms.openlocfilehash: 7730419509cd0c3530813734a98f777ddf9d9f04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078150"
 ---
-# <a name="security-in-linq-to-sql"></a>LINQ to SQL'de güvenlik
+# <a name="security-in-linq-to-sql"></a>LINQ to SQL’de Güvenlik
 Bir veritabanına bağlanırken her zaman güvenlik riskleri bulunur. LINQ to SQL SQL Server'daki verilerle çalışmak için bazı yeni yollar içerebilir ancak herhangi bir ek güvenlik mekanizması sağlamaz.  
   
 ## <a name="access-control-and-authentication"></a>Erişim denetimi ve kimlik doğrulaması  
@@ -18,7 +18,7 @@ Bir veritabanına bağlanırken her zaman güvenlik riskleri bulunur. LINQ to SQ
 ## <a name="mapping-and-schema-information"></a>Eşleme ve şema bilgileri  
  Nesne modeli veya dış eşleme dosyasında SQL-CLR tür eşlemesi ve veritabanı şema bilgileri dosya sistemindeki tüm bu dosyalara erişimi için kullanılabilir. Şema bilgileri nesne modeli veya dış eşleme dosyası erişebilen tüm kullanılabilir olacağını varsayalım. Şema bilgileri daha yaygın erişimi engellemek için kaynak dosyaları ve eşleme dosyalarını korumak için dosya güvenlik mekanizmaları kullanın.  
   
-## <a name="connection-strings"></a>Bağlantı dizeleri  
+## <a name="connection-strings"></a>Bağlantı Dizeleri  
  Bağlantı dizelerini parolaları kullanmanızı mümkün olduğunca kaçınılmalıdır. Yalnızca bir bağlantı dizesi kendi güvenlik riski oluşturur, ancak bağlantı dizesini de düz metin olarak nesne modeli ya da dış eşleme dosyası Nesne İlişkisel Tasarımcısı veya SQLMetal komut satırı aracını kullanırken eklenebilir. (Bu bağlantı dizesinde yer alıyorsa) nesne modeli veya dış eşleme dosyası dosya sistemi üzerinden erişimi olan herkes bağlantı parola görebilirsiniz.  
   
  Bu riskleri azaltmak için tümleşik güvenlik SQL Server ile güvenilir bir bağlantı kurmak için kullanın. Bu yaklaşımı kullanarak bağlantı dizesinde parola depolamak gerekmez. Daha fazla bilgi için [SQL Server güvenliği](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
@@ -34,5 +34,6 @@ Bir veritabanına bağlanırken her zaman güvenlik riskleri bulunur. LINQ to SQ
 -   Yaşam süreleri en aza indirmek ve noktaya tüm bağlantı dizeleri için dokunun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Sık Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+- [Sıkça Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

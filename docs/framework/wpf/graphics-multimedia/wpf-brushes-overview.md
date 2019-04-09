@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 12671c62a887f863bfb423cf67d7a25eed4118b2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132216"
 ---
 # <a name="wpf-brushes-overview"></a>WPF Fırçalarına Genel Bakış
 Her şey, ekranda görünen fırça tarafından boyanan çünkü görülebilir. Örneğin, fırça bir düğme ve metin ön bir şeklin arka planı tanımlamak için kullanılır. Bu konu ile Boyama kavramları tanıtır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fırçaları ve örnekler sağlar. Fırçalar boyama etkinleştirme [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] basit, düz renk düzenleri ve görüntü karmaşık kümelerine nesneleri.  
@@ -161,6 +161,7 @@ VisualBrush'ı kullanarak bir dikdörtgen boyanır
  Neden hakkında daha fazla bilgi için <xref:System.Windows.Media.VisualBrush> nesneler olamaz dondurulmuş, bkz: <xref:System.Windows.Media.VisualBrush> türü sayfası.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
 - [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](painting-with-solid-colors-and-gradients-overview.md)

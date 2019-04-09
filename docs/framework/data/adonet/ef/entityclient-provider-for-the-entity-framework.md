@@ -1,18 +1,18 @@
 ---
-title: Entity Framework için EntityClient sağlayıcısı
+title: Entity Framework için EntityClient Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: ac14840145fb3faca0f6243037c8b27be31f5c7f
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: b8de4e36351a93858104a99045c5aeecce9d2997
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169682"
 ---
-# <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework için EntityClient sağlayıcısı
+# <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework için EntityClient Sağlayıcısı
 EntityClient sağlayıcısı kavramsal modelde tanımlanan veri erişimi için Entity Framework uygulamaları tarafından kullanılan veri sağlayıcıdır. Kavramsal modeller hakkında daha fazla bilgi için bkz. [modelleme ve eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient, diğer .NET Framework veri sağlayıcıları, veri kaynağına erişmek için kullanır. Örneğin, EntityClient .NET Framework veri sağlayıcısı (SqlClient) SQL Server için SQL Server veritabanına erişirken kullanır. SqlClient sağlayıcısı hakkında daha fazla bilgi için bkz: [Entity Framework için SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). EntityClient sağlayıcı uygulanan <xref:System.Data.EntityClient> ad alanı.  
   
-## <a name="managing-connections"></a>Bağlantıları yönetme  
+## <a name="managing-connections"></a>Bağlantıları Yönetme  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Üzerinde depolama özel yapılar [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] sağlayarak veri sağlayıcıları bir <xref:System.Data.EntityClient.EntityConnection> ilişkisel veritabanı ve temel alınan veri sağlayıcısı. Oluşturmak için bir <xref:System.Data.EntityClient.EntityConnection> nesnesi, bir dizi gerekli model ve eşleme ve ayrıca depolama özgü veri sağlayıcı adı ve bağlantı dizesi içeren bir meta veri başvurusu gerekir. Sonra <xref:System.Data.EntityClient.EntityConnection> olduğu yerde varlıkları kavramsal model oluşturulan sınıfların aracılığıyla erişilebilir.  
   
  App.config dosyasında bir bağlantı dizesi belirtebilirsiniz.  
@@ -42,27 +42,28 @@ cmd.CommandText = @"SELECT VALUE p
  Kavramsal bir modeli aracılığıyla sunulan verileri güncelleştirmek için bkz: [nasıl yapılır: Entity Framework işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738523(v=vs.100)).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+ [Nasıl yapılır: Bir EntityConnection Bağlantı Dizesi Oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
   
- [Nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
+ [Nasıl yapılır: PrimitiveType Sonuçları Döndüren Bir Sorgu Yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
   
- [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
+ [Nasıl yapılır: StructuralType Sonuçları Döndüren Bir Sorgu Yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)  
   
- [Nasıl yapılır: RefType sonuçları döndüren bir sorgu yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
+ [Nasıl yapılır: RefType Sonuçları Döndüren Bir Sorgu Yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-reftype-results.md)  
   
- [Nasıl yapılır: Karmaşık türler döndüren bir sorgu yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
+ [Nasıl yapılır: Karmaşık Türler Döndüren Bir Sorgu Yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-complex-types.md)  
   
- [Nasıl yapılır: İç içe geçmiş koleksiyonlar döndüren bir sorgu yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
+ [Nasıl yapılır: İç İçe Geçmiş Koleksiyonlar Döndüren Bir Sorgu Yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [Nasıl yapılır: EntityCommand kullanarak parametreli varlık SQL sorgusu yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [Nasıl yapılır: EntityCommand Kullanarak Parametreli Entity SQL Sorgusu Yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [Nasıl yapılır: EntityCommand kullanarak parametreli saklı yordam yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [Nasıl yapılır: EntityCommand Kullanarak Parametreli Saklı Yordam Yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
- [Nasıl yapılır: Çok biçimli sorgu yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
+ [Nasıl yapılır: Çok Biçimli Sorgu Yürütme](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
- [Nasıl yapılır: İle ilişkilerde gezinme işleci gidin](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
+ [Nasıl yapılır: Nasıl yapılır: Navigate İşleci ile İlişkilerde Gezinme](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağlantılarını yönetme ve işlemler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Dil Başvurusu](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

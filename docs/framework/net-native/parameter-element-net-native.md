@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c18919a6c48c251138a3d5e88079d3383979ef1a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137884"
 ---
 # <a name="parameter-element-net-native"></a>\<Parametresi > öğesi (.NET yerel)
 Bir yönteme geçirilen bağımsız değişken türünü yansıma ilkesini uygular.  
@@ -74,6 +74,7 @@ Bir yönteme geçirilen bağımsız değişken türünü yansıma ilkesini uygul
  `<Parameter>` Öğesi alt öğesi olan [ \<yöntemi >](../../../docs/framework/net-native/method-element-net-native.md) öğesi ve belirli bir yöntem parametresine ilkeyi uygulamak için kullanılır. Belirli bir yöntem parametre adı yerine türüne göre belirtilir. Bir ilke türü gibi temsil eden en az bir öznitelik `Activate` veya `Dynamic`, mevcut olması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<Yöntem > öğesi](../../../docs/framework/net-native/method-element-net-native.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

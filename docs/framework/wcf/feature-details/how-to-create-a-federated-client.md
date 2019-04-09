@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Federe istemci oluşturma'
+title: 'Nasıl yapılır: Federe İstemci Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 18c01c8ea6ada24a551b92fc571b68b336e10f64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 457c09ec381db97bc757b9288c9d6ebc0890a305
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104331"
 ---
-# <a name="how-to-create-a-federated-client"></a>Nasıl yapılır: Federe istemci oluşturma
+# <a name="how-to-create-a-federated-client"></a>Nasıl yapılır: Federe İstemci Oluşturma
 Windows Communication Foundation (WCF) oluşturmak için bir istemci bir *Federasyon Hizmeti* üç ana adımdan oluşur:  
   
 1.  Yapılandırma bir [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ya da benzer özel bağlama. Uygun bir bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Alternatif olarak, çalıştırma [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) karşı Federasyon Hizmeti ve bir veya daha fazlası ile iletişim kurmak için bir yapılandırma dosyası oluşturmak için Federasyon Hizmeti meta veri uç noktası Güvenlik belirteci Hizmetleri.  
@@ -161,10 +161,11 @@ Windows Communication Foundation (WCF) oluşturmak için bir istemci bir *Federa
 >  Belirtilen URI'yı kapsayan sertifikalar istemci fikrini uç noktada bu bir URI'leri açığa çıkaran hizmetler giden çağrıları yapan uygulamalar için geçerlidir. Tarafından döndürülen bir koleksiyonda sunucuda yapılandırılan gibi verilen Belirteçleri imzalamak için kullanılan sertifikaları için uygulanmaz <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> , <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> sınıfı. Daha fazla bilgi için [nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Federasyon Örneği](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Nasıl yapılır: WSFederationHttpBinding güvenli oturumlarını devre dışı bırak](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Nasıl yapılır: Yerel yayımlayan yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Nasıl yapılır: WSFederationHttpBinding Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: Yerel Yayımlayan Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [Meta Veriler Hakkında Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Nasıl yapılır: Meta veri uç noktalarını güvenli hale getirme](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

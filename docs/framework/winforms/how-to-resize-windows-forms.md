@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows formlarını yeniden boyutlandır'
+title: 'Nasıl yapılır: Windows Forms’u Yeniden Boyutlandırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 9399069ad5365b025fe8c92b2f10c36c4666f4b4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2da4b7483e92b02360bceb886d84a7f729b84dee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077231"
 ---
-# <a name="how-to-resize-windows-forms"></a>Nasıl yapılır: Windows formlarını yeniden boyutlandır
+# <a name="how-to-resize-windows-forms"></a>Nasıl yapılır: Windows Forms’u Yeniden Boyutlandırma
 Windows formunuzda boyutu birkaç şekilde belirtebilirsiniz. İçin yeni bir değer ayarlayarak hem yüksekliğini hem de formun genişliğine programlama yoluyla değiştirebilirsiniz <xref:System.Windows.Forms.Form.Size%2A> özelliği veya ayarla <xref:System.Windows.Forms.Control.Height%2A> veya <xref:System.Windows.Forms.Control.Width%2A> özellikleri ayrı ayrı. Visual Studio kullanıyorsanız, Windows Forms Tasarımcısı'nı kullanarak boyutunu değiştirebilirsiniz. Ayrıca bkz: [nasıl yapılır: Tasarımcı kullanarak Windows formlarını yeniden boyutlandır](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).  
   
 ### <a name="to-resize-a-form-programmatically"></a>Bir form programlı olarak yeniden boyutlandırmak için  
@@ -113,5 +113,6 @@ Windows formunuzda boyutu birkaç şekilde belirtebilirsiniz. İçin yeni bir de
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms'a Başlarken](getting-started-with-windows-forms.md)
 - [Windows Forms Uygulamalarını Geliştirme](./advanced/index.md)

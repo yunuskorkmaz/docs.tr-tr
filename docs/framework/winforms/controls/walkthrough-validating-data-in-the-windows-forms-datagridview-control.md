@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Windows Forms DataGridView denetiminde verileri doğrulama'
+title: 'İzlenecek yol: Windows Forms DataGridView Denetimindeki Verileri Doğrulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: 6bb46a9bc54652d781d3421051b7d6e09fc91772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710036"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127354"
 ---
-# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>İzlenecek yol: Windows Forms DataGridView denetiminde verileri doğrulama
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>İzlenecek yol: Windows Forms DataGridView Denetimindeki Verileri Doğrulama
 Kullanıcılara veri girişi işlevi görüntülediğinizde, sık formunuza girilen verileri doğrulamak gerekir. <xref:System.Windows.Forms.DataGridView> Sınıfı veri deposuna veri gerçekleştirilmeden önce doğrulamayı gerçekleştirmek için kolay bir yol sağlar. Verileri işleyerek doğrulayabilirsiniz <xref:System.Windows.Forms.DataGridView.CellValidating> tarafından oluşan olayı <xref:System.Windows.Forms.DataGridView> geçerli hücreyi değiştiğinde.  
   
  Bu kılavuzda, tablosundan satırları alır `Customers` Northwind örnek veritabanındaki tablo ve bunları görüntüleme bir <xref:System.Windows.Forms.DataGridView> denetimi. Kullanıcının bir hücreye zaman düzenlediğini `CompanyName` sütun ve hücre bırakın denediğinde <xref:System.Windows.Forms.DataGridView.CellValidating> yeni şirket adı dizesi boş değil; yeni değer boş bir dize ise olduğundan emin olmak için olay işleyicisini inceleyin <xref:System.Windows.Forms.DataGridView> kullanıcının imleç engeller Hücre bir boş olmayan dize girilene kadar çıkarılmasını.  
@@ -89,9 +89,10 @@ Kullanıcılara veri girişi işlevi görüntülediğinizde, sık formunuza giri
 -   Hücrelerin görünüşünü özelleştirme. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md) ve [nasıl yapılır: Windows Forms DataGridView denetiminde yazı tipi ve renk stillerini ayarlama](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Windows Forms DataGridView Denetiminde Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde verileri doğrulama](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [İzlenecek yol: Windows Forms DataGridView denetimine veri girişi sırasında oluşan hataları ele alma](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Windows Forms DataGridView Denetimindeki Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetimindeki Verileri Doğrulama](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [İzlenecek yol: Windows Forms DataGridView Denetimine Veri Girişi Sırasında Oluşan Hataları Ele Alma](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Bağlantı Bilgilerini Koruma](../../data/adonet/protecting-connection-information.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 63dcfd80cca0db67dfad87c491d607506057a532
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 01fb70a7b37d6c9c119fff16a9d680d4139421cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109817"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>(LINQ to DataSet) DataView ile sıralama
 Verileri belirli ölçütlere göre sıralayın ve ardından bir UI denetimine üzerinden bir istemciye verileri sunmak olanağı, veri bağlama, önemli bir yönüdür. <xref:System.Data.DataView> verileri sıralama ve sıralama ölçüte göre sıralanmış veri satırları döndürmek için birçok yol sağlar. Yetenekleri, sıralama, dize tabanlı ek olarak <xref:System.Data.DataView> ayrıca kullanmanızı sağlayan [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] sıralama ölçütü ifadeleri. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler dize tabanlıdır sıralama daha çok daha karmaşık ve güçlü sıralama işlemleri için izin verin. Bu konu, her iki yaklaşım kullanarak sıralama açıklar <xref:System.Data.DataView>.  
@@ -82,6 +82,7 @@ Verileri belirli ölçütlere göre sıralayın ve ardından bir UI denetimine �
  [!code-vb[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
 - [DataView ile Filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
 - [Verileri Sıralama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

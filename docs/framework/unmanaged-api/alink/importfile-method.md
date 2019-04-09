@@ -1,5 +1,5 @@
 ---
-title: ImportFile Yöntemi
+title: ImportFile Metodu
 ms.date: 03/30/2017
 api_name:
 - IALink.ImportFile
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16793cfd93ce296ba0e2bc70c59c22d598aacacd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 69e48c6c3179ced167fdc39ae4df859f161727ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077257"
 ---
-# <a name="importfile-method"></a>ImportFile Yöntemi
+# <a name="importfile-method"></a>ImportFile Metodu
 Derlemeler ve bağlantısız modülleri içeri aktarır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -65,6 +65,7 @@ HRESULT ImportFile(
  ALink.h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

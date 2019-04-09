@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c08cac6fd6b467fe365989cb4d6780325bdaa90
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c9dac5ae2f0f77c7b6d2dbd7f908f3552823735b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109609"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource Yöntemi
 Belirtilen bildirim kaynak yükler.  
@@ -51,6 +51,7 @@ HRESULT RegisterNotifySource
  **Üst bilgi:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [INotifyConnection2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySource2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [INotifySink2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

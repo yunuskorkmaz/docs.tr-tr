@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: 919e39dbe96a1a72ce517d59dcb239636f5aa692
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089425"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Nasıl yapılır: CompositionTarget Kullanarak Çerçeve Aralığı Başına İşleme
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Animasyon altyapısı tabanlı çerçeve animasyon oluşturmak için birçok özellik sağlar. Ancak, uygulama senaryoları daha ayrıntılı işleme çerçeve başına temelinde denetime ihtiyacınız vardır. <xref:System.Windows.Media.CompositionTarget> Nesne üzerinde bir çerçeve başına geri alarak özel animasyon oluşturma olanağı sağlar.  
@@ -41,5 +41,6 @@ ms.locfileid: "57353211"
  Ekleyerek veya kaldırarak bir işleme <xref:System.EventHandler> olayı tetiklenmekte olan sırada temsilci ertelenmesini kadar olay bittikten sonra geciktirilir. Bu nasıl ile tutarlıdır <xref:System.MulticastDelegate>-dayalı olayları, ortak dil çalışma zamanı (CLR) işlenir. Ayrıca, işleme olaylarının herhangi belirli bir sırada çağrılacak garanti edilmez unutmayın. Birden fazla varsa <xref:System.EventHandler> belirli bir sıraya üzerinde temsilciler tek bir kayıt işlemi <xref:System.Windows.Media.CompositionTarget.Rendering> olay ve çoğullamalısınız doğru temsilciler kendiniz düzenleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.CompositionTarget>
 - [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)

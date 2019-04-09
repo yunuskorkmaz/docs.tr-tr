@@ -1,15 +1,15 @@
 ---
-title: LINQ to DataSet sorgularında hata ayıklama
+title: LINQ to DataSet Sorgularında Hata Ayıklama
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0e015cc6042a21bf6d35915c3e19bfeb9b0dbb2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133340"
 ---
-# <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet sorgularında hata ayıklama
+# <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet Sorgularında Hata Ayıklama
 
 Visual Studio destekler, hata ayıklama [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod. Ancak, hata ayıklama arasındaki bazı farklar vardır [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve olmayan-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod. Hata ayıklama özelliklerinin çoğu çalışmak [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] deyimleri, Adımlama, kesme noktaları ayarlama ve hata ayıklayıcı pencerelerinde gösterilen sonuçları görüntüleme. Ancak, sorgu yürütme hata ayıklama sırasında göz önünde bulundurmanız gereken bazı etkilere sahip ertelenmiş [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kod ve Düzenle ve Devam Et'i kullanmadan gereken bazı sınırlamalar vardır. Eşsiz hata ayıklama özelliklerini bu konu başlığı altında anlatılmaktadır [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] olmayan karşılaştırıldığında[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] yönetilen kod.  
   
@@ -28,5 +28,6 @@ Visual Studio destekler, hata ayıklama [!INCLUDE[linq_dataset](../../../../incl
  Visual Studio'da Visual Basic'te, Düzenle ve devam et non - üzerinde kullanabileceğiniz[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodda bile içeren bir yöntem bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Önce kod ekleyip [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ifadesi, satır numarası değişiklikleri etkiler olsa bile [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Visual Basic hata ayıklama deneyimi için olmayan[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu kalır, aynı, önce olduğu gibi [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kullanıma sunulmuştur. Size, Ekle, Kaldır veya değiştiremediğiniz bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] değişiklikleri uygulamak için hata ayıklama durdurmadığınız sürece, ancak sorgu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönetilen Kodda Hata Ayıklama](/visualstudio/debugger/debugging-managed-code)
 - [Programlama Kılavuzu](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

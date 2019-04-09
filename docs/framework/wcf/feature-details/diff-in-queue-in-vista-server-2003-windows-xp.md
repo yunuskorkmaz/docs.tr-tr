@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 5bbae7e54160923e973ff6a8adb655587adf1002
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115992"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar
 Bu konuda, Windows Communication Foundation (WCF) kuyrukları özelliği farklar özetlenmektedir [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -36,5 +36,6 @@ Bu konuda, Windows Communication Foundation (WCF) kuyrukları özelliği farklar
  MSMQ üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] uzak işlem okuma destekler. Bu sıranın barındıran bilgisayardan farklı bir bilgisayar üzerinde barındırılması için bir kuyruktan okuyan bir uygulama sağlar. Bu, sistemin genel performansını artıran bir merkezi kuyruktan okuma Hizmetleri grubu kabiliyeti sağlar. Ayrıca, okuma ve iletiyi işlerken bir hata oluşması, geri işlem yapar ve daha sonra işlenmek sırasındaki ileti kalır sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
 - [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
