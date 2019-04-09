@@ -2,12 +2,12 @@
 title: SAHİP (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: 0378aa365351dcd8c6c1b59674d785def1ee2648
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 19da828d3c7e7763c3dd9ba0e34da8849f90cf0b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155148"
 ---
 # <a name="having-entity-sql"></a>SAHİP (varlık SQL)
 Bir toplama veya bir grup için bir arama koşulu belirtir.  
@@ -47,5 +47,6 @@ HAVING SUM(o.Quantity) > 1
  [!code-csharp[DP EntityServices Concepts 2#HAVING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#having)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Sorgu İfadeleri](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

@@ -1,18 +1,18 @@
 ---
-title: Konsol uygulamalarında yoklama
+title: Konsol Uygulamalarında Yoklama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 008cf6f0bdb6bb4c459ee97f6cc337b6491a5cb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31239033c56303af33899ac88f1745e90f052377
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151261"
 ---
-# <a name="polling-in-console-applications"></a>Konsol uygulamalarında yoklama
+# <a name="polling-in-console-applications"></a>Konsol Uygulamalarında Yoklama
 ADO.NET içinde zaman uyumsuz işlemler, başka bir iş parçacığında başka görevler gerçekleştirilirken bir iş parçacığı üzerinde harcanan zamanı ortadan kaldırır veritabanı işlemleri başlatmak izin verin. Çoğu senaryoda, ancak veritabanı işlemi tamamlanana kadar burada, uygulamanızın devam etmemelisiniz bir noktası yukarısına. Bu gibi durumlarda veya işlem tamamlanıp tamamlanmadığını belirlemek için zaman uyumsuz işlem yoklaması kullanışlıdır.  
   
  Kullanabileceğiniz <xref:System.IAsyncResult.IsCompleted%2A> işlemi olup olmadığını tamamlandı bulmak için özellik.  
@@ -191,5 +191,6 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Zaman Uyumsuz İşlemler](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

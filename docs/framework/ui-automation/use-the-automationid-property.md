@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 88e703d6cee608676be541961614403cf34a53c7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674841"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173101"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID Özelliğini Kullanma
 > [!NOTE]
@@ -57,6 +57,7 @@ ms.locfileid: "57674841"
 -   Automationıd yalnızca eş değerleri arasında benzersiz olması garanti olduğundan bazı durumlarda, UI Otomasyonu ağacında birden çok öğe aynı Automationıd özelliği değerlerine sahip olabilir. Bu durumlarda öğeleri benzersiz bir üst öğede göre tanımlanabilir ve gerekirse bir doya. Örneğin, bir geliştirici menü öğeleri ile sıralı Automationıd 's "Item1", "Item2" vb. gibi alt burada tanımlanan birden çok menü öğeleri ile her ile birden çok alt menü çubuğu sağlayabilir. Her bir menü öğesi sonra benzersiz üst Automationıd yanı sıra kendi Automationıd tarafından tanımlanabilir ve gerekirse kendi dizinleriyle.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
 - [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Özellik Koşulunu Temel Alan UI Otomasyon Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

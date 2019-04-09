@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma'
+title: 'Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156500"
 ---
-# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma
+# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma
 Windows Communication Foundation (WCF) kimlik modeli altyapısı, bir Genişletilebilir beyana dayalı yetkilendirme modelini destekler. Talep belirteçleri ayıklanır ve isteğe bağlı olarak özel yetkilendirme ilkeleri tarafından işlenir ve ardından yerleştirilip bir <xref:System.IdentityModel.Policy.AuthorizationContext>. Yetkilendirme Yöneticisi Taleplerde inceler <xref:System.IdentityModel.Policy.AuthorizationContext> yetkilendirme kararları vermek için.  
   
  Varsayılan olarak, yetkilendirme kararları tarafından yapılan <xref:System.ServiceModel.ServiceAuthorizationManager> sınıfı; ancak bu kararların bir özel Yetkilendirme Yöneticisi oluşturma tarafından geçersiz kılınabilir. Özel Yetkilendirme Yöneticisi oluşturma için türetilen bir sınıf oluşturmanız <xref:System.ServiceModel.ServiceAuthorizationManager> ve uygulama <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> yöntemi. Yetkilendirme kararları içinde yapılan <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> döndüren yöntemi `true` erişim izni ne zaman ve `false` zaman erişim engellendi.  
@@ -118,5 +118,6 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı, bir Genişleti
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [Yetkilendirme İlkesi](../../../../docs/framework/wcf/samples/authorization-policy.md)

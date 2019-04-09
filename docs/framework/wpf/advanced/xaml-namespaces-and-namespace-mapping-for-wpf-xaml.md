@@ -14,17 +14,16 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366614"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176923"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
 Bu konuda daha fazla varlığı ve sık WPF XAML dosyasının kök etiketi içinde bulunan iki XAML ad uzayı eşlemelerinden amacını açıklar. Ayrıca, kendi kod ve/veya ayrı derlemeler içinde tanımlanan öğeleri kullanmak için benzer eşlemeleri oluşturmak nasıl açıklar.  
-  
-  
+
 ## <a name="what-is-a-xaml-namespace"></a>XAML Namespace nedir?  
  XAML ad alanı bir XML ad alanı kavramının gerçekten bir uzantısıdır. XAML ad alanı belirtme teknikleri ön ekleri aynı biçimlendirme kaynak, birden çok ad başvurmak için bir yol sağlamak için ad uzayı tanımlayıcıları olarak URI'ler kullanarak kuralı XML ad alanı sözdizimini kullanır ve benzeri. XML ad alanı XAML tanımına eklenen birincil XAML ad alanı hem bir kapsam benzersizliğin biçimlendirme kullanımlar için anlamına gelir ve ayrıca nasıl biçimlendirme varlıklar büyük olasılıkla belirli CLR ad tarafından desteklenen ve başvurulan etkiler kavramdır bütünleştirilmiş kodları. Bu ikinci faktör ayrıca XAML şema içeriği kavramı tarafından etkilenir. Ancak WPF XAML ad alanları ile nasıl çalıştığına ilişkin daha fazla amaçları için genellikle XAML ad alanları varsayılan bir XAML ad alanı, XAML dil ad alanı ve, XAML biçimlendirme doğrudan belirli destekleyen CLR tarafından eşleştirilen herhangi başka bir XAML ad açısından düşünebilirsiniz ad alanları ve başvurulan derlemeler.  
   
@@ -137,5 +136,6 @@ End Namespace
  BAML nitelenmemiş derleme adları da içermemelidir, ancak tüm adımlar, derlenmiş BAML (PresentationBuildTask oluşturulan) kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML ad alanları anlama](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcd1d7fb1fdcd8b1ad1abf159a7828e51be392a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63c3ecd0ae0d9e1df62d73eb05b759093583f652
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142889"
 ---
 # <a name="notifyfilter-enumeration"></a>NOTIFY_FILTER Numaralandırması
 Hata ayıklayıcı işlevleri için geri çağırmaları tanımlar. Daha fazla bilgi için [Inotifysource2::setnotifyfilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) yöntemi.  
@@ -57,4 +57,5 @@ enum tagNOTIFY_FILTER
  **Üst bilgi:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Tanılama Simge Deposu Sabit Listeleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+
+- [Tanılama Sembol Deposu Numaralandırmaları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

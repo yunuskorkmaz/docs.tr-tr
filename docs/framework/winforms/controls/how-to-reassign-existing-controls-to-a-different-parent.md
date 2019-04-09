@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Mevcut denetimleri farklı bir üst öğeye yeniden atama'
+title: 'Nasıl yapılır: Mevcut Denetimleri Farklı bir Üst Öğeye Yeniden Atama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - container controls [Windows Forms], Windows Forms
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: 650d10fd681a55dfb17425111ef9d81726551da9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 113afc642ca313f10062a496d2f170e3666d5043
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162253"
 ---
-# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Nasıl yapılır: Mevcut denetimleri farklı bir üst öğeye yeniden atama
+# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Nasıl yapılır: Mevcut Denetimleri Farklı bir Üst Öğeye Yeniden Atama
 Formunuzdaki yeni bir kapsayıcı denetimi için mevcut denetimleri atayabilirsiniz.  
   
 > [!NOTE]
@@ -44,8 +44,9 @@ Formunuzdaki yeni bir kapsayıcı denetimi için mevcut denetimleri atayabilirsi
      Üç <xref:System.Windows.Forms.Button> denetimleri içine eklenir artık <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Windows Forms’da Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
-- [İzlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Windows Formlarında Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
+- [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

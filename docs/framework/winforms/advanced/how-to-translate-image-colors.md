@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Görüntü renklerini çevirme'
+title: 'Nasıl yapılır: Görüntü Renklerini Çevirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 8b2e28cab2d2d04f7c99880f2b35a02ebe80dcd8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 04e61383ef79b17ea6e1523588cd9593ec9b082c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132645"
 ---
-# <a name="how-to-translate-image-colors"></a>Nasıl yapılır: Görüntü renklerini çevirme
+# <a name="how-to-translate-image-colors"></a>Nasıl yapılır: Görüntü Renklerini Çevirme
 Bir çeviri, bir veya daha fazla dört renk bileşeni için bir değer ekler. Çevirileri temsil eden renk matrisi girişleri aşağıdaki tabloda verilmiştir.  
   
 |Çevrilecek bileşeni|Matris giriş|  
@@ -46,10 +46,11 @@ Bir çeviri, bir veya daha fazla dört renk bileşeni için bir değer ekler. Ç
  [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Değiştirin `ColorBars.bmp` bir resim dosyası adı ve sisteminize göre geçerli yolu.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs>`e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Değiştirin `ColorBars.bmp` bir resim dosyası adı ve sisteminize göre geçerli yolu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
-- [Görüntüleri Yeniden Renklendirme](recoloring-images.md)
+- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Resimleri Yeniden Renklendirme](recoloring-images.md)

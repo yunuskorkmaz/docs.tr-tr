@@ -4,12 +4,12 @@ description: . NET'te P/Invoke aracılığıyla yerel işlevleri çağırma hakk
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9602b9c8649b97a8be1c26a202a0a910a1547877
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149701"
 ---
 # <a name="platform-invoke-pinvoke"></a>Platform Çağırma (P/Invoke)
 
@@ -237,7 +237,6 @@ namespace PInvokeSamples {
 ```
 
 Yönetilen türler verilen her iki durumda da, parametre ve önceki örneklerin her ikisi de parametrelere bağlıdır. Çalışma zamanı "doğru şeyi" mu ve bunları kendi eşdeğerleri diğer tarafındaki işler. Nasıl türleri için yerel kodda sayfamızı üzerinde sıraya hakkında bilgi edinin [türü taşıma](type-marshalling.md).
-
 
 ## <a name="more-resources"></a>Daha fazla kaynak
 

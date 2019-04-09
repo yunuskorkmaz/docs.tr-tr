@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76f449e52168001a2aaac6cbc3707361cf7f809a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 193caa894b8697a65e8821c01a63dde9cc5b5ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153718"
 ---
 # <a name="getmethodorigin-function"></a>GetMethodOrigin işlevi
 Bir yöntem içinde bildirildiği sınıf belirler.
@@ -79,4 +79,5 @@ Bir sınıfı yöntemleri bir veya daha fazla temel sınıftan devralınabilir. 
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

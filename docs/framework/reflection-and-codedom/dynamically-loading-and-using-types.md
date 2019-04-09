@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8254d3de7dc282edb8ebe8bf0dd71ce1c943322d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145125"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dinamik Olarak Yükleme ve Türleri Kullanma
 Yansıma, dil derleyiciler tarafından kullanılan altyapı sağlar [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] ve JScript örtük geç bağlama uygulamak için. Bağlama benzersiz olarak belirtilen bir türe karşılık gelen bildirimi (uygulama) bulma işlemidir. Bu işlem, çalışma zamanında değil derleme zamanında oluştuğunda, geç bağlama olarak adlandırılır. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] örtük geç bağlama kodunuzda kullanmanıza olanak tanır; Visual Basic Derleyicisi, nesnenin türü elde etmek için yansıma kullanan bir yardımcı yöntem çağırır. Yardımcı yöntemine geçirilen bağımsız değişkenler, çalışma zamanında çağrılacak uygun yöntemi neden. Bu bağımsız değişkenler (nesne) örneği yöntemi, çağrılan yöntemi (dize) ve çağrılan yöntemi (nesne dizisini) geçirilen bağımsız değişkenler adını çağırmak için açıktır.  
@@ -100,7 +100,8 @@ End Module
  <xref:System.Type> Sınıfında **alma** tür parametreleri kullanan yöntemler **bağlayıcı** belirli bir üye başvurularını çözümlemek için. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>, ve <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> belirli üye bu üyenin imzası bilgileri sağlayarak geçerli türden arayın. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> ve <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> geri uygun yöntemleri verilen imza bilgilerini seçin açın olarak da adlandırılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [.NET Framework'te tür dönüştürme](../../../docs/standard/base-types/type-conversion.md)
+- [.NET Framework'te Tür Dönüştürme](../../../docs/standard/base-types/type-conversion.md)

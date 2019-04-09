@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 0754991fe8a427dbaaa2b7fbafe4387e6bc6df2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ed5f25a9297edc5f921305edc009edf5076672b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159750"
 ---
 # <a name="custombinding"></a>\<customBinding >
 
@@ -190,12 +190,12 @@ Kullanıcı için Mesajlaşma yığını üzerinde tam denetim sağlar.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Özel bağlama için iki yönlü Mesajlaşma belirtir. Çift yönlü iletişim, izin vermeyen aktarımları ile Örneğin, HTTP kullanılır. TCP, aksine, yerel olarak çift yönlü iletişimler sağlar ve hizmetin istemciye geri göndermek bu bağlama öğesi kullanımı gerektirmez.<br /><br /> İstemci hizmetinin başvurun ve bağlantı kurmak bir adres kullanıma sunması gerekir. Bu istemci adresi tarafından sağlanan `ClientBaseAddress` özniteliği.<br /><br /> Bu öğe türünde <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
+|[\<compositeDuplex >](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Özel bağlama için iki yönlü Mesajlaşma belirtir. Çift yönlü iletişim, izin vermeyen aktarımları ile Örneğin, HTTP kullanılır. TCP, aksine, yerel olarak çift yönlü iletişimler sağlar ve hizmetin istemciye geri göndermek bu bağlama öğesi kullanımı gerektirmez.<br /><br /> İstemci hizmetinin başvurun ve bağlantı kurmak bir adres kullanıma sunması gerekir. Bu istemci adresi tarafından sağlanan `ClientBaseAddress` özniteliği.<br /><br /> Bu öğe türünde <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
 |[\<pnrpPeerResolver >](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Bir Eş Adı Çözümleme Protokolü (PNRP) eş ad çözümleyici belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
 |[\<reliableSession >](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|WS-Reliable Mesajlaşma için ayarını belirtir. Bu öğe için özel bir bağlama eklendiğinde, sonuçta elde edilen kanal tam olarak destekler-bir kez teslim Güvenceleri. Bu öğe türünde <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Özel bağlama güvenliği için seçenekleri belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.SecurityElement>.|
 |[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|SSL akışı bağlama için güvenlik ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
-|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Bağlama tarafından kullanılacak protokolü ve işlem akışı desteklediğini belirtir `transactionProtocol` özniteliği. Bu öğe türünde <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
+|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Bağlama tarafından kullanılacak protokolü ve işlem akışı desteklediğini belirtir `transactionProtocol` özniteliği. Bu öğe türünde <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
 |[\<windowsStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Özel bağlama güvenliği akış seçeneklerini belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
@@ -291,7 +291,6 @@ Aşağıdaki tabloda, her katman için seçenekler özetlenmektedir.
 Ayrıca, kendi bağlama öğeleri tanımlayıp bunları herhangi bir önceki tanımlanmış katmanları arasında ekleyebilirsiniz.
 
 Bir özel sistem tarafından sağlanan bir bağlamayı değiştirmek için bağlama kullanma hakkında bir tartışma için bkz. [nasıl yapılır: Sistem tarafından sağlanan bir bağlamayı özelleştirme](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).
-
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

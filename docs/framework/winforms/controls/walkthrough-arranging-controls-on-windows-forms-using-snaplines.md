@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme"
+title: "İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4d352ee5c431ba43bbe338a9caf7bd0716e91834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139795"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme
 Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek öncelik taşır. Windows Form Tasarımcısı, bunu gerçekleştirmek için çok sayıda düzen araçları sunar. En önemli biri <xref:System.Windows.Forms.Design.Behavior.SnapLine> özelliği.  
   
  Dayama çizgileri denetimleri başka denetimler ile hizalamak tam olarak nerede gösterir. Bunlar ayrıca, Windows kullanıcı arabirimi yönergelerine belirtildiği gibi denetimleri arasında kenar boşlukları için önerilen uzaklıkları gösterir. Ayrıntılar için bkz [kullanıcı arabirimi tasarımı ve geliştirme](https://go.microsoft.com/FWLink/?LinkId=83878).  
@@ -240,8 +240,9 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
  Kitap Windows kullanıcı arabirimi tasarımı hakkında daha fazla bilgi için bkz. *Microsoft Windows kullanıcı deneyimi, kullanıcı arabirimi geliştiricileri ve tasarımcıları için resmi yönergeleri* Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [İzlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [İzlenecek yol: Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile düzenleme](windows-forms-controls-padding-autosize.md)
-- [Windows Forms’da Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
+- [İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [İzlenecek yol: Doldurma, Kenar Boşlukları ve AutoSize Özelliği ile Windows Forms Denetimlerini Düzenleme](windows-forms-controls-padding-autosize.md)
+- [Windows Formlarında Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)

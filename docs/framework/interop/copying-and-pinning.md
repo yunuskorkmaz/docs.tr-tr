@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: fcc5d3a561eea1e38d0b8a4790af13143cad92d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219626"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166159"
 ---
 # <a name="copying-and-pinning"></a>Kopyalama ve Sabitleme
 Veri sıralarken, birlikte çalışma sıralayıcısı kopyalayabilir veya sıralanmış veri sabitleyin. Veri kopyalama verilerin bir kopyasını başka bir bellek konumuna bir bellek konumunda yerleştirir. Bir değer türü kopyalama arasındaki farklar aşağıda gösterilmiştir ve bir tür kopyalama başvuruya göre yönetilmeyen bellek yönetilen geçirilmedi.  
@@ -78,6 +78,7 @@ Değere ve başvuruya göre geçirilen başvuru türleri
  Olduğunda bir <xref:System.Text.StringBuilder?displayProperty=nameWithType> değeri, Sıralayıcı geçişleri iç arabellek başvuru tarafından geçirilen **StringBuilder** doğrudan çağırana. Çağıran ve çağrılan arabellek boyutuna kabul etmesi gerekir. Çağıranın oluşturmaktan sorumlu bir **StringBuilder** yeterli uzunluğu. Çağrılan arabellek değil taşması emin olmak için gerekli önlemleri almanız gerekir. **StringBuilder** olduğundan başvuru türleri değer olarak geçilemez kural için bir özel parametre olduğu gibi varsayılan olarak geçirilir. Bu her zaman geçirilir olarak daraltma veya genişletme.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Varsayılan Hazırlama Davranışı](default-marshaling-behavior.md)
-- [Yönlü öznitelikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Birlikte Çalışma için Hazırlama](interop-marshaling.md)
+
+- [Varsayılan Sıralama Davranışı](default-marshaling-behavior.md)
+- [Yönlü Öznitelikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
+- [Birlikte Çalışma Hazırlama](interop-marshaling.md)

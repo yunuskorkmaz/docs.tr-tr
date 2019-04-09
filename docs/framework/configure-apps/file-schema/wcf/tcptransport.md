@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 6c5bb61f234c8d5b8ffc5e16195a2cb50022d142
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166172"
 ---
 # <a name="tcptransport"></a>\<Connectionpoolsettings >
 Özel bağlama için iletileri için bir kanal tarafından kullanılabilen bir TCP taşıması tanımlar.  
@@ -66,7 +66,7 @@ ms.locfileid: "57845966"
 |connectionPoolSettings|Adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -80,6 +80,7 @@ ms.locfileid: "57845966"
  `tcpTransport` Öğe başlangıç noktası olan TCP Aktarım Protokolü uygulayan özel bağlamayı oluşturmak için. Bu aktarım WCF WCF iletişim için optimize edilmiştir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.TcpTransportElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>

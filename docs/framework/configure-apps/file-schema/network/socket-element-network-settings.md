@@ -1,5 +1,5 @@
 ---
-title: <socket> Öğesi (Ağ Ayarları)
+title: <socket> Öğesi (ağ ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 3f599d6ada288db861f69fc64e6b84ee326b5830
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160166"
 ---
 # <a name="socket-element-network-settings"></a>\<Yuva > öğesi (ağ ayarları)
 Yuva işlemleri tamamlama bağlantı noktalarını kullanıp kullanmadığını belirtir.  
@@ -51,7 +51,7 @@ Yuva işlemleri tamamlama bağlantı noktalarını kullanıp kullanmadığını 
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
+|[ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `alwaysUseCompletionPortsForAccept` Ve `alwaysUseCompletionPortsForConnect` öznitelikleri tamamlama bağlantı noktaları kullanımına ilişkin varsayılan davranışını belirtmek için kullanılan sınıfları tarafından <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace. Tamamlama bağlantı noktaları, yüksek performanslı sunucu uygulamaları için önerilir.  
@@ -104,6 +104,7 @@ Yuva işlemleri tamamlama bağlantı noktalarını kullanıp kullanmadığını 
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets?displayProperty=nameWithType>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: ee35b6c02637c3013a42303dcd7aa7c813bd183c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5bb81c618e3b27df32763948dbe56c9b37995e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188981"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel İşlem Yapılandırması
 Windows Communication Foundation (WCF) hizmeti için işlem yapılandırmak için üç öznitelikleri sağlar: `transactionFlow`, `transactionProtocol`, ve `transactionTimeout`.  
@@ -63,5 +63,6 @@ Windows Communication Foundation (WCF) hizmeti için işlem yapılandırmak içi
  Kullanılan zaman aşımı değeri bu arasında daha küçük değer olduğunu unutmayın `transactionTimeout` yapılandırma ayarı ve tüm <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> özelliği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<bağlama >](../../../../docs/framework/misc/binding.md)
 - [WCF Yapılandırma Şeması](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

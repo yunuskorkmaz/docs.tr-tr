@@ -2,12 +2,12 @@
 title: Dağıtım Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: eaa3c3644dc6ad6a749a24051064b04bfa43e284
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170813"
 ---
 # <a name="syndication-extensibility"></a>Dağıtım Genişletilebilirliği
 Dağıtım API dağıtılmış içeriği, çeşitli biçimlerde hat yazılmasına izin veren bir biçim nötr programlama modeli sağlamak için tasarlanmıştır. Aşağıdaki sınıflar soyut bir veri modeli oluşur:  
@@ -45,5 +45,6 @@ Dağıtım API dağıtılmış içeriği, çeşitli biçimlerde hat yazılmasın
 -   Geçersiz kılma <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> varsayılan yerine bir MyExtensionItem örneklemek için MyExtensionFeed sınıfında <xref:System.ServiceModel.Syndication.SyndicationItem>. Bir dizi yöntem tanımlanmış <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> oluşturabilir, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>, ve <xref:System.ServiceModel.Syndication.SyndicationPerson> nesneleri (örneğin, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>, ve <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Her biri, özel olarak türetilmiş bir sınıf oluşturmak için kılınabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [Dağıtım Mimarisi](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

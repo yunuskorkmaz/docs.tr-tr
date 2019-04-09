@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8de6c745b1d32c3d98f1b54e822ab084f0574b2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 571612796d4e66be9dd8469d748c2380c839ddfa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165795"
 ---
 # <a name="getscope-method"></a>GetScope Metodu
 Bir içeri aktarma kapsamı alır.  
@@ -57,6 +57,7 @@ HRESULT GetScope(
  ALink.h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

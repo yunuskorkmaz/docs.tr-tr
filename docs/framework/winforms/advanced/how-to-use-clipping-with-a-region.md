@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir bölgeyle kırpma kullanma'
+title: 'Nasıl yapılır: Bir Bölgeyle Kırpma Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - regions [Windows Forms], clipping
 - regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
-ms.openlocfilehash: 2ae9a99ef25c7ee5e52f5995a2d057e42e7d3127
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cf60b32df805a49f8da2760332dc32e34209f6dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163741"
 ---
-# <a name="how-to-use-clipping-with-a-region"></a>Nasıl yapılır: Bir bölgeyle kırpma kullanma
+# <a name="how-to-use-clipping-with-a-region"></a>Nasıl yapılır: Bir Bölgeyle Kırpma Kullanma
 Özelliklerinden birini <xref:System.Drawing.Graphics> kırpma bölgesini sınıftır. Tüm çizim tarafından bir verilen <xref:System.Drawing.Graphics> nesnedir, söz konusu küçük bölgesiyle sınırlı <xref:System.Drawing.Graphics> nesne. Kırpma bölgesini çağırarak ayarlayabileceğiniz <xref:System.Drawing.Graphics.SetClip%2A> yöntemi.  
   
 ## <a name="example"></a>Örnek  
@@ -32,5 +32,6 @@ ms.locfileid: "57715886"
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [GDI+'daki Bölgeler](regions-in-gdi.md)
 - [Bölgeleri Kullanma](using-regions.md)

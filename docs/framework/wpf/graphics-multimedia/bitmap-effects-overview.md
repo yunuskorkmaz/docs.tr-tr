@@ -4,21 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: e82a9596778a3c71aca6bdb8efcb9b3aa227cadb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166900"
 ---
 # <a name="bitmap-effects-overview"></a>Bit Eşlem Efektlerine Genel Bakış
 Bit eşlem efektleri tasarımcılara ve Windows Presentation Foundation (WPF) içerik görsel efektler uygulamak için geliştirici çizilir. Örneğin, bit eşlem efektleri kolayca uygulamanıza izin bir <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> veya Bulanıklaştırma efektini görüntü ya da bir düğme.  
   
 > [!IMPORTANT]
 >  İçinde [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] ya da sonraki <xref:System.Windows.Media.Effects.BitmapEffect> sınıf artık kullanılmıyor. Kullanmayı denerseniz <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı, geçersiz bir özel durum alırsınız. Gereksiz olmayan alternatif <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı <xref:System.Windows.Media.Effects.Effect> sınıfı. Çoğu durumda <xref:System.Windows.Media.Effects.Effect> sınıfı, önemli ölçüde daha hızlıdır.  
-  
-  
-  
+
 <a name="wpf_effects"></a>   
 ## <a name="wpf-bitmap-effects"></a>WPF Bit eşlem efektleri  
  Bit eşlem etkileri (<xref:System.Windows.Media.Effects.BitmapEffect> nesne) basit piksel işleme işlemlerdir. Bir bit eşlem etkisi alır bir <xref:System.Windows.Media.Imaging.BitmapSource> oluşturan yeni bir giriş olarak <xref:System.Windows.Media.Imaging.BitmapSource> gibi bulanıklaştırma veya bir gölge efektini uyguladıktan sonra. Her bit eşlem etkisi filtreleme özelliklerini gibi denetleyen özellikler sunan <xref:System.Windows.Media.Effects.BlurBitmapEffect.Radius%2A> , <xref:System.Windows.Media.Effects.BlurBitmapEffect>.  
@@ -61,6 +59,7 @@ Bit eşlem efektleri tasarımcılara ve Windows Presentation Foundation (WPF) i�
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] kullanılabilir özel efekt oluşturma yönetilmeyen arabirimler de sağlar yönetilen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar. Özel bit eşlem efektleri oluşturmak için referans materyalleri için bkz: [Yönetilmeyen WPF Bit eşlem etkisi](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) belgeleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Effects.BitmapEffectGroup>
 - <xref:System.Windows.Media.Effects.BitmapEffectInput>
 - <xref:System.Windows.Media.Effects.BitmapEffectCollection>

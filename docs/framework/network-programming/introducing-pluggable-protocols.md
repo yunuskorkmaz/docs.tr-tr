@@ -1,5 +1,5 @@
 ---
-title: Takılabilir protokollere giriş
+title: Takılabilir Protokollere Giriş
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data requests, pluggable protocols
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25d7b0e8b8b98d68a0fb4a3cadab3d9f3e8747bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146152"
 ---
-# <a name="introducing-pluggable-protocols"></a>Takılabilir protokollere giriş
+# <a name="introducing-pluggable-protocols"></a>Takılabilir Protokollere Giriş
 Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tümleştirilebilir Internet Services katmanlı, genişletilebilir ve yönetilen bir uygulamasını sağlar. Internet erişimi yer alan sınıfları <xref:System.Net> ve <xref:System.Net.Sockets> ad alanları, hem Web hem de Internet tabanlı uygulamalarını uygulamak için kullanılabilir.  
   
 ## <a name="internet-applications"></a>Internet uygulamaları  
@@ -67,6 +67,7 @@ Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tüm
  Tanıdık Windows Sockets arabirimini veya programlama yuva düzeyinde tarafından sağlanan denetime ihtiyacınız olanlar ile geliştiriciler, bulacaksınız **System.Net.Sockets** sınıfları ihtiyaçlarını karşılamak. **System.Net.Sockets** sınıflar içindeki yerel kod için yönetilen bir geçiş noktasından olan **System.Net** sınıfları. Çoğu durumda **System.Net.Sockets** sınıfları Windows 32-bit karşılıkları yanı sıra tüm gerekli güvenlik denetimleri işleme veri hazırlama.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Takılabilir Protokoller Programlama](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 - [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
 - [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)

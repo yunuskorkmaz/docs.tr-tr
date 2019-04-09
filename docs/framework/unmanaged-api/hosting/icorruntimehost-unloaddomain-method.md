@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6773d9387ae3b91125b413dee51b0c3fcbbb1edd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 492a60d3c8d18bec4e99ae778686fec6e8724248
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140575"
 ---
 # <a name="icorruntimehostunloaddomain-method"></a>ICorRuntimeHost::UnloadDomain Yöntemi
 Belirtilen uygulama etki alanından geçerli işlem kaldırır.  
@@ -58,6 +58,7 @@ HRESULT UnloadDomain (
  **.NET framework sürümü:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

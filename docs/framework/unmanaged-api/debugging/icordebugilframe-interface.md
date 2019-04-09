@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a10c39d7df12c86b8fcf0fb40389c087f96e1ee
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1c60d7685de1e9a1d4f631ad1fba53b981829f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159808"
 ---
 # <a name="icordebugilframe-interface"></a>ICorDebugILFrame Arabirimi
 
@@ -57,4 +57,5 @@ Microsoft Ara dili (MSIL) kodunun bir yığın çerçevesini temsil eder. Icorde
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

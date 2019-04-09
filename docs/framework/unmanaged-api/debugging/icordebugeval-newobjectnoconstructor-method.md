@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93fff7ec315edec8b20b4149650b27e7792fb2f1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6846b866fd47674ca6b5fd187b580fd28e080fd0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162312"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor Yöntemi
 Yeni bir nesne örneği belirtilen türe ait bir oluşturucu yöntemini çağırma girişimi olmadan ayırır.  
@@ -51,4 +51,5 @@ HRESULT NewObjectNoConstructor (
  **.NET framework sürümleri:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [NewParameterizedObjectNoConstructor Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md)

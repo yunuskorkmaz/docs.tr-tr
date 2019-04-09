@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cddb7985c8763e5c18ecca0255f4f3556e03719e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: d05c128910915419821fc44ca7894cd5f63c032d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116005"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Program aracılığıyla .resx dosyalarıyla çalışma
 Ad/değer çiftleri verilerinde ardından belirli bir şemaya izlemeniz gereken bir üst bilgisi dahil olmak üzere, iyi tanımlanmış bir XML XML kaynak (.resx) dosyaları oluşması gerektiğinden bu dosyaları el ile oluşturmak hataya olduğunu fark edebilirsiniz. Alternatif olarak, .resx dosyalarını program aracılığıyla .NET sınıf kitaplığı'nda türleri ve üyeleri'ı kullanarak oluşturabilirsiniz. .NET sınıf kitaplığı, .resx dosyaları içinde depolanan kaynakları almak için de kullanabilirsiniz. Bu konu, türlerine ve üyelerine nasıl kullanabileceğinizi açıklar <xref:System.Resources> .resx dosyalarıyla çalışmak için ad alanı.
@@ -86,6 +86,7 @@ Bir çalışma zamanı içinde yürütülebilir bir .resx dosyası ekleme veya b
  **Al** *resourcesFilename* **-out:** *assemblyFilename*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak Dosyaları Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+
+- [Kaynak Dosyalar Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
 - [Resgen.exe (Kaynak Dosya Oluşturucu)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Derleme Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)

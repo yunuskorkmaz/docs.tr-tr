@@ -2,12 +2,12 @@
 title: İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170670"
 ---
 # <a name="security-concerns-for-message-logging"></a>İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 Bu konu, ileti günlüğe kaydetmeyi tarafından oluşturulan olayları yanı sıra ileti günlüklerini sunulan hassas verilerinizi nasıl koruyabilirsiniz açıklar.  
@@ -110,5 +110,6 @@ Bu konu, ileti günlüğe kaydetmeyi tarafından oluşturulan olayları yanı s�
  Bu olaylar, Windows ile birlikte gelen Olay Görüntüleyicisi'ni Aracı'nda görüntülenebilir. Bunun hakkında daha fazla bilgi için bkz. [olay günlüğü](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+
+- [İleti Günlüğe Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

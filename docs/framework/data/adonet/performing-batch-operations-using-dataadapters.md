@@ -1,18 +1,18 @@
 ---
-title: DataAdapters kullanarak toplu işlemleri gerçekleştirme
+title: DataAdapters Kullanarak Toplu İşlemleri Gerçekleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: ccf730eb85024687285200db8f978291986dcc18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178132"
 ---
-# <a name="performing-batch-operations-using-dataadapters"></a>DataAdapters kullanarak toplu işlemleri gerçekleştirme
+# <a name="performing-batch-operations-using-dataadapters"></a>DataAdapters Kullanarak Toplu İşlemleri Gerçekleştirme
 ADO.NET'te batch desteği sağlayan bir <xref:System.Data.Common.DataAdapter> INSERT, UPDATE ve DELETE işlemlerini gruplamak için bir <xref:System.Data.DataSet> veya <xref:System.Data.DataTable> yerine, aynı anda tek bir işlem sunucusuna. Sunucuya gidiş dönüş sayısı azalma, genellikle önemli performans artışları sonuçlanır. Toplu güncelleştirmeler, SQL Server için .NET veri sağlayıcıları desteklenir (<xref:System.Data.SqlClient>) ve Oracle (<xref:System.Data.OracleClient>).  
   
  Bir veritabanı ile güncelleştirme ne zaman değişir bir <xref:System.Data.DataSet> ADO.NET, önceki sürümlerinde `Update` yöntemi bir `DataAdapter` veritabanı bir satır için güncelleştirmeleri aynı anda gerçekleştirilen. Belirtilen satırları aracılığıyla yinelenir gibi <xref:System.Data.DataTable>, her incelenirken <xref:System.Data.DataRow> değişiklik yapıldığını olmadığını görmek için. Satır değiştiren, uygun adlı `UpdateCommand`, `InsertCommand`, veya `DeleteCommand`değerine bağlı olarak <xref:System.Data.DataRow.RowState%2A> ilgili satır için özellik. Her satır güncelleştirme veritabanını bir ağ gidiş dönüş dahil.  
@@ -142,6 +142,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
  Veri sağlayıcısı ve arka uç veritabanı sunucusunun hangi SQL yapıları toplu iş yürütme için desteklenen belirleyin. Desteklenmeyen bir deyimi yürütme için gönderdiyseniz, bir özel durum.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [DataAdapter Olaylarını İşleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)

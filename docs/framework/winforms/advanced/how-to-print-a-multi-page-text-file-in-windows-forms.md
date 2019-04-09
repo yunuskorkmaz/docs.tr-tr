@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'ta çok sayfalı metin dosyası yazdırma"
+title: "Nasıl yapılır: Windows Forms'da Çok Sayfalı Metin Dosyası Yazdırma"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: f2f91fbaab7fb999a2243e13be9af0bbff0e41ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 69fe58292eda2bb283488252f571d3c3691f6392
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192188"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta çok sayfalı metin dosyası yazdırma
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da Çok Sayfalı Metin Dosyası Yazdırma
 Metin yazdırma Windows tabanlı uygulamalar için çok yaygındır. <xref:System.Drawing.Graphics> Sınıfı bir aygıta bir ekran veya yazıcı gibi çizim nesneleri (grafik veya metin) için yöntemler sağlar.  
   
 > [!NOTE]
@@ -61,6 +61,7 @@ Metin yazdırma Windows tabanlı uygulamalar için çok yaygındır. <xref:Syste
 -   Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
 - [Windows Forms Yazdırma Desteği](windows-forms-print-support.md)

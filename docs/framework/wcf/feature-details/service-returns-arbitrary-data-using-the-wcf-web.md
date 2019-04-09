@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: WCF Web HTTP programlama modeli kullanarak rastgele veriler döndüren bir hizmet oluşturma'
+title: 'Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157490"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Nasıl yapılır: WCF Web HTTP programlama modeli kullanarak rastgele veriler döndüren bir hizmet oluşturma
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Nasıl yapılır: WCF Web HTTP Programlama Modeli Kullanarak Rastgele Veriler Döndüren Bir Hizmet Oluşturma
 Bazen geliştiriciler, veri hizmeti işleminden döndürülen nasıl tam denetimi olmalıdır. Bir hizmet işlemi WCF tarafından desteklenmeyen bir biçimde veri döndürmelidir olduğunda bu durum geçerlidir. Bu konuda, böyle bir hizmet oluşturmak için WCF WEB HTTP programlama modeli kullanarak anlatılmaktadır. Bu hizmet, bir akış döndüren tek bir işlem içerir.  
   
 ### <a name="to-implement-the-service-contract"></a>Hizmet sözleşmesini uygulama  
@@ -176,4 +176,5 @@ namespace RawImageService
 -   Örnek kod başvurusu System.ServiceModel.dll ve System.ServiceModel.Web.dll derlenirken.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b14333235882efb6da1ce011c109c67a1d149bf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33213aced635549dd439cf679d89367a71baa7c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168811"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument Arabirimi
 Bir sembol deposu tarafından başvurulan bir belgeyi temsil eder. Bir belge, bir Tekdüzen Kaynak Konum Belirleyicisi (URL) ve bir belge türü GUID ile tanımlanır. URL'yi kullanarak nasıl depolanacağını bağımsız olarak belgeyi bulun ve belge türü GUID. Belge kaynak sembolü deposuna ve bu arabirimi üzerinden alın.  
@@ -42,4 +42,5 @@ Bir sembol deposu tarafından başvurulan bir belgeyi temsil eder. Bir belge, bi
 |[HasEmbeddedSource Yöntemi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-hasembeddedsource-method.md)|Döndürür `true` hata ayıklama sembolleri; katıştırılmış kaynak belge varsa, aksi halde döndürür `false`.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+
+- [Tanılama Sembol Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

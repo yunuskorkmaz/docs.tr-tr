@@ -1,15 +1,15 @@
 ---
-title: DataTable şema tanımı
+title: DataTable Şema Tanımı
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: aa275e0a9cbd4f8fb3e851865b9de49eca327727
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163078"
 ---
-# <a name="datatable-schema-definition"></a>DataTable şema tanımı
+# <a name="datatable-schema-definition"></a>DataTable Şema Tanımı
 Şema veya bir tablonun yapısını, sütunları ve kısıtlamaları tarafından temsil edilir. Şemasını tanımlayan bir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataColumn> nesneleri olarak <xref:System.Data.ForeignKeyConstraint> ve <xref:System.Data.UniqueConstraint> nesneleri. Bir tablodaki sütunları bir veri kaynağındaki sütun eşleme, ifadeleri hesaplanan değerleri içeren, otomatik olarak değerlerini artırın veya birincil anahtar değerlerini içerir.  
   
  Sütunlar, ilişkiler ve kısıtlamalar bir tablodaki adına göre başvuruları büyük/küçük harfe duyarlıdır. Bu nedenle iki veya daha fazla sütun, ilişkileri veya kısıtlamaları, aynı ada sahip, ancak bu durumda farklı bir tabloda bulunabilir. Örneğin, sahip **Col1** ve **col1**. İçinde çalışması gibi bir başvuru adına göre sütunlarından biri için sütun adı harf tam olarak eşleşmelidir; Aksi takdirde, bir özel durum oluşturulur. Örneğin, varsa tablonun **myTable** sütunları içeren **Col1** ve **col1**, başvuru **Col1** ada göre  **myTable.Columns["Col1"]**, ve **col1** olarak **myTable.Columns["col1"]**. Sütun ya da başvuru girişimi **myTable.Columns["COL1"]** bir özel durum oluşturur.  
@@ -36,5 +36,6 @@ ms.locfileid: "54545390"
  Bir tablodaki sütunları benzersiz kısıtlamaları ve yabancı anahtar tanımlamayı açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: e9d000ca2da9dd9b4c8a677e85bc9cca5b1b1b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199329"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF ve Direct3D9 Birlikte Çalışması
 Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında içerebilir. Bu konuda, verimli bir şekilde WPF ile birlikte çalışır, böylece Direct3D9 içeriği oluşturma işlemini açıklar.  
@@ -148,7 +148,8 @@ Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında iç
 >  WPF yazılımlarında, tamamen işliyorsa <xref:System.Windows.Interop.D3DImage> WPF ön arabellek sahip olmadığından gösterilmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [İzlenecek yol: WPF'de barındırmak için Direct3D9 içeriği oluşturma](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [İzlenecek yol: WPF'de Direct3D9 içeriği barındırma](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [İzlenecek yol: WPF'de Barındırmak için Direct3D9 İçeriği Oluşturma](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [İzlenecek yol: Direct3D9 İçeriğini WPF’de Barındırma](walkthrough-hosting-direct3d9-content-in-wpf.md)

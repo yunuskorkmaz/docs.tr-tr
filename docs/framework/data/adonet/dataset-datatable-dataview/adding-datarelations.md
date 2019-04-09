@@ -1,18 +1,18 @@
 ---
-title: DataRelations ekleme
+title: DataRelations Ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: 9843d5231f6ed95290af6e6d2adaa384f8b47dd7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cefc97e571f315a6a644e0a058d4283168ecb9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509512"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199368"
 ---
-# <a name="adding-datarelations"></a>DataRelations ekleme
+# <a name="adding-datarelations"></a>DataRelations Ekleme
 İçinde bir <xref:System.Data.DataSet> birden çok <xref:System.Data.DataTable> nesnelerini kullanabileceğiniz <xref:System.Data.DataRelation> diğerine tabloları gidin ve ilişkili tablodan alt veya üst satırlar döndürülecek bir tablo ilişkilendirmek için nesneleri.  
   
  Oluşturmak için gereken bağımsız değişkenler bir **DataRelation** için bir adı olan **DataRelation** oluşturulan ve bir dizi veya birden fazla <xref:System.Data.DataColumn> üst ve alt hizmet sütunlara yönelik başvurulara İlişki sütun. Oluşturduktan sonra bir **DataRelation**, tablolar arasında gezinmek için ve değerleri almak için kullanabilirsiniz.  
@@ -36,5 +36,6 @@ customerOrders.Relations.Add("CustOrders",
  A **DataRelation** de sahip bir **iç içe** özelliği, ayarlandığında **true**, üst tablodan ilgili satır içinde iç içe alt tablosundan satırları neden olur XML öğeleri kullanarak yazılırken <xref:System.Data.DataSet.WriteXml%2A> . Daha fazla bilgi için [kullanarak bir veri kümesi XML'de](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,17 +8,16 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: da455adb23dd70a915e81217c6c30f2d523e001c
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101373"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF Grafik İşlemeye Genel Bakış
 Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel katman. Rolü üzerinde odaklanır <xref:System.Windows.Media.Visual> desteği işlemeye sınıfı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modeli.  
-  
-  
+
 <a name="role_of_visual_object"></a>   
 ## <a name="role-of-the-visual-object"></a>Görsel nesnenin rolü  
  <xref:System.Windows.Media.Visual> Sınıf içinden temel soyutlama, her <xref:System.Windows.FrameworkElement> nesne türetilir. Ayrıca yeni denetimler yazmakla için giriş noktası olarak hizmet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ve birçok yolla, Win32 uygulama modeli pencere tutucu (HWND) olarak düşünülebilir.  
@@ -41,7 +40,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
 -   Düzen  
   
--   Stilleri  
+-   Stiller  
   
 -   Veri bağlama  
   
@@ -113,7 +112,7 @@ DrawingGroup işlemlerin sırası
   
  <xref:System.Windows.Controls.Button> Denetimi içeren bir <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> sırayla içeren öğe bir <xref:System.Windows.Controls.ContentPresenter> öğesi. <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> Öğedir kenarlık ve arka plan bilgileri için çizmek için sorumlu <xref:System.Windows.Controls.Button>. <xref:System.Windows.Controls.ContentPresenter> Öğedir içeriğini görüntülemek için sorumlu <xref:System.Windows.Controls.Button>. Bu durumda, beri görüntüleme metni <xref:System.Windows.Controls.ContentPresenter> öğesi içeren bir <xref:System.Windows.Controls.TextBlock> öğesi. Olgu, <xref:System.Windows.Controls.Button> denetimi kullanan bir <xref:System.Windows.Controls.ContentPresenter> içeriği gibi diğer öğeleri tarafından gösterilebilir anlamına gelir bir <xref:System.Windows.Controls.Image> veya geometri gibi bir <xref:System.Windows.Media.EllipseGeometry>.  
   
-### <a name="control-templates"></a>Denetim şablonları  
+### <a name="control-templates"></a>Denetim Şablonları  
  Bir denetimin genişletme denetimlerin bir hiyerarşiye anahtar <xref:System.Windows.Controls.ControlTemplate>. Varsayılan visual hiyerarşi bir denetim için bir denetim şablonu belirtir. Bir denetim açıkça başvuruda bulunduğunuzda visual hiyerarşi dolaylı başvuru. Bir denetim için özelleştirilmiş bir görünümünü oluşturmak bir denetim şablonu için varsayılan değerleri geçersiz kılabilir. Örneğin, arka plan rengi değerini değiştirebilir <xref:System.Windows.Controls.Button> böylece bir doğrusal gradyan renk değeri yerine düz renk değeri kullanır. Daha fazla bilgi için [düğme stilleri ve şablonları](../controls/button-styles-and-templates.md).  
   
  Bir kullanıcı arabirimi öğesi gibi bir <xref:System.Windows.Controls.Button> denetiminde, bir denetimin tüm işleme tanımını açıklayan çeşitli vektör grafik yönerge listeleri içerir. Aşağıdaki kodda gösterildiği bir <xref:System.Windows.Controls.Button> biçimlendirme içinde tanımlanan denetimi.  
@@ -249,11 +248,12 @@ Grafikler ve farklı DPI ayarlarıyla metin
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
 - [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Görsel Katmanda Tıklama Testi](hit-testing-in-the-visual-layer.md)
 - [DrawingVisual Nesnelerini Kullanma](using-drawingvisual-objects.md)
-- [Öğretici: Win32 uygulamasında görsel nesneler barındırma](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Öğretici: Win32 Uygulamasında Görsel Nesneler Barındırma](tutorial-hosting-visual-objects-in-a-win32-application.md)
 - [WPF Uygulama Performansını İyileştirme](../advanced/optimizing-wpf-application-performance.md)

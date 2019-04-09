@@ -8,23 +8,21 @@ f1_keywords:
 helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-ms.openlocfilehash: f6d7c3b3e57b236007ac267dfa8cf7aba1da1d55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1ee9dc731f3cb96bd40935b94113c7c2aa91ff4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183202"
 ---
 # <a name="default-c-reference"></a>default (C# Başvurusu)
 
-`default` Anahtar sözcüğü kullanılabilir `switch` deyimi veya bir varsayılan değer ifadesi:
-
-- [Switch deyimi](switch.md): Varsayılan etiketi belirtir.
-
-- [Varsayılan değer ifadeleri](../../programming-guide/statements-expressions-operators/default-value-expressions.md): Varsayılan değer türü üretir.
+`default` Anahtar sözcüğü, iki şekilde kullanılabilir:
+- [ `switch` Deyimi](switch.md) varsayılan etiket belirtmek için.
+- A [varsayılan değer ifadesi](../../programming-guide/statements-expressions-operators/default-value-expressions.md) türünün varsayılan değeri üretmek için.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C# Başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)

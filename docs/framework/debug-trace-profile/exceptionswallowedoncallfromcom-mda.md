@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aebcd2d2f2387f478c36e84dad82d90d4d70d68e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f076cbc556c7d9feff8a226f050743cd7728622
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148154"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>exceptionSwallowedOnCallFromCom MDA
 `exceptionSwallowedOnCallFromCOM` Yönetilen hata ayıklama Yardımcısı (MDA), bir özel durum COM'dan yönetilmeyen HRESULT dönüş türü olmayan bir yöntem adlı ortak dil çalışma zamanı (CLR) kodu oluşturulduğunda etkinleştirilir.  
@@ -47,6 +47,7 @@ ms.locfileid: "54554679"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Birlikte Çalışma Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

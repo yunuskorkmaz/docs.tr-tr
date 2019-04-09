@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Davranış ve görünümünü genişleterek hücre ve sütunları Windows Forms DataGridView denetiminde özelleştirme'
+title: 'Nasıl yapılır: Windows Forms DataGridView Denetiminde Davranış ve Görünümünü Genişleterek Hücre ve Sütunları Özelleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 7ea684fd0a3f23005e70594bf1870851a3708a8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c68327bb0fb747cdf38d61e944401db9f3af22a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721274"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130695"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Nasıl yapılır: Davranış ve görünümünü genişleterek hücre ve sütunları Windows Forms DataGridView denetiminde özelleştirme
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Davranış ve Görünümünü Genişleterek Hücre ve Sütunları Özelleştirme
 <xref:System.Windows.Forms.DataGridView> Denetimi, çeşitli yollarla görünümünü ve davranışını özellikleri, olayları kullanarak özelleştirip Yahoo! companion sınıfları sağlar. Bazen, bu özellikleri sağlamak ötesine gidin, hücre için gereksinimlerine sahip olabilir. Kendi özel oluşturabilirsiniz <xref:System.Windows.Forms.DataGridViewCell> genişletilmiş işlevselliği sağlamak için sınıf.  
   
  Bir özel Oluştur <xref:System.Windows.Forms.DataGridViewCell> türetilen sınıf <xref:System.Windows.Forms.DataGridViewCell> temel sınıfı veya türetilmiş sınıflarının biri. Hücre herhangi bir türde herhangi bir türde sütun görüntüleyebilse de, genellikle de bir özel oluşturacağınız <xref:System.Windows.Forms.DataGridViewColumn> sınıfı özel hücre türünüz görüntülemek için. Sütun sınıflar türetilen <xref:System.Windows.Forms.DataGridViewColumn> veya türetilmiş türlerini biri.  
@@ -71,6 +71,7 @@ ms.locfileid: "57721274"
  Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>
 - <xref:System.Windows.Forms.DataGridViewColumn>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153250"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ Uygulamaları ile Tümleştirme Genel Bakış
 Windows Communication Foundation (WCF) dağıtılmış uygulamalar oluşturmak için zengin bir ortam sağlar. COM +'da barındırılan bir bileşen tabanlı uygulama mantığı zaten kullanıyorsanız, WCF, yeniden yazmak zorunda kalmadan yerine mevcut mantığınızı genişletmek için de kullanabilirsiniz. Mevcut COM + veya Enterprise Hizmetleri iş mantığı Web Hizmetleri aracılığıyla kullanıma sunmak istediğiniz, ortak bir senaryodur.  
@@ -102,4 +102,5 @@ Windows Communication Foundation (WCF) dağıtılmış uygulamalar oluşturmak i
  COM + işlem özellikleri geri dönüştürme tümleşik uygulamaları kullanılamaz. Uygulamanın işlem geri dönüştürme kullanmak üzere yapılandırılmış ve bileşenlerin bir COM + barındırılan işlemde çalıştığından, hizmeti başlatılamıyor. Bu gereksinim, işlem geri dönüştürme ayarları uygulanmamış olduğundan Web barındırılan işlem modu kullanarak Hizmetleri içermez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [COM Uygulamaları ile Tümleştirme Genel Bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

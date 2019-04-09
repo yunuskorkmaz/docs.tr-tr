@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: decde09c2225da0af420813b477b86f4564d42f7
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a4ddaaea2133a8adf5271628f442644194a7f453
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131943"
 ---
 # <a name="data-contract-schema-reference"></a>Veri Sözleşmesi Şema Başvurusu
 Bu konu, XML Şeması (tarafından kullanılan XSD) alt açıklar <xref:System.Runtime.Serialization.DataContractSerializer> açıklayan ortak dil çalışma zamanı (CLR) için XML serileştirme türleri.  
@@ -475,21 +475,21 @@ public class Employee : Person
   
 |XSD türü|.NET türü|  
 |--------------|---------------|  
-|`anyType`|<xref:System.Object>.|  
+|`anyType`|<xref:System.Object>biçimindeki telefon numarasıdır.|  
 |`anySimpleType`|<xref:System.String>.|  
 |`duration`|<xref:System.TimeSpan>.|  
-|`dateTime`|<xref:System.DateTime>.|  
+|`dateTime`|<xref:System.DateTime>biçimindeki telefon numarasıdır.|  
 |`dateTimeOffset`|<xref:System.DateTime> ve <xref:System.TimeSpan> kaydırmanın. DateTimeOffset serileştirme aşağıya bakın.|  
-|`time`|<xref:System.String>.|  
+|`time`|<xref:System.String>biçimindeki telefon numarasıdır.|  
 |`date`|<xref:System.String>.|  
 |`gYearMonth`|<xref:System.String>.|  
 |`gYear`|<xref:System.String>.|  
 |`gMonthDay`|<xref:System.String>.|  
 |`gDay`|<xref:System.String>.|  
-|`gMonth`|<xref:System.String>.|  
+|`gMonth`|<xref:System.String>biçimindeki telefon numarasıdır.|  
 |`boolean`|<xref:System.Boolean>|  
 |`base64Binary`|<xref:System.Byte> dizisi.|  
-|`hexBinary`|<xref:System.String>.|  
+|`hexBinary`|<xref:System.String>biçimindeki telefon numarasıdır.|  
 |`float`|<xref:System.Single>.|  
 |`double`|<xref:System.Double>.|  
 |`anyURI`|<xref:System.Uri>.|  
@@ -520,7 +520,7 @@ public class Employee : Person
 |`unsignedInt`|<xref:System.UInt32>.|  
 |`unsignedShort`|<xref:System.UInt16>.|  
 |`unsignedByte`|<xref:System.Byte>.|  
-|`positiveInteger`|<xref:System.Int64>.|  
+|`positiveInteger`|<xref:System.Int64>biçimindeki telefon numarasıdır.|  
   
 ## <a name="iserializable-types-mapping"></a>Eşleme ISerializable türler  
  İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sürüm 1.0, <xref:System.Runtime.Serialization.ISerializable> Kalıcılık ya da veri aktarımı için nesneleri serileştirmek için genel bir mekanizma olarak kullanıma sunulmuştur. Kullanabileceğiniz birçok [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türleri uygulayan `ISerializable` ve uygulamalar arasında geçirilebilir. <xref:System.Runtime.Serialization.DataContractSerializer> doğal olarak için destek sağlar `ISerializable` sınıfları. `DataContractSerializer` Eşler `ISerializable` uygulama şema türü, yalnızca QName türü tarafından (tam adı) değişir ve etkili bir şekilde özellik koleksiyonlarıdır. Örneğin, `DataContractSerializer` eşler <xref:System.Exception> aşağıdaki XSD türüne `http://schemas.datacontract.org/2004/07/System` ad alanı.  
@@ -682,8 +682,9 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
-- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Sözleşmelerini Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

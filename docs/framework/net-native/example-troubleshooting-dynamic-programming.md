@@ -1,17 +1,17 @@
 ---
-title: 'Örnek: Dinamik programlama sorunlarını giderme'
+title: 'Örnek: Dinamik Programlama Sorunlarını Giderme'
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f17552a98683e4278dbdfbfa927ca3b075b225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137897"
 ---
-# <a name="example-troubleshooting-dynamic-programming"></a>Örnek: Dinamik programlama sorunlarını giderme
+# <a name="example-troubleshooting-dynamic-programming"></a>Örnek: Dinamik Programlama Sorunlarını Giderme
 > [!NOTE]
 >  Bu konuda, .NET Native Geliştirici yayın öncesi bir yazılım olan Önizleme, ifade eder. Önizlemesi'nden indirebileceğiniz [Microsoft Connect Web sitesi](https://go.microsoft.com/fwlink/?LinkId=394611) (kayıt gerekir).  
   
@@ -61,5 +61,6 @@ AppViewModel.Current.LayoutVM.PageMap
  Uygulama kullanmışsınız `typeof(LayoutApplicationVM)` yerine `Type.GetType("LayoutApplicationVM")`, araç zincirinizi korunur `browse` meta verileri.  Ancak, yine de oluşturduktan mıydı `invoke` neden için meta verileri bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) türü örneği oluşturulurken özel durum. Özel durum önlemek için yine de ad alanı veya belirten türü için bir çalışma zamanı yönerge eklemeniz gerekir `dynamic` ilkesi. Çalışma zamanı yönergeleri hakkında daha fazla bilgi için bkz: [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Örnek: Veri bağlama sırasında özel durum işleme](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Örnek: Veri Bağlama Sırasında Özel Durum İşleme](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

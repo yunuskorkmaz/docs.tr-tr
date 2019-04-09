@@ -4,12 +4,12 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167511"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme
 Güvenli istemci veya hizmet oluştururken kullanabileceğiniz bir [sertifika](working-with-certificates.md) kimlik bilgisi olarak. Örneğin, ortak bir kimlik bilgisi türü ile oluşturduğunuz X.509 sertifikası olan <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> yöntemi. 
@@ -22,7 +22,6 @@ Microsoft Yönetim Konsolu (MMC) ile Windows sistemlerinde inceleyebilirsiniz se
 
 - Hizmet hesabı: Belirli bir hizmete cihazdaki yerel deposudur.
 
-  
 ## <a name="view-certificates-in-the-mmc-snap-in"></a>MMC ek bileşeninde sertifikaları görüntüle 
 
 Aşağıdaki yordam, uygun bir sertifika bulmak için yerel cihazınıza depoları incelemek nasıl göstermektedir: 
@@ -57,7 +56,6 @@ Aşağıdaki yordam, uygun bir sertifika bulmak için yerel cihazınıza depolar
 8. MMC ek bileşeninde, sertifikaları görüntülemek için seçin **konsol kökü** sol bölmede genişletin **sertifikalar (yerel bilgisayar)**.
 
     Her sertifika türünün dizinlerinin listesi görüntülenir. Her sertifika dizinden görüntülemek, dışarı aktarma, alma ve sertifikalarını silin.
-  
 
 ## <a name="view-certificates-with-the-certificate-manager-tool"></a>Sertifika Yöneticisi Aracı ile sertifikaları görüntüleme
 
@@ -79,8 +77,8 @@ Da görüntüleyebilir, dışarı aktarma almak ve Sertifika Yöneticisi aracı 
   
 2. Sertifikalarınızı, altında görüntülemek için **Sertifikalar - Geçerli kullanıcı** sol bölmede, görüntülemek istediğiniz sertifika türü için dizine genişletin.
 
-  
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sertifikalarla çalışma](working-with-certificates.md)
 - [Nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](how-to-create-temporary-certificates-for-use-during-development.md)
 - [Nasıl yapılır: Bir sertifikanın parmak izini alma](how-to-retrieve-the-thumbprint-of-a-certificate.md)

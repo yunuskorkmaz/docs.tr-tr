@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
-ms.translationtype: MT
+ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161518"
 ---
 # <a name="structured-navigation-overview"></a>Yapılandırılmış Gezintiye Genel Bakış
 Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, veya bir <xref:System.Windows.Navigation.NavigationWindow> paketi tarafından tanımlanan sayfaların oluşan [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] ve için köprüler tarafından gitme. Sayfalar ve, bunlar, köprüler tarafından tanımlandığı şekilde gezinilebilir yolları yapısını gezinti topolojisi bilinir. Böyle bir topoloji, çeşitli uygulama türleri, belgeler içinde gezinmek, uygun. Bu tür uygulamalar için kullanıcı bir sayfadan başka bir sayfaya ya da sayfa diğer ilgili hiçbir şeyi bilmenize gerek olmadan gidebilirsiniz.  
@@ -20,9 +20,7 @@ Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../incl
  Ancak, diğer uygulama türleri arasında bunlar geçiş yaptığınızda bilmem gerekenler sayfaları sahip. Örneğin, bir kuruluştaki tüm çalışanlar listelemek için bir sayfa olan insan kaynakları bir uygulama düşünün; "Listesi Çalışanlar" sayfası. Bu sayfa ayrıca bir köprüyü tıklatarak yeni bir çalışan eklemek kullanıcılar izin verebilir. Tıklandığında, sayfanın yeni çalışanın ayrıntıları toplamak ve bunları yeni çalışan oluşturup listesini güncelleştirmek için "Liste Çalışanlar" sayfasına geri dönmek için "Bir çalışan Ekle" sayfasına götürür. Bu gezinti stilini yapısal programlama bilinen bir değer döndürmez ve bazı işleme gerçekleştirmek için bir yöntem çağırmak için benzerdir. Bu nedenle, bu stil Gezinti olarak da bilinen *yapılandırılmış Gezinti*.  
   
  <xref:System.Windows.Controls.Page> Sınıf yapılandırılmış gezintiye desteği uygulama değil. Bunun yerine, <xref:System.Windows.Navigation.PageFunction%601> sınıf türetilir <xref:System.Windows.Controls.Page> ve yapılandırılmış gezinti için gerekli temel yapılarıyla genişletir. Bu konuda yapılandırılmış gezintiye kullanarak oluşturmak nasıl gösterilmektedir <xref:System.Windows.Navigation.PageFunction%601>.  
-  
- 
-  
+
 <a name="Structured_Navigation"></a>   
 ## <a name="structured-navigation"></a>Yapılandırılmış gezintiye  
  Bir sayfa yapılandırılmış bir gezinti başka bir sayfa çağırdığında, bazılarını veya tümünü aşağıdaki davranışları gereklidir:  
@@ -170,6 +168,7 @@ Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../incl
  Diğer durumlarda, uygulamalarını verimli bir şekilde çalışması için yapılandırılmış gezintiye bağımlı karmaşık gezinti topolojilerine sahip olabilir. Daha fazla bilgi için [gezinti topolojilerine genel bakış](navigation-topologies-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
 - [Gezinti Topolojilerine Genel Bakış](navigation-topologies-overview.md)

@@ -1,15 +1,15 @@
 ---
-title: Nesne durumları ve değişiklik izleme
+title: Nesne Durumları ve Değişiklik İzleme
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 89e9f44a6cd3579a5ef9cc2078609ca26e0d2ae5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191161"
 ---
-# <a name="object-states-and-change-tracking"></a>Nesne durumları ve değişiklik izleme
+# <a name="object-states-and-change-tracking"></a>Nesne Durumları ve Değişiklik İzleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesneler her zaman katılan bazı *durumu*. Örneğin, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yeni bir nesne oluşturur nesne `Unchanged` durumu. Kendiniz oluşturduğunuz yeni bir nesne için bilinmeyen <xref:System.Data.Linq.DataContext> ve `Untracked` durumu. Başarılı yürütülmesinin <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, bilinen tüm nesneleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bulunan `Unchanged` durumu. (Tek özel durumu başarıyla bulunan veritabanından silinmiş olanlar tarafından temsil edilen `Deleted` durum ve kullanılamaz durumda uygulamasındaki <xref:System.Data.Linq.DataContext> örneği.)  
   
 ## <a name="object-states"></a>Nesne durumları  
@@ -63,5 +63,6 @@ ms.locfileid: "54683316"
  Gerekli başvuru hem ilgili yabancı anahtar güncelleştirirseniz, bunlar kabul emin olmanız gerekir. Bir <xref:System.InvalidOperationException> iki çağırmanızı zamanında eşitlenmemişse özel durum <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Yabancı anahtar değerini değişiklikler temel alınan satırın bir güncelleştirme etkileyen için yeterli olmakla birlikte, tutarlılık Nesne grafiği ve çift yönlü ilişkiler bağlantıyı sürdürmek için başvuru değiştirmeniz gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Insert, Update ve Delete İşlemleri](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

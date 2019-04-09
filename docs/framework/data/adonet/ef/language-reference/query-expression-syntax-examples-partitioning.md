@@ -1,18 +1,18 @@
 ---
-title: 'Sorgu ifadesi söz dizimi örnekleri: Bölümleme'
+title: 'Sorgu İfadesi Söz Dizimi Örnekleri: Bölümlendirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e41aed0-3be9-4f75-98de-860a85552a3c
-ms.openlocfilehash: c8bfe57e6f49f382885507f7aa7093eff7720c2c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e205a50b70a29d056af23ba64eb630b50e304ecb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827961"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165288"
 ---
-# <a name="query-expression-syntax-examples-partitioning"></a>Sorgu ifadesi söz dizimi örnekleri: Bölümleme
+# <a name="query-expression-syntax-examples-partitioning"></a>Sorgu İfadesi Söz Dizimi Örnekleri: Bölümlendirme
 Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Skip%2A> ve <xref:System.Linq.Enumerable.Take%2A> sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://archive.codeplex.com/?p=msftdbprodsamples) sorgu ifadesi söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
   
  Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
@@ -37,4 +37,5 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
  [!code-vb[DP L2E Examples#TakeNested](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#takenested)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

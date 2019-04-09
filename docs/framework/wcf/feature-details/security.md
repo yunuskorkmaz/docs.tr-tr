@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 9827d14a1e64b6111c6c3c9cf53a49170f1a9077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592828"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118202"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation Güvenliği
 Bu bölümdeki konularda, Windows Communication Foundation (WCF) güvenlik özellikleri ve bunları güvenli iletiler yardımcı olmak için nasıl kullanılacağını açıklar.  
@@ -19,7 +19,7 @@ Bu bölümdeki konularda, Windows Communication Foundation (WCF) güvenlik özel
  Windows Server AppFabric ve güvenlik hakkında daha fazla bilgi için bkz. [Windows Server AppFabric güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  Wcf'de güvenlik özelliklerini açıklar.  
   
  [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
@@ -37,7 +37,7 @@ Bu bölümdeki konularda, Windows Communication Foundation (WCF) güvenlik özel
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  WCF güvenlik özellikleri kullanarak iletileri güvenli hale getirmek açıklar.  
   
- [Kimlik Doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Genel kimlik doğrulama görevlerini gösterir.  
   
  [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
@@ -70,4 +70,5 @@ Bu bölümdeki konularda, Windows Communication Foundation (WCF) güvenlik özel
  [Kavramsal Genel Bakış](../../../../docs/framework/wcf/conceptual-overview.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Uygulamanızı Yapılandırma](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

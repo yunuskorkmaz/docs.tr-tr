@@ -2,12 +2,12 @@
 title: Davranış Sınıfı
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
-ms.openlocfilehash: 5d988ae32684bb3ef7ba3dc2ee8c1d749126bcc6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c7c25e63677ca2b48a5df18892d2e8ab946ad08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144008"
 ---
 # <a name="behavior-class"></a>Davranış Sınıfı
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,4 +39,5 @@ class Behavior
 |Ad Alanı|İçinde tanımlı root\ServiceModel|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>

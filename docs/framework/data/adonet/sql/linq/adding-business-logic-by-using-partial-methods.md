@@ -1,18 +1,18 @@
 ---
-title: Kısmi yöntemler kullanarak iş mantığı ekleme
+title: Kısmi Yöntemler Kullanarak İş Mantığı Ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: 082994085a3cbb9a229ae6c6eea30f15b796fc20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea7dbc4f760a446440cb7291413d69b1202f80e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162665"
 ---
-# <a name="adding-business-logic-by-using-partial-methods"></a>Kısmi yöntemler kullanarak iş mantığı ekleme
+# <a name="adding-business-logic-by-using-partial-methods"></a>Kısmi Yöntemler Kullanarak İş Mantığı Ekleme
 Visual Basic özelleştirebilirsiniz ve C# oluşturulan kodda, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kullanarak projeleri *kısmi yöntemler*. Kod, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oluşturur imzaları kısmi bir yöntemin bir parçası olarak tanımlar. Yöntemi uygulamak istiyorsanız, kendi kısmi yöntem ekleyebilirsiniz. Kendi uygulamanız eklemezseniz derleyici kısmi yöntem imzası atar ve varsayılan yöntem çağrıları [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 > [!NOTE]
@@ -51,5 +51,6 @@ Visual Basic özelleştirebilirsiniz ve C# oluşturulan kodda, [!INCLUDE[vbtecdl
  [!code-vb[DLinqOverrideDefault#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefault/vb/northwind.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Değişiklikleri Yapma ve Gönderme](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
 - [Insert, Update ve Delete İşlemlerini Özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

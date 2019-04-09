@@ -1,5 +1,5 @@
 ---
-title: Bağlantıları yönetme
+title: Bağlantıları Yönetme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: e5579dd05e11de9dd54023604f7515fb52fb29a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152912"
 ---
-# <a name="managing-connections"></a>Bağlantıları yönetme
+# <a name="managing-connections"></a>Bağlantıları Yönetme
 Veri kaynaklarına bağlanmak için HTTP kullanan uygulamalar, .NET Framework'ün kullanabileceğiniz <xref:System.Net.ServicePoint> ve <xref:System.Net.ServicePointManager> sınıfları için Internet bağlantılarını yönetme ve en yüksek ölçek ve performans elde etmelerine yardımcı olmak için.  
   
  **ServicePoint** sınıfı için uygulama bağlanabilir Internet kaynaklarına erişebilmesi için bir uç nokta ile bir uygulama sağlar. Her **ServicePoint** yardımcı performansını artırmak için bağlantıları arasında en iyi duruma getirme bilgilerini paylaşarak bağlantıları Internet sunucusuyla iyileştirme bilgileri içerir.  
@@ -65,5 +65,6 @@ sp.ConnectionLimit = newLimit
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağlantı Gruplandırma](../../../docs/framework/network-programming/connection-grouping.md)
 - [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)

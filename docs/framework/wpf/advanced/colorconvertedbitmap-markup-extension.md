@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], ColorConvertedBitmap markup extension
 - ColorConvertedBitmap markup extension [WPF]
 ms.assetid: 18321c18-c898-4470-93fa-a702b47770c1
-ms.openlocfilehash: e51a39b6516d88f53b54f8ab7c1c0d1ad4c025e1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e8a36a1b8592146eb2474805638cdc3697adb0c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172945"
 ---
 # <a name="colorconvertedbitmap-markup-extension"></a>ColorConvertedBitmap Biçimlendirme Uzantısı
 Katıştırılmış bir profili olmayan bir bit eşlem kaynağını belirtmek için bir yol sağlar. Renk bağlamları / tarafından belirtilen profilleri [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], görüntü kaynağı olarak [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
@@ -37,6 +37,7 @@ Katıştırılmış bir profili olmayan bir bit eşlem kaynağını belirtmek i�
  `ColorConvertedBitmap` bir işaretleme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. İçindeki tüm biçimlendirme uzantıları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmak {ve} kuralına göre kendi öznitelik sözdizimi içinde karakterler bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemcisinin bir işaretleme uzantısı özniteliği işlemesi gerekir. Daha fazla bilgi için [biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A>
-- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Biçimlendirme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [Görüntülemeye Genel Bakış](../graphics-multimedia/imaging-overview.md)

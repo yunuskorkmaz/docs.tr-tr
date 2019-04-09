@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0eeaf0bd347b7aa6fe47387282a5237cf91a5f59
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137858"
 ---
 # <a name="assembly-element-net-native"></a>\<Derleme > öğesi (.NET yerel)
 Çalışma zamanı yansıma ilkesini belirtilen bir derlemedeki tüm türleri için geçerlidir.  
@@ -92,6 +92,7 @@ ms.locfileid: "55281976"
  `Activate`, `Browse`, `Dynamic`, Ve `Serialize` öznitelikleri tüm isteğe bağlı. Ancak, `<Assembly>` öğesi bu öznitelikler en az birini içermelidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çalışma Zamanı Yönerge İlkesi Ayarları](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)

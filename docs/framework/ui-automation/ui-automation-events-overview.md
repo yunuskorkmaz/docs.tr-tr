@@ -9,12 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 9ffb00f6327c95fe9e10dc39db72da1c29382201
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ae780da7d6c6d45cb791333e5f0edcf0690f297b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183748"
 ---
 # <a name="ui-automation-events-overview"></a>UI Otomasyonu Olaylarına Genel Bakış
 > [!NOTE]
@@ -82,6 +82,7 @@ ms.locfileid: "57674594"
  Olay tanımlayıcıların bir listesi için bkz. [istemciler için UI Otomasyonu olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İstemciler İçin UI Otomasyonu Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+
+- [İstemciler İçin UI Otomasyon Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [UI Otomasyon Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

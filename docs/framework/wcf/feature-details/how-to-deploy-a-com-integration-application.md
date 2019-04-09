@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: COM + tümleştirme uygulaması dağıtma'
+title: 'Nasıl yapılır: COM+ Tümleştirme Uygulaması Dağıtma'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 0dcaa7d12c7e35170dee155612f824ed22ab8b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 281fe0fb93fffb84f85f19b42e8d90e86dc300c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146737"
 ---
-# <a name="how-to-deploy-a-com-integration-application"></a>Nasıl yapılır: COM + tümleştirme uygulaması dağıtma
+# <a name="how-to-deploy-a-com-integration-application"></a>Nasıl yapılır: COM+ Tümleştirme Uygulaması Dağıtma
 Bir kez, başka bir makineye dağıtmak istediğiniz bir COM + tümleştirme uygulaması, yazdınız. Bu konu, bir COM + tümleştirme uygulaması bir makineden diğerine taşıyabilirsiniz açıklar.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Taşıma bir COM + tümleştirme uygulaması barındırılan  
@@ -39,6 +39,7 @@ Bir kez, başka bir makineye dağıtmak istediğiniz bir COM + tümleştirme uyg
 5.  .Svc dosyasını (componentName.svc) ve Web.config dosyasını vroot makine a b makinede yeni oluşturulan vroot kopyalayın  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [COM+ Uygulamaları ile Tümleştirme Genel Bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
-- [Nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
-- [Nasıl yapılır: COM + hizmet modeli yapılandırma aracı kullanın](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [Nasıl yapılır: COM+ Hizmet Ayarlarını Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Nasıl yapılır: COM+ Hizmet Modeli Yapılandırma Aracı'nı Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

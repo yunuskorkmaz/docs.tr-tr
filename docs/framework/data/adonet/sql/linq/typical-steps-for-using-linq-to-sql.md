@@ -1,26 +1,26 @@
 ---
-title: LINQ to SQL kullanma için tipik adımları
+title: LINQ to SQL Kullanmaya İlişkin Tipik Adımlar
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 32e81d08010f67b8eac19777a40826b18c440f83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132853"
 ---
-# <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL kullanma için tipik adımları
+# <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL Kullanmaya İlişkin Tipik Adımlar
 Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulama, bu konunun ilerleyen bölümlerinde açıklanan adımları izleyin. Çok adımlı isteğe bağlı olduğunu unutmayın. Varsayılan durumunda, nesne modelini kullanabilirsiniz çok mümkündür.  
   
  Hızlı Başlangıç için kullanmak [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] nesne modelinizi oluşturup sorgularınızı kodlamaya başlayın.  
   
-## <a name="creating-the-object-model"></a>Nesne modeli oluşturma  
+## <a name="creating-the-object-model"></a>Nesne Modeli Oluşturma  
  İlk adım, var olan bir ilişkisel veritabanının meta verilerine nesne modeli oluşturmaktır. Nesne modeli, geliştiricinin programlama diline göre kullanılan veritabanını temsil eder. Daha fazla bilgi için [LINQ to SQL nesne modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
   
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Model oluşturmak için bir aracı seçin.  
  Üç Araçlar, model oluşturmak için kullanılabilir.  
   
--   , [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   Bu [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      Bu tasarımcı, varolan bir veritabanından nesne modeli oluşturmak için zengin kullanıcı arabirimi sağlar. Bu araç, Visual Studio IDE bir parçasıdır ve küçük veya Orta veritabanları için uygundur.  
   
@@ -82,6 +82,7 @@ Uygulamak için bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-
  Daha fazla bilgi için [hata ayıklama desteği](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Başlarken](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
 - [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e92707e7b24709d64915e29823196bb0f827175
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187359"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats Metodu
 Ortak dil çalışma zamanının atık toplama sistemi geçerli İstatistikler kümesini alır.  
@@ -73,10 +73,11 @@ pCLRGCManager->GetStats(&GCStats);
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Otomatik Bellek Yönetimi](../../../../docs/standard/automatic-memory-management.md)
 - [COR_GC_STATS Yapısı](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [COR_GC_STAT_TYPES Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
-- [Atık Toplama](../../../../docs/standard/garbage-collection/index.md)
+- [COR_GC_STAT_TYPES Numaralandırması](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
+- [Çöp Toplama](../../../../docs/standard/garbage-collection/index.md)
 - [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
 - [CLR Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)

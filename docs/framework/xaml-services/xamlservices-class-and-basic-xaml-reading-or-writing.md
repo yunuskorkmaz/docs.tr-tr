@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: 68211babbce2e9512689fa329dcf33be0afa4a0c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58027136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162275"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices Sınıfı ve Temel XAML Okuma veya Yazma
 <xref:System.Xaml.XamlServices> XAML düğümü akışı özel erişim gerektiren değil XAML senaryoları için kullanılan bir .NET Framework XAML hizmetlerinde tarafından sağlanan sınıfı veya bu düğümünden elde edilen XAML türü sistem bilgileri kullanılabilir. <xref:System.Xaml.XamlServices> API aşağıdaki gibi özetlenen: `Load` veya `Parse` XAML yükleme yolu desteklemek için `Save` kaydetme yolu, bir XAML desteklemek için ve `Transform` bir yükleme yolu birleştiren bir teknik sağlar ve yol kaydetmek için. `Transform` bir XAML şema diğerine geçmek için kullanılabilir. Bu konu, her biri bu API sınıflandırmalar özetler ve belirli bir yöntemi aşırı yüklemeleri arasındaki farklar açıklanmaktadır.  
@@ -62,6 +62,7 @@ ms.locfileid: "58027136"
  XAML düğümü akışı içindeki her bir düğümün İnceleme üzerinde kullanan işlemleri için genellikle kullanmanızı <xref:System.Xaml.XamlServices.Transform%2A>. Bunun yerine kendi yükleme yolu kayıt yolu işlemi tanımlamanız ve kendi mantığınızı interject gerekir. Yolları her birinde bir XAML okuyucu/XAML yazıcı çifti kendi düğüm döngü etrafında kullanın. Örneğin, ilk XAML kullanarak yük <xref:System.Xaml.XamlXmlReader> ve düğümleri art arda gelen adımla <xref:System.Xaml.XamlXmlReader.Read%2A> çağırır. XAML düğüm akış düzeyinde, işletim artık bir dönüştürme uygulamak için tek tek düğümleri (türleri, üyeler, diğer düğümler) ayarlayabilir veya düğüm olarak bırakın-olduğu. Düğüm ve sonraki sürümlerde ilgili gönderdiğiniz sonra `Write` API'si, bir <xref:System.Xaml.XamlObjectWriter> ve nesne yazma. Daha fazla bilgi için [anlama XAML düğüm Stream yapılarını ve kavramlarını](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
 - [XAML Hizmetleri](index.md)

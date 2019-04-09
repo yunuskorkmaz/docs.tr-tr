@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 1aa51d07be6073a75ef40ade83eba13371db3a69
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ef41b458a3f5b977eaaff523413c1a8d3b1982a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126652"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Zaman uyumsuz işlemler (WCF Data Services)
 Web uygulamaları, iç ağ içinde çalışan uygulamalar daha yüksek gecikme istemci ve sunucu arasında uyum gerekir. Uygulamanızın performans ve kullanıcı deneyimini iyileştirmek için zaman uyumsuz yöntemleri kullanılarak öneririz <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfları erişirken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sunucuları Web üzerinden.  
@@ -37,4 +37,5 @@ Web uygulamaları, iç ağ içinde çalışan uygulamalar daha yüksek gecikme i
  Çok iş parçacıklı bir uygulamada, zaman uyumsuz işlem için bir geri çağırma olarak kayıtlı temsilci değil gerekmeyen çağrıldığında çağırmak için kullanılan aynı iş parçacığında *başlamak* yönteminin, ilk istek oluşturur. Nereye geri çağırma gerekir çağrılacak belirli bir iş parçacığında bir uygulamada, açıkça yürütülmesini sıralamanız gerekir *son* istenen iş parçacığı, yanıtı işleyen yöntem. Örneğin, Windows Presentation Foundation WPF tabanlı uygulamalar ve Silverlight tabanlı uygulamaların yanıt UI iş parçacığına geri kullanarak sıralanması gerekir <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> metodunda <xref:System.Windows.Threading.Dispatcher> nesne. Daha fazla bilgi için [(WCF Veri Hizmetleri/Silverlight) veri hizmetini sorgulama](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

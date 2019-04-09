@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: eb16f633f78e9d345d20c93847e2c22173267960
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161440"
 ---
 # <a name="table-overview"></a>Tabloya Genel Bakış
 <xref:System.Windows.Documents.Table> ızgara tabanlı akış belge içeriği sunumunu destekleyen bir blok düzeyinde öğesidir. Bu öğenin esnekliğini çok kullanışlı hale getirir, ancak aynı zamanda, anlamak ve doğru bir şekilde kullanmak için daha karmaşık hale getirir.  
@@ -176,6 +176,7 @@ ms.locfileid: "58410829"
  [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Akış Belgesine Genel Bakış](flow-document-overview.md)
 - [XAML ile Tablo Tanımlama](how-to-define-a-table-with-xaml.md)
 - [WPF'deki Belgeler](documents-in-wpf.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 94d362767b92799fa54f46e71724284a92b5bf7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a4fe68ca4c2d4a58ecf561d17111fdf6a68a9118
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358827"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171853"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Nasıl yapılır: Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] Internet bölgesi izinleri kümesi için kısıtlı bir kısmi güven güvenliği korumalı alan içinde çalıştırın. Bu izin kümesi, Web hizmeti çağrıları yalnızca şu adreste bulunabilir Hizmetleri Web sınırlar [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kaynak uygulamanın siteyi. Olduğunda bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hataları ayıklanmakta Visual Studio 2005'ten yine de bu Web hizmeti olarak başvuruları aynı kaynak siteyi sahip olmadığı kabul edilir. Bu neden güvenlik özel durumlarını ne zaman yükseltilecek [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web hizmetini çağırmak çalışır. Ancak, bir Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] proje, aynı kaynak siteyi çağırdığı hata ayıklama sırasında Web hizmeti olarak olması benzetimini yapmak için yapılandırılabilir. Böylece [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] güvenli bir şekilde güvenlik özel durumları neden olmadan Web hizmetini çağırmak için.
@@ -31,7 +31,7 @@ ms.locfileid: "57358827"
 
 4.  İçinde **Başlat seçenekleri** bölümünde, aşağıdaki girin **komut satırı bağımsız değişkenleri** metin kutusunda:
 
-     `-debug`  *Dosya adı*
+     `-debug`  *filename*
 
      *Filename* değerini **-hata ayıklama** parametredir .xbap dosya adı; örneğin:
 
@@ -63,4 +63,5 @@ ms.locfileid: "57358827"
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Konağı (PresentationHost.exe)](wpf-host-presentationhost-exe.md)

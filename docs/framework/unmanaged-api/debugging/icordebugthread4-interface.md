@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e583569e43ea58b37f33729bfa19eef1929fae3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f213a35a12bfb5cc92558a76e122a1494d567f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170806"
 ---
 # <a name="icordebugthread4-interface"></a>ICorDebugThread4 Arabirimi
 İş parçacığı engelleme bilgileri sağlar.  
@@ -50,5 +50,6 @@ ms.locfileid: "54517246"
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Forms uygulamasında yazı tipi şeması değişikliklerine yanıt verme'
+title: 'Nasıl yapılır: Bir Windows Forms Uygulamasında Yazı Tipi Şeması Değişikliklerine Yanıt Verme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 85770687ecfad690a251eafec9051c4c20f45dd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182110"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Nasıl yapılır: Bir Windows Forms uygulamasında yazı tipi şeması değişikliklerine yanıt verme
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Nasıl yapılır: Bir Windows Forms Uygulamasında Yazı Tipi Şeması Değişikliklerine Yanıt Verme
 Windows işletim sistemlerinde, bir kullanıcı, daha büyük veya küçük varsayılan yazı tipini görünür yapmak için sistem genelinde yazı tipi ayarlarını değiştirebilirsiniz. Bu yazı tipi ayarları değiştirmek, ekranlarda metin okuma için daha büyük türü gerektirir ve görme engelli kullanıcılar için kritik öneme sahiptir. Artırmayı veya yazı tipi düzeni değiştiğinde formun ve içerilen tüm metin boyutunu azaltmak için bu değişiklikler tepki vermek için Windows Forms uygulaması ayarlayabilirsiniz. Yazı tipi boyutlarını değişiklikleri dinamik olarak uyum sağlayacak şekilde formunuza istiyorsanız formunuza kod ekleyebilirsiniz.  
   
  Genellikle, Windows Forms tarafından kullanılan varsayılan yazı tipi tarafından döndürülen yazı tipi <xref:Microsoft.Win32> ad alanı çağrısına `GetStockObject(DEFAULT_GUI_FONT)`. Bu çağrı tarafından döndürülen yazı tipi, yalnızca ekran çözünürlüğü değiştiğinde değişir. Aşağıdaki yordamda gösterildiği gibi kodunuzu için varsayılan yazı tipini değiştirmek <xref:System.Drawing.SystemFonts.IconTitleFont%2A> yazı tipi boyutu değişikliklere yanıt vermek için.  
@@ -65,5 +65,6 @@ Windows işletim sistemlerinde, bir kullanıcı, daha büyük veya küçük vars
  Bu kod örneğinde constructer bir çağrı içeren `InitializeComponent`, Visual Studio'da yeni bir Windows Forms projesi oluşturduğunuzda tanımlı olduğu. Komut satırında, bir uygulama oluşturuyorsanız bu kod satırını kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Windows Forms'ta Otomatik Ölçeklendirme](automatic-scaling-in-windows-forms.md)

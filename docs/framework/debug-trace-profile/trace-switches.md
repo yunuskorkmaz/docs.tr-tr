@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27f0d35dbe459ce53e6e10905a0a86a3f2bd3762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132671"
 ---
 # <a name="trace-switches"></a>İzleme Anahtarları
 İzleme anahtarları etkinleştirmek, devre dışı bırakın ve İzleme çıkışı filtrelemek olanak sağlar. Bunlar, mevcut kodunuzu ve .config dosyası aracılığıyla harici olarak yapılandırılabilir nesnelerdir. .NET Framework içinde sağlanan izleme anahtarlarını üç tür vardır: <xref:System.Diagnostics.BooleanSwitch> sınıfı <xref:System.Diagnostics.TraceSwitch> sınıfı ve <xref:System.Diagnostics.SourceSwitch> sınıfı. <xref:System.Diagnostics.BooleanSwitch> Bir iki durumlu izleme deyimleri çeşitli devre dışı bırakma veya etkinleştirme anahtarı, sınıf görevi görür. <xref:System.Diagnostics.TraceSwitch> Ve <xref:System.Diagnostics.SourceSwitch> sınıfları belirli izleme düzeyi için bir izleme anahtarı etkinleştirmenize izin böylece <xref:System.Diagnostics.Trace> veya <xref:System.Diagnostics.TraceSource> düzeyi ve altındaki tüm düzeyleri için belirtilen iletileri görüntülenir. Geçiş devre dışı bırakırsanız, izleme iletileri görüntülenmez. Bu sınıflar türetilen Özet (**MustInherit**) sınıfı **anahtar**gibi bir kullanıcı tarafından geliştirilen anahtar gerekir.  
@@ -49,7 +49,7 @@ ms.locfileid: "54702632"
   
 |Enum değeri|Tamsayı değeri|Görüntülenen ileti türü (veya belirtilen çıkış hedefine yazılmış)|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|Kapalı|0|Hiçbiri|  
+|Kapalı|0|Yok.|  
 |Hata|1.|Yalnızca hata iletileri|  
 |Uyarı|2|Uyarı iletileri ve hata iletileri|  
 |Bilgi|3|Bilgilendirme iletileri, uyarı iletileri ve hata iletileri|  
@@ -84,6 +84,7 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
  Sağlamaya ek olarak **BooleanSwitch** ve **TraceSwitch**, kendi anahtarları devralarak tanımlayabileceğiniz **anahtar** sınıfı ve taban sınıf yöntemlerini geçersiz kılma özelleştirilmiş yöntemleri ile. Geliştirici tanımlı anahtarlar oluşturma hakkında daha fazla bilgi için bkz. <xref:System.Diagnostics.Switch> sınıfı .NET Framework başvurusu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Nasıl yapılır: Uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+
+- [İz Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [İzleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

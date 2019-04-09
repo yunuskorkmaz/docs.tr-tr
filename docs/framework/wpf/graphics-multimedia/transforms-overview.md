@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: e3169a34f676d65a3af50bfc9177095c9996c1a2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162211"
 ---
 # <a name="transforms-overview"></a>Dönüşümlere Genel Bakış
 Bu konu nasıl kullanılacağını açıklar [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> döndürme, ölçeklendirme, taşımak için sınıflar (çevirme) ve eğme <xref:System.Windows.FrameworkElement> nesneleri.  
-  
-  
+
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>Dönüşüm nedir?  
  A <xref:System.Windows.Media.Transform> harita veya noktaları bir koordinat alanından başka bir koordinat alanına dönüştürme işlemini tanımlar. Bu eşleme dönüştürme tarafından açıklanan <xref:System.Windows.Media.Matrix>, üç sütunlarını içeren üç satır koleksiyonu <xref:System.Double> değerleri.  
@@ -150,6 +149,7 @@ Döndür düğmesi için kullanılan LayoutTransform
  Öğesinden devralındığından <xref:System.Windows.Freezable> sınıfı <xref:System.Windows.Media.Transform> sınıfı birkaç özel özellik sağlar: <xref:System.Windows.Media.Transform> nesneleri olarak bildirilebilir [kaynakları](../advanced/xaml-resources.md)geliştirmek için salt okunur yapılan birden fazla nesne arasında paylaşılan performans, kopyalanan ve iş parçacığı açısından güvenli hale. Tarafından sağlanan farklı özellikler hakkında daha fazla bilgi için <xref:System.Windows.Freezable> nesneleri bkz [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
 - [Nasıl Yapılır Konuları](transformations-how-to-topics.md)

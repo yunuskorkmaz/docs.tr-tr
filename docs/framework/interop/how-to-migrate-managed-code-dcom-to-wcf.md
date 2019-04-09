@@ -1,17 +1,17 @@
 ---
-title: "Nasıl yapılır: Yönetilen kodu DCOM'dan WCF'ye geçirme"
+title: 'Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme'
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4f944ddb86e93f4a97c924bc5323e52214455bda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165197"
 ---
-# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Nasıl yapılır: Yönetilen kodu DCOM'dan WCF'ye geçirme
+# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme
 Windows Communication Foundation (WCF) önerilen ve güvenli Dağıtılmış Bileşen Nesne Modeli (DCOM) üzerinden sunucular ve istemciler dağıtılmış bir ortamda arasındaki çağrıların yönetilen kod için seçimdir. Bu makale nasıl kod DCOM'dan WCF'ye aşağıdaki senaryolar için geçirme için.  
   
 -   Uzak Hizmet, bir nesneyi değere göre istemciye döndürür.  
@@ -422,6 +422,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Temel WCF Programlama](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Hizmetleri Tasarlama ve Uygulama](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [İstemci Derleme](../../../docs/framework/wcf/building-clients.md)

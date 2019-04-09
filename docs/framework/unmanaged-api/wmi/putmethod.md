@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74654cf18d87fed8ad5ce9a4cd4249d56fdb4343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99bc65b0181a7c0ab7877273b3747ece91544f99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152509"
 ---
 # <a name="putmethod-function"></a>PutMethod işlevi
 Bir metot oluşturur.
@@ -60,7 +60,6 @@ HRESULT PutMethod (
 
 `pSignatureOut`  
 [in]  Bir kopyasını bir işaretçiye [__Parameters sistem sınıfı](/windows/desktop/WmiSdk/--parameters) içeren `out` yönteminin parametreleri. Bu parametre yoksayılır kümesine `null`.
- 
 
 ## <a name="return-value"></a>Dönüş değeri
 
@@ -102,4 +101,5 @@ Bir örnek için bkz. [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

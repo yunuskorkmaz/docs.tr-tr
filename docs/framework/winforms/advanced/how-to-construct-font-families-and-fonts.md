@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yazı tipi aileleri ve yazı tipleri'
+title: 'Nasıl yapılır: Yazı Tipi Aileleri ve Yazı Tipleri Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: b651671e525ae5cfc365a392b96d258ac835a21c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181226"
 ---
-# <a name="how-to-construct-font-families-and-fonts"></a>Nasıl yapılır: Yazı tipi aileleri ve yazı tipleri
+# <a name="how-to-construct-font-families-and-fonts"></a>Nasıl yapılır: Yazı Tipi Aileleri ve Yazı Tipleri Oluşturma
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] yazı tipleri ile aynı yazı tipi ancak farklı stillerde yazı tipi aileleri gruplandırır. Örneğin, aşağıdaki yazı tipleri Arial yazı tipi ailesini içerir:  
   
 -   Arial normal  
@@ -47,8 +47,9 @@ ms.locfileid: "57708570"
  [!code-vb[System.Drawing.FontsAndText#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+ Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs>`e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yazı Tipleri ve Metin Kullanma](using-fonts-and-text.md)
-- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)

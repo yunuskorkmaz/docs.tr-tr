@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Windows Forms'ta katman nesneleri"
+title: 'Nasıl yapılır: Windows Forms’da Nesneleri Katmanlara Ayırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: ea97e26d31d2cdda353b6ada554cac27c5b56c62
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2b02e5e1a4d9872cc89a26b25a44c226ee545a88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166016"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>Nasıl yapılır: Windows Forms'ta katman nesneleri
+# <a name="how-to-layer-objects-on-windows-forms"></a>Nasıl yapılır: Windows Forms’da Nesneleri Katmanlara Ayırma
 Karmaşık kullanıcı arabirimi oluşturmak veya birden çok belge arabirimi (MDI) formla çalışmak, genellikle denetimleri hem daha karmaşık kullanıcı arabirimleri (UI) oluşturmak için alt formları katman isteyeceksiniz. Taşıma ve denetimleri ve windows Grup bağlamında izlemek için z düzenini yönetmek. *Z düzenini* formun z ekseni (ayrıntılı) boyunca bir form üzerinde denetimleri visual katmanlarını olduğu. Pencerenin üst kısmında z düzenini, diğer tüm windows ile çakışıyor. Diğer tüm windows pencerenin alt kısmındaki z düzenini çakışıyor.  
   
 > [!NOTE]
@@ -53,8 +53,9 @@ Karmaşık kullanıcı arabirimi oluşturmak veya birden çok belge arabirimi (M
 >  Windows Forms destekler *denetim kapsama*. Denetim kapsamı içeren bir dizi gibi bir dizi içeren bir denetimi içindeki denetimler yerleştirme <xref:System.Windows.Forms.RadioButton> içinde denetleyen bir <xref:System.Windows.Forms.GroupBox> denetimi. Ardından, içeren denetimi içindeki denetimler katmanlayabilirsiniz. Grup kutusu taşıma, bunlar içinde yer aldığından, denetimleri de taşır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms Denetimleri](index.md)
-- [Windows Forms’da Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
+- [Windows Formlarında Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
 - [Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
-- [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [İşlevlere Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)

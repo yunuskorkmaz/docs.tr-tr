@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Sıralı iş akışı oluşturma'
+title: 'Nasıl yapılır: Akış Çizelgesi İş Akışı Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: de6608d0b3fc0ba4113b8fa7c65881983aabf0c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189306"
 ---
-# <a name="how-to-create-a-sequential-workflow"></a>Nasıl yapılır: Sıralı iş akışı oluşturma
+# <a name="how-to-create-a-sequential-workflow"></a>Nasıl yapılır: Akış Çizelgesi İş Akışı Oluşturma
 İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konu başlığı altında adımlar hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma işleminde <xref:System.Activities.Statements.Sequence> etkinliği ve özel etkinlikler önceki [nasıl yapılır: Bir etkinlik oluşturursunuz](how-to-create-an-activity.md) konu. İş akışı sayısını tahmin eden oyun modelleri.  
   
 > [!NOTE]
@@ -158,10 +158,11 @@ ms.locfileid: "58463806"
      Lütfen iş akışının nasıl çalıştırılacağını yönergeleri görmek için bir sonraki konu [nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md). Zaten tamamladıysanız [nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md) adım iş akışı farklı bir stil ve çalıştırmak bu adımdaki sıralı iş akışı kullanarak istediğiniz, atlayın [uygulaması derleme ve çalıştırma için](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) bölümünü [nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Windows Workflow Foundation Programlama](programming.md)
 - [İş Akışları Tasarlama](designing-workflows.md)
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
-- [Nasıl yapılır: Bir etkinlik oluşturma](how-to-create-an-activity.md)
-- [Nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md)
+- [Nasıl yapılır: Etkinlik Oluşturma](how-to-create-an-activity.md)
+- [Nasıl yapılır: İş Akışı Çalıştırma](how-to-run-a-workflow.md)

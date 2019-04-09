@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Toolstripmenuıtems kopyalama'
+title: 'Nasıl yapılır: ToolStripMenuItems Kopyalama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menu items [Windows Forms], copying and pasting
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 94dc1271468661801d07b341214b03bc31bb3099
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116356"
 ---
-# <a name="how-to-copy-toolstripmenuitems"></a>Nasıl yapılır: Toolstripmenuıtems kopyalama
+# <a name="how-to-copy-toolstripmenuitems"></a>Nasıl yapılır: ToolStripMenuItems Kopyalama
 Tasarım zamanında, tüm üst düzey menüler ve bunların alt öğeleri farklı bir konuma üzerinde kopyalayabilirsiniz <xref:System.Windows.Forms.MenuStrip>. Ayrıca, tek tek menü öğeleri üst düzey menüler arasında kopyalama veya içindeki menü öğelerinin konumu değiştirebilirsiniz.  
   
 ### <a name="to-copy-a-top-level-menu-and-its-submenu-items-to-another-top-level-location"></a>Üst düzey menü ve onun alt öğelerini başka bir üst düzey konumuna kopyalamak için  
@@ -43,6 +43,7 @@ Tasarım zamanında, tüm üst düzey menüler ve bunların alt öğeleri farkl�
      Seçilen alt öğeden önce kopyaladığınız alt öğe eklenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [MenuStrip Denetimine Genel Bakış](menustrip-control-overview-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms için çalışma zamanında olay işleyicileri oluşturma'
+title: 'Nasıl yapılır: Windows Forms için Çalışma Zamanındaki Olay İşleyicileri'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 7ebafd745290a40fa6f4f83910fb32d67cdcff75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 3c1dca420b9e63fe8a2cb93b2e7918d9dc35e84d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705274"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158554"
 ---
-# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Nasıl yapılır: Windows Forms için çalışma zamanında olay işleyicileri oluşturma
+# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Nasıl yapılır: Windows Forms için Çalışma Zamanındaki Olay İşleyicileri
 Windows Forms Tasarımcısı'nı kullanarak olayları oluşturmaya ek olarak, çalışma zamanında bir olay işleyicisi de oluşturabilirsiniz. Bu eylem, bunları programı ilk kez başlatıldığında, bağlı olan'ın aksine çalışma zamanında kod koşullara göre olay işleyicileri bağlanmanızı sağlar.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>Çalışma zamanında bir olay işleyicisi oluşturmak için  
@@ -73,6 +73,7 @@ Windows Forms Tasarımcısı'nı kullanarak olayları oluşturmaya ek olarak, ç
      <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> Yukarıdaki Visual Basic kodu içinde gösterilen yöntemi, bir düğme için tıklama olayı işleyicisi oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms'ta Olay İşleyicileri Oluşturma](creating-event-handlers-in-windows-forms.md)
 - [Olay İşleyicilerine Genel Bakış](event-handlers-overview-windows-forms.md)
-- [Basic'de devralınmış olay işleyicileri Visual Basic sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Visual Basic'de Devralınmış Olay İşleyicileri İle İlgili Sorun Giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

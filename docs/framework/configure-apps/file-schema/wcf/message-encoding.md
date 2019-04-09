@@ -2,12 +2,12 @@
 title: İleti Kodlama
 ms.date: 03/30/2017
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
-ms.openlocfilehash: d797b810af5df5fc1acf31e0ab6338689da9f55c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fb0d4a994eaf1497841691eb76261329a48599d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168759"
 ---
 # <a name="message-encoding"></a>İleti Kodlama
 Kodlama, Unicode karakter kümesini bir dizi bayta dönüştürme işlemidir. Kod çözme ters işlemidir. Windows Communication Foundation (WCF) için SOAP iletilerini kodlama üç türlerini içerir: Metin, ikili ve ileti aktarım en iyi duruma getirme mekanizması (MTOM).  
@@ -19,6 +19,7 @@ Kodlama, Unicode karakter kümesini bir dizi bayta dönüştürme işlemidir. Ko
  `textMessageEncoding` Yapılandırma bölümü, kablo metin tabanlı iletileri oluşturmak için kullanılan bir metin Kodlayıcı belirtir. Bu Kodlayıcı tarafından üretilen iletileri, WS - için uygun * Interop bağlı. Web hizmeti veya Web hizmeti istemcisi, metinsel XML genellikle anlayabilirsiniz. Ancak, büyük ikili veri olarak metin blokları iletme XML iletileri kodlaması için az verimli yöntemdir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)

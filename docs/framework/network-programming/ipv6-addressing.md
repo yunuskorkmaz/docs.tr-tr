@@ -1,5 +1,5 @@
 ---
-title: IPv6 adresleme
+title: IPv6 Adresleme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121959"
 ---
-# <a name="ipv6-addressing"></a>IPv6 adresleme
+# <a name="ipv6-addressing"></a>IPv6 Adresleme
 Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Kullanılabilir adresler Internet'in topolojisini yansıtmak Yönlendirme etki alanları bir hiyerarşiye alt bölümlere ayırmak için bu tür bir geniş adres alanı bir neden olmasıdır. Başka bir nedeni, cihazları ağa bağlanan adreslerini ağ bağdaştırıcıları (veya arabirimleri) eşlemektir. IPv6 adresleri ağ arabirimi düzeyinde olduğunu ve ayrıca otomatik yapılandırma özellikleri, düşük düzeyinde gidermek için doğal bir özellik sunar.  
   
 ## <a name="text-representation"></a>Metin gösterimi  
@@ -52,7 +52,7 @@ Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Kullan�
   
  Bir 64-bit ön ekine sahip bir adres örneği verilmiştir.  
   
- `3FFE:FFFF:0:CD30:0:0:0:0/64`.  
+ `3FFE:FFFF:0:CD30:0:0:0:0/64`biçimindeki telefon numarasıdır.  
   
  Bu örnekte ön ekidir `3FFE:FFFF:0:CD30`. Adresi de sıkıştırılmış bir biçimde olarak yazılabilir `3FFE:FFFF:0:CD30::/64`.  
   
@@ -73,5 +73,6 @@ Internet Protokolü sürüm 6 (IPv6), 128 bit uzunluğunda adresleridir. Kullan�
  Genel olarak, bir düğüm her zaman bir bağlantı-yerel adresi vardır. Site-yerel adresi ve bir veya daha fazla genel adresi olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İnternet Protokolü Sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Yuvalar](../../../docs/framework/network-programming/sockets.md)

@@ -1,17 +1,17 @@
 ---
-title: Icordebugmoduledebugevent arabirimi
+title: ICorDebugModuleDebugEvent Arabirimi
 ms.date: 03/30/2017
 ms.assetid: 41950c52-1ac8-4212-b814-c77e20879f91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 399f27db0a2d18e3bcd90b87f4470a77cb50595d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bf1fa21872c710ebc69c45e9980aeaa577a45fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646872"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160920"
 ---
-# <a name="icordebugmoduledebugevent-interface"></a>Icordebugmoduledebugevent arabirimi
+# <a name="icordebugmoduledebugevent-interface"></a>ICorDebugModuleDebugEvent Arabirimi
 Genişletir [Icordebugdebugevent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) Modül düzeyinde olaylar desteklemek için arabirim.  
   
 ## <a name="methods"></a>Yöntemler  
@@ -36,5 +36,6 @@ Genişletir [Icordebugdebugevent](../../../../docs/framework/unmanaged-api/debug
  **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

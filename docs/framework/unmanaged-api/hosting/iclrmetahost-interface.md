@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b52b12df9953dbafaeebfe223313288de0e559b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143955"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost Arabirimi
 Kendi sürüm numarasına göre belirli bir sürümü ortak dil çalışma zamanı (CLR) döndürür, tüm yüklü CLRs listesinde, belirtilen bir işlemde yüklenen tüm çalışma zamanları listesinde, bir derlemeye derlemek, bir işleminden çıkmak için kullanılan CLR sürümü bulmak için yöntemler sağlar bir temiz çalışma zamanı kapatması ve sorgu eski API bağlama.  
@@ -57,5 +57,6 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Özel bir kullanıcı adı ve parola Doğrulayıcı kullanma'
+title: 'Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 619d3e80a8206ae3ceef2d7ff822dc3bfa8f65be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c5f5783f4f302b7a33c6d960049d68ed18dac91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160257"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Nasıl yapılır: Özel bir kullanıcı adı ve parola Doğrulayıcı kullanma
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma
 Varsayılan olarak, Windows Communication Foundation (WCF) Windows kullanıcı adı ve parola kullanılabilir olduğunda kimlik doğrulaması için kullanıcı adını ve parolasını doğrulamak için kullanır. Ancak, WCF özel kullanıcı adı ve parola kimlik doğrulaması düzeni için olarak da bilinen tanır *doğrulayıcıları*. Özel kullanıcı adı ve parola Doğrulayıcı eklemek için türetilen bir sınıf oluşturma <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ve ardından yapılandırın.  
   
  Örnek bir uygulama için bkz: [kullanıcı Adıparola Doğrulayıcı](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
@@ -118,6 +118,7 @@ Varsayılan olarak, Windows Communication Foundation (WCF) Windows kullanıcı a
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
-- [Nasıl yapılır: ASP.NET üyelik sağlayıcısını kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
-- [Kimlik Doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+- [Nasıl yapılır: ASP.NET Üyelik Sağlayıcısını Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

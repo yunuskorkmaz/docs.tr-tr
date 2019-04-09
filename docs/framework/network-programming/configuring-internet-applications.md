@@ -1,5 +1,5 @@
 ---
-title: Internet uygulamalarını yapılandırma
+title: İnternet Uygulamalarını Yapılandırma
 ms.date: 03/30/2017
 helpviewer_keywords:
 - downloading Internet resources, default proxy
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: 48794898eb1a3e13454a335a2335fac57d8faf3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc4717c873e65311a8502e66f3edaf39dd89ff9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133808"
 ---
-# <a name="configuring-internet-applications"></a>Internet uygulamalarını yapılandırma
+# <a name="configuring-internet-applications"></a>İnternet Uygulamalarını Yapılandırma
 [ \<System.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) yapılandırma öğesi, uygulamalar için ağ yapılandırma bilgileri içerir. Kullanarak [ \<system.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) öğesini ayarlayın proxy sunucuları, bağlantı yönetimi parametrelerinin ve uygulamanıza özel kimlik doğrulama ve istek modülleri dahil.  
   
  [ \<DefaultProxy > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md) öğesi tarafından döndürülen proxy sunucusu tanımlar `GlobalProxySelection` sınıfı. Tüm <xref:System.Net.HttpWebRequest> olmayan kendi <xref:System.Net.HttpWebRequest.Proxy%2A> özelliği belirli bir değere ayarlanmış varsayılan proxy kullanır. Proxy adresi ayarı yanı sıra proxy kullanmaz sunucu adresleri listesi oluşturabilirsiniz ve proxy yerel adresler için kullanılmamalıdır belirtebilirsiniz.  
@@ -98,6 +98,7 @@ ms.locfileid: "54561653"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
 - [Ağ Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [\<system.Net > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576b60293ed53448f3829fdcc9f89ad8508599af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135817"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Kullanım Dışı CLR Barındırma İşlevleri
 Bu bölümde barındırma API'sinin önceki sürümlerinde kullanılan yönetilmeyen genel statik işlevler açıklanmaktadır.  
@@ -159,4 +159,5 @@ Bu bölümde barındırma API'sinin önceki sürümlerinde kullanılan yönetilm
  Yönetilen modül görüntüleri doğrular ve bunlar yüklendikten sonra işletim sistemi yükleyicisi bildirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.NET Framework 4 Barındırma Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)

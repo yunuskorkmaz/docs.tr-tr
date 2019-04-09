@@ -2,12 +2,12 @@
 title: 'İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma '
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160673"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma 
 Bu konuda izleme verilerinin biçimini tanımlar ve uygulamanızda sorun giderme için hizmet izleme görüntüleyicisini kullanma yaklaşımları görüntüleme.  
@@ -45,7 +45,7 @@ Bu konuda izleme verilerinin biçimini tanımlar ve uygulamanızda sorun giderme
   
 -   `<SubType>` (izleme düzeyi).  
   
--   `<TimeCreated>`.  
+-   `<TimeCreated>`biçimindeki telefon numarasıdır.  
   
 -   `<Source>` (izleme kaynak adı).  
   
@@ -53,7 +53,7 @@ Bu konuda izleme verilerinin biçimini tanımlar ve uygulamanızda sorun giderme
   
 -   `<Execution>` (kimlik) işlem ve iş parçacığı.  
   
--   `<Computer>`.  
+-   `<Computer>`biçimindeki telefon numarasıdır.  
   
 -   `<ExtendedData>`, dahil olmak üzere `<Action>`, `<MessageID>` ve `<ActivityId>` ileti üstbilgisinde bir ileti gönderirken ayarlayın.  
   
@@ -169,8 +169,7 @@ WCF istemci etkinlikler oluşturma zamanı (sol paneli) ve iç içe geçmiş etk
  Aşağıdaki resimde, bir WCF Hizmeti etkinlikleri graf görünümünü gösterir:   
 
  ![Ekran görüntüsü, izleme WCF Hizmeti etkinliklerin listesini gösteren Görüntüleyicisi](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
-  
-  
+
  Aşağıdaki ekran görüntüsünde hem istemci hem de hizmet etkinlikleri gösterir ve eylem işlem Ekle etkinliği (turuncu) süreçler arasında vurgular. Oklar, istemci ile hizmet tarafından gönderilen ve alınan istek ve yanıt iletilerinin ilgilidir. İşlem eyleminin izlemeleri graftaki işlemler arasında ayrılmış, ancak aynı etkinliğin sağ panelde bir parçası olarak gösterilir. Bu panelde alınan ve işlenen iletiler için hizmet izlemeleri ardından gönderilen iletiler için istemci izlemelerini görebiliriz.  
   
  Aşağıdaki görüntülerin her iki WCF hizmet ve istemci etkinliğini graf görünümünü gösterir  
@@ -189,8 +188,7 @@ Hizmet ve istemci hatası bağıntı
   
   Aşağıdaki resimde, bir sorun kökünde bulunacak kırmızı veya sarı bir etkinliği seçip işlemi gösterilmektedir.   
  ![Bir sorunun kök bulmak için kırmızı veya sarı etkinliklerin ekran görüntüsü.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
- 
-  
+
  Üst Sağdaki panelde, sol tarafta seçili etkinlik izlemelerini inceleyebilirsiniz. Panelin kırmızı veya sarı izlemelerinde inceleyin ve nasıl bağıntılı bakın. Yukarıdaki grafikte hem istemci hem de aynı işlemi eylem etkinliğindeki hizmet için uyarı izlemeleri görüyoruz.  
   
  Bu izlemeler, hatanın kök nedeni ile belirtmezseniz, seçili etkinlik (burada işlem eylem) Sol paneldeki çift tıklayarak grafiği kullanabilir. Grafik ile ilgili etkinlikler görüntülenir. Ardından, ("+" işareti tıklayarak) ilgili etkinlikleri genişletebilirsiniz ilk yayılan izleme kırmızı veya sarı ilgili bir aktivite içinde bulunamadı. Yalnızca kırmızı veya sarı izleme sorunun kök nedenini izlemek kadar aktarımları ilgili etkinlikler veya ileti akışları için uç noktalar genelinde aşağıdaki ilgi önce gerçekleşen etkinlikler genişletme tutun.  
@@ -207,6 +205,7 @@ Sorunun kök nedenini izlemek için etkinlikleri genişletme
 Sorun gidermeye başlamak için kırmızı veya sarı ileti izleme seçin ve çift kökenini izlemek için tıklatın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

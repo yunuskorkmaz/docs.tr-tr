@@ -1,5 +1,5 @@
 ---
-title: İstemci yuvaları kullanma
+title: İstemci Yuvaları Kullanma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: 42cea87576ca4c5cbca685c6d71272649eabb844
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b99720b9653b8454419acd35085bfe9a7ac4b5af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171398"
 ---
-# <a name="using-client-sockets"></a>İstemci yuvaları kullanma
+# <a name="using-client-sockets"></a>İstemci Yuvaları Kullanma
 Bir konuşma aracılığıyla başlatabilmesi bir <xref:System.Net.Sockets.Socket>, uygulamanızı hem de uzak cihazı veri kanalı oluşturmanız gerekir. Diğer ağ adresi ailelerini ve protokolleri mevcut olmasına karşın, bu örnek bir uzak hizmete bir TCP/IP bağlantısı oluşturma işlemi gösterilmektedir.  
   
  TCP/IP'yi hizmet benzersiz olarak tanımlanabilmesi için bir ağ adresi ve bir hizmet bağlantı noktası numarası kullanır. Ağ adresi, ağdaki belirli bir aygıt tanımlar; bağlantı noktası numarası, hizmete bağlanmak için bu cihazda tanımlar. Ağ adresi ve hizmet bağlantı noktası birleşimi .NET Framework tarafından temsil edilen bir uç nokta adı verilen <xref:System.Net.EndPoint> sınıfı. Bir alt öğesi **uç nokta** için tanımlanan her desteklenen Adres ailesi; IP adresi ailesi için sınıf <xref:System.Net.IPEndPoint>.  
@@ -78,7 +78,8 @@ try {
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Zaman Uyumlu İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [Zaman Uyumsuz İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [Nasıl yapılır: Yuva oluşturun](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [Nasıl yapılır: Yuva Oluşturma](../../../docs/framework/network-programming/how-to-create-a-socket.md)
 - [Yuvalar](../../../docs/framework/network-programming/sockets.md)

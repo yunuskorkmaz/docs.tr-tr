@@ -1,5 +1,5 @@
 ---
-title: <AppContextSwitchOverrides> Öğesi
+title: <AppContextSwitchOverrides> Öğe
 ms.custom: updateeachrelease
 ms.date: 03/07/2019
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8593dbc8a419048950a852a02057f40f80d992a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136467"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > öğesi
 Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.AppContext> yeni işlevselliği için bir geri çevirme mekanizma sağlar sınıfını.  
@@ -175,6 +175,7 @@ Aşağıdaki örnekte `<add>` iki ayarlarına eklenecek öğe `<appSettings>` we
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<çalışma zamanı > öğesi](runtime-element.md)
 - [\<Yapılandırma > öğesi](../configuration-element.md)

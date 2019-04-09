@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 5ec801e1e20fdb495537505a71ddaef6218ad5fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122154"
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
 Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağlamalar program WCF uygulamaları için hızlı bir yol sunar. Bunun tek istisnası, etkin bir varsayılan güvenlik düzeni tüm bağlamaları vardır. Bu konuda güvenlik ihtiyaçları için doğru bağlama seçmenize yardımcı olur.  
@@ -204,7 +204,7 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|Hiçbiri|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
+|Yok.|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
 |Temel|Temel kimlik doğrulaması. Daha fazla bilgi için HTTP kimlik doğrulaması RFC 2617 – bakın: Temel ve Özet kimlik doğrulaması, kullanılabilir [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
 |Özet|Özet kimlik doğrulaması. Daha fazla bilgi için HTTP kimlik doğrulaması RFC 2617 – bakın: Temel ve Özet kimlik doğrulaması, kullanılabilir [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|NT LAN Manager (NTLM) kimlik doğrulaması.|  
@@ -217,14 +217,15 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|Hiçbiri|Anonim istemci ile etkileşim kurmak hizmet sağlar.|  
+|Yok.|Anonim istemci ile etkileşim kurmak hizmet sağlar.|  
 |Windows|Windows kimlik bilgisi kimliği doğrulanmış bağlamında yapılması SOAP ileti alışverişlerinde sağlar.|  
 |UserName|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir kullanıcı adı kimlik bilgisi. Güvenlik modu ayarlandığında unutmayın `TransportWithMessageCredential`, WCF parola ve bu anahtarları kullanarak ileti modu güvenliği için Özet veya türetme anahtarı parola gönderme desteklemez. Bu nedenle, WCF aktarma kullanıcı adı kimlik bilgilerini kullanarak güvenli zorlar.|  
 |Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir sertifika.|  
 |IssuedToken|Özel belirteç sağlamak için bir güvenlik belirteci hizmeti kullanmak için hizmet verir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+
+- [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Kimlik Bilgisi Türü Seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Özel Bağlamalarla Güvenlik Özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)

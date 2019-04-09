@@ -2,12 +2,12 @@
 title: Etkinlik
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170215"
 ---
 # <a name="activity"></a>Etkinlik
 Bu konu, Windows Communication Foundation (WCF) izleme modelinde etkinlik izlemeleri açıklar. Etkinlikler işlem hata kapsamını daraltmak kullanıcı Yardımı birimleri. Aynı etkinlik içinde oluşan hataları doğrudan ilişkilidir. Örneğin, ileti şifre çözme başarısız olduğundan işlem başarısız olur. Şifre çözme hatası ve istek hatası arasında doğrudan bağıntı gösteren aynı etkinliğinde, hem işlem hem de şifre çözme hatası iletisi izlemelerini görünür.  
@@ -98,8 +98,9 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 -   Etkinlikler, etkinlikleri, mutlaka nesneleri gösterir. Bir etkinlik olarak yorumlanması gereken "Bu gerçekleştiği zaman. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır. (anlamlı izleme Emisyonu oluştu)."  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İzlemeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma ](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [Kullanıcı Kodu İzlemeleri Yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
+- [Kullanıcı Kodu İzleri Yayma](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

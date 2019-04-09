@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Sıralama içeriği bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi'
+title: 'Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminin İçeriğini Sıralama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckedListBox control [Windows Forms], sorting
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: 4c00e853299c6eea2c97adb7f94cd7753ffa3d93
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4db1c133aabe39232a891183356e9c1b712f5cc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150611"
 ---
-# <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Sıralama içeriği bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi
+# <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminin İçeriğini Sıralama
 Windows Forms denetimleri verilere bağlı olduklarında sıralamayın. Sıralanmış verileri görüntülemek için sıralama destekleyen bir veri kaynağı kullanıyorsanız ve ardından sıralanmasını veri kaynağı. Sıralama destekleyen veri kaynakları veri görünümleri, veri yöneticilerini görüntülemek ve diziler sıralanır.  
   
  Denetimin veriye bağlı değilse, sıralayabilirsiniz.  
@@ -27,10 +27,11 @@ Windows Forms denetimleri verilere bağlı olduklarında sıralamayın. Sıralan
      Bu ayar tüm varolan liste öğelerini sıralanmış olarak yeniden konumlandırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
 - [Windows Forms Veri Bağlama](../windows-forms-data-binding.md)
-- [Nasıl yapılır: Ekleme ve kaldırma öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](add-and-remove-items-from-a-wf-combobox.md)
+- [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Öğe Ekleme ve Kaldırma](add-and-remove-items-from-a-wf-combobox.md)
 - [ListBox Yerine Ne Zaman Windows Forms ComboBox Kullanılır?](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
 - [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](windows-forms-controls-used-to-list-options.md)

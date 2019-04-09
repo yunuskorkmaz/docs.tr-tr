@@ -2,12 +2,12 @@
 title: WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 484fad33614ca2b9507ed88aadfc1a41bb216c28
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167654"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 Windows 8, Windows Store uygulamaları adı verilen bir uygulama yeni bir tür tanıtır. Bu uygulamaları dokunmatik ekran arabirimi geçici bir çözüm olarak tasarlanmıştır. .NET framework 4.5, WCF hizmetlerini çağırmak Windows Store uygulamaları etkinleştirir.  
@@ -120,7 +120,7 @@ Aşağıdaki güvenlik modu Windows Store uygulamalarında desteklenir:
   
 Aşağıdaki istemci kimlik bilgisi türlerinin Windows Store uygulamalarında desteklenir:
   
-1.  Hiçbiri  
+1.  None  
   
 2.  Temel  
   
@@ -175,6 +175,7 @@ void async SomeMethod()
  Async anahtar sözcüğü zaman uyumsuz yöntemini çağıran, zaman uyumsuz çağrı ve await anahtar sözcüğü yapmadan yöntemi kullanımına dikkat edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF'de Windows Store Apps blogu](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
 - [WCF Windows Store istemcileri ve güvenlik](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
 - [Windows Store uygulamaları ve çapraz makine çağrıları](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)

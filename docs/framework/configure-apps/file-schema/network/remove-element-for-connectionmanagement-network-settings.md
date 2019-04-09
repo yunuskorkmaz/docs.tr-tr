@@ -1,5 +1,5 @@
 ---
-title: connectionManagement için <remove> Öğesi (Ağ Ayarları)
+title: <remove> ConnectionManagement (ağ ayarları) için
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/remove
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 62f7793c8f25f4803e881e2f183c99c62000ca23
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d9c584fb2faa971e7ce1ca287a94c8c6129820fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158866"
 ---
 # <a name="remove-element-for-connectionmanagement-network-settings"></a>\<kaldırma > connectionManagement (ağ ayarları) için
 Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.  
@@ -75,6 +75,7 @@ Bir IP adresi veya DNS adı bağlantı yönetimi listesinden kaldırır.
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

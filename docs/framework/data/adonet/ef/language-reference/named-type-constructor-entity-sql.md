@@ -2,12 +2,12 @@
 title: Adlandırılmış Tür oluşturucu (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: f6577b49c299e1497da2692daef6d22cba1473b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 26fb2839f0cc7d645f6ce6daea2d27e35868b63c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168798"
 ---
 # <a name="named-type-constructor-entity-sql"></a>Adlandırılmış Tür oluşturucu (varlık SQL)
 Varlık gibi kavramsal model nominal türü veya karmaşık türler örneklerini oluşturmak için kullanılır.  
@@ -59,5 +59,6 @@ Varlık gibi kavramsal model nominal türü veya karmaşık türler örneklerini
  [!code-csharp[DP EntityServices Concepts 2#NAMED_TYPE_CONSTRUCTOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#named_type_constructor)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Oluşturma Türleri](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
 - [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

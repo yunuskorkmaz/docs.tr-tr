@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132047"
 ---
 # <a name="identifying-functions-in-dlls"></a>DLL'lerde İşlevleri Tanımlama
 Bir DLL işlevini kimliğini aşağıdaki öğelerden oluşur:  
@@ -46,6 +46,7 @@ Bir DLL işlevini kimliğini aşağıdaki öğelerden oluşur:
  Windows API ile ilgili kapsamlı belgeler için bkz. Nasıl oluşturulacağını gösteren örnekler için. NET tabanlı bildirimler platformuyla kullanılacak çağırmak için bkz: [Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönetilmeyen DLL İşlevlerini Kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [Giriş Noktası Belirtme](../../../docs/framework/interop/specifying-an-entry-point.md)
 - [DLL İşlevleri için bir Sınıf Oluşturma](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)

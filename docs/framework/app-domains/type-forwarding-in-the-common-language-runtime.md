@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92b72667101575aebea9b60a41979e374004b541
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3c262e8a20eb9a805f6c64cac412f0d0fd6eeb80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109986"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Ortak Dil Çalışma Zamanında Tür İletme
 Tür iletme orijinal derleme kullanan uygulamaları yeniden derlemenize gerek kalmadan bir tür için başka bir derleme taşımanızı sağlar.  
@@ -47,6 +47,7 @@ Tür iletme orijinal derleme kullanan uygulamaları yeniden derlemenize gerek ka
 4.  Türü artık türü içeren derlemeye bir başvuru ile konum için kullanıldığı derlemeyi yeniden derleyin. Örneğin, C# dosyasına komut satırında derleme yapıyorsanız kullanın [/Reference (C# Derleyici Seçenekleri)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) türü içeren derlemenin belirtmek için seçeneği. C++'ta kullanmak [#using](/cpp/preprocessor/hash-using-directive-cpp) türü içeren derlemenin belirtmek için kaynak dosyadaki yönergesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
 - [Tür İletme (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
-- [#using yönergesi](/cpp/preprocessor/hash-using-directive-cpp)
+- [#using Yönergesi](/cpp/preprocessor/hash-using-directive-cpp)

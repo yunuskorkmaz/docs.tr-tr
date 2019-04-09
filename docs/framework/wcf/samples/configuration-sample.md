@@ -2,12 +2,12 @@
 title: Yapılandırma Örneği
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: b999c84fc6fd4d1a367b4e1476de8376858008a2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 6ceea71e4adc4e8c25ca624ca8adb6e08713a93b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158710"
 ---
 # <a name="configuration-sample"></a>Yapılandırma Örneği
 Bu örnek, bir hizmet bulunabilir hale getirmek için bir yapılandırma dosyası kullanımını gösterir.  
@@ -268,4 +268,3 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 3.  Yürütülebilir hizmet oluşturma dizinden çalıştırın.  
   
 4.  İstemci yürütülebilir çalıştırın. İstemci hizmetini bulun mümkün olduğunu unutmayın.  
-  

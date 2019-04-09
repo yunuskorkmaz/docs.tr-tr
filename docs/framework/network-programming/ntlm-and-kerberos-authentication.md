@@ -1,5 +1,5 @@
 ---
-title: NTLM ve Kerberos kimlik doğrulaması
+title: NTLM ve Kerberos Kimlik Doğrulaması
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 4b93bce3560aaf5e0c888324e74129b5cb62262e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2efb2d25e1b7566e3405a699be1795b37d549091
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183371"
 ---
-# <a name="ntlm-and-kerberos-authentication"></a>NTLM ve Kerberos kimlik doğrulaması
+# <a name="ntlm-and-kerberos-authentication"></a>NTLM ve Kerberos Kimlik Doğrulaması
 Varsayılan NTLM kimlik doğrulaması ve Kerberos kimlik doğrulama sunucusu ile kimlik doğrulamasını kullanmayı denemek çağıran uygulama ile ilişkili Microsoft Windows NT kullanıcı kimlik bilgilerini kullanın. Varsayılan olmayan NTLM kimlik doğrulaması kullanırken, uygulama kimlik doğrulama türü NTLM olarak ayarlar ve kullandığı bir <xref:System.Net.NetworkCredential> kullanıcı adı, parola ve etki alanı aşağıdaki örnekte gösterildiği gibi ana bilgisayara geçirmek için nesne.  
   
 ```vb  
@@ -63,5 +63,6 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 >  NTLM kimlik doğrulaması, bir proxy sunucu üzerinden çalışmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Temel ve Özet Kimlik Doğrulama](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+
+- [Temel ve Özet Kimlik Doğrulaması](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
 - [İnternet Kimlik Doğrulaması](../../../docs/framework/network-programming/internet-authentication.md)

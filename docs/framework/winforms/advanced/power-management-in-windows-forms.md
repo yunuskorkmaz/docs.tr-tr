@@ -8,12 +8,12 @@ helpviewer_keywords:
 - battery states
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
-ms.openlocfilehash: 77d2096239ec70f98ebfc299f1eda75ad4490be9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6bb9b4f30a88ece93b17ff2510087b220d538738
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154680"
 ---
 # <a name="power-management-in-windows-forms"></a>Windows Forms'ta Güç Yönetimi
 Windows Forms uygulamalarınızı güç yönetimi özellikleri Windows işletim sisteminde yararlanabilirsiniz. Uygulamalarınızı bir bilgisayarın güç durumunu izleyebilir ve bir durum değişikliği oluştuğunda harekete. Örneğin, uygulamanızın taşınabilir bir bilgisayar üzerinde çalışıyorsa, bilgisayarın pil şarjı altında belirli bir düzeyde düştüğünde, uygulamanızın belirli özelliklerini devre dışı bırakmak isteyebilirsiniz.  
@@ -33,6 +33,7 @@ Windows Forms uygulamalarınızı güç yönetimi özellikleri Windows işletim 
  [!code-vb[PowerMode#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>
 - <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>
 - <xref:System.Windows.Forms.Application.SetSuspendState%2A>

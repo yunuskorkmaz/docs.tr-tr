@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Destekleyici bir kimlik bilgisi oluşturma'
+title: 'Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093715"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici bir kimlik bilgisi oluşturma
+# <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma
 Birden fazla kimlik bilgisi gerektiren bir özel güvenlik düzeni olması mümkündür. Örneğin, bir hizmetin istemci yalnızca bir kullanıcı adı ve parola talep edebilir, ancak aynı zamanda istemci kanıtlayan bir kimlik bilgisi 18 yaşın üzerinde olan. İkinci bir kimlik bilgisi bir *kimlik bilgisi destekleyen*. Bu konuda, bu kimlik bilgilerini bir Windows Communication Foundation (WCF) istemcisinde uygulamak açıklanmaktadır.  
   
 > [!NOTE]
@@ -81,4 +81,5 @@ Birden fazla kimlik bilgisi gerektiren bir özel güvenlik düzeni olması mümk
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

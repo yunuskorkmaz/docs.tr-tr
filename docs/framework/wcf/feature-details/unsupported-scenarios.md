@@ -2,12 +2,12 @@
 title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178782"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar
 Çeşitli nedenlerden dolayı Windows Communication Foundation (WCF) bazı belirli güvenlik senaryoları desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI veya Kerberos kimlik doğrulama protokolleri uygulamaz ve bu nedenle WCF hizmet Windows kimlik doğrulaması ile bu platform üzerinde çalıştırılmasını desteklemez. Kullanıcı adı/parola ve HTTP/HTTPS tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları, WCF, Windows XP Home Edition altında çalışırken desteklenir.  
@@ -109,9 +109,10 @@ ms.locfileid: "54631279"
  Düzeltme içeri aktarma yaptıktan sonra istemci üzerinde doğrudan bağlama değiştirmektir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+
+- [Güvenlik Değerlendirmeleri](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Bilgileri Açıklama](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Ayrıcalık Yükseltme](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

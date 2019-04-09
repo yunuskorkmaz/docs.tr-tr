@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: SaveFileDialog bileşenini kullanarak dosyaları kaydetme'
+title: 'Nasıl yapılır: SaveFileDialog Bileşenini Kullanarak Dosyaları Kaydetme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3394acbb26fff4c099ad746a3dc63e663374716a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176806"
 ---
-# <a name="how-to-save-files-using-the-savefiledialog-component"></a>Nasıl yapılır: SaveFileDialog bileşenini kullanarak dosyaları kaydetme
+# <a name="how-to-save-files-using-the-savefiledialog-component"></a>Nasıl yapılır: SaveFileDialog Bileşenini Kullanarak Dosyaları Kaydetme
 <xref:System.Windows.Forms.SaveFileDialog> Bileşen, dosya sistemi ve kaydedilecek dosyaları seçmek kullanıcıların sağlar. İletişim kutusu iletişim kutusunda kullanıcının seçtiği dosya adını ve yolunu döndürür. Ancak, gerçekte dosyaları diske yazmak için kod yazmanız gerekir.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>SaveFileDialog bileşenini kullanarak bir dosyayı kaydetmek için  
@@ -178,5 +178,6 @@ ms.locfileid: "57719435"
     >  Gibi belirli denetimleri <xref:System.Windows.Forms.RichTextBox> denetlemek, dosyaları Kaydet seçeneğine sahipsiniz. Daha fazla bilgi için MSDN çevrimiçi kitaplığındaki teknik makalenin "SaveFileDialog bileşeni" bölümüne bakın. [Windows için temel kod formları iletişim kutularını](https://go.microsoft.com/fwlink/?LinkID=102575).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [SaveFileDialog Bileşeni](savefiledialog-component-windows-forms.md)

@@ -1,17 +1,17 @@
 ---
-title: 'İzlenecek yol: Basit Nesne modeli ve sorgu (Visual Basic)'
+title: 'İzlenecek yol: Basit Nesne Modeli ve Sorgu (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: c6d00271f412829cb8e030c2b9a338f73327977b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ccbb979ae7cf67dd54eb80e1d30e74078960b43d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169110"
 ---
-# <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>İzlenecek yol: Basit Nesne modeli ve sorgu (Visual Basic)
+# <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>İzlenecek yol: Basit Nesne Modeli ve Sorgu (Visual Basic)
 Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en düşük karmaşıklık bir senaryodur. Örnek Northwind veritabanındaki Müşteriler tablosunu modeller bir varlık sınıfı oluşturur. Ardından, Londra'da buluna listesi müşteriler için basit bir sorgu oluşturur.  
   
  Bu izlenecek yol, kod odaklı yardımcı olmak için tasarım gereği Göster [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kavramları. Kullanacağınız normalde Konuşmayı [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] , nesne modeli oluşturun.  
@@ -153,4 +153,5 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
  İlişkiler üzerinde sorgulama Kılavuzu uygulamak istiyorsanız, önkoşul olan çözüm geçirmesini tamamladınız, gözden geçirme için kaydettiğinizden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İzlenecek Yollarla Öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

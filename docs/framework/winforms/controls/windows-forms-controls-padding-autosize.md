@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile düzenleme'
+title: 'İzlenecek yol: Doldurma, Kenar Boşlukları ve AutoSize Özelliği ile Windows Forms Denetimlerini Düzenleme'
 ms.date: 03/30/2017
 f1_keywords:
 - Margin.Bottom
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: ca5f968364cd768b708616a867baee49775ca611
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c07afa1e408c2950ea45f206f43125fc9329ad14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167875"
 ---
-# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>İzlenecek yol: Windows Forms denetimleri doldurma, kenar boşlukları ve AutoSize özelliği ile düzenleme
+# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>İzlenecek yol: Doldurma, Kenar Boşlukları ve AutoSize Özelliği ile Windows Forms Denetimlerini Düzenleme
 Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek öncelik taşır. **Windows Form Tasarımcısı** , bunu gerçekleştirmek için çok sayıda düzen araçları sağlar. En önemli üç olan <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, ve <xref:System.Windows.Forms.Control.AutoSize%2A> tüm Windows Forms denetimleri var olan özellikleri.  
   
  <xref:System.Windows.Forms.Control.Margin%2A> Tutar diğer denetimleri belirtilen bir denetimin kenarlık uzaklıkta çevresindeki boşluk özelliği tanımlar.  
@@ -185,11 +185,12 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
 -   Alt denetimleri yerleştirme ile deneme bir <xref:System.Windows.Forms.Panel> denetimi. <xref:System.Windows.Forms.Control.Padding%2A> Özelliği, daha fazla genel gerçekleştirme <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> özelliğini karşılamak kendinizi bu durumun bir alt denetimin koyarak geçerli olup olmadığını bir <xref:System.Windows.Forms.Panel> denetimi ve alt denetim ayarı <xref:System.Windows.Forms.Control.Dock%2A> özelliğini<xref:System.Windows.Forms.DockStyle.Fill>. Ayarlama <xref:System.Windows.Forms.Panel> denetimin <xref:System.Windows.Forms.Control.Padding%2A> özelliğini çeşitli değerleri ve Not etkisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>
 - [AutoSize Özelliğine Genel Bakış](autosize-property-overview.md)
-- [İzlenecek yol: TableLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [İzlenecek yol: FlowLayoutPanel kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

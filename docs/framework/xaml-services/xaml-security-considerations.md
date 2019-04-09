@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-ms.openlocfilehash: 6cd09295f9dac26011652d6b0a33318841b04072
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162678"
 ---
 # <a name="xaml-security-considerations"></a>XAML Güvenlik Konuları
 Bu konuda, XAML ve .NET Framework XAML Hizmetleri API kullanırken uygulama güvenliği için en iyi uygulamalar açıklanmaktadır.  
@@ -42,4 +42,5 @@ Bu konuda, XAML ve .NET Framework XAML Hizmetleri API kullanırken uygulama güv
  XAML için CLR temel CLR tür sistemine nasıl uyguladığını eşdüzeyde, birçok yönden kendi tür sistemi destekler. Ancak, bazı yönlerini türü tanıma burada kendi tür bilgilerini temel alarak bir türle ilgili güven kararları yapmak için türlerini destekleyen CLR türü bilgileri erteleme. XAML tür sistemi belirli raporlama özelliklerinin bazıları sanal yöntemler açık kalır ve bu nedenle, tam olarak özgün .NET Framework XAML hizmetlerinde uygulamaları denetimi altında olmayan olmasıdır. XAML tür sistemi genişletilebilirliği, XAML kendisi ve olası alternatif tür eşlemesi stratejileri varsayılan XAML şema içeriği ve varsayılan CLR destekli uygulama karşı eşleşecek şekilde genişletilebilir olduğundan bu genişletilebilirlik noktaları vardır. Daha fazla bilgi için bkz özgü Notlar çeşitli özelliklerini <xref:System.Xaml.XamlType> ve <xref:System.Xaml.XamlMember>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Xaml.Permissions.XamlAccessLevel>

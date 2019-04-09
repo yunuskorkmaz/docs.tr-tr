@@ -2,12 +2,12 @@
 title: WPF Uygulamaları için RealTimeStylus'u Devre Dışı Bırakma
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
-ms.openlocfilehash: 6af7ff3addfe2673ab73ff0f977770f89c6234bb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e44b71ac5af64ab3a6cb008db71e5a8881592e91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124689"
 ---
 # <a name="disable-the-realtimestylus-for-wpf-applications"></a>WPF Uygulamaları için RealTimeStylus'u Devre Dışı Bırakma
 Windows Presentation Foundation (WPF), Windows 7 dokunma girişini işlemek için destek sunmuştur. Tablet platformun gerçek zamanlı iğne girişi aracılığıyla desteği geldi <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, ve <xref:System.Windows.UIElement.OnStylusMove%2A> olayları. Windows 7, çok noktalı dokunma girişi Win32 WM_TOUCH pencere iletileri de sağlar. Bu iki API üzerinde aynı HWND karşılıklı olarak birbirini dışlar. Etkinleştirme touch tablet platformda (WPF uygulamaları için varsayılan) aracılığıyla devre dışı bırakır WM_TOUCH iletileri girin. Sonuç olarak, bir WPF penceresinden touch iletileri alacak şekilde WM_TOUCH kullanmak için yerleşik ekran kalemi desteği ' WPF'de devre dışı bırakmalısınız. Bu, bir WPF penceresi WM_TOUCH kullanan bileşen barındırma gibi senaryolarda geçerlidir.  
@@ -53,4 +53,5 @@ public static void DisableWPFTabletSupport()
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ekran Kaleminden Gelen Girişi Önleme](intercepting-input-from-the-stylus.md)

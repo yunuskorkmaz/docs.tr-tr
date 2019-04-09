@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Arka planda işlem çalıştırma'
+title: 'İzlenecek yol: Arka Planda İşlem Çalıştırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 0ba4ca2589a61a9331308a816da6ddb5276adbc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149090"
 ---
-# <a name="walkthrough-running-an-operation-in-the-background"></a>İzlenecek yol: Arka planda işlem çalıştırma
+# <a name="walkthrough-running-an-operation-in-the-background"></a>İzlenecek yol: Arka Planda İşlem Çalıştırma
 Sahip olduğunuz işleminin tamamlanması uzun sürer ve kullanıcı arabiriminizde gecikmelere neden istiyor musunuz, kullanabileceğiniz <xref:System.ComponentModel.BackgroundWorker> sınıfı, başka bir iş parçacığı üzerinde işlemi çalıştıramadı.  
   
  Bu örnekte kullanılan kod tam listesi için bkz. [nasıl yapılır: Arka planda işlem çalıştırma](how-to-run-an-operation-in-the-background.md).  
@@ -34,8 +34,8 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve kullanıcı arabirimini
   
     |Düğme|Ad|Metin|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Start**|  
-    |`button2`|`cancelBtn`|**İptal Etme**|  
+    |`button1`|`startBtn`|**Başlat**|  
+    |`button2`|`cancelBtn`|**İptal**|  
   
 2.  Açık **araç kutusu**, tıklayın **bileşenleri** sekmesine ve ardından sürükleyin <xref:System.ComponentModel.BackgroundWorker> formunuza bileşen.  
   
@@ -101,8 +101,9 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve kullanıcı arabirimini
 -   Bileşenler için zaman uyumsuz deseni destekleyen bir sınıf uygulamak. Daha fazla bilgi için [olay tabanlı zaman uyumsuz deseni uygulama](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Nasıl yapılır: Arka planda işlem çalıştırma](how-to-run-an-operation-in-the-background.md)
+- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Nasıl yapılır: Arka Planda İşlem Çalıştırma](how-to-run-an-operation-in-the-background.md)
 - [BackgroundWorker Bileşeni](backgroundworker-component.md)

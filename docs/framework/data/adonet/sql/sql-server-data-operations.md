@@ -1,15 +1,15 @@
 ---
-title: ADO.NET'te SQL Server veri işlemleri
+title: ADO.NET’te SQL Server Veri İşlemleri
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 66e7a33edfc053760109ded4c18c84950869b4af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2dd4430e5b7f86253966f2778abe7d9ba58661a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143513"
 ---
-# <a name="sql-server-data-operations-in-adonet"></a>ADO.NET'te SQL Server veri işlemleri
+# <a name="sql-server-data-operations-in-adonet"></a>ADO.NET’te SQL Server Veri İşlemleri
 Bu bölümde, SQL Server özellikleri ve SQL Server için .NET Framework veri sağlayıcısı özel işlevler açıklanmaktadır (<xref:System.Data.SqlClient>).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
@@ -26,6 +26,7 @@ Bu bölümde, SQL Server özellikleri ve SQL Server için .NET Framework veri sa
  SQL Server 2008'de tanıtılan tablo değerli parametreleri ile nasıl çalışılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

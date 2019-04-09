@@ -2,12 +2,12 @@
 title: F# Etkileşimli (fsi.exe) Başvurusu
 description: Bilgi nasıl F# etkileşimli (fsi.exe) çalıştırmak için kullanılan F# etkileşimli olarak konsolda veya yürütülecek kodu F# betikler.
 ms.date: 05/16/2016
-ms.openlocfilehash: dde65a4fa4bd41895716344fc67823366c73c5d4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172269"
 ---
 # <a name="interactive-programming-with-f"></a>Etkileşimli F ile programlama\#
 
@@ -43,10 +43,8 @@ Bazı kitaplıklar başvuran bir proje açıksa, bunları başvurabilirsiniz F# 
 
 Denetleyebileceğiniz F# ayarları ayarlayarak etkileşimli komut satırı bağımsız değişkenleri (Seçenekler). Üzerinde **Araçları** menüsünde **seçenekleri...** ve ardından  **F# Araçları**. Değiştirebileceğiniz iki ayar F# etkileşimli seçenekleri ve **64-bit F# etkileşimli** yalnızca çalıştırıyorsanız, ilgili ayarı F# etkileşimli bir 64-bit makinedeki. Bu ayar, fsi.exe veya 32 bit veya 64-bit işlem olarak çalıştırılacak şekilde belirlemek için makine mimarisi kullanan fsianycpu.exe adanmış 64-bit sürümünü çalıştırmak istediğiniz olup olmadığını belirler.
 
-
 ## <a name="scripting-with-f"></a>F ile betik oluşturma\#
 Betiklerini kullanan dosya uzantısı **.fsx** veya **.fsscript**. Kaynak kodu derleme ve daha sonra derlemede çalıştıran yerine yalnızca çalıştırabilirsiniz **fsi.exe** ve komut dosyasının dosya adı belirtin F# kaynak kodu, ve F# etkileşimli kod okur ve gerçek yürütür saat.
-
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Etkileşimli, komut dosyası ve derlenmiş ortamlar arasındaki farklar
 Ne zaman derlediğiniz kod F# etkileşimli, etkileşimli olarak çalıştırılıyor veya sembolün bir betik çalıştırarak **etkileşimli** tanımlanır. Ne zaman derlediğiniz kod derleyici, sembol **COMPILED** tanımlanır. Bu nedenle, kod derlenmiş ve etkileşimli modda farklı olması gerekiyorsa, hangisini kullanacağınızı belirlemek için koşullu derleme için ön işlemci yönergeleri kullanabilirsiniz.
@@ -99,5 +97,5 @@ test
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[F# Interactive Seçenekleri](../../language-reference/fsharp-interactive-options.md)|Komut satırı söz dizimini açıklar ve seçenekleri F# etkileşimli, fsi.exe.|
-|[F#Etkileşimli Kitaplık Başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Kitaplık işlevleri kullanılabilir kod yürütülürken açıklanmaktadır F# etkileşimli.|
+|[F# Etkileşimli Seçenekleri](../../language-reference/fsharp-interactive-options.md)|Komut satırı söz dizimini açıklar ve seçenekleri F# etkileşimli, fsi.exe.|
+|[F# Etkileşimli Kitaplık Başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Kitaplık işlevleri kullanılabilir kod yürütülürken açıklanmaktadır F# etkileşimli.|

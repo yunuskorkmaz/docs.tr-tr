@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Girintileri, asılı girintileri ve madde işaretli paragrafları Windows Forms RichTextBox denetimi ile ayarlama'
+title: 'Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Girintileri, Asılı Girintileri ve Madde İşaretli Paragrafları Ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4cb9b351b5ed1ab9cd05be0763d967000791fb46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140653"
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Girintileri, asılı girintileri ve madde işaretli paragrafları Windows Forms RichTextBox denetimi ile ayarlama
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Girintileri, Asılı Girintileri ve Madde İşaretli Paragrafları Ayarlama
 Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimin görüntülediği metni biçimlendirmek için çok sayıda seçeneği vardır. Madde işaretli listeler olarak ayarlayarak seçili paragrafların biçimlendirebilirsiniz <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliği. Ayrıca <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, ve <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> girinti paragraf sol ve sağ kenarları denetimi ve diğer satırlık bir metin ile sol kenarı göre ayarlamak için özellikler.  
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Paragraf madde işaretli liste olarak biçimlendirmek için  
@@ -69,6 +69,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimin görüntülediğ
     >  Tüm bu özellikler, seçilen metin ve sonra geçerli ekleme noktasına yazdığınız metni içeren tüm paragrafları etkiler. Örneğin, bir kullanıcı bir paragraf içinde bir sözcük seçer ve ardından girintisini ayarlar yeni ayarları bu sözcüğü içeren tüm paragrafa ve daha sonra seçili paragrafın girilen paragraflara uygulanır. Program aracılığıyla metni seçme hakkında daha fazla bilgi için bkz: <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox Denetimi](richtextbox-control-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

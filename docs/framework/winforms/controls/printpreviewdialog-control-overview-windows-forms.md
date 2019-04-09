@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 32fbdd222e34f642d29255e6c594076b6d2a91e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188844"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog denetimine genel bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> denetimidir görüntülemek için kullanılan bir önceden yapılandırılmış bir iletişim kutusu nasıl bir [PrintDocument](printdocument-component-windows-forms.md) yazdırıldığında görünür. Windows tabanlı uygulamanızda kendi iletişim kutusu yapılandırmak yerine basit bir çözüm olarak kullanın. Yazdırma ve yakınlaştırma, bir veya birden çok sayfa görüntüleme ve iletişim kutusunu kapatmak için düğme denetimi içerir.  
@@ -52,6 +52,7 @@ Anahtar mevcut değilse veya diğer herhangi bir değere ayarlarsanız, iyileşt
 Kullanırsanız <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> performansını yazıcı ayarlarını değiştirmek için olay <xref:System.Windows.Forms.PrintPreviewDialog> denetimi değil artıracak bir iyileştirme yapılandırma anahtarı olarak ayarlanmış olsa bile.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [PrintPreviewControl Denetimine Genel Bakış](printpreviewcontrol-control-overview-windows-forms.md)
 - [PrintPreviewDialog Denetimi](printpreviewdialog-control-windows-forms.md)

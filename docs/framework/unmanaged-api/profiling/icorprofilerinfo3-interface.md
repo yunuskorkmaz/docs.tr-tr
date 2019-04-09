@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57caee7a0da019fc45bd35b7b81f8d066991081b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b523c5819994e6da0332188311b4b631e3f9072
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178769"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 Arabirimi
 Kod profil oluşturucuları (CLR) olayı izlemeyi denetlemek ve bilgi istemek için ortak dil çalışma zamanıyla iletişim kurmak için yöntemler sağlar. `ICorProfilerInfo3` Arabirimi uzantısıdır [Icorprofilerınfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) arabirimi. Destekleyen yeni yöntemler sağlar [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] ve sonraki sürümler.  
@@ -60,5 +60,6 @@ Kod profil oluşturucuları (CLR) olayı izlemeyi denetlemek ve bilgi istemek i�
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

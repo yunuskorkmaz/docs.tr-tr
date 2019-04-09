@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: IListSource arabirimini uygulama'
+title: 'Nasıl yapılır: IListSource Arabirimini Uygulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: ee63d092eb14bd5c8ab928852e02d30e653baf48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159789"
 ---
-# <a name="how-to-implement-the-ilistsource-interface"></a>Nasıl yapılır: IListSource arabirimini uygulama
+# <a name="how-to-implement-the-ilistsource-interface"></a>Nasıl yapılır: IListSource Arabirimini Uygulama
 Uygulama <xref:System.ComponentModel.IListSource> arabirimi uygulamıyor bağlanabilir bir sınıf oluşturmak için <xref:System.Collections.IList> ancak bunun yerine başka bir konumdan bir liste sağlar.  
   
 ## <a name="example"></a>Örnek  
@@ -39,6 +39,7 @@ Uygulama <xref:System.ComponentModel.IListSource> arabirimi uygulamıyor bağlan
 -   System.Drawing ve System.Windows.Forms öğelerini derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ComponentModel.IListSource>
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>

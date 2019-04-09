@@ -1,15 +1,15 @@
 ---
-title: Veri türleri ve işlevleri
+title: Veri Türleri ve İşlevleri
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: deb8df0d64b4e8db24e5d611332e512781ef01b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c17c02900ea6ebda1ee4bbf6e6534310f125a0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151950"
 ---
-# <a name="data-types-and-functions"></a>Veri türleri ve işlevleri
+# <a name="data-types-and-functions"></a>Veri Türleri ve İşlevleri
 Aşağıdaki tabloda listelenen konular, SQL desteği üyeleri, yapıları ve ortak dil çalışma zamanı (CLR) yayınları için LINQ açıklar. Desteklenen üyeleri ve yapıları, LINQ to SQL sorgularında kullanılabilir.  
   
  Tabloda desteklenmeyen bir öğe LINQ to SQL CLR üyesi, yapı veya tür dönüştürme çeviremez anlamına gelir. SQL Server üzerinde yürütme için. Yine de bunları kodunuzda kullanmak mümkün olabilir, ancak sorgu Transact-SQL veya veritabanından sonuçları alındıktan sonra çevrilir önce bunlar değerlendirilmelidir.  
@@ -32,5 +32,6 @@ Aşağıdaki tabloda listelenen konular, SQL desteği üyeleri, yapıları ve or
 |[Desteklenmeyen İşlev](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|Desteklenmeyen işlevleri açıklanmıştır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
 - [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -1,15 +1,15 @@
 ---
-title: İşlem desteği
+title: İşlem Desteği
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
-ms.openlocfilehash: f53a6081102991c73543b4cd76365f7e2c0faf89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517207"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196170"
 ---
-# <a name="transaction-support"></a>İşlem desteği
+# <a name="transaction-support"></a>İşlem Desteği
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] üç farklı işlem modelleri destekler. Bu modeller gerçekleştirilen denetimlerini sırasına göre listelenir.  
   
 ## <a name="explicit-local-transaction"></a>Açık yerel işlem  
@@ -24,5 +24,6 @@ ms.locfileid: "54517207"
  Çağırdığınızda <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çağrısı kapsamında olup olmadığını görmek için denetimleri bir <xref:System.Transactions.Transaction> veya `Transaction` özelliği (`IDbTransaction`) kullanıcı tarafından başlatılan bir yerel işlem kümesi. Hiçbir işlem bulursa [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yerel bir işlem başlatır (`IDbTransaction`) ve oluşturulan SQL komutları yürütme için kullanır. Tüm SQL komutları başarıyla tamamladıktan sonra [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yerel işlem yürütür ve döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Nasıl yapılır: İşlemleri kullanarak veri gönderimlerini köşeli ayraç](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+- [Nasıl yapılır: İşlemleri Kullanarak Veri Gönderimlerini Ayraç İçine Alma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)

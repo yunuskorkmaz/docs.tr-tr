@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139145"
 ---
 # <a name="xarray-markup-extension"></a>x:Array İşaretleme Uzantısı
 XAML işaretleme uzantısı aracılığıyla nesne dizileri için genel destek sağlar. Bu karşılık gelir `x:ArrayExtension` XAML [MS-XAML] yazın.  
@@ -70,5 +70,6 @@ XAML işaretleme uzantısı aracılığıyla nesne dizileri için genel destek s
  Dizi öğeleri kullanılan özel türleri sınıf ayrıca XAML içinde nesne öğeleri olarak oluşturulmasını gereksinimleri desteklemesi gerekir. Daha fazla bilgi için [XAML ve özel sınıflar için WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İşaretleme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+
+- [Biçimlendirme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [WPF'den System.Xaml'e Geçirilen Türler](types-migrated-from-wpf-to-system-xaml.md)

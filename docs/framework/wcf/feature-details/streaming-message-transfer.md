@@ -2,12 +2,12 @@
 title: İleti Aktarma Akışı
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136883"
 ---
 # <a name="streaming-message-transfer"></a>İleti Aktarma Akışı
 Windows Communication Foundation (WCF) taşımalar iletileri aktarmak için iki modu destekler:  
@@ -47,4 +47,5 @@ Windows Communication Foundation (WCF) taşımalar iletileri aktarmak için iki 
  Akış için arabelleğe alınan aktarma modundan değiştirme, TCP ve adlandırılmış kanal taşıma yerel kanal şeklini değiştirir. Arabelleğe alınan aktarımları için yerel kanal şekildir <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Yerel kanal akış aktarımları için olan <xref:System.ServiceModel.Channels.IRequestChannel> ve <xref:System.ServiceModel.Channels.IReplyChannel>. Doğrudan bu kullanan mevcut bir uygulamayı aktarım modu değiştirme taşır (diğer bir deyişle, bir hizmet sözleşmesini üzerinden değil) beklenen kanal şekli için kanal fabrikaları ve dinleyicileri değiştirilmesi gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Akışı etkinleştir](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [Nasıl yapılır: Akışı Etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Meta verileri almak için MetadataExchangeClient kullanma'
+title: 'Nasıl yapılır: Meta Verileri Almak için MetadataExchangeClient Kullanma'
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: 8f99fcf8a355001908c31c383201da8db78c6d24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168629"
 ---
-# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Nasıl yapılır: Meta verileri almak için MetadataExchangeClient kullanma
+# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Nasıl yapılır: Meta Verileri Almak için MetadataExchangeClient Kullanma
 Kullanım <xref:System.ServiceModel.Description.MetadataExchangeClient> sınıfı WS-MetadataExchange (MEX) protokolünü kullanarak meta verileri indirilemedi. Alınan meta veri dosyaları olarak döndürülen bir <xref:System.ServiceModel.Description.MetadataSet> nesne. Döndürülen <xref:System.ServiceModel.Description.MetadataSet> nesneyi içeren koleksiyonu <xref:System.ServiceModel.Description.MetadataSection> nesneleri, her birinin içerdiği belirli meta veriler diyalekti ve bir tanımlayıcı. Döndürülen meta verilere dosyalara yazmak veya döndürülen meta verilere Web Hizmetleri Açıklama Dili (WSDL) belgeleri içeriyorsa, meta verileri kullanarak içeri aktarabilirsiniz <xref:System.ServiceModel.Description.WsdlImporter>.  
   
  <xref:System.ServiceModel.Description.MetadataExchangeClient> Bir adresi alan oluşturucular üzerinde bağlama kullan <xref:System.ServiceModel.Description.MetadataExchangeBindings> adresinin Tekdüzen Kaynak Tanımlayıcısı (URI) şemasını eşleşen statik sınıf. Alternatif olarak kullanabileceğiniz <xref:System.ServiceModel.Description.MetadataExchangeClient> Oluşturucu açıkça kullanılacak bağlamanın belirtmenizi sağlar. Belirtilen bağlama, tüm meta veri başvurularını çözümlemek için kullanılır.  
@@ -36,6 +36,7 @@ Kullanım <xref:System.ServiceModel.Description.MetadataExchangeClient> sınıf�
  Bu kod örneği derlemek için System.ServiceModel.dll derlemeye başvuru ve içe <xref:System.ServiceModel.Description> ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description.MetadataResolver>
 - <xref:System.ServiceModel.Description.MetadataExchangeClient>
 - <xref:System.ServiceModel.Description.WsdlImporter>

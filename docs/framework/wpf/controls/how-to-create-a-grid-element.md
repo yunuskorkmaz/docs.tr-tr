@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
-ms.openlocfilehash: 5aa0e5b617d952fd5df1f80ae0ff146a6899aa32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ebb9369da73bd595338e5b6ef42bda639bde6ed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134543"
 ---
 # <a name="how-to-create-a-grid-element"></a>Nasıl yapılır: Kılavuz Öğesi Oluşturma
 ## <a name="example"></a>Örnek  
@@ -26,5 +26,6 @@ ms.locfileid: "57379516"
 
   ![üç sütuna bozuk bir kılavuz içeren bir WPF kullanıcı arabirimi ekran gösterilmektedir.  Başlık '2018 ürünleri üst satırdaki tüm sütunlar kapsayan sevk' taşıyan ve üç sütunu her satış rakamlarını ile belirli bir Çeyreğin için vardır.  Metin iletisi iki sütun kapsayan en alttaki sahip ' toplam birimler: 300,000'](././media/how-to-create-a-grid-element/how-to-create-a-grid-element.png)
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.Grid>
 - [Panellere Genel Bakış](panels-overview.md)

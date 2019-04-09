@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İzleme dinleyicileri ile TraceSource ve filtreler kullanma'
+title: 'Nasıl yapılır: İz Dinleyicileri ile TraceSource ve Filtreler Kullanma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e87e9d82ec16c9bcb1621c14756f401bd4f7b8a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d51092aebad340a7549acef248d009518314505d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157475"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Nasıl yapılır: İzleme dinleyicileri ile TraceSource ve filtreler kullanma
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Nasıl yapılır: İz Dinleyicileri ile TraceSource ve Filtreler Kullanma
 .NET Framework 2.0 sürümünde yeni özelliklerden biri, Gelişmiş bir izleme sistemidir. Temel değiştirilmez: izleme iletileri rapor verilerini bir ilişkili çıkış Orta dinleyici için anahtarlar aracılığıyla gönderilir. Sürüm 2.0 için birincil bir fark var izlemeleri örneklerini başlatılabilir mı <xref:System.Diagnostics.TraceSource> sınıfı. <xref:System.Diagnostics.TraceSource> bir Gelişmiş izleme sistemi olarak çalışmaya yöneliktir ve eski yerine statik yöntemleri kullanılabilir <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> izleme sınıfları. Tanıdık <xref:System.Diagnostics.Trace> ve <xref:System.Diagnostics.Debug> sınıfları yine de mevcut, ancak kullanmak için önerilen yöntemdir <xref:System.Diagnostics.TraceSource> izleme sınıfı.  
   
  Bu konuda kullanımını açıklayan bir <xref:System.Diagnostics.TraceSource> uygulama yapılandırma dosyası ile birlikte.  İzleme kullanarak önerilmez olsa da, mümkündür bir <xref:System.Diagnostics.TraceSource> kullanmadan bir yapılandırma dosyası. Bir yapılandırma dosyası olmadan izleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: İzleme kaynakları oluşturma ve başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
@@ -164,9 +164,10 @@ ms.locfileid: "54491104"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Nasıl yapılır: Oluşturma ve izleme kaynaklarını başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [İz Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175298"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView Denetimi Senaryoları (Windows Forms)
 İle <xref:System.Windows.Forms.DataGridView> denetimi, çeşitli veri kaynaklarından tablo verilerini görüntüleyebilir. El ile doldurabilirsiniz basit kullanımları bir <xref:System.Windows.Forms.DataGridView> ve denetim verilerine doğrudan düzenleyebilirsiniz. Genellikle, ancak bir dış veri kaynağındaki verileri depolamak ve üzerinden denetime bağlamak bir <xref:System.Windows.Forms.BindingSource> bileşeni.  
@@ -87,5 +87,6 @@ ms.locfileid: "57721324"
 -   Konak denetimleri yerleşik sütun türleri tarafından sağlanan olanlar dışındaki kendi hücre ve sütun sınıflarına uygulayabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView hücrelerinde denetimleri](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView Denetimine Genel Bakış](datagridview-control-overview-windows-forms.md)

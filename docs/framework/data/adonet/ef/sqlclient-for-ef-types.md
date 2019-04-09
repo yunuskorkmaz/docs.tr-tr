@@ -2,12 +2,12 @@
 title: Entity FrameworkTypes için SqlClient
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: b121020c8779cfb3959425b1019eaf085b97d6cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb12bde1e319fde5adf20ad6cd54f8776aeda31d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147666"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Entity FrameworkTypes için SqlClient
 SQL Server (SqlClient) sağlayıcısı bildirim dosyası için .NET Framework veri sağlayıcısı sağlayıcısı ilkel türler, her bir türü için modelleri kavramsal ve depolama modeli ilkel türlerini ve yükseltme ve dönüştürme arasındaki eşlemeleri listesini içerir. Kural kavramsal ve depolama modeli ilkel türler arasında.  
@@ -51,4 +51,5 @@ SQL Server (SqlClient) sağlayıcısı bildirim dosyası için .NET Framework ve
 |`xml`|Eşittir karşılaştırılabilir: False<br /><br /> Sipariş karşılaştırılabilir: False|`Edm.String`|MaxLength:<br /><br /> -Varsayılan: 1073741823<br /><br /> -Sabit: Doğru<br /><br /> Unicode:<br /><br /> -Varsayılan: Doğru<br /><br /> -Sabit: Doğru<br /><br /> FixedLength:<br /><br /> -Varsayılan: False<br /><br /> -Sabit: Doğru|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [CSDL, SSDL ve MSL Belirtimleri](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+
+- [CSDL, SSDL ve MSL belirtimleri](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

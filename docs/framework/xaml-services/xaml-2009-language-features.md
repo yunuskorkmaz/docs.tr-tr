@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 6de103d9b5b59ec1a47098e44e07ee95a3db166e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162286"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 Dil Özellikleri
 XAML 2009, mevcut XAML dil belirtimi genişleten yeni XAML dil özellikleri toplu terimdir. XAML 2009, birkaç yeni yönergeleri ve yapıları sunar. Bunlar [x: Arguments yönergesi](x-arguments-directive.md); [x: FactoryMethod yönergesi](x-factorymethod-directive.md); [x: Reference işaretleme uzantısı](x-reference-markup-extension.md); [x: TypeArguments yönergesi ](x-typearguments-directive.md); ve dili ortak temelleri için yerleşik türler (örneğin `x:Char`).  
@@ -33,4 +33,5 @@ XAML 2009, mevcut XAML dil belirtimi genişleten yeni XAML dil özellikleri topl
  Olaylar tarafından desteklenen öznitelikleri için XAML 2006 biçimlendirmesi derleme karmaşıktır ve biçimlendirme derleme olayları gönderen varsayılır. XAML 2009, çalışma zamanı ayrıştırma ve XAML yükleme kadar olay kablolama erteler bir işaretleme uzantısı benzer bir biçimlendirme biçimini destekler. Ancak, WPF uygulamaları ve WPF kullanıcı Arabirimi için XAML senaryolar bu özellik genellikle kullanmayın. WPF ve XAML 2006 uygulaması tanımlanan yönlendirilmiş olaylar için olay işleyicisi kablolama birleşimini kullanan <xref:System.Windows.UIElement> düzeyi ve bunun biçimlendirme derleyici adım çok olay özniteliği işlemesi için. Biçimlendirme derleyici ayrıca XAML biçimlendirme derleyici kullanılır yapı eylemleri yeri bildirin içinde bulunan herhangi bir olay özniteliği önceden işler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XAML'ye Genel Bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md)

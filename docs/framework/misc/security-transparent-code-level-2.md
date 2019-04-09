@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567028"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156084"
 ---
 # <a name="security-transparent-code-level-2"></a>Güvenliği Saydam Kod, 2. Düzey
 <a name="top"></a>
@@ -44,13 +44,13 @@ ms.locfileid: "54567028"
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Kullanım örnekleri ve davranışlar](#examples)  
+-   [Kullanım Örnekleri ve Davranışlar](#examples)  
   
--   [Desenleri geçersiz kılma](#override)  
+-   [Desenleri Geçersiz Kılma](#override)  
   
--   [Devralma kuralları](#inheritance)  
+-   [Devralma Kuralları](#inheritance)  
   
--   [Ek bilgiler ve kurallar](#additional)  
+-   [Ek Bilgiler ve Kurallar](#additional)  
   
 <a name="examples"></a>   
 ## <a name="usage-examples-and-behaviors"></a>Kullanım Örnekleri ve Davranışlar  
@@ -86,7 +86,7 @@ ms.locfileid: "54567028"
 |Kısmen güvenilen bir derleme üzerinde herhangi bir öznitelik yok|Türleri ve üyeleri varsayılan olarak saydam olan, ancak güvenlik açısından kritik veya güvenlik güvenli kritik olabilir.|Tüm türler ve üyeler görünmez.|  
 |Bir öznitelik yok|Hiçbir öznitelik belirtmemeye sizin için saydamlık kuralları belirlemek ortak dil çalışma zamanı neden olur. Tüm türleri ve üyeleri güvenlik-burada güvenlik açısından kritik olan bir devralma kuralı ihlal ediyor dışında önemlidir.|Tam olarak güvenilen bir derleme üzerinde (genel derleme önbelleğinde veya tam güven olarak tanımlanan `AppDomain`) tüm türleri şeffaftır ve tüm üyeleri güvenlik-güvenli-kritik.|  
 |`SecurityTransparent`|Tüm türler ve üyeler görünmez.|Tüm türler ve üyeler görünmez.|  
-|`SecurityCritical(SecurityCriticalScope.Everything)`|Uygulanamaz.|Tüm türleri ve üyeleri güvenlik kritik öneme sahiptir.|  
+|`SecurityCritical(SecurityCriticalScope.Everything)`|Geçerli değildir.|Tüm türleri ve üyeleri güvenlik kritik öneme sahiptir.|  
 |`SecurityCritical`|Bu derlemedeki türleri tarafından tanıtılan tüm kod büyük/küçük harf önemlidir; diğer tüm kod saydamdır. Sanal veya soyut bir yöntemi geçersiz kılmak veya bir arabirimin yöntemini uygulayan yöntemi olarak açıkça açıklama gerekir `SecurityCritical` veya `SecuritySafeCritical`.|Tüm Varsayılanları saydam kod. Ancak, tek tek türleri ve üyeleri diğer özniteliklere sahip olabilir.|  
   
 ### <a name="type-and-member-annotation"></a>Tür ve Üye Ek Açıklaması  
@@ -192,5 +192,6 @@ ms.locfileid: "54567028"
  <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> Özelliği `false` varsayılan olarak, bu nedenle özelliği ayarlanmalıdır `true` doğrulamayı atlamasına. Bu, yalnızca en iyi duruma getirme amacıyla yapılmalıdır. Saydam kod derleme içindeki kullanılarak doğrulanabilir olduğundan emin olmanız gerekir `transparent` seçeneğini [PEVerify aracı](../../../docs/framework/tools/peverify-exe-peverify-tool.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Güvenliği saydam kod, düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
 - [Güvenlik Değişiklikleri](../../../docs/framework/security/security-changes.md)

@@ -2,12 +2,12 @@
 title: Federasyon Örneği
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: e9f0c47a1bafe715a40d150a77543ca71a249920
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 5c71abc3308513be7b00d92254e92e814c3688dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155213"
 ---
 # <a name="federation-sample"></a>Federasyon Örneği
 Bu örnek, Federasyon güvenlik gösterir.  
@@ -116,4 +116,3 @@ Bu örnek, Federasyon güvenlik gösterir.
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
-  

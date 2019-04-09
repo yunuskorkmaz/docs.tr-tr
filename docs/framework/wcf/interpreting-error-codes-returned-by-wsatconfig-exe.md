@@ -2,12 +2,12 @@
 title: wsatConfig.exe Tarafından Döndürülen Hata Kodlarını Yorumlama
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151638"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe Tarafından Döndürülen Hata Kodlarını Yorumlama
 Bu konuda, tüm hata kodlarını WS-AtomicTransaction yapılandırma hizmet programı (wsatConfig.exe) oluşturulan ve önerilen gerçekleştirilecek eylemler listeler.  
@@ -16,7 +16,7 @@ Bu konuda, tüm hata kodlarını WS-AtomicTransaction yapılandırma hizmet prog
   
 |Hata Kodu|Açıklama|Gerçekleştirilecek önerilen eylem|  
 |----------------|-----------------|------------------------------------|  
-|0|İşlem başarılı oldu|Hiçbiri|  
+|0|İşlem başarılı oldu|Yok.|  
 |1.|Beklenmeyen bir hata oluştu|Microsoft ile iletişime geçin|  
 |2|Güvenlik ayarlarını almak için MSDTC bağlanmaya çalışılırken beklenmeyen bir hata oluştu.|MSDTC hizmetinin devre dışı değildir ve döndürülen özel durumda listelenen tüm sorunları gidermeye emin olun.|  
 |3|Ağ güvenlik ayarları okumak için yeterli izinlere WsatConfig.exe altında çalıştırıldığı hesabı yok.|WsatConfig.exe yönetici kullanıcı hesabı altında çalıştırın.|  
@@ -68,4 +68,5 @@ Bu konuda, tüm hata kodlarını WS-AtomicTransaction yapılandırma hizmet prog
 |56|ETW izleme oturumunu başlatılmaya çalışılırken beklenmeyen bir hata oluştu.|Microsoft ile iletişime geçin.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145242"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code İç XAML Türü
 Kod içinde bir XAML üretim yerleşimi sağlar. Bu tür kod ya da XAML veya bir çalışma zamanı tarafından yorumu gibi sonraki kullanımlar için XAML üretimde sol derleyen herhangi XAML işlemci uygulamasında tarafından derlenebilir.  
@@ -49,6 +49,7 @@ Kod içinde bir XAML üretim yerleşimi sağlar. Bu tür kod ya da XAML veya bir
 -   Kısmi sınıf CLR ad alanı dışında kod varlıklara başvurular tüm tam olarak nitelenmiş olmalıdır. Bildirilen üyeleri geçersiz kılmalar için geçersiz kılınabilir kısmi sınıf üyeleri, bu dile özgü geçersiz kılma anahtar sözcüğü ile belirtilmelidir. Üyeleri bildirilmişlerse `x:Code` kapsam çakışan XAML dışında oluşturulan bir kısmi sınıf üyelerine, şekilde derleyici çakışma raporları XAML dosyası derleme yüklemek veya.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [x:Class Yönergesi](x-class-directive.md)
 - [Arka Plan Kod ve WPF İçindeki XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [XAML'ye Genel Bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md)

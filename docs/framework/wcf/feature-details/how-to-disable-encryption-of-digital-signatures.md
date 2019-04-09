@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Dijital imzaların şifrelenmesini devre dışı bırak'
+title: 'Nasıl yapılır: Dijital İmzaların Şifrelenmesini Devre Dışı Bırakma'
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
-ms.openlocfilehash: 360d939db1c7e75cea1b6f3c6a013f214564a717
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6f5004224f66f2961efc3ee920989487273c3eff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192127"
 ---
-# <a name="how-to-disable-encryption-of-digital-signatures"></a>Nasıl yapılır: Dijital imzaların şifrelenmesini devre dışı bırak
+# <a name="how-to-disable-encryption-of-digital-signatures"></a>Nasıl yapılır: Dijital İmzaların Şifrelenmesini Devre Dışı Bırakma
 Varsayılan olarak, bir iletinin imzalanmış ve imza dijital olarak şifrelenir. Bu örneği ile özel bir bağlama oluşturarak denetlenir <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ve ayarı `MessageProtectionOrder` özelliği için ya da sınıfın bir <xref:System.ServiceModel.Security.MessageProtectionOrder> numaralandırma değeri. Varsayılan, <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> değeridir. Bu işlem yalnızca imzalama değerinden daha fazla zaman yüzde 30 kullanır ve genel iletinin (ileti daha küçük, büyük performans etkisi) boyutuna göre şifreleme. Şifreleme imzası devre dışı bırakıldığında, ancak iletisinin içeriği tahmin etmek bir saldırgan sağlayabilir. İmza öğesi düz metin iletisi imzalı her bölümü karma kodunu içerdiğinden, bu mümkündür. Örneğin, ileti gövdesi, varsayılan olarak şifrelenmiş olsa da, şifrelenmemiş imza karma kodunu şifreleme önce ileti gövdesi içeriyor. İmzalanmış ve şifrelenmiş bölümü için olası değerler kümesini küçük olursa, bir saldırganın karma değer bakarak, içeriği türetme mümkün olabilir. Şifreleme imzası bu saldırı vektörü azaltır.  
   
  Bu nedenle, şifreleme imzası yalnızca içeriğin değerinin düşük olduğu veya büyük ve belirleyici olmayan içerik olası değerler kümesidir ve performans kazancı daha yukarıda açıklanan saldırı azaltma daha önemli devre dışı bırakın.  
@@ -26,4 +26,5 @@ Varsayılan olarak, bir iletinin imzalanmış ve imza dijital olarak şifrelenir
 3.  Ayarlama <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>, veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Özel Bağlamalarla Güvenlik Özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)

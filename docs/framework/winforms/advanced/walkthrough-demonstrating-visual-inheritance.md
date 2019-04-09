@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 932df915ab55d8141e64836961dd636d3d5da241
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174609"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>İzlenecek yol: Görsel Devralmayı Gösterme
 Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetimler eklemek için sağlar. Bu izlenecek yolda temel bir form oluşturun ve bir sınıf kitaplığı derleyin. Bu sınıf kitaplığı, başka bir projeye içeri aktarmak ve temel formundan devralan yeni bir form oluşturun. Bu kılavuz boyunca, öğreneceksiniz nasıl yapılır:  
@@ -164,6 +164,7 @@ Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetiml
  Kullanıcı denetimleri için devralma kadar aynı şekilde çalışır. Yeni bir sınıf kitaplığı projesi açın ve bir kullanıcı denetimi ekleyin. Bağlı denetimler üzerindeki yerleştirin ve projeyi derleyin. Başka bir yeni sınıf kitaplığı projesi açın ve derlenmiş sınıf kitaplığına bir başvuru ekleyin. Ayrıca, devralınan bir denetim ekleyerek deneyin (aracılığıyla **yeni öğe ekleme** iletişim kutusu) projeye ve kullanarak **devralma Seçici**. Bir kullanıcı denetimi eklemek ve değiştirmek `Inherits` (`:` Visual C#) deyimi. Daha fazla bilgi için [nasıl yapılır: Windows Form devralma](how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Windows Form devralma](how-to-inherit-windows-forms.md)
+
+- [Nasıl yapılır: Windows Formlarını Devralma](how-to-inherit-windows-forms.md)
 - [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)

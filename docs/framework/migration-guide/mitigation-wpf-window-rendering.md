@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71e1829716e0a9d5fc63692ca84c8bfefe4cefef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d54751ae0492e25f824eee6362e0f3bca446d75e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147634"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Azaltma: WPF penceresi işleme
 İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] tek görünen bir çoklu monitör senaryosunda dışında genişletir, Windows 8'de çalıştırma ve üzeri, pencerenin tamamını kırpma olmadan oluşturulur.  
@@ -39,4 +39,5 @@ ms.locfileid: "54663472"
 -   Ayarlayarak <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> özelliğini `true` uygulamanın başlangıcında.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çalışma Zamanı Değişiklikleri](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

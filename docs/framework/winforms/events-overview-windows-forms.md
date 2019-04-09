@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157818"
 ---
 # <a name="events-overview-windows-forms"></a>Olaylara Genel Bakış (Windows Forms)
 Bir olay yanıt verebilirsiniz bir eylem veya "handle" kodunu içerir. Olaylar, fareyle tıklamak veya bir tuşuna basmak gibi bir kullanıcı eylemi tarafından oluşturulabilir; Program kodu tarafından; veya sistemi.  
@@ -44,5 +44,6 @@ Bir olay yanıt verebilirsiniz bir eylem veya "handle" kodunu içerir. Olaylar, 
  Temsilciler ile kullanılan bir bağlama mekanizması dinamik: bir temsilci imzası olan, olay işleyicisinin eşleşen herhangi bir yöntemi için çalışma zamanında bağlanabilir. Bu özellik ile ayarlayın veya bağımlı bir yöntem bir koşula bağlı ve bir olay işleyicisi bir denetimi dinamik olarak eklemek için değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms'ta Olay İşleyicileri Oluşturma](creating-event-handlers-in-windows-forms.md)
 - [Olay İşleyicilerine Genel Bakış](event-handlers-overview-windows-forms.md)

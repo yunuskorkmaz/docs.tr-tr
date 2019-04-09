@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049452"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147803"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Tür Dönüştürücülerinde ve İşaretleme Uzantılarında Kullanılabilir Hizmet Bağlamları
 Türü dönüştürücü ve biçimlendirme uzantısı kullanımı destekleyen türleri yazarları, genellikle bir kullanım işaretleme veya Nesne grafiği yapısı çevreleyen bulunduğu hakkında bağlamsal bilgiler olması gerekir. Bilgi sağlanan nesne doğru örneği veya Nesne grafiğini içinde varolan nesnelere nesne başvuruları hale getirilebilir, böylece gerekebilir. .NET Framework XAML hizmetlerinde kullanırken gerekli olabilecek bağlam Hizmet Arabirimleri bir dizi olarak kullanıma sunulur. Türü dönüştürücü veya biçimlendirme uzantısı desteği için kod, bir hizmet için geçilen gelen ve kullanılabilir bir hizmet sağlayıcısı bağlamı kullanarak sorgulayabilir <xref:System.Xaml.XamlObjectWriter> veya ilgili türler. XAML şema içeriği doğrudan bu tür bir hizmet aracılığıyla kullanılabilir. Bu konu, bir değer dönüştürücü uygulamasından hizmet bağlamları erişim açıklar ve genellikle kullanılabilir hizmetleri ve kendi rolleri listeler.  
@@ -187,7 +187,8 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
  Daha fazla bilgi için bkz. <xref:System.Xaml.IDestinationTypeProvider>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [XAML İşaretleme Uzantılarına Genel Bakış](markup-extensions-for-xaml-overview.md)
+- [XAML Biçimlendirme Uzantılarına Genel Bakış](markup-extensions-for-xaml-overview.md)
 - [XAML Tür Dönüştürücülerine Genel Bakış](type-converters-for-xaml-overview.md)

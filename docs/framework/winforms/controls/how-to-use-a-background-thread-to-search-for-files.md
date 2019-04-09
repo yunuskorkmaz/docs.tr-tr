@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Dosya aramak için bir arka plan iş parçacığı kullanma'
+title: 'Nasıl yapılır: Dosya Aramak için Arka Plan İş Parçacığı Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723172"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157807"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Nasıl yapılır: Dosya aramak için bir arka plan iş parçacığı kullanma
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Nasıl yapılır: Dosya Aramak için Arka Plan İş Parçacığı Kullanma
 <xref:System.ComponentModel.BackgroundWorker> Bileşeni değiştirir ve işlevsellik ekler <xref:System.Threading> ad alanı; ancak <xref:System.Threading> ad alanı korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [BackgroundWorker bileşenine genel bakış](backgroundworker-component-overview.md).  
   
  Windows Forms kendiliğinden boş iş parçacıklı yerel Win32 windows üzerinde bağlı olduğu Windows Forms tek iş parçacıklı grup (STA) modeli kullanır. STA modelini bir pencere bir iş parçacığı üzerinde oluşturulabilir ancak iş parçacığı oluşturulduktan sonra geçiş yapamazsınız, ve onu tüm işlev çağrılarını kendi oluşturma iş parçacığı üzerinde gerçekleşmesi gerektiğini anlamına gelir. Windows Forms dışında ücretsiz iş parçacıklı model .NET Framework sınıflarını kullanın. .NET Framework'teki iş parçacığı oluşturma hakkında daha fazla bilgi için bkz: [parçacıkları](../../../standard/threading/index.md).  
@@ -763,6 +763,7 @@ namespace SampleUsage
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)
 - [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

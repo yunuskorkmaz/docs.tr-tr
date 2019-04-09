@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-ms.openlocfilehash: 5ddd6600493cd127f8024f23594c628476cac19e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162652"
 ---
 # <a name="textbox-overview"></a>TextBox Genel Bakışı
 <xref:System.Windows.Controls.TextBox> Sınıfı görüntülemek veya biçimlendirilmemiş metin düzenlemenize olanak sağlar. Yaygın bir <xref:System.Windows.Controls.TextBox> form biçimlendirilmemiş metin düzenleme. Örneğin, kullanıcının adı, telefon numarası için soran bir form vb. kullanırsınız <xref:System.Windows.Controls.TextBox> metin girişi denetimleri. Bu konu tanıtır <xref:System.Windows.Controls.TextBox> sınıfı ve her ikisinde de kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve C#.  
-  
- 
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox veya RichTextBox?  
  Her ikisi de <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.RichTextBox> metin girişi kullanıcıların ancak iki denetimleri farklı senaryolar için kullanılırlar. A <xref:System.Windows.Controls.TextBox> daha az sistem kaynağı gerektiren bir <xref:System.Windows.Controls.RichTextBox> yalnızca düz metin düzenlenecek gerektiğinde ideal, bu nedenle (yani, bir form kullanımı). A <xref:System.Windows.Controls.RichTextBox> kullanıcı biçimlendirilmiş metin, resimler, tablolar düzenlemek gerekli olan veya desteklenen diğer daha iyi bir seçenek içeriktir. Örneğin, bir belge, makale veya biçimlendirme, gerektiren blog düzenleme görüntüleri, vb., kullanarak en iyi şekilde gerçekleştirilir bir <xref:System.Windows.Controls.RichTextBox>. Aşağıdaki tabloda birincil özelliklerini özetler <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.TextBox>.  
@@ -68,5 +66,6 @@ ms.locfileid: "57361076"
  Genellikle <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> olay değiştiğinde algılamak için kullanılması gerekir metinde bir <xref:System.Windows.Controls.TextBox> veya <xref:System.Windows.Controls.RichTextBox> yerine, değişiklikleri <xref:System.Windows.UIElement.KeyDown> bekleyebileceğiniz gibi. Bkz: [algılamak, metni bir metin kutusu değişti](how-to-detect-when-text-in-a-textbox-has-changed.md) örneği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nasıl Yapılır Konuları](textbox-how-to-topics.md)
-- [RichTextBox Genel Bakış](richtextbox-overview.md)
+- [RichTextBox Genel Bakışı](richtextbox-overview.md)

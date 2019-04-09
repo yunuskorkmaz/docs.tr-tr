@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 140b9284d9361aa149b4f739908376d1cbe6902c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170714"
 ---
 # <a name="varieties-of-custom-controls"></a>Özel Denetim Çeşitleri
 .NET Framework ile geliştirin ve yeni denetimleri uygulayın. Devralma yoluyla da olarak mevcut denetimleri hakkında bilgi sahibi kullanıcı denetiminin işlevselliğini genişletebilirsiniz. Ayrıca, kendi boyama gerçekleştiren özel denetimler yazabilirsiniz.  
@@ -107,8 +107,9 @@ ms.locfileid: "57713035"
  Kullanım <xref:System.ComponentModel.DesignerAttribute> denetiminiz tasarımcınıza ile ilişkilendirilecek. Daha fazla bilgi için [tasarım zamanı desteğini genişletmek](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) ve [nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)
-- [Nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](how-to-develop-a-simple-windows-forms-control.md)
+- [Nasıl yapılır: Basit Bir Windows Forms Denetimi Geliştirme](how-to-develop-a-simple-windows-forms-control.md)
 - [Bileşik Windows Forms Denetimi Geliştirme](developing-a-composite-windows-forms-control.md)
-- [Tasarım zamanı desteği sunma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Tasarım Zamanı Desteği Sunma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

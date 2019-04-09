@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 1e0050dbf6ec5ade22e3f09ceee66f69826e56df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163182"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Performansı iyileştirme: Donanımdan Yararlanma
 Mimarisini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iki işlenen ardışık düzen, donanım ve yazılım vardır. Bu konuda, uygulamalarınızın performans iyileştirmeleri hakkında kararlar almanıza yardımcı olmak için bu işleme ardışık düzenleri hakkında bilgi sağlar.  
@@ -55,6 +55,7 @@ Mimarisini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-wincl
  Daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme katmanları bkz [grafik işleme katmanları](graphics-rendering-tiers.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
 - [Uygulama Performansını Planlama](planning-for-application-performance.md)
 - [Düzen ve Tasarım](optimizing-performance-layout-and-design.md)

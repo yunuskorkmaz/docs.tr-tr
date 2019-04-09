@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: c4c6c01839294e134b0961059a4c165a67c1ecf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176936"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>(LINQ to DataSet) DataView ile filtreleme
 Ardından bir UI denetimine üzerinden bir istemciye verileri sunmak ve belirli ölçütleri kullanarak veri filtreleme olanağı, veri bağlama, önemli bir yönüdür. <xref:System.Data.DataView> verileri filtreleme ve toplantı belirli filtre ölçütlerini veri satırları kümelerine döndürmek için birçok yol sağlar. Dize tabanlı yanı sıra filtreleme yetenekleri <xref:System.Data.DataView> kullanma olanağı da sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeleri filtreleme ölçütlerine. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifadeler, dize tabanlı filtreleme daha çok daha karmaşık ve güçlü filtreleme işlemleri için izin verin.  
@@ -93,5 +93,6 @@ Ardından bir UI denetimine üzerinden bir istemciye verileri sunmak ve belirli 
  [!code-vb[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
 - [DataView ile Sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

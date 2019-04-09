@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms CheckedListBox denetimindeki işaretli öğeleri belirleme'
+title: 'Nasıl yapılır: Windows Forms CheckedListBox Denetimindeki İşaretli Öğeleri Belirleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 2936a64338f47107b11b5f6eb85c5e94707bf926
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0cfb34d058486c44ffb01e6c105134e3ca4c2175
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184684"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Nasıl yapılır: Windows Forms CheckedListBox denetimindeki işaretli öğeleri belirleme
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Nasıl yapılır: Windows Forms CheckedListBox Denetimindeki İşaretli Öğeleri Belirleme
 Bir Windows Forms veri sunarken <xref:System.Windows.Forms.CheckedListBox> denetimi, ya da yineleme depolanan koleksiyonu aracılığıyla <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> özellik ya da liste aracılığıyla adım <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> hangi öğelerin denetlenir belirlemek için yöntemi. <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Yöntemi ve bağımsız değişkeni olarak bir öğe dizin numarasını alır ve döndürür `true` veya `false`. Beklediğiniz, aykırı <xref:System.Windows.Forms.ListBox.SelectedItems%2A> ve <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> özelliklerini değil belirleme hangi öğelerin denetlenir; hangi öğelerin vurgulanmış belirlerler.  
   
 ### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>CheckedListBox denetimindeki işaretli öğeleri belirleme  
@@ -112,4 +112,5 @@ Bir Windows Forms veri sunarken <xref:System.Windows.Forms.CheckedListBox> denet
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](windows-forms-controls-used-to-list-options.md)

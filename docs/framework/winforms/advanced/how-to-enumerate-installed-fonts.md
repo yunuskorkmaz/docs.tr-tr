@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yüklü yazı tiplerini numaralandırma'
+title: 'Nasıl yapılır: Yüklü Yazı Tiplerini Numaralandırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: e56f06d6f7a762a1ef1ff85fa30751ea64f9f14b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 92f27399cce9e03a4679c8a34fbdafcf28c32252
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155018"
 ---
-# <a name="how-to-enumerate-installed-fonts"></a>Nasıl yapılır: Yüklü yazı tiplerini numaralandırma
+# <a name="how-to-enumerate-installed-fonts"></a>Nasıl yapılır: Yüklü Yazı Tiplerini Numaralandırma
 <xref:System.Drawing.Text.InstalledFontCollection> Sınıfının devraldığı <xref:System.Drawing.Text.FontCollection> soyut temel sınıf. Kullanabileceğiniz bir <xref:System.Drawing.Text.InstalledFontCollection> bilgisayarda yüklü yazı tiplerini numaralandırma nesnesi. <xref:System.Drawing.Text.FontCollection.Families%2A> Özelliği bir <xref:System.Drawing.Text.InstalledFontCollection> nesnesi olan bir dizi <xref:System.Drawing.FontFamily> nesneleri.  
   
 ## <a name="example"></a>Örnek  
@@ -32,4 +32,5 @@ ms.locfileid: "58653749"
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>. Ayrıca, almalısınız <xref:System.Drawing.Text> ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yazı Tipleri ve Metin Kullanma](using-fonts-and-text.md)

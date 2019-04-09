@@ -1,5 +1,5 @@
 ---
-title: Internet kimlik doğrulama
+title: İnternet Kimlik Doğrulaması
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [.NET Framework], classes
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 10d9c976a9294bffd85791b222dfededd0fc9256
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155928"
 ---
-# <a name="internet-authentication"></a>Internet kimlik doğrulama
+# <a name="internet-authentication"></a>İnternet Kimlik Doğrulaması
 <xref:System.Net> Sınıfları istemci kimlik doğrulama mekanizmaları, temel standart Internet kimlik doğrulama yöntemleri de dahil olmak üzere çeşitli destek, Özet, negotiate, NTLM ve Kerberos kimlik doğrulaması, hem de oluşturabileceğiniz özel yöntemler.  
   
  Kimlik doğrulama kimlik bilgileri depolanır <xref:System.Net.NetworkCredential> ve <xref:System.Net.CredentialCache> uygulayan sınıflar <xref:System.Net.ICredentials> arabirimi. Bu sınıflardan birine kimlik bilgileri sorgulandığında örneğini döndürür. **NetworkCredential** sınıfı. Kimlik doğrulama işlemi tarafından yönetilen <xref:System.Net.AuthenticationManager> sınıfı ve gerçek kimlik doğrulama işlemi uygulayan bir kimlik doğrulama modülü sınıfı tarafından gerçekleştirilen <xref:System.Net.IAuthenticationModule> arabirimi. Özel kimlik doğrulama modülü ile kaydetmelisiniz **bulunan** kullanılmadan önce; modüller için temel, Özet, negotiate, NTLM ve Kerberos kimlik doğrulama yöntemleri varsayılan olarak kayıtlı.  
@@ -40,6 +40,7 @@ ms.locfileid: "54587966"
  Bazı kimlik doğrulama düzeni bir kaynak için bir istek yapmadan kullanıcı kimlik doğrulaması yapabilir. Bir uygulama, bu nedenle sunucu için en az bir gidiş dönüş ortadan kaynak kullanıcıyla preauthenticating tarafından zamandan tasarruf edebilirsiniz. Veya, daha sonra kullanıcıya daha duyarlı olmamız için program başlatma sırasında kimlik doğrulaması gerçekleştirebilirsiniz. Ön kimlik doğrulaması kullanabilir kimlik doğrulama düzenleri <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> özelliğini **true**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Temel ve Özet Kimlik Doğrulama](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+
+- [Temel ve Özet Kimlik Doğrulaması](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
 - [NTLM ve Kerberos Kimlik Doğrulaması](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)

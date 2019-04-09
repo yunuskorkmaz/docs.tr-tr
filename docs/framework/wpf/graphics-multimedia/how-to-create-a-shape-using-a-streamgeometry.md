@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], shapes
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
-ms.openlocfilehash: 3273b6f45c367afeb8e572d0f68e6774075890c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108608"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Nasıl yapılır: StreamGeometry Kullanarak Şekil Oluşturma
 <xref:System.Windows.Media.StreamGeometry> Hafif alternatifi <xref:System.Windows.Media.PathGeometry> geometrik şekiller oluşturma. Kullanım bir <xref:System.Windows.Media.StreamGeometry> karmaşık geometri açıklamak gerektiğinde ancak destekleme veri bağlama, animasyon veya değişikliği yükü istemiyorsanız. Örneğin, verimlilik, nedeniyle <xref:System.Windows.Media.StreamGeometry> sınıftır donatıcıları açıklamak için iyi bir seçimdir.  
@@ -38,6 +38,7 @@ ms.locfileid: "57361025"
  [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometryexample.vb#streamgeometryexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.StreamGeometryContext>

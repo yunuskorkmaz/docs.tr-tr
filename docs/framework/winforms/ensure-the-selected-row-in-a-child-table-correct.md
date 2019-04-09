@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir alt tabloda seçilen satırın doğru konumda kalmasını sağlama'
+title: 'Nasıl yapılır: Bir Alt Tabloda Seçilen Satırın Doğru Konumda Kalmasını Sağlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 930d0dc28a4ab0e34a6229a4b74617084918a275
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149116"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Nasıl yapılır: Bir alt tabloda seçilen satırın doğru konumda kalmasını sağlama
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Nasıl yapılır: Bir Alt Tabloda Seçilen Satırın Doğru Konumda Kalmasını Sağlama
 Aktardığınızda genellikle, Windows Forms veri bağlama ile çalışırken, verilerin ne üst/alt adlı veya ana/Ayrıntılar görünümü görüntülenir. Bu iki denetimlerinde aynı kaynaktan verilerin görüntülendiği bir veri bağlama senaryosu ifade eder. Bir denetim seçimini değiştirmeden değiştirmek için ikinci denetimde görüntülenen veri neden olur. Örneğin, ilk denetim müşteriler ve siparişler listesi ilk denetiminde ise seçili müşterilerle ilgili ikinci bir listesini içerebilir.  
   
  Alt tabloda seçilen olan satır tablonun ilk satırına sıfırlanmaz emin olmak için ek adımlar gerekebilir üst/alt görünüm verileri görüntülerken .NET Framework sürüm 2.0 ile başlatılıyor. Bunu yapmak için önbelleğe alma alt tablo konum ve üst tablo değiştikten sonra sıfırlamak alması gerekir. Genellikle alt sıfırlama bir alanda bir üst tablosu değişiklikleri satırının ilk kez gerçekleşir.  
@@ -84,6 +84,7 @@ Aktardığınızda genellikle, Windows Forms veri bağlama ile çalışırken, v
  Bu örnek komut satırından Visual Basic veya Visual C# için oluşturma hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [yapı komut satırı ile csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Birden çok denetimin eşitlenmiş kalmasını aynı veri kaynağına bağlama](multiple-controls-bound-to-data-source-synchronized.md)
+
+- [Nasıl yapılır: Aynı Veri Kaynağına Bağlanan Birden Çok Denetimin Eşitlenmiş Kalmasını Sağlama](multiple-controls-bound-to-data-source-synchronized.md)
 - [BindingSource Bileşeni](./controls/bindingsource-component.md)
 - [Veri Bağlama ve Windows Forms](data-binding-and-windows-forms.md)

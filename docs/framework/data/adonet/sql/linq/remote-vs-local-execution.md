@@ -1,18 +1,18 @@
 ---
-title: Uzak vs. Yerel yürütme
+title: Uzak ve Yerel Yürütme Karşılaştırması
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: 9d72350c472ff68d8ee623d82096bdab0c88abb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164521"
 ---
-# <a name="remote-vs-local-execution"></a>Uzak vs. Yerel yürütme
+# <a name="remote-vs-local-execution"></a>Uzak ve Yerel Yürütme Karşılaştırması
 Sorgularınızın ya da uzaktan yürütün karar verebilirsiniz (diğer bir deyişle, veritabanı altyapısı veritabanı sorgusu çalıştırır) veya yerel olarak ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yerel önbelleğe karşı sorgu yürütülür).  
   
 ## <a name="remote-execution"></a>Uzaktan Yürütme  
@@ -27,7 +27,7 @@ Sorgularınızın ya da uzaktan yürütün karar verebilirsiniz (diğer bir deyi
   
 -   Veritabanı altyapısı tarafından çalıştırılan bir sorgu genellikle büyük verimli veritabanı dizinleri nedeniyle.  
   
-## <a name="local-execution"></a>Yerel yürütme  
+## <a name="local-execution"></a>Yerel Yürütme Karşılaştırması  
  Diğer durumlarda, ilişkili varlık kümesinin tamamını yerel önbellek üzerinde olmasını isteyebilirsiniz. Bu amaçla <xref:System.Data.Linq.EntitySet%601> sağlar <xref:System.Data.Linq.EntitySet%601.Load%2A> tüm üyelerini açıkça yüklemek için gereken yöntemini <xref:System.Data.Linq.EntitySet%601>.  
   
  Varsa bir <xref:System.Data.Linq.EntitySet%601> zaten yüklendiğinde sonraki sorgular yerel olarak çalıştırılır. Bu yaklaşım, iki şekilde yardımcı olur:  
@@ -48,4 +48,5 @@ Sorgularınızın ya da uzaktan yürütün karar verebilirsiniz (diğer bir deyi
  Uygulayan bir yerel koleksiyonu arasındaki önemli fark Not <xref:System.Collections.Generic.List%601> ve uzak sorguları karşı yürütülen sağlayan koleksiyonu *kümeleri sıralanmamış* ilişkisel bir veritabanındaki. <xref:System.Collections.Generic.List%601> Dizin değerlerinin kullananlar gibi yöntemler, genellikle bir sıralanmamış karşı uzak sorgu alınamıyor listesi semantiğini gerektirir. Bu nedenle, bu tür yöntemler dolaylı olarak yük <xref:System.Data.Linq.EntitySet%601> yerel yürütmeye olanak tanımak için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

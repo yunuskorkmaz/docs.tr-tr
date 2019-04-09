@@ -2,12 +2,12 @@
 title: İstemci Yapılandırması
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 1cd7a066622c7d317b1a9c62658531521082c964
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144696"
 ---
 # <a name="client-configuration"></a>İstemci Yapılandırması
 Windows Communication Foundation (WCF) istemci yapılandırması, adresi, bağlama, davranış ve Sözleşme, istemci uç noktası için hizmet uç noktalarına bağlanmak için hangi istemcilerin kullanın, "ABC" özelliklerini belirtmek için kullanabilirsiniz. [ \<İstemci >](../../configure-apps/file-schema/wcf/client.md) öğeye sahip bir [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesi özniteliklerini genel uç noktasını yapılandırmak için kullanılır. Bu öznitelikler ele alınmıştır [yapılandırma uç noktaları](#configuring-endpoints) bölümü.  
@@ -94,5 +94,6 @@ Windows Communication Foundation (WCF) istemci yapılandırması, adresi, bağla
  [ \<Meta veri >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) öğe meta verileri kaydetmek için kullanılan ayarları içeri aktarma uzantıları belirtmek için kullanılır. Meta veri sistemini genişletme hakkında daha fazla bilgi için bkz. [meta veri sistemini genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uç noktalar: Adresleri, bağlamalar ve sözleşmeler](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+
+- [Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [İstemci Davranışlarını Yapılandırma](../../../../docs/framework/wcf/configuring-client-behaviors.md)

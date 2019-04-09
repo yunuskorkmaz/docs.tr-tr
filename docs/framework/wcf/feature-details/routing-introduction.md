@@ -2,12 +2,12 @@
 title: Yönlendirme Tanıtımı
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158684"
 ---
 # <a name="routing-introduction"></a>Yönlendirme Tanıtımı
 Yönlendirme hizmeti, yönlendirme iletilerinin ileti içeriğine göre yeteneğine sahip bir genel takılabilir SOAP aracı sağlar. Yönlendirme hizmeti ile hizmet toplama, hizmet sürümü oluşturma, öncelikli Yönlendirme ve çok noktaya yayın yönlendirme gibi senaryolara olanak tanır ve yönlendirme karmaşık mantık oluşturabilirsiniz. Yönlendirme hizmeti, hata, işleme sağlar ve birincil hedef uç noktasına gönderilirken bir hata oluşması durumunda iletilerin gönderildiği listelerini yedekleme uç nokta ayarlamak de sağlar.  
@@ -402,6 +402,7 @@ using (ServiceHost serviceHost =
  Windows kimlik bilgisi kimliğe bürünme yönlendirme hizmeti ile kullanmak için kimlik bilgilerini hem service'ı yapılandırmanız gerekir. İstemci kimlik bilgileri nesnesi (<xref:System.ServiceModel.Security.WindowsClientCredential>, gelen erişilebilir operasyonlar <xref:System.ServiceModel.ChannelFactory>) tanımlayan bir <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> kimliğe bürünme izin vermek için ayarlanmalıdır özelliği. Son olarak, hizmette yapılandırmanız gereken <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> ayarlamak için davranış `ImpersonateCallerForAllOperations` için `true`. Yönlendirme hizmeti ile kişileştirme etkinleştirildi iletilerini yönlendirmede istemcileri oluşturma karar vermek için bu bayrağı kullanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İleti Filtreleri](message-filters.md)
-- [Anlaşmaları Yönlendirme](routing-contracts.md)
+- [Sözleşmeleri Yönlendirme](routing-contracts.md)
 - [Filtre Seçme](choosing-a-filter.md)

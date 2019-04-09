@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: fead6e28949726bef46fe2be46e976fb47c3e9a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125664"
 ---
 # <a name="custom-rendering-ink"></a>Özel İşleme Mürekkebi
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Bir fırça özelliği, boyutunu, rengini ve şekil gibi bir vuruş görünümünü belirtmenize olanak sağlar ancak ne ötesinde görünümünü özelleştirmek istediğiniz zamanlar olabilir <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> izin verin. Mürekkep tarafından işlenirken bir püskürtme kabı, Petrol boyama ve birçok başka etkileri görünüşünü özelleştirme isteyebilirsiniz. Windows Presentation Foundation (WPF), özel işleme mürekkebi özel bir uygulama tarafından sağlayan <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> ve <xref:System.Windows.Ink.Stroke> nesne.  
@@ -92,4 +92,5 @@ ms.locfileid: "57362636"
  Kendi türetilerek mürekkep görünümünü özelleştirebilirsiniz <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, ve <xref:System.Windows.Controls.InkCanvas> sınıfları. Birlikte, bu sınıflar stroke'un Görünümü Kullanıcı vuruşu çizer ve toplandıktan sonra tutarlı olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Gelişmiş Mürekkep İşleme](advanced-ink-handling.md)

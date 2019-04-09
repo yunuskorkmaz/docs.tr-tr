@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd725f7468b26f9d8af3d7928b9df6fbefd93b6f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4c42297e848844617ffdc6c85c81846b5805eb4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502507"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181361"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain Yöntemi
 Varsayılan uygulama etki alanı başlatmak için kullanılacak özelliklerini ayarlar.  
@@ -66,5 +66,6 @@ HRESULT SetPropertiesForDefaultAppDomain(
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)
 - [ICLRDomainManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)

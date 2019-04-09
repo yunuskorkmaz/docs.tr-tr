@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: eee7499373809538355227633ab9a1a66aedb9ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183787"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Windows Forms Denetimlerinde Erişilebilirlik Yönergelerini Destekleyen Özellikler
 Standart araç kutusunda Windows Forms denetimlerinde erişilebilirlik yönergelerini klavye odağı gösterme ve ekran öğeleri gösterme dahil olmak üzere, çoğunu destekler.  
@@ -31,4 +31,5 @@ Standart araç kutusunda Windows Forms denetimlerinde erişilebilirlik yönergel
 |BackgroundImage|Bu özellik, metin daha okunabilir yapmak için boş bırakın.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: Erişilebilir bir Windows tabanlı uygulama oluşturma](walkthrough-creating-an-accessible-windows-based-application.md)
+
+- [İzlenecek yol: Erişilebilir bir Windows Tabanlı Uygulama Oluşturma](walkthrough-creating-an-accessible-windows-based-application.md)

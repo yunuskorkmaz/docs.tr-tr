@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tlbimp.exe kullanarak birincil birlikte çalışma derlemeleri oluşturma'
+title: 'Nasıl yapılır: Tlbimp.exe Kullanarak Birincil Birlikte Çalışma Derlemeleri Oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1136dd3220b189d60b4972410ce0ce6657d07cd
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: 839b0ed6f8e9868e1a3d8e19cc6e8a580313d160
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218989"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146438"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Nasıl yapılır: Tlbimp.exe kullanarak birincil birlikte çalışma derlemeleri oluşturma
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Nasıl yapılır: Tlbimp.exe Kullanarak Birincil Birlikte Çalışma Derlemeleri Oluşturma
 Birincil birlikte çalışma derlemesi oluşturmak için iki yolunuz vardır:  
   
 -   Kullanarak [tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) tarafından sağlanan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
@@ -68,4 +68,5 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Birincil birlikte çalışma derlemelerini kaydetme](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+
+- [Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

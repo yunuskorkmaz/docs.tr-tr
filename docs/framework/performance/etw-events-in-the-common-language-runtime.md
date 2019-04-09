@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 284b7f814f8a9355220f0da59e8fce7d79345609
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d059a5d4df402b309f628bf3e9393114c4cdeec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191399"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Ortak Dil Çalışma Zamanında ETW Olayları
 Ortak dil çalışma zamanı (CLR) yararlı olay izleme ile hata ayıklama ve profil oluşturma olayları, çok çeşitli Windows (ETW) tanılama bilgileri sağlar. CLR ETW olaylarını mevcut profil oluşturma ve hata ayıklama desteği ortak dil çalışma zamanı tarafından sağlanan genişletmek için Windows ETW izleme sistemi yararlanın.  
@@ -36,4 +36,5 @@ Ortak dil çalışma zamanı (CLR) yararlı olay izleme ile hata ayıklama ve pr
  CLR ETW hakkında ayrıntılı bilgi olayları, anahtar sözcükler, düzeyleri ve olay verilerini sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.NET Framework'te ETW Olayları](../../../docs/framework/performance/etw-events.md)

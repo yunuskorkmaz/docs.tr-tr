@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: İstek-yanıt sözleşmesi oluşturma'
+title: 'Nasıl yapılır: İstek-Yanıt Sözleşmesi Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 085514e09eb13676d5c939724071e89535d443f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9954be556df13193c290a55616ad83ef07e0af7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141082"
 ---
-# <a name="how-to-create-a-request-reply-contract"></a>Nasıl yapılır: İstek-yanıt sözleşmesi oluşturma
+# <a name="how-to-create-a-request-reply-contract"></a>Nasıl yapılır: İstek-Yanıt Sözleşmesi Oluşturma
 İstek-yanıt anlaşması yanıt döndüren bir yöntem belirtir. Yanıtı gönderilir ve bu sözleşmenin koşullarına isteğine bağıntılı. Bile yöntem hiç yanıt döndürür (`void` C# veya `Sub` Visual Basic'te), altyapıyı oluşturur ve çağırana bir boş ileti gönderir. Bir boş bir yanıt iletisini göndermeyi önlemek için tek yönlü anlaşma işlemi için kullanın.  
   
 ### <a name="to-create-a-request-reply-contract"></a>İstek-yanıt anlaşması oluşturma  
@@ -48,6 +48,7 @@ public interface ICalculator
 -   Uygulama <xref:System.ServiceModel.ServiceContractAttribute> ve <xref:System.ServiceModel.OperationContractAttribute> öznitelikleri hizmet dağıtıldıktan sonra bu hizmet sözleşmesi tanımları otomatik olarak oluşturulmasını Web Hizmetleri Açıklama Dili (WSDL) belgesinde sağlar. Belge ekleyerek indirdiğiniz `?wsdl` HTTP temel adresi hizmeti. Örneğin, `http://microsoft/CalculatorService?wsdl`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [Hizmet Sözleşmeleri Tasarlama](../../../../docs/framework/wcf/designing-service-contracts.md)
-- [Nasıl yapılır: Çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

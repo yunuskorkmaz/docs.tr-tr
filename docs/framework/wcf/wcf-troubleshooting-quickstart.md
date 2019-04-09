@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168139"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda, birkaç müşteriler içine geliştirme WCF istemcileri ve Hizmetleri çalıştırdığınız bilinen sorunlar listelenmektedir. Çalıştırmakta olduğunuz sorun bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu işlem bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve bu özel durumları hakkında ayrıntılı bilgi almak hizmet içinde oluşabilecek. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -250,4 +250,5 @@ public string Echo(string input)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Kimlik Doğrulama Hatalarını Ayıklama](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

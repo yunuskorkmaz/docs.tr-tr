@@ -2,12 +2,12 @@
 title: Döngüsel İzleme
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: eaecf2205e7618f02a66f8c35fc88ca5a59947b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2339cb780cd09a98dd0cb77eefd66b2473597860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152379"
 ---
 # <a name="circular-tracing"></a>Döngüsel İzleme
 Bu örnek, bir döngüsel arabellek İzleme dinleyicisi uygulamasını gösterir. Sık karşılaşılan bir senaryodur üretim Hizmetleri için uzun süreler için kullanılabilen hizmetler ve izleme günlüğü düşük bir düzeyde etkin ' dir. Bu hizmetler, çok fazla disk alanı kullanır. Bir hizmet sorunlarını giderirken, izleme günlüğü en son verileri sorununuzu çözmek için geçerlidir. Bu örnek yalnızca en son izlemeleri, yapılandırılabilir bir veri miktarına kadar diskte tutulur bir döngüsel arabellek İzleme dinleyicisi uygulanışı gösterilmektedir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve özel İzleme dinleyicisi içerir.  
@@ -60,4 +60,5 @@ Bu örnek, bir döngüsel arabellek İzleme dinleyicisi uygulamasını gösterir
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

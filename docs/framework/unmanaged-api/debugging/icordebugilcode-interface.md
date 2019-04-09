@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b13968e999fb737c954fc41ed2ec220e7894b73b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 279a87039c4cbc12c7ec5f734928c851185280f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175727"
 ---
 # <a name="icordebugilcode-interface"></a>ICorDebugILCode Arabirimi
 [.NET Framework 4.5.2 ve sonraki sürümlerinde desteklenen]  
@@ -40,5 +40,6 @@ ms.locfileid: "54634100"
  **.NET framework sürümleri:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

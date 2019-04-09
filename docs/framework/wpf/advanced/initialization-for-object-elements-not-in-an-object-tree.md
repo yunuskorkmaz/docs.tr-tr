@@ -10,18 +10,16 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108972"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Nesne Ağacında Olmayan Nesne Öğelerini Başlatma
 Bazı yönlerini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] başlatma erteleneceğini mantıksal ağaç veya görsel ağaç'için bağlı bu öğe genellikle kullanan işlemler. Bu konu, ya da ağacına bağlı olmayan bir öğe başlatmak için gereken adımları açıklar.  
-  
- 
-  
+
 ## <a name="elements-and-the-logical-tree"></a>Öğeleri ve mantıksal ağaç  
  Örneği oluşturduğunuzda, bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfı kod içinde çeşitli yönlerini nesne başlatmanın bilmeniz gereken bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfı kasıtlı bir parçası değildir sınıf oluşturucusu çağrılırken yürütülen kod. Özellikle bir denetim sınıf için denetimin görsel temsilini çoğunu Oluşturucu tarafından tanımlanmadı. Bunun yerine, görsel bir temsili denetim şablonu tarafından tanımlanır. Şablon olabilecek çeşitli kaynaklardan gelir, ancak çoğunlukla şablonu tema stillerinden elde edilir. Şablonları etkili bir şekilde geç bağlama; Denetim için Düzen hazır olana kadar gerekli şablon söz konusu denetime bağlı değil. Ve kökünde bir işleme yüzeyi bağlanan bir mantıksal ağaç bağlı olduğu kadar denetim için Düzen hazır değil. Mantıksal ağaçta tanımlanan tüm alt öğeleri işleme başlatır, kök düzeyinde öğesidir.  
   
@@ -43,6 +41,7 @@ Bazı yönlerini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-w
  [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF İçinde Ağaçlar](trees-in-wpf.md)
 - [WPF Grafik İşlemeye Genel Bakış](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)

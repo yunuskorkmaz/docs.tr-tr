@@ -1,18 +1,18 @@
 ---
-title: Bir sorgu sonucunu sayfalama
+title: Sorgu Sonucunu Sayfalama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 11bf7e1021c3bb65e4d736e83d2631ae05c274f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 023efcc15d7080afc1583f4ad8984e152b86cf23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140328"
 ---
-# <a name="paging-through-a-query-result"></a>Bir sorgu sonucunu sayfalama
+# <a name="paging-through-a-query-result"></a>Sorgu Sonucunu Sayfalama
 Bir sorgu sonucunu sayfalama bir sorgunun sonuçlarını veri sayfaları ve daha küçük alt kümelerini döndürme işlemidir. Bu, kolay yönetilmesi, küçük öbekler halinde bir kullanıcı için sonuçları görüntülemek için yaygın bir uygulamadır.  
   
  **DataAdapter** verilerine aşırı yüklemeleri yalnızca bir sayfanın döndürmek için bir olanak sağlar. **dolgu** yöntemi. Ancak, bu büyük sorgu sonuçları için disk belleği için en iyi seçim olmayabilir ancak **DataAdapter** hedef doldurur <xref:System.Data.DataTable> veya <xref:System.Data.DataSet> yalnızca istenen kayıtları döndürmek için kaynaklar ile tüm sorgu yine de kullanılır. Tüm sorgu döndürülecek kaynakların kullanmadan bir veri kaynağından veri sayfasını döndürmek için yalnızca bu gerekli için döndürülen satırları Azalt sorgunuz için ek ölçüt belirtin.  
@@ -124,5 +124,6 @@ adapter.Fill(dataSet, "Orders");
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

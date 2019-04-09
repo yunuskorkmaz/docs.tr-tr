@@ -2,12 +2,12 @@
 title: Hizmet Uç Noktaları ve Kuyruk İşleme
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 7b4eca1519eeb1ed6357b625a3253105ece2b8ad
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172529"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabileceği ve hizmet uç noktaları sıralara nasıl eşleştiği anlatılmaktadır. Aşağıdaki çizimde, bir anımsatıcı Klasik Windows Communication Foundation (WCF) uygulama dağıtımı kuyruğa gösterir.  
@@ -105,4 +105,5 @@ Bu konuda, istemciler sıralarından okuyun hizmetleri nasıl karşılayabilece�
  Net.msmq:// adresleme kullanamayacağınızı unutmayın `MsmqIntegrationBinding`. Çünkü `MsmqIntegrationBinding` serbest biçimli MSMQ adı biçimi adresleme, destekleyen MSMQ çok noktaya yayın ve dağıtım listesi özellikleri kullanmak için bu bağlamayı kullanan bir WCF hizmeti kullanabilirsiniz. Bir özel durum belirten `CustomDeadLetterQueue` kullanırken `MsmqIntegrationBinding`. Bunun nasıl olduğu için benzer form net.msmq:// olmalıdır kullanarak belirtilen `NetMsmqBinding`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Ağ izlemeyi yapılandırma'
+title: 'Nasıl yapılır: Ağ İzlemeyi Yapılandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 3930453e2ba3594e19d8eb7c3dfbceb49c3a1e80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151560"
 ---
-# <a name="how-to-configure-network-tracing"></a>Nasıl yapılır: Ağ izlemeyi yapılandırma
+# <a name="how-to-configure-network-tracing"></a>Nasıl yapılır: Ağ İzlemeyi Yapılandırma
 Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve içeriğini belirleyen ayarları içerir. Bu yordamı gerçekleştirmeden önce izlemenin etkin olduğundan emin olun. İzlemeyi etkinleştirme hakkında daha fazla bilgi için bkz: [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
  Bilgisayar yapılandırma dosyası machine.config, Windows'un yüklü olduğu dizinde %Windir%\Microsoft.NET\Framework klasöründe depolanır. (Örneğin, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config veya C:\Windows\ bilgisayarda yüklü .NET Framework'ün her sürümü için %Windir%\Microsoft.NET\Framework altındaki klasörlerde ayrı bir machine.config dosyası yok Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.).  
@@ -98,7 +98,8 @@ Uygulama veya bilgisayar yapılandırma dosyası, ağ izlemelerinin biçimini ve
 |`Tracemode`|İsteğe bağlı <xref:System.String> özniteliği. Kümesine `includehex` protokol izlemelerini onaltılık ve metin biçiminde göstermek için. Kümesine `protocolonly` yalnızca metin göstermek için. Varsayılan değer `includehex` şeklindedir.<br /><br /> Bu öznitelik ayarlanmalıdır \<anahtarlar > örnekte gösterilen şekilde öğesi. Altındaki bir öğede bu öznitelik ayarlanırsa bir özel durum \<kaynak > öğesi.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ağ İzlemeyi Yorumlama](../../../docs/framework/network-programming/interpreting-network-tracing.md)
 - [.NET Framework'te Ağ İzleme](../../../docs/framework/network-programming/network-tracing.md)
 - [Ağ İzlemeyi Etkinleştirme](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [İzleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

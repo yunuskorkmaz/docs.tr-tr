@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Dönüş satır kümeleri'
+title: 'Nasıl yapılır: Satır Kümeleri Döndürme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 725718f5-da29-4841-9f53-aafef64ba977
-ms.openlocfilehash: b9fcbd8aa74740a66fa6caca18067ac473891f4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 599ad6f722251003ab56547ce050cbd0e8da831d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168720"
 ---
-# <a name="how-to-return-rowsets"></a>Nasıl yapılır: Dönüş satır kümeleri
+# <a name="how-to-return-rowsets"></a>Nasıl yapılır: Satır Kümeleri Döndürme
 Bu örnek veritabanından satır döndürür ve sonucu filtrelemek için bir giriş parametresi içerir.  
   
  Bir satır kümesi döndüren bir saklı yordamı çalıştırdığınızda, kullandığınız bir *sonucu* saklı yordamdan döndürür depolayan sınıf. Daha fazla bilgi için [çözümleme LINQ to SQL kaynak kodunu](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md).  
@@ -37,5 +37,6 @@ END
  [!code-vb[DLinqSprox#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

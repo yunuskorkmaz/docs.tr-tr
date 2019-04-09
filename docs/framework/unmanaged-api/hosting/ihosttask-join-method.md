@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6406e280cd9fd86e32169a77dbb5ef468b8cf564
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4373fc4e8a4c414c40e8d3c5547b5998b9300348
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170778"
 ---
 # <a name="ihosttaskjoin-method"></a>IHostTask::Join Yöntemi
 Geçerli tarafından temsil edilen bir görev kadar çağırma göreviyle engeller [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) örneği tamamlanana, belirtilen zaman aralığı sona erdiğinde, veya [Ihosttask::alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) çağrılır.  
@@ -64,8 +64,9 @@ HRESULT Join (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICLRTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [IHostTask Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
 - [IHostTaskManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [WAIT_OPTION Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)
+- [WAIT_OPTION Numaralandırması](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)

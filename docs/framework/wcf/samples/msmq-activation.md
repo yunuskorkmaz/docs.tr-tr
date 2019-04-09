@@ -2,12 +2,12 @@
 title: MSMQ Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 0b3d90ed756b2bb2b9bebc0ac9e36789a80df1d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162834"
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 Bu örnek, bir ileti kuyruktan okunmak uygulamaların Windows İşlem Etkinleştirme Hizmeti (WAS) barındırmak nasıl gösterir. Bu örnekte `netMsmqBinding` ve dayanır [iki yönlü iletişimi](../../../../docs/framework/wcf/samples/two-way-communication.md) örnek. Bu durumda Web barındırılan bir uygulama hizmetidir ve istemci kendiliğinden barındırılır ve gönderilen satın alma siparişleri durumunu izlemek için konsola çıkışı.  
@@ -351,4 +351,5 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)

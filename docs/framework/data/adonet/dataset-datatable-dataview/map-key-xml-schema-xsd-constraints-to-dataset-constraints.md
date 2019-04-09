@@ -1,15 +1,15 @@
 ---
-title: Anahtar XML Şeması (XSD) kısıtlamalarını DataSet kısıtlamaları ile eşleme
+title: Anahtar XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: a68c43e9ab0a47c6a38bc794bac7d3ceb71391f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46a980f06198c6f06bb13824c65cfb5309eec154
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189924"
 ---
-# <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Anahtar XML Şeması (XSD) kısıtlamalarını DataSet kısıtlamaları ile eşleme
+# <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Anahtar XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 Şemada, bir öğenin anahtar kısıtlaması belirtebilir veya özniteliğini kullanarak **anahtar** öğesi. Öğe veya öznitelik bir anahtar kısıtlaması belirtilen şema örnek benzersiz değerlere sahip olmalıdır ve null değer olamaz.  
   
  Anahtar kısıtlaması, bir anahtar kısıtlaması tanımlandığı sütunu null değerler alamaz dışında benzersiz kısıtlama için benzerdir.  
@@ -79,6 +79,7 @@ TableName: customers
  Değerini **ConstraintName** özelliği **UniqueConstraint** içinde **veri kümesi** değeri **msdata:ConstraintName** Belirtilen öznitelik **anahtar** şema öğesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

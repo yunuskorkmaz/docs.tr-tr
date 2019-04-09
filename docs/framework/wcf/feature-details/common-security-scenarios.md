@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: 094e71d2f84dff482c689ef1475697d93ce889b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199277"
 ---
 # <a name="common-security-scenarios"></a>Ortak Güvenlik Senaryoları
 Bu bölümdeki konular, katalog hizmeti güvenlik yapılandırmalarını ve olası istemci bir numarası. Yapılandırmaları bir dizi etkene göre değişir. Örneğin, bir hizmet veya istemci intranet üzerinde olup veya olup Windows ya da (Örneğin HTTPS) aktarım güvenliği sağlanır.  
@@ -18,25 +18,25 @@ Bu bölümdeki konular, katalog hizmeti güvenlik yapılandırmalarını ve olas
  [İnternet Güvenli Olmayan Hizmet ve İstemci](../../../../docs/framework/wcf/feature-details/internet-unsecured-client-and-service.md)  
  Genel, güvenli olmayan bir istemci ve hizmet örneği.  
   
- [İntranet Güvenli Olmayan Hizmet ve İstemci](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
+ [Intranet Güvenli Olmayan Hizmet ve İstemci](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
  WCF uygulaması için özel bir güvenli ağ üzerinden bilgi sağlamak için temel bir Windows Communication Foundation (WCF) hizmeti geliştirdi.  
   
- [Temel Kimlik Doğrulama ile Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
+ [Temel Kimlik Doğrulama ile Taşıma Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  Uygulamaya özel kimlik doğrulaması kullanarak oturum etmesine olanak tanır.  
   
- [Windows Kimlik Doğrulaması ile Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)  
+ [Windows Kimlik Doğrulama ile Taşıma Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)  
  Bir istemci ve hizmet Windows güvenlik güvenli gösterir.  
   
  [Anonim İstemci ile Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security-with-an-anonymous-client.md)  
  Bu senaryo, gizliliği ve bütünlüğü sağlamak için Aktarım güvenliği (Örneğin HTTPS) kullanır.  
   
- [Sertifika Kimlik Doğrulama ile Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security-with-certificate-authentication.md)  
+ [Sertifika Kimlik Doğrulama ile Taşıma Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security-with-certificate-authentication.md)  
  Bir istemci ve hizmet güvenliği bir sertifika ile sağlanan gösterir.  
   
  [Anonim İstemci ile İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
  Bir istemci ve hizmet tarafından WCF ileti güvenliğini güvenli gösterir.  
   
- [Kullanıcı Adı İstemcisi ile İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
+ [Kullaıcı Adı İstemcisi ile İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  İstemci istemciler, bir etki alanı kullanıcı adı ve parola kullanarak oturum açmasına izin veren bir Windows Forms uygulamasıdır.  
   
  [Sertifika İstemcisi ile İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
@@ -63,7 +63,7 @@ Bu bölümdeki konular, katalog hizmeti güvenlik yapılandırmalarını ve olas
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
  [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)  
   
@@ -71,7 +71,7 @@ Bu bölümdeki konular, katalog hizmeti güvenlik yapılandırmalarını ve olas
   
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
- [Kimlik Doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
  [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
@@ -80,5 +80,6 @@ Bu bölümdeki konular, katalog hizmeti güvenlik yapılandırmalarını ve olas
  [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Güvenlik Kılavuzu ve En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
 - [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

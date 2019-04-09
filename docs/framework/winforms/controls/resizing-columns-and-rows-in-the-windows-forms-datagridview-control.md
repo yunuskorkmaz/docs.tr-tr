@@ -6,12 +6,12 @@ helpviewer_keywords:
 - columns [Windows Forms], resizing in grids
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
-ms.openlocfilehash: 8eae5dafa314bb293f55a780f6be67d06f376004
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138118"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Hücre ve Satırları Yeniden Boyutlandırma
 `DataGridView` Denetim satırları ve sütunları boyutlandırma davranışını özelleştirmek için çeşitli seçenekler sağlar. Genellikle, `DataGridView` hücreleri değil yeniden boyutlandırma, içeriğine göre. Bunun yerine, hücreden daha büyük herhangi bir görüntü değeriyle küçük. İçerik bir dize olarak görüntülenebilir, hücre bir araç ipucu olarak görüntülenir.  
@@ -27,13 +27,13 @@ ms.locfileid: "57709668"
  [Windows Forms DataGridView Denetiminde Sütun Doldurma Modu](column-fill-mode-in-the-windows-forms-datagridview-control.md)  
  Sütun doldurma modu ayrıntılı açıklar ve sütun doldurma modu ve Diğer modları ile denemek için kullanabileceğiniz bir tanıtım kodu sağlar.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminin boyutlandırma modlarını ayarlama](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminin Boyutlandırma Modlarını Ayarlama](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
  Genel amaçlar için boyutlandırma modlarını yapılandırılması açıklanmaktadır.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminde içeriği sığdıracak şekilde hücreleri programlı olarak yeniden boyutlandırma](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde İçeriği Sığdıracak Şekilde Hücreleri Programlı Olarak Yeniden Boyutlandırma](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
  Programlı olarak yeniden boyutlandırma ile denemek için kullanabileceğiniz tanıtım kodu sağlar.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetiminde içerik değiştiğinde hücreleri otomatik olarak yeniden boyutlandırma](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetiminde İçerik Değiştiğinde Hücreleri Otomatik Olarak Yeniden Boyutlandırma](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  Otomatik boyutlandırma modları ile denemek için kullanabileceğiniz tanıtım kodu sağlar.  
   
 ## <a name="reference"></a>Başvuru  
@@ -41,4 +41,5 @@ ms.locfileid: "57709668"
  İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView> denetimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataGridView Denetimi](datagridview-control-windows-forms.md)

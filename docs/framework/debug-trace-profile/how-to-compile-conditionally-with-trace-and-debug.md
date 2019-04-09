@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İzleme ve hata ayıklama ile koşullu derleme'
+title: 'Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1738d73cf99c8b5a8131bd5e018a799c3a7780c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158664"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve hata ayıklama ile koşullu derleme
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme
 Uygulama geliştirme sırasında hata ayıklama sırasında Visual Studio çıktı penceresinde, izleme ve hata ayıklama çıkışını gidin. Ancak, dağıtılan bir uygulamada İzleme özelliklerini eklemek için Araçlı uygulamalarınızla derlemelisiniz **izleme** etkin derleyici yönergesi. Bu, uygulamanızın yayın sürümüne derlenecek izleme kodu sağlar. Değil etkinleştirirseniz **izleme** yönergesi, tüm izleme kodu derleme sırasında yok sayılır ve dağıtacağınız yürütülebilir kodu bulunmaz.  
   
  Koşullu öznitelikler, izleme ve hata ayıklama yöntemleri ilişkilendirdiniz. Örneğin, koşul özniteliğini izleme ise **true**, tüm izleme deyimleri (derlenmiş .exe dosyasının veya .dll); bir derlemenin içinde dahil edilir **izleme** conditional özniteliği olduğundan **false**, izleme deyimleri dahil edilmez.  
@@ -78,8 +78,8 @@ Uygulama geliştirme sırasında hata ayıklama sırasında Visual Studio çıkt
     |**Visual Basic**|**#CONST izleme = true**|İzleme sağlar|  
     ||**#CONST izleme = false**|İzleme devre dışı bırakır|  
     ||**#CONST hata ayıklama = true**|Hata ayıklamayı etkinleştirir|  
-    ||**#CONST DEBUG = false**|Hata ayıklama devre dışı bırakır|  
-    |**C#**|**#define TRACE**|İzleme sağlar|  
+    ||**#CONST hata ayıklama = false**|Hata ayıklama devre dışı bırakır|  
+    |**C#**|**#define izleme**|İzleme sağlar|  
     ||**#undef izleme**|İzleme devre dışı bırakır|  
     ||**#define hata ayıklama**|Hata ayıklamayı etkinleştirir|  
     ||**#undef hata ayıklama**|Hata ayıklama devre dışı bırakır|  
@@ -96,10 +96,11 @@ Out derleyici yönergesi yorum.
 >  Derlemek hazır olduğunuzda ya da seçebilirsiniz **derleme** gelen **derleme** menüsünden veya komut satırı yöntemini kullanın ancak yazmayı olmadan **d:** koşullu tanımlamak için derleme simgeleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Nasıl yapılır: Oluşturma, başlatma ve izleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+
+- [İzleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Nasıl yapılır: Uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Nasıl yapılır: Komut Satırı Derleyicisini Çağırma](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [İz Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Nasıl yapılır: Visual Studio Komut Satırı için Ortam Değişkenlerini Ayarlama](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Nasıl yapılır: Komut satırı derleyicisini çağırma](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

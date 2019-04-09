@@ -9,17 +9,16 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-ms.openlocfilehash: 8180064d1a500ea17568f6790e13398524eb5f36
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d7fe5f15f79ab068e88c3fb6f7b7cac0986aa636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146503"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML Sözdizimi
 Gibi bazı denetimleri <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker>, kullandığınız özelliklere sahip <xref:System.DateTime> türü. Genellikle bir ilk tarih veya saat bu denetimleri için arka plan kod çalışma zamanında belirttiğiniz olsa da, XAML içinde bir başlangıç tarihi veya saati belirtebilirsiniz. WPF XAML ayrıştırıcı ayrıştırılmasını işler <xref:System.DateTime> yerleşik bir XAML metni söz dizimini kullanarak değerleri. Bu konunun ayrıntılarını açıklar <xref:System.DateTime> XAML metni söz dizimi.  
-  
-  
+
 <a name="where_datetime_xaml_syntax_is_used"></a>   
 ## <a name="when-to-use-datetime-xaml-syntax"></a>DateTime XAML söz dizimini kullanacak şekilde ne zaman  
  XAML içinde tarihlerinin ayarlanması, her zaman gerekli değildir ve hatta istenmeyebilir. Örneğin, kullanabileceğinizi <xref:System.DateTime.Now%2A?displayProperty=nameWithType> çalıştırma veya bir tarihte başlatmak için özellik yapmak tüm tarih ayarlamaları Takvim kullanıcı girişini temel alarak gerideki kod içinde. Bununla birlikte, burada isteyebilirsiniz kod sabit tarihler senaryo vardır bir <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker> bir denetim şablonu içinde. <xref:System.DateTime> Bu senaryolar için XAML söz dizimi kullanılmalıdır.  
@@ -75,4 +74,5 @@ Gibi bazı denetimleri <xref:System.Windows.Controls.Calendar> ve <xref:System.W
  Daha önce belirtildiği gibi bir <xref:System.DateTime> XAML içinde kabul edilebilir bir dize belirtilmesi için giriş olarak <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Bu, resmileştirilmiş diğer biçimlere içerir (örneğin <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>) ve belirli bir HTTP'dir değil biçimleri <xref:System.Globalization.DateTimeFormatInfo> formu. Örneğin, form `YYYY/mm/dd` kabul edilebilir için giriş olarak <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Bu konu, çalışan ve bunun yerine standart bir yöntem olarak kısa tarih deseni önerir tüm olası biçimleri açıklamak denemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)

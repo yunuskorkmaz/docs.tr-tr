@@ -29,18 +29,16 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: ecea2575503ad8fe4ff8a190a417bae75a7b31f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149311"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri tanımlar. Bu terimler sık kalanında bu belge, WPF belgeler için her ikisi de özellikle ve XAML veya XAML dil desteğini System.Xaml düzeyinde Etkin temel XAML kavramları kullanan diğer çerçeveler için kullanılır. Bu konu başlığı altında bu konu başlığı altında tanıtılan temel terminoloji genişletir. [XAML genel bakış (WPF)](xaml-overview-wpf.md).  
-  
 
-  
 <a name="the_xaml_language_specification"></a>   
 ## <a name="the-xaml-language-specification"></a>XAML dil belirtimi  
  Burada tanımlanan XAML sözdizimi terminolojisi ayrıca tanımlanan veya başvurulan içinde XAML dil belirtimi. XAML aşağıdaki XML tabanlı bir dildir ve XML yapısal kuralları üzerinde genişletir. Bazı terimler, paylaşılan veya XML dil veya XML belge nesne modeli anlatırken yaygın olarak kullanılan terimler hakkında temel alır.  
@@ -316,8 +314,9 @@ Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri ta
  Ancak yalnızca *typeName*. *memberName* form öznitelikler, *baseTypeName*. *memberName* biçimlendirmede kötü stili ve kaçınmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
-- [XAML Namespace (x:) Dil özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML Ad Alanı (x:) Dil Özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML Uzantıları](wpf-xaml-extensions.md)
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
 - [TypeConverters ve XAML](typeconverters-and-xaml.md)

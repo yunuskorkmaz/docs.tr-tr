@@ -2,12 +2,12 @@
 title: Geliştirme Kanalları
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-ms.openlocfilehash: 74a54972ffa7d00d702a2339665d18acdcbf93ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1922f5158d72bc5bc443e92c6eabb28510dec0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175207"
 ---
 # <a name="developing-channels"></a>Geliştirme Kanalları
 Windows Communication Foundation (WCF) ile kullanılabilecek bir protokolü veya taşıma kanalı geliştirmek için uygulama katmanı birkaç adım gerektirir. Bu konuda, bu adımları açıklar ve daha fazla bilgi için belirli konulara gösterir. Kanal modeli ve bu konunun başlarında bahsedilen çeşitli türlerini anlamak için bkz: [kanal modeline genel bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md). Tam aktarım kanal örnek için bkz [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
@@ -34,4 +34,5 @@ Windows Communication Foundation (WCF) ile kullanılabilecek bir protokolü veya
 4.  Bir bağlama bölümü ve bağlama yapılandırma sistemi kullanıma sunmak için bağlama yapılandırma öğesi ekleyin. Daha fazla bilgi için [yapılandırma ve meta veri desteği](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağlamaları Genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md)

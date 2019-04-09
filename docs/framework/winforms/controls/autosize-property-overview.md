@@ -7,12 +7,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-ms.openlocfilehash: 2fc06bef2434e87b7fbd3ec79e7671c4e32b7b3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d5c4a22f186ddc5811c4a4d5e79776decea9e50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173634"
 ---
 # <a name="autosize-property-overview"></a>AutoSize Özelliğine Genel Bakış
 <xref:System.Windows.Forms.Control.AutoSize%2A> Özelliği tarafından belirtilen değeri elde etmek gerekirse kendi boyutunu değiştirmek bir denetim sağlar <xref:System.Windows.Forms.Control.PreferredSize%2A> özelliği. Belirli denetimler için boyutlandırma davranışını belirleyerek ayarlama `AutoSizeMode` özelliği.  
@@ -67,6 +67,7 @@ ms.locfileid: "54649836"
 >  Üretkenlik, Windows Form Tasarımcısı'shadows ' en üst düzeye çıkarmak <xref:System.Windows.Forms.Control.AutoSize%2A> özelliği <xref:System.Windows.Forms.Form> sınıfı. Tasarım zamanında, gibi ancak form davranışını <xref:System.Windows.Forms.Control.AutoSize%2A> özelliği `false`gerçek ayarına bakılmaksızın. Hiçbir özel Konaklama çalışma zamanında yapılmış ve <xref:System.Windows.Forms.Control.AutoSize%2A> özelliği uygulanan özellik ayarı tarafından belirtildiği gibi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.PreferredSize%2A>
 - <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11b36fa4636dd55e539c198a260dcf93da02a237
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b40ac5f49288f7b30018e0c8c727e3ce6b73ae8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199498"
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC Numaralandırması
 Özel tanımlayıcılardır belirten sabit değerleri içerir.  
@@ -54,4 +54,5 @@ typedef enum {
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+
+- [Profil Oluşturma Numaralandırmaları](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

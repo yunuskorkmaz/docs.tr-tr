@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Oturumlarının gerektiren bir hizmet oluşturma'
+title: 'Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-ms.openlocfilehash: fa151d472dbd27a62f91cd3a43339c66787dc456
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c104798fa3ef0e8b9dc43ad9cc68599b71de4011
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140497"
 ---
-# <a name="how-to-create-a-service-that-requires-sessions"></a>Nasıl yapılır: Oturumlarının gerektiren bir hizmet oluşturma
+# <a name="how-to-create-a-service-that-requires-sessions"></a>Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma
 Oturumları, istemcilere hizmet örnekleri arasındaki ilişkilendirmeleri geri çağırmaları ve çok atlamalı güvenlik gibi yararlı özellikleri sağlayan iki veya daha fazla uç noktalar arasında paylaşılan bir durum oluşturur. Windows Communication Foundation (WCF) uygulamalarında oturumları hakkında daha fazla bilgi için bkz. [oturumları kullanarak](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>Bir sözleşme bağlamasına oturumları desteklemek gerekli olduğunu belirtmek için  
@@ -39,6 +39,7 @@ Oturumları, istemcilere hizmet örnekleri arasındaki ilişkilendirmeleri geri 
  [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]     
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType>

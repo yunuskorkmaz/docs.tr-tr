@@ -1,18 +1,18 @@
 ---
-title: DataRow silme
+title: DataRow Silme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 69bdf4d23463cc07259a2b1de6b9efaa78f0f0de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196144"
 ---
-# <a name="datarow-deletion"></a>DataRow silme
+# <a name="datarow-deletion"></a>DataRow Silme
 Silmek için kullanabileceğiniz iki yöntem vardır bir <xref:System.Data.DataRow> nesnesinden bir <xref:System.Data.DataTable> nesne: **Kaldır** yöntemi <xref:System.Data.DataRowCollection> nesnesi ve <xref:System.Data.DataRow.Delete%2A> yöntemi **DataRow**nesne. Oysa <xref:System.Data.DataRowCollection.Remove%2A> yöntemi siler bir **DataRow** gelen **DataRowCollection**, <xref:System.Data.DataRow.Delete%2A> yöntemi yalnızca satır silme işlemi için işaretler. Uygulama çağırdığında gerçek kaldırma gerçekleşir **AcceptChanges** yöntemi. Kullanarak <xref:System.Data.DataRow.Delete%2A>, hangi satırların gerçekten kaldırmadan önce silinmek üzere işaretlenmiş programlı olarak denetleyebilirsiniz. Satır silme için işaretlendiğinden kendi <xref:System.Data.DataRow.RowState%2A> özelliği <xref:System.Data.DataRow.Delete%2A>.  
   
  Ne <xref:System.Data.DataRow.Delete%2A> ya da <xref:System.Data.DataRowCollection.Remove%2A> bir foreach döngüsü içinde yineleme sırasında çağrılması gereken bir <xref:System.Data.DataRowCollection> nesne. <xref:System.Data.DataRow.Delete%2A> ya da <xref:System.Data.DataRowCollection.Remove%2A> koleksiyon durumunu değiştirin.  
@@ -45,6 +45,7 @@ workRow.Delete();
 >  Varsa **RowState** , bir **DataRow** olduğu **eklenen**, yani yalnızca eklendiğini tablosuna ve ardından olarak işaretlenmiş **silinmiş**, bu tablosundan kaldırıldı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>

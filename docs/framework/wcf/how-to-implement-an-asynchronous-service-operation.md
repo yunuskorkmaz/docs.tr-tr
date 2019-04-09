@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: 8d11f39942793414e9e800b4e180d4d5ed5b2a3a
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: ec1c6549c4a386f529ca2191e1876975b2bf5dcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186855"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Nasıl yapılır: Zaman Uyumsuz Bir Hizmet İşlemi Uygulama
 Windows Communication Foundation (WCF) uygulamalar, bir hizmet işlemi zaman uyumlu veya zaman uyumsuz olarak nasıl çağıran istemciye dikte olmadan uygulanabilir. Örneğin, zaman uyumsuz hizmet işlemlerini zaman uyumlu olarak çağrılması ve zaman uyumlu hizmet işlemlerini zaman uyumsuz olarak çağrılabilir. İşlem bir istemci uygulamasında zaman uyumsuz olarak çağırma gösteren bir örnek için bkz [nasıl yapılır: Hizmet işlemlerini zaman uyumsuz çağırma](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Zaman uyumlu ve zaman uyumsuz işlemler hakkında daha fazla bilgi için bkz: [Hizmet sözleşmeleri tasarlama](../../../docs/framework/wcf/designing-service-contracts.md) ve [zaman uyumlu ve zaman uyumsuz işlemler](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). Bu konu zaman uyumsuz bir hizmet işlemi temel yapısını tanımlar, kod tam değil. Hem hizmet hem de istemci tarafında tam bir örnek için bkz: [zaman uyumsuz](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
@@ -46,5 +46,6 @@ Windows Communication Foundation (WCF) uygulamalar, bir hizmet işlemi zaman uyu
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hizmet Sözleşmeleri Tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Zaman Uyumlu ve Zaman Uyumsuz İşlemler](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)

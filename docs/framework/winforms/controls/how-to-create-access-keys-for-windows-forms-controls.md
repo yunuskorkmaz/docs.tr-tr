@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms denetimleri için erişim tuşları oluşturma'
+title: 'Nasıl yapılır: Windows Forms Denetimleri için Erişim Tuşları Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 5713bc9fa02e6122cc42348160dbe9315e023bc4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fefd322afb938453ec1ea23e8ff6de9f9ae2a851
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141641"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Nasıl yapılır: Windows Forms denetimleri için erişim tuşları oluşturma
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Nasıl yapılır: Windows Forms Denetimleri için Erişim Tuşları Oluşturma
 Bir *erişim anahtarı* menü, menü öğesi ya da bir düğme gibi bir denetimin etiket metninin altı çizili karakterdir. Bir erişim anahtarı ile kullanıcı "bir düğme önceden tanımlanmış bir erişim anahtarı ile birlikte ALT tuşuna basarak tıklayabilirsiniz". Örneğin, bir form yazdırma için bir yordam bir düğme çalıştırır ve bu nedenle kendi `Text` "P" harfi harfine çalışma zamanında düğmesi metnin altı çizili "P" neden olmadan önce ve işareti ekleme özelliği "Print," ayarlanır. Kullanıcı, ilişkili düğme ALT + P tuşlarına basarak komut çalıştırabilirsiniz. Bir erişim anahtarı için alamayan bir denetim sahip olamaz.  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>Bir denetim için erişim anahtarı oluşturmak için  
@@ -53,7 +53,8 @@ Bir *erişim anahtarı* menü, menü öğesi ya da bir düğme gibi bir denetimi
     >  Bir erişim anahtarı oluşturmadan bir başlık ve işareti eklemek için iki işaretlerini Ekle (& &). Tek bir ve işareti başlığı görüntülenir ve herhangi bir karakter altı çizili olarak gösterilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Button>
-- [Nasıl yapılır: Windows Forms düğme tıklamalarına yanıt verme](how-to-respond-to-windows-forms-button-clicks.md)
-- [Nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Nasıl yapılır: Windows Forms Düğme Tıklamalarına Yanıt Verme](how-to-respond-to-windows-forms-button-clicks.md)
+- [Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

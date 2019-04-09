@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b71c177c7c0cb029fb7cfa734f54c87abf20b348
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7864bb81c3b457bf8ec07cd194d24b29a42bd441
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156071"
 ---
 # <a name="iclriocompletionmanager-interface"></a>ICLRIoCompletionManager Arabirimi
 Belirtilen g/ç durumunu ortak dil çalışma zamanı (CLR) bildirmek için ana izin veren bir geri çağırma yöntemi uygular ister.  
@@ -45,6 +45,7 @@ Belirtilen g/ç durumunu ortak dil çalışma zamanı (CLR) bildirmek için ana 
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IHostIoCompletionManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
 - [IHostThreadPoolManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
 - [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

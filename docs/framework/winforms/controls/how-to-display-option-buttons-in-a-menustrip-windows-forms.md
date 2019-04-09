@@ -9,12 +9,12 @@ helpviewer_keywords:
 - displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-ms.openlocfilehash: c64dd88915fdd17deee415b4d6c3fd088fbcfbfd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 61feda3f49c9a9e03a606c0284629f809d6876b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115537"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Nasıl yapılır: MenuStrip (Windows Forms) seçenek düğmeleri görüntüleme
 Seçenek düğmeleri, radyo düğmeleri olarak da bilinir, kullanıcılar yalnızca teker teker seçebilir dışında onay kutularını işaretleyin benzerdir. Ancak varsayılan olarak <xref:System.Windows.Forms.ToolStripMenuItem> sınıfı seçenek düğmesini davranışı sağlamaz, sınıfı menü öğeleri için seçenek düğmesini davranışı uygulamak için özelleştirebileceğiniz onay kutusu davranış sağlayan bir <xref:System.Windows.Forms.MenuStrip> denetimi.  
@@ -81,6 +81,7 @@ Seçenek düğmeleri, radyo düğmeleri olarak da bilinir, kullanıcılar yalnı
 -   Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=nameWithType>
@@ -90,4 +91,4 @@ Seçenek düğmeleri, radyo düğmeleri olarak da bilinir, kullanıcılar yalnı
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RadioButtonRenderer>
 - [MenuStrip Denetimi](menustrip-control-windows-forms.md)
-- [Nasıl yapılır: Özel ToolStripRenderer uygulama](how-to-implement-a-custom-toolstriprenderer.md)
+- [Nasıl yapılır: Özel ToolStripRenderer Uygulama](how-to-implement-a-custom-toolstriprenderer.md)

@@ -1,18 +1,18 @@
 ---
-title: DataAdapter parametreleri
+title: DataAdapter Parametreleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: dcc4c5485e59456d75c0f183e9b53b457072ab94
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b8284f45d769f018655ee35a5f0b067703963634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199108"
 ---
-# <a name="dataadapter-parameters"></a>DataAdapter parametreleri
+# <a name="dataadapter-parameters"></a>DataAdapter Parametreleri
 <xref:System.Data.Common.DbDataAdapter> Verileri almak ve verileri için veri kaynağını güncelleştirmek için kullanılan dört özelliklere sahiptir: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> özelliği veri kaynağından; veri döndürür ve <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, ve <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> özellikleri yönetmek için kullanılır veri kaynağındaki değişiklikleri. `SelectCommand` Özelliği çağırmadan önce ayarlanmalıdır `Fill` yöntemi `DataAdapter`. `InsertCommand`, `UpdateCommand`, Veya `DeleteCommand` özelliklerini ayarlamak, önce `Update` yöntemi `DataAdapter` , hangi değişiklikleri verilerde yapılan bağlı olarak adlandırılır <xref:System.Data.DataTable>. Satırlar eklenir, örneğin, `InsertCommand` çağırmadan önce ayarlanmalıdır `Update`. Zaman `Update` eklenen, güncelleştirilen veya silinen satır işleme `DataAdapter` ilgili kullanan `Command` eylemi işlemek için özellik. Değiştirilen satır hakkında güncel bilgiler geçirildiğinde `Command` nesnesi aracılığıyla `Parameters` koleksiyonu.  
   
  Veri kaynağındaki satırı güncelleştirmek, güncelleştirilecek tablosundaki bir satırı tanımlamak için benzersiz bir tanımlayıcı kullanır UPDATE deyiminin çağırın. Benzersiz tanımlayıcı genellikle bir birincil anahtar alanı değeridir. UPDATE deyimini aşağıdaki Transact-SQL deyiminde gösterildiği gibi benzersiz tanımlayıcısı ve sütunları hem güncelleştirilmesi için değerleri içeren parametrelerini kullanır.  
@@ -165,6 +165,7 @@ adapter.Fill(customers, "Customers");
 >  Parametre adı için bir parametre sağlanmazsa, parametre parametresinin bir artımlı varsayılan ad verilir*N* *,* "Parametre1" ile başlayan. Parametre kaçınmanızı öneririz*N* bir parametre adı sağlayın, mevcut bir varsayılan parametre adı ile sağladığınız ad çakışması nedeniyle adlandırma kuralı `ParameterCollection`. Sağlanan ad zaten varsa, bir özel durum oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)

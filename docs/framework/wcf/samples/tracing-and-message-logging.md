@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5cd0e9620250b410e60c1fd378e7525bb2917756
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ba4428bad6662928ddc1830c8998dd5f5b6b9bbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186582"
 ---
 # <a name="tracing-and-message-logging"></a>İleti İzleme ve Kaydetme
 Bu örnek, izleme ve ileti günlüğe kaydetmeyi etkinleştirme gösterir. Sonuçta elde edilen izleme ve ileti günlüklerini kullanarak görüntülenen [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -133,5 +133,6 @@ Bu örnek, izleme ve ileti günlüğe kaydetmeyi etkinleştirme gösterir. Sonu�
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İzleme](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

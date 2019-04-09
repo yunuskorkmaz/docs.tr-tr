@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184827"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma
 Kullandığınızda, bir <xref:System.Windows.Forms.DataGridView> uygulamanızdaki verileri düzenlemek için genellikle, kullanıcılarınızın veri deposuna veri yeni satır ekleme olanağı sağlayacak istersiniz. <xref:System.Windows.Forms.DataGridView> Denetimi, bir satır yeni kayıtlar için her zaman son satır gösterilen sağlayarak bu işlevselliği destekler. Kendi satır üst bilgisi olarak bir yıldız işareti (*) simgesiyle işaretlenir. Aşağıdaki bölümlerde yeni kayıtlar için satır programla etkin olduğunda dikkate almanız gereken şeylerden bazıları açıklanmaktadır.  
@@ -58,7 +58,8 @@ Kullandığınızda, bir <xref:System.Windows.Forms.DataGridView> uygulamanızda
  Sanal mod uyguluyorsanız, yeni kayıtlar için bir satır veri modeli ve satır eklenmesi geri almak ne zaman gerektiğinde izlemek gerekir. Bu işlevlerin tam uygulama işleme kapsamı bir veya daha fazla satır düzeyinde olup olmadığını uygulamasının veri modeli ve kendi işlem semantiği, örneğin, bağlıdır. Daha fazla bilgi için [Windows Forms DataGridView denetiminde sanal mod](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Windows Forms DataGridView Denetiminde Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde yeni satırlar için varsayılan değerleri belirtme](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Windows Forms DataGridView Denetimindeki Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Yeni Satırlar İçin Varsayılan Değerleri Belirtme](specify-default-values-for-new-rows-in-the-datagrid.md)

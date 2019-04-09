@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60d42fa296585d26186a2e75a49c5b3cf761e846
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4bb09f827726f759383598d18fb80657a7e2ff04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179068"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>Genel Derleme Önbelleği ile Hizmet Verilen Bileşenleri Kullanma
 Hizmet verilen bileşenlerin (yönetilen kod COM + bileşenleri) genel derleme önbelleğinde koymanız gerekir. Bazı senaryolarda, COM + Hizmetleri ve ortak dil çalışma zamanı genel derleme önbelleğinde olmayan hizmet verilen bileşenleri işleyebilir; Diğer senaryolarda yapamazlar. Aşağıdaki senaryolar bu göstermektedir:  
@@ -26,5 +26,6 @@ Hizmet verilen bileşenlerin (yönetilen kod COM + bileşenleri) genel derleme �
 -   Bir ASP.NET uygulamasında hizmet verilen bileşenleri için durum farklıdır. Uygulama temel bin dizininde servis verilen bileşenleri içeren derlemenin yerleştirin ve isteğe bağlı kayıt kullanıyorsanız, ASP.NET çalışma zamanı gölge yeteneklerini kullanır çünkü derleme indirme önbelleğe gölge kopyalar olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bütünleştirilmiş Kodlar ve Genel Derleme Önbelleği ile Çalışma](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+
+- [Derlemeler ve Genel Derleme Önbelleği ile Çalışma](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

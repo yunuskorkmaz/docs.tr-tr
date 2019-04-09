@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92e4f416e26e5af9124593f2bef8d8042fcfc953
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163143"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
 .NET yerel uygulamaları Windows Store veya Geliştirici bilgisayara statik derlenmesini sağlar. Bu Windows Store uygulamaları için tam zamanında (JIT) derleyici tarafından gerçekleştirilen dinamik derlemeden farklıdır veya [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) cihazda. Farklar rağmen .NET Native ile uyumluluğu korumak çalışır [.NET için Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). Çoğunlukla, .NET için Windows Store uygulamaları iş öğeleri de .NET Native ile çalışır.  Ancak, bazı durumlarda, davranış değişiklikleri karşılaşabilirsiniz. Bu belge aşağıdaki alanlarda standart .NET için Windows Store uygulamaları ve .NET Native arasındaki farklar açıklanır:  
@@ -99,7 +99,7 @@ ms.locfileid: "56966794"
   
 -   [HttpClient](#HttpClient)  
   
--   [Interop](#Interop)  
+-   [Birlikte çalışma](#Interop)  
   
 -   [Desteklenmeyen API'leri](#APIs)  
   
@@ -153,7 +153,7 @@ ms.locfileid: "56966794"
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Yöntemi .NET Native kısa tarihler içeren dizeleri doğru bir şekilde ayrıştırılır. Ancak, tarih değişikliği uyumluluk saklamaz ve zaman ayrıştırma Microsoft Bilgi Bankası makalelerinde açıklandığı [KB2803771](https://support.microsoft.com/kb/2803771) ve [KB2803755](https://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` doğru .NET Native yuvarlanır. CLR'nin bazı sürümleri, sonuç dizesine yerine kesilmiş yuvarlanır.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is corredoğru .NET Native yuvarlanır. CLR'nin bazı sürümleri, sonuç dizesine yerine kesilmiş yuvarlanır.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient farkları  
@@ -177,11 +177,11 @@ ms.locfileid: "56966794"
   
  .NET için Windows Store apps ayarlamanıza olanak tanır <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> özelliğini <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>hem <xref:System.Net.DecompressionMethods.Deflate> ve <xref:System.Net.DecompressionMethods.GZip>, veya <xref:System.Net.DecompressionMethods.None>.  Yalnızca .NET native destekler <xref:System.Net.DecompressionMethods.Deflate> ile birlikte <xref:System.Net.DecompressionMethods.GZip>, veya <xref:System.Net.DecompressionMethods.None>.  Ayarlanmaya çalışılırken <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> ya da özellik <xref:System.Net.DecompressionMethods.Deflate> veya <xref:System.Net.DecompressionMethods.GZip> tek başına sessizce hem de ayarlar <xref:System.Net.DecompressionMethods.Deflate> ve <xref:System.Net.DecompressionMethods.GZip>.  
   
- **Çerezler**  
+ **Tanımlama bilgileri**  
   
  Tanımlama bilgisi işleme ile aynı anda gerçekleştirilen <xref:System.Net.Http.HttpClient> ve WinINet.  Tanımlama bilgilerine <xref:System.Net.CookieContainer> WinINet tanımlama bilgisi önbelleğinde tanımlama bilgileri ile birleştirilir.  Tanımlama bilgisinden kaldırma <xref:System.Net.CookieContainer> engeller <xref:System.Net.Http.HttpClient> tanımlama bilgisi, zaten WinINet tarafından görülen ve tanımlama bilgileri, kullanıcı tarafından silinmiş olmayan ancak tanımlama bilgisi göndermesini WinINet gönderir.  Program aracılığıyla kullanarak bir tanımlama bilgisi WinINet kaldırmak mümkün değildir <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler>, veya <xref:System.Net.CookieContainer> API.  Ayarı <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> özelliğini `false` yalnızca neden <xref:System.Net.Http.HttpClient> tanımlama bilgileri göndermeyi durdurun WinINet, yine de isteğinde, tanımlama bilgileri içerebilir.  
   
- **Kimlik bilgileri**  
+ **Kimlik Bilgileri**  
   
  .NET için Windows Store uygulamalarında <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> ve <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> özellikleri bağımsız olarak çalışır.  Ayrıca, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği uygulayan nesne kabul eden <xref:System.Net.ICredentials> arabirimi.  Ayarı .NET Native içinde <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> özelliğini `true` neden <xref:System.Net.Http.HttpClientHandler.Credentials%2A> olacak özelliği `null`.  Ayrıca, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği yalnızca ayarlanabilir `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>, veya bir nesne türü <xref:System.Net.NetworkCredential>.  Diğer atama <xref:System.Net.ICredentials> en popüler olan nesne, <xref:System.Net.CredentialCache>, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği oluşturur bir <xref:System.PlatformNotSupportedException>.  
   
@@ -575,13 +575,9 @@ Diğer desteklenmeyen birlikte çalışma özellikleri şunlardır:
      Tür `InnerType` seri hale getirici için temel sınıf üyelerini serileştirme sırasında geçiş değildir çünkü bilinen değil.  
   
 -   <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> bir sınıf veya yapı uygulayan serileştirmek başarısız <xref:System.Collections.Generic.IEnumerable%601> arabirimi. Örneğin, aşağıdaki türleri serileştirmek veya seri durumdan çıkarmak başarısız:  
-  
-  
-  
+
 -   <xref:System.Xml.Serialization.XmlSerializer> serileştirilecek nesnenin tam tür bilmediği aşağıdaki nesne değeri serileştirmek başarısız olur:  
-  
-  
-  
+
 -   <xref:System.Xml.Serialization.XmlSerializer> serileştirmek veya seri hale getirilmiş nesne türü ise seri durumdan başaramıyor <xref:System.Xml.XmlQualifiedName>.  
   
 -   Tüm seri hale getiricileri genişletme (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ve <xref:System.Xml.Serialization.XmlSerializer>) tür için serileştirme kod oluşturmak başarısız <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> ya da içeren bir tür için <xref:System.Xml.Linq.XElement>. Bunlar bunun yerine derleme zamanı hataları görüntüleyin.  
@@ -651,6 +647,7 @@ Diğer desteklenmeyen birlikte çalışma özellikleri şunlardır:
  .NET yerel bir Windows Store uygulamaları projesi için bir birim testi kitaplığı üzerindeki etkinleştirme desteklenmez ve projeyi oluşturmak başarısız olmasına neden olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [.NET için Windows Store uygulamalarına genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)

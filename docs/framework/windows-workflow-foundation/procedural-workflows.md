@@ -1,15 +1,15 @@
 ---
-title: Yordam iş akışları
+title: Yordam İş Akışları
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: fcf50296a8ce3e7e2e0631057467af8a8efd9215
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 05942418038ca4349e32973aeefdfc4a50e49f46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164755"
 ---
-# <a name="procedural-workflows"></a>Yordam iş akışları
+# <a name="procedural-workflows"></a>Yordam İş Akışları
 Yordam iş akışları, akış denetimi yöntemleri yordam dillerinde bulunan benzer kullanın. Bu yapılar dahil `While` ve `If`. Bu iş akışları gibi diğer akış denetimi etkinlikleri kullanarak serbestçe oluşturulabildikleri <xref:System.Activities.Statements.Flowchart> ve <xref:System.Activities.Statements.Sequence>.  
   
 ## <a name="controlling-execution-flow"></a>Yürütme akışı denetimi  
@@ -37,4 +37,5 @@ Yordam iş akışları, akış denetimi yöntemleri yordam dillerinde bulunan be
 >  Kullanıyorsanız [!INCLUDE[dublin](../../../includes/dublin-md.md)] bir Web grubundaki konak iş akışlarına AppFabric örnekleri farklı AppFabric sunucular arasında taşınır. Bu, kaynakları tüm düğümler arasında paylaşılacak mümkün olmasını gerektirir.  Varsayılan ağ 4 iş akışı etkinlikleri hiçbiri yerel kaynaklara erişen herhangi bir işlem içerir. İş akışı immovable olarak işaretlemek için herhangi bir mekanizma AppFabric sunmaz olduğundan, bir geliştirici iş akışı taşındığında başarısız olan özel etkinlikler oluşturmamalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Akış Çizelgesi İş Akışları](flowchart-workflows.md)

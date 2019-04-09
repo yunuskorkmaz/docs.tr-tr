@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress controls [Windows Forms]
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-ms.openlocfilehash: 57a8c61c71fa17e1d3df309007823eab76d9efb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162117"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar Denetimine Genel Bakış
 <xref:System.Windows.Forms.ToolStripProgressBar> Radye ve tüm işleme işlevselliğini bir araya getiren <xref:System.Windows.Forms.ToolStrip> tipik işlem izleme işlevselliği denetimleriyle. A <xref:System.Windows.Forms.ToolStripProgressBar> en genellikle tarafından barındırılan <xref:System.Windows.Forms.StatusStrip>, sık göre küçük bir <xref:System.Windows.Forms.ToolStrip>.  
@@ -32,4 +32,5 @@ ms.locfileid: "54528634"
 |<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|İlerleme çubuğu geçerli konumunu miktarına göre ilerler <xref:System.Windows.Forms.ToolStripProgressBar.Step%2A> özelliği.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ToolStripProgressBar>

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms etiket denetimleri ile erişim tuşları oluşturma'
+title: 'Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: 227880ad15e452df3f05807c41f3923cccb6fe3a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ff603ee784978a8b2bab2cccd4610fc50b45d477
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171723"
 ---
-# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Nasıl yapılır: Windows Forms etiket denetimleri ile erişim tuşları oluşturma
+# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma
 Windows Forms <xref:System.Windows.Forms.Label> denetimleri, diğer denetimler için erişim anahtarları tanımlamak için kullanılabilir. Kullanıcı, bir etiket denetiminde bir erişim anahtarı tanımladığınızda, ALT tuşuyla sekme sırasının takip eden denetim odağı taşımak için belirlediğiniz karakter basabilirsiniz. Etiketleri odağı alamıyor olduğundan, odak sonraki sekme sırasını denetimde otomatik olarak taşır. Metin kutuları, birleşik giriş kutuları, liste kutuları ve veri kılavuzları için erişim anahtarlarını atamak için bu tekniği kullanın.  
   
 ### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Bir denetimi bir etikete sahip bir erişim anahtarı atamak için  
@@ -64,6 +64,7 @@ Windows Forms <xref:System.Windows.Forms.Label> denetimleri, diğer denetimler i
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bir Windows Forms etiket denetimini içeriğini sığdıracak şekilde boyutlandırma](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+
+- [Nasıl yapılır: Windows Forms Etiket Denetimini İçeriğini Sığdıracak Şekilde Boyutlandırma](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Etiket Denetimine Genel Bakış](label-control-overview-windows-forms.md)
 - [Etiket Denetimi](label-control-windows-forms.md)

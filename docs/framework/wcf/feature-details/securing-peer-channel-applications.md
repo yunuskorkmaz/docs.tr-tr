@@ -2,12 +2,12 @@
 title: Eş Kanalı Uygulamalarını Güvenli Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: d6dd6d95fb151a4f06dc4f632465b38b07720a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146256"
 ---
 # <a name="securing-peer-channel-applications"></a>Eş Kanalı Uygulamalarını Güvenli Hale Getirme
 Gibi diğer bağlamalar altında [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` güvenlik varsayılan olarak etkin olan ve her ikisi de taşıma ve ileti tabanlı güvenlik (veya) sunar. Bu konuda, bu iki tür güvenlik anlatılmaktadır. Bağlama belirtimi güvenlik modu etiketinde tarafından belirtilen güvenlik türünü (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
@@ -42,5 +42,6 @@ Gibi diğer bağlamalar altında [!INCLUDE[vstecwinfx](../../../../includes/vste
  [Eş Kanal Senaryoları](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Eş Kanalı Güvenliği](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
 - [Eş Kanal Uygulaması Oluşturma](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

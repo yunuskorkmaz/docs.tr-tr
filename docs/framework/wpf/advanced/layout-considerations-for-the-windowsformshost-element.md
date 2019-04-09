@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168993"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar
 Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi etkileşim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
@@ -99,9 +99,10 @@ Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost
 -   Varsa <xref:System.Windows.Forms.Control.Size%2A> özelliği belirtilen sınırlama, daha küçük bir boyuttan döndürür <xref:System.Windows.Forms.Integration.WindowsFormsHost> bu boyut değerini kabul eder ve değeri döndürür [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [İzlenecek yol: Düzenleme Windows Forms denetimlerini düzenleme](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [İzlenecek yol: WPF’de Windows Forms Denetimlerini Düzenleme](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [Düzenleme Windows Forms denetimleri örneği](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Windows Forms ve WPF Özelliğini Eşleme](windows-forms-and-wpf-property-mapping.md)
 - [Geçiş ve Birlikte Çalışabilirlik](migration-and-interoperability.md)

@@ -2,14 +2,14 @@
 title: Dil ile tümleşik sorgu (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 108dc60285e51ab4cd703e668127a4ffd5fc1c74
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186634"
 ---
-# <a name="language-integrated-query-linq"></a>Dil ile tümleşik sorgu (LINQ)
+# <a name="language-integrated-query-linq"></a>Dil ile Tümleşik Sorgu (LINQ)
 
 Dil ile tümleşik sorgu (LINQ) tümleştirmesini sorgu özellikleri doğrudan C# dilinin temel teknoloji kümesi adıdır. Geleneksel olarak, veri sorguları zaman veya IntelliSense desteği olmadan tür denetimini en basit dizeler derleme olarak ifade edilir. Ayrıca, her veri kaynağı türü için bir farklı bir sorgu dili öğrenmek zorunda: SQL veritabanlarını, XML belgeleri, çeşitli Web Hizmetleri ve benzeri. LINQ ile olduğu gibi sınıflar, yöntemler, olaylar bir birinci sınıf dil yapısı sorgu.
 
@@ -42,13 +42,10 @@ Aşağıdaki örnek, tam bir sorgu işlemi gösterilmektedir. Veri kaynağı olu
 LINQ hakkında daha fazla bilgi edinmek için bazı temel kavramları hakkında bilgi sahibi olma Başlat [sorgu ifadesi Temelleri](../../../linq/query-expression-basics.md), ve ardından, olduğu ilgilenen LINQ teknolojisi için belgeleri okuyun:   
 -   XML belgeleri: [LINQ to XML](linq-to-xml.md)  
   
--   ADO.NET Entity Framework: [LINQ to entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+-   ADO.NET varlık çerçevesi: [LINQ to entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
--   Dosyaları, .NET koleksiyonlarında dizeleri vb.: [nesnelere LINQ](linq-to-objects.md)
+-   .NET koleksiyonları, dosyaları, dizeleri ve bu şekilde devam eder: [Nesnelere LINQ](linq-to-objects.md)
 
 Bir derin LINQ genel olarak anlaşılması için bkz: [C# üzerinde LINQ](../../../linq/linq-in-csharp.md).
 
 C# üzerinde LINQ ile çalışmaya başlamak için öğreticiye bakın [LINQ ile çalışma](../../../tutorials/working-with-linq.md).
-
-
-

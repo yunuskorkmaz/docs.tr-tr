@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 2e818f3d5a7dfa85bf361d7de0cbd5bcb2dfe63b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c63dd07686463c652c27dea8473b4d8cbe2dab71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137676"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Nesne gerçekleştirme (WCF Data Services)
 Kullanırken **hizmet Başvurusu Ekle** iletişim kullanmak için bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bir .NET Framework tabanlı istemci uygulamasında akış, eşdeğeri veri sınıfları için veri modelindeki akış tarafından kullanıma sunulan her varlık türü oluşturulur. Daha fazla bilgi için [veri hizmeti istemci kitaplığı oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Bir sorgu tarafından döndürülen varlık verilerini bu oluşturulan istemci veri hizmeti sınıfları birinin bir örneğine tanımdır. Birleştirme seçeneklerini ve izlenen nesneler için kimlik çözümü hakkında daha fazla bilgi için bkz: [veri hizmeti bağlamını yönetme](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
@@ -47,5 +47,6 @@ Kullanırken **hizmet Başvurusu Ekle** iletişim kullanmak için bir [!INCLUDE[
 5.  İstemci Kitaplığı nesnesine iliştirir <xref:System.Data.Services.Client.DataServiceContext>. Nesne ne zaman bağlı <xref:System.Data.Services.Client.MergeOption> olduğu <xref:System.Data.Services.Client.MergeOption.NoTracking>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Sorgu Projeksiyonları](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)

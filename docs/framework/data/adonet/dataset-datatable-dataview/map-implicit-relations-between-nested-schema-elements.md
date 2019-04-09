@@ -1,15 +1,15 @@
 ---
-title: İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme
+title: İç İçe Geçmiş Şema Öğeleri Arasında Örtük İlişkileri Eşleme
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 3b17b7f76870c64a9c4332dd99a71fcd8ea6b6e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 076e3ec6e5a00fd294fa3c6d7998cfab3a136240
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182084"
 ---
-# <a name="map-implicit-relations-between-nested-schema-elements"></a>İç içe geçmiş şema öğeleri arasında örtük ilişkileri eşleme
+# <a name="map-implicit-relations-between-nested-schema-elements"></a>İç İçe Geçmiş Şema Öğeleri Arasında Örtük İlişkileri Eşleme
 Bir XML Şeması Tanım Dili (XSD) şemaya karmaşık türler birbiriyle içinde iç içe olabilir. Bu durumda, eşleme işlemi varsayılan eşleme uygular ve aşağıdakileri oluşturur <xref:System.Data.DataSet>:  
   
 -   (Üst ve alt) karmaşık türlerinin her biri için bir tablo.  
@@ -98,6 +98,7 @@ Bir XML Şeması Tanım Dili (XSD) şemaya karmaşık türler birbiriyle içinde
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
 - [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

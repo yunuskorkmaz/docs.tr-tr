@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Tarafından görüntülenen resmi ayarlama bir Windows Forms Tasarımcısı'nı kullanarak denetimi"
+title: 'Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimi Tarafından Görüntülenen Resmi Ayarlama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], images
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2e0837e4a3058db7f1086d6a8ed53136ec86c7ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153497"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Nasıl yapılır: Tarafından görüntülenen resmi ayarlama bir Windows Forms Tasarımcısı'nı kullanarak denetimi
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimi Tarafından Görüntülenen Resmi Ayarlama
 Çeşitli Windows Forms denetimleri, görüntüleri görüntüleyebilirsiniz. Görüntü denetimi gibi bir disk simgesini gösteren düğme üzerinde amacını açıklar bir simge olabilir **Kaydet** komutu. Alternatif olarak, simge, istediğiniz görünümü denetiminin kendilerinde olmasına arka plan görüntüsü olabilir.  
   
 > [!NOTE]
@@ -33,6 +33,7 @@ ms.locfileid: "57702263"
 2.  Görüntülemek istediğiniz görüntüyü seçin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

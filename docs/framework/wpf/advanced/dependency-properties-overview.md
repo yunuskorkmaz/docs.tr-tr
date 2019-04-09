@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 0d336a55ee849ea3e9584cdcfd87e5d6c4befe25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188649"
 ---
 # <a name="dependency-properties-overview"></a>Bağımlılık özelliklerine genel bakış
 
@@ -125,7 +125,7 @@ Aşağıdaki örnek kümeleri <xref:System.Windows.Controls.ContentControl.Conte
 
 Bağımlılık özellikleri veya <xref:System.Windows.DependencyObject> sınıfı, özgün olarak desteklemez <xref:System.ComponentModel.INotifyPropertyChanged> değişiklik bildirimleri üretme amacıyla <xref:System.Windows.DependencyObject> kaynak veri bağlama işlemleri için özellik değeri. Veri bağlama kullanımda değişiklikleri bir veri bağlama hedefine bildirebilirsiniz için özelliklerin nasıl oluşturulacağı hakkında daha fazla bilgi için bkz. [Data Binding Overview](../data/data-binding-overview.md).
 
-### <a name="styles"></a>Stilleri
+### <a name="styles"></a>Stiller
 Stilleri ve şablonları kullanarak bağımlılık özellikleri için baş motive edici temel senaryolar ikisidir. Stiller uygulama tanımlayan özellikleri ayarlamak için özellikle yararlı [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Stilleri, genellikle XAML kaynak olarak tanımlanır. Genellikle belirli özelliklerin yanı sıra, "başka bir özellik için gerçek zamanlı değere göre bir özellik değerini değiştirmek Tetikleyicileri" için "ayarlayıcılar" içerdiğinden stilleri özellik sistemi ile etkileşim kurun.
 
 Aşağıdaki örnekte çok basit bir stil oluşturur (hangi içinde tanımlanan bir <xref:System.Windows.FrameworkElement.Resources%2A> gösterilmez, sözlük), ardından o stilin doğrudan uygular <xref:System.Windows.FrameworkElement.Style%2A> özelliği için bir <xref:System.Windows.Controls.Button>. Stil kümelerinin ayarlandığı <xref:System.Windows.Controls.Control.Background%2A> özelliği için bir stil uygulanmış <xref:System.Windows.Controls.Button> yeşil.
@@ -197,6 +197,7 @@ Genellikle, her zaman uygulamak ve bile yerel olarak ayarlanmış saklamasını 
 - Bağımlılık özellikleri genellikle ortak özellikler, erişilebilir olmasını düşünülmelidir veya bir örneğine erişimi olan en az bir çağıran tarafından bulunabilir. Daha fazla bilgi için [bağımlılık özelliği güvenliği](dependency-property-security.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)
 - [Salt Okunur Bağımlılık Özellikleri](read-only-dependency-properties.md)
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)

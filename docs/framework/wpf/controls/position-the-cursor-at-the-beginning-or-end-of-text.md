@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextBox control [WPF], positioning cursor
 - cursor [WPF], positioning
 ms.assetid: c771a0b8-c6b4-4240-aecd-a21d0ba51a2e
-ms.openlocfilehash: e4058518e4eb56e1cd9d5fdafd792d8f8d3b77ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3d7da5daf09e06938b8366e0f5f98a599cae4571
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186231"
 ---
 # <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>Nasıl yapılır: TextBox Denetiminde İmleci Metnin Başlangıcında veya Sonunda Konumlandırma
 Bu örnek başına veya sonuna metin içeriğini imleci konumlandırma nasıl gösterir bir <xref:System.Windows.Controls.TextBox> denetimi.  
@@ -37,5 +37,6 @@ Bu örnek başına veya sonuna metin içeriğini imleci konumlandırma nasıl g�
  [!code-vb[TextBox_MiscCode#_CursorToEnd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_cursortoend)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [TextBox Genel Bakış](textbox-overview.md)
-- [RichTextBox Genel Bakış](richtextbox-overview.md)
+
+- [TextBox Genel Bakışı](textbox-overview.md)
+- [RichTextBox Genel Bakışı](richtextbox-overview.md)

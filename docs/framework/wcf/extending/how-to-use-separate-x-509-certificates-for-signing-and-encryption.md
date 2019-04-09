@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İmzalama için ayrı X.509 sertifikaları kullanma ve şifreleme'
+title: 'Nasıl yapılır: İmzalama ve Şifreleme için Ayrı X.509 Sertifikaları Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160946"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Nasıl yapılır: İmzalama için ayrı X.509 sertifikaları kullanma ve şifreleme
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Nasıl yapılır: İmzalama ve Şifreleme için Ayrı X.509 Sertifikaları Kullanma
 Bu konuda, Windows Communication Foundation (WCF) ileti imzalama ve şifreleme hem istemci hem de hizmet için farklı sertifikalar kullanmak üzere yapılandırma gösterilmektedir.  
   
  WCF istemci veya hizmet birden çok sertifika ayarlamak için bir API sağlanmadığı için imzalama ve şifreleme için kullanılacak ayrı sertifikalar etkinleştirmek için özel bir istemci veya hizmet kimlik bilgilerini (veya her ikisi de) oluşturulması gerekir. Ayrıca, birden çok sertifika bilgileri kullanmasına ve bir uygun güvenlik belirteci sağlayıcısı oluşturmak için anahtar kullanımı ve ileti yönü belirtilen belirteci yöneticisi sağlanmalıdır güvenlik.  
@@ -90,9 +90,10 @@ Bu konuda, Windows Communication Foundation (WCF) ileti imzalama ve şifreleme h
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [İzlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

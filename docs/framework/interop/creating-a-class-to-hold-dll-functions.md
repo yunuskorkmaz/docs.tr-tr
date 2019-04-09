@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5718c70597acc6919c697a9033e8593865e60a2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 399ad6649016e53d91d5d9d30ecc031ae8a97a4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149363"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>DLL İşlevleri için bir Sınıf Oluşturma
 Sık kullanılan bir DLL işlevinin yönetilen sınıfta sarmalama platform işlevi kapsülleyen etkili bir yaklaşımdır. Her durumda bunu yapmak için zorunlu olmasa da, sınıf sarmalayıcı DLL işlevlerini tanımlama kullanışlı çünkü sağlamak hantal ve hataya eğilimli olabilir. Visual Basic'te programlama yapıyorsanız veya C#, DLL işlevleri bir sınıf veya Visual Basic module'u içinde bildirmeniz gerekir.  
@@ -37,6 +37,7 @@ Sık kullanılan bir DLL işlevinin yönetilen sınıfta sarmalama platform işl
  Lütfen sınıfı ve metotlarını şekilde adlandırabilirsiniz. Nasıl oluşturulacağını gösteren örnekler için. NET tabanlı bildirimler platformuyla kullanılacak çağırmak için bkz: [Platform Çağırma ile veri hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönetilmeyen DLL İşlevlerini Kullanma](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [DLL'lerde İşlevleri Tanımlama](../../../docs/framework/interop/identifying-functions-in-dlls.md)
 - [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)

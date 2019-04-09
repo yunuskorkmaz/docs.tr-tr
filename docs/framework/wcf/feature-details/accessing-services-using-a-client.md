@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194532"
 ---
 # <a name="accessing-services-using-a-client"></a>İstemci Kullanarak Hizmetlere Erişme
 İstemci uygulamaları oluşturmak, yapılandırmak ve WCF istemci veya kanal nesneleri Hizmetleri ile iletişim kurmak için kullanmanız gerekir. [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md) konu nesneleri ve adımlarını temel istemci ve kanal nesneleri oluşturma ve bunları kullanarak genel bir bakış sağlar.  
@@ -94,10 +94,11 @@ ms.locfileid: "54583213"
  Örtük bir yaklaşım kullanan uygulamaları kullanıcı arabirimi başlatıcılar çağırmak, ancak uygulamanın kullanıcı bağlama gönderme zaman aşımı süresi içinde yanıt vermezse, kullanıcı arabirimi döndürdüğünde bir özel durum oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çift Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/duplex-services.md)
-- [Nasıl yapılır: Erişim Hizmetleri tek yönlü ve istek-yanıt sözleşmeleriyle](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişim](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Nasıl yapılır: WSE 3.0 Erişim hizmeti](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [Nasıl yapılır: ChannelFactory kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
-- [Nasıl yapılır: Hizmet işlemlerini zaman uyumsuz olarak çağırma](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle Hizmetlere Erişme](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Nasıl yapılır: WSE 3.0 Hizmetine Erişme](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Nasıl yapılır: ChannelFactory Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Nasıl yapılır: Hizmet İşlemlerini Zaman Uyumsuz Olarak Çağırma](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
 - [Orta Katman İstemci Uygulamaları](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

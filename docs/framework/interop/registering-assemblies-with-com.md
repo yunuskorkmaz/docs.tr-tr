@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e5d6c063fedf14559b20d1de49c1855d0fe1304
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169032"
 ---
 # <a name="registering-assemblies-with-com"></a>Derlemeleri COM ile Kaydetme
 Adlı bir komut satırı aracını çalıştırdığınız [derleme Kayıt Aracı (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) kaydetmek veya com ile kullanmak için derleme kaydını kaldırmak için .NET Framework sınıfı COM istemcilerinin şeffaf bir şekilde kullanabilmeniz için RegAsm.exe'yi sınıfına ilişkin bilgileri sistem kayıt defterine ekler. <xref:System.Runtime.InteropServices.RegistrationServices> Sınıfı eşdeğer bir işlevselliği sağlar.  
@@ -44,7 +44,8 @@ Adlı bir komut satırı aracını çalıştırdığınız [derleme Kayıt Arac�
  İçin `InprocServer32` alt anahtarı Mscoree.dll başvuru, ortak dil çalışma zamanı Yönetilen Nesne oluşturduğunu göstermek için geleneksel COM tür kitaplığı yerine görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
-- [Nasıl yapılır: COM başvurusu .NET türlerinden](how-to-reference-net-types-from-com.md)
-- [Bir .NET nesnesini çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [COM erişimi için bir uygulama dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [Nasıl yapılır: COM'dan .NET Türlerine Başvurma](how-to-reference-net-types-from-com.md)
+- [.NET Nesnesini Çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [COM Erişimi için Bir Uygulamayı Dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

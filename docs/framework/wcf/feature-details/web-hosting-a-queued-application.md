@@ -2,12 +2,12 @@
 title: Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126028"
 ---
 # <a name="web-hosting-a-queued-application"></a>Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
 Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modelini genelleştirir [!INCLUDE[iis601](../../../../includes/iis601-md.md)] HTTP sunucusu, HTTP bağımlılığını kaldırarak işlem modeli. Bu, hem HTTP hem de net.msmq ve ileti tabanlı etkinleştirme destekleyen ve belirli bir bilgisayardaki uygulamaları, çok sayıda konak imkanı barındırma ortamında msmq.formatname gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  
@@ -42,5 +42,6 @@ Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Win
  WAS barındırılan bir uygulama, sistem genelinde atılacak veya zehirli alt kuyruklar gibi alt kuyruk gibi bir sistem kuyruğundaki iletileri göre etkinleştirilemiyor. Ürünün bu sürümü için bir sınırlama budur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
 - [Hizmet Uç Noktaları ve Kuyruk İşleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

@@ -1,18 +1,18 @@
 ---
-title: DbDataAdapter ile verileri değiştirme
+title: DbDataAdapter ile Verileri Değiştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3bd4cbeffcf320d6415b3a3d4aa907280d71a598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158879"
 ---
-# <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter ile verileri değiştirme
+# <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter ile Verileri Değiştirme
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> Yöntemi bir <xref:System.Data.Common.DbProviderFactory> nesne size bir <xref:System.Data.Common.DbDataAdapter> Fabrika oluşturduğunuz sırada belirtilen temel alınan veri sağlayıcısı için kesin belirlenmiş bir nesne. Daha sonra kullanabileceğiniz bir <xref:System.Data.Common.DbCommandBuilder> komutları eklemek için oluşturmak için güncelleştirme ve verileri silme bir <xref:System.Data.DataSet> bir veri kaynağı.  
   
 ## <a name="retrieving-data-with-a-dbdataadapter"></a>DbDataAdapter ile verileri alınıyor  
@@ -21,7 +21,7 @@ ms.locfileid: "54725187"
  [!code-csharp[DataWorks DbProviderFactories.DbDataAdapter#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapter/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.DbDataAdapter#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapter/VB/source.vb#1)]  
   
-## <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter ile verileri değiştirme  
+## <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter ile Verileri Değiştirme  
  Bu örnek verilerde değişiklik yapmayı gösteren bir `DataTable` kullanarak bir <xref:System.Data.Common.DbDataAdapter> kullanarak bir <xref:System.Data.Common.DbCommandBuilder> veri kaynağındaki verileri güncelleştirmek için gereken komutlarını oluşturmak için. <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> , `DbDataAdapter` CustomerID ve CompanyName Müşteriler tablosundan almak için ayarlanır. <xref:System.Data.Common.DbCommandBuilder.GetInsertCommand%2A> Yöntemi ayarlamak için kullanılır <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> özelliği <xref:System.Data.Common.DbCommandBuilder.GetUpdateCommand%2A> yöntemi ayarlamak için kullanılır <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> özelliği ve <xref:System.Data.Common.DbCommandBuilder.GetDeleteCommand%2A> yöntemi ayarlamak için kullanılan <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> özelliği. Bu kod müşterilerin tabloya yeni satır ekler ve veri kaynağını güncelleştirir. Kodu daha sonra eklenen satır Müşteriler tablosu için birincil anahtar tanımlı CustomerID arayarak bulur. CompanyName değiştirir ve veri kaynağını güncelleştirir. Son olarak, kod satırı siler.  
   
  [!code-csharp[DataWorks DbProviderFactories.DbDataAdapterModify#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapterModify/CS/source.cs#1)]
@@ -43,6 +43,7 @@ ms.locfileid: "54725187"
 >  Sağlayıcıya özgü parametreler önleme tamamen doğrudan SQL deyimlerini oluşturmak için dize birleştirme kullanarak güvenlik nedenleriyle önerilmez. Dize birleştirme yerine parametreleri kullanarak uygulamanızı SQL ekleme saldırılarına karşı savunmasız bırakır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [DbProviderFactory Alma](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [DbConnection, DbCommand ve DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)

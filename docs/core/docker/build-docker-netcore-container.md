@@ -4,12 +4,12 @@ description: Bu öğreticide bir Docker ile .NET Core uygulamasını kapsayıcı
 ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 8255a901c706e55e143cdf23dda0eb9bc79d245d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 518a2228bb23569689d56577f83b066a5d518be8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58844953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186933"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: Kapsayıcılı bir .NET Core uygulaması
 
@@ -25,8 +25,6 @@ Bu öğreticide şunları öğreneceksiniz nasıl yapılır:
 > * Azure’a dağıtma
 
 Bu öğreticide, Docker kapsayıcı derleme ve dağıtım görevleri bir .NET Core uygulaması için size öğretir. [Docker platformu](https://docs.docker.com/engine/docker-overview/#the-docker-platform) kullanan [Docker altyapısı](https://docs.docker.com/engine/docker-overview/#docker-engine) oluşturmayı ve uygulamaları olarak paketini [Docker görüntülerini](https://docs.docker.com/glossary/?term=image). Bu görüntüleri yazılan [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) dağıtılabilir ve çalışacak biçimde bir [kapsayıcı katmanlı](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
-
-
 
 ## <a name="net-core-easiest-way-to-get-started"></a>.NET core: Başlamanın en kolay yolu
 

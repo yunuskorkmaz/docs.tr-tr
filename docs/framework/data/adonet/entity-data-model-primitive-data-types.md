@@ -1,15 +1,15 @@
 ---
-title: 'Varlık veri modeli: Basit veri türleri'
+title: 'Varlık Veri Modeli: Basit Veri Türleri'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: 2c2e1056c43f974ec38407372a8f447e52b4a630
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142655"
 ---
-# <a name="entity-data-model-primitive-data-types"></a>Varlık veri modeli: Basit veri türleri
+# <a name="entity-data-model-primitive-data-types"></a>Varlık Veri Modeli: Basit Veri Türleri
 Varlık veri modeli (EDM) (örneğin, dize, Boolean, Int32 vb.) tanımlamak için kullanılan soyut temel veri türleri kümesi destekler [özellikleri](../../../../docs/framework/data/adonet/property.md) kavramsal modelde. Bu basit veri türleri depolama veya SQL Server veritabanı veya ortak dil çalışma zamanı (CLR) gibi barındırma ortamı desteklenir gerçek ilkel veri türleri için proxy'ler. EDM ilkel veri türleri üzerinde işlemler ve dönüştürmeler semantiği tanımlamıyor; Bu semantiği depolama veya barındırma ortamı tarafından tanımlanır. Genellikle, EDM ilkel veri türleri karşılık gelen Basit veri türleri depolama veya barındırma ortamında eşlenir. Entity Framework EDM ilkel türlerinde SQL Server veri türlerine eşlemelerini nasıl hakkında daha fazla bilgi için bkz: [Entity FrameworkTypes için SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
   
 > [!NOTE]
@@ -39,5 +39,6 @@ Varlık veri modeli (EDM) (örneğin, dize, Boolean, Int32 vb.) tanımlamak içi
 |Zaman|Günün bir saati içerir.|Duyarlık, null, varsayılan|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

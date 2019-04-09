@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168174"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Yönetilen Kodda Prototipler Oluşturma
 Bu konu, yönetilmeyen işlevleri nasıl açıklar ve yönetilen kod yöntem tanımında açıklama birkaç öznitelik alanları tanıtır. Nasıl oluşturulacağını gösteren örnekler için. NET tabanlı bildirimler platformuyla kullanılacak çağırmak için bkz: [Platform Çağırma ile veri hazırlama](marshaling-data-with-platform-invoke.md).  
@@ -111,7 +111,7 @@ extern "C" int MessageBox(
 ### <a name="platform-invoke-examples"></a>Platform Çağırma Örnekleri  
  Platform çağırma örnekleri bu bölümde kullanımını gösteren `RegistryPermission` yığın ilerlemesi değiştiricileri ile özniteliği.  
   
- Aşağıdaki kod örneğinde, <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny`, ve `PermitOnly` değiştiricileri yoksayılır.  
+ Aşağıdaki kod örneğinde, <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny`, ve `PermitOnly` değiştiricileri yoksayılır.  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -235,11 +235,12 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yönetilmeyen DLL İşlevlerini Kullanma](consuming-unmanaged-dll-functions.md)
 - [Giriş Noktası Belirtme](specifying-an-entry-point.md)
 - [Karakter Kümesi Belirtme](specifying-a-character-set.md)
 - [Platform Çağırma Örnekleri](platform-invoke-examples.md)
-- [Platform çağırmayla ilgili güvenlik konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
+- [Platform Çağırmayla İlgili Güvenlik Konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [DLL'lerde İşlevleri Tanımlama](identifying-functions-in-dlls.md)
 - [DLL İşlevleri için bir Sınıf Oluşturma](creating-a-class-to-hold-dll-functions.md)
 - [DLL İşlevini Çağırma](calling-a-dll-function.md)

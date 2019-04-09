@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 9a6869b84746081df7917aca32042002b8b044c5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097232"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Nasıl yapılır: XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama
 Bu örnek nasıl bağlanacağını gösterir [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] verileri kullanarak bir <xref:System.Windows.Data.XmlDataProvider>.  
@@ -59,9 +59,10 @@ Bu örnek nasıl bağlanacağını gösterir [!INCLUDE[TLA#tla_xml](../../../../
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Data.ObjectDataProvider>
 - [XML Sorgu Sonuçları için XDocument, XElement veya LINQ'ya Bağlama](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
 - [Hiyerarşik XML Verileri ile Ana Öğe-Ayrıntı Desenini Kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Bağlama Kaynaklarına Genel Bakış](binding-sources-overview.md)
+- [Kaynakların Bağlanmasına Genel Bakış](binding-sources-overview.md)
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

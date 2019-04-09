@@ -1,18 +1,18 @@
 ---
-title: Saklı yordamlarla verileri değiştirme
+title: Saklı Yordamlarla Verileri Değiştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: 2093554eb59746d6b52c2895ec3ded5d9088fa3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dfd4f07ba0a0473975d87c7cd166635473344a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149337"
 ---
-# <a name="modifying-data-with-stored-procedures"></a>Saklı yordamlarla verileri değiştirme
+# <a name="modifying-data-with-stored-procedures"></a>Saklı Yordamlarla Verileri Değiştirme
 Saklı yordamlar, veri giriş parametresi olarak kabul edebilir ve veri çıkış parametreleri, sonuç kümesi ya da dönüş değeri döndürebilir. Aşağıdaki örnekte nasıl ADO.NET gönderir ve girdi aldığı gösterilmektedir parametreleri, çıktı parametreleri ve dönüş değerleri. Örneğin, birincil anahtar sütunu bir kimlik sütunu bir SQL Server veritabanında olduğu bir tabloya yeni bir kayıt ekler.  
   
 > [!NOTE]
@@ -40,6 +40,7 @@ RETURN @@ROWCOUNT
  [!code-vb[DataWorks SqlClient.SprocIdentityReturn#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.SprocIdentityReturn/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Komut Yürütme](../../../../docs/framework/data/adonet/executing-a-command.md)

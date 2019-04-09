@@ -11,18 +11,16 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 12f9acccfc23364795cd18ef1da2ced5b442c6f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d36d30dd336bbe50b192b10a6a60d2c7e382adb8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137715"
 ---
 # <a name="resources-and-code"></a>Kaynaklar ve Kod
 Bu genel bakışta nasıl yoğunlaşır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kaynakları erişilemez veya kod kullanılarak oluşturulan yerine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] söz dizimi. Genel kaynak kullanımı ve kaynaklardan daha fazla bilgi için bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sözdizimi açısından görmek [XAML kaynakları](xaml-resources.md).  
-  
-  
-  
+
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>Kaynak kodundan erişme  
  Aracılığıyla tanımlanmışsa, kaynakları tanımlayan anahtarları [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kaynak kodda istemesi durumunda belirli kaynakları almak için de kullanılır. Bir kaynak koddan almanın en basit yolu çağırmaktır <xref:System.Windows.FrameworkElement.FindResource%2A> veya <xref:System.Windows.FrameworkElement.TryFindResource%2A> uygulamanızdaki framework düzeyi nesnelerinden yöntemi. Davranış bu yöntemler arasında İstenen anahtar bulunamazsa ne olur farktır. <xref:System.Windows.FrameworkElement.FindResource%2A> bir özel durum oluşturur; <xref:System.Windows.FrameworkElement.TryFindResource%2A> döndürür ancak bir özel durum oluşturmaz `null`. Her yöntem giriş parametresi olarak kaynak anahtarı alır ve gevşek yazılmış bir nesne döndürür. Genellikle, bir kaynak anahtarı bir dizedir, ancak bazen dize olmayan kullanımları vardır; bkz: [nesneleri anahtar olarak kullanma](#objectaskey) ayrıntıları bölümü. Genellikle döndürülen nesne kaynak istenirken ayarlama özelliği tarafından gereken türünü dönüştürürsünüz. Kod kaynak çözümleme için arama mantığı dinamik kaynak başvurusu aynıdır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] çalışması. Kaynak Ara çağıran öğeden başlar ve ardından mantıksal ağaçta ardışık üst öğe olmaya devam eder. Arama ve sonraki sürümlerde uygulama kaynaklarını, temalar ve gerekirse, sistem kaynakları devam eder. Kod isteği bir kaynak için düzgün şekilde için gelen yüklenen kaynak sözlüğünden den yapılmış kaynak sözlükleri çalışma zamanı değişiklikleri hesaba katmayacak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], için ve ayrıca gerçek zamanlı sistem kaynağı değişiklikleri.  
@@ -47,5 +45,6 @@ Bu genel bakışta nasıl yoğunlaşır [!INCLUDE[TLA#tla_winclient](../../../..
  Çoğu kaynak kullanımları anahtarını kaynağının adını bir dize olacak şekilde ayarlar. Ancak, çeşitli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleri kasıtlı olmayan bir dize türü anahtarları belirtmek için kullanın, bunun yerine bu parametre bir nesnedir. Tarafından kullanılan bir nesne tarafından anahtarlanmış kaynağa sahip olma yeteneği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stili ve Tema oluşturma desteği. Aksi takdirde stili olmayan bir denetim için varsayılan stil haline gelen tema stilleri her tarafından Anahtarlanan <xref:System.Type> uygulanması gereken denetimi. Türü tarafından Anahtarlanan her denetim türü varsayılan örneklerinde çalışan bir güvenilir arama mekanizmayı sağlar ve tür yansıma tarafından algılanır ve varsayılan stil türetilmiş tür sahip olsa da, türetilmiş sınıfların stil eklemek için kullanılır. Belirtebileceğiniz bir <xref:System.Type> içinde tanımlanan bir kaynak için anahtar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanarak [x: Type işaretleme uzantısı](../../xaml-services/x-type-markup-extension.md). Benzer uzantıları destekleyen diğer dize olmayan için anahtar kullanımları mevcut [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibi özellikleri [ComponentResourceKey işaretleme uzantısı](componentresourcekey-markup-extension.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XAML Kaynakları](xaml-resources.md)
 - [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)

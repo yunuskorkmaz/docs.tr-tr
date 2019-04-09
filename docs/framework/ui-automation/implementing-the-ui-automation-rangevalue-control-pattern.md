@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: 34044b337dfb7498fd75f7f9a8bd17c2db9eb7d2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: aeb14bddf98adf53a52c8897994bd0fb6fa498ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175805"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>UI Otomasyon RangeValue Denetim Düzeni Uygulama
 > [!NOTE]
@@ -37,13 +37,13 @@ Değerin türü tamsayı ve Minimum ve maksimum özellik değerlerini olduğu bi
   
 |Gerekli üye|Üye türü|Notlar|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|Hiçbiri|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Yöntemler|Hiçbiri|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Özellik|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Özellik|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Özellik|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Yöntemler|None|  
   
  Bu denetim düzeni, ilişkili olay vardır.  
   
@@ -56,8 +56,9 @@ Değerin türü tamsayı ve Minimum ve maksimum özellik değerlerini olduğu bi
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> Geçerli bir değerle çağrılır büyüktür <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> veya küçüktür <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+
+- [UI Otomasyon Denetim Düzenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [UI Otomasyon Sağlayıcısında Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [İstemciler İçin UI Otomasyon Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI Otomasyonda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

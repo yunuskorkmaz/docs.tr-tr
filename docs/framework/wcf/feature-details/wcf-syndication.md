@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-ms.openlocfilehash: c7fefb49cf70b9f3c55937e7be06eca212af364d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175922"
 ---
 # <a name="wcf-syndication"></a>WCF Dağıtımı
 Windows Communication Foundation (WCF) okuyun ve bunları oluşturduğunuz yanı sıra bunları bir hizmet uç noktasında kullanıma olanak tanıyan dağıtım akışlarını Atom, RSS veya diğer özel biçimler kolayca çalışmak için destek sağlar. Bu bölümdeki konular bu programlama modeli için dağıtım ayrıntılı açıklar.  
@@ -24,13 +24,13 @@ Windows Communication Foundation (WCF) okuyun ve bunları oluşturduğunuz yanı
  [WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
  WCF dağıtım nesnesi modeli içinde akışları nasıl temsil edildiğini ve bunların RSS akışına dönüştürülür ve Atom akışları açıklanır.  
   
- [Nasıl yapılır: Temel bir RSS akışı oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [Nasıl yapılır: Temel Bir RSS Akışı Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
  Temel bir RSS akışı kullanıma sunduğu bir hizmetin nasıl oluşturulacağını gösterir.  
   
- [Nasıl yapılır: Temel bir Atom akışı oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [Nasıl yapılır: Temel Bir Atom Akışı Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
  Temel bir ATOM akışı kullanıma sunduğu bir hizmetin nasıl oluşturulacağını gösterir.  
   
- [Nasıl yapılır: Bir akışı hem Atom olarak kullanıma sunmak ve RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
+ [Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
  Akışın ATOM ve RSS kullanılabilir bir hizmet oluşturma işlemi gösterilmektedir.  
   
  [Dağıtım Genişletilebilirliği](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)  
@@ -41,5 +41,6 @@ Windows Communication Foundation (WCF) okuyun ve bunları oluşturduğunuz yanı
 ## <a name="related-sections"></a>İlgili Bölümler  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [Kısmi Güven](../../../../docs/framework/wcf/feature-details/partial-trust.md)

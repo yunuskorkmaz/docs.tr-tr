@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: dafc75c9db0dfe9b51c7425a269c166182bbcc87
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: c4082c7f8ebea54a9abf2f80c992dc871f8408ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183644"
 ---
 # <a name="service-transaction-behavior"></a>Hizmet İşlem Davranışı
 Bu örnek, bir istemci Eşgüdümlü işlem kullanımı ve ServiceBehaviorAttribute ve OperationBehaviorAttribute hizmet işlem davranışı denetlemek için ayarları gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) , hesaplayıcı hizmet uygular, ancak gerçekleştirilen işlemlerin bir veritabanı tablosu ve hesap makinesi işlemleri için toplam çalışan bir durum bilgisi olan bir sunucu günlüğü korumak için genişletilir. Sunucu günlüğü tablosu kalıcı Yazar bağımlı istemci işlemi tamamlanmazsa, bir istemci Eşgüdümlü işlem - sonucunu Web hizmeti işlemi güncelleştirmeleri veritabanına kaydedilmiş olmamasını sağlar.  
@@ -264,4 +264,3 @@ Creating new service instance...
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
-  

@@ -1,18 +1,18 @@
 ---
-title: Yerel işlemler
+title: Yerel İşlemler
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 9cad6c798856fb77023bb52c528b9294f5f6d0bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 30dd3a54092c5b30cdd8dfd2917b6ea57edd7086
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153627"
 ---
-# <a name="local-transactions"></a>Yerel işlemler
+# <a name="local-transactions"></a>Yerel İşlemler
 İşlemlerde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] , böylece bunlar iş tek bir birim olarak yürütmek için birden çok görevleri birbirine bağlayın istediğinizde kullanılır. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak bir tablo ile sipariş bilgilerini güncelleştirir. İkinci olarak, Envanter bilgilerini içeren bir tablo güncelleştirir, öğeleri borçlandırarak sıralı. Her iki görev başarısız olursa, her iki güncelleştirmeleri geri alınır.  
   
 ## <a name="determining-the-transaction-type"></a>İşlem türünü belirleme  
@@ -48,6 +48,7 @@ ms.locfileid: "54656186"
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Dağıtılmış İşlemler](../../../../docs/framework/data/adonet/distributed-transactions.md)
 - [SQL Server ile System.Transactions Tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)

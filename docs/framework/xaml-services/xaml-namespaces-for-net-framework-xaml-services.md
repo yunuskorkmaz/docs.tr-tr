@@ -2,12 +2,12 @@
 title: .NET Framework XAML Hizmetleri İçin XAML Ad Uzayları
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: e9d644f4f62d70a1feec0030a680067412baa5e6
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: dc2c424306b9ebd705f2541266e4b1e3afe94547
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030528"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153562"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML Hizmetleri İçin XAML Ad Uzayları
 XAML ad alanı tanımını bir XML ad alanı üzerinde genişleten bir kavramdır. Benzer şekilde bir XML ad alanı, XAML ad alanını kullanarak tanımlayabilirsiniz bir `xmlns` biçimlendirme özniteliği. XAML ad alanları, XAML düğümü akışı ve diğer XAML hizmetler API'lerini de temsil edilir. Bu konu, XAML ad alanı kavramını tanımlar ve XAML ad alanları'nın tanımlanabilir ve XAML şema bağlamları ve .NET Framework XAML hizmetlerinde diğer yönleri tarafından kullanılan nasıl açıklanmaktadır.  
@@ -64,4 +64,5 @@ XAML ad alanı tanımını bir XML ad alanı üzerinde genişleten bir kavramdı
  XAML ad alanı .NET Framework XAML hizmetlerinde işleme için uygun olan diğer iki API olan öznitelikleri <xref:System.Windows.Markup.XmlnsDefinitionAttribute> ve <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Bu öznitelikler, derlemelere uygulanır. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> bir URI içeren herhangi bir XAML ad alanı bildirimi yorumlamak için XAML şema içeriği tarafından kullanılır. <xref:System.Windows.Markup.XmlnsPrefixAttribute> belirli bir XAML ad alanı tahmin edilebilir bir önek ile seri hale getirilebilir, böylece bu XAML yayma araçları tarafından kullanılır. Daha fazla bilgi için [özel türler ve Kitaplıkar için CLR öznitelikleri XAML-Related](xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama](understanding-xaml-node-stream-structures-and-concepts.md)

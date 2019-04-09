@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: c71ab84cfd97e65f5e30bd5e1ff651f8e0c2d700
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132086"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Yayımlama .NET Core CLI ile uygulamaları
 
@@ -129,7 +129,8 @@ Bir FDE yayımlama bir uygulama, otomatik olarak yapar İleri en son .NET Core g
 
 Gerekir (.NET Core hariç geçerli platform hedeflediğinizde 3.x) ile aşağıdaki anahtarları kullanarak `dotnet publish` bir FDE yayımlamak için komutu:
 
-- `-r <RID>` Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
+- `-r <RID>`
+  Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
 
 - `--self-contained false` Bu anahtar, yürütülebilir bir FDE olarak oluşturmak için .NET Core SDK'sı söyler.
 
@@ -148,13 +149,13 @@ Bir SCD yayımlama, en son kullanılabilir .NET Core güvenlik düzeltme eki sar
 
 Aşağıdaki anahtarlar ile kullanmalısınız `dotnet publish` bir SCD yayımlamak için komutu:
 
-- `-r <RID>` Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
+- `-r <RID>`
+  Bu anahtar, hedef platform belirtmek için bir tanımlayıcı (RID) kullanır. Çalışma zamanı tanımlayıcılarının bir listesi için bkz. [çalışma zamanı tanımlayıcı (RID) katalog](../rid-catalog.md).
 
 - `--self-contained true` Bu anahtar, yürütülebilir bir SCD olarak oluşturmak için .NET Core SDK'sı söyler.
 
 > [!NOTE]
 > Etkinleştirerek dağıtımınızın toplam boyutunu azaltabilirsiniz **Genelleştirme sabit modu**. Bu mod, genel olarak duyarlı değildir ve biçimlendirme kuralları, büyük/küçük harf kuralları ve dize karşılaştırma ve sıralama düzenini kullanabilen uygulamalar için kullanılabilir [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture). Hakkında daha fazla bilgi için **Genelleştirme sabit modu** ve etkinleştirmek için bkz [.NET Core Genelleştirme sabit modu](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
-
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

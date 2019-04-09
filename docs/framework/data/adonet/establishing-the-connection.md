@@ -1,18 +1,18 @@
 ---
-title: Bağlantı kurma
+title: Bağlantı Kurma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142352"
 ---
-# <a name="establishing-the-connection"></a>Bağlantı kurma
+# <a name="establishing-the-connection"></a>Bağlantı Kurma
 Microsoft SQL Server'a bağlanmak için <xref:System.Data.SqlClient.SqlConnection> SQL Server için .NET Framework veri sağlayıcısı nesnesi. Bir OLE DB veri kaynağına bağlanmak için <xref:System.Data.OleDb.OleDbConnection> nesnesini OLE DB için .NET Framework veri sağlayıcısı. Bir ODBC veri kaynağına bağlanmak için <xref:System.Data.Odbc.OdbcConnection> ODBC için .NET Framework veri sağlayıcısı nesnesi. Bir Oracle veri kaynağına bağlanmak için <xref:System.Data.OracleClient.OracleConnection> Oracle için .NET Framework veri sağlayıcısı nesnesi. Güvenli bir şekilde depolamak ve bağlantı dizelerini almak için bkz. [bağlantı bilgilerini koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
 ## <a name="closing-connections"></a>Bağlantı Kapatma  
@@ -143,6 +143,7 @@ nwindConn.Open();
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)
 - [OLE DB, ODBC ve Oracle Bağlantı Havuzu](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Kod içinde hizmet uç noktası oluşturma'
+title: 'Nasıl yapılır: Kod İçinde Hizmet Uç Noktası Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 143a43545646e180bcfdedb60c64bbbb7c83ac2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0b51018a5940e01b38b00addb762fa6504495a4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139873"
 ---
-# <a name="how-to-create-a-service-endpoint-in-code"></a>Nasıl yapılır: Kod içinde hizmet uç noktası oluşturma
+# <a name="how-to-create-a-service-endpoint-in-code"></a>Nasıl yapılır: Kod İçinde Hizmet Uç Noktası Oluşturma
 Bu örnekte, bir `ICalculator` anlaşma hesaplayıcı hizmeti için tanımlanan, hizmet içinde uygulanan `CalculatorService` sınıf ve onun uç noktası burada belirtilen hizmetini kullanmalısınız kod içinde tanımlanan <xref:System.ServiceModel.BasicHttpBinding> sınıfı.  
   
  Yapılandırma yerine kesin kod bağlama ve adres bilgilerini bildirimli olarak belirtmek için genellikle en iyi uygulamadır. Bağlamalarında ve adreslerinde dağıtılan bir hizmette hizmet geliştirilen kullandığı olanlardan genellikle farklı olduğundan uç noktaları kodda tanımlama genellikle pratik değildir. Daha genel olarak, bağlama tutulması ve adresleme bilgilerini kodunun dışında yeniden derleyin veya uygulama yeniden dağıtmaya gerek kalmadan değiştirmek için bunları sağlar.  
@@ -47,4 +47,5 @@ Bu örnekte, bir `ICalculator` anlaşma hesaplayıcı hizmeti için tanımlanan,
      Varsayılan uç noktaları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Kodda hizmet bağlama belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+
+- [Nasıl yapılır: Kodda Hizmet Bağlama Belirtme](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

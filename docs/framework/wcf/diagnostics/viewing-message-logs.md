@@ -2,12 +2,12 @@
 title: İleti Günlüklerini Görüntüleme
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: f368d4f8f2a214feaa24b732513a99edf2e28296
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139067"
 ---
 # <a name="viewing-message-logs"></a>İleti Günlüklerini Görüntüleme
 Bu konu, ileti günlüklerini görüntüleme biçimini açıklar.  
@@ -61,6 +61,7 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 -   Kodlama, UTF-8'e dönüştürme için etkinleştirilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma ](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [İleti Günlüğe Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)

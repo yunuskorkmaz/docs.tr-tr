@@ -12,18 +12,16 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165275"
 ---
 # <a name="binding-declarations-overview"></a>Bağlama Bildirimlerine Genel Bakış
 Bu konuda bir bağlama bildirebilirsiniz farklı yolları açıklanmaktadır.  
-  
- 
-  
+
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu konuda okumadan önce kavram ve biçimlendirme uzantısı kullanımı ile tanıdık önemlidir. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz: [biçimlendirme uzantıları ve WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md).  
@@ -126,7 +124,8 @@ Bu konuda bir bağlama bildirebilirsiniz farklı yolları açıklanmaktadır.
 -   Varsayılan <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> değeri arasında değişir <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> ve <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> ilişkili bağımlılık özelliği de bağlı olarak. Bağımlılık özelliklerinin çoğu için varsayılan değerdir <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, ancak <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> özelliği varsayılan değerine sahip <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)
 - [Veri Bağlama](../advanced/optimizing-performance-data-binding.md)
-- [PropertyPath XAML Söz Dizimi](../advanced/propertypath-xaml-syntax.md)
+- [PropertyPath XAML Sözdizimi](../advanced/propertypath-xaml-syntax.md)

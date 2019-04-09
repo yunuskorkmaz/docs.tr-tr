@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099787"
 ---
 # <a name="application-settings-architecture"></a>Uygulama Ayarları Mimarisi
 Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve mimarinin gruplandırılmış ayarları ve ayarları anahtarları gibi gelişmiş özellikleri keşfediyor.  
@@ -147,6 +147,7 @@ Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve
  Tüm öznitelikler tanımlanan ayarları desteklemek sağlayıcınıza gerekmez <xref:System.Configuration?displayProperty=nameWithType> ad alanı, en az bir destek gerekir ancak <xref:System.Configuration.ApplicationScopedSettingAttribute> ve <xref:System.Configuration.UserScopedSettingAttribute>ve ayrıca desteklemelidir <xref:System.Configuration.DefaultSettingValueAttribute>. Özniteliklerle her zaman desteklemediği sağlayıcınız yalnızca bildirimi başarısız olması; bir özel durum oluşturmamalıdır. Ayarları sınıfı öznitelikleri için geçersiz bir birleşim ancak kullanıp kullanmadığını — uygulama gibi <xref:System.Configuration.ApplicationScopedSettingAttribute> ve <xref:System.Configuration.UserScopedSettingAttribute> aynı ayarı — sağlayıcınız bir özel durum ve işlemin sona ermesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>

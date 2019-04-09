@@ -2,12 +2,12 @@
 title: İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 0dadf89ecbd7623735debe37355761aea3d62db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130800"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları
 Bu konuda, WebHost kullanırken faydalı ipuçları yanı sıra açıklanmasını hassas bilgileri nasıl Koruyabileceğiniz açıklanmaktadır.  
@@ -91,4 +91,5 @@ Bu konuda, WebHost kullanırken faydalı ipuçları yanı sıra açıklanmasın�
  Ayrıca, iletiyi gönderenin IP adresi, bir kez bağlantı tabanlı aktarımlar için bağlantı başına ve bir kez aksi gönderilen ileti başına kaydedilir. Bu gönderen rızası gerçekleştirilir. Ancak, bu günlük yalnızca, varsayılan olmayan ya da önerilen izlemenin düzeylerin, üretimde dışında hata ayıklama Canlı bilgi veya ayrıntılı izleme düzeyleri gerçekleşir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

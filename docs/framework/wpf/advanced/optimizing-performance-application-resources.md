@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139431"
 ---
 # <a name="optimizing-performance-application-resources"></a>Performansı iyileştirme: Uygulama Kaynakları
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] benzer yazılmış öğeler arasında tutarlı bir görünüm veya davranış destekleyebilir uygulama kaynaklarını paylaşmasına olanak sağlar. Bu konu, bu alandaki yardımcı olabilecek bazı öneriler, uygulamalarınızın performansını sağlar.  
@@ -43,6 +43,7 @@ ms.locfileid: "57352405"
  [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
 - [Uygulama Performansını Planlama](planning-for-application-performance.md)
 - [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)

@@ -6,18 +6,16 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186837"
 ---
 # <a name="property-value-inheritance"></a>Özellik Değeri Kalıtımı
 Özellik değeri kalıtımı özelliğidir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi. Özellik değeri kalıtımı alt öğelerini üstten öğeleri, bu değer en yakın üst öğede herhangi bir yerde ayarlanmış olarak devralınması belirli bir özellik değeri kalıtımı ağacındaki sağlar. Sistem büyük olasılıkla tüm sayfa kök recurses için üst öğe Ayrıca özellik değeri devralma yoluyla değeri elde. Özellik değeri devralma varsayılan özellik sistemi davranış değildir; bir özellik alt öğeleri üzerinde özellik değeri kalıtımı başlatmak bu özelliği neden için özel meta verileri ayarıyla oluşturulmalıdır.  
-  
 
-  
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## <a name="property-value-inheritance-is-containment-inheritance"></a>Özellik değeri kalıtımı olan kapsama inheritance'tır  
  Burada bir terim olarak "devralma" tam olarak aynı kavram olarak devralma türleri ve genel nesne yönelimli programlama, burada türetilmiş sınıflar temel sınıflarının işaretçilerine üye tanımları devral bağlamında değil. Devralmanın anlamı da etkin olduğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: çeşitli temel sınıflarında tanımlanan özellikler, öznitelik olarak sunulur, türetilmiş için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sınıflar öğeleri olarak kullanılan ve kod üyeleri olarak sunulur. Özellik değeri kalıtımı özellikle nasıl özellik değerlerini bir öğeden diğerine öğe ağacındaki içinde üst-alt ilişkileri göndermemeniz devrettiği hakkındadır. Öğe ağacı içinde tanımladığınız uygulamalar gibi diğer öğeleri içinde öğeleri iç içe doğrudan görülebilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme. Nesnelerin ağaçlarını de program aracılığıyla nesneleri diğer nesnelerin atanan koleksiyonlarına ekleyerek oluşturulabilir ve özellik değeri kalıtımı aynı şekilde tamamlanmış ağaçtaki çalışma zamanında çalışır.  
@@ -42,6 +40,7 @@ ms.locfileid: "57359893"
  Özellik devralma öğelerin bir ağacının çapraz geçişi ile çalışır. Bu genellikle için mantıksal ağaç paralel ağacıdır. Ancak, her dahil WPF çekirdek düzeyinde bir nesne gibi bir öğe ağacı tanımlar biçimlendirme içinde bir <xref:System.Windows.Media.Brush>, kesintili bir mantıksal ağaç oluşturdunuz. True mantıksal ağacı yoluyla kavramsal olarak genişlemez <xref:System.Windows.Media.Brush>, mantıksal ağacı bir WPF çerçeve düzeyi kavramıdır. Bu yöntemleri kullanırken sonuçları yansıtılmış gördüğünüz <xref:System.Windows.LogicalTreeHelper>. Ancak, özellik değeri kalıtımı bu boşluğu mantıksal ağaçta arasında köprü olabilir ve devralınabilir özelliği ekli özelliği ve bilinçli devralmayı engelleme sınır kayıtlı olduğu sürece, devralınan değerleri yine de geçirebilirsiniz (bir gibi<xref:System.Windows.Controls.Frame>) karşılaşıldı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağımlılık Özelliği Meta Verisi](dependency-property-metadata.md)
 - [Ekli Özelliklere Genel Bakış](attached-properties-overview.md)
 - [Bağımlılık Özelliği Değer Önceliği](dependency-property-value-precedence.md)

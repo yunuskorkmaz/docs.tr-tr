@@ -1,15 +1,15 @@
 ---
-title: Eş adları ve PNRP kimlikleri
+title: Eş Adları ve PNRP Kimlikleri
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: 3f82d472e1f8913e2f518abbefa2bb6407d6f54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7e92519bede478a5e26a88a56236f987c93c441
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173114"
 ---
-# <a name="peer-names-and-pnrp-ids"></a>Eş adları ve PNRP kimlikleri
+# <a name="peer-names-and-pnrp-ids"></a>Eş Adları ve PNRP Kimlikleri
 Bir eş ad, bir bilgisayar, bir kullanıcı, Grup, bir hizmet veya bir IPv6 adresine çözülebilir bir eş ile ilişkili herhangi bir şey olabilir, iletişim için bir uç nokta temsil eder. Eş Adı Çözümleme Protokolü (PNRP), bulut üyelerini tanımlamak için kullanılan bir PNRP kimliği, oluşturulması için istatistiksel olarak benzersiz eş adını alır.  
   
 ## <a name="peer-names"></a>Eş adları  
@@ -31,5 +31,6 @@ Bir eş ad, bir bilgisayar, bir kullanıcı, Grup, bir hizmet veya bir IPv6 adre
  Tek bir bilgisayardan kaydedilmesi birden çok PNRP kimlikleri bu P2P kimliği ve hizmet konumu birleşimini sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.PeerToPeer.PeerName>
 - <xref:System.Net.PeerToPeer>

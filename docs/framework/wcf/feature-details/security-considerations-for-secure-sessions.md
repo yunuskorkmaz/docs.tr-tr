@@ -2,12 +2,12 @@
 title: Güvenli Oturumlar için Güvenlikli İlgili Önemli Noktalar
 ms.date: 03/30/2017
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-ms.openlocfilehash: 85b0f95606e1ca3d52d8c79dbe0042c51ce3f36e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2244ba42b1cf95f77424d32a19ebe11dd3a2a45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148713"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Güvenli Oturumlar için Güvenlikli İlgili Önemli Noktalar
 Güvenli oturumlar uygularken güvenliğini etkileyen aşağıdakileri dikkate almanız gerekir. Güvenlik konuları hakkında daha fazla bilgi için bkz. [güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) ve [en iyi güvenlik uygulamaları](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
@@ -21,6 +21,7 @@ Güvenli oturumlar uygularken güvenliğini etkileyen aşağıdakileri dikkate a
  Bu türetilmiş için özel bir belirteç isterseniz yan tümcesi türüne kaydıracağını anlamına gelir. bir `SecurityTokenReference` öğesi. Türetme devre dışı bırakma seçeneği yoktur, ancak anahtarları türetmek için varsayılandır. Bir anahtarı sarmalama başarısız olursa, türetilmiş anahtar belirtecinde seri hale getirme başarılı, ancak bu seri durumdan çalışılırken bir özel durum oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: WSFederationHttpBinding güvenli oturumlarını devre dışı bırak](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+
+- [Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Güvenlik Değerlendirmeleri](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Güvenlik için En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

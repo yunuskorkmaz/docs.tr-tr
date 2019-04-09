@@ -1,15 +1,15 @@
 ---
-title: İlişki sonu
+title: association end
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 7fb9b48c5ed832e83f2a1e344d17d9a9797d393b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410335"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108296"
 ---
-# <a name="association-end"></a>İlişki sonu
+# <a name="association-end"></a>association end
 Bir *ilişkilendirme end* tanımlayan [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) bir ucunda bir [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) ve varlık sayısı bu ilişkilendirmeyi sonunda bulunabilir örnekleri yazın. İlişkilendirme ucu ilişkilendirme bir parçası olarak tanımlanır; bir ilişkiyi tam olarak iki ilişkilendirme ucu olması gerekir. [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) gezinme bir ilişkilendirme end bölümünden diğerine sağlar.  
   
  Bir ilişkilendirme end tanımı, şu bilgileri içerir:  
@@ -35,5 +35,6 @@ Bir *ilişkilendirme end* tanımlayan [varlık türü](../../../../docs/framewor
  [!code-xml[EDM_Example_Model#AssociationEnd](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#associationend)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

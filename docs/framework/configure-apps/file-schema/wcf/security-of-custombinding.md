@@ -2,12 +2,12 @@
 title: <security> , <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: 552b28c4e4368ec4a01502a1df65cb46aa17c05d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ffe791d495a4e06c9649dd0c37d0fd010e2c64bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182045"
 ---
 # <a name="security-of-custombinding"></a>\<Güvenlik >, \<customBinding >
 Özel bağlama için güvenlik seçeneklerini belirtir.  
@@ -167,6 +167,7 @@ ms.locfileid: "55258064"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.SecurityElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -174,5 +175,5 @@ ms.locfileid: "55258064"
 - [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

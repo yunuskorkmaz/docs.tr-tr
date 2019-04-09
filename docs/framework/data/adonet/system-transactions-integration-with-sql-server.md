@@ -1,18 +1,18 @@
 ---
-title: SQL Server ile System.Transactions tümleştirmesi
+title: SQL Server ile System.Transactions Tümleştirmesi
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 12b81d02e5db613c96d19a4aa3730b95e3477b7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166967"
 ---
-# <a name="systemtransactions-integration-with-sql-server"></a>SQL Server ile System.Transactions tümleştirmesi
+# <a name="systemtransactions-integration-with-sql-server"></a>SQL Server ile System.Transactions Tümleştirmesi
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Sürüm 2.0 kullanılmaya aracılığıyla erişilebilen bir işlem framework <xref:System.Transactions> ad alanı. Bu çerçeve işlemleri, tamamen tümleşik bir şekilde kullanıma sunan [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]de dahil olmak üzere [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Programlanabilirlik geliştirmeleri yanı sıra <xref:System.Transactions> ve [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] işlemleri ile çalışırken en iyi duruma getirme koordine etmek için birlikte çalışabilir. Otomatik olarak tam olarak dağıtılmış bir işlem gerekli olarak yükseltilebilir basit bir (yerel) işlem bir promotable işlemdir.  
@@ -229,5 +229,6 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

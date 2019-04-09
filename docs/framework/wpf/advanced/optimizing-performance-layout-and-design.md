@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107074"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Performansı iyileştirme: Düzen ve Tasarım
 Tasarımı, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Düzen hesaplama ve nesne başvurularını doğrulama gereksiz yük oluşturarak uygulama performansını etkileyebilir. Nesneleri, oluşumunu özellikle, çalışma zamanında uygulamanızın performans özelliklerine etkileyebilir.  
@@ -70,6 +70,7 @@ Tasarımı, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winc
  Mantıksal ağacı hakkında daha fazla bilgi için bkz. [WPF içinde ağaçlar](trees-in-wpf.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
 - [Uygulama Performansını Planlama](planning-for-application-performance.md)
 - [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)

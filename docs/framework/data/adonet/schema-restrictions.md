@@ -1,25 +1,25 @@
 ---
-title: Şema kısıtlamaları
+title: Şema Kısıtlamaları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 7bc5f3fc1c87b8acbbfeb0bad0c7766c0a2ef1dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688304"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151209"
 ---
-# <a name="schema-restrictions"></a>Şema kısıtlamaları
+# <a name="schema-restrictions"></a>Şema Kısıtlamaları
 İsteğe bağlı ikinci parametresi **GetSchema** yöntemdir şema bilgileri miktarını sınırlamak için kullanılan kısıtlamaları döndürdü ve geçer **GetSchema** dize dizisi olarak yöntemi . Bu kısıtlama sayıya eşdeğerdir ve geçirebileceğiniz değerleri dizisinde konumunu belirler.  
   
  Örneğin, aşağıdaki tabloda, SQL Server için .NET Framework veri sağlayıcısı kullanarak "Tablo" şema koleksiyonu tarafından desteklenen kısıtlamaları açıklamaktadır. SQL Server şema koleksiyonları için ek kısıtlamalar, bu konunun sonunda listelenmiştir.  
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
@@ -149,7 +149,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
@@ -158,7 +158,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
 |Sütun|@Column|COLUMN_NAME|4|  
@@ -167,7 +167,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
 |Sütun|@Column|COLUMN_NAME|4|  
@@ -176,7 +176,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
   
@@ -184,7 +184,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|VIEW_CATALOG|1.|  
+|Katalog|@Catalog|VIEW_CATALOG|1.|  
 |Sahip|@Owner|VIEW_SCHEMA|2|  
 |Tablo|@Table|VIEW_NAME|3|  
 |Sütun|@Column|COLUMN_NAME|4|  
@@ -193,7 +193,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|SPECIFIC_CATALOG|1.|  
+|Katalog|@Catalog|SPECIFIC_CATALOG|1.|  
 |Sahip|@Owner|SPECIFIC_SCHEMA|2|  
 |Ad|@Name|SPECIFIC_NAME|3|  
 |Parametre|@Parameter|PARAMETER_NAME|4|  
@@ -202,7 +202,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|SPECIFIC_CATALOG|1.|  
+|Katalog|@Catalog|SPECIFIC_CATALOG|1.|  
 |Sahip|@Owner|SPECIFIC_SCHEMA|2|  
 |Ad|@Name|SPECIFIC_NAME|3|  
 |Tür|@Type|ROUTINE_TYPE|4|  
@@ -211,7 +211,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|db_name()|1.|  
+|Katalog|@Catalog|db_name()|1.|  
 |Sahip|@Owner|user_name()|2|  
 |Tablo|@Table|o.Name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
@@ -221,7 +221,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|db_name()|1.|  
+|Katalog|@Catalog|db_name()|1.|  
 |Sahip|@Owner|user_name()|2|  
 |Tablo|@Table|o.Name|3|  
   
@@ -236,7 +236,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|CONSTRAINT_CATALOG|1.|  
+|Katalog|@Catalog|CONSTRAINT_CATALOG|1.|  
 |Sahip|@Owner|CONSTRAINT_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
 |Ad|@Name|CONSTRAINT_NAME|4|  
@@ -248,7 +248,7 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
   
@@ -256,10 +256,11 @@ class Program
   
 |Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Kataloğu|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
 |Sütun|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

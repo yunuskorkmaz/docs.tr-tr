@@ -2,12 +2,12 @@
 title: Özel Akış Yükseltmeleri
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 12c2b56d65b2ff41d6919e978dfad7560d05782c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cd8385194e1f24d246e6fc398462b45bacbe15d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127367"
 ---
 # <a name="custom-stream-upgrades"></a>Özel Akış Yükseltmeleri
 İstemci ve sunucu arasında bulunan bayt sürekli bir akış üzerinde Stream odaklı taşımalar TCP ve adlandırılmış kanallar gibi çalışır. Bu akış tarafından gerçekleştirilen bir <xref:System.IO.Stream> nesne. Bir akış yükseltme istemci kanal yığınına bir isteğe bağlı Protokolü katmanı eklemek ister ve bunu yapmak için iletişim kanalı diğer ucuna sorar. Özgün değiştirerek akış yükseltme oluşur <xref:System.IO.Stream> yükseltilmiş bir nesne.  
@@ -93,6 +93,7 @@ ms.locfileid: "54611325"
 4.  Akışı yapılan her çağrı sonra yükseltilecek <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> ve <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>
 - <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>
 - <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>

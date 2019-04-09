@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a53f433d1b6caca98b2b0d564774820239320f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170787"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` Yönetilen hata ayıklama Yardımcısı (MDA) davranışını değiştirir <xref:System.Object> sınıf gerçekleştirmek için bir işlem tarafından döndürülen ilişkin karma kodu modül <xref:System.Object.GetHashCode%2A> yöntemi. Bu MDA için'varsayılan mod neden olan 1 ' dir <xref:System.Object.GetHashCode%2A> 0 tüm nesneleri için döndürülecek.  
@@ -61,6 +61,7 @@ ms.locfileid: "54739673"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

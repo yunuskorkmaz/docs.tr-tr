@@ -1,15 +1,15 @@
 ---
-title: WCF Veri Hizmetleri protokol uygulama ayrıntıları
+title: WCF Veri Hizmetleri Protokol Uygulama Ayrıntıları
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: fdaaa95bdcffa3ae053cc856753faa1a224eebc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fcef8778707f2bac68755762143f4a7528f0bf1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152860"
 ---
-# <a name="wcf-data-services-protocol-implementation-details"></a>WCF Veri Hizmetleri protokol uygulama ayrıntıları
+# <a name="wcf-data-services-protocol-implementation-details"></a>WCF Veri Hizmetleri Protokol Uygulama Ayrıntıları
 ## <a name="odata-protocol-implementation-details"></a>OData protokol uygulama ayrıntıları  
  [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Protokolü uygulayan bir veri hizmeti işlevleri belirli minimum düzeyde sağlamanızı gerektirir. Bu işlevler "gerekir" ve "gerekir." açısından Protokolü belgelerinde açıklanmıştır İsteğe bağlı diğer işlevleri "Mayıs" açısından açıklanır Bu konuda, şu anda tarafından uygulanmadı Bu isteğe bağlı işlevler açıklanmaktadır. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Daha fazla bilgi için [OData Protokolü belgeleri](https://go.microsoft.com/fwlink/?LinkID=184554).  
   
@@ -23,5 +23,6 @@ ms.locfileid: "54728758"
  Ne zaman veri hizmetine gönderilen bir sorgu isteği içeren bir `$top` veya `$skip` sistem sorgusu seçeneği ve içermemesi `$orderby` sistem sorgusu seçeneği, döndürülen akışa göre artan düzende anahtar özellikleri sıralandığı. Sıralama doğru disk belleği sonuçları sağlamak için gerekli olmasıdır. Bunu yapmak için veri hizmeti sorgusuna bir sıralama ifadesi ekler. Bu davranış, aynı zamanda sunucu tabanlı disk belleği veri hizmeti etkin olduğunda oluşur. Daha fazla bilgi için [veri hizmeti yapılandırma](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md). Sıralama oluşan döndürülen akışını denetlemek için içermelidir `$orderby` URI sorgu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

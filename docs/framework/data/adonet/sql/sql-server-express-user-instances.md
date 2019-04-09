@@ -1,18 +1,18 @@
 ---
-title: SQL Server Express kullanıcı örnekleri
+title: SQL Server Express Kullanıcı Örnekleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093820"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111156"
 ---
-# <a name="sql-server-express-user-instances"></a>SQL Server Express kullanıcı örnekleri
+# <a name="sql-server-express-user-instances"></a>SQL Server Express Kullanıcı Örnekleri
 Microsoft SQL Server Express Edition (SQL Server Express) .NET Framework veri sağlayıcısı için SQL Server kullanırken yalnızca kullanılabilir kullanıcı örneği özelliğini destekler (`SqlClient`). Bir kullanıcı örneği, SQL Server Express Veritabanı Altyapısı'nın üst örneği tarafından oluşturulan ayrı bir örneğidir. Kullanıcı örnekleri eklemek ve SQL Server Express veritabanlarına bağlanmak için kendi yerel bilgisayarlarında yönetici olmayan kullanıcılar izin verin. Her örneği, tek kullanıcı, kullanıcı başına tek örnek güvenlik bağlamı altında çalışır.  
   
 ## <a name="user-instance-capabilities"></a>Kullanıcı örneği özellikleri  
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  Ağ Protokolü kullanıcı örnekleri için adlandırılmış kanallar yerel olması gerekir. Bir kullanıcı örneği bir SQL Server'ın uzak örneğinde başlatılamıyor ve SQL Server oturumları izin verilmez.  
   
 ## <a name="connecting-to-a-user-instance"></a>Bir kullanıcı örneğine bağlanma  
- `User Instance` Ve `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> anahtar sözcüklere izin bir <xref:System.Data.SqlClient.SqlConnection> bir kullanıcı örneğine bağlanmak için. Kullanıcı örnekleri tarafından da desteklenir <xref:System.Data.SqlClient.SqlConnectionStringBuilder> `UserInstance` ve `AttachDBFilename` özellikleri.  
+ `User Instance` Ve `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> anahtar sözcüklere izin bir <xref:System.Data.SqlClient.SqlConnection> bir kullanıcı örneğine bağlanmak için. Kullanıcı örnekleri tarafından da desteklenir <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` ve `AttachDBFilename` özellikleri.  
   
  Aşağıda gösterilen örnek bağlantı dizesi hakkında aşağıdakileri unutmayın:  
   
@@ -58,7 +58,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Ayrıca <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> ve <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> özellikler zamanında bağlantı dizenizi oluşturmak için çalışma zamanında.  
+>  Ayrıca <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> ve <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> özellikler zamanında bağlantı dizenizi oluşturmak için çalışma zamanında.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Kullanarak &#124;DataDirectory&#124; değiştirme dizesi  
  `AttachDbFileName` ADO.NET 2. 0'sunulmasıyla birlikte genişletilmişse `|DataDirectory|` (kanal sembolleri alınmış) değiştirme dizesi. `DataDirectory` ile birlikte kullanılan `AttachDbFileName` bir veri dosyası için göreli bir yol belirtmek için göreli bir yol olan yerine veri kaynağına dayalı bağlantı dizesi oluşturmak, geliştiricilerin tam yolunu belirtmeniz gerekir.  
@@ -151,6 +151,7 @@ private static void OpenSqlConnection()
 -   Özel ASP.NET, Windows kimlik doğrulaması kullanarak barındırma. Tek bir SQL Server Express örneği intranet üzerinde barındırılabilir. Uygulamayı, kimliğe bürünme kullanılmadığında ASPNET Windows hesabı kullanarak bağlanır. Kullanıcı örnekleri, üçüncü taraf veya paylaşılan barındırma burada tüm uygulamalar aynı kullanıcı örneği paylaşımında yapabileceği ve artık birbirinden yalıtılmış kalır senaryoları için kullanılmamalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)
 - [Veri Kaynağına Bağlanma](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)

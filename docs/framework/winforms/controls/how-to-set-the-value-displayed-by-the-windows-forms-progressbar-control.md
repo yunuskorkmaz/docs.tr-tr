@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ProgressBar denetimi tarafından görüntülenen değeri ayarlama'
+title: 'Nasıl yapılır: Windows Forms ProgressBar Denetimi Tarafından Görüntülenen Değeri Ayarlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: a889d6e5cd40833353c1b294031621b7b289ac4d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 292a70658e37839897b39d4d58fdf98903d2d963
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196885"
 ---
-# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Nasıl yapılır: Windows Forms ProgressBar denetimi tarafından görüntülenen değeri ayarlama
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Nasıl yapılır: Windows Forms ProgressBar Denetimi Tarafından Görüntülenen Değeri Ayarlama
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.ToolStripProgressBar> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ProgressBar> denetler; ancak, <xref:System.Windows.Forms.ProgressBar> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
   
@@ -225,6 +225,7 @@ ms.locfileid: "57715899"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>
 - [ProgressBar Denetimine Genel Bakış](progressbar-control-overview-windows-forms.md)

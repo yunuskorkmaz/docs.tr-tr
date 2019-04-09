@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Derleme içeriği görüntüle'
+title: 'Nasıl yapılır: Derleme İçeriklerini Görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72778f769c2c3f030de0cd31d087e0a90ba6f508
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
+ms.openlocfilehash: 229d3efb6566605fb9f03ad2012793fe2e4cb17b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675042"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155187"
 ---
-# <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: Derleme içeriği görüntüle
+# <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: Derleme İçeriklerini Görüntüleme
 Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) bir dosyayı Microsoft Ara dili (MSIL) bilgilerini görüntülemek için. İncelenmekte olan dosyanın derleme olup, bu bilgileri derlemenin özniteliklerini yanı sıra diğer modül ve derlemelerdeki başvuruları ekleyebilirsiniz. Bu bilgiler bir dosyaya bir bütünleştirilmiş kod veya bir derlemenin parçası olup ve dosyanın diğer modüllerde veya derlemeler için başvurular olup saptamanıza yardımcı olabilir.  
   
 ### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>Ildasm.exe kullanarak bir derlemenin içeriğini görüntülemek için  
@@ -89,6 +89,7 @@ Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/t
  Bir derleme bildirimi derlemenin içeriğine bağlı olarak farklı yönergeler bir dizi içerebilir. ECMA belgeleri, derleme bildiriminde yönergeleri kapsamlı bir listesi için bkz. özellikle "Bölüm II: Meta veri tanımı ve anlamı"ve" Bölüm III: CIL'i yönerge kümesi". Belgeler çevrimiçi olarak kullanılabilir; bkz: [ECMA C# ve ortak dil altyapısı standartları](https://go.microsoft.com/fwlink/?LinkID=99212) MSDN'de ve [standart ECMA-335 - ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) Ecma uluslararası Web sitesinde.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uygulama etki alanları ve derlemeler](application-domains.md#application-domains-and-assemblies)
-- [Uygulama Etki Alanları ve Bütünleştirilmiş Kodlar için Nasıl Yapılır Konuları](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
+
+- [Uygulama Etki Alanları ve derlemeler](application-domains.md#application-domains-and-assemblies)
+- [Uygulama Etki Alanları ve Derlemeler Nasıl Yapılır Konuları](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
 - [Ildasm.exe (IL Ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

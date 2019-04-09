@@ -9,18 +9,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 18a08c9bec8436399cd3acbf27198e0912e32d09
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148310"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış
 Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, ve <xref:System.Windows.Media.RadialGradientBrush> düz renkler, doğrusal gradyanlar ve radyal gradyanlar ile Boyama nesneleri.  
-  
 
-  
 <a name="solidcolor"></a>   
 ## <a name="painting-an-area-with-a-solid-color"></a>Düz renk ile bir alanı boyama  
  En yaygın işlemlerden herhangi bir platformda bir düz ile bir alanı boyama etmektir <xref:System.Windows.Media.Color>. Bu görevi gerçekleştirmek için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sağlar <xref:System.Windows.Media.SolidColorBrush> sınıfı. Aşağıdaki bölümlerde farklı yolları ile Boyama bir <xref:System.Windows.Media.SolidColorBrush>.  
@@ -169,6 +167,7 @@ Farklı ayarlarla GradientOrigin, merkezi RadiusX ve RadiusY RadialGradientBrush
  <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ve <xref:System.Windows.Media.VisualBrush> sınıfları görüntüler, çizimler veya görsel ile bir alanı boyama olanak tanır. Boyama görüntüler, çizimler ve desenleri hakkında daha fazla bilgi için bkz. [görüntüler, çizimler ve görsellerle boyama](painting-with-images-drawings-and-visuals.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.LinearGradientBrush>

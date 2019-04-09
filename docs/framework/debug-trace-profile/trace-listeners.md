@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdccc0d60cb5f4bbee5da9b07072a9aa14a8fde9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35aec3a311680e398d9f2bba94bf4c9a274c8a04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137910"
 ---
 # <a name="trace-listeners"></a>İz Dinleyicileri
 Kullanırken **izleme**, **hata ayıklama** ve <xref:System.Diagnostics.TraceSource>, toplama ve gönderilen iletilerin kaydetmek için bir mekanizma olması gerekir. İzleme iletileri tarafından alınan *dinleyicileri*. Toplamak, depolamak ve izleme iletilerini yönlendirmek için bir dinleyici amacı olan. Dinleyiciler bir günlük, pencere veya metin dosyası gibi uygun bir hedef izleme çıkışa doğrudan.  
@@ -77,9 +77,10 @@ System.Diagnostics.Trace.Listeners.Add(
  Kendi dinleyicileri devralarak tanımlayabileceğiniz **TraceListener** temel sınıf ve kendi özelleştirilmiş yöntemlerinizi yöntemleriyle geçersiz kılma. Geliştirici tarafından tanımlanan dinleyicileri oluşturma ile ilgili daha fazla bilgi için bkz: <xref:System.Diagnostics.TraceListener> .NET Framework başvurusu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TraceListener>
-- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [İzleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
 - [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)

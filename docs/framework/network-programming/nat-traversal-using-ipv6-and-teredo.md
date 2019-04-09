@@ -1,15 +1,15 @@
 ---
-title: IPv6 ve Teredo kullanarak NAT geçişi
+title: IPv6 ve Teredo kullanarak NAT Geçişi
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: 896c3f9036e76c37f5f6bf2950d3d2d2864b3f37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170780"
 ---
-# <a name="nat-traversal-using-ipv6-and-teredo"></a>IPv6 ve Teredo kullanarak NAT geçişi
+# <a name="nat-traversal-using-ipv6-and-teredo"></a>IPv6 ve Teredo kullanarak NAT Geçişi
 Geliştirmeler ağ adresi çevirisi (NAT) geçişi için destek sağlayan yapıldı. Bu değişiklikler, IPv6 ve Teredo ile kullanılmak üzere tasarlanmıştır ancak ayrıca diğer IP teknolojileri tünel için geçerlidir. Bu geliştirmeler sınıflarda etkileyen <xref:System.Net> ve ilgili ad alanları.  
   
  Bu değişiklikler, IP teknolojileri tünel kullanmayı planlıyorsanız istemci ve sunucu uygulamaları etkileyebilir.  
@@ -45,6 +45,7 @@ Geliştirmeler ağ adresi çevirisi (NAT) geçişi için destek sağlayan yapıl
  Kullanan uygulamalar için <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> ve ilişkili sınıflarının <xref:System.Net.Sockets.Socket.GetSocketOption%2A> ve <xref:System.Net.Sockets.Socket.SetSocketOption%2A> yöntemleri ile kullanılabilir <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType> yuva sorgu, etkinleştirme veya NAT geçişi devre dışı bırakmak için seçeneği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=nameWithType>

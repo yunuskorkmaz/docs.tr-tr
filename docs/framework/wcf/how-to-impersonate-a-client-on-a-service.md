@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir hizmette istemci kimliğine bürünme'
+title: 'Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 260ff8b2131e1ee3c42197187f7067ab9c1328d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c414d0af033d9d703fcf947d008aeefcef5b876
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497510"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169123"
 ---
-# <a name="how-to-impersonate-a-client-on-a-service"></a>Nasıl yapılır: Bir hizmette istemci kimliğine bürünme
+# <a name="how-to-impersonate-a-client-on-a-service"></a>Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme
 Bir Windows Communication Foundation (WCF) hizmette istemci kimliğine bürünme istemci adına eylem gerçekleştirmek hizmet sağlar. Erişim tabi eylemleri için Denetim listesi (ACL), dizinleri ve dosyaları bir makinede erişim veya bir SQL Server veritabanına erişimi gibi ACL onay istemci kullanıcı hesabıdır karşı denetler. Bu konuda, bir istemcinin kimliğe bürünme düzeyi ayarlamak bir istemci bir Windows etki alanında etkinleştirmek için gerekli temel adımlar gösterilmektedir. Bu çalışma örneği için bkz [istemci kimliğine bürünme](../../../docs/framework/wcf/samples/impersonating-the-client.md). İstemci kimliğine bürünme hakkında daha fazla bilgi için bkz: [temsilcilik ve kimliğe bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 > [!NOTE]
@@ -46,6 +46,7 @@ Bir Windows Communication Foundation (WCF) hizmette istemci kimliğine bürünme
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - [İstemci Kimliğine Bürünme](../../../docs/framework/wcf/samples/impersonating-the-client.md)

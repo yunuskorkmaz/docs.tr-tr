@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: eefdb3b1205a64221e3e9352f70e3d06dc074eff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197223"
 ---
 # <a name="how-to-implement-binding-validation"></a>Nasıl yapılır: Bağlama Doğrulaması Uygulama
 Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> ve geçersiz bir değer girildiğinde, kullanıcıyı bilgilendirmek üzere görsel geri bildirim sağlamak için bir stil tetikleyicisi dayalı bir özel doğrulama kuralı.  
@@ -38,5 +38,6 @@ Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Control
  Özel bir sağlamazsanız unutmayın <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> bir doğrulama hatası olmadığında kullanıcıya görsel geribildirim sağlamak için varsayılan hata şablon görüntülenir. "Veri doğrulama" bölümüne bakın [Data Binding Overview](data-binding-overview.md) daha fazla bilgi için. Ayrıca, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bağlama kaynak özelliği güncelleştirme sırasında oluşturulan özel durumları yakalayan bir yerleşik doğrulama kuralları sağlar. Daha fazla bilgi için bkz. <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

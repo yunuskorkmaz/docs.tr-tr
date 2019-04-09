@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: COM + hizmet modeli yapılandırma aracı kullanın'
+title: "Nasıl yapılır: COM+ Hizmet Modeli Yapılandırma Aracı'nı Kullanma"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196898"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Nasıl yapılır: COM + hizmet modeli yapılandırma aracı kullanın
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Nasıl yapılır: COM+ Hizmet Modeli Yapılandırma Aracı'nı Kullanma
 Uygun bir barındırma modu seçtikten sonra COM + hizmet modeli yapılandırma komut satırı aracı (ComSvcConfig.exe) Web Hizmetleri olarak kullanıma sunulacak bir uygulama arabirimleri yapılandırmak için kullanın.  
   
 > [!NOTE]
@@ -110,4 +110,5 @@ Uygun bir barındırma modu seçtikten sonra COM + hizmet modeli yapılandırma 
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [COM+ Uygulamaları ile Tümleştirme Genel Bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

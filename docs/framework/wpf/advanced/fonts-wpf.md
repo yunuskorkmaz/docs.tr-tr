@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169253"
 ---
 # <a name="fonts-wpf"></a>Yazı Tipleri (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] metin kullanarak zengin sunumu için destek içerir [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi. Bir örnek paketinin [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipleri ile birlikte [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
@@ -23,6 +23,7 @@ ms.locfileid: "57360985"
  [Nasıl Yapılır Konuları](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
 - [WPF'deki Belgeler](documents-in-wpf.md)

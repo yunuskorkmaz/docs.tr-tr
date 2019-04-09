@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 2c33fa1ebb3c9dd4f05c24db9de42ff47c84f983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 8cc94117cc26f44288835fd85c6ded429124d3c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107932"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Matrise Animasyon Ekleme
 Bu örnek, animasyon ekleme işlemi gösterilmektedir <xref:System.Windows.Media.MatrixTransform.Matrix%2A> özelliği bir <xref:System.Windows.Media.MatrixTransform> anahtar çerçeveler kullanarak.  
@@ -35,6 +35,7 @@ Bu örnek, animasyon ekleme işlemi gösterilmektedir <xref:System.Windows.Media
  Tam bir örnek için bkz. [ana kare animasyon örnek](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.MatrixTransform.Matrix%2A>
 - <xref:System.Windows.Media.MatrixTransform>
 - [Anahtar-Çerçeve Animasyonlara Genel Bakış](key-frame-animations-overview.md)

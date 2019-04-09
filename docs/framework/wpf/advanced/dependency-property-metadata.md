@@ -7,18 +7,16 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 7a9f4c2c8c9ff6c315b9d7189d5e859a902c3e4d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170371"
 ---
 # <a name="dependency-property-metadata"></a>Bağımlılık Özelliği Meta Verisi
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ne bildirilen bir özellik üzerinden erişiyorsanız hakkında veya genel olabilir ötesine giden sistem raporlama bir meta veri özellik sistemi içerir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] özellikleri. Meta verileri için bir bağımlılık özelliği bir bağımlılık özelliği tanımlayan bir sınıf tarafından da bir benzersiz bir şekilde atanabilir bağımlılık özelliği için farklı bir sınıf eklendiğinde değiştirilebilir ve özellikle devralan tüm türetilmiş sınıfları tarafından geçersiz kılınabilir bağımlılık özelliği tanımlayan temel sınıf.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu konu, üzerinde bir tüketici mevcut bağımlılık özellikleri perspektifinden bağımlılık özellikleri anladığınızı varsayar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfları ve okuma [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md). Bu konudaki örnekleri izlemek için de anlamanız gereken [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve nasıl yazıldığını bilmeniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
@@ -92,6 +90,7 @@ ms.locfileid: "57352939"
  Çağırabilirsiniz <xref:System.Windows.DependencyProperty.AddOwner%2A> ekli özelliği sahibi sınıfı tarafından tanımlanan bir bağımlılık özelliği için. Genellikle bunu nedeni bağlı olmayan bir bağımlılık özelliği olarak daha önce ekli özellik kullanıma sunulmasıdır. Ardından açığa çıkarır <xref:System.Windows.DependencyProperty.AddOwner%2A> dönüş değeri olarak bir `public static readonly` bağımlılık özelliği tanımlayıcı olarak kullanılacak alanı ve özellik üyeler tablosunda görünür ve ekli olmayan bir özelliğini destekleyen uygun bir "sarmalayıcı" özellikleri tanımlar sınıfınıza kullanımı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.PropertyMetadata>
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>

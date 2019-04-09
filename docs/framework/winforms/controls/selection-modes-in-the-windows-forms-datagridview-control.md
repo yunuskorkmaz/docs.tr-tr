@@ -5,12 +5,12 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: 931df04bbe6b8448030e26cd2cc2c904865ac0d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717309"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097284"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Seçim Modları
 Uygulamanızın içinde kullanıcı seçimlerine göre eylemleri gerçekleştirmek için bazen istediğiniz bir <xref:System.Windows.Forms.DataGridView> denetimi. Eylemler bağlı olarak, mümkün olan seçim türlerini sınırlamak isteyebilirsiniz. Örneğin, uygulamanızın seçili olan kaydı için bir rapor yazdırabilir varsayalım. Bu durumda, yapılandırma isteyebilirsiniz <xref:System.Windows.Forms.DataGridView> denetimi bir satır her zaman herhangi bir yere tıklayarak böylece tüm satırı seçer ve bu nedenle aynı anda yalnızca bir satır seçilebilir.  
@@ -45,9 +45,10 @@ Uygulamanızın içinde kullanıcı seçimlerine göre eylemleri gerçekleştirm
 >  Seçili hücreleri programlı kullanımını gösteren kod örneği bulunabilir <xref:System.Windows.Forms.DataGridView> sınıfına genel bakış.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
 - [Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminin seçim modunu ayarlama](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminin Seçim Modunu Ayarlama](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

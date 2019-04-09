@@ -9,24 +9,25 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 8683b3ba55f3b9d5425c865af7e18127b55be02d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140224"
 ---
 # <a name="geometries"></a>Geometriler
 <xref:System.Windows.Media.Geometry> işlemek için kullanılan, çok yönlü bir sınıf [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] grafik, isabet testi nesneleri ve kırpma bölgeleri tanımlayın  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Yol İşaretleme Söz Dizimi](path-markup-syntax.md)  
+ [Yol Biçimlendirme Sözdizimi](path-markup-syntax.md)  
  [Geometriye Genel Bakış](geometry-overview.md)  
  [Nasıl Yapılır Konuları](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
 - [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Grafikler ve Multimedya](index.md)

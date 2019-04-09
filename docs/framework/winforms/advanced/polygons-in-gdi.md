@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], polygons
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
-ms.openlocfilehash: cffbee5f73b9fe92e2f1f3c7eff2f2336d9123a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2b1e3d387e4d056d9187c54dcef560544206c370
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132632"
 ---
 # <a name="polygons-in-gdi"></a>GDI+'daki Çokgenler
 Bir çokgenin üç veya daha fazla düz kenarlar ile kapalı şekildir. Örneğin, üç kenarı sahip bir çokgenin bir üçgen olan dört tarafında sahip bir çokgenin dikdörtgen şeklinde ve beş yüz sahip bir çokgenin bir Beşgene olduğu. Aşağıdaki resimde, birkaç çokgenler gösterilmektedir.  
@@ -32,7 +32,8 @@ Bir çokgenin üç veya daha fazla düz kenarlar ile kapalı şekildir. Örneği
  ![Polygon](./media/aboutgdip02-art08.gif "Aboutgdip02_art08")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
-- [Nasıl yapılır: Kalem oluşturma](how-to-create-a-pen.md)
+- [Nasıl yapılır: Kalem Oluşturma](how-to-create-a-pen.md)

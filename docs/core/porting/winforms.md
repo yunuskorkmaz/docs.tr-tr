@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 3a50b5f085aee4afc2f388aeac8a4f68823b92c7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: 0f45c053311885c779d394a97f5845119e2b5c82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186160"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Nasıl yapılır: .NET Core için bir Windows Forms masaüstü uygulaması bağlantı noktası
 
@@ -36,7 +36,6 @@ Bu makalede, çeşitli adlar, geçiş için kullanılan dosya türlerini tanıml
 - Çalışan bir Windows Forms projesi oluşturan ve sorun çalışır bir çözümde.
 - İçinde projenizin kodlanmasını C#. 
 - Son yükleme [.NET Core 3.0](https://aka.ms/netcore3download) Önizleme.
-
 
 >[!NOTE]
 >**Visual Studio 2017** .NET Core 3.0 projeleri desteklemiyor. **Visual Studio 2019 Önizleme/RC** .NET Core 3.0 projeleri destekler ancak görsel tasarımcı için .NET Core 3.0, Windows Forms projeleri henüz desteklememektedir. Görsel tasarımcıyı kullanmak için çözümünüzdeki forms dosyaları ile .NET Core projesi paylaşan bir .NET Windows Forms projesi olması gerekir.

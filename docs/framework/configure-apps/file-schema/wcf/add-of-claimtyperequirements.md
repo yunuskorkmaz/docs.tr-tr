@@ -2,12 +2,12 @@
 title: <add> , <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 6a8c96fb2cb2050cac7b8853b84caecc883449d7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 97d3ecca369aeffb7b2e8464f385eeae13bd470f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168860"
 ---
 # <a name="add-of-claimtyperequirements"></a>\<Ekle >, \<claimTypeRequirements >
 Birleştirilmiş kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir. Örneğin, hizmetleri, belirli bir talep türleri kümesini sahip olması gerekir gelen kimlik gereksinimleri belirtin.  
@@ -73,6 +73,7 @@ Birleştirilmiş kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağl
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.ClaimTypeRequirements%2A>
@@ -84,5 +85,5 @@ Birleştirilmiş kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağl
 - [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

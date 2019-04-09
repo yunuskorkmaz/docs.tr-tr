@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158450"
 ---
 # <a name="user-drawn-controls"></a>Kullanıcı Çizimli Denetimler
 .NET Framework kolayca kendi denetimleri geliştirme olanağı sağlar. Standart denetimler kodla birlikte ilişkili bir dizi olan bir kullanıcı denetimi oluşturabilir veya sıfırdan kendi denetiminizi yukarı tasarlayabilirsiniz. Devralma, varolan bir denetimden devralan bir denetim oluşturma ve doğal işlevselliği eklemek için bile kullanabilirsiniz. Hangi yaklaşımı kullanın, .NET Framework özel bir grafik arabirim için oluşturduğunuz herhangi bir denetimi çizmek için işlevsellik sağlar.  
@@ -76,11 +76,12 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 >  Kullanım <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> dikdörtgen olmayan denetimi uygulamak için özellik.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Control.Region%2A>
 - <xref:System.Windows.Forms.ControlStyles>
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [Bağlı Denetimler](constituent-controls.md)
 - [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)

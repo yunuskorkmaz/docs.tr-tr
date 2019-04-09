@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 981fecf33b60c76ecab760185db7dab4bbb254d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165212"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Nasıl yapılır: Komut Destekli Denetime Komut Bağlama
 Aşağıdaki örnek e nasıl bağlanacağını gösterir. bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Control> komutu desteği de yerleşik.  Komutları için birden çok kaynaktan eksiksiz bir örnek için bkz. [örnek bir özel RoutedCommand oluşturma](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) örnek.  
@@ -37,5 +37,6 @@ Aşağıdaki örnek e nasıl bağlanacağını gösterir. bir <xref:System.Windo
  [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Komut Vermeye Genel Bakış](commanding-overview.md)
 - [Komut Desteği Olmadan Denetime Komut Bağlama](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

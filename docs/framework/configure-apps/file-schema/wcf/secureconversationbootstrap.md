@@ -2,12 +2,12 @@
 title: <secureConversationBootstrap>
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: c4e9ad3845f8ceef51cd4474b5f3f61b85f12754
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e39458e7e0bac15429ad3d34c4fbba0f55d254f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167004"
 ---
 # <a name="secureconversationbootstrap"></a>\<secureConversationBootstrap>
 Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.  
@@ -74,6 +74,7 @@ Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri be
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Özel bağlama için güvenlik seçeneklerini belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
@@ -82,5 +83,5 @@ Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri be
 - [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

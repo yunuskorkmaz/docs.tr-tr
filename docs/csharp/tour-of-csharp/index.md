@@ -1,18 +1,18 @@
 ---
 title: Turu C# - C# Kılavuzu
 description: Yeni C#? Dilinin temellerini öğrenin.
-ms.date: 08/10/2016
-ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: d1373b65d6cb821871c68574662360c1431d79cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152067"
 ---
 # <a name="a-tour-of-the-c-language"></a>Turu C# dil
 
-C# (okunur "Bkz Sharp") bir basit, modern, nesne yönelimli ve tür kullanımı uyumlu programlama dilidir. C#kendi kökleri dilleri C ailesinde vardır ve C, C++, Java ve JavaScript programcıları için hemen tanıdık gelecektir.
+C# (okunur "Bkz Sharp") bir basit, modern, nesne yönelimli ve tür kullanımı uyumlu programlama dilidir. C#kendi kökleri dilleri C ailesinde vardır ve C, C++, Java ve JavaScript programcıları için hemen tanıdık gelecektir. Bu Turun dil ana bileşenleri'ne genel bakış sağlar. Dil etkileşimli örnekleri keşfedin, deneyin bizim [giriş C# ](../tutorials/intro-to-csharp/index.md) öğreticiler.
 
 C#, nesne yönelimli bir dildir ancak C# daha fazla için destek içerir ***bileşen odaklı*** programlama. Çağdaş yazılım tasarımı giderek daha fazla işlevsellik müstakil ve kendiliğinden açıklayıcı paketleri biçiminde yazılım bileşenlerini kullanır. Bu bileşenler özellikleri, yöntemleri ve olayları ile bunların bir programlama modeli sunar, anahtarıdır; bileşen hakkında tanımlayıcı bilgiler sağlayan özniteliklerine sahip oldukları; ve bunlar kendi belgelerinin dahil edilip derecelendirilir. C#dil yapıları doğrudan yaparak, bu kavramları desteklemek için sağlar C# doğal dilde çok oluşturun ve yazılım bileşenlerini kullanın.
 
@@ -43,7 +43,6 @@ Hello, World
 > [!IMPORTANT]
 > `csc` Tam Framework komut ve tüm platformlarda kullanılamayabilir.
 
-
 "Hello, World" programı ile başlayan bir `using` başvuran yönergesi `System` ad alanı. Ad alanlarında, C# programları ve kitaplıkları düzenleme, hiyerarşik bir yöntem sağlar. Ad alanları, türler ve diğer ad alanları içerir — örneğin, `System` ad alanı içeren bir dizi türleri gibi `Console` program ve diğer ad alanları, bir sayı gibi başvurulan sınıfı `IO` ve `Collections`. A `using` belirtilen bir ad alanı başvuruyor yönergesi bu ad alanının üyeleri olan türlerinin nitelenmemiş kullanımı sağlar. Nedeniyle `using` yönerge, programın kullanabilirsiniz `Console.WriteLine` için kısayol olarak `System.Console.WriteLine`.
 
 `Hello` "Hello, World" program tarafından bildirilen adlı yöntem tek bir üye sınıfında `Main`. `Main` Yöntemi statik değiştiriciyle bildirildi. Örnek yöntemleri anahtar sözcüğü kullanılarak belirli kapsayan nesne örneği başvurabilirsiniz ancak `this`, belirli bir nesneye başvuru olmadan statik yöntemleri çalışır. Kural gereği, adlı statik bir yöntemi `Main` bir programın giriş noktası olarak görev yapar.
@@ -68,7 +67,7 @@ Hakkında bilgi edinmek için çok daha fazla C#.  Aşağıdaki konularda öğel
     - Bir ***dizi*** hesaplanan dizinlerini erişilen değişken bir sayı içeren bir veri yapısıdır.
 * [Arabirimler](interfaces.md)
     - Bir ***arabirimi*** sınıfları ve yapıları tarafından uygulanan bir sözleşmeyi tanımlar. Bir arabirim yöntemleri, özellikleri, olayları ve dizin oluşturucular içerebilir. Bir arabirim tanımlar üyelerinin uygulamalarını sağlamaz; yalnızca bir sınıf ya da arabirimi uygulayan yapının tarafından sağlanması gereken üyeleri belirtir.
-* [Sabit listeleri](enums.md)
+* [Numaralandırmalar](enums.md)
     - Bir ***sabit listesi türü*** adlandırılmış sabitler kümesini içeren farklı bir değer türüdür.
 * [Temsilciler](delegates.md)
     - A ***temsilci türü*** belirli bir parametre olan yöntemlere başvuruları temsil listesi ve dönüş türü. Temsilciler, yöntemleri değişkenine atanır ve parametre olarak geçirilen varlıklar olarak değerlendirmek mümkün kılar. Diğer dillerde bulunan işlev işaretçileri kavramı temsilcileri benzerdir ancak işlev işaretçileri, nesne yönelimli ve tür kullanımı uyumlu temsilciler.

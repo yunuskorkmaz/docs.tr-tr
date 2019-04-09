@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: b2023370ee248e999514090e57531eafb301c616
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b44f63d20e0e2ed0d2486003b15a932ba939f55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155109"
 ---
 # <a name="wsdualhttpbinding"></a>\<wsDualHttpBinding >
 Çift yönlü Hizmet sözleşmeleri veya SOAP aracıları üzerinden haberleşme için uygun olan güvenli, güvenilir ve birlikte çalışabilen bağlama tanımlar.  
@@ -132,6 +132,7 @@ ms.locfileid: "57377212"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>
 - [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)

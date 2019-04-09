@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a26863f2a1880cffba5eb3ea51573f45323be72d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb0810a9e0ffce825abecc87eb2698920209d86f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171814"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass MDA
 `nonComVisibleBaseClass` Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilmiş olduğunda bir `QueryInterface` Çağrının yapıldığı COM çağrılabilir sarmalayıcı (CCW) yerel veya yönetilmeyen kodla COM görünür olmayan bir taban sınıftan türetilen bir COM yönetilen görünür sınıfı.  `QueryInterface` Çağrının sebep olur yalnızca çağrı burada istekleri sınıf arabirimi veya varsayılan durumda etkinleştirmek MDA `IDispatch` sınıfı için Yönetilen COM-görünür.  MDA değil etkinleştirildiği zaman `QueryInterface` olan açık bir arabirim için <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> özniteliği uygulanan ve açıkça COM görünür bir sınıf tarafından uygulanır.  
@@ -55,6 +55,7 @@ constrained by the COM versioning rules.
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Birlikte Çalışma Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

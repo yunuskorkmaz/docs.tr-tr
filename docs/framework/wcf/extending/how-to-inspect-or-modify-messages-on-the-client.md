@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: İstemcide iletileri denetleme veya değiştirme'
+title: 'Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme'
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 4cb4560aa9edf9b9de30ab387f24f2f5300f1097
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cc2a03806dbc9ff33c1b16da7a31d862001534aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167485"
 ---
-# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Nasıl yapılır: İstemcide iletileri denetleme veya değiştirme
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme
 İnceleme veya uygulayarak bir WCF istemcisi gelen veya giden iletileri değiştirme bir <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> ve istemci çalışma zamanına ekleme. Daha fazla bilgi için [genişletme istemciler](../../../../docs/framework/wcf/extending/extending-clients.md). Hizmette eşdeğer özellik <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Tam kod örneği için bkz. [ileti denetçileri](../../../../docs/framework/wcf/samples/message-inspectors.md) örnek.  
   
 ### <a name="to-inspect-or-modify-messages"></a>İletileri denetleme veya değiştirme için  
@@ -127,6 +127,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>
 - [Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

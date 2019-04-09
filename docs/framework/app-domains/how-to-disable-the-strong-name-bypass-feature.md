@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tanımlayıcı adlı atlama özelliğini devre dışı bırakma'
+title: 'Nasıl yapılır: Tanımlayıcı Adlı Atlama Özelliğini Devre Dışı Bırakma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - strong-name bypass feature
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4e5ea1907ec3de4536d09b3d76ca4956c8756d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5f96ba198a88b10d77509187d0dec9806a9e26b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155702"
 ---
-# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Nasıl yapılır: Tanımlayıcı adlı atlama özelliğini devre dışı bırakma
+# <a name="how-to-disable-the-strong-name-bypass-feature"></a>Nasıl yapılır: Tanımlayıcı Adlı Atlama Özelliğini Devre Dışı Bırakma
 İle .NET Framework sürüm 3.5 Service Pack 1 (SP1) başlayarak, tam güvene bir derleme yüklendiğinde tanımlayıcı ad imzaları doğrulanmaz <xref:System.AppDomain> gibi varsayılan nesne <xref:System.AppDomain> için `MyComputer` bölge. Bu atlama özelliğini tanımlayıcı ad adlandırılır. İçin tam güven ortamında, talepleri <xref:System.Security.Permissions.StrongNameIdentityPermission> imzalı için tam güven derlemeleri imzalarına bağımsız olarak her zaman başarılı. Tek kısıtlama, kendi bölgesine tam güvenilir olduğundan derleme tam güvenilir olması gerekliliğidir. Tanımlayıcı adı bir faktör Bu koşullar altında olmadığı için bunu doğrulanması için bir neden yoktur. Tanımlayıcı ad imzası doğrulama atlama önemli performans geliştirmeleri sunar.  
   
  Bu gecikme-imzalı değil ve bir tam güvene yüklenen herhangi bir tam güven derleme atlama özelliğini uygular <xref:System.AppDomain> tarafından belirtilen dizinden kendi <xref:System.AppDomainSetup.ApplicationBase%2A> özelliği.  
@@ -54,6 +54,7 @@ ms.locfileid: "54494308"
 >  Yalnızca bilgisayar için atlama özelliği etkinse, bir uygulama için tanımlayıcı ad doğrulama açıp kapatabilirsiniz. Atlama özelliği, bilgisayarı kapatılmış, tüm uygulamalar için güçlü adlar doğrulanır ve tek bir uygulama için doğrulamayı atlayamazsınız.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sn.exe (Tanımlayıcı Ad Aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [\<bypassTrustedAppStrongNames > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Tanımlayıcı Adlı Derlemeler Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
