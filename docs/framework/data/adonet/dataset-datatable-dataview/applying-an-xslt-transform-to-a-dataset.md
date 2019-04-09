@@ -1,21 +1,21 @@
 ---
-title: DataSet'e XSLT dönüşümü uygulama
+title: DataSet’e XSLT Dönüşümü Uygulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: b665fc9593cd73e759625bdfd537581958f8734d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b3aca6a71f88762084934d0d9c7cea15b5366c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072603"
 ---
-# <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="191cf-102">DataSet'e XSLT dönüşümü uygulama</span><span class="sxs-lookup"><span data-stu-id="191cf-102">Applying an XSLT Transform to a DataSet</span></span>
-<span data-ttu-id="191cf-103">**WriteXml** yöntemi <xref:System.Data.DataSet> içeriğini yazmanızı sağlayan bir **veri kümesi** XML verileri olarak.</span><span class="sxs-lookup"><span data-stu-id="191cf-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="191cf-104">Ardından bu XML XSL Dönüşümleri (XSLT) kullanarak başka bir biçime dönüştürmek için genel bir görevdir.</span><span class="sxs-lookup"><span data-stu-id="191cf-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="191cf-105">Bununla birlikte, eşitleme bir **veri kümesi** ile bir <xref:System.Xml.XmlDataDocument> bir XSLT stil sayfası içeriğini sağlayan bir **veri kümesi** ilk içeriğini yazmak zorunda kalmadan  **Veri kümesi** kullanarak XML verilerini olarak **WriteXml**.</span><span class="sxs-lookup"><span data-stu-id="191cf-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  
+# <a name="applying-an-xslt-transform-to-a-dataset"></a><span data-ttu-id="8249a-102">DataSet’e XSLT Dönüşümü Uygulama</span><span class="sxs-lookup"><span data-stu-id="8249a-102">Applying an XSLT Transform to a DataSet</span></span>
+<span data-ttu-id="8249a-103">**WriteXml** yöntemi <xref:System.Data.DataSet> içeriğini yazmanızı sağlayan bir **veri kümesi** XML verileri olarak.</span><span class="sxs-lookup"><span data-stu-id="8249a-103">The **WriteXml** method of the <xref:System.Data.DataSet> enables you to write the contents of a **DataSet** as XML data.</span></span> <span data-ttu-id="8249a-104">Ardından bu XML XSL Dönüşümleri (XSLT) kullanarak başka bir biçime dönüştürmek için genel bir görevdir.</span><span class="sxs-lookup"><span data-stu-id="8249a-104">A common task is to then transform that XML to another format using XSL transformations (XSLT).</span></span> <span data-ttu-id="8249a-105">Bununla birlikte, eşitleme bir **veri kümesi** ile bir <xref:System.Xml.XmlDataDocument> bir XSLT stil sayfası içeriğini sağlayan bir **veri kümesi** ilk içeriğini yazmak zorunda kalmadan  **Veri kümesi** kullanarak XML verilerini olarak **WriteXml**.</span><span class="sxs-lookup"><span data-stu-id="8249a-105">However, synchronizing a **DataSet** with an <xref:System.Xml.XmlDataDocument> enables you to apply an XSLT stylesheet to the contents of a **DataSet** without having to first write the contents of the **DataSet** as XML data using **WriteXml**.</span></span>  
   
- <span data-ttu-id="191cf-106">Aşağıdaki örnek dolduran bir **veri kümesi** tablolar ve ilişkiler ile eşitler **veri kümesi** ile bir **XmlDataDocument**ve bir kısmı Yazar **Veri kümesi** bir HTML dosyası kullanarak bir XSLT stil sayfası.</span><span class="sxs-lookup"><span data-stu-id="191cf-106">The following example populates a **DataSet** with tables and relationships, synchronizes the **DataSet** with an **XmlDataDocument**, and writes a portion of the **DataSet** as an HTML file using an XSLT stylesheet.</span></span> <span data-ttu-id="191cf-107">XSLT stil sayfası içeriğini aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="191cf-107">Following are the contents of the XSLT stylesheet.</span></span>  
+ <span data-ttu-id="8249a-106">Aşağıdaki örnek dolduran bir **veri kümesi** tablolar ve ilişkiler ile eşitler **veri kümesi** ile bir **XmlDataDocument**ve bir kısmı Yazar **Veri kümesi** bir HTML dosyası kullanarak bir XSLT stil sayfası.</span><span class="sxs-lookup"><span data-stu-id="8249a-106">The following example populates a **DataSet** with tables and relationships, synchronizes the **DataSet** with an **XmlDataDocument**, and writes a portion of the **DataSet** as an HTML file using an XSLT stylesheet.</span></span> <span data-ttu-id="8249a-107">XSLT stil sayfası içeriğini aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="8249a-107">Following are the contents of the XSLT stylesheet.</span></span>  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -56,10 +56,10 @@ ms.locfileid: "54595571"
 </xsl:stylesheet>  
 ```  
   
- <span data-ttu-id="191cf-108">Aşağıdaki kod dolgular **veri kümesi** ve XSLT stil sayfasını uygular.</span><span class="sxs-lookup"><span data-stu-id="191cf-108">The following code fills the **DataSet** and applies the XSLT style sheet.</span></span>  
+ <span data-ttu-id="8249a-108">Aşağıdaki kod dolgular **veri kümesi** ve XSLT stil sayfasını uygular.</span><span class="sxs-lookup"><span data-stu-id="8249a-108">The following code fills the **DataSet** and applies the XSLT style sheet.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="191cf-109">İçin bir XSLT stil sayfası uyguluyorsanız bir **veri kümesi** ilişkileri içeren, ayarlarsanız en iyi performansı elde etmek **iç içe** özelliği <xref:System.Data.DataRelation> için **true**her biri için ilişki iç içe geçmiş.</span><span class="sxs-lookup"><span data-stu-id="191cf-109">If you are applying an XSLT style sheet to a **DataSet** that contains relations, you achieve best performance if you set the **Nested** property of the <xref:System.Data.DataRelation> to **true** for each nested relation.</span></span> <span data-ttu-id="191cf-110">Bu XSLT stil sayfalarını kullanmanızı hiyerarşi gidin ve yoğun performans XPath konumu eksenler (örneğin, önceki eşdüzey ve aşağıdaki eşdüzey stil kullanarak verileri dönüştürmek bu uygulama doğal yukarıdan aşağıya işlemesine olanak gezinebilirsiniz sayfası düğüm test ifadeleri).</span><span class="sxs-lookup"><span data-stu-id="191cf-110">This allows you to use XSLT style sheets that implement natural top-down processing to navigate the hierarchy and transform the data, as opposed to using performance-intensive XPath location axes (for example, preceding-sibling and following-sibling in style sheet node test expressions) to navigate it.</span></span> <span data-ttu-id="191cf-111">İç içe ilişkiler hakkında daha fazla bilgi için bkz. [iç içe DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span><span class="sxs-lookup"><span data-stu-id="191cf-111">For more information on nested relations, see [Nesting DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span></span>  
+>  <span data-ttu-id="8249a-109">İçin bir XSLT stil sayfası uyguluyorsanız bir **veri kümesi** ilişkileri içeren, ayarlarsanız en iyi performansı elde etmek **iç içe** özelliği <xref:System.Data.DataRelation> için **true**her biri için ilişki iç içe geçmiş.</span><span class="sxs-lookup"><span data-stu-id="8249a-109">If you are applying an XSLT style sheet to a **DataSet** that contains relations, you achieve best performance if you set the **Nested** property of the <xref:System.Data.DataRelation> to **true** for each nested relation.</span></span> <span data-ttu-id="8249a-110">Bu XSLT stil sayfalarını kullanmanızı hiyerarşi gidin ve yoğun performans XPath konumu eksenler (örneğin, önceki eşdüzey ve aşağıdaki eşdüzey stil kullanarak verileri dönüştürmek bu uygulama doğal yukarıdan aşağıya işlemesine olanak gezinebilirsiniz sayfası düğüm test ifadeleri).</span><span class="sxs-lookup"><span data-stu-id="8249a-110">This allows you to use XSLT style sheets that implement natural top-down processing to navigate the hierarchy and transform the data, as opposed to using performance-intensive XPath location axes (for example, preceding-sibling and following-sibling in style sheet node test expressions) to navigate it.</span></span> <span data-ttu-id="8249a-111">İç içe ilişkiler hakkında daha fazla bilgi için bkz. [iç içe DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span><span class="sxs-lookup"><span data-stu-id="8249a-111">For more information on nested relations, see [Nesting DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -123,6 +123,7 @@ xslTran.Transform(xmlDoc, null, writer);
 writer.Close();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="191cf-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="191cf-112">See also</span></span>
-- [<span data-ttu-id="191cf-113">DataSet ve XmlDataDocument Eşitlemesi</span><span class="sxs-lookup"><span data-stu-id="191cf-113">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [<span data-ttu-id="191cf-114">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="191cf-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="8249a-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8249a-112">See also</span></span>
+
+- [<span data-ttu-id="8249a-113">DataSet ve XmlDataDocument Eşitlemesi</span><span class="sxs-lookup"><span data-stu-id="8249a-113">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [<span data-ttu-id="8249a-114">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="8249a-114">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

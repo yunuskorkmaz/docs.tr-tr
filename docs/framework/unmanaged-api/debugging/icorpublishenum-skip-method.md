@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f56792bbdf11c099205efd0cb35e3bf02d67632
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a98892964eb21746580e9115f86fd1be0832d9f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082060"
 ---
-# <a name="icorpublishenumskip-method"></a><span data-ttu-id="83261-102">ICorPublishEnum::Skip Yöntemi</span><span class="sxs-lookup"><span data-stu-id="83261-102">ICorPublishEnum::Skip Method</span></span>
-<span data-ttu-id="83261-103">İmleci İleri numaralandırmada tarafından belirtilen sayıda öğeyi taşır.</span><span class="sxs-lookup"><span data-stu-id="83261-103">Moves the cursor forward in the enumeration by the specified number of items.</span></span>  
+# <a name="icorpublishenumskip-method"></a><span data-ttu-id="190e8-102">ICorPublishEnum::Skip Yöntemi</span><span class="sxs-lookup"><span data-stu-id="190e8-102">ICorPublishEnum::Skip Method</span></span>
+<span data-ttu-id="190e8-103">İmleci İleri numaralandırmada tarafından belirtilen sayıda öğeyi taşır.</span><span class="sxs-lookup"><span data-stu-id="190e8-103">Moves the cursor forward in the enumeration by the specified number of items.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83261-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="83261-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="190e8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="190e8-104">Syntax</span></span>  
   
 ```  
 HRESULT Skip (  
@@ -35,18 +35,19 @@ HRESULT Skip (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="83261-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="83261-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="190e8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="190e8-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="83261-106">[in] İmleç ilerlemek, öğe sayısı.</span><span class="sxs-lookup"><span data-stu-id="83261-106">[in] The number of items by which to move the cursor forward.</span></span>  
+ <span data-ttu-id="190e8-106">[in] İmleç ilerlemek, öğe sayısı.</span><span class="sxs-lookup"><span data-stu-id="190e8-106">[in] The number of items by which to move the cursor forward.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="83261-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="83261-107">Requirements</span></span>  
- <span data-ttu-id="83261-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83261-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="190e8-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="190e8-107">Requirements</span></span>  
+ <span data-ttu-id="190e8-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="190e8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="83261-109">**Üst bilgi:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="83261-109">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="190e8-109">**Üst bilgi:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="190e8-109">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="83261-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83261-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="190e8-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="190e8-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="83261-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83261-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="190e8-111">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="190e8-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="83261-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="83261-112">See also</span></span>
-- [<span data-ttu-id="83261-113">ICorPublishEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="83261-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="190e8-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="190e8-112">See also</span></span>
+
+- [<span data-ttu-id="190e8-113">ICorPublishEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="190e8-113">ICorPublishEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d9671354edfeb4a320a451f355c2125dc8e9dc5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c0c5dabd4145098941e9e8a7e36fa3215c26713d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084929"
 ---
-# <a name="createassemblyenum-function"></a><span data-ttu-id="70671-102">CreateAssemblyEnum İşlevi</span><span class="sxs-lookup"><span data-stu-id="70671-102">CreateAssemblyEnum Function</span></span>
-<span data-ttu-id="70671-103">Bir işaretçi alır bir [Iassemblyenum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) nesneleri ile belirtilen derlemedeki numaralandırabilirsiniz örneği [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).</span><span class="sxs-lookup"><span data-stu-id="70671-103">Gets a pointer to an [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) instance that can enumerate the objects in the assembly with the specified [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).</span></span>  
+# <a name="createassemblyenum-function"></a><span data-ttu-id="df695-102">CreateAssemblyEnum İşlevi</span><span class="sxs-lookup"><span data-stu-id="df695-102">CreateAssemblyEnum Function</span></span>
+<span data-ttu-id="df695-103">Bir işaretçi alır bir [Iassemblyenum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) nesneleri ile belirtilen derlemedeki numaralandırabilirsiniz örneği [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).</span><span class="sxs-lookup"><span data-stu-id="df695-103">Gets a pointer to an [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) instance that can enumerate the objects in the assembly with the specified [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="70671-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="70671-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df695-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="df695-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAssemblyEnum (  
@@ -40,35 +40,36 @@ HRESULT CreateAssemblyEnum (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="70671-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="70671-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="df695-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="df695-105">Parameters</span></span>  
  `pEnum`  
- <span data-ttu-id="70671-106">[out] İstenen içeren bir bellek konumuna işaretçi `IAssemblyEnum` işaretçi.</span><span class="sxs-lookup"><span data-stu-id="70671-106">[out] Pointer to a memory location that contains the requested `IAssemblyEnum` pointer.</span></span>  
+ <span data-ttu-id="df695-106">[out] İstenen içeren bir bellek konumuna işaretçi `IAssemblyEnum` işaretçi.</span><span class="sxs-lookup"><span data-stu-id="df695-106">[out] Pointer to a memory location that contains the requested `IAssemblyEnum` pointer.</span></span>  
   
  `pUnkReserved`  
- <span data-ttu-id="70671-107">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="70671-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="70671-108">`pUnkReserved` null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="70671-108">`pUnkReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="df695-107">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="df695-107">[in] Reserved for future extensibility.</span></span> `pUnkReserved` <span data-ttu-id="df695-108">null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="df695-108">must be a null reference.</span></span>  
   
  `pName`  
- <span data-ttu-id="70671-109">[in] `IAssemblyName` İstenen derleme.</span><span class="sxs-lookup"><span data-stu-id="70671-109">[in] The `IAssemblyName` of the requested assembly.</span></span> <span data-ttu-id="70671-110">Bu ad, numaralandırma filtrelemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="70671-110">This name is used to filter the enumeration.</span></span> <span data-ttu-id="70671-111">Genel derleme önbelleğini tüm derlemeleri numaralandırmak için null olabilir.</span><span class="sxs-lookup"><span data-stu-id="70671-111">It can be null to enumerate all assemblies in the global assembly cache.</span></span>  
+ <span data-ttu-id="df695-109">[in] `IAssemblyName` İstenen derleme.</span><span class="sxs-lookup"><span data-stu-id="df695-109">[in] The `IAssemblyName` of the requested assembly.</span></span> <span data-ttu-id="df695-110">Bu ad, numaralandırma filtrelemek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="df695-110">This name is used to filter the enumeration.</span></span> <span data-ttu-id="df695-111">Genel derleme önbelleğini tüm derlemeleri numaralandırmak için null olabilir.</span><span class="sxs-lookup"><span data-stu-id="df695-111">It can be null to enumerate all assemblies in the global assembly cache.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="70671-112">[in] Numaralandırıcının davranışını değiştirmek için kullanılan bayraklar.</span><span class="sxs-lookup"><span data-stu-id="70671-112">[in] Flags for modifying the enumerator's behavior.</span></span> <span data-ttu-id="70671-113">Bu parametre içeren tam bir bit [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="70671-113">This parameter contains exactly one bit from the [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="df695-112">[in] Numaralandırıcının davranışını değiştirmek için kullanılan bayraklar.</span><span class="sxs-lookup"><span data-stu-id="df695-112">[in] Flags for modifying the enumerator's behavior.</span></span> <span data-ttu-id="df695-113">Bu parametre içeren tam bir bit [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="df695-113">This parameter contains exactly one bit from the [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) enumeration.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="70671-114">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="70671-114">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="70671-115">`pvReserved` null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="70671-115">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="df695-114">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="df695-114">[in] Reserved for future extensibility.</span></span> `pvReserved` <span data-ttu-id="df695-115">null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="df695-115">must be a null reference.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="70671-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="70671-116">Remarks</span></span>  
- <span data-ttu-id="70671-117">`dwFlags` Parametre içeren tam bir bit `ASM_CACHE_FLAGS` sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="70671-117">The `dwFlags` parameter contains exactly one bit from the `ASM_CACHE_FLAGS` enumeration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="df695-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="df695-116">Remarks</span></span>  
+ <span data-ttu-id="df695-117">`dwFlags` Parametre içeren tam bir bit `ASM_CACHE_FLAGS` sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="df695-117">The `dwFlags` parameter contains exactly one bit from the `ASM_CACHE_FLAGS` enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="70671-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="70671-118">Requirements</span></span>  
- <span data-ttu-id="70671-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70671-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="df695-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="df695-118">Requirements</span></span>  
+ <span data-ttu-id="df695-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="df695-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="70671-120">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="70671-120">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="df695-120">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="df695-120">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="70671-121">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="70671-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="df695-121">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="df695-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="70671-122">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70671-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="df695-122">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="df695-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="70671-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="70671-123">See also</span></span>
-- [<span data-ttu-id="70671-124">IAssemblyEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="70671-124">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
-- [<span data-ttu-id="70671-125">IAssemblyName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="70671-125">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="70671-126">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="70671-126">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="df695-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="df695-123">See also</span></span>
+
+- [<span data-ttu-id="df695-124">IAssemblyEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="df695-124">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [<span data-ttu-id="df695-125">IAssemblyName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="df695-125">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="df695-126">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="df695-126">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

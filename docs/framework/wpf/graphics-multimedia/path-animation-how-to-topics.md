@@ -7,30 +7,31 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072512"
 ---
-# <a name="path-animation-how-to-topics"></a><span data-ttu-id="31d78-102">Yol Animasyonu ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="31d78-102">Path Animation How-to Topics</span></span>
-<span data-ttu-id="31d78-103">Bu bölümdeki konular, bir nesnenin yol üzerinde animasyonunu nasıl ekleyebileceğiniz gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="31d78-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
+# <a name="path-animation-how-to-topics"></a><span data-ttu-id="e19c7-102">Yol Animasyonu ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="e19c7-102">Path Animation How-to Topics</span></span>
+<span data-ttu-id="e19c7-103">Bu bölümdeki konular, bir nesnenin yol üzerinde animasyonunu nasıl ekleyebileceğiniz gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="e19c7-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="31d78-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="31d78-104">In This Section</span></span>  
- [<span data-ttu-id="31d78-105">Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Çift Animasyon)</span><span class="sxs-lookup"><span data-stu-id="31d78-105">Animate an Object Along a Path (Double Animation)</span></span>](how-to-animate-an-object-along-a-path-double-animation.md)  
- [<span data-ttu-id="31d78-106">Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (İşaret Etme Animasyonu)</span><span class="sxs-lookup"><span data-stu-id="31d78-106">Animate an Object Along a Path (Point Animation)</span></span>](how-to-animate-an-object-along-a-path-point-animation.md)  
- [<span data-ttu-id="31d78-107">Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Matris Animasyonu)</span><span class="sxs-lookup"><span data-stu-id="31d78-107">Animate an Object Along a Path (Matrix Animation)</span></span>](how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [<span data-ttu-id="31d78-108">Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Sapma Birikmesi ile Matris Animasyonu)</span><span class="sxs-lookup"><span data-stu-id="31d78-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [<span data-ttu-id="31d78-109">Geometrik Yol Kullanarak Nesneyi Döndürme (Matris Animasyonu)</span><span class="sxs-lookup"><span data-stu-id="31d78-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [<span data-ttu-id="31d78-110">Geometrik Yol Kullanarak Nesneyi Döndürme</span><span class="sxs-lookup"><span data-stu-id="31d78-110">Rotate an Object by Using a Geometric Path</span></span>](how-to-rotate-an-object-by-using-a-geometric-path.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e19c7-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e19c7-104">In This Section</span></span>  
+ [<span data-ttu-id="e19c7-105">Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Çift Animasyon)</span><span class="sxs-lookup"><span data-stu-id="e19c7-105">Animate an Object Along a Path (Double Animation)</span></span>](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [<span data-ttu-id="e19c7-106">Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (İşaret Etme Animasyonu)</span><span class="sxs-lookup"><span data-stu-id="e19c7-106">Animate an Object Along a Path (Point Animation)</span></span>](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [<span data-ttu-id="e19c7-107">Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Matris Animasyonu)</span><span class="sxs-lookup"><span data-stu-id="e19c7-107">Animate an Object Along a Path (Matrix Animation)</span></span>](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [<span data-ttu-id="e19c7-108">Bir Nesnenin Yol Üzerinde Animasyonunu Oluşturma (Sapma Birikmesi ile Matris Animasyonu)</span><span class="sxs-lookup"><span data-stu-id="e19c7-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [<span data-ttu-id="e19c7-109">Geometrik Yol Kullanarak Nesneyi Döndürme (Matris Animasyonu)</span><span class="sxs-lookup"><span data-stu-id="e19c7-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [<span data-ttu-id="e19c7-110">Geometrik Yol Kullanarak Nesneyi Döndürme</span><span class="sxs-lookup"><span data-stu-id="e19c7-110">Rotate an Object by Using a Geometric Path</span></span>](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
-## <a name="reference"></a><span data-ttu-id="31d78-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="31d78-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e19c7-111">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e19c7-111">Reference</span></span>  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a><span data-ttu-id="31d78-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="31d78-112">See also</span></span>
-- [<span data-ttu-id="31d78-113">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="31d78-113">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="31d78-114">Animasyona Genel bakış</span><span class="sxs-lookup"><span data-stu-id="31d78-114">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="31d78-115">Anahtar-Çerçeve Animasyonlara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="31d78-115">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e19c7-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e19c7-112">See also</span></span>
+
+- [<span data-ttu-id="e19c7-113">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="e19c7-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="e19c7-114">Animasyona Genel bakış</span><span class="sxs-lookup"><span data-stu-id="e19c7-114">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="e19c7-115">Anahtar-Çerçeve Animasyonlara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e19c7-115">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
