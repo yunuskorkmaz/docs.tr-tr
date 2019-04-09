@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEditAndContinueErrorInfo::GetErrorCode Metodu
+title: ICorDebugEditAndContinueErrorInfo::GetErrorCode Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEditAndContinueErrorInfo.GetErrorCode
@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 026aab33207544e21a21f6c2374925d1d7923e55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0ef1e6511bf8e452a336ba6ea02359fe41e07cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180745"
 ---
-# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="74158-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Metodu</span><span class="sxs-lookup"><span data-stu-id="74158-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
-<span data-ttu-id="74158-103">`GetErrorCode` artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="74158-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="74158-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="74158-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="93e28-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Yöntemi</span><span class="sxs-lookup"><span data-stu-id="93e28-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
+`GetErrorCode` <span data-ttu-id="93e28-103">artık kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="93e28-103">is obsolete.</span></span> <span data-ttu-id="93e28-104">Bu yöntemi çağırmanız gerekmez.</span><span class="sxs-lookup"><span data-stu-id="93e28-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74158-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="74158-105">See also</span></span>
-- [<span data-ttu-id="74158-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="74158-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="93e28-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="93e28-105">See also</span></span>
+
+- [<span data-ttu-id="93e28-106">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="93e28-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

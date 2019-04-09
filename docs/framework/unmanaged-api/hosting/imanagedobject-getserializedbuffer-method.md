@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7930e993640e1ae88ce65b6c2025a5b62a0d0999
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cb9242160b684b3c7b90756d7b20811ad162fc30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156149"
 ---
-# <a name="imanagedobjectgetserializedbuffer-method"></a><span data-ttu-id="1dd8d-102">IManagedObject::GetSerializedBuffer Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1dd8d-102">IManagedObject::GetSerializedBuffer Method</span></span>
-<span data-ttu-id="1dd8d-103">Bu yönetilen bir nesnenin dize gösterimini alır.</span><span class="sxs-lookup"><span data-stu-id="1dd8d-103">Gets the string representation of this managed object.</span></span>  
+# <a name="imanagedobjectgetserializedbuffer-method"></a><span data-ttu-id="7842a-102">IManagedObject::GetSerializedBuffer Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7842a-102">IManagedObject::GetSerializedBuffer Method</span></span>
+<span data-ttu-id="7842a-103">Bu yönetilen bir nesnenin dize gösterimini alır.</span><span class="sxs-lookup"><span data-stu-id="7842a-103">Gets the string representation of this managed object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1dd8d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1dd8d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7842a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7842a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSerializedBuffer (  
@@ -35,21 +35,22 @@ HRESULT GetSerializedBuffer (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1dd8d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1dd8d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7842a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7842a-105">Parameters</span></span>  
  `pBSTR`  
- <span data-ttu-id="1dd8d-106">[out] Serileştirilmiş nesne bir dizeye bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="1dd8d-106">[out] A pointer to a string that is the serialized object.</span></span>  
+ <span data-ttu-id="7842a-106">[out] Serileştirilmiş nesne bir dizeye bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="7842a-106">[out] A pointer to a string that is the serialized object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1dd8d-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1dd8d-107">Remarks</span></span>  
- <span data-ttu-id="1dd8d-108">`GetSerializedBuffer` Yöntemi istemciye sıralanabilir şekilde nesneyi serileştirir.</span><span class="sxs-lookup"><span data-stu-id="1dd8d-108">The `GetSerializedBuffer` method serializes the object so it can be marshaled to the client.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7842a-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7842a-107">Remarks</span></span>  
+ <span data-ttu-id="7842a-108">`GetSerializedBuffer` Yöntemi istemciye sıralanabilir şekilde nesneyi serileştirir.</span><span class="sxs-lookup"><span data-stu-id="7842a-108">The `GetSerializedBuffer` method serializes the object so it can be marshaled to the client.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1dd8d-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1dd8d-109">Requirements</span></span>  
- <span data-ttu-id="1dd8d-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1dd8d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7842a-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7842a-109">Requirements</span></span>  
+ <span data-ttu-id="7842a-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7842a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1dd8d-111">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1dd8d-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="7842a-111">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7842a-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1dd8d-112">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="1dd8d-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7842a-112">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="7842a-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1dd8d-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1dd8d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="7842a-113">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="7842a-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="1dd8d-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1dd8d-114">See also</span></span>
-- [<span data-ttu-id="1dd8d-115">IManagedObject Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1dd8d-115">IManagedObject Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7842a-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7842a-114">See also</span></span>
+
+- [<span data-ttu-id="7842a-115">IManagedObject Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7842a-115">IManagedObject Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)

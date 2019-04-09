@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 364742957d16f12508d2df6f4cd7f50d7956d4cb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b5d4145e6c76cf95f2468a3f5ad59edcd310423e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160881"
 ---
-# <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="c5db8-102">ISymUnmanagedReader::GetMethodVersion Metodu</span><span class="sxs-lookup"><span data-stu-id="c5db8-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
-<span data-ttu-id="c5db8-103">Yöntem sürümünü alır.</span><span class="sxs-lookup"><span data-stu-id="c5db8-103">Gets the method version.</span></span> <span data-ttu-id="c5db8-104">Yöntemi sürüm 1 ile başlayan ve yöntem yeniden derlenen her zaman artırılır.</span><span class="sxs-lookup"><span data-stu-id="c5db8-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="c5db8-105">Yeniden derleme değişikliğe gerek kalmadan yönteme oluşabilir.</span><span class="sxs-lookup"><span data-stu-id="c5db8-105">Recompilation can happen without changes to the method.</span></span>  
+# <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="9d75c-102">ISymUnmanagedReader::GetMethodVersion Metodu</span><span class="sxs-lookup"><span data-stu-id="9d75c-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
+<span data-ttu-id="9d75c-103">Yöntem sürümünü alır.</span><span class="sxs-lookup"><span data-stu-id="9d75c-103">Gets the method version.</span></span> <span data-ttu-id="9d75c-104">Yöntemi sürüm 1 ile başlayan ve yöntem yeniden derlenen her zaman artırılır.</span><span class="sxs-lookup"><span data-stu-id="9d75c-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="9d75c-105">Yeniden derleme değişikliğe gerek kalmadan yönteme oluşabilir.</span><span class="sxs-lookup"><span data-stu-id="9d75c-105">Recompilation can happen without changes to the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5db8-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c5db8-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d75c-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9d75c-106">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodVersion (  
@@ -35,18 +35,19 @@ HRESULT GetMethodVersion (
     [out] int* version);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c5db8-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c5db8-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9d75c-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9d75c-107">Parameters</span></span>  
  `pMethod`  
- <span data-ttu-id="c5db8-108">[in] Hangi sürümü almak yöntem.</span><span class="sxs-lookup"><span data-stu-id="c5db8-108">[in] The method for which to get the version.</span></span>  
+ <span data-ttu-id="9d75c-108">[in] Hangi sürümü almak yöntem.</span><span class="sxs-lookup"><span data-stu-id="9d75c-108">[in] The method for which to get the version.</span></span>  
   
  `version`  
- <span data-ttu-id="c5db8-109">[out] Bir işaretçi bir değişkene yöntemi sürümünü alır.</span><span class="sxs-lookup"><span data-stu-id="c5db8-109">[out] A pointer to a variable that receives the method version.</span></span>  
+ <span data-ttu-id="9d75c-109">[out] Bir işaretçi bir değişkene yöntemi sürümünü alır.</span><span class="sxs-lookup"><span data-stu-id="9d75c-109">[out] A pointer to a variable that receives the method version.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c5db8-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c5db8-110">Return Value</span></span>  
- <span data-ttu-id="c5db8-111">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="c5db8-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9d75c-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="9d75c-110">Return Value</span></span>  
+ <span data-ttu-id="9d75c-111">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="9d75c-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c5db8-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c5db8-112">Requirements</span></span>  
- <span data-ttu-id="c5db8-113">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c5db8-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d75c-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9d75c-112">Requirements</span></span>  
+ <span data-ttu-id="9d75c-113">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9d75c-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5db8-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c5db8-114">See also</span></span>
-- [<span data-ttu-id="c5db8-115">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c5db8-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9d75c-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9d75c-114">See also</span></span>
+
+- [<span data-ttu-id="9d75c-115">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9d75c-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

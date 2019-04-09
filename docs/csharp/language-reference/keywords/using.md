@@ -1,35 +1,32 @@
 ---
 title: using anahtar sözcüğü - C# başvurusu
-ms.custom: seodec18
-ms.date: 07/20/2015
+ms.custom: seoapril2019
+ms.date: 04/05/2019
 f1_keywords:
 - using_CSharpKeyword
 - using
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 4fcd46b5f532a1b9cb1df910dd9c99b27ec9f29a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 07563d32b176832966ab50942cda2b0b26b80e44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137975"
 ---
-# <a name="using-c-reference"></a><span data-ttu-id="50d88-102">using (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="50d88-102">using (C# Reference)</span></span>
+# <a name="using-c-reference"></a><span data-ttu-id="5f829-102">using (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="5f829-102">using (C# Reference)</span></span>
 
-<span data-ttu-id="50d88-103">`using` Anahtar sözcüğü sahip iki ana kullanır:</span><span class="sxs-lookup"><span data-stu-id="50d88-103">The `using` keyword has two major uses:</span></span>
+<span data-ttu-id="5f829-103">`using` Anahtar sözcüğü sahip üç ana kullanır:</span><span class="sxs-lookup"><span data-stu-id="5f829-103">The `using` keyword has three major uses:</span></span>
+- <span data-ttu-id="5f829-104">[Using deyimi](using-statement.md) hangi nesne elden sonunda bir kapsam tanımlar.</span><span class="sxs-lookup"><span data-stu-id="5f829-104">The [using statement](using-statement.md) defines a scope at the end of which an object will be disposed.</span></span> 
+- <span data-ttu-id="5f829-105">Using [yönergesi](using-directive.md) bir ad alanı için bir diğer ad oluşturur veya diğer ad alanlarında tanımlı türleri içeri aktarır.</span><span class="sxs-lookup"><span data-stu-id="5f829-105">The using [directive](using-directive.md) creates an alias for a namespace or imports types defined in other namespaces.</span></span> 
+- <span data-ttu-id="5f829-106">[Using static yönergesi](using-static.md) tek bir sınıf üyelerinin içeri aktarır.</span><span class="sxs-lookup"><span data-stu-id="5f829-106">The [using static directive](using-static.md) imports the members of a single class.</span></span>
 
-- <span data-ttu-id="50d88-104">Bir ad alanı için bir diğer ad oluşturmak veya diğer ad alanlarında tanımlı türleri içeri aktarmak için kullanıldığında bir yönerge.</span><span class="sxs-lookup"><span data-stu-id="50d88-104">As a directive, when it is used to create an alias for a namespace or to import types defined in other namespaces.</span></span> <span data-ttu-id="50d88-105">Bkz: [using yönergesi](using-directive.md).</span><span class="sxs-lookup"><span data-stu-id="50d88-105">See [using directive](using-directive.md).</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f829-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5f829-107">See also</span></span>
 
-- <span data-ttu-id="50d88-106">Hangi nesneyi elden sonunda bir kapsam tanımlar, deyim olarak.</span><span class="sxs-lookup"><span data-stu-id="50d88-106">As a statement, when it defines a scope at the end of which an object will be disposed.</span></span> <span data-ttu-id="50d88-107">Bkz: [using deyimi](using-statement.md).</span><span class="sxs-lookup"><span data-stu-id="50d88-107">See [using statement](using-statement.md).</span></span>
-
-<span data-ttu-id="50d88-108">Ayrıca, ['using static](using-static.md) yönergesi statik üyeleri bir tür adı belirtmeden erişebileceğiniz bir tür tanımlamak olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="50d88-108">In addition, the [using static](using-static.md) directive lets you define a type whose static members you can access without specifying a type name.</span></span>
-
-## <a name="see-also"></a><span data-ttu-id="50d88-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="50d88-109">See also</span></span>
-
-- [<span data-ttu-id="50d88-110">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="50d88-110">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="50d88-111">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="50d88-111">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="50d88-112">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="50d88-112">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="50d88-113">Ad Alanı Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="50d88-113">Namespace Keywords</span></span>](namespace-keywords.md)
-- [<span data-ttu-id="50d88-114">Ad Alanları</span><span class="sxs-lookup"><span data-stu-id="50d88-114">Namespaces</span></span>](../../programming-guide/namespaces/index.md)
-- [<span data-ttu-id="50d88-115">extern</span><span class="sxs-lookup"><span data-stu-id="50d88-115">extern</span></span>](extern.md)
+- [<span data-ttu-id="5f829-108">C# Başvurusu</span><span class="sxs-lookup"><span data-stu-id="5f829-108">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="5f829-109">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="5f829-109">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="5f829-110">C# Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="5f829-110">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="5f829-111">Ad Alanı Anahtar Sözcükleri</span><span class="sxs-lookup"><span data-stu-id="5f829-111">Namespace Keywords</span></span>](namespace-keywords.md)
+- [<span data-ttu-id="5f829-112">Ad Alanları</span><span class="sxs-lookup"><span data-stu-id="5f829-112">Namespaces</span></span>](../../programming-guide/namespaces/index.md)
+- [<span data-ttu-id="5f829-113">extern</span><span class="sxs-lookup"><span data-stu-id="5f829-113">extern</span></span>](extern.md)

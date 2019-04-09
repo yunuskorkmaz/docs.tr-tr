@@ -2,25 +2,25 @@
 title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
-ms.openlocfilehash: 54f52b1496ada2573949f98e1397b3b7736078d3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 37d935287fa7dfba640c39071295fd660f4db7c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160829"
 ---
-# <a name="issuer"></a><span data-ttu-id="21014-101">\<veren ></span><span class="sxs-lookup"><span data-stu-id="21014-101">\<issuer></span></span>
-<span data-ttu-id="21014-102">Güvenlik belirteci hizmeti (güvenlik belirteçlerini çıkartan STS) belirtir.</span><span class="sxs-lookup"><span data-stu-id="21014-102">Specifies the Security Token Service (STS) that issues security tokens.</span></span>  
+# <a name="issuer"></a><span data-ttu-id="0ae26-101">\<veren ></span><span class="sxs-lookup"><span data-stu-id="0ae26-101">\<issuer></span></span>
+<span data-ttu-id="0ae26-102">Güvenlik belirteci hizmeti (güvenlik belirteçlerini çıkartan STS) belirtir.</span><span class="sxs-lookup"><span data-stu-id="0ae26-102">Specifies the Security Token Service (STS) that issues security tokens.</span></span>  
   
- <span data-ttu-id="21014-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="21014-103">\<system.serviceModel></span></span>  
-<span data-ttu-id="21014-104">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="21014-104">\<bindings></span></span>  
-<span data-ttu-id="21014-105">\<wsFederationHttpBinding></span><span class="sxs-lookup"><span data-stu-id="21014-105">\<wsFederationHttpBinding></span></span>  
-<span data-ttu-id="21014-106">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="21014-106">\<binding></span></span>  
-<span data-ttu-id="21014-107">\<Güvenlik ></span><span class="sxs-lookup"><span data-stu-id="21014-107">\<security></span></span>  
-<span data-ttu-id="21014-108">\<İleti ></span><span class="sxs-lookup"><span data-stu-id="21014-108">\<message></span></span>  
-<span data-ttu-id="21014-109">\<veren ></span><span class="sxs-lookup"><span data-stu-id="21014-109">\<issuer></span></span>  
+ <span data-ttu-id="0ae26-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="0ae26-103">\<system.serviceModel></span></span>  
+<span data-ttu-id="0ae26-104">\<bağlamaları ></span><span class="sxs-lookup"><span data-stu-id="0ae26-104">\<bindings></span></span>  
+<span data-ttu-id="0ae26-105">\<wsFederationHttpBinding></span><span class="sxs-lookup"><span data-stu-id="0ae26-105">\<wsFederationHttpBinding></span></span>  
+<span data-ttu-id="0ae26-106">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="0ae26-106">\<binding></span></span>  
+<span data-ttu-id="0ae26-107">\<Güvenlik ></span><span class="sxs-lookup"><span data-stu-id="0ae26-107">\<security></span></span>  
+<span data-ttu-id="0ae26-108">\<İleti ></span><span class="sxs-lookup"><span data-stu-id="0ae26-108">\<message></span></span>  
+<span data-ttu-id="0ae26-109">\<veren ></span><span class="sxs-lookup"><span data-stu-id="0ae26-109">\<issuer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="21014-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="21014-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ae26-110">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0ae26-110">Syntax</span></span>  
   
 ```xml  
 <issuer address="Uri">
@@ -43,35 +43,36 @@ ms.locfileid: "55254515"
 </issuer>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="21014-111">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="21014-111">Attributes and Elements</span></span>  
- <span data-ttu-id="21014-112">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="21014-112">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0ae26-111">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="0ae26-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="0ae26-112">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="0ae26-112">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="21014-113">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="21014-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0ae26-113">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="0ae26-113">Attributes</span></span>  
   
-|<span data-ttu-id="21014-114">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="21014-114">Attribute</span></span>|<span data-ttu-id="21014-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="21014-115">Description</span></span>|  
+|<span data-ttu-id="0ae26-114">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="0ae26-114">Attribute</span></span>|<span data-ttu-id="0ae26-115">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0ae26-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="21014-116">adres</span><span class="sxs-lookup"><span data-stu-id="21014-116">address</span></span>|<span data-ttu-id="21014-117">Zorunlu dize.</span><span class="sxs-lookup"><span data-stu-id="21014-117">Required string.</span></span> <span data-ttu-id="21014-118">STS URL'si.</span><span class="sxs-lookup"><span data-stu-id="21014-118">The URL of the STS.</span></span>|  
+|<span data-ttu-id="0ae26-116">adres</span><span class="sxs-lookup"><span data-stu-id="0ae26-116">address</span></span>|<span data-ttu-id="0ae26-117">Zorunlu dize.</span><span class="sxs-lookup"><span data-stu-id="0ae26-117">Required string.</span></span> <span data-ttu-id="0ae26-118">STS URL'si.</span><span class="sxs-lookup"><span data-stu-id="0ae26-118">The URL of the STS.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="21014-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="21014-119">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0ae26-119">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="0ae26-119">Child Elements</span></span>  
   
-|<span data-ttu-id="21014-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="21014-120">Element</span></span>|<span data-ttu-id="21014-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="21014-121">Description</span></span>|  
+|<span data-ttu-id="0ae26-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="0ae26-120">Element</span></span>|<span data-ttu-id="0ae26-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0ae26-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="21014-122">\<üstbilgiler ></span><span class="sxs-lookup"><span data-stu-id="21014-122">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="21014-123">Adres üstbilgileri Oluşturucu oluşturabilirsiniz uç noktaları koleksiyonudur.</span><span class="sxs-lookup"><span data-stu-id="21014-123">A collection of address headers for the endpoints that the builder can create.</span></span>|  
-|[<span data-ttu-id="21014-124">\<Kimliği ></span><span class="sxs-lookup"><span data-stu-id="21014-124">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="21014-125">Verilen bir belirteç kullanırken, sunucu kimlik doğrulaması istemci etkinleştiren ayarları belirtir.</span><span class="sxs-lookup"><span data-stu-id="21014-125">When using an issued token, specifies settings that enable the client to authenticate the server.</span></span>|  
+|[<span data-ttu-id="0ae26-122">\<üstbilgiler ></span><span class="sxs-lookup"><span data-stu-id="0ae26-122">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="0ae26-123">Adres üstbilgileri Oluşturucu oluşturabilirsiniz uç noktaları koleksiyonudur.</span><span class="sxs-lookup"><span data-stu-id="0ae26-123">A collection of address headers for the endpoints that the builder can create.</span></span>|  
+|[<span data-ttu-id="0ae26-124">\<Kimliği ></span><span class="sxs-lookup"><span data-stu-id="0ae26-124">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="0ae26-125">Verilen bir belirteç kullanırken, sunucu kimlik doğrulaması istemci etkinleştiren ayarları belirtir.</span><span class="sxs-lookup"><span data-stu-id="0ae26-125">When using an issued token, specifies settings that enable the client to authenticate the server.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="21014-126">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="21014-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0ae26-126">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="0ae26-126">Parent Elements</span></span>  
   
-|<span data-ttu-id="21014-127">Öğe</span><span class="sxs-lookup"><span data-stu-id="21014-127">Element</span></span>|<span data-ttu-id="21014-128">Açıklama</span><span class="sxs-lookup"><span data-stu-id="21014-128">Description</span></span>|  
+|<span data-ttu-id="0ae26-127">Öğe</span><span class="sxs-lookup"><span data-stu-id="0ae26-127">Element</span></span>|<span data-ttu-id="0ae26-128">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0ae26-128">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="21014-129">\<İleti ></span><span class="sxs-lookup"><span data-stu-id="21014-129">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|<span data-ttu-id="21014-130">İleti düzeyi güvenlik ayarlarını tanımlar [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) öğesi.</span><span class="sxs-lookup"><span data-stu-id="21014-130">Defines the settings for the message-level security for the [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) element.</span></span>|  
+|[<span data-ttu-id="0ae26-129">\<İleti ></span><span class="sxs-lookup"><span data-stu-id="0ae26-129">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|<span data-ttu-id="0ae26-130">İleti düzeyi güvenlik ayarlarını tanımlar [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) öğesi.</span><span class="sxs-lookup"><span data-stu-id="0ae26-130">Defines the settings for the message-level security for the [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) element.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="21014-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="21014-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0ae26-131">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0ae26-131">See also</span></span>
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.Issuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
-- [<span data-ttu-id="21014-132">Kimlik Doğrulama ile Hizmet Kimliği</span><span class="sxs-lookup"><span data-stu-id="21014-132">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [<span data-ttu-id="21014-133">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="21014-133">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [<span data-ttu-id="21014-134">Kimlik Doğrulama ile Hizmet Kimliği</span><span class="sxs-lookup"><span data-stu-id="21014-134">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [<span data-ttu-id="21014-135">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="21014-135">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [<span data-ttu-id="21014-136">Özel Bağlamalarla Güvenlik Özellikleri</span><span class="sxs-lookup"><span data-stu-id="21014-136">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [<span data-ttu-id="21014-137">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="21014-137">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="0ae26-132">Kimlik Doğrulama ile Hizmet Kimliği</span><span class="sxs-lookup"><span data-stu-id="0ae26-132">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [<span data-ttu-id="0ae26-133">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="0ae26-133">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="0ae26-134">Kimlik Doğrulama ile Hizmet Kimliği</span><span class="sxs-lookup"><span data-stu-id="0ae26-134">Service Identity and Authentication</span></span>](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [<span data-ttu-id="0ae26-135">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="0ae26-135">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [<span data-ttu-id="0ae26-136">Özel Bağlamalarla Güvenlik Özellikleri</span><span class="sxs-lookup"><span data-stu-id="0ae26-136">Security Capabilities with Custom Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [<span data-ttu-id="0ae26-137">Federasyon ve Verilen Belirteçler</span><span class="sxs-lookup"><span data-stu-id="0ae26-137">Federation and Issued Tokens</span></span>](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

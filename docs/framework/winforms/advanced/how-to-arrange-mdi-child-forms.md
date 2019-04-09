@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: MDI alt formlarını düzenleme'
+title: 'Nasıl yapılır: MDI Alt Formlarını Düzenleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 3d67da6330cdceaf975c62b474c1580b853a2676
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160114"
 ---
-# <a name="how-to-arrange-mdi-child-forms"></a><span data-ttu-id="46a0b-102">Nasıl yapılır: MDI alt formlarını düzenleme</span><span class="sxs-lookup"><span data-stu-id="46a0b-102">How to: Arrange MDI Child Forms</span></span>
-<span data-ttu-id="46a0b-103">Genellikle, kutucuk, Cascade ve düzenleme, açık MDI alt formlarını yerleşimini denetleyen gibi eylemleri menü komutlarını uygulamanız olacak.</span><span class="sxs-lookup"><span data-stu-id="46a0b-103">Often, applications will have menu commands for actions such as Tile, Cascade, and Arrange, which control the layout of the open MDI child forms.</span></span> <span data-ttu-id="46a0b-104">Kullanabileceğiniz <xref:System.Windows.Forms.Form.LayoutMdi%2A> yöntemi biriyle <xref:System.Windows.Forms.MdiLayout> numaralandırma değerlerinden bir MDI alt formları yeniden düzenlemek için ana formu.</span><span class="sxs-lookup"><span data-stu-id="46a0b-104">You can use the <xref:System.Windows.Forms.Form.LayoutMdi%2A> method with one of the <xref:System.Windows.Forms.MdiLayout> enumeration values to rearrange the child forms in an MDI parent form.</span></span>  
+# <a name="how-to-arrange-mdi-child-forms"></a><span data-ttu-id="26e29-102">Nasıl yapılır: MDI Alt Formlarını Düzenleme</span><span class="sxs-lookup"><span data-stu-id="26e29-102">How to: Arrange MDI Child Forms</span></span>
+<span data-ttu-id="26e29-103">Genellikle, kutucuk, Cascade ve düzenleme, açık MDI alt formlarını yerleşimini denetleyen gibi eylemleri menü komutlarını uygulamanız olacak.</span><span class="sxs-lookup"><span data-stu-id="26e29-103">Often, applications will have menu commands for actions such as Tile, Cascade, and Arrange, which control the layout of the open MDI child forms.</span></span> <span data-ttu-id="26e29-104">Kullanabileceğiniz <xref:System.Windows.Forms.Form.LayoutMdi%2A> yöntemi biriyle <xref:System.Windows.Forms.MdiLayout> numaralandırma değerlerinden bir MDI alt formları yeniden düzenlemek için ana formu.</span><span class="sxs-lookup"><span data-stu-id="26e29-104">You can use the <xref:System.Windows.Forms.Form.LayoutMdi%2A> method with one of the <xref:System.Windows.Forms.MdiLayout> enumeration values to rearrange the child forms in an MDI parent form.</span></span>  
   
- <span data-ttu-id="46a0b-105"><xref:System.Windows.Forms.MdiLayout> Numaralandırma değerlerinin görüntü alt formları basamaklı yatay veya dikey olarak döşenmiş gibi olarak ya da MDI formunun alt kısmı alt form simgeler olarak.</span><span class="sxs-lookup"><span data-stu-id="46a0b-105">The <xref:System.Windows.Forms.MdiLayout> enumeration values display child forms as cascading, as horizontally or vertically tiled, or as child form icons arranged along the lower portion of the MDI form.</span></span> <span data-ttu-id="46a0b-106">Bu değerleri Windows komutları ile aynı etkiye sahip **basamaklı windows**, **windows yan yana göster**, **Göster Yığılmış windows**, ve **masaüstünü gösterir** sırasıyla.</span><span class="sxs-lookup"><span data-stu-id="46a0b-106">These values have the same effect as the Windows commands **Cascade windows**, **Show windows side by side**, **Show windows stacked**, and **Show the desktop**, respectively.</span></span>  
+ <span data-ttu-id="26e29-105"><xref:System.Windows.Forms.MdiLayout> Numaralandırma değerlerinin görüntü alt formları basamaklı yatay veya dikey olarak döşenmiş gibi olarak ya da MDI formunun alt kısmı alt form simgeler olarak.</span><span class="sxs-lookup"><span data-stu-id="26e29-105">The <xref:System.Windows.Forms.MdiLayout> enumeration values display child forms as cascading, as horizontally or vertically tiled, or as child form icons arranged along the lower portion of the MDI form.</span></span> <span data-ttu-id="26e29-106">Bu değerleri Windows komutları ile aynı etkiye sahip **basamaklı windows**, **windows yan yana göster**, **Göster Yığılmış windows**, ve **masaüstünü gösterir** sırasıyla.</span><span class="sxs-lookup"><span data-stu-id="26e29-106">These values have the same effect as the Windows commands **Cascade windows**, **Show windows side by side**, **Show windows stacked**, and **Show the desktop**, respectively.</span></span>  
   
- <span data-ttu-id="46a0b-107">Genellikle, bu yöntemler bir menü öğesinin tarafından çağrılan olay işleyicileri olarak kullanılan <xref:System.Windows.Forms.Control.Click> olay.</span><span class="sxs-lookup"><span data-stu-id="46a0b-107">Often, these methods are used as the event handlers called by a menu item's <xref:System.Windows.Forms.Control.Click> event.</span></span> <span data-ttu-id="46a0b-108">Bu şekilde, bir menü öğesi metni "Cascade Windows" ile MDI alt pencereleri üzerinde istenen etkisi olabilir.</span><span class="sxs-lookup"><span data-stu-id="46a0b-108">In this way, a menu item with the text "Cascade Windows" can have the desired effect on the MDI child windows.</span></span>  
+ <span data-ttu-id="26e29-107">Genellikle, bu yöntemler bir menü öğesinin tarafından çağrılan olay işleyicileri olarak kullanılan <xref:System.Windows.Forms.Control.Click> olay.</span><span class="sxs-lookup"><span data-stu-id="26e29-107">Often, these methods are used as the event handlers called by a menu item's <xref:System.Windows.Forms.Control.Click> event.</span></span> <span data-ttu-id="26e29-108">Bu şekilde, bir menü öğesi metni "Cascade Windows" ile MDI alt pencereleri üzerinde istenen etkisi olabilir.</span><span class="sxs-lookup"><span data-stu-id="26e29-108">In this way, a menu item with the text "Cascade Windows" can have the desired effect on the MDI child windows.</span></span>  
   
-### <a name="to-arrange-child-forms"></a><span data-ttu-id="46a0b-109">Alt formlarını düzenlemek için</span><span class="sxs-lookup"><span data-stu-id="46a0b-109">To arrange child forms</span></span>  
+### <a name="to-arrange-child-forms"></a><span data-ttu-id="26e29-109">Alt formlarını düzenlemek için</span><span class="sxs-lookup"><span data-stu-id="26e29-109">To arrange child forms</span></span>  
   
-1.  <span data-ttu-id="46a0b-110">Bir yöntem kullanmak <xref:System.Windows.Forms.Form.LayoutMdi%2A> ayarlanacak yöntemi <xref:System.Windows.Forms.MdiLayout> MDI üst formu için sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="46a0b-110">In a method, use the <xref:System.Windows.Forms.Form.LayoutMdi%2A> method to set the <xref:System.Windows.Forms.MdiLayout> enumeration for the MDI parent form.</span></span> <span data-ttu-id="46a0b-111">Aşağıdaki örnekte <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> numaralandırma değeri MDI üst formunun alt pencereler için (`Form1`).</span><span class="sxs-lookup"><span data-stu-id="46a0b-111">The following example uses the <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> enumeration value for the child windows of the MDI parent form (`Form1`).</span></span> <span data-ttu-id="46a0b-112">Numaralandırma sırasında olay işleyicisi için kod içinde kullanılan <xref:System.Windows.Forms.Control.Click> olayı **Cascade Windows** menü öğesi.</span><span class="sxs-lookup"><span data-stu-id="46a0b-112">The enumeration is used in code during the event handler for the <xref:System.Windows.Forms.Control.Click> event of the **Cascade Windows** menu item.</span></span>  
+1.  <span data-ttu-id="26e29-110">Bir yöntem kullanmak <xref:System.Windows.Forms.Form.LayoutMdi%2A> ayarlanacak yöntemi <xref:System.Windows.Forms.MdiLayout> MDI üst formu için sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="26e29-110">In a method, use the <xref:System.Windows.Forms.Form.LayoutMdi%2A> method to set the <xref:System.Windows.Forms.MdiLayout> enumeration for the MDI parent form.</span></span> <span data-ttu-id="26e29-111">Aşağıdaki örnekte <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> numaralandırma değeri MDI üst formunun alt pencereler için (`Form1`).</span><span class="sxs-lookup"><span data-stu-id="26e29-111">The following example uses the <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> enumeration value for the child windows of the MDI parent form (`Form1`).</span></span> <span data-ttu-id="26e29-112">Numaralandırma sırasında olay işleyicisi için kod içinde kullanılan <xref:System.Windows.Forms.Control.Click> olayı **Cascade Windows** menü öğesi.</span><span class="sxs-lookup"><span data-stu-id="26e29-112">The enumeration is used in code during the event handler for the <xref:System.Windows.Forms.Control.Click> event of the **Cascade Windows** menu item.</span></span>  
   
     ```vb  
     Protected Sub CascadeWindows_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)  
@@ -39,17 +39,18 @@ ms.locfileid: "57711908"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="46a0b-113">Ayrıca windows ve windows düzenleyerek simgeler olarak değiştirerek döşeme <xref:System.Windows.Forms.MdiLayout> numaralandırma değeri kullanılır.</span><span class="sxs-lookup"><span data-stu-id="46a0b-113">You can also tile windows and arranging windows as icons by changing the <xref:System.Windows.Forms.MdiLayout> enumeration value used.</span></span>  
+    >  <span data-ttu-id="26e29-113">Ayrıca windows ve windows düzenleyerek simgeler olarak değiştirerek döşeme <xref:System.Windows.Forms.MdiLayout> numaralandırma değeri kullanılır.</span><span class="sxs-lookup"><span data-stu-id="26e29-113">You can also tile windows and arranging windows as icons by changing the <xref:System.Windows.Forms.MdiLayout> enumeration value used.</span></span>  
   
-2.  <span data-ttu-id="46a0b-114">Visual kullanıyorsanız C#, formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="46a0b-114">If you’re using Visual C#, place the following code in the form's constructor to register the event handler.</span></span>  
+2.  <span data-ttu-id="26e29-114">Visual kullanıyorsanız C#, formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="26e29-114">If you’re using Visual C#, place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="46a0b-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="46a0b-115">See also</span></span>
-- [<span data-ttu-id="46a0b-116">Çok Belgeli Arabirim (MDI) Uygulamaları</span><span class="sxs-lookup"><span data-stu-id="46a0b-116">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
-- [<span data-ttu-id="46a0b-117">Nasıl yapılır: MDI üst formları oluşturma</span><span class="sxs-lookup"><span data-stu-id="46a0b-117">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="46a0b-118">Nasıl yapılır: MDI alt formları oluştur</span><span class="sxs-lookup"><span data-stu-id="46a0b-118">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="46a0b-119">Nasıl yapılır: Etkin MDI alt öğesini belirleme</span><span class="sxs-lookup"><span data-stu-id="46a0b-119">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
-- [<span data-ttu-id="46a0b-120">Nasıl yapılır: Etkin MDI alt öğesine veri gönderme</span><span class="sxs-lookup"><span data-stu-id="46a0b-120">How to: Send Data to the Active MDI Child</span></span>](how-to-send-data-to-the-active-mdi-child.md)
+## <a name="see-also"></a><span data-ttu-id="26e29-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="26e29-115">See also</span></span>
+
+- [<span data-ttu-id="26e29-116">Çoklu Belge Arabirimi (MDI) Uygulamaları</span><span class="sxs-lookup"><span data-stu-id="26e29-116">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
+- [<span data-ttu-id="26e29-117">Nasıl yapılır: MDI Üst Formları Oluşturma</span><span class="sxs-lookup"><span data-stu-id="26e29-117">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="26e29-118">Nasıl yapılır: MDI Alt Formları Oluşturma</span><span class="sxs-lookup"><span data-stu-id="26e29-118">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="26e29-119">Nasıl yapılır: Etkin MDI Alt Öğesini Belirleme</span><span class="sxs-lookup"><span data-stu-id="26e29-119">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
+- [<span data-ttu-id="26e29-120">Nasıl yapılır: Etkin MDI Alt Öğesine Veri Gönderme</span><span class="sxs-lookup"><span data-stu-id="26e29-120">How to: Send Data to the Active MDI Child</span></span>](how-to-send-data-to-the-active-mdi-child.md)

@@ -7,26 +7,27 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: 9a57b4a656ca5119ac6717579f49950437588328
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4da98f5caa0cbf4714d16f66a18c67844bf5c201
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184866"
 ---
-# <a name="image"></a><span data-ttu-id="9a177-102">Görüntü</span><span class="sxs-lookup"><span data-stu-id="9a177-102">Image</span></span>
-<span data-ttu-id="9a177-103"><xref:System.Windows.Controls.Image> Bit eşlem resimleri görüntülemek için kullanılan öğe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.</span><span class="sxs-lookup"><span data-stu-id="9a177-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="image"></a><span data-ttu-id="debc2-102">Görüntü</span><span class="sxs-lookup"><span data-stu-id="debc2-102">Image</span></span>
+<span data-ttu-id="debc2-103"><xref:System.Windows.Controls.Image> Bit eşlem resimleri görüntülemek için kullanılan öğe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.</span><span class="sxs-lookup"><span data-stu-id="debc2-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9a177-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="9a177-104">In This Section</span></span>  
- [<span data-ttu-id="9a177-105">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="9a177-105">How-to Topics</span></span>](image-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="debc2-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="debc2-104">In This Section</span></span>  
+ [<span data-ttu-id="debc2-105">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="debc2-105">How-to Topics</span></span>](image-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="9a177-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="9a177-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="debc2-106">Başvuru</span><span class="sxs-lookup"><span data-stu-id="debc2-106">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="9a177-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9a177-107">See also</span></span>
-- [<span data-ttu-id="9a177-108">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="9a177-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="9a177-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="9a177-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="debc2-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="debc2-107">See also</span></span>
+
+- [<span data-ttu-id="debc2-108">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="debc2-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="debc2-109">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="debc2-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a072e124343641c9f75fb9f924a6409efc8e1d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc0554ed89d21607978d059b26c4ad69e59a2d4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166640"
 ---
-# <a name="corlinkeroptions-enumeration"></a><span data-ttu-id="8c320-102">CorLinkerOptions Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="8c320-102">CorLinkerOptions Enumeration</span></span>
-<span data-ttu-id="8c320-103">Meta veri bağlayıcı seçeneklerini seçmek için bayrakları belirtir.</span><span class="sxs-lookup"><span data-stu-id="8c320-103">Specifies flags to select options for the metadata linker.</span></span>  
+# <a name="corlinkeroptions-enumeration"></a><span data-ttu-id="cd350-102">CorLinkerOptions Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="cd350-102">CorLinkerOptions Enumeration</span></span>
+<span data-ttu-id="cd350-103">Meta veri bağlayıcı seçeneklerini seçmek için bayrakları belirtir.</span><span class="sxs-lookup"><span data-stu-id="cd350-103">Specifies flags to select options for the metadata linker.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c320-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8c320-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd350-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cd350-104">Syntax</span></span>  
   
 ```  
 typedef enum CorLinkerOptions {  
@@ -35,19 +35,20 @@ typedef enum CorLinkerOptions {
 } CorLinkerOptions;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="8c320-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="8c320-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="cd350-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="cd350-105">Members</span></span>  
   
-|<span data-ttu-id="8c320-106">Üye</span><span class="sxs-lookup"><span data-stu-id="8c320-106">Member</span></span>|<span data-ttu-id="8c320-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8c320-107">Description</span></span>|  
+|<span data-ttu-id="cd350-106">Üye</span><span class="sxs-lookup"><span data-stu-id="cd350-106">Member</span></span>|<span data-ttu-id="cd350-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cd350-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDAssembly`|<span data-ttu-id="8c320-108">Özel türleri ve genel işlevler korunmaz.</span><span class="sxs-lookup"><span data-stu-id="8c320-108">The private types and global functions are not preserved.</span></span>|  
-|`MDNetModule`|<span data-ttu-id="8c320-109">Özel türleri ve genel işlevler korunur.</span><span class="sxs-lookup"><span data-stu-id="8c320-109">The private types and global functions are preserved.</span></span>|  
+|`MDAssembly`|<span data-ttu-id="cd350-108">Özel türleri ve genel işlevler korunmaz.</span><span class="sxs-lookup"><span data-stu-id="cd350-108">The private types and global functions are not preserved.</span></span>|  
+|`MDNetModule`|<span data-ttu-id="cd350-109">Özel türleri ve genel işlevler korunur.</span><span class="sxs-lookup"><span data-stu-id="cd350-109">The private types and global functions are preserved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8c320-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8c320-110">Requirements</span></span>  
- <span data-ttu-id="8c320-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c320-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cd350-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cd350-110">Requirements</span></span>  
+ <span data-ttu-id="cd350-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cd350-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8c320-112">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8c320-112">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="cd350-112">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="cd350-112">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="8c320-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c320-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="cd350-113">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="cd350-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="8c320-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8c320-114">See also</span></span>
-- [<span data-ttu-id="8c320-115">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="8c320-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="cd350-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cd350-114">See also</span></span>
+
+- [<span data-ttu-id="cd350-115">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="cd350-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

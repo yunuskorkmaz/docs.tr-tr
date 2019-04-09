@@ -16,36 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d25afe5ecc8dd23e78fd60fbf8452e28c5aa8be5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8062ab151efc6175aa68cb0563cd2ad042ee9cd8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189059"
 ---
-# <a name="flockclrversioncallback-function-pointer"></a><span data-ttu-id="7a6d6-102">FLockClrVersionCallback İşlev İşaretçisi</span><span class="sxs-lookup"><span data-stu-id="7a6d6-102">FLockClrVersionCallback Function Pointer</span></span>
-<span data-ttu-id="7a6d6-103">Başlatmanın belirtmek için ortak dil çalışma zamanı (CLR) çağrıları çalışmaya veya tamamlanmış bir işleve işaret eder.</span><span class="sxs-lookup"><span data-stu-id="7a6d6-103">Points to a function that the common language runtime (CLR) calls to indicate that initialization has either started or completed.</span></span>  
+# <a name="flockclrversioncallback-function-pointer"></a><span data-ttu-id="a3aad-102">FLockClrVersionCallback İşlev İşaretçisi</span><span class="sxs-lookup"><span data-stu-id="a3aad-102">FLockClrVersionCallback Function Pointer</span></span>
+<span data-ttu-id="a3aad-103">Başlatmanın belirtmek için ortak dil çalışma zamanı (CLR) çağrıları çalışmaya veya tamamlanmış bir işleve işaret eder.</span><span class="sxs-lookup"><span data-stu-id="a3aad-103">Points to a function that the common language runtime (CLR) calls to indicate that initialization has either started or completed.</span></span>  
   
- <span data-ttu-id="7a6d6-104">Bu işlev işaretçisi içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7a6d6-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="a3aad-104">Bu işlev işaretçisi içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a3aad-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7a6d6-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7a6d6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a3aad-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a3aad-105">Syntax</span></span>  
   
 ```  
 typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="7a6d6-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7a6d6-106">Remarks</span></span>  
- <span data-ttu-id="7a6d6-107">Bu işlev, ana bilgisayar tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="7a6d6-107">This function is implemented by the host.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a3aad-106">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a3aad-106">Remarks</span></span>  
+ <span data-ttu-id="a3aad-107">Bu işlev, ana bilgisayar tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="a3aad-107">This function is implemented by the host.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7a6d6-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7a6d6-108">Requirements</span></span>  
- <span data-ttu-id="7a6d6-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7a6d6-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a3aad-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a3aad-108">Requirements</span></span>  
+ <span data-ttu-id="a3aad-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a3aad-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7a6d6-110">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7a6d6-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a3aad-110">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a3aad-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7a6d6-111">**Kitaplığı:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="7a6d6-111">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="a3aad-111">**Kitaplığı:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="a3aad-111">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="7a6d6-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a6d6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="a3aad-112">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="a3aad-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7a6d6-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7a6d6-113">See also</span></span>
-- [<span data-ttu-id="7a6d6-114">LockClrVersion İşlevi</span><span class="sxs-lookup"><span data-stu-id="7a6d6-114">LockClrVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)
-- [<span data-ttu-id="7a6d6-115">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="7a6d6-115">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="a3aad-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a3aad-113">See also</span></span>
+
+- [<span data-ttu-id="a3aad-114">LockClrVersion İşlevi</span><span class="sxs-lookup"><span data-stu-id="a3aad-114">LockClrVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)
+- [<span data-ttu-id="a3aad-115">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="a3aad-115">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

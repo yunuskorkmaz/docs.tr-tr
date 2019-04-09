@@ -2,20 +2,20 @@
 title: <workflowControlEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
-ms.openlocfilehash: de0a51ed6f2a878ab3a6ebe15863f1f2925034ce
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a9c16d1036a8177120cd152d4ac211ad084d588e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150390"
 ---
-# <a name="workflowcontrolendpoint"></a><span data-ttu-id="e8c81-101">\<workflowControlEndpoint ></span><span class="sxs-lookup"><span data-stu-id="e8c81-101">\<workflowControlEndpoint></span></span>
-<span data-ttu-id="e8c81-102">Bu yapılandırma öğesi, iş akışı örnekleri yürütülmesini denetlemek için bir standart uç nokta tanımlar. (oluşturma, çalıştırma, askıya alma, sonlandırma, vb.).</span><span class="sxs-lookup"><span data-stu-id="e8c81-102">This configuration element defines a standard endpoint for controlling the execution of workflow instances (create, run, suspend, terminate, etc).</span></span>  
+# <a name="workflowcontrolendpoint"></a><span data-ttu-id="c1ab5-101">\<workflowControlEndpoint ></span><span class="sxs-lookup"><span data-stu-id="c1ab5-101">\<workflowControlEndpoint></span></span>
+<span data-ttu-id="c1ab5-102">Bu yapılandırma öğesi, iş akışı örnekleri yürütülmesini denetlemek için bir standart uç nokta tanımlar. (oluşturma, çalıştırma, askıya alma, sonlandırma, vb.).</span><span class="sxs-lookup"><span data-stu-id="c1ab5-102">This configuration element defines a standard endpoint for controlling the execution of workflow instances (create, run, suspend, terminate, etc).</span></span>  
   
-<span data-ttu-id="e8c81-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="e8c81-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="e8c81-104">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="e8c81-104">\<standardEndpoints></span></span>  
+<span data-ttu-id="c1ab5-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="c1ab5-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="c1ab5-104">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="c1ab5-104">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e8c81-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e8c81-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1ab5-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c1ab5-105">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -27,23 +27,24 @@ ms.locfileid: "55272606"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="e8c81-106">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="e8c81-106">Attributes and Elements</span></span>  
- <span data-ttu-id="e8c81-107">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="e8c81-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c1ab5-106">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="c1ab5-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="c1ab5-107">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c1ab5-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="e8c81-108">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="e8c81-108">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c1ab5-108">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="c1ab5-108">Attributes</span></span>  
   
-|<span data-ttu-id="e8c81-109">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="e8c81-109">Attribute</span></span>|<span data-ttu-id="e8c81-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e8c81-110">Description</span></span>|  
+|<span data-ttu-id="c1ab5-109">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="c1ab5-109">Attribute</span></span>|<span data-ttu-id="c1ab5-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c1ab5-110">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="e8c81-111">name</span><span class="sxs-lookup"><span data-stu-id="e8c81-111">name</span></span>|<span data-ttu-id="e8c81-112">Standart uç nokta yapılandırmasını adını belirten dize.</span><span class="sxs-lookup"><span data-stu-id="e8c81-112">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="e8c81-113">Adı kullanılıyor `endpointConfiguration` özniteliği bir standart uç noktası yapılandırmasına bağlamak için hizmet uç noktası.</span><span class="sxs-lookup"><span data-stu-id="e8c81-113">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
+|<span data-ttu-id="c1ab5-111">name</span><span class="sxs-lookup"><span data-stu-id="c1ab5-111">name</span></span>|<span data-ttu-id="c1ab5-112">Standart uç nokta yapılandırmasını adını belirten dize.</span><span class="sxs-lookup"><span data-stu-id="c1ab5-112">A String that specifies the name of the configuration of the standard endpoint.</span></span> <span data-ttu-id="c1ab5-113">Adı kullanılıyor `endpointConfiguration` özniteliği bir standart uç noktası yapılandırmasına bağlamak için hizmet uç noktası.</span><span class="sxs-lookup"><span data-stu-id="c1ab5-113">The name is used in the `endpointConfiguration` attribute of the service endpoint to link a standard endpoint to its configuration.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="e8c81-114">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="e8c81-114">Child Elements</span></span>  
- <span data-ttu-id="e8c81-115">Yok.</span><span class="sxs-lookup"><span data-stu-id="e8c81-115">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c1ab5-114">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="c1ab5-114">Child Elements</span></span>  
+ <span data-ttu-id="c1ab5-115">Yok.</span><span class="sxs-lookup"><span data-stu-id="c1ab5-115">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="e8c81-116">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="e8c81-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c1ab5-116">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="c1ab5-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="e8c81-117">Öğe</span><span class="sxs-lookup"><span data-stu-id="e8c81-117">Element</span></span>|<span data-ttu-id="e8c81-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e8c81-118">Description</span></span>|  
+|<span data-ttu-id="c1ab5-117">Öğe</span><span class="sxs-lookup"><span data-stu-id="c1ab5-117">Element</span></span>|<span data-ttu-id="c1ab5-118">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c1ab5-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="e8c81-119">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="e8c81-119">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="e8c81-120">Daha fazla (adresi, bağlama, anlaşma) kendi özellik sabit veya olan standart uç noktaları koleksiyonu uç noktaları biriyle önceden tanımlanmış.</span><span class="sxs-lookup"><span data-stu-id="e8c81-120">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="c1ab5-119">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="c1ab5-119">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="c1ab5-120">Daha fazla (adresi, bağlama, anlaşma) kendi özellik sabit veya olan standart uç noktaları koleksiyonu uç noktaları biriyle önceden tanımlanmış.</span><span class="sxs-lookup"><span data-stu-id="c1ab5-120">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="e8c81-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e8c81-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1ab5-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c1ab5-121">See also</span></span>
+
 - <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>

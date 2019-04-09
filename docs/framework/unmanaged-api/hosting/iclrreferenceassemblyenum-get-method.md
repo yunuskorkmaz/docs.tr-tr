@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63351d15cfe5f085940306e204ee5f6200ee8494
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 31d26ed6249bad8a7e2fbaab01264c1b32e1ff55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194480"
 ---
-# <a name="iclrreferenceassemblyenumget-method"></a><span data-ttu-id="32e35-102">ICLRReferenceAssemblyEnum::Get Yöntemi</span><span class="sxs-lookup"><span data-stu-id="32e35-102">ICLRReferenceAssemblyEnum::Get Method</span></span>
-<span data-ttu-id="32e35-103">Derleme kimliği sağlanan dizini alır.</span><span class="sxs-lookup"><span data-stu-id="32e35-103">Gets the assembly identity at the supplied index.</span></span>  
+# <a name="iclrreferenceassemblyenumget-method"></a><span data-ttu-id="8c229-102">ICLRReferenceAssemblyEnum::Get Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8c229-102">ICLRReferenceAssemblyEnum::Get Method</span></span>
+<span data-ttu-id="8c229-103">Derleme kimliği sağlanan dizini alır.</span><span class="sxs-lookup"><span data-stu-id="8c229-103">Gets the assembly identity at the supplied index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32e35-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="32e35-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c229-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8c229-104">Syntax</span></span>  
   
 ```  
 HRESULT Get (  
@@ -37,41 +37,42 @@ HRESULT Get (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="32e35-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="32e35-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8c229-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8c229-105">Parameters</span></span>  
  `dwIndex`  
- <span data-ttu-id="32e35-106">[in] Derleme kimliği döndürmek için sıfır tabanlı dizini.</span><span class="sxs-lookup"><span data-stu-id="32e35-106">[in] The zero-based index of the assembly identity to return.</span></span>  
+ <span data-ttu-id="8c229-106">[in] Derleme kimliği döndürmek için sıfır tabanlı dizini.</span><span class="sxs-lookup"><span data-stu-id="8c229-106">[in] The zero-based index of the assembly identity to return.</span></span>  
   
  `pwzBuffer`  
- <span data-ttu-id="32e35-107">[out] Derlemeyi kimlik verilerini içeren arabellek.</span><span class="sxs-lookup"><span data-stu-id="32e35-107">[out] A buffer containing the assembly identity data.</span></span>  
+ <span data-ttu-id="8c229-107">[out] Derlemeyi kimlik verilerini içeren arabellek.</span><span class="sxs-lookup"><span data-stu-id="8c229-107">[out] A buffer containing the assembly identity data.</span></span>  
   
  `pcchBufferSize`  
- <span data-ttu-id="32e35-108">[out içinde] Boyutu `pwzBuffer` arabellek.</span><span class="sxs-lookup"><span data-stu-id="32e35-108">[in, out] The size of the `pwzBuffer` buffer.</span></span>  
+ <span data-ttu-id="8c229-108">[out içinde] Boyutu `pwzBuffer` arabellek.</span><span class="sxs-lookup"><span data-stu-id="8c229-108">[in, out] The size of the `pwzBuffer` buffer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="32e35-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="32e35-109">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8c229-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="8c229-109">Return Value</span></span>  
   
-|<span data-ttu-id="32e35-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="32e35-110">HRESULT</span></span>|<span data-ttu-id="32e35-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="32e35-111">Description</span></span>|  
+|<span data-ttu-id="8c229-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8c229-110">HRESULT</span></span>|<span data-ttu-id="8c229-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8c229-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="32e35-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="32e35-112">S_OK</span></span>|<span data-ttu-id="32e35-113">`Get` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="32e35-113">`Get` returned successfully.</span></span>|  
-|<span data-ttu-id="32e35-114">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="32e35-114">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="32e35-115">`pwzBuffer` çok küçüktür.</span><span class="sxs-lookup"><span data-stu-id="32e35-115">`pwzBuffer` is too small.</span></span>|  
-|<span data-ttu-id="32e35-116">ERROR_NO_MORE_ITEMS</span><span class="sxs-lookup"><span data-stu-id="32e35-116">ERROR_NO_MORE_ITEMS</span></span>|<span data-ttu-id="32e35-117">Numaralandırma, daha fazla öğe içeriyor.</span><span class="sxs-lookup"><span data-stu-id="32e35-117">The enumeration contains no more items.</span></span>|  
-|<span data-ttu-id="32e35-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="32e35-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="32e35-119">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="32e35-119">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="32e35-120">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="32e35-120">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="32e35-121">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="32e35-121">The call timed out.</span></span>|  
-|<span data-ttu-id="32e35-122">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="32e35-122">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="32e35-123">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="32e35-123">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="32e35-124">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="32e35-124">HOST_E_ABANDONED</span></span>|<span data-ttu-id="32e35-125">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="32e35-125">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="32e35-126">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="32e35-126">E_FAIL</span></span>|<span data-ttu-id="32e35-127">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="32e35-127">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="32e35-128">CLR, artık bir yöntem E_FAIL döndürürse, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="32e35-128">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="32e35-129">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="32e35-129">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="8c229-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="8c229-112">S_OK</span></span>|`Get` <span data-ttu-id="8c229-113">başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="8c229-113">returned successfully.</span></span>|  
+|<span data-ttu-id="8c229-114">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="8c229-114">ERROR_INSUFFICIENT_BUFFER</span></span>|`pwzBuffer` <span data-ttu-id="8c229-115">çok küçüktür.</span><span class="sxs-lookup"><span data-stu-id="8c229-115">is too small.</span></span>|  
+|<span data-ttu-id="8c229-116">ERROR_NO_MORE_ITEMS</span><span class="sxs-lookup"><span data-stu-id="8c229-116">ERROR_NO_MORE_ITEMS</span></span>|<span data-ttu-id="8c229-117">Numaralandırma, daha fazla öğe içeriyor.</span><span class="sxs-lookup"><span data-stu-id="8c229-117">The enumeration contains no more items.</span></span>|  
+|<span data-ttu-id="8c229-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="8c229-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="8c229-119">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="8c229-119">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="8c229-120">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="8c229-120">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="8c229-121">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="8c229-121">The call timed out.</span></span>|  
+|<span data-ttu-id="8c229-122">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="8c229-122">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="8c229-123">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="8c229-123">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="8c229-124">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="8c229-124">HOST_E_ABANDONED</span></span>|<span data-ttu-id="8c229-125">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="8c229-125">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="8c229-126">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="8c229-126">E_FAIL</span></span>|<span data-ttu-id="8c229-127">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="8c229-127">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="8c229-128">CLR, artık bir yöntem E_FAIL döndürürse, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="8c229-128">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="8c229-129">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="8c229-129">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="32e35-130">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="32e35-130">Remarks</span></span>  
- <span data-ttu-id="32e35-131">`Get` genellikle iki kez çağrılır.</span><span class="sxs-lookup"><span data-stu-id="32e35-131">`Get` is typically called twice.</span></span> <span data-ttu-id="32e35-132">İlk çağrı için bir null değer sağlayan `pwzBuffer`ve ayarlar `pcchBufferSize` boyuta uygun `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="32e35-132">The first call supplies a null value for `pwzBuffer`, and sets `pcchBufferSize` to the size appropriate for `pwzBuffer`.</span></span> <span data-ttu-id="32e35-133">İkinci çağrı uygun şekilde boyutlandırılmış sağlayan `pwzBuffer`ve tamamlandıktan sonra derleme kurallı kimlik verilerini içerir.</span><span class="sxs-lookup"><span data-stu-id="32e35-133">The second call supplies an appropriately sized `pwzBuffer`, and contains the canonical assembly identity data upon completion.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8c229-130">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8c229-130">Remarks</span></span>  
+ `Get` <span data-ttu-id="8c229-131">genellikle iki kez çağrılır.</span><span class="sxs-lookup"><span data-stu-id="8c229-131">is typically called twice.</span></span> <span data-ttu-id="8c229-132">İlk çağrı için bir null değer sağlayan `pwzBuffer`ve ayarlar `pcchBufferSize` boyuta uygun `pwzBuffer`.</span><span class="sxs-lookup"><span data-stu-id="8c229-132">The first call supplies a null value for `pwzBuffer`, and sets `pcchBufferSize` to the size appropriate for `pwzBuffer`.</span></span> <span data-ttu-id="8c229-133">İkinci çağrı uygun şekilde boyutlandırılmış sağlayan `pwzBuffer`ve tamamlandıktan sonra derleme kurallı kimlik verilerini içerir.</span><span class="sxs-lookup"><span data-stu-id="8c229-133">The second call supplies an appropriately sized `pwzBuffer`, and contains the canonical assembly identity data upon completion.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="32e35-134">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="32e35-134">Requirements</span></span>  
- <span data-ttu-id="32e35-135">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32e35-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8c229-134">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8c229-134">Requirements</span></span>  
+ <span data-ttu-id="8c229-135">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c229-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32e35-136">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="32e35-136">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8c229-136">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8c229-136">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="32e35-137">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="32e35-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8c229-137">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="8c229-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="32e35-138">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32e35-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="8c229-138">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="8c229-138">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="32e35-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="32e35-139">See also</span></span>
-- [<span data-ttu-id="32e35-140">ICLRAssemblyReferenceList Arabirimi</span><span class="sxs-lookup"><span data-stu-id="32e35-140">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="32e35-141">ICLRReferenceAssemblyEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="32e35-141">ICLRReferenceAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8c229-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8c229-139">See also</span></span>
+
+- [<span data-ttu-id="8c229-140">ICLRAssemblyReferenceList Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8c229-140">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="8c229-141">ICLRReferenceAssemblyEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8c229-141">ICLRReferenceAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md)

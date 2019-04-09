@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b036c5cff5300377580fe22dc254911fbdd79715
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e0e859ba8b6ec247073b0b69b035ea4cf074ab05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149298"
 ---
-# <a name="isymunmanagedmethodgetscopefromoffset-method"></a><span data-ttu-id="48d04-102">ISymUnmanagedMethod::GetScopeFromOffset Metodu</span><span class="sxs-lookup"><span data-stu-id="48d04-102">ISymUnmanagedMethod::GetScopeFromOffset Method</span></span>
-<span data-ttu-id="48d04-103">Belirtilen uzaklık kapsayan bu yöntem en kapsayan sözlü kapsamda alır.</span><span class="sxs-lookup"><span data-stu-id="48d04-103">Gets the most enclosing lexical scope within this method that encloses the given offset.</span></span> <span data-ttu-id="48d04-104">Bu yerel değişken aramaları başlatmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="48d04-104">This can be used to start local variable searches.</span></span>  
+# <a name="isymunmanagedmethodgetscopefromoffset-method"></a><span data-ttu-id="68952-102">ISymUnmanagedMethod::GetScopeFromOffset Metodu</span><span class="sxs-lookup"><span data-stu-id="68952-102">ISymUnmanagedMethod::GetScopeFromOffset Method</span></span>
+<span data-ttu-id="68952-103">Belirtilen uzaklık kapsayan bu yöntem en kapsayan sözlü kapsamda alır.</span><span class="sxs-lookup"><span data-stu-id="68952-103">Gets the most enclosing lexical scope within this method that encloses the given offset.</span></span> <span data-ttu-id="68952-104">Bu yerel değişken aramaları başlatmak için kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="68952-104">This can be used to start local variable searches.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48d04-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="48d04-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68952-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="68952-105">Syntax</span></span>  
   
 ```  
 HRESULT GetScopeFromOffset(  
@@ -35,18 +35,19 @@ HRESULT GetScopeFromOffset(
     [out, retval] ISymUnmanagedScope**  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="48d04-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="48d04-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="68952-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="68952-106">Parameters</span></span>  
  `offset`  
- <span data-ttu-id="48d04-107">[in] A `ULONG` içeren uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="48d04-107">[in] A `ULONG` that contains the offset.</span></span>  
+ <span data-ttu-id="68952-107">[in] A `ULONG` içeren uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="68952-107">[in] A `ULONG` that contains the offset.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="48d04-108">[out] Ayarlanmış bir işaretçi ve döndürülen [Isymunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="48d04-108">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
+ <span data-ttu-id="68952-108">[out] Ayarlanmış bir işaretçi ve döndürülen [Isymunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="68952-108">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="48d04-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="48d04-109">Return Value</span></span>  
- <span data-ttu-id="48d04-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="48d04-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="68952-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="68952-109">Return Value</span></span>  
+ <span data-ttu-id="68952-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="68952-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="48d04-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="48d04-111">Requirements</span></span>  
- <span data-ttu-id="48d04-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="48d04-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="68952-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="68952-111">Requirements</span></span>  
+ <span data-ttu-id="68952-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="68952-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48d04-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="48d04-113">See also</span></span>
-- [<span data-ttu-id="48d04-114">ISymUnmanagedMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="48d04-114">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="68952-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="68952-113">See also</span></span>
+
+- [<span data-ttu-id="68952-114">ISymUnmanagedMethod Arabirimi</span><span class="sxs-lookup"><span data-stu-id="68952-114">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

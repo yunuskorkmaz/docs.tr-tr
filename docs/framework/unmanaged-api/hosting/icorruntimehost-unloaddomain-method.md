@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6773d9387ae3b91125b413dee51b0c3fcbbb1edd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 492a60d3c8d18bec4e99ae778686fec6e8724248
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140575"
 ---
-# <a name="icorruntimehostunloaddomain-method"></a><span data-ttu-id="0b8f2-102">ICorRuntimeHost::UnloadDomain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0b8f2-102">ICorRuntimeHost::UnloadDomain Method</span></span>
-<span data-ttu-id="0b8f2-103">Belirtilen uygulama etki alanından geçerli işlem kaldırır.</span><span class="sxs-lookup"><span data-stu-id="0b8f2-103">Unloads the specified application domain from the current process.</span></span>  
+# <a name="icorruntimehostunloaddomain-method"></a><span data-ttu-id="5d2a7-102">ICorRuntimeHost::UnloadDomain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5d2a7-102">ICorRuntimeHost::UnloadDomain Method</span></span>
+<span data-ttu-id="5d2a7-103">Belirtilen uygulama etki alanından geçerli işlem kaldırır.</span><span class="sxs-lookup"><span data-stu-id="5d2a7-103">Unloads the specified application domain from the current process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b8f2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0b8f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d2a7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5d2a7-104">Syntax</span></span>  
   
 ```  
 HRESULT UnloadDomain (  
@@ -35,29 +35,30 @@ HRESULT UnloadDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0b8f2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0b8f2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5d2a7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5d2a7-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="0b8f2-106">[in] Türünde bir işaretçi <xref:System._AppDomain?displayProperty=nameWithType> kaldırılacak etki alanını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="0b8f2-106">[in] A pointer of type <xref:System._AppDomain?displayProperty=nameWithType> that represents the domain to be unloaded.</span></span>  
+ <span data-ttu-id="5d2a7-106">[in] Türünde bir işaretçi <xref:System._AppDomain?displayProperty=nameWithType> kaldırılacak etki alanını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="5d2a7-106">[in] A pointer of type <xref:System._AppDomain?displayProperty=nameWithType> that represents the domain to be unloaded.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0b8f2-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0b8f2-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5d2a7-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="5d2a7-107">Return Value</span></span>  
   
-|<span data-ttu-id="0b8f2-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0b8f2-108">HRESULT</span></span>|<span data-ttu-id="0b8f2-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0b8f2-109">Description</span></span>|  
+|<span data-ttu-id="5d2a7-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5d2a7-108">HRESULT</span></span>|<span data-ttu-id="5d2a7-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5d2a7-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="0b8f2-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="0b8f2-110">S_OK</span></span>|<span data-ttu-id="0b8f2-111">İşlem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="0b8f2-111">The operation was successful.</span></span>|  
-|<span data-ttu-id="0b8f2-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="0b8f2-112">S_FALSE</span></span>|<span data-ttu-id="0b8f2-113">İşlemi tamamlayamadı.</span><span class="sxs-lookup"><span data-stu-id="0b8f2-113">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="0b8f2-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0b8f2-114">E_FAIL</span></span>|<span data-ttu-id="0b8f2-115">Bilinmeyen, geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="0b8f2-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="0b8f2-116">Ortak dil çalışma zamanı (CLR), artık bir yöntem E_FAIL döndürürse, işlemde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="0b8f2-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="0b8f2-117">Herhangi bir barındırma API'si yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="0b8f2-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="0b8f2-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0b8f2-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0b8f2-119">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="0b8f2-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="5d2a7-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="5d2a7-110">S_OK</span></span>|<span data-ttu-id="5d2a7-111">İşlem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="5d2a7-111">The operation was successful.</span></span>|  
+|<span data-ttu-id="5d2a7-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="5d2a7-112">S_FALSE</span></span>|<span data-ttu-id="5d2a7-113">İşlemi tamamlayamadı.</span><span class="sxs-lookup"><span data-stu-id="5d2a7-113">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="5d2a7-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5d2a7-114">E_FAIL</span></span>|<span data-ttu-id="5d2a7-115">Bilinmeyen, geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="5d2a7-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="5d2a7-116">Ortak dil çalışma zamanı (CLR), artık bir yöntem E_FAIL döndürürse, işlemde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="5d2a7-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="5d2a7-117">Herhangi bir barındırma API'si yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="5d2a7-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="5d2a7-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5d2a7-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5d2a7-119">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="5d2a7-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0b8f2-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0b8f2-120">Requirements</span></span>  
- <span data-ttu-id="0b8f2-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0b8f2-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d2a7-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5d2a7-120">Requirements</span></span>  
+ <span data-ttu-id="5d2a7-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d2a7-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b8f2-122">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0b8f2-122">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5d2a7-122">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5d2a7-122">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0b8f2-123">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="0b8f2-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5d2a7-123">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="5d2a7-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0b8f2-124">**.NET framework sürümü:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="0b8f2-124">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="5d2a7-124">**.NET framework sürümü:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="5d2a7-124">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b8f2-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0b8f2-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d2a7-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5d2a7-125">See also</span></span>
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="0b8f2-126">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0b8f2-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="5d2a7-126">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5d2a7-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
