@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Pencereyi yatay bölme'
+title: 'Nasıl yapılır: Pencereyi Yatay Bölme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: e11e1d6730c6c8c9c0a1ac170aeb5393bf3153b7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d10616e2f09eabec1209a26aabe501ea0af903cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189661"
 ---
-# <a name="how-to-split-a-window-horizontally"></a><span data-ttu-id="94408-102">Nasıl yapılır: Pencereyi yatay bölme</span><span class="sxs-lookup"><span data-stu-id="94408-102">How to: Split a Window Horizontally</span></span>
-<span data-ttu-id="94408-103">Aşağıdaki kod örneği böler Bölümlendirici yapar <xref:System.Windows.Forms.SplitContainer> denetimi yatay.</span><span class="sxs-lookup"><span data-stu-id="94408-103">The following code example makes the splitter that divides the <xref:System.Windows.Forms.SplitContainer> control horizontal.</span></span>  
+# <a name="how-to-split-a-window-horizontally"></a><span data-ttu-id="6bb10-102">Nasıl yapılır: Pencereyi Yatay Bölme</span><span class="sxs-lookup"><span data-stu-id="6bb10-102">How to: Split a Window Horizontally</span></span>
+<span data-ttu-id="6bb10-103">Aşağıdaki kod örneği böler Bölümlendirici yapar <xref:System.Windows.Forms.SplitContainer> denetimi yatay.</span><span class="sxs-lookup"><span data-stu-id="6bb10-103">The following code example makes the splitter that divides the <xref:System.Windows.Forms.SplitContainer> control horizontal.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="94408-104"><xref:System.Windows.Forms.SplitContainer.Orientation%2A> Özelliği <xref:System.Windows.Forms.SplitContainer> denetimi Bölümlendiricinin, Denetim'ın yönü belirler.</span><span class="sxs-lookup"><span data-stu-id="94408-104">The <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control determines the direction of the splitter, not of the control itself.</span></span>  
+>  <span data-ttu-id="6bb10-104"><xref:System.Windows.Forms.SplitContainer.Orientation%2A> Özelliği <xref:System.Windows.Forms.SplitContainer> denetimi Bölümlendiricinin, Denetim'ın yönü belirler.</span><span class="sxs-lookup"><span data-stu-id="6bb10-104">The <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control determines the direction of the splitter, not of the control itself.</span></span>  
   
-### <a name="to-split-a-window-horizontally"></a><span data-ttu-id="94408-105">Pencereyi yatay bölme için</span><span class="sxs-lookup"><span data-stu-id="94408-105">To split a window horizontally</span></span>  
+### <a name="to-split-a-window-horizontally"></a><span data-ttu-id="6bb10-105">Pencereyi yatay bölme için</span><span class="sxs-lookup"><span data-stu-id="6bb10-105">To split a window horizontally</span></span>  
   
-1.  <span data-ttu-id="94408-106">Bir yordam içinde ayarlamak <xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliği <xref:System.Windows.Forms.SplitContainer> denetimini <xref:System.Windows.Forms.Orientation.Horizontal>.</span><span class="sxs-lookup"><span data-stu-id="94408-106">Within a procedure, set the <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control to <xref:System.Windows.Forms.Orientation.Horizontal>.</span></span>  
+1.  <span data-ttu-id="6bb10-106">Bir yordam içinde ayarlamak <xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliği <xref:System.Windows.Forms.SplitContainer> denetimini <xref:System.Windows.Forms.Orientation.Horizontal>.</span><span class="sxs-lookup"><span data-stu-id="6bb10-106">Within a procedure, set the <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control to <xref:System.Windows.Forms.Orientation.Horizontal>.</span></span>  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -55,6 +55,7 @@ ms.locfileid: "57708047"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="94408-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="94408-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6bb10-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6bb10-107">See also</span></span>
+
 - <xref:System.Windows.Forms.SplitContainer>
-- [<span data-ttu-id="94408-108">SplitContainer Denetimi</span><span class="sxs-lookup"><span data-stu-id="94408-108">SplitContainer Control</span></span>](splitcontainer-control-windows-forms.md)
+- [<span data-ttu-id="6bb10-108">SplitContainer Denetimi</span><span class="sxs-lookup"><span data-stu-id="6bb10-108">SplitContainer Control</span></span>](splitcontainer-control-windows-forms.md)

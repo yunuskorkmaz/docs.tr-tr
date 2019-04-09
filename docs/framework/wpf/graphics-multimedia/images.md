@@ -9,27 +9,28 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: b59cd1c1ec2ee058811996c92e4b215c8872ff0b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194987"
 ---
-# <a name="images"></a><span data-ttu-id="86c1c-102">Görüntüler</span><span class="sxs-lookup"><span data-stu-id="86c1c-102">Images</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="86c1c-103">birden çok görüntü biçimlerini, yüksek uygunluğa sahip görüntü işleme ve codec genişletilebilirliği için yerleşik destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="86c1c-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="6a399-102">Görüntüler</span><span class="sxs-lookup"><span data-stu-id="6a399-102">Images</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="6a399-103">birden çok görüntü biçimlerini, yüksek uygunluğa sahip görüntü işleme ve codec genişletilebilirliği için yerleşik destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="6a399-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="86c1c-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="86c1c-104">In This Section</span></span>  
- [<span data-ttu-id="86c1c-105">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="86c1c-105">Imaging Overview</span></span>](imaging-overview.md)  
- [<span data-ttu-id="86c1c-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="86c1c-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6a399-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="6a399-104">In This Section</span></span>  
+ [<span data-ttu-id="6a399-105">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="6a399-105">Imaging Overview</span></span>](imaging-overview.md)  
+ [<span data-ttu-id="6a399-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="6a399-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="86c1c-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="86c1c-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6a399-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="6a399-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="86c1c-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="86c1c-108">See also</span></span>
-- [<span data-ttu-id="86c1c-109">2B Grafikleri ve Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="86c1c-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="86c1c-110">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="86c1c-110">Graphics and Multimedia</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="6a399-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6a399-108">See also</span></span>
+
+- [<span data-ttu-id="6a399-109">2B Grafikleri ve Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="6a399-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="6a399-110">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="6a399-110">Graphics and Multimedia</span></span>](index.md)

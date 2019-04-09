@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e982fa7f6354f341ff4718440f345e282a1d20d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa10ae1cf67339a6719210f3162f19ac648e8ee5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127419"
 ---
-# <a name="validatorflags-enumeration"></a><span data-ttu-id="4ab81-102">ValidatorFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="4ab81-102">ValidatorFlags Enumeration</span></span>
-<span data-ttu-id="4ab81-103">Bir çağrıda gerçekleştirilmelidir doğrulama türünü gösteren değerleri içerir [Iclrvalidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="4ab81-103">Contains values that indicate the type of validation that should be performed in a call to the [ICLRValidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) method.</span></span>  
+# <a name="validatorflags-enumeration"></a><span data-ttu-id="364ea-102">ValidatorFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="364ea-102">ValidatorFlags Enumeration</span></span>
+<span data-ttu-id="364ea-103">Bir çağrıda gerçekleştirilmelidir doğrulama türünü gösteren değerleri içerir [Iclrvalidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="364ea-103">Contains values that indicate the type of validation that should be performed in a call to the [ICLRValidator::Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4ab81-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4ab81-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="364ea-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="364ea-104">Syntax</span></span>  
   
 ```  
 enum ValidatorFlags {  
@@ -38,25 +38,26 @@ enum ValidatorFlags {
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4ab81-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="4ab81-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="364ea-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="364ea-105">Members</span></span>  
   
-|<span data-ttu-id="4ab81-106">Üye</span><span class="sxs-lookup"><span data-stu-id="4ab81-106">Member</span></span>|<span data-ttu-id="4ab81-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4ab81-107">Description</span></span>|  
+|<span data-ttu-id="364ea-106">Üye</span><span class="sxs-lookup"><span data-stu-id="364ea-106">Member</span></span>|<span data-ttu-id="364ea-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="364ea-107">Description</span></span>|  
 |------------|-----------------|  
-|`VALIDATOR_CHECK_ILONLY`|<span data-ttu-id="4ab81-108">Yalnızca Microsoft Ara dilini (MSIL) yürütülebilir dosyasına doğrulanmalıdır belirtir.</span><span class="sxs-lookup"><span data-stu-id="4ab81-108">Specifies that only the Microsoft intermediate language (MSIL) in the executable file should be validated.</span></span>|  
-|`VALIDATOR_CHECK_PEFORMAT_ONLY`|<span data-ttu-id="4ab81-109">Sadece yürütülebilir dosya biçimi doğrulanmalıdır belirtir.</span><span class="sxs-lookup"><span data-stu-id="4ab81-109">Specifies that only the format of the executable file should be validated.</span></span>|  
-|`VALIDATOR_EXTRA_VERBOSE`|<span data-ttu-id="4ab81-110">Tüm doğrulama türlerinin gerçekleştirilen ve üzerinde bildirilen belirtir.</span><span class="sxs-lookup"><span data-stu-id="4ab81-110">Specifies that all types of validation should be performed and reported on.</span></span>|  
-|`VALIDATOR_NOCHECK_PEFORMAT`|<span data-ttu-id="4ab81-111">Yürütülebilir dosya biçiminin geçerliliğinin doğrulanması belirtir.</span><span class="sxs-lookup"><span data-stu-id="4ab81-111">Specifies that the format of the executable file should not be validated.</span></span>|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|<span data-ttu-id="4ab81-112">Doğrulama hatası iletilerinin doğrulama hatalarını yükseltmek kaynak kodu satırlarını içermesi gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="4ab81-112">Specifies that validation error messages should include the lines of source code that raise validation errors.</span></span> <span data-ttu-id="4ab81-113">Bu alanın değeri, .NET Framework 2.0 sürümünde geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="4ab81-113">This field value is not valid in the .NET Framework version 2.0.</span></span>|  
+|`VALIDATOR_CHECK_ILONLY`|<span data-ttu-id="364ea-108">Yalnızca Microsoft Ara dilini (MSIL) yürütülebilir dosyasına doğrulanmalıdır belirtir.</span><span class="sxs-lookup"><span data-stu-id="364ea-108">Specifies that only the Microsoft intermediate language (MSIL) in the executable file should be validated.</span></span>|  
+|`VALIDATOR_CHECK_PEFORMAT_ONLY`|<span data-ttu-id="364ea-109">Sadece yürütülebilir dosya biçimi doğrulanmalıdır belirtir.</span><span class="sxs-lookup"><span data-stu-id="364ea-109">Specifies that only the format of the executable file should be validated.</span></span>|  
+|`VALIDATOR_EXTRA_VERBOSE`|<span data-ttu-id="364ea-110">Tüm doğrulama türlerinin gerçekleştirilen ve üzerinde bildirilen belirtir.</span><span class="sxs-lookup"><span data-stu-id="364ea-110">Specifies that all types of validation should be performed and reported on.</span></span>|  
+|`VALIDATOR_NOCHECK_PEFORMAT`|<span data-ttu-id="364ea-111">Yürütülebilir dosya biçiminin geçerliliğinin doğrulanması belirtir.</span><span class="sxs-lookup"><span data-stu-id="364ea-111">Specifies that the format of the executable file should not be validated.</span></span>|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|<span data-ttu-id="364ea-112">Doğrulama hatası iletilerinin doğrulama hatalarını yükseltmek kaynak kodu satırlarını içermesi gerektiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="364ea-112">Specifies that validation error messages should include the lines of source code that raise validation errors.</span></span> <span data-ttu-id="364ea-113">Bu alanın değeri, .NET Framework 2.0 sürümünde geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="364ea-113">This field value is not valid in the .NET Framework version 2.0.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4ab81-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4ab81-114">Requirements</span></span>  
- <span data-ttu-id="4ab81-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4ab81-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="364ea-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="364ea-114">Requirements</span></span>  
+ <span data-ttu-id="364ea-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="364ea-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4ab81-116">**Üst bilgi:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="4ab81-116">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="364ea-116">**Üst bilgi:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="364ea-116">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="4ab81-117">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4ab81-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="364ea-117">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="364ea-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4ab81-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ab81-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="364ea-118">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="364ea-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4ab81-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4ab81-119">See also</span></span>
-- [<span data-ttu-id="4ab81-120">ICLRErrorReportingManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4ab81-120">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [<span data-ttu-id="4ab81-121">Barındırma Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="4ab81-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="364ea-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="364ea-119">See also</span></span>
+
+- [<span data-ttu-id="364ea-120">ICLRErrorReportingManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="364ea-120">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="364ea-121">Barındırma Numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="364ea-121">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

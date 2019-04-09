@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c4e22c2e80af37177294d86c2e5775a5c296fe7
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 7b3712b4cb66facc105a03d7bfad235f09339056
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193011"
 ---
-# <a name="couninitializeee-function"></a><span data-ttu-id="fdaaa-102">CoUninitializeEE İşlevi</span><span class="sxs-lookup"><span data-stu-id="fdaaa-102">CoUninitializeEE Function</span></span>
-<span data-ttu-id="fdaaa-103">`CoUninitializeEE` artık kullanılmıyor ve hiçbir işlevsellik sağlar.</span><span class="sxs-lookup"><span data-stu-id="fdaaa-103">`CoUninitializeEE` is obsolete and provides no functionality.</span></span>  
+# <a name="couninitializeee-function"></a><span data-ttu-id="c0981-102">CoUninitializeEE İşlevi</span><span class="sxs-lookup"><span data-stu-id="c0981-102">CoUninitializeEE Function</span></span>
+`CoUninitializeEE` <span data-ttu-id="c0981-103">artık kullanılmıyor ve hiçbir işlevsellik sağlar.</span><span class="sxs-lookup"><span data-stu-id="c0981-103">is obsolete and provides no functionality.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fdaaa-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fdaaa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0981-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c0981-104">Syntax</span></span>  
   
 ```  
 void CoUninitializeEE (  
@@ -35,9 +35,10 @@ void CoUninitializeEE (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="fdaaa-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fdaaa-105">Remarks</span></span>  
- <span data-ttu-id="fdaaa-106">Ortak dil çalışma zamanı yürütme altyapısının bir işlemden olamaz.</span><span class="sxs-lookup"><span data-stu-id="fdaaa-106">The common language runtime execution engine cannot be unloaded from a process.</span></span> <span data-ttu-id="fdaaa-107">Yürütme altyapısı çağrıyı kapatmaya [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span><span class="sxs-lookup"><span data-stu-id="fdaaa-107">To shut down the execution engine call [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c0981-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c0981-105">Remarks</span></span>  
+ <span data-ttu-id="c0981-106">Ortak dil çalışma zamanı yürütme altyapısının bir işlemden olamaz.</span><span class="sxs-lookup"><span data-stu-id="c0981-106">The common language runtime execution engine cannot be unloaded from a process.</span></span> <span data-ttu-id="c0981-107">Yürütme altyapısı çağrıyı kapatmaya [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span><span class="sxs-lookup"><span data-stu-id="c0981-107">To shut down the execution engine call [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fdaaa-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fdaaa-108">See also</span></span>
-- [<span data-ttu-id="fdaaa-109">CoInitializeEE İşlevi</span><span class="sxs-lookup"><span data-stu-id="fdaaa-109">CoInitializeEE Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
-- [<span data-ttu-id="fdaaa-110">Meta Veri Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="fdaaa-110">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="c0981-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c0981-108">See also</span></span>
+
+- [<span data-ttu-id="c0981-109">CoInitializeEE İşlevi</span><span class="sxs-lookup"><span data-stu-id="c0981-109">CoInitializeEE Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
+- [<span data-ttu-id="c0981-110">Meta Veri Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="c0981-110">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

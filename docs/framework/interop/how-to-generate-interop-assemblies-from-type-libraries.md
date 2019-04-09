@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tür kitaplıklarından birlikte çalışma derlemeleri oluşturma'
+title: 'Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Derlemeleri Oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -10,37 +10,38 @@ helpviewer_keywords:
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95e85578a4879a9af9f262a933150292a4f58ec2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cc388d68e5314604d3c8e8991b7fa3c600a5d873
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116733"
 ---
-# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a><span data-ttu-id="2b852-102">Nasıl yapılır: Tür kitaplıklarından birlikte çalışma derlemeleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="2b852-102">How to: Generate Interop Assemblies from Type Libraries</span></span>
-<span data-ttu-id="2b852-103">[Tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) meta verileri için bir COM tür kitaplığında bulunan arabirimleri ve coclass'ları dönüştürür bir komut satırı aracıdır.</span><span class="sxs-lookup"><span data-stu-id="2b852-103">The [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) is a command-line tool that converts the coclasses and interfaces contained in a COM type library to metadata.</span></span> <span data-ttu-id="2b852-104">Bu araç bir birlikte çalışma derlemesi ve tür bilgisi için ad alanı otomatik olarak oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2b852-104">This tool creates an interop assembly and namespace for the type information automatically.</span></span> <span data-ttu-id="2b852-105">Bir sınıfın meta verileri kullanıma sunulduktan sonra yönetilen istemcilerin COM tür örnekleri oluşturma ve bir .NET örneği sanki olarak kendi yöntemlerini çağırmaya.</span><span class="sxs-lookup"><span data-stu-id="2b852-105">After the metadata of a class is available, managed clients can create instances of the COM type and call its methods, just as if it were a .NET instance.</span></span> <span data-ttu-id="2b852-106">Tlbimp.exe tüm tür kitaplığında tek seferde meta verisine dönüştürür ve tür kitaplığında tanımlanan türlerin bir alt kümesi için tür bilgisi oluşturulamıyor.</span><span class="sxs-lookup"><span data-stu-id="2b852-106">Tlbimp.exe converts an entire type library to metadata at once and cannot generate type information for a subset of the types defined in a type library.</span></span>  
+# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a><span data-ttu-id="c3a26-102">Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Derlemeleri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="c3a26-102">How to: Generate Interop Assemblies from Type Libraries</span></span>
+<span data-ttu-id="c3a26-103">[Tür kitaplığı alma programı (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) meta verileri için bir COM tür kitaplığında bulunan arabirimleri ve coclass'ları dönüştürür bir komut satırı aracıdır.</span><span class="sxs-lookup"><span data-stu-id="c3a26-103">The [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) is a command-line tool that converts the coclasses and interfaces contained in a COM type library to metadata.</span></span> <span data-ttu-id="c3a26-104">Bu araç bir birlikte çalışma derlemesi ve tür bilgisi için ad alanı otomatik olarak oluşturur.</span><span class="sxs-lookup"><span data-stu-id="c3a26-104">This tool creates an interop assembly and namespace for the type information automatically.</span></span> <span data-ttu-id="c3a26-105">Bir sınıfın meta verileri kullanıma sunulduktan sonra yönetilen istemcilerin COM tür örnekleri oluşturma ve bir .NET örneği sanki olarak kendi yöntemlerini çağırmaya.</span><span class="sxs-lookup"><span data-stu-id="c3a26-105">After the metadata of a class is available, managed clients can create instances of the COM type and call its methods, just as if it were a .NET instance.</span></span> <span data-ttu-id="c3a26-106">Tlbimp.exe tüm tür kitaplığında tek seferde meta verisine dönüştürür ve tür kitaplığında tanımlanan türlerin bir alt kümesi için tür bilgisi oluşturulamıyor.</span><span class="sxs-lookup"><span data-stu-id="c3a26-106">Tlbimp.exe converts an entire type library to metadata at once and cannot generate type information for a subset of the types defined in a type library.</span></span>  
   
-### <a name="to-generate-an-interop-assembly-from-a-type-library"></a><span data-ttu-id="2b852-107">Tür kitaplığından bir birlikte çalışma derlemesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="2b852-107">To generate an interop assembly from a type library</span></span>  
+### <a name="to-generate-an-interop-assembly-from-a-type-library"></a><span data-ttu-id="c3a26-107">Tür kitaplığından bir birlikte çalışma derlemesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="c3a26-107">To generate an interop assembly from a type library</span></span>  
   
-1.  <span data-ttu-id="2b852-108">Aşağıdaki komutu kullanın:</span><span class="sxs-lookup"><span data-stu-id="2b852-108">Use the following command:</span></span>  
+1.  <span data-ttu-id="c3a26-108">Aşağıdaki komutu kullanın:</span><span class="sxs-lookup"><span data-stu-id="c3a26-108">Use the following command:</span></span>  
   
-     <span data-ttu-id="2b852-109">**Tlbimp** \< *tür kitaplığı dosyası*></span><span class="sxs-lookup"><span data-stu-id="2b852-109">**tlbimp** \<*type-library-file*></span></span>  
+     <span data-ttu-id="c3a26-109">**Tlbimp** \< *tür kitaplığı dosyası*></span><span class="sxs-lookup"><span data-stu-id="c3a26-109">**tlbimp** \<*type-library-file*></span></span>  
   
-     <span data-ttu-id="2b852-110">Ekleme **/out:** anahtar LOANLib.dll gibi değiştirilmiş bir ad ile birlikte çalışma derlemesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2b852-110">Adding the **/out:** switch produces an interop assembly with an altered name, such as LOANLib.dll.</span></span> <span data-ttu-id="2b852-111">Birlikte çalışma bütünleştirilmiş kod adı değiştirme yinelenen adları, oluşabilecek sorunları önlemek ve özgün COM DLL dosyasından ayırt yardımcı olabilir.</span><span class="sxs-lookup"><span data-stu-id="2b852-111">Altering the interop assembly name can help distinguish it from the original COM DLL and prevent problems that can occur from having duplicate names.</span></span>  
+     <span data-ttu-id="c3a26-110">Ekleme **/out:** anahtar LOANLib.dll gibi değiştirilmiş bir ad ile birlikte çalışma derlemesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="c3a26-110">Adding the **/out:** switch produces an interop assembly with an altered name, such as LOANLib.dll.</span></span> <span data-ttu-id="c3a26-111">Birlikte çalışma bütünleştirilmiş kod adı değiştirme yinelenen adları, oluşabilecek sorunları önlemek ve özgün COM DLL dosyasından ayırt yardımcı olabilir.</span><span class="sxs-lookup"><span data-stu-id="c3a26-111">Altering the interop assembly name can help distinguish it from the original COM DLL and prevent problems that can occur from having duplicate names.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2b852-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="2b852-112">Example</span></span>  
- <span data-ttu-id="2b852-113">Aşağıdaki komutu Loanlib.dll derlemesinde oluşturur `Loanlib` ad alanı.</span><span class="sxs-lookup"><span data-stu-id="2b852-113">The following command produces the Loanlib.dll assembly in the `Loanlib` namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="c3a26-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="c3a26-112">Example</span></span>  
+ <span data-ttu-id="c3a26-113">Aşağıdaki komutu Loanlib.dll derlemesinde oluşturur `Loanlib` ad alanı.</span><span class="sxs-lookup"><span data-stu-id="c3a26-113">The following command produces the Loanlib.dll assembly in the `Loanlib` namespace.</span></span>  
   
 ```  
 tlbimp Loanlib.tlb  
 ```  
   
- <span data-ttu-id="2b852-114">Aşağıdaki komut değiştirilen bir ad (LOANLib.dll) ile birlikte çalışma derlemesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="2b852-114">The following command produces an interop assembly with an altered name (LOANLib.dll).</span></span>  
+ <span data-ttu-id="c3a26-114">Aşağıdaki komut değiştirilen bir ad (LOANLib.dll) ile birlikte çalışma derlemesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="c3a26-114">The following command produces an interop assembly with an altered name (LOANLib.dll).</span></span>  
   
 ```  
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2b852-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2b852-115">See also</span></span>
-- [<span data-ttu-id="2b852-116">Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma</span><span class="sxs-lookup"><span data-stu-id="2b852-116">Importing a Type Library as an Assembly</span></span>](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
-- [<span data-ttu-id="2b852-117">COM Bileşenlerini .NET Framework'te Gösterme</span><span class="sxs-lookup"><span data-stu-id="2b852-117">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a><span data-ttu-id="c3a26-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c3a26-115">See also</span></span>
+
+- [<span data-ttu-id="c3a26-116">Tür Kitaplığını Derleme Olarak İçeri Aktarma</span><span class="sxs-lookup"><span data-stu-id="c3a26-116">Importing a Type Library as an Assembly</span></span>](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+- [<span data-ttu-id="c3a26-117">COM Bileşenlerini .NET Framework'te Gösterme</span><span class="sxs-lookup"><span data-stu-id="c3a26-117">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)

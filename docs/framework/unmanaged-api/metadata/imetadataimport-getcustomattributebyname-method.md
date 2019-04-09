@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 26a4ed5bc406645e662ded54374f0594d1e97524
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 61029074347d554faaefe790c1e408e860e34690
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183033"
 ---
-# <a name="imetadataimportgetcustomattributebyname-method"></a><span data-ttu-id="b6a54-102">IMetaDataImport::GetCustomAttributeByName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b6a54-102">IMetaDataImport::GetCustomAttributeByName Method</span></span>
-<span data-ttu-id="b6a54-103">Özel öznitelik adını ve sahibini verilen alır.</span><span class="sxs-lookup"><span data-stu-id="b6a54-103">Gets the custom attribute, given its name and owner.</span></span>  
+# <a name="imetadataimportgetcustomattributebyname-method"></a><span data-ttu-id="8d49f-102">IMetaDataImport::GetCustomAttributeByName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="8d49f-102">IMetaDataImport::GetCustomAttributeByName Method</span></span>
+<span data-ttu-id="8d49f-103">Özel öznitelik adını ve sahibini verilen alır.</span><span class="sxs-lookup"><span data-stu-id="8d49f-103">Gets the custom attribute, given its name and owner.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6a54-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b6a54-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d49f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8d49f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCustomAttributeByName (  
@@ -38,31 +38,32 @@ HRESULT GetCustomAttributeByName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b6a54-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b6a54-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8d49f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8d49f-105">Parameters</span></span>  
  `tkObj`  
- <span data-ttu-id="b6a54-106">[in] Özel öznitelik sahip nesnesini temsil eden bir meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="b6a54-106">[in] A metadata token representing the object that owns the custom attribute.</span></span>  
+ <span data-ttu-id="8d49f-106">[in] Özel öznitelik sahip nesnesini temsil eden bir meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="8d49f-106">[in] A metadata token representing the object that owns the custom attribute.</span></span>  
   
  `szName`  
- <span data-ttu-id="b6a54-107">[in] Özel öznitelik adı.</span><span class="sxs-lookup"><span data-stu-id="b6a54-107">[in] The name of the custom attribute.</span></span>  
+ <span data-ttu-id="8d49f-107">[in] Özel öznitelik adı.</span><span class="sxs-lookup"><span data-stu-id="8d49f-107">[in] The name of the custom attribute.</span></span>  
   
  `ppData`  
- <span data-ttu-id="b6a54-108">[out] Özel öznitelik değeri olan verilerin bir dizisine bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="b6a54-108">[out] A pointer to an array of data that is the value of the custom attribute.</span></span>  
+ <span data-ttu-id="8d49f-108">[out] Özel öznitelik değeri olan verilerin bir dizisine bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8d49f-108">[out] A pointer to an array of data that is the value of the custom attribute.</span></span>  
   
  `pcbData`  
- <span data-ttu-id="b6a54-109">[out] Döndürülen verileri baytlık boyutu \*`ppData`.</span><span class="sxs-lookup"><span data-stu-id="b6a54-109">[out] The size in bytes of the data returned in \*`ppData`.</span></span>  
+ <span data-ttu-id="8d49f-109">[out] Döndürülen verileri baytlık boyutu \*`ppData`.</span><span class="sxs-lookup"><span data-stu-id="8d49f-109">[out] The size in bytes of the data returned in \*`ppData`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b6a54-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b6a54-110">Remarks</span></span>  
- <span data-ttu-id="b6a54-111">Birden çok özel öznitelikler için aynı sahibi tanımlamak için geçerlidir; hatta aynı ada sahip olabilir.</span><span class="sxs-lookup"><span data-stu-id="b6a54-111">It is legal to define multiple custom attributes for the same owner; they may even have the same name.</span></span> <span data-ttu-id="b6a54-112">Ancak, `GetCustomAttributeByName` yalnızca bir örneğini döndürür.</span><span class="sxs-lookup"><span data-stu-id="b6a54-112">However, `GetCustomAttributeByName` returns only one instance.</span></span> <span data-ttu-id="b6a54-113">(`GetCustomAttributeByName` bulduğu ilk örneği döndürür.) Tüm özel öznitelik örneklerini bulmak için arama [Imetadataımport::enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="b6a54-113">(`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8d49f-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8d49f-110">Remarks</span></span>  
+ <span data-ttu-id="8d49f-111">Birden çok özel öznitelikler için aynı sahibi tanımlamak için geçerlidir; hatta aynı ada sahip olabilir.</span><span class="sxs-lookup"><span data-stu-id="8d49f-111">It is legal to define multiple custom attributes for the same owner; they may even have the same name.</span></span> <span data-ttu-id="8d49f-112">Ancak, `GetCustomAttributeByName` yalnızca bir örneğini döndürür.</span><span class="sxs-lookup"><span data-stu-id="8d49f-112">However, `GetCustomAttributeByName` returns only one instance.</span></span> <span data-ttu-id="8d49f-113">(`GetCustomAttributeByName` bulduğu ilk örneği döndürür.) Tüm özel öznitelik örneklerini bulmak için arama [Imetadataımport::enumcustomattributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="8d49f-113">(`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6a54-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b6a54-114">Requirements</span></span>  
- <span data-ttu-id="b6a54-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6a54-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d49f-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8d49f-114">Requirements</span></span>  
+ <span data-ttu-id="8d49f-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d49f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6a54-116">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="b6a54-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8d49f-116">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="8d49f-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b6a54-117">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="b6a54-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8d49f-117">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="8d49f-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b6a54-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6a54-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="8d49f-118">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="8d49f-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b6a54-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b6a54-119">See also</span></span>
-- [<span data-ttu-id="b6a54-120">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b6a54-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="b6a54-121">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b6a54-121">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8d49f-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8d49f-119">See also</span></span>
+
+- [<span data-ttu-id="8d49f-120">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8d49f-120">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="8d49f-121">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8d49f-121">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -7,41 +7,42 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 80659117ab96a6bdb9a9536d3eba47d13a2c395f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70294aff4c40bd5ae14b61e6a847155a10d675a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183046"
 ---
-# <a name="imaging-how-to-topics"></a><span data-ttu-id="58371-102">Görüntüleme ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="58371-102">Imaging How-to Topics</span></span>
-<span data-ttu-id="58371-103">Bu bölümdeki konular, nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] görüntülemek veya bit eşlem resimleri değiştirmek için.</span><span class="sxs-lookup"><span data-stu-id="58371-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  
+# <a name="imaging-how-to-topics"></a><span data-ttu-id="01cbe-102">Görüntüleme ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="01cbe-102">Imaging How-to Topics</span></span>
+<span data-ttu-id="01cbe-103">Bu bölümdeki konular, nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] görüntülemek veya bit eşlem resimleri değiştirmek için.</span><span class="sxs-lookup"><span data-stu-id="01cbe-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="58371-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="58371-104">In This Section</span></span>  
- [<span data-ttu-id="58371-105">XAML'de BitmapImage Kullanma</span><span class="sxs-lookup"><span data-stu-id="58371-105">Use a BitmapImage in XAML</span></span>](how-to-use-a-bitmapimage.md)  
- [<span data-ttu-id="58371-106">Bir Görüntüyü Küçük Resim Olarak Yükleme</span><span class="sxs-lookup"><span data-stu-id="58371-106">Load an Image as a Thumbnail</span></span>](how-to-load-an-image-as-a-thumbnail.md)  
- [<span data-ttu-id="58371-107">Bit Eşlem Görüntüsüne Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="58371-107">Apply a Transform to a Bitmap Image</span></span>](how-to-apply-a-transform-to-a-bitmapimage.md)  
- [<span data-ttu-id="58371-108">Bir Görselden Bit Eşlem Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58371-108">Create a Bitmap from a Visual</span></span>](how-to-create-a-bitmap-from-a-visual.md)  
- [<span data-ttu-id="58371-109">Görüntü Dosyası İçine Bir Görseli Kodlama</span><span class="sxs-lookup"><span data-stu-id="58371-109">Encode a Visual to an Image File</span></span>](how-to-encode-a-visual-to-an-image-file.md)  
- [<span data-ttu-id="58371-110">Yeni bir BitmapSource Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58371-110">Create a new BitmapSource</span></span>](how-to-create-a-new-bitmapsource.md)  
- [<span data-ttu-id="58371-111">BitmapSource Nesnelerini Birbirlerine Bağlayarak Zincir Oluşturma</span><span class="sxs-lookup"><span data-stu-id="58371-111">Chain BitmapSource Objects Together</span></span>](how-to-chain-bitmapsource-objects-together.md)  
- [<span data-ttu-id="58371-112">BitmapSource'u Farklı bir PixelFormat'a Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="58371-112">Convert a BitmapSource to a Different PixelFormat</span></span>](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [<span data-ttu-id="58371-113">BitmapSource'u Dizinli Piksel Biçimine Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="58371-113">Convert a BitmapSource to an Indexed Pixel Format</span></span>](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [<span data-ttu-id="58371-114">Bir JPEG Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="58371-114">Encode and Decode a JPEG Image</span></span>](how-to-encode-and-decode-a-jpeg-image.md)  
- [<span data-ttu-id="58371-115">Bir BMP Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="58371-115">Encode and Decode a BMP Image</span></span>](how-to-encode-and-decode-a-bmp-image.md)  
- [<span data-ttu-id="58371-116">Bir PNG Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="58371-116">Encode and Decode a PNG Image</span></span>](how-to-encode-and-decode-a-png-image.md)  
- [<span data-ttu-id="58371-117">Bir WDP Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="58371-117">Encode and Decode a WDP Image</span></span>](how-to-encode-and-decode-a-wdp-image.md)  
- [<span data-ttu-id="58371-118">Bir GIF Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="58371-118">Encode and Decode a GIF Image</span></span>](how-to-encode-and-decode-a-gif-image.md)  
- [<span data-ttu-id="58371-119">Bir TIFF Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="58371-119">Encode and Decode a TIFF Image</span></span>](how-to-encode-and-decode-a-tiff-image.md)  
- [<span data-ttu-id="58371-120">Bit Eşleme Meta Veri Yazma</span><span class="sxs-lookup"><span data-stu-id="58371-120">Write Metadata to a Bitmap</span></span>](how-to-write-metadata-to-a-bitmap.md)  
- [<span data-ttu-id="58371-121">Bit Eşlemden Meta Veriler Okuma</span><span class="sxs-lookup"><span data-stu-id="58371-121">Read Metadata from a Bitmap</span></span>](how-to-read-metadata-from-a-bitmap.md)  
+## <a name="in-this-section"></a><span data-ttu-id="01cbe-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="01cbe-104">In This Section</span></span>  
+ [<span data-ttu-id="01cbe-105">XAML'de BitmapImage Kullanma</span><span class="sxs-lookup"><span data-stu-id="01cbe-105">Use a BitmapImage in XAML</span></span>](how-to-use-a-bitmapimage.md)  
+ [<span data-ttu-id="01cbe-106">Bir Görüntüyü Küçük Resim Olarak Yükleme</span><span class="sxs-lookup"><span data-stu-id="01cbe-106">Load an Image as a Thumbnail</span></span>](how-to-load-an-image-as-a-thumbnail.md)  
+ [<span data-ttu-id="01cbe-107">Bit Eşlem Görüntüsüne Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="01cbe-107">Apply a Transform to a Bitmap Image</span></span>](how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [<span data-ttu-id="01cbe-108">Bir Görselden Bit Eşlem Oluşturma</span><span class="sxs-lookup"><span data-stu-id="01cbe-108">Create a Bitmap from a Visual</span></span>](how-to-create-a-bitmap-from-a-visual.md)  
+ [<span data-ttu-id="01cbe-109">Görüntü Dosyası İçine Bir Görseli Kodlama</span><span class="sxs-lookup"><span data-stu-id="01cbe-109">Encode a Visual to an Image File</span></span>](how-to-encode-a-visual-to-an-image-file.md)  
+ [<span data-ttu-id="01cbe-110">Yeni bir BitmapSource Oluşturma</span><span class="sxs-lookup"><span data-stu-id="01cbe-110">Create a new BitmapSource</span></span>](how-to-create-a-new-bitmapsource.md)  
+ [<span data-ttu-id="01cbe-111">BitmapSource Nesnelerini Birbirlerine Bağlayarak Zincir Oluşturma</span><span class="sxs-lookup"><span data-stu-id="01cbe-111">Chain BitmapSource Objects Together</span></span>](how-to-chain-bitmapsource-objects-together.md)  
+ [<span data-ttu-id="01cbe-112">BitmapSource'u Farklı bir PixelFormat'a Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="01cbe-112">Convert a BitmapSource to a Different PixelFormat</span></span>](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [<span data-ttu-id="01cbe-113">BitmapSource'u Dizinli Piksel Biçimine Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="01cbe-113">Convert a BitmapSource to an Indexed Pixel Format</span></span>](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [<span data-ttu-id="01cbe-114">Bir JPEG Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="01cbe-114">Encode and Decode a JPEG Image</span></span>](how-to-encode-and-decode-a-jpeg-image.md)  
+ [<span data-ttu-id="01cbe-115">Bir BMP Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="01cbe-115">Encode and Decode a BMP Image</span></span>](how-to-encode-and-decode-a-bmp-image.md)  
+ [<span data-ttu-id="01cbe-116">Bir PNG Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="01cbe-116">Encode and Decode a PNG Image</span></span>](how-to-encode-and-decode-a-png-image.md)  
+ [<span data-ttu-id="01cbe-117">Bir WDP Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="01cbe-117">Encode and Decode a WDP Image</span></span>](how-to-encode-and-decode-a-wdp-image.md)  
+ [<span data-ttu-id="01cbe-118">Bir GIF Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="01cbe-118">Encode and Decode a GIF Image</span></span>](how-to-encode-and-decode-a-gif-image.md)  
+ [<span data-ttu-id="01cbe-119">Bir TIFF Görüntüsünü Kodlama ve Kodunu Çözme</span><span class="sxs-lookup"><span data-stu-id="01cbe-119">Encode and Decode a TIFF Image</span></span>](how-to-encode-and-decode-a-tiff-image.md)  
+ [<span data-ttu-id="01cbe-120">Bit Eşleme Meta Veri Yazma</span><span class="sxs-lookup"><span data-stu-id="01cbe-120">Write Metadata to a Bitmap</span></span>](how-to-write-metadata-to-a-bitmap.md)  
+ [<span data-ttu-id="01cbe-121">Bit Eşlemden Meta Veriler Okuma</span><span class="sxs-lookup"><span data-stu-id="01cbe-121">Read Metadata from a Bitmap</span></span>](how-to-read-metadata-from-a-bitmap.md)  
   
-## <a name="reference"></a><span data-ttu-id="58371-122">Başvuru</span><span class="sxs-lookup"><span data-stu-id="58371-122">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="01cbe-122">Başvuru</span><span class="sxs-lookup"><span data-stu-id="01cbe-122">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="58371-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="58371-123">See also</span></span>
-- [<span data-ttu-id="58371-124">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="58371-124">Imaging Overview</span></span>](imaging-overview.md)
+## <a name="see-also"></a><span data-ttu-id="01cbe-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="01cbe-123">See also</span></span>
+
+- [<span data-ttu-id="01cbe-124">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="01cbe-124">Imaging Overview</span></span>](imaging-overview.md)

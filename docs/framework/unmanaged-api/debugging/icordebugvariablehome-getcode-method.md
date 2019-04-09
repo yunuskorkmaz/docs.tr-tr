@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c9b334535f8f6652f30a4b5c9de64bde435c3bd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6a4cadae7a43d0cd965e51535eae2c95e59900d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130019"
 ---
-# <a name="icordebugvariablehomegetcode-method"></a><span data-ttu-id="7aac4-102">ICorDebugVariableHome::GetCode yöntemi</span><span class="sxs-lookup"><span data-stu-id="7aac4-102">ICorDebugVariableHome::GetCode Method</span></span>
-<span data-ttu-id="7aac4-103">Bu içeren "ICorDebugCode" örneğini alır [Icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) nesne.</span><span class="sxs-lookup"><span data-stu-id="7aac4-103">Gets the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
+# <a name="icordebugvariablehomegetcode-method"></a><span data-ttu-id="00d42-102">ICorDebugVariableHome::GetCode yöntemi</span><span class="sxs-lookup"><span data-stu-id="00d42-102">ICorDebugVariableHome::GetCode Method</span></span>
+<span data-ttu-id="00d42-103">Bu içeren "ICorDebugCode" örneğini alır [Icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) nesne.</span><span class="sxs-lookup"><span data-stu-id="00d42-103">Gets the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7aac4-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7aac4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="00d42-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="00d42-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCode(  
@@ -35,19 +35,19 @@ HRESULT GetCode(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7aac4-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7aac4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="00d42-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="00d42-105">Parameters</span></span>  
  `ppCode`  
- <span data-ttu-id="7aac4-106">[out] Bu içeren "ICorDebugCode" örneğini adresini bir işaretçiye [Icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) nesne.</span><span class="sxs-lookup"><span data-stu-id="7aac4-106">[out] A pointer to the address of the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
+ <span data-ttu-id="00d42-106">[out] Bu içeren "ICorDebugCode" örneğini adresini bir işaretçiye [Icordebugvariablehome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) nesne.</span><span class="sxs-lookup"><span data-stu-id="00d42-106">[out] A pointer to the address of the "ICorDebugCode" instance that contains this [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7aac4-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7aac4-107">Requirements</span></span>  
- <span data-ttu-id="7aac4-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7aac4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="00d42-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="00d42-107">Requirements</span></span>  
+ <span data-ttu-id="00d42-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="00d42-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7aac4-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7aac4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="00d42-109">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="00d42-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7aac4-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7aac4-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="00d42-110">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="00d42-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7aac4-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7aac4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ **<span data-ttu-id="00d42-111">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="00d42-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7aac4-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7aac4-112">See also</span></span>
-- [<span data-ttu-id="7aac4-113">ICorDebugVariableHome Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7aac4-113">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a><span data-ttu-id="00d42-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="00d42-112">See also</span></span>
 
+- [<span data-ttu-id="00d42-113">ICorDebugVariableHome Arabirimi</span><span class="sxs-lookup"><span data-stu-id="00d42-113">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
