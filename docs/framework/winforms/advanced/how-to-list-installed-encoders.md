@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yüklenen Kodlayıcıları listeleme'
+title: 'Nasıl yapılır: Yüklenen Kodlayıcıları Listeleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image encoders [Windows Forms], listing
 ms.assetid: 49e8e4e9-7a67-42d9-86bf-08821cdc282e
-ms.openlocfilehash: 492930b7d8a47db478c8fa0f282cb5f491e144ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ce297cb6d183bc63c8b276e30100aa4e864cd90d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078817"
 ---
-# <a name="how-to-list-installed-encoders"></a>Nasıl yapılır: Yüklenen Kodlayıcıları listeleme
-Uygulamanız için bir özel görüntü dosya biçimi tasarrufu yapıp yapamayacağınızı belirleyebilirsiniz için görüntü Kodlayıcıları bir bilgisayarda kullanılabilir listesinde isteyebilirsiniz. <xref:System.Drawing.Imaging.ImageCodecInfo> Sağlar sınıfını <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> statik yöntemler hangi görüntü Kodlayıcıları kullanılabilir belirleyebilirsiniz. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> bir dizi döndürür <xref:System.Drawing.Imaging.ImageCodecInfo> nesneleri.  
+# <a name="how-to-list-installed-encoders"></a>Nasıl yapılır: Yüklenen Kodlayıcıları Listeleme
+Uygulamanız için bir özel görüntü dosya biçimi tasarrufu yapıp yapamayacağınızı belirleyebilirsiniz için görüntü Kodlayıcıları bir bilgisayarda kullanılabilir listesinde isteyebilirsiniz. <xref:System.Drawing.Imaging.ImageCodecInfo> Sağlar sınıfını <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> statik yöntemler hangi görüntü Kodlayıcıları kullanılabilir belirleyebilirsiniz. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> Bir dizi döndürür <xref:System.Drawing.Imaging.ImageCodecInfo> nesneleri.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği, yüklenen Kodlayıcıları listesi ve özellik değerlerine çıkarır.  
@@ -32,5 +32,6 @@ Uygulamanız için bir özel görüntü dosya biçimi tasarrufu yapıp yapamayac
 -   A <xref:System.Windows.Forms.PaintEventArgs>, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Yüklenen kod çözücüleri listeleme](how-to-list-installed-decoders.md)
+
+- [Nasıl yapılır: Yüklenen Kod Çözücüleri Listeleme](how-to-list-installed-decoders.md)
 - [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](using-image-encoders-and-decoders-in-managed-gdi.md)

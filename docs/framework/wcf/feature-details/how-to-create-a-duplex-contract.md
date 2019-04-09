@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çift yönlü sözleşme oluşturma'
+title: 'Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: 8cc53f6842d55892ae178e22e2835555a132778b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 002c94f2cb69e330e8d2796a9f93d977b10f53f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078180"
 ---
-# <a name="how-to-create-a-duplex-contract"></a>Nasıl yapılır: Çift yönlü sözleşme oluşturma
+# <a name="how-to-create-a-duplex-contract"></a>Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma
 Bu konu, çift yönlü Sözleşme (iki yönlü) kullanan yöntemleri oluşturmak için temel adımları gösterir. Çift yönlü sözleşme, istemciler ve sunucular ya da diğer çağrıları başlatabilir, böylece birbiriyle bağımsız olarak iletişim kurmasına izin verir. Çift yönlü sözleşme Windows Communication Foundation (WCF) Hizmetleri için kullanılabilir üç ileti modelinden biridir. Diğer iki ileti desenleri olan tek yönlü ve istek-yanıt. Çift yönlü sözleşme, istemci ve sunucu arasında iki yönlü sözleşmeler oluşur ve yöntem çağrıları bağıntılı gerekli değildir. Bu tür bir sözleşme hizmetiniz daha fazla bilgi için istemci sorgu veya olay istemci üzerinde açıkça kullanın. Bir istemci uygulaması için çift yönlü sözleşme oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişme](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Çalışma örnek için bkz: [çift yönlü](../../../../docs/framework/wcf/samples/duplex.md) örnek.  
   
 ### <a name="to-create-a-duplex-contract"></a>Çift yönlü sözleşme oluşturma  
@@ -68,10 +68,11 @@ Bu konu, çift yönlü Sözleşme (iki yönlü) kullanan yöntemleri oluşturmak
 -   Çift yönlü hizmetler gösterme uç noktalarını güvenli hale getirilmelidir. Bir hizmeti çift yönlü bir ileti aldığında yanıt göndermesi yerini belirlemek için gelen bu iletide ReplyTo bakar. Ardından kanal güvenli değildir, güvenilmeyen bir istemci bir hedef makine, hizmet reddi için önde gelen bir hedef makinenin ReplyTo içeren kötü amaçlı bir ileti gönderebilir. Normal istek-yanıt iletileri, bu bir sorun ReplyTo göz ardı edilir ve yanıt üzerinde özgün iletinin geldiği kanal üzerinde gönderilen değildir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [Nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişim](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Nasıl yapılır: Çift Yönlü Sözleşme ile Hizmetlere Erişme](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Çift Yönlü](../../../../docs/framework/wcf/samples/duplex.md)
 - [Hizmetleri Tasarlama ve Uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Nasıl yapılır: Bir hizmet sözleşmesini tanımlama](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
 - [Oturum](../../../../docs/framework/wcf/samples/session.md)

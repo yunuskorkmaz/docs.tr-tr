@@ -2,12 +2,12 @@
 title: <transportConfigurationTypes>
 ms.date: 03/30/2017
 ms.assetid: 929c8b0a-5460-4f66-a098-2cb8d4e10b69
-ms.openlocfilehash: 560da96c50e99461d25c1fd65def2dc10c284470
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b3683a198ec403fb9966bb902c936108fd043bfa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083653"
 ---
 # <a name="transportconfigurationtypes"></a>\<transportConfigurationTypes >
 Belirli bir türünü belirleyen yapılandırma öğelerinin bir koleksiyonunu temsil eder. Bu özel WAS protokoller eklemek için kullanılabilir.  
@@ -50,6 +50,7 @@ Belirli bir türünü belirleyen yapılandırma öğelerinin bir koleksiyonunu t
 |[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Belirli bir hizmet barındırma ortamını gösteren türü tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElementCollection>

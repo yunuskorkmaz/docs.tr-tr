@@ -1,15 +1,15 @@
 ---
-title: Mimari ve tasarım
+title: Mimari ve Tasarım
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096143"
 ---
-# <a name="architecture-and-design"></a>Mimari ve tasarım
+# <a name="architecture-and-design"></a>Mimari ve Tasarım
 SQL üretimi modülünde [örnek sağlayıcısı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) komut ağacı temsil eden ifade ağacında bir ziyaretçi olarak uygulanır. Oluşturma, tek bir geçişinde ifade ağacı gerçekleştirilir.  
   
  Ağaç düğümleri aşağıdan yukarı işlenir. İlk olarak, bir ara yapı üretilir: SqlSelectStatement veya SqlBuilder, her iki uygulama ISqlFragment. Ardından, dize SQL deyimi, yapısından oluşturulur. Ara yapı için iki nedeni vardır:  
@@ -415,4 +415,5 @@ IsEmpty(inut) = Not Exists(input)
  Uzantı diğer adlar için hem de sütunlar için benzersiz adlar oluşturmak için burada n, henüz kullanılmamış en küçük bir diğer ad, < existing_name > _n kullanın. Genel liste tüm adlar, basamaklı yeniden adlandırmaya gerek artırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Örnek Sağlayıcısında SQL Oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e568050a5cc94da865d656adc8a775024dab836c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dec04fa267c61798a3340e9d1e18150b812e9eaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500050"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092662"
 ---
 # <a name="setpekind-method"></a>SetPEKind Yöntemi
 Taşınabilir yürütülebilir türü, makineye özgü veya makine geçişte sorun yaşamaz belirler.  
@@ -57,6 +57,7 @@ HRESULT SetPEKind(
  ALink.h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [GetPEKind Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
 - [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)

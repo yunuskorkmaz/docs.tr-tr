@@ -5,20 +5,18 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 12ca85132ca063471092078c6f54e23a57f574ae
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079831"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF Genel Bakışında Çift Yönlü Özellikler
 Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çift yönlü içeriği hızlı geliştirilmesini destekleyen birçok özellik vardır, örneğin, verileri karma soldan sağa ve için sağ aynı belgede sol. Aynı anda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Arapça ve kullanıcıların konuşma İbranice gibi çift yönlü özellikler ihtiyaç duyan kullanıcılar için mükemmel bir deneyim oluşturur.  
   
  Aşağıdaki bölümlerde, çift yönlü içerik en iyi görünümü elde etmek nasıl bulunacağını gösteren örnekler birlikte birçok çift yönlü özellikler açıklanmaktadır. Örneklerin en sık kullandığınız [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], kavramlarını da kolayca uygulayabilirsiniz ancak C# veya Microsoft Visual Basic kod.  
-  
 
-  
 <a name="FlowDirection"></a>   
 ## <a name="flowdirection"></a>FlowDirection  
  İçerik akışı yönü tanımlayan temel özellik bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Bu özellik, iki numaralandırma değerlerinden birine ayarlanabilir <xref:System.Windows.FlowDirection.LeftToRight> veya <xref:System.Windows.FlowDirection.RightToLeft>. Bu özellik tüm kullanılabilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] devralacak öğeleri <xref:System.Windows.FrameworkElement>.  
@@ -43,7 +41,7 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
   
  [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
- En üst düzey <xref:System.Windows.Window> sahip bir <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>, içerdiği tüm öğeleri de aynı devral <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Bir öğenin belirtilen geçersiz kılma <xref:System.Windows.FrameworkElement.FlowDirection%2A> gibi ikinci bir açık yönü değişikliği eklemelisiniz <xref:System.Windows.Controls.TextBlock> değişikliklerini önceki örnekte <xref:System.Windows.FlowDirection.LeftToRight>. Hiçbir <xref:System.Windows.FrameworkElement.FlowDirection%2A> tanımlanan varsayılan <xref:System.Windows.FlowDirection.LeftToRight> uygular.  
+ En üst düzey <xref:System.Windows.Window> sahip bir <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, içerdiği tüm öğeleri de aynı devral <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Bir öğenin belirtilen geçersiz kılma <xref:System.Windows.FrameworkElement.FlowDirection%2A> gibi ikinci bir açık yönü değişikliği eklemelisiniz <xref:System.Windows.Controls.TextBlock> değişikliklerini önceki örnekte <xref:System.Windows.FlowDirection.LeftToRight>. Hiçbir <xref:System.Windows.FrameworkElement.FlowDirection%2A> tanımlanan varsayılan <xref:System.Windows.FlowDirection.LeftToRight> uygular.  
   
  Aşağıdaki grafikte, önceki örnek çıktı gösterilmektedir:
 
@@ -116,7 +114,7 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
     
  ![Bir sağdan sola gradyan ile bir araç çubuğunu gösteren grafik.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)  
   
- Aşağıdaki örnek çizen bir <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>. (Sağdan sola çizip için kaldırın <xref:System.Windows.FlowDirection> özniteliği <xref:System.Windows.Controls.ToolBar>.  
+ Aşağıdaki örnek çizen bir <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>. (Sağdan sola çizip için kaldırın <xref:System.Windows.FlowDirection> özniteliği <xref:System.Windows.Controls.ToolBar>.  
   
  [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
@@ -142,9 +140,9 @@ Herhangi diğer geliştirme platformu, farklı [!INCLUDE[TLA2#tla_winclient](../
   
  **Yolları**  
   
- Ek olarak bir <xref:System.Windows.Controls.Image>, başka bir ilgi çekici bir öğedir <xref:System.Windows.Shapes.Path>. Bir yolu, bir dizi bağlantılı çizgiler ve eğrilerdir çizebilirsiniz bir nesnedir. Benzer şekilde davranan bir <xref:System.Windows.Controls.Image> ilgili kendi <xref:System.Windows.FlowDirection>; Örneğin, <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> bir yatay yansıması kendi <xref:System.Windows.FlowDirection.LeftToRight> bir. Ancak, farklı bir <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> devralır, <xref:System.Windows.FlowDirection> kapsayıcı ve bir açıkça belirtmeniz gerekmez.  
+ Ek olarak bir <xref:System.Windows.Controls.Image>, başka bir ilgi çekici bir öğedir <xref:System.Windows.Shapes.Path>. Bir yolu, bir dizi bağlantılı çizgiler ve eğrilerdir çizebilirsiniz bir nesnedir. Benzer şekilde davranan bir <xref:System.Windows.Controls.Image> ilgili kendi <xref:System.Windows.FlowDirection>; Örneğin, <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> bir yatay yansıması kendi <xref:System.Windows.FlowDirection.LeftToRight> bir. Ancak, farklı bir <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> devralır, <xref:System.Windows.FlowDirection> kapsayıcı ve bir açıkça belirtmeniz gerekmez.  
   
- Aşağıdaki örnek, 3 satır kullanarak basit bir ok çizer. Birinci oka devralan <xref:System.Windows.FlowDirection.RightToLeft> akış yönünü <xref:System.Windows.Controls.StackPanel> böylece kendi başlangıç ve bitiş noktalarını işlecin sağ tarafındaki bir kök ölçülür. Açık olan ikinci ok <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> sağ tarafta da başlatır. Ancak üçüncü oku, sol taraftaki başlangıç kök sahiptir. Bkz: çizim hakkında daha fazla bilgi için <xref:System.Windows.Media.LineGeometry> ve <xref:System.Windows.Media.GeometryGroup>.  
+ Aşağıdaki örnek, 3 satır kullanarak basit bir ok çizer. Birinci oka devralan <xref:System.Windows.FlowDirection.RightToLeft> akış yönünü <xref:System.Windows.Controls.StackPanel> böylece kendi başlangıç ve bitiş noktalarını işlecin sağ tarafındaki bir kök ölçülür. Açık olan ikinci ok <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> sağ tarafta da başlatır. Ancak üçüncü oku, sol taraftaki başlangıç kök sahiptir. Bkz: çizim hakkında daha fazla bilgi için <xref:System.Windows.Media.LineGeometry> ve <xref:System.Windows.Media.GeometryGroup>.  
   
  [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   

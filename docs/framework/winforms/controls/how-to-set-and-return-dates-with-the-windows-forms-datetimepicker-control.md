@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DateTimePicker denetimi ile ayarlanmış ve dönüş tarihleri'
+title: 'Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Tarihleri Ayarlama ve Döndürme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], setting and returning dates
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-ms.openlocfilehash: 73c40a48a75955d1ba44decae6b50ca641a63f7b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc4f0bdf7355cda61e6cb95f5e0b18c4f83aa62b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081547"
 ---
-# <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Nasıl yapılır: Windows Forms DateTimePicker denetimi ile ayarlanmış ve dönüş tarihleri
+# <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Tarihleri Ayarlama ve Döndürme
 Seçili tarih veya saat Windows Forms'ta <xref:System.Windows.Forms.DateTimePicker> denetimi tarafından belirlenir <xref:System.Windows.Forms.DateTimePicker.Value%2A> özelliği. Ayarlayabileceğiniz <xref:System.Windows.Forms.DateTimePicker.Value%2A> denetim görüntülenmeden önce özelliği (örneğin, tasarım zamanında ya da formun <xref:System.Windows.Forms.Form.Load> olay) hangi tarih denetiminde başlangıçta seçilir belirlemek için. Varsayılan olarak, denetime ait <xref:System.Windows.Forms.DateTimePicker.Value%2A> geçerli tarihe ayarlama. Denetimin değiştirirseniz <xref:System.Windows.Forms.DateTimePicker.Value%2A> kodda denetimi form üzerinde yeni ayarını yansıtacak şekilde otomatik olarak güncelleştirilir.  
   
  <xref:System.Windows.Forms.DateTimePicker.Value%2A> Özelliği döndürür bir <xref:System.DateTime> yapısı olarak değeri. Çeşitli özellikleri vardır <xref:System.DateTime> görüntülenen tarih hakkında belirli bilgi döndüren yapısı. Bu özellikler, yalnızca bir değer döndürmek için kullanılabilir; bunları bir değer ayarlamak için kullanmayın.  
@@ -73,5 +73,6 @@ Seçili tarih veya saat Windows Forms'ta <xref:System.Windows.Forms.DateTimePick
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DateTimePicker Denetimi](datetimepicker-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms DateTimePicker denetimi ile özel biçimde tarih görüntüleme](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Özel Biçimde Tarih Görüntüleme](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

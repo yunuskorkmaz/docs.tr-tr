@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087631"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM Uygulamaları ile Tümleştirme Genel Bakış
 Windows Communication Foundation (WCF), yönetilen kod geliştiriciye bağlantılı uygulamalar oluşturmaya yönelik zengin bir ortam sağlar. Yönetilmeyen COM tabanlı kodunda önemli bir yatırımınız varsa ve geçirmek istiyor musunuz, ancak hala WCF Web Hizmetleri doğrudan mevcut kodunuza WCF hizmet bilinen adını kullanarak tümleştirebilirsiniz. Hizmet bilinen adı, Office VBA, Visual Basic 6.0 veya Visual C++ 6.0 gibi bir geniş aralığı, COM tabanlı geliştirme ortamlarından kullanılabilir.  
@@ -66,4 +66,5 @@ Windows Communication Foundation (WCF), yönetilen kod geliştiriciye bağlantı
 >  `</configuration>`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Kaydetme ve hizmet bilinen adı yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

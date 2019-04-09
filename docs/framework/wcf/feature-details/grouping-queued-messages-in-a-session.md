@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 260e8b38f110ffc2c2fdc5e2768db8c95fb01860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115277"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Oturumda Kuyruğa Alınmış İletileri Gruplandırma
 Windows Communication Foundation (WCF) tarafından tek bir alıcı uygulamanın bir dizi ilgili ileti işleme için bir arada gruplandırmak izin veren bir oturum sağlar. Bir oturumun parçasıdır iletileri aynı işlemin bir parçası olmalıdır. Tüm oturum işlenmek üzere bir ileti başarısız olursa tüm iletiler aynı işlemin bir parçası olduğundan geri alınır. Oturumları edilemeyen ve zehirli kuyrukları benzer davranışlara sahip. Oturumları için yapılandırılmış bir kuyruğa alınmış bağlaması üzerindeki yaşam süresi (TTL) özelliği zaman oturum bir bütün olarak uygulanır. Yalnızca TTL'nin süresi dolmadan önce bazı oturumdaki iletiler gönderilir, tüm oturumda edilemeyen sırasına konur. Benzer şekilde, uygulama kuyruktan bir uygulamaya gönderilecek bir oturumda ileti başarısız olursa, tüm oturumda (varsa) zehirli sıraya konur.  
@@ -76,15 +76,12 @@ Windows Communication Foundation (WCF) tarafından tek bir alıcı uygulamanın 
 ### <a name="code-for-the-service"></a>Hizmet kodu  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]
  [!code-vb[S_Msmq_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/service.vb#1)]  
-  
-  
-  
+
 ### <a name="code-for-the-client"></a>İstemci kodu  
  [!code-csharp[S_Msmq_Session#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/client.cs#3)]
  [!code-vb[S_Msmq_Session#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/client.vb#3)]  
-  
-  
-  
+
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Oturumlar ve Kuyruklar](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
-- [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Kuyruklar Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41e10855a7254da4124ac0bf9aa247b90311632b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 59bfc6785d3ad195e219afc323b7fdb513d8fefc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092571"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 Yöntemi
 Yeni bir derleme seçeneklerini ve adını ayarlar. İlişkisiz modüller oluşturmak, bu yöntemi çağırmanız gerekmez.  
@@ -57,6 +57,7 @@ HRESULT SetAssemblyFile2(
  ALink.h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

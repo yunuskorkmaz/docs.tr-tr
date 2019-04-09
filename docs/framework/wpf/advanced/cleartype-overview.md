@@ -5,17 +5,16 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0127ee4112c4b42a7a55b9233217ea1e02604042
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085200"
 ---
 # <a name="cleartype-overview"></a>ClearType Genel Bakışı
 Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] teknoloji bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
-  
-  
+
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Teknoloji genel bakış  
  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] bir yazılım teknolojisi tarafından geliştirilen [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , dizüstü ekranları, Pocket PC ekranları ve düz panel izleyiciler gibi mevcut LCD'ler (Sıvı Crystal gösterir), metnin okunabilirliğini artırır.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] her piksel LCD ekranın tek dikey renk Şerit öğelerine erişerek çalışır. Önce [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], küçük bir bilgisayar görüntüleyebilir ayrıntı düzeyini tek bir piksel olan ancak [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] LCD Monitör üzerinde çalışan, biz artık özellikleri bir pikselin kesir olarak küçük metnin genişliği görüntüleyebilir. Ek çözümleme uzun süreler okumak çok daha kolay hale metin görüntüleme, küçük ayrıntıları netliğini artırır.  
@@ -67,4 +66,5 @@ ClearType y yönünde düzgünleştirme ile metin
  [ClearType tarayıcısı PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ClearType Kayıt Defteri Ayarları](cleartype-registry-settings.md)

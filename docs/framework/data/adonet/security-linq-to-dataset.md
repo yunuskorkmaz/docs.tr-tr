@@ -2,12 +2,12 @@
 title: Güvenlik (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
-ms.openlocfilehash: e0b71dd3628e0bbc4c11e7b9f62a4833ce6fa811
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa281cb4d6019ca2df85137eb505724e55b8060a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087345"
 ---
 # <a name="security-linq-to-dataset"></a>Güvenlik (LINQ to DataSet)
 Bu konuda bulunan güvenlik sorunlarını ele alınmaktadır [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -23,4 +23,5 @@ Bu konuda bulunan güvenlik sorunlarını ele alınmaktadır [!INCLUDE[linq_data
  Tüm giriş doğrudan veya dolaylı olarak bir kullanıcı veya bir dış aracı türetilmiş izinsiz eylemler gerçekleştirmek için hedef dilinin sözdizimi yararlanan içerik olabilir. Bu, hedef dil Transact-SQL olduğu bir saldırı desenini sonra adlandırılmış bir SQL ekleme saldırısına olarak bilinir. Kullanıcı girişi sorguyu doğrudan eklenen bir veritabanı tablosu bırakın, hizmet reddine neden veya aksi halde gerçekleştirilmekte olan işlemin yapısını değiştirmek için kullanılır. Sorgu oluşturmak mümkün olsa da [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], nesne modeli API aracılığıyla gerçekleştirilir. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] dize düzenlemesi veya birleştirme, bunlar Transact-SQL ve SQL ekleme saldırılarına karşı geleneksel anlamda fazla etkilenmez gibi kullanarak sorguları oluşur değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Programlama Kılavuzu](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

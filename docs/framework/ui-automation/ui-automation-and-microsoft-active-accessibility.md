@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 67382c0383726d2c2caabde1e80bfb37a1a9c27c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 29a6b897115c5f2f3ae8d7e4ec708be59dc0d85b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679274"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115342"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Otomasyonu ve Microsoft Active Accessibility
 > [!NOTE]
@@ -68,7 +68,7 @@ ms.locfileid: "57679274"
   
  Aşağıdaki tabloda eşleme gösterilmektedir [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] rollere [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim türlerinin.  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] Rol|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Denetim türü|  
+|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] rol|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Denetim türü|  
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------|  
 |ROLE_SYSTEM_PUSHBUTTON|Düğme|  
 |ROLE_SYSTEM_CLIENT|Takvim|  
@@ -137,7 +137,7 @@ ms.locfileid: "57679274"
   
  Aşağıdaki tabloda gösterir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri karşılık [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] durum sabitler.  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] durumu|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Özelliği|Tetikleyici durumu değişikliği?|  
+|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] durum|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik|Tetikleyici durumu değişikliği?|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
 |STATE_SYSTEM_CHECKED|Onay kutusu <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Radyo düğmesi <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Y|  
 |STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|Y|  
@@ -152,7 +152,7 @@ ms.locfileid: "57679274"
 |STATE_SYSTEM_MUTLISELECTABLE|<xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty>|N|  
 |STATE_SYSTEM_OFFSCREEN|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = True|N|  
 |STATE_SYSTEM_PROTECTED|<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|N|  
-|STATE_SYSTEM_READONLY|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty?displayProperty=nameWithType> ve <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty?displayProperty=nameWithType>|N|  
+|STATE_SYSTEM_READONLY|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty?displayProperty=nameWithType> and <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty?displayProperty=nameWithType>|N|  
 |STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> desteklenir|N|  
 |STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|N|  
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
@@ -160,7 +160,7 @@ ms.locfileid: "57679274"
   
  Ya da uygulanmadı çoğu tarafından şu durumlar [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] denetim sunucuları veya eşdeğeri olmayan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
-|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] durumu|Açıklamalar|  
+|[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] durum|Açıklamalar|  
 |-----------------------------------------------------------------------|-------------|  
 |STATE_SYSTEM_BUSY|Kullanılamaz [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_DEFAULT|Kullanılamaz [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
@@ -195,7 +195,7 @@ ms.locfileid: "57679274"
 |EVENT_OBJECT_DESCRIPTIONCHANGE|Tam eşdeğeri; belki de <xref:System.Windows.Automation.AutomationElement.HelpTextProperty> veya <xref:System.Windows.Automation.AutomationElement.LocalizedControlTypeProperty> özellik değişikliği|  
 |EVENT_OBJECT_DESTROY|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_FOCUS|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|  
-|EVENT_OBJECT_HELPCHANGE|<xref:System.Windows.Automation.AutomationElement.HelpTextProperty> Değişiklik|  
+|EVENT_OBJECT_HELPCHANGE|<xref:System.Windows.Automation.AutomationElement.HelpTextProperty> değiştirme|  
 |EVENT_OBJECT_HIDE|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_LOCATIONCHANGE|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> Özellik değişikliği|  
 |EVENT_OBJECT_NAMECHANGE|<xref:System.Windows.Automation.AutomationElement.NameProperty> Özellik değişikliği|  
@@ -240,7 +240,7 @@ ms.locfileid: "57679274"
 |Eşdeğeri|<xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty> Özellik değişikliği|  
 |Eşdeğeri|<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty> Özellik değişikliği|  
 |Eşdeğeri|<xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty> Özellik değişikliği|  
-|Eşdeğeri|<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> Olay|  
+|Eşdeğeri|<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> olay|  
 |Eşdeğeri|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>   
@@ -250,4 +250,5 @@ ms.locfileid: "57679274"
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Modeli aracılığıyla diğer sağlayıcısı kodu çağırmak sağlayıcıları gereksinimini ortadan kaldırır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Çekirdek hizmeti tüm gerekli toplama yapar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [UI Otomasyonu Temelleri](../../../docs/framework/ui-automation/index.md)
+
+- [UI Otomasyon Temelleri](../../../docs/framework/ui-automation/index.md)

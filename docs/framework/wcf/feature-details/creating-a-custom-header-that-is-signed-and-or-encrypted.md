@@ -1,15 +1,15 @@
 ---
-title: Özel bir başlık oluşturma işaretli ve- veya şifreli
+title: İmzalanmış ve/veya şifrelenmiş özel bir başlık oluşturma
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 0f8f86bcb5494cd502d14aff1cf3c4cdf4f8dd33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76bfb6040f6b78765ed42ce7fbf86cdbd62c1e48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494827"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075654"
 ---
-# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Özel bir başlık oluşturma işaretli ve- veya şifreli
+# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>İmzalanmış ve/veya şifrelenmiş özel bir başlık oluşturma
 Bir WCF istemcisi kullanarak olmayan WCF Hizmeti çağrılırken bazen özel SOAP üstbilgileri kullanmak gereklidir. Wcf'de imzalanacak ve şifrelenecek özel üst bilgileri olmayan bir WCF Hizmeti ile çalışmasını engelleyen Standartlaştırma hata yoktur. Sorun, varsayılan XML ad alanları yanlış Standartlaştırma tarafından neden olur. Yalnızca imzalı ve/veya şifrelenmiş özel üst bilgileri olmayan WCF hizmetlerinde çağrılırken sorunlu budur.  Hizmet imzalanmış ve/veya şifrelenmiş özel üst bilgi içeren ileti aldığında imzası doğrulanamıyor. Bu geçici çözüm Standartlaştırma hatayı önler, olmayan WCF hizmetleri ile birlikte çalışabilirlik sağlar, ancak WCF hizmetleri ile birlikte çalışabilirlik engellemez.  
   
 ## <a name="defining-the-custom-header"></a>Özel üst bilgi tanımlama  
@@ -57,6 +57,7 @@ public  class MyMessageContract
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Varsayılan İleti Anlaşması](../../../../docs/framework/wcf/samples/default-message-contract.md)
-- [İleti Anlaşmaları](../../../../docs/framework/wcf/samples/message-contracts.md)
-- [İleti Anlaşmaları Kullanma](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+
+- [Varsayılan İleti Sözleşmesi](../../../../docs/framework/wcf/samples/default-message-contract.md)
+- [İleti Sözleşmeleri](../../../../docs/framework/wcf/samples/message-contracts.md)
+- [İleti Sözleşmeleri Kullanılıyor](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

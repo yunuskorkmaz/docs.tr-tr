@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: ae6c8dc3669ed46165f3d78e78735187ebbc3776
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 17dd8e0c02d71fc7e72800fc578866188d03060e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097245"
 ---
 # <a name="merged-resource-dictionaries"></a>Birleştirilmiş Kaynak Sözlükleri
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kaynakları, birleştirilmiş kaynak sözlük özelliğini desteklemez. Bu özellik, kaynaklar bölümünü tanımlamak için bir yol sağlar. bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dışında derlenmiş uygulama [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulama. Kaynaklar ardından uygulamalar arasında paylaşılabilir ve ayrıca daha rahat yerelleştirme için yalıtılır.  
@@ -52,6 +52,7 @@ ms.locfileid: "57377066"
  Yerelleştirilebilecek kaynakları birincil sözlüklerine birleştirilir ve gevşek'olarak tutulan sözlüklere yalıtılmış olması durumunda [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bu dosyaları ayrı olarak yerelleştirilebilir. Bu teknik, yerelleştirme uydu kaynak derlemeleri için basit bir alternatiftir. Ayrıntılar için bkz [WPF genelleştirmesi ve yerelleştirmesine genel bakış](wpf-globalization-and-localization-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.ResourceDictionary>
 - [XAML Kaynakları](xaml-resources.md)
 - [Kaynaklar ve Kod](resources-and-code.md)

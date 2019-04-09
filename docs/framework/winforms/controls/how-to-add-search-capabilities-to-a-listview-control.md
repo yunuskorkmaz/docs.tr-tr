@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme'
+title: 'Nasıl yapılır: ListView Denetimine Arama Yetenekleri Ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding search capabilities
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
-ms.openlocfilehash: c25349d4ab981d422ade93944f709c3068a7aba9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c1c59c3d4bb5d0d35103371575ebdd49d3559bbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108556"
 ---
-# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Nasıl yapılır: Bir ListView denetimine arama yetenekleri ekleme
+# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Nasıl yapılır: ListView Denetimine Arama Yetenekleri Ekleme
 Önerilmesine öğeleri büyük listesiyle çalışırken bir <xref:System.Windows.Forms.ListView> kullanıcıya arama özellikleri sunmak istediğiniz denetimi. <xref:System.Windows.Forms.ListView> Denetim, iki farklı şekilde bu özellik sunar: eşleşen metin ve arama konumu.  
   
  <xref:System.Windows.Forms.ListView.FindItemWithText%2A> Yöntemi bir metin araması gerçekleştirmek sağlayan bir <xref:System.Windows.Forms.ListView> verilen arama dizesi ve isteğe bağlı bir başlangıç ve bitiş dizini, liste veya ayrıntı görünümü'nde. Buna karşılık, <xref:System.Windows.Forms.ListView.FindNearestItem%2A> yöntemi içindeki bir öğeyi bulmak sağlayan bir <xref:System.Windows.Forms.ListView> simgesini veya kutucuk görünümünde, bir dizi x ve y koordinatları ve aramak için bir yön verilen.  
@@ -48,9 +48,10 @@ ms.locfileid: "57722391"
  [!code-vb[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.FindItemWithText%2A>
 - <xref:System.Windows.Forms.ListView.FindNearestItem%2A>
 - [ListView Denetimi](listview-control-windows-forms.md)
 - [ListView Denetimine Genel Bakış](listview-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Nasıl yapılır: Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

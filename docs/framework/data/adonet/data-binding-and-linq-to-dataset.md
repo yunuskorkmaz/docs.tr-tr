@@ -1,15 +1,15 @@
 ---
-title: Veri bağlama ve LINQ to DataSet
+title: Veri Bağlama ve LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: 91349de3b12b45e645ad4080c9fc972f28c669ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073565"
 ---
-# <a name="data-binding-and-linq-to-dataset"></a>Veri bağlama ve LINQ to DataSet
+# <a name="data-binding-and-linq-to-dataset"></a>Veri Bağlama ve LINQ to DataSet
 *Veri bağlama* iş mantığı ve UI uygulama arasında bağlantı kuran işlemidir. Verilere bağlı öğeleri doğru ayarların bağlama varsa ve veri değeri değiştiğinde verileri uygun bildirimleri sağlar, değişiklikleri otomatik olarak yansıtır. <xref:System.Data.DataSet> Bir bellek içi tutarlı bir ilişkisel programlama modeli, içerdiği veri kaynağı ne olursa olsun sağlayan veri gösterimidir. ADO.NET 2.0 <xref:System.Data.DataView> depolanan verilerini sıralama ve filtreleme sayesinde bir <xref:System.Data.DataTable>. Bu işlevsellik, çoğunlukla veri bağlama uygulamalarda kullanılır. Kullanarak bir <xref:System.Data.DataView>sıralamalar farklı olan bir tabloda verilerini açığa çıkarabilir ve verileri satır durum ya da bir filtre ifadesi temelinde göre filtre uygulayabilirsiniz. Hakkında daha fazla bilgi için <xref:System.Data.DataView> nesne, bkz: [DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
   
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] üzerinde karmaşık ve güçlü sorgular oluşturmak geliştiricilerinin sağlayan bir <xref:System.Data.DataSet> kullanarak [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]. Ancak, bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgunun döndürdüğü numaralandırması <xref:System.Data.DataRow> kolayca bir bağlama senaryosunda kullanılmayan nesneler. Bağlama kolaylaştırmak için oluşturabileceğiniz bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu. Bu <xref:System.Data.DataView> filtreleme ve sıralama sorguda belirtilen kullanır, ancak daha iyi veri bağlama için uygundur. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] işlevselliğini genişletir <xref:System.Data.DataView> sağlayarak [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ifade tabanlı filtreleme ve sıralama, çok daha karmaşık ve güçlü filtreleme ve sıralama dize tabanlı filtreleme ve sıralama işlemleri sağlar.  
@@ -32,8 +32,9 @@ ms.locfileid: "54655783"
  [DataView Performansı](../../../../docs/framework/data/adonet/dataview-performance.md)  
  Hakkında bilgi sağlar <xref:System.Data.DataView> ve performans.  
   
- [Nasıl yapılır: Windows Forms DataGridView denetimine DataView nesnesi bağlama](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView Denetimine DataView Nesnesi Bağlama](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
  Nasıl bağlanacağını açıklayan bir <xref:System.Data.DataView> nesnesini bir <xref:System.Windows.Forms.DataGridView>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Programlama Kılavuzu](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

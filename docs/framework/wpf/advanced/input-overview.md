@@ -24,16 +24,15 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 810417529f71ec366f940c062a416a675bfecd2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d8eb22c4de9dc28f332b220dd4703b0c681904f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090049"
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Alt sistemi sağlayan güçlü [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] giriş çeşitli cihazlardan almak için fare, klavye, dokunmatik ve Kalem dahil. Bu konu tarafından sağlanan hizmetleri açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve giriş sistemleri mimarisini açıklar.
-
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>Giriş API'si
@@ -288,9 +287,9 @@ ms.locfileid: "57376825"
 
 |İptal Olayı çağrılma yeri|Zaten oluşan giriş gerçekleşen fare olayları|
 |----------------------------------------|-----------------------------------------------------------------|
-|<xref:System.Windows.UIElement.ManipulationStarting> ve <xref:System.Windows.UIElement.ManipulationStarted>|Olayları fare.|
+|<xref:System.Windows.UIElement.ManipulationStarting> and <xref:System.Windows.UIElement.ManipulationStarted>|Olayları fare.|
 |<xref:System.Windows.UIElement.ManipulationDelta>|Fare aşağı ve fare olayları taşıyın.|
-|<xref:System.Windows.UIElement.ManipulationInertiaStarting> ve <xref:System.Windows.UIElement.ManipulationCompleted>|Fare aşağı, fare taşıma ve fare olayları.|
+|<xref:System.Windows.UIElement.ManipulationInertiaStarting> and <xref:System.Windows.UIElement.ManipulationCompleted>|Fare aşağı, fare taşıma ve fare olayları.|
 
  Çağırırsanız unutmayın <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A> düzenlenmesini Eylemsizliği içinde olduğunda, yöntemin döndürür `false` ve fare olayları giriş oluşturmaz.
 
@@ -391,8 +390,9 @@ ms.locfileid: "57376825"
  Ek kaynaklar kullanılabilir biçimde açıklayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework öğeleri ve daha ayrıntılı olarak olay yönlendirme. Daha fazla bilgi için şu genel bakışlara bakın [komut vermeye genel genel bakış](commanding-overview.md), [odağa genel bakış](focus-overview.md), [temel öğelere genel bakış](base-elements-overview.md), [WPFiçindeağaçlar](trees-in-wpf.md), ve [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Odağa Genel Bakış](focus-overview.md)
 - [Komut Vermeye Genel Bakış](commanding-overview.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
 - [Temel Öğelere Genel Bakış](base-elements-overview.md)
 - [Özellikler](properties-wpf.md)

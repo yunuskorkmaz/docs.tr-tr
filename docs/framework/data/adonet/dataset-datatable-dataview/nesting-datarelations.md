@@ -1,18 +1,18 @@
 ---
-title: İç içe geçme DataRelations
+title: DataRelations’ı İç İçe Yerleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 5fc987e37d9b33cd1640bb32423f62a7e74937f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7975e17bd957a822bf3d60d487eb928cee84bd28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117215"
 ---
-# <a name="nesting-datarelations"></a>İç içe geçme DataRelations
+# <a name="nesting-datarelations"></a>DataRelations’ı İç İçe Yerleştirme
 Verilerin ilişkisel bir temsilini içinde tek tek tablolar, bir sütun veya sütun kümesini kullanarak birbirleriyle satırları içerir. ADO.NET'te <xref:System.Data.DataSet>, tablolar arasında ilişki kullanılarak uygulanan bir <xref:System.Data.DataRelation>. Oluştururken bir **DataRelation**, sütun üst-alt ilişkileri yalnızca ilişkisi yönetilir. Tabloları ve sütunları ayrı varlıklardır. XML sağlayan veri hiyerarşik temsili, iç içe geçmiş alt öğelerini içeren üst öğeler tarafından üst-alt ilişkilerini temsil edilir.  
   
  İç içe alt nesnelerin kolaylaştırmak için bir **veri kümesi** ile eşitlenen bir <xref:System.Xml.XmlDataDocument> veya XML verileri olarak kullanılarak yazılmış **WriteXml**, **DataRelation** kullanıma sunan bir **iç içe** özelliği. Ayarı **iç içe** özelliği bir **DataRelation** için **true** alt satırları XML verileri olarak yazılırken üst sütun içinde iç içe ilişkisinin neden olan veya eşitlenen bir **XmlDataDocument**. **İç içe** özelliği **DataRelation** olduğu **false**, varsayılan olarak.  
@@ -132,6 +132,7 @@ customerOrders.Nested = true;
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [DataRelations Ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)
 - [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)

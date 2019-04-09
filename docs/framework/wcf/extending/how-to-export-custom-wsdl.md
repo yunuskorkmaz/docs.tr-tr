@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Özel WSDL dışarı aktarma'
+title: 'Nasıl yapılır: Özel WSDL Dışarı Aktarma'
 ms.date: 03/30/2017
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-ms.openlocfilehash: 86c6be86febb21f3c676d28357b29db5dcca07db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 16f34a71882587bbd9782d7a9ea807faa72e8238
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645151"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080767"
 ---
-# <a name="how-to-export-custom-wsdl"></a>Nasıl yapılır: Özel WSDL dışarı aktarma
+# <a name="how-to-export-custom-wsdl"></a>Nasıl yapılır: Özel WSDL Dışarı Aktarma
 Bu konu, özel WSDL bilgilerini dışarı aktarmak nasıl açıklar. Bunu yapmak için biz adlı yeni bir kod öznitelik tanımlayacaksınız `WsdlDocumentationAttribute` hizmeti tarafından oluşturulan WSDL özel bilgileri eklenir.  
   
 ### <a name="to-export-custom-wsdl-information"></a>Özel WSDL bilgilerini dışarı aktarmak için  
@@ -196,4 +196,5 @@ return lines;
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)

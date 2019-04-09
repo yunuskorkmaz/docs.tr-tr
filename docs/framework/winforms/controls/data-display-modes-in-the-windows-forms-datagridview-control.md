@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 86eda82cad778978711520bc2951a7a35d133753
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703086"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079701"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları
 <xref:System.Windows.Forms.DataGridView> Denetim, üç ayrı modda veri görüntüleyebilir: ilişkili, bağlantısız ve sanal. Gereksinimlerinize göre en uygun modu seçin.  
@@ -42,6 +42,7 @@ ms.locfileid: "57703086"
  Sanal mod hakkında daha fazla bilgi için bkz: [Windows Forms DataGridView denetiminde sanal mod](virtual-mode-in-the-windows-forms-datagridview-control.md). Sanal modu olaylarını kullanmayı gösteren bir örnek için bkz: [izlenecek yol: Sanal modu uygulama içinde Windows Forms DataGridView denetiminde](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>
@@ -49,7 +50,7 @@ ms.locfileid: "57703086"
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
 - [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Sütun Türleri](column-types-in-the-windows-forms-datagridview-control.md)
-- [İzlenecek yol: Bağlantısız bir Windows Forms DataGridView denetimi](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetimine veri bağlama](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetimine Veri Bağlama](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Sanal Mod](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [İzlenecek yol: Windows Forms DataGridView denetiminde sanal modu uygulama](implementing-virtual-mode-wf-datagridview-control.md)
+- [İzlenecek yol: Windows Forms DataGridView Denetiminde Sanal Modu Uygulama](implementing-virtual-mode-wf-datagridview-control.md)

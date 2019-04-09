@@ -2,12 +2,12 @@
 title: WCF ve Uluslararası Hale Getirilmiş Etki Alanı Adları
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: 83c6f3c2afec0f2b6b8fccca4bd8252e9ab35400
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c166f497117314dd8cea3b04b9b1072203374c52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571593"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112612"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF ve Uluslararası Hale Getirilmiş Etki Alanı Adları
 WCF hizmetleri Uluslararası yapılan etki alanı adı (IDN) ile izin vermek için destek eklendi. Bir Uluslararası yapılan etki alanı adı, ASCII olmayan karakterler içeren bir etki alanı adı değil. Bir WCF istemcisi IDN adı ile bir web hizmeti konuşabilir bir IDN adı ile bir WCF Hizmeti barındırma her iki özelliği destekler.  
@@ -42,4 +42,5 @@ WCF hizmetleri Uluslararası yapılan etki alanı adı (IDN) ile izin vermek iç
 >  Unicode karakterler için applicationHost.exe.config eklerken, UTF-8 kodlaması kullanarak dosyayı kaydedin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Uri?displayProperty=nameWithType>

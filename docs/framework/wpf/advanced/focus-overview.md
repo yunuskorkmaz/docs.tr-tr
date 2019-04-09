@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073890"
 ---
 # <a name="focus-overview"></a>Odağa Genel Bakış
 İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] odakla ilgili iki ana kavram vardır: klavye odağı ve mantıksal odak.  Klavye odağı klavye girişini alır öğeye başvuruyor ve odaklı bir odak kapsam içindeki öğeye mantıksal Odaklanıldığında başvurur.  Bu kavramlar, bu genel bakışta ayrıntılı ele alınmıştır.  Bu kavramlar farkını anlama, birden çok bölgede odak burada elde edilebilir sahip karmaşık uygulamalar oluşturmak için önemlidir.  
@@ -21,9 +21,7 @@ ms.locfileid: "57369922"
  Odak yönetimine katılan başlıca sınıflardır <xref:System.Windows.Input.Keyboard> sınıfı <xref:System.Windows.Input.FocusManager> sınıfı ve temel öğe sınıfları, gibi <xref:System.Windows.UIElement> ve <xref:System.Windows.ContentElement>.  Temel öğeler hakkında daha fazla bilgi için bkz. [temel öğelere genel bakış](base-elements-overview.md).  
   
  <xref:System.Windows.Input.Keyboard> Sınıfı öncelikle klavye odağı ile ilgili ve <xref:System.Windows.Input.FocusManager> öncelikle mantıksal odak ile ilgili olan ancak bu mutlak bir ayrım değildir.  Klavye girintisine sahip bir öğe mantıksal odağı da gerekir, ancak mantıksal odağı olan bir öğeyi klavye odağı sahip değil.  Kullandığınızda bu açıktır <xref:System.Windows.Input.Keyboard> klavye odağı olan öğe ayarlanacak sınıfı ayrıca öğede mantıksal Odaklanıldığında ayarlar.  
-  
 
-  
 <a name="Keyboard_Focus"></a>   
 ## <a name="keyboard-focus"></a>Klavye odağı  
  Klavye odağı, şu anda klavye girdisi alıyor öğesine başvurur.  Klavye girintisine sahip yalnızca bir öğe tüm masaüstü olabilir.  İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], klavye girintisine sahip öğenin <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> kümesine `true`.  Statik özelliği <xref:System.Windows.Input.Keyboard.FocusedElement%2A> üzerinde <xref:System.Windows.Input.Keyboard> sınıfı, şu anda klavye girintisine sahip öğeyi alır.  
@@ -70,7 +68,7 @@ ms.locfileid: "57369922"
  [!code-vb[FocusSnippets#FocusGetSetFocusedElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
   
 <a name="Keyboard_Navigation"></a>   
-## <a name="keyboard-navigation"></a>Klavye ile gezinme  
+## <a name="keyboard-navigation"></a>Klavye ile Gezinme  
  <xref:System.Windows.Input.KeyboardNavigation> Sınıftır Gezinti anahtarlarından birini basıldığında varsayılan klavye odağı Gezinti uygulamak için sorumlu.  Gezinti tuşları şunlardır: SEKME, SHIFT + TAB, CTRL + SEKME, CTRL + SHIFT + SEKME, UPARROW, DARALTILDI, sol ok ve sağ ok tuşları.  
   
  Ekli ayarlayarak bir gezinti kapsayıcı gezinme davranışını değiştirilebilir <xref:System.Windows.Input.KeyboardNavigation> özellikleri <xref:System.Windows.Input.KeyboardNavigation.TabNavigation%2A>, <xref:System.Windows.Input.KeyboardNavigation.ControlTabNavigation%2A>, ve <xref:System.Windows.Input.KeyboardNavigation.DirectionalNavigation%2A>.  Bu özellikler, türlerinin <xref:System.Windows.Input.KeyboardNavigationMode> ve olası değerleri <xref:System.Windows.Input.KeyboardNavigationMode.Continue>, <xref:System.Windows.Input.KeyboardNavigationMode.Local>, <xref:System.Windows.Input.KeyboardNavigationMode.Contained>, <xref:System.Windows.Input.KeyboardNavigationMode.Cycle>, <xref:System.Windows.Input.KeyboardNavigationMode.Once>, ve <xref:System.Windows.Input.KeyboardNavigationMode.None>.  Varsayılan değer <xref:System.Windows.Input.KeyboardNavigationMode.Continue>, yani öğe Gezinti kapsayıcı değil.  
@@ -118,6 +116,7 @@ ms.locfileid: "57369922"
  Mantıksal odak ile ilgili olaylar <xref:System.Windows.UIElement.GotFocus> ve <xref:System.Windows.UIElement.LostFocus>.  Bu olaylar üzerinde tanımlanan <xref:System.Windows.Input.FocusManager> ekli olaylar olarak ancak <xref:System.Windows.Input.FocusManager> CLR olay sarmalayıcıları kullanıma sunmuyor.  <xref:System.Windows.UIElement> ve <xref:System.Windows.ContentElement> daha rahat bu olayları gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>

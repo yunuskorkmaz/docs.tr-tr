@@ -1,15 +1,15 @@
 ---
-title: Özel bileşik tasarımcılar - iş akışı öğesi sunucu
+title: Özel Bileşik Tasarımcılar - İş Akışı Öğesi Sunucu
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: d201dad45f4ed31d7c06f3302a9cdfbb01647722
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4c1258a49ac3ef2227d520fe11f341819f8663a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089204"
 ---
-# <a name="custom-composite-designers---workflow-item-presenter"></a>Özel bileşik tasarımcılar - iş akışı öğesi sunucu
+# <a name="custom-composite-designers---workflow-item-presenter"></a>Özel Bileşik Tasarımcılar - İş Akışı Öğesi Sunucu
 <xref:System.Activities.Presentation.WorkflowItemPresenter> İçin "bir bırakma bölgesi rastgele bir etkinlik nereye yerleştirilebileceğini" oluşturulmasına izin verir WF Tasarımcı programlama modeli içinde bir anahtar türü. Bu örnek, bu yüzeyleri böyle bir "bırakma bölgesi." bir etkinlik Tasarımcısı oluşturma gösterir.
 
  Bu örnek gösterir:
@@ -81,5 +81,6 @@ ms.locfileid: "54731016"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>
-- [İş Akışı Tasarımcısı ile Uygulama Geliştirme](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [İş Akışı Tasarımcısı ile uygulama geliştirme](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

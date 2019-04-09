@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d32e5ed28153ae3ad54e1f75242a767d2e764a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a3bbbaa565a6c118082456a1ab6d7af59db7067
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119281"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Kısmen Güvenilen Koddan Kitaplıkları Kullanma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -52,4 +52,5 @@ ms.locfileid: "54585282"
 >  .NET Framework sınıf kitaplığındaki bazı sınıflar olmadığı **AllowPartiallyTrustedCallersAttribute** özniteliği ve kısmen güvenilen kod tarafından çağrılamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)
+
+- [Kod Erişimi Güvenliği](../../../docs/framework/misc/code-access-security.md)

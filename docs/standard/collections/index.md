@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bed202d927cc026b903cb006220620210893056e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083848"
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
 Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyonu olarak yönetilebilir işlenebilir. Kullanabileceğiniz <xref:System.Array?displayProperty=nameWithType> sınıf veya sınıflardan <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, eklemek, gt;System.Collections.Immutable ad alanlarını kaldırın ve ayrı ayrı öğeleri veya koleksiyondaki öğelerin bir aralığını değiştirin.  
@@ -25,8 +25,7 @@ Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyonu o
  Koleksiyonların iki ana türü vardır; Genel koleksiyonlar ve genel olmayan koleksiyon. Genel koleksiyonlar .NET Framework 2.0 sürümünde eklenen ve tür kullanımı uyumlu koleksiyonlar sağlamak derleme zamanında. Bu nedenle, genel koleksiyonlar normalde daha iyi performans sunar. Genel koleksiyonlar oluşturulur ve ve ondan dönüştürme gerektirmeyen bir tür parametresini kabul <xref:System.Object> eklediğinizde veya öğeleri koleksiyondan Kaldır yazın.  Ayrıca, en genel koleksiyonlar desteklenen [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] uygulamalar. Genel olmayan koleksiyonları depolayabileceğiniz öğeleri olarak <xref:System.Object>atama gerektirir ve çoğu için desteklenmez [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] uygulama geliştirme. Ancak, eski kod içinde genel olmayan koleksiyon görebilirsiniz.  
   
  İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], koleksiyonlar <xref:System.Collections.Concurrent> ad alanı, koleksiyon öğelerine birden fazla iş parçacığından erişmek için verimli bir iş parçacığı açısından güvenli işlemler sağlar. Gt;System.Collections.Immutable ad alanındaki değişmez koleksiyon sınıfları ([NuGet paketini](https://www.nuget.org/packages/System.Collections.Immutable)) özgün koleksiyon ve özgün koleksiyon bir kopyası üzerinde gerçekleştirilen işlemler doğası gereği iş parçacığı açısından güvenli değildir değiştirilemez.  
-  
-  
+
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>Genel koleksiyon özellikleri  
  Tüm koleksiyonlar, ekleme, kaldırma veya koleksiyondaki öğeleri bulma yöntemleri sağlar. Ayrıca, tüm koleksiyonlar, doğrudan veya dolaylı olarak uygulamak <xref:System.Collections.ICollection> arabirimi veya <xref:System.Collections.Generic.ICollection%601> arabirimi paylaşmak bu özellikler:  
@@ -78,12 +77,12 @@ Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyonu o
 |Başlık|Açıklama|  
 |-----------|-----------------|  
 |[Koleksiyon Sınıfı Seçme](../../../docs/standard/collections/selecting-a-collection-class.md)|Farklı koleksiyonlarda açıklar ve bir senaryonuz için seçmenize yardımcı olur.|  
-|[Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)|Gibi yaygın olarak kullanılan jenerik ve jenerik olmayan koleksiyon türlerini açıklar <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
-|[Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../docs/standard/collections/when-to-use-generic-collections.md)|Genel koleksiyon türlerinin kullanımını açıklar.|  
+|[Çok Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)|Gibi yaygın olarak kullanılan jenerik ve jenerik olmayan koleksiyon türlerini açıklar <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
+|[Genel Koleksiyonları Ne Zaman Kullanılacağı](../../../docs/standard/collections/when-to-use-generic-collections.md)|Genel koleksiyon türlerinin kullanımını açıklar.|  
 |[Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Eşitlik karşılaştırma ve sıralama karşılaştırmaları koleksiyonlardaki kullanmayı açıklar.|  
 |[Sıralanmış Koleksiyon Türleri](../../../docs/standard/collections/sorted-collection-types.md)|Sıralanmış koleksiyon performans ve özelliklerini açıklar.|  
-|[Hashtable ve Sözlük Koleksiyon Türleri](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Genel ve genel olmayan karma tabanlı sözlük türleri özelliklerini açıklar.|  
-|[İş Parçacığı Güvenli Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)|Gibi koleksiyon türlerini açıklar <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> ve <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> birden çok iş parçacığından güvenli ve verimli eş zamanlı erişimi destekler.|  
+|[Karma Tablo ve Sözlük Koleksiyon Türleri](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Genel ve genel olmayan karma tabanlı sözlük türleri özelliklerini açıklar.|  
+|[İş Parçacığı Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)|Gibi koleksiyon türlerini açıklar <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> ve <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> birden çok iş parçacığından güvenli ve verimli eş zamanlı erişimi destekler.|  
 |Gt;System.Collections.Immutable|Değişmez koleksiyonları tanıtır ve koleksiyon türlerine bağlantılar sağlar.|  
   
 <a name="BKMK_Reference"></a>   

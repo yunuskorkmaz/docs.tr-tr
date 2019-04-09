@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: d0b8d812fd13be090f42bf4fb3ea84cedd1c07a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5a962b30771414e4b20711b001dc38ff8dc69823
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082574"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer Denetimi
 <xref:System.Windows.Forms.ToolStrip> özellik denetimleri yerleşik radye (Yuvalandığında araç alanı içinde yatay veya dikey boşluk paylaşımını) kullanarak <xref:System.Windows.Forms.ToolStripContainer>.  
@@ -22,10 +22,10 @@ ms.locfileid: "57716861"
  [ToolStripContainer Denetimine Genel Bakış](toolstripcontainer-control-overview.md)  
  Amacı ve Windows Forms ana kavramları açıklayan konuları sağlar <xref:System.Windows.Forms.ToolStripContainer> denetimi.  
   
- [Nasıl yapılır: Bir forma ToolStripContainer ekleme](how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [Nasıl yapılır: Forma ToolStripContainer Ekleme](how-to-add-a-toolstripcontainer-to-a-form.md)  
  Ekleme gösteren bir <xref:System.Windows.Forms.ToolStripContainer> uygulama ve denetim belirli bir panoya eklemek için <xref:System.Windows.Forms.ToolStripContainer>.  
   
- [Nasıl yapılır: Toolstripcontentpanel'e denetim ekleme](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ [Nasıl yapılır: ToolStripContentPanel'ine Denetim Ekleme](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  Bir denetime ekleme gösterir <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
 ## <a name="reference"></a>Başvuru  
@@ -42,4 +42,5 @@ ms.locfileid: "57716861"
  İçin başvuru belgeleri sağlar <xref:System.Windows.Forms.ToolStripPanel> denetimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

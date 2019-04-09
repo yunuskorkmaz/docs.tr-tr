@@ -5,18 +5,16 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 214d2cf369a62f5565ef4b89fd658f6bec4b2fdc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4e4c4891a905a5e4458ad5fc21a512c1dfe6f74e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092922"
 ---
 # <a name="localization-attributes-and-comments"></a>Yerelleştirme Öznitelikleri ve Yorumlar
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Yerelleştirme açıklamalarını olan özellikleri içinde [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kaynak kodu, kurallar ve ipuçları için yerelleştirme sağlamak için geliştiriciler tarafından sağlanan. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Yerelleştirme açıklamalarını iki bilgi kümesi içerir: Yerelleştirme öznitelikleri ve serbest biçimli yerelleştirme yorumlar. Yerelleştirme öznitelikleri tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirme hangi kaynakların yerelleştirilmesi belirtmek için API. Serbest biçimli, uygulama yazarı eklemek isteyen herhangi bir bilgi yorumlardır.  
-  
 
-  
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>Yerelleştirme açıklamalarını  
  Biçimlendirme uygulama yazarları belirli öğeleri için gereksinimler varsa [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], metin uzunluğu, yazı tipi ailesi veya yazı tipi boyutu gibi kısıtlamalar, bu bilgileri yerelleştiriciler açıklamalar ile ifade edebilir [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kod. Kaynak koda açıklama ekleme işlemi aşağıdaki gibidir:  
@@ -25,7 +23,7 @@ ms.locfileid: "57377106"
   
 2.  Derleme işlemi sırasında .proj dosyasında serbest biçimli yerelleştirme derleme, Yorumlar parçası atmak veya tüm yorumları atmak yorumlarında verilip verilmeyeceğini belirtebilirsiniz. Çıkarılan yorumlar, ayrı bir dosyada yer alır. Seçeneğini kullanarak belirttiğiniz bir `LocalizationDirectivesToLocFile` etiketi, örneğin:  
   
-     `<LocalizationDirectivesToLocFile>` *Değer* `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`  
   
 3.  Atanabilecek değerleri şunlardır:  
   
@@ -90,7 +88,7 @@ ms.locfileid: "57377106"
   
 |Kategori|Açıklama|  
 |--------------|-------------|  
-|Hiçbiri|Hedeflenen değeri tanımlı hiçbir kategori vardır.|  
+|Yok.|Hedeflenen değeri tanımlı hiçbir kategori vardır.|  
 |Devral|Hedeflenen değeri, kategori, üst öğeden devralır.|  
 |Yoksayma|Hedeflenen değeri yerelleştirme işleminde göz ardı edilir. Yoksay yalnızca geçerli değer etkiler. Alt düğümleri etkilemez.|  
 |NeverLocalize|Geçerli değer yerelleştirilemez. Bu kategori, öğenin alt gruplar tarafından devralınır.|  
@@ -100,6 +98,7 @@ ms.locfileid: "57377106"
  Localization.Comments hedeflenen değeri ile ilgili serbest biçimli dizeleri içerir. Uygulama geliştiricileri, çevirmenlerin vermek için bilgi ekleyebileceğiniz uygulamaların metnin nasıl çevrileceği hakkında ipuçları. Yorumları biçimi arasına "(") tarafından herhangi bir dize olabilir. Kullanım '\\' kaçış karakterleri için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF için Genelleştirme](globalization-for-wpf.md)
 - [Düğme Oluşturmak için Otomatik Düzeni Kullanma](how-to-use-automatic-layout-to-create-a-button.md)
 - [Otomatik Düzen için Kılavuz Kullanma](how-to-use-a-grid-for-automatic-layout.md)

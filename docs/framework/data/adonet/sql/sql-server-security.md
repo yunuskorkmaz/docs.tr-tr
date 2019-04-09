@@ -1,15 +1,15 @@
 ---
-title: SQL Server güvenliği
+title: SQL Server Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 33ec28536115f8571bfda47266ed3b5cad1442bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650593"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080780"
 ---
-# <a name="sql-server-security"></a>SQL Server güvenliği
+# <a name="sql-server-security"></a>SQL Server Güvenliği
 SQL Server güvenli veritabanı uygulamaları oluşturma desteği çok sayıda özelliğe sahiptir.  
   
  Veri hırsızlığına veya vandalism, gibi genel güvenlik değerlendirmeleri, kullanmakta olduğunuz SQL Server sürümünden bağımsız olarak geçerlidir. Veri bütünlüğü da bir güvenlik sorunu kabul edilmelidir. Veri korumalı değilse, geçici veri işleme izin verilir ve verilerin yanlışlıkla işe yaramaz hale gelebilir veya kötü amaçlı olarak hatalı değerler ile değiştirilmiş veya tamamen silinmiş olduğunu mümkündür. Ayrıca, genellikle, için gizli bilgilerin doğru depolama gibi bağlı yasal gereksinimi vardır. Bazı tür kişisel veri depolama tamamen, belirli bir yargılama alanında yasalara bağlı olarak proscribed.  
@@ -40,5 +40,6 @@ SQL Server ve Azure SQL veritabanı için güvenlik konuları açıklanmaktadır
 SQL Server'ı yüklemeden önce dikkate alınması gereken güvenlik konuları açıklanmaktadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

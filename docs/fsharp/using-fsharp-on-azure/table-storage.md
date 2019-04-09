@@ -3,12 +3,12 @@ title: Azure tablo depolama kullanmaya başlamaF#
 description: Azure tablo depolama veya Azure Cosmos DB kullanarak bulutta yapılandırılmış veri Store.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 54c777acd454e4f675175b814675c185e41ad9a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086708"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure tablo depolama ve F kullanarak Azure Cosmos DB tablo API'si ile çalışmaya başlama\#
 
@@ -35,7 +35,6 @@ Bu öğreticide nasıl yazılacağını göstermektedir F# Azure tablo depolama 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturma](/azure/storage/storage-create-storage-account) veya [Azure Cosmos DB hesabı](https://azure.microsoft.com/try/cosmosdb/).
-
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Oluşturma bir F# betik ve başlangıç F# etkileşimli
 
@@ -128,7 +127,6 @@ Artık sonuçlar yazdırma:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
-
 ### <a name="retrieve-a-range-of-entities-in-a-partition"></a>Bir bölüme bir grup varlık alma
 
 Bir bölümdeki tüm varlıkları sorgulamak istemiyorsanız bölüm anahtarı filtresi ile bir satır anahtarı filtresini birleştirerek bir aralık belirleyebilirsiniz. Burada, iki filtre "Smith" bölümünde tüm varlıkları almak için nereye satır anahtarı (ad) alfabede "M"'den önceki bir harfle başlayan kullanırsınız.
@@ -148,7 +146,6 @@ Tek, belirli bir varlığı almak üzere bir sorgu yazabilirsiniz. Burada kullan
 Artık sonuçlar yazdırma:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
-
 
 ### <a name="replace-an-entity"></a>Bir varlığı değiştirme
 
@@ -194,8 +191,8 @@ Bir depolama hesabından bir tablo silebilirsiniz. Silinen bir tablo, silme işl
 
 Table storage'nın temellerini öğrendiğinize göre daha karmaşık depolama görevleri ve Azure Cosmos DB tablo API'si hakkında bilgi edinmek için bu bağlantıları izleyin.
 
-- [Azure Cosmos DB Tablo API’sine Giriş](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [.NET başvurusu için Depolama İstemci Kitaplığı](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Azure Cosmos DB tablo API'sine giriş](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
+- [.NET başvurusu için depolama istemcisi kitaplığı](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
 - [Azure depolama tür sağlayıcısı](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure depolama ekibi blogu](https://blogs.msdn.com/b/windowsazurestorage/)
 - [Bağlantı dizeleri yapılandırma](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

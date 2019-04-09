@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - Transforms [WPF]
 ms.assetid: 5c042f8d-d569-45e4-ab32-868b89759bf2
-ms.openlocfilehash: 8311c26d9f5a89893ef3882a477fb18aa76f2cff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f2a675cad6e98078c409fbdee036c5b5555e6b2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099323"
 ---
 # <a name="how-to-apply-a-transform-to-a-bitmapimage"></a>Nasıl yapılır: Bitmapımage'a Dönüşüm Uygulama
 Bu örnek nasıl uygulanacağını gösterir. bir <xref:System.Windows.Media.Transform> için bir <xref:System.Windows.Media.Imaging.BitmapImage>.  
@@ -23,6 +23,7 @@ Bu örnek nasıl uygulanacağını gösterir. bir <xref:System.Windows.Media.Tra
  [!code-vb[ImagingSnippetGallery_procedural_snip#TransformedBitmapInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/TransformedBitmapExample.vb#transformedbitmapinline1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Imaging.BitmapSource>
 - [Görüntülemeye Genel Bakış](imaging-overview.md)
 - [Görüntü Döndürme](../controls/how-to-rotate-an-image.md)

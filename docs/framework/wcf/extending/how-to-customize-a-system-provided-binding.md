@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Sistem tarafından sağlanan bir bağlamayı özelleştirme'
+title: 'Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 7447830de81471c6d9e5b7812ec7a0ad1dbd2ccf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cee570bdc9d7bf6debfc4ec226e91f3fd79a01dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095158"
 ---
-# <a name="how-to-customize-a-system-provided-binding"></a>Nasıl yapılır: Sistem tarafından sağlanan bir bağlamayı özelleştirme
+# <a name="how-to-customize-a-system-provided-binding"></a>Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme
 Windows Communication Foundation (WCF) bazı temel alınan bağlama öğeleri özelliklerini ancak özelliklerin tümü yapılandırmanıza olanak sağlayan birkaç sistem tarafından sağlanan bağlamalar içerir. Bu konuda, bir özel bağlamayı oluşturmak için bağlama öğelerinin özelliklerini ayarlamak gösterilmiştir.  
   
  Doğrudan oluşturma ve bağlama öğeleri sistem tarafından sağlanan bağlamalar kullanmadan yapılandırma hakkında daha fazla bilgi için bkz. [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
@@ -51,6 +51,7 @@ Windows Communication Foundation (WCF) bazı temel alınan bağlama öğeleri ö
      [!code-vb[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Channels.CustomBinding>

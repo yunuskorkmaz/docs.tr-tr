@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc2e80a050e3b2e14663ba4bb67f650a16a6c619
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdacf5fc4a5c73fc60df961432089ee65dd0cfaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079545"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>Azaltma: WCF hizmetleri ve sertifika kimlik doğrulaması
 .NET Framework 4.6, TLS 1.1 ve TLS 1.2 WCF SSL protokolü varsayılan listeye ekler. İstemci ve sunucu makineler sahip .NET Framework 4.6 veya üzeri yüklü olduğunda, TLS 1.2 anlaşması için kullanılır.  
@@ -54,4 +54,5 @@ ms.locfileid: "54738319"
     >  Bu geçici çözüm önerilmez, bu yana MD5 karma algoritması bir sertifikayla güvenli olarak kabul edilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çalışma Zamanı Değişiklikleri](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

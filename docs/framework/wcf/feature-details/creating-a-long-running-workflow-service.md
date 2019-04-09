@@ -2,12 +2,12 @@
 title: Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 8fe1ad70db6c788a304d9099fb2f35a4d89db489
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109661"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 Bu konuda, uzun süre çalışan iş akışı hizmeti oluşturma işlemini açıklar. İş akışı hizmetleri uzun süre çalışan uzun süreler için çalıştırabilirsiniz. İş akışını belirli bir noktada bazı ek bilgiler için bekleyen boşta gidebilir. Bu meydana geldiğinde iş akışını bir SQL veritabanı'na kalıcı ve bellekten kaldırılır. Ek bilgilerin kullanıma sunulduğunda iş akışı örneği belleğe geri yüklenir ve yürütmeye devam eder.  Bu senaryoda, oldukça basitleştirilmiş bir sipariş sistemi uyguluyor.  İstemci sırasını başlatmak için iş akışı hizmeti için bir Başlangıç iletisi gönderir. İstemciye bir sipariş kimliği döndürür. Bu noktada iş akışı hizmeti istemciden başka bir ileti bekliyor ve boşta durumuna girer ve bir SQL Server veritabanına kalıcı hale getirilir.  İstemci bir öğe sıralamak için sonraki iletiyi gönderdiğinde, iş akışı hizmeti belleğe geri yüklenir ve sırasını işlemeyi tamamladıktan sonra. Kod örneğinde öğe sırasını eklenmiş belirten bir dize döndürür. Kod örneği, teknoloji, ancak bunun yerine uzun süre çalışan iş akışı hizmetleri gösteren basit örnek bir gerçek dünya uygulaması olarak hazırlanmamıştır. Bu konu Visual Studio 2012 projeler ve çözümler oluşturulacağını bildiğinizi varsayar.
@@ -199,4 +199,5 @@ Bu konuda, uzun süre çalışan iş akışı hizmeti oluşturma işlemini açı
     ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)

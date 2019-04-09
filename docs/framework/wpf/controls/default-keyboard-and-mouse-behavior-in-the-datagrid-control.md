@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-ms.openlocfilehash: f122eb97719182b4cad5fb0e757cd3647e575094
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741619"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083328"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid Denetiminde Varsayılan Klavye ve Fare Davranışı
 Bu konu, kullanıcılar ile nasıl etkileşim kurabileceğine açıklar <xref:System.Windows.Controls.DataGrid> klavyeyi ve fareyi kullanarak denetimi.  
@@ -97,5 +97,6 @@ Bu konu, kullanıcılar ile nasıl etkileşim kurabileceğine açıklar <xref:Sy
  Bitişik satır bitişik olmayan aralıkları seçmek için CTRL + SHIFT birleştirilebilir. Bunu yapmak için SHIFT kullanarak ilk aralığı Seç + daha önce açıklandığı gibi tıklayın. İlk dizi satır seçtikten sonra CTRL tuşunu kullanın + sonraki aralıktaki ilk satırını seçin ve CTRL + SHIFT tuşuna basarak Son satırda sonraki Aralık'a tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGrid.SelectionMode%2A>

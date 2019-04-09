@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 3fc325f1b4bb4eca73e051732810c9d9853ff4d7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 911ba1474677f26a773ff63e958ba0ceedbefd0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100983"
 ---
 # <a name="technology-regions-overview"></a>Teknoloji Bölgelerine Genel Bakış
 WPF, Win32 veya DirectX gibi bir uygulamada birden fazla sunu teknolojileri kullanılıyorsa bunların üst düzey bir genel pencere oluşturma alanları paylaşmanız gerekir. Bu konu, sunu ve WPF birlikte çalışabilirlik uygulamanız için giriş etkileyebilir sorunları açıklar.  
@@ -61,6 +61,7 @@ WPF, Win32 veya DirectX gibi bir uygulamada birden fazla sunu teknolojileri kull
 -   Uygulama çalışıyorsa [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], windows üzerinde katmanlanmış [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] yüzeylerinin olduğunda [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] uygulama oluşturur.  (Gerçek işleme dizisi [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencerenin ardından gizler [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] çizer, ardından [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] katmanlı pencereyi geri alır).  Olmayan[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] katmanlı windows de bu sınırlamaya sahiptir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF ve Win32 Birlikte Çalışması](wpf-and-win32-interoperation.md)
-- [İzlenecek yol: Win32'de WPF saati barındırma](walkthrough-hosting-a-wpf-clock-in-win32.md)
+- [İzlenecek yol: WPF Saatini Win32 içinde Barındırma](walkthrough-hosting-a-wpf-clock-in-win32.md)
 - [WPF'de Win32 İçeriği Barındırma](hosting-win32-content-in-wpf.md)

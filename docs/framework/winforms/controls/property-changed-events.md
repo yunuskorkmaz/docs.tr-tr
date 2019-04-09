@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property changes (using code)
 - properties [Windows Forms], changes
 ms.assetid: 268039ec-5aaa-4d76-b902-acccb036c850
-ms.openlocfilehash: 0ff5b3874d9de169f4a9f1040d601173af352c06
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cabfd9e799288a332a0b2f96140f5f1cc328508b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105775"
 ---
 # <a name="property-changed-events"></a>Özellik Değişti Olayları
 Adlı bir özellik bildirimleri göndermek için denetim istiyorsanız *PropertyName* değişiklikleri tanımlayın adlı bir olay *PropertyName* `Changed` ve adlı bir yöntem `On` *PropertyName* `Changed` , olayını başlatır. Windows Forms'ta adlandırma kuralı kelimenin sonuna eklenecek olan *değiştirilen* özelliğinin adı. Özellik değişti olayları için ilişkili olay temsilci türü <xref:System.EventHandler>, ve olay veri türü <xref:System.EventArgs>. Temel sınıf <xref:System.Windows.Forms.Control> gibi birçok özellik değişti olayları tanımlar <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>ve diğerleri. Olaylar hakkında bilgi için bkz: [olayları](../../../standard/events/index.md) ve [Windows Forms denetimlerindeki olaylar](events-in-windows-forms-controls.md).  
@@ -26,6 +26,7 @@ Adlı bir özellik bildirimleri göndermek için denetim istiyorsanız *Property
  [!code-vb[System.Windows.Forms.FlashTrackBar#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Olaylar](../../../standard/events/index.md)
 - [Windows Forms Denetimlerindeki Olaylar](events-in-windows-forms-controls.md)
 - [Windows Forms Denetimlerindeki Özellikler](properties-in-windows-forms-controls.md)

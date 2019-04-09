@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: CodeDOM kullanarak sınıf oluşturma'
+title: 'Nasıl yapılır: CodeDOM Kullanarak Sınıf Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78c50b3813ebb0bb65955e411eb84e4cd9e0a001
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 99fa1fcb300d523d74a07da09e5a04848364607e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098838"
 ---
-# <a name="how-to-create-a-class-using-codedom"></a>Nasıl yapılır: CodeDOM kullanarak sınıf oluşturma
+# <a name="how-to-create-a-class-using-codedom"></a>Nasıl yapılır: CodeDOM Kullanarak Sınıf Oluşturma
 Aşağıdaki yordamlar oluşturma ve iki alan, üç özellik, bir yöntem, bir oluşturucu ve bir giriş noktası içeren bir sınıf oluşturur bir CodeDOM grafiği derleme işlemini göstermektedir.  
   
 1.  CodeDOM kod, bir sınıfın kaynak kodu oluşturmak için kullanacağı bir konsol uygulaması oluşturun.  
@@ -119,5 +119,6 @@ The object:
 -   Bu kod örneği gerektirir `FullTrust` izin kümesinin başarıyla yürütülemedi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [CodeDOM'yi Kullanma](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
 - [CodeDOM Grafiğinden Kaynak Kodu Oluşturma ve Derleme](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

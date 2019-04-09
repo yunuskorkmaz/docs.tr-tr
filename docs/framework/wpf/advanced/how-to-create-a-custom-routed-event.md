@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Özel Gönderilmiş Olay Oluşturma'
+title: 'Nasıl yapılır: Özel Yönlendirilmiş Olay Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: c351bec05fa8ad8438cb8521f6ab1e6277a40b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091479"
 ---
-# <a name="how-to-create-a-custom-routed-event"></a>Nasıl yapılır: Özel Gönderilmiş Olay Oluşturma
+# <a name="how-to-create-a-custom-routed-event"></a>Nasıl yapılır: Özel Yönlendirilmiş Olay Oluşturma
 Olay yönlendirme desteklemek özel etkinliği için kaydetmeniz gerekir. bir <xref:System.Windows.RoutedEvent> kullanarak <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> yöntemi. Bu örnekte, özel gönderilmiş olay oluşturma hakkındaki temel bilgileri gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
@@ -35,6 +35,7 @@ Olay yönlendirme desteklemek özel etkinliği için kaydetmeniz gerekir. bir <x
  Nasıl tırmanma olayları iş bir örneğini görmek için bkz: [bir yönlendirilmiş olayı işleme](how-to-handle-a-routed-event.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
 - [Girişe Genel Bakış](input-overview.md)
 - [Denetim Yazımına Genel Bakış](../controls/control-authoring-overview.md)

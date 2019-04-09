@@ -2,12 +2,12 @@
 title: WCF Web HTTP Programlama Nesnesi Modeli
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096016"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP Programlama Nesnesi Modeli
 WCF WEB HTTP programlama modeli, geliştiricilerin SOAP gerek kalmadan Windows Communication Foundation (WCF) Web Hizmetleri temel HTTP istekleri aracılığıyla kullanıma sunmak sağlar. WCF WEB HTTP programlama modeli, var olan WCF genişletilebilirlik model temelinde oluşturulmuştur. Aşağıdaki sınıfları tanımlar:  
@@ -100,6 +100,7 @@ WCF WEB HTTP programlama modeli, geliştiricilerin SOAP gerek kalmadan Windows C
  WCF WEB HTTP programlama modeli WS - desteklemediği için * protokolleri WCF WEB HTTP programlama modeli üzerinde oluşturulmuş bir Web hizmeti güvenli hale getirmek için tek yolu olduğundan SSL kullanarak hizmetinize kullanıma sunmak için. SSL ile ayarlama hakkında daha fazla bilgi için [!INCLUDE[iisver](../../../../includes/iisver-md.md)] bkz [IIS'te SSL uygulama](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>
 - <xref:System.ServiceModel.Web.WebInvokeAttribute>

@@ -1,18 +1,18 @@
 ---
-title: İlişkilerde sorgulama
+title: İlişkilerde Sorgulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: 783ecb35408f63c7f3e7299e503c3f0fda3f36ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e1cf9efcf47fc70421c64541aead5fb36d8c9d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666442"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083159"
 ---
-# <a name="querying-across-relationships"></a>İlişkilerde sorgulama
+# <a name="querying-across-relationships"></a>İlişkilerde Sorgulama
 Diğer nesne veya koleksiyonlar, sınıf tanımlarındaki diğer nesnelerin başvuruları doğrudan veritabanında yabancı anahtar ilişkileri karşılık gelir. İlişki özelliklerine erişmek ve bir nesneden diğerine gitmek için nokta gösterimi kullanılarak sorguladığınızda, bu ilişkileri kullanabilirsiniz. Bu erişim işlemleri daha karmaşık birleştirmelerden veya eşdeğer SQL bağıntılı alt sorgularda çevir.  
   
  Örneğin, aşağıdaki sorguyu yalnızca Londra'da bulunan müşteriler için siparişleri için sonuçları kısıtlamak için bir yol olarak müşterilere siparişleri gider.  
@@ -53,4 +53,5 @@ WHERE  (t0.City = @p0)
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

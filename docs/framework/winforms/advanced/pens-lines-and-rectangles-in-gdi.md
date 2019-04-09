@@ -17,12 +17,12 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 91f41fb4acf5ec174bd76498a70aed3dcda076f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078232"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+'da Kalemler, Çizgiler ve Dikdörtgenler
 İle çizgi çizmek için [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] oluşturmak gereken bir <xref:System.Drawing.Graphics> nesnesi ve bir <xref:System.Drawing.Pen> nesne. <xref:System.Drawing.Graphics> Nesne çizim yapan yöntemler sağlar ve <xref:System.Drawing.Pen> nesnesi gibi çizgi rengini, genişliğini ve stili özniteliklerini depolar.  
@@ -68,9 +68,10 @@ ms.locfileid: "57705751"
  A <xref:System.Drawing.Rectangle> nesnesi yöntemlerini ve özelliklerini düzenleme ve dikdörtgen hakkında bilgileri toplamak için sahiptir. Örneğin, <xref:System.Drawing.Rectangle.Inflate%2A> ve <xref:System.Drawing.Rectangle.Offset%2A> yöntemleri, boyutunu ve konumunu dikdörtgenin değiştirin. <xref:System.Drawing.Rectangle.IntersectsWith%2A> Yöntemi bildirir olup dikdörtgen başka kesişip dikdörtgen, verilen ve <xref:System.Drawing.Rectangle.Contains%2A> yöntemi söyler, belirli bir noktaya dikdörtgen içinde olup.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
-- [Nasıl yapılır: Kalem oluşturma](how-to-create-a-pen.md)
-- [Nasıl yapılır: Bir Windows formunda çizgi çizme](how-to-draw-a-line-on-a-windows-form.md)
-- [Nasıl yapılır: Anahatlı şekil çizme](how-to-draw-an-outlined-shape.md)
+- [Nasıl yapılır: Kalem Oluşturma](how-to-create-a-pen.md)
+- [Nasıl yapılır: Windows Formunda Çizgi Çizme](how-to-draw-a-line-on-a-windows-form.md)
+- [Nasıl yapılır: Anahatlı Şekil Çizme](how-to-draw-an-outlined-shape.md)

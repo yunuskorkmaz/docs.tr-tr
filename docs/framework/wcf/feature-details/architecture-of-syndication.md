@@ -2,12 +2,12 @@
 title: Dağıtım Mimarisi
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: b07fc03fd11c794d804b6bcd1813010965365e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075918"
 ---
 # <a name="architecture-of-syndication"></a>Dağıtım Mimarisi
 Dağıtım API dağıtılmış içeriği, çeşitli biçimlerde hat açın yazılmasına izin veren bir biçim nötr programlama modeli sağlamak için tasarlanmıştır. Aşağıdaki sınıflar soyut bir veri modeli oluşur:  
@@ -78,6 +78,7 @@ Dağıtım API dağıtılmış içeriği, çeşitli biçimlerde hat açın yazı
 -   Bir anahtar dağıtım protokolleri genişletilebilirlik özelliğidir. Hem Atom 1.0 hem de RSS 2.0 öznitelikler ve öğeler'de tanımlanmayan, dağıtım akışlarını eklemenize olanak tanır. Özel öznitelikler ve Uzantılar ile çalışmaya ilişkin iki yöntem WCF dağıtım programlama modeli sağlar: yeni bir sınıf ve geniş yazılmış erişim türetme. Daha fazla bilgi için [dağıtım genişletilebilirliği](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Dağıtımı Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
 - [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

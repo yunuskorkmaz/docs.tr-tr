@@ -2,12 +2,12 @@
 title: Oracle için .NET Framework veri sağlayıcısı için sistem gereksinimleri
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: cc3fc61c5adebf67b1203897579b2f959cbc0546
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61f8509cce248f6cc0a56900227f9758eb27c4e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111053"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Oracle için .NET Framework veri sağlayıcısı için sistem gereksinimleri
 Oracle için .NET Framework veri sağlayıcısı, Microsoft Data Access Components (MDAC) 2.6 veya sonraki sürümünü gerektirir. MDAC 2.8 SP1 önerilir.  
@@ -38,5 +38,6 @@ Unicode=True
  Kullanılabilirlik nedenlerinden dolayı için <xref:System.Data.OracleClient.OracleLob> nesne .NET Framework Stream sınıfından devralır ve sağlar **ReadByte** ve **WriteByte** yöntemleri. Ayrıca yöntemler gibi uygular **CopyTo** ve **silme**, bu bölümlerde Oracle iş **LOB** nesneleri. Buna karşılık, Oracle istemci yazılımı karakteri ile çalışmak için API'ler sunar **LOB**s (**CLOB** ve **NCLOB**). Ancak, bu API'leri yalnızca tam karakterler üzerinde çalışır. Bu farklılık nedeniyle, Oracle için veri sağlayıcısı için destek uygular **okuma** ve **ReadByte** byte-wise bir şekilde UTF-16 verilerle çalışmak için. Ancak, diğer yöntemleri **OracleLob** nesne yalnızca tam karakter operations izin verin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

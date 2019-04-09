@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splines [Windows Forms], Bezier
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-ms.openlocfilehash: 7648f7f9da72abea4bfc87603eea290614294eff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107334"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier GDI +'daki eğrileri
 Dört noktası tarafından belirtilen eğri Bézier eğri olduğu: iki uç noktaları (p1 ve p2) ve iki denetim noktaları (c1 ve c2). Eğriyi, başlar p1 ve p2 sona erer. Eğri denetim noktaları üzerinden geçmez, ancak denetim noktaları belirli yönde eğri çekmek ve bends eğrinin şeklini etkileyen mıknatıs davranır. Bézier eğri denetim noktalarını ve uç noktaları ile birlikte aşağıda gösterilmiştir.  
@@ -38,9 +38,10 @@ Dört noktası tarafından belirtilen eğri Bézier eğri olduğu: iki uç nokta
  ![Paths](./media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
 - [Eğriler Oluşturma ve Çizme](constructing-and-drawing-curves.md)
-- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md)
-- [Nasıl yapılır: Kalem oluşturma](how-to-create-a-pen.md)
+- [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](how-to-create-graphics-objects-for-drawing.md)
+- [Nasıl yapılır: Kalem Oluşturma](how-to-create-a-pen.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 9adbb4166d713cea0344c9fa58ce85e5afce086d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f8e13c6983b6c3a88bc1d9f559f7fac3d6342d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110090"
 ---
 # <a name="duplex-services"></a>Çift Yönlü Hizmetler
 Çift yönlü hizmet sözleşmesi, her iki bitiş noktası iletileri diğer bağımsız olarak gönderebilir ileti değişim deseni ' dir. Çift yönlü bir hizmet, bu nedenle, olay benzeri davranış sağlayan geri istemci uç noktası için iletileri gönderebilir. Bir istemci bir hizmete bağlanır ve hizmet üzerinde hizmet istemciye iletileri gönderebilir bir kanal sağlar çift yönlü iletişimi gerçekleşir. Çift yönlü hizmetler olay benzeri davranışını yalnızca bir oturumunda çalıştığını unutmayın.  
@@ -40,9 +40,7 @@ ms.locfileid: "54717930"
  Oturum iletişim hem çift yönlü iletişimi destekleyen bir bağlama sağlamak için hizmeti için yapılandırma ayarlanması gerekir. `wsDualHttpBinding` Öğesi oturumu iletişimi destekler ve her yön için bir ikili HTTP bağlantılarını sağlayarak çift yönlü iletişim sağlar.  
   
  İstemcide, sunucu istemciye bağlanmak için aşağıdaki örnek yapılandırmada gösterildiği gibi kullanabileceğiniz bir adresi yapılandırmanız gerekir.  
-  
-  
-  
+
 > [!NOTE]
 >  Genellikle bir güvenli konuşma kullanarak kimlik doğrulaması için başarısız olmayan yönlü istemciler durum bir <xref:System.ServiceModel.Security.MessageSecurityException>. Ancak, bir güvenli konuşma kullanan çift yönlü istemci kimlik doğrulaması başarısız olursa, istemci alır bir <xref:System.TimeoutException> yerine.  
   
@@ -90,6 +88,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 >  Bir hizmet veya istemcinin, kanal kapandığında çift yönlü modeli otomatik olarak algılamaz. Bu nedenle istemci beklenmedik şekilde sonlandırılırsa, varsayılan olarak hizmet değil bildirilir veya bir istemci beklenmedik şekilde sonlandırılırsa, hizmet olmayan bildirilir. Bu nedenle seçerseniz birbirine bildirmek için kendi protokolü, istemciler ve hizmetler uygulayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çift Yönlü](../../../../docs/framework/wcf/samples/duplex.md)
 - [İstemci Çalışma Zamanı Davranışını Belirtme](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Nasıl yapılır: Kanal fabrikası oluşturma ve bunu kanal oluşturmak ve yönetmek için kullanın](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Nasıl yapılır: Kanal Fabrikası Oluşturma ve Bunu Kanal Oluşturmak ve Yönetmek için Kullanma](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

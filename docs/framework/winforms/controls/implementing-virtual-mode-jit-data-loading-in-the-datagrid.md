@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 641db19cc6493a20c9f9a34622f466e3623c32ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088658"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Zamanında Veri Yükleme ile Sanal Modu Uygulama
 Sanal modda uygulamak için bir neden <xref:System.Windows.Forms.DataGridView> yalnızca gerekli verileri almak üzere denetimidir. Bu adlandırılır *tam zamanında veri yükleme*.  
@@ -71,10 +71,11 @@ Sanal modda uygulamak için bir neden <xref:System.Windows.Forms.DataGridView> y
  Uygulamanızı'nın kayma performansını artırmak için yerel olarak depolanan veri miktarı artırabilir. Ancak, başlangıç süresini kısaltmak için başlangıçta çok fazla veri yükleme olmadığını önlemesi gerekmektedir. Değiştirmek istediğiniz `Cache` , depolayabileceğiniz veri sayısını artırmak için sınıf. Daha fazla veri sayfalarını kullanarak kayan verimliliği artırabilir, ancak veri sayfasında, kullanılabilir bant genişliğini ve sunucu gecikme süresi bağlı olarak satır ideal sayısını belirlemek ihtiyacınız olacak. Daha küçük sayfalarıyla sunucusu daha sık erişilen, ancak istenen veri döndürülemiyor daha az zaman alır. Daha fazla bant genişliği daha sorun gecikme ise, büyük veri sayfaları kullanmak isteyebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - [Windows Forms DataGridView Denetiminde Performans Ayarlaması](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetimini Ölçeklendirme için En İyi Yöntemler](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Sanal Mod](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [İzlenecek yol: Windows Forms DataGridView denetiminde sanal modu uygulama](implementing-virtual-mode-wf-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde tam zamanında veri yükleme ile sanal modu uygulama](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [İzlenecek yol: Windows Forms DataGridView Denetiminde Sanal Modu Uygulama](implementing-virtual-mode-wf-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Zamanında Veri Yükleme ile Sanal Modu Uygulama](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

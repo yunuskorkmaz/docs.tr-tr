@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Meta veri alma ve uyumlu bir hizmet ekleme'
+title: 'Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2ddc50e2851217002c825163761855d649b56db1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608501"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095977"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Nasıl yapılır: Meta veri alma ve uyumlu bir hizmet ekleme
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme
 Genellikle, aynı kişi değildir tasarlayıp Hizmetleri. Birlikte çalışma uygulamaları önemli olduğu ortamlarda sözleşmelerine tasarlanan veya Web Hizmetleri Açıklama Dili (WSDL) açıklanan ve bir geliştirici, sağlanan Sözleşmesi ile uyumlu bir hizmet uygulaması gerekir. Windows Communication Foundation (WCF) için bir hizmetiniz geçirme ancak kablo biçimini korumak isteyebilirsiniz. Ayrıca, çift yönlü sözleşmeler de bir geri çağırma anlaşması uygulamak çağıranlar gerektirir.  
   
  Bu gibi durumlarda kullanmalısınız [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (veya eşdeğer bir aracı) gereksinimlerini karşılamak için uygulayabileceğiniz yönetilen bir dilde hizmet sözleşme arabirimi oluşturmak için Sözleşme. Genellikle [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kanal fabrikası ya da bir WCF istemci türü ile yanı sıra yukarı doğru bağlama ayarlar bir istemci yapılandırma dosyası ile kullanılan bir hizmet sözleşmesini almak için kullanılır ve adresi. Oluşturulan yapılandırma dosyası kullanmak için bir hizmet yapılandırma dosyasına değiştirmeniz gerekir. Hizmet sözleşmesi değiştirmek gerekebilir.  
@@ -60,4 +60,5 @@ Genellikle, aynı kişi değildir tasarlayıp Hizmetleri. Birlikte çalışma uy
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+
+- [ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

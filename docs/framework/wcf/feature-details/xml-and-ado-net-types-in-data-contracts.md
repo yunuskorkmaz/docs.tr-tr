@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-ms.openlocfilehash: b5d9c3362ebd69e587d58104e7ebc9d9e96a9020
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073968"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Veri Sözleşmelerinde XML ve ADO.NET Türleri
 Windows Communication Foundation (WCF) veri sözleşme modeli XML doğrudan temsil eden belirli türlerini destekler. Bu türleri XML olarak serileştirilme şeklini, seri hale getirici herhangi başka bir işlemeye olmadan bu tür XML içeriği yazar. Desteklenen türler <xref:System.Xml.XmlElement>, dizilerin <xref:System.Xml.XmlNode> (ama `XmlNode` kendisini yazın), türleri uygulayan <xref:System.Xml.Serialization.IXmlSerializable>. <xref:System.Data.DataSet> Ve <xref:System.Data.DataTable> türü belirtilmiş datasets yanı sıra türü veritabanı programlamada kullanılan yaygın olarak. Bu türleri uygulayan `IXmlSerializable` modeli sözleşme arabirimi ve verileri bu nedenle serileştirilebilir şunlardır. Bu tür için bazı özel durumlar, bu konunun sonunda listelenmiştir.  
@@ -203,7 +203,8 @@ Windows Communication Foundation (WCF) veri sözleşme modeli XML doğrudan tems
  Veri sözleşmesi modelinde türü belirtilmiş DataSets için destek sınırlıdır. Türü belirtilmiş DataSets serisi seri hale getirilebilir ve kendi şemasını dışarı aktarabilirsiniz. Ancak, yalnızca var olanları kullanabilirsiniz olarak veri sözleşmesi şema içeri aktarma yeni oluşturamıyor şemada, veri kümesi türleri yazılan. Var olan bir türü belirtilmiş DataSet kullanarak gösterebilir `/r` Svcutil.exe üzerinde geçin. Bir Svcutil.exe olmadan kullanmayı denerseniz `/r` yazılan veri kümesi kullanan bir hizmet üzerinde değiştirmek, alternatif bir serileştirici (XmlSerializer) otomatik olarak seçilir. DataContractSerializer kullanmanız gerekir ve veri kümeleri, şema oluşturmak gerekir, aşağıdaki yordamı kullanabilirsiniz: türü belirtilmiş veri kümesi türleri üretmek (ile XSD.exe'nin aracını kullanarak `/d` hizmette geçiş), derleme türleri ve gelin bunları kullanarak `/r` Svcutil.exe üzerinde geçin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>
-- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Veri Sözleşmelerini Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

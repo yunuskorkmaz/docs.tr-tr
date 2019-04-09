@@ -1,5 +1,5 @@
 ---
-title: Ağda akışları kullanma
+title: Ağda Akışları Kullanma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: 9849c64b30ed1021c12f34a7920104537292197a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a593ea324d39d8161ad87c4df6d6010970f3e1c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109063"
 ---
-# <a name="using-streams-on-the-network"></a>Ağda akışları kullanma
+# <a name="using-streams-on-the-network"></a>Ağda Akışları Kullanma
 Ağ kaynaklarını .NET Framework akışları olarak temsil edilir. .NET Framework akışları genel düşünerek, aşağıdaki özellikleri sunar:  
   
 -   Web veri göndermek ve almak için yaygın bir yolu. Hangi gerçek dosyasının içeriğini — HTML, XML veya başka bir şey — uygulamanızın kullanacağı <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> ve <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> veri göndermek ve almak için.  
@@ -103,5 +103,6 @@ sr.Close()
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: WebRequest sınıfını kullanarak veri isteme](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
+
+- [Nasıl yapılır: WebRequest Sınıfını Kullanarak Veri İsteme](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
 - [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)

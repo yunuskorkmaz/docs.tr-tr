@@ -1,15 +1,15 @@
 ---
-title: IPv6 devre dışı bırakma ve etkinleştirme
+title: IPv6 Etkinleştirme ve Devre Dışı Bırakma
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 75c452216a5f4a74792d641a840f53e4423ab92f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73dee0cb57674c8a2fa4ba2246162870ab1e3a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083692"
 ---
-# <a name="enabling-and-disabling-ipv6"></a>IPv6 devre dışı bırakma ve etkinleştirme
+# <a name="enabling-and-disabling-ipv6"></a>IPv6 Etkinleştirme ve Devre Dışı Bırakma
 IPv6 protokolü kullanmak için bir IPv6 destekleyen bir işletim sistemi sürümünü çalıştırdığından emin olun ve işletim sistemi ve ağ sınıfları düzgün yapılandırıldığından emin olun.  
   
 ## <a name="configuration-steps"></a>Yapılandırma adımları  
@@ -45,6 +45,7 @@ IPv6 protokolü kullanmak için bir IPv6 destekleyen bir işletim sistemi sürü
  .NET Framework sürüm 2.0 ve üzeri, Windows IPv6 sonra üyeleri destekliyorsa <xref:System.Net.Dns?displayProperty=nameWithType> sınıfı (örneğin, <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> yöntemi), tek bir kısıtlama olmaksızın IPv6 adreslerini döndürür. Geçersiz DNS üyeleri <xref:System.Net.Dns?displayProperty=nameWithType> (örneğin, <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> yöntemi) okuyun ve yapılandırma dosyasında IPv6 etkin ayarı için değer tanınamıyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İnternet Protokolü Sürüm 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Yuvalar](../../../docs/framework/network-programming/sockets.md)
 - [Ağ Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: cd143b55190ce398cc33e57a832ae85aabc36c41
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f969e13ba50c2aadd170bdb28716213056d62cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100125"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>İzlenecek yol: Microsoft Expression Blend Kullanarak Düğme Oluşturma
 Bu izlenecek yol, oluşturma işleminde size yol gösterir bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Microsoft Expression Blend kullanarak özelleştirilmiş düğmesi.  
@@ -248,8 +248,9 @@ Bu izlenecek yol, oluşturma işleminde size yol gösterir bir [!INCLUDE[TLA2#tl
 -   Çeşitli: gradyan, oluşturun, BitmapEffects ekleyin, dönüşümler kullanma ve nesnelerin temel özelliklerini ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XAML Kullanarak bir Düğme Oluşturma](walkthrough-create-a-button-by-using-xaml.md)
 - [Stil ve Şablon Oluşturma](styling-and-templating.md)
 - [Animasyona Genel bakış](../graphics-multimedia/animation-overview.md)
 - [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Bit Eşlem Etkilerine Genel Bakış](../graphics-multimedia/bitmap-effects-overview.md)
+- [Bit Eşlem Efektlerine Genel Bakış](../graphics-multimedia/bitmap-effects-overview.md)

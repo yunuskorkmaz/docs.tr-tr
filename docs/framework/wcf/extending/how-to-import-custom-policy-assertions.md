@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Özel ilke onaylamalarını içe aktarma'
+title: 'Nasıl yapılır: Özel İlke Onaylamalarını İçeri Aktarma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: e27c6ed6508544180d8659717b700e604b0f3d3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073630"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>Nasıl yapılır: Özel ilke onaylamalarını içe aktarma
+# <a name="how-to-import-custom-policy-assertions"></a>Nasıl yapılır: Özel İlke Onaylamalarını İçeri Aktarma
 İlke onaylamalarını bir hizmet uç noktası gereksinimlerini ve özelliklerini açıklar.  İstemci uygulamaları ilke onaylamalarını bağlama istemciyi yapılandırmak için veya bir hizmet uç noktası için hizmet sözleşmesi özelleştirmek için hizmet meta verilerinde kullanabilir.  
   
  Özel ilke onaylamalarını uygulayarak aktarılır <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> arabirimi ve söz konusu nesne meta veri sistemini veya uygulama kaydederek geçirme uygulama yapılandırma dosyanızda yazın.  Uygulamaları <xref:System.ServiceModel.Description.IPolicyImportExtension> arabirimi, varsayılan bir oluşturucu sağlamalıdır.  
@@ -64,6 +64,7 @@ ms.locfileid: "54674787"
 1.  Alma için ekleme <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> özelliği (örneğin, kullanıyorsanız <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>) meta verileri içeri aktarmadan önce.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>

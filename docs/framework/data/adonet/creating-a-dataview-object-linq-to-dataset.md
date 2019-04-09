@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 3f53c9889e1fdae6c582e8d4a17f640e425e6594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121660"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView nesnesi (LINQ to DataSet) oluşturma
 Oluşturmanın iki yolu vardır. bir <xref:System.Data.DataView> içinde [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı. Oluşturabileceğiniz bir <xref:System.Data.DataView> gelen bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] üzerinden sorgu bir <xref:System.Data.DataTable>, ya da bir türü belirtilmiş veya türsüz oluşturabilirsiniz <xref:System.Data.DataTable>. Her iki durumda da, oluşturduğunuz <xref:System.Data.DataView> birini kullanarak <xref:System.Data.DataTableExtensions.AsDataView%2A> genişletme yöntemleri; <xref:System.Data.DataView> atmamalıdır doğrudan değil [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bağlamı.  
@@ -71,6 +71,7 @@ Oluşturmanın iki yolu vardır. bir <xref:System.Data.DataView> içinde [!INCLU
  Ancak, ayarı ile birlikte gelen bir performans kaybı yoktur <xref:System.Data.DataView.RowFilter%2A> veya <xref:System.Data.DataView.Sort%2A> sonra özellik <xref:System.Data.DataView> bir sorgudan oluşturuldu <xref:System.Data.DataView> filtreleme ve sıralama işlemleri desteklemek için bir dizin oluşturur. Ayarı <xref:System.Data.DataView.RowFilter%2A> veya <xref:System.Data.DataView.Sort%2A> özelliği yükü uygulamanıza ekleme ve performansı azaltarak veri dizini oluşturur. Mümkün olduğunda, ilk oluşturduğunuzda bilgi sıralama ve filtreleme belirtmek daha iyi <xref:System.Data.DataView> ve daha sonra değiştirmekten kaçının.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
 - [DataView ile Filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
 - [DataView ile Sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

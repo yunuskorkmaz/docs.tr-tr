@@ -1,15 +1,15 @@
 ---
-title: Bağlantı dizesi söz dizimi
+title: Bağlantı Dizesi Söz Dizimi
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084981"
 ---
-# <a name="connection-string-syntax"></a>Bağlantı dizesi söz dizimi
+# <a name="connection-string-syntax"></a>Bağlantı Dizesi Söz Dizimi
 Her .NET Framework veri sağlayıcısı sahip bir `Connection` devralınan nesne <xref:System.Data.Common.DbConnection> sağlayıcıya özgü yanı sıra <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliği. Belirli bir bağlantı dizesi söz dizimi tüm sağlayıcılar için belgelenen kendi `ConnectionString` özelliği. Aşağıdaki tablo, .NET Framework'e dahil edilen dört veri sağlayıcıları listeler.  
   
 |.NET framework veri sağlayıcısı|Açıklama|  
@@ -19,7 +19,7 @@ Her .NET Framework veri sağlayıcısı sahip bir `Connection` devralınan nesne
 |<xref:System.Data.Odbc>|ODBC kullanarak kullanıma sunulan veri kaynakları için veri erişim sağlar. Bağlantı dizesi söz dizimi hakkında daha fazla bilgi için bkz. <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A>.|  
 |<xref:System.Data.OracleClient>|Version 8.1.7 Oracle için veri erişimi sağlar veya üzeri. Bağlantı dizesi söz dizimi hakkında daha fazla bilgi için bkz. <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.|  
   
-## <a name="connection-string-builders"></a>Bağlantı dizesi oluşturucular  
+## <a name="connection-string-builders"></a>Bağlantı Dizesi Oluşturucular  
  ADO.NET 2.0, .NET Framework veri sağlayıcıları için aşağıdaki bağlantı dizesi oluşturucular kullanıma sunuldu.  
   
 -   <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
@@ -195,6 +195,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
  ODBC bağlantı dizesi söz dizimi hakkında daha fazla bilgi için bkz. <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

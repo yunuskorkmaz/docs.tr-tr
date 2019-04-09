@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows formdan ses çalma'
+title: 'Nasıl yapılır: Bir Windows Formdan Ses Çalma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 7d8c723fc995e8b9987681e3db343c43d3bc2682
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714716"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078687"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>Nasıl yapılır: Bir Windows formdan ses çalma
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>Nasıl yapılır: Bir Windows Formdan Ses Çalma
 Bu örnek, çalışma zamanında verilen yolda bir ses çalar.  
   
 ## <a name="example"></a>Örnek  
@@ -65,6 +65,6 @@ private void playSimpleSound()
  Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, dosyayı `Form1.vb` Visual Basic kaynak dosyası olmayabilir. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- <xref:System.Media.SoundPlayer>
-- [Nasıl yapılır: Bir Windows Form içinde zaman uyumsuz ses yükleme](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
 
+- <xref:System.Media.SoundPlayer>
+- [Nasıl yapılır: Bir Windows Form içinde Zaman Uyumsuz Ses Yükleme](how-to-load-a-sound-asynchronously-within-a-windows-form.md)

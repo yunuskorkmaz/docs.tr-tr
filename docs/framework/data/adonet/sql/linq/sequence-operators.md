@@ -1,15 +1,15 @@
 ---
-title: Dizi işleçleri
+title: Dizi İşleçleri
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113691"
 ---
-# <a name="sequence-operators"></a>Dizi işleçleri
+# <a name="sequence-operators"></a>Dizi İşleçleri
 Genel olarak bakıldığında, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir veya daha fazla aşağıdaki kalitelerini dizisi işleçleri desteklemez:  
   
 -   Bir lambda ile dizin parametresi alır.  
@@ -46,4 +46,5 @@ Genel olarak bakıldığında, [!INCLUDE[vbtecdlinq](../../../../../../includes/
  Tüm desteklenen dizisi işleçleri iş dışındaki ortak dil çalışma zamanında (CLR) beklendiği gibi `Average`. `Average` Oysa ortalama türü ile aynı türde bir değer döndürür CLR'de `Average` döndürür ya da her zaman bir <xref:System.Double> veya <xref:System.Decimal>. Kaynak bağımsız değişkenini açıkça ise dönüştürme çift / ondalık ya da Seçici bıraktığı çift / ondalık, sonuçta elde edilen SQL böyle bir dönüştürme de sahip olur ve sonucu beklendiği gibi olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

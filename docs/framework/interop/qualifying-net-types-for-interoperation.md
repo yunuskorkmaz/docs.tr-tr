@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a40b9524990213eaaf2ed78503b6f831776306ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097983"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Birlikte Çalışma için Niteleyici .NET Türleri
 COM uygulamaları için bir bütünleştirilmiş kodundaki türler kullanıma sunmak istiyorsanız, tasarım zamanında COM birlikte çalışabilirlik gereksinimlerini göz önünde bulundurun. Aşağıdaki yönergelere uyunuz, yönetilen türler (sınıfı, arabirim, yapı ve sabit listesi) COM türleri ile sorunsuz şekilde tümleştirin:  
@@ -48,8 +48,9 @@ COM uygulamaları için bir bütünleştirilmiş kodundaki türler kullanıma su
  COM dışarı aktardığınızda, yönetilen bir tür devralma hiyerarşisinde düzleştirilir. Sürüm oluşturma, yönetilen ve yönetilmeyen ortamlar arasında da farklılık gösterir. Türler com'a diğer yönetilen türleri aynı sürüm özelliklere sahip değilsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
 - [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [Sınıf arabirimine giriş](com-callable-wrapper.md#introducing-the-class-interface)
 - [Birlikte Çalışma Özniteliklerini Uygulama](../../../docs/framework/interop/applying-interop-attributes.md)
-- [COM için Bütünleştirilmiş Kod Paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [COM için Derlemeyi Paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

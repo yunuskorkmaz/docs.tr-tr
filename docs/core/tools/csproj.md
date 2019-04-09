@@ -2,12 +2,12 @@
 title: .NET Core csproj biçimine eklemeler
 description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkında bilgi edinin
 ms.date: 09/22/2017
-ms.openlocfilehash: e196be28f622873359153f32c5dd9b0b5a514c0f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: f6b57164086efa357c70f55a9b9ac16b680c8f46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085798"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -283,7 +283,6 @@ Lisans dosyası, proje için örnek kullanım açıkça ekleyerek iyileştirmesi
 
 Bir paket için uygun olan lisans URL'si. (_Visual Studio 15.9.4, .NET SDK'sı 2.1.502 ve 2.2.101 beri kullanım dışı_)
 
-
 ### <a name="packageiconurl"></a>PackageIconUrl
 
 Kullanıcı Arabirimi ekranı pakette için simge olarak kullanılacak bir URL saydam arka plana sahip 64 x 64 görüntüsü.
@@ -383,7 +382,7 @@ Her öznitelik içeriği ve başka neslini aşağıdaki tabloda gösterildiği g
 Notlar:
 
 * `AssemblyVersion` ve `FileVersion` değerini almak için varsayılandır `$(Version)` soneki olmadan. Örneğin, varsa `$(Version)` olduğu `1.2.3-beta.4`, değer sonra `1.2.3`.
-* `InformationalVersion` değerini varsayılan olarak `$(Version)`.
+* `InformationalVersion` Varsayılan olarak, değeri olarak `$(Version)`.
 * `InformationalVersion` sahip `$(SourceRevisionId)` özelliği varsa eklenir. Bunu kullanarak devre dışı bırakılabilir `IncludeSourceRevisionInInformationalVersion`.
 * `Copyright` ve `Description` özellikleri NuGet meta veriler için de kullanılır.
 * `Configuration` tüm yapı işlemi ile paylaşılır ve aracılığıyla ayarlanan `--configuration` parametresinin `dotnet` komutları.

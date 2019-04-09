@@ -5,18 +5,16 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108712"
 ---
 # <a name="framework-property-metadata"></a>Çerçeve Özelliği Meta Verileri
 Çerçeve özelliği meta verileri seçenekleri nesne öğelerini WPF framework düzeyde olduğu kabul özelliklerinin raporlanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mimarisi. Genel olarak, işleme, veri bağlama gibi özelliklerin WPF çerçeve düzeyi atamasını gerektirir ve özellik sistemi daraltmalar tarafından işlenmesini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ve yürütülebilir dosyalar. Çerçeve özelliği meta verileri, belirli bir öğe özelliklerinin özelliğe özgü özellikleri belirlemek için bu sistemler tarafından sorgulanır.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu konu, üzerinde bir tüketici mevcut bağımlılık özellikleri perspektifinden bağımlılık özellikleri anladığınızı varsayar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfları ve okuma [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md). Ayrıca okuma [bağımlılık özelliği meta verisi](dependency-property-metadata.md).  
@@ -29,7 +27,7 @@ ms.locfileid: "57379282"
   
 -   Bir öğenin üst öğesi etkileyen düzen özelliklerini raporlama (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>). Bu bayrak varsayılan olarak ayarlanmış olduğu bazı örnekler <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> ve <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>.  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Varsayılan olarak, bağımlılık özellikleri değerlerini devralmaz. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> Ayrıca bazı denetim birleştirme senaryolar için gerekli olan bir görsel ağacında seyahat Devralmanın yol sağlar.  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>biçimindeki telefon numarasıdır. Varsayılan olarak, bağımlılık özellikleri değerlerini devralmaz. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> Ayrıca bazı denetim birleştirme senaryolar için gerekli olan bir görsel ağacında seyahat Devralmanın yol sağlar.  
   
     > [!NOTE]
     >  Terim "özellik değerleri anlamına gelir bağımlılık özellikleri için özel bir durum bağlamında devralır"; alt öğeleri nedeniyle WPF çerçeve düzeyi özelliği üst öğelerden gerçek bağımlılık özelliği değer devralabilir geldiğini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi. Yönetilen kod türü ve üyeleri devralma yoluyla türetilmiş türler ile doğrudan yapılacak bir şey yok sahiptir. Ayrıntılar için bkz [özellik değeri kalıtımı](property-value-inheritance.md).  
@@ -73,6 +71,7 @@ ms.locfileid: "57379282"
  Bu davranış tarafından uygulanan <xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>ve türetilmiş meta veri sınıflarında geçersiz kılınabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
 - [Bağımlılık Özelliği Meta Verisi](dependency-property-metadata.md)
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)

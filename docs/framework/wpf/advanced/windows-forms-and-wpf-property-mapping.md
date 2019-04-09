@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088827"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Forms ve WPF Özelliğini Eşleme
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] teknolojileri sahip iki özelliği, benzer ancak farklı modeli. *Özellik eşleme* iki mimariler arasında birlikte çalışabilirliği destekler ve aşağıdaki özellikleri sağlar:  
@@ -135,9 +135,10 @@ ms.locfileid: "57358567"
 |<xref:System.Windows.Forms.Control.Visible%2A>|<xref:System.Windows.UIElement.Visibility%2A>|<xref:System.Windows.Forms.Integration.ElementHost> Denetim kümeleri <xref:System.Windows.UIElement.Visibility%2A> aşağıdaki kuralları kullanarak barındırılan öğesindeki özelliği:<br /><br /> -   <xref:System.Windows.Forms.Control.Visible%2A> = `true` eşlendiği <xref:System.Windows.Visibility.Visible>.<br />-   <xref:System.Windows.Forms.Control.Visible%2A> = `false` eşlendiği <xref:System.Windows.Visibility.Hidden>.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF ve Win32 Birlikte Çalışması](wpf-and-win32-interoperation.md)
 - [WPF ve Windows Forms Birlikte Çalışması](wpf-and-windows-forms-interoperation.md)
-- [İzlenecek yol: WindowsFormsHost Öğesi kullanarak özellikleri eşleme](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [İzlenecek yol: ElementHost denetimini kullanarak özellikleri eşleme](walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [İzlenecek yol: WindowsFormsHost Öğesi Kullanarak Özellikleri Eşleme](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [İzlenecek yol: ElementHost Denetimini Kullanarak Özellikleri Eşleme](walkthrough-mapping-properties-using-the-elementhost-control.md)

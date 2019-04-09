@@ -1,5 +1,5 @@
 ---
-title: UDP Hizmetleri kullanma
+title: UDP Hizmetleri Kullanma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: f89a0ad79dbf46c6d75d56106ad05a683482a501
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 397c51501ac333d6df699064b3fe82920bc38152
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086110"
 ---
-# <a name="using-udp-services"></a>UDP Hizmetleri kullanma
+# <a name="using-udp-services"></a>UDP Hizmetleri Kullanma
 <xref:System.Net.Sockets.UdpClient> Sınıfı UDP kullanarak Ağ Hizmetleri ile iletişim kurar. Özellikleri ve yöntemleri <xref:System.Net.Sockets.UdpClient> oluşturma ayrıntıları soyut sınıf bir <xref:System.Net.Sockets.Socket> istemek ve UDP kullanarak verileri alma.
 
 Kullanıcı Veri Birimi Protokolü (UDP), uzak bir konağa verileri sunmak için bir en iyi hale getiren basit bir protokoldür. Ancak, bağlantısız bir protokol UDP protokolünü olduğundan, uzak uç noktaya gönderdi UDP veri birimi ulşamasını garanti değil ya da, bunlar gönderildiği sırada ulşamasını garanti. UDP kullanan uygulamalar, eksik, yinelenen ve sıra dışı veri birimi işlemek için hazırlanması gerekir.
@@ -159,5 +159,6 @@ class Program
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.Sockets.UdpClient>
 - <xref:System.Net.IPAddress>

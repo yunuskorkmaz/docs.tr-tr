@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101307"
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
 Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, başarısızlık veya her ikisi de) güvenlik olaylarını denetleme özelliği ile oturum açabilirsiniz. Olayları Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi'ni kullanarak incelenebilir.  
@@ -88,22 +88,23 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar (başarı, b
 |Sistem|Uygulama günlüğü|Güvenlik günlüğü|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] veya üzeri|Desteklenir|Desteklenmez|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] ve [!INCLUDE[wv](../../../../includes/wv-md.md)]|Desteklenir|İş parçacığı bağlamı sahip olması gerekir `SeAuditPrivilege`|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] and [!INCLUDE[wv](../../../../includes/wv-md.md)]|Desteklenir|İş parçacığı bağlamı sahip olması gerekir `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Diğer faktörler  
  Ek olarak işletim sistemi, aşağıdaki tabloda günlük etkinleştirme denetleyen diğer ayarlar açıklanmaktadır.  
   
 |faktörü|Uygulama günlüğü|Güvenlik günlüğü|  
 |------------|---------------------|------------------|  
-|Denetim İlkesi Yönetimi|Uygulanamaz.|Yapılandırması ile birlikte, güvenlik günlüğü ayrıca yerel güvenlik yetkilisi (LSA) ilkesi tarafından kontrol edilir. "Nesne erişimini denetle" kategorisi de etkinleştirilmesi gerekir.|  
+|Denetim İlkesi Yönetimi|Geçerli değildir.|Yapılandırması ile birlikte, güvenlik günlüğü ayrıca yerel güvenlik yetkilisi (LSA) ilkesi tarafından kontrol edilir. "Nesne erişimini denetle" kategorisi de etkinleştirilmesi gerekir.|  
 |Varsayılan kullanıcı deneyimi|Uygulama işlemleri için hiçbir ek adım gerekmez, tüm kimliği doğrulanmış kullanıcılara uygulama günlüğüne yazabilirsiniz.|(Bağlam) uygulama işlemi olmalıdır `SeAuditPrivilege`.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Nasıl yapılır: Güvenlik olaylarını denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
-- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
+- [Nasıl yapılır: Güvenlik Olaylarını Denetleme](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<davranışlar >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
 - [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

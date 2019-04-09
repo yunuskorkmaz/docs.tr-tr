@@ -1,5 +1,5 @@
 ---
-title: 'En iyi uygulamalar: Veri Sözleşmesi Sürümü Oluşturma'
+title: 'En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409477"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119008"
 ---
-# <a name="best-practices-data-contract-versioning"></a>En iyi uygulamalar: Veri Sözleşmesi Sürümü Oluşturma
+# <a name="best-practices-data-contract-versioning"></a>En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma
 Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. Veri sözleşmeleri hakkında daha fazla bilgi için bkz: konularındaki [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Şema doğrulaması ilgili not  
@@ -91,6 +91,7 @@ Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluştur
  Burada listelenen yönergeleri bazı özel durumlar uygulandığında güvenle yoksayılabilir. Seri hale getirme, seri durumundan çıkarma ve şema mekanizmaları ilgili yönergeleri'ndeki deviating önce tam olarak anladığınızdan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
@@ -100,8 +101,8 @@ Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluştur
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
-- [Veri Anlaşmalarını Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Veri Anlaşması Sürümü Oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Veri Anlaşması Adları](../../../docs/framework/wcf/feature-details/data-contract-names.md)
-- [İleri Uyumlu Veri Anlaşmaları](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Veri Sözleşmelerini Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Sözleşmesi Sürümü Oluşturma](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Veri Sözleşmesi Adları](../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [İleri Uyumlu Veri Sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
 - [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

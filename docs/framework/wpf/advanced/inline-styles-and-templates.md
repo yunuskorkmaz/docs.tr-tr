@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 6225e1abd2b6bb8c3598b08bb2a717340c435e77
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091440"
 ---
 # <a name="inline-styles-and-templates"></a>Satır İçi Stil ve Şablonları
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sağlar <xref:System.Windows.Style> nesneleri ve şablon nesneleri (<xref:System.Windows.FrameworkTemplate> alt sınıflarını) öğesinin görsel görünümüne kaynakları tanımlamak için bir yol kullanılabilmesi için birden çok kez. Bu nedenle, öznitelikleri [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] türleri ele <xref:System.Windows.Style> ve <xref:System.Windows.FrameworkTemplate> neredeyse her zaman mevcut stilleri ve şablonları kaynak başvuruları yerine satır içi yenilerini tanımlayın.  
@@ -20,15 +20,15 @@ ms.locfileid: "57373393"
 ## <a name="limitations-of-inline-styles-and-templates"></a>Satır içi stilleri ve şablonları sınırlamaları  
  İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], stil ve şablon özellikler teknik olarak ayarlanabilir iki yoldan biriyle. Öznitelik sözdizimi, örneğin bir kaynak içinde tanımlanan bir stile başvurmak için kullanabileceğiniz `<` *nesne*`Style="{StaticResource`*myResourceKey*`}" .../>`. Veya örneğin bir stil satır içi tanımlamak için özellik öğesi sözdizimini kullanabilirsiniz:  
   
- `<` *Nesne* `>`  
+ `<` *nesne* `>`  
   
- `<` *Nesne* `.Style>`  
+ `<` *nesne* `.Style>`  
   
  `<` `Style`  `.../>`  
   
- `</` *Nesne* `.Style>`  
+ `</` *nesne* `.Style>`  
   
- `</` *Nesne* `>`  
+ `</` *nesne* `>`  
   
  Öznitelik kullanımı çok daha yaygındır. Satır içi olarak tanımlanan ve kaynaklar içinde tanımlanmamış bir stil yalnızca kapsayıcı öğe için mutlaka kapsama alınır ve hiçbir kaynak anahtarına sahip olduğu gibi bir kolayca yeniden kullanılamaz. Genel bir kaynak tarafından tanımlanan stil daha verimli ve kullanışlı ve daha genel mantığıyla [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] programlama modeli biçimlendirmede tasarımdan kod program mantığında ayırma ilkesi.  
   
@@ -37,4 +37,5 @@ ms.locfileid: "57373393"
  Etkin nesneyi döndürmek biçimlendirme uzantıları tarafından diğer sözdizimleri da stilleri ve şablonları için mümkündür. Olası senaryolar sahip olan iki uzantı şunlardır [TemplateBinding](templatebinding-markup-extension.md) ve <xref:System.Windows.Data.Binding>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Stil ve Şablon Oluşturma](../controls/styling-and-templating.md)

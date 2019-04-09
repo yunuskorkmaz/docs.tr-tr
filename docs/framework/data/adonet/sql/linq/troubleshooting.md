@@ -2,12 +2,12 @@
 title: Sorun giderme
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105488"
 ---
 # <a name="troubleshooting"></a>Sorun giderme
 Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar ve aksi takdirde bu sorunların etkisini azaltmak veya önlemek için öneriler sunar.  
@@ -70,5 +70,6 @@ Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!IN
  Oluşturulan yöntemi `OnCreated()` nesne Oluşturucu çağrılır, senaryo görüntüleneceği dahil olmak üzere her zaman çağrılır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] özgün değerler için bir kopya yapmak için bir oluşturucuyu çağırır. Uygularsanız, bu davranışı dikkate alın `OnCreated()` kendi kısmi sınıf yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama Desteği](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
-- [Sık Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+- [Sıkça Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

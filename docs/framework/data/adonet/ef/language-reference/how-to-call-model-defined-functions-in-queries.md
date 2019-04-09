@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Sorgularda model tanımlı işlevler çağırma'
+title: 'Nasıl yapılır: Sorgularda Model Tanımlı İşlevler Çağırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: ee0624c7f06fba93f17dc23b63a76e4e8e11a1e0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: abab705c7ea83318949cf0d75e491905da7896e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099735"
 ---
-# <a name="how-to-call-model-defined-functions-in-queries"></a>Nasıl yapılır: Sorgularda model tanımlı işlevler çağırma
+# <a name="how-to-call-model-defined-functions-in-queries"></a>Nasıl yapılır: Sorgularda Model Tanımlı İşlevler Çağırma
 Bu konu, içinden kavramsal modelde tanımlı işlevleri çağırmak açıklar [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular.  
   
  Aşağıdaki yordam bir model tanımlı işlev içinden çağırmak için İleri düzey bir özeti sağlar. bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu. Aşağıdaki örnek, bu yordamdaki adımları hakkında daha fazla ayrıntı sağlar. Yordam, kavramsal modelde tanımlı bir işlev varsayar. Daha fazla bilgi için [nasıl yapılır: Kavramsal modelde özel işlevleri tanımlamak](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
@@ -43,7 +43,8 @@ Bu konu, içinden kavramsal modelde tanımlı işlevleri çağırmak açıklar [
  [!code-vb[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#3)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.edmx dosyasını genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [LINQ to Entities Sorgularında Çağırma İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
-- [Nasıl yapılır: Model tanımlı işlevleri nesne yöntemleri çağırma](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)
+- [Nasıl yapılır: Model Tanımlı İşlevleri Nesne Yöntemleri Olarak Çağırma](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)

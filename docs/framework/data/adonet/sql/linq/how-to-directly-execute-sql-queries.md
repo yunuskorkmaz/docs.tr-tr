@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Doğrudan SQL sorguları yürütme'
+title: 'Nasıl yapılır: Doğrudan SQL Sorguları Yürütme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: 1caf81df5998e5aaef4ad011a399d70aff43ca9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6423959ed5036cc8ab2a88bb7273ef7aa95c8958
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101542"
 ---
-# <a name="how-to-directly-execute-sql-queries"></a>Nasıl yapılır: Doğrudan SQL sorguları yürütme
+# <a name="how-to-directly-execute-sql-queries"></a>Nasıl yapılır: Doğrudan SQL Sorguları Yürütme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] parametrelenmiş SQL sorgularını (metin biçiminde) içine yazma sorguları çevirir ve bunları SQL server için işlem gönderir.  
   
  Uygulamanızı yerel olarak kullanılabilir yöntemleri çeşitli SQL yürütülemiyor. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Bu yerel yöntemlerin eşdeğer işlemlere ve SQL ortamı içinde kullanılabilen işlevleri dönüştürmeye çalışıyor. Birçok yöntem ve işleçlerde [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] SQL komutları doğrudan çevirileri yerleşik türlerine sahip. Bazı kullanılabilir olan işlevleri üretilebilir. Üretilemeyebilir o çalışma zamanı özel durumlarını oluşturur. Daha fazla bilgi için [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
@@ -36,5 +36,6 @@ ms.locfileid: "54634464"
  Tarafından kullanılan aynı küme gösterimini kullanarak sorgu metni ifade parametreleri `Console.WriteLine()` ve `String.Format()`. Aslında, `String.Format()` gerçekten sağlarsanız, Küme Küme ayracıyla belirtilen parametrelerle değiştirerek oluşturulan parametre adları gibi sorgu dizesine göre adlandırılır @p0, @p1 ... @p(n).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Veritabanını Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

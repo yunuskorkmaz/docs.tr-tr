@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Store ve yeniden sorguları'
+title: 'Nasıl yapılır: Sorguları Depolama ve Yeniden Kullanma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: a913839ab8e6048b18270061a75ca632e2797fb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aac20c3f9c421d353938a83b9e321d35abd244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084202"
 ---
-# <a name="how-to-store-and-reuse-queries"></a>Nasıl yapılır: Store ve yeniden sorguları
+# <a name="how-to-store-and-reuse-queries"></a>Nasıl yapılır: Sorguları Depolama ve Yeniden Kullanma
 Birden çok kez yapısal olarak benzer sorguları yürüten bir uygulamanız varsa, genellikle bir kez sorgu derleyerek ve birkaç kez farklı parametrelerle yürütme performansı artırabilirsiniz. Örneğin, bir uygulamanın nerede Şehir çalışma zamanında bir forma kullanıcı tarafından belirtilen, belirli bir şehirdeki olan tüm müşterileri alma gerekebilir. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekler *derlenmiş sorgular* bu amaç için.  
   
 > [!NOTE]
@@ -34,6 +34,7 @@ Birden çok kez yapısal olarak benzer sorguları yürüten bir uygulamanız var
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.Linq.CompiledQuery>
 - [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Veritabanını Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

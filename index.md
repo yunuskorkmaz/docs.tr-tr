@@ -6,12 +6,12 @@ title: .NET Belgeleri
 description: C#, Visual Basic ve F# kullanarak herhangi bir platformda çeşitli uygulamalar oluşturmak için .NET kullanmayı öğrenin. API başvurusuna, örnek koda, öğreticilere ve daha fazlasına göz atın.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 31e810246528c99a665128d3535b92dbfcb4352d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464521"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297275"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,7 +77,7 @@ ms.locfileid: "58464521"
         <h1>.NET Belgeleri</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Belgeler</a>
+                <a data-default="true" href="#docs">Docs</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">Başlarken</a>
@@ -214,7 +214,7 @@ ms.locfileid: "58464521"
                                                 <h3><a href="/dotnet/visual-basic">Visual Basic Kılavuzu</a></h3>
                                                 <p><a href="/dotnet/visual-basic/getting-started">Başlarken</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Visual Basic Turu</a></p>
-                                                <p><a href="/dotnet/visual-basic/language-reference">Visual Basic Dili Başvurusu</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference">Visual Basic Dil Başvurusu</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -231,8 +231,8 @@ ms.locfileid: "58464521"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">ML.NET Kılavuzu</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials">Öğreticiler</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">Kaynaklar</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#tutorials">Öğreticiler</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#resources">Kaynaklar</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Sözlük</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API başvurusu</a></p>
                                             </div>
@@ -582,7 +582,7 @@ ms.locfileid: "58464521"
                         <a href="#gaming">Oyun</a>
                         <ul id="gaming" class="cardsC">
                             <li>
-                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/">
+                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -663,7 +663,7 @@ ms.locfileid: "58464521"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">Makine Öğrenimi ve AI</a>
+                        <a href="#ml-ai">Makine Öğrenmesi ve AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
                                 <a href="/dotnet/machine-learning">

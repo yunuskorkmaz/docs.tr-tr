@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-ms.openlocfilehash: 2bba90f704458e1c724328feccaaf6f04b98ecb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104207"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox Denetimine Genel Bakış (Windows Forms)
 Bir Windows Forms <xref:System.Windows.Forms.ListBox> denetimi, kullanıcı bir veya daha fazla öğe seçebilir listesini görüntüler. Toplam öğe sayısı, görüntülenebilen sayıyı aşarsa, bir kaydırma çubuğuna otomatik olarak eklenir <xref:System.Windows.Forms.ListBox> denetimi. Zaman <xref:System.Windows.Forms.ListBox.MultiColumn%2A> özelliği `true`, liste kutusunda birden çok sütunda öğeleri görüntüler ve yatay kaydırma çubuğu görünür. Zaman <xref:System.Windows.Forms.ListBox.MultiColumn%2A> özelliği `false`, liste kutusu öğeleri tek bir sütunda görüntüler ve dikey kaydırma çubuğu görünür. Zaman <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> ayarlanır `true`, öğe sayısı ne olursa olsun kaydırma çubuğu görünür. <xref:System.Windows.Forms.ListBox.SelectionMode%2A> Özelliği, aynı anda kaç liste öğelerini seçilebilir belirler.  
@@ -23,11 +23,12 @@ Bir Windows Forms <xref:System.Windows.Forms.ListBox> denetimi, kullanıcı bir 
  Ekleme veya öğeleri silme bir <xref:System.Windows.Forms.ListBox> denetlemek, kullanın <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> veya <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> yöntemi. Alternatif olarak, öğeleri listesine kullanarak ekleyebileceğiniz <xref:System.Windows.Forms.ListBox.Items%2A> özellik tasarım zamanında.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ListBox>
-- [Nasıl yapılır: Ekleme ve kaldırma öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](add-and-remove-items-from-a-wf-combobox.md)
-- [Nasıl yapılır: Sıralama içeriği bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Nasıl yapılır: Bir Windows Forms ComboBox veya ListBox denetimini verilere bağlama](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Öğe Ekleme ve Kaldırma](add-and-remove-items-from-a-wf-combobox.md)
+- [Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminin İçeriğini Sıralama](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Nasıl yapılır: Windows Forms ComboBox veya ListBox Denetimini Verilere Bağlama](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [ComboBox Denetimine Genel Bakış](combobox-control-overview-windows-forms.md)
 - [CheckedListBox Denetimine Genel Bakış](checkedlistbox-control-overview-windows-forms.md)
 - [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](windows-forms-controls-used-to-list-options.md)
-- [Nasıl yapılır: ComboBox, ListBox veya CheckedListBox denetiminde bir Windows Forms için arama tablosu oluşturma](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetimi için Arama Tablosu Oluşturma](create-a-lookup-table-for-a-wf-combobox-listbox.md)

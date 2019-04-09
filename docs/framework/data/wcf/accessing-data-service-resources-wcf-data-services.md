@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4b0af7f20cbf932773df3ae226729a0a6c2500
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085876"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Veri Hizmeti kaynaklarına (WCF Veri Hizmetleri) erişme
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] destekleyen [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] verilerinizi tarafından bir URI'leri adreslenebilir kaynaklarla bir akış olarak kullanıma sunmak için. Varlık ilişkisi kurallarına göre bu kaynakları temsil edilen [varlık veri modeli](../../../../docs/framework/data/adonet/entity-data-model.md). Bu modelde, işletimsel birimleri, müşteri, sipariş, öğeleri ve ürünleri gibi uygulama etki alanında veri türleri veri varlıkları temsil eder. Varlık verilerini erişilen ve özellikle standart HTTP fiilleri, GET, temsili durum aktarımı (REST) semantiği kullanarak değiştirilen koy Gönder ve Sil.  
@@ -97,4 +97,5 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
  URI'sini bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kaynak adresi varlık verileri hizmet tarafından sunulan, sağlar. Bir Web tarayıcısının Adres alanına bir URI girin, bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış istenen kaynağın gösterimini döndürülür. Daha fazla bilgi için [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Bir Web tarayıcısında test beklenen verileri bir veri hizmeti kaynağı döndürür, ayrıca oluşturmak, güncelleştirmek ve verileri silmek üretim Veri Hizmetleri genellikle uygulama kodu tarafından erişilen veya bir Web sayfasında dil komut dosyası için yararlı olabilir. Daha fazla bilgi için [bir istemci uygulamasında veri hizmeti kullanma](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Açık Veri Protokolü Web sitesi](https://go.microsoft.com/fwlink/?LinkID=182204)

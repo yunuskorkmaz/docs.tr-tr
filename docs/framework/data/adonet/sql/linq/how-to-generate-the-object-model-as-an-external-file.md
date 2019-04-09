@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Nesne modelini dış dosya oluşturma'
+title: 'Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 44b123130b79026ed7638ccc7abeb13d8a5f55ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095588"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Nasıl yapılır: Nesne modelini dış dosya oluşturma
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a>Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma
 Öznitelik tabanlı eşleme için alternatif olarak, nesne modeli, dış bir XML dosyası olarak SQLMetal komut satırı aracını kullanarak oluşturabilirsiniz. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Dış XML eşleme dosyası kullanarak kodunuzda dağınıklığını azaltın. Ayrıca, uygulamanızın ikili dosyaları yeniden derlemeye gerek kalmadan dış dosyasını değiştirerek davranışını değiştirebilirsiniz. Daha fazla bilgi için [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
@@ -49,6 +49,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veyaC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Nasıl yapılır: Visual Basic veya C# içinde Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

@@ -1,18 +1,18 @@
 ---
-title: Tek aşamalı ve çok aşamalı bir işlem Sistemi'ne
+title: Tek Aşamalı ve Çok Aşamalı İşlem Gerçekleştirme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089572"
 ---
-# <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Tek aşamalı ve çok aşamalı bir işlem Sistemi'ne
+# <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Tek Aşamalı ve Çok Aşamalı İşlem Gerçekleştirme
 Bir işlemde kullanılan her kaynak eylemlerini bir işlem yöneticisi (TM) düzenlenir Kaynak Yöneticisi (RM) tarafından yönetilir. [Katılımcı bir işlemde kaynakları kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) konu açıklar bir kaynak (veya birden fazla kaynak) bir işlemde nasıl kaydedilebilir. Bu konu nasıl işlem taahhüt kayıtlı kaynakları arasında Eşgüdümlü olabileceğini açıklar.  
   
  İşlemin sonunda, uygulama ya da kaydedilmiş veya geri için işlem ister. Bazı kaynak yöneticileri tamamlamaya oylama başkalarının çalışırken gibi hareket yöneticisi riskleri ortadan işlem geri dönmek için işaretleme.  
@@ -110,5 +110,6 @@ public void InDoubt (Enlistment enlistment)
  Tüm güncelleştirmeleri herhangi bir açık işbirliği yapıldığından tek aşaması yürütme Protokolü çalışma zamanında daha etkilidir. Bu protokol hakkında daha fazla bilgi için bkz. [tek aşamalı işleme ve yükseltilebilir tek aşamalı bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Tek Aşamalı İşleme ve Yükseltilebilir Tek Aşamalı Bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
 - [Bir İşlemde Kaynakları Katılımcı Olarak Kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

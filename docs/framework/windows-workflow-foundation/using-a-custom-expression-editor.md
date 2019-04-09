@@ -1,15 +1,15 @@
 ---
-title: Özel ifade düzenleyicisini kullanma
+title: Özel İfade Düzenleyicisi Kullanma
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 3bbad843c5e4d409627c255be7341d364a3d36d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101282"
 ---
-# <a name="using-a-custom-expression-editor"></a>Özel ifade düzenleyicisini kullanma
+# <a name="using-a-custom-expression-editor"></a>Özel İfade Düzenleyicisi Kullanma
 Özel ifade düzenleyicisini düzenleme deneyimi daha zengin ya da daha basit bir ifade sağlamak üzere uygulanabilir. Özel ifade düzenleyicisini kullanma isteyebilirsiniz birçok senaryo vardır:  
   
 -   IntelliSense ve diğer zengin düzenleme yeniden barındırılan iş akışı Tasarımcısı'nda özellikleri için destek sağlamak için. Varsayılan Visual Studio ifade Düzenleyicisi'ni yeniden barındırılan uygulamalarda kullanılamaz çünkü bu işlevselliği sağlanmalıdır.  
@@ -279,6 +279,7 @@ namespace WpfApplication1
  Kullanıyorsanız bir **ExpressionTextBox** denetimi bir özel etkinlik Tasarımcısı'nda oluşturup ifade düzenleyicileri kullanarak yok etmek ise gerekli değildir <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> ve <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> yöntemlerinin <xref:System.Activities.Presentation.View.IExpressionEditorService> arabirimi. <xref:System.Activities.Presentation.View.ExpressionTextBox> Sınıfı yönetir bu sizin için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Activities.Presentation.View.IExpressionEditorService>
 - <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
 - [Özel Etkinlik Tasarımcısında ExpressionTextBox Kullanma](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

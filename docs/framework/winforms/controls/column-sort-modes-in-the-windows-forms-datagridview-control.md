@@ -5,17 +5,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106672"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Sıralama Modları
 <xref:System.Windows.Forms.DataGridView> Sütun sıralama modları üç sahip. Her bir sütunun sıralama modu aracılığıyla belirtilen <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> aşağıdakilerden birini ayarlanabilir sütunun özelliği <xref:System.Windows.Forms.DataGridViewColumnSortMode> sabit listesi değerleri.  
   
-|`DataGridViewColumnSortMode` Değer|Açıklama|  
+|`DataGridViewColumnSortMode` value|Açıklama|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|Metin kutusu sütunları için varsayılan. Sütun üst bilgilerini seçimi için kullanılmıyorsa, otomatik olarak sütun başlığına tıklayarak sıralar <xref:System.Windows.Forms.DataGridView> bu sütuna göre sıralama düzenini belirten bir simge görüntüler.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|Varsayılan olmayan – metin kutusu sütunlar için. Bu sütun programlamayla sıralama; Sıralama glif boşluk ayrılmış şekilde ancak bu sıralama için tasarlanmamıştır.|  
@@ -59,6 +59,7 @@ ms.locfileid: "57717862"
 >  <xref:System.Windows.Forms.DataGridView.SortCompare> Olay oluşmaz olduğunda <xref:System.Windows.Forms.DataGridView.DataSource%2A> özelliği veya <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özellik değeri `true`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.SortedColumn%2A?displayProperty=nameWithType>
@@ -66,5 +67,5 @@ ms.locfileid: "57717862"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [Windows Forms DataGridView Denetimindeki Verileri Sıralama](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde sütunlar için sıralama modlarını ayarlama](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminde sıralamayı özelleştirme](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunlar için Sıralama Modlarını Ayarlama](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Sıralamayı Özelleştirme](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

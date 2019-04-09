@@ -1,18 +1,18 @@
 ---
-title: Dataview'den DataTable oluşturma
+title: DataView’dan DataTable Oluşturma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: cda8693ad4f061d2260d4629b774c401b0daac26
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080923"
 ---
-# <a name="creating-a-datatable-from-a-dataview"></a>Dataview'den DataTable oluşturma
+# <a name="creating-a-datatable-from-a-dataview"></a>DataView’dan DataTable Oluşturma
 Verileri bir veri kaynağından alınan ve doldurduktan sonra bir <xref:System.Data.DataTable> verilerle, sıralama, filtreleme veya aksi halde tekrar almadan döndürülen verileri sınırlamak isteyebilirsiniz. <xref:System.Data.DataView> Sınıfı bunu mümkün kılar. Ayrıca, yeni bir oluşturmanız gerekir, <xref:System.Data.DataTable> gelen <xref:System.Data.DataView>, kullanabileceğiniz <xref:System.Data.DataView.ToTable%2A> tüm satırları ve sütunları veya verilerin bir alt kümesini yeni kopyalamak için yöntemi <xref:System.Data.DataTable>. <xref:System.Data.DataView.ToTable%2A> Yöntemi için aşırı yüklemeler sağlar:  
   
 -   Oluşturma bir <xref:System.Data.DataTable> sütunların bir alt kümesi olan sütunlar içeren <xref:System.Data.DataView>.  
@@ -206,6 +206,7 @@ Console.WriteLine();
  }  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Data.DataView.ToTable%2A>
 - [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

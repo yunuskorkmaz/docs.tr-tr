@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220961"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081495"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Yerel'i Kullanmaya Başlama
 Windows 10 için yeni bir Windows uygulaması yazmak ister mevcut bir Windows Store app geçiriyorsanız, aynı kümesini yordamları izleyebilirsiniz. Oluşturmak için bir [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama, şu adımları izleyin:  
@@ -106,17 +106,18 @@ Windows 10 için yeni bir Windows uygulaması yazmak ister mevcut bir Windows St
   
  Özel durum ve uygulamanızı test ederken ortaya çıkan diğer sorunları işleme bazı belirli örnekler için bkz:  
   
--   [Örnek: Veri bağlama sırasında özel durum işleme](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Örnek: Veri Bağlama Sırasında Özel Durum İşleme](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [Örnek: Dinamik programlama sorunlarını giderme](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [Örnek: Dinamik Programlama Sorunlarını Giderme](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [.NET Native Uygulamalarında Çalışma Zamanı Özel Durumları](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET yerel kurulumu ve yapılandırması](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET Native ve Derleme](../../../docs/framework/net-native/net-native-and-compilation.md)
-- [Yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [Yansıma Kullanan API'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
+- [.NET Yerel Kurulumu ve Yapılandırması](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Yerel ve Derleme](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Yansıma ve .NET Yerel](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Yansıma kullanan API'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [Serileştirme ve Meta Veriler](../../../docs/framework/net-native/serialization-and-metadata.md)
-- [Windows Mağazası Uygulamanızı .NET Native'e Taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+- [Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

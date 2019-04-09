@@ -6,18 +6,16 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: a1de1ee80d1f88b0c0a7adfb75b96353b6861d97
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122362"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF için XAML ve Özel Sınıflar
 XAML içinde uygulandığı şekilde [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] çerçevelerini destekleyen özel bir sınıf veya yapı, tüm tanımlama yeteneği [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] dil ve ardından erişim kullanarak XAML biçimlendirmesi. Bir karışımını kullanabilirsiniz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-tanımlanan türleri ve aynı biçimlendirme dosyasında özel türlerinizi genellikle XAML ad alanı öneki özel türleri eşleyerek. Bu konuda, özel bir sınıf bir XAML öğesi olarak kullanılabilir olması için karşılaması gereken gereksinimleri anlatılmaktadır.  
-  
- 
-  
+
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## <a name="custom-classes-in-applications-or-assemblies"></a>Uygulamaların veya derlemelerin özel sınıflar  
  XAML içinde kullanılan özel sınıflar, iki farklı şekilde tanımlanabilir: arka plan kod veya birincil üreten diğer kod içinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulaması veya farklı bir sınıfta bir yürütülebilir dosya gibi ayrı bir derleme veya bir sınıf kitaplığı kullanılan DLL. Bu yaklaşımların her birinin belirli avantajları ve dezavantajları vardır.  
@@ -113,6 +111,7 @@ XAML içinde uygulandığı şekilde [!INCLUDE[TLA#tla_clr](../../../../includes
  IF gibi belirli senaryolarda, bir denetim yazarı, XAML içinde oluşturulabilir herhangi bir nesne temsili de geri denk XAML biçimlendirmesi serileştirilecek sağlamak isteyebilirsiniz. Serileştirme gereksinimleri, bu konuda açıklanan değil. Bkz: [denetim yazmaya genel bakış](../controls/control-authoring-overview.md) ve [öğe ağacı ve Serileştirme](element-tree-and-serialization.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
 - [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)
 - [Denetim Yazımına Genel Bakış](../controls/control-authoring-overview.md)

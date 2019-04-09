@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 43b5ad2f346406897e8bcbcce5660a6c9524f9af
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: c4eb1e5fd0c0b06f332b1eba7d3445963699415c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100384"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Nasıl yapılır: Windows Hizmetleri Yükleme ve kaldırma
 .NET Framework ile Windows hizmet geliştiriyorsanız, hızlı bir şekilde hizmet uygulamanızı kullanarak yükleyebileceğiniz [ *InstallUtil.exe* ](../tools/installutil-exe-installer-tool.md) komut satırı yardımcı programı. Bir Windows hizmeti, kullanıcıların yüklemek ve kaldırmak yayımlamayı isteyen geliştiriciler InstallShield kullanmanız gerekir. Daha fazla bilgi için [bir yükleyici paketi (Windows istemcisi) oluşturma](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
@@ -67,6 +67,7 @@ ms.locfileid: "55826279"
 3. Yürütülebilir dosya için bir hizmet silindikten sonra hizmet kayıt defterinde mevcut olabilir. Bu durumda, komutu kullanın [sc delete](/windows-server/administration/windows-commands/sc-delete) kayıt defterinden service girişini kaldırmak için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows hizmeti uygulamalarına giriş](../windows-services/introduction-to-windows-service-applications.md)
 - [Nasıl yapılır: Windows Hizmetleri oluşturma](../windows-services/how-to-create-windows-services.md)
 - [Nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../windows-services/how-to-add-installers-to-your-service-application.md)

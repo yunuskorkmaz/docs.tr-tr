@@ -1,14 +1,14 @@
 ---
-title: < system.identityModel >
+title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: fd17c0318480f5e157c8c9114116735b82bbfcef
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2f0040fb7084b9d53adbd1a114f1cfc62d58e5a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110012"
 ---
 # <a name="systemidentitymodel"></a>\<system.identityModel>
 Windows Identity Foundation (WIF) seçenekleri uygulamalarda etkinleştirmek için yapılandırma sağlar.  
@@ -26,7 +26,7 @@ Windows Identity Foundation (WIF) seçenekleri uygulamalarda etkinleştirmek iç
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -76,4 +76,5 @@ Windows Identity Foundation (WIF) seçenekleri uygulamalarda etkinleştirmek iç
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

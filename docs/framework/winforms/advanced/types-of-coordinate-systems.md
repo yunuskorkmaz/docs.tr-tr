@@ -15,12 +15,12 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 42e8b5626cf30010f154e7c978708042c4e3369a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089308"
 ---
 # <a name="types-of-coordinate-systems"></a>Koordinat Sistemi Türleri
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] üç koordinat kullanır: dünya, sayfa ve cihaz. Dünya koordinatlarını bir belirli grafik grubuna ilişkin model için kullanılan koordinatları ve .NET Framework yöntemleri için geçirdiğiniz koordinatları. Bir form veya denetim gibi çizim yüzeyi tarafından kullanılan koordinat sistemini sayfa koordinatlarına bakın. Cihaz, bir ekran veya kağıt gibi üzerine çizilmiş fiziksel cihaz tarafından kullanılan koordinat koordinatları. Çağrısı yaptığınızda `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, geçirdiğiniz noktaları <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi —`(0, 0)` ve `(160, 80)`— dünyanın koordinat alanındadır. Önce [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ekranda çizgi çizmek, bir dizi dönüştürmeyi koordinatları geçirin. Gerçek koordinat dönüştürmesini adlı bir dönüştürme dünya koordinatlarını sayfa koordinatlarına dönüştüren ve sayfa dönüşümü adlı başka bir dönüştürme sayfa koordinatlarına cihaz koordinatlarına dönüştürür.  
@@ -95,5 +95,6 @@ ms.locfileid: "57715869"
 |Cihaz|(192, 48) için (384, 144)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Koordinat Sistemleri ve Dönüştürmeler](coordinate-systems-and-transformations.md)
 - [Dönüşümlerin Matrisle Temsili](matrix-representation-of-transformations.md)

@@ -4,12 +4,12 @@ description: Paketler, meta paketler ve çerçeveler için terimler öğrenin.
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090504"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Paketler, meta paketler ve çerçeveler
 
@@ -82,7 +82,7 @@ Anahtar .NET Core meta paketler şunlardır:
 
 Örneğin, [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) aşağıdaki çerçevelerini destekler:
 
-- . NETFramework, sürüm = 4.6
+- .NETFramework,Version=4.6
 - . NETStandard, sürüm = 1,3
 - 6 Xamarin platformları (örneğin, xamarinios10)
 
@@ -97,7 +97,6 @@ Bu çerçeveler ilk iki çerçeveleri tanımlanan iki farklı şekilde örnekler
 Çerçeveler ve paketler arasında iki yönlü bir ilişki yoktur. İlk bölümü örneğin belirtilen bir çerçeve için mevcut API'lere tanımlama `netstandard1.3`. Hedefleyen paketler `netstandard1.3` (veya uyumlu çerçeveleri `netstandard1.0`) tanımlamak için mevcut API'lere `netstandard1.3`. Döngüsel başvuru gibi görünebilir, ancak bu değildir. "Paket tabanlı" olmasının da, API tanımı Framework paketleri gelir. Framework, tüm API tanımlamıyor.
 
 İlişki ikinci bölümü, varlık seçimdir. Paketler, birden çok çerçeve varlıklar içerebilir. Paketler ve/veya meta paketler kümesine başvuru göz önünde bulundurulduğunda, framework varlık, örneğin seçilmelidir belirlemek için gerekli `net46` veya `netstandard1.3`. Doğru varlık seçilmesi gerekir. Örneğin, bir `net46` varlık büyük olasılıkla .NET Framework 4.0 veya .NET Core 1.0 ile uyumlu değil.
-
 
 Aşağıdaki görüntüde bu ilişkileri görebilirsiniz. *API* hedefler ve tanımlar *framework*. *Framework* için kullanılan *varlık seçimi*. *Varlık* API sağlar.
 
