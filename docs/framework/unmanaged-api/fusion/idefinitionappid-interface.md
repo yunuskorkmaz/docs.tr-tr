@@ -16,33 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e8bb31967a6ad515761e6cd03657f2c834debe5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bd705ef549de3a8018efe731ef8735ef7b6b915
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083185"
 ---
-# <a name="idefinitionappid-interface"></a><span data-ttu-id="b81ea-102">IDefinitionAppId Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b81ea-102">IDefinitionAppId Interface</span></span>
-<span data-ttu-id="b81ea-103">Uygulama geçerli kapsamda tanımlar kod için benzersiz bir tanımlayıcı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="b81ea-103">Represents a unique identifier for the code that defines the application in the current scope.</span></span>  
+# <a name="idefinitionappid-interface"></a><span data-ttu-id="08277-102">IDefinitionAppId Arabirimi</span><span class="sxs-lookup"><span data-stu-id="08277-102">IDefinitionAppId Interface</span></span>
+<span data-ttu-id="08277-103">Uygulama geçerli kapsamda tanımlar kod için benzersiz bir tanımlayıcı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="08277-103">Represents a unique identifier for the code that defines the application in the current scope.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b81ea-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="b81ea-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="08277-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="08277-104">Methods</span></span>  
   
-|<span data-ttu-id="b81ea-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="b81ea-105">Method</span></span>|<span data-ttu-id="b81ea-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b81ea-106">Description</span></span>|  
+|<span data-ttu-id="08277-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="08277-105">Method</span></span>|<span data-ttu-id="08277-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="08277-106">Description</span></span>|  
 |------------|-----------------|  
-|`IDefinitionAppId::get_Codebase`|<span data-ttu-id="b81ea-107">Bu kod temsil eden bir biçimlendirilmiş dize alır `IDefinitionAppId` nesne.</span><span class="sxs-lookup"><span data-stu-id="b81ea-107">Gets a formatted string that represents the code in this `IDefinitionAppId` object.</span></span>|  
-|`IDefinitionAppId::put_Codebase`|<span data-ttu-id="b81ea-108">Bu kod ayarlar `IDefinitionAppId` belirtilen nesneye biçimlendirilmiş dize değeri.</span><span class="sxs-lookup"><span data-stu-id="b81ea-108">Sets the code of this `IDefinitionAppId` object to the specified formatted string value.</span></span>|  
-|`IDefinitionAppId::EnumAppPath`|<span data-ttu-id="b81ea-109">Bir arabirim işaretçisi alır bir [Ienumdefinitionıdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md) geçerli uygulama yolu derlemeleri içeren nesne.</span><span class="sxs-lookup"><span data-stu-id="b81ea-109">Gets an interface pointer to an [IEnumDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md) object that contains the assemblies in the current application path.</span></span>|  
-|`IDefinitionAppId::SetAppPath`|<span data-ttu-id="b81ea-110">Uygulama yolu geçerli kapsamda belirtilen tarafından başvurulan değer derleme için ayarlar [Idefinitionıdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) nesne.</span><span class="sxs-lookup"><span data-stu-id="b81ea-110">Sets the application path for the assembly in the current scope to the value referenced by the specified [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) object.</span></span>|  
-|`IDefinitionAppId::get_SubscriptionId`|<span data-ttu-id="b81ea-111">Abonelik için bu belirteci tanımlayıcı bir dize gösterimini bir işaretçi alır `IDefinitionAppId` nesne.</span><span class="sxs-lookup"><span data-stu-id="b81ea-111">Gets a pointer to a string representation of the token identifier for a subscription to this `IDefinitionAppId` object.</span></span>|  
-|`IDefinitionAppId::put_SubscriptionId`|<span data-ttu-id="b81ea-112">Bir abonelik için belirteç tanımlayıcısı için ayarlar `IDefinitionAppId` nesne belirtilen dize değeri.</span><span class="sxs-lookup"><span data-stu-id="b81ea-112">Sets the token identifier for a subscription to this `IDefinitionAppId` object to the specified string value.</span></span>|  
+|`IDefinitionAppId::get_Codebase`|<span data-ttu-id="08277-107">Bu kod temsil eden bir biçimlendirilmiş dize alır `IDefinitionAppId` nesne.</span><span class="sxs-lookup"><span data-stu-id="08277-107">Gets a formatted string that represents the code in this `IDefinitionAppId` object.</span></span>|  
+|`IDefinitionAppId::put_Codebase`|<span data-ttu-id="08277-108">Bu kod ayarlar `IDefinitionAppId` belirtilen nesneye biçimlendirilmiş dize değeri.</span><span class="sxs-lookup"><span data-stu-id="08277-108">Sets the code of this `IDefinitionAppId` object to the specified formatted string value.</span></span>|  
+|`IDefinitionAppId::EnumAppPath`|<span data-ttu-id="08277-109">Bir arabirim işaretçisi alır bir [Ienumdefinitionıdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md) geçerli uygulama yolu derlemeleri içeren nesne.</span><span class="sxs-lookup"><span data-stu-id="08277-109">Gets an interface pointer to an [IEnumDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md) object that contains the assemblies in the current application path.</span></span>|  
+|`IDefinitionAppId::SetAppPath`|<span data-ttu-id="08277-110">Uygulama yolu geçerli kapsamda belirtilen tarafından başvurulan değer derleme için ayarlar [Idefinitionıdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) nesne.</span><span class="sxs-lookup"><span data-stu-id="08277-110">Sets the application path for the assembly in the current scope to the value referenced by the specified [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) object.</span></span>|  
+|`IDefinitionAppId::get_SubscriptionId`|<span data-ttu-id="08277-111">Abonelik için bu belirteci tanımlayıcı bir dize gösterimini bir işaretçi alır `IDefinitionAppId` nesne.</span><span class="sxs-lookup"><span data-stu-id="08277-111">Gets a pointer to a string representation of the token identifier for a subscription to this `IDefinitionAppId` object.</span></span>|  
+|`IDefinitionAppId::put_SubscriptionId`|<span data-ttu-id="08277-112">Bir abonelik için belirteç tanımlayıcısı için ayarlar `IDefinitionAppId` nesne belirtilen dize değeri.</span><span class="sxs-lookup"><span data-stu-id="08277-112">Sets the token identifier for a subscription to this `IDefinitionAppId` object to the specified string value.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b81ea-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b81ea-113">Requirements</span></span>  
- <span data-ttu-id="b81ea-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b81ea-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08277-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="08277-113">Requirements</span></span>  
+ <span data-ttu-id="08277-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08277-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b81ea-115">**Üst bilgi:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="b81ea-115">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="08277-115">**Üst bilgi:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="08277-115">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="b81ea-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b81ea-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="08277-116">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="08277-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b81ea-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b81ea-117">See also</span></span>
-- [<span data-ttu-id="b81ea-118">Fusion Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b81ea-118">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="08277-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="08277-117">See also</span></span>
+
+- [<span data-ttu-id="08277-118">Fusion Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="08277-118">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

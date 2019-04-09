@@ -2,23 +2,24 @@
 title: Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 ms.date: 03/30/2017
 ms.assetid: 10ef3876-6f8e-4d4e-8444-f47847b64795
-ms.openlocfilehash: 3b51a100677221866186b2e24f34396c012d11c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d74d73cc43b500d3920ca03905f4eb7543619a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075541"
 ---
-# <a name="microsofttransactionstransactionbridgedurableparticipantreplaywhilepreparing"></a><span data-ttu-id="3b8a1-102">Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing</span><span class="sxs-lookup"><span data-stu-id="3b8a1-102">Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing</span></span>
-<span data-ttu-id="3b8a1-103">WS-AT protokolü hizmetini hazırlama için yanıt vermedi dayanıklı bir katılımcı yeniden yürütme iletisi aldı.</span><span class="sxs-lookup"><span data-stu-id="3b8a1-103">The WS-AT protocol service received a Replay message from a durable participant, which did not respond to Prepare.</span></span> <span data-ttu-id="3b8a1-104">Sonuç olarak, işlem iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="3b8a1-104">Consequently, the transaction was aborted.</span></span>  
+# <a name="microsofttransactionstransactionbridgedurableparticipantreplaywhilepreparing"></a><span data-ttu-id="a7823-102">Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing</span><span class="sxs-lookup"><span data-stu-id="a7823-102">Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing</span></span>
+<span data-ttu-id="a7823-103">WS-AT protokolü hizmetini hazırlama için yanıt vermedi dayanıklı bir katılımcı yeniden yürütme iletisi aldı.</span><span class="sxs-lookup"><span data-stu-id="a7823-103">The WS-AT protocol service received a Replay message from a durable participant, which did not respond to Prepare.</span></span> <span data-ttu-id="a7823-104">Sonuç olarak, işlem iptal edildi.</span><span class="sxs-lookup"><span data-stu-id="a7823-104">Consequently, the transaction was aborted.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="3b8a1-105">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3b8a1-105">Description</span></span>  
- <span data-ttu-id="3b8a1-106">Dayanıklı bir katılımcı hala hazırlama sırasında yeniden yürütme iletisi aldıysanız izlenen.</span><span class="sxs-lookup"><span data-stu-id="3b8a1-106">Traced if a Replay message is received while a Durable participant is still Preparing.</span></span> <span data-ttu-id="3b8a1-107">Bu durum için geçersiz bir ileti budur ve işlem iptal edecek.</span><span class="sxs-lookup"><span data-stu-id="3b8a1-107">This is an illegal message for this state and the transaction is going to be aborted.</span></span>  
+## <a name="description"></a><span data-ttu-id="a7823-105">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a7823-105">Description</span></span>  
+ <span data-ttu-id="a7823-106">Dayanıklı bir katılımcı hala hazırlama sırasında yeniden yürütme iletisi aldıysanız izlenen.</span><span class="sxs-lookup"><span data-stu-id="a7823-106">Traced if a Replay message is received while a Durable participant is still Preparing.</span></span> <span data-ttu-id="a7823-107">Bu durum için geçersiz bir ileti budur ve işlem iptal edecek.</span><span class="sxs-lookup"><span data-stu-id="a7823-107">This is an illegal message for this state and the transaction is going to be aborted.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="3b8a1-108">Sorun giderme</span><span class="sxs-lookup"><span data-stu-id="3b8a1-108">Troubleshooting</span></span>  
- <span data-ttu-id="3b8a1-109">Bu hatanın hareketin sonucu emin değilseniz ancak (alt TransactionManagers dahil) dayanıklı bir katılımcı hata durumundan kurtuldu indiate olabilir ve durumunu istek.</span><span class="sxs-lookup"><span data-stu-id="3b8a1-109">Receiving this error can indiate that a Durable participant (including Subordinate TransactionManagers) has recovered from failure, however it is unsure of the transaction outcome and request its status.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="a7823-108">Sorun giderme</span><span class="sxs-lookup"><span data-stu-id="a7823-108">Troubleshooting</span></span>  
+ <span data-ttu-id="a7823-109">Bu hatanın hareketin sonucu emin değilseniz ancak (alt TransactionManagers dahil) dayanıklı bir katılımcı hata durumundan kurtuldu indiate olabilir ve durumunu istek.</span><span class="sxs-lookup"><span data-stu-id="a7823-109">Receiving this error can indiate that a Durable participant (including Subordinate TransactionManagers) has recovered from failure, however it is unsure of the transaction outcome and request its status.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b8a1-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3b8a1-110">See also</span></span>
-- [<span data-ttu-id="3b8a1-111">İzleme</span><span class="sxs-lookup"><span data-stu-id="3b8a1-111">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="3b8a1-112">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="3b8a1-112">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="3b8a1-113">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="3b8a1-113">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a7823-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a7823-110">See also</span></span>
+
+- [<span data-ttu-id="a7823-111">İzleme</span><span class="sxs-lookup"><span data-stu-id="a7823-111">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="a7823-112">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="a7823-112">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="a7823-113">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="a7823-113">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

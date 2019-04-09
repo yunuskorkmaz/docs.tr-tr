@@ -5,42 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fdd64af-6ad0-46cd-91c8-dbe26620eeb1
-ms.openlocfilehash: 92daf1dff3d473016d92b359ea6f75295a9dbd37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27a48b7ffe5466c52f19f15cf3c1a6cb558028b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739043"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097349"
 ---
-# <a name="dataset-specific-operator-examples-linq-to-dataset"></a><span data-ttu-id="b6f5d-102">DataSet'e özgü işleç örnekleri (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="b6f5d-102">DataSet-Specific Operator Examples (LINQ to DataSet)</span></span>
-<span data-ttu-id="b6f5d-103">Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi ve <xref:System.Data.DataRowComparer> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="b6f5d-103">The examples in this topic demonstrate how to use the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method and the <xref:System.Data.DataRowComparer> class.</span></span>  
+# <a name="dataset-specific-operator-examples-linq-to-dataset"></a><span data-ttu-id="aacad-102">DataSet'e özgü işleç örnekleri (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="aacad-102">DataSet-Specific Operator Examples (LINQ to DataSet)</span></span>
+<span data-ttu-id="aacad-103">Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi ve <xref:System.Data.DataRowComparer> sınıfı.</span><span class="sxs-lookup"><span data-stu-id="aacad-103">The examples in this topic demonstrate how to use the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method and the <xref:System.Data.DataRowComparer> class.</span></span>  
   
- <span data-ttu-id="b6f5d-104">`FillDataSet` Bu örneklerde kullanılan yöntemi belirtilen [verileri bir DataSet içine Yükleniyor](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="b6f5d-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="aacad-104">`FillDataSet` Bu örneklerde kullanılan yöntemi belirtilen [verileri bir DataSet içine Yükleniyor](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="aacad-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="b6f5d-105">Bu konudaki örnekler AdventureWorks örnek veritabanındaki kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarını kullanın.</span><span class="sxs-lookup"><span data-stu-id="b6f5d-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="aacad-105">Bu konudaki örnekler AdventureWorks örnek veritabanındaki kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarını kullanın.</span><span class="sxs-lookup"><span data-stu-id="aacad-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="b6f5d-106">Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:</span><span class="sxs-lookup"><span data-stu-id="b6f5d-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="aacad-106">Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:</span><span class="sxs-lookup"><span data-stu-id="aacad-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="b6f5d-107">Daha fazla bilgi için [nasıl yapılır: Visual Studio'da bir LINQ to DataSet projesi oluşturma](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="b6f5d-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="aacad-107">Daha fazla bilgi için [nasıl yapılır: Visual Studio'da bir LINQ to DataSet projesi oluşturma](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="aacad-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="copytodatatable"></a><span data-ttu-id="b6f5d-108">CopyToDataTable</span><span class="sxs-lookup"><span data-stu-id="b6f5d-108">CopyToDataTable</span></span>  
+## <a name="copytodatatable"></a><span data-ttu-id="aacad-108">CopyToDataTable</span><span class="sxs-lookup"><span data-stu-id="aacad-108">CopyToDataTable</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b6f5d-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="b6f5d-109">Example</span></span>  
- <span data-ttu-id="b6f5d-110">Bu örnekte yükleyen bir <xref:System.Data.DataTable> kullanarak sorgu sonuçları ile <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="b6f5d-110">This example loads a <xref:System.Data.DataTable> with query results by using the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method.</span></span>  
+### <a name="example"></a><span data-ttu-id="aacad-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="aacad-109">Example</span></span>  
+ <span data-ttu-id="aacad-110">Bu örnekte yükleyen bir <xref:System.Data.DataTable> kullanarak sorgu sonuçları ile <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="aacad-110">This example loads a <xref:System.Data.DataTable> with query results by using the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#LoadDataTableWithQueryResults](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#loaddatatablewithqueryresults)]
  [!code-vb[DP LINQ to DataSet Examples#LoadDataTableWithQueryResults](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#loaddatatablewithqueryresults)]  
   
-## <a name="datarowcomparer"></a><span data-ttu-id="b6f5d-111">DataRowComparer</span><span class="sxs-lookup"><span data-stu-id="b6f5d-111">DataRowComparer</span></span>  
+## <a name="datarowcomparer"></a><span data-ttu-id="aacad-111">DataRowComparer</span><span class="sxs-lookup"><span data-stu-id="aacad-111">DataRowComparer</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b6f5d-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="b6f5d-112">Example</span></span>  
- <span data-ttu-id="b6f5d-113">Bu örnek iki farklı veri satırları kullanarak karşılaştırır <xref:System.Data.DataRowComparer>.</span><span class="sxs-lookup"><span data-stu-id="b6f5d-113">This example compares two different data rows by using <xref:System.Data.DataRowComparer>.</span></span>  
+### <a name="example"></a><span data-ttu-id="aacad-112">Örnek</span><span class="sxs-lookup"><span data-stu-id="aacad-112">Example</span></span>  
+ <span data-ttu-id="aacad-113">Bu örnek iki farklı veri satırları kullanarak karşılaştırır <xref:System.Data.DataRowComparer>.</span><span class="sxs-lookup"><span data-stu-id="aacad-113">This example compares two different data rows by using <xref:System.Data.DataRowComparer>.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#CompareDifferentDataRows](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#comparedifferentdatarows)]  
   
-## <a name="see-also"></a><span data-ttu-id="b6f5d-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b6f5d-114">See also</span></span>
-- [<span data-ttu-id="b6f5d-115">DataSet’e Veri Yükleme</span><span class="sxs-lookup"><span data-stu-id="b6f5d-115">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [<span data-ttu-id="b6f5d-116">LINQ to DataSet Örnekleri</span><span class="sxs-lookup"><span data-stu-id="b6f5d-116">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a><span data-ttu-id="aacad-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aacad-114">See also</span></span>
+
+- [<span data-ttu-id="aacad-115">DataSet’e Veri Yükleme</span><span class="sxs-lookup"><span data-stu-id="aacad-115">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [<span data-ttu-id="aacad-116">LINQ to DataSet Örnekleri</span><span class="sxs-lookup"><span data-stu-id="aacad-116">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

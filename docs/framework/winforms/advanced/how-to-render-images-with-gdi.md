@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: GDI + ile görüntü işleme'
+title: 'Nasıl yapılır: GDI+ ile Resim İşleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: d2c626f46862e5fdc7c51b509a6419a3d67c4102
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cb43536f941ea7a6e1a48e78046089636360eef5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079454"
 ---
-# <a name="how-to-render-images-with-gdi"></a><span data-ttu-id="05e53-102">Nasıl yapılır: GDI + ile görüntü işleme</span><span class="sxs-lookup"><span data-stu-id="05e53-102">How to: Render Images with GDI+</span></span>
-<span data-ttu-id="05e53-103">Kullanabileceğiniz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] uygulamalarınızdaki dosyaları olarak mevcut görüntülerini işlemek için.</span><span class="sxs-lookup"><span data-stu-id="05e53-103">You can use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to render images that exist as files in your applications.</span></span> <span data-ttu-id="05e53-104">Yeni bir nesne oluşturarak bunu bir <xref:System.Drawing.Image> sınıfı (gibi <xref:System.Drawing.Bitmap>), oluşturma bir <xref:System.Drawing.Graphics> kullanmak istediğiniz çizim yüzeyi başvuran nesne ve çağırma <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi <xref:System.Drawing.Graphics> nesne.</span><span class="sxs-lookup"><span data-stu-id="05e53-104">You do this by creating a new object of an <xref:System.Drawing.Image> class (such as <xref:System.Drawing.Bitmap>), creating a <xref:System.Drawing.Graphics> object that refers to the drawing surface you want to use, and calling the <xref:System.Drawing.Graphics.DrawImage%2A> method of the <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="05e53-105">Görüntü grafik sınıfı tarafından temsil edilen çizim yüzeyine boyanacak.</span><span class="sxs-lookup"><span data-stu-id="05e53-105">The image will be painted onto the drawing surface represented by the graphics class.</span></span> <span data-ttu-id="05e53-106">Oluşturma ve tasarım zamanında resim dosyalarını düzenlemek için görüntü Düzenleyicisi'ni kullanın ve bunları işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çalışma zamanında.</span><span class="sxs-lookup"><span data-stu-id="05e53-106">You can use the Image Editor to create and edit image files at design time, and render them with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] at run time.</span></span> <span data-ttu-id="05e53-107">Daha fazla bilgi için [simgeler için görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons).</span><span class="sxs-lookup"><span data-stu-id="05e53-107">For more information, see [Image Editor for Icons](/cpp/windows/image-editor-for-icons).</span></span>  
+# <a name="how-to-render-images-with-gdi"></a><span data-ttu-id="4cbb8-102">Nasıl yapılır: GDI+ ile Resim İşleme</span><span class="sxs-lookup"><span data-stu-id="4cbb8-102">How to: Render Images with GDI+</span></span>
+<span data-ttu-id="4cbb8-103">Kullanabileceğiniz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] uygulamalarınızdaki dosyaları olarak mevcut görüntülerini işlemek için.</span><span class="sxs-lookup"><span data-stu-id="4cbb8-103">You can use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to render images that exist as files in your applications.</span></span> <span data-ttu-id="4cbb8-104">Yeni bir nesne oluşturarak bunu bir <xref:System.Drawing.Image> sınıfı (gibi <xref:System.Drawing.Bitmap>), oluşturma bir <xref:System.Drawing.Graphics> kullanmak istediğiniz çizim yüzeyi başvuran nesne ve çağırma <xref:System.Drawing.Graphics.DrawImage%2A> yöntemi <xref:System.Drawing.Graphics> nesne.</span><span class="sxs-lookup"><span data-stu-id="4cbb8-104">You do this by creating a new object of an <xref:System.Drawing.Image> class (such as <xref:System.Drawing.Bitmap>), creating a <xref:System.Drawing.Graphics> object that refers to the drawing surface you want to use, and calling the <xref:System.Drawing.Graphics.DrawImage%2A> method of the <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="4cbb8-105">Görüntü grafik sınıfı tarafından temsil edilen çizim yüzeyine boyanacak.</span><span class="sxs-lookup"><span data-stu-id="4cbb8-105">The image will be painted onto the drawing surface represented by the graphics class.</span></span> <span data-ttu-id="4cbb8-106">Oluşturma ve tasarım zamanında resim dosyalarını düzenlemek için görüntü Düzenleyicisi'ni kullanın ve bunları işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çalışma zamanında.</span><span class="sxs-lookup"><span data-stu-id="4cbb8-106">You can use the Image Editor to create and edit image files at design time, and render them with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] at run time.</span></span> <span data-ttu-id="4cbb8-107">Daha fazla bilgi için [simgeler için görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons).</span><span class="sxs-lookup"><span data-stu-id="4cbb8-107">For more information, see [Image Editor for Icons](/cpp/windows/image-editor-for-icons).</span></span>  
   
-### <a name="to-render-an-image-with-gdi"></a><span data-ttu-id="05e53-108">GDI + ile görüntü oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="05e53-108">To render an image with GDI+</span></span>  
+### <a name="to-render-an-image-with-gdi"></a><span data-ttu-id="4cbb8-108">GDI + ile görüntü oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="4cbb8-108">To render an image with GDI+</span></span>  
   
-1.  <span data-ttu-id="05e53-109">Görüntülemek istediğiniz görüntüyü temsil eden bir nesne oluşturun.</span><span class="sxs-lookup"><span data-stu-id="05e53-109">Create an object representing the image you want to display.</span></span> <span data-ttu-id="05e53-110">Bu nesne öğesinden devralınan bir sınıf üyesi olmalıdır <xref:System.Drawing.Image>, gibi <xref:System.Drawing.Bitmap> veya <xref:System.Drawing.Imaging.Metafile>.</span><span class="sxs-lookup"><span data-stu-id="05e53-110">This object must be a member of a class that inherits from <xref:System.Drawing.Image>, such as <xref:System.Drawing.Bitmap> or <xref:System.Drawing.Imaging.Metafile>.</span></span> <span data-ttu-id="05e53-111">Bir örnek gösterilir:</span><span class="sxs-lookup"><span data-stu-id="05e53-111">An example is shown:</span></span>  
+1.  <span data-ttu-id="4cbb8-109">Görüntülemek istediğiniz görüntüyü temsil eden bir nesne oluşturun.</span><span class="sxs-lookup"><span data-stu-id="4cbb8-109">Create an object representing the image you want to display.</span></span> <span data-ttu-id="4cbb8-110">Bu nesne öğesinden devralınan bir sınıf üyesi olmalıdır <xref:System.Drawing.Image>, gibi <xref:System.Drawing.Bitmap> veya <xref:System.Drawing.Imaging.Metafile>.</span><span class="sxs-lookup"><span data-stu-id="4cbb8-110">This object must be a member of a class that inherits from <xref:System.Drawing.Image>, such as <xref:System.Drawing.Bitmap> or <xref:System.Drawing.Imaging.Metafile>.</span></span> <span data-ttu-id="4cbb8-111">Bir örnek gösterilir:</span><span class="sxs-lookup"><span data-stu-id="4cbb8-111">An example is shown:</span></span>  
   
     ```vb  
     ' Uses the System.Environment.GetFolderPath to get the path to the   
@@ -47,7 +47,7 @@ ms.locfileid: "57702834"
           (System::Environment::SpecialFolder::MyPictures));  
     ```  
   
-2.  <span data-ttu-id="05e53-112">Oluşturma bir <xref:System.Drawing.Graphics> kullanmak istediğiniz çizim yüzeyi temsil eden nesne.</span><span class="sxs-lookup"><span data-stu-id="05e53-112">Create a <xref:System.Drawing.Graphics> object that represents the drawing surface you want to use.</span></span> <span data-ttu-id="05e53-113">Daha fazla bilgi için [nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md).</span><span class="sxs-lookup"><span data-stu-id="05e53-113">For more information, see [How to: Create Graphics Objects for Drawing](how-to-create-graphics-objects-for-drawing.md).</span></span>  
+2.  <span data-ttu-id="4cbb8-112">Oluşturma bir <xref:System.Drawing.Graphics> kullanmak istediğiniz çizim yüzeyi temsil eden nesne.</span><span class="sxs-lookup"><span data-stu-id="4cbb8-112">Create a <xref:System.Drawing.Graphics> object that represents the drawing surface you want to use.</span></span> <span data-ttu-id="4cbb8-113">Daha fazla bilgi için [nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md).</span><span class="sxs-lookup"><span data-stu-id="4cbb8-113">For more information, see [How to: Create Graphics Objects for Drawing](how-to-create-graphics-objects-for-drawing.md).</span></span>  
   
     ```vb  
     ' Creates a Graphics object that represents the drawing surface of   
@@ -67,7 +67,7 @@ ms.locfileid: "57702834"
     Graphics^ g = button1->CreateGraphics();  
     ```  
   
-3.  <span data-ttu-id="05e53-114">Çağrı <xref:System.Drawing.Graphics.DrawImage%2A> görüntüsünü işlemek için grafik nesne.</span><span class="sxs-lookup"><span data-stu-id="05e53-114">Call the <xref:System.Drawing.Graphics.DrawImage%2A> of your graphics object to render the image.</span></span> <span data-ttu-id="05e53-115">Çizilecek görüntü hem çizilecek olduğu koordinatları belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="05e53-115">You must specify both the image to be drawn, and the coordinates where it is to be drawn.</span></span>  
+3.  <span data-ttu-id="4cbb8-114">Çağrı <xref:System.Drawing.Graphics.DrawImage%2A> görüntüsünü işlemek için grafik nesne.</span><span class="sxs-lookup"><span data-stu-id="4cbb8-114">Call the <xref:System.Drawing.Graphics.DrawImage%2A> of your graphics object to render the image.</span></span> <span data-ttu-id="4cbb8-115">Çizilecek görüntü hem çizilecek olduğu koordinatları belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="4cbb8-115">You must specify both the image to be drawn, and the coordinates where it is to be drawn.</span></span>  
   
     ```vb  
     g.DrawImage(myBitmap, 1, 1)  
@@ -81,11 +81,12 @@ ms.locfileid: "57702834"
     g->DrawImage(myBitmap, 1, 1);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="05e53-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="05e53-116">See also</span></span>
-- [<span data-ttu-id="05e53-117">Grafik Programlamaya Başlarken</span><span class="sxs-lookup"><span data-stu-id="05e53-117">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
-- [<span data-ttu-id="05e53-118">Nasıl yapılır: Çizim için grafik nesneleri oluşturma</span><span class="sxs-lookup"><span data-stu-id="05e53-118">How to: Create Graphics Objects for Drawing</span></span>](how-to-create-graphics-objects-for-drawing.md)
-- [<span data-ttu-id="05e53-119">GDI+'da Kalemler, Çizgiler ve Dikdörtgenler</span><span class="sxs-lookup"><span data-stu-id="05e53-119">Pens, Lines, and Rectangles in GDI+</span></span>](pens-lines-and-rectangles-in-gdi.md)
-- [<span data-ttu-id="05e53-120">Nasıl yapılır: Bir Windows formunda metin çizme</span><span class="sxs-lookup"><span data-stu-id="05e53-120">How to: Draw Text on a Windows Form</span></span>](how-to-draw-text-on-a-windows-form.md)
-- [<span data-ttu-id="05e53-121">Windows Forms’da Grafikler ve Çizim</span><span class="sxs-lookup"><span data-stu-id="05e53-121">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
-- [<span data-ttu-id="05e53-122">Çizim çizgi veya kapalı şekiller</span><span class="sxs-lookup"><span data-stu-id="05e53-122">Drawing Lines or Closed Figures</span></span>](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
-- [<span data-ttu-id="05e53-123">Simgeler için Görüntü Düzenleyicisi</span><span class="sxs-lookup"><span data-stu-id="05e53-123">Image Editor for Icons</span></span>](/cpp/windows/image-editor-for-icons)
+## <a name="see-also"></a><span data-ttu-id="4cbb8-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4cbb8-116">See also</span></span>
+
+- [<span data-ttu-id="4cbb8-117">Grafik Programlamaya Başlarken</span><span class="sxs-lookup"><span data-stu-id="4cbb8-117">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
+- [<span data-ttu-id="4cbb8-118">Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma</span><span class="sxs-lookup"><span data-stu-id="4cbb8-118">How to: Create Graphics Objects for Drawing</span></span>](how-to-create-graphics-objects-for-drawing.md)
+- [<span data-ttu-id="4cbb8-119">GDI+'da Kalemler, Çizgiler ve Dikdörtgenler</span><span class="sxs-lookup"><span data-stu-id="4cbb8-119">Pens, Lines, and Rectangles in GDI+</span></span>](pens-lines-and-rectangles-in-gdi.md)
+- [<span data-ttu-id="4cbb8-120">Nasıl yapılır: Bir Windows Formunda Metin Çizme</span><span class="sxs-lookup"><span data-stu-id="4cbb8-120">How to: Draw Text on a Windows Form</span></span>](how-to-draw-text-on-a-windows-form.md)
+- [<span data-ttu-id="4cbb8-121">Windows Formlarında Grafikler ve Çizim</span><span class="sxs-lookup"><span data-stu-id="4cbb8-121">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="4cbb8-122">Çizgi veya Kapalı Şekiller Çizme</span><span class="sxs-lookup"><span data-stu-id="4cbb8-122">Drawing Lines or Closed Figures</span></span>](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
+- [<span data-ttu-id="4cbb8-123">Simgeler İçin Görüntü Düzenleyicisi</span><span class="sxs-lookup"><span data-stu-id="4cbb8-123">Image Editor for Icons</span></span>](/cpp/windows/image-editor-for-icons)

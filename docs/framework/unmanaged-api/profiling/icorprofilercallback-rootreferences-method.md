@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfab1d716b5a8b530561e2dc72442591eb0d8e42
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b616017745d7cc33d57b1626b6c27c59a0a60a32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499036"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091180"
 ---
-# <a name="icorprofilercallbackrootreferences-method"></a><span data-ttu-id="1791d-102">ICorProfilerCallback::RootReferences Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1791d-102">ICorProfilerCallback::RootReferences Method</span></span>
-<span data-ttu-id="1791d-103">Profil oluşturucuyu çöp toplamadan sonra kök başvuruları hakkındaki bilgileri ile bildirir.</span><span class="sxs-lookup"><span data-stu-id="1791d-103">Notifies the profiler with information about root references after garbage collection.</span></span>  
+# <a name="icorprofilercallbackrootreferences-method"></a><span data-ttu-id="13995-102">ICorProfilerCallback::RootReferences Yöntemi</span><span class="sxs-lookup"><span data-stu-id="13995-102">ICorProfilerCallback::RootReferences Method</span></span>
+<span data-ttu-id="13995-103">Profil oluşturucuyu çöp toplamadan sonra kök başvuruları hakkındaki bilgileri ile bildirir.</span><span class="sxs-lookup"><span data-stu-id="13995-103">Notifies the profiler with information about root references after garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1791d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1791d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13995-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="13995-104">Syntax</span></span>  
   
 ```  
 HRESULT RootReferences(  
@@ -35,28 +35,29 @@ HRESULT RootReferences(
     [in, size_is(cRootRefs)] ObjectID rootRefIds[] );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1791d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1791d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="13995-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="13995-105">Parameters</span></span>  
  `cRootRefs`  
- <span data-ttu-id="1791d-106">[in] Başvuruları sayısını `rootRefIds` dizisi.</span><span class="sxs-lookup"><span data-stu-id="1791d-106">[in] The number of references in the `rootRefIds` array.</span></span>  
+ <span data-ttu-id="13995-106">[in] Başvuruları sayısını `rootRefIds` dizisi.</span><span class="sxs-lookup"><span data-stu-id="13995-106">[in] The number of references in the `rootRefIds` array.</span></span>  
   
  `rootRefIds`  
- <span data-ttu-id="1791d-107">[in] Statik nesne veya yığındaki bir nesne başvurusu nesne kimlikleri dizisi.</span><span class="sxs-lookup"><span data-stu-id="1791d-107">[in] An array of object IDs that reference either a static object or an object on the stack.</span></span>  
+ <span data-ttu-id="13995-107">[in] Statik nesne veya yığındaki bir nesne başvurusu nesne kimlikleri dizisi.</span><span class="sxs-lookup"><span data-stu-id="13995-107">[in] An array of object IDs that reference either a static object or an object on the stack.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1791d-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1791d-108">Remarks</span></span>  
- <span data-ttu-id="1791d-109">Her ikisi de `RootReferences` ve [Icorprofilercallback2::rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) profil oluşturucu bildirmek için çağırılır.</span><span class="sxs-lookup"><span data-stu-id="1791d-109">Both `RootReferences` and [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) are called to notify the profiler.</span></span> <span data-ttu-id="1791d-110">Profil oluşturucular tarafından normalde uygulanır birini veya diğerini, ancak ikisi birden değil, bilgi geçirilen çünkü `RootReferences2` geçirilen bir üst kümesidir `RootReferences`.</span><span class="sxs-lookup"><span data-stu-id="1791d-110">Profilers will normally implement one or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="13995-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="13995-108">Remarks</span></span>  
+ <span data-ttu-id="13995-109">Her ikisi de `RootReferences` ve [Icorprofilercallback2::rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) profil oluşturucu bildirmek için çağırılır.</span><span class="sxs-lookup"><span data-stu-id="13995-109">Both `RootReferences` and [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) are called to notify the profiler.</span></span> <span data-ttu-id="13995-110">Profil oluşturucular tarafından normalde uygulanır birini veya diğerini, ancak ikisi birden değil, bilgi geçirilen çünkü `RootReferences2` geçirilen bir üst kümesidir `RootReferences`.</span><span class="sxs-lookup"><span data-stu-id="13995-110">Profilers will normally implement one or the other, but not both, because the information passed in `RootReferences2` is a superset of that passed in `RootReferences`.</span></span>  
   
- <span data-ttu-id="1791d-111">Mümkündür `rootRefIds` dizisi null bir nesne içerir.</span><span class="sxs-lookup"><span data-stu-id="1791d-111">It is possible for the `rootRefIds` array to contain a null object.</span></span> <span data-ttu-id="1791d-112">Örneğin, yığın üzerinde bildirilen tüm nesne başvuruları kökleri çöp toplayıcısı tarafından kabul edilir ve her zaman bildirilir.</span><span class="sxs-lookup"><span data-stu-id="1791d-112">For example, all object references declared on the stack are treated as roots by the garbage collector and will always be reported.</span></span>  
+ <span data-ttu-id="13995-111">Mümkündür `rootRefIds` dizisi null bir nesne içerir.</span><span class="sxs-lookup"><span data-stu-id="13995-111">It is possible for the `rootRefIds` array to contain a null object.</span></span> <span data-ttu-id="13995-112">Örneğin, yığın üzerinde bildirilen tüm nesne başvuruları kökleri çöp toplayıcısı tarafından kabul edilir ve her zaman bildirilir.</span><span class="sxs-lookup"><span data-stu-id="13995-112">For example, all object references declared on the stack are treated as roots by the garbage collector and will always be reported.</span></span>  
   
- <span data-ttu-id="1791d-113">Tarafından döndürülen nesne kimlikleri `RootReferences` çöp toplama nesneleri eski adreslerinden yeni adreslerine taşıma ortasında olabileceğinden geri kendisini sırasında geçerli değildir.</span><span class="sxs-lookup"><span data-stu-id="1791d-113">The object IDs returned by `RootReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses.</span></span> <span data-ttu-id="1791d-114">Bu nedenle, profil oluşturucular sırasında nesneleri incelemek kullanmamanız gerekir bir `RootReferences` çağırın.</span><span class="sxs-lookup"><span data-stu-id="1791d-114">Therefore, profilers must not attempt to inspect objects during a `RootReferences` call.</span></span> <span data-ttu-id="1791d-115">Zaman [Icorprofilercallback2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) olan çağrılır, tüm nesnelerin yeni konumlarına taşınır ve güvenli bir şekilde inceledi.</span><span class="sxs-lookup"><span data-stu-id="1791d-115">When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.</span></span>  
+ <span data-ttu-id="13995-113">Tarafından döndürülen nesne kimlikleri `RootReferences` çöp toplama nesneleri eski adreslerinden yeni adreslerine taşıma ortasında olabileceğinden geri kendisini sırasında geçerli değildir.</span><span class="sxs-lookup"><span data-stu-id="13995-113">The object IDs returned by `RootReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects from old addresses to new addresses.</span></span> <span data-ttu-id="13995-114">Bu nedenle, profil oluşturucular sırasında nesneleri incelemek kullanmamanız gerekir bir `RootReferences` çağırın.</span><span class="sxs-lookup"><span data-stu-id="13995-114">Therefore, profilers must not attempt to inspect objects during a `RootReferences` call.</span></span> <span data-ttu-id="13995-115">Zaman [Icorprofilercallback2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) olan çağrılır, tüm nesnelerin yeni konumlarına taşınır ve güvenli bir şekilde inceledi.</span><span class="sxs-lookup"><span data-stu-id="13995-115">When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, all objects have been moved to their new locations and can be safely inspected.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1791d-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1791d-116">Requirements</span></span>  
- <span data-ttu-id="1791d-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1791d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13995-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="13995-116">Requirements</span></span>  
+ <span data-ttu-id="13995-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13995-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1791d-118">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1791d-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="13995-118">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="13995-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1791d-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1791d-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="13995-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="13995-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1791d-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1791d-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="13995-120">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="13995-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="1791d-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1791d-121">See also</span></span>
-- [<span data-ttu-id="1791d-122">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1791d-122">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="13995-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="13995-121">See also</span></span>
+
+- [<span data-ttu-id="13995-122">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="13995-122">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

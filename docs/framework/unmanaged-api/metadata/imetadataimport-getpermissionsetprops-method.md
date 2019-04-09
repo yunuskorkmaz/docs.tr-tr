@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 806f1ebcacb9e7ad27b7370f9976b3341bf64f8c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3ff91a24dec7f8507989b701ea24b569c1670c89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109721"
 ---
-# <a name="imetadataimportgetpermissionsetprops-method"></a><span data-ttu-id="dbc7b-102">IMetaDataImport::GetPermissionSetProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="dbc7b-102">IMetaDataImport::GetPermissionSetProps Method</span></span>
-<span data-ttu-id="dbc7b-103">İle ilişkili meta verileri alır <xref:System.Security.PermissionSet?displayProperty=nameWithType> belirtilen izni belirteci tarafından temsil edilir.</span><span class="sxs-lookup"><span data-stu-id="dbc7b-103">Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.</span></span>  
+# <a name="imetadataimportgetpermissionsetprops-method"></a><span data-ttu-id="a1c2d-102">IMetaDataImport::GetPermissionSetProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a1c2d-102">IMetaDataImport::GetPermissionSetProps Method</span></span>
+<span data-ttu-id="a1c2d-103">İle ilişkili meta verileri alır <xref:System.Security.PermissionSet?displayProperty=nameWithType> belirtilen izni belirteci tarafından temsil edilir.</span><span class="sxs-lookup"><span data-stu-id="a1c2d-103">Gets the metadata associated with the <xref:System.Security.PermissionSet?displayProperty=nameWithType> represented by the specified Permission token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dbc7b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dbc7b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a1c2d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a1c2d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPermissionSetProps (  
@@ -38,29 +38,30 @@ HRESULT GetPermissionSetProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="dbc7b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="dbc7b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a1c2d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a1c2d-105">Parameters</span></span>  
  `pm`  
- <span data-ttu-id="dbc7b-106">[in] İzin için meta veri özelliklerini almak için kümesini temsil eden izin meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="dbc7b-106">[in] The Permission metadata token that represents the permission set to get the metadata properties for.</span></span>  
+ <span data-ttu-id="a1c2d-106">[in] İzin için meta veri özelliklerini almak için kümesini temsil eden izin meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="a1c2d-106">[in] The Permission metadata token that represents the permission set to get the metadata properties for.</span></span>  
   
  `pdwAction`  
- <span data-ttu-id="dbc7b-107">[out] İzin kümesi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="dbc7b-107">[out] A pointer to the permission set.</span></span>  
+ <span data-ttu-id="a1c2d-107">[out] İzin kümesi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a1c2d-107">[out] A pointer to the permission set.</span></span>  
   
  `ppvPermission`  
- <span data-ttu-id="dbc7b-108">[out] İzin kümesi ikili meta veri imzası bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="dbc7b-108">[out] A pointer to the binary metadata signature of the permission set.</span></span>  
+ <span data-ttu-id="a1c2d-108">[out] İzin kümesi ikili meta veri imzası bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a1c2d-108">[out] A pointer to the binary metadata signature of the permission set.</span></span>  
   
  `pcbPermission`  
- <span data-ttu-id="dbc7b-109">[out] Bayt cinsinden boyutu `ppvPermission`.</span><span class="sxs-lookup"><span data-stu-id="dbc7b-109">[out] The size in bytes of `ppvPermission`.</span></span>  
+ <span data-ttu-id="a1c2d-109">[out] Bayt cinsinden boyutu `ppvPermission`.</span><span class="sxs-lookup"><span data-stu-id="a1c2d-109">[out] The size in bytes of `ppvPermission`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dbc7b-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dbc7b-110">Requirements</span></span>  
- <span data-ttu-id="dbc7b-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dbc7b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a1c2d-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a1c2d-110">Requirements</span></span>  
+ <span data-ttu-id="a1c2d-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a1c2d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dbc7b-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="dbc7b-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a1c2d-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="a1c2d-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="dbc7b-113">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="dbc7b-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a1c2d-113">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="a1c2d-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="dbc7b-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dbc7b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="a1c2d-114">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="a1c2d-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="dbc7b-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dbc7b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a1c2d-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a1c2d-115">See also</span></span>
+
 - <xref:System.Security.PermissionSet>
-- [<span data-ttu-id="dbc7b-116">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="dbc7b-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="dbc7b-117">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="dbc7b-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="a1c2d-116">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a1c2d-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="a1c2d-117">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a1c2d-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

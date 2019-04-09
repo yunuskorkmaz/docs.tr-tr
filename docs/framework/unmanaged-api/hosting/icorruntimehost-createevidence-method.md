@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c54c21008e5922a5357f503821d87e297f0d00e9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ca54f779d257314b843838d90ca9996f1eb3237b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081842"
 ---
-# <a name="icorruntimehostcreateevidence-method"></a><span data-ttu-id="4a5f8-102">ICorRuntimeHost::CreateEvidence Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4a5f8-102">ICorRuntimeHost::CreateEvidence Method</span></span>
-<span data-ttu-id="4a5f8-103">Türü bir arabirim işaretçisi alır <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, geçirilecek güvenlik kanıt oluşturmak için ana sağlayan [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) veya [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-103">Gets an interface pointer of type <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, which allows the host to create security evidence to pass to the [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) or [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) method.</span></span>  
+# <a name="icorruntimehostcreateevidence-method"></a><span data-ttu-id="b33b2-102">ICorRuntimeHost::CreateEvidence Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b33b2-102">ICorRuntimeHost::CreateEvidence Method</span></span>
+<span data-ttu-id="b33b2-103">Türü bir arabirim işaretçisi alır <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, geçirilecek güvenlik kanıt oluşturmak için ana sağlayan [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) veya [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="b33b2-103">Gets an interface pointer of type <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, which allows the host to create security evidence to pass to the [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) or [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4a5f8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4a5f8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b33b2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b33b2-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateEvidence (  
@@ -35,32 +35,33 @@ HRESULT CreateEvidence (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4a5f8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4a5f8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b33b2-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b33b2-105">Parameters</span></span>  
  `pEvidence`  
- <span data-ttu-id="4a5f8-106">[out] Bir arabirim işaretçisi için bir <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> güvenlik kanıt oluşturmak için kullanılan bir örnek.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-106">[out] A interface pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> instance used to create security evidence.</span></span> <span data-ttu-id="4a5f8-107">Bu işaretçinin türü belirtilmiş `IUnknown`, Arayanların genellikle çağırmalıdır `QueryInterface` bir işaretçi alma için bu arabirimdeki bir <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-107">This pointer is typed `IUnknown`, so callers should typically call `QueryInterface` on this interface to obtain a pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.</span></span>  
+ <span data-ttu-id="b33b2-106">[out] Bir arabirim işaretçisi için bir <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> güvenlik kanıt oluşturmak için kullanılan bir örnek.</span><span class="sxs-lookup"><span data-stu-id="b33b2-106">[out] A interface pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> instance used to create security evidence.</span></span> <span data-ttu-id="b33b2-107">Bu işaretçinin türü belirtilmiş `IUnknown`, Arayanların genellikle çağırmalıdır `QueryInterface` bir işaretçi alma için bu arabirimdeki bir <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b33b2-107">This pointer is typed `IUnknown`, so callers should typically call `QueryInterface` on this interface to obtain a pointer to an <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4a5f8-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="4a5f8-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b33b2-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b33b2-108">Return Value</span></span>  
   
-|<span data-ttu-id="4a5f8-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4a5f8-109">HRESULT</span></span>|<span data-ttu-id="4a5f8-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4a5f8-110">Description</span></span>|  
+|<span data-ttu-id="b33b2-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b33b2-109">HRESULT</span></span>|<span data-ttu-id="b33b2-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b33b2-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="4a5f8-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="4a5f8-111">S_OK</span></span>|<span data-ttu-id="4a5f8-112">İşlem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-112">The operation was successful.</span></span>|  
-|<span data-ttu-id="4a5f8-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="4a5f8-113">S_FALSE</span></span>|<span data-ttu-id="4a5f8-114">İşlemi tamamlayamadı.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-114">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="4a5f8-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="4a5f8-115">E_FAIL</span></span>|<span data-ttu-id="4a5f8-116">Bilinmeyen, geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="4a5f8-117">Ortak dil çalışma zamanı (CLR), artık bir yöntem E_FAIL döndürürse, işlemde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="4a5f8-118">Herhangi bir barındırma API'si yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="4a5f8-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="4a5f8-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="4a5f8-120">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b33b2-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="b33b2-111">S_OK</span></span>|<span data-ttu-id="b33b2-112">İşlem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="b33b2-112">The operation was successful.</span></span>|  
+|<span data-ttu-id="b33b2-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="b33b2-113">S_FALSE</span></span>|<span data-ttu-id="b33b2-114">İşlemi tamamlayamadı.</span><span class="sxs-lookup"><span data-stu-id="b33b2-114">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="b33b2-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b33b2-115">E_FAIL</span></span>|<span data-ttu-id="b33b2-116">Bilinmeyen, geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="b33b2-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="b33b2-117">Ortak dil çalışma zamanı (CLR), artık bir yöntem E_FAIL döndürürse, işlemde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="b33b2-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="b33b2-118">Herhangi bir barındırma API'si yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="b33b2-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b33b2-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b33b2-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b33b2-120">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="b33b2-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4a5f8-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4a5f8-121">Remarks</span></span>  
- <span data-ttu-id="4a5f8-122">Bu yöntem, yerel koddan doldurulamaz boş bir koleksiyon döndürür.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-122">This method returns an empty collection that cannot be populated from native code.</span></span> <span data-ttu-id="4a5f8-123">Kullanmanız gereken <xref:System.Security.Policy.Evidence> yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-123">You should use the <xref:System.Security.Policy.Evidence> method instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b33b2-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b33b2-121">Remarks</span></span>  
+ <span data-ttu-id="b33b2-122">Bu yöntem, yerel koddan doldurulamaz boş bir koleksiyon döndürür.</span><span class="sxs-lookup"><span data-stu-id="b33b2-122">This method returns an empty collection that cannot be populated from native code.</span></span> <span data-ttu-id="b33b2-123">Kullanmanız gereken <xref:System.Security.Policy.Evidence> yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="b33b2-123">You should use the <xref:System.Security.Policy.Evidence> method instead.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4a5f8-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4a5f8-124">Requirements</span></span>  
- <span data-ttu-id="4a5f8-125">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4a5f8-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b33b2-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b33b2-124">Requirements</span></span>  
+ <span data-ttu-id="b33b2-125">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b33b2-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4a5f8-126">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4a5f8-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b33b2-126">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b33b2-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4a5f8-127">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="4a5f8-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b33b2-127">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="b33b2-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4a5f8-128">**.NET framework sürümü:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="4a5f8-128">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="b33b2-128">**.NET framework sürümü:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="b33b2-128">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4a5f8-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4a5f8-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b33b2-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b33b2-129">See also</span></span>
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="4a5f8-130">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4a5f8-130">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="b33b2-130">ICorRuntimeHost Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b33b2-130">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

@@ -5,43 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: b8cd2c58efb08523050e19c31201be48ae98ba03
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 540c0fe5c4d06ea341b9cc8be9755cc67fe9bbc2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085187"
 ---
-# <a name="intranet-unsecured-client-and-service"></a><span data-ttu-id="7d576-102">Intranet Güvenli Olmayan Hizmet ve İstemci</span><span class="sxs-lookup"><span data-stu-id="7d576-102">Intranet Unsecured Client and Service</span></span>
-<span data-ttu-id="7d576-103">WCF uygulaması için özel bir güvenli ağ üzerinden bilgi sağlamak için geliştirilmiş basit bir Windows Communication Foundation (WCF) hizmeti aşağıdaki çizimde gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="7d576-103">The following illustration depicts a simple Windows Communication Foundation (WCF) service developed to provide information on a secure private network to a WCF application.</span></span> <span data-ttu-id="7d576-104">Güvenlik, verileri düşük önem derecesi olduğundan, ağ doğası gereği güvenli olması beklenir veya WCF altyapısı aşağıdaki katman tarafından sağlanan güvenlik gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="7d576-104">Security is not required because the data is of low importance, the network is expected to be inherently secure, or security is provided by a layer below the WCF infrastructure.</span></span>  
+# <a name="intranet-unsecured-client-and-service"></a><span data-ttu-id="e5808-102">Intranet Güvenli Olmayan Hizmet ve İstemci</span><span class="sxs-lookup"><span data-stu-id="e5808-102">Intranet Unsecured Client and Service</span></span>
+<span data-ttu-id="e5808-103">WCF uygulaması için özel bir güvenli ağ üzerinden bilgi sağlamak için geliştirilmiş basit bir Windows Communication Foundation (WCF) hizmeti aşağıdaki çizimde gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="e5808-103">The following illustration depicts a simple Windows Communication Foundation (WCF) service developed to provide information on a secure private network to a WCF application.</span></span> <span data-ttu-id="e5808-104">Güvenlik, verileri düşük önem derecesi olduğundan, ağ doğası gereği güvenli olması beklenir veya WCF altyapısı aşağıdaki katman tarafından sağlanan güvenlik gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="e5808-104">Security is not required because the data is of low importance, the network is expected to be inherently secure, or security is provided by a layer below the WCF infrastructure.</span></span>  
   
  ![İntranet güvenli olmayan istemci ve hizmet senaryo.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
-|<span data-ttu-id="7d576-106">Özelliği</span><span class="sxs-lookup"><span data-stu-id="7d576-106">Characteristic</span></span>|<span data-ttu-id="7d576-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7d576-107">Description</span></span>|  
+|<span data-ttu-id="e5808-106">Özelliği</span><span class="sxs-lookup"><span data-stu-id="e5808-106">Characteristic</span></span>|<span data-ttu-id="e5808-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e5808-107">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="7d576-108">Güvenlik modu</span><span class="sxs-lookup"><span data-stu-id="7d576-108">Security Mode</span></span>|<span data-ttu-id="7d576-109">Yok.</span><span class="sxs-lookup"><span data-stu-id="7d576-109">None</span></span>|  
-|<span data-ttu-id="7d576-110">Taşıma</span><span class="sxs-lookup"><span data-stu-id="7d576-110">Transport</span></span>|<span data-ttu-id="7d576-111">TCP</span><span class="sxs-lookup"><span data-stu-id="7d576-111">TCP</span></span>|  
-|<span data-ttu-id="7d576-112">Bağlama</span><span class="sxs-lookup"><span data-stu-id="7d576-112">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
-|<span data-ttu-id="7d576-113">Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="7d576-113">Interoperability</span></span>|<span data-ttu-id="7d576-114">Yalnızca WCF</span><span class="sxs-lookup"><span data-stu-id="7d576-114">WCF only</span></span>|  
-|<span data-ttu-id="7d576-115">Kimlik doğrulaması</span><span class="sxs-lookup"><span data-stu-id="7d576-115">Authentication</span></span>|<span data-ttu-id="7d576-116">Yok.</span><span class="sxs-lookup"><span data-stu-id="7d576-116">None</span></span>|  
-|<span data-ttu-id="7d576-117">Bütünlüğü</span><span class="sxs-lookup"><span data-stu-id="7d576-117">Integrity</span></span>|<span data-ttu-id="7d576-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="7d576-118">None</span></span>|  
-|<span data-ttu-id="7d576-119">Gizliliği</span><span class="sxs-lookup"><span data-stu-id="7d576-119">Confidentiality</span></span>|<span data-ttu-id="7d576-120">Yok.</span><span class="sxs-lookup"><span data-stu-id="7d576-120">None</span></span>|  
+|<span data-ttu-id="e5808-108">Güvenlik modu</span><span class="sxs-lookup"><span data-stu-id="e5808-108">Security Mode</span></span>|<span data-ttu-id="e5808-109">None</span><span class="sxs-lookup"><span data-stu-id="e5808-109">None</span></span>|  
+|<span data-ttu-id="e5808-110">Taşıma</span><span class="sxs-lookup"><span data-stu-id="e5808-110">Transport</span></span>|<span data-ttu-id="e5808-111">TCP</span><span class="sxs-lookup"><span data-stu-id="e5808-111">TCP</span></span>|  
+|<span data-ttu-id="e5808-112">Bağlama</span><span class="sxs-lookup"><span data-stu-id="e5808-112">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
+|<span data-ttu-id="e5808-113">Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="e5808-113">Interoperability</span></span>|<span data-ttu-id="e5808-114">Yalnızca WCF</span><span class="sxs-lookup"><span data-stu-id="e5808-114">WCF only</span></span>|  
+|<span data-ttu-id="e5808-115">Kimlik doğrulaması</span><span class="sxs-lookup"><span data-stu-id="e5808-115">Authentication</span></span>|<span data-ttu-id="e5808-116">Yok.</span><span class="sxs-lookup"><span data-stu-id="e5808-116">None</span></span>|  
+|<span data-ttu-id="e5808-117">Bütünlüğü</span><span class="sxs-lookup"><span data-stu-id="e5808-117">Integrity</span></span>|<span data-ttu-id="e5808-118">None</span><span class="sxs-lookup"><span data-stu-id="e5808-118">None</span></span>|  
+|<span data-ttu-id="e5808-119">Gizliliği</span><span class="sxs-lookup"><span data-stu-id="e5808-119">Confidentiality</span></span>|<span data-ttu-id="e5808-120">Yok.</span><span class="sxs-lookup"><span data-stu-id="e5808-120">None</span></span>|  
   
-## <a name="service"></a><span data-ttu-id="7d576-121">Hizmet</span><span class="sxs-lookup"><span data-stu-id="7d576-121">Service</span></span>  
- <span data-ttu-id="7d576-122">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="7d576-122">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="7d576-123">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="7d576-123">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="e5808-121">Hizmet</span><span class="sxs-lookup"><span data-stu-id="e5808-121">Service</span></span>  
+ <span data-ttu-id="e5808-122">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="e5808-122">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="e5808-123">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="e5808-123">Do one of the following:</span></span>  
   
--   <span data-ttu-id="7d576-124">Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.</span><span class="sxs-lookup"><span data-stu-id="7d576-124">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="e5808-124">Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.</span><span class="sxs-lookup"><span data-stu-id="e5808-124">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="7d576-125">Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="7d576-125">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="e5808-125">Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.</span><span class="sxs-lookup"><span data-stu-id="e5808-125">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="7d576-126">Kod</span><span class="sxs-lookup"><span data-stu-id="7d576-126">Code</span></span>  
- <span data-ttu-id="7d576-127">Aşağıdaki kod, bir uç nokta ile herhangi bir güvenliğin oluşturma işlemi gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="7d576-127">The following code shows how to create an endpoint with no security:</span></span>  
+### <a name="code"></a><span data-ttu-id="e5808-126">Kod</span><span class="sxs-lookup"><span data-stu-id="e5808-126">Code</span></span>  
+ <span data-ttu-id="e5808-127">Aşağıdaki kod, bir uç nokta ile herhangi bir güvenliğin oluşturma işlemi gösterilmektedir:</span><span class="sxs-lookup"><span data-stu-id="e5808-127">The following code shows how to create an endpoint with no security:</span></span>  
   
  [!code-csharp[C_UnsecuredService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#2)]
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="7d576-128">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="7d576-128">Configuration</span></span>  
- <span data-ttu-id="7d576-129">Aşağıdaki kod, yapılandırma'yı kullanarak aynı uç noktasını ayarlar:</span><span class="sxs-lookup"><span data-stu-id="7d576-129">The following code sets up the same endpoint using configuration:</span></span>  
+### <a name="configuration"></a><span data-ttu-id="e5808-128">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="e5808-128">Configuration</span></span>  
+ <span data-ttu-id="e5808-129">Aşağıdaki kod, yapılandırma'yı kullanarak aynı uç noktasını ayarlar:</span><span class="sxs-lookup"><span data-stu-id="e5808-129">The following code sets up the same endpoint using configuration:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -70,24 +70,24 @@ ms.locfileid: "58466237"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="7d576-130">İstemci</span><span class="sxs-lookup"><span data-stu-id="7d576-130">Client</span></span>  
- <span data-ttu-id="7d576-131">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="7d576-131">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="7d576-132">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="7d576-132">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="e5808-130">İstemci</span><span class="sxs-lookup"><span data-stu-id="e5808-130">Client</span></span>  
+ <span data-ttu-id="e5808-131">Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="e5808-131">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="e5808-132">Aşağıdakilerden birini yapın:</span><span class="sxs-lookup"><span data-stu-id="e5808-132">Do one of the following:</span></span>  
   
--   <span data-ttu-id="7d576-133">Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.</span><span class="sxs-lookup"><span data-stu-id="7d576-133">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="e5808-133">Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.</span><span class="sxs-lookup"><span data-stu-id="e5808-133">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="7d576-134">Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun.</span><span class="sxs-lookup"><span data-stu-id="7d576-134">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="7d576-135">Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın.</span><span class="sxs-lookup"><span data-stu-id="7d576-135">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="7d576-136">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="7d576-136">For example:</span></span>  
+-   <span data-ttu-id="e5808-134">Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun.</span><span class="sxs-lookup"><span data-stu-id="e5808-134">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="e5808-135">Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın.</span><span class="sxs-lookup"><span data-stu-id="e5808-135">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="e5808-136">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="e5808-136">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="7d576-137">Kod</span><span class="sxs-lookup"><span data-stu-id="7d576-137">Code</span></span>  
- <span data-ttu-id="7d576-138">Aşağıdaki kod TCP protokolünü kullanarak güvenli bir uç nokta erişen temel bir WCF istemcisi gösterir.</span><span class="sxs-lookup"><span data-stu-id="7d576-138">The following code shows a basic WCF client that accesses an unsecured endpoint using the TCP protocol.</span></span>  
+### <a name="code"></a><span data-ttu-id="e5808-137">Kod</span><span class="sxs-lookup"><span data-stu-id="e5808-137">Code</span></span>  
+ <span data-ttu-id="e5808-138">Aşağıdaki kod TCP protokolünü kullanarak güvenli bir uç nokta erişen temel bir WCF istemcisi gösterir.</span><span class="sxs-lookup"><span data-stu-id="e5808-138">The following code shows a basic WCF client that accesses an unsecured endpoint using the TCP protocol.</span></span>  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="7d576-139">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="7d576-139">Configuration</span></span>  
- <span data-ttu-id="7d576-140">Aşağıdaki yapılandırma kodunu istemciye uygular:</span><span class="sxs-lookup"><span data-stu-id="7d576-140">The following configuration code applies to the client:</span></span>  
+### <a name="configuration"></a><span data-ttu-id="e5808-139">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="e5808-139">Configuration</span></span>  
+ <span data-ttu-id="e5808-140">Aşağıdaki yapılandırma kodunu istemciye uygular:</span><span class="sxs-lookup"><span data-stu-id="e5808-140">The following configuration code applies to the client:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -112,7 +112,8 @@ ms.locfileid: "58466237"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7d576-141">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7d576-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5808-141">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e5808-141">See also</span></span>
+
 - <xref:System.ServiceModel.NetTcpBinding>
-- [<span data-ttu-id="7d576-142">Güvenliğe Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7d576-142">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [<span data-ttu-id="7d576-143">Windows Server AppFabric için güvenlik modeli</span><span class="sxs-lookup"><span data-stu-id="7d576-143">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [<span data-ttu-id="e5808-142">Güvenlik Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e5808-142">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [<span data-ttu-id="e5808-143">Windows Server AppFabric için güvenlik modeli</span><span class="sxs-lookup"><span data-stu-id="e5808-143">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
