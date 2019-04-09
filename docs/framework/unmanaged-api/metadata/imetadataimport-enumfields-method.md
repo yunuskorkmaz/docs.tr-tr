@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18cf59553468e2408f3898d8233bd05d453db17b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 313dbd11f1d033f0e15de651b9c130cc98c217e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192837"
 ---
-# <a name="imetadataimportenumfields-method"></a><span data-ttu-id="7b1a6-102">IMetaDataImport::EnumFields Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7b1a6-102">IMetaDataImport::EnumFields Method</span></span>
-<span data-ttu-id="7b1a6-103">FieldDef simgesi belirteçleri için belirtilen TypeDef belirteci tarafından başvurulan türünü numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="7b1a6-103">Enumerates FieldDef tokens for the type referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenumfields-method"></a><span data-ttu-id="f882f-102">IMetaDataImport::EnumFields Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f882f-102">IMetaDataImport::EnumFields Method</span></span>
+<span data-ttu-id="f882f-103">FieldDef simgesi belirteçleri için belirtilen TypeDef belirteci tarafından başvurulan türünü numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="f882f-103">Enumerates FieldDef tokens for the type referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7b1a6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7b1a6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f882f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f882f-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumFields (   
@@ -39,38 +39,39 @@ HRESULT EnumFields (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7b1a6-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7b1a6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f882f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f882f-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="7b1a6-106">[out içinde] Numaralandırıcı bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="7b1a6-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="f882f-106">[out içinde] Numaralandırıcı bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="f882f-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `cl`  
- <span data-ttu-id="7b1a6-107">[in] Numaralandırılacak alanları sınıfı TypeDef simgesi.</span><span class="sxs-lookup"><span data-stu-id="7b1a6-107">[in] The TypeDef token of the class whose fields are to be enumerated.</span></span>  
+ <span data-ttu-id="f882f-107">[in] Numaralandırılacak alanları sınıfı TypeDef simgesi.</span><span class="sxs-lookup"><span data-stu-id="f882f-107">[in] The TypeDef token of the class whose fields are to be enumerated.</span></span>  
   
  `rFields`  
- <span data-ttu-id="7b1a6-108">[out] FieldDef simgesi belirteçleri listesi.</span><span class="sxs-lookup"><span data-stu-id="7b1a6-108">[out] The list of FieldDef tokens.</span></span>  
+ <span data-ttu-id="f882f-108">[out] FieldDef simgesi belirteçleri listesi.</span><span class="sxs-lookup"><span data-stu-id="f882f-108">[out] The list of FieldDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="7b1a6-109">[in] En büyük boyutunu `rFields` dizisi.</span><span class="sxs-lookup"><span data-stu-id="7b1a6-109">[in] The maximum size of the `rFields` array.</span></span>  
+ <span data-ttu-id="f882f-109">[in] En büyük boyutunu `rFields` dizisi.</span><span class="sxs-lookup"><span data-stu-id="f882f-109">[in] The maximum size of the `rFields` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="7b1a6-110">[out] Döndürülen fieldDef simgesi belirteçleri gerçek sayısını `rFields`.</span><span class="sxs-lookup"><span data-stu-id="7b1a6-110">[out] The actual number of FieldDef tokens returned in `rFields`.</span></span>  
+ <span data-ttu-id="f882f-110">[out] Döndürülen fieldDef simgesi belirteçleri gerçek sayısını `rFields`.</span><span class="sxs-lookup"><span data-stu-id="f882f-110">[out] The actual number of FieldDef tokens returned in `rFields`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7b1a6-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="7b1a6-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f882f-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="f882f-111">Return Value</span></span>  
   
-|<span data-ttu-id="7b1a6-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7b1a6-112">HRESULT</span></span>|<span data-ttu-id="7b1a6-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7b1a6-113">Description</span></span>|  
+|<span data-ttu-id="f882f-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f882f-112">HRESULT</span></span>|<span data-ttu-id="f882f-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f882f-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="7b1a6-114">`EnumFields` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="7b1a6-114">`EnumFields` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="7b1a6-115">Numaralandırılacak alan yok.</span><span class="sxs-lookup"><span data-stu-id="7b1a6-115">There are no fields to enumerate.</span></span> <span data-ttu-id="7b1a6-116">Bu durumda, `pcTokens` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="7b1a6-116">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|`EnumFields` <span data-ttu-id="f882f-114">başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="f882f-114">returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="f882f-115">Numaralandırılacak alan yok.</span><span class="sxs-lookup"><span data-stu-id="f882f-115">There are no fields to enumerate.</span></span> <span data-ttu-id="f882f-116">Bu durumda, `pcTokens` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="f882f-116">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7b1a6-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7b1a6-117">Requirements</span></span>  
- <span data-ttu-id="7b1a6-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7b1a6-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f882f-117">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f882f-117">Requirements</span></span>  
+ <span data-ttu-id="f882f-118">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f882f-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7b1a6-119">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="7b1a6-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f882f-119">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="f882f-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7b1a6-120">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="7b1a6-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f882f-120">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="f882f-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7b1a6-121">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7b1a6-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="f882f-121">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="f882f-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7b1a6-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7b1a6-122">See also</span></span>
-- [<span data-ttu-id="7b1a6-123">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7b1a6-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="7b1a6-124">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7b1a6-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f882f-122">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f882f-122">See also</span></span>
+
+- [<span data-ttu-id="f882f-123">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f882f-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="f882f-124">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f882f-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

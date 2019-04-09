@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bcab5adf30648f6b5a614a407478977bc37c7062
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6156499368fb743b69c03f38b40ad3c5bcabce6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174908"
 ---
-# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="d17db-102">IMetaDataTables::GetColumnInfo Yöntemi</span><span class="sxs-lookup"><span data-stu-id="d17db-102">IMetaDataTables::GetColumnInfo Method</span></span>
-<span data-ttu-id="d17db-103">Belirtilen tabloda belirtilen sütuna ilişkin verileri alır.</span><span class="sxs-lookup"><span data-stu-id="d17db-103">Gets data about the specified column in the specified table.</span></span>  
+# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="6cebf-102">IMetaDataTables::GetColumnInfo Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6cebf-102">IMetaDataTables::GetColumnInfo Method</span></span>
+<span data-ttu-id="6cebf-103">Belirtilen tabloda belirtilen sütuna ilişkin verileri alır.</span><span class="sxs-lookup"><span data-stu-id="6cebf-103">Gets data about the specified column in the specified table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d17db-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d17db-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6cebf-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6cebf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetColumnInfo (   
@@ -40,34 +40,35 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d17db-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d17db-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6cebf-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6cebf-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="d17db-106">[in] İstediğiniz tabloyu dizini.</span><span class="sxs-lookup"><span data-stu-id="d17db-106">[in] The index of the desired table.</span></span>  
+ <span data-ttu-id="6cebf-106">[in] İstediğiniz tabloyu dizini.</span><span class="sxs-lookup"><span data-stu-id="6cebf-106">[in] The index of the desired table.</span></span>  
   
  `ixCol`  
- <span data-ttu-id="d17db-107">[in] İstenen sütun dizini.</span><span class="sxs-lookup"><span data-stu-id="d17db-107">[in] The index of the desired column.</span></span>  
+ <span data-ttu-id="6cebf-107">[in] İstenen sütun dizini.</span><span class="sxs-lookup"><span data-stu-id="6cebf-107">[in] The index of the desired column.</span></span>  
   
  `poCol`  
- <span data-ttu-id="d17db-108">[out] Satırdaki sütun uzaklığı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="d17db-108">[out] A pointer to the offset of the column in the row.</span></span>  
+ <span data-ttu-id="6cebf-108">[out] Satırdaki sütun uzaklığı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6cebf-108">[out] A pointer to the offset of the column in the row.</span></span>  
   
  `pcbCol`  
- <span data-ttu-id="d17db-109">[out] Sütunun bayt cinsinden boyutu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="d17db-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
+ <span data-ttu-id="6cebf-109">[out] Sütunun bayt cinsinden boyutu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6cebf-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
   
  `pType`  
- <span data-ttu-id="d17db-110">[out] Sütundaki değerleri türü bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="d17db-110">[out] A pointer to the type of the values in the column.</span></span>  
+ <span data-ttu-id="6cebf-110">[out] Sütundaki değerleri türü bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6cebf-110">[out] A pointer to the type of the values in the column.</span></span>  
   
  `ppName`  
- <span data-ttu-id="d17db-111">[out] Sütun adı için bir işaretçi işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="d17db-111">[out] A pointer to a pointer to the column name.</span></span>  
+ <span data-ttu-id="6cebf-111">[out] Sütun adı için bir işaretçi işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="6cebf-111">[out] A pointer to a pointer to the column name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d17db-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d17db-112">Requirements</span></span>  
- <span data-ttu-id="d17db-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d17db-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6cebf-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6cebf-112">Requirements</span></span>  
+ <span data-ttu-id="6cebf-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6cebf-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d17db-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="d17db-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6cebf-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="6cebf-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d17db-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="d17db-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6cebf-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="6cebf-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d17db-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d17db-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="6cebf-116">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="6cebf-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="d17db-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d17db-117">See also</span></span>
-- [<span data-ttu-id="d17db-118">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d17db-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="d17db-119">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="d17db-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6cebf-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6cebf-117">See also</span></span>
+
+- [<span data-ttu-id="6cebf-118">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6cebf-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="6cebf-119">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6cebf-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
