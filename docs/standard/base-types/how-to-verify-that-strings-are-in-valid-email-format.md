@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama'
+title: 'Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama'
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed0721f2bfa8e272822740cf26173c1592de428
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236654"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890507"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Nasıl Yapılır: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Nasıl yapılır: Dizelerin Geçerli E-Posta Biçiminde Olduğunu Doğrulama
 Aşağıdaki örnek, bir dize geçerli bir e-posta biçiminde olduğunu doğrulamak için normal bir ifade kullanır.  
 
 ## <a name="example"></a>Örnek  
@@ -59,8 +59,8 @@ Aşağıdaki örnek, bir dize geçerli bir e-posta biçiminde olduğunu doğrula
 |`(?("")("".+?(?<!\\)""@)`|İlk karakter bir tırnak işareti ise, en az bir bitiş tırnak işaretinden sonra herhangi bir karakter, oluşumunu ardından bir başlangıç tırnağından eşleştirin. Bir ters eğik çizgi karakteriyle bitiş tırnak işareti gelmemelidir (\\). `(?<!` bir sıfır Genişlik negatif geriye yönelik onaydır başlangıcıdır. Dizenin sonunda bir at işareti (@).|  
 |<code>&#124;(([0-9a-z]</code>|İlk karakter bir tırnak işareti değil ise, gelen alfabetik bir karakterle eşleşen bir-z veya A (karşılaştırma büyük/küçük harfe duyarsız) Z ya da herhangi bir sayısal karakter 0-9.|  
 |`(\.(?!\.))`|Sonraki karakteri bir nokta ise, eşleştirin. Bir nokta değil ise, önceden sonraki karaktere bakın ve eşleştirmeyi devam ettirin. `(?!\.)` Art arda iki bir e-posta adresinin yerel kısmında görünmesini engelleyen bir sıfır Genişlik negatif ileriye yönelik olaydır.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Sonraki karakteri bir nokta değil ise, herhangi bir sözcük karakteri veya şu karakterlerden birini eşleşen:-! #$% ' * +=? ^\`{}&#124;~.|  
-|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|Değişim deseni (süre olmayan veya karakter sayısını biri tarafından izlenen bir nokta) sıfır veya daha fazla kez eşleştirin.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>| Sonraki karakteri bir nokta değil ise, herhangi bir sözcük karakteri veya şu karakterlerden birini eşleşen:-! #$% ' * +=? ^\`{}&#124;~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>| Değişim deseni (süre olmayan veya karakter sayısını biri tarafından izlenen bir nokta) sıfır veya daha fazla kez eşleştirin.|  
 |`@`|Eşleşme @ karakteri.|  
 |`(?<=[0-9a-z])`|Karakter önceyse eşleştirmeyi devam ettirin. A-Z, A'dan Z'ye veya 0-9 @ karakterdir. `(?<=[0-9a-z])` Yapısı, sıfır genişlik pozitif geriye yönelik onayı tanımlar.|  
 |`(?(\[)`|@ İzleyen karakterin açılış ayracı olup olmadığını denetleyin.|  
@@ -105,4 +105,4 @@ vbc /t:library RegexUtilities.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET framework normal ifadeleri](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET Framework Normal İfadeleri](../../../docs/standard/base-types/regular-expressions.md)
