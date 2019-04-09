@@ -1,18 +1,18 @@
 ---
-title: Bilinen sorunlar ve dikkat edilmesi gerekenler LINQ to Entities'de
+title: LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191334"
 ---
-# <a name="known-issues-and-considerations-in-linq-to-entities"></a>Bilinen sorunlar ve dikkat edilmesi gerekenler LINQ to Entities'de
+# <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler
 Bu bölümde ile ilgili bilinen sorunlar hakkında bilgi [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular.  
   
 -   [LINQ sorguları, önbelleğe alınamaz](#LINQQueriesThatAreNotCached)  
@@ -80,4 +80,5 @@ Bu bölümde ile ilgili bilinen sorunlar hakkında bilgi [!INCLUDE[linq_entities
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+
+- [LINQ - Varlıklar](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

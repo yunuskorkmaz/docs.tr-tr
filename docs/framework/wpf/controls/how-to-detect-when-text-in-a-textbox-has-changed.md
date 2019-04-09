@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text change [WPF], detecting
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-ms.openlocfilehash: 72441e53d21df47d34a0600dafdf0b4b04c11cad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1adadb0f071815930d34f40ddf244ffc8c19131b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091154"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Nasıl yapılır: TextBox İçindeki Metin Değiştirildiğinde Algılama
 Bu örnekte kullanılacak yollarından biri gösterilmektedir <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> bir yöntem yürütülmeye çalışıldı olay olduğunda metinde bir <xref:System.Windows.Controls.TextBox> denetim değişti.  
@@ -43,6 +43,7 @@ Bu örnekte kullanılacak yollarından biri gösterilmektedir <xref:System.Windo
  Açıklamalar  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.TextChangedEventArgs>
-- [TextBox Genel Bakış](textbox-overview.md)
-- [RichTextBox Genel Bakış](richtextbox-overview.md)
+- [TextBox Genel Bakışı](textbox-overview.md)
+- [RichTextBox Genel Bakışı](richtextbox-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Okuma resim meta verileri'
+title: 'Nasıl yapılır: Görüntü Meta Verilerini Okuma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: eba21519e6ea6cf4a2a412750fd305d7af620c1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173621"
 ---
-# <a name="how-to-read-image-metadata"></a>Nasıl yapılır: Okuma resim meta verileri
+# <a name="how-to-read-image-metadata"></a>Nasıl yapılır: Görüntü Meta Verilerini Okuma
 Bazı görüntü dosyaları, görüntü özelliklerini belirlemek için okuyabilecekleri meta veriler içerir. Örneğin, dijital hello'nun marka ve model görüntü yakalamak için kullanılan kameranın belirlemek için okuyabilecekleri bir meta veri içerebilir. İle [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], var olan meta verileri okuyabilir ve görüntü dosyaları ayrıca yeni meta veriler yazabilirsiniz.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] meta verilerde tek bir parçası olarak depolayan bir <xref:System.Drawing.Imaging.PropertyItem> nesne. Okuyabilirsiniz <xref:System.Drawing.Image.PropertyItems%2A> özelliği bir <xref:System.Drawing.Image> bir dosyanın tüm meta verileri alınacak nesne. <xref:System.Drawing.Image.PropertyItems%2A> Özelliği, bir dizi döndürür <xref:System.Drawing.Imaging.PropertyItem> nesneleri.  
@@ -40,7 +40,7 @@ Bazı görüntü dosyaları, görüntü özelliklerini belirlemek için okuyabil
   
 |Sayısal değer|Açıklama|  
 |-------------------|-----------------|  
-|1.|A `Byte`|  
+|1.|BİR `Byte`|  
 |2|Bir dizi `Byte` ASCII kodlamalı nesneler|  
 |3|Bir 16 bit tam sayı|  
 |4|Bir 32 bit tamsayı|  
@@ -124,5 +124,6 @@ Bazı görüntü dosyaları, görüntü özelliklerini belirlemek için okuyabil
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Formun işlemek <xref:System.Windows.Forms.Control.Paint> olay ve bu kodu Boya olay işleyicisine yapıştırın. Değiştirmeniz gereken `FakePhoto.jpg` bir görüntü adı ve yolu içeri aktarma ve sistem geçerli `System.Drawing.Imaging` ad alanı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
-- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)
+
+- [Resimler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
+- [Resimler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)

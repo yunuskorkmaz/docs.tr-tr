@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
-ms.openlocfilehash: 1f8d8bf8edd7968ed2d2a5c4ddd654dccf318f71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c279316c2a372a1498707b27ec8658813306304b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191269"
 ---
 # <a name="toolstripcontainer-control-overview"></a>ToolStripContainer Denetimine Genel Bakış
 A <xref:System.Windows.Forms.ToolStripContainer> sol, sağ, üst ve alt kenarı konumlandırma ve radye panelleri sahip <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, ve <xref:System.Windows.Forms.StatusStrip> kontrol eder. Birden çok <xref:System.Windows.Forms.ToolStrip> denetimleri yığın dikey olarak bunları sola veya sağa yerleştirdiğinizde <xref:System.Windows.Forms.ToolStripContainer>. Bunları üstüne veya altına yerleştirebilirsiniz varsa bunlar yatay olarak yerleşir <xref:System.Windows.Forms.ToolStripContainer>. Orta kullanabileceğiniz <xref:System.Windows.Forms.ToolStripContentPanel> , <xref:System.Windows.Forms.ToolStripContainer> geleneksel denetimleri form üzerinde yerleştirmek için.  
@@ -33,5 +33,6 @@ A <xref:System.Windows.Forms.ToolStripContainer> sol, sağ, üst ve alt kenarı 
 |<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|Belirten bir değeri alır veya ayarlar olup olmadığını, üst panelde <xref:System.Windows.Forms.ToolStripContainer> görülebilir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ToolStripContainer>
 - <xref:System.Windows.Forms.ToolStripContentPanel>

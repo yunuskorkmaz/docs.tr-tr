@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tanımlayıcı adlı bir derlemeye başvuru'
+title: 'Nasıl yapılır: Tanımlayıcı Adlı Bir Derlemeye Başvurma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3da46ee5e7c1973f06cbd91126f3101c3f1d7e47
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596078"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089573"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>Nasıl yapılır: Tanımlayıcı adlı bir derlemeye başvuru
+# <a name="how-to-reference-a-strong-named-assembly"></a>Nasıl yapılır: Tanımlayıcı Adlı Bir Derlemeye Başvurma
 Türleri veya bir katı adlı derleme kaynaklara başvuran işlemi genellikle saydamdır. Başvuru (erken bağlama) derleme zamanında ya da çalışma zamanında yapabilirsiniz.  
   
  Derleyiciye belirttiğinizde, derlemenizi açıkça başka bir derlemeye başvuran bir derleme zamanı başvurusu gerçekleşir. Derleme zamanı başvuran kullandığınızda, derleyici otomatik olarak hedeflenen tanımlayıcı adlı bütünleştirilmiş kodunun ortak anahtarı alır ve derlenmiş bütünleştirilmiş kod derleme başvurusu yerleştirir.  
@@ -71,4 +71,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
  **sn - tp \<**  *ortak anahtar dosyası* **>**  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+
+- [Tanımlayıcı Adlı Derlemeler Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

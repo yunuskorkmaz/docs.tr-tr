@@ -1,15 +1,15 @@
 ---
-title: İşlemler ve eşzamanlılık
+title: İşlemler ve Eşzamanlılık
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: f5efa8f25e3cd4dedec9e5a9c99db28320a4d93e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba857031a54374ee295c2bfd724e7fb8651b7c1f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174700"
 ---
-# <a name="transactions-and-concurrency"></a>İşlemler ve eşzamanlılık
+# <a name="transactions-and-concurrency"></a>İşlemler ve Eşzamanlılık
 Tek bir komutu veya bir paket olarak çalıştırılacak komut grubuyla ilgili bir işlem oluşur. İşlemler, iş birden çok işlem tek bir birim halinde birleştirmek olanak tanır. İşlem bir noktadaki bir hata oluşması durumunda tüm güncelleştirmeleri geri ön işlem durumlarına geri alınabilir.  
   
  Bir işlem için ACID özellikleri uymalıdır — kararlılık, tutarlılık, yalıtım ve dayanıklılık — veri tutarlılık garantisi için. Microsoft SQL Server, bir istemci uygulama bir güncelleştirme gerçekleştirdiğinde, günlüğe kaydetme ve işlem yönetimi olanakları kilitleme sağlayarak destek işlemleri gibi çoğu ilişkisel veritabanı sistemleri ekleme veya silme işlemi.  
@@ -35,6 +35,7 @@ Tek bir komutu veya bir paket olarak çalıştırılacak komut grubuyla ilgili b
  İyimser ve kötümser eşzamanlılık ve eşzamanlılık ihlaller için nasıl sınayıp doğrulayabileceğiniz açıklanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İşlem Temelleri](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
 - [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Yapılandırmada istemci bağlama belirtme'
+title: 'Nasıl yapılır: Yapılandırmada İstemci Bağlama Belirtme'
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 2441b307961079c28e114b4fed69c252ff42e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 81e9b4b5949d3a89749911a30ad199c4f0da300f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091570"
 ---
-# <a name="how-to-specify-a-client-binding-in-configuration"></a>Nasıl yapılır: Yapılandırmada istemci bağlama belirtme
+# <a name="how-to-specify-a-client-binding-in-configuration"></a>Nasıl yapılır: Yapılandırmada İstemci Bağlama Belirtme
 Bu örnekte, bir hesap makinesi hizmetini kullanması için bir istemci konsol uygulaması oluşturulur ve o istemci için bağlama bildirimli olarak yapılandırmasında belirtilen. İstemcisinin eriştiği `CalculatorService`, uygulayan `ICalculator` arabirimi ve hizmet ve Kullan istemci <xref:System.ServiceModel.BasicHttpBinding> sınıfı.  
   
  Özetlenen yordamı, hesap makinesi hizmetinin çalıştığını varsayar. Derleme hizmeti hakkında daha fazla bilgi için bkz: [nasıl yapılır: Yapılandırmada hizmet bağlaması belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Ayrıca kullanan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci bileşenlerini otomatik olarak oluşturmak için Windows Communication Foundation (WCF) sağlar. Araç istemci kodu ve hizmete erişim yapılandırması oluşturur.  
@@ -51,4 +51,5 @@ Bu örnekte, bir hesap makinesi hizmetini kullanması için bir istemci konsol u
 6.  Derleyin ve istemci çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
