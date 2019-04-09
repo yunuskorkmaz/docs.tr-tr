@@ -1,5 +1,5 @@
 ---
-title: <disableCachingBindingFailures> Öğesi
+title: <disableCachingBindingFailures> Öğe
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c99eb6b77a969a1c5003743b0407821e2537b683
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4893adaf528f1a9ef8fc8eab8027406fd8520cc2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159282"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > öğesi
 Derleme yoklama işlemi tarafından bulunamadığı için oluşan hataları bağlama önbelleğe alma devre dışı bırakılıp bırakılmayacağını belirtir.  
@@ -81,6 +81,7 @@ Derleme yoklama işlemi tarafından bulunamadığı için oluşan hataları bağ
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

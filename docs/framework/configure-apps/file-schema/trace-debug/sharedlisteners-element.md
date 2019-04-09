@@ -1,5 +1,5 @@
 ---
-title: <sharedListeners> Öğesi
+title: <sharedListeners> Öğe
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348823"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190804"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners > öğesi
 Herhangi bir kaynak veya trace ögesi başvurabilirsiniz dinleyicileri içerir.  Dinleyiciler, varsayılan olarak tüm izlemeleri almaz ve çalışma zamanında bu dinleyicileri almak mümkün değildir. Paylaşılan dinleyiciler tanımlanan dinleyicileri adına göre kaynakları veya izlemeleri eklenebilir.  
@@ -89,6 +89,7 @@ Herhangi bir kaynak veya trace ögesi başvurabilirsiniz dinleyicileri içerir. 
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Diagnostics.TraceListener>
 - [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [İzleme Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [İz Dinleyicileri](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

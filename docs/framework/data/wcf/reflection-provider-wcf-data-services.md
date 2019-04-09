@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: 12a23970b059e338df05a2f0b58ca67ad6fae6d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159529"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Yansıma sağlayıcısı (WCF Data Services)
 Entity Framework Veri modeliyle verileri kullanıma sunduğundan yanı sıra [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kesinlikle bir varlık tabanlı modelde tanımlı değil verilerini açığa çıkarabilir. Yansıma sağlayıcısı, dönüş türleri uygulayan sınıflar verileri kullanıma sunar <xref:System.Linq.IQueryable%601> arabirimi. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bu sınıflar için bir veri modeli çıkarsamak için yansıtma kullanır ve adresi tabanlı sorgular kaynaklarda dil ile tümleşik sorgu (LINQ) çevirebilir-sorguları sunulan temel <xref:System.Linq.IQueryable%601> türleri.  
@@ -51,7 +51,7 @@ Entity Framework Veri modeliyle verileri kullanıma sunduğundan yanı sıra [!I
   
 |.NET framework veri türü|Veri modeli türü|  
 |------------------------------|---------------------|  
-|<xref:System.Byte>`[]`|`Edm.Binary`|  
+|<xref:System.Byte> `[]`|`Edm.Binary`|  
 |<xref:System.Boolean>|`Edm.Boolean`|  
 |<xref:System.Byte>|`Edm.Byte`|  
 |<xref:System.DateTime>|`Edm.DateTime`|  
@@ -95,4 +95,5 @@ Entity Framework Veri modeliyle verileri kullanıma sunduğundan yanı sıra [!I
  Varsayılan olarak Entity Framework yerel olarak desteklendiğinden, ilişkisel verilerle kullanmak için önerilen veri sağlayıcısı olan [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Ancak LINQ to SQL sınıfları data service ile kullanılacak yansıma sağlayıcısını kullanabilirsiniz. <xref:System.Data.Linq.Table%601> Sonucu üzerinde yöntemleri tarafından döndürülen kümeleri <xref:System.Data.Linq.DataContext> LINQ to SQL Object Relational Designer (O/R Tasarımcısı) uygulama tarafından oluşturulan <xref:System.Linq.IQueryable%601> arabirimi. Bu, bu yöntemlere erişmek ve oluşturulan LINQ to SQL sınıfları kullanarak varlık verilerini SQL Server'dan döndürmek yansıma sağlayıcısı sağlar. Ancak LINQ to SQL uygulamadığından <xref:System.Data.Services.IUpdatable> arabirimi, gereken varolan genişleten kısmi bir sınıf eklemek <xref:System.Data.Linq.DataContext> eklemek için kısmi sınıf <xref:System.Data.Services.IUpdatable> uygulaması. Daha fazla bilgi için [nasıl yapılır: LINQ to SQL veri kaynağı kullanarak veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

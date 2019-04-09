@@ -2,12 +2,12 @@
 title: Basitleştirilmiş Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 22595a3d428da9dbd3cb8b6e67ca8b40bf39d457
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184060"
 ---
 # <a name="simplified-configuration"></a>Basitleştirilmiş Yapılandırma
 Windows Communication Foundation (WCF) hizmetlerini yapılandırmak, karmaşık bir görev olabilir. Çok sayıda farklı seçeneğiniz vardır ve her zaman gerekli ayarları belirlemek kolay değildir. Yapılandırma dosyalarını WCF hizmetleri esnekliğini artırın, ancak bunlar ayrıca sorunları bulmak sabit bir çoğu için işlemcilerden kaynaklanıyor olabilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Bu sorunları giderir ve büyüklüğü ve karmaşıklığı ile hizmet yapılandırmasının azaltmak için bir yol sağlar.  
@@ -114,9 +114,10 @@ Windows Communication Foundation (WCF) hizmetlerini yapılandırmak, karmaşık 
 >  Bu özellik yalnızca WCF Hizmeti Yapılandırması istemci yapılandırmasını ilişkilendirir. Çoğu durumda, WCF istemci yapılandırması svcutil.exe veya Visual Studio'dan bir hizmet başvurusu ekleme gibi bir araç tarafından oluşturulur. Bir WCF istemcisi elle yapılandırıyorsanız eklemeniz gerekecektir bir \<istemci > yapılandırma öğesi ve çağırmak istediğiniz uç nokta belirtin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Hizmetler için Bağlamaları Yapılandırma](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Hizmetleri Yapılandırma](../../../docs/framework/wcf/configuring-services.md)
 - [WCF hizmetlerini yapılandırma](configuring-services.md)
-- [Code’da WCF Hizmetlerini Yapılandırma](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)
+- [WCF Hizmetlerini Kodda Yapılandırma](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

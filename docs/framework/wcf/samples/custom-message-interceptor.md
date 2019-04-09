@@ -2,12 +2,12 @@
 title: Özel İleti Kesici
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 789b3a2003ab96a9658eab7c092067e6110a46cd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: c756b9947b48fbf7cd902bf570c6d29f52fdaad6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181421"
 ---
 # <a name="custom-message-interceptor"></a>Özel İleti Kesici
 Bu örnek, kanal genişletilebilirlik modeli kullanımını gösterir. Özellikle, kanal fabrikaları ve tüm gelen ve giden iletileri çalışma zamanı yığını olarak belirli bir noktada ele alınması için kanal dinleyicileri oluşturan özel bağlama öğesinin uygulanması gösterilmektedir. Örnek, bir istemci ve sunucu bu özel fabrikaları kullanımını gösteren de içerir.  
@@ -160,4 +160,3 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
 4.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 5.  Client.exe çalıştırın ve her iki konsol penceresi çıktısı için izleme Service.exe çalıştırın.  
-  

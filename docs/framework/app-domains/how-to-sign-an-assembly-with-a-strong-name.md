@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama'
+title: 'Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 971180465f506fa69ff562ab0fdef56c0a5ec918
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196560"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama
 Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:  
   
 -   Kullanarak **imzalama** projenin sekmede **özellikleri** Visual Studio'da iletişim kutusu. Bu, bir derlemeyi katı bir adla imzalamanın en kolay ve en kullanışlı yoludur.  
@@ -54,13 +54,13 @@ Bir derlemeyi katı bir adla imzalamak için çeşitli yollar vardır:
   
      burada:  
   
-     *AssemblyName*  
+     *derlemeAdı*  
      Assembly Linker'in yayacağı katı imzalı derlemenin (.dll veya .exe dosyası) adı.  
   
-     *Modül adı*  
+     *{1&gt;modülAdı&lt;1}*  
      Bir veya birden çok tür içeren bir .NET Framework kod modülünün (bir .netmodule dosyası) adı. Kodunuzu derlemek tarafından bir .netmodule dosyası oluşturabilirsiniz `/target:module` C# veya Visual Basic'te geçiş yapın.  
   
-     *keyfileName*  
+     *{1&gt;anahtardosyasıAdı&lt;1}*  
      Anahtar çiftini içeren kapsayıcının veya dosyanın adı. Assembly Linker, geçerli dizinle ilişki içindeki bir göreli yolu yorumlar.  
   
  Aşağıdaki örnek, derlemeyi imzalar `MyAssembly.dll` anahtar dosyasını kullanarak bir katı adla `sgKey.snk`.  
@@ -101,9 +101,10 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Nasıl yapılır: Genel-özel anahtar çifti oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Bütünleştirilmiş Kod İmzalamayı Geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md)
+
+- [Tanımlayıcı Adlı Derlemeler Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Al.exe (Derleme Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Derleme İmzalamayı Geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [Derleme ve Bildirim İmzalamayı Yönetme](/visualstudio/ide/managing-assembly-and-manifest-signing)
 - [İmzalama Sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/signing-page-project-designer)

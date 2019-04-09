@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 3ce7bbc0dfccfda7a25dfecf32e93876ddde01f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679742"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188298"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Önizleme 2) yenilikler
 
@@ -34,7 +34,6 @@ Her sürümü ile yayımlanmış olan hakkında daha fazla bilgi için aşağıd
 - [Desenler ile daha fazlasını yapın C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
 - [Ele C# 8.0 bir döngü için](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
 - [Building C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
-
 
 ### <a name="ranges-and-indices"></a>Aralıkları ve dizinler
 
@@ -171,7 +170,6 @@ Sırasında `dotnet build` veya `dotnet publish`, kullanmakta olduğunuz SDK pla
 
 Yayımlama, yayınlama, bağlama ve razor sayfası hala gerektirir gibi bazı işlemler vardır.
 
-
 ## <a name="local-dotnet-tools"></a>Yerel dotnet araçları
 
 >[!WARNING]
@@ -179,7 +177,7 @@ Yayımlama, yayınlama, bağlama ve razor sayfası hala gerektirir gibi bazı i�
 >
 >Mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
 >
->Windows üzerinde: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+>Windows'da: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
 >Bu klasör silmezseniz, hata alırsınız.
 
@@ -484,7 +482,6 @@ Windows formunda düz C API'leri, COM ve WinRT zengin bir yerel API sunar. .NET 
 
 COM ile kullanma örneği gördüğünüz [Excel Demo kaynak kodu](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
 
-
 ## <a name="type-sequencereader"></a>Tür: SequenceReader
 
 .NET Core 3. 0'da, `System.Buffers.SequenceReader` Okuyucu için olarak kullanılabilecek eklendi `ReadOnlySequence<T>`. Hızlı, yüksek performanslı, böylece düşük ayırma çözümlenmesi `System.IO.Pipelines` birden çok yedekleme arabellekler çapraz veri. 
@@ -773,7 +770,6 @@ Bazı dağıtımlarda, SSL sertifikası erişimi etkinleştirmek için ek bir ad
 Bir GPIO'yu paketleri GPIO, SPI, I2C ve PWM cihazlar için APIleri içerir. IOT bağlamaları paketi içerir [cihaz bağlamaları](https://github.com/dotnet/iot/blob/master/src/devices/README.md) çeşitli yongaları ve algılayıcılar, aynı anda [dotnet/IOT-src/cihazlar](https://github.com/dotnet/iot/tree/master/src/devices).
 
 Güncelleştirilmiş seri bağlantı noktası .NET Core 3.0 Preview 1 kapsamında duyurulan API'leri bu paketlerin bir parçası değildir ancak mevcut .NET Core platformu bir parçası olarak.
-
 
 ## <a name="platform-support"></a>Platform Desteği
 

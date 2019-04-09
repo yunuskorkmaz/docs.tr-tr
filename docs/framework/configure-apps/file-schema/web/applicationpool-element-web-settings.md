@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: a9c81d98a5e531eaa547614c4d236b6c84526398
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184736"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > öğesi (Web Ayarları)
 Bir ASP.NET uygulaması tümleşik modda çalıştırılan işlem genelinde yönetmesi için ASP.NET tarafından kullanılan yapılandırma ayarlarını belirten [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] veya sonraki bir sürümü.  
@@ -95,4 +95,5 @@ Bir ASP.NET uygulaması tümleşik modda çalıştırılan işlem genelinde yön
 |Boş olabilir.||  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<System.Web > öğesi (Web Ayarları)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

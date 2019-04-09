@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: e9bab754302252cdf4e4e9303ecc4a188e651ca9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183982"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
@@ -112,4 +112,5 @@ ms.locfileid: "57678416"
  Güvenlik bilgileri için bkz: [UI Otomasyon güvenliğine genel bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [UI Otomasyonu Temelleri](../../../docs/framework/ui-automation/index.md)
+
+- [UI Otomasyon Temelleri](../../../docs/framework/ui-automation/index.md)

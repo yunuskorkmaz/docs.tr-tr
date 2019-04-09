@@ -1,16 +1,16 @@
 ---
-title: Kimlik ve erişim aracı Visual Studio 2012 için
+title: Visual Studio 2012 için Kimlik ve Erişim Aracı
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: a1b5456f9081d807a3c9e29e1010cbfbf91e637f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9216298889637780e79d1bfc7ac060458c745968
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170124"
 ---
-# <a name="identity-and-access-tool-for-visual-studio-2012"></a>Kimlik ve erişim aracı Visual Studio 2012 için
+# <a name="identity-and-access-tool-for-visual-studio-2012"></a>Visual Studio 2012 için Kimlik ve Erişim Aracı
 Bu konuda, Visual Studio 11 için yeni Kimlik ve Erişim Aracı açıklanmaktadır. Bu araç şu URL'den indirin: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) veya doğrudan Visual Studio 11 uzantılar Yöneticisi'nde "kimlik" için arama yapın.  
   
  Visual Studio 11 için Kimlik ve Erişim Aracı, aşağıdaki önemli özelliklerle birlikte önemli ölçüde basitleştirilmiş bir geliştirme zamanı deneyimi sağlar:  
@@ -28,4 +28,5 @@ Bu konuda, Visual Studio 11 için yeni Kimlik ve Erişim Aracı açıklanmaktad�
 -   Araç, kullanmak istediğiniz tüm kimlik sağlayıcıları için basit bir onay kutularını listesi ile Windows Azure Access Control Service (ACS) özelliklerini kullanır: Facebook, Google, Live ID, Yahoo!, tüm Openıd sağlayıcılar ve tüm WS-Federasyon sağlayıcıları. Kimlik sağlayıcılarınızı seçin, Tamam'a tıklayın ve F5'e basın; hem uygulamanız hem de ACS otomatik olarak yapılandırılacak ve test uygulamanız ACS'yi kullanacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WIF Özellikleri](../../../docs/framework/security/wif-features.md)

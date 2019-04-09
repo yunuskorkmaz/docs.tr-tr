@@ -2,12 +2,12 @@
 title: İleti Denetçileri
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 248e74e039c0ebb0b1580ec2cb4f19d713d95c51
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e8afbc1fc85dab18d6fbd5e8d49b10847a7d230f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199810"
 ---
 # <a name="message-inspectors"></a>İleti Denetçileri
 Bu örnek, uygulama ve hizmet ve istemci ileti denetçileri yapılandırma gösterir.  
@@ -412,4 +412,3 @@ catch (Exception e)
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
-  

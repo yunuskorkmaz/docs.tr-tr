@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Windows Forms'ta sürükle ve bırak işlemi gerçekleştirme"
+title: "İzlenecek yol: Windows Forms'da Sürükle ve Bırak İşlemi Gerçekleştirme"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715249"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189033"
 ---
-# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>İzlenecek yol: Windows Forms'ta sürükle ve bırak işlemi gerçekleştirme
+# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>İzlenecek yol: Windows Forms'da Sürükle ve Bırak İşlemi Gerçekleştirme
 Windows tabanlı uygulamalar sürükle-bırak işlemlerini gerçekleştirmek için bir dizi olayı, özellikle işlemelidir <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, ve <xref:System.Windows.Forms.Control.DragDrop> olayları. Kullanılabilir bilgilerle olay bağımsız değişkenleri bu olayların çalışarak, sürükle ve bırak işlemleri kolayca kolaylaştırabilir.  
   
 ## <a name="dragging-data"></a>Veriler sürükleme  
@@ -107,6 +107,7 @@ Windows tabanlı uygulamalar sürükle-bırak işlemlerini gerçekleştirmek iç
     >  Ayrıca, çalışabilirsiniz <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> özelliğine bağlı olarak tuşları basılı sürükle ve bırak işlemi sırasında böylece bazı efektler ortaya (örneğin, CTRL tuşuna basıldığında sürüklenen veri kopyalamak için standart olmadığı).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Panoya veri ekleme](how-to-add-data-to-the-clipboard.md)
-- [Nasıl yapılır: Panodan veri alma](how-to-retrieve-data-from-the-clipboard.md)
+
+- [Nasıl yapılır: Panoya Veri Ekleme](how-to-add-data-to-the-clipboard.md)
+- [Nasıl yapılır: Panodan Veri Alma](how-to-retrieve-data-from-the-clipboard.md)
 - [Sürükle ve Bırak İşlemleri ve Pano Desteği](drag-and-drop-operations-and-clipboard-support.md)

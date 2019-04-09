@@ -4,12 +4,12 @@ description: Microsoft WCF Web Service Reference Provider .NET Core ve ASP.NET C
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3452a6a598e255dd9a32629d8ef0589b88f9c00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197080"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web hizmeti başvurusu sağlayıcısı aracını kullanma
 
@@ -54,7 +54,6 @@ Kullanarak **ASP.NET Core Web uygulaması** proje şablonu örnek olarak, bu mak
     
     3c. Tıklayın **sonraki** açmak için düğmeyi **veri türü seçenekleri** ve **istemci seçenekleri** sayfaları. Alternatif olarak, **son** düğmesine varsayılan seçenekleri kullanın.
 
-
 4. **Veri türü seçenekleri** form, oluşturulan hizmet başvurusu yapılandırma ayarları iyileştirmek sağlar:
 
 ![.NET Core için Visual Studio veri türü Seçenekleri sekmesi](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
@@ -65,7 +64,6 @@ Kullanarak **ASP.NET Core Web uygulaması** proje şablonu örnek olarak, bu mak
 Tür bilgileri yüklenirken proje bağımlılıkları sayısı ve diğer sistem performans etkenlere bağlı olarak bir gecikme olabilir. **Son** düğmesi devre sürece yükleme sırasında **bütünleştirilmiş kodlardaki türleri yeniden** onay kutusu olarak işaretli değildir.
 
 5. Tıklayın **son** işiniz bittiğinde.
-
 
 İlerleme durumunu, aracın görüntüleme oluştu:
 

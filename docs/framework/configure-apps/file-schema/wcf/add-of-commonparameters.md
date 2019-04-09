@@ -2,12 +2,12 @@
 title: <add> , <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: e0ca00911577f9f210def9326df261f772f9c26d
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 6aaba3f82966ad4496e6edaae06b5d7a8aef3863
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199491"
 ---
 # <a name="add-of-commonparameters"></a>\<Ekle >, \<commonParameters >
 Dünya çapında bir çok hizmette kullanılan parametreleri ad-değer çiftinin belirtir. Genellikle bu parametre, dayanıklı hizmetler tarafından paylaşılan veritabanı bağlantı dizesi içerir.  
@@ -86,6 +86,7 @@ Dünya çapında bir çok hizmette kullanılan parametreleri ad-değer çiftinin
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
 - <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
 - <xref:System.Workflow.Runtime.WorkflowRuntime>

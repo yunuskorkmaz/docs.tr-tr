@@ -1,15 +1,15 @@
 ---
-title: "Nasıl yapılır: Was'ta WCF Hizmeti barındırma"
+title: "Nasıl yapılır: WAS'de WCF Hizmeti Barındırma"
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9c60248342c9cfa0e1b70d86df47a478dd34a60f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195455"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: Was'ta WCF Hizmeti barındırma
+# <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: WAS'de WCF Hizmeti Barındırma
 Bu konuda anahatları Windows İşlem Etkinleştirme Hizmetleri (WAS olarak da bilinir) oluşturmak için gereken temel adımlarda barındırılan Windows Communication Foundation (WCF) hizmet. OLAN HTTP olmayan aktarım kurallarıyla çalışma Internet Information Services (IIS) özellikleri genelleştirilmiş olduğundan yeni işlem Etkinleştirme hizmeti. WCF dinleyici bağdaştırıcı arabirimi gibi TCP ve adlandırılmış kanallar ve Message Queuing, WCF tarafından desteklenen HTTP olmayan protokolleri üzerinden alınan etkinleştirme isteklerini iletişim kurmak için kullanır.  
   
  WAS etkinleştirme bileşenleri düzgün şekilde yüklenir ve yapılandırılır, ancak uygulamanın bir parçası yazılması için herhangi bir barındırma kod gerektirmeyen bu barındırma seçeneği gerektirir. Yükleme ve WAS'ta yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: WCF etkinleştirme bileşenlerini yükleme ve yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
@@ -99,5 +99,6 @@ Bu konuda anahatları Windows İşlem Etkinleştirme Hizmetleri (WAS olarak da b
 6.  Derleyin ve istemci çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [TCP Etkinleştirme](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

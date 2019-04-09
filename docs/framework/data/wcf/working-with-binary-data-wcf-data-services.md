@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 44507d8e746584ecf8efaa0b361d1707eae50156
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82a773623c1941320aa155dd5bd937d318c1238a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170332"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>İkili verileri (WCF Veri Hizmetleri) ile çalışma
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı sağlar, almak ve ikili verileri güncelleştirmek bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aşağıdaki yollardan biriyle akış:  
@@ -67,5 +67,6 @@ ms.locfileid: "54570596"
 >  Çağırdığınızda <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>, akış kadar veri hizmetine gönderilmez <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> çağrılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Veriyi Denetimlere Bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

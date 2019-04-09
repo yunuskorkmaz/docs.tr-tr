@@ -1,15 +1,15 @@
 ---
-title: Bağlantı bilgilerini koruma
+title: Bağlantı Bilgilerini Koruma
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 4c8992abc30690be8e9ef9c208b0a0bd3ddf6116
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091961"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184450"
 ---
-# <a name="protecting-connection-information"></a>Bağlantı bilgilerini koruma
+# <a name="protecting-connection-information"></a>Bağlantı Bilgilerini Koruma
 Veri kaynağı erişimi korumaya en önemli hedeflerinden bir uygulamanın güvenliğini sağlama andır. Güvenli olmayan, bir bağlantı dizesi olası bir güvenlik açığı sunar. Bağlantı bilgilerini düz metin halinde depolanmasını veya sisteminizin ödün bellek riskleri kalıcı. Bağlantı dizeleri gömülü kaynak kodunuzu kullanarak okunabilir [Ildasm.exe (IL ayrıştırıcı)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) derlenmiş derlemede Microsoft Ara dilini (MSIL) görüntülemek için.  
   
  Kimlik doğrulama türüne göre güvenlik açıklarını içeren bağlantı dizeleri ortaya çıkabilecek bellek ve disk ve bunları çalışma zamanında oluşturmak için kullanılan teknikleri bağlantı dizeleri nasıl kalıcı kullanılır.  
@@ -40,6 +40,7 @@ Veri kaynağı erişimi korumaya en önemli hedeflerinden bir uygulamanın güve
  Da bağlantı dizelerini yapılandırma dosyalarında, uygulamanızın kodunda eklemek gereğini ortadan kaldırır depolayabilirsiniz. Yapılandırma dosyaları .NET Framework, ortak bir öğe kümesini tanımladığı standart XML dosyalarıdır. Bağlantı dizelerini yapılandırma dosyaları içinde depolanan genellikle  **\<connectionStrings >** öğesinde **app.config** bir Windows uygulaması için veya  **Web.config** ASP.NET uygulaması için dosya. Alma ve yapılandırma dosyaları, bağlantı dizeleri şifreleme depolamak temelleri hakkında daha fazla bilgi için bkz: [bağlantı dizeleri ve yapılandırma dosyalarını](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Şifreleme yapılandırma bilgilerini kullanarak korumalı yapılandırma](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
 - [.NET içinde güvenlik](../../../standard/security/index.md)

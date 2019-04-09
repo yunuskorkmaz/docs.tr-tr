@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Tam bir Windows Forms yazdırma işleri'
+title: 'Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: 1ae20e4fdc3a4fc3de8c462c355bcc700eddf22e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f8d0f1f067efbae6e2b667328e75996179b91737
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159828"
 ---
-# <a name="how-to-complete-windows-forms-print-jobs"></a>Nasıl yapılır: Tam bir Windows Forms yazdırma işleri
+# <a name="how-to-complete-windows-forms-print-jobs"></a>Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama
 Genellikle, sözcük işlemciler ve yazdırma gerektiren diğer uygulamaları yazdırma işi tamamlandığını kullanıcılara bir ileti görüntülemek için seçeneği sunacak. Bu işlevsellik, Windows Forms'ta işleyerek sağlayabilir <xref:System.Drawing.Printing.PrintDocument.EndPrint> olayı <xref:System.Drawing.Printing.PrintDocument> bileşeni.  
   
  Aşağıdaki yordam, Windows tabanlı bir uygulama ile oluşturduğunuz gerektirir bir <xref:System.Drawing.Printing.PrintDocument> bileşen üzerindeki, Windows tabanlı bir uygulama yazdırma etkinleştirme standart yoludur. Kullanarak Windows Forms yazdırma hakkında daha fazla bilgi için <xref:System.Drawing.Printing.PrintDocument> bileşeni Bkz [nasıl yapılır: Standart Windows Forms yazdırma işleri oluşturma](how-to-create-standard-windows-forms-print-jobs.md).  
@@ -81,5 +81,6 @@ Genellikle, sözcük işlemciler ve yazdırma gerektiren diğer uygulamaları ya
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Windows Forms Yazdırma Desteği](windows-forms-print-support.md)

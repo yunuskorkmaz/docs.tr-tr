@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-ms.openlocfilehash: 83f87e911d9d5412eaba1eb88aea74b9325bc899
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bdae1689ffeb8c54d756b9debbd26d57a052892d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198796"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Nasıl yapılır: Animasyon için Süre Ayarlama
 A <xref:System.Windows.Media.Animation.Timeline> zaman bir segmentini ve kesiminin uzunluğu çizelgesinin tarafından belirlenir temsil <xref:System.Windows.Duration>. Olduğunda bir <xref:System.Windows.Media.Animation.Timeline> geçerlilik süresinin, yürütmeyi durdurur. Varsa <xref:System.Windows.Media.Animation.Timeline> alt öğe zaman çizelgeleri varsa bunlar da yürütmeyi durdurur. Bir animasyon, söz konusu olduğunda <xref:System.Windows.Duration> animasyon bitiş değeri başlangıç değerinden geçişin ne kadar alacağını belirtir.  
@@ -24,5 +24,6 @@ A <xref:System.Windows.Media.Animation.Timeline> zaman bir segmentini ve kesimin
  [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Duration>
 - [Animasyona Genel bakış](animation-overview.md)

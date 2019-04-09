@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 495ce5f6-bb4d-4b30-807a-c3c35f1ca95c
-ms.openlocfilehash: 3a95e8e68361f060d843247f400043a79dc28889
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0c8751454be6e0eed547c38e9d0bc7931abaec3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466875"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196976"
 ---
 # <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a>ProcessUnhandledException işlevi (WPF yönetilmeyen API Başvurusu)
 Bu API Windows Presentation Foundation (WPF) altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
@@ -44,4 +44,5 @@ void __stdcall ProcessUnhandledException(
  **.NET framework sürümü:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Yönetilmeyen API Başvurusu](wpf-unmanaged-api-reference.md)

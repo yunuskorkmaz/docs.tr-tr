@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197847"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Boyutlandırma Seçenekleri
 <xref:System.Windows.Forms.DataGridView> Satırlar, sütunlar ve üst bilgiler birçok farklı oluşum sonucunda boyutunu değiştirebilirsiniz. Aşağıdaki tabloda bu örnekleri gösterilmektedir.  
@@ -128,6 +128,7 @@ ms.locfileid: "57717914"
  Boyutlandırma özellikleri ve yöntemleri tarafından kullanılan sabit listeleri için içerik tabanlı boyutlandırma benzer değerlere sahip. Hücreleri tercih edilen boyutlarını hesaplamak için kullanılır, bu değerleri ile sınırlayabilirsiniz. Tüm boyutlandırma sabit listeleri için görüntülenen hücrelere başvuru adları ile değerlerini kendi hesaplamalar görüntülenen satırların hücreleri sınırlayın. Satırları dışlama, çok sayıda satır çalışırken bir performans cezasını önlemek yararlıdır. Üst bilgi veya başlık olmayan hücre hücre değerlerini hesaplamalara da kısıtlayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>
@@ -156,4 +157,4 @@ ms.locfileid: "57717914"
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
 - [Windows Forms DataGridView Denetiminde Hücre ve Satırları Yeniden Boyutlandırma](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Sütun Doldurma Modu](column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView denetiminin boyutlandırma modlarını ayarlama](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView Denetiminin Boyutlandırma Modlarını Ayarlama](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

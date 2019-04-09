@@ -2,12 +2,12 @@
 title: <standardEndpoints>
 ms.date: 03/30/2017
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
-ms.openlocfilehash: 1451105f210f34747aca337b3279821f72a19080
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 66b86647689ea2ca39ae2f569d275aff1f48cba5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190281"
 ---
 # <a name="standardendpoints"></a>\<standardEndpoints >
 Bu yapılandırma bölümü yeniden kullanılabilen önceden yapılandırılmış uç noktalar olan standart uç noktalarının bir koleksiyonunu tanımlamanıza olanak sağlar. Bir standart uç nokta gerekir veya daha fazla adresi, bağlama ve sözleşme öznitelikleri için sabit bir değer. Örneğin, bulma uç noktası sözleşme sabittir. Standart uç noktaları, yeni özellikleri benzer özel bağlamaları tanımlamak için olan hizmet uç noktası genişletmek için de kullanabilirsiniz.  
@@ -50,4 +50,5 @@ Bu yapılandırma bölümü yeniden kullanılabilen önceden yapılandırılmı�
 |\<system.ServiceModel>|Tüm WCF yapılandırma öğelerinin kök öğe.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Standart Uç Noktalar](../../../../../docs/framework/wcf/feature-details/standard-endpoints.md)
+
+- [Standart Uç Noktaları](../../../../../docs/framework/wcf/feature-details/standard-endpoints.md)

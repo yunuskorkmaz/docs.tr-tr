@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f125d322a5a3e2841d6b1ba1f2f8d5fe9745870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb42c04df6e02ff43421b7af6bf2d51b53aa3e69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181987"
 ---
 # <a name="disconnectedcontext-mda"></a>disconnectedContext MDA
 `disconnectedContext` Yönetilen hata ayıklama Yardımcısı (MDA), bir COM nesnesi ile ilgili bir istek bakım sırasında geçiş bağlantısı kesilen grubu veya bağlamı CLR girişiminde bulunduğunda etkinleştirilir.  
@@ -47,6 +47,7 @@ ms.locfileid: "54569709"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Birlikte Çalışma Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

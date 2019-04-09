@@ -24,18 +24,16 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175801"
 ---
 # <a name="object-lifetime-events"></a>Nesne Yaşam Süresi Olayları
 Bu konu, söz konusu açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aşamaları oluşturma, kullanma ve yok etme, bir nesnenin yaşam süresini belirtmek olayları.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu konu, üzerinde bir tüketici mevcut bağımlılık özellikleri perspektifinden bağımlılık özellikleri anladığınızı varsayar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sınıfları ve okuma [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md) konu. Bu konudaki örnekleri izlemek için de anlamanız gereken [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (bkz [XAML genel bakış (WPF)](xaml-overview-wpf.md)) ve nasıl yazıldığını bilmeniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
@@ -75,5 +73,6 @@ Bu konu, söz konusu açıklar [!INCLUDE[TLA2#tla_winclient](../../../../include
 -   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, ve <xref:System.Windows.Controls.Frame>: [Gezintiye genel bakış](../app-development/navigation-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağımlılık Özelliği Değer Önceliği](dependency-property-value-precedence.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)

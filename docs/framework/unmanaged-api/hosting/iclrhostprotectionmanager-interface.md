@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d4cb310215967a79e43e43319e107b6c42551e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd096344c987d8901f0baab86e370abbb03528e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177781"
 ---
 # <a name="iclrhostprotectionmanager-interface"></a>ICLRHostProtectionManager Arabirimi
 Yönetilen sınıflar, yöntemler, özellikler ve alanları kısmen güvenilen kod çalıştırılmasını engellemek konak sağlar.  
@@ -43,5 +43,6 @@ Yönetilen sınıflar, yöntemler, özellikler ve alanları kısmen güvenilen k
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [EApiCategories Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)
+
+- [EApiCategories Numaralandırması](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)
 - [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)

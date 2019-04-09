@@ -1,16 +1,16 @@
 ---
-title: Windows Identity Foundation 4.5 yenilikler nelerdir?
+title: Windows Identity Foundation 4.5'teki Yenilikler
 ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
-ms.openlocfilehash: 9009f3bd6e782aefdeca0f071dc70d6247c3987b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 07e1aee85e22f6dd5257cdd49e8af99b423cb17f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195533"
 ---
-# <a name="whats-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5 yenilikler nelerdir?
+# <a name="whats-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5'teki Yenilikler
 Windows Identity Foundation'ın (WIF) ilk sürümü tek başına bir indirme olarak gönderildi ve .NET 3.5 SP1 zaman çerçevesinde kullanıma sunulduğundan WIF 3.5 olarak bilinmekteydi. .NET 4.5 sürümünden itibaren WIF, .NET çerçevesinin bir parçası olmuştur. WIF sınıflarının doğrudan çerçevede kullanılabilir olması beyana dayalı kimliğin taleplerin kullanılmasını kolaylaştırır NET'te çok daha ayrıntılı bir tümleştirme sağlar. WIF 3.5 için yazılmış uygulamalar için yeni modelin avantajlarından yararlanmak için değiştirilmesi gerekecektir; bilgi için [WIF 4.5 için bir Application Built Using WIF 3.5 geçirme yönergeleri](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
   
  Aşağıda, bazı önemli ana değişiklikleri bulabilirsiniz.  
@@ -57,6 +57,7 @@ Windows Identity Foundation'ın (WIF) ilk sürümü tek başına bir indirme ola
      Kullanırken **kimlik ve erişim aracı Visual Studio 2012 için** (bkz **değiştirir Visual Studio deneyimine** yukarıda), aracı ekler bir `<serviceCredentials>` öğeyle `useIdentityConfiguration` özniteliği ayarlayın sizin için yapılandırma dosyası. Karşılık gelen de ekler [ \<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) öğesi WIF yapılandırması ayarlarını içeren ve bir bağlama ve kimlik doğrulaması tercih ettiğiniz sts'ye dış kaynak için gerekli diğer ayarları ekler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WIF 3.5 Kullanılarak Derlenmiş bir Uygulamayı WIF 4.5’e Geçirme Yönergeleri](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
 - [WIF 3.5 ile WIF 4.5 Arasında Ad Alanı Eşleme](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
 - [WIF API Başvurusu](../../../docs/framework/security/wif-api-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Nesnelerin geç başlatılmasını gerçekleştirme'
+title: 'Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d1ddbd9649d82ffe55c16e0657a1c020b50acbb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188969"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a>Nasıl yapılır: Nesnelerin geç başlatılmasını gerçekleştirme
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme
 <xref:System.Lazy%601?displayProperty=nameWithType> Sınıfı yavaş başlatma ve nesne örneğinin gerçekleştirmenin iş basitleştirir. Nesneleri yavaş bir şekilde başlatarak bunları hiçbir zaman gerekli ya da ilk erişilen kadar başlatma erteleyebilirsiniz hiç oluşturmak zorunda önleyebilirsiniz. Daha fazla bilgi için [yavaş başlatma](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="example"></a>Örnek  
@@ -77,5 +77,6 @@ End Sub
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [Geç Başlatma](../../../docs/framework/performance/lazy-initialization.md)
+- [Yavaş Başlatma](../../../docs/framework/performance/lazy-initialization.md)

@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Visual Basic ile bileşik denetim yazma'
+title: 'İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: 5eaa92b6294ebf849f005f6e12d2dacb43fa4d6c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ed3a7dc23050412082fb10fabf6b1d5a4507973e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186114"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>İzlenecek yol: Visual Basic ile bileşik denetim yazma
+# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma
 Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir yöntemdir. Bileşik Denetim aslında bir görsel bir temsili ile bileşenidir. Bu nedenle, bir veya daha fazla Windows Forms denetimleri, bileşenleri veya kullanıcı girişini doğrulama, görüntü özelliklerini değiştirerek veya yazar tarafından gereken diğer görevleri gerçekleştirme işlevselliğini genişletebildiği kod bloklarını oluşabilir. Bileşik denetimler, diğer denetimlerle aynı şekilde Windows formlarında yerleştirilebilir. Bu kılavuzun ilk bölümünde oluşturduğunuz adlı basit bir bileşik denetim `ctlClock`. İzlenecek yol ikinci kısmında, işlevlerini genişletmek `ctlClock` devralma yoluyla.  
   
 > [!NOTE]
@@ -361,7 +361,7 @@ Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir y
     |`label1`|**Metin**|`(blank space)`|  
     ||**Ad**|`lblTest`|  
     |`dateTimePicker1`|**Ad**|`dtpTest`|  
-    ||**Biçim**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
+    ||**Biçimi**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. Tasarımcıda çift **dtpTest**.  
   
@@ -396,6 +396,7 @@ Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir y
      Bu izlenecek yol, bir dizi temel kavramları kapsamında. Bileşik Denetim kapsayıcıya denetimleri ve Bileşenleri'ni birleştirerek bileşik denetim oluşturulacağını öğrendiniz. Özellikleri denetiminize eklemek ve özel işlevselliği uygulamak üzere kod yazmak için öğrendiniz. Son bölümde, devralma yoluyla belirli bir bileşik denetim işlevlerini genişletmek ve bu yöntemi geçersiz kılarak konak yöntemleri işlevlerini değiştirmek için öğrendiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)
-- [Nasıl yapılır: Bileşik denetimler yazma](how-to-author-composite-controls.md)
-- [Nasıl yapılır: Bir denetimi görüntüleme araç kutusu öğelerini Seç iletişim kutusu](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Nasıl yapılır: Bileşik Denetimler Yazma](how-to-author-composite-controls.md)
+- [Nasıl yapılır: Araç Kutusu Öğelerini Seç İletişim Kutusunda bir Denetimi Görüntüleme](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

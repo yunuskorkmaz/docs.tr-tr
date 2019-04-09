@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İnceleme ve yansıma ile genel türleri örnek oluşturma'
+title: 'Nasıl yapılır: Yansıma ile Genel Türleri İnceleme ve Örnek Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69864e647a7cf4e6193f4eb76ce2b7bc93b09404
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ed5ef0ced0497895e8688bdb27c6f7f378d7cd3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189675"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Nasıl yapılır: İnceleme ve yansıma ile genel türleri örnek oluşturma
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Nasıl yapılır: Yansıma ile Genel Türleri İnceleme ve Örnek Oluşturma
 Genel türler hakkında bilgi tıpkı diğer türler hakkında bilgi elde edilir: inceleme tarafından bir <xref:System.Type> genel türü temsil eden nesne. İlkeye genel bir türün bir listesi olduğunu fark <xref:System.Type> , genel tür parametrelerini temsil eden nesneleri. Bu bölümdeki ilk yordam, genel türler inceler.  
   
  Oluşturabileceğiniz bir <xref:System.Type> oluşturulan tür, genel tür tanımı için tür parametreleri bağlama tür bağımsız değişkeni tarafından temsil eden nesne. İkinci yordam bu gösterir.  
@@ -124,6 +124,7 @@ Genel türler hakkında bilgi tıpkı diğer türler hakkında bilgi elde edilir
 -   Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>
 - [Yansıma ve Genel Türler](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-ms.openlocfilehash: d22d0ada44ca4374da0b8feccf0a37ff1016dc80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576505"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196326"
 ---
 # <a name="implementing-service-contracts"></a>Hizmet Sözleşmelerini Uygulama
 Bir veya daha fazla uç noktası istemcilere kullanılabilir olan işlevsellik sunduğu bir sınıf bir hizmettir. Bir hizmet oluşturmak için bir Windows Communication Foundation (WCF) sözleşmesi uygulayan bir sınıf yazın. İki yoldan biriyle bunu yapabilirsiniz. Sözleşme ayrı ayrı arabirim olarak tanımlayabilir ve ardından bu arabirimi uygulayan bir sınıf oluşturun. Alternatif olarak, sınıf ve sözleşme doğrudan yerleştirerek oluşturabileceğiniz <xref:System.ServiceModel.ServiceContractAttribute> sınıfı özniteliği ve <xref:System.ServiceModel.OperationContractAttribute> hizmeti istemcilerine uygun olan yöntemler özniteliği.  
@@ -58,7 +58,8 @@ class MathService
  Bir hizmet sözleşmesini uyguladıktan sonra hizmeti için bir veya daha fazla uç noktası oluşturmanız gerekir. Daha fazla bilgi için [uç nokta oluşturmaya genel bakış](../../../docs/framework/wcf/endpoint-creation-overview.md). Bir hizmet çalıştırma hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hizmetleri Tasarlama ve Uygulama](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Nasıl yapılır: Bir sözleşme sınıfı ile hizmet oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
-- [Nasıl yapılır: Bir sözleşme arabirimi ile hizmet oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
+- [Nasıl yapılır: Anlaşma Sınıfı ile Hizmet Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
+- [Nasıl yapılır: Sözleşme Arabirimi ile Hizmet Oluşturma](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
 - [Hizmet Çalışma Zamanı Davranışını Belirtme](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81a502ab3c0f9f2faf4685c5d61c66f2eab83e7f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197002"
 ---
 # <a name="callback-functions"></a>Geri Çağırma İşlevleri
 Kod, bir görevi tamamlamak, yönetilmeyen bir DLL işlevini yardımcı olan yönetilen bir uygulama içinde bir geri çağırma işlevidir. Bir geri arama işlev çağrıları, dolaylı olarak bir DLL işlevini aracılığıyla yönetilen bir uygulama geçirmek ve yönetilen bir uygulamasını yedekleyin. Bazı platformuyla adlı birçok DLL işlevleri çağırma düzgün çalışması için yönetilen kodda bir geri çağırma işlevini gerektirir.  
@@ -28,5 +28,6 @@ Kod, bir görevi tamamlamak, yönetilmeyen bir DLL işlevini yardımcı olan yö
  Geri çağırma işlevleri, bir görev art arda gerçekleştirilen durumlarda kullanım için idealdir. Başka bir ortak kullanımı numaralandırma işlevleri ile olduğu gibi **EnumFontFamilies**, **EnumPrinters**, ve **EnumWindows** Windows API. **EnumWindows** aracılığıyla her penceresinde bir görevi gerçekleştirmek için geri çağrı işlevini çağırıp bilgisayarınızdaki tüm var olan windows işlev numaralandırır. Yönergeler ve örnek için bkz. [nasıl yapılır: Geri çağırma işlevlerini uygulama](../../../docs/framework/interop/how-to-implement-callback-functions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Geri çağırma işlevlerini uygulama](../../../docs/framework/interop/how-to-implement-callback-functions.md)
+
+- [Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama](../../../docs/framework/interop/how-to-implement-callback-functions.md)
 - [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)

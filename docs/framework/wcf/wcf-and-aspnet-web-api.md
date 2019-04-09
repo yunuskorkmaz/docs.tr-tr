@@ -2,12 +2,12 @@
 title: WCF ve ASP.NET Web API
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: 460c2d6d3acfd857c3f11db313a2ebb894a14cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d805c09bef45932ba006a213343429ae7c9303df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192010"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF ve ASP.NET Web API
 WCF hizmet odaklı uygulamalar oluşturmak için Microsoft'un programlama modelidir. Bu, geliştiricilerin platformlar arasında tümleştirin ve mevcut yatırımlarınızdan ile birlikte çalışmak güvenli, güvenilir, hizmetteki çözümleri oluşturmasına olanak sağlar. [ASP.NET Web API](https://www.asp.net/web-api) istemciler, tarayıcılar ve mobil cihazlar dahil olmak üzere geniş bir yelpazede ulaşan HTTP hizmetlerini oluşturmayı kolaylaştıran bir çerçevedir. ASP.NET Web API'si, .NET Framework üzerinde RESTful uygulamaları geliştirmek için ideal bir platformdur. Bu konuda, hangi teknoloji ihtiyaçlarınızı en iyi karşılayacak karar vermenize yardımcı olacak rehberlik sunulmaktadır.  
@@ -27,5 +27,6 @@ WCF hizmet odaklı uygulamalar oluşturmak için Microsoft'un programlama modeli
  WCF taşımalar çeşitli erişilebilir olan güvenilir, güvenli web hizmetleri oluşturmak için kullanın. Çok çeşitli istemcileri erişilebilir olan HTTP tabanlı hizmetler oluşturmak için ASP.NET Web API'sini kullanın. ASP.NET Web API oluşturma ve yeni REST stili hizmetler tasarlama kullanın. WCF REST stilinde Hizmetleri yazmak için bazı destek sağlar, ancak KALAN ASP.NET Web API desteği daha tamamlandı ve gelecekteki tüm REST özellik geliştirmeleri, ASP.NET Web API'de hale getirilir. Mevcut bir WCF Hizmeti varsa ve ek REST uç noktalarını kullanıma sunmak istediğiniz WCF kullanın ve <xref:System.ServiceModel.WebHttpBinding>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Communication Foundation nedir?](../../../docs/framework/wcf/whats-wcf.md)
 - [Temel Windows Communication Foundation Kavramları](../../../docs/framework/wcf/fundamental-concepts.md)

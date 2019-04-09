@@ -2,12 +2,12 @@
 title: Özel Durumlar
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 94a0a2430ffe7db47152517c742aed1c18a39e64
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717277"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145996"
 ---
 # <a name="exceptions"></a>Özel Durumlar
 İş akışları kullanabilirsiniz <xref:System.Activities.Statements.TryCatch> bir iş akışı yürütme sırasında başlatılan özel durumları işlemek için etkinlik. Bu özel durumlar işlenebilen veya bunlar kullanarak yeniden oluşturulan <xref:System.Activities.Statements.Rethrow> etkinlik. Etkinlikler <xref:System.Activities.Statements.TryCatch.Finally%2A> bölümü olan yürütülmesi ya da <xref:System.Activities.Statements.TryCatch.Try%2A> bölüm veya <xref:System.Activities.Statements.TryCatch.Catches%2A> bölüm tamamlar. İş akışları tarafından barındırılan bir <xref:System.Activities.WorkflowApplication> örneği de kullanabilirsiniz <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> olay işleyici tarafından işlenmeyen özel durumları işlemek için bir <xref:System.Activities.Statements.TryCatch> etkinlik.  
@@ -51,6 +51,7 @@ ms.locfileid: "57717277"
  Özel durum işleme ve maaş arasındaki fark özel durum işleme bir etkinliği yürütülmesi sırasında gerçekleşir. Bir etkinlik başarıyla tamamlandıktan sonra maaş gerçekleşir. Özel durum işleme maaş tarafından başarıyla tamamlanan iş önceden tamamlanmış bir etkinliğin Al. geri alınabilecek bir mekanizma sağlar. etkinlik özel durumu oluşturur sonra temizleme fırsatı sağlar. Daha fazla bilgi için [maaş](compensation.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Activities.Statements.TryCatch>
 - <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
 - <xref:System.Activities.Statements.CompensableActivity>

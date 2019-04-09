@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-ms.openlocfilehash: 1f66c79f18fd02327c0c1f4f20787e566437f20f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188324"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Nasıl yapılır: Görsel Taslakla Özelliğe Animasyon Ekledikten Sonra Ayarlama
 Bazı durumlarda, animasyon sonra bir özelliğin değerini değiştiremezsiniz görünebilir.  
@@ -63,6 +63,7 @@ Bazı durumlarda, animasyon sonra bir özelliğin değerini değiştiremezsiniz 
  Bu teknik, görsel taslak olmayan animasyon için de kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>
 - <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Media.Animation.RemoveStoryboard>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 208841d880ffcbfb2bbeb9e235cc8cdf0fa2f041
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185542"
 ---
 # <a name="hosting-services"></a>Barındırma Hizmetleri
 Etkin duruma gelmesi bir hizmet oluşturup kendi bağlam ve yaşam süresini denetleyen bir çalışma zamanı ortamında barındırılması gerekir. Windows Communication Foundation (WCF) hizmetlerini destekleyen yönetilen kodu herhangi bir Windows işlem içinde çalıştırmak için tasarlanmıştır.  
@@ -62,10 +62,11 @@ Etkin duruma gelmesi bir hizmet oluşturup kendi bağlam ve yaşam süresini den
  Bir hizmeti ya da herhangi bir uzantı bir güvenilmeyen konak ödün güvenlikten çalıştıran dikkat etmeniz önemlidir. Ayrıca, açılırken unutmayın bir <xref:System.ServiceModel.ServiceHost> kimliğe bürünme altında kullanıcı kapalı, örneğin önbelleğe alarak kaydedildiğini değil bir uygulama sağlamalıdır <xref:System.Security.Principal.WindowsIdentity> kullanıcının.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sistem Gereksinimleri](../../../docs/framework/wcf/wcf-system-requirements.md)
 - [Temel Programlama Yaşam Döngüsü](../../../docs/framework/wcf/basic-programming-lifecycle.md)
-- [Hizmet Anlaşmalarını Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)
-- [Nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [Nasıl yapılır: Was'ta WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [Nasıl yapılır: Yönetilen bir Windows hizmetinde bir WCF Hizmeti barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [Nasıl yapılır: Yönetilen bir uygulamada bir WCF Hizmeti barındırma](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Hizmet Sözleşmelerini Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [Nasıl yapılır: IIS'de WCF Hizmeti Barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Nasıl yapılır: WAS'de WCF Hizmeti Barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

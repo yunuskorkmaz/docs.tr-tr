@@ -6,18 +6,16 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 581bd29de07697794e1e752c02068d31db9e0de8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197691"
 ---
 # <a name="trees-in-wpf"></a>WPF İçinde Ağaçlar
 Birçok teknolojileri burada geliştiriciler nesne düğümleri işleme veya uygulamanın davranışını etkilemek için ağacında doğrudan düzenlemezsiniz ağaç yapısında öğeleri ve bileşenleri düzenlenir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ayrıca birkaç ağaç yapısı metaphors program öğeler arasındaki ilişkileri tanımlamak için kullanır. Çoğunlukla WPF geliştiricilerinin kod içinde bir uygulama oluşturun veya nesne ağaç benzetimini düşünmek kavramsal olarak çalışırken XAML içinde uygulama bölümlerini tanımlayan ancak olacak belirli bir API'yi çağırıp ya da bunu yerine bazı genel yapmak için özel biçimlendirme kullanma Nesne ağacında işlemeyi API gibi XML DOM kullanabilir WPF sunan bir ağaç benzetimini görünümü sağlayan iki yardımcı sınıflar <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>. Bu aynı ağaçları belirli anahtar WPF özellikleri davranışını anlamak için yararlı olduğundan koşulları görsel ağacı ve mantıksal ağaç WPF belgelerinde de kullanılır. Bu konu ne görsel ağacı ve mantıksal ağaç temsil tanımlar, böyle ağaçları için genel bir nesne ağacında kavramdır nasıl ilişkili olduğunu açıklar ve tanıtır <xref:System.Windows.LogicalTreeHelper> ve <xref:System.Windows.Media.VisualTreeHelper>s.  
-  
 
-  
 <a name="element_tree"></a>   
 ## <a name="trees-in-wpf"></a>WPF İçinde Ağaçlar  
  En kapsamlı ağaç yapısında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nesne ağacıdır. Bir uygulama sayfasındaki tanımlarsanız [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve ardından Yük [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ağaç yapısını biçimlendirmede öğelerinin iç içe geçme ilişkileri temel alınarak oluşturulur. Bir uygulamayı tanımlayan veya bir bölümü uygulama kodundaki ardından ağaç yapısını oluşturduysanız, belirli bir nesne için içerik modeli uygulayan özellikler için özellik değerlerini nasıl atamak temel. İçinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], tam nesne ağacının conceptualized ve kendi ortak API için bildirilen iki yolu vardır: mantıksal ağacı ve görsel ağaç olarak. Mantıksal ağaç ve görsel ağaç arasındaki farklılıklar her zaman olması önemli değildir, ancak bunlar zaman zaman sorunları ile belirli neden olabilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] alt sistemlerin ve işaretleme veya kod içinde yaptığınız etkileyen seçenekleri.  
@@ -87,8 +85,9 @@ Birçok teknolojileri burada geliştiriciler nesne düğümleri işleme veya uyg
  Ancak, kaynak araması hemen mantıksal ağaç genişletebilirsiniz. Uygulama biçimlendirme için kaynak araması ardından ileriye doğru uygulama düzeyinde kaynak sözlükleri ve ardından statik özellikler veya anahtarlarının başvurulan tema desteği ve sistem değerleri devam edebilirsiniz. Kaynak başvurularını dinamik ise Temalar kendilerini tema mantıksal ağaç dışında sistem değerleri de başvurabilirsiniz. Kaynak sözlükleri ve arama mantığı hakkında daha fazla bilgi için bkz. [XAML kaynakları](xaml-resources.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Girişe Genel Bakış](input-overview.md)
 - [WPF Grafik İşlemeye Genel Bakış](../graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
 - [Nesne Ağacında Olmayan Nesne Öğelerini Başlatma](initialization-for-object-elements-not-in-an-object-tree.md)
 - [WPF Mimarisi](wpf-architecture.md)

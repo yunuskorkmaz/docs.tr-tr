@@ -1,18 +1,18 @@
 ---
-title: Bir veri kümesi bir XmlDataDocument ile eşitleme
+title: DataSet’i bir XmlDataDocument ile Eşitleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: ef0518bfd53ea5696c9369fe78e4ceccd3c6260c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133737"
 ---
-# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Bir veri kümesi bir XmlDataDocument ile eşitleme
+# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>DataSet’i bir XmlDataDocument ile Eşitleme
 Bu bölüm işleme kullanarak türü kesin belirlenmiş bir satın alma siparişinin tek bir adımda gösterir <xref:System.Data.DataSet> ile eşitlenen bir <xref:System.Xml.XmlDataDocument>. Aşağıdaki örneklerde oluşturma bir **veri kümesi** kaynak XML belgesi yalnızca bir kısmını eşleşen bir simge durumuna küçültülmüş şema ile. Örneklerde bir **XmlDataDocument** kaynak XML belge kalitesini korumak için etkinleştirme **veri kümesi** bir alt XML belgesi oluşturmak için kullanılacak.  
   
  Aşağıdaki XML belgesi için bir sipariş ilişkin tüm bilgileri içerir: Müşteri bilgileri, sıralı öğeleri, sevkiyat bilgilerini ve benzeri.  
@@ -232,5 +232,6 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

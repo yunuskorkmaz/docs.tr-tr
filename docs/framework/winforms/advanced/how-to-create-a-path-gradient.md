@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yol gradyanı oluşturma'
+title: 'Nasıl yapılır: Yol Gradyanı Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186101"
 ---
-# <a name="how-to-create-a-path-gradient"></a>Nasıl yapılır: Yol gradyanı oluşturma
+# <a name="how-to-create-a-path-gradient"></a>Nasıl yapılır: Yol Gradyanı Oluşturma
 <xref:System.Drawing.Drawing2D.PathGradientBrush> Sınıfı renkleri yavaş yavaş değişen bir şeklin dolgu özelleştirmenize olanak tanır. Örneğin, merkezi bir yolu için bir renk ve başka bir renk için bir yol sınırını belirtebilirsiniz. Ayrıca her bir yol sınırları boyunca birkaç noktası için farklı renkler belirtebilirsiniz.  
   
 > [!NOTE]
@@ -111,4 +111,5 @@ ms.locfileid: "58126233"
  Önceki örneklerde, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirdikleri <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Şekilleri Doldurmak için Gradyan Fırçası Kullanma](using-a-gradient-brush-to-fill-shapes.md)

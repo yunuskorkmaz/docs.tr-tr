@@ -1,18 +1,18 @@
 ---
-title: Büyük Udt'ler
+title: Büyük UDT’ler
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 259b8e6df9b302ec50fe84a3b57d4597821bdcc8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8b2f195b2cb4c365693dc0f250a577a93cf25eee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181538"
 ---
-# <a name="large-udts"></a>Büyük Udt'ler
+# <a name="large-udts"></a>Büyük UDT’ler
 Kullanıcı tanımlı türler(UDT) ortak dil çalışma zamanı (CLR) nesneleri bir SQL Server veritabanında depolayarak sunucunun skalar türü sistemini genişletmek bir geliştirici izin verin. Udt'ler birden çok öğe içerebilir ve davranışlar, tek bir SQL Server sistem veri türünü oluşur geleneksel diğer veri türleri farklı olabilir.  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ Kullanıcı tanımlı türler(UDT) ortak dil çalışma zamanı (CLR) nesneleri 
   
  Kullanıcı tanımlı türler için kapsamlı belgeler için SQL Server Books Online'nın sürümü kullandığınız SQL Server sürümü için bkz.  
   
- **SQL Server Çevrimiçi Kitapları**  
+ **SQL Server Çevrimiçi Kitaplar**  
   
 1.  [Kullanıcı Tanımlı CLR Türleri](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
@@ -132,6 +132,7 @@ End Using
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Veritabanı Şema Bilgilerini Alma](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)

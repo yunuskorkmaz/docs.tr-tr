@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: X.509 sertifikası ile bir hizmeti güvenli hale getirme'
+title: 'Nasıl yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6757d6375cbe1662b8bd7beb8a7562be166bc414
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181512"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Nasıl yapılır: X.509 sertifikası ile bir hizmeti güvenli hale getirme
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Nasıl yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme
 X.509 sertifikası ile bir hizmeti güvenli hale getirme çoğu bağlamaları Windows Communication Foundation (WCF) kullanan temel bir tekniktir. Bu konuda bir X.509 sertifikası ile şirket içinde barındırılan bir hizmet yapılandırma adımlarını açıklar.  
   
  Sunucunun kimliğini doğrulamak için kullanılan geçerli bir sertifika önkoşuldur. Sertifika sunucusu için bir güvenilen sertifika yetkilisi tarafından verilmiş olması gerekir. Sertifika geçerli değilse, hizmeti kullanmaya çalışırken herhangi bir istemci hizmeti güvenmeyecek ve bağlantı sonuç olarak yapılacaktır. Sertifikaları kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -83,4 +83,5 @@ X.509 sertifikası ile bir hizmeti güvenli hale getirme çoğu bağlamaları Wi
 -   <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

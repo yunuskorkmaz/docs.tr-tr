@@ -1,18 +1,18 @@
 ---
-title: 'Sorgu ifadesi söz dizimi örnekleri: İlişkilerde gezinme'
+title: 'Sorgu İfadesi Söz Dizimi Örnekleri: İlişkilerde Geziniliyor'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
-ms.openlocfilehash: ed59a25421f8347c25f80573fa127debf61b4c36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2133ae7902cc4746e00be75e7a801296073041e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193947"
 ---
-# <a name="query-expression-syntax-examples-navigating-relationships"></a>Sorgu ifadesi söz dizimi örnekleri: İlişkilerde gezinme
+# <a name="query-expression-syntax-examples-navigating-relationships"></a>Sorgu İfadesi Söz Dizimi Örnekleri: İlişkilerde Geziniliyor
 Gezinti özellikleri [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] ilişkilendirme ucunda varlıkları bulmak için kullanılan kısayol özellik. Bir varlıktan diğerine giderler veya ilgili varlıkları ilişkilendirme aracılığıyla tek bir varlık kümesi bir kullanıcı Gezinti özellikleri sağlar. Bu konuda sorgu ifadesi söz dizimi örnekleri Gezinti özellikleri ile ilişkilerde gezinme konusunda sunmaktadır [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular.  
   
  Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
@@ -47,4 +47,5 @@ Gezinti özellikleri [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-m
  [!code-vb[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

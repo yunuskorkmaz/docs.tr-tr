@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 24a9c63b8d52ef05c386e5bfefe81e33245ece91
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191282"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI Otomasyon Öğelerini Alma
 > [!NOTE]
@@ -97,6 +97,7 @@ ms.locfileid: "57674490"
  Alabileceğiniz bir <xref:System.Windows.Automation.AutomationElement> odaklı denetimin statik temsil eden <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> özelliği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [TreeWalker ile UI Otomasyonu Öğeleri Arasında Gezinme](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+
+- [Özellik Koşulunu Temel Alan UI Otomasyon Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [TreeWalker ile UI Otomasyon Öğeleri Arasında Gezinme](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
 - [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

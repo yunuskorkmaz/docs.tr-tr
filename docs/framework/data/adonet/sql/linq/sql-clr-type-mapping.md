@@ -1,15 +1,15 @@
 ---
-title: SQL-CLR tür eşlemesi
+title: SQL-CLR Tür Eşlemesi
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617349"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152496"
 ---
-# <a name="sql-clr-type-mapping"></a>SQL-CLR tür eşlemesi
+# <a name="sql-clr-type-mapping"></a>SQL-CLR Tür Eşlemesi
 LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programlama dilinde ifade nesne modeli eşlenir. Uygulama çalışırken, LINQ to SQL nesne modeli dil ile tümleşik sorgu SQL'e çevirir ve bunları yürütme için veritabanı gönderir. Veritabanı sonuçları döndürdüğünde, LINQ to SQL geri kendi programlama dilinde çalışabileceğiniz nesneleri sonuçları çevirir.  
   
  Nesne modeli ve veritabanı arasında veri çevirmek için bir *tür eşlemesi* tanımlanması gerekir. LINQ to SQL her ortak dil çalışma zamanı (CLR) türü belirli bir SQL Server türü ile eşleşecek şekilde tür eşlemesi kullanır. Tür eşlemeleri ve öznitelik tabanlı eşleme ile nesne modeli içinde veritabanı yapısı ve tablo ilişkileri gibi diğer eşleme bilgilerini tanımlayabilirsiniz. Alternatif olarak, bir dış eşleme dosyası ile nesne modelini dış eşleme bilgilerini belirtebilirsiniz. Daha fazla bilgi için [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) ve [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
@@ -235,7 +235,7 @@ LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programla
  Olsa da `VARBINARY(MAX)` sütunlarla `FILESTREAM` özniteliğini <xref:System.Data.Linq.Binary> nesneleri <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi, sütunları otomatik olarak oluşturamıyor `FILESTREAM` özniteliği. Hakkında daha fazla bilgi için `FILESTREAM`, bkz: [FILESTREAM genel bakış](https://go.microsoft.com/fwlink/?LinkId=115291) üzerinde Microsoft SQL Server Books Online.  
   
 <a name="BinarySerialization"></a>   
-### <a name="binary-serialization"></a>İkili seri hale getirme  
+### <a name="binary-serialization"></a>İkili Serileştirme  
  Bir sınıf uyguluyorsa <xref:System.Runtime.Serialization.ISerializable> arabirimi, herhangi bir SQL ikili alan bir nesneyi serileştirip serileştiremeyeceğini (`BINARY`, `VARBINARY`, `IMAGE`). Nesne serileştirilmiş ve seri durumdan göre nasıl <xref:System.Runtime.Serialization.ISerializable> arabirimi uygulanır. Daha fazla bilgi için [ikili serileştirme](https://go.microsoft.com/fwlink/?LinkId=115581).  
   
 <a name="MiscMapping"></a>   
@@ -257,6 +257,7 @@ LINQ to SQL'de, ilişkisel veritabanı veri modeli, kendi seçtiğiniz programla
  LINQ to SQL herhangi bir türü eşlemeleri için bu çeşitli türleri desteklemez.  Daha fazla bilgi için [türü eşleme çalıştırma zamanı davranışını matris](#BehaviorMatrix).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Öznitelik Tabanlı Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

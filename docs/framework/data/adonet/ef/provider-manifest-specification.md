@@ -1,15 +1,15 @@
 ---
-title: Sağlayıcı bildirimi belirtimi
+title: Sağlayıcı Bildirimi Belirtimi
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 409653fa415e62ff0591e09ad4771c5951689b24
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169916"
 ---
-# <a name="provider-manifest-specification"></a>Sağlayıcı bildirimi belirtimi
+# <a name="provider-manifest-specification"></a>Sağlayıcı Bildirimi Belirtimi
 Bu bölümde, nasıl bir veri deposu sağlayıcısı türleri ve işlevleri veri deposunda destekleyebileceğini açıklanmaktadır.  
   
  Varlık Hizmetleri belirli veri depolama sağlayıcısının bağımsız olarak çalışır ancak hala modelleri, eşlemeler ve sorguları bir temel alınan veri deposuyla nasıl etkileşim açıkça tanımlamak bir veri sağlayıcı sağlar. Bir Soyutlama Katmanı varlık Hizmetleri yalnızca belirli bir veri deposu ya da veri sağlayıcısı hedeflenecek.  
@@ -280,4 +280,5 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
  Her bir veri deposu sağlayıcısı ad alanı veya ad alanı bildiriminde tanımlanan bilgi grubu tanımlamanız gerekir. Bu ad alanı Entity SQL sorguları, işlevi ve türü adlarını çözümlemek için kullanılabilir. Örneğin: SqlServer. Bu ad alanı Entity SQL sorguları tarafından desteklenen standart işlev için varlık Hizmetleri tarafından tanımlanan kurallı ad alanı, EDM, farklı olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Entity Framework Veri Sağlayıcısı Yazma](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

@@ -1,5 +1,5 @@
 ---
-title: <appDomainManagerType> Öğesi
+title: <appDomainManagerType> Öğe
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainManagerType element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25a3bf60986b571b473561d4258a76624bbfc982
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7aa13d26ac11ed624caa4c9704325f2d604418bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164222"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > öğesi
 Varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi olarak görev yapan türünü belirtir.  
@@ -74,6 +74,7 @@ Varsayılan uygulama etki alanı için uygulama etki alanı yöneticisi olarak g
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
 - [\<appDomainManagerAssembly > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)

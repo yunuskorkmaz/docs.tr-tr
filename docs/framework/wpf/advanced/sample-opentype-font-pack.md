@@ -6,17 +6,16 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 0a2db2392c2380a397da42474a311449c8fdf9fb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 96a0a5feaf14a7f040402681e90fba8f9766324b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199043"
 ---
 # <a name="sample-opentype-font-pack"></a>Örnek OpenType Yazı Tipi Paketi
 Bu konu, örneğine genel bakış sağlar. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] ile dağıtılan yazı tipleri [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Genişletilmiş örnek yazı tipi desteği [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tarafından kullanılabilen özellikler [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
-  
-  
+
 <a name="overview"></a>   
 ## <a name="fonts-in-the-opentype-font-pack"></a>OpenType yazı tipi paketi yazı tipleri  
  [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Örnek takımına [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] oluştururken kullanabileceğiniz yazı tipleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Örnek yazı tiplerinin lisans Ascender Corporation'ın altında sağlanır. Bu yazı tipleri yalnızca özelliklerinin bir alt kümesi tarafından tanımlanan toplam uygulama [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] biçimi. Aşağıdaki tabloda örnek adlarını listeler [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] yazı tipi.  
@@ -53,6 +52,7 @@ Lindsey yazı tipi görüntüleme
  Uygulamanızda yazı tipleri kullanabileceğiniz iki yolu vardır. Proje derleme içinde kaynak olarak gömülü içerik öğeleri olarak uygulamanıza yazı tipleri ekleyebilirsiniz. Alternatif olarak, yazı tiplerini uygulamanıza uygulamanın derleme dosyaları içinde gömülü proje kaynak öğeler olarak ekleyebilirsiniz. Daha fazla bilgi için [uygulamalarla yazı tiplerini paketleme](packaging-fonts-with-applications.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Documents.Typography>
 - [OpenType Yazı Tipi Özellikleri](opentype-font-features.md)
 - [Uygulamalarla Yazı Tiplerini Paketleme](packaging-fonts-with-applications.md)

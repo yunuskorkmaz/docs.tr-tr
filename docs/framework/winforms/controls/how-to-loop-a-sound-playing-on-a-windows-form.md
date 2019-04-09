@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Sesi döngü olarak çalma bir Windows formunda'
+title: 'Nasıl yapılır: Windows Form Üzerinde Bir Çalma Sesini Döngüye Alma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188519"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Nasıl yapılır: Sesi döngü olarak çalma bir Windows formunda
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Nasıl yapılır: Windows Form Üzerinde Bir Çalma Sesini Döngüye Alma
 Aşağıdaki kod örneği, sürekli bir ses çalar. Zaman kodunda `stopPlayingButton_Click` olay işleyicisi çalıştığında, herhangi bir sesi durdurur yürütülmekte. Ses çalma, hiçbir şey olmaz.  
   
 ## <a name="example"></a>Örnek  
@@ -54,6 +54,7 @@ Aşağıdaki kod örneği, sürekli bir ses çalar. Zaman kodunda `stopPlayingBu
  Dosya adına dayanarak dosyanın içeriği ile ilgili kararlar vermeyin. Örneğin, Form1.vb dosyası bir Visual Basic kaynak dosyası olmayabilir. Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [Nasıl yapılır: Bir Windows formdan ses çalma](how-to-play-a-sound-from-a-windows-form.md)
+- [Nasıl yapılır: Bir Windows Formdan Ses Çalma](how-to-play-a-sound-from-a-windows-form.md)
 - [SoundPlayer Sınıfına Genel Bakış](soundplayer-class-overview.md)

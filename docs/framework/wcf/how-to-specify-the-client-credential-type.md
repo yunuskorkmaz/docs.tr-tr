@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İstemci kimlik bilgileri türünü belirtme'
+title: 'Nasıl yapılır: İstemci Kimlik Bilgileri Türünü Belirtme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 9fe999c4ee27d4a78bfad185fa3bcc065d74708a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1138f0fe955782c71076d5c15c236d1d4ebbec01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185061"
 ---
-# <a name="how-to-specify-the-client-credential-type"></a>Nasıl yapılır: İstemci kimlik bilgileri türünü belirtme
+# <a name="how-to-specify-the-client-credential-type"></a>Nasıl yapılır: İstemci Kimlik Bilgileri Türünü Belirtme
 (Aktarım veya iletisi) bir güvenlik modu ayarlandıktan sonra istemci kimlik bilgisi türünü ayarlama seçeneğiniz vardır. Bu özellik, istemci hizmete kimlik doğrulaması için kimlik bilgisi türü sağlamanız gerekir belirtir. (İstemci kimlik bilgisi türü ayarlamadan önce gerekli bir adım) güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Güvenlik modunu ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>İstemci kimlik bilgisi türü kodunda ayarlamak için  
@@ -58,5 +58,6 @@ ms.locfileid: "54643387"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hizmetleri Güvenli Hale Getirme](../../../docs/framework/wcf/securing-services.md)
-- [Nasıl yapılır: Güvenlik modunu ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Nasıl yapılır: Güvenlik Modunu Ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

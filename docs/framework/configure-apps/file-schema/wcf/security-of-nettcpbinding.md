@@ -2,12 +2,12 @@
 title: <security> , <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: be3417296a401c002e59487cd4903e15e6301a63
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3fd850862172ad2b9bd58cd01d332028ff76462a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199082"
 ---
 # <a name="security-of-nettcpbinding"></a>\<Güvenlik >, \<netTcpBinding >
 Bir bağlama için güvenlik ayarlarını tanımlar.  
@@ -42,7 +42,7 @@ Bir bağlama için güvenlik ayarlarını tanımlar.
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Hiçbiri|Güvenlik devre dışı bırakıldı.|  
+|Yok.|Güvenlik devre dışı bırakıldı.|  
 |Taşıma|Aktarım güvenliği TLS TCP veya SPNego kullanılarak sağlanır. Hizmet, SSL sertifikalarıyla yapılandırılması gerekebilir. Bu mod koruma düzeyiyle denetlemek mümkündür.|  
 |İleti|SOAP ileti güveliği kullanarak güvenliği sağlanır. Varsayılan olarak, SOAP gövdesi imzalı ve şifrelenir. Çeşitli hizmet kimlik bilgilerini kullanmak için algoritma paketini olan bant dışı istemci kullanılabilir olup gibi özellikler, bu mod sunar ve ileti gövdesi uygulamak için koruma düzeyini. İstemci kimlik doğrulaması, oturum başına bir kez gerçekleştirilir ve kimlik doğrulama sonuçlarını oturum süresi boyunca önbelleğe alınır.|  
 |TransportWithMessageCredential|Aktarım güvenliği ile ileti güvenliği amacıyla birlikte çalışır. Aktarım güvenliği TCP veya SPNego üzerinden TLS tarafından sağlanır ve sunucu kimlik doğrulaması bütünlüğü ve gizliliği sağlar. SOAP ileti güvenliği, istemci kimlik doğrulaması sağlar. Varsayılan olarak, istemci kimlik doğrulaması, oturum başına bir kez gerçekleştirilir ve kimlik doğrulama sonuçlarını oturum süresi boyunca önbelleğe alınır.|  
@@ -68,6 +68,7 @@ Bir bağlama için güvenlik ayarlarını tanımlar.
  Bu yapılandırma öğesi için güvenlik özelliklerini sağlayan `netTcpBinding`. Çapraz makine haberleşmesi için güvenli, güvenilir ve iyileştirilmiş bağlama budur. Varsayılan olarak TCP ileti güvenliği ve kimlik doğrulaması, güvenilirlik ve ikili ileti kodlama WS-ReliableMessaging ileti teslimi ve Windows güvenliği destekleyen bir çalışma zamanı iletişim yığını oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.NetTcpSecurity>
 - <xref:System.ServiceModel.NetTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>

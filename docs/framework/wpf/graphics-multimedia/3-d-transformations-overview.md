@@ -8,18 +8,16 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: 578c8061271e08e4eac1ec5f11c84e63a3fa37bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190640"
 ---
 # <a name="3-d-transformations-overview"></a>3B Dönüşümlere Genel Bakış
 Bu konu, 3B modeller dönüştürmeleri uygulamak açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] grafik sistemi. Dönüştürmeleri geliştiricinin yeniden konumlandırma, yeniden boyutlandırma ve bunları tanımlayan temel değerleri değiştirmeden modelleri yeniden yönlendirme sağlar.  
-  
 
-  
 ## <a name="3-d-coordinate-space"></a>3B koordinat  
  3B grafik içeriği [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bir öğedeki kapsüllenir <xref:System.Windows.Controls.Viewport3D>, iki boyutlu öğesi yapısında katılmak. Grafik sistemi Viewport3D diğer birçok gibi iki boyutlu bir görsel öğe olarak değerlendirir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Viewport3D bir pencere olarak çalışır; bir Görünüm penceresi — üç boyutlu bir Sahne olarak. Daha doğru bir şekilde 3B Görünümü yansıtıldığı bir yüzeydir.  Diğer 2B çizim nesneleri aynı Sahne grafiği ile Viewport3D kullanabilseniz de, 2B ve 3B nesneleri Viewport3D içinde işleyemezsiniz. Aşağıdaki tartışmada Viewport3D öğesi tarafından tanımlanan koordinat yer alır.  
   
@@ -106,6 +104,7 @@ Döndürme örneği
  Kamera modelleri de olduğundan, kamera özellikleri de dönüştürmek mümkündür.  Görünümü sahnenin kamera konumu veya düzlem uzaklıklarını dönüştürerek kesinlikle değiştirebilirsiniz ancak — aslında tüm Sahne projeksiyon dönüştürme — bu şekilde elde etkileri birçoğu kadar "visual" Görüntüleyicisi çoğaltılmasının anlamı olmayabilir olduğunu unutmayın Konum veya modelleri konumunu sahnedeki uygulanmış olarak dönüşümler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [3B Grafiklere Genel Bakış](3-d-graphics-overview.md)
 - [Dönüşümlere Genel Bakış](transforms-overview.md)
 - [2B dönüşümleri örneği](https://go.microsoft.com/fwlink/?LinkID=158252)

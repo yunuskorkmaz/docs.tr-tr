@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e9bacc8f67755319b416c14766204f6eb2be52de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192088"
 ---
 # <a name="deploying-an-interop-application"></a>Birlikte Çalışma Uygulamasını Dağıtma
 Birlikte çalışma uygulamasını genellikle bir .NET istemci bütünleştirilmiş kodu içeren bir veya daha fazla birlikte çalışma derlemelerini temsil eden ayrı bir COM tür kitaplığı ve COM bileşenlerini bir veya daha fazla kayıtlı. Visual Studio ve [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] bölümünde açıklandığı gibi içeri aktarma ve birlikte çalışma derlemesine bir tür kitaplığına dönüştürme için araçlar sağlar [bir tür kitaplığını derleme olarak içeri aktarma](importing-a-type-library-as-an-assembly.md). Birlikte çalışma uygulamasını dağıtmak için iki yolu vardır:  
@@ -46,7 +46,8 @@ Birlikte çalışma uygulamasını genellikle bir .NET istemci bütünleştirilm
  Birden çok uygulama tarafından paylaşılan derlemeleri genel bütünleştirilmiş kod önbelleğine merkezi bir depoda yüklü olması gerekir. .NET istemcileri imzalanır ve genel derleme önbelleğinde yüklü birlikte çalışma derlemesi aynı kopyasını erişebilir. Üretme ve birincil birlikte çalışma derlemeleri kullanma hakkında daha fazla bilgi için bkz. [birincil birlikte çalışma derlemelerini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)
-- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
-- [Yönetilen kodda COM türlerini kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [Tür Kitaplığını Derleme Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
+- [Yönetilen Kodda COM Türlerini Kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Birlikte Çalışma Projesi Derleme](compiling-an-interop-project.md)

@@ -2,12 +2,12 @@
 title: Büyük Veriler ve Akış Yapma
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176338"
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 Windows Communication Foundation (WCF) iletişimleri XML tabanlı bir altyapıdır. XML veri yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](https://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemleri geliştiricilere ve mimarlara genellikle açısından gönderilen iletileri kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlama verimli ikili veri aktarımı için özel zorlukları doğurur.  
@@ -173,7 +173,7 @@ class MyData
      …  
     <bindings>  
       <basicHttpBinding>  
-        <binding name="ExampleBinding" transferMode="Streaming"/>  
+        <binding name="ExampleBinding" transferMode="Streamed"/>  
       </basicHttpBinding>  
     </bindings>  
      …  
@@ -239,4 +239,5 @@ public class UploadStreamMessage
 >  Arabelleğe alınan ya da akış aktarımları karar, uç noktanın yerel bir karardır. HTTP taşımaları için bir bağlantı üzerinden veya proxy sunucuları ve diğer aracılar için aktarım modunu dağıtılmaz. Hizmet arabirimi açıklamasında aktarım modunu ayarlama yansıtılmaz. Bir hizmeti bir WCF istemcisi oluşturduktan sonra akış aktarımları ile modu ayarlamak için kullanılması hedeflenen hizmetler için yapılandırma dosyasını düzenlemeniz gerekir. TCP ve adlandırılmış kanal aktarımlar, aktarım modu İlkesi onaylama olarak yayılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Akışı etkinleştir](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [Nasıl yapılır: Akışı Etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

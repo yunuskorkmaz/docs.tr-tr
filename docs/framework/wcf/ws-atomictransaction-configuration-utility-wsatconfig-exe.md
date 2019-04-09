@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: b4c2bb2d9c81b6ab3afc783d1188de7664e01566
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30e5a22e54bf977143b2ae94e678ad5106ec9ed6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741424"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191828"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction Yapılandırma Yardımcı Programı (wsatConfig.exe)
 WS-AtomicTransaction yapılandırma yardımcı programını temel WS-AtomicTransaction destek ayarları yapılandırmak için kullanılır.  
@@ -50,5 +50,6 @@ wsatConfig [Options]
 |-virtualServer:\<virtualServer >|DTC kaynak kümesi adını belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WS-AtomicTransaction Kullanma](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)
 - [WS-Atomic İşlem Desteğini Yapılandırma](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

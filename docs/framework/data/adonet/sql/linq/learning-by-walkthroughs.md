@@ -1,15 +1,15 @@
 ---
-title: İzlenecek yollarla öğrenme
+title: İzlenecek Yollarla Öğrenme
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 1ddd2b8dacaccc0911a7e5a2bd684bba0fa16012
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189013"
 ---
-# <a name="learning-by-walkthroughs"></a>İzlenecek yollarla öğrenme
+# <a name="learning-by-walkthroughs"></a>İzlenecek Yollarla Öğrenme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Belgeler birkaç izlenecek yollar sağlar. Bu konu (sorun giderme dahil) bazı genel kılavuz sorunları ele alır ve hakkında bilgi almak için birkaç adım izlenecek yollar için bağlantılar sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 > [!NOTE]
@@ -22,10 +22,10 @@ ms.locfileid: "54589969"
   
 |Hedefi|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Bir varlık sınıfı oluşturun ve basit bir sorgu yürütün.|[İzlenecek yol: Basit Nesne modeli ve sorgu (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[İzlenecek yol: Basit Nesne modeli ve sorgu (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|İkinci bir sınıf ekleyin ve daha karmaşık bir sorgu yürütün.<br /><br /> (Önceki gözden geçirmede tamamlanmasından gerektirir).|[İzlenecek yol: (Visual Basic) ilişkilerde sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[İzlenecek yol: İlişkilerde sorgulama (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Ekleyin, değiştirin ve veritabanındaki öğeleri silin.|[İzlenecek yol: (Visual Basic) verileri düzenleme](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[İzlenecek yol: Verileri düzenleme (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Saklı yordamları kullanın.|[İzlenecek yol: Yalnızca saklı yordamları (Visual Basic) kullanma](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[İzlenecek yol: Kullanarak yalnızca saklı yordamları (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Bir varlık sınıfı oluşturun ve basit bir sorgu yürütün.|[İzlenecek yol: Basit Nesne Modeli ve Sorgu (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
+|İkinci bir sınıf ekleyin ve daha karmaşık bir sorgu yürütün.<br /><br /> (Önceki gözden geçirmede tamamlanmasından gerektirir).|[İzlenecek yol: İlişkilerde Sorgulama (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[İzlenecek yol: İlişkilerde Sorgulama (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
+|Ekleyin, değiştirin ve veritabanındaki öğeleri silin.|[İzlenecek yol: Verileri Düzenleme (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[İzlenecek yol: Verileri Düzenleme (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
+|Saklı yordamları kullanın.|[İzlenecek yol: Yalnızca Saklı Yordamlar Kullanma (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[İzlenecek yol: Yalnızca Saklı Yordamları Kullanma (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Genel  
  Aşağıdaki bilgiler, bu izlenecek yollar için genel ilgilidir:  
@@ -88,4 +88,5 @@ ms.locfileid: "54589969"
 3.  Sağ **SQL Server (SQLEXPRESS)** ve ardından **yeniden**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Başlarken](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

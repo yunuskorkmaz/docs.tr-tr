@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CommandBindings [WPF]
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
-ms.openlocfilehash: a24a7a31154de58051677ba41496fcf4da3f2568
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bf01066a35672e1996f193abc6d76153e5e9dd46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355070"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181707"
 ---
 # <a name="how-to-enable-a-command"></a>Nasıl yapılır: Komutu Etkinleştirme
 Aşağıdaki örnek, komut vermeye genel kullanımı gösterilmiştir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Örnek nasıl ilişkilendirildiğini gösterir. bir <xref:System.Windows.Input.RoutedCommand> için bir <xref:System.Windows.Controls.Button>, oluşturun bir <xref:System.Windows.Input.CommandBinding>ve uygulama olay işleyicileri oluşturma <xref:System.Windows.Input.RoutedCommand>.  Komut vermeye genel ile ilgili daha fazla bilgi için bkz: [komut vermeye genel genel bakış](commanding-overview.md).  
@@ -40,4 +40,5 @@ Aşağıdaki örnek, komut vermeye genel kullanımı gösterilmiştir [!INCLUDE[
  [!code-vb[EnableCloseCommand#CloseCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Komut Vermeye Genel Bakış](commanding-overview.md)

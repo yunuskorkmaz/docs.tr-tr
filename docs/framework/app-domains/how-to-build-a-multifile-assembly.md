@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir çoklu dosya derlemesi oluşturun'
+title: 'Nasıl yapılır: Birden Fazla Dosya Derlemesi Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68f525244f2238ebdc44116fc91c3ddcb0a79bfd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187804"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Nasıl yapılır: Bir çoklu dosya derlemesi oluşturun
+# <a name="how-to-build-a-multifile-assembly"></a>Nasıl yapılır: Birden Fazla Dosya Derlemesi Oluşturma
 Bu makalede, bir çoklu dosya derlemesi oluşturmak nasıl açıklanır ve yordamdaki her adımı gösteren kod sağlar.
 
 > [!NOTE]
@@ -98,7 +98,8 @@ Bu makalede, bir çoklu dosya derlemesi oluşturmak nasıl açıklanır ve yorda
     Kullanabileceğiniz [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) bir derlemenin içeriğini incelemek için ya da bir dosyanın bir derleme veya modül olup olmadığını belirlemek için.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)
-- [Nasıl yapılır: Derleme içeriği görüntüle](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Çok Dosyalı Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/multifile-assemblies.md)
+
+- [Derlemeler Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)
+- [Nasıl yapılır: Derleme İçeriklerini Görüntüleme](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Birden Çok Dosya Derlemeleri](../../../docs/framework/app-domains/multifile-assemblies.md)

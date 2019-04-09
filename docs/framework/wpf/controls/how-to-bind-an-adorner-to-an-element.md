@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UIElements [WPF], binding adorners to
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-ms.openlocfilehash: 4943121aaf8ee6524be3fc9004eafee4fa92e527
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 54c9e6dfff2bbf7bfabde523b5d6ae5a623fe733
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194727"
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>Nasıl yapılır: Öğeye bir Donatıcı Bağlama
 Bu örnekte, program aracılığıyla belirtilen bir öğeye bir donatıcı bağlama işlemi gösterilmektedir <xref:System.Windows.UIElement>.  
@@ -34,4 +34,5 @@ Bu örnekte, program aracılığıyla belirtilen bir öğeye bir donatıcı bağ
 >  Kullanarak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] başka bir öğeye bir donatıcı bağlamak için şu anda desteklenmiyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Donatıcılara Genel Bakış](adorners-overview.md)

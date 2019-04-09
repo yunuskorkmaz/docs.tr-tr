@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms DataGridView denetiminde yeni satırlar için varsayılan değerleri belirtme'
+title: 'Nasıl yapılır: Windows Forms DataGridView Denetiminde Yeni Satırlar İçin Varsayılan Değerleri Belirtme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: cc854f0cdbef8373b74a16c7d5bc044cfee5aa84
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8a90cbef7032fd3753a6c9ec0b856a4e2ea1db27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193700"
 ---
-# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView denetiminde yeni satırlar için varsayılan değerleri belirtme
+# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Yeni Satırlar İçin Varsayılan Değerleri Belirtme
 Uygulamaya yeni eklenen satırlar için değerleri varsayılan doldururken daha kolay veri girişi yapabilirsiniz. İle <xref:System.Windows.Forms.DataGridView> sınıfı doldurabilirsiniz varsayılan değerlerle <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> olay. Kullanıcı yeni kayıtlar için satır girdiğinde bu olay tetiklenir. Kodunuzu bu olay işlediğinde, seçtiğiniz değerlere sahip istenen hücreleri doldurabilirsiniz.  
   
  Aşağıdaki kod örneği kullanarak yeni satırlar için varsayılan değerlerin nasıl belirtileceğini gösterir <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> olay.  
@@ -36,7 +36,8 @@ Uygulamaya yeni eklenen satırlar için değerleri varsayılan doldururken daha 
 -   Başvurular <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemeler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Windows Forms DataGridView Denetiminde Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView Denetimindeki Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Yeni Kayıtlar için Satır Kullanma](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

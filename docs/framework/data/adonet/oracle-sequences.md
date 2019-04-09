@@ -1,15 +1,15 @@
 ---
-title: Oracle dizileri
+title: Oracle Dizileri
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 1646ae7c2732fe152c9028ac6f4c1e4cbba85520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192660"
 ---
-# <a name="oracle-sequences"></a>Oracle dizileri
+# <a name="oracle-sequences"></a>Oracle Dizileri
 Oracle için .NET Framework veri sağlayıcısı kullanarak ekler gerçekleştirdikten sonra anahtar Oracle sırası sunucu tarafından oluşturulan değerleri almak için destek sağlar. <xref:System.Data.OracleClient.OracleDataAdapter>.  
   
  SQL Server ve Oracle, birincil anahtar olarak belirlenebilir sütunları otomatik olarak artırma oluşturmayı destekler. Tabloya satır eklendikçe bu değerler sunucu tarafından oluşturulur. SQL Server'da, bir sütunun kimlik özelliği ayarlayın; Oracle bir dizi oluşturun. Otomatik artış sütunları SQL Server ve Oracle dizileri arasındaki fark olmasıdır:  
@@ -99,5 +99,6 @@ public void OracleSequence(String connectionString)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

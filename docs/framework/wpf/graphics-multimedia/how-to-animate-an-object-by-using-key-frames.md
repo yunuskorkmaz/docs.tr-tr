@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: 1e0e464adf70aeeaecb522d328d3087ca66a530c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 0b2b517410c6cbc4f3deca13e5948c8de583fd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177807"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Nesneye Animasyon Ekleme
 Bu örnekte olduğu bir nesneye animasyon uygulamak gösterilmektedir <xref:System.Windows.Controls.Page.Background%2A> özelliği bir <xref:System.Windows.Controls.Page> anahtar çerçeveler kullanarak denetimi.  
@@ -34,6 +34,7 @@ Bu örnekte olduğu bir nesneye animasyon uygulamak gösterilmektedir <xref:Syst
  Tam bir örnek için bkz. [ana kare animasyon örnek](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>
 - <xref:System.Windows.Controls.Page.Background%2A>
 - <xref:System.Windows.Controls.Page>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 8acc1ac099a71fbf624049b119ebe908f27cbb55
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199459"
 ---
 # <a name="xclass-directive"></a>x:Class Yönergesi
 Kısmi sınıflar işaretleme ve arka plan kod arasında katılmak XAML biçimlendirmesi derleme yapılandırır. Kodu kısmi sınıfın içinde ayrı bir kod dosyasında tanımlanan bir [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] dilin biçimlendirme kısmi sınıf genellikle XAML derleme sırasında kod oluşturma tarafından oluşturulur ancak.  
@@ -35,7 +35,7 @@ Kısmi sınıflar işaretleme ve arka plan kod arasında katılmak XAML biçimle
 |`namespace`|İsteğe bağlı. Belirtir bir [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] tarafından tanımlanan bir parçalı sınıf içeren ad alanı `classname`. Varsa `namespace` belirtilirse, nokta (.) ayıran `namespace` ve `classname`. Açıklamalara bakın.|  
 |`classname`|Gerekli. Belirtir [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] yüklenen XAML ve kod arka plan için bu XAML bağlanan kısmi sınıf adı.|  
   
-## <a name="dependencies"></a>Bağımlılıkları  
+## <a name="dependencies"></a>Bağımlılıklar  
  `x:Class` yalnızca XAML üretim kök öğe üzerinde belirtilebilir. `x:Class` bir üst öğeye sahipse XAML üretimde herhangi bir nesne üzerinde geçerli değil. Daha fazla bilgi için [ \[MS-XAML\] bölümü 4.3.1.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -61,6 +61,7 @@ Kısmi sınıflar işaretleme ve arka plan kod arasında katılmak XAML biçimle
  `x:Class` Silverlight için ayrı olarak belgelenmiştir. Daha fazla bilgi için [XAML Namespace (x:) Dil özellikleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [x:Subclass Yönergesi](x-subclass-directive.md)
 - [WPF için XAML ve Özel Sınıflar](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [x:ClassModifier Yönergesi](x-classmodifier-directive.md)

@@ -2,12 +2,12 @@
 title: Null Semantikler
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
-ms.openlocfilehash: 272c19d7ee64381baa93cb2eda1cc035c42a025d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb1e96ba44c5d64e8366a654c2d06d89c9b46c9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172763"
 ---
 # <a name="null-semantics"></a>Null Semantikler
 Aşağıdaki tabloda çeşitli bölümlerine bağlantılar sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] belgeleri nerede `null` (`Nothing` Visual Basic'te) sorunlar ele alınmıştır.  
@@ -20,4 +20,5 @@ Aşağıdaki tabloda çeşitli bölümlerine bağlantılar sağlar [!INCLUDE[vbt
 |[Sayısal Dizideki Değerlerin Toplamını Hesaplama](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|Açıklayan nasıl <xref:System.Linq.Enumerable.Sum%2A> işleci değerlendirilen `null` (`Nothing` Visual Basic'te) yerine boş bir dizi veya yalnızca null içeren bir dizi için 0.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

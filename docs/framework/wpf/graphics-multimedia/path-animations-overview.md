@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: c8e628e11debadb88c365ac95d355f1ee641bdbc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182474"
 ---
 # <a name="path-animations-overview"></a>Yol Animasyonlarına Genel Bakış
 <a name="introduction"></a> Bu konu, çıkış değerleri oluşturmak için bir geometrik yol kullanmanıza olanak sağlayan yol animasyonları tanıtır. Yol animasyonları, taşıma ve karmaşık yollar üzerindeki nesneler döndürmek için kullanışlıdır.  
@@ -90,8 +90,9 @@ ms.locfileid: "57367862"
  Kullanılan yolu sözdizimi hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnekte bkz [yol işaretleme söz dizimi](path-markup-syntax.md) genel bakış.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Yol İşaretleme Söz Dizimi](path-markup-syntax.md)
+- [Yol Biçimlendirme Sözdizimi](path-markup-syntax.md)
 - [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](path-animation-how-to-topics.md)
 - [Animasyona Genel bakış](animation-overview.md)
 - [Özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md)

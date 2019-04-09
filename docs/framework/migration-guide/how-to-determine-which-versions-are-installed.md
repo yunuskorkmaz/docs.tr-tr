@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 570cbd49fd8a8ea42d1c43ebe067a0d2d3f9dc27
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176312"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme
 
@@ -37,7 +37,6 @@ Kullanıcılar [yükleme](https://docs.microsoft.com/dotnet/framework/install) v
 >
 > Sürümleri hakkında daha fazla bilgi için bkz. [.NET Framework sürümleri ve bağımlılıkları](versions-and-dependencies.md).
 
-
 Bir bilgisayarda yüklü .NET Framework sürümlerinin bir listesini almak için kayıt defterine erişim. Kayıt defterini veya kodu sorgulamanız için bunu kullanın ya da Kayıt Defteri Düzenleyicisi'ni kullanabilirsiniz:
  
 - Yeni bir .NET Framework sürümleri (4.5 ve üzeri) bulun: 
@@ -54,7 +53,6 @@ Bir bilgisayarda yüklü CLR sürümlerin listesini almak için bir aracı veya 
 - [Ortam sınıfını sorgulamak için kodu kullanın.](#clr_b)  
 
 .NET Framework'ün her sürümü için yüklü güncelleştirmeleri algılama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Hangi .NET Framework güncelleştirmelerinin yüklü olduğunu belirleme](how-to-determine-which-net-framework-updates-are-installed.md). 
-  
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>(4.5 ve üzeri) daha yeni .NET Framework sürümlerini bulmak
 
@@ -171,7 +169,6 @@ Aşağıdaki örnek, .NET Framework 1 bulur&#8211;yüklü olan 4 sürümleri:
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
-
 ## <a name="find-clr-versions"></a>CLR sürümleri bulun
   
 <a name="clr_a"></a> 
@@ -208,8 +205,6 @@ Kullanım [CLR sürüm Aracı (Clrver.exe)](../tools/clrver-exe-clr-version-tool
    - Tanımlayıcı için ikincil sürüm (örneğin, *0* sürüm 4.0 için), kullanın <xref:System.Version.Minor%2A?displayProperty=nameWithType> özelliği.
 
    - İçin tüm sürüm dizesini (örneğin, *4.0.30319.18010*), kullanın <xref:System.Version.ToString%2A?displayProperty=nameWithType> yöntemi. Bu yöntem, kodu yürüten çalışma zamanının sürümünü gösteren tek bir değer döndürür. Derleme sürümlerini veya bilgisayarda yüklü diğer çalışma zamanı sürümleri döndürmez.
-
-
 
 Aşağıdaki örnekte <xref:System.Environment.Version%2A?displayProperty=nameWithType> CLR sürümü bilgisini almak için özellik:
 

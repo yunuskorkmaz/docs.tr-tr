@@ -10,12 +10,12 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 2be08f5d3c2cd82e50569a105e3fa15f12ad352c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 750234a7073b3931b4f3ce5674f3989fe119c50c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355174"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199953"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Nasıl yapılır: PrintTickets'i Doğrulama ve Birleştirme
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Yazdırma şema](https://go.microsoft.com/fwlink/?LinkId=186397) esnek ve Genişletilebilir içerir <xref:System.Printing.PrintCapabilities> ve <xref:System.Printing.PrintTicket> öğeleri. Yazdırma cihazı yeteneklerini eski maddeler halinde listeler ve cihaz belirli bir sırayla belgeleri, belgenin veya tek tek sayfa göre bu özellikleri nasıl kullanması gereken ikinci belirtir.  
@@ -57,6 +57,7 @@ ms.locfileid: "57355174"
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintTicket>
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>

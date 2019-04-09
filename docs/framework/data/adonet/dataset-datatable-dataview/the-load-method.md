@@ -1,17 +1,17 @@
 ---
-title: Load yöntemi
+title: Load Yöntemi
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: 06666e069f20bc06f303c4e829d1c69c185a8a84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173296"
 ---
-# <a name="the-load-method"></a>Load yöntemi
+# <a name="the-load-method"></a>Load Yöntemi
 Kullanabileceğiniz <xref:System.Data.DataTable.Load%2A> yüklemek için yöntemi bir <xref:System.Data.DataTable> bir veri kaynağından satırlarla. Bu, en basit şekliyle, tek bir parametre kabul eden aşırı yüklenmiş yöntem, bir **DataReader**. Yalnızca bu formda yükler **DataTable** satırlarla. İsteğe bağlı olarak belirleyebileceğiniz **LoadOption** veriler nasıl eklenir denetlemek için parametre **DataTable**.  
   
  **LoadOption** parametredir durumlarda özellikle yararlı burada **DataTable** zaten veri satırını içeren, veri kaynağından gelen verileri açıklayan veri ile birleştirilir zaten tablodaki. Örneğin, **PreserveCurrentValues** belirten (varsayılan) burada bir satır olarak işaretlendiyse durumlarda **eklenen** içinde **DataTable**, **özgün** değerini veya her bir sütun ayarlanmış eşleşen satır içeriğini veri kaynağından. **Geçerli** değeri satır eklendiğinde, atanan değerleri koruyun ve **RowState** satırının ayarlanacak **değiştirilen**.  
@@ -69,5 +69,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

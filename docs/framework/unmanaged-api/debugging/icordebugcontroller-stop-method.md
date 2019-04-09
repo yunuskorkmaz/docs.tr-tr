@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbe0459824499aba86c908012f038256f9923513
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 724db8c5c8dbb5bf3ff8bc7202a60397180b7b38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183397"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop Yöntemi
 Yönetilen kod işlemde çalışan tüm iş parçacıkları üzerinde işbirliği yapan Durma gerçekleştirir.  
@@ -57,4 +57,3 @@ HRESULT Stop (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bdb51d38109cf4c072a9841983e86a444e964b0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191893"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Tanımlayıcı Ad Aracı)
 Tanımlayıcı ad Aracı (Sn.exe) derlemeleri ile oturum yardımcı [güçlü adlar](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe; temel yönetim, imza oluşturma ve imza doğrulaması için seçenekler sağlar.  
@@ -125,7 +125,8 @@ sn -d MyContainer
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Araçlar](../../../docs/framework/tools/index.md)
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Al.exe (Derleme Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Tanımlayıcı Adlı Derlemeler](../../../docs/framework/app-domains/strong-named-assemblies.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

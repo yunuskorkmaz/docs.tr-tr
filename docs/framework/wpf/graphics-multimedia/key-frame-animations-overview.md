@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191594"
 ---
 # <a name="key-frame-animations-overview"></a>Anahtar-Çerçeve Animasyonlara Genel Bakış
 Bu konu, anahtar-çerçeve animasyonlara tanıtır. Anahtar-çerçeve animasyonlara ikiden fazla hedef değerleri kullanarak animasyon olanak sağlar ve animasyonun ilişkilendirme metodunu denetleyebilirsiniz.  
@@ -284,6 +284,7 @@ Anahtar eğrisi denetim noktası kullanma (0.25, 0,5) ve (0,75, 1.0)
 8.  Anahtar çerçeveler sırayla çözülen süre (birincil anahtar) ve sırasının bildirim (ikincil anahtarı), yani sıralama, çözümlenmiş anahtar çerçevesi tabanlı kullanma tutarlı bir sıralama <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>

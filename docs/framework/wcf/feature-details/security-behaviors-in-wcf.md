@@ -2,12 +2,12 @@
 title: WCF'de Güvenlik Davranışları
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180069"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF'de Güvenlik Davranışları
 Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranışını hizmet düzeyinde veya uç nokta düzeyine değiştirin. (Genel olarak, davranışları hakkında daha fazla bilgi için bkz [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Güvenlik davranışları* kimlik bilgileri, kimlik doğrulaması, yetkilendirme denetime izin vermek ve günlüklerini denetleme. Programlama veya yapılandırma yoluyla davranışları kullanabilirsiniz. Bu konu, aşağıdaki davranışları güvenlik işlevleri için ilgili yapılandırma üzerinde durulmaktadır:  
@@ -218,5 +218,6 @@ Windows Communication Foundation (WCF) davranışlar çalışma zamanı davranı
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

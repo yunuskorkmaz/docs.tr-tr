@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: befa74f02ccb0dde4448f36c0698feebaf6201ce
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: e1e92fccfad792fc1b9df86a582f0406a87f34e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195299"
 ---
 # <a name="federationconfiguration"></a>\<Federationconfiguration'a >
 Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) kullanırken, Federasyon kimlik doğrulaması WS-Federation protokolü aracılığıyla. Yapılandırır <xref:System.Security.Claims.ClaimsAuthorizationManager> kullanırken <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> beyana dayalı erişim denetimi sağlamak için sınıf.  
@@ -39,9 +39,9 @@ Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationMo
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|SAM tarafından kullanılan tanımlama bilgisi işleyicisi yapılandırır. İsteğe bağlı.|  
+|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|SAM tarafından kullanılan tanımlama bilgisi işleyicisi yapılandırır. İsteğe bağlı.|  
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Şifreleme ve belirteç şifre çözme için kullanılan sertifikayı yapılandırır. İsteğe bağlı.|  
-|[\<wsFederation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|WS-Federasyon kimlik doğrulama Modülü (WSFAM) yapılandırır. İsteğe bağlı.|  
+|[\<wsFederation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|WS-Federasyon kimlik doğrulama Modülü (WSFAM) yapılandırır. İsteğe bağlı.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -92,6 +92,7 @@ Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationMo
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

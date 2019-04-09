@@ -2,12 +2,12 @@
 title: Parametreler (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: 8d618edd-0988-4ff2-8263-ce59448af7a5
-ms.openlocfilehash: 5fa050e43e4590f61c3011a1b9bb0937da7032a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47a1514933904daa623adc151d50525f011e07a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187684"
 ---
 # <a name="parameters-entity-sql"></a>Parametreler (varlık SQL)
 Parametrelerdir dışında tanımlanan değişkenler [!INCLUDE[esql](../../../../../../includes/esql-md.md)], genellikle bir konak dil tarafından kullanılan bir bağlama API aracılığıyla. Her bir parametreye bir ad ve bir türü vardır. Parametre adları ile sorgu ifadelerinde tanımlanır, (@) öneki olarak sembol. Bu bunları özelliklerin adları veya sorguda tanımlanan diğer adlar belirgin hale getirir.  
@@ -23,5 +23,6 @@ select c
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

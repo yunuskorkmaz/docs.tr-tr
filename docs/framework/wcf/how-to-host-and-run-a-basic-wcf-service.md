@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 38fd9b89e2719be8ce4d33b1b50f68171d587369
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad9536b1f27ba3945bf76d0474de4825033a1e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197912"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Öğretici: Temel bir Windows Communication Foundation Hizmeti barındırma ve çalıştırma
 
@@ -30,7 +30,6 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > - WCF Hizmeti barındırma için kod ekleyin.
 > - Yapılandırma dosyasını güncelleştirin.
 > - WCF hizmeti başlatın ve doğrulamak çalışıyor.
-
 
 ## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>Oluşturma ve barındırma hizmeti bir konsol uygulama projesi yapılandırma
 
@@ -176,7 +175,6 @@ Kodu aşağıdaki değişiklikleri yapın:
     
     Bu kodu nasıl çalıştığı hakkında daha fazla bilgi için bkz: [hizmet programı adımları barındırma](#service-hosting-program-steps).
 
-
 2. Proje özelliklerini güncelleştirin:
 
    1. İçinde **Çözüm Gezgini** penceresinde **GettingStartedHost** klasöre tıklayın ve ardından **özellikleri** kısayol menüsünden.
@@ -189,7 +187,6 @@ Kodu aşağıdaki değişiklikleri yapın:
 
    3. Gelen **dosya** menüsünde **Tümünü Kaydet**.
 
-
 ## <a name="verify-the-service-is-working"></a>Hizmetinin çalıştığını doğrulayın
 
 1. Çözümü derleyin ve çalıştırın **GettingStartedHost** Konsolu Visual Studio içinde uygulama. 
@@ -200,7 +197,6 @@ Kodu aşağıdaki değişiklikleri yapın:
    
    > [!NOTE]
    > Bunun gibi hizmetleri uygun HTTP adresleri dinlemek makinede kaydetme izni gerektirir. Yönetim hesapları, bu izne sahiptir, ancak yönetici olmayan hesapların HTTP ad alanları için izin verilmelidir. Ad alanı ayırmaları yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma HTTP ve HTTPS](feature-details/configuring-http-and-https.md). 
-
 
 ## <a name="service-hosting-program-steps"></a>Hizmet barındırma program adımları
 
@@ -223,7 +219,6 @@ Hizmet aşağıdaki gibi açıklandığı gibi ana bilgisayar için eklenen kodu
 > Bir WCF hizmet kitaplığı eklediğinizde, hizmet ana bilgisayarı yeniden başlatarak hatalarını ayıklıyorsanız Visual Studio bunu sizin için barındırır. Çakışmaları önlemek için Visual Studio WCF hizmet kitaplığı barındırma veritabanından engelleyebilirsiniz. 
 > 1. Seçin **GettingStartedLib** projesi **Çözüm Gezgini** ve **özellikleri** kısayol menüsünden.
 > 2. Seçin **WCF seçenekleri** kaldırın **Başlat WCF hizmet aynı çözümdeki başka bir proje hata ayıklama konağı**.
-
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

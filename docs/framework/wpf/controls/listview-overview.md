@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186504"
 ---
 # <a name="listview-overview"></a>ListView Genel Bakışı
 <xref:System.Windows.Controls.ListView> Denetim bir veri öğeleri kümesi farklı düzenler veya görünümleri görüntülemek için altyapı sağlar. Örneğin, bir kullanıcı, bir tablodaki veri öğelerini görüntülemek ve sıralama sütunlarını isteyebilirsiniz.  
-  
-  
+
 <a name="WhatisaListView"></a>   
 ## <a name="what-is-a-listview"></a>Bir ListView nedir?  
  <xref:System.Windows.Controls.ListView> Denetimi bir <xref:System.Windows.Controls.ItemsControl> sınıfından türetilen <xref:System.Windows.Controls.ListBox>. Genellikle, öğelerinden veri koleksiyonunun üyeleridir ve olarak temsil edilmektedir <xref:System.Windows.Controls.ListViewItem> nesneleri. A <xref:System.Windows.Controls.ListViewItem> olduğu bir <xref:System.Windows.Controls.ContentControl> ve yalnızca tek bir alt öğe içerebilir. Ancak, bu alt öğesi herhangi bir görsel öğe olabilir.  
@@ -82,10 +81,11 @@ ms.locfileid: "58186123"
  Özelleştirilmiş görünümleri gibi <xref:System.Windows.Controls.GridView> türetilmiştir <xref:System.Windows.Controls.ViewBase> soyut olarak temsil edilen veri öğelerini görüntülemek için araçlar sağlar sınıfını <xref:System.Windows.Controls.ListViewItem> nesneleri.    
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.GridView>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
-- [GridView Genel Bakış](gridview-overview.md)
+- [GridView Genel Bakışı](gridview-overview.md)
 - [Nasıl Yapılır Konuları](listview-how-to-topics.md)
 - [Denetimler](../advanced/optimizing-performance-controls.md)

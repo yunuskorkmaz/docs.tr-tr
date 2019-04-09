@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 3decf955748b156b8eff4b5286a70e67d8ac14ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195156"
 ---
 # <a name="configuring-http-and-https"></a>HTTP ve HTTPS Yapılandırma
 WCF hizmetleri ve istemcilerin HTTP ve HTTPS üzerinden iletişim kurabilir. HTTP/HTTPS ayarları, Internet Information Services (IIS) kullanarak veya bir komut satırı aracı kullanılarak yapılandırılır. Bir WCF Hizmeti IIS HTTP veya HTTPS ayarlarında zaman barındırılan (inetmgr.exe aracını kullanarak) IIS içinde yapılandırılabilir. Şirket içinde barındırılan bir WCF Hizmeti ise, bir komut satırı aracını kullanarak HTTP veya HTTPS ayarları yapılandırılır.  
@@ -91,5 +91,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  IIS üzerinde bağlantı noktası paylaşımı desteklemez [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. IIS çalıştıran ve bir WCF hizmeti bir ad alanı ile aynı bağlantı noktası kullanmayı dener WCF hizmeti başlatmak başarısız olur. 80 numaralı bağlantı noktasını kullanarak hem de varsayılan IIS ve WCF. Hizmetlerden biri için bağlantı noktası atamasını değiştirin veya WCF hizmeti, IIS tarafından kullanılmayan bir ağ bağdaştırıcısı atamak için dinleme IP listeyi kullanın. IIS 6.0 ve üzeri HTTP sunucu API'leri kullanmak için tasarlanmıştır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
-- [Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

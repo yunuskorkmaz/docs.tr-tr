@@ -1,15 +1,15 @@
 ---
-title: SQL oluşturma
+title: SQL Üretimi
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
-ms.openlocfilehash: 1eb2830d96000e61d62b2fc934cd246df3ad3e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 108a68f74849c7fa1418775c2a37db06d9d947ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701514"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180588"
 ---
-# <a name="sql-generation"></a>SQL oluşturma
+# <a name="sql-generation"></a>SQL Üretimi
 Sağlayıcı için yazdığınız zaman [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], çevirme gerekir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belirli bir veritabanı için SQL Server Transact-SQL veya PL/SQL Oracle gibi anlayabilmeniz SQL içine ağaçları komutu. Bu bölümde, için SQL oluşturma bileşeni (için SELECT sorgusu) geliştirme hakkında bilgi edineceksiniz bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcısı. Ekleme hakkında bilgi için güncelleştirme ve sorguları silmek için bkz [değişiklik SQL oluşturma](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md).  
   
  Bu bölümde anlamak için aşina olmalısınız [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve ADO.NET sağlayıcısı modeli. Komut ağaçlarının de anlamanız gerekir ve <xref:System.Data.Common.CommandTrees.DbExpression>.  
@@ -27,4 +27,5 @@ Sağlayıcı için yazdığınız zaman [!INCLUDE[adonet_ef](../../../../../incl
  [Örnek Sağlayıcısında SQL Oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Entity Framework Veri Sağlayıcısı Yazma](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

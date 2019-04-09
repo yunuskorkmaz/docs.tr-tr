@@ -2,12 +2,12 @@
 title: Meta Veriler Hakkında Güvenlik Konuları
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172971"
 ---
 # <a name="security-considerations-with-metadata"></a>Meta Veriler Hakkında Güvenlik Konuları
 Meta veri özelliklerini Windows Communication Foundation (WCF) kullanırken, yayımlama, alma ve hizmet meta verileri kullanarak güvenlikle ilgili etkileri göz önünde bulundurun.  
@@ -39,5 +39,6 @@ Meta veri özelliklerini Windows Communication Foundation (WCF) kullanırken, ya
  Bir hizmetin uygulama yapılandırma dosyasını denetleyebilirsiniz nasıl ve meta verileri yayımlanır. Uygun erişim denetim listeleriyle (ACL) bir saldırganın bu ayarları değiştiremezsiniz emin olmak için uygulama yapılandırma dosyasına korumak için iyi bir fikirdir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Meta veri uç noktalarını güvenli hale getirme](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+
+- [Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
 - [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)

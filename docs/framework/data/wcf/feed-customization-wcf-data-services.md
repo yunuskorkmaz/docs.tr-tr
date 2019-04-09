@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: cea3d57442d330b662335326c5b8ffd78d276ef2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: dc2fc5de591429d76210b1dacf69485bb3b11b2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189085"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirme (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] veri bir akış olarak kullanıma sunmak için. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] için veri akışı hem Atom hem de JavaScript nesne gösterimi (JSON) biçimlerini destekler. Atom akışı, kullandığınızda [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklar ve ilişkiler, HTTP ileti gövdesine eklenebilir bir XML biçimine gibi verileri seri hale getirmek için standart bir yöntemini sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklarda bulunan verileri ve Atom öğeleri arasında varsayılan varlık özelliği eşlemeyi tanımlar. Daha fazla bilgi için [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -93,5 +93,6 @@ ms.locfileid: "56093755"
  Daha fazla bilgi için [veri hizmeti sürümü oluşturma](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yansıma Sağlayıcısı](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
 - [Entity Framework Sağlayıcısı](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

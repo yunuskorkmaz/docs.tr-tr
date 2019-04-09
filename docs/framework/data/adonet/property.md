@@ -2,12 +2,12 @@
 title: özellik
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 80c4bb3ccbab75c17b098723fc10b8b996e40576
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181655"
 ---
 # <a name="property"></a>özellik
 *Özellikleri* temel yapı taşlarıdır [varlık türleri](../../../../docs/framework/data/adonet/entity-type.md) ve [karmaşık türler](../../../../docs/framework/data/adonet/complex-type.md). Bir varlık türü örneği veya karmaşık tür örneği içeren veri özelliklerini ve şekli özelliklerini tanımlayın. Kavramsal modelde özellikleri, bir sınıf üzerinde tanımlanan özelliklere benzer. Bir sınıfındaki özellikleri sınıfı şeklini tanımlamak ve nesneler hakkında bilgi taşımak aynı şekilde, kavramsal model özelliklerinde bir varlık türü şeklini tanımlamak ve varlık türü örnekleri hakkında bilgi taşımak.  
@@ -42,5 +42,6 @@ ms.locfileid: "58409724"
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

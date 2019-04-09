@@ -2,12 +2,12 @@
 title: ServiceModel Öznitelikleri ve ServiceDescription Başvurusu
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: 3b1b10f34e300d77943a93d180b5be9e4a3366c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195351"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel Öznitelikleri ve ServiceDescription Başvurusu
 *Açıklama ağaç* türlerin hiyerarşisi olan (başlayarak <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> sınıfı) bir hizmet her yönüyle birlikte açıklar. Windows Communication Foundation (WCF) Web Hizmetleri Açıklama Dili (WSDL), XML Şeması Tanım Dili (XSD) ve istemciler için kullanabileceğiniz hizmetiyle ilgili ilke onaylamalarını (meta veriler) yayımlamak için bir geçerli hizmet çalışma zamanı oluşturmak için bir açıklama ağaç kullanır. bağlanmak ve bu hizmeti kullanmak ve çeşitli kod ve yapılandırma dosyası açıklaması ağaç değerlerinin temsillerini oluşturmak için.  
@@ -114,4 +114,5 @@ ms.locfileid: "54726633"
  Açıklama ağaç değerleri meta verilere nasıl dönüştürüldüğünü hakkında daha fazla bilgi için bkz. [ServiceDescription ve WSDL başvurusu](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ServiceDescription ve WSDL Başvurusu](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

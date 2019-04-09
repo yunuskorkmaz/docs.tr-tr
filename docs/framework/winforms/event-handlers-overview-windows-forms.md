@@ -10,12 +10,12 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: 6dbcffadfd484dc33db2fcd3ee3f680dcc0740e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186088"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Olay İşleyicilerine Genel Bakış (Windows Forms)
 Bir olay işleyicisi olaya bağlı olan bir yöntemdir. Bir olay oluştuğunda, olay işleyicisi içindeki kod yürütülür. Her bir olay işleyicisi doğru olayı işlemek izin veren iki parametre sağlar. Aşağıdaki örnek, bir olay işleyicisi için gösterir. bir <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay.  
@@ -49,5 +49,6 @@ private:
  Aynı olay işleyicisi, farklı denetimler için aynı olayı işlemek için de kullanabilirsiniz. Örneğin, bir grup varsa <xref:System.Windows.Forms.RadioButton> bir form üzerinde denetimleri için tek olay işleyicisine oluşturabilir <xref:System.Windows.Forms.Control.Click> olay ve her bir denetimin <xref:System.Windows.Forms.Control.Click> olayını tek olay işleyicisine bağlı. Daha fazla bilgi için [nasıl yapılır: Windows Forms'ta tek olay işleyicisine birden fazla olay bağlama](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms'ta Olay İşleyicileri Oluşturma](creating-event-handlers-in-windows-forms.md)
 - [Olaylara Genel Bakış](events-overview-windows-forms.md)

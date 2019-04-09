@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama'
+title: 'Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: 9fe514cce4d4aec386f9d61cb84f3a39273c35b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 98d51f9c6465186e77784aba080130110545f399
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192166"
 ---
-# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama
+# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama
 Aşağıdaki örnek program Fibonacci numaraları hesaplayan bir form oluşturur. Hesaplama kullanıcı arabirimi hesaplama devam ettikçe gecikmeler çalışmaya devam eder, kullanıcı arabirimi iş parçacığından ayrı bir iş parçacığında çalışır.  
   
  Visual Studio'da bu görevi için kapsamlı desteği yoktur.  
@@ -48,6 +48,7 @@ Aşağıdaki örnek program Fibonacci numaraları hesaplayan bir form oluşturur
 >  Her türlü çoklu iş parçacığı kullanırken, büyük olasılıkla kendiniz çok önemli ve karmaşık hataları ortaya çıkarır. Başvurun [yönetilen iş parçacığı oluşturma en iyi yöntemler](../../../standard/threading/managed-threading-best-practices.md) kullanan herhangi bir çözümü uygulamadan önce çoklu iş parçacığı kullanımı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
 - [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

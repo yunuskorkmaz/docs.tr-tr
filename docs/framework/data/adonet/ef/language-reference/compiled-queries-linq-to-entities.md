@@ -1,18 +1,18 @@
 ---
-title: Derlenmiş sorgular (LINQ to Entities)
+title: Derlenmiş Sorgular (LINQ to Entities)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: d261418136cfc799e7891da02b2bd8174cf8340a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193076"
 ---
-# <a name="compiled-queries--linq-to-entities"></a>Derlenmiş sorgular (LINQ to Entities)
+# <a name="compiled-queries--linq-to-entities"></a>Derlenmiş Sorgular (LINQ to Entities)
 Birden çok kez varlık Çerçevesi'nde yapısal olarak benzer sorguları yürüten bir uygulamanız varsa, sorgu bir kez derleyerek ve birkaç kez farklı parametrelerle yürütme sık performansı artırabilirsiniz. Örneğin, bir uygulama belirli bir şehirdeki tüm müşterileri alma gerekebilir; Şehir, çalışma zamanında bir forma kullanıcı tarafından belirtilir. LINQ to Entities, bu amaç için derlenmiş sorgular kullanmayı destekler.  
   
  .NET Framework 4.5 ile başlayarak, LINQ sorguları otomatik olarak önbelleğe. Ancak, bu sonraki yürütme sayısı maliyeti azaltmak için derlenmiş LINQ sorguları kullanmaya devam edebilirsiniz ve derlenmiş sorgular otomatik olarak önbelleğe LINQ sorguları daha verimli olabilir. LINQ to Entities sorguları Not geçerli `Enumerable.Contains` işleci bellek içi koleksiyonlara otomatik olarak önbelleğe alınmaz. Bellek içi koleksiyonları derlenmiş LINQ sorgularında ayrıca kümesini parametreleştirme izin verilmez.  
@@ -69,6 +69,7 @@ Birden çok kez varlık Çerçevesi'nde yapısal olarak benzer sorguları yürü
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [LINQ - Varlıklar](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [Entity Framework birleştirme seçeneklerini ve derlenmiş sorgular](https://go.microsoft.com/fwlink/?LinkId=199591)

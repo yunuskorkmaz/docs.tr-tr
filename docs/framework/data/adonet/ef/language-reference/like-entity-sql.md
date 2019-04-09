@@ -2,12 +2,12 @@
 title: (SQL varlık gibi)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 406e660efcc351df3fd2720a5d13d8398d1a8216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197717"
 ---
 # <a name="like-entity-sql"></a>(SQL varlık gibi)
 Belirli bir karakter olup olmadığını belirleyen `String` belirtilen desenle eşleşir.  
@@ -57,13 +57,13 @@ match [NOT] LIKE pattern [ESCAPE escape]
 >  Belirli bir sağlayıcı hedefliyorsanız, sağlayıcıya özgü uzantıları kullanabilirsiniz. Ancak, bu tür yapıları farklı diğer sağlayıcılar tarafından örneğin değerlendirilecek. SqlServer destekler [ilk son] ve [^ ilk son] arasında ilk ve son tam olarak bir karakter ve değerler arasında değildir: ikinci eşleşme tam olarak bir karakter önceki eşleştiği desenleri ilk ve son.  
   
 ### <a name="escape"></a>Esc  
- KAÇIŞ yan tümcesinde'ı kullanarak bir karakter dizeleri için arama yapabilirsiniz veya daha fazla özel joker karakter önceki bölümdeki tabloda açıklanan. Örneğin, birkaç belge değişmez değer "%100" başlığında içerir ve tüm bu belgeleri için arama yapmak istediğiniz varsayılır. Yüzde (%) karakterini bir joker karakter olduğundan kullanarak atlatmak gerekir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] KAÇIŞ yan tümcesinde arama başarıyla yürütülemedi. Bu filtre, bir örnek verilmiştir.  
+ KAÇIŞ yan tümcesinde'ı kullanarak bir karakter dizeleri için arama yapabilirsiniz veya daha fazla özel joker karakter önceki bölümdeki tabloda açıklanan. Örneğin, birkaç belge değişmez değer "%100" başlığında içerir ve tüm bu belgeleri için arama yapmak istediğiniz varsayılır. Çünkü yüzde (%) karakterini bir joker karakter, kullanarak kaçış [!INCLUDE[esql](../../../../../../includes/esql-md.md)] KAÇIŞ yan tümcesinde arama başarıyla yürütülemedi. Bu filtre, bir örnek verilmiştir.  
   
 ```  
 "title like '%100!%%' escape '!'"  
 ```  
   
- Bu arama ifadesinde ünlem işareti karakteri (!) takip yüzde joker karakter (%) bir değişmez değer olarak yerine bir joker karakter olarak kabul edilir. Herhangi bir karakterle dışında bir kaçış karakteri olarak kullanabileceğiniz [!INCLUDE[esql](../../../../../../includes/esql-md.md)] joker karakterler ve köşeli ayraç (`[ ]`) karakter. Önceki örnekte, kaçış karakteri ünlem işareti (!) karakteridir.  
+ Bu arama ifadesinde yüzde joker karakter (%) ünlem işareti karakteri (!) takip bir değişmez değer olarak yerine bir joker karakter olarak kabul edilir. Herhangi bir karakterle dışında bir kaçış karakteri olarak kullanabileceğiniz [!INCLUDE[esql](../../../../../../includes/esql-md.md)] joker karakterler ve köşeli ayraç (`[ ]`) karakter. Önceki örnekte, kaçış karakteri ünlem işareti (!) karakteridir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki iki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] belirli karakter dizesi olup olmadığını belirlemek için KAÇIŞ işleçleri, belirtilen desenle eşleşen ve sorgular gibi kullanın. İlk sorgu arar `Name` karakterlerle başlayan `Down_`. Bu sorgu çıkış seçeneği kullanır, çünkü alt çizgi (`_`) bir joker karakterdir. KAÇIŞ seçeneğini belirtmeden sorgu için arama `Name` kelimesiyle başlayan değerler `Down` alt çizgi karakteri dışındaki herhangi bir tek karakterle ardından. Sorgular, AdventureWorks satış modeline dayanır. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
@@ -75,4 +75,5 @@ match [NOT] LIKE pattern [ESCAPE escape]
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

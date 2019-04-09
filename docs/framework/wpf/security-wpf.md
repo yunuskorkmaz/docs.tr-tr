@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 84f7e0f1174a048d650741075344de3158c2994e
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193674"
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
 <a name="introduction"></a> Güvenlik modeli, Windows Presentation Foundation (WPF) tek başına ve tarayıcıda tutulan uygulamalar geliştirirken dikkate almanız gerekir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalar Kısıtlanmamış izinlere sahip yürütün ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** izin kümesi), Windows Installer (.msi), XCopy kullanarak dağıtılmış olup olmadığını veya [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Kısmi güven, ClickOnce ile tek başına WPF uygulamalarını dağıtmak desteklenmez. Ancak, tam güven uygulaması kısmi güven oluşturabilirsiniz <xref:System.AppDomain> .NET Framework eklenti modeli kullanarak. Daha fazla bilgi için [WPF eklentileri genel bakış](./app-development/wpf-add-ins-overview.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "58654321"
 |Kaynak|Bir yapı türüne sahip bir projeye eklenen dosyaları **kaynak**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |İçerik|Bir yapı türüne sahip bir projeye eklenen dosyaları **içerik**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Kaynak site|Bir yapı türüne sahip bir projeye eklenen dosyaları **hiçbiri**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Uygulama kodu|Derlenmiş kod arka plan olan XAML kaynakları.<br /><br /> veya<br /><br /> Bir yapı türüne sahip bir projeye eklenen XAML dosyaları **sayfa**.|`pack://application:,,,/MyResourceFile``.xaml`|  
+|Uygulama kodu|Derlenmiş kod arka plan olan XAML kaynakları.<br /><br /> -veya-<br /><br /> Bir yapı türüne sahip bir projeye eklenen XAML dosyaları **sayfa**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 >  Uygulama verileri dosyaları ve paketi hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], bkz: [WPF Uygulama kaynağı, içerik ve veri dosyalarını](./app-development/wpf-application-resource-content-and-data-files.md).  
@@ -267,15 +267,16 @@ ms.locfileid: "58654321"
 |Alan|Kaynak|  
 |----------|--------------|  
 |Yönetilen kod|[Desenler ve uygulamalar için uygulamalar güvenlik kılavuzu](https://go.microsoft.com/fwlink/?LinkId=117426)|  
-|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[Kod erişimi güvenliği](../misc/code-access-security.md)|  
+|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[Kod Erişimi Güvenliği](../misc/code-access-security.md)|  
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)
 - [WPF Güvenlik Stratejisi - Platform Güvenliği](wpf-security-strategy-platform-security.md)
 - [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](wpf-security-strategy-security-engineering.md)
 - [Desenler ve uygulamalar için uygulamalar güvenlik kılavuzu](https://go.microsoft.com/fwlink/?LinkId=117426)
-- [Kod erişimi güvenliği](../misc/code-access-security.md)
+- [Kod Erişimi Güvenliği](../misc/code-access-security.md)
 - [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
 - [XAML'ye Genel Bakış (WPF)](./advanced/xaml-overview-wpf.md)

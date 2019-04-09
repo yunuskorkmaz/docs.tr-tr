@@ -2,12 +2,12 @@
 title: <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-ms.openlocfilehash: 69d85c9d9da6fe605c7cbeda16e801d32eb30d49
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b8643a5321bbab692ebb704101c664105b4ab55c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162200"
 ---
 # <a name="messagesenderauthentication"></a>\<messageSenderAuthentication >
 İletiyi gönderen tarafından kullanılan eş sertifika kimlik doğrulaması ayarlarını belirtir.  
@@ -54,6 +54,7 @@ ms.locfileid: "55758927"
  İleti kimlik doğrulaması seçilirse, bu öğe yapılandırılmalıdır. Çıkış kanallar için her ileti tarafından sağlanan sertifikayı kullanarak imzalanmış [ \<sertifika >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md). Tüm iletileri tarafından belirtilen Doğrulayıcı kullanarak ileti kimlik bilgileri karşı uygulamaya teslim önce iade `customCertificateValidatorType` bu öğenin özniteliği. Doğrulayıcı kabul edin veya kimlik bilgilerini reddedebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>

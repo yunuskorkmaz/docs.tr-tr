@@ -2,12 +2,12 @@
 title: DataAdapters ve DataReaders
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: f4588187aad910d0b50b0c804e6de20a477b567b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af1d44b1e320557ab7906ce65dbeb5415b5c09dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189696"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters ve DataReaders
 ADO.NET kullanarak **DataReader** bir veritabanından veri salt okunur, salt iletme akışını almak için. Sonuçları döndüren sorguyu yürütür ve bunları isteyen kadar istemci üzerinde ağ arabellekteki depolanır kullanarak **okuma** yöntemi **DataReader**. Kullanarak **DataReader** hem kullanılabilir duruma geldiği veri alarak ve (varsayılan) uygulama performansını artırabilir sistem yükünü azaltarak bellekte bir anda yalnızca bir satır depolama.  
@@ -45,6 +45,7 @@ ADO.NET kullanarak **DataReader** bir veritabanından veri salt okunur, salt ile
  Güncelleştirmeleri uygularken SQL Server gidiş dönüş sayısını azaltarak geliştirerek uygulama performansını açıklar `DataSet`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)

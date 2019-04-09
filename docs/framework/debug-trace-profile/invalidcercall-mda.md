@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3cccb94268264217a1e6a1b5def71c6c433b820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614789"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193921"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 `invalidCERCall` Yönetilen hata ayıklama Yardımcısı (MDA) hiçbir güvenilirlik sözleşme veya aşırı zayıf bir sözleşme olan bir yönteme bir çağrı kısıtlı yürütme bölge (CER) grafik içinde olduğunda etkinleştirilir. Zayıf bir sözleşme çağrısı, diğer bir deyişle, geçirilen örneği daha büyük bir kapsamın en kötü durum durumu bozulması olduğunu bildiren bir sözleşmedir <xref:System.AppDomain> veya işlem durumu bozuksa ya da sonuç her zaman hesaplanabilir belirleyici olmayan içinde bir CER çağrıldığında.  
@@ -55,6 +55,7 @@ ms.locfileid: "54614789"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

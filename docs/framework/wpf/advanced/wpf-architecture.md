@@ -16,17 +16,16 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362023"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199433"
 ---
 # <a name="wpf-architecture"></a>WPF Mimarisi
 Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisi Kılavuzlu bir turu sağlar. Ana alt çoğunu kapsar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ve nasıl etkileşim kurduklarını açıklar. Bu ayrıca mimarları tarafından yapılan seçimleri bazıları ayrıntılı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
-  
-  
+
 <a name="System_Object"></a>   
 ## <a name="systemobject"></a>System.Object  
  Birincil [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] programlama modeli yönetilen kod gösterilir. Tasarım aşamasında başlarında [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] birkaç satırı sistem yönetilen bileşenleri yönetilmeyen olanları arasında nerede çizileceğini hakkında tartışmalarını somut vardı. [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Daha üretken ve daha güçlü (dahil, bellek yönetimi, hata işleme, ortak tür sistemi, vb.) geliştirme sağlayan özellikler sunar ancak bunlar bir bedeli.  
@@ -142,6 +141,7 @@ Bu konu, Windows Presentation Foundation (WPF) sınıf hiyerarşisi Kılavuzlu b
  Geliştirme başladığınızda [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tabanlı uygulamalar, tanıdık gelecektir. Özellikleri, nesneleri kullanma ayarlayabilirsiniz ve veri bağlama çok benzer şekilde kullanarak yapabilirsiniz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] veya [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]. Daha ayrıntılı bir araştırma mimarisi ile [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], olasılığını temelde veri uygulamanın çekirdek sürücüsü olarak ele almanız çok daha zengin uygulamalar oluşturmak için var olduğunu göreceksiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.Input.ICommand>

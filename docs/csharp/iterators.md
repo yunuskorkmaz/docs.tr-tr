@@ -3,12 +3,12 @@ title: Yineleyiciler
 description: Yerleşik kullanmayı öğrenin C# yineleyiciler ve kendi özel yineleyici yöntemleri oluşturma.
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 37ed45fc563eacf0c6bf412dcfb28dbc6db2bb17
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: f1be4e9a8b67f0e71615c730af4316253224b888
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155226"
 ---
 # <a name="iterators"></a>Yineleyiciler
 
@@ -238,5 +238,3 @@ finally
 ```
 
 Ne bu ayrıntıları unutmayın gerek yoktur. `foreach` Deyimi sizin için söz konusu farklılıklarına işler. Derleyici herhangi birini bu yapıları için doğru kodu oluşturur. 
-
-

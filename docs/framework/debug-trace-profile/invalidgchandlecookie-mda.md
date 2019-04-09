@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3908663a12f0e4edd8024c7f53f21b2e82bb8dbd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 876f0fe3c40cb6754b4ba714833dd160dc4de3a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176962"
 ---
 # <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie MDA
 `invalidGCHandleCookie` Yönetilen hata ayıklama Yardımcısı (MDA) etkin olduğu bir dönüştürme, geçersiz bir'den <xref:System.IntPtr> tanımlama bilgisi için bir <xref:System.Runtime.InteropServices.GCHandle> denenir.  
@@ -46,6 +46,7 @@ ms.locfileid: "54665402"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
 - <xref:System.Runtime.InteropServices.GCHandle>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

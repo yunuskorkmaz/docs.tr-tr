@@ -1,15 +1,15 @@
 ---
-title: Geliştiricinin varsayılan davranışı geçersiz kılma sorumlulukları
+title: Geliştiricinin Varsayılan Davranışı Geçersiz Kılma Sorumlulukları
 ms.date: 03/30/2017
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-ms.openlocfilehash: 4773d4d5cf8192dfa1f8bfad6b5846c03ab1d2c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12ea526d71946cdc7ab821f5e38948fcbb57d158
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555628"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184775"
 ---
-# <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Geliştiricinin varsayılan davranışı geçersiz kılma sorumlulukları
+# <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Geliştiricinin Varsayılan Davranışı Geçersiz Kılma Sorumlulukları
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aşağıdaki gereksinimleri uygulamaz ancak bu gereksinimler karşılanmadı varsa davranışı tanımlanmamış.  
   
 -   Geçersiz kılma yöntemi değil çağırmalıdır <xref:System.Data.Linq.DataContext.SubmitChanges%2A> veya <xref:System.Data.Linq.Table%601.Attach%2A>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Bu yöntemler, bir geçersiz kılma yöntemi çağrılırsa, özel durum oluşturur.  
@@ -27,4 +27,5 @@ ms.locfileid: "54555628"
 -   Son olarak, belirtilen işlemi gerçekleştirmek için geçersiz kılma yöntemi bekleniyor. Semantiği [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yükleniyor, ertelenmiş istekli yükleme gibi işlemleri ve <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) belirtilen hizmet sağlamak için geçersiz kılma gerektirir. Örneğin, bir yük geçersiz kılar, yalnızca içeriği veritabanında olasılıkla tutarsız veri önünü açacak denetlemeden boş bir koleksiyon döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Insert, Update ve Delete İşlemlerini Özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
