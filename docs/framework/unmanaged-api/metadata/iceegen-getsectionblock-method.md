@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e264a63dcea9c351289d1f63e1907f7c68779011
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7e600f29a9036bb28031bd7854bc8cbb34c4566a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200655"
 ---
-# <a name="iceegengetsectionblock-method"></a><span data-ttu-id="94399-102">ICeeGen::GetSectionBlock Metodu</span><span class="sxs-lookup"><span data-stu-id="94399-102">ICeeGen::GetSectionBlock Method</span></span>
-<span data-ttu-id="94399-103">Kod tabanının bir bölüm bloğunu alır.</span><span class="sxs-lookup"><span data-stu-id="94399-103">Gets a section block of the code base.</span></span>  
+# <a name="iceegengetsectionblock-method"></a><span data-ttu-id="6f380-102">ICeeGen::GetSectionBlock Metodu</span><span class="sxs-lookup"><span data-stu-id="6f380-102">ICeeGen::GetSectionBlock Method</span></span>
+<span data-ttu-id="6f380-103">Kod tabanının bir bölüm bloğunu alır.</span><span class="sxs-lookup"><span data-stu-id="6f380-103">Gets a section block of the code base.</span></span>  
   
- <span data-ttu-id="94399-104">Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="94399-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="6f380-104">Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="6f380-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="94399-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="94399-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f380-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6f380-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSectionBlock (  
@@ -40,30 +40,31 @@ HRESULT GetSectionBlock (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="94399-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="94399-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6f380-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6f380-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="94399-107">[in] Bir blok kod tabanının alınacağı bölümü.</span><span class="sxs-lookup"><span data-stu-id="94399-107">[in] The section from which to retrieve a block of the code base.</span></span>  
+ <span data-ttu-id="6f380-107">[in] Bir blok kod tabanının alınacağı bölümü.</span><span class="sxs-lookup"><span data-stu-id="6f380-107">[in] The section from which to retrieve a block of the code base.</span></span>  
   
  `len`  
- <span data-ttu-id="94399-108">[in] Alınacak Blok uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="94399-108">[in] The length of the block to be retrieved.</span></span>  
+ <span data-ttu-id="6f380-108">[in] Alınacak Blok uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="6f380-108">[in] The length of the block to be retrieved.</span></span>  
   
  `align`  
- <span data-ttu-id="94399-109">[in] Bloğun ilk baytı hizalamak hangi bölümde başlangıcına göre bayt.</span><span class="sxs-lookup"><span data-stu-id="94399-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span></span> <span data-ttu-id="94399-110">Blok bölüm içindeki konumudur.</span><span class="sxs-lookup"><span data-stu-id="94399-110">This is the position of the block within the section.</span></span>  
+ <span data-ttu-id="6f380-109">[in] Bloğun ilk baytı hizalamak hangi bölümde başlangıcına göre bayt.</span><span class="sxs-lookup"><span data-stu-id="6f380-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span></span> <span data-ttu-id="6f380-110">Blok bölüm içindeki konumudur.</span><span class="sxs-lookup"><span data-stu-id="6f380-110">This is the position of the block within the section.</span></span>  
   
  `ppBytes`  
- <span data-ttu-id="94399-111">[out] Alınan blok adresini alan bir konuma yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="94399-111">[out] A pointer to a location that receives the address of the retrieved block.</span></span>  
+ <span data-ttu-id="6f380-111">[out] Alınan blok adresini alan bir konuma yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="6f380-111">[out] A pointer to a location that receives the address of the retrieved block.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="94399-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="94399-112">Remarks</span></span>  
- <span data-ttu-id="94399-113">Çağrı `GetSectionBlock` yalnızca diğer yöntemler tarafından işlenmemiş özel bölümü gereksinimleriniz varsa.</span><span class="sxs-lookup"><span data-stu-id="94399-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6f380-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="6f380-112">Remarks</span></span>  
+ <span data-ttu-id="6f380-113">Çağrı `GetSectionBlock` yalnızca diğer yöntemler tarafından işlenmemiş özel bölümü gereksinimleriniz varsa.</span><span class="sxs-lookup"><span data-stu-id="6f380-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="94399-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="94399-114">Requirements</span></span>  
- <span data-ttu-id="94399-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94399-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f380-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6f380-114">Requirements</span></span>  
+ <span data-ttu-id="6f380-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6f380-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="94399-116">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="94399-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6f380-116">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="6f380-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="94399-117">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="94399-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6f380-117">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="6f380-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="94399-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94399-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="6f380-118">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="6f380-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="94399-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="94399-119">See also</span></span>
-- [<span data-ttu-id="94399-120">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="94399-120">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6f380-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6f380-119">See also</span></span>
+
+- [<span data-ttu-id="6f380-120">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6f380-120">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

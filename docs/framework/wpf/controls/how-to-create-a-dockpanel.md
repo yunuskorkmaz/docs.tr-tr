@@ -8,21 +8,22 @@ helpviewer_keywords:
 - controls [WPF], DockPanel
 - DockPanel control [WPF], creating
 ms.assetid: 9194f663-e279-4f1a-86d7-125a57d05c6f
-ms.openlocfilehash: f725a9e56eb7194bb09aeb8b59611f319cdfe8f8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 35434a13386ae89fdc1428bd632d21c1551c9871
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200603"
 ---
-# <a name="how-to-create-a-dockpanel"></a><span data-ttu-id="7248a-102">Nasıl yapılır: DockPanel Oluşturma</span><span class="sxs-lookup"><span data-stu-id="7248a-102">How to: Create a DockPanel</span></span>
-## <a name="example"></a><span data-ttu-id="7248a-103">Örnek</span><span class="sxs-lookup"><span data-stu-id="7248a-103">Example</span></span>  
- <span data-ttu-id="7248a-104">Aşağıdaki örnek, oluşturur ve bir örneği kullanan <xref:System.Windows.Controls.DockPanel> kodu kullanarak.</span><span class="sxs-lookup"><span data-stu-id="7248a-104">The following example creates and uses an instance of <xref:System.Windows.Controls.DockPanel> by using code.</span></span> <span data-ttu-id="7248a-105">Örnek alanı beş oluşturarak bölümleme işlemi gösterilmektedir <xref:System.Windows.Shapes.Rectangle> öğeleri ve konumlandırma (yerleşik) bir üst öğe içinde bunları <xref:System.Windows.Controls.DockPanel>.</span><span class="sxs-lookup"><span data-stu-id="7248a-105">The example shows you how to partition space by creating five <xref:System.Windows.Shapes.Rectangle> elements and positioning (docking) them inside a parent <xref:System.Windows.Controls.DockPanel>.</span></span> <span data-ttu-id="7248a-106">Varsayılan ayar tutuyorsanız, nihai dikdörtgenin tüm kalan ayrılmamış alan doldurur.</span><span class="sxs-lookup"><span data-stu-id="7248a-106">If you retain the default setting, the final rectangle fills all the remaining unallocated space.</span></span>  
+# <a name="how-to-create-a-dockpanel"></a><span data-ttu-id="3c6bd-102">Nasıl yapılır: DockPanel Oluşturma</span><span class="sxs-lookup"><span data-stu-id="3c6bd-102">How to: Create a DockPanel</span></span>
+## <a name="example"></a><span data-ttu-id="3c6bd-103">Örnek</span><span class="sxs-lookup"><span data-stu-id="3c6bd-103">Example</span></span>  
+ <span data-ttu-id="3c6bd-104">Aşağıdaki örnek, oluşturur ve bir örneği kullanan <xref:System.Windows.Controls.DockPanel> kodu kullanarak.</span><span class="sxs-lookup"><span data-stu-id="3c6bd-104">The following example creates and uses an instance of <xref:System.Windows.Controls.DockPanel> by using code.</span></span> <span data-ttu-id="3c6bd-105">Örnek alanı beş oluşturarak bölümleme işlemi gösterilmektedir <xref:System.Windows.Shapes.Rectangle> öğeleri ve konumlandırma (yerleşik) bir üst öğe içinde bunları <xref:System.Windows.Controls.DockPanel>.</span><span class="sxs-lookup"><span data-stu-id="3c6bd-105">The example shows you how to partition space by creating five <xref:System.Windows.Shapes.Rectangle> elements and positioning (docking) them inside a parent <xref:System.Windows.Controls.DockPanel>.</span></span> <span data-ttu-id="3c6bd-106">Varsayılan ayar tutuyorsanız, nihai dikdörtgenin tüm kalan ayrılmamış alan doldurur.</span><span class="sxs-lookup"><span data-stu-id="3c6bd-106">If you retain the default setting, the final rectangle fills all the remaining unallocated space.</span></span>  
   
  [!code-csharp[DockPanelCode#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DockPanelCode/CSharp/DockPanel_Code.cs#1)]
  [!code-vb[DockPanelCode#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DockPanelCode/VisualBasic/dockpanel_vb.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="7248a-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7248a-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c6bd-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3c6bd-107">See also</span></span>
+
 - <xref:System.Windows.Controls.DockPanel>
 - <xref:System.Windows.Controls.Dock>
-- [<span data-ttu-id="7248a-108">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7248a-108">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="3c6bd-108">Panellere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="3c6bd-108">Panels Overview</span></span>](panels-overview.md)

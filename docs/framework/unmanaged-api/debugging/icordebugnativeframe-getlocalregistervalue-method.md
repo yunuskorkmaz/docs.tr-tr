@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e6512871bf9a5cb0219a470267d1be4ecd403b3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f53c8290271391e52176f8364b592ce6b46faf71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195949"
 ---
-# <a name="icordebugnativeframegetlocalregistervalue-method"></a><span data-ttu-id="ae497-102">ICorDebugNativeFrame::GetLocalRegisterValue Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ae497-102">ICorDebugNativeFrame::GetLocalRegisterValue Method</span></span>
-<span data-ttu-id="ae497-103">Bir bağımsız değişken veya yerel bu çerçeve için belirtilen kayıt defterinde depolanan yerel değişken değerini alır.</span><span class="sxs-lookup"><span data-stu-id="ae497-103">Gets the value of an argument or local variable that is stored in the specified register for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalregistervalue-method"></a><span data-ttu-id="2f3ce-102">ICorDebugNativeFrame::GetLocalRegisterValue Yöntemi</span><span class="sxs-lookup"><span data-stu-id="2f3ce-102">ICorDebugNativeFrame::GetLocalRegisterValue Method</span></span>
+<span data-ttu-id="2f3ce-103">Bir bağımsız değişken veya yerel bu çerçeve için belirtilen kayıt defterinde depolanan yerel değişken değerini alır.</span><span class="sxs-lookup"><span data-stu-id="2f3ce-103">Gets the value of an argument or local variable that is stored in the specified register for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ae497-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ae497-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2f3ce-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2f3ce-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalRegisterValue (  
@@ -38,30 +38,29 @@ HRESULT GetLocalRegisterValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ae497-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ae497-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2f3ce-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2f3ce-105">Parameters</span></span>  
  `reg`  
- <span data-ttu-id="ae497-106">[in] "CorDebugRegister" numaralandırma değerini içeren kayıt belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="ae497-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the value.</span></span>  
+ <span data-ttu-id="2f3ce-106">[in] "CorDebugRegister" numaralandırma değerini içeren kayıt belirten bir değer.</span><span class="sxs-lookup"><span data-stu-id="2f3ce-106">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="ae497-107">[in] Tarafından başvurulan ikili meta veri imzası boyutunu belirten bir tamsayı `pvSigBlob` parametresi.</span><span class="sxs-lookup"><span data-stu-id="ae497-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="2f3ce-107">[in] Tarafından başvurulan ikili meta veri imzası boyutunu belirten bir tamsayı `pvSigBlob` parametresi.</span><span class="sxs-lookup"><span data-stu-id="2f3ce-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="ae497-108">[in] A `PCCOR_SIGNATURE` değerin türü. ikili meta verileri imza işaret eden bir değer.</span><span class="sxs-lookup"><span data-stu-id="ae497-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="2f3ce-108">[in] A `PCCOR_SIGNATURE` değerin türü. ikili meta verileri imza işaret eden bir değer.</span><span class="sxs-lookup"><span data-stu-id="2f3ce-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="ae497-109">[out] Belirtilen kayıt defterinde depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ae497-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register.</span></span>  
+ <span data-ttu-id="2f3ce-109">[out] Belirtilen kayıt defterinde depolanan alınan değeri temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="2f3ce-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ae497-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ae497-110">Remarks</span></span>  
- <span data-ttu-id="ae497-111">`GetLocalRegisterValue` Yöntemi, bir yerel çerçeve veya bir tam zamanında (JIT) kullanılabilir-çerçeve derlenir.</span><span class="sxs-lookup"><span data-stu-id="ae497-111">The `GetLocalRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2f3ce-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2f3ce-110">Remarks</span></span>  
+ <span data-ttu-id="2f3ce-111">`GetLocalRegisterValue` Yöntemi, bir yerel çerçeve veya bir tam zamanında (JIT) kullanılabilir-çerçeve derlenir.</span><span class="sxs-lookup"><span data-stu-id="2f3ce-111">The `GetLocalRegisterValue` method can be used either in a native frame or a just-in-time (JIT)-compiled frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ae497-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ae497-112">Requirements</span></span>  
- <span data-ttu-id="ae497-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ae497-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2f3ce-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2f3ce-112">Requirements</span></span>  
+ <span data-ttu-id="2f3ce-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2f3ce-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ae497-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ae497-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2f3ce-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2f3ce-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ae497-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ae497-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2f3ce-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2f3ce-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ae497-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ae497-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="2f3ce-116">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="2f3ce-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ae497-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ae497-117">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="2f3ce-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2f3ce-117">See also</span></span>
