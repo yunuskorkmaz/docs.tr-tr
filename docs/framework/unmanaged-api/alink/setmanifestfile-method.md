@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f22927b388a62ee6025c987bb107b2dfd51da0e3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8307960166cfc668a577431d688c439f0f794be2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072434"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile Yöntemi
 Bağlayıcı derleme oluşturduğunda kullandığı bildirim dosyası sıfırlamak sağlar.  
@@ -49,7 +49,8 @@ HRESULT SetManifestFile(
  ALink.h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [IALink3 Yöntemi](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
+
+- [IALink3 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Derleme Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

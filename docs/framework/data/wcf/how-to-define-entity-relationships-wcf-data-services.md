@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: cc255524-1534-4fae-b83c-250933d5a72b
-ms.openlocfilehash: 6baf873e08bb65e97d9fdc9b0d0d500bf7a77836
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 242b0985bb8abc80359148b0c224ffbc40f8f11f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072902"
 ---
 # <a name="how-to-define-entity-relationships-wcf-data-services"></a>Nasıl yapılır: Varlık ilişkileri (WCF Veri Hizmetleri) tanımlayın
 Yeni bir varlıkta eklediğinizde [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], yeni varlık ve ilgili varlıkları arasındaki ilişkileri otomatik olarak tanımlanmamış. Oluşturma ve ilişkileri varlık örnekleri arasında değiştirme ve veri hizmeti bu değişiklikleri yansıtmak için istemci kitaplığını sahiptir. Daha fazla bilgi için [veri hizmetini güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
@@ -32,5 +32,6 @@ Yeni bir varlıkta eklediğinizde [!INCLUDE[ssAstoria](../../../../includes/ssas
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrder](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorder)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Nasıl yapılır: Ekleme, değiştirme ve varlıklarını silme](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)
+- [Nasıl yapılır: Varlık Ekleme, Değiştirme ve Silme](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)

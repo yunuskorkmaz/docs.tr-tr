@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Bağlama üzerinden meta verileri bir olmayan - MEX alma'
+title: 'Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074163"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Nasıl yapılır: Bağlama üzerinden meta verileri bir olmayan - MEX alma
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Nasıl yapılır: MEX Olmayan Bağlama Üzerinden Meta Verileri Alma
 Bu konu, bir MEX uç noktasından bir MEX olmayan bağlama üzerinden meta verileri alınacak açıklar. Bu örnek kodda dayanır [özel güvenli meta veri uç noktası](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) örnek.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Bir MEX olmayan bağlama üzerinden meta verilerini almak için  
@@ -124,4 +124,5 @@ Bu konu, bir MEX uç noktasından bir MEX olmayan bağlama üzerinden meta veril
 5.  Bu noktada, hizmet uç noktaları koleksiyonu vardır. Meta verileri içeri aktarma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Hizmet uç noktalarına meta verileri alma](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)

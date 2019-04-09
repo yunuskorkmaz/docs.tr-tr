@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702574"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072850"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows Forms için ClickOnce Dağıtımı
 Aşağıdaki konularda açıklanmıştır [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], istemci bilgisayarlara Windows Forms uygulamaları kolayca dağıtmak için kullanılan bir teknolojisidir.  
@@ -38,16 +38,16 @@ Aşağıdaki konularda açıklanmıştır [!INCLUDE[ndptecclick](../../../includ
  [ClickOnce ve Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
  Güvenilir Uygulama Dağıtımı'Authenticode teknolojisi nasıl kullanıldığını açıklar.  
   
- [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [İzlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  Komut satırı kullanarak ve SDK Araçları dağıtılacağı gösterir bir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] olmadan Visual Studio kullanarak uygulama.  
   
- [Nasıl yapılır: ClickOnce Uygulamaları için Sunucu Bilgisayara Güvenilir Yayımcı Ekleme](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [Nasıl yapılır: Güvenilen bir yayımcı ClickOnce uygulamaları için bir istemci bilgisayara ekleyin](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  İstemci bilgisayarların güvenilen uygulama dağıtımı için gerekli tek seferlik yapılandırmasını gösterir.  
   
  [Nasıl yapılır: Dağıtım Güncelleştirmeleri için Alternatif Bir Konum Belirtme](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  Yapılandırma gösteren bir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] farklı bir konum için bir uygulamanın yeni sürümlerini denetlemek için SDK araçlarını kullanarak uygulama.  
   
- [İzlenecek yol: ClickOnce Dağıtım API'si ile İsteğe Bağlı Derlemeleri İndirme](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
+ [İzlenecek yol: ClickOnce dağıtım API'si ile isteğe bağlı derlemeleri indirme](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  API çağrıları, uygulamanızın onu yüklemeye çalışır bir bütünleştirilmiş kod ilk zaman almak için kullanmayı gösterir.  
   
  [Nasıl yapılır: Çevrimiçi bir ClickOnce Uygulamasında Sorgu Dize Bilgilerini Alma](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
@@ -63,9 +63,10 @@ Aşağıdaki konularda açıklanmıştır [!INCLUDE[ndptecclick](../../../includ
  Kullanılabilir, böylece bir dosyayı işaretler gösterilmektedir [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] veri dizini.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Uygulama Ayarlarına Genel Bakış](./advanced/application-settings-overview.md)
 - [ClickOnce Uygulamalarını Yayımlama](/visualstudio/deployment/publishing-clickonce-applications)
-- [Komut Satırından ClickOnce Uygulamalarını Derleme](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
+- [Komut Satırından ClickOnce Uygulamalarını Yapılandırma](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
 - [System.Deployment.Application Kullanan ClickOnce Uygulamalarında Hata Ayıklama](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
 - [ClickOnce ile COM Bileşenleri Dağıtma](/visualstudio/deployment/deploying-com-components-with-clickonce)
 - [Nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

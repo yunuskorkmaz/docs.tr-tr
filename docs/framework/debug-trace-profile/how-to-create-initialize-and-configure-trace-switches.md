@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Oluşturma, başlatma ve izleme anahtarları yapılandırma'
+title: 'Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739621"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079142"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Nasıl yapılır: Oluşturma, başlatma ve izleme anahtarları yapılandırma
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma
 İzleme anahtarları etkinleştirmek, devre dışı bırakın ve İzleme çıkışı filtrelemek olanak sağlar.  
   
 <a name="create"></a>   
@@ -126,7 +126,8 @@ ms.locfileid: "54739621"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Nasıl yapılır: Uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+
+- [İzleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [İzleme ve Hata Ayıklama Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

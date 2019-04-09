@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 22c07490d0d3b54be96f32d67c9b4aee70306c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087280"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows Forms Uygulamalarındaki Yardım Sistemleri
 Biri en önemli courtesies, uygulamaların bir geliştirici furnish Kullanıcılarınızla aynıdır yetkin bir Yardım sistemi. Disoriented yanıltıcı veya haline nerede bunlar kapatır budur. Windows tabanlı bir uygulama Yardım sisteminde sağlama kolayca yapılır kullanarak [HelpProvider bileşeni](../controls/helpprovider-component-windows-forms.md).  
@@ -24,6 +24,7 @@ Biri en önemli courtesies, uygulamaların bir geliştirici furnish Kullanıcıl
  HTML Yardımı 1.x HTML Help Workshop dosyalarıyla oluşturabilirsiniz. HTML Yardımı hakkında daha fazla bilgi için "HTML Help Workshop" veya MSDN'deki diğer "HTML Help" konularına bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](integrating-user-help-in-windows-forms.md)
 - [HelpProvider Bileşeni](../controls/helpprovider-component-windows-forms.md)
 - [ToolTip Bileşeni](../controls/tooltip-component-windows-forms.md)

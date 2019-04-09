@@ -2,12 +2,12 @@
 title: Sorgu ifadesi örnekleri (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-ms.openlocfilehash: 23804e3807708da8c58be650636cabae2349b449
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f15e397c711bd01d5770e59c4f2c8227ee2ac7ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074293"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Sorgu ifadesi örnekleri (LINQ to DataSet)
 Bu bölümde LINQ standart sorgu işleçlerini kullanan veri kümesi programlama örnekleri için sorgu ifade sözdizimi sunmaktadır. <xref:System.Data.DataSet> Bu örneklerde kullanılan kullanarak doldurulur `FillDataSet` yöntemi içinde belirtilen [verileri bir DataSet içine Yükleniyor](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Daha fazla bilgi için [standart sorgu işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [standart sorgu işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
@@ -35,6 +35,7 @@ Bu bölümde LINQ standart sorgu işleçlerini kullanan veri kümesi programlama
  Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.GroupJoin%2A> ve <xref:System.Linq.Enumerable.Join%2A> sorgulamak için yöntemleri bir <xref:System.Data.DataSet>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Metot Tabanlı Sorgu Örnekleri](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)
+
+- [Yöntem Tabanlı Sorgu Örnekleri](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)
 - [DataSet’e Özgü İşleç Örnekleri](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)
 - [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

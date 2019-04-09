@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 0d8b3e476488f81e4154c876e555b3090d0287f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: c092ad49f40257467245a07a6e4b9849822e1835
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076568"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>İzlenecek yol: XAML Kullanarak bir Düğme Oluşturma
 Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında kullanmak için bir animasyonlu düğme oluşturma öğrenmektir. Bu izlenecek yol, stil ve şablon kod yeniden kullanımını ve düğme mantığının ayrımı düğme bildiriminden imkan tanıyan özelleştirilmiş bir düğme kaynak oluşturmak için kullanır. Bu izlenecek yolda tamamen yazılır [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -432,8 +432,9 @@ Bu kılavuzun amacı, bir Windows Presentation Foundation (WPF) uygulamasında k
 -   Özelleştirilmiş kullanıcı eylemlerine düğme davranışı (gibi <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, ve <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) animasyon efektleri dahil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Microsoft Expression Blend Kullanarak Düğme Oluşturma](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
 - [Stil ve Şablon Oluşturma](styling-and-templating.md)
 - [Animasyona Genel bakış](../graphics-multimedia/animation-overview.md)
 - [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Bit Eşlem Etkilerine Genel Bakış](../graphics-multimedia/bitmap-effects-overview.md)
+- [Bit Eşlem Efektlerine Genel Bakış](../graphics-multimedia/bitmap-effects-overview.md)

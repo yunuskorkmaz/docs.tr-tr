@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076685"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms'ta Kullanıcı Girdisi Doğrulama
 Kullanıcıların uygulamanıza veri girerken, uygulamanızın kullandığı önce verilerin geçerli olduğunu doğrulamak isteyebilirsiniz. Belirli metin alanları olmaması, uzunluğu sıfır, bir alan, bir telefon numarası veya diğer türdeki bir biçimlendirilmiş veri biçimlendirilmiş olması veya bir dize bir veritabanının güvenliğini tehlikeye atmak için kullanılabilir tüm güvenli olmayan karakterleri içermemesi gerektirebilir. Windows Forms, uygulamanızdaki girişi doğrulama birçok yol sağlar.  
@@ -91,6 +91,7 @@ Kullanıcıların uygulamanıza veri girerken, uygulamanızın kullandığı ön
 >  Bu şekilde kapatmak için form zorlarsanız, form denetiminin denetimlerinde zaten kaydedilmemiş tüm verileri kaybolur. Ayrıca, bunlar kapatıldığında kalıcı formlar denetimlerin içeriği doğrulamaz. Odağı bir denetime kilitlemek için doğrulama denetimi kullanmaya devam edebilirsiniz, ancak formu kapatmadan ile ilişkili davranışı hakkında merak gerekmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>

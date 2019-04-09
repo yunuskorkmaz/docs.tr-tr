@@ -1,19 +1,19 @@
 ---
-title: 'İzlenecek yol: WPF içeriği için stil oluşturma'
+title: 'İzlenecek yol: WPF İçeriği için Stil Oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079364"
 ---
-# <a name="walkthrough-styling-wpf-content"></a>İzlenecek yol: WPF içeriği için stil oluşturma
+# <a name="walkthrough-styling-wpf-content"></a>İzlenecek yol: WPF İçeriği için Stil Oluşturma
 Bu izlenecek yol, bir Windows Form üzerinde barındırılan bir Windows Presentation Foundation (WPF) denetimine stil uygulamak nasıl gösterir.
 
  Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
@@ -150,6 +150,7 @@ Bu izlenecek yol, bir Windows Form üzerinde barındırılan bir Windows Present
 5.  Tamam ve İptal düğmeleri tıklatabilir ve farkları görüntüleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Geçiş ve Birlikte Çalışabilirlik](../../wpf/advanced/migration-and-interoperability.md)

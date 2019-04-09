@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 3d188038526570761c2e50dc607fd4aac165fda5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d25c8500250411083e9fb6b33b3f743e5cd103c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076751"
 ---
 # <a name="xname-directive"></a>x:Name Yönergesi
 XAML namescope XAML tanımlı öğeleri benzersiz olarak tanımlar. XAML ad kapsamları ve benzersizlik modellerini çerçeveleri, API'leri sağlar veya çalışma zamanında XAML oluşturulan nesne grafiğine erişerek davranışları uygulayın örneklenmiş nesnelere uygulanabilir.  
@@ -67,6 +67,7 @@ XAML namescope XAML tanımlı öğeleri benzersiz olarak tanımlar. XAML ad kaps
  `x:Name` Silverlight için ayrı olarak belgelenmiştir. Daha fazla bilgi için [XAML Namespace (x:) Dil özellikleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
 - [WPF İçinde Ağaçlar](../wpf/advanced/trees-in-wpf.md)

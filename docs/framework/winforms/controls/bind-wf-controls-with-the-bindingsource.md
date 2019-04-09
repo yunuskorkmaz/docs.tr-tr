@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: BindingSource bileşeniyle Tasarımcı kullanarak Windows Forms denetimleri bağlama'
+title: 'Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimlerini BindingSource Bileşeni ile Bağlama'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: e12498bc71957d49893e49e54095b6bb184ac2c3
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074664"
 ---
-# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Nasıl yapılır: BindingSource bileşeniyle Tasarımcı kullanarak Windows Forms denetimleri bağlama
+# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimlerini BindingSource Bileşeni ile Bağlama
 Formunuza denetimler eklenir ve uygulamanız için kullanıcı arabirimi belirlenen sonra çalışma zamanında, kullanıcılar alter ve uygulamayla ilgili verileri kaydetme böylece bir veri kaynağına denetimlerin bağlayabilirsiniz.  
   
  Windows Forms'ta bir denetim veya denetimlerin bir dizisini bağlama en kolay gerçekleştirilir kullanarak <xref:System.Windows.Forms.BindingSource> denetimi form üzerinde denetimleri ve veri kaynağı arasında bir köprü olarak.  
@@ -60,7 +60,8 @@ Formunuza denetimler eklenir ve uygulamanız için kullanıcı arabirimi belirle
      **DataSource** UI türü Düzenleyici kapanır ve veri kümesi <xref:System.Windows.Forms.BindingSource> ve tablo bağdaştırıcısı belirli veri bağlantısı formunuza eklenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [Yeni veri kaynağı ekleme](/visualstudio/data-tools/add-new-data-sources)
-- [Veri kaynakları penceresi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
+- [Veri Kaynakları Penceresi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))

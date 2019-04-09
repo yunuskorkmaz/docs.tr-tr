@@ -2,12 +2,12 @@
 title: Geniş Yazılmış Uzantılar Örneği
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 19d39e4a70022304262c5872636d3ea03a3b861b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f22d5b2c1c7680b750d8bd26da10588e0ca9f585
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086799"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Geniş Yazılmış Uzantılar Örneği
 Zengin destek uzantısı verilerle çalışmak için dağıtım nesne modeli sağlar — akışı bir dağıtımda mevcut olan bilgiler XML gösterimi kullanıcının, ancak açıkça gibi sınıfları tarafından sunulan <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem>. Bu örnek, uzantı verilerle çalışmak için temel teknikleri gösterir.  
@@ -156,5 +156,6 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Kesin Tür Belirtilmiş Uzantılar](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
 - [WCF Dağıtımı](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

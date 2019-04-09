@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama'
+title: 'Nasıl yapılır: Windows Forms Denetiminde Öznitelikleri Uygulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: fd41999b1cd1cde940d182f3acc505bbb92a3aa4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e86277c06e515b28bada3331cf4fd63e536319a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079597"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Nasıl yapılır: Windows Forms Denetiminde Öznitelikleri Uygulama
 Bileşen ve Denetim doğru tasarım ortamı ile etkileşimli ve düzgün çalışma zamanında yürüten geliştirmek için öznitelikleri doğru sınıflar ve üyeler uygulama gerekir.  
   
 ## <a name="example"></a>Örnek  
@@ -78,6 +78,7 @@ Bileşen ve Denetim doğru tasarım ortamı ile etkileşimli ve düzgün çalı�
 -   Barındıran formun `AttributesDemoControl` başvurusu gerektirir `AttributesDemoControl` oluşturmak için derleme.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
 - [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)

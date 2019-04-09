@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: DataGrid denetimi ile doğrulama uygulama'
+title: 'Nasıl yapılır: DataGrid Denetimi ile Doğrulama Uygulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086814"
 ---
-# <a name="how-to-implement-validation-with-the-datagrid-control"></a>Nasıl yapılır: DataGrid denetimi ile doğrulama uygulama
+# <a name="how-to-implement-validation-with-the-datagrid-control"></a>Nasıl yapılır: DataGrid Denetimi ile Doğrulama Uygulama
 <xref:System.Windows.Controls.DataGrid> Denetimi hücre ve satır düzeyinde doğrulama yapmanıza olanak sağlar. Bir kullanıcı bir değer güncelleştirdiğinde hücre düzeyinde doğrulama ile tek bir bağımlı veri nesnesinin özelliklerini doğrulayın. Bir kullanıcı bir satır için değişiklikleri onayladığında ile satır düzeyinde doğrulama, tüm veri nesnelerini doğrulayın. Ayrıca, doğrulama hataları için özelleştirilmiş görsel geri bildirim sağlamak veya varsayılan görsel geri bildirim kullanabilirsiniz, <xref:System.Windows.Controls.DataGrid> denetim sağlar.  
   
  Aşağıdaki yordamlarda, doğrulama kuralları uygulamak açıklanır <xref:System.Windows.Controls.DataGrid> bağlamaları ve görsel geri bildirim özelleştirin.  
@@ -91,6 +91,7 @@ ms.locfileid: "57371092"
  [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
 - [Veri Bağlama](../data/data-binding-wpf.md)

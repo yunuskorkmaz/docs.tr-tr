@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Dinamik olarak veritabanı oluşturma'
+title: 'Nasıl yapılır: Dinamik Olarak Veritabanı Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: a73efb334fddc7e0bbfbaca53f0d5026105dd22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072395"
 ---
-# <a name="how-to-dynamically-create-a-database"></a>Nasıl yapılır: Dinamik olarak veritabanı oluşturma
+# <a name="how-to-dynamically-create-a-database"></a>Nasıl yapılır: Dinamik Olarak Veritabanı Oluşturma
 LINQ to SQL nesne modeli, bir ilişkisel veritabanına eşlenir. İlişkisel veritabanının yapısını tanımlamak için öznitelik tabanlı eşleme veya bir dış eşleme dosyası kullanarak eşleme etkindir. Her iki senaryoda veritabanı kullanarak yeni bir örneğini oluşturabilirsiniz ilişkisel veritabanı hakkında yeterli bilgi yok <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi.  
   
  <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> Yöntemi, nesne modelinde kodlanmış bilgilerin kapsamını veritabanına yalnızca bir kopyasını oluşturur. Dosyaları ve öznitelikler, nesne modelinden var olan bir veritabanının yapısı hakkında her şeyi kodlamamayı. Eşleme bilgileri değil kullanıcı tarafından tanımlanan İşlevler, saklı yordamlar, Tetikleyiciler içeriğini temsil veya denetim kısıtlamaları. Bu davranış, çeşitli veritabanları için yeterli olur.  
@@ -49,6 +49,7 @@ LINQ to SQL nesne modeli, bir ilişkisel veritabanına eşlenir. İlişkisel ver
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Öznitelik Tabanlı Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

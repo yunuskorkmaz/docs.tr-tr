@@ -4,12 +4,12 @@ description: Desteklenen Linux sürümleri ve .NET Core bağımlılıklarının 
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 29256259c66b909ad65691230bd652f38583184e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084919"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux üzerinde .NET Core önkoşulları
 
@@ -23,7 +23,7 @@ Bu makalede, Linux üzerinde .NET Core uygulamaları geliştirmek için ihtiyaç
 
 ## <a name="supported-linux-versions"></a>Desteklenen Linux sürümleri
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET core 2.x](#tab/netcore2x)
 
 .NET core 2.x tek bir işletim sistemi olarak Linux değerlendirir. Tek bir Linux yapı (yonga Mimarisi) başına desteklenen Linux dağıtımları için yoktur. 
 
@@ -44,7 +44,7 @@ Daha fazla bilgi ve indirme bağlantıları [.NET Core 2.2 indirir](https://www.
 
 Bkz: [.NET Core 2.1 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) ve [.NET Core 2.2 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) tam listesi, .NET Core 2.1 ve .NET Core 2.2 dışı işletim sistemleri, dağıtımlar ve sürümleri, desteklenen işletim sistemi sürümleri ve yaşam döngüsü İlkesi bağlantılarını destekler.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET core 1.x](#tab/netcore1x)
 
 Daha fazla bilgi ve indirme bağlantıları [.NET Core 1.1 indirir](https://www.microsoft.com/net/download/dotnet-core/1.1) veya [.NET Core 1.0 indirir](https://www.microsoft.com/net/download/dotnet-core/1.0).
 
@@ -61,7 +61,7 @@ Daha fazla bilgi ve indirme bağlantıları [.NET Core 1.1 indirir](https://www.
 
 Bkz: [.NET Core 1.x desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) .NET Core tam listesi için 1.x desteklenen işletim sistemleri, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında.
 
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET core 3.0 Önizleme 1](#tab/netcore30)
+# [<a name="net-core-30-preview-1"></a>.NET core 3.0 Önizleme 1](#tab/netcore30)
 
 .NET core 3.0 Önizleme 1, tek bir işletim sistemi Linux değerlendirir. Tek bir Linux yapı (yonga Mimarisi) başına desteklenen Linux dağıtımları için yoktur. 
 
@@ -86,8 +86,6 @@ Alpine Linux                  | 3.8+                  | x64, ARM64
 Bkz: [.NET Core 3.0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) tam listesi .NET Core 3.0, desteklenen işletim sistemleri, dağıtımlar ve sürümler, destek işletim sistemi sürümleri ve yaşam döngüsü ilkesi bağlantılar dışında.
 
 ARM64'te .NET Core 3.0 yükleme hakkında daha fazla bilgi için bkz. [Linux ARM64 üzerinde .NET Core 3.0 yükleme](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
-
-
 
 ---
 

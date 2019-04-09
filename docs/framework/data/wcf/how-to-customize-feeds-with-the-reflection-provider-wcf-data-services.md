@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: 00c23dcf-9bb8-459a-a012-6c4d9bcad7e9
-ms.openlocfilehash: fe6e65a0030ca016f280e6b2c1106b4aa302d26e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f7f17e13dce81dfbaecc266b314e6695716f21c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086838"
 ---
 # <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a>Nasıl yapılır: (WCF Veri Hizmetleri) yansıma sağlayıcısı ile akışları özelleştirme
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir varlığın özelliklerini AtomPub protokolünde tanımlanan kullanılmayan öğelere eşlenebilir böylece bir veri hizmeti yanıttaki Atom serileştirme özelleştirmenize olanak sağlar. Bu konuda, yansıma sağlayıcısını kullanarak tarafından tanımlanan bir veri modeli varlık türleri için eşleme öznitelikleri tanımlamak gösterilmektedir. Daha fazla bilgi için [akış özelleştirme](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
@@ -32,4 +32,5 @@ ms.locfileid: "54637709"
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResultInline](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresultinline.xml#iqueryablefeedresultinline)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yansıma Sağlayıcısı](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)

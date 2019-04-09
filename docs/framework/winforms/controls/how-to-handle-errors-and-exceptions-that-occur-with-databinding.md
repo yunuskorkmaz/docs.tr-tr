@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Hataları ve ortaya çıkan özel durumlar veri bağlama ile işleme'
+title: 'Nasıl yapılır: Veri Bağlamada Oluşan Hataları ve Özel Durumları İşleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], error handling
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
-ms.openlocfilehash: 8400ce602d15c195aea43f9e5a162fddb1783830
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 709db2a98074e3322adad8b1275b3c4418c14636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084628"
 ---
-# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Nasıl yapılır: Hataları ve ortaya çıkan özel durumlar veri bağlama ile işleme
+# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Nasıl yapılır: Veri Bağlamada Oluşan Hataları ve Özel Durumları İşleme
 Denetimlere bağlayabilirsiniz önerilmesine özel durumlar ve hatalar temel alınan iş nesnelerde ortaya çıkar. Bu hatalar ve özel durumlar ıntercept ve sonra kurtarmak veya hata bilgilerini kullanıcıya işleyerek geçirmek <xref:System.Windows.Forms.Binding.BindingComplete> belirli bir olay <xref:System.Windows.Forms.Binding>, <xref:System.Windows.Forms.BindingSource>, veya <xref:System.Windows.Forms.CurrencyManager> bileşeni.  
   
 ## <a name="example"></a>Örnek  
@@ -40,6 +40,7 @@ Denetimlere bağlayabilirsiniz önerilmesine özel durumlar ve hatalar temel al�
  Visual Basic veya Visual C# için bu örnek komut satırından derleme hakkında daha fazla bilgi için bkz: [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) veya [oluşturma ile komut satırı csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Visual Studio bu örnekte yeni bir projeye kod yapıştırarak da oluşturabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>
 - [BindingSource Bileşeni](bindingsource-component.md)

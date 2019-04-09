@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27587c391b1d5cf5f5edb87cf5aa81d227869315
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 69fcc862e98e305105a6f17ca49940bd10cef39c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57464678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072564"
 ---
 # <a name="icorruntimehostenumdomains-method"></a>ICorRuntimeHost::EnumDomains Yöntemi
 Bir numaralandırıcı, geçerli işlem için etki alanlarını alır.  
@@ -58,4 +58,5 @@ HRESULT EnumDomains (
  **.NET framework sürümü:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICorRuntimeHost Arabirimi](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

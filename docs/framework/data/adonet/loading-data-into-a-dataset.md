@@ -1,18 +1,18 @@
 ---
-title: Bir veri kümesine veri yükleme
+title: DataSet’e Veri Yükleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a53e5dc1-9669-49d4-828d-efa633237066
-ms.openlocfilehash: 0f50638beb50220d06daef7bbd6002b319a92476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb5578d790e5d3f54f75f964bb3288d861c9d7c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074059"
 ---
-# <a name="loading-data-into-a-dataset"></a>Bir veri kümesine veri yükleme
+# <a name="loading-data-into-a-dataset"></a>DataSet’e Veri Yükleme
 A <xref:System.Data.DataSet> nesne, ilk ile ele sorgulayabilirsiniz önce doldurulmalıdır [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Doldurmak için birkaç farklı şekilde <xref:System.Data.DataSet>. Örneğin, kullanabileceğiniz [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] sonuçları içine yükleyin ve veritabanını sorgulamak için <xref:System.Data.DataSet>. Daha fazla bilgi için [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  
   
  Verileri yüklemek için başka bir yaygın yolu bir <xref:System.Data.DataSet> kullanmaktır <xref:System.Data.Common.DataAdapter> veritabanından veri almak için sınıf. Bu, aşağıdaki örnekte gösterilmiştir.  
@@ -24,6 +24,7 @@ A <xref:System.Data.DataSet> nesne, ilk ile ele sorgulayabilirsiniz önce doldur
  [!code-vb[DP LINQ to DataSet Examples#FillDataSet](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#filldataset)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to DataSet Genel Bakış](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

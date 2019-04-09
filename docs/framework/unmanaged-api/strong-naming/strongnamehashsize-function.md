@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad1f015f04b3829090417c26e8d58892ee15af4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c7e807b502e0905f9ae785203289447c71d25e04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072151"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize İşlevi
 Belirtilen karma algoritması kullanarak bir karma için gerekli arabellek boyutunu alır.  
@@ -60,5 +60,6 @@ BOOLEAN StrongNameHashSize (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [StrongNameHashSize Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)
 - [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

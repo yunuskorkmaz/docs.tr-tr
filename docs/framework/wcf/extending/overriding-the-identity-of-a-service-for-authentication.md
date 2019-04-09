@@ -5,22 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082197"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
 Genellikle, istemci kimlik bilgisi türü seçiminde kimlik hizmeti metaveri türünü belirler. çünkü bir hizmette kimlik ayarlamak gerekmez. Örneğin, aşağıdaki yapılandırma kodunu kullanır [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi ve kümelerini `clientCredentialType` Windows için özniteliği.  
-  
-  
-  
+
  Aşağıdaki Web Hizmetleri Açıklama Dili (WSDL) parçası için önceden tanımlanmış uç nokta kimliğini gösterir. Bu örnekte, hizmet belirli bir kullanıcı hesabının altında şirket içinde barındırılan bir hizmet olarak çalışıyor (username@contoso.com) ve bu nedenle kullanıcı asıl adı (UPN) kimlik hesap adı içeriyor. UPN bir Windows etki alanı kullanıcı oturum açma adını de denir.  
-  
-  
-  
+
  Kimlik ayarı gösteren örnek bir uygulama için bkz. [hizmet kimliği örneği](../../../../docs/framework/wcf/samples/service-identity-sample.md). Hizmet kimliği hakkında daha fazla bilgi için bkz: [kimlik doğrulama ile hizmet kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos kimlik doğrulaması ve kimlik  
@@ -52,13 +48,9 @@ Genellikle, istemci kimlik bilgisi türü seçiminde kimlik hizmeti metaveri tü
   
 ### <a name="using-the-identity-element-in-configuration"></a>Kullanarak \<kimlik > yapılandırma öğesi  
  Sertifika için daha önce gösterilen bağlamasında istemci kimlik bilgileri türünü değiştirirseniz`,` oluşturulan WSDL seri hale getirilmiş bir Base64 içeriyorsa aşağıdaki kodda gösterildiği gibi kimlik değeri için X.509 sertifikası. Windows dışındaki tüm istemci kimlik bilgisi türleri için varsayılan değer budur.  
-  
-  
-  
+
  Varsayılan hizmet kimliği değerini değiştirin ya da kullanarak kimlik türünü değiştirme <`identity`> öğesi yapılandırma veya kod kimliği ayarlama. Bir etki alanı adı sistemi (DNS) kimlik değerine sahip aşağıdaki yapılandırma kodunu ayarlar `contoso.com`.  
-  
-  
-  
+
 ### <a name="setting-identity-programmatically"></a>Kimlik programlı olarak ayarlama  
  WCF formu otomatik olarak belirlediğinden hizmetiniz bir kimlik açıkça belirtmek yok. Ancak, WCF, bir kimlik bir uç nokta belirtmek gerekirse sağlar. Aşağıdaki kod, belirli bir DNS kimliği ile yeni bir hizmet uç noktası ekler.  
   
@@ -66,5 +58,6 @@ Genellikle, istemci kimlik bilgisi türü seçiminde kimlik hizmeti metaveri tü
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [Kimlik Doğrulama ile Hizmet Kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f64431e7804ba6e068a3d05f512c6ead089d7712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079324"
 ---
 # <a name="animation-and-timing-system-overview"></a>Animasyon ve Zamanlama Sistemine Genel Bakış
 Bu konuda, zamanlama sistemi animasyon nasıl kullandığı açıklanmaktadır <xref:System.Windows.Media.Animation.Timeline>, ve <xref:System.Windows.Media.Animation.Clock> özelliklerine animasyon uygulamak için sınıflar.  
@@ -83,6 +83,7 @@ Bir oluşum zinciri
  Bir özelliğe animasyon eklediğinizde <xref:System.Windows.Media.Animation.AnimationClock> özelliğin ayarlar *geçerli* değeri. CLR erişeni aracılığıyla özelliğin değerini alma veya <xref:System.Windows.DependencyObject.GetValue%2A> yöntem çıkışı döndürür <xref:System.Windows.Media.Animation.AnimationClock> olduğunda <xref:System.Windows.Media.Animation.AnimationClock> olduğu <xref:System.Windows.Media.Animation.ClockState.Active> veya <xref:System.Windows.Media.Animation.ClockState.Filling>. Özelliğin taban değerini kullanarak alabilirsiniz <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Animasyona Genel bakış](animation-overview.md)
 - [Zamanlama Olaylarına Genel Bakış](timing-events-overview.md)
 - [Zamanlama Davranışlarına Genel Bakış](timing-behaviors-overview.md)

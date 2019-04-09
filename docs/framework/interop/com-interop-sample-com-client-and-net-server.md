@@ -1,5 +1,5 @@
 ---
-title: 'COM birlikte çalışma örneği: COM istemcisi ve .NET sunucusu'
+title: 'COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc2cd6b59fe7d05e4973d8a9ece13d9ae7f91e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a928dde8615589cbc8e502a9b5dd033beded4c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086760"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a>COM birlikte çalışma örneği: COM istemcisi ve .NET sunucusu
+# <a name="com-interop-sample-com-client-and-net-server"></a>COM Birlikte Çalışma Örneği: COM İstemcisi ve .NET Sunucusu
 Bu örnek, birlikte çalışabilirlik gösterir bir [COM istemcisi](#cpconcominteropsamplecomclientnetserveranchor1) ve [.NET sunucu](#cpconcominteropsamplecomclientnetserveranchor2) ipotek hesaplamalar gerçekleştiren. Bu örnekte, istemci oluşturur ve yönetilen örneği çağrıları `Loan` sınıfı, dört bağımsız değişken (Bu dört sıfıra eşit bir) geçirir örneği ve hesaplamalar görüntüler. Bu örnekteki kod örnekleri, bu bölümde görünür.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
@@ -390,4 +390,5 @@ namespace LoanLib {
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

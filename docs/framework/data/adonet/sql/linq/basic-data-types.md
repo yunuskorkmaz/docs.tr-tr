@@ -1,15 +1,15 @@
 ---
-title: Temel veri türleri
+title: Temel Veri Türleri
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b05bc69bdd6eea15806b8d928487da2c3f6503b5
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072889"
 ---
-# <a name="basic-data-types"></a>Temel veri türleri
+# <a name="basic-data-types"></a>Temel Veri Türleri
 Transact-SQL önce için LINQ to SQL sorgularında Çevir çünkü bunlar Microsoft SQL Server üzerinde yürütülür. LINQ to SQL, temel veri türleri için SQL Server'ın yaptığı aynı yerleşik işlevselliğinin destekler.  
   
 ## <a name="casting"></a>Atama  
@@ -23,5 +23,6 @@ Transact-SQL önce için LINQ to SQL sorgularında Çevir çünkü bunlar Micros
 -   Is işleci: `IS` Devralma eşleme kullanıldığında desteklenen çeviri işleci vardır. Bu doğrudan ayrıştırıcı sütununu test yerine bir nesne belirli bir varlık türüdür ve ayrıştırıcı sütunu üzerinde bir denetimi çevrildiğinde olup olmadığını belirlemek için kullanılabilir. Visual Basic hakkında daha fazla bilgi ve C# bulunan işleç, bkz: [işleci olan](~/docs/visual-basic/language-reference/operators/is-operator.md) ve [olduğu](~/docs/csharp/language-reference/keywords/is.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

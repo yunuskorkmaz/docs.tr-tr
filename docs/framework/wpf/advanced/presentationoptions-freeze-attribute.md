@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: 3ff4a3221392d6b247d0a486e4e1f0406f539362
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074670"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze Özniteliği
 Kümeleri <xref:System.Windows.Freezable.IsFrozen%2A> durumunu `true` çağırılarak <xref:System.Windows.Freezable> öğesi. Varsayılan davranışı bir <xref:System.Windows.Freezable> olmadan `PresentationOptions:Freeze` belirtilen özniteliği olan <xref:System.Windows.Freezable.IsFrozen%2A> olduğu `false` yükleme süresi ve genel bağlıdır <xref:System.Windows.Freezable> çalışma zamanında davranış.  
@@ -42,6 +42,7 @@ Kümeleri <xref:System.Windows.Freezable.IsFrozen%2A> durumunu `true` çağırı
  Herhangi bir değer `Freeze` dışında özniteliği `true` (büyük/küçük harfe duyarlı değil) bir yükleme zamanı hatası oluşturur. (Belirtme `Freeze` olarak özniteliği `false` bir hata değildir, ancak zaten şekilde ayarlayarak varsayılan `false` hiçbir şey yapılmaz).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Freezable>
 - [Freezable Nesnelerine Genel Bakış](freezable-objects-overview.md)
 - [mc:Ignorable Özniteliği](mc-ignorable-attribute.md)

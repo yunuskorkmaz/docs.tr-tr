@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 46f5b4b1a2721a07decb045cd3734ce6edaa0762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522043"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074761"
 ---
 # <a name="extending-clients"></a>İstemcileri Genişletme
 Bir arama uygulamasında hizmet modeli katmanını içine giden iletiler için yöntem çağrılarına uygulama kodunda çevirme, bunları temel alınan kanallara gönderme, geri dönüş değerlerine dönüştürür ve out Parametreleri sonuçları çevirme sorumludur uygulama kodu ve sonuçları çağırana geri döndürülüyor. Hizmet modeli uzantıları değiştirebilir veya yürütme veya iletişim davranışı ve istemci veya dağıtıcı işlevi, özel davranışlar, ileti ve parametre durdurma ve diğer genişletilebilirlik işlevlerini içeren özellikler uygular.  
@@ -115,7 +115,8 @@ Bir arama uygulamasında hizmet modeli katmanını içine giden iletiler için y
  Bir WCF istemcisi arasında durdurma gösteren örnekler için bkz. [nasıl yapılır: Parametreleri inceleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime>
 - <xref:System.ServiceModel.Dispatcher.ClientOperation>
-- [Nasıl yapılır: İstemcide iletileri denetleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
-- [Nasıl yapılır: Parametreleri inceleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Nasıl yapılır: İstemcide İletileri Denetleme veya Değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
+- [Nasıl yapılır: Parametreleri İnceleme veya Değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

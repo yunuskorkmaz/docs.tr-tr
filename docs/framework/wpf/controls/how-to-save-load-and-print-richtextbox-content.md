@@ -12,12 +12,12 @@ helpviewer_keywords:
 - RichTextBox control [WPF], printing
 - RichTextBox control [WPF], loading
 ms.assetid: ffb113d3-c68a-47ca-8ac0-882283f38326
-ms.openlocfilehash: bcb368ababaac15dd92b11e43c22dfb705a7c0b3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 90581bee7815dafd44c3cae18a8af7394fee1e9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072473"
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>Nasıl yapılır: RichTextBox İçeriğini Kaydetme, Yükleme ve Yazdırma
 Aşağıdaki örnek nasıl kaydedileceğini içeriğini gösterir bir <xref:System.Windows.Controls.RichTextBox> , içerik tekrar içine bir dosyaya yük <xref:System.Windows.Controls.RichTextBox>ve içeriği yazdır.  
@@ -34,5 +34,6 @@ Aşağıdaki örnek nasıl kaydedileceğini içeriğini gösterir bir <xref:Syst
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [RichTextBox Genel Bakış](richtextbox-overview.md)
-- [TextBox Genel Bakış](textbox-overview.md)
+
+- [RichTextBox Genel Bakışı](richtextbox-overview.md)
+- [TextBox Genel Bakışı](textbox-overview.md)

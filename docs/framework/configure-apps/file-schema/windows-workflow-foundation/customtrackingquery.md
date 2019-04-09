@@ -3,12 +3,12 @@ title: <customTrackingQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e108e89-1132-46b7-868a-c7f5c69dc89f
-ms.openlocfilehash: 4e525bc4c77649a6c6d70ddb2408b6ecce4a0f09
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92060260075017359d8a5f0500d52e52c2217d3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076659"
 ---
 # <a name="customtrackingquery"></a>\<customTrackingQuery >
 Kod etkinlikleriniz tanımlayan olayları izlemek için kullanılan sorguları koleksiyonunu temsil eder. Sorgu özel izleme kayıtları abone olmak izleme Katılımcısı için gereklidir.  
@@ -57,6 +57,7 @@ Kod etkinlikleriniz tanımlayan olayları izlemek için kullanılan sorguları k
 |[\<customTrackingQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/customtrackingquery.md)|Kod etkinlikleriniz tanımlayan olayları izlemek için kullanılan sorgu.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
 - [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Meta veri uç noktalarını güvenli hale getirme'
+title: 'Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: e7ba87a0e2a0a9dd0a4cd984dd88b4850a24040e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: be4bf9b3601e33d90306401abe1dce73f77d09e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076581"
 ---
-# <a name="how-to-secure-metadata-endpoints"></a>Nasıl yapılır: Meta veri uç noktalarını güvenli hale getirme
+# <a name="how-to-secure-metadata-endpoints"></a>Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme
 Bir hizmet için meta veriler, kötü niyetli bir kullanıcı yararlanabilen uygulamanızla ilgili gizli bilgiler içerebilir. Hizmet tüketicileri, hizmetinizi hakkındaki meta verileri almak için güvenli bir mekanizma da gerektirebilir. Bu nedenle, bazen meta verilerinizi güvenli bir uç noktayı kullanarak yayımlamak gereklidir.  
   
  Meta veri uç noktalarını, genellikle uygulama uç noktaları güvenliğini sağlamak için Windows Communication Foundation (WCF) tanımlanan standart güvenlik mekanizmalarını kullanılarak güvenli hale getirilir. (Daha fazla bilgi için [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
@@ -93,10 +93,11 @@ Bir hizmet için meta veriler, kötü niyetli bir kullanıcı yararlanabilen uyg
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Meta Veriler Hakkında Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

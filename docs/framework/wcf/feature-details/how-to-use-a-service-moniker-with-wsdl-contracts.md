@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: WSDL sözleşmeleriyle hizmet bilinen adı kullanma'
+title: 'Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b8729055c82e3ce1273e8a0cfae53a1f6d3c14e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081677"
 ---
-# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Nasıl yapılır: WSDL sözleşmeleriyle hizmet bilinen adı kullanma
+# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma
 Tamamen bağımsız bir COM birlikte çalışma istemciniz isteyebileceğiniz durumlar vardır. Hizmeti çağırmak istediğinizde bir MEX uç noktası ve DLL COM birlikte çalışması için kayıtlı olmayabilir WCF istemcisini açığa çıkarmamak. Bu durumlarda, hizmeti tanımlayan bir WSDL dosyası oluşturun ve WCF hizmet bilinen adını geçirin. Bu konu, bir WSDL WCF bilinen adını kullanarak çalışmaya WCF başlama örneği çağrılacak açıklar.  
   
 ### <a name="using-the-wsdl-service-moniker"></a>WSDL hizmet bilinen adı kullanma  
@@ -23,9 +23,7 @@ Tamamen bağımsız bir COM birlikte çalışma istemciniz isteyebileceğiniz du
      [!code-csharp[S_WSDL_Client#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wsdl_client/cs/service.cs#0)]  
   
 4.  Bir bağlama ad alanı, App.config hizmete ekleyin:  
-  
-  
-  
+
 5.  Uygulamanın okuma WSDL dosyası oluşturun. Adım 3 ve 4 ad alanlarını eklenmiş olduğundan, hizmetin tüm WSDL açıklaması göz atarak sorgulamak için IE kullanabilirsiniz `http://localhost/ServiceModelSamples/Service.svc?wsdl`. Dosyayı serviceWSDL.xml Internet Explorer'dan kaydedin. Adım 3 ve 4 ad belirtmezseniz, yukarıdaki URL'yi sorgulamasını döndürülen WSDL belgesinde tam WSDL olmayacaktır. WSDL belgesi döndürülen diğer WSDL belgeleri içe birkaç içeri aktarma deyimlerini içerir. Her içeri aktarma deyimi aracılığıyla gidin ve tam bir WSDL belgesi oluşturmak WSDL içe WSDL ile hizmetten döndürülen birleştirme gerekir.  
   
 6.  Visual Basic 6.0 açın ve yeni bir standart .exe dosyası oluşturun. Forma bir düğme ekleyin ve aşağıdaki kodu için tıklama işleyicisi eklemek için Ekle düğmesine çift tıklayın:  
@@ -57,5 +55,6 @@ Tamamen bağımsız bir COM birlikte çalışma istemciniz isteyebileceğiniz du
 7.  Visual Basic uygulamasını çalıştırın. Bir ileti kutusu arama çıkarma (145, 76.54) sonuçlarını görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)
 - [COM Uygulamaları ile Tümleştirme Genel Bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

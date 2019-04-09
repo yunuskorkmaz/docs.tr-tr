@@ -4,12 +4,12 @@ description: Eklentileri destekleyen bir .NET Core uygulaması oluşturmayı ö�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 85ea06d56ed1c3312a010c5e575dd193c00b93e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a9431ee28c7df21a8688f845be20e062eca21887
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076815"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Eklenti ile .NET Core uygulaması oluşturma
 
@@ -111,8 +111,6 @@ IEnumerable<ICommand> commands = pluginPaths.SelectMany(pluginPath =>
     return CreateCommands(pluginAssembly);
 }).ToList();
 ```
-
-
 
 Ardından değiştirin `// Output the loaded commands` aşağıdaki kod parçacığı ile Açıklama:
 

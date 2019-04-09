@@ -1,18 +1,18 @@
 ---
-title: DataSet'e XSLT dönüşümü uygulama
+title: DataSet’e XSLT Dönüşümü Uygulama
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: b665fc9593cd73e759625bdfd537581958f8734d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b3aca6a71f88762084934d0d9c7cea15b5366c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072603"
 ---
-# <a name="applying-an-xslt-transform-to-a-dataset"></a>DataSet'e XSLT dönüşümü uygulama
+# <a name="applying-an-xslt-transform-to-a-dataset"></a>DataSet’e XSLT Dönüşümü Uygulama
 **WriteXml** yöntemi <xref:System.Data.DataSet> içeriğini yazmanızı sağlayan bir **veri kümesi** XML verileri olarak. Ardından bu XML XSL Dönüşümleri (XSLT) kullanarak başka bir biçime dönüştürmek için genel bir görevdir. Bununla birlikte, eşitleme bir **veri kümesi** ile bir <xref:System.Xml.XmlDataDocument> bir XSLT stil sayfası içeriğini sağlayan bir **veri kümesi** ilk içeriğini yazmak zorunda kalmadan  **Veri kümesi** kullanarak XML verilerini olarak **WriteXml**.  
   
  Aşağıdaki örnek dolduran bir **veri kümesi** tablolar ve ilişkiler ile eşitler **veri kümesi** ile bir **XmlDataDocument**ve bir kısmı Yazar **Veri kümesi** bir HTML dosyası kullanarak bir XSLT stil sayfası. XSLT stil sayfası içeriğini aşağıda verilmiştir.  
@@ -124,5 +124,6 @@ writer.Close();
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
