@@ -17,30 +17,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c88b69f672f58f3f9916ad189f6e560d9f4151a5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b3f70d2d90df43fdfe759387bebd776736843a1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087514"
 ---
-# <a name="icordebugenumreset-method"></a><span data-ttu-id="03cfd-102">ICorDebugEnum::Reset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="03cfd-102">ICorDebugEnum::Reset Method</span></span>
-<span data-ttu-id="03cfd-103">İmleç numaralandırma başlangıcına taşır.</span><span class="sxs-lookup"><span data-stu-id="03cfd-103">Moves the cursor to the beginning of the enumeration.</span></span>  
+# <a name="icordebugenumreset-method"></a><span data-ttu-id="cf554-102">ICorDebugEnum::Reset Yöntemi</span><span class="sxs-lookup"><span data-stu-id="cf554-102">ICorDebugEnum::Reset Method</span></span>
+<span data-ttu-id="cf554-103">İmleç numaralandırma başlangıcına taşır.</span><span class="sxs-lookup"><span data-stu-id="cf554-103">Moves the cursor to the beginning of the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03cfd-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="03cfd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cf554-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cf554-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="03cfd-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="03cfd-105">Requirements</span></span>  
- <span data-ttu-id="03cfd-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03cfd-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cf554-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cf554-105">Requirements</span></span>  
+ <span data-ttu-id="cf554-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf554-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03cfd-107">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="03cfd-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cf554-107">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cf554-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="03cfd-108">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03cfd-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cf554-108">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cf554-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="03cfd-109">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03cfd-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="cf554-109">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="cf554-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="03cfd-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="03cfd-110">See also</span></span>
-- [<span data-ttu-id="03cfd-111">Icordebugenum arabirimi</span><span class="sxs-lookup"><span data-stu-id="03cfd-111">ICorDebugEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+## <a name="see-also"></a><span data-ttu-id="cf554-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cf554-110">See also</span></span>
+
+- [<span data-ttu-id="cf554-111">ICorDebugEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cf554-111">ICorDebugEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

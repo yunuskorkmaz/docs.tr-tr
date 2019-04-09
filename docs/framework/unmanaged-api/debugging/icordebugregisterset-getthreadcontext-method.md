@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1ee576f41d20fdf4523fb4b566c3f2ce870d62c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: fecbcff0fd124b94aeeecf82e23d9875c34ebb9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091583"
 ---
-# <a name="icordebugregistersetgetthreadcontext-method"></a><span data-ttu-id="e7db7-102">ICorDebugRegisterSet::GetThreadContext Metodu</span><span class="sxs-lookup"><span data-stu-id="e7db7-102">ICorDebugRegisterSet::GetThreadContext Method</span></span>
-<span data-ttu-id="e7db7-103">Geçerli iş parçacığı bağlamını alır.</span><span class="sxs-lookup"><span data-stu-id="e7db7-103">Gets the context of the current thread.</span></span>  
+# <a name="icordebugregistersetgetthreadcontext-method"></a><span data-ttu-id="98f32-102">ICorDebugRegisterSet::GetThreadContext Metodu</span><span class="sxs-lookup"><span data-stu-id="98f32-102">ICorDebugRegisterSet::GetThreadContext Method</span></span>
+<span data-ttu-id="98f32-103">Geçerli iş parçacığı bağlamını alır.</span><span class="sxs-lookup"><span data-stu-id="98f32-103">Gets the context of the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7db7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e7db7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98f32-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="98f32-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadContext(  
@@ -37,27 +37,28 @@ HRESULT GetThreadContext(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e7db7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e7db7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="98f32-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="98f32-105">Parameters</span></span>  
  `contextSize`  
- <span data-ttu-id="e7db7-106">[in] Bayt cinsinden boyutu, `context` dizisi.</span><span class="sxs-lookup"><span data-stu-id="e7db7-106">[in] The size, in bytes, of the `context` array.</span></span>  
+ <span data-ttu-id="98f32-106">[in] Bayt cinsinden boyutu, `context` dizisi.</span><span class="sxs-lookup"><span data-stu-id="98f32-106">[in] The size, in bytes, of the `context` array.</span></span>  
   
  `context`  
- <span data-ttu-id="e7db7-107">[out içinde] Win32 oluşturan bir bayt dizisi `CONTEXT` geçerli platform için yapısı.</span><span class="sxs-lookup"><span data-stu-id="e7db7-107">[in, out] An array of bytes that compose the Win32 `CONTEXT` structure for the current platform.</span></span>  
+ <span data-ttu-id="98f32-107">[out içinde] Win32 oluşturan bir bayt dizisi `CONTEXT` geçerli platform için yapısı.</span><span class="sxs-lookup"><span data-stu-id="98f32-107">[in, out] An array of bytes that compose the Win32 `CONTEXT` structure for the current platform.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e7db7-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e7db7-108">Remarks</span></span>  
- <span data-ttu-id="e7db7-109">Hata ayıklayıcı Win32 yerine bu işlevi çağırmanız gerekir `GetThreadContext` işlev çünkü iş parçacığı burada onun içeriği geçici olarak değiştirildi "ele geçirilen" bir durumda olabilir.</span><span class="sxs-lookup"><span data-stu-id="e7db7-109">The debugger should call this function instead of the Win32 `GetThreadContext` function, because the thread may be in a "hijacked" state where its context has been temporarily changed.</span></span> <span data-ttu-id="e7db7-110">Döndürülen veriler bir Win32, `CONTEXT` geçerli platform için yapısı.</span><span class="sxs-lookup"><span data-stu-id="e7db7-110">The data returned is a Win32 `CONTEXT` structure for the current platform.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="98f32-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="98f32-108">Remarks</span></span>  
+ <span data-ttu-id="98f32-109">Hata ayıklayıcı Win32 yerine bu işlevi çağırmanız gerekir `GetThreadContext` işlev çünkü iş parçacığı burada onun içeriği geçici olarak değiştirildi "ele geçirilen" bir durumda olabilir.</span><span class="sxs-lookup"><span data-stu-id="98f32-109">The debugger should call this function instead of the Win32 `GetThreadContext` function, because the thread may be in a "hijacked" state where its context has been temporarily changed.</span></span> <span data-ttu-id="98f32-110">Döndürülen veriler bir Win32, `CONTEXT` geçerli platform için yapısı.</span><span class="sxs-lookup"><span data-stu-id="98f32-110">The data returned is a Win32 `CONTEXT` structure for the current platform.</span></span>  
   
- <span data-ttu-id="e7db7-111">Yaprak olmayan çerçeveler için istemcileri hangi kayıtları kullanarak geçerli olduğunu denetlemeniz gerekir [Icordebugregisterset::getregistersavailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).</span><span class="sxs-lookup"><span data-stu-id="e7db7-111">For non-leaf frames, clients should check which registers are valid by using [ICorDebugRegisterSet::GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).</span></span>  
+ <span data-ttu-id="98f32-111">Yaprak olmayan çerçeveler için istemcileri hangi kayıtları kullanarak geçerli olduğunu denetlemeniz gerekir [Icordebugregisterset::getregistersavailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).</span><span class="sxs-lookup"><span data-stu-id="98f32-111">For non-leaf frames, clients should check which registers are valid by using [ICorDebugRegisterSet::GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7db7-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e7db7-112">Requirements</span></span>  
- <span data-ttu-id="e7db7-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7db7-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98f32-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="98f32-112">Requirements</span></span>  
+ <span data-ttu-id="98f32-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="98f32-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7db7-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e7db7-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="98f32-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="98f32-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e7db7-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7db7-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="98f32-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="98f32-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e7db7-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7db7-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="98f32-116">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="98f32-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e7db7-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e7db7-117">See also</span></span>
-- [<span data-ttu-id="e7db7-118">ICorDebugRegisterSet Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e7db7-118">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [<span data-ttu-id="e7db7-119">ICorDebugRegisterSet2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e7db7-119">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="98f32-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="98f32-117">See also</span></span>
+
+- [<span data-ttu-id="98f32-118">ICorDebugRegisterSet Arabirimi</span><span class="sxs-lookup"><span data-stu-id="98f32-118">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [<span data-ttu-id="98f32-119">ICorDebugRegisterSet2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="98f32-119">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

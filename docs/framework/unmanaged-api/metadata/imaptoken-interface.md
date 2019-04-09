@@ -16,33 +16,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 579f925498f6ded83c5e90137d04020e610599b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111676"
 ---
-# <a name="imaptoken-interface"></a><span data-ttu-id="bf9b4-102">IMapToken Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bf9b4-102">IMapToken Interface</span></span>
-<span data-ttu-id="bf9b4-103">Derlemeler arasında eşleme özellikleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="bf9b4-103">Provides mapping capabilities between assemblies.</span></span>  
+# <a name="imaptoken-interface"></a><span data-ttu-id="c1dc4-102">IMapToken Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c1dc4-102">IMapToken Interface</span></span>
+<span data-ttu-id="c1dc4-103">Derlemeler arasında eşleme özellikleri sağlar.</span><span class="sxs-lookup"><span data-stu-id="c1dc4-103">Provides mapping capabilities between assemblies.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bf9b4-104">`IMapToken` İstemci tarafından arabirimi uygulanır.</span><span class="sxs-lookup"><span data-stu-id="bf9b4-104">The `IMapToken` interface must be implemented by the client.</span></span>  
+>  <span data-ttu-id="c1dc4-104">`IMapToken` İstemci tarafından arabirimi uygulanır.</span><span class="sxs-lookup"><span data-stu-id="c1dc4-104">The `IMapToken` interface must be implemented by the client.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="bf9b4-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="bf9b4-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c1dc4-105">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="c1dc4-105">Methods</span></span>  
   
-|<span data-ttu-id="bf9b4-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="bf9b4-106">Method</span></span>|<span data-ttu-id="bf9b4-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bf9b4-107">Description</span></span>|  
+|<span data-ttu-id="c1dc4-106">Yöntem</span><span class="sxs-lookup"><span data-stu-id="c1dc4-106">Method</span></span>|<span data-ttu-id="c1dc4-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c1dc4-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="bf9b4-108">Map Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bf9b4-108">Map Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|<span data-ttu-id="bf9b4-109">İki derleme meta verileri imza kullanma arasında bir ilişki eşler.</span><span class="sxs-lookup"><span data-stu-id="bf9b4-109">Maps a relationship between two assemblies using metadata signatures.</span></span>|  
+|[<span data-ttu-id="c1dc4-108">Map Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c1dc4-108">Map Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|<span data-ttu-id="c1dc4-109">İki derleme meta verileri imza kullanma arasında bir ilişki eşler.</span><span class="sxs-lookup"><span data-stu-id="c1dc4-109">Maps a relationship between two assemblies using metadata signatures.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="bf9b4-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bf9b4-110">Requirements</span></span>  
- <span data-ttu-id="bf9b4-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bf9b4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c1dc4-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c1dc4-110">Requirements</span></span>  
+ <span data-ttu-id="c1dc4-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c1dc4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf9b4-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="bf9b4-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c1dc4-112">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c1dc4-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bf9b4-113">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="bf9b4-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c1dc4-113">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="c1dc4-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bf9b4-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf9b4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="c1dc4-114">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="c1dc4-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="bf9b4-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bf9b4-115">See also</span></span>
-- [<span data-ttu-id="bf9b4-116">Meta Veri Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="bf9b4-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="c1dc4-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c1dc4-115">See also</span></span>
+
+- [<span data-ttu-id="c1dc4-116">Meta Veri Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="c1dc4-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

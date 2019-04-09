@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama'
+title: 'Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 81bf7db9ec25ae112127712dcd0443d3e045bc10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2aa85aa9682f1f5f4b6c13465034000bb01f0e62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075209"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a><span data-ttu-id="b8b9e-102">Nasıl yapılır: Bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama</span><span class="sxs-lookup"><span data-stu-id="b8b9e-102">How to: Publish Metadata for a Service Using a Configuration File</span></span>
-<span data-ttu-id="b8b9e-103">Bu, bir Windows Communication Foundation (WCF) hizmet için meta verileri yayımlama gösteren iki nasıl yapılır konuları biridir.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-103">This is one of two how-to topics that demonstrate publishing metadata for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="b8b9e-104">Hizmet yapılandırma dosyasını ve kod kullanarak meta verileri nasıl yayımlamalısınız belirtmenin iki yolu vardır.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-104">There are two ways to specify how a service should publish metadata, using a configuration file and using code.</span></span> <span data-ttu-id="b8b9e-105">Bu konuda, bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-105">This topic shows how to publish metadata for a service using a configuration file.</span></span>  
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a><span data-ttu-id="183d4-102">Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama</span><span class="sxs-lookup"><span data-stu-id="183d4-102">How to: Publish Metadata for a Service Using a Configuration File</span></span>
+<span data-ttu-id="183d4-103">Bu, bir Windows Communication Foundation (WCF) hizmet için meta verileri yayımlama gösteren iki nasıl yapılır konuları biridir.</span><span class="sxs-lookup"><span data-stu-id="183d4-103">This is one of two how-to topics that demonstrate publishing metadata for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="183d4-104">Hizmet yapılandırma dosyasını ve kod kullanarak meta verileri nasıl yayımlamalısınız belirtmenin iki yolu vardır.</span><span class="sxs-lookup"><span data-stu-id="183d4-104">There are two ways to specify how a service should publish metadata, using a configuration file and using code.</span></span> <span data-ttu-id="183d4-105">Bu konuda, bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="183d4-105">This topic shows how to publish metadata for a service using a configuration file.</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="b8b9e-106">Bu konu, güvenli bir şekilde meta verileri yayımlama gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-106">This topic shows how to publish metadata in an unsecure manner.</span></span> <span data-ttu-id="b8b9e-107">Herhangi bir istemci hizmet meta verileri alabilir.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-107">Any client can retrieve the metadata from the service.</span></span> <span data-ttu-id="b8b9e-108">Meta verileri güvenli bir şekilde yayımlamak için hizmetinize ihtiyaç duyuyorsanız bkz [özel güvenli meta veri uç noktası](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).</span><span class="sxs-lookup"><span data-stu-id="b8b9e-108">If you require your service to publish metadata in a secure manner, see [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).</span></span>  
+>  <span data-ttu-id="183d4-106">Bu konu, güvenli bir şekilde meta verileri yayımlama gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="183d4-106">This topic shows how to publish metadata in an unsecure manner.</span></span> <span data-ttu-id="183d4-107">Herhangi bir istemci hizmet meta verileri alabilir.</span><span class="sxs-lookup"><span data-stu-id="183d4-107">Any client can retrieve the metadata from the service.</span></span> <span data-ttu-id="183d4-108">Meta verileri güvenli bir şekilde yayımlamak için hizmetinize ihtiyaç duyuyorsanız bkz [özel güvenli meta veri uç noktası](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).</span><span class="sxs-lookup"><span data-stu-id="183d4-108">If you require your service to publish metadata in a secure manner, see [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).</span></span>  
   
- <span data-ttu-id="b8b9e-109">Kod meta verileri yayımlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Kod kullanarak bir hizmet için meta verileri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span><span class="sxs-lookup"><span data-stu-id="b8b9e-109">For more information about publishing metadata in code, see [How to: Publish Metadata for a Service Using Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span></span> <span data-ttu-id="b8b9e-110">Meta veri yayımlama sağlayan bir WS aktarım GET isteği ya da bir HTTP/GET isteği kullanılarak kullanarak meta verileri almak istemcileri `?wsdl` sorgu dizesi.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-110">Publishing metadata allows clients to retrieve the metadata using a WS-Transfer GET request or an HTTP/GET request using the `?wsdl` query string.</span></span> <span data-ttu-id="b8b9e-111">Kod çalıştığından emin olmak için temel bir WCF hizmeti oluşturma.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-111">To be sure that the code is working, create a basic WCF service.</span></span> <span data-ttu-id="b8b9e-112">Kolaylık olması için aşağıdaki kodda temel şirket içinde barındırılan bir hizmet sağlanır.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-112">For simplicity, a basic self-hosted service is provided in the following code.</span></span>  
+ <span data-ttu-id="183d4-109">Kod meta verileri yayımlama hakkında daha fazla bilgi için bkz: [nasıl yapılır: Kod kullanarak bir hizmet için meta verileri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span><span class="sxs-lookup"><span data-stu-id="183d4-109">For more information about publishing metadata in code, see [How to: Publish Metadata for a Service Using Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span></span> <span data-ttu-id="183d4-110">Meta veri yayımlama sağlayan bir WS aktarım GET isteği ya da bir HTTP/GET isteği kullanılarak kullanarak meta verileri almak istemcileri `?wsdl` sorgu dizesi.</span><span class="sxs-lookup"><span data-stu-id="183d4-110">Publishing metadata allows clients to retrieve the metadata using a WS-Transfer GET request or an HTTP/GET request using the `?wsdl` query string.</span></span> <span data-ttu-id="183d4-111">Kod çalıştığından emin olmak için temel bir WCF hizmeti oluşturma.</span><span class="sxs-lookup"><span data-stu-id="183d4-111">To be sure that the code is working, create a basic WCF service.</span></span> <span data-ttu-id="183d4-112">Kolaylık olması için aşağıdaki kodda temel şirket içinde barındırılan bir hizmet sağlanır.</span><span class="sxs-lookup"><span data-stu-id="183d4-112">For simplicity, a basic self-hosted service is provided in the following code.</span></span>  
   
 ```csharp  
 using System;  
@@ -71,7 +71,7 @@ namespace Metadata.Samples
 }  
 ```  
   
- <span data-ttu-id="b8b9e-113">Bu hizmet bir yapılandırma dosyası kullanılarak yapılandırılan şirket içinde barındırılan bir hizmettir.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-113">This service is a self-hosted service, which is configured using a configuration file.</span></span> <span data-ttu-id="b8b9e-114">Aşağıdaki yapılandırma dosyası, başlangıç noktası olarak görev yapar.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-114">The following configuration file serves as a starting point.</span></span>  
+ <span data-ttu-id="183d4-113">Bu hizmet bir yapılandırma dosyası kullanılarak yapılandırılan şirket içinde barındırılan bir hizmettir.</span><span class="sxs-lookup"><span data-stu-id="183d4-113">This service is a self-hosted service, which is configured using a configuration file.</span></span> <span data-ttu-id="183d4-114">Aşağıdaki yapılandırma dosyası, başlangıç noktası olarak görev yapar.</span><span class="sxs-lookup"><span data-stu-id="183d4-114">The following configuration file serves as a starting point.</span></span>  
   
 ```xml  
 <configuration>  
@@ -90,25 +90,17 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a><span data-ttu-id="b8b9e-115">Uygulama yapılandırma dosyası kullanarak bir WCF hizmeti için meta verileri yayımlama</span><span class="sxs-lookup"><span data-stu-id="b8b9e-115">To publish metadata for a WCF service using an application configuration file</span></span>  
+### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a><span data-ttu-id="183d4-115">Uygulama yapılandırma dosyası kullanarak bir WCF hizmeti için meta verileri yayımlama</span><span class="sxs-lookup"><span data-stu-id="183d4-115">To publish metadata for a WCF service using an application configuration file</span></span>  
   
-1.  <span data-ttu-id="b8b9e-116">App.config dosyasında Kapanıştan sonra `</services>` öğesi oluşturmak bir `<behaviors>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-116">Within the App.config file, after the closing `</services>` element, create a `<behaviors>` element.</span></span>  
-  
-  
-  
-2.  <span data-ttu-id="b8b9e-117">İçinde `<behaviors>` öğe, Ekle bir `<serviceBehaviors>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-117">Within the `<behaviors>` element, add a `<serviceBehaviors>` element.</span></span>  
-  
-  
-  
-3.  <span data-ttu-id="b8b9e-118">Ekleme bir `<behavior>` öğesine `<serviceBehaviors>` öğesi için bir değer belirtin `name` özniteliği `<behavior>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-118">Add a `<behavior>` element to the `<serviceBehaviors>` element and specify a value for the `name` attribute of the `<behavior>` element.</span></span>  
-  
-  
-  
-4.  <span data-ttu-id="b8b9e-119">Ekleme bir `<serviceMetadata>` öğesine `<behavior>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-119">Add a `<serviceMetadata>` element to the `<behavior>` element.</span></span> <span data-ttu-id="b8b9e-120">Ayarlama `httpGetEnabled` özniteliğini `true` ve `policyVersion` Policy15 için özniteliği.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-120">Set the `httpGetEnabled` attribute to `true` and the `policyVersion` attribute to Policy15.</span></span> <span data-ttu-id="b8b9e-121">`httpGetEnabled` bir HTTP GET isteği tarafından yapılan meta veri isteklerine hizmet verir.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-121">`httpGetEnabled` allows the service to respond to metadata requests made by an HTTP GET request.</span></span> <span data-ttu-id="b8b9e-122">`policyVersion` Hizmet meta verilerini oluştururken için WS-Policy 1.5 uyacak şekilde söyler.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-122">`policyVersion` tells the service to conform to WS-Policy 1.5 when generating metadata.</span></span>  
-  
-  
-  
-5.  <span data-ttu-id="b8b9e-123">Ekleme bir `behaviorConfiguration` özniteliğini `<service>` öğe belirtin `name` özniteliği `<behavior>` adım 1'de aşağıdaki kod örneğinde gösterildiği gibi eklenen öğe.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-123">Add a `behaviorConfiguration` attribute to the `<service>` element and specify the `name` attribute of the `<behavior>` element added in step 1, as shown in the following code example.</span></span>  
+1.  <span data-ttu-id="183d4-116">App.config dosyasında Kapanıştan sonra `</services>` öğesi oluşturmak bir `<behaviors>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="183d4-116">Within the App.config file, after the closing `</services>` element, create a `<behaviors>` element.</span></span>  
+
+2.  <span data-ttu-id="183d4-117">İçinde `<behaviors>` öğe, Ekle bir `<serviceBehaviors>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="183d4-117">Within the `<behaviors>` element, add a `<serviceBehaviors>` element.</span></span>  
+
+3.  <span data-ttu-id="183d4-118">Ekleme bir `<behavior>` öğesine `<serviceBehaviors>` öğesi için bir değer belirtin `name` özniteliği `<behavior>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="183d4-118">Add a `<behavior>` element to the `<serviceBehaviors>` element and specify a value for the `name` attribute of the `<behavior>` element.</span></span>  
+
+4.  <span data-ttu-id="183d4-119">Ekleme bir `<serviceMetadata>` öğesine `<behavior>` öğesi.</span><span class="sxs-lookup"><span data-stu-id="183d4-119">Add a `<serviceMetadata>` element to the `<behavior>` element.</span></span> <span data-ttu-id="183d4-120">Ayarlama `httpGetEnabled` özniteliğini `true` ve `policyVersion` Policy15 için özniteliği.</span><span class="sxs-lookup"><span data-stu-id="183d4-120">Set the `httpGetEnabled` attribute to `true` and the `policyVersion` attribute to Policy15.</span></span> `httpGetEnabled` <span data-ttu-id="183d4-121">bir HTTP GET isteği tarafından yapılan meta veri isteklerine hizmet verir.</span><span class="sxs-lookup"><span data-stu-id="183d4-121">allows the service to respond to metadata requests made by an HTTP GET request.</span></span> `policyVersion` <span data-ttu-id="183d4-122">Hizmet meta verilerini oluştururken için WS-Policy 1.5 uyacak şekilde söyler.</span><span class="sxs-lookup"><span data-stu-id="183d4-122">tells the service to conform to WS-Policy 1.5 when generating metadata.</span></span>  
+
+5.  <span data-ttu-id="183d4-123">Ekleme bir `behaviorConfiguration` özniteliğini `<service>` öğe belirtin `name` özniteliği `<behavior>` adım 1'de aşağıdaki kod örneğinde gösterildiği gibi eklenen öğe.</span><span class="sxs-lookup"><span data-stu-id="183d4-123">Add a `behaviorConfiguration` attribute to the `<service>` element and specify the `name` attribute of the `<behavior>` element added in step 1, as shown in the following code example.</span></span>  
   
     ```xml  
     <services>  
@@ -127,7 +119,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6.  <span data-ttu-id="b8b9e-124">Bir veya daha fazla Ekle `<endpoint>` sözleşmesi öğeleri kümesine `IMetadataExchange`aşağıdaki kod örneğinde gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-124">Add one or more `<endpoint>` elements with the contract set to `IMetadataExchange`, as shown in the following code example.</span></span>  
+6.  <span data-ttu-id="183d4-124">Bir veya daha fazla Ekle `<endpoint>` sözleşmesi öğeleri kümesine `IMetadataExchange`aşağıdaki kod örneğinde gösterildiği gibi.</span><span class="sxs-lookup"><span data-stu-id="183d4-124">Add one or more `<endpoint>` elements with the contract set to `IMetadataExchange`, as shown in the following code example.</span></span>  
   
     ```xml  
     <services>  
@@ -146,31 +138,31 @@ namespace Metadata.Samples
     </services>  
     ```  
   
-7.  <span data-ttu-id="b8b9e-125">Önceki adımda eklediğiniz meta veri uç noktaları için `binding` öznitelik aşağıdakilerden biri:</span><span class="sxs-lookup"><span data-stu-id="b8b9e-125">For the metadata endpoints added in the previous step, set the `binding` attribute to one of the following:</span></span>  
+7.  <span data-ttu-id="183d4-125">Önceki adımda eklediğiniz meta veri uç noktaları için `binding` öznitelik aşağıdakilerden biri:</span><span class="sxs-lookup"><span data-stu-id="183d4-125">For the metadata endpoints added in the previous step, set the `binding` attribute to one of the following:</span></span>  
   
-    -   <span data-ttu-id="b8b9e-126">`mexHttpBinding` için HTTP yayımlama.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-126">`mexHttpBinding` for HTTP publication.</span></span>  
+    -   `mexHttpBinding` <span data-ttu-id="183d4-126">için HTTP yayımlama.</span><span class="sxs-lookup"><span data-stu-id="183d4-126">for HTTP publication.</span></span>  
   
-    -   <span data-ttu-id="b8b9e-127">`mexHttpsBinding` HTTPS için yayımlama.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-127">`mexHttpsBinding` for HTTPS publication.</span></span>  
+    -   `mexHttpsBinding` <span data-ttu-id="183d4-127">HTTPS için yayımlama.</span><span class="sxs-lookup"><span data-stu-id="183d4-127">for HTTPS publication.</span></span>  
   
-    -   <span data-ttu-id="b8b9e-128">`mexNamedPipeBinding` adlandırılmış kanal yayını.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-128">`mexNamedPipeBinding` for named pipe publication.</span></span>  
+    -   `mexNamedPipeBinding` <span data-ttu-id="183d4-128">adlandırılmış kanal yayını.</span><span class="sxs-lookup"><span data-stu-id="183d4-128">for named pipe publication.</span></span>  
   
-    -   <span data-ttu-id="b8b9e-129">`mexTcpBinding` için TCP yayımlama.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-129">`mexTcpBinding` for TCP publication.</span></span>  
+    -   `mexTcpBinding` <span data-ttu-id="183d4-129">için TCP yayımlama.</span><span class="sxs-lookup"><span data-stu-id="183d4-129">for TCP publication.</span></span>  
   
-8.  <span data-ttu-id="b8b9e-130">Bir önceki adımda eklediğiniz meta veri uç noktaları, adresi eşit olarak ayarlayın:</span><span class="sxs-lookup"><span data-stu-id="b8b9e-130">For the metadata endpoints added in a previous step, set the address equal to:</span></span>  
+8.  <span data-ttu-id="183d4-130">Bir önceki adımda eklediğiniz meta veri uç noktaları, adresi eşit olarak ayarlayın:</span><span class="sxs-lookup"><span data-stu-id="183d4-130">For the metadata endpoints added in a previous step, set the address equal to:</span></span>  
   
-    -   <span data-ttu-id="b8b9e-131">Taban adresi meta veri bağlama ile aynı olduğunda konak uygulamanın temel adres yayın noktası olarak kullanmak için boş bir dize.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-131">An empty string to use the host application's base address as the publication point if the base address is the same as the metadata binding.</span></span>  
+    -   <span data-ttu-id="183d4-131">Taban adresi meta veri bağlama ile aynı olduğunda konak uygulamanın temel adres yayın noktası olarak kullanmak için boş bir dize.</span><span class="sxs-lookup"><span data-stu-id="183d4-131">An empty string to use the host application's base address as the publication point if the base address is the same as the metadata binding.</span></span>  
   
-    -   <span data-ttu-id="b8b9e-132">Konak uygulamanın temel adres varsa göreli bir adres.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-132">A relative address if the host application has a base address.</span></span>  
+    -   <span data-ttu-id="183d4-132">Konak uygulamanın temel adres varsa göreli bir adres.</span><span class="sxs-lookup"><span data-stu-id="183d4-132">A relative address if the host application has a base address.</span></span>  
   
-    -   <span data-ttu-id="b8b9e-133">Mutlak bir adres.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-133">An absolute address.</span></span>  
+    -   <span data-ttu-id="183d4-133">Mutlak bir adres.</span><span class="sxs-lookup"><span data-stu-id="183d4-133">An absolute address.</span></span>  
   
-9. <span data-ttu-id="b8b9e-134">Konsol uygulamasını derleyin ve çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-134">Build and run the console application.</span></span>  
+9. <span data-ttu-id="183d4-134">Konsol uygulamasını derleyin ve çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="183d4-134">Build and run the console application.</span></span>  
   
-10. <span data-ttu-id="b8b9e-135">Hizmetin taban adresine göz atmak için Internet Explorer'ı kullanın (http://localhost:8001/MetadataSample Bu örnekte) ve meta veri yayımlama açık olduğunu doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-135">Use Internet Explorer to browse to the base address of the service (http://localhost:8001/MetadataSample in this sample) and verify that the metadata publishing is turned on.</span></span> <span data-ttu-id="b8b9e-136">Aksi durumda, sonuçta elde edilen sayfanın üst kısmındaki bir ileti görüntüler: "Bu hizmet için meta veri yayımlama şu anda devre dışı bırakıldı."</span><span class="sxs-lookup"><span data-stu-id="b8b9e-136">If not, a message at the top of the resulting page displays: "Metadata publishing for this service is currently disabled."</span></span>  
+10. <span data-ttu-id="183d4-135">Hizmetin taban adresine göz atmak için Internet Explorer'ı kullanın (http://localhost:8001/MetadataSample Bu örnekte) ve meta veri yayımlama açık olduğunu doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="183d4-135">Use Internet Explorer to browse to the base address of the service (http://localhost:8001/MetadataSample in this sample) and verify that the metadata publishing is turned on.</span></span> <span data-ttu-id="183d4-136">Aksi durumda, sonuçta elde edilen sayfanın üst kısmındaki bir ileti görüntüler: "Bu hizmet için meta veri yayımlama şu anda devre dışı bırakıldı."</span><span class="sxs-lookup"><span data-stu-id="183d4-136">If not, a message at the top of the resulting page displays: "Metadata publishing for this service is currently disabled."</span></span>  
   
-### <a name="to-use-default-endpoints"></a><span data-ttu-id="b8b9e-137">Varsayılan uç noktalarını kullanacak şekilde</span><span class="sxs-lookup"><span data-stu-id="b8b9e-137">To use default endpoints</span></span>  
+### <a name="to-use-default-endpoints"></a><span data-ttu-id="183d4-137">Varsayılan uç noktalarını kullanacak şekilde</span><span class="sxs-lookup"><span data-stu-id="183d4-137">To use default endpoints</span></span>  
   
-1.  <span data-ttu-id="b8b9e-138">Varsayılan uç noktalarını kullanan bir hizmet üzerinde meta verileri yapılandırmak için belirtmeniz <xref:System.ServiceModel.Description.ServiceMetadataBehavior> yapılandırma dosyasını önceki örnekte olduğu gibi ancak tüm uç noktalar belirtmeyin.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-138">To configure metadata on a service that uses default endpoints, specify the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in the configuration file as in the previous example, but do not specify any endpoints.</span></span> <span data-ttu-id="b8b9e-139">Yapılandırma dosyası, ardından şöyle görünebilir.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-139">The configuration file would then look like this.</span></span>  
+1.  <span data-ttu-id="183d4-138">Varsayılan uç noktalarını kullanan bir hizmet üzerinde meta verileri yapılandırmak için belirtmeniz <xref:System.ServiceModel.Description.ServiceMetadataBehavior> yapılandırma dosyasını önceki örnekte olduğu gibi ancak tüm uç noktalar belirtmeyin.</span><span class="sxs-lookup"><span data-stu-id="183d4-138">To configure metadata on a service that uses default endpoints, specify the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in the configuration file as in the previous example, but do not specify any endpoints.</span></span> <span data-ttu-id="183d4-139">Yapılandırma dosyası, ardından şöyle görünebilir.</span><span class="sxs-lookup"><span data-stu-id="183d4-139">The configuration file would then look like this.</span></span>  
   
     ```xml  
     <configuration>  
@@ -187,10 +179,10 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     <span data-ttu-id="b8b9e-140">Hizmetin sahip olduğu bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ile `httpGetEnabled` kümesine `true`etkin meta veri yayımlama hizmeti sahiptir ve uç nokta açıkça eklenmiş olduğundan, çalışma zamanı varsayılan uç noktalar ekler.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-140">Because the service has a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> with the `httpGetEnabled` set to `true`, the service has publishing metadata enabled, and because no endpoints were explicitly added, the runtime adds the default endpoints.</span></span> <span data-ttu-id="b8b9e-141">Varsayılan uç noktaları, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="b8b9e-141">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
+     <span data-ttu-id="183d4-140">Hizmetin sahip olduğu bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ile `httpGetEnabled` kümesine `true`etkin meta veri yayımlama hizmeti sahiptir ve uç nokta açıkça eklenmiş olduğundan, çalışma zamanı varsayılan uç noktalar ekler.</span><span class="sxs-lookup"><span data-stu-id="183d4-140">Because the service has a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> with the `httpGetEnabled` set to `true`, the service has publishing metadata enabled, and because no endpoints were explicitly added, the runtime adds the default endpoints.</span></span> <span data-ttu-id="183d4-141">Varsayılan uç noktaları, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="183d4-141">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b8b9e-142">Örnek</span><span class="sxs-lookup"><span data-stu-id="b8b9e-142">Example</span></span>  
- <span data-ttu-id="b8b9e-143">Aşağıdaki kod örneği, hizmet için meta verilerini yayımlayan yapılandırma dosyası ile temel bir WCF hizmeti ve uygulamasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-143">The following code example shows the implementation of a basic WCF service and the configuration file that publishes metadata for the service.</span></span>  
+## <a name="example"></a><span data-ttu-id="183d4-142">Örnek</span><span class="sxs-lookup"><span data-stu-id="183d4-142">Example</span></span>  
+ <span data-ttu-id="183d4-143">Aşağıdaki kod örneği, hizmet için meta verilerini yayımlayan yapılandırma dosyası ile temel bir WCF hizmeti ve uygulamasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="183d4-143">The following code example shows the implementation of a basic WCF service and the configuration file that publishes metadata for the service.</span></span>  
   
 ```csharp  
 using System;  
@@ -261,10 +253,11 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b8b9e-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b8b9e-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="183d4-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="183d4-144">See also</span></span>
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [<span data-ttu-id="b8b9e-145">Nasıl yapılır: Yönetilen bir uygulamada bir WCF Hizmeti barındırma</span><span class="sxs-lookup"><span data-stu-id="b8b9e-145">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [<span data-ttu-id="b8b9e-146">Kendini Barındırma</span><span class="sxs-lookup"><span data-stu-id="b8b9e-146">Self-Host</span></span>](../../../../docs/framework/wcf/samples/self-host.md)
-- [<span data-ttu-id="b8b9e-147">Meta Veri Mimarisine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b8b9e-147">Metadata Architecture Overview</span></span>](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [<span data-ttu-id="b8b9e-148">Meta Verileri Kullanma</span><span class="sxs-lookup"><span data-stu-id="b8b9e-148">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [<span data-ttu-id="b8b9e-149">Nasıl yapılır: Kod kullanarak bir hizmet için meta verileri yayımlama</span><span class="sxs-lookup"><span data-stu-id="b8b9e-149">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [<span data-ttu-id="183d4-145">Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma</span><span class="sxs-lookup"><span data-stu-id="183d4-145">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [<span data-ttu-id="183d4-146">Kendini Barındırma</span><span class="sxs-lookup"><span data-stu-id="183d4-146">Self-Host</span></span>](../../../../docs/framework/wcf/samples/self-host.md)
+- [<span data-ttu-id="183d4-147">Meta Veri Mimarisi Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="183d4-147">Metadata Architecture Overview</span></span>](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [<span data-ttu-id="183d4-148">Meta Verileri Kullanma</span><span class="sxs-lookup"><span data-stu-id="183d4-148">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [<span data-ttu-id="183d4-149">Nasıl yapılır: Kod Kullanarak Bir Hizmet için Meta Verileri Yayımlama</span><span class="sxs-lookup"><span data-stu-id="183d4-149">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

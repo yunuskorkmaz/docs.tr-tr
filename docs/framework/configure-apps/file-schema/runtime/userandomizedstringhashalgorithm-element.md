@@ -1,5 +1,5 @@
 ---
-title: <UseRandomizedStringHashAlgorithm> Öğesi
+title: <UseRandomizedStringHashAlgorithm> Öğe
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,74 +10,74 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3545938d8f9a59c8f3c6d03e5e67bb5f545a4981
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2a51b9fb485da605effbad0e81b8baf5e05e382a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087800"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a><span data-ttu-id="2b7fe-102">\<UseRandomizedStringHashAlgorithm > öğesi</span><span class="sxs-lookup"><span data-stu-id="2b7fe-102">\<UseRandomizedStringHashAlgorithm> Element</span></span>
-<span data-ttu-id="2b7fe-103">Ortak dil çalışma zamanı için dizelerin karma kodlarını hesaplayıp belirleyen bir her uygulama etki alanı.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-103">Determines whether the common language runtime calculates hash codes for strings on a per application domain basis.</span></span>  
+# <a name="userandomizedstringhashalgorithm-element"></a><span data-ttu-id="1e058-102">\<UseRandomizedStringHashAlgorithm > öğesi</span><span class="sxs-lookup"><span data-stu-id="1e058-102">\<UseRandomizedStringHashAlgorithm> Element</span></span>
+<span data-ttu-id="1e058-103">Ortak dil çalışma zamanı için dizelerin karma kodlarını hesaplayıp belirleyen bir her uygulama etki alanı.</span><span class="sxs-lookup"><span data-stu-id="1e058-103">Determines whether the common language runtime calculates hash codes for strings on a per application domain basis.</span></span>  
   
- <span data-ttu-id="2b7fe-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="2b7fe-104">\<configuration></span></span>  
-<span data-ttu-id="2b7fe-105">\<çalışma zamanı ></span><span class="sxs-lookup"><span data-stu-id="2b7fe-105">\<runtime></span></span>  
-<span data-ttu-id="2b7fe-106">\<UseRandomizedStringHashAlgorithm ></span><span class="sxs-lookup"><span data-stu-id="2b7fe-106">\<UseRandomizedStringHashAlgorithm></span></span>  
+ <span data-ttu-id="1e058-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="1e058-104">\<configuration></span></span>  
+<span data-ttu-id="1e058-105">\<çalışma zamanı ></span><span class="sxs-lookup"><span data-stu-id="1e058-105">\<runtime></span></span>  
+<span data-ttu-id="1e058-106">\<UseRandomizedStringHashAlgorithm ></span><span class="sxs-lookup"><span data-stu-id="1e058-106">\<UseRandomizedStringHashAlgorithm></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b7fe-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2b7fe-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e058-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1e058-107">Syntax</span></span>  
   
 ```xml  
 <UseRandomizedStringHashAlgorithm   
    enabled=0|1 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2b7fe-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="2b7fe-108">Attributes and Elements</span></span>  
- <span data-ttu-id="2b7fe-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1e058-108">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="1e058-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="1e058-109">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="1e058-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2b7fe-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="2b7fe-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1e058-110">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="1e058-110">Attributes</span></span>  
   
-|<span data-ttu-id="2b7fe-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="2b7fe-111">Attribute</span></span>|<span data-ttu-id="2b7fe-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2b7fe-112">Description</span></span>|  
+|<span data-ttu-id="1e058-111">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="1e058-111">Attribute</span></span>|<span data-ttu-id="1e058-112">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1e058-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="2b7fe-113">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="2b7fe-114">Dizeler için karma kodları hesaplanıp hesaplanmadığını belirtir bir her uygulama etki alanı.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-114">Specifies whether hash codes for strings are calculated on a per application domain basis.</span></span>|  
+|`enabled`|<span data-ttu-id="1e058-113">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="1e058-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="1e058-114">Dizeler için karma kodları hesaplanıp hesaplanmadığını belirtir bir her uygulama etki alanı.</span><span class="sxs-lookup"><span data-stu-id="1e058-114">Specifies whether hash codes for strings are calculated on a per application domain basis.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="2b7fe-115">etkin Öznitelik</span><span class="sxs-lookup"><span data-stu-id="2b7fe-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="1e058-115">etkin Öznitelik</span><span class="sxs-lookup"><span data-stu-id="1e058-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="2b7fe-116">Değer</span><span class="sxs-lookup"><span data-stu-id="2b7fe-116">Value</span></span>|<span data-ttu-id="2b7fe-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2b7fe-117">Description</span></span>|  
+|<span data-ttu-id="1e058-116">Değer</span><span class="sxs-lookup"><span data-stu-id="1e058-116">Value</span></span>|<span data-ttu-id="1e058-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1e058-117">Description</span></span>|  
 |-----------|-----------------|  
-|`0`|<span data-ttu-id="2b7fe-118">Ortak dil çalışma zamanı dizeler için karma kodları hesaplama olmayan bir uygulama etki alanı temelinde; tek bir algoritma dize karma kodlarını hesaplamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-118">The common language runtime does not compute hash codes for strings on a per application domain basis; a single algorithm is used to calculate string hash codes.</span></span> <span data-ttu-id="2b7fe-119">Bu varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-119">This is the default.</span></span>|  
-|`1`|<span data-ttu-id="2b7fe-120">Ortak dil çalışma zamanı dizeler için karma kodlar hesaplayan bir her uygulama etki alanı.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-120">The common language runtime computes hash codes for strings on a per application domain basis.</span></span> <span data-ttu-id="2b7fe-121">Farklı uygulama etki alanlarındaki ve farklı işlemlerdeki aynı dizeler, farklı karma kodlarına sahip olacaktır.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-121">Identical strings in different application domains and in different processes will have different hash codes.</span></span>|  
+|`0`|<span data-ttu-id="1e058-118">Ortak dil çalışma zamanı dizeler için karma kodları hesaplama olmayan bir uygulama etki alanı temelinde; tek bir algoritma dize karma kodlarını hesaplamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="1e058-118">The common language runtime does not compute hash codes for strings on a per application domain basis; a single algorithm is used to calculate string hash codes.</span></span> <span data-ttu-id="1e058-119">Bu varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="1e058-119">This is the default.</span></span>|  
+|`1`|<span data-ttu-id="1e058-120">Ortak dil çalışma zamanı dizeler için karma kodlar hesaplayan bir her uygulama etki alanı.</span><span class="sxs-lookup"><span data-stu-id="1e058-120">The common language runtime computes hash codes for strings on a per application domain basis.</span></span> <span data-ttu-id="1e058-121">Farklı uygulama etki alanlarındaki ve farklı işlemlerdeki aynı dizeler, farklı karma kodlarına sahip olacaktır.</span><span class="sxs-lookup"><span data-stu-id="1e058-121">Identical strings in different application domains and in different processes will have different hash codes.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2b7fe-122">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="2b7fe-122">Child Elements</span></span>  
- <span data-ttu-id="2b7fe-123">Yok.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1e058-122">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="1e058-122">Child Elements</span></span>  
+ <span data-ttu-id="1e058-123">Yok.</span><span class="sxs-lookup"><span data-stu-id="1e058-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="2b7fe-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="2b7fe-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1e058-124">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="1e058-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="2b7fe-125">Öğe</span><span class="sxs-lookup"><span data-stu-id="2b7fe-125">Element</span></span>|<span data-ttu-id="2b7fe-126">Açıklama</span><span class="sxs-lookup"><span data-stu-id="2b7fe-126">Description</span></span>|  
+|<span data-ttu-id="1e058-125">Öğe</span><span class="sxs-lookup"><span data-stu-id="1e058-125">Element</span></span>|<span data-ttu-id="1e058-126">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1e058-126">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="2b7fe-127">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="2b7fe-128">Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-128">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="1e058-127">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="1e058-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="1e058-128">Çalışma zamanı başlatma seçenekleri hakkında bilgi içerir.</span><span class="sxs-lookup"><span data-stu-id="1e058-128">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2b7fe-129">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2b7fe-129">Remarks</span></span>  
- <span data-ttu-id="2b7fe-130">Varsayılan olarak, <xref:System.StringComparer> sınıfı ve <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> yöntemi, uygulama etki alanları arasında tutarlı bir karma kod üreten tek bir karma algoritma kullanın.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-130">By default, the <xref:System.StringComparer> class and the <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> method use a single hashing algorithm that produces a consistent hash code across application domains.</span></span> <span data-ttu-id="2b7fe-131">Bu ayarlamakla eşdeğerdir `enabled` özniteliği `<UseRandomizedStringHashAlgorithm>` öğesine `0`.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-131">This is equivalent to setting the `enabled` attribute of the `<UseRandomizedStringHashAlgorithm>` element to `0`.</span></span> <span data-ttu-id="2b7fe-132">İçinde kullanılan karma algoritması budur [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2b7fe-132">This is the hashing algorithm used in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1e058-129">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1e058-129">Remarks</span></span>  
+ <span data-ttu-id="1e058-130">Varsayılan olarak, <xref:System.StringComparer> sınıfı ve <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> yöntemi, uygulama etki alanları arasında tutarlı bir karma kod üreten tek bir karma algoritma kullanın.</span><span class="sxs-lookup"><span data-stu-id="1e058-130">By default, the <xref:System.StringComparer> class and the <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> method use a single hashing algorithm that produces a consistent hash code across application domains.</span></span> <span data-ttu-id="1e058-131">Bu ayarlamakla eşdeğerdir `enabled` özniteliği `<UseRandomizedStringHashAlgorithm>` öğesine `0`.</span><span class="sxs-lookup"><span data-stu-id="1e058-131">This is equivalent to setting the `enabled` attribute of the `<UseRandomizedStringHashAlgorithm>` element to `0`.</span></span> <span data-ttu-id="1e058-132">İçinde kullanılan karma algoritması budur [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1e058-132">This is the hashing algorithm used in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span></span>  
   
- <span data-ttu-id="2b7fe-133"><xref:System.StringComparer> Sınıfı ve <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> yöntemi ayrıca karma kodlar hesaplayan farklı bir karma algoritması kullanan bir her uygulama etki alanı.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-133">The <xref:System.StringComparer> class and the <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> method can also use a different hashing algorithm that computes hash codes on a per application domain basis.</span></span> <span data-ttu-id="2b7fe-134">Sonuç olarak, eşdeğer dizeler için karma kodlarını uygulama etki alanları arasında farklılık gösterir.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-134">As a result, hash codes for equivalent strings will differ across application domains.</span></span> <span data-ttu-id="2b7fe-135">Bu bir katılım özelliğidir; yararlanmak için ayarlamalısınız `enabled` özniteliği `<UseRandomizedStringHashAlgorithm>` öğesine `1`.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-135">This is an opt-in feature; to take advantage of it, you must set the `enabled` attribute of the `<UseRandomizedStringHashAlgorithm>` element to `1`.</span></span>  
+ <span data-ttu-id="1e058-133"><xref:System.StringComparer> Sınıfı ve <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> yöntemi ayrıca karma kodlar hesaplayan farklı bir karma algoritması kullanan bir her uygulama etki alanı.</span><span class="sxs-lookup"><span data-stu-id="1e058-133">The <xref:System.StringComparer> class and the <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> method can also use a different hashing algorithm that computes hash codes on a per application domain basis.</span></span> <span data-ttu-id="1e058-134">Sonuç olarak, eşdeğer dizeler için karma kodlarını uygulama etki alanları arasında farklılık gösterir.</span><span class="sxs-lookup"><span data-stu-id="1e058-134">As a result, hash codes for equivalent strings will differ across application domains.</span></span> <span data-ttu-id="1e058-135">Bu bir katılım özelliğidir; yararlanmak için ayarlamalısınız `enabled` özniteliği `<UseRandomizedStringHashAlgorithm>` öğesine `1`.</span><span class="sxs-lookup"><span data-stu-id="1e058-135">This is an opt-in feature; to take advantage of it, you must set the `enabled` attribute of the `<UseRandomizedStringHashAlgorithm>` element to `1`.</span></span>  
   
- <span data-ttu-id="2b7fe-136">Karma tabloda dize arama genellikle bir o(1) işlemidir.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-136">The string lookup in a hash table is typically an O(1) operation.</span></span> <span data-ttu-id="2b7fe-137">Ancak, çok sayıda çakışma oluştuğunda arama bir O olabilir (n<sup>2</sup>) işlemi.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-137">However, when a large number of collisions occur, the lookup can become an O(n<sup>2</sup>) operation.</span></span> <span data-ttu-id="2b7fe-138">Kullanabileceğiniz `<UseRandomizedStringHashAlgorithm>` yapılandırma öğesi, karma kodlarının hesaplandığı anahtarlar girilen verilere dayalı özellikle hangi sırayla olası çakışmaların sayısını sınırlayan, uygulama etki alanı başına rasgele bir karma algoritma oluşturmak için kullanıcılar tarafından.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-138">You can use the `<UseRandomizedStringHashAlgorithm>` configuration element to generate a random hashing algorithm per application domain, which in turn limits the number of potential collisions, particularly when the keys from which the hash codes are calculated are based on data input by users.</span></span>  
+ <span data-ttu-id="1e058-136">Karma tabloda dize arama genellikle bir o(1) işlemidir.</span><span class="sxs-lookup"><span data-stu-id="1e058-136">The string lookup in a hash table is typically an O(1) operation.</span></span> <span data-ttu-id="1e058-137">Ancak, çok sayıda çakışma oluştuğunda arama bir O olabilir (n<sup>2</sup>) işlemi.</span><span class="sxs-lookup"><span data-stu-id="1e058-137">However, when a large number of collisions occur, the lookup can become an O(n<sup>2</sup>) operation.</span></span> <span data-ttu-id="1e058-138">Kullanabileceğiniz `<UseRandomizedStringHashAlgorithm>` yapılandırma öğesi, karma kodlarının hesaplandığı anahtarlar girilen verilere dayalı özellikle hangi sırayla olası çakışmaların sayısını sınırlayan, uygulama etki alanı başına rasgele bir karma algoritma oluşturmak için kullanıcılar tarafından.</span><span class="sxs-lookup"><span data-stu-id="1e058-138">You can use the `<UseRandomizedStringHashAlgorithm>` configuration element to generate a random hashing algorithm per application domain, which in turn limits the number of potential collisions, particularly when the keys from which the hash codes are calculated are based on data input by users.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2b7fe-139">Örnek</span><span class="sxs-lookup"><span data-stu-id="2b7fe-139">Example</span></span>  
- <span data-ttu-id="2b7fe-140">Aşağıdaki örnekte tanımlayan bir `DisplayString` bir özel dize sabiti içeren sınıf `s`, değeri olan "Dize budur."</span><span class="sxs-lookup"><span data-stu-id="2b7fe-140">The following example defines a `DisplayString` class that includes a private string constant, `s`, whose value is "This is a string."</span></span> <span data-ttu-id="2b7fe-141">Ayrıca bir `ShowStringHashCode` dize değeri ve Yöntem yürütme, uygulama etki alanı adı karma kodunu görüntüler yöntemi.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-141">It also includes a `ShowStringHashCode` method that displays the string value and its hash code along with the name of the application domain in which the method is executing.</span></span>  
+## <a name="example"></a><span data-ttu-id="1e058-139">Örnek</span><span class="sxs-lookup"><span data-stu-id="1e058-139">Example</span></span>  
+ <span data-ttu-id="1e058-140">Aşağıdaki örnekte tanımlayan bir `DisplayString` bir özel dize sabiti içeren sınıf `s`, değeri olan "Dize budur."</span><span class="sxs-lookup"><span data-stu-id="1e058-140">The following example defines a `DisplayString` class that includes a private string constant, `s`, whose value is "This is a string."</span></span> <span data-ttu-id="1e058-141">Ayrıca bir `ShowStringHashCode` dize değeri ve Yöntem yürütme, uygulama etki alanı adı karma kodunu görüntüler yöntemi.</span><span class="sxs-lookup"><span data-stu-id="1e058-141">It also includes a `ShowStringHashCode` method that displays the string value and its hash code along with the name of the application domain in which the method is executing.</span></span>  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  
   
- <span data-ttu-id="2b7fe-142">Örnek bir yapılandırma dosyası sağlamadan çalıştırdığınızda, aşağıdakine benzer bir çıktı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-142">When you run the example without supplying a configuration file, it displays output similar to the following.</span></span> <span data-ttu-id="2b7fe-143">Dize için karma kodları iki uygulama etki alanında aynı olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-143">Note that the hash codes for the string are identical in the two application domains.</span></span>  
+ <span data-ttu-id="1e058-142">Örnek bir yapılandırma dosyası sağlamadan çalıştırdığınızda, aşağıdakine benzer bir çıktı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="1e058-142">When you run the example without supplying a configuration file, it displays output similar to the following.</span></span> <span data-ttu-id="1e058-143">Dize için karma kodları iki uygulama etki alanında aynı olduğuna dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="1e058-143">Note that the hash codes for the string are identical in the two application domains.</span></span>  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
   
- <span data-ttu-id="2b7fe-144">Ancak örneğin dizinine şu yapılandırma dosyasını ekleyin ve sonra örneği çalıştırırsanız, aynı dize için karma kodlarını uygulama etki alanına göre farklılık gösterir.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-144">However, if you add the following configuration file to the example's directory and then run the example, the hash codes for the same string will differ by application domain.</span></span>  
+ <span data-ttu-id="1e058-144">Ancak örneğin dizinine şu yapılandırma dosyasını ekleyin ve sonra örneği çalıştırırsanız, aynı dize için karma kodlarını uygulama etki alanına göre farklılık gösterir.</span><span class="sxs-lookup"><span data-stu-id="1e058-144">However, if you add the following configuration file to the example's directory and then run the example, the hash codes for the same string will differ by application domain.</span></span>  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -88,14 +88,15 @@ String 'This is a string.' in domain 'NewDomain': 941BCEAC
 </configuration>  
 ```  
   
- <span data-ttu-id="2b7fe-145">Yapılandırma dosyası varolduğunda, örnek aşağıdaki çıkışı görüntüler:</span><span class="sxs-lookup"><span data-stu-id="2b7fe-145">When the configuration file is present, the example displays the following output:</span></span>  
+ <span data-ttu-id="1e058-145">Yapılandırma dosyası varolduğunda, örnek aşağıdaki çıkışı görüntüler:</span><span class="sxs-lookup"><span data-stu-id="1e058-145">When the configuration file is present, the example displays the following output:</span></span>  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2b7fe-146">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2b7fe-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e058-146">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1e058-146">See also</span></span>
+
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

@@ -1,19 +1,19 @@
 ---
-title: Satır hatası bilgileri
+title: Satır Hatası Bilgileri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: bc3e4517e0bb194508ccb0598920a3bdd1299e5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152730"
 ---
-# <a name="row-error-information"></a><span data-ttu-id="746ab-102">Satır hatası bilgileri</span><span class="sxs-lookup"><span data-stu-id="746ab-102">Row Error Information</span></span>
-<span data-ttu-id="746ab-103">Değerleri düzenleme sırasında satır hatalar için yanıt zorunda kalmamak için bir <xref:System.Data.DataTable>, hata bilgilerini daha sonra kullanmak için bir satır ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="746ab-103">To avoid having to respond to row errors while editing values in a <xref:System.Data.DataTable>, you can add the error information to the row for later use.</span></span> <span data-ttu-id="746ab-104"><xref:System.Data.DataRow> Nesnesi sağlayan bir <xref:System.Data.DataRow.RowError%2A> bu amaçla her satırında özelliği.</span><span class="sxs-lookup"><span data-stu-id="746ab-104">The <xref:System.Data.DataRow> object provides a <xref:System.Data.DataRow.RowError%2A> property on each row for this purpose.</span></span> <span data-ttu-id="746ab-105">Veri ekleme **RowError** özelliği bir **DataRow** ayarlar <xref:System.Data.DataRow.HasErrors%2A> özelliği **DataRow** için **true**.</span><span class="sxs-lookup"><span data-stu-id="746ab-105">Adding data to the **RowError** property of a **DataRow** sets the <xref:System.Data.DataRow.HasErrors%2A> property of the **DataRow** to **true**.</span></span> <span data-ttu-id="746ab-106">Varsa **DataRow** parçası olan bir **DataTable**, ve **DataRow.HasErrors** olduğu **true**, **DataTable.HasErrors** özelliği de **true**.</span><span class="sxs-lookup"><span data-stu-id="746ab-106">If the **DataRow** is part of a **DataTable**, and **DataRow.HasErrors** is **true**, the **DataTable.HasErrors** property is also **true**.</span></span> <span data-ttu-id="746ab-107">Bunun için de geçerlidir **veri kümesi** hangi **DataTable** ait.</span><span class="sxs-lookup"><span data-stu-id="746ab-107">This applies as well to the **DataSet** to which the **DataTable** belongs.</span></span> <span data-ttu-id="746ab-108">Hataları için test yapma, denetleyebilirsiniz **HasErrors** hata bilgisi için herhangi bir satır eklenip eklenmediğini belirlemek için özellik.</span><span class="sxs-lookup"><span data-stu-id="746ab-108">When testing for errors, you can check the **HasErrors** property to determine if error information has been added to any rows.</span></span> <span data-ttu-id="746ab-109">Varsa **HasErrors** olduğu **true**, kullanabileceğiniz <xref:System.Data.DataTable.GetErrors%2A> yöntemi **DataTable** dönün ve aşağıdaki örnekte gösterildiği gibi yalnızca hataları olan satırlar inceleyin.</span><span class="sxs-lookup"><span data-stu-id="746ab-109">If **HasErrors** is **true**, you can use the <xref:System.Data.DataTable.GetErrors%2A> method of the **DataTable** to return and examine only the rows with errors, as shown in the following example.</span></span>  
+# <a name="row-error-information"></a><span data-ttu-id="b2f3b-102">Satır Hatası Bilgileri</span><span class="sxs-lookup"><span data-stu-id="b2f3b-102">Row Error Information</span></span>
+<span data-ttu-id="b2f3b-103">Değerleri düzenleme sırasında satır hatalar için yanıt zorunda kalmamak için bir <xref:System.Data.DataTable>, hata bilgilerini daha sonra kullanmak için bir satır ekleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="b2f3b-103">To avoid having to respond to row errors while editing values in a <xref:System.Data.DataTable>, you can add the error information to the row for later use.</span></span> <span data-ttu-id="b2f3b-104"><xref:System.Data.DataRow> Nesnesi sağlayan bir <xref:System.Data.DataRow.RowError%2A> bu amaçla her satırında özelliği.</span><span class="sxs-lookup"><span data-stu-id="b2f3b-104">The <xref:System.Data.DataRow> object provides a <xref:System.Data.DataRow.RowError%2A> property on each row for this purpose.</span></span> <span data-ttu-id="b2f3b-105">Veri ekleme **RowError** özelliği bir **DataRow** ayarlar <xref:System.Data.DataRow.HasErrors%2A> özelliği **DataRow** için **true**.</span><span class="sxs-lookup"><span data-stu-id="b2f3b-105">Adding data to the **RowError** property of a **DataRow** sets the <xref:System.Data.DataRow.HasErrors%2A> property of the **DataRow** to **true**.</span></span> <span data-ttu-id="b2f3b-106">Varsa **DataRow** parçası olan bir **DataTable**, ve **DataRow.HasErrors** olduğu **true**, **DataTable.HasErrors** özelliği de **true**.</span><span class="sxs-lookup"><span data-stu-id="b2f3b-106">If the **DataRow** is part of a **DataTable**, and **DataRow.HasErrors** is **true**, the **DataTable.HasErrors** property is also **true**.</span></span> <span data-ttu-id="b2f3b-107">Bunun için de geçerlidir **veri kümesi** hangi **DataTable** ait.</span><span class="sxs-lookup"><span data-stu-id="b2f3b-107">This applies as well to the **DataSet** to which the **DataTable** belongs.</span></span> <span data-ttu-id="b2f3b-108">Hataları için test yapma, denetleyebilirsiniz **HasErrors** hata bilgisi için herhangi bir satır eklenip eklenmediğini belirlemek için özellik.</span><span class="sxs-lookup"><span data-stu-id="b2f3b-108">When testing for errors, you can check the **HasErrors** property to determine if error information has been added to any rows.</span></span> <span data-ttu-id="b2f3b-109">Varsa **HasErrors** olduğu **true**, kullanabileceğiniz <xref:System.Data.DataTable.GetErrors%2A> yöntemi **DataTable** dönün ve aşağıdaki örnekte gösterildiği gibi yalnızca hataları olan satırlar inceleyin.</span><span class="sxs-lookup"><span data-stu-id="b2f3b-109">If **HasErrors** is **true**, you can use the <xref:System.Data.DataTable.GetErrors%2A> method of the **DataTable** to return and examine only the rows with errors, as shown in the following example.</span></span>  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -77,9 +77,10 @@ protected static void OnRowChanged(
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="746ab-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="746ab-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2f3b-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b2f3b-110">See also</span></span>
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
-- [<span data-ttu-id="746ab-111">DataTable Verilerini Düzenleme</span><span class="sxs-lookup"><span data-stu-id="746ab-111">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [<span data-ttu-id="746ab-112">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="746ab-112">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="b2f3b-111">DataTable Verilerini Düzenleme</span><span class="sxs-lookup"><span data-stu-id="b2f3b-111">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [<span data-ttu-id="b2f3b-112">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="b2f3b-112">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

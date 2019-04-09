@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0aef54b1ddab9b2ccc0bfcfe8974a65831f70450
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7c2725c62105e92996bb2d8e79e8ff504904e9c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107958"
 ---
-# <a name="icordebugprocess5gettypefields-method"></a><span data-ttu-id="bf725-102">ICorDebugProcess5::GetTypeFields Metodu</span><span class="sxs-lookup"><span data-stu-id="bf725-102">ICorDebugProcess5::GetTypeFields Method</span></span>
-<span data-ttu-id="bf725-103">Bir türe ait alanları hakkında bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="bf725-103">Provides information about the fields that belong to a type.</span></span>  
+# <a name="icordebugprocess5gettypefields-method"></a><span data-ttu-id="11a8b-102">ICorDebugProcess5::GetTypeFields Metodu</span><span class="sxs-lookup"><span data-stu-id="11a8b-102">ICorDebugProcess5::GetTypeFields Method</span></span>
+<span data-ttu-id="11a8b-103">Bir türe ait alanları hakkında bilgi sağlar.</span><span class="sxs-lookup"><span data-stu-id="11a8b-103">Provides information about the fields that belong to a type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf725-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bf725-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11a8b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="11a8b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeFields(  
@@ -38,31 +38,32 @@ HRESULT GetTypeFields(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bf725-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bf725-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="11a8b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="11a8b-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="bf725-106">[in] Alan bilgilerini alınan tür tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="bf725-106">[in] The identifier of the type whose field information is retrieved.</span></span>  
+ <span data-ttu-id="11a8b-106">[in] Alan bilgilerini alınan tür tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="11a8b-106">[in] The identifier of the type whose field information is retrieved.</span></span>  
   
  `celt`  
- <span data-ttu-id="bf725-107">[in] Sayısını [cor_fıeld](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) olan alan bilgilerdir alınacak nesne.</span><span class="sxs-lookup"><span data-stu-id="bf725-107">[in] The number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects whose field information is to be retrieved.</span></span>  
+ <span data-ttu-id="11a8b-107">[in] Sayısını [cor_fıeld](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) olan alan bilgilerdir alınacak nesne.</span><span class="sxs-lookup"><span data-stu-id="11a8b-107">[in] The number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects whose field information is to be retrieved.</span></span>  
   
  `fields`  
- <span data-ttu-id="bf725-108">[out] Bir dizi [cor_fıeld](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) türe ait alanları hakkında bilgi sağlayan nesneleri.</span><span class="sxs-lookup"><span data-stu-id="bf725-108">[out] An array of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects that provide information about the fields that belong to the type.</span></span>  
+ <span data-ttu-id="11a8b-108">[out] Bir dizi [cor_fıeld](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) türe ait alanları hakkında bilgi sağlayan nesneleri.</span><span class="sxs-lookup"><span data-stu-id="11a8b-108">[out] An array of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects that provide information about the fields that belong to the type.</span></span>  
   
  `pceltNeeded`  
- <span data-ttu-id="bf725-109">[out] Bir işaretçi sayısına [cor_fıeld](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) bulunan nesneleri `fields`.</span><span class="sxs-lookup"><span data-stu-id="bf725-109">[out] A pointer to the number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects included in `fields`.</span></span>  
+ <span data-ttu-id="11a8b-109">[out] Bir işaretçi sayısına [cor_fıeld](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) bulunan nesneleri `fields`.</span><span class="sxs-lookup"><span data-stu-id="11a8b-109">[out] A pointer to the number of [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) objects included in `fields`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bf725-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bf725-110">Remarks</span></span>  
- <span data-ttu-id="bf725-111">`celt` Alan bilgilerini doldurmak için yöntemi kullanan alanların sayısını belirten bir parametre `fields`, değerine karşılık gelmelidir `COR_TYPE_LAYOUT::numFields` alan.</span><span class="sxs-lookup"><span data-stu-id="bf725-111">The `celt` parameter, which specifies the number of fields whose field information the method uses to populate `fields`, should correspond to the value of the `COR_TYPE_LAYOUT::numFields` field.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="11a8b-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="11a8b-110">Remarks</span></span>  
+ <span data-ttu-id="11a8b-111">`celt` Alan bilgilerini doldurmak için yöntemi kullanan alanların sayısını belirten bir parametre `fields`, değerine karşılık gelmelidir `COR_TYPE_LAYOUT::numFields` alan.</span><span class="sxs-lookup"><span data-stu-id="11a8b-111">The `celt` parameter, which specifies the number of fields whose field information the method uses to populate `fields`, should correspond to the value of the `COR_TYPE_LAYOUT::numFields` field.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bf725-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bf725-112">Requirements</span></span>  
- <span data-ttu-id="bf725-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bf725-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11a8b-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="11a8b-112">Requirements</span></span>  
+ <span data-ttu-id="11a8b-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="11a8b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bf725-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bf725-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="11a8b-114">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="11a8b-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bf725-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bf725-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="11a8b-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="11a8b-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bf725-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bf725-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="11a8b-116">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="11a8b-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="bf725-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bf725-117">See also</span></span>
-- [<span data-ttu-id="bf725-118">ICorDebugProcess5 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="bf725-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="bf725-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="bf725-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="11a8b-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="11a8b-117">See also</span></span>
+
+- [<span data-ttu-id="11a8b-118">ICorDebugProcess5 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="11a8b-118">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="11a8b-119">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="11a8b-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

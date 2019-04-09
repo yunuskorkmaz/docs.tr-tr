@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms TabControl ile sekme ekleyip'
+title: 'Nasıl yapılır: Windows Forms TabControl ile Sekme Ekleme ve Kaldırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 4420f598f1243e6c834ecd82bb6ea7071cc95402
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 723e05803b1f7d2bc56476248987085dbe5e23f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101607"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="d8d90-102">Nasıl yapılır: Windows Forms TabControl ile sekme ekleyip</span><span class="sxs-lookup"><span data-stu-id="d8d90-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
-<span data-ttu-id="d8d90-103">Varsayılan olarak, bir <xref:System.Windows.Forms.TabControl> denetimi içeren iki <xref:System.Windows.Forms.TabPage> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="d8d90-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="d8d90-104">Bu sekmeler aracılığıyla erişebileceğiniz <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="d8d90-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="34c4d-102">Nasıl yapılır: Windows Forms TabControl ile Sekme Ekleme ve Kaldırma</span><span class="sxs-lookup"><span data-stu-id="34c4d-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
+<span data-ttu-id="34c4d-103">Varsayılan olarak, bir <xref:System.Windows.Forms.TabControl> denetimi içeren iki <xref:System.Windows.Forms.TabPage> kontrol eder.</span><span class="sxs-lookup"><span data-stu-id="34c4d-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="34c4d-104">Bu sekmeler aracılığıyla erişebileceğiniz <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="34c4d-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="d8d90-105">Program aracılığıyla sekme eklemek için</span><span class="sxs-lookup"><span data-stu-id="d8d90-105">To add a tab programmatically</span></span>  
+### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="34c4d-105">Program aracılığıyla sekme eklemek için</span><span class="sxs-lookup"><span data-stu-id="34c4d-105">To add a tab programmatically</span></span>  
   
--   <span data-ttu-id="d8d90-106">Kullanım <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> yöntemi <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="d8d90-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+-   <span data-ttu-id="34c4d-106">Kullanım <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> yöntemi <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="34c4d-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -45,13 +45,13 @@ ms.locfileid: "57707956"
     tabControl1->TabPages->Add(myTabPage);  
     ```  
   
-### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="d8d90-107">Bir sekme programlı bir şekilde kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="d8d90-107">To remove a tab programmatically</span></span>  
+### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="34c4d-107">Bir sekme programlı bir şekilde kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="34c4d-107">To remove a tab programmatically</span></span>  
   
--   <span data-ttu-id="d8d90-108">Seçili sekmeleri kaldırmak için <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> yöntemi <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="d8d90-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+-   <span data-ttu-id="34c4d-108">Seçili sekmeleri kaldırmak için <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> yöntemi <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="34c4d-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-     <span data-ttu-id="d8d90-109">-veya-</span><span class="sxs-lookup"><span data-stu-id="d8d90-109">-or-</span></span>  
+     <span data-ttu-id="34c4d-109">-veya-</span><span class="sxs-lookup"><span data-stu-id="34c4d-109">-or-</span></span>  
   
--   <span data-ttu-id="d8d90-110">Tüm sekmeler kaldırmak için <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> yöntemi <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="d8d90-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+-   <span data-ttu-id="34c4d-110">Tüm sekmeler kaldırmak için <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> yöntemi <xref:System.Windows.Forms.TabControl.TabPages%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="34c4d-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     ' Removes the selected tab:  
@@ -74,8 +74,9 @@ ms.locfileid: "57707956"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d8d90-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d8d90-111">See also</span></span>
-- [<span data-ttu-id="d8d90-112">TabControl Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="d8d90-112">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
-- [<span data-ttu-id="d8d90-113">Nasıl yapılır: Sekme sayfasına denetim ekleme</span><span class="sxs-lookup"><span data-stu-id="d8d90-113">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
-- [<span data-ttu-id="d8d90-114">Nasıl yapılır: Sekme sayfalarını devre dışı bırak</span><span class="sxs-lookup"><span data-stu-id="d8d90-114">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
-- [<span data-ttu-id="d8d90-115">Nasıl yapılır: Windows Forms Tabcontrol'un görünüşünü değiştirme</span><span class="sxs-lookup"><span data-stu-id="d8d90-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a><span data-ttu-id="34c4d-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="34c4d-111">See also</span></span>
+
+- [<span data-ttu-id="34c4d-112">TabControl Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="34c4d-112">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
+- [<span data-ttu-id="34c4d-113">Nasıl yapılır: Sekme Sayfasına Denetim Ekleme</span><span class="sxs-lookup"><span data-stu-id="34c4d-113">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
+- [<span data-ttu-id="34c4d-114">Nasıl yapılır: Sekme Sayfalarını Devre Dışı Bırakma</span><span class="sxs-lookup"><span data-stu-id="34c4d-114">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="34c4d-115">Nasıl yapılır: Windows Forms TabControl Görünümünü Değiştirme</span><span class="sxs-lookup"><span data-stu-id="34c4d-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

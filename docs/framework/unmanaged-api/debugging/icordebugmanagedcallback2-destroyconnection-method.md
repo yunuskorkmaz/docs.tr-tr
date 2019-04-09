@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e2d054057b1813e163193b14a754ebeda034563
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 35ae3a9761798ed9ea42b984f2c6c2cad4e42777
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075931"
 ---
-# <a name="icordebugmanagedcallback2destroyconnection-method"></a><span data-ttu-id="f3954-102">ICorDebugManagedCallback2::DestroyConnection Metodu</span><span class="sxs-lookup"><span data-stu-id="f3954-102">ICorDebugManagedCallback2::DestroyConnection Method</span></span>
-<span data-ttu-id="f3954-103">Hata ayıklayıcı, belirtilen bağlantı sonlandırıldı bildirir.</span><span class="sxs-lookup"><span data-stu-id="f3954-103">Notifies the debugger that the specified connection has been terminated.</span></span>  
+# <a name="icordebugmanagedcallback2destroyconnection-method"></a><span data-ttu-id="8dcda-102">ICorDebugManagedCallback2::DestroyConnection Metodu</span><span class="sxs-lookup"><span data-stu-id="8dcda-102">ICorDebugManagedCallback2::DestroyConnection Method</span></span>
+<span data-ttu-id="8dcda-103">Hata ayıklayıcı, belirtilen bağlantı sonlandırıldı bildirir.</span><span class="sxs-lookup"><span data-stu-id="8dcda-103">Notifies the debugger that the specified connection has been terminated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f3954-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f3954-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8dcda-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8dcda-104">Syntax</span></span>  
   
 ```  
 HRESULT DestroyConnection (  
@@ -36,25 +36,26 @@ HRESULT DestroyConnection (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f3954-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f3954-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8dcda-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8dcda-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="f3954-106">[in] Silinen bir bağlantı içeren işlemini temsil eden bir Icordebugprocess nesneye bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="f3954-106">[in] A pointer to an ICorDebugProcess object that represents the process containing the connection that was destroyed.</span></span>  
+ <span data-ttu-id="8dcda-106">[in] Silinen bir bağlantı içeren işlemini temsil eden bir Icordebugprocess nesneye bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8dcda-106">[in] A pointer to an ICorDebugProcess object that represents the process containing the connection that was destroyed.</span></span>  
   
  `dwConnectionId`  
- <span data-ttu-id="f3954-107">[in] Silinen bağlantının kimliği.</span><span class="sxs-lookup"><span data-stu-id="f3954-107">[in] The ID of the connection that was destroyed.</span></span>  
+ <span data-ttu-id="8dcda-107">[in] Silinen bağlantının kimliği.</span><span class="sxs-lookup"><span data-stu-id="8dcda-107">[in] The ID of the connection that was destroyed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f3954-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f3954-108">Remarks</span></span>  
- <span data-ttu-id="f3954-109">A `DestroyConnection` geri çağırma tetiklenen bir konak çağırdığında [Iclrdebugmanager::endconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) içinde [barındırma API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span><span class="sxs-lookup"><span data-stu-id="f3954-109">A `DestroyConnection` callback will be fired when a host calls [ICLRDebugManager::EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8dcda-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="8dcda-108">Remarks</span></span>  
+ <span data-ttu-id="8dcda-109">A `DestroyConnection` geri çağırma tetiklenen bir konak çağırdığında [Iclrdebugmanager::endconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) içinde [barındırma API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span><span class="sxs-lookup"><span data-stu-id="8dcda-109">A `DestroyConnection` callback will be fired when a host calls [ICLRDebugManager::EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f3954-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f3954-110">Requirements</span></span>  
- <span data-ttu-id="f3954-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f3954-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8dcda-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8dcda-110">Requirements</span></span>  
+ <span data-ttu-id="8dcda-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8dcda-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f3954-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f3954-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8dcda-112">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8dcda-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f3954-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3954-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8dcda-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8dcda-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f3954-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3954-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="8dcda-114">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="8dcda-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f3954-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f3954-115">See also</span></span>
-- [<span data-ttu-id="f3954-116">ICorDebugManagedCallback2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f3954-116">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="f3954-117">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f3954-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8dcda-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8dcda-115">See also</span></span>
+
+- [<span data-ttu-id="8dcda-116">ICorDebugManagedCallback2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8dcda-116">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="8dcda-117">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8dcda-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

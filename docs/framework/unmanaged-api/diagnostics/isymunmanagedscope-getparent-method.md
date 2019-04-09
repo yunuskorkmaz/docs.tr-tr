@@ -17,33 +17,34 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 634f30186c552f0e5330dd94f78c585da7d450c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d90aeb22a945f4fa1576009c700c420704dd891b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144787"
 ---
-# <a name="isymunmanagedscopegetparent-method"></a><span data-ttu-id="ebaaf-102">ISymUnmanagedScope::GetParent Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ebaaf-102">ISymUnmanagedScope::GetParent Method</span></span>
-<span data-ttu-id="ebaaf-103">Bu kapsam üst kapsamı alır.</span><span class="sxs-lookup"><span data-stu-id="ebaaf-103">Gets the parent scope of this scope.</span></span>  
+# <a name="isymunmanagedscopegetparent-method"></a><span data-ttu-id="6b66b-102">ISymUnmanagedScope::GetParent Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6b66b-102">ISymUnmanagedScope::GetParent Method</span></span>
+<span data-ttu-id="6b66b-103">Bu kapsam üst kapsamı alır.</span><span class="sxs-lookup"><span data-stu-id="6b66b-103">Gets the parent scope of this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ebaaf-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ebaaf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b66b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6b66b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetParent(  
     [out, retval] ISymUnmanagedScope** pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ebaaf-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ebaaf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6b66b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="6b66b-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="ebaaf-106">[out] Döndürülen işaretçi [Isymunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="ebaaf-106">[out] A pointer to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
+ <span data-ttu-id="6b66b-106">[out] Döndürülen işaretçi [Isymunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="6b66b-106">[out] A pointer to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ebaaf-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="ebaaf-107">Return Value</span></span>  
- <span data-ttu-id="ebaaf-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="ebaaf-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6b66b-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="6b66b-107">Return Value</span></span>  
+ <span data-ttu-id="6b66b-108">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="6b66b-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ebaaf-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ebaaf-109">Requirements</span></span>  
- <span data-ttu-id="ebaaf-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ebaaf-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b66b-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="6b66b-109">Requirements</span></span>  
+ <span data-ttu-id="6b66b-110">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="6b66b-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ebaaf-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ebaaf-111">See also</span></span>
-- [<span data-ttu-id="ebaaf-112">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ebaaf-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [<span data-ttu-id="ebaaf-113">GetChildren Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ebaaf-113">GetChildren Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)
+## <a name="see-also"></a><span data-ttu-id="6b66b-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6b66b-111">See also</span></span>
+
+- [<span data-ttu-id="6b66b-112">ISymUnmanagedScope Arabirimi</span><span class="sxs-lookup"><span data-stu-id="6b66b-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="6b66b-113">GetChildren Yöntemi</span><span class="sxs-lookup"><span data-stu-id="6b66b-113">GetChildren Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)

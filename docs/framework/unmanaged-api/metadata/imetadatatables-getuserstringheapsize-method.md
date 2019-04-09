@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1215da0816c1fc7cdfaee0da167118909f8e5eb3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d35231e4c36639722635796891056a8902b95940
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097466"
 ---
-# <a name="imetadatatablesgetuserstringheapsize-method"></a><span data-ttu-id="810ea-102">IMetaDataTables::GetUserStringHeapSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="810ea-102">IMetaDataTables::GetUserStringHeapSize Method</span></span>
-<span data-ttu-id="810ea-103">Kullanıcı dize yığın bayt cinsinden boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="810ea-103">Gets the size, in bytes, of the user string heap.</span></span>  
+# <a name="imetadatatablesgetuserstringheapsize-method"></a><span data-ttu-id="c2e52-102">IMetaDataTables::GetUserStringHeapSize Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c2e52-102">IMetaDataTables::GetUserStringHeapSize Method</span></span>
+<span data-ttu-id="c2e52-103">Kullanıcı dize yığın bayt cinsinden boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="c2e52-103">Gets the size, in bytes, of the user string heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="810ea-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="810ea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c2e52-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c2e52-104">Syntax</span></span>  
   
 ```  
 HRESULT GetUserStringHeapSize (  
@@ -35,19 +35,20 @@ HRESULT GetUserStringHeapSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="810ea-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="810ea-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c2e52-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c2e52-105">Parameters</span></span>  
  `pcbBlobs`  
- <span data-ttu-id="810ea-106">[out] Bayt cinsinden kullanıcı dize yığın boyutu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="810ea-106">[out] A pointer to the size, in bytes, of the user string heap.</span></span>  
+ <span data-ttu-id="c2e52-106">[out] Bayt cinsinden kullanıcı dize yığın boyutu için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c2e52-106">[out] A pointer to the size, in bytes, of the user string heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="810ea-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="810ea-107">Requirements</span></span>  
- <span data-ttu-id="810ea-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="810ea-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c2e52-107">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c2e52-107">Requirements</span></span>  
+ <span data-ttu-id="c2e52-108">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2e52-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="810ea-109">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="810ea-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c2e52-109">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c2e52-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="810ea-110">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="810ea-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c2e52-110">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="c2e52-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="810ea-111">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="810ea-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="c2e52-111">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="c2e52-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="810ea-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="810ea-112">See also</span></span>
-- [<span data-ttu-id="810ea-113">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="810ea-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="810ea-114">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="810ea-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c2e52-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c2e52-112">See also</span></span>
+
+- [<span data-ttu-id="c2e52-113">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c2e52-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="c2e52-114">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c2e52-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

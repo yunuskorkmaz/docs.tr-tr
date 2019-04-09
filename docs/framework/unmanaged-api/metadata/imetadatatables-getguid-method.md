@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94df2192b0b02f6cf0e068cb554afc6e7f9ec74d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 70a22e7e37a0fd88bcb8673846f5313d35971a15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121530"
 ---
-# <a name="imetadatatablesgetguid-method"></a><span data-ttu-id="7e18e-102">IMetaDataTables::GetGuid Metodu</span><span class="sxs-lookup"><span data-stu-id="7e18e-102">IMetaDataTables::GetGuid Method</span></span>
-<span data-ttu-id="7e18e-103">Belirtilen dizindeki satırdaki bir GUID alır.</span><span class="sxs-lookup"><span data-stu-id="7e18e-103">Gets a GUID from the row at the specified index.</span></span>  
+# <a name="imetadatatablesgetguid-method"></a><span data-ttu-id="4158b-102">IMetaDataTables::GetGuid Metodu</span><span class="sxs-lookup"><span data-stu-id="4158b-102">IMetaDataTables::GetGuid Method</span></span>
+<span data-ttu-id="4158b-103">Belirtilen dizindeki satırdaki bir GUID alır.</span><span class="sxs-lookup"><span data-stu-id="4158b-103">Gets a GUID from the row at the specified index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e18e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7e18e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4158b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4158b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGuid (   
@@ -36,25 +36,26 @@ HRESULT GetGuid (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7e18e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7e18e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4158b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4158b-105">Parameters</span></span>  
  `ixGuid`  
- <span data-ttu-id="7e18e-106">[in] Satır GUID alınacağı dizin.</span><span class="sxs-lookup"><span data-stu-id="7e18e-106">[in] The index of the row from which to get the GUID.</span></span>  
+ <span data-ttu-id="4158b-106">[in] Satır GUID alınacağı dizin.</span><span class="sxs-lookup"><span data-stu-id="4158b-106">[in] The index of the row from which to get the GUID.</span></span>  
   
  `ppGuid`  
- <span data-ttu-id="7e18e-107">[out] GUID işaretçisi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="7e18e-107">[out] A pointer to a pointer to the GUID.</span></span>  
+ <span data-ttu-id="4158b-107">[out] GUID işaretçisi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="4158b-107">[out] A pointer to a pointer to the GUID.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7e18e-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7e18e-108">Remarks</span></span>  
- <span data-ttu-id="7e18e-109">Tutarlı sonuçlar döndürmez çünkü bu yöntem kullanımını önermeyiz.</span><span class="sxs-lookup"><span data-stu-id="7e18e-109">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="7e18e-110">Ortak dil altyapısı (CLI) belgeleri GUID tablosu hakkında daha fazla bilgi için bkz. özellikle "Bölüm II: Meta veri tanımı ve anlamı".</span><span class="sxs-lookup"><span data-stu-id="7e18e-110">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="7e18e-111">Belgeler çevrimiçi olarak kullanılabilir; bkz: [ECMA C# ve ortak dil altyapısı standartları](https://go.microsoft.com/fwlink/?LinkID=99212) MSDN'de ve [standart ECMA-335 - ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) Ecma uluslararası Web sitesinde.</span><span class="sxs-lookup"><span data-stu-id="7e18e-111">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4158b-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4158b-108">Remarks</span></span>  
+ <span data-ttu-id="4158b-109">Tutarlı sonuçlar döndürmez çünkü bu yöntem kullanımını önermeyiz.</span><span class="sxs-lookup"><span data-stu-id="4158b-109">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="4158b-110">Ortak dil altyapısı (CLI) belgeleri GUID tablosu hakkında daha fazla bilgi için bkz. özellikle "Bölüm II: Meta veri tanımı ve anlamı".</span><span class="sxs-lookup"><span data-stu-id="4158b-110">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="4158b-111">Belgeler çevrimiçi olarak kullanılabilir; bkz: [ECMA C# ve ortak dil altyapısı standartları](https://go.microsoft.com/fwlink/?LinkID=99212) MSDN'de ve [standart ECMA-335 - ortak dil altyapısı (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) Ecma uluslararası Web sitesinde.</span><span class="sxs-lookup"><span data-stu-id="4158b-111">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7e18e-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7e18e-112">Requirements</span></span>  
- <span data-ttu-id="7e18e-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e18e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4158b-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4158b-112">Requirements</span></span>  
+ <span data-ttu-id="4158b-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4158b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e18e-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="7e18e-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4158b-114">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="4158b-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7e18e-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="7e18e-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4158b-115">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="4158b-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7e18e-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e18e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="4158b-116">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="4158b-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7e18e-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7e18e-117">See also</span></span>
-- [<span data-ttu-id="7e18e-118">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7e18e-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="7e18e-119">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7e18e-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4158b-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4158b-117">See also</span></span>
+
+- [<span data-ttu-id="4158b-118">IMetaDataTables Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4158b-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="4158b-119">IMetaDataTables2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4158b-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

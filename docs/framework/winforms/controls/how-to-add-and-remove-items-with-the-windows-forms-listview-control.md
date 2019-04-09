@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip'
+title: 'Nasıl yapılır: Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,31 +9,32 @@ helpviewer_keywords:
 - list views [Windows Forms], adding list items
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-ms.openlocfilehash: cfa6690db464f432c9082278627a03cd43df6834
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ef0275b3cbc79f22b4fa573f41e4cbdbc3d58990
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104656"
 ---
-# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a><span data-ttu-id="fe1fb-102">Nasıl yapılır: Windows Forms ListView denetimi ile öğe ekleyip</span><span class="sxs-lookup"><span data-stu-id="fe1fb-102">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>
-<span data-ttu-id="fe1fb-103">Bir Windows Forms için bir öğe ekleme işlemini <xref:System.Windows.Forms.ListView> öncelikle, bulunan öğeyi belirten ve Özellikler atayarak denetimi oluşur.</span><span class="sxs-lookup"><span data-stu-id="fe1fb-103">The process of adding an item to a Windows Forms <xref:System.Windows.Forms.ListView> control consists primarily of specifying the item and assigning properties to it.</span></span> <span data-ttu-id="fe1fb-104">Liste öğe ekleme veya kaldırma herhangi bir zamanda gerçekleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="fe1fb-104">Adding or removing list items can be done at any time.</span></span>  
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a><span data-ttu-id="b2511-102">Nasıl yapılır: Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma</span><span class="sxs-lookup"><span data-stu-id="b2511-102">How to: Add and Remove Items with the Windows Forms ListView Control</span></span>
+<span data-ttu-id="b2511-103">Bir Windows Forms için bir öğe ekleme işlemini <xref:System.Windows.Forms.ListView> öncelikle, bulunan öğeyi belirten ve Özellikler atayarak denetimi oluşur.</span><span class="sxs-lookup"><span data-stu-id="b2511-103">The process of adding an item to a Windows Forms <xref:System.Windows.Forms.ListView> control consists primarily of specifying the item and assigning properties to it.</span></span> <span data-ttu-id="b2511-104">Liste öğe ekleme veya kaldırma herhangi bir zamanda gerçekleştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="b2511-104">Adding or removing list items can be done at any time.</span></span>  
   
-### <a name="to-add-items-programmatically"></a><span data-ttu-id="fe1fb-105">Program aracılığıyla öğeleri eklemek için</span><span class="sxs-lookup"><span data-stu-id="fe1fb-105">To add items programmatically</span></span>  
+### <a name="to-add-items-programmatically"></a><span data-ttu-id="b2511-105">Program aracılığıyla öğeleri eklemek için</span><span class="sxs-lookup"><span data-stu-id="b2511-105">To add items programmatically</span></span>  
   
-1.  <span data-ttu-id="fe1fb-106">Kullanım <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> yöntemi <xref:System.Windows.Forms.ListView.Items%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="fe1fb-106">Use the <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> method of the <xref:System.Windows.Forms.ListView.Items%2A> property.</span></span>  
+1.  <span data-ttu-id="b2511-106">Kullanım <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> yöntemi <xref:System.Windows.Forms.ListView.Items%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="b2511-106">Use the <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> method of the <xref:System.Windows.Forms.ListView.Items%2A> property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#11)]  
   
-### <a name="to-remove-items-programmatically"></a><span data-ttu-id="fe1fb-107">Program aracılığıyla öğeleri kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="fe1fb-107">To remove items programmatically</span></span>  
+### <a name="to-remove-items-programmatically"></a><span data-ttu-id="b2511-107">Program aracılığıyla öğeleri kaldırmak için</span><span class="sxs-lookup"><span data-stu-id="b2511-107">To remove items programmatically</span></span>  
   
-1.  <span data-ttu-id="fe1fb-108">Kullanım <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> veya <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> yöntemi <xref:System.Windows.Forms.ListView.Items%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="fe1fb-108">Use the <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> or <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> method of the <xref:System.Windows.Forms.ListView.Items%2A> property.</span></span> <span data-ttu-id="fe1fb-109"><xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> Yöntemi, tek bir öğe kaldırır; <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> yöntemi listesinden tüm öğeleri kaldırır.</span><span class="sxs-lookup"><span data-stu-id="fe1fb-109">The <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> method removes a single item; the <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> method removes all items from the list.</span></span>  
+1.  <span data-ttu-id="b2511-108">Kullanım <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> veya <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> yöntemi <xref:System.Windows.Forms.ListView.Items%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="b2511-108">Use the <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> or <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> method of the <xref:System.Windows.Forms.ListView.Items%2A> property.</span></span> <span data-ttu-id="b2511-109"><xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> Yöntemi, tek bir öğe kaldırır; <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> yöntemi listesinden tüm öğeleri kaldırır.</span><span class="sxs-lookup"><span data-stu-id="b2511-109">The <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> method removes a single item; the <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> method removes all items from the list.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  
   
-## <a name="see-also"></a><span data-ttu-id="fe1fb-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fe1fb-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2511-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b2511-110">See also</span></span>
+
 - <xref:System.Windows.Forms.ListView>
-- [<span data-ttu-id="fe1fb-111">ListView Denetimi</span><span class="sxs-lookup"><span data-stu-id="fe1fb-111">ListView Control</span></span>](listview-control-windows-forms.md)
-- [<span data-ttu-id="fe1fb-112">ListView Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="fe1fb-112">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)
+- [<span data-ttu-id="b2511-111">ListView Denetimi</span><span class="sxs-lookup"><span data-stu-id="b2511-111">ListView Control</span></span>](listview-control-windows-forms.md)
+- [<span data-ttu-id="b2511-112">ListView Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="b2511-112">ListView Control Overview</span></span>](listview-control-overview-windows-forms.md)
