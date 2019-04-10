@@ -4,12 +4,12 @@ description: Bu konuda, bir yeniden kullanılabilir bir kitaplık ve birim testi
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3c515c3771f8204bbc7b6944f81fed463c309bc3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: be0aebb1ac700de07a52c4c50383f45d1191b7f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203408"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327756"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Mac için Visual Studio kullanarak macos'ta eksiksiz bir .NET Core çözümü derleme
 
@@ -26,7 +26,7 @@ Bu öğreticide, bir arama sözcüğünü ve bir kullanıcının metin dizesini 
 
 - OpenSSL (.NET Core 1.1 çalıştırıyorsanız): Bkz: [Mac üzerinde .NET Core önkoşulları](../macos-prerequisites.md) konu.
 - [.NET core SDK 1.1 veya üzeri](https://www.microsoft.com/net/core#macos)
-- [Mac için Visual Studio 2017](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
+- [Mac için Visual Studio 2017](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 Önkoşullar hakkında daha fazla bilgi için bkz. [Mac üzerinde .NET Core önkoşulları](../../core/macos-prerequisites.md). Tam Visual Studio 2017 için Mac için bkz: sistem gereksinimleri [Mac ürün ailesi sistem gereksinimleri için Visual Studio 2017](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
@@ -192,4 +192,4 @@ Birim testleri, geliştirme sırasında test etme ve yayımlama otomatikleştiri
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sürüm Notları Mac için Visual Studio 2017](/visualstudio/releasenotes/vs2017-mac-relnotes)
+- [Mac için Visual Studio 2017 Sürüm Notları](/visualstudio/releasenotes/vs2017-mac-relnotes)

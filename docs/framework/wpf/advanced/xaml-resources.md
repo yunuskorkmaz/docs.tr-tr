@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230024"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344929"
 ---
 # <a name="xaml-resources"></a>XAML Kaynakları
 Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir nesnedir. Fırçalar ve stilleri kaynakları örnekleridir. Bu genel bakışta, kaynakları kullanmayı açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıca oluşturabilir ve kod kullanarak veya birbirinin yerine kod arasında kaynaklarına erişin ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Daha fazla bilgi için [kaynaklar ve kod](resources-and-code.md).  
@@ -69,11 +69,11 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
   
 #### <a name="static-resource-lookup-behavior"></a>Statik kaynak arama davranışı  
   
-1.  İstenen anahtar özelliğini ayarlayan bir öğe tarafından tanımlanan kaynak sözlüğünün içinde arama işlemi olup olmadığını denetler.  
+1. İstenen anahtar özelliğini ayarlayan bir öğe tarafından tanımlanan kaynak sözlüğünün içinde arama işlemi olup olmadığını denetler.  
   
-2.  Arama işlemi üst öğe ve kendi kaynak sözlüğü için mantıksal ağaç yukarı, ardından erişir. Kök öğe ulaşılana kadar bu devam eder.  
+2. Arama işlemi üst öğe ve kendi kaynak sözlüğü için mantıksal ağaç yukarı, ardından erişir. Kök öğe ulaşılana kadar bu devam eder.  
   
-3.  Ardından, uygulama kaynaklarının denetlenir. Uygulama kaynakları tarafından tanımlanan kaynak sözlüğü içindeki kaynakları olan <xref:System.Windows.Application> nesnesi, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
+3. Ardından, uygulama kaynaklarının denetlenir. Uygulama kaynakları tarafından tanımlanan kaynak sözlüğü içindeki kaynakları olan <xref:System.Windows.Application> nesnesi, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
   
  Statik kaynak başvurulara bir kaynak sözlüğü, zaten sözcüksel olarak kaynak başvurusu önce tanımlanmış bir kaynağa başvurması gerekir. İleri başvurulara tarafından bir statik kaynak başvurusu çözümlenemiyor. Statik kaynak başvurularını kullanıyorsanız, kaynak olarak kullanılmak üzere tasarlanmış kaynakları veya her bir ilgili kaynak sözlüğü başına yakın tanımlanan şekilde bu nedenle, kaynak sözlüğü yapısını tasarlamanız gerekir.  
   
@@ -101,19 +101,19 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
 #### <a name="dynamic-resource-lookup-behavior"></a>Dinamik kaynak arama davranışı  
  Kaynak arama davranışı bir dinamik kaynak başvurusu çağırırsanız, kodunuzda arama davranışı parallels <xref:System.Windows.FrameworkElement.FindResource%2A> veya <xref:System.Windows.FrameworkElement.SetResourceReference%2A>.  
   
-1.  İstenen anahtar özelliğini ayarlayan bir öğe tarafından tanımlanan kaynak sözlüğünün içinde arama işlemi olup olmadığını denetler.  
+1. İstenen anahtar özelliğini ayarlayan bir öğe tarafından tanımlanan kaynak sözlüğünün içinde arama işlemi olup olmadığını denetler.  
   
     -   Öğe tanımlıyorsa bir <xref:System.Windows.FrameworkElement.Style%2A> özelliği <xref:System.Windows.Style.Resources%2A> sözlükte <xref:System.Windows.Style> denetlenir.  
   
     -   Öğe tanımlıyorsa bir <xref:System.Windows.Controls.Control.Template%2A> özelliği <xref:System.Windows.FrameworkTemplate.Resources%2A> sözlükte <xref:System.Windows.FrameworkTemplate> denetlenir.  
   
-2.  Arama işlemi üst öğe ve kendi kaynak sözlüğü için mantıksal ağaç yukarı, ardından erişir. Kök öğe ulaşılana kadar bu devam eder.  
+2. Arama işlemi üst öğe ve kendi kaynak sözlüğü için mantıksal ağaç yukarı, ardından erişir. Kök öğe ulaşılana kadar bu devam eder.  
   
-3.  Ardından, uygulama kaynaklarının denetlenir. Uygulama kaynakları tarafından tanımlanan kaynak sözlüğü içindeki kaynakları olan <xref:System.Windows.Application> nesnesi, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
+3. Ardından, uygulama kaynaklarının denetlenir. Uygulama kaynakları tarafından tanımlanan kaynak sözlüğü içindeki kaynakları olan <xref:System.Windows.Application> nesnesi, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
   
-4.  Tema kaynak sözlüğü, şu anda etkin tema için denetlenir. Tema çalışma zamanında değişirse, değeri değerlendirilir.  
+4. Tema kaynak sözlüğü, şu anda etkin tema için denetlenir. Tema çalışma zamanında değişirse, değeri değerlendirilir.  
   
-5.  Sistem kaynakları denetlenir.  
+5. Sistem kaynakları denetlenir.  
   
  Özel durum davranışını (varsa) değişir:  
   
