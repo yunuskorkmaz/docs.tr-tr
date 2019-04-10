@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: RichTextBox İçinde Özel Bağlam Menüsü Konumlandırma'
+title: 'Nasıl yapılır: RichTextBox İçinde Özel Açılır Menü Konumlandırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,30 +10,31 @@ helpviewer_keywords:
 - RichTextBox control [WPF], positioning custom context menus
 - context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
-ms.openlocfilehash: abb5bbb5d5a537b14f334782e87fa7caf0c7976f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9407f59c3daafd09fa5b84006f33ef2f3ebd31f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209430"
 ---
-# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a><span data-ttu-id="d119b-102">Nasıl yapılır: RichTextBox İçinde Özel Bağlam Menüsü Konumlandırma</span><span class="sxs-lookup"><span data-stu-id="d119b-102">How to: Position a Custom Context Menu in a RichTextBox</span></span>
-<span data-ttu-id="d119b-103">Bu örnek için bir özel bağlam menüsü konumlandırma nasıl gösterir bir <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="d119b-103">This example shows how to position a custom context menu for a <xref:System.Windows.Controls.RichTextBox>.</span></span>  
+# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a><span data-ttu-id="d4720-102">Nasıl yapılır: RichTextBox İçinde Özel Açılır Menü Konumlandırma</span><span class="sxs-lookup"><span data-stu-id="d4720-102">How to: Position a Custom Context Menu in a RichTextBox</span></span>
+<span data-ttu-id="d4720-103">Bu örnek için bir özel bağlam menüsü konumlandırma nasıl gösterir bir <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="d4720-103">This example shows how to position a custom context menu for a <xref:System.Windows.Controls.RichTextBox>.</span></span>  
   
- <span data-ttu-id="d119b-104">Özel bağlam menüsü için uyguladığınızda bir **RichTextBox**, bağlam menüsünü yerleşimini işlenmesinden sorumludur.</span><span class="sxs-lookup"><span data-stu-id="d119b-104">When you implement a custom context menu for a **RichTextBox**, you are responsible for handling the placement of the context menu.</span></span>  <span data-ttu-id="d119b-105">Varsayılan olarak, merkezde özel bağlam menüsü açıldığında **RichTextBox**.</span><span class="sxs-lookup"><span data-stu-id="d119b-105">By default, a custom context menu is opened at the center of the **RichTextBox**.</span></span>  
+ <span data-ttu-id="d4720-104">Özel bağlam menüsü için uyguladığınızda bir **RichTextBox**, bağlam menüsünü yerleşimini işlenmesinden sorumludur.</span><span class="sxs-lookup"><span data-stu-id="d4720-104">When you implement a custom context menu for a **RichTextBox**, you are responsible for handling the placement of the context menu.</span></span>  <span data-ttu-id="d4720-105">Varsayılan olarak, merkezde özel bağlam menüsü açıldığında **RichTextBox**.</span><span class="sxs-lookup"><span data-stu-id="d4720-105">By default, a custom context menu is opened at the center of the **RichTextBox**.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d119b-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="d119b-106">Example</span></span>  
- <span data-ttu-id="d119b-107">Varsayılan yerleştirme davranışı geçersiz kılmak için için bir dinleyici eklemek <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> olay.</span><span class="sxs-lookup"><span data-stu-id="d119b-107">To override the default placement behavior, add a listener for the <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event.</span></span>  <span data-ttu-id="d119b-108">Aşağıdaki örnekte, program aracılığıyla bunun nasıl yapılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d119b-108">The following example shows how to do this programmatically.</span></span>  
+## <a name="example"></a><span data-ttu-id="d4720-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="d4720-106">Example</span></span>  
+ <span data-ttu-id="d4720-107">Varsayılan yerleştirme davranışı geçersiz kılmak için için bir dinleyici eklemek <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> olay.</span><span class="sxs-lookup"><span data-stu-id="d4720-107">To override the default placement behavior, add a listener for the <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event.</span></span>  <span data-ttu-id="d4720-108">Aşağıdaki örnekte, program aracılığıyla bunun nasıl yapılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d4720-108">The following example shows how to do this programmatically.</span></span>  
   
  [!code-csharp[RichTextBox_ContextMenu#_AddListener](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_addlistener)]
  [!code-vb[RichTextBox_ContextMenu#_AddListener](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_addlistener)]  
   
-## <a name="example"></a><span data-ttu-id="d119b-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="d119b-109">Example</span></span>  
- <span data-ttu-id="d119b-110">Aşağıdaki örnek, karşılık gelen bir uygulamasını gösterir <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> olay dinleyicisi.</span><span class="sxs-lookup"><span data-stu-id="d119b-110">The following example shows an implementation the corresponding <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event listener.</span></span>  
+## <a name="example"></a><span data-ttu-id="d4720-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="d4720-109">Example</span></span>  
+ <span data-ttu-id="d4720-110">Aşağıdaki örnek, karşılık gelen bir uygulamasını gösterir <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> olay dinleyicisi.</span><span class="sxs-lookup"><span data-stu-id="d4720-110">The following example shows an implementation the corresponding <xref:System.Windows.FrameworkContentElement.ContextMenuOpening> event listener.</span></span>  
   
  [!code-csharp[RichTextBox_ContextMenu#_ListenerBody](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_listenerbody)]
  [!code-vb[RichTextBox_ContextMenu#_ListenerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
   
-## <a name="see-also"></a><span data-ttu-id="d119b-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d119b-111">See also</span></span>
-- [<span data-ttu-id="d119b-112">RichTextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="d119b-112">RichTextBox Overview</span></span>](richtextbox-overview.md)
-- [<span data-ttu-id="d119b-113">TextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="d119b-113">TextBox Overview</span></span>](textbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="d4720-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d4720-111">See also</span></span>
+
+- [<span data-ttu-id="d4720-112">RichTextBox Genel Bakışı</span><span class="sxs-lookup"><span data-stu-id="d4720-112">RichTextBox Overview</span></span>](richtextbox-overview.md)
+- [<span data-ttu-id="d4720-113">TextBox Genel Bakışı</span><span class="sxs-lookup"><span data-stu-id="d4720-113">TextBox Overview</span></span>](textbox-overview.md)

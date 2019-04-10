@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0682aec060d5f65a3034d482c92a04e0880f7a6b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: afd8bd76f8d738c9eaa3a8e3d490e175e408b92b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204308"
 ---
-# <a name="icordebugmanagedcallbackcreateappdomain-method"></a><span data-ttu-id="c02b1-102">ICorDebugManagedCallback::CreateAppDomain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c02b1-102">ICorDebugManagedCallback::CreateAppDomain Method</span></span>
-<span data-ttu-id="c02b1-103">Hata ayıklayıcı, bir uygulama etki alanı oluşturulduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="c02b1-103">Notifies the debugger that an application domain has been created.</span></span>  
+# <a name="icordebugmanagedcallbackcreateappdomain-method"></a><span data-ttu-id="54b7f-102">ICorDebugManagedCallback::CreateAppDomain Yöntemi</span><span class="sxs-lookup"><span data-stu-id="54b7f-102">ICorDebugManagedCallback::CreateAppDomain Method</span></span>
+<span data-ttu-id="54b7f-103">Hata ayıklayıcı, bir uygulama etki alanı oluşturulduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="54b7f-103">Notifies the debugger that an application domain has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c02b1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c02b1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="54b7f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="54b7f-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAppDomain (  
@@ -36,21 +36,22 @@ HRESULT CreateAppDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c02b1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c02b1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="54b7f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="54b7f-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="c02b1-106">[in] Uygulama etki alanı oluşturulduğu işlemini temsil eden bir Icordebugprocess nesnesine bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c02b1-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the application domain was created.</span></span>  
+ <span data-ttu-id="54b7f-106">[in] Uygulama etki alanı oluşturulduğu işlemini temsil eden bir Icordebugprocess nesnesine bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="54b7f-106">[in] A pointer to an ICorDebugProcess object that represents the process in which the application domain was created.</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="c02b1-107">[in] Oluşturulmuş uygulama etki alanı temsil eden bir Icordebugappdomain nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="c02b1-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has been created.</span></span>  
+ <span data-ttu-id="54b7f-107">[in] Oluşturulmuş uygulama etki alanı temsil eden bir Icordebugappdomain nesne işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="54b7f-107">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that has been created.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c02b1-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c02b1-108">Requirements</span></span>  
- <span data-ttu-id="c02b1-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c02b1-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="54b7f-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="54b7f-108">Requirements</span></span>  
+ <span data-ttu-id="54b7f-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="54b7f-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c02b1-110">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c02b1-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="54b7f-110">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="54b7f-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c02b1-111">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c02b1-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="54b7f-111">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54b7f-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c02b1-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c02b1-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="54b7f-112">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="54b7f-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c02b1-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c02b1-113">See also</span></span>
-- [<span data-ttu-id="c02b1-114">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c02b1-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="54b7f-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="54b7f-113">See also</span></span>
+
+- [<span data-ttu-id="54b7f-114">ICorDebugManagedCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="54b7f-114">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

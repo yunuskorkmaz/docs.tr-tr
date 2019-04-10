@@ -5,47 +5,48 @@ helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-ms.openlocfilehash: 0c0d24111a2fdf856ff1f4ce154ec85afbbd61ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 26633b0abaa8c1c2916153b2236ecf9e4982fd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208871"
 ---
-# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="0f26e-102">Windows Forms DataGridView Denetimindeki Varsayılan İşlevler</span><span class="sxs-lookup"><span data-stu-id="0f26e-102">Default Functionality in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="0f26e-103">Windows Forms <xref:System.Windows.Forms.DataGridView> denetimi varsayılan işlevselliği önemli ölçüde ile kullanıcılara sağlar.</span><span class="sxs-lookup"><span data-stu-id="0f26e-103">The Windows Forms <xref:System.Windows.Forms.DataGridView> control provides users with a significant amount of default functionality.</span></span>  
+# <a name="default-functionality-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="5085d-102">Windows Forms DataGridView Denetimindeki Varsayılan İşlevler</span><span class="sxs-lookup"><span data-stu-id="5085d-102">Default Functionality in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="5085d-103">Windows Forms <xref:System.Windows.Forms.DataGridView> denetimi varsayılan işlevselliği önemli ölçüde ile kullanıcılara sağlar.</span><span class="sxs-lookup"><span data-stu-id="5085d-103">The Windows Forms <xref:System.Windows.Forms.DataGridView> control provides users with a significant amount of default functionality.</span></span>  
   
-## <a name="default-functionality"></a><span data-ttu-id="0f26e-104">Varsayılan işlevsellik</span><span class="sxs-lookup"><span data-stu-id="0f26e-104">Default Functionality</span></span>  
- <span data-ttu-id="0f26e-105">Varsayılan olarak, bir <xref:System.Windows.Forms.DataGridView> denetimi:</span><span class="sxs-lookup"><span data-stu-id="0f26e-105">By default, a <xref:System.Windows.Forms.DataGridView> control:</span></span>  
+## <a name="default-functionality"></a><span data-ttu-id="5085d-104">Varsayılan işlevsellik</span><span class="sxs-lookup"><span data-stu-id="5085d-104">Default Functionality</span></span>  
+ <span data-ttu-id="5085d-105">Varsayılan olarak, bir <xref:System.Windows.Forms.DataGridView> denetimi:</span><span class="sxs-lookup"><span data-stu-id="5085d-105">By default, a <xref:System.Windows.Forms.DataGridView> control:</span></span>  
   
--   <span data-ttu-id="0f26e-106">Sütun üst bilgilerini ve tablo dikey kaydırma yaparken görünür kalmasını satır üst bilgileri otomatik olarak görüntüler.</span><span class="sxs-lookup"><span data-stu-id="0f26e-106">Automatically displays column headers and row headers that remain visible as the table scrolls vertically.</span></span>  
+-   <span data-ttu-id="5085d-106">Sütun üst bilgilerini ve tablo dikey kaydırma yaparken görünür kalmasını satır üst bilgileri otomatik olarak görüntüler.</span><span class="sxs-lookup"><span data-stu-id="5085d-106">Automatically displays column headers and row headers that remain visible as the table scrolls vertically.</span></span>  
   
--   <span data-ttu-id="0f26e-107">Seçimi göstergesi geçerli satır içeren bir satır üst bilgisi yok.</span><span class="sxs-lookup"><span data-stu-id="0f26e-107">Has a row header that contains a selection indicator for the current row.</span></span>  
+-   <span data-ttu-id="5085d-107">Seçimi göstergesi geçerli satır içeren bir satır üst bilgisi yok.</span><span class="sxs-lookup"><span data-stu-id="5085d-107">Has a row header that contains a selection indicator for the current row.</span></span>  
   
--   <span data-ttu-id="0f26e-108">Seçim dikdörtgeninin ilk hücreye sahiptir.</span><span class="sxs-lookup"><span data-stu-id="0f26e-108">Has a selection rectangle in the first cell.</span></span>  
+-   <span data-ttu-id="5085d-108">Seçim dikdörtgeninin ilk hücreye sahiptir.</span><span class="sxs-lookup"><span data-stu-id="5085d-108">Has a selection rectangle in the first cell.</span></span>  
   
--   <span data-ttu-id="0f26e-109">Sütun ayırıcılarını kullanıcı çift tıkladığında, otomatik olarak yeniden boyutlandırılıp boyutlandırılamayacağını sütun içeriyor.</span><span class="sxs-lookup"><span data-stu-id="0f26e-109">Has columns that can be automatically resized when the user double-clicks the column dividers.</span></span>  
+-   <span data-ttu-id="5085d-109">Sütun ayırıcılarını kullanıcı çift tıkladığında, otomatik olarak yeniden boyutlandırılıp boyutlandırılamayacağını sütun içeriyor.</span><span class="sxs-lookup"><span data-stu-id="5085d-109">Has columns that can be automatically resized when the user double-clicks the column dividers.</span></span>  
   
--   <span data-ttu-id="0f26e-110">Görsel stiller, Windows XP ve Windows Server 2003 ailesinde otomatik olarak destekler, <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemi uygulamanın çağrılır `Main` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="0f26e-110">Automatically supports visual styles on Windows XP and the Windows Server 2003 family when the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method is called from the application's `Main` method.</span></span>  
+-   <span data-ttu-id="5085d-110">Görsel stiller, Windows XP ve Windows Server 2003 ailesinde otomatik olarak destekler, <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemi uygulamanın çağrılır `Main` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5085d-110">Automatically supports visual styles on Windows XP and the Windows Server 2003 family when the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method is called from the application's `Main` method.</span></span>  
   
- <span data-ttu-id="0f26e-111">Ayrıca, içeriğini bir <xref:System.Windows.Forms.DataGridView> denetim varsayılan olarak düzenlenebilir:</span><span class="sxs-lookup"><span data-stu-id="0f26e-111">Additionally, the contents of a <xref:System.Windows.Forms.DataGridView> control can be edited by default:</span></span>  
+ <span data-ttu-id="5085d-111">Ayrıca, içeriğini bir <xref:System.Windows.Forms.DataGridView> denetim varsayılan olarak düzenlenebilir:</span><span class="sxs-lookup"><span data-stu-id="5085d-111">Additionally, the contents of a <xref:System.Windows.Forms.DataGridView> control can be edited by default:</span></span>  
   
--   <span data-ttu-id="0f26e-112">Kullanıcı çift tıklamaları birbirinden ayırma ya da bir hücreye F2 tuşuna basar denetimi otomatik olarak hücre düzenleme moduna geçirir ve hücre içeriğini kullanıcı türleri olarak güncelleştirir.</span><span class="sxs-lookup"><span data-stu-id="0f26e-112">If the user double-clicks or presses F2 in a cell, the control automatically puts the cell into edit mode and updates the contents of the cell as the user types.</span></span>  
+-   <span data-ttu-id="5085d-112">Kullanıcı çift tıklamaları birbirinden ayırma ya da bir hücreye F2 tuşuna basar denetimi otomatik olarak hücre düzenleme moduna geçirir ve hücre içeriğini kullanıcı türleri olarak güncelleştirir.</span><span class="sxs-lookup"><span data-stu-id="5085d-112">If the user double-clicks or presses F2 in a cell, the control automatically puts the cell into edit mode and updates the contents of the cell as the user types.</span></span>  
   
--   <span data-ttu-id="0f26e-113">Kullanıcı Kılavuzu sonuna kadar kaydırma ise kullanıcı yeni kayıtları eklemek için bir satır bulunduğunu görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="0f26e-113">If the user scrolls to the end of the grid, the user will see that a row for adding new records is present.</span></span> <span data-ttu-id="0f26e-114">Kullanıcı bu satırı tıkladığında, yeni bir satır eklenir <xref:System.Windows.Forms.DataGridView> denetimiyle varsayılan değerleri.</span><span class="sxs-lookup"><span data-stu-id="0f26e-114">When the user clicks this row, a new row is added to the <xref:System.Windows.Forms.DataGridView> control, with default values.</span></span> <span data-ttu-id="0f26e-115">Bu yeni satır, kullanıcı ESC tuşuna bastığında kaybolur.</span><span class="sxs-lookup"><span data-stu-id="0f26e-115">When the user presses ESC, this new row disappears.</span></span>  
+-   <span data-ttu-id="5085d-113">Kullanıcı Kılavuzu sonuna kadar kaydırma ise kullanıcı yeni kayıtları eklemek için bir satır bulunduğunu görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="5085d-113">If the user scrolls to the end of the grid, the user will see that a row for adding new records is present.</span></span> <span data-ttu-id="5085d-114">Kullanıcı bu satırı tıkladığında, yeni bir satır eklenir <xref:System.Windows.Forms.DataGridView> denetimiyle varsayılan değerleri.</span><span class="sxs-lookup"><span data-stu-id="5085d-114">When the user clicks this row, a new row is added to the <xref:System.Windows.Forms.DataGridView> control, with default values.</span></span> <span data-ttu-id="5085d-115">Bu yeni satır, kullanıcı ESC tuşuna bastığında kaybolur.</span><span class="sxs-lookup"><span data-stu-id="5085d-115">When the user presses ESC, this new row disappears.</span></span>  
   
--   <span data-ttu-id="0f26e-116">Kullanıcı bir satır üst bilgisi tıklarsa, tüm satırı seçilir.</span><span class="sxs-lookup"><span data-stu-id="0f26e-116">If the user clicks a row header, the whole row is selected.</span></span>  
+-   <span data-ttu-id="5085d-116">Kullanıcı bir satır üst bilgisi tıklarsa, tüm satırı seçilir.</span><span class="sxs-lookup"><span data-stu-id="5085d-116">If the user clicks a row header, the whole row is selected.</span></span>  
   
- <span data-ttu-id="0f26e-117">Bağladığınızda bir <xref:System.Windows.Forms.DataGridView> denetim ayarlayarak bir veri kaynağı için kendi <xref:System.Windows.Forms.DataGridView.DataSource%2A> özelliği, denetimi:</span><span class="sxs-lookup"><span data-stu-id="0f26e-117">When you bind a <xref:System.Windows.Forms.DataGridView> control to a data source by setting its <xref:System.Windows.Forms.DataGridView.DataSource%2A> property, the control:</span></span>  
+ <span data-ttu-id="5085d-117">Bağladığınızda bir <xref:System.Windows.Forms.DataGridView> denetim ayarlayarak bir veri kaynağı için kendi <xref:System.Windows.Forms.DataGridView.DataSource%2A> özelliği, denetimi:</span><span class="sxs-lookup"><span data-stu-id="5085d-117">When you bind a <xref:System.Windows.Forms.DataGridView> control to a data source by setting its <xref:System.Windows.Forms.DataGridView.DataSource%2A> property, the control:</span></span>  
   
--   <span data-ttu-id="0f26e-118">Otomatik olarak veri kaynağının sütunlarının adlarını, sütun üst bilgi metni olarak kullanır.</span><span class="sxs-lookup"><span data-stu-id="0f26e-118">Automatically uses the names of the data source's columns as the column header text.</span></span>  
+-   <span data-ttu-id="5085d-118">Otomatik olarak veri kaynağının sütunlarının adlarını, sütun üst bilgi metni olarak kullanır.</span><span class="sxs-lookup"><span data-stu-id="5085d-118">Automatically uses the names of the data source's columns as the column header text.</span></span>  
   
--   <span data-ttu-id="0f26e-119">Veri kaynağının içeriğiyle doldurulur.</span><span class="sxs-lookup"><span data-stu-id="0f26e-119">Is populated with the contents of the data source.</span></span> <span data-ttu-id="0f26e-120"><xref:System.Windows.Forms.DataGridView> sütunlar, veri kaynağındaki her sütun için otomatik olarak oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="0f26e-120"><xref:System.Windows.Forms.DataGridView> columns are automatically created for each column in the data source.</span></span>  
+-   <span data-ttu-id="5085d-119">Veri kaynağının içeriğiyle doldurulur.</span><span class="sxs-lookup"><span data-stu-id="5085d-119">Is populated with the contents of the data source.</span></span> <xref:System.Windows.Forms.DataGridView> <span data-ttu-id="5085d-120">sütunlar, veri kaynağındaki her sütun için otomatik olarak oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="5085d-120">columns are automatically created for each column in the data source.</span></span>  
   
--   <span data-ttu-id="0f26e-121">Görünür her satır için bir satır bir tablo oluşturur.</span><span class="sxs-lookup"><span data-stu-id="0f26e-121">Creates a row for each visible row in the table.</span></span>  
+-   <span data-ttu-id="5085d-121">Görünür her satır için bir satır bir tablo oluşturur.</span><span class="sxs-lookup"><span data-stu-id="5085d-121">Creates a row for each visible row in the table.</span></span>  
   
--   <span data-ttu-id="0f26e-122">Kullanıcı bir sütun başlığına sağ tıkladığında, temel alınan verileri temel alan satır otomatik olarak sıralar.</span><span class="sxs-lookup"><span data-stu-id="0f26e-122">Automatically sorts the rows based on the underlying data when the user clicks a column header.</span></span>  
+-   <span data-ttu-id="5085d-122">Kullanıcı bir sütun başlığına sağ tıkladığında, temel alınan verileri temel alan satır otomatik olarak sıralar.</span><span class="sxs-lookup"><span data-stu-id="5085d-122">Automatically sorts the rows based on the underlying data when the user clicks a column header.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f26e-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0f26e-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5085d-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5085d-123">See also</span></span>
+
 - <xref:System.Windows.Forms.DataGridView>
-- [<span data-ttu-id="0f26e-124">DataGridView Denetimi</span><span class="sxs-lookup"><span data-stu-id="0f26e-124">DataGridView Control</span></span>](datagridview-control-windows-forms.md)
+- [<span data-ttu-id="5085d-124">DataGridView Denetimi</span><span class="sxs-lookup"><span data-stu-id="5085d-124">DataGridView Control</span></span>](datagridview-control-windows-forms.md)

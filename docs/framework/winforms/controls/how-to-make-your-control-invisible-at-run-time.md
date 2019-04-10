@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çalışma zamanında denetiminizi görünmez yapma'
+title: 'Nasıl yapılır: Çalışma Zamanında Denetiminizi Görünmez Yapma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invisible
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-ms.openlocfilehash: 52ea2336bac1ec483cb86e24114090a1b3725038
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 06283a93c3b88d2febc1d64797139eee62661b42
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201656"
 ---
-# <a name="how-to-make-your-control-invisible-at-run-time"></a><span data-ttu-id="44d14-102">Nasıl yapılır: Çalışma zamanında denetiminizi görünmez yapma</span><span class="sxs-lookup"><span data-stu-id="44d14-102">How to: Make Your Control Invisible at Run Time</span></span>
-<span data-ttu-id="44d14-103">Çalışma zamanında görünmez olan bir kullanıcı denetimi oluşturmak isteyebilirsiniz zamanlar vardır.</span><span class="sxs-lookup"><span data-stu-id="44d14-103">There are times when you might want to create a user control that is invisible at run time.</span></span> <span data-ttu-id="44d14-104">Örneğin, bir uyarı saati bir denetim ne zaman uyarı sizi uyarabilir dışında görünmez olabilir.</span><span class="sxs-lookup"><span data-stu-id="44d14-104">For example, a control that is an alarm clock might be invisible except when the alarm was sounding.</span></span> <span data-ttu-id="44d14-105">Bu ayarlayarak kolayca gerçekleştirilir <xref:System.Windows.Forms.Control.Visible%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="44d14-105">This is easily accomplished by setting the <xref:System.Windows.Forms.Control.Visible%2A> property.</span></span> <span data-ttu-id="44d14-106">Varsa <xref:System.Windows.Forms.Control.Visible%2A> özelliği `true`, Denetim normal olarak görünür.</span><span class="sxs-lookup"><span data-stu-id="44d14-106">If the <xref:System.Windows.Forms.Control.Visible%2A> property is `true`, your control will appear as normal.</span></span> <span data-ttu-id="44d14-107">Varsa `false`, denetiminizin gizlenir.</span><span class="sxs-lookup"><span data-stu-id="44d14-107">If `false`, your control will be hidden.</span></span> <span data-ttu-id="44d14-108">Denetiminiz kodunda görünmez hala çalışabilir ancak kullanıcı arabirimi aracılığıyla denetimi ile etkileşim kurmak mümkün olmayacaktır.</span><span class="sxs-lookup"><span data-stu-id="44d14-108">Although code in your control may still run while invisible, you will not be able to interact with the control through the user interface.</span></span> <span data-ttu-id="44d14-109">Kullanıcı girişi (örneğin, fare tıklamaları) hala yanıt veren görünmeyen bir denetim oluşturmak istiyorsanız, saydam bir denetimi oluşturmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="44d14-109">If you want to create an invisible control that still responds to user input (for example, mouse clicks), you should create a transparent control.</span></span> <span data-ttu-id="44d14-110">Daha fazla bilgi için [denetiminiz saydam bir arka plan verme](how-to-give-your-control-a-transparent-background.md).</span><span class="sxs-lookup"><span data-stu-id="44d14-110">For more information, see [Giving Your Control a Transparent Background](how-to-give-your-control-a-transparent-background.md).</span></span>  
+# <a name="how-to-make-your-control-invisible-at-run-time"></a><span data-ttu-id="a7eaa-102">Nasıl yapılır: Çalışma Zamanında Denetiminizi Görünmez Yapma</span><span class="sxs-lookup"><span data-stu-id="a7eaa-102">How to: Make Your Control Invisible at Run Time</span></span>
+<span data-ttu-id="a7eaa-103">Çalışma zamanında görünmez olan bir kullanıcı denetimi oluşturmak isteyebilirsiniz zamanlar vardır.</span><span class="sxs-lookup"><span data-stu-id="a7eaa-103">There are times when you might want to create a user control that is invisible at run time.</span></span> <span data-ttu-id="a7eaa-104">Örneğin, bir uyarı saati bir denetim ne zaman uyarı sizi uyarabilir dışında görünmez olabilir.</span><span class="sxs-lookup"><span data-stu-id="a7eaa-104">For example, a control that is an alarm clock might be invisible except when the alarm was sounding.</span></span> <span data-ttu-id="a7eaa-105">Bu ayarlayarak kolayca gerçekleştirilir <xref:System.Windows.Forms.Control.Visible%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="a7eaa-105">This is easily accomplished by setting the <xref:System.Windows.Forms.Control.Visible%2A> property.</span></span> <span data-ttu-id="a7eaa-106">Varsa <xref:System.Windows.Forms.Control.Visible%2A> özelliği `true`, Denetim normal olarak görünür.</span><span class="sxs-lookup"><span data-stu-id="a7eaa-106">If the <xref:System.Windows.Forms.Control.Visible%2A> property is `true`, your control will appear as normal.</span></span> <span data-ttu-id="a7eaa-107">Varsa `false`, denetiminizin gizlenir.</span><span class="sxs-lookup"><span data-stu-id="a7eaa-107">If `false`, your control will be hidden.</span></span> <span data-ttu-id="a7eaa-108">Denetiminiz kodunda görünmez hala çalışabilir ancak kullanıcı arabirimi aracılığıyla denetimi ile etkileşim kurmak mümkün olmayacaktır.</span><span class="sxs-lookup"><span data-stu-id="a7eaa-108">Although code in your control may still run while invisible, you will not be able to interact with the control through the user interface.</span></span> <span data-ttu-id="a7eaa-109">Kullanıcı girişi (örneğin, fare tıklamaları) hala yanıt veren görünmeyen bir denetim oluşturmak istiyorsanız, saydam bir denetimi oluşturmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="a7eaa-109">If you want to create an invisible control that still responds to user input (for example, mouse clicks), you should create a transparent control.</span></span> <span data-ttu-id="a7eaa-110">Daha fazla bilgi için [denetiminiz saydam bir arka plan verme](how-to-give-your-control-a-transparent-background.md).</span><span class="sxs-lookup"><span data-stu-id="a7eaa-110">For more information, see [Giving Your Control a Transparent Background](how-to-give-your-control-a-transparent-background.md).</span></span>  
   
-### <a name="to-make-your-control-invisible-at-run-time"></a><span data-ttu-id="44d14-111">İçin çalışma zamanında denetiminizi görünmez yapma</span><span class="sxs-lookup"><span data-stu-id="44d14-111">To make your control invisible at run time</span></span>  
+### <a name="to-make-your-control-invisible-at-run-time"></a><span data-ttu-id="a7eaa-111">İçin çalışma zamanında denetiminizi görünmez yapma</span><span class="sxs-lookup"><span data-stu-id="a7eaa-111">To make your control invisible at run time</span></span>  
   
-1.  <span data-ttu-id="44d14-112">Ayarlama <xref:System.Windows.Forms.Control.Visible%2A> özelliğini `false`.</span><span class="sxs-lookup"><span data-stu-id="44d14-112">Set the <xref:System.Windows.Forms.Control.Visible%2A> property to `false`.</span></span>  
+1.  <span data-ttu-id="a7eaa-112">Ayarlama <xref:System.Windows.Forms.Control.Visible%2A> özelliğini `false`.</span><span class="sxs-lookup"><span data-stu-id="a7eaa-112">Set the <xref:System.Windows.Forms.Control.Visible%2A> property to `false`.</span></span>  
   
     ```vb  
     ' To set the Visible property from within your object's own code.  
@@ -39,7 +39,8 @@ ms.locfileid: "57708983"
     myControl1.Visible = false;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="44d14-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="44d14-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7eaa-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a7eaa-113">See also</span></span>
+
 - <xref:System.Windows.Forms.Control.Visible%2A>
-- [<span data-ttu-id="44d14-114">.NET Framework ile Özel Windows Forms Denetimleri Geliştirme</span><span class="sxs-lookup"><span data-stu-id="44d14-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
-- [<span data-ttu-id="44d14-115">Nasıl yapılır: Denetiminize saydam arka plan verme</span><span class="sxs-lookup"><span data-stu-id="44d14-115">How to: Give Your Control a Transparent Background</span></span>](how-to-give-your-control-a-transparent-background.md)
+- [<span data-ttu-id="a7eaa-114">.NET Framework ile Özel Windows Forms Denetimleri Geliştirme</span><span class="sxs-lookup"><span data-stu-id="a7eaa-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="a7eaa-115">Nasıl yapılır: Denetiminize Saydam Arka Plan Verme</span><span class="sxs-lookup"><span data-stu-id="a7eaa-115">How to: Give Your Control a Transparent Background</span></span>](how-to-give-your-control-a-transparent-background.md)

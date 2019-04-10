@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a1963221942134d148d5417ebafea97a26aead5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d97f536d54ac1cb77c5d0413d2437508374ac7f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169006"
 ---
-# <a name="imetadataemit2savedelta-method"></a><span data-ttu-id="18036-102">IMetaDataEmit2::SaveDelta Yöntemi</span><span class="sxs-lookup"><span data-stu-id="18036-102">IMetaDataEmit2::SaveDelta Method</span></span>
-<span data-ttu-id="18036-103">Değişiklikleri geçerli Düzenle ve devam et oturumdan belirtilen dosyaya kaydeder.</span><span class="sxs-lookup"><span data-stu-id="18036-103">Saves changes from the current edit-and-continue session to the specified file.</span></span>  
+# <a name="imetadataemit2savedelta-method"></a><span data-ttu-id="1dfef-102">IMetaDataEmit2::SaveDelta Yöntemi</span><span class="sxs-lookup"><span data-stu-id="1dfef-102">IMetaDataEmit2::SaveDelta Method</span></span>
+<span data-ttu-id="1dfef-103">Değişiklikleri geçerli Düzenle ve devam et oturumdan belirtilen dosyaya kaydeder.</span><span class="sxs-lookup"><span data-stu-id="1dfef-103">Saves changes from the current edit-and-continue session to the specified file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="18036-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="18036-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1dfef-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1dfef-104">Syntax</span></span>  
   
 ```  
 HRESULT SaveDelta (  
@@ -36,22 +36,23 @@ HRESULT SaveDelta (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="18036-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="18036-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1dfef-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1dfef-105">Parameters</span></span>  
  `szFile`  
- <span data-ttu-id="18036-106">[in] Dosya adı altında kaydetmek için değiştirir.</span><span class="sxs-lookup"><span data-stu-id="18036-106">[in] The file name under which to save changes.</span></span>  
+ <span data-ttu-id="1dfef-106">[in] Dosya adı altında kaydetmek için değiştirir.</span><span class="sxs-lookup"><span data-stu-id="1dfef-106">[in] The file name under which to save changes.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="18036-107">[in] Ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="18036-107">[in] Reserved.</span></span> <span data-ttu-id="18036-108">Sıfır olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="18036-108">Must be zero.</span></span>  
+ <span data-ttu-id="1dfef-107">[in] Ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="1dfef-107">[in] Reserved.</span></span> <span data-ttu-id="1dfef-108">Sıfır olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="1dfef-108">Must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="18036-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="18036-109">Requirements</span></span>  
- <span data-ttu-id="18036-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="18036-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1dfef-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1dfef-109">Requirements</span></span>  
+ <span data-ttu-id="1dfef-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1dfef-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="18036-111">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="18036-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1dfef-111">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="1dfef-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="18036-112">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="18036-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1dfef-112">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="1dfef-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="18036-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18036-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="1dfef-113">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="1dfef-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="18036-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="18036-114">See also</span></span>
-- [<span data-ttu-id="18036-115">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="18036-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="18036-116">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="18036-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1dfef-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1dfef-114">See also</span></span>
+
+- [<span data-ttu-id="1dfef-115">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1dfef-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="1dfef-116">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="1dfef-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

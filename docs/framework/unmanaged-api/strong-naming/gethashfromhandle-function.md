@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64c71f1263ae6fd2c72126ec83bda74d5902a311
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 48dd987896536006fe81bc01528cadb507123e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203411"
 ---
-# <a name="gethashfromhandle-function"></a><span data-ttu-id="c3842-102">GetHashFromHandle İşlevi</span><span class="sxs-lookup"><span data-stu-id="c3842-102">GetHashFromHandle Function</span></span>
-<span data-ttu-id="c3842-103">Belirtilen dosya tanıtıcısıyla belirtilen karma algoritması kullanarak bir dosyanın içeriğini üzerinden bir karma oluşturur.</span><span class="sxs-lookup"><span data-stu-id="c3842-103">Generates a hash over the contents of the file with the specified file handle, using the specified hash algorithm.</span></span>  
+# <a name="gethashfromhandle-function"></a><span data-ttu-id="3b6c5-102">GetHashFromHandle İşlevi</span><span class="sxs-lookup"><span data-stu-id="3b6c5-102">GetHashFromHandle Function</span></span>
+<span data-ttu-id="3b6c5-103">Belirtilen dosya tanıtıcısıyla belirtilen karma algoritması kullanarak bir dosyanın içeriğini üzerinden bir karma oluşturur.</span><span class="sxs-lookup"><span data-stu-id="3b6c5-103">Generates a hash over the contents of the file with the specified file handle, using the specified hash algorithm.</span></span>  
   
- <span data-ttu-id="c3842-104">Bu işlev kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="c3842-104">This function has been deprecated.</span></span> <span data-ttu-id="c3842-105">Kullanım [Iclrstrongname::gethashfromhandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="c3842-105">Use the [ICLRStrongName::GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md) method instead.</span></span>  
+ <span data-ttu-id="3b6c5-104">Bu işlev kullanım dışı bırakıldı.</span><span class="sxs-lookup"><span data-stu-id="3b6c5-104">This function has been deprecated.</span></span> <span data-ttu-id="3b6c5-105">Kullanım [Iclrstrongname::gethashfromhandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="3b6c5-105">Use the [ICLRStrongName::GetHashFromHandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3842-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c3842-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b6c5-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3b6c5-106">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromHandle (  
@@ -40,31 +40,32 @@ HRESULT GetHashFromHandle (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c3842-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c3842-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3b6c5-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3b6c5-107">Parameters</span></span>  
  `hFile`  
- <span data-ttu-id="c3842-108">[in] Karma hale getirilecek dosya tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="c3842-108">[in] The handle of the file to be hashed.</span></span>  
+ <span data-ttu-id="3b6c5-108">[in] Karma hale getirilecek dosya tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="3b6c5-108">[in] The handle of the file to be hashed.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="c3842-109">[out içinde] Sabit karma algoritmasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="c3842-109">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="c3842-110">Sıfır varsayılan algoritma için kullanın.</span><span class="sxs-lookup"><span data-stu-id="c3842-110">Use zero for the default algorithm.</span></span>  
+ <span data-ttu-id="3b6c5-109">[out içinde] Sabit karma algoritmasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="3b6c5-109">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="3b6c5-110">Sıfır varsayılan algoritma için kullanın.</span><span class="sxs-lookup"><span data-stu-id="3b6c5-110">Use zero for the default algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="c3842-111">[out] Döndürülen karma arabellek.</span><span class="sxs-lookup"><span data-stu-id="c3842-111">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="3b6c5-111">[out] Döndürülen karma arabellek.</span><span class="sxs-lookup"><span data-stu-id="3b6c5-111">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="c3842-112">[in] İstenen en büyük boyutunu `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="c3842-112">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="3b6c5-112">[in] İstenen en büyük boyutunu `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="3b6c5-112">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="c3842-113">[out] Döndürülen bayt cinsinden boyutu `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="c3842-113">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="3b6c5-113">[out] Döndürülen bayt cinsinden boyutu `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="3b6c5-113">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3842-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c3842-114">Requirements</span></span>  
- <span data-ttu-id="c3842-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3842-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b6c5-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3b6c5-114">Requirements</span></span>  
+ <span data-ttu-id="3b6c5-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b6c5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3842-116">**Üst bilgi:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="c3842-116">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="3b6c5-116">**Üst bilgi:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="3b6c5-116">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="c3842-117">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="c3842-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3b6c5-117">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="3b6c5-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c3842-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3842-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="3b6c5-118">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="3b6c5-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c3842-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c3842-119">See also</span></span>
-- [<span data-ttu-id="c3842-120">GetHashFromHandle Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c3842-120">GetHashFromHandle Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [<span data-ttu-id="c3842-121">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c3842-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3b6c5-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3b6c5-119">See also</span></span>
+
+- [<span data-ttu-id="3b6c5-120">GetHashFromHandle Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3b6c5-120">GetHashFromHandle Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
+- [<span data-ttu-id="3b6c5-121">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3b6c5-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -20,19 +20,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a93e73fa8345b48e604d6f63d16170d850ead451
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b95625cfe17b36c0244e6780a08dcf50ce50763d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201864"
 ---
-# <a name="corexitprocess-function"></a><span data-ttu-id="204e5-102">CorExitProcess İşlevi</span><span class="sxs-lookup"><span data-stu-id="204e5-102">CorExitProcess Function</span></span>
-<span data-ttu-id="204e5-103">Yönetilmeyen geçerli işlemi kapatır.</span><span class="sxs-lookup"><span data-stu-id="204e5-103">Shuts down the current unmanaged process.</span></span>  
+# <a name="corexitprocess-function"></a><span data-ttu-id="07287-102">CorExitProcess İşlevi</span><span class="sxs-lookup"><span data-stu-id="07287-102">CorExitProcess Function</span></span>
+<span data-ttu-id="07287-103">Yönetilmeyen geçerli işlemi kapatır.</span><span class="sxs-lookup"><span data-stu-id="07287-103">Shuts down the current unmanaged process.</span></span>  
   
- <span data-ttu-id="204e5-104">Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="204e5-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="204e5-105">Kullanım [Iclrmetahost::exitprocess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="204e5-105">Use the [ICLRMetaHost::ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) method instead.</span></span>  
+ <span data-ttu-id="07287-104">Bu işlev içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="07287-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="07287-105">Kullanım [Iclrmetahost::exitprocess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="07287-105">Use the [ICLRMetaHost::ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="204e5-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="204e5-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07287-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="07287-106">Syntax</span></span>  
   
 ```  
 void STDMETHODCALLTYPE CorExitProcess (   
@@ -40,23 +40,24 @@ void STDMETHODCALLTYPE CorExitProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="204e5-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="204e5-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="07287-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="07287-107">Parameters</span></span>  
  `exitCode`  
- <span data-ttu-id="204e5-108">İşlem çıkış kodunu belirten bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="204e5-108">An integer that specifies the process exit code.</span></span>  
+ <span data-ttu-id="07287-108">İşlem çıkış kodunu belirten bir tamsayı.</span><span class="sxs-lookup"><span data-stu-id="07287-108">An integer that specifies the process exit code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="204e5-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="204e5-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="07287-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="07287-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="204e5-110">İle başlayarak [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], `CorExitProcess` başlatılan her çalışma zamanı işleminde, yalnızca, eski API'ler bağlı çalışma zamanı çıkar.</span><span class="sxs-lookup"><span data-stu-id="204e5-110">Beginning with the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], `CorExitProcess` exits every started runtime in the process, not just the runtime to which the legacy APIs have been bound.</span></span>  
+>  <span data-ttu-id="07287-110">İle başlayarak [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], `CorExitProcess` başlatılan her çalışma zamanı işleminde, yalnızca, eski API'ler bağlı çalışma zamanı çıkar.</span><span class="sxs-lookup"><span data-stu-id="07287-110">Beginning with the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], `CorExitProcess` exits every started runtime in the process, not just the runtime to which the legacy APIs have been bound.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="204e5-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="204e5-111">Requirements</span></span>  
- <span data-ttu-id="204e5-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="204e5-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07287-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="07287-111">Requirements</span></span>  
+ <span data-ttu-id="07287-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07287-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="204e5-113">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="204e5-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="07287-113">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="07287-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="204e5-114">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="204e5-114">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="07287-114">**Kitaplığı:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="07287-114">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="204e5-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="204e5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="07287-115">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="07287-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="204e5-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="204e5-116">See also</span></span>
-- [<span data-ttu-id="204e5-117">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="204e5-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="07287-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="07287-116">See also</span></span>
+
+- [<span data-ttu-id="07287-117">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="07287-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

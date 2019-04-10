@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88984da3e0456212c73280020da7235d136bf48b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ad1a9bc6b2e5c84f15cf0cf706504f18341f8584
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482411"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209183"
 ---
-# <a name="ihostpolicymanagerontimeout-method"></a><span data-ttu-id="03216-102">IHostPolicyManager::OnTimeout Yöntemi</span><span class="sxs-lookup"><span data-stu-id="03216-102">IHostPolicyManager::OnTimeout Method</span></span>
-<span data-ttu-id="03216-103">Ortak dil çalışma zamanı (CLR) için bir çağrı tarafından belirtilen eylemi gerçekleştirmek üzere bir konağa bildirir [Iclrpolicymanager::setactionontimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) yöntemi yanıt olarak bir zaman aşımı.</span><span class="sxs-lookup"><span data-stu-id="03216-103">Notifies the host that the common language runtime (CLR) is about to take the action specified by a call to the [ICLRPolicyManager::SetActionOnTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) method in response to a timeout.</span></span>  
+# <a name="ihostpolicymanagerontimeout-method"></a><span data-ttu-id="3a630-102">IHostPolicyManager::OnTimeout Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3a630-102">IHostPolicyManager::OnTimeout Method</span></span>
+<span data-ttu-id="3a630-103">Ortak dil çalışma zamanı (CLR) için bir çağrı tarafından belirtilen eylemi gerçekleştirmek üzere bir konağa bildirir [Iclrpolicymanager::setactionontimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) yöntemi yanıt olarak bir zaman aşımı.</span><span class="sxs-lookup"><span data-stu-id="3a630-103">Notifies the host that the common language runtime (CLR) is about to take the action specified by a call to the [ICLRPolicyManager::SetActionOnTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) method in response to a timeout.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03216-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="03216-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a630-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3a630-104">Syntax</span></span>  
   
 ```  
 HRESULT OnTimeout (  
@@ -36,35 +36,36 @@ HRESULT OnTimeout (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="03216-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="03216-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3a630-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3a630-105">Parameters</span></span>  
  `operation`  
- <span data-ttu-id="03216-106">[in] Aşağıdakilerden birini [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) zaman aşımına uğradı işlem türünü belirten değer.</span><span class="sxs-lookup"><span data-stu-id="03216-106">[in] One of the [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) values, indicating the kind of operation that timed out.</span></span>  
+ <span data-ttu-id="3a630-106">[in] Aşağıdakilerden birini [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) zaman aşımına uğradı işlem türünü belirten değer.</span><span class="sxs-lookup"><span data-stu-id="3a630-106">[in] One of the [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) values, indicating the kind of operation that timed out.</span></span>  
   
  `action`  
- <span data-ttu-id="03216-107">[in] Aşağıdakilerden birini [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) değerleri, CLR eylemini belirten sürüyor yanıt olarak zaman aşımı.</span><span class="sxs-lookup"><span data-stu-id="03216-107">[in] One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values, indicating the action the CLR is taking in response to the timeout.</span></span>  
+ <span data-ttu-id="3a630-107">[in] Aşağıdakilerden birini [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) değerleri, CLR eylemini belirten sürüyor yanıt olarak zaman aşımı.</span><span class="sxs-lookup"><span data-stu-id="3a630-107">[in] One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values, indicating the action the CLR is taking in response to the timeout.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="03216-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="03216-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3a630-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="3a630-108">Return Value</span></span>  
   
-|<span data-ttu-id="03216-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="03216-109">HRESULT</span></span>|<span data-ttu-id="03216-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="03216-110">Description</span></span>|  
+|<span data-ttu-id="3a630-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3a630-109">HRESULT</span></span>|<span data-ttu-id="3a630-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="3a630-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="03216-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="03216-111">S_OK</span></span>|<span data-ttu-id="03216-112">`OnTimeout` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="03216-112">`OnTimeout` returned successfully.</span></span>|  
-|<span data-ttu-id="03216-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="03216-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="03216-114">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="03216-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="03216-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="03216-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="03216-116">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="03216-116">The call timed out.</span></span>|  
-|<span data-ttu-id="03216-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="03216-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="03216-118">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="03216-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="03216-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="03216-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="03216-120">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="03216-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="03216-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="03216-121">E_FAIL</span></span>|<span data-ttu-id="03216-122">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="03216-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="03216-123">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="03216-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="03216-124">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="03216-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="3a630-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="3a630-111">S_OK</span></span>|`OnTimeout` <span data-ttu-id="3a630-112">başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="3a630-112">returned successfully.</span></span>|  
+|<span data-ttu-id="3a630-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3a630-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3a630-114">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="3a630-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="3a630-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3a630-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3a630-116">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="3a630-116">The call timed out.</span></span>|  
+|<span data-ttu-id="3a630-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3a630-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3a630-118">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="3a630-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="3a630-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3a630-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3a630-120">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="3a630-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="3a630-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3a630-121">E_FAIL</span></span>|<span data-ttu-id="3a630-122">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="3a630-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3a630-123">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="3a630-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3a630-124">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="3a630-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="03216-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="03216-125">Requirements</span></span>  
- <span data-ttu-id="03216-126">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03216-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a630-125">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3a630-125">Requirements</span></span>  
+ <span data-ttu-id="3a630-126">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3a630-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03216-127">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="03216-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3a630-127">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3a630-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="03216-128">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="03216-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3a630-128">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="3a630-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="03216-129">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03216-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="3a630-129">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="3a630-129">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="03216-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="03216-130">See also</span></span>
-- [<span data-ttu-id="03216-131">EClrOperation Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="03216-131">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [<span data-ttu-id="03216-132">EPolicyAction Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="03216-132">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [<span data-ttu-id="03216-133">ICLRPolicyManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="03216-133">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [<span data-ttu-id="03216-134">IHostPolicyManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="03216-134">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3a630-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3a630-130">See also</span></span>
+
+- [<span data-ttu-id="3a630-131">EClrOperation Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="3a630-131">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
+- [<span data-ttu-id="3a630-132">EPolicyAction Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="3a630-132">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
+- [<span data-ttu-id="3a630-133">ICLRPolicyManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3a630-133">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [<span data-ttu-id="3a630-134">IHostPolicyManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3a630-134">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

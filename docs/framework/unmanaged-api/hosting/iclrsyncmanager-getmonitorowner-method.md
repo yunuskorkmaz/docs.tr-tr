@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 342039e21774668ed9e6bfac289aca7c1e99b1e0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4b14421bbe71b68ca677cf712512a7f10aa30583
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208208"
 ---
-# <a name="iclrsyncmanagergetmonitorowner-method"></a><span data-ttu-id="b30b1-102">ICLRSyncManager::GetMonitorOwner Metodu</span><span class="sxs-lookup"><span data-stu-id="b30b1-102">ICLRSyncManager::GetMonitorOwner Method</span></span>
-<span data-ttu-id="b30b1-103">Alır [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) sahibi tarafından belirtilen tanımlama bilgisinin tanımlanan izleme örneği.</span><span class="sxs-lookup"><span data-stu-id="b30b1-103">Gets the [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance that owns the monitor identified by the specified cookie.</span></span>  
+# <a name="iclrsyncmanagergetmonitorowner-method"></a><span data-ttu-id="629cb-102">ICLRSyncManager::GetMonitorOwner Metodu</span><span class="sxs-lookup"><span data-stu-id="629cb-102">ICLRSyncManager::GetMonitorOwner Method</span></span>
+<span data-ttu-id="629cb-103">Alır [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) sahibi tarafından belirtilen tanımlama bilgisinin tanımlanan izleme örneği.</span><span class="sxs-lookup"><span data-stu-id="629cb-103">Gets the [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance that owns the monitor identified by the specified cookie.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b30b1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b30b1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="629cb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="629cb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMonitorOwner (  
@@ -36,41 +36,42 @@ HRESULT GetMonitorOwner (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b30b1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b30b1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="629cb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="629cb-105">Parameters</span></span>  
  `cookie`  
- <span data-ttu-id="b30b1-106">[in] İzleyiciyle ilişkili tanımlama.</span><span class="sxs-lookup"><span data-stu-id="b30b1-106">[in] The cookie associated with the monitor.</span></span>  
+ <span data-ttu-id="629cb-106">[in] İzleyiciyle ilişkili tanımlama.</span><span class="sxs-lookup"><span data-stu-id="629cb-106">[in] The cookie associated with the monitor.</span></span>  
   
  `ppOwnerHostTask`  
- <span data-ttu-id="b30b1-107">[out] Bir işaretçi `IHostTask` şu anda sahip olan İzleyici ya da null görev sahipliği varsa.</span><span class="sxs-lookup"><span data-stu-id="b30b1-107">[out] A pointer to the `IHostTask` that currently owns the monitor, or null if no task has ownership.</span></span>  
+ <span data-ttu-id="629cb-107">[out] Bir işaretçi `IHostTask` şu anda sahip olan İzleyici ya da null görev sahipliği varsa.</span><span class="sxs-lookup"><span data-stu-id="629cb-107">[out] A pointer to the `IHostTask` that currently owns the monitor, or null if no task has ownership.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b30b1-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b30b1-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="629cb-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="629cb-108">Return Value</span></span>  
   
-|<span data-ttu-id="b30b1-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b30b1-109">HRESULT</span></span>|<span data-ttu-id="b30b1-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b30b1-110">Description</span></span>|  
+|<span data-ttu-id="629cb-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="629cb-109">HRESULT</span></span>|<span data-ttu-id="629cb-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="629cb-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="b30b1-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="b30b1-111">S_OK</span></span>|<span data-ttu-id="b30b1-112">`GetMonitorOwner` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="b30b1-112">`GetMonitorOwner` returned successfully.</span></span>|  
-|<span data-ttu-id="b30b1-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b30b1-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b30b1-114">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="b30b1-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="b30b1-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="b30b1-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="b30b1-116">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="b30b1-116">The call timed out.</span></span>|  
-|<span data-ttu-id="b30b1-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="b30b1-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="b30b1-118">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="b30b1-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="b30b1-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="b30b1-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="b30b1-120">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="b30b1-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="b30b1-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b30b1-121">E_FAIL</span></span>|<span data-ttu-id="b30b1-122">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="b30b1-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b30b1-123">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="b30b1-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b30b1-124">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="b30b1-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="629cb-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="629cb-111">S_OK</span></span>|`GetMonitorOwner` <span data-ttu-id="629cb-112">başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="629cb-112">returned successfully.</span></span>|  
+|<span data-ttu-id="629cb-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="629cb-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="629cb-114">CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.</span><span class="sxs-lookup"><span data-stu-id="629cb-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="629cb-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="629cb-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="629cb-116">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="629cb-116">The call timed out.</span></span>|  
+|<span data-ttu-id="629cb-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="629cb-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="629cb-118">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="629cb-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="629cb-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="629cb-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="629cb-120">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="629cb-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="629cb-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="629cb-121">E_FAIL</span></span>|<span data-ttu-id="629cb-122">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="629cb-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="629cb-123">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="629cb-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="629cb-124">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="629cb-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b30b1-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b30b1-125">Remarks</span></span>  
- <span data-ttu-id="b30b1-126">Ana bilgisayar genellikle çağrıları `GetMonitorOwner` kilitlenme algılaması mekanizması bir parçası olarak.</span><span class="sxs-lookup"><span data-stu-id="b30b1-126">The host typically calls `GetMonitorOwner` as part of a deadlock-detection mechanism.</span></span> <span data-ttu-id="b30b1-127">Tanımlama bilgisi için bir çağrı kullanılarak oluşturulduğunda bir izleyiciyle ilişkili [Ihostsyncmanager::createmonitorevent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md).</span><span class="sxs-lookup"><span data-stu-id="b30b1-127">The cookie is associated with a monitor when it is created by using a call to [IHostSyncManager::CreateMonitorEvent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="629cb-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="629cb-125">Remarks</span></span>  
+ <span data-ttu-id="629cb-126">Ana bilgisayar genellikle çağrıları `GetMonitorOwner` kilitlenme algılaması mekanizması bir parçası olarak.</span><span class="sxs-lookup"><span data-stu-id="629cb-126">The host typically calls `GetMonitorOwner` as part of a deadlock-detection mechanism.</span></span> <span data-ttu-id="629cb-127">Tanımlama bilgisi için bir çağrı kullanılarak oluşturulduğunda bir izleyiciyle ilişkili [Ihostsyncmanager::createmonitorevent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md).</span><span class="sxs-lookup"><span data-stu-id="629cb-127">The cookie is associated with a monitor when it is created by using a call to [IHostSyncManager::CreateMonitorEvent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b30b1-128">İzleyici temel olay serbest bırakmak için bir çağrı engelleyebilecek — ancak değil kilitlenme — bu yönteme bir çağrı şu anda yürürlükte izleyen ile ilişkili tanımlama açıksa.</span><span class="sxs-lookup"><span data-stu-id="b30b1-128">A call to release the event underlying the monitor might block—but will not deadlock—if a call to this method is currently in effect on the cookie associated with that monitor.</span></span> <span data-ttu-id="b30b1-129">Bu İzleyici almayı denerseniz diğer görevleri de engelleyebilir.</span><span class="sxs-lookup"><span data-stu-id="b30b1-129">Other tasks might also block if they attempt to acquire this monitor.</span></span>  
+>  <span data-ttu-id="629cb-128">İzleyici temel olay serbest bırakmak için bir çağrı engelleyebilecek — ancak değil kilitlenme — bu yönteme bir çağrı şu anda yürürlükte izleyen ile ilişkili tanımlama açıksa.</span><span class="sxs-lookup"><span data-stu-id="629cb-128">A call to release the event underlying the monitor might block—but will not deadlock—if a call to this method is currently in effect on the cookie associated with that monitor.</span></span> <span data-ttu-id="629cb-129">Bu İzleyici almayı denerseniz diğer görevleri de engelleyebilir.</span><span class="sxs-lookup"><span data-stu-id="629cb-129">Other tasks might also block if they attempt to acquire this monitor.</span></span>  
   
- <span data-ttu-id="b30b1-130">`GetMonitorOwner` her zaman hemen döndürür ve çağrısı yapıldıktan sonra istediğiniz zaman çağrılabilir `CreateMonitorEvent`.</span><span class="sxs-lookup"><span data-stu-id="b30b1-130">`GetMonitorOwner` always returns immediately and can be called any time after a call to `CreateMonitorEvent`.</span></span> <span data-ttu-id="b30b1-131">Ana görevi, olayda bekleyen beklemeniz gerekmez.</span><span class="sxs-lookup"><span data-stu-id="b30b1-131">The host does not need to wait until a task is waiting on the event.</span></span>  
+ `GetMonitorOwner` <span data-ttu-id="629cb-130">her zaman hemen döndürür ve çağrısı yapıldıktan sonra istediğiniz zaman çağrılabilir `CreateMonitorEvent`.</span><span class="sxs-lookup"><span data-stu-id="629cb-130">always returns immediately and can be called any time after a call to `CreateMonitorEvent`.</span></span> <span data-ttu-id="629cb-131">Ana görevi, olayda bekleyen beklemeniz gerekmez.</span><span class="sxs-lookup"><span data-stu-id="629cb-131">The host does not need to wait until a task is waiting on the event.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b30b1-132">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b30b1-132">Requirements</span></span>  
- <span data-ttu-id="b30b1-133">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b30b1-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="629cb-132">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="629cb-132">Requirements</span></span>  
+ <span data-ttu-id="629cb-133">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="629cb-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b30b1-134">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b30b1-134">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="629cb-134">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="629cb-134">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b30b1-135">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="b30b1-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="629cb-135">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="629cb-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b30b1-136">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b30b1-136">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="629cb-136">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="629cb-136">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b30b1-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b30b1-137">See also</span></span>
-- [<span data-ttu-id="b30b1-138">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b30b1-138">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="b30b1-139">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b30b1-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="629cb-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="629cb-137">See also</span></span>
+
+- [<span data-ttu-id="629cb-138">ICLRSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="629cb-138">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="629cb-139">IHostSyncManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="629cb-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

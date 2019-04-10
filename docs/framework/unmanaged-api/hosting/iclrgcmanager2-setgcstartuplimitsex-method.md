@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 708dd1e13fd999f9a3a11ce36248e82c15000bfc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6cba7b4a34835eb2f394aa71be8b907973cb1cd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204724"
 ---
-# <a name="iclrgcmanager2setgcstartuplimitsex-method"></a><span data-ttu-id="b5a97-102">ICLRGCManager2::SetGCStartupLimitsEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b5a97-102">ICLRGCManager2::SetGCStartupLimitsEx Method</span></span>
-<span data-ttu-id="b5a97-103">Bir çöp toplama kesim boyutunu ve çöp toplama sistemin nesil 0 en büyük boyutunu ayarlar.</span><span class="sxs-lookup"><span data-stu-id="b5a97-103">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span>  
+# <a name="iclrgcmanager2setgcstartuplimitsex-method"></a><span data-ttu-id="edcac-102">ICLRGCManager2::SetGCStartupLimitsEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="edcac-102">ICLRGCManager2::SetGCStartupLimitsEx Method</span></span>
+<span data-ttu-id="edcac-103">Bir çöp toplama kesim boyutunu ve çöp toplama sistemin nesil 0 en büyük boyutunu ayarlar.</span><span class="sxs-lookup"><span data-stu-id="edcac-103">Sets the size of a garbage collection segment and the maximum size of the garbage collection system's generation 0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b5a97-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b5a97-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="edcac-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="edcac-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGCStartupLimitsEx (  
@@ -36,44 +36,45 @@ HRESULT SetGCStartupLimitsEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b5a97-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b5a97-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="edcac-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="edcac-105">Parameters</span></span>  
  `SegmentSize`  
- <span data-ttu-id="b5a97-106">[in] Bir çöp toplama kesim belirtilen boyutu.</span><span class="sxs-lookup"><span data-stu-id="b5a97-106">[in] The specified size of a garbage collection segment.</span></span>  
+ <span data-ttu-id="edcac-106">[in] Bir çöp toplama kesim belirtilen boyutu.</span><span class="sxs-lookup"><span data-stu-id="edcac-106">[in] The specified size of a garbage collection segment.</span></span>  
   
- <span data-ttu-id="b5a97-107">En düşük kesim boyutu 4 MB'dir.</span><span class="sxs-lookup"><span data-stu-id="b5a97-107">The minimum segment size is 4 MB.</span></span> <span data-ttu-id="b5a97-108">Parçaları, 1 MB'lık artışlarla daha yüksek veya daha büyük olabilir.</span><span class="sxs-lookup"><span data-stu-id="b5a97-108">Segments can be increased in increments of 1 MB or larger.</span></span>  
+ <span data-ttu-id="edcac-107">En düşük kesim boyutu 4 MB'dir.</span><span class="sxs-lookup"><span data-stu-id="edcac-107">The minimum segment size is 4 MB.</span></span> <span data-ttu-id="edcac-108">Parçaları, 1 MB'lık artışlarla daha yüksek veya daha büyük olabilir.</span><span class="sxs-lookup"><span data-stu-id="edcac-108">Segments can be increased in increments of 1 MB or larger.</span></span>  
   
  `MaxGen0Size`  
- <span data-ttu-id="b5a97-109">[in] Nesil 0 için belirtilen en büyük boyutu.</span><span class="sxs-lookup"><span data-stu-id="b5a97-109">[in] The specified maximum size for generation 0.</span></span>  
+ <span data-ttu-id="edcac-109">[in] Nesil 0 için belirtilen en büyük boyutu.</span><span class="sxs-lookup"><span data-stu-id="edcac-109">[in] The specified maximum size for generation 0.</span></span>  
   
- <span data-ttu-id="b5a97-110">En düşük nesil 0, 64 KB büyüklüğünde.</span><span class="sxs-lookup"><span data-stu-id="b5a97-110">The minimum generation 0 size is 64 KB.</span></span>  
+ <span data-ttu-id="edcac-110">En düşük nesil 0, 64 KB büyüklüğünde.</span><span class="sxs-lookup"><span data-stu-id="edcac-110">The minimum generation 0 size is 64 KB.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b5a97-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b5a97-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="edcac-111">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="edcac-111">Return Value</span></span>  
   
-|<span data-ttu-id="b5a97-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b5a97-112">HRESULT</span></span>|<span data-ttu-id="b5a97-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b5a97-113">Description</span></span>|  
+|<span data-ttu-id="edcac-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="edcac-112">HRESULT</span></span>|<span data-ttu-id="edcac-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="edcac-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="b5a97-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="b5a97-114">S_OK</span></span>|<span data-ttu-id="b5a97-115">`SetGCStartupLimitsEx` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="b5a97-115">`SetGCStartupLimitsEx` returned successfully.</span></span>|  
-|<span data-ttu-id="b5a97-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b5a97-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b5a97-117">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="b5a97-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="b5a97-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="b5a97-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="b5a97-119">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="b5a97-119">The call timed out.</span></span>|  
-|<span data-ttu-id="b5a97-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="b5a97-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="b5a97-121">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="b5a97-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="b5a97-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="b5a97-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="b5a97-123">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="b5a97-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="b5a97-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b5a97-124">E_FAIL</span></span>|<span data-ttu-id="b5a97-125">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="b5a97-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b5a97-126">CLR, artık E_FAIL bir yöntemin dönüşünün ardından, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="b5a97-126">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b5a97-127">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="b5a97-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="edcac-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="edcac-114">S_OK</span></span>|`SetGCStartupLimitsEx` <span data-ttu-id="edcac-115">başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="edcac-115">returned successfully.</span></span>|  
+|<span data-ttu-id="edcac-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="edcac-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="edcac-117">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="edcac-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="edcac-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="edcac-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="edcac-119">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="edcac-119">The call timed out.</span></span>|  
+|<span data-ttu-id="edcac-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="edcac-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="edcac-121">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="edcac-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="edcac-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="edcac-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="edcac-123">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="edcac-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="edcac-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="edcac-124">E_FAIL</span></span>|<span data-ttu-id="edcac-125">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="edcac-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="edcac-126">CLR, artık E_FAIL bir yöntemin dönüşünün ardından, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="edcac-126">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="edcac-127">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="edcac-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b5a97-128">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b5a97-128">Remarks</span></span>  
- <span data-ttu-id="b5a97-129">Değerleri, `SetGCStartupLimitsEx` kümeleri yalnızca ana bilgisayar başlatılmadan önce belirtilebilir.</span><span class="sxs-lookup"><span data-stu-id="b5a97-129">The values that `SetGCStartupLimitsEx` sets can be specified only before the host is started.</span></span> <span data-ttu-id="b5a97-130">Sonraki çağrılar `SetGCStartupLimitsEx` göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="b5a97-130">Later calls to `SetGCStartupLimitsEx` are ignored.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="edcac-128">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="edcac-128">Remarks</span></span>  
+ <span data-ttu-id="edcac-129">Değerleri, `SetGCStartupLimitsEx` kümeleri yalnızca ana bilgisayar başlatılmadan önce belirtilebilir.</span><span class="sxs-lookup"><span data-stu-id="edcac-129">The values that `SetGCStartupLimitsEx` sets can be specified only before the host is started.</span></span> <span data-ttu-id="edcac-130">Sonraki çağrılar `SetGCStartupLimitsEx` göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="edcac-130">Later calls to `SetGCStartupLimitsEx` are ignored.</span></span>  
   
- <span data-ttu-id="b5a97-131">Her iki parametre, diğer planı etkilemeden ayarlamak için değiştirmek istemiyorsanız parametresi için 0 (sıfır) belirtin.</span><span class="sxs-lookup"><span data-stu-id="b5a97-131">To set either parameter without affecting the other, specify 0 (zero) for the parameter you don't want to change.</span></span>  
+ <span data-ttu-id="edcac-131">Her iki parametre, diğer planı etkilemeden ayarlamak için değiştirmek istemiyorsanız parametresi için 0 (sıfır) belirtin.</span><span class="sxs-lookup"><span data-stu-id="edcac-131">To set either parameter without affecting the other, specify 0 (zero) for the parameter you don't want to change.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b5a97-132">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b5a97-132">Requirements</span></span>  
- <span data-ttu-id="b5a97-133">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5a97-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="edcac-132">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="edcac-132">Requirements</span></span>  
+ <span data-ttu-id="edcac-133">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="edcac-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b5a97-134">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b5a97-134">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="edcac-134">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="edcac-134">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b5a97-135">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="b5a97-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="edcac-135">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="edcac-135">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b5a97-136">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5a97-136">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="edcac-136">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="edcac-136">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b5a97-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b5a97-137">See also</span></span>
-- [<span data-ttu-id="b5a97-138">Otomatik Bellek Yönetimi</span><span class="sxs-lookup"><span data-stu-id="b5a97-138">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
-- [<span data-ttu-id="b5a97-139">Atık Toplama</span><span class="sxs-lookup"><span data-stu-id="b5a97-139">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
-- [<span data-ttu-id="b5a97-140">ICLRControl Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b5a97-140">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="b5a97-141">ICLRGCManager2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b5a97-141">ICLRGCManager2 Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="edcac-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="edcac-137">See also</span></span>
+
+- [<span data-ttu-id="edcac-138">Otomatik Bellek Yönetimi</span><span class="sxs-lookup"><span data-stu-id="edcac-138">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="edcac-139">Çöp Toplama</span><span class="sxs-lookup"><span data-stu-id="edcac-139">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="edcac-140">ICLRControl Arabirimi</span><span class="sxs-lookup"><span data-stu-id="edcac-140">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="edcac-141">ICLRGCManager2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="edcac-141">ICLRGCManager2 Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)
