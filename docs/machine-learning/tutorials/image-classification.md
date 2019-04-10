@@ -4,12 +4,12 @@ description: Önceden eğitilmiş bir TensorFlow modeli yeniden kullanarak gör�
 ms.date: 04/05/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7d320135d0d414c2cca934ff3d4cad5152a24ee8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 775f26d0e2453a0027f1e54ddc05f51e596ad540
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59232531"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427519"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Öğretici: TensorFlow ile bir ML.NET özel görüntü sınıflandırıcı oluşturma
 
@@ -28,7 +28,7 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!NOTE]
 > Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir. Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Bu öğretici ve ilgili örnek şu anda kullandığınız **ML.NET sürüm 0.10**. Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning GitHub deposu](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)
+Bu öğretici ve ilgili örnek şu anda kullandığınız **ML.NET sürüm 0.10**. Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) GitHub deposu.
 
 ## <a name="image-classification-sample-overview"></a>Görüntü sınıflandırma örneğine genel bakış
 
@@ -38,13 +38,13 @@ Bu öğreticide kaynak kodunu bulabilirsiniz [dotnet/samples](https://github.com
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-* [Visual Studio 2017 15.6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) yüklü ".NET Core çoklu platform geliştirme" iş yüküyle birlikte sağlanır.
+* [Visual Studio 2017 15.6 veya üzeri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) yüklü ".NET Core çoklu platform geliştirme" iş yüküyle birlikte sağlanır.
 
 * Microsoft.ML 0.10.0 Nuget paketi
 * Microsoft.ML.ImageAnalytics 0.10.0 Nuget paketi
 * Microsoft.ML.TensorFlow 0.10.0 Nuget paketi
 
-* [Öğretici varlıklar dizin. ZIP dosyası](http://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
+* [Öğretici varlıklar dizin. ZIP dosyası](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
 * [InceptionV3 machine learning modeli](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
@@ -136,7 +136,7 @@ Eğitim ve test görüntüleri bir ZIP dosyası indireceksiniz varlıklar klasö
 
 ### <a name="prepare-your-data"></a>Verilerinizi hazırlama
 
-1. İndirme [proje varlıklar dizin zip dosyasını](http://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)ve sıkıştırmasını açın.
+1. İndirme [proje varlıklar dizin zip dosyasını](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)ve sıkıştırmasını açın.
 
 2. Kopyalama `assets` içine dizin, *TransferLearningTF* proje dizini. Bu dizin ve alt dizinlerinde (dışında indirme ve bir sonraki adımda ekleme yeni model) verileri ve destek dosyaları içeren Bu öğretici için gerekli.
 
@@ -509,4 +509,4 @@ Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 
 Bir genişletilmiş görüntü sınıflandırma örnek keşfetmek için Machine Learning örnekleri GitHub havuzuna göz atın.
 > [!div class="nextstepaction"]
-> [DotNet/machinelearning-samples GitHub deposu](https://github.com/dotnet/machinelearning/)
+> [DotNet/machinelearning-samples GitHub deposu](https://github.com/dotnet/machinelearning-samples/)

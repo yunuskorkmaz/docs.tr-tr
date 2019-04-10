@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 210b7cabb658c6f068d9ab34c83050ad6267e426
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704914"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427389"
 ---
 # <a name="-operator-c-reference"></a>?: İşleci (C# Başvurusu)
 
@@ -24,12 +24,12 @@ Koşullu işleç `?:`Üçlü koşullu işleç, yaygın olarak bilinen bir Boole 
 Koşullu işlecin sözdizimi aşağıdaki gibidir:
 
 ```csharp
-condition ? consequence : alternative
+condition ? consequent : alternative
 ```
 
-`condition` İfade gerekir değerlendirmek için `true` veya `false`. Varsa `condition` değerlendiren `true`, `consequence` ifade değerlendirilir ve sonuç işleminin sonucu haline gelir. Varsa `condition` değerlendiren `false`, `alternative` ifade değerlendirilir ve sonuç işleminin sonucu haline gelir. Yalnızca `consequence` veya `alternative` değerlendirilir.
+`condition` İfade gerekir değerlendirmek için `true` veya `false`. Varsa `condition` değerlendiren `true`, `consequent` ifade değerlendirilir ve sonuç işleminin sonucu haline gelir. Varsa `condition` değerlendiren `false`, `alternative` ifade değerlendirilir ve sonuç işleminin sonucu haline gelir. Yalnızca `consequent` veya `alternative` değerlendirilir.
 
-Türünü `consequence` ve `alternative` aynı veya orada bir türden diğerine örtülü bir dönüştürme diğerine olmalıdır olması gerekir.
+Türünü `consequent` ve `alternative` aynı veya orada bir türden diğerine örtülü bir dönüştürme diğerine olmalıdır olması gerekir.
 
 Koşullu işleç sağla ilişkilendirilebilir, diğer bir deyişle, bir ifade formu
 
@@ -54,12 +54,12 @@ Aşağıdaki örnek, koşullu işlecinin kullanımını gösterir:
 Ref koşullu ifadesi sözdizimi aşağıdaki gibidir:
 
 ```csharp
-condition ? ref consequence : ref alternative
+condition ? ref consequent : ref alternative
 ```
 
-Ref koşullu ifadesi iki ifadeden yalnızca biri özgün koşullu işleç gibi değerlendirilir: ya da `consequence` veya `alternative`.
+Ref koşullu ifadesi iki ifadeden yalnızca biri özgün koşullu işleç gibi değerlendirilir: ya da `consequent` veya `alternative`.
 
-Ref koşullu ifadenin türü söz konusu olduğunda `consequence` ve `alternative` aynı olmalıdır.
+Ref koşullu ifadenin türü söz konusu olduğunda `consequent` ve `alternative` aynı olmalıdır.
 
 Aşağıdaki örnek, ref koşullu ifadesi kullanımını göstermektedir:
 
@@ -83,10 +83,10 @@ Daha fazla bilgi için [koşullu işleç](~/_csharplang/spec/expressions.md#cond
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C# Başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - [if-else deyimi](../keywords/if-else.md)
-- [?. and ?[] İşleçleri](null-conditional-operators.md)
+- [?. ve ?[] İşleçleri](null-conditional-operators.md)
 - [?? İşleç](null-coalescing-operator.md)
 - [ref anahtar sözcüğü](../keywords/ref.md)

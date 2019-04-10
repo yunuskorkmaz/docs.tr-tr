@@ -3,12 +3,12 @@ title: 'Öğretici: İlk Çözümleyicisi ve kod düzeltmenizi yazın'
 description: Bu öğretici bir çözümleyici oluşturmak için adım adım yönergeler sağlar ve kod düzeltmesi .NET derleyici SDK'sı (Roslyn API'leri) kullanarak.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 665dac9d36933c35be19cc826b8b4dc614c38ed2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7e3d1ac3a1ef692a1b7f1980fd00f95b04a8d047
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677193"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427506"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Öğretici: İlk Çözümleyicisi ve kod düzeltmenizi yazın
 
@@ -254,7 +254,7 @@ Kod düzeltmenizi denemek hazırdır.  Visual Studio ikinci bir örneğini Çöz
 
 ![Const uyarıları yapabilirsiniz](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
-Devam eden birçok yaptık. Yapılabilecek bildirimleri altında dalgalı çizgiler vardır `const`. Ancak yine de yapmak için iş yok. Eklerseniz bu düzgün çalışır. `const` başlayarak bildirimlere `i`, ardından `j` ve son olarak `k`. Ancak eklerseniz `const` değiştiricisi ile başlayarak, farklı bir sıra i `k`, hataları, çözümleyici oluşturur: `k` bildirilemez `const`sürece `i` ve `j` her ikisi de zaten olan `const`. Değişkenleri bildirilir ve başlatılır farklı şekilde ele emin olmak için daha fazla analiz yapmak var.
+Devam eden birçok yaptık. Yapılabilecek bildirimleri altında dalgalı çizgiler vardır `const`. Ancak yine de yapmak için iş yok. Eklerseniz bu düzgün çalışır. `const` başlayarak bildirimlere `i`, ardından `j` ve son olarak `k`. Ancak eklerseniz `const` değiştiricisi ile başlayarak, farklı bir sıra `k`, hataları, çözümleyici oluşturur: `k` bildirilemez `const`sürece `i` ve `j` her ikisi de zaten olan `const`. Değişkenleri bildirilir ve başlatılır farklı şekilde ele emin olmak için daha fazla analiz yapmak var.
 
 ## <a name="build-data-driven-tests"></a>Veri odaklı testler oluşturun
 
