@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829336"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295646"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Nasıl yapılır: Bildirme ve Visual Basic'te bir varsayılan özelliğini çağırın
 A *varsayılan özellik* kodunuzun bu belirtmeden erişeceği sınıfın veya yapının bir özelliktir. Kodu adları çağrılırken bir sınıf veya yapı ancak değil bir özellik ve bağlamı bir özellik erişim sağlar, varsa, Visual Basic erişim o sınıfın veya yapının varsayılan özellik giderir.  
@@ -26,37 +26,37 @@ A *varsayılan özellik* kodunuzun bu belirtmeden erişeceği sınıfın veya ya
   
 ### <a name="to-declare-a-default-property"></a>Varsayılan bir özelliği bildirme  
   
-1.  Özelliği, normal bir şekilde bildirin. Belirtmeyin `Shared` veya `Private` anahtar sözcüğü.  
+1. Özelliği, normal bir şekilde bildirin. Belirtmeyin `Shared` veya `Private` anahtar sözcüğü.  
   
-2.  Dahil `Default` özelliği bildirimindeki anahtar sözcüğü.  
+2. Dahil `Default` özelliği bildirimindeki anahtar sözcüğü.  
   
-3.  Bir özellik için en az bir parametre belirtin. En az bir bağımsız değişken almaz ve varsayılan bir özellik tanımlanamaz.  
+3. Bir özellik için en az bir parametre belirtin. En az bir bağımsız değişken almaz ve varsayılan bir özellik tanımlanamaz.  
   
      [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
 ### <a name="to-call-a-default-property"></a>Varsayılan özellik çağırmak için  
   
-1.  Bir değişken içeren bir sınıf veya yapı türü bildirin.  
+1. Bir değişken içeren bir sınıf veya yapı türü bildirin.  
   
      [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
-2.  Değişken adı bir ifadede tek başına, özellik adı burada normalde verilebilir kullanın.  
+2. Değişken adı bir ifadede tek başına, özellik adı burada normalde verilebilir kullanın.  
   
      [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
-3.  Değişken adı parantez içinde bir bağımsız değişken listesiyle izleyin. Varsayılan özellik en az bir bağımsız değişken almalıdır.  
+3. Değişken adı parantez içinde bir bağımsız değişken listesiyle izleyin. Varsayılan özellik en az bir bağımsız değişken almalıdır.  
   
      [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
-4.  Varsayılan özellik değerini almak için bir bağımsız değişken listesiyle bir ifadede veya eşittir değişken adını kullanın (`=`) bir atama ifadesinde oturum açın.  
+4. Varsayılan özellik değerini almak için bir bağımsız değişken listesiyle bir ifadede veya eşittir değişken adını kullanın (`=`) bir atama ifadesinde oturum açın.  
   
      [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
-5.  Varsayılan özellik değerini ayarlamak için değişken adı, atama deyiminin sol tarafında bir bağımsız değişken listesiyle kullanın.  
+5. Varsayılan özellik değerini ayarlamak için değişken adı, atama deyiminin sol tarafında bir bağımsız değişken listesiyle kullanın.  
   
      [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
-6.  Yalnızca diğer herhangi bir özelliğe erişmek için yaptığınız gibi her zaman varsayılan özellik adı değişken adı ile birlikte belirtebilirsiniz.  
+6. Yalnızca diğer herhangi bir özelliğe erişmek için yaptığınız gibi her zaman varsayılan özellik adı değişken adı ile birlikte belirtebilirsiniz.  
   
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
@@ -86,10 +86,10 @@ A *varsayılan özellik* kodunuzun bu belirtmeden erişeceği sınıfın veya ya
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Default](../../../../visual-basic/language-reference/modifiers/default.md)
-- [Visual Basic'de özellikler ile değişkenler arasındaki farklar](./differences-between-properties-and-variables.md)
-- [Nasıl yapılır: Özellik oluşturma](./how-to-create-a-property.md)
-- [Nasıl yapılır: Bir özelliği karışık erişim düzeyleriyle bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Nasıl yapılır: Bir özellik yordamı çağırma](./how-to-call-a-property-procedure.md)
-- [Nasıl yapılır: Bir özelliğe değer ekleme](./how-to-put-a-value-in-a-property.md)
-- [Nasıl yapılır: Bir özellikten değer alma](./how-to-get-a-value-from-a-property.md)
+- [Varsayılan](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Visual Basic'de Özellikler ve Değişkenler Arasındaki Farklar](./differences-between-properties-and-variables.md)
+- [Nasıl yapılır: Özellik Oluşturma](./how-to-create-a-property.md)
+- [Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Nasıl yapılır: Bir Özellik Yordamı Çağırma](./how-to-call-a-property-procedure.md)
+- [Nasıl yapılır: Bir Özelliğe Değer Ekleme](./how-to-put-a-value-in-a-property.md)
+- [Nasıl yapılır: Bir Özellikten Değer Alma](./how-to-get-a-value-from-a-property.md)

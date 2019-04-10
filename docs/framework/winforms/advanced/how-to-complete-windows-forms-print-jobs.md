@@ -9,12 +9,12 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f8d0f1f067efbae6e2b667328e75996179b91737
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159828"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293761"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama
 Genellikle, sözcük işlemciler ve yazdırma gerektiren diğer uygulamaları yazdırma işi tamamlandığını kullanıcılara bir ileti görüntülemek için seçeneği sunacak. Bu işlevsellik, Windows Forms'ta işleyerek sağlayabilir <xref:System.Drawing.Printing.PrintDocument.EndPrint> olayı <xref:System.Drawing.Printing.PrintDocument> bileşeni.  
@@ -23,7 +23,7 @@ Genellikle, sözcük işlemciler ve yazdırma gerektiren diğer uygulamaları ya
   
 ### <a name="to-complete-a-print-job"></a>Yazdırma işi tamamlamak için  
   
-1.  Ayarlama <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> özelliği <xref:System.Drawing.Printing.PrintDocument> bileşeni.  
+1. Ayarlama <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> özelliği <xref:System.Drawing.Printing.PrintDocument> bileşeni.  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,7 +37,7 @@ Genellikle, sözcük işlemciler ve yazdırma gerektiren diğer uygulamaları ya
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2.  İşlemek için kod yazma <xref:System.Drawing.Printing.PrintDocument.EndPrint> olay.  
+2. İşlemek için kod yazma <xref:System.Drawing.Printing.PrintDocument.EndPrint> olay.  
   
      Aşağıdaki kod örneğinde, belgeyi yazdırma tamamlandığını belirten bir ileti kutusu görüntülenir.  
   

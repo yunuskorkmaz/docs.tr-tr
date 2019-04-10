@@ -8,12 +8,12 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 9e88f5f093ce55d3d80da9b38689016872ea12cb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0327c497025630747e526503556f4a1705948850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980197"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295269"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Nasıl yapılır: Visual Basic başvurusu COM nesneleri
 Visual Basic'te tür kitaplıklarını sahip bir COM nesnelerine başvuru ekleme birlikte çalışma derlemesi oluşturulması için COM kitaplığı gerektirir. COM nesnesinin üyeleri için başvurular birlikte çalışma derlemesine yönlendirilir ve ardından gerçek COM nesneye iletilir. COM nesnesi alınan yanıtları birlikte çalışma derlemesine yönlendirilir ve iletilmesi, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] uygulama.  
@@ -24,19 +24,19 @@ Visual Basic'te tür kitaplıklarını sahip bir COM nesnelerine başvuru ekleme
   
 ### <a name="to-add-references-to-com-objects"></a>COM nesnelerinin başvuruları eklemek için  
   
-1.  Üzerinde **proje** menüsünde seçin **Başvuru Ekle** ve ardından **COM** iletişim kutusundaki sekmesi.  
+1. Üzerinde **proje** menüsünde seçin **Başvuru Ekle** ve ardından **COM** iletişim kutusundaki sekmesi.  
   
-2.  COM nesneleri listesinden kullanmak istediğiniz bileşeni seçin.  
+2. COM nesneleri listesinden kullanmak istediğiniz bileşeni seçin.  
   
-3.  Birlikte çalışma derlemesi erişimini basitleştirmek için ekleme bir `Imports` sınıfı veya modülü COM nesnesi içinde kullanacağınız üstüne deyimi. Örneğin, aşağıdaki kod örneği ad alanını içeri aktarır `INKEDLib` başvurulan nesneler için `Microsoft InkEdit Control 1.0` kitaplığı.  
+3. Birlikte çalışma derlemesi erişimini basitleştirmek için ekleme bir `Imports` sınıfı veya modülü COM nesnesi içinde kullanacağınız üstüne deyimi. Örneğin, aşağıdaki kod örneği ad alanını içeri aktarır `INKEDLib` başvurulan nesneler için `Microsoft InkEdit Control 1.0` kitaplığı.  
   
      [!code-vb[VbVbalrInterop#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#40)]  
   
 ### <a name="to-create-an-interop-assembly-using-tlbimp"></a>Tlbimp kullanarak birlikte çalışma derlemesi oluşturmak için  
   
-1.  Tlbimp konumunu zaten arama yolu bir parçası değilse ve değil o anda bulunduğu dizinde arama yoluna ekleyin.  
+1. Tlbimp konumunu zaten arama yolu bir parçası değilse ve değil o anda bulunduğu dizinde arama yoluna ekleyin.  
   
-2.  Çağrı, bir komut isteminden aşağıdaki bilgileri sağlayarak Tlbimp:  
+2. Çağrı, bir komut isteminden aşağıdaki bilgileri sağlayarak Tlbimp:  
   
     -   Ad ve tür kitaplığı içeren DLL konumunu  
   
@@ -57,6 +57,6 @@ Visual Basic'te tür kitaplıklarını sahip bir COM nesnelerine başvuru ekleme
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [İzlenecek yol: COM nesnelerinde kalıtım uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

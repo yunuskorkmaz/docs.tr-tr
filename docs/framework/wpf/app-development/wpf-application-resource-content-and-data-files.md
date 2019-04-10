@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: f9fd936c15454a81058d42825800a388c5c90a40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211934"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] uygulamalar genellikle gibi yürütülebilir olmayan veriler içeren dosyaları bağımlıdır [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], görüntü, video ve ses. Windows Presentation Foundation (WPF), yapılandırma, belirlemekten ve bu tür bir uygulama verileri dosyaları olarak adlandırılan veri dosyalarını kullanarak özel destek sunar. Bu destek, uygulama verilerini dosya türleri dahil olmak üzere, belirli bir dizi döner:  
@@ -38,8 +38,7 @@ ms.locfileid: "57379204"
  Windows Presentation Foundation (WPF) uygulaması veri dosyalara başvurmak için paketi kullanır [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] ayrıntılı olarak açıklanan düzeni [paketi URI ' WPF'de](pack-uris-in-wpf.md)).  
   
  Bu konuda, yapılandırma ve uygulama verileri dosyaları kullanma açıklar.  
-  
-  
+
 <a name="Resource_Files"></a>   
 ## <a name="resource-files"></a>Kaynak Dosyalar  
  Uygulama veri dosyası her zaman bir uygulama için kullanılabilir olması gerekiyorsa, kullanılabilirlik düzeyi garanti yalnızca uygulamanın ana çalıştırılabilir derlemesinin veya onun başvurulmuş derlemeler içinde derlemek için yoludur. Bu tür bir uygulama veri dosyası olarak da bilinen bir *kaynak dosyası*.  
@@ -124,7 +123,7 @@ ms.locfileid: "57379204"
  Uygulamanız, bunları kullanan derleme yeniden derlemeden DLL'yi güncelleştirebilirsiniz olmasını istediğiniz uygulama verileri dosyaları belirli bir dizi gerektirdiğinde, içerik dosyalarını kullanmanız gerekir.  
   
 ### <a name="configuring-content-files"></a>İçerik dosyalarını yapılandırma  
- Bir içerik dosyası bir projeye eklemek için uygulama veri dosyası olarak dahil edilmesi gereken bir `Content` öğesi. Bir içerik dosyası doğrudan bütünleştirilmiş koda derlenmemiş olduğundan, ayrıca ayarlamanız gerekir [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` içerik dosya derlemesi göreli bir konuma kopyalanır belirtmek için bir meta veri öğesi. Her yapı çıkış klasörüne Kopyalanacak kaynak istiyorsanız, bir projenin, ayarladığınız `CopyToOutputDirectory` meta veri öğesi ile `Always` değeri. Aksi takdirde, kaynağın yalnızca en yeni sürümünü kullanarak yapı çıktı klasörüne kopyalandığından emin olabilirsiniz `PreserveNewest` değeri.  
+ Bir içerik dosyası bir projeye eklemek için uygulama veri dosyası olarak dahil edilmesi gereken bir `Content` öğesi. Bir içerik dosyası doğrudan bütünleştirilmiş koda derlenmemiş olduğundan, ayrıca ayarlamanız gerekir [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` içerik dosya derlemesi göreli bir konuma kopyalanır belirtmek için bir meta veri öğesi. Her yapı çıkış klasörüne Kopyalanacak kaynak istiyorsanız, bir projenin, ayarladığınız `CopyToOutputDirectory` meta veri öğesi ile `Always` değeri. Aksi takdirde, kaynağın yalnızca en yeni sürümünü kullanarak yapı çıktı klasörüne kopyalandığından emin olabilirsiniz `PreserveNewest` değeri.  
   
  Aşağıdaki yapıya kopyalanan bir içerik dosyası klasör kaynağın için yeni bir sürümü, projeye eklenir çıktı olarak yapılandırılmış bir dosya gösterir.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "57379204"
 ### <a name="configuring-site-of-origin-files"></a>Kaynak dosyaları sitesi yapılandırma  
  Mevcut olmayan veya bilinmeyen derleme zamanında kaynak dosyaları, site, geleneksel dağıtım kullanmanız gerekir gerekli dosyaları sağlamaya yönelik bir mekanizma kullanarak da dahil olmak üzere, çalışma zamanında kullanılabilir `XCopy` komut satırı programı veya [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Kaynak sitede bulunmasını gibi ancak yine de açık bağımlılığı önlemek istiyor dosyaları derleme zamanında biliyorsanız, bu dosyalara ekleyebileceğiniz bir [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] proje olarak `None` öğesi. İçerik dosyaları ayarlamak gerek duyduğunuz [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` site kaynak dosya derlemesi göre ya da belirterek bir konuma kopyalanır belirtmek için özniteliği `Always` değeri veya `PreserveNewest` değeri.  
+ Kaynak sitede bulunmasını gibi ancak yine de açık bağımlılığı önlemek istiyor dosyaları derleme zamanında biliyorsanız, bu dosyalara ekleyebileceğiniz bir [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] proje olarak `None` öğesi. İçerik dosyaları ayarlamak gerek duyduğunuz [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` site kaynak dosya derlemesi göre ya da belirterek bir konuma kopyalanır belirtmek için özniteliği `Always` değeri veya `PreserveNewest` değeri.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -239,4 +238,5 @@ ms.locfileid: "57379204"
  Uygulama veri dosyası derleme türü değiştirdikten sonra bu değişikliklerin uygulandığından emin olmak için uygulamanın tamamını yeniden derlemek gerekir. Yalnızca uygulama oluşturuyorsanız, değişiklikler uygulanmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF İçinde URI'leri Paketleme](pack-uris-in-wpf.md)

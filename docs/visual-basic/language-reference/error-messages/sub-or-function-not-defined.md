@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 6bca368e13a32559bcb7cbb028dcaa1dea0353e3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294684"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub veya Function tanımlı değil (Visual Basic)
 A `Sub` veya `Function` çağrılması için tanımlanmalıdır. Bu hatanın olası nedenleri şunlardır:  
@@ -24,11 +24,11 @@ A `Sub` veya `Function` çağrılması için tanımlanmalıdır. Bu hatanın ola
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Yordam adının doğru yazıldığından emin olun.  
+1. Yordam adının doğru yazıldığından emin olun.  
   
-2.  Bulmak istediğiniz çağırmak için yordam içeren projenin adı **başvuruları** iletişim kutusu. Görünmüyorsa, tıklayın **Gözat** aramak için düğme. Proje adının sol tarafındaki onay kutusunu işaretleyin ve ardından **Tamam**.  
+2. Bulmak istediğiniz çağırmak için yordam içeren projenin adı **başvuruları** iletişim kutusu. Görünmüyorsa, tıklayın **Gözat** aramak için düğme. Proje adının sol tarafındaki onay kutusunu işaretleyin ve ardından **Tamam**.  
   
-3.  Yordam adını kontrol edin.  
+3. Yordam adını kontrol edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

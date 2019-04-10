@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 564e9e424b8b82e8837a0a58cb8c11389920c297
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139639"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294814"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Nasıl yapılır: Durum Makinesi İş Akışı Oluşturma
 İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konu başlığı altında adımlar hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma işleminde <xref:System.Activities.Statements.StateMachine> etkinliği ve özel etkinlikler önceki [nasıl yapılır: Bir etkinlik oluşturursunuz](how-to-create-an-activity.md) konu. İş akışı sayısını tahmin eden oyun modelleri.  
@@ -23,31 +23,31 @@ ms.locfileid: "59139639"
   
 ### <a name="to-create-the-workflow"></a>İş akışını oluşturmak için  
   
-1.  Sağ **NumberGuessWorkflowActivities** içinde **Çözüm Gezgini** seçip **Ekle**, **yeni öğe**.  
+1. Sağ **NumberGuessWorkflowActivities** içinde **Çözüm Gezgini** seçip **Ekle**, **yeni öğe**.  
   
-2.  İçinde **yüklü**, **ortak öğeler** düğümünü **iş akışı**. Seçin **etkinlik** gelen **iş akışı** listesi.  
+2. İçinde **yüklü**, **ortak öğeler** düğümünü **iş akışı**. Seçin **etkinlik** gelen **iş akışı** listesi.  
   
-3.  Tür `StateMachineNumberGuessWorkflow` içine **adı** kutusuna ve tıklatın **Ekle**.  
+3. Tür `StateMachineNumberGuessWorkflow` içine **adı** kutusuna ve tıklatın **Ekle**.  
   
-4.  Sürükle bir **StateMachine** etkinliğinden **Durum makinesi** bölümünü **araç kutusu** üzerine bırakın **Buraya Bırak etkinlik** üzerindeki etiket İş akışı tasarım yüzeyi.  
+4. Sürükle bir **StateMachine** etkinliğinden **Durum makinesi** bölümünü **araç kutusu** üzerine bırakın **Buraya Bırak etkinlik** üzerindeki etiket İş akışı tasarım yüzeyi.  
   
 ### <a name="to-create-the-workflow-variables-and-arguments"></a>Bağımsız değişkenler ve iş akışı değişkenlerini oluşturmak için  
   
-1.  Çift **StateMachineNumberGuessWorkflow.xaml** içinde **Çözüm Gezgini** zaten görüntülenmiyorsa, iş akışı Tasarımcısı'nda görüntülenecek.  
+1. Çift **StateMachineNumberGuessWorkflow.xaml** içinde **Çözüm Gezgini** zaten görüntülenmiyorsa, iş akışı Tasarımcısı'nda görüntülenecek.  
   
-2.  Tıklayın **bağımsız değişkenleri** sol alt tarafında görüntülenecek iş akışı Tasarımcısı **bağımsız değişkenleri** bölmesi.  
+2. Tıklayın **bağımsız değişkenleri** sol alt tarafında görüntülenecek iş akışı Tasarımcısı **bağımsız değişkenleri** bölmesi.  
   
-3.  Tıklayın **bağımsız değişken oluşturma**.  
+3. Tıklayın **bağımsız değişken oluşturma**.  
   
-4.  Tür `MaxNumber` içine **adı** kutusunda **içinde** gelen **yönü** aşağı açılan listesinden **Int32** gelen**Bağımsız değişken türü** aşağı açılan liste ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
+4. Tür `MaxNumber` içine **adı** kutusunda **içinde** gelen **yönü** aşağı açılan listesinden **Int32** gelen**Bağımsız değişken türü** aşağı açılan liste ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
   
-5.  Tıklayın **bağımsız değişken oluşturma**.  
+5. Tıklayın **bağımsız değişken oluşturma**.  
   
-6.  Tür `Turns` içine **adı** altında yeni eklenen kutusunu `MaxNumber` bağımsız değişkeni, select **kullanıma** gelen **yönü** aşağı açılan listesinden  **Int32** gelen **bağımsız değişken türü** aşağı açılan liste ve ENTER tuşuna basın.  
+6. Tür `Turns` içine **adı** altında yeni eklenen kutusunu `MaxNumber` bağımsız değişkeni, select **kullanıma** gelen **yönü** aşağı açılan listesinden  **Int32** gelen **bağımsız değişken türü** aşağı açılan liste ve ENTER tuşuna basın.  
   
-7.  Tıklayın **bağımsız değişkenleri** etkinlik Tasarımcısı kapatmak için sol alt tarafında **bağımsız değişkenleri** bölmesi.  
+7. Tıklayın **bağımsız değişkenleri** etkinlik Tasarımcısı kapatmak için sol alt tarafında **bağımsız değişkenleri** bölmesi.  
   
-8.  Tıklayın **değişkenleri** sol alt tarafında görüntülenecek iş akışı Tasarımcısı **değişkenleri** bölmesi.  
+8. Tıklayın **değişkenleri** sol alt tarafında görüntülenecek iş akışı Tasarımcısı **değişkenleri** bölmesi.  
   
 9. Tıklayın **değişken oluşturma**.  
   
@@ -64,14 +64,14 @@ ms.locfileid: "59139639"
   
 ### <a name="to-add-the-workflow-activities"></a>İş akışı etkinlikleri eklemek için  
   
-1.  Tıklayın **State1** seçin. İçinde **Özellikler penceresi**, değiştirme **DisplayName** için `Initialize Target`.  
+1. Tıklayın **State1** seçin. İçinde **Özellikler penceresi**, değiştirme **DisplayName** için `Initialize Target`.  
   
     > [!TIP]
     >  Varsa **Özellikler penceresi** görüntülenen, select değil **Özellikler penceresi** gelen **görünümü** menüsü.  
   
-2.  Yeni adı çift **başlatmak hedef** genişletmek için iş akışı tasarımcısında durum.  
+2. Yeni adı çift **başlatmak hedef** genişletmek için iş akışı tasarımcısında durum.  
   
-3.  Sürükle bir **atama** etkinliğinden **Temelleri** bölümünü **araç kutusu** üzerine bırakın **giriş** durumu bölümü. Tür `Target` içine **için** kutusu ve içine aşağıdaki ifade **bir C# ifadesi girin** veya **zadejte Výraz jazyka vb.** kutusu.  
+3. Sürükle bir **atama** etkinliğinden **Temelleri** bölümünü **araç kutusu** üzerine bırakın **giriş** durumu bölümü. Tür `Target` içine **için** kutusu ve içine aşağıdaki ifade **bir C# ifadesi girin** veya **zadejte Výraz jazyka vb.** kutusu.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -84,15 +84,15 @@ ms.locfileid: "59139639"
     > [!TIP]
     >  Varsa **araç kutusu** penceresi görüntülenmiyorsa, seçin **araç kutusu** gelen **görünümü** menüsü.  
   
-4.  İade için genel durum makinesi iş akışı Tasarımcısı görünümünde tıklayarak **StateMachine** alan içerik haritasındaki iş akışı Tasarımcısı üst kısmında görüntüler.  
+4. İade için genel durum makinesi iş akışı Tasarımcısı görünümünde tıklayarak **StateMachine** alan içerik haritasındaki iş akışı Tasarımcısı üst kısmında görüntüler.  
   
-5.  Sürükle bir **durumu** etkinliğinden **Durum makinesi** bölümünü **araç kutusu** iş akışı tasarımcıya ve onu kutucuğunun üzerine gelin **hedefBaşlat** durumu. Dört üçgenler geçici olarak görüneceğini unutmayın **başlatmak hedef** üzerine yeni bir durum olduğunda durumu. Yeni durumunu hemen aşağıdadır üçgen bırak **başlatmak hedef** durumu. Bu iş akışı üzerine yeni durum yerleştirir ve bir geçiş oluşturur **başlatmak hedef** yeni durumu için durum.  
+5. Sürükle bir **durumu** etkinliğinden **Durum makinesi** bölümünü **araç kutusu** iş akışı tasarımcıya ve onu kutucuğunun üzerine gelin **hedefBaşlat** durumu. Dört üçgenler geçici olarak görüneceğini unutmayın **başlatmak hedef** üzerine yeni bir durum olduğunda durumu. Yeni durumunu hemen aşağıdadır üçgen bırak **başlatmak hedef** durumu. Bu iş akışı üzerine yeni durum yerleştirir ve bir geçiş oluşturur **başlatmak hedef** yeni durumu için durum.  
   
-6.  Tıklayın **State1** seçmek için değiştirme **DisplayName** için `Enter Guess`ve genişletmek için iş akışı tasarımcısında durumu çift tıklayın.  
+6. Tıklayın **State1** seçmek için değiştirme **DisplayName** için `Enter Guess`ve genişletmek için iş akışı tasarımcısında durumu çift tıklayın.  
   
-7.  Sürükle bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** üzerine bırakın **giriş** durumu bölümü.  
+7. Sürükle bir **WriteLine** etkinliğinden **Temelleri** bölümünü **araç kutusu** üzerine bırakın **giriş** durumu bölümü.  
   
-8.  İçine aşağıdaki ifadeyi yazın **metin** özelliği **WriteLine**.  
+8. İçine aşağıdaki ifadeyi yazın **metin** özelliği **WriteLine**.  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -183,7 +183,7 @@ ms.locfileid: "59139639"
   
 ### <a name="to-build-the-workflow"></a>İş akışı oluşturmak için  
   
-1.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
+1. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
      Lütfen iş akışının nasıl çalıştırılacağını yönergeleri görmek için bir sonraki konu [nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md). Zaten tamamladıysanız [nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md) adım iş akışı farklı bir stil ve çalıştırmak bu adım durum makine iş akışını kullanarak istediğiniz, atlayın [uygulaması derleme ve çalıştırma için](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) bölümünü [nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md).  
   

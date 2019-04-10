@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: Herhangi bir sözcük veya alana (LINQ) (Visual Basic) göre filtre metin verilerini sıralama veya'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 6a5277e26b74ccf54af0cdc5f671516fcc7badb8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 46c9149a7cb1809bf94162649de0a35110bbc697
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832209"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294515"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Nasıl yapılır: Herhangi bir sözcük veya alana (LINQ) (Visual Basic) göre filtre metin verilerini sıralama veya
 Aşağıdaki örnek nasıl satırında herhangi bir alan olarak virgülle ayrılmış değerler gibi yapılandırılmış metin satırlarını sıralanacağını gösterir. Alanın, çalışma zamanında dinamik olarak belirtilebilir. Scores.csv alanlarında dört test puanlarını bir dizi tarafından izlenen bir öğrenci kimlik numarasını temsil ettiğini varsayar.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Veri içeren bir dosya oluşturmak için  
   
-1.  Konu başlığından scores.csv veri kopyalama [nasıl yapılır: İçerik gelen benzer olmayan dosyaları (LINQ) (Visual Basic) katılın](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) ve Çözüm klasörünüz olarak kaydedin.  
+1. Konu başlığından scores.csv veri kopyalama [nasıl yapılır: İçerik gelen benzer olmayan dosyaları (LINQ) (Visual Basic) katılın](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) ve Çözüm klasörünüz olarak kaydedin.  
   
 ## <a name="example"></a>Örnek  
   

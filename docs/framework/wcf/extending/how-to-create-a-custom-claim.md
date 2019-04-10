@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: fa04b883e37cc287e6bd52ce9f206b2b24fe905f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295386"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Nasıl yapılır: Özel Talep Oluşturma
 Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak için bir dizi yerleşik talep türleri ve yardımcı işlevlerini haklarıyla sağlar <xref:System.IdentityModel.Claims.Claim> örnekleriyle bu türleri ve hakları. Bu yerleşik talepler, model bilgileri varsayılan olarak WCF destekleyen istemci kimlik bilgisi türlerinde bulunan şekilde tasarlanmıştır. Çoğu durumda, yerleşik talep yeterlidir; Ancak bazı uygulamalar, özel talepler gerektirebilir. Bir talep talep türünü, talep için geçerli olduğu için kaynak ve doğrudan diğer bir deyişle olarak onaylanan bu kaynak üzerinde oluşur. Bu konuda bir özel talep oluşturma işlemini açıklar.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Bir temel veri türüne göre özel bir talep oluşturmak için  
   
-1.  Talep türü, kaynak değeri ve sağa geçirerek özel talep oluşturma <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> Oluşturucusu.  
+1. Talep türü, kaynak değeri ve sağa geçirerek özel talep oluşturma <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> Oluşturucusu.  
   
     1.  Talep türü için benzersiz bir değer karar verin.  
   
@@ -40,7 +40,7 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı oluşturmak iç
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-non-primitive-data-type"></a>Bir basit olmayan veri türüne göre özel bir talep oluşturmak için  
   
-1.  Talep türü, kaynak değeri ve sağa geçirerek özel talep oluşturma <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> Oluşturucusu.  
+1. Talep türü, kaynak değeri ve sağa geçirerek özel talep oluşturma <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> Oluşturucusu.  
   
     1.  Talep türü için benzersiz bir değer karar verin.  
   

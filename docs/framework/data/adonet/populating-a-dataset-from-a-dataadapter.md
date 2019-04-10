@@ -1,19 +1,19 @@
 ---
-title: Dataadapter'dan bir DataSet doldurma
+title: DataAdapter’dan bir DataSet Doldurma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: 0756eb0917e812101006f000db07f55f39afda57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecfd2c3a31b42b380c593aef0bbc23775874cc7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076828"
 ---
-# <a name="populating-a-dataset-from-a-dataadapter"></a>Dataadapter'dan bir DataSet doldurma
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Sağlayan bir tutarlı ilişkisel programlama modeli bağımsız veri kaynağının veri bellekte gösterimidir. `DataSet` Tablolar, kısıtlamalar ve tablolar arasındaki ilişkileri içeren verileri eksiksiz bir kümesini temsil eder. Çünkü `DataSet` veri kaynağını, bağımsız bir `DataSet` uygulamaya yerel veri ve birden çok veri kaynaklarından alınan verileri içerebilir. Mevcut veri kaynaklarıyla etkileşim aracılığıyla denetlenir `DataAdapter`.  
+# <a name="populating-a-dataset-from-a-dataadapter"></a>DataAdapter’dan bir DataSet Doldurma
+[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> Sağlayan bir tutarlı ilişkisel programlama modeli bağımsız veri kaynağının veri bellekte gösterimidir. `DataSet` Tablolar, kısıtlamalar ve tablolar arasındaki ilişkileri içeren verileri eksiksiz bir kümesini temsil eder. Çünkü `DataSet` veri kaynağını, bağımsız bir `DataSet` uygulamaya yerel veri ve birden çok veri kaynaklarından alınan verileri içerebilir. Mevcut veri kaynaklarıyla etkileşim aracılığıyla denetlenir `DataAdapter`.  
   
  `SelectCommand` Özelliği `DataAdapter` olduğu bir `Command` nesnesini, veri kaynağından veri alır. `InsertCommand`, `UpdateCommand`, Ve `DeleteCommand` özelliklerini `DataAdapter` olan `Command` verilerde yapılan değişiklikleri göre veri kaynağındaki verileri güncellemelerini yönetmelerini nesneleri `DataSet`. Bu özellikleri daha ayrıntılı olarak ele alınmaktadır [güncelleştirme veri kaynaklarını DataAdapters ile](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
@@ -182,6 +182,7 @@ adapter.Fill(customers, "Customers");
 |ANATR|10625|1.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
 - [DbDataAdapter ile Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)

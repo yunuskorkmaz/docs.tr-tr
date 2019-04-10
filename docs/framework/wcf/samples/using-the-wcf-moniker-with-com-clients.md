@@ -2,12 +2,12 @@
 title: WCF Bilinen Adını COM İstemcileri ile Kullanma
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 3cb610f85c929c371299bc505646cdf924ecdaea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294853"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek, Windows Communication Foundation (WCF) hizmet bilinen adını COM tabanlı geliştirme ortamlarına uygulamaları (Office VBA) için Microsoft Office Visual Basic veya Visual Basic 6.0 gibi Web Hizmetleri Tümleştirme için nasıl kullanılacağını gösterir. Bu örnek bir Windows komut dosyası ana bilgisayarı istemci (.vbs) destekleyen bir istemci kitaplığı (.dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet hesap makinesi hizmetidir ve COM istemcisi matematik işlemlerini çağıran — ekleme, çıkarma, çarpma ve bölme — hizmet. İleti kutusu windows istemci etkinliği görülebilir.  
@@ -184,46 +184,46 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-set-up-and-build-the-sample"></a>Ayarlama ve örneği oluşturmak için  
   
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Visual Studio için geliştirici komut isteminden, dile özgü klasörü altında \client\bin klasörü açın.  
+3. Visual Studio için geliştirici komut isteminden, dile özgü klasörü altında \client\bin klasörü açın.  
   
     > [!NOTE]
     >  Kullanıyorsanız [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 veya Windows Server 2008 R2'de, yönetici ayrıcalıklarına sahip komut isteminden çalıştırdığınızdan emin olun.  
   
-4.  Yazın `tlbexp.exe client.dll /out:CalcProxy.tlb` dll tlb dosyasına dışarı aktarmak için. Bir "tür kitaplığı dışarı Aktarıcı Uyarısı" bekleniyordu, ancak genel tür gerekli olmadığından bir sorun değildir.  
+4. Yazın `tlbexp.exe client.dll /out:CalcProxy.tlb` dll tlb dosyasına dışarı aktarmak için. Bir "tür kitaplığı dışarı Aktarıcı Uyarısı" bekleniyordu, ancak genel tür gerekli olmadığından bir sorun değildir.  
   
-5.  Yazın `regasm.exe /tlb:CalcProxy.tlb client.dll` türleri com ile kaydetmek için Bir "tür kitaplığı dışarı Aktarıcı Uyarısı" bekleniyordu, ancak genel tür gerekli olmadığından bir sorun değildir.  
+5. Yazın `regasm.exe /tlb:CalcProxy.tlb client.dll` türleri com ile kaydetmek için Bir "tür kitaplığı dışarı Aktarıcı Uyarısı" bekleniyordu, ancak genel tür gerekli olmadığından bir sorun değildir.  
   
-6.  Yazın `gacutil.exe /i client.dll` derlemesi Genel Derleme Önbelleği'ne ekleme.  
+6. Yazın `gacutil.exe /i client.dll` derlemesi Genel Derleme Önbelleği'ne ekleme.  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için  
   
-1.  Hizmeti şu adreste yazarak bir tarayıcı kullanarak erişebileceğiniz test: `http://localhost/servicemodelsamples/service.svc`. Yanıtta bir onay sayfası gösterilmelidir.  
+1. Hizmeti şu adreste yazarak bir tarayıcı kullanarak erişebileceğiniz test: `http://localhost/servicemodelsamples/service.svc`. Yanıtta bir onay sayfası gösterilmelidir.  
   
-2.  ComCalcClient.vbs \client, dile özgü klasörü altında çalıştırın. İleti kutusu windows istemci etkinliği görüntülenir.  
+2. ComCalcClient.vbs \client, dile özgü klasörü altında çalıştırın. İleti kutusu windows istemci etkinliği görüntülenir.  
   
-3.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+3. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
-1.  Hizmet bilgisayarda ServiceModelSamples adlı sanal bir dizin oluşturun. Disk dizini ve sanal dizin oluşturmak için örnek ile dahil Setupvroot.bat betiği kullanılabilir.  
+1. Hizmet bilgisayarda ServiceModelSamples adlı sanal bir dizin oluşturun. Disk dizini ve sanal dizin oluşturmak için örnek ile dahil Setupvroot.bat betiği kullanılabilir.  
   
-2.  Hizmet program dosyaları %SystemDrive%\Inetpub\wwwroot\servicemodelsamples hizmeti bilgisayarında ServiceModelSamples sanal dizinine kopyalayın. \Bin dizinine dosyaları eklemeyi unutmayın.  
+2. Hizmet program dosyaları %SystemDrive%\Inetpub\wwwroot\servicemodelsamples hizmeti bilgisayarında ServiceModelSamples sanal dizinine kopyalayın. \Bin dizinine dosyaları eklemeyi unutmayın.  
   
-3.  Dile özgü klasörü altında \client klasöründen istemci komut dosyasını istemci bilgisayara kopyalayın.  
+3. Dile özgü klasörü altında \client klasöründen istemci komut dosyasını istemci bilgisayara kopyalayın.  
   
-4.  Betik dosyasında adresi uç nokta tanımı hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" yönelik tüm başvuruları adresindeki bir tam etki alanı adı ile değiştirin.  
+4. Betik dosyasında adresi uç nokta tanımı hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" yönelik tüm başvuruları adresindeki bir tam etki alanı adı ile değiştirin.  
   
-5.  WSDL dosyasını istemci bilgisayara kopyalayın. WSDL dosyasındaki serviceWsdl.xml, "localhost" yönelik tüm başvuruları adresindeki bir tam etki alanı adı ile değiştirin.  
+5. WSDL dosyasını istemci bilgisayara kopyalayın. WSDL dosyasındaki serviceWsdl.xml, "localhost" yönelik tüm başvuruları adresindeki bir tam etki alanı adı ile değiştirin.  
   
-6.  Dile özgü klasörü altında \client\bin klasör Client.dll kitaplık istemci bilgisayardaki bir dizine kopyalayın.  
+6. Dile özgü klasörü altında \client\bin klasör Client.dll kitaplık istemci bilgisayardaki bir dizine kopyalayın.  
   
-7.  Bir komut istemi'nden istemci bilgisayarda, hedef dizine gidin. Kullanıyorsanız [!INCLUDE[wv](../../../../includes/wv-md.md)] veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)], komut istemini yönetici olarak çalıştırdığınızdan emin olun.  
+7. Bir komut istemi'nden istemci bilgisayarda, hedef dizine gidin. Kullanıyorsanız [!INCLUDE[wv](../../../../includes/wv-md.md)] veya [!INCLUDE[lserver](../../../../includes/lserver-md.md)], komut istemini yönetici olarak çalıştırdığınızdan emin olun.  
   
-8.  Yazın `tlbexp.exe client.dll /out:CalcProxy.tlb` dll tlb dosyasına dışarı aktarmak için. Bir "tür kitaplığı dışarı Aktarıcı Uyarısı" bekleniyordu, ancak genel tür gerekli olmadığından bir sorun değildir.  
+8. Yazın `tlbexp.exe client.dll /out:CalcProxy.tlb` dll tlb dosyasına dışarı aktarmak için. Bir "tür kitaplığı dışarı Aktarıcı Uyarısı" bekleniyordu, ancak genel tür gerekli olmadığından bir sorun değildir.  
   
 9. Yazın `regasm.exe /tlb:CalcProxy.tlb client.dll` türleri com ile kaydetmek için Bu yolu içeren klasöre ayarlandı olun `regasm.exe` komutu çalıştırmadan önce.  
   

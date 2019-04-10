@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 839b0ed6f8e9868e1a3d8e19cc6e8a580313d160
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146438"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295503"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Nasıl yapılır: Tlbimp.exe Kullanarak Birincil Birlikte Çalışma Derlemeleri Oluşturma
 Birincil birlikte çalışma derlemesi oluşturmak için iki yolunuz vardır:  
@@ -36,7 +36,7 @@ Birincil birlikte çalışma derlemesi oluşturmak için iki yolunuz vardır:
   
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Tlbimp.exe kullanarak birincil birlikte çalışma derlemesi oluşturmak için  
   
-1.  Komut isteminde, şunları yazın:  
+1. Komut isteminde, şunları yazın:  
   
      **Tlbimp** *tlbfile***/birincil/keyfile:** *filename* **/out:** *assemblyname*  
   

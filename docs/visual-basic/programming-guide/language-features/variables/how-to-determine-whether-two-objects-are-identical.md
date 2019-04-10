@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 2b2c43811cbb3a06ed1e8c092ca42e50a4d037c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816089"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295048"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Nasıl yapılır: İki nesnenin aynı (Visual Basic) olup olmadığını belirleme
 Visual Basic'te, her iki değişken için aynı sınıf örneği bellekte gelirseniz iki değişken başvuruları kendi işaretçileri aynıysa, diğer bir deyişle, aynı kabul edilir. Örneğin, bir Windows Forms uygulamasında belirlemek için bir karşılaştırma yapmak isteyebileceğiniz olup olmadığını geçerli örneğini (`Me`) belirli bir örneği aynı olduğu gibi `Form2`.  
@@ -22,9 +22,9 @@ Visual Basic'te, her iki değişken için aynı sınıf örneği bellekte gelirs
   
 #### <a name="to-determine-if-two-objects-are-identical"></a>İki nesnenin aynı olup olmadığını belirlemek için  
   
-1.  Ayarlanmış bir `Boolean` iki nesne test etmek için ifade.  
+1. Ayarlanmış bir `Boolean` iki nesne test etmek için ifade.  
   
-2.  Test ifadesinde kullanmak `Is` işlenen olarak iki nesne işleci.  
+2. Test ifadesinde kullanmak `Is` işlenen olarak iki nesne işleci.  
   
      `Is` döndürür `True` için aynı sınıf örneği nesnelerini noktası.  
   
@@ -33,9 +33,9 @@ Visual Basic'te, her iki değişken için aynı sınıf örneği bellekte gelirs
   
 #### <a name="to-determine-if-two-objects-are-not-identical"></a>İki nesnenin aynı olup olmadığını belirlemek için  
   
-1.  Ayarlanmış bir `Boolean` iki nesne test etmek için ifade.  
+1. Ayarlanmış bir `Boolean` iki nesne test etmek için ifade.  
   
-2.  Test ifadesinde kullanmak `IsNot` işlenen olarak iki nesne işleci.  
+2. Test ifadesinde kullanmak `IsNot` işlenen olarak iki nesne işleci.  
   
      `IsNot` döndürür `True` nesneleri aynı sınıf örneğine işaret etmiyorsa.  
   
@@ -52,10 +52,10 @@ Visual Basic'te, her iki değişken için aynı sınıf örneği bellekte gelirs
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Nesne Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Is İşleci](../../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot İşleci](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Nasıl yapılır: İki nesnenin ilgili olup olmadığını belirleme](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Nasıl yapılır: İki Nesnenin İlgili Olup Olmadığını Belirleme](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
 - [Me, My, MyBase ve MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

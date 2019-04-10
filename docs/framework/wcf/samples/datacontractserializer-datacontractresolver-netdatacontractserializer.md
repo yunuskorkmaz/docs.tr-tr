@@ -2,12 +2,12 @@
 title: NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 455ffe936373525f574d4401412c099d41d45f66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167225"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295152"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma
 Bu örnek gösterir nasıl kullanımını <xref:System.Runtime.Serialization.DataContractSerializer> uygun bir <xref:System.Runtime.Serialization.DataContractResolver> aynı işlevselliği sağlar <xref:System.Runtime.Serialization.NetDataContractSerializer>. Bu örnek, uygun oluşturma işlemi gösterilmektedir <xref:System.Runtime.Serialization.DataContractResolver> ve eklemek üzere onu nasıl <xref:System.Runtime.Serialization.DataContractSerializer>.
@@ -57,21 +57,21 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1.  Visual Studio 2012 kullanarak DCRSample.sln çözüm dosyasını açın.
+1. Visual Studio 2012 kullanarak DCRSample.sln çözüm dosyasını açın.
 
-2.  Çözüm dosyasını sağ tıklatın ve seçin **özellikleri**.
+2. Çözüm dosyasını sağ tıklatın ve seçin **özellikleri**.
 
-3.  İçinde **çözüm özellik sayfaları** iletişim altında **ortak özellikler**, **başlangıç projesi**seçin **birden fazla başlangıç projesi:**.
+3. İçinde **çözüm özellik sayfaları** iletişim altında **ortak özellikler**, **başlangıç projesi**seçin **birden fazla başlangıç projesi:**.
 
-4.  Yanındaki **DCSwithDCR** proje, select **Başlat** gelen **eylem** açılır.
+4. Yanındaki **DCSwithDCR** proje, select **Başlat** gelen **eylem** açılır.
 
-5.  Yanındaki **NetDCS** proje, select **Başlat** gelen **eylem** açılır.
+5. Yanındaki **NetDCS** proje, select **Başlat** gelen **eylem** açılır.
 
-6.  Tıklayın **Tamam** iletişim kutusunu kapatmak için.
+6. Tıklayın **Tamam** iletişim kutusunu kapatmak için.
 
-7.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+7. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-8.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.
+8. Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.
 
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

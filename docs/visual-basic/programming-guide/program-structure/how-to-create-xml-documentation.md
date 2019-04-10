@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 2f32847c1b3a0fdf1892d6b423bb33783b6bdfe3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 95f6c5b23deadc16eb1e81f274e2cc5149598fb7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814594"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294490"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de XML belgesi oluşturma
 Bu örnek XML belge açıklamaları ekleme kodunuzu gösterir.  
@@ -19,22 +19,22 @@ Bu örnek XML belge açıklamaları ekleme kodunuzu gösterir.
   
 ### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Bir tür veya üye için XML belgeleri oluşturmak için  
   
-1.  İçinde **Kod Düzenleyicisi**, yukarıdaki belgeleri oluşturmak istediğiniz türe veya üyeye satırında imlecinizi.  
+1. İçinde **Kod Düzenleyicisi**, yukarıdaki belgeleri oluşturmak istediğiniz türe veya üyeye satırında imlecinizi.  
   
-2.  Tür `'''` (üç tek tırnak işareti).  
+2. Tür `'''` (üç tek tırnak işareti).  
   
      Türe veya üyeye bir XML çatısı eklenir **Kod Düzenleyicisi**.  
   
-3.  Uygun etiketleri arasına tanımlayıcı bilgiler ekleyin.  
+3. Uygun etiketleri arasına tanımlayıcı bilgiler ekleyin.  
   
     > [!NOTE]
     >  XML belgeleri bloğu içinde ek satırlar eklerseniz, her bir çizgi ile başlamalıdır `'''`.  
   
-4.  Türe veya üyeye yeni XML belge açıklamaları kullanan ek kod ekleyin.  
+4. Türe veya üyeye yeni XML belge açıklamaları kullanan ek kod ekleyin.  
   
      IntelliSense görüntüler metinden \<Özet > türe veya üyeye etiketi.  
   
-5.  Belge açıklamaları içeren bir XML dosyası oluşturmak için kodu derleyin. Daha fazla bilgi için [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+5. Belge açıklamaları içeren bir XML dosyası oluşturmak için kodu derleyin. Daha fazla bilgi için [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

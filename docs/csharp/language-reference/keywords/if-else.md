@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517844"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294425"
 ---
 # <a name="if-else-c-reference"></a>if-else (C# Başvurusu)
 
@@ -82,7 +82,7 @@ Aşağıdaki örnek, bir girdi karakteri küçük harf, bir büyük harf veya sa
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-Yalnızca bir deyimde başka bloğu ya da sonra blok herhangi bir geçerli ifade olabilir, koşul için geçerli bir Boole ifade kullanabilirsiniz. Mantıksal işleçler gibi kullanabileceğiniz [ && ](../operators/conditional-and-operator.md), [ & ](../operators/and-operator.md), [ &#124; &#124; ](../operators/conditional-or-operator.md), [ &#124; ](../operators/or-operator.md) ve [!](../operators/logical-negation-operator.md) Bileşik koşul yapma. Aşağıdaki kod örnekleri gösterir.
+Yalnızca bir deyimde başka bloğu ya da sonra blok herhangi bir geçerli ifade olabilir, koşul için geçerli bir Boole ifade kullanabilirsiniz. Kullanabileceğiniz [mantıksal işleçler](../operators/boolean-logical-operators.md) gibi `!`, `&&`, `||`, `&`, `|`, ve `^` Bileşik koşul yapma. Aşağıdaki kod örnekleri gösterir.
 
 ```csharp
 // NOT
@@ -137,9 +137,9 @@ if (!(m >= n || m >= p))
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C# Başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [?: İşleç](../operators/conditional-operator.md)
 - [if-else Deyimi (C++)](/cpp/cpp/if-else-statement-cpp)
-- [switch](switch.md)
+- [anahtarı](switch.md)

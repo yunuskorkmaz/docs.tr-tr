@@ -2,12 +2,12 @@
 title: WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167654"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294866"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 Windows 8, Windows Store uygulamaları adı verilen bir uygulama yeni bir tür tanıtır. Bu uygulamaları dokunmatik ekran arabirimi geçici bir çözüm olarak tasarlanmıştır. .NET framework 4.5, WCF hizmetlerini çağırmak Windows Store uygulamaları etkinleştirir.  
@@ -24,31 +24,31 @@ Windows 8, Windows Store uygulamaları adı verilen bir uygulama yeni bir tür t
 ### <a name="supported-bindings"></a>Desteklenen bağlamaları  
  Aşağıdaki WCF bağlamaları, Windows Store uygulamalarında desteklenir:  
   
-1.  <xref:System.ServiceModel.BasicHttpBinding>  
+1. <xref:System.ServiceModel.BasicHttpBinding>  
   
-2.  <xref:System.ServiceModel.NetTcpBinding>  
+2. <xref:System.ServiceModel.NetTcpBinding>  
   
-3.  <xref:System.ServiceModel.NetHttpBinding>  
+3. <xref:System.ServiceModel.NetHttpBinding>  
   
-4.  <xref:System.ServiceModel.Channels.CustomBinding>
+4. <xref:System.ServiceModel.Channels.CustomBinding>
   
  Aşağıdaki bağlama öğeleri Windows Store uygulamalarında desteklenir.  
   
-1.  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+1. <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-2.  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+2. <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-3.  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+3. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
-4.  <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+4. <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-5.  <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+5. <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-6.  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+6. <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
-7.  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+7. <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
-8.  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+8. <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
@@ -97,11 +97,11 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ### <a name="serialization"></a>Serileştirme  
  Aşağıdaki seri hale getiricileri genişletme, Windows Store uygulamalarında desteklenir:  
   
-1.  DataContractSerializer  
+1. DataContractSerializer  
   
-2.  DataContractJsonSerializer  
+2. DataContractJsonSerializer  
   
-3.  XmlSerializer  
+3. XmlSerializer  
   
 > [!WARNING]
 >  XmlDictionaryWriter.Write(DateTime) şimdi bir DateTime nesnesini bir dize olarak yazar.  
@@ -120,21 +120,21 @@ Aşağıdaki güvenlik modu Windows Store uygulamalarında desteklenir:
   
 Aşağıdaki istemci kimlik bilgisi türlerinin Windows Store uygulamalarında desteklenir:
   
-1.  None  
+1. Yok.  
   
-2.  Temel  
+2. Temel  
   
-3.  Özet  
+3. Özet  
   
-4.  Anlaşma  
+4. Anlaşma  
   
-5.  NTLM  
+5. NTLM  
   
-6.  Windows  
+6. Windows  
   
-7.  Kullanıcı adı (ileti güvenliği)  
+7. Kullanıcı adı (ileti güvenliği)  
   
-8.  Windows (aktarım güvenliği)  
+8. Windows (aktarım güvenliği)  
   
  Erişim ve varsayılan Windows kimlik bilgilerini göndermek Windows Store uygulamaları için sırada Package.appmanifest dosyası içinde bu işlevi etkinleştirmeniz gerekir. Bu dosyayı açmak, özellikleri sekmesini seçin ve "Varsayılan Windows kimlik bilgileri" seçin. Bu, uygulama etki alanı kimlik bilgileri gerektiren intranet kaynaklarına bağlanmanıza imkan sağlar.  
   
@@ -144,11 +144,11 @@ Aşağıdaki istemci kimlik bilgisi türlerinin Windows Store uygulamalarında d
 ### <a name="misc"></a>Çeşitli  
  Aşağıdaki sınıflar kullanımı, Windows Store uygulamaları için desteklenir:  
   
-1.  <xref:System.ServiceModel.ChannelFactory>  
+1. <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <xref:System.ServiceModel.DuplexChannelFactory%601>
+2. <xref:System.ServiceModel.DuplexChannelFactory%601>
   
-3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
+3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
 ### <a name="defining-service-contracts"></a>Hizmet sözleşmelerini tanımlama  
  Yalnızca görev tabanlı zaman uyumsuz deseni kullanılarak zaman uyumsuz hizmet işlemleri tanımlama öneririz. Bu, Windows Store uygulamalarını bir hizmet işlemi çağrılırken yanıt verebilir durumda kalmasını sağlar.  

@@ -18,20 +18,18 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0bcb0e7369345aaae39d99a005a07304aaad7043
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200356"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Geliştiriciler, iş parçacığı kurtarmak için tasarlanmıştır. Sonuç olarak, çoğu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geliştiriciler birden fazla iş parçacığı kullanan bir arabirim yazma zorunda kalmaz. Çoklu iş parçacığı kullanan programları, karmaşık ve hata ayıklama zor olduğundan, bunlar çözümleri tek iş parçacıklı bulunduğunda kaçınılmalıdır.  
   
  Olursa olsun ne kadar iyi, ancak Hayır desteklemesi için [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework hiç sorun her tür için tek iş parçacıklı bir çözüm sağlayabilir olacaktır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Kapat, gelen vardır, ancak yine de burada birden çok iş parçacığı geliştirmek durumlarda [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] yanıtlama hızı veya uygulama performans. Bu yazıda, bazı arka plan malzeme görüştükten sonra bu durumlardan bazıları inceler ve bazı alt düzey ayrıntıları Serileştirmenin burada sona eriyor.  
-  
 
-  
 > [!NOTE]
 >  Bu konuda ele alınmıştır kullanarak iş parçacığı <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> zaman uyumsuz çağrılar için yöntemi. Zaman uyumsuz çağrıları çağrı yaparak da yapabilirsiniz <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> Al yönteminin bir <xref:System.Action> veya <xref:System.Func%601> bir parametre olarak.  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> Yöntemi döndürür bir <xref:System.Windows.Threading.DispatcherOperation> veya <xref:System.Windows.Threading.DispatcherOperation%601>, sahip olduğu bir <xref:System.Windows.Threading.DispatcherOperation.Task%2A> özelliği. Kullanabileceğiniz `await` ya da anahtar sözcüğüyle <xref:System.Windows.Threading.DispatcherOperation> veya ilişkili <xref:System.Threading.Tasks.Task>. Zaman uyumlu olarak beklemesi gerekiyorsa <xref:System.Threading.Tasks.Task> tarafından döndürülen bir <xref:System.Windows.Threading.DispatcherOperation> veya <xref:System.Windows.Threading.DispatcherOperation%601>, çağrı <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> genişletme yöntemi.  Çağırma <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> bir kilitlenmeyle neden olur. Kullanma hakkında daha fazla bilgi için bir <xref:System.Threading.Tasks.Task> görev Paralelliği zaman uyumsuz işlemleri gerçekleştirmek için bkz.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A> Yöntemi alan aşırı yüklemeler de sahip bir <xref:System.Action> veya <xref:System.Func%601> bir parametre olarak.  Kullanabileceğiniz <xref:System.Windows.Threading.Dispatcher.Invoke%2A> zaman uyumlu hale getirmek için yöntemini çağıran bir temsilci geçirerek <xref:System.Action> veya <xref:System.Func%601>.  
   
@@ -99,7 +97,7 @@ ms.locfileid: "58125687"
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
- Bu yöntem, asal sonraki tek sayı olup olmadığını denetler. Asal ise, yöntem doğrudan güncelleştirmeleri `bigPrime` <xref:System.Windows.Controls.TextBlock> keşfi yansıtacak şekilde. Hesaplama bileşeni oluşturmak için kullanılan aynı iş parçacığında gerçekleştirilmekte olduğundan bunu yapabilirsiniz. Ki seçilen hesaplama için ayrı bir iş parçacığı kullanmak, size daha karmaşık bir eşitleme mekanizmasının kullanılması ve güncelleştirme yürütme gerekirdi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Biz bu durum sonraki kazandırabileceğinizi göstereceğiz.  
+ Bu yöntem, asal sonraki tek sayı olup olmadığını denetler. Asal ise, yöntem doğrudan güncelleştirmeleri `bigPrime`<xref:System.Windows.Controls.TextBlock> keşfi yansıtacak şekilde. Hesaplama bileşeni oluşturmak için kullanılan aynı iş parçacığında gerçekleştirilmekte olduğundan bunu yapabilirsiniz. Ki seçilen hesaplama için ayrı bir iş parçacığı kullanmak, size daha karmaşık bir eşitleme mekanizmasının kullanılması ve güncelleştirme yürütme gerekirdi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Biz bu durum sonraki kazandırabileceğinizi göstereceğiz.  
   
  Bu örnek için tam kaynak kodunu görmek [uzun süre çalışan hesaplama örneğiyle Single-Threaded uygulama](https://go.microsoft.com/fwlink/?LinkID=160038)  
   
@@ -145,7 +143,7 @@ ms.locfileid: "58125687"
   
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Gezgini bu şekilde çalışır. Her yeni Gezgini penceresi özgün işleme ait olduğu, ancak bunu bağımsız bir iş parçacığı denetimi altında oluşturulur.  
   
- Kullanarak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame> denetimi, Web sayfaları görüntüleriz. Basit bir kolayca oluşturabiliriz [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] değiştirin. Biz önemli bir özelliği ile Başlat: yeni bir Gezgini penceresi açmak için yeteneği. Kullanıcı, "Yeni Pencere" tıkladığında düğmesi, biz bir kopyasını ayrı bir iş parçacığı bizim penceresi başlatın. Bu şekilde, diğer tüm windows uzun süreli veya engelleme işlemleri windows biriyle kilitlenmez.  
+ Kullanarak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Frame> denetimi, Web sayfaları görüntüleriz. Basit bir kolayca oluşturabiliriz [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] değiştirin. Biz önemli bir özelliği ile Başlat: yeni bir Gezgini penceresi açmak için yeteneği. Kullanıcı, "Yeni Pencere" tıkladığında düğmesi, biz bir kopyasını ayrı bir iş parçacığı bizim penceresi başlatın. Bu şekilde, diğer tüm windows uzun süreli veya engelleme işlemleri windows biriyle kilitlenmez.  
   
  Gerçekte, kendi karmaşık iş parçacığı modeli Web tarayıcı modeline sahiptir. Çoğu okuyucularına tanıyor olmalıdır çünkü bunu seçtik.  
   
@@ -218,4 +216,5 @@ ms.locfileid: "58125687"
  Görev için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] biz her yerde yeniden giriş engelleme neden olan bellek sızıntısı yeniden eklenmesiyle olmadan beklenmeyen yeniden giriş önlemek içindir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Uzun süre çalışan hesaplama örneğiyle tek iş parçacıklı uygulama](https://go.microsoft.com/fwlink/?LinkID=160038)

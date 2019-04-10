@@ -5,17 +5,16 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080000"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType Kayıt Defteri Ayarları
-Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] tarafından kullanılan kayıt defteri ayarları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
-  
-  
+Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] tarafından kullanılan kayıt defteri ayarları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
+
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Teknoloji genel bakış  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir görüntü cihazı kullanmak için metin işleme uygulamaları [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] okuma deneyimi sağlamak için özellikleri. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] bir yazılım teknolojisi tarafından geliştirilen [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , dizüstü ekranları, Pocket PC ekranları ve düz panel izleyiciler gibi mevcut LCD'ler (Sıvı Crystal gösterir), metnin okunabilirliğini artırır. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] her piksel LCD ekranın tek dikey renk Şerit öğelerine erişerek çalışır. Daha fazla bilgi için [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], bkz: [ClearType genel bakışı](cleartype-overview.md).  
@@ -32,17 +31,17 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] düzeyi|Düzeyini açıklayan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renk anlaşılabilir.|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] düzey|Düzeyini açıklayan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renk anlaşılabilir.|  
 |Gama düzeyi|Piksel renk bileşeni görüntüleme cihazı için düzeyini açıklar.|  
 |Piksel yapısı|Piksel görüntüleme cihazı için düzenlemeyi açıklar.|  
 |Metin Karşıtlık düzeyi|Görüntülenen metin karşıtlık düzeyini açıklar.|  
   
- Bu ayarlar, tanımlanan başvurmak nasıl bilen bir dış yapılandırma yardımcı programı tarafından erişilebilen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] kayıt defteri ayarları. Bu ayarlar da oluşturulabilir veya değerleri kullanarak doğrudan erişerek [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Kayıt Defteri Düzenleyicisi.  
+ Bu ayarlar, tanımlanan başvurmak nasıl bilen bir dış yapılandırma yardımcı programı tarafından erişilebilen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] kayıt defteri ayarları. Bu ayarlar da oluşturulabilir veya değerleri kullanarak doğrudan erişerek [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Kayıt Defteri Düzenleyicisi.  
   
- Varsa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] kayıt defteri ayarları ayarlanmadı (olan varsayılan durumu), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama sorguları [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] sistem parametreleri bilgi yazı tipi düzeltmeye ayarları için.  
+ Varsa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] kayıt defteri ayarları ayarlanmadı (olan varsayılan durumu), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama sorguları [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] sistem parametreleri bilgi yazı tipi düzeltmeye ayarları için.  
   
 > [!NOTE]
->  Görüntü cihaz adları listelendirmek hakkında daha fazla bilgi için bkz: `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işlevi.  
+>  Görüntü cihaz adları listelendirmek hakkında daha fazla bilgi için bkz: `SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işlevi.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType düzeyi  
@@ -90,7 +89,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
  Piksel yapısı, 0'dan 2 arasında bir tamsayı değerine karşılık gelir. Varsayılan düzey düz piksel yapısını temsil eden 0 ' dır.  
   
 > [!NOTE]
->  Görüntü cihaz adları listelendirmek hakkında daha fazla bilgi için bkz: `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işlevi.  
+>  Görüntü cihaz adları listelendirmek hakkında daha fazla bilgi için bkz: `EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işlevi.  
   
 ### <a name="registry-setting"></a>Kayıt defteri ayarı  
  Kayıt defteri ayarı piksel yapısı için konum, özel bir görüntü cihaz adına karşılık gelen bir yerel makine ayarı şöyle olur:  
@@ -115,5 +114,6 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
  ![ClearType Kayıt Defteri Düzenleyicisi'nde ayarları.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ClearType Genel Bakışı](cleartype-overview.md)
 - [ClearType düzgünleştirme](/windows/desktop/gdi/cleartype-antialiasing)

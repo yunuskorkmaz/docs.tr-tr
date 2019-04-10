@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 90e26154b4a0a006a4cbb114ec5ddd74a33fc762
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d7216b3aed89dc88737cc346386d6b03929fe60
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115199"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295581"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Nasıl yapılır: Bir X.509 Sertifikasının Şifreleme Sağlayıcısını Değiştirme
 Bu konu nasıl bir X.509 sertifikasının özel anahtar sağlamak için kullanılan şifreleme sağlayıcısını değiştirme ve Windows Communication Foundation (WCF) güvenlik altyapısına sağlayıcı tümleştirmek nasıl gösterir. Sertifikaları kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -29,19 +29,19 @@ Bu konu nasıl bir X.509 sertifikasının özel anahtar sağlamak için kullanı
   
 #### <a name="to-create-a-custom-x509-asymmetric-key"></a>Özel X.509 asimetrik anahtar oluşturmak için  
   
-1.  Türetilmiş yeni bir sınıf tanımlama <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey> sınıfı.  
+1. Türetilmiş yeni bir sınıf tanımlama <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey> sınıfı.  
   
-2.  Geçersiz kılma <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> salt okunur özelliği. Bu özellik, sertifikanın ortak/özel anahtar çifti gerçek anahtar boyutunu döndürür.  
+2. Geçersiz kılma <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> salt okunur özelliği. Bu özellik, sertifikanın ortak/özel anahtar çifti gerçek anahtar boyutunu döndürür.  
   
-3.  Geçersiz kılma <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> yöntemi. Bu yöntem, sertifikanın özel anahtara sahip bir simetrik anahtarın şifresini çözmek için WCF güvenlik çerçevesi tarafından çağrılır. (Anahtarı daha önce sertifikanın ortak anahtar ile şifrelenmiş.)  
+3. Geçersiz kılma <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> yöntemi. Bu yöntem, sertifikanın özel anahtara sahip bir simetrik anahtarın şifresini çözmek için WCF güvenlik çerçevesi tarafından çağrılır. (Anahtarı daha önce sertifikanın ortak anahtar ile şifrelenmiş.)  
   
-4.  Geçersiz kılma <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> yöntemi. Bu yöntem bir örneği elde etmek için WCF güvenlik çerçevesi tarafından çağrılır <xref:System.Security.Cryptography.AsymmetricAlgorithm> geçirilen yönteme parametreleri bağlı olarak sertifikanın özel veya ortak anahtar şifreleme sağlayıcısını temsil eden sınıf.  
+4. Geçersiz kılma <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> yöntemi. Bu yöntem bir örneği elde etmek için WCF güvenlik çerçevesi tarafından çağrılır <xref:System.Security.Cryptography.AsymmetricAlgorithm> geçirilen yönteme parametreleri bağlı olarak sertifikanın özel veya ortak anahtar şifreleme sağlayıcısını temsil eden sınıf.  
   
-5.  İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> yöntemi. Farklı bir uygulaması, bu yöntemi yok sayın <xref:System.Security.Cryptography.HashAlgorithm> sınıfı gereklidir.  
+5. İsteğe bağlı. Geçersiz kılma <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> yöntemi. Farklı bir uygulaması, bu yöntemi yok sayın <xref:System.Security.Cryptography.HashAlgorithm> sınıfı gereklidir.  
   
-6.  Geçersiz kılma <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A> yöntemi. Bu yöntem bir örneğini döndürür <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> sertifikanın özel anahtarı ile ilişkili sınıf.  
+6. Geçersiz kılma <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A> yöntemi. Bu yöntem bir örneğini döndürür <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> sertifikanın özel anahtarı ile ilişkili sınıf.  
   
-7.  Geçersiz kılma <xref:System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm%2A> yöntemi. Bu yöntem, belirli bir şifreleme algoritması güvenlik anahtar uygulama tarafından desteklenip desteklenmediğini belirtmek için kullanılır.  
+7. Geçersiz kılma <xref:System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm%2A> yöntemi. Bu yöntem, belirli bir şifreleme algoritması güvenlik anahtar uygulama tarafından desteklenip desteklenmediğini belirtmek için kullanılır.  
   
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
@@ -50,17 +50,17 @@ Bu konu nasıl bir X.509 sertifikasının özel anahtar sağlamak için kullanı
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Sistem tarafından sağlanan X.509 güvenlik belirteci özel X.509 asimetrik güvenlik anahtar belirteciyle değiştirilecek  
   
-1.  Özel X.509 asimetrik güvenlik anahtarı yerine sistem tarafından sağlanan güvenlik anahtarı döndüren özel bir X.509 güvenlik belirteci, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel güvenlik belirteçleri hakkında daha fazla bilgi için bkz: [nasıl yapılır: Özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+1. Özel X.509 asimetrik güvenlik anahtarı yerine sistem tarafından sağlanan güvenlik anahtarı döndüren özel bir X.509 güvenlik belirteci, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel güvenlik belirteçleri hakkında daha fazla bilgi için bkz: [nasıl yapılır: Özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomX509Token#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#2)]
      [!code-vb[c_CustomX509Token#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#2)]  
   
-2.  Örnekte gösterildiği gibi özel bir X.509 güvenlik belirteci döndüren bir özel güvenlik belirteci sağlayıcı oluşturma. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz. [nasıl yapılır: Özel güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2. Örnekte gösterildiği gibi özel bir X.509 güvenlik belirteci döndüren bir özel güvenlik belirteci sağlayıcı oluşturma. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz. [nasıl yapılır: Özel güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
      [!code-csharp[c_CustomX509Token#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#3)]
      [!code-vb[c_CustomX509Token#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#3)]  
   
-3.  Özel güvenlik anahtarı Başlatıcı tarafında kullanılacak gerekiyorsa özel bir istemci güvenlik belirteci yöneticisi ve özel istemci kimlik bilgileri sınıfları, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel istemci kimlik bilgileri ve istemci güvenlik belirteci yöneticileri hakkında daha fazla bilgi için bkz. [izlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+3. Özel güvenlik anahtarı Başlatıcı tarafında kullanılacak gerekiyorsa özel bir istemci güvenlik belirteci yöneticisi ve özel istemci kimlik bilgileri sınıfları, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel istemci kimlik bilgileri ve istemci güvenlik belirteci yöneticileri hakkında daha fazla bilgi için bkz. [izlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomX509Token#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#4)]
      [!code-vb[c_CustomX509Token#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#4)]  
@@ -68,7 +68,7 @@ Bu konu nasıl bir X.509 sertifikasının özel anahtar sağlamak için kullanı
      [!code-csharp[c_CustomX509Token#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#6)]
      [!code-vb[c_CustomX509Token#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#6)]  
   
-4.  Alıcı tarafında kullanılacak özel güvenlik anahtarı gerekiyorsa, bir özel hizmet güvenlik belirteci yöneticisi ve özel hizmet kimlik bilgilerini, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel hizmet kimlik bilgilerini ve hizmeti güvenlik belirteci yöneticileri hakkında daha fazla bilgi için bkz. [izlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+4. Alıcı tarafında kullanılacak özel güvenlik anahtarı gerekiyorsa, bir özel hizmet güvenlik belirteci yöneticisi ve özel hizmet kimlik bilgilerini, aşağıdaki örnekte gösterildiği gibi oluşturun. Özel hizmet kimlik bilgilerini ve hizmeti güvenlik belirteci yöneticileri hakkında daha fazla bilgi için bkz. [izlenecek yol: Özel istemci ve hizmet kimlik bilgilerini oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomX509Token#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#5)]
      [!code-vb[c_CustomX509Token#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#5)]  

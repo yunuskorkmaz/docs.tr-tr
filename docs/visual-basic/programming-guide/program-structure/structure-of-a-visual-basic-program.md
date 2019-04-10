@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828127"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295776"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Bir Visual Basic Programının Yapısı
 Bir Visual Basic programını standart yapı taşlarından oluşturulmuştur. A *çözüm* bir veya daha fazla proje içerir. A *proje* sırayla bir veya daha fazla içerebilir. Her *derleme* bir veya daha fazla kaynak dosyalarından derlenir. A *kaynak dosyası* tanımı ve sınıflar, yapılar, modülleri ve sonuç olarak, kodunuzu içeren arabirimleri uygulamasını sağlar.  
@@ -22,11 +22,11 @@ Bir Visual Basic programını standart yapı taşlarından oluşturulmuştur. A 
 ## <a name="file-level-programming-elements"></a>Dosya düzeyinde programlama öğeleri  
  Bir proje veya dosya başlatma ve Kod Düzenleyicisi'ni açın, bazı kodlar zaten yerinde ve doğru sırada bakın. Yazdığınız kod, aşağıdaki sırayı izlemelidir:  
   
-1.  `Option` Deyimleri  
+1. `Option` deyimler  
   
-2.  `Imports` Deyimleri  
+2. `Imports` deyimler  
   
-3.  `Namespace` ifadeler ve ad alanı düzeyinde öğeleri  
+3. `Namespace` ifadeler ve ad alanı düzeyinde öğeleri  
   
  Farklı bir sırada deyimleri girerseniz, derleme hatalarıyla sonuçlanabilir.  
   
@@ -49,7 +49,7 @@ Bir Visual Basic programını standart yapı taşlarından oluşturulmuştur. A 
   
 -   [Class Deyimi](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure Deyimi](../../../visual-basic/language-reference/statements/structure-statement.md)  
+-   [Structure Yapısı](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
 -   [Module Deyimi](../../../visual-basic/language-reference/statements/module-statement.md)  
   
@@ -94,6 +94,6 @@ Bir Visual Basic programını standart yapı taşlarından oluşturulmuştur. A 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
-- [Visual Basic adlandırma kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [Visual Basic sınırlamaları](../../../visual-basic/programming-guide/program-structure/limitations.md)
+- [Visual Basic'de Ana Yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic Adlandırma Kuralları](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic Sınırlamaları](../../../visual-basic/programming-guide/program-structure/limitations.md)

@@ -2,12 +2,12 @@
 title: Sunucu tarafı davranışı uygulamak için eylemleri kullanma
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144124"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294944"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Sunucu tarafı davranışı uygulamak için eylemleri kullanma
 
@@ -40,11 +40,11 @@ OData eylemleri bağlı bir OData hizmetinden bir kaynağı görevi gören bir d
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  Bu arabirim, WCF veri hizmeti eylemi yürütmek için bir yol sağlar. IDataServiceInvokable uygularken, siz 3 işlemler için sorumlu olursunuz:  
   
-1.  Yakalama ve potansiyel olarak parametreleri hazırlama  
+1. Yakalama ve potansiyel olarak parametreleri hazırlama  
   
-2.  Invoke() çağrıldığında eylemin gerçekten uygulayan kodu parametreleri gönderme  
+2. Invoke() çağrıldığında eylemin gerçekten uygulayan kodu parametreleri gönderme  
   
-3.  GetResult() kullanılarak alınabilir herhangi depolama Invoke() sonuçlar sağlar. böylece  
+3. GetResult() kullanılarak alınabilir herhangi depolama Invoke() sonuçlar sağlar. böylece  
   
  Parametre belirteçleri geçirilebilir. Veri hizmeti sağlayıcısı (hazırlama) dönüştürmeniz gerekebilir Durum buysa, kaynakları temsil eden belirteçleri ile çalışan gerçek eyleme dağıtmadan önce bu belirteçleri gerçek Kaynakları Yazmayı mümkün olduğundan bu değildir. Parametre sıraya sonra böylelikle eylemi çağrıldığında oluşan değişiklikleri kaynağa kaydedilmiş ve üzerine yazılma disk düzenlenebilir bir durumda olması gerekir.  
   

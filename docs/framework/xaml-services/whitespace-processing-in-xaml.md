@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102238"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294931"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML'de Boşluk İşleme
 XAML dil kuralları önemli boşlukların işlenen, tarafından durum bir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlemci uygulamasında. Bu bölümde, XAML dili kurallar listelenmiştir. Ayrıca tarafından tanımlanan ek boşluk işleme belgeleri [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML işlemci ve seri hale getirme için XAML yazıcı uygulamasıdır.  
@@ -25,15 +25,15 @@ XAML dil kuralları önemli boşlukların işlenen, tarafından durum bir [!INCL
 ## <a name="white-space-normalization"></a>Boşluk normalleştirme  
  Varsayılan olarak, aşağıdaki beyaz boşluk normalleştirme gerçekleşir, bir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlemci işlemleri bir [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] dosyası:  
   
-1.  Doğu Asya karakterler arasında satır başı besleme karakterleri kaldırılır. Bu terim tanımı için bu konunun ilerleyen bölümlerindeki "Doğu Asya karakterler" bölümüne bakın.  
+1. Doğu Asya karakterler arasında satır başı besleme karakterleri kaldırılır. Bu terim tanımı için bu konunun ilerleyen bölümlerindeki "Doğu Asya karakterler" bölümüne bakın.  
   
-2.  Tüm beyaz boşluk karakterleri (boşluk, satır besleme, sekme), boşluk dönüştürülür.  
+2. Tüm beyaz boşluk karakterleri (boşluk, satır besleme, sekme), boşluk dönüştürülür.  
   
-3.  Tüm ardışık boşluk silinir ve bir boşlukla değiştirildi.  
+3. Tüm ardışık boşluk silinir ve bir boşlukla değiştirildi.  
   
-4.  Başlangıç etiketinin hemen ardından bir boşluk silinir.  
+4. Başlangıç etiketinin hemen ardından bir boşluk silinir.  
   
-5.  Bitiş etiketi hemen önce bir boşluk silinir.  
+5. Bitiş etiketi hemen önce bir boşluk silinir.  
   
  "Varsayılan" karşılık gelen varsayılan değeri tarafından belirtilen duruma [XML: Space](xml-space-handling-in-xaml.md) özniteliği.  
   

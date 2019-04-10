@@ -8,52 +8,52 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 43347e3afdf55277ee8969954626d02192a10ec5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295438"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma
 Windows Communication Foundation (WCF) Federasyon Hizmeti oluşturma ana aşağıdaki yordamlardan oluşur:  
   
-1.  Yapılandırma bir <xref:System.ServiceModel.WSFederationHttpBinding> ya da benzer özel bağlama. Uygun bir bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
+1. Yapılandırma bir <xref:System.ServiceModel.WSFederationHttpBinding> ya da benzer özel bağlama. Uygun bir bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
   
-2.  Yapılandırma <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> hizmete sunulan nasıl verilen belirteçleri denetler doğrulanır.  
+2. Yapılandırma <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> hizmete sunulan nasıl verilen belirteçleri denetler doğrulanır.  
   
  Bu konuda, ikinci adım hakkında ayrıntılar sağlar. Federasyon hizmetinin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>Kodda IssuedTokenServiceCredential özelliklerini ayarlamak için  
   
-1.  Kullanım <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> özelliği <xref:System.ServiceModel.Description.ServiceCredentials> sınıfı bir başvuru döndürmek için bir <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> örneği. Özellik erişilen <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> özelliği <xref:System.ServiceModel.ServiceHostBase> sınıfı.  
+1. Kullanım <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> özelliği <xref:System.ServiceModel.Description.ServiceCredentials> sınıfı bir başvuru döndürmek için bir <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> örneği. Özellik erişilen <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> özelliği <xref:System.ServiceModel.ServiceHostBase> sınıfı.  
   
-2.  Ayarlama <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> özelliğini `true` varsa gibi Self verilen belirteçler [!INCLUDE[infocard](../../../../includes/infocard-md.md)] kartlardır doğrulanamaz. Varsayılan, `false` değeridir.  
+2. Ayarlama <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> özelliğini `true` varsa gibi Self verilen belirteçler [!INCLUDE[infocard](../../../../includes/infocard-md.md)] kartlardır doğrulanamaz. Varsayılan, `false` değeridir.  
   
-3.  Tarafından döndürülen bir koleksiyonda doldurmak <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> örneklerini özelliğiyle <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> sınıfı. Her örneği, hizmet belirteçleri kimliğini doğrulayacak bir veren temsil eder.  
+3. Tarafından döndürülen bir koleksiyonda doldurmak <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> örneklerini özelliğiyle <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> sınıfı. Her örneği, hizmet belirteçleri kimliğini doğrulayacak bir veren temsil eder.  
   
     > [!NOTE]
     >  Tarafından döndürülen bir istemci-tarafı koleksiyonda aksine <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> özelliği, bilinen sertifika koleksiyonuna anahtarlanmış koleksiyon değil. Hizmet verilen belirtecin (tabidir, bu konunun ilerleyen bölümlerinde açıklanan daha fazla kısıtlama,) içeren ileti gönderen adresini bakılmaksızın belirtilen sertifikaları belirteçleri kabul eder.  
   
-4.  Ayarlama <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> özelliğini birine <xref:System.ServiceModel.Security.X509CertificateValidationMode> sabit listesi değerleri. Bu, yalnızca kod içinde yapılabilir. Varsayılan, <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A> değeridir.  
+4. Ayarlama <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> özelliğini birine <xref:System.ServiceModel.Security.X509CertificateValidationMode> sabit listesi değerleri. Bu, yalnızca kod içinde yapılabilir. Varsayılan, <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A> değeridir.  
   
-5.  Varsa <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> özelliği <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, ardından özel bir örneği atamak <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfının <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> özelliği.  
+5. Varsa <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> özelliği <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, ardından özel bir örneği atamak <xref:System.IdentityModel.Selectors.X509CertificateValidator> sınıfının <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> özelliği.  
   
-6.  Varsa <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> ayarlanır `ChainTrust` veya `PeerOrChainTrust`ayarlayın <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> özelliğini uygun bir değerden <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> sabit listesi. İptal modu kullanılmaz Not `PeerTrust` veya `Custom` doğrulama modları.  
+6. Varsa <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> ayarlanır `ChainTrust` veya `PeerOrChainTrust`ayarlayın <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> özelliğini uygun bir değerden <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> sabit listesi. İptal modu kullanılmaz Not `PeerTrust` veya `Custom` doğrulama modları.  
   
-7.  Gerekirse, özel bir örneği atamak <xref:System.IdentityModel.Tokens.SamlSerializer> sınıfının <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> özelliği. Özel güvenlik onaylama işaretleme dili (SAML) seri hale getirici, örneğin, özel SAML onaylamalarını ayrıştırmak için gereklidir.  
+7. Gerekirse, özel bir örneği atamak <xref:System.IdentityModel.Tokens.SamlSerializer> sınıfının <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> özelliği. Özel güvenlik onaylama işaretleme dili (SAML) seri hale getirici, örneğin, özel SAML onaylamalarını ayrıştırmak için gereklidir.  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-configuration"></a>Yapılandırmada IssuedTokenServiceCredential özelliklerini ayarlamak için  
   
-1.  Oluşturma bir `<issuedTokenAuthentication>` öğesi alt öğesi olarak bir <`serviceCredentials`> öğesi.  
+1. Oluşturma bir `<issuedTokenAuthentication>` öğesi alt öğesi olarak bir <`serviceCredentials`> öğesi.  
   
-2.  Ayarlama `allowUntrustedRsaIssuers` özniteliği `<issuedTokenAuthentication>` öğesine `true` gibi Self verilen bir belirteç kimlik doğrulaması, bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] kart.  
+2. Ayarlama `allowUntrustedRsaIssuers` özniteliği `<issuedTokenAuthentication>` öğesine `true` gibi Self verilen bir belirteç kimlik doğrulaması, bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] kart.  
   
-3.  Oluşturma bir `<knownCertificates>` öğesi alt öğesi olarak `<issuedTokenAuthentication>` öğesi.  
+3. Oluşturma bir `<knownCertificates>` öğesi alt öğesi olarak `<issuedTokenAuthentication>` öğesi.  
   
-4.  Sıfır veya daha fazla oluşturma `<add>` öğeleri alt öğeleri olarak `<knownCertificates>` öğesini kullanarak sertifikayı bulma belirtin `storeLocation`, `storeName`, `x509FindType`, ve `findValue` öznitelikleri.  
+4. Sıfır veya daha fazla oluşturma `<add>` öğeleri alt öğeleri olarak `<knownCertificates>` öğesini kullanarak sertifikayı bulma belirtin `storeLocation`, `storeName`, `x509FindType`, ve `findValue` öznitelikleri.  
   
-5.  Gerekirse, ayarlayın `samlSerializer` özniteliği <`issuedTokenAuthentication`> özel tür adını öğesine <xref:System.IdentityModel.Tokens.SamlSerializer> sınıfı.  
+5. Gerekirse, ayarlayın `samlSerializer` özniteliği <`issuedTokenAuthentication`> özel tür adını öğesine <xref:System.IdentityModel.Tokens.SamlSerializer> sınıfı.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek özelliklerini ayarlar bir <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> kod.  

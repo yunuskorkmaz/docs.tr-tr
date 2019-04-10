@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 10d9c976a9294bffd85791b222dfededd0fc9256
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295464"
 ---
 # <a name="internet-authentication"></a>İnternet Kimlik Doğrulaması
 <xref:System.Net> Sınıfları istemci kimlik doğrulama mekanizmaları, temel standart Internet kimlik doğrulama yöntemleri de dahil olmak üzere çeşitli destek, Özet, negotiate, NTLM ve Kerberos kimlik doğrulaması, hem de oluşturabileceğiniz özel yöntemler.  
@@ -33,9 +33,9 @@ ms.locfileid: "59155928"
   
  Bir Internet kaynağına kimlik doğrulaması istediğinde <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> yöntemi gönderir <xref:System.Net.WebRequest> için **bulunan** birlikte bir istek için kimlik bilgileri. İsteğin şu işlem göre doğrulanır:  
   
-1.  **Bulunan** çağrıları <xref:System.Net.IAuthenticationModule.Authenticate%2A> yöntemi her kayıtlı sırada kayıtlı kimlik doğrulama modülü. **Bulunan** döndürmez ilk modülü kullanır **null** kimlik doğrulama işlemini gerçekleştirmek için. İşlemin ayrıntılarını ilgili kimlik doğrulama modülü türüne bağlı olarak değişir.  
+1. **Bulunan** çağrıları <xref:System.Net.IAuthenticationModule.Authenticate%2A> yöntemi her kayıtlı sırada kayıtlı kimlik doğrulama modülü. **Bulunan** döndürmez ilk modülü kullanır **null** kimlik doğrulama işlemini gerçekleştirmek için. İşlemin ayrıntılarını ilgili kimlik doğrulama modülü türüne bağlı olarak değişir.  
   
-2.  Kimlik doğrulama işlemi tamamlandıktan sonra kimlik doğrulama modülü döndürür bir <xref:System.Net.Authorization> için **WebRequest** Internet kaynağına erişmek için gereken bilgileri içerir.  
+2. Kimlik doğrulama işlemi tamamlandıktan sonra kimlik doğrulama modülü döndürür bir <xref:System.Net.Authorization> için **WebRequest** Internet kaynağına erişmek için gereken bilgileri içerir.  
   
  Bazı kimlik doğrulama düzeni bir kaynak için bir istek yapmadan kullanıcı kimlik doğrulaması yapabilir. Bir uygulama, bu nedenle sunucu için en az bir gidiş dönüş ortadan kaynak kullanıcıyla preauthenticating tarafından zamandan tasarruf edebilirsiniz. Veya, daha sonra kullanıcıya daha duyarlı olmamız için program başlatma sırasında kimlik doğrulaması gerçekleştirebilirsiniz. Ön kimlik doğrulaması kullanabilir kimlik doğrulama düzenleri <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> özelliğini **true**.  
   
