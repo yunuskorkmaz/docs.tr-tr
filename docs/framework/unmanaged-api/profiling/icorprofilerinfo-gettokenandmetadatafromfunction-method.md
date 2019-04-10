@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb81972a7f52889d10a59cd5cd9ea0e8e1e3e571
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7e7f2e8247d3ba822cc09a98f985926e6b5400c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206895"
 ---
-# <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a><span data-ttu-id="4c454-102">ICorProfilerInfo::GetTokenAndMetadataFromFunction Metodu</span><span class="sxs-lookup"><span data-stu-id="4c454-102">ICorProfilerInfo::GetTokenAndMetadataFromFunction Method</span></span>
-<span data-ttu-id="4c454-103">Meta veri belirteci ve belirteç karşı belirtilen işlev için kullanılabilecek bir meta veri arabirimi örneği alır.</span><span class="sxs-lookup"><span data-stu-id="4c454-103">Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.</span></span>  
+# <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a><span data-ttu-id="ac675-102">ICorProfilerInfo::GetTokenAndMetadataFromFunction Metodu</span><span class="sxs-lookup"><span data-stu-id="ac675-102">ICorProfilerInfo::GetTokenAndMetadataFromFunction Method</span></span>
+<span data-ttu-id="ac675-103">Meta veri belirteci ve belirteç karşı belirtilen işlev için kullanılabilecek bir meta veri arabirimi örneği alır.</span><span class="sxs-lookup"><span data-stu-id="ac675-103">Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c454-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4c454-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac675-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ac675-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTokenAndMetaDataFromFunction(  
@@ -37,27 +37,28 @@ HRESULT GetTokenAndMetaDataFromFunction(
     [out] mdToken    *pToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4c454-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4c454-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ac675-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ac675-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="4c454-106">[in] İşlevi için meta verileri arabirimi ve meta veri belirteci almak için kimliği.</span><span class="sxs-lookup"><span data-stu-id="4c454-106">[in] The ID of the function for which to get the metadata token and metadata interface.</span></span>  
+ <span data-ttu-id="ac675-106">[in] İşlevi için meta verileri arabirimi ve meta veri belirteci almak için kimliği.</span><span class="sxs-lookup"><span data-stu-id="ac675-106">[in] The ID of the function for which to get the metadata token and metadata interface.</span></span>  
   
  `riid`  
- <span data-ttu-id="4c454-107">[in] Başvuru Kimliği örneğini almak meta verileri arabirimi.</span><span class="sxs-lookup"><span data-stu-id="4c454-107">[in] The reference ID of the metadata interface to get the instance of.</span></span>  
+ <span data-ttu-id="ac675-107">[in] Başvuru Kimliği örneğini almak meta verileri arabirimi.</span><span class="sxs-lookup"><span data-stu-id="ac675-107">[in] The reference ID of the metadata interface to get the instance of.</span></span>  
   
  `ppImport`  
- <span data-ttu-id="4c454-108">[out] Belirteci karşı belirtilen işlev için kullanılabilir meta veri arabirimi örneği adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="4c454-108">[out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.</span></span>  
+ <span data-ttu-id="ac675-108">[out] Belirteci karşı belirtilen işlev için kullanılabilir meta veri arabirimi örneği adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ac675-108">[out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.</span></span>  
   
  `pToken`  
- <span data-ttu-id="4c454-109">[out] Belirtilen işlev için meta veri belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="4c454-109">[out] A pointer to the metadata token for the specified function.</span></span>  
+ <span data-ttu-id="ac675-109">[out] Belirtilen işlev için meta veri belirteci için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ac675-109">[out] A pointer to the metadata token for the specified function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4c454-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4c454-110">Requirements</span></span>  
- <span data-ttu-id="4c454-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4c454-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac675-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ac675-110">Requirements</span></span>  
+ <span data-ttu-id="ac675-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac675-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4c454-112">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4c454-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ac675-112">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ac675-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="4c454-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4c454-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ac675-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ac675-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4c454-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c454-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="ac675-114">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="ac675-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4c454-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4c454-115">See also</span></span>
-- [<span data-ttu-id="4c454-116">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4c454-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ac675-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ac675-115">See also</span></span>
+
+- [<span data-ttu-id="ac675-116">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ac675-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -3,25 +3,25 @@ title: Çapraz doğrulama - ML.NET kullanarak makine öğrenme modeli eğitme
 description: Bir machine learning modelinin tahminler elde etmek için doğruluğu büyük bir düzeyde olmasını ML.NET ile çapraz doğrulama kullanarak modeli eğitmek nasıl keşfedin
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9508835e613cf4f78d7f95a25cc98c3c3aade7ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676544"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231324"
 ---
-# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="88fe7-103">Çapraz doğrulama - ML.NET kullanarak makine öğrenme modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="88fe7-103">Train a machine learning model using cross-validation - ML.NET</span></span>
+# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="ee14b-103">Çapraz doğrulama - ML.NET kullanarak makine öğrenme modeli eğitme</span><span class="sxs-lookup"><span data-stu-id="ee14b-103">Train a machine learning model using cross-validation - ML.NET</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="88fe7-104">Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="88fe7-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="88fe7-105">Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="88fe7-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
+> <span data-ttu-id="ee14b-104">Bu konu şu anda Önizleme aşamasında olan ML.NET ifade eder ve malzeme değişiklik gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="ee14b-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="ee14b-105">Daha fazla bilgi için ziyaret [ML.NET giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="ee14b-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="88fe7-106">Bu nasıl yapılır ve ilgili örnek şu anda kullandığınızdan **ML.NET sürüm 0.10**.</span><span class="sxs-lookup"><span data-stu-id="88fe7-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="88fe7-107">Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning GitHub deposunu](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="88fe7-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
+<span data-ttu-id="ee14b-106">Bu nasıl yapılır ve ilgili örnek şu anda kullandığınızdan **ML.NET sürüm 0.10**.</span><span class="sxs-lookup"><span data-stu-id="ee14b-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="ee14b-107">Daha fazla bilgi için bkz: adresindeki sürüm notlarını [dotnet/machinelearning GitHub deposunu](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="ee14b-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="88fe7-108">[Çapraz doğrulama](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) ML uygulamalar için kullanışlı bir tekniktir.</span><span class="sxs-lookup"><span data-stu-id="88fe7-108">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="88fe7-109">Bir çalışma alanından diğerine model kalitesi varyansını tahmin etmenize yardımcı olur ve ayrıca değerlendirme için ayarlanmış ayrı bir test ayıklanacak ihtiyacını ortadan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="88fe7-109">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
+<span data-ttu-id="ee14b-108">[Çapraz doğrulama](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) ML uygulamalar için kullanışlı bir tekniktir.</span><span class="sxs-lookup"><span data-stu-id="ee14b-108">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="ee14b-109">Bir çalışma alanından diğerine model kalitesi varyansını tahmin etmenize yardımcı olur ve ayrıca değerlendirme için ayarlanmış ayrı bir test ayıklanacak ihtiyacını ortadan kaldırır.</span><span class="sxs-lookup"><span data-stu-id="ee14b-109">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
 
-<span data-ttu-id="88fe7-110">ML.NET otomatik olarak (tüm ön işleme bulunduğu sürece bir öğrenme işlem hattında) özellik kazandırma sayesinde doğru geçerlidir sonra 'stratification sütun' kavramı ilgili örnekler ayrılmış yoksa emin olmak için kullanın.</span><span class="sxs-lookup"><span data-stu-id="88fe7-110">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
+<span data-ttu-id="ee14b-110">ML.NET otomatik olarak (tüm ön işleme bulunduğu sürece bir öğrenme işlem hattında) özellik kazandırma sayesinde doğru geçerlidir sonra 'stratification sütun' kavramı ilgili örnekler ayrılmış yoksa emin olmak için kullanın.</span><span class="sxs-lookup"><span data-stu-id="ee14b-110">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
 
-<span data-ttu-id="88fe7-111">Rastgele 90/10 train-test bölme ve bir 5-fold çapraz doğrulama kullanarak Iris veri kümesinde bir eğitim örnek aşağıdadır:</span><span class="sxs-lookup"><span data-stu-id="88fe7-111">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
+<span data-ttu-id="ee14b-111">Rastgele 90/10 train-test bölme ve bir 5-fold çapraz doğrulama kullanarak Iris veri kümesinde bir eğitim örnek aşağıdadır:</span><span class="sxs-lookup"><span data-stu-id="ee14b-111">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
@@ -46,7 +46,6 @@ var reader = mlContext.Data.CreateTextLoader(
     // First line of the file is a header, not a data row.
     hasHeader: true
 );
-
 
 // Read the data.
 var data = reader.Read(dataPath);

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c88b56f6edb2ec16d8cf46659224ae38cf7a9b14
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 312f133c263becfd815f1b4ad48dff4892963aaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479707"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227859"
 ---
-# <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a><span data-ttu-id="0b0de-102">ICorProfilerCallback::UnmanagedToManagedTransition Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0b0de-102">ICorProfilerCallback::UnmanagedToManagedTransition Method</span></span>
-<span data-ttu-id="0b0de-103">Profil Oluşturucu, yönetilmeyen koddan yönetilen koda geçiş oluştuğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="0b0de-103">Notifies the profiler that a transition from unmanaged code to managed code has occurred.</span></span>  
+# <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a><span data-ttu-id="43292-102">ICorProfilerCallback::UnmanagedToManagedTransition Yöntemi</span><span class="sxs-lookup"><span data-stu-id="43292-102">ICorProfilerCallback::UnmanagedToManagedTransition Method</span></span>
+<span data-ttu-id="43292-103">Profil Oluşturucu, yönetilmeyen koddan yönetilen koda geçiş oluştuğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="43292-103">Notifies the profiler that a transition from unmanaged code to managed code has occurred.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b0de-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0b0de-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43292-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="43292-104">Syntax</span></span>  
   
 ```  
 HRESULT UnmanagedToManagedTransition(  
@@ -35,29 +35,30 @@ HRESULT UnmanagedToManagedTransition(
     [in] COR_PRF_TRANSITION_REASON reason);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0b0de-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0b0de-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="43292-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="43292-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="0b0de-106">[in] Aranan işlev kimliği.</span><span class="sxs-lookup"><span data-stu-id="0b0de-106">[in] The ID of the function that is being called.</span></span>  
+ <span data-ttu-id="43292-106">[in] Aranan işlev kimliği.</span><span class="sxs-lookup"><span data-stu-id="43292-106">[in] The ID of the function that is being called.</span></span>  
   
  `reason`  
- <span data-ttu-id="0b0de-107">[in] Değerini [cor_prf_transıtıon_reason](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) geçişi, yönetilmeyen koddan yönetilen koda bir çağrı nedeniyle veya yönetilmeyen bir işlev tarafından yönetilen bir adlı geri döndürme nedeniyle oluşup oluşmadığını belirten sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="0b0de-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.</span></span>  
+ <span data-ttu-id="43292-107">[in] Değerini [cor_prf_transıtıon_reason](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) geçişi, yönetilmeyen koddan yönetilen koda bir çağrı nedeniyle veya yönetilmeyen bir işlev tarafından yönetilen bir adlı geri döndürme nedeniyle oluşup oluşmadığını belirten sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="43292-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0b0de-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0b0de-108">Remarks</span></span>  
- <span data-ttu-id="0b0de-109">Varsa değerini `reason` COR_PRF_TRANSITION_RETURN olduğu ve `functionId` null olmayan işlev kimliği yönetilmeyen işleve olan ve hiçbir zaman just-in-time (JIT) derleyici kullanarak derlenen olan.</span><span class="sxs-lookup"><span data-stu-id="0b0de-109">If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="0b0de-110">Yönetilmeyen işlevleri kendileriyle ilişkili bir ad ve bazı meta verileri gibi bazı temel bilgileri var.</span><span class="sxs-lookup"><span data-stu-id="0b0de-110">Unmanaged functions have some basic information associated with them, such as a name and some metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="43292-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="43292-108">Remarks</span></span>  
+ <span data-ttu-id="43292-109">Varsa değerini `reason` COR_PRF_TRANSITION_RETURN olduğu ve `functionId` null olmayan işlev kimliği yönetilmeyen işleve olan ve hiçbir zaman just-in-time (JIT) derleyici kullanarak derlenen olan.</span><span class="sxs-lookup"><span data-stu-id="43292-109">If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="43292-110">Yönetilmeyen işlevleri kendileriyle ilişkili bir ad ve bazı meta verileri gibi bazı temel bilgileri var.</span><span class="sxs-lookup"><span data-stu-id="43292-110">Unmanaged functions have some basic information associated with them, such as a name and some metadata.</span></span>  
   
- <span data-ttu-id="0b0de-111">Varsa değerini `reason` COR_PRF_TRANSITION_CALL, olan (diğer bir deyişle, yönetilen işlevi) çağrılan işlev henüz JIT olarak derlenmiş ayarlanmamış olduğunu mümkün olabilir.</span><span class="sxs-lookup"><span data-stu-id="0b0de-111">If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.</span></span>  
+ <span data-ttu-id="43292-111">Varsa değerini `reason` COR_PRF_TRANSITION_CALL, olan (diğer bir deyişle, yönetilen işlevi) çağrılan işlev henüz JIT olarak derlenmiş ayarlanmamış olduğunu mümkün olabilir.</span><span class="sxs-lookup"><span data-stu-id="43292-111">If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0b0de-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0b0de-112">Requirements</span></span>  
- <span data-ttu-id="0b0de-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0b0de-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43292-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="43292-112">Requirements</span></span>  
+ <span data-ttu-id="43292-113">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43292-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b0de-114">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0b0de-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="43292-114">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="43292-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0b0de-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0b0de-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="43292-115">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="43292-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0b0de-116">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b0de-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="43292-116">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="43292-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0b0de-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0b0de-117">See also</span></span>
-- [<span data-ttu-id="0b0de-118">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0b0de-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="0b0de-119">ManagedToUnmanagedTransition Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0b0de-119">ManagedToUnmanagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)
-- [<span data-ttu-id="0b0de-120">C++'ta Açık PInvoke Kullanma (DllImport Özniteliği)</span><span class="sxs-lookup"><span data-stu-id="0b0de-120">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
-- [<span data-ttu-id="0b0de-121">C++ Birlikte Çalışabilirliği Kullanma (Örtük PInvoke)</span><span class="sxs-lookup"><span data-stu-id="0b0de-121">Using C++ Interop (Implicit PInvoke)</span></span>](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)
+## <a name="see-also"></a><span data-ttu-id="43292-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="43292-117">See also</span></span>
+
+- [<span data-ttu-id="43292-118">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="43292-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="43292-119">ManagedToUnmanagedTransition Yöntemi</span><span class="sxs-lookup"><span data-stu-id="43292-119">ManagedToUnmanagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)
+- [<span data-ttu-id="43292-120">C++'ta Açık PInvoke Kullanma (DllImport Özniteliği)</span><span class="sxs-lookup"><span data-stu-id="43292-120">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
+- [<span data-ttu-id="43292-121">C++ Birlikte Çalışabilirliği Kullanma (Örtük PInvoke)</span><span class="sxs-lookup"><span data-stu-id="43292-121">Using C++ Interop (Implicit PInvoke)</span></span>](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)

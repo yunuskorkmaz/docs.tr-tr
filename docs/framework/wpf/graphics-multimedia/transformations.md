@@ -16,22 +16,23 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227241"
 ---
-# <a name="transformations"></a><span data-ttu-id="7012c-102">Dönüşümler</span><span class="sxs-lookup"><span data-stu-id="7012c-102">Transformations</span></span>
-<span data-ttu-id="7012c-103">Döndürme, ölçeklendirme, çevirme veya eğme için kullanılan dönüşümler <xref:System.Windows.FrameworkElement> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="7012c-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="8c57c-102">Dönüşümler</span><span class="sxs-lookup"><span data-stu-id="8c57c-102">Transformations</span></span>
+<span data-ttu-id="8c57c-103">Döndürme, ölçeklendirme, çevirme veya eğme için kullanılan dönüşümler <xref:System.Windows.FrameworkElement> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="8c57c-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7012c-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="7012c-104">In This Section</span></span>  
- [<span data-ttu-id="7012c-105">Dönüşümlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7012c-105">Transforms Overview</span></span>](transforms-overview.md)  
- [<span data-ttu-id="7012c-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="7012c-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8c57c-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="8c57c-104">In This Section</span></span>  
+ [<span data-ttu-id="8c57c-105">Dönüşümlere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8c57c-105">Transforms Overview</span></span>](transforms-overview.md)  
+ [<span data-ttu-id="8c57c-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="8c57c-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="7012c-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7012c-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8c57c-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8c57c-107">See also</span></span>
+
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="7012c-108">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="7012c-108">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="7012c-109">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7012c-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="7012c-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="7012c-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="8c57c-108">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="8c57c-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="8c57c-109">WPF Grafik İşlemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="8c57c-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="8c57c-110">Düzen</span><span class="sxs-lookup"><span data-stu-id="8c57c-110">Layout</span></span>](../advanced/layout.md)
