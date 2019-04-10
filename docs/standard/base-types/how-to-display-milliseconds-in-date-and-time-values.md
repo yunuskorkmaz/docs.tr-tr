@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Görüntü milisaniye cinsinden tarih ve saat değerleri'
+title: 'Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3678c687817c4c93508d95c3d4b7453eadee32e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314938"
 ---
-# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Nasıl yapılır: Görüntü milisaniye cinsinden tarih ve saat değerleri
+# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme
 <xref:System.DateTime.ToString?displayProperty=nameWithType> gibi varsayılan tarih ve saat biçimlendirme yöntemleri, bir zaman değerinin saatlerini, dakikalarını ve saniyelerini içerir ancak milisaniye bileşenini içermez. Bu konu, biçimlendirilen tarih ve saat dizelerine bir tarihin ve saatin milisaniye bileşeninin nasıl eklendiğini gösterir.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>Bir DateTime değerinin milisaniye bileşenini görüntülemek için  
   
-1.  Eğer bir tarihin dize gösterimiyle çalışıyorsanız, statik <xref:System.DateTime> veya <xref:System.DateTimeOffset> yöntemini kullanarak bunu bir <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> veya bir <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType> değerine dönüştürün.  
+1. Eğer bir tarihin dize gösterimiyle çalışıyorsanız, statik <xref:System.DateTime> veya <xref:System.DateTimeOffset> yöntemini kullanarak bunu bir <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> veya bir <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType> değerine dönüştürün.  
   
-2.  Bir saatin milisaniye bileşeninin dize gösterimini ayıklamak için, tarih ve saat değerinin <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%2A> yöntemini çağırın ve `fff` veya `FFF` özel biçim desenini tek başına veya başka özel biçim tanımlayıcılarıyla birlikte `format` parametresi olarak geçirin.  
+2. Bir saatin milisaniye bileşeninin dize gösterimini ayıklamak için, tarih ve saat değerinin <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%2A> yöntemini çağırın ve `fff` veya `FFF` özel biçim desenini tek başına veya başka özel biçim tanımlayıcılarıyla birlikte `format` parametresi olarak geçirin.  
   
 ## <a name="example"></a>Örnek  
  Bu örnek, her ikisi de tek başına olan ve daha uzun bir tarih ve saat dizesine eklenen bir <xref:System.DateTime> ve bir <xref:System.DateTimeOffset> değerine ait milisaniye bileşenini konsolda görüntüler.  

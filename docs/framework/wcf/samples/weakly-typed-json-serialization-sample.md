@@ -2,12 +2,12 @@
 title: Zayıf yazılmış JSON Seri Hale Getirme Örneği
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 13c51c416c6efad9a168999b0751cb9c1d88baba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205062"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303693"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Zayıf yazılmış JSON Seri Hale Getirme Örneği
 Verilen kablo biçimini veya kablo biçimini geri bir kullanıcı tanımlı türe seri durumdan çıkarılırken bir kullanıcı tanımlı türe serileştirilirken verilen kullanıcı tanımlı tür hem hizmet hem de istemcinin kullanılabilir olması gerekir. Genellikle bunu gerçekleştirmek için <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu kullanıcı tarafından tanımlanan türlerine uygulandığında ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik üyeleri için uygulanır. Bu mekanizma da JavaScript nesne gösterimi (JSON) nesneler ile çalışma konusunda açıklandığı gibi uygulanır [nasıl yapılır: JSON verileri seri hale getrime ve](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -125,11 +125,11 @@ My favorite bands are Band ABC and Band XYZ.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  ' % S'çözüm WeaklyTypedJson.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. ' % S'çözüm WeaklyTypedJson.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Çözümü çalıştırın.  
+3. Çözümü çalıştırın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

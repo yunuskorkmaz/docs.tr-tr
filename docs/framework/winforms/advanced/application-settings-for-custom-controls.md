@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169747"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317304"
 ---
 # <a name="application-settings-for-custom-controls"></a>Özel Denetimler için Uygulama Ayarları
 Özel denetimlerinizi denetimleri üçüncü taraf uygulamalarda barındırıldığında uygulama ayarlarını kalıcı yapma olanağı vermek için belirli görevleri tamamlamanız gerekir.  
@@ -22,9 +22,9 @@ ms.locfileid: "59169747"
   
  Ayrıca, aşağıdaki gibi Visual Studio tasarım zamanı ortamlarda düzgün çalışması özel denetimler için uygulama ayarları için sırayla uygulamalıdır:  
   
-1.  Bir özel uygulama ayarları sınıf alan bir Oluşturucu ile bir <xref:System.ComponentModel.IComponent> tek bir parametre olarak. Bu sınıfı kaydedin ve tüm uygulama ayarlarınızı yüklemek için kullanın. Bu sınıfın yeni bir örneğini oluşturduğunuzda, oluşturucu kullanılarak özel denetiminizi geçirin.  
+1. Bir özel uygulama ayarları sınıf alan bir Oluşturucu ile bir <xref:System.ComponentModel.IComponent> tek bir parametre olarak. Bu sınıfı kaydedin ve tüm uygulama ayarlarınızı yüklemek için kullanın. Bu sınıfın yeni bir örneğini oluşturduğunuzda, oluşturucu kullanılarak özel denetiminizi geçirin.  
   
-2.  Denetim oluşturulan ve bir form üzerinde olduğu gibi formun yerleştirilir. sonra bu özel ayarları sınıfı oluşturma <xref:System.Windows.Forms.Form.Load> olay işleyicisi.  
+2. Denetim oluşturulan ve bir form üzerinde olduğu gibi formun yerleştirilir. sonra bu özel ayarları sınıfı oluşturma <xref:System.Windows.Forms.Form.Load> olay işleyicisi.  
   
  Özel ayarlar sınıfı oluşturma ile ilgili yönergeler için bkz: [nasıl yapılır: Uygulama ayarları oluşturma](how-to-create-application-settings.md).  
   

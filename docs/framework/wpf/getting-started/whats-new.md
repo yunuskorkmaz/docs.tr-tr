@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227489"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325832"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF Sürüm 4.5'te Yenilikler
 <a name="introduction"></a> Bu konu, yeni ve geliştirilmiş özellikleri hakkında bilgi içerir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sürüm 4.5.  
@@ -56,9 +56,9 @@ ms.locfileid: "59227489"
 <a name="VirtualizingPanel"></a>   
 ## <a name="new-features-for-the-virtualizingpanel"></a>VirtualizingPanel için yeni özellikler  
   
-1.  Belirtebileceğiniz olup olmadığını bir <xref:System.Windows.Controls.VirtualizingPanel>, gibi <xref:System.Windows.Controls.VirtualizingStackPanel>, kısmi öğeleri kullanarak görüntüler <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ekli özellik. Varsa <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ayarlanır <xref:System.Windows.Controls.ScrollUnit.Item>, <xref:System.Windows.Controls.VirtualizingPanel> yalnızca tamamen görünür olan öğeleri görüntüler. Varsa <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ayarlanır <xref:System.Windows.Controls.ScrollUnit.Pixel>, <xref:System.Windows.Controls.VirtualizingPanel> kısmen görünür öğeleri görüntüleyebilirsiniz.  
+1. Belirtebileceğiniz olup olmadığını bir <xref:System.Windows.Controls.VirtualizingPanel>, gibi <xref:System.Windows.Controls.VirtualizingStackPanel>, kısmi öğeleri kullanarak görüntüler <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ekli özellik. Varsa <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ayarlanır <xref:System.Windows.Controls.ScrollUnit.Item>, <xref:System.Windows.Controls.VirtualizingPanel> yalnızca tamamen görünür olan öğeleri görüntüler. Varsa <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ayarlanır <xref:System.Windows.Controls.ScrollUnit.Pixel>, <xref:System.Windows.Controls.VirtualizingPanel> kısmen görünür öğeleri görüntüleyebilirsiniz.  
   
-2.  Önce ve sonra Görünüm penceresinin önbellek boyutu belirtebilirsiniz, <xref:System.Windows.Controls.VirtualizingPanel> kullanarak sanallaştırma <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> ekli özellik.  Önbellek alanı öğeleri olmayan sanallaştırılır görünüm penceresinin altında veya üstünde miktarıdır.  Görünüme kaydırılan gibi kullanıcı Arabirimi öğeleri oluşturmaktan kaçınmak için bir önbellek kullanarak performansı artırabilirsiniz. Böylece uygulama işlemi sırasında yanıt vermemeye değil daha düşük bir öncelikte önbellek doldurulur. <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> Özelliği tarafından kullanılan ölçü belirler <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>.  
+2. Önce ve sonra Görünüm penceresinin önbellek boyutu belirtebilirsiniz, <xref:System.Windows.Controls.VirtualizingPanel> kullanarak sanallaştırma <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> ekli özellik.  Önbellek alanı öğeleri olmayan sanallaştırılır görünüm penceresinin altında veya üstünde miktarıdır.  Görünüme kaydırılan gibi kullanıcı Arabirimi öğeleri oluşturmaktan kaçınmak için bir önbellek kullanarak performansı artırabilirsiniz. Böylece uygulama işlemi sırasında yanıt vermemeye değil daha düşük bir öncelikte önbellek doldurulur. <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> Özelliği tarafından kullanılan ölçü belirler <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>.  
   
 <a name="static_properties"></a>   
 ## <a name="binding-to-static-properties"></a>Statik özellikler bağlama  
@@ -86,11 +86,11 @@ ms.locfileid: "59227489"
 ## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>Bu uygulama ICustomTypeProvider türlerine bağlama  
  WPF uygulayan nesneler için veri bağlamayı destekleyen <xref:System.Reflection.ICustomTypeProvider>, özel türleri olarak da bilinir.  Özel türler aşağıdaki durumlarda kullanabilirsiniz.  
   
-1.  Olarak bir <xref:System.Windows.PropertyPath> Veri bağlamada. Örneğin, <xref:System.Windows.Data.Binding.Path%2A> özelliği bir <xref:System.Windows.Data.Binding> özel tür bir özelliğine başvurabilir.  
+1. Olarak bir <xref:System.Windows.PropertyPath> Veri bağlamada. Örneğin, <xref:System.Windows.Data.Binding.Path%2A> özelliği bir <xref:System.Windows.Data.Binding> özel tür bir özelliğine başvurabilir.  
   
-2.  Değeri olarak <xref:System.Windows.DataTemplate.DataType%2A> özelliği.  
+2. Değeri olarak <xref:System.Windows.DataTemplate.DataType%2A> özelliği.  
   
-3.  Otomatik oluşturulan sütunları belirleyen bir tür olarak bir <xref:System.Windows.Controls.DataGrid>.  
+3. Otomatik oluşturulan sütunları belirleyen bir tür olarak bir <xref:System.Windows.Controls.DataGrid>.  
   
 <a name="binding_state"></a>   
 ## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>Bir bağlama ifadesinden veri bağlama bilgileri alınıyor  

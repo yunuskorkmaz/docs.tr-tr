@@ -2,12 +2,12 @@
 title: Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307627"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
 Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik grupları için.  AlwaysOn Kullanılabilirlik grupları özelliği SQL Server 2012'ye eklendi. AlwaysOn Kullanılabilirlik grupları hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
@@ -27,9 +27,9 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
   
  Bu bağlantı dizesi anahtar sözcükler ile programlı bir şekilde değiştirebilirsiniz:  
   
-1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
+1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
 >  Ayarı `MultiSubnetFailover` için `true` ile gerekli değildir [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] veya sonraki sürümler.
@@ -59,9 +59,9 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
   
  Bir ikincil çoğaltma konumuna bağlanma, salt okunur yönlendirme etkin değilse, aşağıdaki durumlarda başarısız olur:  
   
-1.  İkincil çoğaltma konumu bağlantılarını kabul edecek şekilde yapılandırılmamışsa.  
+1. İkincil çoğaltma konumu bağlantılarını kabul edecek şekilde yapılandırılmamışsa.  
   
-2.  Bir uygulama kullanıyorsa `ApplicationIntent=ReadWrite` (aşağıda açıklanmıştır) ve ikincil çoğaltma konumu salt okunur erişim için yapılandırılır.  
+2. Bir uygulama kullanıyorsa `ApplicationIntent=ReadWrite` (aşağıda açıklanmıştır) ve ikincil çoğaltma konumu salt okunur erişim için yapılandırılır.  
   
  <xref:System.Data.SqlClient.SqlDependency> salt okunur ikincil çoğaltmalarda desteklenmiyor.  
   
@@ -86,11 +86,11 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
 ## <a name="read-only-routing"></a>Salt okunur yönlendirme  
  Salt okunur yönlendirme okuma yalnızca bir veritabanı çoğaltmasını kullanılabilirliğini sağlayan bir özelliktir. Salt okunur yönlendirme etkinleştirmek için:  
   
-1.  Bir Always On kullanılabilirlik grubu kullanılabilirlik grubu dinleyicisi için bağlanmanız gerekir.  
+1. Bir Always On kullanılabilirlik grubu kullanılabilirlik grubu dinleyicisi için bağlanmanız gerekir.  
   
-2.  `ApplicationIntent` Bağlantı dizesi anahtar kelimesi ayarlanmalıdır `ReadOnly`.  
+2. `ApplicationIntent` Bağlantı dizesi anahtar kelimesi ayarlanmalıdır `ReadOnly`.  
   
-3.  Kullanılabilirlik grubu salt okunur yönlendirme etkinleştirmek için veritabanı yöneticisi tarafından yapılandırılmış olması gerekir.  
+3. Kullanılabilirlik grubu salt okunur yönlendirme etkinleştirmek için veritabanı yöneticisi tarafından yapılandırılmış olması gerekir.  
   
  Salt okunur yönlendirme kullanarak birden çok bağlantı tümü aynı salt okunur çoğaltmaya bağlanmaya mümkündür. Salt okunur kopyaya farklı istemci bağlantıları veritabanı eşitleme değişiklikleri veya sunucunun yönlendirme yapılandırması değişiklikleri neden olabilir. Tüm salt okunur istekler aynı salt okunur kopyaya bağlanmalarını sağlamak için bir kullanılabilirlik grubu dinleyicisi için geçmeyin `Data Source` bağlantı dizesi anahtar sözcüğü. Bunun yerine, salt okunur örneğinin adını belirtin.  
   

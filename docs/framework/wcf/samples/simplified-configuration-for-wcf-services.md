@@ -2,12 +2,12 @@
 title: WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 50693062b201c9cf2e0d87f796f3e935e1fd8e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220727"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304265"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 Bu örnek nasıl uygulanacağını ve tipik hizmeti ve Windows Communication Foundation (WCF) kullanarak istemci yapılandırma gösterir. Bu örnek diğer tüm temel teknoloji örnekleri temelini oluşturur.  
@@ -57,11 +57,11 @@ Bu örnek nasıl uygulanacağını ve tipik hizmeti ve Windows Communication Fou
   
 ### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Aşağıdaki adımları izleyerek örneği çalıştırın:  
+3. Aşağıdaki adımları izleyerek örneği çalıştırın:  
   
     1.  Sağ tıklayın **hizmet** seçin ve proje **başlangıç projesi olarak ayarla**, tuşuna **Ctrl + F5**.  
   

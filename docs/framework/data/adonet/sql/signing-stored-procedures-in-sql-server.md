@@ -2,12 +2,12 @@
 title: SQL Server'da Saklı Yordam İmzalama
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094625"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313924"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server'da Saklı Yordam İmzalama
  İmzalayan özel anahtarla şifrelenmiş veri Özet bir dijital imzadır. Özel anahtar, dijital imza, taşıyıcı veya sahibi benzersiz olmasını sağlar. Saklı yordamları, işlevleri (satır içi tablo değerli işlevler dışında) tetikleyiciler ve derlemeleri oturum açabilirsiniz.  
@@ -23,25 +23,25 @@ ms.locfileid: "59094625"
   
  Bir modül oturum açarken kullanılan iki gereken adımlar vardır:  
   
-1.  Transact-SQL kullanarak bir sertifika oluşturmak `CREATE CERTIFICATE [certificateName]` deyimi. Bu deyim bir başlangıç ve bitiş tarihi ve bir parola ayarlamak için birkaç seçenek vardır. Varsayılan sona erme tarihi bir yıldır.  
+1. Transact-SQL kullanarak bir sertifika oluşturmak `CREATE CERTIFICATE [certificateName]` deyimi. Bu deyim bir başlangıç ve bitiş tarihi ve bir parola ayarlamak için birkaç seçenek vardır. Varsayılan sona erme tarihi bir yıldır.  
   
-1.  Yordamı Transact-SQL kullanarak bir sertifika ile oturum `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` deyimi.  
+1. Yordamı Transact-SQL kullanarak bir sertifika ile oturum `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` deyimi.  
 
 Modül imzalandıktan sonra sertifika ile ilişkilendirilmesi gereken ek izinler tutmak için oluşturulacak bir veya daha fazla sorumluları gerekir.  
 
 Ek veritabanı düzeyi izinler modülü ihtiyacı varsa:  
   
-1.  Transact-SQL kullanarak bu sertifikayla ilişkili bir veritabanı kullanıcısı oluşturun `CREATE USER [userName] FROM CERTIFICATE [certificateName]` deyimi. Bu kullanıcı, yalnızca veritabanında var ve bir oturum açma, o aynı sertifikadan oluşturuldu sürece oturum açma kimliğiyle ilişkili değil.  
+1. Transact-SQL kullanarak bu sertifikayla ilişkili bir veritabanı kullanıcısı oluşturun `CREATE USER [userName] FROM CERTIFICATE [certificateName]` deyimi. Bu kullanıcı, yalnızca veritabanında var ve bir oturum açma, o aynı sertifikadan oluşturuldu sürece oturum açma kimliğiyle ilişkili değil.  
   
-1.  Sertifika kullanıcı gerekli veritabanı düzeyinde izinleri verin.  
+1. Sertifika kullanıcı gerekli veritabanı düzeyinde izinleri verin.  
   
 Ek sunucu düzeyi izinleri modülü ihtiyacı varsa:  
   
-1.  Sertifikayı kopyalayın `master` veritabanı.  
+1. Sertifikayı kopyalayın `master` veritabanı.  
  
-1.  Transact-SQL kullanarak bu sertifikayla ilişkili bir oturum açma oluşturma `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` deyimi.  
+1. Transact-SQL kullanarak bu sertifikayla ilişkili bir oturum açma oluşturma `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` deyimi.  
   
-1.  Sertifika oturum açma, gerekli sunucu düzeyi izinleri verin.  
+1. Sertifika oturum açma, gerekli sunucu düzeyi izinleri verin.  
   
 > [!NOTE]  
 >  Bir sertifika verme deyimi kullanarak iptal edilen izinleri olan bir kullanıcıya verilemiyor. REDDET her zaman izin ver sertifika kullanıcıya verilen izinleri devralmasını çağıran önleme önceliklidir.  

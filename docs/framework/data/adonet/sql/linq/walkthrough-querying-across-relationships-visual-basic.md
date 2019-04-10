@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213356"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314665"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>İzlenecek yol: İlişkilerde Sorgulama (Visual Basic)
 Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ilişkilendirmeleri* veritabanında yabancı anahtar ilişkileri göstermek için.  
@@ -53,15 +53,15 @@ Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../..
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Erişim için müşteri nesnesi kullanarak nesneleri  
   
-1.  Değiştirme `Sub Main` yazarak veya yönteme aşağıdaki kodu kopyalayıp yapıştırmak yöntemi:  
+1. Değiştirme `Sub Main` yazarak veya yönteme aşağıdaki kodu kopyalayıp yapıştırmak yöntemi:  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2.  Uygulamanızda hata ayıklamak için F5 tuşuna basın.  
+2. Uygulamanızda hata ayıklamak için F5 tuşuna basın.  
   
      İleti kutusunda iki ad görünür ve konsol penceresinde oluşturulan SQL kodu gösterir.  
   
-3.  Hata ayıklamayı durdurmak için ileti kutusunu kapatın.  
+3. Hata ayıklamayı durdurmak için ileti kutusunu kapatın.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Veritabanınızın kesin türü belirtilmiş bir görünüm oluşturma  
  Bir veritabanınız kesin türü belirtilmiş görünüm ile başlamak kolaydır. Kesin yazarak <xref:System.Data.Linq.DataContext> nesne çağrıları gerektirmeyen <xref:System.Data.Linq.DataContext.GetTable%2A>. Kesin olarak belirlenmiş kullandığınızda tüm sorgularınızdaki kesin türü belirtilmiş tabloları kullanabilir <xref:System.Data.Linq.DataContext> nesne.  
@@ -70,23 +70,23 @@ Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../..
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>Kesin DataContext nesne yazmak için  
   
-1.  Yukarıdaki aşağıdaki kodu ekleyin `Customer` sınıfının bildirimi.  
+1. Yukarıdaki aşağıdaki kodu ekleyin `Customer` sınıfının bildirimi.  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2.  Değiştirme `Sub Main` kesin olarak belirlenmiş kullanılacak <xref:System.Data.Linq.DataContext> gibi:  
+2. Değiştirme `Sub Main` kesin olarak belirlenmiş kullanılacak <xref:System.Data.Linq.DataContext> gibi:  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3.  Uygulamanızda hata ayıklamak için F5 tuşuna basın.  
+3. Uygulamanızda hata ayıklamak için F5 tuşuna basın.  
   
      Konsol penceresi çıktısı şöyledir:  
   
      `ID=WHITC`  
   
-4.  Konsol penceresinde uygulamayı kapatmak için Enter tuşuna basın.  
+4. Konsol penceresinde uygulamayı kapatmak için Enter tuşuna basın.  
   
-5.  Üzerinde **dosya** menüsünde tıklatın **Tümünü Kaydet** bu uygulamayı kaydetmek istiyorsanız.  
+5. Üzerinde **dosya** menüsünde tıklatın **Tümünü Kaydet** bu uygulamayı kaydetmek istiyorsanız.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Sonraki izlenecek ([izlenecek yol: Verileri düzenleme (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) verileri işlemek nasıl gösterir. Bu izlenecek yol, iki izlenecek yollar zaten tamamladığınız bu dizide Kaydet gerektirmez.  

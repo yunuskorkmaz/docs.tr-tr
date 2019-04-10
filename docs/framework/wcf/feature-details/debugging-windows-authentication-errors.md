@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228274"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299455"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
 Windows kimlik doğrulaması, bir güvenlik mekanizması olarak kullanırken, Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI), güvenlik işlemlerini işler. SSPI katmanında güvenlik hatası meydana geldiğinde, Windows Communication Foundation (WCF) tarafından takip edilir. Bu konu, çerçeve ve hataları tanılamak üzere soruları sağlar.  
@@ -25,11 +25,11 @@ Windows kimlik doğrulaması, bir güvenlik mekanizması olarak kullanırken, G�
 ## <a name="debugging-methodology"></a>Hata ayıklama yöntemi  
  Temel yöntem aşağıdaki gibidir:  
   
-1.  Windows kimlik doğrulaması kullandığınızı belirleyin. Başka bir düzen kullanıyorsanız, bu konuda geçerli değildir.  
+1. Windows kimlik doğrulaması kullandığınızı belirleyin. Başka bir düzen kullanıyorsanız, bu konuda geçerli değildir.  
   
-2.  Windows kimlik doğrulaması kullanıyorsanız eminseniz, WCF yapılandırma doğrudan Kerberos veya anlaşma kullanıp kullanmadığını belirleyin.  
+2. Windows kimlik doğrulaması kullanıyorsanız eminseniz, WCF yapılandırma doğrudan Kerberos veya anlaşma kullanıp kullanmadığını belirleyin.  
   
-3.  Yapılandırmanızı NTLM ve Kerberos protokolünü kullanıp kullanmadığını belirledikten sonra hata iletileri doğru bağlamda anlayabilirsiniz.  
+3. Yapılandırmanızı NTLM ve Kerberos protokolünü kullanıp kullanmadığını belirledikten sonra hata iletileri doğru bağlamda anlayabilirsiniz.  
   
 ### <a name="availability-of-the-kerberos-protocol-and-ntlm"></a>NTLM ve Kerberos protokolü kullanılabilirliği  
  Kerberos SSP Kerberos Anahtar Dağıtım Merkezi (KDC) olarak görev yapacak bir etki alanı denetleyicisi gerektirir. Kerberos protokolü, yalnızca etki alanı kimlikleri hem istemci hem de hizmet kullanırken kullanılabilir. Diğer hesap birleşimler, NTLM, aşağıdaki tabloda özetlendiği gibi kullanılır.  
@@ -81,15 +81,15 @@ Windows kimlik doğrulaması, bir güvenlik mekanizması olarak kullanırken, G�
   
  Kerberos ile kimlik bilgileri görüşmesi uygulamak için aşağıdaki adımları uygulayın:  
   
-1.  Uygulama temsilcisi ayarlayarak <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> için <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>.  
+1. Uygulama temsilcisi ayarlayarak <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> için <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>.  
   
-2.  SSPI anlaşması gerektirir:  
+2. SSPI anlaşması gerektirir:  
   
     1.  Standart bağlamaları kullanıyorsanız `NegotiateServiceCredential` özelliğini `true`.  
   
     2.  Özel bağlamalar kullanıyorsanız `AuthenticationMode` özniteliği `Security` öğesine `SspiNegotiated`.  
   
-3.  Kerberos, NTLM kullanımını engelleyerek kullanmak için SSPI anlaşması gerektirir:  
+3. Kerberos, NTLM kullanımını engelleyerek kullanmak için SSPI anlaşması gerektirir:  
   
     1.  Bu kodda, aşağıdaki deyimi yapın: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   

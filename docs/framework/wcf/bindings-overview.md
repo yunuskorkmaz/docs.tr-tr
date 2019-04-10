@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: c450de0eb3eead3a2d3b21c3635caa71d92ce07f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212810"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325065"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation Bağlamaları Genel Bakış
 Bağlamaları bir Windows Communication Foundation (WCF) hizmet uç noktasını bağlamak için gerekli olan iletişim ayrıntılarını belirtmek için kullanılan nesneleridir. Her bir WCF Hizmeti uç noktası bağlama iyi belirtilen olmasını gerektirir. Bu konuda bağlarını tanımlamak, iletişim ayrıntılarını bağlama, hangi bağlamaları WCF'de dahil edilir ve bir bağlama için bir uç nokta nasıl belirtilebilir öğelerin türleri açıklanmaktadır.  
@@ -50,9 +50,9 @@ Bağlamaları bir Windows Communication Foundation (WCF) hizmet uç noktasını 
 ## <a name="using-bindings"></a>Bağlamaları kullanma  
  Bağlamalar kullanılarak iki temel adımları kapsar:  
   
-1.  Seçin veya bir bağlama tanımlar. WCF ile dahil sistem tarafından sağlanan bağlamalar birini seçin ve kendi varsayılan ayarlarla kullanmak için en kolay yöntemdir bakın. Ayrıca, sistem tarafından sağlanan bir bağlamayı seçin ve gereksinimlerinize uyacak şekilde özellik değerlerine sıfırlayın. Alternatif olarak, Denetim ve özelleştirme daha yüksek derece özel bağlama veya kullanıcı tanımlı bir bağlama oluşturabilirsiniz.  
+1. Seçin veya bir bağlama tanımlar. WCF ile dahil sistem tarafından sağlanan bağlamalar birini seçin ve kendi varsayılan ayarlarla kullanmak için en kolay yöntemdir bakın. Ayrıca, sistem tarafından sağlanan bir bağlamayı seçin ve gereksinimlerinize uyacak şekilde özellik değerlerine sıfırlayın. Alternatif olarak, Denetim ve özelleştirme daha yüksek derece özel bağlama veya kullanıcı tanımlı bir bağlama oluşturabilirsiniz.  
   
-2.  Seçili veya tanımlı bağlama kullanan bir uç nokta oluşturun.  
+2. Seçili veya tanımlı bağlama kullanan bir uç nokta oluşturun.  
   
 ## <a name="code-and-configuration"></a>Kod ve yapılandırma  
  Bağlama iki yolla tanımlayabilirsiniz: yapılandırma veya kod aracılığıyla. Bu iki yaklaşımı, sistem tarafından sağlanan bir bağlamayı veya özel bir bağlama kullanarak üzerinde güvenmeyin. Genel olarak, kod kullanarak bir bağlama tasarım zamanında tanımı üzerinde tam denetim verir. Yapılandırmayı kullanarak diğer taraftan, Sistem Yöneticisi veya bir WCF hizmeti veya hizmeti uygulamayı yeniden derlemenize gerek kalmadan bir bağlama parametreleri değiştirmek için istemci kullanıcı sağlar. WCF uygulaması, dağıtılacak olduğu belirli makine gereksinimlerini tahmin etmenin yolu olduğundan bu esnekliğin genellikle tercih edilir. Bağlama (ve adresleme) tutma bilgi kodunun dışında yeniden derleme veya yeniden dağıtma işlemi uygulamanın gerek kalmadan değiştirmek sağlar. Kod içinde tanımlanan bağlamaları sonra yapılandırma dosyasında belirtilen bağlamaları yapılandırma tanımlı bağlamalar üzerine yazmak kod tanımlı bağlamalar izin vererek oluşturulduğunu unutmayın.  

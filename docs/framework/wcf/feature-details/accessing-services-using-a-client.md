@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194532"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314886"
 ---
 # <a name="accessing-services-using-a-client"></a>İstemci Kullanarak Hizmetlere Erişme
 İstemci uygulamaları oluşturmak, yapılandırmak ve WCF istemci veya kanal nesneleri Hizmetleri ile iletişim kurmak için kullanmanız gerekir. [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md) konu nesneleri ve adımlarını temel istemci ve kanal nesneleri oluşturma ve bunları kullanarak genel bir bakış sağlar.  
@@ -83,11 +83,11 @@ ms.locfileid: "59194532"
   
  Uygulama açık yaklaşımı kullanarak, aşağıdaki adımları sırayla gerçekleştirmeniz gerekir:  
   
-1.  Çağırın ya da <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (veya zaman uyumsuz bir sürümü).  
+1. Çağırın ya da <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (veya zaman uyumsuz bir sürümü).  
   
-2.  Başlatıcılar döndürüldüğünde çağırın ya da <xref:System.ServiceModel.ICommunicationObject.Open%2A> metodunda <xref:System.ServiceModel.IClientChannel> nesne veya <xref:System.ServiceModel.IClientChannel> döndürülen nesne <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> özelliği.  
+2. Başlatıcılar döndürüldüğünde çağırın ya da <xref:System.ServiceModel.ICommunicationObject.Open%2A> metodunda <xref:System.ServiceModel.IClientChannel> nesne veya <xref:System.ServiceModel.IClientChannel> döndürülen nesne <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> özelliği.  
   
-3.  İşlemleri çağırın.  
+3. İşlemleri çağırın.  
   
  Üretim kalitesindeki uygulamaları açık bir yaklaşım benimseyerek kullanıcı arabirimi işlemini denetleyen önerilir.  
   

@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Bir etkinlik oluşturma'
+title: 'Nasıl yapılır: Etkinlik Oluşturma'
 ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709024"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315146"
 ---
-# <a name="how-to-create-an-activity"></a>Nasıl yapılır: Bir etkinlik oluşturma
+# <a name="how-to-create-an-activity"></a>Nasıl yapılır: Etkinlik Oluşturma
 
 Etkinlikleri olan çekirdek birimi davranış [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Bir etkinlik yürütülme mantığı yönetilen kodda uygulanabilir veya diğer etkinlikleri kullanarak uygulanabilir. Bu konu, iki etkinliği oluşturma işlemini gösterir. İlk Etkinlik yürütme mantığını uygulamak için kodu kullanan basit bir etkinliktir. İkinci etkinlik uygulaması, diğer etkinlikleri kullanarak tanımlanır. Bu etkinlikler, aşağıdaki adımlarda öğreticide kullanılır.
 
@@ -21,26 +21,26 @@ Etkinlikleri olan çekirdek birimi davranış [!INCLUDE[wf1](../../../includes/w
 
 ## <a name="create-the-activity-library-project"></a>Etkinlik kitaplığı projesi oluşturun
 
-1.  Visual Studio açıp seçin **yeni** > **proje** gelen **dosya** menüsü.
+1. Visual Studio açıp seçin **yeni** > **proje** gelen **dosya** menüsü.
 
-2.  İçinde **yeni proje** iletişim altında **yüklü** kategorisi, select **Visual C#** > **iş akışı** (veya **Visual Basic** > **iş akışı**).
+2. İçinde **yeni proje** iletişim altında **yüklü** kategorisi, select **Visual C#** > **iş akışı** (veya **Visual Basic** > **iş akışı**).
 
     > [!NOTE]
     > Görmüyorsanız **iş akışı** şablon kategorisi yüklemeniz gerekebilir **Windows Workflow Foundation** Visual Studio bileşen. Seçin **açık Visual Studio yükleyicisi** sol tarafındaki bağlantıyı **yeni proje** iletişim. Visual Studio Yükleyicisi'nde seçin **tek tek bileşenler** sekmesi. Ardından, altında **geliştirme etkinliklerini** kategorisi seçin **Windows Workflow Foundation** bileşeni. Seçin **Değiştir** bileşeni.
 
 3. Seçin **etkinlik Kitaplığı** proje şablonu. Tür `NumberGuessWorkflowActivities` içinde **adı** kutusuna ve ardından **Tamam**.
 
-4.  Sağ **gt;activity1.XAML** içinde **Çözüm Gezgini** ve **Sil**. Tıklayın **Tamam** onaylamak için.
+4. Sağ **gt;activity1.XAML** içinde **Çözüm Gezgini** ve **Sil**. Tıklayın **Tamam** onaylamak için.
 
 ## <a name="create-the-readint-activity"></a>ReadInt etkinliği oluşturma
 
-1.  Seçin **Yeni Öğe Ekle** gelen **proje** menüsü.
+1. Seçin **Yeni Öğe Ekle** gelen **proje** menüsü.
 
-2.  İçinde **yüklü** > **ortak öğeler** düğümünü **iş akışı**. Seçin **kod etkinliği** gelen **iş akışı** listesi.
+2. İçinde **yüklü** > **ortak öğeler** düğümünü **iş akışı**. Seçin **kod etkinliği** gelen **iş akışı** listesi.
 
-3.  Tür `ReadInt` içine **adı** kutusuna ve ardından **Ekle**.
+3. Tür `ReadInt` içine **adı** kutusuna ve ardından **Ekle**.
 
-4.  Varolan `ReadInt` aşağıdaki tanımını tanımıyla.
+4. Varolan `ReadInt` aşağıdaki tanımını tanımıyla.
 
      [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
@@ -50,21 +50,21 @@ Etkinlikleri olan çekirdek birimi davranış [!INCLUDE[wf1](../../../includes/w
 
 ## <a name="create-the-prompt-activity"></a>Komut istemi etkinliği oluşturma
 
-1.  Tuşuna **Ctrl**+**Shift**+**B** Projeyi derlemek için. Proje etkinleştirir oluşturmaya `ReadInt` etkinlik bu projede Bu adımdan özel etkinlik oluşturmak için kullanılacak.
+1. Tuşuna **Ctrl**+**Shift**+**B** Projeyi derlemek için. Proje etkinleştirir oluşturmaya `ReadInt` etkinlik bu projede Bu adımdan özel etkinlik oluşturmak için kullanılacak.
 
-2.  Seçin **Yeni Öğe Ekle** gelen **proje** menüsü.
+2. Seçin **Yeni Öğe Ekle** gelen **proje** menüsü.
 
-3.  İçinde **yüklü** > **ortak öğeler** düğümünü **iş akışı**. Seçin **etkinlik** gelen **iş akışı** listesi.
+3. İçinde **yüklü** > **ortak öğeler** düğümünü **iş akışı**. Seçin **etkinlik** gelen **iş akışı** listesi.
 
-4.  Tür `Prompt` içine **adı** kutusuna ve ardından **Ekle**.
+4. Tür `Prompt` içine **adı** kutusuna ve ardından **Ekle**.
 
-5.  Çift **Prompt.xaml** içinde **Çözüm Gezgini** zaten görüntülenmiyorsa, tasarımcıda görüntülenecek.
+5. Çift **Prompt.xaml** içinde **Çözüm Gezgini** zaten görüntülenmiyorsa, tasarımcıda görüntülenecek.
 
-6.  Tıklayın **bağımsız değişkenleri** sol alt tarafında görüntülenecek etkinlik Tasarımcısı **bağımsız değişkenleri** bölmesi.
+6. Tıklayın **bağımsız değişkenleri** sol alt tarafında görüntülenecek etkinlik Tasarımcısı **bağımsız değişkenleri** bölmesi.
 
-7.  Tıklayın **bağımsız değişken oluşturma**.
+7. Tıklayın **bağımsız değişken oluşturma**.
 
-8.  Tür `BookmarkName` içine **adı** kutusunda **içinde** gelen **yönü** aşağı açılan listesinden **dize** gelen**Bağımsız değişken türü** aşağı açılan liste ve ENTER tuşuna **Enter** bağımsız değişkeni kaydetmek için.
+8. Tür `BookmarkName` içine **adı** kutusunda **içinde** gelen **yönü** aşağı açılan listesinden **dize** gelen**Bağımsız değişken türü** aşağı açılan liste ve ENTER tuşuna **Enter** bağımsız değişkeni kaydetmek için.
 
 9. Tıklayın **bağımsız değişken oluşturma**.
 
@@ -108,5 +108,5 @@ Etkinlikleri olan çekirdek birimi davranış [!INCLUDE[wf1](../../../includes/w
 - <xref:System.Activities.NativeActivity%601>
 - [Özel Etkinlikler Tasarlama ve Uygulama](designing-and-implementing-custom-activities.md)
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
-- [Nasıl yapılır: Bir iş akışı oluşturma](how-to-create-a-workflow.md)
+- [Nasıl yapılır: İş Akışı Oluşturma](how-to-create-a-workflow.md)
 - [Özel Etkinlik Tasarımcısında ExpressionTextBox Kullanma](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

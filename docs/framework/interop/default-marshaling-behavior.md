@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c15e24fbe2a131435fe71782c8a55f416f71d62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129330"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315770"
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Sıralama Davranışı
 Birlikte çalışma hazırlama kurallar arasında yönetilen ve yönetilmeyen bellek geçerken yöntem parametreleri ile ilişkili verileri nasıl davranacağını bu dikte çalışır. Yerleşik kurallar bir çağrılan geçirilen verileri değiştirebilir ve bu değişiklikleri çağırana döndürmesi ve performans iyileştirmelerini sağlayıp altında Sıralayıcı koşulda veri türü dönüşümleri olarak sıralama gibi etkinlikler denetler.  
@@ -64,11 +64,11 @@ BSTR MethodOne (BSTR b) {
   
  Sıralayıcı, bilinen bir nesneden bir arabirim değil, şunları yapar:  
   
-1.  Nesne için sıralayıcı sorgular **IProvideClassInfo2** arabirimi. Sağlanırsa, döndürülen CLSID Sıralayıcı kullanan **IProvideClassInfo2.GetGUID** arayüzü sağlama coclass'ı tanımlamak için. Derleme önceden kayıtlı olup olmadığını CLSID ile kapsayıcı kayıt defterinden Sıralayıcı bulabilirsiniz.  
+1. Nesne için sıralayıcı sorgular **IProvideClassInfo2** arabirimi. Sağlanırsa, döndürülen CLSID Sıralayıcı kullanan **IProvideClassInfo2.GetGUID** arayüzü sağlama coclass'ı tanımlamak için. Derleme önceden kayıtlı olup olmadığını CLSID ile kapsayıcı kayıt defterinden Sıralayıcı bulabilirsiniz.  
   
-2.  Arabirim için sıralayıcı sorgular **Iprovideclassınfo** arabirimi. Sağladıysanız Sıralayıcı kullanan **ITypeInfo** döndürüldüğü **IProvideClassInfo.GetClassinfo** arabirimi gösterme sınıfı CLSID değeri belirlemek için. Sıralayıcı CLSID sarmalayıcı için meta verileri bulmak için kullanabilirsiniz.  
+2. Arabirim için sıralayıcı sorgular **Iprovideclassınfo** arabirimi. Sağladıysanız Sıralayıcı kullanan **ITypeInfo** döndürüldüğü **IProvideClassInfo.GetClassinfo** arabirimi gösterme sınıfı CLSID değeri belirlemek için. Sıralayıcı CLSID sarmalayıcı için meta verileri bulmak için kullanabilirsiniz.  
   
-3.  Sıralayıcı hala sınıfı tanımlanamıyor, adlı bir genel sarmalayıcı sınıf arabirimi sarmalar **System.comobject'e**.  
+3. Sıralayıcı hala sınıfı tanımlanamıyor, adlı bir genel sarmalayıcı sınıf arabirimi sarmalar **System.comobject'e**.  
   
 ## <a name="default-marshaling-for-delegates"></a>Temsilciler için varsayılan sıralama  
  Yönetilen bir temsilci, bir COM arabirimi veya çağıran mekanizmasına dayalı bir işlev işaretçisi olarak sıralanır:  

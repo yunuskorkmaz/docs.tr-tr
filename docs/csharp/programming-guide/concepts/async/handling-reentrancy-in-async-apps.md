@@ -2,12 +2,12 @@
 title: (C#) zaman uyumsuz uygulamalarda yeniden girişi işleme
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 95004951a664c3c8271604938c5ce1d93a269304
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: efa46408da492cbdeeb38b363196c79a1ae25157
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211510"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321542"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>(C#) zaman uyumsuz uygulamalarda yeniden girişi işleme
 Zaman uyumsuz kod uygulamanıza eklediğinizde, göz önünde bulundurun ve tamamlanmadan önce zaman uyumsuz bir işlem engellemelisiniz yeniden giriş muhtemelen önlemek gerekir. Olasılıklarını tanımlamaz ve yönetmezseniz, beklenmedik sonuçlara neden olabilir.  
@@ -140,7 +140,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  Bu senaryoyu ayarlamak için bağlantısında verilen temel kodda aşağıdaki değişiklikleri yapın [inceleme ve örnek uygulamayı çalıştırma](#BKMD_SettingUpTheExample). Bitmiş uygulamayı da indirebilirsiniz [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Projenin adı CancelAndRestart'tır.  
   
-1.  Bildirme bir <xref:System.Threading.CancellationTokenSource> değişken `cts`, tüm yöntemler için kapsam dahilinde olan.  
+1. Bildirme bir <xref:System.Threading.CancellationTokenSource> değişken `cts`, tüm yöntemler için kapsam dahilinde olan.  
   
     ```csharp  
     public partial class MainWindow : Window   // Or class MainPage  
@@ -149,7 +149,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
         CancellationTokenSource cts;  
     ```  
   
-2.  İçinde `StartButton_Click`, bir işlemin zaten çalışıp çalışmadığını belirleyin. Varsa değerini `cts` olan boş, hiçbir işlem zaten etkin. Değer null değilse, zaten çalışan işlemi iptal edildi.  
+2. İçinde `StartButton_Click`, bir işlemin zaten çalışıp çalışmadığını belirleyin. Varsa değerini `cts` olan boş, hiçbir işlem zaten etkin. Değer null değilse, zaten çalışan işlemi iptal edildi.  
   
     ```csharp  
     // *** If a download process is already underway, cancel it.  
@@ -159,7 +159,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
     }  
     ```  
   
-3.  Ayarlama `cts` geçerli işlemi temsil eden farklı bir değer.  
+3. Ayarlama `cts` geçerli işlemi temsil eden farklı bir değer.  
   
     ```csharp  
     // *** Now set cts to a new value that you can use to cancel the current process  
@@ -168,7 +168,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
     cts = newCTS;  
     ```  
   
-4.  Sonunda `StartButton_Click`, geçerli işlem tamamlanır, bu nedenle ayarlayın `cts` null geri dönün.  
+4. Sonunda `StartButton_Click`, geçerli işlem tamamlanır, bu nedenle ayarlayın `cts` null geri dönün.  
   
     ```csharp  
     // *** When the process is complete, signal that another process can begin.  
@@ -541,42 +541,42 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 ### <a name="BKMK_DownloadingTheApp"></a> Uygulamayı karşıdan yükleme  
   
-1.  Sıkıştırılmış dosyayı indirin [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
+1. Sıkıştırılmış dosyayı indirin [zaman uyumsuz örnekleri: .NET Masaüstü uygulamalarda yeniden girişi](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
   
-2.  İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
+2. İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
   
-3.  Menü çubuğunda, **dosya**, **açık**, **proje/çözüm**.  
+3. Menü çubuğunda, **dosya**, **açık**, **proje/çözüm**.  
   
-4.  Sıkıştırması açılmış örnek kodun bulunduğu klasöre gidin ve ardından çözüm (.sln) dosyasını açın.  
+4. Sıkıştırması açılmış örnek kodun bulunduğu klasöre gidin ve ardından çözüm (.sln) dosyasını açın.  
   
-5.  İçinde **Çözüm Gezgini**, çalıştırın ve ardından istediğiniz projenin kısayol menüsünü **StartUpProject olarak ayarla**.  
+5. İçinde **Çözüm Gezgini**, çalıştırın ve ardından istediğiniz projenin kısayol menüsünü **StartUpProject olarak ayarla**.  
   
-6.  Oluşturun ve projeyi çalıştırmak için CTRL + F5 tuşlarını seçin.  
+6. Oluşturun ve projeyi çalıştırmak için CTRL + F5 tuşlarını seçin.  
   
 ### <a name="BKMK_BuildingTheApp"></a> Uygulama oluşturma  
  Aşağıdaki bölümde, örnek bir WPF uygulaması olarak oluşturmak için kod sağlar.  
   
 ##### <a name="to-build-a-wpf-app"></a>Bir WPF uygulaması derlemek için  
   
-1.  Visual Studio’yu çalıştırın.  
+1. Visual Studio’yu çalıştırın.  
   
-2.  Menü çubuğunda, **dosya**, **yeni**, **proje**.  
+2. Menü çubuğunda, **dosya**, **yeni**, **proje**.  
   
      **Yeni proje** iletişim kutusu açılır.  
   
-3.  İçinde **yüklü şablonlar** bölmesini genişletin **Visual C#** ve ardından **Windows**.  
+3. İçinde **yüklü şablonlar** bölmesini genişletin **Visual C#** ve ardından **Windows**.  
   
-4.  Proje türleri listesinde seçin **WPF uygulaması**.  
+4. Proje türleri listesinde seçin **WPF uygulaması**.  
   
-5.  Projeyi adlandırın `WebsiteDownloadWPF`ve ardından **Tamam** düğmesi.  
+5. Projeyi adlandırın `WebsiteDownloadWPF`ve ardından **Tamam** düğmesi.  
   
      Yeni Proje görünür **Çözüm Gezgini**.  
   
-6.  Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
+6. Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
   
      Sekme görünür değilse, nde MainWindow.xaml için kısayol menüsünü açın **Çözüm Gezgini**ve ardından **kodu görüntüle**.  
   
-7.  İçinde **XAML** MainWindow.xaml görüntülemek için kodu aşağıdaki kodla değiştirin.  
+7. İçinde **XAML** MainWindow.xaml görüntülemek için kodu aşağıdaki kodla değiştirin.  
   
     ```csharp  
     <Window x:Class="WebsiteDownloadWPF.MainWindow"  
@@ -596,7 +596,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
      Bir metin kutusu ve bir düğme içeren basit bir pencere **tasarım** MainWindow.xaml görünümü.  
   
-8.  İçin bir başvuru eklemeniz <xref:System.Net.Http>.  
+8. İçin bir başvuru eklemeniz <xref:System.Net.Http>.  
   
 9. İçinde **Çözüm Gezgini**için MainWindow.xaml.cs kısayol menüsünü açın ve ardından **kodu görüntüle**.  
   

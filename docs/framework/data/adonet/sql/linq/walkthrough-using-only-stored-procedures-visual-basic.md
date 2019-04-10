@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 686d1797666c36f47d1ab0244754bbf2daf97eaf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188584"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314834"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>İzlenecek yol: Yalnızca Saklı Yordamlar Kullanma (Visual Basic)
 Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] senaryosu kullanarak verilerine erişmek için saklı yordamlar yalnızca. Bu yaklaşım, genellikle veri deposu nasıl erişilir sınırlamak için Veritabanı yöneticileri tarafından kullanılır.  
@@ -62,15 +62,15 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturmak için  
   
-1.  Visual Studio **dosya** menüsünü tıklatın **yeni proje**.  
+1. Visual Studio **dosya** menüsünü tıklatın **yeni proje**.  
   
-2.  İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusunda **Visual Basic**ve ardından **Windows**.  
+2. İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusunda **Visual Basic**ve ardından **Windows**.  
   
-3.  İçinde **şablonları** bölmesinde tıklayın **Windows Forms uygulaması**.  
+3. İçinde **şablonları** bölmesinde tıklayın **Windows Forms uygulaması**.  
   
-4.  İçinde **adı** kutusuna **SprocOnlyApp**.  
+4. İçinde **adı** kutusuna **SprocOnlyApp**.  
   
-5.  **Tamam**'ı tıklatın.  
+5. **Tamam**'ı tıklatın.  
   
      Windows Forms Tasarımcısı'nı açar.  
   
@@ -79,11 +79,11 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll eklemek için  
   
-1.  İçinde **Çözüm Gezgini**, tıklayın **tüm dosyaları göster**.  
+1. İçinde **Çözüm Gezgini**, tıklayın **tüm dosyaları göster**.  
   
-2.  İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.  
+2. İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.  
   
-3.  İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.  
+3. İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.  
   
      Derleme, projeye eklenir.  
   
@@ -92,9 +92,9 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Northwind kod dosyası projeye eklemek için  
   
-1.  Üzerinde **proje** menüsünde tıklatın **varolan öğeyi Ekle**.  
+1. Üzerinde **proje** menüsünde tıklatın **varolan öğeyi Ekle**.  
   
-2.  İçinde **varolan öğeyi Ekle** iletişim kutusu için c:\linqtest3\northwind.vb taşıyın ve ardından **Ekle**.  
+2. İçinde **varolan öğeyi Ekle** iletişim kutusu için c:\linqtest3\northwind.vb taşıyın ve ardından **Ekle**.  
   
      Northwind.vb dosya projeye eklenir.  
   
@@ -103,11 +103,11 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-create-the-database-connection"></a>Veritabanı bağlantısı oluşturmak için  
   
-1.  İçinde **Çözüm Gezgini**, sağ **Form1.vb**ve ardından **kodu görüntüle**.  
+1. İçinde **Çözüm Gezgini**, sağ **Form1.vb**ve ardından **kodu görüntüle**.  
   
      `Class Form1` Kod Düzenleyicisi'nde görünür.  
   
-2.  Aşağıdaki kodu yazın `Form1` kod bloğu:  
+2. Aşağıdaki kodu yazın `Form1` kod bloğu:  
   
      [!code-vb[DLinqWalk4VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#1)]  
   
@@ -116,42 +116,42 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-set-up-the-user-interface"></a>Kullanıcı arabirimi oluşturan ayarlamak için  
   
-1.  İade için Windows Forms Tasarımcısı (**Form1.vb[Design]**).  
+1. İade için Windows Forms Tasarımcısı (**Form1.vb[Design]**).  
   
-2.  Üzerinde **görünümü** menüsünde tıklatın **araç kutusu**.  
+2. Üzerinde **görünümü** menüsünde tıklatın **araç kutusu**.  
   
      Araç kutusu açılır.  
   
     > [!NOTE]
     >  Tıklayın **AutoHide** Raptiye kalan gerçekleştirirken araç kutusu açık tutmak için bu bölümdeki adımlar.  
   
-3.  Sürükleyin iki düğme, iki metin kutuları ve iki etiket araç kutusundan **Form1**.  
+3. Sürükleyin iki düğme, iki metin kutuları ve iki etiket araç kutusundan **Form1**.  
   
      Eşlik eden resimde olduğu gibi denetimleri düzenleyin. Genişletin **Form1** denetimleri bir kolayca uyacak şekilde.  
   
-4.  Sağ **Label1**ve ardından **özellikleri**.  
+4. Sağ **Label1**ve ardından **özellikleri**.  
   
-5.  Değişiklik **metin** özelliğinden **Label1** için **OrderID girin:**.  
+5. Değişiklik **metin** özelliğinden **Label1** için **OrderID girin:**.  
   
-6.  Aynı şekilde **etiket 2**, değiştirme **metin** özelliğinden **etiket 2** için **CustomerID girin:**.  
+6. Aynı şekilde **etiket 2**, değiştirme **metin** özelliğinden **etiket 2** için **CustomerID girin:**.  
   
-7.  Aynı şekilde değiştirme **metin** özelliği **Button1** için **sipariş ayrıntıları**.  
+7. Aynı şekilde değiştirme **metin** özelliği **Button1** için **sipariş ayrıntıları**.  
   
-8.  Değişiklik **metin** özelliği **Button2** için **siparişi geçmişi**.  
+8. Değişiklik **metin** özelliği **Button2** için **siparişi geçmişi**.  
   
      Tüm metni görünür olması düğme denetimleri genişletebilirsiniz.  
   
 #### <a name="to-handle-button-clicks"></a>Düğme tıklamaları işlemek için  
   
-1.  Çift **sipariş ayrıntıları** üzerinde **Form1** oluşturmak için `Button1` olay işleyicisi ve Kod Düzenleyicisi'ni açın.  
+1. Çift **sipariş ayrıntıları** üzerinde **Form1** oluşturmak için `Button1` olay işleyicisi ve Kod Düzenleyicisi'ni açın.  
   
-2.  Aşağıdaki kodu yazın `Button1` işleyicisi:  
+2. Aşağıdaki kodu yazın `Button1` işleyicisi:  
   
      [!code-vb[DLinqWalk4VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#2)]  
   
-3.  Şimdi çift **Button2** oluşturmak için Form1 üzerinde `Button2` olay işleyicisi ve Kod Düzenleyicisi'ni açın.  
+3. Şimdi çift **Button2** oluşturmak için Form1 üzerinde `Button2` olay işleyicisi ve Kod Düzenleyicisi'ni açın.  
   
-4.  Aşağıdaki kodu yazın `Button2` işleyicisi:  
+4. Aşağıdaki kodu yazın `Button2` işleyicisi:  
   
      [!code-vb[DLinqWalk4VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#3)]  
   
@@ -160,33 +160,33 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-test-the-application"></a>Uygulamayı test etmek için  
   
-1.  Hata ayıklamayı başlatmak için F5 tuşuna basın.  
+1. Hata ayıklamayı başlatmak için F5 tuşuna basın.  
   
      Form1 görünür.  
   
-2.  İçinde **girin OrderID** kutusuna **10249** ve ardından **sipariş ayrıntıları**.  
+2. İçinde **girin OrderID** kutusuna **10249** ve ardından **sipariş ayrıntıları**.  
   
      Bir ileti kutusu 10249 siparişteki ürünleri listeler.  
   
      Tıklayın **Tamam** ileti kutusunu kapatın.  
   
-3.  İçinde **girin CustomerID** kutusuna `ALFKI`ve ardından **siparişi geçmişi**.  
+3. İçinde **girin CustomerID** kutusuna `ALFKI`ve ardından **siparişi geçmişi**.  
   
      Bir ileti kutusu ALFKI müşteri siparişi geçmişi listeler.  
   
      Tıklayın **Tamam** ileti kutusunu kapatın.  
   
-4.  İçinde **girin OrderID** kutusuna `123`ve ardından **sipariş ayrıntıları**.  
+4. İçinde **girin OrderID** kutusuna `123`ve ardından **sipariş ayrıntıları**.  
   
      "Sonuç yok." bir ileti kutusu görüntüler  
   
      Tıklayın **Tamam** ileti kutusunu kapatın.  
   
-5.  Üzerinde **hata ayıklama** menüsünü tıklatın **hata ayıklamayı durdurmak**.  
+5. Üzerinde **hata ayıklama** menüsünü tıklatın **hata ayıklamayı durdurmak**.  
   
      Hata ayıklama oturumunu kapatır.  
   
-6.  Denemeler tamamladınız, tıklayabilirsiniz **Projeyi Kapat** üzerinde **dosya** menüsünde ve istendiğinde projenizi kaydedin.  
+6. Denemeler tamamladınız, tıklayabilirsiniz **Projeyi Kapat** üzerinde **dosya** menüsünde ve istendiğinde projenizi kaydedin.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu proje, bazı değişiklikler yaparak geliştirebilirsiniz. Örneğin, bir liste kutusunda mevcut saklı yordamları listeler ve yürütmek için hangi yordamların seçmesine sahip. Ayrıca, raporları bir metin dosyasına çıkışı akış.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224053"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323258"
 ---
 # <a name="frequently-asked-questions"></a>Sıkça Sorulan Sorular
 Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı yaygın sorunlar yanıt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -156,11 +156,11 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  A. Bu gelişmiş bir senaryo için aşağıdaki adımları uygulayın:  
   
-1.  Değiştirerek .dbml dosyasına da özelliği değiştirilecek <xref:System.Data.Linq.ITable.IsReadOnly%2A> bayrak `True`.  
+1. Değiştirerek .dbml dosyasına da özelliği değiştirilecek <xref:System.Data.Linq.ITable.IsReadOnly%2A> bayrak `True`.  
   
-2.  Kısmi bir sınıf ekleyin. Bir oluşturucu parametrelerle salt okunur üyeler için oluşturun.  
+2. Kısmi bir sınıf ekleyin. Bir oluşturucu parametrelerle salt okunur üyeler için oluşturun.  
   
-3.  Varsayılan gözden geçirme <xref:System.Data.Linq.Mapping.UpdateCheck> değeri (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>), uygulamanız için doğru değeri olup olmadığını belirlemek için.  
+3. Varsayılan gözden geçirme <xref:System.Data.Linq.Mapping.UpdateCheck> değeri (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>), uygulamanız için doğru değeri olup olmadığını belirlemek için.  
   
     > [!CAUTION]
     >  Kullanıyorsanız [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Visual Studio'da yaptığınız değişiklikleri üzerine yazılmış olabilir.  

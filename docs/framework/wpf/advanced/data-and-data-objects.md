@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-ms.openlocfilehash: 483491ea7408c1df57f31b4b984116b085ea50ba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367550"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312065"
 ---
 # <a name="data-and-data-objects"></a>Veri ve Veri Nesneleri
 Bir Sürükle ve bırak işleminin bir parçası aktarılan veriler bir veri nesnesi içinde depolanır.  Kavramsal olarak, bir veri nesnesi, bir veya daha fazla aşağıdaki çiftleri oluşur:  
@@ -87,11 +87,11 @@ Bir Sürükle ve bırak işleminin bir parçası aktarılan veriler bir veri nes
 ### <a name="removing-data-from-a-data-object"></a>Veri nesnesinden verileri kaldırılıyor  
  Verileri doğrudan veri nesnesinden kaldırılamaz.  Etkili bir şekilde veri nesnesinden verileri kaldırmak için aşağıdaki adımları izleyin:  
   
-1.  Korumak istediğiniz verileri içeren yeni bir veri nesnesi oluşturun.  
+1. Korumak istediğiniz verileri içeren yeni bir veri nesnesi oluşturun.  
   
-2.  "Kopyala" eski veri nesnesi istenen verileri için yeni bir veri nesnesi.  Veri kopyalamak için aşağıdakilerden birini kullanma <xref:System.Windows.DataObject.GetData%2A> almak için yöntemler bir <xref:System.Object> ham verileri içeren ve şunlardan birini kullanın <xref:System.Windows.DataObject.SetData%2A> verileri yeni bir veri nesnesi eklemek için yöntemleri.  
+2. "Kopyala" eski veri nesnesi istenen verileri için yeni bir veri nesnesi.  Veri kopyalamak için aşağıdakilerden birini kullanma <xref:System.Windows.DataObject.GetData%2A> almak için yöntemler bir <xref:System.Object> ham verileri içeren ve şunlardan birini kullanın <xref:System.Windows.DataObject.SetData%2A> verileri yeni bir veri nesnesi eklemek için yöntemleri.  
   
-3.  Eski veri nesnesi yenisiyle değiştirin.  
+3. Eski veri nesnesi yenisiyle değiştirin.  
   
 > [!NOTE]
 >  <xref:System.Windows.DataObject.SetData%2A> Yöntemleri yalnızca bir veri nesnesine verilerini ekleyin; veri ve veri biçimi tam olarak önceki bir çağrı ile aynı olsa bile, bunlar veri değiştirmeyin. Çağırma <xref:System.Windows.DataObject.SetData%2A> iki kez aynı veri ve veri için biçim veri/veri biçimi veri nesnesi içinde bulunmasına neden olur.

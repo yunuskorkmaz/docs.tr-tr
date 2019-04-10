@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 684ce075155d3da9bae3f7828e84d34399928875
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158632"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315354"
 ---
 # <a name="data-contract-surrogates"></a>Veri Sözleşmesi Yedekleri
 Veri anlaşması *vekil* veri anlaşması modeli üzerinde oluşturulmuş, Gelişmiş bir özelliktir. Bu özellik türü özelleştirme ve kullanıcılar nasıl bir tür, seri durumdan çıkarılmış veya öngörülen meta verileri içine serileştirilmiş değiştirmek istediğiniz durumlarda değiştirme için kullanılmak üzere tasarlanmıştır. Bir veri anlaşması türü, alanlar ve özellikler ile işaretlenmemiş için belirtilmemiş bazı senaryolar, bir vekil nerede kullanılabilir olduğunda <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği veya kullanıcılar şema farklılıkları dinamik olarak oluşturmak istediğiniz.  
@@ -141,15 +141,15 @@ Veri anlaşması *vekil* veri anlaşması modeli üzerinde oluşturulmuş, Geli�
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>Serileştirme ve seri durumundan çıkarma uygulamak için  
   
-1.  Bir örneğini oluşturmak <xref:System.ServiceModel.ServiceHost> hizmetiniz için. Eksiksiz yönergeler için bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+1. Bir örneğini oluşturmak <xref:System.ServiceModel.ServiceHost> hizmetiniz için. Eksiksiz yönergeler için bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
-2.  İçin her <xref:System.ServiceModel.Description.ServiceEndpoint> belirtilen hizmet ana bilgisayarı, bulmak, <xref:System.ServiceModel.Description.OperationDescription>.  
+2. İçin her <xref:System.ServiceModel.Description.ServiceEndpoint> belirtilen hizmet ana bilgisayarı, bulmak, <xref:System.ServiceModel.Description.OperationDescription>.  
   
-3.  Örneği olup olmadığını belirlemek için işlem davranışları aracılığıyla aramayı <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bulunur.  
+3. Örneği olup olmadığını belirlemek için işlem davranışları aracılığıyla aramayı <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bulunur.  
   
-4.  Varsa bir <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bulunamadı, ayarla, <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> vekil yeni bir örneğini özelliğini. Hayır ise <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bulunamadı, ardından yeni bir örneğini oluşturun ve ayarlayın <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> yeni davranış için yeni bir örneğini vekil üyesi.  
+4. Varsa bir <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bulunamadı, ayarla, <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> vekil yeni bir örneğini özelliğini. Hayır ise <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bulunamadı, ardından yeni bir örneğini oluşturun ve ayarlayın <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> yeni davranış için yeni bir örneğini vekil üyesi.  
   
-5.  Son olarak, bu yeni davranış için geçerli işlem davranışları, aşağıdaki örnekte gösterildiği gibi ekleyin:  
+5. Son olarak, bu yeni davranış için geçerli işlem davranışları, aşağıdaki örnekte gösterildiği gibi ekleyin:  
   
      [!code-csharp[C_IDataContractSurrogate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#8)]  
   
@@ -158,19 +158,19 @@ Veri anlaşması *vekil* veri anlaşması modeli üzerinde oluşturulmuş, Geli�
   
 ##### <a name="to-implement-a-surrogate-for-metadata-importation"></a>Meta verileri içeri aktarma için bir temsilci uygulamak için  
   
-1.  Meta verileri kullanarak içeri aktarma <xref:System.ServiceModel.Description.WsdlImporter> sınıfı.  
+1. Meta verileri kullanarak içeri aktarma <xref:System.ServiceModel.Description.WsdlImporter> sınıfı.  
   
-2.  Kullanım <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> denetlenecek yöntemi olup olmadığını bir <xref:System.Runtime.Serialization.XsdDataContractImporter> tanımlanmış.  
+2. Kullanım <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> denetlenecek yöntemi olup olmadığını bir <xref:System.Runtime.Serialization.XsdDataContractImporter> tanımlanmış.  
   
-3.  Varsa <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi döndürür `false`, yeni bir <xref:System.Runtime.Serialization.XsdDataContractImporter> ve kendi <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> özelliğine yeni bir örneğini <xref:System.Runtime.Serialization.ImportOptions> sınıfı. Aksi takdirde içeri Aktarıcı tarafından döndürülen kullanın `out` parametresinin <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi.  
+3. Varsa <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi döndürür `false`, yeni bir <xref:System.Runtime.Serialization.XsdDataContractImporter> ve kendi <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> özelliğine yeni bir örneğini <xref:System.Runtime.Serialization.ImportOptions> sınıfı. Aksi takdirde içeri Aktarıcı tarafından döndürülen kullanın `out` parametresinin <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi.  
   
-4.  Varsa <xref:System.Runtime.Serialization.XsdDataContractImporter> hiçbir <xref:System.Runtime.Serialization.ImportOptions> tanımlanan ve ardından yeni bir örneğini özelliğini ayarlayın <xref:System.Runtime.Serialization.ImportOptions> sınıfı.  
+4. Varsa <xref:System.Runtime.Serialization.XsdDataContractImporter> hiçbir <xref:System.Runtime.Serialization.ImportOptions> tanımlanan ve ardından yeni bir örneğini özelliğini ayarlayın <xref:System.Runtime.Serialization.ImportOptions> sınıfı.  
   
-5.  Ayarlama <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> özelliği <xref:System.Runtime.Serialization.ImportOptions> , <xref:System.Runtime.Serialization.XsdDataContractImporter> vekil yeni bir örneğini için.  
+5. Ayarlama <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> özelliği <xref:System.Runtime.Serialization.ImportOptions> , <xref:System.Runtime.Serialization.XsdDataContractImporter> vekil yeni bir örneğini için.  
   
-6.  Ekleme <xref:System.Runtime.Serialization.XsdDataContractImporter> tarafından döndürülen koleksiyona <xref:System.ServiceModel.Description.MetadataExporter.State%2A> özelliği <xref:System.ServiceModel.Description.WsdlImporter> (devralınan <xref:System.ServiceModel.Description.MetadataExporter> sınıfı.)  
+6. Ekleme <xref:System.Runtime.Serialization.XsdDataContractImporter> tarafından döndürülen koleksiyona <xref:System.ServiceModel.Description.MetadataExporter.State%2A> özelliği <xref:System.ServiceModel.Description.WsdlImporter> (devralınan <xref:System.ServiceModel.Description.MetadataExporter> sınıfı.)  
   
-7.  Kullanım <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> yöntemi <xref:System.ServiceModel.Description.WsdlImporter> veri sözleşmeleri şeması içindeki tüm içeri aktarabilirsiniz. Son adımda kod vekil çağırarak yüklenen şemaları oluşturulur.  
+7. Kullanım <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> yöntemi <xref:System.ServiceModel.Description.WsdlImporter> veri sözleşmeleri şeması içindeki tüm içeri aktarabilirsiniz. Son adımda kod vekil çağırarak yüklenen şemaları oluşturulur.  
   
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
@@ -179,15 +179,15 @@ Veri anlaşması *vekil* veri anlaşması modeli üzerinde oluşturulmuş, Geli�
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Meta veri dışarı aktarma için bir yedek kullanmak için  
   
-1.  Yeni bir <xref:System.ServiceModel.Description.WsdlExporter> veya `wsdlExporter` geçirilen <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> yöntemi.  
+1. Yeni bir <xref:System.ServiceModel.Description.WsdlExporter> veya `wsdlExporter` geçirilen <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> yöntemi.  
   
-2.  Kullanım <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> denetlemek için işlev olup olmadığını bir <xref:System.Runtime.Serialization.XsdDataContractExporter> tanımlanmış.  
+2. Kullanım <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> denetlemek için işlev olup olmadığını bir <xref:System.Runtime.Serialization.XsdDataContractExporter> tanımlanmış.  
   
-3.  Varsa <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> döndürür `false`, yeni bir <xref:System.Runtime.Serialization.XsdDataContractExporter> oluşturulan XML şemaları ile <xref:System.ServiceModel.Description.WsdlExporter>ve döndürdüğü koleksiyona ekleyin <xref:System.ServiceModel.Description.MetadataExporter.State%2A> özelliği <xref:System.ServiceModel.Description.WsdlExporter>. Tarafından döndürülen verici kullanmayacak `out` parametresinin <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi.  
+3. Varsa <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> döndürür `false`, yeni bir <xref:System.Runtime.Serialization.XsdDataContractExporter> oluşturulan XML şemaları ile <xref:System.ServiceModel.Description.WsdlExporter>ve döndürdüğü koleksiyona ekleyin <xref:System.ServiceModel.Description.MetadataExporter.State%2A> özelliği <xref:System.ServiceModel.Description.WsdlExporter>. Tarafından döndürülen verici kullanmayacak `out` parametresinin <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi.  
   
-4.  Varsa <xref:System.Runtime.Serialization.XsdDataContractExporter> hiçbir <xref:System.Runtime.Serialization.ExportOptions> tanımlanan sonra ayarlanmış <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> özelliğine yeni bir örneğini <xref:System.Runtime.Serialization.ExportOptions> sınıfı.  
+4. Varsa <xref:System.Runtime.Serialization.XsdDataContractExporter> hiçbir <xref:System.Runtime.Serialization.ExportOptions> tanımlanan sonra ayarlanmış <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> özelliğine yeni bir örneğini <xref:System.Runtime.Serialization.ExportOptions> sınıfı.  
   
-5.  Ayarlama <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> özelliği <xref:System.Runtime.Serialization.ExportOptions> , <xref:System.Runtime.Serialization.XsdDataContractExporter> vekil yeni bir örneğini için. Meta verileri dışarı aktarma için sonraki adımlar herhangi bir değişiklik gerektirmez.  
+5. Ayarlama <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> özelliği <xref:System.Runtime.Serialization.ExportOptions> , <xref:System.Runtime.Serialization.XsdDataContractExporter> vekil yeni bir örneğini için. Meta verileri dışarı aktarma için sonraki adımlar herhangi bir değişiklik gerektirmez.  
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   

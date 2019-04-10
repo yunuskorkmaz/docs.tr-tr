@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: aca110339c94afd5442aed5a2481964b456154f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e8f77a4fd1047598d51c2e0932d9c1309a305a86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201617"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295516"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Nasıl yapılır: Panodan Veri Alma
 <xref:System.Windows.Forms.Clipboard> Sınıfı, Windows işletim sistemi Pano özelliğini ile etkileşim kurmak için kullanabileceğiniz yöntemler sağlar. Birçok uygulama Pano verileri için geçici bir deposu olarak kullanın. Örneğin, Word'ün işlemci panoya kes/yapıştır işlemleri sırasında kullanın. Pano, bir uygulamadan diğerine bilgi aktarmak için kullanışlıdır.  
@@ -31,14 +31,14 @@ ms.locfileid: "59201617"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Tek, ortak bir biçimde panodan veri almak için  
   
-1.  Kullanım <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, veya <xref:System.Windows.Forms.Clipboard.GetText%2A> yöntemi. İsteğe bağlı olarak karşılık gelen kullanın `Contains` *biçimi* ilk veri belirli bir biçimde kullanılabilir olup olmadığını belirlemek için yöntemleri. Bu yöntem yalnızca [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Kullanım <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, veya <xref:System.Windows.Forms.Clipboard.GetText%2A> yöntemi. İsteğe bağlı olarak karşılık gelen kullanın `Contains` *biçimi* ilk veri belirli bir biçimde kullanılabilir olup olmadığını belirlemek için yöntemleri. Bu yöntem yalnızca [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Özel bir biçimde panodan veri almak için  
   
-1.  Kullanım <xref:System.Windows.Forms.Clipboard.GetData%2A> yöntemi ile bir özel biçim adı. Bu yöntem yalnızca kullanılabilir [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Kullanım <xref:System.Windows.Forms.Clipboard.GetData%2A> yöntemi ile bir özel biçim adı. Bu yöntem yalnızca kullanılabilir [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      Önceden tanımlanmış biçim adıyla kullanabilirsiniz <xref:System.Windows.Forms.Clipboard.SetData%2A> yöntemi. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.DataFormats>.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "59201617"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Birden çok biçimde panodan veri almak için  
   
-1.  Kullanım <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> yöntemi. Sürümlerinde panodan veri almak için bu yöntemi kullanın öncesi [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Kullanım <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> yöntemi. Sürümlerinde panodan veri almak için bu yöntemi kullanın öncesi [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

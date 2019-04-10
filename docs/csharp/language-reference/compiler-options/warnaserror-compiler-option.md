@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: b208f6e4e768e400af203117d185944be285cb72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ae555c2e049e687f508e62b5b46fd8a744e827f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329109"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# Derleyici Seçenekleri)
 **- Warnaserror +** seçeneği, tüm uyarıları hata olarak davranır  
@@ -35,11 +35,11 @@ ms.locfileid: "54634616"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açın **özellikleri** sayfası.  
+1. Projenin açın **özellikleri** sayfası.  
   
-2.  Tıklayın **derleme** özellik sayfası.  
+2. Tıklayın **derleme** özellik sayfası.  
   
-3.  Değiştirme **uyarıları hata olarak değerlendir** özelliği.  
+3. Değiştirme **uyarıları hata olarak değerlendir** özelliği.  
   
  Bu derleyici seçeneğini program üzerinden ayarlamak için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>.  
   

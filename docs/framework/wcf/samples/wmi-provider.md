@@ -2,12 +2,12 @@
 title: WMI Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 2c20fd6804761dd472a8accd25ab98f662b0292a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 519f63f8dfc558a83a98ca44f74e926beb81c190
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162299"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327236"
 ---
 # <a name="wmi-provider"></a>WMI Sağlayıcısı
 Bu örnek, WCF yerleşik Windows Yönetim Araçları (WMI) sağlayıcısını kullanarak çalışma zamanında Windows Communication Foundation (WCF) hizmetlerden veri toplamak nasıl gösterir. Ayrıca, bu örnek, bir kullanıcı tanımlı WMI nesnesi için bir hizmet eklemek nasıl gösterir. Örnek için WMI sağlayıcısını etkinleştirir [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve veri toplamaya gösterilmiştir `ICalculator` zamanında hizmet.  
@@ -121,18 +121,18 @@ cscript EnumerateCustomObjects.js
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirdiğiniz olun [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirdiğiniz olun [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  WMI hizmetleri şeması (InstallUtil.exe varsayılan konumları, "% WINDIR%\Microsoft.NET\Framework\v4.0.30319" dır) InstallUtil.exe çalıştırarak barındırma dizininde service.dll dosyasını yayımlayın. Bu adım yalnızca service.dll dosyasına değişiklikler yapıldığında yürütülmesi gerekiyor.
+3. WMI hizmetleri şeması (InstallUtil.exe varsayılan konumları, "% WINDIR%\Microsoft.NET\Framework\v4.0.30319" dır) InstallUtil.exe çalıştırarak barındırma dizininde service.dll dosyasını yayımlayın. Bu adım yalnızca service.dll dosyasına değişiklikler yapıldığında yürütülmesi gerekiyor.
   
-4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     >  WCF ASP.NET'ı yükledikten sonra yüklerseniz, "%WINDIR%\ çalıştırmanız gerekebilir Microsoft.Net\Framework\v3.0\Windows iletişimi Foundation\servicemodelreg.exe "- r - WMI Nesne yayımlamak için ASP.NET hesabı izin vermek için x.  
   
-5.  WMI aracılığıyla komutları kullanarak ortaya örnekten verileri görüntüleme: `cscript EnumerateServices.js` veya `cscript EnumerateCustomObjects.js`.  
+5. WMI aracılığıyla komutları kullanarak ortaya örnekten verileri görüntüleme: `cscript EnumerateServices.js` veya `cscript EnumerateCustomObjects.js`.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

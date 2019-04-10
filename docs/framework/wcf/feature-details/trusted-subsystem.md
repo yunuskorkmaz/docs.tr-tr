@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319371"
 ---
 # <a name="trusted-subsystem"></a>Güvenilir Alt Sistem
 Bir istemci, bir ağ üzerinden dağıtılan bir veya daha fazla Web Hizmetleri erişir. Web Hizmetleri, Web hizmetinin uygulamadaki iş mantığının bu ek kaynaklara (örneğin, veritabanları veya diğer Web hizmetlerini) erişim kapsüllenir şekilde tasarlanmıştır. Bu kaynakların yetkisiz erişime karşı korunması gerekir. Aşağıdaki çizimde, bir güvenilir alt sistem işlemi gösterilmektedir.  
@@ -19,15 +19,15 @@ Bir istemci, bir ağ üzerinden dağıtılan bir veya daha fazla Web Hizmetleri 
   
  Aşağıdaki adımlarda gösterildiği gibi güvenilir alt sistem işlemi açıklanmaktadır:  
   
-1.  İstemci kimlik bilgileriyle birlikte güvenilir alt sistem için bir istek gönderir.  
+1. İstemci kimlik bilgileriyle birlikte güvenilir alt sistem için bir istek gönderir.  
   
-2.  Güvenilir alt sistem doğrular ve kullanıcıya yetki verir.  
+2. Güvenilir alt sistem doğrular ve kullanıcıya yetki verir.  
   
-3.  Güvenilir alt sistem uzak kaynak için bir istek iletisi gönderir. Bu istek, güvenilir alt sistem (veya hizmet hesabı altında güvenilir alt sistem işlemi yürütülmekte olduğu) için kimlik bilgilerini eşlik eder.  
+3. Güvenilir alt sistem uzak kaynak için bir istek iletisi gönderir. Bu istek, güvenilir alt sistem (veya hizmet hesabı altında güvenilir alt sistem işlemi yürütülmekte olduğu) için kimlik bilgilerini eşlik eder.  
   
-4.  Arka uç kaynak kimliğini doğrular ve güvenilir alt sistem yetkisi verir. İsteği işler ve güvenilir alt sistem yanıt verir.  
+4. Arka uç kaynak kimliğini doğrular ve güvenilir alt sistem yetkisi verir. İsteği işler ve güvenilir alt sistem yanıt verir.  
   
-5.  Güvenilir alt sistem yanıta işler ve istemciye kendi yanıt verir.  
+5. Güvenilir alt sistem yanıta işler ve istemciye kendi yanıt verir.  
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  

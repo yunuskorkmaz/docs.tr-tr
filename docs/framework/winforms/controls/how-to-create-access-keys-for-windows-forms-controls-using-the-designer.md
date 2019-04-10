@@ -15,12 +15,12 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-ms.openlocfilehash: 900a955173c28c7b86fce73e418561ed437719c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 410fc0134046c5fa7e05bfcd38ce6818244a0a54
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216931"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307879"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimleri için Erişim Tuşları Oluşturma
 Bir *erişim anahtarı* menü, menü öğesi ya da bir düğme gibi bir denetimin etiket metninin altı çizili karakterdir. Bunu, "bir düğme önceden tanımlanmış bir erişim anahtarı ile birlikte ALT tuşuna basarak tıklayın" kullanıcının sağlar. Örneğin, bir form yazdırma için bir yordam bir düğme çalıştırır ve bu nedenle kendi `Text` "P" neden harfin altı çizili "P" düğme metni çalışma zamanında harf önce "ve işareti ekleme Yazdır," (&) özelliğini ayarlayın. Kullanıcı, ilişkili düğme ALT + P tuşlarına basarak komut çalıştırabilirsiniz. Bir erişim anahtarı için alamayan bir denetim sahip olamaz.  
@@ -30,7 +30,7 @@ Bir *erişim anahtarı* menü, menü öğesi ya da bir düğme gibi bir denetimi
   
 ### <a name="to-create-an-access-key-for-a-control"></a>Bir denetim için erişim anahtarı oluşturmak için  
   
-1.  İçinde **özellikleri** penceresinde `Text` özellik erişim tuşu olacak harfi önce ve işareti içeren bir dize (&). Harfi "P" erişim anahtarı olarak ayarlamak için örneğin **& Yazdır** kılavuza.  
+1. İçinde **özellikleri** penceresinde `Text` özellik erişim tuşu olacak harfi önce ve işareti içeren bir dize (&). Harfi "P" erişim anahtarı olarak ayarlamak için örneğin **& Yazdır** kılavuza.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

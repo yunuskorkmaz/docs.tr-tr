@@ -8,12 +8,12 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c7a9d03ef60586e1162f088d662dfe44bbdcb591
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160114"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317239"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>Nasıl yapılır: MDI Alt Formlarını Düzenleme
 Genellikle, kutucuk, Cascade ve düzenleme, açık MDI alt formlarını yerleşimini denetleyen gibi eylemleri menü komutlarını uygulamanız olacak. Kullanabileceğiniz <xref:System.Windows.Forms.Form.LayoutMdi%2A> yöntemi biriyle <xref:System.Windows.Forms.MdiLayout> numaralandırma değerlerinden bir MDI alt formları yeniden düzenlemek için ana formu.  
@@ -24,7 +24,7 @@ Genellikle, kutucuk, Cascade ve düzenleme, açık MDI alt formlarını yerleşi
   
 ### <a name="to-arrange-child-forms"></a>Alt formlarını düzenlemek için  
   
-1.  Bir yöntem kullanmak <xref:System.Windows.Forms.Form.LayoutMdi%2A> ayarlanacak yöntemi <xref:System.Windows.Forms.MdiLayout> MDI üst formu için sabit listesi. Aşağıdaki örnekte <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> numaralandırma değeri MDI üst formunun alt pencereler için (`Form1`). Numaralandırma sırasında olay işleyicisi için kod içinde kullanılan <xref:System.Windows.Forms.Control.Click> olayı **Cascade Windows** menü öğesi.  
+1. Bir yöntem kullanmak <xref:System.Windows.Forms.Form.LayoutMdi%2A> ayarlanacak yöntemi <xref:System.Windows.Forms.MdiLayout> MDI üst formu için sabit listesi. Aşağıdaki örnekte <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> numaralandırma değeri MDI üst formunun alt pencereler için (`Form1`). Numaralandırma sırasında olay işleyicisi için kod içinde kullanılan <xref:System.Windows.Forms.Control.Click> olayı **Cascade Windows** menü öğesi.  
   
     ```vb  
     Protected Sub CascadeWindows_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)  
@@ -41,7 +41,7 @@ Genellikle, kutucuk, Cascade ve düzenleme, açık MDI alt formlarını yerleşi
     > [!NOTE]
     >  Ayrıca windows ve windows düzenleyerek simgeler olarak değiştirerek döşeme <xref:System.Windows.Forms.MdiLayout> numaralandırma değeri kullanılır.  
   
-2.  Visual kullanıyorsanız C#, formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.  
+2. Visual kullanıyorsanız C#, formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

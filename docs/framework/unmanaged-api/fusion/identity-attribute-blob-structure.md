@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314080"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB Yapısı
 Tek bir öznitelik bir derlemede hakkında bilgiler içerir ve üç oluşur `DWORD`s. Her `DWORD` bir uzaklık tarafından üretilen bir karakter arabelleğine `CurrentIntoBuffer` yöntemi [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) arabirimi  
@@ -49,13 +49,13 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 ## <a name="sample"></a>Örnek  
  Aşağıdaki örnekte, sonunda bir doldurulmuş neden birkaç temel adımları gösterilmektedir. `IDENTITY_ATTRIBUTE_BLOB` yapısı:  
   
-1.  Elde bir [Ireferenceıdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) derleme için.  
+1. Elde bir [Ireferenceıdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) derleme için.  
   
-2.  Çağrı `IReferenceIdentity::EnumAttributes` yöntemi ve bir [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
+2. Çağrı `IReferenceIdentity::EnumAttributes` yöntemi ve bir [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
   
-3.  Bir karakter arabelleği oluşturun ve olarak cast bir `IDENTITY_ATTRIBUTE_BLOB` yapısı.  
+3. Bir karakter arabelleği oluşturun ve olarak cast bir `IDENTITY_ATTRIBUTE_BLOB` yapısı.  
   
-4.  Çağrı `CurrentIntoBuffer` yöntemi `IEnumIDENTITY_ATTRIBUTE` arabirimi. Bu yöntem öznitelikleri kopyalar `Namespace`, `Name`, ve `Value` karakter arabelleğine. Bu dizelere üç uzaklık içinde kullanılabilir hale gelecektir `IDENTITY_ATTRIBUTE_BLOB` yapısı.  
+4. Çağrı `CurrentIntoBuffer` yöntemi `IEnumIDENTITY_ATTRIBUTE` arabirimi. Bu yöntem öznitelikleri kopyalar `Namespace`, `Name`, ve `Value` karakter arabelleğine. Bu dizelere üç uzaklık içinde kullanılabilir hale gelecektir `IDENTITY_ATTRIBUTE_BLOB` yapısı.  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  

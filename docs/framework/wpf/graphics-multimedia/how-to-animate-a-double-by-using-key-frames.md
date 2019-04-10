@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 33d567b1bb91060a5b0e1da67236a27815262474
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208791"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305591"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Çifte Animasyon Ekleme
 Bu örnek, alan bir özelliğin değerine animasyon ekleme işlemi gösterilmektedir bir <xref:System.Double> anahtar çerçeveler kullanarak.  
@@ -22,11 +22,11 @@ Bu örnek, alan bir özelliğin değerine animasyon ekleme işlemi gösterilmekt
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek bir dikdörtgen ekran boyunca taşır. Örnekte <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> animasyon uygulamak için sınıfı <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği bir <xref:System.Windows.Media.TranslateTransform> uygulanan bir <xref:System.Windows.Shapes.Rectangle>. Süresiz olarak yinelenen animasyon, üç anahtar çerçeveler aşağıdaki şekilde kullanır:  
   
-1.  İlk üç saniye boyunca bir örneği kullanan <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> yol dikdörtgen bir hızda başlangıç konumundan 500 konuma taşımak için sınıf. Gibi anahtar doğrusal çerçeveler <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> değerler arasında sorunsuz bir doğrusal geçişi oluşturun.  
+1. İlk üç saniye boyunca bir örneği kullanan <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> yol dikdörtgen bir hızda başlangıç konumundan 500 konuma taşımak için sınıf. Gibi anahtar doğrusal çerçeveler <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> değerler arasında sorunsuz bir doğrusal geçişi oluşturun.  
   
-2.  Dördüncü ikinci sonunda bir örneği kullanan <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> aniden dikdörtgen sonraki konuma taşımak için sınıf. Gibi ayrı anahtar çerçeveler <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> değerleri arasında ani atlamalar oluşturun. Bu örnekte, dikdörtgen başlangıç konumunda ve aniden 500 konumunda görünür.  
+2. Dördüncü ikinci sonunda bir örneği kullanan <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> aniden dikdörtgen sonraki konuma taşımak için sınıf. Gibi ayrı anahtar çerçeveler <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> değerleri arasında ani atlamalar oluşturun. Bu örnekte, dikdörtgen başlangıç konumunda ve aniden 500 konumunda görünür.  
   
-3.  Son iki saniye içinde bir örneği kullanan <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> rectangle geri başlangıç konumuna taşımak için sınıf. Eğri anahtar çercevesi ister <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> değerini göre değerler arasında değişken bir geçiş oluşturmak <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> özelliği. Bu örnekte, dikdörtgen yavaş taşıyarak başlar ve ardından katlanarak zaman diliminin sonuna doğru hızlandırır.  
+3. Son iki saniye içinde bir örneği kullanan <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> rectangle geri başlangıç konumuna taşımak için sınıf. Eğri anahtar çercevesi ister <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> değerini göre değerler arasında değişken bir geçiş oluşturmak <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> özelliği. Bu örnekte, dikdörtgen yavaş taşıyarak başlar ve ardından katlanarak zaman diliminin sonuna doğru hızlandırır.  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]

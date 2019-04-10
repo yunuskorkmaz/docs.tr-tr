@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207090"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295716"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static İşaretleme Uzantısı
 Tanımlanan herhangi bir statik değere göre kod varlığa başvuran bir [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– uyumlu şekilde. Başvurulan statik özelliği, XAML içinde bir özelliğinin değeri sağlamak için kullanılabilir.  
@@ -55,13 +55,13 @@ Yaptığınız kullanırken dikkatli `x:Static` doğrudan bir özelliğin değer
 
 Teknik olarak mümkün olan diğer iki XAML kullanımları vardır. Ancak, bu kullanımları gereksiz yere ayrıntılıdır oldukları için daha az yaygın olan:  
 
-1.  Nesne öğesi sözdizimi.
+1. Nesne öğesi sözdizimi.
 
     ```xaml
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-2.  Başlatma dizesi için açık bir üye özelliği ile söz dizimi özniteliği.
+2. Başlatma dizesi için açık bir üye özelliği ile söz dizimi özniteliği.
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />

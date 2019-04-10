@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11525c2a98ceee3115fe789dbb106347c0201ecd
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311961"
 ---
 # <a name="net-framework-tools"></a>.NET Framework Araçları
 .NET Framework araçları, .NET Framework'ü hedefleyen uygulamaları ve bileşenleri oluşturmayı, dağıtmayı ve yönetmeyi kolaylaştırmayı sağlar.  
   
-Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile otomatik olarak yüklenir. Visual Studio'yu indirmek için şurayı ziyaret edin [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) sayfası.
+Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile otomatik olarak yüklenir. Visual Studio'yu indirmek için şurayı ziyaret edin [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) sayfası.
   
  Derleme Önbelleği Görüntüleyicisi (Shfusion.dll) dışında komut satırından tüm araçları çalıştırabilirsiniz. Dosya Gezgini'nde Shfusion.dll'ye erişmeniz gerekir.  
   
@@ -29,7 +29,7 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
 >  Bazı araçlar, 32-bit bilgisayarlar veya 64-bit bilgisayarlar için özeldir. Bilgisayarınız için aracın uygun sürümünü çalıştırdığınızdan emin olun.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [Al.exe (Derleme Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  Modüller ya da kaynak dosyalarından derleme bildirimi içeren bir dosya oluşturur.  
   
  [Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)](../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
@@ -50,7 +50,7 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
  [CorFlags.exe (CorFlags Dönüştürme Aracı)](../../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)  
  Taşınabilir çalıştırılabilir (PE) görüntüsünün üstbilgisine ait CorFlags bölümünü yapılandırmanıza olanak sağlar.  
   
- [Fuslogvw.exe (Bütünleştirilmiş Kod Bağlaması Günlük Görüntüleyici)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)  
+ [Fuslogvw.exe (Derleme Bağlaması Günlük Görüntüleyici)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)  
  Derleme hakkında, .NET Framework'ün çalışma zamanında neden derlemeyi bulamadığını tanılamanıza yardımcı olacak bilgiler görüntüler.  
   
  [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
@@ -68,10 +68,10 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
  [Lc.exe (Lisans Derleyici)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
  Lisans bilgilerini içeren metin dosyalarını okur ve kaynak olarak bir ortak dil çalışma zamanı çalıştırılabilir dosyasının içinde katıştırılabilir bir .licenses dosyası oluşturur. Lisans bilgilerini içeren metin dosyalarını okur ve kaynak olarak bir ortak dil çalışma zamanı çalıştırılabilir dosyasının içinde katıştırılabilir bir .licenses dosyası oluşturur.  
   
- [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
+ [Mage.exe (Bildirim Üretme ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
  Uygulama ve dağıtım bildirimleri oluşturmanıza, düzenlemenize ve imzalamanıza olanak verir. Bir komut satırı aracı olarak Mage.exe, hem toplu betiklerden hem de ASP.NET uygulamaları dahil diğer Windows tabanlı uygulamalardan çalıştırılabilir.  
   
- [MageUI.exe (Bildirim Oluşturma ve Düzenleme Aracı, Grafik İstemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
+ [MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
  Komut satırı aracı Mage.exe ile aynı işlevselliği destekler, ancak Windows tabanlı bir kullanıcı arabirimi (UI) kullanır. Komut satırı aracı Mage.exe ile aynı işlevselliği destekler, ancak Windows tabanlı bir kullanıcı arabirimi (UI) kullanır.  
   
  [MDbg.exe (.NET Framework Komut Satırı Hata Ayıklayıcı)](../../../docs/framework/tools/mdbg-exe.md)  
@@ -129,7 +129,7 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
  Windows Forms tarafından kullanılan kullanıcı arabirimi (UI) kaynaklarını (.resx veya .resources dosyaları) yerelleştirmenize yardımcı olur. Dizeleri çevirebilir ve ardından yerelleştirilmiş dizeleri içerecek şekilde denetimleri boyutlandırabilir, taşıyabilir ve gizleyebilirsiniz.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [WPF araçları](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
+ [WPF Araçları](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
  İsXPS Conformance Aracı (isXPS.exe) ve profil oluşturma araçları performans gibi araçlar içerir.  
   
  [Windows Communication Foundation Araçları](../../../docs/framework/wcf/tools.md)  

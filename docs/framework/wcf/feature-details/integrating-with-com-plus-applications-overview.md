@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153250"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328731"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ Uygulamaları ile Tümleştirme Genel Bakış
 Windows Communication Foundation (WCF) dağıtılmış uygulamalar oluşturmak için zengin bir ortam sağlar. COM +'da barındırılan bir bileşen tabanlı uygulama mantığı zaten kullanıyorsanız, WCF, yeniden yazmak zorunda kalmadan yerine mevcut mantığınızı genişletmek için de kullanabilirsiniz. Mevcut COM + veya Enterprise Hizmetleri iş mantığı Web Hizmetleri aracılığıyla kullanıma sunmak istediğiniz, ortak bir senaryodur.  
@@ -36,13 +36,13 @@ Windows Communication Foundation (WCF) dağıtılmış uygulamalar oluşturmak i
   
  Aşağıdaki adımlar, bir COM + bileşenin arabirimi bileşen değiştirmeden, bir Web hizmeti olarak kullanıma sunmak için gereklidir:  
   
-1.  COM + bileşenin arabirimi bir Web hizmeti olarak kullanıma sunulabilecek olup olmadığını belirler.  
+1. COM + bileşenin arabirimi bir Web hizmeti olarak kullanıma sunulabilecek olup olmadığını belirler.  
   
-2.  Uygun bir barındırma modunu seçin.  
+2. Uygun bir barındırma modunu seçin.  
   
-3.  COM + hizmet modeli Yapılandırma Aracı (ComSvcConfig.exe) arabirimi için bir Web hizmeti eklemek için kullanın. ComSvcConfig.exe kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: COM + hizmet modeli yapılandırma aracı kullanın](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3. COM + hizmet modeli Yapılandırma Aracı (ComSvcConfig.exe) arabirimi için bir Web hizmeti eklemek için kullanın. ComSvcConfig.exe kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: COM + hizmet modeli yapılandırma aracı kullanın](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
-4.  Uygulama yapılandırma dosyasında herhangi bir ek hizmet ayarı yapılandırın. Bir bileşen yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4. Uygulama yapılandırma dosyasında herhangi bir ek hizmet ayarı yapılandırın. Bir bileşen yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Desteklenen arabirimi  
  Bir Web hizmeti olarak kullanıma sunulabilir arabirimleri türüyle ilgili bazı kısıtlamalar vardır. Aşağıdaki türde arabirimler desteklenmez:  

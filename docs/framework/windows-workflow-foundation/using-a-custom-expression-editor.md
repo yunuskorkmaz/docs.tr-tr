@@ -2,12 +2,12 @@
 title: Özel İfade Düzenleyicisi Kullanma
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101282"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314093"
 ---
 # <a name="using-a-custom-expression-editor"></a>Özel İfade Düzenleyicisi Kullanma
 Özel ifade düzenleyicisini düzenleme deneyimi daha zengin ya da daha basit bir ifade sağlamak üzere uygulanabilir. Özel ifade düzenleyicisini kullanma isteyebilirsiniz birçok senaryo vardır:  
@@ -18,11 +18,11 @@ ms.locfileid: "59101282"
   
  Özel ifade düzenleyicisini uygulamak için üç temel adımlar gerekir:  
   
-1.  <xref:System.Activities.Presentation.View.IExpressionEditorService> arabirimini gerçekleştirin. Bu arabirim, oluşturulmasını ve ifade Düzenleyicisi yok edilmesini yönetir.  
+1. <xref:System.Activities.Presentation.View.IExpressionEditorService> arabirimini gerçekleştirin. Bu arabirim, oluşturulmasını ve ifade Düzenleyicisi yok edilmesini yönetir.  
   
-2.  <xref:System.Activities.Presentation.View.IExpressionEditorInstance> arabirimini gerçekleştirin. Bu arabirim, düzenleme UI'si ifadesi için kullanıcı arabirimini uygular.  
+2. <xref:System.Activities.Presentation.View.IExpressionEditorInstance> arabirimini gerçekleştirin. Bu arabirim, düzenleme UI'si ifadesi için kullanıcı arabirimini uygular.  
   
-3.  Yayımlama <xref:System.Activities.Presentation.View.IExpressionEditorService> yeniden barındırılan iş akışı uygulamanızdaki.  
+3. Yayımlama <xref:System.Activities.Presentation.View.IExpressionEditorService> yeniden barındırılan iş akışı uygulamanızdaki.  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Özel ifade Düzenleyicisi uygulayan bir sınıf kitaplığında  
  (Kavram kanıtı) kod örneği aşağıdadır `MyEditorService` uygulayan sınıf <xref:System.Activities.Presentation.View.IExpressionEditorService> arabirimi MyExpressionEditorService kitaplığı projesinde yer alan.  

@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211991"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319904"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Nasıl yapılır: Windows Forms CheckBox Tıklamalarına Yanıt Verme
 Her bir kullanıcı bir Windows Forms tıkladığında <xref:System.Windows.Forms.CheckBox> denetimi <xref:System.Windows.Forms.Control.Click> olayı oluşur. Onay kutusunun durumunu olarak bazı eylemleri gerçekleştirmek için uygulamanızı programlayabilirsiniz.  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>CheckBox tıklamalarına yanıt verme için  
   
-1.  İçinde <xref:System.Windows.Forms.Control.Click> olay işleyicisi, kullanım <xref:System.Windows.Forms.CheckBox.Checked%2A> denetimin durumunu belirlemek ve gerekli herhangi bir eylemi gerçekleştirmek için özellik.  
+1. İçinde <xref:System.Windows.Forms.Control.Click> olay işleyicisi, kullanım <xref:System.Windows.Forms.CheckBox.Checked%2A> denetimin durumunu belirlemek ve gerekli herhangi bir eylemi gerçekleştirmek için özellik.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -80,7 +80,7 @@ Her bir kullanıcı bir Windows Forms tıkladığında <xref:System.Windows.Form
   
 ### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Bir eylemi bir onay kutusu seçildiğinde belirlemek için tıklandı  
   
-1.  Case deyimi değerini sorgulamanıza <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliğini bir eyleme belirlemek için. Zaman <xref:System.Windows.Forms.CheckBox.ThreeState%2A> özelliği `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliği, kutunun denetlenen temsil eder ve üç olası değer döndürebilir kutusu görüntülenir kutusu denetlenmeyen durdurulmasını veya üçüncü belirlenmemiş duruma sahip bir devre dışı Görünüm seçeneğini belirtmek için kullanılamaz.  
+1. Case deyimi değerini sorgulamanıza <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliğini bir eyleme belirlemek için. Zaman <xref:System.Windows.Forms.CheckBox.ThreeState%2A> özelliği `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> özelliği, kutunun denetlenen temsil eder ve üç olası değer döndürebilir kutusu görüntülenir kutusu denetlenmeyen durdurulmasını veya üçüncü belirlenmemiş duruma sahip bir devre dışı Görünüm seçeneğini belirtmek için kullanılamaz.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837510"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316628"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Nasıl yapılır: Bir yordam bağımsız değişkeninin (Visual Basic) değerini değiştirme
 Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken yordamda tanımlanan parametrelerin birine karşılık gelir. Bazı durumlarda çağıran koddaki bağımsız değişken temel değer yordamının kodunu değiştirebilirsiniz. Diğer durumlarda, yordam bir bağımsız değişken yalnızca yerel kopyasına değiştirebilirsiniz.  
@@ -31,13 +31,13 @@ Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken
   
 #### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>Temel alınan çağıran koddaki bir yordam bağımsız değişkeninin değerini değiştirmek için  
   
-1.  Yordam bildiriminde belirtin [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) için argument'ine karşılık gelen parametre.  
+1. Yordam bildiriminde belirtin [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) için argument'ine karşılık gelen parametre.  
   
-2.  Çağıran kod içinde değiştirilebilir bir programlama öğesine bağımsız değişken olarak geçirin.  
+2. Çağıran kod içinde değiştirilebilir bir programlama öğesine bağımsız değişken olarak geçirin.  
   
-3.  Çağıran kod içinde bağımsız değişken bağımsız değişken listesinde parantez içine almayın.  
+3. Çağıran kod içinde bağımsız değişken bağımsız değişken listesinde parantez içine almayın.  
   
-4.  Yordam kodunda parametre adı çağıran koddaki temel öğeye bir değer atamak için kullanın.  
+4. Yordam kodunda parametre adı çağıran koddaki temel öğeye bir değer atamak için kullanın.  
   
  Örnek görmek için bir tanıtım daha ilerisine.  
   
@@ -46,13 +46,13 @@ Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken
   
 #### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>Yordam kodunda bir yordam bağımsız değişkeninin kopyasını değiştirmek için  
   
-1.  Yordam bildiriminde belirtin [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) için argument'ine karşılık gelen parametre.  
+1. Yordam bildiriminde belirtin [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) için argument'ine karşılık gelen parametre.  
   
-     veya  
+     -veya-  
   
      Çağıran kod içinde bağımsız değişken bağımsız değişken listesinde parantez içinde alın. Karşılık gelen parametre belirtse dahi, bu bağımsız değişkeni değere göre geçirilecek Visual Basic zorlar `ByRef`.  
   
-2.  Yordam kodunda parametre adı bağımsız değişkeni bir yerel kopyasını için bir değer atamak için kullanın. Temeldeki değeri çağıran koddaki değiştirilmez.  
+2. Yordam kodunda parametre adı bağımsız değişkeni bir yerel kopyasını için bir değer atamak için kullanın. Temeldeki değeri çağıran koddaki değiştirilmez.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir dizi değişkenini alabilir ve çalışan iki yordamı öğeleri üzerinde gösterir. `increase` Yordamı yalnızca ekler her öğe için. `replace` Yordamı yeni bir dizi parametresine atar `a()` ve sonra her öğeye ekler.  
@@ -81,11 +81,11 @@ Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken
 
 - [Yordamlar](./index.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)
+- [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)
 - [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
 - [Değiştirilebilir ve Değiştirilemez Bağımsız Değişkenler Arasındaki Farklar](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [Değere ve Başvuruya Göre Bağımsız Değişken Geçirme Arasındaki Farklar](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Nasıl yapılır: Bir yordam bağımsız değişkenini değer değişikliklerine karşı koruma](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Nasıl yapılır: Bağımsız değişkeni değere göre geçirilecek şekilde zorlama](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Nasıl yapılır: Bir Yordam Bağımsız Değişkenini Değer Değişikliklerine Karşı Koruma](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Nasıl yapılır: Bağımsız Değişkeni Değere Göre Geçirilecek Şekilde Zorlama](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](./passing-arguments-by-position-and-by-name.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

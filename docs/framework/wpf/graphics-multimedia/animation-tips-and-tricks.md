@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202150"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295958"
 ---
 # <a name="animation-tips-and-tricks"></a>Animasyon İpuçları ve Püf Noktaları
 İçinde animasyon ile çalışırken [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], birkaç ipucu vardır ve animasyonlarınızın püf noktaları daha iyi performans ve yükünden kurtarın.  
@@ -71,9 +71,9 @@ ms.locfileid: "59202150"
   
  İlk İkinci düğmeye tıklarsanız <xref:System.Windows.Media.Animation.Storyboard> olduğundan yürütme, aşağıdaki davranış bekleyebilirsiniz:  
   
-1.  İlk film şeridi sona erer ve animasyon olduğundan dikdörtgeni özgün konumuna geri gönderir. bir <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> , <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
+1. İlk film şeridi sona erer ve animasyon olduğundan dikdörtgeni özgün konumuna geri gönderir. bir <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> , <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
   
-2.  İkinci film şeridi etkili olur ve artık geçerli konumundan canlandırır 500 0.  
+2. İkinci film şeridi etkili olur ve artık geçerli konumundan canlandırır 500 0.  
   
  **Ancak neler değil.** Bunun yerine, rectangle geri dönmez; sağa doğru ilerlendiğinde devam eder. Bunun nedeni, ikinci animasyonun başlangıç değeri geçerli değerin ilk animasyonun kullanır ve bu değeri 500'e canlandırır olmasıdır. Ne zaman ikinci animasyon değiştirir ilk çünkü <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> kullanılan <xref:System.Windows.Media.Animation.FillBehavior> ilk animasyon önemli değildir.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212095"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317900"
 ---
 # <a name="how-to-validate-application-settings"></a>Nasıl yapılır: Uygulama Ayarlarını Doğrulama
 Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.  
@@ -78,7 +78,7 @@ Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Bir ayarı değiştirirken uygulama ayarlarını doğrulamak için  
   
-1.  Eğer bir C# geliştirici, form veya Denetim `Load` olayı için bir olay işleyicisi ekleme <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> olay.  
+1. Eğer bir C# geliştirici, form veya Denetim `Load` olayı için bir olay işleyicisi ekleme <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> olay.  
   
      -veya-  
   
@@ -97,7 +97,7 @@ Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.
     End Sub   
     ```  
   
-2.  Olay işleyicisi tanımlama ve içinde sınır doğum tarihi denetimi gerçekleştirmek için kod yazın.  
+2. Olay işleyicisi tanımlama ve içinde sınır doğum tarihi denetimi gerçekleştirmek için kod yazın.  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -126,7 +126,7 @@ Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.
   
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>Kaydetme, uygulama ayarlarını doğrulamak için gerçekleşir.  
   
-1.  Form veya Denetim `Load` olayı için olay işleyicisi eklemek <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> olay.  
+1. Form veya Denetim `Load` olayı için olay işleyicisi eklemek <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> olay.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -141,7 +141,7 @@ Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.
     End Sub  
     ```  
   
-2.  Olay işleyicisi tanımlama ve içinde sınır doğum tarihi denetimi gerçekleştirmek için kod yazın.  
+2. Olay işleyicisi tanımlama ve içinde sınır doğum tarihi denetimi gerçekleştirmek için kod yazın.  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  

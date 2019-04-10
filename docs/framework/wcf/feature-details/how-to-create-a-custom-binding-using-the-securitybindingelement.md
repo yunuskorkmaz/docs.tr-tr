@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: f25d590442e789f6e7197e6b4b33c817a4dc8d78
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175597"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316810"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma
 Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik sağlamaz, WCF destekleyen tüm güvenlik seçeneklerini yapılandırırken birçok sistem tarafından sağlanan bağlamalar içerir. Bu konu, tek tek bağlama öğelerini doğrudan özel bağlama oluşturma işlemini gösterir ve böyle bir bağlamanın oluştururken belirttiğiniz güvenlik ayarlarından bazıları vurgular. Özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -83,19 +83,19 @@ Windows Communication Foundation (WCF) yapılandırılabilir, ancak tam esneklik
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>SymmetricSecurityBindingElement kullanan özel bağlama oluşturma  
   
-1.  Bir örneğini oluşturmak <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı adıyla `outputBec`.  
+1. Bir örneğini oluşturmak <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı adıyla `outputBec`.  
   
-2.  Statik metodunu çağırın `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, örneğini döndüren <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> sınıfı.  
+2. Statik metodunu çağırın `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, örneğini döndüren <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> sınıfı.  
   
-3.  Ekleme <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> koleksiyona (`outputBec`) çağırarak `Add` yöntemi <xref:System.Collections.ObjectModel.Collection%601> , <xref:System.ServiceModel.Channels.BindingElement> sınıfı.  
+3. Ekleme <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> koleksiyona (`outputBec`) çağırarak `Add` yöntemi <xref:System.Collections.ObjectModel.Collection%601> , <xref:System.ServiceModel.Channels.BindingElement> sınıfı.  
   
-4.  Bir örneğini oluşturmak <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> sınıfı ve koleksiyona eklemek (`outputBec`). Bu bağlama tarafından kullanılan kodlamayı belirtir.  
+4. Bir örneğini oluşturmak <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> sınıfı ve koleksiyona eklemek (`outputBec`). Bu bağlama tarafından kullanılan kodlamayı belirtir.  
   
-5.  Oluşturma bir <xref:System.ServiceModel.Channels.HttpTransportBindingElement> ve koleksiyona eklemek (`outputBec`). Bu, bağlama HTTP aktarımı kullandığını belirtir.  
+5. Oluşturma bir <xref:System.ServiceModel.Channels.HttpTransportBindingElement> ve koleksiyona eklemek (`outputBec`). Bu, bağlama HTTP aktarımı kullandığını belirtir.  
   
-6.  Bir örneğini oluşturarak yeni özel bağlama oluşturma <xref:System.ServiceModel.Channels.CustomBinding> sınıfı ve koleksiyonu geçirme `outputBec` Oluşturucusu.  
+6. Bir örneğini oluşturarak yeni özel bağlama oluşturma <xref:System.ServiceModel.Channels.CustomBinding> sınıfı ve koleksiyonu geçirme `outputBec` Oluşturucusu.  
   
-7.  Sonuçta elde edilen özel bağlama birçok standart olarak aynı özellikleri paylaşır <xref:System.ServiceModel.WSHttpBinding>. Bu ileti düzeyi güvenliği ve Windows kimlik bilgilerini belirtir, ancak güvenli oturumlarını devre dışı bırakır, belirtilen-bant, hizmet kimlik bilgisi gerektirir ve imzalar şifrelemez. Yalnızca ayarlayarak son denetlenebilir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> adım 4'te gösterildiği gibi özelliği. Diğer iki standart bağlama üzerinde ayarları kullanılarak denetlenebilir.  
+7. Sonuçta elde edilen özel bağlama birçok standart olarak aynı özellikleri paylaşır <xref:System.ServiceModel.WSHttpBinding>. Bu ileti düzeyi güvenliği ve Windows kimlik bilgilerini belirtir, ancak güvenli oturumlarını devre dışı bırakır, belirtilen-bant, hizmet kimlik bilgisi gerektirir ve imzalar şifrelemez. Yalnızca ayarlayarak son denetlenebilir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> adım 4'te gösterildiği gibi özelliği. Diğer iki standart bağlama üzerinde ayarları kullanılarak denetlenebilir.  
   
 ## <a name="example"></a>Örnek  
   

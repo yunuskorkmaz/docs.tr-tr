@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: c49d28f42dec311d4a0c35a7115b00d989411358
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073721"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313599"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>Bir ASP.NET Uygulamasında SqlDependency
 Bu bölümdeki örnek nasıl kullanılacağını gösterir <xref:System.Data.SqlClient.SqlDependency> ASP.NET yararlanarak dolaylı olarak <xref:System.Web.Caching.SqlCacheDependency> nesne. <xref:System.Web.Caching.SqlCacheDependency> Nesnesini kullanan bir <xref:System.Data.SqlClient.SqlDependency> bildirimlerini dinlemek ve doğru şekilde önbelleği güncelleştirmek için.  
@@ -24,11 +24,11 @@ Bu bölümdeki örnek nasıl kullanılacağını gösterir <xref:System.Data.Sql
 ## <a name="creating-the-sample-application"></a>Örnek uygulamayı oluşturma  
  Oluşturun ve örnek uygulamayı çalıştırmak için aşağıdaki adımları izleyin:  
   
-1.  Yeni bir ASP.NET Web sitesi oluşturun.  
+1. Yeni bir ASP.NET Web sitesi oluşturun.  
   
-2.  Ekleme bir <xref:System.Web.UI.WebControls.Label> ve <xref:System.Web.UI.WebControls.GridView> Default.aspx sayfasında denetimi.  
+2. Ekleme bir <xref:System.Web.UI.WebControls.Label> ve <xref:System.Web.UI.WebControls.GridView> Default.aspx sayfasında denetimi.  
   
-3.  Sayfanın sınıf modülü açın ve aşağıdaki yönergelerini ekleyin:  
+3. Sayfanın sınıf modülü açın ve aşağıdaki yönergelerini ekleyin:  
   
     ```vb  
     Option Strict On  
@@ -42,12 +42,12 @@ Bu bölümdeki örnek nasıl kullanılacağını gösterir <xref:System.Data.Sql
     using System.Web.Caching;  
     ```  
   
-4.  Sayfanın içinde aşağıdaki kodu ekleyin `Page_Load` olay:  
+4. Sayfanın içinde aşağıdaki kodu ekleyin `Page_Load` olay:  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  İki yardımcı yöntemler ekler `GetConnectionString` ve `GetSQL`. Tanımlanan bağlantı dizesi tümleşik güvenliği kullanır. Kullandığınız hesabın gerekli veritabanı izinleri olduğunu doğrulamak ihtiyacınız olacak örnek veritabanını **AdventureWorks**, etkin bildirim yok.
+5. İki yardımcı yöntemler ekler `GetConnectionString` ve `GetSQL`. Tanımlanan bağlantı dizesi tümleşik güvenliği kullanır. Kullandığınız hesabın gerekli veritabanı izinleri olduğunu doğrulamak ihtiyacınız olacak örnek veritabanını **AdventureWorks**, etkin bildirim yok.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

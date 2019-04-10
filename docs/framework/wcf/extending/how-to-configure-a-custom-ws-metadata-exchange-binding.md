@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: ab659e7e586b28f5c06b9b6ba12b313f318c6542
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 51681e258e6a21b3a7ae604d1c0ef65d320bfb4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210509"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311883"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Nasıl yapılır: Özel Bir WS-Metadata Değişimi Bağlaması Yapılandırma
 Bu konu, özel bir WS-Metadata yapılandırma açıklayacak değişimi bağlaması. Windows Communication Foundation (WCF) dört sistem tarafından tanımlanan meta veri bağlamaları içerir, ancak meta veriler, istediğiniz herhangi bir bağlamayı kullanarak yayımlayabilirsiniz. Bu konuda, meta verileri kullanarak yayımlamak nasıl gösterilecektir `wsHttpBinding`. Bu bağlama, güvenli bir şekilde meta verileri kullanıma sunduğundan seçeneği sunar. Bu makalede kod dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Yapılandırma dosyası kullanma  
   
-1.  Hizmet yapılandırma dosyasında içeren bir hizmet davranışını ekleyin `serviceMetadata` etiketi:  
+1. Hizmet yapılandırma dosyasında içeren bir hizmet davranışını ekleyin `serviceMetadata` etiketi:  
   
     ```xml  
     <behaviors>  
@@ -29,14 +29,14 @@ Bu konu, özel bir WS-Metadata yapılandırma açıklayacak değişimi bağlamas
     </behaviors>  
     ```  
   
-2.  Ekleme bir `behaviorConfiguration` özniteliği bu yeni davranış başvuran hizmet etiketi:  
+2. Ekleme bir `behaviorConfiguration` özniteliği bu yeni davranış başvuran hizmet etiketi:  
   
     ```xml  
     <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
     behaviorConfiguration="CalculatorServiceBehavior">   
     ```  
   
-3.  MEX adres olarak belirten bir meta veri uç noktası ekleme `wsHttpBinding` bağlama olarak ve <xref:System.ServiceModel.Description.IMetadataExchange> Sözleşme:  
+3. MEX adres olarak belirten bir meta veri uç noktası ekleme `wsHttpBinding` bağlama olarak ve <xref:System.ServiceModel.Description.IMetadataExchange> Sözleşme:  
   
     ```xml  
     <endpoint address="mex"  
@@ -44,7 +44,7 @@ Bu konu, özel bir WS-Metadata yapılandırma açıklayacak değişimi bağlamas
               contract="IMetadataExchange" />  
     ```  
   
-4.  Meta veri değişimi uç noktası olduğunu doğrulamak için çalışma doğru bir uç nokta etiket eklemede istemci yapılandırma dosyasında:  
+4. Meta veri değişimi uç noktası olduğunu doğrulamak için çalışma doğru bir uç nokta etiket eklemede istemci yapılandırma dosyasında:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -52,7 +52,7 @@ Bu konu, özel bir WS-Metadata yapılandırma açıklayacak değişimi bağlamas
               contract="IMetadataExchange"/>  
     ```  
   
-5.  Yeni bir istemcinin Main() yöntemi oluşturma <xref:System.ServiceModel.Description.MetadataExchangeClient> örnek olarak ayarlayın, <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> özelliğini `true`, çağrı <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> ve ardından döndürülen meta verileri koleksiyonu yineleme:  
+5. Yeni bir istemcinin Main() yöntemi oluşturma <xref:System.ServiceModel.Description.MetadataExchangeClient> örnek olarak ayarlayın, <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> özelliğini `true`, çağrı <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> ve ardından döndürülen meta verileri koleksiyonu yineleme:  
   
     ```  
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
@@ -66,19 +66,19 @@ Bu konu, özel bir WS-Metadata yapılandırma açıklayacak değişimi bağlamas
   
 ### <a name="configuring-by-code"></a>Kod ile yapılandırma  
   
-1.  Oluşturma bir <xref:System.ServiceModel.WSHttpBinding> bağlama örneği:  
+1. Oluşturma bir <xref:System.ServiceModel.WSHttpBinding> bağlama örneği:  
   
     ```  
     WSHttpBinding binding = new WSHttpBinding();  
     ```  
   
-2.  Oluşturma bir <xref:System.ServiceModel.ServiceHost> örneği:  
+2. Oluşturma bir <xref:System.ServiceModel.ServiceHost> örneği:  
   
     ```  
     ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress);  
     ```  
   
-3.  Hizmet uç noktası ekleme ve ekleme bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> örneği:  
+3. Hizmet uç noktası ekleme ve ekleme bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> örneği:  
   
     ```  
     serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, baseAddress);  
@@ -87,13 +87,13 @@ Bu konu, özel bir WS-Metadata yapılandırma açıklayacak değişimi bağlamas
     serviceHost.Description.Behaviors.Add(smb);  
     ```  
   
-4.  Meta veri değişimi uç noktası ekleme belirtme <xref:System.ServiceModel.WSHttpBinding> daha önce oluşturulan:  
+4. Meta veri değişimi uç noktası ekleme belirtme <xref:System.ServiceModel.WSHttpBinding> daha önce oluşturulan:  
   
     ```  
     serviceHost.AddServiceEndpoint(typeof(IMetadataExchange), binding, mexAddress);  
     ```  
   
-5.  Meta veri değişimi uç noktası düzgün çalıştığını doğrulamak için istemci yapılandırma dosyasında bir bitiş etiketi ekleyin:  
+5. Meta veri değişimi uç noktası düzgün çalıştığını doğrulamak için istemci yapılandırma dosyasında bir bitiş etiketi ekleyin:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -101,7 +101,7 @@ Bu konu, özel bir WS-Metadata yapılandırma açıklayacak değişimi bağlamas
               contract="IMetadataExchange"/>  
     ```  
   
-6.  Yeni bir istemcinin Main() yöntemi oluşturma <xref:System.ServiceModel.Description.MetadataExchangeClient> örnek olarak ayarlayın <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> özelliğini `true`, çağrı <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> ve ardından döndürülen meta verileri koleksiyonu yineleme:  
+6. Yeni bir istemcinin Main() yöntemi oluşturma <xref:System.ServiceModel.Description.MetadataExchangeClient> örnek olarak ayarlayın <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> özelliğini `true`, çağrı <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> ve ardından döndürülen meta verileri koleksiyonu yineleme:  
   
     ```  
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191594"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316745"
 ---
 # <a name="key-frame-animations-overview"></a>Anahtar-Çerçeve Animasyonlara Genel Bakış
 Bu konu, anahtar-çerçeve animasyonlara tanıtır. Anahtar-çerçeve animasyonlara ikiden fazla hedef değerleri kullanarak animasyon olanak sağlar ve animasyonun ilişkilendirme metodunu denetleyebilirsiniz.  
@@ -259,9 +259,9 @@ Anahtar eğrisi denetim noktası kullanma (0.25, 0,5) ve (0,75, 1.0)
   
  Aşağıdaki listede, anahtar zaman bir anahtar-çerçeve animasyonun anahtar çercevesi için çözümlendiği yordamı açıklar.  
   
-1.  Çözmek <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
+1. Çözmek <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
   
-2.  Animasyonun belirlemek *toplam ilişkilendirme süre*, anahtar çerçeve animasyonu yineleme tamamlamak için gereken toplam süreyi.  
+2. Animasyonun belirlemek *toplam ilişkilendirme süre*, anahtar çerçeve animasyonu yineleme tamamlamak için gereken toplam süreyi.  
   
     1.  Animasyonun <xref:System.Windows.Media.Animation.Timeline.Duration%2A> değil <xref:System.Windows.Duration.Automatic%2A> veya <xref:System.Windows.Duration.Forever%2A>, toplam ilişkilendirme zaman animasyonun değeri <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliği.  
   
@@ -269,19 +269,19 @@ Anahtar eğrisi denetim noktası kullanma (0.25, 0,5) ve (0,75, 1.0)
   
     3.  Aksi takdirde, toplam ilişkilendirme süresi 1 saniye arasındadır.  
   
-3.  Çözümlemek için toplam ilişkilendirme zaman değerini kullanmak <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
+3. Çözümlemek için toplam ilişkilendirme zaman değerini kullanmak <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
   
-4.  Önceki adımlarda zaten çözülmüş değil ise son anahtar çerçeve çözümleyin. Varsa <xref:System.Windows.Media.Animation.KeyTime> sonuncusuna anahtar çerçevesi olan <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> veya <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, kendi çözülmüş zamanı toplam ilişkilendirme zamanına eşit olacaktır.  
+4. Önceki adımlarda zaten çözülmüş değil ise son anahtar çerçeve çözümleyin. Varsa <xref:System.Windows.Media.Animation.KeyTime> sonuncusuna anahtar çerçevesi olan <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> veya <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, kendi çözülmüş zamanı toplam ilişkilendirme zamanına eşit olacaktır.  
   
      Varsa <xref:System.Windows.Media.Animation.KeyTime> ilk anahtar çerçevenin <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> ve bu animasyonu sahip birden fazla anahtar kasalarına çözümlemek, <xref:System.Windows.Media.Animation.KeyTime> yalnızca bir anahtar kare ise; sıfır değeri ve <xref:System.Windows.Media.Animation.KeyTime> değer <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, toplam çözümlenmiş olmasından ilişkilendirme süresi, önceki adımda açıklandığı gibi.  
   
-5.  Kalan çözmek <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> değerleri: her süreden eşit bir pay verilir.  Bu işlem sırasında çözümlenmemiş <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> değerleri geçici olarak kabul edilir <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> değerleri ve geçici olarak çözümlenen zamanı alın.  
+5. Kalan çözmek <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> değerleri: her süreden eşit bir pay verilir.  Bu işlem sırasında çözümlenmemiş <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> değerleri geçici olarak kabul edilir <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> değerleri ve geçici olarak çözümlenen zamanı alın.  
   
-6.  Çözmek <xref:System.Windows.Media.Animation.KeyTime> anahtar çerçeveler ile değerlerini çözdükten anahtar çerçeveler bunları en yakın bildirilen kullanarak anahtar zaman belirtilmeyen <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
+6. Çözmek <xref:System.Windows.Media.Animation.KeyTime> anahtar çerçeveler ile değerlerini çözdükten anahtar çerçeveler bunları en yakın bildirilen kullanarak anahtar zaman belirtilmeyen <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
   
-7.  Kalan çözmek <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> değerleri. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> kullanma <xref:System.Windows.Media.Animation.KeyTime> anahtar komşu değerleri kullanarak çözümlenmiş zamanı belirlemek için çerçeve.  Animasyonun hızı anahtar bu çerçevenin çözümlenmiş zamanı çevresinde sabit olduğundan emin olmaktır.  
+7. Kalan çözmek <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> değerleri. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> kullanma <xref:System.Windows.Media.Animation.KeyTime> anahtar komşu değerleri kullanarak çözümlenmiş zamanı belirlemek için çerçeve.  Animasyonun hızı anahtar bu çerçevenin çözümlenmiş zamanı çevresinde sabit olduğundan emin olmaktır.  
   
-8.  Anahtar çerçeveler sırayla çözülen süre (birincil anahtar) ve sırasının bildirim (ikincil anahtarı), yani sıralama, çözümlenmiş anahtar çerçevesi tabanlı kullanma tutarlı bir sıralama <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
+8. Anahtar çerçeveler sırayla çözülen süre (birincil anahtar) ve sırasının bildirim (ikincil anahtarı), yani sıralama, çözümlenmiş anahtar çerçevesi tabanlı kullanma tutarlı bir sıralama <xref:System.Windows.Media.Animation.KeyTime> değerleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

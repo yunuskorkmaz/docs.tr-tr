@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0219699a7369b3c1fe3fd92caa68a80eef235c2e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329524"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Derleme Bağlaması Günlük Görüntüleyici)
 Derleme Bağlama Kayıt Günlüğü Görüntüleyici derleme bağlamalar için ayrıntıları görüntüler. Bu bilgiler .NET Framework'ün çalışma zamanında niye bir derlemeyi bulamadığını tanılamanıza yardımcı olur. Bu hatalar genellikle derlemenin yanlış yere yayınlanması sonucudur, geçerli olmayan yerel bir resim veya kültürlerin uyuşmayan bir sürüm numarası. Genellikle bir derlemeyi bulmak için ortak dil çalışma zamanının başarısızlığı olarak görünür bir <xref:System.TypeLoadException> uygulamanızdaki.  
@@ -36,18 +36,18 @@ fuslogvw
   
 ### <a name="to-change-the-log-location-view"></a>Günlük konum görünümünü değiştirmek için  
   
-1.  Seçin **varsayılan** tüm uygulama türleri için bağlama başarısızlıklarını görmek için seçenek düğmesini. Varsayılan olarak, wininet önbelleğinde disk üzerinde her kullanıcı dizini içinde günlük kayıtları depolanır.  
+1. Seçin **varsayılan** tüm uygulama türleri için bağlama başarısızlıklarını görmek için seçenek düğmesini. Varsayılan olarak, wininet önbelleğinde disk üzerinde her kullanıcı dizini içinde günlük kayıtları depolanır.  
   
-2.  Seçin **özel** belirttiğiniz özel bir dizinde bağlama başarısızlıklarını görmek için seçenek düğmesini. Özel Günlük konumu ayarlayarak günlükleri depolamak için çalışma zamanı istediğiniz özel bir konum belirtmeniz gerekir **günlük ayarları** iletişim kutusuna geçerli bir dizin adı. Dizin temiz olmalıdır ve sadece çalışma zamanının oluşturduğu dosyaları içermelidir. Eğer günlüğe kaydedilecek hata üreten bir çalıştırılabilir dosya içeriyorsa, başarısızlık günlüğe kaydedilmeyecek çünkü araç çalıştırılabilir olanla aynı isimde bir dizin yaratmaya çalışacaktır. Buna ek olarak, bir yürütülebilir çalıştırma denemesi bu günlük konumunda başarısız olur.  
+2. Seçin **özel** belirttiğiniz özel bir dizinde bağlama başarısızlıklarını görmek için seçenek düğmesini. Özel Günlük konumu ayarlayarak günlükleri depolamak için çalışma zamanı istediğiniz özel bir konum belirtmeniz gerekir **günlük ayarları** iletişim kutusuna geçerli bir dizin adı. Dizin temiz olmalıdır ve sadece çalışma zamanının oluşturduğu dosyaları içermelidir. Eğer günlüğe kaydedilecek hata üreten bir çalıştırılabilir dosya içeriyorsa, başarısızlık günlüğe kaydedilmeyecek çünkü araç çalıştırılabilir olanla aynı isimde bir dizin yaratmaya çalışacaktır. Buna ek olarak, bir yürütülebilir çalıştırma denemesi bu günlük konumunda başarısız olur.  
   
     > [!NOTE]
     >  Varsayılan bağlama konumu özel bağlama konumuna tercih edilir. Wininet önbelleğindeki varsayılan bağlama konumu çalışma zamanını saklar ve otomatik olarak temizler. Eğer özel bir bağlama konumu belirlerseniz, onu temizlemek sizin sorumluluğunuzdadır.  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>Belirli bir kültür hakkında detayları görüntülemek için  
   
-1.  Görüntüleyiciden istenen uygulamanın girişini seçin.  
+1. Görüntüleyiciden istenen uygulamanın girişini seçin.  
   
-2.  Tıklayın **Günlüğü Görüntüle** düğmesi. Alternatif olarak, seçili girdiye çift tıklayabilirsiniz.  
+2. Tıklayın **Günlüğü Görüntüle** düğmesi. Alternatif olarak, seçili girdiye çift tıklayabilirsiniz.  
   
      Araç seçili bağlama başarısızlığı hakkında aşağıdaki ayrıntıları görüntüler:  
   
@@ -99,9 +99,9 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-a-single-entry-from-the-log"></a>Günlük kaydından tek bir girdiyi silmek için  
   
-1.  Görüntüleyicide bir girdi seçin.  
+1. Görüntüleyicide bir girdi seçin.  
   
-2.  Tıklayın **girdiyi Sil** düğmesi.  
+2. Tıklayın **girdiyi Sil** düğmesi.  
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Günlükten bütün girdileri silmek için  
   
@@ -210,9 +210,9 @@ Discarding native image.
   
 #### <a name="to-enable-a-custom-log-path"></a>Özel bir günlük kaydı yolunu etkinleştirmek için  
   
-1.  Seçin **etkinleştir özel günlük yolu** seçenek düğmesini.  
+1. Seçin **etkinleştir özel günlük yolu** seçenek düğmesini.  
   
-2.  Yolu girin **özel günlük yolu** metin kutusu.  
+2. Yolu girin **özel günlük yolu** metin kutusu.  
   
 > [!NOTE]
 >  [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) saklamak için Internet Explorer (IE) önbelleğini kullanır. IE önbelleğindeki zaman zaman bozulmalar nedeniyle [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) bazen yeni bağlama günlüklerini görüntüleme penceresinde durdurabilir. Bu bozulmanın sonucu olarak, .NET bağlama altyapısı (füzyon) bağlama günlüğüne yazamaz veya okuyamaz. (Eğer özel günlük yolu kullanıyorsanız bu sorunla karşılaşmayabilirsiniz.)  Bozulmayı düzeltmek ve füzyonun bağlama günlük kayıtlarını tekrar göstermesine izin vermek için, IE Internet Seçenekleri iletişim kutusundan geçici internet dosyalarını silerek IE önbelleğini temizleyin.  
@@ -221,9 +221,9 @@ Discarding native image.
   
 #### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Windows uygulama kapsayıcısı içinde çalışan uygulamalar için günlük kaydediciyi etkinleştirmek için  
   
-1.  Önceki prosedürde açıklandığı gibi özel bir günlük yolunu etkinleştirin. Varsayılan olarak, Windows uygulama kapsayıcı içinde çalışan uygulamaların hard disk erişimi sınırlıdır. Uygulama kapsayıcı içerisindeki bütün uygulamalar için belirlediğiniz dizinin okuma/yazma erişim hakkı vardır.  
+1. Önceki prosedürde açıklandığı gibi özel bir günlük yolunu etkinleştirin. Varsayılan olarak, Windows uygulama kapsayıcı içinde çalışan uygulamaların hard disk erişimi sınırlıdır. Uygulama kapsayıcı içerisindeki bütün uygulamalar için belirlediğiniz dizinin okuma/yazma erişim hakkı vardır.  
   
-2.  Seçin **modern günlük kaydını etkinleştir** onay kutusu.  
+2. Seçin **modern günlük kaydını etkinleştir** onay kutusu.  
   
     > [!NOTE]
     >  Bu kutu yalnızca Windows 8 veya sonrasında etkindir.  

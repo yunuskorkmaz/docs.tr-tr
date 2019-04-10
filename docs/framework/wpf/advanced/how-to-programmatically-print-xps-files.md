@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: f113516fd96b88ea04b5ee155f808200dd2c893d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114302"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312078"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Nasıl yapılır: Program Aracılığıyla XPS Dosyalarını Yazdırma
 Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.AddJob%2A> yazdırmak için yöntemi [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] açmadan dosyaları bir <xref:System.Windows.Controls.PrintDialog> veya İlkesi, tüm [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] hiç.  
@@ -25,13 +25,13 @@ Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.Add
 ## <a name="example"></a>Örnek  
  Üç parametre kullanarak yönelik temel adımlar <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> yöntemi aşağıdaki gibidir. Aşağıdaki örnekte ayrıntılarını verir.  
   
-1.  Yazıcı XPSDrv yazıcısı olup olmadığını belirler. (Bkz [yazdırma genel bakış](printing-overview.md) XPSDrv hakkında daha fazla bilgi için.)  
+1. Yazıcı XPSDrv yazıcısı olup olmadığını belirler. (Bkz [yazdırma genel bakış](printing-overview.md) XPSDrv hakkında daha fazla bilgi için.)  
   
-2.  Yazıcı XPSDrv yazıcısı değilse, çoklu iş parçacığı için iş parçacığının grubunu ayarlayın.  
+2. Yazıcı XPSDrv yazıcısı değilse, çoklu iş parçacığı için iş parçacığının grubunu ayarlayın.  
   
-3.  Bir yazdırma sunucusu ve yazdırma sırası nesne örneği.  
+3. Bir yazdırma sunucusu ve yazdırma sırası nesne örneği.  
   
-4.  Yazdırılacak dosyayı bir proje adı belirterek bu yöntemi çağırın ve <xref:System.Boolean> bayrak belirten XPSDrv yazıcısı yazıcı olup olmadığını.  
+4. Yazdırılacak dosyayı bir proje adı belirterek bu yöntemi çağırın ve <xref:System.Boolean> bayrak belirten XPSDrv yazıcısı yazıcı olup olmadığını.  
   
  Aşağıdaki örnekte, tüm yazdırma toplu işlemi gösterilmektedir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] bir dizindeki dosyaları. Uygulamanın üç parametre depolayacağınız dizini belirtmek için kullanıcıdan rağmen <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> yöntemi gerekli olmadığı bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Sahip olduğunuz herhangi bir kod yolunda kullanılabilir bir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dosya adı ve kendisine geçirebilirsiniz yolu.  
   

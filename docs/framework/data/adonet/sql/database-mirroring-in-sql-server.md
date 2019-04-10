@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230999"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325702"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server’da Veritabanı Yansıtması
 SQL Server veritabanı yansıtma, bir kopya veya yansıtma, bir yedek sunucu üzerinde bir SQL Server veritabanının tutmanızı sağlar. Yansıtma, verilerin iki ayrı kopyasını süreleri ve yüksek düzeyde kullanılabilirlik sağladığınızdan hiç var ve veri yedekliği tamamlamak sağlar. Geliştirici herhangi bir eylemde bulunmanız veya bir SQL Server veritabanı için yapılandırıldıktan sonra kod yazmaya gerek yoktur, böylece SQL Server için .NET veri sağlayıcısı, veritabanı yansıtması için örtük desteği sağlar. Ayrıca, <xref:System.Data.SqlClient.SqlConnection> nesne destekleyen bir yük devretme iş ortağı sunucu adını sağlayan sağlayan bir açık bir bağlantı modu <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
  İçin Basitleştirilmiş aşağıdaki olaylar dizisi gerçekleşir bir <xref:System.Data.SqlClient.SqlConnection> yansıtma için yapılandırılmış bir veritabanını hedefler nesnesi:  
   
-1.  İstemci uygulaması başarıyla asıl veritabanına bağlanır ve sunucunun daha istemcide önbelleğe ortak sunucu adını geri gönderir.  
+1. İstemci uygulaması başarıyla asıl veritabanına bağlanır ve sunucunun daha istemcide önbelleğe ortak sunucu adını geri gönderir.  
   
-2.  Asıl veritabanı içeren bir sunucu başarısız olursa veya bağlantı kesildi, bağlantı ve işlem durumu kaybolur. İstemci uygulama, asıl veritabanına bir bağlantı kurmayı yeniden dener ve başarısız olur.  
+2. Asıl veritabanı içeren bir sunucu başarısız olursa veya bağlantı kesildi, bağlantı ve işlem durumu kaybolur. İstemci uygulama, asıl veritabanına bir bağlantı kurmayı yeniden dener ve başarısız olur.  
   
-3.  İstemci uygulama, iş ortağı sunucusunda yansıtma veritabanına bir bağlantı kurmak şeffaf bir şekilde çalışır. Başarılı olursa, ardından yeni asıl veritabanı haline gelir yansıtma veritabanına bağlantı yönlendirilir.  
+3. İstemci uygulama, iş ortağı sunucusunda yansıtma veritabanına bir bağlantı kurmak şeffaf bir şekilde çalışır. Başarılı olursa, ardından yeni asıl veritabanı haline gelir yansıtma veritabanına bağlantı yönlendirilir.  
   
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Yük devretme ortağı bağlantı dizesindeki belirtme  
  Bağlantı dizesindeki bir yük devretme iş ortağı sunucu adı sağlarsanız, istemci uygulaması ilk kez bağlandığında asıl veritabanı kullanılamıyorsa istemci saydam yük devretme iş ortağı ile bağlantı dener.  

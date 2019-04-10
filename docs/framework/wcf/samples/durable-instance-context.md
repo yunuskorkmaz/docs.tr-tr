@@ -2,12 +2,12 @@
 title: Dayanıklı Örnek Bağlamı
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 74b2d42900b032936734884ceb19472d70b56b43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316940"
 ---
 # <a name="durable-instance-context"></a>Dayanıklı Örnek Bağlamı
 Bu örnek nasıl özelleştirileceğini dayanıklı örnek bağlamı etkinleştirmek için Windows Communication Foundation (WCF) çalışma zamanı gösterir. SQL Server 2005 (SQL Server 2005 Express bu durumda), yedekleme deposu olarak kullanır. Ancak, ayrıca özel depolama mekanizmaları erişmek için bir yol sağlar.  
@@ -23,9 +23,9 @@ Bu örnek nasıl özelleştirileceğini dayanıklı örnek bağlamı etkinleşti
   
  Önceki açıklamaya göre iki adımı kolayca kaydetme amacına ulaşmanız için ayırt edilebilir:  
   
-1.  İçerik kimliği yürütmek için kablo üzerinde giden ileti değiştirin  
+1. İçerik kimliği yürütmek için kablo üzerinde giden ileti değiştirin  
   
-2.  Özel örneklemesini mantığını uygulamak için hizmet yerel davranışını değiştirin.  
+2. Özel örneklemesini mantığını uygulamak için hizmet yerel davranışını değiştirin.  
   
  Kablodaki iletileri listesindeki ilk öğe etkilediği için özel bir kanal uygulanması gerekir ve kanal katmana aşılayın. İkincisi yalnızca hizmet yerel davranışını etkiler ve bu nedenle birkaç hizmet genişletilebilirlik noktaları genişleterek uygulanabilir. Sonraki birkaç bölümde her biri bu uzantıları ele alınmıştır.  
   
@@ -442,11 +442,11 @@ Press ENTER to shut down client
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
 >  Bu örneği çalıştırmak için SQL Server 2005 veya SQL Express 2005 çalıştırıyor olmalısınız. SQL Server 2005 çalıştırıyorsanız, hizmetin bağlantı dizesi yapılandırmasını değiştirmeniz gerekir. Çapraz makine çalıştırırken, SQL Server yalnızca sunucu makinesinde gereklidir.  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117767"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315692"
 ---
 # <a name="dependency-property-value-precedence"></a>Bağımlılık Özelliği Değer Önceliği
 <a name="introduction"></a> Bu konu açıklar nasıl işleyişini [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] özellik sistemi bir bağımlılık özelliğinin değeri etkileyebilir ve hangi yönlerini özelliği tarafından sistemi geçerli etkili bir özelliğinin değerini için öncelik açıklar.  
@@ -39,25 +39,25 @@ ms.locfileid: "59117767"
 ## <a name="dependency-property-setting-precedence-list"></a>Bağımlılık özelliği ayarı önceliği listesi  
  Bağımlılık özellikleri çalışma zamanı değerlerini atarken özellik sistemi kullanan kesin sırasını verilmiştir. En yüksek önceliğe önce listelenir. Bazı yapılan Genelleştirme bu listeyi genişler [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  
   
-1.  **Özellik sistemi zorlama.** Zorlama hakkında ayrıntılı bilgi için bkz. [zorlama, animasyon ve temel değer](#animations) bu konuda.  
+1. **Özellik sistemi zorlama.** Zorlama hakkında ayrıntılı bilgi için bkz. [zorlama, animasyon ve temel değer](#animations) bu konuda.  
   
-2.  **Etkin animasyonlar veya animasyonları tutma davranış.** Bu değer yerel olarak ayarlanmış olsa bile pratik etkili sahip olmak için bir özelliğin animasyon temel (unanimated) değer üzerinde önceliğe sahip mümkün olması gerekir. Ayrıntılar için bkz [zorlama, animasyon ve temel değer](#animations) bu konuda.  
+2. **Etkin animasyonlar veya animasyonları tutma davranış.** Bu değer yerel olarak ayarlanmış olsa bile pratik etkili sahip olmak için bir özelliğin animasyon temel (unanimated) değer üzerinde önceliğe sahip mümkün olması gerekir. Ayrıntılar için bkz [zorlama, animasyon ve temel değer](#animations) bu konuda.  
   
-3.  **Yerel değer.** Yerel değer özniteliği veya özelliği bir öğe olarak ayarı da karşılık gelir "sarmalayıcı" özelliği kolaylık aracılığıyla ayarlanabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], veya bir çağrı tarafından <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] belirli bir örneğine bir özelliğini kullanarak. Bir bağlama veya kaynak kullanarak yerel bir değer ayarlarsanız, doğrudan bir değer olarak ayarlandıysa bu her önceliği işlevi görür.  
+3. **Yerel değer.** Yerel değer özniteliği veya özelliği bir öğe olarak ayarı da karşılık gelir "sarmalayıcı" özelliği kolaylık aracılığıyla ayarlanabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], veya bir çağrı tarafından <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] belirli bir örneğine bir özelliğini kullanarak. Bir bağlama veya kaynak kullanarak yerel bir değer ayarlarsanız, doğrudan bir değer olarak ayarlandıysa bu her önceliği işlevi görür.  
   
-4.  **TemplatedParent şablonu özellikleri.** Bir öğeye sahip bir <xref:System.Windows.FrameworkElement.TemplatedParent%2A> bir şablonunun bir parçası oluşturulmuş olsa bile (bir <xref:System.Windows.Controls.ControlTemplate> veya <xref:System.Windows.DataTemplate>). Bu geçerli olduğunda hakkında daha fazla bilgi için bkz [TemplatedParent](#templatedparent) bu konuda. Şablon içerisinde, aşağıdaki öncelik geçerlidir:  
+4. **TemplatedParent şablonu özellikleri.** Bir öğeye sahip bir <xref:System.Windows.FrameworkElement.TemplatedParent%2A> bir şablonunun bir parçası oluşturulmuş olsa bile (bir <xref:System.Windows.Controls.ControlTemplate> veya <xref:System.Windows.DataTemplate>). Bu geçerli olduğunda hakkında daha fazla bilgi için bkz [TemplatedParent](#templatedparent) bu konuda. Şablon içerisinde, aşağıdaki öncelik geçerlidir:  
   
     1.  Gelen tetikler <xref:System.Windows.FrameworkElement.TemplatedParent%2A> şablonu.  
   
     2.  Özellik kümeleri (genellikle ile [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öznitelikler) içinde <xref:System.Windows.FrameworkElement.TemplatedParent%2A> şablonu.  
   
-5.  **Örtük stil.** Yalnızca geçerli `Style` özelliği. `Style` Özelliği herhangi bir stil kaynağı tarafından o öğenin türüyle eşleşen bir anahtar ile doldurulur. Stil kaynağı sayfası veya uygulama olması gerekir. Temalar bir örtük stil kaynağı için arama devam etmez.  
+5. **Örtük stil.** Yalnızca geçerli `Style` özelliği. `Style` Özelliği herhangi bir stil kaynağı tarafından o öğenin türüyle eşleşen bir anahtar ile doldurulur. Stil kaynağı sayfası veya uygulama olması gerekir. Temalar bir örtük stil kaynağı için arama devam etmez.  
   
-6.  **Stil tetiklenir.** Sayfasından veya uygulama stilleri içindeki Tetikleyiciler (açık veya örtük stil bu stiller olabilir, ancak varsayılan stillerden daha düşük önceliğe sahip).  
+6. **Stil tetiklenir.** Sayfasından veya uygulama stilleri içindeki Tetikleyiciler (açık veya örtük stil bu stiller olabilir, ancak varsayılan stillerden daha düşük önceliğe sahip).  
   
-7.  **Şablon tetiklenir.** Herhangi bir tetikleyici bir şablon bir stil içinde veya doğrudan uygulanan bir şablon.  
+7. **Şablon tetiklenir.** Herhangi bir tetikleyici bir şablon bir stil içinde veya doğrudan uygulanan bir şablon.  
   
-8.  **Stil ayarlayıcı.** Değerlerini bir <xref:System.Windows.Setter> sayfasından veya uygulama stilleri içindeki.  
+8. **Stil ayarlayıcı.** Değerlerini bir <xref:System.Windows.Setter> sayfasından veya uygulama stilleri içindeki.  
   
 9. **Varsayılan (tema) stili.** Bu geçerli olduğunda ve tema stilleri şablonlarında tema stilleri nasıl ilişki kuracağını hakkında daha fazla bilgi için bkz: [(tema) varsayılan stillerini](#themestyles) bu konunun devamındaki. Varsayılan stil içinde aşağıdaki öncelik sırası uygular:  
   

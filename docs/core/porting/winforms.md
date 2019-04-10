@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 0f45c053311885c779d394a97f5845119e2b5c82
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186160"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327171"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Nasıl yapılır: .NET Core için bir Windows Forms masaüstü uygulaması bağlantı noktası
 
@@ -27,7 +27,7 @@ Bu makalede, çeşitli adlar, geçiş için kullanılan dosya türlerini tanıml
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=winforms+core) yapmak istediğiniz herhangi bir tasarımcı iş için.
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) yapmak istediğiniz herhangi bir tasarımcı iş için.
 
   Aşağıdaki Visual Studio iş yüklerini yükleyin:
   - .NET masaüstü geliştirme
@@ -38,7 +38,7 @@ Bu makalede, çeşitli adlar, geçiş için kullanılan dosya türlerini tanıml
 - Son yükleme [.NET Core 3.0](https://aka.ms/netcore3download) Önizleme.
 
 >[!NOTE]
->**Visual Studio 2017** .NET Core 3.0 projeleri desteklemiyor. **Visual Studio 2019 Önizleme/RC** .NET Core 3.0 projeleri destekler ancak görsel tasarımcı için .NET Core 3.0, Windows Forms projeleri henüz desteklememektedir. Görsel tasarımcıyı kullanmak için çözümünüzdeki forms dosyaları ile .NET Core projesi paylaşan bir .NET Windows Forms projesi olması gerekir.
+>**Visual Studio 2017** .NET Core 3.0 projeleri desteklemiyor. **Visual Studio 2019** .NET Core 3.0 projeleri destekler ancak görsel tasarımcı için .NET Core 3.0, Windows Forms projeleri henüz desteklememektedir. Görsel tasarımcıyı kullanmak için çözümünüzdeki forms dosyaları ile .NET Core projesi paylaşan bir .NET Windows Forms projesi olması gerekir.
 
 ### <a name="consider"></a>Göz önünde bulundurun
 
@@ -60,7 +60,7 @@ Bir .NET Framework Windows Forms uygulaması taşırken dikkate almanız gereken
 
     Tüm geçiş işleminden önce NuGet paketlerini en son sürümlerini kullanmak için her zaman iyi bir uygulamadır. Uygulamanızı herhangi bir NuGet paketinin başvuruyorsa, bunları en son sürüme güncelleştirin. Uygulamanız başarıyla derlendiğinden emin olun. Herhangi bir paket hata varsa, yükselttikten sonra paketi kodunuzu kesmeyecektir en son sürüme düşürme.
 
-01. Visual Studio 2019 Önizleme/RC için .NET Core 3.0 Form Tasarımcısı henüz desteklemiyor
+01. .NET Core 3.0 için Visual Studio 2019 henüz Form Tasarımcısı desteklemiyor
 
     Şu anda, Visual Studio'da Forms Tasarımcısı'nı kullanmak istiyorsanız, var olan .NET Framework Windows Forms projesi dosyanızı çalışır durumda bulundurmanıza gerek.
 
@@ -294,7 +294,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ## <a name="windows-forms-designer"></a>Windows Form Tasarımcısı
 
-Ayrıntılı olarak açıklanan bu makalede, Visual Studio 2019 Önizleme/RC yalnızca Form Tasarımcısı .NET Framework projelerinde destekler. Yan yana .NET Core projesi oluşturarak, .NET Framework projesinin tasarım formlara kullanırken projeniz .NET Core ile test edebilirsiniz. Çözüm dosyanız .NET Framework ve .NET Core projeleri içerir. Ekleme, formlar ve denetimler .NET Framework projesinde tasarım ve üzerinde dosya glob desenlerinin ekledik .NET Core projeleri için herhangi bir yeni veya değiştirilen dosyaları otomatik olarak .NET Core projelerinde dahil edilir.
+Ayrıntılı olarak açıklanan bu makalede, Visual Studio 2019 yalnızca Form Tasarımcısı .NET Framework projelerinde destekler. Yan yana .NET Core projesi oluşturarak, .NET Framework projesinin tasarım formlara kullanırken projeniz .NET Core ile test edebilirsiniz. Çözüm dosyanız .NET Framework ve .NET Core projeleri içerir. Ekleme, formlar ve denetimler .NET Framework projesinde tasarım ve üzerinde dosya glob desenlerinin ekledik .NET Core projeleri için herhangi bir yeni veya değiştirilen dosyaları otomatik olarak .NET Core projelerinde dahil edilir.
 
 Visual Studio 2019 Windows Form Tasarımcısı'nı destekler. sonra kopyalama/.NET Core proje dosyanızın içeriğini .NET Framework proje dosyasına yapıştırma. Eklenen dosya glob desenlerinin delete `<Source>` ve `<EmbeddedResource>` öğeleri. Uygulamanız tarafından kullanılan herhangi bir proje başvurusu yolları düzeltin. Bu .NET Framework projesi bir .NET Core projesinden etkili bir şekilde yükseltir.
  

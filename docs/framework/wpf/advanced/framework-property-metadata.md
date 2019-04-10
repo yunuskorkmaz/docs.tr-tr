@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314704"
 ---
 # <a name="framework-property-metadata"></a>Çerçeve Özelliği Meta Verileri
 Çerçeve özelliği meta verileri seçenekleri nesne öğelerini WPF framework düzeyde olduğu kabul özelliklerinin raporlanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mimarisi. Genel olarak, işleme, veri bağlama gibi özelliklerin WPF çerçeve düzeyi atamasını gerektirir ve özellik sistemi daraltmalar tarafından işlenmesini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sunu [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] ve yürütülebilir dosyalar. Çerçeve özelliği meta verileri, belirli bir öğe özelliklerinin özelliğe özgü özellikleri belirlemek için bu sistemler tarafından sorgulanır.  
@@ -48,9 +48,9 @@ ms.locfileid: "59108712"
   
  Oluşturuyorsanız bir <xref:System.Windows.FrameworkPropertyMetadata> örnek, meta verilerin çerçeve özelliği özellikleriyle iletişim kuran belirli özellikleri için değerlerle doldurmak için iki yolu vardır:  
   
-1.  Kullanım <xref:System.Windows.FrameworkPropertyMetadata> veren Oluşturucu imzasının bir `flags` parametresi. Bu parametre istenen tüm birleştirilmiş değerlerle doldurulacak <xref:System.Windows.FrameworkPropertyMetadataOptions> numaralandırma bayrakları.  
+1. Kullanım <xref:System.Windows.FrameworkPropertyMetadata> veren Oluşturucu imzasının bir `flags` parametresi. Bu parametre istenen tüm birleştirilmiş değerlerle doldurulacak <xref:System.Windows.FrameworkPropertyMetadataOptions> numaralandırma bayrakları.  
   
-2.  İmzaları birini bir `flags` parametresi ve her raporlama Boolean özelliğini ayarlayın <xref:System.Windows.FrameworkPropertyMetadata> için `true` her istenen özellik değişiklik için. Bunu yaparsanız, bu bağımlılık özelliği ile herhangi bir öğe oluşturulmadan önce bu özelliklerini ayarlamalısınız; Boole özellikleri önleme davranışına izin vermek için okuma-yazma `flags` parametresi ve meta veriler hala doldurmak, ancak meta veri özelliği kullanılmadan önce etkili bir şekilde korumalı hale getirilmelidir. Bu nedenle, meta verileri istendikten sonra özellikleri ayarlama girişimi geçersiz bir işlem olacaktır.  
+2. İmzaları birini bir `flags` parametresi ve her raporlama Boolean özelliğini ayarlayın <xref:System.Windows.FrameworkPropertyMetadata> için `true` her istenen özellik değişiklik için. Bunu yaparsanız, bu bağımlılık özelliği ile herhangi bir öğe oluşturulmadan önce bu özelliklerini ayarlamalısınız; Boole özellikleri önleme davranışına izin vermek için okuma-yazma `flags` parametresi ve meta veriler hala doldurmak, ancak meta veri özelliği kullanılmadan önce etkili bir şekilde korumalı hale getirilmelidir. Bu nedenle, meta verileri istendikten sonra özellikleri ayarlama girişimi geçersiz bir işlem olacaktır.  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>Çerçeve özelliği meta verileri birleştirme davranışı  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: 20c475fd7bd4b2cec6c6e10182a88a43fa7c56f1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5f4b962762aeecea65748c5456bc4a2d75595d4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843052"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311623"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te kullanıcı ayarları için özellik kılavuzu oluşturma
 Kullanıcı ayarları için bir özellik kılavuzunda doldurarak oluşturabileceğiniz bir <xref:System.Windows.Forms.PropertyGrid> kullanıcı ayarı özelliklerini denetimiyle `My.Settings` nesne.  
@@ -29,17 +29,17 @@ Kullanıcı ayarları için bir özellik kılavuzunda doldurarak oluşturabilece
   
 ### <a name="to-add-a-user-setting-property-grid"></a>Bir kullanıcı ayarı özellik kılavuzunda eklemek için  
   
-1.  Ekleme **PropertyGrid** denetimi **araç kutusu** uygulamanız için tasarım yüzeyine varsayılır burada `Form1`.  
+1. Ekleme **PropertyGrid** denetimi **araç kutusu** uygulamanız için tasarım yüzeyine varsayılır burada `Form1`.  
   
      Özellik Kılavuzu denetimini varsayılan adıdır `PropertyGrid1`.  
   
-2.  Tasarım yüzeyi için çift `Form1` form-load olay işleyicisinde kodu açın.  
+2. Tasarım yüzeyi için çift `Form1` form-load olay işleyicisinde kodu açın.  
   
-3.  Ayarlama `My.Settings` seçili nesne için özellik kılavuzu olarak nesnesi.  
+3. Ayarlama `My.Settings` seçili nesne için özellik kılavuzu olarak nesnesi.  
   
      [!code-vb[VbVbalrMyResources#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#11)]  
   
-4.  Özellik Kılavuzu, yalnızca kullanıcı ayarlarını yapılandırın.  
+4. Özellik Kılavuzu, yalnızca kullanıcı ayarlarını yapılandırın.  
   
      [!code-vb[VbVbalrMyResources#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#12)]  
   

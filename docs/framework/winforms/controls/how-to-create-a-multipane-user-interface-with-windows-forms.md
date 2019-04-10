@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192700"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315160"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Nasıl yapılır: Windows Forms'da Çok Bölmeli Kullanıcı Arabirimi Oluşturma
 Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli kullanıcı arabirimi oluşturacaksınız bir **klasör** listesinde bir **iletileri** bölmesinde ve **Önizleme** bölmesi. Bu düzenleme formu denetimleri yerleştirme temelde aracılığıyla sağlanır.  
@@ -30,7 +30,7 @@ Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli ku
   
 ### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Program aracılığıyla Outlook-stilinde bir kullanıcı arabirimi oluşturmak için  
   
-1.  Bir form içinde kullanıcı arabirimi oluşturan her denetimi bildirin. Bu örneğin <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, ve <xref:System.Windows.Forms.RichTextBox> Microsoft Outlook kullanıcı arabirimini taklit edecek şekilde kontrol eder.  
+1. Bir form içinde kullanıcı arabirimi oluşturan her denetimi bildirin. Bu örneğin <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, ve <xref:System.Windows.Forms.RichTextBox> Microsoft Outlook kullanıcı arabirimini taklit edecek şekilde kontrol eder.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli ku
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  Kullanıcı arabiriminizi tanımlayan bir yordamı oluşturun. Aşağıdaki kod, böylece form Microsoft Outlook kullanıcı arabiriminde andıracaktır özelliklerini ayarlar. Ancak, diğer denetimleri kullanarak veya farklı yerleştirme, eşit oranda esnek diğer kullanıcı arabirimleri oluşturmak oldukça kolaydır.  
+2. Kullanıcı arabiriminizi tanımlayan bir yordamı oluşturun. Aşağıdaki kod, böylece form Microsoft Outlook kullanıcı arabiriminde andıracaktır özelliklerini ayarlar. Ancak, diğer denetimleri kullanarak veya farklı yerleştirme, eşit oranda esnek diğer kullanıcı arabirimleri oluşturmak oldukça kolaydır.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli ku
     }  
     ```  
   
-3.  Visual Basic'te, yeni oluşturduğunuz yordam bir çağrı ekleyin `New()` yordamı. Görselde C#, form sınıfın oluşturucusunda Bu kod satırını ekleyin.  
+3. Visual Basic'te, yeni oluşturduğunuz yordam bir çağrı ekleyin `New()` yordamı. Görselde C#, form sınıfın oluşturucusunda Bu kod satırını ekleyin.  
   
     ```vb  
     ' Add this to the New procedure.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 9410d166a3f91770cb0c64b9971dc58ad9cd07cb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843701"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314691"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>İzlenecek yol: Dosyaları ve dizinleri Visual Basic'te düzenleme
 Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu listeler ve bir dizinde metin dosyaları inceler, küçük bir uygulamanın nasıl oluşturulacağını açıklar. Her seçili metin dosyası için dosya öznitelikleri ve içeriğindeki birinci satırın uygulama sağlar. Bir günlük dosyasına yazmak için bir seçenek yoktur.  
@@ -31,17 +31,17 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
 ### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
-1.  Üzerinde **dosya** menüsünü tıklatın **yeni proje**.  
+1. Üzerinde **dosya** menüsünü tıklatın **yeni proje**.  
   
      **Yeni Proje** iletişim kutusu görünür.  
   
-2.  İçinde **yüklü şablonlar** bölmesini genişletin **Visual Basic**ve ardından **Windows**. İçinde **şablonları** Orta tıklayarak bölmesinde **Windows Forms uygulaması**.  
+2. İçinde **yüklü şablonlar** bölmesini genişletin **Visual Basic**ve ardından **Windows**. İçinde **şablonları** Orta tıklayarak bölmesinde **Windows Forms uygulaması**.  
   
-3.  İçinde **adı** kutusuna `FileExplorer` proje adını ayarlayın ve ardından **Tamam**.  
+3. İçinde **adı** kutusuna `FileExplorer` proje adını ayarlayın ve ardından **Tamam**.  
   
      Visual Studio projeyi ekler **Çözüm Gezgini**, ve Windows Forms Tasarımcısı açılır.  
   
-4.  Denetimler aşağıdaki tabloda forma eklemek ve karşılık gelen özelliklerini ayarlayın.  
+4. Denetimler aşağıdaki tabloda forma eklemek ve karşılık gelen özelliklerini ayarlayın.  
   
     |Denetim|Özellik|Değer|  
     |-------------|--------------|-----------|  
@@ -53,15 +53,15 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Bir klasör seçin ve bir klasördeki dosyaları Listele  
   
-1.  Oluşturma bir `Click` için olay işleyicisi `browseButton` formdaki bir denetime çift tıklayın. Kod Düzenleyicisi açılır.  
+1. Oluşturma bir `Click` için olay işleyicisi `browseButton` formdaki bir denetime çift tıklayın. Kod Düzenleyicisi açılır.  
   
-2.  Aşağıdaki kodu ekleyin `Click` olay işleyicisi.  
+2. Aşağıdaki kodu ekleyin `Click` olay işleyicisi.  
   
      [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
      `FolderBrowserDialog1.ShowDialog` Çağrı açılır **klasöre Gözat** iletişim kutusu. Sonra kullanıcı **Tamam**, <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> özelliği gönderilen bağımsız değişken olarak `ListFiles` sonraki adımda eklenen yöntemi.  
   
-3.  Aşağıdaki `ListFiles` yöntemi.  
+3. Aşağıdaki `ListFiles` yöntemi.  
   
      [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
@@ -71,17 +71,17 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
      Tarafından döndürülen dizeler `GetFiles` yöntemi ardından eklenir **ListBox**.  
   
-4.  Uygulamayı çalıştırın. Tıklayın **Gözat** düğmesi. İçinde **klasöre Gözat** iletişim kutusu, .txt dosyaları içeren bir klasörü klasörü seçin ve tıklayın **Tamam**.  
+4. Uygulamayı çalıştırın. Tıklayın **Gözat** düğmesi. İçinde **klasöre Gözat** iletişim kutusu, .txt dosyaları içeren bir klasörü klasörü seçin ve tıklayın **Tamam**.  
   
      `ListBox` Seçilen klasördeki .txt dosyalarının bir listesini içerir.  
   
-5.  Uygulamanın çalışmayı durdurur.  
+5. Uygulamanın çalışmayı durdurur.  
   
 ### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>Bir dosyanın özniteliklerini alma ve bir metin dosyasından içerik  
   
-1.  Oluşturma bir `Click` için olay işleyicisi `examineButton` formdaki bir denetime çift tıklayın.  
+1. Oluşturma bir `Click` için olay işleyicisi `examineButton` formdaki bir denetime çift tıklayın.  
   
-2.  Aşağıdaki kodu ekleyin `Click` olay işleyicisi.  
+2. Aşağıdaki kodu ekleyin `Click` olay işleyicisi.  
   
      [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
@@ -89,7 +89,7 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
      Dosya yolu için bağımsız değişken olarak gönderilen `GetTextForOutput` sonraki adımda eklenen yöntemi. Bu yöntem dosya bilgileri içeren bir dize döndürür. Dosya bilgileri görünür bir **MessageBox**.  
   
-3.  Aşağıdaki `GetTextForOutput` yöntemi.  
+3. Aşağıdaki `GetTextForOutput` yöntemi.  
   
      [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
@@ -97,15 +97,15 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
      <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> Yöntemi okur dosya içeriğine bir <xref:System.IO.StreamReader>. İlk satırının içeriğini elde edilen `StreamReader` ve eklendiğinden `StringBuilder`.  
   
-4.  Uygulamayı çalıştırın. Tıklayın **Gözat**, .txt dosyaları içeren bir klasöre göz atın. **Tamam**'ı tıklatın.  
+4. Uygulamayı çalıştırın. Tıklayın **Gözat**, .txt dosyaları içeren bir klasöre göz atın. **Tamam**'ı tıklatın.  
   
      Bir dosya seçin `ListBox`ve ardından **inceleyin**. A `MessageBox` dosya bilgilerini gösterir.  
   
-5.  Uygulamanın çalışmayı durdurur.  
+5. Uygulamanın çalışmayı durdurur.  
   
 ### <a name="to-add-a-log-entry"></a>Günlük girdisi eklemek için  
   
-1.  Sonuna aşağıdaki kodu ekleyin `examineButton_Click` olay işleyicisi.  
+1. Sonuna aşağıdaki kodu ekleyin `examineButton_Click` olay işleyicisi.  
   
      [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
@@ -113,41 +113,41 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
   
      <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Yöntemi ile `append` değişkenini `True`, günlüğü girdisi oluşturmak için kullanılır.  
   
-2.  Uygulamayı çalıştırın. Bir metin dosyasına göz atın, onu seçip `ListBox`seçin **Sonuçları Kaydet** onay kutusunu işaretleyin ve ardından **inceleyin**. Günlük girişi için yazıldığını doğrulayın `log.txt` dosya.  
+2. Uygulamayı çalıştırın. Bir metin dosyasına göz atın, onu seçip `ListBox`seçin **Sonuçları Kaydet** onay kutusunu işaretleyin ve ardından **inceleyin**. Günlük girişi için yazıldığını doğrulayın `log.txt` dosya.  
   
-3.  Uygulamanın çalışmayı durdurur.  
+3. Uygulamanın çalışmayı durdurur.  
   
 ### <a name="to-use-the-current-directory"></a>Geçerli dizin kullanmak için  
   
-1.  İçin bir olay işleyicisi oluşturun `Form1_Load` formun çift tıklayın.  
+1. İçin bir olay işleyicisi oluşturun `Form1_Load` formun çift tıklayın.  
   
-2.  Olay işleyicisine aşağıdaki kodu ekleyin.  
+2. Olay işleyicisine aşağıdaki kodu ekleyin.  
   
      [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
      Bu kod, geçerli dizine klasör tarayıcı varsayılan dizinini ayarlar.  
   
-3.  Uygulamayı çalıştırın. Tıkladığınızda **Gözat** ilk kez **klasöre Gözat** geçerli dizine iletişim kutusu açılır.  
+3. Uygulamayı çalıştırın. Tıkladığınızda **Gözat** ilk kez **klasöre Gözat** geçerli dizine iletişim kutusu açılır.  
   
-4.  Uygulamanın çalışmayı durdurur.  
+4. Uygulamanın çalışmayı durdurur.  
   
 ### <a name="to-selectively-enable-controls"></a>Seçmeli olarak denetimleri etkinleştirmek için  
   
-1.  Aşağıdaki `SetEnabled` yöntemi.  
+1. Aşağıdaki `SetEnabled` yöntemi.  
   
      [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
      `SetEnabled` Yöntemi etkinleştirir veya bir öğe olup olmadığını seçildiğinde bağlı olarak denetimleri devre dışı bırakan `ListBox`.  
   
-2.  Oluşturma bir `SelectedIndexChanged` için olay işleyicisi `filesListBox` çift tıklayarak `ListBox` form denetimi.  
+2. Oluşturma bir `SelectedIndexChanged` için olay işleyicisi `filesListBox` çift tıklayarak `ListBox` form denetimi.  
   
-3.  Bir çağrı ekleyin `SetEnabled` yeni `filesListBox_SelectedIndexChanged` olay işleyicisi.  
+3. Bir çağrı ekleyin `SetEnabled` yeni `filesListBox_SelectedIndexChanged` olay işleyicisi.  
   
-4.  Bir çağrı ekleyin `SetEnabled` sonunda `browseButton_Click` olay işleyicisi.  
+4. Bir çağrı ekleyin `SetEnabled` sonunda `browseButton_Click` olay işleyicisi.  
   
-5.  Bir çağrı ekleyin `SetEnabled` sonunda `Form1_Load` olay işleyicisi.  
+5. Bir çağrı ekleyin `SetEnabled` sonunda `Form1_Load` olay işleyicisi.  
   
-6.  Uygulamayı çalıştırın. **Sonuçları Kaydet** onay kutusunu ve **inceleyin** içinde bir öğe seçili değilse düğmesi devre dışı `ListBox`.  
+6. Uygulamayı çalıştırın. **Sonuçları Kaydet** onay kutusunu ve **inceleyin** içinde bir öğe seçili değilse düğmesi devre dışı `ListBox`.  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>My.Computer.FileSystem kullanarak tam örnek  
  Tam bir örnek aşağıda verilmiştir.  
@@ -164,4 +164,4 @@ Bu izlenecek yol, Visual Basic'te dosya g/ç temelleri tanıtılmaktadır. Bu li
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [İzlenecek yol: .NET Framework yöntemlerini kullanarak dosyaları düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [İzlenecek yol: .NET Framework Yöntemlerini Kullanarak Dosyaları Düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

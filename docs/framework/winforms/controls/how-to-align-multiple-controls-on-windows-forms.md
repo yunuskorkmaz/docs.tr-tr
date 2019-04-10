@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: d07da72e238ef21237ca60e4d9b47240507948e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209547"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307749"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Nasıl yapılır: Windows Forms’da Birden Çok Denetimi Hizalama
 Windows tabanlı uygulamanızın kullanıcı arabirimini (UI) düzenini standart hale getirmek için tek bir komutla denetim gruplarını konumlandırabilirsiniz.  
@@ -22,11 +22,11 @@ Windows tabanlı uygulamanızın kullanıcı arabirimini (UI) düzenini standart
   
 ### <a name="to-align-multiple-controls-on-a-form"></a>Form üzerindeki birden çok denetimi hizalama  
   
-1.  Getirin istediğiniz denetimleri içeren formu açın **Windows Form Tasarımcısı**.  
+1. Getirin istediğiniz denetimleri içeren formu açın **Windows Form Tasarımcısı**.  
   
-2.  Böylece seçtiğiniz ilk denetim, diğer hizalanmalıdır birincil denetim hizalamak için istediğiniz denetimleri seçin.  
+2. Böylece seçtiğiniz ilk denetim, diğer hizalanmalıdır birincil denetim hizalamak için istediğiniz denetimleri seçin.  
   
-3.  Üzerinde **biçimi** menüsünde **Hizala**ve ardından yedi seçenekleri birine tıklayın.  
+3. Üzerinde **biçimi** menüsünde **Hizala**ve ardından yedi seçenekleri birine tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176169"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315822"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Nasıl yapılır: İmza Onayı Ayarlama
 *İmza onayı* alınan yanıtı gönderen kişinin orijinal iletiye yanıt olarak oluşturulan emin olmak bir ileti Başlatıcı bir mekanizmadır. İmza onayı WS-güvenlik 1.1 belirtiminde tanımlanır. Bir uç nokta WS-güvenlik 1.0 destekliyorsa, imza onayını kullanamazsınız.  
@@ -22,29 +22,29 @@ ms.locfileid: "59176169"
   
 ### <a name="to-enable-signature-confirmation-in-code"></a>İmza onayı kodda etkinleştirmek için  
   
-1.  Öğesinin bir örneğini oluşturur <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı.  
+1. Öğesinin bir örneğini oluşturur <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı.  
   
-2.  Bir örneğini oluşturmak <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> sınıfı.  
+2. Bir örneğini oluşturmak <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> sınıfı.  
   
-3.  Ayarlama <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> için `true`.  
+3. Ayarlama <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> için `true`.  
   
-4.  Güvenlik öğesinin bağlama koleksiyona ekleyin.  
+4. Güvenlik öğesinin bağlama koleksiyona ekleyin.  
   
-5.  Belirtilen özel bir bağlama oluşturma [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+5. Belirtilen özel bir bağlama oluşturma [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>İmza onayı yapılandırması etkinleştirmek için  
   
-1.  Ekleme bir `<customBinding>` öğesine `<bindings>` yapılandırma dosyasının.  
+1. Ekleme bir `<customBinding>` öğesine `<bindings>` yapılandırma dosyasının.  
   
-2.  Ekleme bir `<binding>` öğesi ve küme adı özniteliği için uygun bir değer.  
+2. Ekleme bir `<binding>` öğesi ve küme adı özniteliği için uygun bir değer.  
   
-3.  Uygun bir kodlama öğesi ekleyin. Aşağıdaki örnek ekler bir `<TextMessageEncoding>` öğesi.  
+3. Uygun bir kodlama öğesi ekleyin. Aşağıdaki örnek ekler bir `<TextMessageEncoding>` öğesi.  
   
-4.  Ekleme bir `<security>` alt öğesi ve kümesi `requireSignatureConfirmation` özniteliğini `true`.  
+4. Ekleme bir `<security>` alt öğesi ve kümesi `requireSignatureConfirmation` özniteliğini `true`.  
   
-5.  İsteğe bağlı. Önyükleme sırasında imza Onayı etkinleştirmek için eklemeniz bir [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) alt öğesi ve kümesi `equireSignatureConfirmation` özniteliğini `true`.  
+5. İsteğe bağlı. Önyükleme sırasında imza Onayı etkinleştirmek için eklemeniz bir [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) alt öğesi ve kümesi `equireSignatureConfirmation` özniteliğini `true`.  
   
-6.  Uygun aktarma öğesini ekleyin. Aşağıdaki örnek ekler bir [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
+6. Uygun aktarma öğesini ekleyin. Aşağıdaki örnek ekler bir [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
     ```xml  
     <bindings>  

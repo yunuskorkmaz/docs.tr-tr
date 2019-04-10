@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding search capabilities
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
-ms.openlocfilehash: c1c59c3d4bb5d0d35103371575ebdd49d3559bbe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d5d4dae55fc9f0613ab6535b2fe57e262d0ef141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108556"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314028"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>Nasıl yapılır: ListView Denetimine Arama Yetenekleri Ekleme
 Önerilmesine öğeleri büyük listesiyle çalışırken bir <xref:System.Windows.Forms.ListView> kullanıcıya arama özellikleri sunmak istediğiniz denetimi. <xref:System.Windows.Forms.ListView> Denetim, iki farklı şekilde bu özellik sunar: eşleşen metin ve arama konumu.  
@@ -25,11 +25,11 @@ ms.locfileid: "59108556"
   
 ### <a name="to-find-an-item-using-text"></a>Metin kullanarak bir öğeyi bulmak için  
   
-1.  Oluşturma bir <xref:System.Windows.Forms.ListView> ile <xref:System.Windows.Forms.ListView.View%2A> özelliğini <xref:System.Windows.Forms.View.Details> veya <xref:System.Windows.Forms.View.List>ve ardından doldurmak <xref:System.Windows.Forms.ListView> öğeleri.  
+1. Oluşturma bir <xref:System.Windows.Forms.ListView> ile <xref:System.Windows.Forms.ListView.View%2A> özelliğini <xref:System.Windows.Forms.View.Details> veya <xref:System.Windows.Forms.View.List>ve ardından doldurmak <xref:System.Windows.Forms.ListView> öğeleri.  
   
-2.  Çağrı <xref:System.Windows.Forms.ListView.FindItemWithText%2A> yöntemini bulmak için istediğiniz öğenin metni.  
+2. Çağrı <xref:System.Windows.Forms.ListView.FindItemWithText%2A> yöntemini bulmak için istediğiniz öğenin metni.  
   
-3.  Aşağıdaki kod örneği, bir temel oluşturmak gösterilmiştir <xref:System.Windows.Forms.ListView>öğeleriyle doldurun ve metin girişi kullanıcı listede bir öğeyi bulmak için kullanın.  
+3. Aşağıdaki kod örneği, bir temel oluşturmak gösterilmiştir <xref:System.Windows.Forms.ListView>öğeleriyle doldurun ve metin girişi kullanıcı listede bir öğeyi bulmak için kullanın.  
   
  [!code-cpp[System.Windows.Forms.ListViewFindItems#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.ListViewFindItems#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#1)]
@@ -37,11 +37,11 @@ ms.locfileid: "59108556"
   
 ### <a name="to-find-an-item-using-x--and-y-coordinates"></a>X ve y koordinatları kullanarak bir öğeyi bulmak için  
   
-1.  Oluşturma bir <xref:System.Windows.Forms.ListView> ile <xref:System.Windows.Forms.View> özelliğini <xref:System.Windows.Forms.View.SmallIcon> veya <xref:System.Windows.Forms.View.LargeIcon>ve ardından doldurmak <xref:System.Windows.Forms.ListView> öğeleri.  
+1. Oluşturma bir <xref:System.Windows.Forms.ListView> ile <xref:System.Windows.Forms.View> özelliğini <xref:System.Windows.Forms.View.SmallIcon> veya <xref:System.Windows.Forms.View.LargeIcon>ve ardından doldurmak <xref:System.Windows.Forms.ListView> öğeleri.  
   
-2.  Çağrı <xref:System.Windows.Forms.ListView.FindNearestItem%2A> yöntemini, istenen x ve y- ve arama yapmak istediğiniz yönü.  
+2. Çağrı <xref:System.Windows.Forms.ListView.FindNearestItem%2A> yöntemini, istenen x ve y- ve arama yapmak istediğiniz yönü.  
   
-3.  Aşağıdaki kod örneği temel bir simge oluşturulmaya gösterilmektedir <xref:System.Windows.Forms.ListView>, öğeleri ve yakalama ile doldurmak <xref:System.Windows.Forms.Control.MouseDown> yukarı yönde yakın öğeyi bulmak için olay.  
+3. Aşağıdaki kod örneği temel bir simge oluşturulmaya gösterilmektedir <xref:System.Windows.Forms.ListView>, öğeleri ve yakalama ile doldurmak <xref:System.Windows.Forms.Control.MouseDown> yukarı yönde yakın öğeyi bulmak için olay.  
   
  [!code-cpp[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#2)]
  [!code-csharp[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#2)]

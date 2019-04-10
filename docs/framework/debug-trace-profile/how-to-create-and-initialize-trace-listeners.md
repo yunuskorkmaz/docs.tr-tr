@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222724"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321061"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Nasıl yapılır: İz Dinleyicileri Oluşturma ve Başlatma
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> Ve <xref:System.Diagnostics.Trace?displayProperty=nameWithType> sınıfları almak ve bu iletileri işleyen dinleyicileri adlı nesnelere iletiler gönderir. Tür bir dinleyici <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, otomatik olarak oluşturulur ve izleme ya da hata ayıklama etkin olduğunda başlatılır. İsterseniz <xref:System.Diagnostics.Trace> veya <xref:System.Diagnostics.Debug> herhangi bir ek kaynaklar için yönlendirilmesine çıktısını oluşturmalı ve ek izleme dinleyicileri başlatır.  
@@ -29,7 +29,7 @@ ms.locfileid: "59222724"
   
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Oluşturma ve yapılandırma dosyası kullanarak izleme dinleyicisi  
   
-1.  Uygulama yapılandırma dosyasında, İzleme dinleyicisi bildirin. Oluşturmakta olduğunuz dinleyici diğer nesneler gerektiriyorsa, bunları da bildirin. Aşağıdaki örnekte adlı bir dinleyici oluşturma işlemi gösterilmektedir `myListener` metin dosyasına yazar `TextWriterOutput.log`.  
+1. Uygulama yapılandırma dosyasında, İzleme dinleyicisi bildirin. Oluşturmakta olduğunuz dinleyici diğer nesneler gerektiriyorsa, bunları da bildirin. Aşağıdaki örnekte adlı bir dinleyici oluşturma işlemi gösterilmektedir `myListener` metin dosyasına yazar `TextWriterOutput.log`.  
   
     ```xml  
     <configuration>  
@@ -44,7 +44,7 @@ ms.locfileid: "59222724"
     </configuration>  
     ```  
   
-2.  Kullanım <xref:System.Diagnostics.Trace> izleme dinleyicilerine ileti yazmak için kodunuzda sınıfı.  
+2. Kullanım <xref:System.Diagnostics.Trace> izleme dinleyicilerine ileti yazmak için kodunuzda sınıfı.  
   
     ```vb  
     Trace.TraceInformation("Test message.")  

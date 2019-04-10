@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300612"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Nasıl yapılır: Etkin MDI Alt Öğesini Belirleme
 Bazı durumlarda, çalışan bir komut odaklanmış etkin alt form üzerinde denetim sağlamak isteyeceksiniz. Örneğin, alt formun metin kutusunda seçili metni panoya kopyalamak istediğiniz varsayalım. Seçili metni panoya kullanmaya kopyalayan bir yordam oluşturacak <xref:System.Windows.Forms.Control.Click> Standart Düzen menüsünde kopyalama menü öğesinin olay.  
@@ -27,7 +27,7 @@ Bazı durumlarda, çalışan bir komut odaklanmış etkin alt form üzerinde den
   
 ### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>(Metni panoya kopyalamak için) etkin MDI alt belirlemek için  
   
-1.  Bir yöntem içinde etkin denetim etkin alt formun metnini panoya kopyalayın.  
+1. Bir yöntem içinde etkin denetim etkin alt formun metnini panoya kopyalayın.  
   
     > [!NOTE]
     >  Bu örnek MDI üst formu olduğunu varsayar (`Form1`) içeren bir veya daha fazla MDI alt pencereleri olan bir <xref:System.Windows.Forms.RichTextBox> denetimi. Daha fazla bilgi için [MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md).  

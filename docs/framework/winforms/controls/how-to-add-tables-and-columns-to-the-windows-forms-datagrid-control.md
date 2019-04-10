@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: 55a8d28d04dd05d4dba7ab2b1edbcfbcce97cecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222048"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319917"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetimine Tablo ve Sütun Ekleme
 > [!NOTE]
@@ -25,12 +25,12 @@ ms.locfileid: "59222048"
   
 ### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>DataGrid denetimine tablo ve sütun programsal olarak eklemek için  
   
-1.  Tablodaki verileri görüntülemek için öncelikle bağlanmalıdır <xref:System.Windows.Forms.DataGrid> denetlemek için bir veri kümesi. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+1. Tablodaki verileri görüntülemek için öncelikle bağlanmalıdır <xref:System.Windows.Forms.DataGrid> denetlemek için bir veri kümesi. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
     > [!CAUTION]
     >  Sütun stillerini programlı olarak belirtme, her zaman Oluştur **DataGridColumnStyle** nesneleri ve bunları Ekle **GridColumnStylesCollection** eklemeden önce nesne  **DataGridTableStyle** nesneleri için **GridTableStylesCollection** nesne. Boş bir eklediğinizde **DataGridTableStyle** nesnesini koleksiyonuna **DataGridColumnStyle** nesneleri otomatik olarak üretilen sizin için. Yeni eklemeyi denerseniz, bu nedenle, bir özel durum oluşturulur **DataGridColumnStyle** yinelenen nesneleriyle **MappingName** değerler **GridColumnStylesCollection**nesne.  
   
-2.  Yeni bir tablo stili bildirme ve eşleme adını ayarlayın.  
+2. Yeni bir tablo stili bildirme ve eşleme adını ayarlayın.  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -47,7 +47,7 @@ ms.locfileid: "59222048"
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  Yeni bir sütun stili bildirme ve eşleme adını ve diğer özellikleri ayarlayın.  
+3. Yeni bir sütun stili bildirme ve eşleme adını ve diğer özellikleri ayarlayın.  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "59222048"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  Çağrı **Ekle** yöntemi **GridColumnStylesCollection** nesne için tablo stili sütun eklemek için  
+4. Çağrı **Ekle** yöntemi **GridColumnStylesCollection** nesne için tablo stili sütun eklemek için  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "59222048"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  Çağrı **Ekle** yöntemi **GridTableStylesCollection** veri kılavuzu için tablo stili eklenecek nesne.  
+5. Çağrı **Ekle** yöntemi **GridTableStylesCollection** veri kılavuzu için tablo stili eklenecek nesne.  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  

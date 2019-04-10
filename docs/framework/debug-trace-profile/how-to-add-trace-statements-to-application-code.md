@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f45259623d4a481e635ac1b54ecb9a17497ab5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204100"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325598"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme
 İzleme için en sık kullanılan yöntemleri çıkış dinleyicileri için yazma yöntemleri şunlardır: **Yazma**, **Writeıf**, **WriteLine**, **Writelineıf**, **Assert**, ve **başarısız**. Bu yöntemleri iki kategoriye ayrılabilir: **Yazma**, **WriteLine**, ve **başarısız** tüm çıkış koşulsuz, oysa yayma **Writeıf**, **Writelineıf**ve  **Assert** bir Boolean koşulu test yazma ve koşul değerine göre yazma. **Writeıf** ve **Writelineıf** koşul ise çıktı yayma `true`, ve **Assert** koşul ise, çıktıyı yayar `false`.  
@@ -29,7 +29,7 @@ ms.locfileid: "59204100"
   
 ### <a name="to-write-a-complete-line"></a>Tam bir satır yazmak için  
   
-1.  Arama <xref:System.Diagnostics.Trace.WriteLine%2A> veya <xref:System.Diagnostics.Trace.WriteLineIf%2A> yöntemi.  
+1. Arama <xref:System.Diagnostics.Trace.WriteLine%2A> veya <xref:System.Diagnostics.Trace.WriteLineIf%2A> yöntemi.  
   
      Böylece sonraki iletiyi tarafından döndürülen bir satır başı, bu yöntem tarafından döndürülen ileti sonuna eklenir **yazma**, **Writeıf**, **WriteLine**, veya  **Writelineıf** satırında başlar:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59204100"
   
 ### <a name="to-write-a-partial-line"></a>Kısmi bir satır yazmak için  
   
-1.  Arama <xref:System.Diagnostics.Trace.Write%2A> veya <xref:System.Diagnostics.Trace.WriteIf%2A> yöntemi.  
+1. Arama <xref:System.Diagnostics.Trace.Write%2A> veya <xref:System.Diagnostics.Trace.WriteIf%2A> yöntemi.  
   
      Sonraki iletiyi bırakırsınız bir **yazma**, **Writeıf**, **WriteLine**, veya **Writelineıf** tarafından put ileti ile aynı satırda başlayacak **yazma** veya **Writeıf** deyimi:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59204100"
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Doğrulamak için belirli koşullar önce veya sonra bir yöntem yürütülmeye var  
   
-1.  Çağrı <xref:System.Diagnostics.Trace.Assert%2A> yöntemi.  
+1. Çağrı <xref:System.Diagnostics.Trace.Assert%2A> yöntemi.  
   
     ```vb  
     Dim i As Integer = 4  

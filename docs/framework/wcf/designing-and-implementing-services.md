@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216432"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319683"
 ---
 # <a name="designing-and-implementing-services"></a>Hizmetleri Tasarlama ve Uygulama
 Bu bölümde tanımlaması ve WCF sözleşmeleri gösterilmektedir. Ne bir uç nokta için dış dünya iletişim kuran bir hizmet sözleşmesi belirler. Daha somut bir düzeyde istek/yanıt gibi tek yönlü ve çift yönlü bir dizi temel ileti exchange desenleri (MEPs) ile düzenlenmiş belirli ileti hakkında bir deyim olduğu. Bir hizmet sözleşmesini ileti alışverişlerinde mantıksal olarak ilişkili bir dizi ise, bir hizmet işlemi bir tek ileti alışverişi olur. Örneğin, bir `Hello` işlemi (arayan Karşılama duyurmaktan biçimde) bir ileti açıkça kabul etmelidir ve olabilir veya (işlemin ilgili bağlı olarak) bir ileti döndürmeyebilir.  
@@ -38,13 +38,13 @@ Bu bölümde tanımlaması ve WCF sözleşmeleri gösterilmektedir. Ne bir uç n
   
  Örneğin, bir satın alma siparişi sözleşme olabilir bir `CreateOrder` sipariş bilgileri bir girişi kabul eden bir işlem türleri ve siparişi tanımlayıcısı dahil olmak üzere, başarı veya başarısızlık durumu bilgilerini döndürür. Ayrıca olabilir bir `GetOrderStatus` işlemi, bir siparişi tanımlayıcısı kabul eden ve sipariş durumu bilgilerini döndürür. Bu tür bir hizmet sözleşmesini belirtmeniz gerekir:  
   
-1.  Satın alma siparişi sözleşme, toplamda `CreateOrder` ve `GetOrderStatus` operations.  
+1. Satın alma siparişi sözleşme, toplamda `CreateOrder` ve `GetOrderStatus` operations.  
   
-2.  İşlemleri belirttiğiniz iletileri giriş ve çıkış iletileri.  
+2. İşlemleri belirttiğiniz iletileri giriş ve çıkış iletileri.  
   
-3.  Bu iletiler gerçekleştirebilirsiniz veriler.  
+3. Bu iletiler gerçekleştirebilirsiniz veriler.  
   
-4.  Kategorik deyimleri hakkında iletişim altyapısı başarıyla iletileri işlemek için gerekli. Örneğin, bu Ayrıntılar arasında olup olmadığını ve hangi güvenlik formları başarılı iletişim kurmak için gereklidir.  
+4. Kategorik deyimleri hakkında iletişim altyapısı başarıyla iletileri işlemek için gerekli. Örneğin, bu Ayrıntılar arasında olup olmadığını ve hangi güvenlik formları başarılı iletişim kurmak için gereklidir.  
   
  Bu tür birçok platformda (Microsoft olmayan platformlar dahil) diğer uygulamalara yönelik bilgileri iletmek için XML hizmet sözleşmelerini herkese açık şekilde standart XML biçimlerde, gibi ifade edilir [Web Hizmetleri Açıklama Dili](https://go.microsoft.com/fwlink/?LinkId=94952) () WSDL) ve [XML Şeması](https://go.microsoft.com/fwlink/?LinkId=94953) (XSD), diğerlerinin yanı sıra. Geliştiriciler için birçok platformda dil belirtiminin anladıkları olduğundan hem dillere birlikte çalışabilirliği etkinleştirmek için tasarlandığından hizmet ile iletişim kurabilen uygulamaları oluşturmak için bu genel sözleşme bilgileriniz kullanabilirsiniz Genel form, biçimleri ve protokolleri hizmetinin desteklediği açıklayarak. WCF bu tür bilgileri nasıl işlediği hakkında daha fazla bilgi için bkz. [meta verileri](../../../docs/framework/wcf/feature-details/metadata.md).  
   

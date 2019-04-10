@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217074"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328679"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Nasıl yapılır: Bölünmüş Pencerede Yeniden Boyutlandırma ve Konumlama Davranışını Tanımlama
 Bölmelerden <xref:System.Windows.Forms.SplitContainer> denetim kiralamak kendileri de olmak için yeniden boyutlandırılabilir ve kullanıcılar tarafından yönetilebilir. Ancak, olacaktır istediğinizde Bölümlendirici programlı olarak denetlemek için bir kez — burada yer alır ve ne derece taşınabilir.  
@@ -31,7 +31,7 @@ Bölmelerden <xref:System.Windows.Forms.SplitContainer> denetim kiralamak kendil
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>SplitContainer yeniden boyutlandırma davranışını tanımlamak için  
   
-1.  Bir yordamda <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> özelliğini istenen boyut, böylece ayırıcı 'Yaslama' davranışını elde edilir.  
+1. Bir yordamda <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> özelliğini istenen boyut, böylece ayırıcı 'Yaslama' davranışını elde edilir.  
   
      Aşağıdaki kod örneğinde, formun içinde <xref:System.Windows.Forms.Form.Load> olay, bölümlendirici içinde <xref:System.Windows.Forms.SplitContainer> denetim sürüklendiğinde 10 piksel atlamak için ayarlanır.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: f7fecf2f90c56e5ac10ea5929f1c23b25bf181bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9aac3a0efd6359c25a6972f0e0b52dd489ec31db
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221762"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327535"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Nasıl yapılır: Uygulamalar Arasında Sürükle ve Bırak İşlemleri Gerçekleştirme
 Uygulamalar arasında sürükle ve bırak işlemleri gerçekleştirme Bu eylem, uygulamadaki etkinleştirme değerinden farklı katılan her iki uygulama arasında kurulan "Sözleşme" göre davranır sürece <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> ve <xref:System.Windows.Forms.DragEventArgs.Effect%2A> özellikleri.  
@@ -18,21 +18,21 @@ Uygulamalar arasında sürükle ve bırak işlemleri gerçekleştirme Bu eylem, 
   
 ### <a name="to-perform-a-drag-and-drop-procedure-between-applications"></a>Uygulamalar arasında sürükle ve bırak yordam gerçekleştirmek için  
   
-1.  Yeni bir Windows Forms uygulaması oluşturun.  
+1. Yeni bir Windows Forms uygulaması oluşturun.  
   
-2.  Ekleme bir <xref:System.Windows.Forms.TextBox> form denetimi.  
+2. Ekleme bir <xref:System.Windows.Forms.TextBox> form denetimi.  
   
-3.  Yapılandırma <xref:System.Windows.Forms.TextBox> bırakılan veri almasına izin denetimi.  
+3. Yapılandırma <xref:System.Windows.Forms.TextBox> bırakılan veri almasına izin denetimi.  
   
      Daha fazla bilgi için [izlenecek yol: Windows Forms'ta sürükle ve bırak işlemi gerçekleştirme](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
-4.  Windows tabanlı uygulamanızı çalıştırın ve uygulama çalışırken WordPad çalıştırın.  
+4. Windows tabanlı uygulamanızı çalıştırın ve uygulama çalışırken WordPad çalıştırın.  
   
      WordPad sürükle ve bırak işlemleri sağlayan Windows tarafından yüklenen bir metin düzenleyicidir. Tuşuna basarak erişilebilir durumda **Başlat** düğmesi, seçme **çalıştırmak**, ardından yazarak `WordPad` metin kutusuna **çalıştırmak** iletişim kutusu ve tıklayarak**Tamam**.  
   
-5.  WordPad açıldıktan sonra içine bir metin dizesi yazın.  
+5. WordPad açıldıktan sonra içine bir metin dizesi yazın.  
   
-6.  Fareyi kullanarak, metni seçin ve ardından seçili metin üzerine sürükleyin <xref:System.Windows.Forms.TextBox> Windows tabanlı uygulama denetimi.  
+6. Fareyi kullanarak, metni seçin ve ardından seçili metin üzerine sürükleyin <xref:System.Windows.Forms.TextBox> Windows tabanlı uygulama denetimi.  
   
      Üzerine fare imlecinizle mesajının görüntülendiğini görün <xref:System.Windows.Forms.TextBox> denetimi (ve sonuç olarak, yükseltme <xref:System.Windows.Forms.Control.DragEnter> olay), imleç ve seçilen metne bırakabilirsiniz <xref:System.Windows.Forms.TextBox> denetimi.  
   

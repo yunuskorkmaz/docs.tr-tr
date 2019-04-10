@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 2b02e5e1a4d9872cc89a26b25a44c226ee545a88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8d0abbf0f71ac176d17261a0ae863938c575bdaf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166016"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311670"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Nasıl yapılır: Windows Forms’da Nesneleri Katmanlara Ayırma
 Karmaşık kullanıcı arabirimi oluşturmak veya birden çok belge arabirimi (MDI) formla çalışmak, genellikle denetimleri hem daha karmaşık kullanıcı arabirimleri (UI) oluşturmak için alt formları katman isteyeceksiniz. Taşıma ve denetimleri ve windows Grup bağlamında izlemek için z düzenini yönetmek. *Z düzenini* formun z ekseni (ayrıntılı) boyunca bir form üzerinde denetimleri visual katmanlarını olduğu. Pencerenin üst kısmında z düzenini, diğer tüm windows ile çakışıyor. Diğer tüm windows pencerenin alt kısmındaki z düzenini çakışıyor.  
@@ -27,9 +27,9 @@ Karmaşık kullanıcı arabirimi oluşturmak veya birden çok belge arabirimi (M
   
 ### <a name="to-layer-controls-at-design-time"></a>Tasarım zamanında katman denetimleri  
   
-1.  Katman istediğiniz denetimi seçin.  
+1. Katman istediğiniz denetimi seçin.  
   
-2.  Üzerinde **biçimi** menüsünde **sipariş**ve ardından **öne** veya **geri gönderme**.  
+2. Üzerinde **biçimi** menüsünde **sipariş**ve ardından **öne** veya **geri gönderme**.  
   
 ### <a name="to-layer-controls-programmatically"></a>Katman için programlı denetimler  
   

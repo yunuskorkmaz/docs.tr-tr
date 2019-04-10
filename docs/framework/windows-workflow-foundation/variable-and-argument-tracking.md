@@ -2,12 +2,12 @@
 title: Değişken ve Bağımsız Değişken İzleme
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: ef2d6111d5c123ac6c684df09f03398340a5522c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231045"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300898"
 ---
 # <a name="variable-and-argument-tracking"></a>Değişken ve Bağımsız Değişken İzleme
 Bir iş akışı yürütülmesini izlerken, genellikle verileri ayıklamak kullanışlıdır. Bu izleme kayıt sonrası yürütme erişirken ek bağlam sağlar. İçinde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], herhangi bir görünür bir değişken veya bağımsız değişken izleme kullanarak iş akışı herhangi bir etkinliği kapsamında ayıklayabilirsiniz. İzleme profilleri verileri ayıklamak kolaylaştırır.  
@@ -40,11 +40,11 @@ Bir iş akışı yürütülmesini izlerken, genellikle verileri ayıklamak kulla
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>Değişkenler ve bağımsız değişkenler içinde depolanan bilgi koruma  
  Varsayılan WF çalışma zamanı tarafından görünür hale izlenen bir değişken veya bağımsız değişken olarak. Bir iş akışı Geliştirici aşağıdaki adımları izleyerek erişmesini koruyabilir:  
   
-1.  Bir değişkenin değeri olarak şifreleyin.  
+1. Bir değişkenin değeri olarak şifreleyin.  
   
-2.  Bir değişkenin veya bağımsız değişken ayıklama önlemek için bir izleme profili yazma denetimi.  
+2. Bir değişkenin veya bağımsız değişken ayıklama önlemek için bir izleme profili yazma denetimi.  
   
-3.  Özel İzleme katılımcıları WF kod emin olmak için değişken veya bağımsız değişkenleri depolanan hassas bilgileri açıklamaz.  
+3. Özel İzleme katılımcıları WF kod emin olmak için değişken veya bağımsız değişkenleri depolanan hassas bilgileri açıklamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

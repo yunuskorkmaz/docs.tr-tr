@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 5a4ecd1fbe5bb79a67d9df07d8f1a93830b03880
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499875"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315809"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# Derleyici Seçenekleri)
 **-Warn** seçeneği, derleyicinin görüntülenecek uyarı düzeyini belirtir.  
@@ -49,11 +49,11 @@ ms.locfileid: "54499875"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açın **özellikleri** sayfası.  
+1. Projenin açın **özellikleri** sayfası.  
   
-2.  Tıklayın **derleme** özellik sayfası.  
+2. Tıklayın **derleme** özellik sayfası.  
   
-3.  Değiştirme **uyarı düzeyi** özelliği.  
+3. Değiştirme **uyarı düzeyi** özelliği.  
   
  Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
   

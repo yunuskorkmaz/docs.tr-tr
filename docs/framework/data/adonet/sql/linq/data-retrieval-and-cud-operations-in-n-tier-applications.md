@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209821"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318435"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N Katmanı Uygulamalarında Veri Alma ve CUD İşlemleri (LINQ to SQL)
 Bir ağ üzerinden bir istemci müşteriler veya siparişler gibi varlık nesnelerini seri hale getirmek, bu varlıklar, veri bağlamından ayrılır. Veri bağlamı artık değişikliklerini veya diğer nesnelerle ilişkilerini izler. İstemcileri yalnızca verileri okumasını sürece, bir sorun değildir. İstemcilerin bir yeni satır eklemek oldukça kolaydır. İstemcileri güncelleştirin veya veri silemezsiniz uygulamanız gerekiyorsa çağırmadan önce ancak ardından varlıkları için yeni bir veri bağlamı eklediğiniz gerekir <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Özgün değerleriyle bir iyimser eşzamanlılık kontrolü kullanıyorsanız, ayrıca, ardından da veritabanı orijinal varlık hem varlık değiştirilmiş olarak sağlamak için bir yol almanız gerekir. `Attach` Yöntemleri ayrılmış eklendikten sonra yeni bir veri bağlamına varlıkları put olanak sağlanır.  
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>Durum  
  Nesne sonra bir varlığa bağlı olduğu <xref:System.Data.Linq.DataContext> nesne örneği, kabul olması `PossiblyModified` durumu. Bağlı nesneyi kabul zorlamak için üç yol vardır `Modified`.  
   
-1.  Değiştirilmemiş olarak ekleme ve doğrudan alanları değiştirin.  
+1. Değiştirilmemiş olarak ekleme ve doğrudan alanları değiştirin.  
   
-2.  Kendisiyle ekleme <xref:System.Data.Linq.Table%601.Attach%2A> geçerli ve özgün nesne örneklerini alan aşırı yüklemesini. Değiştirilen alanları otomatik olarak bilir, böylece bu eski ve yeni değerlerle değişikliği İzleyicisi sağlar.  
+2. Kendisiyle ekleme <xref:System.Data.Linq.Table%601.Attach%2A> geçerli ve özgün nesne örneklerini alan aşırı yüklemesini. Değiştirilen alanları otomatik olarak bilir, böylece bu eski ve yeni değerlerle değişikliği İzleyicisi sağlar.  
   
-3.  Kendisiyle ekleme <xref:System.Data.Linq.Table%601.Attach%2A> ikinci (true olarak ayarlanırsa) Boolean parametresini alan aşırı yükleme. Bu, herhangi bir özgün değeri sağlamak zorunda kalmadan değiştirilmiş nesne dikkate alınması gereken değişiklik İzleyici bildirir. Bu yaklaşımda, nesnenin sürümü/zaman damgası alanı olması gerekir.  
+3. Kendisiyle ekleme <xref:System.Data.Linq.Table%601.Attach%2A> ikinci (true olarak ayarlanırsa) Boolean parametresini alan aşırı yükleme. Bu, herhangi bir özgün değeri sağlamak zorunda kalmadan değiştirilmiş nesne dikkate alınması gereken değişiklik İzleyici bildirir. Bu yaklaşımda, nesnenin sürümü/zaman damgası alanı olması gerekir.  
   
  Daha fazla bilgi için [nesne durumları ve değişiklik izleme](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md).  
   

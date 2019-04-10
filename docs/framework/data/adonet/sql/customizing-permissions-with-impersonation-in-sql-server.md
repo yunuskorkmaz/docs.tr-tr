@@ -2,12 +2,12 @@
 title: SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202800"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326976"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme
 Çoğu uygulama, temel tablolar için erişimi kısıtlamak için sahiplik zinciri bağlı olan verilere erişmek için saklı yordamlar kullanır. Saklı yordamları ÇALIŞTIRMA izinlerini iptal etme veya temel tablolardan izinleri reddetme verebilirsiniz. SQL Server tabloları ve saklı yordam sahibi aynıysa çağıranın izinlerini kontrol yapmaz. Ancak, sahiplik zinciri nesneleri farklı sahipleri varsa veya dinamik SQL söz konusu olduğunda çalışmaz.  
@@ -34,15 +34,15 @@ EXECUTE AS USER = 'userName';
   
  Üç adımı kullanan EXECUTE AS yan tümcesinde bir yordam.  
   
-1.  Bir oturum açmayla değil veritabanında bir ara sunucu kullanıcısı oluşturun. Bu gerekli değildir, ancak izinleri yönetirken yardımcı olur.  
+1. Bir oturum açmayla değil veritabanında bir ara sunucu kullanıcısı oluşturun. Bu gerekli değildir, ancak izinleri yönetirken yardımcı olur.  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  Proxy kullanıcı gerekli izinleri verin.  
+1. Proxy kullanıcı gerekli izinleri verin.  
   
-2.  Ekleme EXECUTE AS yan tümcesi saklı yordam veya kullanıcı tanımlı işlev.  
+2. Ekleme EXECUTE AS yan tümcesi saklı yordam veya kullanıcı tanımlı işlev.  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  

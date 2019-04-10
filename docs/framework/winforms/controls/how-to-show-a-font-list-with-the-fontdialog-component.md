@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: fba9caecc71c5cb77c811fc112616647c79689c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220194"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307333"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Nasıl yapılır: FontDialog Bileşeni ile Yazı Tipi Listesi Gösterme
 [FontDialog](fontdialog-component-windows-forms.md) bileşeni yanı sıra bir yazı tipi Seç ağırlık ve boyutu gibi ekran yönünü değiştirmek kullanıcıların sağlar.  
@@ -27,11 +27,11 @@ ms.locfileid: "59220194"
   
 ### <a name="to-select-font-properties-using-the-fontdialog-component"></a>FontDialog bileşeni kullanarak yazı tipi özellikleri seçmek için  
   
-1.  İletişim kutusunu kullanarak görüntüleme <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> yöntemi.  
+1. İletişim kutusunu kullanarak görüntüleme <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> yöntemi.  
   
-2.  Kullanım <xref:System.Windows.Forms.DialogResult> özelliği iletişim kutusu nasıl kapatıldığı belirler.  
+2. Kullanım <xref:System.Windows.Forms.DialogResult> özelliği iletişim kutusu nasıl kapatıldığı belirler.  
   
-3.  Kullanım <xref:System.Windows.Forms.FontDialog.Font%2A> istenen yazı tipi ayarlamak için özellik.  
+3. Kullanım <xref:System.Windows.Forms.FontDialog.Font%2A> istenen yazı tipi ayarlamak için özellik.  
   
      Aşağıdaki örnekte <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay işleyicisi açılır bir <xref:System.Windows.Forms.FontDialog> bileşeni. Bir yazı tipi seçilen ve kullanıcı olduğunda tıkladığında **Tamam**, <xref:System.Windows.Forms.FontDialog.Font%2A> özelliği bir <xref:System.Windows.Forms.TextBox> üzerinde form denetimi için seçtiğiniz yazı tipi ayarlayın. Formunuza sahip örnek varsayar bir <xref:System.Windows.Forms.Button> denetimi, bir <xref:System.Windows.Forms.TextBox> denetimi ve bir <xref:System.Windows.Forms.FontDialog> bileşeni.  
   

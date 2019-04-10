@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215956"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295906"
 ---
 # <a name="document-serialization-and-storage"></a>Belge Serileştirme ve Depolama
 Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluşturmak için güçlü bir ortam sağlar.  Sabit belgeler hem akış Gelişmiş belgelerini destekleyen gelişmiş özellikler ile güçlü 2B görüntüleme denetimleri, birleştirilmiş ve 3B grafik özellikleri .NET Framework uygulamaları, kalite ve kullanıcı deneyimi yepyeni bir düzeye taşıyın.  Esnek bir bellek içi temsili bir belgenin yönetebilmek .NET Framework'ün temel bir özelliği ve verimli bir şekilde kaydedin ve bir veri deposundan belge yükleme neredeyse her uygulamanın.  Bir belge bir dış veri deposuna iç bellek içi gösterimden dönüştürme işlemi, serileştirme olarak adlandırılır.  Bir veri deposunun okuma ve orijinal bellek içi örnek yeniden ters işlemi seri durumundan çıkarma olarak adlandırılır.  
@@ -65,11 +65,11 @@ Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluştur
 ### <a name="creating-a-plug-in-serializer"></a>Bir eklenti seri hale getirici oluşturma  
  Eklenti serileştiricileri ve bağlı seri hale getiricileri genişletme aynı sunulan genel yöntemleri ve olayları kullanın ve zaman uyumlu veya zaman uyumsuz olarak çalışmasına benzer şekilde tasarlanabilir.  Normalde bir eklenti seri hale getirici oluşturmak için izlenen üç temel adım vardır:  
   
-1.  Uygulama ve seri hale getirici bağlantılı bir serileştirici olarak ilk hatalarını ayıklayın.  Başlangıçta derlenir ve bir test uygulaması doğrudan bağlı seri hale getirici oluşturma, test etmek için tam erişim kesme noktaları ve diğer yararlı hata ayıklama hizmetleri sağlar.  
+1. Uygulama ve seri hale getirici bağlantılı bir serileştirici olarak ilk hatalarını ayıklayın.  Başlangıçta derlenir ve bir test uygulaması doğrudan bağlı seri hale getirici oluşturma, test etmek için tam erişim kesme noktaları ve diğer yararlı hata ayıklama hizmetleri sağlar.  
   
-2.  Seri hale getirici tam olarak test edildikten sonra bir <xref:System.Windows.Documents.Serialization.ISerializerFactory> arabirimi eklenti oluşturma eklenir.  <xref:System.Windows.Documents.Serialization.ISerializerFactory> Arabirimi mantıksal ağaç içeren tüm .NET Framework nesnelere tam erişim veren <xref:System.Windows.UIElement> nesneleri <xref:System.Windows.Documents.IDocumentPaginatorSource>, ve <xref:System.Windows.Media.Visual> öğeleri.  Ayrıca <xref:System.Windows.Documents.Serialization.ISerializerFactory> aynı zaman uyumlu ve zaman uyumsuz yöntemleri ve bağlantılı serileştiriciler tarafından kullanılan olayları sağlar.  Büyük belgelerin çıkış sürebilir olduğundan, zaman uyumsuz işlemler duyarlı kullanıcı etkileşimini korumak ve veri deposuyla ilgili bir sorun oluşursa, bir "İptal" seçeneği sunmak için önerilir.  
+2. Seri hale getirici tam olarak test edildikten sonra bir <xref:System.Windows.Documents.Serialization.ISerializerFactory> arabirimi eklenti oluşturma eklenir.  <xref:System.Windows.Documents.Serialization.ISerializerFactory> Arabirimi mantıksal ağaç içeren tüm .NET Framework nesnelere tam erişim veren <xref:System.Windows.UIElement> nesneleri <xref:System.Windows.Documents.IDocumentPaginatorSource>, ve <xref:System.Windows.Media.Visual> öğeleri.  Ayrıca <xref:System.Windows.Documents.Serialization.ISerializerFactory> aynı zaman uyumlu ve zaman uyumsuz yöntemleri ve bağlantılı serileştiriciler tarafından kullanılan olayları sağlar.  Büyük belgelerin çıkış sürebilir olduğundan, zaman uyumsuz işlemler duyarlı kullanıcı etkileşimini korumak ve veri deposuyla ilgili bir sorun oluşursa, bir "İptal" seçeneği sunmak için önerilir.  
   
-3.  Eklenti seri hale getirici oluşturulduktan sonra bir yükleme betiği dağıtmak için uygulanır ve yükleme (ve kaldırma) eklenti (bkz. Yukarıdaki "[eklentisi Serileştiricileri Yükleme](#InstallingPluginSerializers)").  
+3. Eklenti seri hale getirici oluşturulduktan sonra bir yükleme betiği dağıtmak için uygulanır ve yükleme (ve kaldırma) eklenti (bkz. Yukarıdaki "[eklentisi Serileştiricileri Yükleme](#InstallingPluginSerializers)").  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

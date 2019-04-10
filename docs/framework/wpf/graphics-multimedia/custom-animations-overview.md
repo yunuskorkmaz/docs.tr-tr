@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190736"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313950"
 ---
 # <a name="custom-animations-overview"></a>Özel Animasyonlara Genel Bakış
 Bu konu nasıl ve ne zaman açıklar genişletmek için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyon sistem özel anahtar çerçeveler, animasyon sınıfları oluşturarak veya onu atlamak için çerçeve başına geri çağırma kullanarak.  
@@ -99,9 +99,9 @@ Bu konu nasıl ve ne zaman açıklar genişletmek için [!INCLUDE[TLA2#tla_wincl
   
  Önerilen paradigma (tarafından kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animasyonları) iki devralma düzeyleri kullanmaktır:  
   
-1.  Bir soyut oluşturma  *\<türü >* türetildiği AnimationBase sınıfı <xref:System.Windows.Media.Animation.AnimationTimeline>. Bu sınıf'ı geçersiz kılmalıdır <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> yöntemi. Ayrıca yeni soyut bir yöntem olan GetCurrentValueCore'u, ve geçersiz kılma <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> varsayılan hedef değer parametreleri ve varsayılan başlangıç değer türlerini doğrular, böylece daha sonra GetCurrentValueCore çağırır.  
+1. Bir soyut oluşturma  *\<türü >* türetildiği AnimationBase sınıfı <xref:System.Windows.Media.Animation.AnimationTimeline>. Bu sınıf'ı geçersiz kılmalıdır <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> yöntemi. Ayrıca yeni soyut bir yöntem olan GetCurrentValueCore'u, ve geçersiz kılma <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> varsayılan hedef değer parametreleri ve varsayılan başlangıç değer türlerini doğrular, böylece daha sonra GetCurrentValueCore çağırır.  
   
-2.  Devralan başka bir sınıf oluşturmanız gelen yeni  *\<türü >* AnimationBase sınıf ve geçersiz kılmaları <xref:System.Windows.Freezable.CreateInstanceCore%2A> yöntemi, tanıttığınız GetCurrentValueCore yöntemi ve <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> özelliği.  
+2. Devralan başka bir sınıf oluşturmanız gelen yeni  *\<türü >* AnimationBase sınıf ve geçersiz kılmaları <xref:System.Windows.Freezable.CreateInstanceCore%2A> yöntemi, tanıttığınız GetCurrentValueCore yöntemi ve <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> özelliği.  
   
  **Alternatif yaklaşımlar**  
   

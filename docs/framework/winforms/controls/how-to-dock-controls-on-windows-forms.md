@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: 61ccad615eec81eb1aa77e6a99d48ef29ecb5be2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231532"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317265"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Nasıl yapılır: Windows Forms'a Denetimler Yerleştirme
 Formunuza kenarlarına denetimleri yerleştirme veya onlara denetimin kapsayıcı (bir form veya bir kapsayıcı denetimi) doldurun. Örneğin, Windows Gezgini noktaları kendi <xref:System.Windows.Forms.TreeView> pencerenin sol tarafındaki denetim ve kendi <xref:System.Windows.Forms.ListView> penceresinin sağ tarafındaki denetimi. Kullanım <xref:System.Windows.Forms.Control.Dock%2A> yerleştirme modu tanımlamak, tüm görünür Windows Forms denetimleri için özellik.  
@@ -23,13 +23,13 @@ Formunuza kenarlarına denetimleri yerleştirme veya onlara denetimin kapsayıc�
   
 ### <a name="to-dock-a-control"></a>Bir denetim sabitlemek için  
   
-1.  Sabitlemek istediğiniz denetimi seçin.  
+1. Sabitlemek istediğiniz denetimi seçin.  
   
-2.  Özellikler penceresinde sağındaki oku <xref:System.Windows.Forms.Control.Dock%2A> özelliği.  
+2. Özellikler penceresinde sağındaki oku <xref:System.Windows.Forms.Control.Dock%2A> özelliği.  
   
      Bir düzenleyici gösteren bir dizi kenarları ve form merkezini temsil eden kutu görüntülenir.  
   
-3.  Edge denetim sabitlemek istediğiniz formun temsil eden düğmeye tıklayın. Denetimin form veya denetim kapsayıcı içeriğini doldurmak için merkezi kutusuna tıklayın. Tıklayın **(hiçbiri)** yerleştirme devre dışı bırakmak için.  
+3. Edge denetim sabitlemek istediğiniz formun temsil eden düğmeye tıklayın. Denetimin form veya denetim kapsayıcı içeriğini doldurmak için merkezi kutusuna tıklayın. Tıklayın **(hiçbiri)** yerleştirme devre dışı bırakmak için.  
   
      Denetim, yerleşik uç sınırlarına uyacak şekilde otomatik olarak boyutlandırılır.  
   

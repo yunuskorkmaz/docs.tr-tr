@@ -2,12 +2,12 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 7cafd8c1ba96a4fa1014f3570413b4bb83f69766
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 479941593b1abefe637525703140b02917c6692b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316797"
 ---
 # <a name="bindings"></a>\<bağlamaları >
 
@@ -29,15 +29,15 @@ Kullanabileceğiniz `bindings` standart ve özel bağlamalar için Windows Commu
   
  Öğeleri yığında görünme sırasını çünkü bu işlem iletiyi uygulanma sırası önemlidir. Gerekli yığın öğelerin sırasını aşağıda verilmiştir:  
   
-1.  İşlemler (isteğe bağlı)  
+1. İşlemler (isteğe bağlı)  
   
-2.  Güvenilir Mesajlaşma (isteğe bağlı)  
+2. Güvenilir Mesajlaşma (isteğe bağlı)  
   
-3.  Güvenlik (isteğe bağlı)  
+3. Güvenlik (isteğe bağlı)  
   
-4.  Kodlayıcı  
+4. Kodlayıcı  
   
-5.  Taşıma  
+5. Taşıma  
   
  Özel bağlamalar tarafından tanımlanır, `name` özniteliği. Özel bağlamalar hakkında daha fazla bilgi için bkz. [özel bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

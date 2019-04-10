@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 5bc4bce984c4159949f840f395005ec9fe746e85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227320"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312169"
 ---
 # <a name="how-to-enable-streaming"></a>Nasıl yapılır: Akışı Etkinleştirme
 Windows Communication Foundation (WCF) iletilerini arabelleğe alınan ya da akış aktarımları kullanarak gönderebilirsiniz. Bir alıcı okumadan önce varsayılan arabelleğe alınan aktarım modunda bir ileti tamamen teslim edilmelidir. Aktarım modunu akışında alıcı tamamen teslim edilmeden önce iletiyi işlemeye başlayabilirsiniz. Akış modunda iletilen bilgiler uzun ve seri olarak işlenebilecek yararlı olur. Akış modunda de, ileti tamamen arabelleğe çok büyük olduğunda yararlıdır.  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) iletilerini arabelleğe alınan ya da ak�
   
 ### <a name="to-stream-data"></a>Akış verileri  
   
-1.  Veri akışı `OperationContract` için hizmeti iki gereksinimleri karşılaması gerekir:  
+1. Veri akışı `OperationContract` için hizmeti iki gereksinimleri karşılaması gerekir:  
   
     1.  Akışla verileri tutan parametresi, yöntemin tek parametre olmalıdır. Örneğin, giriş iletisine akışla birine ise, işlemi tam olarak bir girdi parametreniz olmalıdır. Benzer şekilde, çıktı iletisi akışını ise işlemi tam olarak bir çıkış parametresi ya da dönüş değeri olması gerekir.  
   
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) iletilerini arabelleğe alınan ya da ak�
   
      `GetStream` İşlemi arabelleğe alınan bazı girdi verisi olarak aldığı bir `string`, arabelleğe alınıp ve döndürür bir `Stream`, hangi akış. Buna karşılık `UploadStream` alır bir `Stream` (akış) ve döndüren bir `bool` (arabelleğe). `EchoStream` alan ve döndüren `Stream` işlem girişi örneğidir ve çıkış iletileri hem de akış. Son olarak, `GetReversedStream` giriş alan ve döndüren bir `Stream` (akış).  
   
-2.  Akış bağlamadaki etkinleştirilmesi gerekir. Ayarladığınız bir `TransferMode` özelliği şu değerlerden birini alabilir:  
+2. Akış bağlamadaki etkinleştirilmesi gerekir. Ayarladığınız bir `TransferMode` özelliği şu değerlerden birini alabilir:  
   
     1.  `Buffered`,  
   
@@ -60,14 +60,14 @@ Windows Communication Foundation (WCF) iletilerini arabelleğe alınan ya da ak�
          [!code-csharp[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#3)]
          [!code-vb[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#3)]  
   
-3.  İşlemleri `GetStream`, `UploadStream`, ve `EchoStream` tüm baş doğrudan bir dosyadan veri gönderen veya alınan verileri bir dosyaya kaydetme. Aşağıdaki kod içindir `GetStream`.  
+3. İşlemleri `GetStream`, `UploadStream`, ve `EchoStream` tüm baş doğrudan bir dosyadan veri gönderen veya alınan verileri bir dosyaya kaydetme. Aşağıdaki kod içindir `GetStream`.  
   
      [!code-csharp[c_HowTo_EnableStreaming#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#4)]
      [!code-vb[c_HowTo_EnableStreaming#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#4)]  
   
 ### <a name="writing-a-custom-stream"></a>Özel bir akış yazma  
   
-1.  Bunu gönderildiği sırada bir veri akışı, her bir öbeği özel işleme yapmak veya alınan özel akış sınıfından türetilen <xref:System.IO.Stream>. Özel bir akışa ilişkin bir örnek olarak, aşağıdaki kodu içeren bir `GetReversedStream` yöntemi ve bir `ReverseStream` sınıfı-.  
+1. Bunu gönderildiği sırada bir veri akışı, her bir öbeği özel işleme yapmak veya alınan özel akış sınıfından türetilen <xref:System.IO.Stream>. Özel bir akışa ilişkin bir örnek olarak, aşağıdaki kodu içeren bir `GetReversedStream` yöntemi ve bir `ReverseStream` sınıfı-.  
   
      `GetReversedStream` Oluşturur ve yeni bir örneğini döndürür `ReverseStream`. Sistem okur gibi gerçek işleme olur `ReverseStream` nesne. `ReverseStream.Read` Yöntemi bayt öbeğini temel alınan dosyadan okur, bunları tersine çevirir ve sonra ters bayt sayısını döndürür. Bu yöntem, tüm dosya içeriğini ters değil; bir kerede bir bayt bir öbek tersine çevirir. Bu örnek, içeriği olarak akış işlemede nasıl gerçekleştirebileceğiniz gösterir akıştan yazılamaz veya okunamaz için okuyun.  
   

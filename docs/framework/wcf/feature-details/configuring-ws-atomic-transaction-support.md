@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 8fe76cfa0dbcd8bc7ef8248ac798a8b45bf87201
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203541"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315185"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-Atomic İşlem Desteğini Yapılandırma
 Bu konuda, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTransaction (WS-AT) desteği nasıl yapılandıracağınız açıklanır.  
@@ -56,19 +56,19 @@ Bu konuda, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTran
   
  Güven oluşturmak için gerekli sertifikaları zaten sahip olması gerekir. Oluşturun ve aşağıdaki adımları önce yeni sertifika yükleme konusunda bilgi almak için bkz: [nasıl yapılır: Oluşturma ve yükleme geçici istemci sertifikaları WCF'de geliştirme sırasında](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
-1.  Makine A'da sertifikalar MMC ek bileşenini alma LocalMachine\MY (Kişisel düğümü) ve LocalMachine\ROOT deposu (güvenilen kök sertifika yetkilisi düğümü) mevcut sertifikayı (certA) kullanarak. Belirli bir düğüme sertifikayı içeri aktarmak için düğümünü sağ tıklatın ve seçin **tüm görevler/içeri aktarma**.  
+1. Makine A'da sertifikalar MMC ek bileşenini alma LocalMachine\MY (Kişisel düğümü) ve LocalMachine\ROOT deposu (güvenilen kök sertifika yetkilisi düğümü) mevcut sertifikayı (certA) kullanarak. Belirli bir düğüme sertifikayı içeri aktarmak için düğümünü sağ tıklatın ve seçin **tüm görevler/içeri aktarma**.  
   
-2.  B sertifikalar MMC ek bileşenini kullanarak, makinede oluşturun veya bir özel anahtara sahip bir sertifika certB edinmek ve LocalMachine\MY (Kişisel düğümü) ve LocalMachine\ROOT deposu (güvenilen kök sertifika yetkilisi düğümü) içe aktarın.  
+2. B sertifikalar MMC ek bileşenini kullanarak, makinede oluşturun veya bir özel anahtara sahip bir sertifika certB edinmek ve LocalMachine\MY (Kişisel düğümü) ve LocalMachine\ROOT deposu (güvenilen kök sertifika yetkilisi düğümü) içe aktarın.  
   
-3.  Bu zaten yapılmadıysa, certA'ın ortak anahtarını bir dosyaya dışarı aktarın.  
+3. Bu zaten yapılmadıysa, certA'ın ortak anahtarını bir dosyaya dışarı aktarın.  
   
-4.  Bu zaten yapılmadıysa, certB'ın ortak anahtarını bir dosyaya dışarı aktarın.  
+4. Bu zaten yapılmadıysa, certB'ın ortak anahtarını bir dosyaya dışarı aktarın.  
   
 ### <a name="establishing-mutual-trust-between-machines"></a>Makineler arasındaki karşılıklı güven oluşturma  
   
-1.  Makine A'da certB dosya gösterimini LocalMachine\MY ve LocalMachine\ROOT depolarına aktarın. Bu, makine ile iletişim kurmak için güvenleri certB bildirir.  
+1. Makine A'da certB dosya gösterimini LocalMachine\MY ve LocalMachine\ROOT depolarına aktarın. Bu, makine ile iletişim kurmak için güvenleri certB bildirir.  
   
-2.  B makinede LocalMachine\MY ve LocalMachine\ROOT depolara certA'ın dosyasını içeri aktarın. Bu, makine ile iletişim kurmak için B güvenleri certA anlamına gelir.  
+2. B makinede LocalMachine\MY ve LocalMachine\ROOT depolara certA'ın dosyasını içeri aktarın. Bu, makine ile iletişim kurmak için B güvenleri certA anlamına gelir.  
   
  Bu adımları tamamladıktan sonra iki makine arasında güven ve WS-AT aracılığıyla birbirleriyle iletişim kurmak için yapılandırılabilir.  
   
@@ -77,9 +77,9 @@ Bu konuda, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTran
   
  Bu, WS-AT MMC ek bileşenini kullanarak yapılandırabilirsiniz. Bu araç hakkında daha fazla bilgi için bkz. [WS-AtomicTransaction yapılandırması MMC ek bileşenini](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) konu. Aşağıdaki adımlar, MSDTC çalıştıran iki bilgisayar arasında güven oluşturma açıklanmaktadır.  
   
-1.  Makine A'ın ayarlarını yapılandırın. "Son nokta sertifikası" için certA seçin. "Yetkili sertifikaları için" certB seçin.  
+1. Makine A'ın ayarlarını yapılandırın. "Son nokta sertifikası" için certA seçin. "Yetkili sertifikaları için" certB seçin.  
   
-2.  Makine B'nin ayarlarını yapılandırın. "Son nokta sertifikası" için certB seçin. "Yetkili sertifikaları için" certA seçin.  
+2. Makine B'nin ayarlarını yapılandırın. "Son nokta sertifikası" için certB seçin. "Yetkili sertifikaları için" certA seçin.  
   
 > [!NOTE]
 >  Bir makineyi başka bir makine için bir ileti gönderdiğinde, gönderenin alıcının sertifikanın konu adı ve alıcının makinenin adını eşleştiğini doğrulayın dener. Bunlar eşleşmiyorsa, sertifika doğrulama başarısız olur ve iki makine iletişim kuramıyor.  
@@ -98,13 +98,13 @@ Bu konuda, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTran
   
  WS-AT protokolü hizmet ayrıca tümleşik ServiceModel izlemeye ETW izleme oturumunu destekler. Bu, var olan işlem izlemeleri yanı sıra ayrıntılı ve iletişim özgü izlemeler sağlar.  Bu ek izlemeleri etkinleştirmek için şu adımları izleyin.  
   
-1.  Açık **başlangıç/çalıştırma** menüsünden "regedit" giriş kutusuna girin ve seçin **Tamam**.  
+1. Açık **başlangıç/çalıştırma** menüsünden "regedit" giriş kutusuna girin ve seçin **Tamam**.  
   
-2.  İçinde **Kayıt Defteri Düzenleyicisi'ni**, sol bölmede, Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\ aşağıdaki klasöre gidin  
+2. İçinde **Kayıt Defteri Düzenleyicisi'ni**, sol bölmede, Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\ aşağıdaki klasöre gidin  
   
-3.  Sağ tıklayın `ServiceModelDiagnosticTracing` seçin ve sağ bölmede değer **Değiştir**.  
+3. Sağ tıklayın `ServiceModelDiagnosticTracing` seçin ve sağ bölmede değer **Değiştir**.  
   
-4.  İçinde **değer verisi** giriş kutusunda, aşağıdakilerden birini etkinleştirmek istediğiniz izleme düzeyini belirtmek için aşağıdaki geçerli değerleri girin.  
+4. İçinde **değer verisi** giriş kutusunda, aşağıdakilerden birini etkinleştirmek istediğiniz izleme düzeyini belirtmek için aşağıdaki geçerli değerleri girin.  
   
 -   0: kapalı  
   

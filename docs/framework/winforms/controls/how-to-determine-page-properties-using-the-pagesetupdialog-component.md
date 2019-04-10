@@ -10,12 +10,12 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 6eefe7dd69d02712b650d95ddf14394c10792807
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c65eb54bb95b9a20cd1e43f0d491af47985f2e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329212"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Nasıl yapılır: PageSetupDialog Bileşenini Kullanarak Sayfa Özelliklerini Belirleme
 [PageSetupDialog](pagesetupdialog-component-windows-forms.md) kullanıcıya bir belge için bileşen sunar düzen, sayfa boyutunu ve diğer sayfa düzeni seçenekleri.  
@@ -26,7 +26,7 @@ ms.locfileid: "59213709"
   
 ### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a>PageSetupDialog bileşenini kullanarak sayfa özelliklerini ayarlamak için  
   
-1.  Kullanma <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> iletişim kutusunu görüntülemek için yöntemi belirtme <xref:System.Drawing.Printing.PrintDocument> kullanılacak.  
+1. Kullanma <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> iletişim kutusunu görüntülemek için yöntemi belirtme <xref:System.Drawing.Printing.PrintDocument> kullanılacak.  
   
      Aşağıdaki örnekte <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Click> olay işleyicisi örneği açılır <xref:System.Windows.Forms.PageSetupDialog> bileşeni. Var olan bir belgeyi belirtilen <xref:System.Windows.Forms.PageSetupDialog.Document%2A> özelliği ve kendi <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> özelliği `false`.  
   

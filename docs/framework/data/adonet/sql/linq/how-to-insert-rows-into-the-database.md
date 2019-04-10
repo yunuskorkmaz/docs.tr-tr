@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328601"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>Nasıl yapılır: Veritabanına Satır Ekleme
 İlişkili nesneleri ekleyerek bir veritabanına satır ekleme [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> koleksiyonu ve ardından veritabanına değişiklikleri gönderme. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygun SQL değişikliklerinizi çevirir `INSERT` komutları.  
@@ -24,11 +24,11 @@ ms.locfileid: "59169604"
   
 ### <a name="to-insert-a-row-into-the-database"></a>Veritabanına bir satır eklemek için  
   
-1.  Gönderilecek sütun verileri içeren yeni bir nesne oluşturun.  
+1. Gönderilecek sütun verileri içeren yeni bir nesne oluşturun.  
   
-2.  Eklemek istediğiniz yeni nesneye [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` veritabanında hedef tabloyla ilişkili koleksiyonu.  
+2. Eklemek istediğiniz yeni nesneye [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` veritabanında hedef tabloyla ilişkili koleksiyonu.  
   
-3.  Veritabanı için değişiklik gönderin.  
+3. Veritabanı için değişiklik gönderin.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği, türü yeni bir nesne oluşturur `Order` ve uygun değerlerle doldurur. Ardından yeni nesneye ekler `Order` koleksiyonu. Son olarak, yeni bir satır olarak değişiklik veritabanına gönderdiğinde `Orders` tablo.  

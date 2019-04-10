@@ -2,25 +2,25 @@
 title: 'Nasıl yapılır: İstek-Yanıt Sözleşmesi Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 9954be556df13193c290a55616ad83ef07e0af7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327483"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Nasıl yapılır: İstek-Yanıt Sözleşmesi Oluşturma
 İstek-yanıt anlaşması yanıt döndüren bir yöntem belirtir. Yanıtı gönderilir ve bu sözleşmenin koşullarına isteğine bağıntılı. Bile yöntem hiç yanıt döndürür (`void` C# veya `Sub` Visual Basic'te), altyapıyı oluşturur ve çağırana bir boş ileti gönderir. Bir boş bir yanıt iletisini göndermeyi önlemek için tek yönlü anlaşma işlemi için kullanın.  
   
 ### <a name="to-create-a-request-reply-contract"></a>İstek-yanıt anlaşması oluşturma  
   
-1.  Bir arabirim, kendi seçtiğiniz programlama dilinde oluşturun.  
+1. Bir arabirim, kendi seçtiğiniz programlama dilinde oluşturun.  
   
-2.  Uygulama <xref:System.ServiceModel.ServiceContractAttribute> özniteliği için arabirim.  
+2. Uygulama <xref:System.ServiceModel.ServiceContractAttribute> özniteliği için arabirim.  
   
-3.  Uygulama <xref:System.ServiceModel.OperationContractAttribute> istemcileri çağırabilirsiniz her yönteme öznitelik.  
+3. Uygulama <xref:System.ServiceModel.OperationContractAttribute> istemcileri çağırabilirsiniz her yönteme öznitelik.  
   
-4.  İsteğe bağlı. Değerini <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğini `true` bir boş bir yanıt iletisini göndermeyi önlemek için. Varsayılan olarak, tüm işlemler istek-yanıt sözleşmeleriyle gerçekleştirilir.  
+4. İsteğe bağlı. Değerini <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğini `true` bir boş bir yanıt iletisini göndermeyi önlemek için. Varsayılan olarak, tüm işlemler istek-yanıt sözleşmeleriyle gerçekleştirilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek sağlayan bir hesap makinesi hizmet sözleşme tanımlayan `Add` ve `Subtract` yöntemleri. `Multiply` Yöntemi değil sözleşmesinin bir parçası olarak işaretlenmediğinden <xref:System.ServiceModel.OperationContractAttribute> sınıfı ve bu nedenle, istemciler için erişilebilir değil.  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: 6d2edadc323994f7f25394321fb1aff18f7154c5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 017a2458562068727674bd3fd9cda8c33d989e8b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824279"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314626"
 ---
 # <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>İfade türüne sahip '\<typename >' kısıtlanmış bir tür olan ve 'Object' veya 'ValueType' öğesinden devralınan üyelere erişim için kullanılamaz
 Bir ifade, ortak dil çalışma zamanı tarafından (CLR) Kutulu bir türe değerlendirir ancak kutulama gerektiren bir üye erişir.  
@@ -25,11 +25,11 @@ Bir ifade, ortak dil çalışma zamanı tarafından (CLR) Kutulu bir türe değe
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  İçin alıntı türü değerlendirilen bir ifade bulun.  
+1. İçin alıntı türü değerlendirilen bir ifade bulun.  
   
-2.  Devralınan bir yöntemi çağırmak için çalışır Ekstrenizi bölümü bulun <xref:System.Object> veya <xref:System.ValueType>.  
+2. Devralınan bir yöntemi çağırmak için çalışır Ekstrenizi bölümü bulun <xref:System.Object> veya <xref:System.ValueType>.  
   
-3.  Yöntem çağrısının önlemek için deyimi yeniden yazın.  
+3. Yöntem çağrısının önlemek için deyimi yeniden yazın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

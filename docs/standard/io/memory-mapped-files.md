@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654360"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328315"
 ---
 # <a name="memory-mapped-files"></a>Bellek Eşlemeli Dosyalar
 Bir bellek işlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu dosya ve bellek alanı eşlemesini okuma ve yazma doğrudan bellek tarafından dosyasını değiştirmek birden çok işlem dahil olmak üzere bir uygulama sağlar. İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], yönetilen kod bellek eşlemeli dosyalar açıklandığı gibi aynı şekilde access bellek eşlemeli dosyalar, yerel Windows işlevlerine erişmek için kullanabileceğiniz [Managing Memory-Mapped dosyaları](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
@@ -96,29 +96,29 @@ Bir bellek işlemeli dosya sanal bellekte bir dosyanın içeriğini içerir. Bu 
   
  Aşağıdaki örnek, Boole değerleri bellekle eşlenen bir dosyaya yazma üç ayrı işlemler (konsol uygulamaları) oluşur. Aşağıdaki eylemler dizisini oluşur:  
   
-1.  `Process A` bellek eşlemeli dosya oluşturur ve bir değer için yazar.  
+1. `Process A` bellek eşlemeli dosya oluşturur ve bir değer için yazar.  
   
-2.  `Process B` bellek eşlemeli dosya açılır ve bir değer için yazar.  
+2. `Process B` bellek eşlemeli dosya açılır ve bir değer için yazar.  
   
-3.  `Process C` bellek eşlemeli dosya açılır ve bir değer için yazar.  
+3. `Process C` bellek eşlemeli dosya açılır ve bir değer için yazar.  
   
-4.  `Process A` okur ve bellek eşlemeli dosya değerleri görüntüler.  
+4. `Process A` okur ve bellek eşlemeli dosya değerleri görüntüler.  
   
-5.  Sonra `Process A` tamamlandı bellekle eşlenen dosya ile dosya çöp toplamadan hemen iadesi.  
+5. Sonra `Process A` tamamlandı bellekle eşlenen dosya ile dosya çöp toplamadan hemen iadesi.  
   
  Bu örneği çalıştırmak için aşağıdakileri yapın:  
   
-1.  Uygulamaları derlemek ve üç komut istemi penceresi açın.  
+1. Uygulamaları derlemek ve üç komut istemi penceresi açın.  
   
-2.  İlk komut istemi penceresinde çalıştırın `Process A`.  
+2. İlk komut istemi penceresinde çalıştırın `Process A`.  
   
-3.  İkinci komut istemi penceresinde çalıştırın `Process B`.  
+3. İkinci komut istemi penceresinde çalıştırın `Process B`.  
   
-4.  Geri dönüp `Process A` ve ENTER tuşuna basın.  
+4. Geri dönüp `Process A` ve ENTER tuşuna basın.  
   
-5.  Üçüncü komut istemi penceresinde çalıştırın `Process C`.  
+5. Üçüncü komut istemi penceresinde çalıştırın `Process C`.  
   
-6.  Geri dönüp `Process A` ve ENTER tuşuna basın.  
+6. Geri dönüp `Process A` ve ENTER tuşuna basın.  
   
  Çıkışı `Process A` aşağıdaki gibidir:  
   
@@ -147,4 +147,4 @@ Process C says: True
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)
+- [Dosya ve Akış G/Ç](../../../docs/standard/io/index.md)

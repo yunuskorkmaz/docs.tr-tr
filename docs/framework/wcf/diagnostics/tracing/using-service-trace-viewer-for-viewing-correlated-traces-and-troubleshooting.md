@@ -2,12 +2,12 @@
 title: 'İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma '
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160673"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329056"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma 
 Bu konuda izleme verilerinin biçimini tanımlar ve uygulamanızda sorun giderme için hizmet izleme görüntüleyicisini kullanma yaklaşımları görüntüleme.  
@@ -152,17 +152,17 @@ WCF istemci etkinlikler oluşturma zamanı (sol paneli) ve iç içe geçmiş etk
   
  Hizmette etkinlik modeli WCF kavramlara şu şekilde eşlenir:  
   
-1.  Biz, oluşturmak ve bir ServiceHost (Bu konakla ilgili birkaç etkinlik örneği için söz konusu olduğunda güvenlik oluşturabilir) açın.  
+1. Biz, oluşturmak ve bir ServiceHost (Bu konakla ilgili birkaç etkinlik örneği için söz konusu olduğunda güvenlik oluşturabilir) açın.  
   
-2.  Dinleme, etkinlik ServiceHost içinde her dinleyici için (ile aktarımları açık ServiceHost içine ve dışına) oluştururuz.  
+2. Dinleme, etkinlik ServiceHost içinde her dinleyici için (ile aktarımları açık ServiceHost içine ve dışına) oluştururuz.  
   
-3.  Dinleyici istemci tarafından başlatılan iletişim istek algıladığında istemci tarafından gönderilen tüm baytlar işlenme "Bayt alma" etkinlik için aktarır. Bu etkinlik, istemci-hizmet etkileşim sırasında gerçekleşen bağlantı hataları görebiliriz.  
+3. Dinleyici istemci tarafından başlatılan iletişim istek algıladığında istemci tarafından gönderilen tüm baytlar işlenme "Bayt alma" etkinlik için aktarır. Bu etkinlik, istemci-hizmet etkileşim sırasında gerçekleşen bağlantı hataları görebiliriz.  
   
-4.  İletiye karşılık gelen her kümesi alınan bayt için Biz bu bayt "İşlemi iletisi" etkinliğinde, WCF ileti nesnesi oluştururuz burada işleyin. Bu etkinlik, hatalı bir zarf veya hatalı bir ileti ile ilgili hataları görüyoruz.  
+4. İletiye karşılık gelen her kümesi alınan bayt için Biz bu bayt "İşlemi iletisi" etkinliğinde, WCF ileti nesnesi oluştururuz burada işleyin. Bu etkinlik, hatalı bir zarf veya hatalı bir ileti ile ilgili hataları görüyoruz.  
   
-5.  İleti oluşturulduğunda, biz bir işlem eylem etkinliği aktarın. Varsa `propagateActivity` ayarlanır `true` hem istemci hem de hizmet üzerinde bu etkinlik istemcide tanımlanan ve daha önce açıklanan aynı kimliğe sahip. İstekle ilişkili tüm izlemeleri WCF'de yayılan yanıt ileti işleme dahil olmak üzere bu etkinliğe olduğundan bu aşamadan biz doğrudan bağıntı uç noktalar genelinde fayda başlayın.  
+5. İleti oluşturulduğunda, biz bir işlem eylem etkinliği aktarın. Varsa `propagateActivity` ayarlanır `true` hem istemci hem de hizmet üzerinde bu etkinlik istemcide tanımlanan ve daha önce açıklanan aynı kimliğe sahip. İstekle ilişkili tüm izlemeleri WCF'de yayılan yanıt ileti işleme dahil olmak üzere bu etkinliğe olduğundan bu aşamadan biz doğrudan bağıntı uç noktalar genelinde fayda başlayın.  
   
-6.  İşlem dışı eylem için kullanıcı kodunda WCF'de yayılan gördüğünüzden yayılan izlemeleri yalıtmak için bir "Kullanıcı kodu yürütme" etkinlik oluştururuz. Önceki örnekte, "Hizmet Ekle yanıt gönderir" izleme "Yürütme kullanıcı kodu" etkinlik değil istemci tarafından yayılan etkinlik varsa yayılır.  
+6. İşlem dışı eylem için kullanıcı kodunda WCF'de yayılan gördüğünüzden yayılan izlemeleri yalıtmak için bir "Kullanıcı kodu yürütme" etkinlik oluştururuz. Önceki örnekte, "Hizmet Ekle yanıt gönderir" izleme "Yürütme kullanıcı kodu" etkinlik değil istemci tarafından yayılan etkinlik varsa yayılır.  
   
  Aşağıdaki çizimde, ilk soldaki Kök etkinlik (0000), varsayılan etkinlik olduğu etkinliğidir. Sonraki üç ServiceHost açmak için etkinliklerdir. Dinleyici etkinliktir sütunda 5 ve kalan etkinlikleri (6-8), kullanıcı kodu etkinleştirmesi için işleme bayt gelen iletiyi WCF işlenmesini açıklayın.  
 

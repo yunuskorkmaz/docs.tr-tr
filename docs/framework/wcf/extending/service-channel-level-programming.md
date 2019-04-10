@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329136"
 ---
 # <a name="service-channel-level-programming"></a>Hizmet Kanal Düzeyi Programlama
 Bu konu, bir Windows Communication Foundation (WCF) hizmet uygulaması kullanmadan yazma açıklar <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> ve onun ilişkili nesne modeli.  
@@ -18,15 +18,15 @@ Bu konu, bir Windows Communication Foundation (WCF) hizmet uygulaması kullanmad
 ## <a name="receiving-messages"></a>İleti alma  
  İletileri almak ve işlemek hazır olması için aşağıdaki adımlar gereklidir:  
   
-1.  Bir bağlama oluşturun.  
+1. Bir bağlama oluşturun.  
   
-2.  Bir kanal dinleyicisi oluşturun.  
+2. Bir kanal dinleyicisi oluşturun.  
   
-3.  Kanal dinleyicisi açın.  
+3. Kanal dinleyicisi açın.  
   
-4.  İsteği okumak ve bir yanıt gönderir.  
+4. İsteği okumak ve bir yanıt gönderir.  
   
-5.  Tüm kanal nesneleri kapatın.  
+5. Tüm kanal nesneleri kapatın.  
   
 #### <a name="creating-a-binding"></a>Bir bağlama oluşturma  
  Bir bağlama ilk adımı dinleyen ve iletileri alma oluşturmaktır. WCF, doğrudan bir tanesi örneği tarafından kullanılan birkaç yerleşik veya sistem tarafından sağlanan bağlamaları ile birlikte gelir. Ayrıca, kendi özel bağlama 1 kod yaptığı bir CustomBinding sınıfı örneği tarafından da oluşturabilirsiniz.  

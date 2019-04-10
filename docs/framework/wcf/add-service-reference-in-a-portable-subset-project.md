@@ -2,12 +2,12 @@
 title: Taşınabilir Alt Küme Projesine Hizmet Başvurusu Ekle
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e1d65df46c0ed6d9d271727ad04a661c5e34a1ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145437"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316732"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Taşınabilir Alt Küme Projesine Hizmet Başvurusu Ekle
 Taşınabilir alt küme projeleri bir tek kaynak ağacının Bakımı ve birden çok .NET uygulamalarını (masaüstünde, Silverlight, Windows Phone ve XBOX) hala desteklerken yapı sistemi .NET derleme programcılar etkinleştirin. Taşınabilir alt küme projeleri yalnızca herhangi bir .NET uygulaması üzerinde kullanılabilen bir .NET framework derlemesi olan bir .NET taşınabilir kitaplıklar başvuru.  
@@ -15,21 +15,21 @@ Taşınabilir alt küme projeleri bir tek kaynak ağacının Bakımı ve birden 
 ## <a name="add-service-reference-details"></a>Hizmet başvuru ayrıntıları ekleyin  
  Bir taşınabilir alt küme projesine hizmet başvurusu ekleme, aşağıdaki kısıtlamalar uygulanır:  
   
-1.  İçin <xref:System.Xml.Serialization.XmlSerializer>, yalnızca sabit Kodlamalar izin verilir. SOAP Kodlamalar, içeri aktarma sırasında bir hata oluşturur.  
+1. İçin <xref:System.Xml.Serialization.XmlSerializer>, yalnızca sabit Kodlamalar izin verilir. SOAP Kodlamalar, içeri aktarma sırasında bir hata oluşturur.  
   
-2.  Hizmetleri kullanan <xref:System.Runtime.Serialization.DataContractSerializer> senaryoları, veri sözleşme vekil yeniden kullanılan türleri yalnızca taşınabilir alt kümesinden geldiğini emin olmak için sağlanır.  
+2. Hizmetleri kullanan <xref:System.Runtime.Serialization.DataContractSerializer> senaryoları, veri sözleşme vekil yeniden kullanılan türleri yalnızca taşınabilir alt kümesinden geldiğini emin olmak için sağlanır.  
   
-3.  Taşınabilir kitaplıklarda desteklenmeyen bağlamalar kullanan uç noktaları (dışındaki tüm bağlamaları <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> işlem akışı, güvenilir oturumlar veya MTOM kodlama ve eşdeğer özel bağlamalar olmadan) göz ardı edilir.  
+3. Taşınabilir kitaplıklarda desteklenmeyen bağlamalar kullanan uç noktaları (dışındaki tüm bağlamaları <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> işlem akışı, güvenilir oturumlar veya MTOM kodlama ve eşdeğer özel bağlamalar olmadan) göz ardı edilir.  
   
-4.  İleti üstbilgileri içeri aktarmadan önce tüm işlemlerdeki tüm ileti açıklamalarını silinir.  
+4. İleti üstbilgileri içeri aktarmadan önce tüm işlemlerdeki tüm ileti açıklamalarını silinir.  
   
-5.  Taşınabilir olmayan öznitelikler <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute>, ve <xref:System.ServiceModel.TransactionFlowAttribute> oluşturulan istemci proxy koddan kaldırıldı.  
+5. Taşınabilir olmayan öznitelikler <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute>, ve <xref:System.ServiceModel.TransactionFlowAttribute> oluşturulan istemci proxy koddan kaldırıldı.  
   
-6.  ProtectionLevel, Sessionmode'u, IsInitiating ve IsTerminating kaldırılma taşınabilir olmayan özellikler <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, ve <xref:System.ServiceModel.FaultContractAttribute>.  
+6. ProtectionLevel, Sessionmode'u, IsInitiating ve IsTerminating kaldırılma taşınabilir olmayan özellikler <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, ve <xref:System.ServiceModel.FaultContractAttribute>.  
   
-7.  Tüm hizmet işlemlerini zaman uyumsuz işlemler istemci proxy'de'olarak oluşturulur.  
+7. Tüm hizmet işlemlerini zaman uyumsuz işlemler istemci proxy'de'olarak oluşturulur.  
   
-8.  Taşınabilir olmayan türler kullanan oluşturulan istemci oluşturucular kaldırılır.  
+8. Taşınabilir olmayan türler kullanan oluşturulan istemci oluşturucular kaldırılır.  
   
 9. A <xref:System.Net.CookieContainer> örneği oluşturulan istemcide gösterilir.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: 2e34ba035c8d7f9132915a9269d545f32033cbed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b706568a0e8221aac737780592882f728f0f9e9c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132593"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328783"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Noktaya Animasyon Ekleme
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> animasyon uygulamak için sınıfı bir <xref:System.Windows.Point>.  
@@ -22,11 +22,11 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir elips üçgen yol boyunca taşır. Örnekte <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> animasyon uygulamak için sınıfı <xref:System.Windows.Media.EllipseGeometry.Center%2A> özelliği bir <xref:System.Windows.Media.EllipseGeometry>. Bu animasyonu üç anahtar çerçeveler şu şekilde kullanılır:  
   
-1.  İlk yarım saniye boyunca bir örneği kullanan <xref:System.Windows.Media.Animation.LinearPointKeyFrame> elips yol boyunca başlangıç konumundan bir hızda taşımak için sınıf. Gibi anahtar doğrusal çerçeveler <xref:System.Windows.Media.Animation.LinearPointKeyFrame> değerler arasında sorunsuz bir doğrusal ilişkilendirme oluşturun.  
+1. İlk yarım saniye boyunca bir örneği kullanan <xref:System.Windows.Media.Animation.LinearPointKeyFrame> elips yol boyunca başlangıç konumundan bir hızda taşımak için sınıf. Gibi anahtar doğrusal çerçeveler <xref:System.Windows.Media.Animation.LinearPointKeyFrame> değerler arasında sorunsuz bir doğrusal ilişkilendirme oluşturun.  
   
-2.  Sonraki sonuna sırasında yarım saniye kullanan bir örneğini <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> aniden elips yol boyunca sonraki konuma taşımak için sınıf. Gibi ayrı anahtar çerçeveler <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> değerleri arasında ani atlamalar oluşturun.  
+2. Sonraki sonuna sırasında yarım saniye kullanan bir örneğini <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> aniden elips yol boyunca sonraki konuma taşımak için sınıf. Gibi ayrı anahtar çerçeveler <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> değerleri arasında ani atlamalar oluşturun.  
   
-3.  Son iki saniye boyunca bir örneği kullanan <xref:System.Windows.Media.Animation.SplinePointKeyFrame> elipsin başlangıç konumuna geri taşımak için sınıf. Eğri anahtar çercevesi ister <xref:System.Windows.Media.Animation.SplinePointKeyFrame> değerlerine göre değerleri arasında bir değişken geçiş oluşturmak <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> özelliği. Bu örnekte, animasyon yavaş başlar ve zaman diliminin sonuna doğru katlanarak hızlandırır.  
+3. Son iki saniye boyunca bir örneği kullanan <xref:System.Windows.Media.Animation.SplinePointKeyFrame> elipsin başlangıç konumuna geri taşımak için sınıf. Eğri anahtar çercevesi ister <xref:System.Windows.Media.Animation.SplinePointKeyFrame> değerlerine göre değerleri arasında bir değişken geçiş oluşturmak <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> özelliği. Bu örnekte, animasyon yavaş başlar ve zaman diliminin sonuna doğru katlanarak hızlandırır.  
   
  [!code-csharp[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/PointAnimationUsingKeyFramesExample.cs#pointanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/pointanimationusingkeyframesexample.vb#pointanimationusingkeyframeswholepage)]

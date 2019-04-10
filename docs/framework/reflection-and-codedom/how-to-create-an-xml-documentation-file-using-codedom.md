@@ -11,35 +11,35 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2871d273e0bbb09ff5bf440ea943cdac3f8e061
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201955"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297531"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma
 CodeDOM, XML belgeleri oluşturan kodu oluşturmak için kullanılabilir. Kod oluşturma ve XML belgeleri çıktısı oluşturan derleyici seçeneğiyle oluşturulan kod derleme XML belge açıklamaları içeren CodeDOM grafik oluşturma işlemi içerir.  
   
 ### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>XML belge açıklamaları içeren bir CodeDOM grafiği oluşturmak için  
   
-1.  Oluşturma bir <xref:System.CodeDom.CodeCompileUnit> örnek uygulama için CodeDOM grafiğini içeren.  
+1. Oluşturma bir <xref:System.CodeDom.CodeCompileUnit> örnek uygulama için CodeDOM grafiğini içeren.  
   
-2.  Kullanım <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> oluşturucuyla `docComment` parametresini `true` metin ve XML belgeleri açıklama öğeleri oluşturmak için.  
+2. Kullanım <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> oluşturucuyla `docComment` parametresini `true` metin ve XML belgeleri açıklama öğeleri oluşturmak için.  
   
      [!code-csharp[CodeDomHelloWorldSample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#4)]
      [!code-vb[CodeDomHelloWorldSample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#4)]  
   
 ### <a name="to-generate-the-code-from-the-codecompileunit"></a>CodeCompileUnit kodunu oluşturmak için  
   
-1.  Kullanım <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> kodun derlenmesi için bir kaynak dosyası oluşturmak için yöntemi.  
+1. Kullanım <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> kodun derlenmesi için bir kaynak dosyası oluşturmak için yöntemi.  
   
      [!code-csharp[CodeDomHelloWorldSample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#5)]
      [!code-vb[CodeDomHelloWorldSample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#5)]  
   
 ### <a name="to-compile-the-code-and-generate-the-documentation-file"></a>Kodu derlemek ve belge dosyası oluşturmak için  
   
-1.  Ekleme **/doc** derleyici seçeneği <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> özelliği bir <xref:System.CodeDom.Compiler.CompilerParameters> nesne ve nesneyi geçirin <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> kodu derlendiğinde XML belge dosyası oluşturmak için yöntemi.  
+1. Ekleme **/doc** derleyici seçeneği <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> özelliği bir <xref:System.CodeDom.Compiler.CompilerParameters> nesne ve nesneyi geçirin <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> kodu derlendiğinde XML belge dosyası oluşturmak için yöntemi.  
   
      [!code-csharp[CodeDomHelloWorldSample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#6)]
      [!code-vb[CodeDomHelloWorldSample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#6)]  

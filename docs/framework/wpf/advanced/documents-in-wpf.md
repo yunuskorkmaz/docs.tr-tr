@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169617"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313963"
 ---
 # <a name="documents-in-wpf"></a>WPF'deki Belgeler
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çok çeşitli daha kolay erişilebilen ve önceki nesil içinde salt okunur olacak şekilde tasarlanan yüksek kaliteli içeriğinin oluşturulmasını belge özellikleri sunan [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Gelişmiş Özellikler ve kalite, ek olarak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge görüntüleme, paketleme ve güvenlik için tümleşik hizmetleri de sağlar. Bu konuda tanıtır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] belge türleri ve belge paketleme.  
@@ -89,9 +89,9 @@ ms.locfileid: "59169617"
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
  Güvenlik için bir <xref:System.IO.Packaging.PackageDigitalSignature> ("dijital imzası") bir paket içindeki bölümleri ile ilişkili olabilir. A <xref:System.IO.Packaging.PackageDigitalSignature> [509] içererek, iki özellik sağlar:  
   
-1.  Tanımlar ve gönderene Bölümü'nün kimliğini doğrular.  
+1. Tanımlar ve gönderene Bölümü'nün kimliğini doğrular.  
   
-2.  Bölümü değiştirilmemiş olduğunu doğrular.  
+2. Bölümü değiştirilmemiş olduğunu doğrular.  
   
  Dijital imza bir bölümü değiştirilmesini değil, ancak bölümü herhangi bir şekilde değiştirilirse, bir dijital imza doğrulama denetimi başarısız olur. Uygulama ardından uygun eylemi gerçekleştirebilirsiniz — Örneğin, bölümün açılmasını engellemek veya bölümü değiştirilmiş ve güvenli olmayan kullanıcıya bildir.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59169617"
   
  Paket ilişkileri ekleme ve ek bilgileri paketin tamamını veya tek tek bölümleri ile ilişkilendirmek için bulunabilirlik olanağı sağlar. Paket ilişkileri iki birincil işlevleri için kullanılır:  
   
-1.  Başka bir bölümü bir bölümünden bağımlılık ilişkileri tanımlama.  
+1. Başka bir bölümü bir bölümünden bağımlılık ilişkileri tanımlama.  
   
-2.  Tanımlama bilgileri notları veya diğer veri bölümü için ilgili ekleme ilişkiler.  
+2. Tanımlama bilgileri notları veya diğer veri bölümü için ilgili ekleme ilişkiler.  
   
  A <xref:System.IO.Packaging.PackageRelationship> bağımlılıkları tanımlayın ve bir paket veya paket bir bütün olarak parçası ile ilişkili diğer bilgileri eklemek için hızlı, keşfedilebilir bir yol sağlar.  
   

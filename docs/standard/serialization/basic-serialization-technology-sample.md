@@ -1,15 +1,15 @@
 ---
-title: Temel serileştirme teknolojisi örneği
+title: Temel Serileştirme Teknolojisi Örneği
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315016"
 ---
-# <a name="basic-serialization-technology-sample"></a>Temel serileştirme teknolojisi örneği
+# <a name="basic-serialization-technology-sample"></a>Temel Serileştirme Teknolojisi Örneği
 [Örneği indirin](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
   
  Bu örnek, bir akışa bellekte bir nesne grafiğinin seri hale getirmek için ortak dil çalışma zamanının yeteneğini gösterir. Bu örnek ya da kullanabilirsiniz <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> veya <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> seri hale getirme. Veri ile doldurulan bir bağlantılı listesinin serileştirilecek veya için veya bir dosya akışı seri durumdan. Her iki durumda da, sonuçları görebilmesi listesi görüntülenir. Bağlantılı listesinin türünde `LinkedList`, bu örnek tarafından tanımlanan bir türü.  
@@ -18,25 +18,25 @@ ms.locfileid: "54681709"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>Komut istemi kullanarak örneği oluşturmak için  
   
-1.  Komut istemi kullanarak Technologies\Serialization\Runtime Serialization\Basic dizin altında dile özgü alt birine gidin.  
+1. Komut istemi kullanarak Technologies\Serialization\Runtime Serialization\Basic dizin altında dile özgü alt birine gidin.  
   
-2.  Tür **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** veya **msbuild SerializationVB.sln**, dil, programlama dillerinden bağlı olarak komut satırı.  
+2. Tür **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** veya **msbuild SerializationVB.sln**, dil, programlama dillerinden bağlı olarak komut satırı.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio kullanarak örneği oluşturmak için  
   
-1.  Açık [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] ve örnek için dile özgü alt birine gidin.  
+1. Açık [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] ve örnek için dile özgü alt birine gidin.  
   
-2.  Visual Studio'da dosyayı açmak için dil, programlama dillerinden istediğinizi bağlı olarak SerializationCS.sln, SerializationJSL.sln veya SerializationVB.sln dosya simgesini çift tıklatın.  
+2. Visual Studio'da dosyayı açmak için dil, programlama dillerinden istediğinizi bağlı olarak SerializationCS.sln, SerializationJSL.sln veya SerializationVB.sln dosya simgesini çift tıklatın.  
   
-3.  İçinde **derleme** menüsünde **Çözümü Derle**.  
+3. İçinde **derleme** menüsünde **Çözümü Derle**.  
   
  Uygulama örneği varsayılan \bin veya \bin\debug'dır alt dizininde oluşturulur.  
   
 ### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   
-1.  Yerleşik yürütülebilir dosya içeren dizine gidin.  
+1. Yerleşik yürütülebilir dosya içeren dizine gidin.  
   
-2.  Tür **Serialization.exe**, parametre değerleri ile birlikte, komut satırında istediğiniz.  
+2. Tür **Serialization.exe**, parametre değerleri ile birlikte, komut satırında istediğiniz.  
   
     > [!NOTE]
     >  Bu örnek, bir konsol uygulaması oluşturur. Çıktısını görüntülemek için komut istemi kullanarak başlatma gerekir.  
@@ -46,13 +46,13 @@ ms.locfileid: "54681709"
   
  Örneğin:  
   
- **Serialize.exe -sx Test.xml 10**  
+ **Serialize.exe - sx Test.xml 10**  
   
  Seri durumdan çıkarılacak **Test.xml** dosya önceki örnekteki, parametrelerini **dx Test.xml**.  
   
  Örneğin:  
   
- **Serialize.exe -dx Test.xml**  
+ **Serialize.exe - dx Test.xml**  
   
  İki Yukarıdaki örneklerde, komut satırı anahtarı "x", XML SOAP serileştirme istediğinizi gösterir. İkili serileştirme kullanmak için "b" yerinde kullanabilirsiniz. Serileştirme çok büyük bir düğüm sayısı ile deneyin istiyorsanız, bir dosyaya konsol çıkışı yönlendirmek isteyebilirsiniz.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54681709"
   
 -   Çalışma zamanı seri hale getirme  
   
-    -   <xref:System.Runtime.Serialization.IFormatter>Ya da başvurmak için kullanılan bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> veya bir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> nesne.  
+    -   <xref:System.Runtime.Serialization.IFormatter> Ya da başvurmak için kullanılan bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> veya <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> nesne.  
   
     -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> İkili biçimde bir akışa bağlı bir liste serileştirmek için kullanılır. İkili biçimlendirici, yalnızca bir biçimi kullanıp <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> anladığı türü. Ancak, veri kısa olabilir.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "54681709"
   
 -   Akış G/Ç  
   
-    -   <xref:System.IO.Stream>Serileştirme ve seri halinden dağıtmak için kullanılır. Bu örnekte kullanılan belirli akış türü <xref:System.IO.FileStream> türü. Ancak, serileştirme türetilen her türlü kullanılabilir <xref:System.IO.Stream>.  
+    -   <xref:System.IO.Stream> Seri hale getirmek ve seri halinden dağıtmak için kullanılır. Bu örnekte kullanılan belirli akış türü <xref:System.IO.FileStream> türü. Ancak, serileştirme türetilen her türlü kullanılabilir <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File>Oluşturmak için kullanılan <xref:System.IO.FileStream> nesneleri için okuma ve disk üzerindeki dosyalar oluşturuluyor.  
+    -   <xref:System.IO.File> Oluşturmak için kullanılan <xref:System.IO.FileStream> nesneler için okuma ve disk üzerindeki dosyalar oluşturuluyor.  
   
-    -   <xref:System.IO.FileStream>Seri hale getirmek ve bağlı listeler serisini kaldırmak için kullanılır.  
+    -   <xref:System.IO.FileStream> Seri hale getirmek ve bağlı listeler serisini kaldırmak için kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

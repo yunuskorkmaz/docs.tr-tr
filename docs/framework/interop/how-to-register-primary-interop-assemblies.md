@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Birincil birlikte çalışma derlemelerini kaydetme'
+title: 'Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c5f1882c37861fe7dd7997348dc51e30ce2950e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218547"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314756"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>Nasıl yapılır: Birincil birlikte çalışma derlemelerini kaydetme
+# <a name="how-to-register-primary-interop-assemblies"></a>Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme
 
 Sınıflar yalnızca COM birlikte çalışma tarafından sıralanabilir ve her zaman arabirimleri olarak sıralanmış. Bazı durumlarda, sınıf hazırlamak için kullanılan arabirimi sınıf arabirimi bilinir. Tercih ettiğiniz bir arabirime sahip sınıf arabirimi geçersiz kılma hakkında daha fazla bilgi için bkz: [COM çağrılabilir sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md).
 
@@ -36,7 +36,7 @@ Kullanım [derleme Kayıt Aracı (Regasm.exe)](../../../docs/framework/tools/reg
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Birincil birlikte çalışma derlemesi kaydetmek için
 
-1.  Komut isteminde, şunları yazın:
+1. Komut isteminde, şunları yazın:
 
      **RegAsm** *assemblyname*
 
@@ -51,6 +51,6 @@ regasm CompanyA.UtilLib.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Birincil birlikte çalışma derlemeleriyle programlama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
-- [Birincil birlikte çalışma derlemelerini konumlandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
-- [Birincil birlikte çalışma derlemelerini yeniden dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))
+- [Birincil Birlikte Çalışma Derlemeleriyle Programlama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
+- [Birincil Birlikte Çalışma Derlemelerinin Konumunu Bulma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
+- [Birincil Birlikte Çalışma Derlemelerini Yeniden Dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))

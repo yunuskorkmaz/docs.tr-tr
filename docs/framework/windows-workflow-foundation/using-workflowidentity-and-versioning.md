@@ -1,15 +1,15 @@
 ---
-title: Workflowıdentity ve sürüm oluşturma kullanma
+title: WorkflowIdentity Kullanma ve Sürüm Oluşturma
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 64abab815c523abce88b00515239155499de9c4c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5bed526a47b802c60aa679e53c84af4e14656675
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708177"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327496"
 ---
-# <a name="using-workflowidentity-and-versioning"></a>Workflowıdentity ve sürüm oluşturma kullanma
+# <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity Kullanma ve Sürüm Oluşturma
 <xref:System.Activities.WorkflowIdentity> uygulama geliştiricilerinin'bir ad ilişkilendirmek için iş akışı için bir yol sağlar ve bir <xref:System.Version> bir iş akışı tanımıyla ve kalıcı iş akışı örneğiyle ilişkili olması bu bilgileri. Bu kimlik bilgileri birden çok iş akışı tanımı sürümünün yan yana yürütme gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için temel sağlar. Bu konuda kullanarak genel sağlanır <xref:System.Activities.WorkflowIdentity> ile <xref:System.Activities.WorkflowApplication> barındırma. Yan yana yürütme bir iş akışı hizmeti içinde iş akışı tanımları hakkında daha fazla bilgi için bkz: [WorkflowServiceHost yan yana sürüm oluşturma](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Dinamik güncelleştirme hakkında daha fazla bilgi için bkz: [dinamik güncelleştirme](dynamic-update.md).  
   
 ## <a name="in-this-topic"></a>Bu konuda  
@@ -146,14 +146,14 @@ wfApp.Load(instance);
  **SqlWorkflowInstanceStore '4.0.0.0' veritabanı sürümüne sahip. Bu veritabanı sürümü karşı InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' çalıştırılamaz.  Lütfen '4.5.0.0' veritabanına yükseltin.**  
 ### <a name="ToUpgrade"></a> Veritabanı şemasına yükseltmek için  
   
-1.  Örneğin Kalıcılık veritabanı sunucusuna bağlanmak ve SQL Server Management Studio'yu açın **. \SQLEXPRESS**.  
+1. Örneğin Kalıcılık veritabanı sunucusuna bağlanmak ve SQL Server Management Studio'yu açın **. \SQLEXPRESS**.  
   
-2.  Seçin **açık**, **dosya** gelen **dosya** menüsü. Şu klasöre göz atın: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
+2. Seçin **açık**, **dosya** gelen **dosya** menüsü. Şu klasöre göz atın: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
   
-3.  Seçin **SqlWorkflowInstanceStoreSchemaUpgrade.sql** tıklatıp **açık**.  
+3. Seçin **SqlWorkflowInstanceStoreSchemaUpgrade.sql** tıklatıp **açık**.  
   
-4.  Kalıcılık veritabanı adını seçin **kullanılabilir veritabanlarını** açılır.  
+4. Kalıcılık veritabanı adını seçin **kullanılabilir veritabanlarını** açılır.  
   
-5.  Seçin **yürütme** gelen **sorgu** menüsü.  
+5. Seçin **yürütme** gelen **sorgu** menüsü.  
   
  Sorgu tamamladığında, veritabanı şemasını yükseltilir ve isterseniz, kalıcı iş akışı örnekleri için atanan varsayılan iş akışı kimliğini görüntüleyebilirsiniz. Kalıcılık veritabanınızı genişletin **veritabanları** düğümünün **Nesne Gezgini**ve ardından **görünümleri** düğümü. Sağ **System.Activities.DurableInstancing.Instances** ve **ilk 1000 satırı Seç**. Sütunları sonuna kaydırın ve görünüme eklenen altı ek sütunlar olduğuna dikkat edin: **IdentityName**, **IdentityPackage**, **derleme**, **ana**, **küçük**, ve **düzeltme**. Kalıcı bir iş akışı değerine sahip olacak **NULL** bu alanlar için null iş akışı kimliğini temsil eden.

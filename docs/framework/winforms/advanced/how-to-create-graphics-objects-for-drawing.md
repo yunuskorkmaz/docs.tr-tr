@@ -10,21 +10,21 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223634"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324207"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma
 Çizgiler ve şekiller çizmek önce metin işlemek veya görüntülemek ve görüntülerle işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], oluşturmak gereken bir <xref:System.Drawing.Graphics> nesne. <xref:System.Drawing.Graphics> Nesnesini temsil eder bir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizim yüzeyi ve grafik görüntüleri oluşturmak için kullanılan nesne.  
   
  Grafiklerle çalışma iki adımı vardır:  
   
-1.  Oluşturma bir <xref:System.Drawing.Graphics> nesne.  
+1. Oluşturma bir <xref:System.Drawing.Graphics> nesne.  
   
-2.  Kullanarak <xref:System.Drawing.Graphics> çizgiler ve şekiller çizmek, metin, işleme veya görüntülemek ve görüntüleri işlemek için nesne.  
+2. Kullanarak <xref:System.Drawing.Graphics> çizgiler ve şekiller çizmek, metin, işleme veya görüntülemek ve görüntüleri işlemek için nesne.  
   
 ## <a name="creating-a-graphics-object"></a>Bir grafik nesnesi oluşturma  
  Bir grafik nesnesinin çeşitli yollarla oluşturulabilir.  
@@ -48,11 +48,11 @@ ms.locfileid: "59223634"
   
 #### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>Boyama olayını içinde PaintEventArgs grafik nesnesine başvuru almak için  
   
-1.  Bildirme <xref:System.Drawing.Graphics> nesne.  
+1. Bildirme <xref:System.Drawing.Graphics> nesne.  
   
-2.  Başvurmak için değişkenine atayın <xref:System.Drawing.Graphics> nesnesinin bir parçası olarak geçirilen <xref:System.Windows.Forms.PaintEventArgs>.  
+2. Başvurmak için değişkenine atayın <xref:System.Drawing.Graphics> nesnesinin bir parçası olarak geçirilen <xref:System.Windows.Forms.PaintEventArgs>.  
   
-3.  Form veya denetim boyama için kodu ekleyin.  
+3. Form veya denetim boyama için kodu ekleyin.  
   
      Aşağıdaki örnek nasıl başvurulacağını gösterir bir <xref:System.Drawing.Graphics> nesnesinden <xref:System.Windows.Forms.PaintEventArgs> içinde <xref:System.Windows.Forms.Control.Paint> olay:  
   

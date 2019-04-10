@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219219"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298918"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>İzleme Uygulamaları
 İzleme, çalışırken uygulamanızın yürütmesini izlemek bir yoldur. .NET Framework uygulamanızı izleme ve hata ayıklama araçları, geliştirme ve uygulama geliştirirken hem dağıttıktan sonra bu araçları kullanabilirsiniz ekleyebilirsiniz. Kullanabileceğiniz <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, ve <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> hataları ve uygulama yürütme günlükleri, metin dosyaları veya diğer cihazlar daha sonra çözümlemek için ilgili bilgileri kaydetmek için sınıflar.  
@@ -67,11 +67,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ### <a name="phases-of-code-tracing"></a>Kod izleme aşamaları  
  Kod izlemenin üç aşama vardır:  
   
-1.  **İzleme** — izleme kodu uygulamanıza ekleyin.  
+1. **İzleme** — izleme kodu uygulamanıza ekleyin.  
   
-2.  **İzleme** — izleme kodu, belirtilen hedef bilgilerini yazar.  
+2. **İzleme** — izleme kodu, belirtilen hedef bilgilerini yazar.  
   
-3.  **Analiz** — tanımlamak ve uygulamadaki sorunları anlamak için izleme bilgileri değerlendirin.  
+3. **Analiz** — tanımlamak ve uygulamadaki sorunları anlamak için izleme bilgileri değerlendirin.  
   
  Geliştirme sırasında tüm hata ayıklama ve izleme yöntemleri varsayılan olarak Visual Studio çıkış penceresine yazmak çıktı. Dağıtılan bir uygulamada yöntemleri belirttiğiniz hedeflerini izleme bilgilerini yazın. İzleme veya hata ayıklama için bir çıkış hedefi belirtme hakkında daha fazla bilgi için bkz. [izleme dinleyicilerine](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
@@ -79,17 +79,17 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 ##### <a name="to-use-tracing-in-an-application"></a>Bir uygulamada izlemeyi kullanmak için  
   
-1.  Uygulamayı dağıttıktan sonra yerinde almak istediğiniz hangi izleme çıkış göz önünde bulundurun.  
+1. Uygulamayı dağıttıktan sonra yerinde almak istediğiniz hangi izleme çıkış göz önünde bulundurun.  
   
-2.  Anahtarları kümesi oluşturun. Daha fazla bilgi için [nasıl yapılır: İzleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+2. Anahtarları kümesi oluşturun. Daha fazla bilgi için [nasıl yapılır: İzleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
-3.  Uygulama koduna izleme deyimleri ekleyin.  
+3. Uygulama koduna izleme deyimleri ekleyin.  
   
-4.  İzleme çıktısı görüntülenir ve uygun dinleyiciler eklemek için istediğiniz belirleyin. Daha fazla bilgi için [oluşturma ve izleme dinleyicilerini başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
+4. İzleme çıktısı görüntülenir ve uygun dinleyiciler eklemek için istediğiniz belirleyin. Daha fazla bilgi için [oluşturma ve izleme dinleyicilerini başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
   
-5.  Test ve uygulamanız ve içerdiği izleme kodu hata ayıklama.  
+5. Test ve uygulamanız ve içerdiği izleme kodu hata ayıklama.  
   
-6.  Aşağıdaki yordamlardan birini kullanarak yürütülebilir kod uygulamasına derleyin:  
+6. Aşağıdaki yordamlardan birini kullanarak yürütülebilir kod uygulamasına derleyin:  
   
     -   Kullanım **derleme** menüsü ile birlikte **hata ayıklama** sayfasının **özellik sayfaları** iletişim kutusunda **Çözüm Gezgini**. Bu, Visual Studio'da derleme sırasında kullanın.  
   
@@ -97,11 +97,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   Kullanım **izleme** ve **hata ayıklama** derleme komut satırı yöntemi için derleyici yönergeleri. Daha fazla bilgi için [izleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Bu komut satırından derleme yapılırken kullanın.  
   
-7.  Çalışma zamanı sırasında bir sorun meydana gelirse, uygun bir izleme anahtarı etkinleştirin. Daha fazla bilgi için [izleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+7. Çalışma zamanı sırasında bir sorun meydana gelirse, uygun bir izleme anahtarı etkinleştirin. Daha fazla bilgi için [izleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
      İzleme kodu izleme iletileri belirtilen hedefe, örneğin, bir ekran, bir metin dosyası veya bir olay günlüğüne yazar. Dinleyici, dahil edilen türünü **Trace.Listeners** koleksiyon hedefini belirler.  
   
-8.  İzleme iletileri tanımlamak ve uygulama sorunu anlamak için analiz edin.  
+8. İzleme iletileri tanımlamak ve uygulama sorunu anlamak için analiz edin.  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>İzleme Araçları ve dağıtılmış uygulamalar  
  Dağıtılmış bir uygulama oluşturduğunuzda, onu kullanılacak şekilde uygulama test etmek zor bulabilirsiniz. Birkaç geliştirme ekipleri, işletim sistemleri veya tarayıcılar (tüm yerelleştirilmiş dil seçenekleri dahil) tüm olası eşleştirme birleşimlerini test etmek için ya da çok sayıda uygulamanın aynı anda erişen kullanıcıların benzetimini yapmak için özelliğine sahip. Bu koşullar altında yüksek miktarlarda, farklı ayarlar ve benzersiz bir son kullanıcı davranışları için Dağıtılmış bir uygulamanın nasıl yanıt vereceğini test edilemez. Ayrıca, dağıtılmış bir uygulamanın birçok bölümü, kullanıcı arabirimi ile doğrudan etkileşim kurmak veya bu parçaların etkinliğini görüntüleyin vardır.  

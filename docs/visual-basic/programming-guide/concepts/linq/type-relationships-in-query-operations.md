@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822342"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327639"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>LINQ Sorgu İşlemlerinde Tür İlişkileri (Visual Basic)
 Kullanılan değişkenleri [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] sorgu işlemleri kesin olarak belirlenmiştir ve birbiriyle uyumlu olması gerekir. Güçlü veri kaynağının, sorgu ve sorgu yürütme kullanılır. Aşağıdaki çizimde açıklamak için kullanılan terimler tanımlayan bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu. Bir sorgunun bölümlerini hakkında daha fazla bilgi için bkz: [temel sorgu işlemleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -49,11 +49,11 @@ Kullanılan değişkenleri [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md
   
  Türleri açık veya örtük olarak belirlenmiş olup olmadığını aşağıdaki ilişkileri hem de önceki kod örnekleri, mevcut.  
   
-1.  Veri kaynağındaki öğelerin türü `names`, Aralık değişkeninin türü `name`, sorgu.  
+1. Veri kaynağındaki öğelerin türü `names`, Aralık değişkeninin türü `name`, sorgu.  
   
-2.  Seçili olan nesnenin türü `name`, sorgu değişkeni türünü belirler `mNames`. Burada `name` sorgu değişkeni Visual Basic'de IEnumerable (Of String), bu nedenle, bir dize ise.  
+2. Seçili olan nesnenin türü `name`, sorgu değişkeni türünü belirler `mNames`. Burada `name` sorgu değişkeni Visual Basic'de IEnumerable (Of String), bu nedenle, bir dize ise.  
   
-3.  Nde tanımlanan sorgu `mNames` yürütüldü `For Each` döngü. Döngü sorgu yürütmenin sonucu üzerinde yinelenir. Çünkü `mNames`, yürütüldüğünde, dizeler, döngü yineleme değişkeni, bir dizi döndürür `nm`, ayrıca bir dizedir.  
+3. Nde tanımlanan sorgu `mNames` yürütüldü `For Each` döngü. Döngü sorgu yürütmenin sonucu üzerinde yinelenir. Çünkü `mNames`, yürütüldüğünde, dizeler, döngü yineleme değişkeni, bir dizi döndürür `nm`, ayrıca bir dizedir.  
   
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>Seçilen öğelerden bir alan döndüren sorgular  
  Aşağıdaki örnekte gösterildiği bir [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] sorgulama veri kaynağından seçilen her öğe yalnızca bir bölümünü içeren bir dizi döndüren işlemi. Sorgu koleksiyonunu alır `Customer` nesneleri, veri kaynağı olarak ve yalnızca projeleri `Name` sonucun bir özellik. Müşteri adı bir dize olduğundan, sorgu çıktı olarak bir dize sırası üretir.  
@@ -72,11 +72,11 @@ Next
   
  Bu basit örnekte değişkenleri arasındaki ilişkileri gibidir.  
   
-1.  Veri kaynağındaki öğelerin türü `customers`, Aralık değişkeninin türü `cust`, sorgu. Türü bu örnekte, `Customer`.  
+1. Veri kaynağındaki öğelerin türü `customers`, Aralık değişkeninin türü `cust`, sorgu. Türü bu örnekte, `Customer`.  
   
-2.  `Select` Deyimi döndürür `Name` her özellik `Customer` nesnenin tamamı yerine nesne. Çünkü `Name` sorgu değişkeni bir dize ise `custNames`, yeniden IEnumerable (Of String), olmayacaktır `Customer`.  
+2. `Select` Deyimi döndürür `Name` her özellik `Customer` nesnenin tamamı yerine nesne. Çünkü `Name` sorgu değişkeni bir dize ise `custNames`, yeniden IEnumerable (Of String), olmayacaktır `Customer`.  
   
-3.  Çünkü `custNames` dizeleri temsil `For Each` döngüsünün yineleme değişkeni `custName`, bir dize olmalıdır.  
+3. Çünkü `custNames` dizeleri temsil `For Each` döngüsünün yineleme değişkeni `custName`, bir dize olmalıdır.  
   
  Önceki örnekte yerel tür çıkarımı, yazma ve anlama, aşağıdaki örnekte gösterildiği gibi daha kullanışsız olur.  
   
@@ -110,17 +110,17 @@ Next
   
  Önceki örnekte tüm değişkenlerin türleri belirlemek mümkün olmasa da, ilişkileri aynı kalır.  
   
-1.  Veri kaynağındaki öğelerin türü yeniden sorgudaki Aralık değişkeninin türüdür. Bu örnekte, `cust` örneğidir `Customer`.  
+1. Veri kaynağındaki öğelerin türü yeniden sorgudaki Aralık değişkeninin türüdür. Bu örnekte, `cust` örneğidir `Customer`.  
   
-2.  Çünkü `Select` deyimi, sorgu değişkeni anonim bir tür ürettiğinden `nameCityQuery`, anonim bir tür dolaylı olarak yazılmalıdır. Anonim bir tür kullanılabilir adı yok ve bu nedenle açıkça belirtilemez.  
+2. Çünkü `Select` deyimi, sorgu değişkeni anonim bir tür ürettiğinden `nameCityQuery`, anonim bir tür dolaylı olarak yazılmalıdır. Anonim bir tür kullanılabilir adı yok ve bu nedenle açıkça belirtilemez.  
   
-3.  Yineleme değişkeni türünü `For Each` döngü 2. adımda oluşturduğunuz anonim türdür. Tür kullanılabilir adı olduğundan, döngü yineleme değişkeninin türü örtülü olarak belirlenmesi gerekir.  
+3. Yineleme değişkeni türünü `For Each` döngü 2. adımda oluşturduğunuz anonim türdür. Tür kullanılabilir adı olduğundan, döngü yineleme değişkeninin türü örtülü olarak belirlenmesi gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'te lınq'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Anonim Tipler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Yerel Çıkarım](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic'te LINQ'e Başlarken](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Anonim Türler](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Yerel Tür Arabirimi](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Visual Basic'de LINQ'e Giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Sorgular](../../../../visual-basic/language-reference/queries/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307710"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>İzlenecek yol: WPF içinde Win32 Denetimini Barındırma
 Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir ortam sağlar. Win32 kodu önemli ölçüde yatırımınız varsa, ancak bu en az bazılarını yeniden daha etkili olabilir, söz konusu kodu WPF uygulamanızda yerine tamamen yeniden yazın. WPF WPF sayfasında bir Win32 penceresinde barındırma için basit bir mekanizma sağlar.  
@@ -35,25 +35,25 @@ Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir
   
  Temel barındırma yordam aynıdır:  
   
-1.  Pencereyi barındırmak için bir WPF sayfa uygulayın. Bir tekniktir oluşturmak için bir <xref:System.Windows.Controls.Border> barındırılan pencere için sayfanın bir bölümünü ayırmak için öğesi.  
+1. Pencereyi barındırmak için bir WPF sayfa uygulayın. Bir tekniktir oluşturmak için bir <xref:System.Windows.Controls.Border> barındırılan pencere için sayfanın bir bölümünü ayırmak için öğesi.  
   
-2.  Devralınan denetimini barındırmak için bir sınıf uygulamak <xref:System.Windows.Interop.HwndHost>.  
+2. Devralınan denetimini barındırmak için bir sınıf uygulamak <xref:System.Windows.Interop.HwndHost>.  
   
-3.  Bu sınıfta geçersiz kılma <xref:System.Windows.Interop.HwndHost> sınıf üyesi <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
+3. Bu sınıfta geçersiz kılma <xref:System.Windows.Interop.HwndHost> sınıf üyesi <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4.  Barındırılan pencerenin alt WPF sayfasını içeren bir pencere öğesi olarak oluşturun. Geleneksel WPF programlama açıkça gerekmez ancak bunu kullanacağından, barındırma sayfası işleyici (HWND) ile bir penceredir. HWND sayfasını aldığınız aracılığıyla `hwndParent` parametresinin <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> yöntemi. Bu HWND alt sitesi olarak barındırılan pencere oluşturulmalıdır.  
+4. Barındırılan pencerenin alt WPF sayfasını içeren bir pencere öğesi olarak oluşturun. Geleneksel WPF programlama açıkça gerekmez ancak bunu kullanacağından, barındırma sayfası işleyici (HWND) ile bir penceredir. HWND sayfasını aldığınız aracılığıyla `hwndParent` parametresinin <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> yöntemi. Bu HWND alt sitesi olarak barındırılan pencere oluşturulmalıdır.  
   
-5.  Ana pencere oluşturduktan sonra barındırılan penceresinin HWND döndürür. Bir veya daha fazla Win32 denetimini barındırmak istiyorsanız, genellikle bir konak penceresini HWND alt sitesi olarak oluşturur ve konak penceresinin denetimleri alt öğesi yapın. Bir ana penceresinde denetimleri sarmalama HWND sınırında bildirimleri ile belirli bazı Win32 sorunlarla ilgilenen denetimlerden bildirim almak, WPF sayfası için basit bir yol sağlar.  
+5. Ana pencere oluşturduktan sonra barındırılan penceresinin HWND döndürür. Bir veya daha fazla Win32 denetimini barındırmak istiyorsanız, genellikle bir konak penceresini HWND alt sitesi olarak oluşturur ve konak penceresinin denetimleri alt öğesi yapın. Bir ana penceresinde denetimleri sarmalama HWND sınırında bildirimleri ile belirli bazı Win32 sorunlarla ilgilenen denetimlerden bildirim almak, WPF sayfası için basit bir yol sağlar.  
   
-6.  Bildirim alt denetimler gibi ana pencerenin gönderilen Seçili iletileri işler. Bunu yapmanın iki yolu vardır.  
+6. Bildirim alt denetimler gibi ana pencerenin gönderilen Seçili iletileri işler. Bunu yapmanın iki yolu vardır.  
   
     -   Barındırma sınıfınızdaki iletileri işlemek isterseniz, geçersiz kılma <xref:System.Windows.Interop.HwndHost.WndProc%2A> yöntemi <xref:System.Windows.Interop.HwndHost> sınıfı.  
   
     -   WPF iletileri işleyen, işlemek isterseniz <xref:System.Windows.Interop.HwndHost> sınıfı <xref:System.Windows.Interop.HwndHost.MessageHook> arka plan kod olayı. Bu olay, barındırılan pencere tarafından alınan her ileti için gerçekleşir. Bu seçeneği belirlerseniz, hala tanımlamalısınız <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ancak yalnızca en az bir uygulama gerekir.  
   
-7.  Geçersiz kılma <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> ve <xref:System.Windows.Interop.HwndHost.WndProc%2A> yöntemlerinin <xref:System.Windows.Interop.HwndHost>. Karşılamak için bu yöntemleri geçersiz kılmanız gerekir <xref:System.Windows.Interop.HwndHost> sözleşme, ancak yalnızca gerekebilir en az bir uygulama sağlamak.  
+7. Geçersiz kılma <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> ve <xref:System.Windows.Interop.HwndHost.WndProc%2A> yöntemlerinin <xref:System.Windows.Interop.HwndHost>. Karşılamak için bu yöntemleri geçersiz kılmanız gerekir <xref:System.Windows.Interop.HwndHost> sözleşme, ancak yalnızca gerekebilir en az bir uygulama sağlamak.  
   
-8.  Arka plan kod dosyanızı denetim sınıf barındırma örneği oluşturun ve bir alt öğesi yapın <xref:System.Windows.Controls.Border> pencereyi barındırması amaçlanan öğesi.  
+8. Arka plan kod dosyanızı denetim sınıf barındırma örneği oluşturun ve bir alt öğesi yapın <xref:System.Windows.Controls.Border> pencereyi barındırması amaçlanan öğesi.  
   
 9. Göndererek barındırılan pencere ile iletişim kurmak [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] iletilerini ve denetimlerinin gönderdiği bildirimler gibi kendi alt Windows iletilerini işleme.  
   

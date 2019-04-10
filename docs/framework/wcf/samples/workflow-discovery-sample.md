@@ -2,12 +2,12 @@
 title: İş Akışı Keşif Örneği
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: 1076e7045ca546fed7e6902f69406bfc002c4c26
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9a0d3ad22b4663ee71b5b2aa8d0e3d64f20996d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964429"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311675"
 ---
 # <a name="workflow-discovery-sample"></a>İş Akışı Keşif Örneği
 Bu örnek, bir iş akışı hizmeti bulunabilir hale getirme ve belirli bir hizmet için arayan bir özel kod etkinliği yazmak nasıl gösterir.  
@@ -20,7 +20,7 @@ Bu örnek, bir iş akışı hizmeti bulunabilir hale getirme ve belirli bir hizm
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Bu örneği çalıştırmak için doğru URL ACL olmalıdır HTTP uç noktaları kullanır (bkz [yapılandırma HTTP ve HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için). Yükseltilmiş bir komut isteminde aşağıdaki komutu yürütülürken uygun ACL'lerin eklemeniz gerekir. Kabuğunuz değişken biçimi anlamıyorsa şu bağımsız değişkenler için kullanıcı adı ve etki alanı değiştirin.  
+1. Bu örneği çalıştırmak için doğru URL ACL olmalıdır HTTP uç noktaları kullanır (bkz [yapılandırma HTTP ve HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için). Yükseltilmiş bir komut isteminde aşağıdaki komutu yürütülürken uygun ACL'lerin eklemeniz gerekir. Kabuğunuz değişken biçimi anlamıyorsa şu bağımsız değişkenler için kullanıcı adı ve etki alanı değiştirin.  
   
      **Netsh http ekleme urlacl url =http://+:8000/ kullanıcı etki alanı % =\\% UserName %**  
   

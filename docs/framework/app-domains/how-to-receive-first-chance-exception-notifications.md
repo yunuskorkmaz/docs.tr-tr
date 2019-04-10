@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ef9d90f82abd15de05967262b6e6a4c3a6b842b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314119"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Nasıl yapılır: İlk Fırsat Özel Durum Bildirimleri Alma
 <xref:System.AppDomain.FirstChanceException> Olayı <xref:System.AppDomain> sınıfı bir özel durum bir bildirim almanızı sağlar, önce ortak dil çalışma zamanı için özel durum işleyicileri aramaya başladı.
@@ -31,17 +31,17 @@ ms.locfileid: "59164898"
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>Varsayılan uygulama etki alanında ilk fırsat özel durum bildirimleri göstermek için
 
-1.  Tanımlamak için bir olay işleyicisi <xref:System.AppDomain.FirstChanceException> olay, bir lambda kullanarak işlev ve olaya ekleyin. Bu örnekte olay işleyicisi nerede olay işlenen uygulama etki alanı adını ve özel durumun yazdırır <xref:System.Exception.Message%2A> özelliği.
+1. Tanımlamak için bir olay işleyicisi <xref:System.AppDomain.FirstChanceException> olay, bir lambda kullanarak işlev ve olaya ekleyin. Bu örnekte olay işleyicisi nerede olay işlenen uygulama etki alanı adını ve özel durumun yazdırır <xref:System.Exception.Message%2A> özelliği.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#2)]
 
-2.  Bir özel durum ve bunu yakalayıp yakalamayacağınıza. Çalışma zamanı özel durum işleyicisi bulur önce <xref:System.AppDomain.FirstChanceException> olay tetiklenir ve bir ileti görüntüler. Bu ileti özel durum işleyicisi tarafından görüntülenen ileti takip eder.
+2. Bir özel durum ve bunu yakalayıp yakalamayacağınıza. Çalışma zamanı özel durum işleyicisi bulur önce <xref:System.AppDomain.FirstChanceException> olay tetiklenir ve bir ileti görüntüler. Bu ileti özel durum işleyicisi tarafından görüntülenen ileti takip eder.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#3)]
 
-3.  Özel durum, ancak bunu yakalamayın. Çalışma zamanı için bir özel durum işleyicisi arar önce <xref:System.AppDomain.FirstChanceException> olay tetiklenir ve bir ileti görüntüler. Uygulama sonlanana için hiçbir özel durum işleyicisi yok.
+3. Özel durum, ancak bunu yakalamayın. Çalışma zamanı için bir özel durum işleyicisi arar önce <xref:System.AppDomain.FirstChanceException> olay tetiklenir ve bir ileti görüntüler. Uygulama sonlanana için hiçbir özel durum işleyicisi yok.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#4)]
@@ -56,12 +56,12 @@ ms.locfileid: "59164898"
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>Oluşturduğunuz bir uygulama etki alanında ilk fırsat özel durum bildirimleri almak için
 
-1.  Tanımlamak için bir olay işleyicisi <xref:System.AppDomain.FirstChanceException> olay. Bu örnekte bir `static` yöntemi (`Shared` yöntem Visual Basic'te) olay burada ele uygulama etki alanı adını ve özel durumun yazdırır <xref:System.Exception.Message%2A> özelliği.
+1. Tanımlamak için bir olay işleyicisi <xref:System.AppDomain.FirstChanceException> olay. Bu örnekte bir `static` yöntemi (`Shared` yöntem Visual Basic'te) olay burada ele uygulama etki alanı adını ve özel durumun yazdırır <xref:System.Exception.Message%2A> özelliği.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#3)]
 
-2.  Bir uygulama etki alanı oluşturma ve olay işleyicisi ekleme <xref:System.AppDomain.FirstChanceException> , uygulama etki alanı için olay. Bu örnekte, uygulama etki alanını adlı `AD1`.
+2. Bir uygulama etki alanı oluşturma ve olay işleyicisi ekleme <xref:System.AppDomain.FirstChanceException> , uygulama etki alanı için olay. Bu örnekte, uygulama etki alanını adlı `AD1`.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#2)]
@@ -70,17 +70,17 @@ ms.locfileid: "59164898"
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-application-domain"></a>Uygulama etki alanında ilk fırsat özel durum bildirimleri göstermek için
 
-1.  Oluşturma bir `Worker` önceki yordamda oluşturduğunuz uygulama etki alanındaki nesne. `Worker` Sınıfı, ortak olmalıdır ve öğesinden türetilmelidir <xref:System.MarshalByRefObject>, bu makalenin sonundaki tam örnekte gösterildiği gibi.
+1. Oluşturma bir `Worker` önceki yordamda oluşturduğunuz uygulama etki alanındaki nesne. `Worker` Sınıfı, ortak olmalıdır ve öğesinden türetilmelidir <xref:System.MarshalByRefObject>, bu makalenin sonundaki tam örnekte gösterildiği gibi.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#4)]
 
-2.  Bir yöntemi çağırmak `Worker` bir özel durum nesnesi. Bu örnekte, `Thrower` yöntemi iki kez çağrılır. İlk kez yöntemi bağımsız değişken olan `true`, kendi özel durumu yakalamak yöntem neden olur. Bağımsız değişken ikinci kez olan `false`ve `Main()` yöntemi varsayılan uygulama etki alanındaki özel durumu yakalar.
+2. Bir yöntemi çağırmak `Worker` bir özel durum nesnesi. Bu örnekte, `Thrower` yöntemi iki kez çağrılır. İlk kez yöntemi bağımsız değişken olan `true`, kendi özel durumu yakalamak yöntem neden olur. Bağımsız değişken ikinci kez olan `false`ve `Main()` yöntemi varsayılan uygulama etki alanındaki özel durumu yakalar.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#6)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#6)]
 
-3.  Kodda yerleştirin `Thrower` yöntemi kendi özel durum işleme olup olmadığını denetlemek için yöntemi.
+3. Kodda yerleştirin `Thrower` yöntemi kendi özel durum işleme olup olmadığını denetlemek için yöntemi.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#5)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]

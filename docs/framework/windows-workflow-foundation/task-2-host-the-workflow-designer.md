@@ -2,12 +2,12 @@
 title: 'Görev 2: İş Akışı Tasarımcısını Barındırma'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299273"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Görev 2: İş Akışı Tasarımcısını Barındırma
 Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] bir Windows Presentation Foundation (WPF) uygulamasındaki.  
@@ -16,19 +16,19 @@ Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../.
   
 ### <a name="to-host-the-workflow-designer"></a>İş akışı tasarımcısını barındırma için  
   
-1.  Açık HostingApplication proje oluşturduğunuz [görev 1: Yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md).  
+1. Açık HostingApplication proje oluşturduğunuz [görev 1: Yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md).  
   
-2.  Kullanımını kolaylaştırmak için penceresinin boyutunu ayarlayın [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Bunu yapmak için **MainWindow** Tasarımcısı'nda görüntülenecek F4 tuşuna basın **özellikleri** penceresinde hem de **Düzen** var. bölümünde, **genişliği** 600 değerini ve **yükseklik** 350 değerini.  
+2. Kullanımını kolaylaştırmak için penceresinin boyutunu ayarlayın [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Bunu yapmak için **MainWindow** Tasarımcısı'nda görüntülenecek F4 tuşuna basın **özellikleri** penceresinde hem de **Düzen** var. bölümünde, **genişliği** 600 değerini ve **yükseklik** 350 değerini.  
   
-3.  Kılavuz adı seçerek ayarlayın **kılavuz** Tasarımcı panelinde (kutusunun içine tıklayın **MainWindow**) ve ayarı **adı** en üstündeki özellik  **Özellikleri** "grid1" penceresine.  
+3. Kılavuz adı seçerek ayarlayın **kılavuz** Tasarımcı panelinde (kutusunun içine tıklayın **MainWindow**) ve ayarı **adı** en üstündeki özellik  **Özellikleri** "grid1" penceresine.  
   
-4.  İçinde **özellikleri** penceresinde üç noktaya tıklayın (**...** ) yanındaki `ColumnDefinitions` açmak için özellik **Koleksiyonu Düzenleyicisi** iletişim kutusu.  
+4. İçinde **özellikleri** penceresinde üç noktaya tıklayın (**...** ) yanındaki `ColumnDefinitions` açmak için özellik **Koleksiyonu Düzenleyicisi** iletişim kutusu.  
   
-5.  İçinde **Koleksiyonu Düzenleyicisi** iletişim kutusu, tıklayın **Ekle** düğmesini düzene üç sütun eklemek için üç kez. İlk sütun içerecek **araç kutusu**, ikinci sütun barındıracak [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], ve üçüncü sütunda Özellik denetçisi için kullanılacaktır.  
+5. İçinde **Koleksiyonu Düzenleyicisi** iletişim kutusu, tıklayın **Ekle** düğmesini düzene üç sütun eklemek için üç kez. İlk sütun içerecek **araç kutusu**, ikinci sütun barındıracak [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], ve üçüncü sütunda Özellik denetçisi için kullanılacaktır.  
   
-6.  Ayarlama `Width` Ortadaki sütun değerine özelliğini "4 *".  
+6. Ayarlama `Width` Ortadaki sütun değerine özelliğini "4 *".  
   
-7.  Değişiklikleri kaydetmek için **Tamam** 'a tıklayın. Aşağıdaki XAML MainWindow.xaml dosyanıza eklenir:  
+7. Değişiklikleri kaydetmek için **Tamam** 'a tıklayın. Aşağıdaki XAML MainWindow.xaml dosyanıza eklenir:  
   
     ```xml  
     <Grid Name="grid1">  
@@ -40,7 +40,7 @@ Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../.
     </Grid>  
     ```  
   
-8.  İçinde **Çözüm Gezgini**, MainWindow.xaml sağ tıklayıp **kodu görüntüle**. Aşağıdaki adımları izleyerek kodu değiştirin:  
+8. İçinde **Çözüm Gezgini**, MainWindow.xaml sağ tıklayıp **kodu görüntüle**. Aşağıdaki adımları izleyerek kodu değiştirin:  
   
     1.  Aşağıdaki ad alanlarını ekleyin:  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: e559702d5fd7f0f56c7b2b010713e3129504746a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192140"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327379"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunda Windows Gezgini Stilinde bir Arabirim Oluşturma
 Windows Gezgini bir ortak kullanıcı arabirimi uygulamalar için kendi hazır bilgisi nedeniyle seçimdir.  
@@ -25,9 +25,9 @@ Windows Gezgini bir ortak kullanıcı arabirimi uygulamalar için kendi hazır b
   
 ### <a name="to-create-a-windows-explorer-style-windows-form"></a>Bir Windows Gezgini stilinde Windows Form oluşturma  
   
-1.  Yeni bir Windows uygulaması projesi oluşturun (**dosya** > **yeni** > **proje** > **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).  
+1. Yeni bir Windows uygulaması projesi oluşturun (**dosya** > **yeni** > **proje** > **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).  
   
-2.  Gelen **araç kutusu**:  
+2. Gelen **araç kutusu**:  
   
     1.  Sürükleme bir <xref:System.Windows.Forms.SplitContainer> denetimi formunuza sürükleyin.  
   
@@ -35,14 +35,14 @@ Windows Gezgini bir ortak kullanıcı arabirimi uygulamalar için kendi hazır b
   
     3.  Sürükleme bir <xref:System.Windows.Forms.ListView> içine denetim **SplitterPanel2** (panelini <xref:System.Windows.Forms.SplitContainer> işaretlenen denetim **Panel2**).  
   
-3.  Her üç denetim CTRL tuşuna basarak ve bunları sırayla tıklayarak seçin. Seçtiğinizde, <xref:System.Windows.Forms.SplitContainer> denetlemek, paneller yerine ayırıcıyı tıklayın.  
+3. Her üç denetim CTRL tuşuna basarak ve bunları sırayla tıklayarak seçin. Seçtiğinizde, <xref:System.Windows.Forms.SplitContainer> denetlemek, paneller yerine ayırıcıyı tıklayın.  
   
     > [!NOTE]
     >  Kullanmayın **Tümünü Seç** komutunu **Düzenle** menüsü. Bunu yaparsanız, sonraki adımda gerekli özellik görüntülenmez **özellikleri** penceresi.  
   
-4.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
+4. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-5.  Uygulamayı çalıştırmak için F5'e basın.  
+5. Uygulamayı çalıştırmak için F5'e basın.  
   
      Form, Windows Gezgini için benzer bir iki bölümden kullanıcı arabirimi görüntüler.  
   

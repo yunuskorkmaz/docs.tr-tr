@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320476"
 ---
 # <a name="adorners-overview"></a>Donatıcılara Genel Bakış
 Donatıcıları, özel bir tür <xref:System.Windows.FrameworkElement>görsel ipuçları kullanıcıya sağlamak için kullanılır. Diğer kullanımının yanı sıra donatıcıları işlevsel tanıtıcıları öğeleri ekleyin ya da bir denetimi hakkındaki durum bilgilerini sağlamak için kullanılabilir.  
@@ -74,9 +74,9 @@ Donatıcıları, özel bir tür <xref:System.Windows.FrameworkElement>görsel ip
 ## <a name="adorning-a-single-uielement"></a>Tek bir UIElement Donatma  
  Belirli bir öğeye bir donatıcı bağlama için <xref:System.Windows.UIElement>, şu adımları izleyin:  
   
-1.  Statik metodunu çağırın <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> almak için bir <xref:System.Windows.Documents.AdornerLayer> nesnesi <xref:System.Windows.UIElement> donatılmış için. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> Belirtilen adreste başlayan görsel ağaç'kurmak gezer <xref:System.Windows.UIElement>ve bulduğu ilk donatıcı katmanı döndürür. (Hiçbir donatıcı katman bulunursa, yöntem null değeri döndürür.)  
+1. Statik metodunu çağırın <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> almak için bir <xref:System.Windows.Documents.AdornerLayer> nesnesi <xref:System.Windows.UIElement> donatılmış için. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> Belirtilen adreste başlayan görsel ağaç'kurmak gezer <xref:System.Windows.UIElement>ve bulduğu ilk donatıcı katmanı döndürür. (Hiçbir donatıcı katman bulunursa, yöntem null değeri döndürür.)  
   
-2.  Çağrı <xref:System.Windows.Documents.AdornerLayer.Add%2A> donatıcıyı hedefe bağlamak için yöntemi <xref:System.Windows.UIElement>.  
+2. Çağrı <xref:System.Windows.Documents.AdornerLayer.Add%2A> donatıcıyı hedefe bağlamak için yöntemi <xref:System.Windows.UIElement>.  
   
  Aşağıdaki örnekte (yukarıda gösterilen) SimpleCircleAdorner bağlayan bir <xref:System.Windows.Controls.TextBox> adlı *myTextBox*.  
   
@@ -90,9 +90,9 @@ Donatıcıları, özel bir tür <xref:System.Windows.FrameworkElement>görsel ip
 ## <a name="adorning-the-children-of-a-panel"></a>Panelin alt öğelerini Donatma  
  Alt öğeye bir donatıcı bağlama için bir <xref:System.Windows.Controls.Panel>, şu adımları izleyin:  
   
-1.  Çağrı `static` yöntemi <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> alt öğeleri donatılmış için öğeye bir donatıcı katmanı bulunacak.  
+1. Çağrı `static` yöntemi <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> alt öğeleri donatılmış için öğeye bir donatıcı katmanı bulunacak.  
   
-2.  Çağrı ve üst öğenin alt öğelerini numaralandırın <xref:System.Windows.Documents.AdornerLayer.Add%2A> her alt öğeye bir donatıcı bağlama için yöntemi.  
+2. Çağrı ve üst öğenin alt öğelerini numaralandırın <xref:System.Windows.Documents.AdornerLayer.Add%2A> her alt öğeye bir donatıcı bağlama için yöntemi.  
   
  Aşağıdaki örnek SimpleCircleAdorner (yukarıda alt için gösterilen) bağlanır bir <xref:System.Windows.Controls.StackPanel> adlı *myStackPanel*.  
   

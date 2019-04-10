@@ -2,14 +2,14 @@
 title: Tasarımcıyı yeniden barındırma
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837367"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328172"
 ---
-# <a name="designer-rehosting"></a>Tasarımcıyı yeniden barındırma
+# <a name="designer-rehosting"></a>Tasarımcıyı Yeniden Barındırma
 Tasarımcı yeniden barındırma başvuran özel bir uygulama içinde iş akışı tasarım tuvali barındırmak için kullanılan yaygın bir senaryodur. Çoğu kişi bilginiz barındırma kullanılabilen birkaç senaryolar burada iş akışı Tasarımcısı uygulamada gösteren yararlı olabilir ancak Visual Studio uygulamasıdır:  
   
 -   (Şu anda etkin durumuna, toplam yürütme süresi veri veya iş akışı örneği ile ilgili diğer bilgileri gibi işlemine ilişkin çalışma zamanı verilerinin yanı sıra işlem görselleştirmek bir son kullanıcı olanak tanır) uygulamalarını izleme.  
@@ -114,11 +114,11 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Örnek kullanma  
   
-1.  Visual Studio 2010'da DesignerRehosting.sln çözümü açın.  
+1. Visual Studio 2010'da DesignerRehosting.sln çözümü açın.  
   
-2.  Derlemek ve uygulamayı çalıştırmak için F5 tuşuna basın.  
+2. Derlemek ve uygulamayı çalıştırmak için F5 tuşuna basın.  
   
-3.  Bir WPF uygulamasını yeniden barındırılan bir tasarımcı ile başlar.  
+3. Bir WPF uygulamasını yeniden barındırılan bir tasarımcı ile başlar.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

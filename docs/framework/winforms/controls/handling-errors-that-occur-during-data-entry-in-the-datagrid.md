@@ -12,12 +12,12 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-ms.openlocfilehash: dfd0753895a937ccef9a8bc14b2f692219eb7f06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9e803b6450fb8c9ade4adde5bf98fb1c3c62c861
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230479"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313234"
 ---
 # <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>İzlenecek yol: Windows Forms DataGridView Denetimine Veri Girişi Sırasında Oluşan Hataları Ele Alma
 Temel alınan veri deposundan hataları işleme, veri girişi uygulama için gerekli bir özelliktir. Windows Forms <xref:System.Windows.Forms.DataGridView> denetim kolaylaştırır bu göstererek <xref:System.Windows.Forms.DataGridView.DataError> veri deposunu bir kısıtlama ihlali veya bir ihlal iş kuralı algıladığında gerçekleşmek üzereyken olay.  
@@ -35,7 +35,7 @@ Temel alınan veri deposundan hataları işleme, veri girişi uygulama için ger
   
 #### <a name="to-handle-data-entry-errors-in-the-datagridview-control"></a>DataGridView denetimine veri girişi sırasında oluşan hataları işlemek için  
   
-1.  Türetilen bir sınıf oluşturmanız <xref:System.Windows.Forms.Form> ve içeren bir <xref:System.Windows.Forms.DataGridView> denetimi ve bir <xref:System.Windows.Forms.BindingSource> bileşeni.  
+1. Türetilen bir sınıf oluşturmanız <xref:System.Windows.Forms.Form> ve içeren bir <xref:System.Windows.Forms.DataGridView> denetimi ve bir <xref:System.Windows.Forms.BindingSource> bileşeni.  
   
      Aşağıdaki kod örneği içerir ve temel başlatma sağlar bir `Main` yöntemi.  
   
@@ -44,7 +44,7 @@ Temel alınan veri deposundan hataları işleme, veri girişi uygulama için ger
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridView.DataError#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#02)]  
   
-2.  Veritabanına bağlanırken ayrıntılarını işlemek için form denetiminin sınıf tanımında bir yöntem uygulayın.  
+2. Veritabanına bağlanırken ayrıntılarını işlemek için form denetiminin sınıf tanımında bir yöntem uygulayın.  
   
      Bu kod örneği kullanan bir `GetData` doldurulmuş bir döndüren yöntem <xref:System.Data.DataTable> nesne. Ayarladığınız mutlaka `connectionString` değişken veritabanınız için uygun olan bir değer.  
   
@@ -54,12 +54,12 @@ Temel alınan veri deposundan hataları işleme, veri girişi uygulama için ger
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#30)]  
   
-3.  Form için bir işleyici uygulamak <xref:System.Windows.Forms.Form.Load> başlatan olay <xref:System.Windows.Forms.DataGridView> ve <xref:System.Windows.Forms.BindingSource> ve veri bağlamasını ayarlamak ayarlar.  
+3. Form için bir işleyici uygulamak <xref:System.Windows.Forms.Form.Load> başlatan olay <xref:System.Windows.Forms.DataGridView> ve <xref:System.Windows.Forms.BindingSource> ve veri bağlamasını ayarlamak ayarlar.  
   
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#10)]  
   
-4.  Tanıtıcı <xref:System.Windows.Forms.DataGridView.DataError> olayda <xref:System.Windows.Forms.DataGridView>.  
+4. Tanıtıcı <xref:System.Windows.Forms.DataGridView.DataError> olayda <xref:System.Windows.Forms.DataGridView>.  
   
      Bir işleme hata bağlamı ise hata görüntüleme bir <xref:System.Windows.Forms.MessageBox>.  
   

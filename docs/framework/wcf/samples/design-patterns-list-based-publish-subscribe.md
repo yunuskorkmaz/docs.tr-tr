@@ -2,12 +2,12 @@
 title: 'Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 2d8041bf3efefa085e94636624e92abb573c1820
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196924"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312052"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma
 Bu örnek, bir Windows Communication Foundation (WCF) programı olarak uygulanan liste tabanlı yayımlama-abone olma deseni gösterilmektedir.  
@@ -112,23 +112,23 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>Ayarlama ve örneği oluşturmak için  
   
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Örneği aynı makinede çalıştırmak için  
   
-1.  Test hizmeti aşağıdaki adresi girerek bir tarayıcı kullanarak erişebilirsiniz: `http://localhost/servicemodelsamples/service.svc`. Yanıtta bir onay sayfası gösterilmelidir.  
+1. Test hizmeti aşağıdaki adresi girerek bir tarayıcı kullanarak erişebilirsiniz: `http://localhost/servicemodelsamples/service.svc`. Yanıtta bir onay sayfası gösterilmelidir.  
   
-2.  \Client\bin Client.exe çalıştırma\\, dile özgü klasörü altında. İstemci etkinliği istemci konsol penceresinde görüntülenir. Çeşitli istemciler başlatın.  
+2. \Client\bin Client.exe çalıştırma\\, dile özgü klasörü altında. İstemci etkinliği istemci konsol penceresinde görüntülenir. Çeşitli istemciler başlatın.  
   
-3.  \Datasource\bin DataSource.exe çalıştırma\\, dile özgü klasörü altında. Veri kaynak etkinliği konsol penceresinde görüntülenir. Veri kaynağı bilgilerini hizmetine gönderir. sonra her bir istemciye geçirilmelidir.  
+3. \Datasource\bin DataSource.exe çalıştırma\\, dile özgü klasörü altında. Veri kaynak etkinliği konsol penceresinde görüntülenir. Veri kaynağı bilgilerini hizmetine gönderir. sonra her bir istemciye geçirilmelidir.  
   
-4.  İstemci, veri kaynağı ve hizmet programlarını iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. İstemci, veri kaynağı ve hizmet programlarını iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Makineler arasında örneği çalıştırmak için  
   
-1.  Hizmet Makine'yi ayarlayın:  
+1. Hizmet Makine'yi ayarlayın:  
   
     1.  Hizmeti makinede ServiceModelSamples adlı sanal bir dizin oluşturun. Toplu iş dosyası Setupvroot.bat gelen [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) disk dizini ve sanal dizin oluşturmak için kullanılabilir.  
   
@@ -136,21 +136,21 @@ public class PriceChangeEventArgs : EventArgs
   
     3.  Test bir tarayıcı kullanarak istemci makine hizmete erişebilir.  
   
-2.  İstemci makineleri ayarlama:  
+2. İstemci makineleri ayarlama:  
   
     1.  İstemci makineler için dile özgü klasörü altında \client\bin\ klasöründen istemci program dosyaları kopyalayın.  
   
     2.  Her istemci yapılandırma dosyasında adresi uç nokta tanımı hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" yönelik tüm başvuruları adresindeki bir tam etki alanı adı ile değiştirin.  
   
-3.  Veri kaynağı Makine'yi ayarlayın:  
+3. Veri kaynağı Makine'yi ayarlayın:  
   
     1.  Veri kaynak makineye \datasource\bin\ klasöründen dile özgü klasörü altında veri kaynağı program dosyaları kopyalayın.  
   
     2.  Veri kaynağı yapılandırma dosyasında adresi uç nokta tanımı hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" yönelik tüm başvuruları adresindeki bir tam etki alanı adı ile değiştirin.  
   
-4.  İstemci makinelerinde Client.exe bir komut istemi'nden başlatın.  
+4. İstemci makinelerinde Client.exe bir komut istemi'nden başlatın.  
   
-5.  Veri kaynak makinede Datasource.exe bir komut istemi'nden başlatın.  
+5. Veri kaynak makinede Datasource.exe bir komut istemi'nden başlatın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

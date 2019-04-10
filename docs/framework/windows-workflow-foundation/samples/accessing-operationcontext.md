@@ -1,15 +1,15 @@
 ---
-title: OperationContext erişimi
+title: OperationContext Erişimi
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: 3c7ce1c9c37ee93b58a07376e0aeae045f0ca408
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864306"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327964"
 ---
-# <a name="accessing-operationcontext"></a>OperationContext erişimi
+# <a name="accessing-operationcontext"></a>OperationContext Erişimi
 Bu örnek gösterir nasıl Mesajlaşma etkinlikleri (<xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.Send>) bir özel kapsam etkinliğiyle erişmek için kullanılan <xref:System.ServiceModel.OperationContext.Current%2A> ve ekleyebilir veya bir giden veya gelen ileti içinde bir özel ileti üst bilgisi alınamıyor.  
   
 ## <a name="demonstrates"></a>Gösteriler  
@@ -20,13 +20,13 @@ Bu örnek gösterir nasıl Mesajlaşma etkinlikleri (<xref:System.ServiceModel.A
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Bu örnek, bir iş akışı hizmeti kullanarak HTTP uç noktalarını kullanıma sunar. Bu örnek, uygun URL ACL çalıştırılacak eklenmesi gerekir (bkz [yapılandırma HTTP ve HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için), Visual Studio'yu yönetici olarak çalıştırdığınızdan veya uygun ACL'lerin eklemek için aşağıdaki komutu yükseltilmiş bir isteminde yürütülüyor. Kullanıcı adı ve etki alanı başvurulduğunda emin olun.  
+1. Bu örnek, bir iş akışı hizmeti kullanarak HTTP uç noktalarını kullanıma sunar. Bu örnek, uygun URL ACL çalıştırılacak eklenmesi gerekir (bkz [yapılandırma HTTP ve HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için), Visual Studio'yu yönetici olarak çalıştırdığınızdan veya uygun ACL'lerin eklemek için aşağıdaki komutu yükseltilmiş bir isteminde yürütülüyor. Kullanıcı adı ve etki alanı başvurulduğunda emin olun.  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2.  URL ACL eklendikten sonra aşağıdaki adımları kullanın.  
+2. URL ACL eklendikten sonra aşağıdaki adımları kullanın.  
   
     1.  Çözümü oluşturun.  
   

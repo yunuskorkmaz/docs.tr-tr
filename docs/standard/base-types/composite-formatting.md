@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314015"
 ---
 # <a name="composite-formatting"></a>Bileşik Biçimlendirme
 
@@ -90,7 +90,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
 |Tür veya tür kategorisi|Bkz. |  
 |---------------------------|---------|  
 |Tarih ve saat türleri (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Numaralandırma türleri (öğesinden türetilen tüm türler <xref:System.Enum?displayProperty=nameWithType>)|[Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Numaralandırma türleri (öğesinden türetilen tüm türler <xref:System.Enum?displayProperty=nameWithType>)|[Numaralandırma Biçimi Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|  
 |Sayısal türler (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
@@ -100,15 +100,15 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
   
  Kaçırılan ayraçların yorumlanma şekli beklenmeyen sonuçlara neden olabilir. Örneğin, biçim öğesini göz önünde bulundurun "{{{0:D}}}", bir açılış ayracı görüntülemek için hedeflenen, sayısal bir değer olarak biçimlendirilmiş bir ondalık sayı ve bir kapanış ayracı. Ancak, biçim öğesi aslında şu şekilde yorumlanır:  
   
-1.  İlk iki açılış ayracı ("{{") kaçırılır ve bir açılış ayracı olur.  
+1. İlk iki açılış ayracı ("{{") kaçırılır ve bir açılış ayracı olur.  
   
-2.  Sonraki üç karakter ("{0:") bir biçim öğesinin başlangıcı olarak yorumlanır.  
+2. Sonraki üç karakter ("{0:") bir biçim öğesinin başlangıcı olarak yorumlanır.  
   
-3.  Sonraki karakter ("D") Ondalık standart sayısal biçim tanımlayıcısı olarak yorumlanır, ancak sonraki iki kaçırılan ayıraç ("}}") tek bir ayıraç olur. Sonuç dize ("D}") standart bir sayısal biçim tanımlayıcısı olmadığı için, sonuç dize özel bir biçimlendirme dizesi olarak yorumlanır ve bu nedenle "D}" sabit dizesini görüntüler.  
+3. Sonraki karakter ("D") Ondalık standart sayısal biçim tanımlayıcısı olarak yorumlanır, ancak sonraki iki kaçırılan ayıraç ("}}") tek bir ayıraç olur. Sonuç dize ("D}") standart bir sayısal biçim tanımlayıcısı olmadığı için, sonuç dize özel bir biçimlendirme dizesi olarak yorumlanır ve bu nedenle "D}" sabit dizesini görüntüler.  
   
-4.  Son ayıraç ("}") biçim öğesinin bitişi olarak yorumlanır.  
+4. Son ayıraç ("}") biçim öğesinin bitişi olarak yorumlanır.  
   
-5.  Sonuç olarak "{D}" sabit dizesi görüntülenir. Biçimlendirilmek istenen sayısal değer görüntülenmez.  
+5. Sonuç olarak "{D}" sabit dizesi görüntülenir. Biçimlendirilmek istenen sayısal değer görüntülenmez.  
   
  Kodunuzun kaçırılan ayraçları ve format öğelerini yanlış yorumlamasından kaçınmanın bir yolu, ayraçları ve biçim öğesini ayrı olarak biçimlendirmektir. Yani, ilk biçimlendirme işleminde bir sabit açılış ayracı görüntülemek, sonraki işlemde biçim öğesinin sonucunu görüntülemek ve son işlemde de bir sabit kapanış ayracı görüntülemektir. Aşağıdaki örnek bu yaklaşımı gösterir.  
   
@@ -120,11 +120,11 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
   
  Parametre listesinde bir biçim öğesine karşılık gelen her değer şu şekilde bir dizeye dönüştürülür:  
   
-1.  Biçimlendirilecek değer ise `null`, boş bir dize <xref:System.String.Empty?displayProperty=nameWithType> döndürülür.  
+1. Biçimlendirilecek değer ise `null`, boş bir dize <xref:System.String.Empty?displayProperty=nameWithType> döndürülür.  
   
-2.  Varsa bir <xref:System.ICustomFormatter> kullanılamıyorsa çalışma zamanı çağrıları kendi <xref:System.ICustomFormatter.Format%2A> yöntemi. Öğenin yöntemi geçirir *formatString* biri varsa, değer veya `null` , değilse ile birlikte <xref:System.IFormatProvider> uygulaması. Çağrı <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> yöntemi döndürür `null`, yürütme devam eder, sonraki adıma; Aksi takdirde, sonucunu <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> çağrı döndürülür.
+2. Varsa bir <xref:System.ICustomFormatter> kullanılamıyorsa çalışma zamanı çağrıları kendi <xref:System.ICustomFormatter.Format%2A> yöntemi. Öğenin yöntemi geçirir *formatString* biri varsa, değer veya `null` , değilse ile birlikte <xref:System.IFormatProvider> uygulaması. Çağrı <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> yöntemi döndürür `null`, yürütme devam eder, sonraki adıma; Aksi takdirde, sonucunu <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> çağrı döndürülür.
   
-3.  Değer uyguluyorsa <xref:System.IFormattable> arabirimi, arabirimin <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemi çağrılır. Yönteme *formatString* değeri biçim öğesinde varsa veya `null` değilse. <xref:System.IFormatProvider> Bağımsız değişkeni aşağıdaki şekilde belirlenir:  
+3. Değer uyguluyorsa <xref:System.IFormattable> arabirimi, arabirimin <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemi çağrılır. Yönteme *formatString* değeri biçim öğesinde varsa veya `null` değilse. <xref:System.IFormatProvider> Bağımsız değişkeni aşağıdaki şekilde belirlenir:  
   
     -   Bir bileşik biçimlendirme yöntemi ile bir null olmayan bir sayı değeri <xref:System.IFormatProvider> bağımsız değişken çağrılırsa, çalışma zamanı bir <xref:System.Globalization.NumberFormatInfo> nesnesinin kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. Bağımsız değişkenin değerini ise tane sağlanamazsa, `null`, veya bileşik biçimlendirme yöntemi yoksa bir <xref:System.IFormatProvider> parametresi <xref:System.Globalization.NumberFormatInfo> nesnesi geçerli iş parçacığı kültürü kullanılır.  
   
@@ -132,7 +132,7 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
   
     -   Diğer tür nesneler için bir bileşik biçimlendirme yöntemi ile aranan bir <xref:System.IFormatProvider> bağımsız değişken değeri doğrudan geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması. Aksi takdirde, `null` geçirilir <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> uygulaması.  
   
-4.  Türün parametresiz `ToString` yöntemini geçersiz kılan <xref:System.Object.ToString?displayProperty=nameWithType> veya temel sınıfının davranışını devralan, çağrılır. Bu durumda, belirtilen biçim dizesi tarafından *formatString* bileşen biçim öğesinde varsa, göz ardı edilir.  
+4. Türün parametresiz `ToString` yöntemini geçersiz kılan <xref:System.Object.ToString?displayProperty=nameWithType> veya temel sınıfının davranışını devralan, çağrılır. Bu durumda, belirtilen biçim dizesi tarafından *formatString* bileşen biçim öğesinde varsa, göz ardı edilir.  
   
  Üstteki adımlar gerçekleştirildikten sonra hizalama uygulanır.  
   
@@ -172,4 +172,4 @@ Bileşik biçimlendirme özelliği aşağıdaki gibi yöntemler tarafından dest
 - [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Numaralandırma Biçimi Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)

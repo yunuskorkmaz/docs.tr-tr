@@ -2,12 +2,12 @@
 title: Kapsam ile Keşif Örneği
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 553a7adbe2d6daf29d4acf76990503df09c3bff1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328094"
 ---
 # <a name="discovery-with-scopes-sample"></a>Kapsam ile Keşif Örneği
 Bu örnek bulunabilirlik uç noktaları da nasıl kullanılacağını olarak sınıflandırmak için kapsamları kullanmayı gösterir <xref:System.ServiceModel.Discovery.DiscoveryClient> uç noktaları için zaman uyumsuz bir arama gerçekleştirmek için. Hizmette her uç nokta için bulma uç noktası bulma davranışını ekleme ve uç noktasına bir kapsamı ekleme işlemi kullanılarak yanı sıra tarafından bitiş noktası bulunabilirliğini denetleme özelleştirme Bu örnek gösterir. İstemcide, örnek istemcileri nasıl oluşturacağınızı üzerinden giden bir <xref:System.ServiceModel.Discovery.DiscoveryClient> ve ince parametreleri kapsamına ekleyerek kapsamları eklemek için arama <xref:System.ServiceModel.Discovery.FindCriteria>. Ayrıca bu örnek bir sonlandırma ölçütüne ekleyerek istemciler yanıtları nasıl kısıtlayabilirsiniz gösterir.  
@@ -20,13 +20,13 @@ Bu örnek bulunabilirlik uç noktaları da nasıl kullanılacağını olarak sı
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Bu örnek HTTP uç noktaları kullanır ve bu örneği çalıştırmak için doğru URL ACL eklenmesi gerekir. Bkz: [yapılandırma HTTP ve HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için. Aşağıdaki komut bir yükseltilmiş ayrıcalık yürütme uygun ACL'lerin eklemeniz gerekir. Olduğu gibi bir komut çalışmazsa, aşağıdaki bağımsız değişkenler yerine etki alanı ve kullanıcı adı isteyebilirsiniz: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Bu örnek HTTP uç noktaları kullanır ve bu örneği çalıştırmak için doğru URL ACL eklenmesi gerekir. Bkz: [yapılandırma HTTP ve HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için. Aşağıdaki komut bir yükseltilmiş ayrıcalık yürütme uygun ACL'lerin eklemeniz gerekir. Olduğu gibi bir komut çalışmazsa, aşağıdaki bağımsız değişkenler yerine etki alanı ve kullanıcı adı isteyebilirsiniz: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Çözümü oluşturun.  
+2. Çözümü oluşturun.  
   
-3.  Yürütülebilir hizmet oluşturma dizinden çalıştırın.  
+3. Yürütülebilir hizmet oluşturma dizinden çalıştırın.  
   
-4.  İstemci yürütülebilir çalıştırın. İstemci hizmetini bulun mümkün olduğunu unutmayın.  
+4. İstemci yürütülebilir çalıştırın. İstemci hizmetini bulun mümkün olduğunu unutmayın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
