@@ -2,21 +2,21 @@
 title: Özel Bir Şifreleme Algoritması Belirtme
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: c92ce463f885e9784913b07eb11941ecd7d78d09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342836"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Özel Bir Şifreleme Algoritması Belirtme
 WCF kullanmak üzere özel bir şifreleme algoritması belirtmenize olanak verir veri şifrelemek veya bilgi işlem dijital imzalar. Bu, aşağıdaki adımlarla gerçekleştirilir:  
   
-1.  Öğesinden bir sınıf türetin <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1. Öğesinden bir sınıf türetin <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
-2.  Algoritma kaydetme  
+2. Algoritma kaydetme  
   
-3.  Bağlamasıyla yapılandırma <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-türetilmiş sınıf.  
+3. Bağlamasıyla yapılandırma <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-türetilmiş sınıf.  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>SecurityAlgorithmSuite bir sınıf türetin  
  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> Algoritması, çeşitli güvenlikle ilgili işlemler yapılırken kullanılacak belirtmenizi sağlar bir soyut temel sınıf. Örneğin, bir dijital imza veya iletiyi şifrelemek için karma hesaplaması. Aşağıdaki kod, bir sınıf türetmek gösterilmektedir <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:  

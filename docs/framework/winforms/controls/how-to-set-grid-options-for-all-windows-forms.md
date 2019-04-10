@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 8dec7451aaa84b5ec0f3f5d6210afa82924500fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199829"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336063"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Nasıl yapılır: Tüm Windows Formları için Kılavuz Seçeneklerini Ayarlama
 Visual Studio geliştirme ortamında çalışmaya kullanılan hale tercihleri formları ve projeleri ile iş için Windows Form Tasarımcısı'nda ayarlayabilirsiniz.  
@@ -23,9 +23,9 @@ Visual Studio geliştirme ortamında çalışmaya kullanılan hale tercihleri fo
   
 ### <a name="to-set-global-windows-forms-options"></a>Genel Windows Formları seçeneklerini ayarlamak için  
   
-1.  Gelen **Araçları** menüsünde **seçenekleri**.  
+1. Gelen **Araçları** menüsünde **seçenekleri**.  
   
-2.  Sol bölmesinde **seçenekleri** iletişim kutusu, tıklayın **Windows Form Tasarımcısı**.  
+2. Sol bölmesinde **seçenekleri** iletişim kutusu, tıklayın **Windows Form Tasarımcısı**.  
   
      Sağ bölmede altında **düzen ayarlarını** başlık, oluşturduğunuz tüm yeni formları için kılavuz ayarları varsayılan ayarlayabilirsiniz. Bu ayarlar, kılavuz boyutu, mi denetimleri için Yaslama ve üzerinde varsayılan olarak olup içerir. Ayrıca, aşağıdaki seçeneklerden birini seçebilirsiniz **LayoutMode** ve **dayama çizgileri** Düzen modu. Dayama çizgileri hakkında daha fazla bilgi için bkz. [izlenecek yol: Forms dayama çizgileri kullanarak Windows denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   

@@ -2,12 +2,12 @@
 title: Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213395"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341107"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı WCF tarafından oluşturulan tanılama izlemeleri analiz etmenize yardımcı olur. Hizmet izleme görüntüleyicisini kolayca birleştirmek, görüntülemek ve böylece tanılama onarın ve WCF hizmet sorunları doğrula izleme günlüğü iletileri filtrelemek için bir yol sağlar.  
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
 ##### <a name="to-open-a-trace-file"></a>Bir izleme dosyasını açmak için  
   
-1.  WCF yükleme konumuna (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) gidin ve ardından yazın, bir komut penceresi kullanarak hizmet izleme görüntüleyicisini Başlat `SvcTraceViewer.exe`.  
+1. WCF yükleme konumuna (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) gidin ve ardından yazın, bir komut penceresi kullanarak hizmet izleme görüntüleyicisini Başlat `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  Hizmet izleme Görüntüleyicisi aracı iki dosya türleri ile ilişkilendirebilirsiniz: .svclog ve .stvproj. Kaydolun ve dosya uzantılarını kaydını silmek için komut satırında iki parametre kullanabilirsiniz.  
@@ -81,14 +81,14 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 >   
 >  /unregister: unregister the association of file extensions ".svclog" and ".stvproj" with SvcTraceViewer.exe  
   
-1.  Hizmet izleme görüntüleyicisini başladığında tıklayın **dosya** gelin ve ardından **açık**. İzleme dosyalarınızın depolandığı konuma gidin.  
+1. Hizmet izleme görüntüleyicisini başladığında tıklayın **dosya** gelin ve ardından **açık**. İzleme dosyalarınızın depolandığı konuma gidin.  
   
-2.  Açmak istediğiniz izleme dosyasına çift tıklayın.  
+2. Açmak istediğiniz izleme dosyasına çift tıklayın.  
   
     > [!NOTE]
     >  Birden çok izleme dosyaları tıklatırken seçmek ve aynı anda açmak için SHIFT tuşuna basın. Hizmet izleme görüntüleyicisini tüm dosyaların içeriğini birleştirir ve bir görünüm sunar. Örneğin, hem istemci hem de hizmet izleme dosyaları açabilirsiniz. İleti günlüğe kaydetme ve Etkinlik yayma Yapılandırması etkinleştirildiğinde, bu yararlıdır. Bu şekilde, hizmet ve istemci arasında ileti değişimi inceleyebilirsiniz. Ayrıca, birden çok dosya Görüntüleyicisi'ne sürükleyin veya kullanın **proje** sekmesi. Daha fazla ayrıntı için proje yönetimi bölümüne bakın.  
   
-3.  Ek izleme dosyaları, açık olan koleksiyona eklemek için tıklatın **dosya** gelin ve ardından **Ekle**. Açılan pencerede izleme dosyalarının konumuna gidin ve eklemek istediğiniz dosyaya çift tıklayın.  
+3. Ek izleme dosyaları, açık olan koleksiyona eklemek için tıklatın **dosya** gelin ve ardından **Ekle**. Açılan pencerede izleme dosyalarının konumuna gidin ve eklemek istediğiniz dosyaya çift tıklayın.  
   
 > [!CAUTION]
 >  200 MB değerinden daha büyük bir izleme günlük dosyası yüklemek önerilmez. Bu sınırdan büyük bir dosya yüklemeye çalışırsanız, yükleme işlemi, bilgisayar kaynağınıza bağlı olarak uzun zaman alabilir. Hizmet izleme Görüntüleyicisi aracı uzun süredir duyarlı olmayabilir veya makinenizin bellek tüketebilir. Bunu önlemek için kısmi yüklemeyi yapılandırmanız önerilir. Bunun nasıl yapılacağı hakkında daha fazla bilgi için "Yükleme büyük izleme dosyaları" bölümüne bakın.  
@@ -154,24 +154,24 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
 ###### <a name="selecting-traces-in-the-graph"></a>Grafikte izlemeleri seçme  
   
-1.  Graftaki bir blok tıklayın.  
+1. Graftaki bir blok tıklayın.  
   
-2.  Yukarı ve aşağı tuşlarını, komşu izlemeleri seçin.  
+2. Yukarı ve aşağı tuşlarını, komşu izlemeleri seçin.  
   
-3.  İzleme ve ayrıntılı bölmesinde izleme bilgileri inceleyin.  
+3. İzleme ve ayrıntılı bölmesinde izleme bilgileri inceleyin.  
   
 ###### <a name="expanding-or-collapsing-activity-transfers"></a>Genişletme veya daraltma etkinlik aktarımları  
  Başka bir etkinlik için etkinlik seçimi dışarı aktarırken, etkinlik aktarımları genişletebilirsiniz. Aktarımları izlemenizi sağlar.  
   
  Genişlet veya daralt etkinlik aktarımları için  
   
-1.  "+" İşareti ile Aktarım izleme aktarımı simgesine sol tarafında bulun.  
+1. "+" İşareti ile Aktarım izleme aktarımı simgesine sol tarafında bulun.  
   
-2.  "+"'a tıklayın veya basın **Ctrl** ve "+" için klavyeyi kullanma.  
+2. "+"'a tıklayın veya basın **Ctrl** ve "+" için klavyeyi kullanma.  
   
-3.  Sonraki etkinliği grafikte görünür.  
+3. Sonraki etkinliği grafikte görünür.  
   
-4.  A "-" aktarımı simgesine sol tarafında görünür. Tıklayın "-" oturum veya Ctrl tuşuna basın ve "-", etkinlik aktarım daraltır.  
+4. A "-" aktarımı simgesine sol tarafında görünür. Tıklayın "-" oturum veya Ctrl tuşuna basın ve "-", etkinlik aktarım daraltır.  
   
 > [!NOTE]
 >  Birden çok aktarımları içine bir aktivitesi olduğundan ve aktarımları birini genişletin, yeni bir etkinlik için Kök etkinlikten neden etkinlikleri görüntülenir. Bu yeni etkinlikler daraltılmış formda görüntülenir. Bu etkinlikler ile ilgili ayrıntıları görmek istiyorsanız, bunları dikey grafiğin üst bilgisindeki Genişlet simgesine tıklayarak genişletin.  
@@ -181,13 +181,13 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
  Genişletmek veya daraltmak için dikey etkinlikleri için  
   
-1.  Etkinlik dikey olarak genişletmek için etkinlik üst bilgisindeki "+" simgesine tıklayın.  
+1. Etkinlik dikey olarak genişletmek için etkinlik üst bilgisindeki "+" simgesine tıklayın.  
   
-2.  Tüm izlemeleri grafikte görüntülenen dikkat edin.  
+2. Tüm izlemeleri grafikte görüntülenen dikkat edin.  
   
-3.  Tıklayın "-" etkinlik dikey daraltmak için etkinlik üst bilgisindeki simge.  
+3. Tıklayın "-" etkinlik dikey daraltmak için etkinlik üst bilgisindeki simge.  
   
-4.  Bildirim yalnızca önemli aktarımları ileti günlükleri, uyarı ve etkinlik özel durumu izlemeleri gösterilir.  
+4. Bildirim yalnızca önemli aktarımları ileti günlükleri, uyarı ve etkinlik özel durumu izlemeleri gösterilir.  
   
 ###### <a name="options"></a>Seçenekler  
  İki seçenekler arasından seçim yapabilirsiniz **seçeneği** graf görünümünü menüsünde.  
@@ -259,17 +259,17 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 ###### <a name="creating-a-custom-filter-using-the-template-wizard"></a>Özel Şablon Sihirbazı'nı kullanarak bir filtre oluşturma  
  Varolan bir izleme'yi tıklatın ve izleme yapısına göre bir filtre oluşturun. Bu örnek, iş parçacığı kimliğini temel alan özel bir filtre oluşturur.  
   
-1.  Görüntüleyici'nin sağ üst kısımdaki alana izleme bölmesinde, filtrelemek için kullanmak istediğiniz öğeyi içeren bir izleme seçin.  
+1. Görüntüleyici'nin sağ üst kısımdaki alana izleme bölmesinde, filtrelemek için kullanmak istediğiniz öğeyi içeren bir izleme seçin.  
   
-2.  Tıklayın **özel filtre oluşturma** düğmesi İzleme bölmesinin en üstünde yer alan.  
+2. Tıklayın **özel filtre oluşturma** düğmesi İzleme bölmesinin en üstünde yer alan.  
   
-3.  Görüntülenen iletişim kutusunda, filtreniz için bir ad girin. Bu örnekte, girin `Thread ID`. Filtre kümenizi bir açıklamasını sağlar.  
+3. Görüntülenen iletişim kutusunda, filtreniz için bir ad girin. Bu örnekte, girin `Thread ID`. Filtre kümenizi bir açıklamasını sağlar.  
   
-4.  Soldaki ağaç görünümünde 1. adımda seçtiğiniz izleme kaydının yapısını görüntüler. Bir koşul için oluşturmak istediğiniz öğeyi bulun. Bu örnekte XPath bulunmasını ThreadID göz atın: /E2ETraceEvent/System/Execution/@ThreadID düğümü. Ağaç görünümünde ThreadID öznitelik çift tıklayın. Bu iletişim kutusunun sağ tarafındaki özniteliği için bir ifade oluşturur.  
+4. Soldaki ağaç görünümünde 1. adımda seçtiğiniz izleme kaydının yapısını görüntüler. Bir koşul için oluşturmak istediğiniz öğeyi bulun. Bu örnekte XPath bulunmasını ThreadID göz atın: /E2ETraceEvent/System/Execution/@ThreadID düğümü. Ağaç görünümünde ThreadID öznitelik çift tıklayın. Bu iletişim kutusunun sağ tarafındaki özniteliği için bir ifade oluşturur.  
   
-5.  Parametre alanı ThreadID koşulu için None olarak değiştirin '{0}'. Bu adım, filtre uygulandığında yapılandırılması ThreadID değeri sağlar. (Bkz. nasıl filtre bölümünde uygulanır) En fazla dört parametre tanımlayabilirsiniz. Koşullar, OR operatörü kullanılarak birleştirilir.  
+5. Parametre alanı ThreadID koşulu için None olarak değiştirin '{0}'. Bu adım, filtre uygulandığında yapılandırılması ThreadID değeri sağlar. (Bkz. nasıl filtre bölümünde uygulanır) En fazla dört parametre tanımlayabilirsiniz. Koşullar, OR operatörü kullanılarak birleştirilir.  
   
-6.  Tıklayın **Tamam** filtre oluşturmak için.  
+6. Tıklayın **Tamam** filtre oluşturmak için.  
   
 > [!NOTE]
 >  Bir filtre Şablonu Sihirbazı'nı kullanarak oluşturulduktan sonra yalnızca el ile düzenlenebilir. Daha önce oluşturduğunuz bir filtre için Sihirbazı'nı etkinleştirmek mümkün değildir. Ayrıca, şablonu Sihirbazı'nda oluşturulan bir XPath filtresi Koşulları OR operatörü kullanılarak birleştirilir. Bir AND işlemi gerekiyorsa, oluşturulduktan sonra filtre ifadesi düzenleyebilirsiniz.  
@@ -277,20 +277,20 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 ###### <a name="creating-a-custom-filter-manually"></a>Özel filtre el ile oluşturma  
  Özel Filtreler menüsü için XPath filtrelerinde el ile girmenizi sağlar.  
   
-1.  Görünüm menüden **özel filtreler** menü öğesi.  
+1. Görünüm menüden **özel filtreler** menü öğesi.  
   
-2.  Görüntülenen iletişim kutusunda tıklatın **yeni.**  
+2. Görüntülenen iletişim kutusunda tıklatın **yeni.**  
   
-3.  En az bir filtre adı ve XPath ifadesi belirtin.  
+3. En az bir filtre adı ve XPath ifadesi belirtin.  
   
-4.  **Tamam**'ı tıklatın.  
+4. **Tamam**'ı tıklatın.  
   
 ###### <a name="applying-a-custom-filter"></a>Özel filtre uygulama  
  Özel filtre oluşturulduktan sonra ancak erişilebilir durumda filtre araç. İçinde uygulamak istediğiniz filtreyi seçin **arama içinde** filtre araç alanı. Önceki örnekte, iş parçacığı'ID ' seçin.  
   
-1.  İçinde aradığınız değeri belirtin **Aranan** alan. Bizim örneğimizde, aramak istediğiniz iş parçacığı Kimliğini girin.  
+1. İçinde aradığınız değeri belirtin **Aranan** alan. Bizim örneğimizde, aramak istediğiniz iş parçacığı Kimliğini girin.  
   
-2.  Tıklayın **artık filtre**ve işlemin sonucu inceleyin.  
+2. Tıklayın **artık filtre**ve işlemin sonucu inceleyin.  
   
  Filtreniz birden çok parametre kullanıyorsa, bunları girmeniz kullanarak ';' ayırıcı olarak **Aranan** alan. Örneğin, aşağıdaki dize, 3 parametre tanımlar: ‘1;findValue;text’. Görüntüleyici '1' uygulandığı {0} filtre parametresi. 'findValue' ve 'text' uygulandığı {1} ve {2} sırasıyla.  
   
@@ -299,21 +299,21 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
   
  Özel filtre içeri aktarmak için:  
   
-1.  İçinde **görünümü** menüsünde tıklatın **özel filtreler**.  
+1. İçinde **görünümü** menüsünde tıklatın **özel filtreler**.  
   
-2.  Açılan iletişim kutusunda, tıklayın **alma** düğmesi.  
+2. Açılan iletişim kutusunda, tıklayın **alma** düğmesi.  
   
-3.  Özel filtre (.stvcf) dosyasına gidin, dosyayı ve tıklayın **açık** düğmesi.  
+3. Özel filtre (.stvcf) dosyasına gidin, dosyayı ve tıklayın **açık** düğmesi.  
   
  Özel filtre dışarı aktarmak için:  
   
-1.  Görünüm menüden **özel filtreler**.  
+1. Görünüm menüden **özel filtreler**.  
   
-2.  Açılan iletişim kutusunda, dışarı aktarmak istediğiniz filtreyi seçin.  
+2. Açılan iletişim kutusunda, dışarı aktarmak istediğiniz filtreyi seçin.  
   
-3.  Tıklayın **dışarı** düğmesi.  
+3. Tıklayın **dışarı** düğmesi.  
   
-4.  Özel filtre tanım dosyası (.stvcf) konumunu ve adını belirtin ve tıklayın **Kaydet** düğmesi.  
+4. Özel filtre tanım dosyası (.stvcf) konumunu ve adını belirtin ve tıklayın **Kaydet** düğmesi.  
   
 > [!NOTE]
 >  Bu özel filtreler yalnızca içe ve dışa aktarılan hizmet izleme Görüntüleyicisi'nden. Diğer araçları tarafından okunamaz.  
@@ -396,9 +396,9 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
 #### <a name="adjusting-partial-loading"></a>Kısmi yüklemeyi ayarlama  
  İzleme dosyasını kısmen yüklediğiniz sonra yüklenen veri kümesini değiştirmek isteyebilirsiniz. Kısmi yüklenirken araç Görüntüleyicisi üst kısmındaki ayarlayarak bunu yapabilirsiniz.  
   
-1.  Araç çubuğunun fareyle taşıyın veya başlangıç ve bitiş saati girin.  
+1. Araç çubuğunun fareyle taşıyın veya başlangıç ve bitiş saati girin.  
   
-2.  Tıklayın **Ayarla** düğmesi.  
+2. Tıklayın **Ayarla** düğmesi.  
   
 ## <a name="understanding-trace-icons"></a>İzleme simgeler anlama  
  Hizmet izleme Görüntüleyicisi aracı kullanır simge listesi aşağıdadır **etkinlik** görünümü **grafik** görünümü ve **izleme** bölmesinde farklı öğeleri göstermek için.  

@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Özel İzleme Katılımcısı oluşturma'
+title: 'Nasıl yapılır: Özel İzleme Katılımcısı Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: c4c6a8d17180ee00942c1bfd9ddc7bfa04bb962f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64320a8f4799e79f54348e5381ed2d8ed49d496b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720962"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338182"
 ---
-# <a name="how-to-create-a-custom-tracking-participant"></a>Nasıl yapılır: Özel İzleme Katılımcısı oluşturma
+# <a name="how-to-create-a-custom-tracking-participant"></a>Nasıl yapılır: Özel İzleme Katılımcısı Oluşturma
 İş akışı izleme, iş akışı yürütme durumunu görünürlük sağlar. İş akışı çalışma zamanı iş akışı yaşam döngüsü olayları, etkinlik yaşam döngüsü olayları, yer işareti harcanması ve hataları tanımlayan izleme kayıtları gösterir. Bu izleme kayıtları izleme katılımcıları tarafından tüketilir. Windows Workflow Foundation (WF) izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan standart izleme katılımcı içerir. Gereksinimlerinizi karşılamıyorsa, özel izleme katılımcı de yazabilirsiniz. Bu öğretici adım özel izleme katılımcı ve çıktısını yakalamak izleme profili oluşturmayı açıklar `WriteLine` etkinlikleri ve böylece kullanıcıya gösterilir.  
   
 > [!NOTE]
@@ -20,9 +20,9 @@ ms.locfileid: "57720962"
   
 ## <a name="to-create-the-custom-tracking-participant"></a>Özel İzleme Katılımcısı oluşturma  
   
-1.  Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** ve **Ekle**, **sınıfı**. Tür `StatusTrackingParticipant` içine **adı** ve'ı tıklatın **Ekle**.  
+1. Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** ve **Ekle**, **sınıfı**. Tür `StatusTrackingParticipant` içine **adı** ve'ı tıklatın **Ekle**.  
   
-2.  Aşağıdaki `using` (veya `Imports`) deyimini dosyanın diğer üst `using` (veya `Imports`) ifadeleri.  
+2. Aşağıdaki `using` (veya `Imports`) deyimini dosyanın diğer üst `using` (veya `Imports`) ifadeleri.  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -34,7 +34,7 @@ ms.locfileid: "57720962"
     using System.IO;  
     ```  
   
-3.  Değiştirme `StatusTrackingParticipant` devraldığı sınıfının `TrackingParticipant`.  
+3. Değiştirme `StatusTrackingParticipant` devraldığı sınıfının `TrackingParticipant`.  
   
     ```vb  
     Public Class StatusTrackingParticipant  
@@ -49,7 +49,7 @@ ms.locfileid: "57720962"
     }  
     ```  
   
-4.  Aşağıdaki `Track` yöntemi geçersiz kılma. Kayıtları İzleme birkaç farklı türleri vardır. Biz çıktısında ilgilendiğiniz `WriteLine` kayıtları izleme etkinliğinde bulunan etkinlikler. Varsa `TrackingRecord` olduğu bir `ActivityTrackingRecord` için bir `WriteLine` etkinliği `Text` , `WriteLine` sonra adlı bir dosyaya eklenir `InstanceId` iş akışı. Bu öğreticide, dosyanın ana uygulama geçerli klasöre kaydedilir.  
+4. Aşağıdaki `Track` yöntemi geçersiz kılma. Kayıtları İzleme birkaç farklı türleri vardır. Biz çıktısında ilgilendiğiniz `WriteLine` kayıtları izleme etkinliğinde bulunan etkinlikler. Varsa `TrackingRecord` olduğu bir `ActivityTrackingRecord` için bir `WriteLine` etkinliği `Text` , `WriteLine` sonra adlı bir dosyaya eklenir `InstanceId` iş akışı. Bu öğreticide, dosyanın ana uygulama geçerli klasöre kaydedilir.  
   
     ```vb  
     Protected Overrides Sub Track(record As TrackingRecord, timeout As TimeSpan)  
@@ -96,9 +96,9 @@ ms.locfileid: "57720962"
   
 ## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>İzleme profili oluşturma ve izleme Katılımcısı kaydetmek için  
   
-1.  Sağ **WorkflowHostForm** içinde **Çözüm Gezgini** ve **kodu görüntüle**.  
+1. Sağ **WorkflowHostForm** içinde **Çözüm Gezgini** ve **kodu görüntüle**.  
   
-2.  Aşağıdaki `using` (veya `Imports`) deyimini dosyanın diğer üst `using` (veya `Imports`) ifadeleri.  
+2. Aşağıdaki `using` (veya `Imports`) deyimini dosyanın diğer üst `using` (veya `Imports`) ifadeleri.  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -108,7 +108,7 @@ ms.locfileid: "57720962"
     using System.Activities.Tracking;  
     ```  
   
-3.  Aşağıdaki kodu ekleyin `ConfigureWorkflowApplication` ekleyen koddan sonra `StringWriter` iş akışı uzantıları ve iş akışı yaşam döngüsü işleyicileri önce.  
+3. Aşağıdaki kodu ekleyin `ConfigureWorkflowApplication` ekleyen koddan sonra `StringWriter` iş akışı uzantıları ve iş akışı yaşam döngüsü işleyicileri önce.  
   
     ```vb  
     'Add the custom tracking participant with a tracking profile  
@@ -217,9 +217,9 @@ ms.locfileid: "57720962"
   
 ## <a name="to-display-the-tracking-information"></a>İzleme bilgilerini görüntülemek için  
   
-1.  Sağ **WorkflowHostForm** içinde **Çözüm Gezgini** ve **kodu görüntüle**.  
+1. Sağ **WorkflowHostForm** içinde **Çözüm Gezgini** ve **kodu görüntüle**.  
   
-2.  İçinde `InstanceId_SelectedIndexChanged` işleyicisi hemen durum penceresi temizler koddan sonra aşağıdaki kodu ekleyin.  
+2. İçinde `InstanceId_SelectedIndexChanged` işleyicisi hemen durum penceresi temizler koddan sonra aşağıdaki kodu ekleyin.  
   
     ```vb  
     'If there is tracking data for this workflow, display it  
@@ -312,11 +312,11 @@ ms.locfileid: "57720962"
   
 ## <a name="to-build-and-run-the-application"></a>Derleme ve uygulamayı çalıştırmak için  
   
-1.  Uygulamayı oluşturmak için Ctrl + Shift + B tuşlarına basın.  
+1. Uygulamayı oluşturmak için Ctrl + Shift + B tuşlarına basın.  
   
-2.  Uygulamayı başlatmak için CTRL + F5 tuşlarına basın.  
+2. Uygulamayı başlatmak için CTRL + F5 tuşlarına basın.  
   
-3.  Tahmin eden oyun ve başlangıç ve iş akışı türü için bir aralık seçmek **yeni oyun**. İçinde bir tahmin girin **tahmin** kutusuna ve tıklatın **Git** , tahmin göndermek için. İş akışı durumu durum penceresinde görüntülendiğine dikkat edin. Bu çıkış yakalanmıştır `WriteLine` etkinlikler. Geçiş için farklı bir iş akışı birini seçerek **iş akışı örnek kimliğini** birleşik giriş kutusu ve geçerli iş akışı durumunu kaldırıldığını unutmayın. Önceki iş akışını ve durum, aşağıdaki örneğe benzer şekilde geri yüklendiğini Not dönün.  
+3. Tahmin eden oyun ve başlangıç ve iş akışı türü için bir aralık seçmek **yeni oyun**. İçinde bir tahmin girin **tahmin** kutusuna ve tıklatın **Git** , tahmin göndermek için. İş akışı durumu durum penceresinde görüntülendiğine dikkat edin. Bu çıkış yakalanmıştır `WriteLine` etkinlikler. Geçiş için farklı bir iş akışı birini seçerek **iş akışı örnek kimliğini** birleşik giriş kutusu ve geçerli iş akışı durumunu kaldırıldığını unutmayın. Önceki iş akışını ve durum, aşağıdaki örneğe benzer şekilde geri yüklendiğini Not dönün.  
   
     > [!NOTE]
     > İzleme etkinleştirilmeden önce başlatıldığından bir iş akışına geçiş yaparsanız yok durumu görüntülenir. Ancak ek tahmin yaparsanız, izleme artık etkin olmadığından durumlarını kaydedilir.  
@@ -332,7 +332,7 @@ ms.locfileid: "57720962"
 
     İş akışı örnek kimliğini not edin ve kendi tamamlanana kadar oyun.
   
-4.  Windows Gezgini'ni açın ve gidin **NumberGuessWorkflowHost\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak). Ek olarak proje dosyaları GUID adlarıyla yürütülebilir dosyalar olduğunu unutmayın. Önceki adımda tamamlanan iş akışı'ndan iş akışı örneği kimliğine karşılık gelen bir belirleyin ve Not Defteri'nde açın. İzleme bilgileri aşağıdaki gibi bilgileri içerir.  
+4. Windows Gezgini'ni açın ve gidin **NumberGuessWorkflowHost\bin\debug** klasörü (veya **bin\release** proje ayarlarınıza bağlı olarak). Ek olarak proje dosyaları GUID adlarıyla yürütülebilir dosyalar olduğunu unutmayın. Önceki adımda tamamlanan iş akışı'ndan iş akışı örneği kimliğine karşılık gelen bir belirleyin ve Not Defteri'nde açın. İzleme bilgileri aşağıdaki gibi bilgileri içerir.  
   
     ```output
     Please enter a number between 1 and 10

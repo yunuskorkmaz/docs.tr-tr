@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652026"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336154"
 ---
 # <a name="managed-execution-process"></a>Yönetilen Yürütme İşlemi
 <a name="introduction"></a> Yönetilen yürütme işlemi, bu konunun ilerleyen bölümlerinde ayrıntılı ele alınmıştır aşağıdaki adımları içerir:  
   
-1.  [Bir derleyici seçme](#choosing_a_compiler).  
+1. [Bir derleyici seçme](#choosing_a_compiler).  
   
      Ortak dil çalışma zamanı tarafından sağlanan avantajlar elde etmek için çalışma zamanını hedefleyen bir veya daha fazla dil derleyicileri kullanmanız gerekir.  
   
-2.  [MSIL kodunuzu derlerken](#compiling_to_msil).  
+2. [MSIL kodunuzu derlerken](#compiling_to_msil).  
   
      Derleme, kaynak kodunuzu Microsoft Ara diline (MSIL) çevirir ve gerekli meta veriler oluşturur.  
   
-3.  [Yerel kod için MSIL derleme](#compiling_msil_to_native_code).  
+3. [Yerel kod için MSIL derleme](#compiling_msil_to_native_code).  
   
      Yürütme sırasında just-ın-time (JIT) derleyici MSIL'yi yerel kod içine çevirir. Bu derleme sırasında kod MSIL ve meta verileri olup olmadığını kod tür bakımından güvenli olacak şekilde belirlenebilir kullanıma bulmak için bir doğrulama işlemi geçmesi gerekir.  
   
-4.  [Kod çalıştırma](#running_code).  
+4. [Kod çalıştırma](#running_code).  
   
      Ortak dil çalışma zamanı yürütme bağlantısı ve yürütme sırasında kullanılabilecek hizmetleri sağlayan altyapıyı sağlar.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "54652026"
   
  Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] ve [!INCLUDE[windowsver](../../includes/windowsver-md.md)], işletim sistemi yükleyicisi COFF üst bilgisinde bir bit inceleyerek yönetilen modüller için denetler. Bit kümesi yönetilen bir modül gösterir. Yükleyici yönetilen modülleri algılarsa, mscoree.dll, yükler ve `_CorValidateImage` ve `_CorImageUnloading` yönetilen modül görüntüleri yüklenmiş ve yüklenmemiş yükleyicisi bildirir. `_CorValidateImage` Aşağıdaki eylemleri gerçekleştirir:  
   
-1.  Kod geçerli yönetilen kod olmasını sağlar.  
+1. Kod geçerli yönetilen kod olmasını sağlar.  
   
-2.  Çalışma zamanında bir giriş noktası için giriş noktası görüntüde değiştirir.  
+2. Çalışma zamanında bir giriş noktası için giriş noktası görüntüde değiştirir.  
   
  64 bit Windows üzerinde `_CorValidateImage` bellekte PE32 je typu PE32 + biçimine dönüştürerek görüntü değiştirir.  
   
@@ -109,12 +109,12 @@ ms.locfileid: "54652026"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genel bakış](../../docs/framework/get-started/overview.md)
+- [Genel Bakış](../../docs/framework/get-started/overview.md)
 - [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL Derleyici)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
 - [Güvenlik](../../docs/standard/security/index.md)
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../docs/framework/interop/index.md)
 - [Dağıtım](../../docs/framework/deployment/net-framework-applications.md)
-- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Ortak Dil Çalışma Zamanındaki Derlemeler](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Uygulama Etki Alanları](../../docs/framework/app-domains/application-domains.md)

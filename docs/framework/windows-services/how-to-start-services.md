@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: fbca3cfd241ded6f83df6ba2206601a7417322ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230128"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336843"
 ---
 # <a name="how-to-start-services"></a>Nasıl yapılır: Hizmetleri Başlatma
 Bir hizmeti yüklendikten sonra başlatılmalıdır. Çağrı <xref:System.ServiceProcess.ServiceBase.OnStart%2A> hizmet sınıfı yöntemi. Genellikle, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> hizmetin gerçekleştirecek faydalı bir iş yöntemi tanımlar. Bir hizmeti başlatıldıktan sonra el ile duraklatıldı veya durduruluncaya kadar etkin kalır.  
@@ -27,11 +27,11 @@ Bir hizmeti yüklendikten sonra başlatılmalıdır. Çağrı <xref:System.Servi
   
 ### <a name="to-specify-how-a-service-should-start"></a>Bir hizmetin nasıl başlaması gerektiğini belirtmek için  
   
-1.  Hizmetinizi oluşturduktan sonra bunun için gerekli yükleyicileri ekleyin. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1. Hizmetinizi oluşturduktan sonra bunun için gerekli yükleyicileri ekleyin. Daha fazla bilgi için [nasıl yapılır: Hizmet uygulamasına yükleyiciler ekleme](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  Tasarımcısı'nda çalıştığınız hizmeti için hizmet Yükleyici'yi tıklatın.  
+2. Tasarımcısı'nda çalıştığınız hizmeti için hizmet Yükleyici'yi tıklatın.  
   
-3.  İçinde **özellikleri** penceresinde <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> özelliğini aşağıdakilerden biri:  
+3. İçinde **özellikleri** penceresinde <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> özelliğini aşağıdakilerden biri:  
   
     |Hizmetinizi yüklemek için|Bu değeri ayarlayın|  
     |----------------------------------|--------------------|  
@@ -48,15 +48,15 @@ Bir hizmeti yüklendikten sonra başlatılmalıdır. Çağrı <xref:System.Servi
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>El ile bir hizmeti sunucu Gezgini'nden başlatmak için  
   
-1.  İçinde **Sunucu Gezgini**, zaten listede yoksa istediğiniz sunucuya ekleyin. Daha fazla bilgi için bkz: nasıl yapılır: Erişim ve Sunucu Gezgini veritabanı Gezgini başlatılamıyor.  
+1. İçinde **Sunucu Gezgini**, zaten listede yoksa istediğiniz sunucuya ekleyin. Daha fazla bilgi için bkz: nasıl yapılır: Erişim ve Sunucu Gezgini veritabanı Gezgini başlatılamıyor.  
   
-2.  Genişletin **Hizmetleri** düğümünü ve ardından başlamak istediğiniz hizmeti bulun.  
+2. Genişletin **Hizmetleri** düğümünü ve ardından başlamak istediğiniz hizmeti bulun.  
   
-3.  Hizmet adını sağ tıklayın ve **Başlat**.  
+3. Hizmet adını sağ tıklayın ve **Başlat**.  
   
 ### <a name="to-manually-start-a-service-from-services-control-manager"></a>El ile bir hizmeti Hizmet Denetim Yöneticisi'nden başlatmak için  
   
-1.  Açık **Hizmet Denetim Yöneticisi** aşağıdakilerden birini yaparak:  
+1. Açık **Hizmet Denetim Yöneticisi** aşağıdakilerden birini yaparak:  
   
     -   Windows XP ve 2000 Professional, sağ **Bilgisayarım** Masaüstü ve ardından **Yönet**. Görüntülenen iletişim kutusunda Genişlet **hizmetler ve uygulamalar** düğümü.  
   
@@ -69,13 +69,13 @@ Bir hizmeti yüklendikten sonra başlatılmalıdır. Çağrı <xref:System.Servi
   
      Hizmetiniz listede görmelisiniz **Hizmetleri** pencerenin.  
   
-2.  Listeden hizmetinizi seçin, sağ tıklayın ve ardından **Başlat**.  
+2. Listeden hizmetinizi seçin, sağ tıklayın ve ardından **Başlat**.  
   
 ### <a name="to-manually-start-a-service-from-code"></a>Bir hizmeti koddan el ile başlatmak için  
   
-1.  Bir örneğini oluşturmak <xref:System.ServiceProcess.ServiceController> sınıfı ve yönetmek istediğiniz hizmetiyle etkileşim kurmak üzere yapılandırın.  
+1. Bir örneğini oluşturmak <xref:System.ServiceProcess.ServiceController> sınıfı ve yönetmek istediğiniz hizmetiyle etkileşim kurmak üzere yapılandırın.  
   
-2.  Çağrı <xref:System.ServiceProcess.ServiceController.Start%2A> hizmeti başlatmak için yöntemi.  
+2. Çağrı <xref:System.ServiceProcess.ServiceController.Start%2A> hizmeti başlatmak için yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

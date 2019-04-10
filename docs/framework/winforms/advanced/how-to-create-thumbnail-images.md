@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144020"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341497"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Nasıl yapılır: Küçük Resimler Oluşturma
 Bir küçük resim, bir resmin küçük bir sürümüdür. Bir küçük resim çağırarak oluşturabileceğiniz <xref:System.Drawing.Image.GetThumbnailImage%2A> yöntemi bir <xref:System.Drawing.Image> nesne.  
@@ -34,19 +34,19 @@ Bir küçük resim, bir resmin küçük bir sürümüdür. Bir küçük resim ç
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Örneği çalıştırmak için aşağıdaki adımları izleyin:  
   
-1.  Yeni bir Windows Forms uygulaması oluşturun.  
+1. Yeni bir Windows Forms uygulaması oluşturun.  
   
-2.  Örnek kod formuna ekleyin.  
+2. Örnek kod formuna ekleyin.  
   
-3.  Form için bir işleyici oluşturma <xref:System.Windows.Forms.Control.Paint> olay  
+3. Form için bir işleyici oluşturma <xref:System.Windows.Forms.Control.Paint> olay  
   
-4.  İçinde <xref:System.Windows.Forms.Control.Paint> işleyicisi, çağrı `GetThumbnail` yöntemi ve pass `e` için <xref:System.Windows.Forms.PaintEventArgs>.  
+4. İçinde <xref:System.Windows.Forms.Control.Paint> işleyicisi, çağrı `GetThumbnail` yöntemi ve pass `e` için <xref:System.Windows.Forms.PaintEventArgs>.  
   
-5.  Küçük resmini yapmak istediğiniz görüntü dosyasını bulun.  
+5. Küçük resmini yapmak istediğiniz görüntü dosyasını bulun.  
   
-6.  İçinde `GetThumbnail` yöntemi, bir yol belirtin ve dosya adı görüntünüze.  
+6. İçinde `GetThumbnail` yöntemi, bir yol belirtin ve dosya adı görüntünüze.  
   
-7.  Örneği çalıştırmak için F5 tuşuna basın.  
+7. Örneği çalıştırmak için F5 tuşuna basın.  
   
      Form üzerinde bir 100 x 100 küçük resim görünür.  
   

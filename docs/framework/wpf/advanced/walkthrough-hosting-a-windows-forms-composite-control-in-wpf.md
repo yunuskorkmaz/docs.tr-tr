@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: f9e0477b2c186ea9b23886f460caf965a5db0244
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 90d0e2f3c6ebab070809a4813c87da3539fd14f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174362"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337857"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>İzlenecek yol: WPF'de Windows Forms Bileşik Denetimini Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu olabilir en az yeniden daha etkili kodda bazıları, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama yerine baştan yeniden. Mevcut Windows Forms denetimleri olduğunda en yaygın senaryodur. Bazı durumlarda, bile bu denetimleri için kaynak koduna erişim olmayabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibi denetimleri barındırma için basit bir yordam sağlar bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Örneğin, kullanabileceğiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çoğu barındırırken, programlama için <xref:System.Windows.Forms.DataGridView> kontrol eder.  
@@ -44,17 +44,17 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
 ### <a name="creating-the-project"></a>Projeyi Oluşturma  
  Proje başlatmak için:  
   
-1.  Başlatma [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]açın **yeni proje** iletişim kutusu.  
+1. Başlatma [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]açın **yeni proje** iletişim kutusu.  
   
-2.  Pencere kategorisinde seçin **Windows Forms Denetim Kitaplığı** şablonu.  
+2. Pencere kategorisinde seçin **Windows Forms Denetim Kitaplığı** şablonu.  
   
-3.  Yeni proje adını `MyControls`.  
+3. Yeni proje adını `MyControls`.  
   
-4.  Konum için bir kolayca adlandırılmış üst düzey klasör gibi belirtin `WpfHostingWindowsFormsControl`. Daha sonra ana bilgisayar uygulaması bu klasöre koyacaktır.  
+4. Konum için bir kolayca adlandırılmış üst düzey klasör gibi belirtin `WpfHostingWindowsFormsControl`. Daha sonra ana bilgisayar uygulaması bu klasöre koyacaktır.  
   
-5.  Tıklayın **Tamam** projeyi oluşturmak için. Varsayılan proje adlı tek bir denetim içeren `UserControl1`.  
+5. Tıklayın **Tamam** projeyi oluşturmak için. Varsayılan proje adlı tek bir denetim içeren `UserControl1`.  
   
-6.  Çözüm Gezgini'nde, yeniden adlandırma `UserControl1` için `MyControl1`.  
+6. Çözüm Gezgini'nde, yeniden adlandırma `UserControl1` için `MyControl1`.  
   
  Projenize aşağıdaki sistem DLL'lerini başvuruları olması gerekir. Bu DLL'leri birini varsayılan olarak dahil edilmez, bunları projeye ekleyin.  
   
@@ -112,19 +112,19 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
 ### <a name="giving-the-assembly-a-strong-name-and-building-the-assembly"></a>Derlemeyi güçlü bir isim verilmesi ve bütünleştirilmiş kod oluşturma
  Tarafından başvurulabilmesi derlemenin bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama, sağlam bir adı olmalıdır. Güçlü bir ad oluşturmak için bir anahtar dosyası ile Sn.exe oluşturun ve projenize ekleyin.
 
-1.  Açık bir [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] komut istemi. Bunu yapmak için tıklatın **Başlat** menüsüne ve ardından **tüm programlar/Microsoft Visual Studio 2010/Visual Studio Araçları/Visual Studio komut istemi**. Bu, özel ortam değişkenleriyle bir konsol penceresi açılır.
+1. Açık bir [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] komut istemi. Bunu yapmak için tıklatın **Başlat** menüsüne ve ardından **tüm programlar/Microsoft Visual Studio 2010/Visual Studio Araçları/Visual Studio komut istemi**. Bu, özel ortam değişkenleriyle bir konsol penceresi açılır.
 
-2.  Komut isteminde kullanmak `cd` proje klasörünüzün Git komutu.
+2. Komut isteminde kullanmak `cd` proje klasörünüzün Git komutu.
 
-3.  Aşağıdaki komutu çalıştırarak MyControls.snk adlı bir anahtar dosyası oluşturur.
+3. Aşağıdaki komutu çalıştırarak MyControls.snk adlı bir anahtar dosyası oluşturur.
 
     ```
     Sn.exe -k MyControls.snk
     ```
 
-4.  Anahtar dosyası projenize eklemek için Çözüm Gezgini'nde proje adına sağ tıklayın ve ardından **özellikleri**. Proje Tasarımcısı'nda tıklatın **imzalama** sekmesinde **derlemeyi imzalamayı** onay kutusunu işaretleyin ve ardından, anahtar dosyasına gidin.
+4. Anahtar dosyası projenize eklemek için Çözüm Gezgini'nde proje adına sağ tıklayın ve ardından **özellikleri**. Proje Tasarımcısı'nda tıklatın **imzalama** sekmesinde **derlemeyi imzalamayı** onay kutusunu işaretleyin ve ardından, anahtar dosyasına gidin.
 
-5.  Çözümü oluşturun. Derleme MyControls.dll adlı bir DLL oluşturur.
+5. Çözümü oluşturun. Derleme MyControls.dll adlı bir DLL oluşturur.
 
 ## <a name="implementing-the-wpf-host-application"></a>WPF ana bilgisayar uygulaması uygulama
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulamanız tarafından kullanılan ana <xref:System.Windows.Forms.Integration.WindowsFormsHost> barındırmak için `MyControl1`. Uygulama işleyen `OnButtonClick` denetimden verileri almak için olay. Ayrıca denetimin özelliklerinden bazıları değiştirebilmek için seçenek düğmeleri koleksiyonu vardır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama. Aşağıdaki resimde tamamlanmış uygulama gösterilir.
@@ -136,25 +136,25 @@ Aşağıdaki görüntüde, WPF uygulamasında katıştırılmış denetime dahil
 ### <a name="creating-the-project"></a>Projeyi Oluşturma
  Proje başlatmak için:
 
-1.  Açık [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]seçip **yeni proje**.
+1. Açık [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]seçip **yeni proje**.
 
-2.  Pencere kategorisinde seçin **WPF uygulaması** şablonu.
+2. Pencere kategorisinde seçin **WPF uygulaması** şablonu.
 
-3.  Yeni proje adını `WpfHost`.
+3. Yeni proje adını `WpfHost`.
 
-4.  Konum için MyControls projesini içeren aynı üst düzey klasörü belirtin.
+4. Konum için MyControls projesini içeren aynı üst düzey klasörü belirtin.
 
-5.  Tıklayın **Tamam** projeyi oluşturmak için.
+5. Tıklayın **Tamam** projeyi oluşturmak için.
 
  Ayrıca içeren DLL başvuruları eklemek gereken `MyControl1` ve diğer derlemeler.
 
-1.  Çözüm Gezgini'nde proje adına sağ tıklayıp **Başvuru Ekle**.
+1. Çözüm Gezgini'nde proje adına sağ tıklayıp **Başvuru Ekle**.
 
-2.  Tıklayın **Gözat** sekmesini tıklatıp MyControls.dll içeren klasöre göz atın. Bu kılavuz için bu klasör MyControls\bin\Debug'dır.
+2. Tıklayın **Gözat** sekmesini tıklatıp MyControls.dll içeren klasöre göz atın. Bu kılavuz için bu klasör MyControls\bin\Debug'dır.
 
-3.  MyControls.dll seçin ve ardından **Tamam**.
+3. MyControls.dll seçin ve ardından **Tamam**.
 
-4.  WindowsFormsIntegration.dll adlı WindowsFormsIntegration derlemesine bir başvuru ekleyin.
+4. WindowsFormsIntegration.dll adlı WindowsFormsIntegration derlemesine bir başvuru ekleyin.
 
 ### <a name="implementing-the-basic-layout"></a>Temel düzeni uygulama
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Ana bilgisayarının içinde MainWindow.xaml uygulama uygulanır. Bu dosyayı içeren [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] düzenini tanımlar ve Windows Forms denetimi barındıran biçimlendirmesi. Uygulamanın üç bölgelere ayrılmıştır:

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3bbe330e71c30e9e92fdd107a59f78fee31ecc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342353"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Çalışma Zamanının Derlemelerin Konumunu Bulması
 .NET Framework uygulamanızı başarıyla dağıtmak için ortak dil çalışma zamanının nasıl bulur ve uygulamanızı oluşturan derlemeleri bağlar anlamanız gerekir. Varsayılan olarak, çalışma zamanı tamamen aynı sürümünün uygulamanın derlendiği bir derleme ile bağlamak çalışır. Bu varsayılan davranışı yapılandırma dosyası ayarlarının tarafından geçersiz kılınabilir.  
@@ -40,16 +40,16 @@ ms.locfileid: "59111572"
   
  Çalışma zamanı bir bütünleştirilmiş kod başvurusu çözmek için aşağıdaki adımları kullanır:  
   
-1.  [Doğru derleme sürümünü belirler](#step1) uygulama yapılandırma dosyası, yayımcı ilkesi dosyası ve makine yapılandırma dosyası gibi geçerli yapılandırma dosyalarını inceleyerek. Yapılandırma dosyasını uzak makinede yer alıyorsa, çalışma zamanı bulun ve uygulama yapılandırma dosyasını indirmeniz gerekir.  
+1. [Doğru derleme sürümünü belirler](#step1) uygulama yapılandırma dosyası, yayımcı ilkesi dosyası ve makine yapılandırma dosyası gibi geçerli yapılandırma dosyalarını inceleyerek. Yapılandırma dosyasını uzak makinede yer alıyorsa, çalışma zamanı bulun ve uygulama yapılandırma dosyasını indirmeniz gerekir.  
   
-2.  [Derleme adı için önce bağlı olup olmadığını denetler](#step2) ve bu durumda, daha önce yüklenen derleme kullanır. Assembly başarısız oldu yüklemek için önceki bir istek, istek hemen derleme yükleme girişimi başarısız oldu.  
+2. [Derleme adı için önce bağlı olup olmadığını denetler](#step2) ve bu durumda, daha önce yüklenen derleme kullanır. Assembly başarısız oldu yüklemek için önceki bir istek, istek hemen derleme yükleme girişimi başarısız oldu.  
   
     > [!NOTE]
     >  Derleme bağlamayı önbelleğe alma hataları, .NET Framework 2.0 sürümünde yenidir.  
   
-3.  [Genel derleme önbelleğini](#step3). Derleme var. bulunursa, çalışma zamanı Bu derlemeyi kullanır.  
+3. [Genel derleme önbelleğini](#step3). Derleme var. bulunursa, çalışma zamanı Bu derlemeyi kullanır.  
   
-4.  [Derleme için araştırmaları](#step4) aşağıdaki adımları kullanarak:  
+4. [Derleme için araştırmaları](#step4) aşağıdaki adımları kullanarak:  
   
     1.  Yapılandırma ve yayımcı ilkesi özgün başvuruyu etkilemez ve bağlama isteği kullanılarak oluşturulmuşsa <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> yöntemi, çalışma zamanı denetimleri için konum ipuçları.  
   
@@ -154,9 +154,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>4. Adım: Aracılığıyla derlemenin kod tabanlarında bulma veya algılama  
  Çağıran derleme başvurusu ve yapılandırma dosyalarındaki bilgileri kullanarak doğru derleme sürümünü belirlendikten sonra ve (yalnızca katı adlı derlemeler için), genel derleme önbelleğinde denetledi sonra ortak dil çalışma zamanı, derlemeyi bulmayı dener. Bütünleştirilmiş bulma işlemi aşağıdaki adımları içerir:  
   
-1.  Varsa bir [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) öğesi, çalışma zamanı denetimleri belirtilen konuma uygulama yapılandırma dosyasında bulunur. Bir eşleşme bulunursa, o derleme kullanılır ve hiçbir yoklama gerçekleşir. Derleme var. bulunmazsa, bağlama isteği başarısız olur.  
+1. Varsa bir [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) öğesi, çalışma zamanı denetimleri belirtilen konuma uygulama yapılandırma dosyasında bulunur. Bir eşleşme bulunursa, o derleme kullanılır ve hiçbir yoklama gerçekleşir. Derleme var. bulunmazsa, bağlama isteği başarısız olur.  
   
-2.  Çalışma zamanı, ardından daha sonra bu bölümde belirtilen kurallarını kullanarak başvurulan derlemenin araştırmaları.  
+2. Çalışma zamanı, ardından daha sonra bu bölümde belirtilen kurallarını kullanarak başvurulan derlemenin araştırmaları.  
   
 > [!NOTE]
 >  Birden çok derleme sürümünü bir dizinde sahip ve bu derlemenin belirli bir sürümünü başvurmak istediğiniz, kullanmalısınız [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) öğe yerine `privatePath` özniteliği[ \<yoklama >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) öğesi. Kullanırsanız [ \<yoklama >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) öğesi, çalışma zamanı durdurur doğru bir eşleşme olup olmadığına bakılmaksızın, başvurulan, basit bir derleme adıyla eşleşen bir derleme bulduğu ilk kez algılanıyor. Bu derleme, doğru bir eşleşme varsa kullanılır. Doğru bir eşleşme değilse, yoklama durdurur ve bağlama başarısız olur.  

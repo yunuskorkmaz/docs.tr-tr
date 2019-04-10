@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 30dd3a54092c5b30cdd8dfd2917b6ea57edd7086
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153627"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339157"
 ---
 # <a name="local-transactions"></a>Yerel İşlemler
 İşlemlerde [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] , böylece bunlar iş tek bir birim olarak yürütmek için birden çok görevleri birbirine bağlayın istediğinizde kullanılır. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak bir tablo ile sipariş bilgilerini güncelleştirir. İkinci olarak, Envanter bilgilerini içeren bir tablo güncelleştirir, öğeleri borçlandırarak sıralı. Her iki görev başarısız olursa, her iki güncelleştirmeleri geri alınır.  
@@ -34,13 +34,13 @@ ms.locfileid: "59153627"
 ## <a name="example"></a>Örnek  
  Bir işlem gerçekleştirmek için aşağıdaki adımları izleyin.  
   
-1.  Çağrı <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> yöntemi <xref:System.Data.SqlClient.SqlConnection> hareketin başlangıcını işaretlemek için nesne. <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> Yöntemi işlem bir başvuru döndürür. Bu başvuru atandığı <xref:System.Data.SqlClient.SqlCommand> kayıtlı nesneler.  
+1. Çağrı <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> yöntemi <xref:System.Data.SqlClient.SqlConnection> hareketin başlangıcını işaretlemek için nesne. <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> Yöntemi işlem bir başvuru döndürür. Bu başvuru atandığı <xref:System.Data.SqlClient.SqlCommand> kayıtlı nesneler.  
   
-2.  Ata `Transaction` nesnesini <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> özelliği <xref:System.Data.SqlClient.SqlCommand> yürütülecek. Etkin bir işlem ile bir bağlantı üzerindeki bir komut yürütülürse ve `Transaction` nesne değil atanmış için `Transaction` özelliği `Command` nesnesi, bir özel durum harekete geçirilir.  
+2. Ata `Transaction` nesnesini <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> özelliği <xref:System.Data.SqlClient.SqlCommand> yürütülecek. Etkin bir işlem ile bir bağlantı üzerindeki bir komut yürütülürse ve `Transaction` nesne değil atanmış için `Transaction` özelliği `Command` nesnesi, bir özel durum harekete geçirilir.  
   
-3.  Gerekli komutları yürütün.  
+3. Gerekli komutları yürütün.  
   
-4.  Çağrı <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> yöntemi <xref:System.Data.SqlClient.SqlTransaction> , işlemi tamamlamak için nesne veya çağrı <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> işlemi sonlandırmak için yöntemi. Bağlantı kapalı veya önce ya da elden <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> veya <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> yöntem yürütüldüğünde, işlem geri alındı.  
+4. Çağrı <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> yöntemi <xref:System.Data.SqlClient.SqlTransaction> , işlemi tamamlamak için nesne veya çağrı <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> işlemi sonlandırmak için yöntemi. Bağlantı kapalı veya önce ya da elden <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> veya <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> yöntem yürütüldüğünde, işlem geri alındı.  
   
  İşlem mantığı kullanılarak aşağıdaki kod örneğinde gösterilmiştir [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Microsoft SQL Server.  
   

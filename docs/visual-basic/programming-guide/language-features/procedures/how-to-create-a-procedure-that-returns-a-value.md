@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 88e30caed97938501302c05830df6546a6822a48
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831260"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335504"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değer döndüren bir yordam oluşturma
 Kullandığınız bir `Function` yordamın çağrıldığı koda bir değer döndürür.  
   
 ### <a name="to-create-a-procedure-that-returns-a-value"></a>Bir değer döndüren bir yordam oluşturmak için  
   
-1.  Diğer herhangi bir yordam dışında kullanmak bir `Function` deyimi, arkasından bir `End Function` deyimi.  
+1. Diğer herhangi bir yordam dışında kullanmak bir `Function` deyimi, arkasından bir `End Function` deyimi.  
   
-2.  İçinde `Function` deyimi izleyin `Function` adını yordamı ve parantez içinde parametre listesi ile anahtar sözcüğü.  
+2. İçinde `Function` deyimi izleyin `Function` adını yordamı ve parantez içinde parametre listesi ile anahtar sözcüğü.  
   
-3.  Parantezler ile izleyin bir `As` yan tümcesi, döndürülen değerin veri türü belirtmek için.  
+3. Parantezler ile izleyin bir `As` yan tümcesi, döndürülen değerin veri türü belirtmek için.  
   
-4.  Yordam kod deyimlerini arasında yerleştirin `Function` ve `End Function` deyimleri.  
+4. Yordam kod deyimlerini arasında yerleştirin `Function` ve `End Function` deyimleri.  
   
-5.  Kullanım bir `Return` deyimini çağrıldığı koda bir değer döndürür.  
+5. Kullanım bir `Return` deyimini çağrıldığı koda bir değer döndürür.  
   
      Aşağıdaki `Function` yordamı, en uzun kenar veya, diğer iki yüz için değerlerine dik üçgenin, hipotenüsü hesaplar.  
   
@@ -44,5 +44,5 @@ Kullandığınız bir `Function` yordamın çağrıldığı koda bir değer dön
 - [İşleç Yordamları](./operator-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Nasıl yapılır: Bir yordamdan değer döndürme](./how-to-return-a-value-from-a-procedure.md)
-- [Nasıl yapılır: Bir değer döndüren bir yordam çağırma](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Nasıl yapılır: Bir Yordamdan Değer Döndürme](./how-to-return-a-value-from-a-procedure.md)
+- [Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma](./how-to-call-a-procedure-that-returns-a-value.md)

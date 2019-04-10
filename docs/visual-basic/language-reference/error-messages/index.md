@@ -7,32 +7,32 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: c326b781222429d68ec4385d95507a6ba99eafcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 822c0f266e7dd68f063043d98a9f4af308ae93fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590140"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338143"
 ---
 # <a name="error-messages-visual-basic"></a>Hata İletileri (Visual Basic)
-Yazma, derleme veya Visual Basic uygulama çalıştırdığınızda aşağıdaki tür hataları oluşabilir:  
+Yazma, derleme veya Visual Basic uygulamasını çalıştırın, aşağıdaki türde hatalar oluşabilir:  
   
-1.  Visual Studio'da bir uygulama yazdığınızda ortaya tasarım zamanı hataları.  
+1. Visual Studio'da bir uygulama yazdığınızda, tasarım zamanı hataları.  
   
-2.  Visual Studio'da veya bir komut isteminde bir uygulamayı derlediğinizde ortaya derleme zamanı hataları.  
+2. Visual Studio'da veya bir komut isteminde bir uygulama derlerken, derleme zamanı hataları.  
   
-3.  Visual Studio'da veya tek başına yürütülebilir bir dosya olarak bir uygulamayı çalıştırdığınızda ortaya çalışma zamanı hataları.  
+3. Visual Studio'da veya tek başına yürütülebilir bir dosya olarak bir uygulamayı çalıştırdığınızda, çalışma zamanı hataları.  
   
- Belirli bir hata ile ilgili sorunları giderme hakkında daha fazla bilgi için bkz: [Visual Basic programcıları için ek kaynaklar](../../../visual-basic/getting-started/additional-resources.md).  
+ Belirli bir hata giderme hakkında daha fazla bilgi için bkz: [Visual Basic programcıları için ek kaynaklar](../../../visual-basic/getting-started/additional-resources.md).  
   
-## <a name="run-time-errors"></a>Çalıştırma zamanı hataları  
- Visual Basic uygulama sistem yürütülemiyor bir eylem gerçekleştirmek üzere çalışırsa, bir çalışma zamanı hatası oluşur ve Visual Basic oluşturur bir `Exception` nesnesi. Visual Basic, özel hatalar tüm verilerin üretebilir yazın, dahil olmak üzere `Exception` kullanarak nesneleri, `Throw` deyimi. Bir uygulama hatası hata numarası ve yakalanan özel durum iletisi görüntüleyerek belirleyebilirsiniz. Bir hata belirledi değil, uygulama sona erer.  
+## <a name="run-time-errors"></a>Çalışma zamanı hataları  
+ Bir Visual Basic uygulamasının sistem yürütülemiyor bir eylem gerçekleştirmeye çalışırsa, bir çalışma zamanı hatası oluşur ve Visual Basic oluşturur bir `Exception` nesne. Visual Basic, özel hatalar her türlü verinin oluşturabileceği yazın, dahil olmak üzere `Exception` kullanarak nesneleri, `Throw` deyimi. Uygulama hata özel durum yakalandı, ileti ve hata numarasını görüntüleyerek belirleyebilirsiniz. Bir hata oluştu değil, uygulama sona erer.  
   
- Kod yakalamak ve çalışma zamanı hataları inceleyin. Hatayı üreten kodu alın, bir `Try` bloğu, eşleşen bir içindeki tüm atılmış hata yakalayabilir `Catch` bloğu. Çalışma zamanında hataları yakalar ve bunları kodunuzda yanıt hakkında daha fazla bilgi için bkz: [deneyin... Catch... Finally ifadesi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Kod, yakalama ve çalışma zamanı hataları inceleyin. Hata üreten kodun içine, bir `Try` bloğu içinde eşleşen bir hatadır yakalayabilir `Catch` blok. Çalışma zamanı sırasında hataları yakalar ve kodunuzda yanıtlanması hakkında daha fazla bilgi için bkz: [deneyin... Catch... Finally deyimini](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 ## <a name="compile-time-errors"></a>Derleme zamanı hataları  
- Visual Basic derleyici kodundaki bir sorunla karşılaşırsa, derleme zamanı hata oluşur. Kod Düzenleyicisi'nde dalgalı bir çizgi kod satırını altında göründüğünden hangi satırlık bir kod hataya kolayca tanımlayabilirsiniz. Dalgalı alt çizgi veya açık ya da işaret hata iletisi görüntülenir **hata listesi**, diğer iletileri de gösterir.  
+ Visual Basic Derleyicisi kodundaki bir sorunla karşılaşırsa, bir derleme zamanı hatası oluşur. Kod Düzenleyicisi'nde, hangi kod satırının Bu kod satırı altında dalgalı çizgi görünüyor hata nedeni kolayca belirleyebilirsiniz. Dalgalı çizgi veya açık ya da işaret ederseniz hata iletisi görüntülenir **hata listesi**, diğer iletiler de gösterilmektedir.  
   
- Dalgalı alt çizgi bir tanımlayıcısı varsa ve kısa çizgi en sağdaki karakterin altında görünür, sınıf, oluşturucusu, yöntemi, özelliği, alan veya numaralandırma için bir saplama oluşturabilir. Daha fazla bilgi için bkz: [kullanımından Oluştur](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
+ Dalgalı çizgi tanımlayıcının sahipse ve kısa çizgi en sağdaki karakter altında görünür, sınıf, oluşturucu, yöntemi, özelliği, alan veya sabit listesi için bir saplama oluşturabilirsiniz. Daha fazla bilgi için [kullanımından Oluştur](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
   
- Visual Basic derleyici gelen uyarıları çözümleme göre daha hızlı çalışır ve daha az hataları olan kod yazmayı mümkün olabilir. Bu uyarılar uygulamayı çalıştırdığınızda, hatalara neden olabilecek kodunu belirleyin. Örneğin, derleyici, bir atanmamış nesne değişkeni üyesi çağrılacak çalışırsanız dönüş değeri ayarlamadan bir işlevinden dönmek, ya yürütme konusunda sizi uyarır bir `Try` bloğu özel durumları yakalamak için mantığı hatalı. Açma ve kapatma, devre dışı bırakma dahil olmak üzere uyarılar hakkında daha fazla bilgi için bkz: [yapılandırma uyarılarını Visual Basic'te](/visualstudio/ide/configuring-warnings-in-visual-basic).
+ Visual Basic Derleyicisi gelen uyarılar çözümleyerek, daha hızlı çalışır ve daha az hata olan kod yazmayı mümkün olabilir. Bu uyarılar uygulamayı çalıştırdığınızda, hatalara neden olabilecek kodunu tanımlayın. Örneğin, derleyici, atanmamış nesne değişkeninin bir üyeyi çağıran denerseniz bir işlevden dönüş değeri ayarlamadan döndürür veya yürütme uyarır bir `Try` hatalarla mantığında özel durumları yakalama bloğu. Açma ve kapatma, devre dışı bırakma dahil olmak üzere uyarılar hakkında daha fazla bilgi için bkz. [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).

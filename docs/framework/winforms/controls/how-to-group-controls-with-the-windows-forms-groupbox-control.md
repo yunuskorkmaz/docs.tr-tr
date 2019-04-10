@@ -6,12 +6,12 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 706655c8cb2c2548b393b6ad731c13e47fd9381a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d2bad0020d18cd262bc2fe3489a00209308bd7b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179641"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335881"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Nasıl yapılır: Windows Forms GroupBox Denetimiyle Denetimleri Gruplandırma
 Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri başka denetimler gruplandırmak için kullanılır. Grup denetimleri için üç neden vardır:  
@@ -24,13 +24,13 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> denetimleri başka denetimler
   
 ### <a name="to-create-a-group-of-controls"></a>Denetimlerin bir grup oluşturmak için  
   
-1.  Çizim bir <xref:System.Windows.Forms.GroupBox> form denetimi.  
+1. Çizim bir <xref:System.Windows.Forms.GroupBox> form denetimi.  
   
-2.  Her grup kutusunun içinde çizim grup kutusu diğer denetimleri ekleyin.  
+2. Her grup kutusunun içinde çizim grup kutusu diğer denetimleri ekleyin.  
   
      Bir grup kutusuna eklemek istediğiniz mevcut denetimleri varsa, tüm denetimler seçip onları seçin panoya Kes <xref:System.Windows.Forms.GroupBox> denetlemek ve ardından bunları Grup kutuya yapıştırın. Ayrıca bunları grup kutusuna sürükleyebilirsiniz.  
   
-3.  Ayarlama <xref:System.Windows.Forms.GroupBox.Text%2A> grup kutusu için uygun bir açıklamalı alt yazı özelliği.  
+3. Ayarlama <xref:System.Windows.Forms.GroupBox.Text%2A> grup kutusu için uygun bir açıklamalı alt yazı özelliği.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

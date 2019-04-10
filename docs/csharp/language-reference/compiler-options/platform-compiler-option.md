@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 59b54cfd731c21982cae9a07fd1e37d97f3747db
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ae2305e0f5d3ca4de386d8e7933a1107450e0be4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487003"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341510"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C# Derleyici Seçenekleri)
 Hangi sürümü ortak dil çalışma zamanı (CLR), derleme çalıştırılıp belirtir.  
@@ -60,11 +60,11 @@ Hangi sürümü ortak dil çalışma zamanı (CLR), derleme çalıştırılıp b
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Açık **özellikleri** proje sayfası.  
+1. Açık **özellikleri** proje sayfası.  
   
-2.  Tıklayın **derleme** özellik sayfası.  
+2. Tıklayın **derleme** özellik sayfası.  
   
-3.  Değiştirme **Platform hedefi** özelliği ve .NET Framework 4.5 hedefleyen projeler için seçin veya temizleyin **32 bit tercih et** onay kutusu.  
+3. Değiştirme **Platform hedefi** özelliği ve .NET Framework 4.5 hedefleyen projeler için seçin veya temizleyin **32 bit tercih et** onay kutusu.  
   
  **Not - platform** Visual C# Express geliştirme ortamında kullanılamaz.  
   

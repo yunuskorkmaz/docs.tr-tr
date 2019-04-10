@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971799"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333840"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Nasıl yapılır: (Visual Basic) için bir yordam parametresini tanımlama
 A *parametre* çağıran kod, çağırdığında bir değeri yordama geçirmeye izin verir. Her parametre için bir yordam adı ve veri türünü belirten bir değişken bildirmek aynı şekilde bildirin. Ayrıca geçirme mekanizma belirtin ve parametre isteğe bağlıdır.  
@@ -22,17 +22,17 @@ A *parametre* çağıran kod, çağırdığında bir değeri yordama geçirmeye 
   
 ### <a name="to-define-a-procedure-parameter"></a>Bir yordamın parametresini tanımlama  
   
-1.  Yordam bildiriminde parametre adı, diğer parametreler virgülle ayırarak, yordam parametre listesine ekleyin.  
+1. Yordam bildiriminde parametre adı, diğer parametreler virgülle ayırarak, yordam parametre listesine ekleyin.  
   
-2.  Parametrenin veri türünü karar verin.  
+2. Parametrenin veri türünü karar verin.  
   
-3.  Parametre adı ile bir `As` yan veri türü belirtin.  
+3. Parametre adı ile bir `As` yan veri türü belirtin.  
   
-4.  Parametresi için istediğiniz geçirme mekanizması karar verin. Normalde çağıran koddaki değeri değiştirebilmesi için yordamı istemediğiniz sürece değere göre bir parametre geçirin.  
+4. Parametresi için istediğiniz geçirme mekanizması karar verin. Normalde çağıran koddaki değeri değiştirebilmesi için yordamı istemediğiniz sürece değere göre bir parametre geçirin.  
   
-5.  Parametre adıyla önünde [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) geçirme mekanizması belirtmek için. Daha fazla bilgi için [farklar arasında geçen bir bağımsız değişken değer ve başvuru tarafından](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. Parametre adıyla önünde [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) veya [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) geçirme mekanizması belirtmek için. Daha fazla bilgi için [farklar arasında geçen bir bağımsız değişken değer ve başvuru tarafından](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6.  Parametre isteğe bağlıysa geçirme mekanizmasıyla önünde [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) ve parametre veri türü bir eşittir işareti ile izleyin (`=`) ve varsayılan değeri.  
+6. Parametre isteğe bağlıysa geçirme mekanizmasıyla önünde [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) ve parametre veri türü bir eşittir işareti ile izleyin (`=`) ve varsayılan değeri.  
   
      Aşağıdaki örnek, ana hat tanımlar. bir `Sub` yordamı üç parametrelere sahip. İlk iki gereklidir ve üçüncü isteğe bağlıdır. Parametre bildirimleri parametre listesinde virgülle ayrılır.  
   
@@ -57,7 +57,7 @@ A *parametre* çağıran kod, çağırdığında bir değeri yordama geçirmeye 
 - [Yordamlar](./index.md)
 - [Alt Yordamlar](./sub-procedures.md)
 - [İşlev Yordamları](./function-procedures.md)
-- [Nasıl yapılır: Bir yordama bağımsız değişkenler geçirme](./how-to-pass-arguments-to-a-procedure.md)
+- [Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme](./how-to-pass-arguments-to-a-procedure.md)
 - [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
 - [Özyinelemeli Yordamlar](./recursive-procedures.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)

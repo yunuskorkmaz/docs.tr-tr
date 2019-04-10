@@ -10,25 +10,25 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218218"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339846"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML Belirteçleri ve Talepleri
 Güvenlik onaylama işaretleme dili (SAML) *belirteçleri* talep XML temsillerini olan. Varsayılan olarak, SAML belirteçlerini Windows Communication Foundation (WCF) kullanan güvenlik federe senaryolarda olan *verilen belirteçler*.  
   
  SAML belirteçlerini başka bir varlık ile ilgili bir varlık tarafından yapılan talep kümesi olan deyimleri taşır. Örneğin, güvenlik federe senaryolarda, sistemde bulunan bir kullanıcı ile ilgili bir güvenlik belirteci hizmeti tarafından deyimleri yapılır. Güvenlik belirteci hizmeti belirtecinde yer alan ifadeleri belki belirtmek için SAML belirteci imzalar. Buna ek olarak, SAML belirteci SAML belirtecinin kullanıcı bilgisi kanıtlar şifreleme anahtar malzemesi ile ilişkilidir. Bu kavram, bağlı olan taraf SAML belirteci olan aslında, o kullanıcıya verilen karşılar. Örneğin, tipik bir senaryoda:  
   
-1.  Bir istemci, bu güvenlik belirteci hizmeti için Windows kimlik bilgilerini kullanarak kimlik doğrulaması, bir güvenlik belirteci Hizmeti'nden bir SAML belirteci ister.  
+1. Bir istemci, bu güvenlik belirteci hizmeti için Windows kimlik bilgilerini kullanarak kimlik doğrulaması, bir güvenlik belirteci Hizmeti'nden bir SAML belirteci ister.  
   
-2.  Güvenlik belirteci hizmeti istemciye bir SAML belirteci verir. SAML belirtecindeki güvenlik belirteci hizmeti ile ilişkili bir sertifika ile imzalanmış ve şifrelenmiş hedef hizmet için bir düzeltme anahtar içeriyor.  
+2. Güvenlik belirteci hizmeti istemciye bir SAML belirteci verir. SAML belirtecindeki güvenlik belirteci hizmeti ile ilişkili bir sertifika ile imzalanmış ve şifrelenmiş hedef hizmet için bir düzeltme anahtar içeriyor.  
   
-3.  İstemci ayrıca bir kopyasını alır *kanıt anahtarı*. İstemci uygulama hizmeti SAML belirtecine ardından sunar ( *bağlı olan taraf*) ve ileti kavram anahtarla imzalar.  
+3. İstemci ayrıca bir kopyasını alır *kanıt anahtarı*. İstemci uygulama hizmeti SAML belirtecine ardından sunar ( *bağlı olan taraf*) ve ileti kavram anahtarla imzalar.  
   
-4.  SAML belirtecindeki üzerinden imzası, bağlı olan taraf güvenlik belirteci hizmeti belirteci veren söyler. Sağlama anahtarı ile oluşturulan ileti imzası, belirteci istemciye verildiğini bağlı olan taraf söyler.  
+4. SAML belirtecindeki üzerinden imzası, bağlı olan taraf güvenlik belirteci hizmeti belirteci veren söyler. Sağlama anahtarı ile oluşturulan ileti imzası, belirteci istemciye verildiğini bağlı olan taraf söyler.  
   
 ## <a name="from-claims-to-samlattributes"></a>Gelen talepler için SamlAttributes  
  WCF'de, SAML belirteçlerini deyimlerinde olarak modellenir <xref:System.IdentityModel.Tokens.SamlAttribute> doğrudan doldurulabilir nesneleri <xref:System.IdentityModel.Claims.Claim> sağlanan nesnelerini <xref:System.IdentityModel.Claims.Claim> nesnesinin bir <xref:System.IdentityModel.Claims.Claim.Right%2A> özelliği <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> ve <xref:System.IdentityModel.Claims.Claim.Resource%2A> özelliği olduğu tür <xref:System.String>. Örneğin:  

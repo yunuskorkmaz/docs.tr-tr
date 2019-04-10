@@ -2,12 +2,12 @@
 title: İzleme Katılımcıları
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340184"
 ---
 # <a name="tracking-participants"></a>İzleme Katılımcıları
 İzleme katılımcıları erişmek bir iş akışı Geliştirici tanıyan genişletilebilirlik noktaları olan <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> nesneleri ve bunları işlem. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan standart izleme katılımcı içerir. Gereksinimlerinizi karşılamıyorsa, özel izleme katılımcı de yazabilirsiniz.  
@@ -81,13 +81,13 @@ ms.locfileid: "59138833"
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>Olay Görüntüleyicisi'nde izleme kayıtları görüntüleme olanağı  
   
-1.  Olay Görüntüleyicisi'ni (EVENTVWR. başlatma EXE)  
+1. Olay Görüntüleyicisi'ni (EVENTVWR. başlatma EXE)  
   
-2.  Seçin **Olay Görüntüleyicisi, uygulama ve hizmet günlükleri, Microsoft, Windows, uygulama uygulamalarının**.  
+2. Seçin **Olay Görüntüleyicisi, uygulama ve hizmet günlükleri, Microsoft, Windows, uygulama uygulamalarının**.  
   
-3.  Sağ tıklayın ve emin **görünümü, Analitik ve hata ayıklama günlüklerini göster** seçilir. Aksi durumda, onay işaretine yanında görünecek şekilde seçin. Bu görüntüler **analitik**, **Perf**, ve **hata ayıklama** günlükleri.  
+3. Sağ tıklayın ve emin **görünümü, Analitik ve hata ayıklama günlüklerini göster** seçilir. Aksi durumda, onay işaretine yanında görünecek şekilde seçin. Bu görüntüler **analitik**, **Perf**, ve **hata ayıklama** günlükleri.  
   
-4.  Sağ **analitik** oturum açın ve ardından **günlüğü etkinleştir**. Günlük %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl dosyasında bulunur.  
+4. Sağ **analitik** oturum açın ve ardından **günlüğü etkinleştir**. Günlük %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl dosyasında bulunur.  
   
 ## <a name="custom-tracking-participant"></a>Özel İzleme katılımcı  
  API izleme katılımcı, izleme çalışma zamanı uzantısı, iş akışı çalışma zamanı tarafından yayılan izleme kayıtları işlemek için Özel mantık dahil edebilirsiniz bir kullanıcı tarafından sağlanan izleme katılımcı ile sağlar. Özel İzleme katılımcı yazmak için geliştirici uygulamalıdır `Track` metodunda <xref:System.Activities.Tracking.TrackingParticipant> sınıfı. Bu yöntem, bir izleme kaydını yayılan iş akışı çalışma zamanı tarafından çağrılır.  

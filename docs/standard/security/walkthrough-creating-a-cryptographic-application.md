@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek Yol: Şifreleme Uygulaması Oluşturma'
+title: 'İzlenecek yol: Şifreleme Uygulaması Oluşturma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964721"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341770"
 ---
-# <a name="walkthrough-creating-a-cryptographic-application"></a>İzlenecek Yol: Şifreleme Uygulaması Oluşturma
+# <a name="walkthrough-creating-a-cryptographic-application"></a>İzlenecek yol: Şifreleme Uygulaması Oluşturma
 Bu izlenecek yol, şifrelemek ve içeriğin şifresini gösterilmektedir. Kod örnekleri, bir Windows Forms uygulaması için tasarlanmıştır. Bu uygulama, akıllı kart kullanma gibi gerçek dünya senaryolarını göstermemiz gerekmez. Bunun yerine, şifreleme ve şifre çözme temellerini gösterir.  
   
  Bu izlenecek yol aşağıdaki yönergeler için şifreleme kullanır:  
@@ -88,15 +88,15 @@ Bu izlenecek yol, şifrelemek ve içeriğin şifresini gösterilmektedir. Kod ö
   
  `EncryptFile` Yöntemi şunları yapar:  
   
-1.  Oluşturur bir <xref:System.Security.Cryptography.RijndaelManaged> içeriği şifrelemek için Simetrik algoritma.  
+1. Oluşturur bir <xref:System.Security.Cryptography.RijndaelManaged> içeriği şifrelemek için Simetrik algoritma.  
   
-2.  Oluşturur bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> şifrelemek için nesne <xref:System.Security.Cryptography.RijndaelManaged> anahtarı.  
+2. Oluşturur bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> şifrelemek için nesne <xref:System.Security.Cryptography.RijndaelManaged> anahtarı.  
   
-3.  Kullanan bir <xref:System.Security.Cryptography.CryptoStream> okuyun ve şifrelemek üzere nesne <xref:System.IO.FileStream> baytlara hedef blokları kaynak dosyasının <xref:System.IO.FileStream> şifrelenmiş dosya için nesne.  
+3. Kullanan bir <xref:System.Security.Cryptography.CryptoStream> okuyun ve şifrelemek üzere nesne <xref:System.IO.FileStream> baytlara hedef blokları kaynak dosyasının <xref:System.IO.FileStream> şifrelenmiş dosya için nesne.  
   
-4.  Şifrelenmiş anahtarı ve IV'yi uzunluklarının belirler ve uzunluğu değerlerine bayt dizileri oluşturur.  
+4. Şifrelenmiş anahtarı ve IV'yi uzunluklarının belirler ve uzunluğu değerlerine bayt dizileri oluşturur.  
   
-5.  Anahtar ve IV uzunluğu değerlerine şifrelenmiş paketi yazar.  
+5. Anahtar ve IV uzunluğu değerlerine şifrelenmiş paketi yazar.  
   
  Şifreleme paketi aşağıdaki biçimdedir:  
   
@@ -127,15 +127,15 @@ Bu izlenecek yol, şifrelemek ve içeriğin şifresini gösterilmektedir. Kod ö
   
  `Decrypt` Yöntemi şunları yapar:  
   
-1.  Oluşturur bir <xref:System.Security.Cryptography.RijndaelManaged> içeriğin şifresini Simetrik algoritma.  
+1. Oluşturur bir <xref:System.Security.Cryptography.RijndaelManaged> içeriğin şifresini Simetrik algoritma.  
   
-2.  İlk sekiz baytı okur <xref:System.IO.FileStream> şifrelenmiş anahtar ve IV uzunluklarının alınacağı bayt dizileri halinde şifrelenmiş paketi.  
+2. İlk sekiz baytı okur <xref:System.IO.FileStream> şifrelenmiş anahtar ve IV uzunluklarının alınacağı bayt dizileri halinde şifrelenmiş paketi.  
   
-3.  Anahtar ve IV şifreleme paketinden bayt dizileri ayıklar.  
+3. Anahtar ve IV şifreleme paketinden bayt dizileri ayıklar.  
   
-4.  Oluşturur bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> şifresini çözmek için nesne <xref:System.Security.Cryptography.RijndaelManaged> anahtarı.  
+4. Oluşturur bir <xref:System.Security.Cryptography.RSACryptoServiceProvider> şifresini çözmek için nesne <xref:System.Security.Cryptography.RijndaelManaged> anahtarı.  
   
-5.  Kullanan bir <xref:System.Security.Cryptography.CryptoStream> okuyun ve şifre metin bölümünü şifresini çözmek için nesne <xref:System.IO.FileStream> şifreleme paketlemeden, bayt cinsinden bloklarında <xref:System.IO.FileStream> şifresi çözülen dosya için nesne. Bu tamamlandığında, şifre çözme tamamlanır.  
+5. Kullanan bir <xref:System.Security.Cryptography.CryptoStream> okuyun ve şifre metin bölümünü şifresini çözmek için nesne <xref:System.IO.FileStream> şifreleme paketlemeden, bayt cinsinden bloklarında <xref:System.IO.FileStream> şifresi çözülen dosya için nesne. Bu tamamlandığında, şifre çözme tamamlanır.  
   
  Aşağıdaki kodu olarak ekleyin `Click` için olay işleyicisi `Decrypt File` düğmesi.  
   
@@ -182,33 +182,33 @@ Bu izlenecek yol, şifrelemek ve içeriğin şifresini gösterilmektedir. Kod ö
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>Anahtarları oluşturmak için şifrelemek ve şifresini çözme  
   
-1.  Tıklayın `Create Keys` düğmesi. Etiket anahtarı adını görüntüler ve tam anahtar çifti olduğunu gösterir.  
+1. Tıklayın `Create Keys` düğmesi. Etiket anahtarı adını görüntüler ve tam anahtar çifti olduğunu gösterir.  
   
-2.  Tıklayın `Export Public Key` düğmesi. Ortak anahtar parametreleri verme geçerli anahtar değiştirmez unutmayın.  
+2. Tıklayın `Export Public Key` düğmesi. Ortak anahtar parametreleri verme geçerli anahtar değiştirmez unutmayın.  
   
-3.  Tıklayın `Encrypt File` düğmesine tıklayın ve bir dosya seçin.  
+3. Tıklayın `Encrypt File` düğmesine tıklayın ve bir dosya seçin.  
   
-4.  Tıklayın `Decrypt File` düğmesine tıklayın ve yalnızca şifrelenmiş dosya belirleyin.  
+4. Tıklayın `Decrypt File` düğmesine tıklayın ve yalnızca şifrelenmiş dosya belirleyin.  
   
-5.  Yalnızca şifresi dosyasını inceleyin.  
+5. Yalnızca şifresi dosyasını inceleyin.  
   
-6.  Uygulamayı kapatın ve alınırken kalıcı anahtar kapsayıcıları bir sonraki senaryoda test etmek için yeniden başlatın.  
+6. Uygulamayı kapatın ve alınırken kalıcı anahtar kapsayıcıları bir sonraki senaryoda test etmek için yeniden başlatın.  
   
 #### <a name="to-encrypt-using-the-public-key"></a>Ortak anahtar kullanarak şifrelemek için  
   
-1.  Tıklayın `Import Public Key` düğmesi. Etiket, anahtar adını görüntüler ve bunun yalnızca genel olduğunu gösterir.  
+1. Tıklayın `Import Public Key` düğmesi. Etiket, anahtar adını görüntüler ve bunun yalnızca genel olduğunu gösterir.  
   
-2.  Tıklayın `Encrypt File` düğmesine tıklayın ve bir dosya seçin.  
+2. Tıklayın `Encrypt File` düğmesine tıklayın ve bir dosya seçin.  
   
-3.  Tıklayın `Decrypt File` düğmesine tıklayın ve yalnızca şifrelenmiş dosya belirleyin. Özel anahtarın şifresini çözmek için sahip olması gerektiğinden bu başarısız olur.  
+3. Tıklayın `Decrypt File` düğmesine tıklayın ve yalnızca şifrelenmiş dosya belirleyin. Özel anahtarın şifresini çözmek için sahip olması gerektiğinden bu başarısız olur.  
   
  Bu senaryo, bir dosyayı başka bir kişi için şifrelemek için yalnızca ortak anahtarın gösterir. Genellikle söz konusu kişinin, size yalnızca ortak anahtar ve şifre çözme için özel anahtarın stopaj.  
   
 #### <a name="to-decrypt-using-the-private-key"></a>Özel anahtarı kullanarak şifresini çözmek için  
   
-1.  Tıklayın `Get Private Key` düğmesi. Etiket anahtarı adını görüntüler ve tam bir anahtar çifti olup olmadığını gösterir.  
+1. Tıklayın `Get Private Key` düğmesi. Etiket anahtarı adını görüntüler ve tam bir anahtar çifti olup olmadığını gösterir.  
   
-2.  Tıklayın `Decrypt File` düğmesine tıklayın ve yalnızca şifrelenmiş dosya belirleyin. Tam anahtar çifti şifresini çözmek için sahip olduğunuz için bu başarılı olacaktır.  
+2. Tıklayın `Decrypt File` düğmesine tıklayın ve yalnızca şifrelenmiş dosya belirleyin. Tam anahtar çifti şifresini çözmek için sahip olduğunuz için bu başarılı olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

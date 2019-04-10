@@ -2,12 +2,12 @@
 title: Windows Hizmet Uygulamasında Barındırma
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 5cd5a8bd198fe4f2f8cc26a9937029b578eff2e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216762"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335374"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows Hizmet Uygulamasında Barındırma
 (Eski adıyla Windows NT Hizmetleri da bilinir) Windows hizmetleri sağlayan bir işlem modeli özellikle uzun süre çalışan bir yürütülebilir dosya bulunmalıdır ve herhangi bir biçimde kullanıcı arabirimi gösterme uygulamalar için uygundur. Hizmet uygulaması başlatmaya olanak tanıyan hizmet denetimi yöneticisi tarafından (SCM), yönetilen bir Windows işlem ömrü durdurun ve Windows hizmeti uygulamalarını duraklatma. "Always on" uygulamalar için uygun bir barındırma ortamı yapmadan bilgisayar başlatıldığında otomatik olarak başlayacak şekilde bir Windows hizmeti işlemi yapılandırabilirsiniz. Windows hizmeti uygulamaları hakkında daha fazla bilgi için bkz: [Windows hizmet uygulamaları](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -24,9 +24,9 @@ ms.locfileid: "59216762"
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>İçinde bir Windows hizmeti uygulaması WCF barındırmak için  
   
-1.  Bir Windows hizmet uygulaması oluşturun. Windows hizmet uygulamaları sınıfları kullanarak yönetilen kod yazabileceğiniz <xref:System.ServiceProcess> ad alanı. Bu uygulama öğesinden devralınan bir sınıf içermelidir <xref:System.ServiceProcess.ServiceBase>.  
+1. Bir Windows hizmet uygulaması oluşturun. Windows hizmet uygulamaları sınıfları kullanarak yönetilen kod yazabileceğiniz <xref:System.ServiceProcess> ad alanı. Bu uygulama öğesinden devralınan bir sınıf içermelidir <xref:System.ServiceProcess.ServiceBase>.  
   
-2.  WCF hizmetleri ömrünü Windows hizmet uygulaması ömrünü bağlayın. Genellikle, barındırma hizmeti başlatıldığında etkinleşir, barındırma hizmeti durduruldu ve barındırma işlemi WCF hizmeti bir hatayla karşılaştığında Kapat iletileri için dinleyecek şekilde bir Windows hizmet uygulamasında barındırılan WCF hizmetleri için istediğiniz. Bu şekilde gerçekleştirilebilir:  
+2. WCF hizmetleri ömrünü Windows hizmet uygulaması ömrünü bağlayın. Genellikle, barındırma hizmeti başlatıldığında etkinleşir, barındırma hizmeti durduruldu ve barındırma işlemi WCF hizmeti bir hatayla karşılaştığında Kapat iletileri için dinleyecek şekilde bir Windows hizmet uygulamasında barındırılan WCF hizmetleri için istediğiniz. Bu şekilde gerçekleştirilebilir:  
   
     -   Geçersiz kılma <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> bir veya daha fazla örneğini açmayı <xref:System.ServiceModel.ServiceHost>. Tek bir Windows hizmet uygulaması, bir grup olarak başlatıp birden çok WCF hizmetlerini barındırabilirler.  
   

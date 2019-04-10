@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: f69fb25df4ed2af79cc5ffa59f0969a1616d38ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185447"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336882"
 ---
 # <a name="exporting-schemas-from-classes"></a>Sınıflardan Şemaları Dışa Aktarma
 Veri sözleşmesi modeli kullandığınız sınıflardan XML Şeması Tanım Dili (XSD) şemaları oluşturmak için <xref:System.Runtime.Serialization.XsdDataContractExporter> sınıfı. Bu konuda şemaları oluşturma işlemi açıklanmaktadır.  
@@ -25,20 +25,20 @@ Veri sözleşmesi modeli kullandığınız sınıflardan XML Şeması Tanım Dil
   
 #### <a name="to-export-schemas"></a>Şemaları dışarı aktarmak için  
   
-1.  Bir örneğini oluşturmak <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
+1. Bir örneğini oluşturmak <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
   
-2.  İsteğe bağlı. Başarılı bir <xref:System.Xml.Schema.XmlSchemaSet> oluşturucuda. Bu durumda, şema dışarı aktarma sırasında oluşturulan şema için eklenir <xref:System.Xml.Schema.XmlSchemaSet> örneği yerine boş bir ile başlayan <xref:System.Xml.Schema.XmlSchemaSet>.  
+2. İsteğe bağlı. Başarılı bir <xref:System.Xml.Schema.XmlSchemaSet> oluşturucuda. Bu durumda, şema dışarı aktarma sırasında oluşturulan şema için eklenir <xref:System.Xml.Schema.XmlSchemaSet> örneği yerine boş bir ile başlayan <xref:System.Xml.Schema.XmlSchemaSet>.  
   
-3.  İsteğe bağlı. Birini çağırın <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> yöntemleri. Yöntemi, belirtilen türe dışarı olup olmadığını belirler. Has yöntemi olarak aynı aşırı `Export` sonraki adımda yöntemi.  
+3. İsteğe bağlı. Birini çağırın <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> yöntemleri. Yöntemi, belirtilen türe dışarı olup olmadığını belirler. Has yöntemi olarak aynı aşırı `Export` sonraki adımda yöntemi.  
   
-4.  Birini çağırın <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> yöntemleri. Üç aşırı yükleme sürüyor bir <xref:System.Type>, <xref:System.Collections.Generic.List%601> , `Type` nesneler veya bir <xref:System.Collections.Generic.List%601> , <xref:System.Reflection.Assembly> nesneleri. En son durumda verilen derlemelerdeki tüm türleri verilir.  
+4. Birini çağırın <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> yöntemleri. Üç aşırı yükleme sürüyor bir <xref:System.Type>, <xref:System.Collections.Generic.List%601> , `Type` nesneler veya bir <xref:System.Collections.Generic.List%601> , <xref:System.Reflection.Assembly> nesneleri. En son durumda verilen derlemelerdeki tüm türleri verilir.  
   
      Birden çok çağrılar `Export` birden çok öğe aynı eklenen yöntemi sonuçlanıyor `XmlSchemaSet`. Bir tür içinde oluşturulmaz `XmlSchemaSet` zaten var olup olmadığını. Bu nedenle, çağırma `Export` üzerinde birden çok kez aynı `XsdDataContractExporter` birden çok örneğini oluşturmak için tercih edilir `XsdDataContractExporter` sınıfı. Bu yinelenen bir şema türü oluşturulmasını önler.  
   
     > [!NOTE]
     >  Dışarı aktarma sırasında bir hata varsa `XmlSchemaSet` öngörülemeyen durumda olacaktır.  
   
-5.  Erişim <xref:System.Xml.Schema.XmlSchemaSet> aracılığıyla <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> özelliği.  
+5. Erişim <xref:System.Xml.Schema.XmlSchemaSet> aracılığıyla <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> özelliği.  
   
 ## <a name="export-options"></a>Dışarı aktarma seçenekleri  
  Ayarlayabileceğiniz <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> özelliği <xref:System.Runtime.Serialization.XsdDataContractExporter> örneğine <xref:System.Runtime.Serialization.ExportOptions> dışarı aktarma işlemini çeşitli yönlerini denetlemek için sınıf. Özellikle, aşağıdaki seçenekleri ayarlayabilirsiniz:  

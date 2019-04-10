@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WorkflowServiceHost ile Kalıcılığı Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 8485cfdfb3a8f62f04fc488ad28df86e609e17ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b8839f42a9b8b5f4da0a1a8364c7eac5a4c06d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086669"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337168"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile Kalıcılığı Yapılandırma
 Bu konu, barındırılan iş akışları için kalıcılığını sağlamak için SQL iş akışı örneği Store özelliği yapılandırmayı açıklar <xref:System.ServiceModel.Activities.WorkflowServiceHost> bir yapılandırma dosyası kullanarak. SQL iş akışı örneği Store özelliği kullanmadan önce iş akışı örneği kalıcı hale getirmek için kullanılan bir SQL veritabanı oluşturmanız gerekir. Daha fazla bilgi için [nasıl yapılır: İş akışları ve iş akışı hizmetleri için SQL kalıcılığını](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>SQL iş akışı örneği Store yapılandırmasında yapılandırmak için  
   
-1.  SQL iş akışı örnek deposunun özellikleri aracılığıyla yapılandırılabilir <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, bir hizmet davranışını ayarlar XML yapılandırması üzerinden değiştirilmesine izin verir. Aşağıdaki yapılandırma örnek kullanan SQL iş akışı örnek deposu yapılandırma işlemi gösterilmektedir <`sqlWorkflowInstanceStore`> yapılandırma dosyasında bir davranış öğesi.  
+1. SQL iş akışı örnek deposunun özellikleri aracılığıyla yapılandırılabilir <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, bir hizmet davranışını ayarlar XML yapılandırması üzerinden değiştirilmesine izin verir. Aşağıdaki yapılandırma örnek kullanan SQL iş akışı örnek deposu yapılandırma işlemi gösterilmektedir <`sqlWorkflowInstanceStore`> yapılandırma dosyasında bir davranış öğesi.  
   
     ```xml  
     <serviceBehaviors>  
@@ -38,7 +38,7 @@ Bu konu, barındırılan iş akışları için kalıcılığını sağlamak içi
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-code"></a>SQL iş akışı örneği Store kodda yapılandırmak için  
   
-1.  SQL iş akışı örnek deposunun özellikleri aracılığıyla yapılandırılabilir <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, kod aracılığıyla ayarlarını değiştirmenize olanak sağlayan bir hizmet davranışı. Aşağıdaki örnek, SQL iş akışı örnek deposu kullanarak yapılandırma işlemi gösterilmektedir <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> kodu davranış öğesi  
+1. SQL iş akışı örnek deposunun özellikleri aracılığıyla yapılandırılabilir <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, kod aracılığıyla ayarlarını değiştirmenize olanak sağlayan bir hizmet davranışı. Aşağıdaki örnek, SQL iş akışı örnek deposu kullanarak yapılandırma işlemi gösterilmektedir <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> kodu davranış öğesi  
   
     ```csharp  
     host.Description.Behaviors.Add(new SqlWorkflowInstanceStoreBehavior  

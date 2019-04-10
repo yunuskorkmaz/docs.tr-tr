@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 98b96f5b4c6d6ea70687a97c849e89573c67c37e
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 297285ccb9aba7eae1d70a7d28a62241646a023c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334165"
 ---
 # <a name="equality-operators-c-reference"></a>Eşitlik işleçleri (C# Başvurusu)
 
@@ -68,7 +68,7 @@ Aşağıdaki örnek, kullanımını gösterir. `!=` işleci:
 
 ## <a name="operator-overloadability"></a>İşleç overloadability
 
-Kullanıcı tanımlı türler için [aşırı](../keywords/operator.md) `==` ve `!=` işleçleri. Bir tür iki işleçlerden aşırı de başka bir aşırı gerekir.
+Kullanıcı tanımlı bir tür için [aşırı](../keywords/operator.md) `==` ve `!=` işleçleri. Bir tür iki işleçlerden aşırı de başka bir aşırı gerekir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -76,7 +76,7 @@ Daha fazla bilgi için [ilişkisel ve tür testi işleçleri](~/_csharplang/spec
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C# Başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - <xref:System.IEquatable%601?displayProperty=nameWithType>

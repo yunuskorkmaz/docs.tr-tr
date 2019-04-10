@@ -11,12 +11,12 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: cf3ec21aa0272f60599f5659d78214120bcfcaf8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 27b19e47d108b9af43a6d8882264d62c726ffe56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343278"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Nasıl yapılır: Windows Forms MonthCalendar Denetimi ile Belirli Günleri Kalın Olarak Görüntüleme
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetim görüntüleyebilir gün kalın yazı tipinde tekil bir tarih veya yinelenen aralıklarla. Dikkat çekmek tatiller ve hafta sonları gibi özel bir tarih için bunu yapabilirsiniz.  
@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetim görüntüleyebi
   
 ### <a name="to-make-a-date-appear-in-bold-type"></a>Bir tarih kalın yazı tipinde görünür hale getirmek için  
   
-1.  Oluşturma <xref:System.DateTime> nesneleri.  
+1. Oluşturma <xref:System.DateTime> nesneleri.  
   
     ```vb  
     Dim myVacation1 As Date = New DateTime(2001, 6, 10)  
@@ -42,7 +42,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetim görüntüleyebi
     DateTime myVacation2 = DateTime(2001, 6, 17);  
     ```  
   
-2.  Tek bir tarih çağırarak kalınlaştırmak <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, veya <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> yöntemi <xref:System.Windows.Forms.MonthCalendar> denetimi.  
+2. Tek bir tarih çağırarak kalınlaştırmak <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, veya <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> yöntemi <xref:System.Windows.Forms.MonthCalendar> denetimi.  
   
     ```vb  
     MonthCalendar1.AddBoldedDate(myVacation1)  
@@ -80,7 +80,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetim görüntüleyebi
   
 ### <a name="to-make-a-date-appear-in-the-regular-font"></a>Normal yazı tipinde görünür bir tarih yapma  
   
-1.  Tek bir kalın tarihi çağırarak normal yazı tipinde görünür hale <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, veya <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> yöntemi.  
+1. Tek bir kalın tarihi çağırarak normal yazı tipinde görünür hale <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, veya <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> yöntemi.  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
@@ -113,7 +113,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> denetim görüntüleyebi
     monthCalendar1->RemoveAllBoldedDates();  
     ```  
   
-2.  Yazı tipi görünümünü güncelleştirin <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> yöntemi.  
+2. Yazı tipi görünümünü güncelleştirin <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> yöntemi.  
   
     ```vb  
     MonthCalendar1.UpdateBoldedDates()  

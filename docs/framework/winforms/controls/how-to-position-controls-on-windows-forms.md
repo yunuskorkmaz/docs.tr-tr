@@ -15,12 +15,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 22225c97ec082022cb609e47d3cafcdcc052143d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132801"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334009"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Nasıl yapılır: Windows Forms’da Denetimleri Konumlandırma
 Yerleştirmenize, Windows Forms Tasarımcısı'nı kullanın veya belirtmek için <xref:System.Windows.Forms.Control.Location%2A> özelliği.  
@@ -37,9 +37,9 @@ Yerleştirmenize, Windows Forms Tasarımcısı'nı kullanın veya belirtmek içi
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>Özellikler penceresini kullanarak bir denetimi konumlandırmak için  
   
-1.  Yerleştirmek istediğiniz denetim tıklayın.  
+1. Yerleştirmek istediğiniz denetim tıklayın.  
   
-2.  İçinde **özellikleri** penceresinde, tür değerleri için <xref:System.Windows.Forms.Control.Location%2A> denetim kapsayıcısı içinden konumuna bağlı olarak, bir virgülle ayrılmış bir özellik.  
+2. İçinde **özellikleri** penceresinde, tür değerleri için <xref:System.Windows.Forms.Control.Location%2A> denetim kapsayıcısı içinden konumuna bağlı olarak, bir virgülle ayrılmış bir özellik.  
   
      İlk (X) kapsayıcısının sol kenarlık mesafe sayısıdır; İkinci (Y) üst kenarlığın piksel cinsinden ölçülen kapsayıcı alanının mesafe sayısıdır.  
   
@@ -48,7 +48,7 @@ Yerleştirmenize, Windows Forms Tasarımcısı'nı kullanın veya belirtmek içi
   
 ### <a name="to-position-a-control-programmatically"></a>Bir denetimin program aracılığıyla konumlandırmak için  
   
-1.  Ayarlama <xref:System.Windows.Forms.Control.Location%2A> denetimin özellik bir <xref:System.Drawing.Point>.  
+1. Ayarlama <xref:System.Windows.Forms.Control.Location%2A> denetimin özellik bir <xref:System.Drawing.Point>.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ Yerleştirmenize, Windows Forms Tasarımcısı'nı kullanın veya belirtmek içi
     button1->Location = Point(100, 100);  
     ```  
   
-2.  Denetim konumunun X koordinatını değiştirme kullanarak <xref:System.Windows.Forms.Control.Left%2A> alt özellik.  
+2. Denetim konumunun X koordinatını değiştirme kullanarak <xref:System.Windows.Forms.Control.Left%2A> alt özellik.  
   
     ```vb  
     Button1.Left = 300  
@@ -78,7 +78,7 @@ Yerleştirmenize, Windows Forms Tasarımcısı'nı kullanın veya belirtmek içi
   
 ### <a name="to-increment-a-controls-location-programmatically"></a>Bir denetimin konumu programlı olarak artırmak için  
   
-1.  Ayarlama <xref:System.Windows.Forms.Control.Left%2A> denetim noktasının X koordinatı artırmak için alt özellik.  
+1. Ayarlama <xref:System.Windows.Forms.Control.Left%2A> denetim noktasının X koordinatı artırmak için alt özellik.  
   
     ```vb  
     Button1.Left += 200  

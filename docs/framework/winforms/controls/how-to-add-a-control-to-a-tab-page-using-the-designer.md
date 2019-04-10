@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 609dfb93e2327ffd6013230cf5d54572e0f9b420
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340977"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak bir Sekme Sayfasına Denetim Ekleme
 Windows Forms kullanımını <xref:System.Windows.Forms.TabControl> düzenli bir şekilde diğer denetimleri görüntülemektir. Bir sekme sayfası ana parçası üzerinde bir resim görüntülemek için bu yönergeleri kullanabilirsiniz. Simge bir sekme sayfası etiket parçası ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Windows Forms Tabcontrol'un görünüşünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
@@ -23,9 +23,9 @@ Windows Forms kullanımını <xref:System.Windows.Forms.TabControl> düzenli bir
   
 ### <a name="to-add-a-control-using-the-designer"></a>Tasarımcı kullanarak bir denetim eklemek için  
   
-1.  Böylece en üstte görünür uygun sekme sayfasına tıklayın.  
+1. Böylece en üstte görünür uygun sekme sayfasına tıklayın.  
   
-2.  Sekme sayfasında denetimi çizin.  
+2. Sekme sayfasında denetimi çizin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

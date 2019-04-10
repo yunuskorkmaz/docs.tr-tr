@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143552"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340795"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Nasıl yapılır: Uzaktan Yazıcıların Durumunu Araştırma
 Orta ve büyük şirketler belirli bir zamanda en nedeniyle bir kağıt sıkıştı çalışma veya kağıt veya diğer bazı sorunlu durum dışında olan birden çok yazıcılar olabilir. Zengin, kullanıma sunulan yazıcı Özellikler [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] hızlı yazıcıların durumunu araştırma gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
@@ -24,11 +24,11 @@ Orta ve büyük şirketler belirli bir zamanda en nedeniyle bir kağıt sıkış
 ## <a name="example"></a>Örnek  
  Bu tür bir yardımcı programı oluşturmak için önemli adımlar aşağıdaki gibidir.  
   
-1.  Tüm yazdırma sunucularının bir listesini alın.  
+1. Tüm yazdırma sunucularının bir listesini alın.  
   
-2.  Kendi yazdırma sorgulamak için sunucular üzerinden döngü.  
+2. Kendi yazdırma sorgulamak için sunucular üzerinden döngü.  
   
-3.  Sunucu döngüsünün her geçişinde sunucunun tüm kuyruklar üzerinden döngü ve kuyruk şu anda çalışmadığını gösterebilir her bir özellik okuyun.  
+3. Sunucu döngüsünün her geçişinde sunucunun tüm kuyruklar üzerinden döngü ve kuyruk şu anda çalışmadığını gösterebilir her bir özellik okuyun.  
   
  Aşağıdaki kod parçacıkları dizisidir. Kolaylık olması için bu örnek, yazdırma sunucularını CRLF ayrılmış bir listesi olduğunu varsayar. Değişken `fileOfPrintServers` olduğu bir <xref:System.IO.StreamReader> bu dosya için nesne. Her bir sunucu adı, kendi satırında olduğundan, tüm çağrısı <xref:System.IO.StreamReader.ReadLine%2A> sonraki sunucunun adını alır ve taşır <xref:System.IO.StreamReader>'s imleci sonraki satırın başlangıcına.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 5479c312ae7eb7a166803a6e1238806aae9bd656
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835667"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336089"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 Örtük tür dönüştürmelerini kısıtlamak için katı türü anlamları zorlar.  
@@ -39,11 +39,11 @@ ms.locfileid: "58835667"
   
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>-Optionstrict Visual Studio IDE'de ayarlamak için  
   
-1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri.**   
+1. Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri.**   
   
-2.  Tıklayın **derleme** sekmesi.  
+2. Tıklayın **derleme** sekmesi.  
   
-3.  Değer değiştirme **Option Strict** kutusu.  
+3. Değer değiştirme **Option Strict** kutusu.  
   
 ### <a name="to-set--optionstrict-programmatically"></a>-Optionstrict program üzerinden ayarlamak için  
   
@@ -58,7 +58,7 @@ vbc -optionstrict+ test.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Komut Satırı Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: ccbb979ae7cf67dd54eb80e1d30e74078960b43d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169110"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338078"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>İzlenecek yol: Basit Nesne Modeli ve Sorgu (Visual Basic)
 Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en düşük karmaşıklık bir senaryodur. Örnek Northwind veritabanındaki Müşteriler tablosunu modeller bir varlık sınıfı oluşturur. Ardından, Londra'da buluna listesi müşteriler için basit bir sorgu oluşturur.  
@@ -46,32 +46,32 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturmak için  
   
-1.  Üzerinde **dosya** menüsünü tıklatın **yeni proje**.  
+1. Üzerinde **dosya** menüsünü tıklatın **yeni proje**.  
   
-2.  İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklayın **Visual Basic**.  
+2. İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklayın **Visual Basic**.  
   
-3.  İçinde **şablonları** bölmesinde tıklayın **konsol uygulaması**.  
+3. İçinde **şablonları** bölmesinde tıklayın **konsol uygulaması**.  
   
-4.  İçinde **adı** kutusuna **LinqConsoleApp**.  
+4. İçinde **adı** kutusuna **LinqConsoleApp**.  
   
-5.  **Tamam**'ı tıklatın.  
+5. **Tamam**'ı tıklatın.  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ başvuruları ve yönergeleri ekleme  
  Bu izlenecek yol, projenizdeki varsayılan olarak yüklü olmayabilir derlemeleri kullanır. Varsa `System.Data.Linq` projenize bir başvuru olarak listelenmemiş (tıklayın **tüm dosyaları göster** içinde **Çözüm Gezgini** genişletin **başvuruları** düğümü), açıklandığı gibi ekleyin Aşağıdaki adımlar.  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq eklemek için  
   
-1.  İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.  
+1. İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.  
   
-2.  İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.  
+2. İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.  
   
      Derleme, projeye eklenir.  
   
-3.  Ayrıca **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**kaydırın ve System.Windows.Forms öğelerini tıklayın ve ardından **Tamam**.  
+3. Ayrıca **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**kaydırın ve System.Windows.Forms öğelerini tıklayın ve ardından **Tamam**.  
   
      İleti kutusu izlenecek yolda destekler, bu derleme, projeye eklenir.  
   
-4.  Yukarıdaki aşağıdaki yönergeleri ekleme `Module1`:  
+4. Yukarıdaki aşağıdaki yönergeleri ekleme `Module1`:  
   
      [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]  
   
@@ -128,22 +128,22 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-execute-the-query"></a>Sorguyu yürütmek için  
   
-1.  Sonuna aşağıdaki kodu yapıştırın veya yazın `Sub Main` yöntemi (sonra sorgu açıklama):  
+1. Sonuna aşağıdaki kodu yapıştırın veya yazın `Sub Main` yöntemi (sonra sorgu açıklama):  
   
      [!code-vb[DLinqWalk1AVB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#6)]  
   
-2.  Uygulamada hata ayıklamak için F5 tuşuna basın.  
+2. Uygulamada hata ayıklamak için F5 tuşuna basın.  
   
     > [!NOTE]
     >  Uygulamanızı bir çalışma zamanı hatası oluşturur, sorun giderme bölümüne bakın. [izlenecek yollarla öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
      İleti kutusunda altı Müşteri listesini görüntüler. Konsol penceresinde oluşturulan SQL kodunu görüntüler.  
   
-3.  Tıklayın **Tamam** ileti kutusunu kapatın.  
+3. Tıklayın **Tamam** ileti kutusunu kapatın.  
   
      Uygulamayı kapatır.  
   
-4.  Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet**.  
+4. Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet**.  
   
      Sonraki adım adım kılavuza devam ederseniz, bu uygulama gerekir.  
   

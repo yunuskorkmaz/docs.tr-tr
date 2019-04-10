@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: a1d138bcdc2c4637cd6aa035360ff258d3fe7100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178795"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338104"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma
 Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar otomatik olarak görünür **araç kutusu**, sizin tarafınızdan gerekli herhangi bir işlem ile. El ile de doldurabilirsiniz **araç kutusu** kullanarak kendi özel bileşenlerle [seçin araç kutusu öğeleri iletişim kutusu (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), ancak **araç kutusu** alır çözümünüzün içindeki öğelerin aşağıdaki özelliklere sahip çıkışları derleme:  
@@ -45,31 +45,31 @@ Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar oto
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
-1.  Adlı bir Windows tabanlı uygulama projesi oluşturma `ToolboxExample` (**dosya** > **yeni** > **proje**  >  **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).  
+1. Adlı bir Windows tabanlı uygulama projesi oluşturma `ToolboxExample` (**dosya** > **yeni** > **proje**  >  **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).  
   
-2.  Yeni bir bileşen projeye ekleyin. Bu çağrı `DemoComponent`.  
+2. Yeni bir bileşen projeye ekleyin. Bu çağrı `DemoComponent`.  
   
      Daha fazla bilgi için [nasıl yapılır: Yeni proje öğeleri ekleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)).  
   
-3.  Projeyi oluşturun.  
+3. Projeyi oluşturun.  
   
-4.  Gelen **Araçları** menüsünde tıklatın **seçenekleri** öğesi. Tıklayın **genel** altında **Windows Form Tasarımcısı** emin olun ve öğe **AutoToolboxPopulate** seçeneği **True**.  
+4. Gelen **Araçları** menüsünde tıklatın **seçenekleri** öğesi. Tıklayın **genel** altında **Windows Form Tasarımcısı** emin olun ve öğe **AutoToolboxPopulate** seçeneği **True**.  
   
 ## <a name="creating-an-instance-of-a-custom-component"></a>Özel bileşen örneği oluşturma  
  Sonraki adım, formda özel bileşen örneği oluşturmaktır. Çünkü **araç kutusu** otomatik olarak hesapları yeni bileşeni için bu olarak herhangi bir bileşeni veya denetimi oluşturmak oldukça kolaydır.  
   
 #### <a name="to-create-an-instance-of-a-custom-component"></a>Bir özel bileşene bir örneğini oluşturmak için  
   
-1.  Projenin formda açın **Form Tasarımcısı**.  
+1. Projenin formda açın **Form Tasarımcısı**.  
   
-2.  İçinde **araç kutusu**, adlı yeni sekmesini **ToolboxExample bileşenleri**.  
+2. İçinde **araç kutusu**, adlı yeni sekmesini **ToolboxExample bileşenleri**.  
   
      Sekmesine tıklayın, sonra göreceğiniz **DemoComponent**.  
   
     > [!NOTE]
     >  Performans nedenleriyle bileşenleri otomatik olarak doldurulan alanında **araç kutusu** özel bit eşlemler, görüntüleme ve <xref:System.Drawing.ToolboxBitmapAttribute> desteklenmiyor. Özel bir bileşeni için bir simge görüntülemek için **araç kutusu**, kullanın **araç kutusu öğelerini Seç** iletişim kutusu, bileşeni yüklenemiyor.  
   
-3.  Bileşeniniz formunuza sürükleyin.  
+3. Bileşeniniz formunuza sürükleyin.  
   
      Bileşen örneği oluşturulur ve eklenen **bileşeni Tepsi**.  
   
@@ -78,15 +78,15 @@ Bileşenlerinizi açık çözümde bir proje tarafından tanımlanan, bunlar oto
   
 #### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>Bileşenleri yeniden yükleme ve kaldırma araç kutusu üzerindeki etkisini denemek için  
   
-1.  Çözümden proje Kaldır.  
+1. Çözümden proje Kaldır.  
   
      Projeleri kaldırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Projeleri yeniden yükleyin ve kaldırma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100)). Kaydetmeniz istenirse seçin **Evet**.  
   
-2.  Yeni bir **Windows uygulama** çözüme bir proje. Formda açın **Tasarımcısı**.  
+2. Yeni bir **Windows uygulama** çözüme bir proje. Formda açın **Tasarımcısı**.  
   
      **ToolboxExample bileşenleri** , artık önceki projeyi sekmesinden kaybolur.  
   
-3.  Reload `ToolboxExample` proje.  
+3. Reload `ToolboxExample` proje.  
   
      **ToolboxExample bileşenleri** sekmesinde artık yeniden görüntülenir.  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 197361020ad8c6a88a5fc8617b8e24f420799e14
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377322"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341198"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Birlikte Çalışabilirlik İle İlgili Sorun Giderme (Visual Basic)
 Ne zaman, birlikte çalışmak COM ve yönetilen kodu arasında [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], bir veya daha fazla aşağıdaki yaygın sorunların karşılaşabilirsiniz.  
@@ -42,9 +42,9 @@ Ne zaman, birlikte çalışmak COM ve yönetilen kodu arasında [!INCLUDE[dnprdn
   
  Yeniden adlandırma, COM nesnesinin Tüketiciler için iki sorunlara neden olabilir.  
   
-1.  İstemciler, oluşturulan yöntem adları edemeyeceğiniz.  
+1. İstemciler, oluşturulan yöntem adları edemeyeceğiniz.  
   
-2.  Yeni aşırı sınıf ya da onun temel sınıfından eklendiğinde bir COM nesnesi olarak kullanıma sunulan sınıfında oluşturulan yöntem adlarını değiştirebilirsiniz. Bu sürüm sorunlara neden olabilir.  
+2. Yeni aşırı sınıf ya da onun temel sınıfından eklendiğinde bir COM nesnesi olarak kullanıma sunulan sınıfında oluşturulan yöntem adlarını değiştirebilirsiniz. Bu sürüm sorunlara neden olabilir.  
   
  Her iki sorunları çözmek için her bir yöntemin COM nesneleri olarak kullanıma sunulacak nesneleri geliştirirken, aşırı yükleme yerine benzersiz bir ad verin.  
   
@@ -132,6 +132,6 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [İzlenecek yol: COM nesnelerinde kalıtım uygulama](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [Inherits Deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Genel Derleme Önbelleği](../../../framework/app-domains/gac.md)

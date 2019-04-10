@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Veritabanı Adları Belirtme'
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: 1c694678dc3a60cf91dea62f2a17973b396e2b19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a43a7ac541adb984eeb8bb88b7ab96db86baf26c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335283"
 ---
 # <a name="how-to-specify-database-names"></a>Nasıl yapılır: Veritabanı Adları Belirtme
 Kullanım <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliği bir <xref:System.Data.Linq.Mapping.DatabaseAttribute> bir ad tarafından bağlantı sağlanamadığında bir veritabanının adını belirtmek için özniteliği.  
@@ -16,11 +16,11 @@ Kullanım <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliği b
   
 ### <a name="to-specify-the-name-of-the-database"></a>Veritabanının adını belirtmek için  
   
-1.  Ekleme <xref:System.Data.Linq.Mapping.DatabaseAttribute> sınıf bildiriminin veritabanı için özniteliği.  
+1. Ekleme <xref:System.Data.Linq.Mapping.DatabaseAttribute> sınıf bildiriminin veritabanı için özniteliği.  
   
-2.  Ekleme <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliğini <xref:System.Data.Linq.Mapping.DatabaseAttribute> özniteliği.  
+2. Ekleme <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliğini <xref:System.Data.Linq.Mapping.DatabaseAttribute> özniteliği.  
   
-3.  Ayarlama <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özellik değeri, belirtmek istediğiniz adı.  
+3. Ayarlama <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özellik değeri, belirtmek istediğiniz adı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

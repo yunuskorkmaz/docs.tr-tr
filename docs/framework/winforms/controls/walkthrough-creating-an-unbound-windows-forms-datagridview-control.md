@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: 375ac3bd3a178cc059239cf84209ebbf5d6aca11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220584"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343475"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma
 Sık veritabanından kaynaklanmayan tablosal verileri görüntülemek isteyebilirsiniz. Örneğin, iki boyutlu bir dizisini içeriğini göstermek isteyebilirsiniz. <xref:System.Windows.Forms.DataGridView> Sınıfı, bir veri kaynağına bağlama olmadan verileri görüntülemek için kolay ve özelleştirilebilir bir yol sağlar. Bu izlenecek yol nasıl doldurulacağını gösterir bir <xref:System.Windows.Forms.DataGridView> denetlemek ve eklenmesini ve "bağlantısız" modda satırların silinmesi yönetin. Varsayılan olarak, kullanıcının yeni bir satır ekleyebilirsiniz. Satır ekleme önleyecek şekilde ayarlanmış <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliği `false`.  
@@ -27,19 +27,19 @@ Sık veritabanından kaynaklanmayan tablosal verileri görüntülemek isteyebili
   
 #### <a name="to-use-an-unbound-datagridview-control"></a>İlişkisiz bir DataGridView denetimi kullanmak için  
   
-1.  Türetilen bir sınıf oluşturmanız <xref:System.Windows.Forms.Form> ve aşağıdaki değişken bildirimlerini içerir ve `Main` yöntemi.  
+1. Türetilen bir sınıf oluşturmanız <xref:System.Windows.Forms.Form> ve aşağıdaki değişken bildirimlerini içerir ve `Main` yöntemi.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#02)]  
   
-2.  Uygulama bir `SetupLayout` formunuzun sınıfı tanımında'form düzeni'kurmak için yöntemi.  
+2. Uygulama bir `SetupLayout` formunuzun sınıfı tanımında'form düzeni'kurmak için yöntemi.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#20)]  
   
-3.  Oluşturma bir `SetupDataGridView` yöntemi ayarlamak için <xref:System.Windows.Forms.DataGridView> sütun ve özellikler.  
+3. Oluşturma bir `SetupDataGridView` yöntemi ayarlamak için <xref:System.Windows.Forms.DataGridView> sütun ve özellikler.  
   
      Bu yöntem ilk ekler <xref:System.Windows.Forms.DataGridView> formun denetimine <xref:System.Windows.Forms.Control.Controls%2A> koleksiyonu. Ardından, görüntülenecek sütun sayısını kullanılarak ayarlanabilir <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> özelliği. Sütun başlıkları için varsayılan stili ayarlayarak ayarlanır <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>, ve <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> özelliklerini <xref:System.Windows.Forms.DataGridViewCellStyle> tarafından döndürülen <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> özelliği.  
   
@@ -48,14 +48,14 @@ Sık veritabanından kaynaklanmayan tablosal verileri görüntülemek isteyebili
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#30)]  
   
-4.  Oluşturma bir `PopulateDataGridView` satırlar eklemek için yöntemi <xref:System.Windows.Forms.DataGridView> denetimi.  
+4. Oluşturma bir `PopulateDataGridView` satırlar eklemek için yöntemi <xref:System.Windows.Forms.DataGridView> denetimi.  
   
      Her satır, bir şarkı ve ilişkili bilgilerini temsil eder.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#40)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#40)]  
   
-5.  Yerinde yardımcı program yöntemleri ile olay işleyicileri ekleyebilirsiniz.  
+5. Yerinde yardımcı program yöntemleri ile olay işleyicileri ekleyebilirsiniz.  
   
      Ele alacaksınız **Ekle** ve **Sil** düğmeleri <xref:System.Windows.Forms.Control.Click> olaylar, formun <xref:System.Windows.Forms.Form.Load> olay ve <xref:System.Windows.Forms.DataGridView> denetimin <xref:System.Windows.Forms.DataGridView.CellFormatting> olay.  
   

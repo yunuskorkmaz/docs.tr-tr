@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: JSON Verilerini Seri Hale Getrime ve Seri Halden Çıkarma'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 6363a8e161969c188c5dd18c425ffd42969e9adc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106164"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336960"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Nasıl yapılır: JSON verileri seri hale getrime ve
 JSON (JavaScript nesne gösterimi), küçük miktarda bir AJAX içerebilen Web Hizmetleri ile istemci tarayıcıları arasında verileri hızlı değişimleri sağlar verimli veri kodlama biçimi değil.  
@@ -23,7 +23,7 @@ JSON (JavaScript nesne gösterimi), küçük miktarda bir AJAX içerebilen Web H
   
 ## <a name="to-define-the-data-contract-for-a-person-type"></a>Bir kişi türü için veri anlaşması tanımlamak için 
   
-1.  Veri sözleşme tanımlamasına `Person` ekleyerek <xref:System.Runtime.Serialization.DataContractAttribute> sınıfa ve <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği seri hale getirmek istediğiniz üyeleri. Veri sözleşmeleri hakkında daha fazla bilgi için bkz: [Hizmet sözleşmeleri tasarlama](../designing-service-contracts.md).  
+1. Veri sözleşme tanımlamasına `Person` ekleyerek <xref:System.Runtime.Serialization.DataContractAttribute> sınıfa ve <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği seri hale getirmek istediğiniz üyeleri. Veri sözleşmeleri hakkında daha fazla bilgi için bkz: [Hizmet sözleşmeleri tasarlama](../designing-service-contracts.md).  
   
     ```csharp  
     [DataContract]  
@@ -39,7 +39,7 @@ JSON (JavaScript nesne gösterimi), küçük miktarda bir AJAX içerebilen Web H
   
 ## <a name="to-serialize-an-instance-of-type-person-to-json"></a>JSON kişiye türün bir örneğini serileştirmek için  
   
-1.  Bir örneğini oluşturmak `Person` türü.  
+1. Bir örneğini oluşturmak `Person` türü.  
   
     ```csharp  
     Person p = new Person();  
@@ -47,20 +47,20 @@ JSON (JavaScript nesne gösterimi), küçük miktarda bir AJAX içerebilen Web H
     p.age = 42;  
     ```  
   
-2.  Seri hale getirme `Person` kullanarak bellek akışı nesnesine <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+2. Seri hale getirme `Person` kullanarak bellek akışı nesnesine <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
     ```csharp  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
-3.  Kullanım <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> JSON verilerini akışa yazmak için yöntemi.  
+3. Kullanım <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> JSON verilerini akışa yazmak için yöntemi.  
   
     ```csharp  
     ser.WriteObject(stream1, p);  
     ```  
   
-4.  JSON çıktısını gösterir.  
+4. JSON çıktısını gösterir.  
   
     ```csharp  
     stream1.Position = 0;  
@@ -71,14 +71,14 @@ JSON (JavaScript nesne gösterimi), küçük miktarda bir AJAX içerebilen Web H
   
 ## <a name="to-deserialize-an-instance-of-type-person-from-json"></a>JSON kişiden türünün bir örneği seri durumdan çıkarılacak  
   
-1.  JSON olarak kodlanmış veriler yeni bir örneğini seri durumdan `Person` kullanarak <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> yöntemi <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+1. JSON olarak kodlanmış veriler yeni bir örneğini seri durumdan `Person` kullanarak <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> yöntemi <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
     ```csharp  
     stream1.Position = 0;  
     Person p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
-2.  Sonuçları gösterir.  
+2. Sonuçları gösterir.  
   
     ```csharp  
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");  

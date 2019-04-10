@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334932"
 ---
 # <a name="best-practices-data-contract-versioning"></a>En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma
 Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluşturmak için en iyi uygulamaları listeler. Veri sözleşmeleri hakkında daha fazla bilgi için bkz: konularındaki [kullanarak veri sözleşmeleri](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -50,21 +50,21 @@ Bu konu, zaman içinde kolayca geliştirebilirsiniz veri sözleşmeleri oluştur
   
  Bazı yönergeler daha eski beklenirken yeni sürümleri bir türün tam olarak göndermek için izlenmesi gereken veya yeni bir tane beklenirken eski bir gönderin. Diğer yönergeleri kati şekilde gerekli değildir, ancak şema sürümü geleceği tarafından etkilenebilir, çünkü burada listelenir.  
   
-1.  Sürüm veri sözleşmelerine göre türü devralma çalışmayın. Sonraki sürümler oluşturmak için var olan bir türü veri anlaşması değiştirin veya yeni ilişkisiz türü oluşturun.  
+1. Sürüm veri sözleşmelerine göre türü devralma çalışmayın. Sonraki sürümler oluşturmak için var olan bir türü veri anlaşması değiştirin veya yeni ilişkisiz türü oluşturun.  
   
-2.  Devralma, sürüm oluşturma mekanizması olarak kullanılmaz ve belirli kuralları takip koşuluyla devralma veri sözleşmeleri ile birlikte kullanımı verilmez. Bir tür belirli temel türünden türer ise, gelecek sürümlerinden farklı bir temel tür türetilir yapmayın (aynı verilere sahip olmadığı sürece sözleşme). Bunun tek istisnası vardır: bir veri anlaşması türü kendi temel türü arasındaki hiyerarşi içine bir tür ekleyebilirsiniz, ancak yalnızca veri üyeleri ile içermiyorsa hiyerarşideki diğer türleri olası tüm sürümlerini diğer üyelerin aynı adları. Genel olarak, farklı düzeylerde aynı aynı ada sahip veri üyeleri kullanarak Devralma Hiyerarşisi sürüm ciddi sorunlara yol açabilir ve kaçınılmalıdır.  
+2. Devralma, sürüm oluşturma mekanizması olarak kullanılmaz ve belirli kuralları takip koşuluyla devralma veri sözleşmeleri ile birlikte kullanımı verilmez. Bir tür belirli temel türünden türer ise, gelecek sürümlerinden farklı bir temel tür türetilir yapmayın (aynı verilere sahip olmadığı sürece sözleşme). Bunun tek istisnası vardır: bir veri anlaşması türü kendi temel türü arasındaki hiyerarşi içine bir tür ekleyebilirsiniz, ancak yalnızca veri üyeleri ile içermiyorsa hiyerarşideki diğer türleri olası tüm sürümlerini diğer üyelerin aynı adları. Genel olarak, farklı düzeylerde aynı aynı ada sahip veri üyeleri kullanarak Devralma Hiyerarşisi sürüm ciddi sorunlara yol açabilir ve kaçınılmalıdır.  
   
-3.  Bir veri sözleşmesi ilk sürümünden itibaren her zaman uygulama <xref:System.Runtime.Serialization.IExtensibleDataObject> gidiş dönüşü etkinleştirmek için. Daha fazla bilgi için [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Bu arabirim uygulamadan bir veya daha fazla sürümleri bir türün yayımlandı, türü bir sonraki sürümünde uygulayın.  
+3. Bir veri sözleşmesi ilk sürümünden itibaren her zaman uygulama <xref:System.Runtime.Serialization.IExtensibleDataObject> gidiş dönüşü etkinleştirmek için. Daha fazla bilgi için [İleri uyumlu veri sözleşmeleri](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Bu arabirim uygulamadan bir veya daha fazla sürümleri bir türün yayımlandı, türü bir sonraki sürümünde uygulayın.  
   
-4.  Sonraki sürümlerde, veri anlaşması adına veya ad alanı değiştirmeyin. Adını veya temel alınan veri anlaşması türünün ad alanını değiştirme, ad alanı ve veri anlaşması adına gibi uygun mekanizmaları kullanarak doğru yazdığınızdan emin <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>. Adlandırma hakkında daha fazla bilgi için bkz. [veri sözleşmesi adları](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4. Sonraki sürümlerde, veri anlaşması adına veya ad alanı değiştirmeyin. Adını veya temel alınan veri anlaşması türünün ad alanını değiştirme, ad alanı ve veri anlaşması adına gibi uygun mekanizmaları kullanarak doğru yazdığınızdan emin <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataContractAttribute>. Adlandırma hakkında daha fazla bilgi için bkz. [veri sözleşmesi adları](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
-5.  Sonraki sürümlerde, tüm veri üyelerinin adları değiştirmeyin. Alan, özelliği veya veri üyesi temel olay adının değiştirilmesi kullanırsanız `Name` özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> mevcut veri üye adına korumak için.  
+5. Sonraki sürümlerde, tüm veri üyelerinin adları değiştirmeyin. Alan, özelliği veya veri üyesi temel olay adının değiştirilmesi kullanırsanız `Name` özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> mevcut veri üye adına korumak için.  
   
-6.  Sonraki sürümlerde, herhangi bir alan, özelliği veya sağlayacak şekilde ilgili veri üye değişiklikleri için ortaya çıkan veri anlaşması veri üyesi temel olay türünü değiştirmeyin. Arabirim türleri etkilenebileceğini eşdeğer <xref:System.Object> beklenen veri anlaşması belirleme amacıyla.  
+6. Sonraki sürümlerde, herhangi bir alan, özelliği veya sağlayacak şekilde ilgili veri üye değişiklikleri için ortaya çıkan veri anlaşması veri üyesi temel olay türünü değiştirmeyin. Arabirim türleri etkilenebileceğini eşdeğer <xref:System.Object> beklenen veri anlaşması belirleme amacıyla.  
   
-7.  Sonraki sürümlerde, mevcut veri üyelerinin sırasını ayarlayarak değiştirmeyin <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği.  
+7. Sonraki sürümlerde, mevcut veri üyelerinin sırasını ayarlayarak değiştirmeyin <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği.  
   
-8.  Sonraki sürümlerde, yeni veri üyeleri eklenebilir. Bunlar, her zaman bu kuralları izlemelidir:  
+8. Sonraki sürümlerde, yeni veri üyeleri eklenebilir. Bunlar, her zaman bu kuralları izlemelidir:  
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Özelliği her zaman sol varsayılan değerine `false`.  
   

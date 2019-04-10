@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WorkflowServiceHost ile İzlemeyi Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: dc6a89505c788183ed5d53df986c0f545c0d5533
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226553"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336570"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile İzlemeyi Yapılandırma
 Yapılandırma izleme için bu konu açıklar bir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] barındırılan iş akışı <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Bir hizmet davranışını belirterek, bir Web.config dosyası aracılığıyla yapılandırılır.  
   
 ### <a name="configure-tracking-in-configuration"></a>Yapılandırmada izlemeyi yapılandırma  
   
-1.  Ekleme <xref:System.Activities.Tracking.EtwTrackingParticipant> kullanarak <`behavior`> öğesinde aşağıdaki örnekte gösterildiği gibi bir yapılandırma dosyası.  
+1. Ekleme <xref:System.Activities.Tracking.EtwTrackingParticipant> kullanarak <`behavior`> öğesinde aşağıdaki örnekte gösterildiği gibi bir yapılandırma dosyası.  
   
     ```xml  
     <behaviors>  
@@ -56,7 +56,7 @@ Yapılandırma izleme için bu konu açıklar bir [!INCLUDE[netfx_current_long](
   
 ### <a name="configure-tracking-in-code"></a>Kodda izlemeyi yapılandırma  
   
-1.  Ekleme <xref:System.Activities.Tracking.EtwTrackingParticipant> kullanarak <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> kodda, aşağıdaki örnekte gösterildiği gibi davranış.  
+1. Ekleme <xref:System.Activities.Tracking.EtwTrackingParticipant> kullanarak <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> kodda, aşağıdaki örnekte gösterildiği gibi davranış.  
   
     ```csharp  
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  

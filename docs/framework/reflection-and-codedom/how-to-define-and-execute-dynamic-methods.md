@@ -11,31 +11,31 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa7d77509a80ce67ee97abf648036ebb26b6f4c5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 17bc7c417980c0850788f082ebb6e810fd0c53d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211497"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333307"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Nasıl yapılır: Dinamik Yöntemleri Tanımlama ve Yürütme
 Aşağıdaki yordamlar tanımlama ve basit bir dinamik yöntem ve bir sınıfın bir örneğine bağlı olarak dinamik bir yöntem yürütme işlemini göstermektedir. Dinamik yöntemler hakkında daha fazla bilgi için bkz. <xref:System.Reflection.Emit.DynamicMethod> sınıfı ve [yansıma yayma dinamik yöntem senaryoları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Dinamik bir yöntem tanımlayıp  
   
-1.  Metodunu yürütmek için bir temsilci türü bildirin. Genel temsilci bildirmenize gerek temsilci türleri sayısını en aza indirmek için kullanmayı düşünün. Aşağıdaki kod türleri için kullanılabilecek iki temsilci bildirir `SquareIt` yöntemi ve bunlardan birinin geneldir.  
+1. Metodunu yürütmek için bir temsilci türü bildirin. Genel temsilci bildirmenize gerek temsilci türleri sayısını en aza indirmek için kullanmayı düşünün. Aşağıdaki kod türleri için kullanılabilecek iki temsilci bildirir `SquareIt` yöntemi ve bunlardan birinin geneldir.  
   
      [!code-cpp[DynamicMethodHowTo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#2)]
      [!code-csharp[DynamicMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#2)]
      [!code-vb[DynamicMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#2)]  
   
-2.  Dinamik yöntem için parametre türlerini belirten bir dizi oluşturun. Bu örnekte, yalnızca bir parametresi olan bir `int` (`Integer` Visual Basic'te), yalnızca bir öğe dizisi sahiptir.  
+2. Dinamik yöntem için parametre türlerini belirten bir dizi oluşturun. Bu örnekte, yalnızca bir parametresi olan bir `int` (`Integer` Visual Basic'te), yalnızca bir öğe dizisi sahiptir.  
   
      [!code-cpp[DynamicMethodHowTo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#3)]
      [!code-csharp[DynamicMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#3)]
      [!code-vb[DynamicMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#3)]  
   
-3.  Oluşturma bir <xref:System.Reflection.Emit.DynamicMethod>. Bu örnekte, yöntem adlı `SquareIt`.  
+3. Oluşturma bir <xref:System.Reflection.Emit.DynamicMethod>. Bu örnekte, yöntem adlı `SquareIt`.  
   
     > [!NOTE]
     >  Dinamik yöntemler adlar vermek gerekli değildir ve ada göre çağrılamaz. Birden çok dinamik yöntem aynı ada sahip olabilir. Ancak, ad çağrı yığınlarıyla görüntülenir ve hata ayıklama için yararlı olabilir.  
@@ -46,7 +46,7 @@ Aşağıdaki yordamlar tanımlama ve basit bir dinamik yöntem ve bir sınıfın
      [!code-csharp[DynamicMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#4)]
      [!code-vb[DynamicMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#4)]  
   
-4.  Yöntem gövdesini gösterin. Bu örnekte, bir <xref:System.Reflection.Emit.ILGenerator> nesnesi, Microsoft Ara dilini (MSIL) göstermek için kullanılır. Alternatif olarak, bir <xref:System.Reflection.Emit.DynamicILInfo> nesne birlikte ile yönetilmeyen kod oluşturucuları için yöntem gövdesini yaymak için kullanılabilir bir <xref:System.Reflection.Emit.DynamicMethod>.  
+4. Yöntem gövdesini gösterin. Bu örnekte, bir <xref:System.Reflection.Emit.ILGenerator> nesnesi, Microsoft Ara dilini (MSIL) göstermek için kullanılır. Alternatif olarak, bir <xref:System.Reflection.Emit.DynamicILInfo> nesne birlikte ile yönetilmeyen kod oluşturucuları için yöntem gövdesini yaymak için kullanılabilir bir <xref:System.Reflection.Emit.DynamicMethod>.  
   
      Bu örnekte MSIL olan bağımsız değişkeni yükleyen bir `int`, yığın üstüne dönüştürür bir `long`, yinelenenleri `long`ve iki sayıyı çarpar. Bu kare sonucu yığında bırakır ve dönüş tüm yöntemi yapması gerekir.  
   
@@ -54,7 +54,7 @@ Aşağıdaki yordamlar tanımlama ve basit bir dinamik yöntem ve bir sınıfın
      [!code-csharp[DynamicMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#5)]
      [!code-vb[DynamicMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#5)]  
   
-5.  Dinamik yöntem çağırarak temsil eden bir (1. adımda belirtilen) temsilci örneğini oluşturmak <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> yöntemi. Temsilci oluşturma yöntemi tamamlandıktan ve herhangi ek çalışır yöntemini değiştirmek — örneğin, daha fazla MSIL ekleme — göz ardı edilir. Aşağıdaki kod, temsilci oluşturur ve bu, Genel temsilci kullanarak çağırır.  
+5. Dinamik yöntem çağırarak temsil eden bir (1. adımda belirtilen) temsilci örneğini oluşturmak <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> yöntemi. Temsilci oluşturma yöntemi tamamlandıktan ve herhangi ek çalışır yöntemini değiştirmek — örneğin, daha fazla MSIL ekleme — göz ardı edilir. Aşağıdaki kod, temsilci oluşturur ve bu, Genel temsilci kullanarak çağırır.  
   
      [!code-cpp[DynamicMethodHowTo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#6)]
      [!code-csharp[DynamicMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#6)]
@@ -62,25 +62,25 @@ Aşağıdaki yordamlar tanımlama ve basit bir dinamik yöntem ve bir sınıfın
   
 ### <a name="to-define-and-execute-a-dynamic-method-that-is-bound-to-an-object"></a>Bir nesneye bağımlı dinamik bir yöntem tanımlayıp  
   
-1.  Metodunu yürütmek için bir temsilci türü bildirin. Genel temsilci bildirmenize gerek temsilci türleri sayısını en aza indirmek için kullanmayı düşünün. Aşağıdaki kod, temsilci bir nesneye bağlıysa, herhangi bir yöntemle bir parametre ve dönüş değeri veya iki parametre ile bir yöntem ve bir dönüş değeri yürütmek için kullanılan genel temsilci türünde bildirir.  
+1. Metodunu yürütmek için bir temsilci türü bildirin. Genel temsilci bildirmenize gerek temsilci türleri sayısını en aza indirmek için kullanmayı düşünün. Aşağıdaki kod, temsilci bir nesneye bağlıysa, herhangi bir yöntemle bir parametre ve dönüş değeri veya iki parametre ile bir yöntem ve bir dönüş değeri yürütmek için kullanılan genel temsilci türünde bildirir.  
   
      [!code-cpp[DynamicMethodHowTo#12](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#12)]
      [!code-csharp[DynamicMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#12)]
      [!code-vb[DynamicMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#12)]  
   
-2.  Dinamik yöntem için parametre türlerini belirten bir dizi oluşturun. Yöntemi temsil eden bir temsilci bir nesneye bağlı ise, ilk parametresinin temsilci bağlı türüyle eşleşmelidir. Bu örnekte, türünün iki parametresi vardır `Example` ve türü `int` (`Integer` Visual Basic'te).  
+2. Dinamik yöntem için parametre türlerini belirten bir dizi oluşturun. Yöntemi temsil eden bir temsilci bir nesneye bağlı ise, ilk parametresinin temsilci bağlı türüyle eşleşmelidir. Bu örnekte, türünün iki parametresi vardır `Example` ve türü `int` (`Integer` Visual Basic'te).  
   
      [!code-cpp[DynamicMethodHowTo#13](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#13)]
      [!code-csharp[DynamicMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#13)]
      [!code-vb[DynamicMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#13)]  
   
-3.  Oluşturma bir <xref:System.Reflection.Emit.DynamicMethod>. Bu örnekte, yöntem adı yok. Dönüş değerinin türü olarak belirtilen `int` (`Integer` Visual Basic'te). Yöntem özel ve korumalı üyelerine erişebilir `Example` sınıfı.  
+3. Oluşturma bir <xref:System.Reflection.Emit.DynamicMethod>. Bu örnekte, yöntem adı yok. Dönüş değerinin türü olarak belirtilen `int` (`Integer` Visual Basic'te). Yöntem özel ve korumalı üyelerine erişebilir `Example` sınıfı.  
   
      [!code-cpp[DynamicMethodHowTo#14](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#14)]
      [!code-csharp[DynamicMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#14)]
      [!code-vb[DynamicMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#14)]  
   
-4.  Yöntem gövdesini gösterin. Bu örnekte, bir <xref:System.Reflection.Emit.ILGenerator> nesnesi, Microsoft Ara dilini (MSIL) göstermek için kullanılır. Alternatif olarak, bir <xref:System.Reflection.Emit.DynamicILInfo> nesne birlikte ile yönetilmeyen kod oluşturucuları için yöntem gövdesini yaymak için kullanılabilir bir <xref:System.Reflection.Emit.DynamicMethod>.  
+4. Yöntem gövdesini gösterin. Bu örnekte, bir <xref:System.Reflection.Emit.ILGenerator> nesnesi, Microsoft Ara dilini (MSIL) göstermek için kullanılır. Alternatif olarak, bir <xref:System.Reflection.Emit.DynamicILInfo> nesne birlikte ile yönetilmeyen kod oluşturucuları için yöntem gövdesini yaymak için kullanılabilir bir <xref:System.Reflection.Emit.DynamicMethod>.  
   
      Bu örnekte MSIL bir örneği olan ilk bağımsız değişken, yükler, `Example` sınıfı ve türü özel örnek alanı değerini yüklemek için kullandığı `int`. İkinci bağımsız değişkeni yüklenir ve iki sayı çarpılır. Sonucu daha büyük ise `int`, değer kesilir ve en önemli bitleri atılır. Yöntemi, yığında dönüş değeri döndürür.  
   
@@ -88,7 +88,7 @@ Aşağıdaki yordamlar tanımlama ve basit bir dinamik yöntem ve bir sınıfın
      [!code-csharp[DynamicMethodHowTo#15](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#15)]
      [!code-vb[DynamicMethodHowTo#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#15)]  
   
-5.  Dinamik yöntem çağırarak temsil eden bir (1. adımda belirtilen) temsilci örneğini oluşturmak <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> yöntemi aşırı yüklemesi. Temsilci oluşturma yöntemi tamamlandıktan ve herhangi ek çalışır yöntemini değiştirmek — örneğin, daha fazla MSIL ekleme — göz ardı edilir.  
+5. Dinamik yöntem çağırarak temsil eden bir (1. adımda belirtilen) temsilci örneğini oluşturmak <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> yöntemi aşırı yüklemesi. Temsilci oluşturma yöntemi tamamlandıktan ve herhangi ek çalışır yöntemini değiştirmek — örneğin, daha fazla MSIL ekleme — göz ardı edilir.  
   
     > [!NOTE]
     >  Çağırabilirsiniz <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> yöntemi hedef türünün diğer örneklerine bağlı temsilci oluşturmak için birden çok kez.  

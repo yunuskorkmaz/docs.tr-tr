@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336557"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>İzlenecek yol: Profesyonel Stilde ToolStrip Denetimi Oluşturma
 Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sınıfından türetilen yazarak bir profesyonel görünümünü ve davranışını denetleyen <xref:System.Windows.Forms.ToolStripProfessionalRenderer> türü.  
@@ -45,22 +45,22 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
   
 #### <a name="to-create-the-control-library-project"></a>Denetim Kitaplığı projesini oluşturmak için  
   
-1.  Adlı yeni bir Windows Denetim Kitaplığı projesi oluşturun `StackViewLibrary`.  
+1. Adlı yeni bir Windows Denetim Kitaplığı projesi oluşturun `StackViewLibrary`.  
   
-2.  İçinde **Çözüm Gezgini**, istediğiniz dilde bağlı olarak "UserControl1.cs" veya "UserControl1.vb" adlı kaynak dosyası silerek projenin varsayılan denetimini silin.  
+2. İçinde **Çözüm Gezgini**, istediğiniz dilde bağlı olarak "UserControl1.cs" veya "UserControl1.vb" adlı kaynak dosyası silerek projenin varsayılan denetimini silin.  
   
      Daha fazla bilgi için [nasıl yapılır: , Silme, kaldırmak ve öğeleri hariç](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
-3.  Yeni bir <xref:System.Windows.Forms.UserControl> öğesinin **StackViewLibrary** proje. Yeni kaynak dosyanın temel adı verin `StackView`.  
+3. Yeni bir <xref:System.Windows.Forms.UserControl> öğesinin **StackViewLibrary** proje. Yeni kaynak dosyanın temel adı verin `StackView`.  
   
 ## <a name="designing-the-stackview-control"></a>StackView denetimi tasarlama  
  `StackView` Denetimdir: bir alt öğesi ile bileşik denetim <xref:System.Windows.Forms.ToolStrip> denetimi. Bileşik denetimler hakkında daha fazla bilgi için bkz: [özel denetim çeşitleri](varieties-of-custom-controls.md).  
   
 #### <a name="to-design-the-stackview-control"></a>Tasarım StackView denetimi  
   
-1.  Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.ToolStrip> denetimi tasarım yüzeyine bırakın.  
+1. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.ToolStrip> denetimi tasarım yüzeyine bırakın.  
   
-2.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.ToolStrip> denetimin özellikleri aşağıdaki tabloya göre.  
+2. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.ToolStrip> denetimin özellikleri aşağıdaki tabloya göre.  
   
     |Özellik|Değer|  
     |--------------|-----------|  
@@ -73,9 +73,9 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
     |Doldurma|`0, 7, 0, 0`|  
     |RenderMode|<xref:System.Windows.Forms.ToolStripRenderMode.Professional>|  
   
-3.  Windows Form Tasarımcısı'nda tıklatın <xref:System.Windows.Forms.ToolStrip> denetimin **Ekle** düğmesine tıklayın ve Ekle bir <xref:System.Windows.Forms.ToolStripButton> için `stackStrip` denetimi.  
+3. Windows Form Tasarımcısı'nda tıklatın <xref:System.Windows.Forms.ToolStrip> denetimin **Ekle** düğmesine tıklayın ve Ekle bir <xref:System.Windows.Forms.ToolStripButton> için `stackStrip` denetimi.  
   
-4.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.ToolStripButton> denetimin özellikleri aşağıdaki tabloya göre.  
+4. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.ToolStripButton> denetimin özellikleri aşağıdaki tabloya göre.  
   
     |Özellik|Değer|  
     |--------------|-----------|  
@@ -91,7 +91,7 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
     |Metin|**posta**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
-5.  Daha fazla üç için yineleme adım 7 <xref:System.Windows.Forms.ToolStripButton> kontrol eder.  
+5. Daha fazla üç için yineleme adım 7 <xref:System.Windows.Forms.ToolStripButton> kontrol eder.  
   
      Denetimlere `calendarStackButton`, `contactsStackButton`, ve `tasksStackButton`. Değerini <xref:System.Windows.Forms.Control.Text%2A> özelliğini **Takvim**, **kişiler**, ve **görevleri**sırasıyla.  
   
@@ -100,26 +100,26 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
   
 #### <a name="to-handle-events"></a>Olayları işlemek için  
   
-1.  Windows Form Tasarımcısı'nda seçin `StackView` denetimi.  
+1. Windows Form Tasarımcısı'nda seçin `StackView` denetimi.  
   
-2.  İçinde **özellikleri** penceresinde tıklayın **olayları**.  
+2. İçinde **özellikleri** penceresinde tıklayın **olayları**.  
   
-3.  Oluşturulacak yükleme olayı çift `StackView_Load` olay işleyicisi.  
+3. Oluşturulacak yükleme olayı çift `StackView_Load` olay işleyicisi.  
   
-4.  İçinde `StackView_Load` olay işleyicisine aşağıdaki kodu kopyalayıp yapıştırın.  
+4. İçinde `StackView_Load` olay işleyicisine aşağıdaki kodu kopyalayıp yapıştırın.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#3)]  
   
-5.  Windows Form Tasarımcısı'nda seçin `mailStackButton` denetimi.  
+5. Windows Form Tasarımcısı'nda seçin `mailStackButton` denetimi.  
   
-6.  İçinde **özellikleri** penceresinde tıklayın **olayları**.  
+6. İçinde **özellikleri** penceresinde tıklayın **olayları**.  
   
-7.  Tıklama olayı çift tıklatın.  
+7. Tıklama olayı çift tıklatın.  
   
      Windows Form Tasarımcısı oluşturur `mailStackButton_Click` olay işleyicisi.  
   
-8.  Yeniden adlandırma `mailStackButton_Click` olay işleyicisine `stackButton_Click`.  
+8. Yeniden adlandırma `mailStackButton_Click` olay işleyicisine `stackButton_Click`.  
   
      Daha fazla bilgi için [bir kod sembol yeniden düzenlemeyi yeniden adlandırma](/visualstudio/ide/reference/rename).  
   
@@ -139,12 +139,12 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
   
 #### <a name="to-define-icons"></a>Simgeleri tanımlamak için  
   
-1.  Kod Düzenleyicisi'nde aşağıdaki kodu ekleyin `StackView` sınıf tanımını. Bu kod için bit eşlemler başlatır <xref:System.Windows.Forms.ToolStripButton> simgeler.  
+1. Kod Düzenleyicisi'nde aşağıdaki kodu ekleyin `StackView` sınıf tanımını. Bu kod için bit eşlemler başlatır <xref:System.Windows.Forms.ToolStripButton> simgeler.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#2)]  
   
-2.  Bir çağrı ekleyin `InitializeImages` yönteminde `StackView` sınıf oluşturucusu.  
+2. Bir çağrı ekleyin `InitializeImages` yönteminde `StackView` sınıf oluşturucusu.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
@@ -154,14 +154,14 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
   
 #### <a name="to-implement-a-custom-renderer"></a>Özel oluşturucu uygulamak için  
   
-1.  Aşağıdaki kodu ekleyin `StackView` denetim tanımı.  
+1. Aşağıdaki kodu ekleyin `StackView` denetim tanımı.  
   
      Bu tanımı, `StackRenderer` sınıfı, hangi geçersiz kılmaları <xref:System.Windows.Forms.ToolStripRenderer.RenderGrip>, <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder>, ve <xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground> özel görünüm oluşturmak için yöntemleri.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#10)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#10)]  
   
-2.  İçinde `StackView` denetimin Oluşturucu, yeni bir örneğini oluşturmak `StackRenderer` sınıfı ve bu örneğe atama `stackStrip` denetimin <xref:System.Windows.Forms.ToolStrip.Renderer%2A> özelliği.  
+2. İçinde `StackView` denetimin Oluşturucu, yeni bir örneğini oluşturmak `StackRenderer` sınıfı ve bu örneğe atama `stackStrip` denetimin <xref:System.Windows.Forms.ToolStrip.Renderer%2A> özelliği.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
@@ -171,9 +171,9 @@ Uygulamanızın verebilirsiniz <xref:System.Windows.Forms.ToolStrip> kendi sın�
   
 #### <a name="to-test-the-stackview-control"></a>StackView Denetimi'ni sınamak için  
   
-1.  Projeyi oluşturmak ve başlatmak için F5 tuşuna basın **UserControl Test kapsayıcısı**.  
+1. Projeyi oluşturmak ve başlatmak için F5 tuşuna basın **UserControl Test kapsayıcısı**.  
   
-2.  Düğmelerinin üzerinde işaretçiyi `StackView` denetlemek ve ardından seçili durumuna görünümünü görmek için bir düğmesine tıklayın.  
+2. Düğmelerinin üzerinde işaretçiyi `StackView` denetlemek ve ardından seçili durumuna görünümünü görmek için bir düğmesine tıklayın.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Bu kılavuzda, profesyonel bir Office XP denetiminin görünümünü ile yeniden kullanılabilir bir özel istemci denetimi oluşturdunuz. Kullanabileceğiniz <xref:System.Windows.Forms.ToolStrip> birçok başka amaçlarla denetimlerin ailesi:  

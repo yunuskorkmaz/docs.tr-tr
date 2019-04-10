@@ -2,12 +2,12 @@
 title: Belirteç Sağlayıcı
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: a0d46419de71cb3504467d1b728fb05f3de0bf45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085771"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336297"
 ---
 # <a name="token-provider"></a>Belirteç Sağlayıcı
 Bu örnek, özel bir belirteç sağlayıcısını uygulamak nasıl gösterir. Windows Communication Foundation (WCF) bir belirteç sağlayıcısı güvenlik altyapısı için kimlik bilgilerini sağlamak için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece ileti güvenlik altyapısı güvenli hale getirebilirsiniz, kimlik bilgileri sorunları uygun. WCF varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı ile birlikte gelir. WCF ayrıca ile birlikte gelir bir [!INCLUDE[infocard](../../../../includes/infocard-md.md)] belirteç sağlayıcısı. Özel belirteç sağlayıcıları, aşağıdaki durumlarda kullanışlıdır:
@@ -109,7 +109,7 @@ Bu örnek, özel bir belirteç sağlayıcısını uygulamak nasıl gösterir. Wi
 
  Aşağıdaki adımlarda, özel bir belirteç sağlayıcısını geliştirin ve WCF güvenlik çerçevesi ile tümleştirmek gösterilmektedir:
 
-1.  Özel bir belirteç sağlayıcısını yazın.
+1. Özel bir belirteç sağlayıcısını yazın.
 
      Örnek kullanıcı adı ve parola özel bir belirteç sağlayıcısını uygular. Bu kullanıcı adı parola eşleşmesi gerekir. Bu özel belirteç sağlayıcısı, yalnızca gösterim amaçlıdır ve gerçek dünya dağıtım önerilmez.
 
@@ -128,7 +128,7 @@ Bu örnek, özel bir belirteç sağlayıcısını uygulamak nasıl gösterir. Wi
     }
     ```
 
-2.  Özel güvenlik belirteci Yöneticisi'ni yazın.
+2. Özel güvenlik belirteci Yöneticisi'ni yazın.
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> Oluşturmak için kullanılan <xref:System.IdentityModel.Selectors.SecurityTokenProvider> belirli <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> kendisine geçirilen `CreateSecurityTokenProvider` yöntemi. Güvenlik belirteci Yöneticisi ayrıca belirteç Doğrulayıcı ve belirteci seri hale getirici oluşturmak için kullanılır, ancak bunlar Bu örnek tarafından ele alınmamıştır. Bu örnekte, özel güvenlik belirteci yöneticisi devraldığı <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sınıf ve geçersiz kılmaları `CreateSecurityTokenProvider` geçirilen belirteci gereksinimleri, kullanıcı adı sağlayıcı belirttiğinizde, özel kullanıcı adı belirteci sağlayıcısı döndürülecek yöntemi istendi.
 
@@ -159,7 +159,7 @@ Bu örnek, özel bir belirteç sağlayıcısını uygulamak nasıl gösterir. Wi
     }
     ```
 
-3.  Özel istemci kimlik bilgilerini yazın.
+3. Özel istemci kimlik bilgilerini yazın.
 
      İstemci kimlik bilgileri sınıfı istemci proxy'si için yapılandırıldığında kimlik bilgilerini temsil etmek için kullanılır ve güvenlik belirteci kimlik doğrulayıcılar, belirteç sağlayıcıları ve belirteci serileştiriciye elde etmek için kullanılan belirteci yöneticisi oluşturur.
 
@@ -184,7 +184,7 @@ Bu örnek, özel bir belirteç sağlayıcısını uygulamak nasıl gösterir. Wi
     }
     ```
 
-4.  Özel istemci kimlik bilgilerini kullanacak biçimde yapılandırın.
+4. Özel istemci kimlik bilgilerini kullanacak biçimde yapılandırın.
 
      Özel istemci kimlik bilgilerini kullanmak üzere istemciyi sırasıyla örneği, varsayılan istemci kimlik bilgisi sınıfını siler ve yeni istemci kimlik bilgisi sınıfını sağlar.
 
@@ -246,44 +246,44 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Ayarlama ve örneği oluşturmak için
 
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için
 
-1.  Visual Studio 2012 komut istemini yönetici ayrıcalıklarıyla açılan içinde örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.
+1. Visual Studio 2012 komut istemini yönetici ayrıcalıklarıyla açılan içinde örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.
 
     > [!NOTE]
     >  Setup.bat toplu iş dosyası, bir Visual Studio 2012 komut isteminden çalıştırılması için tasarlanmıştır. PATH ortam değişkenine içinde Visual Studio 2012 komut istemi noktaları Setup.bat betiği tarafından gereken yürütülebilir dosyaları içeren dizine ayarlayın.  
   
-2.  Service.exe service\bin'nden başlatın.  
+2. Service.exe service\bin'nden başlatın.  
   
-3.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
+3. Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-4.  Kullanıcı adı isteminde bir kullanıcı adı yazın.  
+4. Kullanıcı adı isteminde bir kullanıcı adı yazın.  
   
-5.  Parola isteminde yazıldı aynı dize için kullanıcı adı istemi kullanın.  
+5. Parola isteminde yazıldı aynı dize için kullanıcı adı istemi kullanın.  
   
-6.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
-1.  Hizmet ikili dosyaları için hizmet bilgisayarda bir dizin oluşturun.  
+1. Hizmet ikili dosyaları için hizmet bilgisayarda bir dizin oluşturun.  
   
-2.  Hizmet program dosyaları hizmeti bilgisayarında hizmet dizinine kopyalayın. Ayrıca Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
+2. Hizmet program dosyaları hizmeti bilgisayarında hizmet dizinine kopyalayın. Ayrıca Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
   
-3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Service.exe.config dosyayı bu yeni sertifika adı yansıtacak şekilde güncelleştirilmesi gerekir. Setup.bat toplu iş dosyasını değiştirerek, sunucu sertifikası oluşturabilirsiniz. Setup.bat dosyasının Visual Studio için geliştirici komut isteminden çalıştırılmalıdır Not yönetici ayrıcalıklarıyla açılan. Ayarlamalısınız `%SERVER_NAME%` hizmeti barındırmak için kullanılan bilgisayarın tam ana bilgisayar adı için değişken.  
+3. Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Service.exe.config dosyayı bu yeni sertifika adı yansıtacak şekilde güncelleştirilmesi gerekir. Setup.bat toplu iş dosyasını değiştirerek, sunucu sertifikası oluşturabilirsiniz. Setup.bat dosyasının Visual Studio için geliştirici komut isteminden çalıştırılmalıdır Not yönetici ayrıcalıklarıyla açılan. Ayarlamalısınız `%SERVER_NAME%` hizmeti barındırmak için kullanılan bilgisayarın tam ana bilgisayar adı için değişken.  
   
-4.  Sunucu sertifikasını istemcinin CurrentUser TrustedPeople depoya kopyalayın. Sunucu sertifikası güvenilir istemci veren tarafından verildiğinde Bunu yapmak gerekmez.  
+4. Sunucu sertifikasını istemcinin CurrentUser TrustedPeople depoya kopyalayın. Sunucu sertifikası güvenilir istemci veren tarafından verildiğinde Bunu yapmak gerekmez.  
   
-5.  Hizmet bilgisayarı Service.exe.config dosyada localhost yerine tam bilgisayar adını belirtmek için temel adresini değiştirin.  
+5. Hizmet bilgisayarı Service.exe.config dosyada localhost yerine tam bilgisayar adını belirtmek için temel adresini değiştirin.  
   
-6.  Hizmet bilgisayarda service.exe bir komut isteminden çalıştırın.  
+6. Hizmet bilgisayarda service.exe bir komut isteminden çalıştırın.  
   
-7.  İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörünün altındaki istemci bilgisayara kopyalayın.  
+7. İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörünün altındaki istemci bilgisayara kopyalayın.  
   
-8.  İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
+8. İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
   
 9. İstemci bilgisayarda Başlat `Client.exe` bir komut istemi penceresinden.  
   
@@ -291,4 +291,4 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
-1.  Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
+1. Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  

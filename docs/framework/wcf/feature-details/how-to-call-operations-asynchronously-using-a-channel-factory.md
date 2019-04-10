@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 0662b82661e4fb3cde85930c2c4544f541d3a2a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 17b6dd979f7554cd433cc1abcf2a4da8dd9b83cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202735"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338923"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Nasıl yapılır: Kanal Fabrikası Kullanarak İşlemlere Zaman Uyumsuz Olarak Çağrı Yapma
 Bu konu nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak kullanılırken erişebilir kapsayan bir <xref:System.ServiceModel.ChannelFactory%601>-tabanlı istemci uygulaması. (Kullanırken bir <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> olay tabanlı zaman uyumsuz çağırma modeli kullandığınız bir hizmeti çağırmak için nesne. Daha fazla bilgi için [nasıl yapılır: Hizmet işlemlerini zaman uyumsuz çağırma](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Olay tabanlı zaman uyumsuz çağırma modeli hakkında daha fazla bilgi için bkz. [olay tabanlı zaman uyumsuz desen (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
@@ -21,7 +21,7 @@ Bu konu nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak kullanılırk
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>WCF Hizmeti işlemlerini zaman uyumsuz olarak çağırmak için  
   
-1.  Çalıştırma [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ile aracı `/async` seçenek aşağıdaki komutta gösterildiği gibi.  
+1. Çalıştırma [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ile aracı `/async` seçenek aşağıdaki komutta gösterildiği gibi.  
   
     ```  
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a  
@@ -29,12 +29,12 @@ Bu konu nasıl bir istemci bir hizmet işlemi zaman uyumsuz olarak kullanılırk
   
      Bu işlem için hizmet sözleşmesi bir zaman uyumsuz istemci sürümünü oluşturur.  
   
-2.  Zaman uyumsuz işlemi aşağıdaki örnek kodda gösterildiği gibi tamamlandığında çağrılacak bir geri çağırma işlevi oluşturun.  
+2. Zaman uyumsuz işlemi aşağıdaki örnek kodda gösterildiği gibi tamamlandığında çağrılacak bir geri çağırma işlevi oluşturun.  
   
      [!code-csharp[C_How_To_CF_Async#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/client.cs#2)]
      [!code-vb[C_How_To_CF_Async#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/client.vb#2)]  
   
-3.  Bir hizmet işlemi zaman uyumsuz olarak erişmek için istemci ve çağrı oluşturma `Begin[Operation]` (örneğin, `BeginAdd`) ve aşağıdaki örnek kodda gösterildiği gibi bir geri çağırma işlevini belirtin.  
+3. Bir hizmet işlemi zaman uyumsuz olarak erişmek için istemci ve çağrı oluşturma `Begin[Operation]` (örneğin, `BeginAdd`) ve aşağıdaki örnek kodda gösterildiği gibi bir geri çağırma işlevini belirtin.  
   
      [!code-csharp[C_How_To_CF_Async#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/client.cs#3)]
      [!code-vb[C_How_To_CF_Async#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/client.vb#3)]  

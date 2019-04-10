@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342238"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Nasıl yapılır: MaskedTextBox Denetimine Veri Bağlama
 Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için başka bir Windows Forms denetimi gibi denetim. Bununla birlikte, verilerinizi veritabanında biçimi tanımınızı maskesi beklenen biçimde eşleşmiyorsa, verileri yeniden biçimlendirmek gerekir. Aşağıdaki yordam kullanılarak bunun nasıl yapılacağını göstermektedir <xref:System.Windows.Forms.Binding.Format> ve <xref:System.Windows.Forms.Binding.Parse> olayları <xref:System.Windows.Forms.Binding> ayrı bir telefon numarası görüntülemek ve tek düzenlenebilir bir alanı telefon uzantısı veritabanı alanları için sınıf.  
@@ -24,15 +24,15 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
   
 ### <a name="to-bind-data-to-a-maskedtextbox-control"></a>MaskedTextBox denetimine veri bağlama için  
   
-1.  Yeni bir Windows Forms projesi oluşturun.  
+1. Yeni bir Windows Forms projesi oluşturun.  
   
-2.  İki <xref:System.Windows.Forms.TextBox> denetimleri formunuza; bunları `FirstName` ve `LastName`.  
+2. İki <xref:System.Windows.Forms.TextBox> denetimleri formunuza; bunları `FirstName` ve `LastName`.  
   
-3.  Sürükleme bir <xref:System.Windows.Forms.MaskedTextBox> Formunuza denetim; adlandırın `PhoneMask`.  
+3. Sürükleme bir <xref:System.Windows.Forms.MaskedTextBox> Formunuza denetim; adlandırın `PhoneMask`.  
   
-4.  Ayarlama <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği `PhoneMask` için `(000) 000-0000 x9999`.  
+4. Ayarlama <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği `PhoneMask` için `(000) 000-0000 x9999`.  
   
-5.  Aşağıdaki ad alanı için formu alır ekleyin.  
+5. Aşağıdaki ad alanı için formu alır ekleyin.  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
     Imports System.Data.SqlClient  
     ```  
   
-6.  Formun sağ tıklatın ve seçin **kodu görüntüle**. Bu kod, form Sınıfınız içinde herhangi bir yere yerleştirin.  
+6. Formun sağ tıklatın ve seçin **kodu görüntüle**. Bu kod, form Sınıfınız içinde herhangi bir yere yerleştirin.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
     End Sub  
     ```  
   
-7.  Olay işleyicileri ekleme <xref:System.Windows.Forms.Binding.Format> ve <xref:System.Windows.Forms.Binding.Parse> birleştirin ve ayırmak için olayları `PhoneNumber` ve `Extension` ilişkili alanları <xref:System.Data.DataSet>.  
+7. Olay işleyicileri ekleme <xref:System.Windows.Forms.Binding.Format> ve <xref:System.Windows.Forms.Binding.Parse> birleştirin ve ayırmak için olayları `PhoneNumber` ve `Extension` ilişkili alanları <xref:System.Data.DataSet>.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ Verilere bağlayabilirsiniz bir <xref:System.Windows.Forms.MaskedTextBox> için 
     End Sub  
     ```  
   
-8.  İki ekleme <xref:System.Windows.Forms.Button> formu için denetimler. Bunları `previousButton` ve `nextButton`. Her düğme eklemek için çift bir <xref:System.Windows.Forms.Control.Click> olay işleyicisi ve aşağıdaki kod örneğinde gösterildiği gibi olay işleyicilerini doldurun.  
+8. İki ekleme <xref:System.Windows.Forms.Button> formu için denetimler. Bunları `previousButton` ve `nextButton`. Her düğme eklemek için çift bir <xref:System.Windows.Forms.Control.Click> olay işleyicisi ve aşağıdaki kod örneğinde gösterildiği gibi olay işleyicilerini doldurun.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  

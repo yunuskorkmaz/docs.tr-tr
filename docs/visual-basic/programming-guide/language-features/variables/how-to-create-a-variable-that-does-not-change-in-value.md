@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823330"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342940"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Nasıl yapılır: (Visual Basic) değeri değişmeyen bir değişken oluşturma
 Bir değişkenin değerini değiştirmez kavramımız çelişkili görünebilir. Ancak bazı durumlarda bir sabit uygun olmadığı durumlarda ve sabit bir değere sahip bir değişken sağlamak kullanışlıdır. Böyle bir durumda olan bir üye değişkeni tanımlayabilirsiniz [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğü.  
@@ -25,7 +25,7 @@ Bir değişkenin değerini değiştirmez kavramımız çelişkili görünebilir.
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Değeri değişmeyen bir değişken oluşturmak için  
   
-1.  Modül düzeyinde olan bir üye değişkeni bildirme [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)ve [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğü.  
+1. Modül düzeyinde olan bir üye değişkeni bildirme [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)ve [salt okunur](../../../../visual-basic/language-reference/modifiers/readonly.md) anahtar sözcüğü.  
   
     ```  
     Dim ReadOnly timeStarted  
@@ -33,7 +33,7 @@ Bir değişkenin değerini değiştirmez kavramımız çelişkili görünebilir.
   
      Belirtebileceğiniz `ReadOnly` yalnızca bir üye değişkeni üzerinde. Başka bir deyişle, her türlü yordam dışında Modül düzeyinde değişkeni tanımlamanız gerekir.  
   
-2.  Değerin tek bir deyimde derleme zamanında bilgi işlem, bir başlatma yan tümcesi içinde kullanın. `Dim` deyimi. İzleyin [olarak](../../../../visual-basic/language-reference/statements/as-clause.md) yan tümcesiyle birlikte bir eşittir işareti (`=`) ve ardından bir ifade. Derleyici, bu ifade bir sabit değere değerlendirebilirsiniz emin olun.  
+2. Değerin tek bir deyimde derleme zamanında bilgi işlem, bir başlatma yan tümcesi içinde kullanın. `Dim` deyimi. İzleyin [olarak](../../../../visual-basic/language-reference/statements/as-clause.md) yan tümcesiyle birlikte bir eşittir işareti (`=`) ve ardından bir ifade. Derleyici, bu ifade bir sabit değere değerlendirebilirsiniz emin olun.  
   
     ```  
     Dim ReadOnly timeStarted As Date = Now  

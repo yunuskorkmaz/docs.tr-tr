@@ -8,12 +8,12 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 5aa8ff1efa045d52382cc5c24a0cae1f0f1bb510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bdf7c3df0ffd97dd88a4c442a8a73593a0447ee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127146"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336388"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Nasıl yapılır: (Windows Forms) tasarımcıyı kullanarak resim yükleme
 Windows Forms ile <xref:System.Windows.Forms.PictureBox> denetimi, yüklemek ve bir resim, ayarlayarak tasarım zamanında bir formda görüntülemek <xref:System.Windows.Forms.PictureBox.Image%2A> geçerli bir resim özelliği. Aşağıdaki tabloda, kabul edilebilir dosya türleri gösterilmektedir.  
@@ -31,17 +31,17 @@ Windows Forms ile <xref:System.Windows.Forms.PictureBox> denetimi, yüklemek ve 
   
 ### <a name="to-display-a-picture-at-design-time"></a>Tasarım zamanında bir resim görüntülemek için  
   
-1.  Çizim bir <xref:System.Windows.Forms.PictureBox> form denetimi.  
+1. Çizim bir <xref:System.Windows.Forms.PictureBox> form denetimi.  
   
-2.  Özellikler penceresinde seçin <xref:System.Windows.Forms.PictureBox.Image%2A> özelliği, sonra üç nokta düğmesini görüntülemek için tıklatın **açık** iletişim kutusu.  
+2. Özellikler penceresinde seçin <xref:System.Windows.Forms.PictureBox.Image%2A> özelliği, sonra üç nokta düğmesini görüntülemek için tıklatın **açık** iletişim kutusu.  
   
-3.  Belirli bir dosya türü için (örneğin, .gif dosyaları) arıyorsanız, onu seçip **dosya türü** kutusu.  
+3. Belirli bir dosya türü için (örneğin, .gif dosyaları) arıyorsanız, onu seçip **dosya türü** kutusu.  
   
-4.  Görüntülemek istediğiniz dosyayı seçin.  
+4. Görüntülemek istediğiniz dosyayı seçin.  
   
 ### <a name="to-clear-the-picture-at-design-time"></a>Tasarım zamanında resmi temizlemek için  
   
-1.  Üzerinde **özellikleri** penceresinde <xref:System.Windows.Forms.PictureBox.Image%2A> özelliği ve sağ görüntü nesnesinin adını solunda görünür küçük resmine tıklayın. Seçin **sıfırlama**.  
+1. Üzerinde **özellikleri** penceresinde <xref:System.Windows.Forms.PictureBox.Image%2A> özelliği ve sağ görüntü nesnesinin adını solunda görünür küçük resmine tıklayın. Seçin **sıfırlama**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

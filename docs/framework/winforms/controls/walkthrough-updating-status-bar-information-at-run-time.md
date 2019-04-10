@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 61fb68a43132b350b62f073ca8683fada3be52d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7beae9bb886c7c79d4d97375887bfecb0c2a40c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225774"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333320"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>İzlenecek yol: Çalışma Zamanında Durum Çubuğu Bilgilerini Güncelleştirme
 > [!IMPORTANT]
@@ -28,29 +28,29 @@ ms.locfileid: "59225774"
   
 ### <a name="to-get-the-status-bar-ready-for-updating"></a>Durum çubuğu güncelleştirmek için hazır hale getirmek için  
   
-1.  Yeni bir Windows formu oluşturun.  
+1. Yeni bir Windows formu oluşturun.  
   
-2.  Ekleme bir <xref:System.Windows.Forms.StatusBar> form denetimi. Ayrıntılar için bkz [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md).  
+2. Ekleme bir <xref:System.Windows.Forms.StatusBar> form denetimi. Ayrıntılar için bkz [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md).  
   
-3.  Bir durum çubuğu paneline eklemek, <xref:System.Windows.Forms.StatusBar> denetimi. Ayrıntılar için bkz [nasıl yapılır: Bir StatusBar denetimine panel ekleme](how-to-add-panels-to-a-statusbar-control.md).  
+3. Bir durum çubuğu paneline eklemek, <xref:System.Windows.Forms.StatusBar> denetimi. Ayrıntılar için bkz [nasıl yapılır: Bir StatusBar denetimine panel ekleme](how-to-add-panels-to-a-statusbar-control.md).  
   
-4.  İçin <xref:System.Windows.Forms.StatusBar> formunuza, eklediğiniz denetimi ayarlama <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> özelliğini `true`.  
+4. İçin <xref:System.Windows.Forms.StatusBar> formunuza, eklediğiniz denetimi ayarlama <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> özelliğini `true`.  
   
-5.  Bir Windows Forms ekleme <xref:System.Windows.Forms.Timer> forma bileşen.  
+5. Bir Windows Forms ekleme <xref:System.Windows.Forms.Timer> forma bileşen.  
   
     > [!NOTE]
     >  Windows Forms <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> bileşeni, bir Windows Forms ortamı için tasarlanmıştır. Bir sunucu ortamı için uygun olan bir zamanlayıcı gerekirse bkz [sunucu tabanlı zamanlayıcılar giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
-6.  Ayarlama <xref:System.Windows.Forms.Timer.Enabled%2A> özelliğini `true`.  
+6. Ayarlama <xref:System.Windows.Forms.Timer.Enabled%2A> özelliğini `true`.  
   
-7.  Ayarlama <xref:System.Windows.Forms.Timer.Interval%2A> özelliği <xref:System.Windows.Forms.Timer> 30000 için.  
+7. Ayarlama <xref:System.Windows.Forms.Timer.Interval%2A> özelliği <xref:System.Windows.Forms.Timer> 30000 için.  
   
     > [!NOTE]
     >  <xref:System.Windows.Forms.Timer.Interval%2A> Özelliği <xref:System.Windows.Forms.Timer> bileşeni doğru bir zaman görüntülenen saat yansıtılmasını sağlamak üzere 30 saniye (30.000 milisaniye cinsinden) ayarlanır.  
   
 ### <a name="to-implement-the-timer-to-update-the-status-bar"></a>Durum çubuğunu güncellemek için Zamanlayıcıyı uygulamak için  
   
-1.  Olay işleyicisi aşağıdaki kodu ekleyin <xref:System.Windows.Forms.Timer> panelini güncelleştirmek için bileşen <xref:System.Windows.Forms.StatusBar> denetimi.  
+1. Olay işleyicisi aşağıdaki kodu ekleyin <xref:System.Windows.Forms.Timer> panelini güncelleştirmek için bileşen <xref:System.Windows.Forms.StatusBar> denetimi.  
   
     ```vb  
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick  
@@ -79,7 +79,7 @@ ms.locfileid: "59225774"
   
 ### <a name="to-test-the-application"></a>Uygulamayı test etmek için  
   
-1.  Uygulamada hata ayıklamak ve çalıştırmak için F5 tuşuna basın. Hata ayıklama hakkında daha fazla ayrıntı için bkz. [Visual Studio'da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio).  
+1. Uygulamada hata ayıklamak ve çalıştırmak için F5 tuşuna basın. Hata ayıklama hakkında daha fazla ayrıntı için bkz. [Visual Studio'da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio).  
   
     > [!NOTE]
     >  Yaklaşık olarak 30 durum çubuğunda görüntülenecek saniye saat sürer. Olası en doğru zamanı elde etmek için budur. Buna karşılık, daha kısa süre içinde görünen saati hale getirmek için değerini azaltabilirsiniz <xref:System.Windows.Forms.Timer.Interval%2A> ayarlanan önceki yordamdaki adım 7'deki özelliği.  

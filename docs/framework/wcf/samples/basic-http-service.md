@@ -2,12 +2,12 @@
 title: Temel HTTP Hizmeti
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 247fedac339ebb22a6ef3b3e84f557451ecaaf1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087160"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337116"
 ---
 # <a name="basic-http-service"></a>Temel HTTP Hizmeti
 Bu örnek, bu özellik Windows Communication Foundation (WCF) REST programlama modeli kullanarak "POX" (düz eski XML) hizmet olarak – başvurulan bir HTTP tabanlı, RPC tabanlı hizmeti - uygulama gösterilmiştir. Bu örnek iki bileşenden oluşur: şirket içinde barındırılan bir WCF HTTP hizmet (adını da) ve hizmet oluşturur ve bu çağrıları yapan bir konsol uygulaması (Program.cs).  
@@ -27,11 +27,11 @@ Bu örnek, bu özellik Windows Communication Foundation (WCF) REST programlama m
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Temel Http hizmeti örneği için çözümü açın. Visual Studio 2012 başlatırken başarıyla yürütmek için örnek için yönetici olarak çalıştırmanız gerekir. Visual Studio 2012 simgesini sağ tıklatıp seçerek bunu **yönetici olarak çalıştır** bağlam menüsünden.  
+1. Temel Http hizmeti örneği için çözümü açın. Visual Studio 2012 başlatırken başarıyla yürütmek için örnek için yönetici olarak çalıştırmanız gerekir. Visual Studio 2012 simgesini sağ tıklatıp seçerek bunu **yönetici olarak çalıştır** bağlam menüsünden.  
   
-2.  Çözümü derleyin ve konsol uygulamasının hata ayıklama olmadan çalıştırmak için Ctrl + F5 tuşuna basın CTRL + SHIFT + B tuşlarına basın. Konsol penceresinde görünür ve çalışan hizmetin URI sağlar ve URI HTML Yardım sayfası çalışan hizmeti. Herhangi bir noktada HTML Yardım sayfası URI Yardım sayfasının bir tarayıcıda yazarak görüntüleyebilirsiniz. Örnek çalışırken, istemcinin geçerli etkinlik durumunu yazar.  
+2. Çözümü derleyin ve konsol uygulamasının hata ayıklama olmadan çalıştırmak için Ctrl + F5 tuşuna basın CTRL + SHIFT + B tuşlarına basın. Konsol penceresinde görünür ve çalışan hizmetin URI sağlar ve URI HTML Yardım sayfası çalışan hizmeti. Herhangi bir noktada HTML Yardım sayfası URI Yardım sayfasının bir tarayıcıda yazarak görüntüleyebilirsiniz. Örnek çalışırken, istemcinin geçerli etkinlik durumunu yazar.  
   
-3.  Örnek sonlandırmak için herhangi bir tuşa basın.  
+3. Örnek sonlandırmak için herhangi bir tuşa basın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

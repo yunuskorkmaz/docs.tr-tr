@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211049"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338481"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Nasıl yapılır: Sorunlu Yazdırma İşini Tanımlama
 Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazdırma işlerini ilgili olarak kullanıcılardan alan. Zengin, kullanıma sunulan yazdırma işi Özellikler [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] hızlı bir uzaktan tanılama yazdırma işi gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
@@ -23,7 +23,7 @@ Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazd�
 ## <a name="example"></a>Örnek  
  Bu tür bir yardımcı programı oluşturmak için önemli adımlar aşağıdaki gibidir.  
   
-1.  Kullanıcı hakkında şikayetçi yazdırma işi tanımlayın. Kullanıcılar genellikle tam olarak bunu yapamaz. Yazıcı ve yazdırma sunucularının adlarını bilemeyebilirsiniz. Ayarında kullanılandan farklı bir terminoloji yazıcıya konumunu açıklayabilir kendi <xref:System.Printing.PrintQueue.Location%2A> özelliği. Buna göre bu kullanıcının listesi şu anda oluşturmak iyi bir fikir gönderilen olur. Varsa birden fazla kullanıcı ve yazdırma sistemi yönetici arasındaki iletişimi sorunları ortaya çıktığında iş saptamak için kullanılabilir. Alt adımlar aşağıdaki gibidir.  
+1. Kullanıcı hakkında şikayetçi yazdırma işi tanımlayın. Kullanıcılar genellikle tam olarak bunu yapamaz. Yazıcı ve yazdırma sunucularının adlarını bilemeyebilirsiniz. Ayarında kullanılandan farklı bir terminoloji yazıcıya konumunu açıklayabilir kendi <xref:System.Printing.PrintQueue.Location%2A> özelliği. Buna göre bu kullanıcının listesi şu anda oluşturmak iyi bir fikir gönderilen olur. Varsa birden fazla kullanıcı ve yazdırma sistemi yönetici arasındaki iletişimi sorunları ortaya çıktığında iş saptamak için kullanılabilir. Alt adımlar aşağıdaki gibidir.  
   
     1.  Tüm yazdırma sunucularının bir listesini alın.  
   
@@ -33,7 +33,7 @@ Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazd�
   
     4.  Kuyruk döngünün her geçişinde döngü, işlerini ve şikayetçi kullanıcı tarafından gönderilen bu hakkında tanımlayıcı bilgileri toplayın.  
   
-2.  Sorunlu yazdırma işini tanımlandığı zaman hangi sorunu olabileceğini görmek için ilgili özelliklerini inceleyin. Örneğin, bir hata durumunda iş veya yazıcı sırası işi yazdırmadan önce çevrimdışı hizmet verme muydunuz?  
+2. Sorunlu yazdırma işini tanımlandığı zaman hangi sorunu olabileceğini görmek için ilgili özelliklerini inceleyin. Örneğin, bir hata durumunda iş veya yazıcı sırası işi yazdırmadan önce çevrimdışı hizmet verme muydunuz?  
   
  Aşağıdaki kod, kod örnekleri bir dizisidir. İlk örnek kod, yazdırma sıralarını döngü içerir. (1 c yukarıdaki adım.) Değişken `myPrintQueues` olduğu <xref:System.Printing.PrintQueueCollection> geçerli yazdırma sunucusu için nesne.  
   

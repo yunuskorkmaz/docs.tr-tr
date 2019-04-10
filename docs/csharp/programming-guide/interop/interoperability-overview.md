@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 160403b938a95ae5bb03703f73fa906de5fc3ded
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410764"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337558"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
 Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirliği sağlamak için yöntemleri açıklar.  
@@ -33,26 +33,26 @@ Konu C# yönetilen kod ve yönetimsiz kod arasındaki birlikte çalışabilirli�
 ## <a name="exposing-com-components-to-c"></a>C için COM bileşenlerini gösterme\#
  Bir C# projeden bir COM bileşeni kullanabilir. Genel adımlar aşağıdaki gibidir:  
   
-1.  Kullanın ve kaydetmek için bir COM bileşeni bulun. Kaydedilecek regsvr32.exe veya Geri Al – kaydı bir COM DLL kullanın.  
+1. Kullanın ve kaydetmek için bir COM bileşeni bulun. Kaydedilecek regsvr32.exe veya Geri Al – kaydı bir COM DLL kullanın.  
   
-2.  Projeye bir COM bileşeni ya da tür kitaplığını bir başvuru ekleyin.  
+2. Projeye bir COM bileşeni ya da tür kitaplığını bir başvuru ekleyin.  
   
      Bir başvuru eklediğinizde, Visual Studio kullanan [Tlbimp.exe (tür kitaplığı içeri Aktarıcı)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), çıkış bir .NET Framework birlikte çalışma derlemesi için giriş olarak bir tür kitaplığı alır. Bir çalışma zamanı çağrılabilir sarmalayıcı (RCW) olarak da adlandırılan, derleme, yönetilen sınıflar ve arabirimler COM sınıfları sarmalamak ve tür kitaplığında bulunan arabirimlerin içerir. Visual Studio projesi için oluşturulan derlemeye bir başvuru ekler.  
   
-3.  RCW içinde tanımlanan bir sınıfın bir örneğini oluşturun. Bu, buna karşılık, COM nesnesinin örneği oluşturur.  
+3. RCW içinde tanımlanan bir sınıfın bir örneğini oluşturun. Bu, buna karşılık, COM nesnesinin örneği oluşturur.  
   
-4.  Yalnızca diğer yönetilen nesneleri kullanırken nesnesini kullanın. Nesne tarafından çöp toplama geri kazanılır, COM nesnesinin örneği de bellek serbest bırakılır.  
+4. Yalnızca diğer yönetilen nesneleri kullanırken nesnesini kullanın. Nesne tarafından çöp toplama geri kazanılır, COM nesnesinin örneği de bellek serbest bırakılır.  
   
  Daha fazla bilgi için [COM bileşenlerini .NET Framework'te gösterme](../../../../docs/framework/interop/exposing-com-components.md).  
   
 ## <a name="exposing-c-to-com"></a>C# com'da gösterme  
  COM istemcilerine doğru şekilde sunulan C# türleri kullanabilir. C# türleri kullanıma sunmak için temel adımlar aşağıdaki gibidir:  
   
-1.  C# projesinde birlikte çalışma özniteliklerini ekleyin.  
+1. C# projesinde birlikte çalışma özniteliklerini ekleyin.  
   
      Visual C# proje özelliklerini değiştirerek bir derlemenin COM görünür yapabilirsiniz. Daha fazla bilgi için [derleme bilgileri iletişim kutusu](/visualstudio/ide/reference/assembly-information-dialog-box).  
   
-2.  Bir COM tür kitaplığı üretmek ve COM kullanım için kaydedin.  
+2. Bir COM tür kitaplığı üretmek ve COM kullanım için kaydedin.  
   
      C# derleme COM birlikte çalışma için otomatik olarak kaydetmek için Visual C# proje özelliklerini değiştirebilirsiniz. Visual Studio kullanan [Regasm.exe (derleme kayıt aracı)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)kullanarak `/tlb` komut satırı anahtarı, bir tür kitaplığı oluşturmak için yönetilen bir derleme, girdi olarak alır. Bu tür kitaplığını açıklar `public` türleri derlemesinde ve kayıt defteri girdilerini ekler; böylece COM istemcileri yönetilen sınıfları oluşturabilirsiniz.  
   

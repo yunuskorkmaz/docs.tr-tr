@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: d1676cea520c42a40082e31cce9de9797b06e9ee
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814048"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337246"
 ---
 # <a name="-main"></a>-main
 Sınıf veya içeren modül belirtir `Sub Main` yordamı.  
@@ -37,13 +37,13 @@ Sınıf veya içeren modül belirtir `Sub Main` yordamı.
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>-Ana Visual Studio tümleşik geliştirme ortamında ayarlamak için  
   
-1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
+1. Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
   
-2.  Tıklayın **uygulama** sekmesi.  
+2. Tıklayın **uygulama** sekmesi.  
   
-3.  Emin **etkinleştir uygulama çerçevesi** onay kutusu işaretli değildir.  
+3. Emin **etkinleştir uygulama çerçevesi** onay kutusu işaretli değildir.  
   
-4.  Değer değiştirme **Başlangıç nesnesi** kutusu.  
+4. Değer değiştirme **Başlangıç nesnesi** kutusu.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod derlenir `T2.vb` ve `T3.vb`, belirtilmesi, `Sub Main` yordamı bulunan `Test2` sınıfı.  
@@ -54,7 +54,7 @@ vbc t2.vb t3.vb -main:Test2
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Komut Satırı Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic'de Ana Yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

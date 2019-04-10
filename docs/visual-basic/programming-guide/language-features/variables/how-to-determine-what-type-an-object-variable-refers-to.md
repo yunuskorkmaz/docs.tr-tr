@@ -6,26 +6,26 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6499dfce880cc9ce16e5d77887afc0598692f48e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816414"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342875"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Nasıl yapılır: Bir nesne değişkeninin (Visual Basic) hangi türe başvurduğunu belirleme
 Bir nesne değişkeni başka bir yere depolanmış veriler için bir işaretçi içerir. Çalışma zamanı sırasında bu veri türünü değiştirebilirsiniz. Herhangi bir anda kullanabileceğiniz <xref:System.Type.GetTypeCode%2A> geçerli çalışma zamanı türü belirlemek için yöntemi veya [TypeOf işleci](../../../../visual-basic/language-reference/operators/typeof-operator.md) geçerli olmadığını anlamak için çalışma zamanı türü belirtilen bir tür ile uyumludur.  
   
 ### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>Tam bir nesne değişkeni şu anda türünü belirlemek için başvuruyor  
   
-1.  Nesne değişkeni üzerinde çağrı <xref:System.Object.GetType%2A> almak için yöntemi bir <xref:System.Type?displayProperty=nameWithType> nesne.  
+1. Nesne değişkeni üzerinde çağrı <xref:System.Object.GetType%2A> almak için yöntemi bir <xref:System.Type?displayProperty=nameWithType> nesne.  
   
     ```  
     Dim myObject As Object  
     myObject.GetType()  
     ```  
   
-2.  Üzerinde <xref:System.Type?displayProperty=nameWithType> sınıfı, paylaşılan yöntemi çağırın <xref:System.Type.GetTypeCode%2A> alınacak <xref:System.TypeCode> nesnenin türü için değer sabit listesi.  
+2. Üzerinde <xref:System.Type?displayProperty=nameWithType> sınıfı, paylaşılan yöntemi çağırın <xref:System.Type.GetTypeCode%2A> alınacak <xref:System.TypeCode> nesnenin türü için değer sabit listesi.  
   
     ```  
     Dim myObject As Object  
@@ -60,4 +60,4 @@ Bir nesne değişkeni başka bir yere depolanmış veriler için bir işaretçi 
 - <xref:System.TypeCode>
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Nesne Değişkeni Değerleri](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Nesne Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)

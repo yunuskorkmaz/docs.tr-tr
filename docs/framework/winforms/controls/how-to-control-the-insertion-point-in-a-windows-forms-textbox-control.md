@@ -10,12 +10,12 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: 1fa6e8a3642086f81d0a62502d801ec6ade9b3d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341328"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Nasıl yapılır: Windows Forms TextBox Denetiminde Ekleme Noktasını Belirleme
 Bir Windows Forms olduğunda <xref:System.Windows.Forms.TextBox> denetim ilk odağı aldığında, varolan herhangi bir metni sola metin kutusu içinde varsayılan ekleme. Kullanıcı, klavye veya fare ile ekleme noktasını taşıyabilirsiniz. Metin kutusu kaybeder ve ardından odak kazandıktan, ekleme noktasını yerde kullanıcı son uygulanan olacaktır.  
@@ -24,9 +24,9 @@ Bir Windows Forms olduğunda <xref:System.Windows.Forms.TextBox> denetim ilk oda
   
 ### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>TextBox denetiminde ekleme noktasını denetlemek için  
   
-1.  Ayarlama <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> özelliğini uygun bir değer. Sıfır, ekleme noktasını ilk karakterin hemen soluna yerleştirir.  
+1. Ayarlama <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> özelliğini uygun bir değer. Sıfır, ekleme noktasını ilk karakterin hemen soluna yerleştirir.  
   
-2.  (İsteğe bağlı) Ayarlama <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> özelliğini seçmek istediğiniz metnin uzunluğu.  
+2. (İsteğe bağlı) Ayarlama <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> özelliğini seçmek istediğiniz metnin uzunluğu.  
   
      Aşağıdaki kod, her zaman 0 olarak ekleme noktasını döndürür. `TextBox1_Enter` Olay işleyicisi bağlı denetime; daha fazla bilgi için bkz: [Windows Forms'ta olay işleyicileri oluşturma](../creating-event-handlers-in-windows-forms.md).  
   

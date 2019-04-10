@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Dinamik nesneler (C# ve Visual Basic) oluşturma ve kullanma'
+title: 'İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: f02e2de2ce8e2d4d6c8032e826764fd0383b3b3d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 71330714658729ed82ba111e9384e6cd9d5ae116
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092650"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339430"
 ---
-# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>İzlenecek yol: Dinamik nesneler (C# ve Visual Basic) oluşturma ve kullanma
+# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>İzlenecek yol: Dinamik Nesneler Oluşturma ve Kullanma (C# and Visual Basic)
 
 Dinamik nesneler özellikler ve yöntemler gibi üyeleri çalışma zamanında yerine derleme zamanında ortaya çıkarır. Bu, bir statik türü veya biçimi eşleşmeyen yapılar ile çalışmak için nesneleri oluşturmanızı sağlar. Örneğin, bir dinamik Nesne geçerli HTML biçimlendirmeyi öğeler ve öznitelikler herhangi bir birleşimini içerebilir HTML belge nesne modeli (DOM) başvurmak için kullanabilirsiniz. Her HTML belgesi benzersiz olduğundan, belirli bir HTML belge üyelerini çalışma zamanında belirlenir. Bir HTML öğesi özniteliklerini başvurmak için kullanılan genel bir yöntem için öznitelik adı geçirmektir `GetProperty` öğenin yöntemi. Başvuru `id` HTML öğesi özniteliklerini `<div id="Div1">`, başvuru edinip `<div>` öğesini ve ardından `divElement.GetProperty("id")`. Dinamik Nesne kullanırsanız, başvurabileceğiniz `id` olarak özniteliği `divElement.id`.  
   
@@ -44,30 +44,30 @@ Bu anlatımda oluşturduğunuz ilk proje, bir metin dosyasının içeriğini ara
   
 ### <a name="to-create-a-custom-dynamic-class"></a>Dinamik özel bir sınıf oluşturmak için  
   
-1.  Visual Studio’yu çalıştırın.  
+1. Visual Studio’yu çalıştırın.  
   
-2.  Üzerinde **dosya** menüsünde **yeni** ve ardından **proje**.  
+2. Üzerinde **dosya** menüsünde **yeni** ve ardından **proje**.  
   
-3.  İçinde **yeni proje** iletişim kutusundaki **proje türleri** bölmesinde emin olun **Windows** seçilir. Seçin **konsol uygulaması** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `DynamicSample`ve ardından **Tamam**. Yeni Proje oluşturulur.  
+3. İçinde **yeni proje** iletişim kutusundaki **proje türleri** bölmesinde emin olun **Windows** seçilir. Seçin **konsol uygulaması** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `DynamicSample`ve ardından **Tamam**. Yeni Proje oluşturulur.  
   
-4.  DynamicSample projeye sağ tıklayın ve fareyle **Ekle**ve ardından **sınıfı**. İçinde **adı** kutusuna `ReadOnlyFile`ve ardından **Tamam**. Yeni bir dosya ReadOnlyFile sınıfı içeren eklenir.  
+4. DynamicSample projeye sağ tıklayın ve fareyle **Ekle**ve ardından **sınıfı**. İçinde **adı** kutusuna `ReadOnlyFile`ve ardından **Tamam**. Yeni bir dosya ReadOnlyFile sınıfı içeren eklenir.  
   
-5.  İçeri aktarmak için aşağıdaki kodu ReadOnlyFile.cs veya ReadOnlyFile.vb dosyasının en üstüne ekleyin <xref:System.IO?displayProperty=nameWithType> ve <xref:System.Dynamic?displayProperty=nameWithType> ad alanları.  
+5. İçeri aktarmak için aşağıdaki kodu ReadOnlyFile.cs veya ReadOnlyFile.vb dosyasının en üstüne ekleyin <xref:System.IO?displayProperty=nameWithType> ve <xref:System.Dynamic?displayProperty=nameWithType> ad alanları.  
 
     [!code-csharp[VbDynamicWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#1)]
     [!code-vb[VbDynamicWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#1)]  
 
-6.  Özel dinamik Nesne enum arama kriterlerini belirlemek için kullanır. Class deyimi önce aşağıdaki liste tanımını ekleyin.  
+6. Özel dinamik Nesne enum arama kriterlerini belirlemek için kullanır. Class deyimi önce aşağıdaki liste tanımını ekleyin.  
   
     [!code-csharp[VbDynamicWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#2)]
     [!code-vb[VbDynamicWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#2)]
   
-7.  Güncelleştirme devralmak için sınıf bildirimi `DynamicObject` , aşağıdaki kod örneğinde gösterildiği gibi sınıf.  
+7. Güncelleştirme devralmak için sınıf bildirimi `DynamicObject` , aşağıdaki kod örneğinde gösterildiği gibi sınıf.  
   
     [!code-csharp[VbDynamicWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#3)]
     [!code-vb[VbDynamicWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#3)]
 
-8.  Aşağıdaki kodu ekleyin `ReadOnlyFile` dosya yolu için özel bir alan ve için bir kurucu tanımlamak için sınıf `ReadOnlyFile` sınıfı.  
+8. Aşağıdaki kodu ekleyin `ReadOnlyFile` dosya yolu için özel bir alan ve için bir kurucu tanımlamak için sınıf `ReadOnlyFile` sınıfı.  
   
     [!code-csharp[VbDynamicWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#4)]
     [!code-vb[VbDynamicWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#4)]
@@ -93,9 +93,9 @@ Bu anlatımda oluşturduğunuz ilk proje, bir metin dosyasının içeriğini ara
   
 #### <a name="to-create-a-sample-text-file"></a>Örnek metin dosyası oluşturmak için  
   
-1.  DynamicSample projeye sağ tıklayın ve fareyle **Ekle**ve ardından **yeni öğe**. İçinde **yüklü şablonlar** bölmesinde **genel**ve ardından **metin dosyası** şablonu. İçinde TextFile1.txt varsayılan adı bırakın **adı** kutusuna ve ardından **Ekle**. Yeni bir metin dosyası projeye eklenir.  
+1. DynamicSample projeye sağ tıklayın ve fareyle **Ekle**ve ardından **yeni öğe**. İçinde **yüklü şablonlar** bölmesinde **genel**ve ardından **metin dosyası** şablonu. İçinde TextFile1.txt varsayılan adı bırakın **adı** kutusuna ve ardından **Ekle**. Yeni bir metin dosyası projeye eklenir.  
   
-2.  Aşağıdaki metni TextFile1.txt dosyasına kopyalayın.  
+2. Aşağıdaki metni TextFile1.txt dosyasına kopyalayın.  
   
     ```  
     List of customers and suppliers  
@@ -112,18 +112,18 @@ Bu anlatımda oluşturduğunuz ilk proje, bir metin dosyasının içeriğini ara
     Customer: Koch, Paul  
     ```  
   
-3.  Dosyayı kaydedin ve kapatın.  
+3. Dosyayı kaydedin ve kapatın.  
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>Özel dinamik Nesne kullanan örnek bir uygulama oluşturmak için  
   
-1.  İçinde **Çözüm Gezgini**, Visual C# kullanıyorsanız Program.cs dosyasını ya da Visual Basic kullanıyorsanız Module1.vb dosyasını çift tıklatın.  
+1. İçinde **Çözüm Gezgini**, Visual C# kullanıyorsanız Program.cs dosyasını ya da Visual Basic kullanıyorsanız Module1.vb dosyasını çift tıklatın.  
   
-2.  Main yordamı için bir örneğini oluşturmak için aşağıdaki kodu ekleyin `ReadOnlyFile` TextFile1.txt dosya için sınıf. Kod geç bağlama dinamik üyeleri çağırır ve "Müşteri" dizesini içeren metin satırı almak için kullanır.  
+2. Main yordamı için bir örneğini oluşturmak için aşağıdaki kodu ekleyin `ReadOnlyFile` TextFile1.txt dosya için sınıf. Kod geç bağlama dinamik üyeleri çağırır ve "Müşteri" dizesini içeren metin satırı almak için kullanır.  
   
      [!code-csharp[VbDynamicWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/program.cs#8)]
      [!code-vb[VbDynamicWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/module1.vb#8)]
   
-3.  Dosyayı kaydedin ve oluşturmak ve uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın.  
+3. Dosyayı kaydedin ve oluşturmak ve uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 ## <a name="calling-a-dynamic-language-library"></a>Dinamik Dil kitaplığı çağırma  
 
@@ -131,27 +131,27 @@ Bu anlatımda oluşturduğunuz projenin sonraki IronPython dinamik dilinde yazı
   
 ### <a name="to-create-a-custom-dynamic-class"></a>Dinamik özel bir sınıf oluşturmak için
   
-1.  Visual Studio'da üzerinde **dosya** menüsünde **yeni** ve ardından **proje**.  
+1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** ve ardından **proje**.  
   
-2.  İçinde **yeni proje** iletişim kutusundaki **proje türleri** bölmesinde emin olun **Windows** seçilir. Seçin **konsol uygulaması** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `DynamicIronPythonSample`ve ardından **Tamam**. Yeni Proje oluşturulur.  
+2. İçinde **yeni proje** iletişim kutusundaki **proje türleri** bölmesinde emin olun **Windows** seçilir. Seçin **konsol uygulaması** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `DynamicIronPythonSample`ve ardından **Tamam**. Yeni Proje oluşturulur.  
   
-3.  Visual Basic kullanıyorsanız, DynamicIronPythonSample projeye sağ tıklayın ve ardından **özellikleri**. Tıklayın **başvuruları** sekmesi. **Ekle** düğmesine tıklayın. Visual C# içinde kullanıyorsanız **Çözüm Gezgini**, sağ **başvuruları** klasörünü ve ardından **Başvuru Ekle**.  
+3. Visual Basic kullanıyorsanız, DynamicIronPythonSample projeye sağ tıklayın ve ardından **özellikleri**. Tıklayın **başvuruları** sekmesi. **Ekle** düğmesine tıklayın. Visual C# içinde kullanıyorsanız **Çözüm Gezgini**, sağ **başvuruları** klasörünü ve ardından **Başvuru Ekle**.  
   
-4.  Üzerinde **Gözat** sekmesinde, IronPython kitaplıkları yüklü olduğu klasöre göz atın. C:\Program Files\IronPython 2.6 .NET 4.0 gibi. Seçin **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll**, ve **Microsoft.Dynamic.dll** kitaplıkları . **Tamam**'ı tıklatın.  
+4. Üzerinde **Gözat** sekmesinde, IronPython kitaplıkları yüklü olduğu klasöre göz atın. C:\Program Files\IronPython 2.6 .NET 4.0 gibi. Seçin **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll**, ve **Microsoft.Dynamic.dll** kitaplıkları . **Tamam**'ı tıklatın.  
   
-5.  Visual Basic kullanıyorsanız, Module1.vb dosyasını düzenleyin. Visual C# kullanıyorsanız Program.cs dosyasını düzenleyin.  
+5. Visual Basic kullanıyorsanız, Module1.vb dosyasını düzenleyin. Visual C# kullanıyorsanız Program.cs dosyasını düzenleyin.  
   
-6.  İçeri aktarmak için aşağıdaki kod dosyasının en üstüne ekleyin `Microsoft.Scripting.Hosting` ve `IronPython.Hosting` IronPython kitaplıklarından ad alanları.  
+6. İçeri aktarmak için aşağıdaki kod dosyasının en üstüne ekleyin `Microsoft.Scripting.Hosting` ve `IronPython.Hosting` IronPython kitaplıklarından ad alanları.  
   
     [!code-csharp[VbDynamicWalkthroughIronPython#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#1)]
     [!code-vb[VbDynamicWalkthroughIronPython#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#1)]
   
-7.  Ana yöntemde yeni oluşturmak için aşağıdaki kodu ekleyin `Microsoft.Scripting.Hosting.ScriptRuntime` IronPython kitaplıkları barındırmak için nesne. `ScriptRuntime` Nesne IronPython kitaplık modülü random.py yükler.  
+7. Ana yöntemde yeni oluşturmak için aşağıdaki kodu ekleyin `Microsoft.Scripting.Hosting.ScriptRuntime` IronPython kitaplıkları barındırmak için nesne. `ScriptRuntime` Nesne IronPython kitaplık modülü random.py yükler.  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#2)]
      [!code-vb[VbDynamicWalkthroughIronPython#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#2)]
   
-8.  Random.py modülünü yüklemek için koddan sonra tamsayı dizisi oluşturmak için aşağıdaki kodu ekleyin. Dizi geçirilir `shuffle` yöntemi dizideki değerleri rastgele sıralar random.py modülü.  
+8. Random.py modülünü yüklemek için koddan sonra tamsayı dizisi oluşturmak için aşağıdaki kodu ekleyin. Dizi geçirilir `shuffle` yöntemi dizideki değerleri rastgele sıralar random.py modülü.  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#3)]
      [!code-vb[VbDynamicWalkthroughIronPython#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#3)]
@@ -164,5 +164,5 @@ Bu anlatımda oluşturduğunuz projenin sonraki IronPython dinamik dilinde yazı
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
 - [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)
 - [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [dinamik](../../../csharp/language-reference/keywords/dynamic.md)
 - [Dinamik arabirimleri (Microsoft TechNet indirilebilir PDF) uygulama](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

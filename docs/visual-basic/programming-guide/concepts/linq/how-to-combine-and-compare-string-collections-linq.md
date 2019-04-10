@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: Birleştirme ve karşılaştırma (LINQ) (Visual Basic) dize koleksiyonları'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: efd8ebdcc12c2941753b6811028d73655167c2f9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341276"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Nasıl yapılır: Birleştirme ve karşılaştırma (LINQ) (Visual Basic) dize koleksiyonları
 Bu örnekte, satırlık metin içeren ve ardından sonuçları sıralamak dosyaları birleştirme gösterilmektedir. Özellikle, basit bir birleştirme, bir birleşim ve kesişim metin satırlarını iki kümelerinde gerçekleştirme gösterir.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Proje ve metin dosyaları ayarlamak için  
   
-1.  Bu adlar names1.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin:  
+1. Bu adlar names1.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Bu örnekte, satırlık metin içeren ve ardından sonuçları sıralamak dosyal
     Garcia, Debra  
     ```  
   
-2.  Bu adlar names2.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin. İki dosyayı bazı adları ortak gerektiğini unutmayın.  
+2. Bu adlar names2.txt adlı bir metin dosyasına kopyalayabilir ve proje klasörünüze kaydedin. İki dosyayı bazı adları ortak gerektiğini unutmayın.  
   
     ```  
     Liu, Jinghao  

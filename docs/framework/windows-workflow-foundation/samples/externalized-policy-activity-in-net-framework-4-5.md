@@ -1,15 +1,15 @@
 ---
-title: .NET Framework 4.5 te dış ilke etkinliği
+title: .NET Framework 4.5’te Dış İlke Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706383"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338286"
 ---
-# <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 te dış ilke etkinliği
+# <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5’te Dış İlke Etkinliği
 
 Bu örnek, varolan yürütme ExternalizedPolicy4 etkinlik nasıl imkan gösterir [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> nesneler [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow kurallar altyapısı kullanarak doğrudan Foundation (WF 4.5) WF 3. 5 ', birlikte gönderilir. Bu etkinlik kullanarak açın ve tüm mevcut WF 3.5 yürütme <xref:System.Workflow.Activities.Rules.RuleSet>. WF 3.5 kural Windows Workflow Foundation bir parçası olarak dahil edilen altyapısı hakkında daha fazla bilgi için lütfen okuyun [Windows Workflow Foundation kurallar altyapısı giriş](https://go.microsoft.com/fwlink/?LinkId=166079). Geçiş hakkında daha fazla bilgi için kurallar [!INCLUDE[wf1](../../../../includes/wf1-md.md)] içinde [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], adresindeki geçiş rehberini okuyun [geçiş kılavuzuna](../migration-guidance.md).
 
@@ -66,21 +66,21 @@ Bu örnek, iki istemci uygulamalarını içerir: ImperativeCodeClientSample ve D
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>ImperativeCodeClientSample uygulamayı çalıştırın
 
-1.  Visual Studio kullanarak açma *Policy4sample.sln* çözüm dosyası.
+1. Visual Studio kullanarak açma *Policy4sample.sln* çözüm dosyası.
 
-2.  İçinde **Çözüm Gezgini**, sağ **ImperativeCodeClientSample** proje ve ardından **başlangıç projesi olarak ayarla**.
+2. İçinde **Çözüm Gezgini**, sağ **ImperativeCodeClientSample** proje ve ardından **başlangıç projesi olarak ayarla**.
 
-3.  Projeyi çalıştırmak için basın **Ctrl**+**F5**.
+3. Projeyi çalıştırmak için basın **Ctrl**+**F5**.
 
 ### <a name="run-the-designerclientsample-application"></a>DesignerClientSample uygulamayı çalıştırın
 
-1.  Visual Studio kullanarak açma *Policy4sample.sln* çözüm dosyası.
+1. Visual Studio kullanarak açma *Policy4sample.sln* çözüm dosyası.
 
-2.  İçinde **Çözüm Gezgini**, sağ **DesignerClientSample** proje ve ardından **başlangıç projesi olarak ayarla**.
+2. İçinde **Çözüm Gezgini**, sağ **DesignerClientSample** proje ve ardından **başlangıç projesi olarak ayarla**.
 
-3.  Tuşuna **Ctrl**+**Shift**+**B** Projeyi derlemek için.
+3. Tuşuna **Ctrl**+**Shift**+**B** Projeyi derlemek için.
 
-4.  Tuşuna **Ctrl**+**F5** projeyi çalıştırın.
+4. Tuşuna **Ctrl**+**F5** projeyi çalıştırın.
 
 > [!IMPORTANT]
 > Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.

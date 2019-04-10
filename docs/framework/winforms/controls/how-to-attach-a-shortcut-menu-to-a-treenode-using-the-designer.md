@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], attaching to TreeNodes
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
-ms.openlocfilehash: 1cc90ed9a103c41dbf85e39a43d307b1c0422603
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9be633d14429bc2ceda1f0db2ff09252d55d5dd5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191456"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337454"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak bir TreeNode Öğesine Kısayol Menüsü Ekleme
 Windows Forms <xref:System.Windows.Forms.TreeView> denetimi düğümleri, Windows işletim sistemlerinde Windows Explorer özelliğinin sol bölmede görüntülenen klasörleri ve dosyaları benzer hiyerarşisini görüntüler. Ayarlayarak <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> özelliği sağlayabileceğiniz bağlama duyarlı işlemler kullanıcıya bunlar sağ tıkladığınızda <xref:System.Windows.Forms.TreeView> denetimi. İlişkilendirerek bir <xref:System.Windows.Forms.ContextMenuStrip> tek bileşeniyle <xref:System.Windows.Forms.TreeNode> öğeleri, özelleştirilmiş bir kısayol menüsü işlevsellik düzeyini ekleyebilirsiniz, <xref:System.Windows.Forms.TreeView> kontrol eder.  
@@ -20,13 +20,13 @@ Windows Forms <xref:System.Windows.Forms.TreeView> denetimi düğümleri, Window
   
 ### <a name="to-associate-a-shortcut-menu-with-a-treenode-at-design-time"></a>Bir kısayol menü tasarım zamanında bir TreeNode ile ilişkilendirmek için  
   
-1.  Ekleme bir <xref:System.Windows.Forms.TreeView> Formunuza denetim ve ardından düğüm ekleme <xref:System.Windows.Forms.TreeView> gerektiğinde. Daha fazla bilgi için [nasıl yapılır: Ekle ve Kaldır düğümleri ile Windows Forms TreeView denetimi](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md).  
+1. Ekleme bir <xref:System.Windows.Forms.TreeView> Formunuza denetim ve ardından düğüm ekleme <xref:System.Windows.Forms.TreeView> gerektiğinde. Daha fazla bilgi için [nasıl yapılır: Ekle ve Kaldır düğümleri ile Windows Forms TreeView denetimi](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md).  
   
-2.  Ekleme bir <xref:System.Windows.Forms.ContextMenuStrip> formunuza, bileşen ve çalışma zamanında kullanılabilir hale getirmek istediğiniz nodu düzeyinde işlemleri temsil etmekte kısayol menüsünü menü öğeleri ekleyin. Daha fazla bilgi için [nasıl yapılır: Bir Contextmenustrip'e menü öğeleri ekleme](how-to-add-menu-items-to-a-contextmenustrip.md).  
+2. Ekleme bir <xref:System.Windows.Forms.ContextMenuStrip> formunuza, bileşen ve çalışma zamanında kullanılabilir hale getirmek istediğiniz nodu düzeyinde işlemleri temsil etmekte kısayol menüsünü menü öğeleri ekleyin. Daha fazla bilgi için [nasıl yapılır: Bir Contextmenustrip'e menü öğeleri ekleme](how-to-add-menu-items-to-a-contextmenustrip.md).  
   
-3.  Yeniden **TreeNodeEditor** iletişim kutusu için <xref:System.Windows.Forms.TreeView> denetleme, düzenleme ve ayarlamak için düğümü seçin, <xref:System.Windows.Forms.ContextMenuStrip> özelliğini, eklediğiniz kısayol menüsü.  
+3. Yeniden **TreeNodeEditor** iletişim kutusu için <xref:System.Windows.Forms.TreeView> denetleme, düzenleme ve ayarlamak için düğümü seçin, <xref:System.Windows.Forms.ContextMenuStrip> özelliğini, eklediğiniz kısayol menüsü.  
   
-4.  Bu özelliği ayarlandığında, düğümüne sağ tıklayın, kısayol menüsünde görüntülenir.  
+4. Bu özelliği ayarlandığında, düğümüne sağ tıklayın, kısayol menüsünde görüntülenir.  
   
      Ayrıca, işlemek üzere kod yazmak isteyeceksiniz <xref:System.Windows.Forms.ToolStripItem.Click> bu menü öğeleri için olayları.  
   

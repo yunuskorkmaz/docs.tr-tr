@@ -1,15 +1,15 @@
 ---
-title: Native etkinliği kullanan özel bileşik
+title: Native Etkinliği Kullanan Özel Bileşik
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: 4d7cd64d5a7d581a81d10c39638b63f1f6787570
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 41a823ab00a2be0772a07b15d1292dbb4e8d1a6b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840462"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340301"
 ---
-# <a name="custom-composite-using-native-activity"></a>Native etkinliği kullanan özel bileşik
+# <a name="custom-composite-using-native-activity"></a>Native Etkinliği Kullanan Özel Bileşik
 Bu örnek nasıl yazılacağını gösterir. bir <xref:System.Activities.NativeActivity> diğer zamanlayan <xref:System.Activities.Activity> nesneleri, bir iş akışının yürütmenin akışını denetlemek için. Bu örnek iki ortak denetim akışı kullanan sıra ve çalışırken, bunun nasıl yapılacağını göstermek için.
 
 ## <a name="sample-details"></a>Örnek Ayrıntıları
@@ -25,13 +25,13 @@ Bu örnek nasıl yazılacağını gösterir. bir <xref:System.Activities.NativeA
 
  Alt etkinlik tamamlandığında <xref:System.Activities.CompletionCallback> yürütülür. Döngü En üstten devam eder. Gibi `Execute`, <xref:System.Activities.CompletionCallback> alır bir <xref:System.Activities.NativeActivityContext>, çalışma zamanına uygulayan erişim sağlar.
 
- `MyWhile` farklıdır `MySequence` içeren tek bir zamanlar <xref:System.Activities.Activity> sürekli olarak nesne ve kullanan bir <xref:System.Activities.Activity%601>< bool\> adlı `Condition` Bu zamanlama gerçekleşip gerçekleşmediğini belirleme. Gibi `MySequence`, `MyWhile` kullanan bir `InternalExecute` zamanlama mantığını merkezileştirmek için yöntemi. Bu zamanlamaları `Condition` <xref:System.Activities.Activity>< bool\> ile bir <xref:System.Activities.CompletionCallback%601> \<bool > adlı `OnEvaluationCompleted`. Zaman yürütülmesini `Condition` olan tamamlandı, sonuç bu kullanılabilir duruma <xref:System.Activities.CompletionCallback> adlı kesin türü belirtilmiş bir parametre içinde `result`. Varsa `true`, `MyWhile` çağrıları <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, içinde geçen `Body` <xref:System.Activities.Activity> nesne ve `InternalExecute` olarak <xref:System.Activities.CompletionCallback>. Zaman yürütülmesini `Body` tamamlanır `Condition` yeniden zamanlanmış `InternalExecute`, döngü yeniden başlatılıyor. Zaman `Condition` döndürür `false`, örneği `MyWhile` verir denetimi yeniden çalışma zamanı zamanlama olmadan `Body` ve çalışma zamanı taşır <xref:System.Activities.ActivityInstanceState.Closed> durumu.
+ `MyWhile` farklıdır `MySequence` içeren tek bir zamanlar <xref:System.Activities.Activity> sürekli olarak nesne ve kullanan bir <xref:System.Activities.Activity%601>< bool\> adlı `Condition` Bu zamanlama gerçekleşip gerçekleşmediğini belirleme. Gibi `MySequence`, `MyWhile` kullanan bir `InternalExecute` zamanlama mantığını merkezileştirmek için yöntemi. Bu zamanlamaları `Condition`<xref:System.Activities.Activity>< bool\> ile bir <xref:System.Activities.CompletionCallback%601> \<bool > adlı `OnEvaluationCompleted`. Zaman yürütülmesini `Condition` olan tamamlandı, sonuç bu kullanılabilir duruma <xref:System.Activities.CompletionCallback> adlı kesin türü belirtilmiş bir parametre içinde `result`. Varsa `true`, `MyWhile` çağrıları <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, içinde geçen `Body`<xref:System.Activities.Activity> nesne ve `InternalExecute` olarak <xref:System.Activities.CompletionCallback>. Zaman yürütülmesini `Body` tamamlanır `Condition` yeniden zamanlanmış `InternalExecute`, döngü yeniden başlatılıyor. Zaman `Condition` döndürür `false`, örneği `MyWhile` verir denetimi yeniden çalışma zamanı zamanlama olmadan `Body` ve çalışma zamanı taşır <xref:System.Activities.ActivityInstanceState.Closed> durumu.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
 
-1.  Composite.sln örnek çözüm, Visual Studio 2010'da açın.
+1. Composite.sln örnek çözüm, Visual Studio 2010'da açın.
 
-2.  Derleme ve çözümü çalıştırın.
+2. Derleme ve çözümü çalıştırın.
 
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

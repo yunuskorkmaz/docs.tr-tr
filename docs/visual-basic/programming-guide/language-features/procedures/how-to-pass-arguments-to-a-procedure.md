@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974399"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333918"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Nasıl yapılır: Bağımsız değişkenleri geçirmek yordamına (Visual Basic)
 Bir yordamı çağırdığınızda, parantez içinde bir bağımsız değişken listesiyle yordam adı izleyin. Yordamı tanımlar için gerekli her parametre karşılık gelen bir bağımsız değişken sağlayın ve isteğe bağlı bağımsız değişkenler sağlayabilirsiniz `Optional` parametreleri. Sağladığınız değil, bir `Optional` çağrı parametresi, sağladığınız sonraki herhangi bir bağımsız değişken, bunun yerine bağımsız değişken listesinde işaretlemek için virgül içermesi gerekir.  
@@ -27,15 +27,15 @@ Bir yordamı çağırdığınızda, parantez içinde bir bağımsız değişken 
   
 ### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>Bir yordam için bir veya daha fazla bağımsız değişkenleri geçirmek için  
   
-1.  Arama deyiminde parantezler yordamın adıyla izleyin.  
+1. Arama deyiminde parantezler yordamın adıyla izleyin.  
   
-2.  Parantez içinde bir bağımsız değişken listesi yerleştirin. Yordamı tanımlar her gerekli parametre için bir bağımsız değişken içerir ve bağımsız değişkenlerin virgülle ayırın.  
+2. Parantez içinde bir bağımsız değişken listesi yerleştirin. Yordamı tanımlar her gerekli parametre için bir bağımsız değişken içerir ve bağımsız değişkenlerin virgülle ayırın.  
   
-3.  Her değişken için karşılık gelen parametre veri öğesine dönüştürülebilir bir türün yordamı türü olarak değerlendirilen bir geçerli ifade tanımlar olduğundan emin olun.  
+3. Her değişken için karşılık gelen parametre veri öğesine dönüştürülebilir bir türün yordamı türü olarak değerlendirilen bir geçerli ifade tanımlar olduğundan emin olun.  
   
-4.  Bir parametre olarak tanımlanmışsa [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md), bağımsız değişken listesinde içerebilir veya atlayın. Atlarsanız, yordam Bu parametre için tanımlanan varsayılan değeri kullanır.  
+4. Bir parametre olarak tanımlanmışsa [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md), bağımsız değişken listesinde içerebilir veya atlayın. Atlarsanız, yordam Bu parametre için tanımlanan varsayılan değeri kullanır.  
   
-5.  Bir bağımsız değişken atlarsanız bir `Optional` parametresi ve başka bir parametre sonra parametre listesinde, bir atlanmış bağımsız değişkeni yerine, bağımsız değişken listesinde fazladan bir virgül tarafından işaretleyebilirsiniz.  
+5. Bir bağımsız değişken atlarsanız bir `Optional` parametresi ve başka bir parametre sonra parametre listesinde, bir atlanmış bağımsız değişkeni yerine, bağımsız değişken listesinde fazladan bir virgül tarafından işaretleyebilirsiniz.  
   
      Aşağıdaki örnek, Visual Basic çağırır <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> işlevi.  
   
@@ -51,7 +51,7 @@ Bir yordamı çağırdığınızda, parantez içinde bir bağımsız değişken 
 - [İşlev Yordamları](./function-procedures.md)
 - [Özellik Yordamları](./property-procedures.md)
 - [İşleç Yordamları](./operator-procedures.md)
-- [Nasıl yapılır: Bir yordamın parametresini tanımlama](./how-to-define-a-parameter-for-a-procedure.md)
+- [Nasıl yapılır: Bir Yordamın Parametresini Tanımlama](./how-to-define-a-parameter-for-a-procedure.md)
 - [Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme](./passing-arguments-by-value-and-by-reference.md)
 - [Özyinelemeli Yordamlar](./recursive-procedures.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)

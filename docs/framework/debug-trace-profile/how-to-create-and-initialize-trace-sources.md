@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 346fb3399993246eb8d90f7fa900ab382ae12c71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194896"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339443"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma
 <xref:System.Diagnostics.TraceSource> Sınıfı uygulamalar tarafından uygulamayla ilişkilendirilebilecek izlemeler üretmek için kullanılır. <xref:System.Diagnostics.TraceSource> kolayca izleme olayları, izleme verilerini ve sorunu bilgilendirme izlemeleri izin veren izleme yöntemleri sağlar. İşlevinin İzleme çıktısı <xref:System.Diagnostics.TraceSource> oluşturulabilir ve ile veya yapılandırma dosyalarının kullanımını olmadan başlatıldı. Bu konu, her iki seçenek için yönergeler sağlar. Ancak, çalışma zamanında iz kaynakları tarafından üretilen İzlerin yeniden yapılandırılmasını kolaylaştırmak amacıyla yapılandırma dosyalarını kullanmanızı öneririz.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Oluşturma ve yapılandırma dosyası kullanarak bir iz kaynağını başlatmak için  
   
-1.  Visual Studio konsol uygulama projesi oluşturun ve sağlanan kodu aşağıdaki kodla değiştirin. Bu kod hataları ve uyarıları günlüğe kaydeder ve bunları konsola bazıları ve bunların bazılarını konsola yapılandırma dosyasındaki girişler tarafından oluşturulan myListener dosyasına çıkarır.  
+1. Visual Studio konsol uygulama projesi oluşturun ve sağlanan kodu aşağıdaki kodla değiştirin. Bu kod hataları ve uyarıları günlüğe kaydeder ve bunları konsola bazıları ve bunların bazılarını konsola yapılandırma dosyasındaki girişler tarafından oluşturulan myListener dosyasına çıkarır.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
-2.  Bir projeye adındaki iz kaynağını başlatmak için mevcut değilse bir uygulama yapılandırma dosyası ekleme `TraceSourceApp` , 1. adımdaki kod örneğinde.  
+2. Bir projeye adındaki iz kaynağını başlatmak için mevcut değilse bir uygulama yapılandırma dosyası ekleme `TraceSourceApp` , 1. adımdaki kod örneğinde.  
   
-3.  Varsayılan yapılandırma dosyasının içeriği bir konsol iz dinleyicisi ve 1. adımda oluşturulan iz kaynağı için bir metin yazıcı İzleme dinleyicisi başlatmak için aşağıdaki ayarları değiştirin.  
+3. Varsayılan yapılandırma dosyasının içeriği bir konsol iz dinleyicisi ve 1. adımda oluşturulan iz kaynağı için bir metin yazıcı İzleme dinleyicisi başlatmak için aşağıdaki ayarları değiştirin.  
   
     ```xml  
     <configuration>  

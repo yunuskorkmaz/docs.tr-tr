@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 3ce7bbc0dfccfda7a25dfecf32e93876ddde01f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188298"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341731"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Önizleme 2) yenilikler
 
@@ -70,8 +70,8 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 İmkanına yanı sıra `await foreach`, zaman uyumsuz yineleyiciler, örneğin, döndüren bir yineleyicinin oluşturabilirsiniz bir `IAsyncEnumerable/IAsyncEnumerator` her ikisini yapabilirsiniz `await` ve `yield` içinde. Çıkarılması gereken nesneler için kullanabileceğiniz `IAsyncDisposable`, çeşitli BCL türleri uygulayan, gibi `Stream` ve `Timer`.
 
->[!NOTE]
->Visual Studio 2019 Önizleme 2 veya en son önizlemesi ile geliştirmek istiyorsanız, zaman uyumsuz akışlar kullanmak için .NET Core 3.0 Önizleme 2 ihtiyacınız [ C# Visual Studio Code uzantısı](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5). Komut satırından .NET Core 3.0 Önizleme 2 kullanıyorsanız, daha sonra her şeyin beklendiği gibi çalışır.
+> [!NOTE]
+> Zaman uyumsuz akışlar ile ya da Visual Studio 2019 geliştirmek istiyorsanız kullanmak için .NET Core 3.0 Önizleme 2 veya en son önizlemesi ihtiyacınız [ C# Visual Studio Code uzantısı](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5). Komut satırından .NET Core 3.0 Önizleme 2 kullanıyorsanız, daha sonra her şeyin beklendiği gibi çalışır.
 
 ### <a name="using-declarations"></a>Bildirimi kullanarak
 
@@ -267,7 +267,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 Önizleme 2 ekler **yeni proje** .NET Core 3.0, Windows Forms ve WPF şablonları. Tasarımcılar henüz yine de desteklenir. Ve açmak, başlatmak ve Visual Studio 2019 bu projelerde hata ayıklama.
+Visual Studio 2019 ekler **yeni proje** .NET Core 3.0, Windows Forms ve WPF şablonları. Tasarımcılar henüz yine de desteklenir. Ve açmak, başlatmak ve Visual Studio 2019 bu projelerde hata ayıklama.
 
 Visual Studio 2017 15.9 yeteneği ekler [.NET Core önizlemelerini etkinleştir](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/), ancak bu özelliği etkinleştirmek gereken ve desteklenen bir senaryo değildir.
 
@@ -307,7 +307,7 @@ Geri bildiriminizi Lütfen paylaşım [dotnet/winforms](https://github.com/dotne
 
 [MSIX](https://docs.microsoft.com/windows/msix/) yeni bir Windows uygulama paketi biçimi. .NET Core 3.0 Windows 10 Masaüstü uygulamaları dağıtmak için kullanılabilir.
 
-[Windows uygulaması paketleme projesi](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), Visual Studio 2019 Preview 2 sürümündeki kullanılabilir MSIX paketlerle oluşturmanıza olanak tanır [müstakil](../deploying/index.md#self-contained-deployments-scd) .NET Core uygulamaları.
+[Windows uygulaması paketleme projesi](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), Visual Studio 2019 bulunan MSIX paketlerle oluşturmanıza olanak tanır [müstakil](../deploying/index.md#self-contained-deployments-scd) .NET Core uygulamaları.
 
 >Not: .NET Core proje dosyası içinde desteklenen çalışma zamanları belirtmelisiniz `<RuntimeIdentifiers>` özelliği:
 ```xml

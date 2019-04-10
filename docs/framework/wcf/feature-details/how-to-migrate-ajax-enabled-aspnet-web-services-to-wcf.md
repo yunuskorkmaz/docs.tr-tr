@@ -2,12 +2,12 @@
 title: "Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma"
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143006"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337428"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma
 Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Windows Communication Foundation (WCF) hizmetine geçirme yordamları özetler. Bu, bir ASP.NET AJAX Hizmeti işlevsel olarak eşdeğer bir WCF sürümü oluşturma işlemini gösterir. İki hizmeti daha sonra bir yan yana kullanılabilir veya WCF hizmetini ASP.NET AJAX hizmeti değiştirmek için kullanılabilir.
@@ -26,21 +26,21 @@ Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Wi
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Oluşturma ve ASP.NET Web hizmeti uygulamasını test etmek için
 
-1.  Visual Studio 2012'yi açın.
+1. Visual Studio 2012'yi açın.
 
-2.  Gelen **dosya** menüsünde **yeni**, ardından **proje**, ardından **Web**ve ardından **ASP.NET Web hizmeti uygulaması** .
+2. Gelen **dosya** menüsünde **yeni**, ardından **proje**, ardından **Web**ve ardından **ASP.NET Web hizmeti uygulaması** .
 
-3.  Projeyi adlandırın `ASPHello` tıklatıp **Tamam**.
+3. Projeyi adlandırın `ASPHello` tıklatıp **Tamam**.
 
-4.  Service1.asmx.cs dosyasındaki içeren satırı açıklamadan çıkarın `System.Web.Script.Services.ScriptService]` bu hizmet için AJAX etkinleştirmek için.
+4. Service1.asmx.cs dosyasındaki içeren satırı açıklamadan çıkarın `System.Web.Script.Services.ScriptService]` bu hizmet için AJAX etkinleştirmek için.
 
-5.  Gelen **derleme** menüsünde **Çözümü Derle**.
+5. Gelen **derleme** menüsünde **Çözümü Derle**.
 
-6.  Gelen **hata ayıklama** menüsünde **hata ayıklama olmadan Başlat**.
+6. Gelen **hata ayıklama** menüsünde **hata ayıklama olmadan Başlat**.
 
-7.  Oluşturulan Web sayfası üzerinde seçmek `HelloWorld` işlemi.
+7. Oluşturulan Web sayfası üzerinde seçmek `HelloWorld` işlemi.
 
-8.  Tıklayın **Invoke** düğmesini `HelloWorld` test sayfası. Aşağıdaki XML yanıtı almanız gerekir.
+8. Tıklayın **Invoke** düğmesini `HelloWorld` test sayfası. Aşağıdaki XML yanıtı almanız gerekir.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,13 +53,13 @@ Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Wi
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Eşdeğer bir AJAX WCF hizmet uygulaması oluşturmak için
 
-1.  Sağ **ASPHello** seçin ve proje **Ekle**, ardından **yeni öğe**, ardından **AJAX özellikli bir WCF Hizmeti**.
+1. Sağ **ASPHello** seçin ve proje **Ekle**, ardından **yeni öğe**, ardından **AJAX özellikli bir WCF Hizmeti**.
 
-2.  Hizmet adı `WCFHello` tıklatıp **Ekle**.
+2. Hizmet adı `WCFHello` tıklatıp **Ekle**.
 
-3.  WCFHello.svc.cs dosyasını açın.
+3. WCFHello.svc.cs dosyasını açın.
 
-4.  Aşağıdaki uygulamasını service1.asmx.cs kopyalayın `HelloWorld` işlemi.
+4. Aşağıdaki uygulamasını service1.asmx.cs kopyalayın `HelloWorld` işlemi.
 
     ```
     public string HelloWorld()
@@ -68,7 +68,7 @@ Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Wi
     }
     ```
 
-5.  Kopyalanan uygulaması Yapıştır `HelloWorld` WCFHello.svc.cs dosyasına aşağıdaki kodu yerine işlemi.
+5. Kopyalanan uygulaması Yapıştır `HelloWorld` WCFHello.svc.cs dosyasına aşağıdaki kodu yerine işlemi.
 
     ```
     public void DoWork()
@@ -78,7 +78,7 @@ Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Wi
     }
     ```
 
-6.  Belirtin `Namespace` özniteliğini <xref:System.ServiceModel.ServiceContractAttribute> olarak `WCFHello`.
+6. Belirtin `Namespace` özniteliğini <xref:System.ServiceModel.ServiceContractAttribute> olarak `WCFHello`.
 
     ```
     [ServiceContract(Namespace="WCFHello")]
@@ -87,7 +87,7 @@ Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Wi
     { … }
     ```
 
-7.  Ekleme <xref:System.ServiceModel.Web.WebInvokeAttribute> için `HelloWorld` işlemi ve kümesi <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> dönmesini <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Ayarlanırsa, dönüş türü varsayılan değilse unutmayın <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
+7. Ekleme <xref:System.ServiceModel.Web.WebInvokeAttribute> için `HelloWorld` işlemi ve kümesi <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> dönmesini <xref:System.ServiceModel.Web.WebMessageFormat.Xml>. Ayarlanırsa, dönüş türü varsayılan değilse unutmayın <xref:System.ServiceModel.Web.WebMessageFormat.Json>.
 
     ```
     [OperationContract]
@@ -98,7 +98,7 @@ Bu konu, temel bir ASP.NET AJAX hizmeti eşdeğer bir AJAX etkinleştirilmiş Wi
     }
     ```
 
-8.  Gelen **derleme** menüsünde **Çözümü Derle**.
+8. Gelen **derleme** menüsünde **Çözümü Derle**.
 
 9. WCFHello.svc dosyasını açın ve **hata ayıklama** menüsünde **hata ayıklama olmadan Başlat**.
 

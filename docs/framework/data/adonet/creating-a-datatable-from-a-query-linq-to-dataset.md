@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342537"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>(LINQ to DataSet) sorgudan DataTable oluşturma
 Veri bağlama yaygın olan <xref:System.Data.DataTable> nesne. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi sorgunun sonuçlarını alır ve verileri kopyalayan bir <xref:System.Data.DataTable>, ardından kullanılabileceği için veri bağlama. Ne zaman veri işlemleri gerçekleştirdi, yeni <xref:System.Data.DataTable> kaynağa geri birleştirilmiş <xref:System.Data.DataTable>.  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi oluşturmak için aşağıdaki işlemi kullanır bir <xref:System.Data.DataTable> sorgudan:  
   
-1.  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi klonlar bir <xref:System.Data.DataTable> kaynak tablosundan (bir <xref:System.Data.DataTable> uygulayan nesne <xref:System.Linq.IQueryable%601> arabirimi). <xref:System.Collections.IEnumerable> Kaynak genellikle alanından kaynaklanan bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu ifadesi veya yöntemi.  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi klonlar bir <xref:System.Data.DataTable> kaynak tablosundan (bir <xref:System.Data.DataTable> uygulayan nesne <xref:System.Linq.IQueryable%601> arabirimi). <xref:System.Collections.IEnumerable> Kaynak genellikle alanından kaynaklanan bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sorgu ifadesi veya yöntemi.  
   
-2.  Kopyalanan şemasını <xref:System.Data.DataTable> ilk sütunlarından yerleşik numaralandırılan <xref:System.Data.DataRow> nesnedir kaynak tablosu ve kopyalanan tablosunun adı "query", eklenmiş şekilde bir sözcükle kaynak tablosunun adı.  
+2. Kopyalanan şemasını <xref:System.Data.DataTable> ilk sütunlarından yerleşik numaralandırılan <xref:System.Data.DataRow> nesnedir kaynak tablosu ve kopyalanan tablosunun adı "query", eklenmiş şekilde bir sözcükle kaynak tablosunun adı.  
   
-3.  Kaynak tablodaki her satır için içerik satır yeni bir kopyalanır <xref:System.Data.DataRow> sonra kopyalanan tabloya eklenen nesne. <xref:System.Data.DataRow.RowState%2A> Ve <xref:System.Data.DataRow.RowError%2A> özelliklerini kopyalama işlemi korunur. Bir <xref:System.ArgumentException> oluşturulur <xref:System.Data.DataRow> nesnelerdir kaynağındaki farklı tablolardan.  
+3. Kaynak tablodaki her satır için içerik satır yeni bir kopyalanır <xref:System.Data.DataRow> sonra kopyalanan tabloya eklenen nesne. <xref:System.Data.DataRow.RowState%2A> Ve <xref:System.Data.DataRow.RowError%2A> özelliklerini kopyalama işlemi korunur. Bir <xref:System.ArgumentException> oluşturulur <xref:System.Data.DataRow> nesnelerdir kaynağındaki farklı tablolardan.  
   
-4.  Kopyalanan <xref:System.Data.DataTable> sonuçta döndürülen <xref:System.Data.DataRow> sorgulanabilir giriş tablosundaki nesneler kopyalanır. Kaynak sırası herhangi içermiyorsa <xref:System.Data.DataRow> nesneler, yöntem boş bir döndürür <xref:System.Data.DataTable>.  
+4. Kopyalanan <xref:System.Data.DataTable> sonuçta döndürülen <xref:System.Data.DataRow> sorgulanabilir giriş tablosundaki nesneler kopyalanır. Kaynak sırası herhangi içermiyorsa <xref:System.Data.DataRow> nesneler, yöntem boş bir döndürür <xref:System.Data.DataTable>.  
   
  Çağırmanın Not <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi yürütmek için kaynak tabloda bağlı sorgu neden olur.  
   

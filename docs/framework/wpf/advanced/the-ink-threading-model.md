@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377035"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335328"
 ---
 # <a name="the-ink-threading-model"></a>Mürekkep İş Parçacığı Modeli
 Tablet PC üzerinde mürekkep avantajları, çok yazma gibi normal Kalem ve kağıt hissettiği biridir.  Bunu gerçekleştirmek için tablet kalem, fare yapar ve kullanıcı yazdıkça mürekkebi işler daha çok daha yüksek bir hızda girdi verilerini toplar.  Uygulamanın kullanıcı arabirimini (UI) iş parçacığı engellenmiş olur çünkü Kalem verileri ve işleme mürekkebi toplama için yeterli değil.  Bunu çözmek için bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama kullanıcı mürekkep yazdığında iki ek iş parçacığı kullanır.  
@@ -38,7 +38,7 @@ Tablet PC üzerinde mürekkep avantajları, çok yazma gibi normal Kalem ve kağ
   
  ![Fırça darbesi çizerken iş parçacığı modeli. ](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  Kullanıcı vuruş çizerken gerçekleşen eylemleri  
+1. Kullanıcı vuruş çizerken gerçekleşen eylemleri  
   
     1.  Kullanıcı bir fırça çizdiğinde, ekran kalemi noktaları kalem iş parçacığı üzerinde vardır.  Ekran kalemi de dahil olmak üzere eklentileri <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, ekran kalemi noktaları kalem iş parçacığı üzerinde kabul eder ve önce bunları değiştirmeniz şansınız <xref:System.Windows.Controls.InkCanvas> bunları alır.  
   
@@ -46,7 +46,7 @@ Tablet PC üzerinde mürekkep avantajları, çok yazma gibi normal Kalem ve kağ
   
     3.  <xref:System.Windows.Controls.InkCanvas> UI iş parçacığı üzerinde ekran kalemi noktalarını alır.  
   
-2.  Kullanıcı vuruş sona erdikten sonra gerçekleşen eylemleri  
+2. Kullanıcı vuruş sona erdikten sonra gerçekleşen eylemleri  
   
     1.  Kullanıcı vuruşu çizim tamamlandığında <xref:System.Windows.Controls.InkCanvas> oluşturur bir <xref:System.Windows.Ink.Stroke> ekler ve nesne <xref:System.Windows.Controls.InkPresenter>, statik olarak işleyen.  
   
@@ -61,13 +61,13 @@ Tablet PC üzerinde mürekkep avantajları, çok yazma gibi normal Kalem ve kağ
   
  Önceki diyagramda, aşağıdaki davranış gerçekleşir:  
   
-1.  `StylusPlugin1` x değerleri değiştirir ve y.  
+1. `StylusPlugin1` x değerleri değiştirir ve y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> değişiklik kalemi noktalarını alır ve bunları dinamik işlenen iş parçacığı üzerinde işler.  
+2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> değişiklik kalemi noktalarını alır ve bunları dinamik işlenen iş parçacığı üzerinde işler.  
   
-3.  `StylusPlugin2` değişiklik kalemi noktalarını alır ve daha fazla x değerlerini değiştirir ve y.  
+3. `StylusPlugin2` değişiklik kalemi noktalarını alır ve daha fazla x değerlerini değiştirir ve y.  
   
-4.  Uygulama ekran kalemi noktaları toplar ve kullanıcı vuruş tamamlandığında vuruş statik olarak işler.  
+4. Uygulama ekran kalemi noktaları toplar ve kullanıcı vuruş tamamlandığında vuruş statik olarak işler.  
   
  Varsayın `stylusPlugin1` dikdörtgen ekran kalemi noktaları sınırlar ve `stylusPlugin2` ekran kalemi noktalarını sağa çevirir.  Önceki senaryoda <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> kısıtlı ekran kalemi noktaları, ancak ekran kalemi noktalarını alır.  Kullanıcı vuruş çizdiğinde vuruş dikdörtgenin sınırları içinde oluşturulur, ancak kullanıcı kalemi kaldırıncaya kadar çevrilemeyen vuruş görünmez.  
   
@@ -83,15 +83,15 @@ Tablet PC üzerinde mürekkep avantajları, çok yazma gibi normal Kalem ve kağ
   
  ![Mürekkep iş parçacığı diyagram](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
-1.  Kullanıcı vuruş başlar.  
+1. Kullanıcı vuruş başlar.  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Görsel ağaç oluşturur.  
   
-2.  Kullanıcı vuruşu çiziyor.  
+2. Kullanıcı vuruşu çiziyor.  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Görsel ağaç oluşturur.  
   
-3.  Kullanıcı vuruşu sonlandırır.  
+3. Kullanıcı vuruşu sonlandırır.  
   
     1.  <xref:System.Windows.Controls.InkPresenter> Vuruş görsel ağacına ekler.  
   

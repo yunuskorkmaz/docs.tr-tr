@@ -2,26 +2,26 @@
 title: Bağlamada Zaman Aşımı Değerlerini Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: 21d99ad2ce092db738469f93e80c39380acabd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f323dfff338f8a3ba24caab6df3b3916d3ae0d13
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489615"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339768"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Bağlamada Zaman Aşımı Değerlerini Yapılandırma
-WCF bağlamaları birtakım zaman aşımı ayarları yok. Bu zaman aşımı ayarını ayarları doğru değil yalnızca hizmetinizin performans aynı zamanda play bir rol kullanılabilirlik ve güvenlik hizmetinizin artırabilir. WCF bağlamaları üzerinde aşağıdaki zaman aşımları kullanılabilir:  
+WCF bağlamaları birtakım zaman aşımı ayarları vardır. Bu zaman aşımı ayarını ayarları doğru değil yalnızca hizmetinizin performansını aynı zamanda play bir rol kullanılabilirlik ve güvenlik hizmetinizin artırabilir. Şu zaman aşımları, WCF bağlamaları üzerinde kullanılabilir:  
   
-1.  openTimeout  
+1. opentimeout =  
   
-2.  closeTimeout  
+2. closeTimeout  
   
-3.  sendTimeout  
+3. SendTimeout  
   
-4.  receiveTimeout  
+4. receiveTimeout  
   
 ## <a name="wcf-binding-timeouts"></a>WCF bağlama zaman aşımları  
- Bu konuda tartışılan ayarların her biri bağlama, kendisini, kod veya yapılandırma üzerinde yapılır. Aşağıdaki kod programlı olarak zaman aşımı kendini barındıran hizmet bağlamında WCF bağlamasında nasıl ayarlanacağını gösterir.  
+ Bu konuda tartışılan ayarların her biri bağlama üzerinde kendisi, kod veya yapılandırma ya da yapılır. Aşağıdaki kod, zaman aşımları şirket içinde barındırılan bir hizmet bağlamı WCF bağlamasında programlanarak nasıl ayarlanacağını gösterir.  
   
 ```csharp  
 public static void Main()
@@ -54,7 +54,7 @@ public static void Main()
 }
 ```  
   
- Aşağıdaki örnek bir yapılandırma dosyasına bağlama zaman aşımları yapılandırma gösterir.  
+ Aşağıdaki örnek bir yapılandırma dosyası bir bağlamada zaman aşımı yapılandırma gösterilmektedir.  
   
 ```xml  
 <configuration>
@@ -72,22 +72,22 @@ public static void Main()
 </configuration>
 ```  
   
- Bu ayarlar hakkında daha fazla bilgi için belgelere bulunabilir <xref:System.ServiceModel.Channels.Binding> sınıfı.  
+ Bu ayarlar hakkında daha fazla bilgi için belgelerinde bulunabilir <xref:System.ServiceModel.Channels.Binding> sınıfı.  
   
 ### <a name="client-side-timeouts"></a>İstemci tarafı zaman aşımları  
  İstemci tarafında:  
   
-1.  SendTimeout – tam bir ileti gönderme işlemini yönetir, OperationTimeout başlatmak için kullanılan bir istek/yanıt hizmet işlemi için bir yanıt iletisi alma dahil olmak üzere. Bu zaman aşımı yanıt iletileri bir geri çağırma sözleşme yönteminden gönderirken de geçerlidir.  
+1. SendTimeout – tüm ileti gönderme işlemini yönetir, OperationTimeout başlatmak için kullanılan bir yanıt iletisi için bir istek/yanıt hizmet işlemi alma dahil olmak üzere. Bu zaman aşımı, bir geri çağırma anlaşması yöntemi yanıt iletileri gönderirken de geçerlidir.  
   
-2.  OpenTimeout – hiçbir açık zaman aşımı değeri belirtildiğinde kanalları açarken kullanılan.  
+2. Opentimeout = – hiçbir açık zaman aşımı değeri belirtildiğinde kanalları açarken kullanılan.  
   
-3.  CloseTimeout – hiçbir açık zaman aşımı değeri belirtildiğinde kanalları kapatırken kullanılır.  
+3. CloseTimeout – hiçbir açık zaman aşımı değeri belirtildiğinde Kanal kapatılırken kullanılır.  
   
-4.  ReceiveTimeout – kullanılmaz.  
+4. ReceiveTimeout – kullanılmaz.  
   
 ### <a name="service-side-timeouts"></a>Hizmet tarafı zaman aşımları  
  Hizmet tarafında:  
   
-1.  SendTimeout, OpenTimeout, CloseTimeout gibi istemcide aynıdır.  
+1. SendTimeout opentimeout =, CloseTimeout istemci olarak aynıdır.  
   
-2.  ReceiveTimeout – ne kadar oturum zaman aşımına uğramadan önce boşta kalabileceği denetleyen oturum boşta kalma zaman aşımı başlatmak için hizmet Framework katman tarafından kullanılan.
+2. ReceiveTimeout – ne kadar oturum zaman aşımına uğramadan önce boşta kalabileceği denetleyen oturum boşta kalma zaman aşımı başlatmak için hizmet Framework katmanı tarafından kullanılır.

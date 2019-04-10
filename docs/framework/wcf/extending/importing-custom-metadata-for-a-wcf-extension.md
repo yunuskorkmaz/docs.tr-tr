@@ -2,12 +2,12 @@
 title: WCF Uzantısı için Özel Meta Verileri İçe Aktarma
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090075"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339976"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF Uzantısı için Özel Meta Verileri İçe Aktarma
 Windows Communication Foundation (WCF) meta verileri alma, meta verilerinden bir hizmet veya bileşen parçalarından soyut bir temsilini oluşturma işlemidir. Örneğin, WCF aktarabilirsiniz <xref:System.ServiceModel.Description.ServiceEndpoint> örnekleri <xref:System.ServiceModel.Channels.Binding> örnekleri veya <xref:System.ServiceModel.Description.ContractDescription> bir WSDL örneklerden belge için bir hizmet. WCF hizmet meta verileri içeri aktarmak için uygulaması kullanmak <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> soyut sınıf. Öğesinden türetilen türler <xref:System.ServiceModel.Description.MetadataImporter> WS-Policy yararlanan alma meta veri biçimleri WCF mantığı içeri aktarmak için sınıf uygulama desteği.  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) meta verileri alma, meta verilerinden bir
   
  Bu bölümde açıklanmaktadır:  
   
-1.  Uygulamak ve kullanmak nasıl <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> arabirimi, özel ımporters açıklamalarını oluşturma ve kod oluşturulmasını önce WSDL verileri gösterir. Bu arabirim incelemek veya belirli bir meta veri kümesi kullanılarak gerçekleştirilen kod derleme ve açıklama türünü değiştirmek için kullanabilirsiniz.  
+1. Uygulamak ve kullanmak nasıl <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> arabirimi, özel ımporters açıklamalarını oluşturma ve kod oluşturulmasını önce WSDL verileri gösterir. Bu arabirim incelemek veya belirli bir meta veri kümesi kullanılarak gerçekleştirilen kod derleme ve açıklama türünü değiştirmek için kullanabilirsiniz.  
   
-2.  Uygulamak ve kullanmak nasıl <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> açıklama nesneleri nesil önce ımporters için ilke onaylamalarını sunan arabirimi. Bu arabirim incelemek veya bağlama veya sözleşme indirilen ilkelerine bağlı olarak değiştirmek için kullanabilirsiniz.  
+2. Uygulamak ve kullanmak nasıl <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> açıklama nesneleri nesil önce ımporters için ilke onaylamalarını sunan arabirimi. Bu arabirim incelemek veya bağlama veya sözleşme indirilen ilkelerine bağlı olarak değiştirmek için kullanabilirsiniz.  
   
  Özel WSDL ve ilke onaylamalarını dışa aktarma hakkında daha fazla bilgi için bkz. [WCF uzantısı için özel meta verme](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 98cb62c0d3f82a90ee96797a34600473dbe4dc11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd59e7689fbca68d3e7b0b0008973e471d092fe0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179172"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342979"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma
 Hizmet iletişimi anında kullanılabilir olmasa bile güvenilir Mesajlaşma'nün bir Windows Communication Foundation (WCF) hizmet ve istemci arasında gerçekleşebilir kuyrukları emin olun. Aşağıdaki yordamlar, kalıcı bir istemci ve standart'ı kullanarak bir hizmet arasında bağlayıcı WCF Hizmeti uygularken kuyruğa alınmış iletişim sağlamak nasıl gösterir.  
@@ -19,46 +19,46 @@ Hizmet iletişimi anında kullanılabilir olmasa bile güvenilir Mesajlaşma'nü
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>Bir WCF Hizmeti queuing kullanmak için  
   
-1.  İle işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesini tanımlama <xref:System.ServiceModel.ServiceContractAttribute>. Hizmet söyleşmesi parçası arabiriminde işlemleri işaretlemek <xref:System.ServiceModel.OperationContractAttribute> ve yönteme yanıt döndürdüğünden, bunları tek yönlü olarak belirtin. Aşağıdaki kod örneği bir hizmet sözleşmesi ve işlem tanımı sağlar.  
+1. İle işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesini tanımlama <xref:System.ServiceModel.ServiceContractAttribute>. Hizmet söyleşmesi parçası arabiriminde işlemleri işaretlemek <xref:System.ServiceModel.OperationContractAttribute> ve yönteme yanıt döndürdüğünden, bunları tek yönlü olarak belirtin. Aşağıdaki kod örneği bir hizmet sözleşmesi ve işlem tanımı sağlar.  
   
      [!code-csharp[S_Msmq_Transacted#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#1)]
      [!code-vb[S_Msmq_Transacted#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#1)]  
   
-2.  Kullanıcı tanımlı türler hizmet sözleşmesi başarılı olduğunda, bu türleri için veri sözleşme tanımlamanız gerekir. Aşağıdaki kod, iki veri sözleşmeleri göstermektedir `PurchaseOrder` ve `PurchaseOrderLineItem`. Bu iki tür hizmete gönderilen verileri tanımlar. (Bu veri sözleşme tanımlayan sınıfları da bir dizi yöntem tanımlamanız unutmayın. Bu yöntemleri veri sözleşmesinin bir parçası olarak kabul edilmez. İle bildirilen üyeler <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği veri anlaşması bir parçasıdır.)  
+2. Kullanıcı tanımlı türler hizmet sözleşmesi başarılı olduğunda, bu türleri için veri sözleşme tanımlamanız gerekir. Aşağıdaki kod, iki veri sözleşmeleri göstermektedir `PurchaseOrder` ve `PurchaseOrderLineItem`. Bu iki tür hizmete gönderilen verileri tanımlar. (Bu veri sözleşme tanımlayan sınıfları da bir dizi yöntem tanımlamanız unutmayın. Bu yöntemleri veri sözleşmesinin bir parçası olarak kabul edilmez. İle bildirilen üyeler <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği veri anlaşması bir parçasıdır.)  
   
      [!code-csharp[S_Msmq_Transacted#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#2)]
      [!code-vb[S_Msmq_Transacted#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#2)]  
   
-3.  Bir sınıf içinde arabirim içinde tanımlanmış hizmet sözleşmesinin yöntemleri uygulayın.  
+3. Bir sınıf içinde arabirim içinde tanımlanmış hizmet sözleşmesinin yöntemleri uygulayın.  
   
      [!code-csharp[S_Msmq_Transacted#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#3)]
      [!code-vb[S_Msmq_Transacted#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#3)]  
   
      Bildirim <xref:System.ServiceModel.OperationBehaviorAttribute> yerleştirildiği `SubmitPurchaseOrder` yöntemi. Bu, bu işlem bir işlem içinde çağrılması gerekir ve yöntem tamamlandığında işlem otomatik olarak tamamlanmasını belirtir.  
   
-4.  Bir işlem sırası kullanarak oluşturma <xref:System.Messaging>. Bunun yerine Microsoft Message Queuing (MSMQ) Microsoft Yönetim Konsolu (MMC) kullanarak kuyruk oluşturmayı seçebilirsiniz. Bu durumda, bir işlem kuyruğu oluşturma emin olun.  
+4. Bir işlem sırası kullanarak oluşturma <xref:System.Messaging>. Bunun yerine Microsoft Message Queuing (MSMQ) Microsoft Yönetim Konsolu (MMC) kullanarak kuyruk oluşturmayı seçebilirsiniz. Bu durumda, bir işlem kuyruğu oluşturma emin olun.  
   
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Tanımlayan bir <xref:System.ServiceModel.Description.ServiceEndpoint> hizmet adresini belirtir ve standart kullanan yapılandırmasında <xref:System.ServiceModel.NetMsmqBinding> bağlama. WCF yapılandırma özelliğini kullanma hakkında daha fazla bilgi için bkz. [yapılandırma WCF hizmetleri](../configuring-services.md).  
+5. Tanımlayan bir <xref:System.ServiceModel.Description.ServiceEndpoint> hizmet adresini belirtir ve standart kullanan yapılandırmasında <xref:System.ServiceModel.NetMsmqBinding> bağlama. WCF yapılandırma özelliğini kullanma hakkında daha fazla bilgi için bkz. [yapılandırma WCF hizmetleri](../configuring-services.md).  
 
-6.  Bir konağı için oluşturmayı `OrderProcessing` kullanarak hizmet <xref:System.ServiceModel.ServiceHost> kuyruktan iletileri okuyan ve işler. Hizmet kullanılabilir hale getirmek için hizmet ana bilgisayarı açın. Hizmeti sonlandırmak için herhangi bir tuşa basın kullanıcıya bildiren bir ileti görüntüler. Çağrı `ReadLine` anahtar basıldığında ve ardından hizmeti kapatmak beklenecek.  
+6. Bir konağı için oluşturmayı `OrderProcessing` kullanarak hizmet <xref:System.ServiceModel.ServiceHost> kuyruktan iletileri okuyan ve işler. Hizmet kullanılabilir hale getirmek için hizmet ana bilgisayarı açın. Hizmeti sonlandırmak için herhangi bir tuşa basın kullanıcıya bildiren bir ileti görüntüler. Çağrı `ReadLine` anahtar basıldığında ve ardından hizmeti kapatmak beklenecek.  
   
      [!code-csharp[S_Msmq_Transacted#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#6)]
      [!code-vb[S_Msmq_Transacted#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#6)]  
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>Sıraya alınan hizmet için bir istemci oluşturmak için  
   
-1.  Aşağıdaki örnek, barındırma uygulamasını çalıştırmak ve WCF istemcisi oluşturma için Svcutil.exe aracını kullanma gösterilmektedir.  
+1. Aşağıdaki örnek, barındırma uygulamasını çalıştırmak ve WCF istemcisi oluşturma için Svcutil.exe aracını kullanma gösterilmektedir.  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
     ```  
   
-2.  Tanımlayan bir <xref:System.ServiceModel.Description.ServiceEndpoint> adresini belirtir ve standart kullanan yapılandırmasında <xref:System.ServiceModel.NetMsmqBinding> aşağıdaki örnekte gösterildiği gibi bağlama.  
+2. Tanımlayan bir <xref:System.ServiceModel.Description.ServiceEndpoint> adresini belirtir ve standart kullanan yapılandırmasında <xref:System.ServiceModel.NetMsmqBinding> aşağıdaki örnekte gösterildiği gibi bağlama.  
 
-3.  İşlem sırası çağrı yazmak için bir işlem kapsamı oluşturma `SubmitPurchaseOrder` işlemi ve Kapat WCF istemcisi, aşağıdaki örnekte gösterildiği gibi.  
+3. İşlem sırası çağrı yazmak için bir işlem kapsamı oluşturma `SubmitPurchaseOrder` işlemi ve Kapat WCF istemcisi, aşağıdaki örnekte gösterildiği gibi.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125126"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336193"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement İçerik Modeline Genel Bakış
 Bu içerik modeline genel bakış desteklenen içeriğini açıklayan bir <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Sınıfı, bir tür <xref:System.Windows.Documents.TextElement>. İçerik modeli, diğer hangi nesneleri/öğeleri bulunabilir açıklar. Bu genel bakışta öğesinden türetilen nesneler için kullanılan içerik modeli özetler <xref:System.Windows.Documents.TextElement>. Daha fazla bilgi için [akış belgesine genel bakış](flow-document-overview.md).  
@@ -27,7 +27,7 @@ Bu içerik modeline genel bakış desteklenen içeriğini açıklayan bir <xref:
   
  Yukarıdaki diyagramdan görüldüğü gibi bir öğe için izin verilen alt öğe mutlaka olup bir sınıf türetilir tarafından belirlenir değil <xref:System.Windows.Documents.Block> sınıfı veya <xref:System.Windows.Documents.Inline> sınıfı. Örneğin, bir <xref:System.Windows.Documents.Span> (bir <xref:System.Windows.Documents.Inline>-türetilmiş sınıf) yalnızca <xref:System.Windows.Documents.Inline> alt öğeleri, ancak bir <xref:System.Windows.Documents.Figure> (Ayrıca bir <xref:System.Windows.Documents.Inline>-türetilmiş sınıf) yalnızca <xref:System.Windows.Documents.Block> alt öğeleri. Bu nedenle, bir diyagram hızla başka hangi öğe bulunabilir belirlemek için yararlıdır. Örnek olarak, akış içeriği oluşturmak nasıl belirlemek için diyagram şimdi kullanın. bir <xref:System.Windows.Controls.RichTextBox>.  
   
-1.  A <xref:System.Windows.Controls.RichTextBox> içermelidir bir <xref:System.Windows.Documents.FlowDocument> hangi sırayla içermelidir bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesneye. Önceki şemada karşılık gelen bir segmentten verilmiştir.  
+1. A <xref:System.Windows.Controls.RichTextBox> içermelidir bir <xref:System.Windows.Documents.FlowDocument> hangi sırayla içermelidir bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesneye. Önceki şemada karşılık gelen bir segmentten verilmiştir.  
   
      ![Diyagram: RichTextBox kapsama kuralları](./media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
@@ -35,7 +35,7 @@ Bu içerik modeline genel bakış desteklenen içeriğini açıklayan bir <xref:
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
-2.  Diyagram göre vardır <xref:System.Windows.Documents.Block> öğeleri dahil olmak üzere seçmek için <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, ve <xref:System.Windows.Documents.BlockUIContainer> (önceki şemada blok türetilmiş sınıflara bakın). İstediğimizi varsayalım bir <xref:System.Windows.Documents.Table>. Önceki şemada göre bir <xref:System.Windows.Documents.Table> içeren bir <xref:System.Windows.Documents.TableRowGroup> içeren <xref:System.Windows.Documents.TableRow> içeren öğeleri <xref:System.Windows.Documents.TableCell> içeren bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesneye. Karşılık gelen kesim için verilmiştir <xref:System.Windows.Documents.Table> yukarıdaki diyagramdan alınan.  
+2. Diyagram göre vardır <xref:System.Windows.Documents.Block> öğeleri dahil olmak üzere seçmek için <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, ve <xref:System.Windows.Documents.BlockUIContainer> (önceki şemada blok türetilmiş sınıflara bakın). İstediğimizi varsayalım bir <xref:System.Windows.Documents.Table>. Önceki şemada göre bir <xref:System.Windows.Documents.Table> içeren bir <xref:System.Windows.Documents.TableRowGroup> içeren <xref:System.Windows.Documents.TableRow> içeren öğeleri <xref:System.Windows.Documents.TableCell> içeren bir <xref:System.Windows.Documents.Block>-türetilmiş bir nesneye. Karşılık gelen kesim için verilmiştir <xref:System.Windows.Documents.Table> yukarıdaki diyagramdan alınan.  
   
      ![Diyagram: Üst&#47;tablosu için alt şema](./media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
@@ -43,7 +43,7 @@ Bu içerik modeline genel bakış desteklenen içeriğini açıklayan bir <xref:
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
-3.  Yine, bir veya daha fazla <xref:System.Windows.Documents.Block> altında gerekli öğelerden bir <xref:System.Windows.Documents.TableCell>. Basit hale getirmek için şimdi metin hücre içine yerleştirin. Bunu kullanarak yapabiliriz bir <xref:System.Windows.Documents.Paragraph> ile bir <xref:System.Windows.Documents.Run> öğesi. Karşılık gelen gösteren diyagram kesimlerinden verilmiştir bir <xref:System.Windows.Documents.Paragraph> sürebilir bir <xref:System.Windows.Documents.Inline> öğesi ve bu bir <xref:System.Windows.Documents.Run> (bir <xref:System.Windows.Documents.Inline> öğesi) yalnızca düz metin alabilir.  
+3. Yine, bir veya daha fazla <xref:System.Windows.Documents.Block> altında gerekli öğelerden bir <xref:System.Windows.Documents.TableCell>. Basit hale getirmek için şimdi metin hücre içine yerleştirin. Bunu kullanarak yapabiliriz bir <xref:System.Windows.Documents.Paragraph> ile bir <xref:System.Windows.Documents.Run> öğesi. Karşılık gelen gösteren diyagram kesimlerinden verilmiştir bir <xref:System.Windows.Documents.Paragraph> sürebilir bir <xref:System.Windows.Documents.Inline> öğesi ve bu bir <xref:System.Windows.Documents.Run> (bir <xref:System.Windows.Documents.Inline> öğesi) yalnızca düz metin alabilir.  
   
      ![Diyagram: Üst&#47;paragraf için alt şema](./media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   

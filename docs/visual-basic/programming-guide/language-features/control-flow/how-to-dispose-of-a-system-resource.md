@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829921"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341913"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir sistem kaynağını atma
 Kullanabileceğiniz bir `Using` kodunuzun blok çıktığında sistemin bir kaynağın siler güvence altına almak için blok. Bu, büyük miktarda bellek tüketen veya diğer bileşenleri de kullanmak istediğiniz bir sistem kaynağını kullanıyorsanız yararlı olur.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Bir veritabanı bağlantı ile kodunuzu sona erdiğinde silmek için  
   
-1.  Uygun eklediğinizden emin olun [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) kaynak dosyasının başında veritabanı bağlantısı için (Bu durumda, <xref:System.Data.SqlClient>).  
+1. Uygun eklediğinizden emin olun [Imports deyimi (.NET Namespace ve türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) kaynak dosyasının başında veritabanı bağlantısı için (Bu durumda, <xref:System.Data.SqlClient>).  
   
-2.  Oluşturma bir `Using` ile block `Using` ve `End Using` deyimleri. Veritabanı bağlantısı ile ilgilenen bir kod bloğunun içine yerleştirin.  
+2. Oluşturma bir `Using` ile block `Using` ve `End Using` deyimleri. Veritabanı bağlantısı ile ilgilenen bir kod bloğunun içine yerleştirin.  
   
-3.  Bağlantı bildirme ve bir örneğini bir parçası olarak oluşturma `Using` deyimi.  
+3. Bağlantı bildirme ve bir örneğini bir parçası olarak oluşturma `Using` deyimi.  
   
     ```  
     ' Insert the following line at the beginning of your source file.  

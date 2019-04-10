@@ -2,30 +2,30 @@
 title: Özel Durum ve Hataları İşleme
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: c51d78bb982ec0748cd74a67a4f4b747526a4b42
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483914"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343434"
 ---
 # <a name="handling-exceptions-and-faults"></a>Özel Durum ve Hataları İşleme
 Özel durumlar, yerel hizmet veya istemci uygulamaları içindeki hataları iletişim kurmak için kullanılır. Hataları, diğer taraftan, hataları hizmet sınırları arasında olduğu gibi sunucudan istemciye ya da tam tersi iletişim kurmak için kullanılır. Hataları ek olarak, taşıma kanalları çoğunlukla aktarım özgü mekanizmaları aktarım düzeyi hataları iletişim kurmak için kullanır. Örneğin, HTTP aktarımı 404 gibi durum kodları (bir hata geri göndermek için uç nokta yok) bir mevcut olmayan uç nokta URL'si iletişim kurmak için kullanır. Bu belgenin özel kanal yazarları için rehberlik üç bölüm oluşur. İlk bölüm ne zaman ve nasıl tanımlamak ve özel durumlar rehberlik sağlar. İkinci bölüm oluşturma ve hataları kullanma yönergeleri sağlar. Özel kanal kullanıcısı çalışan uygulamaları giderilmesine yardımcı olmak için izleme bilgisi sağlamak üzere nasıl üçüncü bölümünde açıklanmaktadır.  
   
 ## <a name="exceptions"></a>Özel Durumlar  
- Bir özel durum oluştururken akılda tutulması gereken iki şey vardır: ilk tepki verebilir doğru kodu uygun şekilde özel durumu yazma olanağı tanıyan bir türde olmak zorundadır. İkinci olarak, neyin yanlış gittiğini anlamak için kullanıcı, hata etki ve sorunun nasıl için yeterli bilgi sağlamak vardır. Aşağıdaki bölümlerde, özel durum türlerini ve Windows Communication Foundation (WCF) kanalları iletileri Rehber sağlar. .NET özel durumları belge için tasarım yönergeleri ile özel durumları genel Rehber de mevcuttur.  
+ Bir özel durum oluştururken akılda tutulması gereken iki şey vardır: İlk tepki verebilir doğru kodu uygun şekilde özel durumu yazma olanağı tanıyan bir türde olması gerekir. İkinci olarak, neyin yanlış gittiğini anlamak için kullanıcı, hata etki ve sorunun nasıl için yeterli bilgi sağlamak vardır. Aşağıdaki bölümlerde, özel durum türlerini ve Windows Communication Foundation (WCF) kanalları iletileri Rehber sağlar. .NET özel durumları belge için tasarım yönergeleri ile özel durumları genel Rehber de mevcuttur.  
   
 ### <a name="exception-types"></a>Özel Durum Türleri  
  Kanal tarafından oluşturulan tüm özel durumlar olmalıdır bir <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>, veya türetilmiş bir tür <xref:System.ServiceModel.CommunicationException>. (Özel durumlar gibi <xref:System.ObjectDisposedException> Ayrıca, ancak yalnızca çağıran kod kanal kötüye kullanımını göstermek için oluşturulabilir. Bir kanal doğru kullanılıyorsa, yalnızca belirli özel durumlar gerekir.) WCF sağlar öğesinden türetilen özel durum türleri yedi <xref:System.ServiceModel.CommunicationException> ve kanalları tarafından kullanılmak üzere tasarlanmıştır. Diğer vardır <xref:System.ServiceModel.CommunicationException>-sistemin diğer parçaları tarafından kullanılmak üzere tasarlanmış özel durumları türetilmiş. Bu özel durum türleri şunlardır:  
   
-|Özel durum türü|Açıklama|İç özel duruma içeriği|Kurtarma stratejisi|  
+|Özel Durum Türü|Açıklama|İç özel duruma içeriği|Kurtarma stratejisi|  
 |--------------------|-------------|-----------------------------|-----------------------|  
 |<xref:System.ServiceModel.AddressAlreadyInUseException>|Dinlemek üzere belirtilen uç nokta adresi zaten kullanılıyor.|Varsa, bu özel duruma neden olan aktarım hata hakkında daha fazla ayrıntı sağlar. Örneğin. <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException>, veya <xref:System.Net.Sockets.SocketException>.|Farklı bir adres deneyin.|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|İşlem dinlemek üzere belirtilen uç nokta adresi erişmesine izin verilmiyor.|Varsa, bu özel duruma neden olan aktarım hata hakkında daha fazla ayrıntı sağlar. Örneğin, <xref:System.IO.PipeException>, veya <xref:System.Net.HttpListenerException>.|Farklı kimlik bilgileri ile deneyin.|  
 |<xref:System.ServiceModel.CommunicationObjectFaultedException>|<xref:System.ServiceModel.ICommunicationObject> Kullanılmakta olduğundan hatalı durumunda (daha fazla bilgi için [durum değişikliklerini anlama](../../../../docs/framework/wcf/extending/understanding-state-changes.md)). Bir nesne, hatalı durumuna çağrıları geçişleri bekleyen birden çok hata ve geri kalanı çağrıları throw ilgili bir özel durum yalnızca bir çağrı oluşturur Not bir <xref:System.ServiceModel.CommunicationObjectFaultedException>. Bir uygulamanın bazı özel durumu gözden ve özgün özel durum yakalandı farklı bir iş parçacığında büyük olasılıkla zaten hatalı nesneyi kullanmayı dener çünkü bu özel durum genellikle atılır.|Varsa iç özel durum hakkında ayrıntılar sağlar.|Yeni bir nesne oluşturun. Bağlı olarak neyin neden olduğunu unutmayın <xref:System.ServiceModel.ICommunicationObject> ilk başta hata için diğer işleri kurtarmak için gerekli olabilir.|  
 |<xref:System.ServiceModel.CommunicationObjectAbortedException>|<xref:System.ServiceModel.ICommunicationObject> Kullanılan iptal edildi (daha fazla bilgi için [durum değişikliklerini anlama](../../../../docs/framework/wcf/extending/understanding-state-changes.md)). Benzer şekilde <xref:System.ServiceModel.CommunicationObjectFaultedException>, kendi özel durum uygulama adlı sahiptir gösterir <xref:System.ServiceModel.ICommunicationObject.Abort%2A> nesneden, büyük olasılıkla başka bir iş parçacığı üzerinde ve nesne artık bu nedenle kullanılamaz.|Varsa iç özel durum hakkında ayrıntılar sağlar.|Yeni bir nesne oluşturun. Bağlı olarak neyin neden olduğunu unutmayın <xref:System.ServiceModel.ICommunicationObject> ilk başta iptal etmek için diğer iş kurtarmak için gerekli olabilir.|  
 |<xref:System.ServiceModel.EndpointNotFoundException>|Hedef uzak uç nokta dinleme yapmıyor. Bu, yanlış, çözümlenemeyen olan uç nokta adresi ya da basılı olan uç nokta herhangi bir bölümünden sonuçlanabilir. DNS hatası, kuyruk Yöneticisi kullanılabilir değil ve hizmet çalışmıyor örneklerindendir.|İç özel durum ayrıntıları, genellikle temel alınan aktarımda sağlar.|Farklı bir adres deneyin. Alternatif olarak, gönderici bir süre bekleyin ve hizmet çöktü durumunda yeniden deneyin.|  
-|<xref:System.ServiceModel.ProtocolException>|İletişim protokolleri, uç noktanın İlkesi tarafından açıklandığı uç noktaları arasında eşleşmiyor. Örneğin, çerçeveleme içerik türü uyuşmazlığı veya en büyük ileti boyutu aşıldı.|Varsa belirli protokol hatası hakkında daha fazla bilgi sağlar. Örneğin, <xref:System.ServiceModel.QuotaExceededException> hata nedenini MaxReceivedMessageSize aşıldığında iç istisnadır.|Kurtarma: gönderen ve alınan Protokolü ayarlarla eşleştiğinden emin olun. Bunu yapmanın bir yolu, hizmet uç noktasının meta veri (ilke) yeniden içeri aktarın ve kanal yeniden oluşturmak için oluşturulan bağlama kullanmaktır.|  
+|<xref:System.ServiceModel.ProtocolException>|İletişim protokolleri, uç noktanın İlkesi tarafından açıklandığı uç noktaları arasında eşleşmiyor. Örneğin, çerçeveleme içerik türü uyuşmazlığı veya en büyük ileti boyutu aşıldı.|Varsa belirli protokol hatası hakkında daha fazla bilgi sağlar. Örneğin, <xref:System.ServiceModel.QuotaExceededException> hata nedenini MaxReceivedMessageSize aşıldığında iç istisnadır.|Kurtarma: Gönderen ve alınan Protokolü ayarlarla eşleştiğinden emin olun. Bunu yapmanın bir yolu, hizmet uç noktasının meta veri (ilke) yeniden içeri aktarın ve kanal yeniden oluşturmak için oluşturulan bağlama kullanmaktır.|  
 |<xref:System.ServiceModel.ServerTooBusyException>|Uzak uç nokta dinliyor, ancak iletileri işlemeye hazır değil.|Varsa, iç özel duruma bir SOAP hatası veya aktarım düzeyinde hata ayrıntıları sağlar.|Kurtarma: Bekleyin ve daha sonra işlemi yeniden deneyin.|  
 |<xref:System.TimeoutException>|İşlem zaman aşımı süresi içinde tamamlayamadı.|Zaman aşımı hakkında ayrıntılar sağlayabilir.|Bekleyin ve daha sonra işlemi yeniden deneyin.|  
   
@@ -36,9 +36,9 @@ ms.locfileid: "43483914"
   
  Ne oldu. Kullanıcı deneyimi ile ilgili terimleri kullanarak sorunu hakkında NET bir açıklama sağlayın. Örneğin, hatalı bir özel durum iletisi "Geçersiz yapılandırma bölümü" olacaktır. Bu kullanıcının hangi yapılandırma bölümü yanlış ve neden yanlış olduğunu mu merak ediyorsunuz bırakır. Geliştirilmiş bir ileti olacaktır "Geçersiz yapılandırma bölümü \<customBinding >". Daha da iyi bir ileti olacaktır "adlı myTransport myBinding çünkü adlı bağlama için Aktarım eklenemiyor bağlama myTransport adlı bir aktarım zaten". Bu, uygulamanın yapılandırma dosyasında hüküm ve kullanıcı bir kolayca belirleyebilirsiniz adları kullanarak belirli bir iletidir. Ancak, yine de birkaç anahtar bileşenler eksik vardır.  
   
- Hatanın önemi. İleti açıkça hatası ne anlama geldiğini belirtilmedikçe, kullanıcı yoksayılabilir varsa ya da önemli bir hata olup olmadığını merak ediyor olasıdır. Genel olarak, iletileri anlamı veya anlam hatası ile müşteri adayı. Önceki örnekte geliştirmek için ileti olabilir "ServiceHost başarısız bir yapılandırma hatası nedeniyle açık: myTransport myBinding çünkü adlı bağlama için adlı aktarım eklenemiyor bağlama myTransport adlı bir aktarım zaten".  
+ Hatanın önemi. İleti açıkça hatası ne anlama geldiğini belirtilmedikçe, kullanıcı yoksayılabilir varsa ya da önemli bir hata olup olmadığını merak ediyor olasıdır. Genel olarak, iletileri anlamı veya anlam hatası ile müşteri adayı. Önceki örnekte geliştirmek için ileti olabilir "ServiceHost başarısız bir yapılandırma hatası nedeniyle açmak için: Çünkü myBinding adlı bağlama için myTransport adlı aktarım eklenemiyor bağlama myTransport adlı bir aktarım zaten ".  
   
- Nasıl kullanıcı sorunu düzeltmeniz gerekir. İletinin en önemli parçası kullanıcı düzeltme sorun yardımcı oluyor. İletinin bazı yönergeler veya denetleyin veya sorunu çözmek düzeltme konusunda ipuçları içermelidir. Örneğin, "ServiceHost başarısız bir yapılandırma hatası nedeniyle açık: myTransport myBinding çünkü adlı bağlama için adlı aktarım eklenemiyor bağlama myTransport adlı bir aktarım zaten. Lütfen yalnızca bir aktarım bağlama bulunmasını".  
+ Nasıl kullanıcı sorunu düzeltmeniz gerekir. İletinin en önemli parçası kullanıcı düzeltme sorun yardımcı oluyor. İletinin bazı yönergeler veya denetleyin veya sorunu çözmek düzeltme konusunda ipuçları içermelidir. Örneğin, "ServiceHost başarısız bir yapılandırma hatası nedeniyle açmak için: Çünkü myBinding adlı bağlama için myTransport adlı aktarım eklenemiyor bağlama myTransport adlı bir aktarım zaten. Lütfen yalnızca bir aktarım bağlama bulunmasını".  
   
 ## <a name="communicating-faults"></a>İletişim hataları  
  SOAP 1.1 ve SOAP 1.2 hataları için belirli bir yapı tanımlar. İki özellikleri arasında bazı farklar vardır, ancak genel olarak, ileti ve MessageFault türleri oluşturma ve tüketme hataları için kullanılır.  
@@ -68,7 +68,7 @@ public abstract class MessageFault
 }  
 ```  
   
- `Code` Karşılık gelen özellik `env:Code` (veya `faultCode` SOAP 1.1 içinde) ve hata türünü tanımlar. SOAP 1.2 tanımlar için beş izin verilen değerler `faultCode` (örneğin, gönderen ve alıcı) ve tanımlayan bir `Subcode` herhangi bir alt değer içeren öğe. (Bkz [SOAP 1.2 belirtimi](https://go.microsoft.com/fwlink/?LinkId=95176) izin verilen hata kodları ve anlamları listesi.) SOAP 1.1 biraz farklı bir mekanizma vardır: dört tanımlar `faultCode` tamamen yeni olanlara tanımlayarak ya da daha belirli oluşturmak için noktalı gösterim kullanılarak genişletilebilir değerleri (örneğin, istemci ve sunucu) `faultCodes`, örneğin, Client.Authentication.  
+ `Code` Karşılık gelen özellik `env:Code` (veya `faultCode` SOAP 1.1 içinde) ve hata türünü tanımlar. SOAP 1.2 tanımlar için beş izin verilen değerler `faultCode` (örneğin, gönderen ve alıcı) ve tanımlayan bir `Subcode` herhangi bir alt değer içeren öğe. (Bkz [SOAP 1.2 belirtimi](https://go.microsoft.com/fwlink/?LinkId=95176) izin verilen hata kodları ve anlamları listesi.) SOAP 1.1 biraz farklı bir mekanizma vardır: Dört tanımlar `faultCode` tamamen yeni olanlara tanımlayarak ya da daha belirli oluşturmak için noktalı gösterim kullanılarak genişletilebilir değerleri (örneğin, istemci ve sunucu) `faultCodes`, örneğin, Client.Authentication.  
   
  Ne zaman MessageFault FaultCode.Name program hataları için kullanın ve SOAP 1.2 ad alanı ve ad için FaultCode.Namespace eşler `env:Code` veya SOAP 1.1 `faultCode`. FaultCode.SubCode eşlendiği `env:Subcode` SOAP 1.2 ve SOAP 1.1 için null.  
   
@@ -181,11 +181,11 @@ public override bool OnTryCreateFaultMessage(Exception exception,
 ### <a name="fault-categories"></a>Hata kategorisi  
  Genellikle hatalarının üç kategoriye ayrılır:  
   
-1.  Tüm yığını yaygın hataları. Bu hatalar, kanal yığınında, örneğin InvalidCardinalityAddressingException herhangi bir katmanında karşılaştı.  
+1. Tüm yığını yaygın hataları. Bu hatalar, kanal yığınında, örneğin InvalidCardinalityAddressingException herhangi bir katmanında karşılaştı.  
   
-2.  Olabilecek hataları herhangi bir yere yığınında belirli bir katmanının akışlı bir işlem veya güvenlik rolleri ilgili örneğin bazı hatalarla karşılaştı.  
+2. Olabilecek hataları herhangi bir yere yığınında belirli bir katmanının akışlı bir işlem veya güvenlik rolleri ilgili örneğin bazı hatalarla karşılaştı.  
   
-3.  Tek bir katmanda yığınında yönlendirilmiş hataları, hataları WS-RM sıra numarası hataları örneğin gibi.  
+3. Tek bir katmanda yığınında yönlendirilmiş hataları, hataları WS-RM sıra numarası hataları örneğin gibi.  
   
  Kategori 1. Genellikle WS-Addressing ve SOAP hataları hatalarıdır. Temel `FaultConverter` dönüştürme bu özel durumları işlemek zorunda kalmazsınız WCF tarafından dönüştürür hataları için hata iletileri karşılık gelen WS-Addressing ve SOAP tarafından kendiniz belirtilen sağlanan sınıfı.  
   
@@ -196,11 +196,11 @@ public override bool OnTryCreateFaultMessage(Exception exception,
 ### <a name="interpreting-received-faults"></a>Alınan hatalar yorumlama  
  Bu bölümde, bir hata iletisi aldığında uygun özel durum oluşturmak için yönergeler sağlanmaktadır. Yığındaki her bir katmanında bir ileti işleme için karar ağacı aşağıdaki gibidir:  
   
-1.  Geçersiz ileti katmanı olarak değerlendirir, Katman 'geçersiz ileti' işlemesi yapmanız gerekir. Bu tür işleme katmana özgüdür ancak izleme, iletinin bırakarak içerebilir veya, bir özel durum için bir hata dönüştürülür. Güvenlik düzgün güvenli değil bir mesaj veya hatalı sıra numarasıyla mesajı almak RM örneklerindendir.  
+1. Geçersiz ileti katmanı olarak değerlendirir, Katman 'geçersiz ileti' işlemesi yapmanız gerekir. Bu tür işleme katmana özgüdür ancak izleme, iletinin bırakarak içerebilir veya, bir özel durum için bir hata dönüştürülür. Güvenlik düzgün güvenli değil bir mesaj veya hatalı sıra numarasıyla mesajı almak RM örneklerindendir.  
   
-2.  Aksi takdirde, iletinin özellikle katmana uygulayan bir hata iletisi ve ileti Katman etkileşimi dışında anlamlı değil, katman hata koşulu işlemesi gerekir. Bu katmanlara RM kanal yukarıda anlamsız ve RM kanal hatalı ve gelen bekleyen işlemler atma gelir bir RM dizisi reddedildi hatası örneğidir.  
+2. Aksi takdirde, iletinin özellikle katmana uygulayan bir hata iletisi ve ileti Katman etkileşimi dışında anlamlı değil, katman hata koşulu işlemesi gerekir. Bu katmanlara RM kanal yukarıda anlamsız ve RM kanal hatalı ve gelen bekleyen işlemler atma gelir bir RM dizisi reddedildi hatası örneğidir.  
   
-3.  Aksi takdirde Request() veya Receive() ileti döndürülmelidir. Bu, burada katmanı hatası tanır, ancak hata yalnızca bir istek başarısız oldu ve hatalı kanal ve gelen bekleyen işlemler atma gelmez gösterir servis taleplerini içerir. Böyle bir durumda kullanılabilirliği iyileştirmek için katman uygulamalıdır `GetProperty<FaultConverter>` ve dönüş bir `FaultConverter` hataya bir özel durum için geçersiz kılarak dönüştürebilirsiniz türetilmiş `OnTryCreateException`.  
+3. Aksi takdirde Request() veya Receive() ileti döndürülmelidir. Bu, burada katmanı hatası tanır, ancak hata yalnızca bir istek başarısız oldu ve hatalı kanal ve gelen bekleyen işlemler atma gelmez gösterir servis taleplerini içerir. Böyle bir durumda kullanılabilirliği iyileştirmek için katman uygulamalıdır `GetProperty<FaultConverter>` ve dönüş bir `FaultConverter` hataya bir özel durum için geçersiz kılarak dönüştürebilirsiniz türetilmiş `OnTryCreateException`.  
   
  Aşağıdaki nesne modeli, özel durumları dönüştürme iletileri destekler:  
   
@@ -316,7 +316,7 @@ public class MessageFault
  ![Özel durumları ve hataları işleme](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   
 ### <a name="tracing-from-a-custom-channel"></a>Özel bir kanaldan izleme  
- Özel Kanallar, çalışan bir uygulamaya bir hata ayıklayıcının mümkün değilse, sorunların tanılanmasına yardımcı olmak için izleme iletilerini çıkış yazmanız gerekir. Bu iki üst düzey görevleri içerir: örnekleme bir <xref:System.Diagnostics.TraceSource> ve izlemelerini yazmak için onun yöntemlerini çağırır.  
+ Özel Kanallar, çalışan bir uygulamaya bir hata ayıklayıcının mümkün değilse, sorunların tanılanmasına yardımcı olmak için izleme iletilerini çıkış yazmanız gerekir. Bu iki üst düzey görevleri içerir: Örnekleme bir <xref:System.Diagnostics.TraceSource> ve izlemelerini yazmak için onun yöntemlerini çağırır.  
   
  Örneği oluşturulurken bir <xref:System.Diagnostics.TraceSource>, bu kaynak adı, belirttiğiniz bir dize haline gelir. Bu ad, izleme kaynağı (etkinleştir/devre dışı bırak/set izleme düzeyini) yapılandırmak için kullanılır. Ayrıca, kendi çıktı izlemede görünür. İzleme çıktısına okuyucuları izleme bilgilerini nereden geldiğini anlamak amacıyla özel kanallar benzersiz kaynak adı kullanmanız gerekir. İzleme kaynağı adı olarak bilgilerini yazma derlemenin adını kullanarak yaygın bir uygulamadır. Örneğin, WCF System.ServiceModel derlemeden yazılan bilgi izleme kaynağı System.ServiceModel kullanır.  
   

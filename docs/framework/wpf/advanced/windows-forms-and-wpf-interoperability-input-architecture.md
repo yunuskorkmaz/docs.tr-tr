@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335725"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms ve WPF Birlikte Çalışabilirlik Giriş Mimarisi
 Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hem teknolojiler uygun klavye giriş işleme sahip olmasını gerektirir. Bu konuda, bu teknolojiler, klavye ve karma uygulamalarda kesintisiz birlikte çalışabilirliği etkinleştirmek için işlenen ileti nasıl uygulamak açıklanmaktadır.  
@@ -57,13 +57,13 @@ Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../..
 ### <a name="surrogate-windows-forms-message-loop"></a>Vekil Windows Forms ileti döngüsü  
  Varsayılan olarak, <xref:System.Windows.Forms.Application?displayProperty=nameWithType> sınıfı içeren birincil ileti döngüsü için [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] uygulamalar. Birlikte çalışabilirlik sırasında [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ileti döngüsü iletileri işlemez. Bu nedenle, bu mantık üretilmelidir. İşleyici için <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> olay aşağıdaki adımları gerçekleştirir:  
   
-1.  Bir iletiyi kullanarak filtreler <xref:System.Windows.Forms.IMessageFilter> arabirimi.  
+1. Bir iletiyi kullanarak filtreler <xref:System.Windows.Forms.IMessageFilter> arabirimi.  
   
-2.  Çağrıları <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> yöntemi.  
+2. Çağrıları <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> yöntemi.  
   
-3.  Çevirir ve gerekirse ileti gönderir.  
+3. Çevirir ve gerekirse ileti gönderir.  
   
-4.  İletiyi başka denetimler işlemezse barındırma denetimine ileti geçirir.  
+4. İletiyi başka denetimler işlemezse barındırma denetimine ileti geçirir.  
   
 ### <a name="ikeyboardinputsink-implementation"></a>IKeyboardInputSink Uygulaması  
  Yedek ileti döngüsü klavye management işler. Bu nedenle, <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> yöntemdir yalnızca <xref:System.Windows.Interop.IKeyboardInputSink> uygulama gerektiren üye <xref:System.Windows.Forms.Integration.WindowsFormsHost> sınıfı.  
@@ -72,11 +72,11 @@ Arasındaki birlikte çalışabilirlik [!INCLUDE[TLA2#tla_winclient](../../../..
   
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Uygulaması <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> yöntemi aşağıdaki adımları gerçekleştirir:  
   
-1.  Bulduğu ilk veya son [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] tarafından bulunan denetim <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimi odak alabilir. Denetim seçim geçişi bilgilere bağlıdır.  
+1. Bulduğu ilk veya son [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] tarafından bulunan denetim <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimi odak alabilir. Denetim seçim geçişi bilgilere bağlıdır.  
   
-2.  Odağı denetimi için ayarlar ve döndürür `true`.  
+2. Odağı denetimi için ayarlar ve döndürür `true`.  
   
-3.  Hiçbir denetim odağı alırsanız döndürür `false`.  
+3. Hiçbir denetim odağı alırsanız döndürür `false`.  
   
 ### <a name="windowsformshost-registration"></a>WindowsFormsHost kayıt  
  Zaman penceresi işlemek için bir <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimi oluşturulur, <xref:System.Windows.Forms.Integration.WindowsFormsHost> denetimi ileti döngüsü için kendi durum kaydeden bir iç statik yöntemini çağırır.  

@@ -1,38 +1,38 @@
 ---
-title: Şema düğüm türleri ve yapısını çıkarma kuralları
+title: Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683670"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338715"
 ---
-# <a name="rules-for-inferring-schema-node-types-and-structure"></a>Şema düğüm türleri ve yapısını çıkarma kuralları
+# <a name="rules-for-inferring-schema-node-types-and-structure"></a>Şema Düğüm Türleri ve Yapısını Çıkarma Kuralları
 Bu konu nasıl bir XML belgesi bir XML Şeması Tanım Dili (XSD) yapısını düğüm türleri şema çıkarımı işleminin çevirir açıklar.  
   
 ## <a name="element-inference-rules"></a>Öğe çıkarım kuralları  
  Bu bölümde öğesi bildirimleri için çıkarım kuralları açıklar. Çıkarımı yapılan öğesi bildirimlerinin sekiz yapıları vardır:  
   
-1.  Basit Tür öğesi  
+1. Basit Tür öğesi  
   
-2.  Boş öğe  
+2. Boş öğe  
   
-3.  Boş bir öğe öznitelikleri  
+3. Boş bir öğe öznitelikleri  
   
-4.  Öznitelikler ve basit içerik olan öğe  
+4. Öznitelikler ve basit içerik olan öğe  
   
-5.  Alt öğeleri dizi olan öğe  
+5. Alt öğeleri dizi olan öğe  
   
-6.  Öğesi ile bir dizi alt öğeler ve öznitelikler  
+6. Öğesi ile bir dizi alt öğeler ve öznitelikler  
   
-7.  Öğesi ile bir dizi alt öğelerin seçenekleri  
+7. Öğesi ile bir dizi alt öğelerin seçenekleri  
   
-8.  Alt öğeler ve öznitelikler seçeneklerden bir dizi öğe  
+8. Alt öğeler ve öznitelikler seçeneklerden bir dizi öğe  
   
 > [!NOTE]
 >  Tüm `complexType` bildirimleri anonim türleri olarak sonuçlandı. Çıkarımı yapılan yalnızca genel öğesi kök öğesidir; diğer tüm öğeleri yereldir.  

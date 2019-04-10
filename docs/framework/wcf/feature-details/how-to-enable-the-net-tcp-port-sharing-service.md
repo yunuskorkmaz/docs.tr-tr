@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 77d1d983da87b37c6267cc38a16db446782797f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 20db0ef427a5e791bd6b8dcef90bf7911ae0d4a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130656"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343486"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Nasıl yapılır: Net.TCP Bağlantı Noktası Payalaşım Hizmetini Etkinleştirme
 Windows Communication Foundation (WCF) Net.TCP bağlantı noktası paylaşma hizmeti adlı bir Windows hizmeti TCP bağlantı noktaları arasında birden çok işlem paylaşımını kolaylaştırmak için kullanır. Bu hizmet WCF'nin bir parçası yüklenir, ancak hizmet bir güvenlik önlemi olarak varsayılan olarak etkin değildir ve bu nedenle el ile ilk kullanımda önce etkinleştirilmesi gerekir. Bu konuda, Net TCP bağlantı noktası Microsoft Yönetim Konsolu (MMC) ek bileşenini kullanarak paylaşım hizmetinin nasıl yapılandırılacağı açıklanmaktadır.  
@@ -21,15 +21,15 @@ Windows Communication Foundation (WCF) Net.TCP bağlantı noktası paylaşma hiz
   
 ### <a name="to-enable-the-nettcp-port-sharing-service-using-mmc"></a>Net.TCP bağlantı noktası paylaşımı kullanarak MMC hizmetini etkinleştirmek için  
   
-1.  Başlat Menüsü'nden ya da bir komut istemi penceresi açıp ve yazarak Hizmetler Yönetimi konsolunu açın `services.msc` veya Çalıştır'ı açıp yazarak `services.msc` Aç kutusuna.  
+1. Başlat Menüsü'nden ya da bir komut istemi penceresi açıp ve yazarak Hizmetler Yönetimi konsolunu açın `services.msc` veya Çalıştır'ı açıp yazarak `services.msc` Aç kutusuna.  
   
-2.  İçinde **adı** hizmetlerin listesi sütuna sağ tıklayın **Net.Tcp Bağlantı noktası paylaşma hizmeti**seçip **özellikleri** menüsünde.  
+2. İçinde **adı** hizmetlerin listesi sütuna sağ tıklayın **Net.Tcp Bağlantı noktası paylaşma hizmeti**seçip **özellikleri** menüsünde.  
   
-3.  Hizmeti el ile başlatma etkinleştirmek için **özellikleri** penceresi seçin **genel** sekmesinde ve **başlangıç türü** select el ile kutusuna ve ardından tıklayın**Uygulamak**.  
+3. Hizmeti el ile başlatma etkinleştirmek için **özellikleri** penceresi seçin **genel** sekmesinde ve **başlangıç türü** select el ile kutusuna ve ardından tıklayın**Uygulamak**.  
   
-4.  Hizmet hizmet durumu alanında başlatmak için tıklatın **Başlat** düğmesi. Hizmet durumu, artık "Başlarken" görüntülemelidir.  
+4. Hizmet hizmet durumu alanında başlatmak için tıklatın **Başlat** düğmesi. Hizmet durumu, artık "Başlarken" görüntülemelidir.  
   
-5.  Hizmetler listesine dönmek için **Tamam**ve MMC konsolunu çıkın.  
+5. Hizmetler listesine dönmek için **Tamam**ve MMC konsolunu çıkın.  
   
 ## <a name="example"></a>Örnek  
   

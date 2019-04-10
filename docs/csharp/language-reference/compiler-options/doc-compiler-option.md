@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: baf0084e6caa3fce8ca8c375bdcc2bcd135fa21e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333606"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# Derleyici Seçenekleri)
 **-Doc** seçenek belge yorumlarını bir XML dosyasında yerleştirmenize olanak tanır.  
@@ -52,11 +52,11 @@ ms.locfileid: "54646808"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açın **özellikleri** sayfası.  
+1. Projenin açın **özellikleri** sayfası.  
   
-2.  Tıklayın **derleme** sekmesi.  
+2. Tıklayın **derleme** sekmesi.  
   
-3.  Değiştirme **XML belge dosyası** özelliği.  
+3. Değiştirme **XML belge dosyası** özelliği.  
   
  Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
   

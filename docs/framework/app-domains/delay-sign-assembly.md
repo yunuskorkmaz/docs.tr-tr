@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc1ce9d5b9c8a3784d03207ff1b5a6ead26815c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168200"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334061"
 ---
 # <a name="delay-signing-an-assembly"></a>Derleme İmzalamayı Geciktirme
 Bir kuruluş geliştiricileri her gün için erişimi yoktur yakından korumalı bir anahtar çifti olabilir. Genellikle ortak anahtarı mevcut ancak özel anahtarına erişime yalnızca birkaç kişilerle sınırlıdır. Derlemeleri tanımlayıcı adlarla geliştirirken, her derleme başvuruları tanımlayıcı adlı hedef derlemeye hedef derleme tanımlayıcı bir ad vermek için kullanılan ortak anahtar belirtecini içerir. Bu ortak anahtarı geliştirme sürecinde kullanılabilir olmasını gerektirir.  
@@ -28,9 +28,9 @@ Bir kuruluş geliştiricileri her gün için erişimi yoktur yakından korumalı
   
  Aşağıdaki adımlar, bir derlemeyi gecikmeli imza işleme özetlemektedir:  
   
-1.  Anahtar çiftinden ortak anahtar kısmını nihai imzalama işlemi gerçekleştirecek kuruluşlardan. Genellikle bu anahtarı kullanılarak oluşturulan bir .snk dosyası biçiminde olan [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) tarafından sağlanan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+1. Anahtar çiftinden ortak anahtar kısmını nihai imzalama işlemi gerçekleştirecek kuruluşlardan. Genellikle bu anahtarı kullanılarak oluşturulan bir .snk dosyası biçiminde olan [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) tarafından sağlanan [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
-2.  Kaynak kodu derlemeyi iki özel öznitelikleri ile için ek açıklama <xref:System.Reflection>:  
+2. Kaynak kodu derlemeyi iki özel öznitelikleri ile için ek açıklama <xref:System.Reflection>:  
   
     -   <xref:System.Reflection.AssemblyKeyFileAttribute>, oluşturucusuna bir parametre olarak ortak anahtarı içeren dosyanın adını geçirir.  
   
@@ -40,9 +40,9 @@ Bir kuruluş geliştiricileri her gün için erişimi yoktur yakından korumalı
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
          [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-3.  Derleyici ortak anahtarı derleme bildirimine ekler ve PE dosyasının tam tanımlayıcı ad imzası için alan ayırır. Bu derlemeye başvuran diğer derlemeler, kendi derleme başvurusu depolamak için anahtar alabilmesi derlemeyi sırada gerçek ortak anahtarı depolanmalıdır.  
+3. Derleyici ortak anahtarı derleme bildirimine ekler ve PE dosyasının tam tanımlayıcı ad imzası için alan ayırır. Bu derlemeye başvuran diğer derlemeler, kendi derleme başvurusu depolamak için anahtar alabilmesi derlemeyi sırada gerçek ortak anahtarı depolanmalıdır.  
   
-4.  Derleme geçerli bir tanımlayıcı ad imzası olmadığından, bu imza doğrulaması kapatılması gerekir. Kullanarak bunu yapabilirsiniz **– Vr** tanımlayıcı ad aracı seçeneği.  
+4. Derleme geçerli bir tanımlayıcı ad imzası olmadığından, bu imza doğrulaması kapatılması gerekir. Kullanarak bunu yapabilirsiniz **– Vr** tanımlayıcı ad aracı seçeneği.  
   
      Aşağıdaki örnekte adlı bir derleme için doğrulama kapatır `myAssembly.dll`.  
   
@@ -64,7 +64,7 @@ Bir kuruluş geliştiricileri her gün için erişimi yoktur yakından korumalı
     > [!NOTE]
     >  Bir 64 bit bilgisayarda Visual Studio ile geliştirme sırasında imzalamayı geciktirme kullanıyorsanız ve bir derleme için derleme **herhangi bir CPU**, uygulamak gerekebilir **- Vr** iki kez seçeneği. (Visual Studio'da **herhangi bir CPU** bir değeri **Platform hedefi** özellik oluşturun; varsayılan olarak, komut satırından derlerken, etkin.) Komut satırından veya dosya Gezgini'nden uygulamanızı çalıştırmak için 64 bit sürümünü kullanan [Sn.exe (tanımlayıcı ad aracı)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) uygulanacak **- Vr** derleme seçeneği. (Örneğin, uygulamanızdaki diğer derlemeler tarafından kullanılan bileşenleri derlemeyi içeren) tasarım zamanında, Visual Studio'ya derlemeyi yüklemek için tanımlayıcı ad Aracı'nın 32-bit sürümü kullanın. Derleme tasarım zamanı ortamına yüklendiğinde, just-ın-time (JIT) derleyici derleme komut satırından çalıştırdığınızda yerel kod 64-bit ve 32 bit yerel kod için derleme derler olmasıdır.  
   
-5.  Daha sonra genellikle tam aktarmadan önce kuruluşunuz derlemeye projenin yetkilisi kullanarak imzalama gerçek tanımlayıcı ad imzalama gönderme **– R** tanımlayıcı ad aracı seçeneği.  
+5. Daha sonra genellikle tam aktarmadan önce kuruluşunuz derlemeye projenin yetkilisi kullanarak imzalama gerçek tanımlayıcı ad imzalama gönderme **– R** tanımlayıcı ad aracı seçeneği.  
   
      Aşağıdaki örnek olarak adlandırılan bir derlemeyi imzalar `myAssembly.dll` kullanarak bir tanımlayıcı ad ile `sgKey.snk` anahtar çifti.  
   

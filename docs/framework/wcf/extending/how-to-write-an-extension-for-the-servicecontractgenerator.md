@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: ServiceContractGenerator için Uzantı Yazma'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 104f65f76429701dbf02c1c7a5d737e50b080394
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340626"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Nasıl yapılır: ServiceContractGenerator için Uzantı Yazma
 Bu konu için bir uzantı yazma açıklar <xref:System.ServiceModel.Description.ServiceContractGenerator>. Bu uygulama tarafından yapılabilir <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> bir işlem davranışı arabirimi veya uygulama <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> arabirimdeki bir sözleşme davranışı. Bu konu nasıl uygulayacağınızı gösteren <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> arabirimdeki bir sözleşme davranışı.  
@@ -16,7 +16,7 @@ Bu konu için bir uzantı yazma açıklar <xref:System.ServiceModel.Description.
   
 ### <a name="to-write-an-extension-for-the-servicecontractgenerator"></a>ServiceContractGenerator için uzantı yazma  
   
-1.  Uygulama <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Oluşturulan hizmet sözleşmesi değiştirmek için <xref:System.ServiceModel.Description.ServiceContractGenerationContext> örnek geçirildi <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> yöntemi.  
+1. Uygulama <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Oluşturulan hizmet sözleşmesi değiştirmek için <xref:System.ServiceModel.Description.ServiceContractGenerationContext> örnek geçirildi <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> yöntemi.  
   
     ```  
     public void GenerateContract(ServiceContractGenerationContext context)  
@@ -26,7 +26,7 @@ Bu konu için bir uzantı yazma açıklar <xref:System.ServiceModel.Description.
     }  
     ```  
   
-2.  Uygulama <xref:System.ServiceModel.Description.IWsdlImportExtension> aynı sınıfta. <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> Yöntemi, bir kod oluşturma uzantısı için içeri aktarılan ekleyerek belirli bir WSDL uzantısı (Bu durumda açıklamalarda WSDL) işleyebilir <xref:System.ServiceModel.Description.ContractDescription> örneği.  
+2. Uygulama <xref:System.ServiceModel.Description.IWsdlImportExtension> aynı sınıfta. <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> Yöntemi, bir kod oluşturma uzantısı için içeri aktarılan ekleyerek belirli bir WSDL uzantısı (Bu durumda açıklamalarda WSDL) işleyebilir <xref:System.ServiceModel.Description.ContractDescription> örneği.  
   
     ```  
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -60,7 +60,7 @@ Bu konu için bir uzantı yazma açıklar <xref:System.ServiceModel.Description.
             }  
     ```  
   
-3.  WSDL içeri Aktarıcı istemci yapılandırmanıza ekleyin.  
+3. WSDL içeri Aktarıcı istemci yapılandırmanıza ekleyin.  
   
     ```xml  
     <metadata>  
@@ -70,7 +70,7 @@ Bu konu için bir uzantı yazma açıklar <xref:System.ServiceModel.Description.
     </metadata>  
     ```  
   
-4.  İstemci kod içinde oluşturma bir `MetadataExchangeClient` ve çağrı `GetMetadata`.  
+4. İstemci kod içinde oluşturma bir `MetadataExchangeClient` ve çağrı `GetMetadata`.  
   
     ```  
     MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
@@ -78,13 +78,13 @@ Bu konu için bir uzantı yazma açıklar <xref:System.ServiceModel.Description.
     MetadataSet metaDocs = mexClient.GetMetadata();  
     ```  
   
-5.  Oluşturma bir `WsdlImporter` ve çağrı `ImportAllContracts`.  
+5. Oluşturma bir `WsdlImporter` ve çağrı `ImportAllContracts`.  
   
     ```  
     WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
-6.  Oluşturma bir `ServiceContractGenerator` ve çağrı `GenerateServiceContractType` her sözleşme için.  
+6. Oluşturma bir `ServiceContractGenerator` ve çağrı `GenerateServiceContractType` her sözleşme için.  
   
     ```  
     ServiceContractGenerator generator = new ServiceContractGenerator();  
@@ -96,7 +96,7 @@ Bu konu için bir uzantı yazma açıklar <xref:System.ServiceModel.Description.
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> Her sözleşme davranışı uygulayan verilen bir sözleşme için otomatik olarak çağrılır <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Bu yöntem daha sonra değiştirebilirsiniz <xref:System.ServiceModel.Description.ServiceContractGenerationContext> geçirildi. Bu örnekte açıklama eklenir.  
+7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> Her sözleşme davranışı uygulayan verilen bir sözleşme için otomatik olarak çağrılır <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Bu yöntem daha sonra değiştirebilirsiniz <xref:System.ServiceModel.Description.ServiceContractGenerationContext> geçirildi. Bu örnekte açıklama eklenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

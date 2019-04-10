@@ -5,23 +5,23 @@ helpviewer_keywords:
 - controls [Windows Forms], setting caption
 - Windows Forms, setting the text displayed
 ms.assetid: 9d18e0e0-f17f-4074-837d-e67ceeeaa89d
-ms.openlocfilehash: 645ddedcb0de560737ee05db1375f09cfa2cd7ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0f567befb1e0c323dd16fffedec279ff836cbf8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123869"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337961"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama
 Windows Forms denetimleri, genellikle denetimin birincil işleve ilgili bazı metin görüntüler. Örneğin, bir <xref:System.Windows.Forms.Button> denetimi genellikle düğmesine tıklandığında hangi eylemin gerçekleştirileceğini gösteren bir başlık görüntüler. Tüm denetimler için ayarlayabilir veya dönüş metni kullanarak <xref:System.Windows.Forms.Control.Text%2A> özelliği. Yazı tipi kullanarak değiştirebileceğiniz <xref:System.Windows.Forms.Control.Font%2A> özelliği.  
   
 ### <a name="to-set-the-text-and-font-with-the-designer"></a>Tasarımcı ile yazı tipi ve metin ayarlamak için  
   
-1.  Özellikler penceresinde ayarlayın <xref:System.Windows.Forms.Control.Text%2A> denetiminin uygun bir dize özelliği.  
+1. Özellikler penceresinde ayarlayın <xref:System.Windows.Forms.Control.Text%2A> denetiminin uygun bir dize özelliği.  
   
      Bir altı çizili kısayol tuşu oluşturulacağını içerir ve işareti (&) kısayol tuşunu olacak harfi önce.  
   
-2.  Özellikler penceresinde üç nokta düğmesini (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) yanındaki <xref:System.Windows.Forms.Control.Font%2A> özelliği.  
+2. Özellikler penceresinde üç nokta düğmesini (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) yanındaki <xref:System.Windows.Forms.Control.Font%2A> özelliği.  
   
      Standart yazı tipi iletişim kutusu yazı tipini, yazı tipi stili, boyutu, etkileri (örneğin, üstü çizili veya alt çizgi) ve betik istediğiniz seçin.  
   

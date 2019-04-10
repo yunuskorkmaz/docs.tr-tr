@@ -1,5 +1,5 @@
 ---
-title: "'<filename>' anahtar dosyasından tanımlayıcı adlı derleme oluşturulamadı: <error>"
+title: "Anahtar dosyasından tanımlayıcı adlı derleme oluşturulamadı '<filename>': <error>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31026
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31026
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
-ms.openlocfilehash: 0d0f9b0f3ddcd2f4c97435b7d77d6deadcba2211
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: df6de037cf7cd5b41ed417a8ebfa6f9586e4ebb4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335764"
 ---
 # <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>Anahtar dosyasından tanımlayıcı adlı derleme oluşturulamadı '\<dosya adı >': \<hata >
 Belirtilen anahtar dosyasından tanımlayıcı adlı bütünleştirilmiş kod oluşturulamadı.  
@@ -21,7 +21,7 @@ Belirtilen anahtar dosyasından tanımlayıcı adlı bütünleştirilmiş kod ol
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Doğru anahtar dosyası belirtilmedi ve başka bir uygulama tarafından kilitlenmediğinden emin olun.  
+1. Doğru anahtar dosyası belirtilmedi ve başka bir uygulama tarafından kilitlenmediğinden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

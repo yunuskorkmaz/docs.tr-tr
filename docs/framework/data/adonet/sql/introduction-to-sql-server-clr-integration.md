@@ -2,12 +2,12 @@
 title: SQL Server CLR Tümleştirmesine Giriş
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 2f65e8690aa52f0442b4bee3b98bb1ea86e064a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336817"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR Tümleştirmesine Giriş
 Ortak dil çalışma zamanı (CLR), Microsoft .NET Framework kalbidir ve tüm .NET Framework kod yürütme ortamı sağlar. CLR içinde çalışan kod, yönetilen kod olarak adlandırılır. CLR, ayırma ve bellek, tür güvenliği, özel durum işleme, iş parçacığı yönetimi ve güvenlik zorlama yönetme çeşitli işlevleri ve tam zamanında (JIT) derleme dahil olmak üzere, program yürütme için gerekli hizmetleri sağlar.  
@@ -45,7 +45,7 @@ GO
   
  **SQL Server Çevrimiçi Kitaplar**  
   
-1.  [CLR veritabanı nesneleri dağıtma](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1. [CLR veritabanı nesneleri dağıtma](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
 ## <a name="clr-integration-security"></a>CLR tümleştirme güvenliği  
  Microsoft .NET Framework ortak dil çalışma zamanı (CLR) ile Microsoft SQL Server Tümleştirme güvenlik modelinin yönetir ve farklı içinde SQL Server çalıştıran CLR ve CLR olmayan nesneler arasında erişim güvenliğini sağlar. Bu nesneler, bir Transact-SQL deyimi veya server çalıştıran başka bir CLR nesnesi tarafından çağrılabilir.  

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335413"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Nasıl yapılır: Standart Windows Forms Yazdırma İşleri Oluşturma
 Windows Forms'ta baskı temelidir <xref:System.Drawing.Printing.PrintDocument> bileşeni — daha açık belirtmek gerekirse <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay. İşlemek için kod yazarak <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay ne yazdırma ve yazdırma nasıl belirtebilirsiniz.  
   
 ### <a name="to-create-a-print-job"></a>Bir yazdırma işi oluşturmak için  
   
-1.  Ekleme bir <xref:System.Drawing.Printing.PrintDocument> formunuza bileşen.  
+1. Ekleme bir <xref:System.Drawing.Printing.PrintDocument> formunuza bileşen.  
   
-2.  İşlemek için kod yazma <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay.  
+2. İşlemek için kod yazma <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay.  
   
      Yazdırma mantığınızı kod gerekecektir. Ayrıca, yazdırılması malzeme belirtin gerekecektir.  
   

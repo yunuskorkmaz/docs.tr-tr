@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 83b5498ac6f585a8d2554377748836d88ce592d1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970889"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335023"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -87,7 +87,7 @@ NuGet paketleri, bir veya daha fazla hedef [çerçeveleri](frameworks.md). .NET 
 
 [ `NETStandard.Library` ](https://www.nuget.org/packages/NETStandard.Library/) Metapackage .NET Standard tanımlayan NuGet paketlerini kümesinin tamamını başvuruyor.  Hedeflenecek en yaygın yolu `netstandard` bu metapackage başvurarak olduğu. Açıklanır ve yaklaşık 40 .NET kitaplıkları ve .NET Standard tanımlayan ilişkili API'ler için erişim sağlar. Ek paketleri hedefleyen başvurabilirsiniz `netstandard` erişmek için ek API'ler.
 
-### <a name="versioning"></a>Sürüm oluşturma
+### <a name="versioning"></a>Sürüm Oluşturma
 
 Belirtimi, tekil, ancak bir artımlı olarak büyüyen ve doğrusal olarak tutulan API kümesi değil. Standart ilk sürümü API'leri temel kümesini oluşturur. Sonraki sürümlerde, API'leri ekleyin ve önceki sürümleri tarafından tanımlanan API'leri devralır. Standart API kaldırmak için hiçbir yerleşik sağlama yoktur.
 
@@ -113,7 +113,7 @@ Daha fazla bilgi için [.NET Framework uyumluluk modu](../core/porting/third-par
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>.NET standard kitaplıkları ve Visual Studio
 
-Visual Studio'da .NET standart kitaplıkları oluşturmak için sahip olduğunuzdan emin olun [Visual Studio 2017 sürüm 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) veya daha sonra Windows üzerinde yüklü ya da [sürüm 7.1 Mac için Visual Studio](https://visualstudio.microsoft.com/vs/visual-studio-mac/) veya üzeri yüklü macOS.
+Visual Studio'da .NET standart kitaplıkları oluşturmak için sahip olduğunuzdan emin olun [Visual Studio 2017 sürüm 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) veya daha sonra Windows üzerinde yüklü ya da [sürüm 7.1 Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) veya üzeri yüklü macOS.
 
 Projelerinizde kitaplıkları .NET Standard 2.0 kullanabilir. gerekiyorsa, bunu Visual Studio 2015'te de yapabilirsiniz. Ancak, istemci 3.6 veya üzeri yüklü olan NuGet gerekir. NuGet istemci için Visual Studio 2015'ten indirebileceğiniz [NuGet indirir](https://www.nuget.org/downloads) sayfası.
 

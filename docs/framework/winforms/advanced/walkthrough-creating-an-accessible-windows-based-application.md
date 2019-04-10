@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336661"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>İzlenecek yol: Erişilebilir bir Windows Tabanlı Uygulama Oluşturma
 Erişilebilir bir uygulama oluşturma, önemli iş etkileri vardır. Birçok hükümetler yazılım satın alma için erişilebilirlik düzenlemeleri vardır. Windows için sertifikalıdır logosu erişilebilirlik gereksinimlerini içerir. ABD tek başına kaç tanesinin potansiyel müşteriler, tahmini bir 30 milyon yaşayanlar yazılım erişilebilirliğini tarafından etkilenir.  
@@ -158,7 +158,7 @@ Erişilebilir bir uygulama oluşturma, önemli iş etkileri vardır. Birçok hü
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Etkili bir şekilde yüksek karşıtlık modunu etkinleştirmek için  
   
-1.  Sistem renkleri için etiket renklerini ayarlamak için bir yöntem oluşturun.  
+1. Sistem renkleri için etiket renklerini ayarlamak için bir yöntem oluşturun.  
   
     ```  
     ' Visual Basic  
@@ -188,7 +188,7 @@ Erişilebilir bir uygulama oluşturma, önemli iş etkileri vardır. Birçok hü
     }  
     ```  
   
-2.  Çağrı `SetColorScheme` form Oluşturucu yordamda (`Public Sub New()` Visual Basic'te ve `public class Form1` görselde C#). Visual Basic'te Oluşturucusu erişmek için etiketli bölgeyi Genişlet gerekecektir **Windows Form Designer üretilen kod**.  
+2. Çağrı `SetColorScheme` form Oluşturucu yordamda (`Public Sub New()` Visual Basic'te ve `public class Form1` görselde C#). Visual Basic'te Oluşturucusu erişmek için etiketli bölgeyi Genişlet gerekecektir **Windows Form Designer üretilen kod**.  
   
     ```  
     ' Visual Basic   
@@ -206,7 +206,7 @@ Erişilebilir bir uygulama oluşturma, önemli iş etkileri vardır. Birçok hü
     }  
     ```  
   
-3.  Yanıt vermek için uygun imzaya sahip bir olay yordamı oluşturma <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> olay.  
+3. Yanıt vermek için uygun imzaya sahip bir olay yordamı oluşturma <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> olay.  
   
     ```  
     ' Visual Basic  
@@ -223,7 +223,7 @@ Erişilebilir bir uygulama oluşturma, önemli iş etkileri vardır. Birçok hü
     }  
     ```  
   
-4.  Çağrısından sonra form Oluşturucu için kod ekleme `InitializeComponents`, sistem olay olay yordamına bağlama. Bu yöntemin çağırdığı `SetColorScheme` yordamı.  
+4. Çağrısından sonra form Oluşturucu için kod ekleme `InitializeComponents`, sistem olay olay yordamına bağlama. Bu yöntemin çağırdığı `SetColorScheme` yordamı.  
   
     ```  
     ' Visual Basic  
@@ -246,7 +246,7 @@ Erişilebilir bir uygulama oluşturma, önemli iş etkileri vardır. Birçok hü
     }  
     ```  
   
-5.  Forma kod eklemek <xref:System.Windows.Forms.Control.Dispose%2A> yöntemi çağırmadan önce <xref:System.Windows.Forms.Control.Dispose%2A> yöntemi uygulama kapandığında olay serbest bırakmak için temel sınıf. Erişim için <xref:System.Windows.Forms.Control.Dispose%2A> yöntem Visual Basic'te Windows Form Designer üretilen kod etiketli bölgesini genişletin gerekir.  
+5. Forma kod eklemek <xref:System.Windows.Forms.Control.Dispose%2A> yöntemi çağırmadan önce <xref:System.Windows.Forms.Control.Dispose%2A> yöntemi uygulama kapandığında olay serbest bırakmak için temel sınıf. Erişim için <xref:System.Windows.Forms.Control.Dispose%2A> yöntem Visual Basic'te Windows Form Designer üretilen kod etiketli bölgesini genişletin gerekir.  
   
     > [!NOTE]
     >  Sistem olay kodu, ana uygulamadan ayrı bir iş parçacığı çalıştırır. Olay sunmamayı ise bile programın kapatıldıktan sonra olaya kanca kodu çalıştırın.  
@@ -281,38 +281,38 @@ Erişilebilir bir uygulama oluşturma, önemli iş etkileri vardır. Birçok hü
     }  
     ```  
   
-6.  Uygulamayı çalıştırmak için F5'e basın.  
+6. Uygulamayı çalıştırmak için F5'e basın.  
   
 ## <a name="conveying-important-information-by-means-other-than-sound"></a>Ses dışındaki bir yöntemle önemli bilgileri iletmek  
  Bu uygulamada hiçbir bilgi ses başına aktarılır. Uygulamanızda ses kullanıyorsanız, bazı diğer yöntemlerle de bilgileri vermeniz gerekir.  
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Başka bir şekilde ses daha bilgi sağlamak için  
   
-1.  Başlık çubuğunda FlashWindow Windows API işlevi kullanarak flash olun. Windows API işlevleri çağırmak nasıl bir örnek için bkz [izlenecek yol: Windows API'larını çağırma](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+1. Başlık çubuğunda FlashWindow Windows API işlevi kullanarak flash olun. Windows API işlevleri çağırmak nasıl bir örnek için bkz [izlenecek yol: Windows API'larını çağırma](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
     > [!NOTE]
     >  Kullanıcının, ayrıca bilgisayarın yerleşik Konuşmacı sistem seslerini yürütüldüğünde flash pencereye neden olur etkinse, Windows Nöbetçisi hizmet olabilir.  
   
-2.  Kullanıcı buna yanıt verebilir böylece önemli bilgileri kalıcı olmayan küçük penceresinde görüntüler.  
+2. Kullanıcı buna yanıt verebilir böylece önemli bilgileri kalıcı olmayan küçük penceresinde görüntüler.  
   
-3.  Klavye odağı alması bir ileti kutusu görüntüler. Bu yöntem, kullanıcının yazma sırasında kaçının.  
+3. Klavye odağı alması bir ileti kutusu görüntüler. Bu yöntem, kullanıcının yazma sırasında kaçının.  
   
-4.  Görev durum bildirim alanında bir durum göstergesi görüntüler. Ayrıntılar için bkz [Windows Forms Notifyıcon bileşeni taskbar'na uygulama simgeleri ekleme](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+4. Görev durum bildirim alanında bir durum göstergesi görüntüler. Ayrıntılar için bkz [Windows Forms Notifyıcon bileşeni taskbar'na uygulama simgeleri ekleme](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 ## <a name="testing-the-application"></a>Uygulamayı Test Etme  
  Uygulamayı dağıtmadan önce uyguladıysanız erişilebilirlik özellikleri test etmeniz gerekir.  
   
 #### <a name="to-test-accessibility-features"></a>Erişilebilirlik özelliklerini test etmek için  
   
-1.  Klavye erişimi test etmek için fare çıkarın ve yalnızca klavye kullanma her bir özellik için kullanıcı arabirimi gidin. Tüm görevler yalnızca klavyeyi kullanarak gerçekleştirilebilir emin olun.  
+1. Klavye erişimi test etmek için fare çıkarın ve yalnızca klavye kullanma her bir özellik için kullanıcı arabirimi gidin. Tüm görevler yalnızca klavyeyi kullanarak gerçekleştirilebilir emin olun.  
   
-2.  Yüksek Karşıtlık desteğini test etmek için Denetim Masası'ndaki Erişilebilirlik seçenekleri simgesini seçin. Görüntü sekmesini tıklatın ve Yüksek Karşıtlık kullan onay kutusunu seçin. Renk ve yazı tipi değişikliklerin yansıtıldığından emin olmak için tüm kullanıcı arabirimi öğeleri arasında gezinebilirsiniz. Ayrıca, görüntü veya metin çizilmiş desenleri atlanır emin olun.  
+2. Yüksek Karşıtlık desteğini test etmek için Denetim Masası'ndaki Erişilebilirlik seçenekleri simgesini seçin. Görüntü sekmesini tıklatın ve Yüksek Karşıtlık kullan onay kutusunu seçin. Renk ve yazı tipi değişikliklerin yansıtıldığından emin olmak için tüm kullanıcı arabirimi öğeleri arasında gezinebilirsiniz. Ayrıca, görüntü veya metin çizilmiş desenleri atlanır emin olun.  
   
     > [!NOTE]
     >  Windows NT 4, Denetim Masası'ndaki Erişilebilirlik Seçenekleri simge yok. Bu nedenle, SystemInformation.HighContrast ayarı değiştirmek için bu yordamı Windows NT 4'te çalışmıyor.  
   
-3.  Diğer araçları uygulama erişilebilirliğini test etmek için hazırdır.  
+3. Diğer araçları uygulama erişilebilirliğini test etmek için hazırdır.  
   
-4.  Klavye odağı gösterme test etmek için Büyüteç'i çalıştırın. (Açmak için tıklayın **Başlat** menüsünde **programlar**, işaret **Donatılar**, işaret **erişilebilirlik**ve 'yetıklayın **Büyüteç'i**). Sekmeyle gitmeyi klavye ve fareyi kullanarak kullanıcı arabirimi gidin. Tüm gezinti üzerinde düzgün şekilde izlenir olun **Büyüteç**.  
+4. Klavye odağı gösterme test etmek için Büyüteç'i çalıştırın. (Açmak için tıklayın **Başlat** menüsünde **programlar**, işaret **Donatılar**, işaret **erişilebilirlik**ve 'yetıklayın **Büyüteç'i**). Sekmeyle gitmeyi klavye ve fareyi kullanarak kullanıcı arabirimi gidin. Tüm gezinti üzerinde düzgün şekilde izlenir olun **Büyüteç**.  
   
-5.  İfşa edildi ekran öğelerini test etmek için İncele çalıştırın ve her öğe ulaşmak için fare hem SEKME tuşunu kullanın. İnceleyin penceresinin adı, durumu, rol, konum ve değer alanlarda sunulan bilgiler, kullanıcı arabiriminde her nesne için anlamlı olduğundan emin olun.
+5. İfşa edildi ekran öğelerini test etmek için İncele çalıştırın ve her öğe ulaşmak için fare hem SEKME tuşunu kullanın. İnceleyin penceresinin adı, durumu, rol, konum ve değer alanlarda sunulan bilgiler, kullanıcı arabiriminde her nesne için anlamlı olduğundan emin olun.

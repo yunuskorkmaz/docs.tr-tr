@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 4b0a37814e22260eaaa655dddca278a1f30af09e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171866"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340028"
 ---
 # <a name="control-authoring-overview"></a>Denetim Yazımına Genel Bakış
 Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] denetimi modeli, yeni bir denetim oluşturmak için gereken önemli ölçüde azaltır. Ancak, bazı durumlarda, yine de özel bir denetim oluşturmak gerekebilir. Bu konuda bir özel denetim oluşturup farklı denetim modellerinde yazma gereksiniminizi en aza özellikleri anlatılmaktadır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Bu konuda ayrıca yeni bir denetimin nasıl oluşturulacağını gösterir.  
@@ -191,15 +191,15 @@ Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  Bir uygulama için bir kaynak göründüğünde, üç düzeyde şu sırayla arar:  
   
-1.  Öğe düzeyi.  
+1. Öğe düzeyi.  
   
      Sistem kök öğe ulaşılana kadar kaynak mantıksal üst ve benzeri arar ve kaynağa başvuran bir öğe ile başlar.  
   
-2.  Uygulama düzeyi.  
+2. Uygulama düzeyi.  
   
      Tarafından tanımlanan kaynakları <xref:System.Windows.Application> nesne.  
   
-3.  Tema düzeyi.  
+3. Tema düzeyi.  
   
      Tema düzeyi sözlükler temaları adlı alt klasörde depolanır.  Temalar klasöründeki dosyaları temalara karşılık gelir.  Örneğin, Aero.NormalColor.xaml, Luna.NormalColor.xaml, Royale.NormalColor.xaml vb. olabilir.  Generic.xaml adlı bir dosya da olabilir.  Sistem, temalar düzeyinde bir kaynak için göründüğünde, ilk için temaya özgü dosyasına bakar ve ardından onu generic.xaml içinde arar.  
   

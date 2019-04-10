@@ -1,23 +1,23 @@
 ---
-title: DOM'da bir öğe düğümünden öznitelikleri kaldırma
+title: DOM’da Bir Öğe Düğümünden Öznitelikleri Kaldırma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835187"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336141"
 ---
-# <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM'da bir öğe düğümünden öznitelikleri kaldırma
+# <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM’da Bir Öğe Düğümünden Öznitelikleri Kaldırma
 Öznitelikleri kaldırmak için birçok yolu vardır. Öznitelik koleksiyonundan kaldırabilirsiniz bir tekniktir. Bunu yapmak için aşağıdaki adımları gerçekleştirilir:  
   
-1.  Öğesini kullanarak gelen öznitelik koleksiyonu alma `XmlAttributeCollection attrs = elem.Attributes;`.  
+1. Öğesini kullanarak gelen öznitelik koleksiyonu alma `XmlAttributeCollection attrs = elem.Attributes;`.  
   
-2.  Öznitelik, öznitelik koleksiyonundan üç yöntemden birini kullanarak kaldırın:  
+2. Öznitelik, öznitelik koleksiyonundan üç yöntemden birini kullanarak kaldırın:  
   
     -   Kullanım <xref:System.Xml.XmlAttributeCollection.Remove%2A> belirli bir öznitelik kaldırmak için.  
   

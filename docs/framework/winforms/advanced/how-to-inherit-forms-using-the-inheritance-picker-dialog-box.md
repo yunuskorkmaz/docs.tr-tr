@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212290"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342100"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma
 Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici** iletişim kutusu. Bununla, diğer çözümlere önceden oluşturduğunuz kodu veya kullanıcı arabirimi (UI) avantajlarından yararlanabilirsiniz.  
@@ -23,23 +23,23 @@ Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Devralma Seçici'yi kullanarak varolan bir formdan devralınan bir Windows formu oluşturma  
   
-1.  Gelen **proje** menüsünde seçin **Windows formu eklemek**.  
+1. Gelen **proje** menüsünde seçin **Windows formu eklemek**.  
   
      **Yeni Öğe Ekle** iletişim kutusu açılır.  
   
-2.  Arama **devralınan Form** searchbox ya tıklayarak şablonu **Windows Forms** kategorisini seçin ve içinde ad **adı** kutusu. Tıklayın **Ekle** devam etmek için düğmesine.  
+2. Arama **devralınan Form** searchbox ya tıklayarak şablonu **Windows Forms** kategorisini seçin ve içinde ad **adı** kutusu. Tıklayın **Ekle** devam etmek için düğmesine.  
   
      **Devralma Seçici** iletişim kutusu açılır. Geçerli proje forms içeriyorsa, bunlar görüntülenir **devralma Seçici** iletişim kutusu.  
   
-3.  Bir formdan başka bir derlemede devralmak için tıklatın **Gözat** düğmesi.  
+3. Bir formdan başka bir derlemede devralmak için tıklatın **Gözat** düğmesi.  
   
-4.  İçinde **devralınacak bir bileşen içeren bir dosya seçin** iletişim kutusunda, istediğiniz modülü ve formu içeren projeye gidin.  
+4. İçinde **devralınacak bir bileşen içeren bir dosya seçin** iletişim kutusunda, istediğiniz modülü ve formu içeren projeye gidin.  
   
-5.  Onu seçin ve .exe veya .dll dosyası adına **açık** düğmesi.  
+5. Onu seçin ve .exe veya .dll dosyası adına **açık** düğmesi.  
   
      Bu size döndürür **devralma Seçici** iletişim kutusu, burada bileşen artık listelenir, yanı sıra, bulunduğu proje.  
   
-6.  Bileşeni seçin.  
+6. Bileşeni seçin.  
   
      İçinde **Çözüm Gezgini**, bileşen projenize eklenir. Bir kullanıcı Arabirimi varsa, devralınmış bir form parçası olan denetimler bir simge ile işaretlenir (![ekran görüntüsü Visual Basic kalıtımı sembol.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)) ve seçili olduğunda, denetimin sahip güvenlik düzeyini gösteren bir kenarlığa sahip üst formu. Aşağıdaki tabloda farklı güvenlik düzeylerine karşılık gelen davranışlar listelenmektedir.  
   

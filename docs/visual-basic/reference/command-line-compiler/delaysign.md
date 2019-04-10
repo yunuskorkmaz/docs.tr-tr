@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334607"
 ---
 # <a name="-delaysign"></a>-delaysign
 Derlemenin tamamen veya kısmen imzalanacağını belirtir.  
@@ -37,15 +37,15 @@ Derlemenin tamamen veya kısmen imzalanacağını belirtir.
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>-Delaysıgn Visual Studio tümleşik geliştirme ortamında ayarlamak için  
   
-1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.   
+1. Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.   
   
-2.  Tıklayın **imzalama** sekmesi.  
+2. Tıklayın **imzalama** sekmesi.  
   
-3.  Değer kümesindeki **gecikme yalnızca oturum** kutusu.  
+3. Değer kümesindeki **gecikme yalnızca oturum** kutusu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Komut Satırı Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

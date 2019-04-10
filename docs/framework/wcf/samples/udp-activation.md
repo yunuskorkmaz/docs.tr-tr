@@ -2,12 +2,12 @@
 title: UDP Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 21599990aff1209729a151b4c5a8829e305a1e90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337662"
 ---
 # <a name="udp-activation"></a>UDP Etkinleştirme
 Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek. Bunu genişleten [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows İşlem Etkinleştirme Hizmeti (WAS) kullanarak işlem etkinleştirmeyi desteklemek için örnek.  
@@ -75,13 +75,13 @@ Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transp
   
 #### <a name="to-set-up-this-sample"></a>Bu örneğini kurmak için  
   
-1.  Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aşağıdaki komutu kullanarak 4.0.  
+1. Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aşağıdaki komutu kullanarak 4.0.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Windows Vista'da projeyi derleyin. Derlemeden sonra ayrıca derleme sonrası aşamasında aşağıdaki işlemleri gerçekleştirir:  
+2. Windows Vista'da projeyi derleyin. Derlemeden sonra ayrıca derleme sonrası aşamasında aşağıdaki işlemleri gerçekleştirir:  
   
     -   UDP bağlama "varsayılan Web sitesi" alanına yükler.  
   
@@ -89,13 +89,13 @@ Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transp
   
     -   Ayrıca, bu sanal uygulama için "net.udp" protokol sağlar.  
   
-3.  "WasNetActivator.exe" kullanıcı arabirimi uygulamasını başlatın. Tıklayın **Kurulum** sekmesinde, aşağıdaki onay kutularını işaretleyin ve ardından **yükleme** bunları yüklemek için:  
+3. "WasNetActivator.exe" kullanıcı arabirimi uygulamasını başlatın. Tıklayın **Kurulum** sekmesinde, aşağıdaki onay kutularını işaretleyin ve ardından **yükleme** bunları yüklemek için:  
   
     -   UDP Dinleyici Bağdaştırıcısı  
   
     -   UDP protokol işleyiciler  
   
-4.  Tıklayın **etkinleştirme** sekmesinde kullanıcı arabirimi uygulamasını "WasNetActivator.exe". Tıklayın **Başlat** dinleyici bağdaştırıcısını başlatma düğmesi. Programı çalıştırmak hazırsınız.  
+4. Tıklayın **etkinleştirme** sekmesinde kullanıcı arabirimi uygulamasını "WasNetActivator.exe". Tıklayın **Başlat** dinleyici bağdaştırıcısını başlatma düğmesi. Programı çalıştırmak hazırsınız.  
   
     > [!NOTE]
     >  Bu örnek ile işiniz bittiğinde, "varsayılan Web sitesinden" net.udp bağlamayı kaldırmak Cleanup.bat çalıştırmanız gerekir.  
@@ -113,15 +113,15 @@ Bu örnek dayanır [taşıma: UDP](../../../../docs/framework/wcf/samples/transp
   
 -   Tüm gerekli parçaları düzgün yüklendiğinden emin olun. Aşağıdaki adımlarda, örnek çalıştırmak gösterilmektedir:  
   
-1.  Aşağıdaki Windows Hizmetleri başlatıldığından emin olun:  
+1. Aşağıdaki Windows Hizmetleri başlatıldığından emin olun:  
   
     -   Windows İşlem Etkinleştirme Hizmeti (WAS).  
   
     -   Internet Information Services (IIS): W3SVC.  
   
-2.  Daha sonra WasNetActivator.exe Etkinleştirici başlatın. Altında **etkinleştirme** sekmesi, tek protokol **UDP**, aşağı açılan listeden seçilir. Tıklayın **Başlat** düğmesi Etkinleştirici başlatılamadı.  
+2. Daha sonra WasNetActivator.exe Etkinleştirici başlatın. Altında **etkinleştirme** sekmesi, tek protokol **UDP**, aşağı açılan listeden seçilir. Tıklayın **Başlat** düğmesi Etkinleştirici başlatılamadı.  
   
-3.  Etkinleştirici başlatıldıktan sonra bir komut penceresinden Client.exe çalıştırarak, istemci kodu çalıştırabilirsiniz. Örnek çıktı verilmiştir:  
+3. Etkinleştirici başlatıldıktan sonra bir komut penceresinden Client.exe çalıştırarak, istemci kodu çalıştırabilirsiniz. Örnek çıktı verilmiştir:  
   
     ```  
     Testing Udp Activation.  

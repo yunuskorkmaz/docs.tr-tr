@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Güvenilir oturum içinde Exchange ileti'
+title: 'Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342994"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Nasıl yapılır: Güvenilir oturum içinde Exchange ileti
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme
 
 Bu konuda, bu tür bir oturumu destekleyen sistem tarafından sağlanan bağlamalar, ancak değil, varsayılan olarak kullanarak bir güvenilir oturum etkinleştirmek için gereken adımlar açıklanmaktadır. Kesin kod kullanarak bir güvenilir oturum etkinleştirmek ya da yapılandırma dosyanızdaki bildirimli olarak. Bu yordam, güvenilir oturum etkinleştirmek ve iletileri, gönderildiği aynı sırada ulşamasını işleyebileceği için hizmet ve istemci yapılandırma dosyalarını kullanır.
 
@@ -37,7 +37,7 @@ Bu örnekte kaynak kopyası için bkz: [WS güvenilir oturum](../../../../docs/f
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  Bir yerde *Service.svc* Internet Information Services (IIS) sanal dizininizin dosyasında.
+1. Bir yerde *Service.svc* Internet Information Services (IIS) sanal dizininizin dosyasında.
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Güvenilir oturum kullanılacak WSHttpBinding istemciyi Yapılandırma
 
@@ -79,4 +79,4 @@ Güvenilir oturumlar destekleyen özel bağlama oluşturma örneği için bkz: [
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenilir Oturumlar](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Güvenilir oturumlar](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

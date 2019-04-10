@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 2e0837e4a3058db7f1086d6a8ed53136ec86c7ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 89d9517a92155f569a15c5272bcecc1c8f427f1c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153497"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339677"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimi Tarafından Görüntülenen Resmi Ayarlama
 Çeşitli Windows Forms denetimleri, görüntüleri görüntüleyebilirsiniz. Görüntü denetimi gibi bir disk simgesini gösteren düğme üzerinde amacını açıklar bir simge olabilir **Kaydet** komutu. Alternatif olarak, simge, istediğiniz görünümü denetiminin kendilerinde olmasına arka plan görüntüsü olabilir.  
@@ -24,13 +24,13 @@ ms.locfileid: "59153497"
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Bir denetimi tarafından görüntülenen resmi ayarlama  
   
-1.  İçinde **özellikleri** penceresinde **görüntü** veya **BackgroundImage** özelliğinin, denetimin ardından üç nokta düğmesini (  
+1. İçinde **özellikleri** penceresinde **görüntü** veya **BackgroundImage** özelliğinin, denetimin ardından üç nokta düğmesini (  
   
      ![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) görüntülenecek **seçin kaynak** iletişim kutusu.  
   
-2.  Görüntülemek istediğiniz görüntüyü seçin.  
+2. Görüntülemek istediğiniz görüntüyü seçin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

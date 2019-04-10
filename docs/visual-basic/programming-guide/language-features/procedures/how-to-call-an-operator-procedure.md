@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335491"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir işleç yordamı çağırma
 Bir ifadede operatör sembolünü kullanarak, bir işleç yordamı çağırma. Bir dönüştürme operatörünün söz konusu olduğunda, çağrı [CType işlevi](../../../../visual-basic/language-reference/functions/ctype-function.md) bir değeri bir veri türünden dönüştürme.  
@@ -27,19 +27,19 @@ Bir ifadede operatör sembolünü kullanarak, bir işleç yordamı çağırma. B
   
 ### <a name="to-call-an-operator-procedure"></a>Bir işleç yordamı çağırma için  
   
-1.  İşlecin bir ifadede normal şekilde kullanın.  
+1. İşlecin bir ifadede normal şekilde kullanın.  
   
-2.  İşlenen veri türlerini işleci için ve doğru sırada uygun olduğundan emin olun.  
+2. İşlenen veri türlerini işleci için ve doğru sırada uygun olduğundan emin olun.  
   
-3.  İşleci, beklenen şekilde ifadesinin değerine katkıda bulunur.  
+3. İşleci, beklenen şekilde ifadesinin değerine katkıda bulunur.  
   
 ### <a name="to-call-a-conversion-operator-procedure"></a>Bir dönüştürme işleci yordam çağırmak için  
   
-1.  Kullanım `CType` içinde bir ifade.  
+1. Kullanım `CType` içinde bir ifade.  
   
-2.  İşlenen veri türlerini dönüştürme ve doğru sırada uygun olduğundan emin olun.  
+2. İşlenen veri türlerini dönüştürme ve doğru sırada uygun olduğundan emin olun.  
   
-3.  `CType` dönüştürme işleci yordam çağrıları ve dönüştürülen değeri döndürür.  
+3. `CType` dönüştürme işleci yordam çağrıları ve dönüştürülen değeri döndürür.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek iki oluşturur <xref:System.TimeSpan> yapıları, bunları bir araya getirir ve sonucu bir üçüncü depolar <xref:System.TimeSpan> yapısı. <xref:System.TimeSpan> Birkaç standart İşleç aşırı yüklemeyi işleç yordamları yapısını tanımlar.  
@@ -56,12 +56,12 @@ Bir ifadede operatör sembolünü kullanarak, bir işleç yordamı çağırma. B
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İşleç Yordamları](./operator-procedures.md)
-- [Nasıl yapılır: Bir işleci tanımlama](./how-to-define-an-operator.md)
-- [Nasıl yapılır: Bir dönüşüm işleci tanımlama](./how-to-define-a-conversion-operator.md)
+- [Nasıl yapılır: İşleç Tanımlama](./how-to-define-an-operator.md)
+- [Nasıl yapılır: Dönüştürme İşleci Tanımlama](./how-to-define-a-conversion-operator.md)
 - [Operator Deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
-- [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Nasıl yapılır: Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Genişletme](../../../../visual-basic/language-reference/modifiers/widening.md)
+- [Daraltma](../../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [Structure Yapısı](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Nasıl yapılır: Bir yapıyı bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Örtük ve Açık Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Genişletme ve Daraltma Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Genişletme ve Daraltma Dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

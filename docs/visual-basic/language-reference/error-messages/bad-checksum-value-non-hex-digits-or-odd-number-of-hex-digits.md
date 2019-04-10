@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 211f07e7c9dbc7e0583272d46c493ad99628d283
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81156fd7b1c9957486bcdd898c90a2bad2945829
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724115"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340314"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Hatalı sağlama toplaması değeri, onaltılık olmayan basamaklar veya tek sayıda onaltılık basamak sayısı
 Bir sağlama toplamı değeri geçersiz onaltılık basamaklar içermeyen veya tek sayıda basamak içeriyor.  
@@ -25,11 +25,11 @@ Bir sağlama toplamı değeri geçersiz onaltılık basamaklar içermeyen veya t
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Visual Basic kaynak dosyası ASP.NET oluşturuyorsa, proje derlemesi yeniden başlatın.  
+1. Visual Basic kaynak dosyası ASP.NET oluşturuyorsa, proje derlemesi yeniden başlatın.  
   
-2.  Bu uyarıyı yeniden başlatıldıktan sonra devam ederse, ASP.NET yeniden yükleyin ve derlemeyi yeniden deneyin.  
+2. Bu uyarıyı yeniden başlatıldıktan sonra devam ederse, ASP.NET yeniden yükleyin ve derlemeyi yeniden deneyin.  
   
-3.  Uyarı devam ederse ya da bu ASP.NET kullanmıyorsanız, koşullar hakkında bilgi toplamak ve Microsoft Ürün Destek Hizmetleri bilgilendirir.  
+3. Uyarı devam ederse ya da bu ASP.NET kullanmıyorsanız, koşullar hakkında bilgi toplamak ve Microsoft Ürün Destek Hizmetleri bilgilendirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

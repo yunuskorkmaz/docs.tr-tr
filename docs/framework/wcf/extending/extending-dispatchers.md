@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162730"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335036"
 ---
 # <a name="extending-dispatchers"></a>Dağıtıcıları Genişletme
 Dağıtıcıları çağırana geri göndererek arka plandaki kanal gelen iletileri çekerek ve bunları yöntem çağrıları uygulama kodunda içine çevirme yükümlü olursunuz. Dağıtıcı uzantıları, bu işleme değiştirmenize olanak sağlar.  İnceleme veya değiştirme iletileri ya da parametreler içeriğini ileti veya parametre denetçiler uygulayabilirsiniz.  İletileri işlemleri yönlendirilir veya başka bir işlevsellik sağlayan biçimini değiştirebilirsiniz.  
@@ -76,13 +76,13 @@ Dağıtıcıları çağırana geri göndererek arka plandaki kanal gelen iletile
   
  Dağıtıcı genişletilebilirlik tarafından sunulan dört ana alan bulunur <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sınıfı:  
   
-1.  Kanal bileşenleri özelliklerini kullanmak <xref:System.ServiceModel.Dispatcher.DispatchRuntime> ve bunlar tarafından döndürülen ilişkili kanal dağıtıcı <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> nasıl kanal dağıtıcı kabul eder ve kanalları kapatır özelleştirmek için özellik. Bu kategori içerir <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> özellikleri.  
+1. Kanal bileşenleri özelliklerini kullanmak <xref:System.ServiceModel.Dispatcher.DispatchRuntime> ve bunlar tarafından döndürülen ilişkili kanal dağıtıcı <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> nasıl kanal dağıtıcı kabul eder ve kanalları kapatır özelleştirmek için özellik. Bu kategori içerir <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> özellikleri.  
   
-2.  İşlenen her ileti için ileti bileşenleri özelleştirilir. Bu kategori içerir <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A>ve <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> özellikleri.  
+2. İşlenen her ileti için ileti bileşenleri özelleştirilir. Bu kategori içerir <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A>ve <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> özellikleri.  
   
-3.  Örnek bileşenleri oluşturma, yaşam süresi ve hizmet türünün örneklerini elden özelleştirin. Hizmet nesne kullanım ömrü hakkında daha fazla bilgi için bkz. <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği. Bu kategori içerir <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> özellikleri.  
+3. Örnek bileşenleri oluşturma, yaşam süresi ve hizmet türünün örneklerini elden özelleştirin. Hizmet nesne kullanım ömrü hakkında daha fazla bilgi için bkz. <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği. Bu kategori içerir <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> özellikleri.  
   
-4.  Güvenlikle ilgili bileşenlerini aşağıdaki özellikleri kullanabilirsiniz:  
+4. Güvenlikle ilgili bileşenlerini aşağıdaki özellikleri kullanabilirsiniz:  
   
     -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> denetim olayları yazılacağı gösterir.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 32f4df947926a0c69963d5f4c6872dc38ceeed1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b2719ca000ab86b9ca40f9e78af46cbf598d16e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173504"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337636"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Yönetilen HTML Belgesi Nesne Modelindeki Çerçevelere Erişme
 Bazı HTML belgeleri tanesi oluşur *çerçeveler*, ya da kendi ayrı HTML belgeleri içerebileceği windows. Çerçeveleri kullanarak diğer çerçeveler sürekli içeriklerini değiştirme sırasında bir veya daha fazla parça sayfanın bir gezinti çubuğu gibi statik kalır HTML sayfaları oluşturmak kolaylaştırır.  
@@ -27,11 +27,11 @@ Bazı HTML belgeleri tanesi oluşur *çerçeveler*, ya da kendi ayrı HTML belge
   
 -   Kullanarak `IFRAME` etiketini, çalışma zamanında konumlandırılabilir kayan bir pencere oluşturur.  
   
-1.  Çerçeve HTML belgeleri içerdiğinden, bunlar belge nesne modeli (DOM) pencere öğeleri ve çerçeve öğeleri gösterilir.  
+1. Çerçeve HTML belgeleri içerdiğinden, bunlar belge nesne modeli (DOM) pencere öğeleri ve çerçeve öğeleri gösterilir.  
   
-2.  Eriştiğinizde bir `FRAME` veya `IFRAME` çerçeveler koleksiyonunu kullanarak etiket <xref:System.Windows.Forms.HtmlWindow>, çerçeveye karşılık gelen pencere öğesinin alıyor. Bu, tüm geçerli URL, belge ve boyutu gibi çerçeve dinamik özelliklerini temsil eder.  
+2. Eriştiğinizde bir `FRAME` veya `IFRAME` çerçeveler koleksiyonunu kullanarak etiket <xref:System.Windows.Forms.HtmlWindow>, çerçeveye karşılık gelen pencere öğesinin alıyor. Bu, tüm geçerli URL, belge ve boyutu gibi çerçeve dinamik özelliklerini temsil eder.  
   
-3.  Eriştiğinizde bir `FRAME` veya `IFRAME` kullanarak etiket <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> özelliği <xref:System.Windows.Forms.HtmlWindow>, <xref:System.Windows.Forms.HtmlElement.Children%2A> koleksiyonu veya yöntemler gibi <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> veya <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, çerçeve öğesi alıyor. Bu, orijinal HTML dosyasında belirtilen URL çerçevenin statik özelliklerini temsil eder.  
+3. Eriştiğinizde bir `FRAME` veya `IFRAME` kullanarak etiket <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> özelliği <xref:System.Windows.Forms.HtmlWindow>, <xref:System.Windows.Forms.HtmlElement.Children%2A> koleksiyonu veya yöntemler gibi <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> veya <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, çerçeve öğesi alıyor. Bu, orijinal HTML dosyasında belirtilen URL çerçevenin statik özelliklerini temsil eder.  
   
 ## <a name="frames-and-security"></a>Çerçeve ve güvenlik  
  Çerçeve erişimi karmaşık yönetilen HTML DOM olarak bilinen bir güvenlik önlemi uyguladığını olgu tarafından *çerçeveler betik güvenlik*. Bir belge içeriyorsa bir `FRAMESET` iki veya daha fazlasıyla `FRAME`s farklı etki alanlarında bu `FRAME`s birbiriyle etkileşim olamaz. Diğer bir deyişle, bir `FRAME` Web sitenizin içeriğini görüntüler bilgilerinde erişemiyor bir `FRAME` gibi bir üçüncü taraf site sunan `http://www.adatum.com/`. Bu güvenlik düzeyinde uygulanır <xref:System.Windows.Forms.HtmlWindow> sınıfı. Hakkında genel bilgiler elde edebilirsiniz bir `FRAME` URL'sini, ancak gibi başka bir Web sitesi barındırma erişemiyor olacaktır, <xref:System.Windows.Forms.HtmlWindow.Document%2A> veya, barındırma konumunu ve boyutunu değiştirme `FRAME` veya `IFRAME`.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 5240b9aaaf4d73cb2899a9003f9658dbd8958f3c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 844d165cef05e46d25960f113af3bf99dd35e14f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224344"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340340"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Nasıl yapılır: Windows Forms için Denetimler Yazma
 Bir denetimin kullanıcı ve program arasındaki grafik bağlantısını temsil eder. Bir denetim sağlamak veya verileri işlemek, kullanıcı girişi kabul edebilir, olaylara yanıt vermesi veya herhangi bir sayıda kullanıcı ve uygulama bağlanma diğer işlevlerini gerçekleştirmek. Bir denetimi bir bileşen aslında bir grafik arabirimine sahip olduğundan, bir bileşen mu, yanı sıra kullanıcı etkileşimi sağlamak herhangi bir işlevini hizmet verebilir. Denetimler belirli bir amaca hizmet eder oluşturulur ve denetimleri yazma başka bir programlama görevdir. Aklınızda yazma işleminin hızlandırılmasının denetimine genel bakış aşağıdaki adımları temsil eder. Bağlantılar tek tek adımlara ek bilgi sağlar.  
@@ -23,7 +23,7 @@ Bir denetimin kullanıcı ve program arasındaki grafik bağlantısını temsil 
   
 ### <a name="to-author-a-control"></a>Bir denetim yazma  
   
-1.  Denetim gerçekleştirmek istediğiniz veya bu kısım belirlemek uygulamanızda yürütülür. Dikkate alınması gereken faktörler şunlardır:  
+1. Denetim gerçekleştirmek istediğiniz veya bu kısım belirlemek uygulamanızda yürütülür. Dikkate alınması gereken faktörler şunlardır:  
   
     -   Ne tür bir grafik arabirim ihtiyacınız var?  
   
@@ -33,19 +33,19 @@ Bir denetimin kullanıcı ve program arasındaki grafik bağlantısını temsil 
   
     -   Çeşitli Windows Forms denetimleri bir araya getirerek ihtiyacınız olan işlevleri alabilir miyim?  
   
-2.  Denetim için nesne modeli gerekiyorsa, nasıl işlevselliği nesne modeli dağıtılan ve işlevselliği denetim ve tüm alt nesnelerinin arasında yukarı bölmek belirler. Bir nesne modeli, karmaşık bir denetimi planlama veya çeşitli işlevler dahil etmek istiyorsanız yararlı olabilir.  
+2. Denetim için nesne modeli gerekiyorsa, nasıl işlevselliği nesne modeli dağıtılan ve işlevselliği denetim ve tüm alt nesnelerinin arasında yukarı bölmek belirler. Bir nesne modeli, karmaşık bir denetimi planlama veya çeşitli işlevler dahil etmek istiyorsanız yararlı olabilir.  
   
-3.  Tür belirleme (örneğin, kullanıcı denetimi, özel denetimi, devralınan Windows Forms denetimi) denetimin ihtiyacınız. Ayrıntılar için bkz [denetim türü önerileri](control-type-recommendations.md) ve [özel denetim çeşitleri](varieties-of-custom-controls.md).  
+3. Tür belirleme (örneğin, kullanıcı denetimi, özel denetimi, devralınan Windows Forms denetimi) denetimin ihtiyacınız. Ayrıntılar için bkz [denetim türü önerileri](control-type-recommendations.md) ve [özel denetim çeşitleri](varieties-of-custom-controls.md).  
   
-4.  Özellikleri, yöntemleri ve olayları denetimin ve alt nesnelerinin veya paketinizle yapıları işlevleri hızlı ve uygun erişim düzeyleri (örneğin, genel, korumalı vb.) atayın.  
+4. Özellikleri, yöntemleri ve olayları denetimin ve alt nesnelerinin veya paketinizle yapıları işlevleri hızlı ve uygun erişim düzeyleri (örneğin, genel, korumalı vb.) atayın.  
   
-5.  Özel boyama denetim için gerekiyorsa, bunun için kodu ekleyin. Ayrıntılar için bkz [özel denetim boyama ve işleme](custom-control-painting-and-rendering.md).  
+5. Özel boyama denetim için gerekiyorsa, bunun için kodu ekleyin. Ayrıntılar için bkz [özel denetim boyama ve işleme](custom-control-painting-and-rendering.md).  
   
-6.  Denetiminiz öğesinden devralıyorsa <xref:System.Windows.Forms.UserControl>, Denetim projesinin derlenmesi ve çalışır durumda çalışma zamanı davranışını sınama **UserControl Test kapsayıcısı**. Daha fazla bilgi için [nasıl yapılır: Bir UserControl denetiminin çalışma zamanı davranışını sınama](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+6. Denetiminiz öğesinden devralıyorsa <xref:System.Windows.Forms.UserControl>, Denetim projesinin derlenmesi ve çalışır durumda çalışma zamanı davranışını sınama **UserControl Test kapsayıcısı**. Daha fazla bilgi için [nasıl yapılır: Bir UserControl denetiminin çalışma zamanı davranışını sınama](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
-7.  Ayrıca, test edin ve bir Windows uygulaması gibi yeni bir proje oluşturma, bir kapsayıcının içine yerleştirerek, denetiminde hata ayıklama. Bu işlemin bir parçası olarak gösterilen [izlenecek yol: Visual Basic ile bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-basic.md).  
+7. Ayrıca, test edin ve bir Windows uygulaması gibi yeni bir proje oluşturma, bir kapsayıcının içine yerleştirerek, denetiminde hata ayıklama. Bu işlemin bir parçası olarak gösterilen [izlenecek yol: Visual Basic ile bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-basic.md).  
   
-8.  Her bir özelliği eklemek gibi özellikleri yeni işlevselliği kullanmak için test projenize ekler.  
+8. Her bir özelliği eklemek gibi özellikleri yeni işlevselliği kullanmak için test projenize ekler.  
   
 9. Tasarım iyileştirme yineleyin.  
   

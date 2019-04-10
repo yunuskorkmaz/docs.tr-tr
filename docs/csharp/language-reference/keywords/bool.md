@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 958b58b31193dbf4c03709e4ab7ba38f7f30e0ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334178"
 ---
 # <a name="bool-c-reference"></a>bool (C# Başvurusu)
 
 `bool` Anahtar sözcüğü, bir diğer adını <xref:System.Boolean?displayProperty=nameWithType>. Boole değerleri depolamak üzere değişkenler bildirmek için kullanılır: [true](true-literal.md) ve [false](false-literal.md).
 
 > [!NOTE]
-> Bir değeri de olabilir bir Boolean değişkeni gerektirip gerektirmediğini `null`, kullanın `bool?`. Daha fazla bilgi için [bool? türü](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) bölümünü [boş değer atanabilir türleri kullanma](../../programming-guide/nullable-types/using-nullable-types.md) makalesi.
+> Kullanım `bool?` türü üç değerli mantığı, örneğin,'i desteklemeniz gerekiyorsa çalışırken üç değerli Boole türü destekleyen veritabanları ile. İçin `bool?` işlenenler, önceden tanımlanmış `&` ve `|` üç değerli mantıksal işleçleri destekler. Daha fazla bilgi için [boş değer atanabilir Boolean mantıksal işleçler](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) bölümünü [Boolean mantıksal işleçler](../operators/boolean-logical-operators.md) makalesi.
 
 ## <a name="literals"></a>Sabit değerler
 
@@ -52,10 +52,10 @@ Bu örnekte, bir karakter klavyeden girmeniz ve program, girdi karakteri bir har
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
 - [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)
 - [Yerleşik Türler Tablosu](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [Örtük Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Açık Sayısal Dönüştürmeler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Örtük Sayısal Dönüşümler Tablosu](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Açık Sayısal Dönüşümler Tablosu](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

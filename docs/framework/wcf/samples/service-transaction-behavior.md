@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: c4082c7f8ebea54a9abf2f80c992dc871f8408ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db120df1b2efd28cc484c3749bb22fc2196e9dd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183644"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339950"
 ---
 # <a name="service-transaction-behavior"></a>Hizmet İşlem Davranışı
 Bu örnek, bir istemci Eşgüdümlü işlem kullanımı ve ServiceBehaviorAttribute ve OperationBehaviorAttribute hizmet işlem davranışı denetlemek için ayarları gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) , hesaplayıcı hizmet uygular, ancak gerçekleştirilen işlemlerin bir veritabanı tablosu ve hesap makinesi işlemleri için toplam çalışan bir durum bilgisi olan bir sunucu günlüğü korumak için genişletilir. Sunucu günlüğü tablosu kalıcı Yazar bağımlı istemci işlemi tamamlanmazsa, bir istemci Eşgüdümlü işlem - sonucunu Web hizmeti işlemi güncelleştirmeleri veritabanına kaydedilmiş olmamasını sağlar.  
@@ -206,17 +206,17 @@ Creating new service instance...
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  SQL Server 2005 Express Edition veya SQL Server 2005'in yüklü olduğundan emin olun. Hizmetin App.config dosyasında, veritabanı `connectionString` kümesi veya etkileşimler appSettings ayarlayarak devre dışı bırakılabilir veritabanı `usingSql` değerini `false`.  
+1. SQL Server 2005 Express Edition veya SQL Server 2005'in yüklü olduğundan emin olun. Hizmetin App.config dosyasında, veritabanı `connectionString` kümesi veya etkileşimler appSettings ayarlayarak devre dışı bırakılabilir veritabanı `usingSql` değerini `false`.  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
  Makineler arasında örneği çalıştırırsanız, Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) ağ işlem akışını etkinleştirme ve Windows Communication Foundation (WCF) işlemleri ağ etkinleştirmek için WsatConfig.exe Aracı'nı kullanmak için yapılandırmanız gerekir destekler.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) örnek makinelerde çalışan destekleyecek şekilde yapılandırmak için  
   
-1.  Hizmeti makinede MSDTC gelen ağ işlemleri izin verecek şekilde yapılandırın.  
+1. Hizmeti makinede MSDTC gelen ağ işlemleri izin verecek şekilde yapılandırın.  
   
     1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   
@@ -230,7 +230,7 @@ Creating new service instance...
   
     6.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
-2.  Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) hariç tutulan uygulamalar listesine eklemek için Windows Güvenlik Duvarı hizmeti makinesi ve istemci makine üzerinde yapılandırın:  
+2. Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) hariç tutulan uygulamalar listesine eklemek için Windows Güvenlik Duvarı hizmeti makinesi ve istemci makine üzerinde yapılandırın:  
   
     1.  Windows Güvenlik Duvarı uygulaması Denetim Masası'ndan çalıştırın.  
   
@@ -242,7 +242,7 @@ Creating new service instance...
   
     5.  Tıklayın **Tamam** kapatmak için **Program Ekle** iletişim kutusu seçeneğine tıklayıp **Tamam** Windows Güvenlik Duvarı uygulamasını kapatın.  
   
-3.  İstemci makinesinde MSDTC giden ağ işlemleri izin verecek şekilde yapılandırın:  
+3. İstemci makinesinde MSDTC giden ağ işlemleri izin verecek şekilde yapılandırın:  
   
     1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   

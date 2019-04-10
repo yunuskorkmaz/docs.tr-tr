@@ -2,23 +2,23 @@
 title: 'Nasıl yapılır: DBML Dosyasını Değiştirerek Özelleştirilmiş Kod Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-ms.openlocfilehash: f64d323abf124f3bd8aeb684563a08289fa47f7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338429"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Nasıl yapılır: DBML Dosyasını Değiştirerek Özelleştirilmiş Kod Oluşturma
 Visual Basic oluşturabilir veya C# kaynak koddan bir veritabanı işaretleme dili (.dbml) meta veri dosyası. Bu yaklaşım, varsayılan .dbml dosyası uygulama eşlemesi kodu oluşturmadan önce özelleştirmek için bir fırsat sağlar. Bu gelişmiş bir özelliktir.  
   
  Bu işlemdeki adımlar aşağıdaki gibidir:  
   
-1.  Bir .dbml dosyası oluşturun.  
+1. Bir .dbml dosyası oluşturun.  
   
-2.  Bir .dbml dosyası değiştirmek için bir düzenleyici kullanın. Bir .dbml dosyası için şema tanımı (.xsd) dosyası karşı doğrulamalıdır Not [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .dbml dosyaları. Daha fazla bilgi için [LINQ to SQL'de kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+2. Bir .dbml dosyası değiştirmek için bir düzenleyici kullanın. Bir .dbml dosyası için şema tanımı (.xsd) dosyası karşı doğrulamalıdır Not [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .dbml dosyaları. Daha fazla bilgi için [LINQ to SQL'de kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-3.  Visual Basic oluşturmak veya C# kaynak kodu.  
+3. Visual Basic oluşturmak veya C# kaynak kodu.  
   
  Aşağıdaki örnekler SQLMetal komut satırı aracını kullanın. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   

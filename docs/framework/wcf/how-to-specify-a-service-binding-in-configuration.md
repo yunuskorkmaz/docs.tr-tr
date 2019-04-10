@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 5471e6d5610fd74a71a53624392d757f85304236
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337129"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Nasıl yapılır: Yapılandırmada Hizmet Bağlama Belirtme
 Bu örnekte, bir `ICalculator` anlaşma temel hesaplayıcı hizmeti için tanımlanan, hizmet içinde uygulanan `CalculatorService` sınıf ve onun uç noktası burada belirtilen hizmet kullandığını Web.config dosyasında yapılandırılmış <xref:System.ServiceModel.BasicHttpBinding> . Yapılandırma yerine kod kullanarak bu hizmeti yapılandırmak nasıl bir açıklaması için bkz [nasıl yapılır: Kodda hizmet bağlama belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
@@ -23,12 +23,12 @@ Bu örnekte, bir `ICalculator` anlaşma temel hesaplayıcı hizmeti için tanım
   
 ### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>BasicHttpBinding hizmeti yapılandırmak için kullanmak üzere belirtmek için  
   
-1.  Hizmet türü için bir hizmet anlaşmasını tanımlar.  
+1. Hizmet türü için bir hizmet anlaşmasını tanımlar.  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#1)]  
   
-2.  Hizmet sözleşmesi bir hizmet sınıfında uygulayın.  
+2. Hizmet sözleşmesi bir hizmet sınıfında uygulayın.  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
@@ -36,7 +36,7 @@ Bu örnekte, bir `ICalculator` anlaşma temel hesaplayıcı hizmeti için tanım
     > [!NOTE]
     >  Adres veya bağlama bilgileri hizmeti uygulaması içinde belirtilmedi. Ayrıca, bu bilgileri yapılandırma dosyasından getirilecek yazılacak kod yok.  
   
-3.  Bir uç nokta için yapılandırmak için bir Web.config dosyası oluşturma `CalculatorService` kullanan <xref:System.ServiceModel.WSHttpBinding>.  
+3. Bir uç nokta için yapılandırmak için bir Web.config dosyası oluşturma `CalculatorService` kullanan <xref:System.ServiceModel.WSHttpBinding>.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -73,7 +73,7 @@ Bu örnekte, bir `ICalculator` anlaşma temel hesaplayıcı hizmeti için tanım
     </configuration>  
     ```  
   
-4.  Aşağıdaki satırı içeren bir Service.svc dosyası oluşturun ve, Internet Information Services (IIS) sanal dizinine yerleştirin.  
+4. Aşağıdaki satırı içeren bir Service.svc dosyası oluşturun ve, Internet Information Services (IIS) sanal dizinine yerleştirin.  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
@@ -81,7 +81,7 @@ Bu örnekte, bir `ICalculator` anlaşma temel hesaplayıcı hizmeti için tanım
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>Bağlama özelliklerin varsayılan değerlerini değiştirmek için  
   
-1.  Varsayılan özellik değerlerini birini değiştirmek için <xref:System.ServiceModel.WSHttpBinding>, yeni bir bağlama Yapılandırması adı - oluşturma `<binding name="Binding1">` - içinde [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi ve öznitelikleri için yeni değerleri ayarlayın Bu bağlama öğesi bağlama. Örneğin, varsayılan açık değiştirmek ve 1 dakika ile 2 dakikalık zaman aşımı değerlerini kapatmak için yapılandırma dosyasına aşağıdakileri ekleyin.  
+1. Varsayılan özellik değerlerini birini değiştirmek için <xref:System.ServiceModel.WSHttpBinding>, yeni bir bağlama Yapılandırması adı - oluşturma `<binding name="Binding1">` - içinde [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi ve öznitelikleri için yeni değerleri ayarlayın Bu bağlama öğesi bağlama. Örneğin, varsayılan açık değiştirmek ve 1 dakika ile 2 dakikalık zaman aşımı değerlerini kapatmak için yapılandırma dosyasına aşağıdakileri ekleyin.  
   
     ```xml  
     <wsHttpBinding>  

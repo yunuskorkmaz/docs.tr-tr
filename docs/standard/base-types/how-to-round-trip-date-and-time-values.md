@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Gidiş dönüş tarih ve saat değerleri'
+title: 'Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628194"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340613"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Nasıl yapılır: Gidiş dönüş tarih ve saat değerleri
+# <a name="how-to-round-trip-date-and-time-values"></a>Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri
 Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kesin bir şekilde tanımlamak için tasarlanmıştır. Bu konuda, kaydetme ve geri yükleme işlemi gösterilmektedir bir <xref:System.DateTime> değeri bir <xref:System.DateTimeOffset> değer ve bir tarih ve saat değeri zaman ile kaydedilen değer aynı zamanda geri yüklenen değeri tanımlar, böylece bilgi bölge.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>Bir DateTime değerini gidiş dönüşlü hale getirmek için  
   
-1.  Dönüştürme <xref:System.DateTime> çağırarak dize gösterimine değerine <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> "o" biçim belirteci ile yöntemi.  
+1. Dönüştürme <xref:System.DateTime> çağırarak dize gösterimine değerine <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> "o" biçim belirteci ile yöntemi.  
   
-2.  Dize gösterimini kaydedin <xref:System.DateTime> değeri bir dosyaya veya bir işlem, uygulama etki alanı veya makine sınırı arasında geçirin.  
+2. Dize gösterimini kaydedin <xref:System.DateTime> değeri bir dosyaya veya bir işlem, uygulama etki alanı veya makine sınırı arasında geçirin.  
   
-3.  Temsil eden dizeyi almak <xref:System.DateTime> değeri.  
+3. Temsil eden dizeyi almak <xref:System.DateTime> değeri.  
   
-4.  Çağrı <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> yöntemi ve pass <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> değeri olarak `styles` parametresi.  
+4. Çağrı <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> yöntemi ve pass <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> değeri olarak `styles` parametresi.  
   
  Aşağıdaki örnekte gösterilmiştir gidiş dönüşlü hale getirmek için nasıl bir <xref:System.DateTime> değeri.  
   
@@ -43,13 +43,13 @@ Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kes
   
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>Bir DateTimeOffset değerini gidiş dönüşlü hale getirmek için  
   
-1.  Dönüştürme <xref:System.DateTimeOffset> çağırarak dize gösterimine değerine <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> "o" biçim belirteci ile yöntemi.  
+1. Dönüştürme <xref:System.DateTimeOffset> çağırarak dize gösterimine değerine <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> "o" biçim belirteci ile yöntemi.  
   
-2.  Dize gösterimini kaydedin <xref:System.DateTimeOffset> değeri bir dosyaya veya bir işlem, uygulama etki alanı veya makine sınırı arasında geçirin.  
+2. Dize gösterimini kaydedin <xref:System.DateTimeOffset> değeri bir dosyaya veya bir işlem, uygulama etki alanı veya makine sınırı arasında geçirin.  
   
-3.  Temsil eden dizeyi almak <xref:System.DateTimeOffset> değeri.  
+3. Temsil eden dizeyi almak <xref:System.DateTimeOffset> değeri.  
   
-4.  Çağrı <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> yöntemi ve pass <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> değeri olarak `styles` parametresi.  
+4. Çağrı <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> yöntemi ve pass <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> değeri olarak `styles` parametresi.  
   
  Aşağıdaki örnekte gösterilmiştir gidiş dönüşlü hale getirmek için nasıl bir <xref:System.DateTimeOffset> değeri.  
   
@@ -60,18 +60,18 @@ Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kes
   
 ### <a name="to-round-trip-a-date-and-time-value-with-its-time-zone"></a>Bir tarih ve saat değerini kendi saat dilimiyle gidiş dönüşlü hale getirmek için  
   
-1.  Bir sınıf ya da iki alan bir yapı tanımlar. İlk alanı bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> nesne ve ikinci bir <xref:System.TimeZoneInfo> nesne. Aşağıdaki örnekte, böyle bir türü basit bir sürümüdür.  
+1. Bir sınıf ya da iki alan bir yapı tanımlar. İlk alanı bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> nesne ve ikinci bir <xref:System.TimeZoneInfo> nesne. Aşağıdaki örnekte, böyle bir türü basit bir sürümüdür.  
   
      [!code-csharp[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#3)]
      [!code-vb[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#3)]  
   
-2.  Sınıf ile işaretle <xref:System.SerializableAttribute> özniteliği.  
+2. Sınıf ile işaretle <xref:System.SerializableAttribute> özniteliği.  
   
-3.  Nesnesi kullanarak serileştirme <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> yöntemi.  
+3. Nesnesi kullanarak serileştirme <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> yöntemi.  
   
-4.  Nesnesini kullanarak geri <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> yöntemi.  
+4. Nesnesini kullanarak geri <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> yöntemi.  
   
-5.  Atama (C# ') veya (Visual Basic'te) seri durumdan çıkarılmış nesne uygun türde bir nesneye dönüştürür.  
+5. Atama (C# ') veya (Visual Basic'te) seri durumdan çıkarılmış nesne uygun türde bir nesneye dönüştürür.  
   
  Aşağıdaki örnek nasıl tarih ve saat ve saat dilimi bilgilerini depolayan bir nesne gidiş dönüş için gösterir.  
   
@@ -87,13 +87,13 @@ Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kes
   
     -   <xref:System> (Yalnızca C#).  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>.  
+    -   <xref:System.Globalization?displayProperty=nameWithType>biçimindeki telefon numarasıdır.  
   
     -   <xref:System.IO?displayProperty=nameWithType>.  
   
     -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>biçimindeki telefon numarasıdır.  
   
 -   Bir System.Core.dll başvurusu.  
   
@@ -102,5 +102,5 @@ Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kes
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [DateTime, DateTimeOffset, TimeSpan ve Timezoneınfo arasında seçim](../../../docs/standard/datetime/choosing-between-datetime.md)
+- [DateTime, DateTimeOffset, TimeSpan ve TimeZoneInfo Arasında Seçim Yapma ](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

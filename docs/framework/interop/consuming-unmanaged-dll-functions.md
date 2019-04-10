@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb2aea648df5df9b69815d77a731717f8bc39bbd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193362"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340041"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Yönetilmeyen DLL İşlevlerini Kullanma
 Platform çağırma etkinleştirir olanlar Windows API gibi dinamik bağlantı kitaplıklarını (DLL'ler) uygulanan yönetilmeyen işlevleri çağırmak için kod yönetilen bir hizmettir. Dışarı aktarılan bir işlevi çağırır bulur ve bağımsız değişkenlerinden (tamsayı, dizeler, diziler, yapılar ve benzeri) gerektiği gibi birlikte çalışabilirlik sınırında sürekliliğe devreder.  
@@ -29,15 +29,15 @@ Platform çağırma etkinleştirir olanlar Windows API gibi dinamik bağlantı k
   
 #### <a name="to-consume-exported-dll-functions"></a>Dışa aktarılan DLL işlevleri kullanmak için  
   
-1.  [DLL'lerde işlevleri tanımlama](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1. [DLL'lerde işlevleri tanımlama](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
   
      En düşük düzeyde, işlevin adını ve içerdiği DLL'in adı belirtmeniz gerekir.  
   
-2.  [DLL işlevleri için bir sınıf oluşturmanız](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2. [DLL işlevleri için bir sınıf oluşturmanız](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
   
      Varolan bir sınıfı kullanın, yönetilmeyen her işlev için bağımsız bir sınıf oluşturun veya ilgili yönetilmeyen işlevler bir dizi içeren bir sınıf oluşturun.  
   
-3.  [Yönetilen kodda prototipler oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [Yönetilen kodda prototipler oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] Kullanım **Declare** deyimiyle **işlevi** ve **LIB** anahtar sözcükleri. Bazı nadir durumlarda, kullandığınız **DllImportAttribute** ile **paylaşılan işlevi** anahtar sözcükleri. Bu gibi durumlarda, daha sonra bu bölümde açıklanmıştır.  
   
@@ -45,7 +45,7 @@ Platform çağırma etkinleştirir olanlar Windows API gibi dinamik bağlantı k
   
      [C++] Kullanımı **DllImportAttribute** işlevi ve DLL tanımlamak için. Sarmalayıcı yöntemini işaretlemek veya işlevini **extern "C"**.  
   
-4.  [Bir DLL işlevini çağırmak](../../../docs/framework/interop/calling-a-dll-function.md).  
+4. [Bir DLL işlevini çağırmak](../../../docs/framework/interop/calling-a-dll-function.md).  
   
      Yönetilen herhangi bir yöntemi gibi yönetilen sınıfınıza yöntemi çağırın. [Yapıları geçirme](../../../docs/framework/interop/passing-structures.md) ve [geri çağırma işlevlerini uygulama](../../../docs/framework/interop/callback-functions.md) özel durumları olan.  
   
@@ -58,16 +58,16 @@ Platform çağırma etkinleştirir olanlar Windows API gibi dinamik bağlantı k
   
  Yönetilmeyen bir işlev çağırır olduğunda platform çağırma aşağıdaki eylemler dizisini gerçekleştirir:  
   
-1.  İşlevi içeren DLL bulur.  
+1. İşlevi içeren DLL bulur.  
   
-2.  DLL belleğine yükler.  
+2. DLL belleğine yükler.  
   
-3.  Bellekte bir işlevin adresini bulur ve bağımsız olarak gerekli veri hazırlama yığına iter.  
+3. Bellekte bir işlevin adresini bulur ve bağımsız olarak gerekli veri hazırlama yığına iter.  
   
     > [!NOTE]
     >  İşlev yalnızca ilk çağrıda işlevin adresini bellekte bulma bulma ve DLL yüklenirken oluşur.  
   
-4.  Yönetilmeyen işlev denetimine aktarımlarına.  
+4. Yönetilmeyen işlev denetimine aktarımlarına.  
   
  Platform çağırma yönetilen çağırana yönetilmeyen işlevi tarafından oluşturulan oluşturur özel durumlar.
 

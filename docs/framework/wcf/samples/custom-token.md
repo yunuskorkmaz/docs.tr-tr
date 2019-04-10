@@ -2,12 +2,12 @@
 title: Özel Belirteç
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 3632738ce7afaa5f458dfe26eb562cd70c2e2896
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fbde7d1006cabddafa7e03fdee0e3493416001da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334451"
 ---
 # <a name="custom-token"></a>Özel Belirteç
 Bu örnek, bir Windows Communication Foundation (WCF) uygulamasına özel bir belirteç uygulamasını ekleme gösterir. Örnekte bir `CreditCardToken` istemci kredi kartı bilgilerini güvenli bir şekilde hizmetine geçirilecek. Belirteç WS-güvenlik ileti üstbilgisinde imzalanır ve yanı sıra ileti gövdesi ve diğer ileti üstbilgileri simetrik güvenlik bağlama öğesi kullanılarak şifrelenir. Bu, yerleşik belirteçleri yeterli olmadığı durumlarda kullanışlıdır. Bu örnek, bir yerleşik belirteçlerin kullanmak yerine bir hizmete özel güvenlik belirteci gösterilmiştir. Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular.
@@ -588,38 +588,38 @@ string GetCallerCreditCardNumber()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Ayarlama ve örneği oluşturmak için
 
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için
 
-1.  Yönetici ayrıcalıklarına sahip bir Visual Studio 2012 komut istemi penceresi açın ve örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler. Yolun Makecert.exe bulunduğu klasörü içerdiğinden emin olun.
+1. Yönetici ayrıcalıklarına sahip bir Visual Studio 2012 komut istemi penceresi açın ve örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler. Yolun Makecert.exe bulunduğu klasörü içerdiğinden emin olun.
 
 > [!NOTE]
 >  Sertifikaları örnek ile işiniz bittiğinde Cleanup.bat çalıştırarak kaldırmayı unutmayın. Diğer güvenlik örnekleri aynı sertifikalarını kullanın.  
   
-1.  Client.exe client\bin dizinden başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
+1. Client.exe client\bin dizinden başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-2.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+2. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computer"></a>Bilgisayar arasında örneği çalıştırmak için  
   
-1.  Hizmet ikili dosyaları için hizmet bilgisayarda bir dizin oluşturun.  
+1. Hizmet ikili dosyaları için hizmet bilgisayarda bir dizin oluşturun.  
   
-2.  Hizmet dizini hizmeti bilgisayarında hizmet program dosyaları kopyalayın. CreditCardFile.txt kopyalamak unutmayın; Aksi takdirde kredi kartı authenticator istemciden gönderilen kredi kartı bilgileri doğrulanamıyor. Ayrıca Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
+2. Hizmet dizini hizmeti bilgisayarında hizmet program dosyaları kopyalayın. CreditCardFile.txt kopyalamak unutmayın; Aksi takdirde kredi kartı authenticator istemciden gönderilen kredi kartı bilgileri doğrulanamıyor. Ayrıca Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
   
-3.  Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Setup.bat değiştirirseniz kullanarak bir tane oluşturabilirsiniz `%SERVER_NAME%` değişkenini hizmetin barındırıldığı bilgisayarın tam adı. Setup.bat dosyasının Visual Studio için geliştirici komut isteminden çalıştırılmalıdır Not yönetici ayrıcalıklarıyla açılan.  
+3. Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Setup.bat değiştirirseniz kullanarak bir tane oluşturabilirsiniz `%SERVER_NAME%` değişkenini hizmetin barındırıldığı bilgisayarın tam adı. Setup.bat dosyasının Visual Studio için geliştirici komut isteminden çalıştırılmalıdır Not yönetici ayrıcalıklarıyla açılan.  
   
-4.  Sunucu sertifikası istemci CurrentUser TrustedPeople deponuzu kopyalayın. Yalnızca sunucu sertifikası güvenilir bir veren tarafından yazılmazsa bunu yapmanız gerekir.  
+4. Sunucu sertifikası istemci CurrentUser TrustedPeople deponuzu kopyalayın. Yalnızca sunucu sertifikası güvenilir bir veren tarafından yazılmazsa bunu yapmanız gerekir.  
   
-5.  EchoServiceHost.cs dosyasında localhost yerine tam bilgisayar adını belirtmek için sertifika konu adı değerini değiştirin.  
+5. EchoServiceHost.cs dosyasında localhost yerine tam bilgisayar adını belirtmek için sertifika konu adı değerini değiştirin.  
   
-6.  İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörünün altındaki istemci bilgisayara kopyalayın.  
+6. İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörünün altındaki istemci bilgisayara kopyalayın.  
   
-7.  Client.cs dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
+7. Client.cs dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
   
-8.  Client.cs dosyasında localhost yerine uzak ana bilgisayar tam olarak nitelenmiş adını eşleştirmek için hizmet X.509 sertifikasının konu adı değiştirin.  
+8. Client.cs dosyasında localhost yerine uzak ana bilgisayar tam olarak nitelenmiş adını eşleştirmek için hizmet X.509 sertifikasının konu adı değiştirin.  
   
 9. İstemci bilgisayarda bir komut istemi penceresinden Client.exe başlatın.  
   
@@ -627,4 +627,4 @@ string GetCallerCreditCardNumber()
   
 #### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
-1.  Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
+1. Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  

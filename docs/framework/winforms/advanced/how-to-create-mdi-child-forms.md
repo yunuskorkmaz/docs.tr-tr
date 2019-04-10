@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342485"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Nasıl yapılır: MDI Alt Formları Oluşturma
 MDI alt formlarını olan önemli bir öğesidir [Çok Belgeli Arabirim (MDI) uygulamaları](multiple-document-interface-mdi-applications.md), bu formları kullanıcı etkileşimi merkezi olarak.  
@@ -26,17 +26,17 @@ MDI alt formlarını olan önemli bir öğesidir [Çok Belgeli Arabirim (MDI) uy
   
 ### <a name="to-create-mdi-child-forms"></a>MDI alt formları oluşturmak için  
   
-1.  Yeni bir Windows Forms projesi oluşturun. İçinde **özellikleri Windows** formun kendi <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğini `true`ve onun `WindowsState` özelliğini `Maximized`.  
+1. Yeni bir Windows Forms projesi oluşturun. İçinde **özellikleri Windows** formun kendi <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğini `true`ve onun `WindowsState` özelliğini `Maximized`.  
   
      Bu, form alt pencereler için bir MDI kapsayıcısı olarak belirler.  
   
-2.  Gelen `Toolbox`, sürükleyin bir <xref:System.Windows.Forms.MenuStrip> forma. Ayarlama, `Text` özelliğini **dosya**.  
+2. Gelen `Toolbox`, sürükleyin bir <xref:System.Windows.Forms.MenuStrip> forma. Ayarlama, `Text` özelliğini **dosya**.  
   
-3.  Yanındaki üç nokta (...) tıklayın **öğeleri** özelliği seçeneğine tıklayıp **Ekle** iki alt araç şeridi menü öğesi eklemek için. Ayarlama `Text` özelliği için bu öğeler için **yeni** ve **penceresi**.  
+3. Yanındaki üç nokta (...) tıklayın **öğeleri** özelliği seçeneğine tıklayıp **Ekle** iki alt araç şeridi menü öğesi eklemek için. Ayarlama `Text` özelliği için bu öğeler için **yeni** ve **penceresi**.  
   
-4.  İçinde **Çözüm Gezgini**, projeye sağ tıklayın, fareyle **Ekle**ve ardından **Yeni Öğe Ekle**.  
+4. İçinde **Çözüm Gezgini**, projeye sağ tıklayın, fareyle **Ekle**ve ardından **Yeni Öğe Ekle**.  
   
-5.  İçinde **Yeni Öğe Ekle** iletişim kutusunda **Windows Form** (Visual Basic veya Visual C#) veya **Windows Forms uygulaması (.NET)** (içinde [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) gelen **Şablonları** bölmesi. İçinde **adı** kutusunda, formun adı **Form2**. Tıklayın **açık** projeye form ekleme düğmesi.  
+5. İçinde **Yeni Öğe Ekle** iletişim kutusunda **Windows Form** (Visual Basic veya Visual C#) veya **Windows Forms uygulaması (.NET)** (içinde [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) gelen **Şablonları** bölmesi. İçinde **adı** kutusunda, formun adı **Form2**. Tıklayın **açık** projeye form ekleme düğmesi.  
   
     > [!NOTE]
     >  Bu adımda oluşturduğunuz MDI alt formu, bir standart Windows biçimidir. Bu nedenle, sahip bir <xref:System.Windows.Forms.Form.Opacity%2A> form saydamlığını denetlemenize olanak sağlayan özellik. Ancak, <xref:System.Windows.Forms.Form.Opacity%2A> özelliği, üst düzey pencerelere için tasarlanmıştır. Boyama sorunlar oluşabilir gibi MDI alt formlarını ile kullanmayın.  
@@ -45,13 +45,13 @@ MDI alt formlarını olan önemli bir öğesidir [Çok Belgeli Arabirim (MDI) uy
   
      **Windows Form Tasarımcısı** görüntüleme açıldığında **Form2**.  
   
-6.  Gelen **araç kutusu**, sürükleyin bir **RichTextBox** forma.  
+6. Gelen **araç kutusu**, sürükleyin bir **RichTextBox** forma.  
   
-7.  İçinde **özellikleri** penceresinde `Anchor` özelliğini **üst, sol** ve `Dock` özelliğini **dolgu**.  
+7. İçinde **özellikleri** penceresinde `Anchor` özelliğini **üst, sol** ve `Dock` özelliğini **dolgu**.  
   
      Bu neden <xref:System.Windows.Forms.RichTextBox> bile formu yeniden boyutlandırıldığında alanı MDI alt formunun tamamen doldurmak için denetimi.  
   
-8.  Çift tıklayarak **yeni** oluşturmak için menü öğesi bir <xref:System.Windows.Forms.Control.Click> olay işleyicisi.  
+8. Çift tıklayarak **yeni** oluşturmak için menü öğesi bir <xref:System.Windows.Forms.Control.Click> olay işleyicisi.  
   
 9. Kullanıcı tıkladığında, yeni bir MDI alt formu oluşturmak için aşağıdaki için benzer bir kod ekleme **yeni** menü öğesi.  
   

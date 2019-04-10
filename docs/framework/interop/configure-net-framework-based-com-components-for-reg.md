@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03098126985abc898b8911f98013662632d56e35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176520"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336583"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma
 Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca COM bileşenleri için olandan biraz daha karmaşık. Kurulum, iki bildirimleri gerektirir:  
@@ -28,9 +28,9 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
   
 ### <a name="to-create-an-application-manifest"></a>Bir uygulama bildirimi oluşturmak için  
   
-1.  Bir XML Düzenleyicisi'ni kullanarak oluşturun (veya değiştirme) bir veya daha fazla yönetilen bileşenleri ile birlikte COM uygulama sahibi uygulama bildirimi.  
+1. Bir XML Düzenleyicisi'ni kullanarak oluşturun (veya değiştirme) bir veya daha fazla yönetilen bileşenleri ile birlikte COM uygulama sahibi uygulama bildirimi.  
   
-2.  Aşağıdaki standart üstbilgi dosyasının başına ekleyin:  
+2. Aşağıdaki standart üstbilgi dosyasının başına ekleyin:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -39,7 +39,7 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
   
      Liste öğelerini ve onların öznitelikleri hakkında daha fazla bilgi için bkz. [uygulama bildirimleri](/windows/desktop/SbsCs/application-manifests).  
   
-3.  Bildirimin sahibi olacak kişileri tanımlayın. Aşağıdaki örnekte, `myComApp` sürüm 1 sahip bildirim dosyası.  
+3. Bildirimin sahibi olacak kişileri tanımlayın. Aşağıdaki örnekte, `myComApp` sürüm 1 sahip bildirim dosyası.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -51,7 +51,7 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
       />  
     ```  
   
-4.  Bağımlı derlemelerin belirleyin. Aşağıdaki örnekte, `myComApp` bağlıdır `myManagedComp`.  
+4. Bağımlı derlemelerin belirleyin. Aşağıdaki örnekte, `myComApp` bağlıdır `myManagedComp`.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -75,22 +75,22 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
     </assembly>  
     ```  
   
-5.  Kaydet ve bildirim dosyasının adı. Bir uygulama bildirimi yürütülebilir derlemenin adını .manifest uzantısı tarafından izlenen adıdır. Örneğin, uygulama bildirim dosyası myComApp.exe myComApp.exe.manifest adıdır.  
+5. Kaydet ve bildirim dosyasının adı. Bir uygulama bildirimi yürütülebilir derlemenin adını .manifest uzantısı tarafından izlenen adıdır. Örneğin, uygulama bildirim dosyası myComApp.exe myComApp.exe.manifest adıdır.  
   
  Bir uygulama bildirimi, COM uygulama ile aynı dizinde yükleyebilirsiniz. Alternatif olarak, bunu bir kaynak olarak uygulamanın .exe dosyasına ekleyebilirsiniz. Daha fazla bilgi için ek bilgi için bkz. [yan yana derlemeler hakkında](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
 #### <a name="to-create-a-component-manifest"></a>Bileşen bildirimi oluşturmak için  
   
-1.  Bir XML Düzenleyicisi'ni kullanarak yönetilen derlemeyi tanımlamak için bir bileşen bildirimi oluşturun.  
+1. Bir XML Düzenleyicisi'ni kullanarak yönetilen derlemeyi tanımlamak için bir bileşen bildirimi oluşturun.  
   
-2.  Aşağıdaki standart üstbilgi dosyasının başına ekleyin:  
+2. Aşağıdaki standart üstbilgi dosyasının başına ekleyin:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3.  Dosyanın sahibi olacak kişileri tanımlayın. `<assemblyIdentity>` Öğesinin `<dependentAssembly>` bileşen bildirimini bir uygulama bildirimi dosyasındaki öğesi eşleşmesi gerekir. Aşağıdaki örnekte, `myManagedComp` sürüm 1.2.3.4 sahip bildirim dosyası.  
+3. Dosyanın sahibi olacak kişileri tanımlayın. `<assemblyIdentity>` Öğesinin `<dependentAssembly>` bileşen bildirimini bir uygulama bildirimi dosyasındaki öğesi eşleşmesi gerekir. Aşağıdaki örnekte, `myManagedComp` sürüm 1.2.3.4 sahip bildirim dosyası.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,7 +103,7 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
            />  
     ```  
   
-4.  Derlemedeki her bir sınıf tanımlar. Kullanım `<clrClass>` her derlemede sınıfı, yönetilen benzersiz olarak tanımlanabilmesi için öğesi. Bir alt öğesi olan öğe, `<assembly>` öğesi, aşağıdaki tabloda açıklanan öznitelikleri.  
+4. Derlemedeki her bir sınıf tanımlar. Kullanım `<clrClass>` her derlemede sınıfı, yönetilen benzersiz olarak tanımlanabilmesi için öğesi. Bir alt öğesi olan öğe, `<assembly>` öğesi, aşağıdaki tabloda açıklanan öznitelikleri.  
   
     |Öznitelik|Açıklama|Gerekli|  
     |---------------|-----------------|--------------|  
@@ -146,25 +146,25 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
     </assembly>  
     ```  
   
-5.  Kaydet ve bildirim dosyasının adı. Bir bileşen bildirimini .manifest uzantısı tarafından izlenen derleme kitaplığının adı adıdır. Örneğin, myManagedComp.dll myManagedComp.manifest olur.  
+5. Kaydet ve bildirim dosyasının adı. Bir bileşen bildirimini .manifest uzantısı tarafından izlenen derleme kitaplığının adı adıdır. Örneğin, myManagedComp.dll myManagedComp.manifest olur.  
   
  Bir kaynak olarak bileşen bildirimini derlemesinde katıştırmanız gerekir.  
   
 #### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>Yönetilen derlemede bir bileşen bildirimi eklemek için  
   
-1.  Aşağıdaki deyim içeren bir kaynak betiği oluşturun:  
+1. Aşağıdaki deyim içeren bir kaynak betiği oluşturun:  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
      Bu bildirimde `myManagedComp.manifest` katıştırılmış bileşen bildirimini adıdır. Bu örnekte, betik dosyası adı `myresource.rc`.  
   
-2.  Microsoft Windows Kaynak derleyicisi (Rc.exe) kullanarak betiği derleyin. Komut satırında, aşağıdaki komutu yazın:  
+2. Microsoft Windows Kaynak derleyicisi (Rc.exe) kullanarak betiği derleyin. Komut satırında, aşağıdaki komutu yazın:  
   
      `rc myresource.rc`  
   
      RC.exe üretir `myresource.res` kaynak dosyası.  
   
-3.  Derlemenin kaynak dosyasını yeniden derleyin ve kullanarak kaynak dosyayı belirtin **/win32res** seçeneği:  
+3. Derlemenin kaynak dosyasını yeniden derleyin ve kullanarak kaynak dosyayı belirtin **/win32res** seçeneği:  
   
     ```  
     /win32res:myresource.res  

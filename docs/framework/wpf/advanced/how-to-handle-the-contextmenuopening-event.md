@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: a6ac0158c4fb9d766fd56ee50d0b1b6cc91e5de3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219635"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340405"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Nasıl yapılır: ContextMenuOpening Olayını İşleme
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Olay ya da bir var olan bağlam menüsü önceki görüntülemek veya ayarlayarak görüntülenen menüyü bastırmak için ayarlamak için bir uygulama işlenebilir <xref:System.Windows.RoutedEventArgs.Handled%2A> özelliğini `true` içinde olay verileri. Ayar tipik nedeni <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true` olay menü tamamen yeni ile değiştirilecek verilerdir <xref:System.Windows.Controls.ContextMenu> işlemi iptal ediliyor ve yeni bir açık başlatma bazen gerektiren, nesne. İçin işleyiciler yazarsanız <xref:System.Windows.FrameworkElement.ContextMenuOpening> olay olmanız gerekir zamanlama sorunları arasında farkında bir <xref:System.Windows.Controls.ContextMenu> denetimi ve açma ve genel denetimlerin bağlam menülerini konumlandırma sorumlu hizmeti. Bu konuda çeşitli bağlam menüsü açma senaryoları için kod yöntemlerden bazıları gösterilmektedir ve burada zamanlama sorunu devreye bir durumu gösterir.  
@@ -42,11 +42,11 @@ ms.locfileid: "59219635"
   
  Ancak, bu stil işleyicisinin kullanırsanız <xref:System.Windows.FrameworkElement.ContextMenuOpening>, potansiyel olarak, bir zamanlama sorunu getirebilir ayarladığınız nesne <xref:System.Windows.Controls.ContextMenu> önceden var olan bir bağlam menüsü sahip değil. Bir kullanıcının bir denetimi tıklattığında <xref:System.Windows.FrameworkElement.ContextMenuOpening> tetiklenir olsanız bile var olan <xref:System.Windows.Controls.ContextMenu> boş veya null. Ancak bu durumda, her yeni <xref:System.Windows.Controls.ContextMenu> kaynağında ayarladığınız öğesi ulaşan çok geç görüntülenecek. Ayrıca, kullanıcı ikinci kez sağ tıkladığınızda, bu sefer yeni <xref:System.Windows.Controls.ContextMenu> göründüğünde, null değeri değildir ve işleyicinizi düzgün şekilde değiştirin ve işleyici ikinci kez çalıştırıldığında menüsünü görüntüleme. Bu, iki olası geçici çözümler önerir:  
   
-1.  Çalışabildiğinden emin olun <xref:System.Windows.FrameworkElement.ContextMenuOpening> her zaman en az bir yer tutucu denetimleri karşı çalıştırma işleyicileri <xref:System.Windows.Controls.ContextMenu> kullanılabilir işleyici kodu değiştirilmesi amaçladığınız. Bu durumda, önceki örnekte gösterilen işleyiciyi kullanmaya devam edebilirsiniz, ancak genellikle bir yer tutucu atamak istediğiniz <xref:System.Windows.Controls.ContextMenu> ilk biçimlendirme içinde:  
+1. Çalışabildiğinden emin olun <xref:System.Windows.FrameworkElement.ContextMenuOpening> her zaman en az bir yer tutucu denetimleri karşı çalıştırma işleyicileri <xref:System.Windows.Controls.ContextMenu> kullanılabilir işleyici kodu değiştirilmesi amaçladığınız. Bu durumda, önceki örnekte gösterilen işleyiciyi kullanmaya devam edebilirsiniz, ancak genellikle bir yer tutucu atamak istediğiniz <xref:System.Windows.Controls.ContextMenu> ilk biçimlendirme içinde:  
   
      [!code-xaml[ContextMenuOpeningHandlers#XAMLWithInitCM](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml#xamlwithinitcm)]  
   
-2.  Varsayımında ilk <xref:System.Windows.Controls.ContextMenu> değeri olabilir null, bazı başlangıç mantığına göre. Denetlemede <xref:System.Windows.Controls.ContextMenu> null ya da kodunuzda işleyicinizi olup olmadığını denetlemek için bir bayrak kullanın çalıştıran en az bir kez. Olduğunu varsaydığından <xref:System.Windows.Controls.ContextMenu> ilgili olarak görüntülenen işleyicinizi yapılır ve ardından ayarlar <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true` içinde olay verileri. İçin <xref:System.Windows.Controls.ContextMenuService> bağlam menüsü görüntüleme için sorumlu bir `true` değerini <xref:System.Windows.RoutedEventArgs.Handled%2A> olay iptal et bağlam menüsü görüntüleme / olayı birleşimi denetlemek için bir istek verileri temsil eder.  
+2. Varsayımında ilk <xref:System.Windows.Controls.ContextMenu> değeri olabilir null, bazı başlangıç mantığına göre. Denetlemede <xref:System.Windows.Controls.ContextMenu> null ya da kodunuzda işleyicinizi olup olmadığını denetlemek için bir bayrak kullanın çalıştıran en az bir kez. Olduğunu varsaydığından <xref:System.Windows.Controls.ContextMenu> ilgili olarak görüntülenen işleyicinizi yapılır ve ardından ayarlar <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true` içinde olay verileri. İçin <xref:System.Windows.Controls.ContextMenuService> bağlam menüsü görüntüleme için sorumlu bir `true` değerini <xref:System.Windows.RoutedEventArgs.Handled%2A> olay iptal et bağlam menüsü görüntüleme / olayı birleşimi denetlemek için bir istek verileri temsil eder.  
   
  Şüpheli bağlam menüsü gizlenen, sonraki adım olan yeni bir tane sağlamayı bunu görüntüleyebilir. İçin yeni bir temel olarak aynı olup önceki işleyici: yeni bir yapı <xref:System.Windows.Controls.ContextMenu> ve denetim kaynağının <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType> onunla özelliği. Ek bir adım bağlam menüsü görüntülenmesini artık zorlamalısınız yapılan ilk girişim gizlenen olmasıdır. Görüntülemeye zorla için ayarlamanız <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A?displayProperty=nameWithType> özelliğini `true` işleyici içinde. Bağlam menüsünü açarak işleyicisinde ortaya çıkardığı için bunu yaparken dikkatli olun <xref:System.Windows.FrameworkElement.ContextMenuOpening> yeniden olay. İşleyicinize sonsuz özyinelemeli dönüşür. Her zaman denetlemek gereken bu yüzden `null` veya bağlam menüsünü içinden açarsanız bir bayrağını kullanın. bir <xref:System.Windows.FrameworkElement.ContextMenuOpening> olay işleyicisi.  
   

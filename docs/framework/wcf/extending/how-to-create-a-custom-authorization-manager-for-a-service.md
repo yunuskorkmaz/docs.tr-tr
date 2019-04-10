@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156500"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337844"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma
 Windows Communication Foundation (WCF) kimlik modeli altyapısı, bir Genişletilebilir beyana dayalı yetkilendirme modelini destekler. Talep belirteçleri ayıklanır ve isteğe bağlı olarak özel yetkilendirme ilkeleri tarafından işlenir ve ardından yerleştirilip bir <xref:System.IdentityModel.Policy.AuthorizationContext>. Yetkilendirme Yöneticisi Taleplerde inceler <xref:System.IdentityModel.Policy.AuthorizationContext> yetkilendirme kararları vermek için.  
@@ -28,12 +28,12 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı, bir Genişleti
   
 ### <a name="to-create-a-custom-authorization-manager"></a>Özel Yetkilendirme Yöneticisi oluşturma  
   
-1.  Öğesinden bir sınıf türetin <xref:System.ServiceModel.ServiceAuthorizationManager> sınıfı.  
+1. Öğesinden bir sınıf türetin <xref:System.ServiceModel.ServiceAuthorizationManager> sınıfı.  
   
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  Geçersiz kılma <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> yöntemi.  
+2. Geçersiz kılma <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> yöntemi.  
   
      Kullanım <xref:System.ServiceModel.OperationContext> yapan <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> yetkilendirme kararları vermek için yöntemi.  
   
@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı, bir Genişleti
   
 ### <a name="to-register-a-custom-authorization-manager-using-code"></a>Kod kullanarak bir özel Yetkilendirme Yöneticisi kaydetmek için  
   
-1.  Özel yetkilendirme örneği Yöneticisi oluşturun ve atayın <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> özelliği.  
+1. Özel yetkilendirme örneği Yöneticisi oluşturun ve atayın <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> özelliği.  
   
      <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Kullanılarak erişilebilir <xref:System.ServiceModel.ServiceHostBase.Authorization%2A> özelliği.  
   
@@ -55,17 +55,17 @@ Windows Communication Foundation (WCF) kimlik modeli altyapısı, bir Genişleti
   
 ### <a name="to-register-a-custom-authorization-manager-using-configuration"></a>Yapılandırması'nı kullanarak bir özel Yetkilendirme Yöneticisi kaydetmek için  
   
-1.  Hizmet yapılandırma dosyasını açın.  
+1. Hizmet yapılandırma dosyasını açın.  
   
-2.  Ekleme bir [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) için [ \<davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
+2. Ekleme bir [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) için [ \<davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
   
      İçin [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), ekleme bir `serviceAuthorizationManagerType` özniteliği ve değerini ayarlama için özel Yetkilendirme Yöneticisi'ni temsil eden türdür.  
   
-3.  Hizmet ve istemci arasındaki iletişimin güvenliğini sağlar bir bağlaması ekleyin.  
+3. Hizmet ve istemci arasındaki iletişimin güvenliğini sağlar bir bağlaması ekleyin.  
   
      Bu iletişim için eklenen talepleri belirler seçilir bağlama <xref:System.IdentityModel.Policy.AuthorizationContext>, yetkilendirme kararları vermek için özel Yetkilendirme Yöneticisi'ni kullanır. Sistem tarafından sağlanan bağlamalar hakkında daha fazla ayrıntı için bkz. [System-Provided bağlamaları](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
-4.  Hizmet uç noktası, davranıştır ekleyerek ilişkilendirmek bir [ \<hizmet >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) öğesi ve değerini ayarlama `behaviorConfiguration` özniteliği name özniteliği değerine [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) öğesi.  
+4. Hizmet uç noktası, davranıştır ekleyerek ilişkilendirmek bir [ \<hizmet >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) öğesi ve değerini ayarlama `behaviorConfiguration` özniteliği name özniteliği değerine [ \<davranışı >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) öğesi.  
   
      Hizmet uç noktasını yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Yapılandırma içinde hizmet uç noktası oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   

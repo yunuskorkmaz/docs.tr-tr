@@ -14,12 +14,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: a07fde63463d209e0006de9be677636f19fd93a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147907"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336128"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetimini Biçimlendirme
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "59147907"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>DataGrid denetimi için bir varsayılan stilde oluşturmak için  
   
-1.  Aşağıdaki özellikleri uygun şekilde ayarlayın:  
+1. Aşağıdaki özellikleri uygun şekilde ayarlayın:  
   
     |Özellik|Açıklama|  
     |--------------|-----------------|  
@@ -68,19 +68,19 @@ ms.locfileid: "59147907"
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>Tablo ve sütun bir veri tablosu stilini program üzerinden ayarlamak için  
   
-1.  Yeni bir tablo stili oluşturun ve özelliklerini ayarlayın.  
+1. Yeni bir tablo stili oluşturun ve özelliklerini ayarlayın.  
   
-2.  Sütun stil oluşturma ve özelliklerini ayarlayın.  
+2. Sütun stil oluşturma ve özelliklerini ayarlayın.  
   
-3.  Sütun stili tablo stili 's sütun stillerini koleksiyonuna ekleyin.  
+3. Sütun stili tablo stili 's sütun stillerini koleksiyonuna ekleyin.  
   
-4.  Tablo Stili veri kılavuzunun tablo stilleri koleksiyona ekleyin.  
+4. Tablo Stili veri kılavuzunun tablo stilleri koleksiyona ekleyin.  
   
-5.  Aşağıdaki örnekte, yeni bir örneğini oluşturmak <xref:System.Windows.Forms.DataGridTableStyle> ve kendi <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> özelliği.  
+5. Aşağıdaki örnekte, yeni bir örneğini oluşturmak <xref:System.Windows.Forms.DataGridTableStyle> ve kendi <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> özelliği.  
   
-6.  Yeni bir örneğini oluşturmak bir **GridColumnStyle** ve kendi **MappingName** (ve diğer bazı düzen ve görüntü özelliklerini).  
+6. Yeni bir örneğini oluşturmak bir **GridColumnStyle** ve kendi **MappingName** (ve diğer bazı düzen ve görüntü özelliklerini).  
   
-7.  Oluşturmak istediğiniz her bir sütun stili 2 ile 6 arasındaki adımları yineleyin.  
+7. Oluşturmak istediğiniz her bir sütun stili 2 ile 6 arasındaki adımları yineleyin.  
   
      Aşağıdaki örnekte nasıl bir <xref:System.Windows.Forms.DataGridTextBoxColumn> sütununda görüntülenecek bir ad olduğu için oluşturulur. Sütun stil ek olarak, eklediğiniz <xref:System.Windows.Forms.GridColumnStylesCollection> tablo stili ve tablo stili için eklediğiniz <xref:System.Windows.Forms.GridTableStylesCollection> veri kılavuzunun.  
   

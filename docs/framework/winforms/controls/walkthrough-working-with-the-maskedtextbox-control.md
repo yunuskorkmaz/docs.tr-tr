@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: ca505b062be8c60c1dd9b08fead4855eb1eb4cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103850"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342477"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>İzlenecek yol: MaskedTextBox Denetimiyle Çalışma
 Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
@@ -31,15 +31,15 @@ Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
   
 #### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>MaskedTextBox denetimi formunuza eklemek için  
   
-1.  Form üzerinde yerleştirmek istediğiniz açın <xref:System.Windows.Forms.MaskedTextBox> denetimi.  
+1. Form üzerinde yerleştirmek istediğiniz açın <xref:System.Windows.Forms.MaskedTextBox> denetimi.  
   
-2.  Sürükleme bir <xref:System.Windows.Forms.MaskedTextBox> denetimi **araç kutusu** formunuza.  
+2. Sürükleme bir <xref:System.Windows.Forms.MaskedTextBox> denetimi **araç kutusu** formunuza.  
   
-3.  Denetime sağ tıklayın ve seçin **özellikleri**. İçinde **özellikleri** penceresinde **maskesi** özelliği ve tıklatın **...**  özellik adının yanındaki (üç nokta) düğmesi.  
+3. Denetime sağ tıklayın ve seçin **özellikleri**. İçinde **özellikleri** penceresinde **maskesi** özelliği ve tıklatın **...**  özellik adının yanındaki (üç nokta) düğmesi.  
   
-4.  İçinde **giriş maskesi** iletişim kutusunda **kısa tarih** maske ve tıklayın **Tamam**.  
+4. İçinde **giriş maskesi** iletişim kutusunda **kısa tarih** maske ve tıklayın **Tamam**.  
   
-5.  İçinde **özellikleri** penceresi kümesi <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> özelliğini `true`. Bu özellik, kullanıcı giriş maskesi tanımını ihlal eden bir karakter girişiminde her zaman ses kısa bir bip sesi neden olur.  
+5. İçinde **özellikleri** penceresi kümesi <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> özelliğini `true`. Bu özellik, kullanıcı giriş maskesi tanımını ihlal eden bir karakter girişiminde her zaman ses kısa bir bip sesi neden olur.  
   
  Maske özelliği destekleyen karakterleri özeti için Açıklamalar bölümüne bakın. <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği.  
   
@@ -47,9 +47,9 @@ Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
   
 #### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>Reddedilen maskesi girişi için bir balon ipucunu ekleyin  
   
-1.  Geri dönüp **araç kutusu** ve ekleme bir <xref:System.Windows.Forms.ToolTip> formunuza.  
+1. Geri dönüp **araç kutusu** ve ekleme bir <xref:System.Windows.Forms.ToolTip> formunuza.  
   
-2.  İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> oluşturan olay <xref:System.Windows.Forms.ToolTip> Giriş bir hata oluştuğunda. Balon ipucu veya beş saniye kadar kullanıcı buna tıkladığında görünür kalır.  
+2. İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> oluşturan olay <xref:System.Windows.Forms.ToolTip> Giriş bir hata oluştuğunda. Balon ipucu veya beş saniye kadar kullanıcı buna tıkladığında görünür kalır.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -82,7 +82,7 @@ Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
   
 #### <a name="add-a-balloon-tip-for-invalid-data-types"></a>Geçersiz veri türleri için bir balon ipucunu ekleyin  
   
-1.  Formun içinde <xref:System.Windows.Forms.Form.Load> olay işleyicisi, Ata bir <xref:System.Type> nesnesini temsil eden <xref:System.DateTime> için yazın <xref:System.Windows.Forms.MaskedTextBox> denetimin <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> özelliği:  
+1. Formun içinde <xref:System.Windows.Forms.Form.Load> olay işleyicisi, Ata bir <xref:System.Type> nesnesini temsil eden <xref:System.DateTime> için yazın <xref:System.Windows.Forms.MaskedTextBox> denetimin <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> özelliği:  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -100,7 +100,7 @@ Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
     End Sub  
     ```  
   
-2.  İçin bir olay işleyicisi ekleme <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> olay:  
+2. İçin bir olay işleyicisi ekleme <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> olay:  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  

@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6ce153d52f9142801a7cdc7bb2e6a1770ab0b69
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 97b15ea2202ca410dd517db63a7145d27f62bb48
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338416"
 ---
 # <a name="impersonating-and-reverting"></a>Kimliğe Bürünme ve Geri Alma
 Bazen bir Windows hesabı kimliğine bürünmek üzere Windows hesabı belirteç edinme gerekebilir. Örneğin, ASP.NET tabanlı uygulamanız farklı zamanlarda birden çok kullanıcı adına hareket gerekebilir. Uygulamanızı yönetici Internet Information Services (IIS) temsil eden bir belirteci kabul edin, bu kullanıcının kimliğine bürün, bir işlemi gerçekleştirmek ve önceki kimliğine geri dönülemiyor. Ardından, daha az haklarına sahip bir kullanıcıyı temsil eden IIS belirtecinden kabul, başka bir işlem gerçekleştirmek ve yeniden geri.  
   
  Geçerli iş parçacığı için IIS tarafından bağlı olmayan bir Windows hesabı, uygulamanız nerede bürünmelidir durumlarda, bu hesabın belirteç almalı ve hesabını etkinleştirmek için kullanın. Aşağıdaki görevleri gerçekleştirerek bunu yapabilirsiniz:  
   
-1.  Belirli bir kullanıcı için bir hesap belirteci yönetilmeyen bir çağrı yaparak alma **LogonUser** yöntemi. Bu yöntem .NET Framework temel sınıf kitaplığı'nda değildir, ancak bulunan yönetilmeyen olarak **advapi32.dll**. Yönetilmeyen kod yöntemleri erişme, İleri düzey bir işlemdir ve bu tartışma kapsamı dışındadır. Daha fazla bilgi için [yönetilmeyen kod ile birlikte çalışma](../../../docs/framework/interop/index.md). Hakkında daha fazla bilgi için **LogonUser** yöntemi ve **advapi32.dll**, Platform SDK belgelerine bakın.  
+1. Belirli bir kullanıcı için bir hesap belirteci yönetilmeyen bir çağrı yaparak alma **LogonUser** yöntemi. Bu yöntem .NET Framework temel sınıf kitaplığı'nda değildir, ancak bulunan yönetilmeyen olarak **advapi32.dll**. Yönetilmeyen kod yöntemleri erişme, İleri düzey bir işlemdir ve bu tartışma kapsamı dışındadır. Daha fazla bilgi için [yönetilmeyen kod ile birlikte çalışma](../../../docs/framework/interop/index.md). Hakkında daha fazla bilgi için **LogonUser** yöntemi ve **advapi32.dll**, Platform SDK belgelerine bakın.  
   
-2.  Yeni bir örneğini oluşturma **WindowsIdentity** belirtece geçirerek sınıfı. Aşağıdaki kod, bu çağrıyı gösterir. burada `hToken` Windows belirteci temsil eder.  
+2. Yeni bir örneğini oluşturma **WindowsIdentity** belirtece geçirerek sınıfı. Aşağıdaki kod, bu çağrıyı gösterir. burada `hToken` Windows belirteci temsil eder.  
   
     ```csharp  
     WindowsIdentity impersonatedIdentity = new WindowsIdentity(hToken);  
@@ -36,7 +36,7 @@ Bazen bir Windows hesabı kimliğine bürünmek üzere Windows hesabı belirteç
     Dim impersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
-3.  Kimliğe bürünme, yeni bir örneğini oluşturarak başlayın <xref:System.Security.Principal.WindowsImpersonationContext> sınıfı ve onunla başlatma <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> başlatılmış sınıfının, aşağıdaki kodda gösterildiği yöntemi.  
+3. Kimliğe bürünme, yeni bir örneğini oluşturarak başlayın <xref:System.Security.Principal.WindowsImpersonationContext> sınıfı ve onunla başlatma <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> başlatılmış sınıfının, aşağıdaki kodda gösterildiği yöntemi.  
   
     ```csharp  
     WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate();  
@@ -46,7 +46,7 @@ Bazen bir Windows hesabı kimliğine bürünmek üzere Windows hesabı belirteç
     WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate()  
     ```  
   
-4.  Artık bürünülecek gerektiğinde, çağrı <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> kimliğe bürünme, aşağıdaki kodda gösterildiği şekilde geri dönmek için yöntemi.  
+4. Artık bürünülecek gerektiğinde, çağrı <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> kimliğe bürünme, aşağıdaki kodda gösterildiği şekilde geri dönmek için yöntemi.  
   
     ```csharp  
     myImpersonation.Undo();  
@@ -64,5 +64,5 @@ Bazen bir Windows hesabı kimliğine bürünmek üzere Windows hesabı belirteç
 
 - <xref:System.Security.Principal.WindowsIdentity>
 - <xref:System.Security.Principal.WindowsImpersonationContext>
-- [Sorumlu ve Kimlik Nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)
+- [Asıl ve Kimlik Nesneleri](../../../docs/standard/security/principal-and-identity-objects.md)
 - [Yönetilmeyen Kod ile Birlikte Çalışma](../../../docs/framework/interop/index.md)

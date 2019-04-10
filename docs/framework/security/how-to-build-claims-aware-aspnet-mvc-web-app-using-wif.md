@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET MVC Web uygulaması derleme'
+title: 'Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET MVC Web Uygulaması Derleme'
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-ms.openlocfilehash: 4a003acbf4e182a0493368b586a3add229d8b526
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335673"
 ---
-# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET MVC Web uygulaması derleme
-## <a name="applies-to"></a>Uygulandığı öğe:  
+# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET MVC Web Uygulaması Derleme
+## <a name="applies-to"></a>Uygulanan Öğe  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
   
@@ -53,24 +53,24 @@ ms.locfileid: "48036008"
   
 #### <a name="to-create-simple-aspnet-mvc-application"></a>Basit bir ASP.NET MVC uygulaması oluşturma  
   
-1.  Visual Studio'yu başlatın ve tıklayın **dosya**, **yeni**, ardından **proje**.  
+1. Visual Studio'yu başlatın ve tıklayın **dosya**, **yeni**, ardından **proje**.  
   
-2.  İçinde **yeni proje** penceresinde tıklayın **ASP.NET MVC 3, Web uygulaması**.  
+2. İçinde **yeni proje** penceresinde tıklayın **ASP.NET MVC 3, Web uygulaması**.  
   
-3.  İçinde **adı**, girin `TestApp` basın **Tamam**.  
+3. İçinde **adı**, girin `TestApp` basın **Tamam**.  
   
-4.  İçinde **yeni ASP.NET MVC 3 projesini** iletişim kutusunda **Internet uygulaması** kullanılabilen şablonlardan birini olun **görünüm altyapısı** ayarlanır **Razor**ve ardından **Tamam**.  
+4. İçinde **yeni ASP.NET MVC 3 projesini** iletişim kutusunda **Internet uygulaması** kullanılabilen şablonlardan birini olun **görünüm altyapısı** ayarlanır **Razor**ve ardından **Tamam**.  
   
-5.  Yeni bir proje açıldığında, sağ **TestApp** projesi **Çözüm Gezgini** seçip **özellikleri** seçeneği.  
+5. Yeni bir proje açıldığında, sağ **TestApp** projesi **Çözüm Gezgini** seçip **özellikleri** seçeneği.  
   
-6.  Proje özellikleri sayfasında tıklayın **Web** sekmesinde solda ve emin **kullanım yerel IIS Web sunucusunda** seçeneğinin işaretli.  
+6. Proje özellikleri sayfasında tıklayın **Web** sekmesinde solda ve emin **kullanım yerel IIS Web sunucusunda** seçeneğinin işaretli.  
   
 ## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a>2. adım: ASP.NET MVC uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
  Bu adımda, yapılandırma girdileri ekler *Web.config* talep kullanan yapmak için ASP.NET MVC web uygulamanızın yapılandırma dosyası.  
   
 #### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>ASP.NET MVC uygulaması için talep tabanlı kimlik doğrulaması yapılandırmak için  
   
-1.  Aşağıdaki yapılandırma bölümüne tanımları ekleyin *Web.config* yapılandırma dosyası. Bunlar, Windows Identity Foundation'ı tarafından gereken yapılandırma bölümlerini tanımlar. Tanımları ekleme hemen sonra  **\<yapılandırma >** açılış öğesi:  
+1. Aşağıdaki yapılandırma bölümüne tanımları ekleyin *Web.config* yapılandırma dosyası. Bunlar, Windows Identity Foundation'ı tarafından gereken yapılandırma bölümlerini tanımlar. Tanımları ekleme hemen sonra  **\<yapılandırma >** açılış öğesi:  
   
     ```xml  
     <configSections>  
@@ -79,7 +79,7 @@ ms.locfileid: "48036008"
     </configSections>  
     ```  
   
-2.  Ekleme bir  **\<konum >** uygulamanın Federasyon meta verilerine erişim sağlayan bir öğe:  
+2. Ekleme bir  **\<konum >** uygulamanın Federasyon meta verilerine erişim sağlayan bir öğe:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -91,7 +91,7 @@ ms.locfileid: "48036008"
     </location>  
     ```  
   
-3.  İçinde aşağıdaki yapılandırma girdileri eklemek  **\<system.web >** kullanıcıları engellemek için öğeleri yerel kimlik doğrulamasını devre dışı ve kimlik doğrulamasını yönetmek WIF etkinleştirme.  
+3. İçinde aşağıdaki yapılandırma girdileri eklemek  **\<system.web >** kullanıcıları engellemek için öğeleri yerel kimlik doğrulamasını devre dışı ve kimlik doğrulamasını yönetmek WIF etkinleştirme.  
   
     ```xml  
     <authorization>  
@@ -100,7 +100,7 @@ ms.locfileid: "48036008"
     <authentication mode="None" />  
     ```  
   
-4.  Aşağıdaki Windows Identity Foundation, ASP.NET uygulamanızın URL'sini ve bağlantı noktası numarası değerlerin eşleştiğinden emin olun ve ilgili yapılandırma girdileri eklemek  **\<AudienceUri >** girişi **bölge**  özniteliği  **\<wsFederation >** öğesi ve **yanıt** özniteliği  **\<wsFederation >** öğesi. Ayrıca emin **veren** uygun güvenlik belirteci hizmeti (STS) URL'nizi değeri.  
+4. Aşağıdaki Windows Identity Foundation, ASP.NET uygulamanızın URL'sini ve bağlantı noktası numarası değerlerin eşleştiğinden emin olun ve ilgili yapılandırma girdileri eklemek  **\<AudienceUri >** girişi **bölge**  özniteliği  **\<wsFederation >** öğesi ve **yanıt** özniteliği  **\<wsFederation >** öğesi. Ayrıca emin **veren** uygun güvenlik belirteci hizmeti (STS) URL'nizi değeri.  
   
     ```xml  
     <system.identityModel>  
@@ -124,16 +124,16 @@ ms.locfileid: "48036008"
     </system.identityModel.services>  
     ```  
   
-5.  Başvuru ekleme <xref:System.IdentityModel> derleme.  
+5. Başvuru ekleme <xref:System.IdentityModel> derleme.  
   
-6.  Bir hata olmadığından emin olmak için çözümü derleyin.  
+6. Bir hata olmadığından emin olmak için çözümü derleyin.  
   
 ## <a name="step-3--test-your-solution"></a>3. Adım – Çözümünüzü Test Etme  
  Bu adımda, ASP.NET MVC web uygulamanızı beyana dayalı kimlik doğrulaması için yapılandırılmış test eder. Temel test gerçekleştirmek için güvenlik belirteci hizmeti (STS) tarafından verilen belirteçteki talepleri görüntüler basit kod ekleyeceksiniz.  
   
 #### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a>Talep tabanlı kimlik doğrulaması için ASP.NET MVC uygulamanızı test etmek için  
   
-1.  İçinde **Çözüm Gezgini**, genişletme **denetleyicileri** klasörü ve açık *HomeController.cs* düzenleyicideki dosyada. Aşağıdaki kodu ekleyin **dizin** yöntemi:  
+1. İçinde **Çözüm Gezgini**, genişletme **denetleyicileri** klasörü ve açık *HomeController.cs* düzenleyicideki dosyada. Aşağıdaki kodu ekleyin **dizin** yöntemi:  
   
     ```csharp  
     public ActionResult Index()  
@@ -144,7 +144,7 @@ ms.locfileid: "48036008"
     }  
     ```  
   
-2.  İçinde **Çözüm Gezgini** genişletin **görünümleri** ardından **giriş** klasörleri ve açık *Index.cshtml* düzenleyicideki dosyada. İçeriğini silin ve aşağıdaki işaretlemeyi ekleyin:  
+2. İçinde **Çözüm Gezgini** genişletin **görünümleri** ardından **giriş** klasörleri ve açık *Index.cshtml* düzenleyicideki dosyada. İçeriğini silin ve aşağıdaki işaretlemeyi ekleyin:  
   
     ```html  
     @{  
@@ -212,9 +212,9 @@ ms.locfileid: "48036008"
     </table>  
     ```  
   
-3.  Tuşlarına basarak çözümü çalıştırın **F5** anahtarı.  
+3. Tuşlarına basarak çözümü çalıştırın **F5** anahtarı.  
   
-4.  İçin güvenlik belirteci hizmeti tarafından verilmiş belirteçteki talepleri gösteren sayfa ile sunulan.  
+4. İçin güvenlik belirteci hizmeti tarafından verilmiş belirteçteki talepleri gösteren sayfa ile sunulan.  
   
 ## <a name="related-items"></a>İlgili öğeler  
   

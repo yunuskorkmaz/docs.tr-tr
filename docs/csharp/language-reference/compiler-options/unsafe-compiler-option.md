@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 4a8f7d099b2cd3c1b4331c87f853b617fef505ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cfd7c82bc2cbf816164b235642c0647eeb7e5b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726539"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337337"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (C# Derleyici Seçenekleri)
 **-Unsafe** derleyici seçeneği verir kullanan kod [güvenli](../../../csharp/language-reference/keywords/unsafe.md) derlemek için anahtar sözcüğü.  
@@ -28,11 +28,11 @@ ms.locfileid: "54726539"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açın **özellikleri** sayfası.  
+1. Projenin açın **özellikleri** sayfası.  
   
-2.  Tıklayın **derleme** özellik sayfası.  
+2. Tıklayın **derleme** özellik sayfası.  
   
-3.  Seçin **güvenli olmayan koda izin ver** onay kutusu.  
+3. Seçin **güvenli olmayan koda izin ver** onay kutusu.  
   
 ### <a name="to-add-this-option-in-a-csproj-file"></a>Bu seçenek csproj dosyasında eklemek için
 

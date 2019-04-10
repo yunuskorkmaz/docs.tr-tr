@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 136073b3ef1c5463ff078efd7c173b7446f0ca48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c8dc4ba5a17ca6a950d7ef3e0835f31463979bd3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077926"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342524"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern ve Katıştırılmış Nesnelere Genel Bakış
 > [!NOTE]
@@ -43,13 +43,13 @@ Katıştırılmış nesneler ve onların aralığı yayılma ile metin akışın
   
  Bir metin aralığını içeriğini geçirmek gerekli olduğunda, bir dizi adım söz konusu sırasını arka planda <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> yöntemi başarıyla yürütülemedi.  
   
-1.  Metin aralığı normalleştirilmiş; diğer bir deyişle, metin aralığı bozuk bir aralıkta için daraltılmış <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> getiren endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> gereksiz uç noktası. Bir metin aralığını nereden yayılan durumlarda belirsizliğini kaldırmak bu adım gereklidir <xref:System.Windows.Automation.Text.TextUnit> sınırları: Örneğin, `{The URL https://www.microsoft.com is embedded in text` burada "{" ve "}" metin aralığı noktalarıdır.  
+1. Metin aralığı normalleştirilmiş; diğer bir deyişle, metin aralığı bozuk bir aralıkta için daraltılmış <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> getiren endpoint <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> gereksiz uç noktası. Bir metin aralığını nereden yayılan durumlarda belirsizliğini kaldırmak bu adım gereklidir <xref:System.Windows.Automation.Text.TextUnit> sınırları: Örneğin, `{The URL https://www.microsoft.com is embedded in text` burada "{" ve "}" metin aralığı noktalarıdır.  
   
-2.  Elde edilen aralığın geriye taşınır <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> istenen başlangıcına <xref:System.Windows.Automation.Text.TextUnit> sınır.  
+2. Elde edilen aralığın geriye taşınır <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> istenen başlangıcına <xref:System.Windows.Automation.Text.TextUnit> sınır.  
   
-3.  Aralığın ileriye veya geriye doğru de taşınır <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> istenen sayısına göre <xref:System.Windows.Automation.Text.TextUnit> sınırlar.  
+3. Aralığın ileriye veya geriye doğru de taşınır <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> istenen sayısına göre <xref:System.Windows.Automation.Text.TextUnit> sınırlar.  
   
-4.  Aralığın taşıyarak bozuk aralığı durumundan ardından Genişletilmiş <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> uç noktası tarafından istenen bir <xref:System.Windows.Automation.Text.TextUnit> sınır.  
+4. Aralığın taşıyarak bozuk aralığı durumundan ardından Genişletilmiş <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> uç noktası tarafından istenen bir <xref:System.Windows.Automation.Text.TextUnit> sınır.  
   
  ![Aralık & Yukarı Taşı göe tarafından ayarlamalar](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
 Bir metin aralığını Move() ve ExpandToEnclosingUnit() için nasıl ayarlandığını örnekleri  

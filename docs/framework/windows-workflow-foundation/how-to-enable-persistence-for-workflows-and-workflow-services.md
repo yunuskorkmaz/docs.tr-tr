@@ -1,40 +1,40 @@
 ---
-title: 'Nasıl yapılır: iş akışları ve iş akışı hizmetleri için kalıcılığı etkinleştir'
+title: 'Nasıl yapılır: İş Akışları ve İş Akışı Hizmetleri için Kalıcılığı Etkinleştirme'
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-ms.openlocfilehash: 35158c45217e764bc2e27dac26f8d680e5897fa9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a2a8d73298e14f92f376b97b9637db91532e937
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514424"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340158"
 ---
-# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: iş akışları ve iş akışı hizmetleri için kalıcılığı etkinleştir
-Bu konuda, iş akışları ve iş akışı hizmetleri kalıcılığını etkinleştirmek açıklar.  
+# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: İş Akışları ve İş Akışı Hizmetleri için Kalıcılığı Etkinleştirme
+Bu konu, iş akışları ve iş akışı hizmetleri için kalıcılığı etkinleştir açıklar.  
   
 ## <a name="enable-persistence-for-workflows"></a>İş akışları için kalıcılığı etkinleştir  
- Bir örnek depolama ile ilişkilendirebilirsiniz bir **WorkflowApplication** kullanarak <xref:System.Activities.WorkflowApplication.InstanceStore%2A> özelliği <xref:System.Activities.WorkflowApplication> sınıfı. <xref:System.Activities.WorkflowApplication.Persist%2A> Yöntemi kaydeder veya uygulama ile ilişkili örnek deposuna bir iş akışı devam ettirir. <xref:System.Activities.WorkflowApplication.Unload%2A> Yöntemi bir iş akışı örneği deposuna devam ederse ve bellek örneğinden kaldırır. **Yük** yöntemi bir iş akışı örneği Kalıcılık deposunda saklanan akışı verileri kullanarak belleğe yükler.  
+ Bir örnek deposuyla ilişkilendirebilirsiniz bir **WorkflowApplication** kullanarak <xref:System.Activities.WorkflowApplication.InstanceStore%2A> özelliği <xref:System.Activities.WorkflowApplication> sınıfı. <xref:System.Activities.WorkflowApplication.Persist%2A> Yöntemi kaydederken ya da uygulamayla ilişkili örnek depoya bir iş akışı devam ettirir. <xref:System.Activities.WorkflowApplication.Unload%2A> Yöntemi bir iş akışı örneği deposuna devam ediyorsa ve sonra bellek örneğinden kaldırır. **Yük** yöntemi bir iş akışı örneği sürdürme deposunda saklanan iş akışı verileri kullanarak bellek yükler.  
   
- **Devam ettir** yöntemi aşağıdaki adımları gerçekleştirir:  
+ **Kalan** yöntemi aşağıdaki adımları gerçekleştirir:  
   
-1.  İş akışı Zamanlayıcı duraklatır ve iş akışı boşta durumuna girene kadar bekler.  
+1. İş akışı Zamanlayıcı duraklatır ve iş akışı boşta durumuna girene kadar bekler.  
   
-2.  Devam ederse veya iş akışının Kalıcılık deposuna kaydeder.  
+2. Devam eden veya iş akışı kalıcılığı deposuna kaydeder.  
   
-3.  İş akışı Zamanlayıcı sürdürür.  
+3. İş akışı Zamanlayıcı sürdürür.  
   
- **Unload** yöntemi aşağıdaki adımları gerçekleştirir:  
+ **Kaldırma** yöntemi aşağıdaki adımları gerçekleştirir:  
   
-1.  İş akışı Zamanlayıcı duraklatır ve iş akışı boşta durumuna girene kadar bekler.  
+1. İş akışı Zamanlayıcı duraklatır ve iş akışı boşta durumuna girene kadar bekler.  
   
-2.  Devam ederse veya iş akışının Kalıcılık deposuna kaydeder.  
+2. Devam eden veya iş akışı kalıcılığı deposuna kaydeder.  
   
-3.  İş akışı örneği bellekte siler.  
+3. İş akışı örneği bellekte siler.  
   
- Her iki **devam ettir** ve **Unload** yöntemleri, iş akışı no-persist bölge çıkar kadar bir iş akışı no-persist bölgesinde ederken engeller. Hayır-kalan bölge tamamlandıktan sonra yöntemi ile devam ettir veya kaldırma işlemi devam eder. No-persist bölge Zaman aşımı süresi bitmeden önce ya da kalıcılığı işlemi çok uzun sürerse tamamlanmazsa bir TimeoutException oluşturulur.  
+ Her iki **kalan** ve **kaldırma** yöntemleri, iş akışı no-persist bölge çıkana kadar bir iş akışı no-persist bölgesinde ederken engeller. Hayır-kalan bölge tamamlandıktan sonra yöntemi ile kalıcı veya kaldırma işlemi devam eder. Bir TimeoutException no-persist bölge Zaman aşımı dolmadan veya Kalıcılık işlemi çok uzun sürerse tamamlanmazsa oluşturulur.  
   
-## <a name="enable-persistence-for-workflow-services-in-code"></a>İş akışı hizmetleri kodda kalıcılığı etkinleştir  
- **DurableInstancingOptions** üyesi <xref:System.ServiceModel.WorkflowServiceHost> sınıfı adlı bir özelliğe sahiptir **InstanceStore** bir örnek depolama ile ilişkilendirmek için kullanabileceğiniz **WorkflowServiceHost** .  
+## <a name="enable-persistence-for-workflow-services-in-code"></a>Kod içinde iş akışı hizmetleri için kalıcılığı etkinleştir  
+ **DurableInstancingOptions** üyesi <xref:System.ServiceModel.WorkflowServiceHost> sınıfında adlı bir özellik **InstanceStore** bir örnek deposuna ile ilişkilendirmek için kullanabileceğiniz **WorkflowServiceHost** .  
   
 ```  
 // wsh is an instance of WorkflowServiceHost class  
@@ -43,10 +43,10 @@ wsh.DurableInstancingOptions.InstanceStore = new SqlWorkflowInstanceStore();
   
  Zaman **WorkflowServiceHost** olan açıldı, Kalıcılık otomatik olarak etkinleştirilir **DurableInstancingOptions.InstanceStore** null değil.  
   
- Genellikle, bir hizmet davranışı kullanarak bir iş akışı hizmeti ana bilgisayarı ile kullanılacak somut örnek depolama sağlar **InstanceStore** özelliği. Örneğin, SqlWorkflowInstanceStoreBehavior bir örneğini oluşturur **SqlWorkflowInstanceStore**yapılandırır ve atar **DurableInstancingOptions.InstanceStore**.  
+ Genellikle, bir hizmet davranışını kullanarak bir iş akışı hizmeti konağı ile kullanılacak somut örnek depolama sağlar **InstanceStore** özelliği. Örneğin, SqlWorkflowInstanceStoreBehavior örneği oluşturur **SqlWorkflowInstanceStore**yapılandırır ve buna atayan **DurableInstancingOptions.InstanceStore**.  
   
 ## <a name="enable-persistence-for-workflow-services-using-an-application-configuration-file"></a>Uygulama yapılandırma dosyası kullanarak iş akışı hizmetleri için kalıcılığı etkinleştir  
- Aşağıdaki kod, app.config veya web.config dosyasına ekleyerek bir uygulama yapılandırma dosyası kullanarak Kalıcılık etkinleştirilebilir:  
+ Kalıcılık için app.config veya web.config dosyanızda aşağıdaki kodu ekleyerek bir uygulama yapılandırma dosyası kullanılarak etkinleştirilebilir:  
   
 ```xml  
 <configuration>  

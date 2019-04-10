@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836480"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337701"
 ---
 # <a name="applying-attributes"></a>Öznitelikleri Uygulama
 Kodunuzdaki bir öğeye bir öznitelik uygulamak için aşağıdaki işlemi kullanın.  
   
-1.  Ad alanını .NET Framework'ten içe aktararak yeni bir öznitelik tanımlayın veya varolan bir özniteliği kullanın.  
+1. Ad alanını .NET Framework'ten içe aktararak yeni bir öznitelik tanımlayın veya varolan bir özniteliği kullanın.  
   
-2.  Özniteliği öğenin hemen önüne ekleyerek kod öğesine uygulayın.  
+2. Özniteliği öğenin hemen önüne ekleyerek kod öğesine uygulayın.  
   
      Her dilin kendi öznitelik sözdizimi bulunur. C++ ve C#'de öznitelik, köşeli ayraç içine alınır ve öğeden, satır sonu da içerebilen boşluk ile ayrılır. Visual Basic'te öznitelik, açılı ayraç içine alınır ve aynı mantıksal satırda bulunması gerekir; eğer bir satır sonu isterseniz satır devamı karakteri kullanabilirsiniz.
   
-3.  Öznitelik için konumsal parametreleri ve adlandırılmış parametreleri belirtin.  
+3. Öznitelik için konumsal parametreleri ve adlandırılmış parametreleri belirtin.  
   
      Konumsal parametreler gereklidir ve adlandırılmış parametrelerden önce gelmeleri gerekir; öznitelik oluşturucularından birinin parametrelerine karşılık gelirler. Adlandırılmış parametreler isteğe bağlıdır ve özniteliğin okuma/yazma özelliklerine karşılık gelirler. C++ ve C#, belirtin `name` = `value` isteğe bağlı her parametre için burada `name` özelliğin adıdır. Visual Basic'te, `name`:=`value` belirtin.  
   
@@ -37,8 +37,7 @@ Kodunuzdaki bir öğeye bir öznitelik uygulamak için aşağıdaki işlemi kull
  Kural gereği, tüm öznitelik adları Öznitelik ile biter. Ancak, Visual Basic ve C# gibi çalışma zamanını hedef alan çeşitli diller, bir özniteliğin tam adını belirtmenizi gerektirmez. Örneğin, başlatmak istiyorsanız <xref:System.ObsoleteAttribute?displayProperty=nameWithType>, olarak başvurmanız yeterlidir **Kullanımdan kalktı**.  
   
 ## <a name="applying-an-attribute-to-a-method"></a>Bir Yönteme Öznitelik Uygulama  
- Aşağıdaki kod örneğinde nasıl belirtileceğini gösterir **System.ObsoleteAttribute**, kodu kullanımdan kalkmış olarak işaretler. 
-  `"Will be removed in next version"` dizesi özniteliğe geçirilir. Bu öznitelik, özniteliğin açıkladığı kod çağırıldığında geçirilen dizeyi görüntüleyen bir derleyici uyarısına neden olur.  
+ Aşağıdaki kod örneğinde nasıl belirtileceğini gösterir **System.ObsoleteAttribute**, kodu kullanımdan kalkmış olarak işaretler. `"Will be removed in next version"` dizesi özniteliğe geçirilir. Bu öznitelik, özniteliğin açıkladığı kod çağırıldığında geçirilen dizeyi görüntüleyen bir derleyici uyarısına neden olur.  
   
  [!code-cpp[Conceptual.Attributes.Usage#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#3)]
  [!code-csharp[Conceptual.Attributes.Usage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#3)]
@@ -57,6 +56,6 @@ Kodunuzdaki bir öğeye bir öznitelik uygulamak için aşağıdaki işlemi kull
 
 - [Öznitelikler](../../../docs/standard/attributes/index.md)
 - [Özniteliklerde Depolanan Bilgileri Alma](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
-- [Kavramları](/cpp/windows/attributed-programming-concepts)
+- [Kavramlar](/cpp/windows/attributed-programming-concepts)
 - [Öznitelikler (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [Öznitelikler genel bakış (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

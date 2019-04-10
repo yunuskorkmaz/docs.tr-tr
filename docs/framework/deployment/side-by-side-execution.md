@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654607"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341081"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework'te Yan Yana Yürütme
 Yan yana yürütme uygulamanın veya bileşenin birden çok sürümünü aynı bilgisayarda çalıştırma yeteneğidir. Bir bilgisayar üzerinde ortak dil çalışma zamanı sürümünün ve bir uygulamanın ve çalışma zamanının bir sürümünü kullanan bileşenin çeşitli sürümlerine aynı anda sahip olabilirsiniz.  
@@ -75,11 +75,11 @@ Yan yana yürütme uygulamanın veya bileşenin birden çok sürümünü aynı b
   
  Uygulama yapılandırma dosyası varsa, çalışma zamanı aşağıdaki işlemi sonuçlarına göre yüklemek için uygun çalışma zamanı sürümünü belirler:  
   
-1.  Çalışma zamanı inceler [ \<supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) uygulama yapılandırma dosyasında öğesi. Bir veya daha fazla belirtilen desteklenen çalışma zamanı sürümlerinin  **\<supportedRuntime >** öğesi, çalışma zamanını ilk tarafından belirtilen çalışma zamanı sürümü yükler  **\< supportedRuntime >** öğesi. Bu sürümü kullanılabilir durumda değilse, çalışma zamanının sonraki inceler  **\<supportedRuntime >** öğesini ve belirtilen çalışma zamanı sürümü yük dener. Bu çalışma zamanı sürümü değilse kullanılabilir, sonraki  **\<supportedRuntime >** öğeleri incelenir. Desteklenen çalışma zamanı sürümlerinin hiçbiri varsa, çalışma zamanı bir çalışma zamanı sürümü yüklenemiyor ve kullanıcıya bir ileti görüntüler (3. adıma bakın).  
+1. Çalışma zamanı inceler [ \<supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) uygulama yapılandırma dosyasında öğesi. Bir veya daha fazla belirtilen desteklenen çalışma zamanı sürümlerinin  **\<supportedRuntime >** öğesi, çalışma zamanını ilk tarafından belirtilen çalışma zamanı sürümü yükler  **\< supportedRuntime >** öğesi. Bu sürümü kullanılabilir durumda değilse, çalışma zamanının sonraki inceler  **\<supportedRuntime >** öğesini ve belirtilen çalışma zamanı sürümü yük dener. Bu çalışma zamanı sürümü değilse kullanılabilir, sonraki  **\<supportedRuntime >** öğeleri incelenir. Desteklenen çalışma zamanı sürümlerinin hiçbiri varsa, çalışma zamanı bir çalışma zamanı sürümü yüklenemiyor ve kullanıcıya bir ileti görüntüler (3. adıma bakın).  
   
-2.  Çalışma zamanı, uygulamanın yürütülebilir dosyanın PE dosya üstbilgisi okur. PE dosyası üstbilgisi tarafından belirtilen çalışma zamanı sürümü varsa, çalışma zamanının bu sürümü yükler. Belirtilen çalışma zamanı sürümü kullanılabilir durumda değilse, çalışma zamanı PE üstbilgisinde çalışma zamanı sürümü ile uyumlu olacak şekilde, Microsoft tarafından belirlenen bir çalışma zamanı sürümünü arar. Bu sürüm bulunmazsa, işlemi 3. adımına devam eder.  
+2. Çalışma zamanı, uygulamanın yürütülebilir dosyanın PE dosya üstbilgisi okur. PE dosyası üstbilgisi tarafından belirtilen çalışma zamanı sürümü varsa, çalışma zamanının bu sürümü yükler. Belirtilen çalışma zamanı sürümü kullanılabilir durumda değilse, çalışma zamanı PE üstbilgisinde çalışma zamanı sürümü ile uyumlu olacak şekilde, Microsoft tarafından belirlenen bir çalışma zamanı sürümünü arar. Bu sürüm bulunmazsa, işlemi 3. adımına devam eder.  
   
-3.  Çalışma zamanı, uygulama tarafından desteklenen çalışma zamanı sürüm kullanılamaz olduğunu belirten bir ileti görüntüler. Çalışma zamanı yüklenmedi.  
+3. Çalışma zamanı, uygulama tarafından desteklenen çalışma zamanı sürüm kullanılamaz olduğunu belirten bir ileti görüntüler. Çalışma zamanı yüklenmedi.  
   
     > [!NOTE]
     >  HKLM\Software\Microsoft kayıt defteri anahtarı altında NoGuiFromShim değerini kullanarak bu iletinin görüntülenmesini engelleyebilir\\. NETFramework veya COMPLUS_NoGuiFromShim ortam değişkenini kullanarak. Örneğin, katılımsız yüklemeleri veya Windows Hizmetleri gibi bir kullanıcı değil genellikle etkileşimli uygulamalarla için iletiyi gizleyebilirsiniz. Bu ileti görüntü atlandığında, çalışma zamanı olay günlüğüne bir ileti yazar.  Bir bilgisayardaki tüm uygulamalar için bu iletiyi engellemek için 1 NoGuiFromShim kayıt defteri değerini ayarlayın. Alternatif olarak, belirli bir kullanıcı bağlamında çalışan uygulamalar için iletiyi engellemek için 1 COMPLUS_NoGuiFromShim ortam değişkenini ayarlayın.  
@@ -113,10 +113,10 @@ publicKeyToken=...,
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Nasıl yapılır: Otomatik bağlama yeniden yönlendirmesini devre dışı bırakma ve etkinleştirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Bir uygulamanın bir derlemenin belirli bir sürümüne nasıl bağlanacağını açıklar.|  
-|[Bütünleştirilmiş Kod Bağlama Yönlendirmesini Yapılandırma](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Derleme bağlama başvurularının nasıl belirli bir sürümdeki .NET Framework derlemelerine yeniden yönlendirildiğini açıklar.|  
-|[İşlem İçi Yan Yana Yürütme](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Tek bir işlemde CLR'nin birden çok sürümünü çalıştırılacak işlem içi yan yana çalışma zamanlı ana makine etkinleştirmenin nasıl kullanabileceğini açıklanır.|  
-|[Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Derlemeler üzerine kavramsal bir genel bakış sağlar.|  
+|[Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Bir uygulamanın bir derlemenin belirli bir sürümüne nasıl bağlanacağını açıklar.|  
+|[Derleme Bağlama Yönlendirmesini Yapılandırma](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Derleme bağlama başvurularının nasıl belirli bir sürümdeki .NET Framework derlemelerine yeniden yönlendirildiğini açıklar.|  
+|[Devam Eden Yan Yana Yürütme](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Tek bir işlemde CLR'nin birden çok sürümünü çalıştırılacak işlem içi yan yana çalışma zamanlı ana makine etkinleştirmenin nasıl kullanabileceğini açıklanır.|  
+|[Ortak Dil Çalışma Zamanındaki Derlemeler](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Derlemeler üzerine kavramsal bir genel bakış sağlar.|  
 |[Uygulama Etki Alanları](../../../docs/framework/app-domains/application-domains.md)|Uygulama etki alanları üzerine kavramsal bir genel bakış sağlar.|  
   
 ## <a name="reference"></a>Başvuru  

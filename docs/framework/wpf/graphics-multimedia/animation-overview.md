@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: cf95abc6780b1182582e567f78783388f1d377cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373744"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337740"
 ---
 # <a name="animation-overview"></a>Animasyona Genel bakış
 <a name="introduction"></a>
@@ -74,7 +74,7 @@ ms.locfileid: "57373744"
 ### <a name="part-1-create-a-doubleanimation"></a>Bölüm 1: DoubleAnimation oluşturma  
  Öğenin içine ve dışına görünümü Soldurma yapmanın bir yolu olan animasyon uygulamak için kendi <xref:System.Windows.UIElement.Opacity%2A> özelliği. Çünkü <xref:System.Windows.UIElement.Opacity%2A> özelliği türüdür <xref:System.Double>, ihtiyacınız double değerleri üreten bir animasyonu. A <xref:System.Windows.Media.Animation.DoubleAnimation> bir animasyonun. A <xref:System.Windows.Media.Animation.DoubleAnimation> iki double değerleri arasında bir geçiş oluşturur. Başlangıç değerini belirtmek için ayarlamanız, <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliği. Bitiş değerini belirtmek için ayarlamanız, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliği.  
   
-1.  Bir opaklık değerini `1.0` nesneyi tamamen opak ve bir opaklık değerini getirir `0.0` tamamen görünmez hale getirir. Animasyon geçişi yapmaya `1.0` için `0.0` ayarladığınız kendi <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini `1.0` ve kendi <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini `0.0`. Aşağıdakileri nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Media.Animation.DoubleAnimation> XAML içinde.  
+1. Bir opaklık değerini `1.0` nesneyi tamamen opak ve bir opaklık değerini getirir `0.0` tamamen görünmez hale getirir. Animasyon geçişi yapmaya `1.0` için `0.0` ayarladığınız kendi <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> özelliğini `1.0` ve kendi <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> özelliğini `0.0`. Aşağıdakileri nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Media.Animation.DoubleAnimation> XAML içinde.  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_2)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "57373744"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_2)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_2)]  
   
-2.  Ardından, belirtmelisiniz bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Bir animasyon başlangıç değerine hedef değerine gidin ne kadar sürer belirtir. Aşağıdakileri nasıl ayarlanacağını gösterir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> XAML içinde beş saniye.  
+2. Ardından, belirtmelisiniz bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Bir animasyon başlangıç değerine hedef değerine gidin ne kadar sürer belirtir. Aşağıdakileri nasıl ayarlanacağını gösterir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> XAML içinde beş saniye.  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_3)]  
   
@@ -92,7 +92,7 @@ ms.locfileid: "57373744"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]  
   
-3.  Önceki kod, gelen geçiş animasyon gösterdi `1.0` için `0.0`, tamamen opak görünümden tamamen görünmez soluklaştırılacak hedef öğenin neden olur. Kaybolduktan sonra tekrar görüntüye Soldurma öğesi sağlamak için ayarlayın <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> animasyona özelliği `true`. Animasyon belirsiz bir süre boyunca yineleme yapmak için ayarlanmış kendi <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliğini <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>. Aşağıdakileri nasıl ayarlanacağını gösterir <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> ve <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> XAML özellikleri.  
+3. Önceki kod, gelen geçiş animasyon gösterdi `1.0` için `0.0`, tamamen opak görünümden tamamen görünmez soluklaştırılacak hedef öğenin neden olur. Kaybolduktan sonra tekrar görüntüye Soldurma öğesi sağlamak için ayarlayın <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> animasyona özelliği `true`. Animasyon belirsiz bir süre boyunca yineleme yapmak için ayarlanmış kendi <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> özelliğini <xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>. Aşağıdakileri nasıl ayarlanacağını gösterir <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> ve <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> XAML özellikleri.  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]  
   
@@ -105,7 +105,7 @@ ms.locfileid: "57373744"
 ### <a name="part-2-create-a-storyboard"></a>Bölüm 2: Bir film şeridi oluşturun  
  Bir nesneye animasyon uygulamak için oluşturduğunuz bir <xref:System.Windows.Media.Animation.Storyboard> ve <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> ve <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> nesneyi belirlemek üzere özellikler ve animasyon uygulamak için özellik bağlı.  
   
-1.  Oluşturma <xref:System.Windows.Media.Animation.Storyboard> ve animasyonu alt öğe olarak ekleyin. Aşağıdakileri nasıl oluşturulacağını gösterir <xref:System.Windows.Media.Animation.Storyboard> XAML içinde.  
+1. Oluşturma <xref:System.Windows.Media.Animation.Storyboard> ve animasyonu alt öğe olarak ekleyin. Aşağıdakileri nasıl oluşturulacağını gösterir <xref:System.Windows.Media.Animation.Storyboard> XAML içinde.  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]    
   
@@ -119,7 +119,7 @@ ms.locfileid: "57373744"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_101)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_101)]  
   
-2.  <xref:System.Windows.Media.Animation.Storyboard> Animasyon uygulamak nereye bilmesi gerekir. Kullanım <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType> ekli özellik animasyon uygulamak için nesne belirtmek için. Aşağıdaki hedef adını ayarlama işlemi gösterilmektedir <xref:System.Windows.Media.Animation.DoubleAnimation> için `MyRectangle` XAML içinde.  
+2. <xref:System.Windows.Media.Animation.Storyboard> Animasyon uygulamak nereye bilmesi gerekir. Kullanım <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType> ekli özellik animasyon uygulamak için nesne belirtmek için. Aşağıdaki hedef adını ayarlama işlemi gösterilmektedir <xref:System.Windows.Media.Animation.DoubleAnimation> için `MyRectangle` XAML içinde.  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_6](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_6)]  
   
@@ -128,7 +128,7 @@ ms.locfileid: "57373744"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_102)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_102)]  
   
-3.  Kullanım <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> ekli özellik oynatmak özelliği belirtmek için. Aşağıdaki animasyon nasıl yapılandırıldığını gösterir. hedef <xref:System.Windows.UIElement.Opacity%2A> özelliği <xref:System.Windows.Shapes.Rectangle> XAML içinde.
+3. Kullanım <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> ekli özellik oynatmak özelliği belirtmek için. Aşağıdaki animasyon nasıl yapılandırıldığını gösterir. hedef <xref:System.Windows.UIElement.Opacity%2A> özelliği <xref:System.Windows.Shapes.Rectangle> XAML içinde.
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_7](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_7)]  
   
@@ -143,15 +143,15 @@ ms.locfileid: "57373744"
 ### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>Bölüm 3 (XAML): Film şeridini bir tetikleyici ile ilişkilendirme  
  Başlatmak ve uygulamak için en kolay yolu bir <xref:System.Windows.Media.Animation.Storyboard> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir olay tetikleyicisi kullanmaktır. Bu bölüm nasıl ilişkilendirildiğini gösterir <xref:System.Windows.Media.Animation.Storyboard> XAML içinde bir tetikleyici ile.  
   
-1.  Oluşturma bir <xref:System.Windows.Media.Animation.BeginStoryboard> nesne ve film şeridiniz ilişkilendirin. A <xref:System.Windows.Media.Animation.BeginStoryboard> bir tür <xref:System.Windows.TriggerAction> uygulayan ve başlatan bir <xref:System.Windows.Media.Animation.Storyboard>.  
+1. Oluşturma bir <xref:System.Windows.Media.Animation.BeginStoryboard> nesne ve film şeridiniz ilişkilendirin. A <xref:System.Windows.Media.Animation.BeginStoryboard> bir tür <xref:System.Windows.TriggerAction> uygulayan ve başlatan bir <xref:System.Windows.Media.Animation.Storyboard>.  
   
      [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_3)]  
   
-2.  Oluşturma bir <xref:System.Windows.EventTrigger> ve ekleme <xref:System.Windows.Media.Animation.BeginStoryboard> için kendi <xref:System.Windows.EventTrigger.Actions%2A> koleksiyonu. Ayarlama <xref:System.Windows.EventTrigger.RoutedEvent%2A> özelliği <xref:System.Windows.EventTrigger> başlatmak istediğiniz yönlendirilmiş olay <xref:System.Windows.Media.Animation.Storyboard>. (Yönlendirilmiş olaylar hakkında daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](../advanced/routed-events-overview.md).)  
+2. Oluşturma bir <xref:System.Windows.EventTrigger> ve ekleme <xref:System.Windows.Media.Animation.BeginStoryboard> için kendi <xref:System.Windows.EventTrigger.Actions%2A> koleksiyonu. Ayarlama <xref:System.Windows.EventTrigger.RoutedEvent%2A> özelliği <xref:System.Windows.EventTrigger> başlatmak istediğiniz yönlendirilmiş olay <xref:System.Windows.Media.Animation.Storyboard>. (Yönlendirilmiş olaylar hakkında daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](../advanced/routed-events-overview.md).)  
   
      [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_2)]  
   
-3.  Ekleme <xref:System.Windows.EventTrigger> için <xref:System.Windows.FrameworkElement.Triggers%2A> dikdörtgenin koleksiyonu.  
+3. Ekleme <xref:System.Windows.EventTrigger> için <xref:System.Windows.FrameworkElement.Triggers%2A> dikdörtgenin koleksiyonu.  
   
      [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_1)]  
   
@@ -159,12 +159,12 @@ ms.locfileid: "57373744"
 ### <a name="part-3-code-associate-the-storyboard-with-an-event-handler"></a>(Kod) 3. Bölüm: Film şeridini bir olay işleyicisi ile ilişkilendirme  
  Başlatmak ve uygulamak için en kolay yolu bir <xref:System.Windows.Media.Animation.Storyboard> kodda bir olay işleyicisi kullanmaktır. Bu bölüm nasıl ilişkilendirildiğini gösterir <xref:System.Windows.Media.Animation.Storyboard> olay işleyicisinde kodu ile.  
   
-1.  Kaydolun <xref:System.Windows.FrameworkElement.Loaded> dikdörtgenin olay.  
+1. Kaydolun <xref:System.Windows.FrameworkElement.Loaded> dikdörtgenin olay.  
   
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_104)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_104)]  
   
-2.  Olay işleyicisi bildirin. Olay işleyicisinde kullanın <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> film şeridi uygulamak için yöntemi.  
+2. Olay işleyicisi bildirin. Olay işleyicisinde kullanın <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> film şeridi uygulamak için yöntemi.  
   
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]  
@@ -213,10 +213,10 @@ ms.locfileid: "57373744"
   
 |Özellik türü|Karşılık gelen (From/To/By) temel animasyon|Karşılık gelen anahtar çerçeve animasyonu|Karşılık gelen yol animasyonu|Kullanım örneği|  
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|  
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Hiçbiri|Animasyon <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> veya <xref:System.Windows.Media.GradientStop>.|  
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Animasyon <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> veya <xref:System.Windows.Media.GradientStop>.|  
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animasyon <xref:System.Windows.FrameworkElement.Width%2A> , bir <xref:System.Windows.Controls.DockPanel> veya <xref:System.Windows.FrameworkElement.Height%2A> , bir <xref:System.Windows.Controls.Button>.|  
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animasyon <xref:System.Windows.Media.EllipseGeometry.Center%2A> birini konumlandırmak bir <xref:System.Windows.Media.EllipseGeometry>.|  
-|<xref:System.String>|Hiçbiri|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Hiçbiri|Animasyon <xref:System.Windows.Controls.TextBlock.Text%2A> , bir <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.ContentControl.Content%2A> , bir <xref:System.Windows.Controls.Button>.|  
+|<xref:System.String>|Yok.|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|Animasyon <xref:System.Windows.Controls.TextBlock.Text%2A> , bir <xref:System.Windows.Controls.TextBlock> veya <xref:System.Windows.Controls.ContentControl.Content%2A> , bir <xref:System.Windows.Controls.Button>.|  
   
 <a name="animationsaretimelines"></a>   
 ### <a name="animations-are-timelines"></a>Animasyon zaman çizelgeleri olan  
@@ -336,7 +336,7 @@ ms.locfileid: "57373744"
 |[Özel Animasyonlara Genel Bakış](custom-animations-overview.md)|Anahtar çerçeveler, animasyon sınıfları veya çerçeve başına geri çağırmaları animasyon sistemini genişletmek açıklar.|  
 |Gelen/İçin/Göre Animasyonlarına Genel Bakış|İki değer geçişleri bir animasyon oluşturmayı açıklar.|  
 |[Anahtar-Çerçeve Animasyonlara Genel Bakış](key-frame-animations-overview.md)|Bir animasyon ilişkilendirme yöntemi denetleme olanağı dahil olmak üzere birden çok hedef değerle oluşturmayı açıklar.|  
-|[Hızlandırma İşlevleri](easing-functions.md)|Matematik formülleri geçirmek gibi gerçekçi davranışını almak için animasyon uygulamak açıklanmaktadır.|  
+|[Kolaylaştırıcı İşlevler](easing-functions.md)|Matematik formülleri geçirmek gibi gerçekçi davranışını almak için animasyon uygulamak açıklanmaktadır.|  
 |[Yol Animasyonlarına Genel Bakış](path-animations-overview.md)|Taşıma veya karmaşık bir yolda nesneyi döndürme işlemini açıklamaktadır.|  
 |[Özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md)|Görsel Taslaklar kullanarak özellik animasyonları, yerel animasyonları, saatler ve başına-çerçeve animasyonlara açıklar.|  
 |[Görsel Taslaklara Genel Bakış](storyboards-overview.md)|Görsel Taslaklar ile birden çok zaman çizelgesi karmaşık animasyon oluşturmak için nasıl kullanılacağını açıklar.|  

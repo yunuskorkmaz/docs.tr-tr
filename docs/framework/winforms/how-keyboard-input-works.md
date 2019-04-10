@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204750"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342180"
 ---
 # <a name="how-keyboard-input-works"></a>Klavye Girdisi Nasıl Çalışır
 Windows Forms klavye girdisi Windows iletilere yanıt olarak klavye olayları yükselterek işler. Çoğu Windows Forms uygulamaları klavye girişi, klavye olaylarını işleme tarafından özel olarak işler. Ancak, bir denetim ulaşmadan önce anahtarları kesintiye gibi daha gelişmiş klavye girişi senaryoları uygulayabilmesi klavye iletileri nasıl çalıştığını anlamak gerekir. Bu konu, Windows Forms tanır ve klavye iletileri nasıl yönlendirileceğini genel bir bakış sağlar anahtar veri türlerini açıklar. Klavye olaylarını hakkında daha fazla bilgi için bkz. [kullanan klavye olayları](using-keyboard-events.md).  
@@ -22,13 +22,13 @@ Windows Forms klavye girdisi Windows iletilere yanıt olarak klavye olayları y�
 ## <a name="order-of-keyboard-events"></a>Klavye olayların sırası  
  Daha önce belirtildiği gibi var olan 3 klavye ile denetim oluşabilecek ilgili olaylar. Genel olayların sırası aşağıdaki sırayı gösterir:  
   
-1.  Kullanıcı, "a" anahtarı gönderir, bu anahtar, gönderilen, önceden işlenmiş ve bir <xref:System.Windows.Forms.Control.KeyDown> olayı oluşur.  
+1. Kullanıcı, "a" anahtarı gönderir, bu anahtar, gönderilen, önceden işlenmiş ve bir <xref:System.Windows.Forms.Control.KeyDown> olayı oluşur.  
   
-2.  Kullanıcı, "a" anahtar tutar, bu anahtar, gönderilen, önceden işlenmiş ve bir <xref:System.Windows.Forms.Control.KeyPress> olayı oluşur.  
+2. Kullanıcı, "a" anahtar tutar, bu anahtar, gönderilen, önceden işlenmiş ve bir <xref:System.Windows.Forms.Control.KeyPress> olayı oluşur.  
   
      Bu olay, kullanıcı tutan bir anahtar olarak birden çok kez gerçekleşir.  
   
-3.  "A" anahtar, anahtar önceden işlenmiş, kullanıcı yayınlar gönderilir ve <xref:System.Windows.Forms.Control.KeyUp> olayı oluşur.  
+3. "A" anahtar, anahtar önceden işlenmiş, kullanıcı yayınlar gönderilir ve <xref:System.Windows.Forms.Control.KeyUp> olayı oluşur.  
   
 ## <a name="preprocessing-keys"></a>Ön işleme anahtarları  
  Klavye iletileri işlenir diğer iletiler gibi <xref:System.Windows.Forms.Control.WndProc%2A> bir form veya denetim yöntemi. Bununla birlikte, önce klavye iletileri işlenir, <xref:System.Windows.Forms.Control.PreProcessMessage%2A> yöntemi özel karakter anahtarlar ve fiziksel anahtarlar işlemek için geçersiz kılınabilir bir veya daha fazla yöntemi çağırır. Algılama ve iletileri denetim tarafından işlenmeden önce belirli anahtarlar filtrelemek için bu yöntemleri geçersiz kılabilirsiniz. Aşağıdaki tabloda, yöntemi oluştuğunu sırada gerçekleştirilmekte olan eylemin ve ortaya çıkan, ilgili bir yöntemi gösterir.  

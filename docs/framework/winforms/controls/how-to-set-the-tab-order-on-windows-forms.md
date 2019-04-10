@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: cd86757d43d7d57dc7777422086a7b7a96b6611e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 50f5f91a946aeebc4d82630b25d18d8f8d2ea4be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162130"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339911"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Nasıl yapılır: Windows Forms’da Sekme Sırasını Ayarlama
 Sekme sırası, kullanıcı odak bir denetimden başka SEKME tuşuna basarak hareket sırasıdır. Her form kendi sekme sırasını sahiptir. Varsayılan olarak, sekme sırasını denetimleri oluşturduğunuz sırada ile aynıdır. Sekme sırası numaralandırma sıfır ile başlar.  
@@ -25,16 +25,16 @@ Sekme sırası, kullanıcı odak bir denetimden başka SEKME tuşuna basarak har
   
 ### <a name="to-set-the-tab-order-of-a-control"></a>Bir denetimin sekme sırasını ayarlama  
   
-1.  Üzerinde **görünümü** menüsünde tıklatın **sekme sırasını**.  
+1. Üzerinde **görünümü** menüsünde tıklatın **sekme sırasını**.  
   
      Bu form üzerindeki sekme sırası seçim modunu etkinleştirir. Bir sayı (temsil eden <xref:System.Windows.Forms.Control.TabIndex%2A> özelliği) her denetimin sol üst köşesinde görünür.  
   
-2.  Denetimlerin sekme sırasını istediğiniz sırayla kurmak için tıklayın.  
+2. Denetimlerin sekme sırasını istediğiniz sırayla kurmak için tıklayın.  
   
     > [!NOTE]
     >  Sekme sırası içinde denetimin yer, daha büyük veya 0'a eşit herhangi bir değere ayarlanabilir. Yinelenen meydana geldiğinde, z düzenini iki denetimin değerlendirilir ve üst denetimin ilk olarak sekmeli. (Z-formun z ekseni [derinliği] boyunca bir form üzerinde denetimleri visual katmanlarını sırasıdır. Z düzenini hangi denetimlerin önüne başka denetimler belirler.) Z düzeni hakkında daha fazla bilgi için bkz. [Windows Forms'da nesneleri katmanlama](how-to-layer-objects-on-windows-forms.md).  
   
-3.  İşiniz bittiğinde tıklayın **sekme sırasını** üzerinde **görünümü** yeniden sekme sırasını modundan ayrılmak için menü.  
+3. İşiniz bittiğinde tıklayın **sekme sırasını** üzerinde **görünümü** yeniden sekme sırasını modundan ayrılmak için menü.  
   
     > [!NOTE]
     >  Odak alamayan denetimleri yanı sıra, devre dışı bırakılmış ve görünmez denetimler olmadığı bir <xref:System.Windows.Forms.Control.TabIndex%2A> ve bu özellik sekme sırasının dahil değildir. Kullanıcı TAB tuşuna bastığında gibi bu denetimleri atlanır.  
@@ -47,7 +47,7 @@ Sekme sırası, kullanıcı odak bir denetimden başka SEKME tuşuna basarak har
   
 #### <a name="to-remove-a-control-from-the-tab-order"></a>Bir denetimin sekme sırasından kaldırmak için  
   
-1.  Denetimin ayarlamak <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini `false` Özellikler penceresinde.  
+1. Denetimin ayarlamak <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini `false` Özellikler penceresinde.  
   
      Bir denetim <xref:System.Windows.Forms.Control.TabStop%2A> özelliği sınıflandırmalara ayarlandığı `false` denetimlerde TAB tuşuyla geçiş denetimi atlanır olsa da hala sekme sırası içindeki konumuna tutar.  
   

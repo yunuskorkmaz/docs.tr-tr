@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 182de6ebf9d22da644f1d19566e8cab0052e8521
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341393"
 ---
 # <a name="where-clause-c-reference"></a>where tümcesi (C# Başvurusu)
 
@@ -27,7 +27,7 @@ Aşağıdaki örnekte, `where` yan tümcesi filtreler en az beş olanlar dışı
 
 ## <a name="example"></a>Örnek
 
-Tek bir `where` yan tümcesini kullanarak, çok doğrulamaları gerektiği gibi belirtebilirsiniz [ && ](../operators/conditional-and-operator.md) ve [ &#124; &#124; ](../operators/conditional-or-operator.md) işleçleri. Aşağıdaki örnekte, yalnızca en az beş olan çift sayıları seçmek için iki doğrulamaları sorguyu belirtir.
+Tek bir `where` yan tümcesini kullanarak, çok doğrulamaları gerektiği gibi belirtebilirsiniz [ && ](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) ve [ &#124; &#124; ](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) işleçleri. Aşağıdaki örnekte, yalnızca en az beş olan çift sayıları seçmek için iki doğrulamaları sorguyu belirtir.
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 
@@ -47,9 +47,9 @@ Derleme zamanında `where` anahtar sözcüğü, bir çağrı biçimine dönüşt
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu anahtar sözcükleri (LINQ)](query-keywords.md)
+- [Sorgu Anahtar Sözcükleri (LINQ)](query-keywords.md)
 - [from yan tümcesi](from-clause.md)
-- [select yan tümcesi](select-clause.md)
+- [select tümcesi](select-clause.md)
 - [Verileri Filtreleme](../../programming-guide/concepts/linq/filtering-data.md)
-- [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [C#'de LINQ Kullanmaya Başlama](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ Sorgu İfadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C#'de LINQ'e Başlarken](../../programming-guide/concepts/linq/getting-started-with-linq.md)

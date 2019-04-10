@@ -2,12 +2,12 @@
 title: WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 5107e4d079a51ee94d59aa872c8a4c74f229ea8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201253"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334516"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma
 Windows Communication Foundation (WCF), meta veri dışarı aktarma, hizmet uç noktaları tanımlamak ve bunları istemcilere hizmetin nasıl kullanılacağını anlamak için kullanabileceğiniz bir paralel, standartlaştırılmış gösterimine yansıtma işlemidir. Özel meta verileri, sistem tarafından sağlanan meta verileri vericiler dışarı aktarılamıyor XML öğelerden oluşur. Genellikle, bu kullanıcı tanımlı davranışlar ve bağlama öğeleri ve özellikleri ve bağlamalar ve sözleşmeler gereksinimleriyle ilgili ilke onaylamalarını özel WSDL öğeleri içerir.  
@@ -19,9 +19,9 @@ Windows Communication Foundation (WCF), meta veri dışarı aktarma, hizmet uç 
   
  Bu bölümde açıklanmaktadır:  
   
-1.  Uygulamak ve kullanmak nasıl <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> arabirimi, WSDL yayımlamadan önce WSDL yeni nesil veriler sizin için kullanıma sunar.  
+1. Uygulamak ve kullanmak nasıl <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> arabirimi, WSDL yayımlamadan önce WSDL yeni nesil veriler sizin için kullanıma sunar.  
   
-2.  Uygulamak ve kullanmak nasıl <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> arabirimi, WSDL verilerindeki ilke onaylamalarını dışa aktarma önce ilke verilerini de sunar.  
+2. Uygulamak ve kullanmak nasıl <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> arabirimi, WSDL verilerindeki ilke onaylamalarını dışa aktarma önce ilke verilerini de sunar.  
   
  Özel WSDL ve ilke onaylamalarını içe aktarma hakkında daha fazla bilgi için bkz. [WCF uzantısı için özel meta alma](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md).  
   

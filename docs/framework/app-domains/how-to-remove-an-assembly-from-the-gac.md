@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9bece9e21a29e10f08d53c5e98f01cf02602e18
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ff00e2f1d266243f0453f004564f2ed802d26c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231029"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338728"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Nasıl yapılır: Bir Derlemeyi Genel Derleme Önbelleğinden Kaldırma
 Bir derlemeyi genel derleme önbelleğinden (GAC) kaldırmak için iki yolu vardır:  
@@ -29,7 +29,7 @@ Bir derlemeyi genel derleme önbelleğinden (GAC) kaldırmak için iki yolu vard
   
 ### <a name="removing-an-assembly-with-gacutilexe"></a>Bir derlemeyi Gacutil.exe ile kaldırma  
   
-1.  Komut satırında, aşağıdaki komutu yazın:  
+1. Komut satırında, aşağıdaki komutu yazın:  
   
      **Gacutil – u** \< *derleme adı*>  
   
@@ -46,7 +46,7 @@ gacutil -u hello
   
 ### <a name="removing-an-assembly-with-windows-installer"></a>Bir derlemeyi Windows Installer ile kaldırma  
   
-1.  Gelen **programlar ve Özellikler** uygulamada **Denetim Masası**, kaldırmak istediğiniz uygulamayı seçin. Yükleme paketini derlemeleri GAC'ye yerleştirdiyseniz başka bir uygulama tarafından kullanılmaz, Windows Installer bunları kaldırır.  
+1. Gelen **programlar ve Özellikler** uygulamada **Denetim Masası**, kaldırmak istediğiniz uygulamayı seçin. Yükleme paketini derlemeleri GAC'ye yerleştirdiyseniz başka bir uygulama tarafından kullanılmaz, Windows Installer bunları kaldırır.  
   
     > [!NOTE]
     >  Windows Installer GAC'de kurulu derlemeler için bir başvuru sayısını tutar. Yalnızca, başvuru sayısı, Windows Installer paketi ile yüklü herhangi bir uygulama tarafından kullanılıp kullanılmadığını gösteren sıfır ulaştığında bir derlemenin GAC kaldırılır.  

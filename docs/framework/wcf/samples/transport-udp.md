@@ -2,31 +2,31 @@
 title: 'Taşıma: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332825"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334672"
 ---
 # <a name="transport-udp"></a>Taşıma: UDP
 UDP taşıma örnek nasıl uygulanacağı UDP tek noktaya yayın ve çok noktaya yayın özel bir Windows Communication Foundation (WCF) aktarım olarak gösterir. Örnek kanal çerçevesi kullanarak ve en iyi yöntemleri WCF özel taşıma WCF'de, oluşturmak için önerilen yordamı açıklar. Özel bir taşıma oluşturmak için adımları aşağıdaki gibidir:  
   
-1.  Kanal karar [ileti Exchange desenleri](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel veya IReplyChannel) ChannelFactory ve ChannelListener destekleyecektir. Ardından bu arabirimlerin kapatamaması çeşitlemeleri destekleyip desteklemeyeceğini karar verin.  
+1. Kanal karar [ileti Exchange desenleri](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel veya IReplyChannel) ChannelFactory ve ChannelListener destekleyecektir. Ardından bu arabirimlerin kapatamaması çeşitlemeleri destekleyip desteklemeyeceğini karar verin.  
   
-2.  Kanal fabrikası ve, ileti değişim deseni destekleyen bir dinleyici oluşturun.  
+2. Kanal fabrikası ve, ileti değişim deseni destekleyen bir dinleyici oluşturun.  
   
-3.  Ağ özgü özel durumların uygun türetilmiş sınıfa normalleştirilir olun <xref:System.ServiceModel.CommunicationException>.  
+3. Ağ özgü özel durumların uygun türetilmiş sınıfa normalleştirilir olun <xref:System.ServiceModel.CommunicationException>.  
   
-4.  Ekleme bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) özel taşıma için bir kanal yığını ekler öğesi. Daha fazla bilgi için [bir bağlama öğesi ekleme](#AddingABindingElement).  
+4. Ekleme bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) özel taşıma için bir kanal yığını ekler öğesi. Daha fazla bilgi için [bir bağlama öğesi ekleme](#AddingABindingElement).  
   
-5.  Yeni bağlama öğesi yapılandırma sistemi için kullanıma sunmak için bir bağlama öğesi uzantısı bölümü ekleyin.  
+5. Yeni bağlama öğesi yapılandırma sistemi için kullanıma sunmak için bir bağlama öğesi uzantısı bölümü ekleyin.  
   
-6.  Diğer uç nokta Özellikleri iletişim kurmak için meta verileri uzantılar ekleyin.  
+6. Diğer uç nokta Özellikleri iletişim kurmak için meta verileri uzantılar ekleyin.  
   
-7.  İyi tanımlanmış bir profili göre bağlama öğeleri yığınını önceden yapılandırır bir bağlaması ekleyin. Daha fazla bilgi için [standart bir bağlama ekleme](#AddingAStandardBinding).  
+7. İyi tanımlanmış bir profili göre bağlama öğeleri yığınını önceden yapılandırır bir bağlaması ekleyin. Daha fazla bilgi için [standart bir bağlama ekleme](#AddingAStandardBinding).  
   
-8.  Bir bağlama bölümü ve bağlama yapılandırma sistemi kullanıma sunmak için bağlama yapılandırma öğesi ekleyin. Daha fazla bilgi için [yapılandırma desteği ekleme](#AddingConfigurationSupport).  
+8. Bir bağlama bölümü ve bağlama yapılandırma sistemi kullanıma sunmak için bağlama yapılandırma öğesi ekleyin. Daha fazla bilgi için [yapılandırma desteği ekleme](#AddingConfigurationSupport).  
   
 <a name="MessageExchangePatterns"></a>   
 ## <a name="message-exchange-patterns"></a>İleti Exchange desenleri  
@@ -185,9 +185,9 @@ if (soapBinding != null)
   
  Svcutil.exe çalıştırırken, WSDL içeri aktarma uzantıları yüklemek için Svcutil.exe alma iki seçenek vardır:  
   
-1.  Noktası Svcutil.exe /SvcutilConfig kullanarak bizim yapılandırma dosyasına:\<Dosya >.  
+1. Noktası Svcutil.exe /SvcutilConfig kullanarak bizim yapılandırma dosyasına:\<Dosya >.  
   
-2.  Yapılandırma bölümü Svcutil.exe.config için Svcutil.exe ile aynı dizinde ekleyin.  
+2. Yapılandırma bölümü Svcutil.exe.config için Svcutil.exe ile aynı dizinde ekleyin.  
   
  `UdpBindingElementImporter` Yazın uygular `IWsdlImportExtension` arabirimi. `ImportEndpoint` Yöntemi WSDL bağlantı noktasından adresi alır.  
   
@@ -247,9 +247,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Biz uygulamak sonra `IPolicyImporterExtension` bizim kayıtlı sınıfından (`UdpBindingElementImporter`). İçinde `ImportPolicy()`, biz bizim ad alanında bir onayları arayın ve olanları taşıma oluşturmak için işlem ve çok noktaya yayın olup olmadığını denetleyin. İşleri biz hallederiz Onaylamalar da onaylar bağlama listeden kaldırmalısınız. Yeniden Svcutil.exe çalıştırırken tümleştirme için iki seçenek vardır:  
   
-1.  Noktası Svcutil.exe /SvcutilConfig kullanarak bizim yapılandırma dosyasına:\<Dosya >.  
+1. Noktası Svcutil.exe /SvcutilConfig kullanarak bizim yapılandırma dosyasına:\<Dosya >.  
   
-2.  Yapılandırma bölümü Svcutil.exe.config için Svcutil.exe ile aynı dizinde ekleyin.  
+2. Yapılandırma bölümü Svcutil.exe.config için Svcutil.exe ile aynı dizinde ekleyin.  
   
 <a name="AddingAStandardBinding"></a>   
 ## <a name="adding-a-standard-binding"></a>Standart bir bağlaması ekleniyor  
@@ -466,11 +466,11 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-3.  Yukarıdaki "UDP Test hizmet ve istemci" bölümüne bakın.  
+3. Yukarıdaki "UDP Test hizmet ve istemci" bölümüne bakın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

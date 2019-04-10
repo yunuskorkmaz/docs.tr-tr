@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168070"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343421"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Denetim ve Bileşen Yazmada Sorun Giderme
 Bu konu, bileşenlerin ve denetimlerin geliştirme ortaya çıkan aşağıdaki ortak sorunları listeler. Daha fazla bilgi için [bileşenler ile programlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -38,9 +38,9 @@ Bu konu, bileşenlerin ve denetimlerin geliştirme ortaya çıkan aşağıdaki o
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Araç kutusuna denetim ekleme  
   
-1.  Sağ **araç kutusu** ve kısayol menüsünden seçin **öğelerini Seç**.  
+1. Sağ **araç kutusu** ve kısayol menüsünden seçin **öğelerini Seç**.  
   
-2.  İçinde **araç kutusu öğelerini Seç** iletişim kutusunda, bileşen ekleyin:  
+2. İçinde **araç kutusu öğelerini Seç** iletişim kutusunda, bileşen ekleyin:  
   
     -   Bir .NET Framework bileşeni veya denetimi eklemek istiyorsanız, tıklayın **.NET Framework bileşenlerini** sekmesi.  
   
@@ -48,11 +48,11 @@ Bu konu, bileşenlerin ve denetimlerin geliştirme ortaya çıkan aşağıdaki o
   
     -   Bir COM bileşeni ya da ActiveX denetiminden eklemek istiyorsanız, tıklayın **COM bileşenlerini** sekmesi.  
   
-3.  Denetim iletişim kutusunda listede yoksa seçilir ve ardından onaylamak **Tamam**.  
+3. Denetim iletişim kutusunda listede yoksa seçilir ve ardından onaylamak **Tamam**.  
   
      Denetim eklenir **araç kutusu**.  
   
-4.  Denetim iletişim kutusunda listede yoksa, şunları yapın:  
+4. Denetim iletişim kutusunda listede yoksa, şunları yapın:  
   
     1.  Tıklayın **Gözat** düğmesi.  
   
@@ -73,15 +73,15 @@ Bu konu, bileşenlerin ve denetimlerin geliştirme ortaya çıkan aşağıdaki o
   
 #### <a name="to-debug-a-control-or-component"></a>Bir denetim veya bileşen hatalarını ayıklamak için  
   
-1.  Gelen **derleme** menüsünde tıklatın **Çözümü Derle** çözümünüzü derlemek için.  
+1. Gelen **derleme** menüsünde tıklatın **Çözümü Derle** çözümünüzü derlemek için.  
   
-2.  Gelen **dosya** menüsünde seçin **Ekle**, ardından **yeni proje** uygulamanız için bir test projesi eklemek için.  
+2. Gelen **dosya** menüsünde seçin **Ekle**, ardından **yeni proje** uygulamanız için bir test projesi eklemek için.  
   
-3.  İçinde **Yeni Proje Ekle** Seç iletişim kutusu **Windows uygulama** proje türü için.  
+3. İçinde **Yeni Proje Ekle** Seç iletişim kutusu **Windows uygulama** proje türü için.  
   
-4.  İçinde **Çözüm Gezgini**, sağ **başvuruları** yeni proje için düğüm. Kısayol menüsünde **Başvuru Ekle** denetim veya bileşen içeren projeye bir başvuru eklemek için.  
+4. İçinde **Çözüm Gezgini**, sağ **başvuruları** yeni proje için düğüm. Kısayol menüsünde **Başvuru Ekle** denetim veya bileşen içeren projeye bir başvuru eklemek için.  
   
-5.  Test projesinde bir denetim veya bileşen örneği oluşturun. Bileşeniniz ise **araç kutusu**, Tasarımcı yüzeyine sürükleyin veya örneği aşağıdaki kod örneğinde gösterildiği gibi program aracılığıyla oluşturabilirsiniz.  
+5. Test projesinde bir denetim veya bileşen örneği oluşturun. Bileşeniniz ise **araç kutusu**, Tasarımcı yüzeyine sürükleyin veya örneği aşağıdaki kod örneğinde gösterildiği gibi program aracılığıyla oluşturabilirsiniz.  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  
