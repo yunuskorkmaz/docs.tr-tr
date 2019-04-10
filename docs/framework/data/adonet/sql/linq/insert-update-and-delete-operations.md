@@ -1,18 +1,18 @@
 ---
-title: INSERT, Update ve Delete işlemlerini
+title: Insert, Update ve Delete İşlemleri
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26a43a4f-83c9-4732-806d-bb23aad0ff6b
-ms.openlocfilehash: 7dd2eb64a9320d88c7bc3b5feb6578d70f5910b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a25ea5fe80da1fed16f44fd3243ebea4d64069f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230687"
 ---
-# <a name="insert-update-and-delete-operations"></a>INSERT, Update ve Delete işlemlerini
+# <a name="insert-update-and-delete-operations"></a>Insert, Update ve Delete İşlemleri
 Gerçekleştirdiğiniz `Insert`, `Update`, ve `Delete` işlemlerinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ekleyerek, değiştirerek ve nesneler, nesne modelinde kaldırılıyor. Varsayılan olarak, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eylemlerinizi SQL çevirir ve veritabanı değişiklikleri gönderir.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] düzenleme ve kalıcı yapma nesnelerinizi yaptığınız değişiklikler en üst düzeyde esneklik sunar. Varlık nesnesi (veya bir sorgu aracılığıyla alarak veya yenisini oluşturmak) kullanılabilir hemen sonra bunları uygulamanızda gibi tipik nesneleri değiştirebilirsiniz. Diğer bir deyişle, bunların değerlerini değiştirebilirsiniz, Koleksiyonlarınız için ekleyebilirsiniz ve, koleksiyonlardan kaldırabilirsiniz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yaptığınız değişiklikleri izler ve çağırdığınızda, bunları veritabanına aktarmak hazır <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
@@ -33,5 +33,6 @@ Gerçekleştirdiğiniz `Insert`, `Update`, ve `Delete` işlemlerinde [!INCLUDE[v
 >  Visual Studio kullanan geliştiricilerin kullanabileceğiniz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] saklı yordamlar bu amaç için geliştirilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Insert, Update ve Delete İşlemlerini Özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

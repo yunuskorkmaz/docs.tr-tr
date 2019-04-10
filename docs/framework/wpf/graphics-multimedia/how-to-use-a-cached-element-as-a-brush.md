@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Önbelleğe alınan öğeyi fırça olarak kullanma'
+title: 'Nasıl yapılır: Önbelleğe Alınan Öğeyi Fırça Olarak Kullanma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BitmapCache [WPF], using
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BitmapCacheBrush [WPF], using
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-ms.openlocfilehash: 008bec87390a807ae2b4797af8b86aaf59c92ef5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 78df242c7f00b69e36ea4ab6751f51509d9e2220
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229374"
 ---
-# <a name="how-to-use-a-cached-element-as-a-brush"></a>Nasıl yapılır: Önbelleğe alınan öğeyi fırça olarak kullanma
+# <a name="how-to-use-a-cached-element-as-a-brush"></a>Nasıl yapılır: Önbelleğe Alınan Öğeyi Fırça Olarak Kullanma
 Kullanım <xref:System.Windows.Media.BitmapCacheBrush> verimli bir şekilde önbelleğe alınan öğeyi yeniden sınıfı. Bir öğeyi önbelleğe almak için yeni bir örneğini oluşturma <xref:System.Windows.Media.BitmapCache> sınıfı ve öğenin atayın <xref:System.Windows.UIElement.CacheMode%2A> özelliği.  
   
 ## <a name="example"></a>Örnek  
@@ -23,7 +23,8 @@ Kullanım <xref:System.Windows.Media.BitmapCacheBrush> verimli bir şekilde önb
  [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [Nasıl yapılır: Bir öğeyi önbelleğe alarak işleme performansını artırma](how-to-improve-rendering-performance-by-caching-an-element.md)
+- [Nasıl yapılır: Öğeyi Önbelleğe Alarak İşleme Performansını Artırma](how-to-improve-rendering-performance-by-caching-an-element.md)

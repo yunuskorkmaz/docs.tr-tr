@@ -1,5 +1,5 @@
 ---
-title: Veri isteme
+title: Veri İsteme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 8e469e5480bbec8a04dbf280d4698acd5b328d72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228516"
 ---
-# <a name="requesting-data"></a>Veri isteme
+# <a name="requesting-data"></a>Veri İsteme
 Günümüzün Internet dağıtılmış işletim ortamında çalışan uygulamalar geliştirme, her türden kaynaklardan veri almak için verimli, kullanımı kolay bir yöntem gerektirir. Takılabilir protokoller birden çok Internet protokollerinden veri almak için tek bir arabirim kullanan uygulamalar geliştirmenize olanak tanır.  
   
 ## <a name="uploading-and-downloading-data-from-an-internet-server"></a>Karşıya yükleme ve bir Internet sunucusundan veri indirme  
@@ -53,6 +53,7 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
-- [Nasıl yapılır: Web sayfası isteme ve sonuçları bir Stream alma](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Nasıl yapılır: WebRequest ile eşleşen protokole özgü WebResponse alma](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Nasıl yapılır: Web Sayfası İsteme ve Sonuçları Akış Olarak Alma](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Nasıl yapılır: WebRequest ile Eşleşen Protokole Özgü WebResponse Alma](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

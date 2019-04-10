@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: ddc9e3ec1a07e52e366ff5c17d4dd2ce3a3192a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231298"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) güncelleştirme
 Kullanırken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanmak için istemci kitaplığı bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışı, kitaplık istemci veri hizmeti sınıfların örneklerini akış girişleri çevirir. Bu veri hizmeti sınıfları kullanılarak izlenen <xref:System.Data.Services.Client.DataServiceContext> hangi <xref:System.Data.Services.Client.DataServiceQuery%601> ait. İstemcinin, üzerinde yöntemleri kullanarak rapor varlıkları yapılan değişiklikleri izler. <xref:System.Data.Services.Client.DataServiceContext>. Bu yöntemler, eklenen ve Silinen varlıkları ve ayrıca özellik değerlerini veya varlık örnekleri arasında ilişkiler için yaptığınız değişiklikleri izlemek istemci etkinleştirin. Çağırdığınızda bu izlenen değişiklikleri REST tabanlı işlemler veri hizmetine gönderilen <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> yöntemi.  
@@ -94,6 +94,7 @@ Kullanırken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanm
  Değişiklikleri izlenir <xref:System.Data.Services.Client.DataServiceContext> örnek ancak sunucuya hemen gönderilmez. Belirtilen bir etkinlik için gerekli değişiklikleri tamamladıktan sonra çağrı <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> veri hizmetine yapılan tüm değişiklikler göndermek için. Daha fazla bilgi için [veri hizmeti bağlamını yönetme](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md). Ayrıca değişiklikleri zaman uyumsuz olarak kullanarak kaydedebilirsiniz <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> ve <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> yöntemleri. Daha fazla bilgi için [zaman uyumsuz işlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Zaman Uyumsuz İşlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)

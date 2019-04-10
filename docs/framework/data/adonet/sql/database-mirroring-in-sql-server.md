@@ -1,18 +1,18 @@
 ---
-title: SQL Server'da veritabanı yansıtması
+title: SQL Server’da Veritabanı Yansıtması
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: e70624a43945d29c1690fbed6e39da4f8da6cfe4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230999"
 ---
-# <a name="database-mirroring-in-sql-server"></a>SQL Server'da veritabanı yansıtması
+# <a name="database-mirroring-in-sql-server"></a>SQL Server’da Veritabanı Yansıtması
 SQL Server veritabanı yansıtma, bir kopya veya yansıtma, bir yedek sunucu üzerinde bir SQL Server veritabanının tutmanızı sağlar. Yansıtma, verilerin iki ayrı kopyasını süreleri ve yüksek düzeyde kullanılabilirlik sağladığınızdan hiç var ve veri yedekliği tamamlamak sağlar. Geliştirici herhangi bir eylemde bulunmanız veya bir SQL Server veritabanı için yapılandırıldıktan sonra kod yazmaya gerek yoktur, böylece SQL Server için .NET veri sağlayıcısı, veritabanı yansıtması için örtük desteği sağlar. Ayrıca, <xref:System.Data.SqlClient.SqlConnection> nesne destekleyen bir yük devretme iş ortağı sunucu adını sağlayan sağlayan bir açık bir bağlantı modu <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
  İçin Basitleştirilmiş aşağıdaki olaylar dizisi gerçekleşir bir <xref:System.Data.SqlClient.SqlConnection> yansıtma için yapılandırılmış bir veritabanını hedefler nesnesi:  
@@ -64,4 +64,5 @@ string activeServer = connection.DataSource;
 |[Veritabanı yansıtma](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Ayarlama ve SQL Server yansıtma yapılandırma açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

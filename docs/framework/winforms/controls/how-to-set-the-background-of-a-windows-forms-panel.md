@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: b0cf7666e6d969b3d02d13e86eb45904307d3ce3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 289a91481c832a36b4b77d56ba6b18921ef02d5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228016"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Nasıl yapılır: Bir Windows Forms panelinin arka planını ayarlama
 Bir Windows Forms <xref:System.Windows.Forms.Panel> denetim arka plan rengi hem de arka plan görüntüsü görüntüleyebilirsiniz. <xref:System.Windows.Forms.Control.BackColor%2A> Özelliği etiketleri ve radyo düğmeleri gibi içerdiği denetimlerle arka plan rengini ayarlar. Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlı değil, <xref:System.Windows.Forms.Control.BackColor%2A> seçimi tüm panel doldurur. Varsa <xref:System.Windows.Forms.Control.BackgroundImage%2A> özelliği ayarlanmışsa, görüntünün içerdiği denetimlerle görüntülenir.  
@@ -68,6 +68,7 @@ Bir Windows Forms <xref:System.Windows.Forms.Panel> denetim arka plan rengi hem 
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Panel Denetimi](panel-control-windows-forms.md)

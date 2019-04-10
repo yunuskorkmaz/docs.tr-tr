@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: ed151f998ed7d28ba7ae170839ce2fa3a1ee6135
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 128af261c429228c97d952f1f8d382f46306f711
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229322"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface::GetModuleData yöntemi
 
@@ -45,7 +45,6 @@ HRESULT GetModuleData(
 `data`\
 [out] [DacpModuleData yapısı](dacpmoduledata-structure.md) yüklenen bir modülün bilgilerini tutacak.
 
-
 ## <a name="remarks"></a>Açıklamalar
 
 Sağlanan yöntem parçasıdır `ISOSDacInterface` arabirim ve sanal yöntem tablosunu 13 yuvaya karşılık gelir.
@@ -53,11 +52,11 @@ Sağlanan yöntem parçasıdır `ISOSDacInterface` arabirim ve sanal yöntem tab
 ## <a name="requirements"></a>Gereksinimler
 
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Hiçbiri  
-**Kitaplığı:** Hiçbiri  
+**Üst bilgi:** Yok.  
+**Kitaplığı:** None  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](index.md)
-- [ISOSDacInterface arabirimi](isosdacinterface-interface.md)
+- [ISOSDacInterface Arabirimi](isosdacinterface-interface.md)

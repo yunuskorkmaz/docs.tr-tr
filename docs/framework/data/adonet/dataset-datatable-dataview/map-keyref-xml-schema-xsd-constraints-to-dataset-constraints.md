@@ -1,15 +1,15 @@
 ---
-title: Keyref XML Şeması (XSD) kısıtlamalarını DataSet kısıtlamaları ile eşleme
+title: Keyref XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: bc3863bbe6fd7c290c25056e2420107ed2d8bff3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229751"
 ---
-# <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Keyref XML Şeması (XSD) kısıtlamalarını DataSet kısıtlamaları ile eşleme
+# <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Keyref XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 **Keyref** öğesi bir belge içindeki öğeleri arasında bağlantı kurmanızı sağlar. Bu, ilişkisel bir veritabanındaki yabancı anahtar ilişkisi için benzer. Bir şema belirtiyorsa **keyref** öğesi, öğenin karşılık gelen bir yabancı anahtar kısıtlaması tablolar sütunlar üzerinde şema eşleme işlemi sırasında dönüştürülür <xref:System.Data.DataSet>. Varsayılan olarak, **keyref** öğesi ayrıca oluşturur bir ilişki ile **ParentTable**, **geldiği**, **ParentColumn**ve  **ChildColumn** özellikler üzerinde ilişkisi belirtilmiş.  
   
  Aşağıdaki tabloda ana hatlarını **msdata** öznitelikleri içinde belirtebileceğiniz **keyref** öğesi.  
@@ -20,7 +20,7 @@ ms.locfileid: "54732810"
 |**msdata:ConstraintName**|Varsa **ConstraintName** özniteliği belirtilirse, değeri kısıtlama adı olarak kullanılır. Aksi takdirde, **adı** özniteliği **keyref** şema öğesi sağlar kısıtlama adı **veri kümesi**.|  
 |**msdata:UpdateRule**|Varsa **UpdateRule** özniteliği belirtilirse **keyref** şema öğesi, değeri atanır **UpdateRule** kısıtlaması özelliğinde  **Veri kümesi**. Aksi takdirde **UpdateRule** özelliği **Cascade**.|  
 |**msdata:DeleteRule**|Varsa **DeleteRule** özniteliği belirtilirse **keyref** şema öğesi, değeri atanır **DeleteRule** kısıtlaması özelliğinde  **Veri kümesi**. Aksi takdirde **DeleteRule** özelliği **Cascade**.|  
-|**msdata:AcceptRejectRule**|Varsa **AcceptRejectRule** özniteliği belirtilirse **keyref** şema öğesi, değeri atanır **AcceptRejectRule** kısıtlamaözelliği **Veri kümesi**. Aksi takdirde **AcceptRejectRule** özelliği **hiçbiri**.|  
+|**MSDATA:AcceptRejectRule**|Varsa **AcceptRejectRule** özniteliği belirtilirse **keyref** şema öğesi, değeri atanır **AcceptRejectRule** kısıtlamaözelliği **Veri kümesi**. Aksi takdirde **AcceptRejectRule** özelliği **hiçbiri**.|  
   
  Aşağıdaki örnek belirten bir şema içeriyor **anahtarı** ve **keyref** arasındaki ilişkileri **OrderNumber** alt öğesi **sırası**  öğesi ve **OrderNo** alt öğesi **OrderDetail** öğesi.  
   
@@ -110,6 +110,7 @@ Order(OrderNumber, EmpNumber)
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

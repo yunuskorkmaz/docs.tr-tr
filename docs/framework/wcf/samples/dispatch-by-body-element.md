@@ -2,12 +2,12 @@
 title: Gövde Öğesine göre Dağıt
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 376dfc0dcca3c3278ee4d4afefbe4756dd631212
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 44e70a5344d7ab0fc324c6bc5948f367227c869d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227736"
 ---
 # <a name="dispatch-by-body-element"></a>Gövde Öğesine göre Dağıt
 Bu örnek nasıl gelen iletiler için işlemler atamak için başka bir algoritma uygulanacağını gösterir.  
@@ -178,4 +178,3 @@ public interface IDispatchedByBody
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
-  

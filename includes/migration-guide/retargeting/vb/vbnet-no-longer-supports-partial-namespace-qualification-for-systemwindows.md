@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8db115a46df3fcea103e8fa6896542d0116aa256
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236740"
+---
 ### <a name="vbnet-no-longer-supports-partial-namespace-qualification-for-systemwindows-apis"></a>VB.NET kısmi ad niteliği System.Windows API'leri için artık desteklemektedir.
 
 |   |   |
@@ -7,4 +15,3 @@
 |Kapsam|İkincil|
 |Sürüm|4.5.2|
 |Tür|Yeniden Hedefleme|
-

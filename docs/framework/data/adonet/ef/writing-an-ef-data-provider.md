@@ -1,15 +1,15 @@
 ---
-title: Bir Entity Framework veri sağlayıcısı yazma
+title: Entity Framework Veri Sağlayıcısı Yazma
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 254207b9c3f5edd55fff867b784d71359f6c94c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2aa27475c28bed521c636139b19454b0720960ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228750"
 ---
-# <a name="writing-an-entity-framework-data-provider"></a>Bir Entity Framework veri sağlayıcısı yazma
+# <a name="writing-an-entity-framework-data-provider"></a>Entity Framework Veri Sağlayıcısı Yazma
 Bu bölümde nasıl yazılacağını açıklar bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server dışındaki bir veri kaynağını desteklemek için sağlayıcı. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server'ı destekleyen bir sağlayıcı içerir.  
   
 ## <a name="introducing-the-entity-framework-provider-model"></a>Entity Framework sağlayıcısı modeli ile tanışın  
@@ -42,4 +42,5 @@ Bu bölümde nasıl yazılacağını açıklar bir [!INCLUDE[adonet_ef](../../..
  [Sağlayıcı Bildirimi Belirtimi](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Sağlayıcılarıyla Çalışma](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

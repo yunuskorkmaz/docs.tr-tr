@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231129"
 ---
 # <a name="layout"></a>Düzen
 Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzen sistemi. Düzen hesaplamalar nasıl ve ne zaman ortaya anlamak, kullanıcı arabirimi oluşturmak için gerekli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -149,6 +149,7 @@ Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../
  Öğeleri nasıl ölçülür ve düzenlenmiş anlama anlama Düzen ilk adımdır. Kullanılabilir hakkında daha fazla bilgi için <xref:System.Windows.Controls.Panel> öğeler, bkz [panellere genel bakış](../controls/panels-overview.md). Düzen etkileyen çeşitli konumlandırma özelliklerini daha iyi anlamak için bkz: [hizalama, kenar boşlukları ve dolguya genel bakış](alignment-margins-and-padding-overview.md). Özel bir örneği için <xref:System.Windows.Controls.Panel> öğesi bkz [özel Radyal paneli örnek](https://go.microsoft.com/fwlink/?LinkID=159982). Basit uygulamada araya getirelim hazır olduğunuzda bkz [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
 - [Panellere Genel Bakış](../controls/panels-overview.md)

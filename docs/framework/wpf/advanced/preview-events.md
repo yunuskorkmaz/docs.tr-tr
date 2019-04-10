@@ -7,12 +7,12 @@ helpviewer_keywords:
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-ms.openlocfilehash: 95514cfce88764d92d690fb9c0a51c667a49683b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211406"
 ---
 # <a name="preview-events"></a>Önizleme Olayları
 Olaylar, tünel oluşturma olarak da bilinen önizleme, yönlendirilmiş olaylar burada olayı ve olay veri kaynağı olarak bildirilen öğe doğrultusunda uygulama kök rota yönü geçerse olaylardır. Tüm olay senaryosunu desteklemek veya önizleme olayları gerektirir; Bu konuda, burada özel bileşenler veya sınıflara önizleme olayları oluşturma uygun durumlarda olabilir ve önizleme olayları, uygulama veya bileşenleri, nasıl işleyeceğini bulunduğu durumlar açıklanmaktadır.  
@@ -30,5 +30,6 @@ Olaylar, tünel oluşturma olarak da bilinen önizleme, yönlendirilmiş olaylar
  Her tekniğin yan etkileri ya da sınırlamaları vardır. Bu noktada, olay işleme tırmanma olayı işlemek için beklediğiniz işleyicileri devre dışı bırakabilir ve bu nedenle, genellikle Previ üzerinde devam ederken işlenen olayı işaretlemek için iyi bir fikir olmadığını sınırlamasıdır Önizleme olay işleme yan etkisi olan Rota eni bölümü. SORUMLULUĞUN `handledEventsToo` tekniktir belirtemezsiniz, bir `handledEventsToo` işleyicisinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öznitelik olarak, olay işleyicisine kod işleyicinin eklenecek olduğu bir nesne başvurusu öğeye aldıktan sonra kaydetmeniz gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](marking-routed-events-as-handled-and-class-handling.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+
+- [Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](marking-routed-events-as-handled-and-class-handling.md)
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)

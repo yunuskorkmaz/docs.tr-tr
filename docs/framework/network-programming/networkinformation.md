@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: de8cb03e6205a83d2cc93ee300eb3fcac1ac5b74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0820ad6a6d5000ef7ea575e856d883ba5325b1b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230986"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> Ad alanı ağ olayları, değişiklikler, istatistikler ve özellikler hakkında bilgi toplamanızı sağlar. Kullanarak uzak ana erişilebilir olup olmadığını belirleyebilirsiniz <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> sınıfı.  
@@ -24,6 +24,7 @@ ms.locfileid: "54497176"
  Kullanabileceğiniz <xref:System.Net.NetworkInformation.Ping> uzak bir ana bilgisayarın ayarlama, ağ ve erişilebilir olup olmadığını belirlemek için sınıf. Daha fazla bilgi için [nasıl yapılır: Konağa ping yapma](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Ağ bilgi teknolojisi örneği](https://go.microsoft.com/fwlink/?LinkID=179564)
 - [NetStat aracı teknolojisi örneği](https://go.microsoft.com/fwlink/?LinkID=179562)

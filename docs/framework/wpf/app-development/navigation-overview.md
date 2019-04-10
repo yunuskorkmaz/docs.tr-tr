@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 7636a7d9a100d0df95f7d5462672819624ba52a4
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: feccd6978d0a3cf8db60bbd505826433c93e3276
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227203"
 ---
 # <a name="navigation-overview"></a>Gezintiye Genel Bakış
 Windows Presentation Foundation (WPF), iki uygulama türünde de kullanılabilen tarayıcı stili gezintiyi destekler: tek başına uygulamalar ve [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Gezinti, paket içeriğine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sağlar <xref:System.Windows.Controls.Page> sınıfı. Diğerine gidebilirsiniz <xref:System.Windows.Controls.Page> diğerine bildirimli olarak, kullanarak bir <xref:System.Windows.Documents.Hyperlink>, kullanarak programlama yoluyla veya <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Günlük sayfadan çıkıldığında sayfaları unutmayın ve bunları geri gitmek için kullanır.  
@@ -38,8 +38,7 @@ Windows Presentation Foundation (WPF), iki uygulama türünde de kullanılabilen
   
 > [!NOTE]
 >  Bu konu başlığında, "browser" terimi, barındırabilecek tarayıcılar ifade eder [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] şu anda içeren uygulamalar, [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] ve Firefox. Belirli durumlarda [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] özellikler, yalnızca belirli bir tarayıcı tarafından desteklenir, tarayıcı sürümü başvuruda bulunulur.  
-   
-     
+
 ## <a name="navigation-in-wpf-applications"></a>WPF uygulamalarında Gezinti  
  Bu konu, içinde anahtar Gezinti özelliklerine genel bakış sağlar. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Bu özellikler hem tek başına uygulamalar için kullanılabilir ve [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], bunları bu konuda bağlamında sunar ancak bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
   
@@ -70,7 +69,7 @@ Windows Presentation Foundation (WPF), iki uygulama türünde de kullanılabilen
   
 -   [Gezinme geçmişi ile içerik durumu tutma](#RetainingContentStateWithNavigationHistory)  
   
--   [Çerezler](#Cookies)  
+-   [Tanımlama bilgileri](#Cookies)  
   
 -   [Yapılandırılmış gezintiye](#Structured_Navigation)  
   
@@ -82,7 +81,7 @@ Windows Presentation Foundation (WPF), iki uygulama türünde de kullanılabilen
   
  [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]  
   
- A <xref:System.Windows.Controls.Page> içinde uygulanan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sahip `Page` , kök öğesi olarak ve gerektiren [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] ad alanı bildirimi. `Page` Gitmek ve görüntülemek için istediğiniz içerik öğesi içeriyor. Ayarlayarak içeriğinizi `Page.Content` aşağıdaki biçimlendirmede gösterildiği özellik öğesi.  
+ A <xref:System.Windows.Controls.Page> içinde uygulanan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sahip `Page` , kök öğesi olarak ve gerektiren [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] ad alanı bildirimi. `Page` Gitmek ve görüntülemek için istediğiniz içerik öğesi içeriyor. Ayarlayarak içeriğinizi `Page.Content` aşağıdaki biçimlendirmede gösterildiği özellik öğesi.  
   
  [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]  
   
@@ -118,7 +117,7 @@ Windows Presentation Foundation (WPF), iki uygulama türünde de kullanılabilen
 ### <a name="configuring-a-start-page"></a>Başlangıç sayfası yapılandırma  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] belirli bir miktarda bir tarayıcıda barındırılması için uygulama altyapısı gerektirir. İçinde [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], <xref:System.Windows.Application> sınıfı gerekli uygulama altyapısı kuran uygulama tanımı'nın bir parçasıdır (bkz [uygulama yönetimine genel bakış](application-management-overview.md)).  
   
- Uygulama tanımı olarak yapılandırılmış işaretleme dosyasının işaretleme ve kod arka plan, hem kullanarak genellikle uygulanan bir [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition` öğesi. Bir uygulamanın tanımıdır aşağıdaki bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
+ Uygulama tanımı olarak yapılandırılmış işaretleme dosyasının işaretleme ve kod arka plan, hem kullanarak genellikle uygulanan bir [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`ApplicationDefinition` öğesi. Bir uygulamanın tanımıdır aşağıdaki bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
   
  [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]  
   
@@ -235,7 +234,7 @@ Windows Presentation Foundation (WPF), iki uygulama türünde de kullanılabilen
  Bu durumda, program aracılığıyla gezinti çağırarak başlatmak için kod yazmanız gerekir. <xref:System.Windows.Navigation.NavigationService.Navigate%2A> yöntemi <xref:System.Windows.Navigation.NavigationService> nesne. Bir başvuru alma gerektiren bir <xref:System.Windows.Navigation.NavigationService>.  
   
 #### <a name="getting-a-reference-to-the-navigationservice"></a>NavigationService bir başvuru alma  
- Ele alınmaktadır nedeniyle [gezinti konakları](#Navigation_Hosts) bölümünde, bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama birden fazla olabilir <xref:System.Windows.Navigation.NavigationService>. Bu, kodunuzun bulmanın bir yolu gerektiği anlamına gelir. bir <xref:System.Windows.Navigation.NavigationService>, genellikle olduğu <xref:System.Windows.Navigation.NavigationService> geçerli çıkıldığında <xref:System.Windows.Controls.Page>. Bir başvuru almak bir <xref:System.Windows.Navigation.NavigationService> çağırarak `static` <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A?displayProperty=nameWithType> yöntemi. Alınacak <xref:System.Windows.Navigation.NavigationService> belirli bir çıkıldığında <xref:System.Windows.Controls.Page>, başvuru geçirdiğiniz <xref:System.Windows.Controls.Page> bağımsız değişkeni olarak <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A> yöntemi. Aşağıdaki kod nasıl alınacağı gösterilmiştir <xref:System.Windows.Navigation.NavigationService> geçerli <xref:System.Windows.Controls.Page>.  
+ Ele alınmaktadır nedeniyle [gezinti konakları](#Navigation_Hosts) bölümünde, bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulama birden fazla olabilir <xref:System.Windows.Navigation.NavigationService>. Bu, kodunuzun bulmanın bir yolu gerektiği anlamına gelir. bir <xref:System.Windows.Navigation.NavigationService>, genellikle olduğu <xref:System.Windows.Navigation.NavigationService> geçerli çıkıldığında <xref:System.Windows.Controls.Page>. Bir başvuru almak bir <xref:System.Windows.Navigation.NavigationService> çağırarak `static`<xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A?displayProperty=nameWithType> yöntemi. Alınacak <xref:System.Windows.Navigation.NavigationService> belirli bir çıkıldığında <xref:System.Windows.Controls.Page>, başvuru geçirdiğiniz <xref:System.Windows.Controls.Page> bağımsız değişkeni olarak <xref:System.Windows.Navigation.NavigationService.GetNavigationService%2A> yöntemi. Aşağıdaki kod nasıl alınacağı gösterilmiştir <xref:System.Windows.Navigation.NavigationService> geçerli <xref:System.Windows.Controls.Page>.  
   
  [!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind1)]  
 [!code-csharp[NavigationOverviewSnippets#GetNSCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/GetNSPage.xaml.cs#getnscodebehind2)]
@@ -289,19 +288,19 @@ Windows Presentation Foundation (WPF), iki uygulama türünde de kullanılabilen
 ### <a name="navigation-lifetime"></a>Gezinti ömrü  
  Gördüğünüz gibi gezinti, başlatmak için birçok yolu vardır. Gezinti başlatılır ve gezinme işlemi devam ederken, izleyebilir ve tarafından uygulanan aşağıdaki olaylar kullanarak gezinti etkilemek <xref:System.Windows.Navigation.NavigationService>:  
   
--   <xref:System.Windows.Navigation.NavigationService.Navigating>. Yeni bir gezinti istendiğinde gerçekleşir. Gezinti iptal etmek için kullanılabilir.  
+-   <xref:System.Windows.Navigation.NavigationService.Navigating>biçimindeki telefon numarasıdır. Yeni bir gezinti istendiğinde gerçekleşir. Gezinti iptal etmek için kullanılabilir.  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationProgress>. Gezinti durumu hakkında bilgi sağlamak için düzenli olarak indirme sırasında gerçekleşir.  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationProgress>biçimindeki telefon numarasıdır. Gezinti durumu hakkında bilgi sağlamak için düzenli olarak indirme sırasında gerçekleşir.  
   
--   <xref:System.Windows.Navigation.NavigationService.Navigated>. Sayfa bulunur ve indirilen gerçekleşir.  
+-   <xref:System.Windows.Navigation.NavigationService.Navigated>biçimindeki telefon numarasıdır. Sayfa bulunur ve indirilen gerçekleşir.  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationStopped>. Gezinti durdurulduğunda oluşur (çağırarak <xref:System.Windows.Navigation.NavigationService.StopLoading%2A>), veya ne zaman yeni bir gezinti istenen geçerli bir gezinti devam ederken.  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationStopped>biçimindeki telefon numarasıdır. Gezinti durdurulduğunda oluşur (çağırarak <xref:System.Windows.Navigation.NavigationService.StopLoading%2A>), veya ne zaman yeni bir gezinti istenen geçerli bir gezinti devam ederken.  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationFailed>. İstenen içeriğe gidilirken bir hata harekete geçirildiğinde gerçekleşir.  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationFailed>biçimindeki telefon numarasıdır. İstenen içeriğe gidilirken bir hata harekete geçirildiğinde gerçekleşir.  
   
--   <xref:System.Windows.Navigation.NavigationService.LoadCompleted>. İçin çıkıldığında içeriği yüklenir ve ayrıştırıldığında ve işleme başladı gerçekleşir.  
+-   <xref:System.Windows.Navigation.NavigationService.LoadCompleted>biçimindeki telefon numarasıdır. İçin çıkıldığında içeriği yüklenir ve ayrıştırıldığında ve işleme başladı gerçekleşir.  
   
--   <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>. Hangi olur bir içerik parçasına Gezinti başladığında gerçekleşir:  
+-   <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>biçimindeki telefon numarasıdır. Hangi olur bir içerik parçasına Gezinti başladığında gerçekleşir:  
   
     -   Hemen geçerli içerikte istenen parçası ise.  
   
@@ -730,6 +729,7 @@ Windows Presentation Foundation (WPF), iki uygulama türünde de kullanılabilen
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Gezinti desteği sağlayan [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] için Internet ve onu arasında çıkıldığında için üçüncü taraf içeriği barındırmak için uygulamalar sağlar. Hem uygulamalar hem de kullanıcılar zararlı bir davranış, korunacak [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] çeşitli içinde açıklanan güvenlik özellikleri sağlar [güvenlik](../security-wpf.md) ve [WPF kısmi güven güvenliği](../wpf-partial-trust-security.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Application.SetCookie%2A>
 - <xref:System.Windows.Application.GetCookie%2A>
 - [Uygulama Yönetimine Genel Bakış](application-management-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yük ve görüntü meta dosyaları'
+title: 'Nasıl yapılır: Meta Dosyalarını Yükleme ve Görüntüleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - examples [Windows Forms], metafiles
 - metafiles [Windows Forms], displaying
 ms.assetid: 60af1714-f148-4d85-a739-0557965ffa73
-ms.openlocfilehash: 121f285a95d0169db79bdc302d80dba03b3b40c2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 39b7251b2789c7410e1d59b4aa7990a2f73055fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229361"
 ---
-# <a name="how-to-load-and-display-metafiles"></a>Nasıl yapılır: Yük ve görüntü meta dosyaları
+# <a name="how-to-load-and-display-metafiles"></a>Nasıl yapılır: Meta Dosyalarını Yükleme ve Görüntüleme
 <xref:System.Drawing.Imaging.Metafile> Öğesinden devralan sınıf <xref:System.Drawing.Image> sınıfı, kaydı, görüntüleme ve vektör görüntüleri sınamak için yöntemlerini sağlar.  
   
 ## <a name="example"></a>Örnek  
@@ -34,4 +34,5 @@ ms.locfileid: "57720049"
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)
+
+- [Resimler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)

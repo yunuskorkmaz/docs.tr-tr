@@ -1,15 +1,15 @@
 ---
-title: Kurallı matematik işlevleri
+title: Kurallı Matematik İşlevleri
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: 3e8122806e31fc72b3d390e5e8671fada7f3a47d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228776"
 ---
-# <a name="math-canonical-functions"></a>Kurallı matematik işlevleri
+# <a name="math-canonical-functions"></a>Kurallı Matematik İşlevleri
 
 Entity SQL aşağıdaki kurallı matematik işlevleri içerir:
   
@@ -17,11 +17,11 @@ Entity SQL aşağıdaki kurallı matematik işlevleri içerir:
 
 Mutlak değerini döndürür `value`.
 
-**Bağımsız Değişkenler**
+**Arguments**
 
 Bir `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, ve `Decimal`.
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
 Türünü `value`.
 
@@ -33,11 +33,11 @@ Türünü `value`.
 
 Küçük olmayan en küçük tamsayı döndürür daha `value`.
 
-**Bağımsız Değişkenler**
+**Arguments**
 
 A `Single`, `Double`, ve `Decimal`.
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
 Türünü `value`.
 
@@ -50,11 +50,11 @@ Türünü `value`.
 
 Değerinden büyük olmayan en büyük tamsayı döndürür `value`.
 
-**Bağımsız Değişkenler**
+**Arguments**
 
 A `Single`, `Double`, ve `Decimal`.
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
 Türünü `value`.
 
@@ -67,14 +67,14 @@ Türünü `value`.
 
 Belirtilen sonuç döndüren `value` belirtilen `exponent`.
 
-**Bağımsız Değişkenler**
+**Arguments**
 
 |  |  |
 |--|--|
 |`value` | Bir `Int32, Int64, Double`, veya `Decimal`. |
 |`exponent` | Bir `Int64`, `Double`, veya `Decimal`. |
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
 Türünü `value`.
 
@@ -86,11 +86,11 @@ Türünü `value`.
 
 Tamsayı bölümünü döndürür `value`, en yakın tamsayıya yuvarlanır.
 
-**Bağımsız Değişkenler**
+**Arguments**
 
 A `Single`, `Double`, ve `Decimal`.
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
 Türünü `value`.
 
@@ -102,14 +102,14 @@ Türünü `value`.
 
 Döndürür `value`, yuvarlanır yakın belirtilen `digits`.
 
-**Bağımsız Değişkenler**
+**Arguments**
 
 |  |  |
 |--|--|
 |`value`|`Double` veya `Decimal`.|
 |`digits`|`Int16` veya `Int32`.|
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
 Türünü `value`.
 
@@ -121,14 +121,14 @@ Türünü `value`.
 
 Döndürür `value`, kesilmiş yakın belirtilen `digits`.
 
-**Bağımsız Değişkenler**
+**Arguments**
 
 |  |  |
 |--|--|
 |`value`|`Double` veya `Decimal`.|
 |`digits`|`Int16` veya `Int32`.|
 
-**Dönüş değeri**
+**Dönüş Değeri**
 
 Türünü `value`.
 
@@ -141,4 +141,5 @@ Türünü `value`.
  Microsoft SQL istemci yönetilen sağlayıcısında eşdeğer bir işlevselliği kullanılabilir. Daha fazla bilgi için [Entity Framework işlevleri için SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Kurallı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 716cfbe7d12ccc2233d018f0346f84cf2fc5e733
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230869"
 ---
 # <a name="navigation-topologies-overview"></a>Gezinti Topolojilerine Genel Bakış
 <a name="introduction"></a> Bu genel bakış içindeki gezinti topolojilerine tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Daha sonra örnek, üç genel gezinti topolojileri ele alınmıştır.  
@@ -141,6 +141,7 @@ ms.locfileid: "58819599"
 -   Sihirbazı'nı (kabul edildi veya iptal edildi) tamamlandıktan sonra sihirbaz oluşur sayfaları günlükten kaldırılır. Bu, böylece olası verileri veya durumu anomalileri önleme yalıtılmış, sihirbaz her bir örneğini saklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>

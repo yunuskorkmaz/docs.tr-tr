@@ -1,15 +1,15 @@
 ---
-title: < Thread_UseAllCpuGroups > öğesi
+title: <Thread_UseAllCpuGroups> Öğesi
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95411f5adde07c0d00124b2793b495c7ed8f49ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 236953cc1a430a1dd2a2fbb633c7ef06e6ba200f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230843"
 ---
 # <a name="threaduseallcpugroups-element"></a>\<Thread_UseAllCpuGroups > öğesi
 Çalışma zamanının yönetilen iş parçacıklarını tüm CPU grupları arasında dağıtmadığını belirtir.  
@@ -68,6 +68,7 @@ ms.locfileid: "55288944"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<GCCpuGroup > öğesi](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

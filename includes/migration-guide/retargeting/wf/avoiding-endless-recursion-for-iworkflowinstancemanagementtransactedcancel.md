@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5850e3359dab6503d5745a2266c7bf77780e5cc0
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f78f31f4328a45b5ef3f25cdf6eddac1b17fb6e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234071"
 ---
 ### <a name="avoiding-endless-recursion-for-iworkflowinstancemanagementtransactedcancel-and-iworkflowinstancemanagementtransactedterminate"></a>Sonsuz özyineleme IWorkflowInstanceManagement.TransactedCancel ve IWorkflowInstanceManagement.TransactedTerminate kaçınma
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760882"
 |Kapsam|Kenar|
 |Sürüm|4.7.2|
 |Tür|Yeniden Hedefleme|
-

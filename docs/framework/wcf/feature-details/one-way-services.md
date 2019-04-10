@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: ad285b5a0fa37867b1b80b3d7293a976fbd12c61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527802"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231285"
 ---
 # <a name="one-way-services"></a>Tek Yönlü Hizmetler
 İstek-yanıt deseni bir hizmet işlemi, varsayılan davranıştır. Hizmet işlemi kod olarak temsil edilir olsa bile bir istek-yanıt modelinde istemci yanıt iletisi için bekler. bir `void` yöntemi. Tek yönlü bir işlemle tek bir ileti iletilir. Alıcı bir yanıt iletisi göndermek ya da gönderen bir bekler.  
@@ -55,4 +55,5 @@ public interface IOneWayCalculator
  Bu, bunun yerine, çeşitli denetimleri hem istemcide hem de hizmet inceleyin ve ardından iki tarafındaki en iyi yapılandırma belirlemek için uygulama senaryolarınızı test önerilir. Oturumları kullanımını hizmetinizdeki iletilerinin işlenmesini engelliyorsa, örneğin, ayarlayabilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.InstanceContextMode.PerCall> her ileti farklı hizmet örneği tarafından işlenen ve ayarlama böylece <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> için <xref:System.ServiceModel.ConcurrencyMode.Multiple> aynı anda iletilerini dağıtmak birden fazla iş parçacığı izin vermek üzere. Hizmet ve istemci bağlamaları okuma kotaları artırmak başka bir yaklaşımdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Tek Yönlü](../../../../docs/framework/wcf/samples/one-way.md)

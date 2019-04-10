@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 366878fbfbfbe3e3951095c9ad82c1260638a0cb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228308"
 ---
 # <a name="application-element-net-native"></a>\<Uygulama > öğesi (.NET yerel)
 Birçok farklı uygulama türleri ve olan meta verilerini yansıma çalışma zamanında kullanılabilir ve tüm program öğeleri bir uygulama çalışma zamanı yansıma ilkenin uygulanacağı tür üyeleri için kapsayıcı görevi görür.  
@@ -86,6 +86,7 @@ Birçok farklı uygulama türleri ve olan meta verilerini yansıma çalışma za
 -   Yansıma, seri hale getirme ve birlikte çalışma için birçok farklı uygulama ilkesini ayarlar bir öğe. Özniteliklerini `<Application>` define öğesi tarafından tanımlanan alt öğeler tarafından geçersiz kılınabilir birçok farklı uygulama ilkesi `<Application>` veya [ \<kitaplığı >](../../../docs/framework/net-native/library-element-net-native.md) öğesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<Kitaplık > öğesi](../../../docs/framework/net-native/library-element-net-native.md)
 - [\<Yönergeleri > öğesi](../../../docs/framework/net-native/directives-element-net-native.md)
 - [Çalışma Zamanı Yönerge Öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md)

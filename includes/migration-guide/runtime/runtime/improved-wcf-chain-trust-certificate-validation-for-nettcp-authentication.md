@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e12ba8eb53e6725ebc2e1d87edff3a6a3ce2116b
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 05116d80fcd6b75f366a2542ad2eadd5f434991c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58467485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236170"
 ---
 ### <a name="improved-wcf-chain-trust-certificate-validation-for-nettcp-certificate-authentication"></a>Geliştirilmiş WCF zinciri güven sertifikası doğrulama Net.Tcp sertifika kimlik doğrulaması
 
@@ -15,4 +15,3 @@ ms.locfileid: "58467485"
 |Kapsam|İkincil|
 |Sürüm|4.7.2|
 |Tür|Çalışma zamanı|
-

@@ -1,5 +1,5 @@
 ---
-title: <defaultProxy> Öğesi (Ağ Ayarları)
+title: <defaultProxy> Öğesi (ağ ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 9d9e96296cb764d3fbb3cdcd561e036f9ad6aa2b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228353"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > öğesi (ağ ayarları)
 Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.  
@@ -49,8 +49,8 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proxy kullanmayın adresleri açıklayan normal bir ifade kümesi sağlar.|  
-|[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Yeni proxy modülü uygulamayı ekler.|  
-|[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Bir proxy sunucusu tanımlar.|  
+|[modül](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Yeni proxy modülü uygulamayı ekler.|  
+|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Bir proxy sunucusu tanımlar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -87,5 +87,6 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

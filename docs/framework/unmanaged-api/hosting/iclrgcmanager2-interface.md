@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9897526882a8ae53410a7744f78c558dfa6981e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a89a7ef34418163d790fd055de681c1cdf989e57
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226930"
 ---
 # <a name="iclrgcmanager2-interface"></a>ICLRGCManager2 Arabirimi
 Ortak dil çalışma zamanının atık toplama sistem ile etkileşimde bulunmak konak izin vermek için yöntemler sağlar.  
@@ -47,6 +47,7 @@ Ortak dil çalışma zamanının atık toplama sistem ile etkileşimde bulunmak 
  **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Otomatik Bellek Yönetimi](../../../../docs/standard/automatic-memory-management.md)
 - [COR_GC_STATS Yapısı](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)

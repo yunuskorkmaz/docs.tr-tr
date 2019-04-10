@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228646"
 ---
 # <a name="load-balancing"></a>YükDengeleme
 Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak yollarından biri, bunları bir yük dengeli bir sunucu grubunda dağıtarak ölçeklendirme sağlamaktır. WCF uygulamaları, Windows Ağ Yükü Dengeleme gibi yazılım yük Dengeleyiciler gibi teknikler, standart yük dengelemeyi ve bunun yanı sıra donanım tabanlı Yük Dengeleme Gereçleri kullanarak Yük Dengeleme olabilir.  
@@ -92,4 +92,5 @@ Windows Communication Foundation (WCF) uygulamaları kapasitesini artırmak yoll
  Yük dengeli senaryolarda en iyi performans için kullanmayı <xref:System.ServiceModel.NetTcpSecurity> (ya da <xref:System.ServiceModel.SecurityMode.Transport> veya <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Internet Information Services Barındırma En İyi Uygulamaları](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

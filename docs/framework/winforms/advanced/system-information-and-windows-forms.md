@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: d8efb783fcb5bcbe9c4ee99bc784e27a1aebb0cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228906"
 ---
 # <a name="system-information-and-windows-forms"></a>Sistem Bilgileri ve Windows Forms
 Bazen kodunuzda kararlar için uygulamanızın çalıştığı bilgisayar hakkında bilgi toplamak gereklidir. Örneğin, yalnızca belirli bir ağ etki alanına bağlı olduğunda geçerli olan bir işleve sahip olabilir; Bu durumda, etki alanı belirlemek ve etki alanı mevcut değilse işlev devre dışı bırakmak için bir yol gerekir.  
@@ -43,5 +43,6 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
  Bazı üyeleri daha kullanışlı <xref:System.Windows.Forms.SystemInformation> sınıfını içeren <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>, <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>, <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>, ve <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.SystemInformation>
 - [Windows Forms'ta Güç Yönetimi](power-management-in-windows-forms.md)

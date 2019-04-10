@@ -1,18 +1,18 @@
 ---
-title: Değişken ve bağımsız değişken izleme
+title: Değişken ve Bağımsız Değişken İzleme
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: 4e59a6838d93a57302f0c894445ab9da5d4252ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ef2d6111d5c123ac6c684df09f03398340a5522c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231045"
 ---
-# <a name="variable-and-argument-tracking"></a>Değişken ve bağımsız değişken izleme
+# <a name="variable-and-argument-tracking"></a>Değişken ve Bağımsız Değişken İzleme
 Bir iş akışı yürütülmesini izlerken, genellikle verileri ayıklamak kullanışlıdır. Bu izleme kayıt sonrası yürütme erişirken ek bağlam sağlar. İçinde [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], herhangi bir görünür bir değişken veya bağımsız değişken izleme kullanarak iş akışı herhangi bir etkinliği kapsamında ayıklayabilirsiniz. İzleme profilleri verileri ayıklamak kolaylaştırır.  
   
-## <a name="variables-and-arguments"></a>Değişkenler ve bağımsız değişkenler  
+## <a name="variables-and-arguments"></a>Değişkenler ve Bağımsız Değişkenler  
  Bir etkinlik bir ActivityStateRecord içerilip değişkenleri ve bağımsız değişkenler ayıklanır.  Yalnızca etkinlik kapsamında olduğunda, bir değişken için ayıklama kullanılabilir. Bir etkinlik içinde ayıklanacak bir değişken, aşağıdaki şekilde belirlenir:  
   
 -   Bir değişken değişken adıyla belirtilirse, izlenmekte olan geçerli etkinliği içinde ve üst etkinliklerde değişkeni İzleme arar. Değişken, geçerli etkinlik kapsamda ve üst kapsam aranır.  
@@ -47,5 +47,6 @@ Bir iş akışı yürütülmesini izlerken, genellikle verileri ayıklamak kulla
 3.  Özel İzleme katılımcıları WF kod emin olmak için değişken veya bağımsız değişkenleri depolanan hassas bilgileri açıklamaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)

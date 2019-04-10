@@ -2,12 +2,12 @@
 title: <endpoint> , <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: e3c934ac26a648eea4822cc7ae782dfbbfe0d99e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3af41ad5b5681b08aac44d984372ab5ac66caf5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231207"
 ---
 # <a name="endpoint-of-client"></a>\<uç noktası >'ın \<istemci >
 Sözleşmeyi, bağlamayı ve istemciler tarafından sunucu üzerinde hizmet uç noktalarına bağlanmak için kullanılan kanal uç noktalarının adres özelliklerini belirtir.  
@@ -72,6 +72,7 @@ Sözleşmeyi, bağlamayı ve istemciler tarafından sunucu üzerinde hizmet uç 
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>

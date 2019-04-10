@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b69970d50652da203ecf1ae6fe8d604ccee06cf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f396881ef16f63eaf198aec168e5e94ed887698b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57483581"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228542"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode Metodu
 Ayrıştırma için biçimlendirilmiş belirtilen işlevi tüm kod alır. Bu yöntem .NET Framework 2.0 sürümünde kullanım dışı bırakıldı. Kullanım [Icordebugcode2::getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) yerine.  
@@ -69,5 +69,5 @@ HRESULT GetCode (
  **.NET framework sürümleri:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [GetCodeChunks Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
 
+- [GetCodeChunks Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)

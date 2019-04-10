@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: a4ce6b0ce2bbf37499bcbe917067ec2539044be8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227132"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox Denetimi (Windows Forms)
 Windows Forms `ComboBox` denetimi bir açılan kutudaki verileri görüntülemek için kullanılır. Varsayılan olarak, `ComboBox` denetimi iki parça halinde görünür: kullanıcı bir liste öğesi türüne izin veren bir metin kutusu üst parçasıdır. İkinci bir kullanıcı bir seçebileceği öğe listesini görüntüleyen bir liste kutusu bölümüdür.  
@@ -24,11 +24,11 @@ Windows Forms `ComboBox` denetimi bir açılan kutudaki verileri görüntülemek
  [ComboBox Denetimine Genel Bakış](combobox-control-overview-windows-forms.md)  
  Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
   
- [Nasıl yapılır: Bir ComboBox denetiminde değişken boyutlu metin oluşturma](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ [Nasıl yapılır: ComboBox Denetiminde Değişken Boyutlu Metin Oluşturma](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  Özel çizim metin gösteren bir `ComboBox` denetimi.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.ComboBox> Sınıfı  
+ <xref:System.Windows.Forms.ComboBox> sınıf  
  Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
@@ -36,4 +36,5 @@ Windows Forms `ComboBox` denetimi bir açılan kutudaki verileri görüntülemek
  Liste kutuları, birleşik giriş kutuları ve denetlenen liste kutuları ile yapabileceğiniz çok şey bir listesini sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228274"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows Kimlik Doğrulama Hatalarını Ayıklama
 Windows kimlik doğrulaması, bir güvenlik mekanizması olarak kullanırken, Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI), güvenlik işlemlerini işler. SSPI katmanında güvenlik hatası meydana geldiğinde, Windows Communication Foundation (WCF) tarafından takip edilir. Bu konu, çerçeve ve hataları tanılamak üzere soruları sağlar.  
@@ -145,6 +145,7 @@ Windows kimlik doğrulaması, bir güvenlik mekanizması olarak kullanırken, G�
  Bir makine, uygulama geliştirmek ve başka dağıtma ve farklı hesap türlerinin her makinede kimlik doğrulaması için kullanmak, farklı bir davranış karşılaşabilirsiniz. Örneğin, Windows XP Pro makine kullanarak uygulamanızı geliştirdiğiniz varsayalım `SSPI Negotiated` kimlik doğrulama modu. Kimlik doğrulaması yapmak için bir yerel kullanıcı hesabı kullanıyorsanız, NTLM protokolü kullanılır. Uygulamanın geliştirilme yöntemi sonra etki alanı hesabı altında çalıştığı Windows Server 2003 makineye hizmeti dağıtın. Bu noktada istemci Kerberos ve bir etki alanı denetleyicisi kullanacak için hizmet kimlik doğrulaması mümkün olmayacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>

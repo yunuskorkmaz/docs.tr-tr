@@ -1,14 +1,14 @@
 ---
 title: ML.NET Content Guide
 description: Özel yapay ZEKA çözümleri oluşturmanıza ve bunları ML.NET kullanarak .NET uygulamalarınızla tümleştirin öğrenin.
-ms.date: 01/18/2019
+ms.date: 04/05/2019
 ms.custom: seodec18
-ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: de681daea5a29a121d350271ced4ccc2c0b1b533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231337"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET Content Guide
 
@@ -33,7 +33,11 @@ Temel bilgileri anlamak için bkz: [ML.NET eğitim modeli için temel kavramlar]
 
 [Bir regresyon modeli kullanarak fiyatları tahmin etmeye](./tutorials/taxi-fare.md) faktörlerden geçmiş verilerden yanıt belirlemek için kullandığı Tahmine dayalı bir uygulamayı nasıl oluşturacağınız gösterilmektedir.
 
-[Iris çiçek sınıflandırma özellikleri tarafından](./tutorials/iris-clustering.md) kullanarak Iris veri kümesini analiz etmek için bir kümeleme modeli kullanmayı gösterir. 
+[Iris çiçek sınıflandırma özellikleri tarafından](./tutorials/iris-clustering.md) kullanarak Iris veri kümesini analiz etmek için bir kümeleme modeli kullanmayı gösterir.
+
+[ML.NET ile film öneren oluşturma](./tutorials/movie-recommmendation.md) kullanıcılara kendi geçmişi temel alarak filmler önermek için bir öneri uygulamasının nasıl oluşturulacağını gösterir.
+
+[TensorFlow ile bir ML.NET özel görüntü sınıflandırıcı oluşturma](./tutorials/image-classification.md): ML.NET kullanarak özel görüntü sınıflandırıcı oluşturmak için var olan bir Tensorflow modeli yeniden eğitme gösterilmektedir.
 
 ## <a name="how-to-guide"></a>Nasıl Kılavuzu
 
@@ -46,7 +50,6 @@ Temel bilgileri anlamak için bkz: [ML.NET eğitim modeli için temel kavramlar]
 [Makine öğrenimi görevlerini](./resources/tasks.md) sınıflandırma ve anomali algılama gibi görevleri açıklar. 
 
 [Veri Dönüşümleri](./resources/transforms.md) ML.NET veri hazırlama özelliklerinde açıklar.
-
 
 ## <a name="api-reference"></a>API başvurusu
 

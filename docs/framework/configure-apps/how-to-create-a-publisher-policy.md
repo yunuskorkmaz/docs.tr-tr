@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yayımcı ilkesi oluşturma'
+title: 'Nasıl yapılır: Yayımcı İlkesi Oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: MT
+ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758995"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227398"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı ilkesi oluşturma
+# <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı İlkesi Oluşturma
 Derleme satıcıları, uygulamaları yükseltilen derlemeye bir yayımcı ilkesi dosyası dahil ederek bir derlemenin daha yeni bir sürümünü kullanacağını durumu. Yayımcı ilkesi dosyası, derleme yeniden yönlendirmesini ve kod temel ayarları belirtir ve bir uygulama yapılandırma dosyası aynı biçimi kullanır. Yayımcı ilkesi dosyası bir bütünleştirilmiş kod içine derlenmiş ve genel bütünleştirilmiş kod önbelleğine yerleştirilmesi.  
   
  Yayımcı ilkesi oluşturmak için gerekli olan üç adım vardır:  
@@ -101,9 +101,10 @@ Derleme satıcıları, uygulamaları yükseltilen derlemeye bir yayımcı ilkesi
     >  Özgün Yayımcı ilkesi dosyası derleme olarak aynı dizinde bulunan sürece, yayımcı ilke derlemesi genel derleme önbelleğine eklenemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](../../../docs/framework/configure-apps/index.md)
+
+- [Derlemelerle Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma](../../../docs/framework/configure-apps/index.md)
 - [Çalışma Zamanı Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Derleme Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: eac8c932e9f661933f943a507485a170dc6b6132
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203632"
 ---
 # <a name="application-settings-overview"></a>Uygulama Ayarlarına Genel Bakış
 Bu konuda, oluşturmak ve uygulamanız ve kullanıcılarınız adına ayar verileri depolamak nasıl ele alınmaktadır.  
@@ -48,13 +48,14 @@ Bu konuda, oluşturmak ve uygulamanız ve kullanıcılarınız adına ayar veril
  Ayrıca <xref:System.Windows.Forms.Binding> ayarları formlar ve denetimler üzerinde özelliklerine program aracılığıyla bağlamak için sınıf.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Nasıl yapılır: Uygulama ayarlarını doğrulama](how-to-validate-application-settings.md)
+- [Nasıl yapılır: Uygulama Ayarlarını Doğrulama](how-to-validate-application-settings.md)
 - [Uygulama Ayarlarını Yönetme](/visualstudio/ide/managing-application-settings-dotnet)
-- [Nasıl yapılır: Çalışma zamanında ile ayarları okumaC#](how-to-read-settings-at-run-time-with-csharp.md)
+- [Nasıl yapılır: Çalışma Zamanında C# ile Ayarları Okuma](how-to-read-settings-at-run-time-with-csharp.md)
 - [Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma](using-application-settings-and-user-settings.md)
 - [Uygulama Ayarları Mimarisi](application-settings-architecture.md)
 - [Özel Denetimler için Uygulama Ayarları](application-settings-for-custom-controls.md)

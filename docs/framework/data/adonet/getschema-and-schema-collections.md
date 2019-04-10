@@ -1,18 +1,18 @@
 ---
-title: GetSchema ve şema koleksiyonları
+title: GetSchema ve Şema Koleksiyonları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: e067e5c6e108a27ecaf9e4b0e3e6a33938ad0b59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11cfad81e40e76691db9f99efd1d60f5528600d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230180"
 ---
-# <a name="getschema-and-schema-collections"></a>GetSchema ve şema koleksiyonları
+# <a name="getschema-and-schema-collections"></a>GetSchema ve Şema Koleksiyonları
 **Bağlantı** her .NET Framework yönetilen sağlayıcıları uygulama sınıfları bir **GetSchema** şu anda bağlı, veritabanı şema bilgilerini almak için kullanılan yöntem ve öğesinden döndürülen şema bilgileri **GetSchema** yöntemi gelen biçiminde bir <xref:System.Data.DataTable>. **GetSchema** döndürmek için şema koleksiyonu belirtme ve döndürülen bilgi tutarını sınırlamak için isteğe bağlı parametreler sağlayan aşırı yüklenmiş yöntem yöntemidir.  
   
 ## <a name="specifying-the-schema-collections"></a>Şema koleksiyonları belirtme  
@@ -105,5 +105,6 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

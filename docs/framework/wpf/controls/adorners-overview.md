@@ -7,18 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
-ms.translationtype: MT
+ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227697"
 ---
 # <a name="adorners-overview"></a>Donatıcılara Genel Bakış
 Donatıcıları, özel bir tür <xref:System.Windows.FrameworkElement>görsel ipuçları kullanıcıya sağlamak için kullanılır. Diğer kullanımının yanı sıra donatıcıları işlevsel tanıtıcıları öğeleri ekleyin ya da bir denetimi hakkındaki durum bilgilerini sağlamak için kullanılabilir.  
-  
-  
-  
+
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>Donatıcılar hakkında  
  Bir <xref:System.Windows.Documents.Adorner> özel <xref:System.Windows.FrameworkElement> bağlanan bir <xref:System.Windows.UIElement>. Donatıcıları oluşturulur bir <xref:System.Windows.Documents.AdornerLayer>, her zaman donatılmış öğe veya donatılmış öğelerinin bir koleksiyonunu en üstünde olan bir işleme yüzeyi olduğu. İşleme, bağımsız bir donatıcının <xref:System.Windows.UIElement> donatıcı bağlı. Öğeye bir donatıcı genellikle, bu, donatılmış öğenin sol bulunan standart 2B koordinat kaynağını kullanarak bağlı olduğu öğe göre konumlandırılır.  
@@ -102,8 +100,9 @@ Donatıcıları, özel bir tür <xref:System.Windows.FrameworkElement>görsel ip
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.AdornerHitTestResult>
-- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
 - [Görüntüler, Çizimler ve Görsellerle Boyama](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
 - [Çizim Nesnelerine Genel Bakış](../graphics-multimedia/drawing-objects-overview.md)
 - [Nasıl Yapılır Konuları](adorners-how-to-topics.md)

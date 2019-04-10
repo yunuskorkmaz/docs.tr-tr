@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228204"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML Karakter Varlıkları ve XAML
 XAML, XML'de özel karakterler için tanımlanan karakter varlıkları kullanır. Bu konuda, bazı belirli karakter varlıkları ve XAML içinde diğer XML kavramları yönelik genel konular açıklanmaktadır.  
@@ -63,7 +63,8 @@ XAML, XML'de özel karakterler için tanımlanan karakter varlıkları kullanır
  XAML XML işleme yönergeleri yönergeleri ile geçirilmelidir state XML belirtimleri göre işler. XAML içinde .NET Framework XAML hizmetlerinde işleme işleme yönergeleri kullanmaz. XAML kullanan diğer mevcut altyapılarınız, ayrıca XAML işleme yönergeleri kullanmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XAML'ye Genel Bakış (WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [İşaretleme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Biçimlendirme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [XamlName Dilbilgisi](xamlname-grammar.md)
-- [Boşluk XAML içinde işleme](whitespace-processing-in-xaml.md)
+- [XAML'de Boşluk İşleme](whitespace-processing-in-xaml.md)

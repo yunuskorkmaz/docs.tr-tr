@@ -5,19 +5,19 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: 292c299bd15cd62eabd9a13db1abab1ed07fe57e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231571"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Windows Forms MenuStrip Denetiminde Menü Öğelerini Birleştirme
 Çok Belgeli Arabirim (MDI) uygulaması varsa, üst formun menülerle menü öğeleri veya alt formun tamamını menülerden birleştirebilirsiniz.  
   
  Bu konu, bir MDI uygulamasında menü öğelerini birleştirme ile ilgili temel kavramları açıklar.  
   
-## <a name="general-concepts"></a>Genel kavramlar  
+## <a name="general-concepts"></a>Genel Kavramlar  
  Hem hedef hem de kaynak denetimi birleştirme yordamları içerir:  
   
 -   Hedef <xref:System.Windows.Forms.MenuStrip> içine, birleştirme menü öğeleri ana veya MDI üst formu denetimi.  
@@ -54,8 +54,9 @@ ms.locfileid: "57722371"
  Otomatik birleştirme etkinleştirerek tetikleyebilirsiniz <xref:System.Windows.Forms.MenuStrip> MDI kaynak. Etkinleştirme kaynağını bağlı <xref:System.Windows.Forms.MenuStrip> MDI hedef birleştirilir. Yeni bir form etkin olduğunda, birleştirme son formda geri ve yeni bir form üzerinde tetiklenen. Ayarlayarak bu davranışı denetleyebilirsiniz <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> her gerektiğinde özelliği <xref:System.Windows.Forms.ToolStripItem>, ayarlayarak <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> her özellik <xref:System.Windows.Forms.MenuStrip>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
 - [MenuStrip Denetimi](menustrip-control-windows-forms.md)
-- [Nasıl yapılır: MenuStrip ile MDI pencere listesi oluşturma](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [Nasıl yapılır: MDI uygulamaları için otomatik menü birleştirmeyi ayarlama](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [Nasıl yapılır: MenuStrip ile MDI Pencere Listesi Oluşturma](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [Nasıl yapılır: MDI Uygulamaları için Otomatik Menü Birleştirmeyi Ayarlama](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

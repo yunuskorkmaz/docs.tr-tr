@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227241"
 ---
 # <a name="transformations"></a>Dönüşümler
 Döndürme, ölçeklendirme, çevirme veya eğme için kullanılan dönüşümler <xref:System.Windows.FrameworkElement> nesneleri.  
@@ -31,6 +31,7 @@ Döndürme, ölçeklendirme, çevirme veya eğme için kullanılan dönüşümle
  [Nasıl Yapılır Konuları](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Transform>
 - [Grafikler ve Multimedya](index.md)
 - [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)

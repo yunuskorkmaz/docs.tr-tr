@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228891"
 ---
 # <a name="denial-of-service"></a>Hizmet Reddi
 Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işlenir şekilde doludur oluşur.  
@@ -80,9 +80,10 @@ Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işleni
  Bunu azaltmak için etkin oturumlar sayısı sınırı ve en fazla ömrü boyunca oturum ayarlayarak <xref:System.ServiceModel.Channels.SecurityBindingElement> özelliği <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+
+- [Güvenlik Değerlendirmeleri](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Bilgileri Açıklama](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Ayrıcalık Yükseltme](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)

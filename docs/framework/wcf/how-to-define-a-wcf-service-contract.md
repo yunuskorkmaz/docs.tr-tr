@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228399"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Öğretici: Bir Windows Communication Foundation Hizmet sözleşmesini tanımlama
 
@@ -28,7 +28,6 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
 > - Oluşturma bir **WCF hizmet Kitaplığı** proje.
 > - Bir hizmet sözleşme arabirimi tanımlayın.
-
 
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Bir WCF hizmet kitaplığı projesi oluşturun ve hizmet sözleşme arabirimi tanımlayın
 
@@ -54,7 +53,6 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
       > [!NOTE]
       > Visual Basic Geliştirici ortam ayarları ile Visual Studio yüklü değilse, çözüm gizlenmiş olabilir. Bu durumda, seçin **seçenekleri** gelen **Araçları** menüsü, ardından **projeler ve çözümler** > **genel** içinde **seçenekleri** penceresi. Seçin **çözümü her zaman göster**. Ayrıca, doğrulayın **oluşturulduğunda yeni projeleri Kaydet** seçilir.
-
 
 3. Gelen **Çözüm Gezgini**açın **Iservice1.cs** veya **Iservice1.vb** dosya ve kendi kodu aşağıdaki kodla değiştirin:
 

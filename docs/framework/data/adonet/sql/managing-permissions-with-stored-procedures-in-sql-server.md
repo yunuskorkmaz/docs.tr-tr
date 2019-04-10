@@ -1,15 +1,15 @@
 ---
-title: SQL Server'da saklı yordam izinlerini yönetme
+title: SQL Server'da Saklı Yordam İzinlerini Yönetme
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 92752df75390c4f672f4a0cc1dd48ec7c07f6265
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0688157b45892cacb73f858dffb93836da9fc91d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546510"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229998"
 ---
-# <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server'da saklı yordam izinlerini yönetme
+# <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server'da Saklı Yordam İzinlerini Yönetme
 Bir yöntem çok satırlı defense veritabanınızı geçici olarak oluşturma, saklı yordamları ve kullanıcı tanımlı işlevleri kullanarak tüm veri erişim uygulamaktır. Tablolar gibi temel nesneler için tüm izinleri reddetme ve saklı yordamları yürütme izinlerini iptal etme. Bu, geçici verileri ve veritabanı nesnelerinizi bir güvenlik çevresi etkili bir şekilde oluşturur.  
   
 ## <a name="stored-procedure-benefits"></a>Saklı yordam avantajları  
@@ -57,6 +57,7 @@ Bir yöntem çok satırlı defense veritabanınızı geçici olarak oluşturma, 
 |[Saklı yordamları](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) ve [SQL ekleme](https://go.microsoft.com/fwlink/?LinkId=98234) SQL Server Çevrimiçi Kitapları'nda|Konular, saklı yordamlar oluşturma ve SQL ekleme nasıl çalıştığını açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 74ce1bbc9a887aee3a33eaf05084e8c2000967c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235957"
+---
 ### <a name="wpf-textbox-selected-text-appears-a-different-color-when-the-text-box-is-inactive"></a>Metin kutusu etkin olduğunda WPF seçili TextBox metni farklı bir renkte görünür.
 
 |   |   |
@@ -8,4 +16,3 @@
 |Sürüm|4,5|
 |Tür|Çalışma zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
-
