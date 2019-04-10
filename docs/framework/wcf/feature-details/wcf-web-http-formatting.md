@@ -2,12 +2,12 @@
 title: WCF Web HTTP biçimlendirme
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 37f0506822ca03aed3755ad42f9bf7ecdc962da7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094456"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331045"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP biçimlendirme
 WCF Web HTTP programlama modeli yanıtına döndürmek bir hizmet işlemi için en iyi biçimi dinamik olarak belirlemenize olanak tanır. Uygun bir biçim belirlemek için iki yöntem desteklenir: otomatik ve açık.  
@@ -15,13 +15,13 @@ WCF Web HTTP programlama modeli yanıtına döndürmek bir hizmet işlemi için 
 ## <a name="automatic-formatting"></a>Otomatik biçimlendirme  
  Etkin olduğunda, otomatik biçimlendirme yanıtta döndürülecek en iyi biçimde seçer. Aşağıdaki sırayla denetleyerek, en iyi biçimi belirler:  
   
-1.  Medya türleri istek iletisinin Accept üst bilgisi.  
+1. Medya türleri istek iletisinin Accept üst bilgisi.  
   
-2.  İstek iletisi content-type.  
+2. İstek iletisi content-type.  
   
-3.  Varsayılan biçimi ayarlama işlemi.  
+3. Varsayılan biçimi ayarlama işlemi.  
   
-4.  İçinde WebHttpBehavior ayarı varsayılan biçimi.  
+4. İçinde WebHttpBehavior ayarı varsayılan biçimi.  
   
  İsteğine bir Accept üst bilgisi içeriyorsa, Windows Communication Foundation (WCF) altyapısı onu destekleyen bir türü arar. Varsa `Accept` medya türlerinden öncelikleri üstbilgisini belirtir, bunların tümü kabul edilir. Hiçbir uygun biçimde bulunursa `Accept` üst bilgi, istek iletisinin içerik türü kullanılır. Uygun içerik türü belirtilirse, ayarlama işlemi için varsayılan biçimi kullanılır. Varsayılan biçimi ile ayarlanır `ResponseFormat` parametresinin <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> öznitelikleri. Hiçbir varsayılan biçimi işlemi, değerini belirttiyseniz, <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> özelliği kullanılır. Otomatik biçimlendirme dayanır <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> özelliği. Bu özelliği ayarlandığında `true`, WCF altyapısı kullanılacak en iyi biçimi belirler. Otomatik Biçim Seçimi varsayılan olarak devre dışıdır için geriye dönük uyumluluk. Otomatik Biçim Seçimi program aracılığıyla veya yapılandırma yoluyla etkinleştirilebilir. Aşağıdaki örnek kodda Otomatik Biçim Seçimi etkinleştirme gösterir.  
   

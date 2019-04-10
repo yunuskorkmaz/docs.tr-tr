@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 0e284ee6cce4ab513c03e7be402cc9c0f0c4ee1a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581920"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329667"
 ---
 # <a name="jsonp"></a>JSONP
 Bu örnek JSON ile doldurma (JSONP) WCF REST Hizmetleri destekleyecek şekilde nasıl gösterir. JSONP geçerli belgedeki oluşturma betiği etiketlere göre etki alanları arası betikler çağırmak için kullanılan bir kuraldır. Sonuç bir belirtilen geri çağırma işlevi döndürülür. JSONP gibi etiketler fikrini temel `<script src="http://..." >` herhangi bir etki alanından komut değerlendirebilir ve bu etiketlere göre alınan komut diğer işlevleri zaten tanımlanabilir, kapsamında değerlendirilir.
@@ -64,8 +64,8 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 #### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   
-1.  Çözüm için JSONP örneği açın.  
+1. Çözüm için JSONP örneği açın.  
   
-2.  Başlatmak için F5 tuşuna basın `http://localhost:26648/JSONPClientPage.aspx` tarayıcıda.  
+2. Başlatmak için F5 tuşuna basın `http://localhost:26648/JSONPClientPage.aspx` tarayıcıda.  
   
-3.  Sayfa yüklendikten sonra "Name" ve "Address" için metin girişi değerlerle doldurulduğuna dikkat edin.  Tarayıcı sayfa işleme tamamlandıktan sonra bu değerleri WCF Hizmeti çağrısından sağlandı.
+3. Sayfa yüklendikten sonra "Name" ve "Address" için metin girişi değerlerle doldurulduğuna dikkat edin.  Tarayıcı sayfa işleme tamamlandıktan sonra bu değerleri WCF Hizmeti çağrısından sağlandı.

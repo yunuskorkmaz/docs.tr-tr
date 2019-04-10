@@ -2,12 +2,12 @@
 title: Üyelik ve Rol Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 195940bea9c0fc8b26b6b49eadc1927ff156c514
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176949"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330096"
 ---
 # <a name="membership-and-role-provider"></a>Üyelik ve Rol Sağlayıcısı
 Üyelik ve rol sağlayıcısı örnek, bir hizmetin nasıl kullanabileceğinizi gösterir. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] kimliğini doğrulama ve yetkilendirme istemciler için üyelik ve rol sağlayıcıları.  
@@ -118,9 +118,9 @@ ms.locfileid: "59176949"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+1. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-2.  Yapılandırdığınızdan emin olun [ASP.NET uygulama hizmetleri veritabanına](https://go.microsoft.com/fwlink/?LinkId=94997).  
+2. Yapılandırdığınızdan emin olun [ASP.NET uygulama hizmetleri veritabanına](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
     >  SQL Server Express Edition çalıştırıyorsanız, sunucu adıdır. \SQLEXPRESS. Bu sunucu yapılandırırken kullanılmalıdır [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] uygulama hizmetleri veritabanına de Web.config bağlantı dizesi olduğu gibi.  
@@ -128,35 +128,35 @@ ms.locfileid: "59176949"
     > [!NOTE]
     >  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Çalışan işlem hesabı, bu adımda oluşturulan veritabanı üzerinde izinleri olmalıdır. Bunu yapmak için SQL Server Management Studio ve sqlcmd yardımcı programını kullanın.  
   
-3.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için aşağıdaki yönergeleri kullanın.  
+3. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için aşağıdaki yönergeleri kullanın.  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için  
   
-1.  Yolun Makecert.exe bulunduğu klasörü içerdiğinden emin olun.  
+1. Yolun Makecert.exe bulunduğu klasörü içerdiğinden emin olun.  
   
-2.  Setup.bat Visual Studio'yu yönetici ayrıcalıklarıyla çalıştırmak için bir geliştirici Komut İstemi'nde örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gereken hizmet sertifikaları yükler.  
+2. Setup.bat Visual Studio'yu yönetici ayrıcalıklarıyla çalıştırmak için bir geliştirici Komut İstemi'nde örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gereken hizmet sertifikaları yükler.  
   
-3.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
+3. Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
   
-1.  Hizmet bilgisayarda bir dizin oluşturun. Internet Information Services (IIS) yönetim aracını kullanarak bu dizin için servicemodelsamples adlı sanal bir uygulama oluşturun.  
+1. Hizmet bilgisayarda bir dizin oluşturun. Internet Information Services (IIS) yönetim aracını kullanarak bu dizin için servicemodelsamples adlı sanal bir uygulama oluşturun.  
   
-2.  Hizmet program dosyaları \inetpub\wwwroot\servicemodelsamples hizmeti bilgisayarında sanal dizinine kopyalayın. Dosyaları \bin alt dizinde kopyalama emin olun. Ayrıca hizmet bilgisayara Setup.bat GetComputerName.vbs ve Cleanup.bat dosyaları kopyalayın.  
+2. Hizmet program dosyaları \inetpub\wwwroot\servicemodelsamples hizmeti bilgisayarında sanal dizinine kopyalayın. Dosyaları \bin alt dizinde kopyalama emin olun. Ayrıca hizmet bilgisayara Setup.bat GetComputerName.vbs ve Cleanup.bat dosyaları kopyalayın.  
   
-3.  İstemci ikili dosyaları için istemci bilgisayarda bir dizin oluşturun.  
+3. İstemci ikili dosyaları için istemci bilgisayarda bir dizin oluşturun.  
   
-4.  İstemci program dosyaları istemci bilgisayarda istemci dizinine kopyalayın. Aynı zamanda istemciye Setup.bat Cleanup.bat ve ImportServiceCert.bat dosyaları kopyalayın.  
+4. İstemci program dosyaları istemci bilgisayarda istemci dizinine kopyalayın. Aynı zamanda istemciye Setup.bat Cleanup.bat ve ImportServiceCert.bat dosyaları kopyalayın.  
   
-5.  Sunucusunda, yönetici ayrıcalıklarıyla Visual Studio için geliştirici komut istemi açın ve çalıştırın `setup.bat service`. Çalışan `setup.bat` ile `service` bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
+5. Sunucusunda, yönetici ayrıcalıklarıyla Visual Studio için geliştirici komut istemi açın ve çalıştırın `setup.bat service`. Çalışan `setup.bat` ile `service` bağımsız değişkeni bilgisayarın tam etki alanı adı ile bir hizmet sertifikası oluşturur ve hizmet sertifikası Service.cer adlı bir dosyaya dışarı aktarır.  
   
-6.  Yeni sertifika adını yansıtacak şekilde Web.config'i düzenlemek (içinde `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), bilgisayarın tam etki alanı adıyla aynı olduğu.  
+6. Yeni sertifika adını yansıtacak şekilde Web.config'i düzenlemek (içinde `findValue` özniteliğini [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), bilgisayarın tam etki alanı adıyla aynı olduğu.  
   
-7.  Service.cer dosya hizmeti dizinden istemci bilgisayarda istemci dizinine kopyalayın.  
+7. Service.cer dosya hizmeti dizinden istemci bilgisayarda istemci dizinine kopyalayın.  
   
-8.  İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
+8. İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
   
 9. İstemci, yönetici ayrıcalıklarıyla Visual Studio için geliştirici komut istemi açın ve ImportServiceCert.bat çalıştırın. Bu hizmet sertifikası Service.cer dosyasından CurrentUser - TrustedPeople deposuna aktarır.  
   

@@ -2,12 +2,12 @@
 title: Kullanmaya başlama F# Mac için Visual Studio
 description: Nasıl kullanacağınızı öğrenin F# Mac için Visual Studio ile
 ms.date: 07/03/2018
-ms.openlocfilehash: e37600b2ca8f845ec1068a55ff1f9964d2527742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604177"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331877"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Kullanmaya başlama F# Mac için Visual Studio
 
@@ -19,7 +19,7 @@ Mac için Visual Studio'daki en temel projelerden birine bir konsol uygulamasıd
 
 1. Üzerinde **dosya** menüsünde **yeni çözüm**.
 
-2.  Yeni Proje iletişim kutusunda, konsol uygulaması için 2 farklı şablonlar vardır.  Bir diğer altında .NET Framework'ü hedefleyen .NET ->.  Diğer .NET Core altında şablonudur hedefleyen .NET Core uygulamasını ->.  Bu makalede amacıyla ya da şablon çalışmalıdır.
+2. Yeni Proje iletişim kutusunda, konsol uygulaması için 2 farklı şablonlar vardır.  Bir diğer altında .NET Framework'ü hedefleyen .NET ->.  Diğer .NET Core altında şablonudur hedefleyen .NET Core uygulamasını ->.  Bu makalede amacıyla ya da şablon çalışmalıdır.
 
 3. Konsol uygulaması değiştirme C# için F# gerekirse.  Seçin **sonraki** ilerlemek için düğmeyi!  
 
@@ -116,7 +116,7 @@ Henüz yapmadıysanız, kullanıma [Turu F# ](../tour.md), bazı çekirdek özel
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual F#](../index.md)
-- [F# Turu](../tour.md)
+- [F# turu](../tour.md)
 - [F#Dil Başvurusu](../language-reference/index.md)
 - [Tür çıkarımı](../language-reference/type-inference.md)
 - [Simge ve işleç başvurusu](../language-reference/symbol-and-operator-reference/index.md)

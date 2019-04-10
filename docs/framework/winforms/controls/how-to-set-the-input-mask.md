@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 14591b313b0ba4fc2a0a30a45c693147f00050b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207551"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331474"
 ---
 # <a name="how-to-set-the-input-mask"></a>Nasıl yapılır: Giriş Maskesini Ayarlama
 Maskelenmiş metin kutusu denetimini kabul etme veya reddetme kullanıcı girişi için bir bildirim temelli söz dizimi destekleyen Gelişmiş metin kutusu denetimidir. Maske özelliği ayarlayarak, uygulamanızda herhangi bir özel doğrulama mantığı yazmak zorunda kalmadan izin verilen kullanıcı girişini belirtebilirsiniz. Daha fazla bilgi için Açıklamalar bölümüne bakın. <xref:System.Windows.Forms.MaskedTextBox> sınıfı.  
@@ -21,18 +21,18 @@ Maskelenmiş metin kutusu denetimini kabul etme veya reddetme kullanıcı giriş
   
 #### <a name="to-set-the-mask-property-manually"></a>Maske özelliği el ile ayarlamak için  
   
-1.  İçinde **tasarım** görüntülenecek bir <xref:System.Windows.Forms.MaskedTextBox>.  
+1. İçinde **tasarım** görüntülenecek bir <xref:System.Windows.Forms.MaskedTextBox>.  
   
-2.  İçinde **özellikleri** penceresinde bulun <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği.  
+2. İçinde **özellikleri** penceresinde bulun <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> özelliği.  
   
-3.  İstediğiniz maske yazın. Örneğin, `###`.  
+3. İstediğiniz maske yazın. Örneğin, `###`.  
   
 ## <a name="using-the-input-mask-dialog-box"></a>Giriş maskesi iletişim kutusunu kullanma  
  Giriş maskesi iletişim kutusu, bazı önceden tanımlanmış giriş maskeleri sağlar. Ayrıca, önceden tanımlanmış maskeleri değiştirebilir veya kendi maskesini el ile girin.  
   
 #### <a name="to-open-the-input-mask-dialog-box"></a>Giriş maskesi iletişim kutusunu açmak için  
   
-1.  İçinde **tasarım** görüntülenecek bir <xref:System.Windows.Forms.MaskedTextBox>.  
+1. İçinde **tasarım** görüntülenecek bir <xref:System.Windows.Forms.MaskedTextBox>.  
   
     1.  Akıllı etiket açmak için tıklayın **MaskedTextBox görevleri** paneli.  
   
@@ -48,18 +48,18 @@ Maskelenmiş metin kutusu denetimini kabul etme veya reddetme kullanıcı giriş
   
 #### <a name="to-use-the-input-mask-dialog-box"></a>Giriş maskesi iletişim kutusunu kullanma  
   
-1.  (İsteğe bağlı) Önceden tanımlanmış maskeleri listesinde birine tıklayın.  
+1. (İsteğe bağlı) Önceden tanımlanmış maskeleri listesinde birine tıklayın.  
   
-2.  (İsteğe bağlı) Önceden tanımlanmış maskesinde Düzenle **maskesi** kutusu.  
+2. (İsteğe bağlı) Önceden tanımlanmış maskesinde Düzenle **maskesi** kutusu.  
   
-3.  (İsteğe bağlı) Yeni bir maskesi yazın **maskesi** kutusu. Diğer bir deyişle, önceden tanımlanmış maskeleri birini kullanın gerekmez.  
+3. (İsteğe bağlı) Yeni bir maskesi yazın **maskesi** kutusu. Diğer bir deyişle, önceden tanımlanmış maskeleri birini kullanın gerekmez.  
   
     > [!NOTE]
     >  Önizleme kutusunu görüntüler, kullanıcının gördüğü karakterleri <xref:System.Windows.Forms.MaskedTextBox>. Bu verileri doğru olarak girmiş kullanıcı yardımcı olacak bir kılavuz karakterleridir.  
   
-4.  Seçin veya temizleyin **kullanım ValidatingType** onay kutusu. **Kullanım ValidatingType** onay kutusu, bir veri türü veri girişi doğrulamak için kullanıcı tarafından kullanılıp kullanılmayacağını belirtir. Daha fazla bilgi için <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> özelliği.  
+4. Seçin veya temizleyin **kullanım ValidatingType** onay kutusu. **Kullanım ValidatingType** onay kutusu, bir veri türü veri girişi doğrulamak için kullanıcı tarafından kullanılıp kullanılmayacağını belirtir. Daha fazla bilgi için <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> özelliği.  
   
-5.  **Tamam**'ı tıklatın.  
+5. **Tamam**'ı tıklatın.  
   
      Maske girildiğini **maskesi** özelliğinde **özellikleri** penceresi.  
   

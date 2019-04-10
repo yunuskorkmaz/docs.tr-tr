@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331526"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Hizmet Sözleşmelerinde Veri Aktarımını Belirtme
 Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünülebilir. Hizmet işlemleri iletileri almak, bunları işlemek ve bunları ileti göndermek. İletileri işlem sözleşmeleri kullanma açıklanmaktadır. Örneğin, aşağıdaki sözleşme göz önünde bulundurun.  
@@ -566,11 +566,11 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  Önceki üç durumları (.NET türü korunması, Nesne grafiği korunması ve tamamen özel `XmlObjectSerializer`-serileştirme tabanlı) tüm, özel bir serileştirici prize takılı gerektirir. Bunu yapmak için şu adımları izleyin:  
   
-1.  Kendi davranışını türetme yazma <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.  
+1. Kendi davranışını türetme yazma <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.  
   
-2.  İki geçersiz kılma `CreateSerializer` kendi seri hale getirici döndürülecek yöntemleri (ya da <xref:System.Runtime.Serialization.NetDataContractSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> ile `preserveObjectReferences` kümesine `true`, ya da kendi özel <xref:System.Runtime.Serialization.XmlObjectSerializer>).  
+2. İki geçersiz kılma `CreateSerializer` kendi seri hale getirici döndürülecek yöntemleri (ya da <xref:System.Runtime.Serialization.NetDataContractSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> ile `preserveObjectReferences` kümesine `true`, ya da kendi özel <xref:System.Runtime.Serialization.XmlObjectSerializer>).  
   
-3.  Hizmet ana bilgisayarı açma veya istemci kanal oluşturmak önce varolan Kaldır <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> davranışı ve önceki adımlarda oluşturduğunuz özel bir türetilmiş sınıfta takın.  
+3. Hizmet ana bilgisayarı açma veya istemci kanal oluşturmak önce varolan Kaldır <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> davranışı ve önceki adımlarda oluşturduğunuz özel bir türetilmiş sınıfta takın.  
   
  Gelişmiş serileştirme kavramları hakkında daha fazla bilgi için bkz. [serileştirme ve seri durumundan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   

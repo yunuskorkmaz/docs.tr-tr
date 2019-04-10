@@ -2,12 +2,12 @@
 title: Yapılandırma Olmadan AJAX Hizmeti
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: 0a8c75136af728c2110affe224fe8bf6c47fc1eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f5ebc952fcc6c2ca4c7272a90dc1929d4b4a0eae
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191789"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331617"
 ---
 # <a name="ajax-service-without-configuration"></a>Yapılandırma Olmadan AJAX Hizmeti
 Bu örnek herhangi bir yapılandırma dosyası olmadan temel ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmet (bir Web tarayıcısı istemcisini JavaScript kodunu kullanarak erişebileceğiniz bir hizmeti) oluşturmak için Windows Communication Foundation (WCF) nasıl yapılacağı açıklanır. Ayarlar. Hizmet bir AJAX uç noktası otomatik olarak etkinleştirmeyi .svc dosyasında özel bir sözdizimi kullanır.  
@@ -41,11 +41,11 @@ Bu örnek herhangi bir yapılandırma dosyası olmadan temel ASP.NET zaman uyums
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  İçindeki kurulum yönergelerini gerçekleştirdiğinizden emin olun [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. İçindeki kurulum yönergelerini gerçekleştirdiğinizden emin olun [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  ' % S'çözüm ConfigFreeAjaxService.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. ' % S'çözüm ConfigFreeAjaxService.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Gidin `http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx` (ConfigFreeClientPage.aspx tarayıcıda proje dizininden açmayın).  
+3. Gidin `http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx` (ConfigFreeClientPage.aspx tarayıcıda proje dizininden açmayın).  
   
 > [!NOTE]
 >  Bu örnek çalışırken, anonim kimlik doğrulaması ve Windows kimlik doğrulaması aynı anda IIS ServiceModelSamples klasöründe etkin olmadığından emin olun. Lütfen bu durumda, Windows kimlik doğrulaması devre dışı bırakın. Örnek gerçekleştirdikten sonra Windows kimlik doğrulamasını etkinleştirmek ve "iisreset" çalıştırın.  

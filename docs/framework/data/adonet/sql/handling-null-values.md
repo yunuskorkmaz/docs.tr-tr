@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191477"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332150"
 ---
 # <a name="handling-null-values"></a>Null Değerleri İşleme
 Bir sütundaki değer bilinmeyen veya eksik olduğunda, ilişkisel bir veritabanındaki bir null değer kullanılır. Bir null, boş bir dize (karakter veya tarih/saat veri türleri için) ya da sıfır değeri (sayısal veri türleri için) olur. Tüm null değerlere tutarlı bir şekilde işlenir böylece ANSI SQL 92 belirtimi boş tüm veri türleri için aynı olması gerektiğini belirtir. <xref:System.Data.SqlTypes> Uygulayarak ad alanı null bir semantik sağlar <xref:System.Data.SqlTypes.INullable> arabirimi. Her veri türlerini <xref:System.Data.SqlTypes> kendi `IsNull` özelliği ve `Null` veri türü örneğine atanabilir değer.  
@@ -87,15 +87,15 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Ayrıca, bir örneği için aşağıdaki kurallar geçerli `DataRow.["columnName"]` atamaları null:  
   
-1.  Varsayılan *varsayılan* değer `DbNull.Value` tümü null değer olduğu uygun kesin türü kesin belirlenmiş null sütunları yazdınız dışında.  
+1. Varsayılan *varsayılan* değer `DbNull.Value` tümü null değer olduğu uygun kesin türü kesin belirlenmiş null sütunları yazdınız dışında.  
   
-2.  Null değerler hiçbir zaman XML dosyaları (olduğu gibi "xsi: nil") için serileştirme sırasında yazılır.  
+2. Null değerler hiçbir zaman XML dosyaları (olduğu gibi "xsi: nil") için serileştirme sırasında yazılır.  
   
-3.  Varsayılan, dahil olmak üzere tüm null olmayan değerler her zaman XML seri hale getirilirken yazılır. Burada bir null değer (xsi: nil) açık ve varsayılan değer örtük XSD/XML semantiği budur (XML içinde mevcut değil, doğrulama ayrıştırıcı, ilişkili bir XSD şema alamayacağınızı). Bunun tersi için de geçerlidir bir `DataTable`: bir null değer örtük ve açık varsayılan değerdir.  
+3. Varsayılan, dahil olmak üzere tüm null olmayan değerler her zaman XML seri hale getirilirken yazılır. Burada bir null değer (xsi: nil) açık ve varsayılan değer örtük XSD/XML semantiği budur (XML içinde mevcut değil, doğrulama ayrıştırıcı, ilişkili bir XSD şema alamayacağınızı). Bunun tersi için de geçerlidir bir `DataTable`: bir null değer örtük ve açık varsayılan değerdir.  
   
-4.  XML girdiden okunan satır için tüm eksik sütun değerlerini NULL olarak atanır. Kullanılarak oluşturulan satırları <xref:System.Data.DataTable.NewRow%2A> veya benzer yöntemler DataColumn nesnesinin varsayılan değer atanır.  
+4. XML girdiden okunan satır için tüm eksik sütun değerlerini NULL olarak atanır. Kullanılarak oluşturulan satırları <xref:System.Data.DataTable.NewRow%2A> veya benzer yöntemler DataColumn nesnesinin varsayılan değer atanır.  
   
-5.  <xref:System.Data.DataRow.IsNull%2A> Yöntemi döndürür `true` hem `DbNull.Value` ve `INullable.Null`.  
+5. <xref:System.Data.DataRow.IsNull%2A> Yöntemi döndürür `true` hem `DbNull.Value` ve `INullable.Null`.  
   
 ## <a name="assigning-null-values"></a>Null değerler atama  
  Herhangi biri için varsayılan değer <xref:System.Data.SqlTypes> örneği null.  

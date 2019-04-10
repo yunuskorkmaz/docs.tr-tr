@@ -2,12 +2,12 @@
 title: Dayanıklı Verilen Belirteç Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103265"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329758"
 ---
 # <a name="durable-issued-token-provider"></a>Dayanıklı Verilen Belirteç Sağlayıcısı
 Bu örnek, verilen belirteç sağlayıcısı, özel bir istemci uygulama gösterilmiştir.  
@@ -114,7 +114,7 @@ Bu örnek, verilen belirteç sağlayıcısı, özel bir istemci uygulama göster
   
 #### <a name="to-develop-a-custom-token-provider"></a>Özel bir belirteç sağlayıcısını geliştirmek için  
   
-1.  Özel bir belirteç sağlayıcısını yazın.  
+1. Özel bir belirteç sağlayıcısını yazın.  
   
      Örnek bir önbellekten bir güvenlik belirteci döndüren özel bir belirteç sağlayıcısını uygular.  
   
@@ -133,7 +133,7 @@ Bu örnek, verilen belirteç sağlayıcısı, özel bir istemci uygulama göster
     }  
     ```  
   
-2.  Özel güvenlik belirteci Yöneticisi'ni yazın.  
+2. Özel güvenlik belirteci Yöneticisi'ni yazın.  
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> Oluşturmak için kullanılan bir <xref:System.IdentityModel.Selectors.SecurityTokenProvider> belirli <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> kendisine geçirilen `CreateSecurityTokenProvider` yöntemi. Güvenlik belirteci Yöneticisi ayrıca belirteç Doğrulayıcı ve belirteci seri hale getiricileri genişletme oluşturmak için kullanılır, ancak bunlar Bu örnek tarafından ele alınmamıştır. Bu örnekte, özel güvenlik belirteci yöneticisi devraldığı <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sınıf ve geçersiz kılmaları `CreateSecurityTokenProvider` yöntemi özel belirteç sağlayıcısı, geçirilen belirteci gereksinimleri belirttiğinizde, verilen bir belirteç geri dönmek için istendi.  
   
@@ -162,7 +162,7 @@ Bu örnek, verilen belirteç sağlayıcısı, özel bir istemci uygulama göster
     }  
     ```  
   
-3.  Özel istemci kimlik bilgilerini yazın.  
+3. Özel istemci kimlik bilgilerini yazın.  
   
      Bir istemci kimlik bilgileri sınıfı istemci proxy'si için yapılandırıldığında kimlik bilgilerini temsil etmek için kullanılır ve güvenlik belirteci kimlik doğrulayıcılar, belirteç sağlayıcıları ve belirteci seri hale getiricileri genişletme elde etmek için kullanılan belirteci yöneticisi oluşturur.  
   
@@ -204,7 +204,7 @@ Bu örnek, verilen belirteç sağlayıcısı, özel bir istemci uygulama göster
     }  
     ```  
   
-4.  Belirteç önbelleği uygulayın. Örnek uygulamada, verilen bir belirteç önbelleği tüketicilerinin etkileşim soyut bir temel sınıf önbellek ile kullanır.  
+4. Belirteç önbelleği uygulayın. Örnek uygulamada, verilen bir belirteç önbelleği tüketicilerinin etkileşim soyut bir temel sınıf önbellek ile kullanır.  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ Bu örnek, verilen belirteç sağlayıcısı, özel bir istemci uygulama göster
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerekli sertifikaları oluşturmak için Setup.cmd dosyasını çalıştırın.  
+1. Gerekli sertifikaları oluşturmak için Setup.cmd dosyasını çalıştırın.  
   
-2.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md). Çözümdeki tüm projeleri (paylaşılan, RSTRSTR, hizmet, SecurityTokenService ve istemci) oluşturulan emin olun.  
+2. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md). Çözümdeki tüm projeleri (paylaşılan, RSTRSTR, hizmet, SecurityTokenService ve istemci) oluşturulan emin olun.  
   
-3.  Service.exe ve SecurityTokenService.exe hem de yönetici ayrıcalıklarıyla çalıştığından emin olun.  
+3. Service.exe ve SecurityTokenService.exe hem de yönetici ayrıcalıklarıyla çalıştığından emin olun.  
   
-4.  Client.exe çalıştırın.  
+4. Client.exe çalıştırın.  
   
 #### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
-1.  Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.cmd samples klasöründe çalıştırın.  
+1. Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.cmd samples klasöründe çalıştırın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

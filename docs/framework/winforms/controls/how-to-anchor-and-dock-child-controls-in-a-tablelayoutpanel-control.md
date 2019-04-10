@@ -12,52 +12,52 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: dbd5d04bc1a4505fd2cb75913110199080ca6323
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a84b00e93354a9aaff074a570cee931591816161
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200265"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329927"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Nasıl yapılır: TableLayoutPanel Denetiminde Alt Denetimleri Sabitleme ve Yerleştirme
 <xref:System.Windows.Forms.TableLayoutPanel> Denetim destekler <xref:System.Windows.Forms.Control.Anchor%2A> ve <xref:System.Windows.Forms.Control.Dock%2A> kendi alt denetimlerindeki özellikler.  
   
 ### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a>Bir alt denetimin TableLayoutPanel hücredeki hizalamak için  
   
-1.  Oluşturma bir <xref:System.Windows.Forms.TableLayoutPanel> formunuzdaki denetimi.  
+1. Oluşturma bir <xref:System.Windows.Forms.TableLayoutPanel> formunuzdaki denetimi.  
   
-2.  Değerini <xref:System.Windows.Forms.TableLayoutPanel> denetimin <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> ve <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> özelliklerine **1**.  
+2. Değerini <xref:System.Windows.Forms.TableLayoutPanel> denetimin <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> ve <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> özelliklerine **1**.  
   
-3.  Oluşturma bir <xref:System.Windows.Forms.Button> denetim <xref:System.Windows.Forms.TableLayoutPanel> denetimi. <xref:System.Windows.Forms.Button> Hücresinin sol üst köşesinin kaplar.  
+3. Oluşturma bir <xref:System.Windows.Forms.Button> denetim <xref:System.Windows.Forms.TableLayoutPanel> denetimi. <xref:System.Windows.Forms.Button> Hücresinin sol üst köşesinin kaplar.  
   
-4.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `Left`. <xref:System.Windows.Forms.Button> Hücresinin sol kenarlık ile hizalamak denetimi taşır.  
+4. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `Left`. <xref:System.Windows.Forms.Button> Hücresinin sol kenarlık ile hizalamak denetimi taşır.  
   
     > [!NOTE]
     >  Bu davranış, diğer kapsayıcı denetimlerin davranışından farklıdır. Diğer kapsayıcı denetimlerinde ne zaman alt denetimin taşımaz <xref:System.Windows.Forms.Control.Anchor%2A> özelliği ayarlanır ve bağlantılı denetim ile üst kapsayıcının sınırları arasındaki uzaklığı zaman sabittir <xref:System.Windows.Forms.Control.Anchor%2A> özelliği ayarlanmış.  
   
-5.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `Top, Left`. <xref:System.Windows.Forms.Button> Hücresinin sol üst köşedeki kaplaması denetimi taşır.  
+5. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `Top, Left`. <xref:System.Windows.Forms.Button> Hücresinin sol üst köşedeki kaplaması denetimi taşır.  
   
-6.  Yineleme 5. adımı bir değerle `Top, Right` taşımak <xref:System.Windows.Forms.Button> hücrenin sağ üst köşedeki denetimi. Yineleme değerleriyle `Bottom, Left` ve `Bottom, Right`.  
+6. Yineleme 5. adımı bir değerle `Top, Right` taşımak <xref:System.Windows.Forms.Button> hücrenin sağ üst köşedeki denetimi. Yineleme değerleriyle `Bottom, Left` ve `Bottom, Right`.  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>Bir alt denetimin TableLayoutPanel hücredeki uzatmak için  
   
-1.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `Left, Right`. <xref:System.Windows.Forms.Button> Denetimi yeniden boyutlandırılır hücre arasında esnetme için.  
+1. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `Left, Right`. <xref:System.Windows.Forms.Button> Denetimi yeniden boyutlandırılır hücre arasında esnetme için.  
   
     > [!NOTE]
     >  Bu davranış, diğer kapsayıcı denetimlerin davranışından farklıdır. Diğer kapsayıcı denetimlerinde alt denetim değil ne zaman yeniden boyutlandırılmış <xref:System.Windows.Forms.Control.Anchor%2A> özelliği `Left, Right` veya `Top, Bottom`.  
   
-2.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `Top, Bottom`. <xref:System.Windows.Forms.Button> Denetimi yeniden boyutlandırılır hücrenin en altına üstten esnetme için.  
+2. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `Top, Bottom`. <xref:System.Windows.Forms.Button> Denetimi yeniden boyutlandırılır hücrenin en altına üstten esnetme için.  
   
-3.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `Top, Bottom, Left, Right`. <xref:System.Windows.Forms.Button> Denetim hücreyi dolduracak şekilde yeniden boyutlandırılmış.  
+3. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `Top, Bottom, Left, Right`. <xref:System.Windows.Forms.Button> Denetim hücreyi dolduracak şekilde yeniden boyutlandırılmış.  
   
-4.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `None`. <xref:System.Windows.Forms.Button> Denetimi yeniden boyutlandırıldı ve hücreye ortalanmış.  
+4. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini `None`. <xref:System.Windows.Forms.Button> Denetimi yeniden boyutlandırıldı ve hücreye ortalanmış.  
   
-5.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Left>. <xref:System.Windows.Forms.Button> Hücresinin sol kenarlık ile hizalamak denetimi taşır. <xref:System.Windows.Forms.Button> Denetiminin genişliğini korur, ancak yükseklik hücreyi dikey olarak doldurmak için boyutlandırılır.  
+5. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Left>. <xref:System.Windows.Forms.Button> Hücresinin sol kenarlık ile hizalamak denetimi taşır. <xref:System.Windows.Forms.Button> Denetiminin genişliğini korur, ancak yükseklik hücreyi dikey olarak doldurmak için boyutlandırılır.  
   
     > [!NOTE]
     >  Diğer kapsayıcı denetimlerinde oluşan aynı davranış budur.  
   
-6.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>. <xref:System.Windows.Forms.Button> Denetim hücreyi dolduracak şekilde yeniden boyutlandırılmış.  
+6. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>. <xref:System.Windows.Forms.Button> Denetim hücreyi dolduracak şekilde yeniden boyutlandırılmış.  
   
 ## <a name="example"></a>Örnek  
  Beş düğmeden beş ayrı bağlantılı aşağıdaki çizimde <xref:System.Windows.Forms.TableLayoutPanel> hücreleri.  

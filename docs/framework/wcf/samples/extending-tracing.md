@@ -2,12 +2,12 @@
 title: İzlemeyi Genişletme
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 829ebd2f935135b8765ccd48532d357bf95f805a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c56f886857e8d391a243e3af4a13353f14116247
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208247"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329719"
 ---
 # <a name="extending-tracing"></a>İzlemeyi Genişletme
 Bu örnek, kullanıcı tanımlı etkinlik izlemeleri istemci ve hizmet kodu yazarak Windows Communication Foundation (WCF) izleme özelliğini genişletme gösterir. Bu izleme etkinliklerin oluşturup izlemeleri çalışmanın mantıksal birimler halinde gruplandırmak kullanıcı sağlar. Aktarımları (içinde aynı uç noktası) ile etkinlikleri ve yayma (uç noktalar genelinde) ilişkilendirmek mümkündür. Bu örnekte, hem istemci hem de hizmet için izlemeyi etkinleştirilir. İstemci ve hizmet yapılandırma dosyalarında izlemenin nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [izleme ve ileti günlüğe kaydetme](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -90,11 +90,11 @@ Bu örnek, kullanıcı tanımlı etkinlik izlemeleri istemci ve hizmet kodu yaza
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

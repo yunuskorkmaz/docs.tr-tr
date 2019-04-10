@@ -2,12 +2,12 @@
 title: Bir Web tarayıcısından hizmete erişme (WCF Veri Hizmetleri Hızlı Başlangıç)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 15a74e47774c532e75eca8a60a1af3a3e4f03f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591649"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330330"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Bir Web tarayıcısından hizmete erişme (WCF Veri Hizmetleri Hızlı Başlangıç)
 
@@ -18,16 +18,16 @@ Bu, WCF Veri Hizmetleri hızlı başlangıç ikinci görevdir. Bu görevde, Visu
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Internet Explorer'ı kullanarak varsayılan hizmet belgesi istemek için
 
-1.  Internet Explorer'da gelen **Araçları** menüsünde **Internet Seçenekleri**, tıklayın **içerik** sekmesinde **ayarları**, temizleyin **Akış görüntülenirken kapatma**.
+1. Internet Explorer'da gelen **Araçları** menüsünde **Internet Seçenekleri**, tıklayın **içerik** sekmesinde **ayarları**, temizleyin **Akış görüntülenirken kapatma**.
 
      Bu, okuma akışı devre dışı bırakıldığından emin sağlar. Bu işlev devre dışı bırakabilirim, Web tarayıcısı akışı ham XML verileri yerine XML olarak döndürülen AtomPub kodlanmış belge değerlendirir.
 
     > [!NOTE]
     > Ham XML verileri olarak akışa tarayıcınızın görüntüleyemiyorsanız yine de sayfası için kaynak kodu olarak akış görüntüleyebilir olmalıdır.
 
-2.  Visual Studio'da **F5** anahtar uygulamada hata ayıklamaya başlayın.
+2. Visual Studio'da **F5** anahtar uygulamada hata ayıklamaya başlayın.
 
-3.  Yerel bilgisayarda Web tarayıcısını açın. Adres çubuğunda, aşağıdaki URI girin:
+3. Yerel bilgisayarda Web tarayıcısını açın. Adres çubuğunda, aşağıdaki URI girin:
 
     ```
     http://localhost:12345/northwind.svc
@@ -37,7 +37,7 @@ Bu, WCF Veri Hizmetleri hızlı başlangıç ikinci görevdir. Bu görevde, Visu
 
 ## <a name="to-access-entity-set-resources-from-a-web-browser"></a>Varlık erişmek için bir Web tarayıcısından kaynakları ayarlayın
 
-1.  Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
+1. Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
 
     ```
     http://localhost:12345/northwind.svc/Customers
@@ -45,7 +45,7 @@ Bu, WCF Veri Hizmetleri hızlı başlangıç ikinci görevdir. Bu görevde, Visu
 
      Bu, Northwind örnek veritabanındaki tüm müşteriler bir dizi döndürür.
 
-2.  Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
+2. Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')
@@ -53,7 +53,7 @@ Bu, WCF Veri Hizmetleri hızlı başlangıç ikinci görevdir. Bu görevde, Visu
 
      Belirli bir müşteri için bu varlık örneğini döndürür `ALFKI`.
 
-3.  Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
+3. Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
@@ -61,7 +61,7 @@ Bu, WCF Veri Hizmetleri hızlı başlangıç ikinci görevdir. Bu görevde, Visu
 
      Bu müşteriler ve siparişler bir dizi belirli bir müşteri için tüm siparişleri döndürmek için arasındaki ilişkiyi erişir `ALFKI`.
 
-4.  Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
+4. Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643

@@ -2,12 +2,12 @@
 title: XMLSerializer Örneği
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: eb422e937eb0aeffbaa1ec4288001c5bdb2bdda6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 70c6eb07780296672d663c7d5b9259192b189aad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088645"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330551"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
 Bu örnek ile uyumlu olan türler seri hale getrime ve yapmayı gösteren <xref:System.Xml.Serialization.XmlSerializer>. Windows Communication Foundation (WCF) varsayılan biçimlendiricidir <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı seri hale getirmek ve seri halinden dağıtmak için kullanılabilir olduğunda türleri <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz. XML üzerinde kesin denetim gibi - gerektiğinde bir XML özniteliği ve bir XML öğesi bir veri parçasını olması gerekiyorsa genellikle böyledir. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak olmayan WCF hizmetleri için istemci oluşturulurken seçilir.  
@@ -119,11 +119,11 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

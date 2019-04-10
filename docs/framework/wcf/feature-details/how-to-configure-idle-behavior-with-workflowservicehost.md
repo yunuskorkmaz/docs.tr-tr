@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a676f03b4e6f9dd210b843a6f3bf00c735889500
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164027"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330161"
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile Boşta Davranışı Yapılandırma
 İş akışı örneği kullanarak teslim edilecek bir ileti için beklediği sırada örneğin dış bazı stimulus tarafından sürdürülmesini bir yer işareti karşılaştıkları olduğunda iş akışları boş Git bir <xref:System.ServiceModel.Activities.Receive> etkinlik. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> bir hizmet örneği boşta gittiğinde arasında ve örneği kalıcı ya da kaldırıldığında zaman belirtmenizi sağlar bir davranıştır. Bu, bu zaman aralıkları ayarlamanıza olanak tanır, iki özellik içerir. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> bir iş akışı hizmet örneği boşta gittiğinde ve ne zaman iş akışı hizmet örneği kalıcıdır arasındaki zaman aralığını belirtir. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> İş akışı hizmet örneği kaldırıldığında, burada kaldırma örnek deposuna örneği kalıcı ve bellekten kaldırılıyor anlamına gelir ve ne zaman bir iş akışı hizmet örneği arasındaki zaman aralığını boşta giden belirtir. Bu konu nasıl yapılandırılacağını açıklar <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> bir yapılandırma dosyası.  
   
 ### <a name="to-configure-workflowidlebehavior"></a>WorkflowIdleBehavior yapılandırmak için  
   
-1.  Ekleme bir <`workflowIdle`> öğesi <`behavior`> öğesi içinde <`serviceBehaviors`> Aşağıdaki örnekte gösterildiği gibi bir öğe.  
+1. Ekleme bir <`workflowIdle`> öğesi <`behavior`> öğesi içinde <`serviceBehaviors`> Aşağıdaki örnekte gösterildiği gibi bir öğe.  
   
     ```xml  
     <behaviors>  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 4aca6e9c20dbce7aa8a94067c96fcf44329a6fe4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332397"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 Bunlar kullanılmadan önce değişkenleri bildirilmedikçe derleyici hatalarını raporlamak için neden olur.  
@@ -34,11 +34,11 @@ Bunlar kullanılmadan önce değişkenleri bildirilmedikçe derleyici hataların
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>-Optionexplicit Visual Studio IDE'de ayarlamak için  
   
-1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.   
+1. Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.   
   
-2.  Tıklayın **derleme** sekmesi.  
+2. Tıklayın **derleme** sekmesi.  
   
-3.  Değer değiştirme **Option Explicit** kutusu.  
+3. Değer değiştirme **Option Explicit** kutusu.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod zaman derler `-optionexplicit-` kullanılır.  
@@ -47,7 +47,7 @@ Bunlar kullanılmadan önce değişkenleri bildirilmedikçe derleyici hataların
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Komut Satırı Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)

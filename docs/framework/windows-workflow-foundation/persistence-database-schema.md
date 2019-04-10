@@ -1,15 +1,15 @@
 ---
-title: Kalıcılık veritabanı şeması
+title: Kalıcılık Veritabanı Şeması
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 2c8d74413be64cdf88f7f1821c3678b2bcd2e2b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 38df4b3d629840f1b5def2eafa0d074a2b2397a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515264"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331071"
 ---
-# <a name="persistence-database-schema"></a>Kalıcılık veritabanı şeması
+# <a name="persistence-database-schema"></a>Kalıcılık Veritabanı Şeması
 Bu konuda, SQL iş akışı örneği Store tarafından desteklenen ortak görünümler açıklanmaktadır.  
   
 ## <a name="instances-view"></a>Örnekleri görüntüle  
@@ -30,7 +30,7 @@ Bu konuda, SQL iş akışı örneği Store tarafından desteklenen ortak görün
 |ExecutionStatus|Nvarchar(450)|İş akışının geçerli yürütme durumunu gösterir. Olası durumlar şunlardır **Executing**, **boşta**, **kapalı**.|  
 |Isınitialized|Bit|İş akışı örneği başlatılmış olup olmadığını gösterir. Başlatılan iş akışı örneği en az bir kez kalıcı bir iş akışı örneği ' dir.|  
 |IsSuspended|Bit|İş akışı örneği askıya olup olmadığını gösterir.|  
-|IsCompleted|Bit|İş akışı örneği yürütmesini bitirene olup olmadığını gösterir. **Not:** IIf **InstanceCompletionAction** özelliği **DeleteAll**, örnekleri tamamlandıktan sonra görünümünden kaldırılır.|  
+|IsCompleted|Bit|İş akışı örneği yürütmesini bitirene olup olmadığını gösterir. **Not:**  IIf **InstanceCompletionAction** özelliği **DeleteAll**, örnekleri tamamlandıktan sonra görünümünden kaldırılır.|  
 |EncodingOption|Mini tamsayı|Veri özellikleri serileştirmek için kullanılan kodlama açıklar.<br /><br /> -0 – hiçbir kodlama<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|VARBINARY(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı sağlanan serileştirilmiş bir örnek veri özelliklerini içerir.<br /><br /> Özel bütünleştirilmiş kod yok blob serisini kaldırmak için gerekli olup olmadığını anlamına gelir. yerel bir CLR türü her temel özelliğidir.|  
 |WriteOnlyPrimitiveDataProperties|VARBINARY(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı için sağlanan değil serileştirilmiş bir örnek veri özelliklerini içerir.<br /><br /> Özel bütünleştirilmiş kod yok blob serisini kaldırmak için gerekli olup olmadığını anlamına gelir. yerel bir CLR türü her temel özelliğidir.|  
@@ -38,9 +38,9 @@ Bu konuda, SQL iş akışı örneği Store tarafından desteklenen ortak görün
 |WriteOnlyComplexDataProperties|VARBINARY(max)|Örnek yüklendiğinde, geri iş akışı çalışma zamanı için sağlanan değil serileştirilmiş bir örnek veri özelliklerini içerir.<br /><br /> Bir seri durumdan çıkarıcı bu blobu'nda depolanan tüm nesne türlerinin bilgi gerektirir.|  
 |IdentityName|nvarchar(max)|İş akışı tanımının adı.|  
 |IdentityPackage|nvarchar(max)|İş akışı (derleme adı gibi) oluşturulduğunda verilen paket bilgileri.|  
-|Derleme|BigInt|İş akışı sürümünün derleme numarası.|  
-|Büyük|BigInt|İş akışı sürümü ana sayısı.|  
-|Küçük|BigInt|İş akışı sürümü küçük sayısı.|  
+|Yapı|BigInt|İş akışı sürümünün derleme numarası.|  
+|Ana|BigInt|İş akışı sürümü ana sayısı.|  
+|İkincil|BigInt|İş akışı sürümü küçük sayısı.|  
 |Gözden geçirme|BigInt|İş akışı sürümünün düzeltme numarası.|  
   
 > [!CAUTION]
@@ -60,9 +60,9 @@ Bu konuda, SQL iş akışı örneği Store tarafından desteklenen ortak görün
   
  ServiceDeployments görünüm de Delete tetikleyicisi içeriyor. Uygun izinlere sahip kullanıcılar delete deyimleri ServiceDeployment girişler veritabanından kaldırmak için bu görünümü karşı çalıştırabilirsiniz. Aşağıdakilere dikkat edin:  
   
-1.  Tüm veritabanını, bu işlemi gerçekleştirmeden önce kilitlenmelidir olduğundan, bu görünümden girdileri silme maliyetlidir. Bu, bir iş akışı örneği var olmayan ServiceDeployment girişe burada başvurabileceğiniz senaryo önlemek gereklidir. Kapalı kaldıkları süreleri sırasında yalnızca bu görünümden silme / bakım pencereleri.  
+1. Tüm veritabanını, bu işlemi gerçekleştirmeden önce kilitlenmelidir olduğundan, bu görünümden girdileri silme maliyetlidir. Bu, bir iş akışı örneği var olmayan ServiceDeployment girişe burada başvurabileceğiniz senaryo önlemek gereklidir. Kapalı kaldıkları süreleri sırasında yalnızca bu görünümden silme / bakım pencereleri.  
   
-2.  Tüm girdiler tarafından başvuruluyor bir ServiceDeployment satır silme girişiminde **örnekleri** görünüm yok op neden olur. Yalnızca sıfır başvuruları ServiceDeployment satırlarla silebilirsiniz.  
+2. Tüm girdiler tarafından başvuruluyor bir ServiceDeployment satır silme girişiminde **örnekleri** görünüm yok op neden olur. Yalnızca sıfır başvuruları ServiceDeployment satırlarla silebilirsiniz.  
   
 ## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties görüntüle  
  **InstancePromotedProperties** görünümü kullanıcı tarafından belirtilen yükseltilen özellikleri için bilgiler içerir. Yükseltilen özellik sorgularda örnekleri almak için kullanabileceğiniz bir kullanıcı bir birinci sınıf özellik olarak işlev görür.  Örneğin, bir kullanıcı her zaman sırayla maliyetini depolayan bir PurchaseOrder promosyon ekleyebilirsiniz **Value1** sütun. Bu kullanıcı için tüm satın alma siparişleri maliyeti belirli bir değere aştığı için sorgu etkinleştirir.  

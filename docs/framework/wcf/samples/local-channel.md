@@ -2,12 +2,12 @@
 title: Yerel Kanal
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
-ms.openlocfilehash: 731fcfde52a6b1277551f7d70f795c721fc99dd8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1711909ada4756dd2723f62160eef0ad12c03174
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002716"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333229"
 ---
 # <a name="local-channel"></a>Yerel Kanal
 Yerel kanal aynı uygulama etki alanı içinde iletişim kurmak için kullanılan bir Windows Communication Foundation (WCF) aktarım kanalıdır. Burada aynı uygulama etki alanında çalışan istemci ve hizmet ve ek yükü tipik WCF kanalı yığınının (seri hale getirme ve seri durumundan çıkarma iletilerinin) kaçınılmalıdır senaryoları için kullanışlıdır.  
@@ -18,7 +18,7 @@ Yerel kanal aynı uygulama etki alanı içinde iletişim kurmak için kullanıla
 ## <a name="discussion"></a>Tartışma  
  Örnek, iki proje dosyaları içerir:  
   
--   **LocalChannel**: geçerli uygulama etki alanı içinde yerel kanal programlı temsili. Bu projede gönderen bileşeni bellek içi kuyruğu ileti yerleştirir ve alıcı bileşen alması iletiyi kuyruktan.  
+-   **LocalChannel**: Yerel kanal geçerli uygulama etki alanı içinde programlı gösterimi. Bu projede gönderen bileşeni bellek içi kuyruğu ileti yerleştirir ve alıcı bileşen alması iletiyi kuyruktan.  
   
 -   **ClientAndService**: Bu proje bir hizmeti bir konsol uygulamasında barındırır ve aynı uygulama etki alanı içinde hizmetini çağırmak için bir istemci çalıştırır.  
   
@@ -26,9 +26,9 @@ Yerel kanal aynı uygulama etki alanı içinde iletişim kurmak için kullanıla
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Derleme ve LocalChannel çözümü çalıştırın.  
+1. Derleme ve LocalChannel çözümü çalıştırın.  
   
-2.  Hizmet ana bilgisayarı başlatılır ve istemcinin yerel kanal'ı kullanarak hizmeti çağırır. Hizmet arama sonuçlarını görüntülemek için bir konsol penceresi görünür.  
+2. Hizmet ana bilgisayarı başlatılır ve istemcinin yerel kanal'ı kullanarak hizmeti çağırır. Hizmet arama sonuçlarını görüntülemek için bir konsol penceresi görünür.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

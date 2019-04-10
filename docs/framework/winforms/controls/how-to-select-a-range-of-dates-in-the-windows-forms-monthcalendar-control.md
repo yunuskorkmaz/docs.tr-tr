@@ -11,19 +11,19 @@ helpviewer_keywords:
 - calendars [Windows Forms], selecting date range
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-ms.openlocfilehash: 0e032a6285c43d7e96c7d59444da6d6598bd8100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 82d0499cb40f79a3110b8432fbee66774bcc14a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129954"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332241"
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Nasıl yapılır: Windows Forms MonthCalendar Denetiminde Tarih Aralığı Seçme
 Windows Forms ve önemli bir özelliği <xref:System.Windows.Forms.MonthCalendar> denetimi, kullanıcının bir tarih aralığını seçebilirsiniz. Bu özellik bir geliştirme Tarih Seçimi özelliğidir <xref:System.Windows.Forms.DateTimePicker> denetimi, yalnızca tek bir tarih/saat değeri seçmesini sağlar. Tarih aralığı ayarlayın veya alın özelliklerini kullanarak kullanıcı tarafından ayarlanan bir seçim aralığını <xref:System.Windows.Forms.MonthCalendar> denetimi. Aşağıdaki kod örneği, bir seçim aralığını ayarlamak gösterilmektedir.  
   
 ### <a name="to-select-a-range-of-dates"></a>Tarih aralığı seçin  
   
-1.  Oluşturma <xref:System.DateTime> bir aralıktaki ilk ve son tarihleri temsil eden nesneleri.  
+1. Oluşturma <xref:System.DateTime> bir aralıktaki ilk ve son tarihleri temsil eden nesneleri.  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -40,7 +40,7 @@ Windows Forms ve önemli bir özelliği <xref:System.Windows.Forms.MonthCalendar
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2.  Ayarlama <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> özelliği.  
+2. Ayarlama <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> özelliği.  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  

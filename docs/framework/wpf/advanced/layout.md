@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231129"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330499"
 ---
 # <a name="layout"></a>Düzen
 Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] düzen sistemi. Düzen hesaplamalar nasıl ve ne zaman ortaya anlamak, kullanıcı arabirimi oluşturmak için gerekli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -64,17 +64,17 @@ Bu konu başlığı altında açıklanır [!INCLUDE[TLA#tla_winclient](../../../
   
  Her bir alt <xref:System.Windows.UIElement> konumunu değiştirir. yeni bir düzen sistemi geçişi tetikleme olasılığına sahiptir. Bu nedenle, gereksiz çağırma olarak düzen sistemi çağırabilirsiniz olayları kötü uygulama performansı artırabilir anlamak önemlidir. Düzen sistemi çağrıldığında oluşan süreci açıklanmaktadır.  
   
-1.  Bir alt <xref:System.Windows.UIElement> çekirdek özellikleri sağlayarak düzen işlemine başlar.  
+1. Bir alt <xref:System.Windows.UIElement> çekirdek özellikleri sağlayarak düzen işlemine başlar.  
   
-2.  Tanımlanan özelliklerini boyutlandırma <xref:System.Windows.FrameworkElement> , aşağıdaki gibi değerlendirilir <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, ve <xref:System.Windows.FrameworkElement.Margin%2A>.  
+2. Tanımlanan özelliklerini boyutlandırma <xref:System.Windows.FrameworkElement> , aşağıdaki gibi değerlendirilir <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, ve <xref:System.Windows.FrameworkElement.Margin%2A>.  
   
-3.  <xref:System.Windows.Controls.Panel>-belirli bir mantıksal uygulandığı gibi <xref:System.Windows.Controls.Dock> yönünü veya yığın <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
+3. <xref:System.Windows.Controls.Panel>-belirli bir mantıksal uygulandığı gibi <xref:System.Windows.Controls.Dock> yönünü veya yığın <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
   
-4.  Tüm alt ölçüldükten sonra içeriği yerleştirilmiştir.  
+4. Tüm alt ölçüldükten sonra içeriği yerleştirilmiştir.  
   
-5.  <xref:System.Windows.Controls.Panel.Children%2A> Koleksiyonu, ekranda çizilir.  
+5. <xref:System.Windows.Controls.Panel.Children%2A> Koleksiyonu, ekranda çizilir.  
   
-6.  İşlemi yeniden ek oluşursa çağrılır <xref:System.Windows.Controls.Panel.Children%2A> koleksiyona eklenen bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A> uygulanan veya <xref:System.Windows.UIElement.UpdateLayout%2A> yöntemi çağrılır.  
+6. İşlemi yeniden ek oluşursa çağrılır <xref:System.Windows.Controls.Panel.Children%2A> koleksiyona eklenen bir <xref:System.Windows.FrameworkElement.LayoutTransform%2A> uygulanan veya <xref:System.Windows.UIElement.UpdateLayout%2A> yöntemi çağrılır.  
   
  Bu işlem ve nasıl çağrılır, aşağıdaki bölümlerde daha ayrıntılı tanımlanır.  
   

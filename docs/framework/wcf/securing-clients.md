@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135791"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331812"
 ---
 # <a name="securing-clients"></a>İstemcileri Güvenli Hale Getirme
 Windows Communication Foundation (WCF) hizmet istemciler için güvenlik gereksinimlerini belirler. Diğer bir deyişle, hizmeti kullanmak için hangi güvenlik modunu belirtir ve istemci bir kimlik bilgisi olup olmadığına sağlamalıdır. Bir istemciyi, bu nedenle, güvenli hale getirme işlem basittir: (yayımlanıyorsa) hizmetinden alınan meta verileri kullanın ve bir istemci oluşturun. Meta veriler istemci yapılandırma belirler. Hizmet istemci kimlik bilgileri sağlamanız gerekiyorsa, gereksinime uyan bir kimlik bilgisini edinmeniz gerekir. Bu konu başlığı altında daha ayrıntılı ele alınmaktadır. Güvenli bir hizmet oluşturma hakkında daha fazla bilgi için bkz. [Hizmetleri güvenli hale getirme](../../../docs/framework/wcf/securing-services.md).  
@@ -33,9 +33,9 @@ Windows Communication Foundation (WCF) hizmet istemciler için güvenlik gereksi
 ## <a name="setting-a-client-credential"></a>İstemci kimlik bilgilerini ayarlama  
  Bir istemcide istemci kimlik bilgilerini ayarlama, iki adımdan oluşur:  
   
-1.  Belirlemek *istemci kimlik bilgisi türü* sağlayan bir hizmettir. Bu iki yöntemden biri tarafından gerçekleştirilir. İlk olarak, hizmet Oluşturucusu belgelerinden varsa, bu istemci kimlik bilgilerini belirtmelisiniz hizmeti türü (varsa) gerektirir. İkinci olarak, yalnızca Svcutil.exe araç tarafından oluşturulan bir yapılandırma dosyası varsa, hangi kimlik bilgisi türü gerekli olduğunu belirlemek için tek tek bağlamaları inceleyebilirsiniz.  
+1. Belirlemek *istemci kimlik bilgisi türü* sağlayan bir hizmettir. Bu iki yöntemden biri tarafından gerçekleştirilir. İlk olarak, hizmet Oluşturucusu belgelerinden varsa, bu istemci kimlik bilgilerini belirtmelisiniz hizmeti türü (varsa) gerektirir. İkinci olarak, yalnızca Svcutil.exe araç tarafından oluşturulan bir yapılandırma dosyası varsa, hangi kimlik bilgisi türü gerekli olduğunu belirlemek için tek tek bağlamaları inceleyebilirsiniz.  
   
-2.  Bir gerçek istemci kimlik bilgilerini belirtin. Gerçek istemci kimlik bilgisi adı verilen bir *istemci kimlik bilgisi değeri* türünden ayırmak için. Örneğin, bir sertifika istemci kimlik bilgileri türünü belirten bir sertifika yetkilisi tarafından hizmet verilen X.509 sertifikası sağlamanız gerekir güvenleri.  
+2. Bir gerçek istemci kimlik bilgilerini belirtin. Gerçek istemci kimlik bilgisi adı verilen bir *istemci kimlik bilgisi değeri* türünden ayırmak için. Örneğin, bir sertifika istemci kimlik bilgileri türünü belirten bir sertifika yetkilisi tarafından hizmet verilen X.509 sertifikası sağlamanız gerekir güvenleri.  
   
 ### <a name="determining-the-client-credential-type"></a>İstemci kimlik bilgileri türünü belirleme  
  Oluşturulan Svcutil.exe aracını dosya, inceleyin yapılandırma varsa [ \<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) hangi istemci kimlik bilgisi türü gerekip gerekmediğini bölümü. Bölüm içinde güvenlik gereksinimlerini belirtin bağlama öğeleridir. Özellikle, inceleyin \<Güvenlik > her bağlama öğesi. Bu öğe içeren `mode` özniteliği üç değerlerden birine ayarlayın (`Message`, `Transport`, veya `TransportWithMessageCredential`). Öznitelik değeri modu belirler ve alt öğeleri önemli olduğu modu belirler.  

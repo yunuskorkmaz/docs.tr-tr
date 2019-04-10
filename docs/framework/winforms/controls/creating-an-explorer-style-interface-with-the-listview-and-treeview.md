@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 21a3f7f687f72fe6e73b5d2420675634ff834d2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117994"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332124"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>İzlenecek yol: Tasarımcıyı Kullanarak ListView ve TreeView Denetimleri ile Gezgin Stilinde bir Arabirim Oluşturma
 Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünümlü Windows Forms uygulamaları oluşturmak için olanağıdır. Sık karşılaşılan bir senaryodur ile bir kullanıcı arabirimi (UI) oluşturma <xref:System.Windows.Forms.ListView> ve <xref:System.Windows.Forms.TreeView> Windows işletim sistemlerinin Windows Explorer özelliğine benzer kontrol eder. Windows Gezgini, bir kullanıcının bilgisayarında dosyaları ve klasörleri hiyerarşik yapısını görüntüler.  
@@ -28,27 +28,27 @@ Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünüml
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Bir ListView ve TreeView denetimi içeren form oluşturma  
   
-1.  Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.  
+1. Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.  
   
-2.  İçinde **yeni proje** iletişim kutusunda, aşağıdakileri yapın:  
+2. İçinde **yeni proje** iletişim kutusunda, aşağıdakileri yapın:  
   
     1.  Kategorilerde seçin ya da **Visual Basic** veya **Visual C#**.  
   
     2.  Şablonlar listesinde seçin **Windows Forms uygulaması**.  
   
-3.  **Tamam**'ı tıklatın. Yeni bir Windows Forms projesi oluşturulur.  
+3. **Tamam**'ı tıklatın. Yeni bir Windows Forms projesi oluşturulur.  
   
-4.  Ekleme bir <xref:System.Windows.Forms.SplitContainer> forma denetim ve ayarlayın, <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
+4. Ekleme bir <xref:System.Windows.Forms.SplitContainer> forma denetim ve ayarlayın, <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-5.  Ekleme bir <xref:System.Windows.Forms.ImageList> adlı `imageList1` form ve iki görüntü eklemek için Özellikler penceresini kullanabilirsiniz: bir klasör görüntüsü ve o sırada bir belge görüntüsü.  
+5. Ekleme bir <xref:System.Windows.Forms.ImageList> adlı `imageList1` form ve iki görüntü eklemek için Özellikler penceresini kullanabilirsiniz: bir klasör görüntüsü ve o sırada bir belge görüntüsü.  
   
-6.  Ekleme bir <xref:System.Windows.Forms.TreeView> adlı Denetim `treeview1` forma ve sol tarafında konumlandırın <xref:System.Windows.Forms.SplitContainer> denetimi. Özellikler penceresinde `treeView1` aşağıdakileri yapın:  
+6. Ekleme bir <xref:System.Windows.Forms.TreeView> adlı Denetim `treeview1` forma ve sol tarafında konumlandırın <xref:System.Windows.Forms.SplitContainer> denetimi. Özellikler penceresinde `treeView1` aşağıdakileri yapın:  
   
     1.  Ayarlama <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
   
     2.  Ayarlama <xref:System.Windows.Forms.TreeView.ImageList%2A> özelliği `imagelist1.`  
   
-7.  Ekleme bir <xref:System.Windows.Forms.ListView> adlı Denetim `listView1` forma ve sağ tarafında konumlandırın <xref:System.Windows.Forms.SplitContainer> denetimi. Özellikler penceresinde `listview1` aşağıdakileri yapın:  
+7. Ekleme bir <xref:System.Windows.Forms.ListView> adlı Denetim `listView1` forma ve sağ tarafında konumlandırın <xref:System.Windows.Forms.SplitContainer> denetimi. Özellikler penceresinde `listview1` aşağıdakileri yapın:  
   
     1.  Ayarlama <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
   
@@ -58,7 +58,7 @@ Visual Studio'nun avantajlarından biri kısa bir süre, profesyonel görünüml
   
     4.  Ayarlama <xref:System.Windows.Forms.ListView.SmallImageList%2A> özelliği `imageList1.`  
   
-8.  Doldurmak için kodu Uygula <xref:System.Windows.Forms.TreeView> düğümleri ve alt düğümleri. Bu kodu ekleyin `Form1` sınıfı.  
+8. Doldurmak için kodu Uygula <xref:System.Windows.Forms.TreeView> düğümleri ve alt düğümleri. Bu kodu ekleyin `Form1` sınıfı.  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  

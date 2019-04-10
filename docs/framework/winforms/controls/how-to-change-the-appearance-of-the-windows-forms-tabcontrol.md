@@ -11,35 +11,35 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: c84ce67225b70933e65b8f88da1eaef6b1f3de99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133139"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331344"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Nasıl yapılır: Windows Forms TabControl Görünümünü Değiştirme
 Özelliklerini kullanarak Windows Forms'da sekme görünümünü değiştirebilirsiniz <xref:System.Windows.Forms.TabControl> ve <xref:System.Windows.Forms.TabPage> ayrı sekmeler denetimi oluşturan nesneleri. Bu özellikleri ayarlayarak sekmelerinde görüntüler, sekme dikey yerine yatay olarak görüntüler, sekme, birden çok satır görüntüleme ve etkinleştirebilir veya sekmeleri program aracılığıyla devre dışı bırakın.  
   
 ### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a>Sekmenin etiketi parçası üzerinde bir simge görüntülemek için  
   
-1.  Ekleme bir <xref:System.Windows.Forms.ImageList> forma.  
+1. Ekleme bir <xref:System.Windows.Forms.ImageList> forma.  
   
-2.  Görüntüleri görüntü listesine ekleyin.  
+2. Görüntüleri görüntü listesine ekleyin.  
   
      Görüntü listeleri hakkında daha fazla bilgi için bkz: [ImageList bileşeni](imagelist-component-windows-forms.md) ve [nasıl yapılır: Ekle veya Kaldır görüntülerle Windows Forms ImageList bileşeni](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
-3.  Ayarlama <xref:System.Windows.Forms.TabControl.ImageList%2A> özelliği <xref:System.Windows.Forms.TabControl> için <xref:System.Windows.Forms.ImageList> denetimi.  
+3. Ayarlama <xref:System.Windows.Forms.TabControl.ImageList%2A> özelliği <xref:System.Windows.Forms.TabControl> için <xref:System.Windows.Forms.ImageList> denetimi.  
   
-4.  Ayarlama <xref:System.Windows.Forms.TabPage.ImageIndex%2A> özelliği <xref:System.Windows.Forms.TabPage> dizine listede uygun görüntü.  
+4. Ayarlama <xref:System.Windows.Forms.TabPage.ImageIndex%2A> özelliği <xref:System.Windows.Forms.TabPage> dizine listede uygun görüntü.  
   
 ### <a name="to-create-multiple-rows-of-tabs"></a>Sekmelerin çoklu satırları oluşturmak için  
   
-1.  Sekme sayfaları, istediğiniz sayıda ekleyin.  
+1. Sekme sayfaları, istediğiniz sayıda ekleyin.  
   
-2.  Ayarlama <xref:System.Windows.Forms.TabControl.Multiline%2A> özelliği <xref:System.Windows.Forms.TabControl> için `true`.  
+2. Ayarlama <xref:System.Windows.Forms.TabControl.Multiline%2A> özelliği <xref:System.Windows.Forms.TabControl> için `true`.  
   
-3.  Sekmeleri birden çok satır içinde gösterilmezse ayarlamak <xref:System.Windows.Forms.Control.Width%2A> özelliği <xref:System.Windows.Forms.TabControl> tüm sekmeler dar olacak.  
+3. Sekmeleri birden çok satır içinde gösterilmezse ayarlamak <xref:System.Windows.Forms.Control.Width%2A> özelliği <xref:System.Windows.Forms.TabControl> tüm sekmeler dar olacak.  
   
 ### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>Denetim kenarındaki sekmelerin düzenlemek için  
   
@@ -47,7 +47,7 @@ ms.locfileid: "59133139"
   
 ### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>Program aracılığıyla etkinleştirme veya bir sekme üzerindeki bütün denetimleri devre dışı  
   
-1.  Ayarlama <xref:System.Windows.Forms.TabPage.Enabled%2A> özelliği <xref:System.Windows.Forms.TabPage> için `true` veya `false`.  
+1. Ayarlama <xref:System.Windows.Forms.TabPage.Enabled%2A> özelliği <xref:System.Windows.Forms.TabPage> için `true` veya `false`.  
   
     ```vb  
     TabPage1.Enabled = False  

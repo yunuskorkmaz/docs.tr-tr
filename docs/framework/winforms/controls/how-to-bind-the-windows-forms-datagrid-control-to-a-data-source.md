@@ -14,12 +14,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 80edd3718195fa3c47f7073136031cbddb13168b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176689"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332579"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "59176689"
   
 ### <a name="to-data-bind-the-datagrid-control-programmatically"></a>DataGrid denetimi program aracılığıyla veri-bağlamak için  
   
-1.  DataSet'i doldurmak için kod yazın.  
+1. DataSet'i doldurmak için kod yazın.  
   
      Veri kaynağı bir veri kümesi veya bir veri kümesi tabloyu temel alan bir veri görünümü, forma DataSet'i doldurmak için kod ekleyin.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59176689"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  Çağrı <xref:System.Windows.Forms.DataGrid> denetimin <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi, veri kaynağı ve veri üyesi geçirme. Veri üyesi açıkça geçirebilirsiniz ihtiyacınız yoksa boş bir dize geçirin.  
+2. Çağrı <xref:System.Windows.Forms.DataGrid> denetimin <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi, veri kaynağı ve veri üyesi geçirme. Veri üyesi açıkça geçirebilirsiniz ihtiyacınız yoksa boş bir dize geçirin.  
   
     > [!NOTE]
     >  Kılavuzun ilk kez bağlanıyorsanız, denetimin ayarlayabilirsiniz <xref:System.Windows.Forms.DataGrid.DataSource%2A> ve <xref:System.Windows.Forms.DataGrid.DataMember%2A> özellikleri. Ancak, ayarlandıktan sonra bu özellikleri sıfırlayamazsınız. Bu nedenle, her zaman kullanmanız önerilir <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi.  
@@ -101,7 +101,7 @@ ms.locfileid: "59176689"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  (İsteğe bağlı) Sütun stillerini ve uygun tablo stilleri kılavuza ekleyin. Hiçbir tablo stilleri varsa, bir tablo görürsünüz ancak en az biçimlendirme ile tüm sütunlar görünür.  
+3. (İsteğe bağlı) Sütun stillerini ve uygun tablo stilleri kılavuza ekleyin. Hiçbir tablo stilleri varsa, bir tablo görürsünüz ancak en az biçimlendirme ile tüm sütunlar görünür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

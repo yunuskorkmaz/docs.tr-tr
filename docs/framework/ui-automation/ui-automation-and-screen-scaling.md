@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194077"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332703"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI Otomasyon ve Ekran Ölçeklendirme
 > [!NOTE]
@@ -58,14 +58,14 @@ ms.locfileid: "59194077"
   
  İki parça halinde çözümüdür.  
   
-1.  İlk olarak, istemci uygulaması olun [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-uyumlu. Bunu yapmak için [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevi `SetProcessDPIAware` başlangıçta. Yönetilen kodda aşağıdaki bildirimi bu işlev kullanılabilir hale getirir.  
+1. İlk olarak, istemci uygulaması olun [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-uyumlu. Bunu yapmak için [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevi `SetProcessDPIAware` başlangıçta. Yönetilen kodda aşağıdaki bildirimi bu işlev kullanılabilir hale getirir.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Bu işlev, tüm işlem DPI kullanan, işleme ait tüm windows ölçeklendirilmemiş olduğu anlamına haline getirir. İçinde [vurgulayıcısı ile ilgili örnek](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), vurgulama dikdörtgeni dört windows örneği için UI Otomasyon, mantıksal koordinatları elde fiziksel koordinatları konumunda bulunur. Örnek DPI kullanan değilse, vurgulama 96 DPI ortamında yanlış yerleştirme neden olacağından Masaüstü, mantıksal koordinatlarda çizilmiş.  
   
-2.  İmleç koordinatlarını edinmek için çağrı [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevi `GetPhysicalCursorPos`. Aşağıdaki örnek, bildirmek ve bu işlevi kullanmak gösterilmektedir.  
+2. İmleç koordinatlarını edinmek için çağrı [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] işlevi `GetPhysicalCursorPos`. Aşağıdaki örnek, bildirmek ve bu işlevi kullanmak gösterilmektedir.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  

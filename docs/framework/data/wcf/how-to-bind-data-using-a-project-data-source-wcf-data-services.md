@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f02c551c4382c9db03be2f4a0adbb9061fd4fe65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540760"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332514"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Nasıl yapılır: Proje veri kaynağı (WCF Veri Hizmetleri) kullanarak verileri bağlama
 
@@ -23,11 +23,11 @@ Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Bir WPF penceresinde proje veri kaynağı kullanma
 
-1.  Visual Studio'da bir WPF projesi Northwind verileri hizmeti bir başvuru ekleyin. Daha fazla bilgi için [nasıl yapılır: Bir veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1. Visual Studio'da bir WPF projesi Northwind verileri hizmeti bir başvuru ekleyin. Daha fazla bilgi için [nasıl yapılır: Bir veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
-2.  İçinde **veri kaynakları** penceresini genişletin `Customers` düğümünde **NorthwindEntities** proje veri kaynağı.
+2. İçinde **veri kaynakları** penceresini genişletin `Customers` düğümünde **NorthwindEntities** proje veri kaynağı.
 
-3.  Tıklayın **CustomerID** öğesi, select **ComboBox** listesi ve sürükleme **CustomerID** öğesini **müşteriler** düğümü Tasarımcı.
+3. Tıklayın **CustomerID** öğesi, select **ComboBox** listesi ve sürükleme **CustomerID** öğesini **müşteriler** düğümü Tasarımcı.
 
      Bu pencere için XAML dosyasında aşağıdaki nesne öğeleri oluşturur:
 
@@ -37,7 +37,7 @@ Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel
 
     -   A <xref:System.Windows.Controls.Label>.
 
-4.  Sürükleme **siparişler** tasarımcıya gezinme özelliği.
+4. Sürükleme **siparişler** tasarımcıya gezinme özelliği.
 
      Bu pencere için XAML dosyasında aşağıdaki ek nesne öğeleri oluşturur:
 
@@ -45,18 +45,18 @@ Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel
 
     -   Verilere bağlı <xref:System.Windows.Controls.DataGrid> adlı Denetim `ordersDataGrid`.
 
-5.  (İsteğe bağlı) Ek öğeleri sürükleyin **müşteriler** tasarımcıya düğümü.
+5. (İsteğe bağlı) Ek öğeleri sürükleyin **müşteriler** tasarımcıya düğümü.
 
-6.  Form için kod sayfasını açın ve aşağıdakileri ekleyin `using` deyimleri (`Imports` Visual Basic'te):
+6. Form için kod sayfasını açın ve aşağıdakileri ekleyin `using` deyimleri (`Imports` Visual Basic'te):
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
-7.  Form tanımlayan kısmi class içinde oluşturan aşağıdaki kodu ekleyin. bir <xref:System.Data.Objects.ObjectContext> tanımlar ve örnek `customerID` sabit.
+7. Form tanımlayan kısmi class içinde oluşturan aşağıdaki kodu ekleyin. bir <xref:System.Data.Objects.ObjectContext> tanımlar ve örnek `customerID` sabit.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
-8.  Tasarımcıda penceresi seçin.
+8. Tasarımcıda penceresi seçin.
 
     > [!NOTE]
     > Kendisi yerine seçme içinde pencerenin içerik pencere seçtiğinizden emin olun. Pencerenin seçtiyseniz **adı** metin kutusunun üstüne yakın bir yere **özellikleri** penceresini, pencerenin adını içermelidir.
@@ -76,9 +76,9 @@ Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel
 
 ## <a name="use-a-project-data-source-in-a-windows-form"></a>Bir Windows formda proje veri kaynağı kullanma
 
-1.  İçinde **veri kaynakları** penceresini genişletin **müşteriler** düğümünde **NorthwindEntities** proje veri kaynağı.
+1. İçinde **veri kaynakları** penceresini genişletin **müşteriler** düğümünde **NorthwindEntities** proje veri kaynağı.
 
-2.  Tıklayın **CustomerID** öğesi, select **ComboBox** listesi ve sürükleme **CustomerID** öğesini **müşteriler** düğümü Tasarımcı.
+2. Tıklayın **CustomerID** öğesi, select **ComboBox** listesi ve sürükleme **CustomerID** öğesini **müşteriler** düğümü Tasarımcı.
 
      Bu form aşağıdaki denetimleri oluşturur:
 
@@ -90,23 +90,23 @@ Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel
 
     -   A <xref:System.Windows.Forms.Label>.
 
-3.  Sürükleme **siparişler** forma gezinme özelliği.
+3. Sürükleme **siparişler** forma gezinme özelliği.
 
-4.  Bu oluşturur `ordersBindingSource` denetimini <xref:System.Windows.Forms.BindingSource.DataSource%2A> ayarlamak denetim özelliğini `customersBindingSource` ve <xref:System.Windows.Forms.BindingSource.DataMember%2A> özelliğini `Customers`. Ayrıca oluşturur `ordersDataGridView` formunda bir uygun şekilde başlıklı etiket denetimi tarafından eşlik veriye bağlı denetim.
+4. Bu oluşturur `ordersBindingSource` denetimini <xref:System.Windows.Forms.BindingSource.DataSource%2A> ayarlamak denetim özelliğini `customersBindingSource` ve <xref:System.Windows.Forms.BindingSource.DataMember%2A> özelliğini `Customers`. Ayrıca oluşturur `ordersDataGridView` formunda bir uygun şekilde başlıklı etiket denetimi tarafından eşlik veriye bağlı denetim.
 
-5.  (İsteğe bağlı) Ek öğeleri sürükleyin **müşteriler** tasarımcıya düğümü.
+5. (İsteğe bağlı) Ek öğeleri sürükleyin **müşteriler** tasarımcıya düğümü.
 
-6.  Form için kod sayfasını açın ve aşağıdakileri ekleyin `using` deyimleri (`Imports` Visual Basic'te):
+6. Form için kod sayfasını açın ve aşağıdakileri ekleyin `using` deyimleri (`Imports` Visual Basic'te):
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]
 
-7.  Form tanımlayan kısmi class içinde oluşturan aşağıdaki kodu ekleyin. bir <xref:System.Data.Objects.ObjectContext> tanımlar ve örnek `customerID` sabit.
+7. Form tanımlayan kısmi class içinde oluşturan aşağıdaki kodu ekleyin. bir <xref:System.Data.Objects.ObjectContext> tanımlar ve örnek `customerID` sabit.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]
 
-8.  Form Tasarımcısı'nda formu çift tıklatın.
+8. Form Tasarımcısı'nda formu çift tıklatın.
 
      Bu form için kod sayfası açılır ve işleyen yöntem oluşturur `Load` olayı.
 
@@ -120,4 +120,4 @@ Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Nasıl yapılır: Windows Presentation Foundation öğelerine veri bağlama](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [Nasıl yapılır: Windows Presentation Foundation Öğelerine Veri Bağlama](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99fa1fcb300d523d74a07da09e5a04848364607e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098838"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333177"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Nasıl yapılır: CodeDOM Kullanarak Sınıf Oluşturma
 Aşağıdaki yordamlar oluşturma ve iki alan, üç özellik, bir yöntem, bir oluşturucu ve bir giriş noktası içeren bir sınıf oluşturur bir CodeDOM grafiği derleme işlemini göstermektedir.  
   
-1.  CodeDOM kod, bir sınıfın kaynak kodu oluşturmak için kullanacağı bir konsol uygulaması oluşturun.  
+1. CodeDOM kod, bir sınıfın kaynak kodu oluşturmak için kullanacağı bir konsol uygulaması oluşturun.  
   
      Bu örnekte, adlı oluşturma sınıfı `Sample`, ve oluşturulan kodun adlı bir sınıf `CodeDOMCreatedClass` SampleCode adındaki bir dosyaya.  
   
-2.  Oluşturma sınıfı, CodeDOM grafiğini başlatmak ve üyeleri oluşturucusu ve giriş noktası tanımlamak için CodeDOM yöntemleri kullanın (`Main` yöntemi) oluşturulan sınıfın.  
+2. Oluşturma sınıfı, CodeDOM grafiğini başlatmak ve üyeleri oluşturucusu ve giriş noktası tanımlamak için CodeDOM yöntemleri kullanın (`Main` yöntemi) oluşturulan sınıfın.  
   
      Bu örnekte, oluşturulan sınıfın sahip iki, üç özellik, bir oluşturucu, bir yöntem ve bir `Main` yöntemi.  
   
-3.  Oluşturma, sınıf, bir dile özel kod sağlayıcısını oluşturup çağrısı kendi <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> grafikten kodunu oluşturmak için yöntemi.  
+3. Oluşturma, sınıf, bir dile özel kod sağlayıcısını oluşturup çağrısı kendi <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> grafikten kodunu oluşturmak için yöntemi.  
   
-4.  Derleme ve kod oluşturmak için uygulamadan yürütün.  
+4. Derleme ve kod oluşturmak için uygulamadan yürütün.  
   
      Bu örnekte, oluşturulan kod SampleCode adındaki bir dosyada ' dir. Derlemek ve örnek çıktıyı görmek için bu kodu yürütün.  
   
@@ -87,12 +87,12 @@ Aşağıdaki yordamlar oluşturma ve iki alan, üç özellik, bir yöntem, bir o
   
 ### <a name="to-create-the-graph-and-generate-the-code"></a>Bir grafik oluşturun ve kod oluşturmak için  
   
-1.  İçin önceki adımlarda oluşturulan yöntemler `Main` ilk adımda tanımlanan yöntemi.  
+1. İçin önceki adımlarda oluşturulan yöntemler `Main` ilk adımda tanımlanan yöntemi.  
   
      [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
      [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
   
-2.  Derleme ve oluşturma sınıfı yürütün.  
+2. Derleme ve oluşturma sınıfı yürütün.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği önceki adımlarda kodu gösterir.  

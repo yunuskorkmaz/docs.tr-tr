@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330109"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Nasıl yapılır: Windows Forms’a Kullanıcı Arabirimi Olmadan Denetimler Ekleme
 Görsel olmayan denetim (veya bileşen) uygulamanıza işlevsellik sağlar. Diğer denetimleri farklı bileşenleri bir kullanıcı arabirimi kullanıcıya sağlamaz ve bu nedenle Windows Form Tasarımcısı yüzeyine görüntülenmesi gerekmez. Bir forma bir bileşen eklendiğinde Windows Form Tasarımcısı yeniden boyutlandırılabilir Tepsisi tüm bileşenleri görüntülendiği formun alt kısmındaki görüntüler. Bir denetim, bileşen tepsisine eklendikten sonra bileşeni seçebilir ve herhangi bir form denetiminde olduğu gibi özelliklerini ayarlayın.  
@@ -29,9 +29,9 @@ Görsel olmayan denetim (veya bileşen) uygulamanıza işlevsellik sağlar. Diğ
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Bir Windows forma bir bileşen eklemek için  
   
-1.  Formu açın. Ayrıntılar için bkz [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Formu açın. Ayrıntılar için bkz [nasıl yapılır: Tasarımcıda Windows formlarını görüntüleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  İçinde **araç kutusu**bir bileşene tıklayın ve formunuza sürükleyin.  
+2. İçinde **araç kutusu**bir bileşene tıklayın ve formunuza sürükleyin.  
   
      Bileşen, bileşen tepsisinde görünür.  
   
@@ -42,11 +42,11 @@ Görsel olmayan denetim (veya bileşen) uygulamanıza işlevsellik sağlar. Diğ
   
 #### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>Bir Windows forma programsal olarak bir bileşen eklemek için  
   
-1.  Bir örneğini oluşturmak <xref:System.Windows.Forms.Timer> kod sınıfı.  
+1. Bir örneğini oluşturmak <xref:System.Windows.Forms.Timer> kod sınıfı.  
   
-2.  Ayarlama `Interval` Zamanlayıcının işaretleri arasındaki süreyi belirlemek için özellik.  
+2. Ayarlama `Interval` Zamanlayıcının işaretleri arasındaki süreyi belirlemek için özellik.  
   
-3.  Bileşeniniz için gerekli diğer özellikleri yapılandırın.  
+3. Bileşeniniz için gerekli diğer özellikleri yapılandırın.  
   
      Aşağıdaki kod oluşturma işlemini gösterir. bir <xref:System.Windows.Forms.Timer> ile kendi `Interval` özellik kümesi.  
   

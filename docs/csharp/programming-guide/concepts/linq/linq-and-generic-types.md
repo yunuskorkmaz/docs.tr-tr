@@ -6,19 +6,19 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: fe29bb14b85b74c249a5d9b7f8c2802ef991b13d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cd0fae0c7d99491f21e5e1fb265e4aabafaa63c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977818"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332705"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ ve Genel Türler (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Sorgu'nün 2.0 sürümünde tanıtılan genel türler dayanır [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Sorguları yazmaya başlamadan önce bir ayrıntılı bilgilere genel türler gerekmez. Ancak, iki temel kavramları anlamak isteyebilirsiniz:  
   
-1.  Oluşturduğunuzda, bir genel koleksiyon sınıfının bir örneği gibi <xref:System.Collections.Generic.List%601>, "T" listenin tutulacağı nesne türüyle değiştirin. Örneğin, bir dize listesi olarak ifade edilir `List<string>`ve listesini `Customer` nesneleri olarak ifade edilir `List<Customer>`. Genel liste türü kesin olarak belirtilmiş ve öğeleri olarak depolayan koleksiyonlar üzerinden birçok avantaj sunar <xref:System.Object>. Eklemeyi denerseniz bir `Customer` için bir `List<string>`, derleme sırasında bir hata alırsınız. Çalışma zamanı tür atama gerçekleştirmek olmadığı için kullanımı kolay genel koleksiyonlar var.  
+1. Oluşturduğunuzda, bir genel koleksiyon sınıfının bir örneği gibi <xref:System.Collections.Generic.List%601>, "T" listenin tutulacağı nesne türüyle değiştirin. Örneğin, bir dize listesi olarak ifade edilir `List<string>`ve listesini `Customer` nesneleri olarak ifade edilir `List<Customer>`. Genel liste türü kesin olarak belirtilmiş ve öğeleri olarak depolayan koleksiyonlar üzerinden birçok avantaj sunar <xref:System.Object>. Eklemeyi denerseniz bir `Customer` için bir `List<string>`, derleme sırasında bir hata alırsınız. Çalışma zamanı tür atama gerçekleştirmek olmadığı için kullanımı kolay genel koleksiyonlar var.  
   
-2.  <xref:System.Collections.Generic.IEnumerable%601> genel amaçlı koleksiyon sınıfları kullanarak numaralandırılmasını etkinleştirir arabirimi `foreach` deyimi. Genel koleksiyon sınıfları Destek <xref:System.Collections.Generic.IEnumerable%601> yalnızca gibi genel olmayan koleksiyon sınıfları gibi <xref:System.Collections.ArrayList> Destek <xref:System.Collections.IEnumerable>.  
+2. <xref:System.Collections.Generic.IEnumerable%601> genel amaçlı koleksiyon sınıfları kullanarak numaralandırılmasını etkinleştirir arabirimi `foreach` deyimi. Genel koleksiyon sınıfları Destek <xref:System.Collections.Generic.IEnumerable%601> yalnızca gibi genel olmayan koleksiyon sınıfları gibi <xref:System.Collections.ArrayList> Destek <xref:System.Collections.IEnumerable>.  
   
  Genel türler hakkında daha fazla bilgi için bkz: [genel türler](../../../../csharp/programming-guide/generics/index.md).  
   
@@ -38,5 +38,5 @@ ms.locfileid: "56977818"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C#'de LINQ'e Başlarken](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Genel Türler](../../../../csharp/programming-guide/generics/index.md)

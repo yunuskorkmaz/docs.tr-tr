@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c70382b0d74e830610d1cd7746fd14244b829a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330450"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework ve Bant Dışı Yayınlar
 
@@ -23,26 +23,26 @@ ms.locfileid: "58654568"
 ## <a name="how-oob-packages-are-distributed"></a>OOB paketleri nasıl dağıtılır?
 Çekirdek ortak dil çalışma zamanı (CLR) bileşenleri için OOB sürümleri aracılığıyla dağıtılır [NuGet](https://www.nuget.org/), .NET için Paket Yöneticisi olan. NuGet, Visual Studio'daki Çözüm Gezgini'nden .NET Framework projelerinize kolaylıkla göz atmanıza ve kitaplıklar eklemenize olanak sağlar. NuGet, Visual Studio 2012'den itibaren tüm Visual Studio sürümleriyle birlikte gelir. NuGet'ın yüklü olup olmadığını görmek için nelere **NuGet Paket Yöneticisi** Visual Studio **Araçları** menüsü. Yüklü değilse:
 
-1.  Visual Studio menü çubuğunda **Araçları**, **Uzantılar ve güncelleştirmeler** (Visual Studio 2010'da seçin **Uzantı Yöneticisi**).
+1. Visual Studio menü çubuğunda **Araçları**, **Uzantılar ve güncelleştirmeler** (Visual Studio 2010'da seçin **Uzantı Yöneticisi**).
 
      **Uzantılar ve güncelleştirmeler** iletişim kutusu açılır.
 
-2.  Seçin **çevrimiçi**, **NuGet Paket Yöneticisi**ve ardından **indirme**.
+2. Seçin **çevrimiçi**, **NuGet Paket Yöneticisi**ve ardından **indirme**.
 
-3.  Karşıdan yükleme tamamlandıktan sonra Visual Studio'yu yeniden başlatın.
+3. Karşıdan yükleme tamamlandıktan sonra Visual Studio'yu yeniden başlatın.
 
  Ayrıntılı yükleme yönergeleri için bkz. [NuGet yükleme](/nuget/install-nuget-client-tools) NuGet belgeleri Web sitesinde. NuGet hakkında daha fazla bilgi için bkz. [NuGet belgeleri](/nuget).
 
 ## <a name="using-a-nuget-oob-package"></a>NuGet OOB paketini kullanma
  NuGet yükledikten sonra, Visual Studio'da Çözüm Gezgini'ni kullanarak NuGet paketlerine göz atabilir ve başvurular ekleyebilirsiniz:
 
-1.  Visual Studio'da projeniz için kısayol menüsünü açın ve ardından **NuGet paketlerini Yönet**. (Bu seçenek ayrıca kullanılabilir **proje** menü.)
+1. Visual Studio'da projeniz için kısayol menüsünü açın ve ardından **NuGet paketlerini Yönet**. (Bu seçenek ayrıca kullanılabilir **proje** menü.)
 
-2.  Sol bölmede seçin **çevrimiçi**.
+2. Sol bölmede seçin **çevrimiçi**.
 
-3.  Orta bölmede aşağı açılan liste kutusunda yayın öncesi paketleri kullanmak isterseniz, seçin **öncesini** yerine **yalnızca durağan**.
+3. Orta bölmede aşağı açılan liste kutusunda yayın öncesi paketleri kullanmak isterseniz, seçin **öncesini** yerine **yalnızca durağan**.
 
-4.  Sağ bölmede, kullanmak **arama** kutusunu kullanmak istediğiniz paketi bulmak için. Bazı Microsoft paketleri, Microsoft .NET Framework logosu ile tanımlanır ve tümü Microsoft'u yayımcı olarak tanımlar.
+4. Sağ bölmede, kullanmak **arama** kutusunu kullanmak istediğiniz paketi bulmak için. Bazı Microsoft paketleri, Microsoft .NET Framework logosu ile tanımlanır ve tümü Microsoft'u yayımcı olarak tanımlar.
 
  ![NuGet Paket Yöneticisi'ni gösteren ekran görüntüsü.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 

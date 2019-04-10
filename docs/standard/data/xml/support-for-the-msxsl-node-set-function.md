@@ -1,18 +1,18 @@
 ---
-title: ': Node-set() işlevi desteği'
+title: msxsl:node-set() İşlevi Desteği
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b1fb4abe8ca0ba7afcefe996de59ceaf67a249
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a37220816ab320340b2dd5c048cc4ff2ad9724a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252785"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330239"
 ---
-# <a name="support-for-the-msxslnode-set-function"></a>: Node-set() işlevi desteği
+# <a name="support-for-the-msxslnode-set-function"></a>msxsl:node-set() İşlevi Desteği
 `msxsl:node-set` İşlevi bir sonuç ağacı parçası düğümünü kümeyi dönüştürmek sağlar. Sonuç olarak oluşan düğüm her zaman tek bir düğüm içeriyor ve ağaç kök düğümü.  
   
 > [!NOTE]
@@ -38,7 +38,7 @@ ms.locfileid: "44252785"
     <xsl:template match="/">  
         <authors>  
             <xsl:for-each select="msxsl:node-set($books)/book">   
-                <author><xsl:value-of select="@author"/)</author>  
+                <author><xsl:value-of select="@author"/></author>  
             </xsl:for-each>  
         </authors>  
     </xsl:template>  

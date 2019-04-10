@@ -2,12 +2,12 @@
 title: CodeActivity sınıfını kullanarak iş akışı etkinliği yazma
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: 4954dfa5dba03823d119a456149f0f16cf5ed410
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127101"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331292"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>CodeActivity sınıfını kullanarak iş akışı etkinliği yazma
 Devralarak oluşturulan etkinlikleri <xref:System.Activities.CodeActivity> temel kesinlik temelli davranışını geçersiz kılarak uygulayabilirsiniz <xref:System.Activities.CodeActivity.Execute%2A> yöntemi.
@@ -23,28 +23,28 @@ Devralarak oluşturulan etkinlikleri <xref:System.Activities.CodeActivity> temel
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>CodeActivity devralan bir özel etkinlik oluşturmak için
 
-1.  Visual Studio 2010'u açın.
+1. Visual Studio 2010'u açın.
 
-2.  Seçin **dosya**, **yeni**, ardından **proje**. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **etkinlik Kitaplığı** içinde **şablonları** penceresi. Yeni Proje HelloActivity adı.
+2. Seçin **dosya**, **yeni**, ardından **proje**. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **etkinlik Kitaplığı** içinde **şablonları** penceresi. Yeni Proje HelloActivity adı.
 
-3.  Gt;activity1.XAML HelloActivity projeye sağ tıklayıp **Sil**.
+3. Gt;activity1.XAML HelloActivity projeye sağ tıklayıp **Sil**.
 
-4.  HelloActivity projeye sağ tıklayıp **Ekle** , ardından **sınıfı**. Yeni bir sınıf HelloActivity.cs adı.
+4. HelloActivity projeye sağ tıklayıp **Ekle** , ardından **sınıfı**. Yeni bir sınıf HelloActivity.cs adı.
 
-5.  HelloActivity.cs dosyasına aşağıdakileri ekleyin `using` yönergeleri.
+5. HelloActivity.cs dosyasına aşağıdakileri ekleyin `using` yönergeleri.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  Devralınan yeni bir sınıf olun <xref:System.Activities.CodeActivity> için sınıf bildiriminin bir temel sınıf ekleyerek.
+6. Devralınan yeni bir sınıf olun <xref:System.Activities.CodeActivity> için sınıf bildiriminin bir temel sınıf ekleyerek.
 
     ```csharp
     class HelloActivity : CodeActivity
     ```
 
-7.  Ekleyerek sınıfına işlevsellik ekleme bir <xref:System.Activities.CodeActivity.Execute%2A> yöntemi.
+7. Ekleyerek sınıfına işlevsellik ekleme bir <xref:System.Activities.CodeActivity.Execute%2A> yöntemi.
 
     ```csharp
     protected override void Execute(CodeActivityContext context)
@@ -53,7 +53,7 @@ Devralarak oluşturulan etkinlikleri <xref:System.Activities.CodeActivity> temel
     }
     ```
 
-8.  Kullanım <xref:System.Activities.CodeActivityContext> bir izleme kaydını oluşturmak için.
+8. Kullanım <xref:System.Activities.CodeActivityContext> bir izleme kaydını oluşturmak için.
 
     ```csharp
     protected override void Execute(CodeActivityContext context)

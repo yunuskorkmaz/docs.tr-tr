@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213304"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331682"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Nasıl yapılır: Veritabanından Satır Silme
 Buna karşılık gelen kaldırarak bir veritabanındaki satırları silebilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ilgili tablo koleksiyonu nesneleri. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygun SQL yaptığınız değişiklikleri çevirir `DELETE` komutları.  
@@ -32,11 +32,11 @@ Buna karşılık gelen kaldırarak bir veritabanındaki satırları silebilirsin
   
 ### <a name="to-delete-a-row-in-the-database"></a>Veritabanı bir satırı silin  
   
-1.  Silinecek satırın veritabanını sorgulayın.  
+1. Silinecek satırın veritabanını sorgulayın.  
   
-2.  Çağrı <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> yöntemi.  
+2. Çağrı <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> yöntemi.  
   
-3.  Veritabanı için değişiklik gönderin.  
+3. Veritabanı için değişiklik gönderin.  
   
 ## <a name="example"></a>Örnek  
  Bu ilk kod örneği veritabanı için sipariş #11000 ait, bu Sipariş Ayrıntıları silme işlemi için işaretler ve bu değişiklikleri veritabanına gönderdiğinde sipariş ayrıntıları için sorgular.  

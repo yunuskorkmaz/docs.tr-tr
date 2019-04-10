@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980738"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332215"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)
 Bağımsız değişken gönderebilirsiniz `Main` yöntemi aşağıdaki yöntemlerden biriyle tanımlayarak yöntemi:  
@@ -51,23 +51,23 @@ long num = Convert.ToInt64(s);
   
  Derleme ve uygulamayı bir komut istemi'nden çalıştırmak için bu adımları izleyin:  
   
-1.  Aşağıdaki kodu herhangi bir metin düzenleyiciye yapıştırın ve dosyayı ada sahip bir metin dosyası olarak kaydedin `Factorial.cs`.  
+1. Aşağıdaki kodu herhangi bir metin düzenleyiciye yapıştırın ve dosyayı ada sahip bir metin dosyası olarak kaydedin `Factorial.cs`.  
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2.  Gelen **Başlat** ekran veya **Başlat** menüsünde, Visual Studio'yu açın **Geliştirici komut istemi** penceresini ve ardından yeni dosyasını içeren klasöre gidin oluşturuldu.  
+2. Gelen **Başlat** ekran veya **Başlat** menüsünde, Visual Studio'yu açın **Geliştirici komut istemi** penceresini ve ardından yeni dosyasını içeren klasöre gidin oluşturuldu.  
   
-3.  Uygulamayı derlemek üzere aşağıdaki komutu girin.  
+3. Uygulamayı derlemek üzere aşağıdaki komutu girin.  
   
      `csc Factorial.cs`  
   
      Uygulamanızın adında bir yürütülebilir dosya hiç derleme hatası varsa `Factorial.exe` oluşturulur.  
   
-4.  3'ün faktoriyelini hesaplamak için aşağıdaki komutu girin:  
+4. 3'ün faktoriyelini hesaplamak için aşağıdaki komutu girin:  
   
      `Factorial 3`  
   
-5.  Komut şu çıktıyı üretir: `The factorial of 3 is 6.`  
+5. Komut şu çıktıyı üretir: `The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  Visual Studio'da bir uygulama çalıştırırken, komut satırı bağımsız değişkenlerinde belirtebilirsiniz [hata ayıklama sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/debug-page-project-designer).  
@@ -78,8 +78,8 @@ long num = Convert.ToInt64(s);
 
 - <xref:System.Environment?displayProperty=nameWithType>
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
-- [Ana() ve Komut Satırı Bağımsız Değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Nasıl yapılır: Komut satırı bağımsız değişkenlerini görüntüleme](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Nasıl yapılır: Erişim foreach kullanarak komut satırı bağımsız değişkenleri](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [Ana() ve komut satırı bağımsız değişkenleri](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [Nasıl yapılır: Komut Satırı Bağımsız Değişkenlerini Görüntüleme](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Nasıl yapılır: foreach Kullanarak Komut Satırı Bağımsız Değişkenlerine Erişme](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Ana() Dönüş Değerleri](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [Sınıflar](../../../csharp/programming-guide/classes-and-structs/classes.md)

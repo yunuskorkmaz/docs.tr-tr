@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160946"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332566"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Nasıl yapılır: İmzalama ve Şifreleme için Ayrı X.509 Sertifikaları Kullanma
 Bu konuda, Windows Communication Foundation (WCF) ileti imzalama ve şifreleme hem istemci hem de hizmet için farklı sertifikalar kullanmak üzere yapılandırma gösterilmektedir.  
@@ -47,34 +47,34 @@ Bu konuda, Windows Communication Foundation (WCF) ileti imzalama ve şifreleme h
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>İmzalama ve şifreleme için ayrı sertifikalar kullanmak için  
   
-1.  Devralan yeni bir istemci kimlik bilgileri sınıfı tanımlayın <xref:System.ServiceModel.Description.ClientCredentials> sınıfı. Birden çok sertifika belirtimine izin vermek için dört yeni özellikler uygular: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate`, ve `ServiceEncryptingCertificate`. Ayrıca geçersiz <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> özelleştirilmiş bir örneğini döndürülecek yöntemi <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sonraki adımda tanımlanan sınıfı.  
+1. Devralan yeni bir istemci kimlik bilgileri sınıfı tanımlayın <xref:System.ServiceModel.Description.ClientCredentials> sınıfı. Birden çok sertifika belirtimine izin vermek için dört yeni özellikler uygular: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate`, ve `ServiceEncryptingCertificate`. Ayrıca geçersiz <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> özelleştirilmiş bir örneğini döndürülecek yöntemi <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sonraki adımda tanımlanan sınıfı.  
   
      [!code-csharp[c_FourCerts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#1)]
      [!code-vb[c_FourCerts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#1)]  
   
-2.  Devralan yeni bir istemci güvenlik belirteci yöneticisi tanımlamak <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sınıfı. Geçersiz kılma <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> uygun güvenlik belirteci sağlayıcı oluşturma için yöntemi. `requirement` Parametre (bir <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) ileti yönü ve anahtar kullanım sağlar.  
+2. Devralan yeni bir istemci güvenlik belirteci yöneticisi tanımlamak <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sınıfı. Geçersiz kılma <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> uygun güvenlik belirteci sağlayıcı oluşturma için yöntemi. `requirement` Parametre (bir <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) ileti yönü ve anahtar kullanım sağlar.  
   
      [!code-csharp[c_FourCerts#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#2)]
      [!code-vb[c_FourCerts#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#2)]  
   
-3.  Devralan yeni bir hizmet kimlik bilgilerini sınıfı tanımlayın <xref:System.ServiceModel.Description.ServiceCredentials> sınıfı. Birden çok sertifika belirtimine izin vermek için dört yeni özellikler uygular: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate`, ve `ServiceEncryptingCertificate`. Ayrıca geçersiz <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> özelleştirilmiş bir örneğini döndürülecek yöntemi <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> sonraki adımda tanımlanan sınıfı.  
+3. Devralan yeni bir hizmet kimlik bilgilerini sınıfı tanımlayın <xref:System.ServiceModel.Description.ServiceCredentials> sınıfı. Birden çok sertifika belirtimine izin vermek için dört yeni özellikler uygular: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate`, ve `ServiceEncryptingCertificate`. Ayrıca geçersiz <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A> özelleştirilmiş bir örneğini döndürülecek yöntemi <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> sonraki adımda tanımlanan sınıfı.  
   
      [!code-csharp[c_FourCerts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#3)]
      [!code-vb[c_FourCerts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#3)]  
   
-4.  Devralan yeni bir hizmet güvenlik belirteci yöneticisi tanımlamak <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> sınıfı. Geçersiz kılma <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> gönderilen ileti yönü ve anahtar kullanım verilen uygun güvenlik belirteci sağlayıcı oluşturma için yöntemi.  
+4. Devralan yeni bir hizmet güvenlik belirteci yöneticisi tanımlamak <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> sınıfı. Geçersiz kılma <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> gönderilen ileti yönü ve anahtar kullanım verilen uygun güvenlik belirteci sağlayıcı oluşturma için yöntemi.  
   
      [!code-csharp[c_FourCerts#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#4)]
      [!code-vb[c_FourCerts#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#4)]  
   
 ### <a name="to-use-multiple-certificates-on-the-client"></a>İstemci üzerinde birden çok sertifika kullanmak için  
   
-1.  Özel bir bağlama oluşturun. Güvenlik bağlama öğesinin farklı güvenlik belirteci sağlayıcıları istekleri ve yanıtları için mevcut olması izin vermek için çift yönlü modda çalışmalıdır. Yapmanın bir yolu çift yönlü özellikli bir aktarım kullanın veya kullanmak için budur <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> aşağıdaki kodda gösterildiği gibi. Özelleştirilmiş bağlantı <xref:System.ServiceModel.Security.IdentityVerifier> sonraki adımda güvenlik bağlama öğesi için tanımlanmış. Varsayılan istemci kimlik bilgileri, daha önce oluşturduğunuz özelleştirilmiş istemci kimlik bilgileri ile değiştirin.  
+1. Özel bir bağlama oluşturun. Güvenlik bağlama öğesinin farklı güvenlik belirteci sağlayıcıları istekleri ve yanıtları için mevcut olması izin vermek için çift yönlü modda çalışmalıdır. Yapmanın bir yolu çift yönlü özellikli bir aktarım kullanın veya kullanmak için budur <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> aşağıdaki kodda gösterildiği gibi. Özelleştirilmiş bağlantı <xref:System.ServiceModel.Security.IdentityVerifier> sonraki adımda güvenlik bağlama öğesi için tanımlanmış. Varsayılan istemci kimlik bilgileri, daha önce oluşturduğunuz özelleştirilmiş istemci kimlik bilgileri ile değiştirin.  
   
      [!code-csharp[c_FourCerts#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#5)]
      [!code-vb[c_FourCerts#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#5)]  
   
-2.  Özel tanımlama <xref:System.ServiceModel.Security.IdentityVerifier>. Hizmet birden çok kimlik sahip farklı bir sertifika isteği şifrelemek ve yanıt imzalamak için kullanılır.  
+2. Özel tanımlama <xref:System.ServiceModel.Security.IdentityVerifier>. Hizmet birden çok kimlik sahip farklı bir sertifika isteği şifrelemek ve yanıt imzalamak için kullanılır.  
   
     > [!NOTE]
     >  Aşağıdaki örnekte, tanıtım amacıyla denetimi herhangi bir uç noktası kimliği sağlanan özel bir kimlik doğrulayıcı gerçekleştirmez. Bu yöntem üretim kodu için önerilmez.  
@@ -84,7 +84,7 @@ Bu konuda, Windows Communication Foundation (WCF) ileti imzalama ve şifreleme h
   
 ### <a name="to-use-multiple-certificates-on-the-service"></a>Hizmeti için kullanabileceğiniz birden fazla sertifika  
   
-1.  Özel bir bağlama oluşturun. Güvenlik bağlama öğesinin farklı güvenlik belirteci sağlayıcıları istekleri ve yanıtları için mevcut olması izin vermek için bir çift yönlü modda çalışmalıdır. İstemci ile çift yönlü özellikli bir aktarım kullanın veya kullanmak <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> aşağıdaki kodda gösterildiği gibi. Varsayılan hizmet kimlik bilgilerini, daha önce oluşturduğunuz özelleştirilmiş hizmet kimlik bilgileri ile değiştirin.  
+1. Özel bir bağlama oluşturun. Güvenlik bağlama öğesinin farklı güvenlik belirteci sağlayıcıları istekleri ve yanıtları için mevcut olması izin vermek için bir çift yönlü modda çalışmalıdır. İstemci ile çift yönlü özellikli bir aktarım kullanın veya kullanmak <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> aşağıdaki kodda gösterildiği gibi. Varsayılan hizmet kimlik bilgilerini, daha önce oluşturduğunuz özelleştirilmiş hizmet kimlik bilgileri ile değiştirin.  
   
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  

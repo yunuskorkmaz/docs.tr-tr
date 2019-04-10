@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 18849e61ea9af503d49e6be1894e7ebd53cce9fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201539"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329966"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGrid Denetimine Tablolar ve Sütunlar Ekleme
 
@@ -27,35 +27,35 @@ ms.locfileid: "59201539"
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>Tablo Tasarımcısı'nda DataGrid denetimi eklemek için  
   
-1.  Tablodaki verileri görüntülemek için öncelikle bağlanmalıdır <xref:System.Windows.Forms.DataGrid> denetlemek için bir veri kümesi. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGrid denetimi Tasarımcısı'nı kullanarak bir veri kaynağına bağlama](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
+1. Tablodaki verileri görüntülemek için öncelikle bağlanmalıdır <xref:System.Windows.Forms.DataGrid> denetlemek için bir veri kümesi. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGrid denetimi Tasarımcısı'nı kullanarak bir veri kaynağına bağlama](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
   
-2.  Seçin <xref:System.Windows.Forms.DataGrid> denetimin <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği, Özellikler penceresinde ve ardından üç nokta düğmesini (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) yanındaki görüntülenecek özelliği **DataGridTableStyle Koleksiyonu Düzenleyicisi**.  
+2. Seçin <xref:System.Windows.Forms.DataGrid> denetimin <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği, Özellikler penceresinde ve ardından üç nokta düğmesini (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) yanındaki görüntülenecek özelliği **DataGridTableStyle Koleksiyonu Düzenleyicisi**.  
   
-3.  Koleksiyon Düzenleyicisi'nde **Ekle** tablo stili eklenecek.  
+3. Koleksiyon Düzenleyicisi'nde **Ekle** tablo stili eklenecek.  
   
-4.  Tıklayın **Tamam** için koleksiyon düzenleyicisini kapatın ve yanındaki üç nokta düğmesine tıklayarak yeniden <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği.  
+4. Tıklayın **Tamam** için koleksiyon düzenleyicisini kapatın ve yanındaki üç nokta düğmesine tıklayarak yeniden <xref:System.Windows.Forms.DataGrid.TableStyles%2A> özelliği.  
   
      Koleksiyon Düzenleyicisi'ni yeniden açtığınızda, denetime bağlı herhangi bir veri tabloları için açılır listede görünür <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> tablo stili özelliğidir.  
   
-5.  İçinde **üyeleri** kutusu Koleksiyonu Düzenleyicisi, tabloyu stilini tıklatın.  
+5. İçinde **üyeleri** kutusu Koleksiyonu Düzenleyicisi, tabloyu stilini tıklatın.  
   
-6.  İçinde **özellikleri** Koleksiyonu Düzenleyicisi, seçim kutusunu <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> görüntülemek istediğiniz tablo değeri.  
+6. İçinde **özellikleri** Koleksiyonu Düzenleyicisi, seçim kutusunu <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> görüntülemek istediğiniz tablo değeri.  
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>DataGrid denetimi Tasarımcısı'nda bir sütun eklemek için  
   
-1.  İçinde **üyeleri** kutusunun **DataGridTableStyle Koleksiyonu Düzenleyicisi**, uygun tablo stili seçin. İçinde **özellikleri** Koleksiyonu Düzenleyicisi, seçim kutusunu <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> koleksiyonu ve ardından üç nokta düğmesini (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png " vbEllipsesButton")) görüntülenecek özelliğin yanındaki **DataGridColumnStyle Koleksiyonu Düzenleyicisi**.  
+1. İçinde **üyeleri** kutusunun **DataGridTableStyle Koleksiyonu Düzenleyicisi**, uygun tablo stili seçin. İçinde **özellikleri** Koleksiyonu Düzenleyicisi, seçim kutusunu <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> koleksiyonu ve ardından üç nokta düğmesini (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png " vbEllipsesButton")) görüntülenecek özelliğin yanındaki **DataGridColumnStyle Koleksiyonu Düzenleyicisi**.  
   
-2.  Koleksiyon Düzenleyicisi'nde **Ekle** sütun stili eklemek veya yanındaki aşağı oka tıklayın **Ekle** sütun türünü belirtin.  
+2. Koleksiyon Düzenleyicisi'nde **Ekle** sütun stili eklemek veya yanındaki aşağı oka tıklayın **Ekle** sütun türünü belirtin.  
   
      Ya da seçin aşağı açılan kutusunda <xref:System.Windows.Forms.DataGridTextBoxColumn> veya <xref:System.Windows.Forms.DataGridBoolColumn> türü.  
   
-3.  Kapatmak için Tamam'a tıklayın **DataGridColumnStyle Koleksiyonu Düzenleyicisi**, yanındaki üç nokta düğmesine tıklayarak yeniden <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> özelliği.  
+3. Kapatmak için Tamam'a tıklayın **DataGridColumnStyle Koleksiyonu Düzenleyicisi**, yanındaki üç nokta düğmesine tıklayarak yeniden <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> özelliği.  
   
      Koleksiyon Düzenleyicisi'ni yeniden açtığınızda, tüm veri sütunlarını ilişkili veri tablosu için açılır listede görünür <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> sütun style özelliği.  
   
-4.  İçinde **üyeleri** kutusu Koleksiyonu Düzenleyicisi, sütun stilini tıklatın.  
+4. İçinde **üyeleri** kutusu Koleksiyonu Düzenleyicisi, sütun stilini tıklatın.  
   
-5.  İçinde **özellikleri** Koleksiyonu Düzenleyicisi, seçim kutusunu <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> görüntülemek istediğiniz sütun için değer.  
+5. İçinde **özellikleri** Koleksiyonu Düzenleyicisi, seçim kutusunu <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> görüntülemek istediğiniz sütun için değer.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,12 +2,12 @@
 title: TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81bfeb911658a6f363a9f0f95ecc7db68a02dbe2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119814"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331266"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>TryCatch Kullanarak Akış Çizelgesi Etkinliğine Hata İşleme
 Bu örnek, gösterir nasıl <xref:System.Activities.Statements.TryCatch> etkinliği bir karmaşık denetim akışı etkinliği içinde kullanılabilir.
@@ -31,11 +31,11 @@ Bu örnek, gösterir nasıl <xref:System.Activities.Statements.TryCatch> etkinli
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1.  Visual Studio 2010 kullanarak FlowchartWithFaultHandling.sln çözüm dosyasını açın.
+1. Visual Studio 2010 kullanarak FlowchartWithFaultHandling.sln çözüm dosyasını açın.
 
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-3.  Çözümü çalıştırmak için F5 tuşuna basın.
+3. Çözümü çalıştırmak için F5 tuşuna basın.
 
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

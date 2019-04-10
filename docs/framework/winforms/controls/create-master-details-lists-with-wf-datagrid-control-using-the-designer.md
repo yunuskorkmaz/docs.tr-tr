@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 1d9e01ab1fbabeb7b20fb5d2449ca7bba5f1853a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332085"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGrid Denetimi ile Ana-Ayrıntılar Listeleri Oluşturma
 
@@ -27,26 +27,26 @@ ms.locfileid: "59125983"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Tasarımcıda bir ana-Ayrıntılar listesi oluşturmak için  
   
-1.  İki ekleme <xref:System.Windows.Forms.DataGrid> formu için denetimler. Daha fazla bilgi için [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md). Visual Studio 2005 ' te <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu** varsayılan olarak. Daha fazla bilgi için [nasıl yapılır: Araç kutusu öğeleri Ekle](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
+1. İki ekleme <xref:System.Windows.Forms.DataGrid> formu için denetimler. Daha fazla bilgi için [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md). Visual Studio 2005 ' te <xref:System.Windows.Forms.DataGrid> denetimi içinde değil **araç kutusu** varsayılan olarak. Daha fazla bilgi için [nasıl yapılır: Araç kutusu öğeleri Ekle](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
   
     > [!NOTE]
     >  Aşağıdaki adımlar Visual Studio kullanan 2005, geçerli olmayan **veri kaynakları** penceresi tasarım zamanı veri bağlama için. Daha fazla bilgi için [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) ve [nasıl yapılır: Görüntü ilgili verileri bir Windows Forms uygulamalarındaki](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120)).  
   
-2.  İki veya daha fazla tablodan sürükleyin **Sunucu Gezgini** form.  
+2. İki veya daha fazla tablodan sürükleyin **Sunucu Gezgini** form.  
   
-3.  Gelen **veri** menüsünde **Generate DataSet**.  
+3. Gelen **veri** menüsünde **Generate DataSet**.  
   
-4.  XML Tasarımcısını kullanarak tablolar arasında ilişki ayarlayın. Ayrıntılar için bkz. "nasıl yapılır: XML şemaları ve veri kümelerinde bire çok ilişkileri MSDN'de oluşturma".  
+4. XML Tasarımcısını kullanarak tablolar arasında ilişki ayarlayın. Ayrıntılar için bkz. "nasıl yapılır: XML şemaları ve veri kümelerinde bire çok ilişkileri MSDN'de oluşturma".  
   
-5.  İlişkileri seçerek Kaydet **Tümünü Kaydet** gelen **dosya** menüsü.  
+5. İlişkileri seçerek Kaydet **Tümünü Kaydet** gelen **dosya** menüsü.  
   
-6.  Yapılandırma <xref:System.Windows.Forms.DataGrid> ana kılavuz, aşağıdaki gibi belirtmek istediğiniz denetimi:  
+6. Yapılandırma <xref:System.Windows.Forms.DataGrid> ana kılavuz, aşağıdaki gibi belirtmek istediğiniz denetimi:  
   
     1.  Seçin <xref:System.Data.DataSet> aşağı açılan listeden <xref:System.Windows.Forms.DataGrid.DataSource%2A> özelliği.  
   
     2.  Ana Tablo (örneğin, "Müşteri"), aşağı açılan listeden seçin <xref:System.Windows.Forms.DataGrid.DataMember%2A> özelliği.  
   
-7.  Yapılandırma <xref:System.Windows.Forms.DataGrid> ayrıntıları kılavuz, aşağıdaki gibi belirtmek istediğiniz denetimi:  
+7. Yapılandırma <xref:System.Windows.Forms.DataGrid> ayrıntıları kılavuz, aşağıdaki gibi belirtmek istediğiniz denetimi:  
   
     1.  Seçin <xref:System.Data.DataSet> aşağı açılan listeden <xref:System.Windows.Forms.DataGrid.DataSource%2A> özelliği.  
   

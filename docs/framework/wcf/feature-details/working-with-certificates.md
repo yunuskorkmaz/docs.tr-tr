@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331721"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijital sertifikalar sık iletileri dijital olarak imzala istemcilere ve sunuculara kimlik doğrulaması ve şifreleme için kullanılır. Bu konuda kısaca X.509 dijital sertifika özellikleri ve bunların WCF'de nasıl kullanılacağını açıklar ve WCF ve sertifikaları kullanarak yaygın görevlerin nasıl yerine getirileceğini gösteren ya da, bu kavramları daha açıklayan konulara bağlantılar içerir.  
@@ -90,13 +90,13 @@ Windows Communication Foundation (WCF) güvenlik programlamak için X.509 dijita
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>New-SelfSignedCertificate cmdlet'i ile bir güven zinciri oluşturmak için  
   
-1.  New-SelfSignedCertificate cmdlet'ini kullanarak bir geçici kök yetkilisi (otomatik olarak imzalanan) bir sertifika oluşturun. Özel anahtarı, diske kaydedin.  
+1. New-SelfSignedCertificate cmdlet'ini kullanarak bir geçici kök yetkilisi (otomatik olarak imzalanan) bir sertifika oluşturun. Özel anahtarı, diske kaydedin.  
   
-2.  Yeni sertifikanın ortak anahtarı içeren başka bir sertifika kullanın.  
+2. Yeni sertifikanın ortak anahtarı içeren başka bir sertifika kullanın.  
   
-3.  Kök yetkilisi sertifikası güvenilen kök sertifika yetkilileri deposuna aktarın.  
+3. Kök yetkilisi sertifikası güvenilen kök sertifika yetkilileri deposuna aktarın.  
   
-4.  Adım adım yönergeler için bkz: [nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4. Adım adım yönergeler için bkz: [nasıl yapılır: Geliştirme sırasında kullanmak için geçici sertifikalar oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Hangi sertifikanın kullanılacağını?  
  Sertifikaları hakkında sık sorulan sorular, hangi sertifikanın kullanılacağını, olan ve neden. Yanıt, istemci veya hizmet programlama üzerinde bağlıdır. Aşağıdaki bilgileri, genel bir kılavuz sağlar ve bu soruların kapsamlı bir çözüm değildir.  

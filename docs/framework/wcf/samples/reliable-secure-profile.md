@@ -2,12 +2,12 @@
 title: Güvenilir Güvenlik Profili
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: 98e12e2cbe57313981c863307d3bb65ce88f6589
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e1895da0805a5282fc328b0c8d48d7042a1e5784
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331578"
 ---
 # <a name="reliable-secure-profile"></a>Güvenilir Güvenlik Profili
 Bu örnek WCF oluşturmak nasıl gösterir ve [güvenilir güvenli profili](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Bu örnek uygulamasını gösterir. bir [bağlantı yap](https://go.microsoft.com/fwlink/?LinkId=178141) güvenilir Mesajlaşma ile birlikte ve isteğe bağlı olarak oluşan kanal güvenilir güvenli bir bağlama oluşturmak için güvenli bir kanal tabanlı RSP belirtimi.  
@@ -26,16 +26,16 @@ Bu örnek WCF oluşturmak nasıl gösterir ve [güvenilir güvenli profili](http
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Açık **ReliableSecureProfile** çözüm.  
+1. Açık **ReliableSecureProfile** çözüm.  
   
-2.  Sağ tıklayın **hizmet** projesi **Çözüm Gezgini**seçin **hata ayıklama**, **yeni örnek Başlat** bağlam menüsünden. Bu hizmet ana bilgisayar başlatır.  
+2. Sağ tıklayın **hizmet** projesi **Çözüm Gezgini**seçin **hata ayıklama**, **yeni örnek Başlat** bağlam menüsünden. Bu hizmet ana bilgisayar başlatır.  
   
-3.  Sağ tıklayın **istemci** projesi **Çözüm Gezgini**seçin **hata ayıklama**, **yeni örnek Başlat** bağlam menüsünden. Bu, istemci başlatır.  
+3. Sağ tıklayın **istemci** projesi **Çözüm Gezgini**seçin **hata ayıklama**, **yeni örnek Başlat** bağlam menüsünden. Bu, istemci başlatır.  
   
-4.  Herhangi bir dize istemci konsol penceresinde satırına yazın ve ENTER'ı tıklatın. Bu, Giriş dizesinin Bu dize bir karmasını hesaplar hizmetine gönderir.  
+4. Herhangi bir dize istemci konsol penceresinde satırına yazın ve ENTER'ı tıklatın. Bu, Giriş dizesinin Bu dize bir karmasını hesaplar hizmetine gönderir.  
   
-5.  Hizmet istemci konsol penceresinde sonucu görüntülemek için çift yönlü bir geri çağırma anlaşması işlemi geri çağırdığında sonucu windows istemcisi üzerinde görüntüleyin. Uzun süre çalışan bir veri işleme işleminin benzetimini yapmak için hizmette kasıtlı bir gecikme olur.  
+5. Hizmet istemci konsol penceresinde sonucu görüntülemek için çift yönlü bir geri çağırma anlaşması işlemi geri çağırdığında sonucu windows istemcisi üzerinde görüntüleyin. Uzun süre çalışan bir veri işleme işleminin benzetimini yapmak için hizmette kasıtlı bir gecikme olur.  
   
-6.  (Herhangi biri tarafından çevrimiçi ağ izleme araçları Ağ İzleyicisi, Fiddler vb. gibi) HTTP trafiğini izleme gösteren bir dizisi iletişimi için istemci ile hizmet arasında güvenilir güvenli profili tarafından düzenlenir ve nasıl oluşturduğunuzu istemci 'Bağlantı Yap' isteklere hizmet yoklar. Hizmet işlenen yanıtını geri göndermek hazır aldığında son 'Bağlantı Yap' isteğin arka kanal sonuçları geri göndermek için kullanır.  
+6. (Herhangi biri tarafından çevrimiçi ağ izleme araçları Ağ İzleyicisi, Fiddler vb. gibi) HTTP trafiğini izleme gösteren bir dizisi iletişimi için istemci ile hizmet arasında güvenilir güvenli profili tarafından düzenlenir ve nasıl oluşturduğunuzu istemci 'Bağlantı Yap' isteklere hizmet yoklar. Hizmet işlenen yanıtını geri göndermek hazır aldığında son 'Bağlantı Yap' isteğin arka kanal sonuçları geri göndermek için kullanır.  
   
-7.  Hizmeti kapatmak için hizmet konsol penceresinde ENTER tuşuna basın. İstemciyi kapatma işlemlerinin istemci konsol penceresinde ENTER tuşuna basın.
+7. Hizmeti kapatmak için hizmet konsol penceresinde ENTER tuşuna basın. İstemciyi kapatma işlemlerinin istemci konsol penceresinde ENTER tuşuna basın.

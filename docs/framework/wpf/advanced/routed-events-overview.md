@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171164"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330460"
 ---
 # <a name="routed-events-overview"></a>Gönderilmiş Olaylara Genel Bakış
 Bu konuda yönlendirilmiş olaylar kavramını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Konu yönlendirilmiş olaylar terminolojisini, açıklar yönlendirilmiş olaylar öğe ağacındaki yönlendirilir nasıl nasıl işleyeceğinizi özetler ve kendi özel gönderilmiş olay oluşturma kullanıma sunar.
@@ -204,17 +204,17 @@ Giriş olayı Tırmanma ve tünel oluşturma
   
  Olay işleme sırası aşağıdaki gibidir:  
   
-1.  `PreviewMouseDown` (kök öğe üzerinde tünel).  
+1. `PreviewMouseDown` (kök öğe üzerinde tünel).  
   
-2.  `PreviewMouseDown` (#1 Ara öğede tünel).  
+2. `PreviewMouseDown` (#1 Ara öğede tünel).  
   
-3.  `PreviewMouseDown` (kaynak öğesinde #2 Tünel).  
+3. `PreviewMouseDown` (kaynak öğesinde #2 Tünel).  
   
-4.  `MouseDown` (kaynak öğesinde #2 kabarcık).  
+4. `MouseDown` (kaynak öğesinde #2 kabarcık).  
   
-5.  `MouseDown` (#1 Ara öğede kabarcık).  
+5. `MouseDown` (#1 Ara öğede kabarcık).  
   
-6.  `MouseDown` (Kök öğede kabarcık).  
+6. `MouseDown` (Kök öğede kabarcık).  
   
  Yönlendirilmiş olay işleyici temsilcisini iki nesne başvuru sağlar: olay ve burada işleyicinin çağrıldığı nesnesi başlatan nesne. İşleyicinin burada çağrıldığı nesnesi tarafından bildirilen nesnesidir `sender` parametresi. Burada olayın ilk oluşturulduğu nesnesi tarafından bildirilen <xref:System.Windows.RoutedEventArgs.Source%2A> olay verilerini bir özellik. Yönlendirilmiş olay yine de yükseltilmiş ve bu durumda aynı nesne tarafından işlenen `sender` ve <xref:System.Windows.RoutedEventArgs.Source%2A> özdeş olan (Bu, adım 3 ve 4 olay işleme örneği listesindeki çalışmasıyla).  
   

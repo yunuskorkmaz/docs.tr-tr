@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 6d1134367cbbe494f5ab882d88cc083110ffd5c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362363"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331305"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# Derleyici Seçenekleri)
 **-Out** seçeneği, çıkış dosyasının adını belirtir.  
@@ -49,11 +49,11 @@ ms.locfileid: "57362363"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açın **özellikleri** sayfası.  
+1. Projenin açın **özellikleri** sayfası.  
   
-2.  Tıklayın **uygulama** özellik sayfası.  
+2. Tıklayın **uygulama** özellik sayfası.  
   
-3.  Değiştirme **derleme adı** özelliği.  
+3. Değiştirme **derleme adı** özelliği.  
   
      Bu derleyici seçeneğini program üzerinden ayarlamak için: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> bir proje türü (exe, kitaplık ve diğerleri) ve derleme adı birleşimi tarafından belirlenen bir salt okunur özelliği. Birini veya her ikisini bu özellikleri değiştirerek çıkış dosyası adını ayarlamak gerekli olacaktır.  
   

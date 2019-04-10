@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140901"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331870"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Nasıl yapılır: Tasarım Zamanında Denetimi Formların Kenarlarına Hizalama
 Denetiminiz ayarlayarak formlarınızı kenarına hizalama yapabileceğiniz <xref:System.Windows.Forms.Control.Dock%2A>. Bu özellik, denetimi forma bulunduğu belirler. <xref:System.Windows.Forms.Control.Dock%2A> Özelliği aşağıdaki değerlere ayarlanabilir:  
@@ -31,15 +31,15 @@ Denetiminiz ayarlayarak formlarınızı kenarına hizalama yapabileceğiniz <xre
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>Tasarım zamanında denetiminizi Dock özelliğini ayarlamak için  
   
-1.  Windows Form Tasarımcısı'nda denetiminizi seçin.  
+1. Windows Form Tasarımcısı'nda denetiminizi seçin.  
   
-2.  İçinde **özellikleri** penceresinde, aşağı açılan kutusunda sonraki tıklatın <xref:System.Windows.Forms.Control.Dock%2A> özelliği.  
+2. İçinde **özellikleri** penceresinde, aşağı açılan kutusunda sonraki tıklatın <xref:System.Windows.Forms.Control.Dock%2A> özelliği.  
   
      Altı olası temsil eden bir grafik arabirim <xref:System.Windows.Forms.Control.Dock%2A> ayarları görüntülenir.  
   
-3.  Uygun ayarı seçin.  
+3. Uygun ayarı seçin.  
   
-4.  Denetiminiz artık ayarı tarafından belirlenen şekilde dock.  
+4. Denetiminiz artık ayarı tarafından belirlenen şekilde dock.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

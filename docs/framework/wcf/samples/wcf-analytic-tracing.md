@@ -2,12 +2,12 @@
 title: WCF Analiz İzleme
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 3c9f878a22c928daa9c7dbc142efb3958b1657c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229179"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332319"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
 Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri akışının içine kendi izleme olaylarını ekleme gösterir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analitik izlemeleri, yüksek performans cezası ödeme yapmadan hizmetlerinizi görünürlük elde etmek kolay hale getirmek için yöneliktir. Bu örnek nasıl kullanılacağını gösterir <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API WCF hizmetleri ile tümleştirme yazma olayları.  
@@ -43,31 +43,31 @@ Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri a
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Visual Studio 2012 kullanarak WCFAnalyticTracingExtensibility.sln çözüm dosyasını açın.  
+1. Visual Studio 2012 kullanarak WCFAnalyticTracingExtensibility.sln çözüm dosyasını açın.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
+3. Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
      Web tarayıcısında tıklayın **Calculator.svc**. WSDL belgesinde hizmet URI'si tarayıcı içinde görüntülenmesi gerekir. Bu URI'yi kopyalayın.  
   
-4.  WCF test istemcisi (WcfTestClient.exe) çalıştırın.  
+4. WCF test istemcisi (WcfTestClient.exe) çalıştırın.  
   
      WCF test istemcisi (WcfTestClient.exe) şu konumdadır `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. Varsayılan Visual Studio 2012 yükleme dizini olan `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
-5.  WCF test istemcisi içinde hizmet seçerek ekleyin **dosya**, ardından **Hizmet Ekle**.  
+5. WCF test istemcisi içinde hizmet seçerek ekleyin **dosya**, ardından **Hizmet Ekle**.  
   
      Uç nokta adresi giriş kutusuna ekleyin.  
   
-6.  Tıklayın **Tamam** iletişim kutusunu kapatmak için.  
+6. Tıklayın **Tamam** iletişim kutusunu kapatmak için.  
   
      Sol bölmede altında ICalculator hizmet eklenir **hizmet Projelerim**.  
   
-7.  Olay Görüntüleyici uygulamasını açın.  
+7. Olay Görüntüleyici uygulamasını açın.  
   
      Hizmetini çağırmak önce Olay Görüntüleyicisi'ni başlatın ve olay günlüğüne olayları WCF hizmetinden yayılan izleme dinlediğinden emin olun.  
   
-8.  Gelen **Başlat** menüsünde **Yönetimsel Araçlar**, ardından **Olay Görüntüleyicisi'ni**. Etkinleştirme **analitik** ve **hata ayıklama** günlükleri.  
+8. Gelen **Başlat** menüsünde **Yönetimsel Araçlar**, ardından **Olay Görüntüleyicisi'ni**. Etkinleştirme **analitik** ve **hata ayıklama** günlükleri.  
   
 9. Olay Görüntüleyicisi'nde ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve ardından **Uygulama uygulamalarının**. Sağ **uygulama uygulamalarının**seçin **görünümü**, ardından **Analitik ve hata ayıklama günlüklerini göster**.  
   
@@ -97,13 +97,13 @@ Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri a
   
 #### <a name="to-clean-up-optional"></a>(İsteğe bağlı) temizlemek için  
   
-1.  Açık **Olay Görüntüleyicisi'ni**.  
+1. Açık **Olay Görüntüleyicisi'ni**.  
   
-2.  Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, ardından  **Uygulama sunucusu uygulamalar**. Sağ **analitik** seçip **devre dışı günlük**.  
+2. Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, ardından  **Uygulama sunucusu uygulamalar**. Sağ **analitik** seçip **devre dışı günlük**.  
   
-3.  Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**,  **Uygulama sunucu uygulamaları**, ardından **analitik**. Sağ **analitik** seçip **Günlüğü Temizle**.  
+3. Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**,  **Uygulama sunucu uygulamaları**, ardından **analitik**. Sağ **analitik** seçip **Günlüğü Temizle**.  
   
-4.  Tıklayın **Temizle** olayları temizleyin.  
+4. Tıklayın **Temizle** olayları temizleyin.  
   
 ## <a name="known-issue"></a>Bilinen sorun  
  Bilinen bir sorun var. **Olay Görüntüleyicisi'ni** burada da başarısız olabilir ETW olaylarının kodunu çözmek. Bildiren bir hata iletisini görebilirsiniz: "Olay kimliği için açıklama \<kimliği > kaynağından Microsoft Windows uygulaması uygulamalarının bulunamıyor. Bu olayı oluşturan bileşen, yerel bilgisayarınızda yüklü değil veya yüklemenin bozuk. Yükleyebilir veya yerel bilgisayarda bileşen onarın." Bu hatayla karşılaşırsanız, seçin **Yenile** gelen **eylemleri** menüsü. Olay sonra düzgün bir şekilde kod çözme.  

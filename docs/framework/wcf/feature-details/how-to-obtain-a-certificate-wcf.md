@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 03ee861f7eba8b2ecee6b4697c5b475eacf78c89
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 21e9e0609ed63c4398f2df7ba718f8af17464b0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093910"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332488"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Nasıl yapılır: (WCF) bir sertifika alın
 Windows Communication Foundation (WCF) kullanmak için yalnızca ilk sertifikaları almak, X.509 sertifikaları, özelliklerini kullanın.  
   
 ### <a name="to-obtain-an-x509-certificate"></a>Bir X.509 sertifikası almak için  
   
-1.  Aşağıdakilerden birini seçin:  
+1. Aşağıdakilerden birini seçin:  
   
     -   VeriSign gibi bir sertifika yetkilisinden bir sertifika satın alın  
   

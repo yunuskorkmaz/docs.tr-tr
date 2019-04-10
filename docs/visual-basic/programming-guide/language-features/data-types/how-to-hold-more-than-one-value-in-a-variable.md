@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332267"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Nasıl yapılır: (Visual Basic) değişkende birden fazla değer tutma
 Olması bildirirseniz bir değişkeni birden fazla değer içeren bir *bileşik veri türü*.  
@@ -25,9 +25,9 @@ Olması bildirirseniz bir değişkeni birden fazla değer içeren bir *bileşik 
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>Bir değişkende birden fazla değerini tutmak için  
   
-1.  Bileşik veri türüne değişkeniniz için kullanmak istediğiniz belirleyin.  
+1. Bileşik veri türüne değişkeniniz için kullanmak istediğiniz belirleyin.  
   
-2.  Bileşik veri türü zaten tanımlı değilse, değişken kullanabilmesi tanımlayın.  
+2. Bileşik veri türü zaten tanımlı değilse, değişken kullanabilmesi tanımlayın.  
   
     -   Bir yapı tanımla bir [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
@@ -35,11 +35,11 @@ Olması bildirirseniz bir değişkeni birden fazla değer içeren bir *bileşik 
   
     -   İle bir sınıf tanımlayan bir [Class deyimi](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
-3.  İle bir değişken bildirmek bir `Dim` deyimi.  
+3. İle bir değişken bildirmek bir `Dim` deyimi.  
   
-4.  Değişken adı ile bir `As` yan tümcesi.  
+4. Değişken adı ile bir `As` yan tümcesi.  
   
-5.  İzleyin `As` anahtar sözcüğü ile uygun bileşik veri türünün adı.  
+5. İzleyin `As` anahtar sözcüğü ile uygun bileşik veri türünün adı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 229d3efb6566605fb9f03ad2012793fe2e4cb17b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e33fc98f12c1b49d6fe2b1dc187615e2dc9b1768
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155187"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330083"
 ---
 # <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: Derleme İçeriklerini Görüntüleme
 Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) bir dosyayı Microsoft Ara dili (MSIL) bilgilerini görüntülemek için. İncelenmekte olan dosyanın derleme olup, bu bilgileri derlemenin özniteliklerini yanı sıra diğer modül ve derlemelerdeki başvuruları ekleyebilirsiniz. Bu bilgiler bir dosyaya bir bütünleştirilmiş kod veya bir derlemenin parçası olup ve dosyanın diğer modüllerde veya derlemeler için başvurular olup saptamanıza yardımcı olabilir.  
   
 ### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>Ildasm.exe kullanarak bir derlemenin içeriğini görüntülemek için  
   
-1.  Tür **ildasm** \< *derleme adı*> komut isteminde. Örneğin, aşağıdaki komutu ayrıştırır `Hello.exe` derleme.  
+1. Tür **ildasm** \< *derleme adı*> komut isteminde. Örneğin, aşağıdaki komutu ayrıştırır `Hello.exe` derleme.  
   
     ```  
     ildasm Hello.exe  
@@ -36,7 +36,7 @@ Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/t
   
 ### <a name="to-view-assembly-manifest-information"></a>Derleme bildirimi bilgilerini görüntülemek için  
   
-1.  MSIL ayrıştırıcı penceresinde bildirim simgesini çift tıklatın.  
+1. MSIL ayrıştırıcı penceresinde bildirim simgesini çift tıklatın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, temel bir "Merhaba, dünya" programıyla başlatır. Program derledikten sonra Ildasm.exe Hello.exe derleme ayrıştırmak ve derleme bildirimi görüntülemek için kullanın.  
