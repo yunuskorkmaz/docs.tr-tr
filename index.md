@@ -6,12 +6,12 @@ title: .NET Belgeleri
 description: C#, Visual Basic ve F# kullanarak herhangi bir platformda çeşitli uygulamalar oluşturmak için .NET kullanmayı öğrenin. API başvurusuna, örnek koda, öğreticilere ve daha fazlasına göz atın.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/09/2019
-ms.locfileid: "59297275"
+ms.locfileid: "59427493"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -231,8 +231,8 @@ ms.locfileid: "59297275"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">ML.NET Kılavuzu</a></h3>
-                                                <p><a href="/dotnet/machine-learning/index#tutorials">Öğreticiler</a></p>
-                                                <p><a href="/dotnet/machine-learning/index#resources">Kaynaklar</a></p>
+                                                <p><a href="/dotnet/machine-learning/tutorials">Öğreticiler</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources">Kaynaklar</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Sözlük</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API başvurusu</a></p>
                                             </div>
