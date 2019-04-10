@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dfc1535338f45ac812c089203f2ae13a500ceec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc7cc4ecf710090b2cbe55657a85cb081b2fe33c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689175"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214760"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem Arabirimi
 Genel derleme önbelleğine yüklenen öğeyi temsil eder.  
@@ -40,5 +40,6 @@ Genel derleme önbelleğine yüklenen öğeyi temsil eder.
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [FUSION_INSTALL_REFERENCE Yapısı](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

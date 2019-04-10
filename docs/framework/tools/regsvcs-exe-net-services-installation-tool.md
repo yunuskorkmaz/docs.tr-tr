@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b80df56c9f45f7dd195e1f7bbd03063fa30abb3a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215046"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET Hizmetleri Yükleme Aracı)
 .NET Hizmetleri Yükleme aracı aşağıdaki eylemleri gerçekleştirir:  
@@ -50,11 +50,11 @@ ms.locfileid: "57466768"
 |**/appdir:** *yolu*|Uygulamanın kök dizinini belirtir.|  
 |**yüklemede:** *applicationName*|Bulunacak veya oluşturulacak COM+ uygulamasının adını belirtir.|  
 |**/c**|Hedef uygulamayı oluşturur.|  
-|**/ componly**|Yalnızca bileşenleri yapılandırır; yöntemleri ve arabirimleri yoksayar.|  
+|**/componly**|Yalnızca bileşenleri yapılandırır; yöntemleri ve arabirimleri yoksayar.|  
 |**/exapp**|Varolan bir uygulamayı beklemek üzere aracı belirtir.|  
 |**/extlb**|Varolan bir tür kitaplığını kullanır.|  
-|**/FC**|Hedef uygulamayı bulur veya oluşturur.|  
-|**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|**/fc**|Hedef uygulamayı bulur veya oluşturur.|  
+|**/help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/noreconfig**|Varolan bir hedef uygulamayı yeniden yapılandırmaz.|  
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |**/parname:** *adı*|Bulunacak veya oluşturulacak COM+ uygulamasının adını veya kimliğini belirtir.|  
@@ -87,6 +87,7 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Araçlar](../../../docs/framework/tools/index.md)
-- [Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

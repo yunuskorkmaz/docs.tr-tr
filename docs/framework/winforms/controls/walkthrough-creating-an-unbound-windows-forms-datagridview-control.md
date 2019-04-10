@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Bağlantısız bir Windows Forms DataGridView denetimi'
+title: 'İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: ebbfeaa2d6a7734aa0f2b214be65e64111d28ac0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 375ac3bd3a178cc059239cf84209ebbf5d6aca11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220584"
 ---
-# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>İzlenecek yol: Bağlantısız bir Windows Forms DataGridView denetimi
+# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma
 Sık veritabanından kaynaklanmayan tablosal verileri görüntülemek isteyebilirsiniz. Örneğin, iki boyutlu bir dizisini içeriğini göstermek isteyebilirsiniz. <xref:System.Windows.Forms.DataGridView> Sınıfı, bir veri kaynağına bağlama olmadan verileri görüntülemek için kolay ve özelleştirilebilir bir yol sağlar. Bu izlenecek yol nasıl doldurulacağını gösterir bir <xref:System.Windows.Forms.DataGridView> denetlemek ve eklenmesini ve "bağlantısız" modda satırların silinmesi yönetin. Varsayılan olarak, kullanıcının yeni bir satır ekleyebilirsiniz. Satır ekleme önleyecek şekilde ayarlanmış <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> özelliği `false`.  
   
  Bu konudaki tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: Bir bağlantısız bir Windows Forms DataGridView denetimi oluşturma](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
@@ -93,7 +93,8 @@ Sık veritabanından kaynaklanmayan tablosal verileri görüntülemek isteyebili
 -   Hücrelerin görünüşünü özelleştirme. Daha fazla bilgi için [nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md) ve [nasıl yapılır: Windows Forms DataGridView denetimi için varsayılan hücre stillerini ayarlama](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Bir bağlantısız bir Windows Forms DataGridView denetimi oluşturma](how-to-create-an-unbound-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma](how-to-create-an-unbound-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları](data-display-modes-in-the-windows-forms-datagridview-control.md)

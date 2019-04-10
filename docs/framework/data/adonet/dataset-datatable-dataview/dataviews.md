@@ -1,15 +1,15 @@
 ---
-title: DataView
+title: DataViews
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215917"
 ---
-# <a name="dataviews"></a>DataView
+# <a name="dataviews"></a>DataViews
 A <xref:System.Data.DataView> depolanan veriler alanının farklı görünümlerini oluşturmanızı sağlayan bir <xref:System.Data.DataTable>, veri bağlama uygulamalarda sık kullanılan bir özellik. Kullanarak bir **DataView**sıralamalar farklı olan bir tabloda verilerini açığa çıkarabilir ve verileri satır durum ya da bir filtre ifadesi temelinde göre filtre uygulayabilirsiniz.  
   
  A **DataView** temel alınan verileri dinamik bir görünümünü sağlar **DataTable**: oluşunca içerik, sıralama ve üyelik değişiklikleri yansıtacak. Bu davranışı farklıdır **seçin** yöntemi **DataTable**, döndüren bir <xref:System.Data.DataRow> alan bir tablodaki dizisi üzerinde belirli bir filtre ve/veya sıralama düzeni: Bu içeriği değişiklikleri yansıtır. Tablo, ancak üyeliğini temel alınan ve sıralama statik kalır. Dinamik yeteneklerini **DataView** veri bağlama uygulamalar için ideal bir çözüm oluşturur.  
@@ -60,4 +60,5 @@ A <xref:System.Data.DataView> depolanan veriler alanının farklı görünümler
  ADO.NET açıklar mimarisi ve bileşenleri ve mevcut veri kaynaklarına erişim ve uygulama verilerini yönetmek için ADO.NET kullanma.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

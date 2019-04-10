@@ -1,15 +1,15 @@
 ---
-title: yabancı anahtar özelliği
+title: foreign key property
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
-ms.openlocfilehash: 8680019f6f1a53233b5c49163f474cf33409b69b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 74117b30ca54f7c57bd970003fc6f5dcc54d553f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674477"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218023"
 ---
-# <a name="foreign-key-property"></a>yabancı anahtar özelliği
+# <a name="foreign-key-property"></a>foreign key property
 A *yabancı anahtar özelliği* varlık veri modeli (EDM) basit bir türdür [özelliği](../../../../docs/framework/data/adonet/property.md) (veya basit tür özellikler kümesi) üzerinde bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) içeren[Varlık anahtarı](../../../../docs/framework/data/adonet/entity-key.md) başka bir varlık türü.  
   
  Bir yabancı anahtar özellik, ilişkisel bir veritabanındaki yabancı bir anahtar sütunu benzer. Yabancı anahtar sütunu satır tablolar arasındaki ilişkiler oluşturmak için ilişkisel bir veritabanında kullanılır aynı şekilde, kavramsal modelde yabancı anahtar özelliklerini oluşturmak için kullanılan [ilişkilendirmeleri](../../../../docs/framework/data/adonet/association-type.md) varlık türleri arasında. A [başvuru bütünlüğü kısıtlaması](../../../../docs/framework/data/adonet/referential-integrity-constraint.md) türlerinden birini bir yabancı anahtar özelliğine sahip iki varlık türleri arasındaki ilişkiyi tanımlamak için kullanılır.  
@@ -24,5 +24,6 @@ A *yabancı anahtar özelliği* varlık veri modeli (EDM) basit bir türdür [ö
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)

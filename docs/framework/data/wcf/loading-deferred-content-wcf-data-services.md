@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 3c522cd9f360430bde8a008c4c9702f01887d948
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 905cf9933b726ba570c16719c8d1883a8588254d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227177"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Ertelenmiş içerik (WCF Veri Hizmetleri) yükleme
 Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir sorgunun döndürdüğü veri miktarını sınırlar. Ancak, ilgili varlıkları, disk belleğine alınan yanıt verileri ve gerektiğinde veri hizmetinden ikili veri akışları gibi ek veriler açıkça yükleyebilirsiniz. Bu konu, uygulamanıza böyle ertelenmiş içerik yükleme açıklar.  
@@ -58,5 +58,6 @@ Varsayılan olarak, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir veri akışı olarak ikili büyük nesne (BLOB) veri erişim sağlar. Akış ikili verileri yüklenmesi gereken ve istemci bu verileri daha verimli bir şekilde işleyebilir kadar erteler. Bu işlevsellikten yararlanmak için veri hizmeti uygulanması gereken <xref:System.Data.Services.Providers.IDataServiceStreamProvider> sağlayıcısı. Daha fazla bilgi için [Akış sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Akış etkinleştirildiğinde, varlık türleri ilgili ikili verileri döndürülür. Bu durumda, kullanmalısınız <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> yöntemi <xref:System.Data.Services.Client.DataServiceContext> ikili veriler için veri akışı erişmenize izin sınıfı. Benzer şekilde, kullanmak <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> eklemek veya ikili veri akışı olarak bir varlığın değiştirmek için yöntemi. Daha fazla bilgi için [ikili verilerle çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

@@ -1,15 +1,15 @@
 ---
-title: ADO.NET teknoloji seçenekleri ve yönergeleri
+title: ADO.NET Teknoloji Seçenekleri ve Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 0d0e8f7bd779ce7a8290594887630dd192301fe1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664802"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212537"
 ---
-# <a name="adonet-technology-options-and-guidelines"></a>ADO.NET teknoloji seçenekleri ve yönergeleri
+# <a name="adonet-technology-options-and-guidelines"></a>ADO.NET Teknoloji Seçenekleri ve Yönergeleri
 ADO.NET veri platformu, kodlama ve kavramsal varlık veri modelleri karşı programlamak için sağlayarak geliştiriciler için gerekli bakım miktarını azaltmak için bir çoklu sürüm stratejisidir. Bu platform, ADO.NET varlık çerçevesi ve ilgili teknolojileri içerir.  
   
 ## <a name="entity-framework"></a>Varlık Çerçevesi  
@@ -40,6 +40,7 @@ ADO.NET veri platformu, kodlama ve kavramsal varlık veri modelleri karşı prog
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Veri Hizmetleri Web veya intranet dağıtır. Veri varlıkları ve ilişkileri varlık veri modeli belirtimlere göre olarak yapılandırılmıştır. Bu modelde dağıtılan standart HTTP protokolü tarafından adreslenebilir verilerdir. Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET’teki Yenilikler](../../../../docs/framework/data/adonet/whats-new.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

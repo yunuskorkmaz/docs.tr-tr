@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 81e142a6989ad2c2c365def4ad43e1bad505c411
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58019161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224929"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML Biçimlendirme Uzantılarına Genel Bakış
 Biçimlendirme uzantıları, basit bir tür ya da özel bir XAML türü bir değer almak için bir XAML tekniğidir. Öznitelik kullanımı için biçimlendirme uzantıları açılış kaşlı ayracından bilinen karakter dizisini kullanın. `{` işaretleme uzantısı kapsamı ve bir kapanış küme ayracını girmek için `}` çıkmak için. .NET Framework XAML hizmetlerinde kullanırken bazı System.Xaml derlemesinden önceden tanımlanmış XAML dil biçimlendirme uzantıları kullanabilirsiniz. Alt sınıfı ayrıca <xref:System.Windows.Markup.MarkupExtension> sınıfı System.Xaml içinde tanımlanan ve kendi biçimlendirme uzantılarını tanımlayın. Veya zaten bu çerçeve başvurduğunuz, belirli bir framework tarafından tanımlanan biçimlendirme uzantıları kullanabilirsiniz.  
@@ -31,7 +31,7 @@ Biçimlendirme uzantıları, basit bir tür ya da özel bir XAML türü bir değ
  `x:Static` doğrudan bir özelliğin değerinin türü değildir, ancak bu türe hesaplanan değer türü kodu varlıkları statik değerlerini üretir. Bu, bir tür tanımı iyi bilinen sabitleri olarak zaten mevcut değerleri belirtmek için kullanışlıdır. Daha fazla bilgi için [x: Static işaretleme uzantısı](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` belirtir `null` XAML üyesi için bir değer olarak. Belirli türlerini ya da daha büyük framework kavramlarını tasarımına `null` her zaman bir özellik için varsayılan değer veya zımni bir boş dize özniteliğinin değerini değil. Daha fazla bilgi için [x: Null işaretleme uzantısı](x-null-markup-extension.md).  
+ `x:Null` Belirtir `null` XAML üyesi için bir değer olarak. Belirli türlerini ya da daha büyük framework kavramlarını tasarımına `null` her zaman bir özellik için varsayılan değer veya zımni bir boş dize özniteliğinin değerini değil. Daha fazla bilgi için [x: Null işaretleme uzantısı](x-null-markup-extension.md).  
   
 ### <a name="xarray"></a>x: Array  
  `x:Array` XAML söz dizimi temel öğeleri ve denetim modelleri tarafından sağlanan koleksiyon desteğiyle kasıtlı olarak değil kullanıldığı durumlarda genel diziler oluşturulmasını destekler. Daha fazla bilgi için [x: Array işaretleme uzantısı](x-array-markup-extension.md). XAML 2009 dil temelleri yerine bir uzantısı olarak diziler özellikle erişilir. Daha fazla bilgi için [XAML 2009 dil özellikleri](xaml-2009-language-features.md).  
@@ -155,6 +155,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
  XAML düğümü akışı ile kaydetme üzerinde çalışıyorsanız yolu, genellikle bir şey yok seri hale getirilecek nesne biçimlendirme uzantısı kullanımı tarafından başlangıçta sağlanan konusunda bilgilendiren bir nesne grafiği gösterimi mevcut ve bir `ProvideValue` sonucu. Ayrıca diğer değişiklikler Nesne grafiği yakalama orijinal biçimlendirme uzantısı kullanımı bilgisi koruma için kendi teknikleri bulmanız gerekir ancak gidiş dönüşü için işaretleme uzantısı kullanımları kalıcı hale getirmek için gereken senaryolarda XAML girin. Örneğin, biçimlendirme uzantısı kullanımı geri yüklemek için Kaydet düğümü akışı ile çalışmak ihtiyacınız biçimlendirme uzantısı kullanımı geri yükleyin veya birleştirme özgün XAML gidiş dönüşlü XAML arasındaki herhangi bir türde gerçekleştirmek için yol. Bazı WPF XAML uygulama çerçevelerini Ara türler (ifadeler) burada biçimlendirme uzantısı kullanımı değerleri sağlanan durumları temsil etmek için kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](type-converters-and-markup-extensions-for-xaml.md)
-- [İşaretleme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Biçimlendirme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213135"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Yönetim Türü Kesin Belirlenmiş Sınıf Oluşturucu)
 Yönetim Kesin Belirlenmiş Sınıf Üreticisi aracı, belirtilen bir Windows Yönetim Araçları (WMI) sınıfı için erken bağlı yönetilen bir sınıfı hızlı bir şekilde üretmenize olanak tanır. Oluşturulan sınıf, WMI sınıfının bir örneğine erişmek için yazmanız gereken kodu basitleştirir.  
@@ -32,17 +32,17 @@ WMIClass [options]
   
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
-|*Wmıclass*|Kendisi için erken bağlı yönetilen bir sınıf oluşturulacak Windows Yönetim Araçları sınıfı.|  
+|*WMIClass*|Kendisi için erken bağlı yönetilen bir sınıf oluşturulacak Windows Yönetim Araçları sınıfı.|  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/l***dil* |Erken bağlı yönetilen sınıfın oluşturulacağı dili belirtir. Belirtebileceğiniz **CS** (C#; varsayılan), **VB** (Visual Basic) **MC** (C++) veya **JS** (JScript) dil bağımsız değişken olarak.|  
-|**/m***makine* |WMI sınıfının bulunduğu, bağlanılacak bilgisayarı belirtir. Varsayılan, yerel bilgisayardır.|  
-|**/n***yolu* |WMI sınıfını içeren WMI ad alanına giden yolu belirtir. Bu seçeneği belirtmezseniz, araç için kod oluşturur. *Wmıclass* varsayılan **root\cımv2** ad alanı.|  
-|**/o***classnamespace* |Yönetilen kod sınıfının içinde üretileceği .NET ad alanını belirtir. Bu seçeneği belirtmezseniz, araç ad alanını WMI ad alanını ve şema önekini kullanarak üretir. Şema öneki, sınıf adının alt çizgi karakterinden önce gelen parçasıdır. Örneğin, **Win32_OperatingSystem** sınıfını **root\cımv2** ad oluşturma aracı sınıfında **kök. CIMV2. Win32**.|  
-|**/p***dosya yolu* |Üretilen kodun içinde kaydedileceği dosyanın yolunu belirtir. Bu seçeneği belirtmezseniz, araç dosyayı geçerli dizinde oluşturur. Oluşturur sınıfını kullanarak dosya ve sınıf adları *Wmıclass* bağımsız değişken. Sınıfın ve dosyanın adı olan adı ile aynı *Wmıclass.* Varsa *Wmıclass* bir alt çizgi karakteri içeren sınıf adının alt çizgi karakterinden parçası Aracı'nı kullanır. Örneğin, varsa *Wmıclass* addır biçiminde **Win32_LogicalDisk**, üretilen sınıf ve dosya "logicaldisk" olarak adlandırılır. Bir dosya zaten varsa, araç varolan dosyanın üzerine yazar.|  
-|**/pw***parola* |Tarafından belirtilen bir bilgisayarda oturum açarken kullanılacak parolayı belirtir **/m** seçeneği.|  
-|**/u***kullanıcı adı* |Tarafından belirtilen bir bilgisayarda oturum açarken kullanılacak kullanıcı adını belirtir **/m** seçeneği.|  
+|**/l***dil*|Erken bağlı yönetilen sınıfın oluşturulacağı dili belirtir. Belirtebileceğiniz **CS** (C#; varsayılan), **VB** (Visual Basic) **MC** (C++) veya **JS** (JScript) dil bağımsız değişken olarak.|  
+|**/m***makine*|WMI sınıfının bulunduğu, bağlanılacak bilgisayarı belirtir. Varsayılan, yerel bilgisayardır.|  
+|**/n***yolu*|WMI sınıfını içeren WMI ad alanına giden yolu belirtir. Bu seçeneği belirtmezseniz, araç için kod oluşturur. *Wmıclass* varsayılan **root\cımv2** ad alanı.|  
+|**/o***classnamespace*|Yönetilen kod sınıfının içinde üretileceği .NET ad alanını belirtir. Bu seçeneği belirtmezseniz, araç ad alanını WMI ad alanını ve şema önekini kullanarak üretir. Şema öneki, sınıf adının alt çizgi karakterinden önce gelen parçasıdır. Örneğin, **Win32_OperatingSystem** sınıfını **root\cımv2** ad oluşturma aracı sınıfında **kök. CIMV2. Win32**.|  
+|**/p***dosya yolu*|Üretilen kodun içinde kaydedileceği dosyanın yolunu belirtir. Bu seçeneği belirtmezseniz, araç dosyayı geçerli dizinde oluşturur. Oluşturur sınıfını kullanarak dosya ve sınıf adları *Wmıclass* bağımsız değişken. Sınıfın ve dosyanın adı olan adı ile aynı *Wmıclass.* Varsa *Wmıclass* bir alt çizgi karakteri içeren sınıf adının alt çizgi karakterinden parçası Aracı'nı kullanır. Örneğin, varsa *Wmıclass* addır biçiminde **Win32_LogicalDisk**, üretilen sınıf ve dosya "logicaldisk" olarak adlandırılır. Bir dosya zaten varsa, araç varolan dosyanın üzerine yazar.|  
+|**/pw***parola*|Tarafından belirtilen bir bilgisayarda oturum açarken kullanılacak parolayı belirtir **/m** seçeneği.|  
+|**/u***kullanıcı adı*|Tarafından belirtilen bir bilgisayarda oturum açarken kullanılacak kullanıcı adını belirtir **/m** seçeneği.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -63,9 +63,9 @@ WMIClass [options]
 |CIM_SINT64|**Int64**|  
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Tek**|  
-|CIM_REAL64|**çift**|  
+|CIM_REAL64|**Çift**|  
 |CIM_BOOLEAN|**Boole değeri**|  
-|CIM_String|**dize**|  
+|CIM_String|**Dize**|  
 |CIM_DATETIME|**DateTime** veya **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  
@@ -151,6 +151,7 @@ public class App
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: 28a21aae7f8a08efebfd16bacd2a2d82b04de0c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360075"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222113"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Nasıl yapılır: Veri Koleksiyonunun Varsayılan Görünümünü Alma
 Görünümler, aynı veri koleksiyonunu sıralama, filtreleme ve gruplandırma ölçütü bağlı olarak farklı şekillerde görüntülenmesine izin verir. Her koleksiyon bir bağlama, kaynağı olarak bir koleksiyon belirttiğinde gerçek bağlama kaynağı olarak kullanılan bir paylaşılan varsayılan görünüme sahiptir. Bu örnek, koleksiyonunun varsayılan görünümünü alma gösterir.  
@@ -33,5 +33,6 @@ Görünümler, aynı veri koleksiyonunu sıralama, filtreleme ve gruplandırma �
  Koleksiyon görünümü tarafından sağlanan işlevselliği örnekleri için bkz: [görünümde verileri sıralama](how-to-sort-data-in-a-view.md), [görünümde veri filtreleme](how-to-filter-data-in-a-view.md), ve [Git aracılığıyla CollectionView içindeki nesneler veri](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XAML İçerisinde bir Görüntü Kullanarak Verileri Sıralama ve Gruplama](how-to-sort-and-group-data-using-a-view-in-xaml.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

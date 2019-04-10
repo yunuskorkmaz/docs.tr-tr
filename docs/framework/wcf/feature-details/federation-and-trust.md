@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-ms.openlocfilehash: 1f0872c9aea11a54860fe3075d2756691590e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225345"
 ---
 # <a name="federation-and-trust"></a>Federasyon ve Güven
 Bu konu, Federasyon uygulamalarına, güven sınırları ve yapılandırma ve verilen belirteçler Windows Communication Foundation (WCF) kullanımı ile ilgili çeşitli yönlerini kapsar.  
@@ -38,7 +38,8 @@ Bu konu, Federasyon uygulamalarına, güven sınırları ve yapılandırma ve ve
  Verilen bir belirteç bir istemciden bir Federasyon uç noktası için gönderilen bir iletinin serileştirildiği veya ayarı denetlenen <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> özelliği <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> sınıfı. Bu özellik, birine ayarlanabilir <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode> numaralandırma değerlerinin, ancak en federe senaryolarda yararlı değildir. `SecurityTokenInclusionMode.Never` Ve `SecurityTokenInclusionMode.AlwaysToInitiator` değerler için bağlı olan taraf güvenlik belirteci hizmeti tarafından verilen belirtecin bir başvuru göndermek istemci neden olur. Bağlı olan taraf verilen belirteç kimlik doğrulaması bir kopyasını sahip olduğu sürece, belirteç başvurusu çözümlenebilir olmadığı için başarısız olur. WCF işler `SecurityTokenInclusionMode.Once` eşdeğer olarak `SecurityTokenInclusionMode.AlwaysToRecipient`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>
-- [Nasıl yapılır: Federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: WSFederationHttpBinding Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

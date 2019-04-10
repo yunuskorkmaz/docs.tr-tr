@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: WCF hizmetlerine tek yönlü ve istek-yanıt sözleşmeleriyle'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: f74f874d43698955cce0ae14791a9d6b748ef919
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 84b8f7c44c8124c1a150304dea0f08a0087752bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217035"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Nasıl yapılır: WCF hizmetlerine tek yönlü ve istek-yanıt sözleşmeleriyle
 Aşağıdaki yordamlar, bir Windows Communication Foundation (WCF) hizmetine erişmek için tek yönlü sözleşme ve istek-yanıt sözleşmesi tanımlayan ve çift yönlü iletişim deseni kullanmaz nasıl açıklar.  
@@ -401,4 +401,5 @@ namespace Microsoft.ServiceModel.Samples
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Tek Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/one-way-services.md)

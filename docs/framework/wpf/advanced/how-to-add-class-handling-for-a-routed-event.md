@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Gönderilmiş bir Olay için Sınıf İşleme Ekleme'
+title: 'Nasıl yapılır: Yönlendirilmiş Olay için Sınıf İşleme Ekleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-ms.openlocfilehash: 8c973871336c3389161ce25ae52d2dfaef9c53a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224279"
 ---
-# <a name="how-to-add-class-handling-for-a-routed-event"></a>Nasıl yapılır: Gönderilmiş bir Olay için Sınıf İşleme Ekleme
+# <a name="how-to-add-class-handling-for-a-routed-event"></a>Nasıl yapılır: Yönlendirilmiş Olay için Sınıf İşleme Ekleme
 Yönlendirilmiş olaylar, sınıf veya örnek işleyicileri verilen herhangi bir düğümde rotadaki tarafından işlenebilir. Sınıf işleyicileri önce çağrılır ve olayların örnek işlemesini gizlemenize veya temel sınıflar tarafından sahip olunan olayları Olay belirli davranışları tanıtmak için sınıf uygulamaları tarafından kullanılabilir. Bu örnekte, sınıf işleyicileri uygulamak için yakından ilgili iki teknik gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
@@ -33,7 +33,8 @@ Yönlendirilmiş olaylar, sınıf veya örnek işleyicileri verilen herhangi bir
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.EventManager>
-- [Yönlendirilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](marking-routed-events-as-handled-and-class-handling.md)
+- [Gönderilmiş Olayları İşlenmiş Olarak İşaretleme ve Sınıf İşlemesi](marking-routed-events-as-handled-and-class-handling.md)
 - [Yönlendirilmiş Olayı İşleme](how-to-handle-a-routed-event.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)

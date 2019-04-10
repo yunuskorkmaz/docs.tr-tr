@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir sınıf veya yapı için temel veri sözleşmesi oluşturma'
+title: 'Nasıl yapılır: Bir Sınıf veya Yapı için Temel Bir Veri Sözleşmesi Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: 29105b7f3177403aacf5f8e628f2dceda4e26354
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b46273c468891aa2b18c04adc1ee035c98255ded
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747875"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220519"
 ---
-# <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Nasıl yapılır: Bir sınıf veya yapı için temel veri sözleşmesi oluşturma
+# <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Nasıl yapılır: Bir Sınıf veya Yapı için Temel Bir Veri Sözleşmesi Oluşturma
 Bu konu, temel bir sınıf veya yapıda kullanarak bir veri sözleşmesi oluşturma adımlarını gösterir. Veri sözleşmeleri ve bunların nasıl kullanıldığı hakkında daha fazla bilgi için bkz. [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Temel Windows Communication Foundation (WCF) hizmet ve istemci oluşturma adımlarında size kılavuzluk eder bir öğretici için bkz [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md). Bir temel hizmet ve istemci oluşan bir çalışan örnek uygulama için bkz. [temel veri anlaşması](../../../../docs/framework/wcf/samples/basic-data-contract.md).  
@@ -37,8 +37,9 @@ Bu konu, temel bir sınıf veya yapıda kullanarak bir veri sözleşmesi oluştu
  [!code-vb[DataContractAttribute#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/datacontractattribute/vb/overview.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Sözleşmelerini Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md)
 - [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)

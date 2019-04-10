@@ -1,5 +1,5 @@
 ---
-title: ICorDebugManagedCallback::UnloadAssembly Yöntemi
+title: Icordebugmanagedcallback::unloadassembly yöntemi
 ms.date: 03/30/2017
 api_name:
 - ICorDebugManagedCallback.UnloadAssembly
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef4d7993269aa606aa6b22a1544bc2d04d9e6e93
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6e770602858761dbcf15c233dceebfd35be106aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214137"
 ---
-# <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly Yöntemi
+# <a name="icordebugmanagedcallbackunloadassembly-method"></a>Icordebugmanagedcallback::unloadassembly yöntemi
 Hata ayıklayıcı, bir ortak dil çalışma zamanı derlemesi kaldırıldı bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -56,5 +56,6 @@ HRESULT UnloadAssembly (
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LoadAssembly Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)
 - [ICorDebugManagedCallback Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

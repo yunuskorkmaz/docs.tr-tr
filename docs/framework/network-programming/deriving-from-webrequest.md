@@ -1,5 +1,5 @@
 ---
-title: Webrequest'ten türetme
+title: WebRequest’ten Türetme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WebRequest class, pluggable protocols
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: f840e042321b636443b6763e168abd144b05edae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8e7c1d2943dcbfa8d9faa0b2e53bae57c767101
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216492"
 ---
-# <a name="deriving-from-webrequest"></a>Webrequest'ten türetme
+# <a name="deriving-from-webrequest"></a>WebRequest’ten Türetme
 <xref:System.Net.WebRequest> .NET Framework takılabilir Protokolü modeli uyan bir protokole özgü istek işleyicisi oluşturmak için temel yöntemleri ve özellikleri sağlayan soyut bir temel sınıfı. Kullanan uygulamalar **WebRequest** sınıfı, kullanılan protokolü belirtmek için gerek kalmadan herhangi bir desteklenen protokolünü kullanarak veri isteyebilir.  
   
  İki ölçütü, takılabilir bir protokolü olarak kullanılmak üzere bir protokole özgü sınıfı için sırayla karşılanmalıdır: Sınıf uygulamalıdır <xref:System.Net.IWebRequestCreate> arabirimi ve kaydetmeniz gerekir ile <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> yöntemi. Sınıfı, tüm soyut yöntemlerini ve özelliklerini geçersiz kılmanız gerekir **WebRequest** takılabilir arabirim sağlamak için.  
@@ -89,6 +89,7 @@ ms.locfileid: "54717460"
  **GetResponse yanıtına** yöntemdir uygun bir oluşturmaktan sorumlu **WebResponse** gelen yanıtı içeren alt.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.FileWebRequest>

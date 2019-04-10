@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 204c2dfbf28f95c1b8c2d2c1b757730e64a8e91d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6fa729b131d12b2825a2def700fd918ce8acc40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220181"
 ---
 # <a name="callid-structure"></a>CALL_ID Yapısı
 Bir hata ayıklayıcı çağrılan bir işlev hakkında bilgi sağlar. Bkz: [Inotifysink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) daha fazla bilgi için arabirim.  
@@ -55,5 +55,6 @@ typedef struct tagCALL_ID
  **Üst bilgi:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [INotifySink2 Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [Tanılama Simge Deposu Yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [Tanılama Sembol Deposu Yapıları](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11002ac57a37b3c9ab0badfab49bb9049b0dfa79
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4221dbea2b5ad98f889e04eb8a9b6d992b59066e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212303"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration işlevi
 Bir numaralandırıcı geri numaralandırma başlangıç durumuna sıfırlar.  
@@ -96,7 +96,6 @@ Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Sabit listesi sınıfı, değiştiren veya tanımlanan özelliklere sınırlayın. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Temel sınıftan devralınan özellikler için sabit sınırlar. |
-
 
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  

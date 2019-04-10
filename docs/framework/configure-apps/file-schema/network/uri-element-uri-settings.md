@@ -1,13 +1,13 @@
 ---
-title: <Uri> Öğesi (Uri Ayarları)
+title: <Uri> Öğesi (Uri ayarları)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: f432be7594b1659dfcae0c6eee706358230f2cbb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1f3573babd2e363a78f0ad454f0ba36c87ba6390
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212150"
 ---
 # <a name="uri-element-uri-settings"></a>\<URI > öğesi (Uri ayarları)
 .NET Framework web adresleri Tekdüzen Kaynak Tanımlayıcıları (URI'lar) kullanılarak ifade nasıl işlediğini belirten ayarları içerir.  
@@ -42,7 +42,7 @@ ms.locfileid: "55269256"
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[Yapılandırma](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
+|[yapılandırma](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `uri` Ögesinin üyeleri için ayarları <xref:System.Uri> sınıfları tarafından kullanılan sınıf <xref:System.Net> ad alanı. IRI ve IDN desteğini ayarlarını yapılandırın.  
@@ -68,4 +68,5 @@ ms.locfileid: "55269256"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

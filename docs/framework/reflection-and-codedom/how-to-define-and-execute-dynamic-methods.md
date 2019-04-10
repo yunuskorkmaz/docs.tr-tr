@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Dinamik yöntemleri tanımlama ve yürütme'
+title: 'Nasıl yapılır: Dinamik Yöntemleri Tanımlama ve Yürütme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f24d3e456285efe694e598aa3d435fc15341283
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: aa7d77509a80ce67ee97abf648036ebb26b6f4c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211497"
 ---
-# <a name="how-to-define-and-execute-dynamic-methods"></a>Nasıl yapılır: Dinamik yöntemleri tanımlama ve yürütme
+# <a name="how-to-define-and-execute-dynamic-methods"></a>Nasıl yapılır: Dinamik Yöntemleri Tanımlama ve Yürütme
 Aşağıdaki yordamlar tanımlama ve basit bir dinamik yöntem ve bir sınıfın bir örneğine bağlı olarak dinamik bir yöntem yürütme işlemini göstermektedir. Dinamik yöntemler hakkında daha fazla bilgi için bkz. <xref:System.Reflection.Emit.DynamicMethod> sınıfı ve [yansıma yayma dinamik yöntem senaryoları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Dinamik bir yöntem tanımlayıp  
@@ -123,6 +123,7 @@ Aşağıdaki yordamlar tanımlama ve basit bir dinamik yöntem ve bir sınıfın
 -   Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Reflection.Emit.DynamicMethod>
-- [Yansıma yaymanın](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
-- [Yansıma yayma dinamik yöntem senaryoları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))
+- [Yansıma Yaymanın Kullanımı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [Yansıma Yayma Dinamik Yöntem Senaryoları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))

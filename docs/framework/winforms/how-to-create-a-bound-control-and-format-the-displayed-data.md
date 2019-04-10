@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Bağlantılı denetim oluşturma ve görüntülenen verileri biçimlendirme'
+title: 'Nasıl yapılır: Bağlantılı Denetim Oluşturma ve Görüntülenen Verileri Biçimlendirme'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0f56fc5fa345cbe4584b61ae2622dfb0dfb35be8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225540"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Nasıl yapılır: Bağlantılı denetim oluşturma ve görüntülenen verileri biçimlendirme
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Nasıl yapılır: Bağlantılı Denetim Oluşturma ve Görüntülenen Verileri Biçimlendirme
 Windows Forms veri bağlama ile kullanarak bir veri bağlı denetim içinde görüntülenen verileri biçimlendirebilirsiniz **biçimlendirme ve Gelişmiş bağlama** iletişim kutusu.  
   
 > [!NOTE]
@@ -55,6 +55,7 @@ Windows Forms veri bağlama ile kullanarak bir veri bağlı denetim içinde gör
 8.  Tıklayın **Tamam** kapatmak için **biçimlendirme ve Gelişmiş bağlama** iletişim kutusu ve Özellikler penceresinin başı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bir Windows formunda basit bağlantılı denetim oluşturma](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+
+- [Nasıl yapılır: Windows Forms’ta Basit Bağlantılı Denetim Oluşturma](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Windows Forms'ta Kullanıcı Girdisi Doğrulama](user-input-validation-in-windows-forms.md)
 - [Windows Forms Veri Bağlama](windows-forms-data-binding.md)

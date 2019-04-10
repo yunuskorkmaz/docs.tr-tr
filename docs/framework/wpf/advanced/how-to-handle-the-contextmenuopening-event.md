@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 077a28f345b886fd9ec183b5828c0535ce688cb4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a6ac0158c4fb9d766fd56ee50d0b1b6cc91e5de3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219635"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Nasıl yapılır: ContextMenuOpening Olayını İşleme
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Olay ya da bir var olan bağlam menüsü önceki görüntülemek veya ayarlayarak görüntülenen menüyü bastırmak için ayarlamak için bir uygulama işlenebilir <xref:System.Windows.RoutedEventArgs.Handled%2A> özelliğini `true` içinde olay verileri. Ayar tipik nedeni <xref:System.Windows.RoutedEventArgs.Handled%2A> için `true` olay menü tamamen yeni ile değiştirilecek verilerdir <xref:System.Windows.Controls.ContextMenu> işlemi iptal ediliyor ve yeni bir açık başlatma bazen gerektiren, nesne. İçin işleyiciler yazarsanız <xref:System.Windows.FrameworkElement.ContextMenuOpening> olay olmanız gerekir zamanlama sorunları arasında farkında bir <xref:System.Windows.Controls.ContextMenu> denetimi ve açma ve genel denetimlerin bağlam menülerini konumlandırma sorumlu hizmeti. Bu konuda çeşitli bağlam menüsü açma senaryoları için kod yöntemlerden bazıları gösterilmektedir ve burada zamanlama sorunu devreye bir durumu gösterir.  
@@ -56,7 +56,8 @@ ms.locfileid: "57364846"
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>
 - [Temel Öğelere Genel Bakış](base-elements-overview.md)
-- [ContextMenu Genel Bakış](../controls/contextmenu-overview.md)
+- [ContextMenu Genel Bakışı](../controls/contextmenu-overview.md)

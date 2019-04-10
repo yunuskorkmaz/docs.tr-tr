@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210678"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Sözleşme ve Hizmetlerde Hataları Belirtme ve İşleme
 Windows Communication Foundation (WCF) uygulamaları, SOAP hatası nesneleri ve SOAP hatası nesneleri yönetilen özel durum nesnelere yönetilen özel durum nesneleri eşleyerek hata durumları işleyin. Bu bölümdeki konular, hata ortaya çıkarmak için sözleşmeler tasarlamak nasıl özel SOAP hataları olarak koşulları, bu tür hataları hizmeti uygulamasının bir parçası olarak döndürülecek nasıl ve istemciler bu tür hataları nasıl catch tartışın.  
@@ -56,6 +56,7 @@ Windows Communication Foundation (WCF) uygulamaları, SOAP hatası nesneleri ve 
  Hatalı sözleşme işlenirken WCF ilk SOAP iletisi hata sözleşme adı hataya sözleşme türüyle eşleştirmeye çalışır. Ardından listesini arar tam bir eşleşme bulamazsa, uyumlu bir tür için alfabetik sırayla kullanılabilir hata daraltır. İki arıza durumunda sözleşmelerinin (biridir, başka bir alt örneğin) uyumlu türleridir yanlış türde hata seri için kullanılabilir. Hatalı sözleşme adı, ad alanı ve eylem belirtmezse yalnızca gerçekleşir. Bu sorunun oluşmasını önlemek için her zaman tam adı, ad alanı ve eylem öznitelikleri belirterek hata sözleşmelerine nitelendirin. İlgili hata sözleşmelerine paylaşılan bir temel sınıftan türetilmiş bir dizi tanımladıysanız, ayrıca tüm yeni üyeleri ile işaretlenecek emin olun `[DataMember(IsRequired=true)]`. Bunun hakkında daha fazla bilgi için `IsRequired` özniteliği bakın <xref:System.Runtime.Serialization.DataMemberAttribute>. Uyumlu bir türde bir temel sınıf engellemek ve doğru türetilmiş türe seri durumdan hata zorlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>

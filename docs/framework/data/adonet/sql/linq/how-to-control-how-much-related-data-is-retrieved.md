@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Ne kadar ilgili verilerin alındığını denetleme'
+title: 'Nasıl yapılır: Ne Kadar İlgili Verilerin Alındığını Denetleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 3b52e2cdefefce011be7d729569b76f919f9bb33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd59c09185eab003274614dcc30393b060e6b7c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715614"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215449"
 ---
-# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Nasıl yapılır: Ne kadar ilgili verilerin alındığını denetleme
+# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Nasıl yapılır: Ne Kadar İlgili Verilerin Alındığını Denetleme
 Kullanım <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> ilgili ana hedefiniz için hangi verileri belirtmek için yöntem aynı zamanda alınan. Örneğin, müşteri siparişlerinin hakkında bilgi gerekir biliyorsanız, kullanabileceğiniz <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> sipariş bilgileri, aynı zamanda müşteri bilgileri alınır emin olmak için. Bu yaklaşım yalnızca bir dönüş içinde iki bilgi veritabanına sonuçlanır.  
   
 > [!NOTE]
@@ -25,4 +25,5 @@ Kullanım <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> ilgili ana hedefin
  [!code-vb[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veritabanını Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 0568e72e6d686ce08e6bd802f273e45dd623524b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218777"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Ekran Kaleminden Gelen Girişi Önleme
 <xref:System.Windows.Input.StylusPlugIns> Mimari üzerinde alt düzey denetimi uygulamak için bir mekanizma sağlar <xref:System.Windows.Input.Stylus> giriş ve dijital mürekkep oluşturulmasını <xref:System.Windows.Ink.Stroke> nesneleri. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Sınıfı özel davranış uygulayan ve en iyi performans için ekran kalemi aygıttan gelen veri akışını uygulamak için bir mekanizma sağlar.  
@@ -71,5 +71,6 @@ ms.locfileid: "57374316"
  Kendi türetme tarafından <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> sınıfları ve ekleyerek <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> koleksiyonları, dijital mürekkep davranışını büyük ölçüde geliştirebilirsiniz. Erişiminiz <xref:System.Windows.Input.StylusPoint> veri olarak üretilir, özelleştirme fırsatı verir <xref:System.Windows.Input.Stylus> giriş. Alt düzey erişiminiz olduğundan <xref:System.Windows.Input.StylusPoint> veri, uygulamanız için mürekkep toplama ve işleme en iyi performans ile uygulayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Gelişmiş Mürekkep İşleme](advanced-ink-handling.md)
 - [Erişim ve kalem girişi düzenleme](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

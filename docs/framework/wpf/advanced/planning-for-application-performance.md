@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210210"
 ---
 # <a name="planning-for-application-performance"></a>Uygulama Performansını Planlama
 Ne kadar iyi performans stratejinizi geliştirmek başarım hedeflerinizi başarısını bağlıdır. Planlama herhangi bir ürün geliştirmeye ilk aşamasıdır. Bu konu, iyi bir performans stratejisi geliştirme için birkaç basit kuralları açıklar.  
@@ -33,6 +33,7 @@ Ne kadar iyi performans stratejinizi geliştirmek başarım hedeflerinizi başar
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimleri geniş yayılım özelleştirmesi, denetim davranışlarını değiştirmeden, görünüm için izin vererek kendiliğinden genişletilebilir. Denetim şablonları stiller ve veri şablonları yararlanarak, oluşturabilir ve artımlı olarak özelleştirilebilen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] performans gereksinimlerinizi uyum sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
 - [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)
 - [Düzen ve Tasarım](optimizing-performance-layout-and-design.md)

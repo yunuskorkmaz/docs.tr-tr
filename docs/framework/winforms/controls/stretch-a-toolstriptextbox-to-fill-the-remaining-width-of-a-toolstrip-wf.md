@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-ms.openlocfilehash: 7a557a3d278c2b6d8d083b2ebf8c8129bc498afa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 707fd2e470a9be1d61d2878eeff845b3cad270db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223582"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Nasıl yapılır: Bir toolstrip'nin kalan genişliğini (Windows Forms) doldurmak için
 Ayarladığınızda <xref:System.Windows.Forms.ToolStrip.Stretch%2A> özelliği bir <xref:System.Windows.Forms.ToolStrip> denetimini `true`, denetimi uçtan uca, kapsayıcı doldurur ve kapsayıcısı boyutlandırdığında yeniden boyutlandırır. Bu yapılandırmada, bir öğesi denetiminde gibi esnetme yararlı bir <xref:System.Windows.Forms.ToolStripTextBox>kullanılabilir alanı dolduracak şekilde ve denetim boyutlandırdığında yeniden boyutlandırabilirsiniz. Görünümünü ve davranışını Microsoft® Internet Explorer Adres çubuğuna benzer elde etmek istiyorsanız bu uzatma gibi yararlı olur.  
@@ -30,9 +30,10 @@ Ayarladığınızda <xref:System.Windows.Forms.ToolStrip.Stretch%2A> özelliği 
 -   Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ToolStripTextBox>
 - <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=nameWithType>
-- [ToolStrip Denetim, Mimarisi](toolstrip-control-architecture.md)
-- [Nasıl yapılır: Bir StatusStrip içinde Spring özelliğini etkileşimli kullanma](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)
+- [ToolStrip Denetim Mimarisi](toolstrip-control-architecture.md)
+- [Nasıl yapılır: Bir StatusStrip içinde Spring Özelliğini Etkileşimli Kullanma](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)

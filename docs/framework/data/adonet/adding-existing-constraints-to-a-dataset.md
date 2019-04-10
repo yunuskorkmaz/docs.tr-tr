@@ -1,18 +1,18 @@
 ---
-title: DataSet'e var olan kısıtlamaları ekleme
+title: DataSet’e Var Olan Kısıtlamaları Ekleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 39b1e9945a1cf6cd847fbe82c0b29e50f23bf785
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210561"
 ---
-# <a name="adding-existing-constraints-to-a-dataset"></a>DataSet'e var olan kısıtlamaları ekleme
+# <a name="adding-existing-constraints-to-a-dataset"></a>DataSet’e Var Olan Kısıtlamaları Ekleme
 **Dolgu** yöntemi **DataAdapter** dolduran bir <xref:System.Data.DataSet> yalnızca tablo sütunları ve satırları bir veri kaynağından; ile ancak kısıtlamaları yaygın olarak ayarlanmış veri kaynağı tarafından **doldurun** yöntemi için bu şema bilgileri eklemez **veri kümesi** varsayılan olarak. Doldurmak için bir **veri kümesi** bir veri kaynağından varolan birincil anahtar kısıtlaması bilgilerle çağrısı yapabilirsiniz **FillSchema** yöntemi **DataAdapter**, veya ayarlama **MissingSchemaAction** özelliği **DataAdapter** için **AddWithKey** çağırmadan önce **dolgu**. Bu birincil anahtara sağlayacak kısıtlamalarını **veri kümesi** bu veri kaynağında yansıtır. Yabancı anahtar kısıtlaması bilgileri dahil değildir ve açıkça gösterildiği oluşturulmalıdır [DataTable kısıtlamaları](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
   
  Şema bilgileri ekleme bir **veri kümesi** verilerle doldurma birincil anahtar kısıtlamalarını birlikte olmasını sağlar önce <xref:System.Data.DataTable> nesneler **veri kümesi**. Sonuç olarak, ek zaman doldurmak için çağrıları **veri kümesi** yapılır, birincil anahtar sütun bilgileri, veri kaynağından yeni satırlar her geçerli satır ile eşleştirmek için kullanılır **DataTable**ve geçerli verileri tablolar, veri kaynağı ile yazılır. Veri kaynağından yeni satırlar eklenir şema bilgileri **veri kümesi**, yinelenen satırları imzalanmayarak.  
@@ -61,6 +61,7 @@ custAdapter.Fill(custDataSet, "Customers");
 >  Varsa **FillSchema** yöntemi **OleDbDataAdapter** nesne birden çok sonuç kümesi döndüren bir komut çağrıldığında, yalnızca şema bilgileri ilk sonuç kümesinden döndürülür. Birden çok sonuç için şema bilgileri döndüren zaman ayarlar kullanarak **OleDbDataAdapter**, belirttiğiniz önerilir bir **MissingSchemaAction** , **AddWithKey** ve şema bilgilerini çağrılırken elde **dolgu** yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

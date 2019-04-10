@@ -1,15 +1,15 @@
 ---
-title: Durum makinesi iş akışları
+title: Durum Makinesi İş Akışları
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222997"
 ---
-# <a name="state-machine-workflows"></a>Durum makinesi iş akışları
+# <a name="state-machine-workflows"></a>Durum Makinesi İş Akışları
 Bir Durum makinesi programlar geliştirmek için iyi bilinen bir örnektir. <xref:System.Activities.Statements.StateMachine> Etkinliği ile birlikte <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, ve diğer etkinlikleri Durum makinesi iş akışı programlar oluşturmak için kullanılabilir. Bu konu, durum makine iş akışları oluşturmaya genel bir bakış sağlar.  
   
 ## <a name="state-machine-workflow-overview"></a>Durum makinesi iş akışı genel bakış  
@@ -101,7 +101,8 @@ Bir Durum makinesi programlar geliştirmek için iyi bilinen bir örnektir. <xre
  Durum makinesi tamamlama belirten bir durum.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bir Durum makinesi iş akışı oluşturma](how-to-create-a-state-machine-workflow.md)
+
+- [Nasıl yapılır: Durum Makinesi İş Akışı Oluşturma](how-to-create-a-state-machine-workflow.md)
 - [StateMachine Etkinlik Tasarımcısı](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [State Etkinlik Tasarımcısı](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState Etkinlik Tasarımcısı](/visualstudio/workflow-designer/finalstate-activity-designer)

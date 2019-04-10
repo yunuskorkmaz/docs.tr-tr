@@ -1,15 +1,15 @@
 ---
-title: Windows Workflow'a genel bakış
+title: Windows Workflow’a Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: 049d955b191e14ac79702df3fe218e23a555e6d3
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 57c394805d4aa07f8a137af259619bb1e65c43de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217607"
 ---
-# <a name="windows-workflow-overview"></a>Windows Workflow'a genel bakış
+# <a name="windows-workflow-overview"></a>Windows Workflow’a Genel Bakış
 Bir iş akışı olarak adlandırılan elemental birimler kümesidir *etkinlikleri* gerçek hayattaki bir işleme açıklayan model olarak depolanır. İş akışları yürütme düzenini ve kısa veya uzun süren iş parçaları arasındaki bağımlı ilişkileri açıklamak için bir yol sağlar. Bu iş modeliyle baştan geçirir ve etkinlikleri sistem işlevlerini veya kişiler tarafından yürütülmesi gerekir.  
   
 ## <a name="workflow-run-time-engine"></a>İş akışı çalışma zamanı altyapısı  
@@ -42,4 +42,5 @@ Ana bilgisayar işlemdeki iş akışı bileşenleri
 -   Öğesinden türetilen özel bir etkinlik <xref:System.Activities.CodeActivity> soyut sınıf. <xref:System.Activities.CodeActivity> Çalışma zamanı özelliklerine (örneğin, izleme ve Özellikler) erişebilirsiniz kullanarak <xref:System.Activities.CodeActivityContext> bir parametresi olarak kullanılabilen <xref:System.Activities.CodeActivity.Execute%2A> yöntemi. Bu çalışma zamanı özellikleri hakkında daha fazla bilgi için bkz: [takip ve izleme iş akışı](workflow-tracking-and-tracing.md) ve [iş akışı yürütme özellikleri](workflow-execution-properties.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [BizTalk Server 2006 veya WF? Projeniz için doğru iş akışı aracı seçme](https://go.microsoft.com/fwlink/?LinkId=154901)

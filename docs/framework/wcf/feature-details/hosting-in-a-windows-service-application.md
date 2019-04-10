@@ -2,12 +2,12 @@
 title: Windows Hizmet Uygulamasında Barındırma
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 52c62ef1be7dafc97c5cf958f30444e47f900e92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5cd5a8bd198fe4f2f8cc26a9937029b578eff2e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216762"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows Hizmet Uygulamasında Barındırma
 (Eski adıyla Windows NT Hizmetleri da bilinir) Windows hizmetleri sağlayan bir işlem modeli özellikle uzun süre çalışan bir yürütülebilir dosya bulunmalıdır ve herhangi bir biçimde kullanıcı arabirimi gösterme uygulamalar için uygundur. Hizmet uygulaması başlatmaya olanak tanıyan hizmet denetimi yöneticisi tarafından (SCM), yönetilen bir Windows işlem ömrü durdurun ve Windows hizmeti uygulamalarını duraklatma. "Always on" uygulamalar için uygun bir barındırma ortamı yapmadan bilgisayar başlatıldığında otomatik olarak başlayacak şekilde bir Windows hizmeti işlemi yapılandırabilirsiniz. Windows hizmeti uygulamaları hakkında daha fazla bilgi için bkz: [Windows hizmet uygulamaları](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -37,9 +37,10 @@ ms.locfileid: "54621984"
      WCF hizmetleri barındıran Windows hizmeti uygulamaları dağıtılır ve haline getirmez Windows hizmet uygulamaları WCF kullanmak gibi aynı şekilde yönetilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceProcess>
 - [İzlenecek yol: Bileşen tasarımcısında Windows hizmeti uygulaması oluşturma](https://go.microsoft.com/fwlink/?LinkId=94875)
-- [Nasıl yapılır: Yönetilen bir Windows hizmetinde bir WCF Hizmeti barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Windows Hizmet Konağı](../../../../docs/framework/wcf/samples/windows-service-host.md)
 - [Hizmet Uygulaması Programlama Mimarisi](https://go.microsoft.com/fwlink/?LinkId=94876)
 - [Windows Server App Fabric barındırma özellikleri](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 219c710e8552ae3291c2b144c6048f4ff6710540
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221606"
 ---
 # <a name="generics-in-xaml"></a>XAML'deki Genel Türler
 .NET Framework XAML System.Xaml içinde uygulandığı şekilde hizmetleri genel CLR Türleri kullanma desteği sağlar. Bu destek sınırlamalar genel türler tür bağımsız değişkeni belirtmek ve uygun çağırarak kısıtlamanın zorlanması içerir `Add` genel koleksiyon çalışmaları için yöntemi. Bu konuda, kullanma ve XAML genel türleri başvuran yönleri açıklanmaktadır.  
@@ -43,6 +43,7 @@ ms.locfileid: "58048911"
  Windows Workflow Foundation için özel iş akışlarında [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] genel XAML kullanımını desteklemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [x:TypeArguments Yönergesi](x-typearguments-directive.md)
 - [x:Class Yönergesi](x-class-directive.md)
 - [XAML Dili Ortak Temelleri İçin Yerleşik Türler](built-in-types-for-common-xaml-language-primitives.md)

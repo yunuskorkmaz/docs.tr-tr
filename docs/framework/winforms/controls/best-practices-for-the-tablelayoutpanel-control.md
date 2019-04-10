@@ -14,12 +14,12 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-ms.openlocfilehash: 6be6d0904d5b52e5188f0a5a16aaefa08265379c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222334"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel Denetimi için En İyi Yöntemler
 <xref:System.Windows.Forms.TableLayoutPanel> Denetim dikkatli bir şekilde Windows formlarınızı kullanmadan önce dikkate almanız gereken güçlü düzen özelliklerini sağlar.  
@@ -56,5 +56,6 @@ ms.locfileid: "54674199"
  <xref:System.Windows.Forms.TableLayoutPanel> Denetimi Windows Form Tasarımcısı'nda görsel devralmayı desteklemez. A <xref:System.Windows.Forms.TableLayoutPanel> "tasarım zamanında kilitli gibi" Denetim türetilmiş bir sınıf içinde görünür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>

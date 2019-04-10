@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841172"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212290"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma
 Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici** iletişim kutusu. Bununla, diğer çözümlere önceden oluşturduğunuz kodu veya kullanıcı arabirimi (UI) avantajlarından yararlanabilirsiniz.  
@@ -57,7 +57,8 @@ Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici
     >  Standart denetimler ve Windows Forms bileşenleri ile devralınan denetimler ve bileşenler birleştirdiğinizde çakışmaları z-sıralamasıyla ile karşılaşabilirsiniz. Z-tıklayarak yapılır sırasını değiştirerek bunu düzeltebilirsiniz **biçimi** işaret menüsünde **sipariş**ve ardından **öne** veya  **Arkaya Gönder**. Denetimleri z düzeni hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms'da nesneleri katmanlara](../controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Inherits Deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [kullanma](~/docs/csharp/language-reference/keywords/using.md)
 - [Taban Formun Görünüşünü Değiştirmenin Etkileri](effects-of-modifying-base-form-appearance.md)
 - [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)

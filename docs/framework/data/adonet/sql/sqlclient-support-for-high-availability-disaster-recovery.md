@@ -1,15 +1,15 @@
 ---
-title: Yüksek kullanılabilirlik, olağanüstü durum kurtarma için SqlClient desteği
+title: Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213798"
 ---
-# <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek kullanılabilirlik, olağanüstü durum kurtarma için SqlClient desteği
+# <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
 Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik grupları için.  AlwaysOn Kullanılabilirlik grupları özelliği SQL Server 2012'ye eklendi. AlwaysOn Kullanılabilirlik grupları hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
   
  Şimdi, kullanılabilirlik grubu dinleyicisini belirtin bir (yüksek kullanılabilirlik, olağanüstü durum kurtarma) kullanılabilirlik grubu (ağ) veya SQL Server 2012 yük devretme kümesi örneği bağlantı özelliği. Devreder bir AlwaysOn veritabanı için SqlClient uygulama bağlıysa, özgün bağlantı bozuk ve uygulamanın yük devretme sonrasında çalışmaya devam etmek için yeni bir bağlantı açmanız gerekir.  
@@ -79,7 +79,7 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
   
  `ApplicationIntent` Anahtar sözcüğü, eski, salt okunur veritabanları ile çalışmaz.  
   
- Bir veritabanı izin verebilir veya hedeflenen AlwaysOn veritabanı üzerindeki okuma iş yükleri izin vermeyin. (Bunun `ALLOW_CONNECTIONS` yan tümcesi `PRIMARY_ROLE` ve `SECONDARY_ROLE` [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri.)  
+ Bir veritabanı izin verebilir veya hedeflenen AlwaysOn veritabanı üzerindeki okuma iş yükleri izin vermeyin. (Bunun `ALLOW_CONNECTIONS` yan tümcesi `PRIMARY_ROLE` ve `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri.)  
   
  `ApplicationIntent` Anahtar sözcüğü, salt okunur yönlendirme etkinleştirmek için kullanılır.  
   
@@ -97,5 +97,6 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
  Salt okunur yönlendirme yalnızca Yönlendirme okuma önce birincil siteye bağlanır ve ardından en iyi kullanılabilir okunabilir ikincil için görünür olduğundan, birincil siteye bağlanan daha uzun sürebilir. Bu nedenle, oturum açma zaman aşımı artırmalısınız.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server Özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

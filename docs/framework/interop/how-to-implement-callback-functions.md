@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Geri çağırma işlevlerini uygulama'
+title: 'Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0936b1dc60bf6ca6dae3b5351b0717929c50876a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214072"
 ---
-# <a name="how-to-implement-callback-functions"></a>Nasıl yapılır: Geri çağırma işlevlerini uygulama
+# <a name="how-to-implement-callback-functions"></a>Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama
 Aşağıdaki yordam ve örnek platformunu kullanarak yönetilen bir uygulamada nasıl çağırma göstermek, her pencere tanıtıcısı değeri yerel bilgisayarda yazdırabilir. Özellikle, yordam ve örnek kullanım **EnumWindows** işlev için windows ve yönetilen bir geri çağırma işlevi (pencere tanıtıcısı değerini yazdırmak için adlandırılmış geri çağırma işlemini) listesinde ilerleyin.  
   
 ### <a name="to-implement-a-callback-function"></a>Bir geri çağırma işlevini uygulamak için  
@@ -130,5 +130,6 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Geri Arama İşlevleri](../../../docs/framework/interop/callback-functions.md)
+
+- [Geri Çağırma İşlevleri](../../../docs/framework/interop/callback-functions.md)
 - [DLL İşlevini Çağırma](../../../docs/framework/interop/calling-a-dll-function.md)

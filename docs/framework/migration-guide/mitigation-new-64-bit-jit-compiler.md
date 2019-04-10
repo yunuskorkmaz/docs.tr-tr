@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d3eb82cf9bac1e40947fb78882d18c5f09b0092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3177ae53d8b932a52dccf11b12d44fd07ec1c4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226631"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Azaltma: Yeni 64 bit JIT Derleyici
 .NET Framework 4. 6 ile başlayarak, çalışma zamanı tam zamanında derleme için yeni bir 64 bit JIT derleyicisi içerir. Bu değişiklik, 32-bit JIT Derleyici ile derleme etkilemez.  
@@ -70,5 +70,6 @@ ms.locfileid: "54690091"
  Ayrıca sorun hakkında bir hata bildirimi tarafından bize [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çalışma Zamanı Değişiklikleri](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 - [\<useLegacyJit > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)

@@ -1,17 +1,17 @@
 ---
-title: Mevcut .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
+title: Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | Mevcut .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216671"
 ---
-# <a name="deploy-existing-net-apps-as-windows-containers"></a>Mevcut .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
+# <a name="deploy-existing-net-apps-as-windows-containers"></a>Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 
 Windows kapsayıcılarında tabanlı dağıtımlar, uygulamaları bulut için iyileştirilmiş ve bulutta yerel uygulamalar için geçerlidir.
 
@@ -95,7 +95,7 @@ Görüntü adı, Dockerfile dosyasına eklediğinizde, .NET Framework tabanlı W
 
 > | **Etiket** | **Sistemi ve sürümü** |
 > |---|---|
-> | **Microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x Windows Server core'da |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x Windows Server core'da |
 > | **aspnet:4.x/Microsoft-windowsservercore** | .NET framework 4.x Windows Server core'da ek ASP.NET özelleştirme |
 
 .NET Core (platformlar arası Linux ve Windows için), etiketler, aşağıdaki gibi görünür:
@@ -134,7 +134,6 @@ Bir kapsayıcı olan veya olmayan Hyper-V yalıtım Windows üzerinde çalışan
 -   **Bilgi grafiği: Microsoft ve kapsayıcılar**
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
-
 
 ## <a name="the-container-ecosystem-in-azure"></a>Azure'da kapsayıcı ekosistemi
 

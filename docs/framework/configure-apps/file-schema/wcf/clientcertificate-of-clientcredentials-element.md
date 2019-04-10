@@ -2,12 +2,12 @@
 title: <clientCertificate> ' ın <clientCredentials> öğesi
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 1ca2973b4c0e745f13c1364b2284909d07da738c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216463"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate >, \<clientCredentials > öğesi
 Bir hizmete istemcinin kimliğini doğrulamak için kullanılan bir X.509 sertifikası tanımlar.  
@@ -53,6 +53,7 @@ Bir hizmete istemcinin kimliğini doğrulamak için kullanılan bir X.509 sertif
  Bu yapılandırma öğesi, bu öğe istemcinin kimliğini doğrulamak için kullanılan sertifikayı belirtir. Daha fazla bilgi için [nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -60,7 +61,7 @@ Bir hizmete istemcinin kimliğini doğrulamak için kullanılan bir X.509 sertif
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)
 - [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

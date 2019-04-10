@@ -3,12 +3,12 @@ title: İfade yorumlama
 description: İfade ağacı yapısını incelemek için kod yazmayı öğrenin.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211250"
 ---
 # <a name="interpreting-expressions"></a>İfade yorumlama
 
@@ -355,7 +355,6 @@ Expression<Func<int, int>> factorial = (n) =>
 
 Bu kod için matematiksel bir olası uygulama temsil eden *faktöriyelini* işlevi. Bu kod yazılan şekilde ifade ağaçları ifadeleri lambda ifadeleri atayarak oluşturmanın iki sınırlamaları vurgular. İlk olarak, deyim lambdaları izin verilmez. Anlamı miyim blokları, döngüleri kullanamazsınız, / else ifadeleri ve diğer denetim yapıları C# ' de ortak. İfadeler için faturalamayı ortağıyım. İkinci olarak, yinelemeli olarak çağrısı aynı ifadede bağlanamıyorum.
 Ben sanki zaten bir temsilci, ancak kendi ifade ağaç biçiminde çağrılamıyor olabilir. Bölümünde [ifade ağaçları oluşturma](expression-trees-building.md) bu sınırlamaların üstesinden gelmek için tekniklerini öğreneceksiniz.
-
 
 Bu ifade, her türden düğümleri karşılaşacağınız:
 1. Eşittir (ikili ifade)

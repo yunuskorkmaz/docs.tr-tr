@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: e99683bf6746cc5a85448bb22a996c04b7dcaa8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219427"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.SplitContainer> denetim düşünülebilir bileşik; taşınabilir bir çubukla ayırarak iki bölme. Çubuğu üzerine fare işaretçisi olduğunda, işaretçi şekli çubuğu taşınabilir olduğunu göstermek için değiştirir.  
@@ -40,16 +40,17 @@ Windows Forms <xref:System.Windows.Forms.SplitContainer> denetim düşünülebil
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> Özelliği|Hangi panele aynı kalacak belirler sonra Boyut <xref:System.Windows.Forms.SplitContainer> denetimi yeniden boyutlandırılır.|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> Özelliği|Ayırıcı klavye veya fare ile taşınıp taşınamayacağını belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> Özelliği|Bölümlendirici yatay veya dikey olarak düzenlenmiş, belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> Özelliği|Taşınabilir ayırıcıyı için sol veya üst kenarından piksel cinsinden uzaklığı belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Özelliği|Bölümlendirici kullanıcı tarafından taşınabilir piksel cinsinden en düşük bir uzaklık belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> Özelliği|Ayırıcının piksel cinsinden kalınlığı belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Olay|Bölümlendirici taşıma olduğunda gerçekleşir.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Olay|Bölümlendirici taşıdığınızda gerçekleşir.|  
+|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> özellik|Hangi panele aynı kalacak belirler sonra Boyut <xref:System.Windows.Forms.SplitContainer> denetimi yeniden boyutlandırılır.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> özellik|Ayırıcı klavye veya fare ile taşınıp taşınamayacağını belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> özellik|Bölümlendirici yatay veya dikey olarak düzenlenmiş, belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> özellik|Taşınabilir ayırıcıyı için sol veya üst kenarından piksel cinsinden uzaklığı belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> özellik|Bölümlendirici kullanıcı tarafından taşınabilir piksel cinsinden en düşük bir uzaklık belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> özellik|Ayırıcının piksel cinsinden kalınlığı belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> olay|Bölümlendirici taşıma olduğunda gerçekleşir.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> olay|Bölümlendirici taşıdığınızda gerçekleşir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer Denetimi](splitcontainer-control-windows-forms.md)
 - [SplitContainer denetimi örneği](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

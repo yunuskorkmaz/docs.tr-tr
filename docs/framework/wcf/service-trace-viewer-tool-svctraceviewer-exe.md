@@ -2,12 +2,12 @@
 title: Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213395"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı WCF tarafından oluşturulan tanılama izlemeleri analiz etmenize yardımcı olur. Hizmet izleme görüntüleyicisini kolayca birleştirmek, görüntülemek ve böylece tanılama onarın ve WCF hizmet sorunları doğrula izleme günlüğü iletileri filtrelemek için bir yol sağlar.  
@@ -456,6 +456,7 @@ Windows Communication Foundation (WCF) hizmet izleme Görüntüleyicisi aracı W
  Arapça işletim sistemine kullanılarak oluşturulan bir izleme günlüğü açarsanız, zaman filtresi çalışmıyor fark edebilirsiniz. Örneğin, 2005 yılı Arapça takvim yılında 1427 karşılık gelir. Ancak, hizmet izleme Görüntüleyicisi aracı filtre tarafından desteklenen zaman aralığıyla 1752'den önceki bir tarihi desteklemez. Bu filtrede doğru bir tarih seçmek mümkün olmadığını kapsıyor. Bu sorunu çözmek için özel bir filtresi oluşturabilirsiniz (**görünüm/özel filtreler**) belirli bir zaman aralığı içerecek şekilde bir XPath ifadesi kullanarak.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+
+- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma ](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Uçtan Uca İzleme](./diagnostics/tracing/end-to-end-tracing.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5947f1e84bc5b1f35f0bd479a9fc879dbe63c9f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219219"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>İzleme Uygulamaları
 İzleme, çalışırken uygulamanızın yürütmesini izlemek bir yoldur. .NET Framework uygulamanızı izleme ve hata ayıklama araçları, geliştirme ve uygulama geliştirirken hem dağıttıktan sonra bu araçları kullanabilirsiniz ekleyebilirsiniz. Kullanabileceğiniz <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, ve <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> hataları ve uygulama yürütme günlükleri, metin dosyaları veya diğer cihazlar daha sonra çözümlemek için ilgili bilgileri kaydetmek için sınıflar.  
@@ -122,9 +122,9 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 |Yöntem|Çıkış|  
 |------------|------------|  
-|**Assert**|Belirtilen metin; ya da hiçbiri belirtilmezse, çağrı yığını. Çıktı, yalnızca koşul bir bağımsız değişken olarak belirttiyseniz yazılır **Assert** deyimi **false**.|  
+|**Onayla**|Belirtilen metin; ya da hiçbiri belirtilmezse, çağrı yığını. Çıktı, yalnızca koşul bir bağımsız değişken olarak belirttiyseniz yazılır **Assert** deyimi **false**.|  
 |**Başarısız**|Belirtilen metin; ya da hiçbiri belirtilmezse, çağrı yığını.|  
-|**Yazma**|Belirtilen metin.|  
+|**Write**|Belirtilen metin.|  
 |**Writeıf**|Belirtilen metin bağımsız değişkeni olarak bir koşul belirtilmişse, **Writeıf** deyimi karşılandığında.|  
 |**WriteLine**|Belirtilen metni ve bir satır başı.|  
 |**Writelineıf**|Bir bağımsız değişken olarak bir koşul belirtilmişse belirtilen metin bir satır başı, dönüş ve **Writelineıf** deyimi karşılandığında.|  
@@ -142,14 +142,15 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Uygulamanız, izleme ve bir ASP.NET uygulamasını dağıtmadan önce hata ayıklama devre dışı bırakmayın, kötü amaçlı bir program tarafından yararlanılabilir kendisiyle ilgili bilgiler gösterilmesine neden olabilir. Daha fazla bilgi için [nasıl yapılır: İzleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [derleme ve oluşturma](/visualstudio/ide/compiling-and-building-in-visual-studio), ve [nasıl yapılır: Oluşturma, başlatma ve izleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). Hata ayıklama aynı zamanda Internet Information Services (IIS) aracılığıyla yapılandırılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
-- [Kod Anlaşmaları](../../../docs/framework/debug-trace-profile/code-contracts.md)
+- [Kod Sözleşmeleri](../../../docs/framework/debug-trace-profile/code-contracts.md)
 - [C#, F# ve Visual Basic Proje Türleri](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [Nasıl yapılır: Uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Nasıl yapılır: İzleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [Nasıl yapılır: Oluşturma, başlatma ve izleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Nasıl yapılır: Oluşturma ve izleme kaynaklarını başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Nasıl yapılır: İzleme dinleyicileri ile TraceSource ve filtreler kullanma](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
-- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Nasıl yapılır: İz Dinleyicileri ile TraceSource ve Filtreler Kullanma](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [İz Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)

@@ -1,15 +1,15 @@
 ---
-title: Anlama WebRequest sorunlarını ve özel durumları
+title: WebRequest Sorunlarını ve Özel Durumları Anlama
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 55ef0b0f5260c986cad01d2854202dea3755ace7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215020"
 ---
-# <a name="understanding-webrequest-problems-and-exceptions"></a>Anlama WebRequest sorunlarını ve özel durumları
+# <a name="understanding-webrequest-problems-and-exceptions"></a>WebRequest Sorunlarını ve Özel Durumları Anlama
 <xref:System.Net.WebRequest> türetilen sınıflar (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, ve <xref:System.Net.FileWebRequest>) olağan dışı bir koşul göstermek için özel durumlar. Bazı durumlarda bu sorunların çözümlenmesi belirgin değildir.  
   
 ## <a name="solutions"></a>Çözümler  
@@ -29,6 +29,7 @@ ms.locfileid: "54587534"
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|Sunucudan yanıt, geçerli bir HTTP yanıt değil. .NET Framework sunucu yanıtı HTTP 1.1 RFC ile uyumlu değil algıladığında, bu sorun oluşur. Yanıt yanlış üst bilgiler veya yanlış başlık sınırlayıcılar içerdiğinde, bu sorun oluşabilir. RFC 2616'http 1.1 ve sunucudan yanıt geçerli biçimini tanımlar. Daha fazla bilgi için [RFC 2616 - Hypertext Transfer Protocol--HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) adresindeki [Internet Engineering Task Force (IETF)](https://www.ietf.org/) Web sitesi.|Bir ağ izleme işlem alın ve yanıt üst bilgileri inceleyin.<br /><br /> Sunucu yanıtı olmadan uygulamanız gerekiyorsa (Bu bir güvenlik sorunu olabilir) ayrıştırma, kümesi `useUnsafeHeaderParsing` için `true` yapılandırma dosyası. Bkz: [ \<httpWebRequest > öğesi (ağ ayarları)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.Dns>

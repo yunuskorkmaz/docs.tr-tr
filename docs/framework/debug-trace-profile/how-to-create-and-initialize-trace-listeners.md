@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Oluşturma ve izleme dinleyicilerini başlatma'
+title: 'Nasıl yapılır: İz Dinleyicileri Oluşturma ve Başlatma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222724"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Nasıl yapılır: Oluşturma ve izleme dinleyicilerini başlatma
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Nasıl yapılır: İz Dinleyicileri Oluşturma ve Başlatma
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> Ve <xref:System.Diagnostics.Trace?displayProperty=nameWithType> sınıfları almak ve bu iletileri işleyen dinleyicileri adlı nesnelere iletiler gönderir. Tür bir dinleyici <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, otomatik olarak oluşturulur ve izleme ya da hata ayıklama etkin olduğunda başlatılır. İsterseniz <xref:System.Diagnostics.Trace> veya <xref:System.Diagnostics.Debug> herhangi bir ek kaynaklar için yönlendirilmesine çıktısını oluşturmalı ve ek izleme dinleyicileri başlatır.  
   
  Oluşturduğunuz dinleyicileri, uygulamanızın ihtiyaçlarına yansıtmalıdır. Örneğin, bir metin kayıt tüm izleme çıkışı istiyorsanız, oluşturun bir <xref:System.Diagnostics.TextWriterTraceListener> dinleyicisi etkinleştirildiğinde, tüm çıktı yeni bir metin dosyasına yazar. Öte yandan, yalnızca uygulama yürütme sırasında çıkış görüntülemek istiyorsanız, oluşturun bir <xref:System.Diagnostics.ConsoleTraceListener> dinleyici, tüm çıkış için bir konsol penceresi yönlendirir. <xref:System.Diagnostics.EventLogTraceListener> Bir olay günlüğüne izleme çıkış yönlendirebilir. Daha fazla bilgi için [izleme dinleyicilerine](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
@@ -95,7 +95,8 @@ ms.locfileid: "54583109"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+
+- [İz Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Nasıl yapılır: Uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [İzleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

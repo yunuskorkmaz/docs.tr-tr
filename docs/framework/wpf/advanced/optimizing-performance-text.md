@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409412"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225969"
 ---
 # <a name="optimizing-performance-text"></a>Performansı iyileştirme: Metin
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanarak zengin metin içeriği sunumunu desteği içeren [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrol eder. Genel olarak, üç katmanda metin işleme ayırabilirsiniz:  
@@ -28,8 +28,7 @@ ms.locfileid: "58409412"
 3.  Üst düzey denetimleri gibi kullanarak <xref:System.Windows.Controls.TextBlock> ve <xref:System.Windows.Documents.FlowDocument> nesneleri.  
   
  Bu konu, metin işleme performans önerileri sağlar.  
-  
-  
+
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Glif düzeyinde metin oluşturma  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Glif düzeyinde biçimlendirme doğrudan erişimle dahil olmak üzere gelişmiş destek sağlar <xref:System.Windows.Documents.Glyphs> kesebilir ve metin biçimlendirme sonra devam etmek isteyen müşteriler için. Bu özellikler, aşağıdaki senaryolardan her işleme gereksinimleri için farklı metin kritik destek sağlar.  
@@ -40,7 +39,7 @@ ms.locfileid: "58409412"
   
     -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bir cihaz yazıcı dili olarak.  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]biçimindeki telefon numarasıdır.  
   
     -   Çıktı, önceki yazıcı sürücülerini [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] sabit biçimde uygulamalar.  
   
@@ -162,6 +161,7 @@ ms.locfileid: "58409412"
  En iyi paragraf özelliği <xref:System.Windows.Documents.FlowDocument> nesne yerleştirir paragrafları böylece boşluk mümkün olduğunca eşit olarak dağıtılır. Varsayılan olarak, uygun paragraf özelliği devre dışıdır. Nesnenin ayarlayarak bu özelliği etkinleştirebilirsiniz <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> özelliğini `true`. Ancak, bu özellik etkinleştirildiğinde, uygulama performansını etkiler. Gerekmedikçe uygun paragraf özelliği kullanmayın önerilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
 - [Uygulama Performansını Planlama](planning-for-application-performance.md)
 - [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214942"
 ---
 # <a name="data-contract-equivalence"></a>Veri Sözleşmesi Eşitliği
 Bir istemci başarıyla bir hizmet ya da verileri başarıyla bir istemciye gönderilecek bir hizmeti belirli bir türde veri göndermek gönderilen türü mutlaka alan tarafta mevcut gerekmez. Her iki türdeki veri sözleşmeleri eşdeğer olduğunu tek gereksinim olmasıdır. (Bazı durumlarda, katı denklik bölümünde açıklandığı gibi gerekli değildir [veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -61,8 +61,9 @@ Bir istemci başarıyla bir hizmet ya da verileri başarıyla bir istemciye gön
  Parametreler ve dönüş değerleri beklenen tür bir arabirimse uygulamalar arasında geçirirken, beklenen tür türünde olan eşdeğer <xref:System.Object>. Her tür sonuçta öğesinden türetildiği için <xref:System.Object>, her veri anlaşması için veri anlaşması sonuç olarak türetilen <xref:System.Object>. Bu nedenle, herhangi bir veri anlaşması türü bir arabirim beklendiğinde geçirilebilir. Başarıyla arabirimleri ile çalışmak için ek adımlar gereklidir; Daha fazla bilgi için [veri sözleşme bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Veri Üye Sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md)
-- [Veri Anlaşması Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Veri Anlaşması Adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [Veri Sözleşmesi Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Veri Sözleşmesi Adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

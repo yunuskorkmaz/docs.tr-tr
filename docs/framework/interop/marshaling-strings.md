@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4640d37ad6c30746e203c26c2c1cd71eb70e7579
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223036"
 ---
 # <a name="marshaling-strings"></a>Dizeleri Hazırlama
 Platform çağırma bunları (Unicode) .NET Framework biçiminden yönetilmeyen biçimine (ANSI) gerekirse dönüştürme kopyaları dizesi parametreleri. Yönetilen dizeler sabit olduğundan, platform çağırma işlevi döndüğünde bunları yönetilmeyen bellekten yönetilen bellek kopyalamaz.  
@@ -39,7 +39,8 @@ Platform çağırma bunları (Unicode) .NET Framework biçiminden yönetilmeyen 
 |Değere göre dizeleri içeren yapılarını dizisi.|Yapıları dizisi oluşturan dizeleri içeren ve bir dizi değere göre geçirilir.|[Diziler](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Platform Çağırma ile Veri Hazırlama](marshaling-data-with-platform-invoke.md)
+
+- [Platform Çağırma ile Veri Sıralama](marshaling-data-with-platform-invoke.md)
 - [Sınıflar, Yapılar ve Birleşimleri Hazırlama](marshaling-classes-structures-and-unions.md)
 - [Farklı Dizi Türlerini Hazırlama](marshaling-different-types-of-arrays.md)
-- [Çeşitli sıralama örnekleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
+- [Çeşitli Sıralama Örnekleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))

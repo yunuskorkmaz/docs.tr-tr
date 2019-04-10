@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme'
+title: 'Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: 110b8ffe2fb3e00d7a6787e32d066f62126ebf9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a1b2627c8e9899a122f27dc652f8c91230fed0b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225137"
 ---
-# <a name="how-to-specify-client-credential-values"></a>Nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme
+# <a name="how-to-specify-client-credential-values"></a>Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme
 Windows Communication Foundation (WCF) kullanarak, hizmet, bir istemci için hizmet kimliğinin nasıl doğrulandığını belirtebilirsiniz. Örneğin, bir hizmeti bir sertifikayla istemcinin kimliğinin doğrulanmasını koşabilirsiniz.  
   
 ### <a name="to-determine-the-client-credential-type"></a>İstemci kimlik bilgileri türünü belirlemek için  
@@ -92,6 +92,7 @@ Windows Communication Foundation (WCF) kullanarak, hizmet, bir istemci için hiz
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
@@ -99,9 +100,9 @@ Windows Communication Foundation (WCF) kullanarak, hizmet, bir istemci için hiz
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [WCF Güvenliğini Programlama](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Kimlik Bilgisi Türü Seçme](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Sertifikalarla Çalışma](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Nasıl yapılır: Bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
 - [\<Güvenlik >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
 - [\<İleti >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)

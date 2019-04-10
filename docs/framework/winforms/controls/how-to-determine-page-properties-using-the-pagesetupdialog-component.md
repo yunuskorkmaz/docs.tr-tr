@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: PageSetupDialog bileşenini kullanarak sayfa özelliklerini belirleme'
+title: 'Nasıl yapılır: PageSetupDialog Bileşenini Kullanarak Sayfa Özelliklerini Belirleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6eefe7dd69d02712b650d95ddf14394c10792807
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213709"
 ---
-# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Nasıl yapılır: PageSetupDialog bileşenini kullanarak sayfa özelliklerini belirleme
+# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Nasıl yapılır: PageSetupDialog Bileşenini Kullanarak Sayfa Özelliklerini Belirleme
 [PageSetupDialog](pagesetupdialog-component-windows-forms.md) kullanıcıya bir belge için bileşen sunar düzen, sayfa boyutunu ve diğer sayfa düzeni seçenekleri.  
   
  Örneği belirtmeniz gereken <xref:System.Drawing.Printing.PrintDocument> sınıfı — belgenin yazdırılması budur. Ayrıca, bu kısmen olduğundan kullanıcıların kendi bilgisayarlarında yerel olarak veya bir ağ üzerinden yüklü bir yazıcının olmalıdır nasıl <xref:System.Windows.Forms.PageSetupDialog> bileşen sayfasının kullanıcıya sunulan seçenekler biçimlendirme belirler.  
@@ -88,6 +88,7 @@ ms.locfileid: "57713208"
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Nasıl yapılır: Standart Windows Forms yazdırma işleri oluşturma](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
-- [PageSetupDialog bileşeni](pagesetupdialog-component-windows-forms.md)
+- [Nasıl yapılır: Standart Windows Forms Yazdırma İşleri Oluşturma](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [PageSetupDialog Bileşeni](pagesetupdialog-component-windows-forms.md)

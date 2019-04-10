@@ -6,12 +6,12 @@ helpviewer_keywords:
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-ms.openlocfilehash: 38cd29720a885f10d093bdb4617c503c16402e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219206"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>DataGrid Denetimindeki Boyutlandırma Seçenekleri
 Denetim için çeşitli seçenekler kullanılabilir nasıl <xref:System.Windows.Controls.DataGrid> kendisini boyutları. <xref:System.Windows.Controls.DataGrid>Ve bireysel içindeki satırları ve sütunları <xref:System.Windows.Controls.DataGrid>, içerikleri için otomatik olarak boyutu ayarlanabilir veya belirli değerlere ayarlayın. Varsayılan olarak, <xref:System.Windows.Controls.DataGrid> büyütme ve içerikleri sığacak şekilde küçültmek.  
@@ -86,6 +86,7 @@ Denetim için çeşitli seçenekler kullanılabilir nasıl <xref:System.Windows.
  Kullanıcıların yeniden boyutlandırılabilir <xref:System.Windows.Controls.DataGrid> satırları ve sütunları satır veya sütun üst bilgisi Bölücü sürükleyerek. <xref:System.Windows.Controls.DataGrid> Ayrıca otomatik satırları ve sütunları satır veya sütun başlık ayırıcıya çift tıklayarak yeniden boyutlandırılmasını destekler. Bir kullanıcı, belirli sütunları yeniden boyutlandırmasını önleyecek şekilde ayarlanmış <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> özelliğini `false` tek tek sütun. Kullanıcılar, tüm sütunları yeniden boyutlandırmasını önleyecek şekilde ayarlanmış <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> özelliğini `false`. Kullanıcılar, tüm satırları yeniden boyutlandırmasını önleyecek şekilde ayarlanmış <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> özelliğini `false`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGridColumn>
 - <xref:System.Windows.Controls.DataGridLength>

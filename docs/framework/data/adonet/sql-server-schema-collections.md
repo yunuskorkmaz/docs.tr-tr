@@ -1,15 +1,15 @@
 ---
-title: SQL Server şema koleksiyonları
+title: SQL Server Şema Koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224578"
 ---
-# <a name="sql-server-schema-collections"></a>SQL Server şema koleksiyonları
+# <a name="sql-server-schema-collections"></a>SQL Server Şema Koleksiyonları
 SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiyonları yanı sıra ek şema koleksiyonları destekler. Şema koleksiyonları kullanmakta olduğunuz SQL Server sürümüne göre biraz farklılık gösterir. Desteklenen şema koleksiyonları listesi belirlemek için çağrı **GetSchema** yöntemi bağımsız değişken olmadan veya şema koleksiyonu adı "MetaDataCollections". Bu döndürür bir <xref:System.Data.DataTable> listesiyle desteklenen şema koleksiyonları, desteklediği her kısıtlama sayısı ve kullandıkları tanımlayıcısı parçaların sayısı.  
   
 ## <a name="databases"></a>Veritabanları  
@@ -256,5 +256,6 @@ SQL Server için Microsoft .NET Framework veri sağlayıcısı, ortak şema kole
 |Permission_set_desc|Dize|İzni-Ayarla/güvenlik düzeyi derleme için bir kolay ad.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

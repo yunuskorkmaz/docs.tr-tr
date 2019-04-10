@@ -2,17 +2,17 @@
 title: (C#) zaman uyumsuz uygulamalarda yeniden girişi işleme
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 4f5435dd482a20e1aa5a6e0b93d6222025b05518
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 95004951a664c3c8271604938c5ce1d93a269304
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211510"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>(C#) zaman uyumsuz uygulamalarda yeniden girişi işleme
 Zaman uyumsuz kod uygulamanıza eklediğinizde, göz önünde bulundurun ve tamamlanmadan önce zaman uyumsuz bir işlem engellemelisiniz yeniden giriş muhtemelen önlemek gerekir. Olasılıklarını tanımlamaz ve yönetmezseniz, beklenmedik sonuçlara neden olabilir.  
   
- **Bu konudaki**  
+ **Bu konuda**  
   
 -   [Yeniden giriş tanıma](#BKMK_RecognizingReentrancy)  
   
@@ -480,8 +480,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
         $"\r\n\r\nTOTAL bytes returned:  {total}\r\n";
 }  
 ```  
-  
-   
+
 #### <a name="points-of-interest"></a>İlgi noktaları  
  Çıktıda pound işareti (#) ile başlayan bilgi satırları bu örneğin nasıl çalıştığını açıklamak.  
   

@@ -2,12 +2,12 @@
 title: Veri Sözleşmesi Çözücü Kullanma
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 844c4e0861c2cf4e6acb2b128ff1f5cefa0f7fa0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b1c545d84db68f4b13925dd9088cc9d81050b5e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222451"
 ---
 # <a name="using-a-data-contract-resolver"></a>Veri Sözleşmesi Çözücü Kullanma
 Veri sözleşmesi Çözücü bilinen türleri dinamik olarak yapılandırmanıza olanak sağlar. Bilinen türler seri hale getirme veya bir veri anlaşması tarafından beklendiği bir türü seri durumdan çıkarılırken zaman gerekli değildir. Bilinen türler hakkında daha fazla bilgi için bkz: [veri sözleşme bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Normalde, bilinen türleri statik olarak belirtilir. Bir işlem olası tüm türleri bilmek zorunda anlamına gelir, uygulama işlemi sırasında alabilirsiniz. Bu doğru değildir ve bilinen türleri dinamik olarak belirtmek için önemli senaryolar vardır.  
@@ -88,6 +88,7 @@ SerializerBehavior.DataContractResolver = new MyCustomerResolver();
  Veri sözleşmesi Çözücü hizmet için uygulanan bir öznitelik uygulayarak bildirimli olarak belirtebilirsiniz.  Daha fazla bilgi için [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) örnek. Bu örnek "KnownAssembly" adlı bir öznitelik uygular bu hizmetin davranışı için özel veri anlaşması çözümleyici ekler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Veri Anlaşması Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+
+- [Veri Sözleşmesi Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [DataContractSerializer Örneği](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)
 - [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)

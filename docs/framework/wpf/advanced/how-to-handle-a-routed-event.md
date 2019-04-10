@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Gönderilmiş bir Olayı İşleme'
+title: 'Nasıl yapılır: Yönlendirilmiş Olayı İşleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - routed events [WPF], handling
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-ms.openlocfilehash: 42f5f247e775fbf0bd323fc693a74d6149c87bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edb3d6724af89b7e85986c50b579084e3c4e5070
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211601"
 ---
-# <a name="how-to-handle-a-routed-event"></a>Nasıl yapılır: Gönderilmiş bir Olayı İşleme
+# <a name="how-to-handle-a-routed-event"></a>Nasıl yapılır: Yönlendirilmiş Olayı İşleme
 Bu örnek nasıl tırmanma olayları iş ve nasıl yönlendirilmiş olay verileri işleyen bir işleyici yazılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
@@ -35,8 +35,9 @@ Bu örnek nasıl tırmanma olayları iş ve nasıl yönlendirilmiş olay veriler
  [!code-vb[RoutedEventHandle#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.RoutedEvent>
 - [Girişe Genel Bakış](input-overview.md)
-- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
 - [Nasıl Yapılır Konuları](events-how-to-topics.md)
 - [Ayrıntılı XAML Sözdizimi](xaml-syntax-in-detail.md)

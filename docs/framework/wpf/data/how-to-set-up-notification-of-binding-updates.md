@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], notification of binding updates
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
-ms.openlocfilehash: 0a28e6fc31601e881cf972f586f75ba0b1526b45
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4185198312ed98f9aaa1388626600d9f21abae55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213968"
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>Nasıl yapılır: Bağlama Güncelleştirmeleri Bildirimini Ayarlama
 Bu örnek, bağlama hedefi (hedef) veya bir bağlamanın bağlama (kaynak) kaynak özelliği güncelleştirildiğinde bildirim almak için nasıl ayarlanacağını gösterir.  
@@ -33,5 +33,6 @@ Bu örnek, bağlama hedefi (hedef) veya bir bağlamanın bağlama (kaynak) kayna
  Olay parametrelerinin (türü veya aynı işleyici için birden fazla öğe eklediyseniz öğe gibi), değiştirilen özelliğin ayrıntılarını belirlemek için kullanılabilir olan tek bir öğede birden çok ilişkili özellikler varsa yararlı olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)

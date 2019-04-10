@@ -1,18 +1,18 @@
 ---
-title: Bekleme tanıtıcıları kullanan ASP.NET uygulamaları
+title: Bekleme Tanıtıcıları Kullanan ASP.NET Uygulamaları
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: 0d089b27158a36d03245e6312dff0e0dc71d12f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a17755af4027238393890545c051a063d607b6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224575"
 ---
-# <a name="aspnet-applications-using-wait-handles"></a>Bekleme tanıtıcıları kullanan ASP.NET uygulamaları
+# <a name="aspnet-applications-using-wait-handles"></a>Bekleme Tanıtıcıları Kullanan ASP.NET Uygulamaları
 Uygulamanız bir anda yalnızca bir zaman uyumsuz işlemi işlenirken zaman uyumsuz işlemleri işlemek için yoklama modelleri ve geri çağırma yararlıdır. Bekleme modeller, birden çok zaman uyumsuz işleme için daha esnek bir yol sağlar. Adlı iki bekleme modeli vardır <xref:System.Threading.WaitHandle> bunları uygulamak için kullanılan yöntemleri: bekleme (Any) modeli ve bekleme (Tümü) modeli.  
   
  Ya da bekleme modelini kullanmak için kullanmanız gerekir <xref:System.IAsyncResult.AsyncWaitHandle%2A> özelliği <xref:System.IAsyncResult> tarafından döndürülen nesne <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, veya <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> yöntemleri. <xref:System.Threading.WaitHandle.WaitAny%2A> Ve <xref:System.Threading.WaitHandle.WaitAll%2A> yöntemleri göndermenizi gerektiren <xref:System.Threading.WaitHandle> nesneler bir bağımsız değişken olarak birlikte gruplandırılmış bir dizi.  
@@ -580,5 +580,6 @@ void Button1_Click(object sender, System.EventArgs e)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Zaman Uyumsuz İşlemler](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: C# öğreticiler
 description: Bunlar keşfedin C# oluşturmayı öğrenmek için öğreticileri C# programları ve bilgi C# dil özellikleri.
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214448"
 ---
 # <a name="c-tutorials"></a>C# öğreticiler
 
@@ -61,5 +61,3 @@ Aşağıdaki öğreticilerde oluşturmanıza olanak tanıyan C# kullanarak progr
 * [LINQ ile çalışma](working-with-linq.md): LINQ ve Dil öğelerini destekleyen özelliklerin çoğunu gösterir.
 * [Öznitelikleri kullanarak](attributes.md): oluşturma ve öznitelikleri kullanma işlemi gösterilmektedir C#.
 * [Dize ilişkilendirme](exploration/interpolated-strings.yml) Öğreticisi, değerleri bir dizeye nasıl ekleneceğini gösterir. İlişkilendirilmiş dize oluşturma öğreneceksiniz ile katıştırılmış C# ifadeleri ve nasıl sonuç dizesinde ifade sonuçları metin görünümünü denetler. Bu öğretici ayrıca kullanılabilir [makinenizde yerel olarak çalıştırılacak](exploration/interpolated-strings-local.md).
-
-

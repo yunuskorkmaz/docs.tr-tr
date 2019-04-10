@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: f2738d6e3a5fc75ab2f5714dc6644267e4fa1e29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1af44f2394bbf27f9219831612b4e73d7a1759e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220285"
 ---
 # <a name="extensible-objects"></a>Genişletilebilen Nesneler
 Genişletilebilir nesne düzeni ya da var olan çalışma zamanı sınıflar yeni işlevlerle genişletmek veya bir nesneye yeni bir durum eklemek için kullanılır. Genişletilebilen nesneler birine bağlı uzantılar, paylaşılan durum ve işlevselliği, erişimleri olan bir ortak Genişletilebilir nesnesine erişmek için işleme çok farklı aşamalarında davranışları etkinleştirin.  
@@ -66,6 +66,7 @@ where T : IExtensibleObject<T>
  [!code-csharp[IInstanceContextInitializer#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/iinstancecontextinitializer/cs/initializer.cs#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.IExtensibleObject%601>
 - <xref:System.ServiceModel.IExtension%601>
 - <xref:System.ServiceModel.IExtensionCollection%601>

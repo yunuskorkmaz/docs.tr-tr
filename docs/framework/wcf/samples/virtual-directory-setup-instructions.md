@@ -2,12 +2,12 @@
 title: Sanal Dizin Ayarlama Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225592"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Sanal Dizin Ayarlama Yönergeleri
 Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\servicemodelsamples klasörle eşlendi servicemodelsamples adlı ortak bir sanal dizin paylaşmak için tasarlanmıştır.  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\
   
 7.  Varsayılan olarak, aşağıdaki onay kutularını seçilir:  
   
-    -   **Read**  
+    -   **Oku**  
   
     -   **Komut dosyalarını (örn. ASP) Çalıştır**  
   
@@ -84,7 +84,7 @@ Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\
   
 2.  Varsayılan olarak, aşağıdaki onay kutularını seçilir:  
   
-    -   **Read**  
+    -   **Oku**  
   
     -   **Günlük ziyaret eder.**  
   
@@ -191,4 +191,5 @@ Windows Communication Foundation (WCF) örnekleri %SystemDrive%\inetpub\wwwroot\
     3.  İçinde **grubu** sütun kontrol değeri **ASPNET** "kullanıcıları."  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 590fed6a2a4e59f438dc73057973aff4539cb1aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83afabf58048620b3b9936560f2b3fdf1e2039d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226943"
 ---
 # <a name="applying-interop-attributes"></a>Birlikte Çalışma Özniteliklerini Uygulama
 <xref:System.Runtime.InteropServices> Ad alanı, üç kategoriye birlikte çalışması özel özniteliklerin sağlar: Bu tasarım zamanında tarafından uygulanan, COM birlikte çalışma araçları ve API'leri tarafından dönüştürme işlemi sırasında uygulanan ve, veya COM birlikte çalışma tarafından uygulanır.  
@@ -68,8 +68,9 @@ ms.locfileid: "54589772"
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|İçeren **VARFLAGS** , başlangıçta içeri aktarılmadı bu değişkeni COM tür kitaplığındaki.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.InteropServices>
 - [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [Öznitelikler](../../../docs/standard/attributes/index.md)
-- [Birlikte Çalışma için .NET Türlerini Niteleme](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
-- [COM için Bütünleştirilmiş Kod Paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Birlikte Çalışma için Niteleyici .NET Türleri](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
+- [COM için Derlemeyi Paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

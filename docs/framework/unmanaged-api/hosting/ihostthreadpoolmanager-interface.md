@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7fc0a271a9c62406d2942f387a5458e21211116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e7976740a79efda8e5ab569f2efb55444012c5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220376"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager Arabirimi
 Ortak dil çalışma zamanı (CLR) iş parçacığı havuzu yapılandırmak ve iş parçacığı havuzu iş öğelerine kuyruğuna olanak tanıyan yöntemler sağlar.  
@@ -50,6 +50,7 @@ Ortak dil çalışma zamanı (CLR) iş parçacığı havuzu yapılandırmak ve i
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Threading>
 - <xref:System.Threading.ThreadPool>
 - [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

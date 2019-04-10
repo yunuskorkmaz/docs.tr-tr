@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39b7bcec1196a59c47717ec2b5622ca8e0d3cdfc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225293"
 ---
 # <a name="security-and-remoting-considerations"></a>Güvenlik ve Uzaktan Yönetim Konuları
 Uzaktan iletişimini uygulama etki alanları, işlemleri veya bilgisayarlar arasında çağırma saydam ayarlamanıza olanak sağlar. Ancak, kod erişim güvenlik yığın İlerlemesi (aynı işlemde uygulama etki alanları arasında geçerli) işlem veya makine sınırları geçemez.  
@@ -38,4 +38,5 @@ Uzaktan iletişimini uygulama etki alanları, işlemleri veya bilgisayarlar aras
  Genellikle, varsayılan uygulama etki alanı ile denetim nesnesi içindeki her bir uygulama etki alanları alt oluşturur. Denetim nesnesi yeni uygulama etki alanı yönetir ve bazen varsayılan uygulama etki alanından siparişleri alır, ancak bu gerçekten etki alanını doğrudan iletişim kuramaz. Bazen, varsayılan uygulama etki alanı kendi proxy denetimi nesneye çağırır. Bununla birlikte, varsayılan uygulama etki alanına geri çağırmaya denetim nesnesi için gerekli olduğu durumlar olabilir. Bu durumlarda, varsayılan uygulama etki alanı denetim nesnesi oluşturucusuna bir başvuruya göre geri çağırma nesnesi geçirir. Bu proxy korumak için denetimi nesnesinin sorumluluğundadır. Denetim nesnesi üzerinde bir genel sınıfın genel statik alan proxy yerleştirmeniz ya da proxy aksi genel olarak kullanıma sunmak için varsa, bu tehlikeli bir varsayılan uygulama etki alanına geri aramayı başka bir kod mekanizma açılacaktır. Bu nedenle, Denetim nesneler her zaman proxy özel olarak saklamak için örtük olarak güvenilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)

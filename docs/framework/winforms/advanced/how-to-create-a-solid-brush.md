@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Düz Fırça oluşturma'
+title: 'Nasıl yapılır: Düz Fırça Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - brushes [Windows Forms], examples
 - brushes [Windows Forms], creating solid
 ms.assetid: 85c3fe7d-fb1d-4591-8a9f-d75b556b90af
-ms.openlocfilehash: d7fb7c11a69cae69210dd2eece3336bc40c505c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ed9ec1f52b41c83b3cc6e36dedf97f1c00db42e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711986"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213447"
 ---
-# <a name="how-to-create-a-solid-brush"></a>Nasıl yapılır: Düz Fırça oluşturma
+# <a name="how-to-create-a-solid-brush"></a>Nasıl yapılır: Düz Fırça Oluşturma
 Bu örnekte bir <xref:System.Drawing.SolidBrush> tarafından kullanılabilen bir nesne bir <xref:System.Drawing.Graphics> şekilleri doldurmak için nesne.  
   
 ## <a name="example"></a>Örnek  
@@ -29,6 +29,7 @@ Bu örnekte bir <xref:System.Drawing.SolidBrush> tarafından kullanılabilen bir
  Bunları kullanmayı bitirdikten sonra çağırmalıdır <xref:System.IDisposable.Dispose%2A> fırça nesneleri gibi sistem kaynaklarının kullanılmasına nesneler üzerinde.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.SolidBrush>
 - <xref:System.Drawing.Brush>
 - [Grafik Programlamaya Başlarken](getting-started-with-graphics-programming.md)

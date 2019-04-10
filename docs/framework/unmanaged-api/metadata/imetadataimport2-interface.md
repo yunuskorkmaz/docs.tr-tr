@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8c95249ec28b9018db42ec70443b30ae4f1409c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6717c48fca14f2200f783a984594388ef3b29c15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211939"
 ---
 # <a name="imetadataimport2-interface"></a>IMetaDataImport2 Arabirimi
 Genişletir [Imetadataımport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) genel türleri ile çalışmaktan yeteneği sağlamak için arabirim.  
@@ -49,6 +49,7 @@ Genişletir [Imetadataımport](../../../../docs/framework/unmanaged-api/metadata
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Reflection.PortableExecutableKinds>
 - [Meta Veri Arabirimleri](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataImport Arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

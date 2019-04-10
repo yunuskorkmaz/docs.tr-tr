@@ -1,5 +1,5 @@
 ---
-title: ISymUnmanagedDispose::Destroy Metodu
+title: ISymUnmanagedDispose::Destroy Yöntemi
 ms.date: 03/30/2017
 api_name:
 - ISymUnmanagedDispose.Destroy
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a4a0bac056c7c88a491ac05a17b662ace833df1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51d2f0aedffdd88974a8184954ecbb9a231b70c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213685"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a>ISymUnmanagedDispose::Destroy Metodu
+# <a name="isymunmanageddisposedestroy-method"></a>ISymUnmanagedDispose::Destroy Yöntemi
 Tüm iç başvuruları bırakın ve tüm sonraki yöntem çağrılarında hata döndürmek temel alınan nesnede neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -40,4 +40,5 @@ HRESULT Destroy();
  **Üst bilgi:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ISymUnmanagedDispose Arabirimi](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224053"
 ---
 # <a name="frequently-asked-questions"></a>Sıkça Sorulan Sorular
 Aşağıdaki bölümlerde, uyguladığınızda karşılaşabileceğiniz bazı yaygın sorunlar yanıt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -180,7 +180,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 > [!NOTE]
 >  Bu senaryoda görünümleri kullanımını sınırlamaları vardır. Üzerinde gerçekleştirilen işlemler, bu yaklaşım en güvenli bir şekilde çalışır <xref:System.Data.Linq.Table%601> temel alınan görünümü tarafından desteklenir. Yalnızca hangi işlemlerin hedeflenen bildirin. Örneğin, çoğu uygulama salt okunurdur ve başka bir büyük sayı gerçekleştirmek `Create` / `Update` / `Delete` kullanarak işlemlerini yalnızca saklı yordamlar görünümleri karşı.  
   
-## <a name="connection-pooling"></a>Bağlantı havuzu  
+## <a name="connection-pooling"></a>Bağlantı Havuzu  
  S. Yardımcı bir yapısı var. <xref:System.Data.Linq.DataContext> havuzu?  
   
  A. Örneklerini yeniden denemeyin <xref:System.Data.Linq.DataContext>. Her <xref:System.Data.Linq.DataContext> tek bir belirli düzenleme/sorgu oturum için (kimlik önbellek dahil) durumu korur. Veritabanının mevcut durumuna göre yeni örnekler elde etmek için yeni bir kullanın <xref:System.Data.Linq.DataContext>.  
@@ -200,6 +200,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
  A. Salt okunur modda değişiklikleri izleme özelliğini bağlam devre dışı bırakır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Sorun giderme](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
 - [LINQ to SQL’de Güvenlik](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

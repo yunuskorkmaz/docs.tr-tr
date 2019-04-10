@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Özel ilke onaylamalarını dışa'
+title: 'Nasıl yapılır: Özel İlke Onaylamalarını Dışarı Aktarma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 0fe97e381bea19458df50e1eb94f2027a6a95d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213636"
 ---
-# <a name="how-to-export-custom-policy-assertions"></a>Nasıl yapılır: Özel ilke onaylamalarını dışa
+# <a name="how-to-export-custom-policy-assertions"></a>Nasıl yapılır: Özel İlke Onaylamalarını Dışarı Aktarma
 İlke onaylamalarını bir hizmet uç noktası gereksinimlerini ve özelliklerini açıklar. Hizmet uygulamaları özel ilke onaylamalarını hizmet meta verilerinde uç, iletişim için kullanabileceğiniz istemci uygulamasına bağlama veya sözleşme özelleştirme bilgileri. Uç nokta, işlem ya da ileti konular, özellikleri veya gereksinimleri iletişim kuran bağlı olarak WSDL bağlamalarda iliştirilmiş ilke ifadelerde onaylar dışarı aktarmak için Windows Communication Foundation (WCF) kullanabilirsiniz.  
   
  Özel ilke onaylamalarını dışa aktarılır uygulayarak <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> üzerinde arabirim bir <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> ve hizmet uç noktası veya bağlama öğesi uygulamanızda kaydederek bağlama doğrudan ya da bağlama öğesi ekleniyor yapılandırma dosyası. İlkeyi dışarı aktarma uygulamanıza özel ilke değerinizi olarak eklemelisiniz bir <xref:System.Xml.XmlElement?displayProperty=nameWithType> uygun örneğine <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> üzerinde <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> yöntemlere geçirilen <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> yöntemi.  
@@ -50,6 +50,7 @@ ms.locfileid: "54721278"
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [Nasıl yapılır: Özel ilke onaylamalarını içe aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Nasıl yapılır: Özel İlke Onaylamalarını İçeri Aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

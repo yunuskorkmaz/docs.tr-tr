@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 41f4e7cd633cf6175b6b167937cf53ceb4d9ec59
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 96b7bfabef589464e99e808d19f0dee6cfb23536
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225826"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Veri Hizmeti istemci Kitaplığı'nı (WCF Veri Hizmetleri) oluşturma
 Uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] tarafından kullanıma sunulan veri modeli açıklayan bir hizmeti meta veri belgesi döndürebilir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için [OData: Meta veri belgesi hizmet](https://go.microsoft.com/fwlink/?LinkId=186070). Kullanabileceğiniz **hizmet Başvurusu Ekle** iletişim için bir başvuru eklemek için Visual Studio'da bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-hizmet tabanlı. Tarafından döndürülen meta veriler için bir başvuru eklemek için bu aracı kullanırken bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] istemci projesinde akışı, aşağıdaki eylemleri gerçekleştirir:  
@@ -36,7 +36,7 @@ Uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includes/ssodatafu
   
 |Veri modeli türü|.NET framework veri türü|  
 |---------------------|------------------------------|  
-|`Edm.Binary`|<xref:System.Byte>`[]`|  
+|`Edm.Binary`|<xref:System.Byte> `[]`|  
 |`Edm.Boolean`|<xref:System.Boolean>|  
 |`Edm.Byte`|<xref:System.Byte>|  
 |`Edm.DateTime`|<xref:System.DateTime>|  
@@ -53,5 +53,6 @@ Uygulayan bir veri hizmeti [!INCLUDE[ssODataFull](../../../../includes/ssodatafu
  Daha fazla bilgi için [OData: Temel veri türlerinin](https://go.microsoft.com/fwlink/?LinkId=186072).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

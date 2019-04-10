@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: Kanal güvenliği kimlik bilgilerini belirtin'
+title: 'Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.openlocfilehash: 761f461c1c0cb24901729a717a41bfb1b599112b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222607"
 ---
-# <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal güvenliği kimlik bilgilerini belirtin
+# <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme
 Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamaları, WCF hizmetlerini çağırmak sağlar. Çoğu WCF hizmetleri, istemci kimlik doğrulaması ve yetkilendirme kimlik bilgilerini belirtmenizi gerektirir. Bir WCF hizmeti bir WCF istemciden çağrılırken, yönetilen kodda ya da bir uygulama yapılandırma dosyasında bu kimlik bilgileri belirtebilirsiniz. Bir WCF hizmeti bir COM uygulamasından çağrılırken kullanabileceğiniz <xref:System.ServiceModel.ComIntegration.IChannelCredentials> kimlik bilgilerini belirtmek için arabirim. Bu konuda kullanarak kimlik bilgilerini belirtmek için çeşitli yollar ortaya konacaktır <xref:System.ServiceModel.ComIntegration.IChannelCredentials> arabirimi.  
   
 > [!NOTE]
@@ -65,13 +65,9 @@ Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamaları,
 ### <a name="to-specify-user-name-and-password"></a>Kullanıcı adı ve parola belirtmek için  
   
 1.  Kullanılacak hizmet App.config dosyasını değiştirmek `wsHttpBinding`. Bu, kullanıcı adı ve parola doğrulaması gereklidir:  
-  
-  
-  
+
 2.  Ayarlama `clientCredentialType` için kullanıcı adı:  
-  
-  
-  
+
 3.  Visual Basic 6.0 açın ve yeni bir standart .exe dosyası oluşturun. Forma bir düğme ekleyin ve aşağıdaki kodu için tıklama işleyicisi eklemek için Ekle düğmesine çift tıklayın:  
   
     ```  
@@ -96,9 +92,7 @@ Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamaları,
 ### <a name="to-specify-windows-credentials"></a>Windows kimlik bilgilerini belirtmek için  
   
 1.  Ayarlama `clientCredentialType` hizmet App.config dosyasında Windows için:  
-  
-  
-  
+
 2.  Visual Basic 6.0 açın ve yeni bir standart .exe dosyası oluşturun. Forma bir düğme ekleyin ve aşağıdaki kodu için tıklama işleyicisi eklemek için Ekle düğmesine çift tıklayın:  
   
     ```  
@@ -138,8 +132,9 @@ Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamaları,
      Bu yöntem için parametreler hakkında daha fazla bilgi için bkz. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Nasıl yapılır: Federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

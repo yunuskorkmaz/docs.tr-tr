@@ -1,18 +1,18 @@
 ---
-title: Kimlik önbelleğinden nesne alma
+title: Kimlik Önbelleğinden Nesne Alma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211237"
 ---
-# <a name="retrieving-objects-from-the-identity-cache"></a>Kimlik önbelleğinden nesne alma
+# <a name="retrieving-objects-from-the-identity-cache"></a>Kimlik Önbelleğinden Nesne Alma
 Bu konu LINQ türleri tarafından yönetilen kimlik önbelleğinden nesne döndüren SQL sorgularını açıklar <xref:System.Data.Linq.DataContext>.  
   
  LINQ to SQL'de, yöntemler birini <xref:System.Data.Linq.DataContext> nesnelerini yönetir sorgular yürütülürken, nesne kimliklerini bir kimlik önbellekte oturum açarak olduğu. Bazı durumlarda, LINQ to SQL veritabanında bir sorgu çalıştırmadan önce kimlik önbelleğinden nesne alma dener.  
@@ -65,6 +65,7 @@ Bu konu LINQ türleri tarafından yönetilen kimlik önbelleğinden nesne dönd�
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Nesne Kimliği](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
 - [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

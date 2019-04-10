@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75dc379baf8d92b9b27bdb58ccab930c2d4f91e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ccc45482f691d9950c641ef126a657052a280e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709175"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213644"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 Arabirimi
 Özel hata ayıklayıcı bildirimlerini denetler.  
@@ -48,5 +48,6 @@ ms.locfileid: "54709175"
  **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama Arabirimleri](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

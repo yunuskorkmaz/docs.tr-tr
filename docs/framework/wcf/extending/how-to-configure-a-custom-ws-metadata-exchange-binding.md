@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Yapılandırma özel bir WS-Metadata değişimi bağlaması'
+title: 'Nasıl yapılır: Özel Bir WS-Metadata Değişimi Bağlaması Yapılandırma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4328306a6b67d2eac498ec48d1769bdf4bd5f81e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab659e7e586b28f5c06b9b6ba12b313f318c6542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210509"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Nasıl yapılır: Yapılandırma özel bir WS-Metadata değişimi bağlaması
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Nasıl yapılır: Özel Bir WS-Metadata Değişimi Bağlaması Yapılandırma
 Bu konu, özel bir WS-Metadata yapılandırma açıklayacak değişimi bağlaması. Windows Communication Foundation (WCF) dört sistem tarafından tanımlanan meta veri bağlamaları içerir, ancak meta veriler, istediğiniz herhangi bir bağlamayı kullanarak yayımlayabilirsiniz. Bu konuda, meta verileri kullanarak yayımlamak nasıl gösterilecektir `wsHttpBinding`. Bu bağlama, güvenli bir şekilde meta verileri kullanıma sunduğundan seçeneği sunar. Bu makalede kod dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Yapılandırma dosyası kullanma  
@@ -114,6 +114,7 @@ Bu konu, özel bir WS-Metadata yapılandırma açıklayacak değişimi bağlamas
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Meta Veri Yayımlama Davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
 - [Meta Verileri Alma](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
 - [Meta Veriler](../../../../docs/framework/wcf/feature-details/metadata.md)

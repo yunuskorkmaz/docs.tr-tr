@@ -1,5 +1,5 @@
 ---
-title: <performanceCounter> Öğesi (Ağ Ayarları)
+title: <performanceCounter> Öğesi (ağ ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 4603a942788d31a049196fb699d07a13551fa443
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 30c5cd07c92a8fc3c340cab0ff9ae74e940c0c12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210938"
 ---
 # <a name="performancecounter-element-network-settings"></a>\<performanceCounter > öğesi (ağ ayarları)
 Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.  
@@ -47,7 +47,7 @@ Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
+|[ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
@@ -74,7 +74,8 @@ Etkinleştirir veya ağ performans sayaçları devre dışı bırakır.
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
-- [Ağ performans sayaçları](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+- [Ağ Performans Sayaçları](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: 9a1738e8be0471e24744a440fee10e5b1152ab10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217425"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView Denetimi Teknoloji Özeti (Windows Forms)
 Bu konu hakkında bilgiler için özetlenmiştir `DataGridView` denetimi ve kullanımını destekleyen sınıflar.  
   
  Verileri tablo biçiminde görüntülemek, sık gerçekleştirmek muhtemelen bir görevdir. `DataGridView` Denetimi bir kılavuzda verileri sunmak için eksiksiz bir çözüm olarak tasarlanmıştır.  
   
-## <a name="keywords"></a>Anahtar Sözcükler  
+## <a name="keywords"></a>anahtar sözcükler  
  DataGridView, BindingSource, tablo, hücre, veri bağlama, sanal mod  
   
 ## <a name="namespaces"></a>Ad Alanları  
@@ -61,6 +61,7 @@ Bu konu hakkında bilgiler için özetlenmiştir `DataGridView` denetimi ve kull
  <xref:System.Windows.Forms.DataGridView> Denetim Kapat birlikte çalışabilir <xref:System.Windows.Forms.BindingSource> bileşeni. Bu bileşen, birincil veri kaynağına bir formun olacak şekilde tasarlanmıştır. Arasındaki etkileşimi yönetebilirsiniz bir <xref:System.Windows.Forms.DataGridView> denetim ve veri bağımsız olarak kendi veri kaynağı kaynak türü.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataGridView Denetimine Genel Bakış](datagridview-control-overview-windows-forms.md)
 - [DataGridView Denetimi Mimarisi](datagridview-control-architecture-windows-forms.md)
 - [Bağlantı Bilgilerini Koruma](../../data/adonet/protecting-connection-information.md)

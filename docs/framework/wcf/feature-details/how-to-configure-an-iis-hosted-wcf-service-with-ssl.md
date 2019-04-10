@@ -1,15 +1,15 @@
 ---
-title: 'Nasıl yapılır: SSL ile bir IIS barındırılan WCF hizmetini yapılandırma'
+title: 'Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: ca7343f14215d89b29636776437f5e4a6a8089a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 336c3800fc033cc12bd9c3fe168ae219b72cab91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214124"
 ---
-# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Nasıl yapılır: SSL ile bir IIS barındırılan WCF hizmetini yapılandırma
+# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma
 Bu konu, HTTP aktarım güvenliği kullanılacak bir IIS barındırılan WCF hizmeti kurmak açıklar. HTTP aktarım güvenliği bir SSL sertifikası, IIS ile kayıtlı olması gerekir. Bir SSL sertifikası yoksa, IIS bir test sertifikası oluşturmak için kullanabilirsiniz. Sonraki web sitesine bir SSL bağlaması ekleyin ve web sitesinin kimlik doğrulaması özelliklerini yapılandırmanız gerekir. Son olarak, WCF hizmetini HTTPS kullanacak şekilde yapılandırmanız gerekir.  
   
 ### <a name="creating-a-self-signed-certificate"></a>Otomatik olarak imzalanan sertifika oluşturma  
@@ -145,6 +145,7 @@ Bu konu, HTTP aktarım güvenliği kullanılacak bir IIS barındırılan WCF hiz
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Internet Information Services'te Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
 - [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
 - [Internet Information Services Barındırma En İyi Uygulamaları](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

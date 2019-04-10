@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862488a157c1030335c5f8e3d02f9f411be6d9a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218076"
 ---
 # <a name="assembly-security-considerations"></a>Derleme Güvenliği Konuları
 <a name="top"></a> Bir derleme oluşturduğunuzda, derlemenin çalışması için gerekli izinler kümesi belirtebilirsiniz. Bir derlemeye belirli izinlerin verilip verilmediği kanıta göre belirlenir.  
@@ -63,6 +63,7 @@ ms.locfileid: "54589577"
  Strong adlandırma ve kullanarak imzalama çünkü [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) bütünlüğü bu iki derleme kanıtı üzerinde kod erişim güvenlik ilkesini temel alabilir. Tanımlayıcı adlandırma ve kullanarak imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md) dijital imzalar ve sertifikalar aracılığıyla bütünlüğü garanti. Bahsedilen tüm teknolojiler — karma doğrulama, tanımlayıcı adlandırma ve kullanarak imzalama [SignTool.exe (imza aracı)](../../../docs/framework/tools/signtool-exe.md)— birlikte derlemenin hiçbir şekilde değiştirilmediğinden emin olmak için iş.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)
-- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+
+- [Tanımlayıcı Adlı Derlemeler](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Ortak Dil Çalışma Zamanındaki Derlemeler](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (İmza Aracı)](../../../docs/framework/tools/signtool-exe.md)

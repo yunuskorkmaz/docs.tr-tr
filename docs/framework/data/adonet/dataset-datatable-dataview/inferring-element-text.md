@@ -1,15 +1,15 @@
 ---
-title: Öğe metni çıkarımını yapma
+title: Öğe Metni Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: d457985bfbec924748d1a418e318609b6837b9d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745174"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224968"
 ---
-# <a name="inferring-element-text"></a>Öğe metni çıkarımını yapma
+# <a name="inferring-element-text"></a>Öğe Metni Çıkarımını Yapma
 Bir öğenin metni içeren ve yeni bir sütun adıyla (öznitelikleri olan öğe) veya yinelenen öğeler gibi tablolar olarak çıkarılan için alt öğe yok **TableName_Text** öğe için ortaya çıkan tablosuna eklenir. Öğesinde bulunan metin tablosunda bir satıra eklenir ve yeni bir sütun depolanır. **Columnmapping'in** yeni sütunun özellik ayarlanacak **MappingType.SimpleContent**.  
   
  Örneğin, aşağıdaki XML göz önünde bulundurun.  
@@ -51,6 +51,7 @@ Bir öğenin metni içeren ve yeni bir sütun adıyla (öznitelikleri olan öğe
 |Text2|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
 - [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [XML’den DataSet Schema Bilgilerini Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)

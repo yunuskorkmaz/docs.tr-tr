@@ -1,5 +1,5 @@
 ---
-title: <oidEntry> Öğesi
+title: <oidEntry> Öğe
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: b1dc4c788576fd3cab55db5255617cc55e68594b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219349"
 ---
 # <a name="oidentry-element"></a>\<oidEntry > öğesi
 ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.  
@@ -38,7 +38,7 @@ ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |**OID**|Gerekli öznitelik.<br /><br /> Sınıfınız tarafından uygulanan algoritması karşılık gelen ASN.1 OID belirtir.|  
-|**Adı**|Gerekli öznitelik.<br /><br /> Değeri belirtir **adı** özniteliğini [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) etiketi.|  
+|**name**|Gerekli öznitelik.<br /><br /> Değeri belirtir **adı** özniteliğini [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) etiketi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -79,8 +79,9 @@ ASN.1 nesne tanımlayıcısı (OID) için bir kolay ad eşler.
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Şifreleme Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
 - [Şifreleme Sınıflarını Yapılandırma](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleme](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

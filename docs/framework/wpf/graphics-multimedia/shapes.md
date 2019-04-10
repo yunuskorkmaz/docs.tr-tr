@@ -14,21 +14,22 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 5c4f76ee753ed6caa30d15a51c341a2edb64011d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57350715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217776"
 ---
 # <a name="shapes"></a>Şekiller
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kullanarak temel şekiller çizmek için destek sağlayan <xref:System.Windows.Shapes.Shape> sınıfı. Şekil nesneleri türetilen <xref:System.Windows.FrameworkElement> ve bu nedenle, Düzen sisteme katılan ve yalnızca kullanılarak kurulabilir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)  
+ [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)  
  [Nasıl Yapılır Konuları](shapes-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Shapes.Shape>
 - [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Grafikler ve Multimedya](index.md)

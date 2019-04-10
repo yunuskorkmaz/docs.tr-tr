@@ -3,12 +3,12 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: bb4cb5178885b90ef25ee827c2f11593ead6e73d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cebfc2f3598f32f233db6039dfe82076d2ffce46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221710"
 ---
 # <a name="trustedissuers"></a>\<trustedIssuers >
 Yapılandırma temelli yayınlayıcı adı tarafından kullanılan Güvenilen yayıncı sertifikaları listesinde yapılandırır (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
@@ -44,7 +44,7 @@ Yapılandırma temelli yayınlayıcı adı tarafından kullanılan Güvenilen ya
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -77,5 +77,6 @@ Yapılandırma temelli yayınlayıcı adı tarafından kullanılan Güvenilen ya
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>
 - <xref:System.IdentityModel.Tokens.IssuerNameRegistry>

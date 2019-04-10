@@ -1,5 +1,5 @@
 ---
-title: <webProxyScript> Öğesi (Ağ Ayarları)
+title: <webProxyScript> Öğesi (ağ ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#webProxyScript
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e823d6065ea23f3a47dad6853a1b9e1237a616c9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257830"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218673"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > öğesi (ağ ayarları)
 Web proxy'leri bulmak için kullanılan komut dosyası özelliklerini yapılandırır.  
@@ -47,7 +47,7 @@ Web proxy'leri bulmak için kullanılan komut dosyası özelliklerini yapıland�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
+|[ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
@@ -55,4 +55,5 @@ Web proxy'leri bulmak için kullanılan komut dosyası özelliklerini yapıland�
  Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

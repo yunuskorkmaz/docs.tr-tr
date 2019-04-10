@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir şekli bir görüntüyle döşeme'
+title: 'Nasıl yapılır: Bir Şekli Bir Resimle Döşeme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: d873ba717fa94852692ce395ef7da30c512aba59
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221544"
 ---
-# <a name="how-to-tile-a-shape-with-an-image"></a>Nasıl yapılır: Bir şekli bir görüntüyle döşeme
+# <a name="how-to-tile-a-shape-with-an-image"></a>Nasıl yapılır: Bir Şekli Bir Resimle Döşeme
 Dikdörtgen görüntüleri yalnızca kutucukları birbirinin yanına bir katı kapsayacak şekilde yerleştirilebilir gibi diğer yanındaki (döşeme) bir şekil doldurmak için yerleştirilebilir. Bir şeklin içinin döşeme için bir doku fırça kullanın. Oluşturduğunuzda bir <xref:System.Drawing.TextureBrush> nesnesi oluşturucusuna geçirmeniz bağımsız değişkenlerden biri olan bir <xref:System.Drawing.Image> nesne. Bir şeklin içinin boyamak için doku fırça kullandığınızda, bu görüntüyü yinelenen kopyalarını şekli doldurulur.  
   
  Kaydırma modu özelliğini <xref:System.Drawing.TextureBrush> nesneyi belirleyen dikdörtgen bir kılavuzda yinelenen olarak nasıl yönlendirilmiş görüntüsüdür. Tüm kutucukları kılavuzunda aynı yönü hale getirebilir veya sonraki bir kılavuz konumundan Çevir görüntü yapabilirsiniz. Çevirme yatay olabilir dikey ya da her ikisini de. Aşağıdaki örnekler, farklı türde çevirme ile döşeme göstermektedir.  
@@ -61,4 +61,5 @@ Dikdörtgen görüntüleri yalnızca kutucukları birbirinin yanına bir katı k
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Şekilleri Doldurmak için Fırça Kullanma](using-a-brush-to-fill-shapes.md)

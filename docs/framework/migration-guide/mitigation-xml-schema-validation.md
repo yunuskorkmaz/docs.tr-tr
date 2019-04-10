@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbeeecda3bd34f5eb651cb32246f8b56d5705002
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5c0087412a53177a7c43df838266f6d896c1bd9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651012"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220480"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Azaltma: XML şema doğrulaması
 İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], XSD şema doğrulaması bir bileşik anahtarı kullanılır ve bir anahtar ise boş bir Benzersizlik kısıtlamasını ihlal algılar.  
@@ -38,4 +38,5 @@ ms.locfileid: "54651012"
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Yeniden Hedefleme Değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

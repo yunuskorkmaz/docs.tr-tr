@@ -2,12 +2,12 @@
 title: Yönetilen Bir Uygulamada Barındırma
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 0210f608be8ef7ff8b2af4b0cc36b308cd3ddbe8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218803"
 ---
 # <a name="hosting-in-a-managed-application"></a>Yönetilen Bir Uygulamada Barındırma
 Windows Communication Foundation (WCF) Hizmetleri, tüm barındırılabilir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulama. Dağıtmak için en az bir altyapı gerektirdiğinden kendi kendine barındırma hizmetleri en esnek barındırma seçenektir. Yönetilen uygulamalar, Gelişmiş barındırma ve yönetim özellikleri, WCF, Internet Information Services (IIS) ve Windows Hizmetleri gibi diğer barındırma seçenekleri sağlamaz ancak ayrıca en az sağlam barındırma seçeneği olmasıdır.  
@@ -25,5 +25,6 @@ Windows Communication Foundation (WCF) Hizmetleri, tüm barındırılabilir [!IN
  Kendi kendine barındırma sağlayan diğer yaygın senaryoları Windows Presentation Foundation (WPF) veya Windows Forms (WinForms) göre gibi zengin istemci uygulamalarının ' dir. Bu barındırma seçeneği ayrıca, zengin istemci uygulamaları gibi kolaylaştırır [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] ve dış dünya ile iletişim kurmak için WinForms uygulamaları. Örneğin, kullanan bir eşler arası işbirliği istemci [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] kullanıcı arabirimi için ve ayrıca diğer istemcilerin kendisine bağlanıp bilgi paylaşmak bir WCF hizmetini barındırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)
 - [Başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md)

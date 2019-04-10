@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çizim için grafik nesneleri oluşturma'
+title: 'Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223634"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>Nasıl yapılır: Çizim için grafik nesneleri oluşturma
+# <a name="how-to-create-graphics-objects-for-drawing"></a>Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma
 Çizgiler ve şekiller çizmek önce metin işlemek veya görüntülemek ve görüntülerle işlemek [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], oluşturmak gereken bir <xref:System.Drawing.Graphics> nesne. <xref:System.Drawing.Graphics> Nesnesini temsil eder bir [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] çizim yüzeyi ve grafik görüntüleri oluşturmak için kullanılan nesne.  
   
  Grafiklerle çalışma iki adımı vardır:  
@@ -165,13 +165,14 @@ ms.locfileid: "57709061"
   
     |İşlemek için|Bkz. |  
     |---------------|---------|  
-    |satırları|[Nasıl yapılır: Bir Windows formunda çizgi çizme](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Şekiller|[Nasıl yapılır: Anahatlı şekil çizme](how-to-draw-an-outlined-shape.md)|  
-    |Metin|[Nasıl yapılır: Bir Windows formunda metin çizme](how-to-draw-text-on-a-windows-form.md)|  
-    |Görüntüler|[Nasıl yapılır: GDI + ile görüntü işleme](how-to-render-images-with-gdi.md)|  
+    |satırları|[Nasıl yapılır: Windows Formunda Çizgi Çizme](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Şekiller|[Nasıl yapılır: Anahatlı Şekil Çizme](how-to-draw-an-outlined-shape.md)|  
+    |Metin|[Nasıl yapılır: Bir Windows Formunda Metin Çizme](how-to-draw-text-on-a-windows-form.md)|  
+    |Görüntüler|[Nasıl yapılır: GDI+ ile Resim İşleme](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Grafik Programlamaya Başlarken](getting-started-with-graphics-programming.md)
-- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
-- [Nasıl yapılır: GDI + ile görüntü işleme](how-to-render-images-with-gdi.md)
+- [Nasıl yapılır: GDI+ ile Resim İşleme](how-to-render-images-with-gdi.md)

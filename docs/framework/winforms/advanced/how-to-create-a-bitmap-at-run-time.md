@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çalışma zamanında bir bit eşlem oluşturma'
+title: 'Nasıl yapılır: Çalışma Zamanında Bit Eşlem Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], creating
 - bitmaps [Windows Forms], examples [Visual Basic]
 ms.assetid: 737bae30-e599-4e1d-bf30-bab8280b32be
-ms.openlocfilehash: edcf413bf6b3cb92e4570867afe8222c1f8b84f6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3acaf18afa621a182c26f00c0594516ac573e281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213675"
 ---
-# <a name="how-to-create-a-bitmap-at-run-time"></a>Nasıl yapılır: Çalışma zamanında bir bit eşlem oluşturma
+# <a name="how-to-create-a-bitmap-at-run-time"></a>Nasıl yapılır: Çalışma Zamanında Bit Eşlem Oluşturma
 Bu örneği oluşturur ve çizer bir <xref:System.Drawing.Bitmap> nesne ve var olan bir Windows Formları içinde görüntüler <xref:System.Windows.Forms.PictureBox> denetimi.  
   
 ## <a name="example"></a>Örnek  
@@ -28,5 +28,6 @@ Bu örneği oluşturur ve çizer bir <xref:System.Drawing.Bitmap> nesne ve var o
 -   Sistem, System.Drawing ve System.Windows.Forms derlemeleri alır bir Windows formu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Bitmap>
-- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
+- [Resimler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)

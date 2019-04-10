@@ -11,18 +11,16 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219817"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Bağımlılık Özelliği Geri Aramaları ve Doğrulama
 Bu konuda doğrulama belirlemeyi özelliğinin geçerli değeri değiştiğinde çağrılan geri çağırmaları gibi özellik güvenlikle ilgili özellikler için diğer özel uygulamaları kullanarak ve geçersiz kılma bağımlılık özellikleri oluşturmayı açıklar olası değer belirleme etkileri dışında. Bu konuda Ayrıca bu teknikler kullanılarak varsayılan özellik sistemi davranışlarını genişletme uygun olduğu senaryolar açıklanmaktadır.  
-  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu konu başlığı altında bağımlılık özelliği ve özel bağımlılık özelliği için meta verileri nasıl uygulanacağını uygulama temel senaryolar anladığınızı varsayar. Bkz: [özel bağımlılık özellikleri](custom-dependency-properties.md) ve [bağımlılık özelliği meta verisi](dependency-property-metadata.md) bağlamı için.  
@@ -81,6 +79,7 @@ Bu konuda doğrulama belirlemeyi özelliğinin geçerli değeri değiştiğinde 
  Özellik sistemi tüm işler <xref:System.Windows.CoerceValueCallback> değerini döndüren <xref:System.Windows.DependencyProperty.UnsetValue> bir özel durum olarak. Bu özel durum olarak sonuçlanan özellik değişikliğini anlamına <xref:System.Windows.CoerceValueCallback> çağrılan özellik sistemi tarafından reddedilmesi ve özellik sistemi özelliği önceki değerini yerine bildirmesi. Bu mekanizma, zaman uyumsuz olarak başlatılan bir özellik değişiklikleri geçerli nesne durumu için hala geçerli olduğunu kontrol edin ve aksi takdirde değişiklikleri bastırmak için yararlı olabilir. Özelliğin hangi bileşenin bağlı olarak değer belirleme için bildirilen değer sorumlu olduğu bir değer seçerek gizleyebilirsiniz, başka bir olası senaryodur. Bunu yapmak için kullanabileceğiniz <xref:System.Windows.DependencyProperty> geri çağırma ve özellik tanımlayıcısı için giriş olarak geçirilen <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>ve ardından <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağımlılık Özelliklerine Genel Bakış](dependency-properties-overview.md)
 - [Bağımlılık Özelliği Meta Verisi](dependency-property-metadata.md)
 - [Özel Bağımlılık Özellikleri](custom-dependency-properties.md)

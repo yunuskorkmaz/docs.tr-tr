@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: PropertyNameChanged desenini uygulama'
+title: 'Nasıl yapılır: PropertyNameChanged Desenini Uygulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], custom controls
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
-ms.openlocfilehash: 889a7f5f7a84db378acaa88b717b6011f1a3dfdc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213031"
 ---
-# <a name="how-to-apply-the-propertynamechanged-pattern"></a>Nasıl yapılır: PropertyNameChanged desenini uygulama
+# <a name="how-to-apply-the-propertynamechanged-pattern"></a>Nasıl yapılır: PropertyNameChanged Desenini Uygulama
 Aşağıdaki kod örneğinde nasıl uygulanacağını gösterir *PropertyName*değiştirilen deseni bir özel denetim için. Windows Forms veri bağlama altyapısı ile kullanılan özel denetimleri uyguladığınızda bu düzeni uygulanır.  
   
 ## <a name="example"></a>Örnek  
@@ -29,6 +29,7 @@ Aşağıdaki kod örneğinde nasıl uygulanacağını gösterir *PropertyName*de
 -   Kodu bir boş bir kod dosyasına yapıştırın. Özel denetim içeren bir Windows formunda kullanmalısınız bir `Main` yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: INotifyPropertyChanged arabirimini uygulama](how-to-implement-the-inotifypropertychanged-interface.md)
+
+- [Nasıl yapılır: INotifyPropertyChanged Arabirimini Uygulama](how-to-implement-the-inotifypropertychanged-interface.md)
 - [Windows Forms Veri Bağlamada Bildirimi Değiştirme](change-notification-in-windows-forms-data-binding.md)
 - [Windows Forms Veri Bağlama](windows-forms-data-binding.md)

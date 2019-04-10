@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-ms.openlocfilehash: 9ce4375d9e89e829349a2088daf4556fb05e9e94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211484"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation Bağlamaları
 Windows Communication Foundation (WCF) hizmet uç noktası, diğer uç noktaları ile nasıl iletişim kurduğu bağlantılarını belirtin. En temel sırasında bir bağlama kullanılacak Aktarım (örneğin, HTTP veya TCP) belirtmeniz gerekir. Güvenlik ve işlem, bağlamaları desteği gibi diğer özellikleri de ayarlayabilirsiniz.  
@@ -31,9 +31,10 @@ Windows Communication Foundation (WCF) hizmet uç noktası, diğer uç noktalar�
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Uç noktalar: Adresleri, bağlamalar ve sözleşmeler](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [Bağlamalar](../../../docs/framework/wcf/feature-details/bindings.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Özel Bağlamalar](../../../docs/framework/wcf/extending/custom-bindings.md)

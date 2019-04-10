@@ -1,15 +1,15 @@
 ---
-title: Öznitelik tabanlı eşleme
+title: Öznitelik Tabanlı Eşleme
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223569"
 ---
-# <a name="attribute-based-mapping"></a>Öznitelik tabanlı eşleme
+# <a name="attribute-based-mapping"></a>Öznitelik Tabanlı Eşleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir SQL Server veritabanına eşleyen bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ya da uygulanan öznitelikleri veya bir dış eşleme dosyası kullanarak nesne modeli. Bu konuda, öznitelik tabanlı yaklaşım açıklanmaktadır.  
   
  En basit formunda, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanına eşleyen bir <xref:System.Data.Linq.DataContext>, bir sınıf, sütunları ve söz konusu sınıfın özelliklerini ilişkileri bir tablo. Öznitelikler, devralma hiyerarşisi, nesne modelinde eşlemek için de kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veya C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "54713908"
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Dize|Bkz: <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|İle kullanılan kendi <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliği, veritabanı adını belirtir.|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Dize|Bkz.  <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|İle kullanılan kendi <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliği, veritabanı adını belirtir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "54713908"
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boole değeri|`false`|İlişkilendirme olarak ayarlandığında, yabancı anahtar üyeleri olan tüm NULL olmayan bir ilişkinin üzerinde yerleştirildiğinde, nesneyi siler null.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|Dize|Hiçbiri|Silme davranışını ilişkisi ekler.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|Dize|None|Silme davranışını ilişkisi ekler.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boole değeri|`false`|TRUE ise, üye yabancı anahtar veritabanı ilişkisini gösteren bir ilişkilendirme olarak belirler.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boole değeri|`false`|TRUE ise bir yabancı anahtar benzersizlik kısıtlamasını gösterir.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|Dize|İlgili sınıf kimliği|Bir veya daha fazla hedef varlık sınıfı üyeleri ilişkisinin diğer tarafındaki anahtar değerler olarak belirler.|  
@@ -114,7 +114,7 @@ ms.locfileid: "54713908"
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Dize|Hiçbiri|Veritabanı türü belirtir.|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Dize|None|Veritabanı türü belirtir.|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|Dize|Aynı dize olarak parametre adı veritabanında|Parametre için bir ad belirtir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ParameterAttribute>.  
@@ -143,4 +143,5 @@ ms.locfileid: "54713908"
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.DataAttribute>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

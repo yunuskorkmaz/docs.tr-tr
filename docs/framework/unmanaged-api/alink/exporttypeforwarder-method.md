@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 737f4600d04a4fa443fbd5b422b26eff11178d82
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5bdf9fb50fe06141df6f3818c784588b9e2138af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212030"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder Yöntemi
 Bir tür ileticisi verilen derleme türü tabloya ekler.  
@@ -57,6 +57,7 @@ HRESULT ExportTypeForwarder(
  ALink.h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

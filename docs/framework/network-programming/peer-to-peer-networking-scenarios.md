@@ -1,15 +1,15 @@
 ---
-title: Eşler arası ağ senaryoları
+title: Eşler Arası Ağ Oluşturma Senaryoları
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
-ms.openlocfilehash: 7795bae8fa9ea6b5192f16dfe616c0bf5d543c80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c38f144fccd9376a09f50a735a692a0e7b9d22e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216840"
 ---
-# <a name="peer-to-peer-networking-scenarios"></a>Eşler arası ağ senaryoları
+# <a name="peer-to-peer-networking-scenarios"></a>Eşler Arası Ağ Oluşturma Senaryoları
 Eşler arası ağ iletişimi etkinleştirir veya aşağıdaki senaryolarda geliştirir:  
   
 ## <a name="real-time-communications-rtc"></a>Gerçek zamanlı iletişimler (RTC)  
@@ -69,4 +69,5 @@ Eşler arası ağ iletişimi etkinleştirir veya aşağıdaki senaryolarda geli�
 -  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.PeerToPeer.Collaboration>

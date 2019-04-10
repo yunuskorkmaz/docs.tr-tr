@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224292"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Performansı iyileştirme: Diğer öneriler
 <a name="introduction"></a> Bu konu başlığı altında ek olarak konularındaki tarafından kapsanan performans önerileri sağlar [WPF uygulama performansını en iyi duruma getirme](optimizing-wpf-application-performance.md) bölümü.  
@@ -73,6 +73,7 @@ ms.locfileid: "57358944"
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Yazı tipi önbellek hizmeti, yazı tipi verileri arasında paylaştığı [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar. İlk [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] çalıştırdığınız uygulaması, hizmet zaten çalışmıyorsa bu hizmetini başlatır. Kullanıyorsanız [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], "Windows Presentation Foundation (WPF) yazı tipi önbellek 3.0.0.0" hizmet "El ile" (varsayılan) "Otomatik (Gecikmeli Başlatma)", ilk başlatma süresini azaltmak için ayarlayabileceğiniz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Uygulama Performansını Planlama](planning-for-application-performance.md)
 - [Donanımdan Yararlanma](optimizing-performance-taking-advantage-of-hardware.md)
 - [Düzen ve Tasarım](optimizing-performance-layout-and-design.md)

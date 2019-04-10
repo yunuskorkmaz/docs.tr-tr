@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Akışı etkinleştir'
+title: 'Nasıl yapılır: Akışı Etkinleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 2521b6ac237a76cac64cebca91bbaa792bba2c67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5bc4bce984c4159949f840f395005ec9fe746e85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227320"
 ---
-# <a name="how-to-enable-streaming"></a>Nasıl yapılır: Akışı etkinleştir
+# <a name="how-to-enable-streaming"></a>Nasıl yapılır: Akışı Etkinleştirme
 Windows Communication Foundation (WCF) iletilerini arabelleğe alınan ya da akış aktarımları kullanarak gönderebilirsiniz. Bir alıcı okumadan önce varsayılan arabelleğe alınan aktarım modunda bir ileti tamamen teslim edilmelidir. Aktarım modunu akışında alıcı tamamen teslim edilmeden önce iletiyi işlemeye başlayabilirsiniz. Akış modunda iletilen bilgiler uzun ve seri olarak işlenebilecek yararlı olur. Akış modunda de, ileti tamamen arabelleğe çok büyük olduğunda yararlıdır.  
   
  Akışını etkinleştirmek için tanımladığınız `OperationContract` uygun şekilde ve akış taşıma düzeyinde etkinleştirin.  
@@ -69,11 +69,12 @@ Windows Communication Foundation (WCF) iletilerini arabelleğe alınan ya da ak�
   
 1.  Bunu gönderildiği sırada bir veri akışı, her bir öbeği özel işleme yapmak veya alınan özel akış sınıfından türetilen <xref:System.IO.Stream>. Özel bir akışa ilişkin bir örnek olarak, aşağıdaki kodu içeren bir `GetReversedStream` yöntemi ve bir `ReverseStream` sınıfı-.  
   
-     `GetReversedStream` oluşturur ve yeni bir örneğini döndürür `ReverseStream`. Sistem okur gibi gerçek işleme olur `ReverseStream` nesne. `ReverseStream.Read` Yöntemi bayt öbeğini temel alınan dosyadan okur, bunları tersine çevirir ve sonra ters bayt sayısını döndürür. Bu yöntem, tüm dosya içeriğini ters değil; bir kerede bir bayt bir öbek tersine çevirir. Bu örnek, içeriği olarak akış işlemede nasıl gerçekleştirebileceğiniz gösterir akıştan yazılamaz veya okunamaz için okuyun.  
+     `GetReversedStream` Oluşturur ve yeni bir örneğini döndürür `ReverseStream`. Sistem okur gibi gerçek işleme olur `ReverseStream` nesne. `ReverseStream.Read` Yöntemi bayt öbeğini temel alınan dosyadan okur, bunları tersine çevirir ve sonra ters bayt sayısını döndürür. Bu yöntem, tüm dosya içeriğini ters değil; bir kerede bir bayt bir öbek tersine çevirir. Bu örnek, içeriği olarak akış işlemede nasıl gerçekleştirebileceğiniz gösterir akıştan yazılamaz veya okunamaz için okuyun.  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Büyük Veriler ve Akış Yapma](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
 - [Akış](../../../../docs/framework/wcf/samples/stream.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 7b0135e4fc655b0efc3140e388f75ac8f45193cf
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 029e4983ef270bb5272ad0bf541ee34febd9399c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222347"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Bildirim Üretme ve Düzenleme Aracı, Grafik İstemci)
 
@@ -28,28 +28,28 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Komut|Menü|Kısayol|Açıklama|  
 |-------------|----------|--------------|-----------------|  
-|**Uygulama bildirimi**|**Yeni dosya**||Yeni bir uygulama bildirimi oluşturur.|  
-|**Dağıtım bildirimi**|**Yeni dosya**||Yeni bir dağıtım bildirimi oluşturur.|  
-|**açın**|**Dosya**|CTRL+O|Varolan bir dağıtım bildirimini, uygulama bildirimini ya da düzenlemek için güven lisansını açar.|  
-|**Kapat**|**Dosya**|CTRL+F4|Açık bir dosyayı kapatır.<br /><br /> Bir dosyayı kapatmadan önce değiştirirseniz, MageUI.exe dosyayı bir ortak anahtarla, anahtar çiftiyle veya depolanmış bir sertifikayla yeniden imzalamanızı ister.|  
+|**Uygulama Bildirimi**|**Dosya, Yeni**||Yeni bir uygulama bildirimi oluşturur.|  
+|**Dağıtım Bildirimi**|**Dosya, Yeni**||Yeni bir dağıtım bildirimi oluşturur.|  
+|**Open**|**Dosya**|CTRL+O|Varolan bir dağıtım bildirimini, uygulama bildirimini ya da düzenlemek için güven lisansını açar.|  
+|**Close**|**Dosya**|CTRL+F4|Açık bir dosyayı kapatır.<br /><br /> Bir dosyayı kapatmadan önce değiştirirseniz, MageUI.exe dosyayı bir ortak anahtarla, anahtar çiftiyle veya depolanmış bir sertifikayla yeniden imzalamanızı ister.|  
 |**Kaydet**|**Dosya**|CTRL+S|Şu anda kullanıcı giriş odağı olan belgeyi diske kaydeder.|  
 |**Farklı Kaydet**|**Dosya**||Yeni bir dosya adı ve/veya konum girmenizi sağlayarak bir dosyayı diske kaydeder.|  
 |**Tümünü Kaydet**|**Dosya**||MageUI.exe içinde açık durumdaki tüm dosyalarda yapılan değişiklikleri kaydeder.|  
 |**Tercihler**|**Dosya**||Açılır **tercihleri** iletişim kutusu. Daha fazla bilgi için aşağıdaki bölüme bakın.|  
-|**Çıkış**|**Dosya**|ALT+F4|MageUI.exe'den çıkılır.|  
+|**Çık**|**Dosya**|ALT+F4|MageUI.exe'den çıkılır.|  
 |**Kes**|**Düzenle**|CTRL+X|Seçili durumdaki metni uygulamadan kaldırır ve sistem Pano'suna taşır.|  
 |**Kopyala**|**Düzenle**|CTRL+C|Seçili durumdaki metni sistem Pano'suna kopyalar.|  
 |**Yapıştır**|**Düzenle**|CTRL+V|Sistem Pano'sundaki metni etkin durumdaki metin öğesinin içine yapıştırır.|  
-|**Delete**|**Düzenle**||Şu anda bir güven lisansı gibi bir listedeki seçili öğenin siler **dağıtım bildirimi** sekmesi.|  
+|**Sil**|**Düzenle**||Şu anda bir güven lisansı gibi bir listedeki seçili öğenin siler **dağıtım bildirimi** sekmesi.|  
 |**Tümünü Kapat**|**Pencere**||MageUI.exe'de açık durumdaki tüm dosyaları kapatır. Bir veya daha fazla dosyanın kaydedilmesi gerekiyorsa, gereksinimi MageUI.exe sizden onları kaydetmenizi ister. MageUI.exe ayrıca imzalanmamış veya değiştirilmiş her dosya için bir imzalama anahtarı seçmenizi de ister.|  
-|**hakkında**|**Yardım**||MageUI.exe'nin sürüm ve telif hakkı bilgilerini görüntüler.|  
+|**Hakkında**|**Yardım**||MageUI.exe'nin sürüm ve telif hakkı bilgilerini görüntüler.|  
   
 ## <a name="preferences-dialog-box"></a>Tercihler İletişim Kutusu  
  **Tercihleri** iletişim kutusu aşağıdaki öğeleri içerir.  
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Oturum açık Kaydet**|Bir dosyadaki değişikliklerinizi kaydedeceğiniz her zaman dosyayı imzalamanızı ister.|  
+|**Kaydederken imzala**|Bir dosyadaki değişikliklerinizi kaydedeceğiniz her zaman dosyayı imzalamanızı ister.|  
 |**Varsayılan imza sertifikasını kullanın**|Girilen anahtarı kullanır **sertifika dosyası** tüm dosyaları imzalamak için metin kutusu. Bu komut isteminde bir dosyayı kaydettiğinizde, genellikle görünen imzalama ortadan kaldırır ve **oturum kaydederken** seçilir. Üç nokta kullanın (**...** ) düğmesinin yanındaki **sertifika dosyası** anahtarı dosyasını seçmek için metin kutusu.|  
 |Özet algoritması|Bağımlılık özetlerinin oluşturması için kullanılan algoritmayı belirtir. Değer "sha256RSA" veya "sha1RSA" olmalıdır. Varsayılan olarak SHA1 kullanılır. Hem uygulama hem de dağıtım bildirimlerinde kullanılır. Kullanıcı bildirimi kaydederken bir sertifika sunarsa, bağımlılık özetleri oluşturmak için sertifikadaki algoritmaları kullanır.|  
   
@@ -67,7 +67,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Parola**|Bu sertifikayla imzalamak için kullanılan parolayı yazmanız için bir alan sağlar. Parola yoksa boş bırakılabilir.|  
 |**Depolanmış sertifika ile imzala**|Bilgisayarınızın sertifika deposunda depolanmış dijital sertifikaların seçilebilir bir listesini görüntüler.|  
 |**Zaman damgası URI'si**|Dijital zaman damgası hizmeti Tekdüzen Kaynak Konumlandırıcı'yı (URI) görüntüler. Bildirimlere zaman damgası koymak, uygulamanızın sonraki sürümünü dağıtmadan önce dijital sertifikanızın süresi dolarsa bildirimleri yeniden imzalamanıza gerek kalmamasını sağlar. Daha fazla bilgi için [Windows kök sertifika programı üyeleri](https://go.microsoft.com/fwlink/?LinkId=159000) ve [ClickOnce ve Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
-|**Oturum yok**|Dijital bir sertifikanın imza eklemeden bildirim kaydetmenize izin verir.|  
+|**İmzalama**|Dijital bir sertifikanın imza eklemeden bildirim kaydetmenize izin verir.|  
   
 ## <a name="tab-and-panel-descriptions"></a>Sekme ve Panel Açıklamaları  
  MageUI.exe ile bir belge açtığınızda, kendi sekme sayfasında görünür. Her sekme bir özellik paneli kümesi içerir. Paneller belgenin verilerinin gruplandırılmış alt kümelerini içerir.  
@@ -83,7 +83,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Açıklama**|Yayımcı, ürün ve Destek belirten bilgi.|  
 |**Uygulama Seçenekleri**|Bu tarayıcı uygulaması olan ve bu bildirim güven bilgi kaynağı olup olmadığını belirtir.|  
 |**Dosyalar**|Tüm bu dağıtımı oluşturan dosyaları belirtir.|  
-|**Gerekli izinler**|Uygulamayı bir istemci üzerinde çalıştırmak için gerekli minimum izin kümesi belirtir.|  
+|**Gerekli İzinler**|Uygulamayı bir istemci üzerinde çalıştırmak için gerekli minimum izin kümesi belirtir.|  
   
 ### <a name="name-tab"></a>Adı sekmesi  
  **Adı** ilk oluşturduğunuzda veya bir uygulama bildirimi açtığınızda sekmesi görüntülenir. Dağıtım benzersiz olarak tanımlayan ve isteğe bağlı olarak bir geçerli hedef platformu belirtir.  
@@ -101,7 +101,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Publisher**|Kişi veya kuruluş uygulamadan sorumlu adı. Bu değer, Başlat menüsü klasör adı kullanılır.|  
+|**Yayımcı**|Kişi veya kuruluş uygulamadan sorumlu adı. Bu değer, Başlat menüsü klasör adı kullanılır.|  
 |**Ürün**|Tam ürün adı. Seçtiyseniz **yerel olarak yükleme** için **uygulama türü** öğede **dağıtım seçenekleri** bu ad dağıtım bildirimini sekmesinde görünür ne olur **Başlat** menü bağlantısı ve **Program Ekle veya Kaldır** bu uygulama için.|  
 |**Destek konumu**|URL, müşterilerin Yardım alabilir ve uygulama için destek.|  
   
@@ -120,7 +120,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Doldur**|Uygulama bildirimine uygulama dizini ve alt dizinleri tüm dosyaları ekler. MageUI.exe dizinde tek bir yürütülebilir dosya bulursa, onu otomatik olarak bu istemcide ClickOnce uygulaması başlatıldığında ilk yürütülen dosya giriş noktası olarak işaretler.|  
 |**Uygulama dosyaları**|Tüm uygulama dosyaları listeler. Her dosyanın, aşağıda açıklanan üç düzenlenebilir özniteliği vardır.|  
 |**Dosya türü**|Dosya türü, dört değerlerden biri olabilir:<br /><br /> -Yok.<br />-Giriş noktası. Uygulama birincil yürütülebilir. Yalnızca bir yürütülebilir dosya giriş noktası olarak işaretlenebilir.<br />-Veri dosyası. Uygulama veri sağlayan bir XML dosyası gibi bir dosya.<br />-Simge dosyası. Bir uygulama simgesi, masaüstünde veya bir uygulama penceresinin üst köşesindeki gibi görünür.|  
-|**Optional**|İsteğe bağlı olarak işaretlenmiş dosyaların ilk yükleme veya güncelleştirme yüklenmez ancak System.Deployment üzerine API'sini kullanarak çalışma zamanında yüklenebilir. Daha fazla bilgi için [izlenecek yol: API tasarımcıyı kullanarak ClickOnce dağıtımı ile isteğe bağlı derlemeleri indirme](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
+|**İsteğe Bağlı**|İsteğe bağlı olarak işaretlenmiş dosyaların ilk yükleme veya güncelleştirme yüklenmez ancak System.Deployment üzerine API'sini kullanarak çalışma zamanında yüklenebilir. Daha fazla bilgi için [izlenecek yol: API tasarımcıyı kullanarak ClickOnce dağıtımı ile isteğe bağlı derlemeleri indirme](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
 |**Grup**|İsteğe bağlı dosya kümesi için bir etiket. Birtakım dosyalarda Grup etiketi uygulamak ve bir dizi tek bir API çağrısı ile dosya indirme için isteğe bağlı API'yi kullanın.|  
   
 ### <a name="permissions-required-tab"></a>Gerekli izinler sekmesi  
@@ -157,7 +157,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
   
 |Arabirim Öğesi|Açıklama|  
 |----------------|-----------------|  
-|**Publisher**|Gerekli. Kişi veya kuruluş uygulamadan sorumlu adı. Bu değer, Başlat menüsü klasör adı kullanılır.|  
+|**Yayımcı**|Gerekli. Kişi veya kuruluş uygulamadan sorumlu adı. Bu değer, Başlat menüsü klasör adı kullanılır.|  
 |**Ürün**|Gerekli. Tam ürün adı. Seçtiyseniz **yerel olarak yükleme** için **uygulama türü** öğede **dağıtım seçenekleri** sekmesinde, bu adı ne görünür olacaktır **Başlat** menü bağlantısı ve **Program Ekle veya Kaldır** bu uygulama için.|  
 |**Destek konumu**|İsteğe bağlı. URL, müşterilerin Yardım alabilir ve uygulama için destek.|  
   
@@ -191,6 +191,7 @@ MageUI.exe, komut satırı aracı Mage.exe ile aynı işlevselliği, ancak Windo
 |**Bildirimi seçin**|Uygulama bildirimini seçmenize olanak sağlar. Bir uygulama bildirimi seçtiğinizde sayfadaki diğer alanların tümünü doldurur.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ClickOnce Güvenliği ve Dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment)
-- [İzlenecek yol: ClickOnce Uygulamasını El ile Dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
-- [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [İzlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
+- [Mage.exe (Bildirim Üretme ve Düzenleme Aracı)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

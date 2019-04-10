@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b40533553ccd7a3339a8a3ee0c8b47879efd38ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21533b5173bcd91d0c944fbde4eafc9817de8315
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220064"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON Numaralandırması
 Çalışma zamanı askıya alındığından nedenini gösterir.  
@@ -66,4 +66,5 @@ typedef enum {
  **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Profil Oluşturma Sabit Listeleri](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+
+- [Profil Oluşturma Numaralandırmaları](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

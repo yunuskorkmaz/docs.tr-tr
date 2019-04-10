@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Özel yazı tipi koleksiyonu oluşturma'
+title: 'Nasıl yapılır: Özel Yazı Tipi Koleksiyonu Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 7cfd2a1fd29b58019d49c8cd5df9adb5b0873302
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723784"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210698"
 ---
-# <a name="how-to-create-a-private-font-collection"></a>Nasıl yapılır: Özel yazı tipi koleksiyonu oluşturma
+# <a name="how-to-create-a-private-font-collection"></a>Nasıl yapılır: Özel Yazı Tipi Koleksiyonu Oluşturma
 <xref:System.Drawing.Text.PrivateFontCollection> Sınıfının devraldığı <xref:System.Drawing.Text.FontCollection> soyut temel sınıf. Kullanabileceğiniz bir <xref:System.Drawing.Text.PrivateFontCollection> bir dizi uygulamanıza özel yazı nesnesine. Bir özel yazı tipi koleksiyonu yüklenen sistem yazı tiplerini ve bunun yanı sıra bilgisayarda yüklü değil yazı tipleri içerebilir. Bir özel yazı tipi koleksiyonu için bir yazı tipi dosyası eklemek için çağrı <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> yöntemi bir <xref:System.Drawing.Text.PrivateFontCollection> nesne.  
   
  <xref:System.Drawing.Text.FontCollection.Families%2A> Özelliği bir <xref:System.Drawing.Text.PrivateFontCollection> nesne içeren bir dizi <xref:System.Drawing.FontFamily> nesneleri.  
@@ -37,9 +37,9 @@ ms.locfileid: "57723784"
   
  Verilen ailesi/stil birleşimi varsa bir <xref:System.Drawing.Font> nesnesi, o ailesi ve stili kullanılarak oluşturulur. Geçirilen ilk bağımsız değişken <xref:System.Drawing.Font.%23ctor%2A> oluşturucudur yazı tipi ailesinin adı (değil bir <xref:System.Drawing.FontFamily> nesnesi diğer çeşitleri için olduğu gibi <xref:System.Drawing.Font.%23ctor%2A> Oluşturucu). Sonra <xref:System.Drawing.Font> nesnesi oluşturulduğunda, geçer <xref:System.Drawing.Graphics.DrawString%2A> yöntemi <xref:System.Drawing.Graphics> stil adı aile adını görüntülemek için sınıf.  
   
- Aşağıdaki kodun çıktısı aşağıdaki çizimde gösterilen çıktıya benzer.  
+ Aşağıdaki kodun çıktısı aşağıdaki çizimde gösterilen çıktıya benzer:  
   
- ![Yazı tipleri metin](./media/csfontstext7.png "csfontstext7")  
+ ![Çeşitli yazı tiplerini metin gösteren ekran görüntüsü.](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
  (Bu, aşağıdaki kod örneğinde özel yazı tipi koleksiyonu eklendi) Arial.tff Normal stili Arial yazı tipi dosyasıdır. Ancak, program çıktısı dışında normal Arial yazı tipi ailesi için birkaç kullanılabilir stiller gösterdiğine dikkat edin. Çünkü [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kalın, italik ve kalın italik stillerden Normal stili benzetimini yapabilirsiniz. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Ayrıca alt çizgiler ve Normal stili'dan da üst çizgi üretebilir.  
   
@@ -52,5 +52,6 @@ ms.locfileid: "57723784"
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Drawing.Text.PrivateFontCollection>
 - [Yazı Tipleri ve Metin Kullanma](using-fonts-and-text.md)

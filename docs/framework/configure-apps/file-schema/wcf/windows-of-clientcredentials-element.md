@@ -2,12 +2,12 @@
 title: <windows> ' ın <clientCredentials> öğesi
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: fb55fb9901e4c08a3c5d7662fdb3bf12a71876bb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221026"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<Windows >, \<clientCredentials > öğesi
 İstemciyi temsil etmek için kullanılacak Windows kimlik bilgisi ayarlarını belirtir.  
@@ -46,6 +46,7 @@ ms.locfileid: "55275164"
 |[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Configuration.WindowsClientElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>

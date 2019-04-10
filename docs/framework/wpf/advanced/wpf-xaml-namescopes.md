@@ -10,18 +10,16 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225800"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML Ad Kapsamları
 XAML ad kapsamları tanımlayan bir kavram, XAML içinde tanımlanan nesneler var. XAML namescope adlarında bir nesne ağacında nesnelerin XAML tanımlı adlarını ve örnek eşdeğerlerine arasındaki ilişkileri kurmak için kullanılabilir. Genellikle, XAML ad kapsamları içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yönetilen kod, bir XAML uygulaması için tek tek XAML sayfa yükleme kökleri olduğunda oluşturulur. XAML ad kapsamları programlama nesnesi tarafından tanımlanan <xref:System.Windows.Markup.INameScope> arabirim ve ayrıca pratik bir sınıf tarafından uygulanan <xref:System.Windows.NameScope>.  
-  
-  
-  
+
 <a name="Namescopes_in_Loaded_XAML_Applications"></a>   
 ## <a name="namescopes-in-loaded-xaml-applications"></a>Yüklenen XAML uygulamaları içinde ad kapsamları  
  Programlama Kavramları, genellikle daha geniş programlama veya bilgisayar bilimi bağlam benzersiz tanımlayıcısı veya bir nesneye erişmek için kullanılan ad ilkesini içerir. Tanımlayıcıları veya adları kullanan sistemler için namescope sınırlar içinde tanımlar. Bu ada sahip bir nesne istenirse, bir işlem veya teknik arar veya adları tanımlama benzersizlik burada görüntülerle zorlanır sınırlar. Bu ilkeler için XAML ad kapsamları doğrudur. Sayfa yüklendiğinde XAML sayfası için kök öğesinde, WPF XAML ad kapsamları oluşturulur. Başlangıç sayfası kök dizininde XAML sayfa içinde belirtilen her ad için ilgili bir XAML namescope eklenir.  
@@ -97,5 +95,6 @@ XAML ad kapsamları tanımlayan bir kavram, XAML içinde tanımlanan nesneler va
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
 - [x:Name Yönergesi](../../xaml-services/x-name-directive.md)

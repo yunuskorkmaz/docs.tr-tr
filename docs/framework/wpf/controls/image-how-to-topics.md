@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: f55036d4fdf4576faab50be7b42cf7a4077e6a3b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c300df2c63f4fa852c8cce318a5461f3be5f226
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227567"
 ---
 # <a name="image-how-to-topics"></a>Görüntü ile İlgili Nasıl Yapılır Konuları
 Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.Image> öğesi.  
@@ -31,5 +31,6 @@ Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Wind
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Görüntülemeye Genel Bakış](../graphics-multimedia/imaging-overview.md)
 - [Nasıl Yapılır Konuları](../graphics-multimedia/imaging-how-to-topics.md)

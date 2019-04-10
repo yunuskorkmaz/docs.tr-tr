@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 8d44e9f9278a212813fca5e77ebfca72734c60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224488"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Nasıl yapılır: (WCF) imzaları doğrulamak için kullanılan sertifika yetkilendirme sertifika zincirini belirtme
 Windows Communication Foundation (WCF) bir X.509 sertifikası ile imzalanmış bir SOAP ileti aldığında, varsayılan olarak, X.509 Sertifika bir güvenilen sertifika yetkilisi tarafından verildiğini doğrular. Bu sertifika deposunda aramak ve sertifikayı, sertifika yetkilisi olarak belirlendi güvenilen belirleme gerçekleştirilir. Bunun belirlenmesi WCF için sırada doğru sertifika deposunda sertifika yetkilendirme sertifika zincirini yüklenmesi gerekir.  
@@ -34,4 +34,5 @@ Windows Communication Foundation (WCF) bir X.509 sertifikası ile imzalanmış b
          Sertifikalar ek bileşenini MMC ile kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

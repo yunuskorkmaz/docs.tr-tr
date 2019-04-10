@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 01d17b39e89b764871c1c70512eae6929cc98554
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1415042110a074b270cf1afd286d487ec7369747
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212420"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlamasına karşın, bu da işletim sistemini içeren, temel alınan platformu'nın güvenlik özelliklerine yararlanır [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], ve [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Sağlamak üzere bu katmanları birleştirin [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] herhangi tek hata noktası önlemek için aşağıdaki şekilde gösterildiği gibi çalışır bir güçlü, savunma güvenlik modeli:  
@@ -30,9 +30,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
  ![WPF güvenlik çizim](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
   
  Bu konunun geri kalanı ilgili bu katmanların her özellikleri anlatılmaktadır [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] özellikle.  
-  
 
-  
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>İşletim sistemi güvenlik  
  İşletim sisteminin gerektirdiği en düşük düzey [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] olduğu [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]. Setinin [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] ile oluşturulmuş dahil olmak üzere tüm Windows uygulamaları için güvenlik temelini çeşitli güvenlik özellikleri sağlar [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] güvenlik özelliklerini içerir [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ve daha da genişletir. Bu konuda ele alınmıştır için önemli olan bu güvenlik özelliklerinin kapsamını [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], de nasıl [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] daha derinlemesine savunma sağlamak için bunları ile tümleşir.  
@@ -43,7 +41,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
   
 -   /GS derleme  
   
--   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+-   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]biçimindeki telefon numarasıdır.  
   
 #### <a name="gs-compilation"></a>/GS derleme  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] Tüm dahil olmak üzere pek çok çekirdek sistem kitaplıkları derleyerek koruma sağlayan [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bağımlılıklar gibi [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], arabellek taşmalarına azaltmaya yardımcı olmak için. Bunu, /GS parametresi ile C/C++ komut satırı derleyicisini kullanarak elde edilir. Arabellek taşmaları açıkça kaçınılmalıdır olsa da, /GS derleme bir-savunma yanlışlıkla veya kötü amaçlı olarak bunları tarafından oluşturulan olası güvenlik açıklarına karşı bir örnek sağlar.  
@@ -209,8 +207,9 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetler sağlaması
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] içerir ve güvenlik özelliklerini genişletir [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] çabası güvenlik bir parçası olarak.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Microsoft Internet Explorer 6, Windows XP SP2 güvenliği anlama](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
-- [Kod erişimi güvenliği](../misc/code-access-security.md)
+- [Kod Erişimi Güvenliği](../misc/code-access-security.md)
 - [Güvenlik](security-wpf.md)
 - [WPF Kısmi Güven Güvenliği](wpf-partial-trust-security.md)
 - [WPF Güvenlik Stratejisi - Güvenlik Mühendisliği](wpf-security-strategy-security-engineering.md)

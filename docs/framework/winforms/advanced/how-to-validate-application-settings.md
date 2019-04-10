@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uygulama ayarlarını doğrulama'
+title: 'Nasıl yapılır: Uygulama Ayarlarını Doğrulama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212095"
 ---
-# <a name="how-to-validate-application-settings"></a>Nasıl yapılır: Uygulama ayarlarını doğrulama
+# <a name="how-to-validate-application-settings"></a>Nasıl yapılır: Uygulama Ayarlarını Doğrulama
 Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.  
   
  Uygulama ayarları kesin olarak belirlenmiştir, kullanıcılar için belirli bir ayarı yanlış türde veri atanamaz bazı güvenle sahip. Ancak, bir kullanıcı hala kabul edilebilir sınırları dışında kalan bir ayar için bir değer atamak denemiş olabilir — örneğin, gelecekte gerçekleşen bir doğum tarihi sağlama. <xref:System.Configuration.ApplicationSettingsBase>, üst sınıfı sınıflarının tüm uygulama ayarları, bu sınır denetimini etkinleştirmek için dört olayları gösterir. Bu olayları işleme doğrulama kodunuzun tamamını proje boyunca Saçılma yerine tek bir konuma yerleştirir.  
@@ -161,5 +161,6 @@ Bu konuda, kalıcı önce uygulama ayarlarını doğrulama gösterilmiştir.
     ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Forms'ta Olay İşleyicileri Oluşturma](../creating-event-handlers-in-windows-forms.md)
-- [Nasıl yapılır: Uygulama ayarları oluşturma](how-to-create-application-settings.md)
+- [Nasıl yapılır: Uygulama Ayarları Oluşturma](how-to-create-application-settings.md)

@@ -1,18 +1,18 @@
 ---
 title: Dil bağımsızlığı ve dilden bağımsız bileşenler
-description: Nasıl birçok desteklenen .NET dillerinde biriyle gibi geliştirebileceğinizi öğrenin C#, C + +/ CLI, F#, IronPython, VB, Visual COBOL ve PowerShell.
+description: Nasıl birçok desteklenen .NET dillerinde biriyle gibi geliştirebileceğinizi öğrenin C#, C++/CLI, F#, IronPython, VB, Visual COBOL ve PowerShell.
 ms.date: 07/22/2016
 dev_langs:
 - csharp
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 40ba9b2dcc7321c81ee3f03112e677363c37a5f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214747"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil bağımsızlığı ve dilden bağımsız bileşenler
 
@@ -39,7 +39,7 @@ Bu makalede:
 
     * [Arabirimler](#interfaces)
 
-    * [Sabit Listeleri](#enumerations)
+    * [Numaralandırmalar](#enumerations)
 
     * [Genel olarak tür üyeleri](#type-members-in-general)
 
@@ -53,7 +53,7 @@ Bu makalede:
 
     * [Olaylar](#events)
 
-    * [Overloads](#overloads)
+    * [Aşırı Yüklemeler](#overloads)
 
     * [Özel Durumlar](#exceptions)
 
@@ -61,7 +61,7 @@ Bu makalede:
 
 * [CLSCompliantAttribute özniteliği](#the-clscompliantattribute-attribute)
 
-* [Diller arası birlikte çalışabilirlik](#cross-language-interoperability)
+* [Diller Arası Birlikte Çalışabilirlik](#cross-language-interoperability)
 
 ## <a name="cls-compliance-rules"></a>CLS uyumluluğu kuralları
 
@@ -162,9 +162,9 @@ Diziler | [Diziler](#arrays) | Diziler CLS uyumlu türü olan öğeleri olmalıd
 Öznitelikler | [Öznitelikler](#attributes) | CLS ortak olarak görünür gerekli değiştiricilere izin vermiyor (`modreq`, bkz. Bölüm II), isteğe bağlı değiştiricilere izin vermez ancak (`modopt`, bkz. Bölüm II) anlamadığı. | 35
 Oluşturucular | [Oluşturucular](#constructors) | Devralınan örnek verilerine herhangi bir erişim oluşmadan önce nesne Oluşturucu, temel sınıfının bazı örnek oluşturucusu oluşturucularını çağırmalıdır (Bu oluşturuculara sahip olmak zorunda olmayan değer türleri için geçerli değildir.)  | 21
 Oluşturucular | [Oluşturucular](#constructors) | Nesne Oluşturucu dışında bir nesnenin oluşturmanın bir parçası çağrılmamalıdır ve nesne iki kez başlatılmamış. | 22
-Numaralandırmalar | [Sabit Listeleri](#enumerations) | Temel bir enum türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" olacaktır ve bu alanın işaretlenmesi `RTSpecialName`. |  7
-Numaralandırmalar | [Sabit Listeleri](#enumerations) | Bir varlığı veya yokluğu ile gösterilen iki ayrı türü vardır [System.FlagsAttribute](xref:System.FlagsAttribute) (bkz: bölüm IV kitaplığı) özel öznitelik. Biri, adlandırılmış tamsayı değerlerini temsil eder; diğer temsil eder, adlandırılmamış değer üretmek için birleştirilebilen bit bayrakları adı. Değerini bir `enum` belirtilen değerlerle sınırlı değildir. |  8
-Numaralandırmalar | [Sabit Listeleri](#enumerations) | Bir enumun değişmez statik alanları numaralandırma türüne sahip olamaz. |  9
+Numaralandırmalar | [Numaralandırmalar](#enumerations) | Temel bir enum türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" olacaktır ve bu alanın işaretlenmesi `RTSpecialName`. |  7
+Numaralandırmalar | [Numaralandırmalar](#enumerations) | Bir varlığı veya yokluğu ile gösterilen iki ayrı türü vardır [System.FlagsAttribute](xref:System.FlagsAttribute) (bkz: bölüm IV kitaplığı) özel öznitelik. Biri, adlandırılmış tamsayı değerlerini temsil eder; diğer temsil eder, adlandırılmamış değer üretmek için birleştirilebilen bit bayrakları adı. Değerini bir `enum` belirtilen değerlerle sınırlı değildir. |  8
+Numaralandırmalar | [Numaralandırmalar](#enumerations) | Bir enumun değişmez statik alanları numaralandırma türüne sahip olamaz. |  9
 Olaylar | [Olaylar](#events) | Bir olay uygulayan yöntemler olarak işaretlenmeyecektir `SpecialName` meta verilerinde. |29
 Olaylar | [Olaylar](#events) | Bir olay ve onun erişimcilerinin erişilebilirliği aynı olacaktır. |30
 Olaylar | [Olaylar](#events) | `add` Ve `remove` yöntemleri için bir olay ya da her ikisini de gelecektir mevcut olmalı veya olmamalıdır. |31
@@ -187,8 +187,8 @@ Arabirimler | [Arabirimler](#interfaces) | CLS uyumlu arabirimler statik yöntem
 Adlandırma kuralları | [Adlandırma kuralları](#naming-conventions) | Derlemeleri Annex 7, teknik rapor 15, başlatmak ve tanımlayıcıları, kullanılabilir adresindeki çevrimiçi eklenmesi için izin verilen karakter kümesini yöneten Unicode Standard3.0 izleyin [Unicode normalleştirme formları](https://www.unicode.org/unicode/reports/tr15/tr15-18.html). Tanımlayıcıları Unicode normalleştirme Form c tarafından tanımlanan kurallı biçimde olmalıdır Harfli eşlemeler (Unicode yerel ayara duyarlı, bire bir küçük harf eşlemeler tarafından belirtildiği gibi) aynıysa CLS amacıyla, iki tanımlayıcı aynıdır. Diğer bir deyişle, iki tanımlayıcı CLS altında farklı kabul edilmesi için daha çok, farklı olacaktır. Ancak, devralınan bir tanımı geçersiz kılmak için CLI'yı özgün bildirimin kesin kodlama kullanılmasını gerektirir. | 4
 Aşırı Yükleme | [Adlandırma kuralları](#naming-conventions) | CLS uyumlu kapsamda sunulan tüm adlar, ayrı bağımsız tür adları aynı ve aşırı yükleme olduğu dışında tutulamaz. CTS sağlar, ancak bir yöntem ve bir alan için aynı adı kullanmak tek bir türü diğer bir deyişle, buna izin vermez. | 5
 Aşırı Yükleme | [Adlandırma kuralları](#naming-conventions) | CTS sağlayan ayrı imzaların ayırt edici olarak rağmen alanlar ve iç içe geçmiş türler yalnızca, tanımlayıcı karşılaştırması ile farklı olacaktır. Yöntemler, özellikler ve olaylar (tanımlayıcı karşılaştırmasına göre) aynı ada sahip yalnızca dönüş türüne göre farklı olmalıdır da CLS kuralı 39'da belirtilen hariç | 6
-Aşırı Yükleme | [Overloads](#overloads) | Özellikler ve yöntemler aşırı yüklenebilir. | 37
-Aşırı Yükleme | [Overloads](#overloads) |Özellikler ve yöntemler aşırı yüklenebilir yalnızca sayı ve dönüştürme işleçleri dışında parametre türleri temel `op_Implicit` ve `op_Explicit`, kendi dönüş türüne bağlı olarak, aynı zamanda aşırı yüklenebilir. | 38
+Aşırı Yükleme | [Aşırı Yüklemeler](#overloads) | Özellikler ve yöntemler aşırı yüklenebilir. | 37
+Aşırı Yükleme | [Aşırı Yüklemeler](#overloads) |Özellikler ve yöntemler aşırı yüklenebilir yalnızca sayı ve dönüştürme işleçleri dışında parametre türleri temel `op_Implicit` ve `op_Explicit`, kendi dönüş türüne bağlı olarak, aynı zamanda aşırı yüklenebilir. | 38
 Aşırı Yükleme | -- | Bir türde bildirilen iki veya daha fazla CLS uyumlu yöntem aynı ada sahip ve belirli bir tür örneklemeleri kümesi, aynı parametre ve dönüş türleri, tüm bu yöntemleri bu tür anlamsal olarak eşdeğer olacaktır. | 48
 Özellikler | [Özellikler](#properties) | Bir özelliğin alıcı ve ayarlayıcı yöntemleri uygulayan yöntemler olarak işaretlenmeyecektir `SpecialName` meta verilerinde. | 24
 Özellikler | [Özellikler](#properties) | Özelliğin erişimcileri tüm statik olmalıdır, tüm sanal ya da tamamen örnek olmalıdır. | 26
@@ -322,12 +322,12 @@ CLS uyumlu türü | Açıklama
 [Int32](xref:System.Int32) | 32 bitlik işaretli tamsayı
 [Int64](xref:System.Int64) | 64-bit işaretli tamsayı
 [Tek](xref:System.Single) | Tek duyarlıklı kayan nokta değeri
-[çift](xref:System.Double) | Çift duyarlıklı kayan nokta değeri
+[Çift](xref:System.Double) | Çift duyarlıklı kayan nokta değeri
 [Boole değeri](xref:System.Boolean) | TRUE veya false değeri türü
 [Char](xref:System.Char) | UTF-16 kodlu kod birimi
 [Ondalık](xref:System.Decimal) | Ondalık sayı olmayan kayan nokta
 [IntPtr](xref:System.IntPtr) | İşaretçisi veya tutamacı bir platform tanımlı boyutun
-[dize](xref:System.String) | Sıfır, bir veya daha fazla karakter nesne koleksiyonu
+[Dize](xref:System.String) | Sıfır, bir veya daha fazla karakter nesne koleksiyonu
 
 Aşağıdaki tabloda listelenen gerçek türler CLS uyumlu değildir.
 
@@ -1632,7 +1632,6 @@ using System;
 [CLSCompliant(false)] public class BaseClass
 {}
 
-
 public class BaseCollection<T> where T : BaseClass
 {}
 // Attempting to compile the example displays the following output:
@@ -1644,7 +1643,6 @@ Assembly: CLSCompliant(True)>
 
 <CLSCompliant(False)> Public Class BaseClass
 End Class
-
 
 Public Class BaseCollection(Of T As BaseClass)
 End Class
@@ -1763,7 +1761,6 @@ Kısıtlama eklenirse örnek başarıyla derler `FloatingPoint<T>` sınıfı.
 using System;
 
 [assembly:CLSCompliant(true)]
-
 
 public class Number<T> where T : struct
 {
@@ -1893,7 +1890,6 @@ Public Class C1(Of T)
    Protected Sub M1(n As C1(Of Integer).N)   ' Not CLS-compliant - C1<int>.N not
                                              ' accessible from within C1(Of T) in all
    End Sub                                   ' languages
-
 
    Protected Sub M2(n As C1(Of T).N)     ' CLS-compliant – C1(Of T).N accessible
    End Sub                               ' inside C1(Of T)
@@ -2574,7 +2570,7 @@ Oluşturucu veya CLS uyumlu bir özniteliğin özellikleri sadece aşağıdaki t
 
 * [Char](xref:System.Char)
 
-* [çift](xref:System.Double)
+* [Çift](xref:System.Double)
 
 * [Int16](xref:System.Int16)
 
@@ -2584,7 +2580,7 @@ Oluşturucu veya CLS uyumlu bir özniteliğin özellikleri sadece aşağıdaki t
 
 * [Tek](xref:System.Single)
 
-* [dize](xref:System.String)
+* [Dize](xref:System.String)
 
 * [Tür](xref:System.Type)
 

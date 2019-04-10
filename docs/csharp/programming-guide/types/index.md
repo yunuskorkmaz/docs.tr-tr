@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 2017e7ed1df18ea0b469207cd06396c74125cb19
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 92156bcd05ba1eb559714a71a23efacfdd29fc52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219518"
 ---
 # <a name="types-c-programming-guide"></a>Türler (C# Programlama Kılavuzu)
 ## <a name="types-variables-and-values"></a>Türler, değişkenler ve değerleri  
@@ -75,8 +75,7 @@ ms.locfileid: "58465509"
  Aşağıdaki çizim CTS'deki değer türleri ve başvuru türleri arasındaki ilişkiyi gösterir.
 
  Aşağıdaki görüntüde CTS'deki değer türleri ve başvuru türleri gösterilmektedir: 
-  
-  
+
  ![Gösterir CTS değer türleri ve başvuru türleri ekran görüntüsü.](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
@@ -179,7 +178,7 @@ stringList.Add(4);
   
 -   [Sınıflar ve Yapılar](../../../csharp/programming-guide/classes-and-structs/index.md)  
   
--   [Anonim Tipler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+-   [Anonim Türler](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
   
 -   [Genel Türler](../../../csharp/programming-guide/generics/index.md)  
 
@@ -188,7 +187,7 @@ stringList.Add(4);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [XML Veri Türlerini Dönüştürme](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Tam Sayı Türleri Tablosu](../../../csharp/language-reference/keywords/integral-types-table.md)

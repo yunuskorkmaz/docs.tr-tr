@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
 - ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-ms.openlocfilehash: f26fcf259e9c56ffe17c7d7f5a80428ffbbb27c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23699c67de616ba3f535d2527a315aebe7448d3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215826"
 ---
 # <a name="contextmenustrip-control-overview"></a>ContextMenuStrip Denetimine Genel Bakış
 > [!NOTE]
@@ -32,6 +32,7 @@ ms.locfileid: "54712463"
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|Türetilen denetimler için temel işlevleri sağlar <xref:System.Windows.Forms.ToolStripItem> tıklandığında açılan öğeleri görüntüler.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

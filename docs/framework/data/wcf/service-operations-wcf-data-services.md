@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211978"
 ---
 # <a name="service-operations-wcf-data-services"></a>Hizmet işlemleri (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Sunucu üzerinde yöntemleri açığa için bir veri hizmeti hizmet işlemleri tanımlamanızı sağlar. Diğer veri hizmeti kaynaklarına gibi hizmet işlemleri tarafından bir URI'leri ele alınır. Hizmet işlemleri data Service'te iş mantığı Doğrulama mantığı, rol tabanlı güvenlik uygulamak için uygulama gibi göstermek etkinleştirmeniz veya kullanıma sunmak için özellikler sorgulanırken özel. Hizmet işlemleri yöntem, türetilen veri hizmeti sınıfındaki eklenmiş olan <xref:System.Data.Services.DataService%601>. Tüm diğer veri hizmeti kaynaklarına gibi hizmet işlemi yöntemin parametre sağlayabilirsiniz. Örneğin, aşağıdaki URI işlemi hizmet (temel [hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) veri hizmeti) değeri geçirir `London` için `city` parametresi:  
@@ -105,4 +105,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Durdurucular](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

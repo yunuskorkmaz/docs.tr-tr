@@ -1,15 +1,15 @@
 ---
-title: Model tanımlı işlevi
+title: model-defined function
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 67821c68ee79b42bc54e22f1e15673d2d9243a68
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 77152e8f37b009cbc3e72f053ead867914768d3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226644"
 ---
-# <a name="model-defined-function"></a>Model tanımlı işlevi
+# <a name="model-defined-function"></a>model-defined function
 A *model tanımlı işlev* kavramsal modelde tanımlı bir işlev değil. Model tanımlı bir işlev gövdesini gösterdiğini [varlık SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), işlevin bağımsız ifade sağlayan kuralları veya veri kaynağındaki desteklenen diller.  
   
  Bir model tanımlı işlev tanımı, şu bilgileri içerir:  
@@ -37,6 +37,7 @@ A *model tanımlı işlev* kavramsal modelde tanımlı bir işlev değil. Model 
  [!code-xml[EDM_Example_Model#ModelDefinedFunction](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#modeldefinedfunction)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [Varlık veri modeli: Basit veri türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)
+- [Varlık Veri Modeli: Basit Veri Türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)

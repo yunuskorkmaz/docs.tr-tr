@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir Windows hizmeti (Visual Basic)'
+title: 'Nasıl yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 86c2414fd6ad9c32a37339c553ec80c98426f78a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 160d1b5f0604cff96549c9d94dc5d8ddc7e39f09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612716"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217165"
 ---
-# <a name="how-to-continue-a-windows-service-visual-basic"></a>Nasıl yapılır: Bir Windows hizmeti (Visual Basic)
+# <a name="how-to-continue-a-windows-service-visual-basic"></a>Nasıl yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)
 Bu örnekte <xref:System.ServiceProcess.ServiceController> IIS Yönetici Hizmeti yerel bilgisayarda devam etmek için bileşen.  
   
 ## <a name="example"></a>Örnek  
@@ -50,6 +50,7 @@ Bu örnekte <xref:System.ServiceProcess.ServiceController> IIS Yönetici Hizmeti
  Kullanarak hizmet bilgilere erişimi kısıtlanabilir <xref:System.Security.Permissions.PermissionState> izinleri ayarlamak için numaralandırma <xref:System.Security.Permissions.SecurityPermission> sınıfı.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
-- [Nasıl yapılır: (Visual Basic) bir Windows hizmetini duraklatma](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+- [Nasıl yapılır: Windows Hizmetini Duraklatma (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

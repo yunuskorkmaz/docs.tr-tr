@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: babd601bb29fc2aa9c906921082a18942f6649c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211049"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Nasıl yapılır: Sorunlu Yazdırma İşini Tanımlama
 Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazdırma işlerini ilgili olarak kullanıcılardan alan. Zengin, kullanıma sunulan yazdırma işi Özellikler [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] hızlı bir uzaktan tanılama yazdırma işi gerçekleştirmek için Microsoft .NET Framework'ü bir yol sağlar.  
@@ -82,6 +82,7 @@ Ağ yöneticileri genellikle şikayetlerinin değil veya yavaş yazdırma, yazd�
  [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Printing.PrintJobStatus>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>

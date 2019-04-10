@@ -1,18 +1,18 @@
 ---
-title: Null karşılaştırmalar
+title: Null Karşılaştırmalar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: b5535343b5ac40b12aa06ffb5b587e114f5cd757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222672"
 ---
-# <a name="null-comparisons"></a>Null karşılaştırmalar
+# <a name="null-comparisons"></a>Null Karşılaştırmalar
 A `null` değerindeki veri kaynağı değeri bilinmeyen olduğunu gösterir. İçinde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular, denetleyebilirsiniz null değerler, bu nedenle, bazı hesaplamalar veya karşılaştırmalar yalnızca geçerli veya null olmayan, içeren satırları üzerinde gerçekleştirilen veri. CLR null semantikler, ancak veri kaynağı bir null semantiğe farklı olabilir. Çoğu veritabanı, null karşılaştırmalar işlemek için mantığı üç değerli bir sürümünü kullanın. Diğer bir deyişle, bir null değeri karşılaştırmak için değerlendirilmiyor `true` veya `false`, olarak değerlendirilen `unknown`. ANSI null değerlere uygulaması genellikle budur ancak bu her zaman böyle değildir.  
   
  SQL Server'da varsayılan olarak null eşittir null karşılaştırma null değeri döndürür. Aşağıdaki örnekte, satırları burada `ShipDate` null sonuç kümesinden dışlanan ve [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] deyimi şunu 0 satırları döndürür.  
@@ -47,4 +47,5 @@ WHERE h.ShipDate IS Null
  İçinde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], destekleyen bir koleksiyonu geçirdiğinizde `IQueryable` bir toplama işlevi toplama işlemleri veritabanına gerçekleştirilir. Bellek içinde gerçekleştirilen bir sorgu ve veritabanına gerçekleştirilen sorgu sonuçlarını farklılıklar olabilir. Herhangi bir eşleşme varsa bir bellek içi sorgusu ile sorgu sıfır döndürür. Veritabanını, aynı sorgu döndürür `null`. Varsa bir `null` LINQ Toplama işlevi için geçirilen değer, bir özel durum oluşturulur. Olası kabul edecek şekilde `null` değerleri, cast türleri ve türlerin boş değer atanabilir türler için sorgu sonuçlarını alma özellikleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [LINQ to Entities Sorgu İfadeleri](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

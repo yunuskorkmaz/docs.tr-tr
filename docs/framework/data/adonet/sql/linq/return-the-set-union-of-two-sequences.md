@@ -1,18 +1,18 @@
 ---
-title: İki dizinin küme birleşimini döndürür
+title: İki Dizinin Küme Birleşimini Döndürme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
-ms.openlocfilehash: a2d51e8052c839ea4cd11dec07a3aef95d59d0f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d0d87e2fe14553d468384dfa2cfde1d3ee0d526
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210140"
 ---
-# <a name="return-the-set-union-of-two-sequences"></a>İki dizinin küme birleşimini döndürür
+# <a name="return-the-set-union-of-two-sequences"></a>İki Dizinin Küme Birleşimini Döndürme
 Kullanım <xref:System.Linq.Queryable.Union%2A> işlecini iki dizinin küme birleşimini döndürür.  
   
 ## <a name="example"></a>Örnek  
@@ -26,5 +26,6 @@ Kullanım <xref:System.Linq.Queryable.Union%2A> işlecini iki dizinin küme birl
 Daha fazla bilgi ve örnekler için bkz. <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>.
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sorgu Örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
 - [Standart Sorgu İşleci Çevirisi](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

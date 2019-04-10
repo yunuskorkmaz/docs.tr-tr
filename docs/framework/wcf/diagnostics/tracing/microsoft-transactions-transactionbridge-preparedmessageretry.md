@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.PreparedMessageRetry
 ms.date: 03/30/2017
 ms.assetid: 2194292d-bf5f-4aef-9336-cd3c4795cb71
-ms.openlocfilehash: e5735596f1b724e47cdaadd30f07629ea6b772eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8acdb2f94e752860025ee2963aa78682b43b079
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216918"
 ---
 # <a name="microsofttransactionstransactionbridgepreparedmessageretry"></a>Microsoft.Transactions.TransactionBridge.PreparedMessageRetry
 Yanıt vermeyen bir düzenleyiciye hazırlıklı ileti yeniden gönderildi.  
@@ -19,6 +19,7 @@ Yanıt vermeyen bir düzenleyiciye hazırlıklı ileti yeniden gönderildi.
  Olası ağ veya tarihte teslim edilen gelen yanıt engelleyen ürün sorunları araştırın.  Bu iletiler birçoğu görülürse, altyapı sorunları veya aşırı uzun yanıt süreleri belirtebilirsiniz. Her iki sorun sistemi içinde işlemlerinin aktarım hızını ciddi ölçüde düşürüyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)

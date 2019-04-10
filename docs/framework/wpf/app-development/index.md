@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211068"
 ---
 # <a name="application-development"></a>Uygulama Geliştirme
 <a name="introduction"></a> Windows Presentation Foundation (WPF), aşağıdaki türde uygulamaları geliştirmek için kullanılan bir sunu çerçevesidir:  
@@ -27,9 +27,7 @@ ms.locfileid: "57365141"
 >  WPF türlerini kullanarak bir Windows hizmetinde kesinlikle önerilmez. Bir Windows hizmetinde bu özellikleri kullanmaya çalışırsanız, bunlar düzenleme beklendiği gibi çalışmayabilir.  
   
  Bu uygulama, kümenizi oluşturmak için [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir ana bilgisayar Hizmetleri uygular. Bu konu, bu hizmetleri ve daha fazla bilgi nereye genel bir bakış sağlar.  
-  
 
-  
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>Uygulama Yönetimi  
  Yürütülebilir dosya [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar genellikle aşağıdakileri içeren işlev bir çekirdek kümesi gerektirir:  
@@ -127,6 +125,6 @@ ms.locfileid: "57365141"
 |[WPF’de Windows](windows-in-wpf-applications.md)|Uygulamanızda nasıl kullanılacağını dahil olmak üzere windows yönetme ayrıntıları sağlar <xref:System.Windows.Window> sınıfı ve iletişim kutuları.|  
 |[Gezintiye Genel Bakış](navigation-overview.md)|Uygulamanızın sayfalar arasında gezinti yönetmeye genel bakış sağlar.|  
 |[Barındırma](hosting-wpf-applications.md)|Genel bir bakış sağlar [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
-|[Derleme ve Dağıtma](building-and-deploying-wpf-applications.md)|WPF uygulaması derleme ve dağıtma işlemini açıklamaktadır.|  
+|[Yapılandırma ve Dağıtma](building-and-deploying-wpf-applications.md)|WPF uygulaması derleme ve dağıtma işlemini açıklamaktadır.|  
 |[Visual Studio’da WPF’ye Giriş](../getting-started/introduction-to-wpf-in-vs.md)|WPF ana özelliklerini açıklar.|  
-|[İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Uygulamayı kullanarak bir WPF oluşturmak için sayfa gezinti, düzen, denetimler, resim, nasıl gösterir stilleri bir kılavuz ve bağlama.|
+|[İzlenecek yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Uygulamayı kullanarak bir WPF oluşturmak için sayfa gezinti, düzen, denetimler, resim, nasıl gösterir stilleri bir kılavuz ve bağlama.|

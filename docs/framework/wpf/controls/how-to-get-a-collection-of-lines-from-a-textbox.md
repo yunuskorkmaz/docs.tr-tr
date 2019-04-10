@@ -1,18 +1,18 @@
 ---
-title: "Nasıl yapılır: TextBox'dan Satır Koleksiyonu Alma"
+title: "Nasıl yapılır: TextBox'tan Satır Koleksiyonu Alma"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lines [WPF], getting collection of
 - TextBox control [WPF], getting collection of lines
 ms.assetid: a12f529d-b926-47f6-92bf-cad5f17b532a
-ms.openlocfilehash: 1aa73e55a3fdfd658c6a337b598dff96244ace40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7b2f1c2e071388635fb50b1e3573fd7f44334dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224643"
 ---
-# <a name="how-to-get-a-collection-of-lines-from-a-textbox"></a>Nasıl yapılır: TextBox'dan Satır Koleksiyonu Alma
+# <a name="how-to-get-a-collection-of-lines-from-a-textbox"></a>Nasıl yapılır: TextBox'tan Satır Koleksiyonu Alma
 Bu örnekte, metni satır koleksiyonu alma işlemi gösterilmektedir bir <xref:System.Windows.Controls.TextBox>.  
   
 ## <a name="example"></a>Örnek  
@@ -21,5 +21,6 @@ Bu örnekte, metni satır koleksiyonu alma işlemi gösterilmektedir bir <xref:S
  [!code-csharp[TextBox_MiscCode#_TextBox_GetLines](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textbox_getlines)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [TextBox Genel Bakış](textbox-overview.md)
-- [RichTextBox Genel Bakış](richtextbox-overview.md)
+
+- [TextBox Genel Bakışı](textbox-overview.md)
+- [RichTextBox Genel Bakışı](richtextbox-overview.md)

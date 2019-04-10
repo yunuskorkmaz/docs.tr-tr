@@ -6,18 +6,16 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: fbdd04f40c1d4a29ff1807b8a2760802b0338cb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215956"
 ---
 # <a name="document-serialization-and-storage"></a>Belge Serileştirme ve Depolama
 Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluşturmak için güçlü bir ortam sağlar.  Sabit belgeler hem akış Gelişmiş belgelerini destekleyen gelişmiş özellikler ile güçlü 2B görüntüleme denetimleri, birleştirilmiş ve 3B grafik özellikleri .NET Framework uygulamaları, kalite ve kullanıcı deneyimi yepyeni bir düzeye taşıyın.  Esnek bir bellek içi temsili bir belgenin yönetebilmek .NET Framework'ün temel bir özelliği ve verimli bir şekilde kaydedin ve bir veri deposundan belge yükleme neredeyse her uygulamanın.  Bir belge bir dış veri deposuna iç bellek içi gösterimden dönüştürme işlemi, serileştirme olarak adlandırılır.  Bir veri deposunun okuma ve orijinal bellek içi örnek yeniden ters işlemi seri durumundan çıkarma olarak adlandırılır.  
-  
- 
-  
+
 <a name="AboutSerialization"></a>   
 ## <a name="about-document-serialization"></a>Belge Serileştirme hakkında  
  İdeal olarak seri hale getirme ve bir belge, gelen ve ardından geri belleğe seri kaldırma işlemi uygulamaya saydamdır.  Uygulama "yöntemi, bir seri durumdan çıkarıcının"yöntem veri deposu erişir ve bellek özgün örneğinde yeniden oluşturur okurken"belgeyi kaydetmek için yazma" seri hale getirici çağırır.  Veriler depolanır belirli biçimi, genel olarak serileştirme uzun ve belge için özgün biçimlerinde Yedekleme işleminin oluşturduğu seri durumdan uygulamanın önemli değil.  
@@ -74,6 +72,7 @@ Microsoft .NET Framework, yüksek kaliteli belgeleri görüntülemek ve oluştur
 3.  Eklenti seri hale getirici oluşturulduktan sonra bir yükleme betiği dağıtmak için uygulanır ve yükleme (ve kaldırma) eklenti (bkz. Yukarıdaki "[eklentisi Serileştiricileri Yükleme](#InstallingPluginSerializers)").  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Documents.Serialization>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>

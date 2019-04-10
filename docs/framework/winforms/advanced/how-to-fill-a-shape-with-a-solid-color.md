@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir şekli düz renk ile doldurma'
+title: 'Nasıl yapılır: Bir Şekli Düz Renk ile Doldurma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - colors [Windows Forms], adding to shapes
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-ms.openlocfilehash: 8bc782f9496a9c1562bad2df1ba196fb39572e68
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d6fe7a252029ff80f21d99f7342fabb1d29fbe24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211679"
 ---
-# <a name="how-to-fill-a-shape-with-a-solid-color"></a>Nasıl yapılır: Bir şekli düz renk ile doldurma
+# <a name="how-to-fill-a-shape-with-a-solid-color"></a>Nasıl yapılır: Bir Şekli Düz Renk ile Doldurma
 Bir şekli düz renk ile doldurma için oluşturma bir <xref:System.Drawing.SolidBrush> nesnesi ve ardından, geçirin <xref:System.Drawing.SolidBrush> dolgu yöntemlerinden birini bağımsız değişkeni olarak bir nesne <xref:System.Drawing.Graphics> sınıfı. Aşağıdaki örnek, bir elips kırmızı renkle doldurma gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
@@ -30,4 +30,5 @@ Bir şekli düz renk ile doldurma için oluşturma bir <xref:System.Drawing.Soli
  Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Şekilleri Doldurmak için Fırça Kullanma](using-a-brush-to-fill-shapes.md)

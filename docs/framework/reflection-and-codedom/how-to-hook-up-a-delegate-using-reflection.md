@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yansıma kullanarak temsilci bağlama'
+title: 'Nasıl yapılır: Yansıma Kullanarak Temsilci Bağlama'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe90542d1ba106dd52e8995afab298b4b9f69899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1c95c22c6d4e4421e8a7681dfccabcc82e0ffd86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219791"
 ---
-# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Nasıl yapılır: Yansıma kullanarak temsilci bağlama
+# <a name="how-to-hook-up-a-delegate-using-reflection"></a>Nasıl yapılır: Yansıma Kullanarak Temsilci Bağlama
 Yansıma yüklemek ve derlemeleri çalıştırmak için kullandığınız zaman gibi dil özellikleri kullanamazsınız C# `+=` işleci veya Visual Basic [AddHandler deyimi](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) olayları yeteneklerinizi. Aşağıdaki yordamlar, gerekli tüm türlerin yansıma yoluyla alarak bir olay için varolan bir yöntem denetime nasıl gösterir ve yansıma kullanarak dinamik bir yöntem oluşturma yayma ve en fazla olay bağlama.  
   
 > [!NOTE]
@@ -114,9 +114,10 @@ Yansıma yüklemek ve derlemeleri çalıştırmak için kullandığınız zaman 
 -   Csc.exe, vbc.exe veya cl.exe kullanarak komut satırındaki kodu derleyin. Visual Studio'da Kodu derlemek için bir konsol uygulaması projesi şablonu içine koyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
-- [Nasıl yapılır: Dinamik yöntemleri tanımlama ve yürütme](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
+- [Nasıl yapılır: Dinamik Yöntemleri Tanımlama ve Yürütme](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
 - [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)

@@ -1,17 +1,17 @@
 ---
-title: Webresponse'tan türetme
+title: WebResponse’tan Türetme
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226051"
 ---
-# <a name="deriving-from-webresponse"></a>Webresponse'tan türetme
+# <a name="deriving-from-webresponse"></a>WebResponse’tan Türetme
 <xref:System.Net.WebResponse> .NET Framework takılabilir Protokolü modeli uygun bir protokole özgü yanıt oluşturmak için temel yöntemleri ve özellikleri sağlayan soyut bir temel sınıfı. Kullanan uygulamalar <xref:System.Net.WebRequest> istek verileri bir sınıfa kaynaklardan gelen yanıtları almak bir **WebResponse**. Protokole özgü **WebResponse** alt öğeleri, soyut üyelerini uygulanmalı **WebResponse** sınıfı.  
   
  İlişkili **WebRequest** sınıfı oluşturmalısınız **WebResponse** alt öğeleri. Örneğin, <xref:System.Net.HttpWebResponse> örnekleri yalnızca arama sonucu oluşturulan <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=nameWithType> veya <xref:System.Net.HttpWebRequest.EndGetResponse%2A?displayProperty=nameWithType>. Her **WebResponse** yüklenmek üzere tasarlanmamıştır ve bir kaynağa bir isteğinin sonucunu içerir.  
@@ -39,6 +39,7 @@ ms.locfileid: "54598873"
  Tarafından döndürülen akış örneğini **GetResponseStream** yöntemi uygulama tarafından sahip olunan ve kapatmadan kapatılabilir **WebResponse**. Kural olarak, çağırma **WebResponse.Close** yöntemi tarafından döndürülen akış da kapatır **GetResponse yanıtına**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>
