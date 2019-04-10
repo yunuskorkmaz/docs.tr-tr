@@ -9,21 +9,21 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f8d0f1f067efbae6e2b667328e75996179b91737
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159828"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293761"
 ---
-# <a name="how-to-complete-windows-forms-print-jobs"></a><span data-ttu-id="a125d-102">Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama</span><span class="sxs-lookup"><span data-stu-id="a125d-102">How to: Complete Windows Forms Print Jobs</span></span>
-<span data-ttu-id="a125d-103">Genellikle, sözcük işlemciler ve yazdırma gerektiren diğer uygulamaları yazdırma işi tamamlandığını kullanıcılara bir ileti görüntülemek için seçeneği sunacak.</span><span class="sxs-lookup"><span data-stu-id="a125d-103">Frequently, word processors and other applications that involve printing will provide the option to display a message to users that a print job is complete.</span></span> <span data-ttu-id="a125d-104">Bu işlevsellik, Windows Forms'ta işleyerek sağlayabilir <xref:System.Drawing.Printing.PrintDocument.EndPrint> olayı <xref:System.Drawing.Printing.PrintDocument> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="a125d-104">You can provide this functionality in your Windows Forms by handling the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
+# <a name="how-to-complete-windows-forms-print-jobs"></a><span data-ttu-id="6aedf-102">Nasıl yapılır: Windows Forms Yazdırma İşlerini Tamamlama</span><span class="sxs-lookup"><span data-stu-id="6aedf-102">How to: Complete Windows Forms Print Jobs</span></span>
+<span data-ttu-id="6aedf-103">Genellikle, sözcük işlemciler ve yazdırma gerektiren diğer uygulamaları yazdırma işi tamamlandığını kullanıcılara bir ileti görüntülemek için seçeneği sunacak.</span><span class="sxs-lookup"><span data-stu-id="6aedf-103">Frequently, word processors and other applications that involve printing will provide the option to display a message to users that a print job is complete.</span></span> <span data-ttu-id="6aedf-104">Bu işlevsellik, Windows Forms'ta işleyerek sağlayabilir <xref:System.Drawing.Printing.PrintDocument.EndPrint> olayı <xref:System.Drawing.Printing.PrintDocument> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="6aedf-104">You can provide this functionality in your Windows Forms by handling the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
   
- <span data-ttu-id="a125d-105">Aşağıdaki yordam, Windows tabanlı bir uygulama ile oluşturduğunuz gerektirir bir <xref:System.Drawing.Printing.PrintDocument> bileşen üzerindeki, Windows tabanlı bir uygulama yazdırma etkinleştirme standart yoludur.</span><span class="sxs-lookup"><span data-stu-id="a125d-105">The following procedure requires that you have created a Windows-based application with a <xref:System.Drawing.Printing.PrintDocument> component on it, which is the standard way of enabling printing from a Windows-based application.</span></span> <span data-ttu-id="a125d-106">Kullanarak Windows Forms yazdırma hakkında daha fazla bilgi için <xref:System.Drawing.Printing.PrintDocument> bileşeni Bkz [nasıl yapılır: Standart Windows Forms yazdırma işleri oluşturma](how-to-create-standard-windows-forms-print-jobs.md).</span><span class="sxs-lookup"><span data-stu-id="a125d-106">For more information about printing from Windows Forms using the <xref:System.Drawing.Printing.PrintDocument> component, see [How to: Create Standard Windows Forms Print Jobs](how-to-create-standard-windows-forms-print-jobs.md).</span></span>  
+ <span data-ttu-id="6aedf-105">Aşağıdaki yordam, Windows tabanlı bir uygulama ile oluşturduğunuz gerektirir bir <xref:System.Drawing.Printing.PrintDocument> bileşen üzerindeki, Windows tabanlı bir uygulama yazdırma etkinleştirme standart yoludur.</span><span class="sxs-lookup"><span data-stu-id="6aedf-105">The following procedure requires that you have created a Windows-based application with a <xref:System.Drawing.Printing.PrintDocument> component on it, which is the standard way of enabling printing from a Windows-based application.</span></span> <span data-ttu-id="6aedf-106">Kullanarak Windows Forms yazdırma hakkında daha fazla bilgi için <xref:System.Drawing.Printing.PrintDocument> bileşeni Bkz [nasıl yapılır: Standart Windows Forms yazdırma işleri oluşturma](how-to-create-standard-windows-forms-print-jobs.md).</span><span class="sxs-lookup"><span data-stu-id="6aedf-106">For more information about printing from Windows Forms using the <xref:System.Drawing.Printing.PrintDocument> component, see [How to: Create Standard Windows Forms Print Jobs](how-to-create-standard-windows-forms-print-jobs.md).</span></span>  
   
-### <a name="to-complete-a-print-job"></a><span data-ttu-id="a125d-107">Yazdırma işi tamamlamak için</span><span class="sxs-lookup"><span data-stu-id="a125d-107">To complete a print job</span></span>  
+### <a name="to-complete-a-print-job"></a><span data-ttu-id="6aedf-107">Yazdırma işi tamamlamak için</span><span class="sxs-lookup"><span data-stu-id="6aedf-107">To complete a print job</span></span>  
   
-1.  <span data-ttu-id="a125d-108">Ayarlama <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> özelliği <xref:System.Drawing.Printing.PrintDocument> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="a125d-108">Set the <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> property of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
+1. <span data-ttu-id="6aedf-108">Ayarlama <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> özelliği <xref:System.Drawing.Printing.PrintDocument> bileşeni.</span><span class="sxs-lookup"><span data-stu-id="6aedf-108">Set the <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> property of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,9 +37,9 @@ ms.locfileid: "59159828"
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2.  <span data-ttu-id="a125d-109">İşlemek için kod yazma <xref:System.Drawing.Printing.PrintDocument.EndPrint> olay.</span><span class="sxs-lookup"><span data-stu-id="a125d-109">Write code to handle the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event.</span></span>  
+2. <span data-ttu-id="6aedf-109">İşlemek için kod yazma <xref:System.Drawing.Printing.PrintDocument.EndPrint> olay.</span><span class="sxs-lookup"><span data-stu-id="6aedf-109">Write code to handle the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event.</span></span>  
   
-     <span data-ttu-id="a125d-110">Aşağıdaki kod örneğinde, belgeyi yazdırma tamamlandığını belirten bir ileti kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="a125d-110">In the following code example, a message box is displayed, indicating that the document has finished printing.</span></span>  
+     <span data-ttu-id="6aedf-110">Aşağıdaki kod örneğinde, belgeyi yazdırma tamamlandığını belirten bir ileti kutusu görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="6aedf-110">In the following code example, a message box is displayed, indicating that the document has finished printing.</span></span>  
   
     ```vb  
     Private Sub PrintDocument1_EndPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint  
@@ -66,7 +66,7 @@ ms.locfileid: "59159828"
        }  
     ```  
   
-     <span data-ttu-id="a125d-111">(Visual C# ve [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="a125d-111">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="6aedf-111">(Visual C# ve [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) formun oluşturucuda olay işleyicisi kaydetmek için aşağıdaki kodu yerleştirin.</span><span class="sxs-lookup"><span data-stu-id="6aedf-111">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.EndPrint += new  
@@ -80,7 +80,7 @@ ms.locfileid: "59159828"
        (this, &Form1::printDocument1_EndPrint);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a125d-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a125d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6aedf-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6aedf-112">See also</span></span>
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [<span data-ttu-id="a125d-113">Windows Forms Yazdırma Desteği</span><span class="sxs-lookup"><span data-stu-id="a125d-113">Windows Forms Print Support</span></span>](windows-forms-print-support.md)
+- [<span data-ttu-id="6aedf-113">Windows Forms Yazdırma Desteği</span><span class="sxs-lookup"><span data-stu-id="6aedf-113">Windows Forms Print Support</span></span>](windows-forms-print-support.md)
