@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 - RadioButton control [Windows Forms], grouping
 ms.assetid: 58f8fe34-50b7-49d8-a2be-c271be3c6b32
-ms.openlocfilehash: c785b124d0b9efdbd9a1fa85819031cad3c8857c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 857e61bc89e072aebcf34793d7e8504ece3318c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117903"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307278"
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>Nasıl yapılır: Windows Forms RadioButton Denetimlerini Küme İşlevi Görecek Şekilde Gruplama
 Windows Forms <xref:System.Windows.Forms.RadioButton> denetimleri hangi tek atanabilir bir yordam veya nesne iki veya daha fazla ayarları arasından bir seçim kullanıcılara vermek için tasarlanmıştır. Örneğin, bir grup <xref:System.Windows.Forms.RadioButton> denetimleri, paket operatörler sipariş ettiğiniz görüntüleyebilir, ancak operatörler yalnızca biri kullanılır. Bu nedenle yalnızca bir <xref:System.Windows.Forms.RadioButton> işlevsel Grup bir parçası olsa bile aynı anda seçilebilir.  
@@ -21,9 +21,9 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> denetimleri hangi tek atan
   
 ### <a name="to-group-radiobutton-controls-as-a-set-to-function-independently-of-other-sets"></a>İşlev diğer ayarlar bağımsız olarak bir küme olarak Grup RadioButton denetimlerini  
   
-1.  Sürükleme bir <xref:System.Windows.Forms.GroupBox> veya <xref:System.Windows.Forms.Panel> denetimi **Windows Forms** sekmesinde **araç kutusu** forma.  
+1. Sürükleme bir <xref:System.Windows.Forms.GroupBox> veya <xref:System.Windows.Forms.Panel> denetimi **Windows Forms** sekmesinde **araç kutusu** forma.  
   
-2.  Çizim <xref:System.Windows.Forms.RadioButton> denetimlerini <xref:System.Windows.Forms.GroupBox> veya <xref:System.Windows.Forms.Panel> denetimi.  
+2. Çizim <xref:System.Windows.Forms.RadioButton> denetimlerini <xref:System.Windows.Forms.GroupBox> veya <xref:System.Windows.Forms.Panel> denetimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

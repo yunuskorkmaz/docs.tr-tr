@@ -1,5 +1,5 @@
 ---
-title: C#işleçleri
+title: C# işleçleri
 ms.date: 04/04/2018
 f1_keywords:
 - cs.operators
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7666918cbff7a395a93a274629fe574ff20e170c
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545695"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308659"
 ---
-# <a name="c-operators"></a>C#işleçleri
+# <a name="c-operators"></a>C# işleçleri
 
 C# (matematik, dizin oluşturma, işlev çağrısı, vb.) bir ifadede gerçekleştirilecek işlemleri belirten simgelerdir birçok işleçleri sağlar. Yapabilecekleriniz [aşırı](../../programming-guide/statements-expressions-operators/overloadable-operators.md) işleçlerinin çoğu kullanıcı tanımlı bir türe başvurulduğunda anlamının değiştirin.
 
@@ -75,7 +75,7 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 [-x](subtraction-operator.md) – sayısal olumsuzlama.
 
-[\!x](logical-negation-operator.md) – mantıksal olumsuzlama.
+[\!x](boolean-logical-operators.md#logical-negation-operator-) – mantıksal olumsuzlama.
 
 [~ x](bitwise-complement-operator.md) – bit düzeyinde tamamlayıcı.
 
@@ -133,7 +133,7 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 [olarak](../keywords/as.md) – dönüştürmesi yazın. (Bir statik türü), sağ işlenen tarafından belirtilen tür için sol işlenen döndürür ancak `as` döndürür `null` burada `(T)x` bir özel durum oluşturması.
 
-## <a name="equality-operators"></a>Eşitlik işleçleri
+## <a name="equality-operators"></a>Eşitlik İşleçleri
 
 Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
 
@@ -163,13 +163,13 @@ Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde d
 
 Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
 
-[x & & y](conditional-and-operator.md) – mantıksal and İlk işlenen false olarak değerlendirilirse, ardından C# ikinci işlenenin değerlendirmez.
+[x & & y](boolean-logical-operators.md#conditional-logical-and-operator-) – mantıksal and İlk işlenen false olarak değerlendirilirse, ardından C# ikinci işlenenin değerlendirmez.
 
 ## <a name="conditional-or-operator"></a>Koşullu OR işleci
 
 Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
 
-[x &#124; &#124; y](conditional-or-operator.md) – mantıksal OR. İlk işlenen true olarak değerlendirilirse, ardından C# ikinci işlenenin değerlendirmez.
+[x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – mantıksal OR. İlk işlenen true olarak değerlendirilirse, ardından C# ikinci işlenenin değerlendirmez.
 
 ## <a name="null-coalescing-operator"></a>Null birleşim işleci
 
@@ -213,7 +213,7 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C# Başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C#](../../index.md)
 - [Aşırı Yüklenebilir İşleçler](../../programming-guide/statements-expressions-operators/overloadable-operators.md)

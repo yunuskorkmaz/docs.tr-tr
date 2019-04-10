@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117929"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301704"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms'a Denetimleri Kilitleme
 Windows uygulamanızın kullanıcı arabirimini (UI) tasarlarken, böylece istemeden taşıdığınızda veya diğer özellikleri ayarlarken yeniden boyutlandırabilir, doğru konumlandırılır sonra denetimleri kilitleyebilirsiniz.  
@@ -22,7 +22,7 @@ Windows uygulamanızın kullanıcı arabirimini (UI) tasarlarken, böylece istem
   
 ### <a name="to-lock-a-control"></a>Bir denetim kilitlemek için  
   
-1.  İçinde **özellikleri** penceresinde tıklayın **kilitli** özelliğini tıklatın ve `true`. (Adına çift özellik ayarı değiştirir.)  
+1. İçinde **özellikleri** penceresinde tıklayın **kilitli** özelliğini tıklatın ve `true`. (Adına çift özellik ayarı değiştirir.)  
   
      Alternatif olarak, denetime sağ tıklayın ve seçin **kilit denetimleri**.  
   
@@ -31,20 +31,20 @@ Windows uygulamanızın kullanıcı arabirimini (UI) tasarlarken, böylece istem
   
 ### <a name="to-lock-all-the-controls-on-a-form"></a>Bir formda tüm denetimler kilitlemek için  
   
-1.  Gelen **biçimi** menüsünde seçin **kilit denetimleri**.  
+1. Gelen **biçimi** menüsünde seçin **kilit denetimleri**.  
   
     > [!NOTE]
     >  Bir form denetim olduğundan bu komut formun boyutunu da kilitler.  
   
 ### <a name="to-unlock-all-locked-controls-on-a-form"></a>Formdaki denetimler kilitli tümünün kilidini aç  
   
-1.  Gelen **biçimi** menüsünde seçin **kilit denetimleri**.  
+1. Gelen **biçimi** menüsünde seçin **kilit denetimleri**.  
   
      Formdaki tüm daha önce kilitli denetimleri sunulmuştur kilidi.  
   
 ### <a name="to-unlock-locked-controls-individually"></a>Tek tek denetimler kilitli kilidini aç  
   
-1.  İçinde **özellikleri** penceresinde tıklayın **kilitli** özelliğini tıklatın ve `false`. (Adına çift özellik ayarı değiştirir.)  
+1. İçinde **özellikleri** penceresinde tıklayın **kilitli** özelliğini tıklatın ve `false`. (Adına çift özellik ayarı değiştirir.)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

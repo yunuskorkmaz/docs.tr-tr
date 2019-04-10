@@ -2,12 +2,12 @@
 title: 'Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 9dd1e2eb25b2f400ba42b6cee75f8563c4d52c31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310505"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Özel İleti Kodlayıcısı: Sıkıştırma Kodlayıcısı
 Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak özel bir kodlayıcı uygulamak nasıl gösterir.  
@@ -39,9 +39,9 @@ Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak özel b
   
  Daha önce belirtildiği gibi özel bir kodlayıcı uygulanan birden fazla katman vardır. Her biri bu Katmanlar arasındaki ilişkiyi daha iyi anlamak için aşağıdaki listede hizmet başlatma için basitleştirilmiş bir olaylar dizisi şöyledir:  
   
-1.  Sunucuyu başlatır.  
+1. Sunucuyu başlatır.  
   
-2.  Yapılandırma bilgilerini okuyun.  
+2. Yapılandırma bilgilerini okuyun.  
   
     1.  Özel yapılandırma işleyicisi hizmeti yapılandırmasını kaydeder.  
   
@@ -51,11 +51,11 @@ Bu örnek, Windows Communication Foundation (WCF) platformunu kullanarak özel b
   
     4.  Özel bağlama öğesi oluşturur ve bir ileti Kodlayıcı üreteci döndürür.  
   
-3.  Bir ileti alındı.  
+3. Bir ileti alındı.  
   
-4.  İleti Kodlayıcı fabrikası iletiyi okumak ve yanıt yazmak için bir ileti Kodlayıcı döndürür.  
+4. İleti Kodlayıcı fabrikası iletiyi okumak ve yanıt yazmak için bir ileti Kodlayıcı döndürür.  
   
-5.  Kodlayıcı katmanı, bir sınıf üreteci uygulanır. Yalnızca Kodlayıcı sınıf üreteci için özel bir kodlayıcı herkese açık şekilde sunulmalıdır. Fabrika nesnesine bağlama öğesi tarafından döndürülen zaman <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601> nesnesi oluşturulur. İleti Kodlayıcı arabelleğe alınan veya akış modunda çalışır. Bu örnek, hem arabellekli modu hem de akış modunu gösterir.  
+5. Kodlayıcı katmanı, bir sınıf üreteci uygulanır. Yalnızca Kodlayıcı sınıf üreteci için özel bir kodlayıcı herkese açık şekilde sunulmalıdır. Fabrika nesnesine bağlama öğesi tarafından döndürülen zaman <xref:System.ServiceModel.ServiceHost> veya <xref:System.ServiceModel.ChannelFactory%601> nesnesi oluşturulur. İleti Kodlayıcı arabelleğe alınan veya akış modunda çalışır. Bu örnek, hem arabellekli modu hem de akış modunu gösterir.  
   
  Her modu için yok yayarsa `ReadMessage` ve `WriteMessage` yöntemi soyut `MessageEncoder` sınıfı. Kodlama iş çoğunu, bu yöntemler de gerçekleşir. Örnek, var olan metin ve ikili ileti kodlayıcılar sarmalar. Bu örnek okuma ve yazma iletileri kablo temsilinin iç kodlayıcıya temsilci ve sıkıştırmayı veya sonuçları sıkıştırmasını sıkıştırma Kodlayıcısı olanak sağlar. İleti kodlama için herhangi bir işlem hattı olduğundan, birden çok kodlayıcılar WCF'de kullanmak için tek model budur. İleti sıkıştırması açılmış sonra elde edilen ileti işlemek kanal yığın yığında geçirilir. Sıkıştırma sırasında elde edilen sıkıştırılmış iletisi doğrudan sağlanan akışına yazılır.  
   
@@ -334,17 +334,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 aşağıdaki komutu kullanarak:  
+1. Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 aşağıdaki komutu kullanarak:  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

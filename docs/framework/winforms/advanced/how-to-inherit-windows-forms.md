@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112755"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314550"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Nasıl yapılır: Windows Formlarını Devralma
 Temel forms devralarak yeni Windows form oluşturmaya, ihtiyaç duyduğunuz her zaman bir form tamamen yeniden işlemine geçmeden çabalarınıza çoğaltmak için kullanışlı bir yoldur.  
@@ -25,9 +25,9 @@ Temel forms devralarak yeni Windows form oluşturmaya, ihtiyaç duyduğunuz her 
   
 ### <a name="to-inherit-a-form-programmatically"></a>Bir form programlı olarak devralmak için  
   
-1.  Sınıfınızda, devralınan istediğiniz formu içeren ad alanı bir başvuru ekleyin.  
+1. Sınıfınızda, devralınan istediğiniz formu içeren ad alanı bir başvuru ekleyin.  
   
-2.  Sınıf tanımında devralmak için forma bir başvuru ekleyin. Başvuru formun taban form adını ardından bir nokta içeren ad alanı içermelidir.  
+2. Sınıf tanımında devralmak için forma bir başvuru ekleyin. Başvuru formun taban form adını ardından bir nokta içeren ad alanı içermelidir.  
   
     ```vb  
     Public Class Form2  

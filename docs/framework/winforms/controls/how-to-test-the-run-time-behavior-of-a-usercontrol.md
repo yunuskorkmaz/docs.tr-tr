@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 1719d0461fbb582a1486dcc0726253ec97a07ac6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15b37c71e6643b588c0378510965a9a3e7cb56e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116499"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321776"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Nasıl yapılır: Bir UserControl Denetiminin Çalışma Zamanı Davranışını Sınama
 Geliştirirken bir <xref:System.Windows.Forms.UserControl>, çalışma zamanı davranışını sınama gerekir. Ayrı Windows tabanlı uygulama projesi oluşturun ve test form üzerindeki denetiminizi yerleştirin, ancak bu zor bir işlemdir. Daha hızlı ve kolay bir yolu **UserControl Test kapsayıcısı** Visual Studio tarafından sağlanan. Bu test kapsayıcısında, doğrudan Windows Denetim Kitaplığı projenizden başlatır.  
@@ -29,21 +29,21 @@ Geliştirirken bir <xref:System.Windows.Forms.UserControl>, çalışma zamanı d
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>Bir UserControl denetiminin çalışma zamanı davranışını sınama  
   
-1.  Adlı bir Windows Denetim Kitaplığı projesi oluşturun **TestContainerExample**. Ayrıntılar için bkz [Windows Denetim Kitaplığı şablonu](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
+1. Adlı bir Windows Denetim Kitaplığı projesi oluşturun **TestContainerExample**. Ayrıntılar için bkz [Windows Denetim Kitaplığı şablonu](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
-2.  İçinde **Windows Form Tasarımcısı**, sürükleyin bir <xref:System.Windows.Forms.Label> denetimi **araç kutusu** denetimin tasarım yüzeyine.  
+2. İçinde **Windows Form Tasarımcısı**, sürükleyin bir <xref:System.Windows.Forms.Label> denetimi **araç kutusu** denetimin tasarım yüzeyine.  
   
-3.  Projeyi derlemek ve çalıştırmak için F5 tuşuna basın **UserControl Test kapsayıcısı**. Test kapsayıcısı ile görünür, <xref:System.Windows.Forms.UserControl> içinde **Önizleme** bölmesi.  
+3. Projeyi derlemek ve çalıştırmak için F5 tuşuna basın **UserControl Test kapsayıcısı**. Test kapsayıcısı ile görünür, <xref:System.Windows.Forms.UserControl> içinde **Önizleme** bölmesi.  
   
-4.  Seçin <xref:System.Windows.Forms.Control.BackColor%2A> görüntülenen özelliği <xref:System.Windows.Forms.PropertyGrid> denetim sağındaki **Önizleme** bölmesi. Değerine değiştirmek `ControlDark`. Denetim daha koyu bir renge dönüşür gözlemleyin. Diğer özellik değerleri değiştirmeyi deneyin ve denetim üzerindeki etkisini inceleyin.  
+4. Seçin <xref:System.Windows.Forms.Control.BackColor%2A> görüntülenen özelliği <xref:System.Windows.Forms.PropertyGrid> denetim sağındaki **Önizleme** bölmesi. Değerine değiştirmek `ControlDark`. Denetim daha koyu bir renge dönüşür gözlemleyin. Diğer özellik değerleri değiştirmeyi deneyin ve denetim üzerindeki etkisini inceleyin.  
   
-5.  Tıklayın **Dock dolgu kullanıcı denetimi** aşağıdaki onay kutularından **Önizleme** bölmesi. Denetim bölmesinde doldurmak için boyutlandırılır gözlemleyin. Test kapsayıcı yeniden boyutlandırma ve Denetim ile bölmesinde yeniden boyutlandırılır gözlemleyin.  
+5. Tıklayın **Dock dolgu kullanıcı denetimi** aşağıdaki onay kutularından **Önizleme** bölmesi. Denetim bölmesinde doldurmak için boyutlandırılır gözlemleyin. Test kapsayıcı yeniden boyutlandırma ve Denetim ile bölmesinde yeniden boyutlandırılır gözlemleyin.  
   
-6.  Test kapsayıcısını kapatın.  
+6. Test kapsayıcısını kapatın.  
   
-7.  Başka bir kullanıcı denetimine ekleme **TestContainerExample** proje. Ayrıntılar için bkz [nasıl yapılır: Projeye var olan öğeleri ekleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100)).  
+7. Başka bir kullanıcı denetimine ekleme **TestContainerExample** proje. Ayrıntılar için bkz [nasıl yapılır: Projeye var olan öğeleri ekleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100)).  
   
-8.  İçinde **Windows Form Tasarımcısı**, sürükleyin bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** denetimin tasarım yüzeyine.  
+8. İçinde **Windows Form Tasarımcısı**, sürükleyin bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** denetimin tasarım yüzeyine.  
   
 9. Projeyi oluşturmak ve test kapsayıcıyı çalıştırmak için F5 tuşuna basın.  
   
@@ -54,17 +54,17 @@ Geliştirirken bir <xref:System.Windows.Forms.UserControl>, çalışma zamanı d
   
 #### <a name="to-test-user-controls-from-another-project"></a>Kullanıcı denetimleri başka bir projeden test etmek için  
   
-1.  Adlı bir Windows Denetim Kitaplığı projesi oluşturun **TestContainerExample2**. Ayrıntılar için bkz [Windows Denetim Kitaplığı şablonu](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
+1. Adlı bir Windows Denetim Kitaplığı projesi oluşturun **TestContainerExample2**. Ayrıntılar için bkz [Windows Denetim Kitaplığı şablonu](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
-2.  İçinde **Windows Form Tasarımcısı**, sürükleyin bir <xref:System.Windows.Forms.RadioButton> denetimi **araç kutusu** denetimin tasarım yüzeyine.  
+2. İçinde **Windows Form Tasarımcısı**, sürükleyin bir <xref:System.Windows.Forms.RadioButton> denetimi **araç kutusu** denetimin tasarım yüzeyine.  
   
-3.  Projeyi oluşturmak ve test kapsayıcıyı çalıştırmak için F5 tuşuna basın. Test kapsayıcısı ile görünür, <xref:System.Windows.Forms.UserControl> içinde **Önizleme** bölmesi.  
+3. Projeyi oluşturmak ve test kapsayıcıyı çalıştırmak için F5 tuşuna basın. Test kapsayıcısı ile görünür, <xref:System.Windows.Forms.UserControl> içinde **Önizleme** bölmesi.  
   
-4.  Tıklayın **yük** düğmesi.  
+4. Tıklayın **yük** düğmesi.  
   
-5.  İçinde **açık** iletişim kutusunda, gitmek **TestContainerExample**önceki yordamda oluşturulan .dll,. Seçin **TestContainerExample**tıklayın ve .dll **açık** yük kullanıcı denetimleri için düğme  
+5. İçinde **açık** iletişim kutusunda, gitmek **TestContainerExample**önceki yordamda oluşturulan .dll,. Seçin **TestContainerExample**tıklayın ve .dll **açık** yük kullanıcı denetimleri için düğme  
   
-6.  Kullanım **kullanıcı denetimi seçin** <xref:System.Windows.Forms.ComboBox> iki kullanıcı denetimlerini arasında geçiş yapmak için **TestContainerExample** proje.  
+6. Kullanım **kullanıcı denetimi seçin** <xref:System.Windows.Forms.ComboBox> iki kullanıcı denetimlerini arasında geçiş yapmak için **TestContainerExample** proje.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

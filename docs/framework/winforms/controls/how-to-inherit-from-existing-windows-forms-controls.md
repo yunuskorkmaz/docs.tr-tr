@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 90008b00c95906ba43364c5a4ae3f85d9fdf0e22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 788addee7c024577d029626da4aeb86d0ca9076a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300534"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Nasıl yapılır: Mevcut Windows Forms Denetimlerinden Devralma
 Varolan bir denetimi işlevlerini genişletmek istiyorsanız, varolan bir denetimi devralma yoluyla türetilen bir denetim oluşturabilirsiniz. Varolan bir denetimden devralınırken tüm işlevleri ve denetim görsel özelliklerini devralır. Örneğin, devralınan bir denetim oluşturuyorsanız <xref:System.Windows.Forms.Button>, yeni denetiminizin görünür ve Yasası tam gibi standart <xref:System.Windows.Forms.Button> denetimi. Ardından genişletin veya yeni, denetimin özel yöntemleri ve özellikleri uygulaması aracılığıyla işlevselliğini değiştirmenize. Bazı denetimler, ayrıca, devralınan denetim görsel görünümünü geçersiz kılarak değiştirebilirsiniz, <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi.  
@@ -23,23 +23,23 @@ Varolan bir denetimi işlevlerini genişletmek istiyorsanız, varolan bir deneti
   
 ### <a name="to-create-an-inherited-control"></a>Devralınan bir denetim oluşturmak için  
   
-1.  Yeni bir **Windows Forms uygulaması** proje.  
+1. Yeni bir **Windows Forms uygulaması** proje.  
   
-2.  Gelen **proje** menüsünde seçin **Yeni Öğe Ekle**.  
+2. Gelen **proje** menüsünde seçin **Yeni Öğe Ekle**.  
   
      **Yeni Öğe Ekle** iletişim kutusu görünür.  
   
-3.  İçinde **Yeni Öğe Ekle** iletişim kutusunda, çift **özel denetim**.  
+3. İçinde **Yeni Öğe Ekle** iletişim kutusunda, çift **özel denetim**.  
   
      Yeni özel denetim projenize eklenir.  
   
-4.  Varsa, Visual Basic kullanarak en üstündeki **Çözüm Gezgini**, tıklayın **tüm dosyaları göster**. CustomControl1.vb genişletin ve ardından CustomControl1.Designer.vb kod Düzenleyicisi'nde açın.  
+4. Varsa, Visual Basic kullanarak en üstündeki **Çözüm Gezgini**, tıklayın **tüm dosyaları göster**. CustomControl1.vb genişletin ve ardından CustomControl1.Designer.vb kod Düzenleyicisi'nde açın.  
   
-5.  C# kullanıyorsanız CustomControl1.cs Kod Düzenleyicisi'nde açın.  
+5. C# kullanıyorsanız CustomControl1.cs Kod Düzenleyicisi'nde açın.  
   
-6.  Öğesinden devralan sınıf bildiriminin bulun <xref:System.Windows.Forms.Control>.  
+6. Öğesinden devralan sınıf bildiriminin bulun <xref:System.Windows.Forms.Control>.  
   
-7.  Verileri devralmak istediğiniz denetlemek için temel sınıf değiştirin.  
+7. Verileri devralmak istediğiniz denetlemek için temel sınıf değiştirin.  
   
      Örneğin devralınacak istiyorsanız <xref:System.Windows.Forms.Button>, sınıf bildiriminin aşağıdakiyle değiştirin:  
   
@@ -52,7 +52,7 @@ Varolan bir denetimi işlevlerini genişletmek istiyorsanız, varolan bir deneti
     public partial class CustomControl1 : System.Windows.Forms.Button  
     ```  
   
-8.  Visual Basic kullanıyorsanız, kaydedin ve CustomControl1.Designer.vb kapatın. CustomControl1.vb kod Düzenleyicisi'nde açın.  
+8. Visual Basic kullanıyorsanız, kaydedin ve CustomControl1.Designer.vb kapatın. CustomControl1.vb kod Düzenleyicisi'nde açın.  
   
 9. Herhangi bir özel yöntemler veya denetiminiz birleştirecektir özellikleri uygulayın.  
   

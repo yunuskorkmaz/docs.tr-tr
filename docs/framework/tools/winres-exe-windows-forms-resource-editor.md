@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221101"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296660"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows, kaynak, yerelleştirme, Düzenleyici)
 
@@ -106,9 +106,9 @@ Kullanmakta olduğunuz .NET Framework ile yayımlanan Winres.exe sürümünü ku
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>Bir formla ilişkili .resx veya .resources dosyasını yerelleştirmek için
 
-1.  Tür `winres` Winres.exe'yi çalıştırmak üzere Geliştirici komut istemi.
+1. Tür `winres` Winres.exe'yi çalıştırmak üzere Geliştirici komut istemi.
 
-2.  Yerelleştirilecek bir form için varsayılan kaynakları açmak için **açın** komutunu **dosya** menüsünü açmak için dosyaya gidin.
+2. Yerelleştirilecek bir form için varsayılan kaynakları açmak için **açın** komutunu **dosya** menüsünü açmak için dosyaya gidin.
 
      -veya-
 
@@ -129,11 +129,11 @@ Kullanmakta olduğunuz .NET Framework ile yayımlanan Winres.exe sürümünü ku
     > [!NOTE]
     > Kaynaklarını düzenlediğiniz form devralınmış bir form ise, hem formun içindeki derleme hem de devralan (türetilmiş) formu içeren derleme Genel Derleme Önbelleği'ne (GAC) kaydettirilmeli veya WinRes.exe ile aynı dizinde bulunmalıdır. .NET Framework bileşenlerini GAC'a yükleme hakkında daha fazla bilgi için bkz. [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md).
 
-3.  Form üzerinde denetimleri seçin ve değiştirmek, <xref:System.Windows.Forms.Control.Text%2A> ve yerelleştirilmiş kültür ve dilini yansıtacak şekilde diğer özellikleri. Yerelleştirilmiş metnin sığmasını sağlayacak şekilde denetimleri gerektiği gibi taşıyın veya yeniden boyutlandırın.
+3. Form üzerinde denetimleri seçin ve değiştirmek, <xref:System.Windows.Forms.Control.Text%2A> ve yerelleştirilmiş kültür ve dilini yansıtacak şekilde diğer özellikleri. Yerelleştirilmiş metnin sığmasını sağlayacak şekilde denetimleri gerektiği gibi taşıyın veya yeniden boyutlandırın.
 
-4.  .Resx veya .resources dosyasının yerelleştirilmiş sürümünü kaydetmek için tıklatın **Kaydet** simgesini veya aynı komutu **dosya** menüsü. Araç görüntüler **kültür Seç** penceresi.
+4. .Resx veya .resources dosyasının yerelleştirilmiş sürümünü kaydetmek için tıklatın **Kaydet** simgesini veya aynı komutu **dosya** menüsü. Araç görüntüler **kültür Seç** penceresi.
 
-5.  Uygun kültürü ve dosya modunu seçin, ardından tıklayın **Tamam**.
+5. Uygun kültürü ve dosya modunu seçin, ardından tıklayın **Tamam**.
 
    Aracı'nı yerelleştirilmiş kaynak dosyaları için çalışma zamanındaki beklediği adlandırma kuralını kullanarak dosyayı kaydeder. Örneğin, yerelleştiriyorsanız `TestApp.resources` Almanya'da Almanca için araç dosyası olarak kaydeder. `TestApp.de-DE.resources`. Yerelleştiriyorsanız `TestApp.resx` Almanya'da Almanca için araç dosyası olarak kaydeder. `TestApp.de-DE.resx`. Kaynak adlandırma kuralları hakkında daha fazla bilgi için bkz: [kaynakları paketleme ve dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Çalışma zamanı tarafından kullanılan önceden tanımlanmış kültür adlarının listesi için bkz. <xref:System.Globalization.CultureInfo> sınıfı.
 

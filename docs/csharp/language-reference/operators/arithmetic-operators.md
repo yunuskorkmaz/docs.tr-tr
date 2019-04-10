@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 192acf6fea0c6014aaf092077f8deaa844dfd2ec
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633809"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301132"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# Başvurusu)
 
@@ -93,7 +93,7 @@ Birli `-` işleci desteklemez [ulong](../keywords/ulong.md) türü.
 
 [!code-csharp-interactive[multiplication operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
 
-Birli `*` işleci, bir [işaretçi yöneltme işleci](multiplication-operator.md#pointer-indirection-operator).
+Birli `*` işleci [işaretçi yöneltme işleci](multiplication-operator.md#pointer-indirection-operator).
 
 ## <a name="division-operator-"></a>Bölme işleci /
 
@@ -239,7 +239,7 @@ Açıklamalar, daha fazla bilgi için bkz. [System.Double](/dotnet/api/system.do
 
 ## <a name="operator-overloadability"></a>İşleç overloadability
 
-Kullanıcı tanımlı türler için [aşırı](../keywords/operator.md) birli (`++`, `--`, `+`, ve `-`) ve ikili (`*`, `/`, `%`, `+`ve `-`) Aritmetik işleçler. İkili İşleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtülü olarak aşırı yüklenmiş. Kullanıcı tanımlı bir türe açıkça bir bileşik atama işleci aşırı yüklenemez.
+Kullanıcı tanımlı bir tür için [aşırı](../keywords/operator.md) birli (`++`, `--`, `+`, ve `-`) ve ikili (`*`, `/`, `%`, `+`ve `-`) Aritmetik işleçler. İkili İşleç aşırı yüklendiğinde, karşılık gelen bileşik atama işleci de örtülü olarak aşırı yüklenmiş. Kullanıcı tanımlı bir türe açıkça bir bileşik atama işleci aşırı yüklenemez.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -247,7 +247,7 @@ Daha fazla bilgi için aşağıdaki bölümlere bakın [ C# dil belirtimi](~/_cs
 
 - [Sonek artırma ve azaltma işleçleri](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators)
 - [Önek artırma ve azaltma işleçleri](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)
-- [Birli artı işleci](~/_csharplang/spec/expressions.md#unary-plus-operator)
+- [Tekli artı işleci](~/_csharplang/spec/expressions.md#unary-plus-operator)
 - [Birli eksi işleci](~/_csharplang/spec/expressions.md#unary-minus-operator)
 - [Çarpma işleci](~/_csharplang/spec/expressions.md#multiplication-operator)
 - [Bölme işleci](~/_csharplang/spec/expressions.md#division-operator)
@@ -259,9 +259,9 @@ Daha fazla bilgi için aşağıdaki bölümlere bakın [ C# dil belirtimi](~/_cs
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C# Başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>
-- [.NET Sayısal Değerleri](../../../standard/numerics.md)
+- [.NET sayısal değerleri](../../../standard/numerics.md)

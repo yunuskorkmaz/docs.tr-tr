@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081495"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298480"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Yerel'i Kullanmaya Başlama
 Windows 10 için yeni bir Windows uygulaması yazmak ister mevcut bir Windows Store app geçiriyorsanız, aynı kümesini yordamları izleyebilirsiniz. Oluşturmak için bir [!INCLUDE[net_native](../../../includes/net-native-md.md)] uygulama, şu adımları izleyin:  
   
-1.  [Windows 10 hedefleyen Evrensel Windows Platformu (UWP) uygulaması geliştirme](#Step1)ve hata ayıklama derlemeleri düzgün çalıştığından emin olmak için uygulamanızı test.  
+1. [Windows 10 hedefleyen Evrensel Windows Platformu (UWP) uygulaması geliştirme](#Step1)ve hata ayıklama derlemeleri düzgün çalıştığından emin olmak için uygulamanızı test.  
   
-2.  [Yansıma ve Serileştirme ek kullanım işlemek](#Step2).  
+2. [Yansıma ve Serileştirme ek kullanım işlemek](#Step2).  
   
-3.  [Dağıtma ve sürüm yapıları uygulamanızı test](#Step3).  
+3. [Dağıtma ve sürüm yapıları uygulamanızı test](#Step3).  
   
-4.  [Meta veriler eksik el ile çözümlemeniz](#Step4)ve yineleme [3. adım](#Step3) tüm sorunlar çözülene kadar.  
+4. [Meta veriler eksik el ile çözümlemeniz](#Step4)ve yineleme [3. adım](#Step3) tüm sorunlar çözülene kadar.  
   
 > [!NOTE]
 >  Mevcut bir Windows Store uygulamaya taşıyorsanız [!INCLUDE[net_native](../../../includes/net-native-md.md)], gözden geçirdiğinizden emin olun [geçirme bilgisayarınızı Windows Store uygulaması için .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
@@ -29,9 +29,9 @@ Windows 10 için yeni bir Windows uygulaması yazmak ister mevcut bir Windows St
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>1. Adım: Geliştirme ve test UWP uygulamanızın hata ayıklama yapıları  
  Yeni bir uygulama geliştirirken veya var olan bir geçiş olsun, herhangi bir Windows uygulaması için aynı süreci izleyin.  
   
-1.  Yeni bir UWP projesi, Visual C# veya Visual Basic için evrensel Windows uygulaması şablonunu kullanarak Visual Studio'da oluşturun. Varsayılan olarak, CoreCLR tüm UWP uygulamaları hedefleyen ve yayın yapılarını .NET Native araç zinciri kullanılarak derlenir.  
+1. Yeni bir UWP projesi, Visual C# veya Visual Basic için evrensel Windows uygulaması şablonunu kullanarak Visual Studio'da oluşturun. Varsayılan olarak, CoreCLR tüm UWP uygulamaları hedefleyen ve yayın yapılarını .NET Native araç zinciri kullanılarak derlenir.  
   
-2.  Bulunduğuna bazı bilinen uyumluluk sorunlarına olmadan .NET Native araç zinciri ile UWP uygulaması projelerini derleme arasında dikkat edin. Başvurmak [Geçiş Kılavuzu](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) daha fazla bilgi için.  
+2. Bulunduğuna bazı bilinen uyumluluk sorunlarına olmadan .NET Native araç zinciri ile UWP uygulaması projelerini derleme arasında dikkat edin. Başvurmak [Geçiş Kılavuzu](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) daha fazla bilgi için.  
   
  Artık C# veya Visual Basic kodu karşı yazabilirsiniz [!INCLUDE[net_native](../../../includes/net-native-md.md)] yüzey yerel sistem (veya simülatör) çalıştıran alan.  
   

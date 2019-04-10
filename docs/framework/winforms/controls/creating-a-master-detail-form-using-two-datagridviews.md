@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295802"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>İzlenecek yol: İki Windows Forms DataGridView Denetimi Kullanarak Ana/Ayrıntı Formu Oluşturma
 Kullanmak için en sık karşılaşılan senaryolardan biri, <xref:System.Windows.Forms.DataGridView> denetimi *ana/ayrıntı* form, iki veritabanı tabloları arasında bir üst/alt ilişkisi görüntülenir. Ana tablodaki satırları seçme ile ilgili alt verileri güncelleştirmek ayrıntı tablosunu neden olur.  
@@ -33,14 +33,14 @@ Kullanmak için en sık karşılaşılan senaryolardan biri, <xref:System.Window
   
 #### <a name="to-create-a-masterdetail-form"></a>Ana/ayrıntı formu oluşturma  
   
-1.  Türetilen bir sınıf oluşturmanız <xref:System.Windows.Forms.Form> ve iki tane <xref:System.Windows.Forms.DataGridView> kontrol eder ve iki <xref:System.Windows.Forms.BindingSource> bileşenleri. Aşağıdaki kod temel biçimi başlatma sağlar ve içeren bir `Main` yöntemi. Formunuza oluşturmak için Visual Studio Tasarımcısı'nı kullanın, Tasarımcı oluşturulan kod kullanmak yerine bu kod, ancak burada değişken bildirimlerinde gösterilen adları kullandığınızdan emin olun.  
+1. Türetilen bir sınıf oluşturmanız <xref:System.Windows.Forms.Form> ve iki tane <xref:System.Windows.Forms.DataGridView> kontrol eder ve iki <xref:System.Windows.Forms.BindingSource> bileşenleri. Aşağıdaki kod temel biçimi başlatma sağlar ve içeren bir `Main` yöntemi. Formunuza oluşturmak için Visual Studio Tasarımcısı'nı kullanın, Tasarımcı oluşturulan kod kullanmak yerine bu kod, ancak burada değişken bildirimlerinde gösterilen adları kullandığınızdan emin olun.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  Veritabanına bağlanma ayrıntılı işleme için form denetiminin sınıf tanımında bir yöntem uygulayın. Bu örnekte bir `GetData` dolduran yöntemi bir <xref:System.Data.DataSet> nesne, ekler bir <xref:System.Data.DataRelation> nesnesine bağlar ve veri kümesi <xref:System.Windows.Forms.BindingSource> bileşenleri. Ayarladığınızdan emin olun `connectionString` değişken veritabanınız için uygun olan bir değer.  
+2. Veritabanına bağlanma ayrıntılı işleme için form denetiminin sınıf tanımında bir yöntem uygulayın. Bu örnekte bir `GetData` dolduran yöntemi bir <xref:System.Data.DataSet> nesne, ekler bir <xref:System.Data.DataRelation> nesnesine bağlar ve veri kümesi <xref:System.Windows.Forms.BindingSource> bileşenleri. Ayarladığınızdan emin olun `connectionString` değişken veritabanınız için uygun olan bir değer.  
   
     > [!IMPORTANT]
     >  Depolama bağlantı dizesi içinde bir parola gibi hassas bilgileri, uygulamanızın güvenliğini etkileyebilir. Windows Kimlik Doğrulaması (tümleşik güvenlik olarak da bilinir) kullanılarak bir veritabanına erişimi denetlemek için daha güvenli bir yoldur. Daha fazla bilgi için [bağlantı bilgilerini koruma](../../data/adonet/protecting-connection-information.md).  
@@ -48,7 +48,7 @@ Kullanmak için en sık karşılaşılan senaryolardan biri, <xref:System.Window
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  Form için bir işleyici uygulamak <xref:System.Windows.Forms.Form.Load> bağlayan olay <xref:System.Windows.Forms.DataGridView> için denetimleri <xref:System.Windows.Forms.BindingSource> bileşenleri ve çağrıları `GetData` yöntemi. Aşağıdaki örnek yeniden boyutlandırır kodu içerir <xref:System.Windows.Forms.DataGridView> görüntülenen verileri sığmayacak sütun.  
+3. Form için bir işleyici uygulamak <xref:System.Windows.Forms.Form.Load> bağlayan olay <xref:System.Windows.Forms.DataGridView> için denetimleri <xref:System.Windows.Forms.BindingSource> bileşenleri ve çağrıları `GetData` yöntemi. Aşağıdaki örnek yeniden boyutlandırır kodu içerir <xref:System.Windows.Forms.DataGridView> görüntülenen verileri sığmayacak sütun.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  

@@ -1,5 +1,5 @@
 ---
-title: XML şemalarını çapraz geçirme
+title: XML Şemalarını Çapraz Geçirme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,14 +9,14 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c587f4248205251824be851c135d93784e86c2f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646639"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305045"
 ---
-# <a name="traversing-xml-schemas"></a>XML şemalarını çapraz geçirme
+# <a name="traversing-xml-schemas"></a>XML Şemalarını Çapraz Geçirme
 Şema nesne modeli (SOM) API kullanarak bir XML Şeması geçiş öğeleri, öznitelikleri ve SOM. içinde depolanan türleri erişim sağlar Bir XML geçiş SOM yüklenen şema ayrıca SOM API'sini kullanarak bir XML şeması düzenleme ilk adımdır.  
   
 ## <a name="traversing-an-xml-schema"></a>Bir XML Şeması geçiş yapma  
@@ -43,19 +43,19 @@ ms.locfileid: "54646639"
   
  Aşağıdaki adımlarda, müşteri şema örnek erişir.  
   
-1.  Yeni bir müşteri şema ekler <xref:System.Xml.Schema.XmlSchemaSet> nesnesi ve ardından derler. Herhangi bir şema doğrulama uyarıları ve okuma veya şema derleme hatalarla karşılaşıldı işlenir <xref:System.Xml.Schema.ValidationEventHandler> temsilci.  
+1. Yeni bir müşteri şema ekler <xref:System.Xml.Schema.XmlSchemaSet> nesnesi ve ardından derler. Herhangi bir şema doğrulama uyarıları ve okuma veya şema derleme hatalarla karşılaşıldı işlenir <xref:System.Xml.Schema.ValidationEventHandler> temsilci.  
   
-2.  Derlenmiş alır <xref:System.Xml.Schema.XmlSchema> nesnesinden <xref:System.Xml.Schema.XmlSchemaSet> üzerinde yineleme tarafından <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özelliği. Şema derlendiğinden sonrası-Schema-derleme-sonrası bilgi kümesi (PSCI) özellikleri erişilebilir.  
+2. Derlenmiş alır <xref:System.Xml.Schema.XmlSchema> nesnesinden <xref:System.Xml.Schema.XmlSchemaSet> üzerinde yineleme tarafından <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özelliği. Şema derlendiğinden sonrası-Schema-derleme-sonrası bilgi kümesi (PSCI) özellikleri erişilebilir.  
   
-3.  Her yinelenir <xref:System.Xml.Schema.XmlSchemaElement> içinde <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> sonrası-schema-derleme koleksiyonu <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> koleksiyonu her öğenin adını konsola yazar.  
+3. Her yinelenir <xref:System.Xml.Schema.XmlSchemaElement> içinde <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> sonrası-schema-derleme koleksiyonu <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> koleksiyonu her öğenin adını konsola yazar.  
   
-4.  Karmaşık türü alır `Customer` öğesini kullanarak <xref:System.Xml.Schema.XmlSchemaComplexType> sınıfı.  
+4. Karmaşık türü alır `Customer` öğesini kullanarak <xref:System.Xml.Schema.XmlSchemaComplexType> sınıfı.  
   
-5.  Karmaşık tür herhangi bir özniteliği varsa, alır bir <xref:System.Collections.IDictionaryEnumerator> her Numaralandırılacak <xref:System.Xml.Schema.XmlSchemaAttribute> ve adını konsola yazar.  
+5. Karmaşık tür herhangi bir özniteliği varsa, alır bir <xref:System.Collections.IDictionaryEnumerator> her Numaralandırılacak <xref:System.Xml.Schema.XmlSchemaAttribute> ve adını konsola yazar.  
   
-6.  Karmaşık tür kullanarak dizisi parçacık alır <xref:System.Xml.Schema.XmlSchemaSequence> sınıfı.  
+6. Karmaşık tür kullanarak dizisi parçacık alır <xref:System.Xml.Schema.XmlSchemaSequence> sınıfı.  
   
-7.  Her yinelenir <xref:System.Xml.Schema.XmlSchemaElement> içinde <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> koleksiyon her alt öğenin adını konsola yazar.  
+7. Her yinelenir <xref:System.Xml.Schema.XmlSchemaElement> içinde <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> koleksiyon her alt öğenin adını konsola yazar.  
   
  Tam kod örneği verilmiştir.  
   

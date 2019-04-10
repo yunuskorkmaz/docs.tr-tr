@@ -3,12 +3,12 @@ title: Geçmişini C# - C# Kılavuzu
 description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz ne gibi?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126155"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303368"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
 
@@ -20,11 +20,11 @@ Bu makalede, her ana sürümüne geçmişini sağlar C# dili. C# Takım etmeden 
 C# Derleme araçları, varsayılan dil sürümü en son ana dil sürümü düşünün. Bu bölümdeki diğer makalelerinde ayrıntılı ana sürümler arasında nokta sürümleri olabilir. Bir nokta sürümde en son özellikleri kullanmak için yapmanız [derleyici dil sürüm yapılandırma](../language-reference/configure-language-version.md) ve sürüm seçin. Üç nokta sürümleri beri olmuştur C# 7.0:
 
 * [C# 7.3](csharp-7-3.md):
-  - C#7.3 şu anda içinde [Visual Studio 2017 sürüm 15.7](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md).
+  - C#7.3 sürümünden itibaren kullanılabilir [Visual Studio 2017 sürüm 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ve [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md).
 * [C# 7.2](csharp-7-2.md):
-  - C#şu anda, 7.2 [Visual Studio 2017 sürüm 15.5](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.0 SDK'sını](../../core/whats-new/index.md).
+  - C#7.2 sürümünden itibaren kullanılabilir [Visual Studio 2017 sürüm 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), ve [.NET Core 2.0 SDK'sını](../../core/whats-new/dotnet-core-2-0.md).
 * [C# 7.1](csharp-7-1.md):
-  - Bu özellikler eklenmiştir [Visual Studio 2017 sürüm 15.3](https://visualstudio.microsoft.com/vs/whatsnew/)hem de [.NET Core 2.0 SDK'sını](../../core/whats-new/index.md).
+  - C#7.1 sürümünden itibaren kullanılabilir [Visual Studio 2017 sürüm 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ve [.NET Core 2.0 SDK'sını](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C# sürüm 1.0
 
@@ -45,7 +45,7 @@ C# 1.0 önemli özelliklere yer:
 - [İfadeler](../programming-guide/statements-expressions-operators/expressions.md)
 - [Deyimler](../programming-guide/statements-expressions-operators/statements.md)
 - [Öznitelikler](../programming-guide/concepts/attributes/index.md)
-- [Değişmez Değerler](../language-reference/keywords/literal-keywords.md)
+- [Sabit değerler](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# sürüm 1.2
 
@@ -58,7 +58,7 @@ Artık ilgi çekici şeyler başlatın. Bir C# 2005, Visual Studio 2005 ile birl
 - [Genel Türler](../programming-guide/generics/index.md)
 - [Kısmi türler](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Anonim yöntemler](../programming-guide/statements-expressions-operators/anonymous-methods.md)
-- [Boş değer atanabilir türler](../programming-guide/nullable-types/index.md)
+- [Boş değer atanabilir tipler](../programming-guide/nullable-types/index.md)
 - [Yineleyiciler](../programming-guide/concepts/iterators.md)
 - [Kovaryans ve kontravaryans](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -166,7 +166,7 @@ En son ana sürüm C# 7.0 sürümü var. Bu sürüm bazı gelişime ve harika ş
 
 Diğer özellikler dahil:
 
-- [Atılanlar](./csharp-7.md#discards)
+- [Atar](./csharp-7.md#discards)
 - [İkili sabit değerler ve basamak ayırıcılar](./csharp-7.md#numeric-literal-syntax-improvements)
 - [Throw ifadeleri](./csharp-7.md#throw-expressions)
 

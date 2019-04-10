@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296244"
 ---
 # <a name="extension-methods-visual-basic"></a>Uzantı Yöntemleri (Visual Basic)
 Genişletme yöntemleri, geliştiricilerin zaten yeni bir türetilmiş tür oluşturmadan tanımlanan veri türlerine özel işlevsellik eklemek sağlar. Genişletme yöntemleri mevcut türü bir örnek yöntemi gibi çağrılabilen bir yöntem yazmaktır mümkün kılar.  
@@ -160,17 +160,17 @@ End Module
 ## <a name="extension-method-precedence"></a>Genişletme yöntemini önceliği  
  Aynı imzaya sahip iki uzantı yöntemi kapsam içinde ve erişilebilir olduğunda, daha yüksek önceliğe sahip çağrılır. Bir uzantı yönteminin önceliği, yöntemi kapsam içine almak için kullanılan mekanizmaya dayanır. Aşağıdaki liste, yüksekten en düşüğe öncelik hiyerarşisini gösterir.  
   
-1.  Geçerli modül içinde tanımlanan genişletme yöntemleri.  
+1. Geçerli modül içinde tanımlanan genişletme yöntemleri.  
   
-2.  Genişletme yöntemleri veri türleri geçerli ad alanı veya üst öğelerinden birini üst öğe ad alanlarına daha yüksek bir önceliğe sahip alt ad alanları ile tanımlanır.  
+2. Genişletme yöntemleri veri türleri geçerli ad alanı veya üst öğelerinden birini üst öğe ad alanlarına daha yüksek bir önceliğe sahip alt ad alanları ile tanımlanır.  
   
-3.  Geçerli dosyadaki herhangi bir türü alır içinde tanımlanan genişletme yöntemleri.  
+3. Geçerli dosyadaki herhangi bir türü alır içinde tanımlanan genişletme yöntemleri.  
   
-4.  Geçerli dosyadaki tüm ad alanı içeri aktarmaları içinde tanımlanan genişletme yöntemleri.  
+4. Geçerli dosyadaki tüm ad alanı içeri aktarmaları içinde tanımlanan genişletme yöntemleri.  
   
-5.  Tüm proje düzeyi türündeki aktarılır tanımlanan genişletme yöntemleri.  
+5. Tüm proje düzeyi türündeki aktarılır tanımlanan genişletme yöntemleri.  
   
-6.  Tüm proje düzeyindeki ad alanında aktarılır tanımlanan genişletme yöntemleri.  
+6. Tüm proje düzeyindeki ad alanında aktarılır tanımlanan genişletme yöntemleri.  
   
  Öncelik belirsizliği, kaldırmazsa çağırdığınız yöntemi belirtmek için tam nitelikli adı kullanabilirsiniz. Varsa `Print` yöntemi önceki örnekte bulunan adında bir modülde tanımlanan `StringExtensions`, tam nitelikli ad `StringExtensions.Print(example)` yerine `example.Print()`.  
   
@@ -184,4 +184,4 @@ End Module
 - [İsteğe Bağlı Parametreler](./optional-parameters.md)
 - [Parametre Dizileri](./parameter-arrays.md)
 - [Öznitelikler genel bakış](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic'de Kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

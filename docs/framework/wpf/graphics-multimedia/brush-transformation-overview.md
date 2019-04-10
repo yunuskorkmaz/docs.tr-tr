@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 0b55d2000b8a70bc42373cb976a84ff54ebc4245
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169578"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298337"
 ---
 # <a name="brush-transformation-overview"></a>Fırça Dönüşümüne Genel Bakış
 Fırça sınıf iki dönüşüm özellikleri sağlar: <xref:System.Windows.Media.Brush.Transform%2A> ve <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Özellikleri döndürme, ölçeklendirme, eğme ve bir fırça içeriğini olanak sağlar. Bu konu, bu iki özellik farklılıkları açıklar ve bunların kullanım örneklerini sağlar.  
@@ -29,15 +29,15 @@ Fırça sınıf iki dönüşüm özellikleri sağlar: <xref:System.Windows.Media
   
  Bir fırçanın dönüşüm uyguladığınızda <xref:System.Windows.Media.Brush.RelativeTransform%2A> özelliği çıktısını boyanan alanla eşlenmeden önce dönüşüm fırçaya uygulanır. Aşağıdaki liste bir fırçanın içeriği işlenir ve dönüştürülen sırasını anlatır.  
   
-1.  Fırçanın içeriğini işler. İçin bir <xref:System.Windows.Media.GradientBrush>, bu gradyan alanını belirleme anlamına gelir. İçin bir <xref:System.Windows.Media.TileBrush>, <xref:System.Windows.Media.TileBrush.Viewbox%2A> eşlenmiş <xref:System.Windows.Media.TileBrush.Viewport%2A>. Bu fırça çıktısı haline gelir.  
+1. Fırçanın içeriğini işler. İçin bir <xref:System.Windows.Media.GradientBrush>, bu gradyan alanını belirleme anlamına gelir. İçin bir <xref:System.Windows.Media.TileBrush>, <xref:System.Windows.Media.TileBrush.Viewbox%2A> eşlenmiş <xref:System.Windows.Media.TileBrush.Viewport%2A>. Bu fırça çıktısı haline gelir.  
   
-2.  Fırçanın çıkış 1 x 1 dönüşüm dikdörtgenin proje.  
+2. Fırçanın çıkış 1 x 1 dönüşüm dikdörtgenin proje.  
   
-3.  Fırçanın uygulama <xref:System.Windows.Media.Brush.RelativeTransform%2A>, varsa.  
+3. Fırçanın uygulama <xref:System.Windows.Media.Brush.RelativeTransform%2A>, varsa.  
   
-4.  Dönüştürülen çıktının boyamak için alan üzerine yansıtın.  
+4. Dönüştürülen çıktının boyamak için alan üzerine yansıtın.  
   
-5.  Fırçanın uygulama <xref:System.Windows.Media.Transform>, varsa.  
+5. Fırçanın uygulama <xref:System.Windows.Media.Transform>, varsa.  
   
  Çünkü <xref:System.Windows.Media.Brush.RelativeTransform%2A> fırçanın çıkış 1 x 1 dikdörtgen, dönüşüm merkezi eşlenir ve uzaklık değerleri görünür göreli olarak uygulanır. Örneğin, kullandığınız bir <xref:System.Windows.Media.RotateTransform> 45 derece merkezi fırçayı döndürmek için çıktı, verirsiniz <xref:System.Windows.Media.RotateTransform> bir <xref:System.Windows.Media.RotateTransform.CenterX%2A> 0,5 ve <xref:System.Windows.Media.RotateTransform.CenterY%2A> 0,5.  
   
@@ -61,19 +61,19 @@ Fırça sınıf iki dönüşüm özellikleri sağlar: <xref:System.Windows.Media
   
  Görüntü, olsa bile bozuk olduğuna dikkat edin fırçanın <xref:System.Windows.Media.TileBrush.Stretch%2A> ayarlandı <xref:System.Windows.Media.Stretch.UniformToFill>. Göreli dönüşümü fırçanın sonra uygulanan çünkü <xref:System.Windows.Media.TileBrush.Viewbox%2A> eşlenen alt <xref:System.Windows.Media.TileBrush.Viewport%2A>. Aşağıdaki listede işleminin her adımı açıklanmaktadır:  
   
-1.  Fırçanın içeriğini proje (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) kendi temel döşemesine (<xref:System.Windows.Media.TileBrush.Viewport%2A>) fırça kullanarak <xref:System.Windows.Media.TileBrush.Stretch%2A> ayarı.  
+1. Fırçanın içeriğini proje (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) kendi temel döşemesine (<xref:System.Windows.Media.TileBrush.Viewport%2A>) fırça kullanarak <xref:System.Windows.Media.TileBrush.Stretch%2A> ayarı.  
   
      ![Görünüm penceresinin uyacak şekilde Viewbox esnetme](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
-2.  Taban döşemesi, 1 x 1 dönüşüm dikdörtgenin proje.  
+2. Taban döşemesi, 1 x 1 dönüşüm dikdörtgenin proje.  
   
      ![Harita Görünüm penceresi dönüştürme dikdörtgene](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3.  Uygulama <xref:System.Windows.Media.RotateTransform>.  
+3. Uygulama <xref:System.Windows.Media.RotateTransform>.  
   
      ![Göreli Dönüşümü uygula](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
-4.  Dönüştürülen taban döşemesi boyamak için alan üzerine yansıtın.  
+4. Dönüştürülen taban döşemesi boyamak için alan üzerine yansıtın.  
   
      ![Dönüştürülen fırça çıkış alanına proje](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   

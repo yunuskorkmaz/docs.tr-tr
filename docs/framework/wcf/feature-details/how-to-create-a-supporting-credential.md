@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c6c4ea777f62541f8ca8fa79fdd024e5f5cf2ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093715"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326053"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma
 Birden fazla kimlik bilgisi gerektiren bir özel güvenlik düzeni olması mümkündür. Örneğin, bir hizmetin istemci yalnızca bir kullanıcı adı ve parola talep edebilir, ancak aynı zamanda istemci kanıtlayan bir kimlik bilgisi 18 yaşın üzerinde olan. İkinci bir kimlik bilgisi bir *kimlik bilgisi destekleyen*. Bu konuda, bu kimlik bilgilerini bir Windows Communication Foundation (WCF) istemcisinde uygulamak açıklanmaktadır.  
@@ -68,9 +68,9 @@ Birden fazla kimlik bilgisi gerektiren bir özel güvenlik düzeni olması mümk
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>Kimlik bilgilerini destekleyen içeren özel bir bağlama oluşturma  
   
-1.  Bir güvenlik bağlama öğesi oluşturun. Aşağıdaki örnek bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ile `UserNameForCertificate` kimlik doğrulama modu. Kullanım <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> yöntemi.  
+1. Bir güvenlik bağlama öğesi oluşturun. Aşağıdaki örnek bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ile `UserNameForCertificate` kimlik doğrulama modu. Kullanım <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> yöntemi.  
   
-2.  Uygun bir özellik tarafından döndürülen türleri koleksiyonunu destekleyen parametre ekleyin (`Endorsing`, `Signed`, `SignedEncrypted`, veya `SignedEndorsed`). Türlerinde <xref:System.ServiceModel.Security.Tokens> ad alanı yaygın olarak kullanılan türleri gibi dahil <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
+2. Uygun bir özellik tarafından döndürülen türleri koleksiyonunu destekleyen parametre ekleyin (`Endorsing`, `Signed`, `SignedEncrypted`, veya `SignedEndorsed`). Türlerinde <xref:System.ServiceModel.Security.Tokens> ad alanı yaygın olarak kullanılan türleri gibi dahil <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
   
 ## <a name="example"></a>Örnek  
   

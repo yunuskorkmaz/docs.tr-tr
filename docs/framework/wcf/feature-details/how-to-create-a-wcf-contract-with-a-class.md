@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-ms.openlocfilehash: a514134ed0af3b691a2e66720f81594a51747b6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 37d0e6fae8ad0f3a91f1bead23fb5823fc52d420
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089529"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313235"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Nasıl yapılır: Bir Windows Communication Foundation sözleşme sınıfı ile oluşturma
 Bir Windows Communication Foundation (WCF) sözleşmesi oluşturma tercih edilen yol, bir arabirim kullanmaktır. Daha fazla bilgi için [nasıl yapılır: Bir hizmet sözleşmesini tanımlama](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Bir alternatif, Anahatlı burayı olan bir sınıf oluşturun ve ardından uygulama <xref:System.ServiceModel.ServiceContractAttribute> sınıfı özniteliği doğrudan ve <xref:System.ServiceModel.OperationContractAttribute> her sözleşmesinin bir parçası olan yöntemler için özniteliği.  
@@ -22,13 +22,13 @@ Bir Windows Communication Foundation (WCF) sözleşmesi oluşturma tercih edilen
   
 ### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a>Bir Windows Communication Foundation sözleşme sınıfı ile oluşturma  
   
-1.  Visual Basic kullanarak yeni bir sınıf oluşturun C#, veya tüm diğer ortak dil çalışma zamanı dil.  
+1. Visual Basic kullanarak yeni bir sınıf oluşturun C#, veya tüm diğer ortak dil çalışma zamanı dil.  
   
-2.  Uygulama <xref:System.ServiceModel.ServiceContractAttribute> sınıfı için sınıf.  
+2. Uygulama <xref:System.ServiceModel.ServiceContractAttribute> sınıfı için sınıf.  
   
-3.  Sınıfı yöntemleri oluşturun.  
+3. Sınıfı yöntemleri oluşturun.  
   
-4.  Uygulama <xref:System.ServiceModel.OperationContractAttribute> genel WCF sözleşmesinin bir parçası sunulan her yöntem için sınıf.  
+4. Uygulama <xref:System.ServiceModel.OperationContractAttribute> genel WCF sözleşmesinin bir parçası sunulan her yöntem için sınıf.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği bir hizmet anlaşmasını tanımlayan bir sınıf gösterir.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 2bbdcc8e5a55f9d2cdbb80bf83443f0ad8850452
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ae2aa4c5629096ee7d888e7c4e334c3b6696db3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105293"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323323"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama
 Bir Windows etki alanı bilgisayardaki kaynaklara erişimi denetleme temel güvenlik bir görevdir. Örneğin, yalnızca belirli kullanıcılara bordro bilgilerini gibi hassas verilerin görüntülemeniz mümkün olması gerekir. Bu konu, zorlu bir yöntemi kullanıcının, önceden tanımlanmış bir gruba ait erişimini kısıtlamak nasıl açıklar. Çalışma örnek için bkz: [hizmet işlemlerine erişimi yetkilendirme](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -23,25 +23,25 @@ Bir Windows etki alanı bilgisayardaki kaynaklara erişimi denetleme temel güve
   
 ### <a name="to-create-a-windows-group"></a>Bir Windows grubu oluşturmak için  
   
-1.  Açık **Bilgisayar Yönetimi** Konsolu.  
+1. Açık **Bilgisayar Yönetimi** Konsolu.  
   
-2.  Sol bölmede bulunan tıklayın **yerel kullanıcılar ve gruplar**.  
+2. Sol bölmede bulunan tıklayın **yerel kullanıcılar ve gruplar**.  
   
-3.  Sağ **grupları**, tıklatıp **yeni grup**.  
+3. Sağ **grupları**, tıklatıp **yeni grup**.  
   
-4.  İçinde **grup adı** yeni grup için bir ad yazın.  
+4. İçinde **grup adı** yeni grup için bir ad yazın.  
   
-5.  İçinde **açıklama** yeni grubun açıklamasını yazın.  
+5. İçinde **açıklama** yeni grubun açıklamasını yazın.  
   
-6.  Tıklayın **Ekle** grubuna yeni üyeler eklemek için düğme.  
+6. Tıklayın **Ekle** grubuna yeni üyeler eklemek için düğme.  
   
-7.  Kendinizi gruba eklediğiniz ve aşağıdaki kodu test etmek istediğiniz, oturumu kapattığında gerekir ve tekrar açmaları gruba dahil.  
+7. Kendinizi gruba eklediğiniz ve aşağıdaki kodu test etmek istediğiniz, oturumu kapattığında gerekir ve tekrar açmaları gruba dahil.  
   
 ### <a name="to-demand-user-membership"></a>İsteğe bağlı kullanıcı üyeliği  
   
-1.  Uygulanan hizmet sözleşme kodu içeren Windows Communication Foundation (WCF) kod dosyasını açın. Bir sözleşme uygulama hakkında daha fazla bilgi için bkz. [hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1. Uygulanan hizmet sözleşme kodu içeren Windows Communication Foundation (WCF) kod dosyasını açın. Bir sözleşme uygulama hakkında daha fazla bilgi için bkz. [hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
-2.  Uygulama <xref:System.Security.Permissions.PrincipalPermissionAttribute> öznitelik her yönteme belirli bir gruba sınırlı olmalıdır. Ayarlama <xref:System.Security.Permissions.SecurityAttribute.Action%2A> özelliğini <xref:System.Security.Permissions.SecurityAction.Demand> ve <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> özelliğini grubunun adı. Örneğin:  
+2. Uygulama <xref:System.Security.Permissions.PrincipalPermissionAttribute> öznitelik her yönteme belirli bir gruba sınırlı olmalıdır. Ayarlama <xref:System.Security.Permissions.SecurityAttribute.Action%2A> özelliğini <xref:System.Security.Permissions.SecurityAction.Demand> ve <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> özelliğini grubunun adı. Örneğin:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
@@ -56,16 +56,16 @@ Bir Windows etki alanı bilgisayardaki kaynaklara erişimi denetleme temel güve
   
 #### <a name="to-control-access-using-a-certificate"></a>Bir sertifika kullanarak erişimi denetleme  
   
-1.  Uygulama <xref:System.Security.Permissions.PrincipalPermissionAttribute> erişimi kısıtlamak istediğiniz yönteme sınıf.  
+1. Uygulama <xref:System.Security.Permissions.PrincipalPermissionAttribute> erişimi kısıtlamak istediğiniz yönteme sınıf.  
   
-2.  Özniteliğin eylem <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>.  
+2. Özniteliğin eylem <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>.  
   
-3.  Ayarlama `Name` konu adı ve sertifikanın parmak izi oluşan bir dize özelliği. İki değer, aşağıdaki örnekte gösterildiği gibi noktalı virgül ve boşluk ile ayırın:  
+3. Ayarlama `Name` konu adı ve sertifikanın parmak izi oluşan bir dize özelliği. İki değer, aşağıdaki örnekte gösterildiği gibi noktalı virgül ve boşluk ile ayırın:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#2)]
      [!code-vb[c_PrincipalPermissionAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#2)]  
   
-4.  Ayarlama <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> özelliğini <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> yapılandırmasını aşağıda gösterildiği gibi:  
+4. Ayarlama <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> özelliğini <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> yapılandırmasını aşağıda gösterildiği gibi:  
   
     ```xml  
     <behaviors>  

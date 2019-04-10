@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311532"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir değişkenin kullanılabilirliğini denetleme
 Belirterek bir değişkenin kullanılabilirliğini denetleme kendi *erişim düzeyi*. Hangi kod okuma veya değişkenine yazma izni olan erişim düzeyini belirler.  
@@ -31,25 +31,25 @@ Belirterek bir değişkenin kullanılabilirliğini denetleme kendi *erişim düz
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>Bir değişkenin kendi modül, sınıf veya yapı içinde yalnızca erişilebilir hale getirmek için  
   
-1.  Bir yerde [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) değişken modülü, sınıf veya yapı içinde ancak dışında herhangi bir yordam için.  
+1. Bir yerde [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) değişken modülü, sınıf veya yapı içinde ancak dışında herhangi bir yordam için.  
   
-2.  Dahil [özel](../../../../visual-basic/language-reference/modifiers/private.md) anahtar sözcüğünü `Dim` deyimi.  
+2. Dahil [özel](../../../../visual-basic/language-reference/modifiers/private.md) anahtar sözcüğünü `Dim` deyimi.  
   
      Okuma veya değişkeninden değil, ancak, modül, sınıf veya yapı içinde herhangi bir yere yazmak, dışında.  
   
 #### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>Bir değişken görebileceğiniz herhangi bir koddan erişilebilir hale getirmek için  
   
-1.  Bir üye değişkeni için yerleştirin `Dim` bir modül, sınıf veya yapı içinde ancak her türlü yordam dışındaki değişken bildirimi.  
+1. Bir üye değişkeni için yerleştirin `Dim` bir modül, sınıf veya yapı içinde ancak her türlü yordam dışındaki değişken bildirimi.  
   
-2.  Dahil [genel](../../../../visual-basic/language-reference/modifiers/public.md) anahtar sözcüğünü `Dim` deyimi.  
+2. Dahil [genel](../../../../visual-basic/language-reference/modifiers/public.md) anahtar sözcüğünü `Dim` deyimi.  
   
      Okuma veya değişkene derlemenizi ile birlikte çalışan herhangi bir kodu yazın.  
   
- veya  
+ -veya-  
   
-1.  Yerel bir değişken için yerleştirin `Dim` bir yordam içinde değişken bildirimi.  
+1. Yerel bir değişken için yerleştirin `Dim` bir yordam içinde değişken bildirimi.  
   
-2.  Dahil etmezseniz `Public` anahtar sözcüğünü `Dim` deyimi.  
+2. Dahil etmezseniz `Public` anahtar sözcüğünü `Dim` deyimi.  
   
      Okuma veya değişkeninden değil, ancak yordam içinde herhangi bir yere yazmak, dışında.  
   
@@ -58,17 +58,17 @@ Belirterek bir değişkenin kullanılabilirliğini denetleme kendi *erişim düz
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Bir değişken sınıfına ve tüm türetilmiş sınıflar içinde yalnızca erişilebilir hale getirmek için  
   
-1.  Bir yerde `Dim` bir sınıf içinde ancak her türlü yordam dışındaki değişken bildirimi.  
+1. Bir yerde `Dim` bir sınıf içinde ancak her türlü yordam dışındaki değişken bildirimi.  
   
-2.  Dahil [korumalı](../../../../visual-basic/language-reference/modifiers/protected.md) anahtar sözcüğünü `Dim` deyimi.  
+2. Dahil [korumalı](../../../../visual-basic/language-reference/modifiers/protected.md) anahtar sözcüğünü `Dim` deyimi.  
   
      Okuma veya herhangi bir sınıf değil, ancak ondan türetilen sınıf içinde herhangi bir yere yanı sıra içinden değişkeninden yazma türetme zincirindeki herhangi bir sınıfın dışında.  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>Bir değişken aynı bütünleştirilmiş kod içinde yalnızca erişilebilir hale getirmek için  
   
-1.  Bir yerde `Dim` bir modül, sınıf veya yapı içinde ancak her türlü yordam dışındaki değişken bildirimi.  
+1. Bir yerde `Dim` bir modül, sınıf veya yapı içinde ancak her türlü yordam dışındaki değişken bildirimi.  
   
-2.  Dahil [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md) anahtar sözcüğünü `Dim` deyimi.  
+2. Dahil [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md) anahtar sözcüğünü `Dim` deyimi.  
   
      Okuma veya modül, sınıf veya yapı içinde herhangi bir yere yanı sıra herhangi bir koddan değil, ancak aynı bütünleştirilmiş kodun değişkeninden yazma derleme dışından.  
   
@@ -90,7 +90,7 @@ Private numberForMeOnly As Integer
 
 - [Visual Basic'de erişim düzeyleri](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Dim Deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
-- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
-- [Private](../../../../visual-basic/language-reference/modifiers/private.md)
+- [Ortak](../../../../visual-basic/language-reference/modifiers/public.md)
+- [Korumalı](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md)
+- [Özel](../../../../visual-basic/language-reference/modifiers/private.md)

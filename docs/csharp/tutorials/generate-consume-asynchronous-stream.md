@@ -3,12 +3,12 @@ title: Oluştur ve zaman uyumsuz akışları kullanma
 description: Bu gelişmiş Öğreticisi burada oluşturma ve zaman uyumsuz akışlar kullanan zaman uyumsuz olarak oluşturulan veri dizileri ile çalışmak için daha doğal bir yol sağlar senaryo da gösterilir.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: c8be9cf4b83e3dd72232279e7c15dcba639c2058
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56306017"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308555"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Öğretici: Oluşturma ve kullanarak zaman uyumsuz akışlarını kullanmasını C# 8.0 ve .NET Core 3.0
 
@@ -23,7 +23,7 @@ Bu öğreticide şunları öğrenirsiniz nasıl yapılır:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-.NET Core çalıştırmak için makinenizi ayarlamak ihtiyacınız olacak dahil olmak üzere C# 8.0 beta derleyici. C# 8 beta derleyici sürümünden itibaren kullanılabilir [Visual Studio 2019 Önizleme 1](https://visualstudio.microsoft.com/vs/preview/), veya [.NET Core 3.0 Önizleme 1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). Zaman uyumsuz akışlar ilk .NET Core 3.0 Önizleme 1'de kullanılabilir.
+.NET Core çalıştırmak için makinenizi ayarlamak ihtiyacınız olacak dahil olmak üzere C# 8.0 beta derleyici. C# 8 beta derleyici sürümünden itibaren kullanılabilir [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), veya en son [.NET Core 3.0 Önizleme SDK'sı](https://dotnet.microsoft.com/download/dotnet-core/3.0). Zaman uyumsuz akışlar ilk .NET Core 3.0 Önizleme 1'de kullanılabilir.
 
 Oluşturmak ihtiyacınız olacak bir [GitHub erişim belirteci](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) GitHub GraphQL uç noktaya erişebilmesi için. GitHub erişim belirtecinizi için şu izinler seçin:
 

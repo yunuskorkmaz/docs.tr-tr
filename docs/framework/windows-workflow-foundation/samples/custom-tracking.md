@@ -2,12 +2,12 @@
 title: Özel İzleme
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161851"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307645"
 ---
 # <a name="custom-tracking"></a>Özel İzleme
 Bu örnek bir özel izleme Katılımcısı oluşturma ve izleme verilerini içeriğini konsola yazma gösterir. Ayrıca, örnek yayma yapmayı gösteren <xref:System.Activities.Tracking.CustomTrackingRecord> doldurulmuş olan kullanıcı nesneleri tanımlanan veri. Konsol tabanlı izleme katılımcı filtreleri <xref:System.Activities.Tracking.TrackingRecord> nesneleri bir izleme profili kullanan iş akışı tarafından yayılan kod içinde oluşturulan bir nesne.
@@ -133,11 +133,11 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1.  Visual Studio 2010 kullanarak CustomTrackingSample.sln çözüm dosyasını açın.
+1. Visual Studio 2010 kullanarak CustomTrackingSample.sln çözüm dosyasını açın.
 
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-3.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.
+3. Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.
 
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID92
 ms.assetid: 7f5b8b87-1a28-474d-8639-9de97922ceab
-ms.openlocfilehash: 25d0693f53ae9f6cc09038848e824a119c1bf8de
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 225a363e5e5578160acc5aa45e978a0339b546c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034052"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313233"
 ---
 # <a name="for-loop-not-initialized-visual-basic"></a>For döngüsü (Visual Basic) başlatılmadı.
 Ortasına atlanan bir `For...Next` döngü.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Döngü içinde atlama kaldırın.  
+1. Döngü içinde atlama kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [For Each...Next Deyimi](../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [Nasıl yapılır: Etiket Deyimleri](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)
+- [Nasıl yapılır: Etiket ifadeleri](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)

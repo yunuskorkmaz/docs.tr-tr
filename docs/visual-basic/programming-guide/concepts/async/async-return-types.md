@@ -2,12 +2,12 @@
 title: Zaman uyumsuz dönüş türleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838358"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313287"
 ---
 # <a name="async-return-types-visual-basic"></a>Zaman uyumsuz dönüş türleri (Visual Basic)
 Zaman uyumsuz yöntemler üç olası dönüş türüne sahiptir: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>ve void. Visual Basic'te, void dönüş türü olarak yazılmış bir [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordamı. Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve Await ile Zaman Uyumsuz Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -150,23 +150,23 @@ End Sub
   
  Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:  
   
-1.  Visual Studio’yu çalıştırın.  
+1. Visual Studio’yu çalıştırın.  
   
-2.  Menü çubuğunda, **dosya**, **yeni**, **proje**.  
+2. Menü çubuğunda, **dosya**, **yeni**, **proje**.  
   
      **Yeni proje** iletişim kutusu açılır.  
   
-3.  İçinde **yüklü**, **şablonları** kategorisi seçin **Visual Basic**ve ardından **Windows**. Seçin **WPF uygulaması** proje türleri listesinden.  
+3. İçinde **yüklü**, **şablonları** kategorisi seçin **Visual Basic**ve ardından **Windows**. Seçin **WPF uygulaması** proje türleri listesinden.  
   
-4.  Girin `AsyncReturnTypes` projesinin adı olarak seçip **Tamam** düğmesi.  
+4. Girin `AsyncReturnTypes` projesinin adı olarak seçip **Tamam** düğmesi.  
   
      Yeni Proje görünür **Çözüm Gezgini**.  
   
-5.  Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
+5. Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
   
      Sekme görünür değilse nde MainWindow.xaml için kısayol menüsünü açın **Çözüm Gezgini**ve ardından **açın**.  
   
-6.  İçinde **XAML** MainWindow.xaml penceresinde kodu aşağıdaki kodla değiştirin.  
+6. İçinde **XAML** MainWindow.xaml penceresinde kodu aşağıdaki kodla değiştirin.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -183,9 +183,9 @@ End Sub
   
      Bir metin kutusu ve bir düğme içeren basit bir pencere **tasarım** MainWindow.xaml penceresi.  
   
-7.  İçinde **Çözüm Gezgini**MainWindow.xaml.vb için kısayol menüsünü açın ve ardından **kodu görüntüle**.  
+7. İçinde **Çözüm Gezgini**MainWindow.xaml.vb için kısayol menüsünü açın ve ardından **kodu görüntüle**.  
   
-8.  MainWindow.xaml.vb kodu aşağıdaki kodla değiştirin.  
+8. MainWindow.xaml.vb kodu aşağıdaki kodla değiştirin.  
   
     ```vb  
     Class MainWindow  
@@ -297,5 +297,5 @@ End Sub
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Zaman uyumsuz programlarda (Visual Basic) denetim akışı](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
-- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
+- [Zaman Uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Await İşleci](../../../../visual-basic/language-reference/operators/await-operator.md)

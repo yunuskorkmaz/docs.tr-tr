@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: dd21f80e4b3892cbd9db901b619ecff98f6b70bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3690d1c2eb8ece9059b8b25b5a14bef2021bc8f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320177"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Nasıl yapılır: Visual Basic olay işleyicisi çağırma
 Bir *olay* bir eylem veya oluşum — gibi bir fare tıklatın veya kredi sınırına aşıldı —, tanınır bazı programı bileşeni için kod yazabilirsiniz ve yanıtlayın. Bir *olay işleyicisi* bir olaya yanıt vermek için yazdığınız kodu.  
@@ -26,13 +26,13 @@ Bir *olay* bir eylem veya oluşum — gibi bir fare tıklatın veya kredi sını
   
 ### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>WithEvents ve işler kullanarak bir olay işleyicisi çağırmak için  
   
-1.  Emin olay ile bildirilmiş bir [Event deyimi](../../../../visual-basic/language-reference/statements/event-statement.md).  
+1. Emin olay ile bildirilmiş bir [Event deyimi](../../../../visual-basic/language-reference/statements/event-statement.md).  
   
-2.  Düzeyi kullanarak modül veya sınıfının bir nesne değişkeni bildirme [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) anahtar sözcüğü. `As` Yan tümcesi için bu değişkeni, olayı yükselten sınıf belirtmeniz gerekir.  
+2. Düzeyi kullanarak modül veya sınıfının bir nesne değişkeni bildirme [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) anahtar sözcüğü. `As` Yan tümcesi için bu değişkeni, olayı yükselten sınıf belirtmeniz gerekir.  
   
-3.  Olay işleme bildiriminde `Sub` yordam, ekleme bir [işleme](../../../../visual-basic/language-reference/statements/handles-clause.md) belirten yan tümcesi `WithEvents` değişkeni ve olay adı.  
+3. Olay işleme bildiriminde `Sub` yordam, ekleme bir [işleme](../../../../visual-basic/language-reference/statements/handles-clause.md) belirten yan tümcesi `WithEvents` değişkeni ve olay adı.  
   
-4.  Olay ortaya çıktığında, Visual Basic otomatik olarak çağıran `Sub` yordamı. Kodunuzu kullanabilirsiniz bir `RaiseEvent` ortaya olayın deyimi.  
+4. Olay ortaya çıktığında, Visual Basic otomatik olarak çağıran `Sub` yordamı. Kodunuzu kullanabilirsiniz bir `RaiseEvent` ortaya olayın deyimi.  
   
      Aşağıdaki örnek, bir olayı tanımlar ve `WithEvents` olayı yükselten sınıf başvuran değişkeni. Olay işleme `Sub` yordamı kullanan bir `Handles` yan sınıfı ve bunu işleyen olayı belirtin.  
   
@@ -40,11 +40,11 @@ Bir *olay* bir eylem veya oluşum — gibi bir fare tıklatın veya kredi sını
   
 ### <a name="to-call-an-event-handler-using-addhandler"></a>AddHandler kullanarak bir olay işleyicisi çağırmak için  
   
-1.  Emin olay ile bildirilmiş bir `Event` deyimi.  
+1. Emin olay ile bildirilmiş bir `Event` deyimi.  
   
-2.  Yürütme bir [AddHandler deyimi](../../../../visual-basic/language-reference/statements/addhandler-statement.md) olay işleme dinamik olarak bağlanmak için `Sub` olaylı yordamı.  
+2. Yürütme bir [AddHandler deyimi](../../../../visual-basic/language-reference/statements/addhandler-statement.md) olay işleme dinamik olarak bağlanmak için `Sub` olaylı yordamı.  
   
-3.  Olay ortaya çıktığında, Visual Basic otomatik olarak çağıran `Sub` yordamı. Kodunuzu kullanabilirsiniz bir `RaiseEvent` ortaya olayın deyimi.  
+3. Olay ortaya çıktığında, Visual Basic otomatik olarak çağıran `Sub` yordamı. Kodunuzu kullanabilirsiniz bir `RaiseEvent` ortaya olayın deyimi.  
   
      Aşağıdaki örnekte tanımlayan bir `Sub` işlemek için yordamı <xref:System.Windows.Forms.Form.Closing> formun olay. Ardından kullanır [AddHandler deyimi](../../../../visual-basic/language-reference/statements/addhandler-statement.md) ilişkilendirilecek `catchClose` yordamı için bir olay işleyicisi olarak <xref:System.Windows.Forms.Form.Closing>.  
   
@@ -58,5 +58,5 @@ Bir *olay* bir eylem veya oluşum — gibi bir fare tıklatın veya kredi sını
 - [Alt Yordamlar](./sub-procedures.md)
 - [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [AddressOf İşleci](../../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Nasıl yapılır: Bir yordam oluşturma](./how-to-create-a-procedure.md)
-- [Nasıl yapılır: Bir değer döndürmeyen bir yordam çağırma](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+- [Nasıl yapılır: Yordam Oluşturma](./how-to-create-a-procedure.md)
+- [Nasıl yapılır: Değer Döndürmeyen Bir Yordam Çağırma](./how-to-call-a-procedure-that-does-not-return-a-value.md)

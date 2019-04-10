@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321048"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Nasıl yapılır: Kullanıcı Adı ve Parolayla Kimlik Doğrulama
 
@@ -21,7 +21,7 @@ Bu konu, Windows etki alanı adı ve parola ile bir istemci kimlik doğrulaması
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Windows etki alanı kullanıcı adı ve parola kullanarak kimlik doğrulaması için bir WCF hizmeti yapılandırmak için
   
-1.  Bir örneğini oluşturmak <xref:System.ServiceModel.WSHttpBinding>, bağlamanın güvenlik modunu ayarlama <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>ayarlayın `ClientCredentialType` bağlamanın <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>, aşağıdaki kodda gösterildiği gibi hizmet ana bilgisayarı için yapılandırılmış bağlama kullanarak bir hizmet uç noktası ekleyin:  
+1. Bir örneğini oluşturmak <xref:System.ServiceModel.WSHttpBinding>, bağlamanın güvenlik modunu ayarlama <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>ayarlayın `ClientCredentialType` bağlamanın <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>, aşağıdaki kodda gösterildiği gibi hizmet ana bilgisayarı için yapılandırılmış bağlama kullanarak bir hizmet uç noktası ekleyin:  
   
     ```  
     // ...  
@@ -32,7 +32,7 @@ Bu konu, Windows etki alanı adı ve parola ile bir istemci kimlik doğrulaması
     // ...  
     ```  
   
-2.  Kullanıcı adı şifrelemek için kullanılan sunucu sertifikası ve kablo üzerinden gönderilen parola bilgilerini belirtin. Bu kod, yukarıdaki kod hemen izlemelidir. Aşağıdaki örnek setup.bat dosyasından oluşturulan sertifikayı kullandığını [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md) örnek:  
+2. Kullanıcı adı şifrelemek için kullanılan sunucu sertifikası ve kablo üzerinden gönderilen parola bilgilerini belirtin. Bu kod, yukarıdaki kod hemen izlemelidir. Aşağıdaki örnek setup.bat dosyasından oluşturulan sertifikayı kullandığını [ileti güvenliği kullanıcı adı](../../../../docs/framework/wcf/samples/message-security-user-name.md) örnek:  
   
     ```  
     // ...  
@@ -44,7 +44,7 @@ Bu konu, Windows etki alanı adı ve parola ile bir istemci kimlik doğrulaması
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>Kullanıcı adı ve parola geçirme hizmeti çağırmak için  
   
-1.  İstemci uygulaması için kullanıcı adı ve parola girmesini gerekir. Aşağıdaki kod, kullanıcı adı ve parola için kullanıcıya sorar.  
+1. İstemci uygulaması için kullanıcı adı ve parola girmesini gerekir. Aşağıdaki kod, kullanıcı adı ve parola için kullanıcıya sorar.  
   
     > [!WARNING]
     >  Bu kod, parola girilmesini sırasında görüntülenen üretim ortamında kullanılmamalıdır.  
@@ -61,7 +61,7 @@ Bu konu, Windows etki alanı adı ve parola ile bir istemci kimlik doğrulaması
             }  
     ```  
   
-2.  Aşağıdaki kodda gösterildiği gibi istemcinin kimlik bilgilerinin belirtilmesi istemci proxy örneği oluşturun:  
+2. Aşağıdaki kodda gösterildiği gibi istemcinin kimlik bilgilerinin belirtilmesi istemci proxy örneği oluşturun:  
   
     ```  
     string username;  

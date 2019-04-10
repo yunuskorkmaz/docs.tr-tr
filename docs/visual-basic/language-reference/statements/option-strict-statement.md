@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355135"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310193"
 ---
 # <a name="option-strict-statement"></a>Option Strict Deyimi
 Örtük veri türü dönüşümünü sadece genişletme dönüştürmeleri için sınırlar, geç bağlamaya izin vermiyor ve örtük sonuçlanan yazmaya izin vermeyen bir `Object` türü.  
@@ -71,7 +71,7 @@ Option Strict { On | Off }
   
 -   [\ İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+-   [/= İşleci (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
 -   [Char Veri Türü](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
@@ -109,9 +109,9 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>Option Strict IDE içinde ayarlamak için  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
+1. İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
   
-2.  Üzerinde **derleme** sekmesinde, değer kümesi'nde **Option Strict** kutusu.  
+2. Üzerinde **derleme** sekmesinde, değer kümesi'nde **Option Strict** kutusu.  
   
 ### <a name="conditions"></a> IDE'de uyarı yapılandırmaları ayarlamak için  
  Kullanırken [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) yerine bir `Option Strict` deyimi, hatalara neden olan koşulları üzerinde ek denetim vardır. **Uyarı yapılandırmaları** bölümünü **derle sayfası** karşılık gelen bir derleme zamanı hatasına neden olan üç koşulları ayarlarına sahip olduğunda `Option Strict` açıktır. Bu ayarlar şunlardır:  
@@ -153,12 +153,12 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genişletme ve Daraltma Dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Genişletme ve Daraltma Dönüşümleri](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Örtük ve Açık Dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Derleme Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Tür Dönüştürme İşlevleri](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Nasıl yapılır: Bir nesnenin üyelerine erişim](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Nasıl yapılır: Bir Nesnenin Üyelerine Erişme](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [XML'de Katıştırılmış İfadeler](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Office Çözümlerinde Geç Bağlama](/visualstudio/vsto/late-binding-in-office-solutions)

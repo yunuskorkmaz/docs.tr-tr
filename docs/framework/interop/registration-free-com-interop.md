@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbdc6f795aff5e84debd2e83485a22f1d42b31d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185308"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301002"
 ---
 # <a name="registration-free-com-interop"></a>Kayıtsız COM Birlikte Çalışma
 Kayıtsız COM birlikte çalışma bütünleştirilmiş kod bilgileri depolamak için Windows kayıt defteri kullanmadan bir bileşen etkinleştirir. Dağıtım sırasında bir bilgisayarda bir bileşen kaydetmek yerine Win32 stili bildirim dosyalarını, bağlama ve etkinleştirme hakkında bilgiler içeren tasarım zamanında oluşturun. Bu bildirim dosyaları yerine kayıt defteri anahtarları, bir nesnenin etkinleştirme doğrudan.  
@@ -32,7 +32,7 @@ Kayıtsız COM birlikte çalışma bütünleştirilmiş kod bilgileri depolamak 
   
 ### <a name="requirements-for-registration-free-com-interop"></a>Kayıtsız COM birlikte çalışma için gereksinimler  
   
-1.  Kayıtsız COM birlikte çalışma için destek, kitaplık derlemesine türüne bağlı olarak biraz farklılık gösterir; Özellikle, derleme yönetilmeyen (COM yan yana) olan olup yönetilen (. NET-based). Aşağıdaki tabloda, işletim sistemi ve .NET Framework sürüm gereksinimleri her derleme türünü gösterir.  
+1. Kayıtsız COM birlikte çalışma için destek, kitaplık derlemesine türüne bağlı olarak biraz farklılık gösterir; Özellikle, derleme yönetilmeyen (COM yan yana) olan olup yönetilen (. NET-based). Aşağıdaki tabloda, işletim sistemi ve .NET Framework sürüm gereksinimleri her derleme türünü gösterir.  
   
     |Derleme türü|İşletim sistemi|.NET Framework sürümü|  
     |-------------------|----------------------|----------------------------|  
@@ -45,7 +45,7 @@ Kayıtsız COM birlikte çalışma bütünleştirilmiş kod bilgileri depolamak 
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Kayıtsız etkinleştirme için COM bileşenlerini yapılandırma  
   
-1.  Bir COM bileşeni kayıtsız etkinleştirme ' katılmak bir yan yana derleme olarak dağıtılmalıdır. Yan yana derlemeler yönetilmeyen derlemelerdir.  Daha fazla bilgi için [USING yan yana derlemeler](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
+1. Bir COM bileşeni kayıtsız etkinleştirme ' katılmak bir yan yana derleme olarak dağıtılmalıdır. Yan yana derlemeler yönetilmeyen derlemelerdir.  Daha fazla bilgi için [USING yan yana derlemeler](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
   
      COM yan yana derlemeler, kullanılacak bir. AĞ tabanlı uygulama geliştirme, bağlama ve etkinleştirme bilgilerini içeren bir uygulama bildirimi sağlamanız gerekir. Yönetilmeyen yan yana derlemeler için desteği Windows XP işletim sisteminde yerleşik olarak bulunur. Etkinleştirilmekte olan bileşen kayıt defterinde olmadığında COM işletim sistemi tarafından desteklenen çalışma zamanı, uygulama bildiriminde etkinleştirme bilgilerini tarar.  
   

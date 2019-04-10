@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: c840912f755e1d6bf76720ad0178057c50e4cfd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186166"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300573"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF Güvenlik Stratejisi - Güvenlik Mühendisliği
 Güvenilir bilgi işlem, güvenli kod üretimini sağlamaya yönelik bir Microsoft girişimidir. Güvenilir bilgi işlem inisiyatifiyle önemli bir öğesidir [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Güvenli kod dağıtımını kolaylaştırmak için standart mühendislik süreçlerine ile birlikte kullanılan bir mühendislik uygulamasıdır. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Formalization measurability ve ek yapı ile en iyi birleştiren on aşamadan oluşan dahil olmak üzere:  
@@ -47,11 +47,11 @@ Güvenilir bilgi işlem, güvenli kod üretimini sağlamaya yönelik bir Microso
   
  Yüksek bir düzeyde tehdit modelleme, Market örnek kullanıp aşağıdaki temel adımları içerir:  
   
-1.  **Varlıklar tanımlayan**. Çalışanların, güvenli, Yazar Kasa ve envanter marketin varlıklar içerebilir.  
+1. **Varlıklar tanımlayan**. Çalışanların, güvenli, Yazar Kasa ve envanter marketin varlıklar içerebilir.  
   
-2.  **Giriş noktaları numaralandırma**. Marketin giriş noktaları, ön ve arka kapı, windows, yükleme dock ve havalandırma içerebilir.  
+2. **Giriş noktaları numaralandırma**. Marketin giriş noktaları, ön ve arka kapı, windows, yükleme dock ve havalandırma içerebilir.  
   
-3.  **Giriş noktaları kullanarak varlıkları saldırıları araştırma**. Olası bir saldırı marketin hedef *güvenli* yoluyla varlık *havalandırma* giriş noktası; havalandırma birimi / ve onu aracılığıyla çekilmesi güvenli izin vermek için unscrewed olabilir Depo.  
+3. **Giriş noktaları kullanarak varlıkları saldırıları araştırma**. Olası bir saldırı marketin hedef *güvenli* yoluyla varlık *havalandırma* giriş noktası; havalandırma birimi / ve onu aracılığıyla çekilmesi güvenli izin vermek için unscrewed olabilir Depo.  
   
  Tehdit modelleme boyunca uygulanan [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] ve aşağıdakileri içerir:  
   

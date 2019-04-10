@@ -2,12 +2,12 @@
 title: Kuyruğa Alınan İletilerde Sorun Giderme
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: b2193755beddd6c0d0eef4f95ca311b8e2b75b3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463117"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322049"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Kuyruğa Alınan İletilerde Sorun Giderme
 Bu bölüm, yaygın sorular ve sorun giderme Yardımı için sıralar kullanarak Windows Communication Foundation (WCF) içerir.  
@@ -96,9 +96,9 @@ Bu bölüm, yaygın sorular ve sorun giderme Yardımı için sıralar kullanarak
   
  **Y:** En yaygın nedeni izinlerdir.  
   
-1.  Emin `NetMsmqActivator` işlemi çalışıyor ve kimliğini `NetMsmqActivator` işlemi okuma verilir ve ara sıra izni.  
+1. Emin `NetMsmqActivator` işlemi çalışıyor ve kimliğini `NetMsmqActivator` işlemi okuma verilir ve ara sıra izni.  
   
-2.  Varsa `NetMsmqActivator` olduğundan emin uzak makinede Kuyrukları İzleme, `NetMsmqActivator` kısıtlı bir belirteç altında çalışmaz. Çalıştırılacak `NetMsmqActivator` sınırsız bir belirteç ile:  
+2. Varsa `NetMsmqActivator` olduğundan emin uzak makinede Kuyrukları İzleme, `NetMsmqActivator` kısıtlı bir belirteç altında çalışmaz. Çalıştırılacak `NetMsmqActivator` sınırsız bir belirteç ile:  
   
     ```  
     sc sidtype NetMsmqActivator unrestricted  
@@ -157,19 +157,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **Y:** Bir yerel makine sertifika deposuna sertifika moduyla kullanamazsınız. Geçerli kullanıcı deposunda sertifika ek bileşenini kullanarak makine sertifika deposundan sertifikayı kopyalamanız gerekir. Sertifika ek bileşenini almak için:  
   
-1.  Tıklayın **Başlat**seçin **çalıştırma**, türü `mmc`, tıklatıp **Tamam**.  
+1. Tıklayın **Başlat**seçin **çalıştırma**, türü `mmc`, tıklatıp **Tamam**.  
   
-2.  İçinde **Microsoft Yönetim Konsolu**açın **dosya** menü ve select **Ekle/Kaldır ek bileşenini**.  
+2. İçinde **Microsoft Yönetim Konsolu**açın **dosya** menü ve select **Ekle/Kaldır ek bileşenini**.  
   
-3.  İçinde **Ekle/Kaldır ek bileşenini** iletişim kutusu, tıklayın **Ekle** düğmesi.  
+3. İçinde **Ekle/Kaldır ek bileşenini** iletişim kutusu, tıklayın **Ekle** düğmesi.  
   
-4.  İçinde **tek başına ek eklentisi** iletişim kutusu, select sertifikaları ve tıklatın **Ekle**.  
+4. İçinde **tek başına ek eklentisi** iletişim kutusu, select sertifikaları ve tıklatın **Ekle**.  
   
-5.  İçinde **sertifikaları** ek iletişim kutusunda **kullanıcı hesabım** tıklatıp **son**.  
+5. İçinde **sertifikaları** ek iletişim kutusunda **kullanıcı hesabım** tıklatıp **son**.  
   
-6.  Ardından, ikinci bir Sertifikalar ek bileşeni önceki adımları kullanarak, ancak bu kez ekleyin **bilgisayar hesabı** tıklatıp **sonraki**.  
+6. Ardından, ikinci bir Sertifikalar ek bileşeni önceki adımları kullanarak, ancak bu kez ekleyin **bilgisayar hesabı** tıklatıp **sonraki**.  
   
-7.  Seçin **yerel bilgisayar** tıklatıp **son**. Artık sürükleyin ve sertifikaları makine sertifika depolama alanından geçerli kullanıcı deposunda bırakın.  
+7. Seçin **yerel bilgisayar** tıklatıp **son**. Artık sürükleyin ve sertifikaları makine sertifika depolama alanından geçerli kullanıcı deposunda bırakın.  
   
  **S:** Çalışma grubu modunda başka bir bilgisayarda bir kuyruktan Hizmetimi okuduğunda, "erişim engellendi" istisna alıyorum.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087904"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298883"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Data Services)
 Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikili veriler, video ve ses akışları, görüntüleri, belge dosyaları ya da diğer ikili medya türleri temsil edebilir. Bir varlık veri Modeli'nde bir veya daha fazla ikili özellikleri içerdiğinde, bu ikili veri akışı yanıt giriş içinde base 64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme, performansı etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlığı bağımsız ikili verileri almak için bir mekanizma tanımlar. Bu işlem, ikili veri varlıktan bir veya daha fazla veri akışlarını ayrılarak gerçekleştirilir.  
@@ -28,15 +28,15 @@ Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikil
   
  İkili verilerden akış desteklemek için bir veri hizmeti yapılandırma aşağıdakileri gerektirir:  
   
-1.  Bir medya bağlantısı olarak giriş veri modeli'ndeki varlıkları bir veya daha fazla öznitelik. Bu varlıklar, ikili veri akışını içermemelidir. Bir varlığın herhangi bir ikili özelliği her zaman giriş base-64 kodlu ikili döndürülür.  
+1. Bir medya bağlantısı olarak giriş veri modeli'ndeki varlıkları bir veya daha fazla öznitelik. Bu varlıklar, ikili veri akışını içermemelidir. Bir varlığın herhangi bir ikili özelliği her zaman giriş base-64 kodlu ikili döndürülür.  
   
-2.  T:System.Data.Services.Providers.IDataServiceStreamProvider arabirim uygular.  
+2. T:System.Data.Services.Providers.IDataServiceStreamProvider arabirim uygular.  
   
-3.  Uygulayan bir veri hizmeti tanımlayan <xref:System.IServiceProvider> arabirimi. Veri hizmeti kullanan <xref:System.IServiceProvider.GetService%2A> akış veri sağlayıcı uygulaması erişmek için uygulama. Bu yöntem, uygun Akış sağlayıcısı uygulamasını döndürür.  
+3. Uygulayan bir veri hizmeti tanımlayan <xref:System.IServiceProvider> arabirimi. Veri hizmeti kullanan <xref:System.IServiceProvider.GetService%2A> akış veri sağlayıcı uygulaması erişmek için uygulama. Bu yöntem, uygun Akış sağlayıcısı uygulamasını döndürür.  
   
-4.  Büyük ileti akışları Web uygulama yapılandırmasında etkinleştirin.  
+4. Büyük ileti akışları Web uygulama yapılandırmasında etkinleştirin.  
   
-5.  Sunucuda veya bir veri kaynağındaki ikili kaynaklara erişimini etkinleştirir.  
+5. Sunucuda veya bir veri kaynağındaki ikili kaynaklara erişimini etkinleştirir.  
   
  Bu konudaki örnekleri akış derinlemesine gönderisinde açıklanan fotoğraf hizmeti, bir örneği temel alarak [Veri Hizmetleri Akış sağlayıcısı serisi: Bir Akış sağlayıcısı (Bölüm 1) uygulama](https://go.microsoft.com/fwlink/?LinkID=198989). Bu örnek hizmeti için kaynak kodu kullanılabilir [akış fotoğraf veri hizmeti örnek sayfası](https://go.microsoft.com/fwlink/?LinkID=198988) MSDN Kod Galerisi'nde.  
   

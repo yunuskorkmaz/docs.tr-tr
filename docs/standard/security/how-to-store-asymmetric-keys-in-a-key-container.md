@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir anahtar kapsayıcısında asimetrik anahtarlar Store'
+title: 'Nasıl yapılır: Bir Anahtar Kapsayıcısında Asimetrik Anahtarlar Depolama'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,31 +17,31 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff86db89eadc36faf3ebdcd1f653d73fc958595a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972800"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326196"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Nasıl yapılır: Bir anahtar kapsayıcısında asimetrik anahtarlar Store
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Nasıl yapılır: Bir Anahtar Kapsayıcısında Asimetrik Anahtarlar Depolama
 Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır. Özel anahtarı depolamanız gerekiyorsa, bir anahtar kapsayıcısı kullanmanız gerekir. Anahtar kapsayıcıları hakkında daha fazla bilgi için bkz. [anlama makine düzeyinde ve kullanıcı düzeyi RSA anahtar kapsayıcılarının](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Asimetrik bir anahtar oluşturun ve bir anahtar kapsayıcısında kaydetmek için  
   
-1.  Yeni bir örneğini oluşturmak bir <xref:System.Security.Cryptography.CspParameters> sınıfı ve anahtar kapsayıcısına aramak istediğiniz adı geçirin <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> alan.  
+1. Yeni bir örneğini oluşturmak bir <xref:System.Security.Cryptography.CspParameters> sınıfı ve anahtar kapsayıcısına aramak istediğiniz adı geçirin <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> alan.  
   
-2.  Türetilen bir sınıfın yeni bir örneğini oluşturma <xref:System.Security.Cryptography.AsymmetricAlgorithm> sınıfı (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) ve önceden oluşturulmuş  **CspParameters** nesnesine, yapıcısına.  
+2. Türetilen bir sınıfın yeni bir örneğini oluşturma <xref:System.Security.Cryptography.AsymmetricAlgorithm> sınıfı (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) ve önceden oluşturulmuş  **CspParameters** nesnesine, yapıcısına.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>Anahtarı bir anahtar kapsayıcısından silinemedi  
   
-1.  Yeni bir örneğini oluşturmak bir **CspParameters** sınıfı ve anahtar kapsayıcısına aramak istediğiniz adı geçirin **CspParameters.KeyContainerName** alan.  
+1. Yeni bir örneğini oluşturmak bir **CspParameters** sınıfı ve anahtar kapsayıcısına aramak istediğiniz adı geçirin **CspParameters.KeyContainerName** alan.  
   
-2.  Türetilen bir sınıfın yeni bir örneğini oluşturma **AsymmetricAlgorithm** sınıfı (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) ve geçirin daha önce oluşturduğunuz **CspParameters** nesnesine, yapıcısına.  
+2. Türetilen bir sınıfın yeni bir örneğini oluşturma **AsymmetricAlgorithm** sınıfı (genellikle **RSACryptoServiceProvider** veya **DSACryptoServiceProvider**) ve geçirin daha önce oluşturduğunuz **CspParameters** nesnesine, yapıcısına.  
   
-3.  Ayarlama **PersistKeyInCSP** , türetilen sınıfın özelliği **AsymmetricAlgorithm** için **false** (**False** Visual Basic'te).  
+3. Ayarlama **PersistKeyInCSP** , türetilen sınıfın özelliği **AsymmetricAlgorithm** için **false** (**False** Visual Basic'te).  
   
-4.  Çağrı **Temizle** yöntem, türetilen sınıfın **AsymmetricAlgorithm**. Bu yöntem, sınıfın tüm kaynakları serbest bırakır ve anahtar kapsayıcısı temizler.  
+4. Çağrı **Temizle** yöntem, türetilen sınıfın **AsymmetricAlgorithm**. Bu yöntem, sınıfın tüm kaynakları serbest bırakır ve anahtar kapsayıcısı temizler.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, asimetrik anahtar oluşturma, bir anahtar kapsayıcısında kaydedin, daha sonra anahtarı alamazsınız ve anahtar kapsayıcısından silin gösterilmektedir.  

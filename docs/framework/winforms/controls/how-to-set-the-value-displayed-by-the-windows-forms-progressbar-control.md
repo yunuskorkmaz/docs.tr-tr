@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 292a70658e37839897b39d4d58fdf98903d2d963
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 42a9e0f67f00c1a706b72ab0eeb522e99d8a8dfe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196885"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300482"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Nasıl yapılır: Windows Forms ProgressBar Denetimi Tarafından Görüntülenen Değeri Ayarlama
 > [!IMPORTANT]
@@ -31,9 +31,9 @@ ms.locfileid: "59196885"
   
 ### <a name="to-set-the-progressbar-value-directly"></a>ProgressBar değeri doğrudan ayarlamak için  
   
-1.  Ayarlama <xref:System.Windows.Forms.ProgressBar> denetimin <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> değerleri.  
+1. Ayarlama <xref:System.Windows.Forms.ProgressBar> denetimin <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> değerleri.  
   
-2.  Kodda, denetimin ayarlamak <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliğine yerleşik minimum ve maksimum değerleri arasında bir tamsayı değeri.  
+2. Kodda, denetimin ayarlamak <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliğine yerleşik minimum ve maksimum değerleri arasında bir tamsayı değeri.  
   
     > [!NOTE]
     >  Ayarlarsanız <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği tarafından kurulan sınırların dışındaki <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> denetimin özelliklerini oluşturur bir <xref:System.ArgumentException> özel durum.  
@@ -87,11 +87,11 @@ ms.locfileid: "59196885"
   
 ### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Sabit bir değere göre ilerleme çubuğu artırmak için  
   
-1.  Ayarlama <xref:System.Windows.Forms.ProgressBar> denetimin <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> değerleri.  
+1. Ayarlama <xref:System.Windows.Forms.ProgressBar> denetimin <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> değerleri.  
   
-2.  Denetimin ayarlamak <xref:System.Windows.Forms.ProgressBar.Step%2A> ilerleme çubuğunun artırmak için temsil eden tamsayı özellik değeri görüntülenir.  
+2. Denetimin ayarlamak <xref:System.Windows.Forms.ProgressBar.Step%2A> ilerleme çubuğunun artırmak için temsil eden tamsayı özellik değeri görüntülenir.  
   
-3.  Çağrı <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> kümesinde miktarı tarafından görüntülenen değeri değiştirmek için yöntem <xref:System.Windows.Forms.ProgressBar.Step%2A> özelliği.  
+3. Çağrı <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> kümesinde miktarı tarafından görüntülenen değeri değiştirmek için yöntem <xref:System.Windows.Forms.ProgressBar.Step%2A> özelliği.  
   
      Aşağıdaki kod örneği, bir ilerleme çubuğu dosyaları kopyalama işlemi sayısını nasıl koruyabilirsiniz gösterir.  
   
@@ -153,9 +153,9 @@ ms.locfileid: "59196885"
   
 ### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Dinamik bir değere göre ilerleme çubuğu artırmak için  
   
-1.  Ayarlama <xref:System.Windows.Forms.ProgressBar> denetimin <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> değerleri.  
+1. Ayarlama <xref:System.Windows.Forms.ProgressBar> denetimin <xref:System.Windows.Forms.ProgressBar.Minimum%2A> ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> değerleri.  
   
-2.  Çağrı <xref:System.Windows.Forms.ProgressBar.Increment%2A> belirttiğiniz bir tamsayı tarafından görüntülenen değeri değiştirmek için yöntemi.  
+2. Çağrı <xref:System.Windows.Forms.ProgressBar.Increment%2A> belirttiğiniz bir tamsayı tarafından görüntülenen değeri değiştirmek için yöntemi.  
   
      Aşağıdaki kod örneği, bir kopyalama işlemi sırasında ne kadar disk alanı kullanılmış bir ilerleme çubuğu nasıl hesaplayabilirsiniz gösterir.  
   

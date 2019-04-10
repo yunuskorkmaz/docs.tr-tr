@@ -2,12 +2,12 @@
 title: Kaynak Office Open XML belgesi (C#) oluşturma
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: 0fe5463ae95374542482f768eee2bc694e2c5dd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b36d119eb2da7445649b8db1132b7deea2c684c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635851"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322400"
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>Kaynak Office Open XML belgesi (C#) oluşturma
 Bu konu, diğer bu öğreticideki örneklerde Office Open XML WordprocessingML belgesi nasıl oluşturacağınızı gösterir. Bu yönergeleri izleyin, çıkış her örnekte sağlanan çıkış eşleşir.  
@@ -20,9 +20,9 @@ Bu konu, diğer bu öğreticideki örneklerde Office Open XML WordprocessingML b
   
 #### <a name="to-create-the-wordprocessingml-document"></a>WordprocessingML belgesi oluşturmak için  
   
-1.  Yeni bir Microsoft Word belgesi oluşturun.  
+1. Yeni bir Microsoft Word belgesi oluşturun.  
   
-2.  Aşağıdaki metni yeni bir belgeye yapıştırın:  
+2. Aşağıdaki metni yeni bir belgeye yapıştırın:  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,13 +42,13 @@ Bu konu, diğer bu öğreticideki örneklerde Office Open XML WordprocessingML b
     Hello World  
     ```  
   
-3.  İlk satır stili "Başlık 1" ile biçimlendirin.  
+3. İlk satır stili "Başlık 1" ile biçimlendirin.  
   
-4.  C# kodu içeren satırları seçin. İlk satırı ile başlayan `using` anahtar sözcüğü. Son satır son kapanış ayracından değil. Satırları courier yazı biçimi. İle yeni bir stil biçimlendirir ve yeni stil "Code" olarak adlandırın.  
+4. C# kodu içeren satırları seçin. İlk satırı ile başlayan `using` anahtar sözcüğü. Son satır son kapanış ayracından değil. Satırları courier yazı biçimi. İle yeni bir stil biçimlendirir ve yeni stil "Code" olarak adlandırın.  
   
-5.  Son olarak, çıktısını içeren tüm satırı seçin ve ile biçimlendirmeniz `Code` stili.  
+5. Son olarak, çıktısını içeren tüm satırı seçin ve ile biçimlendirmeniz `Code` stili.  
   
-6.  Belgeyi kaydedin ve SampleDoc.docx adlandırın.  
+6. Belgeyi kaydedin ve SampleDoc.docx adlandırın.  
   
     > [!NOTE]
     >  Microsoft Word 2003 kullanıyorsanız **Word 2007 belgesi** içinde **farklı kaydetme türü** aşağı açılan listesi.  

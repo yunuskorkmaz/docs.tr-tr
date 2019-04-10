@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: b092d54e6cf4d8a96a35e6b1cc818fad8f26e3ae
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834081"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300638"
 ---
 # <a name="option-compare-statement"></a>Option Compare Deyimi
 Dize verileri karşılaştırılırken kullanılan varsayılan karşılaştırma yöntemini bildirir.  
@@ -65,11 +65,11 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>Option Compare IDE içinde ayarlamak için  
   
-1.  İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
+1. İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
   
-2.  Tıklayın **derleme** sekmesi.  
+2. Tıklayın **derleme** sekmesi.  
   
-3.  Değer kümesindeki **Option Compare** kutusu.  
+3. Değer kümesindeki **Option Compare** kutusu.  
   
  Bir proje oluşturduğunuzda **Option Compare** ayarını **derleme** sekmesinde ayarlanmış **Option Compare** ayarı **seçenekleri** iletişim kutusu. Bu, üzerinde ayarı değiştirmek için **Araçları** menüsünde tıklatın **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda **projeler ve çözümler**ve ardından **VB varsayılanları**. İlk varsayılan ayarda **VB varsayılanları** olduğu **ikili**.  
   
@@ -96,7 +96,7 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [Karşılaştırma İşleçleri](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Visual Basic'de Karşılaştırma işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic'de Karşılaştırma İşleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like İşleci](../../../visual-basic/language-reference/operators/like-operator.md)
 - [Dize İşlevleri](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)

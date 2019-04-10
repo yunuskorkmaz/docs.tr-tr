@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 7782c60832be487a258b51eab0b050e0a850d20d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124585"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321451"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Nasıl yapılır: Windows Hizmet Uygulamalarında Hata Ayıklama
 Bir hizmet alanından, Hizmet Denetim Yöneticisi yerine içinden bağlam içinde çalıştırılmalıdır Visual Studio. Bu nedenle, bir hizmette hata ayıklamak diğer Visual Studio uygulama türlerinde hata ayıklamak kadar basit değil Bir hizmette hata ayıklamak için hizmeti başlatın ve sonra içinde çalıştığı işleme bir hata ayıklayıcı eklemeniz gerekir. Ardından tüm Visual Studio standart hata ayıklama işlevselliğini kullanarak uygulamanızın hatalarını ayıklayabilirsiniz.  
@@ -36,23 +36,23 @@ Bir hizmet alanından, Hizmet Denetim Yöneticisi yerine içinden bağlam içind
   
 ### <a name="to-debug-a-service"></a>Bir hizmette hata ayıklamak için  
   
-1.  Hizmetinizde hata ayıklama yapılandırmasını oluşturun.  
+1. Hizmetinizde hata ayıklama yapılandırmasını oluşturun.  
   
-2.  Hizmetinizi yükleyin. Daha fazla bilgi için [nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2. Hizmetinizi yükleyin. Daha fazla bilgi için [nasıl yapılır: Hizmetleri Yükleme ve kaldırma](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-3.  Başlat'nden ya da hizmetiniz **Hizmet Denetim Yöneticisi**, **Sunucu Gezgini**, veya koddan. Daha fazla bilgi için [nasıl yapılır: Hizmetleri başlatmak](../../../docs/framework/windows-services/how-to-start-services.md).  
+3. Başlat'nden ya da hizmetiniz **Hizmet Denetim Yöneticisi**, **Sunucu Gezgini**, veya koddan. Daha fazla bilgi için [nasıl yapılır: Hizmetleri başlatmak](../../../docs/framework/windows-services/how-to-start-services.md).  
   
-4.  Sistem işleme iliştirebilirsiniz için yönetici kimlik bilgileriyle Visual Studio'yu başlatın.  
+4. Sistem işleme iliştirebilirsiniz için yönetici kimlik bilgileriyle Visual Studio'yu başlatın.  
   
-5.  (İsteğe bağlı) Visual Studio menü çubuğunda **Araçları**, **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda **hata ayıklama**, **sembolleri**seçin **Microsoft sembol sunucuları** onay kutusunu işaretleyin ve ardından **Tamam** düğmesi.  
+5. (İsteğe bağlı) Visual Studio menü çubuğunda **Araçları**, **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda **hata ayıklama**, **sembolleri**seçin **Microsoft sembol sunucuları** onay kutusunu işaretleyin ve ardından **Tamam** düğmesi.  
   
-6.  Menü çubuğunda, **iliştirme** gelen **hata ayıklama** veya **Araçları** menüsü. (Klavye: Ctrl+Alt+P)  
+6. Menü çubuğunda, **iliştirme** gelen **hata ayıklama** veya **Araçları** menüsü. (Klavye: Ctrl+Alt+P)  
   
      **İşlemleri** iletişim kutusu görüntülenir.  
   
-7.  Seçin **tüm kullanıcıların işlemlerini göster** onay kutusu.  
+7. Seçin **tüm kullanıcıların işlemlerini göster** onay kutusu.  
   
-8.  İçinde **kullanılabilir işlemler** bölümünde hizmetinizin işlemini seçin ve ardından **iliştirme**.  
+8. İçinde **kullanılabilir işlemler** bölümünde hizmetinizin işlemini seçin ve ardından **iliştirme**.  
   
     > [!TIP]
     >  İşlem hizmetiniz için yürütülebilir dosyasıyla aynı ada sahip olacaktır.  
@@ -77,7 +77,7 @@ Bir hizmet alanından, Hizmet Denetim Yöneticisi yerine içinden bağlam içind
   
 #### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Nasıl yapılır: Bir Windows hizmeti bir konsol uygulaması olarak çalıştır  
   
-1.  Çalışan hizmetinize bir yöntem ekleyin <xref:System.ServiceProcess.ServiceBase.OnStart%2A> ve <xref:System.ServiceProcess.ServiceBase.OnStop%2A> yöntemleri:  
+1. Çalışan hizmetinize bir yöntem ekleyin <xref:System.ServiceProcess.ServiceBase.OnStart%2A> ve <xref:System.ServiceProcess.ServiceBase.OnStop%2A> yöntemleri:  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -88,7 +88,7 @@ Bir hizmet alanından, Hizmet Denetim Yöneticisi yerine içinden bağlam içind
     }  
     ```  
   
-2.  Yeniden `Main` yöntemini aşağıdaki şekilde:  
+2. Yeniden `Main` yöntemini aşağıdaki şekilde:  
   
     ```csharp  
     static void Main(string[] args)  
@@ -105,11 +105,11 @@ Bir hizmet alanından, Hizmet Denetim Yöneticisi yerine içinden bağlam içind
     }
     ```  
   
-3.  İçinde **uygulama** sekmesinde projenin özelliklerini ayarlamak **çıkış türü** için **konsol uygulaması**.  
+3. İçinde **uygulama** sekmesinde projenin özelliklerini ayarlamak **çıkış türü** için **konsol uygulaması**.  
   
-4.  Seçin **hata ayıklamayı Başlat** (F5).  
+4. Seçin **hata ayıklamayı Başlat** (F5).  
   
-5.  Program bir Windows hizmeti olarak yeniden çalıştırmak için yükleyin ve bir Windows hizmeti için her zamanki şekilde başlatın. Bu değişiklikleri geri almak gerekli değildir.  
+5. Program bir Windows hizmeti olarak yeniden çalıştırmak için yükleyin ve bir Windows hizmeti için her zamanki şekilde başlatın. Bu değişiklikleri geri almak gerekli değildir.  
   
  Yalnızca sistem başlatma sırasında oluşan bir sorunu hata ayıklamak istediğiniz zaman gibi bazı durumlarda, Windows hata ayıklayıcı kullanmak zorunda. [Windows Sürücü Seti'nin (WDK) indirme](/windows-hardware/drivers/download-the-wdk) görüp [nasıl Windows hizmetlerinde hata ayıklama](https://support.microsoft.com/kb/824344).  
   

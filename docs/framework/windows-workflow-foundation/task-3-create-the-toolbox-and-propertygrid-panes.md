@@ -2,12 +2,12 @@
 title: 'Görev 3: Araç Kutusu ve PropertyGrid Bölmeleri Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175051"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306030"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Görev 3: Araç Kutusu ve PropertyGrid Bölmeleri Oluşturma
 Bu görevde, oluşturacağınız **araç kutusu** ve **PropertyGrid** bölmeleri ve bunları yeniden barındırılan için ekleme [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
@@ -16,11 +16,11 @@ Bu görevde, oluşturacağınız **araç kutusu** ve **PropertyGrid** bölmeleri
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Araç kutusu oluşturmak ve bu kılavuza eklemek için  
   
-1.  Elde edilen açıklanan yordamı izleyerek HostingApplication projeyi açın [görev 2: İş akışı tasarımcısını barındırma](task-2-host-the-workflow-designer.md).  
+1. Elde edilen açıklanan yordamı izleyerek HostingApplication projeyi açın [görev 2: İş akışı tasarımcısını barındırma](task-2-host-the-workflow-designer.md).  
   
-2.  İçinde **Çözüm Gezgini** bölmesinde MainWindow.xaml dosyasını sağ tıklatın ve seçin **kodu görüntüle**.  
+2. İçinde **Çözüm Gezgini** bölmesinde MainWindow.xaml dosyasını sağ tıklatın ve seçin **kodu görüntüle**.  
   
-3.  Ekleme bir `GetToolboxControl` yönteme `MainWindow` oluşturan sınıf bir <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, yeni bir ekler **araç kutusu** kategorisine **araç kutusu**ve atar <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.Sequence> etkinlik türleri için kategori.  
+3. Ekleme bir `GetToolboxControl` yönteme `MainWindow` oluşturan sınıf bir <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, yeni bir ekler **araç kutusu** kategorisine **araç kutusu**ve atar <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.Sequence> etkinlik türleri için kategori.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ Bu görevde, oluşturacağınız **araç kutusu** ve **PropertyGrid** bölmeleri
     }  
     ```  
   
-4.  Özel bir ekleme `AddToolbox` yönteme `MainWindow` yerleştirir sınıfı **araç kutusu** kılavuzundaki sol sütunda.  
+4. Özel bir ekleme `AddToolbox` yönteme `MainWindow` yerleştirir sınıfı **araç kutusu** kılavuzundaki sol sütunda.  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ Bu görevde, oluşturacağınız **araç kutusu** ve **PropertyGrid** bölmeleri
     }  
     ```  
   
-5.  Bir çağrı ekleyin `AddToolBox` yönteminde `MainWindow()` aşağıdaki kodda gösterildiği gibi sınıf oluşturucusu.  
+5. Bir çağrı ekleyin `AddToolBox` yönteminde `MainWindow()` aşağıdaki kodda gösterildiği gibi sınıf oluşturucusu.  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ Bu görevde, oluşturacağınız **araç kutusu** ve **PropertyGrid** bölmeleri
     }  
     ```  
   
-6.  Derleme ve çözümünüzü çalıştırmak için F5 tuşuna basın. **Araç kutusu** içeren <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.Sequence> etkinlikleri görüntülenmesi gerekir.  
+6. Derleme ve çözümünüzü çalıştırmak için F5 tuşuna basın. **Araç kutusu** içeren <xref:System.Activities.Statements.Assign> ve <xref:System.Activities.Statements.Sequence> etkinlikleri görüntülenmesi gerekir.  
   
 ### <a name="to-create-the-propertygrid"></a>PropertyGrid oluşturmak için  
   
-1.  İçinde **Çözüm Gezgini** bölmesinde MainWindow.xaml dosyasını sağ tıklatın ve seçin **kodu görüntüle**.  
+1. İçinde **Çözüm Gezgini** bölmesinde MainWindow.xaml dosyasını sağ tıklatın ve seçin **kodu görüntüle**.  
   
-2.  Ekleme `AddPropertyInspector` yönteme `MainWindow` yerleştirmek için sınıf **PropertyGrid** en sağdaki sütunda Kılavuz bölmesinde.  
+2. Ekleme `AddPropertyInspector` yönteme `MainWindow` yerleştirmek için sınıf **PropertyGrid** en sağdaki sütunda Kılavuz bölmesinde.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ Bu görevde, oluşturacağınız **araç kutusu** ve **PropertyGrid** bölmeleri
     }  
     ```  
   
-3.  Bir çağrı ekleyin `AddPropertyInspector` yönteminde `MainWindow()` aşağıdaki kodda gösterildiği gibi sınıf oluşturucusu.  
+3. Bir çağrı ekleyin `AddPropertyInspector` yönteminde `MainWindow()` aşağıdaki kodda gösterildiği gibi sınıf oluşturucusu.  
   
     ```csharp  
     public MainWindow()  
@@ -103,7 +103,7 @@ Bu görevde, oluşturacağınız **araç kutusu** ve **PropertyGrid** bölmeleri
     }  
     ```  
   
-4.  Derleme ve çözümü çalıştırmak için F5 tuşuna basın. **Araç kutusu**, iş akışı tasarım tuvali ve **PropertyGrid** bölmeleri tüm görüntülenecek ve sürüklediğinizde bir <xref:System.Activities.Statements.Assign> etkinlik veya <xref:System.Activities.Statements.Sequence> tasarım tuvale etkinliği Özellik Kılavuzu vurgulanan etkinlik bağlı olarak güncelleştirmeniz gerekir.  
+4. Derleme ve çözümü çalıştırmak için F5 tuşuna basın. **Araç kutusu**, iş akışı tasarım tuvali ve **PropertyGrid** bölmeleri tüm görüntülenecek ve sürüklediğinizde bir <xref:System.Activities.Statements.Assign> etkinlik veya <xref:System.Activities.Statements.Sequence> tasarım tuvale etkinliği Özellik Kılavuzu vurgulanan etkinlik bağlı olarak güncelleştirmeniz gerekir.  
   
 ## <a name="example"></a>Örnek  
  MainWindow.xaml.cs dosyası artık şu kodu içermesi gerekir.  

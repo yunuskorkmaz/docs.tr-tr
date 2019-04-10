@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: d904ee48ee187d073647b6e09af57264c8c318f6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ad75c556748bf5c0f9cef55310c4ffa7b01fd458
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813957"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318838"
 ---
 # <a name="permission-denied-visual-basic"></a>İzin reddedildi (Visual Basic)
 Yazma korumalı bir diske yazmak için ya da kilitli bir dosyaya erişmek için girişimde bulunuldu.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Yazma korumalı bir dosyayı açmak için dosyanın yazma korumasını özniteliğini değiştirin.  
+1. Yazma korumalı bir dosyayı açmak için dosyanın yazma korumasını özniteliğini değiştirin.  
   
-2.  Başka bir işlem dosya kilitlemiş değil emin olun ve bunu diğer işlem yayımları kadar dosyayı açmak için bekleyin.  
+2. Başka bir işlem dosya kilitlemiş değil emin olun ve bunu diğer işlem yayımları kadar dosyayı açmak için bekleyin.  
   
-3.  Kayıt defterine erişim için kullanıcı izinlerinizi bu tür bir kayıt defteri erişimi içerdiğini kontrol edin.  
+3. Kayıt defterine erişim için kullanıcı izinlerinizi bu tür bir kayıt defteri erişimi içerdiğini kontrol edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

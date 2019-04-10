@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 3de9b67d687d23e9f31c3060f5af6ef90d45f217
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164768"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295763"
 ---
 # <a name="automatic-proxy-detection"></a>Otomatik Ara Sunucu Algılama
 Otomatik proxy algılama, bir Web proxy sunucusu sistem tarafından tanımlanan ve istemci adına istek göndermek için kullanılan bir işlemdir. Bu özellik Web Proxy Otomatik Bulma (WPAD) de denir. Otomatik proxy algılama etkinleştirildiğinde, istek için kullanılan proxy kümesini döndürmekten sorumlu bir proxy yapılandırma betiğini bulmak sistem çalışır. Proxy yapılandırma betiği bulunursa, betik indirilen, derlenmiş ve kullandığı bir istek için proxy bilgilerini, istek akışı veya yanıt alındığında yerel bilgisayarda çalıştırmak bir <xref:System.Net.WebProxy> örneği.  
@@ -31,13 +31,13 @@ Otomatik proxy algılama, bir Web proxy sunucusu sistem tarafından tanımlanan 
   
  Otomatik proxy algılama etkinleştirildiğinde <xref:System.Net.WebProxy> sınıfı çalışır gibi proxy yapılandırma betiğini bulmak:  
   
-1.  WinINet `InternetQueryOption` işlevi en Internet Explorer'ın en son algılanan proxy yapılandırma betiğini bulmak için kullanılır.  
+1. WinINet `InternetQueryOption` işlevi en Internet Explorer'ın en son algılanan proxy yapılandırma betiğini bulmak için kullanılır.  
   
-2.  Komut dosyası bulunamazsa <xref:System.Net.WebProxy> sınıfı betiğini bulmak için Dinamik Ana Bilgisayar Yapılandırma Protokolü (DHCP) kullanır. DHCP sunucusu konumu (ana bilgisayar adı) ile ya da komut veya komut dosyası için tam bir URL ile yanıt verebilirsiniz.  
+2. Komut dosyası bulunamazsa <xref:System.Net.WebProxy> sınıfı betiğini bulmak için Dinamik Ana Bilgisayar Yapılandırma Protokolü (DHCP) kullanır. DHCP sunucusu konumu (ana bilgisayar adı) ile ya da komut veya komut dosyası için tam bir URL ile yanıt verebilirsiniz.  
   
-3.  DHCP WPAD konak tanımlamıyorsa, DNS adını veya diğer ad olarak WPAD olan bir konak için sorgulanır.  
+3. DHCP WPAD konak tanımlamıyorsa, DNS adını veya diğer ad olarak WPAD olan bir konak için sorgulanır.  
   
-4.  Bu konum, konak tanımlanmaz ve Internet Explorer LAN Ayarları veya bir yapılandırma dosyası bir proxy yapılandırma betiği konumunu belirtilirse kullanılır.  
+4. Bu konum, konak tanımlanmaz ve Internet Explorer LAN Ayarları veya bir yapılandırma dosyası bir proxy yapılandırma betiği konumunu belirtilirse kullanılır.  
   
 > [!NOTE]
 >  ASP.NET bir parçası olarak veya bir NT hizmeti olarak çalışan uygulamalar Internet Explorer proxy sunucusu ayarlarını çağrılıyor kullanıcısı (varsa) kullanın. Bu ayarlar tüm hizmet uygulamaları için kullanılamıyor olabilir.  

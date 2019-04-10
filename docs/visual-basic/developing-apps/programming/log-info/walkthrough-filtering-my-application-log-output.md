@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829401"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298402"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>İzlenecek yol: (Visual Basic) My.Application.Log çıktısını filtreleme
 Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir `My.Application.Log` hangi bilgilerin gelen geçirilen denetlemek için nesne `Log` nesnesine dinleyicileri ve hangi bilgilerin dinleyicileri tarafından yazılır. Yapılandırma bilgileri uygulamanın yapılandırma dosyasında depolandığından uygulama oluşturduktan sonra bile günlüğe kaydetme davranışını değiştirebilirsiniz.  
@@ -21,17 +21,17 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
 #### <a name="to-build-the-sample-application"></a>Örnek uygulamayı oluşturmak için  
   
-1.  Yeni bir Visual Basic Windows uygulaması projesi açın.  
+1. Yeni bir Visual Basic Windows uygulaması projesi açın.  
   
-2.  Form1 button1 adlı bir düğme ekleyin.  
+2. Form1 button1 adlı bir düğme ekleyin.  
   
-3.  İçinde <xref:System.Windows.Forms.Control.Click> Button1 için olay işleyicisi aşağıdaki kodu ekleyin:  
+3. İçinde <xref:System.Windows.Forms.Control.Click> Button1 için olay işleyicisi aşağıdaki kodu ekleyin:  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  Uygulamayı Hata Ayıklayıcısı'nda çalıştırın.  
+4. Uygulamayı Hata Ayıklayıcısı'nda çalıştırın.  
   
-5.  Tuşuna **Button1**.  
+5. Tuşuna **Button1**.  
   
      Uygulama, aşağıdaki bilgileri uygulamanın hata ayıklama çıkışı ve günlük dosyasına yazar.  
   
@@ -39,7 +39,7 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  Uygulamayı kapatın.  
+6. Uygulamayı kapatın.  
   
      Uygulama hata ayıklama çıktı penceresine görüntüleme hakkında daha fazla bilgi için bkz: [çıkış penceresine](/visualstudio/ide/reference/output-window). Uygulamanın günlük dosyasının konumu hakkında daha fazla bilgi için bkz: [izlenecek yol: My.Application.log günlüğünün bilgileri nereye yazdığını belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
@@ -71,9 +71,9 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
 #### <a name="to-log-only-activity-tracing-events"></a>Yalnızca etkinlik izleme olaylarını günlüğe kaydedecek şekilde  
   
-1.  App.config dosyasında sağ **Çözüm Gezgini** seçip **açık**.  
+1. App.config dosyasında sağ **Çözüm Gezgini** seçip **açık**.  
   
-     veya  
+     -veya-  
   
      App.config dosyası yoksa:  
   
@@ -83,15 +83,15 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
     3.  **Ekle**'yi tıklatın.  
   
-2.  Bulun `<switches>` bulunduğu bölüme `<system.diagnostics>` üst düzey olan bölüm `<configuration>` bölümü.  
+2. Bulun `<switches>` bulunduğu bölüme `<system.diagnostics>` üst düzey olan bölüm `<configuration>` bölümü.  
   
-3.  Ekler öğesi bulma `DefaultSwitch` anahtarların koleksiyonu. Bu öğeye benzer görünmelidir:  
+3. Ekler öğesi bulma `DefaultSwitch` anahtarların koleksiyonu. Bu öğeye benzer görünmelidir:  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  Değiştirin `value` "ActivityTracing için" özniteliği.  
+4. Değiştirin `value` "ActivityTracing için" özniteliği.  
   
-5.  App.config dosyasının içeriği aşağıdaki XML'e benzer olmalıdır:  
+5. App.config dosyasının içeriği aşağıdaki XML'e benzer olmalıdır:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
     </configuration>  
     ```  
   
-6.  Uygulamayı Hata Ayıklayıcısı'nda çalıştırın.  
+6. Uygulamayı Hata Ayıklayıcısı'nda çalıştırın.  
   
-7.  Tuşuna **Button1**.  
+7. Tuşuna **Button1**.  
   
      Uygulama, aşağıdaki bilgileri uygulamanın hata ayıklama çıkışı ve günlük dosyasına yazar:  
   
@@ -130,7 +130,7 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  Uygulamayı kapatın.  
+8. Uygulamayı kapatın.  
   
 9. Değiştirin `value` geri "bilgileri için" özniteliği.  
   
@@ -146,9 +146,9 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
 #### <a name="to-log-only-activity-tracing-events"></a>Yalnızca etkinlik izleme olaylarını günlüğe kaydedecek şekilde  
   
-1.  App.config dosyasında sağ **Çözüm Gezgini** ve **açık**.  
+1. App.config dosyasında sağ **Çözüm Gezgini** ve **açık**.  
   
-     veya  
+     -veya-  
   
      App.config dosyası yoksa:  
   
@@ -158,11 +158,11 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
     3.  **Ekle**'yi tıklatın.  
   
-2.  App.config dosyasında sağ **Çözüm Gezgini**. Seçin **açık**.  
+2. App.config dosyasında sağ **Çözüm Gezgini**. Seçin **açık**.  
   
-3.  Bulun `<listeners>` bölümünde `<source>` ile bölümünde `name` altındaki "DefaultSource" özniteliği `<sources>` bölümü. `<sources>` Bölümdür altında `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
+3. Bulun `<listeners>` bölümünde `<source>` ile bölümünde `name` altındaki "DefaultSource" özniteliği `<sources>` bölümü. `<sources>` Bölümdür altında `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
   
-4.  Bu öğeye eklemek `<listeners>` bölümü:  
+4. Bu öğeye eklemek `<listeners>` bölümü:  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
     <add name="NewDefault"/>  
     ```  
   
-5.  Bulun `<sharedListeners>` bölümünde `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
+5. Bulun `<sharedListeners>` bölümünde `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
   
-6.  Bu öğe ekleyen `<sharedListeners>` bölümü:  
+6. Bu öğe ekleyen `<sharedListeners>` bölümü:  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
      <xref:System.Diagnostics.EventTypeFilter> Filtresi aşağıdakilerden birini gerçekleştirir <xref:System.Diagnostics.SourceLevels> sabit listesi değerleri olarak kendi `initializeData` özniteliği.  
   
-7.  App.config dosyasının içeriği aşağıdaki XML'e benzer olmalıdır:  
+7. App.config dosyasının içeriği aşağıdaki XML'e benzer olmalıdır:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
     </configuration>  
     ```  
   
-8.  Uygulamayı Hata Ayıklayıcısı'nda çalıştırın.  
+8. Uygulamayı Hata Ayıklayıcısı'nda çalıştırın.  
   
 9. Tuşuna **Button1**.  
   
@@ -249,9 +249,9 @@ Bu yönerge için filtreleme varsayılan günlük değiştirmek nasıl gösterir
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: My.Application.log günlüğünün bilgileri nereye yazdığını belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [İzlenecek yol: My.Application.Log günlüğünün bilgileri yazdığı yeri değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [İzlenecek yol: Özel günlük dinleyicileri oluşturma](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [Nasıl yapılır: Günlük iletileri yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [İzlenecek yol: My.Application.Log Günlüğünün Bilgileri Nereye Yazdığını Belirleme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [İzlenecek yol: My.Application.Log Günlüğünün Bilgileri Yazdığı Yeri Değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [İzlenecek yol: Özel Günlük Dinleyicileri Oluşturma](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [Nasıl yapılır: Günlük İletileri Yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [İzleme Anahtarları](../../../../framework/debug-trace-profile/trace-switches.md)
 - [Uygulamadan Günlüğe Bilgi Kaydetme](../../../../visual-basic/developing-apps/programming/log-info/index.md)

@@ -2,12 +2,12 @@
 title: Federasyon Örneği
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 5c71abc3308513be7b00d92254e92e814c3688dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155213"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311467"
 ---
 # <a name="federation-sample"></a>Federasyon Örneği
 Bu örnek, Federasyon güvenlik gösterir.  
@@ -67,17 +67,17 @@ Bu örnek, Federasyon güvenlik gösterir.
   
  Erişirken olayların sırasını `BuyBook` işlemi aşağıdaki gibidir:  
   
-1.  İstemci, Windows kimlik bilgilerini kullanarak HomeRealm STS'ye kimliğini doğrular.  
+1. İstemci, Windows kimlik bilgilerini kullanarak HomeRealm STS'ye kimliğini doğrular.  
   
-2.  HomeRealm STS kitaplığı STS'ye kimlik doğrulaması için kullanılabilecek bir belirteç verir.  
+2. HomeRealm STS kitaplığı STS'ye kimlik doğrulaması için kullanılabilecek bir belirteç verir.  
   
-3.  İstemci Kitaplığı sts'ye HomeRealm STS tarafından verilen belirteci kullanarak kimliğini doğrular.  
+3. İstemci Kitaplığı sts'ye HomeRealm STS tarafından verilen belirteci kullanarak kimliğini doğrular.  
   
-4.  Kitaplığı STS kitaplığı hizmete kimlik doğrulaması için kullanılabilecek bir belirteç verir.  
+4. Kitaplığı STS kitaplığı hizmete kimlik doğrulaması için kullanılabilecek bir belirteç verir.  
   
-5.  İstemci Kitaplığı hizmet kitaplığı STS tarafından verilen belirteci kullanarak kimliğini doğrular.  
+5. İstemci Kitaplığı hizmet kitaplığı STS tarafından verilen belirteci kullanarak kimliğini doğrular.  
   
-6.  İstemcisinin eriştiği `BuyBook` işlemi.  
+6. İstemcisinin eriştiği `BuyBook` işlemi.  
   
  Ayarlanmış ve bu örneği çalıştırmak hakkında aşağıdaki yönergelere bakın.  
   
@@ -86,18 +86,18 @@ Bu örnek, Federasyon güvenlik gösterir.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  SDK komut penceresi açın. Örnek yolunda Setup.bat çalıştırın. Bu örnek için gerekli sanal dizinler oluşturur ve uygun izinlere sahip gerekli sertifikaları yükler.  
+1. SDK komut penceresi açın. Örnek yolunda Setup.bat çalıştırın. Bu örnek için gerekli sanal dizinler oluşturur ve uygun izinlere sahip gerekli sertifikaları yükler.  
   
     > [!NOTE]
     >  Setup.bat toplu iş dosyası, bir Windows SDK Komut İstemi'nden çalıştırılmak üzere tasarlanmıştır. MSSDK ortam değişkeni'nın SDK'ın yüklendiği dizini gösterecek gerektiriyor. Bu ortam değişkeni, bir Windows SDK komut istemi içinde otomatik olarak ayarlanır. Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)], ayarlama, IIS Yöneticisi betikleri kullandığından, IIS 6.0 Yönetim uyumluluğu yüklü emin olmanız gerekir. Kurulum betiği çalıştırma [!INCLUDE[wv](../../../../includes/wv-md.md)] yönetici ayrıcalıkları gerektirir.  
   
-2.  Visual Studio'da FederationSample.sln açın ve seçin **Çözümü Derle** gelen **derleme** menüsü. Bu kitaplığı hizmet kitaplığı STS, HomeRealm STS, ortak proje dosyalarını oluşturur ve bunları IIS içinde dağıtır. Bu ayrıca kitaplığı istemci uygulaması oluşturur ve yürütülebilir BookStoreClient.exe FederationSample\BookStoreClient\bin\Debug klasörüne yerleştirir.  
+2. Visual Studio'da FederationSample.sln açın ve seçin **Çözümü Derle** gelen **derleme** menüsü. Bu kitaplığı hizmet kitaplığı STS, HomeRealm STS, ortak proje dosyalarını oluşturur ve bunları IIS içinde dağıtır. Bu ayrıca kitaplığı istemci uygulaması oluşturur ve yürütülebilir BookStoreClient.exe FederationSample\BookStoreClient\bin\Debug klasörüne yerleştirir.  
   
-3.  BookStoreClient.exe çift tıklayın. BookStoreClient penceresi görüntülenir.  
+3. BookStoreClient.exe çift tıklayın. BookStoreClient penceresi görüntülenir.  
   
-4.  Tıklayarak kitaplığı içinde kullanılabilir olan kitapları göz atabilirsiniz **Gözat Books**.  
+4. Tıklayarak kitaplığı içinde kullanılabilir olan kitapları göz atabilirsiniz **Gözat Books**.  
   
-5.  Belirli bir kitap satın almak için kitabı listeden seçin ve **satın kitap**. Uygulama başlatıldığında ve HomeRealm güvenlik belirteci hizmeti ile Windows kimlik doğrulaması kullanarak kimliğini doğrular.  
+5. Belirli bir kitap satın almak için kitabı listeden seçin ve **satın kitap**. Uygulama başlatıldığında ve HomeRealm güvenlik belirteci hizmeti ile Windows kimlik doğrulaması kullanarak kimliğini doğrular.  
   
      , 15 ABD Doları maliyet kitapların satın almak kullanıcılara izin verecek şekilde yapılandırılmış ya da daha az örnektir. Birden çok erişim reddedildi iletisi kitap Store hizmetten alma istemci sonuçları 15 ABD Doları maliyet kitapların satın çalışılıyor.  
   
@@ -106,7 +106,7 @@ Bu örnek, Federasyon güvenlik gösterir.
   
 #### <a name="to-clean-up"></a>Temizlemek için  
   
-1.  CleanUp.bat çalıştırın. Bu yedekleme kümesi sırasında oluşturulan sanal dizinleri siler ve Kurulum sırasında yüklenen sertifikaların da kaldırır.  
+1. CleanUp.bat çalıştırın. Bu yedekleme kümesi sırasında oluşturulan sanal dizinleri siler ve Kurulum sırasında yüklenen sertifikaların da kaldırır.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

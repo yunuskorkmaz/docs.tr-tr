@@ -6,21 +6,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835290"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303099"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Nasıl yapılır: Bir diziyi başka diziye (Visual Basic) atama
 Diziler nesneler olduğundan atama deyimleri diğer nesne türleri gibi kullanabilirsiniz. Bir dizi değişkenini dizi öğeleri ve boyut sayısı ve uzunluk bilgileri oluşturan veri için bir işaretçi tutar ve bu işaretçi atama kopyalar.  
   
 ### <a name="to-assign-one-array-to-another-array"></a>Bir diziyi başka diziye atama için  
   
-1.  İki dizi aynı boyut sayısı (boyut sayısı) ve uyumlu öğe veri türleri olduğundan emin olun.  
+1. İki dizi aynı boyut sayısı (boyut sayısı) ve uyumlu öğe veri türleri olduğundan emin olun.  
   
-2.  Hedef dizi için kaynak dizisi atamak için bir standart atama ifadesi kullanın. Parantezler ile ya da dizi adı izlemeyin.  
+2. Hedef dizi için kaynak dizisi atamak için bir standart atama ifadesi kullanın. Parantezler ile ya da dizi adı izlemeyin.  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -47,4 +47,4 @@ Diziler nesneler olduğundan atama deyimleri diğer nesne türleri gibi kullanab
 - [Diziler](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Dizilerle İlgili Sorun Giderme](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum Deyimi](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [Dizi Dönüştürmeler](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [Dizi Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

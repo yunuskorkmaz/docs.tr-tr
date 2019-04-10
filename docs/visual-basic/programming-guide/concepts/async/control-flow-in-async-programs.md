@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlarda (Visual Basic) denetim akışı
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 57c83021551ab386f62c8d22b90db8da8054df7f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837435"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300937"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Zaman uyumsuz programlarda (Visual Basic) denetim akışı
 Yazma ve zaman uyumsuz programları daha kolay kullanarak koruduğunuz `Async` ve `Await` anahtar sözcükleri. Ancak, nasıl programınızı anlamazsanız sonuçlar sizi şaşırtabilir. Bu konu, her zaman denetimi başka bir ve hangi bilgileri bir yöntemden diğerine taşır. göstermek için basit bir zamanuyumsuz program aracılığıyla denetim akışını aktarılır izler.  
@@ -100,34 +100,34 @@ Length of the downloaded string: 33946.
 ### <a name="download-the-program"></a>Programı indir  
  Bu konu için uygulamayı indirebilirsiniz [zaman uyumsuz örneği: Denetim akışı zaman uyumsuz programlarda](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Aşağıdaki adımlar, açın ve programı çalıştırın.  
   
-1.  İndirilen dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
+1. İndirilen dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
   
-2.  Menü çubuğunda, **dosya**, **açık**, **proje/çözüm**.  
+2. Menü çubuğunda, **dosya**, **açık**, **proje/çözüm**.  
   
-3.  Sıkıştırması açılmış örnek kodun bulunduğu klasöre gidin, çözüm (.sln) dosyasını açın ve sonra oluşturmak ve projeyi çalıştırmak için F5 tuşuna basın.  
+3. Sıkıştırması açılmış örnek kodun bulunduğu klasöre gidin, çözüm (.sln) dosyasını açın ve sonra oluşturmak ve projeyi çalıştırmak için F5 tuşuna basın.  
   
 ### <a name="build-the-program-yourself"></a>Programı kendiniz oluşturun  
  Aşağıdaki Windows Presentation Foundation (WPF) projesi Bu konu için kod örneği içerir.  
   
  Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:  
   
-1.  Visual Studio’yu çalıştırın.  
+1. Visual Studio’yu çalıştırın.  
   
-2.  Menü çubuğunda, **dosya**, **yeni**, **proje**.  
+2. Menü çubuğunda, **dosya**, **yeni**, **proje**.  
   
      **Yeni proje** iletişim kutusu açılır.  
   
-3.  İçinde **yüklü şablonlar** bölmesinde seçin **Visual Basic**ve ardından **WPF uygulaması** proje türleri listesinden.  
+3. İçinde **yüklü şablonlar** bölmesinde seçin **Visual Basic**ve ardından **WPF uygulaması** proje türleri listesinden.  
   
-4.  Girin `AsyncTracer` projesinin adı olarak seçip **Tamam** düğmesi.  
+4. Girin `AsyncTracer` projesinin adı olarak seçip **Tamam** düğmesi.  
   
      Yeni Proje görünür **Çözüm Gezgini**.  
   
-5.  Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
+5. Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
   
      Sekme görünür değilse, nde MainWindow.xaml için kısayol menüsünü açın **Çözüm Gezgini**ve ardından **kodu görüntüle**.  
   
-6.  İçinde **XAML** MainWindow.xaml görüntülemek için kodu aşağıdaki kodla değiştirin.  
+6. İçinde **XAML** MainWindow.xaml görüntülemek için kodu aşağıdaki kodla değiştirin.  
   
     ```vb  
     <Window  
@@ -145,9 +145,9 @@ Length of the downloaded string: 33946.
   
      Bir metin kutusu ve bir düğme içeren basit bir pencere **tasarım** MainWindow.xaml görünümü.  
   
-7.  İçin bir başvuru eklemeniz <xref:System.Net.Http>.  
+7. İçin bir başvuru eklemeniz <xref:System.Net.Http>.  
   
-8.  İçinde **Çözüm Gezgini**MainWindow.xaml.vb için kısayol menüsünü açın ve ardından **kodu görüntüle**.  
+8. İçinde **Çözüm Gezgini**MainWindow.xaml.vb için kısayol menüsünü açın ve ardından **kodu görüntüle**.  
   
 9. MainWindow.xaml.vb kodu aşağıdaki kodla değiştirin.  
   
@@ -363,4 +363,4 @@ Dim contentLength As Integer = Await getLengthTask
 - [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Zaman uyumsuz dönüş türleri (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
 - [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Zaman uyumsuz örneği: Denetim akışı zaman uyumsuz programlarda (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Zaman uyumsuz örneği: Zaman Uyumsuz Programlarda Denetim Akışı (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

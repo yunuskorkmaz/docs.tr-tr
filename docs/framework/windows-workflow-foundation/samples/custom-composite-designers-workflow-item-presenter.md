@@ -2,12 +2,12 @@
 title: Özel Bileşik Tasarımcılar - İş Akışı Öğesi Sunucu
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 4c1258a49ac3ef2227d520fe11f341819f8663a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089204"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311129"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Özel Bileşik Tasarımcılar - İş Akışı Öğesi Sunucu
 <xref:System.Activities.Presentation.WorkflowItemPresenter> İçin "bir bırakma bölgesi rastgele bir etkinlik nereye yerleştirilebileceğini" oluşturulmasına izin verir WF Tasarımcı programlama modeli içinde bir anahtar türü. Bu örnek, bu yüzeyleri böyle bir "bırakma bölgesi." bir etkinlik Tasarımcısı oluşturma gösterir.
@@ -67,9 +67,9 @@ ms.locfileid: "59089204"
 
 #### <a name="to-setup-build-and-run-the-sample"></a>Kurulum, derleme ve örneği çalıştırmak için
 
-1.  Çözümü Visual Studio 2010'da açın.
+1. Çözümü Visual Studio 2010'da açın.
 
-2.  Derlemek ve uygulamayı çalıştırmak için F5 tuşuna basın.
+2. Derlemek ve uygulamayı çalıştırmak için F5 tuşuna basın.
 
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

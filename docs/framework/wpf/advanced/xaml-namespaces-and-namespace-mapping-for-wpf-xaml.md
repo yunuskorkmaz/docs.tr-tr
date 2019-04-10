@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301041"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML için XAML Ad Alanları ve Ad Alanı Eşlemesi
 Bu konuda daha fazla varlığı ve sık WPF XAML dosyasının kök etiketi içinde bulunan iki XAML ad uzayı eşlemelerinden amacını açıklar. Ayrıca, kendi kod ve/veya ayrı derlemeler içinde tanımlanan öğeleri kullanmak için benzer eşlemeleri oluşturmak nasıl açıklar.  
@@ -119,15 +119,15 @@ End Namespace
 ## <a name="wpf-and-assembly-loading"></a>WPF ve derleme yükleme  
  WPF için XAML şema içeriği hangi sırayla CLR tanımlı kavramını kullanır WPF uygulaması modelle tümleştirir <xref:System.AppDomain>. Aşağıdaki sırayı nasıl XAML şema içeriği derlemeler yüklemek ya da WPF kullanıma bağlı çalıştırma veya tasarım zamanı türlerini bulmak nasıl yorumlayacağını açıklayan <xref:System.AppDomain> ve diğer etkenlere bağlı.  
   
-1.  Yinelemek <xref:System.AppDomain>tüm yönlerini adı ile eşleşen bir zaten yüklü derleme için arama, gelen en son yüklenen derleme başlatılıyor.  
+1. Yinelemek <xref:System.AppDomain>tüm yönlerini adı ile eşleşen bir zaten yüklü derleme için arama, gelen en son yüklenen derleme başlatılıyor.  
   
-2.  Adı nitelenmiş varsa, çağrı <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> tam adı.  
+2. Adı nitelenmiş varsa, çağrı <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> tam adı.  
   
-3.  Kısa ad + tam adı, ortak anahtar belirteci biçimlendirme öğesinden yüklenmiş derleme eşleşiyorsa, bu derleme döndürür.  
+3. Kısa ad + tam adı, ortak anahtar belirteci biçimlendirme öğesinden yüklenmiş derleme eşleşiyorsa, bu derleme döndürür.  
   
-4.  Çağırmak için kısa ad + ortak anahtar belirteci kullanmanız <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+4. Çağırmak için kısa ad + ortak anahtar belirteci kullanmanız <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-5.  Adı nitelenmemiş ise, çağrı <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+5. Adı nitelenmemiş ise, çağrı <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
  Adım 3 gevşek XAML kullanmaz; yüklenen gelen derleme yok.  
   

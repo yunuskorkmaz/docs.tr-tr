@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: Görüntü WIF kullanarak oturum açmış durumu gösterme'
+title: 'Nasıl yapılır: WIF Kullanarak Oturum Açmış Durumu Gösterme'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: 7d3d23dc1f2e081c0a7c53fbdfaef749c9729fd4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584409"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311038"
 ---
-# <a name="how-to-display-signed-in-status-using-wif"></a>Nasıl yapılır: Görüntü WIF kullanarak oturum açmış durumu gösterme
-## <a name="applies-to"></a>Uygulandığı öğe:  
+# <a name="how-to-display-signed-in-status-using-wif"></a>Nasıl yapılır: WIF Kullanarak Oturum Açmış Durumu Gösterme
+## <a name="applies-to"></a>Uygulanan Öğe  
   
 -   Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
@@ -56,48 +56,48 @@ ms.locfileid: "48584409"
   
 #### <a name="to-install-the-identity-and-access-extension"></a>Kimlik ve erişim uzantıyı yüklemek için  
   
-1.  Visual Studio'yu yönetici olarak yükseltilmiş modda başlatın.  
+1. Visual Studio'yu yönetici olarak yükseltilmiş modda başlatın.  
   
-2.  Visual Studio'da **Araçları** tıklatıp **Uzantı Yöneticisi**. **Uzantı Yöneticisi** penceresi görüntülenir.  
+2. Visual Studio'da **Araçları** tıklatıp **Uzantı Yöneticisi**. **Uzantı Yöneticisi** penceresi görüntülenir.  
   
-3.  İçinde **Uzantı Yöneticisi**, tıklayın **çevrimiçi uzantılara** seçip sol menüden **Visual Studio Galerisi**.  
+3. İçinde **Uzantı Yöneticisi**, tıklayın **çevrimiçi uzantılara** seçip sol menüden **Visual Studio Galerisi**.  
   
-4.  Sağ üst köşesindeki içinde **Uzantı Yöneticisi**, arama *kimlik ve erişim*.  
+4. Sağ üst köşesindeki içinde **Uzantı Yöneticisi**, arama *kimlik ve erişim*.  
   
-5.  **Kimlik ve erişim** öğesi, arama sonuçlarında görünür. Tıklayın ve ardından **indirme**.  
+5. **Kimlik ve erişim** öğesi, arama sonuçlarında görünür. Tıklayın ve ardından **indirme**.  
   
-6.  **Yükleyip** iletişim kutusu görüntülenir. Lisans şartlarını kabul ediyorsanız tıklayın **yükleme**.  
+6. **Yükleyip** iletişim kutusu görüntülenir. Lisans şartlarını kabul ediyorsanız tıklayın **yükleme**.  
   
-7.  Zaman **kimlik ve erişim** uzantı yükleme tamamlandığında, Visual Studio'yu Yönetici modunda yeniden başlatın.  
+7. Zaman **kimlik ve erişim** uzantı yükleme tamamlandığında, Visual Studio'yu Yönetici modunda yeniden başlatın.  
   
 ## <a name="step-2--create-a-relying-party-aspnet-application"></a>2. adım – bir bağlı olan taraf ASP.NET uygulaması oluşturma  
  Bu adım, bağlı olan taraf WIF ile tümleştirilecek bir ASP.NET Web Forms uygulaması oluşturmayı açıklar.  
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Basit bir ASP.NET uygulaması oluşturmak için  
   
-1.  Visual Studio'yu başlatın ve tıklayın **dosya**, **yeni**, ardından **proje**.  
+1. Visual Studio'yu başlatın ve tıklayın **dosya**, **yeni**, ardından **proje**.  
   
-2.  İçinde **yeni proje** penceresinde tıklayın **ASP.NET Web Forms uygulaması**.  
+2. İçinde **yeni proje** penceresinde tıklayın **ASP.NET Web Forms uygulaması**.  
   
-3.  İçinde **adı**, girin `TestApp` basın **Tamam**.  
+3. İçinde **adı**, girin `TestApp` basın **Tamam**.  
   
 ## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a>Adım 3 – kullanıcıların kimliğini doğrulamak için etkinleştirme yerel geliştirme  
  Bu adım, uygulamanızı yerel geliştirme STS'si etkinleştirmeyi açıklar. Yerel geliştirme STS'si kimlik ve erişim uzantısı için Visual Studio aracılığıyla etkinleştirilir.  
   
 #### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>ASP.NET uygulamanızı yerel geliştirme STS'si etkinleştirmek için  
   
-1.  Visual Studio'da sağ **TestApp** altındaki proje **Çözüm Gezgini**, ardından **kimlik ve erişim**.  
+1. Visual Studio'da sağ **TestApp** altındaki proje **Çözüm Gezgini**, ardından **kimlik ve erişim**.  
   
-2.  **Kimlik ve erişim** penceresi görüntülenir. Altında **sağlayıcıları**seçin **uygulamanızı yerel geliştirme STS'si ile Test**, ardından **Uygula**.  
+2. **Kimlik ve erişim** penceresi görüntülenir. Altında **sağlayıcıları**seçin **uygulamanızı yerel geliştirme STS'si ile Test**, ardından **Uygula**.  
   
 ## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a>4. adım: ASP.NET uygulamanız oturum durumu görüntülemek için değiştirin  
  Bu adım, ASP.NET uygulamanızı, geçerli kullanıcının oturum açtığı olmadığını dinamik olarak görüntülenecek değiştirmeniz açıklar. WIF, STS sağlayıcınız yapılandırıldıktan sonra gelen talepleri işler. Şimdi, kimlik doğrulaması sonucu görüntülemek için uygulamanızın kod yapılandırmanız gerekir.  
   
 #### <a name="to-display-sign-in-status"></a>Oturum durumunu görüntülemek için  
   
-1.  Visual Studio'da açın **Default.aspx** altında dosya **TestApp** proje.  
+1. Visual Studio'da açın **Default.aspx** altında dosya **TestApp** proje.  
   
-2.  Mevcut biçimlendirmeyi Değiştir **Default.aspx** aşağıdaki işaretlemeyle dosyası:  
+2. Mevcut biçimlendirmeyi Değiştir **Default.aspx** aşağıdaki işaretlemeyle dosyası:  
   
     ```  
     <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -114,12 +114,12 @@ ms.locfileid: "48584409"
     </html>  
     ```  
   
-3.  Kaydet **Default.aspx**ve ardından adlı dosyanın arkasındaki kodunu açın **Default.aspx.cs**.  
+3. Kaydet **Default.aspx**ve ardından adlı dosyanın arkasındaki kodunu açın **Default.aspx.cs**.  
   
     > [!NOTE]
     >  **Default.aspx.cs** altındaki gizlenebilir **Default.aspx** Çözüm Gezgini'nde. Varsa **Default.aspx.cs** görünür durumda değilse genişletin **Default.aspx** yanında üçgeni tıklayarak.  
   
-4.  Varolan kodda değiştirin **Default.aspx.cs** aşağıdaki kod ile:  
+4. Varolan kodda değiştirin **Default.aspx.cs** aşağıdaki kod ile:  
   
     ```csharp  
     using System;  
@@ -144,13 +144,13 @@ ms.locfileid: "48584409"
     }  
     ```  
   
-5.  Kaydet **Default.aspx.cs**ve uygulamayı derleyin.  
+5. Kaydet **Default.aspx.cs**ve uygulamayı derleyin.  
   
 ## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a>5. adım – WIF ve ASP.NET uygulamanız arasındaki tümleştirme testi  
  Bu adımda, WIF ve ASP.NET uygulamanızı arasında tümleştirmeyi nasıl sınayıp doğrulayabileceğiniz açıklanır.  
   
 #### <a name="to-test-the-integration-between-wif-and-aspnet"></a>WIF ve ASP.NET arasındaki tümleştirmeden test etmek için  
   
-1.  Visual Studio'da **F5** uygulamanızı hata ayıklama başlatılamıyor. Hiçbir hata bulunamazsa, yeni bir tarayıcı penceresi açılır.  
+1. Visual Studio'da **F5** uygulamanızı hata ayıklama başlatılamıyor. Hiçbir hata bulunamazsa, yeni bir tarayıcı penceresi açılır.  
   
-2.  Tarayıcı sessizce isteğiniz STS'ye yönlendirir ve ardından Default.aspx sayfasında açılır fark edebilirsiniz. WIF düzgün şekilde yapılandırılmışsa, aşağıdaki metni görüntüle sitesini görmeniz gerekir: **"Oturumunuz"**.
+2. Tarayıcı sessizce isteğiniz STS'ye yönlendirir ve ardından Default.aspx sayfasında açılır fark edebilirsiniz. WIF düzgün şekilde yapılandırılmışsa, aşağıdaki metni görüntüle sitesini görmeniz gerekir: **"Oturum"**.

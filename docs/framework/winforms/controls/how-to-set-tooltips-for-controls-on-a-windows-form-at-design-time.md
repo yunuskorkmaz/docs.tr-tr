@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157611"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301340"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Nasıl yapılır: Tasarım Zamanında Windows Formundaki Denetimler için ToolTips Ayarlama
 Ayarlayabileceğiniz bir <xref:System.Windows.Forms.ToolTip> kodda veya Windows Forms Tasarımcısı'nda bir dize. Hakkında daha fazla bilgi için <xref:System.Windows.Forms.ToolTip> bileşeni Bkz [ToolTip bileşenine genel bakış](tooltip-component-overview-windows-forms.md).  
@@ -24,9 +24,9 @@ Ayarlayabileceğiniz bir <xref:System.Windows.Forms.ToolTip> kodda veya Windows 
   
 ### <a name="to-set-a-tooltip-programmatically"></a>Bir araç ipucu program üzerinden ayarlamak için  
   
-1.  Araç İpucu görüntüleyen denetimi ekleyin.  
+1. Araç İpucu görüntüleyen denetimi ekleyin.  
   
-2.  Kullanım <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> yöntemi <xref:System.Windows.Forms.ToolTip> bileşeni.  
+2. Kullanım <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> yöntemi <xref:System.Windows.Forms.ToolTip> bileşeni.  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -45,15 +45,15 @@ Ayarlayabileceğiniz bir <xref:System.Windows.Forms.ToolTip> kodda veya Windows 
   
 ### <a name="to-set-a-tooltip-in-the-designer"></a>Tasarımcıda bir araç ipucu ayarlamak için  
   
-1.  Ekleme bir <xref:System.Windows.Forms.ToolTip> forma bileşen.  
+1. Ekleme bir <xref:System.Windows.Forms.ToolTip> forma bileşen.  
   
-2.  Araç ipucunu görüntülemek veya forma ekler denetimi seçin.  
+2. Araç ipucunu görüntülemek veya forma ekler denetimi seçin.  
   
-3.  İçinde **özellikleri** penceresinde **ToolTip1 araç ipucu** uygun bir metin dizesi değeri.  
+3. İçinde **özellikleri** penceresinde **ToolTip1 araç ipucu** uygun bir metin dizesi değeri.  
 
 ### <a name="to-remove-a-tooltip-programmatically"></a>Bir araç ipucu programlı bir şekilde kaldırmak için  
   
-1.  Kullanım <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> yöntemi <xref:System.Windows.Forms.ToolTip> bileşeni.  
+1. Kullanım <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> yöntemi <xref:System.Windows.Forms.ToolTip> bileşeni.  
   
     ```vb  
     ' In this example, Button1 is the control displaying the ToolTip.  
@@ -72,9 +72,9 @@ Ayarlayabileceğiniz bir <xref:System.Windows.Forms.ToolTip> kodda veya Windows 
   
 ### <a name="to-remove-a-tooltip-in-the-designer"></a>Tasarımcıda bir araç ipucu kaldırmak için  
   
-1.  Araç İpucu görüntüleyen bir denetimi seçin.  
+1. Araç İpucu görüntüleyen bir denetimi seçin.  
   
-2.  İçinde **özellikleri** penceresi, metni silmek **ToolTip1 araç ipucu**.  
+2. İçinde **özellikleri** penceresi, metni silmek **ToolTip1 araç ipucu**.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

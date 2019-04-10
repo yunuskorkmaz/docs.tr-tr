@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek Yol: Veri Akışı Ardışık Düzeni Oluşturma'
+title: 'İzlenecek yol: Veri Akışı Ardışık Düzeni Oluşturma'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b74e60daced88050413855070c880cd6c1cebfb1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 870f65fdbf263913134d0528c200d3c2990a498c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299013"
 ---
-# <a name="walkthrough-creating-a-dataflow-pipeline"></a>İzlenecek Yol: Veri Akışı Ardışık Düzeni Oluşturma
+# <a name="walkthrough-creating-a-dataflow-pipeline"></a>İzlenecek yol: Veri Akışı Ardışık Düzeni Oluşturma
 Hizmetini kullanıyor olsanız da <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> ileti almak için yöntemler kaynak Bloklar, ileti blokları forma bağlanabilir bir *veri akışı işlem hattı*. Bir veri akışı ardışık düzeni bileşenleri dizisidir veya *veri akışı bloklarının*, her biri, daha büyük bir hedefe katkıda bulunan belirli bir görevi gerçekleştirir. Başka bir veri akışı bloğundan bir ileti aldığında, her veri akışı bloğu veri akışı ardışık düzeninde çalışma gerçekleştirir. Bu bir benzerliği otomobil üretimde montaj ' dir. Her araç montaj hattı geçerken çerçevenin bir istasyondan birleştirir, altyapısı ve benzeri bir yükler. Bir montaj hattı aynı anda birleştirilmeleri birden çok araçları sağladığından, aynı anda tüm araçlar bir birleştirme daha iyi aktarım hızı sağlar.
 
  Bu belge, kitap indiren bir veri akışı işlem hattı gösterir *Homer Iliad* kelimeler ile eşleştirilecek metin bir Web sitesi ve aramalar ilk sözcüğün karakterleri, ters sözcükleri. Bu belgedeki veri akışı Ardışık düzenin oluşturulması aşağıdaki adımlardan oluşur:  
   
-1.  Katılan veri akışı bloklarının, işlem hattı oluşturun.  
+1. Katılan veri akışı bloklarının, işlem hattı oluşturun.  
   
-2.  Her veri akışı bloğu ardışık düzende sonraki bloğu bağlanın. Her blok, işlem hattı, önceki blok çıktısını girdi olarak alır.  
+2. Her veri akışı bloğu ardışık düzende sonraki bloğu bağlanın. Her blok, işlem hattı, önceki blok çıktısını girdi olarak alır.  
   
-3.  Her veri akışı bloğu için önceki blok sonlandırıldıktan sonra sonraki bloğu tamamlanmış duruma ayarlar bir devamlılık görevi oluşturun.  
+3. Her veri akışı bloğu için önceki blok sonlandırıldıktan sonra sonraki bloğu tamamlanmış duruma ayarlar bir devamlılık görevi oluşturun.  
   
-4.  Veri işlem hattının karşılaştırması gönderin.  
+4. Veri işlem hattının karşılaştırması gönderin.  
   
-5.  İşlem hattının baş tamamlandı olarak işaretleyebilirsiniz.  
+5. İşlem hattının baş tamamlandı olarak işaretleyebilirsiniz.  
   
-6.  Tüm işi tamamlamak işlem hattı için bekleyin.  
+6. Tüm işi tamamlamak işlem hattı için bekleyin.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
  Okuma [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) bu kılavuza başlamadan önce.  
@@ -108,7 +108,7 @@ Hizmetini kullanıyor olsanız da <xref:System.Threading.Tasks.Dataflow.Dataflow
   
  Veri akışı ardışık düzenleri kullanarak elde edebilirsiniz paralelliği olarak da bilinen *büyük parçalı paralellik* genellikle daha az sayıda, daha büyük görevler oluştuğundan. Daha da kullanabilirsiniz *hassas paralellik* daha küçük, kısa süreli görev bir veri akışı ardışık. Bu örnekte, `findReversedWords` işlem hattının üyeyi kullanan [PLINQ](parallel-linq-plinq.md) paralel çalışma listesinde birden çok öğe işlenecek. Parçalı bir işlem hattındaki hassas paralellik kullanımını genel performansını artırabilir.  
   
- Bir kaynak veri akışı bloğu oluşturmak için birden çok hedef bloğa bağlanabilir bir *veri akışı ağ*. Aşırı yüklenmiş sürümüne <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> yöntemi bir <xref:System.Predicate%601> hedef blok, değerini temel alarak her iletiyi kabul edip etmeyeceğini tanımlayan nesne. Sırayla bloklarından bu iletiyi kabul edene kadar bunlar, bağlı tüm bağlı hedef bloklarına iletiler kaynakları sunan gibi davranacak çoğu veri akışı bloğu türleri. Bu filtreleme mekanizması kullanarak, belirli bir yol verilerine ve diğer verileri başka bir yol aracılığıyla doğrudan bağlanmış veri akışı bloğu sistemleri oluşturabilirsiniz. Bir veri akışı ağı oluşturmak için filtreleme kullanan bir örnek için bkz: [izlenecek yol: veri akışı kullanarak bir Windows Forms uygulamasındaki](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ Bir kaynak veri akışı bloğu oluşturmak için birden çok hedef bloğa bağlanabilir bir *veri akışı ağ*. Aşırı yüklenmiş sürümüne <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> yöntemi bir <xref:System.Predicate%601> hedef blok, değerini temel alarak her iletiyi kabul edip etmeyeceğini tanımlayan nesne. Sırayla bloklarından bu iletiyi kabul edene kadar bunlar, bağlı tüm bağlı hedef bloklarına iletiler kaynakları sunan gibi davranacak çoğu veri akışı bloğu türleri. Bu filtreleme mekanizması kullanarak, belirli bir yol verilerine ve diğer verileri başka bir yol aracılığıyla doğrudan bağlanmış veri akışı bloğu sistemleri oluşturabilirsiniz. Bir veri akışı ağı oluşturmak için filtreleme kullanan bir örnek için bkz: [izlenecek yol: Veri akışı kullanarak bir Windows Forms uygulamalarındaki](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

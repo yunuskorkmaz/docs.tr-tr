@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: e1e92fccfad792fc1b9df86a582f0406a87f34e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195299"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297493"
 ---
 # <a name="federationconfiguration"></a>\<Federationconfiguration'a >
 Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) kullanırken, Federasyon kimlik doğrulaması WS-Federation protokolü aracılığıyla. Yapılandırır <xref:System.Security.Claims.ClaimsAuthorizationManager> kullanırken <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> beyana dayalı erişim denetimi sağlamak için sınıf.  
@@ -58,13 +58,13 @@ Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationMo
   
  Senaryo bağımsız olarak, çalışma zamanı varsayılan Federasyon yapılandırması yükler. Davranışı şu şekilde tanımlanır:  
   
-1.  Yoksa hiçbir `<federationConfiguration>` öğe yok, çalışma zamanı bir Federasyon yapılandırması oluşturur ve varsayılan değerlerle doldurur. Bu varsayılan Federasyon yapılandırma, varsayılan kimlik yapılandırması başvurur.  
+1. Yoksa hiçbir `<federationConfiguration>` öğe yok, çalışma zamanı bir Federasyon yapılandırması oluşturur ve varsayılan değerlerle doldurur. Bu varsayılan Federasyon yapılandırma, varsayılan kimlik yapılandırması başvurur.  
   
-2.  Tek bir varsa `<federationConfiguration>` öğe varsa, bunu adlı adlandırılmamış mı bağımsız olarak varsayılan Federasyon yapılandırması. Varsa, `identityConfiguration` özniteliği belirtilirse, adlandırılmış kimlik yapılandırması başvuruyor; Aksi takdirde varsayılan kimlik yapılandırması başvurulur.  
+2. Tek bir varsa `<federationConfiguration>` öğe varsa, bunu adlı adlandırılmamış mı bağımsız olarak varsayılan Federasyon yapılandırması. Varsa, `identityConfiguration` özniteliği belirtilirse, adlandırılmış kimlik yapılandırması başvuruyor; Aksi takdirde varsayılan kimlik yapılandırması başvurulur.  
   
-3.  Adlandırılmamış bir varsa `<federationConfiguration>` öğe varsa, varsayılan Federasyon yapılandırması. Varsa, `identityConfiguration` özniteliği belirtilirse, adlandırılmış kimlik yapılandırması başvuruyor; Aksi takdirde varsayılan kimlik yapılandırması başvurulur.  
+3. Adlandırılmamış bir varsa `<federationConfiguration>` öğe varsa, varsayılan Federasyon yapılandırması. Varsa, `identityConfiguration` özniteliği belirtilirse, adlandırılmış kimlik yapılandırması başvuruyor; Aksi takdirde varsayılan kimlik yapılandırması başvurulur.  
   
-4.  Birden çok adlı `<federationConfiguration>` öğeleri mevcut ve Hayır adlandırılmamış `<federationConfiguration>` öğe varsa, bir özel durum oluşturulur.  
+4. Birden çok adlı `<federationConfiguration>` öğeleri mevcut ve Hayır adlandırılmamış `<federationConfiguration>` öğe varsa, bir özel durum oluşturulur.  
   
  Genellikle, yalnızca tek bir `<federationConfiguration>` bölümünde tanımlanır. Bu bölümde varsayılan Federasyon yapılandırmasıdır. Birden çok, benzersiz olarak adlandırılmış belirtebilir `<federationConfiguration>` öğeleri; adlandırılmamış farklı bir Federasyon yapılandırması yüklemek istiyorsanız, ancak bu durumda, işleyici sağlamalısınız. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> Olay ve set <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> özellik işleyicisi içine bir <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> uygun değerlerle başlatılan nesne `<federationConfiguration>` yapılandırma dosyasındaki öğesi.  
   

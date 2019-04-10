@@ -5,31 +5,31 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141927"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313586"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma
 Yazılı sözleşme ile Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamasından kullanmadan önce gerekli öznitelik türleri COM ile kaydetme ve COM uygulaması ve ad gerekli bağlama ile yapılandırmanız gerekir yapılandırma.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Gerekli öznitelik türleri COM ile kaydetmek için  
   
-1.  Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) meta veri sözleşmesi WCF hizmetinden almak için aracı. Bir WCF istemcisi derleme ve bir istemci uygulama yapılandırma dosyası için kaynak kodu oluşturur.  
+1. Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) meta veri sözleşmesi WCF hizmetinden almak için aracı. Bir WCF istemcisi derleme ve bir istemci uygulama yapılandırma dosyası için kaynak kodu oluşturur.  
   
-2.  Derlemedeki türleri olarak işaretlendiğinden emin olun `ComVisible`. Bunu yapmak için Visual Studio projesinde AssemblyInfo.cs dosyası şu özniteliği ekleyin.  
+2. Derlemedeki türleri olarak işaretlendiğinden emin olun `ComVisible`. Bunu yapmak için Visual Studio projesinde AssemblyInfo.cs dosyası şu özniteliği ekleyin.  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Yönetilen WCF istemcisini bir tanımlayıcı adlı bütünleştirilmiş kodu olarak derle. Bu şifreleme anahtar çifti ile imzalama gerektirir. Daha fazla bilgi için [bir derlemeyi tanımlayıcı adla imzalama](https://go.microsoft.com/fwlink/?LinkId=94874) .NET Geliştirici Kılavuzu'nda.  
+3. Yönetilen WCF istemcisini bir tanımlayıcı adlı bütünleştirilmiş kodu olarak derle. Bu şifreleme anahtar çifti ile imzalama gerektirir. Daha fazla bilgi için [bir derlemeyi tanımlayıcı adla imzalama](https://go.microsoft.com/fwlink/?LinkId=94874) .NET Geliştirici Kılavuzu'nda.  
   
-4.  Derleme kaydı (Regasm.exe) aracını `/tlb` seçenek türleri derleme com ile kaydetmek için  
+4. Derleme kaydı (Regasm.exe) aracını `/tlb` seçenek türleri derleme com ile kaydetmek için  
   
-5.  Derlemeyi genel bütünleştirilmiş kod önbelleğine eklemek için Genel Derleme Önbelleği (Gacutil.exe) aracını kullanın.  
+5. Derlemeyi genel bütünleştirilmiş kod önbelleğine eklemek için Genel Derleme Önbelleği (Gacutil.exe) aracını kullanın.  
   
     > [!NOTE]
     >  Derleme imzalama ve Genel Derleme Önbelleği'ne ekleyerek isteğe bağlı adımlardır ancak bunlar derleme zamanında doğru konumda yükleme işlemini kolaylaştırabilir.  

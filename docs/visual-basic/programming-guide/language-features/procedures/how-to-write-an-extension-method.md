@@ -6,33 +6,33 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819126"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313768"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Nasıl yapılır: (Visual Basic) uzantı metodu yazma
 Genişletme yöntemleri varolan bir sınıfa yöntemler eklemenize imkan tanır. Bu sınıfın bir örneğini değilmiş gibi uzantı metodu volat pouze jednou.  
   
 ### <a name="to-define-an-extension-method"></a>Bir genişletme yöntemi tanımlamak için  
   
-1.  Yeni veya mevcut bir Visual Basic uygulamaları Visual Studio'da açın.  
+1. Yeni veya mevcut bir Visual Basic uygulamaları Visual Studio'da açın.  
   
-2.  Bir genişletme yöntemi tanımlamak istediğiniz dosyasının en üstüne aşağıdaki içeri aktarma deyimi içerir:  
+2. Bir genişletme yöntemi tanımlamak istediğiniz dosyasının en üstüne aşağıdaki içeri aktarma deyimi içerir:  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  İçinde bir modül, yeni veya mevcut uygulamanızda uzantı özniteliğine sahip yöntem tanımını başlayın:  
+3. İçinde bir modül, yeni veya mevcut uygulamanızda uzantı özniteliğine sahip yöntem tanımını başlayın:  
   
     ```  
     <Extension()>  
     ```  
   
-4.  Dışında ilk parametresinin türü genişletmek istediğiniz veri türünde olmalıdır, yöntemi normal şekilde bildirin.  
+4. Dışında ilk parametresinin türü genişletmek istediğiniz veri türünde olmalıdır, yöntemi normal şekilde bildirin.  
   
     ```  
     <Extension()>   
@@ -87,4 +87,4 @@ End Module
 - [Genişletme Yöntemleri](./extension-methods.md)
 - [Module Deyimi](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
-- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic'de Kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

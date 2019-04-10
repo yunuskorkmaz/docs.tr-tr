@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158664"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298584"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme
 Uygulama geliştirme sırasında hata ayıklama sırasında Visual Studio çıktı penceresinde, izleme ve hata ayıklama çıkışını gidin. Ancak, dağıtılan bir uygulamada İzleme özelliklerini eklemek için Araçlı uygulamalarınızla derlemelisiniz **izleme** etkin derleyici yönergesi. Bu, uygulamanızın yayın sürümüne derlenecek izleme kodu sağlar. Değil etkinleştirirseniz **izleme** yönergesi, tüm izleme kodu derleme sırasında yok sayılır ve dağıtacağınız yürütülebilir kodu bulunmaz.  
@@ -36,9 +36,9 @@ Uygulama geliştirme sırasında hata ayıklama sırasında Visual Studio çıkt
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Özellik sayfaları iletişim kutusundan derleme ayarlarını değiştirmek için  
   
-1.  ' Nde proje düğümüne sağ **Çözüm Gezgini**.  
+1. ' Nde proje düğümüne sağ **Çözüm Gezgini**.  
   
-2.  Seçin **özellikleri** kısayol menüsünden.  
+2. Seçin **özellikleri** kısayol menüsünden.  
   
     -   Visual Basic'te tıklayın **derleme** özellik sayfasının sol bölmede sekme'a tıklayın **Gelişmiş derleme seçenekleri** görüntülemek için düğmeyi **Gelişmiş derleyici ayarları**iletişim kutusu. Etkinleştirmek istediğiniz derleyici ayarları için onay kutularını seçin. Devre dışı bırakmak istediğiniz ayarların onay kutularını temizleyin.  
   
@@ -46,7 +46,7 @@ Uygulama geliştirme sırasında hata ayıklama sırasında Visual Studio çıkt
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>Komut satırını kullanarak işaretlenmiş kod derlemek için  
   
-1.  Komut satırında bir koşullu derleyici anahtarını ayarlayın. Derleyici, izleme eklemek veya yürütülebilir kodu hatalarını ayıklama.  
+1. Komut satırında bir koşullu derleyici anahtarını ayarlayın. Derleyici, izleme eklemek veya yürütülebilir kodu hatalarını ayıklama.  
   
      Örneğin, komut satırına girilen aşağıdaki derleyici yönergesi, izleme kodu derlenmiş bir yürütülebilir dosya şunlardır:  
   
@@ -71,7 +71,7 @@ Uygulama geliştirme sırasında hata ayıklama sırasında Visual Studio çıkt
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>Koşullu derleme kullanarak gerçekleştirmek için #CONST veya #define  
   
-1.  Programlama diliniz için uygun deyim kaynak kod dosyasının en üstüne yazın.  
+1. Programlama diliniz için uygun deyim kaynak kod dosyasının en üstüne yazın.  
   
     |Dil|Deyim|Sonuç|  
     |--------------|---------------|------------|  

@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: WPF'de barındırmak için Direct3D9 içeriği oluşturma"
+title: "İzlenecek yol: WPF'de Barındırmak için Direct3D9 İçeriği Oluşturma"
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 8acef4a52c9317618485a7c46c1e22cc2524dd69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 160395b84ef7ca447d162ceff34752113a1d59a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379607"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300274"
 ---
-# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>İzlenecek yol: WPF'de barındırmak için Direct3D9 içeriği oluşturma
+# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>İzlenecek yol: WPF'de Barındırmak için Direct3D9 İçeriği Oluşturma
 Bu izlenecek yol, uygun bir Windows Presentation Foundation (WPF) uygulamasında barındırmak için Direct3D9 içeriği oluşturma işlemi gösterilmektedir. WPF uygulamalarında Direct3D9 içeriği barındırma ile ilgili daha fazla bilgi için bkz: [WPF ve Direct3D9 birlikte çalışması](wpf-and-direct3d9-interoperation.md).
 
  Bu kılavuzda, aşağıdaki görevleri gerçekleştirin:
@@ -37,29 +37,29 @@ Bu izlenecek yol, uygun bir Windows Presentation Foundation (WPF) uygulamasında
 
 #### <a name="to-create-the-direct3d9-project"></a>Direct3D9 projeyi oluşturmak için
 
-1.  C++'ta adlı yeni bir Win32 projesi oluşturma `D3DContent`.
+1. C++'ta adlı yeni bir Win32 projesi oluşturma `D3DContent`.
 
      Win32 Uygulama Sihirbazı açılır ve karşılama ekranı görüntülenir.
 
-2.  **İleri**'ye tıklayın.
+2. **İleri**'ye tıklayın.
 
      Uygulama ayarları ekranı görünür.
 
-3.  İçinde **uygulama türü:** bölümünden **DLL** seçeneği.
+3. İçinde **uygulama türü:** bölümünden **DLL** seçeneği.
 
-4.  **Son**'a tıklayın.
+4. **Son**'a tıklayın.
 
      D3DContent Proje oluşturulur.
 
-5.  Çözüm Gezgini'nde D3DContent projesine sağ tıklayıp **özellikleri**.
+5. Çözüm Gezgini'nde D3DContent projesine sağ tıklayıp **özellikleri**.
 
      **D3DContent özellik sayfaları** iletişim kutusu açılır.
 
-6.  Seçin **C/C++** düğümü.
+6. Seçin **C/C++** düğümü.
 
-7.  İçinde **ek içerik dizinleri** alanında, DirectX konumunu içeren klasörü belirtin. Bu klasör varsayılan konumu %ProgramFiles%\Microsoft DirectX SDK ise (*sürüm*) \Include.
+7. İçinde **ek içerik dizinleri** alanında, DirectX konumunu içeren klasörü belirtin. Bu klasör varsayılan konumu %ProgramFiles%\Microsoft DirectX SDK ise (*sürüm*) \Include.
 
-8.  Çift **bağlayıcı** düğümünü genişletin.
+8. Çift **bağlayıcı** düğümünü genişletin.
 
 9. İçinde **ek kitaplık dizinleri** alanında, DirectX kitaplıkları klasörünün konumunu belirtin. Bu klasör varsayılan konumu %ProgramFiles%\Microsoft DirectX SDK ise (*sürüm*) \Lib\x86'dır.
 
@@ -74,7 +74,7 @@ Bu izlenecek yol, uygun bir Windows Presentation Foundation (WPF) uygulamasında
 
 #### <a name="to-create-the-direct3d9-content"></a>Direct3D9 içeriği oluşturma
 
-1.  Çözüm Gezgini'nde, üç C++ sınıfları aşağıdaki adlı projeye ekleyin.
+1. Çözüm Gezgini'nde, üç C++ sınıfları aşağıdaki adlı projeye ekleyin.
 
      `CRenderer` (sanal yıkıcı ile)
 
@@ -82,31 +82,31 @@ Bu izlenecek yol, uygun bir Windows Presentation Foundation (WPF) uygulamasında
 
      `CTriangleRenderer`
 
-2.  Renderer.h'ı Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+2. Renderer.h'ı Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
 
-3.  Renderer.cpp'yi Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+3. Renderer.cpp'yi Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
 
-4.  RendererManager.h'ı Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+4. RendererManager.h'ı Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
 
-5.  RendererManager.cpp'yi Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+5. RendererManager.cpp'yi Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
 
-6.  TriangleRenderer.h'ı Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+6. TriangleRenderer.h'ı Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
 
-7.  TriangleRenderer.cpp'yi Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+7. TriangleRenderer.cpp'yi Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
 
-8.  Stdafx.h Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
+8. Stdafx.h Kod Düzenleyicisi'nde açın ve otomatik olarak oluşturulan kodu aşağıdaki kodla değiştirin.
 
      [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
 
@@ -143,4 +143,4 @@ Bu izlenecek yol, uygun bir Windows Presentation Foundation (WPF) uygulamasında
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 ve WPF Birlikte Çalışabilirliği için Performans ile İlgili Önemli Noktalar](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [İzlenecek yol: WPF'de Direct3D9 içeriği barındırma](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [İzlenecek yol: Direct3D9 İçeriğini WPF’de Barındırma](walkthrough-hosting-direct3d9-content-in-wpf.md)

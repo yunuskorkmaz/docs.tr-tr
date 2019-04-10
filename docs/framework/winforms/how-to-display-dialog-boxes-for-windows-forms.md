@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Windows Forms, calling one form from another
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
-ms.openlocfilehash: a25fe86c4dde1fed69e192956d77615bf2a70402
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537430"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311090"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Nasıl yapılır: Windows Forms için İletişim Kutularını Görüntüleme
-Diğer bir uygulamada görüntülemek aynı şekilde bir iletişim kutusu görüntüler. Başlangıç formu uygulama çalıştırıldığında otomatik olarak yükler. İkinci form veya iletişim kutusu uygulamada görünür yapmak için yükleme ve görüntülemek için kod yazma. Benzer şekilde, form veya iletişim kutusu kaybolur, kaldırma veya gizlemek için kod yazma.  
+Uygulamada herhangi bir biçimde görüntüler aynı şekilde bir iletişim kutusu görüntüler. Uygulamayı çalıştırdığınızda başlangıç formu otomatik olarak yükler. İkinci form veya iletişim kutusu uygulamada görünür hale getirmek için yükleme ve görüntüleme için kod yazın. Benzer şekilde, form veya iletişim kutusu kaybolur, kaldırma veya gizlemek için kod yazın.  
   
-### <a name="to-display-a-dialog-box"></a>Bir iletişim kutusu görüntülemek için  
+### <a name="to-display-a-dialog-box"></a>İletişim kutusunu görüntülemek için  
   
-1.  İletişim kutusunu açmak istediğiniz olay işleyicisi gidin. Menü komutu seçildiğinde bir düğme tıklatıldığında veya başka bir olay olduğunda oluşabilir.  
+1. İletişim kutusunu açmak istediğiniz olay işleyicisine Git. Bir menü komutu seçildiğinde bir düğme tıklandığında ya da başka bir olay meydana geldiğinde bu durum oluşabilir.  
   
-2.  Olay işleyicisi iletişim kutusunu açmak için kodu ekleyin. Bu örnekte, bir düğme tıklama olayı iletişim kutusunu göstermek için kullanılır:  
+2. Olay işleyicisi, iletişim kutusunu açmak için kodu ekleyin. Bu örnekte, bir düğme tıklama olayı, iletişim kutusunu göstermek için kullanılır:  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

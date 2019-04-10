@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: c71ab84cfd97e65f5e30bd5e1ff651f8e0c2d700
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132086"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306072"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Yayımlama .NET Core CLI ile uygulamaları
 
@@ -33,8 +33,7 @@ Hızlı Yardım için CLI'yı kullanarak istiyorsunuz? Aşağıdaki tablo bazı 
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
-> [!IMPORTANT]
-> \*SDK'sı sürüm 3.0 kullanırken, framework bağımlı yürütülebilir varsayılan yayımlama modu temel çalıştırırken budur `dotnet publish` komutu. Bu yalnızca projelerine hedefleyen yöneliktir **.NET Core 2.1** veya **.NET Core 3.0**.
+\* SDK'sı sürüm 3.0, framework bağımlı yürütülebilir varsayılan yayımlama modu temel çalıştırırken kullanıldığında `dotnet publish` komutu. Bu yalnızca proje ya da hedeflediğinde geçerlidir **.NET Core 2.1** veya **.NET Core 3.0**.
 
 ## <a name="publishing-basics"></a>Yayımlama temelleri
 

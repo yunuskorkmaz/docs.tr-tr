@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: PLINQ sorgusunu iptal etme'
+title: 'Nasıl yapılır: PLINQ Sorgusunu İptal Etme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604307"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305344"
 ---
-# <a name="how-to-cancel-a-plinq-query"></a>Nasıl yapılır: PLINQ sorgusunu iptal etme
+# <a name="how-to-cancel-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunu İptal Etme
 Aşağıdaki örnekler, PLINQ sorgusunu iptal etme için iki yol gösterir. İlk örnek, çoğunlukla veri geçişini oluşan bir sorguyu iptal gösterilmektedir. İkinci örnek, hesaplama açısından pahalıdır bir kullanıcı işlevi içeren bir sorguyu iptal gösterilmektedir.  
   
 > [!NOTE]
@@ -34,9 +34,9 @@ Aşağıdaki örnekler, PLINQ sorgusunu iptal etme için iki yol gösterir. İlk
   
  İptal seçeneğiyle ilgili genel kılavuz aşağıdaki gibidir:  
   
-1.  Kullanıcı Temsilcisi iptal gerçekleştirirseniz PLINQ dış hakkında bilgilendirmek <xref:System.Threading.CancellationToken> ve throw bir <xref:System.OperationCanceledException>(externalCT).  
+1. Kullanıcı Temsilcisi iptal gerçekleştirirseniz PLINQ dış hakkında bilgilendirmek <xref:System.Threading.CancellationToken> ve throw bir <xref:System.OperationCanceledException>(externalCT).  
   
-2.  İptal gerçekleşirse ve başka bir özel durum oluşturulur, ardından, işleyeceğini bir <xref:System.OperationCanceledException> yerine <xref:System.AggregateException>.  
+2. İptal gerçekleşirse ve başka bir özel durum oluşturulur, ardından, işleyeceğini bir <xref:System.OperationCanceledException> yerine <xref:System.AggregateException>.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, kullanıcı kodunda hesaplama açısından pahalı bir işlev olduğunda iptal nasıl ele alınacağını gösterir.  

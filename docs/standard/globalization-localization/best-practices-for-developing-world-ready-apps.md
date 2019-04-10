@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a42a568e7c3f3a1a5c84d2ceae49c262f77d275d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442496"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310544"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Dünya çapında kullanılmaya hazır uygulamalar geliştirmek için en iyi yöntemler
 
@@ -71,7 +71,7 @@ Bu bölümde dünya çapında kullanılmaya hazır uygulamalar geliştirirken iz
 
 8. Kullanım <xref:System.Resources.ResourceManager?displayProperty=nameWithType> kaynakları almak için sınıf tabanlı kültürü üzerinde.
 
-9. Kullanım [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) Windows formları oluşturmak için kullanarak yerelleştirilebilen için iletişim kutularını [Windows Forms Kaynak Düzenleyicisi'ni (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Windows Forms iletişim kutuları ile kodlamayın.
+9. Kullanım [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) Windows formları oluşturmak için kullanarak yerelleştirilebilen için iletişim kutularını [Windows Forms Kaynak Düzenleyicisi'ni (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Windows Forms iletişim kutuları ile kodlamayın.
 
 10. Profesyonel yerelleştirme (çeviri) için düzenleyin.
 

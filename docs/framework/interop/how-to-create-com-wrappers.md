@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: COM sarmalayıcıları oluşturma'
+title: 'Nasıl yapılır: COM Sarmalayıcıları Oluşturma'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540981"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324141"
 ---
-# <a name="how-to-create-com-wrappers"></a>Nasıl yapılır: COM sarmalayıcıları oluşturma
+# <a name="how-to-create-com-wrappers"></a>Nasıl yapılır: COM Sarmalayıcıları Oluşturma
 
 Bileşen Nesne Modeli (COM) sarmalayıcılar Visual Studio 2005 özellikleri veya .NET Framework Araçları, Tlbimp.exe ve RegAsm.exe'yi kullanarak oluşturabilirsiniz. Her iki yöntem de iki tür COM sarmalayıcıları oluşturma:
 
@@ -28,13 +28,13 @@ Visual Studio 2005'te, projenize bir başvuru olarak COM sarmalayıcı ekleyebil
 
 ### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Visual Studio kullanarak bir çalışma zamanı aranabilir sarmalayıcısı oluşturmak için
 
-1.  Yönetilen uygulamanız için projeyi açın.
+1. Yönetilen uygulamanız için projeyi açın.
 
-2.  Üzerinde **proje** menüsünü tıklatın **tüm dosyaları göster**.
+2. Üzerinde **proje** menüsünü tıklatın **tüm dosyaları göster**.
 
-3.  Üzerinde **proje** menüsünü tıklatın **Başvuru Ekle**.
+3. Üzerinde **proje** menüsünü tıklatın **Başvuru Ekle**.
 
-4.  Başvuru Ekle iletişim kutusuna tıklayın **COM** sekmesinde, seçmek istediğiniz tıklatın ve bileşeni **Tamam**.
+4. Başvuru Ekle iletişim kutusuna tıklayın **COM** sekmesinde, seçmek istediğiniz tıklatın ve bileşeni **Tamam**.
 
      İçinde **Çözüm Gezgini**, projenizi başvurular klasörüne COM bileşeninin eklendiğine dikkat edin.
 
@@ -53,15 +53,15 @@ Artık, COM nesnesi erişmek için kod yazabilirsiniz. Nesne gibi ile bildirerek
   
 ### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Visual Studio kullanarak COM çağrılabilir sarmalayıcısı oluşturmak için  
   
-1.  Yerel kodda çalıştırmak istediğiniz yönetilen sınıf için bir sınıf kitaplığı projesi oluşturun. Sınıfı, bir varsayılan oluşturucuya sahip olmalıdır.  
+1. Yerel kodda çalıştırmak istediğiniz yönetilen sınıf için bir sınıf kitaplığı projesi oluşturun. Sınıfı, bir varsayılan oluşturucuya sahip olmalıdır.  
   
      AssemblyInfo dosyası içinde derleme için bir tam Dört bölümlü sürüm numarasına sahip olduğunuzu doğrulayın. Bu sayı, sürüm oluşturma Windows kayıt defterinde bakımı için gereklidir. Sürüm numaraları hakkında daha fazla bilgi için bkz: [derleme sürümlendirme](../../../docs/framework/app-domains/assembly-versioning.md).  
   
-2.  Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
+2. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
   
-3.  Tıklayın **derleme** sekmesi.  
+3. Tıklayın **derleme** sekmesi.  
   
-4.  Seçin **kaydetme COM birlikte çalışması için** onay kutusu.  
+4. Seçin **kaydetme COM birlikte çalışması için** onay kutusu.  
   
  Proje oluşturduğunuzda, derlemenin COM birlikte çalışması için otomatik olarak kaydedilir. Visual Studio 2005 yerel bir uygulama oluşturuyorsanız tıklayarak derleme kullanabilirsiniz **Başvuru Ekle** üzerinde **proje** menüsü.  
   
@@ -75,5 +75,5 @@ Herhangi bir dizinde bulunan bir derlemeyi Regasm.exe çalıştırın ve ardınd
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [COM Çağrılabilir Sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md)
+- [Çalışma Zamanı Aranabilir Sarmalayıcısı](../../../docs/framework/interop/runtime-callable-wrapper.md)
+- [COM Aranabilir Sarmalayıcısı](../../../docs/framework/interop/com-callable-wrapper.md)

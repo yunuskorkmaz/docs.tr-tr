@@ -1,15 +1,15 @@
 ---
-title: Geliştirme işlemi için Docker tabanlı uygulamalar
+title: Docker Tabanlı Uygulamalar için Geliştirme İşlemi
 description: Seçenekler Docker tabanlı uygulamalar geliştirmeye yönelik üst düzey bir bakış edinin. Windows için Visual Studio, Visual Studio seçtiğiniz Mac ya da Visual Studio Code için çok platformlu destek için (Windows, Mac ve Linux) kullanarak.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: 219a562459be7fb1114dfdd9f139c938d1282c5c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 55d80e3d9f464b940d17b13a598bdab57631a8e4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465041"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324090"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker tabanlı uygulamalar için geliştirme işlemi
 
@@ -32,7 +32,7 @@ Yükleyerek [Docker Community Edition'ı (CE)](https://www.docker.com/community-
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Visual Studio**. Resmi sitesi. \
-  [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/)
+  [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 - **Visual Studio Code**. Resmi sitesi. \
   [https://code.visualstudio.com/download](https://code.visualstudio.com/download)

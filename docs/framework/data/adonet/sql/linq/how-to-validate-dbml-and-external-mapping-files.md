@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: DBML ve Dış Eşleme Dosyalarını Doğrulama'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: b01bcf98bba185b7a4b1802f470a585371980177
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 83a26f22495c849aa00143ca36b63fa147120c28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078739"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310245"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Nasıl yapılır: DBML ve Dış Eşleme Dosyalarını Doğrulama
 Dış eşleme dosyalarını ve değişiklik .dbml dosyalarını, karşılık gelen şema tanımlarının karşı doğrulanmalıdır. Bu konu, doğrulama işlemini uygulamak için Visual Studio kullanıcılarıyla adımları sağlar.  
@@ -16,31 +16,31 @@ Dış eşleme dosyalarını ve değişiklik .dbml dosyalarını, karşılık gel
   
 ### <a name="to-validate-a-dbml-or-xml-file"></a>Bir .dbml veya XML dosyasını doğrulamak için  
   
-1.  Visual Studio'da **dosya** menüsünde **açık**ve ardından **dosya**.  
+1. Visual Studio'da **dosya** menüsünde **açık**ve ardından **dosya**.  
   
-2.  İçinde **açık dosya** iletişim kutusunda, .dbml ya da doğrulamak istediğiniz XML eşleme dosyası.  
+2. İçinde **açık dosya** iletişim kutusunda, .dbml ya da doğrulamak istediğiniz XML eşleme dosyası.  
   
      Dosya açılır **XML Düzenleyicisi**.  
   
-3.  Pencerenin sağ tıklayın ve ardından **özellikleri**.  
+3. Pencerenin sağ tıklayın ve ardından **özellikleri**.  
   
-4.  İçinde **özellikleri** penceresinde üç nokta simgesine tıklayın **şemaları** özelliği.  
+4. İçinde **özellikleri** penceresinde üç nokta simgesine tıklayın **şemaları** özelliği.  
   
      **XML şemaları** iletişim kutusu açılır.  
   
-5.  Amacınıza uygun şema tanımı unutmayın.  
+5. Amacınıza uygun şema tanımı unutmayın.  
   
     -   Bir .dbml dosyası doğrulamak için şema tanımı DbmlSchema.xsd olur. Daha fazla bilgi için [LINQ to SQL'de kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
     -   Dış XML eşleme dosyası doğrulamak için şema tanımı LinqToSqlMapping.xsd olur. Daha fazla bilgi için [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
-6.  İçinde **kullanım** açılır kutusunu açın ve ardından tıklatıp istediğiniz şema tanımı satırın sütun **Bu şemayı kullan**.  
+6. İçinde **kullanım** açılır kutusunu açın ve ardından tıklatıp istediğiniz şema tanımı satırın sütun **Bu şemayı kullan**.  
   
      Şema tanımı, DBML ile ilişkili şimdi veya eşleme dosyası XML dosyasıdır.  
   
      Başka bir şema tanımları seçili olduğundan emin olun.  
   
-7.  Üzerinde **görünümü** menüsünü tıklatın **hata listesi**.  
+7. Üzerinde **görünümü** menüsünü tıklatın **hata listesi**.  
   
      Hataları, uyarıları ve iletileri oluşturulmuş olup olmadığını belirler. Aksi durumda, şema tanımıyla geçerli XML dosyasıdır.  
   
@@ -49,26 +49,26 @@ Dış eşleme dosyalarını ve değişiklik .dbml dosyalarını, karşılık gel
   
 #### <a name="to-copy-a-schema-definition-file-from-a-help-topic"></a>Bir Yardım konusunun bir şema tanımı dosyasını kopyalamak için  
   
-1.  Bu konunun önceki kısımlarında açıklandığı gibi şema tanımını içerdiğinden Yardım konusu bulun.  
+1. Bu konunun önceki kısımlarında açıklandığı gibi şema tanımını içerdiğinden Yardım konusu bulun.  
   
     -   .DBML dosyalar için bkz: [LINQ to SQL'de kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
     -   Dış eşleme dosyaları için bkz: [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
-2.  Tıklayın **kopyalama kod** kod dosyası panoya kopyalamak için.  
+2. Tıklayın **kopyalama kod** kod dosyası panoya kopyalamak için.  
   
-3.  Yeni bir dosya oluşturmak için Not Defteri'ni başlatın.  
+3. Yeni bir dosya oluşturmak için Not Defteri'ni başlatın.  
   
-4.  Pano koddan not defteri dosyasına yapıştırın.  
+4. Pano koddan not defteri dosyasına yapıştırın.  
   
-5.  Not Defteri'ni üzerinde **dosya** menüsünde tıklayın **Kaydet**.  
+5. Not Defteri'ni üzerinde **dosya** menüsünde tıklayın **Kaydet**.  
   
-6.  İçinde **kodlama** kutusunda **Unicode**.  
+6. İçinde **kodlama** kutusunda **Unicode**.  
   
     > [!IMPORTANT]
     >  Bu seçim, 16 Unicode bayt sırası işareti garanti eder (`FFFE`) metin dosyasına eklenir.  
   
-7.  İçinde **dosya adı** kutusunda, bir .xsd uzantısı ile adlı bir dosya oluşturun.  
+7. İçinde **dosya adı** kutusunda, bir .xsd uzantısı ile adlı bir dosya oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

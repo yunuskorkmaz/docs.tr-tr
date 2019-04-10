@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: e487da6316ec381c2009ee33575848dd80df8ab2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1a8d99e5d2bd21a74318718f43b5d1c091ed073e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076634"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322153"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>Nasıl yapılır: Maksimum Saat Eğriltme Ayarlama
 İki bilgisayar saat ayarları farklı ise, zaman açısından kritik işlevler derailed. Bu olasılığını azaltmak için ayarlayabileceğiniz `MaxClockSkew` özelliğini bir <xref:System.TimeSpan>. Bu özellik, iki sınıf üzerinde kullanılabilir:  
@@ -29,41 +29,41 @@ ms.locfileid: "59076634"
   
 ### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>Yeni bir saat ile özel bir bağlama oluşturmak için kod değerinde eğme  
   
-1.  > [!WARNING]
+1. > [!WARNING]
     >  Kodunuzda aşağıdaki ad alanlarına Başvuru Ekle unutmayın: <xref:System.ServiceModel.Channels>, <xref:System.ServiceModel.Description>, <xref:System.Security.Permissions>, ve <xref:System.ServiceModel.Security.Tokens>.  
   
      Bir örneğini oluşturmak bir <xref:System.ServiceModel.WSHttpBinding> sınıfı ve kendi güvenlik modunu ayarlama <xref:System.ServiceModel.SecurityMode.Message>.  
   
-2.  Yeni bir örneğini oluşturma <xref:System.ServiceModel.Channels.BindingElementCollection> çağırarak sınıfı <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A> yöntemi.  
+2. Yeni bir örneğini oluşturma <xref:System.ServiceModel.Channels.BindingElementCollection> çağırarak sınıfı <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A> yöntemi.  
   
-3.  Kullanım <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> yöntemi <xref:System.ServiceModel.Channels.BindingElementCollection> güvenliği bağlama öğesini bulmak için sınıf.  
+3. Kullanım <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> yöntemi <xref:System.ServiceModel.Channels.BindingElementCollection> güvenliği bağlama öğesini bulmak için sınıf.  
   
-4.  Kullanırken <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> gerçek türüne yöntemi. Yayınları için aşağıdaki örnekte <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> türü.  
+4. Kullanırken <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> gerçek türüne yöntemi. Yayınları için aşağıdaki örnekte <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> türü.  
   
-5.  Ayarlama <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> güvenlik bağlama öğesi özelliği.  
+5. Ayarlama <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> güvenlik bağlama öğesi özelliği.  
   
-6.  Oluşturma bir <xref:System.ServiceModel.ServiceHost> uygun hizmet türü ve temel adresine sahip.  
+6. Oluşturma bir <xref:System.ServiceModel.ServiceHost> uygun hizmet türü ve temel adresine sahip.  
   
-7.  Kullanım <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> bir uç nokta ekleyin ve eklemek için yöntem <xref:System.ServiceModel.Channels.CustomBinding>.  
+7. Kullanım <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> bir uç nokta ekleyin ve eklemek için yöntem <xref:System.ServiceModel.Channels.CustomBinding>.  
   
      [!code-csharp[c_MaxClockSkew#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_maxclockskew/cs/source.cs#1)]
      [!code-vb[c_MaxClockSkew#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_maxclockskew/vb/source.vb#1)]  
   
 ### <a name="to-set-the-maxclockskew-in-configuration"></a>MaxClockSkew yapılandırmada ayarlamak için  
   
-1.  Oluşturma bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) içinde [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) öğesi bölümü.  
+1. Oluşturma bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) içinde [ \<bağlamaları >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) öğesi bölümü.  
   
-2.  Oluşturma bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi ve kümesi `name` özniteliği için uygun bir değer. Aşağıdaki örnek ayarlar `MaxClockSkewBinding`.  
+2. Oluşturma bir [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesi ve kümesi `name` özniteliği için uygun bir değer. Aşağıdaki örnek ayarlar `MaxClockSkewBinding`.  
   
-3.  Bir kodlama öğesi ekleyin. Aşağıdaki örnekte ekler bir [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
+3. Bir kodlama öğesi ekleyin. Aşağıdaki örnekte ekler bir [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
-4.  Ekleme bir [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesi ve kümesi `authenticationMode` özniteliği için uygun bir ayar. Aşağıdaki örnek özniteliği olarak ayarlanmış `Kerberos` hizmet Windows kimlik doğrulaması kullandığını belirtmek için.  
+4. Ekleme bir [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) öğesi ve kümesi `authenticationMode` özniteliği için uygun bir ayar. Aşağıdaki örnek özniteliği olarak ayarlanmış `Kerberos` hizmet Windows kimlik doğrulaması kullandığını belirtmek için.  
   
-5.  Ekleme bir [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) ayarlayıp `maxClockSkew` biçiminde bir değer özniteliği `"##:##:##"`. Aşağıdaki örnek, 7 dakika olarak ayarlar. İsteğe bağlı olarak, ekleme bir [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) ayarlayıp `maxClockSkew` özniteliği için uygun bir ayar.  
+5. Ekleme bir [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) ayarlayıp `maxClockSkew` biçiminde bir değer özniteliği `"##:##:##"`. Aşağıdaki örnek, 7 dakika olarak ayarlar. İsteğe bağlı olarak, ekleme bir [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) ayarlayıp `maxClockSkew` özniteliği için uygun bir ayar.  
   
-6.  Bir transport öğesi ekleyin. Aşağıdaki örnekte bir [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
+6. Bir transport öğesi ekleyin. Aşağıdaki örnekte bir [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
   
-7.  Güvenli bir konuşma için güvenlik ayarlarını önyükleme içinde gerçekleşmelidir [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) öğesi.  
+7. Güvenli bir konuşma için güvenlik ayarlarını önyükleme içinde gerçekleşmelidir [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) öğesi.  
   
     ```xml  
     <bindings>  

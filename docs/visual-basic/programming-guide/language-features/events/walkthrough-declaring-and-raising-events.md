@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 0f48c90232c00f53007e7d2f8f08e2107406ecad
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841010"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320697"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>İzlenecek yol: (Visual Basic) olay bildirme ve oluşturma
 Bu izlenecek yolda bildirme ve adlı bir sınıf için bir olay yapmayı gösteren `Widget`. Adımları tamamladıktan sonra Yardımcısı konuyu okumak isteyebilirsiniz [izlenecek yol: Olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), olaylarından kullanmak nasıl `Widget` uygulamada durum bilgilerini sağlamak için nesneleri.  
@@ -28,11 +28,11 @@ Bu izlenecek yolda bildirme ve adlı bir sınıf için bir olay yapmayı göster
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Bu konu için kod örneği oluşturmak için  
   
-1.  Yeni bir Visual Basic Windows uygulaması projesi açın ve adlı bir form oluşturun `Form1`.  
+1. Yeni bir Visual Basic Windows uygulaması projesi açın ve adlı bir form oluşturun `Form1`.  
   
-2.  İki düğme ve bir etiketin ekleme `Form1`.  
+2. İki düğme ve bir etiketin ekleme `Form1`.  
   
-3.  Aşağıdaki tabloda gösterildiği gibi nesneleri ad.  
+3. Aşağıdaki tabloda gösterildiği gibi nesneleri ad.  
   
     |Nesne|Özellik|Ayar|  
     |------------|--------------|-------------|  
@@ -40,7 +40,7 @@ Bu izlenecek yolda bildirme ve adlı bir sınıf için bir olay yapmayı göster
     |`Button2`|`Text`|İptal|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4.  Üzerinde **proje** menüsünde seçin **sınıfı Ekle** adlı bir sınıf eklemek için `Widget.vb` projeye.  
+4. Üzerinde **proje** menüsünde seçin **sınıfı Ekle** adlı bir sınıf eklemek için `Widget.vb` projeye.  
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>Pencere sınıfı için bir olay bildirmek için  
   
@@ -57,11 +57,11 @@ Bu izlenecek yolda bildirme ve adlı bir sınıf için bir olay yapmayı göster
   
 #### <a name="to-raise-the-percentdone-event"></a>PercentDone olayı yükseltmek için  
   
-1.  Erişimini basitleştirmek için `Timer` Bu sınıf tarafından kullanılan özellik Ekle bir `Imports` sınıfı modülünüzde bildirimler bölümünü üstüne deyimi yukarıda `Class Widget` deyimi.  
+1. Erişimini basitleştirmek için `Timer` Bu sınıf tarafından kullanılan özellik Ekle bir `Imports` sınıfı modülünüzde bildirimler bölümünü üstüne deyimi yukarıda `Class Widget` deyimi.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2.  Aşağıdaki kodu ekleyin `Widget` sınıfı:  
+2. Aşağıdaki kodu ekleyin `Widget` sınıfı:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
@@ -77,5 +77,5 @@ Bu izlenecek yolda bildirme ve adlı bir sınıf için bir olay yapmayı göster
 
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>
-- [İzlenecek yol: Olayları işleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)
+- [İzlenecek yol: Olayları İşleme](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)
 - [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WCF Hizmetlerini WSE 3.0 İstemcileriyle Birlikte Çalışmak için Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177300"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303901"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Nasıl yapılır: WCF Hizmetlerini WSE 3.0 İstemcileriyle Birlikte Çalışmak için Yapılandırma
 Windows Communication Foundation (WCF) hizmetlerini WCF hizmetleri belirtiminin WS-Addressing Ağustos 2004 sürümü kullanmak üzere yapılandırılmış hat düzeyinde (WSE) Microsoft .NET istemcileri için Web Hizmetleri iyileştirmeleri 3.0 uyumlu olur.  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>WSE 3.0 istemcileriyle birlikte çalışmak bir WCF hizmetini etkinleştirmek için  
   
-1.  WCF hizmeti için özel bir bağlama tanımlar.  
+1. WCF hizmeti için özel bir bağlama tanımlar.  
   
      Belirtiminin WS-Addressing Ağustos 2004 sürümü ileti kodlama için kullanıldığını belirtmek için özel bir bağlama yeniden oluşturulması gerekir.  
   
@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF) hizmetlerini WCF hizmetleri belirtiminin 
         > [!NOTE]
         >  SOAP 1.2 kullanırken ayarlayın `messageVersion` özniteliğini <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>.  
   
-2.  Hizmetin özel bağlama kullanacağını belirtin.  
+2. Hizmetin özel bağlama kullanacağını belirtin.  
   
     1.  Ayarlama `binding` özniteliği [ \<uç noktası >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesine `customBinding`.  
   

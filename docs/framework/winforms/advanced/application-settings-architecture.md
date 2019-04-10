@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099787"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312572"
 ---
 # <a name="application-settings-architecture"></a>Uygulama Ayarları Mimarisi
 Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve mimarinin gruplandırılmış ayarları ve ayarları anahtarları gibi gelişmiş özellikleri keşfediyor.  
@@ -100,11 +100,11 @@ Bu konuda, uygulama ayarları mimarisi nasıl çalıştığını açıklanır ve
 ### <a name="settings-serialization"></a>Ayarları seri hale getirme  
  Zaman <xref:System.Configuration.LocalFileSettingsProvider> ayarları diske kaydetmelisiniz aşağıdaki eylemleri gerçekleştirir:  
   
-1.  Tanımlanan tüm özellikler incelemek için yansıtma kullanır, <xref:System.Configuration.ApplicationSettingsBase> türetilmiş sınıf ile uygulanan bu bulma, <xref:System.Configuration.ApplicationScopedSettingAttribute> veya <xref:System.Configuration.UserScopedSettingAttribute>.  
+1. Tanımlanan tüm özellikler incelemek için yansıtma kullanır, <xref:System.Configuration.ApplicationSettingsBase> türetilmiş sınıf ile uygulanan bu bulma, <xref:System.Configuration.ApplicationScopedSettingAttribute> veya <xref:System.Configuration.UserScopedSettingAttribute>.  
   
-2.  Disk özelliğine serileştirir. Çağırmak ilk deneme <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> veya <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> üzerinde türü ilişkili <xref:System.ComponentModel.TypeConverter>. Bu başarısız olursa, bunun yerine XML serileştirme kullanır.  
+2. Disk özelliğine serileştirir. Çağırmak ilk deneme <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> veya <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> üzerinde türü ilişkili <xref:System.ComponentModel.TypeConverter>. Bu başarısız olursa, bunun yerine XML serileştirme kullanır.  
   
-3.  Hangi dosyaların ayarlarınız belirler ayarın özniteliğine dayanarak.  
+3. Hangi dosyaların ayarlarınız belirler ayarın özniteliğine dayanarak.  
   
  Kendi ayarları sınıfı uygularsanız, kullanabileceğiniz <xref:System.Configuration.SettingsSerializeAsAttribute> ikili veya özel serileştirme kullanmak için bir ayar işaretlemek için <xref:System.Configuration.SettingsSerializeAs> sabit listesi. Kodda kendi ayarları sınıfı oluşturma ile ilgili daha fazla bilgi için bkz: [nasıl yapılır: Uygulama ayarları oluşturma](how-to-create-application-settings.md).  
   

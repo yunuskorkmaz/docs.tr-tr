@@ -10,29 +10,29 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832287"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312247"
 ---
 # <a name="overload-resolution-visual-basic"></a>Aşırı Yükleme Çözümü (Visual Basic Başvurusu)
 Visual Basic Derleyicisi aşırı yüklenmiş sürümlerinde tanımlanan bir yordam çağrısı karşılaştığında derleyici çağırmak için aşırı yüklemeleri, karar vermeniz gerekir. Bunu aşağıdaki adımları uygulayarak yapar:  
   
-1.  **Erişilebilirlik.** Bu, çağrıyı yapan kod bunu çağırma engelleyen erişim düzeyine sahip hiçbir aşırı yüklemeyle ortadan kaldırır.  
+1. **Erişilebilirlik.** Bu, çağrıyı yapan kod bunu çağırma engelleyen erişim düzeyine sahip hiçbir aşırı yüklemeyle ortadan kaldırır.  
   
-2.  **Parametre sayısı.** Bu, çağrıyı sağlanan daha farklı bir dizi parametre tanımlar hiçbir aşırı yüklemeyle ortadan kaldırır.  
+2. **Parametre sayısı.** Bu, çağrıyı sağlanan daha farklı bir dizi parametre tanımlar hiçbir aşırı yüklemeyle ortadan kaldırır.  
   
-3.  **Parametre veri türleri.** Derleyici, örnek yöntemler tercih üzerinde genişletme yöntemleri sağlar. Herhangi bir örnek yöntemi yalnızca yordam çağrısı eşleştirilecek dönüştürmeleri genişletme gerektiren bulunursa, tüm uzantı yöntemleri bırakılır ve derleyici yalnızca örnek yöntemi adayları ile devam eder. Bu tür bir örnek yöntem bulunursa, örneği ve genişletme yöntemleri ile devam eder.  
+3. **Parametre veri türleri.** Derleyici, örnek yöntemler tercih üzerinde genişletme yöntemleri sağlar. Herhangi bir örnek yöntemi yalnızca yordam çağrısı eşleştirilecek dönüştürmeleri genişletme gerektiren bulunursa, tüm uzantı yöntemleri bırakılır ve derleyici yalnızca örnek yöntemi adayları ile devam eder. Bu tür bir örnek yöntem bulunursa, örneği ve genişletme yöntemleri ile devam eder.  
   
      Bu adımda, çağırma bağımsız değişkenlerinin veri türleri için aşırı yüklemesi'içinde tanımlanan parametre türleri olarak değiştirilemez hiçbir aşırı yüklemeyle ortadan kaldırır.  
   
-4.  **Daraltma dönüştürmeleri.** Bu çağırma bağımsız değişken türleri için tanımlanan parametre türleri bir daraltma dönüşümü gerektirir hiçbir aşırı yüklemeyle ortadan kaldırır. Bu tür denetimi olup geçiş geçerlidir ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `On` veya `Off`.  
+4. **Daraltma dönüştürmeleri.** Bu çağırma bağımsız değişken türleri için tanımlanan parametre türleri bir daraltma dönüşümü gerektirir hiçbir aşırı yüklemeyle ortadan kaldırır. Bu tür denetimi olup geçiş geçerlidir ([Option Strict deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) olan `On` veya `Off`.  
   
-5.  **En az genişletme.** Derleyici çiftler halinde kalan aşırı göz önünde bulundurur. Her bir çifti için tanımlanan parametrelerin veri türlerini karşılaştırır. Tüm aşırı yüklemeler türlerinde diğer karşılık gelen türlerine genişletmek, derleyici ikinci ortadan kaldırır. Diğer bir deyişle, en az genişletme miktarını gerektiren aşırı korur.  
+5. **En az genişletme.** Derleyici çiftler halinde kalan aşırı göz önünde bulundurur. Her bir çifti için tanımlanan parametrelerin veri türlerini karşılaştırır. Tüm aşırı yüklemeler türlerinde diğer karşılık gelen türlerine genişletmek, derleyici ikinci ortadan kaldırır. Diğer bir deyişle, en az genişletme miktarını gerektiren aşırı korur.  
   
-6.  **Tek aday.** Aşırı yüklemeler tek kadar çiftler halinde aşırı kalır ve aşırı yükleyen çağrısı çözümler considering devam eder. Derleyici, tek bir aday için aşırı azaltılamaz, bir hata oluşturur.  
+6. **Tek aday.** Aşırı yüklemeler tek kadar çiftler halinde aşırı kalır ve aşırı yükleyen çağrısı çözümler considering devam eder. Derleyici, tek bir aday için aşırı azaltılamaz, bir hata oluşturur.  
   
  Aşağıdaki çizimde, bir dizi çağırmak için aşırı yüklenmiş sürümleri belirleyen işlemi gösterilmektedir.  
   
@@ -64,10 +64,10 @@ Visual Basic Derleyicisi aşırı yüklenmiş sürümlerinde tanımlanan bir yor
 - [Parametre Dizileri](./parameter-arrays.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
 - [Yordam Sorunlarını Giderme](./troubleshooting-procedures.md)
-- [Nasıl yapılır: Bir yordamın birden fazla sürümünü tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Nasıl yapılır: Aşırı yüklenmiş bir yordamı çağırma](./how-to-call-an-overloaded-procedure.md)
-- [Nasıl yapılır: İsteğe bağlı parametreler isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Nasıl yapılır: Belirsiz sayıda parametre isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma](./how-to-call-an-overloaded-procedure.md)
+- [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Aşırı Yüklemeler](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Genişletme Yöntemleri](./extension-methods.md)

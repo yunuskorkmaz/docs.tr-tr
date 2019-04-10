@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 76055358f9dede9749d1575a5f43d5593c1c9b51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7aa5208a4f378408a01a08a2f4c9dbf2edfa5243
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176377"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323609"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>Nasıl yapılır: Karma Uygulamada Görsel Stilleri Etkinleştirme
 Bu konuda nasıl etkinleştirileceği gösterilmektedir [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] görsel stillerin bir [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] denetiminde barındırılan bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-tabanlı bir uygulama.  
@@ -26,25 +26,25 @@ Bu konuda nasıl etkinleştirileceği gösterilmektedir [!INCLUDE[TLA#tla_winxp]
   
 #### <a name="to-enable-windows-forms-visual-styles"></a>Windows Forms görsel stilleri etkinleştirmek için  
   
-1.  Oluşturma bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] adlı uygulama projesi `HostingWfWithVisualStyles`.  
+1. Oluşturma bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] adlı uygulama projesi `HostingWfWithVisualStyles`.  
   
-2.  Çözüm Gezgini'nde, aşağıdaki derlemelere başvurular ekleyin.  
+2. Çözüm Gezgini'nde, aşağıdaki derlemelere başvurular ekleyin.  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  Araç kutusunda çift <xref:System.Windows.Controls.Grid> simgesini yerleştirmek için bir <xref:System.Windows.Controls.Grid> tasarım yüzeyinde öğesi.  
+3. Araç kutusunda çift <xref:System.Windows.Controls.Grid> simgesini yerleştirmek için bir <xref:System.Windows.Controls.Grid> tasarım yüzeyinde öğesi.  
   
-4.  Özellikler penceresinde değerlerini ayarlayın <xref:System.Windows.FrameworkElement.Height%2A> ve <xref:System.Windows.FrameworkElement.Width%2A> özelliklerine **otomatik**.  
+4. Özellikler penceresinde değerlerini ayarlayın <xref:System.Windows.FrameworkElement.Height%2A> ve <xref:System.Windows.FrameworkElement.Width%2A> özelliklerine **otomatik**.  
   
-5.  Tasarım görünümü veya XAML görünümünde seçin <xref:System.Windows.Window>.  
+5. Tasarım görünümü veya XAML görünümünde seçin <xref:System.Windows.Window>.  
   
-6.  Özellikler penceresinde tıklayın **olayları** sekmesi.  
+6. Özellikler penceresinde tıklayın **olayları** sekmesi.  
   
-7.  Çift <xref:System.Windows.FrameworkElement.Loaded> olay.
+7. Çift <xref:System.Windows.FrameworkElement.Loaded> olay.
   
-8.  MainWindow.xaml.vb veya MainWindow.xaml.cs içinde işlemek için aşağıdaki kodu ekleyin <xref:System.Windows.FrameworkElement.Loaded> olay.  
+8. MainWindow.xaml.vb veya MainWindow.xaml.cs içinde işlemek için aşağıdaki kodu ekleyin <xref:System.Windows.FrameworkElement.Loaded> olay.  
   
      [!code-csharp[HostingWfWithVisualStyles#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfWithVisualStyles/CSharp/HostingWfWithVisualStyles/Window1.xaml.cs#11)]
      [!code-vb[HostingWfWithVisualStyles#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfWithVisualStyles/VisualBasic/HostingWfWithVisualStyles/Window1.xaml.vb#11)]  
@@ -58,11 +58,11 @@ Bu konuda nasıl etkinleştirileceği gösterilmektedir [!INCLUDE[TLA#tla_winxp]
   
 #### <a name="to-disable-windows-forms-visual-styles"></a>Windows Forms görsel stiller devre dışı bırakmak için  
   
-1.  MainWindow.xaml.vb veya MainWindow.xaml.cs Kod Düzenleyicisi'nde açın.  
+1. MainWindow.xaml.vb veya MainWindow.xaml.cs Kod Düzenleyicisi'nde açın.  
   
-2.  Çağrı yorum <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemi.  
+2. Çağrı yorum <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemi.  
   
-3.  Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.  
+3. Derleme ve uygulamayı çalıştırmak için F5 tuşuna basın.  
   
      [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Denetimi, varsayılan sistem stiliyle boyanır.  
   

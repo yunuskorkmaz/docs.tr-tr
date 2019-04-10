@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 6bc2d5c45ef6f8626e51f9f760ec299db19627d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171580"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298324"
 ---
 # <a name="how-to-localize-an-application"></a>Nasıl yapılır: Bir Uygulamayı Yerelleştirme
 Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşturulacağını açıklar.  
@@ -38,13 +38,13 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
 ## <a name="create-a-sample-application"></a>Örnek bir uygulama oluşturma  
  Bu adımda, uygulamanızın yerelleştirme için hazırlık yapacaksınız. İçinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] örnekleri, bu konudaki kod örnekleri için kullanılacak bir HelloApp örnek sağlanmaktadır. Bu örneği kullanmak istiyorsanız, indirme [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyalarını [LocBaml aracı örneği](https://go.microsoft.com/fwlink/?LinkID=160016).  
   
-1.  Yerelleştirme başlamak istediğiniz noktayı uygulamanızı geliştirin.  
+1. Yerelleştirme başlamak istediğiniz noktayı uygulamanızı geliştirin.  
   
-2.  Proje dosyasında bir geliştirme dilini belirtmek böylece [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] bir ana derlemeye ve bir uydu derlemesi oluşturur (bir dosyayla. resources.dll uzantısı) nötr dil kaynakları içerecek şekilde. HelloApp örnek proje dosyasında HelloApp.csproj'dur. Bu dosyada, aşağıdaki şekilde tanımlanan bir geliştirme dilini bulacaksınız:  
+2. Proje dosyasında bir geliştirme dilini belirtmek böylece [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] bir ana derlemeye ve bir uydu derlemesi oluşturur (bir dosyayla. resources.dll uzantısı) nötr dil kaynakları içerecek şekilde. HelloApp örnek proje dosyasında HelloApp.csproj'dur. Bu dosyada, aşağıdaki şekilde tanımlanan bir geliştirme dilini bulacaksınız:  
   
      `<UICulture>en-US</UICulture>`  
   
-3.  İçin Uıd'leri ekleyin, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyaları. Uıd'leri dosyalarda yapılan değişiklikler izlemek ve çevrilmelidir öğeleri tanımlamak için kullanılır. Uıd'leri dosyalarınıza eklemek için çalıştırın **updateuid** proje dosyanızda:  
+3. İçin Uıd'leri ekleyin, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosyaları. Uıd'leri dosyalarda yapılan değişiklikler izlemek ve çevrilmelidir öğeleri tanımlamak için kullanılır. Uıd'leri dosyalarınıza eklemek için çalıştırın **updateuid** proje dosyanızda:  
   
      **msbuild -t:updateuid helloapp.csproj**  
   
@@ -66,30 +66,30 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>Nötr dil kaynakları uydu derleme oluşturma  
  Uygulama dilden kaynakları uydu derlemesi oluşturmak için yapılandırdıktan sonra uygulamayı derleyin. Bu, ana uygulama derlemesine yanı sıra LocBaml tarafından yerelleştirme için gerekli bağımsız dil kaynakları uydu derlemesi oluşturur. Uygulamayı oluşturmak için:  
   
-1.  Derleme oluşturmak için HelloApp bir [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
+1. Derleme oluşturmak için HelloApp bir [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
   
      **MSBuild helloapp.csproj**  
   
-2.  Yeni oluşturulan ana uygulama derlemesine, HelloApp.exe aşağıdaki klasörde oluşturulur:  
+2. Yeni oluşturulan ana uygulama derlemesine, HelloApp.exe aşağıdaki klasörde oluşturulur:  
   
      `C:\HelloApp\Bin\Debug\`  
   
-3.  Yeni oluşturulan dilden kaynakları uydu derlemesini HelloApp.resources.dll aşağıdaki klasörde oluşturulur:  
+3. Yeni oluşturulan dilden kaynakları uydu derlemesini HelloApp.resources.dll aşağıdaki klasörde oluşturulur:  
   
      `C:\HelloApp\Bin\Debug\en-US\`  
   
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Derleme LocBaml aracı  
   
-1.  LocBaml oluşturmak gereken tüm dosyaları bulunan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] örnekleri. C# dosyalarını indirmeye [LocBaml aracı örneği](https://go.microsoft.com/fwlink/?LinkID=160016).  
+1. LocBaml oluşturmak gereken tüm dosyaları bulunan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] örnekleri. C# dosyalarını indirmeye [LocBaml aracı örneği](https://go.microsoft.com/fwlink/?LinkID=160016).  
   
-2.  Komut satırından derleme aracı için proje dosyası (locbaml.csproj) çalıştırın:  
+2. Komut satırından derleme aracı için proje dosyası (locbaml.csproj) çalıştırın:  
   
      **MSBuild locbaml.csproj**  
   
-3.  Yeni oluşturulan yürütülebilir dosya (LocBaml.exe'yi) bulmak için Bin\Release dizine gidin. Example:C:\LocBaml\Bin\Release\locbaml.exe.  
+3. Yeni oluşturulan yürütülebilir dosya (LocBaml.exe'yi) bulmak için Bin\Release dizine gidin. Example:C:\LocBaml\Bin\Release\locbaml.exe.  
   
-4.  LocBaml çalıştırdığınızda belirtebileceğiniz seçenekleri aşağıdaki gibidir:  
+4. LocBaml çalıştırdığınızda belirtebileceğiniz seçenekleri aşağıdaki gibidir:  
   
     -   **Ayrıştırma** veya **-p:** BAML, kaynaklar ayrıştırır veya [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] .csv ya da .txt dosyası oluşturmak için dosyaları.  
   
@@ -114,16 +114,16 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
 ## <a name="use-locbaml-to-parse-a-file"></a>Bir dosya ayrıştırılamıyor LocBaml Kullanma  
  LocBaml aracı oluşturduğunuza göre bu HelloApp.resources.dll yerelleştirilecek metin içeriği ayıklama için ayrıştırmak için kullanıma hazır olursunuz.  
   
-1.  LocBaml.exe ana uygulama derlemesine oluşturulduğu, uygulamanızın bin\debug klasörüne kopyalayın.  
+1. LocBaml.exe ana uygulama derlemesine oluşturulduğu, uygulamanızın bin\debug klasörüne kopyalayın.  
   
-2.  Uydu derleme dosyasını ayrıştırma ve bir .csv dosyası olarak çıktısını depolamak için aşağıdaki komutu kullanın:  
+2. Uydu derleme dosyasını ayrıştırma ve bir .csv dosyası olarak çıktısını depolamak için aşağıdaki komutu kullanın:  
   
      **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
     >  HelloApp.resources.dll giriş dosyası içinde değilse LocBaml.exe'yi aynı dizine taşı dosyalarından birini her iki dosya aynı dizinde olmasını sağlamak.  
   
-3.  LocBaml dosyalarını ayrıştırmak için çalıştırdığınızda, çıktı virgül (.csv dosyaları) veya sekme (.txt dosyaları) tarafından ayrılmış yedi alandan oluşur. Aşağıdaki ayrıştırılmış .csv dosyasını HelloApp.resources.dll için gösterir:
+3. LocBaml dosyalarını ayrıştırmak için çalıştırdığınızda, çıktı virgül (.csv dosyaları) veya sekme (.txt dosyaları) tarafından ayrılmış yedi alandan oluşur. Aşağıdaki ayrıştırılmış .csv dosyasını HelloApp.resources.dll için gösterir:
 
    | |
    |-|
@@ -157,7 +157,7 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
   
    Dikkat tüm değerler için **açıklamaları** alanın değer içermesi; bir alan bir değer yoksa boş. Ayrıca ilk satırda öğe okunabilir ve değiştirilebilir ve "Yoksay" sahip olarak dikkat edin, **kategori** değeri, her biri olmadığını değeri yerelleştirilebilir olduğunu belirtir.  
   
-4.  Ayrıştırılmış dosyaları, özellikle de büyük dosyalarda yerelleştirilebilir öğelerinde bulunmasını kolaylaştırmak için sıralama veya öğelerini göre filtreleme **kategori**, **okunabilirliği**, ve **Modifiability'egöre**. Örneğin, okunamaz ve değiştirilemeyen değerlere filtre uygulayabilirsiniz.  
+4. Ayrıştırılmış dosyaları, özellikle de büyük dosyalarda yerelleştirilebilir öğelerinde bulunmasını kolaylaştırmak için sıralama veya öğelerini göre filtreleme **kategori**, **okunabilirliği**, ve **Modifiability'egöre**. Örneğin, okunamaz ve değiştirilemeyen değerlere filtre uygulayabilirsiniz.  
   
 <a name="translate_loc_content"></a>   
 ## <a name="translate-the-localizable-content"></a>Yerelleştirilebilir İçerik Çevir  
@@ -167,26 +167,26 @@ Bu öğreticide LocBaml aracı kullanarak yerelleştirilmiş bir uygulama oluşt
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>LocBaml yeni oluşturmak için kullanın. resources.dll dosyasını  
  LocBaml ile HelloApp.resources.DLL'i tarafından tanımlanan içeriği çevrilmiştir ve özgün uygulamasına birleştirilmesi gerekir. Kullanım **oluşturmak** veya **-g** yeni bir seçenek. resources.dll dosyasını.  
   
-1.  Yeni bir HelloApp.resources.dll dosyası oluşturmak için aşağıdaki sözdizimini kullanın. Kültür en-US olarak işaretleyin (/ cul: en-US).  
+1. Yeni bir HelloApp.resources.dll dosyası oluşturmak için aşağıdaki sözdizimini kullanın. Kültür en-US olarak işaretleyin (/ cul: en-US).  
   
      **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
     >  Giriş dosyası Hello.csv LocBaml.exe yürütülebilir dosya ile aynı dizinde değilse, her iki dosya aynı dizinde, böylece dosyalarından birini taşıyın.  
   
-2.  Yeni oluşturulan HelloApp.resources.dll dosyanızla C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll dizininde Eski HelloApp.resources.dll dosyasını değiştirin.  
+2. Yeni oluşturulan HelloApp.resources.dll dosyanızla C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll dizininde Eski HelloApp.resources.dll dosyasını değiştirin.  
   
-3.  "Hello World" ve "Goodbye World" artık uygulamanızda çevrilmesi gerekir.  
+3. "Hello World" ve "Goodbye World" artık uygulamanızda çevrilmesi gerekir.  
   
-4.  Farklı bir kültüre çevirmek için çevireceğiniz dil kültürünü kullanın. Aşağıdaki örnek, Canadian'a Çevir gösterilmektedir:  
+4. Farklı bir kültüre çevirmek için çevireceğiniz dil kültürünü kullanın. Aşağıdaki örnek, Canadian'a Çevir gösterilmektedir:  
   
      **LocBaml.exe'yi / HelloApp.resources.dll /trans:Hellofr Oluştur-CA.csv /out:c: \ /cul:fr-CA**  
   
-5.  Ana uygulama derlemesine aynı derlemede yeni bir uydu derleme barındırmak için yeni bir kültüre özgü klasör oluşturun. French-Canadian için klasörü, fr-CA olabilir.  
+5. Ana uygulama derlemesine aynı derlemede yeni bir uydu derleme barındırmak için yeni bir kültüre özgü klasör oluşturun. French-Canadian için klasörü, fr-CA olabilir.  
   
-6.  Oluşturulan uydu derlemesini yeni klasöre kopyalayın.  
+6. Oluşturulan uydu derlemesini yeni klasöre kopyalayın.  
   
-7.  Yeni bir uydu derleme test etmek için uygulamanızı altında çalıştırılacağı kültürü değiştirmeniz gerekir. Bunu iki yoldan biriyle yapabilirsiniz:  
+7. Yeni bir uydu derleme test etmek için uygulamanızı altında çalıştırılacağı kültürü değiştirmeniz gerekir. Bunu iki yoldan biriyle yapabilirsiniz:  
   
     -   İşletim sisteminizin bölgesel ayarları değiştirin (**Başlat** &#124; **Denetim Masası** &#124; **bölge ve Dil Seçenekleri**).  
   

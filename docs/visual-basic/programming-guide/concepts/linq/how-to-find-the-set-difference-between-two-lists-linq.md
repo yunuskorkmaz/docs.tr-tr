@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: (LINQ) (Visual Basic) iki liste arasında ayarlanmış farkı bulma'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: 2d87a2bd882adb6eca144288ace72b0e7c464907
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3757a588ed37805d6dd2569e1d25b07bd166c2d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829505"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324064"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>Nasıl yapılır: (LINQ) (Visual Basic) iki liste arasında ayarlanmış farkı bulma
 Bu örnek, dizeleri iki liste karşılaştırın ve names1.txt ancak names2.txt olan satırlar çıkış için LINQ kullanma işlemini gösterir.  
   
 ### <a name="to-create-the-data-files"></a>Veri dosyaları oluşturmak için  
   
-1.  Kopyalama names1.txt ve names2.txt Çözüm klasörünüz olarak gösterildiği gibi [nasıl yapılır: (LINQ) (Visual Basic) dize koleksiyonlarını birleştirme ve karşılaştırma](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
+1. Kopyalama names1.txt ve names2.txt Çözüm klasörünüz olarak gösterildiği gibi [nasıl yapılır: (LINQ) (Visual Basic) dize koleksiyonlarını birleştirme ve karşılaştırma](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Örnek  
   

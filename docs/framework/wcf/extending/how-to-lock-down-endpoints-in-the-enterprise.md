@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181369"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305974"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme
 Büyük kuruluşlar genellikle uygulamaları kuruluş güvenlik ilkelerine uygun olarak geliştirilen gerektirir. Aşağıdaki konuda geliştirme ve bilgisayarlarda yüklü tüm Windows Communication Foundation (WCF) istemci uygulamaları doğrulamak için kullanılan bir istemci uç noktası Doğrulayıcı yüklemek nasıl ele alınmaktadır.  
@@ -25,23 +25,23 @@ Büyük kuruluşlar genellikle uygulamaları kuruluş güvenlik ilkelerine uygun
   
 ### <a name="to-create-the-endpoint-validator"></a>Uç nokta Doğrulayıcısı oluşturmak için  
   
-1.  Oluşturma bir <xref:System.ServiceModel.Description.IEndpointBehavior> istenen doğrulama adımları ile <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> yöntemi. Aşağıdaki kod örneği sağlar. ( `InternetClientValidatorBehavior` Alınır [güvenlik doğrulaması](../../../../docs/framework/wcf/samples/security-validation.md) örnek.)  
+1. Oluşturma bir <xref:System.ServiceModel.Description.IEndpointBehavior> istenen doğrulama adımları ile <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> yöntemi. Aşağıdaki kod örneği sağlar. ( `InternetClientValidatorBehavior` Alınır [güvenlik doğrulaması](../../../../docs/framework/wcf/samples/security-validation.md) örnek.)  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  Yeni Oluştur <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 1. adımda oluşturulan uç nokta Doğrulayıcı kaydeder. Aşağıdaki kod örneği bunu gösterir. (Bu örnek için özgün kod [güvenlik doğrulaması](../../../../docs/framework/wcf/samples/security-validation.md) örnek.)  
+2. Yeni Oluştur <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 1. adımda oluşturulan uç nokta Doğrulayıcı kaydeder. Aşağıdaki kod örneği bunu gösterir. (Bu örnek için özgün kod [güvenlik doğrulaması](../../../../docs/framework/wcf/samples/security-validation.md) örnek.)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  Derlenmiş bütünleştirilmiş kodu, tanımlayıcı ad ile imzalandığından emin olun. Ayrıntılar için bkz [tanımlayıcı ad Aracı (SN. EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) ve dil derleyici komutları.  
+3. Derlenmiş bütünleştirilmiş kodu, tanımlayıcı ad ile imzalandığından emin olun. Ayrıntılar için bkz [tanımlayıcı ad Aracı (SN. EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) ve dil derleyici komutları.  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>Doğrulayıcı hedef bilgisayara yüklemek için  
   
-1.  Uygun mekanizmayı kullanarak uç nokta Doğrulayıcı yükleyin. Kuruluş, bu Grup İlkesi ve Systems Management Server (SMS) kullanıyor.  
+1. Uygun mekanizmayı kullanarak uç nokta Doğrulayıcı yükleyin. Kuruluş, bu Grup İlkesi ve Systems Management Server (SMS) kullanıyor.  
   
-2.  Genel derleme önbellek kullanarak kesin adlandırılmış derlemeyi yüklemek [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+2. Genel derleme önbellek kullanarak kesin adlandırılmış derlemeyi yüklemek [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
-3.  Kullanım <xref:System.Configuration?displayProperty=nameWithType> ad alanı türleri için:  
+3. Kullanım <xref:System.Configuration?displayProperty=nameWithType> ad alanı türleri için:  
   
     1.  Uzantısına ekleme [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) tam olarak nitelenmiş tür adını kullanarak bölüm ve öğe kilitleyin.  
   

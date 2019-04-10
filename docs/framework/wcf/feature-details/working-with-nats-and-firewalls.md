@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 9cecca0905baa4c0769359caf1fe1b477bf4d6bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518931"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296348"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT ve Güvenlik Duvarlarıyla Çalışma
 İstemci ve sunucu bir ağ bağlantısının sık değil doğrudan ve iletişim için yol. Paket filtre, yönlendirilmiş, analiz ve uç nokta makinelerde ve ağ ara makineler tarafından dönüştürülür. Ağ adresi çevirisi (NAT) ve güvenlik duvarları ağ iletişimi katılabilir Ara uygulamaları için ortak örnekleridir.  
@@ -37,11 +37,11 @@ ms.locfileid: "43518931"
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Bir taşıma ve ileti değişim deseni seçme  
  Bir taşıma seçip MEP üç adımlık bir işlemdir:  
   
-1.  Uç nokta makinelerin çözümlenebilme analiz edin. Son kullanıcıların yaygın olarak NAT tarafından engellenen kendi çözümlenebilme kurumsal sunucular genellikle doğrudan çözümlenebilme bulunur. Her iki bitiş noktasında bir NAT'nin arkasında ise gibi son kullanıcılar arasındaki eşler arası senaryolarda ardından, Teredo çözümlenebilme sağlamak gibi bir teknoloji gerekebilir.  
+1. Uç nokta makinelerin çözümlenebilme analiz edin. Son kullanıcıların yaygın olarak NAT tarafından engellenen kendi çözümlenebilme kurumsal sunucular genellikle doğrudan çözümlenebilme bulunur. Her iki bitiş noktasında bir NAT'nin arkasında ise gibi son kullanıcılar arasındaki eşler arası senaryolarda ardından, Teredo çözümlenebilme sağlamak gibi bir teknoloji gerekebilir.  
   
-2.  Uç nokta makinelerin protokolü ve bağlantı noktası kısıtlamaları analiz edin. Kurumsal sunucular, genellikle o blok güçlü güvenlik duvarının arkasındaki birçok bağlantı noktalarıdır. Ancak, 80 numaralı bağlantı noktası HTTP trafiğine izin vermek için sıklıkla açık olduğundan ve 443 numaralı bağlantı noktasını HTTPS trafiğine izin vermek için açık olduğundan. Son kullanıcılar, bağlantı noktası kısıtlamalara sahip olma olasılığını azaltacak ancak yalnızca giden bağlantılara izin veren bir güvenlik duvarının arkasında olabilir. Bazı güvenlik duvarları, seçmeli olarak Bağlantıları'nı açmak için uç noktasında uygulamaların yönetim izin verir.  
+2. Uç nokta makinelerin protokolü ve bağlantı noktası kısıtlamaları analiz edin. Kurumsal sunucular, genellikle o blok güçlü güvenlik duvarının arkasındaki birçok bağlantı noktalarıdır. Ancak, 80 numaralı bağlantı noktası HTTP trafiğine izin vermek için sıklıkla açık olduğundan ve 443 numaralı bağlantı noktasını HTTPS trafiğine izin vermek için açık olduğundan. Son kullanıcılar, bağlantı noktası kısıtlamalara sahip olma olasılığını azaltacak ancak yalnızca giden bağlantılara izin veren bir güvenlik duvarının arkasında olabilir. Bazı güvenlik duvarları, seçmeli olarak Bağlantıları'nı açmak için uç noktasında uygulamaların yönetim izin verir.  
   
-3.  Aktarım ve ağ adreslenebilirliği ve bağlantı noktası kısıtlamaları izin MEPs işlem.  
+3. Aktarım ve ağ adreslenebilirliği ve bağlantı noktası kısıtlamaları izin MEPs işlem.  
   
  İstemci-sunucu uygulamaları için ortak bir topoloji, yalnızca giden güvenlik duvarı ve güçlü bir güvenlik duvarı ile doğrudan adreslenebilir bir sunucuya Teredo olmadan bir NAT arkasındaki istemciler olmasını sağlamaktır. Bu senaryo, bir çift yönlü MEP ile TCP taşıma ve istek-yanıt ile bir HTTP aktarımı MEP çalışmak iyi. Eşler arası uygulamalar için ortak bir topoloji, NAT ve güvenlik duvarlarıyla arkasında iki uç noktaları sağlamaktır. Bu senaryoda ve ağ topolojisi bilinmeyen olduğu senaryolarda aşağıdaki önerileri göz önünde bulundurun:  
   

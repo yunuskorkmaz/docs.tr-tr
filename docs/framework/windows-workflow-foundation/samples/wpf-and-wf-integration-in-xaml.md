@@ -1,15 +1,15 @@
 ---
-title: WPF ve WF tümleştirmesi XAML
+title: XAML içinde WPF ve WF tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: ce6fc259b4e8743abd71e979825545183eef136a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 188702cfc13d7e353238e108066cc3d5f1c8bda9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298649"
 ---
-# <a name="wpf-and-wf-integration-in-xaml"></a>WPF ve WF tümleştirmesi XAML
+# <a name="wpf-and-wf-integration-in-xaml"></a>XAML içinde WPF ve WF tümleştirmesi
 Bu örnek, tek bir XAML belgesi içinde Windows Presentation Foundation (WPF) ve Windows Workflow Foundation (WF) özelliklerini kullanan bir uygulamanın nasıl oluşturulacağını gösterir. Bunu yapmak için Windows Workflow Foundation (WF) ve XAML genişletilebilirlik örnek kullanır.
 
 ## <a name="sample-details"></a>Örnek Ayrıntıları
@@ -26,15 +26,15 @@ Bu örnek, tek bir XAML belgesi içinde Windows Presentation Foundation (WPF) ve
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1.  Visual Studio 2010 kullanarak WPFWFIntegration.sln çözüm dosyasını açın.
+1. Visual Studio 2010 kullanarak WPFWFIntegration.sln çözüm dosyasını açın.
 
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-3.  Çözümü çalıştırmak için F5 tuşuna basın.
+3. Çözümü çalıştırmak için F5 tuşuna basın.
 
-4.  İlk ve son adınızı iletişim kutusuna yazın.
+4. İlk ve son adınızı iletişim kutusuna yazın.
 
-5.  İletişim kutusunu kapatın ve konsol adınızı görüntülemektedir.
+5. İletişim kutusunu kapatın ve konsol adınızı görüntülemektedir.
 
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

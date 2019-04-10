@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199329"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307736"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF ve Direct3D9 Birlikte Çalışması
 Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında içerebilir. Bu konuda, verimli bir şekilde WPF ile birlikte çalışır, böylece Direct3D9 içeriği oluşturma işlemini açıklar.  
@@ -112,13 +112,13 @@ Direct3D9 içeriği bir Windows Presentation Foundation (WPF) uygulamasında iç
   
  Performans cezasını önlemek için özellikle çok izleme çalışması için kod yazın. Aşağıdaki liste, çoklu monitör kod yazmak için bir yol gösterir.  
   
-1.  Noktasını bulun <xref:System.Windows.Interop.D3DImage> ile ekran alanında `Visual.ProjectToScreen` yöntemi.  
+1. Noktasını bulun <xref:System.Windows.Interop.D3DImage> ile ekran alanında `Visual.ProjectToScreen` yöntemi.  
   
-2.  Kullanım `MonitorFromPoint` GDI yöntemi noktayı görüntüleyen izleme bulunamadı.  
+2. Kullanım `MonitorFromPoint` GDI yöntemi noktayı görüntüleyen izleme bulunamadı.  
   
-3.  Kullanım `IDirect3D9::GetAdapterMonitor` izleme hangi Direct3D9 Bağdaştırıcı bulunamadı yöntemi açıktır.  
+3. Kullanım `IDirect3D9::GetAdapterMonitor` izleme hangi Direct3D9 Bağdaştırıcı bulunamadı yöntemi açıktır.  
   
-4.  Bağdaştırıcı bağdaştırıcısı geri arabelleği ile aynı değilse, yeni bir arka arabellek yeni izleyicide oluşturun ve atayın <xref:System.Windows.Interop.D3DImage> arka arabellek.  
+4. Bağdaştırıcı bağdaştırıcısı geri arabelleği ile aynı değilse, yeni bir arka arabellek yeni izleyicide oluşturun ve atayın <xref:System.Windows.Interop.D3DImage> arka arabellek.  
   
 > [!NOTE]
 >  Varsa <xref:System.Windows.Interop.D3DImage> yayılan izleyiciler, performans söz konusu olduğunda WDDM dışında yavaş olacaktır ve `IDirect3D9Ex` aynı bağdaştırıcısında. Bu durumda performansını artırmak için hiçbir yolu yoktur.  

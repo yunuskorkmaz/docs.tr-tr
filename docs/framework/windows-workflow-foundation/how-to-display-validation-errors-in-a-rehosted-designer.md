@@ -1,22 +1,22 @@
 ---
-title: "Nasıl yapılır: Rehosted Tasarımcısı'nda doğrulama hataları görüntüleme"
+title: 'Nasıl yapılır: Yeniden Barındırılan Tasarımcıda Doğrulama Hatalarını Gösterme'
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-ms.openlocfilehash: 8f70b190042d167741bbadc4e1645756fe5b830d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310206"
 ---
-# <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>Nasıl yapılır: Rehosted Tasarımcısı'nda doğrulama hataları görüntüleme
-Bu konu, almak ve doğrulama hatalarını bir rehosted yayımlamak açıklar [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]. Bu bize rehosted Tasarımcısı bir iş akışında geçerli olduğunu onaylamak için bir yordam sağlar.  
+# <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>Nasıl yapılır: Yeniden Barındırılan Tasarımcıda Doğrulama Hatalarını Gösterme
+Bu konu, alma ve doğrulama hatalarını içinde yeniden barındırılan yayımlama açıklar [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]. Bu bize bir iş akışı yeniden barındırılan tasarımcıda geçerli olduğundan emin olmak için ilgili bir yordam sağlar.  
   
- Bu görev iki bölümden oluşur. Bir uygulama sunmak amacıyla ilk olduğu <xref:System.Activities.Presentation.Validation.IValidationErrorService>.  Bu arabirimde uygulamak için bir kritik yöntemi yoktur <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> hangi geçecek, listesini <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> hata ayıklama günlüğüne hatalar hakkında bilgi içeren nesne.  Arabirimi uyguladıktan sonra bu uygulama örneğini düzenleme bağlamına yayımlayarak hata bilgilerini alır.  
+ Bu görevi, iki bölümden oluşur. İlk uygulama sağlamaktır <xref:System.Activities.Presentation.Validation.IValidationErrorService>.  Bu arabirimde uygulamak için kritik bir yöntem <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> hangi geçecek, listesini <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> için hata ayıklama günlüğünü hatalara ilişkin bilgileri içeren bir nesne.  Arabirimi uyguladıktan sonra bu uygulama örneği için düzenleme bağlamı yayımlayarak hata bilgileri alabilirsiniz.  
   
 ### <a name="implement-the-ivalidationerrorservice-interface"></a>IValidationErrorService arabirimini uygulama  
   
-1.  Hata ayıklama günlüğüne doğrulama hataları ortaya yazacak basit bir uygulama için bir kod örneği aşağıda verilmiştir.  
+1. Doğrulama hataları için hata ayıklama günlüğünü dışarı yazılacak basit bir uygulama için bir kod örneği aşağıda verilmiştir.  
   
     ```  
     using System.Activities.Presentation.Validation;  
@@ -36,9 +36,9 @@ Bu konu, almak ve doğrulama hatalarını bir rehosted yayımlamak açıklar [!I
     }  
     ```  
   
-### <a name="publishing-to-the-editing-context"></a>Düzenlediğiniz içerik yayımlama  
+### <a name="publishing-to-the-editing-context"></a>Düzenleme bağlamı yayımlama  
   
-1.  Aşağıda, bu düzenleme bağlamına yayımlayacak kodu verilmiştir.  
+1. Bu düzenleme bağlamı için yayımlama kod aşağıdaki gibidir.  
   
     ```  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  

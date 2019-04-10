@@ -2,12 +2,12 @@
 title: Sertifika Seçimi ve Doğrulama
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 2f28e9b77abbd53200ecf8128c942ce6348a7460
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111351"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318357"
 ---
 # <a name="certificate-selection-and-validation"></a>Sertifika Seçimi ve Doğrulama
 <xref:System.Net> Sınıfları seçin ve doğrulamak için birkaç yol destekler <xref:System.Security.Cryptography.X509Certificates> Güvenli Yuva Katmanı (SSL) bağlantıları için. Bir istemci, kendisi için bir sunucu kimliğini doğrulamak için bir veya daha fazla sertifikaları seçebilirsiniz. Bir istemci sertifikası kimlik doğrulaması için bir veya daha fazla belirli özniteliklere sahip bir sunucu gerektirebilir.  
@@ -29,11 +29,11 @@ ms.locfileid: "59111351"
 ## <a name="client-certificate-selection"></a>İstemci sertifika seçimi  
  .NET Framework sunucuya aşağıdaki şekilde sunmak için istemci sertifikası seçer:  
   
-1.  Bir istemci sertifikası, daha önce sunucuya gösterilen, sertifikayı ilk sunulduğunda ve sonraki istemci sertifika istekleri için tekrar önbelleğe alınır.  
+1. Bir istemci sertifikası, daha önce sunucuya gösterilen, sertifikayı ilk sunulduğunda ve sonraki istemci sertifika istekleri için tekrar önbelleğe alınır.  
   
-2.  Her zaman bir temsilci varsa, sonuç temsilci seçmek için istemci sertifikası olarak kullanın. Mümkün olduğunda önbelleğe alınan bir sertifika kullanmayı denediğinizde, ancak önbelleğe alınmış anonim kimlik bilgileri temsilcisi null döndürdü ve sertifika koleksiyonunu boş değilse kullanmayın.  
+2. Her zaman bir temsilci varsa, sonuç temsilci seçmek için istemci sertifikası olarak kullanın. Mümkün olduğunda önbelleğe alınan bir sertifika kullanmayı denediğinizde, ancak önbelleğe alınmış anonim kimlik bilgileri temsilcisi null döndürdü ve sertifika koleksiyonunu boş değilse kullanmayın.  
   
-3.  Bir istemci sertifikası için ilk testten buysa, Framework sertifikaları numaralandırır <xref:System.Security.Cryptography.X509Certificates.X509Certificate> veya <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> sınıfı tarafından sağlanan sertifika verenler listesi arasında bir eşleşme aranıyor bağlantıyla ilişkili nesneleri Sunucu ve istemci sertifika verenin adı. Eşleşen ilk sertifikayı sunucuya gönderilir. Sertifika eşleşme yok ya da sertifika koleksiyonu boş sonra anonim bir kimlik bilgisi sunucuya gönderilir.  
+3. Bir istemci sertifikası için ilk testten buysa, Framework sertifikaları numaralandırır <xref:System.Security.Cryptography.X509Certificates.X509Certificate> veya <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> sınıfı tarafından sağlanan sertifika verenler listesi arasında bir eşleşme aranıyor bağlantıyla ilişkili nesneleri Sunucu ve istemci sertifika verenin adı. Eşleşen ilk sertifikayı sunucuya gönderilir. Sertifika eşleşme yok ya da sertifika koleksiyonu boş sonra anonim bir kimlik bilgisi sunucuya gönderilir.  
   
 ## <a name="tools-for-certificate-configuration"></a>Sertifika yapılandırması için Araçlar  
  Araçlar, istemci ve sunucu sertifika yapılandırması için kullanılabilir.  

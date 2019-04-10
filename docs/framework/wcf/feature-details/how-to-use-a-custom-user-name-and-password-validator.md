@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 0c5f5783f4f302b7a33c6d960049d68ed18dac91
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ad53700590c3f3683663d306e15fcbe857f625e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160257"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308516"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Nasıl yapılır: Özel Bir Kullanıcı Adı ve Parola Doğrulayıcı Kullanma
 Varsayılan olarak, Windows Communication Foundation (WCF) Windows kullanıcı adı ve parola kullanılabilir olduğunda kimlik doğrulaması için kullanıcı adını ve parolasını doğrulamak için kullanır. Ancak, WCF özel kullanıcı adı ve parola kimlik doğrulaması düzeni için olarak da bilinen tanır *doğrulayıcıları*. Özel kullanıcı adı ve parola Doğrulayıcı eklemek için türetilen bir sınıf oluşturma <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ve ardından yapılandırın.  
@@ -21,12 +21,12 @@ Varsayılan olarak, Windows Communication Foundation (WCF) Windows kullanıcı a
   
 ### <a name="to-create-a-custom-user-name-and-password-validator"></a>Özel kullanıcı adı ve parola Doğrulayıcı oluşturma  
   
-1.  Türetilen bir sınıf oluşturmanız <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.  
+1. Türetilen bir sınıf oluşturmanız <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.  
   
      [!code-csharp[C_CustomUsernameAndPasswordValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#3)]
      [!code-vb[C_CustomUsernameAndPasswordValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#3)]  
   
-2.  Özel kimlik doğrulama şeması geçersiz kılarak uygulamak <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> yöntemi.  
+2. Özel kimlik doğrulama şeması geçersiz kılarak uygulamak <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> yöntemi.  
   
      Kodu geçersiz kılan aşağıdaki örnekte kullanmayın <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> bir üretim ortamında yöntemi. Kullanıcı adı ve parola çiftleri veritabanından alınırken gerektirebilir, özel kullanıcı adı ve parola doğrulama şeması ile değiştirin.  
   
@@ -37,7 +37,7 @@ Varsayılan olarak, Windows Communication Foundation (WCF) Windows kullanıcı a
   
 ### <a name="to-configure-a-service-to-use-a-custom-user-name-and-password-validator"></a>Özel kullanıcı adı ve parola Doğrulayıcı kullanmak için bir hizmeti yapılandırmak için  
   
-1.  HTTP (S) üzerinden herhangi bir aktarım veya aktarım düzeyi güvenlik ileti güvenliği kullanan bir bağlama yapılandırın.  
+1. HTTP (S) üzerinden herhangi bir aktarım veya aktarım düzeyi güvenlik ileti güvenliği kullanan bir bağlama yapılandırın.  
   
      İleti güveliği kullanarak, bir sistem tarafından sağlanan bağlamalar gibi ekleyin. bir [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), veya bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) ileti güvenliği destekler ve `UserName` kimlik bilgisi türü.  
   
@@ -82,7 +82,7 @@ Varsayılan olarak, Windows Communication Foundation (WCF) Windows kullanıcı a
     </system.serviceModel>  
     ```  
   
-2.  Özel kullanıcı adı ve parola Doğrulayıcı gelen kullanıcı adı ve parola çiftlerini doğrulamak için kullanıldığını belirten bir davranış yapılandırma <xref:System.IdentityModel.Tokens.UserNameSecurityToken> güvenlik belirteçleri.  
+2. Özel kullanıcı adı ve parola Doğrulayıcı gelen kullanıcı adı ve parola çiftlerini doğrulamak için kullanıldığını belirten bir davranış yapılandırma <xref:System.IdentityModel.Tokens.UserNameSecurityToken> güvenlik belirteçleri.  
   
     1.  Alt öğesi olarak [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) öğe, Ekle bir [ \<davranışları >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) öğesi.  
   

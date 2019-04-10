@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 72f05621c96f1b6938b67d19f862a8d28b6df352
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314418"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF ve Win32 Birlikte Çalışması
 Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kod. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu olabilir bazı kodu yeniden kullanmak daha etkili.  
@@ -58,15 +58,15 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
 ## <a name="hosting-wpf-content-in-a-microsoft-win32-window"></a>WPF içeriği Microsoft Win32 penceresinde barındırma  
  Barındırma anahtarını bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] üzerinde bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi <xref:System.Windows.Interop.HwndSource> sınıfı. Bu sınıf sarmalar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi, böylece [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği dahil içine, [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] bir alt pencere olarak. Aşağıdaki yaklaşımı birleştirir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tek bir uygulamada.  
   
-1.  Uygulama, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği (içerik kök öğesi) olarak yönetilen bir sınıf. Genellikle, sınıfı birden çok alt öğe içerebilir ve/veya bir kök öğe gibi kullanılan sınıflarının birinden devralan <xref:System.Windows.Controls.DockPanel> veya <xref:System.Windows.Controls.Page>. Sonraki adımlarda bu sınıf olarak adlandırılır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik sınıfı ve sınıf örnekleri verilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesneleri.  
+1. Uygulama, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği (içerik kök öğesi) olarak yönetilen bir sınıf. Genellikle, sınıfı birden çok alt öğe içerebilir ve/veya bir kök öğe gibi kullanılan sınıflarının birinden devralan <xref:System.Windows.Controls.DockPanel> veya <xref:System.Windows.Controls.Page>. Sonraki adımlarda bu sınıf olarak adlandırılır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik sınıfı ve sınıf örnekleri verilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesneleri.  
   
-2.  Uygulama bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ile uygulama [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)]. Varolan ile başlıyorsanız yönetilmeyen [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] uygulama, genellikle etkinleştirebilirsiniz yönetilen kod eklemek için proje ayarlarınızı değiştirerek çağıracak şekilde `/clr` derleyici bayrağı (ne desteklemekgerekliolabilir,tamkapsam`/clr`derleme bu konuda açıklanan değil).  
+2. Uygulama bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ile uygulama [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)]. Varolan ile başlıyorsanız yönetilmeyen [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] uygulama, genellikle etkinleştirebilirsiniz yönetilen kod eklemek için proje ayarlarınızı değiştirerek çağıracak şekilde `/clr` derleyici bayrağı (ne desteklemekgerekliolabilir,tamkapsam`/clr`derleme bu konuda açıklanan değil).  
   
-3.  İş parçacığı modeli tek iş parçacıklı grup (STA için) ayarlayın. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu iş parçacığı modeli kullanır.  
+3. İş parçacığı modeli tek iş parçacıklı grup (STA için) ayarlayın. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bu iş parçacığı modeli kullanır.  
   
-4.  Pencere yordamını WM_CREATE bildiriminde işleyin.  
+4. Pencere yordamını WM_CREATE bildiriminde işleyin.  
   
-5.  İşleyici (veya işleyici çağıran bir işlev içinde), aşağıdakileri yapın:  
+5. İşleyici (veya işleyici çağıran bir işlev içinde), aşağıdakileri yapın:  
   
     1.  Yeni bir <xref:System.Windows.Interop.HwndSource> HWND üst pencere nesnesi olarak kendi `parent` parametresi.  
   
@@ -76,11 +76,11 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
     4.  <xref:System.Windows.Interop.HwndSource> Nesne <xref:System.Windows.Interop.HwndSource.Handle%2A> özelliği, pencere işleyicisi (HWND) içerir. Uygulamanızın yönetilmeyen parçası kullanabileceğiniz bir HWND almak için cast `Handle.ToPointer()` HWND için.  
   
-6.  Bir başvuru tutan bir statik alan içeren bir yönetilen sınıf uygulamak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesne. Bu sınıf, bir başvuru almak sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesneden, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kod, ancak daha da önemlisi, engeller, <xref:System.Windows.Interop.HwndSource> engeller yanlışlıkla çöp olarak toplanacak.  
+6. Bir başvuru tutan bir statik alan içeren bir yönetilen sınıf uygulamak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesne. Bu sınıf, bir başvuru almak sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesneden, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kod, ancak daha da önemlisi, engeller, <xref:System.Windows.Interop.HwndSource> engeller yanlışlıkla çöp olarak toplanacak.  
   
-7.  Bildirimleri almak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] biri veya daha fazlası için bir işleyici ekleyerek içerik nesne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesne olayları.  
+7. Bildirimleri almak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] biri veya daha fazlası için bir işleyici ekleyerek içerik nesne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik nesne olayları.  
   
-8.  İletişim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kümesi özellikleri, yöntemleri çağırabilir, vb. için statik alanında depolanan başvuru kullanarak içerik nesne.  
+8. İletişim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kümesi özellikleri, yöntemleri çağırabilir, vb. için statik alanında depolanan başvuru kullanarak içerik nesne.  
   
 > [!NOTE]
 >  Bazılarını veya tümünü yapabileceğiniz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik için adım bir sınıf tanımının [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ayrı bir derleme oluşturmak ve ardından ona başvuran içerik sınıfının varsayılan kısmi sınıf kullanarak. Genellikle içerse bir <xref:System.Windows.Application> derleme işleminin parçası olarak nesne [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir derlemeye, söz konusu bitmeyen <xref:System.Windows.Application> birlikte çalışma işleminin bir parçası olarak, yalnızca bir veya daha fazla kök sınıflar için kullandığınız [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] başvurulan dosyaları için uygulama tarafından ve bunların kısmi sınıflar başvuru. Yordamın geri kalanını, yukarıda özetlenen temelde benzerdir.  
@@ -91,17 +91,17 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>WPF Microsoft Win32 penceresinde barındırma  
  Barındırma anahtarını bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] diğer pencereye [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik <xref:System.Windows.Interop.HwndHost> sınıfı. Bu sınıf penceresinde sarmalar bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eklenebilir öğesi bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğe ağacı. <xref:System.Windows.Interop.HwndHost> Ayrıca destekler [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] iletilerini barındırılan pencere için işleme gibi görevleri yapmak izin. Temel yordam aynıdır:  
   
-1.  İçin bir öğe ağacı oluşturma bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama (olabilir başladığınız kodun veya). Öğe ağacındaki bir uygun ve izin verilen noktası bulmasını burada <xref:System.Windows.Interop.HwndHost> uygulaması bir alt öğesi eklenebilir. Kalanı Bu adımlar, bu öğe rezerve öğesi olarak adlandırılır.  
+1. İçin bir öğe ağacı oluşturma bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama (olabilir başladığınız kodun veya). Öğe ağacındaki bir uygun ve izin verilen noktası bulmasını burada <xref:System.Windows.Interop.HwndHost> uygulaması bir alt öğesi eklenebilir. Kalanı Bu adımlar, bu öğe rezerve öğesi olarak adlandırılır.  
   
-2.  Öğesinden türetilen <xref:System.Windows.Interop.HwndHost> tutan bir nesne oluşturmak için [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] içeriği.  
+2. Öğesinden türetilen <xref:System.Windows.Interop.HwndHost> tutan bir nesne oluşturmak için [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] içeriği.  
   
-3.  Bu konak sınıfında geçersiz kılma <xref:System.Windows.Interop.HwndHost> yöntemi <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>. Barındırılan penceresinin HWND döndürür. Döndürülen penceresinin alt pencere olarak gerçek denetim kaydırma isteyebilirsiniz; bir ana penceresinde denetimleri sarmalama için basit bir yol sağlar, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimlerden bildirim almak içerik. Bu teknik düzeltmek için bazı yardımcı olur. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] denetimden sınırında ileti işleme ile ilgili sorunlar.  
+3. Bu konak sınıfında geçersiz kılma <xref:System.Windows.Interop.HwndHost> yöntemi <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>. Barındırılan penceresinin HWND döndürür. Döndürülen penceresinin alt pencere olarak gerçek denetim kaydırma isteyebilirsiniz; bir ana penceresinde denetimleri sarmalama için basit bir yol sağlar, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimlerden bildirim almak içerik. Bu teknik düzeltmek için bazı yardımcı olur. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] denetimden sınırında ileti işleme ile ilgili sorunlar.  
   
-4.  Geçersiz kılma <xref:System.Windows.Interop.HwndHost> yöntemleri <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> ve <xref:System.Windows.Interop.HwndHost.WndProc%2A>. Özellikle yönetilmeyen nesnelere başvurular oluşturduysanız niyetini burada barındırılan içerik başvuruları kaldırın ve temizleme işlemi oluşturmaktır.  
+4. Geçersiz kılma <xref:System.Windows.Interop.HwndHost> yöntemleri <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> ve <xref:System.Windows.Interop.HwndHost.WndProc%2A>. Özellikle yönetilmeyen nesnelere başvurular oluşturduysanız niyetini burada barındırılan içerik başvuruları kaldırın ve temizleme işlemi oluşturmaktır.  
   
-5.  Arka plan kod dosyasında, denetim sınıf barındırma örneği oluşturun ve bunu rezerve öğesinin bir alt öğesi yapın. Genellikle, bir olay işleyicisi aşağıdaki gibi kullanırsınız <xref:System.Windows.FrameworkElement.Loaded>, ya da kısmi sınıf oluşturucusunu kullanın. Ancak, bir çalışma zamanı davranışı ile birlikte çalışabilirlik içeriği de ekleyebilirsiniz.  
+5. Arka plan kod dosyasında, denetim sınıf barındırma örneği oluşturun ve bunu rezerve öğesinin bir alt öğesi yapın. Genellikle, bir olay işleyicisi aşağıdaki gibi kullanırsınız <xref:System.Windows.FrameworkElement.Loaded>, ya da kısmi sınıf oluşturucusunu kullanın. Ancak, bir çalışma zamanı davranışı ile birlikte çalışabilirlik içeriği de ekleyebilirsiniz.  
   
-6.  Denetim bildirimleri gibi işlem seçilen pencere iletileri. İki yaklaşım vardır. Seçtiğiniz kolaylık programlama büyük ölçüde olursa olsun, bu nedenle her iki için ileti akışına, aynı erişim sağlar.  
+6. Denetim bildirimleri gibi işlem seçilen pencere iletileri. İki yaklaşım vardır. Seçtiğiniz kolaylık programlama büyük ölçüde olursa olsun, bu nedenle her iki için ileti akışına, aynı erişim sağlar.  
   
     -   Uygulama ileti kılacağınızı içindeki tüm iletileri (yalnızca kapatma iletiler) için işleme <xref:System.Windows.Interop.HwndHost> yöntemi <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
   
@@ -109,7 +109,7 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
     -   İşlem kullanımı dışında windows iletilerini işleme koyamıyoruz <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
   
-7.  Platform kullanarak barındırılan pencere ile iletişim kurmak yönetilmeyen çağırmak için Çağır `SendMessage` işlevi.  
+7. Platform kullanarak barındırılan pencere ile iletişim kurmak yönetilmeyen çağırmak için Çağır `SendMessage` işlevi.  
   
  Aşağıdaki adımları fare girişi ile çalışan bir uygulama oluşturur. Uygulama tarafından barındırılan pencereniz sekme desteği ekleyebilirsiniz <xref:System.Windows.Interop.IKeyboardInputSink> arabirimi.  
   

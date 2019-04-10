@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-ms.openlocfilehash: a799c0e37d6607e8ff72ab984ff5e540a4e11063
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 67d60709e1c6c76071ecfb7aac74c83dec6f372a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236381"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310050"
 ---
 # <a name="amp-operator-c-reference"></a>&amp; İşleci (C# Başvurusu)
 
@@ -46,9 +46,9 @@ Tamsayı türlerinde işlemler genellikle sabit listesi türlerinde izin verildi
 
 [!code-csharp-interactive[bool logical AND](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#BooleanOperands)]
 
-[Koşullu AND işleci](conditional-and-operator.md) `&&` ayrıca mantıksal hesaplar ve yalnızca ilk işlenen değerlendirilirse işlenenleri ancak ikinci işlenenin değerlendirilir `true`.
+[Koşullu AND işleci](boolean-logical-operators.md#conditional-logical-and-operator-) `&&` ayrıca mantıksal ve işlenenleri, hesaplar, ancak değerlendirme sonucu ilk işlenen ikinci işlenende değerlendirmez `false`.
 
-Boş değer atanabilir bool işlenenleri, davranışı için `&` işleci SQL'in üç değerli mantığı ile tutarlıdır. Daha fazla bilgi için [bool? türü](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) bölümünü [boş değer atanabilir türleri kullanma](../../programming-guide/nullable-types/using-nullable-types.md) makalesi.
+Boş değer atanabilir bool işlenenleri, davranışı için `&` işleci SQL'in üç değerli mantığı ile tutarlıdır. Daha fazla bilgi için [boş değer atanabilir Boolean mantıksal işleçler](boolean-logical-operators.md#nullable-boolean-logical-operators) bölümünü [Boolean mantıksal işleçler](boolean-logical-operators.md) makalesi.
 
 ## <a name="operator-overloadability"></a>İşleç overloadability
 
@@ -60,11 +60,11 @@ Daha fazla bilgi için [address-of işlecini](~/_csharplang/spec/unsafe-code.md#
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C# Başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
+- [Boole mantıksal işleçleri](boolean-logical-operators.md)
 - [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [| işleci](or-operator.md)
 - [^ işleci](xor-operator.md)
 - [~ işleci](bitwise-complement-operator.md)
-- [& & işleci](conditional-and-operator.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 554300f87dbfca351ebcd2d544051968e84880ab
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 105fa8da838938d13022c210c1f65cdafd251003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816834"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308490"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Belirtilen proje düzeyi Imports Namespace veya tür\<qualifiedelementname >', genel üye içermiyor veya bulunamıyor
 Belirtilen proje düzeyi Imports Namespace veya tür\<qualifiedelementname >', genel üye içermiyor veya bulunamıyor. Ad alanı veya tür tanımlanır ve en az bir ortak üye içerdiğinden emin olun. Diğer ad başka diğer adlar içermediğinden emin olun.  
@@ -31,16 +31,16 @@ Belirtilen proje düzeyi Imports Namespace veya tür\<qualifiedelementname >', g
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Açık **Proje Tasarımcısı** geçin **başvuru** sayfası.  
+1. Açık **Proje Tasarımcısı** geçin **başvuru** sayfası.  
   
-2.  İçinde **içeri aktarılan ad alanlarını** bölümünde, kapsayıcı öğe projenizden erişilebilir olduğunu doğrulayın.  
+2. İçinde **içeri aktarılan ad alanlarını** bölümünde, kapsayıcı öğe projenizden erişilebilir olduğunu doğrulayın.  
   
-3.  Kapsayıcı öğe en az bir sunan doğrulayın `Public` üyesi.  
+3. Kapsayıcı öğe en az bir sunan doğrulayın `Public` üyesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Başvurular Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Ortak](../../../visual-basic/language-reference/modifiers/public.md)
+- [Visual Basic'de Ad Alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

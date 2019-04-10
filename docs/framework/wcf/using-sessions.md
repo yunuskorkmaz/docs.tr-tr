@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320931"
 ---
 # <a name="using-sessions"></a>Oturumları Kullanma
 Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grubunu bir konuşma ile ilişkilendirir. WCF oturumları bulunan oturum nesnesi değerinden farklı [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulamaları, farklı davranışları desteklemek ve farklı yollarla denetlenir. Bu konuda WCF'de oturumları sağlayan özellikleri açıklar uygulamaları ve bunların nasıl kullanıldığı.  
@@ -53,9 +53,9 @@ Windows Communication Foundation (WCF) uygulamaları bir *oturumu* iletiler grub
   
  Bir WCF hizmeti bir istemci oturumundan kabul ettiğinde, aşağıdaki özellikler varsayılan olarak etkindir:  
   
-1.  WCF istemci nesnesi arasındaki tüm çağrıların aynı hizmet örneği tarafından işlenir.  
+1. WCF istemci nesnesi arasındaki tüm çağrıların aynı hizmet örneği tarafından işlenir.  
   
-2.  Farklı oturum tabanlı bağlamaları, ek özellikler sağlar.  
+2. Farklı oturum tabanlı bağlamaları, ek özellikler sağlar.  
   
 ## <a name="system-provided-session-types"></a>Sistem tarafından sağlanan oturum türleri  
  Bir hizmet örneği, varsayılan ilişkisi belirli bir oturum ile oturum tabanlı bir bağlamayı destekler. Ancak, farklı oturum tabanlı bağlamalar daha önce açıklanan oturum tabanlı örneklemesini denetimini etkinleştirme yanı sıra farklı özellikleri destekler.  

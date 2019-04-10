@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155135"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309465"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)
 Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en düşük karmaşıklık bir senaryodur. Örnek Northwind veritabanındaki Müşteriler tablosunu modeller bir varlık sınıfı oluşturur. Ardından, Londra'da buluna listesi müşteriler için basit bir sorgu oluşturur.  
@@ -44,30 +44,30 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturmak için  
   
-1.  Visual Studio'da **dosya** menüsünde **yeni**ve ardından **proje**.  
+1. Visual Studio'da **dosya** menüsünde **yeni**ve ardından **proje**.  
   
-2.  İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklayın **Visual C#** .  
+2. İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklayın **Visual C#** .  
   
-3.  İçinde **şablonları** bölmesinde tıklayın **konsol uygulaması**.  
+3. İçinde **şablonları** bölmesinde tıklayın **konsol uygulaması**.  
   
-4.  İçinde **adı** kutusuna **LinqConsoleApp**.  
+4. İçinde **adı** kutusuna **LinqConsoleApp**.  
   
-5.  İçinde **konumu** kutusunda, proje dosyalarını depolamak istediğiniz doğrulayın.  
+5. İçinde **konumu** kutusunda, proje dosyalarını depolamak istediğiniz doğrulayın.  
   
-6.  **Tamam**'ı tıklatın.  
+6. **Tamam**'ı tıklatın.  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ başvuruları ve yönergeleri ekleme  
  Bu izlenecek yol, projenizdeki varsayılan olarak yüklü olmayabilir derlemeleri kullanır. System.Data.Linq projenize bir başvuru olarak listeleniyorsa değil (genişletin **başvuruları** düğümünde **Çözüm Gezgini**), bunu, aşağıdaki adımlarda açıklandığı gibi ekleyin.  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq eklemek için  
   
-1.  İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.  
+1. İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.  
   
-2.  İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.  
+2. İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.  
   
      Derleme, projeye eklenir.  
   
-3.  Üstüne aşağıdaki yönergeleri ekleme **Program.cs**:  
+3. Üstüne aşağıdaki yönergeleri ekleme **Program.cs**:  
   
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
   
@@ -124,11 +124,11 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-execute-the-query"></a>Sorguyu yürütmek için  
   
-1.  Sonuna aşağıdaki kodu yapıştırın veya yazın `Main` yöntemi (sonra sorgu açıklama).  
+1. Sonuna aşağıdaki kodu yapıştırın veya yazın `Main` yöntemi (sonra sorgu açıklama).  
   
      [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]  
   
-2.  Uygulamada hata ayıklamak için F5 tuşuna basın.  
+2. Uygulamada hata ayıklamak için F5 tuşuna basın.  
   
     > [!NOTE]
     >  Uygulamanızı bir çalışma zamanı hatası oluşturur, sorun giderme bölümüne bakın. [izlenecek yollarla öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
@@ -147,7 +147,7 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
      `ID=SEVES, City=London`  
   
-3.  Konsol penceresinde uygulamayı kapatmak için Enter tuşuna basın.  
+3. Konsol penceresinde uygulamayı kapatmak için Enter tuşuna basın.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  [İzlenecek yol: Sorgulama arasında ilişkiler (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) konu, bu gözden geçirme sona ereceği devam eder. Sorgu arasında ilişkiler yönerge gösterir nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tablolarda, benzer şekilde sorgulayabilirsiniz *birleştirmeler* ilişkisel bir veritabanındaki.  

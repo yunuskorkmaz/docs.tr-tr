@@ -2,12 +2,12 @@
 title: Eş Adı Yayını ve Çözümleme
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 0c55b2f1294c055a873278147ff549aa19e33179
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309101"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Eş Adı Yayını ve Çözümleme
 
@@ -25,9 +25,9 @@ Yalnızca diğer P2P kimlikler çözümleniyor, PNRP sürüm 2 düğümleri PNRP
 
  Bir PNRP diğer eş konumlandırma ağ veya Bulut iki aşamadan oluşan bir işlemdir:  
   
-1.  Uç nokta belirleme  
+1. Uç nokta belirleme  
   
-2.  PNRP kimliği çözümleme  
+2. PNRP kimliği çözümleme  
   
  Uç nokta belirleme aşamasında, başka bir bilgisayardaki bir hizmet PNRP kimliği çözümlemeyi deniyor bir eş o uzak eş IPv6 adresini belirler.  Uzak eş yayımlanan veya bilgisayarı veya hizmeti, PNRP Kimliğini ilişkili adrestir.  
   

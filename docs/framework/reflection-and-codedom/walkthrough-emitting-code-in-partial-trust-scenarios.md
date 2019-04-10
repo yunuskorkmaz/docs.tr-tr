@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e9e4aaef8e5f9ece88f56350065b2b688ba2a93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299481"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>İzlenecek yol: Kısmi Güven Senaryolarında Kod Yayma
 Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak bazı özellikler kısmen güvenilen kodda özel izinler gerektirir. Ayrıca, yansıma yayılımı, güvenlikli saydam derlemeler tarafından kısmi güven ile kullanılmak üzere tasarlanmış bir özelliği, anonim olarak barındırılan dinamik yöntemler vardır.  
@@ -59,12 +59,12 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
   
 ##### <a name="to-create-an-application-domain-with-partial-trust"></a>Kısmi güven ile bir uygulama etki alanı oluşturmak için  
   
-1.  Korumalı uygulama etki alanındaki derlemelere vermek amacıyla bir izin kümesi oluşturun. Bu durumda, Internet bölgesi izinleri kümesi kullanılır.  
+1. Korumalı uygulama etki alanındaki derlemelere vermek amacıyla bir izin kümesi oluşturun. Bu durumda, Internet bölgesi izinleri kümesi kullanılır.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2.  Oluşturma bir <xref:System.AppDomainSetup> uygulama etki alanını bir uygulama yoluyla başlatmak için nesne.  
+2. Oluşturma bir <xref:System.AppDomainSetup> uygulama etki alanını bir uygulama yoluyla başlatmak için nesne.  
   
     > [!IMPORTANT]
     >  Kolaylık olması için bu kod örneği geçerli klasörü kullanır. Aslında Internet'ten gelen kodu çalıştırmak için ayrı bir klasör güvenilmeyen kod için açıklandığı kullanın [nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
@@ -72,7 +72,7 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3.  Uygulama etki alanı kurulum bilgilerini ve uygulama etki alanında yürütülen tüm derlemeler için ayarlanmış vermeler belirleyen uygulama etki alanını oluşturun.  
+3. Uygulama etki alanı kurulum bilgilerini ve uygulama etki alanında yürütülen tüm derlemeler için ayarlanmış vermeler belirleyen uygulama etki alanını oluşturun.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
@@ -89,7 +89,7 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
   
 ##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Kısmi güvenli artı RMA'lı bir uygulama etki alanı oluşturmak için  
   
-1.  Yeni bir <xref:System.Security.Permissions.ReflectionPermission> nesnesi ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) kullanın <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> izin verme kümesine izin eklemek için yöntemi.  
+1. Yeni bir <xref:System.Security.Permissions.ReflectionPermission> nesnesi ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) kullanın <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> izin verme kümesine izin eklemek için yöntemi.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
@@ -99,7 +99,7 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
     > [!NOTE]
     >  RMA anonim olarak barındırılan dinamik yöntemlerin bir özelliğidir. Sıradan dinamik yöntemler, JIT görünürlük kontrollerini atladığında, verilmiş kod tam güven gerektirir.  
   
-2.  Uygulama etki alanı kurulum bilgilerini ve izin verme belirleyen uygulama etki alanını oluşturma ayarlayın.  
+2. Uygulama etki alanı kurulum bilgilerini ve izin verme belirleyen uygulama etki alanını oluşturma ayarlayın.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
@@ -110,24 +110,24 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>Tanımlama ve bir uygulama etki alanında bir yöntem yürütülmeye  
   
-1.  Türetilen bir sınıf tanımlama <xref:System.MarshalByRefObject>. Bu, diğer uygulama etki alanlarında sınıfın örneklerini oluşturmak ve uygulama etki alanı sınırları içerisinde yöntem çağrıları yapmak için sağlar. Bu örnekte sınıf adlı `Worker`.  
+1. Türetilen bir sınıf tanımlama <xref:System.MarshalByRefObject>. Bu, diğer uygulama etki alanlarında sınıfın örneklerini oluşturmak ve uygulama etki alanı sınırları içerisinde yöntem çağrıları yapmak için sağlar. Bu örnekte sınıf adlı `Worker`.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2.  Yürütmek istediğiniz kodu içeren genel bir yöntemi tanımlayın. Bu örnekte, kod basit bir dinamik yöntem yayar, yöntemi yürütmek için bir temsilci oluşturur ve temsilci çağırır.  
+2. Yürütmek istediğiniz kodu içeren genel bir yöntemi tanımlayın. Bu örnekte, kod basit bir dinamik yöntem yayar, yöntemi yürütmek için bir temsilci oluşturur ve temsilci çağırır.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3.  Ana programınızda, derlemenizin görünen adını alın. Bu ad örneklerini oluşturduğunuzda kullanılır `Worker` koruma alanlı uygulama etki alanındaki sınıfı.  
+3. Ana programınızda, derlemenizin görünen adını alın. Bu ad örneklerini oluşturduğunuzda kullanılır `Worker` koruma alanlı uygulama etki alanındaki sınıfı.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4.  Ana programınızda, korumalı uygulama etki alanı açıklandığı oluşturma [ilk yordam](#Setting_up) Bu izlenecek yolda. Herhangi bir izin eklemeniz gerekmez `Internet` izin kümesinin, çünkü `SimpleEmitDemo` yöntemi yalnızca genel yöntemler kullanır.  
+4. Ana programınızda, korumalı uygulama etki alanı açıklandığı oluşturma [ilk yordam](#Setting_up) Bu izlenecek yolda. Herhangi bir izin eklemeniz gerekmez `Internet` izin kümesinin, çünkü `SimpleEmitDemo` yöntemi yalnızca genel yöntemler kullanır.  
   
-5.  Ana programınızda bir örneğini oluşturmak `Worker` koruma alanlı uygulama etki alanındaki sınıfı.  
+5. Ana programınızda bir örneğini oluşturmak `Worker` koruma alanlı uygulama etki alanındaki sınıfı.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
@@ -137,7 +137,7 @@ Yansıma yayma aynı API kümesini tam veya kısmi güvende kullanır, ancak baz
     > [!NOTE]
     >  Visual Studio'da bu kodu kullanırsanız, ad alanını katmak için sınıf adını değiştirmeniz gerekir. Varsayılan olarak, ad alanı projenin adıdır. Örneğin, proje "PartialTrust" ise, sınıf adı "PartialTrust.Worker" olmalıdır.  
   
-6.  Çağırmak için kod ekleyin `SimpleEmitDemo` yöntemi. Çağrı uygulama etki alanı sınırı ötesinde sıralanır ve kod korumalı uygulama etki alanında yürütülür.  
+6. Çağırmak için kod ekleyin `SimpleEmitDemo` yöntemi. Çağrı uygulama etki alanı sınırı ötesinde sıralanır ve kod korumalı uygulama etki alanında yürütülür.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  

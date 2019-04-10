@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: ec2a34deb25cd5f4cf492d92129ffc61d14001ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 41794c5ecadbcdc0b38c7c73afc7c010a4ea6989
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300027"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimindeki Hücre Stilleri
 İçindeki her bir hücresinde <xref:System.Windows.Forms.DataGridView> denetim metin biçimi, arka plan rengi, ön plan rengini ve yazı tipi gibi kendi stil sahip olabilir. Genellikle, ancak birden çok hücre belirli stil özellikleri paylaşır.  
@@ -65,25 +65,25 @@ ms.locfileid: "59171528"
 ## <a name="style-inheritance"></a>Stil Devralımı  
  Her <xref:System.Windows.Forms.DataGridViewCell> gelen görünümünü alır, <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> özelliği. <xref:System.Windows.Forms.DataGridViewCellStyle> Bu özellik tarafından döndürülen nesne türü özelliklerinin bir hiyerarşiden değerlerini devralır <xref:System.Windows.Forms.DataGridViewCellStyle>. Bu özellikler hangi sırayla aşağıda listelenen <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> üst bilgisi olmayan hücre değerlerini alır.  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
+2. <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (yalnızca hücrelerde için tek dizin numaralarını bulunan satırlar)  
+3. <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (yalnızca hücrelerde için tek dizin numaralarını bulunan satırlar)  
   
-4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-5.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
+5. <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-6.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+6. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  Satır ve sütun üst bilgisi hücreler için <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> özelliği, verilen sırayla kaynak özellikleri aşağıdaki listeden değerlerle doldurulur.  
   
-1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> veya <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
+2. <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A?displayProperty=nameWithType> veya <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+3. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  Aşağıdaki diyagram bu işlemi göstermektedir.  
   
@@ -91,19 +91,19 @@ ms.locfileid: "59171528"
   
  Ayrıca, belirli satırlar ve sütunlar tarafından devralınan stilleri erişebilir. Sütun <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> özellik değerleri aşağıdaki özelliklerine devralır.  
   
-1.  <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+2. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  Satır <xref:System.Windows.Forms.DataGridViewRow.InheritedStyle%2A> özellik değerleri aşağıdaki özelliklerine devralır.  
   
-1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
+1. <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (yalnızca hücrelerde için tek dizin numaralarını bulunan satırlar)  
+2. <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> (yalnızca hücrelerde için tek dizin numaralarını bulunan satırlar)  
   
-3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+3. <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
-4.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
  Her bir özellik için bir <xref:System.Windows.Forms.DataGridViewCellStyle> nesnesi tarafından döndürülen bir `InheritedStyle` özelliği, özellik değeri öğesinden alınan dışında bir değere ayarlayın karşılık gelen özelliği uygun listedeki ilk hücre stili <xref:System.Windows.Forms.DataGridViewCellStyle> Varsayılanları sınıfı.  
   

@@ -1,15 +1,15 @@
 ---
-title: Değişkenler ve bağımsız değişkenler
+title: Değişkenler ve Bağımsız Değişkenler
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717823"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320749"
 ---
-# <a name="variables-and-arguments"></a>Değişkenler ve bağımsız değişkenler
+# <a name="variables-and-arguments"></a>Değişkenler ve Bağımsız Değişkenler
 Windows Workflow Foundation (WF) değişkenleri temsil eden veri depolama ve küme içi ve dışı bir etkinlik bağımsız değişkenleri veri akışını temsil eder. Bağımsız değişken kümesinin bir etkinlik içerir ve bunlar etkinlik imzasını yapın. Ayrıca, bir etkinlik bir geliştirici ekleyebilir veya değişkenleri bir iş akışı tasarım sırasında kaldırma değişkenler listesini sağlayabilirsiniz. Bağımsız değişken bir değer döndüren bir ifade kullanarak bağlanır.  
   
 ## <a name="variables"></a>Değişkenler  
@@ -63,11 +63,11 @@ Variable<string> var = new Variable<string>
   
  İş akışı çalışma zamanı veri taşıma içine ve dışına etkinlikleri zamanlaması hakkında aşağıdakileri garantiler:  
   
-1.  Bir etkinlik yürütme başlatıldığında, tüm giriş ve giriş/çıkış bağımsız değişkenlerinin değerlerini hesaplanır. Örneğin, ne zaman bakılmaksızın <xref:System.Activities.Argument.Get%2A> olan adlı bir hesaplanır kendi çağrılmasına önce çalışma zamanı tarafından döndürülen değer `Execute`.  
+1. Bir etkinlik yürütme başlatıldığında, tüm giriş ve giriş/çıkış bağımsız değişkenlerinin değerlerini hesaplanır. Örneğin, ne zaman bakılmaksızın <xref:System.Activities.Argument.Get%2A> olan adlı bir hesaplanır kendi çağrılmasına önce çalışma zamanı tarafından döndürülen değer `Execute`.  
   
-2.  Zaman <xref:System.Activities.InOutArgument%601.Set%2A> olan çağrılır, hemen değeri çalışma zamanı ayarlar.  
+2. Zaman <xref:System.Activities.InOutArgument%601.Set%2A> olan çağrılır, hemen değeri çalışma zamanı ayarlar.  
   
-3.  Bağımsız değişken isteğe bağlı olarak olabilir, <xref:System.Activities.Argument.EvaluationOrder%2A> belirtilen. <xref:System.Activities.Argument.EvaluationOrder%2A> bağımsız değişken değerlendirilme sırasını belirleyen sıfır tabanlı bir değerdir. Varsayılan olarak, değerlendirme sırasında bağımsız değişken belirtilmezse ve eşittir <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> değeri. Ayarlama <xref:System.Activities.Argument.EvaluationOrder%2A> büyük veya bu bağımsız değişken için bir değerlendirme sırasını belirlemek için sıfıra eşit bir değer. Windows Workflow Foundation bir belirtilen değerlendirme sırası artan düzende bağımsız değişken değerlendirilir. Bağımsız değişkenlerle bir belirtilmeyen Değerlendirme sırasını belirtilen değerlendirme sırası olanlardan önce değerlendirildiğini unutmayın.  
+3. Bağımsız değişken isteğe bağlı olarak olabilir, <xref:System.Activities.Argument.EvaluationOrder%2A> belirtilen. <xref:System.Activities.Argument.EvaluationOrder%2A> bağımsız değişken değerlendirilme sırasını belirleyen sıfır tabanlı bir değerdir. Varsayılan olarak, değerlendirme sırasında bağımsız değişken belirtilmezse ve eşittir <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> değeri. Ayarlama <xref:System.Activities.Argument.EvaluationOrder%2A> büyük veya bu bağımsız değişken için bir değerlendirme sırasını belirlemek için sıfıra eşit bir değer. Windows Workflow Foundation bir belirtilen değerlendirme sırası artan düzende bağımsız değişken değerlendirilir. Bağımsız değişkenlerle bir belirtilmeyen Değerlendirme sırasını belirtilen değerlendirme sırası olanlardan önce değerlendirildiğini unutmayın.  
   
  Bir etkinlik Yazar bağımsız değişkenlerinden açığa çıkarmak için kesin türü belirtilmiş bir mekanizma kullanabilirsiniz. Bu türün özelliklerini bildirerek gerçekleştirilir <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, ve <xref:System.Activities.InOutArgument%601>. Bu, küme içi ve dışı bir etkinlik giden verileri hakkında belirli bir sözleşme'kurmak bir etkinlik Yazar sağlar.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 52d4fc32836a5d20bd99d8ebfd3119c761376e30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098721"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304785"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Nasıl yapılır: Windows Forms BindingNavigator Denetimine Yükleme, Kaydetme ve İptal Düğmeleri Ekleme
 <xref:System.Windows.Forms.BindingNavigator> Denetimidir özel amaçlı <xref:System.Windows.Forms.ToolStrip> denetimi gezinme ve verilere bağlı denetimler formunuzdaki işlemek için tasarlanmıştır.  
@@ -24,21 +24,21 @@ ms.locfileid: "59098721"
   
 ### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>Yük eklemek, kaydetme ve İptal düğmeleri BindingNavigator bileşenine  
   
-1.  Ekleme bir <xref:System.Windows.Forms.TextBox> form denetimi.  
+1. Ekleme bir <xref:System.Windows.Forms.TextBox> form denetimi.  
   
-2.  Öğeyi bir <xref:System.Windows.Forms.BindingSource>, bir veri kaynağına bağlı. Bu örnekte, <xref:System.Windows.Forms.BindingSource> veritabanına bağlanır.  
+2. Öğeyi bir <xref:System.Windows.Forms.BindingSource>, bir veri kaynağına bağlı. Bu örnekte, <xref:System.Windows.Forms.BindingSource> veritabanına bağlanır.  
   
-3.  Veri kümesi ve tablo bağdaştırıcısı oluşturulur, sonra sürükleyin bir <xref:System.Windows.Forms.BindingNavigator> forma.  
+3. Veri kümesi ve tablo bağdaştırıcısı oluşturulur, sonra sürükleyin bir <xref:System.Windows.Forms.BindingNavigator> forma.  
   
-4.  Ayarlama <xref:System.Windows.Forms.BindingNavigator> denetimin <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> özelliğini <xref:System.Windows.Forms.BindingSource> denetimlere bağlı form üzerindeki.  
+4. Ayarlama <xref:System.Windows.Forms.BindingNavigator> denetimin <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> özelliğini <xref:System.Windows.Forms.BindingSource> denetimlere bağlı form üzerindeki.  
   
-5.  Seçin <xref:System.Windows.Forms.BindingNavigator> denetimi.  
+5. Seçin <xref:System.Windows.Forms.BindingNavigator> denetimi.  
   
-6.  Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) böylece **BindingNavigator görevleri** iletişim kutusu açılır ve seçin **öğedüzenleme**.  
+6. Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) böylece **BindingNavigator görevleri** iletişim kutusu açılır ve seçin **öğedüzenleme**.  
   
      **Öğeler Koleksiyonu Düzenleyicisi** görünür.  
   
-7.  İçinde **öğeler Koleksiyonu Düzenleyicisi**, aşağıdaki adımları tamamlayın:  
+7. İçinde **öğeler Koleksiyonu Düzenleyicisi**, aşağıdaki adımları tamamlayın:  
   
     1.  Ekle bir <xref:System.Windows.Forms.ToolStripSeparator> ve üç <xref:System.Windows.Forms.ToolStripButton> uygun türünü seçerek öğeleri <xref:System.Windows.Forms.ToolStripItem> tıklayıp **Ekle** düğmesi.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59098721"
   
     5.  Tıklayın **Tamam** iletişim kutusunu kapatın. Düğmeleri eklenen <xref:System.Windows.Forms.ToolStrip>.  
   
-8.  Formun sağ tıklatın ve seçin **kodu görüntüle**.  
+8. Formun sağ tıklatın ve seçin **kodu görüntüle**.  
   
 9. Kod Düzenleyicisi'nde tablo bağdaştırıcısı veri yükleyen kod satırını bulun. Veri bağlama 2. adımda ayarladığınızda bu kod üretildi. Kodu aşağıdakine benzer olmalıdır: `TableAdapterName.Fill(DataSetName.TableName)`. Çoğu olacak büyük olasılıkla formun olması <xref:System.Windows.Forms.Form.Load> olay.  
   

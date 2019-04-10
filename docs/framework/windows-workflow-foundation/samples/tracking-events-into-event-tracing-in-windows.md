@@ -2,12 +2,12 @@
 title: Windows'ta Olay İzleme ile Olayları İzleme
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166536"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300651"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows'ta Olay İzleme ile Olayları İzleme
 Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti izleme etkinleştirme ve izleme olayları, olay izleme için Windows (ETW) yayma gösterir. Örnek iş akışı ETW kayıtları izleme yaymak için ETW İzleme katılımcı kullanır (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -39,33 +39,33 @@ Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti izleme etkinle�
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1.  Visual Studio 2010 kullanarak EtwTrackingParticipantSample.sln çözüm dosyasını açın.
+1. Visual Studio 2010 kullanarak EtwTrackingParticipantSample.sln çözüm dosyasını açın.
 
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-3.  Çözümü çalıştırmak için F5 tuşuna basın.
+3. Çözümü çalıştırmak için F5 tuşuna basın.
 
      Varsayılan olarak, hizmet bağlantı noktasını 53797 dinlediğini (http://localhost:53797/SampleWorkflowService.xamlx).
 
-4.  Kullanarak [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], WCF test İstemcisi'ni açın.
+4. Kullanarak [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], WCF test İstemcisi'ni açın.
 
      WCF test istemcisi (WcfTestClient.exe) bulunan \<Visual Studio 2010 yükleme klasörü > \Common7\IDE\ klasör.
 
      Varsayılan Visual Studio 2010 yükleme klasörü C:\Program Files\Microsoft Visual Studio 10.0 ' dir.
 
-5.  WCF test İstemcisi'nde seçin **Hizmet Ekle** gelen **dosya** menüsü.
+5. WCF test İstemcisi'nde seçin **Hizmet Ekle** gelen **dosya** menüsü.
 
      Uç nokta adresi giriş kutusuna ekleyin. Varsayılan, `http://localhost:53797/SampleWorkflowService.xamlx` değeridir.
 
-6.  Olay Görüntüleyici uygulamasını açın.
+6. Olay Görüntüleyici uygulamasını açın.
 
      Hizmeti'ni çağırmadan önce Olay Görüntüleyicisi'ni Başlat **Başlat** menüsünde **çalıştırma** ve yazın `eventvwr.exe`. İş akışı hizmetinden yayılan olayları izlemek için olay günlüğüne dinlediğinden emin olun.
 
-7.  Olay Görüntüleyicisi'nin ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, ve **Microsoft**. Sağ **Microsoft** seçip **görünümü** ve ardından **Analitik ve hata ayıklama günlüklerini göster** analitik etkinleştirmek ve hata ayıklama günlükleri için
+7. Olay Görüntüleyicisi'nin ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, ve **Microsoft**. Sağ **Microsoft** seçip **görünümü** ve ardından **Analitik ve hata ayıklama günlüklerini göster** analitik etkinleştirmek ve hata ayıklama günlükleri için
 
      Emin **Analitik ve hata ayıklama günlüklerini göster** seçeneği denetlenir.
 
-8.  Olay Görüntüleyicisi'nde ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**,  **Uygulama uygulamalarının**. Sağ **analitik** seçip **günlüğü etkinleştir** etkinleştirmek için **analitik** günlük.
+8. Olay Görüntüleyicisi'nde ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**,  **Uygulama uygulamalarının**. Sağ **analitik** seçip **günlüğü etkinleştir** etkinleştirmek için **analitik** günlük.
 
 9. Çift tıklayarak WCF test İstemcisi'ı kullanarak hizmeti test `GetData`.
 
@@ -123,13 +123,13 @@ Bu örnek, Windows Workflow Foundation (WF) iş akışı hizmeti izleme etkinle�
 
 #### <a name="to-clean-up-optional"></a>(İsteğe bağlı) temizlemek için
 
-1.  Olay Görüntüleyicisi'ni açın.
+1. Olay Görüntüleyicisi'ni açın.
 
-2.  Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama Sunucu uygulamaları**. Sağ **analitik** seçip **devre dışı günlük**.
+2. Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama Sunucu uygulamaları**. Sağ **analitik** seçip **devre dışı günlük**.
 
-3.  Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama Sunucu uygulamaları**. Sağ **analitik** seçip **Günlüğü Temizle**.
+3. Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama Sunucu uygulamaları**. Sağ **analitik** seçip **Günlüğü Temizle**.
 
-4.  Seçin **Temizle** olayları silmek için seçeneği.
+4. Seçin **Temizle** olayları silmek için seçeneği.
 
 ## <a name="known-issue"></a>Bilinen sorun
 

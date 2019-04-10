@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 4fdd578f1537e3521093fd12655a452feaa5a38d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112079"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323375"
 ---
 # <a name="single-bulk-copy-operations"></a>Tekil Toplu Kopyalama İşlemleri
 Bir SQL Server toplu kopyalama işlemi gerçekleştirmek için en kolay yaklaşım, bir veritabanında tek bir işlem gerçekleştirmektir. Varsayılan olarak, toplu kopyalama işlemi yalıtılmış bir işlem olarak gerçekleştirilir: yedekleme, geri fırsat ile işlem temelli olmayan bir şekilde, kopyalama işlemi gerçekleşir.  
@@ -22,19 +22,19 @@ Bir SQL Server toplu kopyalama işlemi gerçekleştirmek için en kolay yaklaş�
   
  Toplu kopyalama işlemi gerçekleştirmeye yönelik genel adımlar aşağıdaki gibidir:  
   
-1.  Kaynak sunucuya bağlanın ve kopyalanacak verileri alın. Veri de gelebilir başka kaynaklardan gelen alınamazsa bir <xref:System.Data.IDataReader> veya <xref:System.Data.DataTable> nesne.  
+1. Kaynak sunucuya bağlanın ve kopyalanacak verileri alın. Veri de gelebilir başka kaynaklardan gelen alınamazsa bir <xref:System.Data.IDataReader> veya <xref:System.Data.DataTable> nesne.  
   
-2.  Hedef sunucuya (istediğiniz sürece **SqlBulkCopy** sizin için bir bağlantı kurmak için).  
+2. Hedef sunucuya (istediğiniz sürece **SqlBulkCopy** sizin için bir bağlantı kurmak için).  
   
-3.  Oluşturma bir <xref:System.Data.SqlClient.SqlBulkCopy> nesne, tüm gerekli özellikleri ayarlama.  
+3. Oluşturma bir <xref:System.Data.SqlClient.SqlBulkCopy> nesne, tüm gerekli özellikleri ayarlama.  
   
-4.  Ayarlama **DestinationTableName** hedef tablosu için toplu belirtmek için özelliği ekleme işlemi.  
+4. Ayarlama **DestinationTableName** hedef tablosu için toplu belirtmek için özelliği ekleme işlemi.  
   
-5.  Birini çağırın **WriteToServer** yöntemleri.  
+5. Birini çağırın **WriteToServer** yöntemleri.  
   
-6.  İsteğe bağlı olarak, özellikleri ve arama güncelleştirmesi **WriteToServer** gerektiği şekilde yeniden.  
+6. İsteğe bağlı olarak, özellikleri ve arama güncelleştirmesi **WriteToServer** gerektiği şekilde yeniden.  
   
-7.  Çağrı <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, veya toplu kopyalama işlemleri içinde sarmalamak bir `Using` deyimi.  
+7. Çağrı <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, veya toplu kopyalama işlemleri içinde sarmalamak bir `Using` deyimi.  
   
 > [!CAUTION]
 >  Kaynak ve hedef sütun veri türlerini eşleşmesini öneririz. Veri türleri eşleşmiyorsa **SqlBulkCopy** her kaynak değeri tarafından kullanılan kuralları kullanarak hedef veri türüne dönüştürmeye çalışır <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Dönüştürmeleri performansını etkileyebilir ve ayrıca beklenmeyen hatalara yol açabilir. Örneğin, bir `Double` veri türüne dönüştürülebilir bir `Decimal` veri türü çoğu zaman ama her zaman kullanılmaz.  

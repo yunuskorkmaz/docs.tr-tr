@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Sürükleme ve bırakmayı kullanıcı denetiminde etkinleştirme'
+title: 'İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7009f56c25ff63729f0b0170503c2f356dc91301
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352925"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321685"
 ---
-# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>İzlenecek yol: Sürükleme ve bırakmayı kullanıcı denetiminde etkinleştirme
+# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>İzlenecek yol: Kullanıcı Denetiminde Sürükleme ve Bırakmayı Etkinleştirme
 
 Bu izlenecek yol, sürükle ve bırak veri aktarımı katılabilen özel bir kullanıcı denetimi oluşturmak gösterilmiştir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].
 
@@ -38,11 +38,11 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
 ## <a name="create-the-application-project"></a>Uygulama projesini oluşturun
  Bu bölümde, bir ana sayfa ile iki panel içerir uygulama altyapısı oluşturacak ve bir <xref:System.Windows.Controls.TextBox>.
 
-1.  Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturma `DragDropExample`. Daha fazla bilgi için [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+1. Visual Basic veya Visual C# adlı yeni bir WPF uygulaması projesi oluşturma `DragDropExample`. Daha fazla bilgi için [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-2.  Open MainWindow.xaml.
+2. Open MainWindow.xaml.
 
-3.  Açılış ve kapanış arasında aşağıdaki işaretlemeyi ekleyin <xref:System.Windows.Controls.Grid> etiketler.
+3. Açılış ve kapanış arasında aşağıdaki işaretlemeyi ekleyin <xref:System.Windows.Controls.Grid> etiketler.
 
      Bu işaretleme, kullanıcı arabirimi test uygulaması oluşturur.
 
@@ -51,23 +51,23 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
 ## <a name="add-a-new-user-control-to-the-project"></a>Projeye yeni bir kullanıcı denetimi Ekle
  Bu bölümde, projeye yeni bir kullanıcı denetimi ekleyeceksiniz.
 
-1.  Proje menüsünde **kullanıcı denetimi Ekle**.
+1. Proje menüsünde **kullanıcı denetimi Ekle**.
 
-2.  İçinde **Yeni Öğe Ekle** iletişim kutusunda, ada değiştirin `Circle.xaml`, tıklatıp **Ekle**.
+2. İçinde **Yeni Öğe Ekle** iletişim kutusunda, ada değiştirin `Circle.xaml`, tıklatıp **Ekle**.
 
      Circle.XAML ve kendi arka plan kod projesine eklenir.
 
-3.  Circle.xaml açın.
+3. Circle.xaml açın.
 
      Bu dosya kullanıcı denetiminin kullanıcı arabirimi öğeleri içerir.
 
-4.  Kök aşağıdaki işaretlemeyi ekleyin <xref:System.Windows.Controls.Grid> mavi bir daire olarak kullanıcı arabirimini sahip basit bir kullanıcı denetimi oluşturmak için.
+4. Kök aşağıdaki işaretlemeyi ekleyin <xref:System.Windows.Controls.Grid> mavi bir daire olarak kullanıcı arabirimini sahip basit bir kullanıcı denetimi oluşturmak için.
 
      [!code-xaml[DragDropWalkthrough#EllipseXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]
 
-5.  Circle.xaml.cs veya Circle.xaml.vb açın.
+5. Circle.xaml.cs veya Circle.xaml.vb açın.
 
-6.  C# ' ta bir kopya Oluşturucu oluşturmak için varsayılan oluşturucu sonra aşağıdaki kodu ekleyin. Visual Basic'te, bir kopya oluşturucu ve bir varsayılan oluşturucu oluşturmak için aşağıdaki kodu ekleyin.
+6. C# ' ta bir kopya Oluşturucu oluşturmak için varsayılan oluşturucu sonra aşağıdaki kodu ekleyin. Visual Basic'te, bir kopya oluşturucu ve bir varsayılan oluşturucu oluşturmak için aşağıdaki kodu ekleyin.
 
      Kopyalanacak kullanıcı denetimi izin vermek üzere arka plan kod dosyasında bir kopya Oluşturucu yöntemi ekleyin. Basitleştirilmiş daire kullanıcı denetiminde yalnızca dolgu ve boyutunu kopyalayacağınız kullanıcı denetimi.
 
@@ -76,15 +76,15 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
 
 ## <a name="add-the-user-control-to-the-main-window"></a>Kullanıcı denetiminin ana penceresine ekleme
 
-1.  Open MainWindow.xaml.
+1. Open MainWindow.xaml.
 
-2.  Aşağıdaki XAML açılış ekleme <xref:System.Windows.Window> bir XML ad alanı başvurusu geçerli uygulamaya etiket.
+2. Aşağıdaki XAML açılış ekleme <xref:System.Windows.Window> bir XML ad alanı başvurusu geçerli uygulamaya etiket.
 
     ```
     xmlns:local="clr-namespace:DragDropExample"
     ```
 
-3.  İlk <xref:System.Windows.Controls.StackPanel>, ilk panelindeki daire kullanıcı denetimi iki örneğini oluşturmak için aşağıdaki XAML ekleyin.
+3. İlk <xref:System.Windows.Controls.StackPanel>, ilk panelindeki daire kullanıcı denetimi iki örneğini oluşturmak için aşağıdaki XAML ekleyin.
 
      [!code-xaml[DragDropWalkthrough#CirclesXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
 
@@ -99,9 +99,9 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
 
 ### <a name="to-initiate-a-drag-and-drop-operation"></a>Bir Sürükle ve bırak işlemi başlatmak için
 
-1.  Circle.xaml.cs veya Circle.xaml.vb açın.
+1. Circle.xaml.cs veya Circle.xaml.vb açın.
 
-2.  Aşağıdaki <xref:System.Windows.UIElement.OnMouseMove%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.MouseMove> olay.
+2. Aşağıdaki <xref:System.Windows.UIElement.OnMouseMove%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.MouseMove> olay.
 
      [!code-csharp[DragDropWalkthrough#OnMouseMove](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
      [!code-vb[DragDropWalkthrough#OnMouseMove](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
@@ -120,13 +120,13 @@ Bu izlenecek yolu tamamlamak için Visual Studio ihtiyacınız vardır.
 
         -   `allowedEffects` – Olan izin verilen sürükle ve bırak işlemleri <xref:System.Windows.DragDropEffects.Copy> veya <xref:System.Windows.DragDropEffects.Move>.
 
-3.  Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
+3. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 
-4.  Daire denetimlerden birini tıklatın ve başka bir daire, panellerin üzerine sürükleyin ve <xref:System.Windows.Controls.TextBox>. Üzerine sürüklerken <xref:System.Windows.Controls.TextBox>, taşıma belirtecek şekilde imleç değişir.
+4. Daire denetimlerden birini tıklatın ve başka bir daire, panellerin üzerine sürükleyin ve <xref:System.Windows.Controls.TextBox>. Üzerine sürüklerken <xref:System.Windows.Controls.TextBox>, taşıma belirtecek şekilde imleç değişir.
 
-5.  Bir dairenin üzerine sürüklerken <xref:System.Windows.Controls.TextBox>, basın **Ctrl** anahtarı. Nasıl bir kopyasını belirtmek için imleç değiştiğine dikkat edin.
+5. Bir dairenin üzerine sürüklerken <xref:System.Windows.Controls.TextBox>, basın **Ctrl** anahtarı. Nasıl bir kopyasını belirtmek için imleç değiştiğine dikkat edin.
 
-6.  Bir dairenin üzerine sürükleyip <xref:System.Windows.Controls.TextBox>. Dairenin dolgu rengi dize gösterimini eklenir <xref:System.Windows.Controls.TextBox>.
+6. Bir dairenin üzerine sürükleyip <xref:System.Windows.Controls.TextBox>. Dairenin dolgu rengi dize gösterimini eklenir <xref:System.Windows.Controls.TextBox>.
 
      ![Dize gösterimini dairenin dolgu rengi](./media/dragdrop-colorstring.png "DragDrop_ColorString")
 
@@ -134,9 +134,9 @@ Varsayılan olarak, imleç bir Sürükle ve bırak işlemi sırasında veri bır
 
 ## <a name="give-feedback-to-the-user"></a>Kullanıcıya geri bildirimde bulunun
 
-1.  Circle.xaml.cs veya Circle.xaml.vb açın.
+1. Circle.xaml.cs veya Circle.xaml.vb açın.
 
-2.  Aşağıdaki <xref:System.Windows.UIElement.OnGiveFeedback%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.GiveFeedback> olay.
+2. Aşağıdaki <xref:System.Windows.UIElement.OnGiveFeedback%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.GiveFeedback> olay.
 
      [!code-csharp[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
      [!code-vb[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
@@ -147,24 +147,24 @@ Varsayılan olarak, imleç bir Sürükle ve bırak işlemi sırasında veri bır
 
     -   Temel özel bir imleç ayarlar <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> değeri. İmleç, verileri bırakmayı hangi etkisi hakkında kullanıcıya görsel geribildirim vermek için tasarlanmıştır.
 
-3.  Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
+3. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 
-4.  Bir dairenin denetimleri başka bir daire, panellerin üzerine sürükleyin ve <xref:System.Windows.Controls.TextBox>. İmleçler artık, belirttiğiniz özel işaretçiler olduğunu fark <xref:System.Windows.UIElement.OnGiveFeedback%2A> geçersiz kılar.
+4. Bir dairenin denetimleri başka bir daire, panellerin üzerine sürükleyin ve <xref:System.Windows.Controls.TextBox>. İmleçler artık, belirttiğiniz özel işaretçiler olduğunu fark <xref:System.Windows.UIElement.OnGiveFeedback%2A> geçersiz kılar.
 
      ![Sürükle ve bırak ile özel işaretçiler](./media/dragdrop-customcursor.png "DragDrop_CustomCursor")
 
-5.  Metni seçin `green` gelen <xref:System.Windows.Controls.TextBox>.
+5. Metni seçin `green` gelen <xref:System.Windows.Controls.TextBox>.
 
-6.  Sürükleme `green` bir daire denetime metin. Sürükle ve bırak işlemi etkilerini belirtmek için gösterilen varsayılan imleçler dikkat edin. Geri bildirim imleci her zaman sürükleme kaynağı tarafından ayarlanır.
+6. Sürükleme `green` bir daire denetime metin. Sürükle ve bırak işlemi etkilerini belirtmek için gösterilen varsayılan imleçler dikkat edin. Geri bildirim imleci her zaman sürükleme kaynağı tarafından ayarlanır.
 
 ## <a name="implement-drop-target-events-in-the-user-control"></a>Bırakma hedefi olayları kullanıcı denetimi uygulayın
  Bu bölümde, kullanıcı denetiminin bir bırakma hedefi, kullanıcı etkinleştirme yöntemleri bir bırakma hedefi olarak denetlemek ve üzerinde bırakılan veri işlem geçersiz kılma olduğunu belirtin.
 
 ### <a name="to-enable-the-user-control-to-be-a-drop-target"></a>Bir bırakma hedefi olarak kullanıcı denetimini etkinleştirme
 
-1.  Circle.xaml açın.
+1. Circle.xaml açın.
 
-2.  Açılışında <xref:System.Windows.Controls.UserControl> etiketinde, ekleyin <xref:System.Windows.UIElement.AllowDrop%2A> özelliği ve değerini `true`.
+2. Açılışında <xref:System.Windows.Controls.UserControl> etiketinde, ekleyin <xref:System.Windows.UIElement.AllowDrop%2A> özelliği ve değerini `true`.
 
      [!code-xaml[DragDropWalkthrough#UCTagXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
 
@@ -172,9 +172,9 @@ Varsayılan olarak, imleç bir Sürükle ve bırak işlemi sırasında veri bır
 
 ### <a name="to-process-the-dropped-data"></a>Bırakılan veri işlemek için
 
-1.  Circle.xaml.cs veya Circle.xaml.vb açın.
+1. Circle.xaml.cs veya Circle.xaml.vb açın.
 
-2.  Aşağıdaki <xref:System.Windows.UIElement.OnDrop%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.Drop> olay.
+2. Aşağıdaki <xref:System.Windows.UIElement.OnDrop%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.Drop> olay.
 
      [!code-csharp[DragDropWalkthrough#OnDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
      [!code-vb[DragDropWalkthrough#OnDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
@@ -191,19 +191,19 @@ Varsayılan olarak, imleç bir Sürükle ve bırak işlemi sırasında veri bır
 
     -   İşaretleri <xref:System.Windows.UIElement.Drop> işlenmiş olarak olay. Bırakma olayını daire kullanıcı denetimi, işlenen Bu etkinliğin diğer öğeleri öğrenmek için işlenmiş olarak işaretlemeniz gerekir.
 
-3.  Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
+3. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 
-4.  Metni seçin `green` içinde <xref:System.Windows.Controls.TextBox>.
+4. Metni seçin `green` içinde <xref:System.Windows.Controls.TextBox>.
 
-5.  Bir daire denetime metin sürükleyin ve bırakın. Mavi yeşil daire değişiklikleri.
+5. Bir daire denetime metin sürükleyin ve bırakın. Mavi yeşil daire değişiklikleri.
 
      ![Bir dize dönüştürmek için bir fırça](./media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
 
-6.  Bir metin yazın `green` içinde <xref:System.Windows.Controls.TextBox>.
+6. Bir metin yazın `green` içinde <xref:System.Windows.Controls.TextBox>.
 
-7.  Metni seçin `gre` içinde <xref:System.Windows.Controls.TextBox>.
+7. Metni seçin `gre` içinde <xref:System.Windows.Controls.TextBox>.
 
-8.  Bir daire denetimine sürükleyin ve bırakın. Açılan izin verilir, ancak dairenin rengi, çünkü değiştirmez belirtmek için imleç değiştiğine dikkat edin `gre` geçerli bir renk değil.
+8. Bir daire denetimine sürükleyin ve bırakın. Açılan izin verilir, ancak dairenin rengi, çünkü değiştirmez belirtmek için imleç değiştiğine dikkat edin `gre` geçerli bir renk değil.
 
 9. Yeşil daire denetiminden sürükleyip mavi daire denetimi. Mavi yeşil daire değişiklikleri. Hangi imleç gösterilir bağlıdır dikkat edin <xref:System.Windows.Controls.TextBox> veya daire sürükleme kaynağı.
 
@@ -213,9 +213,9 @@ Veri daire kullanıcı denetime sürüklendiğinde denetimin sürüklenen veri i
 
 ### <a name="to-verify-that-the-data-drop-is-allowed"></a>Veri bırakma izin verildiğini doğrulamak için
 
-1.  Circle.xaml.cs veya Circle.xaml.vb açın.
+1. Circle.xaml.cs veya Circle.xaml.vb açın.
 
-2.  Aşağıdaki <xref:System.Windows.UIElement.OnDragOver%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.DragOver> olay.
+2. Aşağıdaki <xref:System.Windows.UIElement.OnDragOver%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.DragOver> olay.
 
      [!code-csharp[DragDropWalkthrough#OnDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
      [!code-vb[DragDropWalkthrough#OnDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
@@ -228,24 +228,24 @@ Veri daire kullanıcı denetime sürüklendiğinde denetimin sürüklenen veri i
 
     -   Kullanıcı denetimi verileri işleyebildiğinden, ayarlar <xref:System.Windows.DragEventArgs.Effects%2A> özelliğini <xref:System.Windows.DragDropEffects.Copy> veya <xref:System.Windows.DragDropEffects.Move>.
 
-3.  Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
+3. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 
-4.  Metni seçin `gre` içinde <xref:System.Windows.Controls.TextBox>.
+4. Metni seçin `gre` içinde <xref:System.Windows.Controls.TextBox>.
 
-5.  Metin bir daire denetimi sürükleyin. İmleç açılan olduğundan izin verilmiyor belirtmek için hemen değiştiğine dikkat edin `gre` geçerli bir renk değil.
+5. Metin bir daire denetimi sürükleyin. İmleç açılan olduğundan izin verilmiyor belirtmek için hemen değiştiğine dikkat edin `gre` geçerli bir renk değil.
 
  Kullanıcı deneyimini daha fazla bırakma işlemi önizlemesini uygulayarak da geliştirebilirsiniz. Daire kullanıcı denetimi için geçersiz kılar <xref:System.Windows.UIElement.OnDragEnter%2A> ve <xref:System.Windows.UIElement.OnDragLeave%2A> yöntemleri. Ne zaman veri sürüklediğiniz geçerli arka plan denetimin üzerine <xref:System.Windows.Shapes.Shape.Fill%2A> bir yer tutucu değişkende kaydedilir. Dize ardından fırçaya dönüştürülür ve uygulanan <xref:System.Windows.Shapes.Ellipse> dairenin sağlayan kullanıcı Arabirimi. Veri daire dışında ' bırakılan olmadan, özgün sürüklediyseniz <xref:System.Windows.Shapes.Shape.Fill%2A> değeri dairenin yeniden uygulanır.
 
 ### <a name="to-preview-the-effects-of-the-drag-and-drop-operation"></a>Sürükle ve bırak işlemi etkilerini önizlemesini görüntülemek için
 
-1.  Circle.xaml.cs veya Circle.xaml.vb açın.
+1. Circle.xaml.cs veya Circle.xaml.vb açın.
 
-2.  Özel bir daire sınıfında bildirmek <xref:System.Windows.Media.Brush> adlı değişken `_previousFill` ve kendisine başlatma `null`.
+2. Özel bir daire sınıfında bildirmek <xref:System.Windows.Media.Brush> adlı değişken `_previousFill` ve kendisine başlatma `null`.
 
      [!code-csharp[DragDropWalkthrough#Brush](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
      [!code-vb[DragDropWalkthrough#Brush](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
 
-3.  Aşağıdaki <xref:System.Windows.UIElement.OnDragEnter%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.DragEnter> olay.
+3. Aşağıdaki <xref:System.Windows.UIElement.OnDragEnter%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.DragEnter> olay.
 
      [!code-csharp[DragDropWalkthrough#OnDragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
      [!code-vb[DragDropWalkthrough#OnDragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
@@ -258,7 +258,7 @@ Veri daire kullanıcı denetime sürüklendiğinde denetimin sürüklenen veri i
 
     -   Geçerli bir veri dönüştürülürse <xref:System.Windows.Media.Brush>, uygular <xref:System.Windows.Shapes.Shape.Fill%2A> , <xref:System.Windows.Shapes.Ellipse>.
 
-4.  Aşağıdaki <xref:System.Windows.UIElement.OnDragLeave%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.DragLeave> olay.
+4. Aşağıdaki <xref:System.Windows.UIElement.OnDragLeave%2A> sınıf için işleme sağlamak için geçersiz kılma <xref:System.Windows.UIElement.DragLeave> olay.
 
      [!code-csharp[DragDropWalkthrough#OnDragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
      [!code-vb[DragDropWalkthrough#OnDragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
@@ -267,29 +267,29 @@ Veri daire kullanıcı denetime sürüklendiğinde denetimin sürüklenen veri i
 
     -   Geçerli <xref:System.Windows.Media.Brush> kaydedilmiş `_previousFill` değişkenini <xref:System.Windows.Shapes.Shape.Fill%2A> , <xref:System.Windows.Shapes.Ellipse> daire kullanıcı denetiminin kullanıcı Arabirimi sağlar.
 
-5.  Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
+5. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 
-6.  Metni seçin `green` içinde <xref:System.Windows.Controls.TextBox>.
+6. Metni seçin `green` içinde <xref:System.Windows.Controls.TextBox>.
 
-7.  Metin, sürükleyip bırakarak olmadan bir daire denetimin üzerine sürükleyin. Mavi yeşil daire değişiklikleri.
+7. Metin, sürükleyip bırakarak olmadan bir daire denetimin üzerine sürükleyin. Mavi yeşil daire değişiklikleri.
 
      ![Bir sürükleme etkilerini önizleme&#45;ve&#45;bırakma işlemi](./media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
 
-8.  Metin daire denetim uzağa sürükleyin. Mavi yeşil arka daireye dönüşür.
+8. Metin daire denetim uzağa sürükleyin. Mavi yeşil arka daireye dönüşür.
 
 ## <a name="enable-a-panel-to-receive-dropped-data"></a>Bırakılan veri almak bir Panel etkinleştir
 
 Bu bölümde, sürüklenen daire veriler için bırakma hedefleri olarak davranmak üzere daire kullanıcı denetimleri barındıran paneller etkinleştirin. Bir daire bir panelden diğerine taşımak için ya da basılı tutarak bir daire denetimin bir kopyasını yapmak sağlayan kodu gerçekleştireceksiniz **Ctrl** tuşunu sürükleyip bırakarak bir daire.
 
-1.  Open MainWindow.xaml.
+1. Open MainWindow.xaml.
 
-2.  Her birinde aşağıdaki XAML gösterildiği <xref:System.Windows.Controls.StackPanel> denetimler eklemek için işleyiciler <xref:System.Windows.UIElement.DragOver> ve <xref:System.Windows.UIElement.Drop> olayları. Adı <xref:System.Windows.UIElement.DragOver> olay işleyicisi `panel_DragOver`ve ad <xref:System.Windows.UIElement.Drop> olay işleyicisi `panel_Drop`.
+2. Her birinde aşağıdaki XAML gösterildiği <xref:System.Windows.Controls.StackPanel> denetimler eklemek için işleyiciler <xref:System.Windows.UIElement.DragOver> ve <xref:System.Windows.UIElement.Drop> olayları. Adı <xref:System.Windows.UIElement.DragOver> olay işleyicisi `panel_DragOver`ve ad <xref:System.Windows.UIElement.Drop> olay işleyicisi `panel_Drop`.
 
      [!code-xaml[DragDropWalkthrough#PanelsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
 
-3.  MainWindows.xaml.cs veya MainWindow.xaml.vb açın.
+3. MainWindows.xaml.cs veya MainWindow.xaml.vb açın.
 
-4.  İçin aşağıdaki kodu ekleyin <xref:System.Windows.UIElement.DragOver> olay işleyicisi.
+4. İçin aşağıdaki kodu ekleyin <xref:System.Windows.UIElement.DragOver> olay işleyicisi.
 
      [!code-csharp[DragDropWalkthrough#PanelDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
      [!code-vb[DragDropWalkthrough#PanelDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
@@ -302,7 +302,7 @@ Bu bölümde, sürüklenen daire veriler için bırakma hedefleri olarak davranm
 
     -   Varsa **Ctrl** tuşuna basıldığında, ayarlar <xref:System.Windows.DragEventArgs.Effects%2A> özelliğini <xref:System.Windows.DragDropEffects.Copy>. Aksi takdirde, ayarlama <xref:System.Windows.DragEventArgs.Effects%2A> özelliğini <xref:System.Windows.DragDropEffects.Move>.
 
-5.  İçin aşağıdaki kodu ekleyin <xref:System.Windows.UIElement.Drop> olay işleyicisi.
+5. İçin aşağıdaki kodu ekleyin <xref:System.Windows.UIElement.Drop> olay işleyicisi.
 
      [!code-csharp[DragDropWalkthrough#PanelDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
      [!code-vb[DragDropWalkthrough#PanelDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
@@ -319,11 +319,11 @@ Bu bölümde, sürüklenen daire veriler için bırakma hedefleri olarak davranm
 
     -   Kümeleri <xref:System.Windows.DragEventArgs.Effects%2A> bildirmek için özellik <xref:System.Windows.DragDrop.DoDragDrop%2A> yöntemi olup olmadığını taşıma veya kopyalama işlemi gerçekleştirildi.
 
-6.  Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
+6. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın.
 
-7.  Metni seçin `green` gelen <xref:System.Windows.Controls.TextBox>.
+7. Metni seçin `green` gelen <xref:System.Windows.Controls.TextBox>.
 
-8.  Metin bir daire denetimin üzerine sürükleyin ve bırakın.
+8. Metin bir daire denetimin üzerine sürükleyin ve bırakın.
 
 9. Bir daire denetimi sol panelden sağ bölmenin sürükleyip bırakın. Daire kaldırılır <xref:System.Windows.Controls.Panel.Children%2A> sol panelde koleksiyonunu ve sağ alt koleksiyona eklenir.
 

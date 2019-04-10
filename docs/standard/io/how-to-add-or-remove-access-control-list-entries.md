@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 645c4ea76509bf488b62669f65e03d3690fd5a05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 351d8325cc0fc1a1b551b6d513cad02f1291daab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103837"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308022"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>Nasıl yapılır: Ekleme veya kaldırma erişim denetimi listesi girdileri (yalnızca .NET Framework)
 Erişim denetimi listesi (ACL) girişleri için veya bir dosya veya dizinden ekleyip için alın <xref:System.Security.AccessControl.FileSecurity> veya <xref:System.Security.AccessControl.DirectorySecurity> dosya veya dizinden nesne. Nesneyi değiştirmek ve dosya veya dizin için geçerlidir.  
   
 ## <a name="add-or-remove-an-acl-entry-from-a-file"></a>Bir ACL girişi dosyadan ekleyip  
   
-1.  Çağrı <xref:System.IO.File.GetAccessControl%2A?displayProperty=nameWithType> almak için yöntemi bir <xref:System.Security.AccessControl.FileSecurity> dosyasının geçerli ACL girişleri içeren nesne.  
+1. Çağrı <xref:System.IO.File.GetAccessControl%2A?displayProperty=nameWithType> almak için yöntemi bir <xref:System.Security.AccessControl.FileSecurity> dosyasının geçerli ACL girişleri içeren nesne.  
   
-2.  ACL girişleri ekleyip <xref:System.Security.AccessControl.FileSecurity> adım 1'den Nesne döndürdü.  
+2. ACL girişleri ekleyip <xref:System.Security.AccessControl.FileSecurity> adım 1'den Nesne döndürdü.  
   
 3. Değişiklikleri uygulamak için geçirmek <xref:System.Security.AccessControl.FileSecurity> nesnesini <xref:System.IO.File.SetAccessControl%2A?displayProperty=nameWithType> yöntemi.  
   
 ## <a name="add-or-remove-an-acl-entry-from-a-directory"></a>Bir ACL girişi bir dizinden ekleyip  
   
-1.  Çağrı <xref:System.IO.Directory.GetAccessControl%2A?displayProperty=nameWithType> almak için yöntemi bir <xref:System.Security.AccessControl.DirectorySecurity> ait geçerli bir dizin ACL girişleri içeren nesne.  
+1. Çağrı <xref:System.IO.Directory.GetAccessControl%2A?displayProperty=nameWithType> almak için yöntemi bir <xref:System.Security.AccessControl.DirectorySecurity> ait geçerli bir dizin ACL girişleri içeren nesne.  
   
-2.  ACL girişleri ekleyip <xref:System.Security.AccessControl.DirectorySecurity> adım 1'den Nesne döndürdü.  
+2. ACL girişleri ekleyip <xref:System.Security.AccessControl.DirectorySecurity> adım 1'den Nesne döndürdü.  
   
-3.  Değişiklikleri uygulamak için geçirmek <xref:System.Security.AccessControl.DirectorySecurity> nesnesini <xref:System.IO.Directory.SetAccessControl%2A?displayProperty=nameWithType> yöntemi.  
+3. Değişiklikleri uygulamak için geçirmek <xref:System.Security.AccessControl.DirectorySecurity> nesnesini <xref:System.IO.Directory.SetAccessControl%2A?displayProperty=nameWithType> yöntemi.  
   
 ## <a name="example"></a>Örnek  
  Bu örneği çalıştırmak için geçerli bir kullanıcı veya grup hesabı kullanmanız gerekir. Örnekte bir <xref:System.IO.File> nesne. İçin aynı yordamı <xref:System.IO.FileInfo>, <xref:System.IO.Directory>, ve <xref:System.IO.DirectoryInfo> sınıfları.

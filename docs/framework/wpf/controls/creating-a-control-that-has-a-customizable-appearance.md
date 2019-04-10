@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 17b6fd604b5eca54d6323701dafdd38f9f6e7328
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131030"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298350"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Özelleştirilebilir Görünümü olan Denetim Oluşturma
 <a name="introduction"></a>
@@ -94,15 +94,15 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
  Eksik denetim düzgün yanıt aşağıdaki yöntemler sağlayacak <xref:System.Windows.FrameworkElement> nesneler:  
   
-1.  Ayarlama `x:Name` her öznitelik <xref:System.Windows.FrameworkElement> kodda başvurmak gereken.  
+1. Ayarlama `x:Name` her öznitelik <xref:System.Windows.FrameworkElement> kodda başvurmak gereken.  
   
-2.  Her biri için özel özellikleri tanımlama <xref:System.Windows.FrameworkElement> ile etkileşim kurmak gereken.  
+2. Her biri için özel özellikleri tanımlama <xref:System.Windows.FrameworkElement> ile etkileşim kurmak gereken.  
   
-3.  Abone olma ve denetiminizin işlediği meydana gelen olayları abonelikten çıkma <xref:System.Windows.FrameworkElement> özelliği erişimcisi küme.  
+3. Abone olma ve denetiminizin işlediği meydana gelen olayları abonelikten çıkma <xref:System.Windows.FrameworkElement> özelliği erişimcisi küme.  
   
-4.  Ayarlama <xref:System.Windows.FrameworkElement> içinde tanımlanan özellikler adımı 2 <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> yöntemi. Bu erken olduğundan, <xref:System.Windows.FrameworkElement> içinde <xref:System.Windows.Controls.ControlTemplate> denetimi için kullanılabilir. Kullanım `x:Name` , <xref:System.Windows.FrameworkElement> elde <xref:System.Windows.Controls.ControlTemplate>.  
+4. Ayarlama <xref:System.Windows.FrameworkElement> içinde tanımlanan özellikler adımı 2 <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> yöntemi. Bu erken olduğundan, <xref:System.Windows.FrameworkElement> içinde <xref:System.Windows.Controls.ControlTemplate> denetimi için kullanılabilir. Kullanım `x:Name` , <xref:System.Windows.FrameworkElement> elde <xref:System.Windows.Controls.ControlTemplate>.  
   
-5.  Bu maddeyi <xref:System.Windows.FrameworkElement> değil `null` üyelerine erişmeden önce.  Eğer öyleyse `null`, bir hata bildirmez.  
+5. Bu maddeyi <xref:System.Windows.FrameworkElement> değil `null` üyelerine erişmeden önce.  Eğer öyleyse `null`, bir hata bildirmez.  
   
  Aşağıdaki örneklerde gösterildiği nasıl `NumericUpDown` denetim ile etkileşime <xref:System.Windows.FrameworkElement> yukarıdaki listede önerilerle nesneleri.  
   

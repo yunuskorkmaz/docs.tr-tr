@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama'
+title: 'Nasıl yapılır: Visual Studio Komut Satırı için Ortam Değişkenlerini Ayarlama'
 ms.date: 09/29/2017
 f1_keywords:
 - cs.build.commandline
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: ffc75a01230df078073f163c97a8c77229d3b2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c906a2274f57f5a89fb16198c8f6ed2e3a335e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322127"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Nasıl yapılır: Visual Studio Komut Satırı için Ortam Değişkenlerini Ayarlama
 
 VsDevCmd.bat dosya komut satırı derlemeleri etkinleştirmek için uygun ortam değişkenlerini ayarlar.
 
@@ -33,11 +33,11 @@ Visual Studio'nun geçerli sürümü Visual Studio'nun önceki bir sürümü ola
   
 ### <a name="to-run-vsdevcmdbat"></a>VsDevCmd.BAT çalıştırmak için  
   
-1.  Gelen **Başlat** menüsünde, açık **VS 2017 için geliştirici komut istemi**.  İçinde **Visual Studio 2017** klasör.
+1. Gelen **Başlat** menüsünde, açık **VS 2017 için geliştirici komut istemi**.  İçinde **Visual Studio 2017** klasör.
   
-2.  Değiştirme \Program Visual Studio'ya\\*sürüm*\\*sunan*\Common7\Tools veya \Program dosyaları (x86) \Microsoft Visual Studio\\ *Sürüm*\\*sunan*yüklemenizin \Common7\Tools alt dizinine geçin.  (*Sürüm* olduğu *2017* geçerli sürümü için. *Teklif* biri *Kurumsal*, *Professional* veya *topluluk*.)
+2. Değiştirme \Program Visual Studio'ya\\*sürüm*\\*sunan*\Common7\Tools veya \Program dosyaları (x86) \Microsoft Visual Studio\\ *Sürüm*\\*sunan*yüklemenizin \Common7\Tools alt dizinine geçin.  (*Sürüm* olduğu *2017* geçerli sürümü için. *Teklif* biri *Kurumsal*, *Professional* veya *topluluk*.)
   
-3.  Yazarak VsDevCmd.bat çalıştırın **VsDevCmd**.  
+3. Yazarak VsDevCmd.bat çalıştırın **VsDevCmd**.  
   
     > [!CAUTION]
     >  VsDevCmd.bat bilgisayardan diğerine farklılık gösterebilir. Eksik veya bozuk VsDevCmd.bat dosya başka bir bilgisayardan bir VsDevCmd.bat ile değiştirmeyin. Bunun yerine, eksik dosyayı yerine koymak için kurulumu yeniden çalıştırın.  

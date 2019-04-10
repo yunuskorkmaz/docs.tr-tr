@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: cb4a2bcc6f62fac5d0dde82ab32ed6e04e8a9b7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095561"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306995"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Nasıl yapılır: Yerel Yayımlayan Yapılandırma
 Bu konuda verilen belirteçleri yerel yayımlayan kullanmak için bir istemciyi nasıl yapılandıracağınız açıklanmaktadır.  
@@ -27,14 +27,14 @@ Bu konuda verilen belirteçleri yerel yayımlayan kullanmak için bir istemciyi 
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Kodu yerel yayımlayan yapılandırma  
   
-1.  Türünde bir değişken oluşturma <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
+1. Türünde bir değişken oluşturma <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
   
-2.  Öğesinden döndürülen örneği için değişkeni ayarlayın <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> özelliği `ClientCredentials` sınıfı. Bu örnek tarafından döndürülen <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliği istemcinin (devralınan <xref:System.ServiceModel.ClientBase%601>) veya <xref:System.ServiceModel.ChannelFactory.Credentials%2A> özelliği <xref:System.ServiceModel.ChannelFactory>:  
+2. Öğesinden döndürülen örneği için değişkeni ayarlayın <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> özelliği `ClientCredentials` sınıfı. Bu örnek tarafından döndürülen <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliği istemcinin (devralınan <xref:System.ServiceModel.ClientBase%601>) veya <xref:System.ServiceModel.ChannelFactory.Credentials%2A> özelliği <xref:System.ServiceModel.ChannelFactory>:  
   
      [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
      [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
   
-3.  Ayarlama <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> özelliğine yeni bir örneğini <xref:System.ServiceModel.EndpointAddress>, oluşturucusuna bağımsız değişken olarak yerel dağıtımcının adresine sahip.  
+3. Ayarlama <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> özelliğine yeni bir örneğini <xref:System.ServiceModel.EndpointAddress>, oluşturucusuna bağımsız değişken olarak yerel dağıtımcının adresine sahip.  
   
      [!code-csharp[c_CreateSTS#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#10)]
      [!code-vb[c_CreateSTS#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#10)]  
@@ -49,27 +49,27 @@ Bu konuda verilen belirteçleri yerel yayımlayan kullanmak için bir istemciyi 
      [!code-csharp[c_CreateSTS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#12)]
      [!code-vb[c_CreateSTS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#12)]  
   
-4.  Kullanarak yerel sertifika verenin bağlamasını ayarlamak <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> özelliği.  
+4. Kullanarak yerel sertifika verenin bağlamasını ayarlamak <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> özelliği.  
   
      [!code-csharp[c_CreateSTS#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#13)]
      [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]  
   
-5.  İsteğe bağlı. Tarafından döndürülen bir koleksiyonda gibi davranışları ekleyerek yapılandırılmış uç nokta davranışları için yerel dağıtımcının ekleme <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> özelliği.  
+5. İsteğe bağlı. Tarafından döndürülen bir koleksiyonda gibi davranışları ekleyerek yapılandırılmış uç nokta davranışları için yerel dağıtımcının ekleme <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> özelliği.  
   
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
      [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
   
 ### <a name="to-configure-the-local-issuer-in-configuration"></a>Yerel yayımlayan yapılandırma yapılandırmak için  
   
-1.  Oluşturma bir [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) öğesi alt öğesi olarak [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) kendisi bir alt öğesi olan öğeyi [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesinde bir uç nokta davranışı.  
+1. Oluşturma bir [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) öğesi alt öğesi olarak [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) kendisi bir alt öğesi olan öğeyi [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesinde bir uç nokta davranışı.  
   
-2.  Ayarlama `address` belirteci isteklerini kabul edecek yerel dağıtımcının adresine özniteliği.  
+2. Ayarlama `address` belirteci isteklerini kabul edecek yerel dağıtımcının adresine özniteliği.  
   
-3.  Ayarlama `binding` ve `bindingConfiguration` öznitelikleri değerlerine başvuran yerel veren uç noktası ile iletişim kurarken kullanması için uygun bağlama.  
+3. Ayarlama `binding` ve `bindingConfiguration` öznitelikleri değerlerine başvuran yerel veren uç noktası ile iletişim kurarken kullanması için uygun bağlama.  
   
-4.  İsteğe bağlı. Ayarlama [ \<kimlik >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) öğesi alt öğesi olarak <`localIssuer`> öğesi ve yerel dağıtımcının için kimlik bilgilerini belirtin.  
+4. İsteğe bağlı. Ayarlama [ \<kimlik >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) öğesi alt öğesi olarak <`localIssuer`> öğesi ve yerel dağıtımcının için kimlik bilgilerini belirtin.  
   
-5.  İsteğe bağlı. Ayarlama [ \<üstbilgiler >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) öğesi alt öğesi olarak <`localIssuer`> öğesi ve yerel dağıtımcının doğru bir şekilde çözmek için gerekli ek üstbilgi belirtin.  
+5. İsteğe bağlı. Ayarlama [ \<üstbilgiler >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) öğesi alt öğesi olarak <`localIssuer`> öğesi ve yerel dağıtımcının doğru bir şekilde çözmek için gerekli ek üstbilgi belirtin.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Belirli bir bağlama için bir veren adresi ve bağlama belirtilirse, yerel sertifika verenin bu bağlamayı kullanan uç noktaları için kullanılmaz unutmayın. Böyle bir bağlamanın kullanmayın veya veren adresi böylece bunlar bağlama değiştirme her zaman yerel dağıtımcının kullanmayı düşündüğünüz istemcileri sağlamak `null`.  

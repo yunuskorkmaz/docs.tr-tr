@@ -2,12 +2,12 @@
 title: Kurulum Sorunlarını Giderme
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 41e266ba5b54bfb37313f9588515f7ae9cc6f79d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69242ec745f2a5b945ae64eb558070dbf0d39c10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153081"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299624"
 ---
 # <a name="troubleshooting-setup-issues"></a>Kurulum Sorunlarını Giderme
 Bu konu, Windows Communication Foundation (WCF) sorunları kümesi sorun giderme açıklar.  
@@ -30,13 +30,13 @@ Bu konu, Windows Communication Foundation (WCF) sorunları kümesi sorun giderme
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI hizmeti Bozulması blokları yüklemesi .NET Framework 3.0 paketi yüklemesi sırasında Windows Communication Foundation WMI sağlayıcısı  
  WMI hizmeti Bozulması Windows Communication Foundation WMI sağlayıcısı yüklenmesini engelleyebilir. Yükleme sırasında Windows Communication Foundation yükleyici mofcomp.exe bileşenini kullanarak WCF .mof dosyasına kaydedilemedi. Belirtiler listesi verilmiştir:  
   
-1.  .NET framework 3.0 yüklemenin başarıyla tamamlandığını belirten ancak WCF WMI sağlayıcısına kayıtlı değil.  
+1. .NET framework 3.0 yüklemenin başarıyla tamamlandığını belirten ancak WCF WMI sağlayıcısına kayıtlı değil.  
   
-2.  Uygulama olay günlüğüne WCF için WMI sağlayıcısını kaydetme veya mofcomp.exe çalıştıran sorunları başvuran bir hata olayı görünür.  
+2. Uygulama olay günlüğüne WCF için WMI sağlayıcısını kaydetme veya mofcomp.exe çalıştıran sorunları başvuran bir hata olayı görünür.  
   
-3.  Adlı kullanıcının % temp % dizininde dd_wcf_retCA * Kurulum günlük dosyası WCF WMI sağlayıcısı kaydetme hatası başvurular içerir.  
+3. Adlı kullanıcının % temp % dizininde dd_wcf_retCA * Kurulum günlük dosyası WCF WMI sağlayıcısı kaydetme hatası başvurular içerir.  
   
-4.  Bir aşağıdaki gibi bir özel durum olay günlüğü veya Kurulum izleme günlük dosyasında listelenen:  
+4. Bir aşağıdaki gibi bir özel durum olay günlüğü veya Kurulum izleme günlük dosyasında listelenen:  
   
      ServiceModelReg [11:09:59:046]: System.ApplicationException: Unexpected result 3 executing E:\WINDOWS\system32\wbem\mofcomp.exe with "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
@@ -52,7 +52,7 @@ Bu konu, Windows Communication Foundation (WCF) sorunları kümesi sorun giderme
   
  Aşağıdaki adımlar, daha önce açıklanan sorunu gidermek için izlenmesi gerekir.  
   
-1.  Çalıştırma [WMI tanılama yardımcı programını, sürüm 2.0](https://go.microsoft.com/fwlink/?LinkId=94685) WMI hizmetinin onarmak için. Bu aracı kullanma hakkında daha fazla bilgi için bkz. [WMI tanılama yardımcı programını](https://go.microsoft.com/fwlink/?LinkId=94686) konu.  
+1. Çalıştırma [WMI tanılama yardımcı programını, sürüm 2.0](https://go.microsoft.com/fwlink/?LinkId=94685) WMI hizmetinin onarmak için. Bu aracı kullanma hakkında daha fazla bilgi için bkz. [WMI tanılama yardımcı programını](https://go.microsoft.com/fwlink/?LinkId=94686) konu.  
   
  Kullanarak .NET Framework 3.0 yüklemesini onarmak **Program Ekle/Kaldır** uygulaması bulunan **Denetim Masası**, ya da .NET Framework 3.0 kaldırın/yeniden.  
   

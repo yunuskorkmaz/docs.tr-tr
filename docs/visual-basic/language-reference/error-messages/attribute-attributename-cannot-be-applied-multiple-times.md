@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: fe72e7a14723bcfa429ce80b15dbc22b256774aa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: da4a766e2617308cb33b9673a88db9e7a954152a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843597"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304304"
 ---
 # <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Öznitelik '\<attributename >' birden çok kez uygulanamaz
 Öznitelik yalnızca bir kez uygulanabilir. `AttributeUsage` Özniteliği bir öznitelik birden çok kez uygulanabilir olup olmadığını belirler.  
@@ -21,9 +21,9 @@ ms.locfileid: "58843597"
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Öznitelik yalnızca bir kez uygulanır emin olun.  
+1. Öznitelik yalnızca bir kez uygulanır emin olun.  
   
-2.  Geliştirdiğiniz özel öznitelikler kullanıyorsanız, değiştirmeyi göz önünde bulundurun, `AttributeUsage` birden çok öznitelik kullanımı, aşağıdaki örnek olarak izin vermek için özniteliği.  
+2. Geliştirdiğiniz özel öznitelikler kullanıyorsanız, değiştirmeyi göz önünde bulundurun, `AttributeUsage` birden çok öznitelik kullanımı, aşağıdaki örnek olarak izin vermek için özniteliği.  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  

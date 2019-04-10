@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Hizmet Verilerini Bölümlendirme'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: c5cfd56943c97b70ef12276f1bae47fa870366a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150104"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300391"
 ---
 # <a name="how-to-service-data-partitioning"></a>Nasıl yapılır: Hizmet Verilerini Bölümlendirme
 Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için gerekli temel adımlar açıklanmaktadır. Hizmet verilerini bölümlendirme, genellikle daha iyi hizmet kalitesini sağlamak için bir hizmeti ölçeklendirmek gerektiğinde veya farklı müşterilerden gelen istekleri belirli bir şekilde işlemek üzere gerektiğinde kullanılır. Örneğin, yüksek bir değer veya "Altın" müşteriler gelen iletileri, standart bir müşteri iletilerden daha yüksek bir önceliğe işlenecek gerekebilir.  
@@ -21,7 +21,7 @@ Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için g
   
 ### <a name="implement-service-data-partitioning"></a>Uygulama hizmeti veri bölümleme  
   
-1.  Temel yönlendirme hizmeti yapılandırmasını hizmet tarafından sunulan hizmet uç noktaları belirterek oluşturun. Aşağıdaki örnek, iletileri almak için kullanılan iki uç nokta tanımlar. Ayrıca, regularCalc hizmet örnekleri için ileti göndermek için kullanılan istemci uç noktalarını tanımlar.  
+1. Temel yönlendirme hizmeti yapılandırmasını hizmet tarafından sunulan hizmet uç noktaları belirterek oluşturun. Aşağıdaki örnek, iletileri almak için kullanılan iki uç nokta tanımlar. Ayrıca, regularCalc hizmet örnekleri için ileti göndermek için kullanılan istemci uç noktalarını tanımlar.  
   
     ```xml  
     <services>  
@@ -58,7 +58,7 @@ Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için g
      </client>  
     ```  
   
-2.  Hedef Uç noktalara iletileri yönlendirmek için kullanılan filtreler tanımlar.  Bu örnekte, Uçnoktaadı filtre, hangi hizmet uç noktası iletisi aldı belirlemek için kullanılır. Aşağıdaki örnek, gerekli yönlendirme bölüm ve filtreleri tanımlar.  
+2. Hedef Uç noktalara iletileri yönlendirmek için kullanılan filtreler tanımlar.  Bu örnekte, Uçnoktaadı filtre, hangi hizmet uç noktası iletisi aldı belirlemek için kullanılır. Aşağıdaki örnek, gerekli yönlendirme bölüm ve filtreleri tanımlar.  
   
     ```xml  
     <filters>  
@@ -71,7 +71,7 @@ Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için g
     </filters>  
     ```  
   
-3.  Her filtre bir istemci uç noktası ile ilişkilendirir filtre tablo tanımlayın. Bu örnekte, ileti üzerinde alındı belirli bir uç göre yönlendirilir. İletinin yalnızca iki olası filtrelerden birini eşleşebilir olduğundan, hangi filtrelerde değerlendirilir sırasını denetlemek için filtre önceliği kullanma gerek yoktur.  
+3. Her filtre bir istemci uç noktası ile ilişkilendirir filtre tablo tanımlayın. Bu örnekte, ileti üzerinde alındı belirli bir uç göre yönlendirilir. İletinin yalnızca iki olası filtrelerden birini eşleşebilir olduğundan, hangi filtrelerde değerlendirilir sırasını denetlemek için filtre önceliği kullanma gerek yoktur.  
   
      Aşağıdaki filtre tabloyu tanımlayan ve daha önce tanımlanan filtreler ekler.  
   
@@ -85,7 +85,7 @@ Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için g
     </filterTables>  
     ```  
   
-4.  Tabloda bulunan filtrelerle gelen iletileri değerlendirmek için yönlendirme davranışı kullanarak hizmet uç noktaları ile filtreleme tablosu ilişkilendirmelisiniz. Aşağıdaki örnek, hizmet uç noktaları ile ilişkilendirmeyi "filterTable1" gösterir:  
+4. Tabloda bulunan filtrelerle gelen iletileri değerlendirmek için yönlendirme davranışı kullanarak hizmet uç noktaları ile filtreleme tablosu ilişkilendirmelisiniz. Aşağıdaki örnek, hizmet uç noktaları ile ilişkilendirmeyi "filterTable1" gösterir:  
   
     ```xml  
     <behaviors>  

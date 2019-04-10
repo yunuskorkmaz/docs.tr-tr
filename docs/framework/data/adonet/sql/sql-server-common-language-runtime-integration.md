@@ -2,12 +2,12 @@
 title: SQL Server Ortak Dil Çalışma Zamanı Modülü Tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: d87f2b89583747b80ef103f419bd9bd2e3b1e0da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089841"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297506"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server Ortak Dil Çalışma Zamanı Modülü Tümleştirmesi
 SQL Server 2005, ortak dil çalışma zamanı (CLR) bileşeni .NET Framework'ün tümleştirme Microsoft Windows için kullanıma sunuldu. Bu, saklı yordamlar, Tetikleyiciler, kullanıcı tanımlı türler, kullanıcı tarafından tanımlanan İşlevler, kullanıcı tanımlı toplamları ve akış tablo değerli işlevler, Microsoft Visual Basic .NET ve Microsoft da dahil olmak üzere, herhangi bir .NET Framework dili kullanarak yazabildiğinizi anlamına gelir. Visual C#. <xref:Microsoft.SqlServer.Server> Ad alanı, yönetilen kod Microsoft SQL Server ortamı ile etkileşimde bulunmasını yeni uygulama programlama arabirimleri (API) kümesini içerir.  
@@ -18,7 +18,7 @@ SQL Server 2005, ortak dil çalışma zamanı (CLR) bileşeni .NET Framework'ün
   
  **SQL Server Çevrimiçi Kitaplar**  
   
-1.  [Ortak dil çalışma zamanı (CLR) tümleştirme programlama kavramları](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1. [Ortak dil çalışma zamanı (CLR) tümleştirme programlama kavramları](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SQL Server CLR Tümleştirmesine Giriş](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  

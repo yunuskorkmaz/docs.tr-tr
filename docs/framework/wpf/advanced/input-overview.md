@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: d8eb22c4de9dc28f332b220dd4703b0c681904f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090049"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320021"
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Alt sistemi sağlayan güçlü [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] giriş çeşitli cihazlardan almak için fare, klavye, dokunmatik ve Kalem dahil. Bu konu tarafından sağlanan hizmetleri açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve giriş sistemleri mimarisini açıklar.
@@ -217,15 +217,15 @@ ms.locfileid: "59090049"
 
  Önceki çizimde olayların sırası aşağıdaki listede açıklanmaktadır.
 
-1.  <xref:System.Windows.UIElement.TouchEnter> Olay olduğunda kullanıcı koyar nabzını öğe üzerinde bir kez gerçekleşir.
+1. <xref:System.Windows.UIElement.TouchEnter> Olay olduğunda kullanıcı koyar nabzını öğe üzerinde bir kez gerçekleşir.
 
-2.  <xref:System.Windows.UIElement.TouchDown> Olayı, bir kez oluşur.
+2. <xref:System.Windows.UIElement.TouchDown> Olayı, bir kez oluşur.
 
-3.  <xref:System.Windows.UIElement.TouchMove> Olay kullanıcı öğesinin içine parmağınızı hareket ederken birden çok kez gerçekleşir.
+3. <xref:System.Windows.UIElement.TouchMove> Olay kullanıcı öğesinin içine parmağınızı hareket ederken birden çok kez gerçekleşir.
 
-4.  <xref:System.Windows.UIElement.TouchUp> Olay kullanıcı kaldırıncaya öğeden parmak ne zaman bir kez gerçekleşir.
+4. <xref:System.Windows.UIElement.TouchUp> Olay kullanıcı kaldırıncaya öğeden parmak ne zaman bir kez gerçekleşir.
 
-5.  <xref:System.Windows.UIElement.TouchLeave> Olayı, bir kez oluşur.
+5. <xref:System.Windows.UIElement.TouchLeave> Olayı, bir kez oluşur.
 
  İkiden fazla parmağınızı kullanıldığında olaylar için her parmak gerçekleşir.
 
@@ -269,17 +269,17 @@ ms.locfileid: "59090049"
 
  Önceki çizimde olayların sırası aşağıdaki listede açıklanmaktadır.
 
-1.  <xref:System.Windows.UIElement.ManipulationStarting> Olayı, kullanıcı nesne üzerinde bir parmak verdiğinde oluşur. Diğerlerinin yanı sıra bu olay ayarlamanıza olanak tanır <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> özelliği. Sonraki olayları işleme konumunu göreli olacaktır <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>. Olay dışında <xref:System.Windows.UIElement.ManipulationStarting>, bu özellik salt okunur şekilde <xref:System.Windows.UIElement.ManipulationStarting> olaydır bu özelliği ayarlayabilirsiniz. yalnızca bir kez.
+1. <xref:System.Windows.UIElement.ManipulationStarting> Olayı, kullanıcı nesne üzerinde bir parmak verdiğinde oluşur. Diğerlerinin yanı sıra bu olay ayarlamanıza olanak tanır <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> özelliği. Sonraki olayları işleme konumunu göreli olacaktır <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>. Olay dışında <xref:System.Windows.UIElement.ManipulationStarting>, bu özellik salt okunur şekilde <xref:System.Windows.UIElement.ManipulationStarting> olaydır bu özelliği ayarlayabilirsiniz. yalnızca bir kez.
 
-2.  <xref:System.Windows.UIElement.ManipulationStarted> Sonraki olayı oluşur. Bu olay işleme kaynağı raporlar.
+2. <xref:System.Windows.UIElement.ManipulationStarted> Sonraki olayı oluşur. Bu olay işleme kaynağı raporlar.
 
-3.  <xref:System.Windows.UIElement.ManipulationDelta> Olayı, bir kullanıcının parmağınızı hareket dokunmatik olarak birden çok kez oluşur. <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> Özelliği <xref:System.Windows.Input.ManipulationDeltaEventArgs> sınıfı raporlar düzenlenmesini taşıma, genişletme veya çeviri yorumlanır. Nesneyi düzenleme işin çoğu burada gerçekleştirdiğiniz budur.
+3. <xref:System.Windows.UIElement.ManipulationDelta> Olayı, bir kullanıcının parmağınızı hareket dokunmatik olarak birden çok kez oluşur. <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> Özelliği <xref:System.Windows.Input.ManipulationDeltaEventArgs> sınıfı raporlar düzenlenmesini taşıma, genişletme veya çeviri yorumlanır. Nesneyi düzenleme işin çoğu burada gerçekleştirdiğiniz budur.
 
-4.  <xref:System.Windows.UIElement.ManipulationInertiaStarting> Olay kullanıcının parmağınızı nesne ile iletişimi kaybettiğinde gerçekleşir. Bu olay, işlemeleri, yavaşlama Eylemsizliği sırasında belirtmenizi sağlar. Bu durum, seçerseniz nesnenizin farklı fiziksel alanları veya öznitelikleri öykünebileceği olduğundan. Örneğin, uygulamanızın Fiziksel dünyada öğeleri temsil eden iki nesne varsa ve biri diğerinden daha ağır varsayalım. Açık nesne hızlıdır yavaşlatma daha ağır nesne yapabilirsiniz.
+4. <xref:System.Windows.UIElement.ManipulationInertiaStarting> Olay kullanıcının parmağınızı nesne ile iletişimi kaybettiğinde gerçekleşir. Bu olay, işlemeleri, yavaşlama Eylemsizliği sırasında belirtmenizi sağlar. Bu durum, seçerseniz nesnenizin farklı fiziksel alanları veya öznitelikleri öykünebileceği olduğundan. Örneğin, uygulamanızın Fiziksel dünyada öğeleri temsil eden iki nesne varsa ve biri diğerinden daha ağır varsayalım. Açık nesne hızlıdır yavaşlatma daha ağır nesne yapabilirsiniz.
 
-5.  <xref:System.Windows.UIElement.ManipulationDelta> Olay Eylemsizliği gerçekleştiği sırada birden çok kez gerçekleşir. Bu olay kullanıcının parmağınızı dokunmatik ekranı arasında taşıdığınız zaman ve ne zaman oluştuğunu not [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eylemsizliği benzetimini yapar. Diğer bir deyişle, <xref:System.Windows.UIElement.ManipulationDelta> önce ve sonra gerçekleşir <xref:System.Windows.UIElement.ManipulationInertiaStarting> olay. <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> Özelliği raporlar olup olmadığını <xref:System.Windows.UIElement.ManipulationDelta> olayı bu özelliği kontrol edin ve kendi değerine bağlı olarak farklı eylemleri gerçekleştirmek için Eylemsizliği sırasında oluşur.
+5. <xref:System.Windows.UIElement.ManipulationDelta> Olay Eylemsizliği gerçekleştiği sırada birden çok kez gerçekleşir. Bu olay kullanıcının parmağınızı dokunmatik ekranı arasında taşıdığınız zaman ve ne zaman oluştuğunu not [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eylemsizliği benzetimini yapar. Diğer bir deyişle, <xref:System.Windows.UIElement.ManipulationDelta> önce ve sonra gerçekleşir <xref:System.Windows.UIElement.ManipulationInertiaStarting> olay. <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> Özelliği raporlar olup olmadığını <xref:System.Windows.UIElement.ManipulationDelta> olayı bu özelliği kontrol edin ve kendi değerine bağlı olarak farklı eylemleri gerçekleştirmek için Eylemsizliği sırasında oluşur.
 
-6.  <xref:System.Windows.UIElement.ManipulationCompleted> Olay işleme ve tüm Eylemsizliği sona erdiğinde. Diğer bir deyişle, sonra tüm <xref:System.Windows.UIElement.ManipulationDelta> olaylar meydana, <xref:System.Windows.UIElement.ManipulationCompleted> düzenlenmesini tamamlandığını göstermek için olayı oluşur.
+6. <xref:System.Windows.UIElement.ManipulationCompleted> Olay işleme ve tüm Eylemsizliği sona erdiğinde. Diğer bir deyişle, sonra tüm <xref:System.Windows.UIElement.ManipulationDelta> olaylar meydana, <xref:System.Windows.UIElement.ManipulationCompleted> düzenlenmesini tamamlandığını göstermek için olayı oluşur.
 
  <xref:System.Windows.UIElement> Ayrıca tanımlar <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> olay. Bu gerçekleştiğinde, <xref:System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback%2A> yöntemi çağrıldığında <xref:System.Windows.UIElement.ManipulationDelta> olay. <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> Olay, bir nesne sınırına geldiğinde görsel geri bildirim sağlamak, uygulamaları veya bileşenleri sağlar. Örneğin, <xref:System.Windows.Window> sınıfı tanıtıcıları <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> olay, edge ile karşılaşıldığında biraz taşımak için penceresi neden olacak.
 

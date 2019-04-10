@@ -1,15 +1,15 @@
 ---
-title: İşe alma işlemi
+title: İşe Alma İşlemi
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223227"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313157"
 ---
-# <a name="hiring-process"></a>İşe alma işlemi
+# <a name="hiring-process"></a>İşe Alma İşlemi
 Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizmetlerinde barındırılan iki iş akışlarını kullanarak bir iş sürecini gösterir. Bu iş akışları Contoso, Inc. adlı kurgusal bir şirkette BT altyapısını bir parçasıdır  
   
  `HiringRequest` İş akışı işlemi (olarak uygulanan bir <xref:System.Activities.Statements.Flowchart>) yetkilendirme için birkaç yöneticilerin kuruluş içindeki ister. Bu hedefe ulaşmak için var olan diğer hizmetleri iş akışını kuruluştaki (bizim durumumuzda, bir gelen kutusu hizmeti ve düz Windows Communication Foundation (WCF) Hizmetleri uygulanan bir kurumsal veri hizmeti) kullanır.  
@@ -60,9 +60,9 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
 ## <a name="description-of-the-process"></a>İşlem açıklaması  
  Contoso, Inc. Kapat personel kendi bölümlerin her denetiminiz ister. Yeni bir işe alma işlemini başlatmak herhangi bir çalışanın istediği zaman, bu nedenle, bunlar gerçekten işe oluşabilir önce bir işe alma isteği işlemi onay gitmeniz gerekiyor. Bu işlem, işe alma işlemi istek (HiringRequestService projede tanımlanan) olarak adlandırılır ve aşağıdaki adımlardan oluşur:  
   
-1.  Bir çalışan (istek) işe alma işlem isteğini başlatır.  
+1. Bir çalışan (istek) işe alma işlem isteğini başlatır.  
   
-2.  İstek sahibinin Yöneticisi isteği onaylamanız gerekir:  
+2. İstek sahibinin Yöneticisi isteği onaylamanız gerekir:  
   
     1.  Yönetici isteği reddedebilir.  
   
@@ -72,13 +72,13 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
   
     3.  Yönetici onaylayabilirsiniz.  
   
-3.  İstek sahibinin manager onayladıktan sonra Departman sahibi isteği onaylamanız gerekir:  
+3. İstek sahibinin manager onayladıktan sonra Departman sahibi isteği onaylamanız gerekir:  
   
     1.  Departman sahibi reddedebilirsiniz.  
   
     2.  Departman sahibi onaylayabilirsiniz.  
   
-4.  Departman sahibi onayladıktan sonra işlemi 2 ik yöneticileri veya CEO onayını gerektirir:  
+4. Departman sahibi onayladıktan sonra işlemi 2 ik yöneticileri veya CEO onayını gerektirir:  
   
     1.  İşlem, kabul edilen veya reddedilen durumuna geçiş yapabilirsiniz.  
   
@@ -86,16 +86,16 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
   
  Yeni bir çalışan işe alma yöneticileri onayladıktan sonra ik uygun aday bulmanız gerekir. Bu işlem ikinci bir iş akışı tarafından gerçekleştirilir (`ResumeRequest`ResumeRequestService.csproj içinde tanımlanmış). Bu iş akışı Contoso'nun dış Kariyerleri Web sitesine bir kariyer fırsatla gönderen bir iş göndermek için bir işlemi tanımlar, başvuran sürdürür alır ve iş posta durumunu izler. Konumları (bir süresi dolana kadar) bir sabit bir zaman aralığı için kullanılabilir veya bir çalışan şubeden kaldırmaya karar kadar. `ResumeRequest` İş akışı, aşağıdaki adımlardan oluşur:  
   
-1.  Bir çalışan Contoso türlerinden konumu ve bir zaman aşımı süresi hakkında bilgi. Bu bilgi çalışanı türlerinde Kariyerleri Web sitesinde konumu gönderildikten sonra.  
+1. Bir çalışan Contoso türlerinden konumu ve bir zaman aşımı süresi hakkında bilgi. Bu bilgi çalışanı türlerinde Kariyerleri Web sitesinde konumu gönderildikten sonra.  
   
-2.  Bilgi yayımlandıktan sonra ilgili tarafların kendi sürdürür gönderebilirsiniz. Bir özgeçmiş gönderildiğinde iş açılış bağlı bir kayıt depolanır.  
+2. Bilgi yayımlandıktan sonra ilgili tarafların kendi sürdürür gönderebilirsiniz. Bir özgeçmiş gönderildiğinde iş açılış bağlı bir kayıt depolanır.  
   
-3.  Başvuranları sürdürür Contoso ik departmanı birinden açıkça işlemini durdurarak posta kaldırmaya karar veya zaman aşımı süresi dolana kadar gönderebilirsiniz.  
+3. Başvuranları sürdürür Contoso ik departmanı birinden açıkça işlemini durdurarak posta kaldırmaya karar veya zaman aşımı süresi dolana kadar gönderebilirsiniz.  
   
 ## <a name="projects-in-the-sample"></a>Örnek projeleri  
  Aşağıdaki tabloda, örnek çözümdeki projeleri gösterir.  
   
-|Proje|Açıklama|  
+|Project|Açıklama|  
 |-------------|-----------------|  
 |ContosoHR|Veri sözleşmeleri, iş nesneleri ve depo sınıfları içerir.|  
 |HiringRequestService|İşe alma isteği işlemi iş akışının tanımını içerir.<br /><br /> Bu proje, iş akışı (xaml dosyası) bir hizmet olarak kendi kendini barındıran bir konsol uygulaması olarak uygulanır.|  
@@ -108,7 +108,7 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
 ## <a name="feature-summary"></a>Özellik Özeti  
  Aşağıdaki tabloda, bu örnekte, her bir özelliğin nasıl kullanıldığı açıklanmaktadır.  
   
-|Özellik|Açıklama|Proje|  
+|Özellik|Açıklama|Project|  
 |-------------|-----------------|-------------|  
 |Akış Çizelgesi|İş süreci akış grafiği olarak temsil edilir. Bu akış tanımı bir iş, Beyaz Tahta üzerinde çizilen aynı şekilde işlem temsil eder.|HiringRequestService|  
 |İş akışı Hizmetleri|Akış işlem tanımıyla birlikte bir hizmette barındırılıyorsa (Bu örnekte, hizmeti bir konsol uygulamasında barındırılan).|HiringRequestService|  
@@ -137,87 +137,87 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
   
 #### <a name="to-create-the-databases"></a>Veritabanı oluşturma  
   
-1.  Visual Studio için geliştirici komut istemi açın.  
+1. Visual Studio için geliştirici komut istemi açın.  
   
-2.  Örnek klasörüne gidin.  
+2. Örnek klasörüne gidin.  
   
-3.  Setup.cmd'yi çalıştırın.  
+3. Setup.cmd'yi çalıştırın.  
   
-4.  İki veritabanı doğrulayın `ContosoHR` ve `InstanceStore` SQL Express'te oluşturulan.  
+4. İki veritabanı doğrulayın `ContosoHR` ve `InstanceStore` SQL Express'te oluşturulan.  
   
 #### <a name="to-set-up-the-solution-for-execution"></a>Yürütme için çözüm ayarlamak için  
   
-1.  Visual Studio'yu yönetici olarak çalıştırın. HiringRequest.sln açın.  
+1. Visual Studio'yu yönetici olarak çalıştırın. Open HiringRequest.sln.  
   
-2.  Çözüme sağ **Çözüm Gezgini** seçip **özellikleri**.  
+2. Çözüme sağ **Çözüm Gezgini** seçip **özellikleri**.  
   
-3.  Seçeneğini **birden fazla başlangıç projesi** ayarlayıp **CareersWebSite**, **InternalClient**, **HiringRequestService**, ve **ResumeRequestService** için **Başlat**. Bırakın **ContosoHR**, **InboxService**, ve **OrgService** olarak yok.  
+3. Seçeneğini **birden fazla başlangıç projesi** ayarlayıp **CareersWebSite**, **InternalClient**, **HiringRequestService**, ve **ResumeRequestService** için **Başlat**. Bırakın **ContosoHR**, **InboxService**, ve **OrgService** olarak yok.  
   
-4.  CTRL + SHIFT + B tuşlarına basarak çözümü oluşturun. Derleme başarılı olduğunu doğrulayın.  
+4. CTRL + SHIFT + B tuşlarına basarak çözümü oluşturun. Derleme başarılı olduğunu doğrulayın.  
   
 #### <a name="to-run-the-solution"></a>Çözümü çalıştırmak için  
   
-1.  Çözüm oluşturduktan sonra hata ayıklama olmadan çalıştırmak için CTRL + F5 tuşlarına basın. Tüm hizmetlerin başlatıldığından emin olun.  
+1. Çözüm oluşturduktan sonra hata ayıklama olmadan çalıştırmak için CTRL + F5 tuşlarına basın. Tüm hizmetlerin başlatıldığından emin olun.  
   
-2.  Sağ tıklayın **InternalClient** çözüm ve ardından **tarayıcıda görüntüle**. Varsayılan sayfanın `InternalClient` görüntülenir. Hizmetlerinin çalışmakta olduğunu ve bağlantıyı emin olun.  
+2. Sağ tıklayın **InternalClient** çözüm ve ardından **tarayıcıda görüntüle**. Varsayılan sayfanın `InternalClient` görüntülenir. Hizmetlerinin çalışmakta olduğunu ve bağlantıyı emin olun.  
   
-3.  **HiringRequest** modülü görüntülenir. Burada ayrıntıları senaryoyu izleyebilirsiniz.  
+3. **HiringRequest** modülü görüntülenir. Burada ayrıntıları senaryoyu izleyebilirsiniz.  
   
-4.  Bir kez `HiringRequest` olan tam başlatabilirsiniz `ResumeRequest`. Burada ayrıntıları senaryoyu izleyebilirsiniz.  
+4. Bir kez `HiringRequest` olan tam başlatabilirsiniz `ResumeRequest`. Burada ayrıntıları senaryoyu izleyebilirsiniz.  
   
-5.  Zaman `ResumeRequest` olan gönderilen, genel Web sitesinde (Contoso Kariyerleri Web sitesi) kullanılabilir. İş gönderme bakın (ve konumunu uygulamak için), Kariyerleri Web sitesine gidin.  
+5. Zaman `ResumeRequest` olan gönderilen, genel Web sitesinde (Contoso Kariyerleri Web sitesi) kullanılabilir. İş gönderme bakın (ve konumunu uygulamak için), Kariyerleri Web sitesine gidin.  
   
-6.  Sağ **CareersWebSite** çözüm seçip **tarayıcıda görüntüle**.  
+6. Sağ **CareersWebSite** çözüm seçip **tarayıcıda görüntüle**.  
   
-7.  Geri gidin `InternalClient` sağ tıklanarak **InternalClient** çözümdeki seçerek **tarayıcıda görüntüle**.  
+7. Geri gidin `InternalClient` sağ tıklanarak **InternalClient** çözümdeki seçerek **tarayıcıda görüntüle**.  
   
-8.  Git **JobPostings** bölümüne tıklayarak **iş gönderilerinin** gelen üst menüdeki bağlantı. Burada ayrıntıları senaryoyu izleyebilirsiniz.  
+8. Git **JobPostings** bölümüne tıklayarak **iş gönderilerinin** gelen üst menüdeki bağlantı. Burada ayrıntıları senaryoyu izleyebilirsiniz.  
   
 ## <a name="scenarios"></a>Senaryolar  
   
 ### <a name="hiring-request"></a>İşe alma isteği  
   
-1.  Michael Alexander (yazılım mühendisi) yeni bir konuma sahip en az 3 yıllık deneyim C# dilinde mühendislik departmanındaki yazılım mühendisi testi (SDET) işe alma isteği ister.  
+1. Michael Alexander (yazılım mühendisi) yeni bir konuma sahip en az 3 yıllık deneyim C# dilinde mühendislik departmanındaki yazılım mühendisi testi (SDET) işe alma isteği ister.  
   
-2.  Oluşturulduktan sonra istek Michael'ın gelen kutunuzda görünen (tıklayın **Yenile** istek görmüyorsanız) Michael'ın yöneticisi olan Peter Brehm'ın onay bekliyor.  
+2. Oluşturulduktan sonra istek Michael'ın gelen kutunuzda görünen (tıklayın **Yenile** istek görmüyorsanız) Michael'ın yöneticisi olan Peter Brehm'ın onay bekliyor.  
   
-3.  Peter, Michael'in istek üzerine hareket ister. He kendi açıklamaları gözden geçirilmek üzere geri gönderir. Bu nedenle o konum taleplerini C# deneyimi, 3 yerine 5 yıl düşünüyor.  
+3. Peter, Michael'in istek üzerine hareket ister. He kendi açıklamaları gözden geçirilmek üzere geri gönderir. Bu nedenle o konum taleplerini C# deneyimi, 3 yerine 5 yıl düşünüyor.  
   
-4.  Michael kendi Manager'dan kendi gelen kutunuzda bir ileti görür ve yapmasını istemektedir. Michael geçmişini konumu isteği göreceğini ve Peter ile kabul eder. Michael açıklama C# deneyimi 5 yıl gerektirecek şekilde değiştirir ve değişikliği kabul eder.  
+4. Michael kendi Manager'dan kendi gelen kutunuzda bir ileti görür ve yapmasını istemektedir. Michael geçmişini konumu isteği göreceğini ve Peter ile kabul eder. Michael açıklama C# deneyimi 5 yıl gerektirecek şekilde değiştirir ve değişikliği kabul eder.  
   
-5.  Peter, Michael'ın değiştirilmiş istek üzerinde çalışır ve bunu kabul eder. İstek artık mühendislik Direktörü, tarafından Tsvi Reiter onaylanmalıdır.  
+5. Peter, Michael'ın değiştirilmiş istek üzerinde çalışır ve bunu kabul eder. İstek artık mühendislik Direktörü, tarafından Tsvi Reiter onaylanmalıdır.  
   
-6.  He bir açıklama isteği Acil değildir ve kabul ettiği söylemek koyar için istek hızlandırmak Tsvi Reiter istiyor.  
+6. He bir açıklama isteği Acil değildir ve kabul ettiği söylemek koyar için istek hızlandırmak Tsvi Reiter istiyor.  
   
-7.  İstek artık iki ik yöneticileri veya CEO tarafından onaylanması gerekir. CEO, Brian Richard Goldstein Tsvi Acil isteğiyle görür. He isteği kabul ederek, bu nedenle iki ik yöneticileri onayını atlama işlevi görür.  
+7. İstek artık iki ik yöneticileri veya CEO tarafından onaylanması gerekir. CEO, Brian Richard Goldstein Tsvi Acil isteğiyle görür. He isteği kabul ederek, bu nedenle iki ik yöneticileri onayını atlama işlevi görür.  
   
-8.  İstek Michael'ın kutunuzdan ve SDET işe alma işlemi artık başladı.  
+8. İstek Michael'ın kutunuzdan ve SDET işe alma işlemi artık başladı.  
   
 ### <a name="start-resume-request"></a>Sürdürme isteği Başlat  
   
-1.  İş konumu şimdi, kişilerin yeri uygulayabilirsiniz bir dış Web sitesine yayınlanabilir bekliyor ('i tıklatarak gördüğünüz **iş gönderilerinin** bağlantı). Şu anda iş konumu tamamlanıyor ve bu ileti gönderme için sorumlu ik temsilcisi ile iş konumu yer.  
+1. İş konumu şimdi, kişilerin yeri uygulayabilirsiniz bir dış Web sitesine yayınlanabilir bekliyor ('i tıklatarak gördüğünüz **iş gönderilerinin** bağlantı). Şu anda iş konumu tamamlanıyor ve bu ileti gönderme için sorumlu ik temsilcisi ile iş konumu yer.  
   
-2.  İK istediği bu iş konumu düzenlemek (tıklayarak **Düzenle** bağlantı) olarak ayarlayarak 60 dakikalık bir zaman aşımı (gerçek hayatta bu günler veya haftalar olabilir). Zaman aşımı dış Web sitesi belirtilen saate kapalı gerçekleştirilecek iş konumu sağlar.  
+2. İK istediği bu iş konumu düzenlemek (tıklayarak **Düzenle** bağlantı) olarak ayarlayarak 60 dakikalık bir zaman aşımı (gerçek hayatta bu günler veya haftalar olabilir). Zaman aşımı dış Web sitesi belirtilen saate kapalı gerçekleştirilecek iş konumu sağlar.  
   
-3.  Düzenlenen iş konumu kaydettikten sonra görünür **alma sürdürür** sekmesinde (Web yeni iş konumu görmek için sayfayı yenileyin).  
+3. Düzenlenen iş konumu kaydettikten sonra görünür **alma sürdürür** sekmesinde (Web yeni iş konumu görmek için sayfayı yenileyin).  
   
 ### <a name="collecting-resumes"></a>Toplama sürdürür  
   
-1.  Proje konumu dış Web sitesinde görüntülenmesi gerekir. Proje için uygulama isteyen bir kişi özgeçmişinizi gönderin ve bu konum için geçerli.  
+1. Proje konumu dış Web sitesinde görüntülenmesi gerekir. Proje için uygulama isteyen bir kişi özgeçmişinizi gönderin ve bu konum için geçerli.  
   
-2.  İş gönderilerinin listesini hizmete geri dönün, "sürdürür görüntüleyebileceğiniz", toplanmış olabilir kadar.  
+2. İş gönderilerinin listesini hizmete geri dönün, "sürdürür görüntüleyebileceğiniz", toplanmış olabilir kadar.  
   
-3.  İK, ayrıca sürdürür (örneğin, doğru aday belirlendikten sonra) toplamayı durdurabilirsiniz.  
+3. İK, ayrıca sürdürür (örneğin, doğru aday belirlendikten sonra) toplamayı durdurabilirsiniz.  
   
 ## <a name="troubleshooting"></a>Sorun giderme  
   
-1.  Visual Studio'yu yönetici ayrıcalıklarıyla çalıştığından emin olun.  
+1. Visual Studio'yu yönetici ayrıcalıklarıyla çalıştığından emin olun.  
   
-2.  Çözüm yapı başarısız olursa aşağıdakileri doğrulayın:  
+2. Çözüm yapı başarısız olursa aşağıdakileri doğrulayın:  
   
     -   Başvuru `ContosoHR` gelen eksik `InternalClient` veya `CareersWebSite` projeleri.  
   
-3.  Yürütülecek çözümü başarısız olursa aşağıdakileri doğrulayın:  
+3. Yürütülecek çözümü başarısız olursa aşağıdakileri doğrulayın:  
   
     1.  Tüm hizmetler çalışıyor.  
   
@@ -231,6 +231,6 @@ Bu örnek nasıl uygulanacağını Mesajlaşma etkinlikleri ve iş akışı hizm
   
 ## <a name="uninstalling"></a>Kaldırma  
   
-1.  SQL Server örnek deposuna Cleanup.bat DbSetup klasöründe yer alan, çalıştırarak silin.  
+1. SQL Server örnek deposuna Cleanup.bat DbSetup klasöründe yer alan, çalıştırarak silin.  
   
-2.  Kaynak kod şeklinde sabit silin.
+2. Kaynak kod şeklinde sabit silin.

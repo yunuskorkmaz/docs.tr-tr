@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082938"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301301"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ile Çok Bölmeli bir Kullanıcı Arabirimi Oluşturma
 Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli kullanıcı arabirimi oluşturacaksınız bir **klasör** listesinde bir **iletileri** bölmesinde ve **Önizleme** bölmesi. Bu düzenleme formu denetimleri yerleştirme temelde aracılığıyla sağlanır.  
@@ -27,17 +27,17 @@ Aşağıdaki yordamda, Microsoft Outlook ile kullanılan benzer çok bölmeli ku
   
 ### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>Tasarım zamanında bir Outlook stili kullanıcı arabirimi oluşturmak için  
   
-1.  Yeni bir Windows uygulaması projesi oluşturun (**dosya** > **yeni** > **proje** > **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).  
+1. Yeni bir Windows uygulaması projesi oluşturun (**dosya** > **yeni** > **proje** > **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).  
   
-2.  Sürükleme bir <xref:System.Windows.Forms.SplitContainer> denetimi **araç kutusu** form. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
+2. Sürükleme bir <xref:System.Windows.Forms.SplitContainer> denetimi **araç kutusu** form. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-3.  Sürükleme bir <xref:System.Windows.Forms.TreeView> denetimi **araç kutusu** Sol paneli <xref:System.Windows.Forms.SplitContainer> denetimi. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Left> aşağı oka tıklandığında gösterilen değer Düzenleyicisi'nde sol paneli tıklayarak.  
+3. Sürükleme bir <xref:System.Windows.Forms.TreeView> denetimi **araç kutusu** Sol paneli <xref:System.Windows.Forms.SplitContainer> denetimi. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Left> aşağı oka tıklandığında gösterilen değer Düzenleyicisi'nde sol paneli tıklayarak.  
   
-4.  Başka bir sürükleyin <xref:System.Windows.Forms.SplitContainer> denetimi **araç kutusu**; sağ panelde yerleştirin <xref:System.Windows.Forms.SplitContainer> formunuza eklediğiniz denetimi. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill> ve <xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliğini <xref:System.Windows.Forms.Orientation.Horizontal>.  
+4. Başka bir sürükleyin <xref:System.Windows.Forms.SplitContainer> denetimi **araç kutusu**; sağ panelde yerleştirin <xref:System.Windows.Forms.SplitContainer> formunuza eklediğiniz denetimi. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill> ve <xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliğini <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
-5.  Sürükle bir <xref:System.Windows.Forms.ListView> denetimi **araç kutusu** ikinci üst paneline <xref:System.Windows.Forms.SplitContainer> formunuza eklediğiniz denetimi. Ayarlama <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliği <xref:System.Windows.Forms.ListView> denetimini <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Sürükle bir <xref:System.Windows.Forms.ListView> denetimi **araç kutusu** ikinci üst paneline <xref:System.Windows.Forms.SplitContainer> formunuza eklediğiniz denetimi. Ayarlama <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliği <xref:System.Windows.Forms.ListView> denetimini <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-6.  Sürükleme bir <xref:System.Windows.Forms.RichTextBox> denetimi **araç kutusu** ikinci alt paneline <xref:System.Windows.Forms.SplitContainer> denetimi. Ayarlama <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliği <xref:System.Windows.Forms.RichTextBox> denetimini <xref:System.Windows.Forms.DockStyle.Fill>.  
+6. Sürükleme bir <xref:System.Windows.Forms.RichTextBox> denetimi **araç kutusu** ikinci alt paneline <xref:System.Windows.Forms.SplitContainer> denetimi. Ayarlama <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliği <xref:System.Windows.Forms.RichTextBox> denetimini <xref:System.Windows.Forms.DockStyle.Fill>.  
   
      Bu noktada, uygulamayı çalıştırmak için F5 tuşuna basarsanız, form, Microsoft Outlook benzer, üç bölümden kullanıcı arabirimini görüntüler.  
   

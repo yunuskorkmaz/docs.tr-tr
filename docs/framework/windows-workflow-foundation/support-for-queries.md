@@ -1,15 +1,15 @@
 ---
-title: Sorgu desteği
+title: Sorgu Desteği
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712032"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307957"
 ---
-# <a name="support-for-queries"></a>Sorgu desteği
+# <a name="support-for-queries"></a>Sorgu Desteği
 SQL iş akışı örneği Store iyi bilinen özellikler kümesi deposuna kaydeder. Kullanıcılar için sorgulayabilir örnekleri, bu özellikleri bağlı. Aşağıdaki liste, bazı iyi bilinen bu özellikleri içerir:  
   
 -   **Site adı.** Hizmeti içeren Web sitesinin adı.  
@@ -39,21 +39,21 @@ SQL iş akışı örneği Store iyi bilinen özellikler kümesi deposuna kaydede
 ### <a name="the-instances-view"></a>Örnekleri görüntüle  
  Örnekler görünümü, aşağıdaki alanları içerir:  
   
-1.  **Kimlik**  
+1. **Kimliği**  
   
-2.  **PendingTimer**  
+2. **PendingTimer**  
   
-3.  **CreationTime**  
+3. **CreationTime**  
   
-4.  **lastUpdatedTime**  
+4. **LastUpdatedTime**  
   
-5.  **ServiceDeploymentId**  
+5. **ServiceDeploymentId**  
   
-6.  **SuspensionExceptionName**  
+6. **SuspensionExceptionName**  
   
-7.  **SuspensionReason**  
+7. **SuspensionReason**  
   
-8.  **ActiveBookmarks**  
+8. **ActiveBookmarks**  
   
 9. **CurrentMachine**  
   
@@ -80,23 +80,23 @@ SQL iş akışı örneği Store iyi bilinen özellikler kümesi deposuna kaydede
 ### <a name="the-servicedeployments-view"></a>ServiceDeployments görüntüle  
  ServiceDeployments görünümü, aşağıdaki alanları içerir:  
   
-1.  **Site adı**  
+1. **Site adı**  
   
-2.  **RelativeServicePath**  
+2. **RelativeServicePath**  
   
-3.  **RelativeApplicationPath**  
+3. **RelativeApplicationPath**  
   
-4.  **serviceName**  
+4. **ServiceName**  
   
-5.  **ServiceNamespace**  
+5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties görüntüle  
  InstancePromotedProperties görünümü, aşağıdaki alanları içerir. Yükseltilen özellikleri hakkında ayrıntılı bilgi için bkz. [Store genişletilebilirlik](store-extensibility.md) konu.  
   
-1.  **InstanceId**  
+1. **InstanceId**  
   
-2.  **EncodingOption**  
+2. **EncodingOption**  
   
-3.  **PromotionName**  
+3. **PromotionName**  
   
-4.  **Değer #** (alanlardan bir dizi **Value1** için **Value64**).
+4. **Değer #** (alanlardan bir dizi **Value1** için **Value64**).

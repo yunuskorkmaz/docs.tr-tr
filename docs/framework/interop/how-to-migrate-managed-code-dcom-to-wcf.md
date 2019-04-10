@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f944ddb86e93f4a97c924bc5323e52214455bda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165197"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307723"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme
 Windows Communication Foundation (WCF) önerilen ve güvenli Dağıtılmış Bileşen Nesne Modeli (DCOM) üzerinden sunucular ve istemciler dağıtılmış bir ortamda arasındaki çağrıların yönetilen kod için seçimdir. Bu makale nasıl kod DCOM'dan WCF'ye aşağıdaki senaryolar için geçirme için.  
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>3. Adım: Yapılandırma ve WCF hizmetlerini başlatma  
  Bu hizmetler barındırmak için sunucu yapılandırma dosyasında (web.config) aşağıdaki eklemeler olmanız gerekir.  
   
-1.  Ekleme bir `<client>` kapatamaması nesne için uç nokta açıklayan bölümü.  Bu senaryoda, sunucu da bir istemci olarak davranır ve bu ayarı etkinleştirmek için yapılandırılması gerekir.  
+1. Ekleme bir `<client>` kapatamaması nesne için uç nokta açıklayan bölümü.  Bu senaryoda, sunucu da bir istemci olarak davranır ve bu ayarı etkinleştirmek için yapılandırılması gerekir.  
   
-2.  İçinde `<services>` bölümünde, Fabrika ve sessionful nesne için hizmet uç noktalarını bildirir.  Bu hizmet uç noktaları ile iletişim kurmak, almak istemci sağlar <xref:System.ServiceModel.EndpointAddress10> ve oturum kanalı oluşturun.  
+2. İçinde `<services>` bölümünde, Fabrika ve sessionful nesne için hizmet uç noktalarını bildirir.  Bu hizmet uç noktaları ile iletişim kurmak, almak istemci sağlar <xref:System.ServiceModel.EndpointAddress10> ve oturum kanalı oluşturun.  
   
  Bu ayarlarla örnek bir yapılandırma dosyası aşağıda verilmiştir:  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  Hizmeti çağırmak için aşağıdakileri yapmak için istemci kodu ekleyin:  
   
-1.  Bir kanal oluşturmaya `ISessionBoundFactory` hizmeti.  
+1. Bir kanal oluşturmaya `ISessionBoundFactory` hizmeti.  
   
-2.  Çağrılacak kanalı kullanmaya `ISessionBoundFactory` elde bir hizmet bir <xref:System.ServiceModel.EndpointAddress10> nesne.  
+2. Çağrılacak kanalı kullanmaya `ISessionBoundFactory` elde bir hizmet bir <xref:System.ServiceModel.EndpointAddress10> nesne.  
   
-3.  Kullanım <xref:System.ServiceModel.EndpointAddress10> kapatamaması bir nesne elde etmek için bir kanal oluşturmak için.  
+3. Kullanım <xref:System.ServiceModel.EndpointAddress10> kapatamaması bir nesne elde etmek için bir kanal oluşturmak için.  
   
-4.  Çağrı `SetCurrentValue` ve `GetCurrentValue` arasında birden çok çağrı yöntemleri aynı nesne örneği kaldığı göstermek için kullanılır.  
+4. Çağrı `SetCurrentValue` ve `GetCurrentValue` arasında birden çok çağrı yöntemleri aynı nesne örneği kaldığı göstermek için kullanılır.  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  

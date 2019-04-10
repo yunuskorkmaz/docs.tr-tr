@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: f82a548c820aec7d2ae13c30a67d778fc167a8b6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 88bbab2005b464ee97d647f2b4b9be6ff81e2d82
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299117"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>Sabitler iç veya numaralandırılmış türde olmalıdır; sınıf, yapı, tür parametresi veya dizi türünde olamaz
 Bir sınıf, yapı ya da dizi türü veya içeren bir genel türü tarafından tanımlanan bir tür parametresi olarak bir sabit bildirme girişiminde bulundunuz.  
@@ -23,12 +23,12 @@ Bir sınıf, yapı ya da dizi türü veya içeren bir genel türü tarafından t
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Bir iç öğe olarak bir sabit bildirme veya `Enum` türü.  
+1. Bir iç öğe olarak bir sabit bildirme veya `Enum` türü.  
   
-2.  Bir sabit ayrıca özel bir değer gibi olabilir `True`, `False`, veya `Nothing`. Derleyici iç türü uygun olması için önceden tanımlanmış bu değerleri göz önünde bulundurur.  
+2. Bir sabit ayrıca özel bir değer gibi olabilir `True`, `False`, veya `Nothing`. Derleyici iç türü uygun olması için önceden tanımlanmış bu değerleri göz önünde bulundurur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sabitler ve Sabit Listeleri](../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Sabitler ve Numaralandırmalar](../../../visual-basic/language-reference/constants-and-enumerations.md)
 - [Veri Türleri](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Veri Türleri](../../../visual-basic/language-reference/data-types/index.md)

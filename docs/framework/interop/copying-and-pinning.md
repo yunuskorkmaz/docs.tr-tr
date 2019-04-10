@@ -9,23 +9,21 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcc5d3a561eea1e38d0b8a4790af13143cad92d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326287"
 ---
 # <a name="copying-and-pinning"></a>Kopyalama ve Sabitleme
 Veri sıralarken, birlikte çalışma sıralayıcısı kopyalayabilir veya sıralanmış veri sabitleyin. Veri kopyalama verilerin bir kopyasını başka bir bellek konumuna bir bellek konumunda yerleştirir. Bir değer türü kopyalama arasındaki farklar aşağıda gösterilmiştir ve bir tür kopyalama başvuruya göre yönetilmeyen bellek yönetilen geçirilmedi.  
   
- ![Değer türleri değere ve başvuruya göre geçirilen](./media/interopmarshalcopy.gif "interopmarshalcopy")  
-Değere ve başvuruya göre geçirilen değer türleri  
+ ![Değer ve başvuru türleri nasıl kopyalanır gösteren diyagram.](./media/copying-and-pinning/interop-marshal-copy.gif)  
   
- Değer olarak geçilemez yöntem bağımsız değişkenleri yığında değerler olarak yönetilmeyen kod için hazırlanırlar. Kopyalama işlemi doğrudan. Gibi işaretçiler, başvuruya göre geçirilen bağımsız değişkenler yığında geçirilir. Başvuru türleri de değere ve başvuruya göre iletilir. Aşağıdaki çizimde gösterildiği gibi değer olarak geçilemez başvuru türleri ya da kopyaladığınız sabitlenmiş veya.  
+ Değer olarak geçilemez yöntem bağımsız değişkenleri yığında değerler olarak yönetilmeyen kod için hazırlanırlar. Kopyalama işlemi doğrudan. Gibi işaretçiler, başvuruya göre geçirilen bağımsız değişkenler yığında geçirilir. Başvuru türleri de değere ve başvuruya göre iletilir. Aşağıdaki çizimde gösterildiği gibi değer olarak geçilemez başvuru türleri ya da kopyaladığınız Sabitlenen veya: 
   
- ![COM birlikte çalışma](./media/interopmarshalpin.gif "interopmarshalpin")  
-Değere ve başvuruya göre geçirilen başvuru türleri  
+ ![Diyagram gösteren başvuru türleri, değere ve başvuruya göre geçirilen.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)  
   
  Geçici olarak sabitleme, bu nedenle ortak dil çalışma zamanının atık toplayıcısı tarafından yeniden konumlandırılması tutma geçerli bellek konumuna verileri kilitler. Sıralayıcı, veri kopyalama yükünü azaltmak ve performansı artırmak için sabitler. Veri türü kopyaladığınız veya sıralama işlemi sırasında sabitlenmiş olup olmadığını belirler.  Sabitleme otomatik olarak gerçekleştirilir gibi nesneler için sıralama sırasında <xref:System.String>bellek kullanarak el ile de sabitleyebilirsiniz ancak <xref:System.Runtime.InteropServices.GCHandle> sınıfı.  
   

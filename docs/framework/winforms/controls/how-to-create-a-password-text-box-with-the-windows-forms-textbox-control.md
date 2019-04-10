@@ -12,23 +12,23 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: f2017ccfd6d8320d6afc7b5e8a2ce8349c4fbd17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110618"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300989"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Nasıl yapılır: Windows Forms TextBox Denetimi ile Parola Metin Kutusu Oluşturma
 Bir kullanıcı bir dize türleri, yer tutucu karakterleri görüntüler bir Windows Forms metin kutusuna bir parola kutusudur.  
   
 ### <a name="to-create-a-password-text-box"></a>Parola metin kutusu oluşturma  
   
-1.  Ayarlama <xref:System.Windows.Forms.TextBox.PasswordChar%2A> özelliği <xref:System.Windows.Forms.TextBox> belirli bir karakterin denetime.  
+1. Ayarlama <xref:System.Windows.Forms.TextBox.PasswordChar%2A> özelliği <xref:System.Windows.Forms.TextBox> belirli bir karakterin denetime.  
   
      <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Özellik metin kutusunda görüntülenen karakter belirtir. Örneğin, yıldız işareti (parola) kutusunda görüntülenen istiyorsanız belirtin * için <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Özellikler penceresindeki özellik. Ardından, metin kutusuna bir kullanıcı türleri, hangi karakter bağımsız olarak bir yıldız işareti görüntülenir.  
   
-2.  (İsteğe bağlı) Ayarlama <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> özelliği. Özellik karakterlerinin kaçının tutulacağını metin kutusuna yazılabilir belirler. En fazla uzunluk aşıldığında, sistem bir bip sesi yayar ve metin kutusunda daha fazla tüm karakterleri kabul etmez. Bu bir parola uzunluğu en fazla yapmak isteyebilirsiniz Not, parolanızı tahmin etmeye çalıştığınız saldırganlar için kullanışlı olabilir.  
+2. (İsteğe bağlı) Ayarlama <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> özelliği. Özellik karakterlerinin kaçının tutulacağını metin kutusuna yazılabilir belirler. En fazla uzunluk aşıldığında, sistem bir bip sesi yayar ve metin kutusunda daha fazla tüm karakterleri kabul etmez. Bu bir parola uzunluğu en fazla yapmak isteyebilirsiniz Not, parolanızı tahmin etmeye çalıştığınız saldırganlar için kullanışlı olabilir.  
   
      Aşağıdaki kod örneğinde nasıl başlatılacağını en fazla 14 karakter uzunluğunda bir dize kabul edin ve dize yerine bir yıldız görüntüler bir metin kutusu gösterir. `InitializeMyControl` Yordamı değil yürütülecek otomatik olarak; çağrılması gerekir.  
   

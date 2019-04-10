@@ -12,23 +12,23 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 2bff105d5c97a8b98d094a1ce3a4f033aa5971be
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 050af6d10faec3dd09998349dcf96e96ea0f9201
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306195"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Nasıl yapılır: Windows Forms FolderBrowserDialog Bileşeni ile Klasörleri Seçme
 Genellikle, Windows, içinde oluşturduğunuz uygulamalar, en sık dosya kümesini kaydetmek için bir klasör seçmek için kullanıcılara sor gerekecektir. Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> bileşen kolayca bu görevi gerçekleştirmek sağlar.  
   
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>FolderBrowserDialog bileşeni ile klasörleri seçme  
   
-1.  Bir yordamda denetleyin <xref:System.Windows.Forms.FolderBrowserDialog> bileşenin <xref:System.Windows.Forms.Form.DialogResult%2A> iletişim kutusu nasıl kapatıldığı görmek ve değerini almak için özellik <xref:System.Windows.Forms.FolderBrowserDialog> bileşenin <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> özelliği.  
+1. Bir yordamda denetleyin <xref:System.Windows.Forms.FolderBrowserDialog> bileşenin <xref:System.Windows.Forms.Form.DialogResult%2A> iletişim kutusu nasıl kapatıldığı görmek ve değerini almak için özellik <xref:System.Windows.Forms.FolderBrowserDialog> bileşenin <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> özelliği.  
   
-2.  İletişim kutusunun ağacı görünümü içinde görünecek kümesi en üstteki klasöre ihtiyacınız varsa, ayarlayın <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> üyesi özelliği <xref:System.Environment.SpecialFolder> sabit listesi.  
+2. İletişim kutusunun ağacı görünümü içinde görünecek kümesi en üstteki klasöre ihtiyacınız varsa, ayarlayın <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> üyesi özelliği <xref:System.Environment.SpecialFolder> sabit listesi.  
   
-3.  Ayrıca, ayarlayabileceğiniz <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> metin dizesini belirtir. özellik, klasör tarayıcı ağaç görünümü üst kısmında görünür.  
+3. Ayrıca, ayarlayabileceğiniz <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> metin dizesini belirtir. özellik, klasör tarayıcı ağaç görünümü üst kısmında görünür.  
   
      Aşağıdaki örnekte <xref:System.Windows.Forms.FolderBrowserDialog> bileşen ne zaman Visual Studio'da bir proje oluşturun ve içine kaydetmek için bir klasör seçmeniz istenir benzer bir klasör seçmek için kullanılır. Bu örnekte, klasör adı ardından görüntülenen bir <xref:System.Windows.Forms.TextBox> form denetimi. Konumun düzenlenebilir bir alanda gibi yerleştirmek için iyi bir fikirdir bir <xref:System.Windows.Forms.TextBox> denetlemek ve böylece kullanıcılar kendi seçimi hata veya diğer sorunları durumunda düzenleyebilirsiniz. Bu örnek bir formla varsayar bir <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni ve bir <xref:System.Windows.Forms.TextBox> denetimi.  
   

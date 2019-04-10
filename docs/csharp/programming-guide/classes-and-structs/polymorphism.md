@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 3aeb9735876953e9332997f6b8f2ca4df9234c06
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203395"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322088"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 Çok biçimlilik genellikle kapsülleme ve devralma sonra nesne yönelimli programlama, üçüncü sütun olarak adlandırılır. Çok biçimlilik "çok biçimli" anlamına gelen Yunanca sözcüktür ve iki ayrı görünüşlere sahiptir:  
@@ -22,9 +22,9 @@ ms.locfileid: "57203395"
   
  Sanal yöntemleri ile ilgili nesnelerin gruplarını Tekdüzen bir şekilde çalışmanıza olanak sağlar. Örneğin, kullanıcının bir çizim yüzeyinde şekiller çeşitli oluşturmasını sağlayan bir çizim uygulama olduğunu varsayalım. Derleme zamanında hangi türde şekiller kullanıcı oluşturacak bilmezsiniz. Ancak, çeşitli türleri oluşturulan şekillerinin izlemek uygulamada var ve yanıt olarak kullanıcı fare işlemlerini güncelleştirmeniz gerekir. Çok biçimlilik, iki temel adımlar bu sorunu çözmek için kullanabilirsiniz:  
   
-1.  Her özel şekil sınıfı ortak bir taban sınıftan türetilen bir sınıf hiyerarşisi oluşturun.  
+1. Her özel şekil sınıfı ortak bir taban sınıftan türetilen bir sınıf hiyerarşisi oluşturun.  
   
-2.  Sanal bir yöntem, tek bir temel sınıf yöntemini çağrı yoluyla herhangi bir türetilmiş sınıf üzerinde uygun yöntemini çağırmak için kullanın.  
+2. Sanal bir yöntem, tek bir temel sınıf yöntemini çağrı yoluyla herhangi bir türetilmiş sınıf üzerinde uygun yöntemini çağırmak için kullanın.  
   
  İlk olarak, adlı temel bir sınıf oluşturun `Shape`ve gibi türetilmiş sınıflar `Rectangle`, `Circle`, ve `Triangle`. Vermek `Shape` sınıfı olarak adlandırılan sanal bir yöntemi `Draw`, geçersiz kılma belirli çizmek için her bir türetilmiş sınıf içinde şekil, bir sınıfı temsil eder. Oluşturma bir `List<Shape>` nesnesi ve bir daire, üçgen ve dikdörtgen ekleyin. Çizim yüzeyini güncelleştirmek için bir [foreach](../../../csharp/language-reference/keywords/foreach-in.md) listesi ve arama yinelemek için döngü `Draw` yöntemi her `Shape` listesinde nesne. Listedeki her nesne bir türü sahip olsa da `Shape`, çağrılacak çalışma zamanı tür (her türetilmiş bir sınıf yöntemi geçersiz kılınan sürümü).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "57203395"
   
 ## <a name="polymorphism-overview"></a>Çok biçimlilik genel bakış  
   
-### <a name="virtual-members"></a>Sanal üyeler  
+### <a name="virtual-members"></a>Sanal Üyeler  
  Türetilmiş bir sınıf bir taban sınıftan devraldığında tüm yöntemler, alanlar, özellikler ve olaylar temel sınıfın kazanır. Türetilmiş sınıf Tasarımcısı seçebilirsiniz verilip verilmeyeceğini  
   
 -   sanal taban sınıfı üyeleri geçersiz kıl  
@@ -93,7 +93,7 @@ ms.locfileid: "57203395"
   
 -   [Geçersiz Kılmanın ve Yeni Anahtar Sözcüklerin Ne Zaman Kullanılacağını Bilme](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Nasıl yapılır: ToString yöntemini geçersiz kılma](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [Nasıl yapılır: ToString Yöntemini Geçersiz Kılma](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

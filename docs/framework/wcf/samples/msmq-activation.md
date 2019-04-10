@@ -2,12 +2,12 @@
 title: MSMQ Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162834"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295685"
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 Bu örnek, bir ileti kuyruktan okunmak uygulamaların Windows İşlem Etkinleştirme Hizmeti (WAS) barındırmak nasıl gösterir. Bu örnekte `netMsmqBinding` ve dayanır [iki yönlü iletişimi](../../../../docs/framework/wcf/samples/two-way-communication.md) örnek. Bu durumda Web barındırılan bir uygulama hizmetidir ve istemci kendiliğinden barındırılır ve gönderilen satın alma siparişleri durumunu izlemek için konsola çıkışı.  
@@ -215,9 +215,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Emin [!INCLUDE[iisver](../../../../includes/iisver-md.md)] WAS etkinleştirme için gerekli olduğu gibi yüklenir.  
+1. Emin [!INCLUDE[iisver](../../../../includes/iisver-md.md)] WAS etkinleştirme için gerekli olduğu gibi yüklenir.  
   
-2.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ayrıca, WCF HTTP olmayan etkinleştirme bileşenlerini yüklemelisiniz:  
+2. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ayrıca, WCF HTTP olmayan etkinleştirme bileşenlerini yüklemelisiniz:  
   
     1.  Gelen **Başlat** menüsünde seçin **Denetim Masası**.  
   
@@ -229,11 +229,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  Genişletin **Microsoft .NET Framework 3.0** düğüm ve onay **Windows Communication Foundation HTTP olmayan etkinleştirme** özelliği.  
   
-3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  İstemci, bir komut penceresinden client.exe yürüterek çalıştırın. Bu, bir sıra oluşturur ve ona bir ileti gönderir. İleti okuma hizmet sonucunu görmek için çalıştıran istemci bırakın  
+4. İstemci, bir komut penceresinden client.exe yürüterek çalıştırın. Bu, bir sıra oluşturur ve ona bir ileti gönderir. İleti okuma hizmet sonucunu görmek için çalıştıran istemci bırakın  
   
-5.  MSMQ Etkinleştirme hizmeti varsayılan olarak ağ hizmeti olarak çalışır. Bu nedenle, uygulamayı etkinleştirmek için kullanılan kuyruk olmalıdır alır ve ağ hizmeti için izinleri göz at. Bu, Message Queuing MMC kullanarak eklenebilir:  
+5. MSMQ Etkinleştirme hizmeti varsayılan olarak ağ hizmeti olarak çalışır. Bu nedenle, uygulamayı etkinleştirmek için kullanılan kuyruk olmalıdır alır ve ağ hizmeti için izinleri göz at. Bu, Message Queuing MMC kullanarak eklenebilir:  
   
     1.  Gelen **Başlat** menüsünde tıklatın **çalıştırmak**, yazın `Compmgmt.msc` ve ENTER tuşuna basın.  
   
@@ -245,7 +245,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  Üzerinde **güvenlik** sekmesinde **Ekle** gözlem verin ve alma izinleri ağ hizmeti için.  
   
-6.  MSMQ etkinleştirmeyi desteklemek için Windows İşlem Etkinleştirme Hizmeti'nı (WAS) yapılandırın.  
+6. MSMQ etkinleştirmeyi desteklemek için Windows İşlem Etkinleştirme Hizmeti'nı (WAS) yapılandırın.  
   
      Kolaylık, örnek dizininde AddMsmqSiteBinding.cmd adlı bir toplu iş dosyasında aşağıdaki adımlar uygulanır.  
   
@@ -272,9 +272,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          Bu komut kullanılarak erişilecektir /servicemodelsamples uygulamayı etkinleştirir `http://localhost/servicemodelsamples` ve `net.msmq://localhost/servicemodelsamples`.
   
-7.  Daha önce yapmadıysanız, MSMQ Etkinleştirme Hizmeti'nın etkin olduğundan emin olun. Gelen **Başlat** menüsünde tıklatın **çalıştırın**ve türü `Services.msc`. Arama için Hizmetler listesi **Net.Msmq dinleyici bağdaştırıcısı**. Sağ tıklayıp **özellikleri**. Ayarlama **başlangıç türü** için **otomatik**, tıklayın **Uygula** tıklatıp **Başlat** düğmesi. Bu adım yalnızca bir kez Net.Msmq dinleyici bağdaştırıcı hizmeti ilk kullanımlar yapılmalıdır.  
+7. Daha önce yapmadıysanız, MSMQ Etkinleştirme Hizmeti'nın etkin olduğundan emin olun. Gelen **Başlat** menüsünde tıklatın **çalıştırın**ve türü `Services.msc`. Arama için Hizmetler listesi **Net.Msmq dinleyici bağdaştırıcısı**. Sağ tıklayıp **özellikleri**. Ayarlama **başlangıç türü** için **otomatik**, tıklayın **Uygula** tıklatıp **Başlat** düğmesi. Bu adım yalnızca bir kez Net.Msmq dinleyici bağdaştırıcı hizmeti ilk kullanımlar yapılmalıdır.  
   
-8.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md). Ayrıca, satın alma siparişi gönderirken URİ'sini sıra bilgisayar adını yansıtacak şekilde satınalma siparişi gönderen istemci kodu değiştirin. Aşağıdaki kodu kullanın:  
+8. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md). Ayrıca, satın alma siparişi gönderirken URİ'sini sıra bilgisayar adını yansıtacak şekilde satınalma siparişi gönderen istemci kodu değiştirin. Aşağıdaki kodu kullanın:  
   
     ```csharp  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -309,7 +309,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Örneği için bir çalışma alanına katılmış bir bilgisayarda çalıştırmak için  
   
-1.  Bilgisayarınız bir etki alanının parçası değilse, hiçbiri aşağıdaki örnek yapılandırmada gösterildiği gibi kimlik doğrulama modu ve koruma düzeyi ayarlayarak aktarım güvenliği devre dışı bırakın.  
+1. Bilgisayarınız bir etki alanının parçası değilse, hiçbiri aşağıdaki örnek yapılandırmada gösterildiği gibi kimlik doğrulama modu ve koruma düzeyi ayarlayarak aktarım güvenliği devre dışı bırakın.  
   
     ```xml  
     <bindings>  
@@ -321,12 +321,12 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     </bindings>  
     ```  
   
-2.  Örneği çalıştırmadan önce hem sunucu hem de istemci yapılandırmasını değiştirin.  
+2. Örneği çalıştırmadan önce hem sunucu hem de istemci yapılandırmasını değiştirin.  
   
     > [!NOTE]
     >  Ayarı `security mode` için `None` ayarlamakla eşdeğerdir `MsmqAuthenticationMode`, `MsmqProtectionLevel` ve `Message` güvenlik `None`.  
   
-3.  Bir çalışma alanına katılmış bir bilgisayar etkinleştirmesi için hem Etkinleştirme hizmeti hem de çalışan işlemi (her ikisi için aynı olmalıdır) belirli bir kullanıcı hesabı ile çalıştırılmalıdır ve kuyruk ACL'leri belirli bir kullanıcı hesabı için olmalıdır.  
+3. Bir çalışma alanına katılmış bir bilgisayar etkinleştirmesi için hem Etkinleştirme hizmeti hem de çalışan işlemi (her ikisi için aynı olmalıdır) belirli bir kullanıcı hesabı ile çalıştırılmalıdır ve kuyruk ACL'leri belirli bir kullanıcı hesabı için olmalıdır.  
   
      Altında çalışan işlemini çalıştıran kimliği değiştirmek için:  
   
@@ -342,9 +342,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     2.  Sağ **Net.MsmqListener bağdaştırıcısı**ve **özellikleri**.  
   
-4.  Hesabında değişiklik **oturum açma** sekmesi.  
+4. Hesabında değişiklik **oturum açma** sekmesi.  
   
-5.  Bir çalışma grubunda hizmeti sınırsız bir belirteç kullanarak da çalıştırılmalıdır. Bunu yapmak için bir komut penceresinde aşağıdaki komutu çalıştırın:  
+5. Bir çalışma grubunda hizmeti sınırsız bir belirteç kullanarak da çalıştırılmalıdır. Bunu yapmak için bir komut penceresinde aşağıdaki komutu çalıştırın:  
   
     ```console  
     sc sidtype netmsmqactivator unrestricted  

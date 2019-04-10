@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826684"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296192"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Nasıl yapılır: Değişkeninizin (Visual Basic) aynı ada sahip bir değişkeni gizleme
 Bir değişken gizleyebilirsiniz *gölgeleme* , diğer bir deyişle, aynı ada sahip bir değişken tanımlayarak tarafından. İki yolla gizlemek istediğiniz değişkeni gölge:  
@@ -30,7 +30,7 @@ Bir değişken gizleyebilirsiniz *gölgeleme* , diğer bir deyişle, aynı ada s
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>Bir değişken kapsam yoluyla gölgeleme tarafından gizlemek için  
   
-1.  Gizlemek istediğiniz değişken tanımlama bölgeyi belirlemeye ve burada, değişkenle tanımlanacak bir öğe alt bölgesini belirler.  
+1. Gizlemek istediğiniz değişken tanımlama bölgeyi belirlemeye ve burada, değişkenle tanımlanacak bir öğe alt bölgesini belirler.  
   
     |Değişkenin bölge|Bunu yeniden tanımlama için izin verilen öğe alt bölgesini|  
     |-----------------------|-------------------------------------------|  
@@ -39,9 +39,9 @@ Bir değişken gizleyebilirsiniz *gölgeleme* , diğer bir deyişle, aynı ada s
   
      Bu yordamdaki bir blok içinde bir yordam değişken Örneğin içinde tanımlanamaz bir `If`... `End If` oluşturma veya `For` döngü.  
   
-2.  Zaten yoksa, öğe alt bölgesini oluşturun.  
+2. Zaten yoksa, öğe alt bölgesini oluşturun.  
   
-3.  Öğe alt bölgesini içinde yazma bir [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) gölgeleme değişken bildirme.  
+3. Öğe alt bölgesini içinde yazma bir [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) gölgeleme değişken bildirme.  
   
      Öğe alt bölgesini içinde kod değişkenin adı başvurduğunda, derleyicinin gölgeleme değişkenine başvuru çözümler.  
   
@@ -73,11 +73,11 @@ Bir değişken gizleyebilirsiniz *gölgeleme* , diğer bir deyişle, aynı ada s
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>Bir değişken devralma yoluyla gölgeleme tarafından gizlemek için  
   
-1.  Gizlemek istediğiniz değişkeni, bir sınıf ve sınıf düzeyinde (dışında herhangi bir yordam) bildirildiğinden emin olun. Aksi takdirde, devralma yoluyla gölgeleyemez.  
+1. Gizlemek istediğiniz değişkeni, bir sınıf ve sınıf düzeyinde (dışında herhangi bir yordam) bildirildiğinden emin olun. Aksi takdirde, devralma yoluyla gölgeleyemez.  
   
-2.  Henüz mevcut değilse, değişkenin sınıfından türetilen bir sınıf tanımlar.  
+2. Henüz mevcut değilse, değişkenin sınıfından türetilen bir sınıf tanımlar.  
   
-3.  Türetilmiş sınıf içinde yazma bir `Dim` deyimi, değişken bildirme. Dahil [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) bildirimindeki anahtar sözcüğü.  
+3. Türetilmiş sınıf içinde yazma bir `Dim` deyimi, değişken bildirme. Dahil [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) bildirimindeki anahtar sözcüğü.  
   
      Türetilmiş sınıftaki kod değişken adıdır, derleyici Değişkeninizi başvuruyu çözümler.  
   
@@ -106,10 +106,10 @@ Bir değişken gizleyebilirsiniz *gölgeleme* , diğer bir deyişle, aynı ada s
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bildirilmiş Öğelere Başvurular](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic'de gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic'de Gölgeleme](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Gölgeleme ve Geçersiz Kılma Arasındaki Farklar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [Nasıl yapılır: Devralınmış değişkeni gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [Nasıl yapılır: Türetilmiş sınıf tarafından gizlenen bir değişkene erişme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
-- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
+- [Nasıl yapılır: Devralınmış Değişkeni Gizleme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
+- [Nasıl yapılır: Türetilmiş Sınıf Tarafından Gizlenen Bir Değişkene Erişme](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [Geçersiz Kılmalar](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase ve MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Devralma Temelleri](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

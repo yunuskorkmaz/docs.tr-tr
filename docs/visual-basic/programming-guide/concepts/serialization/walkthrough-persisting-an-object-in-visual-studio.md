@@ -2,12 +2,12 @@
 title: (Visual Basic) Visual Studio'da bir nesneyi kalıcı kılma
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841587"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303355"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>İzlenecek yol: (Visual Basic) Visual Studio'da bir nesneyi kalıcı kılma
 Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasarım zamanında olsa da, çalışma zamanında girilen değerleri kaybedilir. Seri hale getirme, bir nesnenin veri değerleri depolamak ve bunları nesnesi örneği başlatıldığında almanıza imkan tanıyan örnekler arasında kalıcı hale getirmek için kullanabilirsiniz.  
@@ -31,11 +31,11 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
   
 ### <a name="to-create-the-loan-class"></a>Kredi sınıfı oluşturmak için  
   
-1.  Yeni bir sınıf kitaplığı projesi oluşturun ve "LoanClass" olarak adlandırın. Daha fazla bilgi için [projeler ve çözümler oluşturma](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1. Yeni bir sınıf kitaplığı projesi oluşturun ve "LoanClass" olarak adlandırın. Daha fazla bilgi için [projeler ve çözümler oluşturma](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
   
-2.  İçinde **Çözüm Gezgini**Class1 dosyası için kısayol menüsünü açın ve seçin **Yeniden Adlandır**. Dosyayı Yeniden Adlandır `Loan` ve ENTER tuşuna basın. Dosya yeniden adlandırılırken da yeniden adlandırmak sınıfa `Loan`.  
+2. İçinde **Çözüm Gezgini**Class1 dosyası için kısayol menüsünü açın ve seçin **Yeniden Adlandır**. Dosyayı Yeniden Adlandır `Loan` ve ENTER tuşuna basın. Dosya yeniden adlandırılırken da yeniden adlandırmak sınıfa `Loan`.  
   
-3.  Sınıfına aşağıdaki genel üyeleri Ekle:  
+3. Sınıfına aşağıdaki genel üyeleri Ekle:  
   
     ```vb  
     Public Class Loan  
@@ -77,21 +77,21 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
   
 ### <a name="to-create-a-test-application"></a>Bir test uygulaması oluşturmak için  
   
-1.  Çözümünüz için bir Windows Forms uygulaması projesi eklemek için **dosya** menüsünde seçin **Ekle**,**yeni proje**.  
+1. Çözümünüz için bir Windows Forms uygulaması projesi eklemek için **dosya** menüsünde seçin **Ekle**,**yeni proje**.  
   
-2.  İçinde **Yeni Proje Ekle** iletişim kutusunda **Windows Forms uygulaması**girin `LoanApp` 'a tıklayın ve proje adı olarak **Tamam** iletişim kutusunu kapatmak için .  
+2. İçinde **Yeni Proje Ekle** iletişim kutusunda **Windows Forms uygulaması**girin `LoanApp` 'a tıklayın ve proje adı olarak **Tamam** iletişim kutusunu kapatmak için .  
   
-3.  İçinde **Çözüm Gezgini**, LoanApp projesini seçin.  
+3. İçinde **Çözüm Gezgini**, LoanApp projesini seçin.  
   
-4.  Üzerinde **proje** menüsünde seçin **başlangıç projesi olarak ayarla**.  
+4. Üzerinde **proje** menüsünde seçin **başlangıç projesi olarak ayarla**.  
   
-5.  Üzerinde **proje** menüsünde seçin **Başvuru Ekle**.  
+5. Üzerinde **proje** menüsünde seçin **Başvuru Ekle**.  
   
-6.  İçinde **Başvuru Ekle** iletişim kutusunda **projeleri** sekmesini ve ardından LoanClass projesini seçin.  
+6. İçinde **Başvuru Ekle** iletişim kutusunda **projeleri** sekmesini ve ardından LoanClass projesini seçin.  
   
-7.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
+7. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
-8.  Tasarımcıda dört ekleme <xref:System.Windows.Forms.TextBox> formu için denetimler.  
+8. Tasarımcıda dört ekleme <xref:System.Windows.Forms.TextBox> formu için denetimler.  
   
 9. Kod Düzenleyicisi'ne şu kodu ekleyin:  
   
@@ -163,13 +163,13 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
   
 ### <a name="to-deserialize-an-object"></a>Bir nesnenin serisini kaldırmak için  
   
-1.  Bir sabit seri hale getirilmiş veri dosya adı için bir sınıf ekleyin.  
+1. Bir sabit seri hale getirilmiş veri dosya adı için bir sınıf ekleyin.  
   
     ```vb  
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2.  Kodda değişiklik `Form1_Load` aşağıdaki gibi olay yordam:  
+2. Kodda değişiklik `Form1_Load` aşağıdaki gibi olay yordam:  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  
@@ -218,4 +218,4 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Seri hale getirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic Programlama Kılavuzu](../../../../visual-basic/programming-guide/index.md)

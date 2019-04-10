@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 35af3090c0f898578a5f8dfb81d02d22a0074ad2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108505"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296101"
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
 Bu örnek, bir istemci Eşgüdümlü işlem kullanımını gösterir ve WS-Atomic işlem ya da OleTransactions protokolünü kullanarak işlem istemci ve sunucu seçeneklerini akış. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan ancak işlemleri kullanımını göstermek için öznitelikli `TransactionFlowAttribute` ile **TransactionFlowOption** ne derece işlem akışı etkin belirlemek için sabit listesi. Akışlı işlem kapsamında, istenen işlemlerin bir günlük veritabanına yazılır ve istemci işlemi tamamlanmazsa, Eşgüdümlü istemci işlemi tamamlanana kadar - devam ederse Web hizmeti işlemi sağlar ilgili güncelleştirmeleri veritabanına iletilmez.  
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   İkinci `Subtract` isteği ile bildirilen yeni bir işlem kapsamı içinde gerçekleştirilir `TransactionScopeOption.Suppress` seçeneği. Bu istemcinin başlangıç dış işlem engeller ve isteğin bir işlem hizmetine akmaz. Bu yaklaşım, bir istemcinin açıkça, çevirme ve gerekli olmadığında, bir işlem hizmetine akan karşı koruma sağlar. Hizmetin Eylemler, yeni ve bağlantısız bir işlem kapsamında gerçekleşir.  
   
--   `Multiply` İsteği akan bir işlem hizmetine istemci tanımını üretilmiş çünkü `ICalculator` arabirimi içeren bir <xref:System.ServiceModel.TransactionFlowAttribute> kümesine <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
+-   `Multiply` İsteği akan bir işlem hizmetine istemci tanımını üretilmiş çünkü `ICalculator` arabirimi içeren bir <xref:System.ServiceModel.TransactionFlowAttribute> kümesine <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
   
 -   `Divide` İsteği akan bir işlem hizmetine istemci tanımını yeniden üretilmiş çünkü `ICalculator` arabirimi içermez bir `TransactionFlowAttribute`. Hizmetin Eylemler, yeni ve bağlantısız başka bir işlem kapsamında yeniden gerçekleşir.  
   
@@ -223,11 +223,11 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2.  SQL Server Express Edition veya SQL Server yüklü olduğundan ve bağlantı dizesini hizmetin uygulama yapılandırma dosyasında doğru ayarlandığından emin olun. Bir veritabanı kullanmadan örneği çalıştırmak için ayarlanmış `usingSql` hizmetin uygulama yapılandırma dosyasına değeri `false`  
+2. SQL Server Express Edition veya SQL Server yüklü olduğundan ve bağlantı dizesini hizmetin uygulama yapılandırma dosyasında doğru ayarlandığından emin olun. Bir veritabanı kullanmadan örneği çalıştırmak için ayarlanmış `usingSql` hizmetin uygulama yapılandırma dosyasına değeri `false`  
   
-3.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     >  Çapraz makine yapılandırması için aşağıdaki yönergeleri kullanarak Dağıtılmış İşlem Düzenleyicisi'ni etkinleştir ve WCF işlemleri ağ desteğini etkinleştirmek için Windows SDK'sı WsatConfig.exe aracını kullanın. Bkz: [WS-Atomic işlem desteğini yapılandırma](https://go.microsoft.com/fwlink/?LinkId=190370) WsatConfig.exe hakkında bilgi.  
@@ -236,7 +236,7 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) çalıştıran destekleyecek şekilde yapılandırmak için  
   
-1.  Windows Server 2003 veya Windows XP çalıştıran bir hizmeti makinede MSDTC gelen ağ işlemleri bu yönergeleri izleyerek izin verecek şekilde yapılandırın.  
+1. Windows Server 2003 veya Windows XP çalıştıran bir hizmeti makinede MSDTC gelen ağ işlemleri bu yönergeleri izleyerek izin verecek şekilde yapılandırın.  
   
     1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   
@@ -252,7 +252,7 @@ Press <ENTER> to terminate the service.
   
     7.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
-2.  Windows Server 2008 veya Windows Vista çalıştıran bir hizmeti makinede MSDTC gelen ağ işlemleri bu yönergeleri izleyerek izin verecek şekilde yapılandırın.  
+2. Windows Server 2008 veya Windows Vista çalıştıran bir hizmeti makinede MSDTC gelen ağ işlemleri bu yönergeleri izleyerek izin verecek şekilde yapılandırın.  
   
     1.  Gelen **Başlat** menüsünde gidin **Denetim Masası**, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   
@@ -266,7 +266,7 @@ Press <ENTER> to terminate the service.
   
     6.  İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
-3.  İstemci makinesinde MSDTC giden ağ işlemleri izin verecek şekilde yapılandırın:  
+3. İstemci makinesinde MSDTC giden ağ işlemleri izin verecek şekilde yapılandırın:  
   
     1.  Gelen **Başlat** menüsünde gidin `Control Panel`, ardından **Yönetimsel Araçlar**, ardından **Bileşen Hizmetleri**.  
   

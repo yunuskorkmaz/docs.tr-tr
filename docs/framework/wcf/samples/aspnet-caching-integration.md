@@ -2,12 +2,12 @@
 title: ASP.NET Önbelleğe Alma Tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197454"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309478"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET Önbelleğe Alma Tümleştirmesi
 Bu örnek, WCF WEB HTTP programlama modeli ile ASP.NET çıktı önbelleği nasıl gösterir. Bu konu, ASP.NET çıktı önbelleği tümleştirme özelliği üzerinde odaklanır.  
@@ -34,31 +34,31 @@ Bu örnek, WCF WEB HTTP programlama modeli ile ASP.NET çıktı önbelleği nas�
 ## <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
  Örnek üç projelerin oluşur:  
   
--   **Hizmet**: ASP.NET barındırılan bir WCF HTTP hizmetini içeren bir Web uygulaması projesi.  
+-   **Hizmet**: ASP.NET'te barındırılan bir WCF HTTP hizmeti içeren bir Web uygulaması projesi.  
   
--   **İstemci**: hizmetine çağrı yapan bir konsol uygulama projesi.  
+-   **İstemci**: Hizmet çağrıları yapan bir konsol uygulama projesi.  
   
--   **Ortak**: hizmet ve istemci tarafından kullanılan müşteri türü içeren paylaşılan bir kitaplık.  
+-   **Ortak**: İstemci ve hizmet tarafından kullanılan müşteri türü içeren paylaşılan bir kitaplık.  
   
  İstemci konsol uygulaması çalışırken istemci hizmete isteği yapan ve konsol penceresine yanıtlardan bilgileri yazar.  
   
 #### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   
-1.  ASP.NET önbelleğe alma tümleştirmesi için örnek çözümü açın.  
+1. ASP.NET önbelleğe alma tümleştirmesi için örnek çözümü açın.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  Varsa **Çözüm Gezgini** pencere zaten açık değilse, CTRL + W + S tuşuna basın.  
+3. Varsa **Çözüm Gezgini** pencere zaten açık değilse, CTRL + W + S tuşuna basın.  
   
-4.  Gelen **Çözüm Gezgini** penceresinde, sağ tıklama **hizmet** seçin ve proje **yeni örnek Başlat**. Bu, hizmeti barındıran ASP.NET geliştirme sunucusu başlatır.  
+4. Gelen **Çözüm Gezgini** penceresinde, sağ tıklama **hizmet** seçin ve proje **yeni örnek Başlat**. Bu, hizmeti barındıran ASP.NET geliştirme sunucusu başlatır.  
   
-5.  Gelen **Çözüm Gezgini** penceresinde, sağ tıklama **istemci** seçin ve proje **yeni örnek Başlat**.  
+5. Gelen **Çözüm Gezgini** penceresinde, sağ tıklama **istemci** seçin ve proje **yeni örnek Başlat**.  
   
-6.  İstemci konsol penceresi görünür ve çalışan hizmetin URI sağlar ve URI HTML Yardım sayfası çalışan hizmeti. Herhangi bir noktada HTML Yardım sayfası URI Yardım sayfasının bir tarayıcıda yazarak görüntüleyebilirsiniz.  
+6. İstemci konsol penceresi görünür ve çalışan hizmetin URI sağlar ve URI HTML Yardım sayfası çalışan hizmeti. Herhangi bir noktada HTML Yardım sayfası URI Yardım sayfasının bir tarayıcıda yazarak görüntüleyebilirsiniz.  
   
-7.  Örnek çalışırken, istemcinin geçerli etkinlik durumunu yazar.  
+7. Örnek çalışırken, istemcinin geçerli etkinlik durumunu yazar.  
   
-8.  İstemci Konsolu uygulamayı sonlandırmak için herhangi bir tuşa basın.  
+8. İstemci Konsolu uygulamayı sonlandırmak için herhangi bir tuşa basın.  
   
 9. Hizmet hata ayıklamayı durdurmak için SHIFT + F5 tuşlarına basın.  
   

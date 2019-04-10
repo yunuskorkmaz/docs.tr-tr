@@ -2,12 +2,12 @@
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142395"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304473"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.OracleClient.OracleBFile> Oracle ile çalışmak için kullanılan sınıfı <xref:System.Data.OracleClient.OracleType.BFile> veri türü.  
@@ -26,9 +26,9 @@ Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.Oracl
   
  NULL olmayan her **OracleBFile** nesne, temel alınan fiziksel dosya konumunu tanımlayan iki varlık ile ilişkilendirilmiş:  
   
-1.  Dosya sistemindeki bir dizin için bir veritabanı diğer adı olan bir Oracle dizin nesnesi ve  
+1. Dosya sistemindeki bir dizin için bir veritabanı diğer adı olan bir Oracle dizin nesnesi ve  
   
-2.  Dizin nesneyle ilişkili dizinde bulunan temel alınan fiziksel dosyanın dosya adı.  
+2. Dizin nesneyle ilişkili dizinde bulunan temel alınan fiziksel dosyanın dosya adı.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki C# örneği nasıl oluşturabileceğinizi gösteren bir **BDOSYA** bir Oracle tablo ve ardından bunu biçiminde alma bir **OracleBFile** nesne. Örnek kullanarak gösterir <xref:System.Data.OracleClient.OracleDataReader> nesne ve **OracleBFile** **arama** ve **okuma** yöntemleri. Bu örneği kullanmak için öncelikle adlı bir dizin oluşturmanız gerekir Not "c:\\\bfiles" ve "MyFile.jpg" Oracle sunucusunda adlı bir dosya.  

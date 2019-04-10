@@ -1,15 +1,15 @@
 ---
-title: Zaman uyumsuz iletişim
+title: Zaman Uyumsuz İletişim
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a9da04e2c6d3c131603211f53c54fd25dde8d338
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593913"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323661"
 ---
-# <a name="asynchronous-communication"></a>Zaman uyumsuz iletişim
+# <a name="asynchronous-communication"></a>Zaman Uyumsuz İletişim
 Bu örnek, iki farklı Windows Workflow Foundation (WF) hizmetler arasındaki iletişimi varsayılan olarak zaman uyumsuz olarak nasıl yapılacağı gösterir.  
   
 ## <a name="demonstrates"></a>Gösteriler  
@@ -31,13 +31,13 @@ Bu örnek, iki farklı Windows Workflow Foundation (WF) hizmetler arasındaki il
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Sağ **AsynchronousCommunication** çözüm ve select **özellikleri**.  
+1. Sağ **AsynchronousCommunication** çözüm ve select **özellikleri**.  
   
-2.  İçinde **ortak özellikler**seçin **başlangıç projesi**seçip **birden fazla başlangıç projesi**.  
+2. İçinde **ortak özellikler**seçin **başlangıç projesi**seçip **birden fazla başlangıç projesi**.  
   
-3.  Taşıma **RentalApprovalService** ve ardından listedeki ilk konuma **CreditCheckService**çizgidir **istemci**. Ayarlama **Başlat** üç projenin tamamına eylem.  
+3. Taşıma **RentalApprovalService** ve ardından listedeki ilk konuma **CreditCheckService**çizgidir **istemci**. Ayarlama **Başlat** üç projenin tamamına eylem.  
   
-4.  Tıklayın **Tamam**, örneği çalıştırmak için F5 tuşuna basın.  
+4. Tıklayın **Tamam**, örneği çalıştırmak için F5 tuşuna basın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

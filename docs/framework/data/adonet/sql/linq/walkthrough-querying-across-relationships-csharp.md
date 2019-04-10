@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: İlişkilerde Sorgulama (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184892"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325377"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>İzlenecek yol: İlişkilerde Sorgulama (C#)
 Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *ilişkilendirmeleri* veritabanında yabancı anahtar ilişkileri göstermek için.  
@@ -51,16 +51,16 @@ Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../..
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Erişim için müşteri nesnesi kullanarak nesneleri  
   
-1.  Değiştirme `Main` yazarak veya yönteme aşağıdaki kodu kopyalayıp yapıştırmak yöntemi:  
+1. Değiştirme `Main` yazarak veya yönteme aşağıdaki kodu kopyalayıp yapıştırmak yöntemi:  
   
      [!code-csharp[DLinqWalk2CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#3)]  
   
-2.  Uygulamanızda hata ayıklamak için F5 tuşuna basın.  
+2. Uygulamanızda hata ayıklamak için F5 tuşuna basın.  
   
     > [!NOTE]
     >  Çıkış açıklama satırı yaparak konsol penceresinde SQL kodu çıkarabilirsiniz `db.Log = Console.Out;`.  
   
-3.  Konsol penceresinde, hata ayıklamayı durdurmak için ENTER tuşuna basın.  
+3. Konsol penceresinde, hata ayıklamayı durdurmak için ENTER tuşuna basın.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Veritabanınızın kesin türü belirtilmiş bir görünüm oluşturma  
  Bir veritabanınız kesin türü belirtilmiş görünüm ile başlamak kolaydır. Kesin yazarak <xref:System.Data.Linq.DataContext> nesne çağrıları gerektirmeyen <xref:System.Data.Linq.DataContext.GetTable%2A>. Kesin olarak belirlenmiş kullandığınızda tüm sorgularınızdaki kesin türü belirtilmiş tabloları kullanabilir <xref:System.Data.Linq.DataContext> nesne.  
@@ -69,21 +69,21 @@ Bu izlenecek yolda kullanımını gösteren [!INCLUDE[vbtecdlinq](../../../../..
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>Kesin DataContext nesne yazmak için  
   
-1.  Yukarıdaki aşağıdaki kodu ekleyin `Customer` sınıfının bildirimi.  
+1. Yukarıdaki aşağıdaki kodu ekleyin `Customer` sınıfının bildirimi.  
   
      [!code-csharp[DLinqWalk2CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#4)]  
   
-2.  Değiştirme `Main` kesin olarak belirlenmiş yöntemini <xref:System.Data.Linq.DataContext> gibi:  
+2. Değiştirme `Main` kesin olarak belirlenmiş yöntemini <xref:System.Data.Linq.DataContext> gibi:  
   
      [!code-csharp[DLinqWalk2CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#5)]  
   
-3.  Uygulamanızda hata ayıklamak için F5 tuşuna basın.  
+3. Uygulamanızda hata ayıklamak için F5 tuşuna basın.  
   
      Konsol penceresi çıktısı şöyledir:  
   
      `ID=WHITC`  
   
-4.  Konsol penceresinde, hata ayıklamayı durdurmak için ENTER tuşuna basın.  
+4. Konsol penceresinde, hata ayıklamayı durdurmak için ENTER tuşuna basın.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Sonraki izlenecek ([izlenecek yol: Verileri düzenleme (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) verileri işlemek nasıl gösterir. Bu izlenecek yol, iki izlenecek yollar zaten tamamladığınız bu dizide Kaydet gerektirmez.  

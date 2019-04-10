@@ -1,15 +1,15 @@
 ---
-title: Veritabanı erişimi etkinlikleri
+title: Veritabanı Erişimi Etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066096"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322608"
 ---
-# <a name="database-access-activities"></a>Veritabanı erişimi etkinlikleri
+# <a name="database-access-activities"></a>Veritabanı Erişimi Etkinlikleri
 Veritabanı erişimi etkinlikleri iş akışı içindeki bir veritabanına erişmek izin verin. Bu etkinliklerin alma veya bilgileri değiştirin ve veritabanlarına erişim ver [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) veritabanına erişmek için.  
   
 > [!IMPORTANT]
@@ -299,26 +299,26 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>Setup.cmd çalıştırmak için
 
-1.  Bir komut istemi açın.
+1. Bir komut istemi açın.
 
-2.  DbActivities örnek klasörüne gidin.
+2. DbActivities örnek klasörüne gidin.
 
-3.  "Setup.cmd" yazın ve ENTER tuşuna basın.
+3. "Setup.cmd" yazın ve ENTER tuşuna basın.
 
     > [!NOTE]
     >  Setup.cmd yerel makine SqlExpress Örneğinizde örneği yüklemek çalışır. Diğer SQL server örneği'nde yüklemek istiyorsanız, Setup.cmd ile yeni örnek adını düzenleyin.
 
 ##### <a name="to-uninstall-the-sample-database"></a>Örnek veritabanını kaldırmak için
 
-1.  Örnek klasöründeki bir komut isteminde CleanUp.cmd çalıştırın.
+1. Örnek klasöründeki bir komut isteminde CleanUp.cmd çalıştırın.
 
 ##### <a name="to-run-the-sample"></a>Örnek çalıştırmak için
 
-1.  Visual Studio 2010'da çözümü açın
+1. Visual Studio 2010'da çözümü açın
 
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-3.  Hata ayıklama olmadan örneği çalıştırmak için CTRL + F5 tuşlarına basın.
+3. Hata ayıklama olmadan örneği çalıştırmak için CTRL + F5 tuşlarına basın.
 
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

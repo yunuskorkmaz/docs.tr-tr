@@ -2,53 +2,53 @@
 title: "Nasıl yapılır: Keşif Proxy'sini Test Etme"
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: 13d2e8ca46e634e3b27c8eb967d89d860df1c72d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 856b86241299585b80d58c6d37582463736a5935
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176286"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316407"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'sini Test Etme
 Keşif proxy'si uygulama gösteren dördüncü dört konuları budur. Önceki konu [nasıl yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulaması yürütürsünüz](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md), Keşif proxy'si hizmet bulmak için kullanır ve ardından hizmeti çağıran bir WCF istemci uygulaması uygulanır. Bu konu, beklendiği gibi keşif proxy'si, hizmet ve istemci uygulama iş doğrulamak açıklar.  
   
 ### <a name="run-the-discovery-proxy"></a>Keşif proxy'si çalıştırın  
   
-1.  Yönetici olarak bir komut istemi açın.  
+1. Yönetici olarak bir komut istemi açın.  
   
-2.  Bildiren bir iletişim kutusu görebilirsiniz: Windows Güvenlik Duvarı, bazı özellikler bu programın engelledi. Bu iletiyi görüyorsanız tıklayın **Engellemeyi Kaldır** düğmesi.  
+2. Bildiren bir iletişim kutusu görebilirsiniz: Windows Güvenlik Duvarı, bazı özellikler bu programın engelledi. Bu iletiyi görüyorsanız tıklayın **Engellemeyi Kaldır** düğmesi.  
   
-3.  İçinde komut isteminde, Keşif proxy'si DiscoveryProxy.exe çalıştırın.  
+3. İçinde komut isteminde, Keşif proxy'si DiscoveryProxy.exe çalıştırın.  
   
-4.  Uygulama aşağıdaki metni görüntülenmelidir: `Proxy started. Hit Enter to exit`.  
+4. Uygulama aşağıdaki metni görüntülenmelidir: `Proxy started. Hit Enter to exit`.  
   
 ### <a name="run-the-discoverable-service"></a>Bulunabilir hizmet çalıştırma  
   
-1.  Yönetici olarak bir komut istemi açın.  
+1. Yönetici olarak bir komut istemi açın.  
   
-2.  İçinde komut isteminde, Service.exe bulunabilir hizmet çalıştırın.  
+2. İçinde komut isteminde, Service.exe bulunabilir hizmet çalıştırın.  
   
-3.  Aşağıdaki metni DiscoveryProxy.exe görüntülenmelidir: `******* Adding the following service: ** [Service Contract Name] ** [Service Endpoint Addr] 3.******* Done *******` .  
+3. Aşağıdaki metni DiscoveryProxy.exe görüntülenmelidir: `******* Adding the following service: ** [Service Contract Name] ** [Service Endpoint Addr] 3.******* Done *******` .  
   
 ### <a name="run-the-client-application"></a>İstemci uygulamasını çalıştırın  
   
-1.  Bir komut istemi açın.  
+1. Bir komut istemi açın.  
   
-2.  Komut istemi içinde client.exe uygulamayı çalıştırın.  
+2. Komut istemi içinde client.exe uygulamayı çalıştırın.  
   
-3.  Birkaç saniye sonra istemci uygulama, aşağıdaki metni görüntüler: [Hizmet uç noktası için] bağlanılıyor.  
+3. Birkaç saniye sonra istemci uygulama, aşağıdaki metni görüntüler: [Hizmet uç noktası için] bağlanılıyor.  
   
-4.  Service.exe, ardından aşağıdaki metni görüntülenmelidir: Alınan istek Karşılama, ı yanıt verir.  
+4. Service.exe, ardından aşağıdaki metni görüntülenmelidir: Alınan istek Karşılama, ı yanıt verir.  
   
-5.  Client.exe sonra aşağıdaki metni görüntülenir: İstemci Merhaba!  
+5. Client.exe sonra aşağıdaki metni görüntülenir: İstemci Merhaba!  
   
 ### <a name="shut-down-the-applications"></a>Uygulamaları kapatın  
   
-1.  İstemci uygulamayı kapatın.  
+1. İstemci uygulamayı kapatın.  
   
-2.  Hizmeti kapat. Keşif proxy'si aşağıdaki metni görüntüler: `******* Removing the following service: ** [Service Contract Name] ** [Service Endpoint Addr] 2.3.******* Done *******`.  
+2. Hizmeti kapat. Keşif proxy'si aşağıdaki metni görüntüler: `******* Removing the following service: ** [Service Contract Name] ** [Service Endpoint Addr] 2.3.******* Done *******`.  
   
-3.  Keşif proxy'si kapatın.  
+3. Keşif proxy'si kapatın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

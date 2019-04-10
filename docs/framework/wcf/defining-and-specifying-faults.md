@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079337"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299338"
 ---
 # <a name="defining-and-specifying-faults"></a>Hataları Tanımlama ve Belirtme
 SOAP hatalarının istemciye ve birlikte çalışabilen bir yolla bir hizmete istemcinin çift yönlü çalışmasından hata durum bilgisini bir hizmetten aktarın. Bu konuda ele alınmıştır ne zaman ve nasıl özel hata içeriğini tanımlamak ve hangi işlemlerin döndürülmeleri belirtin. Bir hizmet ya da çift yönlü istemci bu hataların nasıl gönderebilir ve bir istemci veya hizmet uygulaması bu hataların nasıl işlediği hakkında daha fazla bilgi için bkz. [gönderme ve alma hataları](../../../docs/framework/wcf/sending-and-receiving-faults.md). Hata işleme Windows Communication Foundation (WCF) uygulamalarında genel bakış için bkz. [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -21,11 +21,11 @@ SOAP hatalarının istemciye ve birlikte çalışabilen bir yolla bir hizmete is
 ## <a name="overview"></a>Genel Bakış  
  SOAP hataları olan bir işlem olan bildirilmiş bir <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> özel bir SOAP hatası türü belirtir. Bildirilmemiş SOAP hataları sözleşmenin bir işlem için belirtilen değil olanlardır. Bu konuda bu hata koşullarını tanımlamak ve istemcilerin düzgün bir şekilde özel SOAP hataları bildirildiğinde bu hata koşullarını işlemek için kullanabileceği hizmetiniz için bir hata sözleşme oluşturmanıza yardımcı olur. Temel görevleri sırayla şöyledir:  
   
-1.  Bir istemci hizmeti hakkında bilmeniz gereken hata koşullarını tanımlayın.  
+1. Bir istemci hizmeti hakkında bilmeniz gereken hata koşullarını tanımlayın.  
   
-2.  Bu hata koşulları için SOAP hataları özel içeriği tanımlayın.  
+2. Bu hata koşulları için SOAP hataları özel içeriği tanımlayın.  
   
-3.  Böylece oluştururlar belirli bir SOAP hatası WSDL istemcilere sunulan işlemlerinizi işaretleyin.  
+3. Böylece oluştururlar belirli bir SOAP hatası WSDL istemcilere sunulan işlemlerinizi işaretleyin.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>İstemciler hakkında bilmeniz gereken hata koşulları tanımlama  
  SOAP, belirli bir işleme hata bilgileri taşıyan herkese açık şekilde açıklandığı gibi iletileri hatalarıdır. WSDL diğer işlem iletileri birlikte açıklanan olduğundan, istemciler bilmeniz ve bu nedenle, bir işlemi çağrılırken böyle arızları beklenir. Ancak WCF hizmetleri hangi hata koşulları yönetilen kod hataları dönüştürülecek olan ve istemciye döndürülen hata koşulları ve hizmetinizdeki hataları biçimsel hata ayırmak için bir fırsat sağlar karar yönetilen kodda yazılır bir istemciye sahip konuşma.  

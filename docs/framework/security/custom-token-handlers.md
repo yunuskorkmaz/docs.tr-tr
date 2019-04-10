@@ -1,16 +1,16 @@
 ---
-title: Özel belirteç işleyicileri
+title: Özel Belirteç İşleyicileri
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312117"
 ---
-# <a name="custom-token-handlers"></a>Özel belirteç işleyicileri
+# <a name="custom-token-handlers"></a>Özel Belirteç İşleyicileri
 Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kullanılacağını açıklar. Özel belirteç işleyicileri için varsayılan olarak WIF desteklenmeyen belirteç türleri oluşturmak gerekli konu da kapsar.  
   
 ## <a name="introduction-to-token-handlers-in-wif"></a>WIF belirteç işleyicileri giriş  
@@ -42,9 +42,9 @@ Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kull
   
 #### <a name="adding-a-custom-token-handler"></a>Özel bir belirteci işleyicisi ekleme  
   
-1.  Öğesinden türetilen yeni bir sınıf oluşturun <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
+1. Öğesinden türetilen yeni bir sınıf oluşturun <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
   
-2.  Aşağıdaki yöntemleri geçersiz kılın ve kendi uygulamanız sağlayın:  
+2. Aşağıdaki yöntemleri geçersiz kılın ve kendi uygulamanız sağlayın:  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -58,7 +58,7 @@ Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kull
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  Yeni özel belirteci işleyici içinde bir başvuru ekleyin *Web.config* veya *App.config* içinde dosya  **\<system.identityModel >** , bölüm WIF için geçerlidir. Örneğin, aşağıdaki yapılandırma biçimlendirme adlı yeni bir belirteci işleyicisi belirtir **MyCustomTokenHandler** , bulunduğu **CustomToken** ad alanı.  
+3. Yeni özel belirteci işleyici içinde bir başvuru ekleyin *Web.config* veya *App.config* içinde dosya  **\<system.identityModel >** , bölüm WIF için geçerlidir. Örneğin, aşağıdaki yapılandırma biçimlendirme adlı yeni bir belirteci işleyicisi belirtir **MyCustomTokenHandler** , bulunduğu **CustomToken** ad alanı.  
   
     ```xml  
     <system.identityModel>  

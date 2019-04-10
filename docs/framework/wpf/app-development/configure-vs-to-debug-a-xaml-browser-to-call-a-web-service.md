@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: a4fe68ca4c2d4a58ecf561d17111fdf6a68a9118
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171853"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314379"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Nasıl yapılır: Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] Internet bölgesi izinleri kümesi için kısıtlı bir kısmi güven güvenliği korumalı alan içinde çalıştırın. Bu izin kümesi, Web hizmeti çağrıları yalnızca şu adreste bulunabilir Hizmetleri Web sınırlar [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kaynak uygulamanın siteyi. Olduğunda bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hataları ayıklanmakta Visual Studio 2005'ten yine de bu Web hizmeti olarak başvuruları aynı kaynak siteyi sahip olmadığı kabul edilir. Bu neden güvenlik özel durumlarını ne zaman yükseltilecek [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web hizmetini çağırmak çalışır. Ancak, bir Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] proje, aynı kaynak siteyi çağırdığı hata ayıklama sırasında Web hizmeti olarak olması benzetimini yapmak için yapılandırılabilir. Böylece [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] güvenli bir şekilde güvenlik özel durumları neden olmadan Web hizmetini çağırmak için.
@@ -21,15 +21,15 @@ ms.locfileid: "59171853"
 ## <a name="configuring-visual-studio"></a>Visual Studio'yu yapılandırma
  Hata ayıklamak için Visual Studio 2005 yapılandırmak için bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] bir Web hizmeti çağırır:
 
-1.  Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünde tıklatın **özellikleri**.
+1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünde tıklatın **özellikleri**.
 
-2.  İçinde **Proje Tasarımcısı**, tıklayın **hata ayıklama** sekmesi.
+2. İçinde **Proje Tasarımcısı**, tıklayın **hata ayıklama** sekmesi.
 
-3.  İçinde **başlatma eylemi** bölümünden **harici program Başlat** ve şunu girin:
+3. İçinde **başlatma eylemi** bölümünden **harici program Başlat** ve şunu girin:
 
      `C:\WINDOWS\System32\PresentationHost.exe`
 
-4.  İçinde **Başlat seçenekleri** bölümünde, aşağıdaki girin **komut satırı bağımsız değişkenleri** metin kutusunda:
+4. İçinde **Başlat seçenekleri** bölümünde, aşağıdaki girin **komut satırı bağımsız değişkenleri** metin kutusunda:
 
      `-debug`  *filename*
 
@@ -40,11 +40,11 @@ ms.locfileid: "59171853"
 > [!NOTE]
 >  Bu Visual Studio 2005 ile oluşturulmuş çözümler için varsayılan yapılandırmadır [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] proje şablonu.
 
-1.  Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünde tıklatın **özellikleri**.
+1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünde tıklatın **özellikleri**.
 
-2.  İçinde **Proje Tasarımcısı**, tıklayın **hata ayıklama** sekmesi.
+2. İçinde **Proje Tasarımcısı**, tıklayın **hata ayıklama** sekmesi.
 
-3.  İçinde **Başlat seçenekleri** bölümünde, eklemek için aşağıdaki komut satırı parametresini **komut satırı bağımsız değişkenleri** metin kutusunda:
+3. İçinde **Başlat seçenekleri** bölümünde, eklemek için aşağıdaki komut satırı parametresini **komut satırı bağımsız değişkenleri** metin kutusunda:
 
      `-debugSecurityZoneURL`  *URL*
 

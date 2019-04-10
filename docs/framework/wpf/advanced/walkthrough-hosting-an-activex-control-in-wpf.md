@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: a84363221ee216aade041adb65cce5f092ad3ae5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c27449da5ee0351e472eaba7d930a774979db65f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130151"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311507"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>İzlenecek yol: WPF'de ActiveX Denetimi Barındırma
 Tarayıcı ile Gelişmiş etkileşimi etkinleştirmek için kullanabileceğiniz [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] denetimlerini, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-tabanlı bir uygulama. Bu izlenecek yol, nasıl barındırabilirsiniz gösterir [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] denetim olarak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sayfası.
@@ -39,23 +39,23 @@ Tarayıcı ile Gelişmiş etkileşimi etkinleştirmek için kullanabileceğiniz 
 
 #### <a name="to-create-and-set-up-the-project"></a>Oluşturma ve projesi kurun
 
-1.  Adlı bir WPF uygulaması projesi oluşturmak `HostingAxInWpf`.
+1. Adlı bir WPF uygulaması projesi oluşturmak `HostingAxInWpf`.
 
-2.  Bir Windows Forms Denetim Kitaplığı projesi çözüme ekleyin ve projeyi adlandırın `WmpAxLib`.
+2. Bir Windows Forms Denetim Kitaplığı projesi çözüme ekleyin ve projeyi adlandırın `WmpAxLib`.
 
-3.  WmpAxLib projesinde wmp.dll adlı Windows Media Player derlemesine bir başvuru ekleyin.
+3. WmpAxLib projesinde wmp.dll adlı Windows Media Player derlemesine bir başvuru ekleyin.
 
-4.  Açık **araç kutusu**.
+4. Açık **araç kutusu**.
 
-5.  Sağ **araç kutusu**ve ardından **öğelerini Seç**.
+5. Sağ **araç kutusu**ve ardından **öğelerini Seç**.
 
-6.  Tıklayın **COM bileşenlerini** sekmesinde **Windows Media Player** denetlemek ve ardından **Tamam**.
+6. Tıklayın **COM bileşenlerini** sekmesinde **Windows Media Player** denetlemek ve ardından **Tamam**.
 
      Windows Media Player denetimi eklenir **araç kutusu**.
 
-7.  Çözüm Gezgini'nde sağ **UserControl1** dosya ve ardından **Yeniden Adlandır**.
+7. Çözüm Gezgini'nde sağ **UserControl1** dosya ve ardından **Yeniden Adlandır**.
 
-8.  Adla değiştirin `WmpAxControl.vb` veya `WmpAxControl.cs`dile bağlı olarak.
+8. Adla değiştirin `WmpAxControl.vb` veya `WmpAxControl.cs`dile bağlı olarak.
 
 9. Tüm başvuruları yeniden adlandırmak için istenirse, tıklayın **Evet**.
 
@@ -64,37 +64,37 @@ Tarayıcı ile Gelişmiş etkileşimi etkinleştirmek için kullanabileceğiniz 
 
 #### <a name="to-create-the-activex-control"></a>ActiveX denetimi oluşturmak için
 
-1.  WmpAxControl.vb veya WmpAxControl.cs Windows Form Tasarımcısı'nda açın.
+1. WmpAxControl.vb veya WmpAxControl.cs Windows Form Tasarımcısı'nda açın.
 
-2.  Gelen **araç kutusu**, Windows Media Player denetimi tasarım yüzeyine ekleyin.
+2. Gelen **araç kutusu**, Windows Media Player denetimi tasarım yüzeyine ekleyin.
 
-3.  Özellikler penceresinde, Windows Media Player denetimin değerini <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.
+3. Özellikler penceresinde, Windows Media Player denetimin değerini <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.
 
-4.  WmpAxLib denetim kitaplığı projesi oluşturun.
+4. WmpAxLib denetim kitaplığı projesi oluşturun.
 
 ## <a name="hosting-the-activex-control-on-a-wpf-page"></a>Bir WPF sayfasında ActiveX denetimi barındırma
 
 #### <a name="to-host-the-activex-control"></a>ActiveX denetimi barındırma
 
-1.  HostingAxInWpf projesinde, oluşturulan bir başvuru ekleyin [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] birlikte çalışma derlemesi.
+1. HostingAxInWpf projesinde, oluşturulan bir başvuru ekleyin [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] birlikte çalışma derlemesi.
 
      Bu derleme AxInterop.WMPLib.dll adlandırılır ve Windows Media Player denetimi aktarıldığında WmpAxLib projenin hata ayıklama klasöre eklendi.
 
-2.  WindowsFormsIntegration.dll adlı WindowsFormsIntegration derlemesine bir başvuru ekleyin.
+2. WindowsFormsIntegration.dll adlı WindowsFormsIntegration derlemesine bir başvuru ekleyin.
 
-3.  Bir başvuru ekleyin [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] System.Windows.Forms.dll adlı bütünleştirilmiş kod.
+3. Bir başvuru ekleyin [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] System.Windows.Forms.dll adlı bütünleştirilmiş kod.
 
-4.  MainWindow.xaml WPF Tasarımcısı'nda açın.
+4. MainWindow.xaml WPF Tasarımcısı'nda açın.
 
-5.  Adı <xref:System.Windows.Controls.Grid> öğesi `grid1`.
+5. Adı <xref:System.Windows.Controls.Grid> öğesi `grid1`.
 
      [!code-xaml[HostingAxInWpf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml#1)]
 
-6.  Tasarım görünümü veya XAML görünümünde seçin <xref:System.Windows.Window> öğesi.
+6. Tasarım görünümü veya XAML görünümünde seçin <xref:System.Windows.Window> öğesi.
 
-7.  Özellikler penceresinde tıklayın **olayları** sekmesi.
+7. Özellikler penceresinde tıklayın **olayları** sekmesi.
 
-8.  Çift <xref:System.Windows.FrameworkElement.Loaded> olay.
+8. Çift <xref:System.Windows.FrameworkElement.Loaded> olay.
 
 9. İşlemek için aşağıdaki kodu ekleyin <xref:System.Windows.FrameworkElement.Loaded> olay.
 

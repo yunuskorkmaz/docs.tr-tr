@@ -1,15 +1,15 @@
 ---
-title: "Nasıl yapılır: Keşif proxy'si uygulama"
+title: "Nasıl yapılır: Keşif Proxy'si Uygulama"
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 12adc7215e929bb56aafe104546eb6e58af52ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608920"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321022"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a>Nasıl yapılır: Keşif proxy'si uygulama
+# <a name="how-to-implement-a-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'si Uygulama
 Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Foundation (WCF) bulma özelliği hakkında daha fazla bilgi için bkz. [WCF keşif genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Keşif proxy'si genişleten bir sınıfı oluşturarak uygulanabilir <xref:System.ServiceModel.Discovery.DiscoveryProxy> soyut sınıf. Tanımlanan ve bu örnekte kullanılan diğer destek sınıfları vardır. `OnResolveAsyncResult`, `OnFindAsyncResult`, ve `AsyncResult`. Bu sınıfların uygulamak <xref:System.IAsyncResult> arabirimi. Hakkında daha fazla bilgi için <xref:System.IAsyncResult> bkz [System.IAsyncResult arabirimi](xref:System.IAsyncResult).
 
  Keşif proxy'si ekleme Bu konuda üç ana parçalara bölünmüştür:
@@ -22,11 +22,11 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
 
 ### <a name="to-create-a-new-console-application-project"></a>Yeni bir konsol uygulaması projesi oluşturmak için
 
-1.  Visual Studio 2012 başlatın.
+1. Visual Studio 2012 başlatın.
 
-2.  Yeni bir konsol uygulama projesi oluşturun. Projeyi adlandırın `DiscoveryProxy` ve çözüm adı `DiscoveryProxyExample`.
+2. Yeni bir konsol uygulama projesi oluşturun. Projeyi adlandırın `DiscoveryProxy` ve çözüm adı `DiscoveryProxyExample`.
 
-3.  Aşağıdaki başvuruları projeye ekleyin
+3. Aşağıdaki başvuruları projeye ekleyin
 
     1.  System.ServiceModel.dll
 
@@ -37,9 +37,9 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
 
 ### <a name="to-implement-the-proxydiscoveryservice-class"></a>ProxyDiscoveryService sınıf uygulamak için
 
-1.  Yeni bir kod dosyası projenize ekleyin ve DiscoveryProxy.cs adlandırın.
+1. Yeni bir kod dosyası projenize ekleyin ve DiscoveryProxy.cs adlandırın.
 
-2.  Aşağıdaki `using` DiscoveryProxy.cs deyimleriyle.
+2. Aşağıdaki `using` DiscoveryProxy.cs deyimleriyle.
 
     ```
     using System;
@@ -49,7 +49,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
     using System.Xml;
     ```
 
-3.  Türetilen `DiscoveryProxyService` gelen <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Uygulama `ServiceBehavior` aşağıdaki örnekte gösterildiği gibi sınıfı özniteliği.
+3. Türetilen `DiscoveryProxyService` gelen <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Uygulama `ServiceBehavior` aşağıdaki örnekte gösterildiği gibi sınıfı özniteliği.
 
     ```
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -59,14 +59,14 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
     }
     ```
 
-4.  İçinde `DiscoveryProxy` sınıfı tanımlayın kayıtlı Hizmetleri tutan sözlük.
+4. İçinde `DiscoveryProxy` sınıfı tanımlayın kayıtlı Hizmetleri tutan sözlük.
 
     ```
     // Repository to store EndpointDiscoveryMetadata.
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;
     ```
 
-5.  Sözlük başlatan bir oluşturucu tanımlayamaz.
+5. Sözlük başlatan bir oluşturucu tanımlayamaz.
 
     ```
     public DiscoveryProxyService()
@@ -77,7 +77,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
 
 ### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a>Keşif proxy önbelleği güncelleştirmek için kullanılan yöntemleri tanımlamak için
 
-1.  Uygulama `AddOnlineservice` Hizmetleri önbelleğine eklemek için yöntemi. Bu proxy her bir Duyurunun ileti aldığında çağrılır.
+1. Uygulama `AddOnlineservice` Hizmetleri önbelleğine eklemek için yöntemi. Bu proxy her bir Duyurunun ileti aldığında çağrılır.
 
     ```
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -91,7 +91,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
             }
     ```
 
-2.  Uygulama `RemoveOnlineService` önbellekten hizmetlerini kaldırmak için kullanılan yöntem.
+2. Uygulama `RemoveOnlineService` önbellekten hizmetlerini kaldırmak için kullanılan yöntem.
 
     ```
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -108,7 +108,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
             }
     ```
 
-3.  Uygulama `MatchFromOnlineService` sözlük hizmetinde hizmetiyle eşleştirme yapmayı denemek yöntemleri.
+3. Uygulama `MatchFromOnlineService` sözlük hizmetinde hizmetiyle eşleştirme yapmayı denemek yöntemleri.
 
     ```
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -144,7 +144,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
             }
     ```
 
-4.  Uygulama `PrintDiscoveryMetadata` konsol metni ile kullanıcı sağlayan yöntemi çıkış proxy hangi bulma işlemi yapıyor.
+4. Uygulama `PrintDiscoveryMetadata` konsol metni ile kullanıcı sağlayan yöntemi çıkış proxy hangi bulma işlemi yapıyor.
 
     ```
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -159,7 +159,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
             }
     ```
 
-5.  Aşağıdaki AsyncResult sınıflar için DiscoveryProxyService ekleyin. Bu sınıflar farklı zaman uyumsuz işlem sonuçlarını ayırt etmek için kullanılır.
+5. Aşağıdaki AsyncResult sınıflar için DiscoveryProxyService ekleyin. Bu sınıflar farklı zaman uyumsuz işlem sonuçlarını ayırt etmek için kullanılır.
 
     ```
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult
@@ -225,7 +225,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
 
 ### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a>Bulma Ara sunucusu işlevleri uygulayan yöntemler tanımlamak için
 
-1.  Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si bir çevrimiçi Duyurunun ileti aldığında, bu yöntem çağrılır.
+1. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si bir çevrimiçi Duyurunun ileti aldığında, bu yöntem çağrılır.
 
     ```
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -236,7 +236,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
             }
     ```
 
-2.  Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si, bir duyuru iletiyi işlemeyi tamamladıktan sonra bu yöntem çağrılır.
+2. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si, bir duyuru iletiyi işlemeyi tamamladıktan sonra bu yöntem çağrılır.
 
     ```
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -245,7 +245,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
             }
     ```
 
-3.  Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Bu yöntem çağrılır ile keşif proxy çevrimdışı Duyurunun ileti alır.
+3. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Bu yöntem çağrılır ile keşif proxy çevrimdışı Duyurunun ileti alır.
 
     ```
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -256,7 +256,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
             }
     ```
 
-4.  Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si, bir çevrimdışı duyuru iletiyi işlemeyi tamamladıktan sonra bu yöntem çağrılır.
+4. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si, bir çevrimdışı duyuru iletiyi işlemeyi tamamladıktan sonra bu yöntem çağrılır.
 
     ```
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -265,7 +265,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
             }
     ```
 
-5.  Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si bir bulma isteği aldığında, bu yöntem çağrılır.
+5. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si bir bulma isteği aldığında, bu yöntem çağrılır.
 
     ```
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -284,7 +284,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
     }
     ```
 
-6.  Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si bir bulma isteği işleme tamamlandığında, bu yöntem çağrılır.
+6. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si bir bulma isteği işleme tamamlandığında, bu yöntem çağrılır.
 
     ```
     protected override void OnEndFind(IAsyncResult result)
@@ -293,7 +293,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
             }
     ```
 
-7.  Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si bir Çözümle ileti aldığında, bu yöntem çağrılır.
+7. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si bir Çözümle ileti aldığında, bu yöntem çağrılır.
 
     ```
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -310,7 +310,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
     }
     ```
 
-8.  Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si bir Çözümle iletiyi işlemeyi tamamladığında bu yöntem çağrılır.
+8. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> yöntemi. Keşif proxy'si bir Çözümle iletiyi işlemeyi tamamladığında bu yöntem çağrılır.
 
     ```
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -323,18 +323,18 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
 
 ### <a name="to-implement-the-asyncresult-class"></a>AsyncResult sınıf uygulamak için
 
-1.  Soyut temel sınıf çeşitli zaman uyumsuz sonuç sınıfların türetilmesi için kullanılan AsyncResult tanımlayın.
+1. Soyut temel sınıf çeşitli zaman uyumsuz sonuç sınıfların türetilmesi için kullanılan AsyncResult tanımlayın.
 
-2.  AsyncResult.cs adlı yeni bir kod dosyası oluşturun.
+2. AsyncResult.cs adlı yeni bir kod dosyası oluşturun.
 
-3.  Aşağıdaki `using` AsyncResult.cs deyimleriyle.
+3. Aşağıdaki `using` AsyncResult.cs deyimleriyle.
 
     ```
     using System;
     using System.Threading;
     ```
 
-4.  Aşağıdaki AsyncResult sınıfı ekleyin.
+4. Aşağıdaki AsyncResult sınıfı ekleyin.
 
     ```
     abstract class AsyncResult : IAsyncResult
@@ -487,9 +487,9 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
 
 ### <a name="to-host-the-discoveryproxy"></a>Konağa DiscoveryProxy
 
-1.  Program.cs dosyasının DiscoveryProxyExample projeyi açın.
+1. Program.cs dosyasının DiscoveryProxyExample projeyi açın.
 
-2.  Aşağıdaki `using` deyimleri.
+2. Aşağıdaki `using` deyimleri.
 
     ```
     using System;
@@ -497,7 +497,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
     using System.ServiceModel.Discovery;
     ```
 
-3.  İçinde `Main()` yöntemine aşağıdaki kodu ekleyin. Bu örneği oluşturur `DiscoveryProxy` sınıfı.
+3. İçinde `Main()` yöntemine aşağıdaki kodu ekleyin. Bu örneği oluşturur `DiscoveryProxy` sınıfı.
 
     ```
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -507,7 +507,7 @@ Bu konuda, Keşif proxy'si uygulama açıklanmaktadır. Windows Communication Fo
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());
     ```
 
-4.  Ardından bir bulma uç noktası ve duyuru uç nokta eklemek için aşağıdaki kodu ekleyin.
+4. Ardından bir bulma uç noktası ve duyuru uç nokta eklemek için aşağıdaki kodu ekleyin.
 
     ```
     try
@@ -979,7 +979,7 @@ namespace Microsoft.Samples.Discovery
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Nasıl yapılır: Keşif proxy'sine bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Nasıl yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulama](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [Nasıl yapılır: Keşif proxy'sini test etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [WCF Keşif Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Nasıl yapılır: Keşif Proxy'sini Test Etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

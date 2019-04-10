@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147556"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304408"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Birden Çok Etkin Sonuç Kümesini Etkinleştirme
 Birden çok etkin sonuç kümesi (MARS) tek bir bağlantı üzerinde birden çok toplu iş yürütme izin vermek için SQL Server ile birlikte çalışan bir özelliktir. SQL Server ile kullanmak için MARS etkinleştirilmişse kullanılan her komut nesnesi bir oturum bağlantı ekler.  
@@ -102,11 +102,11 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Bu senaryoyu gerçekleştirmek için üç seçenek vardır:  
   
-1.  Okuyucu oluşturulduktan sonra işlem başlatın ve böylece işlemin bir parçası değil. Her güncelleştirme, böylece kendi işlem olur.  
+1. Okuyucu oluşturulduktan sonra işlem başlatın ve böylece işlemin bir parçası değil. Her güncelleştirme, böylece kendi işlem olur.  
   
-2.  Tüm iş okuyucu kapatıldıktan sonra işleyin. Bu, önemli toplu güncelleştirmeler için olasılığına sahiptir.  
+2. Tüm iş okuyucu kapatıldıktan sonra işleyin. Bu, önemli toplu güncelleştirmeler için olasılığına sahiptir.  
   
-3.  MARS kullanmayın; Bunun yerine MARS önce yaptığınız gibi her komut nesnesi için ayrı bir bağlantı kullanın.  
+3. MARS kullanmayın; Bunun yerine MARS önce yaptığınız gibi her komut nesnesi için ayrı bir bağlantı kullanın.  
   
 ### <a name="detecting-mars-support"></a>MARS destek algılama  
  MARS okuyarak desteği için bir uygulama denetleyebilirsiniz `SqlConnection.ServerVersion` değeri. Birincil numara 9 için SQL Server 2005 ve SQL Server 2008 için 10 olması gerekir.  

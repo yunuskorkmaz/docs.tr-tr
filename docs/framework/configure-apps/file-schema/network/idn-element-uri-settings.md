@@ -2,12 +2,12 @@
 title: <idn> Öğesi (Uri ayarları)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 3940f30f2ef90a77560a82edc909071f0ee8e130
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129408"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321763"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN > öğesi (Uri ayarları)
 Bir etki alanı adı için Uluslararası yapılan etki alanı adı (IDN) ayrıştırma uygulanıp uygulanmadığını belirtir.  
@@ -37,7 +37,7 @@ Bir etki alanı adı için Uluslararası yapılan etki alanı adı (IDN) ayrış
 |`enabled`|Bir etki alanı adı için Uluslararası yapılan etki alanı adı (IDN) ayrıştırma uygulanırsa Yok'tur varsayılan değeri belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -50,13 +50,13 @@ Bir etki alanı adı için Uluslararası yapılan etki alanı adı (IDN) ayrış
   
  IRI desteğini etkinleştirmek için aşağıdaki iki değişiklik gerekmez:  
   
-1.  Machine.config dosyasının .NET Framework 2.0 dizininde aşağıdaki satırı ekleyin  
+1. Machine.config dosyasının .NET Framework 2.0 dizininde aşağıdaki satırı ekleyin  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  IRI ayrıştırma kurallarını uygulanıp ve etki alanı adına uygulanan Uluslararası yapılan etki alanı adı (IDN) ayrıştırma isteyip istemediğinizi belirtin. Bu, machine.config veya app.config dosyasında yapılabilir.  
+2. IRI ayrıştırma kurallarını uygulanıp ve etki alanı adına uygulanan Uluslararası yapılan etki alanı adı (IDN) ayrıştırma isteyip istemediğinizi belirtin. Bu, machine.config veya app.config dosyasında yapılabilir.  
   
  IDN için kullanılan DNS sunucularını bağlı olarak üç olası değer vardır:  
   

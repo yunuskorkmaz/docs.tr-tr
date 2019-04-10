@@ -4,12 +4,12 @@ description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2f1d624365c168d14e98ed175d369f6aef18e42e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153884"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296257"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Bulut için iyileştirilmiş uygulamalarda Microsoft teknolojileri
 
@@ -25,9 +25,9 @@ Aşağıdaki listede, araçları, teknolojileri ve bulut için iyileştirilmiş 
 
 -   **İzleme, günlüğe kaydetme ve denetim telemetri**: Uygulamaları izleyin ve denetleyin ve bulutta çalışan kapsayıcılar için herhangi bir bulut için iyileştirilmiş uygulama için kritik önem taşır. [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) ve [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) bulut için iyileştirilmiş uygulamalar için izleme ve denetim sağlamak ana Microsoft araçlardır.
 
--   **Sağlama**: Otomasyon araçları altyapıyı sağlamak ve bir uygulama birden çok ortama (üretim, test, hazırlık) dağıtmanıza yardımcı olur. Chef ve Puppet gibi araçlar, uygulamanın yapılandırma ve ortamı yönetmek için kullanabilirsiniz. Bu katman, daha kolay ve doğrudan yaklaşımları kullanarak da uygulanabilir. Örneğin, Azure komut satırı araçları, arabirimi (Azure CLI) kullanarak doğrudan dağıtabilir ve ardından sürekli dağıtımı kullanın ve release management işlem hatlarında [Azure DevOps Hizmetleri](https://visualstudio.microsoft.com/team-services/).
+-   **Sağlama**: Otomasyon araçları altyapıyı sağlamak ve bir uygulama birden çok ortama (üretim, test, hazırlık) dağıtmanıza yardımcı olur. Chef ve Puppet gibi araçlar, uygulamanın yapılandırma ve ortamı yönetmek için kullanabilirsiniz. Bu katman, daha kolay ve doğrudan yaklaşımları kullanarak da uygulanabilir. Örneğin, Azure komut satırı araçları, arabirimi (Azure CLI) kullanarak doğrudan dağıtabilir ve ardından sürekli dağıtımı kullanın ve release management işlem hatlarında [Azure DevOps Hizmetleri](https://azure.microsoft.com/services/devops/).
 
--   **Uygulama yaşam döngüsü**: [Azure DevOps hizmetleriyle](https://visualstudio.microsoft.com/team-services/) ve Jenkins gibi başka araçlar olan yardımcı olan yerleşik otomasyon sunucuları uygulamak CI/CD işlem hatları, sürüm yönetimi dahil olmak üzere.
+-   **Uygulama yaşam döngüsü**: [Azure DevOps hizmetleriyle](https://azure.microsoft.com/services/devops/) ve Jenkins gibi başka araçlar olan yardımcı olan yerleşik otomasyon sunucuları uygulamak CI/CD işlem hatları, sürüm yönetimi dahil olmak üzere.
 
 Bu bölümde ve ilgili izlenecek yollar, sonraki bölümlerde özel çalışma zamanı katman (Windows kapsayıcıları) hakkındaki ayrıntıları odaklanır. Yönergeler, Windows Server 2016 (ve sonraki sürümler) Windows kapsayıcıları VM'ler ve Azure Container Instances'a dağıtma yöntemleri açıklar. Ayrıca, Azure App Service gibi daha gelişmiş PaaS platformları ve Azure Service Fabric ve Azure Kubernetes hizmeti gibi orchestrator kapsar.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: b173f322018921ef1c0fec6aa785ae6c9d9e6957
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314223"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Nasıl yapılır: Control Sınıfından Devralma
 Bir Windows formunda kullanmak için tamamen özel bir denetim oluşturmak istiyorsanız, gelen alması gerektiğini <xref:System.Windows.Forms.Control> sınıfı. Öğesinden devralan çalışırken <xref:System.Windows.Forms.Control> daha fazla planlama ve uygulama gerçekleştirmek, ayrıca, en büyük çeşitli seçenekleri sağlar sınıfını gerektirir. Gelen devralınırken <xref:System.Windows.Forms.Control>, iş denetimleri yapar çok temel işlevleri devralır. Doğal olarak işlevselliğini <xref:System.Windows.Forms.Control> sınıf klavye ve fare kullanıcı girişini işleme sınırları ve denetimin boyutunu tanımlar, windows tanıtıcı sağlar ve ileti işleme ve güvenlik sağlar. Grafik arabiriminin denetimin gerçek işleme Bu durumda olan tüm boyama birleşmez ya da herhangi bir belirli bir kullanıcı etkileşimi işlevi dahil etmez. Tüm özel kod aracılığıyla bu görünüşler sağlamanız gerekir.  
@@ -23,25 +23,25 @@ Bir Windows formunda kullanmak için tamamen özel bir denetim oluşturmak istiy
   
 ### <a name="to-create-a-custom-control"></a>Özel bir denetim oluşturmak için  
   
-1.  Yeni bir **Windows uygulama** veya **Windows Denetim Kitaplığı** proje.  
+1. Yeni bir **Windows uygulama** veya **Windows Denetim Kitaplığı** proje.  
   
-2.  Gelen **proje** menüsünde seçin **sınıfı Ekle**.  
+2. Gelen **proje** menüsünde seçin **sınıfı Ekle**.  
   
-3.  İçinde **Yeni Öğe Ekle** iletişim kutusu, tıklayın **özel denetim**.  
+3. İçinde **Yeni Öğe Ekle** iletişim kutusu, tıklayın **özel denetim**.  
   
      Yeni özel denetim projenize eklenir.  
   
-4.  Açmak için F7'ye basın **Kod Düzenleyicisi** özel denetiminizin.  
+4. Açmak için F7'ye basın **Kod Düzenleyicisi** özel denetiminizin.  
   
-5.  Bulun <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi çağrısı dışında boş olur <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi temel sınıf.  
+5. Bulun <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi çağrısı dışında boş olur <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi temel sınıf.  
   
-6.  Denetim için istediğiniz herhangi bir özel boyama birleştirmek için kodu değiştirin.  
+6. Denetim için istediğiniz herhangi bir özel boyama birleştirmek için kodu değiştirin.  
   
      Grafik denetimleri için işlemek için kod yazma hakkında daha fazla bilgi için bkz: [özel denetim boyama ve işleme](custom-control-painting-and-rendering.md).  
   
-7.  Tüm özel yöntemler, özellikler veya denetiminiz birleştirecektir olayların uygulayın.  
+7. Tüm özel yöntemler, özellikler veya denetiminiz birleştirecektir olayların uygulayın.  
   
-8.  Kaydet ve denetim test edin.  
+8. Kaydet ve denetim test edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

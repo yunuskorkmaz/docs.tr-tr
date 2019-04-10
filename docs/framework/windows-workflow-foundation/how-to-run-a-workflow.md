@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: İş akışı çalıştırma'
+title: 'Nasıl yapılır: İş Akışı Çalıştırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: a5866bae5217b8c8ea22ba66a344b464694583ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319930"
 ---
-# <a name="how-to-run-a-workflow"></a>Nasıl yapılır: İş akışı çalıştırma
+# <a name="how-to-run-a-workflow"></a>Nasıl yapılır: İş Akışı Çalıştırma
 Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı niteliğindedir ve bir iş akışı ana bilgisayarı oluşturun ve önceki tanımlanan iş akışı çalıştırma anlatılmaktadır [nasıl yapılır: Bir iş akışı oluşturmak](how-to-create-a-workflow.md) konu.
 
 > [!NOTE]
@@ -23,27 +23,27 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
   
 ### <a name="to-create-the-workflow-host-project"></a>İş akışı ana projeyi oluşturmak için  
   
-1.  Çözüm önceki açın [nasıl yapılır: Bir etkinlik oluşturursunuz](how-to-create-an-activity.md) Visual Studio 2012 kullanarak konu.  
+1. Çözüm önceki açın [nasıl yapılır: Bir etkinlik oluşturursunuz](how-to-create-an-activity.md) Visual Studio 2012 kullanarak konu.  
   
-2.  Sağ **WF45GettingStartedTutorial** çözümde **Çözüm Gezgini** seçip **Ekle**, **yeni proje**.  
+2. Sağ **WF45GettingStartedTutorial** çözümde **Çözüm Gezgini** seçip **Ekle**, **yeni proje**.  
   
     > [!TIP]
     >  Varsa **Çözüm Gezgini** penceresi görüntülenmiyorsa, seçin **Çözüm Gezgini** gelen **görünümü** menüsü.
 
-3.  İçinde **yüklü** düğümünü **Visual C#**, **iş akışı** (veya **Visual Basic**, **iş akışı**).
+3. İçinde **yüklü** düğümünü **Visual C#**, **iş akışı** (veya **Visual Basic**, **iş akışı**).
 
     > [!NOTE]
     >  Hangi programlama diline bağlı olarak, Visual Studio'da birincil dili olarak yapılandırılmış **Visual C#** veya **Visual Basic** düğümü altında olabilir **diğer diller** düğümünde **yüklü** düğümü.
 
      Emin **.NET Framework 4.5** .NET Framework sürüm aşağı açılan listeden seçilen. Seçin **iş akışı konsol uygulaması** gelen **iş akışı** listesi. Tür `NumberGuessWorkflowHost` içine **adı** kutusuna ve tıklatın **Tamam**. Bu destek barındırma temel iş akışı ile bir başlangıç akışı uygulaması oluşturur. Bu temel barındırma kodu değiştirilebilir ve iş akışı uygulamayı çalıştırmak için kullanılır.
 
-4.  Yeni eklenen sağ **NumberGuessWorkflowHost** projesi **Çözüm Gezgini** seçip **Başvuru Ekle**. Seçin **çözüm** gelen **Başvuru Ekle** listesinde, yanında onay **NumberGuessWorkflowActivities**ve ardından **Tamam** .
+4. Yeni eklenen sağ **NumberGuessWorkflowHost** projesi **Çözüm Gezgini** seçip **Başvuru Ekle**. Seçin **çözüm** gelen **Başvuru Ekle** listesinde, yanında onay **NumberGuessWorkflowActivities**ve ardından **Tamam** .
 
-5.  Sağ **Workflow1.xaml** içinde **Çözüm Gezgini** ve **Sil**. Tıklayın **Tamam** onaylamak için.
+5. Sağ **Workflow1.xaml** içinde **Çözüm Gezgini** ve **Sil**. Tıklayın **Tamam** onaylamak için.
 
 ### <a name="to-modify-the-workflow-hosting-code"></a>İş akışı barındırma kodunu değiştirmek için
 
-1.  Çift **Program.cs** veya **Module1.vb** içinde **Çözüm Gezgini** seçerek kodu görüntüleyin.
+1. Çift **Program.cs** veya **Module1.vb** içinde **Çözüm Gezgini** seçerek kodu görüntüleyin.
 
     > [!TIP]
     >  Varsa **Çözüm Gezgini** penceresi görüntülenmiyorsa, seçin **Çözüm Gezgini** gelen **görünümü** menüsü.
@@ -86,12 +86,12 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
 
 ### <a name="to-set-input-arguments-of-a-workflow"></a>Bir iş akışının giriş bağımsız değişkenleri ayarlamak için
 
-1.  Üstüne aşağıdaki ifadeyi ekleyin **Program.cs** veya **Module1.vb** varolan aşağıda `using` veya `Imports` deyimleri.
+1. Üstüne aşağıdaki ifadeyi ekleyin **Program.cs** veya **Module1.vb** varolan aşağıda `using` veya `Imports` deyimleri.
 
      [!code-csharp[CFX_WF_GettingStarted#5](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#5)]
      [!code-vb[CFX_WF_GettingStarted#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#5)]
 
-2.  Yeni oluşturan kod satırına değiştirin <xref:System.Activities.WorkflowApplication> aşağıdaki kodla oluşturur ve oluşturulduğu sırada iş akışına parametreleri sözlüğü geçirir.
+2. Yeni oluşturan kod satırına değiştirin <xref:System.Activities.WorkflowApplication> aşağıdaki kodla oluşturur ve oluşturulduğu sırada iş akışına parametreleri sözlüğü geçirir.
 
     > [!NOTE]
     >  Lütfen değiştirin `Workflow1` ile bu örneklerde `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, veya `StateMachineNumberGuessWorkflow`önceki tamamlanan iş akışı bağlı olarak [nasıl yapılır: Bir iş akışı oluşturmak](how-to-create-a-workflow.md) adım. Değil değiştirirseniz `Workflow1` deneyin ve derlediğinizde veya iş akışı çalıştırma derleme hataları alırsınız.
@@ -103,19 +103,19 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
 
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>Bir iş akışının çıkış değişkenlerini almak için
 
-1.  Değiştirme <xref:System.Activities.WorkflowApplication.Completed%2A> almak ve iş akışı tarafından kullanılan kapatır sayısını görüntülemek için işleyici.
+1. Değiştirme <xref:System.Activities.WorkflowApplication.Completed%2A> almak ve iş akışı tarafından kullanılan kapatır sayısını görüntülemek için işleyici.
 
      [!code-csharp[CFX_WF_GettingStarted#7](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#7)]
      [!code-vb[CFX_WF_GettingStarted#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#7)]
 
 ### <a name="to-resume-a-bookmark"></a>Bir yer işareti sürdürmek için
 
-1.  Üstüne aşağıdaki kodu ekleyin `Main` varolan sonra yöntemi <xref:System.Threading.AutoResetEvent> bildirimi.
+1. Üstüne aşağıdaki kodu ekleyin `Main` varolan sonra yöntemi <xref:System.Threading.AutoResetEvent> bildirimi.
 
      [!code-csharp[CFX_WF_GettingStarted#8](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#8)]
      [!code-vb[CFX_WF_GettingStarted#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#8)]
 
-2.  Aşağıdaki <xref:System.Activities.WorkflowApplication.Idle%2A> işleyici hemen altındaki mevcut üç iş akışı yaşam döngüsü işleyiciler `Main`.
+2. Aşağıdaki <xref:System.Activities.WorkflowApplication.Idle%2A> işleyici hemen altındaki mevcut üç iş akışı yaşam döngüsü işleyiciler `Main`.
 
      [!code-csharp[CFX_WF_GettingStarted#9](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#9)]
      [!code-vb[CFX_WF_GettingStarted#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#9)]
@@ -125,7 +125,7 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
     > [!NOTE]
     >  Bu örnekte, ana bilgisayar uygulaması otomatik sıfırlama olayları kullanan <xref:System.Activities.WorkflowApplication.Completed%2A> ve <xref:System.Activities.WorkflowApplication.Idle%2A> ana uygulama iş akışı ilerlemesini ile eşitlemek için işleyiciler. Blok ve iş akışının bir yer işareti devam etmeden önce boşta beklemesi gerekli değildir, ancak bu örnekte ana iş akışının tamamını olup veya kullanarakdahafazlakullanıcıgirdisiolupbekliyorolduğunubilmesiiçineşitlemeolaylarıgereklidir<xref:System.Activities.Bookmark>. Daha fazla bilgi için [yer işaretleri](bookmarks.md).
 
-3.  Çağrısını kaldırın `WaitOne`, sürdürme ve kullanıcı girişleri toplamak için kodu değiştirin <xref:System.Activities.Bookmark>.
+3. Çağrısını kaldırın `WaitOne`, sürdürme ve kullanıcı girişleri toplamak için kodu değiştirin <xref:System.Activities.Bookmark>.
 
      Aşağıdaki kod satırını kaldırın.
 
@@ -139,9 +139,9 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
 
 ## <a name="BKMK_ToRunTheApplication"></a> Derleme ve uygulamayı çalıştırmak için
 
-1.  Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** seçip **başlangıç projesi olarak ayarla**.
+1. Sağ **NumberGuessWorkflowHost** içinde **Çözüm Gezgini** seçip **başlangıç projesi olarak ayarla**.
 
-2.  Derleme ve uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın. Mümkün olduğunca az kapatır, sayısını tahmin etmeye çalışır.
+2. Derleme ve uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın. Mümkün olduğunca az kapatır, sayısını tahmin etmeye çalışır.
 
      İş akışının diğer stilleri biri ile bir uygulamayı denemek için değiştirin `Workflow1` oluşturan kodu içinde <xref:System.Activities.WorkflowApplication> ile `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, veya `StateMachineNumberGuessWorkflow`istediğiniz hangi iş akışı stili bağlı olarak.
 
@@ -165,7 +165,7 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
 - <xref:System.Activities.Bookmark>
 - [Windows Workflow Foundation Programlama](programming.md)
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
-- [Nasıl yapılır: Bir iş akışı oluşturma](how-to-create-a-workflow.md)
-- [Nasıl yapılır: Oluşturma ve uzun süre çalışan iş akışı](how-to-create-and-run-a-long-running-workflow.md)
+- [Nasıl yapılır: İş Akışı Oluşturma](how-to-create-a-workflow.md)
+- [Nasıl yapılır: Uzun Süre Çalışan İş Akışı Oluşturma ve Çalıştırma](how-to-create-and-run-a-long-running-workflow.md)
 - [Bir iş akışında giriş bekleme](waiting-for-input-in-a-workflow.md)
 - [İş Akışları Barındırma](hosting-workflows.md)

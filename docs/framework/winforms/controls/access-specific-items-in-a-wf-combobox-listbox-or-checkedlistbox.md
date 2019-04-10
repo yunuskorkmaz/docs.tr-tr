@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: 3d61a9b38f809d16e95b485893acaadcf04d826f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077218"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324532"
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Belirli Öğelere Erişme
 Bir Windows Forms birleşik giriş kutusu, liste kutusu ya da işaretli liste kutusu belirli öğeleri erişme önemli bir görevdir. Bir listenin herhangi bir konuma nedir programlı bir şekilde belirlemenizi sağlar.  
   
 ### <a name="to-access-a-specific-item"></a>Belirli bir öğeye erişmek için  
   
-1.  Sorgu `Items` belirli öğenin dizinini kullanarak koleksiyon:  
+1. Sorgu `Items` belirli öğenin dizinini kullanarak koleksiyon:  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  

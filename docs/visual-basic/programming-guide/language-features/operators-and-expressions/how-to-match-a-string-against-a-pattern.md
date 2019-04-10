@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826021"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316277"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Nasıl yapılır: Bir dizeyi belirli bir desene (Visual Basic) göre eşleştirme
 Bir ifade kaydolmadığı istiyorsanız [dize veri türü](../../../../visual-basic/language-reference/data-types/string-data-type.md) sonra kullanabileceğiniz bir desen karşılayan [gibi işleci](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -68,11 +68,11 @@ Bir ifade kaydolmadığı istiyorsanız [dize veri türü](../../../../visual-ba
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Bir karakter, karakter veya hiçbir karakter dize ifadesi bir listesiyle eşleşecek şekilde  
   
-1.  Çağrı `Like` işlecinin iki kez aynı dize ifadesi ve iki çağrıları ile bağlanma [veya işleci](../../../../visual-basic/language-reference/operators/or-operator.md) veya [OrElse işleci](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
+1. Çağrı `Like` işlecinin iki kez aynı dize ifadesi ve iki çağrıları ile bağlanma [veya işleci](../../../../visual-basic/language-reference/operators/or-operator.md) veya [OrElse işleci](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
   
-2.  İlk kez deseni dizesinde `Like` yan tümcesi, parantez içine alınmış karakter listede yer (`[ ]`).  
+2. İlk kez deseni dizesinde `Like` yan tümcesi, parantez içine alınmış karakter listede yer (`[ ]`).  
   
-3.  İkinci deseni dizesinde `Like` yan tümcesi, herhangi bir karakter konumunda söz konusu koymayın.  
+3. İkinci deseni dizesinde `Like` yan tümcesi, herhangi bir karakter konumunda söz konusu koymayın.  
   
      Aşağıdaki örnek, yedi rakamlı bir telefon numarasını testleri `phoneNum` için tam olarak üç sayısal basamak, ardından bir boşluk, tire (`–`), nokta (`.`), veya hiçbir karakter tam olarak dört sayısal basamak, ardından.  
   
@@ -83,4 +83,4 @@ Bir ifade kaydolmadığı istiyorsanız [dize veri türü](../../../../visual-ba
 - [Karşılaştırma İşleçleri](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [İşleçler ve İfadeler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Like İşleci](../../../../visual-basic/language-reference/operators/like-operator.md)
-- [String Veri Türü](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Dize Veri Türü](../../../../visual-basic/language-reference/data-types/string-data-type.md)

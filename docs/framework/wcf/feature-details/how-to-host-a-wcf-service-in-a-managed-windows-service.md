@@ -1,18 +1,18 @@
 ---
-title: 'Nasıl yapılır: Yönetilen bir Windows hizmetinde bir WCF Hizmeti barındırma'
+title: 'Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c63b249cf16100f0b18d622fdecd7cd375df83d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613837"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297765"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Nasıl yapılır: Yönetilen bir Windows hizmetinde bir WCF Hizmeti barındırma
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma
 
 Bu konuda, bir Windows hizmeti tarafından barındırılan bir Windows Communication Foundation (WCF) hizmet oluşturma için gerekli temel adımlar açıklanmaktadır. Senaryo, uzun süre çalışan, Internet Information Services (IIS) dışında iletisi etkin olmayan güvenli bir ortamda barındırılan bir WCF Hizmeti seçeneğini barındıran yönetilen Windows hizmeti olarak etkindir. Hizmet ömrü, bunun yerine işletim sistemi tarafından denetlenir. Barındırma bu seçenek, tüm Windows sürümlerinde kullanılabilir.
 
@@ -22,13 +22,13 @@ Hizmet kodunu bir hizmet uygulaması hizmet sözleşmesi ve bir Windows hizmet s
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a>Hizmet oluşturmak ve barındırma kodu sağlayın
 
-1.  Yeni bir Visual Studio oluşturma **konsol uygulaması** adlı proje **hizmet**.
+1. Yeni bir Visual Studio oluşturma **konsol uygulaması** adlı proje **hizmet**.
 
-2.  Program.cs adını da için yeniden adlandırın.
+2. Program.cs adını da için yeniden adlandırın.
 
-3.  Ad alanına değiştirme `Microsoft.ServiceModel.Samples`.
+3. Ad alanına değiştirme `Microsoft.ServiceModel.Samples`.
 
-4.  Aşağıdaki derlemelere başvurular ekleyin:
+4. Aşağıdaki derlemelere başvurular ekleyin:
 
     - System.ServiceModel.dll
 
@@ -36,22 +36,22 @@ Hizmet kodunu bir hizmet uygulaması hizmet sözleşmesi ve bir Windows hizmet s
 
     - System.Configuration.Install.dll
 
-5.  Aşağıdaki using deyimlerini adını da.
+5. Aşağıdaki using deyimlerini adını da.
 
      [!code-csharp[c_HowTo_HostInNTService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#0)]
      [!code-vb[c_HowTo_HostInNTService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#0)]
 
-6.  Tanımlama `ICalculator` aşağıdaki kodda gösterildiği gibi hizmet sözleşmesi.
+6. Tanımlama `ICalculator` aşağıdaki kodda gösterildiği gibi hizmet sözleşmesi.
 
      [!code-csharp[c_HowTo_HostInNTService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#1)]
      [!code-vb[c_HowTo_HostInNTService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#1)]
 
-7.  Adlı bir sınıf içinde hizmet sözleşmesini uygulama `CalculatorService` aşağıdaki kodda gösterildiği gibi.
+7. Adlı bir sınıf içinde hizmet sözleşmesini uygulama `CalculatorService` aşağıdaki kodda gösterildiği gibi.
 
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]
 
-8.  Adlı yeni bir sınıf oluşturma `CalculatorWindowsService` öğesinden devralan <xref:System.ServiceProcess.ServiceBase> sınıfı. Adlı bir yerel değişken ekleme `serviceHost` başvurusuna <xref:System.ServiceModel.ServiceHost> örneği. Tanımlama `Main` çağıran yöntemi `ServiceBase.Run(new CalculatorWindowsService)`
+8. Adlı yeni bir sınıf oluşturma `CalculatorWindowsService` öğesinden devralan <xref:System.ServiceProcess.ServiceBase> sınıfı. Adlı bir yerel değişken ekleme `serviceHost` başvurusuna <xref:System.ServiceModel.ServiceHost> örneği. Tanımlama `Main` çağıran yöntemi `ServiceBase.Run(new CalculatorWindowsService)`
 
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]
@@ -116,13 +116,13 @@ Hizmet kodunu bir hizmet uygulaması hizmet sözleşmesi ve bir Windows hizmet s
 
 ## <a name="install-and-run-the-service"></a>Yükleme ve hizmet çalıştırma
 
-1.  Çözümü oluşturmak için yapı `Service.exe` yürütülebilir.
+1. Çözümü oluşturmak için yapı `Service.exe` yürütülebilir.
 
-2.  Visual Studio için geliştirici komut istemi açın ve proje dizinine gidin. Tür `installutil bin\service.exe` Windows hizmetini yüklemek için komut isteminde.
+2. Visual Studio için geliştirici komut istemi açın ve proje dizinine gidin. Tür `installutil bin\service.exe` Windows hizmetini yüklemek için komut isteminde.
 
      Tür `services.msc` Hizmet Denetim Yöneticisi (SCM) erişmek için komut isteminde. Windows hizmeti Hizmetleri'nde "WCFWindowsServiceSample" görünmelidir. Windows Hizmeti çalışıyorsa WCF hizmeti yalnızca istemcilere yanıt verebilir. Hizmeti başlatmak için SCM ve Seç "Başlat" veya türü sağ **net Başlat WCFWindowsServiceSample** komut isteminde.
 
-3.  Hizmete değişiklik yaparsanız, öncelikle durdurmak ve bunu kaldırın. Hizmeti durdurun, SCM hizmete sağ tıklayın ve "Durdur" seçin veya **türü net stop WCFWindowsServiceSample** komut isteminde. Windows hizmetini durdurun ve ardından bir istemci çalıştırın gerçekleştiriyorsanız bir <xref:System.ServiceModel.EndpointNotFoundException> istemci hizmeti erişmeye çalışırken özel durum oluşur. Windows hizmet türünü kaldırma **InstallUtil /u bin\service.exe** komut isteminde.
+3. Hizmete değişiklik yaparsanız, öncelikle durdurmak ve bunu kaldırın. Hizmeti durdurun, SCM hizmete sağ tıklayın ve "Durdur" seçin veya **türü net stop WCFWindowsServiceSample** komut isteminde. Windows hizmetini durdurun ve ardından bir istemci çalıştırın gerçekleştiriyorsanız bir <xref:System.ServiceModel.EndpointNotFoundException> istemci hizmeti erişmeye çalışırken özel durum oluşur. Windows hizmet türünü kaldırma **InstallUtil /u bin\service.exe** komut isteminde.
 
 ## <a name="example"></a>Örnek
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 070d641d5a8b683ddfe06039117cc4a8507102df
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827640"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320240"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Nasıl yapılır: (Visual Basic) isteğe bağlı parametreler isteyen bir yordamı aşırı yükleme
 Bir veya daha fazla yordam varsa, [isteğe bağlı](../../../../visual-basic/language-reference/modifiers/optional.md) parametreleri, herhangi bir örtük bunun aşırı yüklerinden eşleşen aşırı yüklenmiş bir sürümünü tanımlayamaz. "Daha fazla bilgi için örtük aşırı yüklemeleri için isteğe bağlı parametreleri" bölümüne bakın [aşırı yükleme yordamları Hususlarına](./considerations-in-overloading-procedures.md).  
@@ -24,17 +24,17 @@ Bir veya daha fazla yordam varsa, [isteğe bağlı](../../../../visual-basic/lan
   
 #### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>İsteğe bağlı bir parametre isteyen bir yordamı aşırı yükleme için  
   
-1.  Yazma bir `Sub` veya `Function` parametre listesinde isteğe bağlı parametre içeren bildirim deyimindeki. Kullanmayın `Optional` anahtar sözcüğü Bu aşırı yüklenmiş bir sürüm.  
+1. Yazma bir `Sub` veya `Function` parametre listesinde isteğe bağlı parametre içeren bildirim deyimindeki. Kullanmayın `Optional` anahtar sözcüğü Bu aşırı yüklenmiş bir sürüm.  
   
-2.  Önünde `Sub` veya `Function` anahtar sözcüğü ile [aşırı](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğü.  
+2. Önünde `Sub` veya `Function` anahtar sözcüğü ile [aşırı](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğü.  
   
-3.  Çağıran kod sağlayan isteğe bağlı bağımsız değişken olduğunda yürütülecek yordamı kod yazın.  
+3. Çağıran kod sağlayan isteğe bağlı bağımsız değişken olduğunda yürütülecek yordamı kod yazın.  
   
-4.  Yordama sonlandırmak `End Sub` veya `End Function` uygun şekilde deyimi.  
+4. Yordama sonlandırmak `End Sub` veya `End Function` uygun şekilde deyimi.  
   
-5.  İsteğe bağlı parametresi parametre listesinde içermez dışında ilk bildirimi için aynı olan ikinci bir bildirim deyiminin yazın.  
+5. İsteğe bağlı parametresi parametre listesinde içermez dışında ilk bildirimi için aynı olan ikinci bir bildirim deyiminin yazın.  
   
-6.  Çağıran kod, isteğe bağlı bağımsız değişken sağlamıyor yürütülecek yordamı kod yazın. Yordama sonlandırmak `End Sub` veya `End Function` uygun şekilde deyimi.  
+6. Çağıran kod, isteğe bağlı bağımsız değişken sağlamıyor yürütülecek yordamı kod yazın. Yordama sonlandırmak `End Sub` veya `End Function` uygun şekilde deyimi.  
   
      Aşağıdaki örnek, iki aşırı yüklenmiş yordamlar ve son olarak geçersiz ve geçerli aşırı yüklü sürümlerini örnekleri bir denk kümesi bir isteğe bağlı parametresi tanımlı bir yordam gösterir.  
   
@@ -51,15 +51,15 @@ Bir veya daha fazla yordam varsa, [isteğe bağlı](../../../../visual-basic/lan
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Birden fazla isteğe bağlı parametre isteyen bir yordamı aşırı yükleme için  
   
-1.  Sağlanan isteğe bağlı bağımsız değişkenlere hangi birleşimleri yordamın mantığı için kabul edilebilir olduğunu belirleyin. İsteğe bağlı bir parametre başka bağlıysa kabul edilemez bir birleşimi ortaya çıkabilir. Örneğin, bir parametre bir eşin adını kabul eder ve başka bir eşin yaş kabul eder, yaş sağlama ancak ad atlama bağımsız değişkenlerin bir birleşimi kabul edilebilir değil.  
+1. Sağlanan isteğe bağlı bağımsız değişkenlere hangi birleşimleri yordamın mantığı için kabul edilebilir olduğunu belirleyin. İsteğe bağlı bir parametre başka bağlıysa kabul edilemez bir birleşimi ortaya çıkabilir. Örneğin, bir parametre bir eşin adını kabul eder ve başka bir eşin yaş kabul eder, yaş sağlama ancak ad atlama bağımsız değişkenlerin bir birleşimi kabul edilebilir değil.  
   
-2.  Sağlanan isteğe bağlı bağımsız değişkenler için her kabul edilebilir birleşim yazma bir `Sub` veya `Function` bildirim deyimindeki, karşılık gelen parametre listesi tanımlar. Kullanmayın `Optional` anahtar sözcüğü.  
+2. Sağlanan isteğe bağlı bağımsız değişkenler için her kabul edilebilir birleşim yazma bir `Sub` veya `Function` bildirim deyimindeki, karşılık gelen parametre listesi tanımlar. Kullanmayın `Optional` anahtar sözcüğü.  
   
-3.  Her bildiriminde önünde `Sub` veya `Function` anahtar sözcüğü ile [aşırı](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğü.  
+3. Her bildiriminde önünde `Sub` veya `Function` anahtar sözcüğü ile [aşırı](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğü.  
   
-4.  Her bildirimi çağıran kod sağlayan bu bildirimin parametre listesine karşılık gelen bir bağımsız değişken listesi, yürütülecek yordamı kod yazın.  
+4. Her bildirimi çağıran kod sağlayan bu bildirimin parametre listesine karşılık gelen bir bağımsız değişken listesi, yürütülecek yordamı kod yazın.  
   
-5.  Her bir yordam sonlandırmak `End Sub` veya `End Function` uygun şekilde deyimi.  
+5. Her bir yordam sonlandırmak `End Sub` veya `End Function` uygun şekilde deyimi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -69,7 +69,7 @@ Bir veya daha fazla yordam varsa, [isteğe bağlı](../../../../visual-basic/lan
 - [Parametre Dizileri](./parameter-arrays.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
 - [Yordam Sorunlarını Giderme](./troubleshooting-procedures.md)
-- [Nasıl yapılır: Bir yordamın birden fazla sürümünü tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Nasıl yapılır: Aşırı yüklenmiş bir yordamı çağırma](./how-to-call-an-overloaded-procedure.md)
-- [Nasıl yapılır: Belirsiz sayıda parametre isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma](./how-to-call-an-overloaded-procedure.md)
+- [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Aşırı Yükleme Çözümü](./overload-resolution.md)

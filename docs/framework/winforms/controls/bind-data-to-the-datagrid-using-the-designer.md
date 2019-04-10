@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200239"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321854"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimine Veri Bağlama
 Tasarımcı bağlanmak için kullanabileceğiniz bir <xref:System.Windows.Forms.DataGridView> veritabanları, iş nesneleri veya Web Hizmetleri gibi birçok farklı çeşitleri veri kaynaklarına denetim. Denetim Tasarımcısı'nı kullanarak bir veri kaynağına bağlandığınızda denetimi otomatik olarak bağlı bir <xref:System.Windows.Forms.BindingSource> veri kaynağını temsil eden bir bileşen. Ayrıca, sütunları denetiminde veri kaynağı tarafından sağlanan şema bilgileri eşleşecek şekilde otomatik olarak oluşturulur.  
@@ -27,19 +27,19 @@ Tasarımcı bağlanmak için kullanabileceğiniz bir <xref:System.Windows.Forms.
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>Denetim bir veri kaynağına bağlamak için  
   
-1.  Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) sağ üst köşesindeki <xref:System.Windows.Forms.DataGridView> denetimi.  
+1. Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) sağ üst köşesindeki <xref:System.Windows.Forms.DataGridView> denetimi.  
   
-2.  Aşağı açılan oka tıklayın **veri kaynağı Seç** seçeneği.  
+2. Aşağı açılan oka tıklayın **veri kaynağı Seç** seçeneği.  
   
-3.  Projenize bir veri kaynağı yoksa tıklayın **proje veri kaynağı Ekle** ve sihirbaz tarafından belirtilen adımları izleyin.  
+3. Projenize bir veri kaynağı yoksa tıklayın **proje veri kaynağı Ekle** ve sihirbaz tarafından belirtilen adımları izleyin.  
   
      Daha fazla bilgi için [veri kaynağı Yapılandırma Sihirbazı](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120)). Yeni veri kaynağınızın görünür **veri kaynağı Seç** açılır pencere. Yeni veri kaynağı gibi bir tek veritabanı tablosu, yalnızca bir üye içeriyorsa denetimi bu üye için otomatik olarak bağlanır. Aksi halde, bir sonraki adıma devam edin.  
   
-4.  Genişletin **diğer veri kaynakları** ve **Zdroje dat Projektu** düğümleri genişletilmiş ve daha sonra denetime bağlamak için veri kaynağını seçin.  
+4. Genişletin **diğer veri kaynakları** ve **Zdroje dat Projektu** düğümleri genişletilmiş ve daha sonra denetime bağlamak için veri kaynağını seçin.  
   
-5.  Veri kaynağınızı birden fazla üye içeriyorsa, oluşturduğunuz örneğin bir <xref:System.Data.DataSet?displayProperty=nameWithType> birden çok tablo içeren veri kaynağını genişletin ve ardından bağlamak için belirli üye seçin.  
+5. Veri kaynağınızı birden fazla üye içeriyorsa, oluşturduğunuz örneğin bir <xref:System.Data.DataSet?displayProperty=nameWithType> birden çok tablo içeren veri kaynağını genişletin ve ardından bağlamak için belirli üye seçin.  
   
-6.  Bir ana/ayrıntı ilişkisi oluşturmak için **veri kaynağı Seç** için ikinci bir açılır pencere <xref:System.Windows.Forms.DataGridView> genişletin, Denetim <xref:System.Windows.Forms.BindingSource> üst tablosu için oluşturulan ve ardından listeden ilgili alt tablo seçin gösterilir.  
+6. Bir ana/ayrıntı ilişkisi oluşturmak için **veri kaynağı Seç** için ikinci bir açılır pencere <xref:System.Windows.Forms.DataGridView> genişletin, Denetim <xref:System.Windows.Forms.BindingSource> üst tablosu için oluşturulan ve ardından listeden ilgili alt tablo seçin gösterilir.  
   
     > [!NOTE]
     >  Projenize bir veri kaynağı zaten varsa, ayrıca kullanabileceğiniz **veri kaynakları** veri formu oluşturmak için pencere. Daha fazla bilgi için [veri kaynakları penceresi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).  

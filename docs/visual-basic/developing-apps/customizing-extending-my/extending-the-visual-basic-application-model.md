@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320151"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic Uygulama Modelini Genişletme
 Uygulama modeli için geçersiz kılarak işlevler ekleyebilirsiniz `Overridable` üyeleri <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> sınıfı. Bu teknik, uygulama modeli davranışını özelleştirip uygulama başlatıldığında ve kapanırken kendi yöntemlere yapılan çağrılar ekleyin sağlar.  
@@ -32,45 +32,45 @@ Uygulama modeli için geçersiz kılarak işlevler ekleyebilirsiniz `Overridable
   
  Uygulamanın normal bir uygulama (birden çok örnek uygulaması) veya bir tek örnekli uygulama ilk örneğinin olduğu durumlarda <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> yöntemini yürütür `Overridable` aşağıdaki sırayla yöntemleri:  
   
-1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Varsayılan olarak, bu yöntem görsel stilleri, metin görüntü stilleri ve (uygulama Windows kimlik doğrulaması kullanıyorsa) ana uygulama iş parçacığına, geçerli sorumluyu ayarlar ve çağrıları `ShowSplashScreen` kullanılmazsa `/nosplash` ya da `-nosplash` olarak kullanılan bir komut satırı bağımsız değişkeni.  
+1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>biçimindeki telefon numarasıdır. Varsayılan olarak, bu yöntem görsel stilleri, metin görüntü stilleri ve (uygulama Windows kimlik doğrulaması kullanıyorsa) ana uygulama iş parçacığına, geçerli sorumluyu ayarlar ve çağrıları `ShowSplashScreen` kullanılmazsa `/nosplash` ya da `-nosplash` olarak kullanılan bir komut satırı bağımsız değişkeni.  
   
      Bu işlev döndürürse uygulama başlatma sırası iptal `False`. Bu, uygulama değil çalıştırmalısınız durumlarda yararlı olabilir.  
   
      <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> Yöntemini aşağıdaki yöntemleri çağırır:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Uygulama tanımlı bir giriş ekranı sahip olup olmadığını belirler ve aşması durumunda, ayrı bir iş parçacığında giriş ekranı görüntüler.  
+    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>biçimindeki telefon numarasıdır. Uygulama tanımlı bir giriş ekranı sahip olup olmadığını belirler ve aşması durumunda, ayrı bir iş parçacığında giriş ekranı görüntüler.  
   
          <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> Yöntemi Karşılama görüntüleyen kodu içeren en az belirtilen milisaniye sayısı için ekran <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> özelliği. Bu işlevselliği kullanmak için giriş ekranı kullanarak uygulama eklemelisiniz **Proje Tasarımcısı** (hangi kümeleri `My.Application.MinimumSplashScreenDisplayTime` iki saniye özelliğini), veya `My.Application.MinimumSplashScreenDisplayTime` özelliğinde geçersizkılanbiryöntemi<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> veya <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> yöntemi. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Giriş ekranı başlatan kodu yaymak bir tasarımcı sağlar.  
+    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>biçimindeki telefon numarasıdır. Giriş ekranı başlatan kodu yaymak bir tasarımcı sağlar.  
   
          Varsayılan olarak, bu yöntemi hiçbir şey yapmaz. Visual Basic'te uygulamanız için giriş ekranı seçerseniz **Proje Tasarımcısı**, Tasarımcı geçersiz kılar <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> ayarlar yönteminin yöntemiyle <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> giriş ekranı formun yeni bir örneğini özelliği .  
   
-2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Yükseltme için bir genişletilebilirlik noktası sağlar `Startup` olay. Bu işlev döndürürse, uygulama başlangıç dizisi durdurur `False`.  
+2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>biçimindeki telefon numarasıdır. Yükseltme için bir genişletilebilirlik noktası sağlar `Startup` olay. Bu işlev döndürürse, uygulama başlangıç dizisi durdurur `False`.  
   
      Varsayılan olarak, bu yöntem başlatır <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> olay. Olay işleyicisi ayarlarsa <xref:System.ComponentModel.CancelEventArgs.Cancel> olay bağımsız değişkenin özelliği `True`, yöntem döndürür `False` uygulama başlatma iptal etmek için.  
   
-3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Ana uygulama başlatma tamamlandıktan sonra çalıştırmaya başlamak hazır olduğunda için başlangıç noktası sağlar.  
+3. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>biçimindeki telefon numarasıdır. Ana uygulama başlatma tamamlandıktan sonra çalıştırmaya başlamak hazır olduğunda için başlangıç noktası sağlar.  
   
      Varsayılan olarak, Windows Forms ileti döngüsü girer önce bu yöntemi çağırır `OnCreateMainForm` (uygulamanın ana formu oluşturmak için) ve `HideSplashScreen` (giriş ekranı kapatmak için) yöntemleri:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Ana formu başlatır kod yaymak bir tasarımcı için bir yol sağlar.  
+    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>biçimindeki telefon numarasıdır. Ana formu başlatır kod yaymak bir tasarımcı için bir yol sağlar.  
   
          Varsayılan olarak, bu yöntemi hiçbir şey yapmaz. Ancak, seçtiğinizde, ana formu uygulamanızı Visual Basic için **Proje Tasarımcısı**, Tasarımcı geçersiz kılar <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> ayarlar yönteminin yöntemiyle <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> ana formu yeni bir örneğini özelliğini.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Uygulama tanımlı bir giriş ekranı varsa ve açık olduğundan, bu yöntem, giriş ekranı kapatır.  
+    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>biçimindeki telefon numarasıdır. Uygulama tanımlı bir giriş ekranı varsa ve açık olduğundan, bu yöntem, giriş ekranı kapatır.  
   
          Varsayılan olarak, bu yöntem, giriş ekranı kapatır.  
   
-4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Tek Örnekli uygulama başka bir örneği uygulama başladığında nasıl davranacağını özelleştirmek için bir yol sağlar.  
+4. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>biçimindeki telefon numarasıdır. Tek Örnekli uygulama başka bir örneği uygulama başladığında nasıl davranacağını özelleştirmek için bir yol sağlar.  
   
      Varsayılan olarak, bu yöntem başlatır <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> olay.  
   
-5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Yükseltme için bir genişletilebilirlik noktası sağlar `Shutdown` olay. Ana uygulama içinde işlenmeyen bir özel durum oluşursa, bu yöntem çalışmaz.  
+5. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>biçimindeki telefon numarasıdır. Yükseltme için bir genişletilebilirlik noktası sağlar `Shutdown` olay. Ana uygulama içinde işlenmeyen bir özel durum oluşursa, bu yöntem çalışmaz.  
   
      Varsayılan olarak, bu yöntem başlatır <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> olay.  
   
-6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Yukarıda listelenen yöntemlerden birini işlenmeyen bir özel durum oluşursa yürütülür.  
+6. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>biçimindeki telefon numarasıdır. Yukarıda listelenen yöntemlerden birini işlenmeyen bir özel durum oluşursa yürütülür.  
   
      Varsayılan olarak, bu yöntem başlatır <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> olay bir hata ayıklayıcısı iliştirilmemiş ve uygulama işleme sürece `UnhandledException` olay.  
   

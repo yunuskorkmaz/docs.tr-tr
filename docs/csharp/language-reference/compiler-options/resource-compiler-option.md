@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725707"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302575"
 ---
 # <a name="-resource-c-compiler-options"></a>-Kaynak (C# Derleyici Seçenekleri)
 Belirtilen kaynak çıkış dosyasına katıştırır.  
@@ -50,13 +50,13 @@ Belirtilen kaynak çıkış dosyasına katıştırır.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Bir kaynak dosyası projenize ekleyin.  
+1. Bir kaynak dosyası projenize ekleyin.  
   
-2.  Eklemek istediğiniz dosyayı seçin **Çözüm Gezgini**.  
+2. Eklemek istediğiniz dosyayı seçin **Çözüm Gezgini**.  
   
-3.  Seçin **derleme eylemi** dosya **özellikleri** penceresi.  
+3. Seçin **derleme eylemi** dosya **özellikleri** penceresi.  
   
-4.  Ayarlama **derleme eylemi** için **katıştırılmış kaynak**.  
+4. Ayarlama **derleme eylemi** için **katıştırılmış kaynak**.  
   
  Bu derleyici seçeneğini program üzerinden ayarlamak hakkında daha fazla bilgi için bkz. <xref:VSLangProj80.FileProperties2.BuildAction%2A>.  
   

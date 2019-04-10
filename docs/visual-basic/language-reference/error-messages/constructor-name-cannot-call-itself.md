@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: ef20f74055a07071ef9634973c6852ac58c3143c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324389"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>Yapıcı '\<adı >' kendisini çağıramaz
 A `Sub New` bir sınıf veya yapı yordamda kendisini çağırır.  
@@ -23,10 +23,10 @@ A `Sub New` bir sınıf veya yapı yordamda kendisini çağırır.
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Çağrılan Oluşturucusu parametre listesini kontrol edin. Bu, çağrıyı yapan Oluşturucusu farklı olmalıdır.  
+1. Çağrılan Oluşturucusu parametre listesini kontrol edin. Bu, çağrıyı yapan Oluşturucusu farklı olmalıdır.  
   
-2.  Farklı bir oluşturucuyu çağırmak düşünmüyorsanız kaldırmak `Sub New` tamamen çağırın.  
+2. Farklı bir oluşturucuyu çağırmak düşünmüyorsanız kaldırmak `Sub New` tamamen çağırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nesne ömrü: Nesnelerin nasıl oluşturulduğunu ve yok](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

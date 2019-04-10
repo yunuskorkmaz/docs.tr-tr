@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Dinamik Güncelleştirme'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 3ae446da5e19b0c4c0c121d44892e4a13ec70dd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7e2fbd6c179444ef4c6e1df5e5068dbd1c5d29fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190996"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320762"
 ---
 # <a name="how-to-dynamic-update"></a>Nasıl yapılır: Dinamik Güncelleştirme
 Bu konuda, oluşturmak ve dinamik yönlendirme yapılandırmasını güncelleştirmek için gerekli temel adımlar açıklanmaktadır. Bu örnekte, ilk yönlendirme yapılandırması yapılandırma dosyasından alınır ve tüm iletileri regularCalc hesaplayıcı hizmete yönlendirir; Ancak, bu program aracılığıyla roundingCalc service hedef uç noktası değiştirmek üzere güncelleştirilir.  
@@ -22,7 +22,7 @@ Bu konuda, oluşturmak ve dinamik yönlendirme yapılandırmasını güncelleşt
   
 ### <a name="implement-initial-configuration"></a>Başlangıç yapılandırmasını Uygula  
   
-1.  Temel yönlendirme hizmeti yapılandırması hizmet tarafından sunulan hizmet uç noktaları belirterek oluşturun. Aşağıdaki örnek, iletileri almak için kullanılacak bir tek hizmet uç noktası tanımlar. Ayrıca, regularCalc için ileti göndermek için kullanılan istemci uç noktası tanımlar.  
+1. Temel yönlendirme hizmeti yapılandırması hizmet tarafından sunulan hizmet uç noktaları belirterek oluşturun. Aşağıdaki örnek, iletileri almak için kullanılacak bir tek hizmet uç noktası tanımlar. Ayrıca, regularCalc için ileti göndermek için kullanılan istemci uç noktası tanımlar.  
   
     ```xml  
     <services>  
@@ -49,7 +49,7 @@ Bu konuda, oluşturmak ve dinamik yönlendirme yapılandırmasını güncelleşt
     </client>  
     ```  
   
-2.  Hedef Uç noktalara iletileri yönlendirmek için kullanılan bir filtre tanımlar. Bu örnekte, MatchAll filtre önceden tanımlanmış regularCalcEndpoint tüm iletileri yönlendirmek için kullanılır. Aşağıdaki örnek, filtreleme tablosu ve filtre tanımlar.  
+2. Hedef Uç noktalara iletileri yönlendirmek için kullanılan bir filtre tanımlar. Bu örnekte, MatchAll filtre önceden tanımlanmış regularCalcEndpoint tüm iletileri yönlendirmek için kullanılır. Aşağıdaki örnek, filtreleme tablosu ve filtre tanımlar.  
   
     ```xml  
     <filters>  
@@ -64,7 +64,7 @@ Bu konuda, oluşturmak ve dinamik yönlendirme yapılandırmasını güncelleşt
     </filterTables>  
     ```  
   
-3.  Filtre tablosunda bulunan filtrelerle gelen iletileri değerlendirmek için yönlendirme davranışı kullanarak hizmet uç noktaları ile filtreleme tablosu ilişkilendirmelisiniz. Aşağıdaki örnek, hizmet uç noktası ile ilişkilendirmeyi "filterTable1" gösterir.  
+3. Filtre tablosunda bulunan filtrelerle gelen iletileri değerlendirmek için yönlendirme davranışı kullanarak hizmet uç noktaları ile filtreleme tablosu ilişkilendirmelisiniz. Aşağıdaki örnek, hizmet uç noktası ile ilişkilendirmeyi "filterTable1" gösterir.  
   
     ```xml  
     <behaviors>  
@@ -80,7 +80,7 @@ Bu konuda, oluşturmak ve dinamik yönlendirme yapılandırmasını güncelleşt
 ## <a name="implement-dynamic-configuration"></a>Dinamik uygulama yapılandırması  
  Dinamik yönlendirme hizmeti yapılandırması yalnızca gerçekleştirilebilecek kod içinde yeni bir oluşturarak <xref:System.ServiceModel.Routing.RoutingConfiguration> ve kullanarak <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> geçerli yapılandırmasını değiştirmek için.  Bu örnekte, yönlendirme hizmeti bir konsol uygulaması içinde şirket içinde barındırılan. Uygulama başlatıldıktan sonra konsol penceresinde iletileri yönlendirilir hedef uç noktasını yapılandırmak için 'Normal' veya 'yuvarlama' girerek yönlendirme yapılandırmayı değiştirebilirsiniz; 'Normal'olduğunda ' regularCalc girilir, aksi takdirde 'yuvarlarken' roundingCalc girilir.  
   
-1.  Aşağıdaki yönlendirme hizmetini desteklemek için using deyimlerini eklenmelidir.  
+1. Aşağıdaki yönlendirme hizmetini desteklemek için using deyimlerini eklenmelidir.  
   
     ```csharp  
     using System;  
@@ -92,7 +92,7 @@ Bu konuda, oluşturmak ve dinamik yönlendirme yapılandırmasını güncelleşt
     using System.ServiceModel.Routing;  
     ```  
   
-2.  Aşağıdaki kod, yönlendirme hizmeti bir konsol uygulaması olarak kendi kendine barındırmak için kullanılır. Bu yönlendirme kullanarak uygulama yapılandırma dosyası içinde yer alan önceki adımda açıklanan Yapılandırma hizmetini başlatır. While döngüsü yönlendirme yapılandırmasını değiştirmek için kullanılan kod içerir.  
+2. Aşağıdaki kod, yönlendirme hizmeti bir konsol uygulaması olarak kendi kendine barındırmak için kullanılır. Bu yönlendirme kullanarak uygulama yapılandırma dosyası içinde yer alan önceki adımda açıklanan Yapılandırma hizmetini başlatır. While döngüsü yönlendirme yapılandırmasını değiştirmek için kullanılan kod içerir.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -117,7 +117,7 @@ Bu konuda, oluşturmak ve dinamik yönlendirme yapılandırmasını güncelleşt
     }  
     ```  
   
-3.  Dinamik yönlendirme yapılandırmasını güncelleştirmek için yeni bir yönlendirme yapılandırması oluşturulması gerekir. Mevcut yönlendirme yapılandırmasını tamamen değiştirecek şekilde bu tüm uç noktaları, filtreler ve yeni yönlendirme yapılandırma için gerekli olan filtre tabloları içermelidir. Yeni yönlendirme yapılandırması kullanmak için çağırmalıdır <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> ve yeni yapılandırma geçişi.  
+3. Dinamik yönlendirme yapılandırmasını güncelleştirmek için yeni bir yönlendirme yapılandırması oluşturulması gerekir. Mevcut yönlendirme yapılandırmasını tamamen değiştirecek şekilde bu tüm uç noktaları, filtreler ve yeni yönlendirme yapılandırma için gerekli olan filtre tabloları içermelidir. Yeni yönlendirme yapılandırması kullanmak için çağırmalıdır <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> ve yeni yapılandırma geçişi.  
   
      Aşağıdaki kodu ekleyin while döngüsü hizmetinin yapılandırılması izin vermek için önceden tanımlanmış kullanıcı girişini temel alarak.  
   

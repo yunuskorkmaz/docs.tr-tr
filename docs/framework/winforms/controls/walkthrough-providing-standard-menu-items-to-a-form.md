@@ -10,12 +10,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: f9e54ecd49fc3bd295f236292715393358bab0b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4957a3f2efcb31594806a188e3d3bb10c2dac09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094885"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296400"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>İzlenecek yol: Bir Forma Standart Menü Öğeleri Sağlama
 Formlarınızla için standart bir menü sağlayabilir <xref:System.Windows.Forms.MenuStrip> denetimi.  
@@ -47,53 +47,53 @@ Formlarınızla için standart bir menü sağlayabilir <xref:System.Windows.Form
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
-1.  Adlı bir Windows uygulaması projesi oluşturmak **StandardMenuForm** (**dosya** > **yeni** > **proje**  >  **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms Uygulama**).  
+1. Adlı bir Windows uygulaması projesi oluşturmak **StandardMenuForm** (**dosya** > **yeni** > **proje**  >  **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms Uygulama**).  
   
-2.  Formu Windows Form Tasarımcısı'nda seçin.  
+2. Formu Windows Form Tasarımcısı'nda seçin.  
   
 ## <a name="creating-a-standard-menu"></a>Standart menü oluşturma  
  Windows Form Tasarımcısı otomatik olarak doldurabilirsiniz bir <xref:System.Windows.Forms.MenuStrip> standart menü öğeleri ile denetimi.  
   
 #### <a name="to-create-a-standard-menu"></a>Standart menü oluşturmak için  
   
-1.  Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.MenuStrip> denetimi formunuza sürükleyin.  
+1. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.MenuStrip> denetimi formunuza sürükleyin.  
   
-2.  Tıklayın <xref:System.Windows.Forms.MenuStrip> denetimin akıllı etiket karakterini (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) seçip **standart öğeleri Ekle**.  
+2. Tıklayın <xref:System.Windows.Forms.MenuStrip> denetimin akıllı etiket karakterini (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) seçip **standart öğeleri Ekle**.  
   
      <xref:System.Windows.Forms.MenuStrip> Denetimi, standart menü öğeleri ile doldurulur.  
   
-3.  Tıklayın **dosya** kendi varsayılan menü öğeleri ve ilişkili simgeleri görmek için menü öğesi.  
+3. Tıklayın **dosya** kendi varsayılan menü öğeleri ve ilişkili simgeleri görmek için menü öğesi.  
   
 ## <a name="creating-a-statusstrip-control"></a>StatusStrip denetimi oluşturma  
  Kullanım <xref:System.Windows.Forms.StatusStrip> denetimi Windows Forms uygulamaları için durumu görüntüler. Menü öğeleri, kullanıcı tarafından seçilen görüntülenen geçerli örnekte, bir <xref:System.Windows.Forms.StatusStrip> denetimi.  
   
 #### <a name="to-create-a-statusstrip-control"></a>StatusStrip denetimi oluşturmak için  
   
-1.  Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.StatusStrip> denetimi formunuza sürükleyin.  
+1. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.StatusStrip> denetimi formunuza sürükleyin.  
   
      <xref:System.Windows.Forms.StatusStrip> Denetimi otomatik olarak noktaları formun altına.  
   
-2.  Tıklayın <xref:System.Windows.Forms.StatusStrip> denetimin açılan düğmesine ve select **StatusLabel** eklemek için bir <xref:System.Windows.Forms.ToolStripStatusLabel> denetimini <xref:System.Windows.Forms.StatusStrip> denetimi.  
+2. Tıklayın <xref:System.Windows.Forms.StatusStrip> denetimin açılan düğmesine ve select **StatusLabel** eklemek için bir <xref:System.Windows.Forms.ToolStripStatusLabel> denetimini <xref:System.Windows.Forms.StatusStrip> denetimi.  
   
 ## <a name="handling-item-selection"></a>İşleme öğe seçimi  
  Tanıtıcı <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> olay kullanıcı menü öğesi seçtiğinde yanıtlayın.  
   
 #### <a name="to-handle-item-selection"></a>Öğe seçimi işlemek için  
   
-1.  Tıklayın **dosya** oluşturma içinde oluşturduğunuz bir menü öğesi bir standart menü bölümü.  
+1. Tıklayın **dosya** oluşturma içinde oluşturduğunuz bir menü öğesi bir standart menü bölümü.  
   
-2.  İçinde **özellikleri** penceresinde tıklayın **olayları**.  
+2. İçinde **özellikleri** penceresinde tıklayın **olayları**.  
   
-3.  Çift <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> olay.  
+3. Çift <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> olay.  
   
      Windows Form Tasarımcısı için bir olay işleyicisi oluşturur <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> olay.  
   
-4.  Olay işleyicisine aşağıdaki kodu ekleyin.  
+4. Olay işleyicisine aşağıdaki kodu ekleyin.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  INSERT `UpdateStatus` forma yardımcı yöntem tanımı.  
+5. INSERT `UpdateStatus` forma yardımcı yöntem tanımı.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
@@ -102,11 +102,11 @@ Formlarınızla için standart bir menü sağlayabilir <xref:System.Windows.Form
   
 #### <a name="to-test-your-form"></a>Formunuza test etmek için  
   
-1.  Derlemek ve formunuza çalıştırmak için F5 tuşuna basın.  
+1. Derlemek ve formunuza çalıştırmak için F5 tuşuna basın.  
   
-2.  Tıklayın **dosya** menüsünü açmak için menü öğesi.  
+2. Tıklayın **dosya** menüsünü açmak için menü öğesi.  
   
-3.  Üzerinde **dosya** menüsünde seçmek için öğelerden birine tıklayın.  
+3. Üzerinde **dosya** menüsünde seçmek için öğelerden birine tıklayın.  
   
      <xref:System.Windows.Forms.StatusStrip> Denetim seçili öğeyi görüntüler.  
   

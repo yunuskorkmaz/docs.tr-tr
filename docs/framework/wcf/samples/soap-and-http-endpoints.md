@@ -2,12 +2,12 @@
 title: SOAP ve HTTP Uç Noktaları
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: be050eecebb050ec41c3d548ea993d9e035e471c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523197"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307450"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP ve HTTP Uç Noktaları
 Bu örnek nasıl rcp tabanlı bir hizmet ekleme ve SOAP hem Web WCF programlama modeli kullanarak "Düz eski XML" (POX) biçiminde kullanıma gösterir. Bkz: [temel HTTP hizmeti](../../../../docs/framework/wcf/samples/basic-http-service.md) hizmeti için HTTP bağlama hakkında daha fazla ayrıntı için örnek. Bu örnek aynı hizmeti SOAP ve farklı bağlamaları kullanarak HTTP üzerinden açığa çıkarmak için ilgili ayrıntıları ele alınmaktadır.  
@@ -36,21 +36,21 @@ Bu örnek nasıl rcp tabanlı bir hizmet ekleme ve SOAP hem Web WCF programlama 
   
 #### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   
-1.  SOAP ve HTTP uç noktaları örneği için çözümü açın.  
+1. SOAP ve HTTP uç noktaları örneği için çözümü açın.  
   
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-3.  CTRL + W, S, açmak için zaten açık değilse, basın **Çözüm Gezgini** penceresi.  
+3. CTRL + W, S, açmak için zaten açık değilse, basın **Çözüm Gezgini** penceresi.  
   
-4.  Gelen **Çözüm Gezgini** penceresinde sağ **hizmet** üzerine imleci getirin ve proje **hata ayıklama** bağlam menüsü seçeneği böylece **yeni başlangıç Örnek** bağlam menüsü görüntülenir. Tıklayın **yeni örnek Başlat**. Bu, hizmeti barındıran ASP.NET geliştirme sunucusu başlatır.  
+4. Gelen **Çözüm Gezgini** penceresinde sağ **hizmet** üzerine imleci getirin ve proje **hata ayıklama** bağlam menüsü seçeneği böylece **yeni başlangıç Örnek** bağlam menüsü görüntülenir. Tıklayın **yeni örnek Başlat**. Bu, hizmeti barındıran ASP.NET geliştirme sunucusu başlatır.  
   
-5.  Çözüm Gezgini Windows istemci projeye sağ tıklayın ve üzerine imleci getirin **hata ayıklama** bağlam menüsü seçeneği böylece **yeni örnek Başlat** bağlam menüsü görüntülenir. Tıklayın **yeni örnek Başlat**.  
+5. Çözüm Gezgini Windows istemci projeye sağ tıklayın ve üzerine imleci getirin **hata ayıklama** bağlam menüsü seçeneği böylece **yeni örnek Başlat** bağlam menüsü görüntülenir. Tıklayın **yeni örnek Başlat**.  
   
-6.  İstemci konsol penceresi görünür ve çalışan hizmetin URI sağlar ve URI HTML Yardım sayfası çalışan hizmeti. Herhangi bir noktada HTML Yardım sayfası URI Yardım sayfasının bir tarayıcıda yazarak görüntüleyebilirsiniz.  
+6. İstemci konsol penceresi görünür ve çalışan hizmetin URI sağlar ve URI HTML Yardım sayfası çalışan hizmeti. Herhangi bir noktada HTML Yardım sayfası URI Yardım sayfasının bir tarayıcıda yazarak görüntüleyebilirsiniz.  
   
-7.  Örnek çalışırken, istemcinin geçerli etkinlik durumunu yazar.  
+7. Örnek çalışırken, istemcinin geçerli etkinlik durumunu yazar.  
   
-8.  İstemci Konsolu uygulamayı sonlandırmak için herhangi bir tuşa basın.  
+8. İstemci Konsolu uygulamayı sonlandırmak için herhangi bir tuşa basın.  
   
 9. Hizmet hata ayıklamayı durdurmak için SHIFT + F5 tuşlarına basın.  
   

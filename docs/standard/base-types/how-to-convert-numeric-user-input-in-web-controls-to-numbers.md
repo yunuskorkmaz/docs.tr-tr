@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Web denetimlerindeki sayısal kullanıcı girişlerini sayıya dönüştürün'
+title: 'Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722367"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296166"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Nasıl yapılır: Web denetimlerindeki sayısal kullanıcı girişlerini sayıya dönüştürün
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Nasıl yapılır: Web Denetimlerindeki Sayısal Kullanıcı Girişlerini Sayıya Dönüştürme
 Kullanıcıların dünyanın herhangi bir Web sayfası görüntülenebileceğinden sayısal verileri girebilirsiniz bir <xref:System.Web.UI.WebControls.TextBox> neredeyse sınırsız sayıda biçimleri denetimi. Sonuç olarak, yerel ve Web sayfasının kullanıcı kültürü belirlemek çok önemlidir. Kullanıcı girişini ayrıştırmasına, daha sonra kullanıcının yerel ayar ve kültür tarafından tanımlanan biçimlendirme kurallarını uygulayabilirsiniz.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Bir Web TextBox denetimi bir sayıyı sayısal giriş dönüştürülemiyor  
   
-1.  Dize dizisi tarafından döndürülen olup olmadığını belirlemek <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> özelliği doldurulur. Yüklü değilse, 6. adıma devam edin.  
+1. Dize dizisi tarafından döndürülen olup olmadığını belirlemek <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> özelliği doldurulur. Yüklü değilse, 6. adıma devam edin.  
   
-2.  Dize dizisi olarak döndürülürse <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği eklendiğinden, ilk öğesi alın. Kullanıcının varsayılan veya tercih edilen dil ve bölge ilk öğeyi gösterir.  
+2. Dize dizisi olarak döndürülürse <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği eklendiğinden, ilk öğesi alın. Kullanıcının varsayılan veya tercih edilen dil ve bölge ilk öğeyi gösterir.  
   
-3.  Örneği bir <xref:System.Globalization.CultureInfo> kullanıcıyı temsil eden bir nesne tercih edilen kültür çağırarak <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu.  
+3. Örneği bir <xref:System.Globalization.CultureInfo> kullanıcıyı temsil eden bir nesne tercih edilen kültür çağırarak <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu.  
   
-4.  Çağırın ya da `TryParse` veya `Parse` kullanıcı dönüştürmek istediğiniz sayısal türü yöntemi için giriş. Bir aşırı yüklemesini kullanmanız `TryParse` veya `Parse` yöntemi ile bir `provider` parametresi, aşağıdakilerden birini geçirin:  
+4. Çağırın ya da `TryParse` veya `Parse` kullanıcı dönüştürmek istediğiniz sayısal türü yöntemi için giriş. Bir aşırı yüklemesini kullanmanız `TryParse` veya `Parse` yöntemi ile bir `provider` parametresi, aşağıdakilerden birini geçirin:  
   
     -   <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
   
     -   <xref:System.Globalization.NumberFormatInfo> Tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.NumberFormat%2A> özelliği <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
   
-5.  Dönüştürme başarısız olursa tarafından döndürülen 2 dize dizisi kalan her öğe için 4 arasındaki adımları yineleyin <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği.  
+5. Dönüştürme başarısız olursa tarafından döndürülen 2 dize dizisi kalan her öğe için 4 arasındaki adımları yineleyin <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği.  
   
-6.  Dönüştürme yine başarısız olursa veya dize dizisi tarafından döndürülen <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği boşsa, tarafından döndürülen sabit kültür kullanarak dizeyi ayrıştırmak <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği.  
+6. Dönüştürme yine başarısız olursa veya dize dizisi tarafından döndürülen <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği boşsa, tarafından döndürülen sabit kültür kullanarak dizeyi ayrıştırmak <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek sayısal bir değer girmesini ister Web formu tam arka plan kod sayfasıdır bir <xref:System.Web.UI.WebControls.TextBox> denetlemek ve bir sayıya dönüştürür. Ardından bu sayıyı iki katına ve özgün giriş olarak aynı biçimlendirme kurallarını kullanarak görüntülenir.  

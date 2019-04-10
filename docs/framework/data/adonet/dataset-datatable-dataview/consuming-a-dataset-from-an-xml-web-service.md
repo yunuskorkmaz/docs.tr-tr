@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: e07fd6598d6b2d1bbd52e5e6735264821b8986bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180251"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297791"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web Hizmetinden DataSet Kullanma
 <xref:System.Data.DataSet> Kısmen Internet üzerinden veri uygun taşıma kolaylaştırmak için bağlantısı kesik bir tasarım ile için tasarlanmıştır. **Veri kümesi** girdi olarak belirlenebilir veya ek kodlamaya gerek kalmadan, XML Web Hizmetleri çıktısını gerekli içeriğini akışını sağlamak için "seri hale getirilebilir" olan **veri kümesi** bir XML Web hizmeti bir istemci ve arka. **Veri kümesi** örtük olarak biçimini kullanarak bir XML akışı dönüştürülür, ağ üzerinden gönderilen ve ardından XML Akışı'ndan reconstructed bir **veri kümesi** alan uçta. Bu, basit ve esnek bir yöntem iletme ve XML Web Hizmetleri kullanarak ilişkisel verileri döndürmek için sağlar. Biçimini hakkında daha fazla bilgi için bkz: [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -22,7 +22,7 @@ ms.locfileid: "59180251"
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Bir veri kümesini kullanan ve döndüren bir XML Web hizmeti oluşturmak için  
   
-1.  XML Web hizmeti oluşturun.  
+1. XML Web hizmeti oluşturun.  
   
      Örnekte, veri, bu durumda, müşterilerin listesini döndüren bir XML Web hizmeti oluşturulur **Northwind** veritabanı ve alan bir **veri kümesi** veri güncelleştirmeleri, XML Web hizmeti Özgün veri kaynağına çözümler.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "59180251"
   
      Tipik bir senaryoda **UpdateCustomers** yöntemi iyimser eşzamanlılık ihlalleri yakalayıp yakalamayacağınıza karar yazılabilir. Kolaylık olması için bu örnek içermez. İyimser eşzamanlılık hakkında daha fazla bilgi için bkz: [iyimser eşzamanlılık](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).  
   
-2.  Bir XML Web hizmeti proxy oluşturma.  
+2. Bir XML Web hizmeti proxy oluşturma.  
   
      XML Web hizmeti istemcilerine kullanıma sunulan yöntemleri kullanmak için bir SOAP proxy gerektirir. Visual Studio sizin için bu proxy oluşturmak olabilir. Bir mevcut Web hizmetinden Visual Studio'dan bir Web başvurusu ayarlayarak bu adımda açıklandığı gibi davranış şeffaf bir şekilde gerçekleşir. Proxy sınıfı kendiniz oluşturmak istiyorsanız, bu tartışma ile devam edin. Çoğu durumda, ancak istemci uygulamanın proxy sınıfı oluşturmak için Visual Studio kullanarak yeterli olur.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "59180251"
     csc -t:library -out:sample.dll sample.cs -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
-3.  Bir XML Web hizmeti istemcisi oluşturma.  
+3. Bir XML Web hizmeti istemcisi oluşturma.  
   
      Visual Studio Web hizmeti proxy sınıfı oluşturmak istiyorsanız, yalnızca istemci projesi oluşturun ve Çözüm Gezgini penceresinde projeye sağ tıklayın, **Web başvurusu Ekle'yi**, Web hizmetinden seçin Listenin mevcut Web Hizmetleri (Web hizmeti geçerli çözüm içindeki ya da geçerli bilgisayarda mevcut değilse bu Web Hizmeti uç noktası adresini sağlayan gerektirebilir.) XML Web hizmeti proxy kendiniz (önceki adımda açıklandığı gibi) oluşturmak, istemci kodunuz içeri aktarabilir ve XML Web hizmeti yöntemlerini kullanır. Aşağıdaki örnek kod çağrıları proxy kitaplığı içeri aktarır **GetCustomers** yeni bir müşteri ve döndürür, müşterilerin listesini almak için ekler bir **veri kümesi** güncelleştirmelerle **UpdateCustomers** .  
   

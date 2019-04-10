@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Web kullanıcılarına yerelleştirilmiş tarih ve saat bilgilerini görüntüleme'
+title: 'Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -15,51 +15,51 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857664"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320164"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Nasıl yapılır: Web kullanıcılarına yerelleştirilmiş tarih ve saat bilgilerini görüntüleme
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Nasıl yapılır: Web Kullanıcılarına Yerelleştirilmiş Tarih ve Saat Bilgilerini Görüntüleme
 Bir Web sayfası dünyanın herhangi bir yere görüntülenebileceğinden ayrıştırma ve biçimlendirme tarih ve saat değerlerini işlemleri (genellikle Web sunucusunun yerel kültür biçiminde) bir varsayılan biçimi üzerinde doğrulamamalısınız kullanıcıyla etkileşim kurulurken. Bunun yerine, işlemek tarih ve saat dizeleri giriş kullanıcı tarafından Web forms, tercih edilen kullanıcının kültürü kullanarak dizeleri çözümlenmelidir. Benzer şekilde, tarih ve saat verileri kullanıcıya kullanıcının kültürü için uygun bir biçimde görüntülenmesi gerekir. Bu konuda, bunun nasıl yapılacağı gösterilmektedir.  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Tarih ve saat ayrıştırılacak giriş kullanıcı tarafından dizeleri  
   
-1.  Dize dizisi tarafından döndürülen olup olmadığını belirlemek <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> özelliği doldurulur. Yüklü değilse, 6. adıma devam edin.  
+1. Dize dizisi tarafından döndürülen olup olmadığını belirlemek <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> özelliği doldurulur. Yüklü değilse, 6. adıma devam edin.  
   
-2.  Dize dizisi olarak döndürülürse <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği eklendiğinden, ilk öğesi alın. Kullanıcının varsayılan veya tercih edilen dil ve bölge ilk öğeyi gösterir.  
+2. Dize dizisi olarak döndürülürse <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği eklendiğinden, ilk öğesi alın. Kullanıcının varsayılan veya tercih edilen dil ve bölge ilk öğeyi gösterir.  
   
-3.  Örneği bir <xref:System.Globalization.CultureInfo> kullanıcıyı temsil eden bir nesne tercih edilen kültür çağırarak <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu.  
+3. Örneği bir <xref:System.Globalization.CultureInfo> kullanıcıyı temsil eden bir nesne tercih edilen kültür çağırarak <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu.  
   
-4.  Çağırın ya da `TryParse` veya `Parse` yöntemi <xref:System.DateTime> veya <xref:System.DateTimeOffset> türü dönüştürmeyi deneyin. Bir aşırı yüklemesini kullanmanız `TryParse` veya `Parse` yöntemi ile bir `provider` parametresi, aşağıdakilerden birini geçirin:  
+4. Çağırın ya da `TryParse` veya `Parse` yöntemi <xref:System.DateTime> veya <xref:System.DateTimeOffset> türü dönüştürmeyi deneyin. Bir aşırı yüklemesini kullanmanız `TryParse` veya `Parse` yöntemi ile bir `provider` parametresi, aşağıdakilerden birini geçirin:  
   
     -   <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
   
     -   <xref:System.Globalization.DateTimeFormatInfo> Tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> özelliği <xref:System.Globalization.CultureInfo> 3. adımda oluşturulan nesne.  
   
-5.  Dönüştürme başarısız olursa tarafından döndürülen 2 dize dizisi kalan her öğe için 4 arasındaki adımları yineleyin <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği.  
+5. Dönüştürme başarısız olursa tarafından döndürülen 2 dize dizisi kalan her öğe için 4 arasındaki adımları yineleyin <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği.  
   
-6.  Dönüştürme yine başarısız olursa veya dize dizisi tarafından döndürülen <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği boşsa, tarafından döndürülen sabit kültür kullanarak dizeyi ayrıştırmak <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği.  
+6. Dönüştürme yine başarısız olursa veya dize dizisi tarafından döndürülen <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği boşsa, tarafından döndürülen sabit kültür kullanarak dizeyi ayrıştırmak <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> özelliği.  
   
 ## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Yerel tarih ve saat kullanıcının isteği ayrıştırılamıyor  
   
-1.  Ekleme bir <xref:System.Web.UI.WebControls.HiddenField> Web formu denetimi.  
+1. Ekleme bir <xref:System.Web.UI.WebControls.HiddenField> Web formu denetimi.  
   
-2.  İşleme bir JavaScript işlevi oluşturmak `onClick` olayı bir `Submit` düğmesi ile eşgüdümlü evrensel saat (UTC) için geçerli tarih ve saat ile yerel saat diliminin uzaklığı yazarak <xref:System.Web.UI.WebControls.HiddenField.Value%2A> özelliği. Dizenin iki bileşeni birbirinden ayırmak için sınırlayıcı (örneğin, noktalı virgül) kullanın.  
+2. İşleme bir JavaScript işlevi oluşturmak `onClick` olayı bir `Submit` düğmesi ile eşgüdümlü evrensel saat (UTC) için geçerli tarih ve saat ile yerel saat diliminin uzaklığı yazarak <xref:System.Web.UI.WebControls.HiddenField.Value%2A> özelliği. Dizenin iki bileşeni birbirinden ayırmak için sınırlayıcı (örneğin, noktalı virgül) kullanın.  
   
-3.  Web form denetiminin kullanın <xref:System.Web.UI.Control.PreRender> HTML'e işlevi eklemesine olay çıkış akışı için betiğin metnini geçirerek <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> yöntemi.  
+3. Web form denetiminin kullanın <xref:System.Web.UI.Control.PreRender> HTML'e işlevi eklemesine olay çıkış akışı için betiğin metnini geçirerek <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> yöntemi.  
   
-4.  Olay işleyicisine bağlamanız `Submit` düğmenin `onClick` olayı için JavaScript işlevinin adı sağlayarak `OnClientClick` özniteliği `Submit` düğmesi.  
+4. Olay işleyicisine bağlamanız `Submit` düğmenin `onClick` olayı için JavaScript işlevinin adı sağlayarak `OnClientClick` özniteliği `Submit` düğmesi.  
   
-5.  Oluşturmak için bir işleyici `Submit` düğmenin <xref:System.Web.UI.WebControls.Button.Click> olay.  
+5. Oluşturmak için bir işleyici `Submit` düğmenin <xref:System.Web.UI.WebControls.Button.Click> olay.  
   
-6.  Olay işleyicisi, dize dizisi tarafından döndürülen olup olmadığını belirlemek <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> özelliği doldurulur. Yüklü değilse, 14 adıma devam edin.  
+6. Olay işleyicisi, dize dizisi tarafından döndürülen olup olmadığını belirlemek <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> özelliği doldurulur. Yüklü değilse, 14 adıma devam edin.  
   
-7.  Dize dizisi olarak döndürülürse <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği eklendiğinden, ilk öğesi alın. Kullanıcının varsayılan veya tercih edilen dil ve bölge ilk öğeyi gösterir.  
+7. Dize dizisi olarak döndürülürse <xref:System.Web.HttpRequest.UserLanguages%2A> özelliği eklendiğinden, ilk öğesi alın. Kullanıcının varsayılan veya tercih edilen dil ve bölge ilk öğeyi gösterir.  
   
-8.  Örneği bir <xref:System.Globalization.CultureInfo> kullanıcıyı temsil eden bir nesne tercih edilen kültür çağırarak <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu.  
+8. Örneği bir <xref:System.Globalization.CultureInfo> kullanıcıyı temsil eden bir nesne tercih edilen kültür çağırarak <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> Oluşturucusu.  
   
 9. Atanmış bir dizeyi geçirmek <xref:System.Web.UI.WebControls.HiddenField.Value%2A> özelliğini <xref:System.String.Split%2A> kullanıcının yerel tarih ve saat dize gösterimini ve kullanıcının yerel saat dilimi uzaklığı dize gösterimini ayrı dizi öğelerinde depolamak için yöntemi.  
   

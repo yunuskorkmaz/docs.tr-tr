@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 841420e609ece83d77bb82f0493d625231d86ec7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170930"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305201"
 ---
 # <a name="assembly-versioning"></a>Derleme Sürümü Oluşturma
 Ortak dil çalışma zamanını kullanan tüm derlemelerin sürüm oluşturma işlemi, derleme düzeyinde gerçekleşir. Bir derlemenin belirli sürümü ve bağımlı derlemelerin sürümleri, derlemenin bildirimine kaydedilir. Çalışma zamanı için varsayılan sürüm ilkesi, yapılandırma dosyalarındaki sürüm ilkelerinde açıkça geçersiz kılınmadığı sürece (uygulama yapılandırma dosyası, yayımcı ilke dosyası ve bilgisayar yöneticisinin yapılandırma dosyası) uygulamaların yalnızca yapılandırıldığı ve test edildiği sürümlerle çalışmasıdır.  
@@ -25,13 +25,13 @@ Ortak dil çalışma zamanını kullanan tüm derlemelerin sürüm oluşturma i�
   
  Çalışma zamanı, bir derleme bağlama isteğini çözmek için birkaç adım gerçekleştirir:  
   
-1.  Bağlanacak derlemenin sürümünü belirlemek için orijinal derleme başvurusunu denetler.  
+1. Bağlanacak derlemenin sürümünü belirlemek için orijinal derleme başvurusunu denetler.  
   
-2.  Sürüm ilkesini uygulamak için uygulanabilir tüm yapılandırma dosyalarını denetler.  
+2. Sürüm ilkesini uygulamak için uygulanabilir tüm yapılandırma dosyalarını denetler.  
   
-3.  Orijinal derleme başvurusundan ve yapılandırma dosyalarında belirtilen yeniden yönlendirmelerden doğru derlemeyi belirler ve çağıran derlemeye bağlanacak olan sürümü belirler.  
+3. Orijinal derleme başvurusundan ve yapılandırma dosyalarında belirtilen yeniden yönlendirmelerden doğru derlemeyi belirler ve çağıran derlemeye bağlanacak olan sürümü belirler.  
   
-4.  Genel derleme önbelleğini, kod tabanlarında belirtilen yapılandırma dosyalarını ve uygulamanın dizinini ve alt dizinleri algılama kurallarını kullanarak içinde açıklanan ardından denetimleri [çalışma zamanı derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+4. Genel derleme önbelleğini, kod tabanlarında belirtilen yapılandırma dosyalarını ve uygulamanın dizinini ve alt dizinleri algılama kurallarını kullanarak içinde açıklanan ardından denetimleri [çalışma zamanı derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
  Bu adımlar aşağıda gösterilmiştir:  
   

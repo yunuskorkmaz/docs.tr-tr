@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301236"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
 A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçekleştirmek için tek bir programlama öğesi. Bir genel sınıf ya da yordamın tanımladığınızda, kendisi için bu işlevi gerçekleştirmek isteyebileceğiniz her veri türü için ayrı bir sürüm tanımlamak zorunda değildir.  
@@ -83,9 +83,9 @@ A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçe
 ## <a name="advantages-of-generic-types"></a>Genel türlerin yararları  
  Genel tür, her biri belirli bir tür üzerinde çalıştığı birden fazla farklı programlama öğelerini bildirmek için temel olarak görev yapar. Genel tür alternatifleri şunlardır:  
   
-1.  Üzerinde çalışan tek bir tür `Object` veri türü.  
+1. Üzerinde çalışan tek bir tür `Object` veri türü.  
   
-2.  Bir dizi *türe özgü* türü, her sürüm ayrı ayrı kodlanmış ve belirli bir veri türüne gibi işletim sürümleri `String`, `Integer`, veya kullanıcı tanımlı bir tür gibi `customer`.  
+2. Bir dizi *türe özgü* türü, her sürüm ayrı ayrı kodlanmış ve belirli bir veri türüne gibi işletim sürümleri `String`, `Integer`, veya kullanıcı tanımlı bir tür gibi `customer`.  
   
  Genel tür, bu alternatifleri kıyasla aşağıdaki avantajlara sahiptir:  
   
@@ -151,11 +151,11 @@ A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçe
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Visual Basic'de Tür Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Veri Türleri Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
-- [,](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [olarak](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [As](../../../../visual-basic/language-reference/statements/as-clause.md)
+- [Nesne Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Kovaryans ve Kontravaryans](../../concepts/covariance-contravariance/index.md)
 - [Yineleyiciler](../../../../visual-basic/programming-guide/concepts/iterators.md)

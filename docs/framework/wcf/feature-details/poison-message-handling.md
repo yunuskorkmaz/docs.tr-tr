@@ -2,12 +2,12 @@
 title: Zehirli İleti İşleme
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146529"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305032"
 ---
 # <a name="poison-message-handling"></a>Zehirli İleti İşleme
 A *zehirli ileti* uygulama teslim denemesi üst sınırını aşan bir ileti. Kuyruk tabanlı bir uygulama hataları nedeniyle bir ileti işleyemediğinde bu durum ortaya çıkabilir. Güvenilirlik taleplerini karşılamak üzere kuyruğa alınan bir uygulamayı bir işlem altında iletileri alır. İletinin yeni bir işlem altında yeniden kuyruğa alınan iletinin alındığı işlem iptal ediliyor iletinin kuyrukta bırakır, böylece. Durdurulacak işlemin neden olan sorun düzeltilmezse alıcı uygulama alma ve teslim denemesi sayısı aşıldı kadar aynı iletiyi iptal ediliyor. döngü ve zehirli ileti sonuçları tıkanıp.  
@@ -66,17 +66,17 @@ A *zehirli ileti* uygulama teslim denemesi üst sınırını aşan bir ileti. Ku
   
  Uygulama bazı tür zehirli iletileri zehirli ileti kuyruğuna taşır ve böylece kuyruğundaki iletileri geri kalanını hizmete erişebilir otomatik zehirli ileti işleme gerektirebilir. Hata işleyicisi mekanizması poison ileti özel durumlar için dinleyecek şekilde kullanmak için tek senaryo olduğunda <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> ayarı <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. Message Queuing 3.0 poison ileti örnek, bu davranış gösterir. En iyi uygulamalar da dahil olmak üzere, zehirli iletileri işlemek için gereken adımlar özetlenmektedir:  
   
-1.  Zehirli ayarlarınızı uygulamanızın gereksinimlerini yansıtacak emin olun. Ayarlarla çalışırken, üzerinde bir Message Queuing yeteneklerini arasındaki farklar anladığınızdan emin olun [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+1. Zehirli ayarlarınızı uygulamanızın gereksinimlerini yansıtacak emin olun. Ayarlarla çalışırken, üzerinde bir Message Queuing yeteneklerini arasındaki farklar anladığınızdan emin olun [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
-2.  Gerekirse, uygulama `IErrorHandler` poison ileti hataları işlemek için. Ayar olmadığından `ReceiveErrorHandling` için `Fault` sıradaki zehirli ileti taşıma veya bir dış bağımlı sorunu el ile bir mekanizma gerekir tipik kullanım uygulamaktır `IErrorHandler` olduğunda `ReceiveErrorHandling` ayarlanır `Fault`, olarak Aşağıdaki kodda gösterilen.  
+2. Gerekirse, uygulama `IErrorHandler` poison ileti hataları işlemek için. Ayar olmadığından `ReceiveErrorHandling` için `Fault` sıradaki zehirli ileti taşıma veya bir dış bağımlı sorunu el ile bir mekanizma gerekir tipik kullanım uygulamaktır `IErrorHandler` olduğunda `ReceiveErrorHandling` ayarlanır `Fault`, olarak Aşağıdaki kodda gösterilen.  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  Oluşturma bir `PoisonBehaviorAttribute` , hizmet davranışı kullanabilirsiniz. Davranış yükler `IErrorHandler` dağıtıcı üzerinde. Aşağıdaki kod örneği bakın.  
+3. Oluşturma bir `PoisonBehaviorAttribute` , hizmet davranışı kullanabilirsiniz. Davranış yükler `IErrorHandler` dağıtıcı üzerinde. Aşağıdaki kod örneği bakın.  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  Hizmetinizi zehirli davranışı özniteliği ile açıklanıyor emin olun.  
+4. Hizmetinizi zehirli davranışı özniteliği ile açıklanıyor emin olun.  
 
  Ayrıca, varsa `ReceiveErrorHandling` ayarlanır `Fault`, `ServiceHost` zehirli ileti ile karşılaşıldığında hataları. Hatalı olaya bağlama ve hizmeti Kapat düzeltme girişimlerinde bulunun ve yeniden başlatın. Örneğin, `LookupId` içinde <xref:System.ServiceModel.MsmqPoisonMessageException> yayılır `IErrorHandler` dikkat edilmesi ve hizmet ana bilgisayar hataları kullandığınızda `System.Messaging` kullanarak kuyruk iletisi için API `LookupId` iletiden kaldırmak için Kuyruk ve bazı dış deposunda veya başka bir kuyruğa ileti deposu. Daha sonra yeniden başlatabilirsiniz `ServiceHost` normal işleme devam etmek için. [Zehirli ileti işleme MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) Bu davranış gösterir.  
   

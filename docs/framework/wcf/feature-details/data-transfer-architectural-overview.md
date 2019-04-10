@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315887"
 ---
 # <a name="data-transfer-architectural-overview"></a>Veri Aktarımı Mimarisi Genel Bakış
 Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünülebilir. Bu iletileri almak, bunları işlemek ve bunları başka bir eylem için kullanıcı kodu için gönderme veya kullanıcı kodu tarafından verilen veri iletileri oluşturmak ve bunları bir hedefe sunun. İleri düzey geliştiriciler için tasarlanmıştır, bu konu, iletileri ve içerdiği veri işleme mimarisini açıklar. Veri göndermek ve almak nasıl daha basit, görev odaklı görünümü için bkz: [hizmet sözleşmelerinde veri aktarımı belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünüle
   
  Bu mümkün olması, tüm arasında bir eşleme tanımlanmalıdır `Message` örneği ve bir XML bilgi kümesi. Aslında, böyle bir eşleme var: WCF SOAP standart, bu eşlemeyi tanımlamak için kullanır. Olduğunda bir `Message` örneği yazılır XML bilgi kümesi elde edilen bilgi iletisini içeren geçerli bir SOAP Zarfı. Bu nedenle, `WriteMessage` normalde aşağıdaki adımları gerçekleştirmelisiniz:  
   
-1.  SOAP Zarfı öğe etiketiyle yazın.  
+1. SOAP Zarfı öğe etiketiyle yazın.  
   
-2.  Etiketiyle SOAP üstbilgi öğesi yazma, tüm üstbilgileri yazmak ve header öğesi kapatın.  
+2. Etiketiyle SOAP üstbilgi öğesi yazma, tüm üstbilgileri yazmak ve header öğesi kapatın.  
   
-3.  SOAP gövdesi öğe etiketiyle yazın.  
+3. SOAP gövdesi öğe etiketiyle yazın.  
   
-4.  Çağrı `WriteBodyContents` veya gövdesi yazmak için eşdeğer yöntemi.  
+4. Çağrı `WriteBodyContents` veya gövdesi yazmak için eşdeğer yöntemi.  
   
-5.  Gövde ve zarf öğeleri kapatın.  
+5. Gövde ve zarf öğeleri kapatın.  
   
  Önceki adımlarda, SOAP standart yakından bağlıdır. Bu karmaşık, birden fazla SOAP sürümünü, örneğin, mevcut olduğunu olgu tarafından kullanılan SOAP sürümü bilmeden SOAP Zarfı öğesi doğru şekilde yazmak mümkün değildir. Ayrıca, bazı durumlarda, bu karmaşık SOAP özgü devre dışı kapatmak için istenebilir tamamen eşleme.  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF), bir Mesajlaşma altyapısı düşünüle
   
  Bu amaçla <xref:System.Xml.IStreamProvider> arabirimi kullanılır. Arabirime sahip bir <xref:System.Xml.IStreamProvider.GetStream> yazılacak akış döndüren yöntem. Çıkış bir akış ileti gövdesine yazılacak doğru şekilde <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> aşağıdaki gibidir:  
   
-1.  Akış (örneğin, XML etiketi açma) önceki tüm gerekli bilgileri yazın.  
+1. Akış (örneğin, XML etiketi açma) önceki tüm gerekli bilgileri yazın.  
   
-2.  Çağrı `WriteValue` üzerinde aşırı <xref:System.Xml.XmlDictionaryWriter> almayan bir <xref:System.Xml.IStreamProvider>, ile bir `IStreamProvider` yazılacak akış döndüren uygulama.  
+2. Çağrı `WriteValue` üzerinde aşırı <xref:System.Xml.XmlDictionaryWriter> almayan bir <xref:System.Xml.IStreamProvider>, ile bir `IStreamProvider` yazılacak akış döndüren uygulama.  
   
-3.  Akış (örneğin, XML kapatma etiketi) aşağıdaki bilgileri yazın.  
+3. Akış (örneğin, XML kapatma etiketi) aşağıdaki bilgileri yazın.  
   
  Bu yaklaşımda, XML yazıcısı çağrısı yapıldığında bir seçim olan <xref:System.Xml.IStreamProvider.GetStream> ve akış verileri yazma. Örneğin, metin ve ikili XML yazarların hemen çağırın ve akış içeriği raflarının başlangıç ve bitiş etiketleri yazma. MTOM yazıcı çağırmak isteyebilirsiniz <xref:System.Xml.IStreamProvider.GetStream> daha sonra uygun bir ileti parçası yazmak hazır olduğunda.  
   

@@ -2,12 +2,12 @@
 title: Görev zaman uyumsuz programlama modeli (TAP) ile async ve await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 3e4fd21172c71d596dd2ec5d171c9230dc3c803e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2fde365acfab3342082e2ca286decc00ca73a19d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295971"
 ---
 # <a name="task-asynchronous-programming-model"></a>Zaman uyumsuz görev programlama modeli
 Zaman uyumsuz programlama kullanarak performans sorunlarını önleyebilir ve uygulamanızın genel yanıt verme becerisini geliştirebilirsiniz. Ancak, zaman uyumsuz uygulamalar yazmaya yönelik geleneksel teknikler karmaşık olabilir ve bu nedenle yazılmaları, hataların ayıklanması ve bakım yapılması zorlaşabilir.  
@@ -106,19 +106,19 @@ Aşağıdaki özellikler, önceki örneği neyin zaman uyumsuz hale getirdiğini
   
  Diyagramdaki sayılar kullanıcı "Başlat" düğmesine tıkladığında başlatılan aşağıdaki adımlara karşılık gelir.
   
-1.  Bir olay işleyici çağırır ve bekler `AccessTheWebAsync` zaman uyumsuz yöntem.  
+1. Bir olay işleyici çağırır ve bekler `AccessTheWebAsync` zaman uyumsuz yöntem.  
   
-2.  `AccessTheWebAsync` oluşturur bir <xref:System.Net.Http.HttpClient> örneği ve çağrıları <xref:System.Net.Http.HttpClient.GetStringAsync%2A> dize olarak bir Web sitesinin içeriklerini karşıdan yüklemek için zaman uyumsuz yöntem.  
+2. `AccessTheWebAsync` oluşturur bir <xref:System.Net.Http.HttpClient> örneği ve çağrıları <xref:System.Net.Http.HttpClient.GetStringAsync%2A> dize olarak bir Web sitesinin içeriklerini karşıdan yüklemek için zaman uyumsuz yöntem.  
   
-3.  İçinde bir şey `GetStringAsync` ilerlemesini engelleyen. Bir web sitesinin indirmesini veya başka bir engelleyen etkinliği beklemesi gerekebilir. Kaynakların engellenmesini önlemek için `GetStringAsync` denetimi onu arayan verir `AccessTheWebAsync`.  
+3. İçinde bir şey `GetStringAsync` ilerlemesini engelleyen. Bir web sitesinin indirmesini veya başka bir engelleyen etkinliği beklemesi gerekebilir. Kaynakların engellenmesini önlemek için `GetStringAsync` denetimi onu arayan verir `AccessTheWebAsync`.  
   
      `GetStringAsync` döndürür bir <xref:System.Threading.Tasks.Task%601>burada `TResult` bir dizedir ve `AccessTheWebAsync` görevi atayan `getStringTask` değişkeni. Görev için yapılan çağrının devam eden işlemini temsil eden `GetStringAsync`, çalışma tamamlandığında gerçek dize değerini oluşturma taahhüdü ile.  
   
-4.  Çünkü `getStringTask` henüz beklenmediği `AccessTheWebAsync` gelen nihai sonuca bağımlı olmayan diğer çalışmalar ile devam edebilir `GetStringAsync`. İş zaman uyumlu yönteme yapılan bir çağrıyla temsil edilir `DoIndependentWork`.  
+4. Çünkü `getStringTask` henüz beklenmediği `AccessTheWebAsync` gelen nihai sonuca bağımlı olmayan diğer çalışmalar ile devam edebilir `GetStringAsync`. İş zaman uyumlu yönteme yapılan bir çağrıyla temsil edilir `DoIndependentWork`.  
   
-5.  `DoIndependentWork` kendi iş ve arayanına dönen bir zaman uyumlu yöntemdir.  
+5. `DoIndependentWork` kendi iş ve arayanına dönen bir zaman uyumlu yöntemdir.  
   
-6.  `AccessTheWebAsync` bir sonuç olmadan yapabileceği işleri dışında çalıştırıldı `getStringTask`. `AccessTheWebAsync` hesaplamak ve uzunluğu, indirilen dizenin, ancak yöntem döndürmek ister, yöntem dizeye sahip oluncaya kadar değeri hesaplamaz.  
+6. `AccessTheWebAsync` bir sonuç olmadan yapabileceği işleri dışında çalıştırıldı `getStringTask`. `AccessTheWebAsync` hesaplamak ve uzunluğu, indirilen dizenin, ancak yöntem döndürmek ister, yöntem dizeye sahip oluncaya kadar değeri hesaplamaz.  
   
      Bu nedenle, `AccessTheWebAsync` bir await işleci kullanarak ilerlemesini askıya alır ve çağıran yönteme denetimi elde etmek üzere kullandığı `AccessTheWebAsync`. `AccessTheWebAsync` döndürür bir `Task<int>` çağırana. Görev, indirilen dizenin uzunluğu olan bir tamsayı sonucu verecek bir taahhüdü temsil eder.  
   
@@ -127,9 +127,9 @@ Aşağıdaki özellikler, önceki örneği neyin zaman uyumsuz hale getirdiğini
   
      Arayanın içinde (bu örnekte olay işleyicisi), işleme düzeni devam eder. Çağıranın sonucuna bağlı olmayan diğer işleri yapabilir `AccessTheWebAsync` sonucunda ortaya çıkan veya çağıranın bekleyen hemen beklemeye geçebilir.   Olay işleyicisi bekliyor `AccessTheWebAsync`, ve `AccessTheWebAsync` bekliyor `GetStringAsync`.  
   
-7.  `GetStringAsync` tamamlandıktan ve bir dize sonucu üretir. Dize sonucu çağrısı tarafından döndürülen değil `GetStringAsync` beklediğiniz şekilde. (Yöntemin adım 3'te zaten bir görev döndürdüğünü unutmayın.) Bunun yerine, dize sonucu tamamlama yöntemini belirten bir görevde saklanır `getStringTask`. Await işleci sonuçtan alır `getStringTask`. Atama ifadesi alınan sonucu atar `urlContents`.  
+7. `GetStringAsync` tamamlandıktan ve bir dize sonucu üretir. Dize sonucu çağrısı tarafından döndürülen değil `GetStringAsync` beklediğiniz şekilde. (Yöntemin adım 3'te zaten bir görev döndürdüğünü unutmayın.) Bunun yerine, dize sonucu tamamlama yöntemini belirten bir görevde saklanır `getStringTask`. Await işleci sonuçtan alır `getStringTask`. Atama ifadesi alınan sonucu atar `urlContents`.  
   
-8.  Zaman `AccessTheWebAsync` dize sonucu yöntem dize uzunluğunu hesaplayabilir. Ardından çalışmasına `AccessTheWebAsync` da tamamlanır ve bekleyen olay işleyicisi devam edebilir. Konunun sonundaki tam örnekte olay işleyicisinin uzunluk sonucundaki değeri aldığını ve yazdığını onaylayabilirsiniz.    
+8. Zaman `AccessTheWebAsync` dize sonucu yöntem dize uzunluğunu hesaplayabilir. Ardından çalışmasına `AccessTheWebAsync` da tamamlanır ve bekleyen olay işleyicisi devam edebilir. Konunun sonundaki tam örnekte olay işleyicisinin uzunluk sonucundaki değeri aldığını ve yazdığını onaylayabilirsiniz.    
 Zaman uyumsuz programlama konusunda yeniyseniz, zaman uyumlu ve zaman uyumsuz davranış arasındaki farkları değerlendirmek için bir dakikanızı ayırın. Zaman uyumlu yöntem, işi tamamlandığında döndürür (5. adım), ancak zaman uyumsuz bir yöntem işi askıya alındığında görev değeri döndürür (3 ve 6. adım). Zaman uyumsuz yöntem çalışmasını tamamladığında görev tamamlandı olarak işaretlenir ve varsa sonuç görevde depolanır.  
   
 Denetim akışı hakkında daha fazla bilgi için bkz. [zaman uyumsuz programlarda (C#) denetim akışı](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  

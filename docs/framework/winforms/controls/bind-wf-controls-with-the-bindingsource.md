@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074664"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304564"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Denetimlerini BindingSource Bileşeni ile Bağlama
 Formunuza denetimler eklenir ve uygulamanız için kullanıcı arabirimi belirlenen sonra çalışma zamanında, kullanıcılar alter ve uygulamayla ilgili verileri kaydetme böylece bir veri kaynağına denetimlerin bağlayabilirsiniz.  
@@ -27,9 +27,9 @@ Formunuza denetimler eklenir ve uygulamanız için kullanıcı arabirimi belirle
   
 ### <a name="to-bind-a-control-at-design-time"></a>Tasarım zamanında bir denetimi bağlamak için  
   
-1.  Sürükleme bir <xref:System.Windows.Forms.TextBox> denetim formu açın.  
+1. Sürükleme bir <xref:System.Windows.Forms.TextBox> denetim formu açın.  
   
-2.  İçinde **özellikleri** penceresi:  
+2. İçinde **özellikleri** penceresi:  
   
     1.  Genişletin **(DataBindings)** düğümü.  
   
@@ -39,17 +39,17 @@ Formunuza denetimler eklenir ve uygulamanız için kullanıcı arabirimi belirle
   
          Bir veri kaynağı, daha önce proje veya form için yapılandırıldı, görünür.  
   
-3.  Tıklayın **proje veri kaynağı Ekle** verilere bağlanmak ve bir veri kaynağı oluşturun.  
+3. Tıklayın **proje veri kaynağı Ekle** verilere bağlanmak ve bir veri kaynağı oluşturun.  
   
-4.  Üzerinde **veri kaynağı Yapılandırma Sihirbazı** Karşılama sayfasında, tıklayın **sonraki**.  
+4. Üzerinde **veri kaynağı Yapılandırma Sihirbazı** Karşılama sayfasında, tıklayın **sonraki**.  
   
-5.  Üzerinde **bir veri kaynağı türü seçin** sayfasında **veritabanı**.  
+5. Üzerinde **bir veri kaynağı türü seçin** sayfasında **veritabanı**.  
   
-6.  Üzerinde **veri bağlantınızı seçin** sayfasında, kullanılabilir bağlantılar listesinden bir veri bağlantısı seçin. İstenen veri bağlantınızı seçin kullanılabilir değilse **yeni bağlantı** yeni bir veri bağlantısı oluşturmak için.  
+6. Üzerinde **veri bağlantınızı seçin** sayfasında, kullanılabilir bağlantılar listesinden bir veri bağlantısı seçin. İstenen veri bağlantınızı seçin kullanılabilir değilse **yeni bağlantı** yeni bir veri bağlantısı oluşturmak için.  
   
-7.  Seçin **Evet, bağlantıyı Kaydet** bağlantı dizesini uygulama yapılandırma dosyasına kaydetmek için.  
+7. Seçin **Evet, bağlantıyı Kaydet** bağlantı dizesini uygulama yapılandırma dosyasına kaydetmek için.  
   
-8.  Uygulamanıza getirmek için veritabanı nesneleri seçin. Bu durumda, istediğiniz bir tabloda bir alan seçin <xref:System.Windows.Forms.TextBox> görüntülenecek.  
+8. Uygulamanıza getirmek için veritabanı nesneleri seçin. Bu durumda, istediğiniz bir tabloda bir alan seçin <xref:System.Windows.Forms.TextBox> görüntülenecek.  
   
 9. İsterseniz varsayılan veri kümesi adı değiştirin.  
   

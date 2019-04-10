@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: abab705c7ea83318949cf0d75e491905da7896e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2fe0360a0548bddb0ebba566eca0d121c9ec9160
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099735"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300625"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>Nasıl yapılır: Sorgularda Model Tanımlı İşlevler Çağırma
 Bu konu, içinden kavramsal modelde tanımlı işlevleri çağırmak açıklar [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgular.  
@@ -19,9 +19,9 @@ Bu konu, içinden kavramsal modelde tanımlı işlevleri çağırmak açıklar [
   
 ### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>Kavramsal modelde tanımlı bir işlevi çağırmak için  
   
-1.  Bir ortak dil çalışma zamanı (CLR) yöntem kavramsal modelde tanımlı işlev eşlendiği uygulamanıza ekleyin. Map yöntemi için uygulamanız gereken bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> yöntemi. Unutmayın <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> ve <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> öznitelik parametreleri: kavramsal modelin ad alanı adı ve işlev adı kavramsal modeldeki sırasıyla. LINQ için ad çözümlemesi işlevi büyük/küçük harfe duyarlıdır.  
+1. Bir ortak dil çalışma zamanı (CLR) yöntem kavramsal modelde tanımlı işlev eşlendiği uygulamanıza ekleyin. Map yöntemi için uygulamanız gereken bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> yöntemi. Unutmayın <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> ve <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> öznitelik parametreleri: kavramsal modelin ad alanı adı ve işlev adı kavramsal modeldeki sırasıyla. LINQ için ad çözümlemesi işlevi büyük/küçük harfe duyarlıdır.  
   
-2.  İşlev Çağır bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu.  
+2. İşlev Çağır bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek içinden kavramsal modelde tanımlı bir işlev çağrısı yapmayı gösteren bir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] sorgu. Örneğin, okul modeli kullanır. Okul modeli hakkında daha fazla bilgi için bkz: [School örnek veritabanını oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) ve [Okul .edmx dosyası oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  

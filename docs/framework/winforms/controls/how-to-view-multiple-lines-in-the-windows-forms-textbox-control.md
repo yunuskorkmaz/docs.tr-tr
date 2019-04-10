@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: f7a0e3a14d14f0629bd9995dbecd3f0b98bea1d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324194"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Nasıl yapılır: Windows Forms TextBox Denetiminde Birden Fazla Çizgiyi Görüntüleme
 Varsayılan olarak, Windows Forms <xref:System.Windows.Forms.TextBox> denetimi tek satırlık metin görüntüler ve kaydırma çubukları görüntülemez. Metin boşluktan uzunsa, metnin yalnızca bir kısmını görülebilir. Ayarlayarak bu varsayılan davranışı değiştirebilirsiniz <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, ve <xref:System.Windows.Forms.TextBox.ScrollBars%2A> özellikleri uygun değerlere.  
@@ -29,9 +29,9 @@ Varsayılan olarak, Windows Forms <xref:System.Windows.Forms.TextBox> denetimi t
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>Çok satırlı TextBox denetiminde görüntülemek için  
   
-1.  Ayarlama <xref:System.Windows.Forms.TextBox.Multiline%2A> özelliğini `true`. Varsa <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> olduğu `true` (varsayılan), denetimdeki metin olarak bir veya daha fazla paragraflar sonra görünür; Aksi takdirde, bazı satırlar kırpılmış denetim ucuna, bir liste olarak görünür.  
+1. Ayarlama <xref:System.Windows.Forms.TextBox.Multiline%2A> özelliğini `true`. Varsa <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> olduğu `true` (varsayılan), denetimdeki metin olarak bir veya daha fazla paragraflar sonra görünür; Aksi takdirde, bazı satırlar kırpılmış denetim ucuna, bir liste olarak görünür.  
   
-2.  Ayarlama <xref:System.Windows.Forms.TextBox.ScrollBars%2A> özelliğini uygun bir değer.  
+2. Ayarlama <xref:System.Windows.Forms.TextBox.ScrollBars%2A> özelliğini uygun bir değer.  
   
     |Değer|Açıklama|  
     |-----------|-----------------|  
@@ -39,7 +39,7 @@ Varsayılan olarak, Windows Forms <xref:System.Windows.Forms.TextBox> denetimi t
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Satırları, bazıları da olabilir genişliğini uzun bir listesini görüntülemek istiyorsanız, bu değeri kullanın <xref:System.Windows.Forms.TextBox> denetimi.|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|Listenin denetimin yüksekliği uzun olması durumunda bu değeri kullanın.|  
   
-3.  Ayarlama <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> özelliğini uygun bir değer.  
+3. Ayarlama <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> özelliğini uygun bir değer.  
   
     |Değer|Açıklama|  
     |-----------|-----------------|  

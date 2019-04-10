@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: e4558084357c8ce07004a8ed71aef586a707f1a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bc7da8121ec1190908d9b94fc7c987f9888c020
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591753"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317460"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (C# Derleyici Seçenekleri)
 **-Win32icon** seçeneği çıktı dosyasına dosya Gezgini'nde istenen görünümü verir çıkış dosyasına bir .ico simge dosyası ekler.  
@@ -35,11 +35,11 @@ ms.locfileid: "54591753"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açın **özellikleri** sayfaları.  
+1. Projenin açın **özellikleri** sayfaları.  
   
-2.  Tıklayın **uygulama** özellik sayfası.  
+2. Tıklayın **uygulama** özellik sayfası.  
   
-3.  Değiştirme **uygulama simgesi** özelliği.  
+3. Değiştirme **uygulama simgesi** özelliği.  
   
  Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.  
   

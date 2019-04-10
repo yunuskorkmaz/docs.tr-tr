@@ -1,15 +1,15 @@
 ---
-title: NativeActivity temel sınıfı
+title: NativeActivity Temel Sınıfı
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 40eff2e597763fd492b3051df1a91622e7a60672
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842041"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296595"
 ---
-# <a name="nativeactivity-base-class"></a>NativeActivity temel sınıfı
+# <a name="nativeactivity-base-class"></a>NativeActivity Temel Sınıfı
 
 <xref:System.Activities.NativeActivity> korumalı Oluşturucu ile soyut bir sınıftır. Gibi <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> uygulayarak kesinlik temelli davranışı yazmak için kullanılan bir <xref:System.Activities.NativeActivity.Execute%2A> yöntemi. Farklı <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> iş akışı çalışma zamanı kullanıma sunulan tüm özelliklere erişebilir <xref:System.Activities.NativeActivityContext> geçirilen nesne <xref:System.Activities.NativeActivity.Execute%2A> yöntemi.
 
@@ -34,28 +34,28 @@ ms.locfileid: "48842041"
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>NativeActivity devralan bir özel etkinlik oluşturmak için
 
-1.  Visual Studio 2010.
+1. OpenVisual Studio 2010.
 
-2.  Seçin **dosya**, **yeni**, ardından **proje**. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **etkinlik Kitaplığı** içinde **şablonları** penceresi. Yeni Proje HelloActivity adı.
+2. Seçin **dosya**, **yeni**, ardından **proje**. Seçin **Workflow 4.0** altında **Visual C#** içinde **proje türleri** penceresi ve select **v2010** düğümü. Seçin **etkinlik Kitaplığı** içinde **şablonları** penceresi. Yeni Proje HelloActivity adı.
 
-3.  Gt;activity1.XAML HelloActivity projeye sağ tıklayıp **Sil**.
+3. Gt;activity1.XAML HelloActivity projeye sağ tıklayıp **Sil**.
 
-4.  HelloActivity projeye sağ tıklayıp **Ekle**, ardından **sınıfı**. Yeni bir sınıf HelloActivity.cs adı.
+4. HelloActivity projeye sağ tıklayıp **Ekle**, ardından **sınıfı**. Yeni bir sınıf HelloActivity.cs adı.
 
-5.  HelloActivity.cs dosyasına aşağıdakileri ekleyin `using` yönergeleri.
+5. HelloActivity.cs dosyasına aşağıdakileri ekleyin `using` yönergeleri.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  Devralınan yeni bir sınıf olun <xref:System.Activities.NativeActivity> için sınıf bildiriminin bir temel sınıf ekleyerek.
+6. Devralınan yeni bir sınıf olun <xref:System.Activities.NativeActivity> için sınıf bildiriminin bir temel sınıf ekleyerek.
 
     ```csharp
     class HelloActivity : NativeActivity
     ```
 
-7.  Ekleyerek sınıfına işlevsellik ekleme bir <xref:System.Activities.NativeActivity.Execute%2A> yöntemi.
+7. Ekleyerek sınıfına işlevsellik ekleme bir <xref:System.Activities.NativeActivity.Execute%2A> yöntemi.
 
     ```csharp
     protected override void Execute(NativeActivityContext context)
@@ -64,7 +64,7 @@ ms.locfileid: "48842041"
     }
     ```
 
-8.  Geçersiz kılma <xref:System.Activities.NativeActivity.CacheMetadata%2A> yöntemi ve özel etkinliğin değişkenleri, bağımsız değişkenler, alt ve temsilciler hakkında bilmeniz iş akışı çalışma zamanı izin vermek için uygun Ekle yöntemi çağrısı. Daha fazla bilgi için <xref:System.Activities.NativeActivityMetadata> sınıfı.
+8. Geçersiz kılma <xref:System.Activities.NativeActivity.CacheMetadata%2A> yöntemi ve özel etkinliğin değişkenleri, bağımsız değişkenler, alt ve temsilciler hakkında bilmeniz iş akışı çalışma zamanı izin vermek için uygun Ekle yöntemi çağrısı. Daha fazla bilgi için <xref:System.Activities.NativeActivityMetadata> sınıfı.
 
 9. Kullanım <xref:System.Activities.NativeActivityContext> bir yer işareti zamanlamak için nesne. Bkz: <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A> oluşturma hakkında ayrıntılar için zamanlamak ve bir yer işareti devam edin.
 

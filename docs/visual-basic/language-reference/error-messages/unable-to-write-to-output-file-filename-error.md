@@ -1,5 +1,5 @@
 ---
-title: "'<filename>' çıkış dosyasına yazılamıyor: <error>"
+title: "Çıkış dosyasına yazılamıyor '<filename>': <error>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 61ba4dbc668f7b236b0631f797feb4e81068e517
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827204"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318227"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>Çıkış dosyasına yazılamıyor '\<dosya adı >': \<hata >
 Dosya oluşturulurken bir sorun oluştu.  
@@ -31,31 +31,31 @@ Dosya oluşturulurken bir sorun oluştu.
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Yinelenen hata durumunda yeniden görmek için programı derleyin.  
+1. Yinelenen hata durumunda yeniden görmek için programı derleyin.  
   
-2.  Hata devam ederse, çalışmanızı kaydedin ve Visual Studio'yu yeniden başlatın.  
+2. Hata devam ederse, çalışmanızı kaydedin ve Visual Studio'yu yeniden başlatın.  
   
-3.  Hata devam ederse bilgisayarı yeniden başlatın.  
+3. Hata devam ederse bilgisayarı yeniden başlatın.  
   
-4.  Hata almaya devam ederseniz, Visual Basic yeniden yükleyin.  
+4. Hata almaya devam ederseniz, Visual Basic yeniden yükleyin.  
   
-5.  Yeniden yüklenmesinden sonra hata oluşmaya devam ederse Microsoft Ürün Destek Hizmetleri bildirin.  
+5. Yeniden yüklenmesinden sonra hata oluşmaya devam ederse Microsoft Ürün Destek Hizmetleri bildirin.  
   
 ### <a name="to-check-file-attributes-in-file-explorer"></a>Dosya Gezgini'nde dosya özniteliklerini kontrol etmek için  
   
-1.  İlgilendiğiniz klasörünü açın.  
+1. İlgilendiğiniz klasörünü açın.  
   
-2.  Tıklayın **görünümleri** simgesini seçip **ayrıntıları**.  
+2. Tıklayın **görünümleri** simgesini seçip **ayrıntıları**.  
   
-3.  Sütun üst bilgisine sağ tıklayın ve seçin **öznitelikleri** aşağı açılan listeden.  
+3. Sütun üst bilgisine sağ tıklayın ve seçin **öznitelikleri** aşağı açılan listeden.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>Bir dosya veya klasör özniteliklerini değiştirmek için  
   
-1.  İçinde **dosya Gezgini**, dosya veya klasörü sağ tıklatın ve seçin **özellikleri**.  
+1. İçinde **dosya Gezgini**, dosya veya klasörü sağ tıklatın ve seçin **özellikleri**.  
   
-2.  İçinde **öznitelikleri** bölümünü **genel** sekmesi, NET **salt okunur** kutusu.  
+2. İçinde **öznitelikleri** bölümünü **genel** sekmesi, NET **salt okunur** kutusu.  
   
-3.  Tuşuna **Tamam**.  
+3. Tuşuna **Tamam**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

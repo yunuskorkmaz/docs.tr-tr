@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: 48c1d24ce2e966f9c078593655da2bc9d84252c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d7919bf87444ef6c4a64ee236356e762da14853f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307905"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta ToolStrip denetiminde AutoComplete seçeneğini etkinleştirme
 Aşağıdaki yordam birleştirir bir <xref:System.Windows.Forms.ToolStripLabel> ile bir <xref:System.Windows.Forms.ToolStripComboBox> , bırakılan öğeleri listesi gibi kısa bir süre önce göstermek için Web siteleri ziyaret edilmedi. Kullanıcı listesindeki öğelerin birinin ilk karakterle eşleşen bir karakter yazdığında, öğenin hemen görüntülenir.  
@@ -27,7 +27,7 @@ Aşağıdaki yordam birleştirir bir <xref:System.Windows.Forms.ToolStripLabel> 
   
 ### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a>ToolStrip denetiminde AutoComplete seçeneğini etkinleştirmek için  
   
-1.  Oluşturma bir <xref:System.Windows.Forms.ToolStrip> denetlemek ve öğeleri ekleyin.  
+1. Oluşturma bir <xref:System.Windows.Forms.ToolStrip> denetlemek ve öğeleri ekleyin.  
   
     ```vb  
     ToolStrip1 = New System.Windows.Forms.ToolStrip  
@@ -41,7 +41,7 @@ Aşağıdaki yordam birleştirir bir <xref:System.Windows.Forms.ToolStripLabel> 
         {toolStripLabel1, toolStripComboBox1});  
     ```  
   
-2.  Ayarlama <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> özelliği için birleşik giriş kutusu ve etiket <xref:System.Windows.Forms.ToolStripItemOverflow.Never> böylece liste her zaman formun boyutundan bağımsız olarak kullanılabilir.  
+2. Ayarlama <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> özelliği için birleşik giriş kutusu ve etiket <xref:System.Windows.Forms.ToolStripItemOverflow.Never> böylece liste her zaman formun boyutundan bağımsız olarak kullanılabilir.  
   
     ```vb  
     ToolStripLabel1.Overflow = _  
@@ -56,7 +56,7 @@ Aşağıdaki yordam birleştirir bir <xref:System.Windows.Forms.ToolStripLabel> 
     toolStripComboBox1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never  
     ```  
   
-3.  Sözcük öğe koleksiyonuna ekleme <xref:System.Windows.Forms.ToolStripComboBox> denetimi.  
+3. Sözcük öğe koleksiyonuna ekleme <xref:System.Windows.Forms.ToolStripComboBox> denetimi.  
   
     ```vb  
     ToolStripComboBox1.Items.AddRange(New Object() {"First Item", _  
@@ -67,7 +67,7 @@ Aşağıdaki yordam birleştirir bir <xref:System.Windows.Forms.ToolStripLabel> 
     toolStripComboBox1.Items.AddRange(new object[] {"First item", "Second item", "Third item"});  
     ```  
   
-4.  Ayarlama <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> özellik birleşik giriş kutusunun <xref:System.Windows.Forms.AutoCompleteMode.Append>.  
+4. Ayarlama <xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A> özellik birleşik giriş kutusunun <xref:System.Windows.Forms.AutoCompleteMode.Append>.  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteMode = _  
@@ -78,7 +78,7 @@ Aşağıdaki yordam birleştirir bir <xref:System.Windows.Forms.ToolStripLabel> 
     toolStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;  
     ```  
   
-5.  Ayarlama <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> özellik birleşik giriş kutusunun <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.  
+5. Ayarlama <xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A> özellik birleşik giriş kutusunun <xref:System.Windows.Forms.AutoCompleteSource.ListItems>.  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteSource = _  

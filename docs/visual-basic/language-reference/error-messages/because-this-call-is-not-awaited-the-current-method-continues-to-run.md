@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 5c8767db154c79d9e3b37a22410ac1e4705b7a44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609805"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304239"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin çalıştırılması devam eder
 Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin yürütülmesi devam eder. Çağrının sonucuna 'Await' işleci uygulamayı düşünün.  
@@ -95,13 +95,13 @@ Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin yürüt
 ## <a name="example"></a>Örnek  
  Aşağıdaki Windows Presentation Foundation (WPF) uygulaması, önceki örnekte yöntemleri içerir. Aşağıdaki adımları uygulamasını ayarlama.  
   
-1.  Bir WPF uygulaması oluşturun ve adlandırın `AsyncWarning`.  
+1. Bir WPF uygulaması oluşturun ve adlandırın `AsyncWarning`.  
   
-2.  Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
+2. Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.  
   
      Sekme görünür değilse, nde MainWindow.xaml için kısayol menüsünü açın **Çözüm Gezgini**ve ardından **kodu görüntüle**.  
   
-3.  Değiştirin **XAML** MainWindow.xaml görünümünü aşağıdaki kod ile.  
+3. Değiştirin **XAML** MainWindow.xaml görünümünü aşağıdaki kod ile.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -119,7 +119,7 @@ Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin yürüt
   
      XAML Tasarımcısı hakkında daha fazla bilgi için bkz. [XAML Tasarımcısını kullanarak kullanıcı Arabirimi oluşturma](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Basit, kendi kullanıcı arabirimini oluşturma hakkında daha fazla bilgi için bkz: "WPF uygulaması oluşturmak için" ve "Basit bir WPF MainWindow tasarlamak için" bölümlerini [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-4.  MainWindow.xaml.vb kodu aşağıdaki kodla değiştirin.  
+4. MainWindow.xaml.vb kodu aşağıdaki kodla değiştirin.  
   
     ```vb  
     Class MainWindow   
@@ -199,7 +199,7 @@ Bu çağrı beklenmediğinden, çağrı tamamlanmadan geçerli yöntemin yürüt
     ' Exiting the Click event handler.  
     ```  
   
-5.  Programı çalıştırın ve ardından F5 tuşuna basın **Başlat** düğmesi.  
+5. Programı çalıştırın ve ardından F5 tuşuna basın **Başlat** düğmesi.  
   
      Beklenen çıkış kodu sonunda görünür.  
   

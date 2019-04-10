@@ -2,12 +2,12 @@
 title: SQL Server Veri Türleri ve ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 90589f54728ad5e887b96f37f96ff31928c680ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168421"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326313"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server Veri Türleri ve ADO.NET
 SQL Server ve .NET Framework, olası veri kaybına neden farklı tür sistemlerde temel alır. SQL Server için .NET Framework veri sağlayıcısı veri bütünlüğünü korumak için (<xref:System.Data.SqlClient>) SQL Server verilerle çalışmak için belirlenmiş erişimci yöntemlerini sağlar. Numaralandırmalara kullanabileceğiniz <xref:System.Data.SqlDbType> belirtmek için sınıflar <xref:System.Data.SqlClient.SqlParameter> veri türleri.  
@@ -20,7 +20,7 @@ SQL Server ve .NET Framework, olası veri kaybına neden farklı tür sistemlerd
   
  **SQL Server Çevrimiçi Kitaplar**  
   
-1.  [Veri türleri (veritabanı altyapısı)](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [Veri türleri (veritabanı altyapısı)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SqlTypes ve DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  

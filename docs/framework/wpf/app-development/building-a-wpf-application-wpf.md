@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184489"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300963"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 Windows Presentation Foundation (WPF) uygulamaları olarak derlenebilir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] yürütülebilir (.exe) kütüphaneler (.dll) veya her iki tür derlemeleri birleşimi. Bu konu nasıl oluşturulacağını tanıtır [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamalar ve anahtar derleme işlemindeki adımları açıklar.  
@@ -57,11 +57,11 @@ Windows Presentation Foundation (WPF) uygulamaları olarak derlenebilir [!INCLUD
   
  Bu adım sırasında aşağıdaki etkinlikleri gerçekleşmesi her [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yani dosya bir `Page` öğesi oluşturun:  
   
-1.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dosya biçimlendirme derleyici tarafından ayrıştırılır.  
+1. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dosya biçimlendirme derleyici tarafından ayrıştırılır.  
   
-2.  Derlenmiş bir gösterimi için oluşturulan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve obj\Release klasörüne kopyalanır.  
+2. Derlenmiş bir gösterimi için oluşturulan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ve obj\Release klasörüne kopyalanır.  
   
-3.  Yeni bir kısmi sınıf CodeDOM gösterimini oluşturulur ve obj\Release klasörüne kopyalanır.  
+3. Yeni bir kısmi sınıf CodeDOM gösterimini oluşturulur ve obj\Release klasörüne kopyalanır.  
   
  Dile özgü kod dosyası için ek olarak, oluşturulan her [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya. Örneğin, Visual Basic projesinde Page1.xaml sayfası için bir Page1.g.vb oluşturulur; C# projesinde Page1.xaml sayfası için bir Page1.g.cs oluşturulur. Dosya oluşturulduğunda dosya adı ".g" gösterir işaretleme dosyasının bir üst düzey öğe için bir kısmi sınıf bildirimine sahip kod (gibi `Page` veya `Window`). Sınıfı ile bildirilen `partial` C# değiştiricisi (`Extends` Visual Basic'te) sınıfın başka bir yerde başka bir bildirim belirtmek için genellikle arka plan kod içinde Page1.xaml.cs dosyası.  
   

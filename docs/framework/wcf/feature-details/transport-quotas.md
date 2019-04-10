@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174635"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299312"
 ---
 # <a name="transport-quotas"></a>Taşıma Kotaları
 Taşıma kotaları bağlantı aşırı kaynakları tüketen ne zaman karar için bir ilke mekanizmasıdır. Kota kota değeri aşıldı sonra ek kaynaklar kullanımını engelleyen bir sınıra sahiptir. Taşıma kotaları kötü amaçlı veya istenmeyen hizmet reddi saldırılarını engeller.  
@@ -100,9 +100,9 @@ Taşıma kotaları bağlantı aşırı kaynakları tüketen ne zaman karar için
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1.  `MaxBufferSize` Aktarım kotası kullanılabilir ise yalnızca `BasicHttp` bağlama. `WSHttp` Bağlamaları akış aktarım modu desteği olmayan senaryolar için vardır.  
+1. `MaxBufferSize` Aktarım kotası kullanılabilir ise yalnızca `BasicHttp` bağlama. `WSHttp` Bağlamaları akış aktarım modu desteği olmayan senaryolar için vardır.  
   
-2.  Taşıma kotaları `MaxPendingConnections` ve `MaxOutboundConnectionsPerEndpoint` adlı bir tek aktarım kotası birleştirilir `MaxConnections`.  
+2. Taşıma kotaları `MaxPendingConnections` ve `MaxOutboundConnectionsPerEndpoint` adlı bir tek aktarım kotası birleştirilir `MaxConnections`.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Taşıma kotaları yapılandırmasından denetleme  
  Uygulama yapılandırması, doğrudan bir bağlaması üzerindeki özelliklerine erişme olarak aynı taşıma kotaları ayarlayabilirsiniz. Yapılandırma dosyalarında aktarım kotası adını her zaman küçük harfle başlar. Örneğin, `CloseTimeout` karşılık gelen bir bağlama özelliği `closeTimeout` yapılandırmasında ayarlama ve `MaxConnections` karşılık gelen bir bağlama özelliği `maxConnections` yapılandırmasında ayarlama.  

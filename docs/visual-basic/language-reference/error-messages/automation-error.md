@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID440
 ms.assetid: 2c4be5c5-2f0d-4a2b-96fe-d1b24f08fc4c
-ms.openlocfilehash: e0ebaabb14cf5685469f88b0be3b7fece017165e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8370f744b916ce4a797c808ed58c5fc9580e6278
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304318"
 ---
 # <a name="automation-error"></a>Otomasyon hatası
 Yöntem yürütme veya alma veya bir nesne değişkeninin bir özelliği ayarlamak bir hata oluştu. Nesnesini oluşturan uygulama tarafından bildirilen hata.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Özelliklerini denetleyin `Err` kaynak ve hatanın yapısını belirlemek için nesne.  
+1. Özelliklerini denetleyin `Err` kaynak ve hatanın yapısını belirlemek için nesne.  
   
-2.  Kullanım `On Error Resume Next` deyimi erişimi deyimi hemen önce ve sonra hemen sonra erişim deyim hataları olup olmadığını denetleyin.  
+2. Kullanım `On Error Resume Next` deyimi erişimi deyimi hemen önce ve sonra hemen sonra erişim deyim hataları olup olmadığını denetleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

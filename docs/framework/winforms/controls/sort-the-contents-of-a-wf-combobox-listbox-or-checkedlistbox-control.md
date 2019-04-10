@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: 4db1c133aabe39232a891183356e9c1b712f5cc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150611"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312585"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminin İçeriğini Sıralama
 Windows Forms denetimleri verilere bağlı olduklarında sıralamayın. Sıralanmış verileri görüntülemek için sıralama destekleyen bir veri kaynağı kullanıyorsanız ve ardından sıralanmasını veri kaynağı. Sıralama destekleyen veri kaynakları veri görünümleri, veri yöneticilerini görüntülemek ve diziler sıralanır.  
@@ -22,7 +22,7 @@ Windows Forms denetimleri verilere bağlı olduklarında sıralamayın. Sıralan
   
 ### <a name="to-sort-the-list"></a>Listeyi sıralamak için  
   
-1.  Ayarlama `Sorted` özelliğini `true`.  
+1. Ayarlama `Sorted` özelliğini `true`.  
   
      Bu ayar tüm varolan liste öğelerini sıralanmış olarak yeniden konumlandırır.  
   

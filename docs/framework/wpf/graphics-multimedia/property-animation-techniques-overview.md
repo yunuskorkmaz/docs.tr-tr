@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165444"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317915"
 ---
 # <a name="property-animation-techniques-overview"></a>Özellik Animasyon Tekniklerine Genel Bakış
 Bu konuda özellikleri farklı yaklaşım açıklanmaktadır: görsel Taslaklar, yerel animasyonları, saatler ve başına-çerçeve animasyonlara.  
@@ -42,13 +42,13 @@ Bu konuda özellikleri farklı yaklaşım açıklanmaktadır: görsel Taslaklar,
   
  A <xref:System.Windows.Media.Animation.Storyboard> kapsayıcı özel bir tür <xref:System.Windows.Media.Animation.Timeline> içerdiği animasyon için hedefleme bilgileri sağlar. İle animasyon uygulamak için bir <xref:System.Windows.Media.Animation.Storyboard>, aşağıdaki üç adımı tamamlayın.  
   
-1.  Bildirme bir <xref:System.Windows.Media.Animation.Storyboard> ve bir veya daha fazla animasyonları.  
+1. Bildirme bir <xref:System.Windows.Media.Animation.Storyboard> ve bir veya daha fazla animasyonları.  
   
-2.  Kullanım <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> ve <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> hedef nesne belirtmek için özellikleri ve özellik animasyonun bağlı.  
+2. Kullanım <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> ve <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> hedef nesne belirtmek için özellikleri ve özellik animasyonun bağlı.  
   
-3.  (Yalnızca kod) Tanımlayan bir <xref:System.Windows.NameScope> için bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>. İle animasyon uygulamak için nesnelerin adlarını kaydetmeleri <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>.  
+3. (Yalnızca kod) Tanımlayan bir <xref:System.Windows.NameScope> için bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>. İle animasyon uygulamak için nesnelerin adlarını kaydetmeleri <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>.  
   
-4.  Başlamak <xref:System.Windows.Media.Animation.Storyboard>.  
+4. Başlamak <xref:System.Windows.Media.Animation.Storyboard>.  
   
  Başlayan bir <xref:System.Windows.Media.Animation.Storyboard> bunlar animasyon özelliklerine animasyon uygular ve bunları başlatır. Başlamak için iki yolu vardır bir <xref:System.Windows.Media.Animation.Storyboard>: kullanabilirsiniz <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi tarafından sağlanan <xref:System.Windows.Media.Animation.Storyboard> sınıfı veya kullanabileceğiniz bir <xref:System.Windows.Media.Animation.BeginStoryboard> eylem. İçinde animasyon uygulamak için tek yolu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kullanmaktır bir <xref:System.Windows.Media.Animation.BeginStoryboard> eylem. A <xref:System.Windows.Media.Animation.BeginStoryboard> eylemi kullanılabilir bir <xref:System.Windows.EventTrigger>, özellik <xref:System.Windows.Trigger>, veya bir <xref:System.Windows.DataTrigger>.  
   
@@ -70,9 +70,9 @@ Bu konuda özellikleri farklı yaklaşım açıklanmaktadır: görsel Taslaklar,
   
  Yerel animasyon kullanarak animasyon uygulamak için aşağıdaki adımları tamamlayın.  
   
-1.  Oluşturma bir <xref:System.Windows.Media.Animation.AnimationTimeline> nesne.  
+1. Oluşturma bir <xref:System.Windows.Media.Animation.AnimationTimeline> nesne.  
   
-2.  Kullanım <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> uygulamak için animasyon uygulamak istediğiniz nesneye yöntemi <xref:System.Windows.Media.Animation.AnimationTimeline> belirttiğiniz özelliğine.  
+2. Kullanım <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> uygulamak için animasyon uygulamak istediğiniz nesneye yöntemi <xref:System.Windows.Media.Animation.AnimationTimeline> belirttiğiniz özelliğine.  
   
  Aşağıdaki örnekte, genişlik ve arka plan rengini animasyon ekleme işlemi gösterilmektedir bir <xref:System.Windows.Controls.Button>.  
   
@@ -87,11 +87,11 @@ Bu konuda özellikleri farklı yaklaşım açıklanmaktadır: görsel Taslaklar,
   
  Tek bir uygulamaya <xref:System.Windows.Media.Animation.Clock> bir özellik için aşağıdaki adımları tamamlayın.  
   
-1.  Oluşturma bir <xref:System.Windows.Media.Animation.AnimationTimeline> nesne.  
+1. Oluşturma bir <xref:System.Windows.Media.Animation.AnimationTimeline> nesne.  
   
-2.  Kullanım <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> yöntemi <xref:System.Windows.Media.Animation.AnimationTimeline> oluşturmak için bir <xref:System.Windows.Media.Animation.AnimationClock>.  
+2. Kullanım <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> yöntemi <xref:System.Windows.Media.Animation.AnimationTimeline> oluşturmak için bir <xref:System.Windows.Media.Animation.AnimationClock>.  
   
-3.  Kullanım <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> uygulamak için animasyon uygulamak istediğiniz nesneye yöntemi <xref:System.Windows.Media.Animation.AnimationClock> belirttiğiniz özelliğine.  
+3. Kullanım <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> uygulamak için animasyon uygulamak istediğiniz nesneye yöntemi <xref:System.Windows.Media.Animation.AnimationClock> belirttiğiniz özelliğine.  
   
  Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Media.Animation.AnimationClock> ve iki benzer özellikleri için geçerlidir.  
   
@@ -100,11 +100,11 @@ Bu konuda özellikleri farklı yaklaşım açıklanmaktadır: görsel Taslaklar,
   
  Bir zamanlama ağacını oluşturmak ve Canlandır özellikleri kullanmak için aşağıdaki adımları tamamlayın.  
   
-1.  Kullanım <xref:System.Windows.Media.Animation.ParallelTimeline> ve <xref:System.Windows.Media.Animation.AnimationTimeline> Zamanlama ağacını oluşturmak için nesne.  
+1. Kullanım <xref:System.Windows.Media.Animation.ParallelTimeline> ve <xref:System.Windows.Media.Animation.AnimationTimeline> Zamanlama ağacını oluşturmak için nesne.  
   
-2.  Kullanım <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> kök <xref:System.Windows.Media.Animation.ParallelTimeline> oluşturmak için bir <xref:System.Windows.Media.Animation.ClockGroup>.  
+2. Kullanım <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> kök <xref:System.Windows.Media.Animation.ParallelTimeline> oluşturmak için bir <xref:System.Windows.Media.Animation.ClockGroup>.  
   
-3.  Yinelemek <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> , <xref:System.Windows.Media.Animation.ClockGroup> ve kendi alt uygulama <xref:System.Windows.Media.Animation.Clock> nesneleri. Her <xref:System.Windows.Media.Animation.AnimationClock> alt, kullanım <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> uygulamak için animasyon uygulamak istediğiniz nesneye yöntemi <xref:System.Windows.Media.Animation.AnimationClock> belirttiğiniz özelliğine  
+3. Yinelemek <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> , <xref:System.Windows.Media.Animation.ClockGroup> ve kendi alt uygulama <xref:System.Windows.Media.Animation.Clock> nesneleri. Her <xref:System.Windows.Media.Animation.AnimationClock> alt, kullanım <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> uygulamak için animasyon uygulamak istediğiniz nesneye yöntemi <xref:System.Windows.Media.Animation.AnimationClock> belirttiğiniz özelliğine  
   
  Saat nesneleri hakkında daha fazla bilgi için bkz. [animasyon ve zamanlama sistemine genel bakış](animation-and-timing-system-overview.md).  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e696a6add8d5182fbf78cbbab26de47e0c0f684
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f71cebc164e7b324dc847c67d3e0e49e856c11c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097505"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306540"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET framework Dağıtım Kılavuzu
 Bu konu için .NET Framework 4.5 .NET Framework'ün herhangi bir sürümünü yüklemek için isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] uygulamalarıyla birlikte.
@@ -117,23 +117,23 @@ Uygulamanızı dağıtmak için ClickOnce, Installaware, InstallShield veya WiX 
 
  Görsel ClickOnce dağıtımını seçmek ve .NET Framework üzerine bağımlılık eklemek için Studio'yu içinde:
 
-1.  Yayımlamak istediğiniz uygulama projesini açın.
+1. Yayımlamak istediğiniz uygulama projesini açın.
 
-2.  Çözüm Gezgini'nde projenizin kısayol menüsünü açın ve ardından **özellikleri**.
+2. Çözüm Gezgini'nde projenizin kısayol menüsünü açın ve ardından **özellikleri**.
 
-3.  Seçin **Yayımla** bölmesi.
+3. Seçin **Yayımla** bölmesi.
 
-4.  Seçin **önkoşulları** düğmesi.
+4. Seçin **önkoşulları** düğmesi.
 
-5.  İçinde **önkoşulları** iletişim kutusunda, emin olun **Önkoşul bileşenlerini yüklemek için Kurulum programını Oluştur** onay kutusu seçilidir.
+5. İçinde **önkoşulları** iletişim kutusunda, emin olun **Önkoşul bileşenlerini yüklemek için Kurulum programını Oluştur** onay kutusu seçilidir.
 
-6.  Önkoşullar listesinde bulun ve projenizi yapılandırmak için kullandığınız .NET Framework sürümünü seçin.
+6. Önkoşullar listesinde bulun ve projenizi yapılandırmak için kullandığınız .NET Framework sürümünü seçin.
 
-7.  Önkoşullar için kaynak konumunu belirtin ve ardından bir seçenek belirleyin **Tamam**.
+7. Önkoşullar için kaynak konumunu belirtin ve ardından bir seçenek belirleyin **Tamam**.
 
      .NET Framework indirme konumu için bir URL sağlarsanız, Microsoft Download Center sitesi veya kendinize ait bir site belirtebilirsiniz. Kendi sunucunuza yeniden dağıtılabilir paketi yerleştiriyorsanız, çevrimdışı yükleyici olmalı ve web yükleyicisi olmalıdır. Yalnızca Microsoft Download Center web yükleyicisini bağlayabilirsiniz. URL, kendi uygulamanızı dağıtılmakta bir disk olarak da belirtebilirsiniz.
 
-8.  İçinde **özellik sayfaları** iletişim kutusunda **Tamam**.
+8. İçinde **özellik sayfaları** iletişim kutusunda **Tamam**.
 
 <a name="installaware"></a> 
 ### <a name="installaware-deployment"></a>Installaware dağıtım
@@ -142,19 +142,19 @@ Installaware Windows uygulaması (APPX), Windows Installer (MSI), yerel kod (EXE
 ### <a name="installshield-deployment"></a>InstallShield dağıtımı
  Görsel InstallShield dağıtımı seçmek ve .NET Framework üzerine bağımlılık eklemek için Studio'yu içinde:
 
-1.  Visual Studio menü çubuğunda **dosya**, **yeni**, **proje**.
+1. Visual Studio menü çubuğunda **dosya**, **yeni**, **proje**.
 
-2.  Sol bölmesinde **yeni proje** iletişim kutusunda **diğer proje türleri**, **Kurulum ve dağıtım**, **InstallShield LE**.
+2. Sol bölmesinde **yeni proje** iletişim kutusunda **diğer proje türleri**, **Kurulum ve dağıtım**, **InstallShield LE**.
 
-3.  İçinde **adı** kutusuna projeniz için bir ad yazın ve ardından **Tamam**.
+3. İçinde **adı** kutusuna projeniz için bir ad yazın ve ardından **Tamam**.
 
-4.  İlk kez kurulum ve dağıtım proje oluşturuyorsanız, seçin **Installshield'e Git** veya **InstallShield Limited Edition'ı Etkinleştir** sürümünüz için InstallShield Limited Edition'ı indirmek için Microsoft Visual Studio. Visual Studio'yu yeniden başlatın.
+4. İlk kez kurulum ve dağıtım proje oluşturuyorsanız, seçin **Installshield'e Git** veya **InstallShield Limited Edition'ı Etkinleştir** sürümünüz için InstallShield Limited Edition'ı indirmek için Microsoft Visual Studio. Visual Studio'yu yeniden başlatın.
 
-5.  Git **proje Yardımcısı** Sihirbazı'nı seçip **uygulama dosyaları** proje çıktısı eklemek için. Bu sihirbazı kullanarak diğer proje öznitelikleri yapılandırabilirsiniz.
+5. Git **proje Yardımcısı** Sihirbazı'nı seçip **uygulama dosyaları** proje çıktısı eklemek için. Bu sihirbazı kullanarak diğer proje öznitelikleri yapılandırabilirsiniz.
 
-6.  Git **yükleme gereksinimlerini** ve işletim sistemleri ve yüklemek istediğiniz .NET Framework sürümünü seçin.
+6. Git **yükleme gereksinimlerini** ve işletim sistemleri ve yüklemek istediğiniz .NET Framework sürümünü seçin.
 
-7.  Kurulum projeniz için kısayol menüsünü açın ve seçin **yapı**.
+7. Kurulum projeniz için kısayol menüsünü açın ve seçin **yapı**.
  
 <a name="wix"></a> 
 ### <a name="windows-installer-xml-wix-deployment"></a>Windows Installer XML (WiX) dağıtımı

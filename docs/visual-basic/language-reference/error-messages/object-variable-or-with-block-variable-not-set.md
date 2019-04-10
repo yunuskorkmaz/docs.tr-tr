@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297934"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Nesne değişkeni veya With bloğu değişkeni ayarlanmamış
 Geçersiz nesne değişkeni başvuruda bulunuyor.   Bu hata, çeşitli nedenlerle oluşabilir:  
@@ -36,7 +36,7 @@ Geçersiz nesne değişkeni başvuruda bulunuyor.   Bu hata, çeşitli nedenlerl
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Ayarlama `Option Strict` için `On` dosyasının başına aşağıdaki kodu ekleyerek:  
+1. Ayarlama `Option Strict` için `On` dosyasının başına aşağıdaki kodu ekleyerek:  
   
 ```vb  
 Option Strict On  
@@ -44,13 +44,13 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  Etkinleştirmek istemiyorsanız `Option Strict`, olmadan bir türü belirtilmiş tüm değişkenler için kodunuzu arama (`Dim x` yerine `Dim x As String`) ve amaçlanan türü bildirimini ekleyin.  
+2. Etkinleştirmek istemiyorsanız `Option Strict`, olmadan bir türü belirtilmiş tüm değişkenler için kodunuzu arama (`Dim x` yerine `Dim x As String`) ve amaçlanan türü bildirimini ekleyin.  
   
-3.  Olarak ayarlanan bir nesne değişkenine başvuran olmayan emin `Nothing`.  Kodunuz için bir anahtar sözcük arama `Nothing`ve böylece nesnenin belirlendiğinden, kodunuzu gözden geçirme `Nothing` sonra başvurduğunuz kadar.  
+3. Olarak ayarlanan bir nesne değişkenine başvuran olmayan emin `Nothing`.  Kodunuz için bir anahtar sözcük arama `Nothing`ve böylece nesnenin belirlendiğinden, kodunuzu gözden geçirme `Nothing` sonra başvurduğunuz kadar.  
   
-4.  Bunları erişmeden önce herhangi bir dizi değişkeni dimensioned emin olun. Dizinin ilk oluşturduğunuzda, bir boyut ya da atayabilirsiniz (`Dim x(5) As String` yerine `Dim x() As String`), veya `ReDim` ilk erişmeden önce dizinin boyut sayısını ayarlamak için anahtar sözcüğü.  
+4. Bunları erişmeden önce herhangi bir dizi değişkeni dimensioned emin olun. Dizinin ilk oluşturduğunuzda, bir boyut ya da atayabilirsiniz (`Dim x(5) As String` yerine `Dim x() As String`), veya `ReDim` ilk erişmeden önce dizinin boyut sayısını ayarlamak için anahtar sözcüğü.  
   
-5.  Emin olun, `With` blok yürüterek başlatılan `With` deyimi giriş noktası.  
+5. Emin olun, `With` blok yürüterek başlatılan `With` deyimi giriş noktası.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

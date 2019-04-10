@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 56e4a3f95c7449ae5693172728c9d777113679bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a11334abc83db20bec06fd2459d7b8598f672f2f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101308"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317486"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Nasıl yapılır: Intercept Data Service Messages (WCF Veri Hizmetleri)
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], işlem için özel mantığı ekleyebilirsiniz, böylece istek iletilerinin yakalayabilirsiniz. Bir ileti kesmeye data Service'te özel öznitelikli yöntem kullanın. Daha fazla bilgi için [dinleyicileri](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  
@@ -22,23 +22,23 @@ ms.locfileid: "59101308"
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>Siparişler varlık kümesi için bir sorgu dinleyiciyi tanımlamak için  
   
-1.  Northwind verileri hizmeti projesindeki Northwind.svc dosyasını açın.  
+1. Northwind verileri hizmeti projesindeki Northwind.svc dosyasını açın.  
   
-2.  Kod sayfasını `Northwind` sınıfında, aşağıdaki `using` deyimi (`Imports` Visual Basic'te).  
+2. Kod sayfasını `Northwind` sınıfında, aşağıdaki `using` deyimi (`Imports` Visual Basic'te).  
   
      [!code-csharp[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#usinglinqexpressions)]
      [!code-vb[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#usinglinqexpressions)]  
   
-3.  İçinde `Northwind` sınıfı, adlandırılan bir hizmet işlemi yöntemi tanımlayın `OnQueryOrders` gibi:  
+3. İçinde `Northwind` sınıfı, adlandırılan bir hizmet işlemi yöntemi tanımlayın `OnQueryOrders` gibi:  
   
      [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
      [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
 ### <a name="to-define-a-change-interceptor-for-the-products-entity-set"></a>Ürünleri varlık kümesi için bir değişiklik dinleyiciyi tanımlamak için  
   
-1.  Northwind verileri hizmeti projesindeki Northwind.svc dosyasını açın.  
+1. Northwind verileri hizmeti projesindeki Northwind.svc dosyasını açın.  
   
-2.  İçinde `Northwind` sınıfı, adlandırılan bir hizmet işlemi yöntemi tanımlayın `OnChangeProducts` gibi:  
+2. İçinde `Northwind` sınıfı, adlandırılan bir hizmet işlemi yöntemi tanımlayın `OnChangeProducts` gibi:  
   
      [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
      [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  

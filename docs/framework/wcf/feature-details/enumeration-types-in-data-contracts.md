@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195884"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309647"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Veri Sözleşmelerinde Numaralandırma Türleri
 Numaralandırmalar veri sözleşme modelindeki ifade edilebilir. Bu konuda bir programlama modeli açıklayan birkaç örneklerle size yol gösterir.  
@@ -79,11 +79,11 @@ Numaralandırmalar veri sözleşme modelindeki ifade edilebilir. Bu konuda bir p
   
  Bir bayrağın numaralandırma değeri göndermek için aşağıdaki adımları uygulayın:  
   
-1.  Bir numaralandırma üyesine bulmaya (ile <xref:System.Runtime.Serialization.EnumMemberAttribute> özniteliği uygulandı) sayısal değere eşler. Varsa bulunan, söz konusu üyeyi içeren bir liste Gönder.  
+1. Bir numaralandırma üyesine bulmaya (ile <xref:System.Runtime.Serialization.EnumMemberAttribute> özniteliği uygulandı) sayısal değere eşler. Varsa bulunan, söz konusu üyeyi içeren bir liste Gönder.  
   
-2.  Vardır numaralandırma üyelerini, sayısal değerin toplam kaldırmaya çalışan (her biri <xref:System.Runtime.Serialization.EnumMemberAttribute> özniteliği uygulandı) her bir parçasının toplamı eşleyin. Bu üye listesini gönderin. Unutmayın *doyumsuz algoritması* böyle bir toplam bulmak için kullanılır ve bu nedenle, mevcut olsa bile, tür toplam bulunan bir garanti yoktur. Bu sorunu önlemek için sayısal değerlerin numaralandırma üyelerinin powers iki olduğundan emin olun.  
+2. Vardır numaralandırma üyelerini, sayısal değerin toplam kaldırmaya çalışan (her biri <xref:System.Runtime.Serialization.EnumMemberAttribute> özniteliği uygulandı) her bir parçasının toplamı eşleyin. Bu üye listesini gönderin. Unutmayın *doyumsuz algoritması* böyle bir toplam bulmak için kullanılır ve bu nedenle, mevcut olsa bile, tür toplam bulunan bir garanti yoktur. Bu sorunu önlemek için sayısal değerlerin numaralandırma üyelerinin powers iki olduğundan emin olun.  
   
-3.  Önceki iki adımı başarısız ve sayısal değer sıfır olmayan, throw bir <xref:System.Runtime.Serialization.SerializationException>. Sayısal değer sıfır ise, boş liste gönderin.  
+3. Önceki iki adımı başarısız ve sayısal değer sıfır olmayan, throw bir <xref:System.Runtime.Serialization.SerializationException>. Sayısal değer sıfır ise, boş liste gönderin.  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnekte sabit listesi bayrağı işleminde kullanılabilir.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: bd9a708b99d11b90e47c3413bb0003ce2def13a1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833729"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300804"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Bir projenin taşınabilir yürütülebilir (PE) dosya gömülü olması için kullanıcı tanımlı Win32 uygulama bildirim dosyası tanımlar.  
@@ -38,9 +38,9 @@ Bir projenin taşınabilir yürütülebilir (PE) dosya gömülü olması için k
   
  Aşağıdaki koşullardan biri doğru ise, uygulama sanallaştırma tabi olacaktır:  
   
-1.  Kullandığınız `-nowin32manifest` seçeneğini sağlamaz daha yeni bir derleme adımı veya bir Windows kaynağı (.res) dosyasının bir parçası olarak bir bildirim kullanarak `-win32resource` seçeneği.  
+1. Kullandığınız `-nowin32manifest` seçeneğini sağlamaz daha yeni bir derleme adımı veya bir Windows kaynağı (.res) dosyasının bir parçası olarak bir bildirim kullanarak `-win32resource` seçeneği.  
   
-2.  İstenen yürütme düzeyini belirtmeyen bir özel bildirim sağlar.  
+2. İstenen yürütme düzeyini belirtmeyen bir özel bildirim sağlar.  
   
  Visual Studio varsayılan .manifest dosyasını oluşturur ve hata ayıklama ve yayın dizinleri yürütülebilir dosyanın yanında depolar. Görüntüleyebilir veya tıklayarak varsayılan app.manifest dosyasını düzenleyin **UAC ayarları görüntüle** üzerinde **uygulama** Proje Tasarımcısı'nda sekmesi. Daha fazla bilgi için [uygulama sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
@@ -68,5 +68,5 @@ Bir projenin taşınabilir yürütülebilir (PE) dosya gömülü olması için k
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Komut Satırı Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)

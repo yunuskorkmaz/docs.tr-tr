@@ -2,12 +2,12 @@
 title: Denetim akışı zaman uyumsuz programlarda (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 45d349fa131daf3fdf39d29d53d8ec236c79f81f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326209"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Denetim akışı zaman uyumsuz programlarda (C#)
 
@@ -99,11 +99,11 @@ Bu konuda kullanan kodu MSDN sitesinden yükleyebilir veya size kendiniz oluştu
 
 Bu konu için uygulamayı indirebilirsiniz [zaman uyumsuz örneği: Denetim akışı zaman uyumsuz programlarda](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Aşağıdaki adımlar, açın ve programı çalıştırın.
 
-1.  İndirilen dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.
+1. İndirilen dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.
 
-2.  Menü çubuğunda, **dosya** > **açık** > **proje/çözüm**.
+2. Menü çubuğunda, **dosya** > **açık** > **proje/çözüm**.
 
-3.  Çözüm (.sln) dosyasını aç sıkıştırması açılmış örnek kodun bulunduğu klasöre gidin ve ardından **F5** anahtarı oluşturun ve projeyi çalıştırın.
+3. Çözüm (.sln) dosyasını aç sıkıştırması açılmış örnek kodun bulunduğu klasöre gidin ve ardından **F5** anahtarı oluşturun ve projeyi çalıştırın.
 
 ### <a name="create-the-program-yourself"></a>Programı kendiniz oluşturun
 
@@ -111,23 +111,23 @@ Aşağıdaki Windows Presentation Foundation (WPF) projesi Bu konu için kod ör
 
 Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:
 
-1.  Visual Studio’yu çalıştırın.
+1. Visual Studio’yu çalıştırın.
 
-2.  Menü çubuğunda, **dosya** > **yeni** > **proje**.
+2. Menü çubuğunda, **dosya** > **yeni** > **proje**.
 
      **Yeni proje** iletişim kutusu açılır.
 
-3.  Seçin **yüklü** > **Visual C#** > **Windows Masaüstü** kategori seçip **WPF uygulaması** Proje şablonları listesinden.
+3. Seçin **yüklü** > **Visual C#** > **Windows Masaüstü** kategori seçip **WPF uygulaması** Proje şablonları listesinden.
 
-4.  Girin `AsyncTracer` projesinin adı olarak seçip **Tamam** düğmesi.
+4. Girin `AsyncTracer` projesinin adı olarak seçip **Tamam** düğmesi.
 
      Yeni Proje görünür **Çözüm Gezgini**.
 
-5.  Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.
+5. Visual Studio Kod Düzenleyicisi'nde seçin **MainWindow.xaml** sekmesi.
 
      Sekme görünür değilse, nde MainWindow.xaml için kısayol menüsünü açın **Çözüm Gezgini**ve ardından **kodu görüntüle**.
 
-6.  İçinde **XAML** MainWindow.xaml görüntülemek için kodu aşağıdaki kodla değiştirin.
+6. İçinde **XAML** MainWindow.xaml görüntülemek için kodu aşağıdaki kodla değiştirin.
 
     ```csharp
     <Window
@@ -145,9 +145,9 @@ Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:
 
      Bir metin kutusu ve bir düğme içeren basit bir pencere **tasarım** MainWindow.xaml görünümü.
 
-7.  İçin bir başvuru eklemeniz <xref:System.Net.Http>.
+7. İçin bir başvuru eklemeniz <xref:System.Net.Http>.
 
-8.  İçinde **Çözüm Gezgini**için MainWindow.xaml.cs kısayol menüsünü açın ve ardından **kodu görüntüle**.
+8. İçinde **Çözüm Gezgini**için MainWindow.xaml.cs kısayol menüsünü açın ve ardından **kodu görüntüle**.
 
 9. MainWindow.xaml.cs kodu aşağıdaki kodla değiştirin.
 
@@ -390,4 +390,4 @@ int contentLength = await getLengthTask;
 - [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Zaman uyumsuz dönüş türleri (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Zaman uyumsuz örneği: Denetim akışı zaman uyumsuz programlarda (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Zaman uyumsuz örneği: Zaman Uyumsuz Programlarda Denetim Akışı (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: ec20068e2cc920048b2d831db75ea2b4deb3f888
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: af56e01c1c8c1e23bb80413ce6f52a5f6d467b4b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151456"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307272"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Nasıl yapılır: Hizmet Uygulamasına Yükleyiciler Ekleme
 Visual Studio hizmet uygulamalarınızla ilişkili kaynakları yükleyebilmek için Yükleme bileşenleri ile birlikte gelir. Yükleme bileşenleri olarak yüklendiği ve Hizmet Denetim Yöneticisi hizmetinin var olduğunu bilmek istiyorum sistemdeki tek tek bir hizmeti kaydedin. Bir hizmet uygulaması ile çalışırken, Özellikler penceresinde otomatik olarak uygun yükleyicileri projenize eklemek için bağlantıyı seçebilirsiniz.  
@@ -33,17 +33,17 @@ Visual Studio hizmet uygulamalarınızla ilişkili kaynakları yükleyebilmek i�
   
 ### <a name="to-add-installers-to-your-service-application"></a>Hizmet uygulamasına yükleyiciler ekleme  
   
-1.  İçinde **Çözüm Gezgini**, erişim **tasarım** görünümü için bir yükleme bileşeni eklemek istediğiniz hizmet.  
+1. İçinde **Çözüm Gezgini**, erişim **tasarım** görünümü için bir yükleme bileşeni eklemek istediğiniz hizmet.  
   
-2.  Hizmet seçmek için tasarımcının arka planını kendisi yerine herhangi bir içeriğini tıklayın.  
+2. Hizmet seçmek için tasarımcının arka planını kendisi yerine herhangi bir içeriğini tıklayın.  
   
-3.  Odak, sağ tıklayın ve ardından Tasarımcısı ile **Yükleyici Ekle**.  
+3. Odak, sağ tıklayın ve ardından Tasarımcısı ile **Yükleyici Ekle**.  
   
      Yeni bir sınıf `ProjectInstaller`ve iki yükleme bileşenleri <xref:System.ServiceProcess.ServiceProcessInstaller> ve <xref:System.ServiceProcess.ServiceInstaller>, hizmet kopyalanır için bileşenleri, proje ve özellik değerlerine eklenir.  
   
-4.  Tıklayın <xref:System.ServiceProcess.ServiceInstaller> bileşeni doğrulayın değerini <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliği aynı değere ayarlanır <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> hizmet özelliği.  
+4. Tıklayın <xref:System.ServiceProcess.ServiceInstaller> bileşeni doğrulayın değerini <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> özelliği aynı değere ayarlanır <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> hizmet özelliği.  
   
-5.  Hizmetinizi kullanmaya nasıl belirlemek için tıklatın <xref:System.ServiceProcess.ServiceInstaller> bileşen ve ayarlanmış <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> özelliğini uygun değer.  
+5. Hizmetinizi kullanmaya nasıl belirlemek için tıklatın <xref:System.ServiceProcess.ServiceInstaller> bileşen ve ayarlanmış <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> özelliğini uygun değer.  
   
     |Değer|Sonuç|  
     |-----------|------------|  
@@ -51,11 +51,11 @@ Visual Studio hizmet uygulamalarınızla ilişkili kaynakları yükleyebilmek i�
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Bilgisayar yeniden başlatıldığında hizmet kendi kendine başlar.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Hizmet başlatılamıyor.|  
   
-6.  Hizmetinizi çalışacağı güvenlik bağlamı belirlemek için tıklatın <xref:System.ServiceProcess.ServiceProcessInstaller> bileşen ve uygun özellik değerlerini ayarlayın. Daha fazla bilgi için [nasıl yapılır: Hizmetler için güvenlik içeriği belirtme](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6. Hizmetinizi çalışacağı güvenlik bağlamı belirlemek için tıklatın <xref:System.ServiceProcess.ServiceProcessInstaller> bileşen ve uygun özellik değerlerini ayarlayın. Daha fazla bilgi için [nasıl yapılır: Hizmetler için güvenlik içeriği belirtme](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
   
-7.  Özel işleme gerçekleştirmek ihtiyaç duyduğunuz herhangi bir yöntemi geçersiz kılın.  
+7. Özel işleme gerçekleştirmek ihtiyaç duyduğunuz herhangi bir yöntemi geçersiz kılın.  
   
-8.  Projenizdeki her bir ek hizmet için 1 ile 7 arasındaki adımları gerçekleştirin.  
+8. Projenizdeki her bir ek hizmet için 1 ile 7 arasındaki adımları gerçekleştirin.  
   
     > [!NOTE]
     >  Projenizdeki her ek hizmet için ek bir eklemelisiniz <xref:System.ServiceProcess.ServiceInstaller> projenin bileşen `ProjectInstaller` sınıfı. <xref:System.ServiceProcess.ServiceProcessInstaller> Üç adımda eklediğiniz bileşen bireysel hizmet yükleyiciler projedeki tüm ile birlikte çalışır.  

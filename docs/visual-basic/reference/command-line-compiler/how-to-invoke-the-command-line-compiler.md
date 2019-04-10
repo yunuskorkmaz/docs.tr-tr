@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 78bf5b1f19db3a4f39e263cfd71283f0f7718631
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 67cad0df3f10ff1fa1f6a58546fe150232fe1283
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817194"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302809"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Nasıl yapılır: (Visual Basic) komut satırı derleyicisini çağırma
 Komut satırına, MS-DOS İstemi olarak da bilinen yürütülebilir dosyasının adını yazarak komut satırı derleyicisini çağırabilirsiniz. Windows komut istemi varsayılan derleme yaparsanız, yürütülebilir dosyanın tam yolunu yazmanız gerekir. Bu varsayılan davranışı geçersiz kılmak için Visual Studio için geliştirici komut istemi kullanın veya yol ortam değişkenine değiştirin. Her ikisi de, derleme adını yazarak herhangi bir dizinden derleme olanak tanır.  
@@ -21,43 +21,43 @@ Komut satırına, MS-DOS İstemi olarak da bilinen yürütülebilir dosyasının
   
 ### <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Visual Studio için geliştirici komut istemi kullanarak derleyici çağırmak için  
   
-1.  Microsoft Visual Studio program grubu içinde Visual Studio Araçları program klasörü açın.  
+1. Microsoft Visual Studio program grubu içinde Visual Studio Araçları program klasörü açın.  
   
-2.  Visual Studio yüklüyse derleyici makinenizde, herhangi bir dizinden erişmek için Visual Studio için geliştirici Komut İstemi'ni kullanabilirsiniz.  
+2. Visual Studio yüklüyse derleyici makinenizde, herhangi bir dizinden erişmek için Visual Studio için geliştirici Komut İstemi'ni kullanabilirsiniz.  
   
-3.  Visual Studio için geliştirici komut istemi çağırın.  
+3. Visual Studio için geliştirici komut istemi çağırın.  
   
-4.  Komut satırında `vbc.exe` *sourceFileName* yazıp ENTER tuşuna basın.  
+4. Komut satırında `vbc.exe` *sourceFileName* yazıp ENTER tuşuna basın.  
   
      Örneğin, kaynak kodunuzu adlı dizinde depolanan `SourceFiles`, türü ve komut istemi açmak `cd SourceFiles` bu dizine gidin. Dizin adlı bir kaynak dosyası içeriyorsa `Source.vb`, yazarak derleme `vbc.exe Source.vb`.  
   
 ### <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>PATH ortam değişkenine derleyicisi için Windows komut istemi ayarlamak için  
   
-1.  Yerel diskinizde Vbc.exe bulmak için Windows Search özelliğini kullanın.  
+1. Yerel diskinizde Vbc.exe bulmak için Windows Search özelliğini kullanın.  
   
      Derleyici bulunduğu dizinin tam adı, Windows dizin konumunu ve ".NET Framework'ün" sürüm bağlıdır. ".NET Framework'ün" birden fazla sürümü varsa, hangi sürümün (genellikle en son sürüm) kullanılacağını belirlemeniz gerekir.  
   
-2.  Öğesinden, **Başlat** menüsünde sağ **Bilgisayarım**ve ardından **özellikleri** kısayol menüsünden.  
+2. Öğesinden, **Başlat** menüsünde sağ **Bilgisayarım**ve ardından **özellikleri** kısayol menüsünden.  
   
-3.  Tıklayın **Gelişmiş** sekmesine ve ardından **ortam değişkenlerini**.  
+3. Tıklayın **Gelişmiş** sekmesine ve ardından **ortam değişkenlerini**.  
   
-4.  İçinde **sistem** değişkenleri bölmesinde **yolu** listesi ve **Düzenle**.  
+4. İçinde **sistem** değişkenleri bölmesinde **yolu** listesi ve **Düzenle**.  
   
-5.  İçinde **düzenleme sistemi** değişken iletişim kutusunda, dizenin sonuna ekleme noktasını Taşı **değişken değeri** alan ve noktalı virgül (;) yazın ardından adım 1'de bulunan tam dizin adı.  
+5. İçinde **düzenleme sistemi** değişken iletişim kutusunda, dizenin sonuna ekleme noktasını Taşı **değişken değeri** alan ve noktalı virgül (;) yazın ardından adım 1'de bulunan tam dizin adı.  
   
-6.  Tıklayın **Tamam** yaptığınız düzenlemeleri onaylamak ve iletişim kutularını kapatmak için.  
+6. Tıklayın **Tamam** yaptığınız düzenlemeleri onaylamak ve iletişim kutularını kapatmak için.  
   
      PATH ortam değişkenine değiştirdikten sonra Visual Basic Derleyicisi Windows komut isteminde herhangi bir dizinden bilgisayarda çalıştırabilirsiniz.  
   
 ### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Windows komut istemi kullanarak derleyici çağırmak için  
   
-1.  Gelen **Başlat** menüsünde tıklatın **Donatılar** klasörünü açın ve ardından açık **Windows Komut İstemi**.  
+1. Gelen **Başlat** menüsünde tıklatın **Donatılar** klasörünü açın ve ardından açık **Windows Komut İstemi**.  
   
-2.  Komut satırında `vbc.exe` *sourceFileName* yazıp ENTER tuşuna basın.  
+2. Komut satırında `vbc.exe` *sourceFileName* yazıp ENTER tuşuna basın.  
   
      Örneğin, kaynak kodunuzu adlı dizinde depolanan `SourceFiles`, türü ve komut istemi açmak `cd SourceFiles` bu dizine gidin. Dizin adlı bir kaynak dosyası içeriyorsa `Source.vb`, yazarak derleme `vbc.exe Source.vb`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Komut Satırı Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Koşullu Derleme](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

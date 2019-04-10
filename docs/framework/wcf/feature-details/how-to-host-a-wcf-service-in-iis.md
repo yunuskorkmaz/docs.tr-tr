@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 8b2ebc108bf3eef60e8877e617acec782da38fa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124559"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309686"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Nasıl yapılır: IIS'de WCF Hizmeti Barındırma
 Bu konuda, Internet Information Services (IIS) barındırılan Windows Communication Foundation (WCF) hizmet oluşturmak için gerekli temel adımlar açıklanmaktadır. Bu konuda, IIS ile ilgili bilgi sahibi olduğunuz ve IIS uygulamaları oluşturmak ve yönetmek için IIS Yönetim Aracı'nı kullanmayı öğrenmenize varsayılır. IIS hakkında daha fazla bilgi için bkz. [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Bir WCF Hizmeti IIS ortamında çalışır gibi işlem geri dönüştürme, IIS özellikleri tüm avantajlarından yararlanır, kapatma, sistem durumu izleme işlemi ve ileti tabanlı etkinleştirme boş. Bu barındırma seçeneği IIS düzgün şekilde yapılandırılmasını gerektirir, ancak uygulamanın bir parçası herhangi bir barındırma kod yazılmasını gerektirmez. Yalnızca bir HTTP aktarımı ile IIS barındırma kullanabilirsiniz.  
@@ -21,28 +21,28 @@ Bu konuda, Internet Information Services (IIS) barındırılan Windows Communica
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>IIS tarafından barındırılan bir hizmet oluşturmak için  
   
-1.  IIS yüklü ve bilgisayarınızda çalışmakta olduğunu doğrulayın. Yükleme ve IIS yapılandırma hakkında daha fazla bilgi için bkz: [yükleme ve IIS 7.0 yapılandırma](https://go.microsoft.com/fwlink/?LinkID=132128)  
+1. IIS yüklü ve bilgisayarınızda çalışmakta olduğunu doğrulayın. Yükleme ve IIS yapılandırma hakkında daha fazla bilgi için bkz: [yükleme ve IIS 7.0 yapılandırma](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2.  "IISHostedCalcService" adlı uygulama dosyalarınızı için yeni bir klasör oluşturun, emin [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] klasörünün içeriğini erişimi vardır ve bu uygulamada bulunan fiziksel olarak yeni bir IIS uygulama oluşturmak için IIS Yönetim Aracı'nı kullanın Dizin. Uygulamanın directory kullan "IISHostedCalc" için bir diğer ad oluştururken.  
+2. "IISHostedCalcService" adlı uygulama dosyalarınızı için yeni bir klasör oluşturun, emin [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] klasörünün içeriğini erişimi vardır ve bu uygulamada bulunan fiziksel olarak yeni bir IIS uygulama oluşturmak için IIS Yönetim Aracı'nı kullanın Dizin. Uygulamanın directory kullan "IISHostedCalc" için bir diğer ad oluştururken.  
   
-3.  Uygulama dizininde, "service.svc" adlı yeni bir dosya oluşturun. Aşağıdakileri ekleyerek bu dosyayı Düzenle @ServiceHost öğesi.  
+3. Uygulama dizininde, "service.svc" adlı yeni bir dosya oluşturun. Aşağıdakileri ekleyerek bu dosyayı Düzenle @ServiceHost öğesi.  
   
     ```  
     <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>  
     ```  
   
-4.  Uygulama dizininin içinde bir App_Code dizin oluşturun.  
+4. Uygulama dizininin içinde bir App_Code dizin oluşturun.  
   
-5.  App_Code alt dizinde adını da adlı bir kod dosyası oluşturun.  
+5. App_Code alt dizinde adını da adlı bir kod dosyası oluşturun.  
   
-6.  Aşağıdaki using deyimlerini adını da dosyasının en üstüne.  
+6. Aşağıdaki using deyimlerini adını da dosyasının en üstüne.  
   
     ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
-7.  Kullandıktan sonra aşağıdaki ad alanı bildirimi ekleyin deyimleri.  
+7. Kullandıktan sonra aşağıdaki ad alanı bildirimi ekleyin deyimleri.  
   
     ```csharp  
     namespace Microsoft.ServiceModel.Samples  
@@ -50,7 +50,7 @@ Bu konuda, Internet Information Services (IIS) barındırılan Windows Communica
     }  
     ```  
   
-8.  Aşağıdaki kodda gösterildiği gibi ad alanı bildirimi içinde hizmet sözleşmesini tanımlamaktır.  
+8. Aşağıdaki kodda gösterildiği gibi ad alanı bildirimi içinde hizmet sözleşmesini tanımlamaktır.  
   
      [!code-csharp[c_HowTo_HostInIIS#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#11)]
      [!code-vb[c_HowTo_HostInIIS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#11)]  

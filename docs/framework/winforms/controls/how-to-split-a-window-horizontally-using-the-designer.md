@@ -6,12 +6,12 @@ helpviewer_keywords:
 - split windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
-ms.openlocfilehash: bf36718600ac1e77be91c4c6eb87ceb44fd5a15f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0dd42f62034ab78407b61e99e2c8940b1b511af
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111390"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325286"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Bir Pencereyi Yatay Bölme
 Bu örnek böler Bölümlendirici yapar <xref:System.Windows.Forms.SplitContainer> denetimi yatay.  
@@ -21,7 +21,7 @@ Bu örnek böler Bölümlendirici yapar <xref:System.Windows.Forms.SplitContaine
   
 ### <a name="to-split-a-window-horizontally"></a>Pencereyi yatay bölme için  
   
-1.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliği <xref:System.Windows.Forms.SplitContainer> denetimini <xref:System.Windows.Forms.Orientation.Horizontal>.  
+1. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliği <xref:System.Windows.Forms.SplitContainer> denetimini <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

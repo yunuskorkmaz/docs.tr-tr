@@ -2,12 +2,12 @@
 title: Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 71e4359686ea2a6b1ae3e8ec840bf25af644a369
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146828"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325728"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması
 Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etkileyen yapıldı <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, ve ilgili sınıflar <xref:System.Net> ve ilgili ad alanları. Güvenliği geliştirmek genişletilmiş koruma için destek eklendi.  
@@ -25,17 +25,17 @@ Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etk
   
  Genel amaçları şunlardır:  
   
-1.  İstemcinin genişletilmiş korumayı desteklemek için güncelleştirdiyseniz, uygulamaları bir kanal bağlama ve tüm desteklenen kimlik doğrulama protokolleri için hizmet bağlama bilgileri vermeniz gerekir. Kanal bağlama bilgileri yalnızca bağlamak için (TLS) kanalı olduğunda sağlanabilir. Hizmet bağlama bilgileri her zaman sağlanmalıdır.  
+1. İstemcinin genişletilmiş korumayı desteklemek için güncelleştirdiyseniz, uygulamaları bir kanal bağlama ve tüm desteklenen kimlik doğrulama protokolleri için hizmet bağlama bilgileri vermeniz gerekir. Kanal bağlama bilgileri yalnızca bağlamak için (TLS) kanalı olduğunda sağlanabilir. Hizmet bağlama bilgileri her zaman sağlanmalıdır.  
   
-2.  Düzgün şekilde yapılandırıldığından güncelleştirilmiş sunucuları istemci kimlik doğrulaması belirtecinde mevcut olduğunda kanal ve hizmet bağlama bilgileri doğrulayın ve kanal bağlamaları eşleşmiyorsa, kimlik doğrulama girişimi reddet. Dağıtım senaryosuna bağlı olarak sunucularına kanal bağlama, hizmet bağlama veya her ikisi de doğrulayabilirsiniz.  
+2. Düzgün şekilde yapılandırıldığından güncelleştirilmiş sunucuları istemci kimlik doğrulaması belirtecinde mevcut olduğunda kanal ve hizmet bağlama bilgileri doğrulayın ve kanal bağlamaları eşleşmiyorsa, kimlik doğrulama girişimi reddet. Dağıtım senaryosuna bağlı olarak sunucularına kanal bağlama, hizmet bağlama veya her ikisi de doğrulayabilirsiniz.  
   
-3.  Güncelleştirilmiş sunucuları, kabul etme veya reddetme ilkesini temel alarak kanal bağlama bilgileri içermeyen alt düzey istemci isteklerini olanağına sahip.  
+3. Güncelleştirilmiş sunucuları, kabul etme veya reddetme ilkesini temel alarak kanal bağlama bilgileri içermeyen alt düzey istemci isteklerini olanağına sahip.  
   
  Genişletilmiş koruma tarafından kullanılan bilgileri birini veya her ikisi de aşağıdaki iki bölümden oluşur:  
   
-1.  Bir kanal bağlama belirteci veya CBT.  
+1. Bir kanal bağlama belirteci veya CBT.  
   
-2.  Bir hizmet asıl adı veya SPN biçiminde bağlama bilgileri hizmeti.  
+2. Bir hizmet asıl adı veya SPN biçiminde bağlama bilgileri hizmeti.  
   
  Hizmet bağlantı bilgilerini belirli hizmet uç noktası kimlik doğrulaması için bir istemcinin hedefi göstergesidir. İstemciden sunucuya aşağıdaki özelliklerle bildiriliyor:  
   
@@ -122,11 +122,11 @@ Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etk
   
  Bu yapılandırmada bir dış güvenli kanal aracılığıyla sunucuya bir istekte bulunulduğunda dış kanal için bir kanal bağlama sorgulanır. Bu kanal bağlama doğrulamak kimlik doğrulama SSPI çağrıları kanal bağlama kimlik doğrulaması blob eşleşmeleri geçirilir. Üç sonuçtan vardır:  
   
-1.  Server'ın temel işletim sistemi genişletilmiş korumayı desteklemiyor. İstek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
+1. Server'ın temel işletim sistemi genişletilmiş korumayı desteklemiyor. İstek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
   
-2.  Dış kanaldan beklenen değerle eşleşmedi bir kanal bağlama alınan istemci belirtilen veya sunucunun genişletilmiş koruma İlkesi yapılandırıldığında, bir kanal bağlama sağlamak istemci başarısız belirten SSPI çağrı başarısız olur için <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>. Her iki durumda da istek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
+2. Dış kanaldan beklenen değerle eşleşmedi bir kanal bağlama alınan istemci belirtilen veya sunucunun genişletilmiş koruma İlkesi yapılandırıldığında, bir kanal bağlama sağlamak istemci başarısız belirten SSPI çağrı başarısız olur için <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>. Her iki durumda da istek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
   
-3.  İstemci doğru kanal bağlama belirtir veya sunucunun genişletilmiş koruma İlkesi ile yapılandırılmış olduğundan bir kanal bağlama belirtmeden bağlanmasına izin <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> istek işleme için uygulamaya döndürülür. Hiçbir hizmet adı denetimi otomatik olarak gerçekleştirilir. Kendi hizmet adı doğrulama kullanarak gerçekleştirmek bir uygulama seçebilirsiniz <xref:System.Net.HttpListenerRequest.ServiceName%2A> özelliği, ancak şu durumlarda yedekli.  
+3. İstemci doğru kanal bağlama belirtir veya sunucunun genişletilmiş koruma İlkesi ile yapılandırılmış olduğundan bir kanal bağlama belirtmeden bağlanmasına izin <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> istek işleme için uygulamaya döndürülür. Hiçbir hizmet adı denetimi otomatik olarak gerçekleştirilir. Kendi hizmet adı doğrulama kullanarak gerçekleştirmek bir uygulama seçebilirsiniz <xref:System.Net.HttpListenerRequest.ServiceName%2A> özelliği, ancak şu durumlarda yedekli.  
   
  Bir uygulamayı sürekli bir HTTP isteğinin gövdesi içinde geçirilen BLOB'ları temel kimlik doğrulaması gerçekleştirmek için kendi SSPI çağrıları yapar ve kanal bağlamayı desteklemek istediği, beklenen kanal bağlama kullanarakdışgüvenlikanaldanalmakgerekiyor<xref:System.Net.HttpListener> yerel Win32'ye geçirmek için [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) işlevi. Bunu yapmak için <xref:System.Net.HttpListenerRequest.TransportContext%2A> özelliği ve çağrı <xref:System.Net.TransportContext.GetChannelBinding%2A> CBT almak için yöntemi. Yalnızca endpoint bağlamaları desteklenir. Herhangi bir şey varsa diğer <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> belirtilen bir <xref:System.NotSupportedException> oluşturulur. Temel işletim sistemi kanal bağlama destekliyorsa <xref:System.Net.TransportContext.GetChannelBinding%2A> yöntemi döndürür bir <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> bir kanal iletilecek uygun bağlama bir işaretçi sarmalama [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) pvBuffer işlevi üye SecBuffer yapısı geçirilen `pInput` parametresi. <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> , Bayt cinsinden uzunluğu kanal bağlama özelliği içerir. Temel işletim sistemi kanal bağlamaları desteklemiyor ise, işlev döndürür `null`.  
   
@@ -136,13 +136,13 @@ Geliştirmeler, tümleşik Windows kimlik doğrulaması tarafından işlenir etk
   
  Bir istek sunucuya bir dış olmadan güvenli yapıldığında bu yapılandırmada, kanal kimlik doğrulaması normalde bir kanal denetimi bağlama devam eder. Doğrulama başarılı olursa, içerik istemci sağlanan ve kabul edilebilir hizmet adları listesini karşı doğrulandı hizmet adı için sorgulanır. Olası dört sonuçları vardır:  
   
-1.  Server'ın temel işletim sistemi genişletilmiş korumayı desteklemiyor. İstek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
+1. Server'ın temel işletim sistemi genişletilmiş korumayı desteklemiyor. İstek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
   
-2.  İstemcinin temel işletim sistemi genişletilmiş korumayı desteklemiyor. İçinde <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> yapılandırma, kimlik doğrulama girişimi başarısız olur ve istek uygulamaya döndürülür. İçinde <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> yapılandırma, kimlik doğrulama girişimi başarısız olur. İstek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
+2. İstemcinin temel işletim sistemi genişletilmiş korumayı desteklemiyor. İçinde <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> yapılandırma, kimlik doğrulama girişimi başarısız olur ve istek uygulamaya döndürülür. İçinde <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> yapılandırma, kimlik doğrulama girişimi başarısız olur. İstek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
   
-3.  İstemcinin temel işletim sistemi genişletilmiş korumayı destekler, ancak uygulama, hizmet bağlaması belirtmedi. İstek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
+3. İstemcinin temel işletim sistemi genişletilmiş korumayı destekler, ancak uygulama, hizmet bağlaması belirtmedi. İstek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
   
-4.  İstemci hizmet bağlama belirtildi. Hizmet bağlaması, izin verilen hizmet bağlamaları listesine karşılaştırılır. Eşleşirse, isteğin uygulamaya döndürülür. Aksi takdirde istek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye otomatik olarak döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
+4. İstemci hizmet bağlama belirtildi. Hizmet bağlaması, izin verilen hizmet bağlamaları listesine karşılaştırılır. Eşleşirse, isteğin uygulamaya döndürülür. Aksi takdirde istek uygulamaya gösterilmeyen ve bir yetkisiz (401) yanıtı istemciye otomatik olarak döndürülür. Bir ileti günlüğe kaydedilir <xref:System.Net.HttpListener> başarısızlığın nedenini belirten bir izleme kaynağı.  
   
  İzin verilen bir kabul edilebilir hizmet adları listesini kullanarak bu basit yaklaşım yetersizse, uygulamanın kendi hizmet adı doğrulama sorgulayarak sağlayabilir <xref:System.Net.HttpListenerRequest.ServiceName%2A> özelliği. Yukarıdaki 1 ve 2 durumda da, özellik döndürür `null`. 3. durumda, boş bir dize döndürür. 4 durumda, istemci tarafından belirtilen hizmet adı döndürülür.  
   

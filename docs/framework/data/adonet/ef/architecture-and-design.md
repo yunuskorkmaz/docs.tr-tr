@@ -2,12 +2,12 @@
 title: Mimari ve Tasarım
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096143"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307580"
 ---
 # <a name="architecture-and-design"></a>Mimari ve Tasarım
 SQL üretimi modülünde [örnek sağlayıcısı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) komut ağacı temsil eden ifade ağacında bir ziyaretçi olarak uygulanır. Oluşturma, tek bir geçişinde ifade ağacı gerçekleştirilir.  
@@ -252,13 +252,13 @@ private bool IsParentAJoin{get}
   
  Bu düğümler ziyaret şu deseni izler:  
   
-1.  İlişkisel giriş sayfasını ziyaret edin ve sonuçta elde edilen SqlSelectStatement alın. İlişkisel bir düğüme giriş aşağıdakilerden biri olabilir:  
+1. İlişkisel giriş sayfasını ziyaret edin ve sonuçta elde edilen SqlSelectStatement alın. İlişkisel bir düğüme giriş aşağıdakilerden biri olabilir:  
   
     -   Bir uzantı (örneğin, bir DbScanExpression) dahil olmak üzere bir ilişkisel düğümü. Bu tür bir düğüm ziyaret bir SqlSelectStatement döndürür.  
   
     -   Küme işlemi ifadesi (UNION ALL, örneğin). Köşeli ayraç içinde sarmalanmış ve yeni SqlSelectStatement FROM yan tümcesinde put sonucu vardır.  
   
-2.  Geçerli düğüm giriş tarafından üretilen SqlSelectStatement eklenebilir olup olmadığını denetleyin. Bu gruplandırma ifadeleri bölümüne SQL Açıklamaalarını açıklar. Aksi halde  
+2. Geçerli düğüm giriş tarafından üretilen SqlSelectStatement eklenebilir olup olmadığını denetleyin. Bu gruplandırma ifadeleri bölümüne SQL Açıklamaalarını açıklar. Aksi halde  
   
     -   Geçerli SqlSelectStatement nesne açılır.  
   
@@ -266,13 +266,13 @@ private bool IsParentAJoin{get}
   
     -   Yeni nesne yığının en üstünde yerleştirin.  
   
-3.  Giriş ifadesini bağlama doğru sembole girdiden yönlendirin. Bu bilgiler SqlSelectStatement nesnesinde korunur.  
+3. Giriş ifadesini bağlama doğru sembole girdiden yönlendirin. Bu bilgiler SqlSelectStatement nesnesinde korunur.  
   
-4.  Yeni bir SymbolTable kapsam ekleyin.  
+4. Yeni bir SymbolTable kapsam ekleyin.  
   
-5.  İfade (örneğin, yansıtma ve koşul) olmayan giriş bölümünü ziyaret edin.  
+5. İfade (örneğin, yansıtma ve koşul) olmayan giriş bölümünü ziyaret edin.  
   
-6.  Genel yığınları için eklenen her nesne açılır.  
+6. Genel yığınları için eklenen her nesne açılır.  
   
  DbSkipExpression SQL'de doğrudan bir eşdeğer yok. Mantıksal olarak veri dönüştürülür:  
   
@@ -301,9 +301,9 @@ ORDER BY sk1, sk2, ...
   
  İkinci olarak, bir giriş teker teker işler. Her giriş için:  
   
-1.  Giriş sayfasını ziyaret edin.  
+1. Giriş sayfasını ziyaret edin.  
   
-2.  POST işlemi ProcessJoinInputResult, sembol tablosuna bir JOIN ifadesinin bir alt ziyaret ve büyük olasılıkla alt tarafından üretilen SqlSelectStatement bittikten sonra bakımından sorumlu olduğu çağırarak giriş ziyaret sonucu. Alt sonuç aşağıdakilerden biri olabilir:  
+2. POST işlemi ProcessJoinInputResult, sembol tablosuna bir JOIN ifadesinin bir alt ziyaret ve büyük olasılıkla alt tarafından üretilen SqlSelectStatement bittikten sonra bakımından sorumlu olduğu çağırarak giriş ziyaret sonucu. Alt sonuç aşağıdakilerden biri olabilir:  
   
     -   Bir üst eklenecek farklı SqlSelectStatement. Böyle bir durumda, varsayılan sütunlar ekleyerek tamamlanmış olması gerekebilir. Bir birleştirme giriş ise, yeni bir birleştirme sembol oluşturmanız gerekir. Aksi takdirde, normal bir sembol oluşturun.  
   

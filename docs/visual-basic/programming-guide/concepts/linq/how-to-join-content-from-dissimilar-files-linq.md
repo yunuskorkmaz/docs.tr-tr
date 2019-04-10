@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Dosyalardan içerik (LINQ) (Visual Basic) katılın'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 4183a27ead8f8570091bb369d75147af7aebd23b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827753"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301119"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Nasıl yapılır: Dosyalardan içerik (LINQ) (Visual Basic) katılın
 
@@ -15,7 +15,7 @@ Bu örnek, eşleşen bir anahtar olarak kullanılan genel bir değer paylaşan i
   
 ## <a name="to-create-the-data-files"></a>Veri dosyaları oluşturmak için
   
-1.  Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, elektronik tablo verilerini temsil eder. Öğrenci Kimliği sütun 1 ve 2'den 5 test puanlarını sütunlardır.  
+1. Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, elektronik tablo verilerini temsil eder. Öğrenci Kimliği sütun 1 ve 2'den 5 test puanlarını sütunlardır.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ Bu örnek, eşleşen bir anahtar olarak kullanılan genel bir değer paylaşan i
     122, 94, 92, 91, 91  
     ```  
   
-2.  Aşağıdaki satırları names.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Öğrenci Soyadı, ad ve Öğrenci Kimliği içeren bir elektronik tablo dosyasını temsil eder  
+2. Aşağıdaki satırları names.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Öğrenci Soyadı, ad ve Öğrenci Kimliği içeren bir elektronik tablo dosyasını temsil eder  
   
     ```  
     Omelchenko,Svetlana,111  

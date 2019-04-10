@@ -2,12 +2,12 @@
 title: Keşif Yönlendirme Hizmeti
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9c0c409eb6cf3146a198b9f4bcd6d76660f5da36
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318773"
 ---
 # <a name="discovery-router-service"></a>Keşif Yönlendirme Hizmeti
 Bu örnek, başka bir uç nokta bulma iletileri iletecek şekilde gösterilmektedir.  
@@ -22,13 +22,13 @@ Bu örnek, başka bir uç nokta bulma iletileri iletecek şekilde gösterilmekte
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Örneği derleyin.  
+1. Örneği derleyin.  
   
-2.  DiscoveryRouter yürütülebilir dosyayı çalıştırın.  
+2. DiscoveryRouter yürütülebilir dosyayı çalıştırın.  
   
-3.  Yürütülebilir hizmet oluşturma dizinden çalıştırın.  
+3. Yürütülebilir hizmet oluşturma dizinden çalıştırın.  
   
-4.  İstemci yürütülebilir çalıştırın. İstemci hizmeti bulduktan unutmayın.  
+4. İstemci yürütülebilir çalıştırın. İstemci hizmeti bulduktan unutmayın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

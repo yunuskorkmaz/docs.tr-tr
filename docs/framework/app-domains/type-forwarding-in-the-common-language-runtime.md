@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c262e8a20eb9a805f6c64cac412f0d0fd6eeb80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5e378eb36e633575d5afa886e886aed302cbdab9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310992"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Ortak Dil Çalışma Zamanında Tür İletme
 Tür iletme orijinal derleme kullanan uygulamaları yeniden derlemenize gerek kalmadan bir tür için başka bir derleme taşımanızı sağlar.  
@@ -30,9 +30,9 @@ Tür iletme orijinal derleme kullanan uygulamaları yeniden derlemenize gerek ka
 ## <a name="forwarding-types"></a>Tür iletme  
  Bir tür iletme gereken dört adım vardır:  
   
-1.  Kaynak kodu türü için özgün derlemeden hedef derlemeye taşıyın.  
+1. Kaynak kodu türü için özgün derlemeden hedef derlemeye taşıyın.  
   
-2.  Derleme türü kullanıldığı yer almasını, ekleme bir <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> taşındı türü. Aşağıdaki kod adlı bir tür özniteliğini gösterir `Example` , taşındı.  
+2. Derleme türü kullanıldığı yer almasını, ekleme bir <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> taşındı türü. Aşağıdaki kod adlı bir tür özniteliğini gösterir `Example` , taşındı.  
   
     ```csharp  
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
@@ -42,9 +42,9 @@ Tür iletme orijinal derleme kullanan uygulamaları yeniden derlemenize gerek ka
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
-3.  Artık türü içeren derlemenin derleme.  
+3. Artık türü içeren derlemenin derleme.  
   
-4.  Türü artık türü içeren derlemeye bir başvuru ile konum için kullanıldığı derlemeyi yeniden derleyin. Örneğin, C# dosyasına komut satırında derleme yapıyorsanız kullanın [/Reference (C# Derleyici Seçenekleri)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) türü içeren derlemenin belirtmek için seçeneği. C++'ta kullanmak [#using](/cpp/preprocessor/hash-using-directive-cpp) türü içeren derlemenin belirtmek için kaynak dosyadaki yönergesi.  
+4. Türü artık türü içeren derlemeye bir başvuru ile konum için kullanıldığı derlemeyi yeniden derleyin. Örneğin, C# dosyasına komut satırında derleme yapıyorsanız kullanın [/Reference (C# Derleyici Seçenekleri)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) türü içeren derlemenin belirtmek için seçeneği. C++'ta kullanmak [#using](/cpp/preprocessor/hash-using-directive-cpp) türü içeren derlemenin belirtmek için kaynak dosyadaki yönergesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

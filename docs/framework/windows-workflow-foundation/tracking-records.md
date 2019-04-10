@@ -2,12 +2,12 @@
 title: İzleme Kayıtları
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: f8b79cad7161e780f336a9c5902e69d9826b23d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298363"
 ---
 # <a name="tracking-records"></a>İzleme Kayıtları
 İş akışı çalışma zamanı, bir iş akışı örneği yürütülmesini izlemek için izleme kayıtları yaymak üzere işaretlendi.  
@@ -50,15 +50,15 @@ ms.locfileid: "59163923"
   
  Örneğin, olabilir basit <xref:System.Activities.Statements.Sequence> içeren etkinlik bir <xref:System.Activities.Statements.WriteLine> kayıtları aşağıdaki sırayla yayılan izleme işlemi:  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> İş akışı başlanacağını gösterir.  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> İş akışı başlanacağını gösterir.  
   
-2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> bir etkinlik zamanlandı gösterir. Bu durumda, bir <xref:System.Activities.Statements.Sequence> etkinlik.  
+2. <xref:System.Activities.Tracking.ActivityScheduledRecord> bir etkinlik zamanlandı gösterir. Bu durumda, bir <xref:System.Activities.Statements.Sequence> etkinlik.  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> temsil eden <xref:System.Activities.Statements.WriteLine> etkinlik.  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord> temsil eden <xref:System.Activities.Statements.WriteLine> etkinlik.  
   
-4.  İki <xref:System.Activities.Tracking.ActivityStateRecord> Tamamlanıyor iki etkinliği temsil eden kaydeder.  
+4. İki <xref:System.Activities.Tracking.ActivityStateRecord> Tamamlanıyor iki etkinliği temsil eden kaydeder.  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> İş akışı tamamlıyor gösterir.  
+5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> İş akışı tamamlıyor gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

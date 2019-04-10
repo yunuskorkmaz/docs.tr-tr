@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6931f9b012a67c2d18995f2a3a56f290be0f0ddb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123454"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313092"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Nasıl yapılır: Kodda Fare ve Klavye Olaylarının Benzetimini Yapma
 Windows Forms programlama yoluyla fare ve klavye girdisi benzetimi için çeşitli seçenekler sunar. Bu konu, bu seçeneklerine genel bakış sağlar.  
@@ -27,9 +27,9 @@ Windows Forms programlama yoluyla fare ve klavye girdisi benzetimi için çeşit
   
 #### <a name="to-programmatically-click-the-right-mouse-button"></a>Program aracılığıyla sağ fare düğmesini tıklatın  
   
-1.  Oluşturma bir <xref:System.Windows.Forms.MouseEventArgs> olan <xref:System.Windows.Forms.MouseEventArgs.Button%2A> özelliği <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> değeri.  
+1. Oluşturma bir <xref:System.Windows.Forms.MouseEventArgs> olan <xref:System.Windows.Forms.MouseEventArgs.Button%2A> özelliği <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> değeri.  
   
-2.  Çağrı <xref:System.Windows.Forms.Control.OnMouseClick%2A> bu yöntemle <xref:System.Windows.Forms.MouseEventArgs> bağımsız değişken olarak.  
+2. Çağrı <xref:System.Windows.Forms.Control.OnMouseClick%2A> bu yöntemle <xref:System.Windows.Forms.MouseEventArgs> bağımsız değişken olarak.  
   
  Özel denetimler hakkında daha fazla bilgi için bkz. [tasarım zamanında Windows Forms denetimleri geliştirme](./controls/developing-windows-forms-controls-at-design-time.md).  
   
@@ -58,7 +58,7 @@ Windows Forms programlama yoluyla fare ve klavye girdisi benzetimi için çeşit
   
 #### <a name="to-send-a-keystroke-to-the-same-application"></a>Aynı uygulamanın bir tuş vuruşu göndermek için  
   
-1.  Çağrı <xref:System.Windows.Forms.SendKeys.Send%2A> veya <xref:System.Windows.Forms.SendKeys.SendWait%2A> yöntemi <xref:System.Windows.Forms.SendKeys> sınıfı. Belirtilen tuş vuruşları uygulamanın etkin denetim alınır. Aşağıdaki kod örneğinde <xref:System.Windows.Forms.SendKeys.Send%2A> form yüzeyi kullanıcı çift tıkladığında ENTER tuşuna basarak benzetimi yapmak için. Bu örnekte bir <xref:System.Windows.Forms.Form> tek bir <xref:System.Windows.Forms.Button> bir sekme dizini 0 olan denetim.  
+1. Çağrı <xref:System.Windows.Forms.SendKeys.Send%2A> veya <xref:System.Windows.Forms.SendKeys.SendWait%2A> yöntemi <xref:System.Windows.Forms.SendKeys> sınıfı. Belirtilen tuş vuruşları uygulamanın etkin denetim alınır. Aşağıdaki kod örneğinde <xref:System.Windows.Forms.SendKeys.Send%2A> form yüzeyi kullanıcı çift tıkladığında ENTER tuşuna basarak benzetimi yapmak için. Bu örnekte bir <xref:System.Windows.Forms.Form> tek bir <xref:System.Windows.Forms.Button> bir sekme dizini 0 olan denetim.  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
@@ -66,7 +66,7 @@ Windows Forms programlama yoluyla fare ve klavye girdisi benzetimi için çeşit
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>Farklı bir uygulamaya tuş vuruşu göndermek için  
   
-1.  Tuş vuruşları almak ve sonra çağrı uygulama penceresini etkinleştir <xref:System.Windows.Forms.SendKeys.Send%2A> veya <xref:System.Windows.Forms.SendKeys.SendWait%2A> yöntemi. Başka bir uygulamayı etkinleştirmek için Yönetilen yöntem olduğundan, diğer uygulamaları odak zorlamak için yerel Windows yöntemlerini kullanmanız gerekir. Aşağıdaki kod örneği kullanan platform çağırma çağrılacak `FindWindow` ve `SetForegroundWindow` hesaplayıcı uygulama penceresi ve ardından aramaları etkinleştirmek için yöntemleri <xref:System.Windows.Forms.SendKeys.SendWait%2A> hesaplayıcısı uygulaması için bir dizi hesaplamalar verecek.  
+1. Tuş vuruşları almak ve sonra çağrı uygulama penceresini etkinleştir <xref:System.Windows.Forms.SendKeys.Send%2A> veya <xref:System.Windows.Forms.SendKeys.SendWait%2A> yöntemi. Başka bir uygulamayı etkinleştirmek için Yönetilen yöntem olduğundan, diğer uygulamaları odak zorlamak için yerel Windows yöntemlerini kullanmanız gerekir. Aşağıdaki kod örneği kullanan platform çağırma çağrılacak `FindWindow` ve `SetForegroundWindow` hesaplayıcı uygulama penceresi ve ardından aramaları etkinleştirmek için yöntemleri <xref:System.Windows.Forms.SendKeys.SendWait%2A> hesaplayıcısı uygulaması için bir dizi hesaplamalar verecek.  
   
     > [!NOTE]
     >  Doğru parametreleri `FindWindow` hesaplayıcısı uygulaması bulur çağrı Windows sürümünüz göre değişir.  Aşağıdaki kod üzerinde hesaplayıcısı uygulaması bulur [!INCLUDE[win7](../../../includes/win7-md.md)]. Üzerinde [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], "SciCalc" için ilk parametre değiştirin. Visual Studio'ya dahil edildi Spy ++ araç, doğru parametreleri belirlemek için kullanabilirsiniz.  

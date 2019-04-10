@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091622"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304811"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF Eklentilerine Genel Bakış
 <a name="Introduction"></a> .NET Framework, geliştiricilerin eklentiyi genişletilebilirlik destekleyen uygulamalar oluşturmak için kullanabileceğiniz bir eklenti modeli içerir. Bu eklenti modeli ile tümleştirin ve uygulama işlevselliğini genişleten eklentileri oluşturulmasına izin verir. Bazı senaryolarda uygulamalar eklenti tarafından sağlanan kullanıcı arabirimlerini görüntülemek de gerekir. Bu konuda, WPF bu senaryolar, mimarisi, aboneliğin avantajları ve kısıtlamalarını arkasında etkinleştirmek için .NET Framework eklenti modeli nasıl artırmaktadır gösterilmektedir.  
@@ -73,7 +73,7 @@ ms.locfileid: "59091622"
 ## <a name="wpf-add-ins"></a>WPF eklentileri  
  WPF, .NET Framework eklenti modeli ile birlikte, çok çeşitli eklentiler kullanıcı arabirimlerini görüntülemek için uygulamaları barındırmak gerektiren senaryolar adresi sağlar. Özellikle, bu senaryolar aşağıdaki iki programlama modeli ile WPF tarafından ele alınır:  
   
-1.  **Eklenti UI döndüren**. Bir eklentiyi bir kullanıcı Arabirimi ana bilgisayar uygulamasına bir yöntem çağrısının anlaşma tarafından tanımlandığı şekilde döndürür. Bu senaryo, aşağıdaki durumlarda kullanılır:  
+1. **Eklenti UI döndüren**. Bir eklentiyi bir kullanıcı Arabirimi ana bilgisayar uygulamasına bir yöntem çağrısının anlaşma tarafından tanımlandığı şekilde döndürür. Bu senaryo, aşağıdaki durumlarda kullanılır:  
   
     -   Bir kullanıcı Arabirimi eklentisi tarafından döndürülen görünümünün ya da verilere bağımlı olduğundan veya yalnızca çalışma zamanında dinamik olarak gibi mevcut koşulları oluşturulan raporlar.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59091622"
   
     -   Eklentiyi öncelikle ana uygulama için bir hizmet gerçekleştirir ve bir kullanıcı Arabirimi ile ana bilgisayar uygulaması durumu bildirir.  
   
-2.  **Eklenti UI olan**. Bir eklenti, sözleşmesi tarafından tanımlandığı şekilde UI'dir. Bu senaryo, aşağıdaki durumlarda kullanılır:  
+2. **Eklenti UI olan**. Bir eklenti, sözleşmesi tarafından tanımlandığı şekilde UI'dir. Bu senaryo, aşağıdaki durumlarda kullanılır:  
   
     -   Bir eklenti gibi bir reklam görüntülenen dışındaki hizmetleri sağlamaz.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "59091622"
   
  WPF UI türleri Uzaktan erişilebilir değildir. Sorunu çözmek için ana uygulamalardan görüntülenecek WPF UI eklentileri tarafından oluşturulan etkinleştirmek için .NET Framework eklenti modeli WPF genişletir. Bu destek, iki tür tarafından WPF sağladığı: <xref:System.AddIn.Contract.INativeHandleContract> arabirimi ve iki statik yöntemler tarafından uygulanan <xref:System.AddIn.Pipeline.FrameworkElementAdapters> sınıfı: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Yüksek düzeyde, bu türleri ve yöntemleri şu şekilde kullanılır:  
   
-1.  WPF gerektiren eklentiler tarafından sağlanan kullanıcı arabirimleri doğrudan veya dolaylı olarak türetilen sınıflar olduklarını <xref:System.Windows.FrameworkElement>şekiller, denetimleri, kullanıcı denetimleri, Düzen bölmeleri ve sayfaları gibi.  
+1. WPF gerektiren eklentiler tarafından sağlanan kullanıcı arabirimleri doğrudan veya dolaylı olarak türetilen sınıflar olduklarını <xref:System.Windows.FrameworkElement>şekiller, denetimleri, kullanıcı denetimleri, Düzen bölmeleri ve sayfaları gibi.  
   
-2.  Sözleşme, eklenti ve barındırma uygulaması UI'dir geçirilecek bildirir her yerde, onu olarak bildirilmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> (değil bir <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırlarında geçirilebilir eklenti UI Uzaktan erişilebilir gösterimidir.  
+2. Sözleşme, eklenti ve barındırma uygulaması UI'dir geçirilecek bildirir her yerde, onu olarak bildirilmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> (değil bir <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırlarında geçirilebilir eklenti UI Uzaktan erişilebilir gösterimidir.  
   
-3.  Eklentinin uygulama etki alanından geçirilmeden önce bir <xref:System.Windows.FrameworkElement> olarak paketlenmiş bir <xref:System.AddIn.Contract.INativeHandleContract> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+3. Eklentinin uygulama etki alanından geçirilmeden önce bir <xref:System.Windows.FrameworkElement> olarak paketlenmiş bir <xref:System.AddIn.Contract.INativeHandleContract> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-4.  Konak uygulamanın uygulama etki alanı için geçirilen sonra <xref:System.AddIn.Contract.INativeHandleContract> olarak paketlenmiş gereken bir <xref:System.Windows.FrameworkElement> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
+4. Konak uygulamanın uygulama etki alanı için geçirilen sonra <xref:System.AddIn.Contract.INativeHandleContract> olarak paketlenmiş gereken bir <xref:System.Windows.FrameworkElement> çağırarak <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
   
  Nasıl <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, ve <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> kullanılan belirli bir senaryoya bağlıdır. Aşağıdaki bölümlerde, her bir programlama modeli için ayrıntıları sağlayın.  
   
@@ -116,17 +116,17 @@ ms.locfileid: "59091622"
 ## <a name="add-in-returns-a-user-interface"></a>Eklenti kullanıcı arayüzü döndürür.  
  Bir kullanıcı Arabirimi bir ana bilgisayar uygulamasına döndürülecek eklenti için aşağıdakiler gereklidir:  
   
-1.  Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework tarafından açıklandığı oluşturulmalıdır [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgeleri.  
+1. Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework tarafından açıklandığı oluşturulmalıdır [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgeleri.  
   
-2.  Sözleşme uygulamalıdır <xref:System.AddIn.Contract.IContract> ve bir kullanıcı Arabirimi döndürülecek sözleşme türü dönüş değerine sahip bir yöntemi bildirmeniz gerekir <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. Sözleşme uygulamalıdır <xref:System.AddIn.Contract.IContract> ve bir kullanıcı Arabirimi döndürülecek sözleşme türü dönüş değerine sahip bir yöntemi bildirmeniz gerekir <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  Eklenti ile ana bilgisayar uygulaması arasında geçirilen kullanıcı Arabirimi öğesinden türetilmelidir doğrudan veya dolaylı olarak <xref:System.Windows.FrameworkElement>.  
+3. Eklenti ile ana bilgisayar uygulaması arasında geçirilen kullanıcı Arabirimi öğesinden türetilmelidir doğrudan veya dolaylı olarak <xref:System.Windows.FrameworkElement>.  
   
-4.  Kullanıcı Arabirimi eklentisi tarafından döndürülen dönüştürülmüş olmalıdır bir <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı geçmeden önce.  
+4. Kullanıcı Arabirimi eklentisi tarafından döndürülen dönüştürülmüş olmalıdır bir <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı geçmeden önce.  
   
-5.  Öğesinden döndürülen UI dönüştürülmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> için bir <xref:System.Windows.FrameworkElement> yalıtım sınırı geçmesinden sonra.  
+5. Öğesinden döndürülen UI dönüştürülmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> için bir <xref:System.Windows.FrameworkElement> yalıtım sınırı geçmesinden sonra.  
   
-6.  Konak uygulama döndürülen görüntüler <xref:System.Windows.FrameworkElement>.  
+6. Konak uygulama döndürülen görüntüler <xref:System.Windows.FrameworkElement>.  
   
  UI döndüren eklenti uygulama yapmayı gösteren bir örnek için bkz: [bir eklenti döndüren bir kullanıcı Arabirimi oluşturma](how-to-create-an-add-in-that-returns-a-ui.md).  
   
@@ -134,17 +134,17 @@ ms.locfileid: "59091622"
 ## <a name="add-in-is-a-user-interface"></a>Bir kullanıcı arabirimi eklentisi olan  
  Bir eklenti UI olduğunda, aşağıdakiler gereklidir:  
   
-1.  Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework tarafından açıklandığı oluşturulmalıdır [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgeleri.  
+1. Ana bilgisayar uygulaması, eklenti ve işlem hattı, .NET Framework tarafından açıklandığı oluşturulmalıdır [eklentiler ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) belgeleri.  
   
-2.  Eklenti anlaşma arabirimi uygulamalıdır <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. Eklenti anlaşma arabirimi uygulamalıdır <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  Ana uygulamaya geçirilen eklentiyi doğrudan veya dolaylı olarak öğesinden türetilmelidir <xref:System.Windows.FrameworkElement>.  
+3. Ana uygulamaya geçirilen eklentiyi doğrudan veya dolaylı olarak öğesinden türetilmelidir <xref:System.Windows.FrameworkElement>.  
   
-4.  Eklenti gelen dönüştürülmelidir bir <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı geçmeden önce.  
+4. Eklenti gelen dönüştürülmelidir bir <xref:System.Windows.FrameworkElement> için bir <xref:System.AddIn.Contract.INativeHandleContract> yalıtım sınırı geçmeden önce.  
   
-5.  Eklenti gelen dönüştürülmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> için bir <xref:System.Windows.FrameworkElement> yalıtım sınırı geçmesinden sonra.  
+5. Eklenti gelen dönüştürülmelidir bir <xref:System.AddIn.Contract.INativeHandleContract> için bir <xref:System.Windows.FrameworkElement> yalıtım sınırı geçmesinden sonra.  
   
-6.  Konak uygulama döndürülen görüntüler <xref:System.Windows.FrameworkElement>.  
+6. Konak uygulama döndürülen görüntüler <xref:System.Windows.FrameworkElement>.  
   
  UI olan eklenti uygulama yapmayı gösteren bir örnek için bkz: [bir eklenti olan bir kullanıcı Arabirimi oluşturma](how-to-create-an-add-in-that-is-a-ui.md).  
   
@@ -181,15 +181,15 @@ ms.locfileid: "59091622"
   
  Eklenti derleme olarak ve işlem hattı derlemeleri belirtmek için sonraki adımdır [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] içerik dosyaları [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] aşağıdakileri yaparak:  
   
-1.  Her işlem hattı klasör Çözüm Gezgini'nde sağ tıklayıp seçerek işlem hattı ve eklenti bütünleştirilmiş kod projesinde dahil **projeye dahil et**.  
+1. Her işlem hattı klasör Çözüm Gezgini'nde sağ tıklayıp seçerek işlem hattı ve eklenti bütünleştirilmiş kod projesinde dahil **projeye dahil et**.  
   
-2.  Ayarı **derleme eylemi** her işlem hattı derleme ve Eklenti derlemesine **içerik** gelen **özellikleri** penceresi.  
+2. Ayarı **derleme eylemi** her işlem hattı derleme ve Eklenti derlemesine **içerik** gelen **özellikleri** penceresi.  
   
  Son adım, işlem hattı derleme dosyaları ve derleme eklenti dosyası indirme için eklenecek uygulama bildirimi yapılandırmaktır. Klasörün kökünde klasörlerdeki dosyaları yerleştirilmelidir [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] önbelleğindeki [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] uygulama kaplar. Yapılandırma sağlanabilir [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] aşağıdakileri yaparak:  
   
-1.  Sağ tıklayın [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] proje, tıklayın **özellikleri**, tıklayın **Yayımla**ve ardından **uygulama dosyaları** düğmesi.  
+1. Sağ tıklayın [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] proje, tıklayın **özellikleri**, tıklayın **Yayımla**ve ardından **uygulama dosyaları** düğmesi.  
   
-2.  İçinde **uygulama dosyaları** iletişim kutusunda, kümesi **yayımlama durumu** her işlem hattı ve DLL eklentisini **Ekle (otomatik)** ve **indirmegrubu** her işlem hattı ve DLL eklentisini **(gerekli)**.  
+2. İçinde **uygulama dosyaları** iletişim kutusunda, kümesi **yayımlama durumu** her işlem hattı ve DLL eklentisini **Ekle (otomatik)** ve **indirmegrubu** her işlem hattı ve DLL eklentisini **(gerekli)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>İşlem hattı ve kullanarak uygulama tabanından  
  Ne zaman işlem hattı ve için yapılandırıldığında [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] dağıtım, aynı yüklenen [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] Önbellek klasörü olarak [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. İşlem hattını kullanma ve gelen eklentisi için [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kodu gerekir alma bunları uygulamadan temel. Çeşitli türleri ve üyeleri için işlem hatları ve eklentiler kullanarak .NET Framework eklenti modeli, bu senaryo için özel desteği sağlar. İlk olarak, yol ile tanımlanan <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> numaralandırma değeri. Aşağıdakileri içeren işlem hattı kullanmak için uygun eklenti üyeleri aşırı yüklemeleri ile bu değeri kullanın:  

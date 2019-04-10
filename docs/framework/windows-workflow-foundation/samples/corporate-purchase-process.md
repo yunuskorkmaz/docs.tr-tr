@@ -1,15 +1,15 @@
 ---
-title: Şirket satın alma işlemi
+title: Şirket Satın Alma İşlemi
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442249"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313339"
 ---
-# <a name="corporate-purchase-process"></a>Şirket satın alma işlemi
+# <a name="corporate-purchase-process"></a>Şirket Satın Alma İşlemi
 Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi için en iyi otomatik öneri seçimiyle oluşturma işlemini gösterir. Bunu birleştirir <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, ve <xref:System.Activities.Statements.ForEach%601> ve işlemini temsil eden bir iş akışı oluşturmak için özel bir etkinlik.
 
  Bu örnek içeren bir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] farklı katılımcı (olarak, özgün istek sahibine veya belirli bir satıcının) işlemiyle etkileşim sağlayan istemci uygulaması.
@@ -18,7 +18,7 @@ Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi iç
 
 -   Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]biçimindeki telefon numarasıdır.
 
 ## <a name="demonstrates"></a>Gösteriler
 
@@ -50,25 +50,25 @@ Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi iç
 ## <a name="description-of-the-process"></a>İşlem açıklaması  
  Bu örnek, genel bir şirket için satıcılardan tekliflerini toplamak için bir Windows Workflow Foundation (WF) programı uygulanışı gösterilmektedir.  
   
-1.  Şirket x bir çalışan bir istek teklifi (RFP) oluşturur.  
+1. Şirket x bir çalışan bir istek teklifi (RFP) oluşturur.  
   
     1.  Çalışan türü RFP başlık ve açıklama.  
   
     2.  Çalışan tekliflerini göndermek için davet etmek istediği satıcıları seçer.  
   
-2.  Çalışan teklif gönderir.  
+2. Çalışan teklif gönderir.  
   
     1.  İş akışı örneği oluşturulur.  
   
     2.  İş akışı, teklifler göndermek tüm satıcılar için bekliyor.  
   
-3.  Tüm teklifleri alındıktan sonra iş akışı alınan tüm teklifleri yinelenir ve en iyisi seçer.  
+3. Tüm teklifleri alındıktan sonra iş akışı alınan tüm teklifleri yinelenir ve en iyisi seçer.  
   
     1.  Her bir satıcı, (Bu örnekte saygınlığı liste içinde VendorRepository.cs depolar) bir üretme ününe sahip.  
   
     2.  Teklif toplam değeri (satıcı tarafından yazdığınız değer) tarafından belirlenir * (satıcı saygınlığı kaydedildiği) / 100.  
   
-4.  Özgün istek sahibine gönderilen tüm teklifleri görebilirsiniz. Özel bir rapor bölümünde en iyi teklifi sunulur.  
+4. Özgün istek sahibine gönderilen tüm teklifleri görebilirsiniz. Özel bir rapor bölümünde en iyi teklifi sunulur.  
   
 ## <a name="process-definition"></a>İşlem tanımı  
  Örnek çekirdek mantığını kullanır bir <xref:System.Activities.Statements.ParallelForEach%601> teklifler (bir yer işareti oluşturur ve özel bir etkinlik kullanılarak), her satıcının bekler etkinlik ve satıcı teklifi bir RFP kaydeder (kullanarak bir <xref:System.Activities.Statements.InvokeMethod> etkinliği).  
@@ -143,15 +143,15 @@ Bu örnek çok basit bir istek teklifleri (RFP) tabanlı satın alma işlemi iç
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Visual Studio 2010 kullanarak PurchaseProcess.sln çözüm dosyasını açın.  
+1. Visual Studio 2010 kullanarak PurchaseProcess.sln çözüm dosyasını açın.  
   
-2.  Web istemcisi projesi yürütmek için açık **Çözüm Gezgini** sağ tıklayın ve **Web istemcisi** proje. Seçin **başlangıç projesi olarak ayarla**.  
+2. Web istemcisi projesi yürütmek için açık **Çözüm Gezgini** sağ tıklayın ve **Web istemcisi** proje. Seçin **başlangıç projesi olarak ayarla**.  
   
-3.  WinForms istemci projesi yürütmek için açık **Çözüm Gezgini** sağ tıklayın ve **WinForms istemci** proje. Seçin **başlangıç projesi olarak ayarla**.  
+3. WinForms istemci projesi yürütmek için açık **Çözüm Gezgini** sağ tıklayın ve **WinForms istemci** proje. Seçin **başlangıç projesi olarak ayarla**.  
   
-4.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
+4. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-5.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
+5. Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 ### <a name="web-client-options"></a>Web istemci seçenekleri  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186673"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296218"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip Denetim Mimarisi
 <xref:System.Windows.Forms.ToolStrip> Ve <xref:System.Windows.Forms.ToolStripItem> sınıfları, araç, durum ve menü öğeleri görüntülemek için esnek, Genişletilebilir bir sistem sağlar. Bu sınıfların tümü bulunur <xref:System.Windows.Forms> ad alanı ve bunların tümü genellikle adlandırılır "ToolStrip" ön ekine sahip (gibi <xref:System.Windows.Forms.ToolStripOverflow>) veya "Şeridinde" soneki ile (gibi <xref:System.Windows.Forms.MenuStrip>).  
@@ -121,19 +121,19 @@ ms.locfileid: "59186673"
 #### <a name="toolstripcontainer-support-of-inheritance"></a>ToolStripContainer destek devralma  
  <xref:System.Windows.Forms.ToolStripContainer> Denetimini destekler sınırlı devralınan senaryoları, aşağıdaki örneğe benzer:  
   
-1.  Yeni bir Windows Forms uygulaması oluşturun.  
+1. Yeni bir Windows Forms uygulaması oluşturun.  
   
-2.  Ekleme bir <xref:System.Windows.Forms.ToolStripContainer> form.  
+2. Ekleme bir <xref:System.Windows.Forms.ToolStripContainer> form.  
   
-3.  Erişim değiştiricisi ayarlamak <xref:System.Windows.Forms.ToolStripContainer> için `public` veya `protected`.  
+3. Erişim değiştiricisi ayarlamak <xref:System.Windows.Forms.ToolStripContainer> için `public` veya `protected`.  
   
-4.  Herhangi bir birleşimini ekleme <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, ve <xref:System.Windows.Forms.ContextMenuStrip> için denetimleri <xref:System.Windows.Forms.ToolStripPanel> bölgeleri <xref:System.Windows.Forms.ToolStripContainer>.  
+4. Herhangi bir birleşimini ekleme <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, ve <xref:System.Windows.Forms.ContextMenuStrip> için denetimleri <xref:System.Windows.Forms.ToolStripPanel> bölgeleri <xref:System.Windows.Forms.ToolStripContainer>.  
   
-5.  Projeyi oluşturun.  
+5. Projeyi oluşturun.  
   
-6.  İlk formundan devralan bir form ekleyin.  
+6. İlk formundan devralan bir form ekleyin.  
   
-7.  Devralınan seçin <xref:System.Windows.Forms.ToolStripContainer> form üzerinde.  
+7. Devralınan seçin <xref:System.Windows.Forms.ToolStripContainer> form üzerinde.  
   
 #### <a name="inherited-behavior-of-child-controls"></a>Alt denetimlerin devralınan davranışı  
  Önceki adımları tamamladıktan sonra devralınan aşağıdaki davranış gerçekleşir:  

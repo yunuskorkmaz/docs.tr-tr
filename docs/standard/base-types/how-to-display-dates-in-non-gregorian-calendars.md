@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079467"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313313"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme
 <xref:System.DateTime> Ve <xref:System.DateTimeOffset> türleri Gregoryen takvim kendi varsayılan takvim olarak kullanın. Bu, tarih ve saat değerinin çağırma anlamına gelir `ToString` yöntemi, o tarih dize gösterimini görüntüler ve saat, tarih ve saat olsa bile Gregoryen takvimindeki başka bir takvimi kullanılarak oluşturuldu. Bu tarih ve saat değeri ile Fars takvimiyle oluşturmak için iki farklı şekilde kullanır, ancak yine de bu tarih ve saat değerleri Gregoryen takvimindeki görüntüler çağırdığında, aşağıdaki örnekte gösterilmiştir <xref:System.DateTime.ToString%2A> yöntemi. Bu örnek, belirli bir takvimde tarihi görüntülemek için iki yaygın olarak kullanılan ama yanlış teknikleri yansıtır.  
@@ -30,26 +30,26 @@ ms.locfileid: "44079467"
   
 ### <a name="to-display-the-date-for-a-cultures-default-calendar"></a>Bir kültürün varsayılan takvim tarihini görüntülemek için  
   
-1.  Türetilen bir takvim nesnesinin örneğini oluşturma <xref:System.Globalization.Calendar> kullanılacak takvimi temsil eden sınıf.  
+1. Türetilen bir takvim nesnesinin örneğini oluşturma <xref:System.Globalization.Calendar> kullanılacak takvimi temsil eden sınıf.  
   
-2.  Örneği bir <xref:System.Globalization.CultureInfo> tarihini görüntülemek için biçimlendirmesi kullanılacak kültürü temsil eden nesne.  
+2. Örneği bir <xref:System.Globalization.CultureInfo> tarihini görüntülemek için biçimlendirmesi kullanılacak kültürü temsil eden nesne.  
   
-3.  Çağrı <xref:System.Array.Exists%2A?displayProperty=nameWithType> Takvim nesnesi tarafından döndürülen dizinin bir üyesi olup olmadığını belirlemek için yöntemi <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> özelliği. Bu takvim için varsayılan takvim olarak verebilen gösterir <xref:System.Globalization.CultureInfo> nesne. Dizinin bir üyesi değilse, "Görüntü tarih içinde Any takvimi" bölümündeki yönergeleri izleyin.  
+3. Çağrı <xref:System.Array.Exists%2A?displayProperty=nameWithType> Takvim nesnesi tarafından döndürülen dizinin bir üyesi olup olmadığını belirlemek için yöntemi <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> özelliği. Bu takvim için varsayılan takvim olarak verebilen gösterir <xref:System.Globalization.CultureInfo> nesne. Dizinin bir üyesi değilse, "Görüntü tarih içinde Any takvimi" bölümündeki yönergeleri izleyin.  
   
-4.  Takvim nesneye atamak <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> özelliği <xref:System.Globalization.DateTimeFormatInfo> tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özelliği.  
+4. Takvim nesneye atamak <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> özelliği <xref:System.Globalization.DateTimeFormatInfo> tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özelliği.  
   
     > [!NOTE]
     >  <xref:System.Globalization.CultureInfo> Sınıfı de sahip bir <xref:System.Globalization.CultureInfo.Calendar%2A> özelliği. Ancak, salt okunur ve sabit değildir; atanan yeni varsayılan takvimi yansıtan değiştirmez <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> özelliği.  
   
-5.  Çağırın ya da <xref:System.DateTime.ToString%2A> veya <xref:System.DateTime.ToString%2A> yöntemi ve geçirin <xref:System.Globalization.CultureInfo> varsayılan takvimini, önceki adımda değiştirildiği nesne.  
+5. Çağırın ya da <xref:System.DateTime.ToString%2A> veya <xref:System.DateTime.ToString%2A> yöntemi ve geçirin <xref:System.Globalization.CultureInfo> varsayılan takvimini, önceki adımda değiştirildiği nesne.  
   
 ### <a name="to-display-the-date-in-any-calendar"></a>Herhangi bir takvimde tarihi görüntülemek için  
   
-1.  Türetilen bir takvim nesnesinin örneğini oluşturma <xref:System.Globalization.Calendar> kullanılacak takvimi temsil eden sınıf.  
+1. Türetilen bir takvim nesnesinin örneğini oluşturma <xref:System.Globalization.Calendar> kullanılacak takvimi temsil eden sınıf.  
   
-2.  Belirlemek, tarih ve saat öğeleri tarih ve saat değerini dize gösterimini görünmelidir.  
+2. Belirlemek, tarih ve saat öğeleri tarih ve saat değerini dize gösterimini görünmelidir.  
   
-3.  Takvim nesnenin görüntülemek istediğiniz her tarih ve saat öğesi için çağrı `Get`... yöntem. Aşağıdaki yöntemleri kullanılabilir:  
+3. Takvim nesnenin görüntülemek istediğiniz her tarih ve saat öğesi için çağrı `Get`... yöntem. Aşağıdaki yöntemleri kullanılabilir:  
   
     -   <xref:System.Globalization.Calendar.GetYear%2A>, uygun takvimde yıl görüntülenecek.  
   

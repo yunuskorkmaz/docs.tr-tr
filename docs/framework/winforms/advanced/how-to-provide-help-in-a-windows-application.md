@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312728"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Nasıl yapılır: Bir Windows Uygulamasında Yardım Sağlama
 Kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> Yardım konuları için bir Yardım dosyası içinde Windows Forms özel denetimlerinde eklemeye bileşeni. Yardım dosyasında, HTML veya HTMLHelp olabilir 1.x veya büyük biçimi.  
@@ -23,17 +23,17 @@ Kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> Yardım konuları i
   
 ### <a name="to-provide-help"></a>Yardım almak için  
   
-1.  Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.HelpProvider> formunuza bileşen.  
+1. Gelen **araç kutusu**, sürükleyin bir <xref:System.Windows.Forms.HelpProvider> formunuza bileşen.  
   
      Bileşen Tepsisi Windows Form Tasarımcısı'nın altındaki yer alacaktır.  
   
-2.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> özelliğini .chm, .col veya .htm Yardım dosya.  
+2. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> özelliğini .chm, .col veya .htm Yardım dosya.  
   
-3.  Formunuzda kullandığınız ve buna başka bir denetim seçin **özellikleri** penceresinde <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> özelliği.  
+3. Formunuzda kullandığınız ve buna başka bir denetim seçin **özellikleri** penceresinde <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> özelliği.  
   
      Geçirilen dize budur <xref:System.Windows.Forms.HelpProvider> Yardım dosyanıza uygun bir Yardım konusuna Göndereceğim bileşen.  
   
-4.  İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> bir değere <xref:System.Windows.Forms.HelpNavigator> sabit listesi.  
+4. İçinde **özellikleri** penceresinde <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> bir değere <xref:System.Windows.Forms.HelpNavigator> sabit listesi.  
   
      Bu yolla belirler **HelpKeyword** özelliği Yardım sistemine geçirilir. Aşağıdaki tabloda, olası ayarlar ve açıklamalarının gösterir.  
   

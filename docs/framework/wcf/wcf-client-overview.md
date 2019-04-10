@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 34abe6b07cebc446324785bde1061c7aa2b04e4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115927"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312338"
 ---
 # <a name="wcf-client-overview"></a>WCF İstemcisi Genel Bakış
 Bu bölümde, istemci uygulamaları neler, yapılandırma, oluşturma ve bir Windows Communication Foundation (WCF) istemci kullanın ve istemci uygulamalarının güvenliğini nasıl açıklanmaktadır.  
@@ -20,13 +20,13 @@ Bu bölümde, istemci uygulamaları neler, yapılandırma, oluşturma ve bir Win
 ## <a name="using-wcf-client-objects"></a>WCF istemci nesnelerini kullanma  
  Başka bir uygulamayla iletişim kurmak için bir WCF istemcisi kullanan bir yönetilen uygulamayı bir istemci uygulamasıdır. Bir istemci oluşturmak için uygulama bir WCF hizmeti için aşağıdaki adımları gerektirir:  
   
-1.  Hizmet sözleşmesi, bağlamalar ve hizmet uç noktası için adres bilgilerini edinin.  
+1. Hizmet sözleşmesi, bağlamalar ve hizmet uç noktası için adres bilgilerini edinin.  
   
-2.  Bu bilgileri kullanarak bir WCF istemcisi oluşturma.  
+2. Bu bilgileri kullanarak bir WCF istemcisi oluşturma.  
   
-3.  İşlemleri çağırın.  
+3. İşlemleri çağırın.  
   
-4.  WCF istemci nesnesi kapatın.  
+4. WCF istemci nesnesi kapatın.  
   
  Aşağıdaki bölümlerde, şu adımları tartışmak ve kısa tanıtımları aşağıdaki sorunlar için sağlayın:  
   

@@ -2,12 +2,12 @@
 title: Zaman uyumsuz bir görev veya görevleri (Visual Basic) listesini iptal etme
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: deb469f2c083870fc96c9217fa862d189629df1f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 62321a5fc011f71ed6125fbaa315573d13667488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834991"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324766"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Zaman uyumsuz bir görev veya görevleri (Visual Basic) listesini iptal etme
 Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek için kullanabileceğiniz bir düğme ayarlayabilirsiniz. Bu konudaki örnekleri izleyerek, Web sitelerinin bir listesiyle ya da bir Web sitesinin içeriklerini indiren bir uygulama için bir iptal düğmesi ekleyebilirsiniz.  
@@ -23,15 +23,15 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
 ### <a name="downloading-the-example"></a>Örneği indirme  
  Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.  
   
-1.  İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
+1. İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
   
-2.  Menü çubuğunda, **dosya**, **açık**, **proje/çözüm**.  
+2. Menü çubuğunda, **dosya**, **açık**, **proje/çözüm**.  
   
-3.  İçinde **Proje Aç** iletişim kutusunda, açtığınız örnek kodu barındıran klasörü açın ve ardından AsyncFineTuningVB için çözüm (.sln) dosyasını açın.  
+3. İçinde **Proje Aç** iletişim kutusunda, açtığınız örnek kodu barındıran klasörü açın ve ardından AsyncFineTuningVB için çözüm (.sln) dosyasını açın.  
   
-4.  İçinde **Çözüm Gezgini**, kısayol menüsünü açın **CancelATask** proje ve ardından **başlangıç projesi olarak ayarla**.  
+4. İçinde **Çözüm Gezgini**, kısayol menüsünü açın **CancelATask** proje ve ardından **başlangıç projesi olarak ayarla**.  
   
-5.  Projeyi çalıştırmak için F5 tuşuna basın.  
+5. Projeyi çalıştırmak için F5 tuşuna basın.  
   
      Projeyi hata ayıklama olmadan çalıştırmak için Ctrl + F5 tuşlarını seçin.  
   
@@ -44,7 +44,7 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
   
  Ardından bu projenin MainWindow.xaml.vb dosyasına aşağıdaki değişiklikleri ekleyin.  
   
-1.  Bildirme bir `CancellationTokenSource` değişken `cts`, kendisine erişen tüm yöntemler için kapsam dahilinde olan.  
+1. Bildirme bir `CancellationTokenSource` değişken `cts`, kendisine erişen tüm yöntemler için kapsam dahilinde olan.  
   
     ```vb  
     Class MainWindow  
@@ -53,7 +53,7 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  İçin aşağıdaki olay işleyicisini ekleyelim **iptal** düğmesi. Olay işleyicisi kullanır <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yöntemi bildirmek için `cts` kullanıcı iptal isteğinde bulunduğunda.  
+2. İçin aşağıdaki olay işleyicisini ekleyelim **iptal** düğmesi. Olay işleyicisi kullanır <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> yöntemi bildirmek için `cts` kullanıcı iptal isteğinde bulunduğunda.  
   
     ```vb  
     ' ***Add an event handler for the Cancel button.  
@@ -65,7 +65,7 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
     End Sub  
     ```  
   
-3.  Aşağıdaki değişiklikler olay işleyicisi yapma **Başlat** düğme `startButton_Click`.  
+3. Aşağıdaki değişiklikler olay işleyicisi yapma **Başlat** düğme `startButton_Click`.  
   
     -   Örneği `CancellationTokenSource`, `cts`.  
   
@@ -93,7 +93,7 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
         End Try  
         ```  
   
-4.  İçinde `AccessTheWebAsync`, kullanın <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> aşırı yükünü `GetAsync` yönteminde <xref:System.Net.Http.HttpClient> bir Web sitesinin içeriklerini karşıdan yüklemek için türü. Geçirmek `ct`, <xref:System.Threading.CancellationToken> parametresinin `AccessTheWebAsync`, ikinci bağımsız değişken. Kullanıcı seçerse belirteç iletiyi taşır **iptal** düğmesi.  
+4. İçinde `AccessTheWebAsync`, kullanın <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> aşırı yükünü `GetAsync` yönteminde <xref:System.Net.Http.HttpClient> bir Web sitesinin içeriklerini karşıdan yüklemek için türü. Geçirmek `ct`, <xref:System.Threading.CancellationToken> parametresinin `AccessTheWebAsync`, ikinci bağımsız değişken. Kullanıcı seçerse belirteç iletiyi taşır **iptal** düğmesi.  
   
      Aşağıdaki kod değişiklikleri göstermektedir `AccessTheWebAsync`.  
   
@@ -121,7 +121,7 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
     End Function  
     ```  
   
-5.  Programı iptal etmezseniz, aşağıdaki çıktıyı üretir.  
+5. Programı iptal etmezseniz, aşağıdaki çıktıyı üretir.  
   
     ```  
     Ready to download.  
@@ -141,15 +141,15 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
 ### <a name="downloading-the-example"></a>Örneği indirme  
  Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uyumsuz örneği: Uygulamanıza ince](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) ve sonra aşağıdaki adımları izleyin.  
   
-1.  İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
+1. İndirdiğiniz dosyanın sıkıştırmasını açın ve sonra Visual Studio'yu başlatın.  
   
-2.  Menü çubuğunda, **dosya**, **açık**, **proje/çözüm**.  
+2. Menü çubuğunda, **dosya**, **açık**, **proje/çözüm**.  
   
-3.  İçinde **Proje Aç** iletişim kutusunda, açtığınız örnek kodu barındıran klasörü açın ve ardından AsyncFineTuningVB için çözüm (.sln) dosyasını açın.  
+3. İçinde **Proje Aç** iletişim kutusunda, açtığınız örnek kodu barındıran klasörü açın ve ardından AsyncFineTuningVB için çözüm (.sln) dosyasını açın.  
   
-4.  İçinde **Çözüm Gezgini**, kısayol menüsünü açın **CancelAListOfTasks** proje ve ardından **başlangıç projesi olarak ayarla**.  
+4. İçinde **Çözüm Gezgini**, kısayol menüsünü açın **CancelAListOfTasks** proje ve ardından **başlangıç projesi olarak ayarla**.  
   
-5.  Projeyi çalıştırmak için F5 tuşuna basın.  
+5. Projeyi çalıştırmak için F5 tuşuna basın.  
   
      Projeyi hata ayıklama olmadan çalıştırmak için Ctrl + F5 tuşlarını seçin.  
   
@@ -158,7 +158,7 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
 ### <a name="building-the-example"></a>Örneği oluşturma  
  Örneği genişletmek için kendiniz adım adım "Örneği indirme" bölümündeki yönergeleri izleyin, ancak seçin **CancelATask** olarak **başlangıç projesi**. Aşağıdaki değişiklikleri bu projeye ekleyin. Yıldız işaretleri, programdaki değişiklikleri işaretler.  
   
-1.  Web adresleri listesi oluşturmak için bir yöntem ekleyin.  
+1. Web adresleri listesi oluşturmak için bir yöntem ekleyin.  
   
     ```vb  
     ' ***Add a method that creates a list of web addresses.  
@@ -178,14 +178,14 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
     End Function  
     ```  
   
-2.  Yöntem çağrısı `AccessTheWebAsync`.  
+2. Yöntem çağrısı `AccessTheWebAsync`.  
   
     ```vb  
     ' ***Call SetUpURLList to make a list of web addresses.  
     Dim urlList As List(Of String) = SetUpURLList()  
     ```  
   
-3.  İçine şu döngüyü ekleyin `AccessTheWebAsync` listesindeki her bir web adresini işlemek için.  
+3. İçine şu döngüyü ekleyin `AccessTheWebAsync` listesindeki her bir web adresini işlemek için.  
   
     ```vb  
     ' ***Add a loop to process the list of web addresses.  
@@ -203,7 +203,7 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
     Next  
     ```  
   
-4.  Çünkü `AccessTheWebAsync` görüntüler uzunlukları, yöntemin herhangi bir şey getirmesi gerekmez. Return ifadesini kaldırın ve yöntemin dönüş türünü değiştirmek <xref:System.Threading.Tasks.Task> yerine <xref:System.Threading.Tasks.Task%601>.  
+4. Çünkü `AccessTheWebAsync` görüntüler uzunlukları, yöntemin herhangi bir şey getirmesi gerekmez. Return ifadesini kaldırın ve yöntemin dönüş türünü değiştirmek <xref:System.Threading.Tasks.Task> yerine <xref:System.Threading.Tasks.Task%601>.  
   
     ```vb  
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task  
@@ -215,7 +215,7 @@ Zaman uyumsuz bir uygulamanın bitmesini beklemek istemiyorsanız, iptal etmek i
     Await AccessTheWebAsync(cts.Token)  
     ```  
   
-5.  Programı iptal etmezseniz, aşağıdaki çıktıyı üretir.  
+5. Programı iptal etmezseniz, aşağıdaki çıktıyı üretir.  
   
     ```  
     Length of the downloaded string: 35939.  

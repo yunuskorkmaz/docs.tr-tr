@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-ms.openlocfilehash: eb0b40a80d37788bcab32791d7ed701a77505371
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bf900566bdb4ecf8d8961a12b5dd67ba426caf27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831450"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305604"
 ---
 # <a name="eventname-is-an-event-and-cannot-be-called-directly"></a>'\<eventname >' bir olaydır ve doğrudan çağrılamaz
 ' <`eventname`>' bir olaydır ve bu nedenle doğrudan çağrılamaz. Kullanım bir `RaiseEvent` deyimi bir olay oluşturabilmelidir.  
@@ -23,7 +23,7 @@ ms.locfileid: "58831450"
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Kullanım bir `RaiseEvent` deyimini olaya sinyal ve yordamı veya bunu işleyen yordamlarını çağırma.  
+1. Kullanım bir `RaiseEvent` deyimini olaya sinyal ve yordamı veya bunu işleyen yordamlarını çağırma.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

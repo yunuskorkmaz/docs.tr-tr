@@ -2,12 +2,12 @@
 title: Standart uç noktaları
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304616"
 ---
 # <a name="usage-of-standard-endpoints"></a>Standart uç noktaları
 
@@ -139,9 +139,9 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1.  Visual Studio 2012 kullanarak, StandardEndpoints.sln dosyasını açın.
+1. Visual Studio 2012 kullanarak, StandardEndpoints.sln dosyasını açın.
 
-2.  Başlamak birden çok proje etkinleştirin.
+2. Başlamak birden çok proje etkinleştirin.
 
     1.  İçinde **Çözüm Gezgini**, standart uç noktaları çözüme sağ tıklayın ve ardından **özellikleri**.
 
@@ -153,7 +153,7 @@ public class CustomEndpoint : ServiceEndpoint
 
          Bu, istemci projesinin sonra hizmet projesi yürütüldüğünü belirtir.
 
-3.  Çözümü çalıştırmak için F5 tuşuna basın.
+3. Çözümü çalıştırmak için F5 tuşuna basın.
 
 > [!NOTE]
 > Adımları işe yaramazsa, ortamınızı düzgün bir şekilde, aşağıdaki adımları kullanarak ayarlandığından emin olun:

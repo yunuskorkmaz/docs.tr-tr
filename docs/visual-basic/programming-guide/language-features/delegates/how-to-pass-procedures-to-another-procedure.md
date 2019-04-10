@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: c2305cd18cfaaa67355dfb342f22e39d37ae0e79
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 312c0e0f100e85256ad4ca856ccf7f35dbaa36dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818481"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305253"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de başka bir yordama yordam geçirin
 Bu örnek, temsilciler başka bir yordama yordam geçirme için nasıl kullanılacağını gösterir.  
@@ -21,25 +21,25 @@ Bu örnek, temsilciler başka bir yordama yordam geçirme için nasıl kullanıl
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>Temsilci ve eşleşen yordamlar oluşturma  
   
-1.  Adlı bir temsilci oluşturmak `MathOperator`.  
+1. Adlı bir temsilci oluşturmak `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2.  Adlı bir yordam oluşturma `AddNumbers` parametreleri ve eşleşen dönüş değeri ile `MathOperator`, böylece imzalar.  
+2. Adlı bir yordam oluşturma `AddNumbers` parametreleri ve eşleşen dönüş değeri ile `MathOperator`, böylece imzalar.  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3.  Adlı bir yordam oluşturma `SubtractNumbers` imzayla eşleşen `MathOperator`.  
+3. Adlı bir yordam oluşturma `SubtractNumbers` imzayla eşleşen `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4.  Adlı bir yordam oluşturma `DelegateTest` , temsilci bir parametre olarak alır.  
+4. Adlı bir yordam oluşturma `DelegateTest` , temsilci bir parametre olarak alır.  
   
      Bu yordam bir başvuru kabul edebilir `AddNumbers` veya `SubtractNumbers`, bunların imzalarını eşleştiğinden `MathOperator` imzası.  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5.  Adlı bir yordam oluşturma `Test` çağrılarının `DelegateTest` temsilcisi ile bir kez `AddNumbers` bir parametre olarak ve yeniden temsilcisi ile `SubtractNumbers` bir parametre olarak.  
+5. Adlı bir yordam oluşturma `Test` çağrılarının `DelegateTest` temsilcisi ile bir kez `AddNumbers` bir parametre olarak ve yeniden temsilcisi ile `SubtractNumbers` bir parametre olarak.  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
@@ -50,4 +50,4 @@ Bu örnek, temsilciler başka bir yordama yordam geçirme için nasıl kullanıl
 - [Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [AddressOf İşleci](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Delegate Deyimi](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Nasıl yapılır: Bir temsilci yöntemi çağırma](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [Nasıl yapılır: Temsilci Yöntemi Çağırma](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

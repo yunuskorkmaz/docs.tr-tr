@@ -2,12 +2,12 @@
 title: Tanılama için Windows Yönetim İzlemesini Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a5dae1479c9be7954b9eec1eed197f358eb48e4f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239520"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308594"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
 Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF Windows Yönetim Araçları (WMI) sağlayıcısı aracılığıyla denetleme verileri kullanıma sunar.  
@@ -56,26 +56,26 @@ Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF 
   
  Kullanıcı ayrıcalık düzeyleri değiştirmek için aşağıdaki adımları kullanın.  
   
-1.  Başlat'a tıklayın ve ardından çalıştırın ve türü **compmgmt.msc**.  
+1. Başlat'a tıklayın ve ardından çalıştırın ve türü **compmgmt.msc**.  
   
-2.  Sağ **Hizmetleri ve uygulama/WMI denetimleri** seçilecek **özellikleri**.  
+2. Sağ **Hizmetleri ve uygulama/WMI denetimleri** seçilecek **özellikleri**.  
   
-3.  Seçin **güvenlik** sekmesine gidin **kök/ServiceModel** ad alanı. Tıklayın **güvenlik** düğmesi.  
+3. Seçin **güvenlik** sekmesine gidin **kök/ServiceModel** ad alanı. Tıklayın **güvenlik** düğmesi.  
   
-4.  Belirli bir grup veya erişimi denetlemek ve kullanmak istediğiniz kullanıcıyı seçin **izin** veya **Reddet** izinlerini yapılandırmak için onay kutusu.  
+4. Belirli bir grup veya erişimi denetlemek ve kullanmak istediğiniz kullanıcıyı seçin **izin** veya **Reddet** izinlerini yapılandırmak için onay kutusu.  
   
 ## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>Ek kullanıcılar için WCF WMI kayıt izinleri veriliyor  
  WCF WMI yönetimi verilerini kullanıma sunar. Bunu bir "ayrılmış sağlayıcı" olarak da adlandırılan bir işlem içi WMI sağlayıcısı barındırarak yapar. Yönetim verilerini sağlamak bu sağlayıcısını Kaydet hesabı uygun izinlere sahip olmalıdır. Windows ayrıcalıklı hesaplar yalnızca küçük bir kümesi, varsayılan olarak ayrılmış sağlayıcılar kaydedebilirsiniz. Kullanıcıların yaygın olarak WMI verilerinden varsayılan kümede olmayan bir hesap altında çalışan bir WCF Hizmeti kullanıma sunmak istediğiniz bir sorun olmasıdır.  
   
  Bu erişimi sağlamak için yönetici aşağıdaki sırayla ek hesap aşağıdaki izinleri vermeniz gerekir:  
   
-1.  WCF WMI Namespace'için erişim izni.  
+1. WCF WMI Namespace'için erişim izni.  
   
-2.  WCF ayrılmış WMI sağlayıcısını kaydetme izni.  
+2. WCF ayrılmış WMI sağlayıcısını kaydetme izni.  
   
 #### <a name="to-grant-wmi-namespace-access-permission"></a>WMI ad alanı erişim izni vermek için  
   
-1.  Aşağıdaki PowerShell betiğini çalıştırın.  
+1. Aşağıdaki PowerShell betiğini çalıştırın.  
   
     ```powershell  
     write-host ""  
@@ -122,7 +122,7 @@ Windows Communication Foundation (WCF) hizmetinin çalışma zamanında bir WCF 
   
 #### <a name="to-grant-provider-registration-access"></a>Sağlayıcı vermek için kayıt erişim  
   
-1.  Aşağıdaki PowerShell betiğini çalıştırın.  
+1. Aşağıdaki PowerShell betiğini çalıştırın.  
   
     ```powershell  
     write-host ""  
@@ -157,16 +157,16 @@ Whoami /user
   
  **%windir%\Program Files\WMI araçları\\**  
   
-1.  İçinde **ad Connect:** penceresinde, tür **root\ServiceModel** tıklatıp **Tamam.**  
+1. İçinde **ad Connect:** penceresinde, tür **root\ServiceModel** tıklatıp **Tamam.**  
   
-2.  İçinde **WMI CIM Studio oturum açma** penceresinde tıklayın **Seçenekleri >>** düğmesini penceresini genişletin. Seçin **paket gizlilik** için **kimlik doğrulama düzeyi**, tıklatıp **Tamam**.  
+2. İçinde **WMI CIM Studio oturum açma** penceresinde tıklayın **Seçenekleri >>** düğmesini penceresini genişletin. Seçin **paket gizlilik** için **kimlik doğrulama düzeyi**, tıklatıp **Tamam**.  
   
 ### <a name="windows-management-instrumentation-tester"></a>Windows Yönetim Araçları test aracı  
  Bu araç, Windows tarafından yüklenir. Çalıştırmak için yazarak bir komut konsolunu Başlat **cmd.exe** içinde **başlangıç/çalıştırma** iletişim kutusu ve tıklatın **Tamam**. Ardından yazın **wbemtest.exe** komut penceresinde. Windows Yönetim Araçları Sınayıcısı aracı sonra başlatılır.  
   
-1.  Tıklayın **Connect** pencerenin sağ üst köşesindeki düğmesi.  
+1. Tıklayın **Connect** pencerenin sağ üst köşesindeki düğmesi.  
   
-2.  Yeni pencerede girin **root\ServiceModel** için **Namespace** alan ve seçim **paket gizlilik** için **kimlik doğrulama düzeyi**. **Bağlan**'a tıklayın.  
+2. Yeni pencerede girin **root\ServiceModel** için **Namespace** alan ve seçim **paket gizlilik** için **kimlik doğrulama düzeyi**. **Bağlan**'a tıklayın.  
   
 ### <a name="using-managed-code"></a>Yönetilen kod kullanarak  
  Ayrıca uzak WMI örnekleri program aracılığıyla tarafından sağlanan sınıfları kullanarak erişebileceğiniz <xref:System.Management> ad alanı. Aşağıdaki kod örneği, bunun nasıl yapılacağı gösterilmektedir.  

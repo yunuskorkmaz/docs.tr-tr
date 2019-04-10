@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094989"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302419"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetimi ile Ana/Ayrıntı Listeleri Oluşturma
 > [!NOTE]
@@ -25,17 +25,17 @@ ms.locfileid: "59094989"
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Ana/ayrıntı ilişkisi program üzerinden ayarlamak için  
   
-1.  İki yeni oluşturma <xref:System.Windows.Forms.DataGrid> denetler ve özelliklerini ayarlayın.  
+1. İki yeni oluşturma <xref:System.Windows.Forms.DataGrid> denetler ve özelliklerini ayarlayın.  
   
-2.  Tablolar, veri kümesine ekleyin.  
+2. Tablolar, veri kümesine ekleyin.  
   
-3.  Türünde bir değişken bildirmek <xref:System.Data.DataRelation> oluşturmak istediğiniz ilişkiyi göstermek üzere.  
+3. Türünde bir değişken bildirmek <xref:System.Data.DataRelation> oluşturmak istediğiniz ilişkiyi göstermek üzere.  
   
-4.  İlişki için bir ad belirterek ve tablo, sütun ve iki tablo tie öğesi belirterek ilişki örneği.  
+4. İlişki için bir ad belirterek ve tablo, sütun ve iki tablo tie öğesi belirterek ilişki örneği.  
   
-5.  İlişki Ekle <xref:System.Data.DataSet> nesnenin <xref:System.Data.DataSet.Relations%2A> koleksiyonu.  
+5. İlişki Ekle <xref:System.Data.DataSet> nesnenin <xref:System.Data.DataSet.Relations%2A> koleksiyonu.  
   
-6.  Kullanım <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi <xref:System.Windows.Forms.DataGrid> her kılavuzların bağlamak için <xref:System.Data.DataSet>.  
+6. Kullanım <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi <xref:System.Windows.Forms.DataGrid> her kılavuzların bağlamak için <xref:System.Data.DataSet>.  
   
      Aşağıdaki örnek, daha önce oluşturulan, müşteriler ve Siparişler tablolarını arasında ana/ayrıntı ilişkisi gösterilmektedir <xref:System.Data.DataSet> (`ds`).  
   

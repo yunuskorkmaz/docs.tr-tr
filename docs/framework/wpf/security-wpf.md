@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193674"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313573"
 ---
 # <a name="security-wpf"></a>Güvenlik (WPF)
 <a name="introduction"></a> Güvenlik modeli, Windows Presentation Foundation (WPF) tek başına ve tarayıcıda tutulan uygulamalar geliştirirken dikkate almanız gerekir. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tek başına uygulamalar Kısıtlanmamış izinlere sahip yürütün ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** izin kümesi), Windows Installer (.msi), XCopy kullanarak dağıtılmış olup olmadığını veya [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Kısmi güven, ClickOnce ile tek başına WPF uygulamalarını dağıtmak desteklenmez. Ancak, tam güven uygulaması kısmi güven oluşturabilirsiniz <xref:System.AppDomain> .NET Framework eklenti modeli kullanarak. Daha fazla bilgi için [WPF eklentileri genel bakış](./app-development/wpf-add-ins-overview.md).  
@@ -103,15 +103,15 @@ ms.locfileid: "59193674"
   
  Bu şekilde güvenli hale getirilebilir işlevler koleksiyonu için bölge başına temelinde yapılandırılmış **Internet**, **Intranet**, **Güvenilen siteler**, ve  **Yasak siteler** bölgeleri. Aşağıdaki adımlar, güvenlik ayarlarının nasıl yapılandırılacağı açıklanmaktadır:  
   
-1.  **Denetim Masası**'nı açın.  
+1. **Denetim Masası**'nı açın.  
   
-2.  Tıklayın **ağ ve Internet** ve ardından **Internet Seçenekleri**.  
+2. Tıklayın **ağ ve Internet** ve ardından **Internet Seçenekleri**.  
   
      Internet Seçenekleri iletişim kutusu görüntülenir.  
   
-3.  Üzerinde **güvenlik** sekmesinde, güvenlik ayarlarını yapılandırmak için bir bölge seçin.  
+3. Üzerinde **güvenlik** sekmesinde, güvenlik ayarlarını yapılandırmak için bir bölge seçin.  
   
-4.  Tıklayın **Özel düzey** düğmesi.  
+4. Tıklayın **Özel düzey** düğmesi.  
   
      **Güvenlik ayarları** iletişim kutusu görünür ve seçili bölgesi için güvenlik ayarlarını yapılandırabilirsiniz.  
   

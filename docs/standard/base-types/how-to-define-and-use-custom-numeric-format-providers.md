@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318383"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Nasıl yapılır: Özel Sayısal Biçim Sağlayıcıları Tanımlama ve Kullanma
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Sayısal değerlerin dize gösterimini üzerinde kapsamlı denetim verir. Bu, sayısal değerlerin biçimini özelleştirmek için aşağıdaki özellikleri destekler:  
@@ -37,9 +37,9 @@ ms.locfileid: "43879042"
   
 ### <a name="to-define-a-custom-format-provider"></a>Bir özel biçim sağlayıcısı tanımlamak için  
   
-1.  Uygulayan bir sınıf tanımlama <xref:System.IFormatProvider> ve <xref:System.ICustomFormatter> arabirimleri.  
+1. Uygulayan bir sınıf tanımlama <xref:System.IFormatProvider> ve <xref:System.ICustomFormatter> arabirimleri.  
   
-2.  Uygulama <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. <xref:System.IFormatProvider.GetFormat%2A> bir geri çağırma yöntemi, biçimlendirme yöntemi (gibi <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi) aslında özel biçimlendirme yapmaktan sorumlu nesnesini almak için çağırır. Tipik bir uygulaması <xref:System.IFormatProvider.GetFormat%2A> şunları yapar:  
+2. Uygulama <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi. <xref:System.IFormatProvider.GetFormat%2A> bir geri çağırma yöntemi, biçimlendirme yöntemi (gibi <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi) aslında özel biçimlendirme yapmaktan sorumlu nesnesini almak için çağırır. Tipik bir uygulaması <xref:System.IFormatProvider.GetFormat%2A> şunları yapar:  
   
     1.  Belirler olmadığını <xref:System.Type> nesne bir yöntem olarak geçirilen parametreyi temsil eder bir <xref:System.ICustomFormatter> arabirimi.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "43879042"
   
     3.  Parametreyi temsil etmez, <xref:System.ICustomFormatter> arabirimi <xref:System.IFormatProvider.GetFormat%2A> döndürür `null`.  
   
-3.  Uygulama <xref:System.ICustomFormatter.Format%2A> yöntemi. Bu yöntemi çağıran <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi ve bir sayının dize gösterimini döndürmekten sorumludur. Yöntemi genellikle uygulama aşağıdakileri içerir:  
+3. Uygulama <xref:System.ICustomFormatter.Format%2A> yöntemi. Bu yöntemi çağıran <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi ve bir sayının dize gösterimini döndürmekten sorumludur. Yöntemi genellikle uygulama aşağıdakileri içerir:  
   
     1.  İsteğe bağlı olarak, yöntem inceleyerek biçimlendirme hizmetleri sağlamak için de avustralya'dan arama içindir emin `provider` parametresi. Her ikisi de uygulayan nesneler biçimlendirme <xref:System.IFormatProvider> ve <xref:System.ICustomFormatter>, bu testi içerir `provider` geçerli biçimlendirme nesne eşitliği parametresi.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "43879042"
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Özel bir sayısal biçimlendirme nesnesini kullanmak için  
   
-1.  Özel biçimlendirme sınıfının yeni bir örneğini oluşturun.  
+1. Özel biçimlendirme sınıfının yeni bir örneğini oluşturun.  
   
-2.  Çağrı <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> biçimlendirme yöntemi, özel biçimlendirme nesne biçimlendirme belirticisi geçirme (veya <xref:System.String.Empty?displayProperty=nameWithType>, bir kullanılmazsa) ve Biçimlendirilecek sayısal değer.  
+2. Çağrı <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> biçimlendirme yöntemi, özel biçimlendirme nesne biçimlendirme belirticisi geçirme (veya <xref:System.String.Empty?displayProperty=nameWithType>, bir kullanılmazsa) ve Biçimlendirilecek sayısal değer.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek adlı bir özel sayısal biçim sağlayıcısı tanımlar `TelephoneFormatter` kendi NANP veya E.123 biçimine bir ABD telefon numarasını temsil eden bir sayıya dönüştürür. Yöntemi iki biçim belirticileri, "(hangi NANP biçimi çıkışları) N" ve "I" (hangi uluslararası E.123 biçim çıkışları) işler.  

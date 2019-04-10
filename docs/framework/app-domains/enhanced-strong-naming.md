@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a24d33a4516a2d4bbf5add8596ee49e2a62beb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154888"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319878"
 ---
 # <a name="enhanced-strong-naming"></a>Güçlü Adlandırmayı İyileştirme
 Tanımlayıcı ad imzası derlemeleri tanımlamak için bir kimlik .NET Framework mekanizmasıdır. Buna genellikle bir oluşturucu (imzalayan) alıcıya (doğrulama) geçirilen verilerin bütünlüğünü doğrulamak için kullanılan ortak anahtar dijital imzası var. Bu imza, bir derleme için benzersiz bir kimlik kullanılır ve derlemeye yapılan başvuruların belirsiz olmamasını sağlar. Derleme oluşturma işleminin bir parçası imzalanır ve sonra yüklendiğinde doğrulanır.  
@@ -41,25 +41,25 @@ Tanımlayıcı ad imzası derlemeleri tanımlamak için bir kimlik .NET Framewor
 ### <a name="signing-with-sha-2-without-key-migration"></a>SHA-2, anahtar geçişi olmadan imzalama  
  Bir derlemeyi bir güçlü ad geçirmeden imzalamak için bir komut istemi penceresinden aşağıdaki komutları çalıştırın:  
   
-1.  Yeni bir kimlik anahtarı (gerekiyorsa) üretin.  
+1. Yeni bir kimlik anahtarı (gerekiyorsa) üretin.  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2.  Kimlik genel anahtarını ayıklayın ve bu anahtar ile imzalarken bir SHA-2 algoritmasının kullanılacağını belirtin.  
+2. Kimlik genel anahtarını ayıklayın ve bu anahtar ile imzalarken bir SHA-2 algoritmasının kullanılacağını belirtin.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3.  Derlemeyi kimlik genel anahtar dosyasıyla Gecikmeli imzalayın.  
+3. Derlemeyi kimlik genel anahtar dosyasıyla Gecikmeli imzalayın.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4.  Derlemeyi tam kimlik anahtar çifti ile yeniden imzalayın.  
+4. Derlemeyi tam kimlik anahtar çifti ile yeniden imzalayın.  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
@@ -68,26 +68,26 @@ Tanımlayıcı ad imzası derlemeleri tanımlamak için bir kimlik .NET Framewor
 ### <a name="signing-with-sha-2-with-key-migration"></a>SHA-2 ile anahtar geçişi ile imzalama  
  Bir derlemeyi geçirilen kesin ad imzalı imzalamak için bir komut istemi penceresinden aşağıdaki komutları çalıştırın.  
   
-1.  Bir kimlik ve imza anahtar çifti (gerekiyorsa) üretin.  
+1. Bir kimlik ve imza anahtar çifti (gerekiyorsa) üretin.  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2.  İmza genel anahtarını ayıklayın ve bu anahtar ile imzalarken bir SHA-2 algoritmasının kullanılacağını belirtin.  
+2. İmza genel anahtarını ayıklayın ve bu anahtar ile imzalarken bir SHA-2 algoritmasının kullanılacağını belirtin.  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3.  Bir karşı imza üreten karma algoritmayı belirleyen kimlik genel anahtarını ayıklayın.  
+3. Bir karşı imza üreten karma algoritmayı belirleyen kimlik genel anahtarını ayıklayın.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4.  İçin parametreler üretin bir <xref:System.Reflection.AssemblySignatureKeyAttribute> özniteliği ve özniteliği derlemeye ekleyin.  
+4. İçin parametreler üretin bir <xref:System.Reflection.AssemblySignatureKeyAttribute> özniteliği ve özniteliği derlemeye ekleyin.  
   
     ```  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
@@ -121,13 +121,13 @@ Tanımlayıcı ad imzası derlemeleri tanımlamak için bir kimlik .NET Framewor
     )]
     ```
   
-5.  Derlemeyi kimlik genel anahtarıyla Gecikmeli imzalayın.  
+5. Derlemeyi kimlik genel anahtarıyla Gecikmeli imzalayın.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6.  Derlemeyi imza kimlik anahtar çifti ile tam olarak imzalayın.  
+6. Derlemeyi imza kimlik anahtar çifti ile tam olarak imzalayın.  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  

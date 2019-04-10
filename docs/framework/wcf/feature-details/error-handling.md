@@ -2,12 +2,12 @@
 title: Hata işleme
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136441"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300287"
 ---
 # <a name="error-handling"></a>Hata işleme
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation işleme hatası  
@@ -34,15 +34,15 @@ ms.locfileid: "59136441"
   
  Bir Ierrorhandler ile bir özel durum oluştuğunda uygulamanızın davranışını açıkça denetleyebilirsiniz. Şunları yapabilirsiniz:  
   
-1.  İstemciye bir hata göndermek gerekip gerekmediğini karar verin  
+1. İstemciye bir hata göndermek gerekip gerekmediğini karar verin  
   
-2.  Bir özel durum bir hata ile değiştirin.  
+2. Bir özel durum bir hata ile değiştirin.  
   
-3.  Bir hata başka bir hata ile değiştirin.  
+3. Bir hata başka bir hata ile değiştirin.  
   
-4.  Günlüğe kaydetme veya izleme gerçekleştirme  
+4. Günlüğe kaydetme veya izleme gerçekleştirme  
   
-5.  Diğer özel etkinlikler gerçekleştirme  
+5. Diğer özel etkinlikler gerçekleştirme  
   
  Hizmetiniz için kanal dağıtıcıları ErrorHandlers özelliğini ekleyerek bir özel hata işleyicisi yükleyebilirsiniz.  Birden fazla hata işleyicisini olması mümkündür ve bu koleksiyona eklendikleri sırayla çağrılır.  
   

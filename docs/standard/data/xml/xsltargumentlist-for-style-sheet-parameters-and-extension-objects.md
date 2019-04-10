@@ -1,5 +1,5 @@
 ---
-title: Stil sayfası parametreleri ve genişletme nesneleri için XsltArgumentList
+title: Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988094"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322416"
 ---
-# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Stil sayfası parametreleri ve genişletme nesneleri için XsltArgumentList
+# <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> Sınıfı içeren Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) parametreleri ve XSLT genişletme nesneleri için. Yöntemlere geçirilen zaman <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi, bu parametreleri ve genişletme nesneleri stil sayfası içinden çağrılan.  
   
 > [!NOTE]
@@ -50,11 +50,11 @@ ms.locfileid: "45988094"
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>XSLT parametresini kullanmak için kullanıcı şunları yapmanız gerekir:  
   
-1.  Oluşturma bir <xref:System.Xml.Xsl.XsltArgumentList> ve kullanarak nesne eklemek <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. Oluşturma bir <xref:System.Xml.Xsl.XsltArgumentList> ve kullanarak nesne eklemek <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
   
-2.  Stil sayfası parametreleri çağırın.  
+2. Stil sayfası parametreleri çağırın.  
   
-3.  Geçirmek <xref:System.Xml.Xsl.XsltArgumentList> için <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi.  
+3. Geçirmek <xref:System.Xml.Xsl.XsltArgumentList> için <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi.  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnekte <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi hesaplanan indirimi tarihini tutmak için bir parametre oluşturun. İndirimi tarihini, sipariş tarihi 20 gün olarak hesaplanır.  
@@ -180,7 +180,7 @@ public class Sample
 </order>  
 ```  
   
-## <a name="xslt-extension-objects"></a>XSLT genişletme nesneleri  
+## <a name="xslt-extension-objects"></a>XSLT Genişletme Nesneleri  
  XSLT genişletme nesneleri eklenir <xref:System.Xml.Xsl.XsltArgumentList> kullanarak <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi. Bir tam adı ve ad alanı URI o anda uzantısı nesnesi ile ilişkilendirilmiş.  
   
  Bir nesne eklendiğinde, çağıran <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> güvenlik ilkesinde tam olarak güvenilir olması gerekir. Çağıranın kısmen güvenilen ise, ayrıca başarısız olur.  
@@ -191,11 +191,11 @@ public class Sample
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>XSLT uzantı nesnesini kullanmak için kullanıcı aşağıdakileri yapmanız gerekir:  
   
-1.  Oluşturma bir <xref:System.Xml.Xsl.XsltArgumentList> ve uzantısını kullanarak nesne eklemek <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
+1. Oluşturma bir <xref:System.Xml.Xsl.XsltArgumentList> ve uzantısını kullanarak nesne eklemek <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
   
-2.  Stil sayfası uzantısı nesneden çağırın.  
+2. Stil sayfası uzantısı nesneden çağırın.  
   
-3.  Geçirmek <xref:System.Xml.Xsl.XsltArgumentList> için <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi.  
+3. Geçirmek <xref:System.Xml.Xsl.XsltArgumentList> için <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi.  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnek, RADIUS verilmiş bir daire çevresi hesaplar.  

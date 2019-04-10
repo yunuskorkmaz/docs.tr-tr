@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198003"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313521"
 ---
 # <a name="diffgrams"></a>DiffGrams
 Bir DiffGram veri öğelerinin geçerli ve orijinal sürümler tanımlayan bir XML biçimidir. <xref:System.Data.DataSet> Yüklemek ve içeriğini kalıcı hale getirmek ve ağ bağlantısı üzerinden aktarım için içeriği seri hale getirmek için biçimini kullanır. Olduğunda bir <xref:System.Data.DataSet> yazılmış bir DiffGram doğru içeriği, ancak şeması değil, yeniden oluşturmak için gerekli tüm bilgileri DiffGram doldurur <xref:System.Data.DataSet>, hem sütun değerleri dahil olmak üzere **özgün** ve **geçerli** satır sürümleri, satır hatası bilgileri ve satır sırası.  
@@ -20,26 +20,26 @@ Bir DiffGram veri öğelerinin geçerli ve orijinal sürümler tanımlayan bir X
   
 ### <a name="to-generate-a-diffgram"></a>Bir Diffgram oluşturmak için  
   
-1.  Kök tablo (diğer bir deyişle, herhangi bir üst olmayan tablolar) listesini oluşturun.  
+1. Kök tablo (diğer bir deyişle, herhangi bir üst olmayan tablolar) listesini oluşturun.  
   
-2.  Her tablo ve alt öğeleri listesinde, tüm satırların ilk Diffgram bölümünde geçerli sürüm kullanıma yazın.  
+2. Her tablo ve alt öğeleri listesinde, tüm satırların ilk Diffgram bölümünde geçerli sürüm kullanıma yazın.  
   
-3.  Her tablo için <xref:System.Data.DataSet>, varsa özgün sürümü tüm satırların yazma,  **\<önce >** Diffgram bölümü.  
+3. Her tablo için <xref:System.Data.DataSet>, varsa özgün sürümü tüm satırların yazma,  **\<önce >** Diffgram bölümü.  
   
-4.  Hata içeren satırları yazmak için olan içerik, hata  **\<hataları >** Diffgram bölümü.  
+4. Hata içeren satırları yazmak için olan içerik, hata  **\<hataları >** Diffgram bölümü.  
   
  Bir Diffgram sonuna XML dosyasının başından sırayla işlenir.  
   
 ### <a name="to-process-a-diffgram"></a>Bir Diffgram işlemek için  
   
-1.  Satırları geçerli sürümünü içeren Diffgram ilk bölümünü işler.  
+1. Satırları geçerli sürümünü içeren Diffgram ilk bölümünü işler.  
   
-2.  İkinci işlem veya  **\<önce >** özgün satır sürümü içeren bölümü değiştirilen ve silinen satır.  
+2. İkinci işlem veya  **\<önce >** özgün satır sürümü içeren bölümü değiştirilen ve silinen satır.  
   
     > [!NOTE]
     >  Bir satır silindi olarak işaretlenmişse silme işlemini bağlı olarak sıranın alt öğeleri de silebilirsiniz `Cascade` özelliği geçerli <xref:System.Data.DataSet>.  
   
-3.  İşlem  **\<hataları >** bölümü. Bu bölümde belirtilen satır ve sütunları her öğe için hata bilgilerini ayarlayın.  
+3. İşlem  **\<hataları >** bölümü. Bu bölümde belirtilen satır ve sütunları her öğe için hata bilgilerini ayarlayın.  
   
 > [!NOTE]
 >  Ayarlarsanız <xref:System.Data.XmlWriteMode> Diffgram, hedef içeriği için <xref:System.Data.DataSet> ve özgün <xref:System.Data.DataSet> farklı olabilir.  

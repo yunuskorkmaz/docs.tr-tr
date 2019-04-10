@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e5ca80de113785904562ff1cef953de8a5a9460
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442145"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313664"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET uygulamaları için kaynak dosyaları oluşturma
 
@@ -31,7 +31,7 @@ Uygulamanızda kolayca kullanılabilir hale getirmek için dizeler, görüntüle
 
 - Program aracılığıyla ikili bir kaynak (.resources) dosyası oluşturun. Ardından dosyayı çalıştırılabilir bir uygulamaya veya bir uygulama kütüphanesine dil derleyicisini kullanarak, veya kullanarak, bir uydu derlemesine gömebilirsiniz [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Daha fazla bilgi için [.resources dosyalarındaki kaynaklar](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles) bölümü.
 
-- Kullanım [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) kaynak dosyası oluşturma ve projenize dahil. Visual Studio, kaynakları eklemenizi, silmenizi ve değiştirmenizi sağlayan bir kaynak düzenleyicisi sağlar. Derleme sırasında, kaynak dosyası otomatik olarak ikili bir .resources dosyasına dönüştürülür ve bir uygulama derlemesine veya uydu derlemesine gömülür. Daha fazla bilgi için [Visual Studio'daki kaynak dosyaları](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) bölümü.
+- Kullanım [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) kaynak dosyası oluşturma ve projenize dahil. Visual Studio, kaynakları eklemenizi, silmenizi ve değiştirmenizi sağlayan bir kaynak düzenleyicisi sağlar. Derleme sırasında, kaynak dosyası otomatik olarak ikili bir .resources dosyasına dönüştürülür ve bir uygulama derlemesine veya uydu derlemesine gömülür. Daha fazla bilgi için [Visual Studio'daki kaynak dosyaları](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) bölümü.
 
 <a name="TextFiles"></a>
 ## <a name="resources-in-text-files"></a>Metin dosyalarında kaynaklar
@@ -172,7 +172,7 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 > [!IMPORTANT]
-> .resx dosyaları, önceden tanımlanmış formatta doğru biçimlendirilmiş XML'lerden oluşması gerektiğinden özellikle .resx dosyaları dizeler haricinde kaynaklar içerdiğinde .resx dosyalarıyla el ile çalışılmasını önermeyiz. Bunun yerine, [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) oluşturmak ve .resx dosyalarını işlemek için saydam bir arabirim sağlar. Daha fazla bilgi için [Visual Studio'daki kaynak dosyaları](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) bölümü. .resx dosyalarını aynı zamanda program aracılığıyla oluşturabilir ve değiştirebilirsiniz. Daha fazla bilgi için [ile .resx dosyalarını program aracılığıyla çalışma](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
+> .resx dosyaları, önceden tanımlanmış formatta doğru biçimlendirilmiş XML'lerden oluşması gerektiğinden özellikle .resx dosyaları dizeler haricinde kaynaklar içerdiğinde .resx dosyalarıyla el ile çalışılmasını önermeyiz. Bunun yerine, [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) oluşturmak ve .resx dosyalarını işlemek için saydam bir arabirim sağlar. Daha fazla bilgi için [Visual Studio'daki kaynak dosyaları](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) bölümü. .resx dosyalarını aynı zamanda program aracılığıyla oluşturabilir ve değiştirebilirsiniz. Daha fazla bilgi için [ile .resx dosyalarını program aracılığıyla çalışma](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
 
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>.Resources dosyalarındaki kaynaklar
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Visual Studio'daki kaynak dosyaları
 
-Bir kaynak dosyasına eklediğinizde, [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) proje, Visual Studio proje dizininde bir .resx dosyası oluşturur. Visual Studio, dizeler, görüntüler ve ikili nesneleri eklemenizi sağlayan kaynak düzenleyicileri sağlar. Düzenleyiciler yalnızca statik verileri işlemek için tasarlandığından programatik nesneleri depolamak için kullanılamazlar; nesne verilerini bir .resx dosyasına veya bir .resources dosyasına program aracılığıyla yazmanız gerekir. Daha fazla bilgi için [ile .resx dosyalarını program aracılığıyla çalışma](../../../docs/framework/resources/working-with-resx-files-programmatically.md) ve [.resources dosyalarındaki kaynaklar](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles) bölümü.
+Bir kaynak dosyasına eklediğinizde, [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) proje, Visual Studio proje dizininde bir .resx dosyası oluşturur. Visual Studio, dizeler, görüntüler ve ikili nesneleri eklemenizi sağlayan kaynak düzenleyicileri sağlar. Düzenleyiciler yalnızca statik verileri işlemek için tasarlandığından programatik nesneleri depolamak için kullanılamazlar; nesne verilerini bir .resx dosyasına veya bir .resources dosyasına program aracılığıyla yazmanız gerekir. Daha fazla bilgi için [ile .resx dosyalarını program aracılığıyla çalışma](../../../docs/framework/resources/working-with-resx-files-programmatically.md) ve [.resources dosyalarındaki kaynaklar](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles) bölümü.
 
 Yerelleştirilmiş kaynaklar ekliyorsanız, bunları ana kaynak dosyasıyla aynı kök dosya adı verin. Ayrıca, dosya adında kültürünü de belirlemeniz gerekir. Örneğin, Resources.resx adında bir kaynak dosyası eklerseniz, sırasıyla İngilizce (Amerika Birleşik Devletleri) ve Fransızca (Fransa) kültürleri için yerelleştirilmiş kaynakları tutmak amacıyla aynı zamanda Resources.en-US.resx ve Resources.fr-FR.resx adlı kaynak dosyaları oluşturabilirsiniz. Ayrıca uygulamanın varsayılan kültürünü de belirlemeniz gerekir. Bu, kaynakları belirli bir kültüre ait yerelleştirilmiş kaynaklar bulunamadığında kullanılan kültürdür. Varsayılan kültürün Visual Studio'daki Çözüm Gezgini'nde proje adına sağ tıklayın belirtmek için uygulama seçeneğine gidin, **derleme bilgileri**, uygun dili/kültürü seçin **nötr Dil** listesi.
 
@@ -208,4 +208,4 @@ Derleme zamanında, Visual Studio öncelikle bir projedeki .resx dosyalarını i
 
 - <xref:System.Resources>
 - [Masaüstü Uygulamalarındaki Kaynaklar](../../../docs/framework/resources/index.md)
-- [Kaynakları Paketleme ve Dağıtma](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Paketleme ve Dağıtma Kaynakları](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

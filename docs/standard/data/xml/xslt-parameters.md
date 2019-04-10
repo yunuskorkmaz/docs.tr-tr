@@ -1,5 +1,5 @@
 ---
-title: XSLT parametreleri
+title: XSLT Parametreleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191892"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306323"
 ---
-# <a name="xslt-parameters"></a>XSLT parametreleri
+# <a name="xslt-parameters"></a>XSLT Parametreleri
 XSLT parametreleri eklenir <xref:System.Xml.Xsl.XsltArgumentList> kullanarak <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi. Bir tam adı ve ad alanı URI o anda parametresi nesnesi ile ilişkilendirilmiş.  
   
 ### <a name="to-use-an-xslt-parameter"></a>XSLT parametresini kullanma  
   
-1.  Oluşturma bir <xref:System.Xml.Xsl.XsltArgumentList> nesne ve parametresini kullanarak ekleme <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi.  
+1. Oluşturma bir <xref:System.Xml.Xsl.XsltArgumentList> nesne ve parametresini kullanarak ekleme <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi.  
   
-2.  Parametresi, stil sayfası içinden çağırın.  
+2. Parametresi, stil sayfası içinden çağırın.  
   
-3.  Geçirmek <xref:System.Xml.Xsl.XsltArgumentList> nesnesini <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
+3. Geçirmek <xref:System.Xml.Xsl.XsltArgumentList> nesnesini <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
   
 ## <a name="parameter-types"></a>Parametre türleri  
  Parametre nesnesine W3C türüne karşılık gelmelidir. Eşdeğer Microsoft .NET sınıfları (tür), aşağıdaki tablo W3C türleri karşılık gelen gösterir ve W3C türün bir XPath türü veya XSLT türü olup.  

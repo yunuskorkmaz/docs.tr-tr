@@ -2,12 +2,12 @@
 title: '-target: winmdobj (C# Derleyici Seçenekleri)'
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319306"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target: winmdobj (C# Derleyici Seçenekleri)
 Kullanırsanız **-target: winmdobj** derleyici seçeneği, derleyicinin bir Windows çalışma zamanı (.winmd) ikili dosyasına dönüştürebileceğiniz bir ara .winmdobj dosyası oluşturur. .Winmd dosyası yönetilen dil programlarının yanı sıra, JavaScript ve C++ programları tarafından ardından tarafından kullanılabilir.  
@@ -29,11 +29,11 @@ Kullanırsanız **-target: winmdobj** derleyici seçeneği, derleyicinin bir Win
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Bu derleyici seçeneğini Windows Mağazası uygulaması için Visual Studio IDE'de ayarlamak için  
   
-1.  İçinde **Çözüm Gezgini**, projeniz için kısayol menüsünü açın ve ardından **özellikleri**.  
+1. İçinde **Çözüm Gezgini**, projeniz için kısayol menüsünü açın ve ardından **özellikleri**.  
   
-2.  Seçin **uygulama** sekmesi.  
+2. Seçin **uygulama** sekmesi.  
   
-3.  İçinde **çıkış türü** listesinde **WinMD dosyası**.  
+3. İçinde **çıkış türü** listesinde **WinMD dosyası**.  
   
      **WinMD dosyası** yalnızca seçeneğin kullanılabilir [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] uygulama şablonları.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303498"
 ---
 # <a name="flow-document-overview"></a>Akış Belgesine Genel Bakış
 Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanmıştır. Önceden tanımlanmış bir düzene ayarlanıyor, yerine akış belgeleri dinamik olarak ayarlama ve çalışma zamanı değişkenleri isteğe bağlı kullanıcı tercihlerini pencere boyutunu ve cihaz çözünürlüğü gibi temel alarak kendi içerik yeniden akışı. Ayrıca, akış belgeleri sayfalandırma ve sütunlar gibi gelişmiş belge özellikleri sunar. Bu konu, akış belgeleri ve bunların nasıl oluşturulacağı hakkında genel bir bakış sağlar.  
@@ -89,9 +89,9 @@ Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanm
   
  Akış içeriği amaçları için iki önemli kategorisi vardır:  
   
-1.  **Blok türetilmiş sınıflar**: "Blok içerik öğeleri" veya "Blok öğeleri" yalnızca olarak da adlandırılır. Devralınan öğeleri <xref:System.Windows.Documents.Block> ortak bir üst öğe altında öğeleri gruplandırmak için veya bir gruba ortak öznitelikleri uygulamak için kullanılabilir.  
+1. **Blok türetilmiş sınıflar**: "Blok içerik öğeleri" veya "Blok öğeleri" yalnızca olarak da adlandırılır. Devralınan öğeleri <xref:System.Windows.Documents.Block> ortak bir üst öğe altında öğeleri gruplandırmak için veya bir gruba ortak öznitelikleri uygulamak için kullanılabilir.  
   
-2.  **Satır içi türetilmiş sınıflar**: "Satır içi içeriği öğelerini" veya yeni "satır içi öğeleri" olarak da adlandırılır. Devralınan öğeleri <xref:System.Windows.Documents.Inline> ya da bir blok öğede veya başka bir satır içi öğenin içinde yer alır. Satır içi öğeleri genellikle ekran için içeriği doğrudan kapsayıcı olarak kullanılır. Örneğin, bir <xref:System.Windows.Documents.Paragraph> (blok öğede) içerebilir bir <xref:System.Windows.Documents.Run> (satır içi öğesini) ancak <xref:System.Windows.Documents.Run> gerçekten ekranında işlenmeden metni içerir.  
+2. **Satır içi türetilmiş sınıflar**: "Satır içi içeriği öğelerini" veya yeni "satır içi öğeleri" olarak da adlandırılır. Devralınan öğeleri <xref:System.Windows.Documents.Inline> ya da bir blok öğede veya başka bir satır içi öğenin içinde yer alır. Satır içi öğeleri genellikle ekran için içeriği doğrudan kapsayıcı olarak kullanılır. Örneğin, bir <xref:System.Windows.Documents.Paragraph> (blok öğede) içerebilir bir <xref:System.Windows.Documents.Run> (satır içi öğesini) ancak <xref:System.Windows.Documents.Run> gerçekten ekranında işlenmeden metni içerir.  
   
  Bu iki kategori her sınıfta, aşağıda kısaca açıklanmıştır.  
   

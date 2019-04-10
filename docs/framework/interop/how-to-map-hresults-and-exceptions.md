@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 609f7f6e5460bf315b87725405496e95abbfdd95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102771"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306553"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme
 COM yöntemleri HRESULTs döndürerek hata raporu; .NET yöntemleri bunları özel durumları atma tarafından rapor. Çalışma zamanı, ikisi arasındaki geçişi işler. .NET Framework içindeki her bir özel durum sınıfı için HRESULT eşler.  
@@ -31,7 +31,7 @@ COM yöntemleri HRESULTs döndürerek hata raporu; .NET yöntemleri bunları öz
   
 ### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Yeni bir özel durum sınıfı oluşturun ve bir HRESULT eşlemek için  
   
-1.  Adlı yeni bir özel durum sınıfı oluşturmak için aşağıdaki kodu kullanın `NoAccessException` ve HRESULT harita `E_ACCESSDENIED`.  
+1. Adlı yeni bir özel durum sınıfı oluşturmak için aşağıdaki kodu kullanın `NoAccessException` ve HRESULT harita `E_ACCESSDENIED`.  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  

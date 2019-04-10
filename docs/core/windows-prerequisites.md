@@ -1,13 +1,14 @@
 ---
 title: Windows üzerinde .NET Core önkoşulları
 description: Windows üzerinde gereken bağımlılıklar geliştirin ve .NET Core uygulamaları çalıştırmak için makine öğrenin.
-ms.date: 12/14/2018
-ms.openlocfilehash: 2209c6e74413204c38ba54ffc538846f27d0bdf6
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.custom: updateeachvsrelease
+ms.date: 04/08/2019
+ms.openlocfilehash: 2941721dfa4b87d4113e4f4b529845e47f3dc1b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656121"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313716"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
 
@@ -62,9 +63,9 @@ Aşağıdaki makaleler sürüm başına .NET Core desteklenen işletim sistemler
 >
 > KB2999226 yanı sıra, ayrıca olduğundan emin olun [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) yüklü. Bu yazılımın yüklü yoksa, .NET Core uygulamasını başlattığında aşağıdakine benzer bir hata görürsünüz: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
-## <a name="prerequisites-for-net-core-30-preview-1"></a>.NET Core 3.0 Önizleme 1 için Önkoşullar
+## <a name="prerequisites-for-net-core-30-preview-3"></a>.NET Core 3.0 Preview 3 için Önkoşullar
 
-.NET core 3.0 Önizleme 1 olarak .NET Core diğer sürümleri aynı önkoşulları vardır. Ancak, Visual Studio kullanmak istiyorsanız projesi .NET Core 3.0 oluşturmak üzere, kullanmalısınız [Visual Studio 2019 Önizleme](https://visualstudio.microsoft.com/vs/preview/). Visual Studio 2019 Preview yüklü yan yana çakışma olmadan Visual Studio'nun diğer sürümleriyle birlikte olabilir.
+.NET core 3.0 Preview 3 olarak .NET Core diğer sürümleri aynı önkoşulları vardır. Ancak, Visual Studio kullanmak istiyorsanız projesi .NET Core 3.0 oluşturmak üzere, kullanmalısınız [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Visual Studio 2019 yüklü yan yana çakışma olmadan Visual Studio'nun diğer sürümleriyle birlikte olabilir.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 ile önkoşulları
     
@@ -72,7 +73,7 @@ Aşağıdaki makaleler sürüm başına .NET Core desteklenen işletim sistemler
 
 Daha fazla Visual Studio 2017'deki değişiklikler hakkında [sürüm notları](/visualstudio/releasenotes/vs2017-relnotes).
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET core 2.x](#tab/netcore2x)
 
 .NET Core 2.2 SDK'sını kullanarak Visual Studio 2017'de .NET Core uygulamaları geliştirmek için:
 
@@ -100,7 +101,7 @@ Visual Studio ile .NET Core 2.2 SDK yapılandırılmış oluşturduktan sonra a�
 * .NET Core 2.2, derleme, .NET Core 1.x ve 2.x'i projeleri yeniden hedefle ve çalıştırın.
 * Yeni .NET Core 2.2 projeleri oluşturun.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET core 1.x](#tab/netcore1x)
 
 Visual Studio'da .NET Core 1.x uygulamalar geliştirmek için [Visual Studio 2017'yi indirip](/visualstudio/install/install-visual-studio) ile **".NET Core çoklu platform geliştirme"** iş yükü (içinde **diğer araç takımları**bölümü) seçili.
 
@@ -122,7 +123,7 @@ Visual Studio'da .NET Core 1.x uygulamalar geliştirmek için [Visual Studio 201
 >
 > * Üzerinde **yardımcı** menüsünde seçin **Microsoft Visual Studio hakkında**.
 > * İçinde **Microsoft Visual Studio hakkında** iletişim kutusunda, sürüm numarasını doğrulayın.
->   * .NET Core 3.0 Önizleme 1 uygulamaları için Visual Studio 2019 Önizleme 1 veya daha yüksek.
+>   * .NET Core 3.0 Preview 3 uygulamaları için Visual Studio 2019 16,0 veya üzeri sürümler.
 >   * .NET Core 2.2 uygulamaları için Visual Studio 2017 sürüm 15,9 veya üzeri.
 >   * .NET Core 2.1 uygulamaları için Visual Studio 2017 sürüm 15.7 veya üzeri.
 >   * .NET Core 1.x uygulamaları için Visual Studio 2017 sürüm 15.0 veya üzeri.

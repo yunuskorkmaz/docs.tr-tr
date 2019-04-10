@@ -2,12 +2,12 @@
 title: WCF'de Kullanılan Güvenlik Kavramları
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: c995705e998ceee34ac9a3c2fc2343366f92ca00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142226"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295555"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF'de Kullanılan Güvenlik Kavramları
 Windows Communication Foundation (WCF) güvenlik kavramları zaten kullanımda üzerine ve çeşitli güvenlik altyapısına içinde dağıtılmış.  
@@ -34,15 +34,15 @@ Windows Communication Foundation (WCF) güvenlik kavramları zaten kullanımda �
 ## <a name="access-control-mechanisms"></a>Erişim Denetimi Mekanizmaları  
  WCF hizmeti veya işlemi erişimi denetlemek için çeşitli yollarla sağlar. Bunlar arasında olan  
   
-1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
+1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2.  ASP.NET üyelik sağlayıcısı  
+2. ASP.NET üyelik sağlayıcısı  
   
-3.  ASP.NET rol sağlayıcısını  
+3. ASP.NET rol sağlayıcısını  
   
-4.  Yetkilendirme Yöneticisi  
+4. Yetkilendirme Yöneticisi  
   
-5.  Kimlik modeli  
+5. Kimlik modeli  
   
  Bu konulara bakın hakkında daha fazla bilgi için [erişim denetimi mekanizmaları](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   

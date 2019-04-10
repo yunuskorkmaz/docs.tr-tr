@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: b0b189db8f51e0cccb6ee0516fc4cc53556ccf51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174128"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310531"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Bir İşlemde Toplu İleti İşleme
 Sıraya alınan uygulamaları, doğruluk ve iletilerin güvenilir teslim emin olmak için işlem kullanır. İşlem, ancak pahalı işlemlerdir ve ileti aktarım hızı önemli ölçüde azaltabilir. İleti işleme hızı artırmak için bir yol, okuma ve tek bir işlemde birden çok iletiyi bir uygulamaya sahip olmaktır. Performans ve kurtarma dengedir: toplu ileti sayısı arttıkça, bu nedenle gerekli işlemler geri alınacak olursa kurtarma iş yapar. Toplu işlem ve oturumları ileti işleme arasındaki farka dikkat edin önemlidir. A *oturumu* tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen ilgili iletiler bir gruplandırmasıdır. Oturumları ilgili iletiler grubunu birlikte işlenmesi gereken genel olarak kullanılır. Buna örnek olarak çevrimiçi bir alışveriş Web sitesidir. *Toplu* ilgisi olmayan iletileri arttıkça aktarım hızı ileti şekilde, birden fazla işlemek için kullanılır. Oturumlar hakkında daha fazla bilgi için bkz. [gruplandırma kuyruğa alınan iletileri bir oturumda](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Toplu iletiler de tek bir uygulama tarafından işlenen ve tek bir birim olarak kabul edilen, ancak toplu işlem iletileri arasında hiçbir ilişkisi olabilir. Bir işlemde toplu ileti işleme uygulamanın nasıl çalıştığını değişmez bir optimizasyondur.  
@@ -31,11 +31,11 @@ Sıraya alınan uygulamaları, doğruluk ve iletilerin güvenilir teslim emin ol
 ## <a name="leaving-batching-mode"></a>Toplu işleme modu çıkılıyor  
  Bir ileti bir toplu işlemin iptal etmek neden olursa, aşağıdaki adımlardan oluşur:  
   
-1.  İletilerin toplu işin tamamını geri alınır.  
+1. İletilerin toplu işin tamamını geri alınır.  
   
-2.  İleti iki kez en yüksek toplu iş boyutu okuma ileti sayısını aşana kadar teker teker okunur.  
+2. İleti iki kez en yüksek toplu iş boyutu okuma ileti sayısını aşana kadar teker teker okunur.  
   
-3.  Yeniden girilen toplu iş modu.  
+3. Yeniden girilen toplu iş modu.  
   
 ## <a name="choosing-the-batch-size"></a>Toplu iş boyutu seçme  
  Bir toplu işin boyutunu uygulama bağımlıdır. Deneysel yöntemi, uygulama için bir en iyi toplu iş boyutu ulaşırsınız en iyi yoludur. Uygulamanızın gerçek dağıtım modeline göre boyutunu seçmek için bir toplu iş boyutu seçerken unutmamak önemlidir. Örneğin, uzak bir makine ve kuyruk kapsayan bir işlem üzerinde bir SQL server ve SQL server'ı gerekirse Uygulama dağıtırken, sonra toplu iş boyutu en iyi tam yapılandırmanın çalıştırarak belirlenir.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e44b695a07c0f304e1c995f240d9fa387195358d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177027"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306346"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Yönetilen Profil Temelli İyileştirme Aracı)
 
@@ -79,23 +79,23 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 ## <a name="to-use-mpgoexe"></a>Mpgo.exe'yi kullanmak için  
   
-1.  Visual Studio Ultimate 2012 ve uygulamanızın yüklü olduğu bir bilgisayar kullanın.  
+1. Visual Studio Ultimate 2012 ve uygulamanızın yüklü olduğu bir bilgisayar kullanın.  
   
-2.  Mpgo.exe'yi bir yönetici olarak gerekli parametrelerle çalıştırın.  Örnek komutlar için sonraki bölüme bakın.  
+2. Mpgo.exe'yi bir yönetici olarak gerekli parametrelerle çalıştırın.  Örnek komutlar için sonraki bölüme bakın.  
   
      En iyi duruma getirilmiş Ara dil (IL) derlemeleri tarafından belirtilen klasörde oluşturulan `–OutDir` parametre (Bu örneklerde, `C:\Optimized` klasörü).  
   
-3.  Tarafından belirtilen dizindeki profil bilgilerini içeren yeni IL derlemeleriyle ile Ngen.exe için kullandığınız IL derlemelerini değiştirin `–OutDir`.  
+3. Tarafından belirtilen dizindeki profil bilgilerini içeren yeni IL derlemeleriyle ile Ngen.exe için kullandığınız IL derlemelerini değiştirin `–OutDir`.  
   
-4.  Mpgo.exe tarafından sağlanan görüntüleri kullanan uygulama kurulumu en iyi duruma getirilmiş yerel görüntüleri yükler.  
+4. Mpgo.exe tarafından sağlanan görüntüleri kullanan uygulama kurulumu en iyi duruma getirilmiş yerel görüntüleri yükler.  
   
 ## <a name="suggested-workflow"></a>Önerilen İş Akışı  
   
-1.  Mpgo.exe'yi kullanarak bir dizi en iyi duruma getirilmiş IL derlemeleri oluşturun `–Scenario` parametresi.  
+1. Mpgo.exe'yi kullanarak bir dizi en iyi duruma getirilmiş IL derlemeleri oluşturun `–Scenario` parametresi.  
   
-2.  En iyi duruma getirilmiş IL derlemelerini kaynak denetime girin.  
+2. En iyi duruma getirilmiş IL derlemelerini kaynak denetime girin.  
   
-3.  Derleme işleminde ile Mpgo.exe'yi çağırın `–Import` parametre oluşturmak için oluşturma sonrası adımı olarak en iyi duruma getirilmiş IL görüntüleri Ngen.exe'ye geçirilecek.  
+3. Derleme işleminde ile Mpgo.exe'yi çağırın `–Import` parametre oluşturmak için oluşturma sonrası adımı olarak en iyi duruma getirilmiş IL görüntüleri Ngen.exe'ye geçirilecek.  
   
  Bu işlem tüm derlemelerin en iyi duruma getirilmiş verilere sahip olmasını sağlar. Güncelleştirilmiş en iyi duruma getirilmiş derlemeleri daha sık iade ederseniz (1. ve 2. adım), tüm üretim geliştirme sürecinde performans numaraları daha tutarlı olur.  
   

@@ -1,18 +1,18 @@
 ---
-title: Veri tanımlama dili ile çalışma
+title: Veri Tanımlama Dili ile Çalışma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 9ca3732de5e4cfa07fe08dec78edc9de23a1a036
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 75a214ad1099bf48dcb2c2d3b36bf07dc0524f8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904371"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313248"
 ---
-# <a name="working-with-data-definition-language"></a>Veri tanımlama dili ile çalışma
+# <a name="working-with-data-definition-language"></a>Veri Tanımlama Dili ile Çalışma
 İle başlayarak [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] sürüm 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] veri tanımlama dili (DDL) destekler. Bu, oluşturmak veya bağlantı dizesi ve depolama (SSDL) model meta verilerini temel alan bir veritabanı örneğini silmek sağlar.  
   
  Aşağıdaki yöntemlerden <xref:System.Data.Objects.ObjectContext> aşağıdakileri gerçekleştirmek için bağlantı dizesini ve SSDL içeriği kullanın: oluşturun veya veritabanını silin, veritabanı var ve oluşturulan DDL betiğini görüntüle olup olmadığını denetleyin:  
@@ -36,9 +36,9 @@ ms.locfileid: "55904371"
   
 #### <a name="to-define-a-database-based-on-the-existing-model"></a>Mevcut modelini temel alan bir veritabanı tanımlamak için  
   
-1.  Bir konsol uygulaması oluşturun.  
+1. Bir konsol uygulaması oluşturun.  
   
-2.  Mevcut bir model uygulamanıza ekleyin.  
+2. Mevcut bir model uygulamanıza ekleyin.  
   
     1.  Adlı boş bir model ekleme `SchoolModel`. Boş bir model oluşturmak için bkz [nasıl yapılır: Yeni bir .edmx dosyası oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) konu.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "55904371"
   
     2.  SchoolModel.edmx dosyasını açın ve içeriği yapıştırın `edmx:Runtime` etiketler.  
   
-3.  Aşağıdaki kodu ana işlevinize ekleyin. Kod, veritabanı sunucunuza DDL betik veritabanı oluşturur, yeni bir varlık için bir bağlam eklenmiştir ve değişiklikleri veritabanına kaydeder görünümleri bağlantı dizesini başlatır.  
+3. Aşağıdaki kodu ana işlevinize ekleyin. Kod, veritabanı sunucunuza DDL betik veritabanı oluşturur, yeni bir varlık için bir bağlam eklenmiştir ve değişiklikleri veritabanına kaydeder görünümleri bağlantı dizesini başlatır.  
   
      [!code-csharp[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#ddl)]
      [!code-vb[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#ddl)]

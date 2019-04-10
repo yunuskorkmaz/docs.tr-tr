@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ee807ae17e4d53d3f6f3963f5a91df0a2dddd0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1522d643a69c47eec03770a8f51756dd4250075a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309426"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable Yöntemi
 Bir bit eşlem kullanılabilir kayıtlara sağlayan bayt dizisini alır.  
@@ -46,11 +46,11 @@ HRESULT GetRegistersAvailable (
 ## <a name="remarks"></a>Açıklamalar  
  CorDebugRegister sabit listesi değerlerini farklı mikro kasalar belirtin. Her bir değerin üst beş biti dizine olan `availableRegChunks` bayt dizisi. Her bir değerin alt üç bit dizinli bayt içindeki bit konumu belirleyin. Verilen bir `CorDebugRegister` belirli bir kaydı, maske kasanın konumu belirten bir değer şu şekilde belirlenir:  
   
-1.  Doğru bayt erişmesi gereken dizin ayıklamak `availableRegChunks` dizisi:  
+1. Doğru bayt erişmesi gereken dizin ayıklamak `availableRegChunks` dizisi:  
   
      `CorDebugRegister` Değer >> 3  
   
-2.  Bit sıfır en az önemli bite olduğu dizinli bayt içindeki bit konumu ayıklayın:  
+2. Bit sıfır en az önemli bite olduğu dizinli bayt içindeki bit konumu ayıklayın:  
   
      `CorDebugRegister` Değer & 7  
   

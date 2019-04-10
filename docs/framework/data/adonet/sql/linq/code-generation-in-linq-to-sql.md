@@ -2,21 +2,21 @@
 title: LINQ to SQL’de Kod Oluşturma
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 48035b0f7b4a8c9a37fade5dfc2e2c45ea779dba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174895"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321594"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL’de Kod Oluşturma
 Kod kullanarak bir veritabanı göstermek için oluşturabilir [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] veya SQLMetal komut satırı aracı. Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:  
   
-1.  *DBML Ayıklayıcısı* veritabanı şema bilgilerini ayıklar ve bilgilerin bir XML biçimli DBML dosyasına yeniden birleştirir.  
+1. *DBML Ayıklayıcısı* veritabanı şema bilgilerini ayıklar ve bilgilerin bir XML biçimli DBML dosyasına yeniden birleştirir.  
   
-2.  DBML dosyasının tarayan *DBML Doğrulayıcı* hataları.  
+2. DBML dosyasının tarayan *DBML Doğrulayıcı* hataları.  
   
-3.  Doğrulama hataları görünüyorsa, dosyanın kod oluşturucuya geçirilir.  
+3. Doğrulama hataları görünüyorsa, dosyanın kod oluşturucuya geçirilir.  
   
  Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Visual Studio kullanan geliştiricilerin de kullanabilir [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] kod oluşturulacak. Bkz: [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   

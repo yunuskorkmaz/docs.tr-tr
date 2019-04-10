@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840932"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308568"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olaylarını işleme (Visual Basic)
 Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [izlenecek yol: Olayları bildirmek ve yükseltmeyi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), bildirmek ve olaylarını gösterir. Bu bölümde, bu izlenecek yol sınıf ve form bunlar gerçekleştiğinde olayların nasıl işleneceğini göstermek için kullanılır.  
@@ -23,7 +23,7 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Pencere öğesi sınıfının PercentDone olayı işlemek için  
   
-1.  Aşağıdaki kodda yerleştirin `Form1`:  
+1. Aşağıdaki kodda yerleştirin `Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
@@ -38,20 +38,20 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
   
 #### <a name="to-handle-an-event"></a>Bir olayı işlemek için  
   
-1.  Seçin `mWidget` sol aşağı açılan listeden **Kod Düzenleyicisi**.  
+1. Seçin `mWidget` sol aşağı açılan listeden **Kod Düzenleyicisi**.  
   
-2.  Seçin `PercentDone` doğru aşağı açılan listeden olay. **Kod Düzenleyicisi** açılır `mWidget_PercentDone` olay yordamı.  
+2. Seçin `PercentDone` doğru aşağı açılan listeden olay. **Kod Düzenleyicisi** açılır `mWidget_PercentDone` olay yordamı.  
   
     > [!NOTE]
     >  **Kod Düzenleyicisi** kullanışlı, ancak gerekli değil, yeni olay işleyicileri ekleme. Bu kılavuzda, olay işleyicileri doğrudan kodunuza hemen kopyalayıp daha doğrudan.  
   
-3.  Aşağıdaki kodu ekleyin `mWidget_PercentDone` olay işleyicisi:  
+3. Aşağıdaki kodu ekleyin `mWidget_PercentDone` olay işleyicisi:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      Her `PercentDone` olayı, olay yordamı, tamamlanma yüzdesini görüntüler bir `Label` denetimi. `DoEvents` Yöntemi çizilecek, etiket sağlar ve ayrıca kullanıcı tıklayın fırsatı sunar **iptal** düğmesi.  
   
-4.  İçin aşağıdaki kodu ekleyin `Button2_Click` olay işleyicisi:  
+4. İçin aşağıdaki kodu ekleyin `Button2_Click` olay işleyicisi:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
@@ -64,11 +64,11 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>Bir nesne oluşturun ve ona bir başvuru atamak için  
   
-1.  Seçin **(Form1 olayları)** sol aşağı açılan listeden **Kod Düzenleyicisi**.  
+1. Seçin **(Form1 olayları)** sol aşağı açılan listeden **Kod Düzenleyicisi**.  
   
-2.  Seçin `Load` doğru aşağı açılan listeden olay. **Kod Düzenleyicisi** açılır `Form1_Load` olay yordamı.  
+2. Seçin `Load` doğru aşağı açılan listeden olay. **Kod Düzenleyicisi** açılır `Form1_Load` olay yordamı.  
   
-3.  İçin aşağıdaki kodu ekleyin `Form1_Load` oluşturmak için olay yordamı `Widget`:  
+3. İçin aşağıdaki kodu ekleyin `Form1_Load` oluşturmak için olay yordamı `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
@@ -88,11 +88,11 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
   
 #### <a name="to-run-the-program"></a>Programı çalıştırmak için  
   
-1.  Proje çalışma moduna için F5 tuşuna basın.  
+1. Proje çalışma moduna için F5 tuşuna basın.  
   
-2.  Tıklayın **görevi Başlat** düğmesi. Her zaman `PercentDone` olayı, etiketi tamamlandığında görev yüzdesi ile güncelleştirilir.  
+2. Tıklayın **görevi Başlat** düğmesi. Her zaman `PercentDone` olayı, etiketi tamamlandığında görev yüzdesi ile güncelleştirilir.  
   
-3.  Tıklayın **iptal** görevi Durdur düğmesini. Dikkat görünümünü **iptal** tıkladığınız zaman hemen düğmesi değiştirmez. `Click` Olamaz, olay ortaya kadar `My.Application.DoEvents` deyimi olay işleme sağlar.  
+3. Tıklayın **iptal** görevi Durdur düğmesini. Dikkat görünümünü **iptal** tıkladığınız zaman hemen düğmesi değiştirmez. `Click` Olamaz, olay ortaya kadar `My.Application.DoEvents` deyimi olay işleme sağlar.  
   
     > [!NOTE]
     >  `My.Application.DoEvents` Yöntemi form gibi tam olarak aynı şekilde olayları işlemez. Örneğin, bu kılavuzda, tıklatmalısınız **iptal** düğmesini iki kez. Olayları doğrudan işlemeye izin vermek için kullanabileceğiniz çoklu iş parçacığı kullanımı. Daha fazla bilgi için [yönetilen iş parçacığı](../../../../standard/threading/index.md).
@@ -118,5 +118,5 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Olay bildirme ve oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
+- [İzlenecek yol: Olay Bildirme ve Oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)

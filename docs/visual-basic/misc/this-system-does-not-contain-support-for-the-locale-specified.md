@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LocalNotSupported
 ms.assetid: 59bfa215-556b-4bfa-8f25-b090ea83298d
-ms.openlocfilehash: a5e1e930367c3d22b1e79590d37c9afad5cb4add
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 6a8a41a06dda243b724a1c37e74f3f38abf69898
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037715"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307515"
 ---
 # <a name="this-system-does-not-contain-support-for-the-locale-specified"></a>Bu sistem, belirtilen yerel ayar için destek içermiyor.
 Kullanmaya çalıştığınız `VbStrConv` numaralandırma, ancak sisteminizi belirtilen yerel ayar desteklemez.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Yerel ayar desteklemek için makine yükseltebilir veya onu destekleyen bir makinede uygulamayı çalıştırın.  
+1. Yerel ayar desteklemek için makine yükseltebilir veya onu destekleyen bir makinede uygulamayı çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

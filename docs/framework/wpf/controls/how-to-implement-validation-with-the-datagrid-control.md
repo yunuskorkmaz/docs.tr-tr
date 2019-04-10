@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086814"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305965"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Nasıl yapılır: DataGrid Denetimi ile Doğrulama Uygulama
 <xref:System.Windows.Controls.DataGrid> Denetimi hücre ve satır düzeyinde doğrulama yapmanıza olanak sağlar. Bir kullanıcı bir değer güncelleştirdiğinde hücre düzeyinde doğrulama ile tek bir bağımlı veri nesnesinin özelliklerini doğrulayın. Bir kullanıcı bir satır için değişiklikleri onayladığında ile satır düzeyinde doğrulama, tüm veri nesnelerini doğrulayın. Ayrıca, doğrulama hataları için özelleştirilmiş görsel geri bildirim sağlamak veya varsayılan görsel geri bildirim kullanabilirsiniz, <xref:System.Windows.Controls.DataGrid> denetim sağlar.  
@@ -42,14 +42,14 @@ ms.locfileid: "59086814"
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>Birden çok değeri tek bir satır nasıl doğrulamak için  
   
-1.  Uygulama bir <xref:System.Windows.Controls.ValidationRule> bağlanan veri nesnesi birden çok özellikleri denetleyen alt sınıfı. İçinde <xref:System.Windows.Controls.ValidationRule.Validate%2A> yöntem uygulaması, cast `value` parametre değeri bir <xref:System.Windows.Data.BindingGroup> örneği. Veri nesnesi aracılığıyla erişebiliyorsa <xref:System.Windows.Data.BindingGroup.Items%2A> özelliği.  
+1. Uygulama bir <xref:System.Windows.Controls.ValidationRule> bağlanan veri nesnesi birden çok özellikleri denetleyen alt sınıfı. İçinde <xref:System.Windows.Controls.ValidationRule.Validate%2A> yöntem uygulaması, cast `value` parametre değeri bir <xref:System.Windows.Data.BindingGroup> örneği. Veri nesnesi aracılığıyla erişebiliyorsa <xref:System.Windows.Data.BindingGroup.Items%2A> özelliği.  
   
      Aşağıdaki örnek, doğrulamak için bu işlemi göstermektedir olmadığını `StartDate` için özellik değeri bir `Course` nesnedir öncesi kendi `EndDate` özellik değeri.  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  Doğrulama kuralı ekleme <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> koleksiyonu. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> Özelliği doğrudan erişim sağlayan <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> özelliği bir <xref:System.Windows.Data.BindingGroup> denetim tarafından kullanılan tüm bağlamaları grupları örneği.  
+2. Doğrulama kuralı ekleme <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> koleksiyonu. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> Özelliği doğrudan erişim sağlayan <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> özelliği bir <xref:System.Windows.Data.BindingGroup> denetim tarafından kullanılan tüm bağlamaları grupları örneği.  
   
      Aşağıdaki örnek kümeleri <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> XAML özelliği. <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> Özelliği <xref:System.Windows.Controls.ValidationStep.UpdatedValue> böylece doğrulama bağlanan veri nesnesi yalnızca güncelleştirildikten sonra oluşur.  
   

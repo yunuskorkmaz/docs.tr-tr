@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148960"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297713"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Zaman Uyumlu ve Zaman Uyumsuz İşlemler
 Bu konuda, uygulama ve zaman uyumsuz hizmet işlemleri çağırma anlatılmaktadır.  
@@ -49,11 +49,11 @@ Bu konuda, uygulama ve zaman uyumsuz hizmet işlemleri çağırma anlatılmaktad
 ### <a name="implementing-an-asynchronous-service-operation"></a>Zaman uyumsuz bir hizmet işlemi uygulama  
  Aşağıdaki üç yöntemden birini kullanarak zaman uyumsuz işlemler uygulanabilir:  
   
-1.  Görev tabanlı zaman uyumsuz desen  
+1. Görev tabanlı zaman uyumsuz desen  
   
-2.  Olay tabanlı zaman uyumsuz desen  
+2. Olay tabanlı zaman uyumsuz desen  
   
-3.  IAsyncResult zaman uyumsuz desen  
+3. IAsyncResult zaman uyumsuz desen  
   
 #### <a name="task-based-asynchronous-pattern"></a>Görev tabanlı zaman uyumsuz desen  
  Görev tabanlı zaman uyumsuz desen, kolay ve oldukça büyük olduğundan zaman uyumsuz işlemleri uygulamak için tercih edilen yoludur. Bu yöntemi kullanmak için yalnızca, bir hizmet işlemi uygulama ve görev dönüş türü belirtin\<T >, burada T mantıksal işlem tarafından döndürülen türdür. Örneğin:  

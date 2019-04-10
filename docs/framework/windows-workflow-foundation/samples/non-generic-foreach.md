@@ -1,15 +1,15 @@
 ---
-title: Genel olmayan ForEach
+title: Genel Olmayan ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 0274cd5b87e6039ff40afa3108986ffd113fc4fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303550"
 ---
-# <a name="non-generic-foreach"></a>Genel olmayan ForEach
+# <a name="non-generic-foreach"></a>Genel Olmayan ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] kendi araç kutusunda etkinlikler, akış denetimi dahil olmak üzere bir dizi birlikte gelen <xref:System.Activities.Statements.ForEach%601>, üzerinden yineleme olanak tanıyan <xref:System.Collections.Generic.IEnumerable%601> koleksiyonları.  
   
  <xref:System.Activities.Statements.ForEach%601> gerektirir, <xref:System.Activities.Statements.ForEach%601.Values%2A> türü özelliğini <xref:System.Collections.Generic.IEnumerable%601>. Bu kullanıcılar, uygulama veri yapıları üzerinde yineleme gelen ışığının <xref:System.Collections.Generic.IEnumerable%601> arabirimi (örneğin, <xref:System.Collections.ArrayList>). Genel olmayan sürümü <xref:System.Activities.Statements.ForEach%601> koleksiyonundaki değerleri türlerinin uyumluluğu sağlamaya yönelik daha fazla çalışma zamanı karmaşıklığı çoğaltamaz bu gereksinimi ortadan kaldırır.  
@@ -67,7 +67,7 @@ Activity sampleUsage =
    };  
 ```  
   
-|Koşul|İleti|Önem Derecesi|Özel durum türü|  
+|Koşul|İleti|Önem Derecesi|Özel Durum Türü|  
 |---------------|-------------|--------------|--------------------|  
 |Değeri. `null`|Povinný argument 'Değerleri' için değer sağlanmadı.|Hata|<xref:System.InvalidOperationException>|  
   
@@ -95,13 +95,13 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 #### <a name="to-run-this-sample"></a>Bu örneği çalıştırmak için  
   
-1.  Seçtiğiniz proje, çözümün başlangıç projesi ayarlayın:  
+1. Seçtiğiniz proje, çözümün başlangıç projesi ayarlayın:  
   
     1.  **CodeTestClient** kod kullanarak etkinliğini kullanma işlemini gösterir.  
   
     2.  **DesignerTestClient** etkinlik Tasarımcısı içinde kullanmayı gösterir.  
   
-2.  Derleme ve projeyi çalıştırın.  
+2. Derleme ve projeyi çalıştırın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

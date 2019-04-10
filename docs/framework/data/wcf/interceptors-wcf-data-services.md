@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 31308f8c2b031ec0efd77b41bc395d85e7e5307a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 35554c8d5e1dd33ab942cecb80075ec2fb1e131c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326261"
 ---
 # <a name="interceptors-wcf-data-services"></a>Dinleyiciler (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir uygulamanın işlem için özel mantığı ekleyebilirsiniz, böylece istek iletileri izlemesine olanak sağlar. Gelen iletiler verileri doğrulamak için bu özel mantığı kullanabilirsiniz. Bir sorgu isteğinin kapsamı gibi istek başına bir özel yetkilendirme ilkesi eklemek için kısıtlamanız için de kullanabilirsiniz.  
@@ -27,9 +27,9 @@ ms.locfileid: "59192868"
   
  Sorgu olmayan işlemleri işlerken olarak adlandırılan, değişiklik dinleyicileri döndürmelidir `void` (`Nothing` Visual Basic'te). Değişiklik dinleyiciyi yöntemleri, aşağıdaki iki parametreyi kabul etmeniz gerekir:  
   
-1.  Varlık kümesinin varlık türüyle uyumlu bir tür parametresi. Veri Hizmeti değişiklik dinleyiciyi çağırdığında, bu parametrenin değeri istek tarafından gönderilen varlık bilgilerini ücreti yansıtılır.  
+1. Varlık kümesinin varlık türüyle uyumlu bir tür parametresi. Veri Hizmeti değişiklik dinleyiciyi çağırdığında, bu parametrenin değeri istek tarafından gönderilen varlık bilgilerini ücreti yansıtılır.  
   
-2.  Türünde bir parametre <xref:System.Data.Services.UpdateOperations>. Bu parametrenin değeri, veri hizmeti değişiklik dinleyiciyi çağırdığında, isteği gerçekleştirmeye çalışan işlemi ücreti yansıtılır.  
+2. Türünde bir parametre <xref:System.Data.Services.UpdateOperations>. Bu parametrenin değeri, veri hizmeti değişiklik dinleyiciyi çağırdığında, isteği gerçekleştirmeye çalışan işlemi ücreti yansıtılır.  
   
  Bir değişiklik dinleyiciyi bir örneğin tanımı aşağıda verilmiştir.  
   

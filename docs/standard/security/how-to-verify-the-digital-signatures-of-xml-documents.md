@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: XML belgelerinin dijital imzalarını doğrulama'
+title: 'Nasıl yapılır: XML Belgelerinin Dijital İmzalarını Doğrulama'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8896f5c8501b757313cc8a549b187ecedcebe97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19537fa3e3e27c3446d22f1f1a8cf2faf472158e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670166"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307775"
 ---
-# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Nasıl yapılır: XML belgelerinin dijital imzalarını doğrulama
+# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Nasıl yapılır: XML Belgelerinin Dijital İmzalarını Doğrulama
 Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> XML verileri doğrulamak için ad alanı bir dijital imza ile imzalanmış. XML dijital imzaları (XMLDSIG) imzalandıktan sonra veri değiştirilmiş değil olduğunu doğrulamanızı sağlar. World Wide Web Consortium (W3C) belirtimi, XMLDSIG standart hakkında daha fazla bilgi için bkz <https://www.w3.org/TR/xmldsig-core/>.
   
  Bu yordam kod örneğinde yer alan bir XML dijital imzayı doğrulamak gösterilmiştir bir <`Signature`> öğesi.  Örnek, RSA ortak anahtarı bir anahtar kapsayıcısından alır ve ardından imzayı doğrulamak için anahtar kullanır.  
@@ -32,37 +32,37 @@ Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> XML veril
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>Bir XML belgesinin dijital imzasını doğrulamak için  
   
-1.  Belgeyi doğrulamak için imzalama için kullanılan aynı asimetrik anahtar kullanmanız gerekir.  Oluşturma bir <xref:System.Security.Cryptography.CspParameters> nesne ve imzalama için kullanılan anahtar kapsayıcısı adını belirtin.  
+1. Belgeyi doğrulamak için imzalama için kullanılan aynı asimetrik anahtar kullanmanız gerekir.  Oluşturma bir <xref:System.Security.Cryptography.CspParameters> nesne ve imzalama için kullanılan anahtar kapsayıcısı adını belirtin.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#2)]
      [!code-vb[HowToVerifyXMLDocumentRSA#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#2)]  
   
-2.  Ortak anahtarınızı kullanarak almak <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı.  Geçirdiğiniz anahtarı otomatik olarak anahtar kapsayıcısından adına göre yüklenir <xref:System.Security.Cryptography.CspParameters> nesnesi oluşturucusuna <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı.  
+2. Ortak anahtarınızı kullanarak almak <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı.  Geçirdiğiniz anahtarı otomatik olarak anahtar kapsayıcısından adına göre yüklenir <xref:System.Security.Cryptography.CspParameters> nesnesi oluşturucusuna <xref:System.Security.Cryptography.RSACryptoServiceProvider> sınıfı.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#3)]
      [!code-vb[HowToVerifyXMLDocumentRSA#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#3)]  
   
-3.  Oluşturma bir <xref:System.Xml.XmlDocument> diskten bir XML dosyası yüklenirken nesne.  <xref:System.Xml.XmlDocument> Doğrulamak için imzalı XML belge nesne içerir.  
+3. Oluşturma bir <xref:System.Xml.XmlDocument> diskten bir XML dosyası yüklenirken nesne.  <xref:System.Xml.XmlDocument> Doğrulamak için imzalı XML belge nesne içerir.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#4)]
      [!code-vb[HowToVerifyXMLDocumentRSA#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#4)]  
   
-4.  Yeni bir <xref:System.Security.Cryptography.Xml.SignedXml> nesne ve geçirin <xref:System.Xml.XmlDocument> nesnesi.  
+4. Yeni bir <xref:System.Security.Cryptography.Xml.SignedXml> nesne ve geçirin <xref:System.Xml.XmlDocument> nesnesi.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#5)]
      [!code-vb[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#5)]  
   
-5.  Bulma <`signature`> öğesi ve yeni bir <xref:System.Xml.XmlNodeList> nesne.  
+5. Bulma <`signature`> öğesi ve yeni bir <xref:System.Xml.XmlNodeList> nesne.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#6)]
      [!code-vb[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#6)]  
   
-6.  İlk XML Yükleme <`signature`> öğesine <xref:System.Security.Cryptography.Xml.SignedXml> nesne.  
+6. İlk XML Yükleme <`signature`> öğesine <xref:System.Security.Cryptography.Xml.SignedXml> nesne.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#7)]
      [!code-vb[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#7)]  
   
-7.  Kullanarak imza denetimi <xref:System.Security.Cryptography.Xml.SignedXml.CheckSignature%2A> yöntemi ve RSA ortak anahtarı.  Bu yöntem, başarı veya başarısızlık durumu gösteren bir Boole değeri döndürür.  
+7. Kullanarak imza denetimi <xref:System.Security.Cryptography.Xml.SignedXml.CheckSignature%2A> yöntemi ve RSA ortak anahtarı.  Bu yöntem, başarı veya başarısızlık durumu gösteren bir Boole değeri döndürür.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#8)]
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
@@ -87,4 +87,4 @@ Sınıfları kullanabilirsiniz <xref:System.Security.Cryptography.Xml> XML veril
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Security.Cryptography.Xml>
-- [Nasıl yapılır: XML belgelerini dijital imzalarla imzalama](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+- [Nasıl yapılır: XML Belgelerini Dijital İmzalarla imzalama](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

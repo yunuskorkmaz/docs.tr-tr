@@ -9,21 +9,21 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: a50cfd60bb44dc4b4af3ffe8d2fc73f41e645c07
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 99f9905109a4deabe3cfb2e3616913e84f565cb7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299130"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Nasıl yapılır: Uygulama için Varsayılan Saat Temelli Önbellek İlkesi Ayarlama
 Önbelleğe alınmış kaynak gönderilen üst bilgiler ve 13 ve RFC 2616, kullanılabilir 14 bölümlerde tanımlanan önbellek davranışı tarafından tanımlanan önbellek davranışı bir uygulamanın varsayılan saat temelli önbellek ilkesini sağlayan [Internet Engineering Task Force () IETF)](https://www.ietf.org/) Web sitesi. Bu, çoğu uygulama için uygun önbellek davranıştır.  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Bir uygulama için varsayılan otomatik İlkesi ayarlama  
   
-1.  Varsayılan zaman tabanlı ilke nesnesi oluşturun.  
+1. Varsayılan zaman tabanlı ilke nesnesi oluşturun.  
   
-2.  Uygulama etki alanı için varsayılan olarak ilkesi ayarlayın.  
+2. Uygulama etki alanı için varsayılan olarak ilkesi ayarlayın.  
   
 ## <a name="example"></a>Örnek  
  Bu bölümdeki iki örneği aynı ilkeler üretir.  

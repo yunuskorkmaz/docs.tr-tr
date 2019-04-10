@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
-ms.openlocfilehash: d86fcff7cf677649e54c6311b8caf72ef5709db3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 676632f55eb0dcc88eaa6d3b50167bb9e6c2b30e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58021901"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314444"
 ---
 # <a name="cannot-convert-start-value-of-type-type1-and-step-value-of-type-type2-to-a-common-type"></a>Başlangıç değeri türü dönüştürülemiyor '\<type1 >' ve adım türünün değeri '\<type2 >' için ortak tür
 Belirtilen `For...Next` denetim değerleri farklı türlere sahip ve ortak bir türe dönüştürülemediğinden bu nedenle geçerli değil.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Tüm değerleri ortak bir türe dönüştürülebilir bir veya daha fazla değer türünü değiştirin.  
+1. Tüm değerleri ortak bir türe dönüştürülebilir bir veya daha fazla değer türünü değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

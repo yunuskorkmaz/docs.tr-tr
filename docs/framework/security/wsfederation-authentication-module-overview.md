@@ -3,12 +3,12 @@ title: WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092480"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310258"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik doğrulama Modülü (WS-FAM) aracılığıyla şirket dışı kimlik doğrulaması için destek içerir. Bu konu nasıl Federasyon kimlik doğrulaması çalışır ve nasıl kullanılacağını anlamanıza yardımcı olur.  
@@ -18,26 +18,26 @@ Windows Identity Foundation (WIF), ASP.NET uygulamalarında WS-Federated kimlik 
   
  ![Federasyon kimlik doğrulama senaryosu](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
   
-1.  Fabrikam güven etki alanındaki bir istemci bir bağlı olan taraf (RP) uygulaması Contoso güven etki alanındaki bir istek gönderir.  
+1. Fabrikam güven etki alanındaki bir istemci bir bağlı olan taraf (RP) uygulaması Contoso güven etki alanındaki bir istek gönderir.  
   
-2.  RP istemciyi Contoso güven etki alanındaki bir sts'ye yönlendirir. Bu STS istemci bilgisi yok.  
+2. RP istemciyi Contoso güven etki alanındaki bir sts'ye yönlendirir. Bu STS istemci bilgisi yok.  
   
-3.  Contoso STS istemci Contoso güven etki alanı ile bir güven ilişkisine sahip Fabrikam güven etki alanındaki bir sts'ye yönlendirir.  
+3. Contoso STS istemci Contoso güven etki alanı ile bir güven ilişkisine sahip Fabrikam güven etki alanındaki bir sts'ye yönlendirir.  
   
-4.  Fabrikam STS, istemcinin kimliğini doğrular ve Contoso STS'ye bir güvenlik belirteci verir.  
+4. Fabrikam STS, istemcinin kimliğini doğrular ve Contoso STS'ye bir güvenlik belirteci verir.  
   
-5.  Contoso STS Fabrikam belirtecini RP'ye tarafından kullanılabilir ve RP için gönderen kendi belirteci oluşturmak için kullanır.  
+5. Contoso STS Fabrikam belirtecini RP'ye tarafından kullanılabilir ve RP için gönderen kendi belirteci oluşturmak için kullanır.  
   
-6.  RP istemcinin talep güvenlik belirteci ayıklar ve bir yetkilendirme kararı verir.  
+6. RP istemcinin talep güvenlik belirteci ayıklar ve bir yetkilendirme kararı verir.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>ASP.NET ile Federasyon kimlik doğrulama modülünü kullanma  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> Federe kimlik doğrulaması eklemenize olanak sağlayan bir HTTP modülü (WS-FAM) olan bir [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] uygulama. Federe kimlik doğrulaması, iş mantığı yazmaya odaklanmasına olanak tanır ve STS tarafından işlenen kimlik doğrulama mantığı sağlar.  
   
  STS doğrulanmamış istekleri yönlendirilmesi gerektiğini belirtmek için WS FAM yapılandırırsınız. WIF iki yolla bir kullanıcının kimliğini sağlar:  
   
-1.  Pasif yeniden yönlendirme: Kimliği doğrulanmamış bir kullanıcı, korunan bir kaynağa erişmeye ve yalnızca bunları bir STS'ye bir oturum açma sayfası gerek kalmadan yönlendirmek istiyorsanız, ardından aldığı doğru yaklaşım budur. STS kullanıcının kimliğini doğrular ve bu kullanıcı için uygun talepleri içeren bir güvenlik belirteci verir. Bu seçenek, HTTP modülleri işlem hattında eklenecek WS FAM gerektirir. WS-FAM kullanın ve bir STS ile federasyona eklemek için uygulamanızın yapılandırma dosyasını değiştirmek için kimlik ve erişim aracı Visual Studio 2012 için kullanabilirsiniz. Daha fazla bilgi için [kimlik ve erişim aracı Visual Studio 2012 için](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1. Pasif yeniden yönlendirme: Kimliği doğrulanmamış bir kullanıcı, korunan bir kaynağa erişmeye ve yalnızca bunları bir STS'ye bir oturum açma sayfası gerek kalmadan yönlendirmek istiyorsanız, ardından aldığı doğru yaklaşım budur. STS kullanıcının kimliğini doğrular ve bu kullanıcı için uygun talepleri içeren bir güvenlik belirteci verir. Bu seçenek, HTTP modülleri işlem hattında eklenecek WS FAM gerektirir. WS-FAM kullanın ve bir STS ile federasyona eklemek için uygulamanızın yapılandırma dosyasını değiştirmek için kimlik ve erişim aracı Visual Studio 2012 için kullanabilirsiniz. Daha fazla bilgi için [kimlik ve erişim aracı Visual Studio 2012 için](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
-2.  Çağırabilirsiniz <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> yöntemi veya <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> RP uygulamanızın oturum açma sayfası için arka plan kod yöntemi.  
+2. Çağırabilirsiniz <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> yöntemi veya <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> RP uygulamanızın oturum açma sayfası için arka plan kod yöntemi.  
   
  Pasif yeniden yönlendirme tüm iletişimin (genellikle bir tarayıcı) istemciden yanıt/yeniden yönlendirme aracılığıyla gerçekleştirilir. WS-FAM burada izler kimliği doğrulanmamış için kullanıcı istekleri ve kullanıcıların yönlendirir, uygulamanızın HTTP ardışık düzenine eklemek, STS'ye belirtin.  
   

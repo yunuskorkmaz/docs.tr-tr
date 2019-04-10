@@ -2,12 +2,12 @@
 title: Programlama Modeli Öğe Ağacı
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086474"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321139"
 ---
 # <a name="programming-model-item-tree"></a>Programlama Modeli Öğe Ağacı
 Bu örnek nasıl gidileceğini gösteren <xref:System.Activities.Presentation.Model.ModelItem> Windows Presentation Foundation (WPF) ağaç görünümünden bildirim temelli veriler bağlama kullanarak ağaç.
@@ -29,15 +29,15 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1.  Visual Studio 2010'da ProgrammingModelItemTree.sln çözümü açın.
+1. Visual Studio 2010'da ProgrammingModelItemTree.sln çözümü açın.
 
-2.  Çözüm seçerek yapı **Çözümü Derle** gelen **derleme** menüsü.
+2. Çözüm seçerek yapı **Çözümü Derle** gelen **derleme** menüsü.
 
-3.  Uygulamayı çalıştırmak için F5'e basın. [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] Formu görüntülenir.
+3. Uygulamayı çalıştırmak için F5'e basın. [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] Formu görüntülenir.
 
-4.  Tıklayın **yük WF** yüklemek için düğmeye <xref:System.Activities.Presentation.Model.ModelItem> ve ağaç görünümüne bağlayın.
+4. Tıklayın **yük WF** yüklemek için düğmeye <xref:System.Activities.Presentation.Model.ModelItem> ve ağaç görünümüne bağlayın.
 
-5.  Tıklayarak **değişiklik modeli öğe ağacı** düğmesi ağacına bir öğe ekleyin ve bir özelliği ayarlamak için yukarıdaki kodu yürütür.
+5. Tıklayarak **değişiklik modeli öğe ağacı** düğmesi ağacına bir öğe ekleyin ve bir özelliği ayarlamak için yukarıdaki kodu yürütür.
 
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

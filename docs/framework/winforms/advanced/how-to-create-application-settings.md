@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5cf109aec8b55650f43f07f5b303c6373df4efc7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166406"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305981"
 ---
 # <a name="how-to-create-application-settings"></a>Nasıl yapılır: Uygulama Ayarları Oluşturma
 Yönetilen kod kullanarak, yeni uygulama ayarları oluşturma ve böylece bu ayarlar yüklenir ve çalışma zamanında otomatik olarak kaydedilir bunları özelliklerine formunuza veya form denetimlerinde bağlayın.  
@@ -24,19 +24,19 @@ Yönetilen kod kullanarak, yeni uygulama ayarları oluşturma ve böylece bu aya
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Yeni uygulama ayarları program aracılığıyla oluşturmak için  
   
-1.  Projenize yeni bir sınıf ekleyin ve adlandırın. Bu yordam için Biz bu sınıf göndereceği `MyUserSettings`. Sınıf tanımını değiştirin, böylece bu sınıfın türetildiği <xref:System.Configuration.ApplicationSettingsBase>.  
+1. Projenize yeni bir sınıf ekleyin ve adlandırın. Bu yordam için Biz bu sınıf göndereceği `MyUserSettings`. Sınıf tanımını değiştirin, böylece bu sınıfın türetildiği <xref:System.Configuration.ApplicationSettingsBase>.  
   
-2.  Bu sarmalayıcı sınıf için ihtiyaç duyduğunuz her uygulama ayarı üzerinde bir özellik tanımlayın ve bu özellik ile ya da geçerli <xref:System.Configuration.ApplicationScopedSettingAttribute> veya <xref:System.Configuration.UserScopedSettingAttribute>ayarı kapsamını bağlı olarak. Ayar kapsamı hakkında daha fazla bilgi için bkz: [uygulama ayarlarına genel bakış](application-settings-overview.md). Artık, kodunuz şu şekilde görünmelidir:  
+2. Bu sarmalayıcı sınıf için ihtiyaç duyduğunuz her uygulama ayarı üzerinde bir özellik tanımlayın ve bu özellik ile ya da geçerli <xref:System.Configuration.ApplicationScopedSettingAttribute> veya <xref:System.Configuration.UserScopedSettingAttribute>ayarı kapsamını bağlı olarak. Ayar kapsamı hakkında daha fazla bilgi için bkz: [uygulama ayarlarına genel bakış](application-settings-overview.md). Artık, kodunuz şu şekilde görünmelidir:  
   
      [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
      [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
-3.  Uygulamanızda bu sarmalayıcı sınıfının bir örneğini oluşturun. Bu genellikle ana formu özel üyesi olacaktır. Sınıfınıza tanımladığınıza göre bir özelliğine bağlamak gerekir; Bu durumda, <xref:System.Windows.Forms.Form.BackColor%2A> formunuza bir özelliğidir. Bunu, formun içinde gerçekleştirebilirsiniz `Load` olay işleyicisi.  
+3. Uygulamanızda bu sarmalayıcı sınıfının bir örneğini oluşturun. Bu genellikle ana formu özel üyesi olacaktır. Sınıfınıza tanımladığınıza göre bir özelliğine bağlamak gerekir; Bu durumda, <xref:System.Windows.Forms.Form.BackColor%2A> formunuza bir özelliğidir. Bunu, formun içinde gerçekleştirebilirsiniz `Load` olay işleyicisi.  
   
      [!code-csharp[ApplicationSettings.Create#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
      [!code-vb[ApplicationSettings.Create#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  
   
-4.  Çalışma zamanında ayarlarını değiştirmek için bir yol sağlar, kullanıcının geçerli ayarlarının formunuza kapatır, aksi takdirde, bu değişiklikler kaybolacak diske kaydetmek gerekir.  
+4. Çalışma zamanında ayarlarını değiştirmek için bir yol sağlar, kullanıcının geçerli ayarlarının formunuza kapatır, aksi takdirde, bu değişiklikler kaybolacak diske kaydetmek gerekir.  
   
      [!code-csharp[ApplicationSettings.Create#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#3)]
      [!code-vb[ApplicationSettings.Create#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#3)]  

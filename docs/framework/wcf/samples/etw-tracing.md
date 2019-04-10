@@ -2,12 +2,12 @@
 title: ETW İzleme
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 964c8fbe04f61ebf7a68e1bf36f9efdaab841e7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b445606677fba23ec81e896cce564330cedd6a19
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300690"
 ---
 # <a name="etw-tracing"></a>ETW İzleme
 Bu örnek olay izleme için Windows (ETW) kullanarak uçtan uca (E2E) izleme uygulamak nasıl gösterir ve `ETWTraceListener` Bu örnek ile sağlanır. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve ETW İzleme içerir.  
@@ -80,22 +80,22 @@ Logman stop Wcf
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirilen mutlaka [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirilen mutlaka [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
     > [!NOTE]
     >  RegisterProvider.bat ve SetupETW.bat CleanupETW.bat komutları kullanmak için bir yerel yönetici hesabı altında çalıştırmanız gerekir. Kullanıyorsanız [!INCLUDE[wv](../../../../includes/wv-md.md)] veya daha sonra ayrıca komut isteminde yükseltilmiş ayrıcalıklarla çalıştırmanız gerekir. Bunu yapmak için komut istemi simgesini sağ tıklatın ve ardından **yönetici olarak çalıştır**.  
   
-3.  RegisterProvider.bat, örneği çalıştırmadan önce istemci ve sunucu üzerinde çalıştırın. Bu, hizmet izleme görüntüleyicisini tarafından okunabilecek izlemeler üretmek için sonuçta elde edilen ETWTracingSampleLog.etl dosyasını ayarlar. Bu dosya C:\logs klasöründe bulunabilir. Bu klasör mevcut değilse oluşturulması gerekir veya izleme yok üretilir. Ardından SetupETW.bat ETW izleme oturumunu başlatmak için istemci ve sunucu bilgisayarları üzerinde çalıştırın. SetupETW.bat dosyası CS\Client klasörü altında bulunabilir.  
+3. RegisterProvider.bat, örneği çalıştırmadan önce istemci ve sunucu üzerinde çalıştırın. Bu, hizmet izleme görüntüleyicisini tarafından okunabilecek izlemeler üretmek için sonuçta elde edilen ETWTracingSampleLog.etl dosyasını ayarlar. Bu dosya C:\logs klasöründe bulunabilir. Bu klasör mevcut değilse oluşturulması gerekir veya izleme yok üretilir. Ardından SetupETW.bat ETW izleme oturumunu başlatmak için istemci ve sunucu bilgisayarları üzerinde çalıştırın. SetupETW.bat dosyası CS\Client klasörü altında bulunabilir.  
   
-4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Örnek tamamlandığında CleanupETW.bat ETWTracingSampleLog.etl dosyası oluşturmayı tamamlamak için çalıştırın.  
+5. Örnek tamamlandığında CleanupETW.bat ETWTracingSampleLog.etl dosyası oluşturmayı tamamlamak için çalıştırın.  
   
-6.  Hizmet izleme görüntüleyicisini içinde ETWTracingSampleLog.etl dosyasından açın. Biçimlendirilmiş bir ikili dosyası .svclog dosyası olarak kaydetmek için istenir.  
+6. Hizmet izleme görüntüleyicisini içinde ETWTracingSampleLog.etl dosyasından açın. Biçimlendirilmiş bir ikili dosyası .svclog dosyası olarak kaydetmek için istenir.  
   
-7.  ETW ve ServiceModel işlemlerini izlemeleri görüntülemek için hizmet izleme görüntüleyicisini içinde yeni oluşturulan .svclog dosyasını açın.  
+7. ETW ve ServiceModel işlemlerini izlemeleri görüntülemek için hizmet izleme görüntüleyicisini içinde yeni oluşturulan .svclog dosyasını açın.  
   
 > [!IMPORTANT]
 >  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

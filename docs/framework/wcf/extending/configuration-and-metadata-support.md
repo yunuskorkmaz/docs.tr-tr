@@ -2,12 +2,12 @@
 title: Yapılandırma ve Meta Veri Desteği
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 65c826c909496a9efeb99801142eb49e4f92d3bc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183496"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298311"
 ---
 # <a name="configuration-and-metadata-support"></a>Yapılandırma ve Meta Veri Desteği
 Bu konu, bağlamalar ve bağlama öğeleri yapılandırma ve meta veri desteğini etkinleştirmek açıklar.  
@@ -163,9 +163,9 @@ if (soapBinding != null)
   
  Svcutil.exe çalıştırırken, WSDL içeri aktarma uzantıları yüklemek için Svcutil.exe alma iki seçenek vardır:  
   
-1.  Noktası Svcutil.exe /SvcutilConfig kullanarak yapılandırma dosyasının:\<Dosya >.  
+1. Noktası Svcutil.exe /SvcutilConfig kullanarak yapılandırma dosyasının:\<Dosya >.  
   
-2.  Yapılandırma bölümü Svcutil.exe.config için Svcutil.exe ile aynı dizinde ekleyin.  
+2. Yapılandırma bölümü Svcutil.exe.config için Svcutil.exe ile aynı dizinde ekleyin.  
   
  `UdpBindingElementImporter` Yazın uygular <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> arabirimi. `ImportEndpoint` Yöntemi WSDL bağlantı noktasından adresini alır:  
   
@@ -223,9 +223,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Biz uygulamak sonra <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> bizim kayıtlı sınıfından (`UdpBindingElementImporter`). İçinde <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, uygun ad alanındaki bir onayları incelemek ve işlemek olanları taşıma oluşturma ve çok noktaya yayın olup olmadığı denetleniyor. Ayrıca, içeri Aktarıcı işleyen bir onayları onaylar bağlama listeden kaldırın. Yeniden Svcutil.exe çalıştırırken tümleştirme için iki seçenek vardır:  
   
-1.  Noktası Svcutil.exe /SvcutilConfig kullanarak bizim yapılandırma dosyasına:\<Dosya >.  
+1. Noktası Svcutil.exe /SvcutilConfig kullanarak bizim yapılandırma dosyasına:\<Dosya >.  
   
-2.  Yapılandırma bölümü Svcutil.exe.config için Svcutil.exe ile aynı dizinde ekleyin.  
+2. Yapılandırma bölümü Svcutil.exe.config için Svcutil.exe ile aynı dizinde ekleyin.  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Özel standart içeri Aktarıcı bağlama ekleme  
  Svcutil.exe ve <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> türü varsayılan olarak tanıyacak ve sistem tarafından sağlanan bağlamalar içeri aktarın. Aksi takdirde, bağlama olarak içeri aktarılan alır bir <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> örneği. Svcutil.exe sağlamak ve <xref:System.ServiceModel.Description.WsdlImporter> içeri aktarmak için `SampleProfileUdpBinding` `UdpBindingElementImporter` da bir standart özel bağlama alıcısı davranır.  

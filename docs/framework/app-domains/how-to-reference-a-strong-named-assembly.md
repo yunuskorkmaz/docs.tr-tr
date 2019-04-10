@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3da46ee5e7c1973f06cbd91126f3101c3f1d7e47
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301028"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Nasıl yapılır: Tanımlayıcı Adlı Bir Derlemeye Başvurma
 Türleri veya bir katı adlı derleme kaynaklara başvuran işlemi genellikle saydamdır. Başvuru (erken bağlama) derleme zamanında ya da çalışma zamanında yapabilirsiniz.  
@@ -30,7 +30,7 @@ Türleri veya bir katı adlı derleme kaynaklara başvuran işlemi genellikle sa
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>Tanımlayıcı adlı bütünleştirilmiş kod derleme zamanı başvuru yapma  
   
-1.  Komut satırında, aşağıdaki komutu yazın:  
+1. Komut satırında, aşağıdaki komutu yazın:  
   
      \<*derleyici komut*> **/reference:**\<*derleme adı*>  
   
@@ -44,7 +44,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 ### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>Tanımlayıcı adlı bütünleştirilmiş kod çalışma zamanı başvuru yapma  
   
-1.  Bir çalışma zamanı başvurusu bir katı adlı derleme yaptığınızda (kullanarak örneğin, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> yöntemi), başvurulan kesin adlandırılmış derlemenin görünen adını kullanmanız gerekir. Bir görünen ad sözdizimi aşağıdaki gibidir:  
+1. Bir çalışma zamanı başvurusu bir katı adlı derleme yaptığınızda (kullanarak örneğin, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> veya <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> yöntemi), başvurulan kesin adlandırılmış derlemenin görünen adını kullanmanız gerekir. Bir görünen ad sözdizimi aşağıdaki gibidir:  
   
      \<*derleme adı*>**,** \< *sürüm numarası*>**,** \< *kültürü*  > **,** \< *ortak anahtar belirteci*>  
   

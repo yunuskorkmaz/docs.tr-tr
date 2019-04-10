@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149311"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298896"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri tanımlar. Bu terimler sık kalanında bu belge, WPF belgeler için her ikisi de özellikle ve XAML veya XAML dil desteğini System.Xaml düzeyinde Etkin temel XAML kavramları kullanan diğer çerçeveler için kullanılır. Bu konu başlığı altında bu konu başlığı altında tanıtılan temel terminoloji genişletir. [XAML genel bakış (WPF)](xaml-overview-wpf.md).  
@@ -99,11 +99,11 @@ Bu konuda, XAML söz dizimi öğeleri tanımlamak için kullanılan terimleri ta
   
  Öznitelik değeri aşağıdakilerden biri tarafından doldurulur bu işlem sırasını kullanarak:  
   
-1.  XAML işlemci küme ayracı ve türeyen bir nesne öğesi karşılaşırsa <xref:System.Windows.Markup.MarkupExtension>ardından değeri bir dize olarak işleme yerine ilk başvurulan işaretleme uzantısı değerlendirilir ve İşaretleme uzantısı tarafından döndürülen nesne olarak kullanılır değer. Çoğu durumda, bir işaretleme uzantısı tarafından döndürülen nesne var olan bir nesne veya değerlendirme çalıştırma kadar erteler ve yeni oluşturulmuş bir nesne değil bir ifade başvuru olacaktır.  
+1. XAML işlemci küme ayracı ve türeyen bir nesne öğesi karşılaşırsa <xref:System.Windows.Markup.MarkupExtension>ardından değeri bir dize olarak işleme yerine ilk başvurulan işaretleme uzantısı değerlendirilir ve İşaretleme uzantısı tarafından döndürülen nesne olarak kullanılır değer. Çoğu durumda, bir işaretleme uzantısı tarafından döndürülen nesne var olan bir nesne veya değerlendirme çalıştırma kadar erteler ve yeni oluşturulmuş bir nesne değil bir ifade başvuru olacaktır.  
   
-2.  Özellik bildirilirse bir öznitelik ile <xref:System.ComponentModel.TypeConverter>, veya bu özellik değer türünde bildirilen bir öznitelik ile <xref:System.ComponentModel.TypeConverter>özniteliğinin dize değerini tür dönüştürücüsünü bir dönüştürme giriş olarak gönderilir ve dönüştürücü döndüreceği bir Yeni nesne örneği.  
+2. Özellik bildirilirse bir öznitelik ile <xref:System.ComponentModel.TypeConverter>, veya bu özellik değer türünde bildirilen bir öznitelik ile <xref:System.ComponentModel.TypeConverter>özniteliğinin dize değerini tür dönüştürücüsünü bir dönüştürme giriş olarak gönderilir ve dönüştürücü döndüreceği bir Yeni nesne örneği.  
   
-3.  Yoksa hiçbir <xref:System.ComponentModel.TypeConverter>, özellik türü doğrudan dönüştürmeyi denedi. Bu son düzeyi, XAML dili temel türlerin veya adlandırılmış sabitler (ardından ayrıştırıcının eşleşen değerleri na erişir) bir numaralandırmada Adları Denetle arasında ayrıştırıcı yerel değerde doğrudan bir dönüştürmedir.  
+3. Yoksa hiçbir <xref:System.ComponentModel.TypeConverter>, özellik türü doğrudan dönüştürmeyi denedi. Bu son düzeyi, XAML dili temel türlerin veya adlandırılmış sabitler (ardından ayrıştırıcının eşleşen değerleri na erişir) bir numaralandırmada Adları Denetle arasında ayrıştırıcı yerel değerde doğrudan bir dönüştürmedir.  
   
 #### <a name="enumeration-attribute-values"></a>Sabit listesi öznitelik değerleri  
  XAML numaralandırmalardan doğası gereği XAML ayrıştırıcıları tarafından işlenir ve sabit listesinin adlandırılmış sabitler, dize adını belirterek bir sabit listesi üyesi belirtilmelidir.  

@@ -2,36 +2,36 @@
 title: "Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme"
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302205"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme
 Bu konuda, Keşif proxy'si uygulama anlatılmaktadır dört konuları saniyedir. Önceki konu [nasıl yapılır: Keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Keşif proxy'si uygulanır. Bu konu başlığında, duyuru iletiler gönderen bir WCF hizmeti oluşturma (`Hello` ve `Bye`) kaydetmek ve kendisi ile keşif proxy'si kaydını silmek keşif proxy'si için neden olur.
 
 ### <a name="to-define-the-service-contract"></a>Hizmet sözleşmesini tanımlama
 
-1.  Yeni bir konsol uygulama projesi Ekle `DiscoveryProxyExample` adlı çözüm `Service`.
+1. Yeni bir konsol uygulama projesi Ekle `DiscoveryProxyExample` adlı çözüm `Service`.
 
-2.  Aşağıdaki derlemelere başvurular ekleyin:
+2. Aşağıdaki derlemelere başvurular ekleyin:
 
     1.  System.ServiceModel
 
     2.  System.ServiceModel.Discovery
 
-3.  Adlı projeye yeni bir sınıf ekleyin `CalculatorService`.
+3. Adlı projeye yeni bir sınıf ekleyin `CalculatorService`.
 
-4.  Aşağıdaki using deyimlerini.
+4. Aşağıdaki using deyimlerini.
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  CalculatorService.cs içinde hizmet sözleşmesini tanımlamaktır.
+5. CalculatorService.cs içinde hizmet sözleşmesini tanımlamaktır.
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ Bu konuda, Keşif proxy'si uygulama anlatılmaktadır dört konuları saniyedir.
     }
     ```
 
-6.  Ayrıca CalculatorService.cs içinde hizmet sözleşmesini uygulama.
+6. Ayrıca CalculatorService.cs içinde hizmet sözleşmesini uygulama.
 
     ```csharp
     // Service class which implements the service contract.
@@ -91,9 +91,9 @@ Bu konuda, Keşif proxy'si uygulama anlatılmaktadır dört konuları saniyedir.
 
 ### <a name="to-host-the-service"></a>Ana bilgisayar hizmeti
 
-1.  Projeyi oluşturduğunuzda oluşturulan Program.cs dosyasını açın.
+1. Projeyi oluşturduğunuzda oluşturulan Program.cs dosyasını açın.
 
-2.  Aşağıdaki using deyimlerini.
+2. Aşağıdaki using deyimlerini.
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ Bu konuda, Keşif proxy'si uygulama anlatılmaktadır dört konuları saniyedir.
     using System.ServiceModel.Discovery;
     ```
 
-3.  İçinde `Main()` yöntemine aşağıdaki kodu ekleyin:
+3. İçinde `Main()` yöntemine aşağıdaki kodu ekleyin:
 
     ```csharp
     // Define the base address of the service

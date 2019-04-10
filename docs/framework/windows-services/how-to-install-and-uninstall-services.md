@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: c4eb1e5fd0c0b06f332b1eba7d3445963699415c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0119fee443aafd1d4215260d2cf42cec9f7eba74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100384"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308477"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Nasıl yapılır: Windows Hizmetleri Yükleme ve kaldırma
 .NET Framework ile Windows hizmet geliştiriyorsanız, hızlı bir şekilde hizmet uygulamanızı kullanarak yükleyebileceğiniz [ *InstallUtil.exe* ](../tools/installutil-exe-installer-tool.md) komut satırı yardımcı programı. Bir Windows hizmeti, kullanıcıların yüklemek ve kaldırmak yayımlamayı isteyen geliştiriciler InstallShield kullanmanız gerekir. Daha fazla bilgi için [bir yükleyici paketi (Windows istemcisi) oluşturma](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
@@ -34,13 +34,13 @@ ms.locfileid: "59100384"
   
 ### <a name="install-your-service-manually"></a>Hizmetinizi el ile yükleyin  
   
-1.  Gelen **Başlat** menüsünde **Visual Studio \< *sürüm* >**  dizin ve select **Geliştirici komut istemi VS için \< *sürüm*>**.
+1. Gelen **Başlat** menüsünde **Visual Studio \< *sürüm* >**  dizin ve select **Geliştirici komut istemi VS için \< *sürüm*>**.
   
      Visual Studio için geliştirici komut istemi görünür. 
   
-2.  Projenizin derlenmiş çalıştırılabilir dosyasının bulunduğu dizine erişin.  
+2. Projenizin derlenmiş çalıştırılabilir dosyasının bulunduğu dizine erişin.  
   
-3.  Çalıştırma *InstallUtil.exe* komutu istemi projenizle parametre olarak çalıştırılabilir:  
+3. Çalıştırma *InstallUtil.exe* komutu istemi projenizle parametre olarak çalıştırılabilir:  
   
     ```console
     installutil <yourproject>.exe  
@@ -58,7 +58,7 @@ ms.locfileid: "59100384"
   
      Visual Studio için geliştirici komut istemi görünür.  
   
-2.  Çalıştırma *InstallUtil.exe* bir parametre olarak projenizin çıktısı ile komut isteminden:  
+2. Çalıştırma *InstallUtil.exe* bir parametre olarak projenizin çıktısı ile komut isteminden:  
   
     ```console  
     installutil /u <yourproject>.exe  

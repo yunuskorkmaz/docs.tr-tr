@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 6d9790d37812ff0ed4ac76049b6949901f7b5c58
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835459"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312625"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Nasıl yapılır: Bir kayıt defteri anahtarı oluşturun ve Visual Basic'te değerini ayarlama
 `CreateSubKey` Yöntemi `My.Computer.Registry` nesnesi, bir kayıt defteri anahtarı oluşturmak için kullanılabilir.  
@@ -31,11 +31,11 @@ ms.locfileid: "58835459"
   
 #### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Bir kayıt defteri anahtarı oluşturun ve içinde bir değer ayarlamak için  
   
-1.  Kullanım `CreateSubkey` , anahtarın adını yanı sıra anahtarı altındaki yerleştirmek için hive'ı belirtme yöntemi. Bu örnek, kayıt defteri anahtarı oluşturur `MyTestKey` HKEY_CURRENT_USER altında.  
+1. Kullanım `CreateSubkey` , anahtarın adını yanı sıra anahtarı altındaki yerleştirmek için hive'ı belirtme yöntemi. Bu örnek, kayıt defteri anahtarı oluşturur `MyTestKey` HKEY_CURRENT_USER altında.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
-2.  Değer `SetValue` yöntemi. Bu örnekte, dize değeri ayarlar. "" Test değeri olan"için MyTestKeyValue".  
+2. Değer `SetValue` yöntemi. Bu örnekte, dize değeri ayarlar. "" Test değeri olan"için MyTestKeyValue".  
   
      [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]  
   
@@ -76,4 +76,4 @@ ms.locfileid: "58835459"
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
 - <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
 - [Kayıt Defterinden Okuma ve Kayıt Defterine Yazma](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [Kod erişimi güvenliği temelleri](../../../../framework/misc/code-access-security-basics.md)
+- [Kod Erişim Güvenliği Temelleri](../../../../framework/misc/code-access-security-basics.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194818"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320138"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>
@@ -100,25 +100,25 @@ ms.locfileid: "59194818"
 ### <a name="debugging-xbaps-that-use-hostscript"></a>HostScript kullanan Xbap'lerde hata ayıklama  
  Bir XBAP kullanıyorsa <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> nesne iletişim kurmak için HTML penceresiyle çalıştırmak ve Visual Studio'da uygulamada hata ayıklamak için belirtmeniz gereken iki ayar vardır. Uygulama erişimi gulamaya için olmalıdır ve uygulama XBAP içeren HTML sayfası ile başlamalıdır. Aşağıdaki adımlar bu iki ayar denetlemek nasıl açıklanmaktadır:  
   
-1.  Visual Studio'da proje özelliklerini açın.  
+1. Visual Studio'da proje özelliklerini açın.  
   
-2.  Üzerinde **güvenlik** sekmesinde **Gelişmiş**.  
+2. Üzerinde **güvenlik** sekmesinde **Gelişmiş**.  
   
      Gelişmiş Güvenlik Ayarları iletişim kutusu görüntülenir.  
   
-3.  Emin olun **gulamaya erişim izni** kutunun işaretli denetleyin ve ardından **Tamam**.  
+3. Emin olun **gulamaya erişim izni** kutunun işaretli denetleyin ve ardından **Tamam**.  
   
-4.  Üzerinde **hata ayıklama** sekmesinde **Başlat tarayıcı URL ile** seçenek ve XBAP içeren HTML sayfasının URL'sini belirtin.  
+4. Üzerinde **hata ayıklama** sekmesinde **Başlat tarayıcı URL ile** seçenek ve XBAP içeren HTML sayfasının URL'sini belirtin.  
   
-5.  Internet Explorer'da tıklayın **Araçları** düğmesine ve ardından **Internet Seçenekleri**.  
+5. Internet Explorer'da tıklayın **Araçları** düğmesine ve ardından **Internet Seçenekleri**.  
   
      Internet Seçenekleri iletişim kutusu görüntülenir.  
   
-6.  Tıklayın **Gelişmiş** sekmesi.  
+6. Tıklayın **Gelişmiş** sekmesi.  
   
-7.  İçinde **ayarları** altında listesinde **güvenlik**, kontrol **Bilgisayarım dosyalarda çalıştırmak etkin içeriğe izin ver** onay kutusu.  
+7. İçinde **ayarları** altında listesinde **güvenlik**, kontrol **Bilgisayarım dosyalarda çalıştırmak etkin içeriğe izin ver** onay kutusu.  
   
-8.  **Tamam**'ı tıklatın.  
+8. **Tamam**'ı tıklatın.  
   
      Internet Explorer'ı yeniden sonra değişiklikler geçerli olacaktır.  
   
@@ -146,9 +146,9 @@ ms.locfileid: "59194818"
 ### <a name="creating-a-full-trust-xbap"></a>Tam güven XBAP oluşturma  
  Bir XBAP tam güven gerektirir, bu izni etkinleştirmek için projenizi değiştirebilirsiniz. Aşağıdaki adımlar, tam güven etkinleştirme açıklanmaktadır:  
   
-1.  Visual Studio'da proje özelliklerini açın.  
+1. Visual Studio'da proje özelliklerini açın.  
   
-2.  Üzerinde **güvenlik** sekmesinde **tam güven uygulamasıdır** seçeneği.  
+2. Üzerinde **güvenlik** sekmesinde **tam güven uygulamasıdır** seçeneği.  
   
  Bu ayar, aşağıdaki değişiklikleri yapar:  
   

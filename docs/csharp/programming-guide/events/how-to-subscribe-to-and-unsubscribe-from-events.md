@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 4d06899303110d0b06729f2a02c47b9096bec724
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981809"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306605"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Nasıl yapılır: Abone olaylara ve aboneliği kaldırma (C# Programlama Kılavuzu)
 Olay ortaya çıktığında çağrılan özel kod yazmak istediğiniz zaman, başka bir sınıf tarafından yayımlanan bir olaya abone olun. Örneğin, bir düğmenin abone `click` uygulamanızın kullanıcı düğmeye tıkladığında faydalı bir şey yapmak için olay.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Visual Studio IDE kullanarak olaylarına abone olma  
   
-1.  Göremiyorsanız **özellikleri** penceresi içinde **tasarım** görüntülemek için form veya denetim bir olay işleyicisi oluşturun ve istediğiniz sağ **özellikleri**.  
+1. Göremiyorsanız **özellikleri** penceresi içinde **tasarım** görüntülemek için form veya denetim bir olay işleyicisi oluşturun ve istediğiniz sağ **özellikleri**.  
   
-2.  Üst kısmındaki **özellikleri** penceresinde tıklayın **olayları** simgesi.  
+2. Üst kısmındaki **özellikleri** penceresinde tıklayın **olayları** simgesi.  
   
-3.  Örneğin, oluşturmak istediğiniz olayı çift `Load` olay.  
+3. Örneğin, oluşturmak istediğiniz olayı çift `Load` olay.  
   
      Visual C# boş olay işleyicisi yöntemi oluşturur ve bunu kodunuza ekler. Alternatif olarak, el ile kod ekleyebilirsiniz **kod** görünümü. Örneğin, aşağıdaki kod satırlarını olduğunda çağrılacak olay işleyicisi yöntemi bildirimini `Form` sınıfı harekete geçirirse `Load` olay.  
   
@@ -37,7 +37,7 @@ Olay ortaya çıktığında çağrılan özel kod yazmak istediğiniz zaman, ba�
   
 ### <a name="to-subscribe-to-events-programmatically"></a>Program aracılığıyla olaylarına abone olma  
   
-1.  Olay için temsilci imzası olan imzayla eşleşen bir olay işleyicisi yöntemi tanımlayın. Örneğin, olay dayanıyorsa <xref:System.EventHandler> temsilci türü, aşağıdaki kod, metot taslağı temsil eder:  
+1. Olay için temsilci imzası olan imzayla eşleşen bir olay işleyicisi yöntemi tanımlayın. Örneğin, olay dayanıyorsa <xref:System.EventHandler> temsilci türü, aşağıdaki kod, metot taslağı temsil eder:  
   
     ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
@@ -46,7 +46,7 @@ Olay ortaya çıktığında çağrılan özel kod yazmak istediğiniz zaman, ba�
     }  
     ```  
   
-2.  Toplama atama işleci kullanın (`+=`), olay işleyicisi olaya bağlamak için. Aşağıdaki örnekte adlı bir nesne olduğunu varsayın `publisher` adlı bir olaya sahip `RaiseCustomEvent`. Abone sınıfı, olaylara abone için bir yayımcı sınıf başvurusu gerektiğini unutmayın.  
+2. Toplama atama işleci kullanın (`+=`), olay işleyicisi olaya bağlamak için. Aşağıdaki örnekte adlı bir nesne olduğunu varsayın `publisher` adlı bir olaya sahip `RaiseCustomEvent`. Abone sınıfı, olaylara abone için bir yayımcı sınıf başvurusu gerektiğini unutmayın.  
   
     ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
@@ -102,7 +102,7 @@ Olay ortaya çıktığında çağrılan özel kod yazmak istediğiniz zaman, ba�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Olaylar](../../../csharp/programming-guide/events/index.md)
-- [event](../../../csharp/language-reference/keywords/event.md)
-- [Nasıl yapılır: .NET Framework yönergeleriyle uyumlu olayları yayımlama](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [olay](../../../csharp/language-reference/keywords/event.md)
+- [Nasıl yapılır: .NET Framework Yönergeleriyle Uyumlu Olayları Yayımlama](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [-= İşleci (C# Başvurusu)](../../language-reference/operators/subtraction-assignment-operator.md)
 - [+= İşleci](../../../csharp/language-reference/operators/addition-assignment-operator.md)

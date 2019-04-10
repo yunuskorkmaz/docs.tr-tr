@@ -12,12 +12,12 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: e6e8a4a5908d890d34ab6de952917cd97be2b433
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3f1f013cbb5e41c997014f556602b01bab62914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297518"
 ---
 # <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetiminde Sütunları Silme veya Gizleme
 > [!NOTE]
@@ -32,13 +32,13 @@ ms.locfileid: "59120152"
   
 ### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>Bir sütun DataGrid'den programlı olarak silmek için  
   
-1.  Formunuza bildirimleri alanında yeni bir örneğini bildirmeniz <xref:System.Windows.Forms.DataGridTableStyle> sınıfı.  
+1. Formunuza bildirimleri alanında yeni bir örneğini bildirmeniz <xref:System.Windows.Forms.DataGridTableStyle> sınıfı.  
   
-2.  Ayarlama <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> stile uygulamak istediğiniz veri kaynağı tablosuna özelliği. Aşağıdaki örnekte <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> özelliği zaten ayarlanmış varsayar.  
+2. Ayarlama <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> stile uygulamak istediğiniz veri kaynağı tablosuna özelliği. Aşağıdaki örnekte <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> özelliği zaten ayarlanmış varsayar.  
   
-3.  Yeni Ekle <xref:System.Windows.Forms.DataGridTableStyle> DataGrid'in tablo stilleri koleksiyona nesne.  
+3. Yeni Ekle <xref:System.Windows.Forms.DataGridTableStyle> DataGrid'in tablo stilleri koleksiyona nesne.  
   
-4.  Çağrı <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> yöntemi <xref:System.Windows.Forms.DataGrid>'s <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> sütun dizini silmek için sütun belirterek koleksiyonu.  
+4. Çağrı <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> yöntemi <xref:System.Windows.Forms.DataGrid>'s <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> sütun dizini silmek için sütun belirterek koleksiyonu.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -79,13 +79,13 @@ ms.locfileid: "59120152"
   
 ### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>Bir sütunun DataGrid'deki program aracılığıyla gizleme  
   
-1.  Formunuza bildirimleri alanında yeni bir örneğini bildirmeniz <xref:System.Windows.Forms.DataGridTableStyle> sınıfı.  
+1. Formunuza bildirimleri alanında yeni bir örneğini bildirmeniz <xref:System.Windows.Forms.DataGridTableStyle> sınıfı.  
   
-2.  Ayarlama <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> özelliğini <xref:System.Windows.Forms.DataGridTableStyle> tablosuna stile uygulamak istediğiniz veri kaynağı. Aşağıdaki kod örneğinde <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> özelliği zaten ayarlanmış varsayar.  
+2. Ayarlama <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> özelliğini <xref:System.Windows.Forms.DataGridTableStyle> tablosuna stile uygulamak istediğiniz veri kaynağı. Aşağıdaki kod örneğinde <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> özelliği zaten ayarlanmış varsayar.  
   
-3.  Yeni Ekle <xref:System.Windows.Forms.DataGridTableStyle> DataGrid'in tablo stilleri koleksiyona nesne.  
+3. Yeni Ekle <xref:System.Windows.Forms.DataGridTableStyle> DataGrid'in tablo stilleri koleksiyona nesne.  
   
-4.  Ayarlayarak sütunu gizleyin kendi `Width` özelliği 0 olarak gizlemek için sütunun sütun dizini belirtme.  
+4. Ayarlayarak sütunu gizleyin kendi `Width` özelliği 0 olarak gizlemek için sütunun sütun dizini belirtme.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  

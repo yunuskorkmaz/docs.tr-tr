@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319410"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# Derleyici Seçenekleri)
 **-Lib** seçeneği tarafından başvurulan derlemelerin konumunu belirten [-başvurusu (C# Derleyici Seçenekleri)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) seçeneği.  
@@ -34,13 +34,13 @@ ms.locfileid: "54677881"
 ## <a name="remarks"></a>Açıklamalar  
  Derleyici şu sıralamadaki tam olmayan bütünleştirilmiş kod başvuruları arar:  
   
-1.  Geçerli çalışma dizini. Bu, derleyicinin çağırıldığı dizinidir.  
+1. Geçerli çalışma dizini. Bu, derleyicinin çağırıldığı dizinidir.  
   
-2.  Ortak dil çalışma zamanı sistem dizini.  
+2. Ortak dil çalışma zamanı sistem dizini.  
   
-3.  Tarafından belirtilen dizinlerde **-lib**.  
+3. Tarafından belirtilen dizinlerde **-lib**.  
   
-4.  LIB ortam değişkeni tarafından belirtilen dizinler.  
+4. LIB ortam değişkeni tarafından belirtilen dizinler.  
   
  Kullanım **-başvuru** bir bütünleştirilmiş kod başvurusu belirtmek için.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "54677881"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açın **özellik sayfaları** iletişim kutusu.  
+1. Projenin açın **özellik sayfaları** iletişim kutusu.  
   
-2.  Tıklayın **başvuru yolu** özellik sayfası.  
+2. Tıklayın **başvuru yolu** özellik sayfası.  
   
-3.  Liste kutusunun içeriğini değiştirin.  
+3. Liste kutusunun içeriğini değiştirin.  
   
  Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   

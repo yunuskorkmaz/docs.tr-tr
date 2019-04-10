@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846473"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313378"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
-.NET Framework dilden bağımsızdır ' dir. Bu bir geliştirici olarak, birinde gibi .NET Framework hedefleyen birçok dilde geliştirebileceğiniz anlamına gelir C#, C + +/ CLI, Eiffel, F#, IronPython, Ironruby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell. Türler ve üyeler sınıf kitaplıkları, bunlar ilk olarak yazılmış içinde dili bilmek zorunda kalmadan ve herhangi bir özgün dil kuralları izlemeye gerek kalmadan olmadan .NET Framework için geliştirilen erişebilirsiniz. Bileşen geliştiricisiyseniz, diline bakılmaksızın herhangi bir .NET Framework uygulama tarafından bileşeniniz erişilebilir.  
+.NET Framework dilden bağımsızdır ' dir. Bu bir geliştirici olarak, birinde gibi .NET Framework hedefleyen birçok dilde geliştirebileceğiniz anlamına gelir C#, C++/CLI, Eiffel, F#, IronPython, Ironruby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell. Türler ve üyeler sınıf kitaplıkları, bunlar ilk olarak yazılmış içinde dili bilmek zorunda kalmadan ve herhangi bir özgün dil kuralları izlemeye gerek kalmadan olmadan .NET Framework için geliştirilen erişebilirsiniz. Bileşen geliştiricisiyseniz, diline bakılmaksızın herhangi bir .NET Framework uygulama tarafından bileşeniniz erişilebilir.  
   
 > [!NOTE]
 >  Bu ilk kısmı bu makalede, dilden bağımsız bileşenlerin oluşturulması açıklanmaktadır — diğer bir deyişle, herhangi bir dilde yazılmış uygulamalar tarafından tüketilebilecek bileşenlerin. Birden çok dilde yazılmış kaynak kodundan tek bileşen veya uygulama da oluşturabilirsiniz; bkz: [diller arası birlikte çalışabilirlik](#CrossLang) ikinci bölümündeki bu makalede.  
@@ -46,7 +46,7 @@ ms.locfileid: "57846473"
   
     -   [Arabirimler](#Interfaces)  
   
-    -   [Sabit Listeleri](#enums)  
+    -   [Numaralandırmalar](#enums)  
   
     -   [Genel olarak tür üyeleri](#members)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "57846473"
   
     -   [Olaylar](#events)  
   
-    -   [Overloads](#overloads)  
+    -   [Aşırı Yüklemeler](#overloads)  
   
     -   [Özel Durumlar](#exceptions)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "57846473"
   
 -   [CLSCompliantAttribute özniteliği](#CLSAttribute)  
   
--   [Diller arası birlikte çalışabilirlik](#CrossLang)  
+-   [Diller Arası Birlikte Çalışabilirlik](#CrossLang)  
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>CLS uyumluluğu kuralları  
@@ -112,9 +112,9 @@ ms.locfileid: "57846473"
 |Öznitelikler|[Öznitelikler](#attributes)|CLS ortak olarak görünür gerekli değiştiricilere izin vermiyor (`modreq`, bkz. Bölüm II), isteğe bağlı değiştiricilere izin vermez ancak (`modopt`, bkz. Bölüm II) anlamadığı.|35|  
 |Oluşturucular|[Oluşturucular](#ctors)|Devralınan örnek verilerine herhangi bir erişim oluşmadan önce nesne Oluşturucu, temel sınıfının bazı örnek oluşturucusu oluşturucularını çağırmalıdır (Bu oluşturuculara sahip olmak zorunda olmayan değer türleri için geçerli değildir.)|21|  
 |Oluşturucular|[Oluşturucular](#ctors)|Nesne Oluşturucu dışında bir nesnenin oluşturmanın bir parçası çağrılmamalıdır ve nesne iki kez başlatılmamış.|22|  
-|Numaralandırmalar|[Sabit Listeleri](#enums)|Temel bir enum türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" olacaktır ve bu alanın işaretlenmesi `RTSpecialName`.|7|  
-|Numaralandırmalar|[Sabit Listeleri](#enums)|Bir varlığı veya yokluğu ile gösterilen iki ayrı türü vardır <xref:System.FlagsAttribute?displayProperty=nameWithType> (bkz: bölüm IV kitaplığı) özel öznitelik. Biri, adlandırılmış tamsayı değerlerini temsil eder; diğer temsil eder, adlandırılmamış değer üretmek için birleştirilebilen bit bayrakları adı. Değerini bir `enum` belirtilen değerlerle sınırlı değildir.|8|  
-|Numaralandırmalar|[Sabit Listeleri](#enums)|Bir enumun değişmez statik alanları numaralandırma türüne sahip olamaz.|9|  
+|Numaralandırmalar|[Numaralandırmalar](#enums)|Temel bir enum türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" olacaktır ve bu alanın işaretlenmesi `RTSpecialName`.|7|  
+|Numaralandırmalar|[Numaralandırmalar](#enums)|Bir varlığı veya yokluğu ile gösterilen iki ayrı türü vardır <xref:System.FlagsAttribute?displayProperty=nameWithType> (bkz: bölüm IV kitaplığı) özel öznitelik. Biri, adlandırılmış tamsayı değerlerini temsil eder; diğer temsil eder, adlandırılmamış değer üretmek için birleştirilebilen bit bayrakları adı. Değerini bir `enum` belirtilen değerlerle sınırlı değildir.|8|  
+|Numaralandırmalar|[Numaralandırmalar](#enums)|Bir enumun değişmez statik alanları numaralandırma türüne sahip olamaz.|9|  
 |Olaylar|[Olaylar](#events)|Bir olay uygulayan yöntemler olarak işaretlenmeyecektir `SpecialName` meta verilerinde.|29|  
 |Olaylar|[Olaylar](#events)|Bir olay ve onun erişimcilerinin erişilebilirliği aynı olacaktır.|30|  
 |Olaylar|[Olaylar](#events)|`add` Ve `remove` yöntemleri için bir olay ya da her ikisini de gelecektir mevcut olmalı veya olmamalıdır.|31|  
@@ -137,8 +137,8 @@ ms.locfileid: "57846473"
 |Adlandırma kuralları|[Adlandırma kuralları](#naming)|Derlemeleri Annex 7, teknik rapor 15, başlatmak ve tanımlayıcıları, kullanılabilir adresindeki çevrimiçi eklenmesi için izin verilen karakter kümesini yöneten Unicode Standard3.0 izleyin <https://www.unicode.org/unicode/reports/tr15/tr15-18.html>. Tanımlayıcıları Unicode normalleştirme Form c tarafından tanımlanan kurallı biçimde olmalıdır Harfli eşlemeler (Unicode yerel ayara duyarlı, bire bir küçük harf eşlemeler tarafından belirtildiği gibi) aynıysa CLS amacıyla, iki tanımlayıcı aynıdır. Diğer bir deyişle, iki tanımlayıcı CLS altında farklı kabul edilmesi için daha çok, farklı olacaktır. Ancak, devralınan bir tanımı geçersiz kılmak için CLI'yı özgün bildirimin kesin kodlama kullanılmasını gerektirir.|4|  
 |Aşırı Yükleme|[Adlandırma kuralları](#naming)|CLS uyumlu kapsamda sunulan tüm adlar, ayrı bağımsız tür adları aynı ve aşırı yükleme olduğu dışında tutulamaz. Diğer bir deyişle, CTSallows tek bir türün bir yöntem ve bir alan için aynı adı kullanın, buna izin vermez.|5|  
 |Aşırı Yükleme|[Adlandırma kuralları](#naming)|CTS sağlayan ayrı imzaların ayırt edici olarak rağmen alanlar ve iç içe geçmiş türler yalnızca, tanımlayıcı karşılaştırması ile farklı olacaktır. Yöntemler, özellikler ve olaylar (tanımlayıcı karşılaştırmasına göre) aynı ada sahip yalnızca dönüş türüne göre farklı olmalıdır da CLS kuralı 39'da belirtilen hariç.|6|  
-|Aşırı Yükleme|[Overloads](#overloads)|Özellikler ve yöntemler aşırı yüklenebilir.|37|  
-|Aşırı Yükleme|[Overloads](#overloads)|Özellikler ve yöntemler aşırı yüklenebilir yalnızca sayı ve dönüştürme işleçleri dışında parametre türleri temel `op_Implicit` ve `op_Explicit`, kendi dönüş türüne bağlı olarak, aynı zamanda aşırı yüklenebilir.|38|  
+|Aşırı Yükleme|[Aşırı Yüklemeler](#overloads)|Özellikler ve yöntemler aşırı yüklenebilir.|37|  
+|Aşırı Yükleme|[Aşırı Yüklemeler](#overloads)|Özellikler ve yöntemler aşırı yüklenebilir yalnızca sayı ve dönüştürme işleçleri dışında parametre türleri temel `op_Implicit` ve `op_Explicit`, kendi dönüş türüne bağlı olarak, aynı zamanda aşırı yüklenebilir.|38|  
 |Aşırı Yükleme|--|Bir türde bildirilen iki veya daha fazla CLS uyumlu yöntem aynı ada sahip ve belirli bir tür örneklemeleri kümesi, aynı parametre ve dönüş türleri, tüm bu yöntemleri bu tür anlamsal olarak eşdeğer olacaktır.|48|  
 |Türler|[Tür ve tür üyesi imzaları](#Types)|<xref:System.Object?displayProperty=nameWithType> CLS uyumludur. CLS uyumlu herhangi bir sınıf, CLS uyumlu bir sınıftan devralmalıdır.|23|  
 |Özellikler|[Özellikler](#properties)|Bir özelliğin alıcı ve ayarlayıcı yöntemleri uygulayan yöntemler olarak işaretlenmeyecektir `SpecialName` meta verilerinde.|24|  
@@ -188,7 +188,7 @@ ms.locfileid: "57846473"
 |Uyumsuz tür|Açıklama|CLS uyumlu alternatif|  
 |-------------------------|-----------------|--------------------------------|  
 |<xref:System.SByte>|8 bitlik işaretli tamsayı veri türü|<xref:System.Int16>|  
-|<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Hiçbiri|  
+|<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Yok.|  
 |<xref:System.UInt16>|16-bit işaretsiz tamsayı|<xref:System.Int32>|  
 |<xref:System.UInt32>|32-bit işaretsiz tamsayı|<xref:System.Int64>|  
 |<xref:System.UInt64>|64-bit işaretsiz tamsayı|<xref:System.Int64> (taşabilir), <xref:System.Numerics.BigInteger>, veya <xref:System.Double>|  
@@ -517,13 +517,13 @@ ms.locfileid: "57846473"
   
  CLS uyumlu bileşenler oluşturmak için:  
   
-1.  Kullanım <xref:System.CLSCompliantAttribute> Derleme CLS uyumlu olarak işaretlemek için.  
+1. Kullanım <xref:System.CLSCompliantAttribute> Derleme CLS uyumlu olarak işaretlemek için.  
   
-2.  CLS uyumlu değil olarak uyumlu olmayan derlemedeki genel olarak sunulan türlerini işaretleyin.  
+2. CLS uyumlu değil olarak uyumlu olmayan derlemedeki genel olarak sunulan türlerini işaretleyin.  
   
-3.  Herhangi bir genel olarak sunulan üye CLS uyumlu türlerde uyumlu olmayan olarak işaretleyin.  
+3. Herhangi bir genel olarak sunulan üye CLS uyumlu türlerde uyumlu olmayan olarak işaretleyin.  
   
-4.  CLS uyumlu olmayan üyeler için CLS uyumlu bir alternatif sağlar.  
+4. CLS uyumlu olmayan üyeler için CLS uyumlu bir alternatif sağlar.  
   
  Tüm uyumlu olmayan türleri ve üyeleri başarılı bir şekilde işaretlediyseniz, derleyici tüm uyumsuz uyarılarını yayınlamaz. Ancak hangi üyelerin CLS uyumlu değildir ve ürün belgelerinizde bunların CLS uyumlu alternatifler listesinde gösterilmelidir.  
   

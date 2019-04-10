@@ -2,12 +2,12 @@
 title: Genişletilmiş Koruma Kimlik Doğrulama için Beni Oku Örnek
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-ms.openlocfilehash: 19fe961e346874346485442bd0ba90badab5f79f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192479"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319358"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Genişletilmiş Koruma Kimlik Doğrulama için Beni Oku Örnek
 Genişletilmiş koruma, bir saldırgan ("adam-in--middle") istemci kimlik bilgileri yakalar ve bunları istemcinin hedeflenen sunucusundaki güvenli kaynaklara erişmek için kullandığı adam-de-adam (MITM) saldırılarına karşı korumak için bir güvenlik girişimidir.  
@@ -19,25 +19,25 @@ Genişletilmiş koruma, bir saldırgan ("adam-in--middle") istemci kimlik bilgil
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  IIS üzerinde Program Ekle/Kaldır makineden yükleme -> Windows özelliklerini.  
+1. IIS üzerinde Program Ekle/Kaldır makineden yükleme -> Windows özelliklerini.  
   
-2.  Windows kimlik doğrulamasını Windows özelliklerini aç: Internet Information Services World Wide Web Hizmetleri -> -> Güvenlik Windows kimlik doğrulaması ->.  
+2. Windows kimlik doğrulamasını Windows özelliklerini aç: Internet Information Services World Wide Web -> hizmetler -> Güvenlik Windows kimlik doğrulaması ->.  
   
-3.  HTTP etkinleştirmesini Windows özelliklerini aç: Microsoft .NET Framework 3.5.1 -> Windows Communication Foundation HTTP etkinleştirme.  
+3. HTTP etkinleştirmesini Windows özelliklerini aç: Microsoft .NET Framework 3.5.1 -> Windows Communication Foundation HTTP etkinleştirme.  
   
-4.  İstemcinin sunucuyla güvenli bir kanal oluşturmak için bu örneği gerektirir ve bu nedenle, Internet Information Services (IIS) Yöneticisi'nden yüklenebilecek bir sunucu sertifikası varlığını gerektirir.  
+4. İstemcinin sunucuyla güvenli bir kanal oluşturmak için bu örneği gerektirir ve bu nedenle, Internet Information Services (IIS) Yöneticisi'nden yüklenebilecek bir sunucu sertifikası varlığını gerektirir.  
   
     1.  Açık IIS Yöneticisi -> sunucu sertifikaları (sekmesinden özelliği Görünüm).  
   
     2.  Bu örnek sınama amacıyla bir otomatik olarak imzalanan sertifika oluşturabilirsiniz. (Internet Explorer'ı güvenli olmadığı hakkında sertifika istemek için istemiyorsanız, güvenilen kök sertifika yetkilisi depolarında yükleyebilirsiniz).  
   
-5.  Varsayılan Web sitesi için Eylemler bölmesine gidin. Düzenle düğmesine Site bağlamaları ->. Bir tür olarak HTTPS henüz varsa, bağlantı noktası numarası 443 ve Yukarıdaki adımda oluşturulan SSL sertifika atama ekleyin.  
+5. Varsayılan Web sitesi için Eylemler bölmesine gidin. Düzenle düğmesine Site bağlamaları ->. Bir tür olarak HTTPS henüz varsa, bağlantı noktası numarası 443 ve Yukarıdaki adımda oluşturulan SSL sertifika atama ekleyin.  
   
-6.  Derleme hizmeti. Bu sanal dizini IIS içinde sizin için (post yapı eylemi proje özelliklerinde belirtilen) oluşturur ve barındırılan Web olması için bir hizmet için gerektiği şekilde dll, .svc ve yapılandırma dosyalarını kopyalar.  
+6. Derleme hizmeti. Bu sanal dizini IIS içinde sizin için (post yapı eylemi proje özelliklerinde belirtilen) oluşturur ve barındırılan Web olması için bir hizmet için gerektiği şekilde dll, .svc ve yapılandırma dosyalarını kopyalar.  
   
-7.  IIS Yöneticisi'ni açın. Önceki adımda oluşturduğunuz sanal dizini (ExtendedProtection) sağ tıklayın ve uygulama Dönüştür'ı seçin.  
+7. IIS Yöneticisi'ni açın. Önceki adımda oluşturduğunuz sanal dizini (ExtendedProtection) sağ tıklayın ve uygulama Dönüştür'ı seçin.  
   
-8.  Kimlik doğrulama modülünü, bu sanal dizin için IIS Yöneticisi'nde açın ve Windows kimlik doğrulamasını etkinleştirin.  
+8. Kimlik doğrulama modülünü, bu sanal dizin için IIS Yöneticisi'nde açın ve Windows kimlik doğrulamasını etkinleştirin.  
   
 9. Gelişmiş ayarları için Windows kimlik doğrulaması için bu sanal dizin açın ve aşağıdaki örnekte, her zaman ilgili ExtendedProtection ayarı ayarlandığından, gerekli ayarlayın.  
   

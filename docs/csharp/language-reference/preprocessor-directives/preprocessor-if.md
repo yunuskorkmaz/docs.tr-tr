@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 027c99df806197637675837b7556b176dc115aba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545825"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318981"
 ---
 # <a name="if-c-reference"></a>#if (C# Başvurusu)
 
@@ -24,7 +24,7 @@ C# derleyicisi karşılaştığında bir `#if` yönergesi, ardından sonuç ile 
 #endif
 ```
 
-İşleçleri [ == ](../operators/equality-operators.md#equality-operator-) (eşitlik) ve [! =](../operators/equality-operators.md#inequality-operator-) (yalnızca test etmek için eşitsizlik) [true](../keywords/true.md) veya [false](../keywords/false.md). Doğru simge tanımlanmadıysa anlamına gelir. Deyim `#if DEBUG` olarak aynı anlamı `#if (DEBUG == true)`. İşleçleri [ && ](../operators/conditional-and-operator.md) (ve) [ &#124; &#124; ](../operators/conditional-or-operator.md) (veya) ve [!](../operators/logical-negation-operator.md) (birden fazla sembol tanımlı olup olmadığını değerlendirmek için değil). Ayrıca, simgeler ve işleçler parantezli gruplandırabilirsiniz.
+İşleçleri [ == ](../operators/equality-operators.md#equality-operator-) (eşitlik) ve [! =](../operators/equality-operators.md#inequality-operator-) (yalnızca test etmek için eşitsizlik) [true](../keywords/true.md) veya [false](../keywords/false.md). Doğru simge tanımlanmadıysa anlamına gelir. Deyim `#if DEBUG` olarak aynı anlamı `#if (DEBUG == true)`. İşleçleri [ && ](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (ve) [ &#124; &#124; ](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (veya) ve [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (birden fazla sembol tanımlı olup olmadığını değerlendirmek için değil). Ayrıca, simgeler ve işleçler parantezli gruplandırabilirsiniz.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -89,7 +89,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Ön İşlemci Yönergeleri](index.md)
-- [Nasıl yapılır: İzleme ve hata ayıklama ile koşullu derleme](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

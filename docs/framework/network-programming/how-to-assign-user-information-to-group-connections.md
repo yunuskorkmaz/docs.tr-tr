@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 5608f6543cf3a9d123eda4dd64a83085f1e1317c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095067"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296972"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>Nasıl yapılır: Bağlantıları Gruplandırmak için Kullanıcı Bilgileri Atama
 
@@ -18,7 +18,7 @@ ms.locfileid: "59095067"
   
 ### <a name="to-assign-user-information-to-a-group-connection"></a>Bir grubu bağlantısı için kullanıcı bilgilerini atamak için  
   
-1.  Bir bağlantı grup adı oluşturun.  
+1. Bir bağlantı grup adı oluşturun.  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -32,7 +32,7 @@ ms.locfileid: "59095067"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  Belirli bir URL için bir istek oluşturun. Örneğin, aşağıdaki kod bir istek URL'sini oluşturur `http://www.contoso.com.`  
+2. Belirli bir URL için bir istek oluşturun. Örneğin, aşağıdaki kod bir istek URL'sini oluşturur `http://www.contoso.com.`  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -42,7 +42,7 @@ ms.locfileid: "59095067"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  Web isteği ve çağrısı için kimlik bilgileri ve bağlantı GroupName ayarlayın **GetResponse yanıtına** almak için bir **WebResponse** nesne.  
+3. Web isteği ve çağrısı için kimlik bilgileri ve bağlantı GroupName ayarlayın **GetResponse yanıtına** almak için bir **WebResponse** nesne.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -58,7 +58,7 @@ ms.locfileid: "59095067"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4.  Yanıt akışına WebRespose nesne kullandıktan sonra kapatın.  
+4. Yanıt akışına WebRespose nesne kullandıktan sonra kapatın.  
   
     ```csharp  
     MyWebResponse.Close();  

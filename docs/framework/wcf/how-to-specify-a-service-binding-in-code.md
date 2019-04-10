@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: edc7a4f5dc21a25ac9752dda60675d979fe18c69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9f3320b031141246a394191a1924509204707dc1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162364"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303459"
 ---
 # <a name="how-to-specify-a-service-binding-in-code"></a>Nasıl yapılır: Kodda Hizmet Bağlama Belirtme
 Bu örnekte, bir `ICalculator` anlaşma hesaplayıcı hizmeti için tanımlanan, hizmet içinde uygulanan `CalculatorService` sınıf ve onun uç noktası burada belirtilen hizmetini kullanmalısınız kod içinde tanımlanan <xref:System.ServiceModel.BasicHttpBinding> sınıfı.  
@@ -21,29 +21,29 @@ Bu örnekte, bir `ICalculator` anlaşma hesaplayıcı hizmeti için tanımlanan,
   
 ### <a name="to-specify-in-code-to-use-the-basichttpbinding-for-the-service"></a>BasicHttpBinding hizmet için kullanılacak kodu belirtmek için  
   
-1.  Hizmet türü için bir hizmet anlaşmasını tanımlar.  
+1. Hizmet türü için bir hizmet anlaşmasını tanımlar.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#1)]  
   
-2.  Hizmet sözleşmesi bir hizmet sınıfında uygulayın.  
+2. Hizmet sözleşmesi bir hizmet sınıfında uygulayın.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#2)]  
   
-3.  Barındırma uygulamada, hizmet ve hizmetle birlikte kullanılacak bağlamanın temel adresi oluşturun.  
+3. Barındırma uygulamada, hizmet ve hizmetle birlikte kullanılacak bağlamanın temel adresi oluşturun.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#3)]
      [!code-vb[C_HowTo_CodeServiceBinding#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#3)]  
   
-4.  Konak hizmeti oluşturun, uç nokta ekleyin ve ardından ana bilgisayar'ı açın.  
+4. Konak hizmeti oluşturun, uç nokta ekleyin ve ardından ana bilgisayar'ı açın.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#4)]
      [!code-vb[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#4)]  
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>Bağlama özelliklerin varsayılan değerlerini değiştirmek için  
   
-1.  Varsayılan özellik değerlerini birini değiştirmek için <xref:System.ServiceModel.BasicHttpBinding> sınıfı, ana bilgisayar oluşturmadan önce yeni değere bağlama üzerinde özellik değerini ayarlayın. Örneğin, 2 dakika 1 dakikalık varsayılan açık ve kapalı zaman aşımı değerlerini değiştirmek için aşağıdakileri kullanın.  
+1. Varsayılan özellik değerlerini birini değiştirmek için <xref:System.ServiceModel.BasicHttpBinding> sınıfı, ana bilgisayar oluşturmadan önce yeni değere bağlama üzerinde özellik değerini ayarlayın. Örneğin, 2 dakika 1 dakikalık varsayılan açık ve kapalı zaman aşımı değerlerini değiştirmek için aşağıdakileri kullanın.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#5)]
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  

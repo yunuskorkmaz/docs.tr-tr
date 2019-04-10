@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139223"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301405"
 ---
 # <a name="drag-and-drop-overview"></a>Sürükleme ve Bırakmaya Genel Bakış
 Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar. Sürükle ve bırak fare (veya başka bir işaretleme cihazı) bir veya birden çok nesne seçmek için bu nesneleri sürükleyerek üzerinden bazı istenen bırakma hedefi kullanılmasına veri aktarım yöntemi için yaygın olarak başvuruyor [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]ve onları bırakma.  
@@ -181,11 +181,11 @@ Bu konu, sürükle ve bırak desteği'ne genel bakış sağlar. [!INCLUDE[TLA#tl
   
  Bir bırakma hedefi bir öğedir, ayarladığınız belirtmek için kendi <xref:System.Windows.UIElement.AllowDrop%2A> özelliğini `true`. Bırakma hedefi olayları, sonra bunları işleyebilmesi öğede gerçekleştirilecektir. Bir Sürükle ve bırak işlemi sırasında bırakma hedefi üzerinde aşağıdaki olaylar dizisi gerçekleşir:  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> veya <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> veya <xref:System.Windows.DragDrop.Drop>  
   
  <xref:System.Windows.DragDrop.DragEnter> Olay verileri bırakma hedefinin sınırları içine sürüklendiğinde oluşur. Uygulamanız için uygunsa genellikle sürükle ve bırak işleminin etkilerini önizlemesini sağlamak için bu olayı işleyin. Ayarlı değil <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> özelliğinde <xref:System.Windows.DragDrop.DragEnter> haliyle bir olay yazılır <xref:System.Windows.DragDrop.DragOver> olay.  
   

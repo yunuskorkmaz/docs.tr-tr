@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
-ms.openlocfilehash: c31a954d659b3f686f8b9780276a4719064e60cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128719"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298545"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>Nasıl yapılır: Sözleşme Arabirimi ile Hizmet Oluşturma
 Windows Communication Foundation (WCF) sözleşme oluşturmak için tercih edilen bir arabirim kullanarak yoludur. Bu sözleşme koleksiyon ve işlemleri erişmek için gerekli iletileri yapısını belirtir hizmet sunar. Bu arabirim uygulayarak girdi ve çıktı türleri tanımlar. <xref:System.ServiceModel.ServiceContractAttribute> sınıf arabirimine ve <xref:System.ServiceModel.OperationContractAttribute> kullanıma sunmak istediğiniz yöntemleri sınıfı.  
@@ -19,13 +19,13 @@ Windows Communication Foundation (WCF) sözleşme oluşturmak için tercih edile
   
 ### <a name="creating-a-wcf-contract-with-an-interface"></a>Bir WCF Sözleşmesi ile bir arabirim oluşturma  
   
-1.  Visual Basic kullanarak yeni bir arabirim oluşturma C#, veya tüm diğer ortak dil çalışma zamanı dil.  
+1. Visual Basic kullanarak yeni bir arabirim oluşturma C#, veya tüm diğer ortak dil çalışma zamanı dil.  
   
-2.  Uygulama <xref:System.ServiceModel.ServiceContractAttribute> arabirimi sınıfı.  
+2. Uygulama <xref:System.ServiceModel.ServiceContractAttribute> arabirimi sınıfı.  
   
-3.  Yöntemler arabirimi tanımlar.  
+3. Yöntemler arabirimi tanımlar.  
   
-4.  Uygulama <xref:System.ServiceModel.OperationContractAttribute> genel WCF sözleşmesinin bir parçası sunulan her yöntem için sınıf.  
+4. Uygulama <xref:System.ServiceModel.OperationContractAttribute> genel WCF sözleşmesinin bir parçası sunulan her yöntem için sınıf.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği bir hizmet anlaşmasını tanımlayan bir arabirimi gösterir.  

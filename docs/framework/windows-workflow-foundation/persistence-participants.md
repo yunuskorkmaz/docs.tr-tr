@@ -2,31 +2,31 @@
 title: Kalıcılık Katılımcıları
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115901"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316368"
 ---
 # <a name="persistence-participants"></a>Kalıcılık Katılımcıları
 Kalıcılık Katılımcısı bir uygulama ana bilgisayarı tarafından tetiklenen bir Kalıcılık işlemi (kaydetme veya yük) katılabilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] İki soyut sınıf ile birlikte gelen **PersistenceParticipant** ve **PersistenceIOParticipant**, hangi Kalıcılık Katılımcısı oluşturma için kullanabilirsiniz. Kalıcılık Katılımcısı bu sınıflardan birine türetilen, ilgilenilen yöntemlerini uygular ve sonra sınıfa bir örneğini ekler <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> koleksiyonunda <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Uygulama konağı, bir iş akışı örneği kalıcı olduğunda bu tür iş akışı uzantılar için Ara ve uygun zamanlarda Kalıcılık katılımcıları uygun yöntemleri çağırmak olabilir.  
   
  Aşağıdaki listede, kalan (Kaydet) işlemi farklı aşamalarında Kalıcılık alt sistemi tarafından gerçekleştirilen görevleri açıklar. Kalıcılık katılımcıları üçüncü ve dördüncü aşamasında kullanılır. Katılımcı bir g/ç Katılımcısı (g/ç işlemlerinde da katıldığı bir Kalıcılık Katılımcısı) ise, katılımcı de altıncı aşamasında kullanılır.  
   
-1.  İş akışı durumu, yer işaretleri, eşlenen değişkenleri ve zaman damgası dahil olmak üzere yerleşik değerleri toplar.  
+1. İş akışı durumu, yer işaretleri, eşlenen değişkenleri ve zaman damgası dahil olmak üzere yerleşik değerleri toplar.  
   
-2.  İş akışı örneği ile ilişkili Uzantı koleksiyonu eklenen tüm Kalıcılık katılımcıları toplar.  
+2. İş akışı örneği ile ilişkili Uzantı koleksiyonu eklenen tüm Kalıcılık katılımcıları toplar.  
   
-3.  Çağıran <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> tüm Kalıcılık katılımcıları tarafından uygulanan yöntem.  
+3. Çağıran <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> tüm Kalıcılık katılımcıları tarafından uygulanan yöntem.  
   
-4.  Çağıran <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> tüm Kalıcılık katılımcıları tarafından uygulanan yöntem.  
+4. Çağıran <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> tüm Kalıcılık katılımcıları tarafından uygulanan yöntem.  
   
-5.  Kalıcı veya iş akışı kalıcı depoya kaydedin.  
+5. Kalıcı veya iş akışı kalıcı depoya kaydedin.  
   
-6.  Çağıran <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> tüm g/ç Kalıcılık katılımcıları yöntemi. Katılımcı bir g/ç katılımcı değilse bu görev atlandı. Kalıcılık bölüm işlemsel ise, işlem Transaction.Current özelliğinde sağlanır.  
+6. Çağıran <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> tüm g/ç Kalıcılık katılımcıları yöntemi. Katılımcı bir g/ç katılımcı değilse bu görev atlandı. Kalıcılık bölüm işlemsel ise, işlem Transaction.Current özelliğinde sağlanır.  
   
-7.  Tüm Kalıcılık katılımcıları tamamlanmasını bekler. Tüm katılımcıları kalıcı örnek verileri başarılı olursa, işlem taahhüt eder.  
+7. Tüm Kalıcılık katılımcıları tamamlanmasını bekler. Tüm katılımcıları kalıcı örnek verileri başarılı olursa, işlem taahhüt eder.  
   
  Kalıcılık Katılımcısı türetildiği **PersistenceParticipant** uygulayabilir ve sınıf **CollectValues** ve **MapValues** yöntemleri. Türetilen bir g/ç Kalıcılık Katılımcısı **PersistenceIOParticipant** uygulayabilir ve sınıf **BeginOnSave** uygulama yanı sıra yöntemi **CollectValues**ve **MapValues** yöntemleri.  
   
@@ -34,15 +34,15 @@ Kalıcılık Katılımcısı bir uygulama ana bilgisayarı tarafından tetiklene
   
  Aşağıdaki listede, yükleme işlemi farklı aşamalarında Kalıcılık alt sistemi tarafından gerçekleştirilen görevleri açıklar. Kalıcılık katılımcıları dördüncü aşamasında kullanılır. Kalıcılık g/ç katılımcıları (g/ç işlemlerinde ayrıca katılmayı Kalıcılık katılımcıları), ayrıca üçüncü aşamada kullanılır.  
   
-1.  İş akışı örneği ile ilişkili Uzantı koleksiyonu eklenen tüm Kalıcılık katılımcıları toplar.  
+1. İş akışı örneği ile ilişkili Uzantı koleksiyonu eklenen tüm Kalıcılık katılımcıları toplar.  
   
-2.  İş akışını sürdürme deposundan yükler.  
+2. İş akışını sürdürme deposundan yükler.  
   
-3.  Çağıran <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> tüm g/ç Kalıcılık Katılımcıları ve tamamlamak tüm Kalıcılık katılımcıları bekler. Kalıcılık bölüm işlemsel ise, işlem Transaction.Current sağlanır.  
+3. Çağıran <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> tüm g/ç Kalıcılık Katılımcıları ve tamamlamak tüm Kalıcılık katılımcıları bekler. Kalıcılık bölüm işlemsel ise, işlem Transaction.Current sağlanır.  
   
-4.  İş akışı örneği sürdürme deposundan alınan verileri temel alan bellekte yükler.  
+4. İş akışı örneği sürdürme deposundan alınan verileri temel alan bellekte yükler.  
   
-5.  Çağıran <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> her Kalıcılık Katılımcısı üzerinde.  
+5. Çağıran <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> her Kalıcılık Katılımcısı üzerinde.  
   
  Kalıcılık Katılımcısı türetildiği **PersistenceParticipant** uygulayabilir ve sınıf **PublishValues** yöntemi. Türetilen bir g/ç Kalıcılık Katılımcısı **PersistenceIOParticipant** uygulayabilir ve sınıf **BeginOnLoad** uygulama yanı sıra yöntemi **PublishValues**yöntemi.  
   

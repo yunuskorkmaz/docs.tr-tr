@@ -2,12 +2,12 @@
 title: Boole Veri Türleri
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: 1ecd01902c1b38552561a56521f91fa1580ffade
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2535d72a89691466b977e1d4c460ff73e3b93dc2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091219"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301015"
 ---
 # <a name="boolean-data-types"></a>Boole Veri Türleri
 Boole işleçleri, davranış kısa devre yapılmamış dışında ortak dil çalışma zamanı içinde (CLR), beklendiği gibi çalışır. Örneğin, Visual Basic `AndAlso` işleci davranacağını gibi `And` işleci. C# `&&` İşleci davranacağını gibi `&` işleci.  
@@ -16,12 +16,12 @@ Boole işleçleri, davranış kısa devre yapılmamış dışında ortak dil ça
   
 |Visual Basic|C#|  
 |------------------|---------|  
-|[And İşleci](~/docs/visual-basic/language-reference/operators/and-operator.md)|[& İşleci](~/docs/csharp/language-reference/operators/and-operator.md)|  
-|[AndAlso İşleci](~/docs/visual-basic/language-reference/operators/andalso-operator.md)|[&& İşleci](~/docs/csharp/language-reference/operators/conditional-and-operator.md)|  
-|[Or İşleci](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124; Operator](~/docs/csharp/language-reference/operators/or-operator.md)|  
-|[OrElse İşleci](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124;&#124;İşleci](~/docs/csharp/language-reference/operators/conditional-or-operator.md)|  
-|[Xor İşleci](~/docs/visual-basic/language-reference/operators/xor-operator.md)|[^ İşleci](~/docs/csharp/language-reference/operators/xor-operator.md)|  
-|[Not İşleci](~/docs/visual-basic/language-reference/operators/not-operator.md)|[\! İşleç](~/docs/csharp/language-reference/operators/logical-negation-operator.md)|  
+|[And İşleci](~/docs/visual-basic/language-reference/operators/and-operator.md)|[& İşleci](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#logical-and-operator-)|  
+|[AndAlso İşleci](~/docs/visual-basic/language-reference/operators/andalso-operator.md)|[&& İşleci](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)|  
+|[Or İşleci](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124; Operator](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#logical-or-operator-)|  
+|[OrElse İşleci](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124;&#124;İşleci](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)|  
+|[Xor İşleci](~/docs/visual-basic/language-reference/operators/xor-operator.md)|[^ İşleci](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#logical-exclusive-or-operator-)|  
+|[Not İşleci](~/docs/visual-basic/language-reference/operators/not-operator.md)|[\! İşleç](~/docs/csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

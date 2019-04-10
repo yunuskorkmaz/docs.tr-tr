@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821458"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296712"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Bildirilmiş Öğelere Başvurular (Visual Basic)
 Kodunuz için bildirilen bir öğe başvurduğunda, Visual Basic Derleyicisi, adı uygun bildirimi, başvuru adı eşleşir. Aynı ada sahip birden fazla öğe bildirilmişse, bu öğeleri tarafından başvurulan olan denetleyebilirsiniz *uygun* adı.  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Bildirilen öğe adını nitelendirme tarafından erişmek için  
   
-1.  Öğe tanımlanmış konumu belirlenemiyor. Bu, bir ad veya hatta ad alanları hiyerarşisi içerebilir. En düşük düzey ad alanı içinde bir modül, sınıf veya yapı öğe bulunmalıdır.  
+1. Öğe tanımlanmış konumu belirlenemiyor. Bu, bir ad veya hatta ad alanları hiyerarşisi içerebilir. En düşük düzey ad alanı içinde bir modül, sınıf veya yapı öğe bulunmalıdır.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  Hedef öğenin konumuna göre bir nitelenmiş yola belirleyin. En üst düzey ad alanı ile devam etmek için en düşük düzey ad alanı ve modül, sınıf veya hedef öğe içeren yapı ile bitmelidir. Yolun her öğeyi takip eden öğe içermelidir.  
+2. Hedef öğenin konumuna göre bir nitelenmiş yola belirleyin. En üst düzey ad alanı ile devam etmek için en düşük düzey ad alanı ve modül, sınıf veya hedef öğe içeren yapı ile bitmelidir. Yolun her öğeyi takip eden öğe içermelidir.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  Nitelik dize hedef öğe için hazırlayın. Bir nokta koyun (`.`) sonra her öğenin yolu. Uygulamanızı her öğe nitelik dizenizi erişiminiz olmalıdır.  
+3. Nitelik dize hedef öğe için hazırlayın. Bir nokta koyun (`.`) sonra her öğenin yolu. Uygulamanızı her öğe nitelik dizenizi erişiminiz olmalıdır.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  İfade veya normal bir şekilde hedef öğeye başvuran atama ifadesi yazın.  
+4. İfade veya normal bir şekilde hedef öğeye başvuran atama ifadesi yazın.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  Hedef öğe adı nitelik dizesiyle koyun. Ad, dönem hemen izlemelidir (`.`) modülü, sınıf veya öğeyi içeren yapı izler.  
+5. Hedef öğe adı nitelik dizesiyle koyun. Ad, dönem hemen izlemelidir (`.`) modülü, sınıf veya öğeyi içeren yapı izler.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  Derleyici nitelik dizesi için hedef öğe başvurusu eşleşebilir açık ve anlaşılır bir bildirimi bulmak için kullanır.  
+6. Derleyici nitelik dizesi için hedef öğe başvurusu eşleşebilir açık ve anlaşılır bir bildirimi bulmak için kullanır.  
   
  Uygulamanız aynı ada sahip birden fazla programlama öğesine erişimi varsa ad başvuru nitelemek olabilir. Örneğin, <xref:System.Windows.Forms> ve <xref:System.Web.UI.WebControls> her iki ad alanları içeren bir `Label` sınıfı (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> ve <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Uygulamanız hem de kullanıyorsa veya kendi tanımlıyorsa `Label` sınıfı, farklı ayırdetmek `Label` nesneleri. Değişken bildiriminde içe veya ad alanı diğer adı içerir. Aşağıdaki örnek, içeri aktarma diğer ad kullanır.  
   
@@ -200,5 +200,5 @@ Dim xDoc As xD.XmlDocument
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
 - [Değişkenler](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [New İşleci](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
+- [Yeni İşleç](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Ortak](../../../../visual-basic/language-reference/modifiers/public.md)

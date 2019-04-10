@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658253"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306657"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Boş değer atanabilir türler (C# programlama Kılavuzu) kullanma
 
@@ -66,6 +66,9 @@ NULL olmayan bir değer türü için karşılık gelen null olabilen türü ört
 Ayrıca önceden tanımlanmış birli ve ikili işleçler ve değer türleri için mevcut kullanıcı tanımlı işleçler boş değer atanabilir türleri tarafından kullanılıyor olabilir. Bir veya iki işlenenin null ise null değeri bu işleçlerden üretmek; Aksi takdirde, işlecin sonucu hesaplamak için kapsanan değerleri kullanır. Örneğin:  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
+
+> [!NOTE]
+> İçin `bool?` yazın, önceden tanımlanmış `&` ve `|` işleçleri yoksa bu bölümde açıklanan kuralları izleyin: biri null olsa bile null olmayan bir işleç değerlendirme sonucu olabilir. Daha fazla bilgi için [boş değer atanabilir Boolean mantıksal işleçler](../../language-reference/operators/boolean-logical-operators.md#nullable-boolean-logical-operators) bölümünü [Boolean mantıksal işleçler](../../language-reference/operators/boolean-logical-operators.md) makalesi.
   
 İlişkisel işleçleri (`<`, `>`, `<=`, `>=`), bir veya iki işlenenin null ise sonucudur `false`. Çünkü varsaymayın belirli bir karşılaştırmanın (örneğin, `<=`) döndürür `false`, karşılaştırma ters (`>`) döndürür `true`. Aşağıdaki örnek, 10 olduğunu gösterir.
 
@@ -75,6 +78,8 @@ Ayrıca önceden tanımlanmış birli ve ikili işleçler ve değer türleri iç
 [!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
 Yukarıdaki örnek, ayrıca her ikisi de null iki boş değer atanabilir türler bir eşitlik karşılaştırması olarak değerlendirilen gösterir `true`.
+
+Daha fazla bilgi için [yükseltilmiş işleçleri](~/_csharplang/spec/expressions.md#lifted-operators) bölümünü [ C# dil belirtimi](~/_csharplang/spec/introduction.md).
 
 ## <a name="boxing-and-unboxing"></a>Kutulama ve kutudan çıkarma
 
@@ -87,31 +92,8 @@ Aşağıdaki örnekte gösterildiği gibi kutulanmış değer türüne karşıl�
 
 [!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
 
-## <a name="the-bool-type"></a>Bool? türü
-
-`bool?` Null olabilen türü üç farklı değer içerebilir: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md), ve [null](../../language-reference/keywords/null.md). `bool?` SQL'de kullanılan Boole değişken türü gibi türüdür. Tarafından üretilen sonuçlar emin olmak için `&` ve `|` işleçleridir üç değerli Boole türü ile tutarlı SQL'de aşağıdaki önceden tanımlı operatörler sağlanır:
-
-- `bool? operator &(bool? x, bool? y)`  
-- `bool? operator |(bool? x, bool? y)`  
-  
-Bu işleçler semantiği aşağıdaki tabloda tanımlanır:  
-  
-|x|y|x & y|x&#124;y|  
-|-------|-------|---------|--------------|  
-|true|true|true|true|  
-|true|false|false|true|  
-|true|null|null|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|null|false|null|  
-|null|true|null|true|  
-|null|false|false|null|  
-|null|null|null|null|  
-
-Bu iki işleç içinde açıklanan kurallar izlemeyin Not [işleçleri](#operators) bölüm: biri null olsa bile null olmayan bir işleç değerlendirme sonucu olabilir.
-  
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Boş değer atanabilir türler](index.md)
+- [Boş değer atanabilir tipler](index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [Tam olarak 'yükseltilmiş' ne demektir?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

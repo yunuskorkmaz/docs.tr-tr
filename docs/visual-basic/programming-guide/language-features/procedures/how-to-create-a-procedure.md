@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedure declarations
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-ms.openlocfilehash: 0f3b0a793b2751b0ec9bb2b7cd6fedc12ae19e18
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 56099d334a03e85b816cf48983cbbead0784ef5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970811"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320398"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Nasıl yapılır: Bir yordam (Visual Basic) oluşturma
 Bir yordamın başlangıç bir bildirim deyiminin arasında alın (`Sub` veya `Function`) hem de bitiş bildirimi deyimi (`End Sub` veya `End Function`). Bu deyimler tüm yordam kodu arasındadır.  
@@ -24,29 +24,29 @@ Bir yordamın başlangıç bir bildirim deyiminin arasında alın (`Sub` veya `F
   
 ### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>Bir değer döndürmeyen bir yordam oluşturmak için  
   
-1.  Diğer herhangi bir yordam dışında kullanmak bir `Sub` deyimi, arkasından bir `End Sub` deyimi.  
+1. Diğer herhangi bir yordam dışında kullanmak bir `Sub` deyimi, arkasından bir `End Sub` deyimi.  
   
-2.  İçinde `Sub` deyimi izleyin `Sub` yordamı sonra parantez parametre listesinde adıyla anahtar sözcüğü.  
+2. İçinde `Sub` deyimi izleyin `Sub` yordamı sonra parantez parametre listesinde adıyla anahtar sözcüğü.  
   
-3.  Yordam kod deyimlerini arasında yerleştirin `Sub` ve `End Sub` deyimleri.  
+3. Yordam kod deyimlerini arasında yerleştirin `Sub` ve `End Sub` deyimleri.  
   
 ### <a name="to-create-a-procedure-that-returns-a-value"></a>Bir değer döndüren bir yordam oluşturmak için  
   
-1.  Diğer herhangi bir yordam dışında kullanmak bir `Function` deyimi, arkasından bir `End Function` deyimi.  
+1. Diğer herhangi bir yordam dışında kullanmak bir `Function` deyimi, arkasından bir `End Function` deyimi.  
   
-2.  İçinde `Function` deyimi izleyin `Function` yordamı sonra parantez, parametre listesinde adıyla anahtar sözcüğü ve ardından bir `As` dönüş değeri veri türünü belirleme yan tümcesi.  
+2. İçinde `Function` deyimi izleyin `Function` yordamı sonra parantez, parametre listesinde adıyla anahtar sözcüğü ve ardından bir `As` dönüş değeri veri türünü belirleme yan tümcesi.  
   
-3.  Yordam kod deyimlerini arasında yerleştirin `Function` ve `End Function` deyimleri.  
+3. Yordam kod deyimlerini arasında yerleştirin `Function` ve `End Function` deyimleri.  
   
-4.  Kullanım bir `Return` deyimini çağrıldığı koda bir değer döndürür.  
+4. Kullanım bir `Return` deyimini çağrıldığı koda bir değer döndürür.  
   
 ### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>Yeni bir yordam kodu eski, yinelenen blok ile bağlanmak için  
   
-1.  Eski kod erişimi sahip olduğu bir yerde yeni bir yordam tanımlamak emin olun.  
+1. Eski kod erişimi sahip olduğu bir yerde yeni bir yordam tanımlamak emin olun.  
   
-2.  Çağıran tek bir deyim ile yinelenen görevi gerçekleştirmek için ifadeleri, eski ve yinelenen bir kod bloğunda değiştirin `Sub` veya `Function` yordamı.  
+2. Çağıran tek bir deyim ile yinelenen görevi gerçekleştirmek için ifadeleri, eski ve yinelenen bir kod bloğunda değiştirin `Sub` veya `Function` yordamı.  
   
-3.  Yordamınız ise bir `Function` bir değer döndüren, çağıran Ekstrenizi bir değişkende depolanması gibi döndürülen değerle bir eylem gerçekleştirir; Aksi takdirde, değeri kaybolur emin olun.  
+3. Yordamınız ise bir `Function` bir değer döndüren, çağıran Ekstrenizi bir değişkende depolanması gibi döndürülen değerle bir eylem gerçekleştirir; Aksi takdirde, değeri kaybolur emin olun.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki `Function` yordamı, en uzun kenar veya, diğer iki yüz için değerlerine dik üçgenin, hipotenüsü hesaplar.  

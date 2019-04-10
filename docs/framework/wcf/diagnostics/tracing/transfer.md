@@ -2,12 +2,12 @@
 title: Aktarma
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145047"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311025"
 ---
 # <a name="transfer"></a>Aktarma
 Bu konu, Windows Communication Foundation (WCF) Etkinlik izleme modelinde aktarımı açıklar.  
@@ -42,21 +42,21 @@ Bu konu, Windows Communication Foundation (WCF) Etkinlik izleme modelinde aktar�
 ## <a name="activity-transfer-sequence"></a>Etkinlik aktarım dizisi  
  İyi biçimlendirilmiş bir etkinlik aktarım dizisi, aşağıdaki adımları içerir.  
   
-1.  Yeni bir gAId seçerek oluşan yeni bir etkinlik başlar.  
+1. Yeni bir gAId seçerek oluşan yeni bir etkinlik başlar.  
   
-2.  Aktarım izleme için bu yeni gAId geçerli etkinlik kimliği yayma  
+2. Aktarım izleme için bu yeni gAId geçerli etkinlik kimliği yayma  
   
-3.  TLS yeni kimlik  
+3. TLS yeni kimlik  
   
-4.  Yeni etkinlik tarafından belirtmek için bir başlangıç izleme gösterin.  
+4. Yeni etkinlik tarafından belirtmek için bir başlangıç izleme gösterin.  
   
-5.  Özgün etkinlik dön aşağıdakilerden oluşur:  
+5. Özgün etkinlik dön aşağıdakilerden oluşur:  
   
-6.  Özgün gAId bir aktarım izleme yayma  
+6. Özgün gAId bir aktarım izleme yayma  
   
-7.  Yeni Etkinlik sonunu belirtmek için İzlemeyi Durdur yayma  
+7. Yeni Etkinlik sonunu belirtmek için İzlemeyi Durdur yayma  
   
-8.  TLS için eski gAId ayarlayın.  
+8. TLS için eski gAId ayarlayın.  
   
  Aşağıdaki kod örneği, bunun nasıl yapılacağı gösterilmektedir. Bu örnek, bir engelleme çağrısının yeni etkinliği aktarırken yapılır ve askıya alma/sürdürme izlemeleri içerir varsayar.  
   

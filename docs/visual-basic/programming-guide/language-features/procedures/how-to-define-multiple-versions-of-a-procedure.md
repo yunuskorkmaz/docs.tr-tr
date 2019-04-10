@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fc7a8e18394b904f0c22a80f71dee091d4f786ab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841179"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324038"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Nasıl yapılır: Bir yordam (Visual Basic) birden fazla sürümünü tanımlama
 Bir yordam tarafından birden çok sürümü tanımlayabilirsiniz *aşırı yükleme* , her sürüm için aynı ada ancak farklı parametre listesini kullanarak. Aşırı yükleme amacı, ada göre ayırmak zorunda kalmadan bir yordamın birden fazla yakından ilgili sürümünü tanımlamaktır.  
@@ -22,13 +22,13 @@ Bir yordam tarafından birden çok sürümü tanımlayabilirsiniz *aşırı yük
   
 ### <a name="to-define-multiple-versions-of-a-procedure"></a>Bir yordamın birden fazla sürümünü tanımlama  
   
-1.  Yazma bir `Sub` veya `Function` bildirim deyimindeki tanımlamak istediğiniz yordamı her sürümü için. Her bildiriminde aynı yordam adı kullanın.  
+1. Yazma bir `Sub` veya `Function` bildirim deyimindeki tanımlamak istediğiniz yordamı her sürümü için. Her bildiriminde aynı yordam adı kullanın.  
   
-2.  Önünde `Sub` veya `Function` anahtar sözcüğü ile her bildirimindeki [aşırı](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğü. İsteğe bağlı olarak atlayabilirsiniz `Overloads` bildirimleri hiçbirinde dahil, ancak bildirimlerinde, her bildiriminde eklemeniz gerekir.  
+2. Önünde `Sub` veya `Function` anahtar sözcüğü ile her bildirimindeki [aşırı](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğü. İsteğe bağlı olarak atlayabilirsiniz `Overloads` bildirimleri hiçbirinde dahil, ancak bildirimlerinde, her bildiriminde eklemeniz gerekir.  
   
-3.  Her bildirim deyimindeki burada çağıran kod söz konusu sürüme ait parametre listesi ile eşleşen bağımsız değişkenleri sağlayan özel durumu işlemek için yordamı kod yazın. Test etmek hangi parametrelerini çağıran kod tarafından sağlanan yok. Visual Basic için yordamı'nın eşleşen sürümünün denetim geçer.  
+3. Her bildirim deyimindeki burada çağıran kod söz konusu sürüme ait parametre listesi ile eşleşen bağımsız değişkenleri sağlayan özel durumu işlemek için yordamı kod yazın. Test etmek hangi parametrelerini çağıran kod tarafından sağlanan yok. Visual Basic için yordamı'nın eşleşen sürümünün denetim geçer.  
   
-4.  Yordamı her bir sürümü sonlandırmak `End Sub` veya `End Function` uygun şekilde deyimi.  
+4. Yordamı her bir sürümü sonlandırmak `End Sub` veya `End Function` uygun şekilde deyimi.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte tanımlayan bir `Sub` Müşteri'nin Dengeleme karşı bir işlem göndermeniz için yordamı. Kullandığı `Overloads` iki yordamı müşterinin adı ve diğer hesap numarası tarafından kabul eden bir sürümünü tanımlamak için anahtar sözcüğü.  
@@ -47,7 +47,7 @@ Bir yordam tarafından birden çok sürümü tanımlayabilirsiniz *aşırı yük
 - [Yordamlar](./index.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Yordam Sorunlarını Giderme](./troubleshooting-procedures.md)
-- [Nasıl yapılır: İsteğe bağlı parametreler isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Nasıl yapılır: Belirsiz sayıda parametre isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)
 - [Aşırı Yükleme Çözümü](./overload-resolution.md)

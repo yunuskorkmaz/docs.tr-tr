@@ -1,15 +1,15 @@
 ---
-title: Askıya alınmış örnek Yönetimi
+title: Askıya Alınmış Örnek Yönetimi
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: d977e058b2de2939d64c91aa9353f6559b3c7013
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583889"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319566"
 ---
-# <a name="suspended-instance-management"></a>Askıya alınmış örnek Yönetimi
+# <a name="suspended-instance-management"></a>Askıya Alınmış Örnek Yönetimi
 Bu örnek, askıya alınmış iş akışı örneğini yönetmek nasıl gösterir.  İçin varsayılan eylem <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> olduğu `AbandonAndSuspend`. Varsayılan olarak, bir iş akışı örneğinden oluşturulan yakalanamayan özel durum barındırılan yani <xref:System.ServiceModel.WorkflowServiceHost> örneği (terk) bellekten çıkarılması ve dayanıklı ve kalıcı örneğinin sürümü, askıya alındı olarak işaretlenmesine neden olur. Askıya alınan iş akışı örneği adlı aşana kadar çalıştırmak mümkün olmayacaktır.
 
  Örnek sorgu askıya alınmış örnekleri için ve nasıl sürdürün veya örneği sonlandırma seçeneği kullanıcıya vermek için bir komut satırı yardımcı programını nasıl uygulanabileceği gösterilmektedir. Bu örnekte, bir iş akışı hizmeti kasıtlı olarak askıya için neden bir özel durum oluşturur. Komut satırı yardımcı programını, ardından örnek için sorgulama ve daha sonra sürdürün veya örneği sonlandırmak için kullanılabilir.
@@ -24,13 +24,13 @@ Bu örnek, askıya alınmış iş akışı örneğini yönetmek nasıl gösterir
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
 
-1.  Bu örnek, aşağıdaki Windows bileşenleri etkin olmasını gerektirir:
+1. Bu örnek, aşağıdaki Windows bileşenleri etkin olmasını gerektirir:
 
     1.  Microsoft ileti kuyrukları (MSMQ) sunucusu
 
     2.  SQL Server Express
 
-2.  SQL Server veritabanı ayarlama.
+2. SQL Server veritabanı ayarlama.
 
     1.  Bir Visual Studio 2010 komut isteminden "Setup.cmd'yi" şunları yapar SuspendedInstanceManagement örnek dizinden çalıştırın:
 
@@ -40,7 +40,7 @@ Bu örnek, askıya alınmış iş akışı örneğini yönetmek nasıl gösterir
 
         3.  IIS APPPOOL\DefaultAppPool ve NT AUTHORITY\NETWORK SERVICE Kalıcılık veritabanı ayarlarken tanımlandı InstanceStoreUsers rolüne ekler.
 
-3.  Hizmet sırasını ayarlayın.
+3. Hizmet sırasını ayarlayın.
 
     1.  Visual Studio 2010'da, sağ **SampleWorkflowApp** projesine **başlangıç projesi olarak ayarla**.
 
@@ -56,7 +56,7 @@ Bu örnek, askıya alınmış iş akışı örneğini yönetmek nasıl gösterir
 
     7.  Seçin **güvenlik** sekmesini ve izin **herkes** izinlerine sahip olmasını **İleti Al**, **iletiye**, ve  **İleti gönderme**.
 
-4.  Şimdi, örnek çalıştırın.
+4. Şimdi, örnek çalıştırın.
 
     1.  Visual Studio 2010'da tuşuna basarak hata ayıklama olmadan SampleWorkflowApp projeyi yeniden çalıştırın. **Ctrl + F5**. İki uç nokta adresleri konsol penceresinde yazdırılır: uygulama uç noktası için bir tane ve gelen diğer <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Bir iş akışı örneği sonra oluşturulur ve bu örnek için kayıtları izleme konsol penceresinde görünür. İş akışı örneği askıya ve iptal örneği neden olan bir özel durum oluşturur.
 
@@ -68,13 +68,13 @@ Bu örnek, askıya alınmış iş akışı örneğini yönetmek nasıl gösterir
 
 #### <a name="to-cleanup-optional"></a>(İsteğe bağlı) temizlemek için
 
-1.  Gelen Compmgmt.msc çalıştırarak Bilgisayar Yönetimi konsolunu açın bir `vs2010` komut istemi.
+1. Gelen Compmgmt.msc çalıştırarak Bilgisayar Yönetimi konsolunu açın bir `vs2010` komut istemi.
 
-2.  Genişletin **hizmet ve uygulamaları**, **Message Queuing**, **özel sıralar**.
+2. Genişletin **hizmet ve uygulamaları**, **Message Queuing**, **özel sıralar**.
 
-3.  Silme **ReceiveTx** kuyruk.
+3. Silme **ReceiveTx** kuyruk.
 
-4.  Kalıcılık veritabanı kaldırmak için cleanup.cmd çalıştırın.
+4. Kalıcılık veritabanı kaldırmak için cleanup.cmd çalıştırın.
 
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

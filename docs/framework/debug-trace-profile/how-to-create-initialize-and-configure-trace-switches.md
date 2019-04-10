@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079142"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325715"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma
 İzleme anahtarları etkinleştirmek, devre dışı bırakın ve İzleme çıkışı filtrelemek olanak sağlar.  
@@ -31,9 +31,9 @@ ms.locfileid: "59079142"
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>Oluşturma ve bir izleme anahtarı'nı başlatmak için  
   
-1.  Bir anahtar ya da türü olarak tanımlamanız <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> veya türü <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> ve anahtar açıklaması ve adını ayarlayın.  
+1. Bir anahtar ya da türü olarak tanımlamanız <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> veya türü <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> ve anahtar açıklaması ve adını ayarlayın.  
   
-2.  Uygulamanızın izleme anahtarını yapılandırın. Daha fazla bilgi için [izleme anahtarları yapılandırma](#configure).  
+2. Uygulamanızın izleme anahtarını yapılandırın. Daha fazla bilgi için [izleme anahtarları yapılandırma](#configure).  
   
      Aşağıdaki kod, her türden iki anahtarlarını oluşturur:  
   
@@ -71,9 +71,9 @@ ms.locfileid: "59079142"
   
 #### <a name="to-configure-trace-switches"></a>İzleme anahtarları yapılandırma  
   
-1.  İzleme anahtarları kullanmak için önce bunları oluşturmak ve bunları kodunuzda bölümünde açıklandığı gibi yerleştirmek [oluşturma ve bir izleme anahtarı başlatma](#create).  
+1. İzleme anahtarları kullanmak için önce bunları oluşturmak ve bunları kodunuzda bölümünde açıklandığı gibi yerleştirmek [oluşturma ve bir izleme anahtarı başlatma](#create).  
   
-2.  Projenize bir yapılandırma dosyası (app.config veya Web.config), ardından gelen içermiyorsa **proje** menüsünde **Yeni Öğe Ekle**.  
+2. Projenize bir yapılandırma dosyası (app.config veya Web.config), ardından gelen içermiyorsa **proje** menüsünde **Yeni Öğe Ekle**.  
   
     -   **Visual Basic:** İçinde **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "59079142"
   
          App.config dosyasını proje derlendiğinde, proje çıktı klasörüne kopyalanır ve yeniden adlandırılır *applicationname*. exe.config olarak.  
   
-3.  Sonra `<configuration>` önce etiket `</configuration>` etiketi, anahtarlarınızda yapılandırmak için uygun XML ekleyin. Aşağıdaki örnekler gösteren bir **BooleanSwitch** ile bir **DisplayName** özelliği `DataMessageSwitch` ve **TraceSwitch** ile bir **DisplayName**  özelliği `TraceLevelSwitch`.  
+3. Sonra `<configuration>` önce etiket `</configuration>` etiketi, anahtarlarınızda yapılandırmak için uygun XML ekleyin. Aşağıdaki örnekler gösteren bir **BooleanSwitch** ile bir **DisplayName** özelliği `DataMessageSwitch` ve **TraceSwitch** ile bir **DisplayName**  özelliği `TraceLevelSwitch`.  
   
     ```xml  
     <system.diagnostics>  
@@ -101,11 +101,11 @@ ms.locfileid: "59079142"
   
      Bu yapılandırmada her iki anahtarları kapalıdır.  
   
-4.  Etkinleştirmek gerekiyorsa bir **BooleanSwitch**, gibi `DataMessagesSwitch` değiştirmek önceki örnekte gösterilen **değer** 0 dışındaki herhangi bir tamsayı.  
+4. Etkinleştirmek gerekiyorsa bir **BooleanSwitch**, gibi `DataMessagesSwitch` değiştirmek önceki örnekte gösterilen **değer** 0 dışındaki herhangi bir tamsayı.  
   
-5.  Etkinleştirmek gerekiyorsa bir **TraceSwitch**, gibi `TraceLevelSwitch` değiştirmek önceki örnekte gösterilen **değer** uygun düzeyi ayarı (1-4).  
+5. Etkinleştirmek gerekiyorsa bir **TraceSwitch**, gibi `TraceLevelSwitch` değiştirmek önceki örnekte gösterilen **değer** uygun düzeyi ayarı (1-4).  
   
-6.  Son kullanıcı anahtarları uygun şekilde yapılandırmak için değiştirmek için hangi değerlerin açık bir anlama sahiptir açıklamaları .config dosyasına ekleyin.  
+6. Son kullanıcı anahtarları uygun şekilde yapılandırmak için değiştirmek için hangi değerlerin açık bir anlama sahiptir açıklamaları .config dosyasına ekleyin.  
   
      Aşağıdaki örnek, Yorumlar dahil olmak üzere son kodu nasıl görünebileceği gösterilmektedir:  
   

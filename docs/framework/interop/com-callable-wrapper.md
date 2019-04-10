@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e2cab36c1dd990a1bf848067e7ae81baeb9ed8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355057"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309491"
 ---
 # <a name="com-callable-wrapper"></a>COM Aranabilir Sarmalayıcısı
 
@@ -27,7 +27,7 @@ Bir COM istemcisi bir .NET nesnesini çağırdığında, ortak dil çalışma za
 
 Çalışma zamanı hizmetlerinin isteyen COM istemcileri sayısından bağımsız olarak yönetilen bir nesne için tam olarak bir saat oluşturur. Aşağıdaki çizimde gösterildiği gibi birden çok COM istemcileri INew arabirimi kullanıma sunan CCW başvuru barındırabilir. CCW sırayla arabirimi uygulayan yönetilen bir nesne için tek bir başvuru içerir ve atık olarak toplanmış. COM hem .NET istemcileri, istekleri için aynı anda aynı yönetilen nesne üzerinde hale getirebilirsiniz.
 
-![COM çağrılabilir sarmalayıcısı](./media/ccw.gif "ccw") COM çağrılabilir sarmalayıcı aracılığıyla erişme .NET nesneleri
+![Birden çok COM istemcileri CCW bir başvuru tutan INew kullanıma sunar.](./media/com-callable-wrapper/com-callable-wrapper-clients.gif)
 
 COM aranabilir sarmalayıcılar, .NET Framework içinde çalışan diğer sınıflar için görünmez. Birincil amaçları, yönetilen ve yönetilmeyen kod arasındaki çağrıların sıralamanız sağlamaktır; Ancak, CCWs nesne kimliğini ve nesne yaşam süresi bunlar kaydırma yönetilen nesnelerin yönetin.
 
@@ -43,9 +43,9 @@ COM aranabilir sarmalayıcılar, .NET Framework içinde çalışan diğer sını
 
 SAAT, tüm genel, COM görünebilir arabirimler, veri türleri ve dönüş değerleri ile etkileşim arabirimi tabanlı COM'ın zorlama tutarlı bir şekilde COM istemcilerine kullanıma sunar. Bir COM istemcisi için bir .NET Framework nesnesi yöntemleri çağrılırken bir COM nesnesi üzerinde yöntemleri çağırmak için aynıdır.
 
-Bu sorunsuz yaklaşım oluşturmak için CCW geleneksel COM arabirimleri gibi üreten **IUnknown** ve **IDispatch**. Aşağıdaki çizimde gösterildiği gibi saatin tersi YÖNDE sarmaladığı .NET nesne üzerinde tek bir başvuru tutar. COM istemcisi ve .NET nesne CCW. proxy ve saplama yapımı birbiriyle etkileşim
+Bu sorunsuz yaklaşım oluşturmak için CCW geleneksel COM arabirimleri gibi üreten **IUnknown** ve **IDispatch**. Aşağıdaki çizimde gösterildiği gibi saatin tersi YÖNDE sarmaladığı .NET nesne üzerinde tek bir başvuru tutar. COM istemcisi hem .NET nesne CCW. proxy ve saplama yapımı birbiriyle etkileşim
 
-![COM arabirimleri](./media/ccwwithinterfaces.gif "ccwwithinterfaces") COM arabirimlerinde ve COM çağrılabilir sarmalayıcısı
+![Nasıl CCW COM arabirimleri üreten gösteren diyagram.](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
 Açıkça yönetilen bir ortamda bir sınıf tarafından uygulanan arabirimler gösterme ek olarak, .NET Framework uygulamaları nesne adına aşağıdaki tabloda listelenen COM arabirimleri sağlar. Bir .NET sınıf kendi uygulaması bu arabirimlerin sağlayarak varsayılan davranışı geçersiz kılabilirsiniz. Ancak, çalışma zamanının uygulamasını her zaman sağlar **IUnknown** ve **IDispatch** arabirimleri.
 
@@ -53,7 +53,7 @@ Açıkça yönetilen bir ortamda bir sınıf tarafından uygulanan arabirimler g
 |---------------|-----------------|
 |**IDispatch**|Geç bağlama türü bir mekanizma sağlar.|
 |**IErrorInfo**|Hata, kaynağı, bir Yardım dosyası, Yardım bağlamı ve hata tanımlı arabiriminin GUID'si değerinin metinsel bir açıklaması verilmiştir (her zaman **GUID_NULL** .NET sınıfları için).|
-|**IProvideClassInfo**|Erişim elde etmek COM istemcileri etkinleştirir **ITypeInfo** yönetilen bir sınıf tarafından uygulanan arabirimi.|
+|**Iprovideclassınfo**|Erişim elde etmek COM istemcileri etkinleştirir **ITypeInfo** yönetilen bir sınıf tarafından uygulanan arabirimi.|
 |**ISupportErrorInfo**|Yönetilen Nesne destekleyip desteklemediğini belirlemek üzere bir COM istemcisi sağlayan **IErrorInfo** arabirimi. Bu durumda, istemcinin en son özel durum nesnesine bir işaretçi alma sağlar. Tüm yönetilen türleri desteği **IErrorInfo** arabirimi.|
 |**ITypeInfo**|Tlbexp.exe tarafından üretilen tür bilgilerini tam olarak aynıdır bir sınıf için tür bilgisini sağlar.|
 |**IUnknown**|Standart uygulamasını sağlar **IUnknown** arabirimi hangi COM istemcisi CCW ömrünü yönetir ve türü zorlama sağlar.|
@@ -199,5 +199,5 @@ Uygulamanıza erken bağlanan çağrılar COM olay arabirim yöntemleri için ge
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [COM Sarmalayıcıları](com-wrappers.md)
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
-- [Birlikte Çalışma için .NET Türlerini Niteleme](qualifying-net-types-for-interoperation.md)
-- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](runtime-callable-wrapper.md)
+- [Birlikte Çalışma için Niteleyici .NET Türleri](qualifying-net-types-for-interoperation.md)
+- [Çalışma Zamanı Aranabilir Sarmalayıcısı](runtime-callable-wrapper.md)

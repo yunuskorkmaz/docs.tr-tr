@@ -1,15 +1,15 @@
 ---
-title: SendMail özel etkinliği
+title: SendMail Özel Etkinliği
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181296"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321867"
 ---
-# <a name="sendmail-custom-activity"></a>SendMail özel etkinliği
+# <a name="sendmail-custom-activity"></a>SendMail Özel Etkinliği
 Bu örnek, türetilen özel etkinlik oluşturma işlemini gösterir <xref:System.Activities.AsyncCodeActivity> bir iş akışı uygulaması içinde kullanmak için SMTP kullanarak posta göndermek için. Özel Etkinlik özelliklerini kullanan <xref:System.Net.Mail.SmtpClient> zaman uyumsuz olarak e-posta gönderin ve kimlik doğrulaması içeren e-posta göndermek için. Test modu, belirteç değiştirme, dosya şablonları ve test bırakma yolu gibi bazı son kullanıcı özellikler de sağlar.  
   
  Aşağıdaki tabloda bağımsız değişkenleri için ayrıntıları `SendMail` etkinlik.  
@@ -18,10 +18,10 @@ Bu örnek, türetilen özel etkinlik oluşturma işlemini gösterir <xref:System
 |-|-|-|  
 |Ana bilgisayar|Dize|Hostitel SMTP sunucu adresi.|  
 |Bağlantı Noktası|Dize|Konak SMTP hizmetinin bağlantı noktası.|  
-|enableSsl|bool|Belirtir olup olmadığını <xref:System.Net.Mail.SmtpClient> Güvenli Yuva Katmanı (SSL) bağlantıyı şifrelemek için kullanır.|  
+|EnableSsl|bool|Belirtir olup olmadığını <xref:System.Net.Mail.SmtpClient> Güvenli Yuva Katmanı (SSL) bağlantıyı şifrelemek için kullanır.|  
 |UserName|Dize|Kullanıcı adı, gönderenin kimliğini doğrulamak için kimlik bilgilerini ayarlayın <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliği.|  
 |Parola|Dize|Gönderenin kimliğini doğrulamak için kimlik bilgilerini ayarlayın parola <xref:System.Net.Mail.SmtpClient.Credentials%2A> özelliği.|  
-|Konu|<xref:System.Activities.InArgument%601>\<dize >|İletinin konusu.|  
+|Özne|<xref:System.Activities.InArgument%601>\<dize >|İletinin konusu.|  
 |Gövde|<xref:System.Activities.InArgument%601>\<dize >|İletinin gövdesi.|  
 |Ekler|<xref:System.Activities.InArgument%601>\<dize >|Bu e-posta iletisine ekli veri depolamak için kullanılan ek koleksiyonu.|  
 |Başlangıç|<xref:System.Net.Mail.MailAddress>|Bu e-posta iletisi için adres.|  
@@ -36,7 +36,7 @@ Bu örnek, türetilen özel etkinlik oluşturma işlemini gösterir <xref:System
 ## <a name="solution-contents"></a>Çözüm içeriği  
  Çözüm iki proje içerir.  
   
-|Proje|Açıklama|Önemli dosya|  
+|Project|Açıklama|Önemli dosya|  
 |-------------|-----------------|---------------------|  
 |SendMail|SendMail etkinliği|1.  SendMail.cs: ana etkinlik uygulama<br />2.  SendMailDesigner.xaml ve SendMailDesigner.xaml.cs: SendMail etkinliğinin Tasarımcısı<br />3.  MailTemplateBody.htm: gönderilecek e-posta şablonu.|  
 |SendMailTestClient|SendMail etkinlik test etmek için istemci.  Bu proje SendMail etkinlik çağrılırken, iki yolunu gösterir: bildirimli ve programlı olarak.|1.  Sequence1.XAML: SendMail etkinlik çağıran iş akışı.<br />2.  Program.cs: Sıra1 çağırır ve aynı zamanda program aracılığıyla SendMail kullanan bir iş akışı oluşturur.|  
@@ -111,7 +111,7 @@ new SendMail
   
 -   [SMTP Hizmeti (IIS 6.0) yapılandırma](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: SMTP e-posta yapılandırma](https://go.microsoft.com/fwlink/?LinkId=150457)  
+-   [IIS 7.0: SMTP e-posta Yapılandır](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
 -   [SMTP hizmeti nasıl yüklenir?](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
@@ -119,17 +119,17 @@ new SendMail
   
 ##### <a name="to-run-this-sample"></a>Bu örneği çalıştırmak için  
   
-1.  Visual Studio 2010 kullanarak SendMail.sln çözüm dosyasını açın.  
+1. Visual Studio 2010 kullanarak SendMail.sln çözüm dosyasını açın.  
   
-2.  Geçerli bir SMTP sunucusuna erişimi olduğundan emin olun. Kurulum yönergelerine bakın.  
+2. Geçerli bir SMTP sunucusuna erişimi olduğundan emin olun. Kurulum yönergelerine bakın.  
   
-3.  Programı, sunucu adresi ve Kimden ve Kime e-posta adreslerini yapılandırın.  
+3. Programı, sunucu adresi ve Kimden ve Kime e-posta adreslerini yapılandırın.  
   
      Doğru Bu örneği çalıştırmak için ilk ve son e-posta adresi ve SMTP sunucusunun adresini değerini program.CS'de Webhostbuilder'a ve Sequence.xaml yapılandırmanız gerekebilir. Program iki farklı şekilde posta gönderen adresi konumlarının her ikisinde de değiştirmek gerekir  
   
-4.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
+4. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
-5.  Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
+5. Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

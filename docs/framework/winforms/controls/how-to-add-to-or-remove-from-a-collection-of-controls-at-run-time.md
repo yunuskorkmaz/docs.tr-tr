@@ -12,12 +12,12 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 5c963976dd787b40c3e5c6180538051cfe419540
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85c1d398c1aabbb73d5ae34186775e2c63666cfb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143149"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309452"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Nasıl yapılır: Çalışma Zamanında bir Denetimler Koleksiyonuna Ekleme veya Kaldırma
 Uygulama geliştirme için ortak görevler için denetimler ekleme ve herhangi bir kapsayıcı denetimi, form üzerinde denetimleri kaldırma (gibi <xref:System.Windows.Forms.Panel> veya <xref:System.Windows.Forms.GroupBox> denetim veya formun kendisi bile). Tasarım zamanında denetimler doğrudan Masası veya grup kutusu sürüklenebilen. Çalışma zamanında bu denetimi yöneten bir `Controls` koleksiyonunun hangi denetimlerin üzerine yerleştirilen izler.  
@@ -27,11 +27,11 @@ Uygulama geliştirme için ortak görevler için denetimler ekleme ve herhangi b
   
 ### <a name="to-add-a-control-to-a-collection-programmatically"></a>Bir denetimin program aracılığıyla bir koleksiyona eklemek için  
   
-1.  Eklenecek denetimin örneği oluşturun.  
+1. Eklenecek denetimin örneği oluşturun.  
   
-2.  Yeni denetimin özelliklerini ayarlayın.  
+2. Yeni denetimin özelliklerini ayarlayın.  
   
-3.  Denetime eklemek `Controls` üst denetim koleksiyonu.  
+3. Denetime eklemek `Controls` üst denetim koleksiyonu.  
   
      Aşağıdaki kod örneği, bir örneğini oluşturma işlemi gösterilmektedir <xref:System.Windows.Forms.Button> denetimi. Bir formla gerektiren bir <xref:System.Windows.Forms.Panel> denetimi düğmesi için olay işleme yöntemi oluşturulmakta, `NewPanelButton_Click`, zaten mevcut.  
   
@@ -66,11 +66,11 @@ Uygulama geliştirme için ortak görevler için denetimler ekleme ve herhangi b
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>Denetimleri bir koleksiyondan programlı bir şekilde kaldırmak için  
   
-1.  Olay işleyici olaydan kaldırılacak. Visual Basic'teki [RemoveHandler deyimi](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) anahtar sözcüğü; görselde C#, kullanın [-= işleci (C# başvuru)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
+1. Olay işleyici olaydan kaldırılacak. Visual Basic'teki [RemoveHandler deyimi](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) anahtar sözcüğü; görselde C#, kullanın [-= işleci (C# başvuru)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
   
-2.  Kullanım `Remove` istediğiniz denetimi panelinden 's silinemedi yöntemi `Controls` koleksiyonu.  
+2. Kullanım `Remove` istediğiniz denetimi panelinden 's silinemedi yöntemi `Controls` koleksiyonu.  
   
-3.  Çağrı <xref:System.Windows.Forms.Control.Dispose%2A> denetim tarafından kullanılan tüm kaynakları serbest bırakmak için yöntemi.  
+3. Çağrı <xref:System.Windows.Forms.Control.Dispose%2A> denetim tarafından kullanılan tüm kaynakları serbest bırakmak için yöntemi.  
   
     ```vb  
     Public Sub RemoveControl()  

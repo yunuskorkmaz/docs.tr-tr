@@ -1,18 +1,18 @@
 ---
-title: XSLT genişletme nesneleri
+title: XSLT Genişletme Nesneleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b662ca537bf33dc9702e99f279bd068f92de6664
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836454"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320424"
 ---
-# <a name="xslt-extension-objects"></a>XSLT genişletme nesneleri
+# <a name="xslt-extension-objects"></a>XSLT Genişletme Nesneleri
 Uzantı nesneler, stil sayfaları genişletmek için kullanılır. Genişletme nesneleri tarafından korunur <xref:System.Xml.Xsl.XsltArgumentList> sınıfı.  
   
  Ekli komut dosyası yerine bir uzantı nesnesi kullanmanın avantajları şunlardır:  
@@ -32,11 +32,11 @@ Uzantı nesneler, stil sayfaları genişletmek için kullanılır. Genişletme n
   
 ### <a name="to-use-an-xslt-extension-object"></a>XSLT uzantı nesnesi kullanmak için  
   
-1.  Oluşturma bir <xref:System.Xml.Xsl.XsltArgumentList> nesne ve uzantısını kullanarak nesne eklemek <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi.  
+1. Oluşturma bir <xref:System.Xml.Xsl.XsltArgumentList> nesne ve uzantısını kullanarak nesne eklemek <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi.  
   
-2.  Uzantı nesnesi stil sayfası içinden çağırın.  
+2. Uzantı nesnesi stil sayfası içinden çağırın.  
   
-3.  Geçirmek <xref:System.Xml.Xsl.XsltArgumentList> nesnesini <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
+3. Geçirmek <xref:System.Xml.Xsl.XsltArgumentList> nesnesini <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

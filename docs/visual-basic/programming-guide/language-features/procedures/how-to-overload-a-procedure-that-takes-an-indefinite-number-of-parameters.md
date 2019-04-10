@@ -10,29 +10,29 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: bae420e88a74fbe3f7e8ad3592133fdcaf191029
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839005"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316459"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Nasıl yapılır: Bir belirsiz sayıda parametre (Visual Basic) isteyen bir yordamı aşırı yükleme
 Bir yordam varsa bir [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametresi, parametre dizisi için tek boyutlu bir dizi alan aşırı yüklenmiş bir sürümünü tanımlayamaz. Daha fazla bilgi için bkz: "Örtük aşırı yüklemeleri için bir ParamArray parametresiyle" [aşırı yükleme yordamları Hususlarına](./considerations-in-overloading-procedures.md).  
   
 ### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Değişken sayıda parametre isteyen bir yordamı aşırı yükleme için  
   
-1.  Yordam ve kod mantıksal avantajlarından çağırma sürümlerinden birden fazla aşırı anlamamıza bir `ParamArray` parametresi. "Aşırı yüklemeler ve ParamArrays" konularına bakın [yordamları aşırı yüklemeye ilişkin düşünceler](./considerations-in-overloading-procedures.md).  
+1. Yordam ve kod mantıksal avantajlarından çağırma sürümlerinden birden fazla aşırı anlamamıza bir `ParamArray` parametresi. "Aşırı yüklemeler ve ParamArrays" konularına bakın [yordamları aşırı yüklemeye ilişkin düşünceler](./considerations-in-overloading-procedures.md).  
   
-2.  Sağlanan değerler hangi sayıda yordam parametre listesi değişken parçası kabul etmelidir belirleyin. Bu değer harf içerebilir ve tek tek boyutlu bir dizi harf içerebilir.  
+2. Sağlanan değerler hangi sayıda yordam parametre listesi değişken parçası kabul etmelidir belirleyin. Bu değer harf içerebilir ve tek tek boyutlu bir dizi harf içerebilir.  
   
-3.  Sağlanan değerler kabul edilebilir her sayısı için yazma bir `Sub` veya `Function` bildirim deyimindeki, karşılık gelen parametre listesi tanımlar. Ya da kullanmayın `Optional` veya `ParamArray` anahtar sözcüğü Bu aşırı yüklenmiş bir sürüm.  
+3. Sağlanan değerler kabul edilebilir her sayısı için yazma bir `Sub` veya `Function` bildirim deyimindeki, karşılık gelen parametre listesi tanımlar. Ya da kullanmayın `Optional` veya `ParamArray` anahtar sözcüğü Bu aşırı yüklenmiş bir sürüm.  
   
-4.  Her bildiriminde önünde `Sub` veya `Function` anahtar sözcüğü ile [aşırı](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğü.  
+4. Her bildiriminde önünde `Sub` veya `Function` anahtar sözcüğü ile [aşırı](../../../../visual-basic/language-reference/modifiers/overloads.md) anahtar sözcüğü.  
   
-5.  Her bildirimi çağıran kod, bildirimin parametre listesine karşılık gelen değerlerini sağlayan, yürütülecek yordamı kod yazın.  
+5. Her bildirimi çağıran kod, bildirimin parametre listesine karşılık gelen değerlerini sağlayan, yürütülecek yordamı kod yazın.  
   
-6.  Her bir yordam sonlandırmak `End Sub` veya `End Function` uygun şekilde deyimi.  
+6. Her bir yordam sonlandırmak `End Sub` veya `End Function` uygun şekilde deyimi.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, tanımlı bir yordam gösterir. bir [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametresi ve aşırı yüklenmiş yordamları eşdeğer bir dizi.  
@@ -61,7 +61,7 @@ Bir yordam varsa bir [ParamArray](../../../../visual-basic/language-reference/mo
 - [Parametre Dizileri](./parameter-arrays.md)
 - [Yordam Aşırı Yüklemesi](./procedure-overloading.md)
 - [Yordam Sorunlarını Giderme](./troubleshooting-procedures.md)
-- [Nasıl yapılır: Bir yordamın birden fazla sürümünü tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Nasıl yapılır: Aşırı yüklenmiş bir yordamı çağırma](./how-to-call-an-overloaded-procedure.md)
-- [Nasıl yapılır: İsteğe bağlı parametreler isteyen bir yordamı aşırı yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Nasıl yapılır: Aşırı Yüklenmiş Bir Yordamı Çağırma](./how-to-call-an-overloaded-procedure.md)
+- [Nasıl yapılır: İsteğe Bağlı Parametreler İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Aşırı Yükleme Çözümü](./overload-resolution.md)

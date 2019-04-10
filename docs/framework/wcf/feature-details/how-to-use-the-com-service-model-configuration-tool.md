@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322595"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Nasıl yapılır: COM+ Hizmet Modeli Yapılandırma Aracı'nı Kullanma
 Uygun bir barındırma modu seçtikten sonra COM + hizmet modeli yapılandırma komut satırı aracı (ComSvcConfig.exe) Web Hizmetleri olarak kullanıma sunulacak bir uygulama arabirimleri yapılandırmak için kullanın.  
@@ -19,11 +19,11 @@ Uygun bir barındırma modu seçtikten sonra COM + hizmet modeli yapılandırma 
   
  En son hizmet modeli sürümü (şu anda v4.5) kullanmak için bir web hizmeti yapılandırmak için bir Windows 7 makinesinde ComSvcConfig.exe kullanırken aşağıdaki adımları gerçekleştirin:  
   
-1.  Kayıt defteri anahtarını ayarlayın `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` 0x00000001 DWORD değerini  
+1. Kayıt defteri anahtarını ayarlayın `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` 0x00000001 DWORD değerini  
   
-2.  ComSvcConfig.exe çalıştırın  
+2. ComSvcConfig.exe çalıştırın  
   
-3.  Özgün değeri geri dön 1. adımda eklenen kayıt defteri anahtarı geri veya varsa silin yoktu.  
+3. Özgün değeri geri dön 1. adımda eklenen kayıt defteri anahtarı geri veya varsa silin yoktu.  
   
 > [!IMPORTANT]
 >  Bu kayıt defteri anahtarı dönüştürme önemlidir. Bu uyumluluk anahtarıdır. Bu değişikliği geri döndürülürken değil sorunları makine üzerinde çalışan diğer .NET uygulamaları neden olabilir).  

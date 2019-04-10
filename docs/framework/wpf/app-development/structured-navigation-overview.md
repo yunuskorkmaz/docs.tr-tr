@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161518"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320077"
 ---
 # <a name="structured-navigation-overview"></a>Yapılandırılmış Gezintiye Genel Bakış
 Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, veya bir <xref:System.Windows.Navigation.NavigationWindow> paketi tarafından tanımlanan sayfaların oluşan [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] ve için köprüler tarafından gitme. Sayfalar ve, bunlar, köprüler tarafından tanımlandığı şekilde gezinilebilir yolları yapısını gezinti topolojisi bilinir. Böyle bir topoloji, çeşitli uygulama türleri, belgeler içinde gezinmek, uygun. Bu tür uygulamalar için kullanıcı bir sayfadan başka bir sayfaya ya da sayfa diğer ilgili hiçbir şeyi bilmenize gerek olmadan gidebilirsiniz.  
@@ -134,9 +134,9 @@ Tarafından barındırılan içerik bir [!INCLUDE[TLA#tla_xbap](../../../../incl
 ### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>Görev dönen sonuç ve bir arama sayfasına bir görevden görev verileri  
  Kullanıcı çağrılan sayfasını kullanarak tamamlandıktan sonra bu örnekte Tamam veya İptal düğmeleri, döndürmek için çağrılan bir sayfa gereksinimlerini tuşlarına basarak miktarlara. Bu yana arama sayfası adlı kullanıcıdan veri toplamak için kullanılan iki tür bilgi arama sayfası gerektirir:  
   
-1.  Olup kullanıcı (Tamam düğmesine veya iptal düğmesi Bu örnekte tuşlarına basarak) adlı sayfanın iptal edildi. Bu, arama sayfası kullanıcıdan toplanan veriyi işlemek belirlemek arama sayfası sağlar.  
+1. Olup kullanıcı (Tamam düğmesine veya iptal düğmesi Bu örnekte tuşlarına basarak) adlı sayfanın iptal edildi. Bu, arama sayfası kullanıcıdan toplanan veriyi işlemek belirlemek arama sayfası sağlar.  
   
-2.  Kullanıcı tarafından sağlanan veriler.  
+2. Kullanıcı tarafından sağlanan veriler.  
   
  Bilgi, döndürülecek <xref:System.Windows.Navigation.PageFunction%601> uygulayan <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> yöntemi. Aşağıdaki kodu çağırmak nasıl gösterir.  
   

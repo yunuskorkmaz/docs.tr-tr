@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-ms.openlocfilehash: 7cd1cd22a216458add2cef97e45ce2daef3f9f9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 096cfc0f19189ba3173a8c5decd483542a18dbb0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177105"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304201"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Nasıl yapılır: özel güvenlik belirteci kimlik doğrulayıcı oluşturma
 Bu konu, bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir özel güvenlik belirteci yöneticisi ile tümleştirmek nasıl gösterir. Bir güvenlik belirteci kimlik doğrulayıcı içeriği gelen bir ileti ile sağlanan bir güvenlik belirteci doğrular. Doğrulama başarılı olursa, kimlik doğrulayıcı koleksiyonunu döndürür. <xref:System.IdentityModel.Policy.IAuthorizationPolicy> değerlendirildiğinde, örnekler, talepler kümesi döndürür.  
@@ -23,11 +23,11 @@ Bu konu, bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir �
   
 #### <a name="to-create-a-custom-security-token-authenticator"></a>Özel güvenlik belirteci kimlik doğrulayıcısı oluşturmak için  
   
-1.  Türetilmiş yeni bir sınıf tanımlama <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> sınıfı.  
+1. Türetilmiş yeni bir sınıf tanımlama <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> sınıfı.  
   
-2.  Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> yöntemi. Yöntem döndürür `true` veya `false` bağlı olup olmadığını özel authenticator gelen belirteç türü olmadığını doğrulayabilirsiniz.  
+2. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> yöntemi. Yöntem döndürür `true` veya `false` bağlı olup olmadığını özel authenticator gelen belirteç türü olmadığını doğrulayabilirsiniz.  
   
-3.  Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> yöntemi. Bu yöntem, belirteç içeriği uygun şekilde doğrulamak gerekir. Belirteç doğrulama adımını geçerse, koleksiyonunu döndürür. <xref:System.IdentityModel.Policy.IAuthorizationPolicy> örnekleri. Aşağıdaki örnek, bir sonraki yordamda oluşturulan bir özel yetkilendirme ilkesi uygulaması kullanır.  
+3. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> yöntemi. Bu yöntem, belirteç içeriği uygun şekilde doğrulamak gerekir. Belirteç doğrulama adımını geçerse, koleksiyonunu döndürür. <xref:System.IdentityModel.Policy.IAuthorizationPolicy> örnekleri. Aşağıdaki örnek, bir sonraki yordamda oluşturulan bir özel yetkilendirme ilkesi uygulaması kullanır.  
   
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
@@ -36,13 +36,13 @@ Bu konu, bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir �
   
 #### <a name="to-create-a-custom-authorization-policy"></a>Özel yetkilendirme ilkesi oluşturmak için  
   
-1.  Yeni bir sınıf uygulamak tanımlamak <xref:System.IdentityModel.Policy.IAuthorizationPolicy> arabirimi.  
+1. Yeni bir sınıf uygulamak tanımlamak <xref:System.IdentityModel.Policy.IAuthorizationPolicy> arabirimi.  
   
-2.  Uygulama <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> salt okunur özelliği. Bu özelliği uygulamak için bir sınıf oluşturucuda bir genel benzersiz tanıtıcısı (GUID) oluşturur ve bu özellik için değer her istendiğinde döndürün yöntemdir.  
+2. Uygulama <xref:System.IdentityModel.Policy.IAuthorizationComponent.Id%2A> salt okunur özelliği. Bu özelliği uygulamak için bir sınıf oluşturucuda bir genel benzersiz tanıtıcısı (GUID) oluşturur ve bu özellik için değer her istendiğinde döndürün yöntemdir.  
   
-3.  Uygulama <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> salt okunur özelliği. Bu özellik, bir veren belirteçten elde edilen talep kümelerinin döndürülecek gerekir. Bu veren belirteci veya belirteç içeriği doğrulamak için sorumlu olduğu bir yetki veren karşılık gelmelidir. Aşağıdaki örnek önceki yordamda oluşturduğunuz özel güvenlik belirteci kimlik doğrulayıcı öğesinden bu sınıfa geçirilen verenin talep kullanır. Özel güvenlik belirteci kimlik doğrulayıcı sistem tarafından sağlanan talep kümesi kullanır (tarafından döndürülen <xref:System.IdentityModel.Claims.ClaimSet.System%2A> özelliği) kullanıcı adı belirteci veren temsil etmek için.  
+3. Uygulama <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A> salt okunur özelliği. Bu özellik, bir veren belirteçten elde edilen talep kümelerinin döndürülecek gerekir. Bu veren belirteci veya belirteç içeriği doğrulamak için sorumlu olduğu bir yetki veren karşılık gelmelidir. Aşağıdaki örnek önceki yordamda oluşturduğunuz özel güvenlik belirteci kimlik doğrulayıcı öğesinden bu sınıfa geçirilen verenin talep kullanır. Özel güvenlik belirteci kimlik doğrulayıcı sistem tarafından sağlanan talep kümesi kullanır (tarafından döndürülen <xref:System.IdentityModel.Claims.ClaimSet.System%2A> özelliği) kullanıcı adı belirteci veren temsil etmek için.  
   
-4.  Uygulama <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> yöntemi. Bu yöntem bir örneğini doldurur <xref:System.IdentityModel.Policy.EvaluationContext> gelen güvenlik belirteci içeriğine göre talep sınıfı (bağımsız değişken olarak geçirilen). Yöntem döndürür `true` ile değerlendirme tamamlandığında. Durumlarda uygulama varlığını değerlendirme bağlamı için ek bilgiler sağlayan diğer yetkilendirme ilkelerini kullanır, bu yöntem döndürebilir `false` gerekli bilgiler yoksa değerlendirme bağlamında henüz. Bu durumda, WCF, bu Yetkilendirme İlkeleri en az biri değerlendirme bağlamı değiştirilirse gelen ileti için oluşturulan diğer yetkilendirme ilkeleri değerlendirdikten sonra yöntemini çağıracaksınız.  
+4. Uygulama <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> yöntemi. Bu yöntem bir örneğini doldurur <xref:System.IdentityModel.Policy.EvaluationContext> gelen güvenlik belirteci içeriğine göre talep sınıfı (bağımsız değişken olarak geçirilen). Yöntem döndürür `true` ile değerlendirme tamamlandığında. Durumlarda uygulama varlığını değerlendirme bağlamı için ek bilgiler sağlayan diğer yetkilendirme ilkelerini kullanır, bu yöntem döndürebilir `false` gerekli bilgiler yoksa değerlendirme bağlamında henüz. Bu durumda, WCF, bu Yetkilendirme İlkeleri en az biri değerlendirme bağlamı değiştirilirse gelen ileti için oluşturulan diğer yetkilendirme ilkeleri değerlendirdikten sonra yöntemini çağıracaksınız.  
   
      [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
      [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
@@ -51,9 +51,9 @@ Bu konu, bir özel güvenlik belirteci kimlik doğrulayıcı oluşturma ve bir �
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>Bir özel güvenlik belirteci kimlik doğrulayıcı özel güvenlik belirteci yöneticisi ile tümleştirmek için  
   
-1.  Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> özel güvenlik belirteci yöneticisi uygulamanızda yöntemi.  
+1. Geçersiz kılma <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> özel güvenlik belirteci yöneticisi uygulamanızda yöntemi.  
   
-2.  Temel, özel güvenlik belirteci kimlik doğrulayıcı döndürülecek etkinleştirmek için yöntemi mantık eklemek <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametresi. Bir kullanıcı adı belirteci gereksinimleri belirteç türü ise, aşağıdaki örnek bir özel güvenlik belirteci kimlik doğrulayıcı döndürür (tarafından temsil edilen <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A> özelliği) ve kendisi için güvenlik belirteci kimlik doğrulayıcı istenen ileti yönü giriş () tarafından temsil edilen <xref:System.ServiceModel.Description.MessageDirection.Input> alan).  
+2. Temel, özel güvenlik belirteci kimlik doğrulayıcı döndürülecek etkinleştirmek için yöntemi mantık eklemek <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametresi. Bir kullanıcı adı belirteci gereksinimleri belirteç türü ise, aşağıdaki örnek bir özel güvenlik belirteci kimlik doğrulayıcı döndürür (tarafından temsil edilen <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A> özelliği) ve kendisi için güvenlik belirteci kimlik doğrulayıcı istenen ileti yönü giriş () tarafından temsil edilen <xref:System.ServiceModel.Description.MessageDirection.Input> alan).  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  

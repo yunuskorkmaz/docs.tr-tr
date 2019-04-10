@@ -2,21 +2,21 @@
 title: WCF Hata İşleme
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235367"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306293"
 ---
 # <a name="wcf-error-handling"></a>WCF Hata İşleme
 WCF uygulaması tarafından karşılaşılan hataları üç gruplardan birine ait:  
   
-1.  İletişim hataları  
+1. İletişim hataları  
   
-2.  Proxy/kanal hataları  
+2. Proxy/kanal hataları  
   
-3.  Uygulama hataları  
+3. Uygulama hataları  
   
  İletişim hataları ağ kullanılamıyor, istemci yanlış bir adresi kullanır veya hizmet ana bilgisayarı gelen iletiler için dinleme yapmıyor ortaya çıkar. Bu tür hatalar istemciye döndürülür <xref:System.ServiceModel.CommunicationException> veya <xref:System.ServiceModel.CommunicationException>-türetilmiş sınıflar.  
   
@@ -40,7 +40,7 @@ WCF uygulaması tarafından karşılaşılan hataları üç gruplardan birine ai
 ## <a name="ierrorhandler"></a>Ierrorhandler  
  <xref:System.ServiceModel.Dispatcher.IErrorHandler> Arabirim WCF uygulamanızı hatalara nasıl yanıt vereceğini üzerinde daha fazla denetim sağlar.  Özel Hata günlük kaydı gibi işlem yapmanıza olanak tanır ve istemciye döndürülen hata iletisi üzerinde tam denetim verir.  Hakkında daha fazla bilgi için <xref:System.ServiceModel.Dispatcher.IErrorHandler> ve [genişletme denetiminin üzerine hata işleme ve Raporlama](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
-## <a name="servicehost-events"></a>ServiceHost olayları  
+## <a name="servicehost-events"></a>ServiceHost Events  
  <xref:System.ServiceModel.ServiceHost> Sınıfı konakları Hizmetleri ve hataları işleme için gerekli olabilecek çeşitli olayları tanımlar. Örneğin:  
   
 1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302627"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW Sağlayıcılar
 Ortak dil çalışma zamanı (CLR) iki sağlayıcıları vardır: çalışma zamanı sağlayıcısı ve Özet sağlayıcı.  
@@ -58,7 +58,7 @@ Ortak dil çalışma zamanı (CLR) iki sağlayıcıları vardır: çalışma zam
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>Çalışma zamanı ve Özet sağlayıcılarını kullanarak ETW veri toplama  
  Aşağıdaki örnek CLR özeti sağlayıcısının sembol çözümleme işlemlerini başlatmak veya profil penceresinin içinde veya dışında son bağımsız olarak en az etki ile yönetilen işlemlerin izin veren bir şekilde kullanmak nasıl gösterir.  
   
-1.  CLR çalışma zamanı sağlayıcısını kullanarak ETW günlüğünü açın:  
+1. CLR çalışma zamanı sağlayıcısını kullanarak ETW günlüğünü açın:  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ Ortak dil çalışma zamanı (CLR) iki sağlayıcıları vardır: çalışma zam
   
      Günlük clr1.etl dosyasına kaydedilir.  
   
-2.  Yürütülecek işlem devam ederken profil oluşturmayı durdurmak için yakalamak için Özet sağlayıcı Başlat `DCEnd` olayları:  
+2. Yürütülecek işlem devam ederken profil oluşturmayı durdurmak için yakalamak için Özet sağlayıcı Başlat `DCEnd` olayları:  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ Ortak dil çalışma zamanı (CLR) iki sağlayıcıları vardır: çalışma zam
   
      Bu topluluğunun `DCEnd` Özet oturumu başlatmak için olayları. Tüm olayların toplanması için 30 ila 60 saniye beklemeniz gerekebilir. Günlük clr1.et2 dosyasına kaydedilir.  
   
-3.  Tüm ETW profil oluşturmalarını devre dışı bırakın:  
+3. Tüm ETW profil oluşturmalarını devre dışı bırakın:  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  Tek bir günlük dosyası oluşturmak üzere profilleri birleştirme:  
+4. Tek bir günlük dosyası oluşturmak üzere profilleri birleştirme:  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  

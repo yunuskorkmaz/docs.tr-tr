@@ -1,38 +1,38 @@
 ---
-title: ModelItem düzenleme bağlamını kullanma
+title: ModelItem Düzenleme Bağlamını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-ms.openlocfilehash: d8d2e7d055099a6aedd13dd48dd78403cdff2a50
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: a2628bbbf2f6684e5d484b05cd5a2ac622f3b664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296897"
 ---
-# <a name="using-the-modelitem-editing-context"></a>ModelItem düzenleme bağlamını kullanma
+# <a name="using-the-modelitem-editing-context"></a>ModelItem Düzenleme Bağlamını Kullanma
 <xref:System.Activities.Presentation.Model.ModelItem> İçerik düzenleme, tasarımcı ile iletişim kurmak için ana bilgisayar uygulaması kullanan nesnedir. <xref:System.Activities.Presentation.EditingContext> iki yöntem sunar <xref:System.Activities.Presentation.EditingContext.Items%2A> ve <xref:System.Activities.Presentation.EditingContext.Services%2A>, kullanılabilir  
   
 ## <a name="the-items-collection"></a>Öğeleri koleksiyonu  
  <xref:System.Activities.Presentation.EditingContext.Items%2A> Koleksiyon konak ve tasarımcı arasında paylaşılan veri veya tüm tasarımcıları için kullanılabilir olan verilerine erişmek için kullanılır. Üzerinden erişilen aşağıdaki özellikleri, bu koleksiyona sahip <xref:System.Activities.Presentation.ContextItemManager> sınıfı:  
   
-1.  <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
+1. <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
   
-2.  <xref:System.Activities.Presentation.ContextItemManager.Subscribe%2A>  
+2. <xref:System.Activities.Presentation.ContextItemManager.Subscribe%2A>  
   
-3.  <xref:System.Activities.Presentation.ContextItemManager.Unsubscribe%2A>  
+3. <xref:System.Activities.Presentation.ContextItemManager.Unsubscribe%2A>  
   
-4.  <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
+4. <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
   
 ## <a name="the-services-collection"></a>Hizmetler koleksiyonu  
  <xref:System.Activities.Presentation.EditingContext.Services%2A> Koleksiyon, tüm tasarımcıları kullanan hizmetler veya tasarımcı konak ile etkileşim kurmak için kullandığı hizmetler erişmek için kullanılır. Bu koleksiyon Not aşağıdaki yöntemleri vardır:  
   
-1.  <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
+1. <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
   
-2.  <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A>  
+2. <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A>  
   
-3.  <xref:System.Activities.Presentation.ServiceManager.Unsubscribe%2A>  
+3. <xref:System.Activities.Presentation.ServiceManager.Unsubscribe%2A>  
   
-4.  <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
+4. <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
   
 ## <a name="assigning-a-designer-an-activity"></a>Bir etkinlik bir tasarımcı atama  
  Bir etkinlik kullanan hangi Tasarımcısı belirtmek için tasarımcı özniteliği kullanılır.  

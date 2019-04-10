@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: dde627edfeb1d4473c9d2e01b9ff83c580a0f122
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319605"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Nasıl yapılır: (Visual Basic) birleştirmeleri kullanarak verileri LINQ ile birleştirme
 Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak koleksiyonları arasında ortak değerlere göre birden fazla koleksiyonun içeriğini birleştirmek. Bu değerler olarak bilinen *anahtar* değerleri. Geliştiricileri ilişkisel veritabanı kavramlarını tanıdık algılayacağı `Join` INNER JOIN as yan tümcesi ve `Group Join` olarak etkili bir şekilde, LEFT OUTER JOIN yan tümcesi.  
@@ -25,9 +25,9 @@ Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak kolek
   
 #### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>Örnek veriler ve türlerini içeren bir proje oluşturmak için  
   
-1.  Bu konudaki örnek çalıştırmak için Visual Studio'yu açın ve yeni bir Visual Basic konsol uygulaması projesi ekleyin. Visual Basic tarafından oluşturulan Module1.vb dosyasını çift tıklayın.  
+1. Bu konudaki örnek çalıştırmak için Visual Studio'yu açın ve yeni bir Visual Basic konsol uygulaması projesi ekleyin. Visual Basic tarafından oluşturulan Module1.vb dosyasını çift tıklayın.  
   
-2.  Bu konuda kullanım örnekleri `Person` ve `Pet` türleri ve verileri aşağıdaki kod örneği. Varsayılan bu kodu kopyalayın `Module1` Visual Basic ile oluşturulan modül.  
+2. Bu konuda kullanım örnekleri `Person` ve `Pet` türleri ve verileri aşağıdaki kod örneği. Varsayılan bu kodu kopyalayın `Module1` Visual Basic ile oluşturulan modül.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
@@ -43,7 +43,7 @@ Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak kolek
   
 #### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>INNER JOIN JOIN yan tümcesi kullanarak gerçekleştirmek için  
   
-1.  Aşağıdaki kodu ekleyin `Module1` iki örtük ve açık iç birleşim örneklerini görmek için projenizdeki modülü.  
+1. Aşağıdaki kodu ekleyin `Module1` iki örtük ve açık iç birleşim örneklerini görmek için projenizdeki modülü.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
@@ -56,7 +56,7 @@ Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak kolek
   
 #### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Left Outer JOIN gruba katılma yan tümcesini kullanarak gerçekleştirmek için  
   
-1.  Aşağıdaki kodu ekleyin `Module1` gruplandırılmış bir sol dış birleşim hem gruplanmamış sol dış birleşim örneklerini görmek için projenizdeki modülü.  
+1. Aşağıdaki kodu ekleyin `Module1` gruplandırılmış bir sol dış birleşim hem gruplanmamış sol dış birleşim örneklerini görmek için projenizdeki modülü.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
@@ -65,7 +65,7 @@ Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak kolek
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>Bir bileşik anahtarı kullanarak bir katılma işlemi için  
   
-1.  Aşağıdaki kodu ekleyin `Module1` bir bileşik anahtarı kullanan bir birleşim örneklerini görmek için projenizdeki modülü.  
+1. Aşağıdaki kodu ekleyin `Module1` bir bileşik anahtarı kullanan bir birleşim örneklerini görmek için projenizdeki modülü.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
@@ -73,19 +73,19 @@ Visual Basic sağlar `Join` ve `Group Join` sorgu yan tümceleri sağlamak kolek
   
 #### <a name="to-add-code-to-run-the-examples"></a>Örnekleri çalıştırmak için kod eklemek için  
   
-1.  Değiştirin `Sub Main` içinde `Module1` bu konudaki örnek çalıştırmak için aşağıdaki kodu projenizdeki modülü.  
+1. Değiştirin `Sub Main` içinde `Module1` bu konudaki örnek çalıştırmak için aşağıdaki kodu projenizdeki modülü.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2.  Örnekleri çalıştırmak için F5 tuşuna basın.  
+2. Örnekleri çalıştırmak için F5 tuşuna basın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Join Yan Tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md)
-- [Group Join Yan Tümcesi](../../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [From Yan Tümcesi](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [Where Yan Tümcesi](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [Visual Basic'de LINQ'e Giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Join Tümcesi](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join Tümcesi](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [From Tümcesi](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where Tümcesi](../../../../visual-basic/language-reference/queries/where-clause.md)
 - [Sorgular](../../../../visual-basic/language-reference/queries/index.md)
-- [LINQ (C#) ile veri dönüştürmeler](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [LINQ ile Veri Dönüştürmeler (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

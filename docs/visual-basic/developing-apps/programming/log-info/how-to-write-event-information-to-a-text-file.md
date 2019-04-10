@@ -6,19 +6,19 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: ee5c7cbea09c6183b48fe1b0acd051d65bdd1875
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819040"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312727"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Nasıl yapılır: Olay bilgilerini metin dosyasına (Visual Basic) yazma
 Kullanabileceğiniz `My.Application.Log` ve `My.Log` gerçekleşen olaylar hakkında bilgileri, uygulamanızda oturum nesneleri. Bu örnek nasıl kullanılacağını gösterir `My.Application.Log.WriteEntry` bir günlük dosyasına izleme bilgileri günlüğe kaydetmek için yöntemi.  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>Ekleme ve dosya günlüğünü dinleyici yapılandırma  
   
-1.  App.config dosyasında sağ **Çözüm Gezgini** ve **açık**.  
+1. App.config dosyasında sağ **Çözüm Gezgini** ve **açık**.  
   
      \- veya -  
   
@@ -30,19 +30,19 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` gerçekleşen olaylar hakk�
   
     3.  **Ekle**'yi tıklatın.  
   
-2.  Bulun `<listeners>` uygulama yapılandırma dosyasında bölümü.  
+2. Bulun `<listeners>` uygulama yapılandırma dosyasında bölümü.  
   
      Size \<dinleyicileri > konusundaki \<kaynak > bölümü altında iç içe "DefaultSource" ad özniteliği ile \<system.diagnostics > üst düzey altındaiçiçebölümünde\<yapılandırma > bölümü.  
   
-3.  Bu öğe ekleyen `<listeners>` bölümü:  
+3. Bu öğe ekleyen `<listeners>` bölümü:  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4.  Bulun `<sharedListeners>` konusundaki `<system.diagnostics>` bölümünde, üst düzey altında iç içe geçmiş `<configuration>` bölümü.  
+4. Bulun `<sharedListeners>` konusundaki `<system.diagnostics>` bölümünde, üst düzey altında iç içe geçmiş `<configuration>` bölümü.  
   
-5.  Bu öğe ekleyen `<sharedListeners>` bölümü:  
+5. Bu öğe ekleyen `<sharedListeners>` bölümü:  
   
     ```xml  
     <add name="FileLogListener"   
@@ -71,4 +71,4 @@ Kullanabileceğiniz `My.Application.Log` ve `My.Log` gerçekleşen olaylar hakk�
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Nasıl yapılır: Günlük özel durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Nasıl yapılır: Özel Durumları Günlüğe Kaydetme](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

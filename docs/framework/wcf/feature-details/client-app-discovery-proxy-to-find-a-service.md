@@ -2,32 +2,32 @@
 title: "Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma"
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 42dc2e8269e36161904f69880712924d4789333e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115979"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321009"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma
 Keşif proxy'si uygulama anlatılmaktadır üçüncü üç konuları konudur. Önceki konu [nasıl yapılır: Keşif proxy'sine bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), kendisini keşif proxy'sine bir WCF Hizmeti uygulanır. Bu konu başlığında keşif proxy'si WCF hizmeti bulmak için kullandığı bir WCF istemcisi oluşturma.  
   
 ### <a name="implement-the-client"></a>İstemcisini uygulama  
   
-1.  Yeni bir konsol uygulama projesi Ekle `DiscoveryProxyExample` adlı çözüm `Client`.  
+1. Yeni bir konsol uygulama projesi Ekle `DiscoveryProxyExample` adlı çözüm `Client`.  
   
-2.  Aşağıdaki derlemelere başvurular ekleyin:  
+2. Aşağıdaki derlemelere başvurular ekleyin:  
   
     1.  System.ServiceModel  
   
     2.  System.ServiceModel.Discovery  
   
-3.  Proje için bu konunun alt kısmına bulunan GeneratedClient.cs ekleyin.  
+3. Proje için bu konunun alt kısmına bulunan GeneratedClient.cs ekleyin.  
   
     > [!NOTE]
     >  Bu dosya genellikle Svcutil.exe gibi bir araç kullanarak oluşturulur. Bu görevi kolaylaştırmak için bu konudaki sağlanır.  
   
-4.  Program.cs dosyasını açın ve aşağıdaki yöntemi ekleyin. Bu yöntem, bir uç nokta adresi alır ve hizmeti istemcisi (proxy) başlatmak için kullanır.  
+4. Program.cs dosyasını açın ve aşağıdaki yöntemi ekleyin. Bu yöntem, bir uç nokta adresi alır ve hizmeti istemcisi (proxy) başlatmak için kullanır.  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -62,7 +62,7 @@ Keşif proxy'si uygulama anlatılmaktadır üçüncü üç konuları konudur. Ö
     }  
     ```  
   
-5.  Aşağıdaki kodu ekleyin `Main` yöntemi.  
+5. Aşağıdaki kodu ekleyin `Main` yöntemi.  
   
     ```csharp  
     public static void Main()  

@@ -2,12 +2,12 @@
 title: <iriParsing> Öğesi (Uri ayarları)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 710d82b70eb16e88404d4d8bbf38d2d030693103
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7033f4dcda7d2fe73310ae0d36d9b05c090d13d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299676"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing > öğesi (Uri ayarları)
 Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma için uygulanmış olup olmadığını belirten bir <xref:System.Uri> ve IRI ayrıştırma kurallarını uygulanıp.  
@@ -50,13 +50,13 @@ Uluslararası kaynak tanımlayıcı (IRI) ayrıştırma için uygulanmış olup 
   
  IRI desteğini etkinleştirmek için aşağıdaki iki değişiklik gerekmez:  
   
-1.  Machine.config dosyasının .NET Framework 2.0 dizininde aşağıdaki satırı ekleyin  
+1. Machine.config dosyasının .NET Framework 2.0 dizininde aşağıdaki satırı ekleyin  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  IRI ayrıştırma kurallarını uygulanması gerektiğini belirtin. Bu, machine.config veya app.config dosyasında yapılabilir.  
+2. IRI ayrıştırma kurallarını uygulanması gerektiğini belirtin. Bu, machine.config veya app.config dosyasında yapılabilir.  
   
  IRI ayrıştırma etkinleştirme (etkin iriParsing = `true`) normalleştirme yapar ve karakter göre en son IRI denetleme kuralları RFC 3987. Varsayılan değer `false` normalleştirme yapın ve RFC 2396 göre denetleme ve RFC 3986'ya (IPv6 değişmez değerleri için) karakter.  
   

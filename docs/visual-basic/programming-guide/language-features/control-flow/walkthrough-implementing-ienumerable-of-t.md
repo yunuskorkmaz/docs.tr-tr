@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 5fc96e1ae3624adc197b5b13029498b9aa90c95e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819508"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302588"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>İzlenecek yol: Visual Basic'te IEnumerable(Of T) uygulama
 <xref:System.Collections.Generic.IEnumerable%601> Arabirimi, aynı anda bir öğe değerlerini bir dizi döndüren sınıflar tarafından uygulanır. Aynı anda bir öğe ile çalışmak için eksiksiz veri Seti yüklemek gerekmez veri döndüren avantajı. Yalnızca tek bir öğe verileri yüklemek için yeterli bellek kullanmak zorunda. Uygulayan sınıflar `IEnumerable(T)` arabirimi ile kullanılabilir `For Each` döngüler veya LINQ sorguları.  
@@ -29,13 +29,13 @@ ms.locfileid: "58819508"
   
 **Numaralandırılabilir sınıf projesi oluşturma**
 
-1.  Visual Basic'te üzerinde **dosya** menüsünde **yeni** ve ardından **proje**.
+1. Visual Basic'te üzerinde **dosya** menüsünde **yeni** ve ardından **proje**.
 
-1.  İçinde **yeni proje** iletişim kutusundaki **proje türleri** bölmesinde emin olun **Windows** seçilir. Seçin **sınıf kitaplığı** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `StreamReaderEnumerable`ve ardından **Tamam**. Yeni Proje görüntülenir.
+1. İçinde **yeni proje** iletişim kutusundaki **proje türleri** bölmesinde emin olun **Windows** seçilir. Seçin **sınıf kitaplığı** içinde **şablonları** bölmesi. İçinde **adı** kutusuna `StreamReaderEnumerable`ve ardından **Tamam**. Yeni Proje görüntülenir.
 
-1.  İçinde **Çözüm Gezgini**Class1.vb dosyaya sağ tıklayın ve tıklayın **Yeniden Adlandır**. Dosyayı Yeniden Adlandır `StreamReaderEnumerable.vb` ve ENTER tuşuna basın. Dosya yeniden adlandırılırken da yeniden adlandırmak sınıfa `StreamReaderEnumerable`. Bu sınıf uygulayacak `IEnumerable(Of String)` arabirimi.
+1. İçinde **Çözüm Gezgini**Class1.vb dosyaya sağ tıklayın ve tıklayın **Yeniden Adlandır**. Dosyayı Yeniden Adlandır `StreamReaderEnumerable.vb` ve ENTER tuşuna basın. Dosya yeniden adlandırılırken da yeniden adlandırmak sınıfa `StreamReaderEnumerable`. Bu sınıf uygulayacak `IEnumerable(Of String)` arabirimi.
 
-1.  StreamReaderEnumerable projeye sağ tıklayın, fareyle **Ekle**ve ardından **yeni öğe**. Seçin **sınıfı** şablonu. İçinde **adı** kutusuna `StreamReaderEnumerator.vb` tıklatıp **Tamam**.
+1. StreamReaderEnumerable projeye sağ tıklayın, fareyle **Ekle**ve ardından **yeni öğe**. Seçin **sınıfı** şablonu. İçinde **adı** kutusuna `StreamReaderEnumerator.vb` tıklatıp **Tamam**.
 
  Bu projedeki ilk sınıf numaralandırılabilir sınıftır ve uygulayacak `IEnumerable(Of String)` arabirimi. Bu genel arabirimi uygulayan <xref:System.Collections.IEnumerable> arabirimi ve bu sınıf tüketicilerinin olarak yazılan değerleri erişebilirsiniz garantiler `String`.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "58819508"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic'de LINQ'e Giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Denetim Akışı](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Döngü Yapıları](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [For Each...Next Deyimi](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: c41d3b2c8d905395f1249b15709da8dbdf5d4632
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3129824f6e4047420c422503cc366a1c8d28b7e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640439"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326222"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>İzlenecek yol: Sınıflar (Visual Basic) tanımlama
 
@@ -30,32 +30,32 @@ Bu yönerge, ardından nesneleri oluşturmak için kullanabileceğiniz sınıfla
   
 ## <a name="to-define-a-class"></a>Bir sınıf tanımlamak için
   
-1.  Tıklayarak bir proje oluşturun **yeni proje** üzerinde **dosya** menüsü. **Yeni Proje** iletişim kutusu görünür.  
+1. Tıklayarak bir proje oluşturun **yeni proje** üzerinde **dosya** menüsü. **Yeni Proje** iletişim kutusu görünür.  
   
-2.  Windows uygulamasını yeni proje görüntülemek için Visual Basic proje şablonları listesinden seçin.  
+2. Windows uygulamasını yeni proje görüntülemek için Visual Basic proje şablonları listesinden seçin.  
   
-3.  Tıklayarak, projeye yeni bir sınıf ekleyin **sınıfı Ekle** üzerinde **proje** menüsü. **Yeni Öğe Ekle** iletişim kutusu görünür.  
+3. Tıklayarak, projeye yeni bir sınıf ekleyin **sınıfı Ekle** üzerinde **proje** menüsü. **Yeni Öğe Ekle** iletişim kutusu görünür.  
   
-4.  Seçin **sınıfı** şablonu.  
+4. Seçin **sınıfı** şablonu.  
   
-5.  Yeni bir sınıf adı `UserNameInfo.vb`ve ardından **Ekle** yeni sınıfı seçerek kodu görüntüleyin.  
+5. Yeni bir sınıf adı `UserNameInfo.vb`ve ardından **Ekle** yeni sınıfı seçerek kodu görüntüleyin.  
   
      [!code-vb[VbVbalrOOP#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#5)]
   
     > [!NOTE]
     >  Visual Basic kullanabileceğiniz **Kod Düzenleyicisi** yazarak başlangıç formunuza bir sınıf eklemek için `Class` anahtar ardından yeni sınıfın adı. **Kod Düzenleyicisi** karşılık gelen sağlar `End Class` deyimi sizin için.  
   
-6.  Arasına aşağıdaki kodu ekleyerek sınıfı için özel bir alan tanımlayın `Class` ve `End Class` ifadeleri:  
+6. Arasına aşağıdaki kodu ekleyerek sınıfı için özel bir alan tanımlayın `Class` ve `End Class` ifadeleri:  
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
      Alan olarak bildirme `Private` yalnızca sınıf kullanılabileceği anlamına gelir. Erişim değiştiricileri gibi kullanarak, alanlar bir sınıfın dışında kullanılabilir yapabilirsiniz `Public` daha fazla erişim sağlar. Daha fazla bilgi için [erişim düzeyini Visual Basic'te](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-7.  Aşağıdaki kodu ekleyerek sınıfı için bir özellik tanımlayın:  
+7. Aşağıdaki kodu ekleyerek sınıfı için bir özellik tanımlayın:  
   
      [!code-vb[VbVbalrOOP#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#8)]
   
-8.  Sınıfı için bir yöntem aşağıdaki kodu ekleyerek tanımlayın:  
+8. Sınıfı için bir yöntem aşağıdaki kodu ekleyerek tanımlayın:  
   
      [!code-vb[VbVbalrOOP#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#9)]
   
@@ -67,17 +67,17 @@ Bu yönerge, ardından nesneleri oluşturmak için kullanabileceğiniz sınıfla
   
 ## <a name="to-create-a-button-to-test-the-class"></a>Test sınıfı için bir düğme oluşturmak için
   
-1.  Başlangıç formu adına tıklanarak tasarım moduna değiştirin **Çözüm Gezgini** tıklayıp **Görünüm Tasarımcısı**. Varsayılan olarak, Windows Uygulama projeleri için başlangıç formu Form1.vb olan. Ana formu sonra görünür.  
+1. Başlangıç formu adına tıklanarak tasarım moduna değiştirin **Çözüm Gezgini** tıklayıp **Görünüm Tasarımcısı**. Varsayılan olarak, Windows Uygulama projeleri için başlangıç formu Form1.vb olan. Ana formu sonra görünür.  
   
-2.  Ana forma bir düğme ekleyin ve kodunu görüntülemek için çift tıklayın `Button1_Click` olay işleyicisi. Test yordamı çağırmak için aşağıdaki kodu ekleyin:  
+2. Ana forma bir düğme ekleyin ve kodunu görüntülemek için çift tıklayın `Button1_Click` olay işleyicisi. Test yordamı çağırmak için aşağıdaki kodu ekleyin:  
   
      [!code-vb[VbVbalrOOP#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#12)]
   
 ## <a name="to-run-your-application"></a>Uygulamanızı çalıştırmak için
   
-1.  F5 tuşuna basarak uygulamanızı çalıştırın. Formdaki test yordamı çağırmak için düğmeye tıklayın. Özgün belirten bir ileti görüntüler `UserName` yordamı adında "MOORE, BOBBY", çünkü `Capitalize` nesnesinin yöntemi.  
+1. F5 tuşuna basarak uygulamanızı çalıştırın. Formdaki test yordamı çağırmak için düğmeye tıklayın. Özgün belirten bir ileti görüntüler `UserName` yordamı adında "MOORE, BOBBY", çünkü `Capitalize` nesnesinin yöntemi.  
   
-2.  Tıklayın **Tamam** ileti kutusunu kapatın. `Button1 Click` Yordam değerini değiştirir `UserName` özelliği ve yeni değeri belirten bir ileti görüntüler `UserName` "Worden, ALi" olduğu.  
+2. Tıklayın **Tamam** ileti kutusunu kapatın. `Button1 Click` Yordam değerini değiştirir `UserName` özelliği ve yeni değeri belirten bir ileti görüntüler `UserName` "Worden, ALi" olduğu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

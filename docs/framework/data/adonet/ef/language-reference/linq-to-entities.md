@@ -2,25 +2,25 @@
 title: LINQ - Varlıklar
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129694"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304590"
 ---
 # <a name="linq-to-entities"></a>LINQ - Varlıklar
 LINQ to Entities, geliştiricilerin Visual Basic veya Visual C# kullanarak varlık çerçevesi kavramsal modeline karşı sorgular yazmaya olanak tanıyan dil ile tümleşik sorgu (LINQ) destekler. Entity Framework sorguları nesne bağlamı karşı yürütülen komut ağaç sorguları tarafından temsil edilir. LINQ to Entities ağaç sorgular, Entity Framework sorguları yürütür ve Entity Framework ve LINQ tarafından kullanılan nesneleri döndürür komut dil ile tümleşik sorgu (LINQ) sorguları dönüştürür. Oluşturma ve bir LINQ to Entities sorgusunda yürütme işlemi aşağıda verilmiştir:  
   
-1.  Oluşturmak bir <xref:System.Data.Objects.ObjectQuery%601> gelen örnek <xref:System.Data.Objects.ObjectContext>.  
+1. Oluşturmak bir <xref:System.Data.Objects.ObjectQuery%601> gelen örnek <xref:System.Data.Objects.ObjectContext>.  
   
-2.  Bir LINQ to Entities sorgusunda C# veya Visual Basic kullanarak compose <xref:System.Data.Objects.ObjectQuery%601> örneği.  
+2. Bir LINQ to Entities sorgusunda C# veya Visual Basic kullanarak compose <xref:System.Data.Objects.ObjectQuery%601> örneği.  
   
-3.  LINQ standart sorgu işleçler ve ifadeler komut ağaçlarını dönüştürmek.  
+3. LINQ standart sorgu işleçler ve ifadeler komut ağaçlarını dönüştürmek.  
   
-4.  Veri kaynağına karşı komut ağacı gösteriminde sorguyu yürütün. Veri kaynağı üzerinde yürütme sırasında oluşturulan özel durumlar, doğrudan istemciye kadar geçirilir.  
+4. Veri kaynağına karşı komut ağacı gösteriminde sorguyu yürütün. Veri kaynağı üzerinde yürütme sırasında oluşturulan özel durumlar, doğrudan istemciye kadar geçirilir.  
   
-5.  Sorgu sonuçları istemciye geri dönün.  
+5. Sorgu sonuçları istemciye geri dönün.  
   
 ## <a name="constructing-an-objectquery-instance"></a>Bir ObjectQuery örneğinin oluşturma  
  <xref:System.Data.Objects.ObjectQuery%601> Genel sınıf bir sıfır veya daha fazla yazılı varlık koleksiyonunu döndüren bir sorgu temsil eder. Bir nesne sorgusu bağlamından el ile yapılandırılan yerine var olan nesne, genellikle oluşturulur ve her zaman bu nesne bağlamına ait. Bu bağlamı bağlantısı ve oluşturmak ve sorguyu yürütmek için gereken meta veri bilgileri sağlar. <xref:System.Data.Objects.ObjectQuery%601> Genel bir sınıf uygulayan <xref:System.Linq.IQueryable%601> genel arabirim, oluşturucu yöntemleri LINQ sorguları artımlı olarak oluşturulacak etkinleştirin. Ayrıca C# kullanarak varlık türü derleyicinin sağlayabilirsiniz `var` anahtar sözcüğü (`Dim` Visual Basic'te, yerel tür çıkarımı etkin).  

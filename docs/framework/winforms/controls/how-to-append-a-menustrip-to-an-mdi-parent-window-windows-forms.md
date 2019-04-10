@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: 9c39b80c06cae91c43c7a79390cef71ae781489e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: a335531b090983de4e2b3daccc9f956930cbad6e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442756"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298948"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Nasıl yapılır: (Windows Forms) MDI üst penceresine MenuStrip ekleme
 Bazı uygulamalarda, bir Çoklu belge arabirimi (MDI) alt penceresi türünü MDI ana penceresinde farklı olabilir. Örneğin, bir elektronik tablo MDI olabilir ve MDI alt bir grafik olabilir. Bu durumda, farklı türlerde MDI alt pencereleri etkin olarak MDI üst menü içeriğini MDI alt menü içeriğini güncelleştirmek istediğiniz.  
@@ -25,25 +25,25 @@ Bazı uygulamalarda, bir Çoklu belge arabirimi (MDI) alt penceresi türünü MD
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>Bir MDI üst menü öğesi eklemek için  
   
-1.  Bir form oluşturun ve ayarlayın, <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğini `true`.  
+1. Bir form oluşturun ve ayarlayın, <xref:System.Windows.Forms.Form.IsMdiContainer%2A> özelliğini `true`.  
   
-2.  Ekleme bir <xref:System.Windows.Forms.MenuStrip> için `Form1` ayarlayıp <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> özelliği <xref:System.Windows.Forms.MenuStrip> için `true`.  
+2. Ekleme bir <xref:System.Windows.Forms.MenuStrip> için `Form1` ayarlayıp <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> özelliği <xref:System.Windows.Forms.MenuStrip> için `true`.  
   
-3.  Ayarlama <xref:System.Windows.Forms.ToolStripItem.Visible%2A> özelliği `Form1` <xref:System.Windows.Forms.MenuStrip> için `false`.  
+3. Ayarlama <xref:System.Windows.Forms.ToolStripItem.Visible%2A> özelliği `Form1`<xref:System.Windows.Forms.MenuStrip> için `false`.  
   
-4.  Bir üst düzey menü öğesine eklemek `Form1` <xref:System.Windows.Forms.MenuStrip> ve kendi <xref:System.Windows.Forms.Control.Text%2A> özelliğini `&File`.  
+4. Bir üst düzey menü öğesine eklemek `Form1`<xref:System.Windows.Forms.MenuStrip> ve kendi <xref:System.Windows.Forms.Control.Text%2A> özelliğini `&File`.  
   
-5.  Bir alt öğe ekleme `&File` menü öğesi ve kümesi kendi <xref:System.Windows.Forms.Form.Text%2A> özelliğini `&Open`.  
+5. Bir alt öğe ekleme `&File` menü öğesi ve kümesi kendi <xref:System.Windows.Forms.Form.Text%2A> özelliğini `&Open`.  
   
-6.  Projeye form ekleme, ekleme bir <xref:System.Windows.Forms.MenuStrip> form ve kümesi <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> özelliği `Form2` <xref:System.Windows.Forms.MenuStrip> için `true`.  
+6. Projeye form ekleme, ekleme bir <xref:System.Windows.Forms.MenuStrip> form ve kümesi <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> özelliği `Form2`<xref:System.Windows.Forms.MenuStrip> için `true`.  
   
-7.  Bir üst düzey menü öğesine eklemek `Form2` <xref:System.Windows.Forms.MenuStrip> ve kendi <xref:System.Windows.Forms.Form.Text%2A> özelliğini `&Special`.  
+7. Bir üst düzey menü öğesine eklemek `Form2`<xref:System.Windows.Forms.MenuStrip> ve kendi <xref:System.Windows.Forms.Form.Text%2A> özelliğini `&Special`.  
   
-8.  İki alt öğe ekleme `&Special` menü öğesi ve kümesi kendi <xref:System.Windows.Forms.Form.Text%2A> özelliklerine `Command&1` ve `Command&2`sırasıyla.  
+8. İki alt öğe ekleme `&Special` menü öğesi ve kümesi kendi <xref:System.Windows.Forms.Form.Text%2A> özelliklerine `Command&1` ve `Command&2`sırasıyla.  
   
 9. Ayarlama <xref:System.Windows.Forms.MergeAction> özelliği `&Special`, `Command&1`, ve `Command&2` menü öğeleri için <xref:System.Windows.Forms.MergeAction.Append>.  
   
-10. İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Control.Click> olayı `&New` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. İçin bir olay işleyicisi oluşturun <xref:System.Windows.Forms.Control.Click> olayı `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 11. Olay işleyicisinin içerisinde kod oluşturmak ve yeni örneklerini görüntülemek için aşağıdaki kod örneği benzer ekleme `Form2` MDI alt öğeleri olarak `Form1`.  
   
@@ -68,7 +68,7 @@ Bazı uygulamalarda, bir Çoklu belge arabirimi (MDI) alt penceresi türünü MD
     }  
     ```  
   
-12. Kod aşağıdaki kod örneğinde benzer yerleştirin getirin `&Open` <xref:System.Windows.Forms.ToolStripMenuItem> olay işleyicisi kaydetmek için.  
+12. Kod aşağıdaki kod örneğinde benzer yerleştirin getirin `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> olay işleyicisi kaydetmek için.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  

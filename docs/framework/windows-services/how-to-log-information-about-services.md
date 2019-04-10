@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: c739aa5073052a8af545b745339270d3a9806135
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136948"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306527"
 ---
 # <a name="how-to-log-information-about-services"></a>Nasıl yapılır: Hizmet Bilgilerini Günlüğe Kaydetme
 Varsayılan olarak, tüm Windows Service projeleri uygulama olay günlüğü ile etkileşimli ve bilgi ve özel durumlar yazma olanağı vardır. Kullandığınız <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> uygulamanızda bu işlevi isteyip istemediğinizi belirtmek için özelliği. Varsayılan olarak, Windows hizmeti proje şablonu ile oluşturduğunuz herhangi bir hizmeti için günlüğe kaydetme açıktır. Statik bir formu kullanabilirsiniz <xref:System.Diagnostics.EventLog> sınıfı örneğini oluşturmak zorunda kalmadan hizmet bilgilerini günlüğe yazılacak bir <xref:System.Diagnostics.EventLog> bileşen veya el ile bir kaynak kaydı.  
@@ -46,18 +46,18 @@ Varsayılan olarak, tüm Windows Service projeleri uygulama olay günlüğü ile
   
 ### <a name="to-set-up-logging-to-a-custom-log"></a>Özel günlük için'günlük kaydı ayarlamak için  
   
-1.  Ayarlama <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özelliğini `false`.  
+1. Ayarlama <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özelliğini `false`.  
   
     > [!NOTE]
     >  Ayarlamalısınız <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> özel bir günlük kullanmak için false.  
   
-2.  Bir örneği bir <xref:System.Diagnostics.EventLog> Windows hizmeti uygulamanızda bileşen.  
+2. Bir örneği bir <xref:System.Diagnostics.EventLog> Windows hizmeti uygulamanızda bileşen.  
   
-3.  Özel günlük çağırarak oluşturmak <xref:System.Diagnostics.EventLog.CreateEventSource%2A> yöntemi ve kaynak dizeyi ve günlük adını dosyasını belirtme oluşturmak istiyorsanız.  
+3. Özel günlük çağırarak oluşturmak <xref:System.Diagnostics.EventLog.CreateEventSource%2A> yöntemi ve kaynak dizeyi ve günlük adını dosyasını belirtme oluşturmak istiyorsanız.  
   
-4.  Ayarlama <xref:System.Diagnostics.EventLog.Source%2A> özelliği <xref:System.Diagnostics.EventLog> bileşen örneği için 3. adımda oluşturduğunuz kaynak dizesi.  
+4. Ayarlama <xref:System.Diagnostics.EventLog.Source%2A> özelliği <xref:System.Diagnostics.EventLog> bileşen örneği için 3. adımda oluşturduğunuz kaynak dizesi.  
   
-5.  Girdilerinizi erişerek yazma <xref:System.Diagnostics.EventLog.WriteEntry%2A> metodunda <xref:System.Diagnostics.EventLog> bileşen örneği.  
+5. Girdilerinizi erişerek yazma <xref:System.Diagnostics.EventLog.WriteEntry%2A> metodunda <xref:System.Diagnostics.EventLog> bileşen örneği.  
   
      Aşağıdaki kod, özel bir günlük için günlük kaydı ayarlamak gösterilmektedir.  
   

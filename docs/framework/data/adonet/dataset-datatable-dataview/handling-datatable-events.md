@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098929"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312832"
 ---
 # <a name="handling-datatable-events"></a>DataTable Olaylarını İşleme
 <xref:System.Data.DataTable> Nesnesi, bir uygulama tarafından işlenebilen bir olay serisi olarak sağlar. Aşağıdaki tabloda açıklanmıştır `DataTable` olayları.  
@@ -47,21 +47,21 @@ ms.locfileid: "59098929"
 ## <a name="sequence-of-operations"></a>İşlem dizisi  
  Ortaya çıkan işlemlerin sırasını İşte olduğunda bir `DataRow` eklenen, değiştirilecek veya silinecek:  
   
-1.  Önerilen kayıt oluşturmak ve değişiklikleri uygulayın.  
+1. Önerilen kayıt oluşturmak ve değişiklikleri uygulayın.  
   
-2.  Denetim kısıtlamaları ifade olmayan sütunları için.  
+2. Denetim kısıtlamaları ifade olmayan sütunları için.  
   
-3.  Raise `RowChanging` veya `RowDeleting` olaylar olarak uygulanabilir.  
+3. Raise `RowChanging` veya `RowDeleting` olaylar olarak uygulanabilir.  
   
-4.  Önerilen kayıt geçerli kayıt olacak şekilde ayarlayın.  
+4. Önerilen kayıt geçerli kayıt olacak şekilde ayarlayın.  
   
-5.  İlişkili tüm dizinlerin güncelleştirin.  
+5. İlişkili tüm dizinlerin güncelleştirin.  
   
-6.  Raise `ListChanged` olayları ilişkili `DataView` nesneleri ve `PropertyChanged` olayları ilişkili `DataRowView` nesneleri.  
+6. Raise `ListChanged` olayları ilişkili `DataView` nesneleri ve `PropertyChanged` olayları ilişkili `DataRowView` nesneleri.  
   
-7.  Ancak bu sütunlarda kısıtlama denetimi gecikme tüm ifade sütunları değerlendirin.  
+7. Ancak bu sütunlarda kısıtlama denetimi gecikme tüm ifade sütunları değerlendirin.  
   
-8.  Raise `ListChanged` olayları ilişkili `DataView` nesneleri ve `PropertyChanged` olayları ilişkili `DataRowView` ifade sütunu değerlendirmeleri tarafından etkilenen nesneler.  
+8. Raise `ListChanged` olayları ilişkili `DataView` nesneleri ve `PropertyChanged` olayları ilişkili `DataRowView` ifade sütunu değerlendirmeleri tarafından etkilenen nesneler.  
   
 9. Raise `RowChanged` veya `RowDeleted` olaylar olarak uygulanabilir.  
   

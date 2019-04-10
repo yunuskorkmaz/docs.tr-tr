@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1017a0326691c2e0f01e2a16df5db566786ee688
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083627"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321737"
 ---
 # <a name="accessing-custom-attributes"></a>Özel Özniteliklere Erişim
 Öznitelikleri program öğelerle ilişkili eklendikten sonra yansıma olmaları ve uygulanmaları değerlerini sorgulamak için kullanılabilir. .NET Framework 1.0 ve 1.1 sürümlerinde, özel öznitelikler yürütme bağlamında incelenir. .NET Framework 2.0 sürümünde yeni bir yükleme bağlamı, yürütme için yüklenemiyor kodu incelemek için kullanılan salt yansıma bağlam sağlar.  
@@ -56,13 +56,13 @@ public class LocalizationExtenderProvider
   
  Genel özel öznitelik türü için özel öznitelikleri almak çalışma zamanı girişiminde bulunursa <xref:System.ComponentModel.DescriptionAttribute> bağlı **GetLanguage** yöntemi, aşağıdaki eylemleri gerçekleştirir:  
   
-1.  Çalışma zamanı denetimleri tür bağımsız değişkeni **DescriptionAttribute** için **Type.GetCustomAttributes**(tür *türü*) herkese açıktır ve bu nedenle görünür ve erişilebilir.  
+1. Çalışma zamanı denetimleri tür bağımsız değişkeni **DescriptionAttribute** için **Type.GetCustomAttributes**(tür *türü*) herkese açıktır ve bu nedenle görünür ve erişilebilir.  
   
-2.  Çalışma zamanı denetimleri kullanıcı tanımlı türe **MyDescriptionAttribute** sınıfından türetilen **DescriptionAttribute** görünür ve erişilebilir **System.Web.DLL**derleme, yönteme bağlı **GetLanguage**().  
+2. Çalışma zamanı denetimleri kullanıcı tanımlı türe **MyDescriptionAttribute** sınıfından türetilen **DescriptionAttribute** görünür ve erişilebilir **System.Web.DLL**derleme, yönteme bağlı **GetLanguage**().  
   
-3.  Çalışma zamanı denetimleri oluşturucusunun **MyDescriptionAttribute** görünür ve erişilebilir **System.Web.DLL** derleme.  
+3. Çalışma zamanı denetimleri oluşturucusunun **MyDescriptionAttribute** görünür ve erişilebilir **System.Web.DLL** derleme.  
   
-4.  Çalışma zamanı oluşturucusunu çağırır **MyDescriptionAttribute** özel öznitelik parametrelerle ve yeni nesne çağırana döner.  
+4. Çalışma zamanı oluşturucusunu çağırır **MyDescriptionAttribute** özel öznitelik parametrelerle ve yeni nesne çağırana döner.  
   
  Özel öznitelik yansıma model türünün tanımlandığı derleme dışından kullanıcı tanımlı türlerin örneklerini dışarıya sızmasına neden olabilecek. Bu gibi kullanıcı tanımlı türler örneklerini döndüren üyelerinden sistem Çalışma Zamanı Kitaplığı'nda farklı değildir <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> dizisi döndürme **RuntimeMethodInfo** nesneleri. Bir istemciden bir kullanıcı tanımlı özel öznitelik türü bulan bilgilerini önlemek için türün üyeleri özel olarak tanımlayın.  
   

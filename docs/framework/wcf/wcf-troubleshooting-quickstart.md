@@ -5,33 +5,33 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168139"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320008"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF Sorun Giderme Hızlı Başlangıç
 Bu konuda, birkaç müşteriler içine geliştirme WCF istemcileri ve Hizmetleri çalıştırdığınız bilinen sorunlar listelenmektedir. Çalıştırmakta olduğunuz sorun bu listede değilse, hizmetiniz için izleme yapılandırma öneririz. Bu işlem bir izleme dosyası oluşturur izleme dosyası Görüntüleyici ile birlikte görüntülemek ve bu özel durumları hakkında ayrıntılı bilgi almak hizmet içinde oluşabilecek. İzlemeyi yapılandırma hakkında daha fazla bilgi için bkz: [İzlemeyi Yapılandırma](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). İzleme dosyası Görüntüleyici hakkında daha fazla bilgi için bkz: [Hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
-1.  [Bir WCF hizmetine göz atmak denediğinizde Windows 7 ve IIS yükledikten sonra aşağıdaki hata iletisini alıyorum: HTTP Hatası 404.3 – bulunamadı](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1. [Bir WCF hizmetine göz atmak denediğinizde Windows 7 ve IIS yükledikten sonra aşağıdaki hata iletisini alıyorum: HTTP Hatası 404.3 – bulunamadı](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
   
      HTTP Hatası 404.3 – değil istediğiniz FoundThe sayfası uzantısı yapılandırması nedeniyle hizmet olamaz. Sayfa bir komut dosyası ise, bir işleyici ekleyin. Dosyanın indirilmesi gerektiğini MIME eşleme ekleyin. Ayrıntılı hata InformationModule StaticFileModule.  
   
-2.  [İstemcim ilk isteğinden sonra bir süredir boşta kalırsa bazen bir MessageSecurityException ikinci istekte alıyorum. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2. [İstemcim ilk isteğinden sonra bir süredir boşta kalırsa bazen bir MessageSecurityException ikinci istekte alıyorum. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3.  [Hizmetimi yaklaşık 10 istemcileri ile etkileşim sonra yeni istemcileri Reddet başlar. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3. [Hizmetimi yaklaşık 10 istemcileri ile etkileşim sonra yeni istemcileri Reddet başlar. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
-4.  [Hizmet yapılandırma öğesinden yere WCF uygulamanın yapılandırma dosyası diğer yükleyebilir?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
+4. [Hizmet yapılandırma öğesinden yere WCF uygulamanın yapılandırma dosyası diğer yükleyebilir?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
-5.  [Hizmetimi ve istemci harika, ancak istemci, başka bir bilgisayarda olduğunda bunları çalıştıramıyor musunuz? Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5. [Hizmetimi ve istemci harika, ancak istemci, başka bir bilgisayarda olduğunda bunları çalıştıramıyor musunuz? Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [Bir FaultException miyim throw zaman\<özel durum > türü bir özel durum olduğunda, her zaman istemci üzerindeki bir genel FaultException türü ve genel tür alıyorum. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6. [Bir FaultException miyim throw zaman\<özel durum > türü bir özel durum olduğunda, her zaman istemci üzerindeki bir genel FaultException türü ve genel tür alıyorum. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
-7.  [Bu tek yönlü gibi görünür ve yanıt veri içerdiğinde istek-yanıt operations yaklaşık aynı hızda döndürür. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7. [Bu tek yönlü gibi görünür ve yanıt veri içerdiğinde istek-yanıt operations yaklaşık aynı hızda döndürür. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
-8.  [X.509 sertifikası ile Hizmetimi kullanıyorum ve bir System.Security.Cryptography.CryptographicException alıyorum. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8. [X.509 sertifikası ile Hizmetimi kullanıyorum ve bir System.Security.Cryptography.CryptographicException alıyorum. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
 9. [İlk parametre bir işlemin öğesinden büyük değiştirdim küçük harf çoğaltmak; artık istemcim bir özel durum oluşturur. Ne oluyor?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   

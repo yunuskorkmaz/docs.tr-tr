@@ -1,15 +1,15 @@
 ---
-title: Pick etkinliği kullanma
+title: Pick Etkinliği Kullanma
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 59f99d2e0a69d796c1ec64093cf73e07b88887c9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848289"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302991"
 ---
-# <a name="using-the-pick-activity"></a>Pick etkinliği kullanma
+# <a name="using-the-pick-activity"></a>Pick Etkinliği Kullanma
 Bu örnek nasıl kullanılacağını gösterir <xref:System.Activities.Statements.Pick> etkinlik.
 
  <xref:System.Activities.Statements.Pick> Etkinlik, olay tabanlı denetim modelleme sağlar. Benzer şekilde C# davranışını `switch` dalları yalnızca biri yürüten deyimi `switch` deyimi. Farklı `switch` deyimi bir dal yürütüldüğünde bir değere dayalı <xref:System.Activities.Statements.Pick> nasıl bir etkinlik tamamlandıktan sonra bağlı olarak bir dalı etkinliği yürütür.
@@ -26,23 +26,23 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Activities.Statement
 
 -   Program.cs: İçerir `Main` örnek iş akışı yürüten işlev.
 
--   ReadString.cs: bazı giriş konsoldan okuyan özel bir etkinlik.
+-   ReadString.cs: Konsolundan bazı giriş okur özel bir etkinlik.
 
--   Sequence1.XAML: kullandığı çekme Tasarımcı kullanılarak oluşturulmuş bir iş akışı.
+-   Sequence1.XAML: Kullanan çekme Tasarımcı kullanılarak oluşturulmuş bir iş akışı.
 
  Bir iş akışı Tasarımcısı'nda oluşturma kodlanmış iş akışı örneği kodlanmış sürümünü gösterir. Aşağıdaki dosyalar dahil edilir:
 
 -   Program.cs: İçerir `Main` örnek iş akışı yürüten işlev.
 
--   ReadString.cs: bazı giriş konsoldan okuyan özel bir etkinlik.
+-   ReadString.cs: Konsolundan bazı giriş okur özel bir etkinlik.
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1.  Visual Studio 2010 kullanarak Pick.sln çözüm dosyasını açın.
+1. Visual Studio 2010 kullanarak Pick.sln çözüm dosyasını açın.
 
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-3.  Çözümü çalıştırmak için F5 tuşuna basın.
+3. Çözümü çalıştırmak için F5 tuşuna basın.
 
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

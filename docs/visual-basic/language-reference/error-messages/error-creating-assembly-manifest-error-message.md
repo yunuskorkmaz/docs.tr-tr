@@ -1,5 +1,5 @@
 ---
-title: 'Derleme bildirimi oluşturulurken hata oldu: <error message>'
+title: 'Derleme bildirimi oluşturulurken hata oluştu: <error message>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30140
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: f9d7867157b65d746809d9b2f50797285d7fcd9c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0f67b772bab3104c00510954d01b200aadfa9e8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831975"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296296"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>Derleme bildirimi oluşturulurken hata oluştu: \<hata iletisi >
 Visual Basic Derleyicisi bir bildirime sahip bir derleme oluşturmak için Assembly Linker (Al.exe Alink olarak da bilinir) çağırır. Bağlayıcı, derleme oluşturma öncesi Emisyonu aşamasında bir hata bildirdi.  
@@ -23,13 +23,13 @@ Visual Basic Derleyicisi bir bildirime sahip bir derleme oluşturmak için Assem
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Tırnak işaretli hata iletisini inceleyin ve konusuna danışın [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). ek açıklama hatası AL1019 ve öneriler  
+1. Tırnak işaretli hata iletisini inceleyin ve konusuna danışın [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). ek açıklama hatası AL1019 ve öneriler  
   
-2.  Sorun devam ederse, koşullar hakkında bilgi toplamak ve Microsoft Ürün Destek Hizmetleri bilgilendirir.  
+2. Sorun devam ederse, koşullar hakkında bilgi toplamak ve Microsoft Ürün Destek Hizmetleri bilgilendirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [İmzalama Sayfası, Proje Tasarımcısı](/visualstudio/ide/reference/signing-page-project-designer)
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Bizimle İletişime Geçin](/visualstudio/ide/talk-to-us)

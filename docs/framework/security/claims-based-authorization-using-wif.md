@@ -1,16 +1,16 @@
 ---
-title: Yetkilendirme WIF kullanarak talep tabanlı
+title: WIF Kullanarak Talep Tabanlı Yetkilendirme
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872936"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312182"
 ---
-# <a name="claims-based-authorization-using-wif"></a>Yetkilendirme WIF kullanarak talep tabanlı
+# <a name="claims-based-authorization-using-wif"></a>WIF Kullanarak Talep Tabanlı Yetkilendirme
 Bağlı taraf uygulamasında, yetkilendirme kimliği doğrulanmış bir kimliğin hangi kaynaklara erişebileceğini ve bu kaynaklar üzerinde hangi işlemleri gerçekleştirebileceğini belirler. Uygunsuz veya zayıf yetkilendirme, bilgi ifşasına ve verilerin izinsiz kullanımına neden olur. Bu konuda, Windows Identity Foundation (WIF) ve Microsoft Azure Erişim Denetimi Hizmeti (ACS) gibi Güvenlik Belirteci Hizmeti (STS) kullanılarak talep kullanan ASP.NET web uygulamaları ve hizmetleri için yetkilendirme uygulama yaklaşımları açıklanmaktadır.  
   
 ## <a name="overview"></a>Genel Bakış  
@@ -42,7 +42,7 @@ Bağlı taraf uygulamasında, yetkilendirme kimliği doğrulanmış bir kimliği
   
 -   **Belirteç verilirken**. Bir kullanıcının kimliği doğrulandığında rol talebi kimlik sağlayıcısı STS veya Windows Azure Access Control Service (ACS) gibi Federasyon sağlayıcısı tarafından verilebilir.  
   
--   **Rasgele talepleri ClaimsAuthenticationManager kullanarak talep rolü türüne dönüştürme**. ClaimsAuthenticationManager, WIF'nin bir parçası olarak sunulan bir bileşendir. Uygulama başlattıklarında isteklerin kesilmesini sağlar, belirteçleri denetler ve talepleri ekleyerek, değiştirerek veya kaldırarak dönüştürür. Talepleri dönüştürme için ClaimsAuthenticationManager'ı kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: uygulama rol tabanlı erişim denetimi (RBAC) talep kullanan ASP.NET Application Using WIF ve ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
+-   **Rasgele talepleri ClaimsAuthenticationManager kullanarak talep rolü türüne dönüştürme**. ClaimsAuthenticationManager, WIF'nin bir parçası olarak sunulan bir bileşendir. Uygulama başlattıklarında isteklerin kesilmesini sağlar, belirteçleri denetler ve talepleri ekleyerek, değiştirerek veya kaldırarak dönüştürür. Talepleri dönüştürme için ClaimsAuthenticationManager'ı kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: WIF ve ACS kullanarak talep kullanan ASP.NET uygulamasında uygulama rol tabanlı erişim denetimi (RBAC)](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
 -   **SamlSecurityTokenRequirement yapılandırma bölümü kullanılarak bir rol türüyle rasgele talep eşleme**— talep dönüştürmenin burada yapılır bildirim temelli bir yaklaşım yalnızca yapılandırmasını ve kodlama kullanarak gereklidir.  
   
@@ -50,14 +50,14 @@ Bağlı taraf uygulamasında, yetkilendirme kimliği doğrulanmış bir kimliği
 ## <a name="claims-based-authorization"></a>Beyana Dayalı Yetkilendirme  
  Beyana dayalı yetkilendirme, erişim verme veya reddetmeye yönelik yetkilendirme kararının, karar verme beyanlarında yer alan verileri kullanan rasgele mantığı temel aldığı bir yaklaşımdır. RBAC söz konusu olduğunda, kullanılan tek talebin rol türü talep olduğunu hatırlayın. Rol türü talep, kullanıcının belirli role ait olup olmadığını denetlemek için kullanıldı. Beyana dayalı yetkilendirme yaklaşımını kullanarak yetkilendirme kararı verme sürecini anlamak için aşağıdaki adımları göz önünde bulundurun:  
   
-1.  Uygulama, kullanıcının kimliğinin doğrulanmasını gerektiren bir istek alır.  
+1. Uygulama, kullanıcının kimliğinin doğrulanmasını gerektiren bir istek alır.  
   
-2.  WIF, kullanıcıyı kimlik sağlayıcısına yönlendirir, kimliği doğrulandıktan sonra kullanıcıyı temsil eden ve kullanıcı hakkında talepler içeren ilişkili bir güvenlik belirteciyle uygulama isteği yapılır. WIF, bu talepleri kullanıcıyı temsil eden sorumluyla ilişkilendirir.  
+2. WIF, kullanıcıyı kimlik sağlayıcısına yönlendirir, kimliği doğrulandıktan sonra kullanıcıyı temsil eden ve kullanıcı hakkında talepler içeren ilişkili bir güvenlik belirteciyle uygulama isteği yapılır. WIF, bu talepleri kullanıcıyı temsil eden sorumluyla ilişkilendirir.  
   
-3.  Uygulama, talepleri karar mantığı mekanizmasına geçirir. Bu; bellek içi kod, web hizmeti çağrısı, veritabanı sorgusu, gelişmiş bir kural altyapısı veya ClaimsAuthorizationManager kullanımı olabilir.  
+3. Uygulama, talepleri karar mantığı mekanizmasına geçirir. Bu; bellek içi kod, web hizmeti çağrısı, veritabanı sorgusu, gelişmiş bir kural altyapısı veya ClaimsAuthorizationManager kullanımı olabilir.  
   
-4.  Karar mekanizması taleplere göre sonucu hesaplar.  
+4. Karar mekanizması taleplere göre sonucu hesaplar.  
   
-5.  Sonuç true ise erişim verilir, false ise engellenir. Örneğin, kural kullanıcının 21 yaşında veya daha yaşlı olmasını ve Washington eyaletinde yaşamasını gerektirebilir.  
+5. Sonuç true ise erişim verilir, false ise engellenir. Örneğin, kural kullanıcının 21 yaşında veya daha yaşlı olmasını ve Washington eyaletinde yaşamasını gerektirebilir.  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> Uygulamalarınızda beyana dayalı yetkilendirme için karar mantığının alınmasında yararlıdır. ClaimsAuthorizationManager, .NET 4.5'in bir parçası olarak sunulan bir WIF bileşenidir. ClaimsAuthorizationManager, gelen taleplere göre yetkilendirme kararları vermek için gelen istekleri kesmenize ve istediğiniz mantığı uygulamanıza imkan tanır. Bu, yetkilendirme mantığının değiştirilmesi gerektiğinde önemli hale gelir. Bu durumda, ClaimsAuthorizationManager uygulamanın bütünlüğünü etkilemez ve bu nedenle değişikliğin sonucu olarak uygulama hatası oluşma olasılığını azaltır. ClaimsAuthorizationManager, talep tabanlı erişim denetimi uygulamak üzere kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: talep yetkilendirmesi talep kullanan ASP.NET Application Using WIF ve ACS](https://go.microsoft.com/fwlink/?LinkID=247446).
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> Uygulamalarınızda beyana dayalı yetkilendirme için karar mantığının alınmasında yararlıdır. ClaimsAuthorizationManager, .NET 4.5'in bir parçası olarak sunulan bir WIF bileşenidir. ClaimsAuthorizationManager, gelen taleplere göre yetkilendirme kararları vermek için gelen istekleri kesmenize ve istediğiniz mantığı uygulamanıza imkan tanır. Bu, yetkilendirme mantığının değiştirilmesi gerektiğinde önemli hale gelir. Bu durumda, ClaimsAuthorizationManager uygulamanın bütünlüğünü etkilemez ve bu nedenle değişikliğin sonucu olarak uygulama hatası oluşma olasılığını azaltır. ClaimsAuthorizationManager, talep tabanlı erişim denetimi uygulamak üzere kullanma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Uygulama yetkilendirme WIF ve ACS kullanarak talep kullanan ASP.NET uygulamasında talep](https://go.microsoft.com/fwlink/?LinkID=247446).

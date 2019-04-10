@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir görevi ve alt öğelerini iptal etme'
+title: 'Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642837"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324483"
 ---
-# <a name="how-to-cancel-a-task-and-its-children"></a>Nasıl yapılır: Bir görevi ve alt öğelerini iptal etme
+# <a name="how-to-cancel-a-task-and-its-children"></a>Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme
 Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirildiğini gösterir:  
   
-1.  İptal edilebilen bir görevi oluşturmak ve başlatmak.  
+1. İptal edilebilen bir görevi oluşturmak ve başlatmak.  
   
-2.  Kullanıcı temsilcinize ve isteğe bağlı olarak görev örneğine bir iptal belirteci geçirmek.  
+2. Kullanıcı temsilcinize ve isteğe bağlı olarak görev örneğine bir iptal belirteci geçirmek.  
   
-3.  Kullanıcı temsilcinizde iptal belirtecini fark etmek ve buna yanıt vermek.  
+3. Kullanıcı temsilcinizde iptal belirtecini fark etmek ve buna yanıt vermek.  
   
-4.  İsteğe bağlı olarak, çağıran iş parçacığında görevin iptal edildiğini belirlemek.  
+4. İsteğe bağlı olarak, çağıran iş parçacığında görevin iptal edildiğini belirlemek.  
   
  Çağıran iş parçacığı görevi zorla bitirmez; yalnızca iptalin istendiğini bildirir. Görev zaten çalışıyorsa, isteği fark etmek ve uygun bir şekilde karşılık vermek kullanıcı temsilcisinin görevidir. Görev çalışmadan iptal istenirse, kullanıcı temsilcisi asla yürütülmez ve görev nesnesi Canceled durumuna geçer.  
   

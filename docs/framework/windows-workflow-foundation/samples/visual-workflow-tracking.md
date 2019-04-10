@@ -1,15 +1,15 @@
 ---
-title: Görsel iş akışı izleme
+title: Görsel İş Akışı İzleme
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: c89a63ac80b4705fff5c7714e7f40646c5b5d26d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6e87b0ef5a0d6fa97c87c99a63fe0e23c389140c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703588"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296465"
 ---
-# <a name="visual-workflow-tracking"></a>Görsel iş akışı izleme
+# <a name="visual-workflow-tracking"></a>Görsel İş Akışı İzleme
 Bu örnek nasıl izleme uygulaması aracılığıyla hata ayıklama işlevselliğini kullanarak görsel bir iş akışı yazılacağını gösterir [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].
 
 ## <a name="sample-details"></a>Örnek Ayrıntıları
@@ -19,17 +19,17 @@ Bu örnek nasıl izleme uygulaması aracılığıyla hata ayıklama işlevselli�
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1.  Visual Studio 2010'daki örnek dizinden WorkflowSimulator.sln dosyasını açın.
+1. Visual Studio 2010'daki örnek dizinden WorkflowSimulator.sln dosyasını açın.
 
-2.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-3.  Örneği çalıştırmak için CTRL + F5 tuşlarına basın. Bu Workflow.xaml dosyası yeniden barındırılan iş akışı Tasarımcısı penceresinde görüntüler.
+3. Örneği çalıştırmak için CTRL + F5 tuşlarına basın. Bu Workflow.xaml dosyası yeniden barındırılan iş akışı Tasarımcısı penceresinde görüntüler.
 
-4.  Tıklayın **dosya** menü ve select **iş akışı çalıştırma...** .
+4. Tıklayın **dosya** menü ve select **iş akışı çalıştırma...** .
 
-5.  Daha önce açıklandığı gibi şu anda yürütülen etkinlik bildirimi vurgulanır ve izleme kayıtları uygulama penceresinin sağ tarafında görüntülenir.
+5. Daha önce açıklandığı gibi şu anda yürütülen etkinlik bildirimi vurgulanır ve izleme kayıtları uygulama penceresinin sağ tarafında görüntülenir.
 
-6.  İş akışı tamamlandığında, herhangi bir karşılık hangi etkinlik incelemek için izleme kayıtları tıklayabilirsiniz.
+6. İş akışı tamamlandığında, herhangi bir karşılık hangi etkinlik incelemek için izleme kayıtları tıklayabilirsiniz.
 
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

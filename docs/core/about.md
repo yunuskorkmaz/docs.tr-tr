@@ -3,12 +3,12 @@ title: .NET Core hakkında
 description: .NET Core hakkında bilgi edinin.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296413"
 ---
 # <a name="about-net-core"></a>.NET Core hakkında
 
@@ -24,7 +24,7 @@ ms.locfileid: "57675972"
 
 ## <a name="languages"></a>Diller
 
-C#, Visual Basic ve F# diller için .NET Core uygulamaları ve kitaplıkları yazma için kullanılabilir. Bu dil olan ya da dahil olmak üzere Ide'lerle ve sık kullandığınız metin düzenleyicisi tümleştirilebilir [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text ve Vim. Bu tümleştirme, kısmen iyi istemeyenler sağlandığı [OmniSharp](https://www.omnisharp.net/) ve [Ionide](http://ionide.io) projeleri.
+C#, Visual Basic ve F# diller için .NET Core uygulamaları ve kitaplıkları yazma için kullanılabilir. Bu dil olan ya da dahil olmak üzere Ide'lerle ve sık kullandığınız metin düzenleyicisi tümleştirilebilir [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text ve Vim. Bu tümleştirme, kısmen iyi istemeyenler sağlandığı [OmniSharp](https://www.omnisharp.net/) ve [Ionide](http://ionide.io) projeleri.
 
 ## <a name="apis"></a>API'ler
 

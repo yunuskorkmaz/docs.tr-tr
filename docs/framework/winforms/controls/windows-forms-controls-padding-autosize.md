@@ -15,12 +15,12 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: c07afa1e408c2950ea45f206f43125fc9329ad14
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167875"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302471"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>İzlenecek yol: Doldurma, Kenar Boşlukları ve AutoSize Özelliği ile Windows Forms Denetimlerini Düzenleme
 Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek öncelik taşır. **Windows Form Tasarımcısı** , bunu gerçekleştirmek için çok sayıda düzen araçları sağlar. En önemli üç olan <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, ve <xref:System.Windows.Forms.Control.AutoSize%2A> tüm Windows Forms denetimleri var olan özellikleri.  
@@ -60,53 +60,53 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
   
 #### <a name="to-create-the-project"></a>Proje oluşturmak için  
   
-1.  Oluşturma bir **Windows uygulama** adlı proje `LayoutExample`. Daha fazla bilgi için [nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
+1. Oluşturma bir **Windows uygulama** adlı proje `LayoutExample`. Daha fazla bilgi için [nasıl yapılır: Bir Windows Forms uygulaması projesi oluşturma](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
   
-2.  Formda seçin **Windows Form Tasarımcısı**.  
+2. Formda seçin **Windows Form Tasarımcısı**.  
   
 ## <a name="setting-margins-for-your-controls"></a>İçin Denetim kenar boşluklarını ayarlama  
  Varsayılan uzaklığını kullanarak, denetimler arasında ayarlayabilirsiniz <xref:System.Windows.Forms.Control.Margin%2A> özelliği. Bir denetimi taşıdığınızda, başka bir denetim için yeterli kapatın, iki denetim kenar boşluklarını gösteren bir snapline görürsünüz. Taşınan bir denetim kenar boşluklarını tarafından tanımlanan uzaklığı için de yaslanacak.  
   
 #### <a name="to-arrange-controls-on-your-form-using-the-margin-property"></a>Margin özelliği kullanarak, form üzerindeki denetimleri düzenlemek için  
   
-1.  İki <xref:System.Windows.Forms.Button> denetimler **araç kutusu** formunuza.  
+1. İki <xref:System.Windows.Forms.Button> denetimler **araç kutusu** formunuza.  
   
-2.  Birini <xref:System.Windows.Forms.Button> denetler ve bunu diğer yakın temas neredeyse kadar.  
+2. Birini <xref:System.Windows.Forms.Button> denetler ve bunu diğer yakın temas neredeyse kadar.  
   
      Bunlar arasında görünür snapline gözlemleyin. Bu uzaklık iki denetimi toplamıdır <xref:System.Windows.Forms.Control.Margin%2A> değerleri. Bu uzaklık taşıdığınız denetim yapıştırır. Ayrıntılar için bkz [izlenecek yol: Forms dayama çizgileri kullanarak Windows denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
-3.  Değişiklik <xref:System.Windows.Forms.Control.Margin%2A> özelliği genişleterek denetimlerden birini <xref:System.Windows.Forms.Control.Margin%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> 20 özelliği.  
+3. Değişiklik <xref:System.Windows.Forms.Control.Margin%2A> özelliği genişleterek denetimlerden birini <xref:System.Windows.Forms.Control.Margin%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> 20 özelliği.  
   
-4.  Birini <xref:System.Windows.Forms.Button> denetler ve diğer yakın taşıyın.  
+4. Birini <xref:System.Windows.Forms.Button> denetler ve diğer yakın taşıyın.  
   
      Snapline kenar boşluğu değerlerinin toplamı uzun ve denetim diğer denetiminden daha büyük bir uzaklık yaslanıp tanımlama.  
   
-5.  Değişiklik <xref:System.Windows.Forms.Control.Margin%2A> genişleterek seçilen denetimin özellik <xref:System.Windows.Forms.Control.Margin%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.Top%2A> 5 özelliği.  
+5. Değişiklik <xref:System.Windows.Forms.Control.Margin%2A> genişleterek seçilen denetimin özellik <xref:System.Windows.Forms.Control.Margin%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.Top%2A> 5 özelliği.  
   
-6.  Seçili denetimin diğer denetim altına taşıyın ve snapline kısa olup olmadığına bakın. Seçili denetimin diğer denetimi sola taşı ve snapline 4. adımda gözlenen değer saklar gözlemleyin.  
+6. Seçili denetimin diğer denetim altına taşıyın ve snapline kısa olup olmadığına bakın. Seçili denetimin diğer denetimi sola taşı ve snapline 4. adımda gözlenen değer saklar gözlemleyin.  
   
-7.  Her yönlerinin ayarlayabilirsiniz <xref:System.Windows.Forms.Control.Margin%2A> özelliği <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, farklı değerler veya bunları tüm ile aynı değeri ayarlayabilirsiniz <xref:System.Windows.Forms.Padding.All%2A> özelliği.  
+7. Her yönlerinin ayarlayabilirsiniz <xref:System.Windows.Forms.Control.Margin%2A> özelliği <xref:System.Windows.Forms.Padding.Left%2A>, <xref:System.Windows.Forms.Padding.Top%2A>, <xref:System.Windows.Forms.Padding.Right%2A>, <xref:System.Windows.Forms.Padding.Bottom%2A>, farklı değerler veya bunları tüm ile aynı değeri ayarlayabilirsiniz <xref:System.Windows.Forms.Padding.All%2A> özelliği.  
   
 ## <a name="setting-padding-for-your-controls"></a>Doldurma için denetimleri ayarlama  
  Uygulamanız için gereken kesin düzenini elde etmek için denetimlerinizi genellikle alt denetimler içerir. Alt denetimin kenarlığının yakınlık üst Denetimin kenarlık belirtmek istediğinizde, üst denetimin kullanın <xref:System.Windows.Forms.Control.Padding%2A> alt denetimin birlikte özelliği <xref:System.Windows.Forms.Control.Margin%2A> özelliği. <xref:System.Windows.Forms.Control.Padding%2A> Özelliği yakınlık denetimin içeriğini denetlemek için de kullanılır (örneğin, bir <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliği) kenarlıkları için.  
   
 #### <a name="to-arrange-controls-on-your-form-using-padding"></a>Formunuzdaki doldurmayı kullanarak denetimleri düzenlemek için  
   
-1.  Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza.  
+1. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza.  
   
-2.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`.  
+2. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`.  
   
-3.  Değişiklik <xref:System.Windows.Forms.Control.Padding%2A> özelliği genişleterek <xref:System.Windows.Forms.Control.Padding%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> 5 özelliği.  
+3. Değişiklik <xref:System.Windows.Forms.Control.Padding%2A> özelliği genişleterek <xref:System.Windows.Forms.Control.Padding%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> 5 özelliği.  
   
      Yeni doldurma yer sağlamak için denetimi genişletir.  
   
-4.  Sürükleme bir <xref:System.Windows.Forms.GroupBox> denetimi **araç kutusu** formunuza. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.GroupBox> denetimi. Konum <xref:System.Windows.Forms.Button> ile sağ alt köşesindeki biter denetlemesini <xref:System.Windows.Forms.GroupBox> denetimi.  
+4. Sürükleme bir <xref:System.Windows.Forms.GroupBox> denetimi **araç kutusu** formunuza. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.GroupBox> denetimi. Konum <xref:System.Windows.Forms.Button> ile sağ alt köşesindeki biter denetlemesini <xref:System.Windows.Forms.GroupBox> denetimi.  
   
      Görünür dayama çizgileri gözlemleyin <xref:System.Windows.Forms.Button> denetim yaklaştığında alt ve sağ kenarları <xref:System.Windows.Forms.GroupBox> denetimi. Bu dayama çizgileri karşılık <xref:System.Windows.Forms.Control.Margin%2A> özelliği <xref:System.Windows.Forms.Button>.  
   
-5.  Değişiklik <xref:System.Windows.Forms.GroupBox> denetimin <xref:System.Windows.Forms.Control.Padding%2A> genişleterek özelliği <xref:System.Windows.Forms.Control.Padding%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> 20 özelliği.  
+5. Değişiklik <xref:System.Windows.Forms.GroupBox> denetimin <xref:System.Windows.Forms.Control.Padding%2A> genişleterek özelliği <xref:System.Windows.Forms.Control.Padding%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> 20 özelliği.  
   
-6.  Seçin <xref:System.Windows.Forms.Button> denetimine <xref:System.Windows.Forms.GroupBox> denetlemek ve ortasına doğru taşıma <xref:System.Windows.Forms.GroupBox>.  
+6. Seçin <xref:System.Windows.Forms.Button> denetimine <xref:System.Windows.Forms.GroupBox> denetlemek ve ortasına doğru taşıma <xref:System.Windows.Forms.GroupBox>.  
   
      Dayama çizgileri kenarlıklarını daha büyük bir uzaklık görünür <xref:System.Windows.Forms.GroupBox> denetimi. Bu uzaklık toplamıdır <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Margin%2A> özelliği ve <xref:System.Windows.Forms.GroupBox> denetimin <xref:System.Windows.Forms.Control.Padding%2A> özelliği.  
   
@@ -117,29 +117,29 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
   
 #### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>AutoSize özelliği kullanarak, bir form üzerinde denetimleri düzenlemek için  
   
-1.  Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza.  
+1. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza.  
   
-2.  Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`.  
+2. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`.  
   
-3.  Değişiklik <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliğini "**bu düğmeye sahip bir uzun dize metin özelliğini**."  
+3. Değişiklik <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliğini "**bu düğmeye sahip bir uzun dize metin özelliğini**."  
   
      Değişiklik yaparsanız <xref:System.Windows.Forms.Button> denetim kendisini yeni metin sığacak şekilde yeniden boyutlandırır.  
   
-4.  Başka bir sürükleyin <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza.  
+4. Başka bir sürükleyin <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza.  
   
-5.  Değişiklik <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliğini "**bu düğme metin özelliğini uzun bir dize içeriyor.**"  
+5. Değişiklik <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliğini "**bu düğme metin özelliğini uzun bir dize içeriyor.**"  
   
      Değişiklik yaparsanız <xref:System.Windows.Forms.Button> denetimi değil yeniden boyutlandırma kendisi ve metin ile denetimin sağ kenarı kırpılır.  
   
-6.  Değişiklik <xref:System.Windows.Forms.Control.Padding%2A> özelliği genişleterek <xref:System.Windows.Forms.Control.Padding%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> 5 özelliği.  
+6. Değişiklik <xref:System.Windows.Forms.Control.Padding%2A> özelliği genişleterek <xref:System.Windows.Forms.Control.Padding%2A> girişi **özellikleri** penceresi ve ayarı <xref:System.Windows.Forms.Padding.All%2A> 5 özelliği.  
   
      Denetimin iç metindeki tüm dört yüzüne kırpılır.  
   
-7.  Değişiklik <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`.  
+7. Değişiklik <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`.  
   
      <xref:System.Windows.Forms.Button> Denetim kendisini dizenin tamamını kapsayacak şekilde yeniden boyutlandırır. Metin etrafına doldurma ayrıca, eklenmiş neden <xref:System.Windows.Forms.Button> tüm dört yönde genişletmek için denetimi.  
   
-8.  Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza. Formun sağ alt köşenin yakınında bulunan konumlandırın.  
+8. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** formunuza. Formun sağ alt köşenin yakınında bulunan konumlandırın.  
   
 9. Değiştirin <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`.  
   
@@ -154,24 +154,24 @@ Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek önce
   
 #### <a name="to-use-the-autosizemode-property"></a>AutoSizeMode özelliği kullanmak için  
   
-1.  Sürükleme bir <xref:System.Windows.Forms.Panel> denetimi **araç kutusu** formunuza.  
+1. Sürükleme bir <xref:System.Windows.Forms.Panel> denetimi **araç kutusu** formunuza.  
   
-2.  Değerini <xref:System.Windows.Forms.Panel> denetimin <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`.  
+2. Değerini <xref:System.Windows.Forms.Panel> denetimin <xref:System.Windows.Forms.Control.AutoSize%2A> özelliğini `true`.  
   
-3.  Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.Panel> denetimi.  
+3. Sürükleme bir <xref:System.Windows.Forms.Button> denetimi **araç kutusu** içine <xref:System.Windows.Forms.Panel> denetimi.  
   
-4.  Bir yerde <xref:System.Windows.Forms.Button> sağ alt köşenin yakınında bulunan denetim <xref:System.Windows.Forms.Panel> denetimi.  
+4. Bir yerde <xref:System.Windows.Forms.Button> sağ alt köşenin yakınında bulunan denetim <xref:System.Windows.Forms.Panel> denetimi.  
   
-5.  Seçin <xref:System.Windows.Forms.Panel> denetlemek ve sağ alt boyutlandırma tutamacı alın. Yeniden boyutlandırma <xref:System.Windows.Forms.Panel> büyük ve küçük olacak şekilde denetim.  
+5. Seçin <xref:System.Windows.Forms.Panel> denetlemek ve sağ alt boyutlandırma tutamacı alın. Yeniden boyutlandırma <xref:System.Windows.Forms.Panel> büyük ve küçük olacak şekilde denetim.  
   
     > [!NOTE]
     >  Özgürce boyutlandırabilirsiniz <xref:System.Windows.Forms.Panel> denetimidir, ancak olamaz boyutunu, konumunu daha küçük <xref:System.Windows.Forms.Button> denetimin sağ alt köşedeki. Bu davranış, varsayılan değeri tarafından belirtilen `AutoSizeMode` özelliğinin <xref:System.Windows.Forms.AutoSizeMode.GrowOnly>.  
   
-6.  Değerini <xref:System.Windows.Forms.Panel> denetimin `AutoSizeMode` özelliğini <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>.  
+6. Değerini <xref:System.Windows.Forms.Panel> denetimin `AutoSizeMode` özelliğini <xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>.  
   
      <xref:System.Windows.Forms.Panel> Denetim boyutları çevreleyen kendisine <xref:System.Windows.Forms.Button> denetimi. Yeniden boyutlandıramazsınız <xref:System.Windows.Forms.Panel> denetimi.  
   
-7.  Sürükleme <xref:System.Windows.Forms.Button> denetimi sol üst köşesinde doğru <xref:System.Windows.Forms.Panel> denetimi.  
+7. Sürükleme <xref:System.Windows.Forms.Button> denetimi sol üst köşesinde doğru <xref:System.Windows.Forms.Panel> denetimi.  
   
      <xref:System.Windows.Forms.Panel> Denetimi yeniden boyutlandırır için <xref:System.Windows.Forms.Button> denetiminin yeni konumu.  
   

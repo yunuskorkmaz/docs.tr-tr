@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Genel-özel anahtar çifti oluşturma'
+title: 'Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce346bfe0c20e94673009adb0134fbaab62cf551
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71eaaa85b8bd287c37f59116e75cf99b030d63ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653924"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297843"
 ---
-# <a name="how-to-create-a-public-private-key-pair"></a>Nasıl yapılır: Genel-özel anahtar çifti oluşturma
+# <a name="how-to-create-a-public-private-key-pair"></a>Nasıl yapılır: Genel-Özel Anahtar Çifti Oluşturma
 
 Bir derlemeyi katı bir adla imzalamak için ortak/özel anahtar çifti olmalıdır. Bu ortak ve özel şifreleme anahtar çifti, derleme sırasında bir tanımlayıcı adlı bütünleştirilmiş kod oluşturmak için kullanılır. Anahtar çiftini kullanarak oluşturabileceğiniz [tanımlayıcı ad Aracı (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md). Anahtar çifti dosyaları .snk uzantı genellikle sahiptir.
 
@@ -33,7 +33,7 @@ Bir derlemeyi katı bir adla imzalamak için ortak/özel anahtar çifti olmalıd
 
 ## <a name="to-create-a-key-pair"></a>Bir anahtar çifti oluşturmak için
 
-1.  Komut satırında, aşağıdaki komutu yazın:
+1. Komut satırında, aşağıdaki komutu yazın:
 
      **sn – k** \< *dosya adı*>
 
@@ -69,4 +69,4 @@ sn -p keypair.snk public.snk
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Tanımlayıcı Adlı Derlemeler Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

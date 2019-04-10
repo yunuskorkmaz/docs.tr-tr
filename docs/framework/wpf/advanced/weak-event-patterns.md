@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139262"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316173"
 ---
 # <a name="weak-event-patterns"></a>Zayıf Olay Desenleri
 Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına bağlı dinleyici nesne ile koordinasyon halinde edilmeyeceği olduğunu mümkündür. Bu durum, bellek sızıntılarının neden olabilir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] belirli olaylar için adanmış yönetici sınıfı sağlayarak ve bu olayın dinleyicileri üzerinde arabirimi uygulama bu sorunu gidermek için kullanılabilecek bir tasarım desenini tanıtır. Bu tasarım deseni olarak bilinen *zayıf olay deseni*.  
@@ -50,11 +50,11 @@ Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına b
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Mevcut bir zayıf olay Manager sınıfını kullanma  
   
-1.  Mevcut bir zayıf olay Yöneticisi bulunamıyor.  
+1. Mevcut bir zayıf olay Yöneticisi bulunamıyor.  
   
      WPF ile birlikte gelen zayıf olay yöneticileri bir listesi için bkz: devralma hiyerarşisinde <xref:System.Windows.WeakEventManager> sınıfı.  
   
-2.  Normal olay birleştirme yerine yeni zayıf olay Yöneticisi'ni kullanın.  
+2. Normal olay birleştirme yerine yeni zayıf olay Yöneticisi'ni kullanın.  
   
      Örneğin, kodunuz bir olaya abone olmak için şu desene kullanıyorsa:  
   
@@ -82,7 +82,7 @@ Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına b
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>Genel zayıf olay Manager sınıfını kullanma  
   
-1.  Genel <xref:System.Windows.WeakEventManager%602> sınıfı yerine normal olay birleştirme.  
+1. Genel <xref:System.Windows.WeakEventManager%602> sınıfı yerine normal olay birleştirme.  
   
      Kullanırken <xref:System.Windows.WeakEventManager%602> olay dinleyicileri kaydetmek için olay kaynağı sağlamanız ve <xref:System.EventArgs> türü olarak sınıfı ve çağrı için tür parametreleri <xref:System.Windows.WeakEventManager%602.AddHandler%2A> aşağıdaki kodda gösterildiği gibi:  
   
@@ -92,19 +92,19 @@ Uygulamalar, olay kaynaklarına bağlı işleyicileri işleyicinin kaynağına b
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>Özel bir zayıf olay Yöneticisi sınıfı oluşturma  
   
-1.  Aşağıdaki sınıf şablonu projenize kopyalayın.  
+1. Aşağıdaki sınıf şablonu projenize kopyalayın.  
   
      Bu sınıf devraldığı <xref:System.Windows.WeakEventManager> sınıfı.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  Değiştirin `SomeEventWeakEventManager` kendi adıyla adı.  
+2. Değiştirin `SomeEventWeakEventManager` kendi adıyla adı.  
   
-3.  Etkinliğiniz için karşılık gelen adları ile daha önce açıklanan üç adlarını değiştirin. (`SomeEvent`, `EventSource`, ve `SomeEventEventArgs`)  
+3. Etkinliğiniz için karşılık gelen adları ile daha önce açıklanan üç adlarını değiştirin. (`SomeEvent`, `EventSource`, ve `SomeEventEventArgs`)  
   
-4.  Zayıf olay manager sınıfı görünürlüğünü (Genel / iç / özel) aynı görünürlük yönettiği olayı olarak ayarlayın.  
+4. Zayıf olay manager sınıfı görünürlüğünü (Genel / iç / özel) aynı görünürlük yönettiği olayı olarak ayarlayın.  
   
-5.  Normal olay birleştirme yerine yeni zayıf olay Yöneticisi'ni kullanın.  
+5. Normal olay birleştirme yerine yeni zayıf olay Yöneticisi'ni kullanın.  
   
      Örneğin, kodunuz bir olaya abone olmak için şu desene kullanıyorsa:  
   

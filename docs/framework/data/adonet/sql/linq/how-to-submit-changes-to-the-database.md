@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: 572c4427ada06701c5982770ae476bd1c6c2b13a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082548"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326391"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>Nasıl yapılır: Veritabanına Değişiklikleri Gönderme
 Nesnelerinizi yaptığınız kaç tane değişiklik bağımsız olarak yalnızca bellek içi çoğaltmalar için değişiklik yapılmaz. Veritabanındaki gerçek veriler için hiçbir değişiklik yaptınız. Açıkça çağırmak kadar değişikliklerinizi sunucusuna iletilmez <xref:System.Data.Linq.DataContext.SubmitChanges%2A> üzerinde <xref:System.Data.Linq.DataContext>.  
   
  Bu çağrı yaptığınızda <xref:System.Data.Linq.DataContext> eşdeğer SQL komutları ile değişikliklerinizi çevirmek çalışır. Bu eylemler geçersiz kılmak için kendi özel mantığı kullanabilirsiniz, ancak gönderme sırası, bir hizmet tarafından düzenlenen <xref:System.Data.Linq.DataContext> olarak bilinen *işlemci değiştirme*. Olayların sırası aşağıdaki gibidir:  
   
-1.  Çağırdığınızda <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bilinen nesne yeni örnekleri kendisine eklenmiş olan olup olmadığını belirlemek için inceler. Aksi halde, bu yeni örnekler izlenen nesneler kümesine eklenir.  
+1. Çağırdığınızda <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bilinen nesne yeni örnekleri kendisine eklenmiş olan olup olmadığını belirlemek için inceler. Aksi halde, bu yeni örnekler izlenen nesneler kümesine eklenir.  
   
-2.  Bekleyen değişiklikleri olan tüm nesnelerin dizisini nesneleri aralarındaki bağımlılıkları göre sıralanır. Değişiklikleri diğer nesnelerine bağımlı nesneler bağımlılıklarını sonra sıralanamadı.  
+2. Bekleyen değişiklikleri olan tüm nesnelerin dizisini nesneleri aralarındaki bağımlılıkları göre sıralanır. Değişiklikleri diğer nesnelerine bağımlı nesneler bağımlılıklarını sonra sıralanamadı.  
   
-3.  Gerçek değişiklikleri hemen iletilmeden önce [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tek tek komut dizisi kapsülleyen bir hareket başlatır.  
+3. Gerçek değişiklikleri hemen iletilmeden önce [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tek tek komut dizisi kapsülleyen bir hareket başlatır.  
   
-4.  Nesnelere değişiklikleri çevrilmiş birer birer SQL komutları ve sunucuya gönderilen.  
+4. Nesnelere değişiklikleri çevrilmiş birer birer SQL komutları ve sunucuya gönderilen.  
   
  Bu noktada durdurmak gönderme işlemi veritabanı tarafından algılanan hataları neden ve bir özel durum oluşturulur. Veritabanında yapılan tüm değişiklikler geri hiçbir gönderimler hiç olmamış gibi alınır. <xref:System.Data.Linq.DataContext> Hala yapılan tüm değişikliklerin tam kayıt içeriyor. Bu nedenle sorun ve arama düzeltileceği deneyebilirsiniz <xref:System.Data.Linq.DataContext.SubmitChanges%2A> yeniden, aşağıdaki kod örneğinde olduğu gibi.  
   

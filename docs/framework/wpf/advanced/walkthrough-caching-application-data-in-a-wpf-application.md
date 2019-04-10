@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma'
+title: 'İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 886a436f845aa4ba9662e75cbc9e534e915a4cfa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361180"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314405"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanızı sağlar. Verileri yeniden erişildiğinde uygulamaları özgün kaynaktan almak yerine önbellekten veri alabilirsiniz. Bu, performansı ve ölçeklenebilirliği artırabilir. Ayrıca, önbelleğe alma, veri kaynağının geçici olarak devre dışı olduğunda yaptığı veri yok.
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Önbelleğe almayı kullanmanızı sağlar sınıfını sağlar [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] uygulamalar. Bu sınıfların bulunan <xref:System.Runtime.Caching> ad alanı.
@@ -56,24 +56,24 @@ ms.locfileid: "57361180"
 
 #### <a name="to-create-a-wpf-application"></a>Bir WPF uygulaması oluşturmak için
 
-1.  Visual Studio’yu çalıştırın.
+1. Visual Studio’yu çalıştırın.
 
-2.  İçinde **dosya** menüsünde tıklatın **yeni**ve ardından **yeni proje**.
+2. İçinde **dosya** menüsünde tıklatın **yeni**ve ardından **yeni proje**.
 
      **Yeni proje** iletişim kutusu görüntülenir.
 
-3.  Altında **yüklü şablonlar**, kullanmak istediğiniz programlama dili seçin (**Visual Basic** veya **Visual C#**).
+3. Altında **yüklü şablonlar**, kullanmak istediğiniz programlama dili seçin (**Visual Basic** veya **Visual C#**).
 
-4.  İçinde **yeni proje** iletişim kutusunda **WPF uygulaması**.
+4. İçinde **yeni proje** iletişim kutusunda **WPF uygulaması**.
 
     > [!NOTE]
     >  Görmüyorsanız, **WPF uygulaması** şablon sürümünü hedefleme emin [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , WPF destekler. İçinde **yeni proje** iletişim kutusunda [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] listeden.
 
-5.  İçinde **adı** metin kutusunda, projeniz için bir ad girin. Örneğin, girdiğiniz **WPFCaching**.
+5. İçinde **adı** metin kutusunda, projeniz için bir ad girin. Örneğin, girdiğiniz **WPFCaching**.
 
-6.  Seçin **çözüm için dizin oluştur** onay kutusu.
+6. Seçin **çözüm için dizin oluştur** onay kutusu.
 
-7.  **Tamam**'ı tıklatın.
+7. **Tamam**'ı tıklatın.
 
      WPF Tasarımcısı açılır **tasarım** görüntüleyin ve MainWindow.xaml dosyayı görüntüler. Visual Studio oluşturur **Projem** klasörünü, Application.xaml dosyasını ve MainWindow.xaml dosyasını.
 
@@ -87,27 +87,27 @@ ms.locfileid: "57361180"
 
 #### <a name="to-change-the-target-net-framework-in-visual-basic"></a>Hedef .NET Framework'ü Visual Basic'te değiştirmek için
 
-1.  İçinde **Çözüm Gezgini**proje adına sağ tıklayın ve ardından **özellikleri**.
+1. İçinde **Çözüm Gezgini**proje adına sağ tıklayın ve ardından **özellikleri**.
 
      Uygulama için Özellikler penceresi görüntülenir.
 
-2.  Tıklayın **derleme** sekmesi.
+2. Tıklayın **derleme** sekmesi.
 
-3.  Pencerenin alt kısmında tıklayın **Gelişmiş derleme seçenekleri...** .
+3. Pencerenin alt kısmında tıklayın **Gelişmiş derleme seçenekleri...** .
 
      **Gelişmiş derleyici ayarları** iletişim kutusu görüntülenir.
 
-4.  İçinde **hedef Framework'ü (tüm yapılandırmaları)** listesinden [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Seçmeyin [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. İçinde **hedef Framework'ü (tüm yapılandırmaları)** listesinden [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Seçmeyin [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
 
-5.  **Tamam**'ı tıklatın.
+5. **Tamam**'ı tıklatın.
 
      **Hedef Framework değişikliği** iletişim kutusu görüntülenir.
 
-6.  İçinde **hedef Framework değişikliği** iletişim kutusu, tıklayın **Evet**.
+6. İçinde **hedef Framework değişikliği** iletişim kutusu, tıklayın **Evet**.
 
      Proje kapatıldı ve sonra yeniden açılmasını.
 
-7.  Aşağıdaki adımları izleyerek önbelleğe alma derlemesine bir başvuru ekleyin:
+7. Aşağıdaki adımları izleyerek önbelleğe alma derlemesine bir başvuru ekleyin:
 
     1.  İçinde **Çözüm Gezgini**, proje adına sağ tıklayın ve ardından **Başvuru Ekle**.
 
@@ -115,15 +115,15 @@ ms.locfileid: "57361180"
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>' % S'hedef .NET Framework'ü Visual C# projesinde değiştirmek için
 
-1.  İçinde **Çözüm Gezgini**, proje adına sağ tıklayın ve ardından **özellikleri**.
+1. İçinde **Çözüm Gezgini**, proje adına sağ tıklayın ve ardından **özellikleri**.
 
      Uygulama için Özellikler penceresi görüntülenir.
 
-2.  Tıklayın **uygulama** sekmesi.
+2. Tıklayın **uygulama** sekmesi.
 
-3.  İçinde **hedef Framework'ü** listesinden [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Seçmeyin **.NET Framework 4 istemci profili**.)
+3. İçinde **hedef Framework'ü** listesinden [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Seçmeyin **.NET Framework 4 istemci profili**.)
 
-4.  Aşağıdaki adımları izleyerek önbelleğe alma derlemesine bir başvuru ekleyin:
+4. Aşağıdaki adımları izleyerek önbelleğe alma derlemesine bir başvuru ekleyin:
 
     1.  Sağ **başvuruları** klasörünü ve ardından **Başvuru Ekle**.
 
@@ -134,11 +134,11 @@ ms.locfileid: "57361180"
 
 #### <a name="to-add-a-button-control"></a>Bir düğme denetimi eklemek için
 
-1.  İçinde **Çözüm Gezgini**, MainWindow.xaml dosyasını açmak için çift tıklatın.
+1. İçinde **Çözüm Gezgini**, MainWindow.xaml dosyasını açmak için çift tıklatın.
 
-2.  Gelen **araç kutusu**altında **ortak WPF denetimleri**, sürükleyin bir `Button` denetimini `MainWindow` penceresi.
+2. Gelen **araç kutusu**altında **ortak WPF denetimleri**, sürükleyin bir `Button` denetimini `MainWindow` penceresi.
 
-3.  İçinde **özellikleri** penceresinde `Content` özelliği `Button` denetimini **önbelleğe alma**.
+3. İçinde **özellikleri** penceresinde `Content` özelliği `Button` denetimini **önbelleğe alma**.
 
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>Önbellek başlatılıyor ve bir giriş önbelleğe alma
  Sonra aşağıdaki görevleri gerçekleştirmek için kod ekleyeceksiniz:
@@ -153,9 +153,9 @@ ms.locfileid: "57361180"
 
 #### <a name="to-create-the-cache-object"></a>Önbellek nesnesi oluşturmak için
 
-1.  MainWindow.xaml.cs veya MainWindow.Xaml.vb dosyasında bir olay işleyicisi oluşturmak için eklediğiniz düğmeyi çift tıklatın.
+1. MainWindow.xaml.cs veya MainWindow.Xaml.vb dosyasında bir olay işleyicisi oluşturmak için eklediğiniz düğmeyi çift tıklatın.
 
-2.  (Önce sınıf bildiriminin) dosyasının en üstüne aşağıdakileri ekleyin `Imports` (Visual Basic) veya `using` deyimleri (C#):
+2. (Önce sınıf bildiriminin) dosyasının en üstüne aşağıdakileri ekleyin `Imports` (Visual Basic) veya `using` deyimleri (C#):
 
     ```csharp
     using System.Runtime.Caching;
@@ -167,7 +167,7 @@ ms.locfileid: "57361180"
     Imports System.IO
     ```
 
-3.  Olay işleyicisi, önbellek nesnesi oluşturmak için aşağıdaki kodu ekleyin:
+3. Olay işleyicisi, önbellek nesnesi oluşturmak için aşağıdaki kodu ekleyin:
 
     ```csharp
     ObjectCache cache = MemoryCache.Default;
@@ -179,7 +179,7 @@ ms.locfileid: "57361180"
 
      <xref:System.Runtime.Caching.ObjectCache> Bir bellek içi nesne önbelleği sağlayan yerleşik bir sınıfı.
 
-4.  Adlı bir önbellek girdisi içeriğini okumak için aşağıdaki kodu ekleyin `filecontents`:
+4. Adlı bir önbellek girdisi içeriğini okumak için aşağıdaki kodu ekleyin `filecontents`:
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ ms.locfileid: "57361180"
     string fileContents = cache["filecontents"] as string;
     ```
 
-5.  Önbellek girdisi adlı olup olmadığını denetlemek için aşağıdaki kodu ekleyin `filecontents` bulunmaktadır:
+5. Önbellek girdisi adlı olup olmadığını denetlemek için aşağıdaki kodu ekleyin `filecontents` bulunmaktadır:
 
     ```vb
     If fileContents Is Nothing Then
@@ -206,7 +206,7 @@ ms.locfileid: "57361180"
 
      Belirtilen önbellek girdisi yok, metin dosyası okuma ve önbelleğe bir önbellek girdisi ekleyin.
 
-6.  İçinde `if/then` engelleme, yeni bir oluşturmak için aşağıdaki kodu ekleyin <xref:System.Runtime.Caching.CacheItemPolicy> önbellek girdisi 10 saniye sonra süresi dolar belirten bir nesne.
+6. İçinde `if/then` engelleme, yeni bir oluşturmak için aşağıdaki kodu ekleyin <xref:System.Runtime.Caching.CacheItemPolicy> önbellek girdisi 10 saniye sonra süresi dolar belirten bir nesne.
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -220,7 +220,7 @@ ms.locfileid: "57361180"
 
      Çıkarma veya sona erme bilgi sağlanmazsa, varsayılan değer <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, önbellek girişlerinin başka bir deyişle, süresi dolmayacak tabanlı yalnızca mutlak bir saat. Yalnızca bellek baskısı olduğunda, bunun yerine, önbellek girişlerinin süresinin. En iyi uygulama, her zaman açık mutlak ya da bir olmaadığını sağlamanız gerekir.
 
-7.  İçinde `if/then` engelleme ve önceki adımda eklediğiniz kodun, izlemek ve metin dosyasının yolu koleksiyona eklemek istediğiniz dosya yolları için bir koleksiyon oluşturmak için aşağıdaki kodu ekleyin:
+7. İçinde `if/then` engelleme ve önceki adımda eklediğiniz kodun, izlemek ve metin dosyasının yolu koleksiyona eklemek istediğiniz dosya yolları için bir koleksiyon oluşturmak için aşağıdaki kodu ekleyin:
 
     ```vb
     Dim filePaths As New List(Of String)()
@@ -235,7 +235,7 @@ ms.locfileid: "57361180"
     > [!NOTE]
     >  Kullanmak istediğiniz metin dosyasını değilse `c:\cache\cacheText.txt`, metin dosyasının bulunduğu kullanmak istediğiniz yolu belirtin.
 
-8.  Önceki adımda eklediğiniz koddan sonra yeni bir eklemek için aşağıdaki kodu ekleyin <xref:System.Runtime.Caching.HostFileChangeMonitor> değişiklik koleksiyonuna nesnesi için önbellek girdisi izler:
+8. Önceki adımda eklediğiniz koddan sonra yeni bir eklemek için aşağıdaki kodu ekleyin <xref:System.Runtime.Caching.HostFileChangeMonitor> değişiklik koleksiyonuna nesnesi için önbellek girdisi izler:
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -288,31 +288,31 @@ ms.locfileid: "57361180"
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>WPF uygulamasında önbelleğe almayı test etme için
 
-1.  Uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın.
+1. Uygulamayı çalıştırmak için CTRL + F5 tuşlarına basın.
 
      `MainWindow` Penceresi görüntülenir.
 
-2.  Tıklayın **önbelleğe alma**.
+2. Tıklayın **önbelleğe alma**.
 
      Önbelleğe alınmış içeriği metin dosyasından bir ileti kutusunda görüntülenir. Zaman damgası dosya çubuğunda dikkat edin.
 
-3.  İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.
+3. İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.
 
      Zaman damgası değiştirilmez. Bu, önbelleğe alınmış içeriği görüntülendiğini gösterir.
 
-4.  10 saniye veya daha fazla bekleyin ve ardından **önbelleğe alma** yeniden.
+4. 10 saniye veya daha fazla bekleyin ve ardından **önbelleğe alma** yeniden.
 
      Bu süre, yeni bir zaman damgası gösterilir. Bu ilke sona önbellek girişi sağlar ve yeni önbelleğe alınmış içerikleri görüntülendiğini gösterir.
 
-5.  Oluşturduğunuz bir metin dosyasını bir metin düzenleyicisinde açın. Henüz herhangi bir değişiklik yapmayın.
+5. Oluşturduğunuz bir metin dosyasını bir metin düzenleyicisinde açın. Henüz herhangi bir değişiklik yapmayın.
 
-6.  İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.
+6. İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.
 
      Zaman damgası yeniden dikkat edin.
 
-7.  Metin dosyası için bir değişiklik yapın ve ardından dosyayı kaydedin.
+7. Metin dosyası için bir değişiklik yapın ve ardından dosyayı kaydedin.
 
-8.  İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.
+8. İleti kutusunu kapatmak ve ardından **önbelleğe alma** yeniden.
 
      Bu ileti kutusu güncelleştirilmiş içerikleri metin dosyasını ve yeni bir zaman damgası içerir. Bu dosya değiştirildiğinde mutlak zaman aşımı süresi dolmamış olsa da ana bilgisayar dosya değişikliği izleme önbellek girdisi çıkarılacak olduğunu gösterir.
 

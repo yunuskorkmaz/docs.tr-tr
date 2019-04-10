@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141394"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306397"
 ---
 # <a name="runtime-profiling"></a>Çalışma Zamanı Profili Oluşturma
 Profil oluşturma tüm geliştirme ve dağıtım senaryosunda performans verilerini toplama yöntemidir. Bu bölüm, geliştiriciler ve uygulama performansı hakkında bilgi toplamak isteyen sistem yöneticilerine yöneliktir.  
@@ -28,19 +28,19 @@ Profil oluşturma tüm geliştirme ve dağıtım senaryosunda performans veriler
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Windows Vista ve sonraki sürümler Perfmon.exe çalıştırmak için  
   
-1.  Komut isteminde **perfmon**. **Performans İzleyicisi** Konsolu görünür.  
+1. Komut isteminde **perfmon**. **Performans İzleyicisi** Konsolu görünür.  
   
-2.  İçinde **izleme araçları** klasörünü tıklatın **Performans İzleyicisi**.  
+2. İçinde **izleme araçları** klasörünü tıklatın **Performans İzleyicisi**.  
   
-3.  Performans İzleyicisi araç çubuğunda **Ekle** ise simgesi (artı işareti) sunar. Mevcut değilse İzleyicisi penceresinde sağ tıklayıp **Sayaç Ekle** seçeneği.  
+3. Performans İzleyicisi araç çubuğunda **Ekle** ise simgesi (artı işareti) sunar. Mevcut değilse İzleyicisi penceresinde sağ tıklayıp **Sayaç Ekle** seçeneği.  
   
      Bu açılır **Sayaç Ekle** iletişim kutusu. **Kullanılabilir sayaçları** liste kutusu kullanılabilir performans nesneleri görüntüler. Önceden tanımlanmış nesneler için bellek yönetimi dahil olmak üzere, .NET Framework uygulamaları için bir dizi vardır (**.NET CLR bellek**), birlikte çalışabilirlik (**.NET CLR Interop**), özel durum işleme (**.NET CLR özel durumları**) ve çoklu iş parçacığı kullanımı (**.NET CLR LocksAndThreads**). Her performans nesnesi bireysel performans sayaçları içerir. Performans İzleyicisi'nde kullanılabilen performans sayaçlarının listesi için bkz. [performans sayaçları](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
-4.  Bunu destekleyen tek performans sayaçları listesini görüntülemek için bir performans nesnesinin adının yanındaki onay kutusunu seçin.  
+4. Bunu destekleyen tek performans sayaçları listesini görüntülemek için bir performans nesnesinin adının yanındaki onay kutusunu seçin.  
   
-5.  Görüntülemek istediğiniz performans sayacı'a tıklayın.  
+5. Görüntülemek istediğiniz performans sayacı'a tıklayın.  
   
-6.  İçinde **seçili nesne örneklerini** liste kutusunda, tıklayın  **\<tüm örnekleri >** genel olarak ortak dil çalışma zamanı performans sayacı izlemek istediğinizi belirtmek için (diğer bir deyişle, bir Sistem genelinde bir temele).  
+6. İçinde **seçili nesne örneklerini** liste kutusunda, tıklayın  **\<tüm örnekleri >** genel olarak ortak dil çalışma zamanı performans sayacı izlemek istediğinizi belirtmek için (diğer bir deyişle, bir Sistem genelinde bir temele).  
   
      -veya-  
   

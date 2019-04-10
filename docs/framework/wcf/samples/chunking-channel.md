@@ -2,12 +2,12 @@
 title: Öbekleme Kanalı
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: fafaef5f9e255adc9d8ff50748c7c82a7888c4cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073825"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302705"
 ---
 # <a name="chunking-channel"></a>Öbekleme Kanalı
 Windows Communication Foundation (WCF) kullanarak büyük iletileri gönderirken, genellikle bu iletileri arabelleğe almak için kullanılan bellek miktarını sınırlamak için tercih edilir. Olası bir çözüm (toplu veri gövdesinde olduğunu varsayarak) ileti akışı sağlamaktır. Ancak bazı protokoller, iletinin tamamı arabelleğe alma gerektirir. Güvenilir Mesajlaşma ve güvenlik gibi iki örnek verilebilir. Başka bir olası öbekleri adlı küçük iletilere büyük ileti ayırmak, söz konusu öbekleri bir öbek teker teker gönderilir ve alıcı tarafında büyük ileti yeniden oluşturmak için bir çözümdür. Uygulama bu parçalama yapabilirsiniz ve serbest Öbekleme veya özel bir kanalda yapmak için kullanabilirsiniz. Kümeleme kanal örnek nasıl bir özel protokolü veya katmanlı kanal Öbekleme ve büyük iletilerin XML'deki Öbekleme yapmak için kullanılabileceğini gösterir.  
@@ -203,11 +203,11 @@ as the ChunkingStart message.
   
  Aşağı, sonraki düzeyde `ChunkingChannel` kümeleme Protokolü uygulamak için çeşitli bileşenleri kullanır. Gönderme tarafında, özel bir kanal kullanan <xref:System.Xml.XmlDictionaryWriter> adlı `ChunkingWriter` gerçek Öbekleme yapar. `ChunkingWriter` İç kanal öbekleri doğrudan göndermek için kullanır. Özel bir kullanarak `XmlDictionaryWriter` büyük iletisinin gövdesi, özgün yazıldığı gibi öbekleri göndermemizi sağlar. Bu, biz özgün iletinin tamamı arabellek yok anlamına gelir.  
   
- ![Öbekleme kanalı](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
+ ![Kümeleme kanal gösteren diyagram mimarisi gönderin.](./media/chunking-channel/chunking-channel-send.gif)  
   
  Alma tarafında `ChunkingChannel` iç kanal gelen iletileri alır ve bunları özel bir uygulamalı <xref:System.Xml.XmlDictionaryReader> adlı `ChunkingReader`, gelen öbek özgün iletiden reconstitutes. `ChunkingChannel` Bu sarmalar `ChunkingReader` özel `Message` adlı uygulama `ChunkingMessage` ve bu iletiyi yukarıdaki katmana döndürür. Bu birleşimi `ChunkingReader` ve `ChunkingMessage` tüm özgün ileti gövdesini arabelleğe alıp zorunda kalmak yerine katmanın üzerinde okunduğu şekilde özgün ileti gövdesi serbest öbek olanak sağlıyor. `ChunkingReader` bir kuyruk, burada arabelleğe alınan öbekleri yapılandırılabilir en fazla sayıya kadar gelen öbekleri arabelleğe alır sahiptir. Bu maksimum sınıra ulaşıldığında, okuyucu iletilerin kuyruktan yukarıdaki katmanı tarafından boşaltılır bekler (diğer bir deyişle, yalnızca özgün iletinin gövdesinden okuyarak) veya en fazla alana kadar zaman aşımına ulaşıldığı.  
   
- ![Öbekleme kanalı](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
+ ![Kümeleme kanal gösteren diyagram mimarisi alırsınız.](./media/chunking-channel/chunking-channel-receive.gif)  
   
 ## <a name="chunking-programming-model"></a>Programlama modeli Öbekleme  
  Hizmet geliştiricileri, iletileri uygulayarak öbekli üzeresiniz belirtebilirsiniz `ChunkingBehavior` sözleşme işlemlerini özniteliği. Öznitelik sunan bir `AppliesTo` Öbekleme giriş iletisi, çıktı iletisi veya her ikisi de uygulanıp uygulanmayacağını belirtmek Geliştirici izin veren özellik. Aşağıdaki örnek, kullanımını gösterir. `ChunkingBehavior` özniteliği:  
@@ -309,19 +309,19 @@ interface ITestService
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aşağıdaki komutu kullanarak 4.0.  
+1. Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aşağıdaki komutu kullanarak 4.0.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Service.exe ilk çalıştırma, Client.exe çalıştırın ve her iki konsol penceresi çıktısı için izleyin.  
+5. Service.exe ilk çalıştırma, Client.exe çalıştırın ve her iki konsol penceresi çıktısı için izleyin.  
   
  Örnek çalıştırırken aşağıdaki çıktı beklenir.  
   

@@ -1,5 +1,5 @@
 ---
-title: XPathNavigator kullanarak XML verilerini yazılan kesin erişme
+title: XPathNavigator Kullanarak Türü Kesin Olarak Belirtilmiş XML Verilerine Erişme
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd0719fbc84159fdf751b136c2a65b0ce40b42ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1905e9f1d80931bd15cff5f3d0a92ceee29435ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665194"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319891"
 ---
-# <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>XPathNavigator kullanarak XML verilerini yazılan kesin erişme
+# <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak Türü Kesin Olarak Belirtilmiş XML Verilerine Erişme
 XPath 2.0 veri modeli, bir örneği olarak <xref:System.Xml.XPath.XPathNavigator> sınıfı, ortak dil çalışma zamanı (CLR) türleri ile eşleştirir, kesin türü belirtilmiş veri içerebilir. XPath 2.0 veri modeline göre yalnızca öğeler ve öznitelikler kesin türü belirtilmiş veri içerebilir. <xref:System.Xml.XPath.XPathNavigator> Sınıf içindeki verilerine erişmek için bir mekanizma sağlar bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> başka bir veri türünden dönüştürme mekanizmaları yanı sıra, kesin türü belirtilmiş veri nesnesi.  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>XPathNavigator tarafından kullanıma sunulan tür bilgileri  
@@ -52,11 +52,11 @@ XPath 2.0 veri modeli, bir örneği olarak <xref:System.Xml.XPath.XPathNavigator
 ## <a name="the-post-schema-validation-infoset-psvi"></a>Sonrası Schema doğrulama bilgi kümesi (PSVI)  
  Bir XML Şeması işlemci bir XML bilgi kümesi girdi olarak kabul eder ve bir sonrası Schema doğrulama bilgi kümesi (PSVI) içine dönüştürür. Bir PSVI yeni eklenen bilgi öğeleri ve bilgi öğelere eklenen yeni özellikleri özgün giriş XML bilgi kümesi olur. XML bilgi kümesi tarafından kullanıma sunulan PSVI içinde eklenen bilgilerin geniş üç sınıfı vardır <xref:System.Xml.XPath.XPathNavigator>.  
   
-1.  Doğrulama sonuçları: Olup bir öğe veya öznitelik başarıyla veya doğrulandı dair bilgiler. Tarafından sunulan bu <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> özelliği <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> özelliği <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
+1. Doğrulama sonuçları: Olup bir öğe veya öznitelik başarıyla veya doğrulandı dair bilgiler. Tarafından sunulan bu <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> özelliği <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> özelliği <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
   
-2.  Varsayılan bilgileri: Göstergelerden eklenebilir olup varsayılan değerleri veya şemasında belirtilen öğe veya öznitelik değeri alındı. Tarafından sunulan bu <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> özelliği <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> özelliği <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
+2. Varsayılan bilgileri: Göstergelerden eklenebilir olup varsayılan değerleri veya şemasında belirtilen öğe veya öznitelik değeri alındı. Tarafından sunulan bu <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> özelliği <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> özelliği <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
   
-3.  Tür ek açıklamaları: Tür tanımları veya öğe ve öznitelik bildirimleri şema bileşenleri başvurular. <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> Özelliği <xref:System.Xml.XPath.XPathNavigator> geçerli olup olmadığını düğümünün belirli tür bilgilerini içerir. Geçerlilik düğümünün, ne zaman, ardından daha sonra doğrulandı gibi bilinmiyorsa düzenlendi. ardından <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> özelliği `null` ancak tür bilgileri çeşitli özelliklerini hala kullanılabilir <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> özelliği <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
+3. Tür ek açıklamaları: Tür tanımları veya öğe ve öznitelik bildirimleri şema bileşenleri başvurular. <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> Özelliği <xref:System.Xml.XPath.XPathNavigator> geçerli olup olmadığını düğümünün belirli tür bilgilerini içerir. Geçerlilik düğümünün, ne zaman, ardından daha sonra doğrulandı gibi bilinmiyorsa düzenlendi. ardından <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> özelliği `null` ancak tür bilgileri çeşitli özelliklerini hala kullanılabilir <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> özelliği <xref:System.Xml.XPath.XPathNavigator> sınıfı.  
   
  Sonrası Schema doğrulama bilgi tarafından kullanıma sunulan kümesi içindeki bilgileri kullanarak aşağıdaki örnekte gösterilmiştir <xref:System.Xml.XPath.XPathNavigator>.  
   

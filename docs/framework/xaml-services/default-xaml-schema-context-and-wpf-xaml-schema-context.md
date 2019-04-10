@@ -2,12 +2,12 @@
 title: Varsayılan XAML Şema İçeriği ve WPF XAML Şema İçeriği
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124702"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295607"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Varsayılan XAML Şema İçeriği ve WPF XAML Şema İçeriği
 XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim yazma davranışını nasıl tür eşlemesi çözümler, derlemelerin nasıl yüklü olduğundan, nasıl belirli okuyucu ve yazıcı dahil olmak üzere, nesne ile nasıl etkileştiğini niteleyen kavramsal bir varlıktır ayarları yorumlanır. Bu konuda, .NET Framework XAML hizmetlerinde CLR tür sistemine dayalı varsayılan XAML şema içeriği ve özellikler açıklanmaktadır. Bu konuda kullanılan WPF XAML şema içeriği anlatılır.  
@@ -46,9 +46,9 @@ XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim yazma davra
   
 #### <a name="xaml-reader-input-loose-xaml"></a>XAML okuyucu giriş (gevşek XAML)  
   
-1.  XAML şema içeriği gezinir <xref:System.AppDomain> tüm yönlerini adı ile eşleşen bir zaten yüklü derleme için arama uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o derleme çözümlemesi için kullanılır.  
+1. XAML şema içeriği gezinir <xref:System.AppDomain> tüm yönlerini adı ile eşleşen bir zaten yüklü derleme için arama uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o derleme çözümlemesi için kullanılır.  
   
-2.  CLR aşağıdaki tekniklerden birini temel Aksi takdirde, <xref:System.Reflection.Assembly> API, bir derlemeyi yüklemek için kullanılır:  
+2. CLR aşağıdaki tekniklerden birini temel Aksi takdirde, <xref:System.Reflection.Assembly> API, bir derlemeyi yüklemek için kullanılır:  
   
     -   Eşlemede tam adı, çağrı <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> tam adı.  
   
@@ -61,9 +61,9 @@ XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim yazma davra
   
  Aracılığıyla derlemenin başvurduğu Not `XamlBuildTask` her zaman tam yetkilidir.  
   
-1.  Çağrı <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> tam adı.  
+1. Çağrı <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> tam adı.  
   
-2.  Önceki adım başarısız olursa, kısa ad (ve ortak anahtar belirteci varsa) kullanan çağrılacak <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Önceki adım başarısız olursa, kısa ad (ve ortak anahtar belirteci varsa) kullanan çağrılacak <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 #### <a name="baml-presentationbuildtask"></a>BAML (PresentationBuildTask)  
  Derleme yükleme BAML için iki önemli nokta vardır: bir bileşen olarak BAML içeren ilk bütünleştirilmiş kod yükleme ve BAML üretim tarafından başvurulan tüm türler için tür yedekleme derlemeleri yükleniyor.  
@@ -71,16 +71,16 @@ XAML şema içeriği belirli bir XAML sözlük kullanan XAML üretim yazma davra
 ##### <a name="assembly-load-for-initial-markup"></a>Bütünleştirilmiş kod yüklemesi ilk biçimlendirme için:  
  Biçimlendirmeden yüklenecek derlemenin her zaman nitelenmemiş başvurudur.  
   
-1.  WPF XAML şema içeriği gezinir <xref:System.AppDomain> tüm yönlerini adı ile eşleşen bir zaten yüklü derleme için arama WPF uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o derleme çözümlemesi için kullanılır.  
+1. WPF XAML şema içeriği gezinir <xref:System.AppDomain> tüm yönlerini adı ile eşleşen bir zaten yüklü derleme için arama WPF uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o derleme çözümlemesi için kullanılır.  
   
-2.  Önceki adım başarısız olursa, kısa ad (ve ortak anahtar belirteci varsa) kullanan çağrılacak <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Önceki adım başarısız olursa, kısa ad (ve ortak anahtar belirteci varsa) kullanan çağrılacak <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ##### <a name="assembly-references-by-baml-types"></a>Derleme başvuruları BAML türlerine göre:  
  Derleme başvuruları BAML üretimde kullanılan türleri için her zaman yapı görevinin çıkış olarak tam olarak nitelenmiş.  
   
-1.  WPF XAML şema içeriği gezinir <xref:System.AppDomain> tüm yönlerini adı ile eşleşen bir zaten yüklü derleme için arama WPF uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o derleme çözümlemesi için kullanılır.  
+1. WPF XAML şema içeriği gezinir <xref:System.AppDomain> tüm yönlerini adı ile eşleşen bir zaten yüklü derleme için arama WPF uygulamasının en son başlatma derleme yüklendi. Bir eşleşme bulunursa, o derleme çözümlemesi için kullanılır.  
   
-2.  Aksi takdirde aşağıdaki tekniklerden birini bir derlemeyi yüklemek için kullanılır:  
+2. Aksi takdirde aşağıdaki tekniklerden birini bir derlemeyi yüklemek için kullanılır:  
   
     -   Çağrı <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> tam adı.  
   

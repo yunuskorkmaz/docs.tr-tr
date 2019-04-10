@@ -5,12 +5,12 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 2543694e6bf8da5b67ecaccc92633a8448154063
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837144"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313807"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Nasıl yapılır: (Visual Basic) uzantı metodu çağırma
 Genişletme yöntemleri varolan bir sınıfa yöntemler eklemenize imkan tanır. Bir genişletme yöntemi bildirildi ve kapsama alınır sonra bunu genişleten türü gibi bir örnek yöntemi çağırabilirsiniz. Uzantı metodu yazma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Uzantı metodu yazma](./how-to-write-an-extension-method.md).  
@@ -34,13 +34,13 @@ End Module
   
 ### <a name="to-call-an-extension-method"></a>Bir uzantı yöntemini çağırmak için  
   
-1.  Genişletme yönteminin ilk parametresi için veri türüne sahip bir değişken bildirir. İçin `PrintAndPunctuate`, gereksinim duyduğunuz bir <xref:System.String> değişkeni:  
+1. Genişletme yönteminin ilk parametresi için veri türüne sahip bir değişken bildirir. İçin `PrintAndPunctuate`, gereksinim duyduğunuz bir <xref:System.String> değişkeni:  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  Değişkeni genişletme yöntemini çağırmak ve değeri ilk parametre olarak bağlı `aString`. Aşağıdaki deyim çağırma görüntüler `Ready?`.  
+2. Değişkeni genişletme yöntemini çağırmak ve değeri ilk parametre olarak bağlı `aString`. Aşağıdaki deyim çağırma görüntüler `Ready?`.  
   
     ```  
     example.PrintAndPunctuate("?")  
@@ -53,7 +53,7 @@ End Module
     example.IndexOf("R")  
     ```  
   
-3.  Başka bir dize değişkeni bildirme ve yeniden herhangi bir dize ile çalışır durumda olduğunu görmek için yöntemi çağırın.  
+3. Başka bir dize değişkeni bildirme ve yeniden herhangi bir dize ile çalışır durumda olduğunu görmek için yöntemi çağırın.  
   
     ```  
     Dim example2 = " or not"  
@@ -96,6 +96,6 @@ End Module
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Uzantı metodu yazma](./how-to-write-an-extension-method.md)
+- [Nasıl yapılır: Genişletme Yöntemi Yazma](./how-to-write-an-extension-method.md)
 - [Genişletme Yöntemleri](./extension-methods.md)
-- [Visual Basic'de kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic'de Kapsam](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: d497dfd5580f1d2741e0edafa86e9dd39ec374ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191997"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300872"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>İzlenecek yol: Karma Uygulamalarda Veriye Bağlama
 Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi olan kullanıcılar sağlamak için gerekli kullanmakta olduğunuz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] veya [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Bu izlenecek yol, veri bağlama iki dahil karma uygulamalarda nasıl kullanabileceğinizi gösterir. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrol eder.  
@@ -49,23 +49,23 @@ Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi o
   
 #### <a name="to-create-and-set-up-the-project"></a>Oluşturma ve projesi kurun  
   
-1.  Adlı bir WPF uygulaması projesi oluşturmak `WPFWithWFAndDatabinding`.  
+1. Adlı bir WPF uygulaması projesi oluşturmak `WPFWithWFAndDatabinding`.  
   
-2.  Çözüm Gezgini'nde, aşağıdaki derlemelere başvurular ekleyin.  
+2. Çözüm Gezgini'nde, aşağıdaki derlemelere başvurular ekleyin.  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  İçinde MainWindow.xaml açın [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+3. İçinde MainWindow.xaml açın [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
-4.  İçinde <xref:System.Windows.Window> öğesi, aşağıdaki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ad alanlarını eşleme.  
+4. İçinde <xref:System.Windows.Window> öğesi, aşağıdaki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ad alanlarını eşleme.  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  Varsayılan ad <xref:System.Windows.Controls.Grid> öğesi `mainGrid` atayarak <xref:System.Windows.FrameworkElement.Name%2A> özelliği.  
+5. Varsayılan ad <xref:System.Windows.Controls.Grid> öğesi `mainGrid` atayarak <xref:System.Windows.FrameworkElement.Name%2A> özelliği.  
   
      [!code-xaml[WPFWithWFAndDatabinding#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
@@ -120,44 +120,44 @@ Bir veri kaynağı bir denetime bağlama olup, temel alınan verilere erişimi o
   
 #### <a name="to-add-the-data-source"></a>Veri kaynağı eklemek için  
   
-1.  Gelen **veri** menüsünde **yeni veri kaynağı Ekle**.  
+1. Gelen **veri** menüsünde **yeni veri kaynağı Ekle**.  
   
-2.  İçinde **veri kaynağı Yapılandırma Sihirbazı**, bir veri kümesini kullanarak Northwind veritabanına bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: Bir veritabanındaki verilere bağlanma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120)).  
+2. İçinde **veri kaynağı Yapılandırma Sihirbazı**, bir veri kümesini kullanarak Northwind veritabanına bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: Bir veritabanındaki verilere bağlanma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120)).  
   
-3.  Tarafından istendiğinde **veri kaynağı Yapılandırma Sihirbazı**, bağlantı dizesi olarak Kaydet `NorthwindConnectionString`.  
+3. Tarafından istendiğinde **veri kaynağı Yapılandırma Sihirbazı**, bağlantı dizesi olarak Kaydet `NorthwindConnectionString`.  
   
-4.  Veritabanı nesnelerinizi seçin. sorulduğunda `Customers` ve `Orders` tabloları ve oluşturulan veri kümesi adı `NorthwindDataSet`.  
+4. Veritabanı nesnelerinizi seçin. sorulduğunda `Customers` ve `Orders` tabloları ve oluşturulan veri kümesi adı `NorthwindDataSet`.  
   
 ## <a name="binding-to-the-data-source"></a>Veri kaynağına bağlama  
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> Bileşeni, uygulamanın veri kaynağı için tek tip arabirim sağlar. Veri kaynağına bağlama arka plan kod dosyasında uygulanır.  
   
 #### <a name="to-bind-to-the-data-source"></a>Veri kaynağına bağlamak için  
   
-1.  MainWindow.xaml.vb veya MainWindow.xaml.cs adlı arka plan kod dosyasını açın.  
+1. MainWindow.xaml.vb veya MainWindow.xaml.cs adlı arka plan kod dosyasını açın.  
   
-2.  Aşağıdaki kodu kopyalayın `MainWindow` sınıf tanımını.  
+2. Aşağıdaki kodu kopyalayın `MainWindow` sınıf tanımını.  
   
      Bu kod bildirir <xref:System.Windows.Forms.BindingSource> bileşeni ve veritabanı'na bağlanma ilişkili yardımcı sınıfları.  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
      [!code-vb[WPFWithWFAndDatabinding#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
 
-3.  Aşağıdaki kod oluşturucuya kopyalayın.
+3. Aşağıdaki kod oluşturucuya kopyalayın.
 
      Bu kod oluşturur ve başlatır <xref:System.Windows.Forms.BindingSource> bileşeni.
 
      [!code-csharp[WPFWithWFAndDatabinding#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
      [!code-vb[WPFWithWFAndDatabinding#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
 
-4.  Open MainWindow.xaml.
+4. Open MainWindow.xaml.
 
-5.  Tasarım görünümü veya XAML görünümünde seçin <xref:System.Windows.Window> öğesi.
+5. Tasarım görünümü veya XAML görünümünde seçin <xref:System.Windows.Window> öğesi.
 
-6.  Özellikler penceresinde tıklayın **olayları** sekmesi.
+6. Özellikler penceresinde tıklayın **olayları** sekmesi.
 
-7.  Çift <xref:System.Windows.FrameworkElement.Loaded> olay.
+7. Çift <xref:System.Windows.FrameworkElement.Loaded> olay.
 
-8.  Aşağıdaki kodu kopyalayın <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisi.
+8. Aşağıdaki kodu kopyalayın <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisi.
 
      Bu kod atar <xref:System.Windows.Forms.BindingSource> veri bağlamı olarak bileşen ve dolduran `Customers` ve `Orders` bağdaştırıcısı nesneleri.
 

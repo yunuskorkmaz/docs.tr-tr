@@ -1,20 +1,20 @@
 ---
-title: Etkinlik tanımı kapsamı ve görünürlüğü
+title: Etkinlik Tanımı Kapsamı ve Görünürlüğü
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 27c43323a176c841f3d90cb9c52f25599bc0686d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325221"
 ---
-# <a name="activity-definition-scoping-and-visibility"></a>Etkinlik tanımı kapsamı ve görünürlüğü
+# <a name="activity-definition-scoping-and-visibility"></a>Etkinlik Tanımı Kapsamı ve Görünürlüğü
 Etkinlik tanımı kapsamı ve kapsamını belirleme gibi görünürlük ve bir nesnenin görünürlüğü olan etkinliğin üyelere erişim için diğer nesneleri ve etkinlikleri. Etkinlik tanımı aşağıdaki uygulamaları tarafından gerçekleştirilir:  
   
-1.  Üyeleri belirleyen (<xref:System.Activities.Argument>, <xref:System.Activities.Variable>, ve <xref:System.Activities.ActivityDelegate> nesneleri ve alt etkinlikler), kullanıcılara bir etkinlik sunar.  
+1. Üyeleri belirleyen (<xref:System.Activities.Argument>, <xref:System.Activities.Variable>, ve <xref:System.Activities.ActivityDelegate> nesneleri ve alt etkinlikler), kullanıcılara bir etkinlik sunar.  
   
-2.  Etkinlik yürütme mantığını uygulama  
+2. Etkinlik yürütme mantığını uygulama  
   
  Uygulama, etkinliğin tüketicilere açık değildir ancak bunun yerine uygulamasının Ayrıntılar üyeler içerebilir.  Tür tanımına benzer, tanımlanan etkinlik tanımı ile ilgili bir etkinlik üye görünürlüğünü nitelemek Yazar etkinlik modeli sağlar.  Bu görünürlük üye kullanım, veri kapsamı gibi yönlerini yönetir.  
   
@@ -27,9 +27,9 @@ Etkinlik tanımı kapsamı ve kapsamını belirleme gibi görünürlük ve bir n
 ### <a name="activity-members"></a>Etkinlik üyeleri  
  Etkinlik modeli bağımsız değişkenler, değişkenleri, temsilciler ve etkinlik tüketicilere kullanılabilmesini çocuk etkinliklerinin tanımlar. Her biri bu üyeleri olarak bildirilebilir `public` veya `private`. Genel üyeler, etkinlik tüketici tarafından yapılandırılır, ancak `private` üyeleri etkinlik yazarı tarafından sabit bir uygulama kullanın. Veri kapsamı için görünürlük kuralları aşağıdaki gibidir:  
   
-1.  Genel değişkenleri ortak üyeleri ve ortak bir alt etkinlik ortak üyeleri başvurabilirsiniz.  
+1. Genel değişkenleri ortak üyeleri ve ortak bir alt etkinlik ortak üyeleri başvurabilirsiniz.  
   
-2.  Özel üyeler ve ortak bir alt etkinlik ortak üyeleri bağımsız değişkenler ve özel değişkenlere başvurabilir.  
+2. Özel üyeler ve ortak bir alt etkinlik ortak üyeleri bağımsız değişkenler ve özel değişkenlere başvurabilir.  
   
  Bir etkinliğin tüketici tarafından ayarlanabilir üyesi hiçbir zaman özel yapılmalıdır.  
   

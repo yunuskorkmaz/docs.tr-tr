@@ -2,12 +2,12 @@
 title: Zaman uyumsuz görevleri tamamlandıkça işleme
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304864"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Birden çok zaman uyumsuz görev başlatma ve bunlar (C#) tamamlandıkça işleme
 
@@ -25,17 +25,17 @@ Tüm Windows Presentation Foundation (WPF) projeden indirebileceğiniz [zaman uy
 > [!TIP]
 > Projeyi indirmek istemiyorsanız, bunun yerine bu konunun sonunda MainWindow.xaml.cs dosyasını gözden geçirebilirsiniz.
 
-1.  Yüklediğiniz .zip dosyasından dosyaları ayıklayın ve sonra Visual Studio'yu başlatın.
+1. Yüklediğiniz .zip dosyasından dosyaları ayıklayın ve sonra Visual Studio'yu başlatın.
 
-2.  Menü çubuğunda, **dosya** > **açık** > **proje/çözüm**.
+2. Menü çubuğunda, **dosya** > **açık** > **proje/çözüm**.
 
-3.  İçinde **Proje Aç** iletişim kutusunda, indirdiğiniz örnek kodu barındıran klasörü açın ve ardından AsyncFineTuningCS için çözüm (.sln) dosyasını açın.
+3. İçinde **Proje Aç** iletişim kutusunda, indirdiğiniz örnek kodu barındıran klasörü açın ve ardından AsyncFineTuningCS için çözüm (.sln) dosyasını açın.
 
-4.  İçinde **Çözüm Gezgini**, kısayol menüsünü açın **ProcessTasksAsTheyFinish** proje ve ardından **başlangıç projesi olarak ayarla**.
+4. İçinde **Çözüm Gezgini**, kısayol menüsünü açın **ProcessTasksAsTheyFinish** proje ve ardından **başlangıç projesi olarak ayarla**.
 
-5.  Seçin **F5** programı çalıştırmak için anahtar (veya basın **Ctrl**+**F5** anahtarları, hata ayıklama olmadan programı çalıştırmak için).
+5. Seçin **F5** programı çalıştırmak için anahtar (veya basın **Ctrl**+**F5** anahtarları, hata ayıklama olmadan programı çalıştırmak için).
 
-6.  Proje, indirilen uzunlukların her zaman aynı sırada görüntülenmediğini doğrulamak için birkaç kez çalıştırın.
+6. Proje, indirilen uzunlukların her zaman aynı sırada görüntülenmediğini doğrulamak için birkaç kez çalıştırın.
 
 ## <a name="create-the-program-yourself"></a>Programı kendiniz oluşturun
 

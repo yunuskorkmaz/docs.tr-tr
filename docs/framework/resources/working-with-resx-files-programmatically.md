@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d05c128910915419821fc44ca7894cd5f63c032d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18a8748c3175ec7e251116f478069d313ab28d7c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116005"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299247"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Program aracılığıyla .resx dosyalarıyla çalışma
 Ad/değer çiftleri verilerinde ardından belirli bir şemaya izlemeniz gereken bir üst bilgisi dahil olmak üzere, iyi tanımlanmış bir XML XML kaynak (.resx) dosyaları oluşması gerektiğinden bu dosyaları el ile oluşturmak hataya olduğunu fark edebilirsiniz. Alternatif olarak, .resx dosyalarını program aracılığıyla .NET sınıf kitaplığı'nda türleri ve üyeleri'ı kullanarak oluşturabilirsiniz. .NET sınıf kitaplığı, .resx dosyaları içinde depolanan kaynakları almak için de kullanabilirsiniz. Bu konu, türlerine ve üyelerine nasıl kullanabileceğinizi açıklar <xref:System.Resources> .resx dosyalarıyla çalışmak için ad alanı.
@@ -23,17 +23,17 @@ Ad/değer çiftleri verilerinde ardından belirli bir şemaya izlemeniz gereken 
  Bu makalede, kaynakları içeren dosyaları XML (.resx) ile çalışma anlatılmaktadır unutmayın. Derlemelerde katıştırılmış ikili kaynak dosyaları ile çalışma hakkında daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager> konu.
 
 > [!WARNING]
-> Program aracılığıyla .resx dosyalarıyla dışında çalışmak için yol vardır. Bir kaynak dosyasına eklediğinizde, bir [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) Visual Studio projesi oluşturmak ve bir .resx dosyası sürdürmek için bir arabirim sağlar ve .resx dosyasını bir .resources dosyası için derleme zamanında otomatik olarak dönüştürür. Bir metin düzenleyicisi, bir .resx dosyasını doğrudan yönetmek için de kullanabilirsiniz. Ancak, dosyası bozulmasını önlemek için dosyasında depolanan herhangi bir ikili bilgiyi değiştirmemek dikkatli olun.
+> Program aracılığıyla .resx dosyalarıyla dışında çalışmak için yol vardır. Bir kaynak dosyasına eklediğinizde, bir [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) Visual Studio projesi oluşturmak ve bir .resx dosyası sürdürmek için bir arabirim sağlar ve .resx dosyasını bir .resources dosyası için derleme zamanında otomatik olarak dönüştürür. Bir metin düzenleyicisi, bir .resx dosyasını doğrudan yönetmek için de kullanabilirsiniz. Ancak, dosyası bozulmasını önlemek için dosyasında depolanan herhangi bir ikili bilgiyi değiştirmemek dikkatli olun.
 
 ## <a name="create-a-resx-file"></a>Bir .resx dosyası oluşturma
 
 Kullanabileceğiniz <xref:System.Resources.ResXResourceWriter?displayProperty=nameWithType> aşağıdaki adımları izleyerek bir .resx dosyası programlı olarak oluşturmak için sınıf:
 
-1.  Örneği bir <xref:System.Resources.ResXResourceWriter> çağırarak <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=nameWithType> yöntemi ve .resx dosyasının adını belirtin. Dosya adı v .resx uzantısını içermesi gerekir. Örneği, <xref:System.Resources.ResXResourceWriter> nesnesine bir `using` bloğu açıkça çağırmak gerekmez <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> adım 3'teki yöntemi.
+1. Örneği bir <xref:System.Resources.ResXResourceWriter> çağırarak <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=nameWithType> yöntemi ve .resx dosyasının adını belirtin. Dosya adı v .resx uzantısını içermesi gerekir. Örneği, <xref:System.Resources.ResXResourceWriter> nesnesine bir `using` bloğu açıkça çağırmak gerekmez <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> adım 3'teki yöntemi.
 
-2.  Çağrı <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> dosyasına eklemek istediğiniz her bir kaynak için yöntemi. Dize nesnesi ve ikili (bayt dizesi) veri eklemek için bu yöntem aşırı yüklemelerini kullanın. Kaynak bir nesne ise, seri hale getirilebilir olması gerekir.
+2. Çağrı <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> dosyasına eklemek istediğiniz her bir kaynak için yöntemi. Dize nesnesi ve ikili (bayt dizesi) veri eklemek için bu yöntem aşırı yüklemelerini kullanın. Kaynak bir nesne ise, seri hale getirilebilir olması gerekir.
 
-3.  Çağrı <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> kaynak dosyası oluşturmak ve tüm kaynakları serbest bırakmak için yöntemi. Varsa <xref:System.Resources.ResXResourceWriter> nesne içinde oluşturulmuş bir `using` blok, kaynaklar için .resx dosyasını ve tarafından kullanılan kaynakları yazılır <xref:System.Resources.ResXResourceWriter> nesne sonunda serbest `using` blok.
+3. Çağrı <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> kaynak dosyası oluşturmak ve tüm kaynakları serbest bırakmak için yöntemi. Varsa <xref:System.Resources.ResXResourceWriter> nesne içinde oluşturulmuş bir `using` blok, kaynaklar için .resx dosyasını ve tarafından kullanılan kaynakları yazılır <xref:System.Resources.ResXResourceWriter> nesne sonunda serbest `using` blok.
 
 Uygun bir başlık elde edilen .resx dosyası varsa ve bir `data` etiketi tarafından eklenen her bir kaynak <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> yöntemi.
 
@@ -46,7 +46,7 @@ Aşağıdaki örnek, altı dizeyi, simge ve iki uygulama tanımlı nesneler depo
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
 
 > [!TIP]
-> Ayrıca [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) .resx dosyalarını oluşturmak için. Derleme zamanında Visual Studio kullanan [kaynak dosya oluşturucu (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) .resx dosyasını ikili bir kaynak (.resources) dönüştürmek için dosya ve ayrıca bir uygulama derlemesine veya uydu derlemesine katıştırır.
+> Ayrıca [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) .resx dosyalarını oluşturmak için. Derleme zamanında Visual Studio kullanan [kaynak dosya oluşturucu (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) .resx dosyasını ikili bir kaynak (.resources) dönüştürmek için dosya ve ayrıca bir uygulama derlemesine veya uydu derlemesine katıştırır.
 
 Bir çalışma zamanı içinde yürütülebilir bir .resx dosyası ekleme veya bir uydu derlemeye derlemek olamaz. .Resx dosyanızı kullanarak ikili kaynak (.resources) dosyasına dönüştürmeniz gerekir [kaynak dosya oluşturucu (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md). Sonuçta elde edilen .resources dosyasını bir uygulama derlemesine veya uydu derlemesine eklenebilir. Daha fazla bilgi için [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).
 

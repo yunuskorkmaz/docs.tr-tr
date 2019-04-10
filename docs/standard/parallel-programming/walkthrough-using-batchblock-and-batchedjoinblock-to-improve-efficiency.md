@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Verimliliği artırmak için BatchBlock ve Batchedjoinblock'u kullanma"
+title: "İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock'u Kullanma"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,30 +11,30 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0367b4224b49377d8d17045e044976e1c511a8ed
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222114"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302990"
 ---
-# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>İzlenecek yol: Verimliliği artırmak için BatchBlock ve Batchedjoinblock'u kullanma
+# <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock'u Kullanma
 TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> ve böylece, bu bildirimleri alabilen ve bir veya daha fazla kaynaktan veri arabellek ve ardından o arabelleğe alınan verileri bir koleksiyon olarak yayınlar sınıfları. Bu toplu işleme mekanizması bir veya daha fazla kaynaktan veri toplayın ve ardından birden fazla veri öğesi toplu olarak işleme yararlı olur. Örneğin, kayıtları bir veritabanına eklemek için veri akışı kullanan bir uygulamayı düşünün. Bu işlem, birden çok öğe aynı zamanda bir kerede yerine sıralı olarak eklenirse daha verimli olabilir. Bu belgenin nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> sınıfı gibi veritabanı verimliliğini artırmak için işlemler Ekle. Ayrıca nasıl kullanılacağını açıklar <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> hem sonuçları hem de program veritabanından okuduğunda oluşan özel durumları yakalamak için sınıf.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="prerequisites"></a>Önkoşullar  
   
-1.  Join Blocks bölümünü okuyun [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) bu kılavuza başlamadan önce belgeleyin.  
+1. Join Blocks bölümünü okuyun [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) bu kılavuza başlamadan önce belgeleyin.  
   
-2.  Northwind veritabanının, Northwind.sdf, bilgisayarınızda mevcut bir kopyasına sahip olduğunuzdan emin olun. Bu dosya, klasör % Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples genellikle bulunur\\.  
+2. Northwind veritabanının, Northwind.sdf, bilgisayarınızda mevcut bir kopyasına sahip olduğunuzdan emin olun. Bu dosya, klasör % Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples genellikle bulunur\\.  
   
     > [!IMPORTANT]
     >  Bazı Windows sürümlerinde, Visual Studio'yu bir yönetici olmayan modda çalışıyorsa Northwind.sdf dosyasına bağlanamazsınız. Northwind.sdf'ye bağlamak için Visual Studio ya da bir geliştirici komut istemi için Visual Studio'da başlatma **yönetici olarak çalıştır** modu.  
   
  Bu izlenecek yol aşağıdaki bölümleri içerir:  
   
--   [Konsol uygulaması oluşturma](#creating)  
+-   [Konsol Uygulaması Oluşturma](#creating)  
   
 -   [Çalışan sınıfı tanımlama](#employeeClass)  
   
@@ -46,22 +46,22 @@ TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.Bat
   
 -   [Veritabanından çalışan verilerini okumak için arabelleğe alınmış birleşim kullanma](#bufferedJoin)  
   
--   [Tam örnek](#complete)  
+-   [Tam Örnek](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>Konsol Uygulaması Oluşturma  
   
 <a name="consoleApp"></a>   
-1.  Bir Visual C# veya Visual Basic Visual Studio'da oluşturma **konsol uygulaması** proje. Bu belgede, proje adı `DataflowBatchDatabase`.  
+1. Bir Visual C# veya Visual Basic Visual Studio'da oluşturma **konsol uygulaması** proje. Bu belgede, proje adı `DataflowBatchDatabase`.  
   
-2.  Projenizde, System.Data.SqlServerCe.dll'ye ve System.Threading.Tasks.Dataflow.dll'ye birer başvuru ekleyin.  
+2. Projenizde, System.Data.SqlServerCe.dll'ye ve System.Threading.Tasks.Dataflow.dll'ye birer başvuru ekleyin.  
   
-3.  Form1.cs (Visual Basic için Form1.vb) aşağıdaki içerdiğinden emin olun `using` (`Imports` Visual Basic'te) ifadeleri.  
+3. Form1.cs (Visual Basic için Form1.vb) aşağıdaki içerdiğinden emin olun `using` (`Imports` Visual Basic'te) ifadeleri.  
   
      [!code-csharp[TPLDataflow_BatchDatabase#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#1)]
      [!code-vb[TPLDataflow_BatchDatabase#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#1)]  
   
-4.  Aşağıdaki veri üyelerini ekleyin `Program` sınıfı.  
+4. Aşağıdaki veri üyelerini ekleyin `Program` sınıfı.  
   
      [!code-csharp[TPLDataflow_BatchDatabase#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#2)]
      [!code-vb[TPLDataflow_BatchDatabase#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#2)]  

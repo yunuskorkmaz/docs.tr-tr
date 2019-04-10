@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e7ef42bab2d7567741a433cbcacf10a5e689f6a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867939"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298922"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Veri Örneği
 Bu örnek, müşteriler, ürünler, sipariş ve Sipariş Ayrıntıları bellek içi koleksiyonlara dönüştürme yöntemleri ile birlikte .csv biçiminde örnek veriler içerir. PLINQ ile daha fazla deney için bu konuda kodda belirli diğer konulardan kod örnekleri yapıştırın ve ondan çağırma `Main` yöntemi. Bu verileri kendi PLINQ sorguları ile de kullanabilirsiniz.  
@@ -27,13 +27,13 @@ Bu örnek, müşteriler, ürünler, sipariş ve Sipariş Ayrıntıları bellek i
   
 ### <a name="to-set-up-this-sample"></a>Bu örneğini kurmak için  
   
-1.  Bir Visual Basic veya Visual C# konsol uygulaması projesi oluşturun.  
+1. Bir Visual Basic veya Visual C# konsol uygulaması projesi oluşturun.  
   
-2.  Program.cs veya Module1.vb içeriğini, bu adımları takip eden kodla değiştirin.  
+2. Program.cs veya Module1.vb içeriğini, bu adımları takip eden kodla değiştirin.  
   
-3.  Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**. Seçin **metin dosyası** ve ardından **Tamam**. Bu konu başlığında verileri kopyalayıp metin dosyasına yapıştırın. Üzerinde **dosya** menüsünde tıklatın **Kaydet**Plinqdata.csv dosya adı ve kaynak kod dosyalarınızı içeren klasöre kaydedin.  
+3. Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**. Seçin **metin dosyası** ve ardından **Tamam**. Bu konu başlığında verileri kopyalayıp metin dosyasına yapıştırın. Üzerinde **dosya** menüsünde tıklatın **Kaydet**Plinqdata.csv dosya adı ve kaynak kod dosyalarınızı içeren klasöre kaydedin.  
   
-4.  Proje oluşturulur ve düzgün çalıştığını doğrulamak için F5 tuşuna basın. Konsol penceresinde aşağıdaki çıktıyı görüntülenmesi gerekir.  
+4. Proje oluşturulur ve düzgün çalıştığını doğrulamak için F5 tuşuna basın. Konsol penceresinde aşağıdaki çıktıyı görüntülenmesi gerekir.  
   
     ```  
     Customer count: 50  

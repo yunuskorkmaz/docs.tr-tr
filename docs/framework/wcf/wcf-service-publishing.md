@@ -2,12 +2,12 @@
 title: WCF Hizmet Yayımlama
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441443"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299728"
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
 
@@ -35,13 +35,13 @@ Hizmet aşağıdaki hedef konumlara yayımlanabilir.
 
 Bir hizmet uygulaması dağıtmak için aşağıdaki adımları gerçekleştirin:
 
-1.  Visual Studio yükseltilmiş ayrıcalıklarla açın (yürütülebilir dosyaya sağ tıklayıp seçin **yönetici olarak çalıştır** açmak için).  IIS 7.0 kullanıyorsanız veya daha sonra emin olun, Denetim Masası'ndaki "Turn Windows özelliklerini aç veya kapat" kullanarak "IIS metatabanı ve IIS6 yapılandırma Uyumluluğu" bileşeni yüklediniz.
+1. Visual Studio yükseltilmiş ayrıcalıklarla açın (yürütülebilir dosyaya sağ tıklayıp seçin **yönetici olarak çalıştır** açmak için).  IIS 7.0 kullanıyorsanız veya daha sonra emin olun, Denetim Masası'ndaki "Turn Windows özelliklerini aç veya kapat" kullanarak "IIS metatabanı ve IIS6 yapılandırma Uyumluluğu" bileşeni yüklediniz.
 
-2.  Bir hizmet projesi açın, **derleme** > **Yayımla \<proje adı >** ana menüden veya projeye sağ **Çözüm Gezgini**tıklatıp **Yayımla**.
+2. Bir hizmet projesi açın, **derleme** > **Yayımla \<proje adı >** ana menüden veya projeye sağ **Çözüm Gezgini**tıklatıp **Yayımla**.
 
-3.  **Yayımla** penceresi görüntülenir. Tıklayın **...** . hizmet için dağıtılması hedef konumu belirtmek için düğmesi. Yerel IIS, dosya sistemi veya FTP sitesi için uygulamayı dağıtmayı seçebilirsiniz. Yerel IIS uygulama dağıtımı, Web sitenizi seçin ve tıklayarak altında web uygulamanızı oluşturma **yeni Web uygulaması oluştur** simgesini sağ üst köşedeki.
+3. **Yayımla** penceresi görüntülenir. Tıklayın **...** . hizmet için dağıtılması hedef konumu belirtmek için düğmesi. Yerel IIS, dosya sistemi veya FTP sitesi için uygulamayı dağıtmayı seçebilirsiniz. Yerel IIS uygulama dağıtımı, Web sitenizi seçin ve tıklayarak altında web uygulamanızı oluşturma **yeni Web uygulaması oluştur** simgesini sağ üst köşedeki.
 
-4.  Tıkladıktan sonra **Yayımla** ana penceresinde, Visual Studio, belirtilen hedef konum uygulamayı dağıtır ve Web.config .svc ve derleme dosyaları hedef dizine kopyalar. biçimindeki telefon numarasıdır. .Svc adını "ProjectName.ServiceName.svc" olacaktır. Hizmet başarıyla yayımlandıktan sonra şuna benzer şekilde Visual Studio çıktı penceresinde bir etkin bağlantı bulabilirsiniz "bağlanma `http://localhost/WebApplicationFolderName...`". CTRL tuşunu BASILI tutun ve hizmet dizin yapısını görüntülemek için Visual Studio içindeki bir tarayıcı sayfasını açmak için bağlantıya tıklayın.
+4. Tıkladıktan sonra **Yayımla** ana penceresinde, Visual Studio, belirtilen hedef konum uygulamayı dağıtır ve Web.config .svc ve derleme dosyaları hedef dizine kopyalar. biçimindeki telefon numarasıdır. .Svc adını "ProjectName.ServiceName.svc" olacaktır. Hizmet başarıyla yayımlandıktan sonra şuna benzer şekilde Visual Studio çıktı penceresinde bir etkin bağlantı bulabilirsiniz "bağlanma `http://localhost/WebApplicationFolderName...`". CTRL tuşunu BASILI tutun ve hizmet dizin yapısını görüntülemek için Visual Studio içindeki bir tarayıcı sayfasını açmak için bağlantıya tıklayın.
 
      Siteye göz atın, IIS'de directory tarayıcı etkin olmadığından olabilir. Lütfen etkinleştirmek için "Şeyler deneyebilirsiniz" bölümünde ipuçlarını izleyin. Alternatif olarak, doğrudan yazmanız `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` hizmet sayfanızı görüntülemek için.
 
@@ -76,5 +76,5 @@ Yerel IIS uygulamanızı dağıtmayı tercih ederseniz, IIS kurulumuyla ilgili h
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF Visual Studio Şablonları](../../../docs/framework/wcf/wcf-vs-templates.md)
-- [WCF Hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
 - [WCF Test İstemcisi (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

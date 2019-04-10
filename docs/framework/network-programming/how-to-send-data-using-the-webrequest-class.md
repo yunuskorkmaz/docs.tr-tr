@@ -8,19 +8,19 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 456dbdab3070e88fe0bc6572c998ce54e3c19c00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3878a94debc7066cb8ace3b119d95d3b76d91610
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166962"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322881"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>Nasıl yapılır: WebRequest sınıfını kullanarak veri gönderme
 Aşağıdaki yordam bir sunucuya veri göndermek için gereken adımları açıklar. Bu yordam, genellikle bir Web sayfasında veri göndermek için kullanılır. 
   
 ## <a name="to-send-data-to-a-host-server"></a>Bir konak sunucusuna veri göndermek için  
   
-1.  Oluşturma bir <xref:System.Net.WebRequest> çağırarak örneği <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> bir betik veya ASP.NET sayfası gibi bir kaynağın URI'sini ile verileri kabul eder. Örneğin: 
+1. Oluşturma bir <xref:System.Net.WebRequest> çağırarak örneği <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> bir betik veya ASP.NET sayfası gibi bir kaynağın URI'sini ile verileri kabul eder. Örneğin: 
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx");  
@@ -34,7 +34,7 @@ Aşağıdaki yordam bir sunucuya veri göndermek için gereken adımları açık
     > .NET Framework türetilen protokole özgü sınıfların sağlar <xref:System.Net.WebRequest> ve <xref:System.Net.WebResponse> sınıfları ile başlayan bir URI'leri *http:*, *https:*, *ftp:* , ve *dosya:*.
     Kümesi ya da okuma protokole özgü özellikleri gerekirse dönüştürmelisiniz, <xref:System.Net.WebRequest> veya <xref:System.Net.WebResponse> protokole özgü nesne türü için nesne. Daha fazla bilgi için [takılabilir protokoller programlama](programming-pluggable-protocols.md). 
   
-2.  Size gereken tüm özellik değerlerini ayarlayın, `WebRequest` nesne. Örneğin, kimlik doğrulamasını etkinleştirmek için ayarlanmış <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> örneğine özellik <xref:System.Net.NetworkCredential> sınıfı:
+2. Size gereken tüm özellik değerlerini ayarlayın, `WebRequest` nesne. Örneğin, kimlik doğrulamasını etkinleştirmek için ayarlanmış <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> örneğine özellik <xref:System.Net.NetworkCredential> sınıfı:
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -44,7 +44,7 @@ Aşağıdaki yordam bir sunucuya veri göndermek için gereken adımları açık
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-3.  Veri ile HTTP gibi bir istek gönderilmesine izin veren bir protokol yöntemini belirtin `POST` yöntemi:  
+3. Veri ile HTTP gibi bir istek gönderilmesine izin veren bir protokol yöntemini belirtin `POST` yöntemi:  
   
     ```csharp  
     request.Method = "POST";  
@@ -54,7 +54,7 @@ Aşağıdaki yordam bir sunucuya veri göndermek için gereken adımları açık
     request.Method = "POST"  
     ```  
   
-4.  Ayarlama <xref:System.Web.HttpRequest.ContentLength> özelliğini isteğinize dahil bayt sayısı. Örneğin: 
+4. Ayarlama <xref:System.Web.HttpRequest.ContentLength> özelliğini isteğinize dahil bayt sayısı. Örneğin: 
   
     ```csharp  
     request.ContentLength = byteArray.Length;  
@@ -64,7 +64,7 @@ Aşağıdaki yordam bir sunucuya veri göndermek için gereken adımları açık
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  Ayarlama <xref:System.Web.HttpRequest.ContentType> özelliğini uygun bir değer. Örneğin:
+5. Ayarlama <xref:System.Web.HttpRequest.ContentType> özelliğini uygun bir değer. Örneğin:
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -74,7 +74,7 @@ Aşağıdaki yordam bir sunucuya veri göndermek için gereken adımları açık
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  Get ayrı tutma çağırarak verileri istek akışı <xref:System.Net.WebRequest.GetRequestStream%2A> yöntemi. Örneğin:
+6. Get ayrı tutma çağırarak verileri istek akışı <xref:System.Net.WebRequest.GetRequestStream%2A> yöntemi. Örneğin:
   
     ```csharp  
     Stream dataStream = request.GetRequestStream();  
@@ -84,7 +84,7 @@ Aşağıdaki yordam bir sunucuya veri göndermek için gereken adımları açık
     Stream dataStream = request.GetRequestStream()  
     ```  
   
-7.  Veri yazılan <xref:System.IO.Stream> tarafından döndürülen nesne `GetRequestStream` yöntemi. Örneğin:
+7. Veri yazılan <xref:System.IO.Stream> tarafından döndürülen nesne `GetRequestStream` yöntemi. Örneğin:
   
     ```csharp  
     dataStream.Write(byteArray, 0, byteArray.Length);  
@@ -94,7 +94,7 @@ Aşağıdaki yordam bir sunucuya veri göndermek için gereken adımları açık
     dataStream.Write(byteArray, 0, byteArray.Length)  
     ```  
   
-8.  İstek akışı çağırarak kapatmak <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yöntemi. Örneğin:
+8. İstek akışı çağırarak kapatmak <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> yöntemi. Örneğin:
   
     ```csharp  
     dataStream.Close();  

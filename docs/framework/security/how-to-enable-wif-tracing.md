@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: WIF izlemeyi etkinleştirme'
+title: 'Nasıl yapılır: WIF İzlemeyi Etkinleştirme'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605190"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310271"
 ---
-# <a name="how-to-enable-wif-tracing"></a>Nasıl yapılır: WIF izlemeyi etkinleştirme
-## <a name="applies-to"></a>Uygulandığı öğe:  
+# <a name="how-to-enable-wif-tracing"></a>Nasıl yapılır: WIF İzlemeyi Etkinleştirme
+## <a name="applies-to"></a>Uygulanan Öğe  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
   
@@ -55,19 +55,19 @@ ms.locfileid: "54605190"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Basit bir ASP.NET uygulaması oluşturmak için  
   
-1.  Visual Studio'yu başlatın ve tıklayın **dosya**, **yeni**, ardından **proje**.  
+1. Visual Studio'yu başlatın ve tıklayın **dosya**, **yeni**, ardından **proje**.  
   
-2.  İçinde **yeni proje** penceresinde tıklayın **ASP.NET Web Forms uygulaması**.  
+2. İçinde **yeni proje** penceresinde tıklayın **ASP.NET Web Forms uygulaması**.  
   
-3.  İçinde **adı**, girin `TestApp` basın **Tamam**.  
+3. İçinde **adı**, girin `TestApp` basın **Tamam**.  
   
-4.  Sağ **TestApp** altındaki proje **Çözüm Gezgini**, ardından **kimlik ve erişim**.  
+4. Sağ **TestApp** altındaki proje **Çözüm Gezgini**, ardından **kimlik ve erişim**.  
   
-5.  **Kimlik ve erişim** penceresi görüntülenir. Altında **sağlayıcıları**seçin **uygulamanızı yerel geliştirme STS'si ile Test**, ardından **Uygula**.  
+5. **Kimlik ve erişim** penceresi görüntülenir. Altında **sağlayıcıları**seçin **uygulamanızı yerel geliştirme STS'si ile Test**, ardından **Uygula**.  
   
-6.  Yeni bir klasör oluşturun, adlı **günlükleri** kökünde **C:** gibi sürücü gösterilen: **C:\Logs**  
+6. Yeni bir klasör oluşturun, adlı **günlükleri** kökünde **C:** gibi sürücü gösterilen: **C:\Logs**  
   
-7.  Aşağıdaki  **\<system.diagnostics >** öğesine *Web.config* kapatma takip yapılandırma dosyası  **\</configSections >** öğesi gibi gösterilir:  
+7. Aşağıdaki  **\<system.diagnostics >** öğesine *Web.config* kapatma takip yapılandırma dosyası  **\</configSections >** öğesi gibi gösterilir:  
   
     ```xml  
     <configuration>  
@@ -96,8 +96,8 @@ ms.locfileid: "54605190"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a>Başarılı izleme için ASP.NET WIF özelliği etkinleştirilmiş uygulamanızı test etmek için  
   
-1.  Tuşlarına basarak çözümü çalıştırın **F5** anahtarı. Verilecek varsayılan ASP.NET ana sayfası gösterilir ve otomatik olarak kullanıcı adıyla kimlik doğrulaması *Terry*, geliştirme STS tarafından döndürülen varsayılan kullanıcı olduğu.  
+1. Tuşlarına basarak çözümü çalıştırın **F5** anahtarı. Verilecek varsayılan ASP.NET ana sayfası gösterilir ve otomatik olarak kullanıcı adıyla kimlik doğrulaması *Terry*, geliştirme STS tarafından döndürülen varsayılan kullanıcı olduğu.  
   
-2.  Tarayıcı penceresini kapatın ve ardından gidin **C:\logs** klasör. Açık **C:\logs\WIF.xml** bir metin düzenleyicisi kullanarak dosya.  
+2. Tarayıcı penceresini kapatın ve ardından gidin **C:\logs** klasör. Açık **C:\logs\WIF.xml** bir metin düzenleyicisi kullanarak dosya.  
   
-3.  İnceleme **WIF.xml** ile başlayan girişler içerdiğini doğrulayın ve dosya  **\<E2ETraceEvent >**. Bu izlemeler içerecek  **\<TraceRecord >** açıklamaları izlenen etkinliğinin öğelerle gibi **doğrulama SecurityToken**.
+3. İnceleme **WIF.xml** ile başlayan girişler içerdiğini doğrulayın ve dosya  **\<E2ETraceEvent >**. Bu izlemeler içerecek  **\<TraceRecord >** açıklamaları izlenen etkinliğinin öğelerle gibi **doğrulama SecurityToken**.

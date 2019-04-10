@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
-ms.openlocfilehash: a690e95cadad4ed089fe1bb3ba6fea541a57411f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9a1b4ab2dc28c569473eddbf50b96d10298d8d3c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076308"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310440"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Nasıl yapılır: Hangi Üyelerin Eşzamanlılık Çakışmaları için Test Edildiğini Belirtme
 Üç numaralandırmalar için biriyle karşılaşmış [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özelliği bir <xref:System.Data.Linq.Mapping.ColumnAttribute> hangi üyelerin güncelleştirmede dahil edileceğini belirtmek için özniteliği algılanması iyimser eşzamanlılık çakışmaları için denetler.  
@@ -24,21 +24,21 @@ ms.locfileid: "59076308"
   
 ### <a name="to-always-use-this-member-for-detecting-conflicts"></a>Her zaman bu üye çakışmaları algılamak için kullanın.  
   
-1.  Ekleme <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özelliğini <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği.  
+1. Ekleme <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özelliğini <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği.  
   
-2.  Ayarlama <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özellik değerini `Always`.  
+2. Ayarlama <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özellik değerini `Always`.  
   
 ### <a name="to-never-use-this-member-for-detecting-conflicts"></a>Hiçbir zaman bu üye çakışmaları algılamak için kullanın.  
   
-1.  Ekleme <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özelliğini <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği.  
+1. Ekleme <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özelliğini <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği.  
   
-2.  Ayarlama <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özellik değerini `Never`.  
+2. Ayarlama <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özellik değerini `Never`.  
   
 ### <a name="to-use-this-member-for-detecting-conflicts-only-when-the-application-has-changed-the-value-of-the-member"></a>Bu üye, yalnızca uygulama üyenin değeri değiştiğinde çakışmaları algılamak için kullanmak için  
   
-1.  Ekleme <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özelliğini <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği.  
+1. Ekleme <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özelliğini <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği.  
   
-2.  Ayarlama <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özellik değerini `WhenChanged`.  
+2. Ayarlama <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özellik değerini `WhenChanged`.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek belirten `HomePage` nesneleri hiçbir zaman test edilemez güncelleştirme denetimler sırasında. Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>.  

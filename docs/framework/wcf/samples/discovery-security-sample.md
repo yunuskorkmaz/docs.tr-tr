@@ -2,12 +2,12 @@
 title: Keşif Güvenliği Örneği
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: b0999b51d5e371c4167bf4712781b3a229119fd0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160770"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318409"
 ---
 # <a name="discovery-security-sample"></a>Keşif Güvenliği Örneği
 Bulma belirtimi olmasını bulma işlemine katılmasını uç noktalarını güvenli gerektirmez. Bulma iletileri ile güvenlik geliştirme azaltır çeşitli türdeki saldırıları (ileti değişikliğinin, hizmet reddi, yeniden yürütme, kimlik sahtekarlığı). Bu örnek, işlem ve (WS-bulma belirtiminin bölüm 8.2 içinde açıklanmıştır) compact imza biçimini kullanarak ileti imzaları doğrulamak özel kanallar uygular. Örnek her ikisini de destekler [2005 bulma belirtimi](https://go.microsoft.com/fwlink/?LinkId=177912) ve [1.1 sürümü](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -60,11 +60,11 @@ Bulma belirtimi olmasını bulma işlemine katılmasını uç noktalarını güv
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1.  Setup.bat betiği Visual Studio için geliştirici komut isteminden çalıştırın. Örnek, oturum ve iletileri doğrulamak için sertifikaları kullanır. Betik Makecert.exe ile bir sertifika oluşturur ve bunları yükler Certmgr.exe kullanarak. Betik, yönetici ayrıcalıklarıyla çalıştırılmalıdır.  
+1. Setup.bat betiği Visual Studio için geliştirici komut isteminden çalıştırın. Örnek, oturum ve iletileri doğrulamak için sertifikaları kullanır. Betik Makecert.exe ile bir sertifika oluşturur ve bunları yükler Certmgr.exe kullanarak. Betik, yönetici ayrıcalıklarıyla çalıştırılmalıdır.  
   
-2.  Derleme ve çalıştırma örneği için Security.sln dosyasını Visual Studio'da açın ve seçin **Rebuild All**. Birden çok proje başlatmak için çözüm özellikleri güncelleştirin: seçin **Başlat** DiscoverySecureChannels dışındaki tüm projeler için. Normalde çözümü çalıştırın.  
+2. Derleme ve çalıştırma örneği için Security.sln dosyasını Visual Studio'da açın ve seçin **Rebuild All**. Birden çok proje başlatmak için çözüm özellikleri güncelleştirin: seçin **Başlat** DiscoverySecureChannels dışındaki tüm projeler için. Normalde çözümü çalıştırın.  
   
-3.  Örnek ile bitirdikten sonra bu örnek için oluşturulan sertifikalar kaldıran Cleanup.bat betiği yürütün.  
+3. Örnek ile bitirdikten sonra bu örnek için oluşturulan sertifikalar kaldıran Cleanup.bat betiği yürütün.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

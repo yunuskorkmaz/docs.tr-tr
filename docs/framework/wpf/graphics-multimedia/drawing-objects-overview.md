@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144033"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325520"
 ---
 # <a name="drawing-objects-overview"></a>Çizim Nesnelerine Genel Bakış
 Bu konu tanıtır <xref:System.Windows.Media.Drawing> nesneleri ve bunları şekiller, bit eşlemler, metin ve medya verimli bir şekilde çizmek için kullanmayı açıklar. Kullanma <xref:System.Windows.Media.Drawing> küçük resim, oluşturduğunuz nesneleri boyama ile bir <xref:System.Windows.Media.DrawingBrush>, veya <xref:System.Windows.Media.Visual> nesneleri.  
@@ -94,27 +94,27 @@ GeometryDrawing
   
  Kendi oluşturmadan medya yürütme için <xref:System.Windows.Media.MediaTimeline>, aşağıdaki adımları gerçekleştirin.  
   
-1.  Oluşturma bir <xref:System.Windows.Media.MediaPlayer> nesne.  
+1. Oluşturma bir <xref:System.Windows.Media.MediaPlayer> nesne.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline1)]  
   
-2.  Kullanım <xref:System.Windows.Media.MediaPlayer.Open%2A> medya dosyasını yüklemek için yöntemi.  
+2. Kullanım <xref:System.Windows.Media.MediaPlayer.Open%2A> medya dosyasını yüklemek için yöntemi.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline2)]  
   
-3.  Oluşturma bir <xref:System.Windows.Media.VideoDrawing>.  
+3. Oluşturma bir <xref:System.Windows.Media.VideoDrawing>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline3)]  
   
-4.  Medyayı ayarlayarak çizmek için konum ve boyut belirtin <xref:System.Windows.Media.VideoDrawing.Rect%2A> özelliği <xref:System.Windows.Media.VideoDrawing>.  
+4. Medyayı ayarlayarak çizmek için konum ve boyut belirtin <xref:System.Windows.Media.VideoDrawing.Rect%2A> özelliği <xref:System.Windows.Media.VideoDrawing>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline4)]  
   
-5.  Ayarlama <xref:System.Windows.Media.VideoDrawing.Player%2A> özelliği <xref:System.Windows.Media.VideoDrawing> ile <xref:System.Windows.Media.MediaPlayer> oluşturduğunuz.  
+5. Ayarlama <xref:System.Windows.Media.VideoDrawing.Player%2A> özelliği <xref:System.Windows.Media.VideoDrawing> ile <xref:System.Windows.Media.MediaPlayer> oluşturduğunuz.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline5](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline5)]  
   
-6.  Kullanım <xref:System.Windows.Media.MediaPlayer.Play%2A> yöntemi <xref:System.Windows.Media.MediaPlayer> medya oynatmayı başlatmak için.  
+6. Kullanım <xref:System.Windows.Media.MediaPlayer.Play%2A> yöntemi <xref:System.Windows.Media.MediaPlayer> medya oynatmayı başlatmak için.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline6](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline6)]  
   
@@ -124,19 +124,19 @@ GeometryDrawing
   
  Medya üzerinde ek zamanlama denetim kazanmak için kullanmak bir <xref:System.Windows.Media.MediaTimeline> ile <xref:System.Windows.Media.MediaPlayer> ve <xref:System.Windows.Media.VideoDrawing> nesneleri. <xref:System.Windows.Media.MediaTimeline> Video yinelenmesi gerektiğini belirtmenize olanak sağlar. Kullanılacak bir <xref:System.Windows.Media.MediaTimeline> ile bir <xref:System.Windows.Media.VideoDrawing>, aşağıdaki adımları gerçekleştirin:  
   
-1.  Bildirme <xref:System.Windows.Media.MediaTimeline> ve zamanlama davranışlarını ayarlayın.  
+1. Bildirme <xref:System.Windows.Media.MediaTimeline> ve zamanlama davranışlarını ayarlayın.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline1)]  
   
-2.  Oluşturma bir <xref:System.Windows.Media.MediaClock> gelen <xref:System.Windows.Media.MediaTimeline>.  
+2. Oluşturma bir <xref:System.Windows.Media.MediaClock> gelen <xref:System.Windows.Media.MediaTimeline>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline2)]  
   
-3.  Oluşturma bir <xref:System.Windows.Media.MediaPlayer> ve <xref:System.Windows.Media.MediaClock> ayarlamak için kendi <xref:System.Windows.Media.MediaPlayer.Clock%2A> özelliği.  
+3. Oluşturma bir <xref:System.Windows.Media.MediaPlayer> ve <xref:System.Windows.Media.MediaClock> ayarlamak için kendi <xref:System.Windows.Media.MediaPlayer.Clock%2A> özelliği.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline3)]  
   
-4.  Oluşturma bir <xref:System.Windows.Media.VideoDrawing> ve atama <xref:System.Windows.Media.MediaPlayer> için <xref:System.Windows.Media.VideoDrawing.Player%2A> özelliği <xref:System.Windows.Media.VideoDrawing>.  
+4. Oluşturma bir <xref:System.Windows.Media.VideoDrawing> ve atama <xref:System.Windows.Media.MediaPlayer> için <xref:System.Windows.Media.VideoDrawing.Player%2A> özelliği <xref:System.Windows.Media.VideoDrawing>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline4)]  
   
