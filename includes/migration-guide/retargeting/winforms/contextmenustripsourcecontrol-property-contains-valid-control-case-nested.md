@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 948c83f49b703194ccfe932e53751e0bb2dde37c
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f1a1eab471d46f018a8e0d0cf787d487cf67c11e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234017"
 ---
 ### <a name="contextmenustripsourcecontrol-property-contains-a-valid-control-in-the-case-of-nested-toolstripmenuitems"></a>İç içe geçmiş Toolstripmenuıtems söz konusu olduğunda, geçerli bir denetim ContextMenuStrip.SourceControl özelliği içerir
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760857"
 |Sürüm|4.7.2|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType></li></ul>|
-

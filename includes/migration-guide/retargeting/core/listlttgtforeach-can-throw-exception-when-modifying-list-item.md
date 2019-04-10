@@ -1,4 +1,12 @@
-### <a name="listlttgtforeach-can-throw-exception-when-modifying-list-item"></a>List&lt;T&gt;.ForEach, liste öğesi değiştirilirken özel durum oluşturabilir
+---
+ms.openlocfilehash: 4e81087431091dfa4d5432d5ea5e2b665be2b130
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234838"
+---
+### <a name="listtforeach-can-throw-exception-when-modifying-list-item"></a>Liste\<T >. ForEach liste öğesi değiştirirken özel durumu oluşturabilecek
 
 |   |   |
 |---|---|
@@ -8,4 +16,3 @@
 |Sürüm|4,5|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Collections.Generic.List%601.ForEach(System.Action{%600})?displayProperty=nameWithType></li></ul>|
-

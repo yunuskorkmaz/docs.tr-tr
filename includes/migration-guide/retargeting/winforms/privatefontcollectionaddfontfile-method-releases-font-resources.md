@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c923d9b341bbf0a21d73ac75cc6cb1a037f37826
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f5d93d76ab3409d4d4c1870cfef94cac59f9475c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234005"
 ---
 ### <a name="privatefontcollectionaddfontfile-method-releases-font-resources"></a>PrivateFontCollection.AddFontFile yöntemi yazı tipi kaynakları serbest bırakır.
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760858"
 |Sürüm|4.7.2|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType></li><li><xref:System.Drawing.Text.FontCollection.Dispose?displayProperty=nameWithType></li></ul>|
-

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 888628a90f615943d155c6c28762a645e36699f0
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3e9a1009167d8a765bc401d64a574bd123736ccd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234029"
 ---
 ### <a name="allow-unicode-bidirectional-control-characters-in-uris"></a>Unicode çift yönlü denetim karakterleri Urılar içinde izin ver
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760881"
 |Sürüm|4.7.2|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
-

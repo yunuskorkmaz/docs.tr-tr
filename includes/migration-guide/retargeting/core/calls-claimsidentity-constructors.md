@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6dd7f2a2f6dec306940650beee58104b20788bdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235008"
+---
 ### <a name="calls-to-claimsidentity-constructors"></a>Claimsıdentity oluşturucular çağrıları
 
 |   |   |
@@ -8,4 +16,3 @@
 |Sürüm|4.6.2|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity)?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)?displayProperty=nameWithType></li></ul>|
-

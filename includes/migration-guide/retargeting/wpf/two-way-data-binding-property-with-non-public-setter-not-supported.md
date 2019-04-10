@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a70aca33d0830f3b23ff985f17c469cb7c4ff35c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234808"
+---
 ### <a name="two-way-data-binding-to-a-property-with-a-non-public-setter-is-not-supported"></a>Bir özelliğe genel olmayan ayarlayıcı ile iki yönlü veri bağlama desteklenmiyor
 
 |   |   |
@@ -8,4 +16,3 @@
 |Sürüm|4.5.1|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType></li></ul>|
-

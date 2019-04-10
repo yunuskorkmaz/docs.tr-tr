@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cdcf7f540a9ded4108121b2cd8e855687a0c7e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234967"
+---
 ### <a name="signedxmlgetpublickey-returns-rsacng-on-net462-or-lightup-without-retargeting-change"></a>SignedXml.GetPublicKey RSACng net462 (veya yerelleştirilmesi) değişiklik yeniden hedefleme olmadan döndürür
 
 |   |   |
@@ -8,4 +16,3 @@
 |Sürüm|4.6.2|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.Security.Cryptography.Xml.SignedXml.CheckSignatureReturningKey(System.Security.Cryptography.AsymmetricAlgorithm@)?displayProperty=nameWithType></li></ul>|
-

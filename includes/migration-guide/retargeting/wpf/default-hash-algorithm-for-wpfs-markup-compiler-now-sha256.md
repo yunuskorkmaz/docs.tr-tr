@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 63a38f33fef09577c5ed621727b8c38e4c7e1bdf
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 14b8930044381d1d86ec7984d36a5c3588eebd81
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233993"
 ---
 ### <a name="the-default-hash-algorithm-for-wpfs-markup-compiler-is-now-sha256"></a>WPF'nin biçimlendirme derleyici için varsayılan karma algoritması SHA256 sunulmuştur
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760937"
 |Kapsam|Geçirgen|
 |Sürüm|4.7.2|
 |Tür|Yeniden Hedefleme|
-

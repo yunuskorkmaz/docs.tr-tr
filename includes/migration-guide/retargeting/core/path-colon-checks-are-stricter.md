@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a51738fa75ba2dd4574549fce2570df8231c4cae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234976"
+---
 ### <a name="path-colon-checks-are-stricter"></a>Yol iki nokta üst üste denetimleri katı
 
 |   |   |
@@ -8,4 +16,3 @@
 |Sürüm|4.6.2|
 |Tür|Yeniden Hedefleme|
 |Etkilenen API’ler|<ul><li><xref:System.IO.Path.GetDirectoryName(System.String)?displayProperty=nameWithType></li><li><xref:System.IO.Path.GetPathRoot(System.String)?displayProperty=nameWithType></li></ul>|
-

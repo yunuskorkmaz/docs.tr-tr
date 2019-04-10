@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 37d771305bb0a4a38eeac9713e8667d158962174
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 77d4978df76735d11f63c7118c1b4708b5b85502
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "57788952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236078"
 ---
 ### <a name="remove-ssl3-from-the-wcf-transportdefaults"></a>WCF TransportDefaults Ssl3 Kaldır
 
@@ -16,4 +16,3 @@ ms.locfileid: "57788952"
 |Sürüm|4.6.2|
 |Tür|Çalışma zamanı|
 |Etkilenen API’ler|<ul><li><xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols?displayProperty=nameWithType></li><li><xref:System.ServiceModel.TcpTransportSecurity.SslProtocols?displayProperty=nameWithType></li></ul>|
-

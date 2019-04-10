@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e2bca42daebd25667ab2f312d5e59089b986503c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234784"
+---
 ### <a name="multi-line-aspnet-textbox-spacing-changed-when-using-antixssencoder"></a>AntiXSSEncoder kullanılırken çok satırlı ASP.Net TextBox boşluğu değiştirildi
 
 |   |   |
@@ -7,4 +15,3 @@
 |Kapsam|İkincil|
 |Sürüm|4,5|
 |Tür|Yeniden Hedefleme|
-

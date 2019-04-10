@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 506218195417548880a9d8d10508a570a7769682
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234999"
+---
 ### <a name="long-path-support"></a>Uzun yol desteği
 
 |   |   |
@@ -7,4 +15,3 @@
 |Kapsam|İkincil|
 |Sürüm|4.6.2|
 |Tür|Yeniden Hedefleme|
-
