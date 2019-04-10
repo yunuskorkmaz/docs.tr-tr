@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: e6aab0b1eca340e212c34e2d25b9b84984dcc7a0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9b280a63e85beac3231bc1a414430239bea4a1f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111520"
 ---
 # <a name="add-of-declaredtypes-element"></a>\<Ekle >, \<declaredTypes > öğesi
 Tarafından kullanılan bir tür ekler <xref:System.Runtime.Serialization.DataContractSerializer> seri durumundan çıkarma sırasında. Bildirilen her tür, alan veya özellik bildirilen tür döndürülecek bilinen türleri içerir.  
@@ -40,7 +40,7 @@ Tarafından kullanılan bir tür ekler <xref:System.Runtime.Serialization.DataCo
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Gerekli dize özniteliği.<br /><br /> Tür adı (ad uzayı dahil), derleme adı, sürüm numarasını, kültürü ve ortak anahtar belirteci belirtir.|  
+| türü|Gerekli dize özniteliği.<br /><br /> Tür adı (ad uzayı dahil), derleme adı, sürüm numarasını, kültürü ve ortak anahtar belirteci belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -76,7 +76,8 @@ Tarafından kullanılan bir tür ekler <xref:System.Runtime.Serialization.DataCo
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Veri Sözleşmesi Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
 - [\<Ekle >, \<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122310"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Temel Windows Communication Foundation Kavramları
 Bu belge, Windows Communication Foundation (WCF) mimarisinin üst düzey bir görünümünü sağlar. Temel kavramları ve bunların birbirine nasıl uyduğunu açıklamak için tasarlanmıştır. Basit bir WCF hizmeti ve istemci sürümü oluşturmaya ilişkin öğretici için bkz: [başlangıç Öğreticisi](../../../docs/framework/wcf/getting-started-tutorial.md). WCF programlama bilgi edinmek için [temel WCF programlama](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -153,5 +153,6 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WCF'de uygulanan Web hizmeti (WS) belirtimleri, WS-güvenlik WS-ReliableMessaging ve benzeri gibi gittikçe artan için Toplu özellik.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Windows Communication Foundation nedir?](../../../docs/framework/wcf/whats-wcf.md)
 - [Windows Communication Foundation Mimarisi](../../../docs/framework/wcf/architecture.md)

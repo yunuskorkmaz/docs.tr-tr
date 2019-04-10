@@ -1,21 +1,21 @@
 ---
-title: OLE DB veri türü eşlemeleri
+title: OLE DB Veri Türü Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 203b017234a98553a053981d8f74b2c419376e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09fab7c5df99ffdb0aef6d32a8ad5ca1ed446d42
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100593"
 ---
-# <a name="ole-db-data-type-mappings"></a>OLE DB veri türü eşlemeleri
+# <a name="ole-db-data-type-mappings"></a>OLE DB Veri Türü Eşlemeleri
 Aşağıdaki tabloda gösterilen gösterilmektedir [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü için .NET Framework veri sağlayıcısı ADO ve OLE DB veri türlerinden (<xref:System.Data.OleDb>). Türü belirlenmiş erişimci yöntemlerini <xref:System.Data.OleDb.OleDbDataReader> da listelenir.  
   
-|ADO türü|OLE DB türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü belirlenmiş erişimcisi|  
+|ADO türü|OLE DB türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]  türü|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] türü belirlenmiş erişimcisi|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
-|adBinary|DBTYPE_BYTES|Bayt]|GetBytes()|  
+|adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
 |adBoolean|DBTYPE_BOOL|Boole değeri|GetBoolean()|  
 |adBSTR|DBTYPE_BSTR|Dize|GetString()|  
 |adChapter|DBTYPE_HCHAPTER|Aracılığıyla desteklenen `DataReader`. Bkz: [DataReader kullanarak veri alma](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|GetValue()|  
@@ -50,5 +50,6 @@ Aşağıdaki tabloda gösterilen gösterilmektedir [!INCLUDE[dnprdnshort](../../
  \* OLE DB türleri için `DBTYPE_IUNKNOWN` ve `DBTYPE_IDISPATCH`, nesne başvurusu bir sıralanmış işaretçiyi gösterimidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: d762c73862d99801c3c65ca12b4c97514834ac7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134985"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Forms'ta Fare Olayları
 Fare girişi işlediğinizde, genellikle işaretçi ve farenin düğme durumunu fare konumunu bilmek ister. Bu konu, fare olayları bu bilgiler edinme hakkında ayrıntılı bilgi sağlar ve Windows Forms denetimlerinde tetiklenen hangi fare tıklatın olayları siparişi açıklar. Bir listesi ve açıklamaları tüm fare olayları için bkz. [nasıl Windows Forms'ta fare girdisi çalışır](how-mouse-input-works-in-windows-forms.md).  Ayrıca bkz: [olay işleyicilerine genel bakış (Windows Forms)](event-handlers-overview-windows-forms.md) ve [olaylara genel bakış (Windows Forms)](events-overview-windows-forms.md).  
@@ -93,7 +93,7 @@ Fare girişi işlediğinizde, genellikle işaretçi ve farenin düğme durumunu 
   
     -   Çift tıklatın doğru: Yükseltilmiş click olayı yok  
   
--   <xref:System.Windows.Forms.ListView> Denetimi  
+-   <xref:System.Windows.Forms.ListView>  denetimi  
   
     > [!NOTE]
     >  Daha sonra ayrıntılı olay yalnızca kullanıcı öğelerde tıkladığında davranış <xref:System.Windows.Forms.ListView> denetimi. Tıklama denetimi başka bir yerde için hiçbir olay harekete geçirilir. Daha sonra açıklanan olaylarına ilaveten vardır <xref:System.Windows.Forms.ListView.BeforeLabelEdit> ve <xref:System.Windows.Forms.ListView.AfterLabelEdit> ile doğrulama kullanmak istiyorsanız, ilginizi çekebilecek olayları <xref:System.Windows.Forms.ListView> denetimi.  
@@ -106,7 +106,7 @@ Fare girişi işlediğinizde, genellikle işaretçi ve farenin düğme durumunu 
   
     -   Sağa çift: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
--   <xref:System.Windows.Forms.TreeView> Denetimi  
+-   <xref:System.Windows.Forms.TreeView>  denetimi  
   
     > [!NOTE]
     >  Daha sonra ayrıntılı olay yalnızca kullanıcı öğeleri veya öğeleri sağındaki tıkladığında davranış <xref:System.Windows.Forms.TreeView> denetimi. Tıklama denetimi başka bir yerde için hiçbir olay harekete geçirilir. Açıklanana yanı sıra daha sonra vardır <xref:System.Windows.Forms.TreeView.BeforeCheck>, <xref:System.Windows.Forms.TreeView.BeforeSelect>, <xref:System.Windows.Forms.TreeView.BeforeLabelEdit>, <xref:System.Windows.Forms.TreeView.AfterSelect>, <xref:System.Windows.Forms.TreeView.AfterCheck>, ve <xref:System.Windows.Forms.TreeView.AfterLabelEdit> ile doğrulama kullanmak istiyorsanız, ilginizi çekebilecek olayları <xref:System.Windows.Forms.TreeView> denetimi .  
@@ -142,4 +142,5 @@ Fare girişi işlediğinizde, genellikle işaretçi ve farenin düğme durumunu 
     >  Kullanıcı fare düğmesini basılı durumdayken işaretçiyi iki durumlu denetimin dışına taşınırsa (fareyi hareket gibi <xref:System.Windows.Forms.Button> , basılı durumdayken denetim), iki durumlu denetimin yükseltilmiş boyama durum ve yalnızca <xref:System.Windows.Forms.Control.MouseUp> olayı oluşur. <xref:System.Windows.Forms.Control.Click> Veya <xref:System.Windows.Forms.Control.MouseClick> olayları, bu durumda gerçekleşmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bir Windows Forms Uygulamasında Fare Girdisi](mouse-input-in-a-windows-forms-application.md)

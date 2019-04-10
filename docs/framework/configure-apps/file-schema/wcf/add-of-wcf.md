@@ -2,12 +2,12 @@
 title: <add> WCF
 ms.date: 03/30/2017
 ms.assetid: c196f6d7-77f6-4266-973c-305b2b4dd8a2
-ms.openlocfilehash: 76197120096329d0eb42121f5740a87c4f42318b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e9ece03ec9376e6a428ac6a82a3f26020f64d744
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186621"
 ---
 # <a name="add-of-wcf"></a>\<Ekle > WCF
 Çalışma zamanını şuradan doğrudan yayılan izleme kayıtları için bekleyen bir izleme katılımcı yapılandırın ve bunları yapılandırılan hangi yolla işlem. Bu yazma içerir (örneğin, dosya, konsolu ETW), belirli bir çıktısına işleme/kayıtları veya gerekli olabilir herhangi bir birleşimini toplama.  
@@ -89,6 +89,7 @@ ms.locfileid: "57356019"
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 2648296d01f0e237847fc16535b01dbd8e9c5b62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377305"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157878"
 ---
 # <a name="panels-overview"></a>Panellere Genel Bakış
 <xref:System.Windows.Controls.Panel> öğeler öğelerin işlenmesi denetleyen bileşenleri — boyutlarına ve boyutlar, konumlarına ve alt içeriklerinin düzenini. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Sağlayan bir dizi önceden tanımlanmış <xref:System.Windows.Controls.Panel> öğeleri ve bunun yanı sıra özel oluşturabilme olanağı <xref:System.Windows.Controls.Panel> öğeleri.  
@@ -253,7 +253,8 @@ ms.locfileid: "57377305"
  Oluşturma hakkında ek bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] yerelleştirilebilir uygulamalarla [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]s, bkz: [kullanım otomatik düzen genel bakış](../advanced/use-automatic-layout-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+
+- [İzlenecek yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF Düzen Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Düzen](../advanced/layout.md)
 - [WPF denetimleri Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160053)

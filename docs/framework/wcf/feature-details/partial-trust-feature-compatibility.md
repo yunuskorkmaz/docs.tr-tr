@@ -2,12 +2,12 @@
 title: Kısmi Güven Özelliği Uyumluluğu
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333514"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124572"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Kısmi Güven Özelliği Uyumluluğu
 Kısmen güvenilen bir ortamda çalışan işlevselliğin sınırlı bir alt kümesinde Windows Communication Foundation (WCF) destekler. Kısmi güvende desteklenen özellikler bölümünde anlatıldığı gibi belirli senaryoları birtakım geçici olarak tasarlanmıştır [desteklenen dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) konu.  
@@ -160,6 +160,7 @@ Kısmen güvenilen bir ortamda çalışan işlevselliğin sınırlı bir alt kü
  Kısmi güven ortamında çalışan kaynağa erişmek veya içinde eylemi uygulamak denemek olduğunda bilgilerini veya bu eylemi bir parça kullanılamaz bulmak için en iyi yolu bir `try` blok ve ardından `catch` hatası. Yinelenen hata izleme dosyaları taşmasını önlemek için kaynağın veya ilk güvenlik hatasından sonra işlem izleme WCF devre dışı bırakır. Kaynağa erişim veya bir eylem gerçekleştirmek için bir girişimde ilk kez her başarısız kaynağa erişim için bir özel durum izleme yoktur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>

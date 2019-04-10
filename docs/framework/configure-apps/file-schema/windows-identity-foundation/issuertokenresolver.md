@@ -3,12 +3,12 @@ title: <issuerTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: a37935fa9302493c0ecaab0f56e1414d44637af6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 08082d2e6647f07f33df72ab79dac00c15a1cd1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269230"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200824"
 ---
 # <a name="issuertokenresolver"></a>\<issuerTokenResolver >
 Belirteci işleyicisi koleksiyondaki işleyiciler tarafından kullanılan verici belirteç çözümleyici kaydeder. Veren belirteç Çözümleyici, imzalama belirtecinin gelen belirteçleri ve iletileri çözmek için kullanılır.  
@@ -41,10 +41,10 @@ Belirteci işleyicisi koleksiyondaki işleyiciler tarafından kullanılan verici
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Veren belirteç çözümleyici türünü belirtir. Aşağıdakilerden biri olması gereken <xref:System.IdentityModel.Tokens.IssuerTokenResolver> sınıfı veya, türetilen tür <xref:System.IdentityModel.Tokens.IssuerTokenResolver> sınıfı. Gerekli.|  
+| türü|Veren belirteç çözümleyici türünü belirtir. Aşağıdakilerden biri olması gereken <xref:System.IdentityModel.Tokens.IssuerTokenResolver> sınıfı veya, türetilen tür <xref:System.IdentityModel.Tokens.IssuerTokenResolver> sınıfı. Gerekli.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Hiçbiri  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -88,4 +88,5 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.IdentityModel.Tokens.IssuerTokenResolver>

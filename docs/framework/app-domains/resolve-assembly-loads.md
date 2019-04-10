@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a93052cba4693e63b3cb702a5ab8f6e15a8d8dec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: accb06421b8a697b0ee89adab0a9dffa23cffb05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193115"
 ---
 # <a name="resolving-assembly-loads"></a>Derleme Yüklerini Çözme
 .NET Framework sağlar <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay yüklenirken derleme üzerinde daha fazla denetim gerektiren uygulamalar için. Bu olayını işleyerek, uygulamanız hangisinin birkaç derleme sürümlerini yüklemek için dinamik bir derleme yayılamıyor ve döndürün. yük bağlamdan normal algılama yolları, select dışındaki bir derlemeyi yüklemek vb. Bu konuda işleme yönelik yönergeler sağlanmaktadır <xref:System.AppDomain.AssemblyResolve> olay.  
@@ -81,5 +81,6 @@ ms.locfileid: "54684495"
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bütünleştirilmiş Kod Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
+
+- [Derleme Yükleme için En İyi Yöntemler](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)

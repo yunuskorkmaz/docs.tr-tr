@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055358"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081274"
 ---
 # <a name="data-binding-overview"></a>Veri Bağlamaya Genel Bakış
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] veri bağlama sunmak ve verilerle etkileşimde bulunmak üzere uygulamalar için basit ve tutarlı bir yol sağlar. Çeşitli veri kaynaklarından biçiminde veriye, öğeler bağlanabilir [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] nesneleri ve [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s gibi <xref:System.Windows.Controls.Button> ve <xref:System.Windows.Controls.ItemsControl>s gibi <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.ListView> esnek tek veri öğelerini stilini veya koleksiyonları etkinleştirmek için yerleşik bir işlevselliğe sahiptir. Sıralama, filtreleme ve Grup görünümleri, veri üzerinde oluşturulabilir.  
@@ -23,8 +23,7 @@ ms.locfileid: "59055358"
  Veri bağlama işlevindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geleneksel modeller, çok çeşitli veri bağlama, esnek kendiliğinden destekleyen özellikler dahil olmak üzere çeşitli avantajları vardır [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] verileri ve iş ayrılmasına gösterimi mantığından [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  Bu konu öncelikle için temel kavramları açıklar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] veri bağlamayı ve ardından gerçekleştirmeyeceğini kullanımını <xref:System.Windows.Data.Binding> sınıfı ve veri bağlama, diğer özellikler.  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>Veri bağlama nedir?  
  Veri bağlama olan uygulama arasında bağlantı kuran işlem [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ve iş mantığı. Veriler, değeri değiştiğinde bağlama doğru ayarları varsa ve verileri uygun bildirimleri sağlar, daha sonra veriye bağlı öğeleri değişiklikleri otomatik olarak yansıtır. Veri bağlama, bir öğe verileri bir dış temsilini değişirse, ardından temel alınan verileri otomatik olarak değişikliği yansıtacak şekilde güncelleştirilmesi anlamına da gelebilir. Örneğin, kullanıcı değeri düzenlerse bir <xref:System.Windows.Controls.TextBox> öğesi, temel alınan veri değeri bu değişikliği yansıtacak şekilde otomatik olarak güncelleştirilir.  
@@ -232,8 +231,7 @@ ms.locfileid: "59055358"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>Koleksiyon Görünümleri  
  Bir kez, <xref:System.Windows.Controls.ItemsControl> veri toplama için sıralama, filtreleme veya grup verileri isteyebileceğiniz bağlıdır. Bunu yapmak için uygulayan sınıflar olan koleksiyon görünümlerini kullanın. <xref:System.ComponentModel.ICollectionView> arabirimi.  
-  
-  
+
 #### <a name="what-are-collection-views"></a>Koleksiyon görünümleri nelerdir?  
  Koleksiyon görünümü, üzerine gidin ve temel alınan kaynak koleksiyonu kendisini değiştirmek zorunda kalmadan, sıralama, filtreleme ve Grup sorguları tabanlı kaynak koleksiyonu görüntülemek izin veren bir bağlama kaynak koleksiyonu katmanıdır. Koleksiyon görünümü Ayrıca, koleksiyondaki geçerli öğeye bir işaretçi tutar. Kaynak koleksiyonu uyguluyorsa <xref:System.Collections.Specialized.INotifyCollectionChanged> arabirimi, tarafından gerçekleştirilen değişikliklerin <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> olay görünümlerine yayılır.  
   
@@ -430,6 +428,7 @@ ms.locfileid: "59055358"
  Ekli özellik ayarlayabilirsiniz <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> belirli bir bağlama durumu hakkında bilgi almak için bağlama ile ilgili bir nesne üzerinde.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [WPF Sürüm 4.5'te Yenilikler](../getting-started/whats-new.md)
 - [LINQ Sorgusunun Sonuçlarına Bağlama](how-to-bind-to-the-results-of-a-linq-query.md)

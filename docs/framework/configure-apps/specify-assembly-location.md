@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f7d09e315f2ccc7ecdcf22719ca6dce1ee1411b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825413"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186296"
 ---
 # <a name="specifying-an-assemblys-location"></a>Derlemenin Konumunu Belirtme
 Derlemenin konumunu belirtmek için iki yolu vardır:  
@@ -66,7 +66,8 @@ Derlemenin konumunu belirtmek için iki yolu vardır:
  **PrivatePath** özniteliği çalışma zamanı derlemeleri araması gereken dizinleri içerir. Uygulama C:\Program Files\MyApp bulunuyorsa, çalışma zamanı bir kod tabanına C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin ve C:\Program Files\MyApp\Bin3 belirtmeyin derlemeleri arar. İçinde belirtilen dizinler **privatePath** uygulama temel dizininin alt dizinleri olması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
-- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](index.md)
+
+- [Ortak Dil Çalışma Zamanındaki Derlemeler](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Derlemelerle Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma](index.md)

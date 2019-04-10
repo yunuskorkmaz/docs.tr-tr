@@ -2,12 +2,12 @@
 title: Yazılmamış istek-yanıt
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: bdd0ae5ac53bf1a35817efba7ae11d947e3a5b33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: ae3c89f9eec9b1684f8c87af200ba87ca8dec093
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101224"
 ---
 # <a name="untyped-requestreply"></a>Yazılmamış İstek/Yanıt
 Bu örnek ileti sınıfını kullanma işlemi sözleşmelerini tanımlamak nasıl gösterir.  
@@ -88,4 +88,3 @@ Press <ENTER> to terminate client.
 >  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  
-  
