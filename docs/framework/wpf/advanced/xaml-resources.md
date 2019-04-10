@@ -7,20 +7,19 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: f5d6ae2d21058e7e6dd9fa9736800237082766d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230024"
 ---
 # <a name="xaml-resources"></a>XAML Kaynakları
 Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir nesnedir. Fırçalar ve stilleri kaynakları örnekleridir. Bu genel bakışta, kaynakları kullanmayı açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıca oluşturabilir ve kod kullanarak veya birbirinin yerine kod arasında kaynaklarına erişin ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Daha fazla bilgi için [kaynaklar ve kod](resources-and-code.md).  
   
 > [!NOTE]
 >  Bu konuda açıklanan kaynak dosyaları kaynak dosyaları açıklanan farklı [WPF Uygulama kaynağı, içerik ve veri dosyalarını](../app-development/wpf-application-resource-content-and-data-files.md) ve açıklanan gömülü veya bağlantılı kaynakların farklı [Yönet Uygulama kaynaklarını (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
-  
-  
+
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>XAML kaynakları kullanma  
  Aşağıdaki örnekte tanımlayan bir <xref:System.Windows.Media.SolidColorBrush> kök öğesi bir sayfanın bir kaynak olarak. Örnek sonra kaynağa başvuruda ve dahil olmak üzere çeşitli alt öğelerinin özelliklerini ayarlamak için kullandığı bir <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Controls.TextBlock>ve <xref:System.Windows.Controls.Button>.  
@@ -129,7 +128,7 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
   
 -   Bir özellik olmalıdır ayarlanan özelliğin bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>. Özelliği tarafından yedeklenmesi gereken bir <xref:System.Windows.DependencyProperty>.  
   
--   Başvuru arasında bir değer için olan bir <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
+-   Başvuru arasında bir değer için olan bir <xref:System.Windows.Style><xref:System.Windows.Setter>.  
   
 -   Ayarlanan özelliğin üzerinde bir özelliği olmalıdır bir <xref:System.Windows.Freezable> değerlerinden birine sağlanan bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> özelliği veya <xref:System.Windows.Setter> değeri.  
   
@@ -145,7 +144,7 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Stil gerçekten bir anahtarı yok: örtük anahtarı `typeof(` <xref:System.Windows.Controls.Button> `)`. Biçimlendirme içinde belirttiğiniz bir <xref:System.Windows.Style.TargetType%2A> doğrudan türü olarak adı (veya isteğe bağlı olarak kullanabileceğiniz [{... x: Type}](../../xaml-services/x-type-markup-extension.md) döndürülecek bir <xref:System.Type>.  
+ Stil gerçekten bir anahtarı yok: örtük anahtarı `typeof(`<xref:System.Windows.Controls.Button>`)`. Biçimlendirme içinde belirttiğiniz bir <xref:System.Windows.Style.TargetType%2A> doğrudan türü olarak adı (veya isteğe bağlı olarak kullanabileceğiniz [{... x: Type}](../../xaml-services/x-type-markup-extension.md) döndürülecek bir <xref:System.Type>.  
   
  Tarafından kullanılan varsayılan tema stil mekanizmaları aracılığıyla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], stil ve çalışma zamanı stil olarak uygulanır bir <xref:System.Windows.Controls.Button> sayfasında olsa bile <xref:System.Windows.Controls.Button> kendisini belirtmek çalışmaz, <xref:System.Windows.FrameworkElement.Style%2A> özelliği veya belirli bir kaynak Stil başvuru. Sayfada tanımlı stil kodunuzu daha önce arama sırası tema sözlük stilde aynı anahtarı kullanarak tema sözlük stili daha bulunur. Yalnızca belirtebilirsiniz `<Button>Hello</Button>` sayfası ve stil ile tanımlanan yerinde <xref:System.Windows.Style.TargetType%2A> , `Button` için bu düğmeyi uygular. İsterseniz, aynı türü değere stiliyle hala açıkça anahtarlayabilirsiniz <xref:System.Windows.Style.TargetType%2A>, anlaşılabilir olması adına, biçimlendirme, ancak bu isteğe bağlıdır.  
   
@@ -154,11 +153,12 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
  <xref:System.Windows.DataTemplate> Ayrıca bir örtülü anahtar vardır. Örtük anahtarı için bir <xref:System.Windows.DataTemplate> olduğu <xref:System.Windows.DataTemplate.DataType%2A> özellik değeri. <xref:System.Windows.DataTemplate.DataType%2A> açıkça kullanmak yerine türü adı olarak da belirtilebilir [{... x: Type} ](../../xaml-services/x-type-markup-extension.md). Ayrıntılar için bkz [veri şablonu oluşturmaya genel bakış](../data/data-templating-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.ResourceDictionary>
 - [Uygulama Kaynakları](optimizing-performance-application-resources.md)
 - [Kaynaklar ve Kod](resources-and-code.md)
 - [Kaynağı Tanımlama ve Kaynağa Başvurma](how-to-define-and-reference-a-resource.md)
 - [Uygulama Yönetimine Genel Bakış](../app-development/application-management-overview.md)
 - [x:Type İşaretleme Uzantısı](../../xaml-services/x-type-markup-extension.md)
-- [StaticResource İşaretleme Uzantısı](staticresource-markup-extension.md)
-- [DynamicResource İşaretleme Uzantısı](dynamicresource-markup-extension.md)
+- [StaticResource Biçimlendirme Uzantısı](staticresource-markup-extension.md)
+- [DynamicResource Biçimlendirme Uzantısı](dynamicresource-markup-extension.md)
