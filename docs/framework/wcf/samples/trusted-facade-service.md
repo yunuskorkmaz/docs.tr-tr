@@ -2,12 +2,12 @@
 title: Güvenilir Görünüm Hizmeti
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 4b02928224f1cb96a25dc71941273625e7d9e5e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091557"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346164"
 ---
 # <a name="trusted-facade-service"></a>Güvenilir Görünüm Hizmeti
 Bu senaryo örneği çağıranın kimlik bilgilerini bir hizmetten diğerine Windows Communication Foundation (WCF) kullanarak akış yapmayı gösteren güvenlik altyapısı.  
@@ -260,27 +260,27 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Örneği aynı makinede çalıştırmak için  
   
-1.  Yolun Makecert.exe bulunduğu klasörü içerdiğinden emin olun.  
+1. Yolun Makecert.exe bulunduğu klasörü içerdiğinden emin olun.  
   
-2.  Setup.bat örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.  
+2. Setup.bat örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.  
   
-3.  Ayrı konsol penceresinde \BackendService\bin dizinden BackendService.exe başlatın  
+3. Ayrı konsol penceresinde \BackendService\bin dizinden BackendService.exe başlatın  
   
-4.  Ayrı konsol penceresinde \FacadeService\bin dizinden FacadeService.exe başlatın  
+4. Ayrı konsol penceresinde \FacadeService\bin dizinden FacadeService.exe başlatın  
   
-5.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
+5. Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-6.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
-1.  Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
+1. Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

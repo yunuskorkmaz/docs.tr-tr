@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: cb8ad8cb4a1ec13611edfcc3de7f4b7eb33fc553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6c5ec6d953d174b525dee7ad3034d2d01ae4950f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829934"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344955"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue İşleci (Visual Basic)
 Bir ifade olup olmadığını belirler `True`.  
@@ -24,15 +24,15 @@ Bir ifade olup olmadığını belirler `True`.
 ## <a name="compiler-use-of-istrue"></a>IsTrue derleyici kullanımı  
  Bir sınıf veya yapı tanımlandığında, bu türde bir değişken kullanabileceğiniz bir `For`, `If`, `Else If`, veya `While` deyimi veya bir `When` yan tümcesi. Bunu yaparsanız, derleyici, türüne dönüştürür bir işleç gerektiriyor. bir `Boolean` koşul sınayabilmeniz değeri. Uygun bir işleç şu sırayla arar:  
   
-1.  Genişleyen bir dönüştürme operatörünün sınıfı veya yapısına `Boolean`.  
+1. Genişleyen bir dönüştürme operatörünün sınıfı veya yapısına `Boolean`.  
   
-2.  Genişleyen bir dönüştürme operatörünün sınıfı veya yapısına `Boolean?`.  
+2. Genişleyen bir dönüştürme operatörünün sınıfı veya yapısına `Boolean?`.  
   
-3.  `IsTrue` İşleci, sınıf ya da yapı üzerinde.  
+3. `IsTrue` İşleci, sınıf ya da yapı üzerinde.  
   
-4.  Bir daraltma dönüşümü için `Boolean?` , değil içeren bir dönüştürme `Boolean` için `Boolean?`.  
+4. Bir daraltma dönüşümü için `Boolean?` , değil içeren bir dönüştürme `Boolean` için `Boolean?`.  
   
-5.  Bir daraltma dönüşümü işleci sınıfı veya yapısına `Boolean`.  
+5. Bir daraltma dönüşümü işleci sınıfı veya yapısına `Boolean`.  
   
  Herhangi bir dönüştürmeyi tanımlamadıysanız `Boolean` veya `IsTrue` işleci, derleyici bir hata bildirir.  
   
@@ -47,5 +47,5 @@ Bir ifade olup olmadığını belirler `True`.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [IsFalse İşleci](../../../visual-basic/language-reference/operators/isfalse-operator.md)
-- [Nasıl yapılır: Bir işleci tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Nasıl yapılır: İşleç Tanımlama](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
 - [OrElse İşleci](../../../visual-basic/language-reference/operators/orelse-operator.md)

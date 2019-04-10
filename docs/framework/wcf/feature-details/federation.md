@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114048"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427311"
 ---
 # <a name="federation"></a>Federasyon
 Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayrıca, Federasyon güvenlik mimariyi dağıtmak için Windows Communication Foundation (WCF) desteği açıklanmaktadır. Federasyon gösteren örnek bir uygulama için bkz. [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -33,9 +33,9 @@ Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayr
 |Güvenlik Belirteci Hizmeti (STS)|Güvenlik belirteçleri bir Web hizmeti; diğer bir deyişle, onaylamalar yanınızda güvendiği, çok güvendiği kanıta göre yapar. Bu, etki alanı arasında güven aracılığı yapmaktan'ın temelini oluşturur.|  
   
 ### <a name="example-scenario"></a>Örnek senaryo  
- Birleşik güvenliği örneği aşağıda gösterilmiştir.  
+ Birleşik güvenliği örneği aşağıda gösterilmiştir:  
   
- ![Federasyon](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ ![Tipik birleşik güvenliği senaryoyu gösteren diyagram.](./media/federation/typical-federated-security-scenario.gif)  
   
  Bu senaryo, iki kuruluş içerir: A ve b kuruluş, bir kuruluştaki bazı kullanıcılar değerli bulduğunuz bir Web kaynağı (bir Web hizmeti) sahip.  
   
@@ -90,12 +90,12 @@ Bu konuda birleşik güvenliği kavramını kısa bir genel bakış sağlar. Ayr
 ## <a name="sample-implementation-using-wcf"></a>WCF kullanan örnek uygulama  
  Aşağıdaki çizim bir örnek uygulama için yerel destek WCF kullanarak Federasyon güvenlik mimarisi gösterilmektedir.  
   
- ![Wcf'de güvenlik Federasyon](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ ![Örnek Federasyon güvenlik uygulama gösteren diyagram.](./media/federation/federated-security-implementation.gif)  
   
 ### <a name="example-myservice"></a>Örnek MyService  
  Hizmet `MyService` tek bir uç nokta aracılığıyla kullanıma sunan `MyServiceEndpoint`. Aşağıdaki çizim, adres, bağlamayı ve uç noktası ile ilişkili sözleşme gösterir.  
   
- ![Federasyon](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
+ ![MyServiceEndpoint ayrıntılarını gösteren diyagram.](./media/federation/myserviceendpoint-details.gif)  
   
  Hizmet uç noktası `MyServiceEndpoint` kullanır [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ve geçerli bir güvenlik onaylama işaretleme dili (SAML) belirteçle gerektiren bir `accessAuthorized` STS b tarafından verilen talep Bu, hizmet yapılandırmasında bildirimli olarak belirtilir.  
   
@@ -160,7 +160,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 #### <a name="sts-b"></a>STS B  
  Aşağıdaki çizim STS b gösterir Daha önce belirtildiği gibi bir güvenlik belirteci hizmeti (STS) de bir Web hizmetidir ve kendi ilişkili uç noktaları, ilke ve benzeri olabilir.  
   
- ![Federasyon](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ ![Güvenlik belirteci hizmeti b gösteren diyagram](./media/federation/myservice-security-token-service-b.gif)  
   
  STS B adlı tek bir uç noktasını kullanıma sunar `STSEndpoint` isteği güvenlik belirteçleri kullanmak olabilir. Özellikle, STS B SAML ile belirteçleri `accessAuthorized` talep, hangi konumunda sunulabilir `MyService` hizmete erişmek için hizmet sitesi. Ancak, kullanıcıların içeren STS A verilen geçerli bir SAML belirteç sunmasını STS B gerektirir `userAuthenticated` talep. Bu, STS yapılandırmada bildirimli olarak belirtilir.  
   
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>Bir kuruluştaki istemci  
  Aşağıdaki çizimde istemci kuruluşta A yer alan adımların yanı sıra yapma gösterir bir `MyService` hizmet çağrısı. İşlev diğer bileşenleri de bütünlük açısından dahil edilir.  
   
- ![Federasyon](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ ![Showwing MyService hizmet çağrısı adımları diyagram.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>Özet  
  Birleşik güvenliği sorumluluk temiz bir bölme sağlar ve güvenli, ölçeklenebilir hizmet mimarisi oluşturmak için yardımcı olur. Dağıtılmış uygulama oluşturup dağıtırken için bir platform, WCF, Federasyon güvenlik uygulamak için yerel destek sağlar.  

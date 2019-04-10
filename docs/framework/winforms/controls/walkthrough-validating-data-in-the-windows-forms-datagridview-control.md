@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127354"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346060"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>İzlenecek yol: Windows Forms DataGridView Denetimindeki Verileri Doğrulama
 Kullanıcılara veri girişi işlevi görüntülediğinizde, sık formunuza girilen verileri doğrulamak gerekir. <xref:System.Windows.Forms.DataGridView> Sınıfı veri deposuna veri gerçekleştirilmeden önce doğrulamayı gerçekleştirmek için kolay bir yol sağlar. Verileri işleyerek doğrulayabilirsiniz <xref:System.Windows.Forms.DataGridView.CellValidating> tarafından oluşan olayı <xref:System.Windows.Forms.DataGridView> geçerli hücreyi değiştiğinde.  
@@ -35,7 +35,7 @@ Kullanıcılara veri girişi işlevi görüntülediğinizde, sık formunuza giri
   
 #### <a name="to-validate-data-entered-in-a-datagridview"></a>DataGridView üzerinde girilen verileri doğrulamak için  
   
-1.  Türetilen bir sınıf oluşturmanız <xref:System.Windows.Forms.Form> ve içeren bir <xref:System.Windows.Forms.DataGridView> denetimi ve bir <xref:System.Windows.Forms.BindingSource> bileşeni.  
+1. Türetilen bir sınıf oluşturmanız <xref:System.Windows.Forms.Form> ve içeren bir <xref:System.Windows.Forms.DataGridView> denetimi ve bir <xref:System.Windows.Forms.BindingSource> bileşeni.  
   
      Aşağıdaki kod örneği içerir ve temel başlatma sağlar bir `Main` yöntemi.  
   
@@ -44,7 +44,7 @@ Kullanıcılara veri girişi işlevi görüntülediğinizde, sık formunuza giri
     [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#02)]  
   
-2.  Veritabanına bağlanırken ayrıntılarını işlemek için form denetiminin sınıf tanımında bir yöntem uygulayın.  
+2. Veritabanına bağlanırken ayrıntılarını işlemek için form denetiminin sınıf tanımında bir yöntem uygulayın.  
   
      Bu kod örneği kullanan bir `GetData` doldurulmuş bir döndüren yöntem <xref:System.Data.DataTable> nesne. Ayarladığınız mutlaka `connectionString` değişken veritabanınız için uygun olan bir değer.  
   
@@ -54,12 +54,12 @@ Kullanıcılara veri girişi işlevi görüntülediğinizde, sık formunuza giri
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#30)]  
   
-3.  Form için bir işleyici uygulamak <xref:System.Windows.Forms.Form.Load> başlatan olay <xref:System.Windows.Forms.DataGridView> ve <xref:System.Windows.Forms.BindingSource> ve veri bağlamasını ayarlamak ayarlar.  
+3. Form için bir işleyici uygulamak <xref:System.Windows.Forms.Form.Load> başlatan olay <xref:System.Windows.Forms.DataGridView> ve <xref:System.Windows.Forms.BindingSource> ve veri bağlamasını ayarlamak ayarlar.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#10)]  
   
-4.  Uygulamak için işleyiciler <xref:System.Windows.Forms.DataGridView> denetimin <xref:System.Windows.Forms.DataGridView.CellValidating> ve <xref:System.Windows.Forms.DataGridView.CellEndEdit> olayları.  
+4. Uygulamak için işleyiciler <xref:System.Windows.Forms.DataGridView> denetimin <xref:System.Windows.Forms.DataGridView.CellValidating> ve <xref:System.Windows.Forms.DataGridView.CellEndEdit> olayları.  
   
      <xref:System.Windows.Forms.DataGridView.CellValidating> Olay işleyicisidir burada belirlediğiniz olmadığını bir hücrenin değerini `CompanyName` sütunu boş. Hücre değerini doğrulama başarısız olursa, ayarlama <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliği <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=nameWithType> sınıfının `true`. Bu neden <xref:System.Windows.Forms.DataGridView> imleç hücre bırakmasını önlemek için denetimi. Ayarlama <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> satır için açıklayıcı bir dize özelliği. Bu hata metnini içeren bir araç ipucu ile bir hata simgesi görüntüler. İçinde <xref:System.Windows.Forms.DataGridView.CellEndEdit> olay işleyicisini <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> satırda boş dize özelliği. <xref:System.Windows.Forms.DataGridView.CellEndEdit> Olay yalnızca hücrenin doğrulama başarısız olursa, bunu yapamazsınız düzenleme modundan çıktığında gerçekleşir.  
   

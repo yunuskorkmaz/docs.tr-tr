@@ -2,12 +2,12 @@
 title: Keşif Bulma ve FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095782"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345787"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Keşif Bulma ve FindCriteria
 Bir bulma bulma işlemi bir veya daha fazla Hizmetleri bulmak için bir istemci tarafından başlatılan ve bulma ana eylemleri biridir. Bir bulma gerçekleştirme ağ üzerinden bir WS-bulma işlemi araştırma iletisi gönderir. Ölçütlerle eşleşen Hizmetleri yanıt WS-bulma ProbeMatch iletileriyle belirtilen. Bulma iletileri hakkında daha fazla bilgi için bkz. [WS-bulma belirtimi](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -40,9 +40,9 @@ Bir bulma bulma işlemi bir veya daha fazla Hizmetleri bulmak için bir istemci 
   
  Sonlandırma ölçütünü şunlardır:  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -Ağdaki hizmetlerden yanıtları için beklenecek en uzun süre. Varsayılan süre 20 saniyedir.  
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -Ağdaki hizmetlerden yanıtları için beklenecek en uzun süre. Varsayılan süre 20 saniyedir.  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -İçin beklenilecek en fazla sayısı. Varsa <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> önce alınan yanıtları <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> geçti, bulma işlemi sona erer.  
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -İçin beklenilecek en fazla sayısı. Varsa <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> önce alınan yanıtları <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> geçti, bulma işlemi sona erer.  
   
 ## <a name="findresponse"></a>FindResponse  
  <xref:System.ServiceModel.Discovery.FindResponse> sahip bir <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> içeren bus'dan eşleşen ağ üzerindeki hizmet tarafından gönderilen koleksiyon özelliği. Hizmet yanıtlandı, boş bir koleksiyondur. Bir veya daha fazla hizmet yanıt verdi, her yanıt depolanan bir <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> adresi, sözleşme ve hizmetle ilgili bazı ek bilgiler içeren nesne.  

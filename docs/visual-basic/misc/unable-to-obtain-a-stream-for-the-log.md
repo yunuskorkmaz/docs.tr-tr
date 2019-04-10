@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
-ms.openlocfilehash: 45b7a16608bea4879e84fa7004097a8c38312284
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 540ff3fbba72d33b2efaa58ad7a8019628f5e83f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031701"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344760"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a>Bir akış günlüğü alınamıyor
 Bir akış günlüğü için alınamıyor. Olası dosya adlarına göre \<adı > zaten kullanımda.  
@@ -20,9 +20,9 @@ Bir akış günlüğü için alınamıyor. Olası dosya adlarına göre \<adı >
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Ayarlama <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> özelliğini <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> veya <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly> günlük dosya adında tarih damgası eklenecek.  
+1. Ayarlama <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> özelliğini <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> veya <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly> günlük dosya adında tarih damgası eklenecek.  
   
-2.  Mevcut günlüklerini arşivleyin ve bunları izin vermek için bilgisayarınızdan <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> yeni günlükler oluşturulacak nesne.  
+2. Mevcut günlüklerini arşivleyin ve bunları izin vermek için bilgisayarınızdan <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> yeni günlükler oluşturulacak nesne.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

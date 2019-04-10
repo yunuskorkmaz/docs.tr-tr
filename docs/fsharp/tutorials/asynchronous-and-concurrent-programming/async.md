@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlama
 description: Bilgi nasıl F# zaman uyumsuz programlama, kullanımı kolay ve doğal dil için dil düzeyinde bir programlama modeli aracılığıyla gerçekleştirilir.
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980093"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343460"
 ---
 # <a name="async-programming-in-f"></a>Zaman uyumsuz programlamada, F\#
 
@@ -57,7 +57,7 @@ Ayrıca, normal `let`, `use`, ve `do` anahtar sözcükleri normal işlevinde old
 
 Daha önce bahsedildiği gibi zaman uyumsuz kodu açıkça başlatılması gereken başka bir bağlamda yapılacak iş belirtimidir. Bunu yapmanın birincil iki yolu vardır:
 
-1.  `Async.RunSynchronously` başka bir iş parçacığında bir zaman uyumsuz iş akışı başlatılacağından ve sonucunu bekler.
+1. `Async.RunSynchronously` başka bir iş parçacığında bir zaman uyumsuz iş akışı başlatılacağından ve sonucunu bekler.
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` başka bir iş parçacığında zaman uyumsuz bir iş akışını başlatmak ve olacak **değil** sonucunu bekler.
+2. `Async.Start` başka bir iş parçacığında zaman uyumsuz bir iş akışını başlatmak ve olacak **değil** sonucunu bekler.
 
 ```fsharp
 open System
@@ -184,9 +184,9 @@ Diğer bazı benzerlikler ve önemli farklar vardır.
 
 Buna karşılık, F# doğal olarak edilebilen zaman uyumsuz iş akışları. İptal basit bir üç adımlık işlemdir.
 
-1.  Yeni bir `CancellationTokenSource`.
-2.  Bir başlangıç işlevine geçirin.
-3.  Çağrı `Cancel` belirtecine.
+1. Yeni bir `CancellationTokenSource`.
+2. Bir başlangıç işlevine geçirin.
+3. Çağrı `Cancel` belirtecine.
 
 Örnek:
 

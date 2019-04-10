@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: düğüm parçasını dönüştürme'
+title: 'Nasıl yapılır: Düğüm Parçasını Dönüştürme'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,27 +8,27 @@ dev_langs:
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb258b61664e1fdbf6604afdf69074c48cf5bda4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597305"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345176"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>Nasıl yapılır: düğüm parçasını dönüştürme
+# <a name="how-to-transform-a-node-fragment"></a>Nasıl yapılır: Düğüm Parçasını Dönüştürme
 İçerdiği verileri dönüştürme ne zaman bir <xref:System.Xml.XmlDocument> veya <xref:System.Xml.XPath.XPathDocument> XSLT dönüşümleri uygulamak için bir belgenin bir bütün olarak nesnesi. Belge kök düğümü dışındaki bir düğümde geçirirseniz, diğer bir deyişle, bu dönüştürme süreci yüklenen belgedeki tüm düğümleri erişmesini engellemez. Düğüm parçasını dönüştürme için yalnızca düğüm parçasını içeren ayrı bir nesne oluşturun ve gerekir, nesneyi geçirmek <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
   
 ## <a name="procedures"></a>Yordamlar  
   
 #### <a name="to-transform-a-node-fragment"></a>Düğüm parçasını dönüştürme için  
   
-1.  Kaynak belge içeren bir nesne oluşturun.  
+1. Kaynak belge içeren bir nesne oluşturun.  
   
-2.  Dönüştürmek istediğiniz düğüm parçasını bulun.  
+2. Dönüştürmek istediğiniz düğüm parçasını bulun.  
   
-3.  Ayrı bir nesne yalnızca düğüm parçasını ile oluşturun.  
+3. Ayrı bir nesne yalnızca düğüm parçasını ile oluşturun.  
   
-4.  Geçirmek için düğüm parçasını <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
+4. Geçirmek için düğüm parçasını <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemi.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bir düğüm parçasını dönüştürür ve sonuçlarını konsola çıkartır.  

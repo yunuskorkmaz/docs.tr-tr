@@ -7,23 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227398"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344669"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı İlkesi Oluşturma
 Derleme satıcıları, uygulamaları yükseltilen derlemeye bir yayımcı ilkesi dosyası dahil ederek bir derlemenin daha yeni bir sürümünü kullanacağını durumu. Yayımcı ilkesi dosyası, derleme yeniden yönlendirmesini ve kod temel ayarları belirtir ve bir uygulama yapılandırma dosyası aynı biçimi kullanır. Yayımcı ilkesi dosyası bir bütünleştirilmiş kod içine derlenmiş ve genel bütünleştirilmiş kod önbelleğine yerleştirilmesi.  
   
  Yayımcı ilkesi oluşturmak için gerekli olan üç adım vardır:  
   
-1.  Yayımcı ilkesi dosyası oluşturun.  
+1. Yayımcı ilkesi dosyası oluşturun.  
   
-2.  Yayımcı ilke derlemesi oluşturun.  
+2. Yayımcı ilke derlemesi oluşturun.  
   
-3.  Yayımcı ilke derlemesi genel derleme önbelleğine ekleme.  
+3. Yayımcı ilke derlemesi genel derleme önbelleğine ekleme.  
   
  Yayımcı ilkesi için şema açıklanan [derleme sürümlerini yeniden yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md). Aşağıdaki örnek, bir yayımcı gösterir. bir sürümü yönlendiren ilke dosyası `myAssembly` diğerine.  
   
@@ -51,7 +51,7 @@ Derleme satıcıları, uygulamaları yükseltilen derlemeye bir yayımcı ilkesi
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>Yayımcı ilke derlemesi oluşturmak için  
   
-1.  Komut isteminde aşağıdaki komutu yazın:  
+1. Komut isteminde aşağıdaki komutu yazın:  
   
      **Al/Link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/Platform:** *processorArchitecture*  
   
@@ -87,7 +87,7 @@ Derleme satıcıları, uygulamaları yükseltilen derlemeye bir yayımcı ilkesi
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Yayımcı ilke derlemesi genel derleme önbelleğine eklemek için  
   
-1.  Komut isteminde aşağıdaki komutu yazın:  
+1. Komut isteminde aşağıdaki komutu yazın:  
   
      **Gacutil /i***publisherPolicyAssemblyFile*  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 27c7500a3d33ec17680896f21f0e44d98fee94c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638476"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345098"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# Derleyici Seçenekleri)
 Bu seçenek, bir C# derleyici iç hatası Microsoft'a bildirmek için kullanışlı bir yol sağlar.  
@@ -28,13 +28,13 @@ Bu seçenek, bir C# derleyici iç hatası Microsoft'a bildirmek için kullanış
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **Yok**  
+ **yok**  
  Derleyici iç hatalarıyla ilgili raporlar toplanmaz ve Microsoft'a gönderilir.  
   
  **istemi**  
  Derleyici iç hatası aldığınızda rapor göndermek isteyip istemediğinizi sorar. **İstemi** geliştirme ortamında bir uygulama derlediğinizde varsayılandır.  
   
- **Kuyruk**  
+ **sıra**  
  Hata raporunu kuyruğa alır. Yönetici kimlik bilgileriyle oturum açtığında günlüğe kaydedilen son Time hatalar bildirebilir. Üç günde birden çok kez hata raporu göndermek için istenmez. **Kuyruk** , komut satırında bir uygulama derlerken varsayılandır.  
   
  **Gönder**  
@@ -51,13 +51,13 @@ Bu seçenek, bir C# derleyici iç hatası Microsoft'a bildirmek için kullanış
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açın **özellikleri** sayfası. Daha fazla bilgi için [derleme sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Projenin açın **özellikleri** sayfası. Daha fazla bilgi için [derleme sayfası, Proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Tıklayın **derleme** özellik sayfası.  
+2. Tıklayın **derleme** özellik sayfası.  
   
-3.  Tıklayın **Gelişmiş** düğmesi.  
+3. Tıklayın **Gelişmiş** düğmesi.  
   
-4.  Değiştirme **iç derleyici hatası raporlama** özelliği.  
+4. Değiştirme **iç derleyici hatası raporlama** özelliği.  
   
  Bu derleyici seçeneğini program üzerinden ayarlamak hakkında daha fazla bilgi için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
   

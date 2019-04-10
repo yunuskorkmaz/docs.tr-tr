@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cc88106a54a00b4b12e5043da7961791a98102c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221238"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344370"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio için geliştirici komut istemi
 
 Visual Studio için geliştirici komut istemi, .NET Framework araçlarını kolayca kullanmanıza olanak sağlar. Bu, belirli ortam değişkenlerini otomatik olarak ayarlayan bir komut istemi olur.
 
 > [!div class="button"]
-> [Visual Studio'yu indirin](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+> [Visual Studio’yu İndir](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>Komut istemi makinenizde arayın
 

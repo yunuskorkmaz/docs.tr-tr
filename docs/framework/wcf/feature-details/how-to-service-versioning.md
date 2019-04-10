@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Hizmet Sürümü Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: dc81fcde3c4f731257bf759cbd3f31542483618d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085382"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346294"
 ---
 # <a name="how-to-service-versioning"></a>Nasıl yapılır: Hizmet Sürümü Oluşturma
 Bu konuda aynı hizmetin farklı sürümlerine iletileri yönlendiren bir yönlendirme yapılandırması oluşturma için gerekli temel adımlar açıklanmaktadır. Bu örnekte, iki farklı sürümlerine bir hesap makinesi hizmet iletileri yönlendirilir `roundingCalc` (v1) ve `regularCalc` (v2). Hem uygulamalar aynı işlemleri desteği: Ancak, eski hizmet `roundingCalc`, sonuç döndürülmeden önce tüm hesaplamalar en yakın tamsayı değerine yuvarlanır. Yeni kullanılıp kullanılmayacağını belirtmek bir istemci uygulaması erişebilmelidir `regularCalc` hizmeti.  
@@ -37,7 +37,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
   
 ### <a name="implement-service-versioning"></a>Uygulama hizmet sürümü oluşturma  
   
-1.  Temel yönlendirme hizmeti yapılandırmasını hizmet tarafından sunulan hizmet uç noktası belirterek oluşturun. Aşağıdaki örnek, iletileri almak için kullanılacak bir tek hizmet uç noktası tanımlar. Ayrıca, ileti göndermek için kullanılan istemci uç noktalarını tanımlar `roundingCalc` (v1) ve `regularCalc` (v2) Hizmetleri.  
+1. Temel yönlendirme hizmeti yapılandırmasını hizmet tarafından sunulan hizmet uç noktası belirterek oluşturun. Aşağıdaki örnek, iletileri almak için kullanılacak bir tek hizmet uç noktası tanımlar. Ayrıca, ileti göndermek için kullanılan istemci uç noktalarını tanımlar `roundingCalc` (v1) ve `regularCalc` (v2) Hizmetleri.  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2.  Hedef Uç noktalara iletileri yönlendirmek için kullanılan filtreler tanımlar.  Bu örnekte, XPath filtresi, hangi sürümü için ileti yönlendirileceğini belirlemek için "CalcVer" özel üst bilgi değeri algılamak için kullanılır. Bir XPath filtresi "CalcVer" üst bilgi içermeyen iletilerini algılamak için de kullanılır. Aşağıdaki örnek, ad alanı tablosu ve gerekli filtreleri tanımlar.  
+2. Hedef Uç noktalara iletileri yönlendirmek için kullanılan filtreler tanımlar.  Bu örnekte, XPath filtresi, hangi sürümü için ileti yönlendirileceğini belirlemek için "CalcVer" özel üst bilgi değeri algılamak için kullanılır. Bir XPath filtresi "CalcVer" üst bilgi içermeyen iletilerini algılamak için de kullanılır. Aşağıdaki örnek, ad alanı tablosu ve gerekli filtreleri tanımlar.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -96,7 +96,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     > [!NOTE]
     > S12 ad alanı öneki varsayılan ad alanı tablo olarak tanımlanır ve ad alanını temsil eden `http://www.w3.org/2003/05/soap-envelope`.
   
-3.  Her filtre bir istemci uç noktası ile ilişkilendirir filtre tablo tanımlayın. İleti "CalcVer" üst bilgi değeri 1 ile içeriyorsa regularCalc hizmetine gönderilir. Başlığı 2 değerini içeriyorsa, roundingCalc hizmetine gönderilir. Üst bilgi varsa, ileti için regularCalc yönlendirilir.  
+3. Her filtre bir istemci uç noktası ile ilişkilendirir filtre tablo tanımlayın. İleti "CalcVer" üst bilgi değeri 1 ile içeriyorsa regularCalc hizmetine gönderilir. Başlığı 2 değerini içeriyorsa, roundingCalc hizmetine gönderilir. Üst bilgi varsa, ileti için regularCalc yönlendirilir.  
   
      Aşağıdaki filtre tabloyu tanımlayan ve daha önce tanımlanan filtreler ekler.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  Filtre tablosunda bulunan filtrelerle gelen iletileri değerlendirmek için yönlendirme davranışı kullanarak hizmet uç noktaları ile filtreleme tablosu ilişkilendirmelisiniz. Aşağıdaki örnek, ilişkilendirme gösterir `filterTable1` hizmet uç noktaları ile:  
+4. Filtre tablosunda bulunan filtrelerle gelen iletileri değerlendirmek için yönlendirme davranışı kullanarak hizmet uç noktaları ile filtreleme tablosu ilişkilendirmelisiniz. Aşağıdaki örnek, ilişkilendirme gösterir `filterTable1` hizmet uç noktaları ile:  
   
     ```xml  
     <behaviors>  

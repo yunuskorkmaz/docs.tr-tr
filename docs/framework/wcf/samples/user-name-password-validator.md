@@ -2,12 +2,12 @@
 title: Kullanıcı AdıParola Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: d15a3753bbea023cd992ed50549ef2c7b0dad74f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162756"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345020"
 ---
 # <a name="user-name-password-validator"></a>Kullanıcı AdıParola Doğrulayıcı
 Bu örnek bir özel UserNamePassword Doğrulayıcıyı uygulamak nasıl gösterir. Bu, yerleşik UserNamePassword doğrulama modları hiçbiri uygulama gereksinimlerini için uygun olduğu durumlarda kullanışlıdır. Örneğin, ne zaman kullanıcı adı/parola çiftleri bir veritabanı gibi bazı dış deposunda depolanır. Bu örnek için iki belirli bir kullanıcı adı/parola çiftleri denetleyen özel Doğrulayıcı sağlayıcısı olan bir hizmete gösterir. İstemci hizmete kimlik doğrulaması için bu tür bir kullanıcı adı/parola çift kullanır.
@@ -278,40 +278,40 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>Ayarlama ve örneği oluşturmak için
 
-1.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-2.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için aşağıdaki yönergeleri kullanın.
+2. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için aşağıdaki yönergeleri kullanın.
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Örneği aynı makinede çalıştırmak için
 
-1.  Setup.bat içinde bir Visual Studio 2012 komut istemi örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.
+1. Setup.bat içinde bir Visual Studio 2012 komut istemi örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.
 
     > [!NOTE]
     >  Setup.bat toplu iş dosyası, bir Visual Studio 2012 komut isteminden çalıştırılması için tasarlanmıştır. PATH ortam değişkenine içinde Visual Studio 2012 komut istemi noktaları Setup.bat betiği tarafından gereken yürütülebilir dosyaları içeren dizine ayarlayın.  
   
-2.  Service.exe service\bin ' başlatın.  
+2. Service.exe service\bin ' başlatın.  
   
-3.  Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
+3. Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-4.  İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-machines"></a>Makineler arasında örneği çalıştırmak için  
   
-1.  Hizmet makinede hizmet ikili dosyaları için bir dizin oluşturun.  
+1. Hizmet makinede hizmet ikili dosyaları için bir dizin oluşturun.  
   
-2.  Hizmet program dosyaları hizmeti makinede hizmet dizine kopyalayın. Ayrıca hizmeti makineye Setup.bat ve Cleanup.bat dosyaları kopyalayın.  
+2. Hizmet program dosyaları hizmeti makinede hizmet dizine kopyalayın. Ayrıca hizmeti makineye Setup.bat ve Cleanup.bat dosyaları kopyalayın.  
   
-3.  Makinenin tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası gerekir. Sunucu Yapılandırma dosyası, bu yeni sertifika adı yansıtacak şekilde güncelleştirilmesi gerekir.  
+3. Makinenin tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası gerekir. Sunucu Yapılandırma dosyası, bu yeni sertifika adı yansıtacak şekilde güncelleştirilmesi gerekir.  
   
-4.  Sunucu sertifikasını istemcinin CurrentUser TrustedPeople depoya kopyalayın. Yalnızca sunucu sertifikası güvenilir bir veren tarafından yazılmazsa yapmanız gerekir.  
+4. Sunucu sertifikasını istemcinin CurrentUser TrustedPeople depoya kopyalayın. Yalnızca sunucu sertifikası güvenilir bir veren tarafından yazılmazsa yapmanız gerekir.  
   
-5.  Hizmeti makinede App.config dosyasında taban adresi localhost yerine tam makine adını değiştirin.  
+5. Hizmeti makinede App.config dosyasında taban adresi localhost yerine tam makine adını değiştirin.  
   
-6.  Bir komut istemi penceresinden Service.exe hizmeti makinede başlatın.  
+6. Bir komut istemi penceresinden Service.exe hizmeti makinede başlatın.  
   
-7.  İstemci program dosyaları \client\bin\ klasöründen, dile özgü klasörünün altındaki istemci makineye kopyalayın.  
+7. İstemci program dosyaları \client\bin\ klasöründen, dile özgü klasörünün altındaki istemci makineye kopyalayın.  
   
-8.  İstemci makinesinde Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
+8. İstemci makinesinde Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
   
 9. İstemci makinesinde bir komut istemi penceresinden Client.exe başlatın.  
   
@@ -319,4 +319,4 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 #### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
   
-1.  Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın. Bu sunucu sertifikası sertifika deposundan kaldırır.  
+1. Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın. Bu sunucu sertifikası sertifika deposundan kaldırır.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], populating
 - ListView control [Windows Forms], adding list items
 ms.assetid: 217611ee-fd11-4d39-9a54-a37c3e781be1
-ms.openlocfilehash: 37e793104eb29c21e67b975a7caa372cc817e57f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6e08a7013242b0dbb433e288c4f8d788cb4e143b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143890"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343850"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma
 Bir Windows Forms için bir öğe ekleme işlemini <xref:System.Windows.Forms.ListView> öncelikle, bulunan öğeyi belirten ve Özellikler atayarak denetimi oluşur. Liste öğe ekleme veya kaldırma herhangi bir zamanda gerçekleştirilebilir.  
@@ -22,15 +22,15 @@ Bir Windows Forms için bir öğe ekleme işlemini <xref:System.Windows.Forms.Li
   
 ### <a name="to-add-or-remove-items-using-the-designer"></a>Tasarımcı kullanarak bir öğe eklemek veya kaldırmak için  
   
-1.  Seçin <xref:System.Windows.Forms.ListView> denetimi.  
+1. Seçin <xref:System.Windows.Forms.ListView> denetimi.  
   
-2.  İçinde **özellikleri** penceresinde tıklayın **üç nokta** (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) düğmesinin yanındaki <xref:System.Windows.Forms.ListView.Items%2A> özelliği.  
+2. İçinde **özellikleri** penceresinde tıklayın **üç nokta** (![VisualStudioEllipsesButton ekran](../media/vbellipsesbutton.png "vbEllipsesButton")) düğmesinin yanındaki <xref:System.Windows.Forms.ListView.Items%2A> özelliği.  
   
      **ListViewItem Koleksiyonu Düzenleyicisi** görünür.  
   
-3.  Bir öğe eklemek için tıklayın **Ekle** düğmesi. Yeni öğenin özelliklerini aşağıdaki gibi ayarlayabilirsiniz <xref:System.Windows.Forms.ListView.Text%2A> ve <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> özellikleri.  
+3. Bir öğe eklemek için tıklayın **Ekle** düğmesi. Yeni öğenin özelliklerini aşağıdaki gibi ayarlayabilirsiniz <xref:System.Windows.Forms.ListView.Text%2A> ve <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> özellikleri.  
   
-4.  Bir öğe kaldırmak için onu seçin ve **Kaldır** düğmesi.  
+4. Bir öğe kaldırmak için onu seçin ve **Kaldır** düğmesi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

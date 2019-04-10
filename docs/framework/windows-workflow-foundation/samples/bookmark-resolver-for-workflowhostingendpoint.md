@@ -1,15 +1,15 @@
 ---
-title: WorkflowHostingEndpoint için yer işareti çözümleyici
+title: WorkflowHostingEndpoint için Yer İşareti Çözümleyici
 ms.date: 03/30/2017
 ms.assetid: 97fd5816-935e-4625-ad04-e6f6befa07de
-ms.openlocfilehash: 48053ec7882b2e742b61fdc293b6bc5f8a129ca5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 4676b3c624a7ba1539a7a12ed38c286f688dcf9f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47081961"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344305"
 ---
-# <a name="bookmark-resolver-for-workflowhostingendpoint"></a>WorkflowHostingEndpoint için yer işareti çözümleyici
+# <a name="bookmark-resolver-for-workflowhostingendpoint"></a>WorkflowHostingEndpoint için Yer İşareti Çözümleyici
 Bu örnek gösterir nasıl <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> kullanılabilir <xref:System.ServiceModel.Activities.WorkflowServiceHost> iş akışı örnekleri oluşturmak için.  
   
 ## <a name="demonstrates"></a>Gösteriler  
@@ -26,9 +26,9 @@ Bu örnek gösterir nasıl <xref:System.ServiceModel.Activities.WorkflowHostingE
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Çözümü oluşturun.  
+1. Çözümü oluşturun.  
   
-2.  Uygulamayı çalıştırın. `CreationEndpoint` Konsol örnek kimliği iş akışı örneği oluşturulduğunda içeren bir ileti gösterir. "Hello World!" iletisi İş akışı örneği tarafından yazdırılır.  
+2. Uygulamayı çalıştırın. `CreationEndpoint` Konsol örnek kimliği iş akışı örneği oluşturulduğunda içeren bir ileti gösterir. "Hello World!" iletisi İş akışı örneği tarafından yazdırılır.  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

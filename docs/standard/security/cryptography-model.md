@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e39e9b3cf83be03d9bb3a55e3741915588e755a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499583"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343876"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework Şifreleme Modeli
 .NET Framework, pek çok standart şifreleme algoritmasını uygulamalarını sağlar. Bu algoritmalar güvenli olası varsayılan özelliklerini kullanıyorsanız ve kolaydır. Ayrıca, .NET Framework şifreleme modeli nesne devralma, akış tasarım ve yapılandırma son derece genişletilebilir.  
@@ -32,15 +32,15 @@ ms.locfileid: "54499583"
 ## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>.NET Framework'teki algoritmaları nasıl uygulanır  
  Farklı uygulamaları bir algoritma için kullanılabilir bir örnek olarak, simetrik algoritmaları göz önünde bulundurun. Temeli tüm simetrik algoritmaları için <xref:System.Security.Cryptography.SymmetricAlgorithm>, aşağıdaki algoritmaları tarafından devralınan:  
   
-1.  <xref:System.Security.Cryptography.Aes>  
+1. <xref:System.Security.Cryptography.Aes>  
   
-2.  <xref:System.Security.Cryptography.DES>  
+2. <xref:System.Security.Cryptography.DES>  
   
-3.  <xref:System.Security.Cryptography.RC2>  
+3. <xref:System.Security.Cryptography.RC2>  
   
-4.  <xref:System.Security.Cryptography.Rijndael>  
+4. <xref:System.Security.Cryptography.Rijndael>  
   
-5.  <xref:System.Security.Cryptography.TripleDES>  
+5. <xref:System.Security.Cryptography.TripleDES>  
   
  <xref:System.Security.Cryptography.Aes> iki sınıfları tarafından devralındığından: <xref:System.Security.Cryptography.AesCryptoServiceProvider> ve <xref:System.Security.Cryptography.AesManaged>. <xref:System.Security.Cryptography.AesCryptoServiceProvider> Sınıfı, Aes, Windows şifreleme API'si (CAPI) uygulamasının çevresinde sarmalayıcı ise <xref:System.Security.Cryptography.AesManaged> sınıfı, tamamen yönetilen kodda yazılır. Uygulama, şifreleme yeni nesil (CNG), yönetilen eklemeyi ve CAPI uygulamalarında üçüncü bir tür yoktur. CNG algoritması örneğidir <xref:System.Security.Cryptography.ECDiffieHellmanCng>. CNG algoritmaları kullanılabilir Windows Vista ve üstü.  
   

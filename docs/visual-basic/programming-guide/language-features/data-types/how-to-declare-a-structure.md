@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343564"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir yapıyı bildirme
 Yapı bildirimi ile başlayan [Structure deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md), ve ile sona `End Structure` deyimi. Bu iki deyimden arasında en az bir bildirmelisiniz *öğesi*. Öğeleri herhangi bir veri türünde olabilir, ancak en az bir paylaşılmayan bir değişken veya paylaşılmayan, özel olmayan bir olay olması gerekir.  
@@ -25,7 +25,7 @@ Yapı bildirimi ile başlayan [Structure deyimi](../../../../visual-basic/langua
   
 ### <a name="to-declare-a-structure"></a>Bir yapıyı bildirmek için  
   
-1.  Başlangıç ve bitiş ifadeleri yapısının oluşturun.  
+1. Başlangıç ve bitiş ifadeleri yapısının oluşturun.  
   
      Yapısı kullanarak bir erişim düzeyini belirleyebileceğiniz [genel](../../../../visual-basic/language-reference/modifiers/public.md), [korumalı](../../../../visual-basic/language-reference/modifiers/protected.md), [arkadaş](../../../../visual-basic/language-reference/modifiers/friend.md), veya [özel](../../../../visual-basic/language-reference/modifiers/private.md) anahtar sözcük veya izin, Varsayılan olarak `Public`.  
   
@@ -34,7 +34,7 @@ Yapı bildirimi ile başlayan [Structure deyimi](../../../../visual-basic/langua
     End Structure  
     ```  
   
-2.  Öğeleri yapısı gövdesi ekleyin.  
+2. Öğeleri yapısı gövdesi ekleyin.  
   
      Bir yapı en az bir öğe içermelidir. Her öğe bildirmek ve bunun için bir erişim düzeyi belirtmeniz gerekir. Kullanırsanız [Dim deyimi](../../../../visual-basic/language-reference/statements/dim-statement.md) erişilebilirlik herhangi bir anahtar, varsayılan olarak `Public`.  
   
@@ -62,8 +62,8 @@ Yapı bildirimi ile başlayan [Structure deyimi](../../../../visual-basic/langua
 - [Bileşik Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Yapılar](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Veri Türleri Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Yapı Değişkenleri](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
 - [Yapılar ve Diğer Programlama Öğeleri](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
 - [Yapılar ve Sınıflar](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
-- [User-Defined Veri Türü](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)
+- [Kullanıcı Tanımlı Veri Türü](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)

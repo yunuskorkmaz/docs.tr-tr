@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 6b4414d56e22646e057e6b1999e15722244deda4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075178"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344838"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Windows İstemcisi ile Kimlik Bilgileri Görüşmesi Olmadan İleti Güvenliği
 Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hizmet Kerberos protokolü tarafından güvenliği sağlanan gösterilmektedir.  
@@ -46,9 +46,9 @@ Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hi
 > [!NOTE]
 >  Anlaşma olmadan Windows kimlik bilgisi türü kullanmak için hizmetin kullanıcı hesabını Active Directory etki alanı ile kayıtlı hizmet asıl adı (SPN) erişiminiz olmalıdır. Bunu iki şekilde yapabilirsiniz:  
   
-1.  Kullanım `NetworkService` veya `LocalSystem` hizmetinizi çalıştırmak için hesap. Bu hesapların makinenin Active Directory etki alanına katıldığında kurulur SPN makineye erişimi olduğundan, WCF uygun SPN öğe içinde hizmet uç noktası hizmetin meta verilerinde (Web Hizmetleri Açıklama otomatik olarak oluşturur. Dil veya WSDL).  
+1. Kullanım `NetworkService` veya `LocalSystem` hizmetinizi çalıştırmak için hesap. Bu hesapların makinenin Active Directory etki alanına katıldığında kurulur SPN makineye erişimi olduğundan, WCF uygun SPN öğe içinde hizmet uç noktası hizmetin meta verilerinde (Web Hizmetleri Açıklama otomatik olarak oluşturur. Dil veya WSDL).  
   
-2.  Hizmetinizi çalıştırmak için rastgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, bu etki alanı hesabı için bir SPN oluşturmanız gerekir. Bunu yapmanın bir yolu, Setspn.exe yardımcı programı aracını kullanmaktır. Hizmet hesabı için SPN'nin oluşturulduktan sonra WCF meta verilerini (WSDL) aracılığıyla hizmetin istemciler söz konusu SPN yayımlamak için yapılandırın. Bu ortaya çıkarılan uç nokta için uç nokta kimliğini ayarlayarak yapılır ya da bir uygulama yapılandırma dosyası veya kod. Aşağıdaki örnek kimliğini programlı olarak yayımlar.  
+2. Hizmetinizi çalıştırmak için rastgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, bu etki alanı hesabı için bir SPN oluşturmanız gerekir. Bunu yapmanın bir yolu, Setspn.exe yardımcı programı aracını kullanmaktır. Hizmet hesabı için SPN'nin oluşturulduktan sonra WCF meta verilerini (WSDL) aracılığıyla hizmetin istemciler söz konusu SPN yayımlamak için yapılandırın. Bu ortaya çıkarılan uç nokta için uç nokta kimliğini ayarlayarak yapılır ya da bir uygulama yapılandırma dosyası veya kod. Aşağıdaki örnek kimliğini programlı olarak yayımlar.  
   
  SPN hakkında daha fazla bilgi, Kerberos protokolü ve Active Directory için bkz. [Kerberos teknik ek Windows için](https://go.microsoft.com/fwlink/?LinkId=88330). Uç nokta kimlikleri hakkında daha fazla bilgi için bkz. [SecurityBindingElement kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   

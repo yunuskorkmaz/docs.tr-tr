@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118111"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344877"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Özel Bileşik Tasarımcılar - İş Akışı Öğeleri Sunucu
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Düzenlemek kapsanan öğelerin koleksiyonunu için izin veren WF Tasarımcı programlama modeli içinde bir anahtar türü. Bu örnek, düzenlenebilir bir koleksiyon ortaya çıkarır bir etkinlik Tasarımcısı oluşturma gösterilmektedir.
@@ -25,9 +25,9 @@ ms.locfileid: "59118111"
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
 
-1.  Açık **UsingWorkflowItemsPresenter.sln** için C# veya VB Visual Studio 2010 için örnek çözümü.
+1. Açık **UsingWorkflowItemsPresenter.sln** için C# veya VB Visual Studio 2010 için örnek çözümü.
 
-2.  Derleme ve çözümü çalıştırın. Yeniden barındırılan iş akışı Tasarımcısı uygulamayı açmalıdır ve etkinlikleri tuvale sürükleyin.
+2. Derleme ve çözümü çalıştırın. Yeniden barındırılan iş akışı Tasarımcısı uygulamayı açmalıdır ve etkinlikleri tuvale sürükleyin.
 
 ## <a name="sample-highlights"></a>Örnek öne çıkan özellikleri
  Bu örneğe yönelik kodun aşağıda gösterilmiştir:

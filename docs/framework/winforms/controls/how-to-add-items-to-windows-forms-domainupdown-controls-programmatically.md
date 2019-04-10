@@ -9,19 +9,19 @@ helpviewer_keywords:
 - spin button control [Windows Forms], adding items
 - DomainUpDown control [Windows Forms], adding items to
 ms.assetid: fd31d314-33eb-4181-90f8-d32ed0c4e072
-ms.openlocfilehash: 32f58dc8b8b96a3d8660550d8ce7696839587ddc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ef44a9e68b8007d57fc7442a178ae98322747c99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080676"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343681"
 ---
 # <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>Nasıl yapılır: Windows Forms DomainUpDown Denetimlerine Programlı Olarak Öğe Ekleme
 Windows Forms için öğeleri ekleyebilirsiniz <xref:System.Windows.Forms.DomainUpDown> kod denetimi. Çağrı <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> veya <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> yöntemi <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> denetimin öğeleri eklemek için sınıfı <xref:System.Windows.Forms.DomainUpDown.Items%2A> özelliği. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> Yöntemi, bir koleksiyonun sonuna bir öğe ekler sırada <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> yöntemi, belirtilen konumda bir öğe ekler.  
   
 ### <a name="to-add-a-new-item"></a>Yeni bir öğe eklemek için  
   
-1.  Kullanım <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> öğelerin listesini sonuna bir öğe eklemek için yöntemi.  
+1. Kullanım <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> öğelerin listesini sonuna bir öğe eklemek için yöntemi.  
   
     ```vb  
     DomainUpDown1.Items.Add("noodles")  
@@ -37,7 +37,7 @@ Windows Forms için öğeleri ekleyebilirsiniz <xref:System.Windows.Forms.Domain
   
      -veya-  
   
-2.  Kullanım <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> belirtilen konumda listeye bir öğe eklemek için yöntemi.  
+2. Kullanım <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> belirtilen konumda listeye bir öğe eklemek için yöntemi.  
   
     ```vb  
     ' Inserts an item at the third position in the list  

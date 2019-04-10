@@ -10,19 +10,19 @@ helpviewer_keywords:
 - tooltips [Windows Forms], delay values
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
-ms.openlocfilehash: 5b903f48035ac27cdd79f0ea38a7a68d558b3c1f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198666"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345488"
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Nasıl yapılır: Windows Forms ToolTip Bileşeninin Gecikmesini Değiştirme
 Bir Windows Forms için ayarlayabileceğiniz birden fazla gecikme değerleri vardır <xref:System.Windows.Forms.ToolTip> bileşeni. Tüm bu özellikler için ölçü birimini milisaniyedir. <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> Özelliği belirler ilişkili denetim için görüntülenecek araç ipucu dize, kullanıcının ne kadar süreyle işaret etmelidir. <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> Özelliği bir araç ipucu ilişkili denetimden fareyi hareket ettirdikçe görüntülenecek araç ipucu dizeler sonraki geçen milisaniye sayısını ayarlar. <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> Özelliği, araç ipucu dize gösterilir sürenin uzunluğunu belirler. Tek tek veya değerini ayarlayarak bu değerleri ayarlayabileceğiniz <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> özelliği; özellikleri için atanan değer baz alınarak ayarlanır gecikme <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> özelliği. Örneğin, <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> N değerine ayarlanır <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> N-ayarlanır <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> değerine ayarlanır <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> beş aralıktaki (veya 5/N) ve <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> beş kez değeri olan bir değere ayarlanmış <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> özelliği (veya 5N).  
   
 ### <a name="to-set-the-delay"></a>Gecikme süresini ayarlamak için  
   
-1.  Bu örnekte gösterildiği gibi aşağıdaki özellikleri ayarlayın.  
+1. Bu örnekte gösterildiği gibi aşağıdaki özellikleri ayarlayın.  
   
     ```vb  
     ToolTip1.InitialDelay = 500  

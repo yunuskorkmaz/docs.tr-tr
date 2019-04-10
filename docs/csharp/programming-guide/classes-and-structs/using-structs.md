@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: fe7cf3cf1982060d22f648c5e17d002b1a695ac0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d2e89c842ae83a5be65c7500e47beb7f302e23be
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427194"
 ---
 # <a name="using-structs-c-programming-guide"></a>Yapıları Kullanma (C# Programlama Kılavuzu)
 `struct` Türü basit nesneler gibi temsil etmek için uygun olan `Point`, `Rectangle`, ve `Color`. Temsil eden bir noktası olarak yalnızca olarak uygun olmasına rağmen bir [sınıfı](../../../csharp/language-reference/keywords/class.md) ile [Implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), [yapı](../../../csharp/language-reference/keywords/struct.md) bazı senaryolarda daha verimli olabilir. Örneğin, bir dizi 1000 bildirirseniz `Point` nesneler, ek bellek ayırır her nesneye başvuran; bu durumda, yapı daha ucuz olabilir. Çünkü [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] adlı bir nesne içeren <xref:System.Drawing.Point>, yapı Bu örnekte bunun yerine "Coords" adlı.  
@@ -19,7 +19,7 @@ ms.locfileid: "56978533"
   
  Bu yapı için bir varsayılan (parametresiz) kurucu tanımlamak için bir hatadır. Bu da bir yapı gövdesi bir örnek alanı başlatmak için bir hatadır. Harici olarak erişilebilen Yapı üyeleri yalnızca parametreli bir kurucu, örtük, varsayılan oluşturucu kullanarak başlatabilirsiniz bir [nesne Başlatıcı](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md), veya struct bildirildikten sonra tarafından ayrı ayrı üyeleri erişme. Herhangi bir özel ya da aksi takdirde erişilemez üye, özel olarak oluşturucular kullanılmasını gerektirir.
   
- Bir yapı kullanarak nesne oluşturduğunuzda [yeni](../../../csharp/language-reference/keywords/new.md) işleci, oluşturulan ve uygun oluşturucuyu göre adlandırılır [oluşturucunun imza](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). Sınıflardan farklı olarak, yapılar kullanmadan oluşturulabilir `new` işleci. Böyle bir durumda ayırma daha verimli hale getirir hiçbir oluşturucu çağrısı yoktur. Ancak, alanlar atanmamış kalır ve nesnenin tüm alanları başlatılıncaya kadar kullanılamaz. Bu almak veya otomatik uygulanan özelliklerin değerlerini ayarlamak için yükleyememesine içerir.
+ Bir yapı kullanarak nesne oluşturduğunuzda [yeni](../../../csharp/language-reference/keywords/new.md) işleci, oluşturulan ve uygun oluşturucuyu göre adlandırılır [oluşturucunun imza](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). Sınıflardan farklı olarak, yapılar kullanmadan oluşturulabilir `new` işleci. Böyle bir durumda ayırma daha verimli hale getirir hiçbir oluşturucu çağrısı yoktur. Ancak, alanlar atanmamış kalır ve nesnenin tüm alanları başlatılıncaya kadar kullanılamaz. Bu, alma veya ayarlama özellikleri aracılığıyla değerleri yeteneğinin içerir.
  
  Varsayılan, parametresiz bir oluşturucu kullanılarak bir yapı nesnesinin örneğini oluşturma durumunda, tüm üyeleri göre atanır kendi [varsayılan değerler](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md).
   

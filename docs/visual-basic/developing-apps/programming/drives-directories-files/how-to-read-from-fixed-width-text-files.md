@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text files [Visual Basic], tasks
 - text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
-ms.openlocfilehash: 4d6019bd9f39a6ae8db4b8c580db4c5ec9d4d4b8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: de60bbe111de151ac358c1b1c00a14dee225447d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816219"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344071"
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te sabit genişlikli metin dosyalarını okuma
 `TextFieldParser` Nesneyi kolayca ve verimli bir şekilde günlükleri gibi yapılandırılmış metin dosyalarını ayrıştırmak için bir yol sağlar.  
@@ -22,19 +22,19 @@ ms.locfileid: "58816219"
   
 ### <a name="to-parse-a-fixed-width-text-file"></a>Sabit genişlikte metin dosyası ayrıştırılamıyor  
   
-1.  Yeni bir `TextFieldParser`. Aşağıdaki kod oluşturur `TextFieldParser` adlı `Reader` ve dosyayı açar `test.log`.  
+1. Yeni bir `TextFieldParser`. Aşağıdaki kod oluşturur `TextFieldParser` adlı `Reader` ve dosyayı açar `test.log`.  
   
      [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   
-2.  Tanımlama `TextFieldType` özelliği olarak `FixedWidth`, genişliği tanımlama ve biçimlendirin. Aşağıdaki kod, metin sütunlarını tanımlar; ilk 5 karakterini geniş, ikinci 10, üçüncü 11 ve dördüncü değişken genişliği.  
+2. Tanımlama `TextFieldType` özelliği olarak `FixedWidth`, genişliği tanımlama ve biçimlendirin. Aşağıdaki kod, metin sütunlarını tanımlar; ilk 5 karakterini geniş, ikinci 10, üçüncü 11 ve dördüncü değişken genişliği.  
   
      [!code-vb[VbFileIORead#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#10)]  
   
-3.  Dosya alanları döngü. Satırları bozuk, bir hata rapor ve ayrıştırma devam edin.  
+3. Dosya alanları döngü. Satırları bozuk, bir hata rapor ve ayrıştırma devam edin.  
   
      [!code-vb[VbFileIORead#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#11)]  
   
-4.  Kapat `While` ve `Using` ile engeller `End While` ve `End Using`.  
+4. Kapat `While` ve `Using` ile engeller `End While` ve `End Using`.  
   
      [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   
@@ -59,8 +59,8 @@ ms.locfileid: "58816219"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
-- [Nasıl yapılır: Virgülle ayrılmış metin dosyalarından okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [Nasıl yapılır: Birden çok biçimli metin dosyalarını okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
+- [Nasıl yapılır: Virgülle Ayrılmış Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [Nasıl yapılır: Birden Çok Biçimli Metin Dosyalarından Okuma](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [TextFieldParser Nesnesiyle Metin Dosyalarını Ayrıştırma](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
 - [İzlenecek yol: Dosyaları ve dizinleri Visual Basic'te düzenleme](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [Sorun giderme: Okuma ve dosyalara metin yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [Sorun Giderme: Metin Dosyalarını Okuma ve Yazma](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

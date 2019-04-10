@@ -1,5 +1,5 @@
 ---
-title: Dahil veya XML şemaları içeri aktarma
+title: XML Şemalarını Dahil Etme veya İçeri Aktarma
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,14 +9,14 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dff5dca159b3e714a027bd2d2ebe86d2b414dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626010"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343577"
 ---
-# <a name="including-or-importing-xml-schemas"></a>Dahil veya XML şemaları içeri aktarma
+# <a name="including-or-importing-xml-schemas"></a>XML Şemalarını Dahil Etme veya İçeri Aktarma
 Bir XML Şeması içerebilir `<xs:import />`, `<xs:include />`, ve `<xs:redefine />` öğeleri. Bu şema öğeleri içerir veya bunları alır şemasının yapısı desteklemek için kullanılabilecek diğer XML şemaları bakın. <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> Ve <xref:System.Xml.Schema.XmlSchemaRedefine> sınıflarını, eşlemek için bu öğeleri içinde şema nesne modeli (SOM) API.  
   
 ## <a name="including-or-importing-an-xml-schema"></a>Dahil veya bir XML Şeması içeri aktarma  
@@ -26,15 +26,15 @@ Bir XML Şeması içerebilir `<xs:import />`, `<xs:include />`, ve `<xs:redefine
   
  Kod örneği, aşağıdaki adımlarda adresi şemasını içerir.  
   
-1.  Müşteri şeması ve adresi şeması yeni bir ekler <xref:System.Xml.Schema.XmlSchemaSet> nesne ve bunları derler. Herhangi bir şema doğrulama uyarıları ve okuma veya şemaları derlenirken karşılaşılan hataları tarafından işlenen <xref:System.Xml.Schema.ValidationEventHandler> temsilci.  
+1. Müşteri şeması ve adresi şeması yeni bir ekler <xref:System.Xml.Schema.XmlSchemaSet> nesne ve bunları derler. Herhangi bir şema doğrulama uyarıları ve okuma veya şemaları derlenirken karşılaşılan hataları tarafından işlenen <xref:System.Xml.Schema.ValidationEventHandler> temsilci.  
   
-2.  Derlenmiş alır <xref:System.Xml.Schema.XmlSchema> nesneler için müşteri ve adresi şemalardan <xref:System.Xml.Schema.XmlSchemaSet> üzerinde yineleme tarafından <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özelliği. Şemaları derlendiğinden sonrası-Schema-derleme-sonrası bilgi kümesi (PSCI) özellikleri erişilebilir.  
+2. Derlenmiş alır <xref:System.Xml.Schema.XmlSchema> nesneler için müşteri ve adresi şemalardan <xref:System.Xml.Schema.XmlSchemaSet> üzerinde yineleme tarafından <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özelliği. Şemaları derlendiğinden sonrası-Schema-derleme-sonrası bilgi kümesi (PSCI) özellikleri erişilebilir.  
   
-3.  Oluşturur bir <xref:System.Xml.Schema.XmlSchemaImport> nesne, kümeleri <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> adresi Şema ad alanı için içeri aktarma özelliğini ayarlar <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> Al özelliğini <xref:System.Xml.Schema.XmlSchema> nesnesi adresi şemasının ve alma işlemi ekler <xref:System.Xml.Schema.XmlSchema.Includes%2A> Müşteri şeması özelliği.  
+3. Oluşturur bir <xref:System.Xml.Schema.XmlSchemaImport> nesne, kümeleri <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> adresi Şema ad alanı için içeri aktarma özelliğini ayarlar <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> Al özelliğini <xref:System.Xml.Schema.XmlSchema> nesnesi adresi şemasının ve alma işlemi ekler <xref:System.Xml.Schema.XmlSchema.Includes%2A> Müşteri şeması özelliği.  
   
-4.  Yeniden işler ve değiştirilmiş derler <xref:System.Xml.Schema.XmlSchema> şeması kullanarak müşteri nesnesi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> ve <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemlerinin <xref:System.Xml.Schema.XmlSchemaSet> sınıfı ve konsola yazar.  
+4. Yeniden işler ve değiştirilmiş derler <xref:System.Xml.Schema.XmlSchema> şeması kullanarak müşteri nesnesi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> ve <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemlerinin <xref:System.Xml.Schema.XmlSchemaSet> sınıfı ve konsola yazar.  
   
-5.  Son olarak, yinelemeli olarak tüm konsol kullanarak müşteri Şemayı içeri aktarılan şema Yazar <xref:System.Xml.Schema.XmlSchema.Includes%2A> müşteri şema özelliği. <xref:System.Xml.Schema.XmlSchema.Includes%2A> Özelliği tüm erişim sağlar, içeri aktarmalar veya yeniden tanımlama bir şemaya eklenen içerir.  
+5. Son olarak, yinelemeli olarak tüm konsol kullanarak müşteri Şemayı içeri aktarılan şema Yazar <xref:System.Xml.Schema.XmlSchema.Includes%2A> müşteri şema özelliği. <xref:System.Xml.Schema.XmlSchema.Includes%2A> Özelliği tüm erişim sağlar, içeri aktarmalar veya yeniden tanımlama bir şemaya eklenen içerir.  
   
  Tam kod örneği ve konsoluna yazılan müşteri ve adresi şemaları aşağıda verilmiştir.  
   

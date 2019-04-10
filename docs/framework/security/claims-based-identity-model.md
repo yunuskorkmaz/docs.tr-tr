@@ -1,16 +1,16 @@
 ---
-title: Beyana dayalı kimlik modeli
+title: Talep Tabanlı Kimlik Modeli
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411740"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345878"
 ---
-# <a name="claims-based-identity-model"></a>Beyana dayalı kimlik modeli
+# <a name="claims-based-identity-model"></a>Talep Tabanlı Kimlik Modeli
 Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda talepler kümesi olarak temsil edilir. Bir talep kullanıcının adı, başka bir e-posta adresi olabilir. Bunun ardında yatan fikir, bir dış kimlik sisteminin uygulamanıza yaptığı her istekle kullanıcı hakkında bilmesi gereken her şeyi ve aldığınız verilerin güvenilir bir kaynaktan geldiğine dair şifreleme güvencesini sağlayacak şekilde yapılandırılmış olmasıdır.  
   
  Bu modelde, çoklu oturum açma daha kolay bir şekilde gerçekleştirilir ve uygulamanız artık aşağıdakilerden sorumlu olmaz:  
@@ -27,9 +27,9 @@ Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda ta
   
  Bu konuda, aşağıdaki bilgiler sağlanmaktadır:  
   
--   [Beyana dayalı kimliğe giriş](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+-   [Beyana Dayalı Kimliğe Giriş](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Beyana dayalı kimlik modeli için temel senaryo](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+-   [Beyana Dayalı Kimlik Modeli için Temel Senaryo](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Beyana Dayalı Kimliğe Giriş  
@@ -73,10 +73,10 @@ Talep kullanan uygulamalar oluştururken, kullanıcı kimliği uygulamanızda ta
   
  Bu diyagram, kimlik doğrulama için WIF ve bu siteyi kullanmak isteyen bir istemci olarak web tarayıcısı kullanacak şekilde yapılandırılmış bir Web sitesini (bağlı taraf uygulaması, RP) göstermektedir.  
   
-1.  Kimliği doğrulanmamış bir kullanıcı bir sayfa istediğinde, kullanıcının tarayıcıyı kimlik sağlayıcıyı (IDP) sayfalarına yönlendirilir.  
+1. Kimliği doğrulanmamış bir kullanıcı bir sayfa istediğinde, kullanıcının tarayıcıyı kimlik sağlayıcıyı (IDP) sayfalarına yönlendirilir.  
   
-2.  Idp'nin kullanıcı adı/parola veya Kerberos kimlik doğrulaması gibi kendi kimlik sunmak kullanıcı gerektirir.  
+2. Idp'nin kullanıcı adı/parola veya Kerberos kimlik doğrulaması gibi kendi kimlik sunmak kullanıcı gerektirir.  
   
-3.  IDP tarayıcıya döndürülen bir belirteç verir.  
+3. IDP tarayıcıya döndürülen bir belirteç verir.  
   
-4.  Tarayıcı, artık başlangıçta istenen sayfaya geri yönlendirilir. Burada WIF, belirtecin sayfaya erişim gereksinimlerini karşılayıp karşılamadığını belirler. Karşılıyorsa, kimlik doğrulamanın yalnızca bir kez gerçekleşmesini ve denetimin uygulamaya geçirilmesini sağlamak üzere bir oturum oluşturmak için bir tanımlama bilgisi verilir.
+4. Tarayıcı, artık başlangıçta istenen sayfaya geri yönlendirilir. Burada WIF, belirtecin sayfaya erişim gereksinimlerini karşılayıp karşılamadığını belirler. Karşılıyorsa, kimlik doğrulamanın yalnızca bir kez gerçekleşmesini ve denetimin uygulamaya geçirilmesini sağlamak üzere bir oturum oluşturmak için bir tanımlama bilgisi verilir.

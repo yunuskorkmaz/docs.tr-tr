@@ -2,12 +2,12 @@
 title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
 description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 2'ile güncel durumda.
 ms.date: 02/12/2019
-ms.openlocfilehash: 34db8df43f962272f21fc8bf3fa31be06b8fdaf3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221247"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427285"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
 
@@ -58,7 +58,7 @@ public enum Rainbow
 }
 ```
 
-Dönüştürme bir `Rainbow` switch ifadesi içeren aşağıdaki yöntemi kullanarak kendi RGB değerleri için değer:
+Uygulama tanımlı değilse bir `RGBColor` nesnesinden oluşturulan türü `R`, `G` ve `B` bileşenleri dönüştürme bir `Rainbow` switch ifadesi içeren aşağıdaki yöntemi kullanarak kendi RGB değerleri için değer:
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>

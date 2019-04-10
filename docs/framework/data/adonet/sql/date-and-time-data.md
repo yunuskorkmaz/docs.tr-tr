@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127120"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344187"
 ---
 # <a name="date-and-time-data"></a>Tarih ve Saat Verileri
 SQL Server 2008, tarih ve saat bilgilerini işlemek için yeni veri türlerini tanıtır. Yeni veri türleri, tarih ve saat için farklı türler ve büyük aralığı, hassasiyet ve saat dilimini tanıma ile genişletilmiş veri türleri içerir. İle .NET Framework sürüm 3.5 Service Pack 1, SQL Server için .NET Framework veri sağlayıcısı (SP) Başlangıç (<xref:System.Data.SqlClient>) SQL Server 2008 veritabanı altyapısı için yeni özellikler hakkında tam destek sağlar. .NET Framework 3.5 SP1'i yüklemeniz gerekir (veya üzeri) ile SqlClient bu yeni özellikleri kullanmak için.  
@@ -21,7 +21,7 @@ SQL Server 2008, tarih ve saat bilgilerini işlemek için yeni veri türlerini t
   
  **SQL Server Çevrimiçi Kitaplar**  
   
-1.  [Tarih ve saat verilerini kullanma](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [Tarih ve saat verilerini kullanma](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Tarih/saat veri türleri SQL Server 2008 ' tanıtılan  
  Yeni tarih ve saat veri türleri aşağıdaki tabloda açıklanmaktadır.  

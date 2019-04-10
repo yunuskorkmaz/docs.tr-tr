@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 533c329bed7b1cb9b07805032c839d3f5ff10634
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139821"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345592"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
 Şirket içinde barındırılan Windows Communication Foundation (WCF) hizmet ile oluşturulurken <xref:System.ServiceModel.WSHttpBinding> sınıfı bu kullanımları aktarım güvenliği, ayrıca bir X.509 sertifikası ile bir bağlantı noktası yapılandırmanız gerekir. Şirket içinde barındırılan bir hizmet oluşturmuyorsanız, hizmetinizi Internet Information Services (IIS) üzerinde barındırabilirsiniz. Daha fazla bilgi için [HTTP aktarım güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -41,13 +41,13 @@ ms.locfileid: "59139821"
   
 ### <a name="to-determine-how-ports-are-configured"></a>Bağlantı noktalarını nasıl yapılandırılacağını belirlemek için  
   
-1.  İçinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], HttpCfg.exe geçerli bağlantı noktası yapılandırmasını görüntülemek için aracını kullanarak **sorgu** ve **ssl** geçer, aşağıdaki örnekte gösterildiği gibi.  
+1. İçinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], HttpCfg.exe geçerli bağlantı noktası yapılandırmasını görüntülemek için aracını kullanarak **sorgu** ve **ssl** geçer, aşağıdaki örnekte gösterildiği gibi.  
   
     ```  
     httpcfg query ssl  
     ```  
   
-2.  İçinde [!INCLUDE[wv](../../../../includes/wv-md.md)], aşağıdaki örnekte gösterildiği gibi geçerli bir bağlantı noktası yapılandırmasını görüntülemek için Netsh.exe aracını kullanın.  
+2. İçinde [!INCLUDE[wv](../../../../includes/wv-md.md)], aşağıdaki örnekte gösterildiği gibi geçerli bir bağlantı noktası yapılandırmasını görüntülemek için Netsh.exe aracını kullanın.  
   
     ```  
     netsh http show sslcert  
@@ -55,17 +55,17 @@ ms.locfileid: "59139821"
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Bir sertifikanın parmak izi almak için  
   
-1.  İstemci kimlik doğrulaması amacı olan bir X.509 sertifikası bulunamıyor sertifikalar MMC ek bileşenini kullanın. Daha fazla bilgi için [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1. İstemci kimlik doğrulaması amacı olan bir X.509 sertifikası bulunamıyor sertifikalar MMC ek bileşenini kullanın. Daha fazla bilgi için [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
-2.  Sertifikanın parmak izi erişin. Daha fazla bilgi için [nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+2. Sertifikanın parmak izi erişin. Daha fazla bilgi için [nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
-3.  Sertifikanın parmak izini Not Defteri gibi bir metin düzenleyicisine kopyalayın.  
+3. Sertifikanın parmak izini Not Defteri gibi bir metin düzenleyicisine kopyalayın.  
   
-4.  Onaltılık karakterler arasındaki tüm boşlukları kaldırın. Bunu gerçekleştirmek için bir metin Düzenleyicisi'nin Bul ve Değiştir özelliğini kullanın ve her alanı null karakteri ile değiştirmek için yoludur.  
+4. Onaltılık karakterler arasındaki tüm boşlukları kaldırın. Bunu gerçekleştirmek için bir metin Düzenleyicisi'nin Bul ve Değiştir özelliğini kullanın ve her alanı null karakteri ile değiştirmek için yoludur.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>Bir bağlantı noktası numarası için bir SSL sertifikası bağlamak için  
   
-1.  İçinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], sertifikayı bir bağlantı noktası numarasını bağlamak için "Ayarla" modunda Güvenli Yuva Katmanı (SSL) deposunda HttpCfg.exe Aracı'nı kullanın. Aracı parmak izi sertifika tanımlamak için aşağıdaki örnekte gösterildiği gibi kullanır.  
+1. İçinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], sertifikayı bir bağlantı noktası numarasını bağlamak için "Ayarla" modunda Güvenli Yuva Katmanı (SSL) deposunda HttpCfg.exe Aracı'nı kullanın. Aracı parmak izi sertifika tanımlamak için aşağıdaki örnekte gösterildiği gibi kullanır.  
   
     ```  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -75,7 +75,7 @@ ms.locfileid: "59139821"
   
     -   **-H** anahtar sertifikanın parmak izini belirtir.  
   
-2.  İçinde [!INCLUDE[wv](../../../../includes/wv-md.md)], aşağıdaki örnekte gösterildiği gibi Netsh.exe aracını kullanın.  
+2. İçinde [!INCLUDE[wv](../../../../includes/wv-md.md)], aşağıdaki örnekte gösterildiği gibi Netsh.exe aracını kullanın.  
   
     ```  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
@@ -89,7 +89,7 @@ ms.locfileid: "59139821"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Bir bağlantı noktası numarası için bir SSL sertifikası bağlama ve istemci sertifikalarını desteklemek için  
   
-1.  İçinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], aktarım katmanında X.509 sertifikalarıyla kimlik doğrulaması için yukarıdaki yordamı izleyin ancak aşağıdaki örnekte gösterildiği gibi bir ek komut satırı parametresi HttpCfg.exe için geçmesi istemcileri desteklemek için.  
+1. İçinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], aktarım katmanında X.509 sertifikalarıyla kimlik doğrulaması için yukarıdaki yordamı izleyin ancak aşağıdaki örnekte gösterildiği gibi bir ek komut satırı parametresi HttpCfg.exe için geçmesi istemcileri desteklemek için.  
   
     ```  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -97,7 +97,7 @@ ms.locfileid: "59139821"
   
      **-F** anahtar söz dizimi olan `n` burada n, 1 ile 7 arasında bir sayı. Değeri 2 ' nin, istemci sertifikaları aktarım katmanında önceki örnekte gösterilen şekilde etkinleştirir. 3 değeri, istemci sertifikaları sağlar ve bu sertifikaları için bir Windows hesabı eşler. Diğer değerleri davranışı için HttpCfg.exe yardımına bakın.  
   
-2.  İçinde [!INCLUDE[wv](../../../../includes/wv-md.md)], yukarıdaki yordamı izleyin, aktarım katmanında X.509 sertifikalarıyla kimlik doğrulaması istemcileri destekler, ancak aşağıdaki örnekte gösterildiği gibi ek bir parametre.  
+2. İçinde [!INCLUDE[wv](../../../../includes/wv-md.md)], yukarıdaki yordamı izleyin, aktarım katmanında X.509 sertifikalarıyla kimlik doğrulaması istemcileri destekler, ancak aşağıdaki örnekte gösterildiği gibi ek bir parametre.  
   
     ```  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
@@ -105,19 +105,19 @@ ms.locfileid: "59139821"
   
 ### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>Bir bağlantı noktası numarasından bir SSL sertifikası silinemedi  
   
-1.  Bilgisayarda tüm bağlamaları parmak izleriyle ve bağlantı noktalarını görmek için HttpCfg.exe veya Netsh.exe aracını kullanın. Disk bilgileri yazdırmak için yeniden yönlendirme karakter kullanın ">" aşağıdaki örnekte gösterildiği gibi.  
+1. Bilgisayarda tüm bağlamaları parmak izleriyle ve bağlantı noktalarını görmek için HttpCfg.exe veya Netsh.exe aracını kullanın. Disk bilgileri yazdırmak için yeniden yönlendirme karakter kullanın ">" aşağıdaki örnekte gösterildiği gibi.  
   
     ```  
     httpcfg query ssl>myMachinePorts.txt  
     ```  
   
-2.  İçinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], HttpCfg.exe aracını **Sil** ve **ssl** anahtar sözcükleri. Kullanım **-i** belirlemek için anahtarı `IP`:`port` numarası ve **-h** parmak izini belirlemek için anahtarı.  
+2. İçinde [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] veya [!INCLUDE[wxp](../../../../includes/wxp-md.md)], HttpCfg.exe aracını **Sil** ve **ssl** anahtar sözcükleri. Kullanım **-i** belirlemek için anahtarı `IP`:`port` numarası ve **-h** parmak izini belirlemek için anahtarı.  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-3.  İçinde [!INCLUDE[wv](../../../../includes/wv-md.md)], aşağıdaki örnekte gösterildiği gibi Netsh.exe aracını kullanın.  
+3. İçinde [!INCLUDE[wv](../../../../includes/wv-md.md)], aşağıdaki örnekte gösterildiği gibi Netsh.exe aracını kullanın.  
   
     ```  
     Netsh http delete sslcert ipport=0.0.0.0:8005  

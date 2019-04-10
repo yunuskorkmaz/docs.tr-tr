@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345527"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF ile Temsilcilik ve Kimliğe Bürünme
 *Kimliğe bürünme* Hizmetleri İstemci Erişim hizmeti etki alanının kaynaklarına erişimi kısıtlama kullanmak yaygın bir tekniktir. Hizmeti etki alanı kaynaklarına ya da yerel dosyaları (kimliğe bürünme) gibi makine kaynakları veya bir dosya paylaşımı (temsilci) gibi başka bir makinedeki bir kaynak olabilir. Örnek bir uygulama için bkz: [istemci kimliğine bürünme](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Kimliğe bürünme kullanma örneği için bkz: [nasıl yapılır: Bir hizmette istemci kimliğine bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -191,13 +191,13 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Kısıtlanmış temsili kullanmak üzere bir uygulama yapılandırma  
  Önce kullanım Kısıtlanmış temsilci seçme, gönderen, alıcı ve etki alanı denetleyicisi, bunu yapmak için yapılandırılmalıdır. Aşağıdaki yordamı Kısıtlanmış temsilci etkinleştirme adımları listeler. Bölümünü Kısıtlanmış temsilci seçme ile temsilci arasındaki farklar hakkında daha fazla bilgi için bkz. [Windows Server 2003 Kerberos uzantıları](https://go.microsoft.com/fwlink/?LinkId=100194) kısıtlanmış tartışma açıklanır.  
   
-1.  Etki alanı denetleyicisinde Temizle **Hesap duyarlıdır ve devredilemez** istemci uygulamasının altında çalıştığı hesabı için onay kutusu.  
+1. Etki alanı denetleyicisinde Temizle **Hesap duyarlıdır ve devredilemez** istemci uygulamasının altında çalıştığı hesabı için onay kutusu.  
   
-2.  Etki alanı denetleyicisinde seçin **hesabıdır temsilci seçme için güvenilir** istemci uygulamasının altında çalıştığı hesabı için onay kutusu.  
+2. Etki alanı denetleyicisinde seçin **hesabıdır temsilci seçme için güvenilir** istemci uygulamasının altında çalıştığı hesabı için onay kutusu.  
   
-3.  Temsilci seçme için güvenilir olması tıklayarak etki alanı denetleyicisinde, orta katman bilgisayarı yapılandırmak **temsilci seçme için bilgisayara güven** seçeneği.  
+3. Temsilci seçme için güvenilir olması tıklayarak etki alanı denetleyicisinde, orta katman bilgisayarı yapılandırmak **temsilci seçme için bilgisayara güven** seçeneği.  
   
-4.  Etki alanı denetleyicisinde tıklayarak kısıtlanmış temsili kullanmak için orta katman bilgisayarı yapılandırmak **bu bilgisayara yalnızca belirtilen hizmetlere temsilci seçmek için güven** seçeneği.  
+4. Etki alanı denetleyicisinde tıklayarak kısıtlanmış temsili kullanmak için orta katman bilgisayarı yapılandırmak **bu bilgisayara yalnızca belirtilen hizmetlere temsilci seçmek için güven** seçeneği.  
   
  Kısıtlanmış temsili yapılandırma hakkında daha ayrıntılı yönergeler için MSDN'de aşağıdaki konulara bakın:  
   

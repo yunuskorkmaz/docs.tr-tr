@@ -1,5 +1,5 @@
 ---
-title: "İzlenecek yol: Bir Windows Forms uygulaması'nda veri akışı kullanma"
+title: "İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d27500332c59f24e121c9c15ac27a36ed93d07
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344383"
 ---
-# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Bir Windows Forms uygulaması'nda veri akışı kullanma
+# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
 Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren veri akışı bloğu ağının nasıl oluşturulacağını gösterir.  
   
  Bu örnek belirtilen klasöründen görüntü dosyalarını yükler, bileşik bir görüntü oluşturur ve sonucu görüntüler. Örnek yol görüntülerine ağ üzerinden veri akışı modelini kullanır. Veri akışı modelinde, bir program bağımsız bileşenleri birbirleriyle iletiler göndererek iletişim. Bir bileşenin bir ileti aldığında, bir eylem gerçekleştirir ve ardından sonucu başka bir bileşene geçirir. Bu, denetim akışı modeli, bir uygulama denetim yapıları, örneğin kullanır, koşullu deyimler, döngüler ve benzeri işlemlerin bir programda sırasını denetlemek için ile karşılaştırın.  
@@ -35,7 +35,7 @@ Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren v
   
 -   [Veri akışı ağ kullanıcı arabirimine bağlanma](#ui)  
   
--   [Tam örnek](#complete)  
+-   [Tam Örnek](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>Windows Forms uygulaması oluşturma  
@@ -43,15 +43,15 @@ Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren v
   
 #### <a name="to-create-the-windows-forms-application"></a>Formları uygulaması Windows oluşturmak için  
   
-1.  Bir Visual C# veya Visual Basic Visual Studio'da oluşturma **Windows Forms uygulaması** proje. Bu belgede, proje adı `CompositeImages`.  
+1. Bir Visual C# veya Visual Basic Visual Studio'da oluşturma **Windows Forms uygulaması** proje. Bu belgede, proje adı `CompositeImages`.  
   
-2.  Ana form için form tasarımcıda Form1.cs (Visual Basic için Form1.vb), ekleme bir <xref:System.Windows.Forms.ToolStrip> denetimi.  
+2. Ana form için form tasarımcıda Form1.cs (Visual Basic için Form1.vb), ekleme bir <xref:System.Windows.Forms.ToolStrip> denetimi.  
   
-3.  Ekleme bir <xref:System.Windows.Forms.ToolStripButton> denetimini <xref:System.Windows.Forms.ToolStrip> denetimi. Ayarlama <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> özelliğini <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> ve <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğini **Klasör Seç**.  
+3. Ekleme bir <xref:System.Windows.Forms.ToolStripButton> denetimini <xref:System.Windows.Forms.ToolStrip> denetimi. Ayarlama <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> özelliğini <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> ve <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğini **Klasör Seç**.  
   
-4.  İkinci bir ekleme <xref:System.Windows.Forms.ToolStripButton> denetimini <xref:System.Windows.Forms.ToolStrip> denetimi. Ayarlama <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> özelliğini <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğini **iptal**ve <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> özelliğini `False`.  
+4. İkinci bir ekleme <xref:System.Windows.Forms.ToolStripButton> denetimini <xref:System.Windows.Forms.ToolStrip> denetimi. Ayarlama <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> özelliğini <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, <xref:System.Windows.Forms.ToolStripItem.Text%2A> özelliğini **iptal**ve <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> özelliğini `False`.  
   
-5.  Ekleme bir <xref:System.Windows.Forms.PictureBox> ana forma bir nesne. Ayarlama <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Ekleme bir <xref:System.Windows.Forms.PictureBox> ana forma bir nesne. Ayarlama <xref:System.Windows.Forms.Control.Dock%2A> özelliğini <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 <a name="network"></a>   
 ## <a name="creating-the-dataflow-network"></a>Veri akışı ağ oluşturma  
@@ -59,25 +59,25 @@ Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren v
   
 #### <a name="to-create-the-dataflow-network"></a>Veri akışı ağı oluşturmak için  
   
-1.  Projenize System.Threading.Tasks.Dataflow.dll'ye birer başvuru ekleyin.  
+1. Projenize System.Threading.Tasks.Dataflow.dll'ye birer başvuru ekleyin.  
   
-2.  Form1.cs (Visual Basic için Form1.vb) aşağıdaki içerdiğinden emin olun `using` (`Using` Visual Basic'te) ifadeleri:  
+2. Form1.cs (Visual Basic için Form1.vb) aşağıdaki içerdiğinden emin olun `using` (`Using` Visual Basic'te) ifadeleri:  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
-3.  Aşağıdaki veri üyelerini ekleyin `Form1` sınıfı:  
+3. Aşağıdaki veri üyelerini ekleyin `Form1` sınıfı:  
   
      [!code-csharp[TPLDataflow_CompositeImages#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#2)]  
   
-4.  Aşağıdaki yöntemi ekleyin `CreateImageProcessingNetwork`, `Form1` sınıfı. Bu yöntem, görüntü işleme ağı oluşturur.  
+4. Aşağıdaki yöntemi ekleyin `CreateImageProcessingNetwork`, `Form1` sınıfı. Bu yöntem, görüntü işleme ağı oluşturur.  
   
      [!code-csharp[TPLDataflow_CompositeImages#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#3)]  
   
-5.  Uygulama `LoadBitmaps` yöntemi.  
+5. Uygulama `LoadBitmaps` yöntemi.  
   
      [!code-csharp[TPLDataflow_CompositeImages#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#4)]  
   
-6.  Uygulama `CreateCompositeBitmap` yöntemi.  
+6. Uygulama `CreateCompositeBitmap` yöntemi.  
   
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
@@ -109,15 +109,15 @@ Bu belge, bir Windows Forms uygulamasında görüntü işleme gerçekleştiren v
   
 #### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Veri akışı ağ kullanıcı arabirimine bağlamak için  
   
-1.  Ana form için form tasarımcısı için bir olay işleyicisi oluşturun <xref:System.Windows.Forms.ToolStripItem.Click> olayı **Klasör Seç** düğmesi.  
+1. Ana form için form tasarımcısı için bir olay işleyicisi oluşturun <xref:System.Windows.Forms.ToolStripItem.Click> olayı **Klasör Seç** düğmesi.  
   
-2.  Uygulama <xref:System.Windows.Forms.ToolStripItem.Click> olayı **Klasör Seç** düğmesi.  
+2. Uygulama <xref:System.Windows.Forms.ToolStripItem.Click> olayı **Klasör Seç** düğmesi.  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3.  Ana form için form tasarımcıda oluşturmak için bir olay işleyicisi <xref:System.Windows.Forms.ToolStripItem.Click> olayı **iptal** düğmesi.  
+3. Ana form için form tasarımcıda oluşturmak için bir olay işleyicisi <xref:System.Windows.Forms.ToolStripItem.Click> olayı **iptal** düğmesi.  
   
-4.  Uygulama <xref:System.Windows.Forms.ToolStripItem.Click> olayı **iptal** düğmesi.  
+4. Uygulama <xref:System.Windows.Forms.ToolStripItem.Click> olayı **iptal** düğmesi.  
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   

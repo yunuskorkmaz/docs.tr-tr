@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203333"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343720"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Nasıl yapılır: Etkin MDI Alt Öğesine Veri Gönderme
 Genellikle, bağlamında [Çok Belgeli Arabirim (MDI) uygulamaları](multiple-document-interface-mdi-applications.md), ne zaman kullanıcı Pano'dan veri bir MDI uygulaması yapıştırır gibi etkin alt pencerenin veri göndermek ihtiyacınız olacak.  
@@ -25,7 +25,7 @@ Genellikle, bağlamında [Çok Belgeli Arabirim (MDI) uygulamaları](multiple-do
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Etkin MDI alt penceresine panodan veri göndermesini  
   
-1.  Bir yöntem içinde etkin alt formunun etkin denetimi için metni panoya kopyalayın.  
+1. Bir yöntem içinde etkin alt formunun etkin denetimi için metni panoya kopyalayın.  
   
     > [!NOTE]
     >  Bu örnek MDI üst formu olduğunu varsayar (`Form1`) içeren bir veya daha fazla MDI alt pencereleri olan bir <xref:System.Windows.Forms.RichTextBox> denetimi. Daha fazla bilgi için [MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md).  

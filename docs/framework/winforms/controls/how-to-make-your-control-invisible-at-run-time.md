@@ -11,19 +11,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invisible
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-ms.openlocfilehash: 06283a93c3b88d2febc1d64797139eee62661b42
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e9af529541a40a951d6defea180dbbef04c8f3be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201656"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345904"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>Nasıl yapılır: Çalışma Zamanında Denetiminizi Görünmez Yapma
 Çalışma zamanında görünmez olan bir kullanıcı denetimi oluşturmak isteyebilirsiniz zamanlar vardır. Örneğin, bir uyarı saati bir denetim ne zaman uyarı sizi uyarabilir dışında görünmez olabilir. Bu ayarlayarak kolayca gerçekleştirilir <xref:System.Windows.Forms.Control.Visible%2A> özelliği. Varsa <xref:System.Windows.Forms.Control.Visible%2A> özelliği `true`, Denetim normal olarak görünür. Varsa `false`, denetiminizin gizlenir. Denetiminiz kodunda görünmez hala çalışabilir ancak kullanıcı arabirimi aracılığıyla denetimi ile etkileşim kurmak mümkün olmayacaktır. Kullanıcı girişi (örneğin, fare tıklamaları) hala yanıt veren görünmeyen bir denetim oluşturmak istiyorsanız, saydam bir denetimi oluşturmanız gerekir. Daha fazla bilgi için [denetiminiz saydam bir arka plan verme](how-to-give-your-control-a-transparent-background.md).  
   
 ### <a name="to-make-your-control-invisible-at-run-time"></a>İçin çalışma zamanında denetiminizi görünmez yapma  
   
-1.  Ayarlama <xref:System.Windows.Forms.Control.Visible%2A> özelliğini `false`.  
+1. Ayarlama <xref:System.Windows.Forms.Control.Visible%2A> özelliğini `false`.  
   
     ```vb  
     ' To set the Visible property from within your object's own code.  

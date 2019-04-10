@@ -1,17 +1,17 @@
 ---
-title: 'Nasıl yapılır: Gelen talepleri dönüştürme'
+title: 'Nasıl yapılır: Gelen Talepleri Dönüştürme'
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-ms.openlocfilehash: 83c6f650580a673d308c7ffd580c785cdb2ab9f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181637"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344643"
 ---
-# <a name="how-to-transform-incoming-claims"></a>Nasıl yapılır: Gelen talepleri dönüştürme
-## <a name="applies-to"></a>Uygulandığı öğe:  
+# <a name="how-to-transform-incoming-claims"></a>Nasıl yapılır: Gelen Talepleri Dönüştürme
+## <a name="applies-to"></a>Uygulanan Öğe  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
   
@@ -58,19 +58,19 @@ ms.locfileid: "50181637"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Basit bir ASP.NET uygulaması oluşturmak için  
   
-1.  Visual Studio'yu yönetici olarak yükseltilmiş modda başlatın.  
+1. Visual Studio'yu yönetici olarak yükseltilmiş modda başlatın.  
   
-2.  Visual Studio'da **dosya**, tıklayın **yeni**ve ardından **proje**.  
+2. Visual Studio'da **dosya**, tıklayın **yeni**ve ardından **proje**.  
   
-3.  İçinde **yeni proje** penceresinde tıklayın **ASP.NET Web Forms uygulaması**.  
+3. İçinde **yeni proje** penceresinde tıklayın **ASP.NET Web Forms uygulaması**.  
   
-4.  İçinde **adı**, girin `TestApp` basın **Tamam**.  
+4. İçinde **adı**, girin `TestApp` basın **Tamam**.  
   
-5.  Sağ **TestApp** altındaki proje **Çözüm Gezgini**, ardından **kimlik ve erişim**.  
+5. Sağ **TestApp** altındaki proje **Çözüm Gezgini**, ardından **kimlik ve erişim**.  
   
-6.  **Kimlik ve erişim** penceresi görüntülenir. Altında **sağlayıcıları**seçin **uygulamanızı yerel geliştirme STS'si ile Test**, ardından **Uygula**.  
+6. **Kimlik ve erişim** penceresi görüntülenir. Altında **sağlayıcıları**seçin **uygulamanızı yerel geliştirme STS'si ile Test**, ardından **Uygula**.  
   
-7.  İçinde *Default.aspx* dosya, var olan bir biçimlendirme aşağıdakiyle değiştirin ve ardından dosyayı kaydedin:  
+7. İçinde *Default.aspx* dosya, var olan bir biçimlendirme aşağıdakiyle değiştirin ve ardından dosyayı kaydedin:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -87,7 +87,7 @@ ms.locfileid: "50181637"
     </asp:Content>  
     ```  
   
-8.  Adlı arka plan kod dosyası açın *Default.aspx.cs*. Ardından dosyayı kaydedin, aşağıdaki varolan kodu değiştirin:  
+8. Adlı arka plan kod dosyası açın *Default.aspx.cs*. Ardından dosyayı kaydedin, aşağıdaki varolan kodu değiştirin:  
   
     ```csharp  
     using System;  
@@ -113,24 +113,24 @@ ms.locfileid: "50181637"
   
 #### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>Özel ClaimsAuthenticationManager kullanarak talep dönüştürme uygulamak için  
   
-1.  Visual Studio'da sağ tıklayın, çözümü tıklayın **Ekle**ve ardından **yeni proje**.  
+1. Visual Studio'da sağ tıklayın, çözümü tıklayın **Ekle**ve ardından **yeni proje**.  
   
-2.  İçinde **Yeni Proje Ekle** penceresinde **sınıf kitaplığı** gelen **Visual C#** şablonları listesinde, girin `ClaimsTransformation`ve tuşuna **Tamam**. Yeni proje, çözüm klasörünüzde oluşturulur.  
+2. İçinde **Yeni Proje Ekle** penceresinde **sınıf kitaplığı** gelen **Visual C#** şablonları listesinde, girin `ClaimsTransformation`ve tuşuna **Tamam**. Yeni proje, çözüm klasörünüzde oluşturulur.  
   
-3.  Sağ **başvuruları** altında **ClaimsTransformation** proje ve ardından **Başvuru Ekle**.  
+3. Sağ **başvuruları** altında **ClaimsTransformation** proje ve ardından **Başvuru Ekle**.  
   
-4.  İçinde **başvuru Yöneticisi** penceresinde **System.IdentityModel**ve ardından **Tamam**.  
+4. İçinde **başvuru Yöneticisi** penceresinde **System.IdentityModel**ve ardından **Tamam**.  
   
-5.  Açık **Class1.cs**, veya yoksa, sağ **ClaimsTransformation**, tıklayın **Ekle**, ardından **sınıfı...**  
+5. Açık **Class1.cs**, veya yoksa, sağ **ClaimsTransformation**, tıklayın **Ekle**, ardından **sınıfı...**  
   
-6.  Aşağıdaki kod dosyasına using yönergeleri:  
+6. Aşağıdaki kod dosyasına using yönergeleri:  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  Aşağıdaki sınıf ve yöntem kod dosyasını ekleyin.  
+7. Aşağıdaki sınıf ve yöntem kod dosyasını ekleyin.  
   
     > [!WARNING]
     >  Aşağıdaki kod, yalnızca gösterim amaçlıdır; hedeflenen izinlerinizi üretim kodunda doğruladığınızdan emin olun.  
@@ -150,7 +150,7 @@ ms.locfileid: "50181637"
     }  
     ```  
   
-8.  Dosyayı kaydedin ve yapı **ClaimsTransformation** proje.  
+8. Dosyayı kaydedin ve yapı **ClaimsTransformation** proje.  
   
 9. İçinde **TestApp** ASP.NET projesi başvuruları üzerinde sağ tıklayın ve ardından **Başvuru Ekle**.  
   
@@ -167,9 +167,9 @@ ms.locfileid: "50181637"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Form kimlik doğrulaması kullanarak talep için ASP.NET Web Forms uygulamanızı test etmek için  
   
-1.  Tuşuna **F5** oluşturun ve uygulamayı çalıştırın. İle sunulan *Default.aspx*.  
+1. Tuşuna **F5** oluşturun ve uygulamayı çalıştırın. İle sunulan *Default.aspx*.  
   
-2.  Üzerinde *Default.aspx* sayfasında, bir tablonun altına görmeniz **bilgisayarınızı talep** içeren başlık **veren**, **OriginalIssuer**, **Türü**, **değer**, ve **ValueType** talep, hesabınız hakkında bilgiler. Son satırı aşağıdaki şekilde sunulması:  
+2. Üzerinde *Default.aspx* sayfasında, bir tablonun altına görmeniz **bilgisayarınızı talep** içeren başlık **veren**, **OriginalIssuer**, **Türü**, **değer**, ve **ValueType** talep, hesabınız hakkında bilgiler. Son satırı aşağıdaki şekilde sunulması:  
   
     ||||||  
     |-|-|-|-|-|  

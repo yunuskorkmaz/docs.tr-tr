@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: c5003b6d4892839d43ba9da103473c4c7e3d947a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e1a33a56d196b2a8731f2ddb5c632b0de147db3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817142"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346320"
 ---
 # <a name="class-classname-cannot-be-found"></a>Sınıfınızın\<SınıfAdı >' bulunamıyor
 Sınıfınızın\<SınıfAdı >' bulunamıyor. Bu durum genellikle eşleşmeyen bir 'Microsoft.VisualBasic.dll' sonucudur.  
@@ -23,13 +23,13 @@ Sınıfınızın\<SınıfAdı >' bulunamıyor. Bu durum genellikle eşleşmeyen 
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1.  Yinelenen hata durumunda yeniden görmek için programı derleyin.  
+1. Yinelenen hata durumunda yeniden görmek için programı derleyin.  
   
-2.  Hata tekrar oluşursa, çalışmanızı kaydedin ve Visual Studio'yu yeniden başlatın.  
+2. Hata tekrar oluşursa, çalışmanızı kaydedin ve Visual Studio'yu yeniden başlatın.  
   
-3.  Sorun devam ederse, Visual Basic yeniden yükleyin.  
+3. Sorun devam ederse, Visual Basic yeniden yükleyin.  
   
-4.  Yeniden yüklenmesinden sonra hata oluşmaya devam ederse Microsoft Ürün Destek Hizmetleri bildirin.  
+4. Yeniden yüklenmesinden sonra hata oluşmaya devam ederse Microsoft Ürün Destek Hizmetleri bildirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

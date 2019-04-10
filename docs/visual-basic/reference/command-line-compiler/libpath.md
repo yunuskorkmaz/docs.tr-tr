@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b8e28b821f6536ddb5c7612e8706e024dd79a0bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833335"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344214"
 ---
 # <a name="-libpath"></a>-LIBPATH
 Başvurulan bütünleştirilmiş kodların konumunu belirtir.  
@@ -33,13 +33,13 @@ Başvurulan bütünleştirilmiş kodların konumunu belirtir.
   
  Derleyici şu sıralamadaki tam olmayan bütünleştirilmiş kod başvuruları arar:  
   
-1.  Geçerli çalışma dizini. Bu, derleyicinin çağırıldığı dizinidir.  
+1. Geçerli çalışma dizini. Bu, derleyicinin çağırıldığı dizinidir.  
   
-2.  Ortak dil çalışma zamanı sistem dizini.  
+2. Ortak dil çalışma zamanı sistem dizini.  
   
-3.  Tarafından belirtilen dizinlerde `/libpath`.  
+3. Tarafından belirtilen dizinlerde `/libpath`.  
   
-4.  LIB ortam değişkeni tarafından belirtilen dizinler.  
+4. LIB ortam değişkeni tarafından belirtilen dizinler.  
   
  `-libpath` Eklenebilir; belirtme seçeneği, birden çok kez önceki tüm değerlere ekler.  
   
@@ -58,6 +58,6 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [.NET derlemeleri](../../../standard/assembly/index.md)
+- [Visual Basic Komut Satırı Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

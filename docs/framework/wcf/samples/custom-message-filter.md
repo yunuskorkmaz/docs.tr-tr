@@ -2,12 +2,12 @@
 title: Özel İleti Filtresi
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 31816ae67e3273e033b53951ff78d662ef8192c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34e6d851bd0aa3515c5c43521be6213451b7ed12
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172841"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345826"
 ---
 # <a name="custom-message-filter"></a>Özel İleti Filtresi
 Bu örnek, Windows Communication Foundation (WCF) iletilerini uç noktalarına dağıtmak için kullandığı ileti filtreleri nasıl değiştirileceğini gösterir.  
@@ -119,11 +119,11 @@ Hello
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Bir tek makineli yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Bir tek makineli yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-3.  Çapraz makine yapılandırmasında örneği çalıştırmak için konumundaki yönergeleri [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md) ve Client.cs dosyasında aşağıdaki satırı değiştirin.  
+3. Çapraz makine yapılandırmasında örneği çalıştırmak için konumundaki yönergeleri [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md) ve Client.cs dosyasında aşağıdaki satırı değiştirin.  
   
     ```  
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  

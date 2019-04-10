@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-ms.openlocfilehash: 7509e2f5035cb05c20af379f9f6a141177d540d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127055"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344331"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>İzlenecek yol: Windows Forms DataGridView Denetiminde Sanal Modu Uygulama
 Çok büyük miktarda içindeki tablosal verileri görüntülemek istediğiniz zaman bir <xref:System.Windows.Forms.DataGridView> ayarlayabileceğiniz denetimi <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> özelliğini `true` ve açıkça denetimin etkileşim kendi veri deposu ile yönetin. Bu durumda denetimin performansını ayarlamanıza olanak tanır.  
@@ -30,7 +30,7 @@ ms.locfileid: "59127055"
   
 #### <a name="to-implement-virtual-mode"></a>Sanal modu uygulama  
   
-1.  Türetilen bir sınıf oluşturmanız <xref:System.Windows.Forms.Form> ve içeren bir <xref:System.Windows.Forms.DataGridView> denetimi.  
+1. Türetilen bir sınıf oluşturmanız <xref:System.Windows.Forms.Form> ve içeren bir <xref:System.Windows.Forms.DataGridView> denetimi.  
   
      Aşağıdaki kod, bazı temel başlatma içerir. Sonraki adımlarda kullanılacak olan bazı değişkenler bildirilmektedir, sağlayan bir `Main` yöntemi, sınıf oluşturucusu bir Basit form düzeni sağlar.  
   
@@ -41,13 +41,13 @@ ms.locfileid: "59127055"
     [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#002)]
     [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#002)]  
   
-2.  Form için bir işleyici uygulamak <xref:System.Windows.Forms.Form.Load> başlatan olay <xref:System.Windows.Forms.DataGridView> denetim ve veri deposu örnek değerlerle doldurur.  
+2. Form için bir işleyici uygulamak <xref:System.Windows.Forms.Form.Load> başlatan olay <xref:System.Windows.Forms.DataGridView> denetim ve veri deposu örnek değerlerle doldurur.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#110)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#110)]  
   
-3.  Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.CellValueNeeded> veri deposundan istenen hücre değerini alır. olay veya `Customer` nesnesi şu anda düzenleme.  
+3. Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.CellValueNeeded> veri deposundan istenen hücre değerini alır. olay veya `Customer` nesnesi şu anda düzenleme.  
   
      Bu olay oluşturduğunda <xref:System.Windows.Forms.DataGridView> denetim boyama hücre gerekiyor.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "59127055"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#120)]  
   
-4.  Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.CellValuePushed> depolayan bir düzenlenmiş hücre değerinde olay `Customer` düzenlenen satırı temsil eden nesne. Bu olay, bir hücre değerini değişiklik kullanıcı tarafından işlenen her gerçekleşir.  
+4. Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.CellValuePushed> depolayan bir düzenlenmiş hücre değerinde olay `Customer` düzenlenen satırı temsil eden nesne. Bu olay, bir hücre değerini değişiklik kullanıcı tarafından işlenen her gerçekleşir.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#130)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#130)]  
   
-5.  Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.NewRowNeeded> oluşturan yeni bir olay `Customer` yeni oluşturulan bir satırı temsil eden nesne.  
+5. Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.NewRowNeeded> oluşturan yeni bir olay `Customer` yeni oluşturulan bir satırı temsil eden nesne.  
   
      Bu olay, yeni kayıtlar için satır kullanıcının girdiği olduğunda gerçekleşir.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59127055"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#140)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#140)]  
   
-6.  Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.RowValidated> yeni veya değiştirilmiş satırları veri deposuna kaydeder olay.  
+6. Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.RowValidated> yeni veya değiştirilmiş satırları veri deposuna kaydeder olay.  
   
      Bu olay, kullanıcının geçerli satırı değiştiğinde gerçekleşir.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "59127055"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#150)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#150)]  
   
-7.  Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> gösteren olay olup olmadığını <xref:System.Windows.Forms.DataGridView.CancelRowEdit> olayı iki kez düzenleme modunda veya düzenleme modu dışında bir kez ESC tuşuna basarak satır geri al kullanıcı işaret ettiğinde gerçekleşir.  
+7. Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> gösteren olay olup olmadığını <xref:System.Windows.Forms.DataGridView.CancelRowEdit> olayı iki kez düzenleme modunda veya düzenleme modu dışında bir kez ESC tuşuna basarak satır geri al kullanıcı işaret ettiğinde gerçekleşir.  
   
      Varsayılan olarak, <xref:System.Windows.Forms.DataGridView.CancelRowEdit> geçerli satırda hücreler sürece değişiklik sırasında satır geri al gerçekleşir <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> özelliği `true` içinde <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> olay işleyicisi. Bu olay işleme kapsamı çalışma zamanında belirlenir yararlı olur.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "59127055"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#160)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#160)]  
   
-8.  Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.CancelRowEdit> değerleri atar olay `Customer` geçerli satırı temsil eden nesne.  
+8. Uygulama için bir işleyici <xref:System.Windows.Forms.DataGridView.CancelRowEdit> değerleri atar olay `Customer` geçerli satırı temsil eden nesne.  
   
      Bu olay, iki kez düzenleme modunda veya düzenleme modu dışında bir kez ESC tuşuna basarak satır geri al kullanıcıya bildirir oluşur. Bu olay, geçerli satırda hiçbir hücreleri değiştirildiyse ya gerçekleşmez değerini <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> özelliği sınıflandırmalara ayarlandığı `false` içinde bir <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> olay işleyicisi.  
   

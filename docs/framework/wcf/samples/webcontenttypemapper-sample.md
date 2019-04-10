@@ -2,12 +2,12 @@
 title: WebContentTypeMapper Örneği
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 7858b07c3da8684326b931b54f825c87a6e35717
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 381fc4a3084b1a2620384a04de85b9085e02ae16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131514"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344682"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper Örneği
 Bu örnek, yeni içerik türleri için Windows Communication Foundation (WCF) ileti gövdesi biçimleri eşlemeyle ilgili bilgi gösterir.  
@@ -54,11 +54,11 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  ' % S'çözüm WebContentTypeMapperSample.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. ' % S'çözüm WebContentTypeMapperSample.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Gidin `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (JCTMClientPage.htm tarayıcıda proje dizininden açmayın).  
+3. Gidin `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (JCTMClientPage.htm tarayıcıda proje dizininden açmayın).  
   
 > [!IMPORTANT]
 >  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 15533b2b1fb13ad43bba645d3f52dbad53b17033
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188942"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344162"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)
 Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Windows.Forms.TreeView> denetimi veya türetilmiş bir öğede bir <xref:System.Windows.Forms.ListView> denetimi. Türetme yanı sıra özel yöntemleri ve bunları işlemek için oluşturucuları, gerekli tüm alanlar eklemenize olanak sağlar. Bu özellik bir kullanımı, her ağaç düğümü veya liste öğesi için bir müşteri nesnesi eklemektir. Buradaki örnekler için olan bir <xref:System.Windows.Forms.TreeView> için denetimi, ancak aynı yaklaşımı kullanılabilir bir <xref:System.Windows.Forms.ListView> denetimi.  
@@ -70,7 +70,7 @@ Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Wind
   
 ### <a name="to-use-a-derived-tree-node"></a>Türetilen bir ağaç düğümünü kullanmak için  
   
-1.  İşlev çağrıları bir parametre olarak, yeni türetilmiş ağaç düğümü kullanabilirsiniz.  
+1. İşlev çağrıları bir parametre olarak, yeni türetilmiş ağaç düğümü kullanabilirsiniz.  
   
      Aşağıdaki örnekte, metin dosyasının konumunu için belirtilen yolda Belgelerim klasördür. Bunun yapılmasının nedeni, Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu dizin içerdiğini varsayar. Bu, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeylerine sahip kullanıcılar da sağlar.  
   
@@ -100,7 +100,7 @@ Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Wind
        "\\TextFile.txt")));  
     ```  
   
-2.  Ağaç düğümünde geçirilir ve olarak belirlenmiş bir <xref:System.Windows.Forms.TreeNode> sınıfından türetilmiş sınıfınızın cast gerekecektir. Atama, nesnenin bir türden diğerine açık bir dönüştürme ' dir. Atama hakkında daha fazla bilgi için bkz. [örtük ve açık dönüştürmeler](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic) [() işleci](~/docs/csharp/language-reference/operators/invocation-operator.md) (görsel C#), veya [atama işleci: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) .  
+2. Ağaç düğümünde geçirilir ve olarak belirlenmiş bir <xref:System.Windows.Forms.TreeNode> sınıfından türetilmiş sınıfınızın cast gerekecektir. Atama, nesnenin bir türden diğerine açık bir dönüştürme ' dir. Atama hakkında daha fazla bilgi için bkz. [örtük ve açık dönüştürmeler](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic) [() işleci](~/docs/csharp/language-reference/operators/invocation-operator.md) (görsel C#), veya [atama işleci: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) .  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

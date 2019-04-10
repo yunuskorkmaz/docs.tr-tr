@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 3fe43e3f815e0f918e22a1ec0fd485079afadde8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a7bdfc244b0ff1c2ed625235df7e74ced026c542
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156032"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343616"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Nasıl yapılır: İleti Yeniden Yürütme Algılamayı Etkinleştirme
 Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri akışını kopyalar ve bir veya daha fazla taraflar akışa başlayarak yeniden oynatılır oluşur. Azaltılabilir sürece, saldırı bilgisayarların stream yasal iletileri, sonuçta hatalı sonuçları, bir öğenin yedekli siparişler gibi bir dizi olarak işler.  
@@ -26,9 +26,9 @@ Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri a
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>Kod kullanılarak istemcide yeniden yürütme algılaması denetlemek için  
   
-1.  Oluşturma bir <xref:System.ServiceModel.Channels.SecurityBindingElement> kullanmak için bir <xref:System.ServiceModel.Channels.CustomBinding>. Daha fazla bilgi için [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Aşağıdaki örnekte bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ile oluşturulan <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> , <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı.  
+1. Oluşturma bir <xref:System.ServiceModel.Channels.SecurityBindingElement> kullanmak için bir <xref:System.ServiceModel.Channels.CustomBinding>. Daha fazla bilgi için [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Aşağıdaki örnekte bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ile oluşturulan <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> , <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı.  
   
-2.  Kullanım <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> bir başvuru döndürmek için özellik <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> sınıfı ve aşağıdaki özellikleri uygun şekilde ayarlayın:  
+2. Kullanım <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> bir başvuru döndürmek için özellik <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> sınıfı ve aşağıdaki özellikleri uygun şekilde ayarlayın:  
   
     1.  `DetectReplay`biçimindeki telefon numarasıdır. Bir Boole değeri. Bu, istemcinin sunucudan olumsuzlukları algılanmalıdır olmadığını yönetir. Varsayılan, `true` değeridir.  
   
@@ -40,19 +40,19 @@ Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri a
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>Kod kullanarak hizmet yeniden yürütme algılamayı denetlemek için  
   
-1.  Oluşturma bir <xref:System.ServiceModel.Channels.SecurityBindingElement> kullanmak için bir <xref:System.ServiceModel.Channels.CustomBinding>.  
+1. Oluşturma bir <xref:System.ServiceModel.Channels.SecurityBindingElement> kullanmak için bir <xref:System.ServiceModel.Channels.CustomBinding>.  
   
-2.  Kullanım <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> bir başvuru döndürmek için özellik <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> sınıfı ve daha önce açıklandığı gibi özellikleri ayarlayın.  
+2. Kullanım <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> bir başvuru döndürmek için özellik <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> sınıfı ve daha önce açıklandığı gibi özellikleri ayarlayın.  
   
 ### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>Yeniden yürütme algılaması istemci veya hizmet yapılandırmasında denetlemek için  
   
-1.  Oluşturma bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. Oluşturma bir [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
-2.  Oluşturma bir `<security>` öğesi.  
+2. Oluşturma bir `<security>` öğesi.  
   
-3.  Oluşturma bir [ \<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) veya [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
+3. Oluşturma bir [ \<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) veya [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
   
-4.  Aşağıdaki öznitelik değerlerini uygun şekilde ayarlayın: `detectReplays`, `maxClockSkew`, `replayWindow`, ve `replayCacheSize`. Aşağıdaki örnek, her iki öznitelikleri ayarlar bir `<localServiceSettings>` ve `<localClientSettings>` öğesi:  
+4. Aşağıdaki öznitelik değerlerini uygun şekilde ayarlayın: `detectReplays`, `maxClockSkew`, `replayWindow`, ve `replayCacheSize`. Aşağıdaki örnek, her iki öznitelikleri ayarlar bir `<localServiceSettings>` ve `<localClientSettings>` öğesi:  
   
     ```xml  
     <customBinding>  

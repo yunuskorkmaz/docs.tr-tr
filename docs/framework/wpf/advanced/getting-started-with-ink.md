@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365574"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343603"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>WPF mürekkep ile çalışmaya başlama
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF), dijital mürekkep uygulamanıza eklemeniz
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Aşağıdaki örneklerde, ilk olarak kullanmaya [Microsoft Visual Studio yükleme](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Ayrıca temel WPF uygulamaları yazmak nasıl yardımcı olur. WPF ile çalışmaya başlama konusunda yardım için bkz. [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Aşağıdaki örnekleri kullanmak için önce yükleme [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Ayrıca temel WPF uygulamaları yazmak nasıl yardımcı olur. WPF ile çalışmaya başlama konusunda yardım için bkz. [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Hızlı Başlangıç
 

@@ -3,12 +3,12 @@ title: Null başvuru türleri için Tasarım
 description: Gelişmiş Bu öğretici, bir null başvuru türlerine giriş sağlar. Tasarımınız ne zaman başvuru değeri null ve boş olamaz yürüttüğünde derleyici sahip hedefi express öğreneceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443267"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427298"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Öğretici: Null başvuru türleri ile mevcut kodu geçirme
 
@@ -24,7 +24,7 @@ Bu öğreticide şunları öğrenirsiniz nasıl yapılır:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-.NET Core çalıştırmak için makinenizi ayarlamak ihtiyacınız olacak dahil olmak üzere C# 8.0 beta derleyici. C# 8 beta derleyici, kullanılabilir [Visual Studio 2019 Önizleme 2 ve üzeri](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview), veya [.NET Core 3.0 Önizleme 2](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+.NET Core çalıştırmak için makinenizi ayarlamak ihtiyacınız olacak dahil olmak üzere C# 8.0 beta derleyici. C# 8 beta derleyici, kullanılabilir [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), veya en son [.NET Core 3.0 Önizleme](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Bu öğreticide, aşina olduğunuz varsayılır C# ve .NET, Visual Studio veya .NET Core CLI gibi.
 
@@ -81,7 +81,7 @@ Bu iki özellik neden `CS8618`, "atanamayan özelliği başlatılmamış". Yeter
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Önceki kod bloğu içinde geçmeden oldukça bit yoktur. Bu uygulamanın kullandığı [AutoMapper](http://automapper.org/) bir haber öğesi oluşturmak için NuGet paketi bir `ISyndicationItem`. Haber hikayesi öğeleri oluşturulur ve özellikler tek bir deyimde ayarlanır keşfettiniz. Tasarımı anlamına `NewsStoryViewModel` bu özellikleri hiç olmayacağını gösterir `null` değeri. Bu özellikler olmalıdır **nonnullable başvuru türleri**. En iyi özgün tasarım hedefi ifade eder. Aslında, hiçbir `NewsStoryViewModel` *olduğu* null olmayan değerler ile doğru şekilde örneği. Bu, geçerli bir düzeltme kod aşağıdaki başlatmaya yapar:
+Önceki kod bloğu içinde geçmeden oldukça bit yoktur. Bu uygulamanın kullandığı [AutoMapper](https://automapper.org/) bir haber öğesi oluşturmak için NuGet paketi bir `ISyndicationItem`. Haber hikayesi öğeleri oluşturulur ve özellikler tek bir deyimde ayarlanır keşfettiniz. Tasarımı anlamına `NewsStoryViewModel` bu özellikleri hiç olmayacağını gösterir `null` değeri. Bu özellikler olmalıdır **nonnullable başvuru türleri**. En iyi özgün tasarım hedefi ifade eder. Aslında, hiçbir `NewsStoryViewModel` *olduğu* null olmayan değerler ile doğru şekilde örneği. Bu, geçerli bir düzeltme kod aşağıdaki başlatmaya yapar:
 
 ```csharp
 public class NewsStoryViewModel

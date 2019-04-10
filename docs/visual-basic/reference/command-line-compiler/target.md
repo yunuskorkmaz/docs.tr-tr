@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 69312ca3512c5407185df11e66d95ce9f5cdddff
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c91e69e3d9f17f758990b8385f6b8d0a1c03bef6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412298"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344747"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Derleyici çıktı biçimi belirtir.  
@@ -25,7 +25,7 @@ Derleyici çıktı biçimi belirtir.
 ## <a name="remarks"></a>Açıklamalar  
  Aşağıdaki tabloda özetlenmiştir etkisini `-target` seçeneği.  
   
-|**Seçeneği**|**Davranışı**|  
+|**Seçenek**|**Davranış**|  
 |----------------|------------------|  
 |`-target:exe`|Bir çalıştırılabilir konsol uygulaması oluşturmak derleyicinin neden olur.<br /><br /> Hayır, varsayılan seçenek budur `-target` seçeneği belirtildi. Yürütülebilir dosyanın .exe uzantılı oluşturulur.<br /><br /> İle aksi belirtilmediği sürece `/out` seçeneği, çıkış dosyası adını içeren giriş dosyasının adını alır `Sub Main` yordamı.<br /><br /> Yalnızca bir `Sub Main` yordam gerekli kaynak kodu dosyalarında bir .exe dosyasına derlenir. Kullanım `-main` hangi sınıfı içeren belirtmek için derleyici seçeneği `Sub Main` yordamı.|  
 |`-target:library`|Bir dinamik bağlantı kitaplığı (DLL) oluşturmak derleyicinin neden olur.<br /><br /> Dinamik bağlantı kitaplığı dosyası, .dll uzantısıyla oluşturulur.<br /><br /> İle aksi belirtilmediği sürece `-out` seçeneği, çıkış dosyası adı ilk giriş dosyasının adını alır.<br /><br /> Bir DLL oluştururken bir `Sub Main` yordam gerekli değildir.|  
@@ -42,11 +42,11 @@ Derleyici çıktı biçimi belirtir.
   
 ### <a name="to-set--target-in-the-visual-studio-ide"></a>Visual Studio IDE'de ayarlamak için - hedef  
   
-1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.   
+1. Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.   
   
-2.  Tıklayın **uygulama** sekmesi.  
+2. Tıklayın **uygulama** sekmesi.  
   
-3.  Değer değiştirme **uygulama türü** kutusu.  
+3. Değer değiştirme **uygulama türü** kutusu.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod derlenir `in.vb`, oluşturma `in.dll`:  
@@ -57,11 +57,11 @@ vbc -target:library in.vb
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Komut Satırı Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
 - [-başvuru (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
-- [.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)
+- [.NET derlemeleri](../../../standard/assembly/index.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

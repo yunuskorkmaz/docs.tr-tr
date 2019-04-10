@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70189fad6d979d0e0ff6ad5d936d8a5b6142eea4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db0493f437d2546302a10bf52aebf326ea8a694c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345774"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>.NET Framework Bileşenlerini COM'da Gösterme
 .NET türüne yazma ve bu tür, yönetilmeyen koddan kullanan geliştiriciler için ayrı etkinliklerdir. Bu bölümde, COM istemcileri ile birlikte çalışan yönetilen kod yazma için bazı ipuçları açıklanmaktadır:  
@@ -34,19 +34,19 @@ ms.locfileid: "59149272"
   
 #### <a name="to-consume-a-managed-type-from-com"></a>Yönetilen bir COM türünden kullanma  
   
-1.  [Derlemeleri COM ile kaydetme](../../../docs/framework/interop/registering-assemblies-with-com.md).  
+1. [Derlemeleri COM ile kaydetme](../../../docs/framework/interop/registering-assemblies-with-com.md).  
   
      Tasarım zamanında bir derleme (ve tür kitaplıklarını) türlerinde kayıtlı olması gerekir. Bir yükleyici bütünleştirilmiş kod kaydedilmiyorsa COM geliştiriciler Regasm.exe isteyin.  
   
-2.  [Com'dan .NET türlerine başvurma](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
+2. [Com'dan .NET türlerine başvurma](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
   
      Aynı araçları ve bugün kullandıkları teknikleri kullanarak derlemedeki türleri COM geliştiriciler başvurabilirsiniz.  
   
-3.  [Bir .NET nesnesini çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
+3. [Bir .NET nesnesini çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
   
      COM geliştiriciler, bunlar herhangi bir yönetilmeyen türü üzerinde yöntemleri çağırmak aynı şekilde .NET nesne üzerinde yöntemleri çağırabilir. Örneğin, COM **CoCreateInstance** API .NET nesneleri etkinleştirir.  
   
-4.  [COM erişimi için bir uygulamayı dağıtmak](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
+4. [COM erişimi için bir uygulamayı dağıtmak](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
   
      Bir katı adlı derleme genel derleme önbelleğinde yüklü ve yayımcısını imzasının gerektirir. İstemci uygulama dizininde olmayan kesin adlı derlemeler yüklenmesi gerekir.  
   

@@ -3,12 +3,12 @@ title: Dallar ve döngüler - Giriş C# Öğreticisi
 description: Dallar ve döngüler hakkındaki Bu öğreticide, yazdığınız C# koşullu dallar ve döngüler deyimleri tekrar tekrar yürütmenin destekleyen dili sözdizimi keşfetmek için kod.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920954"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427259"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dal ve döngü deyimleriyle koşullu mantık öğrenin
 
@@ -88,34 +88,38 @@ Daha karmaşık koşulları test edebilirsiniz. Aşağıdaki kodu ekleyin, `Main
 
 ```csharp
 int c = 4;
-if ((a + b + c > 10) && (a > b))
+if ((a + b + c > 10) && (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("And the first number is greater than the second");
+    Console.WriteLine("And the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("Or the first number is not greater than the second");
+    Console.WriteLine("Or the first number is not equal to the second");
 }
 ```
+
+`==` İçin testler sembolü *eşitlik*. Kullanarak `==` eşitliği testi gördüğünüz atamanın'öğesinden ayırır `a = 5`.
 
 `&&` Temsil eder "ve". Bu koşulların her ikisi de deyimi true dalında yürütmek için true anlamına gelir.  İçine alınmaları koşuluyla her koşullu dalda birden çok deyime sahip bu örnek ayrıca Göster `{` ve `}`.
 
 Ayrıca `||` temsil etmek için "veya". Şu ana kadar yazdıklarınızı sonra aşağıdaki kodu ekleyin:
 
 ```csharp
-if ((a + b + c > 10) || (a > b))
+if ((a + b + c > 10) || (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("Or the first number is greater than the second");
+    Console.WriteLine("Or the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("And the first number is not greater than the second");
+    Console.WriteLine("And the first number is not equal to the second");
 }
 ```
+
+Değerleri Değiştir `a`, `b`, ve `c` arasında geçiş `&&` ve `||` keşfetmek için. Daha fazla bilgiye nasıl elde etmenizi sağlayacak `&&` ve `||` işleçleri çalışır.
 
 İlk adımı tamamladınız. Sonraki bölümde başlamadan önce geçerli kodu ayrı bir yöntem geçelim. Bu, yeni bir örnek ile çalışmaya başlamak kolaylaştırır. Yeniden adlandırma, `Main` yönteme `ExploreIf` ve yeni bir yazma `Main` metoduna çağrı yapan `ExploreIf`. İşiniz bittiğinde, kodunuzun şu şekilde görünmelidir:
 

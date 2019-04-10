@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 3a17d6cd5b723dcde4d8dc7059c9f416308f73db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0bbb24b07fdc1c362e2be43d69d189defbc27a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082665"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346190"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Nasıl yapılır: Hiyerarşik Veriler ile Ana Öğe-Ayrıntı Desenini Kullanma
 Bu örnek, ana öğe-ayrıntı senaryonun nasıl uygulanacağını gösterir.  
@@ -27,9 +27,9 @@ Bu örnek, ana öğe-ayrıntı senaryonun nasıl uygulanacağını gösterir.
   
  Bu örnekte fark etmeye iki şey vardır:  
   
-1.  Üç <xref:System.Windows.Controls.ListBox> denetimleri aynı kaynağına bağlayın. Ayarladığınız <xref:System.Windows.Data.Binding.Path%2A> hangi veri düzeyini istediğinizi belirtmek için bağlama özelliğini <xref:System.Windows.Controls.ListBox> görüntülenecek.  
+1. Üç <xref:System.Windows.Controls.ListBox> denetimleri aynı kaynağına bağlayın. Ayarladığınız <xref:System.Windows.Data.Binding.Path%2A> hangi veri düzeyini istediğinizi belirtmek için bağlama özelliğini <xref:System.Windows.Controls.ListBox> görüntülenecek.  
   
-2.  Ayarlamalısınız <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> özelliğini `true` üzerinde <xref:System.Windows.Controls.ListBox> denetimlerinin izlediğiniz seçimi. Bu özelliğin ayarlanması sağlar Seçili öğe olarak her zaman ayarlandığından <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Alternatif olarak, <xref:System.Windows.Controls.ListBox> öğesinden veri alır bir <xref:System.Windows.Data.CollectionViewSource>, seçim ve para birimi otomatik olarak eşitler.  
+2. Ayarlamalısınız <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> özelliğini `true` üzerinde <xref:System.Windows.Controls.ListBox> denetimlerinin izlediğiniz seçimi. Bu özelliğin ayarlanması sağlar Seçili öğe olarak her zaman ayarlandığından <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Alternatif olarak, <xref:System.Windows.Controls.ListBox> öğesinden veri alır bir <xref:System.Windows.Data.CollectionViewSource>, seçim ve para birimi otomatik olarak eşitler.  
   
  Kullanırken tekniği biraz daha farklı olmasına [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri. Bir örnek için bkz. [hiyerarşik XML verileri ile ana öğe-ayrıntı desenini kullanma](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   

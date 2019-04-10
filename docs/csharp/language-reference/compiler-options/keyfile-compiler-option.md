@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: bd89a5fa58507528b2a70efde04ecd2a6f601b39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e11cbca004aedd7d4f992abf2f766de4f4f5935
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344656"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (C# Derleyici Seçenekleri)
 Şifreleme anahtarını içeren dosya adını belirtir.  
@@ -45,11 +45,11 @@ ms.locfileid: "54605610"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Açık **özellikleri** proje sayfası.  
+1. Açık **özellikleri** proje sayfası.  
   
-2.  Tıklayın **imzalama** özellik sayfası.  
+2. Tıklayın **imzalama** özellik sayfası.  
   
-3.  Değiştirme **bir tanımlayıcı ad anahtar dosyası seç** özelliği.  
+3. Değiştirme **bir tanımlayıcı ad anahtar dosyası seç** özelliği.  
   
  Bu derleyici seçeneği ile program aracılığıyla erişebileceğiniz <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.  
   

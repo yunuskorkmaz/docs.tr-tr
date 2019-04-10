@@ -8,12 +8,12 @@ helpviewer_keywords:
 - managed HTML DOM
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
-ms.openlocfilehash: 98341270ffdb7788aa5c2713682d7d836bde220e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f2306e3405aa0ff37060d987bdc82b58fbaa7784
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203268"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345566"
 ---
 # <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Nasıl yapılır: Yönetilen HTML Belgesi Nesne Modelinde HTML Kaynağına Erişme
 <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> Ve <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> özellikleri <xref:System.Windows.Forms.WebBrowser> denetim önce görüntülenen edildiğinde bulunduğu gibi geçerli belgenin HTML döndürür. Ancak, yöntem ve özellik çağrılarını gibi kullanarak sayfayı değiştirirseniz <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> ve <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, çağırdığınızda bu değişiklikleri görünmez <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> ve <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>. DOM için en güncel HTML kaynağını almak için çağırmalıdır <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> HTML öğesi özelliği.  
@@ -22,22 +22,22 @@ ms.locfileid: "59203268"
   
 ### <a name="retrieving-the-dynamic-source-with-the-outerhtml-property"></a>Dinamik kaynak Outerhtml'i özelliğiyle alınıyor  
   
-1.  Yeni bir Windows Forms uygulaması oluşturun. Tek bir başlangıç <xref:System.Windows.Forms.Form>ve onu çağırmak `Form1`.  
+1. Yeni bir Windows Forms uygulaması oluşturun. Tek bir başlangıç <xref:System.Windows.Forms.Form>ve onu çağırmak `Form1`.  
   
-2.  Konak <xref:System.Windows.Forms.WebBrowser> Windows Forms uygulaması'nda denetim ve adlandırın `WebBrowser1`. Daha fazla bilgi için [nasıl yapılır: Bir Windows Forms uygulamasına Web tarayıcısı yetenekleri ekleme](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md).  
+2. Konak <xref:System.Windows.Forms.WebBrowser> Windows Forms uygulaması'nda denetim ve adlandırın `WebBrowser1`. Daha fazla bilgi için [nasıl yapılır: Bir Windows Forms uygulamasına Web tarayıcısı yetenekleri ekleme](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md).  
   
-3.  Bir saniye oluşturun <xref:System.Windows.Forms.Form> adlı uygulamanızdaki `CodeForm`.  
+3. Bir saniye oluşturun <xref:System.Windows.Forms.Form> adlı uygulamanızdaki `CodeForm`.  
   
-4.  Ekleme bir <xref:System.Windows.Forms.RichTextBox> denetimini `CodeForm` ve kendi <xref:System.Windows.Forms.Control.Dock%2A> özelliğini `Fill`.  
+4. Ekleme bir <xref:System.Windows.Forms.RichTextBox> denetimini `CodeForm` ve kendi <xref:System.Windows.Forms.Control.Dock%2A> özelliğini `Fill`.  
   
-5.  Ortak bir özellik oluşturmak `CodeForm` adlı `Code`.  
+5. Ortak bir özellik oluşturmak `CodeForm` adlı `Code`.  
   
      [!code-csharp[DisplayWebBrowserCode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DisplayWebBrowserCode/CS/CodeForm.cs#1)]
      [!code-vb[DisplayWebBrowserCode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DisplayWebBrowserCode/VB/CodeForm.vb#1)]  
   
-6.  Ekleme bir <xref:System.Windows.Forms.Button> adlı Denetim `Button1` için <xref:System.Windows.Forms.Form>ve izlemek için <xref:System.Windows.Forms.Control.Click> olay. Olayları izleme hakkında daha fazla bilgi için bkz [olayları](../../../standard/events/index.md).  
+6. Ekleme bir <xref:System.Windows.Forms.Button> adlı Denetim `Button1` için <xref:System.Windows.Forms.Form>ve izlemek için <xref:System.Windows.Forms.Control.Click> olay. Olayları izleme hakkında daha fazla bilgi için bkz [olayları](../../../standard/events/index.md).  
   
-7.  Aşağıdaki kodu ekleyin <xref:System.Windows.Forms.Control.Click> olay işleyicisi.  
+7. Aşağıdaki kodu ekleyin <xref:System.Windows.Forms.Control.Click> olay işleyicisi.  
   
      [!code-csharp[DisplayWebBrowserCode#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DisplayWebBrowserCode/CS/Form1.cs#2)]
      [!code-vb[DisplayWebBrowserCode#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DisplayWebBrowserCode/VB/Form1.vb#2)]  

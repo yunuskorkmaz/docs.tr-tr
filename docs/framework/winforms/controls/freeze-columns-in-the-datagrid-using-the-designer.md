@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: 437e49a1f8e5a154f1a54fc7a266579cb5f0122c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 397a2c5a7879be8c1bef7e04e72cf675f25d0fb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344318"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimindeki Sütunları Dondurma
 Kullanıcılar, Windows formlarında gösterilen verileri görüntülerken <xref:System.Windows.Forms.DataGridView> denetimi, bazen için ihtiyaç duydukları tek bir sütun veya sütun kümesi için sık bakın. Örneğin, müşteri bilgilerinin birçok sütunları içeren bir tablo görüntülediğinizde, müşteri adı dışında görünür bölgesi için diğer sütunları etkinleştirme sırasında her zaman görüntülemek için yararlı olur.  
@@ -26,11 +26,11 @@ Kullanıcılar, Windows formlarında gösterilen verileri görüntülerken <xref
   
 ### <a name="to-freeze-a-column-using-the-designer"></a>Tasarımcı kullanarak bir sütun dondurmak için  
   
-1.  Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) sağ üst köşesindeki <xref:System.Windows.Forms.DataGridView> denetlemek ve ardından **sütunları Düzenle**.  
+1. Akıllı etiket karakterini tıklayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) sağ üst köşesindeki <xref:System.Windows.Forms.DataGridView> denetlemek ve ardından **sütunları Düzenle**.  
   
-2.  Bir sütun seçin **seçili sütun** listesi.  
+2. Bir sütun seçin **seçili sütun** listesi.  
   
-3.  İçinde **sütun özellikleri** kılavuz Ayarla <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> özelliğini `true`.  
+3. İçinde **sütun özellikleri** kılavuz Ayarla <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> özelliğini `true`.  
   
     > [!NOTE]
     >  Ayrıca bir sütunu seçerek eklerken dondurmak **Frozen** kutusunda **Sütun Ekle** iletişim kutusu.  

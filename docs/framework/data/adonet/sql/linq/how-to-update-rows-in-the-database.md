@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
-ms.openlocfilehash: 84ef85b1e53d97ff468c3360af5e394a0e4ad776
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e40866c5160d6850b39133050d09026f5ffd6cc5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344188"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>Nasıl yapılır: Veritabanında Satırları Güncelleştirme
 Üye değerleri ile ilişkili nesnelerin değiştirerek bir veritabanındaki satırları güncelleştirebilirsiniz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> koleksiyonu ve ardından veritabanına değişiklikleri gönderme. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygun SQL değişikliklerinizi çevirir `UPDATE` komutları.  
@@ -24,11 +24,11 @@ ms.locfileid: "59091206"
   
 ### <a name="to-update-a-row-in-the-database"></a>Veritabanında bir satırı güncelleştirmek için  
   
-1.  Güncelleştirilecek satırın veritabanını sorgulayın.  
+1. Güncelleştirilecek satırın veritabanını sorgulayın.  
   
-2.  Ortaya çıkan üye değerleri istenen değişiklik [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne.  
+2. Ortaya çıkan üye değerleri istenen değişiklik [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne.  
   
-3.  Veritabanına değişiklikleri gönderme.  
+3. Veritabanına değişiklikleri gönderme.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, sipariş #11000 veritabanını sorgular ve ardından değerlerini değiştirir `ShipName` ve `ShipVia` ortaya çıkan içinde `Order` nesne. Son olarak, bu üye değerlerinin değişiklikleri veritabanına değişiklikleri olarak gönderilen `ShipName` ve `ShipVia` sütun.  

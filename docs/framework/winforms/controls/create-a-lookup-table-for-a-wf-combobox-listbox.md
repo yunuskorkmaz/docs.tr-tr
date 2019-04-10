@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 95b1962b83a44a99ebc466e27c732917d63dc3c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125989"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344110"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetimi için Arama Tablosu Oluşturma
 Bazen bir Windows Form üzerinde kolay bir biçimde verileri görüntüler ancak programınız için daha anlamlı bir biçimde verileri depolamak kullanışlıdır. Örneğin, bir sipariş formu Gıda için bir liste kutusunda ad olarak menü öğeleri görüntülenebilir. Ancak, siparişin kaydı veri tablosu Gıda temsil eden benzersiz kimlik numaraları içerecektir. Aşağıdaki tablolarda, depolamak ve yemek siparişi biçimli verileri görüntülemek nasıl bir örnek gösterilmektedir.  
@@ -46,13 +46,13 @@ Bazen bir Windows Form üzerinde kolay bir biçimde verileri görüntüler ancak
   
 ### <a name="to-create-a-lookup-table"></a>Arama tablosu oluşturma  
   
-1.  Ekleme bir <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, veya <xref:System.Windows.Forms.CheckedListBox> forma.  
+1. Ekleme bir <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, veya <xref:System.Windows.Forms.CheckedListBox> forma.  
   
-2.  Veri kaynağınıza bağlayın.  
+2. Veri kaynağınıza bağlayın.  
   
-3.  İki tablo arasında bir veri ilişkisi oluşturur. Bkz: [DataRelation nesnelerine giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120)).  
+3. İki tablo arasında bir veri ilişkisi oluşturur. Bkz: [DataRelation nesnelerine giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120)).  
   
-4.  Aşağıdaki özellikleri ayarlayın. Bunlar, kod veya tasarımcı ayarlanabilir.  
+4. Aşağıdaki özellikleri ayarlayın. Bunlar, kod veya tasarımcı ayarlanabilir.  
   
     |Özellik|Ayar|  
     |--------------|-------------|  
@@ -60,7 +60,7 @@ Bazen bir Windows Form üzerinde kolay bir biçimde verileri görüntüler ancak
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Denetiminde görüntülemek istediğiniz veri kaynağı tablosu içeren sütun. Önceki senaryoda budur `"Name"` (kodda ayarlamak için tırnak işaretleri kullanın).|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|Depolanan bilgiler içeren veri kaynağı tablosu içeren sütun. Önceki senaryoda budur `"ID"` (kodda ayarlamak için tırnak işaretleri kullanın).|  
   
-5.  Bir yordamda çağrı <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> yöntemi <xref:System.Windows.Forms.ControlBindingsCollection> denetimin bağlamak için sınıf <xref:System.Windows.Forms.ListControl.SelectedValue%2A> özelliğini form girişi kayıt tablosu. Ayrıca, kodda yerine tasarımcısında denetimin erişerek bunu yapabilirsiniz <xref:System.Windows.Forms.Control.DataBindings%2A> özelliğinde **özellikleri** penceresi. Önceki senaryoda budur `OrderDetailsTable`, ve sütun `"ItemID"`.  
+5. Bir yordamda çağrı <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> yöntemi <xref:System.Windows.Forms.ControlBindingsCollection> denetimin bağlamak için sınıf <xref:System.Windows.Forms.ListControl.SelectedValue%2A> özelliğini form girişi kayıt tablosu. Ayrıca, kodda yerine tasarımcısında denetimin erişerek bunu yapabilirsiniz <xref:System.Windows.Forms.Control.DataBindings%2A> özelliğinde **özellikleri** penceresi. Önceki senaryoda budur `OrderDetailsTable`, ve sütun `"ItemID"`.  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  

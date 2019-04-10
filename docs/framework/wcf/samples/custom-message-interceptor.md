@@ -2,12 +2,12 @@
 title: Özel İleti Kesici
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: c756b9947b48fbf7cd902bf570c6d29f52fdaad6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d585e60c9b31e56873b0501425f55541bd647e02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181421"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344279"
 ---
 # <a name="custom-message-interceptor"></a>Özel İleti Kesici
 Bu örnek, kanal genişletilebilirlik modeli kullanımını gösterir. Özellikle, kanal fabrikaları ve tüm gelen ve giden iletileri çalışma zamanı yığını olarak belirli bir noktada ele alınması için kanal dinleyicileri oluşturan özel bağlama öğesinin uygulanması gösterilmektedir. Örnek, bir istemci ve sunucu bu özel fabrikaları kullanımını gösteren de içerir.  
@@ -28,13 +28,13 @@ Bu örnek, kanal genişletilebilirlik modeli kullanımını gösterir. Özellikl
   
  Örnek kanal çerçevesi kullanarak ve WCF en iyi uygulamaları izleyerek Windows Communication Foundation (WCF) özel katmanlı bir kanal oluşturmak için önerilen yordamı açıklar. Özel bir katmanlı kanal oluşturmak için adımlar aşağıdaki gibidir:  
   
-1.  Kanal şekillerinin kanal fabrikası ve kanal dinleyicisi destekleyecek karar verebilirsiniz.  
+1. Kanal şekillerinin kanal fabrikası ve kanal dinleyicisi destekleyecek karar verebilirsiniz.  
   
-2.  Kanal fabrikası ve kanal şekillerinizi destekleyen bir kanal dinleyicisi oluşturun.  
+2. Kanal fabrikası ve kanal şekillerinizi destekleyen bir kanal dinleyicisi oluşturun.  
   
-3.  Bir kanal yığınına özel katmanlı kanal ekleyen bir bağlama öğesi ekleyin.  
+3. Bir kanal yığınına özel katmanlı kanal ekleyen bir bağlama öğesi ekleyin.  
   
-4.  Yeni bağlama öğesi yapılandırma sistemi için kullanıma sunmak için bir bağlama öğesi uzantısı bölümü ekleyin.  
+4. Yeni bağlama öğesi yapılandırma sistemi için kullanıma sunmak için bir bağlama öğesi uzantısı bölümü ekleyin.  
   
 ## <a name="channel-shapes"></a>Kanal şekiller  
  Özel bir katmanlı kanal yazarken ilk adım, hangi şekiller kanal için gerekli olduğuna karar sağlamaktır. Aşağıda bize katmanı destekleyen herhangi bir şekil destekliyoruz bizim ileti denetçisi için (örneğin, aşağıda bize katman oluşturabilirsiniz, <xref:System.ServiceModel.Channels.IOutputChannel> ve <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, sonra da kullanıma sunuyoruz <xref:System.ServiceModel.Channels.IOutputChannel> ve <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
@@ -147,16 +147,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aşağıdaki komutu kullanarak 4.0.  
+1. Yükleme [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aşağıdaki komutu kullanarak 4.0.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Client.exe çalıştırın ve her iki konsol penceresi çıktısı için izleme Service.exe çalıştırın.  
+5. Client.exe çalıştırın ve her iki konsol penceresi çıktısı için izleme Service.exe çalıştırın.  
