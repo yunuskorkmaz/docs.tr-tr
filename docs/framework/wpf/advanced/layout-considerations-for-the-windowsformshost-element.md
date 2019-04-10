@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168993"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327860"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost Öğesi için Düzen Konusunda Dikkat Edilmesi Gereken Noktalar
 Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi etkileşim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] düzen sistemi.  
@@ -84,13 +84,13 @@ Bu konu açıklar nasıl <xref:System.Windows.Forms.Integration.WindowsFormsHost
 ### <a name="sizing-algorithm"></a>Boyutlandırma algoritması  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesini denetimden boyutlandırmak için aşağıdaki yordamı kullanır:  
   
-1.  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesini geçersiz kılar <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemleri.  
+1. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Öğesini geçersiz kılar <xref:System.Windows.FrameworkElement.MeasureOverride%2A> ve <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> yöntemleri.  
   
-2.  Barındırılan denetimin boyutunu belirlemek için <xref:System.Windows.FrameworkElement.MeasureOverride%2A> yöntemini çağırır barındırılan denetimin <xref:System.Windows.Forms.Control.GetPreferredSize%2A> kısıtlamasına sahip yöntemi çevrilmiş geçirilen kısıtlaması gelen <xref:System.Windows.FrameworkElement.MeasureOverride%2A> yöntemi.  
+2. Barındırılan denetimin boyutunu belirlemek için <xref:System.Windows.FrameworkElement.MeasureOverride%2A> yöntemini çağırır barındırılan denetimin <xref:System.Windows.Forms.Control.GetPreferredSize%2A> kısıtlamasına sahip yöntemi çevrilmiş geçirilen kısıtlaması gelen <xref:System.Windows.FrameworkElement.MeasureOverride%2A> yöntemi.  
   
-3.  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Yöntem çalışır denetimden verilen boyuta kısıtlama olarak ayarlanacak.  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Yöntem çalışır denetimden verilen boyuta kısıtlama olarak ayarlanacak.  
   
-4.  Varsa barındırılan denetimin <xref:System.Windows.Forms.Control.Size%2A> özelliği eşleşen belirtilen sınırlama, barındırılan denetim kısıtlaması için boyutlandırılır.  
+4. Varsa barındırılan denetimin <xref:System.Windows.Forms.Control.Size%2A> özelliği eşleşen belirtilen sınırlama, barındırılan denetim kısıtlaması için boyutlandırılır.  
   
  Varsa <xref:System.Windows.Forms.Control.Size%2A> özellik belirtilen sınırlama eşleşmiyor, barındırılan denetim sürekli boyutlandırma desteklemez. Örneğin, <xref:System.Windows.Forms.MonthCalendar> denetimi yalnızca ayrık boyutları sağlar. Bu denetim için izin verilen boyutları (ay sayısını temsil eden) tamsayılar, yükseklik ve genişlik için oluşur. Bu gibi durumlarda <xref:System.Windows.Forms.Integration.WindowsFormsHost> öğesi aşağıdaki gibi davranır:  
   

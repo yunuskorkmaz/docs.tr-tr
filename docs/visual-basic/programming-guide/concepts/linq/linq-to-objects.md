@@ -2,12 +2,12 @@
 title: LINQ to Objects'in (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: dd4c30bc-1c9b-4781-a482-b5eada38deb2
-ms.openlocfilehash: 87c804a831272b2a0c08ac85a552fec86d665e7f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c1e2e8fbaaf984fec69322a459fc7c55890965ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185473"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326885"
 ---
 # <a name="linq-to-objects-visual-basic"></a>LINQ to Objects'in (Visual Basic)
 Tüm sorgular "LINQ için nesneler" LINQ kullanımı ifade eder <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601> koleksiyon Ara LINQ sağlayıcısı veya API gibi kullanmadan, doğrudan [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) veya [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md). LINQ gibi herhangi bir sıralanabilir koleksiyonu sorgulamak için kullanabileceğiniz <xref:System.Collections.Generic.List%601>, <xref:System.Array>, veya <xref:System.Collections.Generic.Dictionary%602>. Koleksiyon veya bir .NET Framework API tarafından döndürülen kullanıcı tanımlı olabilir.  
@@ -16,11 +16,11 @@ Tüm sorgular "LINQ için nesneler" LINQ kullanımı ifade eder <xref:System.Col
   
  Ayrıca, LINQ sorguları üç ana avantajları geleneksel teklif `For Each` döngüleri:  
   
-1.  Özellikle birden çok koşulu filtrelerken daha kısa süren ve okunabilir, değildirler.  
+1. Özellikle birden çok koşulu filtrelerken daha kısa süren ve okunabilir, değildirler.  
   
-2.  Güçlü filtreleme, sıralama ve Gruplama yetenekler uygulama kodu en az sağlarlar.  
+2. Güçlü filtreleme, sıralama ve Gruplama yetenekler uygulama kodu en az sağlarlar.  
   
-3.  Bunlar çok az kayıpla veya hiç değişiklik diğer veri kaynaklarıyla için unity'nin.  
+3. Bunlar çok az kayıpla veya hiç değişiklik diğer veri kaynaklarıyla için unity'nin.  
   
  Genel olarak, daha karmaşık fark geleneksel yineleme teknikleri yerine LINQ kullanarak daha fazla avantaj, verilerle ilgili gerçekleştirmek istediğiniz işlem.  
   

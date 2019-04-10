@@ -2,12 +2,12 @@
 title: Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 76cf2c7ec7edbfaaa186b45f4b810c7d4c0b1d47
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825189"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326716"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation Örnekleri için Bir Kerelik Kurulum Prosedürü
 Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Services (IIS) barındırılan ve genel sanal dizinden çalıştırın. Bu tek seferlik Kurulum yordamı diskte bir klasörü oluşturur; Ayrıca IIS adlı bir sanal dizin ekler **ServiceModelSamples**.
@@ -19,13 +19,13 @@ Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Se
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF örnekleri için bir kerelik Kurulum yordamı  
   
-1.  Emin [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ayarlanır. Nasıl ayarlandığı hakkında daha fazla bilgi için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], bkz: [Internet Information Service barındırma yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1. Emin [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ayarlanır. Nasıl ayarlandığı hakkında daha fazla bilgi için [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], bkz: [Internet Information Service barındırma yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
-2.  Emin [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] yüklenir. Arama aşağıdaki v4.0 dizinini (veya üzeri): **\Windows\Microsoft.NET\Framework**  
+2. Emin [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] yüklenir. Arama aşağıdaki v4.0 dizinini (veya üzeri): **\Windows\Microsoft.NET\Framework**  
   
-3.  Visual Studio 2012 yüklü değil ve işletim sisteminizi Windows Server 2008 SP2 değil ya da daha sonra yükleme [düzeltme 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
+3. Visual Studio 2012 yüklü değil ve işletim sisteminizi Windows Server 2008 SP2 değil ya da daha sonra yükleme [düzeltme 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Aşağıdaki komutları çalıştırın. Bu komutlar neden çalıştırılmalıdır hakkında daha fazla bilgi için bkz. [IIS barındırılan hizmet başarısız](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
+4. Aşağıdaki komutları çalıştırın. Bu komutlar neden çalıştırılmalıdır hakkında daha fazla bilgi için bkz. [IIS barındırılan hizmet başarısız](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
   
     > [!WARNING]
     >  IIS yeniden yüklenirse, aşağıdaki komutları yeniden çalıştırılması gerekir.
@@ -38,13 +38,13 @@ Windows Communication Foundation (WCF) örnekleri çoğu Internet Information Se
     > [!WARNING]
     >  Komutu çalıştırmadan `aspnet_regiis –i –enable` varsayılan uygulama havuzunu kullanarak çalışma hale getirecek [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], aynı bilgisayarda diğer uygulamalar için uyumsuzluk sorunlarını oluşturabilir.  
   
-5.  İzleyin [güvenlik duvarı yönergeleri](../../../../docs/framework/wcf/samples/firewall-instructions.md) örnekleri tarafından kullanılan bağlantı noktaları etkinleştirmek için.  
+5. İzleyin [güvenlik duvarı yönergeleri](../../../../docs/framework/wcf/samples/firewall-instructions.md) örnekleri tarafından kullanılan bağlantı noktaları etkinleştirmek için.  
   
-6.  Aşağıdaki varsayılan dizini kontrol edin: \<Installdrive >:**\WF_WCF_Samples**. Bu, örneklerin daha önce yüklenmişse, varsayılan dizindir.  
+6. Aşağıdaki varsayılan dizini kontrol edin: \<Installdrive >:**\WF_WCF_Samples**. Bu, örneklerin daha önce yüklenmişse, varsayılan dizindir.  
   
-7.  Örnekleri indirme konumundan için bunları yüklemeniz örnekleri yüklü değilse [Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939) veya [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
+7. Örnekleri indirme konumundan için bunları yüklemeniz örnekleri yüklü değilse [Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939) veya [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
   
-8.  Örnekleri yükledikten sonra şu adrese gidin: \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
+8. Örnekleri yükledikten sonra şu adrese gidin: \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. Çalıştırma **Setupvroot.bat** toplu iş dosyası. Aşağıdaki adımları gerçekleştirilir:  
   

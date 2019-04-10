@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099865"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326872"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Nasıl yapılır: Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme
 Yazdırma sıralarını her zaman günde 24 saat kullanılabilir değil. Günün belirli zamanlarında kullanılamaz duruma getirmek için ayarlanabilir başlangıç ve bitiş zamanı özellikleri sahiptirler. Bu özellik, örneğin, belirli bir bölüm 17: 00 sonra özel kullanım için bir yazıcı ayırmak için kullanılabilir. Bu bölüm Kullan yazıcı diğer departmanlardan bakım farklı bir sıra yoktur. Sıra diğer bölümler için 17: 00 sonra kullanılamaz olarak ayarlanması, ayrıcalıklı bölümün sırası olarak ayarlanması sırada her kullanılabilir zaman.  
@@ -29,9 +29,9 @@ Yazdırma sıralarını her zaman günde 24 saat kullanılabilir değil. Günün
   
  Aşağıdaki şekilde bu tür bir işlev için iki ana adım vardır.  
   
-1.  Okuma <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> ve <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> özelliklerini <xref:System.Printing.PrintQueue> geçerli saati bunlar arasında olup olmadığını belirlemek için.  
+1. Okuma <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> ve <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> özelliklerini <xref:System.Printing.PrintQueue> geçerli saati bunlar arasında olup olmadığını belirlemek için.  
   
-2.  Okuma <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> ve <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> özelliklerini <xref:System.Printing.PrintSystemJobInfo> geçerli saati bunlar arasında olup olmadığını belirlemek için.  
+2. Okuma <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> ve <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> özelliklerini <xref:System.Printing.PrintSystemJobInfo> geçerli saati bunlar arasında olup olmadığını belirlemek için.  
   
  Ancak zorluklar bu özellikleri olmayan zorluk ortaya çıkan <xref:System.DateTime> nesneleri. Bunun yerine oldukları <xref:System.Int32> gece yarısından itibaren dakika sayısı arttıkça günün saatini express nesneleri. Ayrıca, bu gece yarısı geçerli saat dilimi ancak gece yarısı UTC (Eşgüdümlü Evrensel Saat) değil.  
   

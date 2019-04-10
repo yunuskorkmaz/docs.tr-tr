@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f52b34e6fb99b52e5775482dec3c59ed6738b31
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920564"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327873"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework'ü yükleme
 
@@ -107,7 +107,7 @@ Yeniden dağıtılabilir yükleyici iki türü kullanılabilir:
 
 Hem web hem de çevrimdışı yükleyiciler x86 ve x64 tabanlı bilgisayarlar için tasarlanmıştır (bkz [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md)), ancak İtanyum tabanlı bilgisayarları desteklemez.
 
-1.  Yüklemek istediğiniz .NET Framework sürümü için indirme sayfayı açın:
+1. Yüklemek istediğiniz .NET Framework sürümü için indirme sayfayı açın:
 
     - .NET framework 4.7.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=863262) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -163,7 +163,7 @@ Dil paketleri, desteklenen diller için yerelleştirilmiş kaynaklar (örneğin,
 > [!IMPORTANT]
 > Dil paketlerini, dil paketi yüklemeden önce web veya çevrimdışı yükleyiciyi çalıştırmanız gerekir böylece bir uygulamayı çalıştırmak için gerekli olan .NET Framework bileşenlerini içermezler. Bir dil paketi yüklediyseniz, bunu kaldırın, .NET Framework'ü yüklemek ve dil paketini yeniden yükleyin.
 
-1.  Yüklediğiniz .NET Framework sürümü için dil paketi indirme sayfasını açın:
+1. Yüklediğiniz .NET Framework sürümü için dil paketi indirme sayfasını açın:
 
     - [.NET framework 4.7.2 dil paketleri](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -183,9 +183,9 @@ Dil paketleri, desteklenen diller için yerelleştirilmiş kaynaklar (örneğin,
 
     - [.NET framework 4.5 dil paketleri](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
-2.  Dil listesinde, indirmek istediğiniz dili seçin ve sayfanın bu dilde yeniden yüklenmesi için birkaç saniye bekleyin.
+2. Dil listesinde, indirmek istediğiniz dili seçin ve sayfanın bu dilde yeniden yüklenmesi için birkaç saniye bekleyin.
 
-3.  Seçin **indirme**.
+3. Seçin **indirme**.
 
 Aşağıdaki tabloda desteklenen diller listelenmiştir.
 

@@ -2,12 +2,12 @@
 title: İzlenecek Yollarla Öğrenme
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189013"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329316"
 ---
 # <a name="learning-by-walkthroughs"></a>İzlenecek Yollarla Öğrenme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Belgeler birkaç izlenecek yollar sağlar. Bu konu (sorun giderme dahil) bazı genel kılavuz sorunları ele alır ve hakkında bilgi almak için birkaç adım izlenecek yollar için bağlantılar sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -53,13 +53,13 @@ ms.locfileid: "59189013"
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>Doğrulamak veya değiştirmek için veritabanı oturum açın  
   
-1.  Windows üzerinde **Başlat** menüsünde **tüm programlar**, **Microsoft SQL Server 2005**, işaret **yapılandırma araçları**ve ardından **SQL Server Yapılandırma Yöneticisi**.  
+1. Windows üzerinde **Başlat** menüsünde **tüm programlar**, **Microsoft SQL Server 2005**, işaret **yapılandırma araçları**ve ardından **SQL Server Yapılandırma Yöneticisi**.  
   
-2.  Sol bölmesinde **SQL Server Configuration Manager**, tıklayın **SQL Server 2005 Services**.  
+2. Sol bölmesinde **SQL Server Configuration Manager**, tıklayın **SQL Server 2005 Services**.  
   
-3.  Sağ bölmede, sağ **SQL Server (SQLEXPRESS)** ve ardından **özellikleri**.  
+3. Sağ bölmede, sağ **SQL Server (SQLEXPRESS)** ve ardından **özellikleri**.  
   
-4.  Tıklayın **oturum açma** sekme ve nasıl sunucuda oturum çalıştığınız doğrulayın.  
+4. Tıklayın **oturum açma** sekme ve nasıl sunucuda oturum çalıştığınız doğrulayın.  
   
      Çoğu durumda **yerel sistem** çalışır.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "59189013"
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>Adlandırılmış Kanallar Protokolü etkinleştirmek için  
   
-1.  Sol bölmesinde **SQL Server Configuration Manager**, genişletme **SQL Server 2005 ağ yapılandırması**ve ardından **SQLEXPRESS protokolleri**.  
+1. Sol bölmesinde **SQL Server Configuration Manager**, genişletme **SQL Server 2005 ağ yapılandırması**ve ardından **SQLEXPRESS protokolleri**.  
   
-2.  Sağ bölmede emin **adlandırılmış kanallar** protokolünün. Yüklü değilse, sağ **Adlandırılmış kanalları** ve ardından **etkinleştirme**.  
+2. Sağ bölmede emin **adlandırılmış kanallar** protokolünün. Yüklü değilse, sağ **Adlandırılmış kanalları** ve ardından **etkinleştirme**.  
   
      Durdurmanız ve hizmeti yeniden başlatmanız gerekir. Sonraki adımları izleyin.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "59189013"
   
 ##### <a name="to-stop-and-restart-the-service"></a>Hizmetini durdurup yeniden başlatmak için  
   
-1.  Sol bölmesinde **SQL Server Configuration Manager**, tıklayın **SQL Server 2005 Services**.  
+1. Sol bölmesinde **SQL Server Configuration Manager**, tıklayın **SQL Server 2005 Services**.  
   
-2.  Sağ bölmede, sağ **SQL Server (SQLEXPRESS)** ve ardından **Durdur**.  
+2. Sağ bölmede, sağ **SQL Server (SQLEXPRESS)** ve ardından **Durdur**.  
   
-3.  Sağ **SQL Server (SQLEXPRESS)** ve ardından **yeniden**.  
+3. Sağ **SQL Server (SQLEXPRESS)** ve ardından **yeniden**.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

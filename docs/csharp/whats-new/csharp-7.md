@@ -3,21 +3,21 @@ title: C# 7.0 - C# Kılavuzu yenilikler nelerdir?
 description: Yeni özelliklere genel bakış sürümünü 7.0 almak C# dili.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 81d06d2e2079e04948ad5e93eefadb1bc11d855a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 8cf9994f74781584b3d7500c09656d4798af32ca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654191"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326547"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 yenilikleri
 
 C# 7.0 C# dili için yeni özellikler ekler:
-* [`out` Değişkenleri](#out-variables)
+* [`out` değişkenler](#out-variables)
     - Bildirebilirsiniz `out` kullanıldıkları yöntemi için bağımsız değişkeni olarak satır içi değerleri.
 * [Demetler](#tuples)
     - Birden çok ortak alanları içeren basit, adsız türleri oluşturabilirsiniz. Bu tür semantikleri, derleyiciler ve Araçlar IDE anlayın.
-* [Atılanlar](#discards)
+* [Atar](#discards)
     - İptali atanan değer hakkında umursamaz atamalarını kullanılan geçici, salt yazılır değişkenlerdir. Diziler ve kullanıcı tanımlı türler Ayrıştırma sırasında yanı sıra ile yöntemleri çağrılırken en yararlı oldukları `out` parametreleri.
 * [Desen Eşleştirme](#pattern-matching)
     - Rastgele türler ve bu türlerin üyelerinin değerlerini göre dallanma mantığı oluşturabilirsiniz.
@@ -27,7 +27,7 @@ C# 7.0 C# dili için yeni özellikler ekler:
     - İşlevler, kapsam ve görünürlük sınırlamak için diğer işlevler içinde iç içe yerleştirebilirsiniz.
 * [Daha fazla ifade gövdeli üyeler](#more-expression-bodied-members)
     - İfadeleri kullanarak yazılabilir üye listesini geldi.
-* [`throw` İfadeleri](#throw-expressions)
+* [`throw` İfadeler](#throw-expressions)
     - Daha önce olduğundan izin vermediği kod yapıları özel durumlar oluşturabilecek `throw` bir ifadesi. 
 * [Genelleştirilmiş bir zaman uyumsuz dönüş türleri](#generalized-async-return-types)
     - Yöntemleri ile bildirilmiş `async` değiştiricisi, ek olarak diğer türleri döndürebilir `Task` ve `Task<T>`.
@@ -170,7 +170,7 @@ Bu özelliği kullanın ve başka bir yerde tanımlanan değişkenleri başvurul
 
 Dönüş değeri olarak bildirdiğiniz bir `ref` ve matris değeri aşağıdaki kodda gösterildiği gibi değiştirin:
 
-[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/program.cs#AssignRefReturn "Assign ref return")]
+[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/Program.cs#AssignRefReturn "Assign ref return")]
 
 C# Dil kötüye kullanmasının korunmasına çeşitli kurallara sahip `ref` yerel değerleri ve Dönüşleri:
 
@@ -191,7 +191,7 @@ Ekleme `ref` için dönüş değeri bir [kaynağı uyumlu değişiklik](version-
 
 Daha fazla bilgi için [ref anahtar sözcüğü](../language-reference/keywords/ref.md) makalesi.
 
-## <a name="local-functions"></a>Yerel İşlevler
+## <a name="local-functions"></a>Yerel işlevler
 
 Sınıflar için birçok tasarım tek bir konumdan Aranan yöntemleri kapsar. Bu ek özel yöntemleri her yöntem, küçük ve odaklı tutun. *Yerel işlevler* , başka bir yöntem bağlamı içinde yöntemleri bildirmek etkinleştirin. Yerel işlevler çalıştığı bağlamı olduğu bildirilen yerel yöntemi yalnızca çağrılır, görmek için sınıf okuyucular için kolaylaştırır.
 

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Meta Verileri Almak için MetadataExchangeClient Kullanma'
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168629"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327886"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Nasıl yapılır: Meta Verileri Almak için MetadataExchangeClient Kullanma
 Kullanım <xref:System.ServiceModel.Description.MetadataExchangeClient> sınıfı WS-MetadataExchange (MEX) protokolünü kullanarak meta verileri indirilemedi. Alınan meta veri dosyaları olarak döndürülen bir <xref:System.ServiceModel.Description.MetadataSet> nesne. Döndürülen <xref:System.ServiceModel.Description.MetadataSet> nesneyi içeren koleksiyonu <xref:System.ServiceModel.Description.MetadataSection> nesneleri, her birinin içerdiği belirli meta veriler diyalekti ve bir tanımlayıcı. Döndürülen meta verilere dosyalara yazmak veya döndürülen meta verilere Web Hizmetleri Açıklama Dili (WSDL) belgeleri içeriyorsa, meta verileri kullanarak içeri aktarabilirsiniz <xref:System.ServiceModel.Description.WsdlImporter>.  
@@ -21,11 +21,11 @@ Kullanım <xref:System.ServiceModel.Description.MetadataExchangeClient> sınıf�
   
 ### <a name="to-use-metadataexchangeclient-to-obtain-metadata"></a>Meta verileri almak için MetadataExchangeClient kullanılacak  
   
-1.  Yeni bir <xref:System.ServiceModel.Description.MetadataExchangeClient> bağlama, bir uç nokta Yapılandırması adı veya meta veri adresini açıkça belirterek nesne.  
+1. Yeni bir <xref:System.ServiceModel.Description.MetadataExchangeClient> bağlama, bir uç nokta Yapılandırması adı veya meta veri adresini açıkça belirterek nesne.  
   
-2.  Yapılandırma <xref:System.ServiceModel.Description.MetadataExchangeClient> gereksinimlerinize uyacak şekilde. Örneğin, meta veriler bulunurken kullanmak, nasıl meta veri başvurularının çözümlenen ayarlayın ve denetlemek için kimlik bilgilerini belirtebilirsiniz <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> ne kadar zaman aşımına uğramadan önce döndürmek meta veri isteği olduğunu denetleme özelliği.  
+2. Yapılandırma <xref:System.ServiceModel.Description.MetadataExchangeClient> gereksinimlerinize uyacak şekilde. Örneğin, meta veriler bulunurken kullanmak, nasıl meta veri başvurularının çözümlenen ayarlayın ve denetlemek için kimlik bilgilerini belirtebilirsiniz <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> ne kadar zaman aşımına uğramadan önce döndürmek meta veri isteği olduğunu denetleme özelliği.  
   
-3.  Elde <xref:System.ServiceModel.Description.MetadataSet> birini çağırma alınan meta veriler içeren nesne <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> yöntemleri. Yalnızca kullanabileceğinizi unutmayın <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> açıkça bir adresi oluştururken belirttiyseniz bağımsız değişkeni alan aşırı yüklemesini <xref:System.ServiceModel.Description.MetadataExchangeClient>.  
+3. Elde <xref:System.ServiceModel.Description.MetadataSet> birini çağırma alınan meta veriler içeren nesne <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> yöntemleri. Yalnızca kullanabileceğinizi unutmayın <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> açıkça bir adresi oluştururken belirttiyseniz bağımsız değişkeni alan aşırı yüklemesini <xref:System.ServiceModel.Description.MetadataExchangeClient>.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki kod örneği kullanma işlemini gösterir <xref:System.ServiceModel.Description.MetadataExchangeClient> indirip meta veri dosyaları numaralandırma.  

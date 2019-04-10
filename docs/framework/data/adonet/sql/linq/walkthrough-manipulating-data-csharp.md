@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: Verileri Düzenleme (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 2a4b9fc5bf9afcace373a3f09b246e2bffd49e3d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5418bdbdeee162bbc8c0abcb11fd39f2cc82ce73
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330785"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>İzlenecek yol: Verileri Düzenleme (C#)
 Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] senaryo ekleme, değiştirme ve bir veritabanındaki verileri siliniyor. Örnek Northwind veritabanının bir kopyasını bir müşteri eklemek, bir müşterinin adını değiştirin ve sipariş silmek için kullanın.  
@@ -53,30 +53,30 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Bir LINQ to SQL çözümü oluşturmak için  
   
-1.  Visual Studio'da **dosya** menüsünde **yeni**ve ardından **proje**.  
+1. Visual Studio'da **dosya** menüsünde **yeni**ve ardından **proje**.  
   
-2.  İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklayın **Visual C#** .  
+2. İçinde **proje türleri** bölmesinde **yeni proje** iletişim kutusu, tıklayın **Visual C#** .  
   
-3.  İçinde **şablonları** bölmesinde tıklayın **konsol uygulaması**.  
+3. İçinde **şablonları** bölmesinde tıklayın **konsol uygulaması**.  
   
-4.  İçinde **adı** kutusuna **LinqDataManipulationApp**.  
+4. İçinde **adı** kutusuna **LinqDataManipulationApp**.  
   
-5.  İçinde **konumu** kutusunda, proje dosyalarını depolamak istediğiniz doğrulayın.  
+5. İçinde **konumu** kutusunda, proje dosyalarını depolamak istediğiniz doğrulayın.  
   
-6.  **Tamam**'ı tıklatın.  
+6. **Tamam**'ı tıklatın.  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ başvuruları ve yönergeleri ekleme  
  Bu izlenecek yol, projenizdeki varsayılan olarak yüklü olmayabilir derlemeleri kullanır. Projenize bir başvuru olarak System.Data.Linq listede yoksa, aşağıdaki adımlarda açıklandığı gibi ekleyin:  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq eklemek için  
   
-1.  İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.  
+1. İçinde **Çözüm Gezgini**, sağ **başvuruları**ve ardından **Başvuru Ekle**.  
   
-2.  İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.  
+2. İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET**System.Data.Linq derleme tıklayın ve ardından **Tamam**.  
   
      Derleme, projeye eklenir.  
   
-3.  Aşağıdaki yönergeler, Program.cs dosyasının en üstüne ekleyin:  
+3. Aşağıdaki yönergeler, Program.cs dosyasının en üstüne ekleyin:  
   
      [!code-csharp[DLinqWalk3CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#1)]  
   
@@ -85,9 +85,9 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Northwind kod dosyası projeye eklemek için  
   
-1.  Üzerinde **proje** menüsünde tıklatın **varolan öğeyi Ekle**.  
+1. Üzerinde **proje** menüsünde tıklatın **varolan öğeyi Ekle**.  
   
-2.  İçinde **varolan öğeyi Ekle** iletişim kutusu için c:\linqtest6\northwind.cs gidin ve ardından **Ekle**.  
+2. İçinde **varolan öğeyi Ekle** iletişim kutusu için c:\linqtest6\northwind.cs gidin ve ardından **Ekle**.  
   
      Northwind.cs dosya projeye eklenir.  
   
@@ -96,11 +96,11 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>Veritabanı bağlantısını test etmek ve ayarlamak için  
   
-1.  İçine aşağıdaki kodu yazın veya yapıştırın `Main` Program sınıfına yöntemi:  
+1. İçine aşağıdaki kodu yazın veya yapıştırın `Main` Program sınıfına yöntemi:  
   
      [!code-csharp[DLinqWalk3CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#2)]  
   
-2.  Bu noktada uygulamayı test etmek için F5 tuşuna basın.  
+2. Bu noktada uygulamayı test etmek için F5 tuşuna basın.  
   
      A **konsol** penceresi açılır.  
   
@@ -113,13 +113,13 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-add-a-new-customer-entity-object"></a>Yeni bir müşteri varlığı nesne eklemek için  
   
-1.  Yeni bir `Customer` önce aşağıdaki kodu ekleyerek `Console.ReadLine();` içinde `Main` yöntemi:  
+1. Yeni bir `Customer` önce aşağıdaki kodu ekleyerek `Console.ReadLine();` içinde `Main` yöntemi:  
   
      [!code-csharp[DLinqWalk3CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#3)]  
   
-2.  Çözüm hata ayıklamak için F5 tuşuna basın.  
+2. Çözüm hata ayıklamak için F5 tuşuna basın.  
   
-3.  Enter tuşuna basarak **konsol** penceresi hata ayıklamayı durdurmak ve gözden geçirme devam etmek için.  
+3. Enter tuşuna basarak **konsol** penceresi hata ayıklamayı durdurmak ve gözden geçirme devam etmek için.  
   
 ## <a name="updating-an-entity"></a>Bir varlığı güncelleştirmek  
  Aşağıdaki adımlarda, alacak bir `Customer` nesne ve onun özelliklerden birini değiştirin.  
@@ -146,17 +146,17 @@ Bu izlenecek yol sağlayan bir temel için uçtan uca [!INCLUDE[vbtecdlinq](../.
   
 #### <a name="to-submit-changes-to-the-database"></a>Değişiklikleri veritabanına göndermek için  
   
-1.  Aşağıdaki kod hemen üstüne INSERT `Console.ReadLine`:  
+1. Aşağıdaki kod hemen üstüne INSERT `Console.ReadLine`:  
   
      [!code-csharp[DLinqWalk3CS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#6)]  
   
-2.  Aşağıdaki kodu ekleyin (sonra `SubmitChanges`) göstermek için önce ve etkileri değişiklikleri gönderdikten sonra:  
+2. Aşağıdaki kodu ekleyin (sonra `SubmitChanges`) göstermek için önce ve etkileri değişiklikleri gönderdikten sonra:  
   
      [!code-csharp[DLinqWalk3CS#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#7)]  
   
-3.  Çözüm hata ayıklamak için F5 tuşuna basın.  
+3. Çözüm hata ayıklamak için F5 tuşuna basın.  
   
-4.  Enter tuşuna basarak **konsol** uygulamayı kapatmak için penceresi.  
+4. Enter tuşuna basarak **konsol** uygulamayı kapatmak için penceresi.  
   
 > [!NOTE]
 >  Değişiklikleri göndererek yeni müşteri ekledikten sonra bu çözüm yürütülemez olduğu gibi yeniden. Çözümü yeniden çalıştırmak için Müşteri Kimliği ve müşteri eklenecek adını değiştirin.  

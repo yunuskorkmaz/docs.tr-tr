@@ -2,12 +2,12 @@
 title: LINQ to Objects'in (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 19dd15fdd7e818e0619647205f2369a55f3bc2b0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: b82d21a7de4f596afb5e41487221498dd5ca9f98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528545"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326638"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects'in (C#)
 Tüm sorgular "LINQ için nesneler" LINQ kullanımı ifade eder <xref:System.Collections.IEnumerable> veya <xref:System.Collections.Generic.IEnumerable%601> koleksiyon Ara LINQ sağlayıcısı veya API gibi kullanmadan, doğrudan [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) veya [LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md). LINQ gibi herhangi bir sıralanabilir koleksiyonu sorgulamak için kullanabileceğiniz <xref:System.Collections.Generic.List%601>, <xref:System.Array>, veya <xref:System.Collections.Generic.Dictionary%602>. Koleksiyon veya bir .NET Framework API tarafından döndürülen kullanıcı tanımlı olabilir.  
@@ -16,11 +16,11 @@ Tüm sorgular "LINQ için nesneler" LINQ kullanımı ifade eder <xref:System.Col
   
  Ayrıca, LINQ sorguları üç ana avantajları geleneksel teklif `foreach` döngüleri:  
   
-1.  Özellikle birden çok koşulu filtrelerken daha kısa süren ve okunabilir, değildirler.  
+1. Özellikle birden çok koşulu filtrelerken daha kısa süren ve okunabilir, değildirler.  
   
-2.  Güçlü filtreleme, sıralama ve Gruplama yetenekler uygulama kodu en az sağlarlar.  
+2. Güçlü filtreleme, sıralama ve Gruplama yetenekler uygulama kodu en az sağlarlar.  
   
-3.  Bunlar çok az kayıpla veya hiç değişiklik diğer veri kaynaklarıyla için unity'nin.  
+3. Bunlar çok az kayıpla veya hiç değişiklik diğer veri kaynaklarıyla için unity'nin.  
   
  Genel olarak, daha karmaşık fark geleneksel yineleme teknikleri yerine LINQ kullanarak daha fazla avantaj, verilerle ilgili gerçekleştirmek istediğiniz işlem.  
   
@@ -36,10 +36,10 @@ Tüm sorgular "LINQ için nesneler" LINQ kullanımı ifade eder <xref:System.Col
  [LINQ ve dosya dizinleri (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  Dosya sistemleri ile etkileşimde bulunmak için LINQ'ın nasıl kullanılabileceğini açıklar. Ayrıca bu kavramları göstermeye konulara bağlantılar içerir.  
   
- [Nasıl yapılır: LINQ (C#) ile ArrayList sorgulama](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ [Nasıl yapılır: LINQ ile ArrayList sorgulama (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
  C# ArrayList sorgulama işlemi gösterilmektedir.  
   
- [Nasıl yapılır: özel yöntemler LINQ sorguları için (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [Nasıl yapılır: LINQ sorguları için özel yöntemler ekleme (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  İçin genişletme yöntemleri ekleyerek LINQ sorguları için kullanabileceğiniz yöntemler kümesi genişletmek açıklanmaktadır <xref:System.Collections.Generic.IEnumerable%601> arabirimi.  
   
  [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  

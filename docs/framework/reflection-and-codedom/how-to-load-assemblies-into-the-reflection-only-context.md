@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f61640687447550ee853e0c233c2dfc615ba3c9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8dc05d27b0316c82c5314a766fcad929dc5f3698
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331058"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme
 Yalnızca yansıma yükleme bağlamı, diğer platformlar için veya .NET Framework'ün diğer sürümleri için derlenmiş derlemeleri incelemenize olanak tanır. Bu bağlamı yüklenen kodunu yalnızca incelenebilir; yürütülemez. Oluşturucular yürütülemiyor çünkü bu nesneler oluşturulamayacağını, anlamına gelir. Kod olarak yürütülemiyor çünkü bağımlılıkları otomatik olarak yüklenmez. Bunları incelemeniz gerekiyorsa, bunları kendiniz yüklemelisiniz.  
   
 ### <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>Yük salt yansıma bağlamına bir derlemeyi yüklemek için  
   
-1.  Kullanım <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> görünen adı, verilen derlemeyi yüklemek için yöntem aşırı yüklemesini veya <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yolu verilen derlemeyi yüklemek için yöntemi. Derleme ikili bir görüntüsüdür kullanırsanız <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29> yöntemi aşırı yüklemesi.  
+1. Kullanım <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> görünen adı, verilen derlemeyi yüklemek için yöntem aşırı yüklemesini veya <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yolu verilen derlemeyi yüklemek için yöntemi. Derleme ikili bir görüntüsüdür kullanırsanız <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29> yöntemi aşırı yüklemesi.  
   
     > [!NOTE]
     >  Yalnızca yansıma bağlam, .NET Framework sürümü yürütme bağlamı dışında bir sürümünden bir mscorlib.dll sürümü yüklemek için kullanamazsınız.  
   
-2.  Derleme bağımlılıkları varsa <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> yöntemi yüklenmemesi bunları. Bunları incelemeniz gerekiyorsa, bunları kendiniz yüklemelisiniz.  
+2. Derleme bağımlılıkları varsa <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> yöntemi yüklenmemesi bunları. Bunları incelemeniz gerekiyorsa, bunları kendiniz yüklemelisiniz.  
   
-3.  Derlemenin kullanarak bir derleme salt yansıma bağlamına yüklü olup olmadığını <xref:System.Reflection.Assembly.ReflectionOnly%2A> özelliği.  
+3. Derlemenin kullanarak bir derleme salt yansıma bağlamına yüklü olup olmadığını <xref:System.Reflection.Assembly.ReflectionOnly%2A> özelliği.  
   
-4.  Öznitelikleri derlemenin veya derlemedeki türleri uygulandıysa, bu öznitelikleri kullanarak incelemek <xref:System.Reflection.CustomAttributeData> salt yansıma bağlamında kod yürütmesine girişimde bulunulmaz emin olmak için sınıf. Uygun aşırı yüklemesini kullanın <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> elde etmek için yöntemi <xref:System.Reflection.CustomAttributeData> bir derleme, üye, modül veya parametre uygulanan öznitelikleri temsil eden nesneleri.  
+4. Öznitelikleri derlemenin veya derlemedeki türleri uygulandıysa, bu öznitelikleri kullanarak incelemek <xref:System.Reflection.CustomAttributeData> salt yansıma bağlamında kod yürütmesine girişimde bulunulmaz emin olmak için sınıf. Uygun aşırı yüklemesini kullanın <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> elde etmek için yöntemi <xref:System.Reflection.CustomAttributeData> bir derleme, üye, modül veya parametre uygulanan öznitelikleri temsil eden nesneleri.  
   
     > [!NOTE]
     >  Derleme veya içeriğine uygulanan öznitelikleri derlemede tanımlanan veya başka bir derlemede salt yansıma bağlamına yüklenen tanımlanabilir. Öznitelikleri tanımlandığı önceden bildirmek için hiçbir yolu yoktur.  

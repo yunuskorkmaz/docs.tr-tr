@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: d79139ac3d11d3cd9a7d1bbe1f12e14df83530e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d2bb9e06d9d84a9b61c67510e9c012066f69d55e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094651"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329238"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Nasıl yapılır: Windows Forms ColorDialog Bileşeninin Görünüşünü Değiştirme
 Windows Forms görünümünü yapılandırabileceğiniz <xref:System.Windows.Forms.ColorDialog> özelliklerini sayıda bileşen. İletişim kutusu iki bölümü vardır: bir temel renkleri ve kullanıcının özel renkler tanımlamasına olanak tanıyan bir gösterir.  
@@ -26,7 +26,7 @@ Windows Forms görünümünü yapılandırabileceğiniz <xref:System.Windows.For
   
 ### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>Renk iletişim kutusu görünümünü yapılandırmak için  
   
-1.  Ayarlama <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, ve <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> özellikleri için istenen değerleri.  
+1. Ayarlama <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>, <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>, <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>, ve <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> özellikleri için istenen değerleri.  
   
     ```vb  
     ColorDialog1.AllowFullOpen = True  

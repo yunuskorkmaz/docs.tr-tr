@@ -12,29 +12,29 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: cf5352ff60aabe45473c3c9103e8369597db2e8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2f97a8c9b0d3f29ada108afaea92f39af3ac6b3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106762"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331006"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Nasıl yapılır: Windows Forms BindingSource ile Bir Web Hizmetine Bağlama
 Windows Form denetimi bir XML Web hizmeti çağırma alınan sonuçları bağlamak istiyorsanız, kullanabileceğiniz bir <xref:System.Windows.Forms.BindingSource> bileşeni. Bu yordam, bağlama için benzer bir <xref:System.Windows.Forms.BindingSource> bir türü için bileşen. Web hizmeti tarafından kullanıma sunulan türleri ve yöntemleri içeren bir istemci-tarafı proxy oluşturmanız gerekir. Bir istemci-tarafı proxy Web hizmeti (.asmx) kendisi ya da Web Hizmetleri Açıklama Dili (WSDL) dosyası oluşturur. Ayrıca, istemci tarafı proxy ortak özellik olarak Web hizmeti tarafından kullanılan karmaşık türler alanları açığa çıkarmalıdır. Ardından bağlama <xref:System.Windows.Forms.BindingSource> Web kullanıma sunulan türlerden proxy hizmeti.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>Oluşturma ve bir istemci-tarafı proxy sunucuya bağlamak için  
   
-1.  Uygun bir ad alanı, seçtiğiniz dizine bir Windows formu oluşturun.  
+1. Uygun bir ad alanı, seçtiğiniz dizine bir Windows formu oluşturun.  
   
-2.  Ekleme bir <xref:System.Windows.Forms.BindingSource> forma bileşen.  
+2. Ekleme bir <xref:System.Windows.Forms.BindingSource> forma bileşen.  
   
-3.  Açık [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)] komut istemi ve formunuza bulunan aynı dizine gidin.  
+3. Açık [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)] komut istemi ve formunuza bulunan aynı dizine gidin.  
   
-4.  WSDL aracını kullanarak girin `wsdl` .asmx veya Web hizmeti için WSDL dosyasının URL'sini uygulamanızı ad alanı tarafından izlenen ve isteğe bağlı olarak dil çalışıyor.  
+4. WSDL aracını kullanarak girin `wsdl` .asmx veya Web hizmeti için WSDL dosyasının URL'sini uygulamanızı ad alanı tarafından izlenen ve isteğe bağlı olarak dil çalışıyor.  
   
      Aşağıdaki kod örneği konumunda bulunan Web hizmetini kullanır `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Örneğin, C# türü için `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`, veya Visual Basic türü `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Yolu için WSDL bağımsız değişken olarak geçirme aracı bir istemci-tarafı proxy aynı dizin ve ad alanı, uygulamanızda belirtilen dil olarak oluşturur. Visual Studio kullanıyorsanız, dosyayı projenize ekleyin.  
   
-5.  İstemci tarafı proxy bağlamak için bir tür seçin.  
+5. İstemci tarafı proxy bağlamak için bir tür seçin.  
   
      Web hizmeti tarafından sunulan bir yöntem tarafından döndürülen bir türü genellikle budur. Seçilen türündeki alanlar için bağlama amacıyla genel özellikleri olarak sunulmalıdır.  
   
@@ -42,7 +42,7 @@ Windows Form denetimi bir XML Web hizmeti çağırma alınan sonuçları bağlam
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/VB/form1.vb#4)]  
   
-6.  Ayarlama <xref:System.Windows.Forms.BindingSource.DataSource%2A> özelliği <xref:System.Windows.Forms.BindingSource> istediğiniz diğer bir deyişle türe bulunan Web hizmeti taraflı proxy.  
+6. Ayarlama <xref:System.Windows.Forms.BindingSource.DataSource%2A> özelliği <xref:System.Windows.Forms.BindingSource> istediğiniz diğer bir deyişle türe bulunan Web hizmeti taraflı proxy.  
   
      [!code-cpp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CPP/form1.cpp#2)]
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#2)]

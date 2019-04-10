@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 4bb5a8134bb9cbcdb70830628895338ec83b28a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55716a9955d12ef3a926efe352a0078044de9990
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614126"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326807"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# Kodlama Kuralları (C# Programlama Kılavuzu)
  Kodlama kuralları aşağıdaki amaçlara hizmet eder:  
@@ -38,7 +38,7 @@ ms.locfileid: "54614126"
 ## <a name="layout-conventions"></a>Düzeni Kuralları  
  İyi Düzen biçimlendirme, kod yapısını vurgulamak ve kodun okunmasını kolaylaştırmak için kullanır. Microsoft örnekleri ve örnek için aşağıdaki kurallara uygun:  
   
--   Varsayılan Kod Düzenleyicisi ayarları (Akıllı girintileme dört karakterlik girintileri, sekmeleri boşluk olarak kaydedilen) kullanın. Daha fazla bilgi için [seçenekler, metin düzenleyici, C++, biçimlendirme](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
+-   Varsayılan Kod Düzenleyicisi ayarları (Akıllı girintileme dört karakterlik girintileri, sekmeleri boşluk olarak kaydedilen) kullanın. Daha fazla bilgi için [seçenekler, metin düzenleyici, C#, biçimlendirme](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
 -   Her satırda yalnızca bir deyim yazın.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "54614126"
   
 ### <a name="-and-124124-operators"></a>& & ve &#124; &#124; işleçleri  
   
--   Özel durumlar önlemek ve gereksiz karşılaştırmalar atlayarak performansı artırmak için kullandığınız [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) yerine [ & ](../../../csharp/language-reference/operators/and-operator.md) ve [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md)yerine [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) gerçekleştirirken karşılaştırmalar, aşağıdaki örnekte gösterildiği gibi.  
+-   Özel durumlar önlemek ve gereksiz karşılaştırmalar atlayarak performansı artırmak için kullandığınız [ && ](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) yerine [ & ](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) ve [ &#124; &#124; ](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)yerine [ &#124; ](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) gerçekleştirirken karşılaştırmalar, aşağıdaki örnekte gösterildiği gibi.  
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
@@ -198,5 +198,5 @@ ms.locfileid: "54614126"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic kodlama kuralları](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
+- [Visual Basic Kodlama Kuralları](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [Güvenli Kodlama Yönergeleri](../../../standard/security/secure-coding-guidelines.md)

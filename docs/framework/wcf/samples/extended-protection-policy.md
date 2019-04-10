@@ -2,12 +2,12 @@
 title: Genişletilmiş Koruma İlkesi
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 59a377a94978741f3f116bab819dff77d8b0fee4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785459"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328757"
 ---
 # <a name="extended-protection-policy"></a>Genişletilmiş Koruma İlkesi
 Genişletilmiş koruma, ADAM-de-adam (MITM) saldırılarına karşı korumaya yönelik bir güvenlik girişimidir. MITM saldırı bir güvenlik tehdididir bir MITM istemci kimlik bilgilerini alır ve bir sunucuya iletir.  
@@ -26,25 +26,25 @@ Genişletilmiş koruma, ADAM-de-adam (MITM) saldırılarına karşı korumaya y�
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Internet Information Services yükleme **Denetim Masası**, **Program Ekle/Kaldır**, **Windows özellikleri**.  
+1. Internet Information Services yükleme **Denetim Masası**, **Program Ekle/Kaldır**, **Windows özellikleri**.  
   
-2.  Yükleme **Windows kimlik doğrulaması** içinde **Windows özellikleri**, **Internet Information Services**, **World Wide Web Hizmetleri**,  **Güvenlik**, ve **Windows kimlik doğrulaması**.  
+2. Yükleme **Windows kimlik doğrulaması** içinde **Windows özellikleri**, **Internet Information Services**, **World Wide Web Hizmetleri**,  **Güvenlik**, ve **Windows kimlik doğrulaması**.  
   
-3.  Yükleme **Windows Communication Foundation HTTP etkinleştirme** içinde **Windows özellikleri**, **Microsoft .NET Framework 3.5.1**, ve **Windows iletişimi Foundation HTTP etkinleştirme**.  
+3. Yükleme **Windows Communication Foundation HTTP etkinleştirme** içinde **Windows özellikleri**, **Microsoft .NET Framework 3.5.1**, ve **Windows iletişimi Foundation HTTP etkinleştirme**.  
   
-4.  Bu örnek, Internet Information Services (IIS) Yöneticisi'nden yüklenebilecek bir sunucu sertifikası varlığını gerektirir böylece sunucu ile güvenli bir kanal oluşturmak istemci gerektirir.  
+4. Bu örnek, Internet Information Services (IIS) Yöneticisi'nden yüklenebilecek bir sunucu sertifikası varlığını gerektirir böylece sunucu ile güvenli bir kanal oluşturmak istemci gerektirir.  
   
     1.  IIS Yöneticisi'ni açın. Açık **sunucu sertifikaları**, içinde göründüğü **özellik görünümü** (makine adı) kök düğümü seçildiğinde sekme.  
   
     2.  Bu örnek test amacıyla otomatik olarak imzalanan bir sertifika oluşturun. Internet Explorer'ı güvenli olmadığı hakkında sertifika istemek için istemiyorsanız, sertifikayı güvenilen kök sertifika yetkilisi depolarında yükleyin.  
   
-5.  Açık **eylemleri** bölmesinde varsayılan Web sitesi için. Tıklayın **Site Düzenle**, **bağlamaları**. Bir tür olarak HTTPS eklemek henüz yoksa, bağlantı noktası numarası 443'tür. Önceki adımda oluşturulan SSL sertifika atayın.  
+5. Açık **eylemleri** bölmesinde varsayılan Web sitesi için. Tıklayın **Site Düzenle**, **bağlamaları**. Bir tür olarak HTTPS eklemek henüz yoksa, bağlantı noktası numarası 443'tür. Önceki adımda oluşturulan SSL sertifika atayın.  
   
-6.  Derleme hizmeti. Bu IIS sanal dizini oluşturur ve .dll, .svc ve .config barındırılan Web hizmeti için gereken dosyaları kopyalar.  
+6. Derleme hizmeti. Bu IIS sanal dizini oluşturur ve .dll, .svc ve .config barındırılan Web hizmeti için gereken dosyaları kopyalar.  
   
-7.  IIS Yöneticisi'ni açın. Sanal dizin sağ tıklayın (**ExtendedProtection**), önceki adımda oluşturulan. Seçin **uygulamasına dönüştürün**.  
+7. IIS Yöneticisi'ni açın. Sanal dizin sağ tıklayın (**ExtendedProtection**), önceki adımda oluşturulan. Seçin **uygulamasına dönüştürün**.  
   
-8.  Açık **kimlik doğrulaması** bu sanal dizin ve etkinleştirmek için IIS Yöneticisi'nde Modülü **Windows kimlik doğrulaması**.  
+8. Açık **kimlik doğrulaması** bu sanal dizin ve etkinleştirmek için IIS Yöneticisi'nde Modülü **Windows kimlik doğrulaması**.  
   
 9. Açık **Gelişmiş ayarlar** altında **Windows kimlik doğrulaması** bu sanal dizin için ve **gerekli**.  
   

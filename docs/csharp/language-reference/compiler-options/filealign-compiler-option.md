@@ -16,12 +16,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: 3437b0f90593eed2900829212866cf689ff54e8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ce1bb864c4cb0b1c330de7d96649f9870231e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660183"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328705"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C# Derleyici Seçenekleri)
 **- Filealign** seçeneği, çıkış dosyasında bölümlerin boyutunu belirtmenize olanak sağlar.  
@@ -45,13 +45,13 @@ ms.locfileid: "54660183"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1.  Projenin açın **özellikleri** sayfası.  
+1. Projenin açın **özellikleri** sayfası.  
   
-2.  Tıklayın **derleme** özellik sayfası.  
+2. Tıklayın **derleme** özellik sayfası.  
   
-3.  Tıklayın **Gelişmiş** düğmesi.  
+3. Tıklayın **Gelişmiş** düğmesi.  
   
-4.  Değiştirme **dosya hizalama** özelliği.  
+4. Değiştirme **dosya hizalama** özelliği.  
   
  Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
   

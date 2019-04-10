@@ -4,12 +4,12 @@ description: Docker tabanlı uygulamalar geliştirmek için iş akışının ayr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 6a4d8a6fea56c01d23d3cdb98ae9e12619e99ff5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328237"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -67,7 +67,7 @@ Uygulamanızda Docker'ı etkinleştirme ve Docker sınama dağıtımı önce (ge
   [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
-  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![2 - dockerfile'ları yazma](./media/image4.png)
 
@@ -206,13 +206,13 @@ Büyük olasılıkla çok aşamalı bir Dockerfile içinde ayrıntılı olarak �
 
 Ve Ayrıntılar, satır satır şunlardır:
 
-1.  "Küçük" yalnızca çalışma zamanı temel görüntü ile bir aşama başlamak için bu çağrı **temel** başvuru.
-2.  Oluşturma **/app** görüntünün dizin.
-3.  Bağlantı noktasını kullanıma sunma **80**.
+1. "Küçük" yalnızca çalışma zamanı temel görüntü ile bir aşama başlamak için bu çağrı **temel** başvuru.
+2. Oluşturma **/app** görüntünün dizin.
+3. Bağlantı noktasını kullanıma sunma **80**.
 <!-- skip -->
-5.  "Büyük" görüntü ile yeni bir aşama oluşturma/yayımlama için başlangıç çağrısı **derleme** başvuru.
-6.  Dizin oluşturma **/src** görüntüde.
-7.  Satır en çok 16, başvurulan projeler kopyalama **.csproj** paketleri daha sonra geri yüklenmesi mümkün dosyaları gibi.
+5. "Büyük" görüntü ile yeni bir aşama oluşturma/yayımlama için başlangıç çağrısı **derleme** başvuru.
+6. Dizin oluşturma **/src** görüntüde.
+7. Satır en çok 16, başvurulan projeler kopyalama **.csproj** paketleri daha sonra geri yüklenmesi mümkün dosyaları gibi.
 <!-- skip -->
 17. Paketleri geri **Catalog.API** proje ve başvurulan proje.
 18. Kopyalama **çözüm için tüm dizin ağacı** (içerdiği dosyaları veya dizinleri hariç **.dockerignore** dosya) öğesinden için **/src** görüntünün dizin.

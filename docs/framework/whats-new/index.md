@@ -10,25 +10,25 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e6ce15c344ecd6e5f8d73cb98a06c8ccb40c9e7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 22f6c6827b2574ba887839f749df8fc7ae6605ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466445"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328640"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 
 Bu makalede, önemli yeni özellikler ve geliştirmeler aşağıdaki .NET Framework sürümlerinde özetlenmektedir:
 
-- [.NET framework 4.7.2](#v472)
+- [.NET Framework 4.7.2](#v472)
 - [.NET framework 4.7.1](#v471)
 - [.NET framework 4.7](#v47)
-- [.NET framework 4.6.2](#v462)
-- [.NET framework 4.6.1](#v461)
+- [.NET Framework 4.6.2](#v462)
+- [.NET Framework 4.6.1](#v461)
 - [.NET 2015 ve .NET Framework 4.6](#v46)
-- [.NET framework 4.5.2](#v452)
-- [.NET framework 4.5.1](#v451)
+- [.NET Framework 4.5.2](#v452)
+- [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
 Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve değiştirilebilir. .NET Framework hakkında genel bilgi için bkz. [Başlarken](../get-started/index.md). Desteklenen platformlar için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md). Yükleme yönergeleri ve indirme bağlantıları [Yükleme Kılavuzu](../install/guide-for-developers.md).
@@ -60,7 +60,7 @@ Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve değiştiril
 
 - [Çekirdek](#core-472)
 - [ASP.NET](#asp-net472)
-- [Ağ](#net472)
+- [Ağ Oluşturma](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -434,7 +434,7 @@ Windows Forms uygulaması için uygulama yapılandırma dosyası uygulama bildir
 
 - [Çekirdek](#core471)
 - [Ortak dil çalışma zamanı (CLR)](#clr)
-- [Ağ](#net471)
+- [Ağ Oluşturma](#net471)
 - [ASP.NET](#asp-net471)
 
 Ayrıca, bir önemli .NET Framework 4.7.1 yardımcı teknoloji kullanıcılar için uygun bir deneyim sağlamak için uygulamanın veren geliştirilmiş erişilebilirlik biridir. .NET Framework 4.7.1'teki erişilebilirlik geliştirmeleri hakkında daha fazla bilgi için bkz: [erişilebilirlik .NET Framework'teki yenilikler](whats-new-in-accessibility.md).
@@ -516,7 +516,7 @@ ASP.NET .NET Framework 4.7 ve önceki sürümlerle geliştiriciler yapılandırm
 .NET Framework 4.7, aşağıdaki alanlarda yeni özellikler içerir:
 
 - [Çekirdek](#Core47)
-- [Ağ](#net47)
+- [Ağ Oluşturma](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -633,7 +633,7 @@ WPF API'leri yazdırmak <xref:System.Printing.PrintQueue?displayProperty=nameWit
 
 - [SqlClient](#SQLClient)
 
-- [Windows Communication Foundation'a](#WCF)
+- [Windows Communication Foundation](#WCF)
 
 - [Windows Presentation Foundation (WPF)](#WPF462)
 
@@ -657,13 +657,13 @@ Yeni API'lerin bir listesi .NET Framework 4.6.2 eklediğiniz için bkz: [.NET Fr
 
 Veri ek açıklama doğrulayıcıları, bir sınıf özelliği için bir veya daha fazla öznitelik ekleyerek doğrulamayı gerçekleştirmek etkinleştirin. Özniteliğin <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> öğe doğrulama başarısız olursa hata iletisinin metni tanımlar. İle başlayarak [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET hata iletilerini yerelleştirmeniz kolaylaştırır. Hata iletileri, yerelleştirilecek:
 
-1.  <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> Doğrulama özniteliği sağlanır.
+1. <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> Doğrulama özniteliği sağlanır.
 
-2.  Kaynak dosyanın App_LocalResources klasöründe depolanır.
+2. Kaynak dosyanın App_LocalResources klasöründe depolanır.
 
-3.  Yerelleştirilmiş kaynak dosyasının adını formundadır `DataAnnotation.Localization.{` *adı*`}.resx`burada *adı* bir kültür adı biçiminde *languageCode* `-` *ülke/regionCode* veya *languageCode*.
+3. Yerelleştirilmiş kaynak dosyasının adını formundadır `DataAnnotation.Localization.{` *adı*`}.resx`burada *adı* bir kültür adı biçiminde *languageCode* `-` *ülke/regionCode* veya *languageCode*.
 
-4.  Anahtar adı kaynak atanan dizedir <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> özniteliği ve değerini olan yerelleştirilmiş hata iletisi.
+4. Anahtar adı kaynak atanan dizedir <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> özniteliği ve değerini olan yerelleştirilmiş hata iletisi.
 
 Örneğin, aşağıdaki veri ek açıklama özniteliği için geçersiz bir derecelendirme varsayılan kültürün hata iletisini tanımlar.
 
@@ -1036,7 +1036,8 @@ Altında çalışan uygulamalar için [!INCLUDE[net_v462](../../../includes/net-
 
 İle başlayarak [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF, hem bir Visual Studio Tasarımcısı'nda ve kod iş akışlarında C# ifadeleri destekler. Re-hosted iş akışı Tasarımcısı, WF iş akışı Tasarımcısı, Visual Studio'da (örneğin, WPF) dışında bir uygulamada olmasını sağlayan anahtar özelliğidir.  Windows Workflow Foundation, C# ifadeleri ve IntelliSense Re-hosted iş akışı Tasarımcısı'nda destekleme özelliği sağlar. Daha fazla bilgi için [Windows Workflow Foundation blog](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` Önceki .NET Framework sürümlerinde [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], WF Tasarımcısı IntelliSense olduğunda kopuk bir müşteri Visual Studio'dan bir iş akışı projesi oluşturur. Eksik iş akışı türlerini ıntellisense'ten uyarılarını görünür proje derlemesi başarılı olur ve iş akışı türlerini tasarımcıda bulunamadı ancak **hata listesi** penceresi. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Bu sorunu giderir ve IntelliSense kullanılabilir hale getirir.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`
+Önceki .NET Framework sürümlerinde [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], WF Tasarımcısı IntelliSense olduğunda kopuk bir müşteri Visual Studio'dan bir iş akışı projesi oluşturur. Eksik iş akışı türlerini ıntellisense'ten uyarılarını görünür proje derlemesi başarılı olur ve iş akışı türlerini tasarımcıda bulunamadı ancak **hata listesi** penceresi. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Bu sorunu giderir ve IntelliSense kullanılabilir hale getirir.
 
 **Artık izleme iş akışını iş akışı V1 uygulamaları FIPS modunda çalıştırın.**
 
@@ -1527,7 +1528,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
      Varsayılan değer `false` şeklindedir.
 
-- **Ağ**
+- **Ağ Oluşturma**
 
     - **Yuva yeniden kullanma**
 
@@ -1563,7 +1564,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
      [!INCLUDE[net_core](../../../includes/net-core-md.md)] öncelikle Unicode kodlamaları destekler ve varsayılan olarak, kod sayfası kodlamaları için sınırlı destek sağlar. Desteklenmeyen ancak .NET Framework içindeki kullanılabilir kod sayfası kodlamaları için destek ekleyebilirsiniz [!INCLUDE[net_core](../../../includes/net-core-md.md)] ile kod sayfası kodlamalarını kaydederek <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> yöntemi. Daha fazla bilgi için bkz. <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
-- **.NET Native**
+- **.NET Yerel**
 
      Windows uygulamaları için Windows 10 hedefleyen [!INCLUDE[net_core](../../../includes/net-core-md.md)] ve C# dilinde yazılmıştır veya Visual Basic, uygulamaları IL yerine yerel koda derleyen yeni bir teknoloji avantajlarından faydalanabilirsiniz. Bunlar, uygulamaları daha hızlı başlangıç ve yürütme süreleri tarafından temsil edilen üretir. Daha fazla bilgi için [.NET Native ile uygulamalar derlemek](../net-native/index.md). Anlamına gelir, kodunuz için .NET JIT derlemesi hem NGEN benzerlikleri ve hangi, inceleyen yerel genel bakış için bkz. [.NET Native ve derleme](../net-native/net-native-and-compilation.md).
 
@@ -1608,12 +1609,12 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
     - Değiştirin <xref:System.Transactions.IPromotableSinglePhaseNotification> ile bir <xref:System.Transactions.ISinglePhaseNotification>, tek aşaması işlemeler destekleyen kalıcı bir liste olduğu.
 
-     Bu aynı uygulama etki alanında yapılabilir ve yükseltmeyi gerçekleştirmek için MSDTC ile etkileşim kurmak için herhangi bir ekstra yönetilmeyen kod gerektirmez. Yalnızca bir bekleyen çağrısından olduğunda yeni yöntem çağrılabilir <xref:System.Transactions?displayProperty=nameWithType> için <xref:System.Transactions.IPromotableSinglePhaseNotification> `Promote` promotable liste tarafından uygulanan yöntem.
+     Bu aynı uygulama etki alanında yapılabilir ve yükseltmeyi gerçekleştirmek için MSDTC ile etkileşim kurmak için herhangi bir ekstra yönetilmeyen kod gerektirmez. Yalnızca bir bekleyen çağrısından olduğunda yeni yöntem çağrılabilir <xref:System.Transactions?displayProperty=nameWithType> için <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` promotable liste tarafından uygulanan yöntem.
 
 - **Profil oluşturma geliştirmeleri.** Aşağıdaki yeni yönetilmeyen profil oluşturma API'leri daha sağlam profil oluşturma sağlar:
 
     - [COR_PRF_ASSEMBLY_REFERENCE_INFO Yapısı](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
-    - [COR_PRF_HIGH_MONITOR Sabit Listesi](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
+    - [COR_PRF_HIGH_MONITOR Numaralandırması](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
     - [GetAssemblyReferences Yöntemi](../unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
     - [GetEventMask2 Yöntemi](../unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
     - [SetEventMask2 Yöntemi](../unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
@@ -1938,6 +1939,6 @@ Taşınabilir sınıf kitaplığı projesi Visual Studio 2012 (ve sonraki sürü
 
 - [.NET Framework ve Bant Dışı Yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Erişilebilirlik .NET Framework'teki yenilikler](whats-new-in-accessibility.md)
-- [Visual Studio 2017'deki yenilikler](/visualstudio/ide/whats-new-in-visual-studio)
+- [Visual Studio 2017’deki Yenilikler](/visualstudio/ide/whats-new-in-visual-studio)
 - [ASP.NET](/aspnet)
 - [Visual C++ yenilikleri](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

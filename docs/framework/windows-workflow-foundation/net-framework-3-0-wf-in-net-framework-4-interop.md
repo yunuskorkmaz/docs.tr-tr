@@ -1,15 +1,15 @@
 ---
-title: Birlikte çalışma etkinliği ile .NET Framework 4, .NET Framework 3.0 WF etkinlikleri kullanma
+title: .NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329420"
 ---
-# <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Birlikte çalışma etkinliği ile .NET Framework 4, .NET Framework 3.0 WF etkinlikleri kullanma
+# <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>.NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
 <xref:System.Activities.Statements.Interop> Etkinliği bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] sarmalar (WF 4.5) etkinliği bir [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) etkinlik içinde bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı. 3 WF etkinliği, bir tek yaprak etkinliği veya etkinlikleri ağacının tümünü olabilir. (İptal ve özel durum işleme dahil) yürütme ve sürekliliği [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] etkinlik bağlamında oluşan [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] yürütülmekte olan iş akışı örneği.  
   
 > [!NOTE]
@@ -34,22 +34,22 @@ ms.locfileid: "49086693"
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Bir WF 3 kullanma sınırlamaları bir birlikte çalışma etkinliği içinde etkinlik  
  Sistem tarafından sağlanan 3 WF etkinlikleri doğrudan içinde sarmalamak edilemez bir <xref:System.Activities.Statements.Interop> etkinlik. Bazı 3 WF etkinlikleri gibi <xref:System.Workflow.Activities.DelayActivity>, benzer bir 4.5 WF etkinliği olduğundan budur. Etkinlik işlevlerini desteklenmediğinden başkaları için budur. Sistem tarafından sağlanan birçok 3 WF etkinlikleri tarafından Sarmalanan iş akışı içinde kullanılabilir <xref:System.Activities.Statements.Interop> etkinlik, aşağıdaki kısıtlamalara tabidir:  
   
-1.  <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.Receive> kullanılamaz bir <xref:System.Activities.Statements.Interop> etkinlik.  
+1. <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.Receive> kullanılamaz bir <xref:System.Activities.Statements.Interop> etkinlik.  
   
-2.  <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity>, ve <xref:System.Workflow.Activities.WebServiceFaultActivity> içinde kullanılamaz bir <xref:System.Activities.Statements.Interop> etkinlik.  
+2. <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity>, ve <xref:System.Workflow.Activities.WebServiceFaultActivity> içinde kullanılamaz bir <xref:System.Activities.Statements.Interop> etkinlik.  
   
-3.  <xref:System.Workflow.Activities.InvokeWorkflowActivity> içinde kullanılamaz bir <xref:System.Activities.Statements.Interop> etkinlik.  
+3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> içinde kullanılamaz bir <xref:System.Activities.Statements.Interop> etkinlik.  
   
-4.  <xref:System.Workflow.ComponentModel.SuspendActivity> içinde kullanılamaz bir <xref:System.Activities.Statements.Interop> etkinlik.  
+4. <xref:System.Workflow.ComponentModel.SuspendActivity> içinde kullanılamaz bir <xref:System.Activities.Statements.Interop> etkinlik.  
   
-5.  İçinde maaş ilgili etkinlikleri kullanılamaz bir <xref:System.Activities.Statements.Interop> etkinlik.  
+5. İçinde maaş ilgili etkinlikleri kullanılamaz bir <xref:System.Activities.Statements.Interop> etkinlik.  
   
  İçindeki 3 WF etkinlikleri kullanımına ilişkin anlamak için bazı davranış özellikleri de vardır <xref:System.Activities.Statements.Interop> etkinlik:  
   
-1.  3 WF etkinlikleri içinde yer alan bir <xref:System.Activities.Statements.Interop> etkinliği olan ne zaman başlatılır <xref:System.Activities.Statements.Interop> etkinlik yürütüldüğünde. WF 4.5 hiçbir başlatma aşaması yürütme önce bir iş akışı örneği için yoktur.  
+1. 3 WF etkinlikleri içinde yer alan bir <xref:System.Activities.Statements.Interop> etkinliği olan ne zaman başlatılır <xref:System.Activities.Statements.Interop> etkinlik yürütüldüğünde. WF 4.5 hiçbir başlatma aşaması yürütme önce bir iş akışı örneği için yoktur.  
   
-2.  Bu işlem bağımsız olarak başladığı bir işlem başladığında değil denetim noktası iş akışı örneği durumu WF 4.5 çalışma zamanı yapar (içinde veya dışında bir <xref:System.Activities.Statements.Interop> etkinliği).  
+2. Bu işlem bağımsız olarak başladığı bir işlem başladığında değil denetim noktası iş akışı örneği durumu WF 4.5 çalışma zamanı yapar (içinde veya dışında bir <xref:System.Activities.Statements.Interop> etkinliği).  
   
-3.  İçindeki etkinlikler için WF 3 izleme kayıtları bir <xref:System.Activities.Statements.Interop> Etkinlik izleme katılımcıları WF 4.5 için sağlanan <xref:System.Activities.Tracking.InteropTrackingRecord> nesneleri. <xref:System.Activities.Tracking.InteropTrackingRecord> bir türevi olan <xref:System.Activities.Tracking.CustomTrackingRecord>.  
+3. İçindeki etkinlikler için WF 3 izleme kayıtları bir <xref:System.Activities.Statements.Interop> Etkinlik izleme katılımcıları WF 4.5 için sağlanan <xref:System.Activities.Tracking.InteropTrackingRecord> nesneleri. <xref:System.Activities.Tracking.InteropTrackingRecord> bir türevi olan <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
-4.  WF 3 özel aktivite 3 WF iş akışı çalışma zamanı gibi içinde tam olarak aynı şekilde birlikte çalışabilirlik ortamında iş akışı kuyrukları kullanarak verilere erişebilir. Özel Etkinlik kod değişikliği yapmadan gereklidir. Konakta veri sürdürme tarafından sıraya alınan 3 WF iş akışını kuyruğa olduğu bir <xref:System.Activities.Bookmark>. Yer işaretinin adı dize biçimindedir <xref:System.IComparable> iş akışı kuyruk adı.
+4. WF 3 özel aktivite 3 WF iş akışı çalışma zamanı gibi içinde tam olarak aynı şekilde birlikte çalışabilirlik ortamında iş akışı kuyrukları kullanarak verilere erişebilir. Özel Etkinlik kod değişikliği yapmadan gereklidir. Konakta veri sürdürme tarafından sıraya alınan 3 WF iş akışını kuyruğa olduğu bir <xref:System.Activities.Bookmark>. Yer işaretinin adı dize biçimindedir <xref:System.IComparable> iş akışı kuyruk adı.

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 70b8e2f28559d5fc54736db1319d2309aa5b86a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5fb175bdd255af1b506dacb973a778b1f6f515f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111338"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329355"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme
 Bu konuda, bir Windows etki alanında bulunan ve aynı etki alanında istemcileri tarafından çağrılan bir Windows Communication Foundation (WCF) hizmeti aktarım güvenliği etkinleştirme gösterilmektedir. Bu senaryo hakkında daha fazla bilgi için bkz. [Windows kimlik doğrulama ile Aktarım güvenliği](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Örnek bir uygulama için bkz: [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) örnek.  
@@ -30,15 +30,15 @@ Bu konuda, bir Windows etki alanında bulunan ve aynı etki alanında istemciler
   
 #### <a name="to-create-a-wshttpbinding-that-uses-windows-credentials-and-message-security"></a>İleti güvenliği Windows kimlik bilgilerini kullanan bir WSHttpBinding oluşturmak için  
   
-1.  Bu yordamın kod başında eklenen `Run` yöntemi `Test` örnek bölümünde hizmeti kodunda bir sınıfta.  
+1. Bu yordamın kod başında eklenen `Run` yöntemi `Test` örnek bölümünde hizmeti kodunda bir sınıfta.  
   
-2.  Öğesinin bir örneğini oluşturur <xref:System.ServiceModel.WSHttpBinding> sınıfı.  
+2. Öğesinin bir örneğini oluşturur <xref:System.ServiceModel.WSHttpBinding> sınıfı.  
   
-3.  Ayarlama <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> özelliği <xref:System.ServiceModel.WSHttpSecurity> sınıfının <xref:System.ServiceModel.SecurityMode.Message>.  
+3. Ayarlama <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> özelliği <xref:System.ServiceModel.WSHttpSecurity> sınıfının <xref:System.ServiceModel.SecurityMode.Message>.  
   
-4.  Ayarlama <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> özelliği <xref:System.ServiceModel.MessageSecurityOverHttp> sınıfının <xref:System.ServiceModel.MessageCredentialType.Windows>.  
+4. Ayarlama <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> özelliği <xref:System.ServiceModel.MessageSecurityOverHttp> sınıfının <xref:System.ServiceModel.MessageCredentialType.Windows>.  
   
-5.  Bu yordamı için kod aşağıdaki gibidir:  
+5. Bu yordamı için kod aşağıdaki gibidir:  
   
      [!code-csharp[c_SecureWindowsService#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#1)]
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
@@ -48,19 +48,19 @@ Bu konuda, bir Windows etki alanında bulunan ve aynı etki alanında istemciler
   
 ##### <a name="to-use-a-binding-in-a-service"></a>Hizmet bağlamayı kullanmak için  
   
-1.  Bu yordamın kod, önceki yordamdaki koddan sonra ekleyin.  
+1. Bu yordamın kod, önceki yordamdaki koddan sonra ekleyin.  
   
-2.  Oluşturma bir <xref:System.Type> adlı değişken `contractType` ve arabirim türü atayın (`ICalculator`). Visual Basic, kullanırken `GetType` işleci; C#, kullanım kullanırken `typeof` anahtar sözcüğü.  
+2. Oluşturma bir <xref:System.Type> adlı değişken `contractType` ve arabirim türü atayın (`ICalculator`). Visual Basic, kullanırken `GetType` işleci; C#, kullanım kullanırken `typeof` anahtar sözcüğü.  
   
-3.  Bir saniye oluşturun <xref:System.Type> adlı değişken `serviceType` ve uygulanan sözleşme türü atayın (`Calculator`).  
+3. Bir saniye oluşturun <xref:System.Type> adlı değişken `serviceType` ve uygulanan sözleşme türü atayın (`Calculator`).  
   
-4.  Bir örneğini oluşturmak <xref:System.Uri> adlı sınıfı `baseAddress` hizmetin taban adresine sahip. Taban adresi taşıma eşleşen bir düzen olmalıdır. Bu durumda, HTTP taşıma şeması olduğunda ve özel adresini içeren "Localhost" Tekdüzen Kaynak Tanımlayıcısı (URI) ve bağlantı noktası numarası (8036) yanı sıra bir taban uç nokta adresi ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
+4. Bir örneğini oluşturmak <xref:System.Uri> adlı sınıfı `baseAddress` hizmetin taban adresine sahip. Taban adresi taşıma eşleşen bir düzen olmalıdır. Bu durumda, HTTP taşıma şeması olduğunda ve özel adresini içeren "Localhost" Tekdüzen Kaynak Tanımlayıcısı (URI) ve bağlantı noktası numarası (8036) yanı sıra bir taban uç nokta adresi ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
   
-5.  Bir örneğini oluşturmak <xref:System.ServiceModel.ServiceHost> sınıfıyla `serviceType` ve `baseAddress` değişkenleri.  
+5. Bir örneğini oluşturmak <xref:System.ServiceModel.ServiceHost> sınıfıyla `serviceType` ve `baseAddress` değişkenleri.  
   
-6.  Kullanarak hizmet için uç nokta ekleme `contractType`, bağlama ve bir uç nokta adı (secureCalculator). Bir istemci taban adresini ve bitiş noktası adı hizmeti çağrısı başlatırken bağlamak gerekir.  
+6. Kullanarak hizmet için uç nokta ekleme `contractType`, bağlama ve bir uç nokta adı (secureCalculator). Bir istemci taban adresini ve bitiş noktası adı hizmeti çağrısı başlatırken bağlamak gerekir.  
   
-7.  Çağrı <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> hizmeti başlatmak için yöntemi. Bu yordam kodu aşağıda gösterilmiştir:  
+7. Çağrı <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> hizmeti başlatmak için yöntemi. Bu yordam kodu aşağıda gösterilmiştir:  
   
      [!code-csharp[c_SecureWindowsService#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#2)]
      [!code-vb[c_SecureWindowsService#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#2)]  
@@ -74,19 +74,19 @@ Bu konuda, bir Windows etki alanında bulunan ve aynı etki alanında istemciler
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>Bir istemci koduna sahip bir bağlama kullanmak için  
   
-1.  Hizmet meta verilerinden proxy kodunu üretmek için SvcUtil.exe aracını kullanın. Daha fazla bilgi için [nasıl yapılır: Bir istemci oluşturmanız](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Oluşturulan proxy kodu devraldığı <xref:System.ServiceModel.ClientBase%601> her istemci gerekli Oluşturucular, yöntemleri ve özellikleri bir WCF Hizmeti ile iletişim kurmak için sahip olmasını sağlar sınıfını. Bu örnekte, oluşturulan kod içeren `CalculatorClient` sınıfını `ICalculator` arabirimi, hizmet kod uyumluluğunu etkinleştirme.  
+1. Hizmet meta verilerinden proxy kodunu üretmek için SvcUtil.exe aracını kullanın. Daha fazla bilgi için [nasıl yapılır: Bir istemci oluşturmanız](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Oluşturulan proxy kodu devraldığı <xref:System.ServiceModel.ClientBase%601> her istemci gerekli Oluşturucular, yöntemleri ve özellikleri bir WCF Hizmeti ile iletişim kurmak için sahip olmasını sağlar sınıfını. Bu örnekte, oluşturulan kod içeren `CalculatorClient` sınıfını `ICalculator` arabirimi, hizmet kod uyumluluğunu etkinleştirme.  
   
-2.  Bu yordamın kod başında eklenen `Main` istemci programı yöntemi.  
+2. Bu yordamın kod başında eklenen `Main` istemci programı yöntemi.  
   
-3.  Bir örneğini oluşturmak <xref:System.ServiceModel.WSHttpBinding> sınıfı ve kendi güvenlik modunu ayarlama `Message` ve kimlik bilgisi türü için istemci `Windows`. Örnekte, değişken adları `clientBinding`.  
+3. Bir örneğini oluşturmak <xref:System.ServiceModel.WSHttpBinding> sınıfı ve kendi güvenlik modunu ayarlama `Message` ve kimlik bilgisi türü için istemci `Windows`. Örnekte, değişken adları `clientBinding`.  
   
-4.  Bir örneğini oluşturmak <xref:System.ServiceModel.EndpointAddress> adlı sınıfı `serviceAddress`. Uç nokta adı ile birleştirilmiş temel adresine sahip örneği başlatır.  
+4. Bir örneğini oluşturmak <xref:System.ServiceModel.EndpointAddress> adlı sınıfı `serviceAddress`. Uç nokta adı ile birleştirilmiş temel adresine sahip örneği başlatır.  
   
-5.  Oluşturulmuş istemci sınıfı örneğini oluşturmak `serviceAddress` ve `clientBinding` değişkenleri.  
+5. Oluşturulmuş istemci sınıfı örneğini oluşturmak `serviceAddress` ve `clientBinding` değişkenleri.  
   
-6.  Çağrı <xref:System.ServiceModel.ClientBase%601.Open%2A> yöntemi, aşağıdaki kodda gösterildiği gibi.  
+6. Çağrı <xref:System.ServiceModel.ClientBase%601.Open%2A> yöntemi, aşağıdaki kodda gösterildiği gibi.  
   
-7.  Hizmet çağrısı ve sonuçları görüntüler.  
+7. Hizmet çağrısı ve sonuçları görüntüler.  
   
      [!code-csharp[c_secureWindowsClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#1)]
      [!code-vb[c_secureWindowsClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#1)]  
@@ -100,15 +100,15 @@ Bu konuda, bir Windows etki alanında bulunan ve aynı etki alanında istemciler
   
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>Aktarım Güvenlik Yapılandırması'nı kullanarak bir Windows etki alanında bir hizmet üzerinde etkinleştirmek için  
   
-1.  Ekleme bir [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesine [ \<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) yapılandırma dosyası bölümünü öğesi.  
+1. Ekleme bir [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesine [ \<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) yapılandırma dosyası bölümünü öğesi.  
   
-2.  Ekleyin bir <`binding`> öğesi <`WSHttpBinding`> öğesi ve set `configurationName` uygulamanız için uygun bir değer özniteliği.  
+2. Ekleyin bir <`binding`> öğesi <`WSHttpBinding`> öğesi ve set `configurationName` uygulamanız için uygun bir değer özniteliği.  
   
-3.  Ekleme bir <`security`> öğesi ve kümesi `mode` özniteliği ileti.  
+3. Ekleme bir <`security`> öğesi ve kümesi `mode` özniteliği ileti.  
   
-4.  Ekleme bir <`message`> öğesi ve set `clientCredentialType` Windows için öznitelik.  
+4. Ekleme bir <`message`> öğesi ve set `clientCredentialType` Windows için öznitelik.  
   
-5.  Hizmet yapılandırma dosyasında değiştirin `<bindings>` bölümü aşağıdaki kod ile. Hizmet yapılandırma dosyasını zaten yoksa bkz [hizmetlerini yapılandırın ve istemciler için bağlamaları kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+5. Hizmet yapılandırma dosyasında değiştirin `<bindings>` bölümü aşağıdaki kod ile. Hizmet yapılandırma dosyasını zaten yoksa bkz [hizmetlerini yapılandırın ve istemciler için bağlamaları kullanma](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
     ```xml  
     <bindings>  
@@ -127,17 +127,17 @@ Bu konuda, bir Windows etki alanında bulunan ve aynı etki alanında istemciler
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Bir istemci yapılandırma ile bir bağlama kullanmak için  
   
-1.  Hizmet meta verilerinden proxy kod ve yapılandırma dosyası üretmek için SvcUtil.exe aracını kullanın. Daha fazla bilgi için [nasıl yapılır: Bir istemci oluşturmanız](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+1. Hizmet meta verilerinden proxy kod ve yapılandırma dosyası üretmek için SvcUtil.exe aracını kullanın. Daha fazla bilgi için [nasıl yapılır: Bir istemci oluşturmanız](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
-2.  Değiştirin [ \<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) ise önceki bölümden yapılandırma kod ile oluşturulan yapılandırma dosyasının.  
+2. Değiştirin [ \<bağlamaları >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) ise önceki bölümden yapılandırma kod ile oluşturulan yapılandırma dosyasının.  
   
-3.  Yordam kodu başında eklenen `Main` istemci programı yöntemi.  
+3. Yordam kodu başında eklenen `Main` istemci programı yöntemi.  
   
-4.  Giriş parametresi olarak yapılandırma dosyasında bağlama adını geçirerek oluşturulan istemci sınıfının bir örneğini oluşturun.  
+4. Giriş parametresi olarak yapılandırma dosyasında bağlama adını geçirerek oluşturulan istemci sınıfının bir örneğini oluşturun.  
   
-5.  Çağrı <xref:System.ServiceModel.ClientBase%601.Open%2A> yöntemi, aşağıdaki kodda gösterildiği gibi.  
+5. Çağrı <xref:System.ServiceModel.ClientBase%601.Open%2A> yöntemi, aşağıdaki kodda gösterildiği gibi.  
   
-6.  Hizmet çağrısı ve sonuçları görüntüler.  
+6. Hizmet çağrısı ve sonuçları görüntüler.  
   
      [!code-csharp[c_secureWindowsClient#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#2)]  
   

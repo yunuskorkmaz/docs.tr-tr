@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: de6608d0b3fc0ba4113b8fa7c65881983aabf0c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c8a16dc0269fbd768a73e99f15f53e38c207a8d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189306"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326846"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Nasıl yapılır: Akış Çizelgesi İş Akışı Oluşturma
 İş akışları yerleşik etkinliklerden yanı sıra özel etkinliklerden oluşturulabilir. Bu konu başlığı altında adımlar hem yerleşik etkinlikler gibi kullanan bir iş akışı oluşturma işleminde <xref:System.Activities.Statements.Sequence> etkinliği ve özel etkinlikler önceki [nasıl yapılır: Bir etkinlik oluşturursunuz](how-to-create-an-activity.md) konu. İş akışı sayısını tahmin eden oyun modelleri.  
@@ -23,31 +23,31 @@ ms.locfileid: "59189306"
   
 ## <a name="to-create-the-workflow"></a>İş akışını oluşturmak için  
   
-1.  Sağ **NumberGuessWorkflowActivities** içinde **Çözüm Gezgini** seçip **Ekle**, **yeni öğe**.  
+1. Sağ **NumberGuessWorkflowActivities** içinde **Çözüm Gezgini** seçip **Ekle**, **yeni öğe**.  
   
-2.  İçinde **yüklü**, **ortak öğeler** düğümünü **iş akışı**. Seçin **etkinlik** gelen **iş akışı** listesi.  
+2. İçinde **yüklü**, **ortak öğeler** düğümünü **iş akışı**. Seçin **etkinlik** gelen **iş akışı** listesi.  
   
-3.  Tür `SequentialNumberGuessWorkflow` içine **adı** kutusuna ve tıklatın **Ekle**.  
+3. Tür `SequentialNumberGuessWorkflow` içine **adı** kutusuna ve tıklatın **Ekle**.  
   
-4.  Sürükle bir **dizisi** etkinliğinden **akış denetimi** bölümünü **araç kutusu** üzerine bırakın **Buraya Bırak etkinlik** üzerindeki etiket İş akışı tasarım yüzeyi.  
+4. Sürükle bir **dizisi** etkinliğinden **akış denetimi** bölümünü **araç kutusu** üzerine bırakın **Buraya Bırak etkinlik** üzerindeki etiket İş akışı tasarım yüzeyi.  
   
 ## <a name="to-create-the-workflow-variables-and-arguments"></a>Bağımsız değişkenler ve iş akışı değişkenlerini oluşturmak için  
   
-1.  Çift **SequentialNumberGuessWorkflow.xaml** içinde **Çözüm Gezgini** zaten görüntülenmiyorsa, iş akışı Tasarımcısı'nda görüntülenecek.  
+1. Çift **SequentialNumberGuessWorkflow.xaml** içinde **Çözüm Gezgini** zaten görüntülenmiyorsa, iş akışı Tasarımcısı'nda görüntülenecek.  
   
-2.  Tıklayın **bağımsız değişkenleri** sol alt tarafında görüntülenecek iş akışı Tasarımcısı **bağımsız değişkenleri** bölmesi.  
+2. Tıklayın **bağımsız değişkenleri** sol alt tarafında görüntülenecek iş akışı Tasarımcısı **bağımsız değişkenleri** bölmesi.  
   
-3.  Tıklayın **bağımsız değişken oluşturma**.  
+3. Tıklayın **bağımsız değişken oluşturma**.  
   
-4.  Tür `MaxNumber` içine **adı** kutusunda **içinde** gelen **yönü** aşağı açılan listesinden **Int32** gelen**Bağımsız değişken türü** aşağı açılan liste ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
+4. Tür `MaxNumber` içine **adı** kutusunda **içinde** gelen **yönü** aşağı açılan listesinden **Int32** gelen**Bağımsız değişken türü** aşağı açılan liste ve bağımsız değişkeni kaydetmek için ENTER tuşuna basın.  
   
-5.  Tıklayın **bağımsız değişken oluşturma**.  
+5. Tıklayın **bağımsız değişken oluşturma**.  
   
-6.  Tür `Turns` içine **adı** altında yeni eklenen kutusunu `MaxNumber` bağımsız değişkeni, select **kullanıma** gelen **yönü** aşağı açılan listesinden  **Int32** gelen **bağımsız değişken türü** aşağı açılan liste ve ENTER tuşuna basın.  
+6. Tür `Turns` içine **adı** altında yeni eklenen kutusunu `MaxNumber` bağımsız değişkeni, select **kullanıma** gelen **yönü** aşağı açılan listesinden  **Int32** gelen **bağımsız değişken türü** aşağı açılan liste ve ENTER tuşuna basın.  
   
-7.  Tıklayın **bağımsız değişkenleri** etkinlik Tasarımcısı kapatmak için sol alt tarafında **bağımsız değişkenleri** bölmesi.  
+7. Tıklayın **bağımsız değişkenleri** etkinlik Tasarımcısı kapatmak için sol alt tarafında **bağımsız değişkenleri** bölmesi.  
   
-8.  Tıklayın **değişkenleri** sol alt tarafında görüntülenecek iş akışı Tasarımcısı **değişkenleri** bölmesi.  
+8. Tıklayın **değişkenleri** sol alt tarafında görüntülenecek iş akışı Tasarımcısı **değişkenleri** bölmesi.  
   
 9. Tıklayın **değişken oluşturma**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59189306"
   
 ## <a name="to-add-the-workflow-activities"></a>İş akışı etkinlikleri eklemek için  
   
-1.  Sürükleme bir **atama** etkinliğinden **Temelleri** bölümünü **araç kutusu** üzerine bırakın **dizisi** etkinlik. Tür `Target` içine **için** kutusu ve içine aşağıdaki ifade **bir C# ifadesi girin** veya **zadejte Výraz jazyka vb.** kutusu.  
+1. Sürükleme bir **atama** etkinliğinden **Temelleri** bölümünü **araç kutusu** üzerine bırakın **dizisi** etkinlik. Tür `Target` içine **için** kutusu ve içine aşağıdaki ifade **bir C# ifadesi girin** veya **zadejte Výraz jazyka vb.** kutusu.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -77,9 +77,9 @@ ms.locfileid: "59189306"
     > [!TIP]
     >  Varsa **araç kutusu** penceresi görüntülenmiyorsa, seçin **araç kutusu** gelen **görünümü** menüsü.  
   
-2.  Sürükleme bir **DoWhile** etkinliğinden **akış denetimi** bölümünü **araç kutusu** ve böylece altına iş akışını bırakın **atama** Etkinlik.  
+2. Sürükleme bir **DoWhile** etkinliğinden **akış denetimi** bölümünü **araç kutusu** ve böylece altına iş akışını bırakın **atama** Etkinlik.  
   
-3.  İçine aşağıdaki ifadeyi yazın **DoWhile** etkinliğin **koşul** özellik değer kutusu.  
+3. İçine aşağıdaki ifadeyi yazın **DoWhile** etkinliğin **koşul** özellik değer kutusu.  
   
     ```vb  
     Guess <> Target  
@@ -91,9 +91,9 @@ ms.locfileid: "59189306"
   
      A <xref:System.Activities.Statements.DoWhile> etkinlik kendi alt etkinlikleri yürütür ve ardından değerlendirir, <xref:System.Activities.Statements.DoWhile.Condition%2A>. Varsa <xref:System.Activities.Statements.DoWhile.Condition%2A> değerlendiren `True`, etkinlikler, ardından <xref:System.Activities.Statements.DoWhile> tekrar yürütün. Bu örnekte, kullanıcının tahmin değerlendirilir ve <xref:System.Activities.Statements.DoWhile> tahmin doğru olana kadar devam eder.  
   
-4.  Sürükleme bir **istemi** etkinliğinden **NumberGuessWorkflowActivities** bölümünü **araç kutusu** sürükleyip **DoWhile** etkinliği Önceki adımda.  
+4. Sürükleme bir **istemi** etkinliğinden **NumberGuessWorkflowActivities** bölümünü **araç kutusu** sürükleyip **DoWhile** etkinliği Önceki adımda.  
   
-5.  İçinde **Özellikler penceresi**, türü `"EnterGuess"` tırnak işaretleri içine dahil **YerİşaretiAdı** özellik değer kutusu **istemi** etkinlik. Tür `Guess` içine **sonucu** özellik değer kutusu ve içine aşağıdaki ifadeyi yazın **metin** özellik kutusu.  
+5. İçinde **Özellikler penceresi**, türü `"EnterGuess"` tırnak işaretleri içine dahil **YerİşaretiAdı** özellik değer kutusu **istemi** etkinlik. Tür `Guess` içine **sonucu** özellik değer kutusu ve içine aşağıdaki ifadeyi yazın **metin** özellik kutusu.  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -106,14 +106,14 @@ ms.locfileid: "59189306"
     > [!TIP]
     >  Varsa **Özellikler penceresi** görüntülenen, select değil **Özellikler penceresi** gelen **görünümü** menüsü.  
   
-6.  Sürükle bir **atama** etkinliğinden **Temelleri** bölümünü **araç kutusu** sürükleyip **DoWhile** BT'nin böylece etkinliği **İstemi** etkinlik.  
+6. Sürükle bir **atama** etkinliğinden **Temelleri** bölümünü **araç kutusu** sürükleyip **DoWhile** BT'nin böylece etkinliği **İstemi** etkinlik.  
   
     > [!NOTE]
     >  Bıraktığınız zaman **atama** etkinliği, Not nasıl iş akışı Tasarımcısı otomatik olarak ekler bir **dizisi** hem de içerecek şekilde etkinlik **istemi** etkinliği ve yeni eklenen **Atama** etkinlik.  
   
-7.  Tür `Turns` içine **için** kutusu ve `Turns + 1` içine **bir C# ifadesi girin** veya **zadejte Výraz jazyka vb.** kutusu.  
+7. Tür `Turns` içine **için** kutusu ve `Turns + 1` içine **bir C# ifadesi girin** veya **zadejte Výraz jazyka vb.** kutusu.  
   
-8.  Sürükle bir **varsa** etkinliğinden **akış denetimi** bölümünü **araç kutusu** sürükleyip **dizisi** BT'nin böylece etkinliği Yeni eklenen **atama** etkinlik.  
+8. Sürükle bir **varsa** etkinliğinden **akış denetimi** bölümünü **araç kutusu** sürükleyip **dizisi** BT'nin böylece etkinliği Yeni eklenen **atama** etkinlik.  
   
 9. İçine aşağıdaki ifadeyi yazın **varsa** etkinliğin **koşul** özellik değer kutusu.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "59189306"
   
 ## <a name="to-build-the-workflow"></a>İş akışı oluşturmak için  
   
-1.  Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
+1. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
      Lütfen iş akışının nasıl çalıştırılacağını yönergeleri görmek için bir sonraki konu [nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md). Zaten tamamladıysanız [nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md) adım iş akışı farklı bir stil ve çalıştırmak bu adımdaki sıralı iş akışı kullanarak istediğiniz, atlayın [uygulaması derleme ve çalıştırma için](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) bölümünü [nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md).  
   

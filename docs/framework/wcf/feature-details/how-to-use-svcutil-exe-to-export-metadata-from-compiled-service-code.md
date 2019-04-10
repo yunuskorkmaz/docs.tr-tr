@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Aktarmak için Svcutil.exe Kullanma'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: cb1cb03a078eeb273c69cc3c49b3ef2173c0a49c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084941"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329394"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Aktarmak için Svcutil.exe Kullanma
 Svcutil.exe gibi meta veri hizmetleri, sözleşmeler ve derlenmiş derlemelerde veri türlerini dışarı aktarabilirsiniz:  
@@ -23,9 +23,9 @@ Svcutil.exe gibi meta veri hizmetleri, sözleşmeler ve derlenmiş derlemelerde 
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>Meta verileri derlenmiş Hizmet sözleşmeleri ile dışarı aktarmak için  
   
-1.  Bir veya daha fazla sınıf libraries.1 içine, hizmet sözleşmesi uygulamaları derleme  
+1. Bir veya daha fazla sınıf libraries.1 içine, hizmet sözleşmesi uygulamaları derleme  
   
-2.  Svcutil.exe derlenmiş derlemeleri üzerinde çalıştırın.  
+2. Svcutil.exe derlenmiş derlemeleri üzerinde çalıştırın.  
   
     > [!NOTE]
     >  Kullanmanız gerekebilir `/reference` geçme herhangi bir bağımlı derleme için dosya yolunu belirtin.  
@@ -36,9 +36,9 @@ Svcutil.exe gibi meta veri hizmetleri, sözleşmeler ve derlenmiş derlemelerde 
   
 ### <a name="to-export-metadata-for-a-compiled-service"></a>Derlenmiş bir hizmet için meta verileri dışarı aktarmak için  
   
-1.  Yürütülebilir bir derleme halinde hizmet uygulamanızı derleyin.  
+1. Yürütülebilir bir derleme halinde hizmet uygulamanızı derleyin.  
   
-2.  Hizmeti yürütülebilir dosyası için bir yapılandırma dosyası oluşturun ve bir hizmet yapılandırması ekleyin.  
+2. Hizmeti yürütülebilir dosyası için bir yapılandırma dosyası oluşturun ve bir hizmet yapılandırması ekleyin.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,7 +53,7 @@ Svcutil.exe gibi meta veri hizmetleri, sözleşmeler ve derlenmiş derlemelerde 
     </configuration>  
     ```  
   
-3.  Svcutil.exe derlenmiş hizmet yürütülebilir kullanarak çalıştırın `/serviceName` hizmetin yapılandırma adını belirtmek için anahtar.  
+3. Svcutil.exe derlenmiş hizmet yürütülebilir kullanarak çalıştırın `/serviceName` hizmetin yapılandırma adını belirtmek için anahtar.  
   
     > [!NOTE]
     >  Kullanmanız gerekebilir `/reference` geçme herhangi bir bağımlı derleme için dosya yolunu belirtin.  
@@ -64,9 +64,9 @@ Svcutil.exe gibi meta veri hizmetleri, sözleşmeler ve derlenmiş derlemelerde 
   
 ### <a name="to-export-metadata-for-compiled-data-contracts"></a>Derlenmiş veri anlaşmaları için meta verileri dışarı aktarmak için  
   
-1.  İçine bir veya daha fazla sınıf kitaplıkları, veri sözleşme uygulamaları derleyin.  
+1. İçine bir veya daha fazla sınıf kitaplıkları, veri sözleşme uygulamaları derleyin.  
   
-2.  Kullanılarak derlenen derlemeler svcutil.exe çalıştırmak `/dataContract` yalnızca meta verilerin veri sözleşmeleri oluşturulması belirtmek için anahtar.  
+2. Kullanılarak derlenen derlemeler svcutil.exe çalıştırmak `/dataContract` yalnızca meta verilerin veri sözleşmeleri oluşturulması belirtmek için anahtar.  
   
     > [!NOTE]
     >  Kullanmanız gerekebilir `/reference` geçme herhangi bir bağımlı derleme için dosya yolunu belirtin.  

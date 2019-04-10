@@ -2,12 +2,12 @@
 title: PII Güvenlik Kilidi
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 38ca91ab969624ab2128e3cfad1d8151cb8d1f88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122063"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326651"
 ---
 # <a name="pii-security-lockdown"></a>PII Güvenlik Kilidi
 Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güvenlikle ilgili çeşitli özelliklerini denetlemek nasıl gösterir:  
@@ -41,11 +41,11 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güven
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Değerleri için örnek Web.config dosyasındaki appSettings bölümündeki şifrelemek için  
   
-1.  Açık bir komut istemi kullanarak Başlat -> Çalıştır... Yazın `cmd` tıklatıp **Tamam**.  
+1. Açık bir komut istemi kullanarak Başlat -> Çalıştır... Yazın `cmd` tıklatıp **Tamam**.  
   
-2.  Aşağıdaki komutu gönderdikten tarafından geçerli .NET Framework dizinine gidin: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
+2. Aşağıdaki komutu gönderdikten tarafından geçerli .NET Framework dizinine gidin: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
   
-3.  Aşağıdaki komutu gönderdikten tarafından Web.config klasöründe appSettings yapılandırma ayarlarını şifrele: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
+3. Aşağıdaki komutu gönderdikten tarafından Web.config klasöründe appSettings yapılandırma ayarlarını şifrele: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
  ASP.NET yapılandırması dpapı'ye bir nasıl yapılır okuyarak yapılandırma dosyalarını bölümlerini şifreleme hakkında daha fazla bilgi bulunabilir ([Güvenli ASP.NET uygulamaları: Kimlik doğrulaması, yetkilendirme ve güvenli iletişimi](https://go.microsoft.com/fwlink/?LinkId=95137)) ve ASP.NET yapılandırma RSA üzerinde bir nasıl yapılır ([nasıl yapılır: ASP.NET 2.0 yapılandırma bölümleri şifrelemek RSA kullanarak](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
@@ -130,17 +130,17 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güven
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
   
-1.  Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Ayarlanacak Machine.config Düzenle `enableLoggingKnownPii` özniteliğini `true`, gerekirse, üst düğümleri ekleme.  
+2. Ayarlanacak Machine.config Düzenle `enableLoggingKnownPii` özniteliğini `true`, gerekirse, üst düğümleri ekleme.  
   
-3.  Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 #### <a name="to-clean-up-the-sample"></a>Örneği temizlemek için  
   
-1.  Ayarlanacak Machine.config Düzenle `enableLoggingKnownPii` özniteliğini `false`.  
+1. Ayarlanacak Machine.config Düzenle `enableLoggingKnownPii` özniteliğini `false`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
