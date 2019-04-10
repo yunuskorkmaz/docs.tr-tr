@@ -5,51 +5,51 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117929"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301704"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a><span data-ttu-id="63fb8-102">Nasıl yapılır: Windows Forms'a Denetimleri Kilitleme</span><span class="sxs-lookup"><span data-stu-id="63fb8-102">How to: Lock Controls to Windows Forms</span></span>
-<span data-ttu-id="63fb8-103">Windows uygulamanızın kullanıcı arabirimini (UI) tasarlarken, böylece istemeden taşıdığınızda veya diğer özellikleri ayarlarken yeniden boyutlandırabilir, doğru konumlandırılır sonra denetimleri kilitleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="63fb8-103">When you design the user interface (UI) of your Windows application, you can lock the controls once they are positioned correctly, so that you do not inadvertently move or resize them when setting other properties.</span></span>  
+# <a name="how-to-lock-controls-to-windows-forms"></a><span data-ttu-id="f8beb-102">Nasıl yapılır: Windows Forms'a Denetimleri Kilitleme</span><span class="sxs-lookup"><span data-stu-id="f8beb-102">How to: Lock Controls to Windows Forms</span></span>
+<span data-ttu-id="f8beb-103">Windows uygulamanızın kullanıcı arabirimini (UI) tasarlarken, böylece istemeden taşıdığınızda veya diğer özellikleri ayarlarken yeniden boyutlandırabilir, doğru konumlandırılır sonra denetimleri kilitleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f8beb-103">When you design the user interface (UI) of your Windows application, you can lock the controls once they are positioned correctly, so that you do not inadvertently move or resize them when setting other properties.</span></span>  
   
- <span data-ttu-id="63fb8-104">Ayrıca, kilitlemek ve tüm form üzerinde denetimleri pek çok denetimi olan formlarda yardımcı olan tek bir seferde kilidini veya tek denetimleri kilidini açabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="63fb8-104">Additionally, you can lock and unlock all the controls on the form at once, which is helpful for forms with many controls, or you can unlock individual controls.</span></span> <span data-ttu-id="63fb8-105">Tüm denetimleri form üzerinde istediğiniz yere yerleştirdikten sonra bunları hatalı hareketini önlemek için tüm kilitleme.</span><span class="sxs-lookup"><span data-stu-id="63fb8-105">Once you have placed all the controls where you want them on the form, lock them all in place to prevent erroneous movement.</span></span>  
+ <span data-ttu-id="f8beb-104">Ayrıca, kilitlemek ve tüm form üzerinde denetimleri pek çok denetimi olan formlarda yardımcı olan tek bir seferde kilidini veya tek denetimleri kilidini açabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f8beb-104">Additionally, you can lock and unlock all the controls on the form at once, which is helpful for forms with many controls, or you can unlock individual controls.</span></span> <span data-ttu-id="f8beb-105">Tüm denetimleri form üzerinde istediğiniz yere yerleştirdikten sonra bunları hatalı hareketini önlemek için tüm kilitleme.</span><span class="sxs-lookup"><span data-stu-id="f8beb-105">Once you have placed all the controls where you want them on the form, lock them all in place to prevent erroneous movement.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="63fb8-106">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="63fb8-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="63fb8-107">Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="63fb8-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="63fb8-108">Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="63fb8-108">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="f8beb-106">Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="f8beb-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="f8beb-107">Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü.</span><span class="sxs-lookup"><span data-stu-id="f8beb-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="f8beb-108">Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="f8beb-108">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-lock-a-control"></a><span data-ttu-id="63fb8-109">Bir denetim kilitlemek için</span><span class="sxs-lookup"><span data-stu-id="63fb8-109">To lock a control</span></span>  
+### <a name="to-lock-a-control"></a><span data-ttu-id="f8beb-109">Bir denetim kilitlemek için</span><span class="sxs-lookup"><span data-stu-id="f8beb-109">To lock a control</span></span>  
   
-1.  <span data-ttu-id="63fb8-110">İçinde **özellikleri** penceresinde tıklayın **kilitli** özelliğini tıklatın ve `true`.</span><span class="sxs-lookup"><span data-stu-id="63fb8-110">In the **Properties** window, click the **Locked** property and select `true`.</span></span> <span data-ttu-id="63fb8-111">(Adına çift özellik ayarı değiştirir.)</span><span class="sxs-lookup"><span data-stu-id="63fb8-111">(Double-clicking the name toggles the property setting.)</span></span>  
+1. <span data-ttu-id="f8beb-110">İçinde **özellikleri** penceresinde tıklayın **kilitli** özelliğini tıklatın ve `true`.</span><span class="sxs-lookup"><span data-stu-id="f8beb-110">In the **Properties** window, click the **Locked** property and select `true`.</span></span> <span data-ttu-id="f8beb-111">(Adına çift özellik ayarı değiştirir.)</span><span class="sxs-lookup"><span data-stu-id="f8beb-111">(Double-clicking the name toggles the property setting.)</span></span>  
   
-     <span data-ttu-id="63fb8-112">Alternatif olarak, denetime sağ tıklayın ve seçin **kilit denetimleri**.</span><span class="sxs-lookup"><span data-stu-id="63fb8-112">Alternatively, right-click the control and choose **Lock Controls**.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="63fb8-113">Denetimleri kilitleme, bunları tasarım yüzeyine bir yeni boyut veya konum sürüklenen öğesinden engeller.</span><span class="sxs-lookup"><span data-stu-id="63fb8-113">Locking controls prevents them from being dragged to a new size or location on the design surface.</span></span> <span data-ttu-id="63fb8-114">Ancak, yine de denetimleri yoluyla konumunu ve boyutunu değiştirebilirsiniz **özellikleri** penceresi veya kod.</span><span class="sxs-lookup"><span data-stu-id="63fb8-114">However, you can still change the size or location of controls by means of the **Properties** window or in code.</span></span>  
-  
-### <a name="to-lock-all-the-controls-on-a-form"></a><span data-ttu-id="63fb8-115">Bir formda tüm denetimler kilitlemek için</span><span class="sxs-lookup"><span data-stu-id="63fb8-115">To lock all the controls on a form</span></span>  
-  
-1.  <span data-ttu-id="63fb8-116">Gelen **biçimi** menüsünde seçin **kilit denetimleri**.</span><span class="sxs-lookup"><span data-stu-id="63fb8-116">From the **Format** menu, choose **Lock Controls**.</span></span>  
+     <span data-ttu-id="f8beb-112">Alternatif olarak, denetime sağ tıklayın ve seçin **kilit denetimleri**.</span><span class="sxs-lookup"><span data-stu-id="f8beb-112">Alternatively, right-click the control and choose **Lock Controls**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="63fb8-117">Bir form denetim olduğundan bu komut formun boyutunu da kilitler.</span><span class="sxs-lookup"><span data-stu-id="63fb8-117">This command locks the form's size as well, because a form is a control.</span></span>  
+    >  <span data-ttu-id="f8beb-113">Denetimleri kilitleme, bunları tasarım yüzeyine bir yeni boyut veya konum sürüklenen öğesinden engeller.</span><span class="sxs-lookup"><span data-stu-id="f8beb-113">Locking controls prevents them from being dragged to a new size or location on the design surface.</span></span> <span data-ttu-id="f8beb-114">Ancak, yine de denetimleri yoluyla konumunu ve boyutunu değiştirebilirsiniz **özellikleri** penceresi veya kod.</span><span class="sxs-lookup"><span data-stu-id="f8beb-114">However, you can still change the size or location of controls by means of the **Properties** window or in code.</span></span>  
   
-### <a name="to-unlock-all-locked-controls-on-a-form"></a><span data-ttu-id="63fb8-118">Formdaki denetimler kilitli tümünün kilidini aç</span><span class="sxs-lookup"><span data-stu-id="63fb8-118">To unlock all locked controls on a form</span></span>  
+### <a name="to-lock-all-the-controls-on-a-form"></a><span data-ttu-id="f8beb-115">Bir formda tüm denetimler kilitlemek için</span><span class="sxs-lookup"><span data-stu-id="f8beb-115">To lock all the controls on a form</span></span>  
   
-1.  <span data-ttu-id="63fb8-119">Gelen **biçimi** menüsünde seçin **kilit denetimleri**.</span><span class="sxs-lookup"><span data-stu-id="63fb8-119">From the **Format** menu, choose **Lock Controls**.</span></span>  
+1. <span data-ttu-id="f8beb-116">Gelen **biçimi** menüsünde seçin **kilit denetimleri**.</span><span class="sxs-lookup"><span data-stu-id="f8beb-116">From the **Format** menu, choose **Lock Controls**.</span></span>  
   
-     <span data-ttu-id="63fb8-120">Formdaki tüm daha önce kilitli denetimleri sunulmuştur kilidi.</span><span class="sxs-lookup"><span data-stu-id="63fb8-120">All previously locked controls on the form are now unlocked.</span></span>  
+    > [!NOTE]
+    >  <span data-ttu-id="f8beb-117">Bir form denetim olduğundan bu komut formun boyutunu da kilitler.</span><span class="sxs-lookup"><span data-stu-id="f8beb-117">This command locks the form's size as well, because a form is a control.</span></span>  
   
-### <a name="to-unlock-locked-controls-individually"></a><span data-ttu-id="63fb8-121">Tek tek denetimler kilitli kilidini aç</span><span class="sxs-lookup"><span data-stu-id="63fb8-121">To unlock locked controls individually</span></span>  
+### <a name="to-unlock-all-locked-controls-on-a-form"></a><span data-ttu-id="f8beb-118">Formdaki denetimler kilitli tümünün kilidini aç</span><span class="sxs-lookup"><span data-stu-id="f8beb-118">To unlock all locked controls on a form</span></span>  
   
-1.  <span data-ttu-id="63fb8-122">İçinde **özellikleri** penceresinde tıklayın **kilitli** özelliğini tıklatın ve `false`.</span><span class="sxs-lookup"><span data-stu-id="63fb8-122">In the **Properties** window, click the **Locked** property and select `false`.</span></span> <span data-ttu-id="63fb8-123">(Adına çift özellik ayarı değiştirir.)</span><span class="sxs-lookup"><span data-stu-id="63fb8-123">(Double-clicking the name toggles the property setting.)</span></span>  
+1. <span data-ttu-id="f8beb-119">Gelen **biçimi** menüsünde seçin **kilit denetimleri**.</span><span class="sxs-lookup"><span data-stu-id="f8beb-119">From the **Format** menu, choose **Lock Controls**.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="63fb8-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="63fb8-124">See also</span></span>
+     <span data-ttu-id="f8beb-120">Formdaki tüm daha önce kilitli denetimleri sunulmuştur kilidi.</span><span class="sxs-lookup"><span data-stu-id="f8beb-120">All previously locked controls on the form are now unlocked.</span></span>  
+  
+### <a name="to-unlock-locked-controls-individually"></a><span data-ttu-id="f8beb-121">Tek tek denetimler kilitli kilidini aç</span><span class="sxs-lookup"><span data-stu-id="f8beb-121">To unlock locked controls individually</span></span>  
+  
+1. <span data-ttu-id="f8beb-122">İçinde **özellikleri** penceresinde tıklayın **kilitli** özelliğini tıklatın ve `false`.</span><span class="sxs-lookup"><span data-stu-id="f8beb-122">In the **Properties** window, click the **Locked** property and select `false`.</span></span> <span data-ttu-id="f8beb-123">(Adına çift özellik ayarı değiştirir.)</span><span class="sxs-lookup"><span data-stu-id="f8beb-123">(Double-clicking the name toggles the property setting.)</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="f8beb-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f8beb-124">See also</span></span>
 
-- [<span data-ttu-id="63fb8-125">Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="63fb8-125">Windows Forms Controls</span></span>](index.md)
-- [<span data-ttu-id="63fb8-126">Windows Formlarında Denetimleri Düzenleme</span><span class="sxs-lookup"><span data-stu-id="63fb8-126">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
-- [<span data-ttu-id="63fb8-127">Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma</span><span class="sxs-lookup"><span data-stu-id="63fb8-127">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [<span data-ttu-id="63fb8-128">Windows Forms'ta Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="63fb8-128">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
-- [<span data-ttu-id="63fb8-129">İşlevlere Göre Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="63fb8-129">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)
+- [<span data-ttu-id="f8beb-125">Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="f8beb-125">Windows Forms Controls</span></span>](index.md)
+- [<span data-ttu-id="f8beb-126">Windows Formlarında Denetimleri Düzenleme</span><span class="sxs-lookup"><span data-stu-id="f8beb-126">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
+- [<span data-ttu-id="f8beb-127">Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma</span><span class="sxs-lookup"><span data-stu-id="f8beb-127">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [<span data-ttu-id="f8beb-128">Windows Forms'ta Kullanılacak Denetimler</span><span class="sxs-lookup"><span data-stu-id="f8beb-128">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="f8beb-129">İşlevlere Göre Windows Forms Denetimleri</span><span class="sxs-lookup"><span data-stu-id="f8beb-129">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)

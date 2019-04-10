@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-ms.openlocfilehash: eb0b40a80d37788bcab32791d7ed701a77505371
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bf900566bdb4ecf8d8961a12b5dd67ba426caf27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831450"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305604"
 ---
-# <a name="eventname-is-an-event-and-cannot-be-called-directly"></a><span data-ttu-id="acf89-102">'\<eventname >' bir olaydır ve doğrudan çağrılamaz</span><span class="sxs-lookup"><span data-stu-id="acf89-102">'\<eventname>' is an event, and cannot be called directly</span></span>
-<span data-ttu-id="acf89-103">' <`eventname`>' bir olaydır ve bu nedenle doğrudan çağrılamaz.</span><span class="sxs-lookup"><span data-stu-id="acf89-103">'<`eventname`>' is an event, and so cannot be called directly.</span></span> <span data-ttu-id="acf89-104">Kullanım bir `RaiseEvent` deyimi bir olay oluşturabilmelidir.</span><span class="sxs-lookup"><span data-stu-id="acf89-104">Use a `RaiseEvent` statement to raise an event.</span></span>  
+# <a name="eventname-is-an-event-and-cannot-be-called-directly"></a><span data-ttu-id="ce71a-102">'\<eventname >' bir olaydır ve doğrudan çağrılamaz</span><span class="sxs-lookup"><span data-stu-id="ce71a-102">'\<eventname>' is an event, and cannot be called directly</span></span>
+<span data-ttu-id="ce71a-103">' <`eventname`>' bir olaydır ve bu nedenle doğrudan çağrılamaz.</span><span class="sxs-lookup"><span data-stu-id="ce71a-103">'<`eventname`>' is an event, and so cannot be called directly.</span></span> <span data-ttu-id="ce71a-104">Kullanım bir `RaiseEvent` deyimi bir olay oluşturabilmelidir.</span><span class="sxs-lookup"><span data-stu-id="ce71a-104">Use a `RaiseEvent` statement to raise an event.</span></span>  
   
- <span data-ttu-id="acf89-105">Yordam çağrısı yordam adı için bir olay belirtir.</span><span class="sxs-lookup"><span data-stu-id="acf89-105">A procedure call specifies an event for the procedure name.</span></span> <span data-ttu-id="acf89-106">Bir olay işleyicisi bir yordam, ancak olay gerçekleşti ve işlenen gerekir bir sinyal bir cihaz.</span><span class="sxs-lookup"><span data-stu-id="acf89-106">An event handler is a procedure, but the event itself is a signaling device, which must be raised and handled.</span></span>  
+ <span data-ttu-id="ce71a-105">Yordam çağrısı yordam adı için bir olay belirtir.</span><span class="sxs-lookup"><span data-stu-id="ce71a-105">A procedure call specifies an event for the procedure name.</span></span> <span data-ttu-id="ce71a-106">Bir olay işleyicisi bir yordam, ancak olay gerçekleşti ve işlenen gerekir bir sinyal bir cihaz.</span><span class="sxs-lookup"><span data-stu-id="ce71a-106">An event handler is a procedure, but the event itself is a signaling device, which must be raised and handled.</span></span>  
   
- <span data-ttu-id="acf89-107">**Hata Kimliği:** BC32022</span><span class="sxs-lookup"><span data-stu-id="acf89-107">**Error ID:** BC32022</span></span>  
+ <span data-ttu-id="ce71a-107">**Hata Kimliği:** BC32022</span><span class="sxs-lookup"><span data-stu-id="ce71a-107">**Error ID:** BC32022</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="acf89-108">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="acf89-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ce71a-108">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="ce71a-108">To correct this error</span></span>  
   
-1.  <span data-ttu-id="acf89-109">Kullanım bir `RaiseEvent` deyimini olaya sinyal ve yordamı veya bunu işleyen yordamlarını çağırma.</span><span class="sxs-lookup"><span data-stu-id="acf89-109">Use a `RaiseEvent` statement to signal an event and invoke the procedure or procedures that handle it.</span></span>  
+1. <span data-ttu-id="ce71a-109">Kullanım bir `RaiseEvent` deyimini olaya sinyal ve yordamı veya bunu işleyen yordamlarını çağırma.</span><span class="sxs-lookup"><span data-stu-id="ce71a-109">Use a `RaiseEvent` statement to signal an event and invoke the procedure or procedures that handle it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="acf89-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="acf89-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce71a-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ce71a-110">See also</span></span>
 
-- [<span data-ttu-id="acf89-111">RaiseEvent Deyimi</span><span class="sxs-lookup"><span data-stu-id="acf89-111">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [<span data-ttu-id="ce71a-111">RaiseEvent Deyimi</span><span class="sxs-lookup"><span data-stu-id="ce71a-111">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

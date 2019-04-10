@@ -2,36 +2,36 @@
 title: "Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme"
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302205"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a><span data-ttu-id="433d5-102">Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme</span><span class="sxs-lookup"><span data-stu-id="433d5-102">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>
-<span data-ttu-id="433d5-103">Bu konuda, Keşif proxy'si uygulama anlatılmaktadır dört konuları saniyedir.</span><span class="sxs-lookup"><span data-stu-id="433d5-103">This topic is the second of four topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="433d5-104">Önceki konu [nasıl yapılır: Keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Keşif proxy'si uygulanır.</span><span class="sxs-lookup"><span data-stu-id="433d5-104">In the previous topic, [How to: Implement a Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), you implemented a discovery proxy.</span></span> <span data-ttu-id="433d5-105">Bu konu başlığında, duyuru iletiler gönderen bir WCF hizmeti oluşturma (`Hello` ve `Bye`) kaydetmek ve kendisi ile keşif proxy'si kaydını silmek keşif proxy'si için neden olur.</span><span class="sxs-lookup"><span data-stu-id="433d5-105">In this topic, you create a WCF service that sends announcement messages (`Hello` and `Bye`) to the discovery proxy, causing it to register and unregister itself with the discovery proxy.</span></span>
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a><span data-ttu-id="c82b9-102">Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme</span><span class="sxs-lookup"><span data-stu-id="c82b9-102">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>
+<span data-ttu-id="c82b9-103">Bu konuda, Keşif proxy'si uygulama anlatılmaktadır dört konuları saniyedir.</span><span class="sxs-lookup"><span data-stu-id="c82b9-103">This topic is the second of four topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="c82b9-104">Önceki konu [nasıl yapılır: Keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Keşif proxy'si uygulanır.</span><span class="sxs-lookup"><span data-stu-id="c82b9-104">In the previous topic, [How to: Implement a Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), you implemented a discovery proxy.</span></span> <span data-ttu-id="c82b9-105">Bu konu başlığında, duyuru iletiler gönderen bir WCF hizmeti oluşturma (`Hello` ve `Bye`) kaydetmek ve kendisi ile keşif proxy'si kaydını silmek keşif proxy'si için neden olur.</span><span class="sxs-lookup"><span data-stu-id="c82b9-105">In this topic, you create a WCF service that sends announcement messages (`Hello` and `Bye`) to the discovery proxy, causing it to register and unregister itself with the discovery proxy.</span></span>
 
-### <a name="to-define-the-service-contract"></a><span data-ttu-id="433d5-106">Hizmet sözleşmesini tanımlama</span><span class="sxs-lookup"><span data-stu-id="433d5-106">To define the service contract</span></span>
+### <a name="to-define-the-service-contract"></a><span data-ttu-id="c82b9-106">Hizmet sözleşmesini tanımlama</span><span class="sxs-lookup"><span data-stu-id="c82b9-106">To define the service contract</span></span>
 
-1.  <span data-ttu-id="433d5-107">Yeni bir konsol uygulama projesi Ekle `DiscoveryProxyExample` adlı çözüm `Service`.</span><span class="sxs-lookup"><span data-stu-id="433d5-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Service`.</span></span>
+1. <span data-ttu-id="c82b9-107">Yeni bir konsol uygulama projesi Ekle `DiscoveryProxyExample` adlı çözüm `Service`.</span><span class="sxs-lookup"><span data-stu-id="c82b9-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Service`.</span></span>
 
-2.  <span data-ttu-id="433d5-108">Aşağıdaki derlemelere başvurular ekleyin:</span><span class="sxs-lookup"><span data-stu-id="433d5-108">Add references to the following assemblies:</span></span>
+2. <span data-ttu-id="c82b9-108">Aşağıdaki derlemelere başvurular ekleyin:</span><span class="sxs-lookup"><span data-stu-id="c82b9-108">Add references to the following assemblies:</span></span>
 
-    1.  <span data-ttu-id="433d5-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="433d5-109">System.ServiceModel</span></span>
+    1.  <span data-ttu-id="c82b9-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="c82b9-109">System.ServiceModel</span></span>
 
-    2.  <span data-ttu-id="433d5-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="433d5-110">System.ServiceModel.Discovery</span></span>
+    2.  <span data-ttu-id="c82b9-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="c82b9-110">System.ServiceModel.Discovery</span></span>
 
-3.  <span data-ttu-id="433d5-111">Adlı projeye yeni bir sınıf ekleyin `CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="433d5-111">Add a new class to the project called `CalculatorService`.</span></span>
+3. <span data-ttu-id="c82b9-111">Adlı projeye yeni bir sınıf ekleyin `CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="c82b9-111">Add a new class to the project called `CalculatorService`.</span></span>
 
-4.  <span data-ttu-id="433d5-112">Aşağıdaki using deyimlerini.</span><span class="sxs-lookup"><span data-stu-id="433d5-112">Add the following using statements.</span></span>
+4. <span data-ttu-id="c82b9-112">Aşağıdaki using deyimlerini.</span><span class="sxs-lookup"><span data-stu-id="c82b9-112">Add the following using statements.</span></span>
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  <span data-ttu-id="433d5-113">CalculatorService.cs içinde hizmet sözleşmesini tanımlamaktır.</span><span class="sxs-lookup"><span data-stu-id="433d5-113">Within CalculatorService.cs, define the service contract.</span></span>
+5. <span data-ttu-id="c82b9-113">CalculatorService.cs içinde hizmet sözleşmesini tanımlamaktır.</span><span class="sxs-lookup"><span data-stu-id="c82b9-113">Within CalculatorService.cs, define the service contract.</span></span>
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ ms.locfileid: "59177833"
     }
     ```
 
-6.  <span data-ttu-id="433d5-114">Ayrıca CalculatorService.cs içinde hizmet sözleşmesini uygulama.</span><span class="sxs-lookup"><span data-stu-id="433d5-114">Also within CalculatorService.cs, implement the service contract.</span></span>
+6. <span data-ttu-id="c82b9-114">Ayrıca CalculatorService.cs içinde hizmet sözleşmesini uygulama.</span><span class="sxs-lookup"><span data-stu-id="c82b9-114">Also within CalculatorService.cs, implement the service contract.</span></span>
 
     ```csharp
     // Service class which implements the service contract.
@@ -89,11 +89,11 @@ ms.locfileid: "59177833"
     }
     ```
 
-### <a name="to-host-the-service"></a><span data-ttu-id="433d5-115">Ana bilgisayar hizmeti</span><span class="sxs-lookup"><span data-stu-id="433d5-115">To host the service</span></span>
+### <a name="to-host-the-service"></a><span data-ttu-id="c82b9-115">Ana bilgisayar hizmeti</span><span class="sxs-lookup"><span data-stu-id="c82b9-115">To host the service</span></span>
 
-1.  <span data-ttu-id="433d5-116">Projeyi oluşturduğunuzda oluşturulan Program.cs dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="433d5-116">Open the Program.cs file that was generated when you created the project.</span></span>
+1. <span data-ttu-id="c82b9-116">Projeyi oluşturduğunuzda oluşturulan Program.cs dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="c82b9-116">Open the Program.cs file that was generated when you created the project.</span></span>
 
-2.  <span data-ttu-id="433d5-117">Aşağıdaki using deyimlerini.</span><span class="sxs-lookup"><span data-stu-id="433d5-117">Add the following using statements.</span></span>
+2. <span data-ttu-id="c82b9-117">Aşağıdaki using deyimlerini.</span><span class="sxs-lookup"><span data-stu-id="c82b9-117">Add the following using statements.</span></span>
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ ms.locfileid: "59177833"
     using System.ServiceModel.Discovery;
     ```
 
-3.  <span data-ttu-id="433d5-118">İçinde `Main()` yöntemine aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="433d5-118">Within the `Main()` method, add the following code:</span></span>
+3. <span data-ttu-id="c82b9-118">İçinde `Main()` yöntemine aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="c82b9-118">Within the `Main()` method, add the following code:</span></span>
 
     ```csharp
     // Define the base address of the service
@@ -156,10 +156,10 @@ ms.locfileid: "59177833"
     }
     ```
 
-<span data-ttu-id="433d5-119">Kayıtlı bir bulunabilir hizmet uygulama tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="433d5-119">You have completed implementing a discoverable service.</span></span> <span data-ttu-id="433d5-120">Geçin [nasıl yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulama](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span><span class="sxs-lookup"><span data-stu-id="433d5-120">Continue on to [How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span></span>
+<span data-ttu-id="c82b9-119">Kayıtlı bir bulunabilir hizmet uygulama tamamladınız.</span><span class="sxs-lookup"><span data-stu-id="c82b9-119">You have completed implementing a discoverable service.</span></span> <span data-ttu-id="c82b9-120">Geçin [nasıl yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulama](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span><span class="sxs-lookup"><span data-stu-id="c82b9-120">Continue on to [How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="433d5-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="433d5-121">Example</span></span>
- <span data-ttu-id="433d5-122">Bu konu başlığında kullanılan kod tam listesi budur.</span><span class="sxs-lookup"><span data-stu-id="433d5-122">This is the full listing of the code used in this topic.</span></span>
+## <a name="example"></a><span data-ttu-id="c82b9-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="c82b9-121">Example</span></span>
+ <span data-ttu-id="c82b9-122">Bu konu başlığında kullanılan kod tam listesi budur.</span><span class="sxs-lookup"><span data-stu-id="c82b9-122">This is the full listing of the code used in this topic.</span></span>
 
 ```csharp
 // CalculatorService.cs
@@ -289,8 +289,8 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="433d5-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="433d5-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c82b9-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c82b9-123">See also</span></span>
 
-- [<span data-ttu-id="433d5-124">WCF Keşfetme</span><span class="sxs-lookup"><span data-stu-id="433d5-124">WCF Discovery</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [<span data-ttu-id="433d5-125">Nasıl yapılır: Keşif Proxy'si Uygulama</span><span class="sxs-lookup"><span data-stu-id="433d5-125">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [<span data-ttu-id="433d5-126">Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma</span><span class="sxs-lookup"><span data-stu-id="433d5-126">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [<span data-ttu-id="c82b9-124">WCF Keşfetme</span><span class="sxs-lookup"><span data-stu-id="c82b9-124">WCF Discovery</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [<span data-ttu-id="c82b9-125">Nasıl yapılır: Keşif Proxy'si Uygulama</span><span class="sxs-lookup"><span data-stu-id="c82b9-125">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [<span data-ttu-id="c82b9-126">Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma</span><span class="sxs-lookup"><span data-stu-id="c82b9-126">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
