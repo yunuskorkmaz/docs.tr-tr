@@ -1,5 +1,5 @@
 ---
-title: <nameEntry> Öğesi
+title: <nameEntry> Öğe
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -8,53 +8,53 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: b5f92ca2956f32382b12c9a1dec4e5d41ea4ee2a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225332"
 ---
-# <a name="nameentry-element"></a><span data-ttu-id="42c8d-102">\<nameEntry > öğesi</span><span class="sxs-lookup"><span data-stu-id="42c8d-102">\<nameEntry> Element</span></span>
-<span data-ttu-id="42c8d-103">Çok sayıda kolay adlara sahip bir sınıf sağlar ve kolay algoritma adı için bir sınıf adı eşler.</span><span class="sxs-lookup"><span data-stu-id="42c8d-103">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>  
+# <a name="nameentry-element"></a><span data-ttu-id="9e701-102">\<nameEntry > öğesi</span><span class="sxs-lookup"><span data-stu-id="9e701-102">\<nameEntry> Element</span></span>
+<span data-ttu-id="9e701-103">Çok sayıda kolay adlara sahip bir sınıf sağlar ve kolay algoritma adı için bir sınıf adı eşler.</span><span class="sxs-lookup"><span data-stu-id="9e701-103">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>  
   
- <span data-ttu-id="42c8d-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="42c8d-104">\<configuration></span></span>  
-<span data-ttu-id="42c8d-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="42c8d-105">\<mscorlib></span></span>  
-<span data-ttu-id="42c8d-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="42c8d-106">\<cryptographySettings></span></span>  
-<span data-ttu-id="42c8d-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="42c8d-107">\<cryptoNameMapping></span></span>  
-<span data-ttu-id="42c8d-108">\<nameEntry ></span><span class="sxs-lookup"><span data-stu-id="42c8d-108">\<nameEntry></span></span>  
+ <span data-ttu-id="9e701-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="9e701-104">\<configuration></span></span>  
+<span data-ttu-id="9e701-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="9e701-105">\<mscorlib></span></span>  
+<span data-ttu-id="9e701-106">\<cryptographySettings ></span><span class="sxs-lookup"><span data-stu-id="9e701-106">\<cryptographySettings></span></span>  
+<span data-ttu-id="9e701-107">\<cryptoNameMapping ></span><span class="sxs-lookup"><span data-stu-id="9e701-107">\<cryptoNameMapping></span></span>  
+<span data-ttu-id="9e701-108">\<nameEntry ></span><span class="sxs-lookup"><span data-stu-id="9e701-108">\<nameEntry></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42c8d-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="42c8d-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e701-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9e701-109">Syntax</span></span>  
   
 ```xml  
 <nameEntry name="friendly name" Class="class name" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="42c8d-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="42c8d-110">Attributes and Elements</span></span>  
- <span data-ttu-id="42c8d-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="42c8d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9e701-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="9e701-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="9e701-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="9e701-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="42c8d-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="42c8d-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="9e701-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="9e701-112">Attributes</span></span>  
   
-|<span data-ttu-id="42c8d-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="42c8d-113">Attribute</span></span>|<span data-ttu-id="42c8d-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="42c8d-114">Description</span></span>|  
+|<span data-ttu-id="9e701-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="9e701-113">Attribute</span></span>|<span data-ttu-id="9e701-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9e701-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="42c8d-115">**Adı**</span><span class="sxs-lookup"><span data-stu-id="42c8d-115">**name**</span></span>|<span data-ttu-id="42c8d-116">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="42c8d-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="42c8d-117">Şifreleme sınıfına uygulayan algoritma kolay adı belirtir.</span><span class="sxs-lookup"><span data-stu-id="42c8d-117">Specifies the friendly name of the algorithm that the cryptography class implements.</span></span>|  
-|<span data-ttu-id="42c8d-118">**class**</span><span class="sxs-lookup"><span data-stu-id="42c8d-118">**class**</span></span>|<span data-ttu-id="42c8d-119">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="42c8d-119">Required attribute.</span></span><br /><br /> <span data-ttu-id="42c8d-120">Değeri belirtir **adı** özniteliğini [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) öğesi.</span><span class="sxs-lookup"><span data-stu-id="42c8d-120">Specifies the value for the **name** attribute in the [\<cryptoClass>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) element.</span></span>|  
+|**<span data-ttu-id="9e701-115">name</span><span class="sxs-lookup"><span data-stu-id="9e701-115">name</span></span>**|<span data-ttu-id="9e701-116">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="9e701-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="9e701-117">Şifreleme sınıfına uygulayan algoritma kolay adı belirtir.</span><span class="sxs-lookup"><span data-stu-id="9e701-117">Specifies the friendly name of the algorithm that the cryptography class implements.</span></span>|  
+|**<span data-ttu-id="9e701-118">sınıf</span><span class="sxs-lookup"><span data-stu-id="9e701-118">class</span></span>**|<span data-ttu-id="9e701-119">Gerekli öznitelik.</span><span class="sxs-lookup"><span data-stu-id="9e701-119">Required attribute.</span></span><br /><br /> <span data-ttu-id="9e701-120">Değeri belirtir **adı** özniteliğini [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) öğesi.</span><span class="sxs-lookup"><span data-stu-id="9e701-120">Specifies the value for the **name** attribute in the [\<cryptoClass>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) element.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="42c8d-121">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="42c8d-121">Child Elements</span></span>  
- <span data-ttu-id="42c8d-122">Yok.</span><span class="sxs-lookup"><span data-stu-id="42c8d-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="9e701-121">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="9e701-121">Child Elements</span></span>  
+ <span data-ttu-id="9e701-122">Yok.</span><span class="sxs-lookup"><span data-stu-id="9e701-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="42c8d-123">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="42c8d-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="9e701-123">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="9e701-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="42c8d-124">Öğe</span><span class="sxs-lookup"><span data-stu-id="42c8d-124">Element</span></span>|<span data-ttu-id="42c8d-125">Açıklama</span><span class="sxs-lookup"><span data-stu-id="42c8d-125">Description</span></span>|  
+|<span data-ttu-id="9e701-124">Öğe</span><span class="sxs-lookup"><span data-stu-id="9e701-124">Element</span></span>|<span data-ttu-id="9e701-125">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9e701-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="42c8d-126">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="42c8d-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.web`|<span data-ttu-id="42c8d-127">ASP.NET yapılandırma bölümü için olan kök öğesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="42c8d-127">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`configuration`|<span data-ttu-id="9e701-126">Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.</span><span class="sxs-lookup"><span data-stu-id="9e701-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.web`|<span data-ttu-id="9e701-127">ASP.NET yapılandırma bölümü için olan kök öğesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="9e701-127">Specifies the root element for the ASP.NET configuration section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="42c8d-128">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="42c8d-128">Remarks</span></span>  
- <span data-ttu-id="42c8d-129">**Adı** özniteliği bulunan soyut sınıflar birinin adı olabilir <xref:System.Security.Cryptography> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="42c8d-129">The **name** attribute can be the name of one of the abstract classes found in the <xref:System.Security.Cryptography> namespace.</span></span> <span data-ttu-id="42c8d-130">Çağırdığınızda **Oluştur** bir soyut bir şifreleme sınıfına yönteminde, soyut sınıf adı için geçirilir <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="42c8d-130">When you call the **Create** method on an abstract cryptography class, the abstract class name is passed to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> method.</span></span> <span data-ttu-id="42c8d-131">**CreateFromName** tarafından belirtilen türün bir örneğini döndürür **sınıfı** özniteliği.</span><span class="sxs-lookup"><span data-stu-id="42c8d-131">**CreateFromName** returns an instance of the type indicated by the **class** attribute.</span></span> <span data-ttu-id="42c8d-132">Varsa **adı** kısa bir ad özniteliği olan RSA gibi bu adı çağırırken kullanabilirsiniz **CreateFromName** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="42c8d-132">If the **name** attribute is a short name, such as RSA, you can use that name when calling the **CreateFromName** method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9e701-128">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9e701-128">Remarks</span></span>  
+ <span data-ttu-id="9e701-129">**Adı** özniteliği bulunan soyut sınıflar birinin adı olabilir <xref:System.Security.Cryptography> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="9e701-129">The **name** attribute can be the name of one of the abstract classes found in the <xref:System.Security.Cryptography> namespace.</span></span> <span data-ttu-id="9e701-130">Çağırdığınızda **Oluştur** bir soyut bir şifreleme sınıfına yönteminde, soyut sınıf adı için geçirilir <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9e701-130">When you call the **Create** method on an abstract cryptography class, the abstract class name is passed to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> method.</span></span> <span data-ttu-id="9e701-131">**CreateFromName** tarafından belirtilen türün bir örneğini döndürür **sınıfı** özniteliği.</span><span class="sxs-lookup"><span data-stu-id="9e701-131">**CreateFromName** returns an instance of the type indicated by the **class** attribute.</span></span> <span data-ttu-id="9e701-132">Varsa **adı** kısa bir ad özniteliği olan RSA gibi bu adı çağırırken kullanabilirsiniz **CreateFromName** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="9e701-132">If the **name** attribute is a short name, such as RSA, you can use that name when calling the **CreateFromName** method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="42c8d-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="42c8d-133">Example</span></span>  
- <span data-ttu-id="42c8d-134">Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<nameEntry >** bir şifreleme sınıfına başvurmak için ve çalışma zamanı yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="42c8d-134">The following example shows how to use the **\<nameEntry>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="42c8d-135">Ardından "RSA" dize iletebileceğiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemini <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesne.</span><span class="sxs-lookup"><span data-stu-id="42c8d-135">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="9e701-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="9e701-133">Example</span></span>  
+ <span data-ttu-id="9e701-134">Aşağıdaki örnek nasıl kullanılacağını gösterir  **\<nameEntry >** bir şifreleme sınıfına başvurmak için ve çalışma zamanı yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="9e701-134">The following example shows how to use the **\<nameEntry>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="9e701-135">Ardından "RSA" dize iletebileceğiniz <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> yöntemini <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> döndürülecek yöntemi bir `MyCryptoRSAClass` nesne.</span><span class="sxs-lookup"><span data-stu-id="9e701-135">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,9 @@ ms.locfileid: "55285941"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="42c8d-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="42c8d-136">See also</span></span>
-- [<span data-ttu-id="42c8d-137">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="42c8d-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="42c8d-138">Şifreleme Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="42c8d-138">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [<span data-ttu-id="42c8d-139">Şifreleme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="42c8d-139">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
-- [<span data-ttu-id="42c8d-140">Şifreleme Sınıflarını Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="42c8d-140">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="9e701-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9e701-136">See also</span></span>
+
+- [<span data-ttu-id="9e701-137">Yapılandırma Dosyası Şeması</span><span class="sxs-lookup"><span data-stu-id="9e701-137">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="9e701-138">Şifreleme Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="9e701-138">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [<span data-ttu-id="9e701-139">Şifreleme Hizmetleri</span><span class="sxs-lookup"><span data-stu-id="9e701-139">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="9e701-140">Şifreleme Sınıflarını Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="9e701-140">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

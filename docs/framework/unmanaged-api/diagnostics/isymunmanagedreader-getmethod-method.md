@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 031e51919d9abd7092756cc42fb35dcc0592758c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ab6228866434b35525b16e97b8cba718b849dea1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213213"
 ---
-# <a name="isymunmanagedreadergetmethod-method"></a><span data-ttu-id="e678d-102">ISymUnmanagedReader::GetMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e678d-102">ISymUnmanagedReader::GetMethod Method</span></span>
-<span data-ttu-id="e678d-103">Token metody verilen sembol okuyucu yöntemi alır.</span><span class="sxs-lookup"><span data-stu-id="e678d-103">Gets a symbol reader method, given a method token.</span></span>  
+# <a name="isymunmanagedreadergetmethod-method"></a><span data-ttu-id="84a14-102">ISymUnmanagedReader::GetMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="84a14-102">ISymUnmanagedReader::GetMethod Method</span></span>
+<span data-ttu-id="84a14-103">Token metody verilen sembol okuyucu yöntemi alır.</span><span class="sxs-lookup"><span data-stu-id="84a14-103">Gets a symbol reader method, given a method token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e678d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e678d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84a14-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="84a14-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethod (  
@@ -35,18 +35,19 @@ HRESULT GetMethod (
     [out, retval] ISymUnmanagedMethod**  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e678d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e678d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="84a14-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="84a14-105">Parameters</span></span>  
  `token`  
- <span data-ttu-id="e678d-106">[in] Token metody</span><span class="sxs-lookup"><span data-stu-id="e678d-106">[in] The method token.</span></span>  
+ <span data-ttu-id="84a14-106">[in] Token metody</span><span class="sxs-lookup"><span data-stu-id="84a14-106">[in] The method token.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="e678d-107">[out] Döndürülen arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="e678d-107">[out] A pointer to the returned interface.</span></span>  
+ <span data-ttu-id="84a14-107">[out] Döndürülen arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="84a14-107">[out] A pointer to the returned interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e678d-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="e678d-108">Return Value</span></span>  
- <span data-ttu-id="e678d-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="e678d-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="84a14-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="84a14-108">Return Value</span></span>  
+ <span data-ttu-id="84a14-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="84a14-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e678d-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e678d-110">Requirements</span></span>  
- <span data-ttu-id="e678d-111">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e678d-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84a14-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="84a14-110">Requirements</span></span>  
+ <span data-ttu-id="84a14-111">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="84a14-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e678d-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e678d-112">See also</span></span>
-- [<span data-ttu-id="e678d-113">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e678d-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="84a14-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="84a14-112">See also</span></span>
+
+- [<span data-ttu-id="84a14-113">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="84a14-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

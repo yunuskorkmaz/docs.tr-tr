@@ -17,32 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bd3d411ad6fe7f65d1eeb25754794704752009e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d14d542a8c1d8adeaf56dc1564e8e10121cd4064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224227"
 ---
-# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="b2227-102">ISymUnmanagedWriter::SetUserEntryPoint Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b2227-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
-<span data-ttu-id="b2227-103">Bu modülü için giriş noktası kullanıcı tanımlı bir yöntemini belirtir.</span><span class="sxs-lookup"><span data-stu-id="b2227-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="b2227-104">Örneğin, bu giriş noktası, derleyicinin ürettiği saptamalar ana önce yerine kullanıcının ana yöntem olabilir.</span><span class="sxs-lookup"><span data-stu-id="b2227-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
+# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="0fe3e-102">ISymUnmanagedWriter::SetUserEntryPoint Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0fe3e-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
+<span data-ttu-id="0fe3e-103">Bu modülü için giriş noktası kullanıcı tanımlı bir yöntemini belirtir.</span><span class="sxs-lookup"><span data-stu-id="0fe3e-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="0fe3e-104">Örneğin, bu giriş noktası, derleyicinin ürettiği saptamalar ana önce yerine kullanıcının ana yöntem olabilir.</span><span class="sxs-lookup"><span data-stu-id="0fe3e-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b2227-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b2227-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0fe3e-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0fe3e-105">Syntax</span></span>  
   
 ```  
 HRESULT SetUserEntryPoint(  
     [in] mdMethodDef entryMethod);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b2227-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b2227-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0fe3e-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0fe3e-106">Parameters</span></span>  
  `entryMethod`  
- <span data-ttu-id="b2227-107">[in] Kullanıcı girişini yöntemi için meta veri belirteci gelin.</span><span class="sxs-lookup"><span data-stu-id="b2227-107">[in] The metadata token for the method that is the user entry point.</span></span>  
+ <span data-ttu-id="0fe3e-107">[in] Kullanıcı girişini yöntemi için meta veri belirteci gelin.</span><span class="sxs-lookup"><span data-stu-id="0fe3e-107">[in] The metadata token for the method that is the user entry point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b2227-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b2227-108">Return Value</span></span>  
- <span data-ttu-id="b2227-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="b2227-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0fe3e-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="0fe3e-108">Return Value</span></span>  
+ <span data-ttu-id="0fe3e-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="0fe3e-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b2227-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b2227-110">Requirements</span></span>  
- <span data-ttu-id="b2227-111">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b2227-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0fe3e-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0fe3e-110">Requirements</span></span>  
+ <span data-ttu-id="0fe3e-111">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0fe3e-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2227-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b2227-112">See also</span></span>
-- [<span data-ttu-id="b2227-113">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b2227-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0fe3e-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0fe3e-112">See also</span></span>
+
+- [<span data-ttu-id="0fe3e-113">ISymUnmanagedWriter Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0fe3e-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

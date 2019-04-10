@@ -6,28 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: b4f4297fdc5c49270ac97513295fc5aa2e0f2213
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209748"
 ---
-# <a name="typography-how-to-topics"></a><span data-ttu-id="9fa30-102">Tipografi ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="9fa30-102">Typography How-to Topics</span></span>
-<span data-ttu-id="9fa30-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zengin metin uygulamalarınızda sunumu desteği.</span><span class="sxs-lookup"><span data-stu-id="9fa30-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
+# <a name="typography-how-to-topics"></a><span data-ttu-id="b42a0-102">Tipografi ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="b42a0-102">Typography How-to Topics</span></span>
+<span data-ttu-id="b42a0-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zengin metin uygulamalarınızda sunumu desteği.</span><span class="sxs-lookup"><span data-stu-id="b42a0-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9fa30-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="9fa30-104">In This Section</span></span>  
- [<span data-ttu-id="9fa30-105">Metin Süslemesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="9fa30-105">Create a Text Decoration</span></span>](how-to-create-a-text-decoration.md)  
- [<span data-ttu-id="9fa30-106">Köprünün Altı Çizili Olup Olmadığını Belirtme</span><span class="sxs-lookup"><span data-stu-id="9fa30-106">Specify Whether a Hyperlink is Underlined</span></span>](how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [<span data-ttu-id="9fa30-107">Metne Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="9fa30-107">Apply Transforms to Text</span></span>](how-to-apply-transforms-to-text.md)  
- [<span data-ttu-id="9fa30-108">Metne Animasyon Uygulama</span><span class="sxs-lookup"><span data-stu-id="9fa30-108">Apply Animations to Text</span></span>](how-to-apply-animations-to-text.md)  
- [<span data-ttu-id="9fa30-109">Gölgeli Metin Oluşturma</span><span class="sxs-lookup"><span data-stu-id="9fa30-109">Create Text with a Shadow</span></span>](how-to-create-text-with-a-shadow.md)  
- [<span data-ttu-id="9fa30-110">Anahatları Belirlenmiş Metin Oluşturma</span><span class="sxs-lookup"><span data-stu-id="9fa30-110">Create Outlined Text</span></span>](how-to-create-outlined-text.md)  
- [<span data-ttu-id="9fa30-111">Denetimin Arka Planına Metin Çizme</span><span class="sxs-lookup"><span data-stu-id="9fa30-111">Draw Text to a Control's Background</span></span>](how-to-draw-text-to-a-control-background.md)  
- [<span data-ttu-id="9fa30-112">Görsele Metin Çizme</span><span class="sxs-lookup"><span data-stu-id="9fa30-112">Draw Text to a Visual</span></span>](how-to-draw-text-to-a-visual.md)  
- [<span data-ttu-id="9fa30-113">XAML'de Özel Karakterler Kullanma</span><span class="sxs-lookup"><span data-stu-id="9fa30-113">Use Special Characters in XAML</span></span>](how-to-use-special-characters-in-xaml.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b42a0-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b42a0-104">In This Section</span></span>  
+ [<span data-ttu-id="b42a0-105">Metin Süslemesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b42a0-105">Create a Text Decoration</span></span>](how-to-create-a-text-decoration.md)  
+ [<span data-ttu-id="b42a0-106">Köprünün Altı Çizili Olup Olmadığını Belirtme</span><span class="sxs-lookup"><span data-stu-id="b42a0-106">Specify Whether a Hyperlink is Underlined</span></span>](how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [<span data-ttu-id="b42a0-107">Metne Dönüşüm Uygulama</span><span class="sxs-lookup"><span data-stu-id="b42a0-107">Apply Transforms to Text</span></span>](how-to-apply-transforms-to-text.md)  
+ [<span data-ttu-id="b42a0-108">Metne Animasyon Uygulama</span><span class="sxs-lookup"><span data-stu-id="b42a0-108">Apply Animations to Text</span></span>](how-to-apply-animations-to-text.md)  
+ [<span data-ttu-id="b42a0-109">Gölgeli Metin Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b42a0-109">Create Text with a Shadow</span></span>](how-to-create-text-with-a-shadow.md)  
+ [<span data-ttu-id="b42a0-110">Anahatları Belirlenmiş Metin Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b42a0-110">Create Outlined Text</span></span>](how-to-create-outlined-text.md)  
+ [<span data-ttu-id="b42a0-111">Denetimin Arka Planına Metin Çizme</span><span class="sxs-lookup"><span data-stu-id="b42a0-111">Draw Text to a Control's Background</span></span>](how-to-draw-text-to-a-control-background.md)  
+ [<span data-ttu-id="b42a0-112">Görsele Metin Çizme</span><span class="sxs-lookup"><span data-stu-id="b42a0-112">Draw Text to a Visual</span></span>](how-to-draw-text-to-a-visual.md)  
+ [<span data-ttu-id="b42a0-113">XAML'de Özel Karakterler Kullanma</span><span class="sxs-lookup"><span data-stu-id="b42a0-113">Use Special Characters in XAML</span></span>](how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9fa30-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9fa30-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b42a0-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b42a0-114">See also</span></span>
+
 - <xref:System.Windows.Documents.Typography>
-- [<span data-ttu-id="9fa30-115">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="9fa30-115">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="9fa30-116">OpenType Yazı Tipi Özellikleri</span><span class="sxs-lookup"><span data-stu-id="9fa30-116">OpenType Font Features</span></span>](opentype-font-features.md)
+- [<span data-ttu-id="b42a0-115">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="b42a0-115">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="b42a0-116">OpenType Yazı Tipi Özellikleri</span><span class="sxs-lookup"><span data-stu-id="b42a0-116">OpenType Font Features</span></span>](opentype-font-features.md)

@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b1414f01c942a02fe984bc39475bd1451171d79
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7b1fe219c4c852792390b48b0ea4d38adb702281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218894"
 ---
-# <a name="functionleave-function"></a><span data-ttu-id="bde86-102">FunctionLeave İşlevi</span><span class="sxs-lookup"><span data-stu-id="bde86-102">FunctionLeave Function</span></span>
-<span data-ttu-id="bde86-103">Profil Oluşturucu bir işlev hakkında çağırana döndürmesi olduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="bde86-103">Notifies the profiler that a function is about to return to the caller.</span></span>  
+# <a name="functionleave-function"></a><span data-ttu-id="dbbb8-102">FunctionLeave İşlevi</span><span class="sxs-lookup"><span data-stu-id="dbbb8-102">FunctionLeave Function</span></span>
+<span data-ttu-id="dbbb8-103">Profil Oluşturucu bir işlev hakkında çağırana döndürmesi olduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-103">Notifies the profiler that a function is about to return to the caller.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bde86-104">`FunctionLeave` İşlevi, .NET Framework 2.0 sürümünde kullanım dışı.</span><span class="sxs-lookup"><span data-stu-id="bde86-104">The `FunctionLeave` function is deprecated in the .NET Framework 2.0.</span></span> <span data-ttu-id="bde86-105">Çalışmaya devam eder ancak performans cezasına sebep olabilir.</span><span class="sxs-lookup"><span data-stu-id="bde86-105">It will continue to work, but will incur a performance penalty.</span></span> <span data-ttu-id="bde86-106">Kullanım [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) işlevini.</span><span class="sxs-lookup"><span data-stu-id="bde86-106">Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.</span></span>  
+>  <span data-ttu-id="dbbb8-104">`FunctionLeave` İşlevi, .NET Framework 2.0 sürümünde kullanım dışı.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-104">The `FunctionLeave` function is deprecated in the .NET Framework 2.0.</span></span> <span data-ttu-id="dbbb8-105">Çalışmaya devam eder ancak performans cezasına sebep olabilir.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-105">It will continue to work, but will incur a performance penalty.</span></span> <span data-ttu-id="dbbb8-106">Kullanım [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) işlevini.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-106">Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bde86-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bde86-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbbb8-107">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="dbbb8-107">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionLeave (  
@@ -37,35 +37,36 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bde86-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="bde86-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dbbb8-108">Parametreler</span><span class="sxs-lookup"><span data-stu-id="dbbb8-108">Parameters</span></span>  
  `funcID`  
- <span data-ttu-id="bde86-109">[in] Döndüren işlev tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="bde86-109">[in] The identifier of the function that is returning.</span></span>  
+ <span data-ttu-id="dbbb8-109">[in] Döndüren işlev tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-109">[in] The identifier of the function that is returning.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bde86-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bde86-110">Remarks</span></span>  
- <span data-ttu-id="bde86-111">`FunctionLeave` Bir geri çağırma işlevidir; uygulamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="bde86-111">The `FunctionLeave` function is a callback; you must implement it.</span></span> <span data-ttu-id="bde86-112">Uygulama kullanmalısınız `__declspec`(`naked`) depolama sınıfı özniteliği.</span><span class="sxs-lookup"><span data-stu-id="bde86-112">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dbbb8-110">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="dbbb8-110">Remarks</span></span>  
+ <span data-ttu-id="dbbb8-111">`FunctionLeave` Bir geri çağırma işlevidir; uygulamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-111">The `FunctionLeave` function is a callback; you must implement it.</span></span> <span data-ttu-id="dbbb8-112">Uygulama kullanmalısınız `__declspec`(`naked`) depolama sınıfı özniteliği.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-112">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="bde86-113">Yürütme altyapısı, bu işlevi çağırmadan önce tüm kayıtları kaydetmez.</span><span class="sxs-lookup"><span data-stu-id="bde86-113">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="dbbb8-113">Yürütme altyapısı, bu işlevi çağırmadan önce tüm kayıtları kaydetmez.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-113">The execution engine does not save any registers before calling this function.</span></span>  
   
--   <span data-ttu-id="bde86-114">Kayan nokta birimi (FPU) de dahil olmak üzere, kullandığınız tüm kayıtları girişte kaydetmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="bde86-114">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+-   <span data-ttu-id="dbbb8-114">Kayan nokta birimi (FPU) de dahil olmak üzere, kullandığınız tüm kayıtları girişte kaydetmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-114">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
--   <span data-ttu-id="bde86-115">Çıkışta, yığın, arayan tarafından gönderildi tüm parametreleri kapalı pencerelerinin tarafından geri yüklemelisiniz.</span><span class="sxs-lookup"><span data-stu-id="bde86-115">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+-   <span data-ttu-id="dbbb8-115">Çıkışta, yığın, arayan tarafından gönderildi tüm parametreleri kapalı pencerelerinin tarafından geri yüklemelisiniz.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-115">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="bde86-116">Uygulamasını `FunctionLeave` çöp toplamanın gecikeceğini çünkü engellemelisiniz değil.</span><span class="sxs-lookup"><span data-stu-id="bde86-116">The implementation of `FunctionLeave` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="bde86-117">Uygulama, yığını bir çöp toplama kullanımı kolay durumda olmayabilir çünkü bir çöp toplama çalışmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="bde86-117">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="bde86-118">Bir çöp toplama girişiminde bulunulursa, çalışma zamanı kadar engeller `FunctionLeave` döndürür.</span><span class="sxs-lookup"><span data-stu-id="bde86-118">If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.</span></span>  
+ <span data-ttu-id="dbbb8-116">Uygulamasını `FunctionLeave` çöp toplamanın gecikeceğini çünkü engellemelisiniz değil.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-116">The implementation of `FunctionLeave` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="dbbb8-117">Uygulama, yığını bir çöp toplama kullanımı kolay durumda olmayabilir çünkü bir çöp toplama çalışmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-117">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="dbbb8-118">Bir çöp toplama girişiminde bulunulursa, çalışma zamanı kadar engeller `FunctionLeave` döndürür.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-118">If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.</span></span>  
   
- <span data-ttu-id="bde86-119">Ayrıca, `FunctionLeave` işlevi değil çağırmalıdır yönetilen koda veya herhangi bir şekilde neden yönetilen bellek ayırma.</span><span class="sxs-lookup"><span data-stu-id="bde86-119">Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="dbbb8-119">Ayrıca, `FunctionLeave` işlevi değil çağırmalıdır yönetilen koda veya herhangi bir şekilde neden yönetilen bellek ayırma.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-119">Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bde86-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="bde86-120">Requirements</span></span>  
- <span data-ttu-id="bde86-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bde86-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dbbb8-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dbbb8-120">Requirements</span></span>  
+ <span data-ttu-id="dbbb8-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dbbb8-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bde86-122">**Üst bilgi:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="bde86-122">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="dbbb8-122">**Üst bilgi:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="dbbb8-122">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="bde86-123">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bde86-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dbbb8-123">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dbbb8-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bde86-124">**.NET framework sürümleri:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="bde86-124">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="dbbb8-124">**.NET framework sürümleri:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="dbbb8-124">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bde86-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bde86-125">See also</span></span>
-- [<span data-ttu-id="bde86-126">FunctionEnter2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="bde86-126">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="bde86-127">FunctionLeave2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="bde86-127">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="bde86-128">FunctionTailcall2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="bde86-128">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [<span data-ttu-id="bde86-129">SetEnterLeaveFunctionHooks2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bde86-129">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="bde86-130">Profil Oluşturma Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="bde86-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="dbbb8-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dbbb8-125">See also</span></span>
+
+- [<span data-ttu-id="dbbb8-126">FunctionEnter2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="dbbb8-126">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="dbbb8-127">FunctionLeave2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="dbbb8-127">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="dbbb8-128">FunctionTailcall2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="dbbb8-128">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [<span data-ttu-id="dbbb8-129">SetEnterLeaveFunctionHooks2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="dbbb8-129">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="dbbb8-130">Profil Oluşturma Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="dbbb8-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

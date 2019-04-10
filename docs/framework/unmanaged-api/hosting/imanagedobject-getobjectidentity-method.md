@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d825a0c67f88e1f37023feb96a217b115653056
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6d014d2900ea790f84331ed933143513ae9e63f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213499"
 ---
-# <a name="imanagedobjectgetobjectidentity-method"></a><span data-ttu-id="0ec20-102">IManagedObject::GetObjectIdentity Metodu</span><span class="sxs-lookup"><span data-stu-id="0ec20-102">IManagedObject::GetObjectIdentity Method</span></span>
-<span data-ttu-id="0ec20-103">Bu yönetilen nesne kimliğini alır.</span><span class="sxs-lookup"><span data-stu-id="0ec20-103">Gets the identity of this managed object.</span></span>  
+# <a name="imanagedobjectgetobjectidentity-method"></a><span data-ttu-id="2aa22-102">IManagedObject::GetObjectIdentity Metodu</span><span class="sxs-lookup"><span data-stu-id="2aa22-102">IManagedObject::GetObjectIdentity Method</span></span>
+<span data-ttu-id="2aa22-103">Bu yönetilen nesne kimliğini alır.</span><span class="sxs-lookup"><span data-stu-id="2aa22-103">Gets the identity of this managed object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0ec20-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0ec20-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2aa22-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2aa22-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObjectIdentity (  
@@ -37,27 +37,28 @@ HRESULT GetObjectIdentity (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0ec20-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0ec20-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2aa22-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2aa22-105">Parameters</span></span>  
  `pBSTRGUID`  
- <span data-ttu-id="0ec20-106">[out] Nesnenin bulunduğu işlem GUİD'si işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="0ec20-106">[out] A pointer to the GUID of the process in which the object resides.</span></span>  
+ <span data-ttu-id="2aa22-106">[out] Nesnenin bulunduğu işlem GUİD'si işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="2aa22-106">[out] A pointer to the GUID of the process in which the object resides.</span></span>  
   
  `AppDomainID`  
- <span data-ttu-id="0ec20-107">[out] Nesnenin uygulama etki alanı kimliği için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0ec20-107">[out] A pointer to the ID of the object's application domain.</span></span>  
+ <span data-ttu-id="2aa22-107">[out] Nesnenin uygulama etki alanı kimliği için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="2aa22-107">[out] A pointer to the ID of the object's application domain.</span></span>  
   
  `pCCW`  
- <span data-ttu-id="0ec20-108">[out] Nesnenin dizinde COM Klasik v tablo için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="0ec20-108">[out] A pointer to object's index in the COM classic v-table.</span></span>  
+ <span data-ttu-id="2aa22-108">[out] Nesnenin dizinde COM Klasik v tablo için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="2aa22-108">[out] A pointer to object's index in the COM classic v-table.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0ec20-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0ec20-109">Remarks</span></span>  
- <span data-ttu-id="0ec20-110">Yönetilen bir nesnenin kimliğini COM Klasik v tablosunda işlem GUID'si, uygulama etki alanı kimliği ve nesnenin dizin içerir.</span><span class="sxs-lookup"><span data-stu-id="0ec20-110">The identity of a managed object includes process GUID, application domain ID, and the object's index in the COM classic v-table.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2aa22-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2aa22-109">Remarks</span></span>  
+ <span data-ttu-id="2aa22-110">Yönetilen bir nesnenin kimliğini COM Klasik v tablosunda işlem GUID'si, uygulama etki alanı kimliği ve nesnenin dizin içerir.</span><span class="sxs-lookup"><span data-stu-id="2aa22-110">The identity of a managed object includes process GUID, application domain ID, and the object's index in the COM classic v-table.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0ec20-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0ec20-111">Requirements</span></span>  
- <span data-ttu-id="0ec20-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ec20-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2aa22-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2aa22-111">Requirements</span></span>  
+ <span data-ttu-id="2aa22-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2aa22-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0ec20-113">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0ec20-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2aa22-113">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2aa22-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0ec20-114">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="0ec20-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2aa22-114">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="2aa22-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0ec20-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ec20-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="2aa22-115">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="2aa22-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0ec20-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0ec20-116">See also</span></span>
-- [<span data-ttu-id="0ec20-117">IManagedObject Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0ec20-117">IManagedObject Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2aa22-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2aa22-116">See also</span></span>
+
+- [<span data-ttu-id="2aa22-117">IManagedObject Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2aa22-117">IManagedObject Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 609bb050bb9c5addb5250f65a059a70d3ce32428
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8321e5aeba435ca5f1398a9cb827a93ae821d686
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217334"
 ---
-# <a name="clrdebuggingprocessflags-enumeration"></a><span data-ttu-id="aa06c-102">CLR_DEBUGGING_PROCESS_FLAGS Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="aa06c-102">CLR_DEBUGGING_PROCESS_FLAGS Enumeration</span></span>
-<span data-ttu-id="aa06c-103">Tarafından kullanılan değerleri sağlar [Iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="aa06c-103">Provides values that are used by the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
+# <a name="clrdebuggingprocessflags-enumeration"></a><span data-ttu-id="5c301-102">CLR_DEBUGGING_PROCESS_FLAGS Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="5c301-102">CLR_DEBUGGING_PROCESS_FLAGS Enumeration</span></span>
+<span data-ttu-id="5c301-103">Tarafından kullanılan değerleri sağlar [Iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="5c301-103">Provides values that are used by the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa06c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="aa06c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c301-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5c301-104">Syntax</span></span>  
   
 ```  
 typedef enum CLR_DEBUGGING_PROCESS_FLAGS  
@@ -36,27 +36,28 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
 }  CLR_DEBUGGING_PROCESS_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="aa06c-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="aa06c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5c301-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="5c301-105">Members</span></span>  
   
-|<span data-ttu-id="aa06c-106">Üye</span><span class="sxs-lookup"><span data-stu-id="aa06c-106">Member</span></span>|<span data-ttu-id="aa06c-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="aa06c-107">Description</span></span>|  
+|<span data-ttu-id="5c301-106">Üye</span><span class="sxs-lookup"><span data-stu-id="5c301-106">Member</span></span>|<span data-ttu-id="5c301-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5c301-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|<span data-ttu-id="aa06c-108">Bu çalışma zamanı göndermek için bir catch yukarı yönetilen hata ayıklayıcı olayında.</span><span class="sxs-lookup"><span data-stu-id="aa06c-108">This runtime has a non-catch-up managed debugger event to send.</span></span> <span data-ttu-id="aa06c-109">Olayları yakalama ve catch yukarı arasındaki fark için Açıklamalar bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="aa06c-109">See the Remarks section for the distinction between catch-up and non-catch-up events.</span></span>|  
-|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|<span data-ttu-id="aa06c-110">Beklemede olan yönetilen olay bir <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> istek.</span><span class="sxs-lookup"><span data-stu-id="aa06c-110">The managed event that is pending is a <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> request.</span></span>|  
+|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|<span data-ttu-id="5c301-108">Bu çalışma zamanı göndermek için bir catch yukarı yönetilen hata ayıklayıcı olayında.</span><span class="sxs-lookup"><span data-stu-id="5c301-108">This runtime has a non-catch-up managed debugger event to send.</span></span> <span data-ttu-id="5c301-109">Olayları yakalama ve catch yukarı arasındaki fark için Açıklamalar bölümüne bakın.</span><span class="sxs-lookup"><span data-stu-id="5c301-109">See the Remarks section for the distinction between catch-up and non-catch-up events.</span></span>|  
+|`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|<span data-ttu-id="5c301-110">Beklemede olan yönetilen olay bir <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> istek.</span><span class="sxs-lookup"><span data-stu-id="5c301-110">The managed event that is pending is a <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> request.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="aa06c-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="aa06c-111">Remarks</span></span>  
- <span data-ttu-id="aa06c-112">Olayları yakalama işlemi, uygulama etki alanı, derleme, modül ve sonra bir işleme eklenmiş kadar geçerli durumu hata ayıklayıcı getiren iş parçacığı oluşturma bildirimleri içerir.</span><span class="sxs-lookup"><span data-stu-id="aa06c-112">Catch-up events include process, application domain, assembly, module, and thread creation notifications that bring the debugger up to the current state after it has attached to a process.</span></span> <span data-ttu-id="aa06c-113">Tarafından belirtilen olmayan catch yukarı olayları `CLR_DEBUGGING_MANAGED_EVENT_PENDING` bayrak, tüm diğer hata ayıklayıcı olayları, özel durumlar gibi içerir ve yönetilen hata ayıklama Yardımcısı (MDA) bildirimleri.</span><span class="sxs-lookup"><span data-stu-id="aa06c-113">Non-catch-up events, which are indicated by the `CLR_DEBUGGING_MANAGED_EVENT_PENDING` flag, include all other debugger events, such as exceptions and managed debugging assistant (MDA) notifications.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5c301-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5c301-111">Remarks</span></span>  
+ <span data-ttu-id="5c301-112">Olayları yakalama işlemi, uygulama etki alanı, derleme, modül ve sonra bir işleme eklenmiş kadar geçerli durumu hata ayıklayıcı getiren iş parçacığı oluşturma bildirimleri içerir.</span><span class="sxs-lookup"><span data-stu-id="5c301-112">Catch-up events include process, application domain, assembly, module, and thread creation notifications that bring the debugger up to the current state after it has attached to a process.</span></span> <span data-ttu-id="5c301-113">Tarafından belirtilen olmayan catch yukarı olayları `CLR_DEBUGGING_MANAGED_EVENT_PENDING` bayrak, tüm diğer hata ayıklayıcı olayları, özel durumlar gibi içerir ve yönetilen hata ayıklama Yardımcısı (MDA) bildirimleri.</span><span class="sxs-lookup"><span data-stu-id="5c301-113">Non-catch-up events, which are indicated by the `CLR_DEBUGGING_MANAGED_EVENT_PENDING` flag, include all other debugger events, such as exceptions and managed debugging assistant (MDA) notifications.</span></span>  
   
- <span data-ttu-id="aa06c-114">`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` Bayrağı isteği iptal edilebilir bir yönetilen hata ayıklayıcı ekleyin ve bir sonlandırma özel durumuyla arasında ayırt etmek çalışma zamanı sağlar.</span><span class="sxs-lookup"><span data-stu-id="aa06c-114">The `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` flag enables the runtime to differentiate between a terminating exception and a request to attach a managed debugger that can be canceled.</span></span>  
+ <span data-ttu-id="5c301-114">`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` Bayrağı isteği iptal edilebilir bir yönetilen hata ayıklayıcı ekleyin ve bir sonlandırma özel durumuyla arasında ayırt etmek çalışma zamanı sağlar.</span><span class="sxs-lookup"><span data-stu-id="5c301-114">The `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` flag enables the runtime to differentiate between a terminating exception and a request to attach a managed debugger that can be canceled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aa06c-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="aa06c-115">Requirements</span></span>  
- <span data-ttu-id="aa06c-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aa06c-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5c301-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5c301-115">Requirements</span></span>  
+ <span data-ttu-id="5c301-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5c301-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aa06c-117">**Üst bilgi:** Metahost.idl, Metahost.h</span><span class="sxs-lookup"><span data-stu-id="aa06c-117">**Header:** Metahost.idl, Metahost.h</span></span>  
+ <span data-ttu-id="5c301-117">**Üst bilgi:** Metahost.idl, Metahost.h</span><span class="sxs-lookup"><span data-stu-id="5c301-117">**Header:** Metahost.idl, Metahost.h</span></span>  
   
- <span data-ttu-id="aa06c-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aa06c-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5c301-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5c301-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="aa06c-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa06c-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="5c301-119">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="5c301-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="aa06c-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aa06c-120">See also</span></span>
-- [<span data-ttu-id="aa06c-121">Hata Ayıklama Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="aa06c-121">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [<span data-ttu-id="aa06c-122">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="aa06c-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="5c301-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5c301-120">See also</span></span>
+
+- [<span data-ttu-id="5c301-121">Hata Ayıklama Numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="5c301-121">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="5c301-122">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="5c301-122">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

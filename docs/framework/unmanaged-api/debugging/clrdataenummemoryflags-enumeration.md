@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd385c1176bea41b41a981e743c6104227d8acd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80ea3afef4aee51760e3a2ce6a2b895bca4a6ec5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224075"
 ---
-# <a name="clrdataenummemoryflags-enumeration"></a><span data-ttu-id="34dff-102">CLRDataEnumMemoryFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="34dff-102">CLRDataEnumMemoryFlags Enumeration</span></span>
-<span data-ttu-id="34dff-103">Hangi bellek bölgeleri için bir çağrı gösterir [Iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) yöntemini içerir.</span><span class="sxs-lookup"><span data-stu-id="34dff-103">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
+# <a name="clrdataenummemoryflags-enumeration"></a><span data-ttu-id="21121-102">CLRDataEnumMemoryFlags Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="21121-102">CLRDataEnumMemoryFlags Enumeration</span></span>
+<span data-ttu-id="21121-103">Hangi bellek bölgeleri için bir çağrı gösterir [Iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) yöntemini içerir.</span><span class="sxs-lookup"><span data-stu-id="21121-103">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="34dff-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="34dff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="21121-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="21121-104">Syntax</span></span>  
   
 ```  
 typedef enum CLRDataEnumMemoryFlags {  
@@ -36,21 +36,22 @@ typedef enum CLRDataEnumMemoryFlags {
 } CLRDataEnumMemoryFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="34dff-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="34dff-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="21121-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="21121-105">Members</span></span>  
   
-|<span data-ttu-id="34dff-106">Üye</span><span class="sxs-lookup"><span data-stu-id="34dff-106">Member</span></span>|<span data-ttu-id="34dff-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="34dff-107">Description</span></span>|  
+|<span data-ttu-id="21121-106">Üye</span><span class="sxs-lookup"><span data-stu-id="21121-106">Member</span></span>|<span data-ttu-id="21121-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="21121-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|<span data-ttu-id="34dff-108">Bir mini döküm, diğer bir deyişle, seyrek bellek dökümü.</span><span class="sxs-lookup"><span data-stu-id="34dff-108">A minidump, that is, a sparse memory dump.</span></span>|  
-|`CLRDATA_ENUM_MEM_HEAP`|<span data-ttu-id="34dff-109">Bir tam bir yığın dökümü oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="34dff-109">A full heap dump.</span></span>|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|<span data-ttu-id="21121-108">Bir mini döküm, diğer bir deyişle, seyrek bellek dökümü.</span><span class="sxs-lookup"><span data-stu-id="21121-108">A minidump, that is, a sparse memory dump.</span></span>|  
+|`CLRDATA_ENUM_MEM_HEAP`|<span data-ttu-id="21121-109">Bir tam bir yığın dökümü oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="21121-109">A full heap dump.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="34dff-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="34dff-110">Requirements</span></span>  
- <span data-ttu-id="34dff-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34dff-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="21121-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="21121-110">Requirements</span></span>  
+ <span data-ttu-id="21121-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="21121-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="34dff-112">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="34dff-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="21121-112">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="21121-112">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="34dff-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34dff-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="21121-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="21121-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="34dff-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34dff-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="21121-114">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="21121-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="34dff-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="34dff-115">See also</span></span>
-- [<span data-ttu-id="34dff-116">Hata Ayıklama Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="34dff-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="21121-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="21121-115">See also</span></span>
+
+- [<span data-ttu-id="21121-116">Hata Ayıklama Numaralandırmaları</span><span class="sxs-lookup"><span data-stu-id="21121-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

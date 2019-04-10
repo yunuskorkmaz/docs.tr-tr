@@ -16,36 +16,37 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94d601125049f0c215b3b03bf8b13d2959872c3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47fee26a0c4c25e4bff5bca94e5e26daaf98cccd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214721"
 ---
-# <a name="verifyclientkey-function"></a><span data-ttu-id="f4019-103">VerifyClientKey işlevi</span><span class="sxs-lookup"><span data-stu-id="f4019-103">VerifyClientKey function</span></span>
-<span data-ttu-id="f4019-104">İstemci anahtarı doğru güvenlik sahip olmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="f4019-104">Ensures that the client key has the correct security.</span></span>  
+# <a name="verifyclientkey-function"></a><span data-ttu-id="ede25-103">VerifyClientKey işlevi</span><span class="sxs-lookup"><span data-stu-id="ede25-103">VerifyClientKey function</span></span>
+<span data-ttu-id="ede25-104">İstemci anahtarı doğru güvenlik sahip olmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="ede25-104">Ensures that the client key has the correct security.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="f4019-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f4019-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ede25-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ede25-105">Syntax</span></span>  
   
 ```  
 LONG VerifyClientKey(); 
 ```  
 
-## <a name="return-value"></a><span data-ttu-id="f4019-106">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="f4019-106">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="ede25-106">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="ede25-106">Return value</span></span>
 
-<span data-ttu-id="f4019-107">İşlev başarılı olursa, dönüş değeri olduğu `ERROR_SUCCESS` (0).</span><span class="sxs-lookup"><span data-stu-id="f4019-107">If the function succeeds, the return value is `ERROR_SUCCESS` (0).</span></span>
+<span data-ttu-id="ede25-107">İşlev başarılı olursa, dönüş değeri olduğu `ERROR_SUCCESS` (0).</span><span class="sxs-lookup"><span data-stu-id="ede25-107">If the function succeeds, the return value is `ERROR_SUCCESS` (0).</span></span>
 
-<span data-ttu-id="f4019-108">İşlev başarısız olursa, dönüş değeri tanımlı bir sıfır olmayan hata kodudur *Wınerror*.</span><span class="sxs-lookup"><span data-stu-id="f4019-108">If the function fails, the return value is a non-zero error code defined in *WinError.h*.</span></span>
+<span data-ttu-id="ede25-108">İşlev başarısız olursa, dönüş değeri tanımlı bir sıfır olmayan hata kodudur *Wınerror*.</span><span class="sxs-lookup"><span data-stu-id="ede25-108">If the function fails, the return value is a non-zero error code defined in *WinError.h*.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="f4019-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f4019-109">Requirements</span></span>  
- <span data-ttu-id="f4019-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f4019-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ede25-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ede25-109">Requirements</span></span>  
+ <span data-ttu-id="ede25-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ede25-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f4019-111">**Üst bilgi:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="f4019-111">**Header:** WMINet_Utils.def</span></span>  
+ <span data-ttu-id="ede25-111">**Üst bilgi:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="ede25-111">**Header:** WMINet_Utils.def</span></span>  
   
- <span data-ttu-id="f4019-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="f4019-112">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ **<span data-ttu-id="ede25-112">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="ede25-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f4019-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f4019-113">See also</span></span>
-- [<span data-ttu-id="f4019-114">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="f4019-114">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="ede25-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ede25-113">See also</span></span>
+
+- [<span data-ttu-id="ede25-114">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="ede25-114">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: f2a261b72fe3205c9a03292f1f6bbcebdcf8649b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356981"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226977"
 ---
-# <a name="textbox"></a><span data-ttu-id="e332b-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="e332b-102">TextBox</span></span>
-<span data-ttu-id="e332b-103"><xref:System.Windows.Controls.TextBox> Denetimi, temel metin girişi WPF uygulamaları için destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="e332b-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
+# <a name="textbox"></a><span data-ttu-id="4b165-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="4b165-102">TextBox</span></span>
+<span data-ttu-id="4b165-103"><xref:System.Windows.Controls.TextBox> Denetimi, temel metin girişi WPF uygulamaları için destek sağlar.</span><span class="sxs-lookup"><span data-stu-id="4b165-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e332b-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e332b-104">In This Section</span></span>  
- [<span data-ttu-id="e332b-105">TextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e332b-105">TextBox Overview</span></span>](textbox-overview.md)  
- [<span data-ttu-id="e332b-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="e332b-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4b165-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="4b165-104">In This Section</span></span>  
+ [<span data-ttu-id="4b165-105">TextBox Genel Bakışı</span><span class="sxs-lookup"><span data-stu-id="4b165-105">TextBox Overview</span></span>](textbox-overview.md)  
+ [<span data-ttu-id="4b165-106">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="4b165-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="e332b-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e332b-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4b165-107">Başvuru</span><span class="sxs-lookup"><span data-stu-id="4b165-107">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,6 +30,7 @@ ms.locfileid: "57356981"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="e332b-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e332b-108">See also</span></span>
-- [<span data-ttu-id="e332b-109">WPF denetimleri Galerisi örneği</span><span class="sxs-lookup"><span data-stu-id="e332b-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [<span data-ttu-id="e332b-110">TextBox Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="e332b-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)
+## <a name="see-also"></a><span data-ttu-id="4b165-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4b165-108">See also</span></span>
+
+- [<span data-ttu-id="4b165-109">WPF denetimleri Galerisi örneği</span><span class="sxs-lookup"><span data-stu-id="4b165-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [<span data-ttu-id="4b165-110">TextBox Stilleri ve Şablonları</span><span class="sxs-lookup"><span data-stu-id="4b165-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)

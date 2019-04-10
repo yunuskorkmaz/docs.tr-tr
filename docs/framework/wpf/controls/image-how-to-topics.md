@@ -7,29 +7,30 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: f55036d4fdf4576faab50be7b42cf7a4077e6a3b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c300df2c63f4fa852c8cce318a5461f3be5f226
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227567"
 ---
-# <a name="image-how-to-topics"></a><span data-ttu-id="11504-102">Görüntü ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="11504-102">Image How-to Topics</span></span>
-<span data-ttu-id="11504-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.Image> öğesi.</span><span class="sxs-lookup"><span data-stu-id="11504-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
+# <a name="image-how-to-topics"></a><span data-ttu-id="f6b1e-102">Görüntü ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="f6b1e-102">Image How-to Topics</span></span>
+<span data-ttu-id="f6b1e-103">Bu bölümdeki konular, nasıl kullanılacağını açıklayan <xref:System.Windows.Controls.Image> öğesi.</span><span class="sxs-lookup"><span data-stu-id="f6b1e-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Image> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="11504-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="11504-104">In This Section</span></span>  
- [<span data-ttu-id="11504-105">Görüntü Öğesi Kullanma</span><span class="sxs-lookup"><span data-stu-id="11504-105">Use the Image Element</span></span>](how-to-use-the-image-element.md)  
-  [<span data-ttu-id="11504-106">Görüntüyü Gri Tona Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="11504-106">Convert an Image to Greyscale</span></span>](how-to-convert-an-image-to-greyscale.md)  
-  [<span data-ttu-id="11504-107">Görüntü Kırpma</span><span class="sxs-lookup"><span data-stu-id="11504-107">Crop an Image</span></span>](how-to-crop-an-image.md)  
-  [<span data-ttu-id="11504-108">Görüntü Döndürme</span><span class="sxs-lookup"><span data-stu-id="11504-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f6b1e-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="f6b1e-104">In This Section</span></span>  
+ [<span data-ttu-id="f6b1e-105">Görüntü Öğesi Kullanma</span><span class="sxs-lookup"><span data-stu-id="f6b1e-105">Use the Image Element</span></span>](how-to-use-the-image-element.md)  
+  [<span data-ttu-id="f6b1e-106">Görüntüyü Gri Tona Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="f6b1e-106">Convert an Image to Greyscale</span></span>](how-to-convert-an-image-to-greyscale.md)  
+  [<span data-ttu-id="f6b1e-107">Görüntü Kırpma</span><span class="sxs-lookup"><span data-stu-id="f6b1e-107">Crop an Image</span></span>](how-to-crop-an-image.md)  
+  [<span data-ttu-id="f6b1e-108">Görüntü Döndürme</span><span class="sxs-lookup"><span data-stu-id="f6b1e-108">Rotate an Image</span></span>](how-to-rotate-an-image.md)  
   
-## <a name="reference"></a><span data-ttu-id="11504-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="11504-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f6b1e-109">Başvuru</span><span class="sxs-lookup"><span data-stu-id="f6b1e-109">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="11504-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="11504-110">See also</span></span>
-- [<span data-ttu-id="11504-111">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="11504-111">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="11504-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="11504-112">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="f6b1e-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f6b1e-110">See also</span></span>
+
+- [<span data-ttu-id="f6b1e-111">Görüntülemeye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f6b1e-111">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="f6b1e-112">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="f6b1e-112">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
