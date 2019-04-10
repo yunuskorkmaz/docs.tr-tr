@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir kodlayıcı tarafından desteklenen parametreleri belirleme'
+title: 'Nasıl yapılır: Bir Kodlayıcı Tarafından Desteklenen Parametreleri Belirleme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
-ms.openlocfilehash: f5af00833c8d8373444b475673709d902598d9d0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2626eee239d9876125340dd133c5a9b3e45c3d7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204581"
 ---
-# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Nasıl yapılır: Bir kodlayıcı tarafından desteklenen parametreleri belirleme
+# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Nasıl yapılır: Bir Kodlayıcı Tarafından Desteklenen Parametreleri Belirleme
 Kalite ve sıkıştırma düzeyi gibi görüntü parametreleri ayarlayabilirsiniz ancak belirtilen görüntü Kodlayıcı tarafından desteklenen parametreleri bilmeniz gerekir. <xref:System.Drawing.Image> Sağlar sınıfını <xref:System.Drawing.Image.GetEncoderParameterList%2A> yöntemi görüntü parametreleri için belirli bir kodlayıcı desteklenen belirleyebilirsiniz. Size encoder bir GUID ile belirtin. <xref:System.Drawing.Image.GetEncoderParameterList%2A> Yöntemi, bir dizi döndürür <xref:System.Drawing.Imaging.EncoderParameter> nesneleri.  
   
 ## <a name="example"></a>Örnek  
@@ -31,6 +31,7 @@ Kalite ve sıkıştırma düzeyi gibi görüntü parametreleri ayarlayabilirsini
 -   A <xref:System.Windows.Forms.PaintEventArgs>, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Yüklenen Kodlayıcıları listeleme](how-to-list-installed-encoders.md)
+
+- [Nasıl yapılır: Yüklenen Kodlayıcıları Listeleme](how-to-list-installed-encoders.md)
 - [Bit Eşlem Türleri](types-of-bitmaps.md)
 - [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](using-image-encoders-and-decoders-in-managed-gdi.md)

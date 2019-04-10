@@ -1,15 +1,15 @@
 ---
-title: İlişki kümesi
+title: association set
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: 2eaa4d3c70e0efbf9705b4285d1abd4753bd1db9
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204490"
 ---
-# <a name="association-set"></a>İlişki kümesi
+# <a name="association-set"></a>association set
 Bir *ilişki kümesi* için mantıksal bir kapsayıcıdır [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) örnekleri aynı türde. Bir ilişki kümesi, bir veri yapısı modelleme değil; diğer bir deyişle, veriler veya ilişkileri yapısını açıklamaz. Böylece bir veri deposuna eşlenebilir bunun yerine, bir ilişki kümesi bir yapısı (örneğin, ortak dil çalışma zamanı veya bir SQL Server veritabanı) barındıran veya depolama ortamı için Grup ilişkilendirme örnekleri için sağlar.  
   
  Bir ilişki kümesi içinde tanımlanan bir [varlık kapsayıcısı](../../../../docs/framework/data/adonet/entity-container.md), mantıksal bir gruplandırması olan [varlık kümeleri](../../../../docs/framework/data/adonet/entity-set.md) ve ilişki Setleri.  
@@ -40,6 +40,7 @@ Bir *ilişki kümesi* için mantıksal bir kapsayıcıdır [ilişkilendirme](../
  [!code-xml[EDM_Example_Model#MultipleAssociationSets](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#multipleassociationsets)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
 - [foreign key property](../../../../docs/framework/data/adonet/foreign-key-property.md)

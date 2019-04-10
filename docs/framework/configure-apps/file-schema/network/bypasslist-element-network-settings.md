@@ -1,5 +1,5 @@
 ---
-title: <bypasslist> Öğesi (Ağ Ayarları)
+title: <bypasslist> Öğesi (ağ ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: db975d44db96f605767d7320737ff3c162bbc8a5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d3d986dae478f49504dae21b9f39574b7887b4d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202228"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<bypasslist > öğesi (ağ ayarları)
 Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sağlar.  
@@ -41,7 +41,7 @@ Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sa
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|Bir IP adresi veya DNS adı için proxy atlama listesi ekler.|  
-|[Temizle](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Atlama listesi temizler.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Atlama listesi temizler.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Bir IP adresi veya DNS adı proxy atlama listeden kaldırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -77,5 +77,6 @@ Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sa
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Ağ Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

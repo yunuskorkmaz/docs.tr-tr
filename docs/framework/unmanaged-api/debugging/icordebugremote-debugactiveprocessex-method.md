@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eba0ff6e545a5da5d7733a157b73ddd66e717de9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 45b919d90454c9424cadb1d4dfc3b0dfb09e5053
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209456"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx Yöntemi
 Hata ayıklayıcısı altında uzak bir makinede bir işlem başlatır.  
@@ -71,6 +71,7 @@ HRESULT DebugActiveProcessEx (
  **.NET framework sürümleri:** 4.5, 4, 3.5 SP1  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICorDebugRemote Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
 - [ICorDebug Arabirimi](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

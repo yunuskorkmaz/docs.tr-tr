@@ -2,12 +2,12 @@
 title: Net.TCP Bağlantı Noktası Hizmetini Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 9bc625f9e998f27b6227a5951f11c7d85220ae7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbc27f0f15be41c5384d8a1f73f0226c3f0f83ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585529"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206817"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Net.TCP Bağlantı Noktası Hizmetini Yapılandırma
 Net.TCP taşıma kullanan şirket içinde barındırılan Hizmetler Denetim birkaç Gelişmiş ayarları gibi `ListenBacklog` ve `MaxPendingAccepts`, ağ iletişimi için kullanılan temel alınan TCP yuva davranışını yönetir. Ancak, her yuva için bu ayarları yalnızca, varsayılan olarak etkin aktarım bağlama bağlantı noktası paylaşımı, devre dışı bırakmışsa bağlama düzeyinde uygulanır.  
@@ -62,4 +62,5 @@ Net.TCP taşıma kullanan şirket içinde barındırılan Hizmetler Denetim birk
 >  Özel bir varsayılan erişimi dosyasını belirtir `etwProviderId` SMSvcHost.exe İzleme hizmeti izlemeleri engellemesini önlemek için.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<NET.TCP >](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)

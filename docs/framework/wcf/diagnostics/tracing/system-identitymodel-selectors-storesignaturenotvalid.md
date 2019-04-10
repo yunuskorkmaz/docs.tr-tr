@@ -2,12 +2,12 @@
 title: System.IdentityModel.Selectors.StoreSignatureNotValid
 ms.date: 03/30/2017
 ms.assetid: 9087bf09-cb15-41ec-bd7a-6338789953d0
-ms.openlocfilehash: 7cf0d2abfb1885bb03099df0874aed3d13e06d6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80a479866df1b716f20539669a5236e5a089948f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207935"
 ---
 # <a name="systemidentitymodelselectorsstoresignaturenotvalid"></a>System.IdentityModel.Selectors.StoreSignatureNotValid
 System.IdentityModel.Selectors.StoreSignatureNotValid  
@@ -16,6 +16,7 @@ System.IdentityModel.Selectors.StoreSignatureNotValid
  Dosya imzası geçersiz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)

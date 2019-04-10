@@ -1,18 +1,18 @@
 ---
-title: Null değerleri işleme
+title: Null Değerleri İşleme
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191477"
 ---
-# <a name="handling-null-values"></a>Null değerleri işleme
+# <a name="handling-null-values"></a>Null Değerleri İşleme
 Bir sütundaki değer bilinmeyen veya eksik olduğunda, ilişkisel bir veritabanındaki bir null değer kullanılır. Bir null, boş bir dize (karakter veya tarih/saat veri türleri için) ya da sıfır değeri (sayısal veri türleri için) olur. Tüm null değerlere tutarlı bir şekilde işlenir böylece ANSI SQL 92 belirtimi boş tüm veri türleri için aynı olması gerektiğini belirtir. <xref:System.Data.SqlTypes> Uygulayarak ad alanı null bir semantik sağlar <xref:System.Data.SqlTypes.INullable> arabirimi. Her veri türlerini <xref:System.Data.SqlTypes> kendi `IsNull` özelliği ve `Null` veri türü örneğine atanabilir değer.  
   
 > [!NOTE]
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>SqlTypes ve CLR Türleri ile null değerleri karşılaştırma  
- Null değerler karşılaştırılırken biçimini arasındaki farkı anlamak önemlidir `Equals` yöntemi null değerleri değerlendirir <xref:System.Data.SqlTypes> CLR türleriyle çalışma şeklini değiştirmeyen. Tüm <xref:System.Data.SqlTypes> `Equals` yöntemleri null değerlerini değerlendirmek için veritabanı semantiğini kullanın: ya da değerler, null, null karşılaştırma verir. Öte yandan, CLR kullanarak `Equals` yöntemi iki <xref:System.Data.SqlTypes> her ikisi de null ise true verir. Bu bir örnek yöntemi gibi CLR'ın kullanımı arasındaki fark gösterdiğinden `String.Equals` yöntemi ve statik ve paylaşılan yöntemi kullanarak `SqlString.Equals`.  
+ Null değerler karşılaştırılırken biçimini arasındaki farkı anlamak önemlidir `Equals` yöntemi null değerleri değerlendirir <xref:System.Data.SqlTypes> CLR türleriyle çalışma şeklini değiştirmeyen. Tüm <xref:System.Data.SqlTypes>`Equals` yöntemleri null değerlerini değerlendirmek için veritabanı semantiğini kullanın: ya da değerler, null, null karşılaştırma verir. Öte yandan, CLR kullanarak `Equals` yöntemi iki <xref:System.Data.SqlTypes> her ikisi de null ise true verir. Bu bir örnek yöntemi gibi CLR'ın kullanımı arasındaki fark gösterdiğinden `String.Equals` yöntemi ve statik ve paylaşılan yöntemi kullanarak `SqlString.Equals`.  
   
  Aşağıdaki örnek, sonuç farkı gösterir `SqlString.Equals` yöntemi ve `String.Equals` her bir null değer çiftinin ve bir çift boş dizeler geçirildiğinde yöntemi.  
   
@@ -142,5 +142,6 @@ String.Equals instance method:
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server Veri Türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

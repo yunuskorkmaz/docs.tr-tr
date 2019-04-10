@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 936bcd59cd21a4fb4c101febcefd26f3b1fdafa1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b979b5f4ee849b96cd29b6c8e2e6a8932e88c182
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201721"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo Arabirimi
 Ortak dil çalışma olayı izleme denetim ve bilgi istemek için (CLR) ile iletişim kurmak için kod profil Oluşturucuları tarafından kullanım için yöntemler sağlar.  
@@ -84,5 +84,6 @@ Ortak dil çalışma olayı izleme denetim ve bilgi istemek için (CLR) ile ilet
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Profil Oluşturma Arabirimleri](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

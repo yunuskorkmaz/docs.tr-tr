@@ -1,19 +1,19 @@
 ---
-title: 'Uç noktalar: Adresleri, bağlamalar ve sözleşmeler'
+title: 'Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: a10d9ac5718bf6b88a3a00902f90045c705f8431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207532"
 ---
-# <a name="endpoints-addresses-bindings-and-contracts"></a>Uç noktalar: Adresleri, bağlamalar ve sözleşmeler
+# <a name="endpoints-addresses-bindings-and-contracts"></a>Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler
 Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerde üzerinden gerçekleşir *uç noktaları* hizmeti. Uç noktaları, istemcilerin bir WCF hizmeti tarafından sunulan işlevlere erişim sağlar.  
   
  Her uç nokta dört özelliklerini oluşur:  
@@ -75,18 +75,19 @@ Bir Windows Communication Foundation (WCF) hizmetiyle kurulan tüm iletişimlerd
  [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)  
  Aktarım, kodlama ve istemciler ve hizmetler birbirleri ile iletişim kurmak için gerekli Protokolü ayrıntıları belirtmek için bağlamaları nasıl kullanıldığını açıklar.  
   
- [Anlaşmalar](../../../../docs/framework/wcf/feature-details/contracts.md)  
+ [Sözleşmeler](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Nasıl yöntemlerini hizmet sözleşmelerini tanımlamak açıklar.  
   
- [Nasıl yapılır: Yapılandırma içinde hizmet uç noktası oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Yapılandırma içinde hizmet uç noktası oluşturma işlemini açıklamaktadır.  
   
- [Nasıl yapılır: Kod içinde hizmet uç noktası oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Nasıl yapılır: Kod İçinde Hizmet Uç Noktası Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Kod içinde hizmet uç noktası oluşturma işlemini açıklamaktadır.  
   
- [Nasıl yapılır: Derlenmiş hizmet kodunu doğrulamak için svcutil.exe kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [Nasıl yapılır: Derlenmiş Hizmet Kodunu Doğrulamak için Svcutil.exe Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  Hizmetini kullanarak barındırma olmadan hizmet uygulamaları ve yapılandırmalarında hataları algılamak nasıl açıklar [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hizmetleri Yapılandırma](../../../../docs/framework/wcf/configuring-services.md)
 - [Bağlamaları Genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md)

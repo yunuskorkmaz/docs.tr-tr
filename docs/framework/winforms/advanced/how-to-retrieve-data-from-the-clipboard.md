@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Panodan veri alma'
+title: 'Nasıl yapılır: Panodan Veri Alma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: 0ed79197190e9f646b5f94ff56e62b19fe4f366a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: aca110339c94afd5442aed5a2481964b456154f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201617"
 ---
-# <a name="how-to-retrieve-data-from-the-clipboard"></a>Nasıl yapılır: Panodan veri alma
+# <a name="how-to-retrieve-data-from-the-clipboard"></a>Nasıl yapılır: Panodan Veri Alma
 <xref:System.Windows.Forms.Clipboard> Sınıfı, Windows işletim sistemi Pano özelliğini ile etkileşim kurmak için kullanabileceğiniz yöntemler sağlar. Birçok uygulama Pano verileri için geçici bir deposu olarak kullanın. Örneğin, Word'ün işlemci panoya kes/yapıştır işlemleri sırasında kullanın. Pano, bir uygulamadan diğerine bilgi aktarmak için kullanışlıdır.  
   
  Bazı uygulamalar, potansiyel olarak veri kullanan diğer uygulamalar sayısını artırmak için birden çok biçimde Pano üzerinde verileri depolar. Pano biçimi biçimini tanımlayan bir dizedir. Tanımlanan biçimi kullanan bir uygulama, Panodaki ilişkili verileri alabilirsiniz. <xref:System.Windows.Forms.DataFormats> Sınıfı kullanmanız için önceden tanımlanmış biçim adları sağlar. Ayrıca, kendi biçim adları kullanın veya kendi biçiminde bir nesnenin türünü kullanın. Panoya veri ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Panoya veri ekleme](how-to-add-data-to-the-clipboard.md).  
@@ -57,5 +57,6 @@ ms.locfileid: "57723861"
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Sürükle ve Bırak İşlemleri ve Pano Desteği](drag-and-drop-operations-and-clipboard-support.md)
-- [Nasıl yapılır: Panoya veri ekleme](how-to-add-data-to-the-clipboard.md)
+- [Nasıl yapılır: Panoya Veri Ekleme](how-to-add-data-to-the-clipboard.md)

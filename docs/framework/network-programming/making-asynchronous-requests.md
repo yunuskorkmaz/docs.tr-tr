@@ -1,5 +1,5 @@
 ---
-title: Zaman uyumsuz istekler yapma
+title: Zaman Uyumsuz İstekler Yapma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 1023d7213c665619f5417eb1016aa50c73def2c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b812db3259cbd2313cdf172950f51ab34679b460
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208572"
 ---
-# <a name="making-asynchronous-requests"></a>Zaman uyumsuz istekler yapma
+# <a name="making-asynchronous-requests"></a>Zaman Uyumsuz İstekler Yapma
 <xref:System.Net> Sınıfları, zaman uyumsuz Internet kaynaklarına erişim için .NET Framework'ün standart zaman uyumsuz programlama modeli kullanın. <xref:System.Net.WebRequest.BeginGetResponse%2A> Ve <xref:System.Net.WebRequest.EndGetResponse%2A> yöntemlerinin <xref:System.Net.WebRequest> başlangıç ve tüm zaman uyumsuz istekler için bir Internet kaynağına sınıfı.  
   
 > [!NOTE]
@@ -335,4 +335,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)

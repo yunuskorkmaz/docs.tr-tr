@@ -2,12 +2,12 @@
 title: Tanımlayıcılar (varlık SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-ms.openlocfilehash: 19c28eb4c883cc0d1cf18cba1751115277848208
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702a9c69c37b572fde18dd57c44608678174fb15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204906"
 ---
 # <a name="identifiers-entity-sql"></a>Tanımlayıcılar (varlık SQL)
 Tanımlayıcılar kullanılır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu ifadesi diğer adlar, değişken başvuruları, nesneleri, işlevleri ve benzeri özelliklerini göstermek için. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iki tür tanımlayıcıları sağlar: Basit tanımlayıcıları ve tırnak işaretli tanımlayıcılar.  
@@ -121,6 +121,7 @@ SELECT 1 AS X, 2 AS X …
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Giriş Karakter Kümesi](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)

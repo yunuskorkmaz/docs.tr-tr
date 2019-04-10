@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Giriş maskesini ayarlama'
+title: 'Nasıl yapılır: Giriş Maskesini Ayarlama'
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.MaskPropertyEditor
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 14591b313b0ba4fc2a0a30a45c693147f00050b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207551"
 ---
-# <a name="how-to-set-the-input-mask"></a>Nasıl yapılır: Giriş maskesini ayarlama
+# <a name="how-to-set-the-input-mask"></a>Nasıl yapılır: Giriş Maskesini Ayarlama
 Maskelenmiş metin kutusu denetimini kabul etme veya reddetme kullanıcı girişi için bir bildirim temelli söz dizimi destekleyen Gelişmiş metin kutusu denetimidir. Maske özelliği ayarlayarak, uygulamanızda herhangi bir özel doğrulama mantığı yazmak zorunda kalmadan izin verilen kullanıcı girişini belirtebilirsiniz. Daha fazla bilgi için Açıklamalar bölümüne bakın. <xref:System.Windows.Forms.MaskedTextBox> sınıfı.  
   
 ## <a name="setting-the-mask-property-manually"></a>Maske özelliği el ile ayarlama  
@@ -64,4 +64,5 @@ Maskelenmiş metin kutusu denetimini kabul etme veya reddetme kullanıcı giriş
      Maske girildiğini **maskesi** özelliğinde **özellikleri** penceresi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: MaskedTextBox denetimiyle çalışma](walkthrough-working-with-the-maskedtextbox-control.md)
+
+- [İzlenecek yol: MaskedTextBox Denetimiyle Çalışma](walkthrough-working-with-the-maskedtextbox-control.md)

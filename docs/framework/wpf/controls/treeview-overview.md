@@ -6,17 +6,16 @@ helpviewer_keywords:
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-ms.openlocfilehash: 5758aead9811cdbaf7f61bbd710092f6b4474ad8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c0967aa506b087120c776389c2891ec9e0b0b64d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209079"
 ---
 # <a name="treeview-overview"></a>TreeView Genel Bakışı
 <xref:System.Windows.Controls.TreeView> Denetimi daraltılabilir düğümleri kullanarak hiyerarşik bir yapıda bilgilerini görüntülemek için bir yol sağlar. Bu konu tanıtır <xref:System.Windows.Controls.TreeView> ve <xref:System.Windows.Controls.TreeViewItem> denetler ve kullanımlarının ilişkin basit örnekler sağlar.  
-  
-  
+
 <a name="Simple_TreeView_Control"></a>   
 ## <a name="what-is-a-treeview"></a>TreeView nedir?  
  <xref:System.Windows.Controls.TreeView> olan bir <xref:System.Windows.Controls.ItemsControl> öğelerini kullanarak katmandan <xref:System.Windows.Controls.TreeViewItem> kontrol eder. Aşağıdaki örnek, oluşturur bir <xref:System.Windows.Controls.TreeView>.  
@@ -74,6 +73,7 @@ ms.locfileid: "57369636"
  [!code-xaml[TreeViewDataBinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
 - [Nasıl Yapılır Konuları](treeview-how-to-topics.md)

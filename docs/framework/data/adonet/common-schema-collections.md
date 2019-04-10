@@ -1,15 +1,15 @@
 ---
-title: Ortak şema koleksiyonları
+title: Ortak Şema Koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: dfd1e28a117ca71cac6c792058c1aeb17a0c4f69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6307352cc2d976e4e9f47d1e111d40f96fc16c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209677"
 ---
-# <a name="common-schema-collections"></a>Ortak şema koleksiyonları
+# <a name="common-schema-collections"></a>Ortak Şema Koleksiyonları
 Ortak şema koleksiyonları her .NET Framework yönetilen sağlayıcıları tarafından uygulanan şema koleksiyonlarıdır. Desteklenen şema koleksiyonları listesi çağırarak belirlemek için bir .NET Framework yönetilen sağlayıcı sorgulayabilirsiniz **GetSchema** yöntemi bağımsız değişken olmadan veya şema koleksiyonu adı "MetaDataCollections". Bu döndürür bir <xref:System.Data.DataTable> listesiyle desteklenen şema koleksiyonları, desteklediği her kısıtlama sayısı ve kullandıkları tanımlayıcısı parçaların sayısı. Bu koleksiyonlar tüm gerekli sütunlar açıklanmaktadır. Sağlayıcıları istedikleri ek sütunlar eklemek ücretsizdir. Örneğin, `SqlClient` ve `OracleClient` ParameterName kısıtlamaları koleksiyona ekleyin.  
   
  Bir sağlayıcı gerekli bir sütunun değeri belirlenemiyor ise null döndürür.  
@@ -95,6 +95,7 @@ Ortak şema koleksiyonları her .NET Framework yönetilen sağlayıcıları tara
 |ReservedWord|dize|Sağlayıcı özel amaçlı sözcük.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [GetSchema ve Şema Koleksiyonları](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

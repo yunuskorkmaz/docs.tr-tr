@@ -1,15 +1,15 @@
 ---
-title: SQL Server'da sorgu bildirimleri
+title: SQL Server'da Sorgu Bildirimleri
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: 2a564ba1e06741523b9b3a005be86b13339889ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203684"
 ---
-# <a name="query-notifications-in-sql-server"></a>SQL Server'da sorgu bildirimleri
+# <a name="query-notifications-in-sql-server"></a>SQL Server'da Sorgu Bildirimleri
 Hizmet Aracısı altyapı inşa edilen uygulamalar, veriler değiştiğinde bildirim almak sorgu bildirimleri sağlar. Bu özellik, bilgileri bir veritabanından, bir Web uygulaması gibi bir önbellek sağlamanız ve kaynak veriler değiştiğinde bildirim almak gereken uygulamalar için özellikle yararlıdır.  
   
  ADO.NET kullanarak sorgu bildirimleri uygulamak üç yol vardır:  
@@ -62,5 +62,6 @@ Hizmet Aracısı altyapı inşa edilen uygulamalar, veriler değiştiğinde bild
  Açıklar <xref:System.Web.Caching.SqlCacheDependency> sınıfı ve tüm üyeleri.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

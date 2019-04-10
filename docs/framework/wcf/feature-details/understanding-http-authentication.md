@@ -2,12 +2,12 @@
 title: HTTP Kimlik Doğrulamasını Anlama
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 77fbed8cae070285925bcdc13c76fe28c3cb13cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206401"
 ---
 # <a name="understanding-http-authentication"></a>HTTP Kimlik Doğrulamasını Anlama
 Kimlik doğrulaması, bir istemcinin bir kaynağa erişmek uygun olup olmadığını belirleme işlemi şeklindedir. HTTP protokolü anlaşması güvenli kaynak erişimi için bir araç olarak kimlik doğrulamasını destekler.  
@@ -36,6 +36,7 @@ Kimlik doğrulaması, bir istemcinin bir kaynağa erişmek uygun olup olmadığ�
 -   Bir sunucu (WWW kimlik denetimi üst bilgilerinde) herhangi sunmalıdır değil değil Düzen hazır kabul etmek ya da, yeterince korumalı kaynağa güvenliğini sağlamaz. İstemciler sunucusu kimlik doğrulama düzeni arasında seçim ücretsizdir. Bazı istemciler varsayılan bir zayıf bir kimlik doğrulama düzeni ya da sunucu listesindeki ilk kimlik doğrulaması düzeni.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Aktarım Güvenliğine Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
-- [Aktarım Güvenliği ile Kimliğe Bürünme Kullanma](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+
+- [Taşıma Güvenliği Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
+- [Taşıma Güvenliği ile Kimliğe Bürünme Kullanma](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

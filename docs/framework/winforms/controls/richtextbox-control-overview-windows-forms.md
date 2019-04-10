@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-ms.openlocfilehash: ded2c9bb0e5b3320de700ce6126710314ed9e4f2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201604"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox Denetimine Genel Bakış (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi görüntüleme, girerek ve biçimlendirme metin düzenleme için kullanılır. <xref:System.Windows.Forms.RichTextBox> Netimi her şeyi <xref:System.Windows.Forms.TextBox> denetimi yapar, ancak ayrıca yazı tiplerini, renkleri ve bağlantılar görüntülemek; metin ve görüntüleri gömülü bir dosyadan; yüklemek ve belirtilen karakter bulun. <xref:System.Windows.Forms.RichTextBox> Denetimi genellikle metin düzenlemesini sağlar ve Microsoft Word gibi bir sözcük işleme uygulamalarını benzer özellikleri görüntülemek için kullanılır. Gibi <xref:System.Windows.Forms.TextBox> denetimi <xref:System.Windows.Forms.RichTextBox> denetimi, kaydırma çubukları; görüntüleyebilir ancak tersine <xref:System.Windows.Forms.TextBox> denetimi, varsayılan ayardır yatay ve dikey kaydırma çubukları gerektiği şekilde görüntülenecek ve ek kaydırma çubuğu ayarları vardır.  
@@ -25,6 +25,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi görüntüleme, g
  Geri Al ve Yinele çoğu düzenleme işlemleri bir <xref:System.Windows.Forms.RichTextBox> çağırarak denetim <xref:System.Windows.Forms.TextBoxBase.Undo%2A> ve <xref:System.Windows.Forms.RichTextBox.Redo%2A> yöntemleri. <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> Yöntemi denetime kullanıcı geri son işlemi uygulanabilir olup olmadığını belirlemenize olanak sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox Denetimi](richtextbox-control-windows-forms.md)
 - [TextBox Denetimine Genel Bakış](textbox-control-overview-windows-forms.md)

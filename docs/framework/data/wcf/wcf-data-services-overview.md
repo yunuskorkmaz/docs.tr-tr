@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: b7e8d0842b705a2fc8897511e1b2e01441d9c6b9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ca52b725f5fad4b591b95bf6a6dd778c7a72d235
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202059"
 ---
 # <a name="wcf-data-services-overview"></a>WCF veri hizmetleri genel bakış
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanarak oluşturma ve veri hizmetlerinin Web veya intranet tüketim sağlayan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Verilerinizi tarafından bir URI'leri adreslenebilir kaynakları olarak kullanıma sunmanıza olanak sağlar. Bu, erişmenize olanak tanır ve özellikle standart HTTP fiilleri, temsili durum aktarımı (REST) semantiği kullanarak, değişiklik verilerini al koy, Gönder ve Sil. Bu konu desenler ve uygulamalar tarafından tanımlanan genel bir bakış sağlar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ve ayrıca tarafından sağlanan özellikleri [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] yararlanmak için [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework tabanlı uygulamalarda.  
@@ -56,6 +56,7 @@ ms.locfileid: "58465847"
  ![Bir WCF Veri Hizmetleri mimarisi diyagramı gösteren ekran görüntüsü.](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md)
 - [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 - [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

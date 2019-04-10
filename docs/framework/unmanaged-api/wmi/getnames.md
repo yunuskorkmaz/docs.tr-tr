@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202657"
 ---
 # <a name="getnames-function"></a>GetNames işlevi
 Bir alt veya tümünü bir nesnenin özellik adlarını alır. 
@@ -80,7 +80,6 @@ Adlandırılmış döndürülen bayrakları ve parametre birleşimi tarafından 
 
 Bayrak değeri `lFlags` bit alanları
 
-
 Olarak geçirilen bayraklar `lEnumFlags` bağımsız değişkeni olan tanımlanan bit alanları *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda.  Herhangi diğer bir grup bayrağı ile her bir gruptan bir bayrak birleştirebilirsiniz. Ancak, aynı grup bayrakları birbirini dışlar. 
 
 | Grup 1 bayrakları |Değer  |Açıklama  |
@@ -112,4 +111,5 @@ Olarak geçirilen bayraklar `lEnumFlags` bağımsız değişkeni olan tanımlana
  **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

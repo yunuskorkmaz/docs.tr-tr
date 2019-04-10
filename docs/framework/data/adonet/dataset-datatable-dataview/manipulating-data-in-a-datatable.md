@@ -1,15 +1,15 @@
 ---
-title: DataTable verilerini düzenleme
+title: DataTable Verilerini Düzenleme
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 54ebde293dd6701b8018e77c6bf8d773a4931e2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202579"
 ---
-# <a name="manipulating-data-in-a-datatable"></a>DataTable verilerini düzenleme
+# <a name="manipulating-data-in-a-datatable"></a>DataTable Verilerini Düzenleme
 Oluşturduktan sonra bir <xref:System.Data.DataTable> içinde bir <xref:System.Data.DataSet>, bir veritabanında bir tablo kullanırken yaptığınız aynı etkinlikler gerçekleştirebilirsiniz. Ekleyebilir, görüntüleyin, düzenleyin ve tablo verilerini silme; hataları ve olayları izleyebilirsiniz; ve tablodaki verileri sorgulayabilir. Verileri değiştirirken bir **DataTable**, değişikliklerin doğru olduğundan ve programlı olarak geçir belirlemek olup olmadığını da doğrulayabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
@@ -38,6 +38,7 @@ Oluşturduktan sonra bir <xref:System.Data.DataTable> içinde bir <xref:System.D
  Kabul etme veya reddetme bir satır için yapılan değişiklikleri açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [DataTable Olaylarını İşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

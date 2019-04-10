@@ -12,17 +12,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204204"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Görüntüler, Çizimler ve Görsellerle Boyama
 Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ve <xref:System.Windows.Media.VisualBrush> bir görüntü ile bir alanı boyama nesnelere bir <xref:System.Windows.Media.Drawing>, veya bir <xref:System.Windows.Media.Visual>.  
-    
-  
+
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
  Bu konuda anlamak için farklı türde fırçalar ile ilgili bilgi sahibi olmalısınız [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sağlar ve temel özelliklerine. Bir giriş için bkz [WPF fırçalarına genel bakış](wpf-brushes-overview.md).  
@@ -135,11 +134,12 @@ TileBrush ile birden çok kutucuk bileşenleri
  Döşeme özellikleri hakkında daha fazla bilgi için <xref:System.Windows.Media.TileBrush> nesneleri bkz [TileBrush'a Genel Bakış](tilebrush-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [TileBrush’a Genel Bakış](tilebrush-overview.md)
+- [TileBrush Genel Bakışı](tilebrush-overview.md)
 - [WPF Fırçalarına Genel Bakış](wpf-brushes-overview.md)
 - [Görüntülemeye Genel Bakış](imaging-overview.md)
 - [Çizim Nesnelerine Genel Bakış](drawing-objects-overview.md)

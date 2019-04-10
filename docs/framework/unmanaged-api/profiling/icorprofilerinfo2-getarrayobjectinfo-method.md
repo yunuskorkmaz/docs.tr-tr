@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fe86fbe7ee51e5f53eeea74d7d5a56046de5e00
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5276c69da05cedcd3195a09da12ddc5b2d0fed67
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201279"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo Metodu
 Bir dizi nesnesi hakkında ayrıntılı bilgiler alır.  
@@ -52,7 +52,7 @@ HRESULT GetArrayObjectInfo(
  [out] Tamsayı içeren bir dizi, her alt temsil eden bir dizinin boyutu bağlı.  
   
  `ppData`  
- [out] C++ kuralına göre düzenlendiğini dizisi için ham arabelleği adresi için bir işaretçi.  
+ [out] Ham arabelleği göre düzenlendiğini dizi adresini bir işaretçiye C++ kuralı.  
   
 ## <a name="remarks"></a>Açıklamalar  
  `pDimensionSizes` Ve `pDimensionLowerBounds` aynı dizinde her dizi konumunda bulunan öğeleri aynı varlık özelliklerini şekilde paralel, dizilerdir.  
@@ -67,5 +67,6 @@ HRESULT GetArrayObjectInfo(
  **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ICorProfilerInfo Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 Arabirimi](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

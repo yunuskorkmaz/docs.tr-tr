@@ -10,17 +10,16 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: eef28a178f11ea23ac23183c9ec7eb06b7f18a29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209170"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Hizalama, Kenar Boşlukları ve Doldurmaya Genel Bakış
 <xref:System.Windows.FrameworkElement> Sınıfı, tam olarak alt öğeleri konumlandırmak için kullanılan çeşitli özellikler sunar. Bu konuda dört en önemli özellikleri anlatılmaktadır: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, ve <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Temel öğeler konumunu kontrol etmek için sağladıkları için bu özellikleri etkilerini anlamak önemli olan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalar.  
-  
-  
+
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## <a name="introduction-to-element-positioning"></a>Öğe konumlandırma giriş  
  Kullanarak öğeleri konumlandırmak için çok çeşitli yollar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ancak, ideal düzeni elde sağ seçmenin ötesine giden <xref:System.Windows.Controls.Panel> öğesi. Konumlandırma ince denetim gerektiren bir anlayış <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, ve <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> özellikleri.  
@@ -142,6 +141,7 @@ ms.locfileid: "57355419"
  Ek kaynaklar kullanılabilir biçimde açıklayan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] daha ayrıntılı düzen. [Panellere genel bakış](../controls/panels-overview.md) konu çeşitli hakkında daha fazla ayrıntı içeren <xref:System.Windows.Controls.Panel> öğeleri. Konu [izlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md) düzeni öğelerinin bileşenleri getirin ve eylemlerini veri kaynaklarına bağlamak için kullandığınız gelişmiş teknikleri sunar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>

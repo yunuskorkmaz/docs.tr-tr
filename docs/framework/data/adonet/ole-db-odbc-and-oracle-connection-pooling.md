@@ -1,15 +1,15 @@
 ---
-title: OLE DB, ODBC ve Oracle bağlantı havuzu
+title: OLE DB, ODBC ve Oracle Bağlantı Havuzu
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: bc07d4d33f2a568ef0fb4dd9806832222a13ca6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208897"
 ---
-# <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC ve Oracle bağlantı havuzu
+# <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC ve Oracle Bağlantı Havuzu
 Bağlantı havuzu performans ve ölçeklenebilirlik, uygulamanızın önemli ölçüde artırabilirsiniz. Bu bölümde, bağlantı için OLE DB, ODBC ve Oracle için .NET Framework veri sağlayıcıları havuzu açıklanmaktadır.  
   
 ## <a name="connection-pooling-for-oledb"></a>Bağlantı için OleDb havuzu  
@@ -50,7 +50,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Çağırmayın `Close` veya `Dispose` üzerinde bir `Connection`, `DataReader`, ya da diğer yönetilen nesnelere `Finalize` sınıfınızın yöntemi. İçindeki bir sonlandırıcı yalnızca sınıfınıza doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınızın herhangi bir yönetilmeyen kaynağa sahip değilse içermeyen bir `Finalize` sınıf tanımına yöntemi. Daha fazla bilgi için [çöp toplama](../../../../docs/standard/garbage-collection/index.md).  
   
-### <a name="transaction-support"></a>İşlem desteği  
+### <a name="transaction-support"></a>İşlem Desteği  
  Bağlantı havuzu ve da atanan göre işlem bağlamı çizilir. İstenen iş parçacığı ve atanmış bağlantı bağlamı eşleşmesi gerekir. Bu nedenle, her bir bağlantı havuzu gerçekten bağlantıları içine ve bunlarla ilişkili hiçbir işlem bağlamı ile ayrılır *N* alt bölümleri her belirli işlem bağlamı ile bağlantılar içerir.  
   
  Bağlantı kapalı olduğunda geri havuzu ve onun işlem bağlamına dayalı uygun alt yayımlanır. Dağıtılmış işlem yine de olsa bile bu nedenle, bağlantı oluşturulurken bir hata olmadan kapatabilirsiniz bekleniyor. Bu, tamamlama veya sonraki bir zamanda Dağıtılmış işlemi iptal etmenizi sağlar.  
@@ -69,6 +69,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Pooling`|'true'|Zaman `true`, bağlantı uygun havuzdan çizilmiş veya gerekirse, oluşturulan ve uygun havuzuna eklenmiş.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağlantı Havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

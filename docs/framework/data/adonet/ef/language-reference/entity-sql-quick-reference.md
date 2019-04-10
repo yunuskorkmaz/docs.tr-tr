@@ -1,15 +1,15 @@
 ---
-title: Entity SQL hızlı başvurusu
+title: Entity SQL Hızlı Başvurusu
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 20d8d1cb1e4b5cbf37dffcce6a7e79c2a4c265d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207077"
 ---
-# <a name="entity-sql-quick-reference"></a>Entity SQL hızlı başvurusu
+# <a name="entity-sql-quick-reference"></a>Entity SQL Hızlı Başvurusu
 Bu konu, hızlı başvuru sağlar. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgular. Sorgular, bu konuda, AdventureWorks satış modeline dayanır.  
   
 ## <a name="literals"></a>Sabit değerler  
@@ -71,7 +71,7 @@ DATETIME '2006-12-25 01:01'
   
 ## <a name="type-constructors"></a>Türü oluşturucuları  
   
-### <a name="row"></a>SATIR  
+### <a name="row"></a>ROW  
  [Satır](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md) bir anonim, yapısal olarak yazılmış (kayıt) değeri olarak oluşturur: `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  Örnek:  
@@ -129,7 +129,7 @@ AS o
   
 ## <a name="references"></a>Referanslar  
   
-### <a name="ref"></a>BAŞVURU  
+### <a name="ref"></a>REF  
  [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md) bir varlık türü örneğine başvuru oluşturur. Örneğin, aşağıdaki sorgu, siparişler varlık kümesinde her sipariş varlığı için başvuru döndürür:  
   
 ```  
@@ -256,7 +256,7 @@ using SqlServer; LOWER('AA');
 |-----------|  
 |aa|  
   
-## <a name="paging"></a>Disk belleği  
+## <a name="paging"></a>Disk Belleği  
  Disk belleği bildirerek ifade edilen bir [atla](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) ve [sınırı](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) için alt yan tümceleri [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) yan tümcesi.  
   
  Örnek:  
@@ -363,5 +363,6 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
 |TRUE|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

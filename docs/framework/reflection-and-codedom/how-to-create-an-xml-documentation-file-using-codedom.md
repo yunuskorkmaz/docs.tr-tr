@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: CodeDOM kullanarak XML belge dosyası oluşturma'
+title: 'Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8086a512d117767127260bcf779fc11555cd67dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a2871d273e0bbb09ff5bf440ea943cdac3f8e061
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201955"
 ---
-# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Nasıl yapılır: CodeDOM kullanarak XML belge dosyası oluşturma
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma
 CodeDOM, XML belgeleri oluşturan kodu oluşturmak için kullanılabilir. Kod oluşturma ve XML belgeleri çıktısı oluşturan derleyici seçeneğiyle oluşturulan kod derleme XML belge açıklamaları içeren CodeDOM grafik oluşturma işlemi içerir.  
   
 ### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>XML belge açıklamaları içeren bir CodeDOM grafiği oluşturmak için  
@@ -80,6 +80,7 @@ CodeDOM, XML belgeleri oluşturan kodu oluşturmak için kullanılabilir. Kod ol
 -   Bu kod örneği gerektirir `FullTrust` izin kümesinin başarıyla yürütülemedi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [XML ile Kodunuzu Belgeleme](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [XML Belge Açıklamaları](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML Belgeleri Yorumları](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
 - [XML Belgeleri](/cpp/ide/xml-documentation-visual-cpp)

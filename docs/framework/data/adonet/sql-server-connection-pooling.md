@@ -1,18 +1,18 @@
 ---
-title: SQL Server Connection Pooling (ADO.NET)
+title: SQL Server Bağlantı Havuzu (ADO.NET)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 640e8976b95b5228f1caa967c053ffd95d2553ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203944"
 ---
-# <a name="sql-server-connection-pooling-adonet"></a>SQL Server Connection Pooling (ADO.NET)
+# <a name="sql-server-connection-pooling-adonet"></a>SQL Server Bağlantı Havuzu (ADO.NET)
 Veritabanı sunucusuna bağlanması, zaman birkaç adımdan oluşur. Bir yuva ya da bir adlandırılmış kanal gibi fiziksel bir kanal, sunucu ile ilk el sıkışma gerçekleşmelidir, oluşturulmalıdır bağlantı dizesi bilgilerini ayrıştırıldığında, bağlantı sunucu tarafından doğrulanması, denetimleri kaydetme için çalıştırılması gerekir Geçerli işlem ve benzeri.  
   
  Uygulamada, çoğu uygulama, bağlantıları için yalnızca bir veya birkaç farklı yapılandırmaları kullanın. Bu uygulama yürütme sırasında aynı bağlantı fazla sürekli açık kapalı ve anlamına gelir. Bağlantılar, açma maliyetini en aza indirmek için [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] adında bir iyileştirme teknik kullanır *bağlantı havuzu*.  
@@ -82,7 +82,7 @@ Bağlantı kapatma ve açma ile ilgili olaylar hakkında daha fazla bilgi için 
 ## <a name="clearing-the-pool"></a>Havuz temizleme  
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 kullanılmaya havuzu temizlemek için iki yeni yöntem: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> ve <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` bağlantı havuzları için belirli bir sağlayıcı, temizler ve `ClearPool` belirli bir bağlantı ile ilişkili bağlantı havuzu temizler. Çağrı zamanında kullanılan bağlantılar varsa, uygun şekilde işaretlenir. Kapatıldığında, havuza geri döner yerine atılır.  
   
-## <a name="transaction-support"></a>İşlem desteği  
+## <a name="transaction-support"></a>İşlem Desteği  
  Bağlantı havuzu ve da atanan göre işlem bağlamı çizilir. Sürece `Enlist=false` belirtilen bağlantı dizesinde bağlantı havuzu sağlar bağlantı kayıtlı olduğundan emin olarak <xref:System.Transactions.Transaction.Current%2A> bağlamı. Ne zaman bir bağlantı kapatıldı ve kayıtlı bir havuzla döndürülen `System.Transactions` işlem, bu kenara sonraki Bu bağlantı havuzunun aynı istek şekilde `System.Transactions` işlem varsa aynı bağlantıyı döndürür. Böyle bir talep verilir ve havuza alınmış bağlantı kullanılabilir bir bağlantı havuzunun işlem temelli olmayan bölümünden çizilmiş ve kayıtlı. Bağlantı yok ya da havuzun alanında bulunan kullanılabilir değilse yeni bir bağlantı oluşturulur ve kayıtlı.  
   
  Bağlantı kapalı olduğunda geri havuzu ve onun işlem bağlamına dayalı uygun alt yayımlanır. Dağıtılmış işlem yine de olsa bile bu nedenle, bağlantı oluşturulurken bir hata olmadan kapatabilirsiniz bekleniyor. Bu, tamamlama veya dağıtılmış işlem daha sonra iptal etmenizi sağlar.  
@@ -130,6 +130,7 @@ using (SqlConnection connection = new SqlConnection(
  Uygulama rolleri yerine kullanabileceğiniz güvenlik mekanizmaları avantajlarından almanızı öneririz. Daha fazla bilgi için [SQL Server'da uygulama rolleri oluşturma](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Bağlantı Havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)

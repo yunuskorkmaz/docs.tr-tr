@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208130"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Tarih ve saat dizelerini .NET ayrıştırma
 
@@ -32,7 +32,6 @@ Bunları dönüştürmek için dizeleri ayrıştırma <xref:System.DateTime> nes
 1. Nasıl eksik bileşenleri belirtebilir metin gösterimi tarih ve saat ayarlanır.
 
 <xref:System.DateTime.Parse%2A> Ve <xref:System.DateTime.TryParse%2A> yöntemleri bir tarih ve saat birçok ortak temsillerini Dönüştür. <xref:System.DateTime.ParseExact%2A> Ve <xref:System.DateTime.TryParseExact%2A> yöntemleri bir tarih ve saat biçim dizesi tarafından belirtilen düzene uyan bir dize gösterimi Dönüştür. (Makaleleri görmek [standart tarih ve saat biçim dizeleri](standard-date-and-time-format-strings.md) ve [özel tarih ve saat biçim dizeleri](custom-date-and-time-format-strings.md) Ayrıntılar için.)
-
 
 Geçerli <xref:System.Globalization.DateTimeFormatInfo> nesnesi, bir tarih ve saat metin nasıl yorumlanmalıdır üzerinde daha fazla denetim sağlar. Özellikleri bir <xref:System.Globalization.DateTimeFormatInfo> tarih ve saat ayırıcısı ve ay, gün ve dönemleri ve biçimi adları için "AM" ve "PM" ifadelerini açıklar. Geçerli iş parçacığı kültürünü sağlayan bir <xref:System.Globalization.DateTimeFormatInfo> geçerli kültürü temsil eden. Belirttiğiniz belirli bir kültür veya özel ayarlar isterseniz, <xref:System.IFormatProvider> ayrıştırma yönteminin parametresi. İçin <xref:System.IFormatProvider> parametresi belirtin bir <xref:System.Globalization.CultureInfo> bir kültürü temsil eden bir nesne veya <xref:System.Globalization.DateTimeFormatInfo> nesne.
 

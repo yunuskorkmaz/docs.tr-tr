@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.openlocfilehash: 5f59c6ea6f39ecba49bd8aa18ee3abab750891c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203723"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework Sınıf Kitaplığı'nda Artık Kullanılmayanlar
 .NET Framework, zaman içinde değişir. Her yeni sürümü, yeni türler ve yeni işlevleri sağlayan bir tür üyeleri ekler. Ayrıca varolan türleri ve üyeleri zamanla değişir. Örneğin, bazı türleri destekledikleri teknoloji tarafından yeni bir teknoloji değiştirilir daha az önemli hale gelir ve bazı yöntemler daha kullanışlı ya da daha tam özellikli olan yeni yöntemlerle olandır.  
@@ -82,4 +82,5 @@ ms.locfileid: "58018749"
  [.NET framework 2.0 eski listesi](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [\<supportedRuntime > öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md)

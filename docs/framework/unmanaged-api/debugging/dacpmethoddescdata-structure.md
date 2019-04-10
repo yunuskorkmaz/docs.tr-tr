@@ -1,5 +1,5 @@
 ---
-title: DacpMethodDescData yapısı
+title: DacpMethodDescData Yapısı
 ms.date: 02/01/2019
 api.name:
 - DacpMethodDescData Structure
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e9037fc035693e079e2471ad37263108656b8c01
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 567dc3942f79b6bfd29338b9103083aa64e66451
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203203"
 ---
-# <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData yapısı
+# <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData Yapısı
 
 Bir yöntemin çalışma zamanı bilgileri için transport arabellek tanımlar.
 
@@ -73,18 +73,18 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | İstenen yerel adres için Rejit bilgileri.                                             |
 | `cJittedRejitVersions`       | İzleme aracılığıyla rejitted yöntemi çağrıldıysa sayısı.                           |
 
-
 ## <a name="remarks"></a>Açıklamalar
 
 Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya kitaplık dosyaları gösterilmez. Bunu kullanmak için yukarıda belirtildiği gibi yapısını tanımlar.
 
 ## <a name="requirements"></a>Gereksinimler
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Hiçbiri  
-**Kitaplığı:** Hiçbiri  
+**Üst bilgi:** Yok.  
+**Kitaplığı:** None  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Hata Ayıklama Yapıları](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Ortak Veri Türleri](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

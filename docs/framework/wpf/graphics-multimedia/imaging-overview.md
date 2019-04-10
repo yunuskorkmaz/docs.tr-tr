@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 45214b5f0e6827c36f87a4d45592ff0989c9a877
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209716"
 ---
 # <a name="imaging-overview"></a>Görüntülemeye Genel Bakış
 Bu konuda tanıtır [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] geliştiricilerin görüntülemek, dönüştürme ve görüntü biçimlendirme sağlar.  
-  
-  
+
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF görüntüleme bileşeni  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] içinde görüntüleme özelliğinde önemli iyileştirmeler sağlar [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Bit eşlem görüntüleme veya ortak denetiminde resim kullanma gibi özellikleri Imaging daha önce bağımlıdır [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] veya [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] kitaplıkları. Bunlar [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] taban çizgisi görüntüleme işlevselliği sağlar, ancak codec genişletilebilirlik ve yüksek uygunluğa sahip görüntü desteği desteği gibi özellikleri eksik. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] eksikliklerini aşmak için tasarlanmış [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] ve [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] ve yeni bir dizi [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] görüntüleme ve uygulamalarınızı yansımalar kullanma.  
@@ -190,6 +189,7 @@ Farklı esnetme ayarları
 >  Codec sistem tanıması dijital olarak imzalanması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - <xref:System.Windows.Media.Imaging.BitmapSource>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
 - <xref:System.Windows.Controls.Image>

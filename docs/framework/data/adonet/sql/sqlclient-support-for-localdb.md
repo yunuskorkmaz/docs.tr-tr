@@ -1,15 +1,15 @@
 ---
-title: Yerel veritabanı için SqlClient desteği
+title: Yerel Veritabanı için SqlClient Desteği
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 102dbdcc79234525a45e9059092ccaad63fa3353
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204763"
 ---
-# <a name="sqlclient-support-for-localdb"></a>Yerel veritabanı için SqlClient desteği
+# <a name="sqlclient-support-for-localdb"></a>Yerel Veritabanı için SqlClient Desteği
 SQL Server kod adı Denali başlayarak adlı LocalDB, SQL Server'ın basit bir sürümü kullanıma sunulacaktır. Bu konuda, bir LocalDB veritabanına bağlanmak nasıl ele alınmaktadır.  
   
 ## <a name="remarks"></a>Açıklamalar  
@@ -59,5 +59,6 @@ SQL Server kod adı Denali başlayarak adlı LocalDB, SQL Server'ın basit bir s
 -   Kullanım `AttachDBFilename` belirtmek için bağlantı dizesi anahtar sözcüğü. MDF dosyası.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [SQL Server Özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

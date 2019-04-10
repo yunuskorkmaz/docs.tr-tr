@@ -1,21 +1,21 @@
 ---
-title: ADO.NET mimarisi
+title: ADO.NET Mimarisi
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2af1d6339b17871d56b949d845534479380c46ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202644"
 ---
-# <a name="adonet-architecture"></a>ADO.NET mimarisi
+# <a name="adonet-architecture"></a>ADO.NET Mimarisi
 Geleneksel veri işleme öncelikli olarak bağlantı tabanlı, iki katmanlı modeli üzerinde yararlandı. Veri işleme, çok katmanlı mimariler giderek kullanır gibi programcılar kendi uygulamaları için daha iyi ölçeklenebilirlik sağlamak için bağlantısı kesik bir yaklaşıma geçirirsiniz.  
   
 ## <a name="adonet-components"></a>ADO.NET bileşenleri  
  İki ana bileşenden [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] erişme ve verileri yönlendirmek için [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veri sağlayıcıları ve <xref:System.Data.DataSet>.  
   
-### <a name="net-framework-data-providers"></a>.NET framework veri sağlayıcıları  
+### <a name="net-framework-data-providers"></a>.NET Framework Veri Sağlayıcıları  
  .NET Framework veri sağlayıcıları açıkça veri işleme ve verileri hızlı, yalnızca iletme, salt okunur erişim için tasarlanmış bileşenlerdir. `Connection` Nesnesi, bir veri kaynağına bağlantı sağlar. `Command` Nesne verileri döndürür, verileri değiştirme, saklı yordamları çalıştırmak ve gönderme veya parametre bilgilerini almak için veritabanı komutları erişim sağlar. `DataReader` Veri kaynağından veri yüksek performanslı akışını sağlar. Son olarak, `DataAdapter` arasında köprü sağlar `DataSet` nesnesi ve veri kaynağı. `DataAdapter` Kullanan `Command` veri kaynağında hem yük SQL komutları yürütme nesnelere `DataSet` verilerle ve verilerde yapılan değişiklikleri mutabık kılma `DataSet` veri kaynağına geri. Daha fazla bilgi için [.NET Framework veri sağlayıcıları](../../../../docs/framework/data/adonet/data-providers.md) ve [alınıyor ve ADO.NET veri değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  
   
 ### <a name="the-dataset"></a>Veri kümesi  
@@ -57,5 +57,6 @@ ADO.NET mimarisi
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] ve XML sınıflarda [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , yakınsama `DataSet` nesne. `DataSet` Bir dosya veya bir XML akışı olup, bir XML kaynaktan gelen veriler ile doldurulabilir. `DataSet` World-Wide Web Consortium (W3C) XML Şeması Tanım Dili (XSD) şemaya, veri kaynağı ne olursa olsun, şema içerir uyumlu XML olarak yazılmış `DataSet`. Yerel seri hale getirme biçimi nedeniyle `DataSet` XML, yapmadan katmanlar arasında verileri taşımak için mükemmel bir ortamdır `DataSet` uzak veri ve şema bağlamı için bir en iyi seçim için ve XML Web hizmeti. Daha fazla bilgi için [XML belgeleri ve verileri](../../../../docs/standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Eğriler çizme'
+title: 'Nasıl yapılır: Ana Eğriler Çizme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 0f5c7a8555130e884b641648d1ffc9865f44dc1e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204958"
 ---
-# <a name="how-to-draw-cardinal-splines"></a>Nasıl yapılır: Eğriler çizme
+# <a name="how-to-draw-cardinal-splines"></a>Nasıl yapılır: Ana Eğriler Çizme
 Kardinal eğri sorunsuz bir şekilde belirli bir nokta kümesi geçen bir eğri ' dir. Kardinal eğri çizmek için oluşturma bir <xref:System.Drawing.Graphics> nesnesi ve bir dizi noktası adresini geçirmek <xref:System.Drawing.Graphics.DrawCurve%2A> yöntemi.  
   
 ### <a name="drawing-a-bell-shaped-cardinal-spline"></a>Zil şeklinde bir Kardinal eğri çizme  
@@ -50,5 +50,6 @@ Kardinal eğri sorunsuz bir şekilde belirli bir nokta kümesi geçen bir eğri 
  Önceki örneklerde, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirdikleri <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
 - [Eğriler Oluşturma ve Çizme](constructing-and-drawing-curves.md)
