@@ -5,51 +5,51 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319371"
 ---
-# <a name="trusted-subsystem"></a><span data-ttu-id="afc29-102">Güvenilir Alt Sistem</span><span class="sxs-lookup"><span data-stu-id="afc29-102">Trusted Subsystem</span></span>
-<span data-ttu-id="afc29-103">Bir istemci, bir ağ üzerinden dağıtılan bir veya daha fazla Web Hizmetleri erişir.</span><span class="sxs-lookup"><span data-stu-id="afc29-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="afc29-104">Web Hizmetleri, Web hizmetinin uygulamadaki iş mantığının bu ek kaynaklara (örneğin, veritabanları veya diğer Web hizmetlerini) erişim kapsüllenir şekilde tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="afc29-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="afc29-105">Bu kaynakların yetkisiz erişime karşı korunması gerekir.</span><span class="sxs-lookup"><span data-stu-id="afc29-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="afc29-106">Aşağıdaki çizimde, bir güvenilir alt sistem işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="afc29-106">The following illustration depicts a trusted subsystem process.</span></span>  
+# <a name="trusted-subsystem"></a><span data-ttu-id="0f3b9-102">Güvenilir Alt Sistem</span><span class="sxs-lookup"><span data-stu-id="0f3b9-102">Trusted Subsystem</span></span>
+<span data-ttu-id="0f3b9-103">Bir istemci, bir ağ üzerinden dağıtılan bir veya daha fazla Web Hizmetleri erişir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="0f3b9-104">Web Hizmetleri, Web hizmetinin uygulamadaki iş mantığının bu ek kaynaklara (örneğin, veritabanları veya diğer Web hizmetlerini) erişim kapsüllenir şekilde tasarlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="0f3b9-105">Bu kaynakların yetkisiz erişime karşı korunması gerekir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="0f3b9-106">Aşağıdaki çizimde, bir güvenilir alt sistem işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-106">The following illustration depicts a trusted subsystem process.</span></span>  
   
- <span data-ttu-id="afc29-107">![Güvenilir alt sistem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span><span class="sxs-lookup"><span data-stu-id="afc29-107">![Trusted subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span></span>  
+ <span data-ttu-id="0f3b9-107">![Güvenilir alt sistem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span><span class="sxs-lookup"><span data-stu-id="0f3b9-107">![Trusted subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")</span></span>  
   
- <span data-ttu-id="afc29-108">Aşağıdaki adımlarda gösterildiği gibi güvenilir alt sistem işlemi açıklanmaktadır:</span><span class="sxs-lookup"><span data-stu-id="afc29-108">The following steps describe the trusted subsystem process as illustrated:</span></span>  
+ <span data-ttu-id="0f3b9-108">Aşağıdaki adımlarda gösterildiği gibi güvenilir alt sistem işlemi açıklanmaktadır:</span><span class="sxs-lookup"><span data-stu-id="0f3b9-108">The following steps describe the trusted subsystem process as illustrated:</span></span>  
   
-1.  <span data-ttu-id="afc29-109">İstemci kimlik bilgileriyle birlikte güvenilir alt sistem için bir istek gönderir.</span><span class="sxs-lookup"><span data-stu-id="afc29-109">The client submits a request to the trusted subsystem, along with credentials.</span></span>  
+1. <span data-ttu-id="0f3b9-109">İstemci kimlik bilgileriyle birlikte güvenilir alt sistem için bir istek gönderir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-109">The client submits a request to the trusted subsystem, along with credentials.</span></span>  
   
-2.  <span data-ttu-id="afc29-110">Güvenilir alt sistem doğrular ve kullanıcıya yetki verir.</span><span class="sxs-lookup"><span data-stu-id="afc29-110">The trusted subsystem authenticates and authorizes the user.</span></span>  
+2. <span data-ttu-id="0f3b9-110">Güvenilir alt sistem doğrular ve kullanıcıya yetki verir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-110">The trusted subsystem authenticates and authorizes the user.</span></span>  
   
-3.  <span data-ttu-id="afc29-111">Güvenilir alt sistem uzak kaynak için bir istek iletisi gönderir.</span><span class="sxs-lookup"><span data-stu-id="afc29-111">The trusted subsystem sends a request message to the remote resource.</span></span> <span data-ttu-id="afc29-112">Bu istek, güvenilir alt sistem (veya hizmet hesabı altında güvenilir alt sistem işlemi yürütülmekte olduğu) için kimlik bilgilerini eşlik eder.</span><span class="sxs-lookup"><span data-stu-id="afc29-112">This request is accompanied by the credentials for the trusted subsystem (or the service account under which the trusted subsystem process is being executed).</span></span>  
+3. <span data-ttu-id="0f3b9-111">Güvenilir alt sistem uzak kaynak için bir istek iletisi gönderir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-111">The trusted subsystem sends a request message to the remote resource.</span></span> <span data-ttu-id="0f3b9-112">Bu istek, güvenilir alt sistem (veya hizmet hesabı altında güvenilir alt sistem işlemi yürütülmekte olduğu) için kimlik bilgilerini eşlik eder.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-112">This request is accompanied by the credentials for the trusted subsystem (or the service account under which the trusted subsystem process is being executed).</span></span>  
   
-4.  <span data-ttu-id="afc29-113">Arka uç kaynak kimliğini doğrular ve güvenilir alt sistem yetkisi verir.</span><span class="sxs-lookup"><span data-stu-id="afc29-113">The back-end resource authenticates and authorizes the trusted subsystem.</span></span> <span data-ttu-id="afc29-114">İsteği işler ve güvenilir alt sistem yanıt verir.</span><span class="sxs-lookup"><span data-stu-id="afc29-114">It then processes the request and issues a response to the trusted subsystem.</span></span>  
+4. <span data-ttu-id="0f3b9-113">Arka uç kaynak kimliğini doğrular ve güvenilir alt sistem yetkisi verir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-113">The back-end resource authenticates and authorizes the trusted subsystem.</span></span> <span data-ttu-id="0f3b9-114">İsteği işler ve güvenilir alt sistem yanıt verir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-114">It then processes the request and issues a response to the trusted subsystem.</span></span>  
   
-5.  <span data-ttu-id="afc29-115">Güvenilir alt sistem yanıta işler ve istemciye kendi yanıt verir.</span><span class="sxs-lookup"><span data-stu-id="afc29-115">The trusted subsystem processes the response and issues its own response to the client.</span></span>  
+5. <span data-ttu-id="0f3b9-115">Güvenilir alt sistem yanıta işler ve istemciye kendi yanıt verir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-115">The trusted subsystem processes the response and issues its own response to the client.</span></span>  
   
-|<span data-ttu-id="afc29-116">Özelliği</span><span class="sxs-lookup"><span data-stu-id="afc29-116">Characteristic</span></span>|<span data-ttu-id="afc29-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="afc29-117">Description</span></span>|  
+|<span data-ttu-id="0f3b9-116">Özelliği</span><span class="sxs-lookup"><span data-stu-id="0f3b9-116">Characteristic</span></span>|<span data-ttu-id="0f3b9-117">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0f3b9-117">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="afc29-118">Güvenlik modu</span><span class="sxs-lookup"><span data-stu-id="afc29-118">Security Mode</span></span>|<span data-ttu-id="afc29-119">İleti</span><span class="sxs-lookup"><span data-stu-id="afc29-119">Message</span></span>|  
-|<span data-ttu-id="afc29-120">Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="afc29-120">Interoperability</span></span>|<span data-ttu-id="afc29-121">Windows Communication Foundation (WCF) yalnızca.</span><span class="sxs-lookup"><span data-stu-id="afc29-121">Windows Communication Foundation (WCF) only.</span></span>|  
-|<span data-ttu-id="afc29-122">Kimlik doğrulaması (hizmet)</span><span class="sxs-lookup"><span data-stu-id="afc29-122">Authentication (service)</span></span>|<span data-ttu-id="afc29-123">Güvenlik belirteci hizmeti doğrular ve istemcilerin yetkisi verir.</span><span class="sxs-lookup"><span data-stu-id="afc29-123">Security token service authenticates and authorizes clients.</span></span>|  
-|<span data-ttu-id="afc29-124">Kimlik doğrulaması (istemci)</span><span class="sxs-lookup"><span data-stu-id="afc29-124">Authentication (client)</span></span>|<span data-ttu-id="afc29-125">Güvenilir alt sistem istemcinin kimliğini doğrular ve güvenilir alt sistem hizmeti kaynak kimliğini doğrular.</span><span class="sxs-lookup"><span data-stu-id="afc29-125">The trusted subsystem authenticates the client and the resource authenticates the trusted subsystem service.</span></span>|  
-|<span data-ttu-id="afc29-126">Bütünlüğü</span><span class="sxs-lookup"><span data-stu-id="afc29-126">Integrity</span></span>|<span data-ttu-id="afc29-127">Evet</span><span class="sxs-lookup"><span data-stu-id="afc29-127">Yes</span></span>|  
-|<span data-ttu-id="afc29-128">Gizliliği</span><span class="sxs-lookup"><span data-stu-id="afc29-128">Confidentiality</span></span>|<span data-ttu-id="afc29-129">Evet</span><span class="sxs-lookup"><span data-stu-id="afc29-129">Yes</span></span>|  
-|<span data-ttu-id="afc29-130">Taşıma</span><span class="sxs-lookup"><span data-stu-id="afc29-130">Transport</span></span>|<span data-ttu-id="afc29-131">HTTP istemci ve güvenilir alt sistem hizmeti arasında.</span><span class="sxs-lookup"><span data-stu-id="afc29-131">HTTP between client and the trusted subsystem service.</span></span><br /><br /> <span data-ttu-id="afc29-132">NET. Güvenilir alt sistem hizmeti ve kaynak (arka uç hizmeti) arasında TCP.</span><span class="sxs-lookup"><span data-stu-id="afc29-132">NET.TCP between trusted subsystem service and the resource (back-end service).</span></span>|  
-|<span data-ttu-id="afc29-133">Bağlama</span><span class="sxs-lookup"><span data-stu-id="afc29-133">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding> <span data-ttu-id="afc29-134">ve <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="afc29-134">and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span></span>|  
+|<span data-ttu-id="0f3b9-118">Güvenlik modu</span><span class="sxs-lookup"><span data-stu-id="0f3b9-118">Security Mode</span></span>|<span data-ttu-id="0f3b9-119">İleti</span><span class="sxs-lookup"><span data-stu-id="0f3b9-119">Message</span></span>|  
+|<span data-ttu-id="0f3b9-120">Birlikte Çalışabilirlik</span><span class="sxs-lookup"><span data-stu-id="0f3b9-120">Interoperability</span></span>|<span data-ttu-id="0f3b9-121">Windows Communication Foundation (WCF) yalnızca.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-121">Windows Communication Foundation (WCF) only.</span></span>|  
+|<span data-ttu-id="0f3b9-122">Kimlik doğrulaması (hizmet)</span><span class="sxs-lookup"><span data-stu-id="0f3b9-122">Authentication (service)</span></span>|<span data-ttu-id="0f3b9-123">Güvenlik belirteci hizmeti doğrular ve istemcilerin yetkisi verir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-123">Security token service authenticates and authorizes clients.</span></span>|  
+|<span data-ttu-id="0f3b9-124">Kimlik doğrulaması (istemci)</span><span class="sxs-lookup"><span data-stu-id="0f3b9-124">Authentication (client)</span></span>|<span data-ttu-id="0f3b9-125">Güvenilir alt sistem istemcinin kimliğini doğrular ve güvenilir alt sistem hizmeti kaynak kimliğini doğrular.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-125">The trusted subsystem authenticates the client and the resource authenticates the trusted subsystem service.</span></span>|  
+|<span data-ttu-id="0f3b9-126">Bütünlüğü</span><span class="sxs-lookup"><span data-stu-id="0f3b9-126">Integrity</span></span>|<span data-ttu-id="0f3b9-127">Evet</span><span class="sxs-lookup"><span data-stu-id="0f3b9-127">Yes</span></span>|  
+|<span data-ttu-id="0f3b9-128">Gizliliği</span><span class="sxs-lookup"><span data-stu-id="0f3b9-128">Confidentiality</span></span>|<span data-ttu-id="0f3b9-129">Evet</span><span class="sxs-lookup"><span data-stu-id="0f3b9-129">Yes</span></span>|  
+|<span data-ttu-id="0f3b9-130">Taşıma</span><span class="sxs-lookup"><span data-stu-id="0f3b9-130">Transport</span></span>|<span data-ttu-id="0f3b9-131">HTTP istemci ve güvenilir alt sistem hizmeti arasında.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-131">HTTP between client and the trusted subsystem service.</span></span><br /><br /> <span data-ttu-id="0f3b9-132">NET. Güvenilir alt sistem hizmeti ve kaynak (arka uç hizmeti) arasında TCP.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-132">NET.TCP between trusted subsystem service and the resource (back-end service).</span></span>|  
+|<span data-ttu-id="0f3b9-133">Bağlama</span><span class="sxs-lookup"><span data-stu-id="0f3b9-133">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding> <span data-ttu-id="0f3b9-134">ve <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="0f3b9-134">and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)</span></span>|  
   
-## <a name="resource-back-end-service"></a><span data-ttu-id="afc29-135">Kaynak (arka uç hizmeti)</span><span class="sxs-lookup"><span data-stu-id="afc29-135">Resource (Back-End Service)</span></span>  
+## <a name="resource-back-end-service"></a><span data-ttu-id="0f3b9-135">Kaynak (arka uç hizmeti)</span><span class="sxs-lookup"><span data-stu-id="0f3b9-135">Resource (Back-End Service)</span></span>  
   
-### <a name="code"></a><span data-ttu-id="afc29-136">Kod</span><span class="sxs-lookup"><span data-stu-id="afc29-136">Code</span></span>  
- <span data-ttu-id="afc29-137">Aşağıdaki kod, bir hizmet uç noktası TCP Aktarım Protokolü üzerinden aktarım güvenliği kullanır kaynak için oluşturma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="afc29-137">The following code shows how to create a service endpoint for the resource, which uses transport security over the TCP transport protocol.</span></span>  
+### <a name="code"></a><span data-ttu-id="0f3b9-136">Kod</span><span class="sxs-lookup"><span data-stu-id="0f3b9-136">Code</span></span>  
+ <span data-ttu-id="0f3b9-137">Aşağıdaki kod, bir hizmet uç noktası TCP Aktarım Protokolü üzerinden aktarım güvenliği kullanır kaynak için oluşturma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-137">The following code shows how to create a service endpoint for the resource, which uses transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### <a name="configuration"></a><span data-ttu-id="afc29-138">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="afc29-138">Configuration</span></span>  
- <span data-ttu-id="afc29-139">Aşağıdaki yapılandırmayı Yapılandırması'nı kullanarak aynı uç noktasını ayarlar.</span><span class="sxs-lookup"><span data-stu-id="afc29-139">The following configuration sets up the same endpoint using configuration.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="0f3b9-138">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="0f3b9-138">Configuration</span></span>  
+ <span data-ttu-id="0f3b9-139">Aşağıdaki yapılandırmayı Yapılandırması'nı kullanarak aynı uç noktasını ayarlar.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-139">The following configuration sets up the same endpoint using configuration.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -87,21 +87,21 @@ ms.locfileid: "59208546"
 </configuration>  
 ```  
   
-## <a name="trusted-subsystem"></a><span data-ttu-id="afc29-140">Güvenilir Alt Sistem</span><span class="sxs-lookup"><span data-stu-id="afc29-140">Trusted Subsystem</span></span>  
+## <a name="trusted-subsystem"></a><span data-ttu-id="0f3b9-140">Güvenilir Alt Sistem</span><span class="sxs-lookup"><span data-stu-id="0f3b9-140">Trusted Subsystem</span></span>  
   
-### <a name="code"></a><span data-ttu-id="afc29-141">Kod</span><span class="sxs-lookup"><span data-stu-id="afc29-141">Code</span></span>  
- <span data-ttu-id="afc29-142">Aşağıdaki kod, kimlik doğrulaması için ve bir kullanıcı adı ve parola HTTP protokolü ileti güvenliğini kullanan güvenilir alt sistem için bir hizmet uç noktası oluşturma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="afc29-142">The following code shows how to create a service endpoint for the trusted subsystem that uses message security over the HTTP protocol and a user name and password for authentication.</span></span>  
+### <a name="code"></a><span data-ttu-id="0f3b9-141">Kod</span><span class="sxs-lookup"><span data-stu-id="0f3b9-141">Code</span></span>  
+ <span data-ttu-id="0f3b9-142">Aşağıdaki kod, kimlik doğrulaması için ve bir kullanıcı adı ve parola HTTP protokolü ileti güvenliğini kullanan güvenilir alt sistem için bir hizmet uç noktası oluşturma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-142">The following code shows how to create a service endpoint for the trusted subsystem that uses message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystems#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#1)]
  [!code-vb[TrustedSubSystems#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#1)]  
   
- <span data-ttu-id="afc29-143">Aşağıdaki kod, TCP Aktarım Protokolü üzerinden aktarım güvenliği kullanarak arka uç hizmetiyle iletişim kurar güvenilen bir alt sistemdeki hizmet gösterir.</span><span class="sxs-lookup"><span data-stu-id="afc29-143">The following code shows a service in a trusted subsystem that communicates with a back-end service using transport security over the TCP transport protocol.</span></span>  
+ <span data-ttu-id="0f3b9-143">Aşağıdaki kod, TCP Aktarım Protokolü üzerinden aktarım güvenliği kullanarak arka uç hizmetiyle iletişim kurar güvenilen bir alt sistemdeki hizmet gösterir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-143">The following code shows a service in a trusted subsystem that communicates with a back-end service using transport security over the TCP transport protocol.</span></span>  
   
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="afc29-144">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="afc29-144">Configuration</span></span>  
- <span data-ttu-id="afc29-145">Aşağıdaki yapılandırmayı Yapılandırması'nı kullanarak aynı uç noktasını ayarlar.</span><span class="sxs-lookup"><span data-stu-id="afc29-145">The following configuration sets up the same endpoint using configuration.</span></span> <span data-ttu-id="afc29-146">İki bağlaması dikkat edin: Bir güvenilir alt barındırılan hizmete güvenliğini sağlar ve diğer güvenilir alt sistem ve arka uç hizmeti arasındaki iletişim kurar.</span><span class="sxs-lookup"><span data-stu-id="afc29-146">Note the two bindings: One secures the service hosted in the trusted subsystem and the other communicates between the trusted subsystem and the back-end service.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="0f3b9-144">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="0f3b9-144">Configuration</span></span>  
+ <span data-ttu-id="0f3b9-145">Aşağıdaki yapılandırmayı Yapılandırması'nı kullanarak aynı uç noktasını ayarlar.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-145">The following configuration sets up the same endpoint using configuration.</span></span> <span data-ttu-id="0f3b9-146">İki bağlaması dikkat edin: Bir güvenilir alt barındırılan hizmete güvenliğini sağlar ve diğer güvenilir alt sistem ve arka uç hizmeti arasındaki iletişim kurar.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-146">Note the two bindings: One secures the service hosted in the trusted subsystem and the other communicates between the trusted subsystem and the back-end service.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -163,16 +163,16 @@ ms.locfileid: "59208546"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="afc29-147">İstemci</span><span class="sxs-lookup"><span data-stu-id="afc29-147">Client</span></span>  
+## <a name="client"></a><span data-ttu-id="0f3b9-147">İstemci</span><span class="sxs-lookup"><span data-stu-id="0f3b9-147">Client</span></span>  
   
-### <a name="code"></a><span data-ttu-id="afc29-148">Kod</span><span class="sxs-lookup"><span data-stu-id="afc29-148">Code</span></span>  
- <span data-ttu-id="afc29-149">Aşağıdaki kodu ve bir kullanıcı adı ve parola HTTP protokolü kimlik doğrulaması için ileti güvenliği kullanarak iletişim kuran istemci ile güvenilir alt sistem oluşturma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="afc29-149">The following code shows how to create the client that communicates with the trusted subsystem by using message security over the HTTP protocol and a user name and password for authentication.</span></span>  
+### <a name="code"></a><span data-ttu-id="0f3b9-148">Kod</span><span class="sxs-lookup"><span data-stu-id="0f3b9-148">Code</span></span>  
+ <span data-ttu-id="0f3b9-149">Aşağıdaki kodu ve bir kullanıcı adı ve parola HTTP protokolü kimlik doğrulaması için ileti güvenliği kullanarak iletişim kuran istemci ile güvenilir alt sistem oluşturma işlemini gösterir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-149">The following code shows how to create the client that communicates with the trusted subsystem by using message security over the HTTP protocol and a user name and password for authentication.</span></span>  
   
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### <a name="configuration"></a><span data-ttu-id="afc29-150">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="afc29-150">Configuration</span></span>  
- <span data-ttu-id="afc29-151">Aşağıdaki kod, ileti güvenliği ve bir kullanıcı adı ve parola HTTP protokolü kimlik doğrulaması için kullanmak üzere istemciyi yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="afc29-151">The following code configures the client to use message security over the HTTP protocol and a user name and password for authentication.</span></span> <span data-ttu-id="afc29-152">Kullanıcı adı ve parola yalnızca kod (yapılandırılabilir değildir) kullanılarak belirtilebilir.</span><span class="sxs-lookup"><span data-stu-id="afc29-152">The user name and password can only be specified using code (it is not configurable).</span></span>  
+### <a name="configuration"></a><span data-ttu-id="0f3b9-150">Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="0f3b9-150">Configuration</span></span>  
+ <span data-ttu-id="0f3b9-151">Aşağıdaki kod, ileti güvenliği ve bir kullanıcı adı ve parola HTTP protokolü kimlik doğrulaması için kullanmak üzere istemciyi yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-151">The following code configures the client to use message security over the HTTP protocol and a user name and password for authentication.</span></span> <span data-ttu-id="0f3b9-152">Kullanıcı adı ve parola yalnızca kod (yapılandırılabilir değildir) kullanılarak belirtilebilir.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-152">The user name and password can only be specified using code (it is not configurable).</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -210,7 +210,7 @@ ms.locfileid: "59208546"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="afc29-153">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="afc29-153">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f3b9-153">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0f3b9-153">See also</span></span>
 
-- [<span data-ttu-id="afc29-154">Güvenlik Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="afc29-154">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [<span data-ttu-id="afc29-155">Windows Server AppFabric için güvenlik modeli</span><span class="sxs-lookup"><span data-stu-id="afc29-155">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [<span data-ttu-id="0f3b9-154">Güvenlik Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="0f3b9-154">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [<span data-ttu-id="0f3b9-155">Windows Server AppFabric için güvenlik modeli</span><span class="sxs-lookup"><span data-stu-id="0f3b9-155">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

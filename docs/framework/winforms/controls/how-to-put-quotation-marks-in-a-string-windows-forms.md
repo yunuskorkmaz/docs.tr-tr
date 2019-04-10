@@ -10,23 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 7e48e948b52cd512dba81d643fb6a42a2d90723f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113210"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328068"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a><span data-ttu-id="709b9-102">Nasıl yapılır: (Windows Forms) dizeye tırnak işaretleri koyma</span><span class="sxs-lookup"><span data-stu-id="709b9-102">How to: Put Quotation Marks in a String (Windows Forms)</span></span>
-<span data-ttu-id="709b9-103">Bazen tırnak işareti yerleştirmek isteyebilirsiniz ("") içinde bir metin dizesi.</span><span class="sxs-lookup"><span data-stu-id="709b9-103">Sometimes you might want to place quotation marks (" ") in a string of text.</span></span> <span data-ttu-id="709b9-104">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="709b9-104">For example:</span></span>  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a><span data-ttu-id="4fcde-102">Nasıl yapılır: (Windows Forms) dizeye tırnak işaretleri koyma</span><span class="sxs-lookup"><span data-stu-id="4fcde-102">How to: Put Quotation Marks in a String (Windows Forms)</span></span>
+<span data-ttu-id="4fcde-103">Bazen tırnak işareti yerleştirmek isteyebilirsiniz ("") içinde bir metin dizesi.</span><span class="sxs-lookup"><span data-stu-id="4fcde-103">Sometimes you might want to place quotation marks (" ") in a string of text.</span></span> <span data-ttu-id="4fcde-104">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="4fcde-104">For example:</span></span>  
   
- <span data-ttu-id="709b9-105">O söyledi, "Müthiş hak ediyor!"</span><span class="sxs-lookup"><span data-stu-id="709b9-105">She said, "You deserve a treat!"</span></span>  
+ <span data-ttu-id="4fcde-105">O söyledi, "Müthiş hak ediyor!"</span><span class="sxs-lookup"><span data-stu-id="4fcde-105">She said, "You deserve a treat!"</span></span>  
   
- <span data-ttu-id="709b9-106">Alternatif olarak, ayrıca kullanabileceğiniz <xref:Microsoft.VisualBasic.ControlChars.Quote> alan bir sabit olarak.</span><span class="sxs-lookup"><span data-stu-id="709b9-106">As an alternative, you can also use the <xref:Microsoft.VisualBasic.ControlChars.Quote> field as a constant.</span></span>  
+ <span data-ttu-id="4fcde-106">Alternatif olarak, ayrıca kullanabileceğiniz <xref:Microsoft.VisualBasic.ControlChars.Quote> alan bir sabit olarak.</span><span class="sxs-lookup"><span data-stu-id="4fcde-106">As an alternative, you can also use the <xref:Microsoft.VisualBasic.ControlChars.Quote> field as a constant.</span></span>  
   
-### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a><span data-ttu-id="709b9-107">Kodunuzda bir dizedeki tırnak işareti yerleştirmek için</span><span class="sxs-lookup"><span data-stu-id="709b9-107">To place quotation marks in a string in your code</span></span>  
+### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a><span data-ttu-id="4fcde-107">Kodunuzda bir dizedeki tırnak işareti yerleştirmek için</span><span class="sxs-lookup"><span data-stu-id="4fcde-107">To place quotation marks in a string in your code</span></span>  
   
-1.  <span data-ttu-id="709b9-108">Visual Basic'te, iki tırnak bir satır içine katıştırılmış bir tırnak işareti ekleyin.</span><span class="sxs-lookup"><span data-stu-id="709b9-108">In Visual Basic, insert two quotation marks in a row as an embedded quotation mark.</span></span> <span data-ttu-id="709b9-109">Görselde C# ve [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], kaçış dizisi Ekle \\"olarak gömülü bir tırnak işareti.</span><span class="sxs-lookup"><span data-stu-id="709b9-109">In Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], insert the escape sequence \\" as an embedded quotation mark.</span></span> <span data-ttu-id="709b9-110">Örneğin, önceki dize oluşturmak için aşağıdaki kodu kullanın.</span><span class="sxs-lookup"><span data-stu-id="709b9-110">For example, to create the preceding string, use the following code.</span></span>  
+1. <span data-ttu-id="4fcde-108">Visual Basic'te, iki tırnak bir satır içine katıştırılmış bir tırnak işareti ekleyin.</span><span class="sxs-lookup"><span data-stu-id="4fcde-108">In Visual Basic, insert two quotation marks in a row as an embedded quotation mark.</span></span> <span data-ttu-id="4fcde-109">Görselde C# ve [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], kaçış dizisi Ekle \\"olarak gömülü bir tırnak işareti.</span><span class="sxs-lookup"><span data-stu-id="4fcde-109">In Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], insert the escape sequence \\" as an embedded quotation mark.</span></span> <span data-ttu-id="4fcde-110">Örneğin, önceki dize oluşturmak için aşağıdaki kodu kullanın.</span><span class="sxs-lookup"><span data-stu-id="4fcde-110">For example, to create the preceding string, use the following code.</span></span>  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -48,9 +48,9 @@ ms.locfileid: "59113210"
        }  
     ```  
   
-     <span data-ttu-id="709b9-111">-veya-</span><span class="sxs-lookup"><span data-stu-id="709b9-111">-or-</span></span>  
+     <span data-ttu-id="4fcde-111">-veya-</span><span class="sxs-lookup"><span data-stu-id="4fcde-111">-or-</span></span>  
   
-2.  <span data-ttu-id="709b9-112">Tırnak işareti için ASCII veya Unicode karakteri Ekle.</span><span class="sxs-lookup"><span data-stu-id="709b9-112">Insert the ASCII or Unicode character for a quotation mark.</span></span> <span data-ttu-id="709b9-113">Visual Basic'te, ASCII karakter (34) kullanın.</span><span class="sxs-lookup"><span data-stu-id="709b9-113">In Visual Basic, use the ASCII character (34).</span></span> <span data-ttu-id="709b9-114">Görselde C#, Unicode karakter (\u0022) kullanın.</span><span class="sxs-lookup"><span data-stu-id="709b9-114">In Visual C#, use the Unicode character (\u0022).</span></span>  
+2. <span data-ttu-id="4fcde-112">Tırnak işareti için ASCII veya Unicode karakteri Ekle.</span><span class="sxs-lookup"><span data-stu-id="4fcde-112">Insert the ASCII or Unicode character for a quotation mark.</span></span> <span data-ttu-id="4fcde-113">Visual Basic'te, ASCII karakter (34) kullanın.</span><span class="sxs-lookup"><span data-stu-id="4fcde-113">In Visual Basic, use the ASCII character (34).</span></span> <span data-ttu-id="4fcde-114">Görselde C#, Unicode karakter (\u0022) kullanın.</span><span class="sxs-lookup"><span data-stu-id="4fcde-114">In Visual C#, use the Unicode character (\u0022).</span></span>  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -65,11 +65,11 @@ ms.locfileid: "59113210"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="709b9-115">Bu örnekte, bir evrensel karakter adı temel karakter kümesindeki bir karakteri belirler kullanamadığından \u0022 kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="709b9-115">In this example, you cannot use \u0022 because you cannot use a universal character name that designates a character in the basic character set.</span></span> <span data-ttu-id="709b9-116">Aksi takdirde, C3851 üretir.</span><span class="sxs-lookup"><span data-stu-id="709b9-116">Otherwise, you produce C3851.</span></span> <span data-ttu-id="709b9-117">Daha fazla bilgi için [derleyici hatası C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span><span class="sxs-lookup"><span data-stu-id="709b9-117">For more information, see [Compiler Error C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span></span>  
+    >  <span data-ttu-id="4fcde-115">Bu örnekte, bir evrensel karakter adı temel karakter kümesindeki bir karakteri belirler kullanamadığından \u0022 kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="4fcde-115">In this example, you cannot use \u0022 because you cannot use a universal character name that designates a character in the basic character set.</span></span> <span data-ttu-id="4fcde-116">Aksi takdirde, C3851 üretir.</span><span class="sxs-lookup"><span data-stu-id="4fcde-116">Otherwise, you produce C3851.</span></span> <span data-ttu-id="4fcde-117">Daha fazla bilgi için [derleyici hatası C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span><span class="sxs-lookup"><span data-stu-id="4fcde-117">For more information, see [Compiler Error C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span></span>  
   
-     <span data-ttu-id="709b9-118">-veya-</span><span class="sxs-lookup"><span data-stu-id="709b9-118">-or-</span></span>  
+     <span data-ttu-id="4fcde-118">-veya-</span><span class="sxs-lookup"><span data-stu-id="4fcde-118">-or-</span></span>  
   
-3.  <span data-ttu-id="709b9-119">Ayrıca, bir sabit karakter tanımlamak ve kullanmak gerektiğinde.</span><span class="sxs-lookup"><span data-stu-id="709b9-119">You can also define a constant for the character, and use it where needed.</span></span>  
+3. <span data-ttu-id="4fcde-119">Ayrıca, bir sabit karakter tanımlamak ve kullanmak gerektiğinde.</span><span class="sxs-lookup"><span data-stu-id="4fcde-119">You can also define a constant for the character, and use it where needed.</span></span>  
   
     ```vb  
     Const quote As String = """"  
@@ -88,14 +88,14 @@ ms.locfileid: "59113210"
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="709b9-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="709b9-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4fcde-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4fcde-120">See also</span></span>
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
-- [<span data-ttu-id="709b9-121">TextBox Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="709b9-121">TextBox Control Overview</span></span>](textbox-control-overview-windows-forms.md)
-- [<span data-ttu-id="709b9-122">Nasıl yapılır: Windows Forms TextBox Denetiminde Ekleme Noktasını Belirleme</span><span class="sxs-lookup"><span data-stu-id="709b9-122">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [<span data-ttu-id="709b9-123">Nasıl yapılır: Windows Forms TextBox Denetimi ile Parola Metin Kutusu Oluşturma</span><span class="sxs-lookup"><span data-stu-id="709b9-123">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [<span data-ttu-id="709b9-124">Nasıl yapılır: Salt Okunur Metin Kutusu Oluşturma</span><span class="sxs-lookup"><span data-stu-id="709b9-124">How to: Create a Read-Only Text Box</span></span>](how-to-create-a-read-only-text-box-windows-forms.md)
-- [<span data-ttu-id="709b9-125">Nasıl yapılır: Windows Forms TextBox Denetiminde Metni Seçme</span><span class="sxs-lookup"><span data-stu-id="709b9-125">How to: Select Text in the Windows Forms TextBox Control</span></span>](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [<span data-ttu-id="709b9-126">Nasıl yapılır: Windows Forms TextBox Denetiminde Birden Fazla Çizgiyi Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="709b9-126">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [<span data-ttu-id="709b9-127">TextBox Denetimi</span><span class="sxs-lookup"><span data-stu-id="709b9-127">TextBox Control</span></span>](textbox-control-windows-forms.md)
+- [<span data-ttu-id="4fcde-121">TextBox Denetimine Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="4fcde-121">TextBox Control Overview</span></span>](textbox-control-overview-windows-forms.md)
+- [<span data-ttu-id="4fcde-122">Nasıl yapılır: Windows Forms TextBox Denetiminde Ekleme Noktasını Belirleme</span><span class="sxs-lookup"><span data-stu-id="4fcde-122">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [<span data-ttu-id="4fcde-123">Nasıl yapılır: Windows Forms TextBox Denetimi ile Parola Metin Kutusu Oluşturma</span><span class="sxs-lookup"><span data-stu-id="4fcde-123">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [<span data-ttu-id="4fcde-124">Nasıl yapılır: Salt Okunur Metin Kutusu Oluşturma</span><span class="sxs-lookup"><span data-stu-id="4fcde-124">How to: Create a Read-Only Text Box</span></span>](how-to-create-a-read-only-text-box-windows-forms.md)
+- [<span data-ttu-id="4fcde-125">Nasıl yapılır: Windows Forms TextBox Denetiminde Metni Seçme</span><span class="sxs-lookup"><span data-stu-id="4fcde-125">How to: Select Text in the Windows Forms TextBox Control</span></span>](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [<span data-ttu-id="4fcde-126">Nasıl yapılır: Windows Forms TextBox Denetiminde Birden Fazla Çizgiyi Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="4fcde-126">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [<span data-ttu-id="4fcde-127">TextBox Denetimi</span><span class="sxs-lookup"><span data-stu-id="4fcde-127">TextBox Control</span></span>](textbox-control-windows-forms.md)
