@@ -6,30 +6,30 @@ helpviewer_keywords:
 - key frames [WPF], QuaternionAnimationUsingKeyFrames
 - animation [WPF], 3-D translations [WPF], with key frames (QuaternionAnimationUsingKeyFrames)
 ms.assetid: 09e5707b-7523-4a08-9aa7-bb13cbedccdf
-ms.openlocfilehash: f0b46e488f5f0ff0a918d7766998528fef001794
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 87176df26405a69cb2c3d63620def0575b750b52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100112"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338026"
 ---
-# <a name="how-to-animate-a-3-d-rotation-using-key-frames-quaternionanimationusingkeyframes"></a><span data-ttu-id="1ef90-102">Nasıl yapılır: Anahtar Çerçeveler Kullanarak 3B Döndürme Hareketlendirme (QuaternionAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="1ef90-102">How to: Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>
-<span data-ttu-id="1ef90-103">Aşağıdaki örnekte, <xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames> 3B nesneyi döndürmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="1ef90-103">In the following example, <xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames> is used to make a 3D object rotate.</span></span> <span data-ttu-id="1ef90-104">Aşağıdaki anahtar çerçeve animasyon kullanır:</span><span class="sxs-lookup"><span data-stu-id="1ef90-104">This animation uses the following key frames:</span></span>  
+# <a name="how-to-animate-a-3-d-rotation-using-key-frames-quaternionanimationusingkeyframes"></a><span data-ttu-id="bf680-102">Nasıl yapılır: Anahtar Çerçeveler Kullanarak 3B Döndürme Hareketlendirme (QuaternionAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="bf680-102">How to: Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>
+<span data-ttu-id="bf680-103">Aşağıdaki örnekte, <xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames> 3B nesneyi döndürmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="bf680-103">In the following example, <xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames> is used to make a 3D object rotate.</span></span> <span data-ttu-id="bf680-104">Aşağıdaki anahtar çerçeve animasyon kullanır:</span><span class="sxs-lookup"><span data-stu-id="bf680-104">This animation uses the following key frames:</span></span>  
   
-1.  <xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame> <span data-ttu-id="1ef90-105">değerler arasında sorunsuz, doğrusal bir ilişkilendirme oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="1ef90-105">is used to create a smooth, linear interpolation between values.</span></span>  
+1. <xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame> <span data-ttu-id="bf680-105">değerler arasında sorunsuz, doğrusal bir ilişkilendirme oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="bf680-105">is used to create a smooth, linear interpolation between values.</span></span>  
   
-2.  <xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame> <span data-ttu-id="1ef90-106">değer (ilişkilendirme yok) arasındaki ani "atlar" oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="1ef90-106">is used to create sudden "jumps" between values (no interpolation).</span></span>  
+2. <xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame> <span data-ttu-id="bf680-106">değer (ilişkilendirme yok) arasındaki ani "atlar" oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="bf680-106">is used to create sudden "jumps" between values (no interpolation).</span></span>  
   
-3.  <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame> <span data-ttu-id="1ef90-107">bağlı olarak değerler arasında değişken bir geçiş oluşturmak için kullanılan <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="1ef90-107">is used to create a variable transition between values depending on the <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A> property.</span></span> <span data-ttu-id="1ef90-108">Aşağıdaki örnekte, bu bölümü animasyonun başlar yavaş ama zaman diliminin sonuna doğru katlanarak hızlandırır.</span><span class="sxs-lookup"><span data-stu-id="1ef90-108">In the example below, this part of the animation starts off slow but toward the end of the time segment, speeds up exponentially.</span></span>  
+3. <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame> <span data-ttu-id="bf680-107">bağlı olarak değerler arasında değişken bir geçiş oluşturmak için kullanılan <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A> özelliği.</span><span class="sxs-lookup"><span data-stu-id="bf680-107">is used to create a variable transition between values depending on the <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A> property.</span></span> <span data-ttu-id="bf680-108">Aşağıdaki örnekte, bu bölümü animasyonun başlar yavaş ama zaman diliminin sonuna doğru katlanarak hızlandırır.</span><span class="sxs-lookup"><span data-stu-id="bf680-108">In the example below, this part of the animation starts off slow but toward the end of the time segment, speeds up exponentially.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1ef90-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="1ef90-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="bf680-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="bf680-109">Example</span></span>  
  [!code-xaml[Animation3DGallery_snip#QuaternionAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/QuaternionAnimationUsingKeyFramesExample.xaml#quaternionanimationusingkeyframesexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="1ef90-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1ef90-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf680-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bf680-110">See also</span></span>
 
-- [<span data-ttu-id="1ef90-111">Görsel Taslaklar Kullanarak 3B Döndürmeye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="1ef90-111">Animate a 3-D Rotation Using Storyboards</span></span>](how-to-animate-a-3-d-rotation-using-storyboards.md)
-- [<span data-ttu-id="1ef90-112">Rotation3DAnimation Kullanarak 3B Döndürmeye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="1ef90-112">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
-- [<span data-ttu-id="1ef90-113">Dördeyler Kullanarak 3B Döndürmeye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="1ef90-113">Animate a 3-D Rotation Using Quaternions</span></span>](how-to-animate-a-3-d-rotation-using-quaternions.md)
-- [<span data-ttu-id="1ef90-114">Anahtar Çerçeveler Kullanarak 3B Döndürmeye Animasyon Ekleme (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="1ef90-114">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](how-to-animate-a-3-d-rotation-using-key-frames.md)
-- [<span data-ttu-id="1ef90-115">3B Grafiklere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="1ef90-115">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
-- [<span data-ttu-id="1ef90-116">Anahtar-Çerçeve Animasyonlara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="1ef90-116">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+- [<span data-ttu-id="bf680-111">Görsel Taslaklar Kullanarak 3B Döndürmeye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="bf680-111">Animate a 3-D Rotation Using Storyboards</span></span>](how-to-animate-a-3-d-rotation-using-storyboards.md)
+- [<span data-ttu-id="bf680-112">Rotation3DAnimation Kullanarak 3B Döndürmeye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="bf680-112">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
+- [<span data-ttu-id="bf680-113">Dördeyler Kullanarak 3B Döndürmeye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="bf680-113">Animate a 3-D Rotation Using Quaternions</span></span>](how-to-animate-a-3-d-rotation-using-quaternions.md)
+- [<span data-ttu-id="bf680-114">Anahtar Çerçeveler Kullanarak 3B Döndürmeye Animasyon Ekleme (Rotation3DAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="bf680-114">Animate a 3-D Rotation Using Key Frames (Rotation3DAnimationUsingKeyFrames)</span></span>](how-to-animate-a-3-d-rotation-using-key-frames.md)
+- [<span data-ttu-id="bf680-115">3B Grafiklere Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="bf680-115">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
+- [<span data-ttu-id="bf680-116">Anahtar-Çerçeve Animasyonlara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="bf680-116">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)

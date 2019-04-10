@@ -2,21 +2,21 @@
 title: 'Nasıl yapılır: (LINQ) (Visual Basic) sınırlandırılmış bir dosyanın alanlarını yeniden sıralama'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: fbcd880d7bae9d6ad57f4769a5c4b6ef6f0141a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f41a8e38812cf9d3c652fa605febf2511f07a27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564571"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339092"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a><span data-ttu-id="152cb-102">Nasıl yapılır: (LINQ) (Visual Basic) sınırlandırılmış bir dosyanın alanlarını yeniden sıralama</span><span class="sxs-lookup"><span data-stu-id="152cb-102">How to: Reorder the Fields of a Delimited File (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="152cb-103">Bir virgülle ayrılmış değer (CSV) dosyası, genellikle elektronik tablo verilerini veya satırları ve sütunları tarafından temsil edilen diğer tablosal verileri depolamak için kullanılan bir metin dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="152cb-103">A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns.</span></span> <span data-ttu-id="152cb-104">Kullanarak <xref:System.String.Split%2A> yöntemi alanlarını ayırmak için sorgulama ve LINQ kullanarak CSV dosyalarını işlemek çok kolaydır.</span><span class="sxs-lookup"><span data-stu-id="152cb-104">By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ.</span></span> <span data-ttu-id="152cb-105">Aslında, yapılandırılmış her metin satırının bölümlerini yeniden sıralamak için aynı tekniği kullanılabilir; CSV dosyaları için sınırlı değildir.</span><span class="sxs-lookup"><span data-stu-id="152cb-105">In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.</span></span>  
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a><span data-ttu-id="f5bd1-102">Nasıl yapılır: (LINQ) (Visual Basic) sınırlandırılmış bir dosyanın alanlarını yeniden sıralama</span><span class="sxs-lookup"><span data-stu-id="f5bd1-102">How to: Reorder the Fields of a Delimited File (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="f5bd1-103">Bir virgülle ayrılmış değer (CSV) dosyası, genellikle elektronik tablo verilerini veya satırları ve sütunları tarafından temsil edilen diğer tablosal verileri depolamak için kullanılan bir metin dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="f5bd1-103">A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns.</span></span> <span data-ttu-id="f5bd1-104">Kullanarak <xref:System.String.Split%2A> yöntemi alanlarını ayırmak için sorgulama ve LINQ kullanarak CSV dosyalarını işlemek çok kolaydır.</span><span class="sxs-lookup"><span data-stu-id="f5bd1-104">By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ.</span></span> <span data-ttu-id="f5bd1-105">Aslında, yapılandırılmış her metin satırının bölümlerini yeniden sıralamak için aynı tekniği kullanılabilir; CSV dosyaları için sınırlı değildir.</span><span class="sxs-lookup"><span data-stu-id="f5bd1-105">In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.</span></span>  
   
- <span data-ttu-id="152cb-106">Aşağıdaki örnekte, üç sütun öğrencilerinin "Soyadı" temsil ettiğini varsayar "ad" ve "Kimliği"</span><span class="sxs-lookup"><span data-stu-id="152cb-106">In the following example, assume that the three columns represent students' "last name," "first name", and "ID."</span></span> <span data-ttu-id="152cb-107">Öğrencilerinin son adlarına göre alfabetik sırada alanlardır.</span><span class="sxs-lookup"><span data-stu-id="152cb-107">The fields are in alphabetical order based on the students' last names.</span></span> <span data-ttu-id="152cb-108">Sorgu, kimlik sütunu öğrencinin ad ve Soyadı birleştiren ikinci sütuna göre ve ardından ilk göründüğü yeni bir sıra üretir.</span><span class="sxs-lookup"><span data-stu-id="152cb-108">The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name.</span></span> <span data-ttu-id="152cb-109">Satır Kimliği alanı göre sıralanır.</span><span class="sxs-lookup"><span data-stu-id="152cb-109">The lines are reordered according to the ID field.</span></span> <span data-ttu-id="152cb-110">Sonuçları yeni bir dosyaya kaydedilir ve özgün veriler değiştirilmez.</span><span class="sxs-lookup"><span data-stu-id="152cb-110">The results are saved into a new file and the original data is not modified.</span></span>  
+ <span data-ttu-id="f5bd1-106">Aşağıdaki örnekte, üç sütun öğrencilerinin "Soyadı" temsil ettiğini varsayar "ad" ve "Kimliği"</span><span class="sxs-lookup"><span data-stu-id="f5bd1-106">In the following example, assume that the three columns represent students' "last name," "first name", and "ID."</span></span> <span data-ttu-id="f5bd1-107">Öğrencilerinin son adlarına göre alfabetik sırada alanlardır.</span><span class="sxs-lookup"><span data-stu-id="f5bd1-107">The fields are in alphabetical order based on the students' last names.</span></span> <span data-ttu-id="f5bd1-108">Sorgu, kimlik sütunu öğrencinin ad ve Soyadı birleştiren ikinci sütuna göre ve ardından ilk göründüğü yeni bir sıra üretir.</span><span class="sxs-lookup"><span data-stu-id="f5bd1-108">The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name.</span></span> <span data-ttu-id="f5bd1-109">Satır Kimliği alanı göre sıralanır.</span><span class="sxs-lookup"><span data-stu-id="f5bd1-109">The lines are reordered according to the ID field.</span></span> <span data-ttu-id="f5bd1-110">Sonuçları yeni bir dosyaya kaydedilir ve özgün veriler değiştirilmez.</span><span class="sxs-lookup"><span data-stu-id="f5bd1-110">The results are saved into a new file and the original data is not modified.</span></span>  
   
-### <a name="to-create-the-data-file"></a><span data-ttu-id="152cb-111">Veri dosyası oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="152cb-111">To create the data file</span></span>  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="f5bd1-111">Veri dosyası oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="f5bd1-111">To create the data file</span></span>  
   
-1.  <span data-ttu-id="152cb-112">Aşağıdaki satırları spreadsheet1.csv adlı bir düz metin dosyasına kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="152cb-112">Copy the following lines into a plain text file that is named spreadsheet1.csv.</span></span> <span data-ttu-id="152cb-113">Dosyayı proje klasörünüze kaydedin.</span><span class="sxs-lookup"><span data-stu-id="152cb-113">Save the file in your project folder.</span></span>  
+1. <span data-ttu-id="f5bd1-112">Aşağıdaki satırları spreadsheet1.csv adlı bir düz metin dosyasına kopyalayın.</span><span class="sxs-lookup"><span data-stu-id="f5bd1-112">Copy the following lines into a plain text file that is named spreadsheet1.csv.</span></span> <span data-ttu-id="f5bd1-113">Dosyayı proje klasörünüze kaydedin.</span><span class="sxs-lookup"><span data-stu-id="f5bd1-113">Save the file in your project folder.</span></span>  
   
     ```  
     Adams,Terry,120  
@@ -33,7 +33,7 @@ ms.locfileid: "54564571"
     Zabokritski,Eugene,121  
     ```  
   
-## <a name="example"></a><span data-ttu-id="152cb-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="152cb-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f5bd1-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="f5bd1-114">Example</span></span>  
   
 ```vb  
 Class CSVFiles  
@@ -74,10 +74,10 @@ End Class
 ' 122, Michael Tucker  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="152cb-115">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="152cb-115">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="f5bd1-115">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="f5bd1-115">Compiling the Code</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="152cb-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="152cb-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5bd1-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f5bd1-116">See also</span></span>
 
-- [<span data-ttu-id="152cb-117">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="152cb-117">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="152cb-118">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="152cb-118">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [<span data-ttu-id="152cb-119">Nasıl yapılır: CSV dosyalarından XML oluşturma</span><span class="sxs-lookup"><span data-stu-id="152cb-119">How to: Generate XML from CSV Files</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
+- [<span data-ttu-id="f5bd1-117">LINQ ve dizeler (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5bd1-117">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="f5bd1-118">LINQ ve dosya dizinleri (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5bd1-118">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="f5bd1-119">Nasıl yapılır: CSV Dosyalarından XML Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f5bd1-119">How to: Generate XML from CSV Files</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
