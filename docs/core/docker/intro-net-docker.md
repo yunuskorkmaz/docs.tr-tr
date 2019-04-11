@@ -3,12 +3,12 @@ title: Docker giriş
 description: Bu makale Docker için bir .NET Core uygulaması bağlamında bir giriş ve genel bakış sağlar.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 725d8301a27f1109c85a89945f0fb8403e255ab4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817261"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480735"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET ve Docker'a giriş
 
@@ -57,6 +57,9 @@ Microsoft, belirli senaryolar için uyarlanmış görüntüleri sağlar. Örneğ
 
 * [Azure uygulama hizmeti](https://azure.microsoft.com/services/app-service/containers/)\
 Web uygulamaları veya API'leri bir PaaS ortamında Linux kapsayıcıları kullanarak dağıtın.
+
+* [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
+Kapsayıcınızı daha yüksek düzeydeki tüm Yönetim Hizmetleri gerektirmeden bulutta barındırın.
 
 * [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Kapsayıcıları kullanarak yinelenen işlem işlerini çalıştırın.

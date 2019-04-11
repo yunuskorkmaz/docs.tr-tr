@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819e0c44d933b491091c05d1c28b30827ead85ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c6d0c7128becb154955664cfdcf96d020de9369
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499860"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480670"
 ---
-# <a name="-deterministic"></a>-belirleyici
+# <a name="-deterministic"></a>-deterministic
 
-Bayt için çıktısı, aynı girişleri için derlemeler arasında özdeş bir derleme oluşturmak derleyicinin neden olur. 
+Bayt için çıktısı, aynı girişleri için derlemeler arasında özdeş bir derleme oluşturmak derleyicinin neden olur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,22 +37,22 @@ Derleyici, aşağıdaki girişleri gerekircilik amacıyla göz önünde bulundur
 - Kullanılan derleme kesin sürümünü ve onun başvurulmuş derlemeler.
 - Geçerli dizin yolu.
 - Tüm dosyaları ikili içeriğini açıkça derleyici doğrudan veya dolaylı olarak dahil olmak üzere geçirilen:
-    - Kaynak dosyaları
-    - Başvurulan derlemeler
-    - Başvurulan modül
-    - Kaynaklar
-    - Tanımlayıcı ad anahtar dosyası
-    - @ yanıt dosyaları
-    - Çözümleyiciler
-    - Rulesets
-    - Çözümleyiciler tarafından kullanılan ek dosyalar
+  - Kaynak dosyaları
+  - Başvurulan derlemeler
+  - Başvurulan modül
+  - Kaynaklar
+  - Tanımlayıcı ad anahtar dosyası
+  - @ yanıt dosyaları
+  - Çözümleyiciler
+  - Rulesets
+  - Çözümleyiciler tarafından kullanılan ek dosyalar
 - Geçerli kültür (hangi tanılama ve özel durum iletileri üretilir dilin).
 - Varsayılan kodlama (veya mevcut kod sayfasında) kodlama belirtilmezse.
 - Varlığı, var olmayan ve derleyicinin arama yolları dosya içeriklerini (örneğin, tarafından belirtilen `/lib` veya `/recurse`).
 - Derleyici çalıştığı CLR platform.
 - Değerini `%LIBPATH%`, çözümleyici bağımlılık yükleniyor etkileyebilir.
 
-Kaynakları genel kullanıma açık olduğunda, belirlenimci derlemeyi güvenilir bir kaynaktan bir ikili derlenmiş olup olmadığını kurmak için kullanılabilir. Ayrıca bir ikili değişiklikleri bağımlı derleme adımları yürütülecek gerekip gerekmediğini belirlemek için bir sürekli derleme sistemi de yararlı olabilir. 
+Kaynakları genel kullanıma açık olduğunda, belirlenimci derlemeyi güvenilir bir kaynaktan bir ikili derlenmiş olup olmadığını kurmak için kullanılabilir. Ayrıca bir ikili değişiklikleri bağımlı derleme adımları yürütülecek gerekip gerekmediğini belirlemek için bir sürekli derleme sistemi de yararlı olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

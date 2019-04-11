@@ -1,37 +1,39 @@
 ---
-title: C# 7.1 yenilikler nelerdir?
-description: C# 7.1 içindeki yeni özelliklere genel bakış.
-ms.date: 08/16/2017
-ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+title: İçindeki yenilikler C# 7.1
+description: İçinde yeni özelliklere genel bakış C# 7.1.
+ms.date: 04/09/2019
+ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728660"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480969"
 ---
-# <a name="whats-new-in-c-71"></a>C# 7.1 yenilikler nelerdir?
+# <a name="whats-new-in-c-71"></a>İçindeki yenilikler C# 7.1
 
-C# 7.1, C# dili için ilk noktası sürümüdür. Artan sürüm tempoyla dil için işaretler. Her yeni özellik hazır olduğunda, yeni özelliklerin daha erken, ideal olarak kullanabilirsiniz. C# 7.1 derleyici dil belirtilen sürümüyle eşleşecek şekilde yapılandırma olanağını ekler. Bu, dil sürümlerini yükseltmek için karar araçları yükseltmeye karar ayırmanıza olanak sağlar.
+C#ilk noktası sürüm 7.1 olan C# dili. Bunu bir daha yüksek bir yayın temposudur dil için işaretler. Her yeni özellik hazır olduğunda, yeni özellikleri daha çabuk, ideal olarak kullanabilirsiniz. C#Derleyicinin, belirtilen bir dile sürümüyle eşleşecek şekilde yapılandırma becerisi 7.1 ekler. Dil sürümleri yükseltme kararı araçları yükseltme kararı ayırmanıza olanak sağlar.
 
-C# 7.1 ekler [dil sürümü seçimi](../language-reference/configure-language-version.md) yapılandırma öğesi, üç yeni dil özellikleri ve yeni derleyici davranışı.
+C#7.1 ekler [dil sürüm seçimi](../language-reference/configure-language-version.md) yapılandırma öğesi, üç yeni dil özellikleri ve yeni derleyici davranışı.
 
 Bu sürümdeki yeni diz özellikleri şunlardır:
 
-* [`async` `Main` Yöntemi](#async-main)
-  - Bir uygulama için giriş noktası olabilir `async` değiştiricisi.
-* [`default` Sabit ifadeleri](#default-literal-expressions)
-  - Hedef türü çıkarsanabileceği olduğunda, varsayılan değeri ifadelerinde varsayılan değişmez değer ifadeleri kullanabilirsiniz.
-* [Çıkarsanan tanımlama grubu öğe adları](#inferred-tuple-element-names)
-  - Başlığın öğeleri adlarını, çoğu durumda tanımlama grubu başlatılmasından çıkarsanabileceği.
+* [`async` `Main` yöntemi](#async-main)
+  - Bir uygulama için giriş noktası `async` değiştiricisi.
+* [`default` değişmez ifadeleri](#default-literal-expressions)
+  - Hedef türü çıkarımı yapılan varsayılan değer ifadeleri toplama varsayılan sabit değer ifadeleri kullanabilirsiniz.
+* [Çıkarsanan demet öğesi adları](#inferred-tuple-element-names)
+  - Demet öğelerinin adlarını, çoğu durumda demet başlatma içinden gösterilen.
+* [Genel tür parametrelerinde desen](#pattern-matching-on-generic-type-parameters)
+  - Genel tür parametresi türü olan değişkenlerde deseni eşleşme ifadeleri kullanabilirsiniz.
 
-Son olarak, derleyici iki seçenek vardır `/refout` ve `/refonly` denetleyen [başvuru derleme oluşturma](#reference-assembly-generation).
+Son olarak, derleyici iki seçeneğe sahiptir `/refout` ve `/refonly` denetleyen [başvuru bütünleştirilmiş kod oluşturmayı](#reference-assembly-generation).
 
-Noktası sürümündeki yeni özellikleri kullanmak için yapmanız [derleyici dil sürümünü yapılandırmanız](../language-reference/configure-language-version.md) ve sürümü seçin.
+Bir nokta sürümde en son özellikleri kullanmak için yapmanız [derleyici dil sürüm yapılandırma](../language-reference/configure-language-version.md) ve sürüm seçin.
 
 ## <a name="async-main"></a>Zaman uyumsuz ana
 
-Bir *zaman uyumsuz ana* yöntemi kullanmanıza olanak sağlayan `await` içinde `Main` yöntemi.
-Daha önce yazma gerekir:
+Bir *async main* yöntemi kullanmanıza olanak sağlar `await` içinde `Main` yöntemi.
+Daha önce yazmanız gerekir:
 
 ```csharp
 static int Main()
@@ -40,7 +42,7 @@ static int Main()
 }
 ```
 
-Şimdi yazabilirsiniz:
+Artık yazabilirsiniz:
 
 ```csharp
 static async Task<int> Main()
@@ -51,7 +53,7 @@ static async Task<int> Main()
 }
 ```
 
-Programınızı bir çıkış kodu varsa döndürmez, bildirebilirsiniz bir `Main` döndüren yöntemi bir <xref:System.Threading.Tasks.Task>:
+Programınız bir çıkış kodu, döndürmüyor, bildirebilirsiniz bir `Main` döndüren yöntem bir <xref:System.Threading.Tasks.Task>:
 
 ```csharp
 static async Task Main()
@@ -60,12 +62,12 @@ static async Task Main()
 }
 ```
 
-Daha fazla bilgiyi ayrıntılar hakkında [zaman uyumsuz ana](../programming-guide/main-and-command-args/index.md) konusu programlama kılavuzu.
+Daha fazla bilgi edinebilirsiniz hakkında ayrıntılar [async main](../programming-guide/main-and-command-args/index.md) Programlama Kılavuzu'nda makale.
 
-## <a name="default-literal-expressions"></a>Varsayılan sabit ifadeleri
+## <a name="default-literal-expressions"></a>Varsayılan değişmez değer ifadeleri
 
-Varsayılan değişmez değer varsayılan değer ifadeleri yüklenene ifadelerini.
-Bu ifade bir değişken varsayılan değere başlatır. Daha önce burada yazarsınız:
+Varsayılan değişmez ifadelerinde bir geliştirme için varsayılan değer ifadeleri toplama var.
+Bu ifadeler, varsayılan değer için bir değişken başlatın. Daha önce burada yazmalısınız:
 
 ```csharp
 Func<string, bool> whereClause = default(Func<string, bool>);
@@ -77,13 +79,13 @@ Sağ taraftaki başlatma türü artık atlayabilirsiniz:
 Func<string, bool> whereClause = default;
 ```
 
-Üzerinde C# programlama kılavuzu konusundaki bu geliştirme hakkında daha fazla bilgiyi [varsayılan değeri ifadeleri](../programming-guide/statements-expressions-operators/default-value-expressions.md).
+İçinde bu geliştirme hakkında daha fazla bilgi C# Programming Guide makale [varsayılan değer ifadeleri](../programming-guide/statements-expressions-operators/default-value-expressions.md).
 
-Bu geliştirme, ayrıca bazı ayrıştırma kurallarının değiştirir [default anahtar sözcüğü](../language-reference/keywords/default.md).
+Bu geliştirme ayrıca bazı ayrıştırma kurallarını değiştirir [default anahtar sözcüğü](../language-reference/keywords/default.md).
 
-## <a name="inferred-tuple-element-names"></a>Çıkarsanan tanımlama grubu öğe adları
+## <a name="inferred-tuple-element-names"></a>Çıkarsanan demet öğesi adları
 
-Bu özellik, C# 7. 0'sunulan diziler özellikle küçük bir yeniliktir. Bir tanımlama grubu başlattığınızda birçok kez atama için sağ tarafında kullanılan değişkenler tanımlama grubu öğeleri için istediğiniz adları aynıdır:
+Bu özellik de kullanıma sunulan diziler özellik için küçük bir geliştirmedir C# 7.0. Bir demet başlattığınızda birden çok kez dizi öğeleri için istediğiniz adları aynı atama için sağ tarafında kullanılan değişkenleri şunlardır:
 
 ```csharp
 int count = 5;
@@ -91,7 +93,7 @@ string label = "Colors used in the map";
 var pair = (count: count, label: label);
 ```
 
-Başlığın öğeleri adları C# 7.1 düzeninde başlatmak için kullanılan değişkenlerden çıkarsanabileceği:
+Değişkenlerden düzeninde başlatmak için kullanılan tanımlama grubu öğelerinin adlarını çıkarılan C# 7.1:
 
 ```csharp
 int count = 5;
@@ -99,9 +101,13 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Bu özellik hakkında daha fazla bilgiyi [diziler](../tuples.md) konu.
+' Deki bu özellik hakkında daha fazla bilgi [diziler](../tuples.md) makalesi.
+
+## <a name="pattern-matching-on-generic-type-parameters"></a>Genel tür parametrelerinde desen
+
+İle başlayarak C# 7.1, desen ifadesi `is` ve `switch` türü deseni bir genel tür parametre türüne sahip olabilir. Bu olabilir ya da denetimi türlerinden en yararlı olabilir `struct` veya `class` türleri ve kutulama önlemek istiyor.
 
 ## <a name="reference-assembly-generation"></a>Başvuru derleme oluşturma
 
-Üreten iki yeni derleyici seçenekleri vardır *yalnızca başvuru derlemeleri*: [/refout](../language-reference/compiler-options/refout-compiler-option.md) ve [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
-Bağlantılı konulardan Bu seçenekler ve daha ayrıntılı başvuru derlemeleri açıklamaktadır.
+Oluşturan iki yeni derleyici seçenek *yalnızca başvuru derlemeleri*: [/refout](../language-reference/compiler-options/refout-compiler-option.md) ve [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Bağlantısı verilen makalelerden Bu seçenekler ve daha ayrıntılı başvuru bütünleştirilmiş kodları açıklanmaktadır.

@@ -4,12 +4,12 @@ description: Farklı değerleri öğrenin CharSet .NET yerel kodu verilerinize n
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 0b9ea8498b56e6d14770cf57e7e82b9992b1ee50
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: f436bbbf435df07d242f9bf295b0264c4cfd5b3b
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299884"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480852"
 ---
 # <a name="charsets-and-marshalling"></a>Charsets ve taşıma
 
@@ -17,10 +17,10 @@ Yol `char` değerleri `string` nesneleri ve `System.Text.StringBuilder` nesneler
 
 Aşağıdaki tablo her bir karakter kümesi arasındaki eşlemeyi gösterir ve bir karakter veya dize ile bu charset sıraya olduğunda nasıl gösterilir:
 
-| CharSet | Windows            | UNIX                                   | Mono UNIX üzerinde        |
-|---------|--------------------|----------------------------------------|---------------------|
-| Ansi    | `char` (ANSI)      | `char` (ANSI MacOS, Linux üzerinde UTF-8) | `char` (UTF-8)      |
-| Unicode | `wchar_t` (UTF-16) | `char16_t` (UTF-16)                    | `char16_t` (UTF-16) |
-| Otomatik    | `wchar_t` (UTF-16) | `char16_t` (UTF-16)                    | `char` (UTF-8)      |
+| CharSet | Windows            | .NET Core 2.2 ve daha önce UNIX | Mono ve .NET Core 3.0 ve sonraki sürümlerde UNIX |
+|---------|--------------------|-----------------------------|------------------------------------------|
+| Ansi    | `char` (ANSI)      | `char` (UTF-8)              | `char` (UTF-8)                           |
+| Unicode | `wchar_t` (UTF-16) | `char16_t` (UTF-16)         | `char16_t` (UTF-16)                      |
+| Otomatik    | `wchar_t` (UTF-16) | `char16_t` (UTF-16)         | `char` (UTF-8)                           |
 
 Hangi gösterimi, charset alınırken, yerel gösterimine bekliyor bildiğinizden emin olun.

@@ -3,12 +3,12 @@ title: C#İfadeleri - Turu C# dil
 description: ifadeleri ve işlenenleri işleçleri olan yapı taşları C# dil
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 7a7f65eb7ba3da3f9630bbcb92d8578d60d2095d
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 4ffe947a4cb8c36a5925a4b3846486e44a9d8ec4
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846603"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480761"
 ---
 # <a name="expressions"></a>İfadeler
 
@@ -28,68 +28,68 @@ Bir işlenen aynı önceliğe sahip iki işleç arasında gerçekleştiğinde *i
 Aşağıdaki özetler C#'s işleçlerini, en düşük yüksekten öncelik sırasına işleci kategorileri listeleme. Aynı kategoride işleçleri eşit önceliğe sahiptir. Her kategori altında bu ifade türünün açıklaması ile birlikte bu kategorideki ifadeleri listesidir.
 
 * Birincil
-    - `x.m`: Üye erişimi
-    - `x(...)`: Yöntem ve temsilci çağırma
-    - `x[...]`: Dizi ve dizinleyici erişimi
-    - `x++`: Artırım sonrası
-    - `x--`: Azaltım sonrası
-    - `new T(...)`: Nesne ve temsilci oluşturma
-    - `new T(...){...}`: Başlatıcı ile nesne oluşturma
-    - `new {...}`:  Anonim nesne Başlatıcı
-    - `new T[...]`: Dizi oluşturma
-    - `typeof(T)`: Elde <xref:System.Type> nesnesi `T`
-    - `checked(x)`: İşaretli bağlamında ifade değerlendirme
-    - `unchecked(x)`: İşaretlenmemiş bağlamında ifade değerlendirme
-    - `default(T)`: Türünün varsayılan değerini alın `T`
-    - `delegate {...}`: Anonim işlevi (anonim yöntemi)
+  - `x.m`: Üye erişimi
+  - `x(...)`: Yöntem ve temsilci çağırma
+  - `x[...]`: Dizi ve dizinleyici erişimi
+  - `x++`: Artırım sonrası
+  - `x--`: Azaltım sonrası
+  - `new T(...)`: Nesne ve temsilci oluşturma
+  - `new T(...){...}`: Başlatıcı ile nesne oluşturma
+  - `new {...}`:  Anonim nesne Başlatıcı
+  - `new T[...]`: Dizi oluşturma
+  - `typeof(T)`: Elde <xref:System.Type> nesnesi `T`
+  - `checked(x)`: İşaretli bağlamında ifade değerlendirme
+  - `unchecked(x)`: İşaretlenmemiş bağlamında ifade değerlendirme
+  - `default(T)`: Türünün varsayılan değerini alın `T`
+  - `delegate {...}`: Anonim işlevi (anonim yöntemi)
 * Birli
-    - `+x`: Kimlik
-    - `-x`: Olumsuzlama
-    - `!x`: Mantıksal olumsuzlama
-    - `~x`: Bitwise olumsuzlama
-    - `++x`: Artırım öncesi
-    - `--x`: Azaltım öncesi
-    - `(T)x`: Açıkça dönüştürmek `x` yazmak için `T`
-    - `await x`: Zaman uyumsuz olarak bekleyin `x` tamamlamak için
+  - `+x`: Kimlik
+  - `-x`: Olumsuzlama
+  - `!x`: Mantıksal olumsuzlama
+  - `~x`: Bitwise olumsuzlama
+  - `++x`: Artırım öncesi
+  - `--x`: Azaltım öncesi
+  - `(T)x`: Açıkça dönüştürmek `x` yazmak için `T`
+  - `await x`: Zaman uyumsuz olarak bekleyin `x` tamamlamak için
 * Çarpma
-    - `x * y`: Çarpma
-    - `x / y`: Bölme
-    - `x % y`: Kalan
+  - `x * y`: Çarpma
+  - `x / y`: Bölme
+  - `x % y`: Kalan
 * Eklenebilir
-    - `x + y`: Toplama, dize bitiştirme, temsilci birleşimi
-    - `x – y`: Çıkarma, temsilci kaldırma
+  - `x + y`: Toplama, dize bitiştirme, temsilci birleşimi
+  - `x – y`: Çıkarma, temsilci kaldırma
 * Shift
-    - `x << y`: Sola kaydırma
-    - `x >> y`: Sağa kaydırma
+  - `x << y`: Sola kaydırma
+  - `x >> y`: Sağa kaydırma
 * İlişkisel ve tür testi
-    - `x < y`: Küçüktür
-    - `x > y`: Büyüktür
-    - `x <= y`: Küçük veya eşittir
-    - `x >= y`: Büyük veya eşittir
-    - `x is T`: Dönüş `true` varsa `x` olduğu bir `T`, `false` Aksi takdirde
-    - `x as T`: Dönüş `x` olarak yazılan `T`, veya `null` varsa `x` değil bir `T`
+  - `x < y`: Küçüktür
+  - `x > y`: Büyüktür
+  - `x <= y`: Küçük veya eşittir
+  - `x >= y`: Büyük veya eşittir
+  - `x is T`: Dönüş `true` varsa `x` olduğu bir `T`, `false` Aksi takdirde
+  - `x as T`: Dönüş `x` olarak yazılan `T`, veya `null` varsa `x` değil bir `T`
 * Eşitlik
-    - `x == y`: Eşittir
-    - `x != y`: Eşit değildir
+  - `x == y`: Eşittir
+  - `x != y`: Eşit değildir
 * Mantıksal VE
-    - `x & y`: Tamsayı bitwise ve, boolean mantıksal ve
+  - `x & y`: Tamsayı bitwise ve, boolean mantıksal ve
 * Mantıksal XOR
-    - `x ^ y`: Tamsayı bitwise XOR, Boolean mantıksal XOR
+  - `x ^ y`: Tamsayı bitwise XOR, Boolean mantıksal XOR
 * Mantıksal VEYA
-    - `x | y`: Tamsayı bitwise VEYA, boolean mantıksal VEYA
+  - `x | y`: Tamsayı bitwise VEYA, boolean mantıksal VEYA
 * Koşullu VE
-    - `x && y`: Değerlendirilen `y` yalnızca `x` değil `false`
+  - `x && y`: Değerlendirilen `y` yalnızca `x` değil `false`
 * Koşullu VEYA
-    - `x || y`: Değerlendirilen `y` yalnızca `x` değil `true`
+  - `x || y`: Değerlendirilen `y` yalnızca `x` değil `true`
 * Null birleşim
-    - `x ?? y`: Değerlendiren `y` varsa `x` için null `x` Aksi takdirde
+  - `x ?? y`: Değerlendiren `y` varsa `x` için null `x` Aksi takdirde
 * Koşullu
-    - `x ? y : z`: Değerlendirir `y` varsa `x` olduğu `true`, `z` varsa `x` olduğu `false`
+  - `x ? y : z`: Değerlendirir `y` varsa `x` olduğu `true`, `z` varsa `x` olduğu `false`
 * Atama ve anonim işlev
-    - `x = y`: Atama
-    - `x op= y`: Bileşik atama; desteklenen işleçler şunlardır:
-        - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-    - `(T x) => y`: Anonim işlevi (lambda ifadesi)
+  - `x = y`: Atama
+  - `x op= y`: Bileşik atama; desteklenen işleçler şunlardır:
+    - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
+  - `(T x) => y`: Anonim işlevi (lambda ifadesi)
 
 > [!div class="step-by-step"]
 > [Önceki](types-and-variables.md)

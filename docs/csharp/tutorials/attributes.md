@@ -4,12 +4,12 @@ description: C# dilinde öznitelikleri nasıl çalıştığını öğrenin.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975608"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481237"
 ---
 # <a name="using-attributes-in-c"></a>Öznitelikleri kullanarak C\#
 
@@ -108,7 +108,7 @@ Yukarıdaki özniteliği bir sınıf veya yapı değil şeye koymak çalışırs
 
 Öznitelik meta veri olarak davranır. Bazı dışa doğru zorla, bunlar gerçekten herhangi bir şey olmaz.
 
-Bul ve öznitelikleri üzerinde işlem yapma [yansıma](../programming-guide/concepts/reflection.md) genellikle gereklidir. Bu öğreticide ayrıntılı yansıma kapsayan olmaz, ancak temel yansıma diğer kodu inceleyen #c dilinde kod yazmanızı sağlayan uygulamadır.
+Bul ve öznitelikleri üzerinde işlem yapma [yansıma](../programming-guide/concepts/reflection.md) genellikle gereklidir. Bu öğreticide ayrıntılı yansıma kapsayan olmaz, ancak temel fikir yansıma, kod yazmaya olanak sağlamasıdır C# , diğer kodu inceler.
 
 Örneğin, bir sınıf hakkında bilgi almak için yansıma kullanabilirsiniz (ekleme `using System.Reflection;` kodunuzu başındaki): 
 
@@ -134,12 +134,12 @@ Ayrıca her zaman örneği oluşturulur. Çağırma `GetCustomAttributes` arka a
 
 .NET Core temel sınıf kitaplığına yerleşik birkaç önemli öznitelikleri şunlardır:
 
-* `[Obsolete]`. Bu, Yukarıdaki örneklerde kullanılan ve kendini `System` ad alanı. Bildirim temelli belgelerine değişen bir kod temeli sağlamak kullanışlıdır. Bir dize biçiminde bir ileti sağlanabilir ve başka bir Boole parametresi için bir derleyici hatası derleyici uyarıdan ilerletmek için kullanılabilir.
+* `[Obsolete]`biçimindeki telefon numarasıdır. Bu, Yukarıdaki örneklerde kullanılan ve kendini `System` ad alanı. Bildirim temelli belgelerine değişen bir kod temeli sağlamak kullanışlıdır. Bir dize biçiminde bir ileti sağlanabilir ve başka bir Boole parametresi için bir derleyici hatası derleyici uyarıdan ilerletmek için kullanılabilir.
 
-* `[Conditional]`. Bu öznitelik bulunduğu `System.Diagnostics` ad alanı. Bu öznitelik, yöntemler (veya öznitelik sınıflarında) uygulanabilir. Oluşturucuya bir dize geçmesi gerekir.
+* `[Conditional]`biçimindeki telefon numarasıdır. Bu öznitelik bulunduğu `System.Diagnostics` ad alanı. Bu öznitelik, yöntemler (veya öznitelik sınıflarında) uygulanabilir. Oluşturucuya bir dize geçmesi gerekir.
 Bu dize eşleşmiyorsa bir `#define` yönergesi, ardından bu yöntem (ancak yöntemin kendisi değil) yapılan her çağrı tarafından kaldırılacak C# derleyici. Genellikle bu hata ayıklama (tanılama) amacıyla kullanılır.
 
-* `[CallerMemberName]`. Bu öznitelik parametreleri ve canlı kullanılabilir `System.Runtime.CompilerServices` ad alanı. Başka bir yöntemi çağıran yöntemin adı ekleme için kullanılan bir özniteliği budur. Bu genellikle bir şekilde 'dizeleri Sihirli' ortadan kaldırmak için kullanılan çeşitli UI çerçeveleri alanında INotifyPropertyChanged uygularken. Örneğin:
+* `[CallerMemberName]`biçimindeki telefon numarasıdır. Bu öznitelik parametreleri ve canlı kullanılabilir `System.Runtime.CompilerServices` ad alanı. Başka bir yöntemi çağıran yöntemin adı ekleme için kullanılan bir özniteliği budur. Bu genellikle bir şekilde 'dizeleri Sihirli' ortadan kaldırmak için kullanılan çeşitli UI çerçeveleri alanında INotifyPropertyChanged uygularken. Örneğin:
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 
@@ -147,4 +147,4 @@ Yukarıdaki kodda, bir sabit değer olan gerekmez `"Name"` dize. Bu, yazım hata
 
 ## <a name="summary"></a>Özet
 
-Bildirim temelli güç öznitelikleri C# ' tan getirin. Ancak bir kod meta veri olarak biçimindedir ve kendileri tarafından harekete.
+Öznitelikleri getirmek için bildirim temelli power C#, ancak kendileri tarafından harekete ve kod bir meta veri biçimidir.

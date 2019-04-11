@@ -3,12 +3,12 @@ title: C#Türler ve değişkenler - Turu C# dil
 description: Türleri tanımlama ve değişkenleri bildirme hakkında bilgi edininC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5159d75c601bbcb8248a11993a4aaf39299734f0
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846616"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481086"
 ---
 # <a name="types-and-variables"></a>Türler ve değişkenler
 
@@ -19,30 +19,30 @@ C#ın değer türleri içinde daha bölünür *basit türler*, *Numaralandırma 
 Genel bir bakış verilmiştir C#'s tür sistemi.
 
 * Değer türleri
-    - Basit türler
-        * İmzalı tam sayı: `sbyte`, `short`, `int`, `long`
-        * İşaretsiz integral: `byte`, `ushort`, `uint`, `ulong`
-        * Unicode karakter sayısı: `char`
-        * IEEE kayan nokta: `float`, `double`
-        * Yüksek duyarlıklı ondalık: `decimal`
-        * Boole: `bool`
-    - Numaralandırma türleri
-        * Formun kullanıcı tanımlı türler `enum E {...}`
-    - Yapı türleri
-        * Formun kullanıcı tanımlı türler `struct S {...}`
-    - Boş değer atanabilen değer türleri
-        * Diğer tüm değer türleri ile uzantıları bir `null` değeri
+  - Basit türler
+    * İmzalı tam sayı: `sbyte`, `short`, `int`, `long`
+    * İşaretsiz integral: `byte`, `ushort`, `uint`, `ulong`
+    * Unicode karakter sayısı: `char`
+    * IEEE kayan nokta: `float`, `double`
+    * Yüksek duyarlıklı ondalık: `decimal`
+    * Boole: `bool`
+  - Numaralandırma türleri
+    * Formun kullanıcı tanımlı türler `enum E {...}`
+  - Yapı türleri
+    * Formun kullanıcı tanımlı türler `struct S {...}`
+  - Boş değer atanabilen değer türleri
+    * Diğer tüm değer türleri ile uzantıları bir `null` değeri
 * Başvuru türleri
-    - Sınıf türleri
-        * Diğer tüm türlerin Ultimate temel sınıf: `object`
-        * Unicode dizelerini: `string`
-        * Formun kullanıcı tanımlı türler `class C {...}`
-    - Arabirim türleri
-        * Formun kullanıcı tanımlı türler `interface I {...}`
-    - Dizi türleri
-        * Tek ve örneğin, çok boyutlu `int[]` ve `int[,]`
-    - Temsilci türleri
-        * Formun kullanıcı tanımlı türler `delegate int D(...)`
+  - Sınıf türleri
+    * Diğer tüm türlerin Ultimate temel sınıf: `object`
+    * Unicode dizelerini: `string`
+    * Formun kullanıcı tanımlı türler `class C {...}`
+  - Arabirim türleri
+    * Formun kullanıcı tanımlı türler `interface I {...}`
+  - Dizi türleri
+    * Tek ve örneğin, çok boyutlu `int[]` ve `int[,]`
+  - Temsilci türleri
+    * Formun kullanıcı tanımlı türler `delegate int D(...)`
 
 Sekiz integral türleri, 8-bit, 16-bit, 32-bit ve 64-bit işaretli veya işaretsiz form değerleri için destek sağlar.
 
@@ -57,20 +57,20 @@ Karakter ve dize işleme C# dilinde Unicode kodlaması kullanır. `char` Türün
 Bu özetler C#ait sayısal türler.
 
 * İmzalı tam sayı
-    - `sbyte`:  8 bit, -128 ile 127 arasındadır
-    - `short`: 16 bit ile 32.767 -32.768 arasındadır
-    - `int`  : 32 bit, aralık 2,147,483,648 ila 2,147,483,647
-    - `long` : 64 bit,-9,223,372,036,854,775,808 9.223.372.036.854.775.807 ile arasındadır
+  - `sbyte`:  8 bit, -128 ile 127 arasındadır
+  - `short`: 16 bit ile 32.767 -32.768 arasındadır
+  - `int`  : 32 bit, aralık 2,147,483,648 ila 2,147,483,647
+  - `long` : 64 bit,-9,223,372,036,854,775,808 9.223.372.036.854.775.807 ile arasındadır
 * İşaretsiz tamsayı
-    - `byte`   :  8 bit, 0 ile 255 arasında
-    - `ushort` : 16 bit, 0 ile 65.535 arasında
-    - `uint`   : 32 bit ve aralığı 0'dan 4.294.967.295'e kadar
-    - `ulong`  : 64 bit, aralığı 0-18,446,744,073,709,551,615
+  - `byte`   :  8 bit, 0 ile 255 arasında
+  - `ushort` : 16 bit, 0 ile 65.535 arasında
+  - `uint`   : 32 bit ve aralığı 0'dan 4.294.967.295'e kadar
+  - `ulong`  : 64 bit, aralığı 0-18,446,744,073,709,551,615
 * Kayan nokta
-    - `float`  : 32 bit aralığı 1.5 × 10'dan<sup>-45</sup> 3.4 × 10<sup>38</sup>, 7 basamaklı duyarlık
-    - `double` : 64 bit aralığı 5.0 × 10'dan<sup>-324</sup> 1.7 × 10<sup>308</sup>, 15 basamaklı duyarlık
+  - `float`  : 32 bit aralığı 1.5 × 10'dan<sup>-45</sup> 3.4 × 10<sup>38</sup>, 7 basamaklı duyarlık
+  - `double` : 64 bit aralığı 5.0 × 10'dan<sup>-324</sup> 1.7 × 10<sup>308</sup>, 15 basamaklı duyarlık
 * Ondalık
-    - `decimal` : 128 bit aralığı olan en az-7.9 × 10<sup>-28</sup> 7,9 × 10<sup>28</sup>, en az 28 basamaklı duyarlık ile
+  - `decimal` : 128 bit aralığı olan en az-7.9 × 10<sup>-28</sup> 7,9 × 10<sup>28</sup>, en az 28 basamaklı duyarlık ile
 
 C# programları kullanım *tür bildirimleri* yeni türler oluşturmak için. Bir tür bildirimi, adı ve yeni türün üyeleri belirtir. Beş C#'s türleri kategorilerini kullanıcı tanımlanabilir: Sınıf türleri, yapı türleri, arabirim türleri, sabit listesi türleri ve temsilci türleri.
 
@@ -101,19 +101,19 @@ C#tür birleşik sistem etkili bir şekilde anlamına gelir değer türleri nesn
 Birkaç türü vardır, *değişkenleri* C# ' ta alanlar, dizi öğeleri, yerel değişkenleri ve parametreleri dahil. Değişkenleri temsil eden, depolama konumları ve her değişken değerlerin neler olması belirleyen bir türe sahip aşağıda gösterildiği gibi bir değişkende depolanır.
 
 * NULL olmayan değer türü
-    - Bu kesin türde bir değer
+  - Bu kesin türde bir değer
 * Null değer türü
-    - A `null` değeri ya da bu kesin türde bir değer
+  - A `null` değeri ya da bu kesin türde bir değer
 * nesne
-    - A `null` başvuru, bir nesneye bir başvuru türünün bir başvuru veya herhangi bir değer türünün kutulanmış bir değer başvurusu
+  - A `null` başvuru, bir nesneye bir başvuru türünün bir başvuru veya herhangi bir değer türünün kutulanmış bir değer başvurusu
 * Sınıf türü
-    - A `null` başvuru, bu sınıf türünün bir örneğine başvuru veya bu sınıf türünden türetilmiş bir sınıfın bir örneğine başvuru
+  - A `null` başvuru, bu sınıf türünün bir örneğine başvuru veya bu sınıf türünden türetilmiş bir sınıfın bir örneğine başvuru
 * Arabirim türü
-    - A `null` başvuru, bu arabirim türünü uygulayıp bir sınıf türünün bir örneğine başvuru veya paketlenmiş değere bu arabirim türünü uygulayıp bir değer türü başvurusu
+  - A `null` başvuru, bu arabirim türünü uygulayıp bir sınıf türünün bir örneğine başvuru veya paketlenmiş değere bu arabirim türünü uygulayıp bir değer türü başvurusu
 * Dizi türü
-    - A `null` başvuru, dizi türü bir örneğe bir başvuru veya uyumlu dizi türünde bir örneğe bir başvuru
+  - A `null` başvuru, dizi türü bir örneğe bir başvuru veya uyumlu dizi türünde bir örneğe bir başvuru
 * Temsilci türü
-    - A `null` başvurusu veya bir örneğini uyumlu temsilci türü başvurusu
+  - A `null` başvurusu veya bir örneğini uyumlu temsilci türü başvurusu
 
 > [!div class="step-by-step"]
 > [Önceki](program-structure.md)

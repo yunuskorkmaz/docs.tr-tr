@@ -1,46 +1,48 @@
 ---
-title: İfade ağaçları açıklanmıştır
+title: İfade ağaçları açıklaması
 description: İfade ağaçları ve nasıl yürütmeden önce dış yürütme ve İnceleme kod çevirme algoritmaları yararlı oldukları hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 97cba9e5ec388729d23fb2689dfc1842a42af9b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012ea0dec85e6fba7581f4bc46a5e78da8c64708
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216875"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481437"
 ---
-# <a name="expression-trees-explained"></a>İfade ağaçları açıklanmıştır
+# <a name="expression-trees-explained"></a>İfade ağaçları açıklaması
 
 [Önceki--genel bakış](expression-trees.md)
 
-Bir ifade ağacına kodu tanımlayan bir veri yapısıdır. Bunlar, bir derleyici kodu çözümlemek ve derlenmiş çıktı üretmek için kullandığı aynı yapıları temel alır. Bu öğreticide okurken oldukça biraz benzerlik ifade ağaçları Roslyn API'leri oluşturmak için kullanılan türleri arasındaki fark edeceksiniz [Çözümleyicileri ve CodeFixes](https://github.com/dotnet/roslyn-analyzers).
-(Çözümleyicileri ve CodeFixes kodu statik çözümlemesi ve olası düzeltmeler için bir geliştirici önerebilir NuGet paketlerdir.) Kavram benzer ve sonuç anlamlı bir şekilde kaynak kodunu incelenmesi izin veren bir veri yapısıdır. Ancak, ifade ağaçları sınıfları ve API'leri Roslyn API'ları daha farklı bir dizi temel alır.
-    
+İfade ağacı kodu tanımlayan bir veri yapısıdır. Bunlar, bir derleyici kodu analiz edin ve derlenen Çıkışta oluşturmak için kullandığı aynı yapıları temel alır. Bu öğreticide belirtildiği gibi olayın benzerlik ifade ağaçları ve Roslyn API'leri oluşturmak için kullanılan türleri arasındaki fark edeceksiniz [Çözümleyicileri ve CodeFixes](https://github.com/dotnet/roslyn-analyzers).
+(Kodu statik analizini ve bir geliştirici için olası düzeltmeleri önerebilir NuGet paketlerini Çözümleyicileri ve CodeFixes içindir.) Kavram benzer ve sonuç anlamlı bir şekilde kaynak kod incelemesini sağlayan bir veri yapısıdır. Ancak, ifade ağaçları sınıfları ve Roslyn API'leri API tamamen farklı bir kümesini temel alır.
+
 Basit bir örneğe bakalım.
-Bir kod satırı şöyledir:
+Bir kod satırı aşağıda verilmiştir:
+
 ```csharp
 var sum = 1 + 2;
 ```
-Bu bir ifade ağacına çözümlemek için olsaydı, ağaç birçok düğümlerini içerir.
-Atama değişken bildirimi deyimiyle en dıştaki düğümdür (`var sum = 1 + 2;`) o en dıştaki düğüm birkaç alt düğümleri içerir: bir değişken bildirimi, bir atama işleci ve sağ tarafındaki eşittir işareti temsil eden bir ifade. İfade başka ek işlemi ve ayrıca sol ve sağ işlenenleri temsil eden ifadelere bölünmüştür.
+Bu bir ifade ağacı çözümlemek için olsaydı, birkaç düğüm ağacı içerir.
+Bir değişken bildirimi deyimiyle atama en dıştaki düğümüdür (`var sum = 1 + 2;`) en dıştaki düğüm birkaç alt düğümleri içerir: bir değişken bildirimi, bir atama işleci ve sağ tarafında eşittir işareti temsil eden bir ifade. İfade başka toplama işlemi ve ayrıca sol ve sağ işleneni temsil eden ifadelere alt bölümlere.
 
-Şimdi biraz daha sağ tarafındaki eşittir işareti olun ifadeleri detaya.
-İfade `1 + 2`. Bu ikili bir ifadedir. Daha açık belirtmek gerekirse bir ikili Toplama ifadesi değil. Bir ikili Toplama ifadesi toplama ifadesinin sol ve sağ düğümleri temsil eden iki alt sahiptir. Her iki düğüm sabit ifadeler şunlardır: sol işleneni değerdir `1`, ve sağ işleneni değerdir `2`.
+Şimdi biraz daha eşittir işareti sağ tarafındaki olun ifadeler detayına.
+İfade `1 + 2`. İkili ifade olmasıdır. Daha açık belirtmek gerekirse, bir ikili ayrıca ifadesidir. İkili ek ifade bir toplama ifadesinin sol ve sağ düğümleri temsil eden iki alt sahiptir. Aşağıda, her iki düğüm de sabit ifadeler verilmiştir: Sol işlenen değerdir `1`, ve sağ işlenen değer `2`.
 
-Görsel olarak, tüm deyimi bir ağacıdır: kök düğümde başlatın ve ağacında deyimi yapar kodu görmek için her düğüme seyahat:
+Görsel olarak, tüm ifade ağacı şudur: Kök düğümde başlatın ve deyim yapan kodu görmek için ağacında her bir düğümüne seyahat:
 
-- Atama deyimiyle değişken bildirimi (`var sum = 1 + 2;`)
-    * Örtük değişken türü bildirimi (`var sum`)
-        - Örtük var anahtar sözcüğü (`var`)
-        - Değişken adı bildirimi (`sum`)
-    * Atama işleci (`=`)
-    * İkili Toplama ifadesi (`1 + 2`)
-        - Sol işleneni (`1`)
-        - Toplama işleci (`+`)
-        - Sağ işleneni (`2`)
+- Değişken bildirimi deyimiyle Ataması (`var sum = 1 + 2;`)
+  * Örtük değişken türü bildirimi (`var sum`)
+    - Örtük var anahtar sözcüğü (`var`)
+    - Değişken bildirimi (`sum`)
+  * Atama işleci (`=`)
+  * İkili ek ifade (`1 + 2`)
+    - Sol işleneni (`1`)
+    - Toplama işleci (`+`)
+    - Sağ işlenen (`2`)
 
-Bu karmaşık görünebilir, ancak çok güçlü bir özelliktir. Aynı işlemi çok daha karmaşık ifadeler bozabilir. Bu ifade göz önünde bulundurun:
+Bu karmaşık görünebilir, ancak çok güçlü bir özelliktir. Aynı işlemi çok daha karmaşık ifadeler bozabilir. Bu ifadeyi göz önünde bulundurun:
+
 ```csharp
 var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
@@ -48,22 +50,22 @@ var finalAnswer = this.SecretSauceFunction(
     MoreSecretSauce('A', DateTime.Now, true);
 ```
 
-Yukarıdaki aynı zamanda bir atamasına sahip bir değişken bildirimi ifadesidir.
+Yukarıdaki ayrıca bir değişken bildirimi bir atama ifadesidir.
 Bu örnekte, sağ taraftaki atamasının çok daha karmaşık bir ağacıdır.
-Bu ifade parçalayın, ancak ne farklı düğümler olabilir göz önünde bulundurun yapacağım değil. Geçerli nesneyi kullanarak bir alıcı, açık olan bir yöntem çağrıları vardır `this` alıcı, mevcut bir. Yöntem çağrıları diğer alıcı nesneleri kullanarak, farklı türlerde sabit bir bağımsız değişken. Ve son olarak, bir ikili Toplama işleci yok. Dönüş türüne bağlı olarak `SecretSauceFunction()` veya `MoreSecretSauce()`, bu ikili Toplama işleci sınıfı için tanımlanmış ikili Toplama işleci için bir statik yöntem çağrısı çözümleme bir geçersiz kılınan Toplama işleci için bir yöntem çağrısı olabilir.
+Bu ifade ayırmak, ancak ne farklı düğümleri olabilir göz önünde bulundurun tıklıyorum değil. Geçerli nesneyi kullanarak bir alıcı, açık olan bir yöntem çağrıları vardır `this` alıcı, daha önceden bir tane. Yöntem çağrıları diğer alıcı nesneleri kullanarak, farklı türden sabit bağımsız değişkenleri vardır. Ve son olarak, bir ikili Toplama işleci yoktur. Dönüş türüne bağlı olarak `SecretSauceFunction()` veya `MoreSecretSauce()`, bu ikili Toplama işleci için bir sınıf için tanımlanmış ikili Toplama işleci bir statik yöntem çağrısına çözümleme bir geçersiz kılınan bir toplama işlecinin metot çağrısı olabilir.
 
-Algılanan bu karmaşıklıktan rağmen yukarıdaki ifadeyi ilk örnek olarak kolayca olarak gittiğinizde bir ağaç yapısı oluşturur. İfade yaprak düğümlerin bulmak için alt düğümleri geçme tutmak. Üst düğüm kendi alt öğelerine başvurular varsa ve her düğüm ne tür bir düğümü tanımlar bir özelliğe sahiptir.
+Algılanan bu karmaşıklığı rağmen yukarıdaki ifadeyi olarak ilk örnek olarak kolayca gittiğinizde bir ağaç yapısı oluşturur. Geçiş ifadesinde yaprak düğümleri bulmak için alt düğümleri tutun. Üst düğüm alt öğelerini başvurular varsa ve her düğüm, ne tür bir düğümü tanımlar bir özelliğe sahiptir.
 
-Bir ifade ağacına yapısını çok tutarlıdır. Temel bilgileri öğrendiğinize sonra bir ifade ağacına temsil edilir olduğunda bile en karmaşık kod anlayabilirsiniz. Veri yapısı içinde şıklık nasıl C# Derleyici en karmaşık C# programları çözümleyebilir ve bu karmaşık kaynak kodundan uygun çıkış oluşturma açıklanmaktadır.
+İfade ağacı yapısını çok tutarlıdır. Temel öğrendikten sonra bir ifade ağacı temsil edilen zaman bile en karmaşık kod anlayabilirsiniz. Veri yapısı, şıklık açıklar nasıl C# derleyici en karmaşık analiz etmek C# programları ve o karmaşık kaynak kodundan uygun çıkış oluşturun.
 
-İfade ağaçları yapısıyla tanıdık sonra hızlı bir şekilde elde bilgi, pek çok daha Gelişmiş senaryolar ile çalışmanıza olanak sağlar bulacaksınız. İfade ağaçları inanılmaz gücü yoktur.
+İfade ağaçları yapısını tanıdık sonra hızlı bir şekilde elde ettiğiniz bilgi çok daha Gelişmiş senaryolar ile çalışmanıza olanak sağlayan bulabilirsiniz. İfade ağaçlarında yapılan inanılmaz gücü yoktur.
 
-Diğer ortamlarda yürütmek için algoritmaları çevirme ek olarak, ifade ağaçları yürütmeden önce kodu incelemek algoritmaları yazmayı kolaylaştırmak için kullanılabilir. Bir yöntemi olan bağımsız değişkenler ifadelerini ve kod çalıştırmadan önce bu ifadeleri inceleyin yazabilirsiniz. İfade ağacına kodu tam gösterimidir: herhangi bir alt ifade değerlerini görebilirsiniz.
-Yöntem ve özellik adları görebilirsiniz. Tüm sabit ifadeler değerini görebilirsiniz.
-Bir ifade ağacına yürütülebilir bir temsilci dönüştürmek ve kod yürütebilir.
+Diğer ortamlarda yürütmek için algoritmalar çevirme ek olarak, ifade ağaçları yürütmeden önce kod İnceleme algoritmaları yazmayı kolaylaştırmak için kullanılabilir. Bir yöntem bağımsız değişkenleri, ifadeler ve kodu yürütmeden önce söz konusu ifadelerden inceleyin yazabilirsiniz. İfade ağacı kod tam gösterimidir: herhangi bir alt ifade değerleri görebilirsiniz.
+Yöntem ve özellik adları görebilirsiniz. Herhangi bir sabit ifadeler değeri görebilirsiniz.
+Yürütülebilir bir temsilciye bir ifade ağacı dönüştürmek ve kod yürütebilir.
 
-İfade ağaçları API'leri neredeyse tüm geçerli kod yapısını temsil eden ağaçları oluşturmanızı sağlar. Ancak, işleri olabildiğince basit tutmak için bazı C# deyimleri bir ifade ağacına olarak oluşturulamıyor. Bir örnektir zaman uyumsuz ifadeleri (kullanarak `async` ve `await` anahtar sözcükler). Zaman uyumsuz algoritmaları gereksinimlerinizi ihtiyacınız varsa işlemek gerekir `Task` derleyici desteği kullanan yerine doğrudan nesneleri. Başka bir döngüler oluşturmada olur. Bunlar kullanarak oluşturduğunuz genellikle `for`, `foreach`, `while` veya `do` döngüler. Gördüğünüz gibi [bu serideki sonraki](expression-trees-building.md), ile tek döngü ifade için ifade ağaçları API'lerini destekleyen `break` ve `continue` döngü yinelenen denetim ifadeleri.
+İfade ağaçları yönelik API'ler neredeyse tüm geçerli kod yapısını temsil eden ağaçları oluşturmanıza olanak sağlar. Ancak, bazı şeyler mümkün olduğunca basit tutmak için C# deyimleri içinde bir ifade ağacı oluşturulamıyor. Zaman uyumsuz ifadeleri bir örnek verilmiştir (kullanarak `async` ve `await` anahtar sözcükleri). Zaman uyumsuz algoritmaları gereksinimlerinizi ihtiyacınız varsa, işlemek gerekir `Task` derleyici desteğe güvenin yerine doğrudan nesneleri. Döngüler oluşturmak da başka bir özelliktir. Genellikle, bu kullanarak oluşturursunuz `for`, `foreach`, `while` veya `do` döngüleri. Gördüğünüz gibi [bu serideki sonraki](expression-trees-building.md), bir tek döngü ifadesi desteklemek için ifade ağaçları API'leri `break` ve `continue` döngü yinelenen denetim ifadeleri.
 
-Yapamayacağınız tek şey, bir ifade ağacına Değiştir ' dir.  İfade ağaçları değişmez veri yapılarını ' dir. (Değiştirin) bir ifade ağacına kesilecek istiyorsanız, bir kopyası özgün, ancak istenen değişikliklerinizi içeren yeni bir ağaç oluşturmanız gerekir. 
+Yapamayacağınız tek şey, bir ifade ağacı değiştirdiğiniz yerdir.  İfade ağaçları sabit veri yapılarıdır. (Değiştirin) bir ifade ağacı bulunmamalıdır istiyorsanız, bir kopyası özgün, ancak istediğiniz değişiklikleri içeren yeni bir ağaç oluşturmanız gerekir.
 
-[Sonraki--Framework destekleyen ifade ağaçları türleri](expression-classes.md)
+[Sonraki--İfade ağaçlarını destekleyen çerçeve türleri](expression-classes.md)

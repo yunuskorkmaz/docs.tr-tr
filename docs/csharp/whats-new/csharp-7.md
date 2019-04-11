@@ -3,36 +3,36 @@ title: C# 7.0 - C# Kılavuzu yenilikler nelerdir?
 description: Yeni özelliklere genel bakış sürümünü 7.0 almak C# dili.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 8cf9994f74781584b3d7500c09656d4798af32ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326547"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481307"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 yenilikleri
 
 C# 7.0 C# dili için yeni özellikler ekler:
 * [`out` değişkenler](#out-variables)
-    - Bildirebilirsiniz `out` kullanıldıkları yöntemi için bağımsız değişkeni olarak satır içi değerleri.
+  - Bildirebilirsiniz `out` kullanıldıkları yöntemi için bağımsız değişkeni olarak satır içi değerleri.
 * [Demetler](#tuples)
-    - Birden çok ortak alanları içeren basit, adsız türleri oluşturabilirsiniz. Bu tür semantikleri, derleyiciler ve Araçlar IDE anlayın.
+  - Birden çok ortak alanları içeren basit, adsız türleri oluşturabilirsiniz. Bu tür semantikleri, derleyiciler ve Araçlar IDE anlayın.
 * [Atar](#discards)
-    - İptali atanan değer hakkında umursamaz atamalarını kullanılan geçici, salt yazılır değişkenlerdir. Diziler ve kullanıcı tanımlı türler Ayrıştırma sırasında yanı sıra ile yöntemleri çağrılırken en yararlı oldukları `out` parametreleri.
+  - İptali atanan değer hakkında umursamaz atamalarını kullanılan geçici, salt yazılır değişkenlerdir. Diziler ve kullanıcı tanımlı türler Ayrıştırma sırasında yanı sıra ile yöntemleri çağrılırken en yararlı oldukları `out` parametreleri.
 * [Desen Eşleştirme](#pattern-matching)
-    - Rastgele türler ve bu türlerin üyelerinin değerlerini göre dallanma mantığı oluşturabilirsiniz.
+  - Rastgele türler ve bu türlerin üyelerinin değerlerini göre dallanma mantığı oluşturabilirsiniz.
 * [`ref` yerel değerleri ve dönüşleri](#ref-locals-and-returns)
-    - Diğer depolama başvuruları yöntemi yerel değişkenleri ve dönüş değerleri olabilir.
+  - Diğer depolama başvuruları yöntemi yerel değişkenleri ve dönüş değerleri olabilir.
 * [Yerel İşlevler](#local-functions)
-    - İşlevler, kapsam ve görünürlük sınırlamak için diğer işlevler içinde iç içe yerleştirebilirsiniz.
+  - İşlevler, kapsam ve görünürlük sınırlamak için diğer işlevler içinde iç içe yerleştirebilirsiniz.
 * [Daha fazla ifade gövdeli üyeler](#more-expression-bodied-members)
-    - İfadeleri kullanarak yazılabilir üye listesini geldi.
+  - İfadeleri kullanarak yazılabilir üye listesini geldi.
 * [`throw` İfadeler](#throw-expressions)
-    - Daha önce olduğundan izin vermediği kod yapıları özel durumlar oluşturabilecek `throw` bir ifadesi. 
+  - Daha önce olduğundan izin vermediği kod yapıları özel durumlar oluşturabilecek `throw` bir ifadesi.
 * [Genelleştirilmiş bir zaman uyumsuz dönüş türleri](#generalized-async-return-types)
-    - Yöntemleri ile bildirilmiş `async` değiştiricisi, ek olarak diğer türleri döndürebilir `Task` ve `Task<T>`.
+  - Yöntemleri ile bildirilmiş `async` değiştiricisi, ek olarak diğer türleri döndürebilir `Task` ve `Task<T>`.
 * [Sayısal sabit değer sözdizimi geliştirmeleri](#numeric-literal-syntax-improvements)
-    - Yeni belirteç sayısal sabitlere okunabilirliği geliştirir.
+  - Yeni belirteç sayısal sabitlere okunabilirliği geliştirir.
 
 Bu makalenin geri kalanında her özelliğine genel bakış sağlar. Her bir özellik için ardındaki mantık öğreneceksiniz. Söz dizimi öğreneceksiniz. Bu özelliklerin keşfedebilirsiniz bizim [etkileşimli incelenmesi](../tutorials/exploration/csharp-7.yml) bu özellikleri.
 
@@ -46,10 +46,10 @@ Türünü belirtmek isteyebilirsiniz `out` , anlaşılması için değişken yuk
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* Kodu daha kolay. 
-    - Out değişkeni da değil başka bir satırda yukarıdaki kullandığınız bildirdiğiniz.
+* Kodu daha kolay.
+  - Out değişkeni da değil başka bir satırda yukarıdaki kullandığınız bildirdiğiniz.
 * Bir başlangıç değeri atamanız gerekmez.
-    - Bildirmek `out` bunu atanmadan önce değişken bir yöntem çağrısında kullanıldığı yanlışlıkla kullanamazsınız.
+  - Bildirmek `out` bunu atanmadan önce değişken bir yöntem çağrısında kullanıldığı yanlışlıkla kullanamazsınız.
 
 ## <a name="tuples"></a>Demetler
 
@@ -77,7 +77,7 @@ Yöntemden döndürülen bir tanımlama grubu üyelerinin açmak istediğinizde 
 . NET'te herhangi bir tür için benzer bir ayrıştırma de sağlayabilirsiniz. Yazdığınız bir `Deconstruct` yöntemi sınıfının bir üyesi olarak. Olduğunu `Deconstruct` yöntem kümesi sağlar `out` ayıklamak istediğiniz bağımsız değişkenleri özelliklerin her biri için. Bunu göz önünde bulundurun `Point` ayıklayan deconstructor yöntemi sağlar sınıfını `X` ve `Y` koordinatları:
 
 [!code-csharp[PointWithDeconstruction](~/samples/snippets/csharp/new-in-7/point.cs#PointWithDeconstruction "Point with deconstruction method")]
- 
+
 Tek tek alanları atayarak ayıklayabileceğiniz bir `Point` bir demet için:
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
@@ -103,7 +103,8 @@ Daha fazla bilgi için [atar](../discards.md).
 
 ## <a name="pattern-matching"></a>Desen eşleştirme
 
-*Desen eşleştirme* yöntem gönderimine dışındaki bir nesne türü özellikleri uygulamak izin veren bir özelliktir. Zaten bir nesne türüne göre yöntemi gönderme hakkında bilgi sahibi. Yöntemi, bir nesnenin türüne göre gönderme uygulamak için dili sözdizimi, nesne yönelimli programlama, sanal ve geçersiz kılma yöntemleri sağlar. Temel ve türetilmiş sınıfları farklı uygulamalar sağlayabilir. Desen eşleştirme ifadeleri bu kavramı genişletmeniz türleri ve devralma hiyerarşisi ilişkili olmayan veri öğeleri için benzer gönderme desenleri kolayca uygulayabilirsiniz. 
+*Desen eşleştirme* yöntem gönderimine dışındaki bir nesne türü özellikleri uygulamak izin veren bir özelliktir. Zaten bir nesne türüne göre yöntemi gönderme hakkında bilgi sahibi. Yöntemi, bir nesnenin türüne göre gönderme uygulamak için dili sözdizimi, nesne yönelimli programlama, sanal ve geçersiz kılma yöntemleri sağlar. Temel ve türetilmiş sınıfları farklı uygulamalar sağlayabilir.
+Desen eşleştirme ifadeleri bu kavramı genişletmeniz türleri ve devralma hiyerarşisi ilişkili olmayan veri öğeleri için benzer gönderme desenleri kolayca uygulayabilirsiniz.
 
 Desen eşleştirme destekler `is` ifadeleri ve `switch` ifadeler. Her bir nesne ve o nesnenin Aranan deseni karşılayıp karşılamadığını belirlemek için özelliklerini inceleme sağlar. Kullandığınız `when` düzeninin ek kuralları belirtmek için anahtar sözcüğü.
 
@@ -133,7 +134,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
     {
         switch (i)
         {
-            case 0: 
+            case 0:
                 break;
             case IEnumerable<int> childSequence:
             {
@@ -141,10 +142,10 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
                     sum += (item > 0) ? item : 0;
                 break;
             }
-            case int n when n > 0: 
-                sum += n; 
+            case int n when n > 0:
+                sum += n;
                 break;
-            null:
+            case null:
                 throw new NullReferenceException("Null found in sequence");
             default:
                 throw new InvalidOperationException("Unrecognized type");
@@ -154,7 +155,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 }
 ```
 
-- `case 0:` tanıdık sabit modelidir. 
+- `case 0:` tanıdık sabit modelidir.
 - `case IEnumerable<int> childSequence:` bir tür desendir.
 - `case int n when n > 0:` bir türü ile ek bir desendir `when` koşul.
 - `case null:` null modelidir.
@@ -175,15 +176,15 @@ Dönüş değeri olarak bildirdiğiniz bir `ref` ve matris değeri aşağıdaki 
 C# Dil kötüye kullanmasının korunmasına çeşitli kurallara sahip `ref` yerel değerleri ve Dönüşleri:
 
 * Eklemelisiniz `ref` yöntem imzası ve tüm anahtar sözcüğü `return` yöntemine deyimler.
-    - Bu sayede Temizle yöntemi genelinde başvuruya göre yöntemi döndürür.
+  - Bu sayede Temizle yöntemi genelinde başvuruya göre yöntemi döndürür.
 * A `ref return` değeri bir değişkene atanabilir veya bir `ref` değişkeni.
-    - Çağıran, dönüş değeri veya kopyalanıp kopyalanmadığını denetler. Atlama `ref` dönüş değeri atarken değiştiricisi çağıran bir başvuru değil depolama değerinin bir kopyasıdır istediğini gösterir.
+  - Çağıran, dönüş değeri veya kopyalanıp kopyalanmadığını denetler. Atlama `ref` dönüş değeri atarken değiştiricisi çağıran bir başvuru değil depolama değerinin bir kopyasıdır istediğini gösterir.
 * Standart bir yöntem dönüş değerine atanamaz bir `ref` yerel değişken.
-    - Aşağıdaki gibi ifadeler izin vermiyor `ref int i = sequence.Count();`
+  - Aşağıdaki gibi ifadeler izin vermiyor `ref int i = sequence.Count();`
 * Döndüremezsiniz bir `ref` ömürlerinin yönteminin yürütülmesi genişletmek olmayan bir değişkene.
-    - Yerel bir değişken veya benzer bir kapsama sahip bir değişken başvuru döndüremez anlamına gelir.
+  - Yerel bir değişken veya benzer bir kapsama sahip bir değişken başvuru döndüremez anlamına gelir.
 * `ref` yerel değerleri ve dönüşleri zaman uyumsuz yöntemlerle kullanılamaz.
-    - Derleyici, zaman uyumsuz yöntem döndürüldüğünde başvurulan değişken son değerine ayarlandı olmadığını bilemezsiniz.
+  - Derleyici, zaman uyumsuz yöntem döndürüldüğünde başvurulan değişken son değerine ayarlandı olmadığını bilemezsiniz.
 
 Ref yerel ayarlar ve ref değerleri kopyalama ya da birden çok kez başvurusunu kaldırma işlemlerini gerçekleştirme önleyerek daha verimlidir etkinleştirir algoritmaları döndürür.
 
@@ -221,7 +222,7 @@ Bir ifade bodied üyesine bir yöntemi değiştirme bir [ikili uyumlu değişikl
 
 ## <a name="throw-expressions"></a>Throw ifadeleri
 
-C# ' ta, `throw` her zaman bir deyim olmuştur. Çünkü `throw` deyimi, bir ifade vardı C# uygulanamadı kullandığınız, yapıları. Bunlar, koşullu ifadeleri ve null birleşim ifadelerini bazı lambda ifadeleri dahil. İfade gövdeli üyeler eklenmesi için daha fazla konum ekler burada `throw` ifadeleri yararlı olacaktır. Bu yapıları hiçbirini yazabilmesi amacıyla da, C# 7.0 tanıtır *throw ifadelerini*. 
+C# ' ta, `throw` her zaman bir deyim olmuştur. Çünkü `throw` deyimi, bir ifade vardı C# uygulanamadı kullandığınız, yapıları. Bunlar, koşullu ifadeleri ve null birleşim ifadelerini bazı lambda ifadeleri dahil. İfade gövdeli üyeler eklenmesi için daha fazla konum ekler burada `throw` ifadeleri yararlı olacaktır. Bu yapıları hiçbirini yazabilmesi amacıyla da, C# 7.0 tanıtır *throw ifadelerini*.
 
 Bu ayrıca daha fazla ifade tabanlı kod yazmayı kolaylaştırır. Hata denetimi için ek deyimleri gerekmez.
 
@@ -229,7 +230,7 @@ Bu ayrıca daha fazla ifade tabanlı kod yazmayı kolaylaştırır. Hata denetim
 
 Döndüren bir `Task` zaman uyumsuz yöntemler bir nesneden performans sorunlarını Belirli yollardaki tanıtmak. `Task` bir başvuru türü olduğundan, onu kullanarak bir nesne ayırma anlamına gelir. Burada bir yöntem ile bildirilmiş durumlarda `async` değiştiricisi önbelleğe alınmış bir sonuç döndürür ya da zaman uyumlu olarak tamamlanan, kodun önemli bölümleri performans ciddi zaman maliyetine ek ayırmaları hale gelebilir. Bu ayırmalar sıkı döngüleri oluşursa pahalı hale gelebilir.
 
-Bu zaman uyumsuz yöntem dönüş türleri sınırlı olmayan yeni dil özelliğin `Task`, `Task<T>`, ve `void`. Döndürülen tür yine de zaman uyumsuz desen karşılaması gerekir yani bir `GetAwaiter` yöntemi erişilebilir olmalıdır. Somut bir örnek olarak `ValueTask` yapmak için .NET framework türü eklendi bu yeni dil özelliğini kullanın: 
+Bu zaman uyumsuz yöntem dönüş türleri sınırlı olmayan yeni dil özelliğin `Task`, `Task<T>`, ve `void`. Döndürülen tür yine de zaman uyumsuz desen karşılaması gerekir yani bir `GetAwaiter` yöntemi erişilebilir olmalıdır. Somut bir örnek olarak `ValueTask` yapmak için .NET framework türü eklendi bu yeni dil özelliğini kullanın:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

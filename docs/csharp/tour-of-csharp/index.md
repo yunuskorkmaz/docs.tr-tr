@@ -3,12 +3,12 @@ title: Turu C# - C# Kılavuzu
 description: Yeni C#? Dilinin temellerini öğrenin.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: d1373b65d6cb821871c68574662360c1431d79cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152067"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481099"
 ---
 # <a name="a-tour-of-the-c-language"></a>Turu C# dil
 
@@ -52,27 +52,27 @@ Program çıktısı tarafından üretilen `WriteLine` yöntemi `Console` sınıf
 Hakkında bilgi edinmek için çok daha fazla C#.  Aşağıdaki konularda öğelerinin genel bir bakış C# dili. Bu genel bakışlar dilinin tüm öğeleri hakkında temel bilgiler sağlar ve ayrıntılar daha kapsamlı öğeleri için gerekli bilgileri size C# dil:
 
 * [Program Yapısı](program-structure.md)
-    - Kuruluş temel kavramları öğrenin C# dil: ***programlar***, ***ad alanları***, ***türleri***, ***üyeleri***ve ***derlemeleri***.
+  - Kuruluş temel kavramları öğrenin C# dil: ***programlar***, ***ad alanları***, ***türleri***, ***üyeleri***ve ***derlemeleri***.
 * [Türler ve Değişkenler](types-and-variables.md)
-    - Hakkında bilgi edinin ***değer türleri***, ***başvuru türleri***, ve ***değişkenleri*** içinde C# dili.
+  - Hakkında bilgi edinin ***değer türleri***, ***başvuru türleri***, ve ***değişkenleri*** içinde C# dili.
 * [İfadeler](expressions.md)
-    - ***İfadeleri*** oluşturulan ***işlenenler*** ve ***işleçleri***. İfade bir değer üretir.
+  - ***İfadeleri*** oluşturulan ***işlenenler*** ve ***işleçleri***. İfade bir değer üretir.
 * [Deyimler](statements.md)
-    - Kullandığınız ***deyimleri*** eylemleri bir programın ifade etmek için.
+  - Kullandığınız ***deyimleri*** eylemleri bir programın ifade etmek için.
 * [Sınıflar ve nesneler](classes-and-objects.md)
-    - ***Sınıflar*** olan en temel C# türü. ***Nesneleri*** sınıfının örnekleridir. Sınıflar kullanılarak oluşturulur ***üyeleri***, hangi de ele alınmıştır bölümüne bakın.
+  - ***Sınıflar*** olan en temel C# türü. ***Nesneleri*** sınıfının örnekleridir. Sınıflar kullanılarak oluşturulur ***üyeleri***, hangi de ele alınmıştır bölümüne bakın.
 * [Yapılar](structs.md)
-    - ***Yapılar*** , farklı sınıflar, değer türleri veri yapılarını.
+  - ***Yapılar*** , farklı sınıflar, değer türleri veri yapılarını.
 * [Diziler](arrays.md)
-    - Bir ***dizi*** hesaplanan dizinlerini erişilen değişken bir sayı içeren bir veri yapısıdır.
+  - Bir ***dizi*** hesaplanan dizinlerini erişilen değişken bir sayı içeren bir veri yapısıdır.
 * [Arabirimler](interfaces.md)
-    - Bir ***arabirimi*** sınıfları ve yapıları tarafından uygulanan bir sözleşmeyi tanımlar. Bir arabirim yöntemleri, özellikleri, olayları ve dizin oluşturucular içerebilir. Bir arabirim tanımlar üyelerinin uygulamalarını sağlamaz; yalnızca bir sınıf ya da arabirimi uygulayan yapının tarafından sağlanması gereken üyeleri belirtir.
+  - Bir ***arabirimi*** sınıfları ve yapıları tarafından uygulanan bir sözleşmeyi tanımlar. Bir arabirim yöntemleri, özellikleri, olayları ve dizin oluşturucular içerebilir. Bir arabirim tanımlar üyelerinin uygulamalarını sağlamaz; yalnızca bir sınıf ya da arabirimi uygulayan yapının tarafından sağlanması gereken üyeleri belirtir.
 * [Numaralandırmalar](enums.md)
-    - Bir ***sabit listesi türü*** adlandırılmış sabitler kümesini içeren farklı bir değer türüdür.
+  - Bir ***sabit listesi türü*** adlandırılmış sabitler kümesini içeren farklı bir değer türüdür.
 * [Temsilciler](delegates.md)
-    - A ***temsilci türü*** belirli bir parametre olan yöntemlere başvuruları temsil listesi ve dönüş türü. Temsilciler, yöntemleri değişkenine atanır ve parametre olarak geçirilen varlıklar olarak değerlendirmek mümkün kılar. Diğer dillerde bulunan işlev işaretçileri kavramı temsilcileri benzerdir ancak işlev işaretçileri, nesne yönelimli ve tür kullanımı uyumlu temsilciler.
+  - A ***temsilci türü*** belirli bir parametre olan yöntemlere başvuruları temsil listesi ve dönüş türü. Temsilciler, yöntemleri değişkenine atanır ve parametre olarak geçirilen varlıklar olarak değerlendirmek mümkün kılar. Diğer dillerde bulunan işlev işaretçileri kavramı temsilcileri benzerdir ancak işlev işaretçileri, nesne yönelimli ve tür kullanımı uyumlu temsilciler.
 * [Öznitelikler](attributes.md)
-     * ***Öznitelikleri*** programları türleri, üyeleri ve diğer varlıkları hakkında daha fazla bildirim temelli bilgi belirtmek etkinleştirin.
+  * ***Öznitelikleri*** programları türleri, üyeleri ve diğer varlıkları hakkında daha fazla bildirim temelli bilgi belirtmek etkinleştirin.
 
 > [!div class="step-by-step"]
 > [Next](program-structure.md)

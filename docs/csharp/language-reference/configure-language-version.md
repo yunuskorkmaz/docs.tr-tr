@@ -2,12 +2,12 @@
 title: Seçin C# dil sürümü - C# Kılavuzu
 description: Belirli bir derleyici sürümü kullanarak söz dizimi doğrulama gerçekleştirmek için derleyici yapılandırma
 ms.date: 02/28/2019
-ms.openlocfilehash: 6d31a757171bd2eecdcc1fbd3da765dcb3fe45c0
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212033"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480748"
 ---
 # <a name="select-the-c-language-version"></a>Seçin C# dil sürümü
 
@@ -80,7 +80,7 @@ Değer `latest` en son sürümü kullanan C# dili. Geçerli değerler şunlardı
 
 ## <a name="configure-multiple-projects"></a>Birden çok proje yapılandırma
 
-Oluşturabileceğiniz bir **Directory.build.props** içeren dosya `<LangVersion>` birden çok dizini yapılandırma öğesi. Genellikle, çözüm dizininizde yaparsınız. Ekleyin bir **Directory.build.props** çözüm dizininizde dosya:
+Oluşturabileceğiniz bir **Directory.Build.props** içeren dosya `<LangVersion>` birden çok dizini yapılandırma öğesi. Genellikle, çözüm dizininizde yaparsınız. Ekleyin bir **Directory.Build.props** çözüm dizininizde dosya:
 
 ```xml
 <Project>
