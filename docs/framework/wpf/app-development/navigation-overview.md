@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: feccd6978d0a3cf8db60bbd505826433c93e3276
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 826cfc0ea7f681e1f7cbe858008c24a4941f0e11
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335088"
 ---
 # <a name="navigation-overview"></a>Gezintiye Genel Bakış
 Windows Presentation Foundation (WPF), iki uygulama türünde de kullanılabilen tarayıcı stili gezintiyi destekler: tek başına uygulamalar ve [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Gezinti, paket içeriğine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sağlar <xref:System.Windows.Controls.Page> sınıfı. Diğerine gidebilirsiniz <xref:System.Windows.Controls.Page> diğerine bildirimli olarak, kullanarak bir <xref:System.Windows.Documents.Hyperlink>, kullanarak programlama yoluyla veya <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Günlük sayfadan çıkıldığında sayfaları unutmayın ve bunları geri gitmek için kullanır.  
@@ -353,13 +353,13 @@ Windows Presentation Foundation (WPF), iki uygulama türünde de kullanılabilen
   
  Varsayılan olarak, her metin <xref:System.Windows.Controls.Page> , görünür **son sayfalar** listesi [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] olduğu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] için <xref:System.Windows.Controls.Page>. Çoğu durumda, bu özellikle kullanıcıya anlamlı değildir. Neyse ki, aşağıdaki seçeneklerden birini kullanarak metin değiştirebilirsiniz:  
   
-1.  Ekli `JournalEntry.Name` öznitelik değeri.  
+1. Ekli `JournalEntry.Name` öznitelik değeri.  
   
-2.  `Page.Title` Öznitelik değeri.  
+2. `Page.Title` Öznitelik değeri.  
   
-3.  `Page.WindowTitle` Öznitelik değeri ve [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] geçerli <xref:System.Windows.Controls.Page>.  
+3. `Page.WindowTitle` Öznitelik değeri ve [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] geçerli <xref:System.Windows.Controls.Page>.  
   
-4.  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Geçerli <xref:System.Windows.Controls.Page>. (Varsayılan)  
+4. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Geçerli <xref:System.Windows.Controls.Page>. (Varsayılan)  
   
  Seçenekler listelendiği sırayı metni bulmak için öncelik sırası ile eşleşir. Örneğin, varsa `JournalEntry.Name` , diğer değerleri yok sayılır ayarlanmış.  
   
@@ -429,19 +429,19 @@ Windows Presentation Foundation (WPF), iki uygulama türünde de kullanılabilen
   
  Neyse ki, günlük veri arasında hatırlamak için destek sağlar <xref:System.Windows.Controls.Page> gezintiler denetim verileri dahil olmak üzere,. Özellikle, her günlük girdisi <xref:System.Windows.Controls.Page> ilişkili geçici bir kapsayıcı olarak davranır <xref:System.Windows.Controls.Page> durumu. Aşağıdaki adımlar, bu destek nasıl kullanıldığını özetlemektedir olduğunda bir <xref:System.Windows.Controls.Page> çıktığınız:  
   
-1.  Geçerli bir giriş <xref:System.Windows.Controls.Page> günlüğe eklenir.  
+1. Geçerli bir giriş <xref:System.Windows.Controls.Page> günlüğe eklenir.  
   
-2.  Durumunu <xref:System.Windows.Controls.Page> geri yığına eklenen bu sayfada, günlük girdisi ile birlikte saklanır.  
+2. Durumunu <xref:System.Windows.Controls.Page> geri yığına eklenen bu sayfada, günlük girdisi ile birlikte saklanır.  
   
-3.  Yeni <xref:System.Windows.Controls.Page> için gitme.  
+3. Yeni <xref:System.Windows.Controls.Page> için gitme.  
   
  Olduğunda sayfa <xref:System.Windows.Controls.Page> olduğu yerde günlüğünü kullanarak geçtiğiniz için aşağıdaki adımları uygulayın:  
   
-1.  <xref:System.Windows.Controls.Page> (Üst günlük girdisi geri yığın üzerinde) oluşturulur.  
+1. <xref:System.Windows.Controls.Page> (Üst günlük girdisi geri yığın üzerinde) oluşturulur.  
   
-2.  <xref:System.Windows.Controls.Page> Günlük girdisi ile depolanan durumu yenilendiğini <xref:System.Windows.Controls.Page>.  
+2. <xref:System.Windows.Controls.Page> Günlük girdisi ile depolanan durumu yenilendiğini <xref:System.Windows.Controls.Page>.  
   
-3.  <xref:System.Windows.Controls.Page> Geri gitme.  
+3. <xref:System.Windows.Controls.Page> Geri gitme.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Bu destek aşağıdaki denetimleri üzerinde kullanıldığında otomatik olarak kullanan bir <xref:System.Windows.Controls.Page>:  
   

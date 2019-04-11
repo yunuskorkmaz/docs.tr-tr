@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: a36cdf9f8cce935c8310e2ce9ffc79f67d077fe6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225150"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344357"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF İçinde URI'leri Paketleme
 Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] belirlemek ve aşağıdakiler dahil pek çok yolla dosyalarını yüklemek için kullanılır:  
@@ -234,15 +234,15 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
  Belirlemek için, dosya türü, bir paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] başvurduğu, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] çözümler [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] yerel derlemeleri ve aşağıdaki buluşsal yöntemlerini kullanarak içerik dosyaları kaynak dosyalar için:  
   
-1.  Derleme meta verileri araştırma bir <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> paketi eşleşen öznitelik [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
+1. Derleme meta verileri araştırma bir <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> paketi eşleşen öznitelik [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
-2.  Varsa <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> özniteliği bulunduğunda, yolun paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bir içerik dosyasına başvuruyor.  
+2. Varsa <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> özniteliği bulunduğunda, yolun paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bir içerik dosyasına başvuruyor.  
   
-3.  Varsa <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> yerel bütünleştirilmiş kod içine derlenmiş kümesi kaynak dosyalarını araştırma, öznitelik bulunamadı.  
+3. Varsa <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> yerel bütünleştirilmiş kod içine derlenmiş kümesi kaynak dosyalarını araştırma, öznitelik bulunamadı.  
   
-4.  Paketi yol ile eşleşen bir kaynak dosya [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bulunduğunda, yolun paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bir kaynak dosyasına başvuruyor.  
+4. Paketi yol ile eşleşen bir kaynak dosya [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bulunduğunda, yolun paketi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bir kaynak dosyasına başvuruyor.  
   
-5.  Kaynak bulunamazsa, dahili olarak oluşturulan <xref:System.Uri> geçersiz.  
+5. Kaynak bulunamazsa, dahili olarak oluşturulan <xref:System.Uri> geçersiz.  
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Çözüm için geçerli değildir [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] şuna başvurun:  
   

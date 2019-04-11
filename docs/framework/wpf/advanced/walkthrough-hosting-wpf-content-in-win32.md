@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 3396604d94b2b0fb3f4a178d3bb3a25b00ef91ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296114"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>İzlenecek yol: WPF İçeriğini Win32 içinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamaları oluşturmak için zengin bir ortam sağlar. Önemli ölçüde yatırımınız varsa [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu olabilir eklemek daha etkili [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özgün kodunuzu yeniden yazma yerine uygulamanızın işlevselliği. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] barındırma için basit bir mekanizma sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi.  
@@ -33,13 +33,13 @@ ms.locfileid: "59166653"
   
  Barındırma için anahtar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] penceresi <xref:System.Windows.Interop.HwndSource> sınıfı. Bu sınıf sarmalar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] içine alınacağı veren penceresinde, [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] bir alt pencere olarak. Aşağıdaki yaklaşımı birleştirir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tek bir uygulamada.  
   
-1.  Uygulama, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik olarak yönetilen bir sınıf.  
+1. Uygulama, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik olarak yönetilen bir sınıf.  
   
-2.  Uygulama bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ile uygulama [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]. Var olan bir uygulama ile başlayan ve yönetilmeyen varsa [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] kod, genellikle etkinleştirebilirsiniz yönetilen kod eklemek için proje ayarlarınızı değiştirerek çağıracak şekilde `/clr` derleyici bayrağı.  
+2. Uygulama bir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ile uygulama [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]. Var olan bir uygulama ile başlayan ve yönetilmeyen varsa [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] kod, genellikle etkinleştirebilirsiniz yönetilen kod eklemek için proje ayarlarınızı değiştirerek çağıracak şekilde `/clr` derleyici bayrağı.  
   
-3.  Tek iş parçacıklı grup (STA) için iş parçacığı modeli ayarlayın.  
+3. Tek iş parçacıklı grup (STA) için iş parçacığı modeli ayarlayın.  
   
-4.  Tanıtıcı [WM_CREATE](/windows/desktop/winmsg/wm-create)bildirim pencere yordamını ve aşağıdakileri yapın:  
+4. Tanıtıcı [WM_CREATE](/windows/desktop/winmsg/wm-create)bildirim pencere yordamını ve aşağıdakileri yapın:  
   
     1.  Yeni bir <xref:System.Windows.Interop.HwndSource> nesnesi olarak ana penceresi ile onun `parent` parametresi.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "59166653"
   
     4.  HWND içeriğini alın. <xref:System.Windows.Interop.HwndSource.Handle%2A> Özelliği <xref:System.Windows.Interop.HwndSource> nesne pencere tanıtıcısı (HWND) içerir. Uygulamanızın yönetilmeyen parçası kullanabileceğiniz bir HWND almak için cast `Handle.ToPointer()` HWND için.  
   
-5.  Bir başvuru tutmak için bir statik alan içeren bir yönetilen sınıf uygulamak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Bu sınıf, bir başvuru almak sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kod.  
+5. Bir başvuru tutmak için bir statik alan içeren bir yönetilen sınıf uygulamak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Bu sınıf, bir başvuru almak sağlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kod.  
   
-6.  Ata [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik statik alan.  
+6. Ata [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içerik statik alan.  
   
-7.  Bildirimleri almak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] birini veya birkaçını bir işleyici ekleyerek içerik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayları.  
+7. Bildirimleri almak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] birini veya birkaçını bir işleyici ekleyerek içerik [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olayları.  
   
-8.  İletişim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerini ayarlayın vb. için statik alanında depolanan başvuru kullanarak içerik.  
+8. İletişim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özelliklerini ayarlayın vb. için statik alanında depolanan başvuru kullanarak içerik.  
   
 > [!NOTE]
 >  Ayrıca [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] uygulamak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriği. Ancak, bu derleme gerekecek ayrı ayrı olarak bir [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)] ve başvuran [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] gelen, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulama. Yordamın geri kalanını yukarıda özetlenen benzer.
@@ -77,13 +77,13 @@ ms.locfileid: "59166653"
 ### <a name="the-basic-application"></a>Temel uygulama
  Visual Studio 2005 şablonu oluşturmak için ana bilgisayar uygulaması için başlangıç noktası oluştu.
 
-1.  Visual Studio 2005 açın ve seçin **yeni proje** gelen **dosya** menüsü.
+1. Visual Studio 2005 açın ve seçin **yeni proje** gelen **dosya** menüsü.
 
-2.  Seçin **Win32** listesinden [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] proje türleri. Varsayılan dilinizi değilse [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)], bu proje türleri altında bulabilirsiniz **diğer diller**.
+2. Seçin **Win32** listesinden [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] proje türleri. Varsayılan dilinizi değilse [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)], bu proje türleri altında bulabilirsiniz **diğer diller**.
 
-3.  Seçin bir **Win32 projesi** şablonu, projeye bir ad atayın ve tıklayın **Tamam** başlatmak için **Win32 Uygulama Sihirbazı**.
+3. Seçin bir **Win32 projesi** şablonu, projeye bir ad atayın ve tıklayın **Tamam** başlatmak için **Win32 Uygulama Sihirbazı**.
 
-4.  Sihirbazın varsayılan ayarları kabul edin ve tıklayın **son** projeyi başlatın.
+4. Sihirbazın varsayılan ayarları kabul edin ve tıklayın **son** projeyi başlatın.
 
  Temel bir şablon oluşturur [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulaması da dahil olmak üzere:
 
@@ -97,13 +97,13 @@ ms.locfileid: "59166653"
 
  İlk olarak yönetilen kod projesi derlemektir. Varsayılan olarak, yönetilmeyen kod olarak projeyi derler. Ancak, çünkü [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulanan yönetilen kodda proje buna uygun olarak derlenmelidir.
 
-1.  İçinde proje adınıza sağ **Çözüm Gezgini** seçip **özellikleri** başlatmak için bağlam menüsünden **özellik sayfaları** iletişim kutusu.
+1. İçinde proje adınıza sağ **Çözüm Gezgini** seçip **özellikleri** başlatmak için bağlam menüsünden **özellik sayfaları** iletişim kutusu.
 
-2.  Seçin **yapılandırma özellikleri** sol bölmesinde ağaç görünümünden.
+2. Seçin **yapılandırma özellikleri** sol bölmesinde ağaç görünümünden.
 
-3.  Seçin **ortak dil çalışma zamanı** gelen destek **Proje Varsayılanları** sağ bölmede listesi.
+3. Seçin **ortak dil çalışma zamanı** gelen destek **Proje Varsayılanları** sağ bölmede listesi.
 
-4.  Seçin **ortak dil çalışma zamanı desteği (/ clr)** aşağı açılan liste kutusundan.
+4. Seçin **ortak dil çalışma zamanı desteği (/ clr)** aşağı açılan liste kutusundan.
 
 > [!NOTE]
 >  Bu derleyici bayrağı uygulamanızda yönetilen kod kullanmanıza olanak tanır, ancak, yönetilmeyen kod hala önceki gibi derlenir.
