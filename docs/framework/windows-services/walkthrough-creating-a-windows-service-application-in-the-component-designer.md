@@ -1,6 +1,6 @@
 ---
 title: 'Öğretici: Bir Windows hizmeti uygulaması oluşturma'
-ms.date: 03/14/2019
+ms.date: 03/27/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 7952256d1b225fe22cd189833a046590cdf0a9f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200681"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518038"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Öğretici: Bir Windows hizmeti uygulaması oluşturma
 
@@ -73,21 +73,7 @@ Bu bölümde, Windows hizmeti için özel bir olay günlüğü ekleyin. <xref:Sy
 
 4. Bir özel olay günlüğü'nü tanımlayın. İçin C#, var olan düzenleme `MyNewService()` Oluşturucusu; Visual Basic için ekleme `New()` Oluşturucusu:
 
-   ```csharp
-   public MyNewService()
-   {
-        InitializeComponent();
-
-        eventLog1 = new EventLog();
-        if (!EventLog.SourceExists("MySource"))
-        {
-            EventLog.CreateEventSource("MySource", "MyNewLog");
-        }
-        eventLog1.Source = "MySource";
-        eventLog1.Log = "MyNewLog";
-    }
-   ```
-
+   [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
 5. Ekleme bir `using` ifadesine **MyNewService.cs** (zaten mevcut değilse), veya bir `Imports` deyimi **MyNewService.vb**, için <xref:System.Diagnostics?displayProperty=nameWithType> ad alanı:
@@ -182,10 +168,7 @@ Tüm iş ana iş parçacığında çalıştırmak yerine arka plan çalışan i�
 
 Bir kod satırı Ekle <xref:System.ServiceProcess.ServiceBase.OnStop%2A> hizmet durdurulduğunda, olay günlüğüne bir giriş ekler yöntemi:
 
-```csharp
-eventLog1.WriteEntry("In OnStop.");
-```
-
+[!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#4)]
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
 ### <a name="define-other-actions-for-the-service"></a>Diğer Eylemler için hizmet tanımlama
@@ -265,6 +248,9 @@ Windows çağıran kod ekleyerek SERVICE_START_PENDING ve SERVICE_STOP_PENDING d
     End Structure
     ```
 
+    > [!NOTE]
+    > Hizmet Denetimi Yöneticisi kullanan `dwWaitHint` ve `dwCheckpoint` üyeleri [SERVICE_STATUS yapısı](/windows/desktop/api/winsvc/ns-winsvc-_service_status) bir Windows hizmeti başlatmak veya kapatmak beklenecek ne kadar süre belirlemek için. Varsa, `OnStart` ve `OnStop` yöntemleri çalıştırmak uzun, hizmetinizin daha fazla zaman çağırarak isteyebilir `SetServiceStatus` yeniden ile bir artımlı `dwCheckPoint` değeri.
+
 3. İçinde `MyNewService` sınıfı, bildirmek [artırılmış](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) işlevi kullanarak [platform çağırma](../interop/consuming-unmanaged-dll-functions.md):
 
     ```csharp
@@ -336,9 +322,6 @@ Windows çağıran kod ekleyerek SERVICE_START_PENDING ve SERVICE_STOP_PENDING d
     SetServiceStatus(Me.ServiceHandle, serviceStatus)    
     ```
 
-> [!NOTE]
-> Hizmet Denetimi Yöneticisi kullanan `dwWaitHint` ve `dwCheckpoint` üyeleri [SERVICE_STATUS yapısı](/windows/desktop/api/winsvc/ns-winsvc-_service_status) bir Windows hizmeti başlatmak veya kapatmak beklenecek ne kadar süre belirlemek için. Varsa, `OnStart` ve `OnStop` yöntemleri çalıştırmak uzun, hizmetinizin daha fazla zaman çağırarak isteyebilir `SetServiceStatus` yeniden ile bir artımlı `dwCheckPoint` değeri.
-
 ## <a name="add-installers-to-the-service"></a>Hizmete yükleyiciler ekleme
 
 Çalıştırmadan önce bir Windows hizmeti, hizmet denetimi Yöneticisi ile kaydeden yüklemeniz gerekir. Yükleyiciler, kayıt ayrıntılarını işlemek için projenize ekleyin.
@@ -391,24 +374,8 @@ Her bir Windows hizmeti altında kayıt defteri girdisini sahip **HKEY_LOCAL_MAC
 
 1. Seçin **Program.cs**, veya **MyNewService.Designer.vb**, ardından **kodu görüntüle** kısayol menüsünden. İçinde `Main` yöntemi, bir giriş parametresi ekleyin ve hizmet oluşturucuya geçirmek için kodu değiştirin:
 
-   ```csharp
-   static void Main(string[] args)
-   {
-       ServiceBase[] ServicesToRun;
-       ServicesToRun = new ServiceBase[]
-       {
-           new MyNewService(args)
-       };
-       ServiceBase.Run(ServicesToRun);
-   }
-   ```
-
-   ```vb
-   Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
-       System.ServiceProcess.ServiceBase.Run(ServicesToRun)
-   End Sub
-   ```
+   [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
+   [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
 
 2. İçinde **MyNewService.cs**, veya **MyNewService.vb**, değiştirme `MyNewService` Oluşturucusu giriş parametresinin şu şekilde işler:
 

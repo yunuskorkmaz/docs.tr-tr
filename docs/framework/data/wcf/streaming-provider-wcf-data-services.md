@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 615443bee67d7ca69d25193404055b7299a58507
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298883"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517596"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Data Services)
 Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikili veriler, video ve ses akışları, görüntüleri, belge dosyaları ya da diğer ikili medya türleri temsil edebilir. Bir varlık veri Modeli'nde bir veya daha fazla ikili özellikleri içerdiğinde, bu ikili veri akışı yanıt giriş içinde base 64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme, performansı etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlığı bağımsız ikili verileri almak için bir mekanizma tanımlar. Bu işlem, ikili veri varlıktan bir veya daha fazla veri akışlarını ayrılarak gerçekleştirilir.  
@@ -46,7 +46,7 @@ Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikil
  **Entity Framework Sağlayıcısı**  
  Bir varlığa bir medya bağlantısı girişinin olduğunu belirtmek için ekleme `HasStream` aşağıdaki örnekteki gibi kavramsal modelin varlık tür tanımında öznitelik:  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  Ad alanı da eklemelisiniz `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` veya varlık veri modelini tanımlar .edmx veya .csdl dosyasının kök.  
   
@@ -74,8 +74,8 @@ Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikil
 ## <a name="creating-the-streaming-data-service"></a>Akış veri hizmeti oluşturma  
  Sağlamak üzere [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] erişimi olan çalışma zamanı <xref:System.Data.Services.Providers.IDataServiceStreamProvider> uygulama, oluşturduğunuz veri hizmeti uygulanmalı ayrıca <xref:System.IServiceProvider> arabirimi. Aşağıdaki örnek nasıl uygulayacağınızı gösteren <xref:System.IServiceProvider.GetService%2A> örneği döndürülecek yöntemi `PhotoServiceStreamProvider` uygulayan sınıf <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
- [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming service/cs/photodata.svc.cs#photoservicestreamingprovider)]
- [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
+ [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
+ [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
   
  Bir veri hizmeti oluşturma hakkında genel bilgi için bkz. [veri hizmeti yapılandırma](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   

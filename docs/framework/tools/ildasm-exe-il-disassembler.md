@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488519"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517544"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Ayrıştırıcı)
 
@@ -69,7 +69,7 @@ Aşağıdaki seçenekler geçerlidir *.exe*, *.dll*, ve *.winmd* dosya ya da kon
 |**/classlist**|Modülde tanımlanmış sınıfların bir listesini içerir.|
 |**/ iletme**|İleriye dönük sınıf bildirimini kullanır.|
 |**OPTIONAL**|Çıktıya dosyanın başlık bilgilerini ekler.|
-|**/ item:** `class`[**::** `member`[`(sig`]]|Sağlanan bağımsız değişkene bağlı olarak aşağıdakileri ayrıştırır:<br /><br /> -Belirtilen ayrıştırır `class`.<br />-Belirtilen ayrıştırır `member` , `class`.<br />-Ayrıştırır `member` , `class` belirtilen imzayla `sig`. Biçimi `sig` olan:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Not** .NET Framework sürümleri 1.0 ve 1.1 `sig` bir kapanış parantezi gelmelidir: `(sig)`. Net Framework 2.0 ile kapanış parantezi eklenmemelidir: (`sig`.|
+|**/ item:** `class`[**::** `member`[`(sig`]]|Sağlanan bağımsız değişkene bağlı olarak aşağıdakileri ayrıştırır:<br /><br /> -Belirtilen ayrıştırır `class`.<br />-Belirtilen ayrıştırır `member` , `class`.<br />-Ayrıştırır `member` , `class` belirtilen imzayla `sig`. Biçimi `sig` olan:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Not** .NET Framework sürümleri 1.0 ve 1.1 `sig` bir kapanış parantezi gelmelidir: `(sig)`. Net Framework 2.0 ile kapanış parantezi eklenmemelidir: `(sig`.|
 |**/noil**|IL derlemesi kod çıktısını engeller.|
 |**stats**|Görüntüye istatistikleri ekler.|
 |**/typelist**|Gidiş dönüş içinde tür sıralamasını korumak üzere türlerin tam listesini oluşturur.|

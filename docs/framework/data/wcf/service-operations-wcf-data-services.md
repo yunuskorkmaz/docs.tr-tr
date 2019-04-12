@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c5514bf32bfe03a65d7d171a500dd5d4cfde35ff
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211978"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517414"
 ---
 # <a name="service-operations-wcf-data-services"></a>Hizmet işlemleri (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Sunucu üzerinde yöntemleri açığa için bir veri hizmeti hizmet işlemleri tanımlamanızı sağlar. Diğer veri hizmeti kaynaklarına gibi hizmet işlemleri tarafından bir URI'leri ele alınır. Hizmet işlemleri data Service'te iş mantığı Doğrulama mantığı, rol tabanlı güvenlik uygulamak için uygulama gibi göstermek etkinleştirmeniz veya kullanıma sunmak için özellikler sorgulanırken özel. Hizmet işlemleri yöntem, türetilen veri hizmeti sınıfındaki eklenmiş olan <xref:System.Data.Services.DataService%601>. Tüm diğer veri hizmeti kaynaklarına gibi hizmet işlemi yöntemin parametre sağlayabilirsiniz. Örneğin, aşağıdaki URI işlemi hizmet (temel [hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) veri hizmeti) değeri geçirir `London` için `city` parametresi:  
@@ -24,8 +24,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
  Bu hizmet işlemi tanımı aşağıdaki gibidir:  
   
- [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
- [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
+ [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
+ [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
  Kullanabileceğiniz <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> , <xref:System.Data.Services.DataService%601> doğrudan veri hizmetini kullanarak veri kaynağına erişmek için. Daha fazla bilgi için [nasıl yapılır: Hizmet işlemi tanımlama](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
   
@@ -90,8 +90,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 ## <a name="service-operations-access-control"></a>Hizmet işlemleri erişim denetimi  
  Hizmet işlemleri hizmet genelinde görünürlüğü tarafından denetlenir <xref:System.Data.Services.IDataServiceConfiguration.SetServiceOperationAccessRule%2A> metodunda <xref:System.Data.Services.IDataServiceConfiguration> çok varlık görünürlüğü kümesi aynı şekilde sınıfı kullanılarak denetlenir <xref:System.Data.Services.IDataServiceConfiguration.SetEntitySetAccessRule%2A> yöntemi. Örneğin, aşağıdaki veri hizmeti tanımı'ndaki kod satırının erişime olanak tanıyan `CustomersByCity` hizmet işlemi.  
   
- [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
- [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  
+ [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationconfig)]
+ [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationconfig)]  
   
 > [!NOTE]
 >  Bir hizmet işlemi, temel alınan varlık kümesi erişimi kısıtlayarak gizli bir dönüş türü varsa, ardından hizmet işlemini istemci uygulamalar tarafından kullanılamaz.  
@@ -101,8 +101,8 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 ## <a name="raising-exceptions"></a>Özel durumlarını oluşturma  
  Kullanmanızı öneririz <xref:System.Data.Services.DataServiceException> bir özel durum veri hizmeti yürütmesinde yükseltmek her sınıf. Veri Hizmeti çalışma zamanı bildiğinden doğru harita HTTP yanıt iletisi için bu özel durum nesnenin özellikleri nasıl budur. Ne zaman yükseltmeniz bir <xref:System.Data.Services.DataServiceException> bir hizmet işlemi, döndürülen özel durum içinde sarmalanmış bir <xref:System.Reflection.TargetInvocationException>. Temel döndürülecek <xref:System.Data.Services.DataServiceException> kapsayan olmadan <xref:System.Reflection.TargetInvocationException>, geçersiz kılmanız gerekir <xref:System.Data.Services.DataService%601.HandleException%2A> yönteminde <xref:System.Data.Services.DataService%601>, ayıklamak <xref:System.Data.Services.DataServiceException> gelen <xref:System.Reflection.TargetInvocationException>ve aşağıdaki örnekte olduğu gibi üst düzey hata olarak döndürün:  
   
- [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#handleexceptions)]
- [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
+ [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#handleexceptions)]
+ [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

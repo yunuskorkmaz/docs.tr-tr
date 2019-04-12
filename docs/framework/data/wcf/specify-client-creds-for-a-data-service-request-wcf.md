@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: 3c97e943d5516f879dda973bc008800032df5eb5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ca2ed1fcf113e06535c8900e5836eb64f9b23958
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134874"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518142"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Nasıl yapılır: Veri Hizmeti için istemci kimlik bilgileri (WCF Veri Hizmetleri) istek belirtin
 Varsayılan olarak, kimlik bilgilerini istemci kitaplığı için bir isteği gönderirken sağlamaz bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmeti. Ancak, kimlik bilgilerini sağlayarak istekleri veri hizmeti kimlik doğrulaması gönderilmesi belirtebilirsiniz bir <xref:System.Net.NetworkCredential> için <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> özelliği <xref:System.Data.Services.Client.DataServiceContext>. Daha fazla bilgi için [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). Bu konudaki örnek açıkça tarafından kullanılan kimlik bilgilerini sağlamak üzere nasıl gösterir [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] veriler veri hizmetinden isterken istemci.  
@@ -22,24 +22,24 @@ Varsayılan olarak, kimlik bilgilerini istemci kitaplığı için bir isteği g�
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, Windows Presentation Framework uygulaması'nın ana sayfasında Extensible Application Markup Language (XAML) dosyası için arka plan kod sayfası arasındadır. Bu örnek görüntüler bir `LoginWindow` örnek kimlik doğrulama toplamak için kullanıcıdan kimlik bilgileri ve daha sonra veri hizmetine istek yaparken, bu kimlik bilgilerini kullanır.  
   
- [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentials.xaml.cs#clientcredentials)]  
- [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/clientcredentials.xaml.vb#clientcredentials)]
+ [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentials.xaml.cs#clientcredentials)]  
+ [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/clientcredentials.xaml.vb#clientcredentials)]
   
 ## <a name="example"></a>Örnek  
  WPF Uygulaması'nın ana sayfasında aşağıdaki XAML tanımlar.  
   
- [!code-xaml[Astoria Northwind Client#ClientCredentialsXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentials.xaml#clientcredentialsxaml)]  
+ [!code-xaml[Astoria Northwind Client#ClientCredentialsXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentials.xaml#clientcredentialsxaml)]  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, veri hizmetine bir istek yapmadan önce kullanıcıdan kimlik doğrulama bilgilerini toplamak için kullanılan pencere için arka plan kod sayfası arasındadır.  
   
- [!code-csharp[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentialslogin.xaml.cs#clientcredentialslogin)]  
- [!code-vb[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/clientcredentialslogin.xaml.vb#clientcredentialslogin)]
+ [!code-csharp[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentialslogin.xaml.cs#clientcredentialslogin)]  
+ [!code-vb[Astoria Northwind Client#ClientCredentialsLogin](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/clientcredentialslogin.xaml.vb#clientcredentialslogin)]
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki XAML WPF uygulaması oturum açma bilgileri tanımlar.  
   
- [!code-xaml[Astoria Northwind Client#ClientCredentialsLoginXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/clientcredentialslogin.xaml#clientcredentialsloginxaml)]  
+ [!code-xaml[Astoria Northwind Client#ClientCredentialsLoginXaml](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentialslogin.xaml#clientcredentialsloginxaml)]  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
  Bu konudaki örnek için aşağıdaki güvenlik değerlendirmeleri geçerlidir:  

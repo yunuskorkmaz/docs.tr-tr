@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, row count
 ms.assetid: 03d41a82-df95-40ac-8439-a6c327d37ba8
-ms.openlocfilehash: 1df3c685940562bfdf1ed84030be9f9e1c283f10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f723d91dd30817f6e15be11dd1bc1432a5939647
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228789"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517557"
 ---
 # <a name="how-to-determine-the-number-of-entities-returned-by-a-query-wcf-data-services"></a>Nasıl yapılır: (WCF Veri Hizmetleri) bir sorgu tarafından döndürülen varlık sayısını belirleme
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], varlık kümesi bir URI sorgu tarafından belirtilen bulunan varlık sayısını belirleyebilirsiniz. Bu sayı, sorgu sonucu birlikte ya da bir tamsayı değeri olarak dahil edilebilir. Daha fazla bilgi için [veri hizmetini sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -22,14 +22,14 @@ ms.locfileid: "59228789"
 ## <a name="example"></a>Örnek  
  Bu örnek bir sorgu çağırdıktan sonra yürütür <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> yöntemi. <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> Özelliği varlıkların sayısı döndürür `Customers` varlık kümesi.  
   
- [!code-csharp[Astoria Northwind Client#CountAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#countallcustomers)]
- [!code-vb[Astoria Northwind Client#CountAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#countallcustomers)]  
+ [!code-csharp[Astoria Northwind Client#CountAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#countallcustomers)]
+ [!code-vb[Astoria Northwind Client#CountAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#countallcustomers)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnek <xref:System.Linq.Enumerable.Count%2A> yöntemi yalnızca bir tamsayı döndürülecek değeri varlıkların sayısı `Customers` varlık kümesi.  
   
- [!code-csharp[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#countallcustomersvalueonly)]
- [!code-vb[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#countallcustomersvalueonly)]  
+ [!code-csharp[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#countallcustomersvalueonly)]
+ [!code-vb[Astoria Northwind Client#CountAllCustomersValueOnly](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#countallcustomersvalueonly)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

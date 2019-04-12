@@ -4,12 +4,12 @@ description: . NET'te P/Invoke aracılığıyla yerel işlevleri çağırma hakk
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 9602b9c8649b97a8be1c26a202a0a910a1547877
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1a5f2f9d13429f84d5b5bb58d36f015004fb746b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149701"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517869"
 ---
 # <a name="platform-invoke-pinvoke"></a>Platform Çağırma (P/Invoke)
 
@@ -24,7 +24,7 @@ public class Program {
 
     // Import user32.dll (containing the function we need) and define
     // the method corresponding to the native function.
-    [DllImport("user32.dll")]
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
 
     public static void Main(string[] args) {
@@ -37,7 +37,7 @@ public class Program {
 Önceki örnekte basit bir işlemdir ancak ne yönetilen koddan yönetilmeyen işlevleri çağırmak gerekli olan kapalı göstermez. Şimdi örnek adım:
 
 *   Satır #1 gösterir kullanarak deyimi için `System.Runtime.InteropServices` gereken tüm öğeleri içeren ad alanı.
-*   Satır #7 tanıtır `DllImport` özniteliği. Bu öznitelik, çalışma zamanı yönetilmeyen DLL yükleyeceğini bildirdiğinde önemlidir. Geçirilen dize bizim hedef işlevi DLL ' dir.
+*   Satır #7 tanıtır `DllImport` özniteliği. Bu öznitelik, çalışma zamanı yönetilmeyen DLL yükleyeceğini bildirdiğinde önemlidir. Geçirilen dize bizim hedef işlevi DLL ' dir. Ayrıca, hangi belirtir [karakter kümesi](./charset.md) dizeleri taşıma için kullanılacak. Son olarak, bu işlev çağrı yaptığını belirtir [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) ve kullanıcı ile alabilirsiniz. Bu nedenle çalışma zamanı hata kodu yakalamalısınız <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
 *   #8 nin en önemli özelliği P/Invoke iş satırıdır. Bir yönetilen yöntemin tanımlar **tam aynı imzaya** yönetilmeyen olarak. Fark, yeni bir anahtar sözcük bildirime sahip `extern`çağırdığınızda, çalışma zamanı bu söyleyen dış bir Metoda ve, çalışma zamanı içinde belirtilen DLL bulmalısınız `DllImport` özniteliği.
 
 Yönetilen herhangi bir yöntemi gibi örneğin geri kalanı yöntemi yalnızca çalıştırır.

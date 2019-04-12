@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: dc2fc5de591429d76210b1dacf69485bb3b11b2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189085"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517323"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Akış özelleştirme (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanan [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] veri bir akış olarak kullanıma sunmak için. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] için veri akışı hem Atom hem de JavaScript nesne gösterimi (JSON) biçimlerini destekler. Atom akışı, kullandığınızda [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklar ve ilişkiler, HTTP ileti gövdesine eklenebilir bir XML biçimine gibi verileri seri hale getirmek için standart bir yöntemini sağlar. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] varlıklarda bulunan verileri ve Atom öğeleri arasında varsayılan varlık özelliği eşlemeyi tanımlar. Daha fazla bilgi için [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -33,11 +33,11 @@ ms.locfileid: "59189085"
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Entity Framework sağlayıcısı ile akışları özelleştirme  
  Veri modeli ile kullanılan [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı .edmx dosyası içinde XML olarak temsil edilir. Bu durumda, özel akışları tanımlama öznitelikleri eklenme `EntityType` ve `Property` varlık türleri ve veri modelinde özelliklerini temsil eden öğeler. Bu akış özelleştirme öznitelikleri içinde tanımlı değil [ \[MC CSDL\]: Kavramsal şema tanım dosyası biçimi](https://go.microsoft.com/fwlink/?LinkId=159072), biçim, [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı veri modeli tanımlamak için kullanır. Bu nedenle, akış özelleştirme öznitelikleri olarak tanımlanan belirli bir şema ad alanında bildirmeniz gerekir `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Aşağıdaki XML parçası için uygulanan akış özelleştirme öznitelikleri gösterir `Property` öğelerini `Products` tanımlayan varlık türü `ProductName`, `ReorderLevel`, ve `UnitsInStock` özellikleri.  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   
  Aşağıdaki özelleştirilmiş veri akışı için bu özniteliği üretmek `Products` varlık kümesi. Akış, özelleştirilmiş veri `ProductName` özellik değeri hem de görüntülenir `author` öğesi ve `ProductName` özellik öğesi ve `UnitsInStock` özelliği ile ve kendi benzersiz bir ad alanına sahip özel bir öğe görüntülenir `ReorderLevel` özelliği bir öznitelik olarak:  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
  Daha fazla bilgi için [nasıl yapılır: Entity Framework sağlayıcısı ile akışları özelleştirme](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
@@ -65,12 +65,12 @@ ms.locfileid: "59189085"
 > [!NOTE]
 >  Bu örnek için veri modeli konusunda tanımlanan [nasıl yapılır: Yansıma sağlayıcısını kullanarak veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   
- [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria custom feeds/cs/orderitems.svc.cs#customorderfeed)]
- [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria custom feeds/vb/orderitems.svc.vb#customorderfeed)]  
+ [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customorderfeed)]
+ [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customorderfeed)]  
   
  Aşağıdaki özelleştirilmiş veri akışı için bu özniteliği üretmek `Orders` varlık kümesi. Bu akış, özelleştirilmiş `OrderId` özellik değeri görüntüler yalnızca `title` öğesinin `entry` ve `Customer` özellik değeri görüntüler hem de `author` öğesi ve `Customer` özellik öğesi:  
   
- [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
+ [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
  Daha fazla bilgi için [nasıl yapılır: Yansıma sağlayıcısı ile akışları özelleştirme](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
   

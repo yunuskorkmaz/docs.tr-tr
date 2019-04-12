@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: a11334abc83db20bec06fd2459d7b8598f672f2f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: ad0673f72b1a81d6bcfaf0704ccd698eda7bb20c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317486"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517854"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Nasıl yapılır: Intercept Data Service Messages (WCF Veri Hizmetleri)
 İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], işlem için özel mantığı ekleyebilirsiniz, böylece istek iletilerinin yakalayabilirsiniz. Bir ileti kesmeye data Service'te özel öznitelikli yöntem kullanın. Daha fazla bilgi için [dinleyicileri](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  
@@ -26,13 +26,13 @@ ms.locfileid: "59317486"
   
 2. Kod sayfasını `Northwind` sınıfında, aşağıdaki `using` deyimi (`Imports` Visual Basic'te).  
   
-     [!code-csharp[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#usinglinqexpressions)]
-     [!code-vb[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#usinglinqexpressions)]  
+     [!code-csharp[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#usinglinqexpressions)]
+     [!code-vb[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#usinglinqexpressions)]  
   
 3. İçinde `Northwind` sınıfı, adlandırılan bir hizmet işlemi yöntemi tanımlayın `OnQueryOrders` gibi:  
   
-     [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
-     [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
+     [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#queryinterceptordef)]
+     [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
 ### <a name="to-define-a-change-interceptor-for-the-products-entity-set"></a>Ürünleri varlık kümesi için bir değişiklik dinleyiciyi tanımlamak için  
   
@@ -40,22 +40,22 @@ ms.locfileid: "59317486"
   
 2. İçinde `Northwind` sınıfı, adlandırılan bir hizmet işlemi yöntemi tanımlayın `OnChangeProducts` gibi:  
   
-     [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
-     [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
+     [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#changeinterceptordef)]
+     [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnek için bir sorgu dinleyiciyi yöntemi tanımlar `Orders` döndüren bir lambda ifadesi varlık kümesi. Bu ifade istenen filtreleyen bir temsilci içerir `Orders` üzerinde ilgili temel `Customers` belirli bir kişi adına sahip. Adı, sırayla istekte bulunan kullanıcı göre belirlenir. Bu örnek, veri hizmeti WCF kullanan bir ASP.NET Web uygulamasında barındırılır ve bu kimlik doğrulamasının etkin varsayar. <xref:System.Web.HttpContext> Sınıfı, geçerli istek ilkesini almak için kullanılır.  
   
- [!code-csharp[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptor)]
- [!code-vb[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptor)]  
+ [!code-csharp[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#queryinterceptor)]
+ [!code-vb[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#queryinterceptor)]  
   
 ## <a name="example"></a>Örnek  
  Bu örnek için bir değişiklik dinleyiciyi yöntemi tanımlar `Products` varlık kümesi. Bu yöntem için hizmetine giriş doğrular bir <xref:System.Data.Services.UpdateOperations.Add> veya <xref:System.Data.Services.UpdateOperations.Change> işlemi ve artık sağlanmayan bir ürüne yapılan bir değişikliği bir özel durum başlatır. Ayrıca, desteklenmeyen bir işlem olarak ürünleri silinmesini engeller.  
   
- [!code-csharp[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptor)]
- [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptor)]  
+ [!code-csharp[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#changeinterceptor)]
+ [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptor)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Hizmet İşlemi Tanımlama](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+- [Nasıl yapılır: Hizmet işlemi tanımlama](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
 - [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231298"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517115"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) güncelleştirme
 Kullanırken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanmak için istemci kitaplığı bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışı, kitaplık istemci veri hizmeti sınıfların örneklerini akış girişleri çevirir. Bu veri hizmeti sınıfları kullanılarak izlenen <xref:System.Data.Services.Client.DataServiceContext> hangi <xref:System.Data.Services.Client.DataServiceQuery%601> ait. İstemcinin, üzerinde yöntemleri kullanarak rapor varlıkları yapılan değişiklikleri izler. <xref:System.Data.Services.Client.DataServiceContext>. Bu yöntemler, eklenen ve Silinen varlıkları ve ayrıca özellik değerlerini veya varlık örnekleri arasında ilişkiler için yaptığınız değişiklikleri izlemek istemci etkinleştirin. Çağırdığınızda bu izlenen değişiklikleri REST tabanlı işlemler veri hizmetine gönderilen <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> yöntemi.  
@@ -24,33 +24,33 @@ Kullanırken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanm
 ## <a name="adding-modifying-and-changing-entities"></a>Ekleme, değiştirme ve varlıkları değiştirme  
  Kullanırken **hizmet Başvurusu Ekle** iletişim için bir başvuru eklemek için Visual Studio'da bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı, sonuçta elde edilen istemci veri hizmeti sınıfları her bir statik sahip *Oluştur* alır yöntemi Her değer atanamayan varlık özelliği için parametre. Varlık örneklerini aşağıdaki örnekteki gibi türü sınıfları oluşturmak için bu yöntemi kullanabilirsiniz:  
   
- [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#createnewproduct)]
- [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#createnewproduct)]  
+ [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
+ [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
  Bir varlık örneğini eklemek için uygun çağrı *AddTo* metodunda <xref:System.Data.Services.Client.DataServiceContext> sınıfı tarafından oluşturulan **hizmet Başvurusu Ekle** iletişim kutusunda, aşağıdaki örnekte olduğu gibi:  
   
- [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addproductspecific)]
- [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addproductspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
+ [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
   
  Bu nesne bağlamı ve doğru varlık kümesine ekler. Ayrıca, çağırabilirsiniz <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, ancak bunun yerine, varlık kümesinin adı sağlamanız gerekir. Eklenen varlığın diğer varlıklarla ilişkiler bir veya daha fazla varsa, kullanabilir <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> yöntemi önceki yöntemlerden birini kullanın veya bu bağlantıları da açıkça tanımlayın. Bu işlemler, bu konunun ilerleyen bölümlerinde ele alınmıştır.  
   
  Bir mevcut varlık örneği, söz konusu varlığa ilişkin ilk sorgu değiştirmek için özellikleri için gerekli değişiklikleri yapın ve sonra çağrı <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> metodunda <xref:System.Data.Services.Client.DataServiceContext> , gösterildiği gibi bu nesne için bir güncelleştirme göndermek için gereken istemci kitaplığına belirtmek için Aşağıdaki örnekte:  
   
- [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#modifycustomerspecific)]
- [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#modifycustomerspecific)]  
+ [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#modifycustomerspecific)]
+ [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#modifycustomerspecific)]  
   
  Bir varlık örneğini silmek için çağrı <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> metodunda <xref:System.Data.Services.Client.DataServiceContext>, aşağıdaki örnekte gösterildiği gibi:  
   
- [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#deleteproductspecific)]
- [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#deleteproductspecific)]  
+ [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
+ [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
  Daha fazla bilgi için [nasıl yapılır: Ekleme, değiştirme ve silme varlıkları](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md).  
   
 ## <a name="attaching-entities"></a>Varlık ekleme  
  Bir varlık için bir sorgu çalıştırmadan bir varlığa yüklemeden yaptığınız güncelleştirmeleri kaydetmek istemci kitaplığı sağlayan <xref:System.Data.Services.Client.DataServiceContext>. Kullanım <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> belirli bir varlık kümesindeki var olan bir nesne iliştirmek için yöntemi <xref:System.Data.Services.Client.DataServiceContext>. Sonra nesneyi değiştirmek ve veri hizmetine değişiklikleri kaydedin. Aşağıdaki örnekte, değiştirilmiş bir müşteri nesnesi bağlamına bağlı olduğu ve ardından <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> ekli nesnesi olarak işaretlemek için çağrılan <xref:System.Data.Services.Client.EntityStates.Modified> önce <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> çağrılır:  
   
- [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#attachobjectspecific)]
- [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#attachobjectspecific)]  
+ [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#attachobjectspecific)]
+ [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#attachobjectspecific)]  
   
  Nesneler eklerken aşağıdaki maddeler geçerlidir:  
   
@@ -80,13 +80,13 @@ Kullanırken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullanm
   
  Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A> yeni bir yöntem `Order_Detail` varolan ilgili `Orders` varlık. Çünkü yeni `Order_Details` nesne tarafından izlenen artık <xref:System.Data.Services.Client.DataServiceContext>, eklediğiniz ilişki `Order_Details` varolan nesne `Products` varlık çağırarak tanımlanan <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> yöntemi:  
   
- [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addorderdetailtoorderspecific)]
- [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorderspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addorderdetailtoorderspecific)]
+ [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addorderdetailtoorderspecific)]  
   
  Sırada <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> yöntemi tanımlar bağlamında nesneler yansıtılan bu bağlantıları için veri hizmeti oluşturulması gereken bağlantıları, gezinti özellikleri nesnelerinin kendileri de ayarlamanız gerekir. Önceki örnekte, gezinti özellikleri şu şekilde ayarlamanız gerekir:  
   
- [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#setnavprops)]
- [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#setnavprops)]  
+ [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
+ [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
  Daha fazla bilgi için [nasıl yapılır: Veri ilişkileri tanımlama](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md).  
   

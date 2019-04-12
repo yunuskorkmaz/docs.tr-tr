@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 1464880e92753d2774b1ca60d55c71a88d8e9b15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519415"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517947"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Veri hizmetini (WCF Veri Hizmetleri) barındırma
 WCF veri hizmetlerini kullanarak, verileri olarak kullanıma sunan bir hizmet oluşturabilmeniz için bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bu veri hizmeti öğesinden devralınan bir sınıf olarak tanımlanan <xref:System.Data.Services.DataService%601>. Bu sınıf, OData gerektirdiği yanıt iletilerini istek iletilerini işlemek ve güncelleştirmeleri veri kaynağına karşı gerçekleştirmek için gereken işlevleri sağlar. Ancak, bir veri hizmeti bağlamak ve bir ağ yuvayı için gelen HTTP istek dinleyemedi. Bu gerekli işlevselliği için veri hizmetini barındıran bir bileşende kullanır.
@@ -52,8 +52,8 @@ Kullanırken **Yeni Öğe Ekle** iletişim Aracı'nı bir ASP.NET uygulamasında
 
  Arka plan kod sayfası `.svc` dosyası gibi Northwind örnek veri hizmeti için tanımlanan veri hizmetinin kendisi, uygulama sınıfı içerir:
 
- [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
- [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+ [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+ [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
  Bir veri hizmeti bir WCF hizmeti gibi davranan olduğundan, veri hizmeti ile tümleşir [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ve WCF Web programlama modelini kullanır. Daha fazla bilgi için [WCF hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) ve [WCF Web HTTP programlama modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
 

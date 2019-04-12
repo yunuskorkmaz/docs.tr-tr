@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
-ms.openlocfilehash: 6fa8e9d66fa89eb058aafd1e74164097b7f5c3a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 511a9bc5352e208697460364e463330fc0ef611a
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157865"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517479"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>Nasıl yapılır: Var olan bir varlığa (WCF Veri Hizmetleri) Dataservicecontext'e ekleme
 Bir varlık içinde veri hizmeti, zaten mevcut olduğunda [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı sağlar, doğrudan varlığı temsil eden bir nesne iliştirmek <xref:System.Data.Services.Client.DataServiceContext> ilk bir sorgu yürütme. Daha fazla bilgi için [veri hizmetini güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
@@ -22,8 +22,8 @@ Bir varlık içinde veri hizmeti, zaten mevcut olduğunda [!INCLUDE[ssAstoria](.
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, var olan bir oluşturma işlemi gösterilmektedir `Customer` veri hizmetine kaydedilecek değişiklikler içeren nesne. Bir nesne bağlamına bağlı olduğu ve <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> ekli nesnesi olarak işaretlemek için yöntemi çağrıldığında <xref:System.Data.Services.Client.EntityStates.Modified> önce <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> yöntemi çağrılır.  
   
- [!code-csharp[Astoria Northwind Client#AttachObject](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#attachobject)]
- [!code-vb[Astoria Northwind Client#AttachObject](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#attachobject)]  
+ [!code-csharp[Astoria Northwind Client#AttachObject](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#attachobject)]
+ [!code-vb[Astoria Northwind Client#AttachObject](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#attachobject)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

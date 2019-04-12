@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: IIS üzerinde çalışan bir WCF veri hizmeti geliştirme'
+title: 'Nasıl yapılır: IIS üzerinde çalışan bir WCF Veri Hizmeti Geliştirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: af81e65dfd4661d62d7aa4a3e6075be312765cb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201086"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517856"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Nasıl yapılır: IIS üzerinde çalışan bir WCF veri hizmeti geliştirme
 
@@ -25,13 +25,13 @@ Bu konuda, WCF Veri Hizmetleri Internet Information Services (IIS) üzerinde ça
 
  Bu konuda Entity Framework kullanarak bir veri hizmeti oluşturulacağını gösterir. Diğer Veri Hizmetleri sağlayıcıları kullanılabilir. Daha fazla bilgi için [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
- Hizmeti oluşturduktan sonra veri hizmeti kaynaklarına erişimi açıkça sağlamanız gerekir. Daha fazla bilgi için [nasıl yapılır: veri hizmetine erişimi etkinleştirme](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
+ Hizmeti oluşturduktan sonra veri hizmeti kaynaklarına erişimi açıkça sağlamanız gerekir. Daha fazla bilgi için [nasıl yapılır: Veri hizmetine erişmesini](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>IIS üzerinde çalışan ASP.NET web uygulaması oluşturun
 
 1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** > **proje**.
 
-2. İçinde **yeni proje** iletişim kutusunda **yüklü** > [**Visual C#** veya **Visual Basic**] > **Web** kategorisi.
+2. İçinde **yeni proje** iletişim kutusunda **yüklü** > [**Visual C#**  veya **Visual Basic**] > **Web**  kategorisi.
 
 3. Seçin **ASP.NET Web uygulaması** şablonu.
 
@@ -132,7 +132,7 @@ Bu konuda, WCF Veri Hizmetleri Internet Information Services (IIS) üzerinde ça
 
 5. Aşağıdakilerden birini yaparak veri modeli veritabanına bağlanmak ve ardından **sonraki**:
 
-    -   Önceden yapılandırılmış bir veritabanı bağlantısı yoksa tıklayın **yeni bağlantı** ve yeni bir bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanları oluşturma bağlantıları](https://go.microsoft.com/fwlink/?LinkId=123631). Bu SQL Server örneği, Northwind örnek veritabanına ekli olması gerekir.
+    -   Önceden yapılandırılmış bir veritabanı bağlantısı yoksa tıklayın **yeni bağlantı** ve yeni bir bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanlarına bağlantı oluşturma](https://go.microsoft.com/fwlink/?LinkId=123631). Bu SQL Server örneği, Northwind örnek veritabanına ekli olması gerekir.
 
          \- veya -
 
@@ -159,8 +159,8 @@ Bu konuda, WCF Veri Hizmetleri Internet Information Services (IIS) üzerinde ça
 
 4. Veri Hizmeti için kod içinde açıklamayı değiştirin `/* TODO: put your data source class name here */` veri modelinin varlık kapsayıcı türü olan veri hizmeti tanımlayan sınıf tanımında, bu durumda olduğu `NorthwindEntities`. Sınıf tanımını aşağıdaki görünmesi gerekir:
 
-     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
-     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

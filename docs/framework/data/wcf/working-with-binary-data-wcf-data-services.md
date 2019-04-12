@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 82a773623c1941320aa155dd5bd937d318c1238a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: de85a3aca629582e79712b71ae2e3413b919ab28
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170332"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517245"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>İkili verileri (WCF Veri Hizmetleri) ile çalışma
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı sağlar, almak ve ikili verileri güncelleştirmek bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aşağıdaki yollardan biriyle akış:  
@@ -30,7 +30,7 @@ ms.locfileid: "59170332"
 ## <a name="entity-metadata"></a>Varlık meta verileri  
  İlgili medya kaynak akışı olan bir varlık veri hizmeti meta verileri tarafından belirtilen `HasStream` özniteliği uygulandı, medya bağlantısı girişinin bir varlık türü. Aşağıdaki örnekte, `PhotoInfo` varlıktır tarafından belirtilen ilgili medya kaynağına sahip bir medya bağlantısı girişinin `HasStream` özniteliği.  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  Kalan örnekler bölümüne erişme ve medya kaynak akışı değiştirme işlemini göstermektedir. Tam bir örnek bir .NET Framework istemci uygulamasındaki bir ortam kaynak akışı yardımıyla nasıl [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı gönderiye bakın [istemciden bir medya kaynağı Stream erişme](https://go.microsoft.com/fwlink/?LinkID=201637).  
   
@@ -43,14 +43,14 @@ ms.locfileid: "59170332"
 ### <a name="getting-the-uri-of-the-binary-stream"></a>İkili Stream URI'sini alma  
  Belirli türdeki resimler ve diğer medya dosyaları gibi medya kaynağı alınırken genellikle ikili veri akışı işleme daha uygulamanızdaki medya kaynağın URI'sini kullanımı daha kolay olur. Bir medya bağlantısı girişle ile ilişkili bir kaynak akışı URI'sini almak için çağırmalıdır <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> metodunda <xref:System.Data.Services.Client.DataServiceContext> varlık izleme örneği. Aşağıdaki örnek nasıl çağrılacağını gösterir <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> istemcide yeni bir görüntü oluşturmak için kullanılan bir medya kaynak akışı URI'sini almak için yöntemi:  
   
- [!code-csharp[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming client/cs/photowindow.xaml.cs#getreadstreamuri)]
- [!code-vb[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming client/vb/photowindow.xaml.vb#getreadstreamuri)]  
+ [!code-csharp[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photowindow.xaml.cs#getreadstreamuri)]
+ [!code-vb[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photowindow.xaml.vb#getreadstreamuri)]  
   
 ### <a name="downloading-the-binary-resource-stream"></a>İkili kaynak Stream indiriliyor  
  Bir ikili kaynak akışı alınırken çağırmalısınız <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> metodunda <xref:System.Data.Services.Client.DataServiceContext> media link entry izleme örneği. Bu yöntem, döndüren veri hizmetine bir istek gönderir. bir <xref:System.Data.Services.Client.DataServiceStreamResponse> başvuru kaynağı içeren akış olan nesne. Uygulamanız ikili bir kaynak olarak gerektirdiğinde bu yöntemi kullanın. bir <xref:System.IO.Stream>. Aşağıdaki örnek nasıl çağrılacağını gösterir <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> yönteminin istemci üzerinde yeni bir görüntü oluşturmak için kullanılan bir akışa almak için:  
   
- [!code-csharp[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria streaming client/cs/customerphotowindow.xaml.cs#getreadstreamclient)]
- [!code-vb[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria streaming client/vb/customerphotowindow.xaml.vb#getreadstreamclient)]  
+ [!code-csharp[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_streaming_client/cs/customerphotowindow.xaml.cs#getreadstreamclient)]
+ [!code-vb[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_streaming_client/vb/customerphotowindow.xaml.vb#getreadstreamclient)]  
   
 > [!NOTE]
 >  Content-Length üst bilgisinde ikili akış içeren yanıt iletisi, veri hizmeti tarafından ayarlanmadı. Bu değer, ikili veri akışını gerçek uzunluğunu yansıtmayabilir.  
@@ -58,8 +58,8 @@ ms.locfileid: "59170332"
 ### <a name="uploading-a-media-resource-as-a-stream"></a>Bir medya kaynağı bir Stream karşıya yükleme  
  Ekleme veya bir medya kaynağı güncelleştirmek için çağrı <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> metodunda <xref:System.Data.Services.Client.DataServiceContext> varlık izleme örneği. Bu yöntem, sağlanan akıştan okunan medya kaynağı içeren veri hizmetine bir istek gönderir. Aşağıdaki örnek nasıl çağrılacağını gösterir <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> yöntemi bir görüntü veri hizmetine göndermek için:  
   
- [!code-csharp[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming client/cs/photodetailswindow.xaml.cs#setsavestream)]
- [!code-vb[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming client/vb/photodetailswindow.xaml.vb#setsavestream)]  
+ [!code-csharp[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photodetailswindow.xaml.cs#setsavestream)]
+ [!code-vb[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photodetailswindow.xaml.vb#setsavestream)]  
   
  Bu örnekte, <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> değeri sağlanarak yöntemi çağrıldığında `true` için `closeStream` parametresi. Bu garanti <xref:System.Data.Services.Client.DataServiceContext> ikili veri verileri hizmete yüklendikten sonra akışı kapatır.  
   

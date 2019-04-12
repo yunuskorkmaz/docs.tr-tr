@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: a05b2ce89d17b8de61ba78f925370aa22f463655
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2e4c40d6c71a254d5f40ea42788608e10c5872a7
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365158"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517180"
 ---
 # <a name="query-projections-wcf-data-services"></a>Sorgu projeksiyonları (WCF Data Services)
 
@@ -52,8 +52,8 @@ Bir varlık türünün tanımlanan veri hizmetinde bir veya daha fazla özellik 
 
 Aşağıdaki örnekte adresi ile ilgili özellikleri projelerin anonim bir LINQ Sorgu `Customers` yeni bir türe `CustomerAddress` istemcide tanımlanır ve bir varlık türü olarak öznitelikli türü:
 
-[!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#selectcustomeraddressspecific)]
-[!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#selectcustomeraddressspecific)]
+[!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#selectcustomeraddressspecific)]
+[!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#selectcustomeraddressspecific)]
 
 Bu örnekte, nesne Başlatıcısı deseni yeni bir örneğini oluşturmak için kullanılan `CustomerAddress` bir oluşturucu çağırmak yerine türü. Varlık türleriyle yansıtılırken oluşturucuları desteklenmiyor ancak varlık olmayan ve anonim tür olarak yansıtılırken kullanılabilir. Çünkü `CustomerAddress` bir varlık türü olduğu değişiklikleri yapılan ve veri hizmetine geri gönderilir.
 
@@ -67,8 +67,8 @@ Aşağıdaki sonuçları varlık ve varlık olmayan tür olarak yansıtılırken
 
 - Örnek:
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
-   [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithinitializer)]
+   [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithinitializer)]
 
 - Varlık türü: Desteklenir
 
@@ -78,8 +78,8 @@ Aşağıdaki sonuçları varlık ve varlık olmayan tür olarak yansıtılırken
 
 - Örnek:
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
-   [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
+   [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
 
 - Varlık türü: A <xref:System.NotSupportedException> tetiklenir.
 
@@ -89,8 +89,8 @@ Aşağıdaki sonuçları varlık ve varlık olmayan tür olarak yansıtılırken
 
 - Örnek:
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
-   [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
+   [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
 
 - Varlık türü: Karışıklık ve büyük olasılıkla başka bir varlığa ait veri kaynağındaki verileri üzerine neden olabileceği için bu dönüştürme varlık türleri için desteklenmiyor. A <xref:System.NotSupportedException> tetiklenir.
 
