@@ -1,6 +1,6 @@
 ---
 title: C# switch deyimi
-ms.date: 08/14/2018
+ms.date: 04/09/2019
 f1_keywords:
 - switch_CSharpKeyword
 - switch
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463260"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481463"
 ---
 # <a name="switch-c-reference"></a>geçiş (C# Başvurusu)
 
@@ -41,7 +41,7 @@ Eşleşme ifade desenlerinde eşleştirilecek değer sağlar `case` etiketler. K
    switch (expr)
 ```
 
-C# 6'da eşleşme ifadesi değer türlerinden birini döndüren bir ifade olmalıdır:
+İçinde C# 6 ve önceki sürümlerde eşleştirme ifadesi bir değer türlerinden birini döndüren bir ifade olması gerekir:
 
 - bir [char](char.md).
 - bir [dize](string.md).
@@ -57,9 +57,9 @@ A `switch` deyimi bir veya daha fazla anahtar bölüm içerebilir. Her anahtar b
 
 A `switch` deyimi anahtar bölümlerinin sayısını içerir ve her bölüm aşağıdaki örnekte gösterildiği gibi bir veya daha fazla durum etiketi olabilir. Ancak, hiçbir iki durum etiketi aynı ifadesi içeriyor olabilir.
 
-[!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
+[!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Switch deyimi içinde yalnızca bir anahtar bölümü yürütür. C# bir geçiş bölümünden diğerine devam etmek için yürütmeye izin vermez. Bu nedenle, aşağıdaki kod bir Derleyici Hatası CS0163 oluşturur: "Denetim olamaz atlayabilir bir case etiketinden (\<case etiketi >) diğerine."
+Switch deyimi içinde yalnızca bir anahtar bölümü yürütür. C#bir geçiş bölümünden diğerine devam etmek için yürütmeye izin vermez. Bu nedenle, aşağıdaki kod bir Derleyici Hatası CS0163 oluşturur: "Denetim olamaz atlayabilir bir case etiketinden (\<case etiketi >) diğerine."
 
 ```csharp
 switch (caseSwitch)
@@ -76,7 +76,7 @@ switch (caseSwitch)
 
 Bu gereksinim, genellikle açıkça kullanarak switch bölümüne çıkarak karşılanır bir [sonu](break.md), [goto](goto.md), veya [dönüş](return.md) deyimi. Program denetimi için geçemez sağlar ancak, aşağıdaki kod Ayrıca, geçersiz çünkü `default` bölümüne geçin.
 
-[!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
+[!code-csharp[switch#4](~/samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
 
 Eşleştirme ifadesi ile eşleşen bir durum etiketi ile anahtar bölümdeki ifade listesinin yürütülmesi ilk deyimden başlar ve deyim listesi boyunca genellikle bir atlama deyimine ulaşılıncaya kadar devam eder bir `break`, `goto case`, `goto label`, `return`, veya `throw`, ulaşıldı. Bu noktada, denetimi dışında aktarılan `switch` deyimi veya başka bir case etiketi. A `goto` deyimi kullanılırsa, gerekir aktarım denetimi için sabit bir etiket. Sabit olmayan etiketine denetim aktarmaya çalışırken istenmeyen yan etkileri, bu tür istenmeyen bir kod konumuna denetimi aktarma veya sonsuz bir döngüye oluşturma olabileceği için bu kısıtlama gereklidir.
 
@@ -86,13 +86,13 @@ Her durum etiketi eşleşen ifade karşılaştırmak için bir desen belirtir ( 
 
 Hakkında bilgi için `switch` deyimi ve desen eşleştirme, [ile desen eşleştirme `switch` deyimi](#pattern) bölümü.
 
-C# 6 yalnızca sabit desen destekler ve sabit değerleri tekrarını izin vermez çünkü durum etiketi birbirini dışlayan değerleri tanımlayın ve yalnızca bir desen eşleştirme ifadesi eşleşebilir. Sonuç olarak, bir sırayı `case` deyimlerinizin önemli olduğu.
+Çünkü C# 6 yalnızca sabit desen destekler ve sabit değerleri tekrarını izin vermez, case etiketleri birbirini dışlayan değerleri tanımlayın ve yalnızca bir desen eşleştirme ifadesi eşleşebilir. Sonuç olarak, bir sırayı `case` deyimlerinizin önemli olduğu.
 
 C# 7.0, ancak diğer desenleri desteklendiğinden, case etiketleri birbirini dışlayan değerleri tanımlamanız gerekir değil ve eşleştirme ifadesi birden çok desen eşleştiğinde. Yalnızca eşleşen desen içeren ilk geçiş bölümündeki deyimlerin yürütülme nedeni sırayı `case` deyimlerinizin'ın, artık önemlidir. C#, case deyimi veya deyimler eşdeğerdir veya önceki deyimlerin kümeleridir switch bölümüne algılarsa, "anahtar durumu önceki bir case tarafından zaten işlendi." bir derleyici hatası, CS8120, oluşturur.
 
-Aşağıdaki örnekte bir `switch` olmayan-birbirini dışlayan desenleri çeşitli kullanan deyimi. Taşırsanız `case 0:` artık Birinci bölümde olması bölüm geçiş `switch` deyimi, C#, tanımlanan desenle olan bir alt tüm tamsayıların değeri sıfır olan bir tamsayı olduğu için bir derleyici hatası oluşturur tarafından `case int val` deyimi.
+Aşağıdaki örnekte bir `switch` olmayan-birbirini dışlayan desenleri çeşitli kullanan deyimi. Taşırsanız `case 0:` artık ilk bölümü olması bölüm anahtarı `switch` deyimi C# tarafındantanımlananörnekleolduğubirtamsayıdeğerisıfırolantümtamsayılarınbiraltkümesiolduğuiçinbirderleyicihatasınanedenolur.`case int val` deyimi.
 
-[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
+[!code-csharp[switch#5](~/samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 
 Bu sorunu gidermek ve iki yoldan biriyle derleyici uyarısı ortadan kaldırır:
 
@@ -135,11 +135,11 @@ Sabit ifade gibi değerlendirilir:
 
 Aşağıdaki örnek, belirli bir tarihin hafta, çalışma haftası ya da ikinci iş haftanın son gününü iş haftanın ilk günü olup olmadığını belirlemek için sabit bir desen kullanır. Bu hesaplar <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> üyelerinin göre geçerli günün özelliği <xref:System.DayOfWeek> sabit listesi.
 
-[!code-csharp[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
+[!code-csharp[switch#7](~/samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
 Aşağıdaki örnek, kullanıcı girişini otomatik kahve makine taklit eden bir konsol uygulamasında işlemek için sabit desen kullanır.
 
-[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
+[!code-csharp[switch#6](~/samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
 
 ### <a name="type-pattern"></a>Tür deseni
 
@@ -149,7 +149,7 @@ Tür düzeni kısa türü değerlendirme ve dönüştürme sağlar. İle kullan�
    case type varname
 ```
 
-Burada *türü* türün adı sonucunu *expr* Boolean'a dönüştürülecek ve *varname* hangi nesne sonucu *expr*eşleşmenin başarılı olursa dönüştürülür.
+Burada *türü* türün adı sonucunu *expr* Boolean'a dönüştürülecek ve *varname* hangi nesne sonucu *expr*eşleşmenin başarılı olursa dönüştürülür. Derleme zamanı türü *expr* ile başlayarak, bir genel tür parametresi olabilir C# 7.1.
 
 `case` İfade `true` herhangi biri doğru ise:
 
@@ -163,7 +163,7 @@ Burada *türü* türün adı sonucunu *expr* Boolean'a dönüştürülecek ve *v
 
 Case ifadesi true ise *varname* kesinlikle atanır ve yalnızca anahtarı bölüm içinde yerel kapsama sahiptir.
 
-Unutmayın `null` bir türle eşleşmiyor. Eşleştirilecek bir `null`, kullanarak aşağıdaki `case` etiketi:
+Unutmayın `null` bir türü ile eşleşmiyor. Eşleştirilecek bir `null`, kullanarak aşağıdaki `case` etiketi:
 
 ```csharp
 case null:
@@ -173,6 +173,12 @@ Aşağıdaki örnek, çeşitli koleksiyon türleri hakkında bilgi sağlamak iç
 
 [!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
+Yerine `object`, genel bir yöntem tür parametresi, aşağıdaki kodda gösterildiği gibi toplama türünü kullanarak yapabilirsiniz:
+
+[!code-csharp[type-pattern#3](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern3.cs#1)]
+
+Genel sürüm, iki yolla ilk örnek farklıdır. İlk olarak, kullanamazsınız `null` çalışması. Herhangi bir sabit çalışması kullanamazsınız, çünkü rastgele her türlü derleyici dönüştürülemiyor `T` dışındaki birine yazın `object`. Çürütülen `default` artık testler için null olmayan bir durumda `object`. Anlamına `default` case yalnızca testleri `null`.
+
 Desen eşleştirme olmadan, bu kod şu şekilde yazılmış olabilir. Kullanım türü desen eşleştirme bir dönüştürmenin sonucu olup olmadığını sınamak için gereksinimini ortadan kaldırarak daha kompakt ve okunabilir bir kod oluşturur bir `null` veya yinelenen atamalar gerçekleştirmek için.
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
@@ -181,11 +187,11 @@ Desen eşleştirme olmadan, bu kod şu şekilde yazılmış olabilir. Kullanım 
 
 Ekleyebileceğiniz Case deyimleri birbirini dışlayan olması gerekmez çünkü C# 7.0 ile başlayarak, bir `when` ek bir koşulu belirtmek için yan tümcesi memnun, doğru olarak değerlendirilebilmesi case deyimi için. `when` Yan tümcesi, bir Boole değeri döndüren herhangi bir ifade olabilir.
 
-Aşağıdaki örnek, bir taban tanımlar `Shape` sınıfı, bir `Rectangle` türetilen sınıf `Shape`ve `Square` türetilen sınıf `Rectangle`. Kullandığı `when` emin olmak için yan tümcesi `ShowShapeInfo` değerlendirir bir `Rectangle` eşit uzunlukta ve genişlikleri olarak atanmış olan bir nesne bir `Square` olarak oluşturulmadı olsa bile bir `Square` nesne. Yöntem bilgileri görüntülemek denemez herhangi bir nesne hakkında `null` veya bir şekil, alan sıfırdır.
+Aşağıdaki örnek, bir taban tanımlar `Shape` sınıfı, bir `Rectangle` türetilen sınıf `Shape`ve `Square` türetilen sınıf `Rectangle`. Kullandığı `when` emin olmak için yan `ShowShapeInfo` değerlendirir bir `Rectangle` eşit uzunlukta ve genişlikleri olarak atanmış olan bir nesne bir `Square` bile bunu olarak örneği edilmemiş bir `Square` nesne. Yöntem bilgileri görüntülemek çalışmaz herhangi bir nesne hakkında `null` veya bir şekil, alan sıfırdır.
 
 [!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
-Unutmayın `when` yan tümcesinde test dener örnek olup olmadığını bir `Shape` nesnedir `null` yürütme değil. Test etmek için doğru türde deseni bir `null` olduğu `case null:`.
+Unutmayın `when` yan tümcesinde test dener örnek olup olmadığını bir `Shape` nesnedir `null` yürütülmez. Test etmek için doğru türde deseni bir `null` olduğu `case null:`.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -193,7 +199,7 @@ Daha fazla bilgi için [switch deyimi](~/_csharplang/spec/statements.md#the-swit
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C# Başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [if-else](if-else.md)

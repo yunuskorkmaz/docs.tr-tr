@@ -1,19 +1,19 @@
 ---
 title: İş - C# başvurusu
 ms.custom: seodec18
-ms.date: 02/17/2017
+ms.date: 04/09/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977064"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480839"
 ---
 # <a name="is-c-reference"></a>is (C# Başvurusu)
 
@@ -47,11 +47,11 @@ Aşağıdaki örnek, gösterir `is` ifadeyi hesaplar için `true` her biri bu d�
 
 [!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
-`is` Anahtar sözcüğü ifade her zaman ya da olarak bilinen bir derleme zamanı uyarısı oluşturur `true` veya `false`. Yalnızca başvuru dönüşümleri, dönüştürmeleri kutulama ve kutudan çıkarma dönüştürme dikkate alır; Kullanıcı tanımlı dönüşümler veya bir türün tarafından tanımlanan dönüştürmeler düşünmez [örtük](implicit.md) ve [açık](explicit.md) işleçleri. Aşağıdaki örnek, uyarılar oluşturur, bu dönüştürme sonucu olarak, derleme zamanında bilinen çünkü. Unutmayın `is` dönüştürmelerinde ifade `int` için `long` ve `double` dönüştürmeler tarafından işlendiğinden dolayı false dönüş [örtük](implicit.md) işleci.
+`is` Anahtar sözcüğü ifade her zaman ya da olarak bilinen bir derleme zamanı uyarısı oluşturur `true` veya `false`. Yalnızca başvuru dönüşümleri, dönüştürmeleri kutulama ve kutudan çıkarma dönüştürme dikkate alır; Kullanıcı tanımlı dönüşümler veya bir türün tarafından tanımlanan dönüştürmeler düşünmez [örtük](implicit.md) ve [açık](explicit.md) işleçleri. Aşağıdaki örnek, uyarılar oluşturur, bu dönüştürme sonucu olarak, derleme zamanında bilinen çünkü. `is` Dönüştürmelerinde ifade `int` için `long` ve `double` dönüştürmeler tarafından işlendiğinden dolayı false dönüş [örtük](implicit.md) işleci.
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` herhangi bir lambda ifadeleri ve anonim yöntemler dışında bir değer döndüren bir ifade olabilir. Aşağıdaki örnekte `is` bir yöntem çağrısının dönüş değerini değerlendirilecek.   
+`expr` anonim yöntem veya lambda ifadesi olamaz. Bu, bir değer döndüren herhangi bir ifade olabilir. Aşağıdaki örnekte `is` bir yöntem çağrısının dönüş değerini değerlendirilecek.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 C# 7.0 ile başlayarak, deseni ile eşleşen kullanabilirsiniz [türü deseni](#type) kullanan daha kısa kodu yazmak için `is` deyimi.
@@ -66,7 +66,7 @@ C# 7.0 ile başlayan `is` ve [geçiş](../../../csharp/language-reference/keywor
 
 - [değişken desen](#var), her zaman yeni bir yerel değişken bir ifadenin değerine bağlar ve başarılı bir eşleşme. 
 
-### <a name="type" /> Tür deseni </a>
+### <a name="a-nametype-type-pattern"></a><a name="type" />Tür deseni
 
 Desen eşleştirme, gerçekleştirmek için tür deseni kullanılırken `is` bir ifadenin belirtilen bir türe dönüştürülüp dönüştürülemeyeceğini test eder ve bu olabilir, bu türden bir değişkene çevirir. Basit bir uzantısıdır `is` kısa türü değerlendirme ve dönüştürme sağlayan deyimi. Genel formu `is` türü modelidir:
 
@@ -85,6 +85,8 @@ Burada *expr* bazı türünde bir örnek için değerlendirilen bir ifade olan *
 - *Expr* temel bir sınıfı olan bir derleme zamanı türü sahip *türü*, ve *expr* sahip olan bir çalışma zamanı türü *türü* veya türetilmiş *türü*. *Derleme zamanı tür* değişkeninin Değişken bildiriminde tanımlanan türüdür. *Çalışma zamanı türü* bir değişken, bu değişkene atanan örnek türüdür.
 
 - *Expr* uygulayan bir tür örneğidir *türü* arabirimi.
+
+İle başlayarak C# 7.1, *expr* genel tür parametresi kısıtlamaları ile tanımlanan bir derleme zamanı türü olabilir. 
 
 Varsa *expr* olduğu `true` ve `is` ile kullanılan bir `if` deyimi *varname* atanır ve yerel kapsamda olan `if` deyimi yalnızca.
 
@@ -106,7 +108,7 @@ Desen eşleştirme olmadan eşdeğer kod, bir açık tür dönüştürme içeren
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Sabit desen
 
-Sabit desen ile eşleşen deseni gerçekleştirirken `is` belirtilen sabit bir ifade eşit olup olmadığını test eder. C# 6 ve önceki sürümleri, sabit desen tarafından desteklenen [geçiş](switch.md) deyimi. C# 7.0 ile başlayarak, tarafından desteklenir mi `is` deyimi de. Kendi sözdizimi aşağıdaki gibidir:
+Sabit desen ile eşleşen deseni gerçekleştirirken `is` belirtilen sabit bir ifade eşit olup olmadığını test eder. C# 6 ve önceki sürümleri, sabit desen tarafından desteklenen [geçiş](switch.md) deyimi. İle başlayarak C# 7.0, onu tarafından desteklenen `is` deyimi de. Kendi sözdizimi aşağıdaki gibidir:
 
 ```csharp
    expr is constant
@@ -142,17 +144,15 @@ Aşağıdaki örnek, bir karşılaştırmasını gösterir `null` denetler:
  
 ### <a name="var" /> değişken deseni </a>
 
-Bir desen eşleşmesi var deseni ile her zaman başarılı olur. Sözdizimi aşağıdaki gibidir:
+Değişken desen ile bir desen eşleşmesi için null olmayan ifadeler her zaman başarılı; varsa *expr* olduğu `null`, `is` ifade `false`. Null olmayan değeri *expr* her zaman aynı türde çalışma zamanı süresi yerel bir değişkene atanan *expr*.  Kendi sözdizimi aşağıdaki gibidir:
 
 ```csharp 
    expr is var varname
 ```
 
-Burada değerini *expr* adlı yerel bir değişkene her zaman atanmış *varname*. *varName* aynı türde bir statik değişken *expr*. Aşağıdaki örnek, bir ifade adlı bir değişkene atayın için değişken deseni kullanır. `obj`. Ardından değerine ve türüne görüntüler `obj`.
+Aşağıdaki örnek, bir ifade adlı bir değişkene atayın için değişken deseni kullanır. `obj`. Ardından değerine ve türüne görüntüler `obj`.
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
-
-Unutmayın *expr* olduğu `null`, `is` ifade hala geçerlidir ve atar `null` için *varname*. 
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi
   
@@ -160,7 +160,7 @@ Unutmayın *expr* olduğu `null`, `is` ifade hala geçerlidir ve atar `null` iç
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../../../csharp/language-reference/index.md)
+- [C# Başvurusu](../../../csharp/language-reference/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)
 - [as](../../../csharp/language-reference/keywords/as.md)
