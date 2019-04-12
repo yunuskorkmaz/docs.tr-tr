@@ -4,12 +4,12 @@ description: Önceden eğitilmiş bir TensorFlow modeli yeniden kullanarak gör�
 ms.date: 04/05/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 775f26d0e2453a0027f1e54ddc05f51e596ad540
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 9b9ac1f1f15b4003a19a3d30d6cadf3e86946376
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427519"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517973"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Öğretici: TensorFlow ile bir ML.NET özel görüntü sınıflandırıcı oluşturma
 
@@ -104,6 +104,7 @@ Katman kullanan bir [ÇOKTERİMLİ Lojistik regresyon algoritması](https://en.w
 
 İki veri kaynağı vardır: `.tsv` dosyası ve görüntü dosyaları.  `tags.tsv` Dosyada iki sütun: ilk olarak tanımlanan `ImagePath` ve ikincisi `Label` görüntüsüne karşılık gelen. Aşağıdaki örnek dosyası, bir başlık satırı yok ve şöyle görünür:
 
+<!-- markdownlint-disable MD010 -->
 ```tsv
 broccoli.jpg    food
 pizza.jpg   food
@@ -114,6 +115,7 @@ teddy4.jpg  toy
 toaster.jpg appliance
 toaster2.png    appliance
 ```
+<!-- markdownlint-enable MD010 -->
 
 Eğitim ve test görüntüleri bir ZIP dosyası indireceksiniz varlıklar klasörlerinde yer alır. Bu görüntüler için Wikimedia Commons ait.
 > *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), serbest medya depo.* Alınan 10:48, 17 Ekim 2018 tarihinden sonra:  
@@ -381,7 +383,7 @@ Aşağıdaki ölçümler için görüntü sınıflandırması değerlendirilir:
 
 * `Log-loss` -bkz [günlük kaybı](../resources/glossary.md#log-loss). Sıfır olarak mümkün olduğunca yakın olmasını günlük zarar kullanmanız gerekir.
 
-* `Per class Log-loss`biçimindeki telefon numarasıdır. Sınıf günlük kaybı sıfır olarak mümkün olduğunca yakın olmasını istediğiniz.
+* `Per class Log-loss`. Sınıf günlük kaybı sıfır olarak mümkün olduğunca yakın olmasını istediğiniz.
 
 Ölçümleri görüntülemek için sonuçları paylaşıp bunlar üzerinde harekete aşağıdaki kodu kullanın:
 

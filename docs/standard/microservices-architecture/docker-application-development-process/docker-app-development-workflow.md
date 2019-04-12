@@ -4,12 +4,12 @@ description: Docker tabanlı uygulamalar geliştirmek için iş akışının ayr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 6a4d8a6fea56c01d23d3cdb98ae9e12619e99ff5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 97b8c40f0926edaf9ab743ac45ba498c96257622
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328237"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517986"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -303,7 +303,7 @@ Uygulamanızdaki her hizmet için ilgili görüntü oluşturmanız gerekir. Uygu
 
 Docker görüntülerini otomatik olarak sizin için Visual Studio'da oluşturulan unutmayın. Aşağıdaki adımlar yalnızca Düzenleyici/CLI iş akışı için gereken ve altında olabilecekler açıklık için açıklanmıştır.
 
-Geliştirme ve yerel olarak bir tamamlanmış itinceye kadar test için geliştirici olarak, ihtiyaç duyduğunuz, özelliği veya kaynak denetim sisteminize (örneğin GitHub) değiştirin. Bu, Docker görüntüleri oluşturun ve kapsayıcıları yerel Docker konağı için (Windows veya Linux VM) dağıtın ve çalıştırın, test ve yerel kapsayıcıların karşı hata ayıklama gerektiği anlamına gelir.
+Geliştirme ve yerel olarak bir tamamlanmış itinceye kadar test için bir geliştirici olarak, ihtiyaç duyduğunuz, özelliği veya kaynak denetim sisteminize (örneğin GitHub) değiştirin. Bu, Docker görüntüleri oluşturun ve kapsayıcıları yerel Docker konağı için (Windows veya Linux VM) dağıtın ve çalıştırın, test ve yerel kapsayıcıların karşı hata ayıklama gerektiği anlamına gelir.
 
 Özel bir görüntü yerel ortamınızda Docker CLI ve Dockerfile'ı kullanarak oluşturmak için docker oluşturma komutu, Şekil 5-5'olduğu gibi kullanabilirsiniz.
 
@@ -561,7 +561,7 @@ RUN powershell add-windowsfeature web-asp-net45
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **ASP.NET-docker/Dockerfile.** Windows özellikleri içerecek şekilde dockerfile'ları için örnek PowerShell komutları. \
+- **aspnet-docker/Dockerfile.** Windows özellikleri içerecek şekilde dockerfile'ları için örnek PowerShell komutları. \
   [https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
 
 >[!div class="step-by-step"]

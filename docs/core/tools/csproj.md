@@ -1,13 +1,13 @@
 ---
 title: .NET Core csproj biçimine eklemeler
 description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkında bilgi edinin
-ms.date: 09/22/2017
-ms.openlocfilehash: 49a7198dc593708abaa83e65af463ea0a7571a55
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.date: 04/08/2019
+ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481320"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517336"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -15,7 +15,7 @@ Bu belge proje dosyaları taşımak bir parçası olarak eklenmiş olan değişi
 
 ## <a name="implicit-package-references"></a>Örtük paket başvuruları
 
-Meta paketler dolaylı olarak başvurulan belirtilen hedef çerçeveleri göre `<TargetFramework>` veya `<TargetFrameworks>` proje dosyanızın özelliği. `<TargetFrameworks>` yoksayılır `<TargetFramework>` olduğu belirtildiğinde, sipariş bağımsızdır.
+Meta paketler dolaylı olarak başvurulan belirtilen hedef çerçeveleri göre `<TargetFramework>` veya `<TargetFrameworks>` proje dosyanızın özelliği. `<TargetFrameworks>` yoksayılır `<TargetFramework>` olduğu belirtildiğinde, sipariş bağımsızdır. Daha fazla bilgi için [paketler, meta paketler ve çerçeveler](../packages.md). 
 
 ```xml
  <PropertyGroup>
@@ -31,13 +31,36 @@ Meta paketler dolaylı olarak başvurulan belirtilen hedef çerçeveleri göre `
 
 ### <a name="recommendations"></a>Öneriler
 
-Bu yana `Microsoft.NETCore.App` veya `NetStandard.Library` meta paketler dolaylı olarak başvurulan, önerilen en iyi yöntemlerimizi aşağıda verilmiştir:
+Bu yana `Microsoft.NETCore.App` veya `NETStandard.Library` meta paketler dolaylı olarak başvurulan, önerilen en iyi yöntemlerimizi aşağıda verilmiştir:
 
-* .NET Core veya .NET Standard hedeflenirken açık bir başvuru hiçbir zaman sahip `Microsoft.NETCore.App` veya `NetStandard.Library` meta paketler aracılığıyla bir `<PackageReference>` proje dosyanızda öğesi.
+* .NET Core veya .NET Standard hedeflenirken açık bir başvuru hiçbir zaman sahip `Microsoft.NETCore.App` veya `NETStandard.Library` meta paketler aracılığıyla bir `<PackageReference>` proje dosyanızda öğesi.
 * .NET Core'u hedefleyen, belirli bir çalışma zamanı sürümünü gerekiyorsa kullanmalısınız `<RuntimeFrameworkVersion>` projenizdeki özelliği (örneğin, `1.0.4`) metapackage başvuran yerine.
   * Kullanıyorsanız gerçekleşebilir [müstakil dağıtımları](../deploying/index.md#self-contained-deployments-scd) 1.0.0 belirli bir düzeltme eki sürümü ihtiyacınız ve örneğin LTS çalışma zamanı.
-* Belirli bir sürümünü gerekiyorsa `NetStandard.Library` kullanabileceğiniz .NET Standard hedeflenirken metapackage `<NetStandardImplicitPackageVersion>` özelliği ve kümesi sürümü ihtiyacınız.
-* Açıkça eklemeyin veya güncelleştirme ya da başvuruları `Microsoft.NETCore.App` veya `NetStandard.Library` metapackage .NET Framework projelerindeki. Herhangi bir sürümünü `NetStandard.Library` NuGet bir .NET Standard tabanlı NuGet paketini otomatik olarak kullanarak bu sürümü yüklendiğinde gereklidir.
+* Belirli bir sürümünü gerekiyorsa `NETStandard.Library` kullanabileceğiniz .NET Standard hedeflenirken metapackage `<NetStandardImplicitPackageVersion>` özelliği ve kümesi sürümü ihtiyacınız.
+* Açıkça eklemeyin veya güncelleştirme ya da başvuruları `Microsoft.NETCore.App` veya `NETStandard.Library` metapackage .NET Framework projelerindeki. Herhangi bir sürümünü `NETStandard.Library` NuGet bir .NET Standard tabanlı NuGet paketini otomatik olarak kullanarak bu sürümü yüklendiğinde gereklidir.
+
+## <a name="implicit-version-for-some-package-references"></a>Bazı paket başvuruları için örtük sürümü
+
+Çoğu açık olan [ `<PackageReference>` ](#packagereference) ayarının gerekli olmasını `Version` kullanılacak NuGet Paket sürümü belirtmek için özniteliği. .NET Core 2.1 veya 2.2 ve başvuru kullanırken [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) veya [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage), ancak öznitelik gerekli değildir. .NET Core SDK'sı sürümü kullanılmalıdır bu paketlerin otomatik olarak seçebilirsiniz.
+
+### <a name="recommendation"></a>Öneri
+
+Başvururken `Microsoft.AspNetCore.App` veya `Microsoft.AspNetCore.All` paketleri kendi sürüm belirtmeyin. Bir sürüm belirtilmezse, SDK'sı uyarı NETSDK1071 üretebilir. Bu uyarıyı düzeltmek için aşağıdaki örnekte Paket sürümü gibi kaldırın:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+```
+
+> Bilinen sorun: .NET Core 2.1 SDK proje Microsoft.NET.Sdk.Web kullandığında, yalnızca bu söz dizimi desteklenir. Bu .NET Core 2.2 SDK çözülür.
+
+ASP.NET Core meta paketler bu başvuruları normal NuGet paketlerini biraz farklı bir davranış vardır. [Framework bağımlı dağıtımları](../deploying/index.md#framework-dependent-deployments-fdd) otomatik olarak bu meta paketler kullanan uygulamalar ASP.NET Core paylaşılan çerçeve yararlanın. Meta paketler kullandığınızda **hiçbir** başvurulan bir ASP.NET Core NuGet paket varlıklarından uygulamayla dağıtılan — ASP.NET Core paylaşılan çerçeve bu varlıkları içerir. Paylaşılan çerçevesindeki varlıkları, uygulama başlatma süresini kısaltmak hedef platform için en iyi duruma getirilir. Paylaşılan altyapısı hakkında daha fazla bilgi için bkz. [.NET Core dağıtımı paketleme](../build/distribution-packaging.md).
+
+Bir sürüm varsa *olduğu* belirtilen bunu olarak işlem görür *minimum* ASP.NET Core paylaşılan framework framework bağımlı dağıtımları ve olarak sürümü bir *tam* sürümü için bağımsız dağıtımlar. Bu, aşağıdaki sonuçları sahip olabilir:
+
+* ASP.NET Core sürümünün yüklü sunucu PackageReference belirtilen sürümünden küçük, başlatmak .NET Core işlemi başarısız olur. Güncelleştirmeleri barındırma ortamları gibi Azure içinde kullanılabilir yapılmıştır. önce güncelleştirmeleri metapackage için genellikle NuGet.org üzerinde kullanılabilir. ASP.NET Core PackageReference sürümüne güncelleştirme dağıtılan bir uygulama başarısız olmasına neden olabilir.
+* Uygulama olarak dağıtılırsa bir [müstakil dağıtım](../deploying/index.md#self-contained-deployments-scd), .NET Core için en son güvenlik güncelleştirmelerini uygulama içeremez. Bir sürüm belirtilmezse, SDK'sını ASP.NET Core en yeni sürümünü otomatik olarak kendi başına dağıtım içerebilir.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core projelerinde varsayılan derleme içerir
 
@@ -384,7 +407,7 @@ Her öznitelik içeriği ve başka neslini aşağıdaki tabloda gösterildiği g
 Notlar:
 
 * `AssemblyVersion` ve `FileVersion` değerini almak için varsayılandır `$(Version)` soneki olmadan. Örneğin, varsa `$(Version)` olduğu `1.2.3-beta.4`, değer sonra `1.2.3`.
-* `InformationalVersion` Varsayılan olarak, değeri olarak `$(Version)`.
+* `InformationalVersion` değerini varsayılan olarak `$(Version)`.
 * `InformationalVersion` sahip `$(SourceRevisionId)` özelliği varsa eklenir. Bunu kullanarak devre dışı bırakılabilir `IncludeSourceRevisionInInformationalVersion`.
 * `Copyright` ve `Description` özellikleri NuGet meta veriler için de kullanılır.
 * `Configuration` tüm yapı işlemi ile paylaşılır ve aracılığıyla ayarlanan `--configuration` parametresinin `dotnet` komutları.
