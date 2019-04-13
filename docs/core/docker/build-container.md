@@ -4,12 +4,12 @@ description: Bu öğreticide, bir .NET Core uygulamasını Docker ile kapsayıc�
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b6aacb48d97c6403e2eefe45c2f477cdf64f941e
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.openlocfilehash: fcbac0e0d17d2481d42e715a7f2790586e31d085
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59518172"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553842"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: Kapsayıcılı bir .NET Core uygulaması
 
@@ -41,11 +41,11 @@ Aşağıdaki önkoşulları yükleyin:
 3.0 gibi yeni bir SDK kullanıyorsanız, uygulamanızı 2.2 SDK'yı kullanmaya zorlanır emin olun. Adlı bir dosya oluşturun `global.json` çalışma dizinine gidin ve aşağıdaki json kodunu yapıştırın:
 
 ```json
-{                                             
-  "sdk": {                                    
-    "version": "2.2.100"                      
-  }                                           
-}                                             
+{
+  "sdk": {
+    "version": "2.2.100"
+  }
+}
 ```
 
 Bu dosyayı kaydedin. Sürüm 2.2 için kullanılacak .NET Core dosyasının varlığını zorlayacak `dotnet` bu dizinden ve aşağıdaki komutu olarak adlandırılır.
@@ -176,7 +176,6 @@ myimage                                 latest              d51bb4452469        
 
 İki görüntü aynı paylaşım bildirimi **görüntü kimliği** değeri. Değer her iki görüntü arasında aynı çünkü yalnızca komutta *Dockerfile* üzerinde mevcut bir görüntüyü yeni görüntüyü temel oluşturmaktı. İki komutu ekleyelim *Dockerfile*. Her komut, görüntünün temsil eden son komutu ile yeni bir görüntü katmanı oluşturur **myımage** depo işaret.
 
-
 ```dockerfile
 COPY app/bin/Release/netcoreapp2.2/publish/ app/
 
@@ -256,7 +255,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### <a name="connect-to-a-container"></a>Bir kapsayıcıya bağlanma
 
-Bir kapsayıcı çalışmaya başladıktan sonra çıktıyı görmek için bağlanabilirsiniz. Kullanım `docker start` ve `docker attach` kapsayıcı ve çıkış akışına göz at'ı başlatmak için komutları. Bu örnekte, <kbd>CTRL + C</kbd> komutu, çalışmakta olan kapsayıcıyı ayırmak için kullanılır. Bu, gerçekten kapsayıcı durdurur kapsayıcı işlemde sonlandırabiliriz. `--sig-proxy=false` Parametresi sağlar <kbd>CTRL + C</kbd> kapsayıcısında işlemi durdurur. 
+Bir kapsayıcı çalışmaya başladıktan sonra çıktıyı görmek için bağlanabilirsiniz. Kullanım `docker start` ve `docker attach` kapsayıcı ve çıkış akışına göz at'ı başlatmak için komutları. Bu örnekte, <kbd>CTRL + C</kbd> komutu, çalışmakta olan kapsayıcıyı ayırmak için kullanılır. Bu, gerçekten kapsayıcı durdurur kapsayıcı işlemde sonlandırabiliriz. `--sig-proxy=false` Parametresi sağlar <kbd>CTRL + C</kbd> kapsayıcısında işlemi durdurur.
 
 Kapsayıcıdan ayırdıktan sonra bunu hala çalışan sayım ve olduğunu doğrulamak için yeniden bağlayın.
 
@@ -322,8 +321,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### <a name="change-the-entrypoint"></a>Giriş noktası değiştirme
 
-`docker run` Komut ayrıca, değiştirmenize imkan tanır `ENTRYPOINT` komutunu *Dockerfile* ve başka bir ancak için yalnızca o kapsayıcı çalıştırın. Örneğin, çalıştırmak için aşağıdaki komutu kullanın `bash` veya `cmd.exe`. Komutu, gerektiği gibi düzenleyin. 
-
+`docker run` Komut ayrıca, değiştirmenize imkan tanır `ENTRYPOINT` komutunu *Dockerfile* ve başka bir ancak için yalnızca o kapsayıcı çalıştırın. Örneğin, çalıştırmak için aşağıdaki komutu kullanın `bash` veya `cmd.exe`. Komutu, gerektiği gibi düzenleyin.
 
 #### <a name="windows"></a>Windows
 Bu örnekte `ENTRYPOINT` değiştirilir `cmd.exe`. <kbd>CTRL + C</kbd> işlemi sona erdirmek ve kapsayıcıyı durdurmak için basılan.

@@ -2,12 +2,12 @@
 title: F#kod biçimlendirme yönergeleri
 description: Biçimlendirme kuralları bilgi F# kod.
 ms.date: 02/08/2019
-ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093625"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553868"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#kod biçimlendirme yönergeleri
 
@@ -74,7 +74,7 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-İle başlayan herhangi bir özel işleç için `*`, derleyici belirsizlik önlemek için tanım başlangıcına bir beyaz alanı eklemeniz gerekecektir. Bu nedenle, yalnızca tek bir boşluk karakteri ile tüm işleçleri tanımlarını çevreleyen önerilir.
+İle başlayan herhangi bir özel işleç için `*` ve birden fazla karakter olan, derleyici belirsizlik önlemek için tanım başlangıcına bir beyaz alanı eklemeniz gerekir. Bu nedenle, yalnızca tek bir boşluk karakteri ile tüm işleçleri tanımlarını çevreleyen öneririz.
 
 ### <a name="surround-function-parameter-arrows-with-white-space"></a>İşlev parametresi oklar boşluk ile çevreleyen
 

@@ -1,173 +1,107 @@
 ---
-title: Machine learning veri dönüşümleri - ML.NET
+title: Veri Dönüşümleri | ML.NET
 description: ML.NET içinde desteklenen özellik Mühendisliği bileşenleri keşfedin.
-author: JRAlexander
-ms.custom: seodec18
-ms.date: 01/14/2019
-ms.openlocfilehash: f7a143fcce23c9043e6cc62ac9986122e71da0b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+author: natke
+ms.author: nakersha
+ms.date: 04/02/2019
+ms.openlocfilehash: 506abcc826059f4d252378b1bde0b852949a42e1
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194779"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553855"
 ---
-# <a name="machine-learning-data-transforms---mlnet"></a>Machine learning veri dönüşümleri - ML.NET
+# <a name="data-transformations"></a>Veri Dönüşümleri
 
-Aşağıdaki tablolarda tüm ML.NET desteklenen veri dönüşümleri hakkında bilgiler içerir.
+Veri Dönüşümleri, model yönetimi için veri hazırlamak için kullanılır. Bu kılavuzun dönüştürmeleri uygulayan sınıf döndüren [IEstimator](xref:Microsoft.ML.IEstimator`1) arabirimi. Veri Dönüşümleri birbirine zincirlenebilir. Her dönüştürme hem bekliyor ve belirli türlerin ve bağlantılı başvuru belgelerinde belirtilen biçimden veri üretir.
 
-> [!NOTE]
-> ML.NET şu anda Önizleme aşamasındadır. Tüm veri dönüşümleri şu anda desteklenmiyor. Belirli bir dönüştürme için bir istek göndermek için bir sorun açın [dotnet/machinelearning](https://github.com/dotnet/machinelearning/issues) GitHub deposu.
+Bazı veri dönüşümleri kendi parametrelerini hesaplamak için eğitim verilerini gerektirir. Örneğin: <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> transformer, ortalama ve eğitim verilerini sırasında varyansını hesaplar `Fit()` işlemi, bu parametreleri kullanır `Transform()` işlemi. 
 
-## <a name="combiners-and-segregators"></a>Combiners ve segregators
+Eğitim verileri diğer veri dönüşümleri gerektirmez. Örneğin: <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> dönüşümü gerçekleştirebilirsiniz `Transform()` işlemi sırasında herhangi bir eğitim veri görülen kalmadan `Fit()` işlemi.
 
-| Dönüştürme | Tanım |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.GroupTransform> | Grupları bir skaler sütuna bitişik grubu kimliğini temel alan bir vektör değerleri |
-| <xref:Microsoft.ML.Transforms.UngroupTransform> | Vektör sütunlara satır, ters grubu dönüşümünün dizileri grupları kaldırın. |
-
-## <a name="conversions"></a>Dönüşümler
+## <a name="column-mapping-and-grouping"></a>Sütun eşleme ve gruplandırma
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | Karmaları tek değerli sütunlar veya sütun vektör. Vektör sütunları için her yuva ayrı olarak karma hale getirir. Metin değerleri veya anahtar değerlerini karma. |
-| <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | Birden çok sütun değerleri karmaları dönüştürür. Bu dönüşüm, hem sayısal ve metin girişleri, hem tek hem de vektör değerli sütunlar kabul eder. |
-| <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | Bir anahtarı bir ikili vektör sütununa dönüştürür. |
-| <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | Karşılık gelen değerlere KeyValues meta verilerindeki anahtar dizinlerini eşlemek için KeyValues meta verileri kullanır. |
-| <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | Bir anahtarı bir vektör sütununa dönüştürür. |
-| <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | Bu türe dönüştürülüp değişiklikler temel alınan sütun türü sağlandı. |
-| <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | Dönüştürür (sözcükler, sayılar, vb.) bir sözlükte dizini oluşturmak için değerleri girin. |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A> | Yeni bir çıktı sütunda bir veya daha fazla giriş sütunları birleştirin |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.CopyColumns%2A> | Kopyalayın ve bir veya daha fazla giriş sütunları yeniden adlandırma |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.DropColumns%2A> | Bir veya daha fazla giriş sütunları kaldırın |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.SelectColumns%2A> | Giriş verileri tutmak için bir veya daha fazla sütun seçin |
 
-## <a name="deep-learning"></a>Derin öğrenme
+## <a name="normalization-and-scaling"></a>Normalleştirme ve ölçeklendirme
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.OnnxTransform> | Mevcut bir ONNX model için veri sağlar ve puan döndürür (tahmin). |
-| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | İle kullanan TensorFlow modeli Puanlama veya TensorFlow modeli yeniden eğitme. |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> | Ortalamasını (eğitim verilerini) çıkarın ve varyansını (eğitim verileri) Böl |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeLogMeanVariance%2A> | Eğitim verileri logaritmasını üzerinde tabanlı normalleştirin |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeLpNorm%2A> | Ölçeklendirme giriş vektör tarafından kendi [lp norm](https://en.wikipedia.org/wiki/Lp_space#The_p-norm_in_finite_dimensions), p burada 1, 2 veya sonsuz. L2 (Euclidean uzaklık) norm varsayılanlara |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeGlobalContrast%2A> | L2 norm (satır verilerinin) ya da sıfıra bölünme ya da standart sapma ve satır veri ortalamasını çıkararak her değeri bir satır ölçeklendirin ve yapılandırılabilir bir ölçek faktörü (varsayılan 2) çarpın |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning%2A> | Giriş değeri bin dizinine atayın ve 0 ile 1 arasında kayan nokta değeri üretmek için bölme sayısı bölün. Eğitim verileri depo arasında eşit bir şekilde dağıtmak için depo sınırları hesaplanır |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeSupervisedBinning%2A> | Etiket sütunu, bağıntı dayalı bir depo için giriş değeri Ata |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A> | Eğitim verileri, minimum ve maksimum değerler arasındaki farkın tarafından giriş ölçeklendirin |
 
-## <a name="feature-extraction"></a>Özelliği ayıklama
-
-| Dönüştürme | Tanım |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Kaldırır, tek tek belirteçleri (büyük küçük harf duyarsız karşılaştırma) stopword karşılaştırarak durdurma sözcükleri listesini belirttiniz.|
-| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları aynı görüntünün bir gri tonlamalı gösterimine dönüştürür.|
-| <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Bir veya daha fazla ReadOnlyMemory sütunları alır ve bunları bir ImageType yükler. |
-| <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları bir vektör temsiline dönüştürür.|
-| <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Bir veya daha fazla ImageType sütunları alır ve bunları sağlanan yükseklik ve genişlik için yeniden boyutlandırır.|
-| <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | LightLDA, görünmeyen Dirichlet ayırma durumu resim uyarlamasını uygular.|
-| <xref:Microsoft.ML.Transforms.LoadTransform> | Belirtilen model dosyasından özel dönüşümler yükler. Seri hale getirilmiş bir zinciri veya farklı (ancak yine de uyumlu) veri görünümüne önceden eğitilmiş bir dönüştürme uygulamak için 'tek tek seçme' dönüştürmeler sağlar. |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Bir paketi sayısı, anahtarların belirli bir vektör içindeki ngrams (uzunluğu 1-n ardışık değerleri dizisi) üretir. Bunu ngrams sözlüğü oluşturmak ve paketi dizin olarak sözlükte kimliğini kullanarak yapar. |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Parçalanmış metin (ReadOnlyMemory vektörü) koleksiyonu veya anahtarlarının vektörleri sayısal özellik vektör kapatır. Özellik vektör ngrams (uzunluğu 1-n ardışık belirteçleri - sözcükleri veya anahtarlarının - dizileri) sayısı ' dir. |
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Koleksiyona karmayı kullanarak sayısal özellik vektör parçalanmış metin (ReadOnlyMemory vektörü) kapatır. |
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Belirli bir metin ngrams (uzunluğu 1-n ardışık bir kelimelerin dizileri) sayısı, bir paket oluşturur. |
-| <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | Kategorik değer göstergesi dizi kategorileri sözlüğü verileri temel alan yapı ve dizi dizini olarak sözlükte kimliğini kullanarak dönüştürür. |
-| <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Projeksiyon üzerinde düşük sıra alt özellik vektör hesaplar. |
-| <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Giriş dizesi puanlamak için bir yaklaşım kullanan modeli kullanır. |
-| <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | Dile özgü durdurma sözcükleri (en yaygın kelimeler) listesini stopword için tek tek belirteçleri (büyük küçük harf duyarsız karşılaştırma) karşılaştırarak kaldırır. |
-| <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | Belirli bir metin ngrams (ardışık bir kelimelerin dizileri) sayısı, bir paket oluşturur. Bunu ngrams sözlüğü oluşturmak ve paketi dizin olarak sözlükte kimliğini kullanarak yapar. |
-| <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | Belirli bir metin ngrams (uzunluğu 1-n ardışık bir kelimelerin dizileri) sayısı, bir paket oluşturur. Bunu her ngram karma ve paketi dizin olarak karma değeri kullanarak yapar. |
-| <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | Ayırıcı karakterler kullanarak sözcüklere metin böler. |
-
-## <a name="image-model-featurizers"></a>Görüntü modeli featurizers
+## <a name="conversions-between-data-types"></a>Veri türleri arasında dönüştürmeler
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | İle kullanılmak için bir genişletme yöntemi budur <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> bir pretrained kullanmak için [AlexNet](https://en.wikipedia.org/wiki/AlexNet) modeli. Bu uzantıyı içeren NuGet ikili model dosyası eklemek için de sağlanır. |
-| <xref:Microsoft.ML.Transforms.ResNet18Extension> | İle kullanılmak için bir genişletme yöntemi budur <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> bir pretrained ResNet18 modelini kullanmak için. Bu uzantıyı içeren NuGet ikili model dosyası eklemek için de sağlanır. |
-| <xref:Microsoft.ML.Transforms.ResNet50Extension> | İle kullanılmak için bir genişletme yöntemi budur <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> pretrained ResNet50model kullanılacak. Bu uzantıyı içeren NuGet ikili model dosyası eklemek için de sağlanır. |
-| <xref:Microsoft.ML.Transforms.ResNet101Extension> | İle kullanılmak için bir genişletme yöntemi budur <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> bir pretrained ResNet101 modelini kullanmak için. Bu uzantıyı içeren NuGet ikili model dosyası eklemek için de sağlanır. |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.ConvertType%2A> | Bir giriş sütun türü için yeni bir tür dönüştürme |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValue*> | Sağlanan sözlük eşleştirmeleri anahtarlardan (Kategoriler) için değerleri eşleyin |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*> | Anahtarları (Kategoriler) için değerleri gelen giriş verilerinin eşleme oluşturarak eşleyin |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToValue*> | Anahtarları özgün değerlerine dönüştürme |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToVector*> | Anahtarları özgün değerlerine sahip vektörleri için Geri Dönüştür |
+| <xref:Microsoft.ML.ConversionsCatalog.MapKeyToBinaryVector*> | Anahtarlar için özgün değerler geri ikili vektör dönüştürme |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.Hash*> | Karma Giriş sütunundaki değeri |
 
-## <a name="label-parsing"></a>Etiket Ayrıştırma
+## <a name="text-transformations"></a>Metin dönüştürmeleri
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  Etiketleri dönüştürür. |
-| <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | Çok sınıflı etiketleri ikili true, False OVA ile kullanmak için öncelikle etiketleri yeniden eşlemesi.|
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Bir metin sütunu normalleştirilmiş ngrams char-gram sayısı ve kayan nokta diziye Dönüştür | 
+| <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | Bir veya daha fazla metin sütunları tek tek sözcüklere bölme |
+| <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | Bir veya daha fazla metin sütunları karakterlerin tek tek float konuları kümesi bölün. |
+| <xref:Microsoft.ML.TextCatalog.NormalizeText*> | Durumu değiştirmek, aksanlı işaretleri, noktalama işaretleri ve sayılar Kaldır |
+| <xref:Microsoft.ML.TextCatalog.ProduceNgrams*> | Bir paketi ngrams (ardışık bir kelimelerin dizileri) sayısı metin sütunu Dönüştür|
+| <xref:Microsoft.ML.TextCatalog.ProduceWordBags*> | Bir paketi ngrams vektör sayısı metin sütunu Dönüştür |
+| <xref:Microsoft.ML.TextCatalog.ProduceHashedNgrams*> | Metin sütunu karma ngram sayıları vektörü Dönüştür |
+| <xref:Microsoft.ML.TextCatalog.ProduceHashedWordBags*> | Bir karma ngram sayıları paketi metin sütunu Dönüştür |
+| <xref:Microsoft.ML.TextCatalog.RemoveDefaultStopWords*>  | Belirtilen dil için varsayılan durdurma sözcükleri giriş sütunları Kaldır |
+| <xref:Microsoft.ML.TextCatalog.RemoveStopWords*> | Kaldırır belirtilen giriş sütunlarından durdurma sözcükleri |
+| <xref:Microsoft.ML.TextCatalog.LatentDirichletAllocation*> | (Float oluşan bir vektörü temsil edilir) bir belge konuları kümesi vektörü float olarak dönüştürme |
+| <xref:Microsoft.ML.TextCatalog.ApplyWordEmbedding*> | Metin belirteçleri vektörleri önceden eğitilmiş bir modeli kullanarak cümle vektör dönüştürme |
+
+## <a name="image-transformations"></a>Resim dönüşümleri
+
+| Dönüştürme | Tanım |
+| --- | --- |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> | Görüntüyü gri tonlamaya dönüştürme |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage*> | Piksel olarak oluşan bir vektörü Dönüştür <xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | Piksel giriş görüntüden sayıdan oluşan bir vektörü Dönüştür |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | Görüntüleri bir klasörden belleğe yükleyin. |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | Görüntüleri yeniden boyutlandırma |
+
+## <a name="categorical-data-transformations"></a>Kategorik veri dönüşümleri
+
+| Dönüştürme | Tanım |
+| --- | --- |
+| <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*> | Bir veya daha fazla metin sütunları Dönüştür [bir seyrek](https://en.wikipedia.org/wiki/One-hot) kodlanmış vektörleri |
+| <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | Daha fazla tek metin sütunları karma tabanlı bir seyrek kodlanmış vektörleri dönüştürün |
 
 ## <a name="missing-values"></a>Eksik değerleri
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | Sütundaki değerleri eksik bırakır. |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Bir boolean çıktı sütunu giriş sütunu giriş sütunundaki değeri eksik olduğu çıkış değeri true ise, aynı sayıda yuva oluşturur. |
-| <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | Varsayılan değer ya da (yalnızca metin olmayan sütunları) ortalama/en düşük/en yüksek değeri ile değiştirerek eksik değerleri işleyin. |
+| <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues*> | Giriş sütunundaki değeri eksik olduğunda, değer true ise yeni bir Boole çıkış sütun oluşturma |
+| <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*> | Yeni çıkış değeri, değerin giriş sütunu eksik olması durumunda varsayılan bir değer ve giriş değeri ayarlanır. bir sütun, aksi takdirde oluşturun |
 
-## <a name="normalization"></a>Normalleştirme
-
-| Dönüştürme | Tanım |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.Projections.LpNormalizingTransformer> | LP-Norm (vektör/row-wise) normalleştirme Dönüştür. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | Ortalama ve vektör değerli sütun için varyansı hesaplar. Geçerli ortalama ve M2 izler (değerleri mean squared farkları toplamı), NaN'ler ve sıfır olmayan öğe sayısını sayısı. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | Ortalama ve vektör değerli sütun için varyansı hesaplar. Geçerli ortalama ve M2 izler (değerleri mean squared farkları toplamı), NaN'ler ve sıfır olmayan öğe sayısını sayısı. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | Min, max, seyrek olmayan değerleri (vCount) sayısı ve ProcessValue() çağrı (trainCount) sayısı için bir vektör değerli sütun izler. |
-| <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | Özellik aralıkları standart hale getirir. |
-| <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |Özellik aralıkları standart hale getirir. |
-
-## <a name="onnx"></a>Onnx
+## <a name="feature-selection"></a>Özellik Seçimi
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.OnnxTransform> | ONNX standart v1.2 kullanacağınız puanları önceden eğitilmiş ONNX modelleri |
+| <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount*> | Varsayılan olmayan değerleri eşik değerinden yüksek olan özellikleri seçin |
+| <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation*> | Etiket sütunundaki verileri en bağımlı olduğu özellikleri seçin |
 
-## <a name="preprocessing"></a>Ön işleme
-| Dönüştürme | Tanım |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.BootstrapSamplingTransformer> | Önyükleme örnekleme Poisson örnekleme kullanarak yaklaştırır. |
-| <xref:Microsoft.ML.Transforms.Projections.RandomFourierFeaturizingTransformer> | Rastgele Fourier özellik oluşturur. |
-| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Simgeleştirici karakter odaklı burada metin bir karakter dizisi olarak değerlendirilir. |
-| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | Ağırlıklar tanımlamaya yardımcı olması için en iyi duruma getirme basitleştirir. |
-
-## <a name="row-filters"></a>Satır filtreleri
+## <a name="custom-transformations"></a>Özel dönüşümler
 
 | Dönüştürme | Tanım |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.RowShufflingTransformer> | Rastgele bir imleç seçeneği belirli sayıda satırı oluşan bir havuz kullanarak gerçekleştirmeyi deneyin.  |
-| <xref:Microsoft.ML.Transforms.SkipFilter> | Alt satır kümesine giriş satır sayısı atlayarak sınırlama sağlar. |
-| <xref:Microsoft.ML.Transforms.SkipTakeFilter> | İsteğe bağlı bir uzaklık konumunda satır kümesini giriş sınırlama sağlar. Veri sayfalama uygulama için kullanılabilir. İle oluşturulduğunda SkipTakeFilter.SkipArguments gibi davranır `SkipFilter`.
-| <xref:Microsoft.ML.Transforms.TakeFilter> | Alt satır kümesine giriş N ilk satırları yararlanarak sınırlama sağlar. |
-
-## <a name="schema"></a>Şema
-
-| Dönüştürme | Tanım |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | Veri kümesindeki sütunları çoğaltır.|
-| <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | Bırakın ya da belirli bir girdiden koruma sütun kümesini seçer. |
-| <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | Yuva sütunları bırakır.|
-| <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | Belirtilen tür ve varsayılan değerlerle yeni bir sütun oluşturur. |
-| <xref:Microsoft.ML.Transforms.RangeFilter> | Dataview tek, Double veya anahtarı (bitişik) türünde bir sütun üzerinde filtreler. Belirtilen en düşük/en yüksek aralıktaki değerleri tutar. NaN'ler her zaman filtrelenir. Giriş anahtar türü varsa, yüzde değerlerini sayısı min/maks kabul edilir. |
-
-## <a name="tensorflow"></a>TensorFlow
-
-| Dönüştürme | Tanım |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | Veya puanları kullanan TensorFlow ile model retrains TensorFlow modeli. |
-
-## <a name="text-processing-and-featurization"></a>Metin işleme ve özellik kazandırma sayesinde
-
-| Dönüştürme | Tanım |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.TextNormalizingTransformer> | Metin normalleştirme dönüşüm sağlayan büyük/küçük harf normalleştirme, aksanlı işaretleri, noktalama işaretleri ve/veya sayı kaldırılıyor. Dönüştürme, vektör belirteçleri/metin (ReadOnlyMemory vektörü) yanı sıra metin girişi üzerinde çalışır. |
-| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Simgeleştirici karakter odaklı burada metin bir karakter dizisi olarak değerlendirilir. |
-
-## <a name="time-series"></a>Zaman serisi
-
-| Dönüştürme | Tanım |
-| --- | --- |
-| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | Değerleri ağırlıklı ortalamasını alır: ExpAvg(y_t) = bir \* y_t + (1-a) \* ExpAvg(y_(t-1)). |
-| <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | Bir i.i.d. değişiklik noktası algılayıcısı dönüşümün uygular Uyarlamalı çekirdek yoğunluğu tahmini ve martingales göre sırası (rastgele örnek). |
-| <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | Implements depo algılayıcısı dönüştürmek için bir i.i.d. dizisi üzerinde Uyarlamalı çekirdek yoğunluğu Tahmine dayalı (rastgele örnek). |
-| <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | Kayan pencere değerleri ağırlıklı ortalamasını sağlar. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.PercentileThresholdTransform> | Zaman serisi geçerli değeri kayan pencere en yüksek değerleri yüzdebirlik ait olup olmadığını belirler. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.PValueTransform> | Geçerli değer görgül p-değer kayan pencere diğer değerlere göre hesaplar. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.SlidingWindowTransform> | Bir kayan pencere üzerinde türünde tek bir zaman serisi çıkarır. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.SsaChangePointDetector> | Zaman serisi tekil Spektrumun model oluşturma göre değişiklik noktası algılayıcısı dönüşüm uygular. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.SsaSpikeDetector> | Uygular, zaman serisi tekil Spektrumun model oluşturma depo algılayıcısı dönüştürme temel. |
-
-## <a name="miscellaneous"></a>Çeşitli
-
-| Dönüştürme | Tanım |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.CompositeTransformer> | Bileşik DataTransform oluşturur. |
-| <xref:Microsoft.ML.Transforms.CustomMappingTransformer%602> | Sağlanan ek sütunları oluşturur `IDataView`. Satır sayısı değişmez ve giriş verilerinin her satır için uygulama kullanıcının işlevinin sonucu olarak görülebilir.|
-| <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | Oluşturulan bir sayı dizisi içeren bir sütun ekler. |
-| <xref:Microsoft.ML.Transforms.ProduceIdTransform> | İmlecin Kimliğine sahip bir sütun bir sütun oluşturur. |
-| <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | Rastgele bir sayı oluşturur. |
+| <xref:Microsoft.ML.CustomMappingCatalog.CustomMapping*> | Kullanıcı tanımlı bir eşleme ile yenilerini üzerine mevcut sütunları Dönüştür |
