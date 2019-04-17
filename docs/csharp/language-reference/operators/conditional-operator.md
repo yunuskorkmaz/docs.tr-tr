@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427389"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672400"
 ---
 # <a name="-operator-c-reference"></a>?: İşleci (C# Başvurusu)
 
@@ -42,6 +42,12 @@ olarak değerlendirilir
 ```csharp
 a ? b : (c ? d : e)
 ```
+
+Bu işleç nasıl değerlendirir unutmayın için kullanabileceğiniz yararlı bir anımsatıcı cihaz sorarak şöyledir: 
+```
+is this condition true ? yes : no
+```
+ile? önceki deyim ve bu sorunun yanıtı mantıksal olarak davranan izleyen bir soru işareti olarak davranan işleci bir parçası.
 
 Aşağıdaki örnek, koşullu işlecinin kullanımını gösterir:
 
@@ -83,10 +89,10 @@ Daha fazla bilgi için [koşullu işleç](~/_csharplang/spec/expressions.md#cond
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - [if-else deyimi](../keywords/if-else.md)
-- [?. ve ?[] İşleçleri](null-conditional-operators.md)
+- [?. and ?[] İşleçleri](null-conditional-operators.md)
 - [?? İşleç](null-coalescing-operator.md)
 - [ref anahtar sözcüğü](../keywords/ref.md)
