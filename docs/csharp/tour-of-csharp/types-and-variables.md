@@ -3,12 +3,12 @@ title: C#Türler ve değişkenler - Turu C# dil
 description: Türleri tanımlama ve değişkenleri bildirme hakkında bilgi edininC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481086"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672374"
 ---
 # <a name="types-and-variables"></a>Türler ve değişkenler
 
@@ -18,31 +18,42 @@ C#ın değer türleri içinde daha bölünür *basit türler*, *Numaralandırma 
 
 Genel bir bakış verilmiştir C#'s tür sistemi.
 
-* Değer türleri
-  - Basit türler
+* [Değer türleri][ValueTypes]
+  - [Basit türler][SimpleTypes]
     * İmzalı tam sayı: `sbyte`, `short`, `int`, `long`
     * İşaretsiz integral: `byte`, `ushort`, `uint`, `ulong`
     * Unicode karakter sayısı: `char`
     * IEEE kayan nokta: `float`, `double`
     * Yüksek duyarlıklı ondalık: `decimal`
     * Boole: `bool`
-  - Numaralandırma türleri
+  - [Numaralandırma türleri][EnumTypes]
     * Formun kullanıcı tanımlı türler `enum E {...}`
-  - Yapı türleri
+  - [Yapı türleri][StructTypes]
     * Formun kullanıcı tanımlı türler `struct S {...}`
-  - Boş değer atanabilen değer türleri
+  - [Boş değer atanabilen değer türleri][NullableTypes]
     * Diğer tüm değer türleri ile uzantıları bir `null` değeri
-* Başvuru türleri
-  - Sınıf türleri
+* [Başvuru türleri][ReferenceTypes]
+  - [Sınıf türleri][ClassTypes]
     * Diğer tüm türlerin Ultimate temel sınıf: `object`
     * Unicode dizelerini: `string`
     * Formun kullanıcı tanımlı türler `class C {...}`
-  - Arabirim türleri
+  - [Arabirim türleri][InterfaceTypes]
     * Formun kullanıcı tanımlı türler `interface I {...}`
-  - Dizi türleri
+  - [Dizi türleri][ArrayTypes]
     * Tek ve örneğin, çok boyutlu `int[]` ve `int[,]`
-  - Temsilci türleri
+  - [Temsilci türleri][DelegateTypes]
     * Formun kullanıcı tanımlı türler `delegate int D(...)`
+
+[ValueTypes]: ../language-reference/keywords/value-types-table.md
+[SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
+[EnumTypes]: ../language-reference/keywords/enum.md
+[StructTypes]: ../language-reference/keywords/struct.md
+[NullableTypes]: ../programming-guide/nullable-types/index.md
+[ReferenceTypes]: ../language-reference/keywords/reference-types.md
+[ClassTypes]: ../language-reference/keywords/class.md
+[InterfaceTypes]: ../language-reference/keywords/interface.md
+[DelegateTypes]: ../language-reference/keywords/delegate.md
+[ArrayTypes]: ../programming-guide/arrays/index.md
 
 Sekiz integral türleri, 8-bit, 16-bit, 32-bit ve 64-bit işaretli veya işaretsiz form değerleri için destek sağlar.
 

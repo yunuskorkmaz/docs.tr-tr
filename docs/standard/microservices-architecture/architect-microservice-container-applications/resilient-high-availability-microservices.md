@@ -4,12 +4,12 @@ description: Mikro hizmetler, geçici ağ ve yüksek kullanılabilirlik elde etm
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c1881392532231bc83227776a647f4dde0a196ad
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: a63b0c67e00ec91c5a91e1c6b84d1a38ab50e394
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59614044"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672361"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Mikro hizmetlerde esneklik ve yüksek kullanılabilirlik
 
@@ -42,7 +42,7 @@ Günlükleri nasıl bir uygulama veya hizmeti, özel durumlar, uyarıları ve ba
 
 Tek parça sunucu tabanlı uygulamalarda yalnızca diskte (bir günlük dosyası) bir dosyaya günlükler yazar ve herhangi bir aracı ile analiz edin. Uygulama yürütme sabit bir sunucu veya VM için sınırlı olduğundan, genellikle akışı olayları çözümlemek için karmaşık değil. Ancak, birçok orchestrator küme düğümleri arasında birden çok hizmet nerede yürütülür dağıtılmış bir uygulamada dağıtılmış olayları ilişkilendirmenize işaretleyebilmesine zordur.
 
-Bir mikro hizmet tabanlı uygulama olayları veya logfiles çıkış akışına kendisi tarafından depolamak deneyin değil ve merkezi bir yerde olaylara yönlendirme yönetmek bile deneyin. Bu, nerede çalıştığını yürütme ortamı altyapısı tarafından toplanacak altında bir standart çıktıya kendi olay akışı, her işlem yalnızca yazmalısınız anlamı saydam olmalıdır. Bu olay akışı yönlendiriciler örneğidir [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), olay akışları, birden fazla kaynaktan toplar ve sistemleri çıktı için yayımlar. Bunlar, bir geliştirme ortamı için basit standart çıktı içerebilir veya Bulut sistemleri [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (için şirket içi uygulamalar için) ve [Azuretanılama](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Ayrıca vardır iyi üçüncü taraf günlük analizi platformları ve uyarı raporu arayabilirsiniz araçları ve izleme günlükleri, hatta gerçek zamanlı gibi [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Bir mikro hizmet tabanlı uygulama olayları veya logfiles çıkış akışına kendisi tarafından depolamak deneyin değil ve merkezi bir yerde olaylara yönlendirme yönetmek bile deneyin. Bu, nerede çalıştığını yürütme ortamı altyapısı tarafından toplanacak altında bir standart çıktıya kendi olay akışı, her işlem yalnızca yazmalısınız anlamı saydam olmalıdır. Bu olay akışı yönlendiriciler örneğidir [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), olay akışları, birden fazla kaynaktan toplar ve sistemleri çıktı için yayımlar. Bunlar, bir geliştirme ortamı için basit standart çıktı içerebilir veya Bulut sistemleri [Azure İzleyici](https://azure.microsoft.com/services/monitor//) ve [Azure tanılama](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview). Ayrıca vardır iyi üçüncü taraf günlük analizi platformları ve uyarı raporu arayabilirsiniz araçları ve izleme günlükleri, hatta gerçek zamanlı gibi [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Düzenleyiciler durum ve tanılama bilgilerini yönetme
 
@@ -67,8 +67,8 @@ Mikro hizmet tabanlı bir uygulama oluşturduğunuzda, karmaşıklığı ile uğ
 - **Azure tanılama nedir** \
   <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **Windows bilgisayarları Azure Log Analytics hizmetine bağlayın** \
-  <https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents>
+- **Windows bilgisayarları Azure İzleyici'hizmetine bağlayın** \
+  <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
 - **Ne anlama gelir günlüğü: Semantik günlük uygulama bloğu kullanma** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>

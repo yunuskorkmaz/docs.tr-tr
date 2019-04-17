@@ -1,23 +1,23 @@
 ---
-title: Microsoft araçları ile docker uygulaması DevOps iş akışı
+title: Microsoft araçları ile Docker uygulaması DevOps iş akışı
 description: Microsoft araçları ile Microsoft Platformu ve araçları DevOps iş akışı ile kapsayıcı Docker uygulaması yaşam döngüsü
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663931"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672309"
 ---
-# <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft araçları ile docker uygulaması DevOps iş akışı
+# <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft araçları ile Docker uygulaması DevOps iş akışı
 
-*Microsoft Visual Studio, Azure DevOps Services, Team Foundation Server ve Application Insights, geliştirme ve takım projeleri yönetme ve hızlı bir şekilde oluşturun, test etmek ve dağıtmak için Araçlar verir BT işlemleri için kapsamlı bir ekosistem sağlar Kapsayıcılı uygulamaları.*
+*Microsoft Visual Studio, Azure DevOps Services, Team Foundation Server ve Azure İzleyici kapsamlı bir ekosistem, geliştirme ve takım projeleri yönetme ve hızlı bir şekilde oluşturun, araçları sunun BT işlemleri test etmek ve dağıtmak için kapsayıcılı hale sağlayın uygulamalar.*
 
 Visual Studio ve Azure DevOps hizmetleriyle birlikte Team Foundation Server şirket içi, bulut geliştirme ekipleri üretken bir şekilde derleme, test ve hedefleyen Windows veya Linux'ta kapsayıcılı uygulamaları yayınlayın.
 
-Microsoft araçları kapsayıcılı uygulamaların belirli uygulamalar için ardışık düzenini otomatik hale getirebilirsiniz: Docker, .NET Core ve diğer platformlarla herhangi bir birleşimini — genel yapılar ve sürekli tümleştirme (CI) ve Azure DevOps Services veya Team ile testleri Foundation Server için sürekli dağıtım (CD) Docker ortamlarını (hazırlama, geliştirme, üretim) ve Application Insights ile Geliştirme ekibine hizmetleri hakkında bilgi analytics iletmek için. Her kod işlemesinde bir derleme (CI) başlatabilir ve Hizmetleri belirli kapsayıcılı ortamlara (CD) otomatik olarak dağıtır.
+Microsoft araçları kapsayıcılı uygulamaların belirli uygulamalar için ardışık düzenini otomatik hale getirebilirsiniz: Docker, .NET Core ve diğer platformlarla herhangi bir birleşimini — genel yapılar ve sürekli tümleştirme (CI) ve Azure DevOps Services veya Team ile testleri Foundation Server için sürekli dağıtım (CD) Docker ortamlarını (hazırlama, geliştirme, üretim) ve Hizmetleri Azure İzleyici aracılığıyla Geliştirme ekibine hakkında analytics bilgi aktarmak için. Her kod işlemesinde bir derleme (CI) başlatabilir ve Hizmetleri belirli kapsayıcılı ortamlara (CD) otomatik olarak dağıtır.
 
 Geliştiricilere ve test edicilere kolayca ve hızlı bir şekilde Microsoft Azure'da şablonları kullanarak Docker tabanlı üretim ortamına benzer geliştirme ve test ortamları sağlayabilirsiniz.
 

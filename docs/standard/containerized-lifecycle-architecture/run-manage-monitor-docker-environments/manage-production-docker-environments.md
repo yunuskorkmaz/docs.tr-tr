@@ -4,12 +4,12 @@ description: Bir kapsayıcı tabanlı üretim ortamı yönetmek için önemli no
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3f8c51b95f52a655de470ac237c51dd4ee9c13eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836623"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672106"
 ---
 # <a name="manage-production-docker-environments"></a>Üretim Docker ortamlarını yönetme
 
@@ -30,7 +30,7 @@ Tablo 6-1, kendi düzenleyicileri, zamanlayıcılar ve kümeleme platformu ile i
 | [Kapsayıcılar için Azure İzleyici](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Adanmış Azure Kubernetes yönetim aracı | Azure Kubernetes hizmeti (AKS) |
 | [Kubernetes Web UI (dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes yönetim aracı, izleyebilir ve yerel Kubernetes kümesini yönetme | Azure Kubernetes Service'i (AKS)<br/>Yerel Kubernetes |
 | [Service Fabric için Azure portalı](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Azure'da, şirket içi, yerel geliştirme ve diğer bulutlarda Service Fabric kümelerini yönetmek için çevrimiçi ve Masaüstü sürümü | Azure Service Fabric |
-| [Kapsayıcı (Log Analytics'e) izleme](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Genel kapsayıcı Yönetimi y izleme çözümüdür. Kubernetes kümelerini aracılığıyla yönetebilirsiniz [kapsayıcılar için Azure İzleyici](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Azure Kubernetes Service'i (AKS)<br/>Mesosphere DC/OS ve diğerleri. |
+| [Kapsayıcı (Azure İzleyici) izleme](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Genel kapsayıcı Yönetimi y izleme çözümüdür. Kubernetes kümelerini aracılığıyla yönetebilirsiniz [kapsayıcılar için Azure İzleyici](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Azure Kubernetes Service'i (AKS)<br/>Mesosphere DC/OS ve diğerleri. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 

@@ -1,15 +1,15 @@
 ---
-title: Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
+title: Kapsayıcı uygulamaları için Microsoft platformu ve araçlarına giriş
 description: Docker uygulama yaşam döngüsü desteklemek için Microsoft'un teklifleri tanışın.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 811ebd46c97b53176bf8bb9e47a366575e273efb
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680206"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672270"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft Platformu ve araçları kapsayıcılı uygulamalar için giriş
 
@@ -17,7 +17,7 @@ ms.locfileid: "57680206"
 
 Şekil 3-1 temel yapı taşları birden çok takımı tarafından (uygulama geliştirme, DevOps altyapı işlemlerini ve BT yönetim ve işlemler) teslim iş türüne göre sınıflandırılmış Docker uygulama yaşam döngüsünü gösterir. Genellikle, kuruluştaki, "kişi" profiller farklı her alan için sorumlu. Bu nedenle becerilerini var.
 
-![Microsoft araçları. Geliştirme/tasarım iş yükü için: Windows, VS ve VS Code, .NET Core, Azure Kubernetes Service için docker altyapısı. Test/derleme/sevk iş yükü için: Azure DevOps, Team Foundation Server, Docker CLI, Azure Kubernetes hizmeti. İzleyici/Çalıştır/Yönet iş yükü için: Application Insights, Azure portalında Azure Kubernetes hizmeti, Service Fabric, diğer düzenleyiciler.](./media/image1.png)
+![Microsoft araçları. Geliştirme/tasarım iş yükü için: Windows, VS ve VS Code, .NET Core, Azure Kubernetes Service için docker altyapısı. Test/derleme/sevk iş yükü için: Azure DevOps, Team Foundation Server, Docker CLI, Azure Kubernetes hizmeti. İzleyici/Çalıştır/Yönet iş yükü için: Azure İzleyici, Azure portalında Azure Kubernetes hizmeti, Service Fabric, diğer düzenleyiciler.](./media/image1.png)
 
 **Şekil 3-1.** Yaşam döngüsünde Microsoft Platformu ve araçları ile kapsayıcılı Docker uygulamaları için temel yapı taşları
 
@@ -51,7 +51,7 @@ Microsoft Platformu ve kapsayıcılı Docker uygulamaları için Araçlar Tablo 
 
   - **Açık kaynak Araçları** nedeniyle AKS düzenleme altyapısı için standart API uç noktalarını kullanıma sunar, en popüler araçların AKS ile uyumludur ve çoğu durumda kullanıma hazır olarak çalışır; görselleştiriciler, izleme, dahil olmak üzere komut satırı araçları ve kullanıma sunuldukça hatta gelecekte kullanıma sunulacak araçlar.
 
-  - **Application Insights** olan Azure'nın soution her açısı, üretim ortamından izlemek için. Sistem tarafından oluşturulan günlük verileri uygulamalardan alabilmesi yalnızca kendi SDK hizmetlerinizi içine ayarlayarak üretim Docker uygulamalarını izleyebilirsiniz.
+  - **Azure İzleyici** olan Azure'nın çözüm, üretim ortamınızın her açıdan ele izlemek için. Sistem tarafından oluşturulan günlük verileri uygulamalardan alabilmesi yalnızca kendi SDK hizmetlerinizi içine ayarlayarak üretim Docker uygulamalarını izleyebilirsiniz.
 
 Bu nedenle, Microsoft, bir uçtan uca kapsayıcı Docker uygulaması yaşam döngüsü için tam bir temel sunar. Ancak, *koleksiyonu ürünleri ve isteğe bağlı olarak seçin ve var olan tümleştirme olanak tanıyan teknolojileri, araçları ve işler*. Özelliklerin ayrıntılı gücü ile birlikte geniş bir yaklaşım esneklik, kapsayıcılı Docker uygulama geliştirme için güçlü bir konumda Microsoft yerleştirin.
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308659"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672296"
 ---
 # <a name="c-operators"></a>C# işleçleri
 
@@ -159,6 +159,14 @@ Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde d
 
 [x &#124; y](or-operator.md) – mantıksal ve bit düzeyinde OR. Bu genellikle tamsayı türleri ile kullanabilirsiniz ve `enum` türleri.
 
+## <a name="true-operator"></a>true işleci
+
+[True](../keywords/true-false-operators.md) işleci döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle doğru olduğunu belirtmek için. 
+
+## <a name="false-operator"></a>false işleci
+
+[False](../keywords/true-false-operators.md) işleci döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle false olduğunu belirtmek için. 
+
 ## <a name="conditional-and-operator"></a>Koşullu AND işleci
 
 Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
@@ -213,7 +221,7 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C#](../../index.md)
 - [Aşırı Yüklenebilir İşleçler](../../programming-guide/statements-expressions-operators/overloadable-operators.md)

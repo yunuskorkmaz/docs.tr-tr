@@ -4,12 +4,12 @@ description: Sistem durumu izleme uygulama yollarından keşfedin.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 1ea4798c0d5bd2513867e5c59354c4e3d88612d9
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: deebcf6771d24be34050dd7fdfb807a681ebce1f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611477"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672210"
 ---
 # <a name="health-monitoring"></a>Sistem durumu izleme
 
@@ -269,23 +269,20 @@ Azure Service Fabric kendi sağladığını unutmayın [sistem durumu izleme mod
 
 İzleme son bölümü göre servis performansını raporlama ve bir sorun algılandığında uyarı olay akışını görselleştirme olduğu. Bu izleme açısını için farklı çözümler kullanabilirsiniz.
 
-Açıklayan gösterilen özel sayfa gibi hizmetlerinizin durumunu gösteren basit bir özel uygulamalar kullanabilir [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks). Ya da olayların akışa göre uyarıları artırmak için Azure Application Insights gibi daha gelişmiş araçları kullanabilirsiniz.
+Açıklayan gösterilen özel sayfa gibi hizmetlerinizin durumunu gösteren basit bir özel uygulamalar kullanabilir [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks). Veya gibi daha gelişmiş araçları kullanabilir [Azure İzleyici](https://azure.microsoft.com/services/monitor/) olayların akışa göre uyarıları yükseltmek için.
 
 Tüm olay akışlarını depoladığınız, son olarak, Microsoft Power BI veya Kibana veya Splunk gibi diğer çözümlerle verileri görselleştirmek için kullanabilirsiniz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
--   **HealthChecks ve ASP.NET Core HealthChecks kullanıcı Arabirimi**
-    [https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
+- **HealthChecks ve ASP.NET Core HealthChecks kullanıcı Arabirimi** \
+  <https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks>
 
--   **Service Fabric sistem durumu izlemeye giriş**
-    [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
+- **Service Fabric sistem durumu izlemeye giriş** \
+  [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure Application Insights**
-    <https://azure.microsoft.com/services/application-insights/>
-
--   **Microsoft Operations Management Suite'e**
-    <https://www.microsoft.com/en-us/cloud-platform/operations-management-suite>
+- **Azure İzleyici**
+  <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]
 >[Önceki](implement-circuit-breaker-pattern.md)

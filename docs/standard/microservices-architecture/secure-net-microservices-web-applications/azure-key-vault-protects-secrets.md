@@ -4,12 +4,12 @@ description: .NET mikro Hizmetleri ve Web uygulamaları - Azure Key Vault güven
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 6addede70ddee3168d4612aab80b0edd28e804c6
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 63bf357c95b82a820b6dfb6a2d24a5d89f66de72
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613778"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672426"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Üretim zamanında gizli dizileri korumak için Azure Key Vault'u kullanma
 
@@ -19,13 +19,13 @@ Ortam değişkenleri olarak depolanan veya gizli dizi Yöneticisi araç tarafın
 
 1. Uygulamanızı bir Azure AD uygulaması kaydedin. (Anahtar kasalarına erişimi, Azure AD tarafından yönetilir.) Bu Azure Yönetim Portalı aracılığıyla yapılabilir. \
 
-   Alternatif olarak, bir parola veya istemci gizli dizi yerine bir sertifika kullanarak kimlik doğrulaması için uygulamanızı isterseniz kullanabileceğiniz [yeni AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet'i. Yalnızca genel anahtarınızı Azure anahtar kasası ile kaydetmek bir sertifika gerekir. (Uygulamanızın özel anahtarı kullanır.)
+   Alternatif olarak, bir parola veya istemci gizli dizi yerine bir sertifika kullanarak kimlik doğrulaması için uygulamanızı isterseniz kullanabileceğiniz [yeni AzADApplication](/powershell/module/az.resources/new-azadapplication) PowerShell cmdlet'i. Yalnızca genel anahtarınızı Azure anahtar kasası ile kaydetmek bir sertifika gerekir. Uygulamanız, özel anahtarı kullanır.
 
 2. Kayıtlı uygulama erişimi, anahtar Kasası'na yeni hizmet sorumlusu oluşturma tarafından sağlar. Aşağıdaki PowerShell komutlarını kullanarak bunu yapabilirsiniz:
 
    ```powershell
-   $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
-   Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
+   $sp = New-AzADServicePrincipal -ApplicationId "<Application ID guid>"
+   Set-AzKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
    ```
 
 3. Anahtar kasası, uygulamanızın yapılandırma kaynağı olarak çağırarak dahil <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> oluşturduğunuzda genişletme yöntemi bir <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> örneği. Çağırmanın Not `AddAzureKeyVault` kayıtlı olan ve önceki adımlarda anahtar kasasına erişim verilen uygulama Kimliğini gerektirir.
