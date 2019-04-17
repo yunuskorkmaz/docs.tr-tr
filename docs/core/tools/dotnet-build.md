@@ -2,12 +2,12 @@
 title: DotNet oluşturma komutu
 description: Dotnet bir projeyi ve tüm bağımlılıklarını komut derlemeleri oluşturun.
 ms.date: 12/04/2018
-ms.openlocfilehash: 1e5e05d51f98394b2b77e3a8fc645cf9712b0a0f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6a701ee371221c780a878e64b996df95f709371f
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169716"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612699"
 ---
 # <a name="dotnet-build"></a>DotNet derleme
 
@@ -17,22 +17,26 @@ ms.locfileid: "53169716"
 
 `dotnet build` -Bir proje ve tüm bağımlılıklarını oluşturur.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 ```
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
     [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+
 ```
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
     [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>Açıklama
@@ -71,7 +75,7 @@ Derleme için proje veya çözüm dosyası. Bir proje veya çözüm dosyası bel
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 

@@ -3,15 +3,15 @@ title: Visual Studio 2012 için Kimlik ve Erişim Aracı
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: 9216298889637780e79d1bfc7ac060458c745968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 65d771b87cd3198848ffac387446abb17df18250
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170124"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611594"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Visual Studio 2012 için Kimlik ve Erişim Aracı
-Bu konuda, Visual Studio 11 için yeni Kimlik ve Erişim Aracı açıklanmaktadır. Bu araç şu URL'den indirin: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) veya doğrudan Visual Studio 11 uzantılar Yöneticisi'nde "kimlik" için arama yapın.  
+Bu konuda, Visual Studio 11 için yeni Kimlik ve Erişim Aracı açıklanmaktadır. Bu araç şu URL'den indirin: <https://go.microsoft.com/fwlink/?LinkID=245849> veya doğrudan Visual Studio 11 uzantılar Yöneticisi'nde "kimlik" için arama yapın.  
   
  Visual Studio 11 için Kimlik ve Erişim Aracı, aşağıdaki önemli özelliklerle birlikte önemli ölçüde basitleştirilmiş bir geliştirme zamanı deneyimi sağlar:  
   

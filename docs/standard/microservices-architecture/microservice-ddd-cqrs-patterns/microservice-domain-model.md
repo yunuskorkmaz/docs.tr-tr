@@ -1,15 +1,15 @@
 ---
-title: Bir mikro hizmet etki alan modeli tasarlama
+title: Mikro hizmet etki alan modeli tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | DDD odaklı bir etki alanı model tasarlarken, temel kavramları anlayın.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 7df274e90d5466581b6f93fe210b6c9310815833
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5c2ac880462851dd18735ced189b3641a759c8ca
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465899"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613063"
 ---
 # <a name="design-a-microservice-domain-model"></a>Bir mikro hizmet etki alanı modeli tasarlama
 
@@ -58,13 +58,13 @@ Bazı kişiler anemic etki alanı modeli önleyici bir düzeni olduğunu varsaya
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 - **DevIQ. Domain Entity** \
-  [https://deviq.com/entity/](https://deviq.com/entity/)
+  <https://deviq.com/entity/>
 
 - **Martin Fowler. Etki alanı modeli** \
-  [https://martinfowler.com/eaaCatalog/domainModel.html](https://martinfowler.com/eaaCatalog/domainModel.html)
+  <https://martinfowler.com/eaaCatalog/domainModel.html>
 
 - **Martin Fowler. Anemic etki alanı modeli** \
-  [https://martinfowler.com/bliki/AnemicDomainModel.html](https://martinfowler.com/bliki/AnemicDomainModel.html)
+  <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>Değer nesnesinin düzeni
 
@@ -83,16 +83,16 @@ EF Core 2.0 içerir [ait varlıklar](https://devblogs.microsoft.com/dotnet/annou
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Martin Fowler. Değer nesne düzeni** \
-  [https://martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html)
+  <https://martinfowler.com/bliki/ValueObject.html>
 
 - **Değer nesnesi** \
-  [https://deviq.com/value-object/](https://deviq.com/value-object/)
+  <https://deviq.com/value-object/>
 
 - **Değer nesnelerini Test odaklı geliştirme** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 - **Eric Evans. Etki alanı Odaklı Tasarım: Kuruluşlarda karmaşık yazılım kalbidir.** (Kitap; değer nesneleri hakkında ayrıntılı bilgi içerir) \
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>Toplama düzeni
 
@@ -145,13 +145,13 @@ Tanımlama ve toplamalar ile çalışma, araştırma ve deneyimi gerektirir. Dah
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Baş Grybniak. DDD Taktiksel tasarım desenleri** \
-  [https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+  <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
 - **Chris Richardson. Toplamlar kullanarak işlem mikro Hizmetleri Geliştirme** \
-  [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+  <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
 - **DevIQ. Toplama düzeni** \
-  [https://deviq.com/aggregate-pattern/](https://deviq.com/aggregate-pattern/)
+  <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
 >[Önceki](ddd-oriented-microservice.md)

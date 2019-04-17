@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610814"
+---
 # <a name="contributing"></a>Katkıda bulunan
 
 .NET belgeleri için katkıda bulunan İlginiz için teşekkür ederiz!
@@ -24,7 +32,7 @@ Sorunlar ve bu depolar için görevleri buraya izlenir.
 
 Temel bir anlayış ihtiyacınız [Git ve GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**1. adım:** Küçük değişiklikler için bu adımı atlayın. Yeni içerik yazma veya var olan içeriğin tamamen düzeltilmesi ilgileniyorsanız, açık bir [sorunu](https://github.com/dotnet/docs/issues) açıklayan ne yapmak istiyorsunuz.
+**1. adım:** (Örneğin, yazım hatası düzeltme veya hemen belgelere bulduğunuz bir sorunu gidermek için bir çekme isteği açma) küçük değişiklikler için bu adımı atlayın. Yeni içerik yazma veya var olan içeriğin tamamen düzeltilmesi ilgileniyorsanız, açık bir [sorunu](https://github.com/dotnet/docs/issues) açıklayan ne yapmak istiyorsunuz.
 İçindeki içeriği **docs** klasörü, tablo, içeriği (İçindekiler tablosunda) yansıtılır bölümlere düzenlenir. Konunun TOC'de nerede yer alır tanımlayın. Teklifiniz hakkında geri bildirim alın.
 
 -veya-

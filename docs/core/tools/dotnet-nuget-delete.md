@@ -3,12 +3,12 @@ title: DotNet nuget delete komutu
 description: Dotnet-nuget-delete komutu siler veya sunucu bir paketten unlists.
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: 827d295d7a52b6c9c82adbcf3d25281bd1cc98fd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: a657fa273ca6b5229a1713fbcaf003217a59fd7f
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168318"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612634"
 ---
 # <a name="dotnet-nuget-delete"></a>DotNet nuget Sil
 
@@ -18,20 +18,24 @@ ms.locfileid: "53168318"
 
 `dotnet nuget delete` -Siler veya sunucu bir paketten unlists.
 
-## <a name="synopsis"></a>Özeti
+## <a name="synopsis"></a>Synopsis
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 ```
 dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+
 ```
 dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
     [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>Açıklama
@@ -50,7 +54,7 @@ dotnet nuget delete [-h|--help]
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`--force-english-output`**
 

@@ -1,17 +1,17 @@
 ---
-title: Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
+title: Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 description: "\"Dış döngü\" DevOps iş akışının adımları öğrenin"
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 95664e20269f68a2eea5111b6c12ec7f108dc77b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 7193200d74eeac23e9cba11b3ed2056458c9984e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462987"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613024"
 ---
-# <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
+# <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 
 Şekil 5-1 bir uçtan uca gösterimi DevOps dış döngü iş akışı oluşturan adımları sunar.
 
@@ -90,13 +90,13 @@ Bu Visual Studio Team Services görevleri ile bir yapı Linux Docker konak/VM Az
 > [! Bilgi] Azure DevOps Hizmetleri Docker CI birleştirme hakkında daha fazla işlem hattı ve izlenecek yollar görüntülemek için bu siteleri ziyaret edin:
 >
 > - Bir Docker kapsayıcısı bir Visual Studio Team Services (artık Azure DevOps Hizmetleri) aracısını çalıştıran: \
->   [https://hub.docker.com/r/microsoft/vsts-agent/](https://hub.docker.com/r/microsoft/vsts-agent/)
+>   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
 > - Azure DevOps hizmetleriyle .NET Core Linux Docker görüntüleri oluşturma: \
->   [https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/](https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/)
+>   <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 >
 > - Bir Linux tabanlı Visual Studio Team Service oluşturma, Docker desteği makineyle derleme: \
->   [http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support](http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support)
+>   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>Tümleştirme, test etme ve çok kapsayıcılı Docker uygulamaları doğrula
 

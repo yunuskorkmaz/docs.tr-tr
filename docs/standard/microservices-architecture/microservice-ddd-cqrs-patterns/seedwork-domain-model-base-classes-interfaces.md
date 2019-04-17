@@ -1,17 +1,17 @@
 ---
-title: Seedwork (yeniden kullanılabilir sınıflar ve arabirimler etki alanı modeliniz için)
+title: Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Seedwork kavramı, uygulama için bir etki alanı DDD odaklı modeli başlatmak için bir başlangıç noktası olarak kullanın.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 38de5d686c17810f406a57d58554046ba2d888d9
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: bea2dbbc926f351179d11eaacd0dbb89fe036b12
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545734"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611074"
 ---
-# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (yeniden kullanılabilir sınıflar ve arabirimler etki alanı modeliniz için)
+# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (etki alanı modeliniz için yeniden kullanılabilir kök sınıflar ve arabirimler)
 
 Çözüm klasörü içeren bir *SeedWork* klasör. Bu klasör, etki alanı varlıklarının ve değer nesneleri için bir temel olarak kullanabileceğiniz özel taban sınıfları içerir. Her etki alanının nesne sınıfında gereksiz kod zorunda kalmazsınız temel sınıfların kullanın. Bu tür sınıflar için klasör adını *SeedWork* gibi bir şey *Framework*. Çağrıldığı *SeedWork* gerçekten bir çerçeve düşünülmez yeniden kullanılabilir sınıfları yalnızca küçük bir alt klasör içerdiği için. *Seedwork* bir terimi tarafından tanıtılan [Michael geçiş yumuşatma](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) ve tarafından popüler [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) ancak bu klasörün ortak SharedKernel, ayrıca adlandırabilirsiniz veya benzer.
 
@@ -140,7 +140,7 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Martin Fowler. Ayrılmış arabirimi.** \
-  [https://www.martinfowler.com/eaaCatalog/separatedInterface.html](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
+  <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]
 >[Önceki](net-core-microservice-domain-model.md)

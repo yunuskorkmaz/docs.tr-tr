@@ -4,24 +4,24 @@ description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamala
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: e89f1e79eec16919b2e70952392b6f640433156b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 2202e2f972951e4074ed1941f0a0cfe352ab4b85
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846265"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612959"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>İzlenecek yollar ve teknik başlangıca genel bakış
 
 Bu e-kitabı boyutunu sınırlamak için ek teknik belgeler ve tam yönergeler bir GitHub deposunda kullanılabilir yapıldı. Bu bölümde açıklanan yönergeler çevrimiçi bir dizi adım adım kurulumu Windows kapsayıcıları ve Azure'a dağıtılacak temel alan birden çok ortamın kapsar.
 
-Aşağıdaki bölümlerde hangi her izlenecek yol, hedefler ve üst düzey işleme hakkında ve söz konusu olan görevler bir diyagramını sunar açıklamaktadır. İzlenecek alabilirsiniz, *eShopModernizing* uygulamaları GitHub deposu wiki adresindeki [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki).
+Aşağıdaki bölümlerde hangi her izlenecek yol, hedefler ve üst düzey işleme hakkında ve söz konusu olan görevler bir diyagramını sunar açıklamaktadır. İzlenecek alabilirsiniz, *eShopModernizing* uygulamaları GitHub deposu wiki adresindeki <https://github.com/dotnet-architecture/eShopModernizing/wiki>.
 
 ## <a name="technical-walkthrough-list"></a>Teknik kılavuz listesi
 
 Get-started aşağıdaki izlenecek kaldırın ve kapsayıcıları kullanarak shift ve Azure'da birden fazla dağıtım seçeneği kullanılarak ettirin örnek uygulamalar için tutarlı ve kapsamlı teknik rehberlik sağlar.
 
-Her biri aşağıdaki izlenecek yollar github'da kullanılabilir olan yeni örnek eShopLegacy ve eShopModernizing uygulamaları kullanan [ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing).
+Her biri aşağıdaki izlenecek yollar github'da kullanılabilir olan yeni örnek eShopLegacy ve eShopModernizing uygulamaları kullanan <https://github.com/dotnet-architecture/eShopModernizing>.
 
 - **Elektronik Mağaza eski uygulamaları (modernize etme temel uygulamaları) turu**
 
@@ -136,7 +136,7 @@ Bu içerik daha derinlemesine GitHub Wiki'de keşfedin:
 
 ### <a name="technical-walkthrough-availability"></a>Teknik kılavuz kullanılabilirlik
 
-Tam Teknik Gözden geçirme eShopModernizing GitHub deposuna wikide kullanılabilir: [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+Tam Teknik Gözden geçirme eShopModernizing GitHub deposuna wikide kullanılabilir: <https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ### <a name="overview"></a>Genel Bakış
 
@@ -182,7 +182,7 @@ Windows kapsayıcıları, Azure'a dağıtırken şirket içi Windows Server 2016
 
 Bu içerik daha derinlemesine GitHub Wiki'de keşfedin:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>İzlenecek yol: 4: Windows kapsayıcı tabanlı uygulamalarınızı Azure Container Instances'a (ACI) dağıtma
 
@@ -228,7 +228,7 @@ Bu içerik daha derinlemesine GitHub Wiki'de keşfedin:
 
 Tam Teknik Gözden geçirme eShopModernizing GitHub deposuna wikide kullanılabilir:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
 
 ### <a name="overview"></a>Genel Bakış
 
@@ -280,7 +280,7 @@ Kubernetes ile geliştiriciler fiziksel ve sanal makineler hakkında düşünmey
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu içerik daha derinlemesine GitHub Wiki'de keşfedin: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+Bu içerik daha derinlemesine GitHub Wiki'de keşfedin: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
 
 ## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>İzlenecek yol: 6: Azure Service Fabric'e Windows kapsayıcıları tabanlı uygulamalarınızı dağıtın
 
@@ -288,7 +288,7 @@ Bu içerik daha derinlemesine GitHub Wiki'de keşfedin: [https://github.com/dotn
 
 Tam Teknik Gözden geçirme eShopModernizing GitHub deposuna wikide kullanılabilir:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 ### <a name="overview"></a>Genel Bakış
 
@@ -354,7 +354,7 @@ Aşağıdaki özellikleri (diğer düzenleyiciler için karşılaştırıldığ�
 
 Bu içerik daha derinlemesine GitHub Wiki'de keşfedin:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 > [!div class="step-by-step"]
 > [Önceki](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

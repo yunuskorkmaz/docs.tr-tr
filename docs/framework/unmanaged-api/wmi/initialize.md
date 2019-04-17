@@ -16,40 +16,45 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca8e87157a7adf45f35608aeba1067f2d66c8972
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7c71b2b6d6f102d19d30d480ee9bafcac3c204be
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081612"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611087"
 ---
 # <a name="initialize-function"></a>Initialize işlevi
-WMI başlatma gerçekleştirir.  
-  
+
+WMI başlatma gerçekleştirir.
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Sözdizimi 
-```  
+
+## <a name="syntax"></a>Sözdizimi
+
+```cpp
 HRESULT Initialize(
    [in] boolean bAllowIManagementObjectQI
-); 
-```  
+);
+```
+
 ## <a name="parameters"></a>Parametreler
 
-`bAllowIManagementObjectQI`   
+`bAllowIManagementObjectQI`
+
 [in] `true` QueryInterface çağrıları WMI nesnelerde izin verildiğini; göstermek için `false` Aksi takdirde.
 
 ## <a name="return-value"></a>Dönüş değeri
 
 İşlev her zaman döndürür `S_OK` (0).
-  
-## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Üst bilgi:** WMINet_Utils.def  
-  
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+
+## <a name="requirements"></a>Gereksinimler
+
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+
+**Üst bilgi:** WMINet_Utils.def
+
+**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

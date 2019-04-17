@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 160eba2c7249793592caf13622b01c597d7feec7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674399"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613869"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Mikro hizmet odaklı bir uygulama tasarlama
 
@@ -92,7 +92,7 @@ Bu nedenle, mikro hizmetler için (ve bu uygulamada veritabanları için bile) d
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **GitHub deposunu hizmetine. Başvuru uygulaması için kaynak kodu**\
-    [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
+    <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Mikro hizmet tabanlı bir çözüm avantajları
 

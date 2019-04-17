@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b7b0fcc9612994803bb23e985f44c483e708857
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140861"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613596"
 ---
 # <a name="attached-events-overview"></a>Ekli Olaylara Genel Bakış
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bir dil bileşeni ve adlı olayın türünü tanımlayan bir *ekli olay*. Ekli olay kavramını belirli bir olay işleyicisi gerçekten tanımlar veya olay devralan bir öğe yerine rastgele bir öğe eklemenize olanak tanır. Bu durumda, ne potansiyel olarak olayı tetiklenmeden nesnesi veya örneği işleme hedef tanımlar veya aksi takdirde olay "sahip".  
@@ -64,9 +64,9 @@ ms.locfileid: "59140861"
   
  Desen aşağıdaki gibidir:  
   
--   Bir yöntem **Ekle*EventName*işleyici** iki parametrelere sahip. İlk parametre olay tanımlamanız gerekir ve tanımlanan olay adları ile eşleşmelidir ***EventName*** yöntemi adı. İkinci parametre eklemek için işleyicisidir. Yöntem olmalıdır `public` ve `static`, dönüş değeri ile.  
+-   Bir yöntem **Ekle*EventName*işleyici** iki parametrelere sahip. İlk parametre, olay işleyicisi ekleneceği örneğidir. Olay işleyicisi eklemek için ikinci parametredir. Yöntem olmalıdır `public` ve `static`, dönüş değeri ile.  
   
--   Bir yöntem **Kaldır*EventName*işleyici** iki parametrelere sahip. İlk parametre olay tanımlamanız gerekir ve tanımlanan olay adları ile eşleşmelidir ***EventName*** yöntemi adı. Kaldırılacak işleyici ikinci parametredir. Yöntem olmalıdır `public` ve `static`, dönüş değeri ile.  
+-   Bir yöntem **Kaldır*EventName*işleyici** iki parametrelere sahip. İlk parametre, olay işleyicisi kaldırılır örneğidir. Kaldırılacak olay işleyicisi ikinci parametredir. Yöntem olmalıdır `public` ve `static`, dönüş değeri ile.  
   
  **Ekle*EventName*işleyici** erişimci yöntemi kolaylaştıran [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemesini ekli olay işleyicisi öznitelikleri bir öğe üzerinde bildirilir. **Ekle*EventName*işleyici** ve **Kaldır*EventName*işleyici** yöntemleri de olay işleyicisi deposu için kod erişimi etkinleştirme ekli olay.  
   
@@ -91,6 +91,6 @@ ms.locfileid: "59140861"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
 - [Ayrıntılı XAML Sözdizimi](xaml-syntax-in-detail.md)
 - [WPF için XAML ve Özel Sınıflar](xaml-and-custom-classes-for-wpf.md)

@@ -4,12 +4,12 @@ description: Farklar ve API ağ geçidi düzeni ve doğrudan istemci-mikro hizme
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 0e2db3629d504065a122a69b916f19aa3b838aab
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f1deb453519eec23e4c9bc8c19800e9caedf0c10
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462961"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611828"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Doğrudan istemci-mikro hizmet iletişimi ile API ağ geçidi düzeni
 
@@ -173,25 +173,25 @@ Ayrıca, Apigee, Kong, MuleSoft, WSO2, API ağ geçitleri özellikleri sunan paz
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Charles Uludağ. Desen: API ağ geçidi / arka uç için ön uç** \
-  [https://microservices.io/patterns/apigateway.html](https://microservices.io/patterns/apigateway.html)
+  <https://microservices.io/patterns/apigateway.html>
 
 - **API ağ geçidi düzeni** \
-  [https://docs.microsoft.com/azure/architecture/microservices/gateway](https://docs.microsoft.com/azure/architecture/microservices/gateway)
+  <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
 - **Toplama ve birleştirme deseni** \
-  [https://microservices.io/patterns/data/api-composition.html](https://microservices.io/patterns/data/api-composition.html)
+  <https://microservices.io/patterns/data/api-composition.html>
 
 - **Azure API Management** \
-  [https://azure.microsoft.com/services/api-management/](https://azure.microsoft.com/services/api-management/)
+  <https://azure.microsoft.com/services/api-management/>
 
 - **UDI Dahan. Hizmet yönelimli oluşturma** \
-  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 - **Clemens Vasters. Mesajlaşma ve mikro hizmetler, GOTO 2016 (video)** \
-  [https://www.youtube.com/watch?v=rXi5CLjIQ9k](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+  <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **API ağ geçidi kısaca** (ASP.net Core API ağ geçidi öğretici serisi) \
-  [https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
+  <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
 >[Önceki](identify-microservice-domain-model-boundaries.md)

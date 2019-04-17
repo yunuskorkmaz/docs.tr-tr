@@ -3,12 +3,12 @@ title: Lambda ifadeleri ve yerel işlevler
 description: Yerel işlevler lambda ifadeleri daha iyi bir seçim neden olabiliyor öğrenin.
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 17ad1e8782adbf9e0f892d72849e58ef9c5ddce1
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7577950314f8c57fba635db8b2bcd69e8d427dc3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125778"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611451"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Lambda ifadeleri karşılaştırma yerel işlevler
 
@@ -59,7 +59,7 @@ Yerel işlevler bu yüküne tabi değildir. Yukarıdaki örnekte, 2, lambda ifad
 > [!NOTE]
 > Bu yöntem yerel işlev denk bir sınıf Kapatılmak üzere de kullanır. Bir yerel işlevin kabini olarak uygulanıp bir `class` veya `struct` bir uygulama ayrıntısı olduğunu. Yerel bir işlev kullanabilir bir `struct` bir lambda her zaman kullanır ancak bir `class`.
 
-[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#29_TaskExample "Task returning method with local function")]
+[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 Bu örnekte gösterilmiştir değil son avantajlarından biri yerel işlevler kullanarak yineleyiciler uygulanabilir `yield return` değerler üretmek için söz dizimi. `yield return` Deyimi lambda ifadelerine izin verilmez.
 

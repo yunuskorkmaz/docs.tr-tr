@@ -1,15 +1,15 @@
 ---
-title: Altyapı Kalıcılık katmanını tasarlama
+title: Altyapı kalıcılık katmanını tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Depo düzeni altyapı Kalıcılık katmanını tasarımında keşfedin.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: c173d0049558ec0a752bc2aead9de9692ea28cf9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3e9c2ce0a332351f136dcd4dcb6d3da4f794a1eb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463065"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611022"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Altyapı Kalıcılık katmanını tasarlama
 
@@ -111,24 +111,24 @@ Depoları yararlı olabilir, ancak bunlar toplama düzeni ve zengin bir etki ala
 ### <a name="repository-pattern"></a>Depo düzeni
 
 - **Depo düzeni** \
-  [https://deviq.com/repository-pattern/](https://deviq.com/repository-pattern/)
+  <https://deviq.com/repository-pattern/>
 
 - **Edward Hieatt ve Rob bana. Depo deseni.** \
-  [https://martinfowler.com/eaaCatalog/repository.html](https://martinfowler.com/eaaCatalog/repository.html)
+  <https://martinfowler.com/eaaCatalog/repository.html>
 
 - **Depo düzeni** \
-  [https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
 - **Eric Evans. Etki alanı Odaklı Tasarım: Kuruluşlarda karmaşık yazılım kalbidir.** (Kitap; depo düzeni hakkında ayrıntılı bilgi içerir) \
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Çalışma deseni birimi
 
 - **Martin Fowler. Çalışma deseni birimidir.** \
-  [https://martinfowler.com/eaaCatalog/unitOfWork.html](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+  <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
 - **Bir ASP.NET MVC uygulamasındaki depo ve iş birimi desenleri uygulama** \
-  [https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
 >[Önceki](domain-events-design-implementation.md)

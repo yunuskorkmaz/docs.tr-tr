@@ -1,17 +1,17 @@
 ---
-title: Windows Identity Foundation 4.5 genel bakış
+title: Windows Identity Foundation 4.5’e Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
-ms.openlocfilehash: 41829bee3df3e47c0ccd712ecc9a314e5971aba0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6165dbf32b777a8d82e756f84ed2415d6ed3d774
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838994"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613039"
 ---
-# <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 genel bakış
-Windows Identity Foundation 4.5, uygulamalarınızda beyana dayalı kimlik uygulamak için kullanılan bir .NET Framework sınıf kümesidir. Bunu kullanarak, talep kullanan uygulama ve hizmetlerin avantajlarından daha kolay bir şekilde yararlanabilirsiniz. WIF 4.5, .NET Framework 4.5 veya sonraki sürümlerini kullanan herhangi bir Web uygulamasında veya Web hizmetinde kullanılabilir. WIF, Microsoft'un açık standartları temel alan ortak sektör vizyonunu uygulayan Federal Kimlik yazılım ailesinin bir parçasıdır. Federal Kimlik üç bileşenden oluşur: [Active Directory® Federasyon Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0 [Windows Azure erişim denetimi Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) ve WIF. Bu üç bileşen birlikte Microsoft'un yeni beyana dayalı bulut kimliği ve erişim platformunun merkezini oluşturur.  
+# <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5’e Genel Bakış
+Windows Identity Foundation 4.5, uygulamalarınızda beyana dayalı kimlik uygulamak için kullanılan bir .NET Framework sınıf kümesidir. Bunu kullanarak, talep kullanan uygulama ve hizmetlerin avantajlarından daha kolay bir şekilde yararlanabilirsiniz. WIF 4.5, .NET Framework 4.5 veya sonraki sürümlerini kullanan herhangi bir Web uygulamasında veya Web hizmetinde kullanılabilir. WIF, Microsoft'un açık standartları temel alan ortak sektör vizyonunu uygulayan Federal Kimlik yazılım ailesinin bir parçasıdır. Federal Kimlik üç bileşenden oluşur: [Etkin Directory® Federasyon Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0 [Windows Azure erişim denetimi Hizmetleri](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) ve WIF. Bu üç bileşen birlikte Microsoft'un yeni beyana dayalı bulut kimliği ve erişim platformunun merkezini oluşturur.  
   
  WIF hakkında daha fazla bilgi için bkz: [Windows Identity Foundation Web sitesi](https://go.microsoft.com/fwlink/?LinkId=149009) MSDN'de güvenlik Geliştirici Merkezi'ndeki. WIF kullanarak uygulamalar oluşturmaya giriş için bkz [Windows Identity Foundation'ı Programlama](https://go.microsoft.com/fwlink/?LinkId=210158) tarafından Vittorio Bertocci'nin (Microsoft Press tarafından yayımlanmıştır).  
   
@@ -28,7 +28,7 @@ Windows Identity Foundation 4.5, uygulamalarınızda beyana dayalı kimlik uygul
   
      Ayrıca, çerçeve Web tarayıcısı istemcileri sağlamak için WS-Federasyonu destekleyen STS oluşturma desteği de sağlar. Böyle bir STS'ye Edilgen STS de denir.  
   
--   Visual Studio 11 için uygulamanızı beyana dayalı kimlik ile güvenli hale getirmenizi ve birden fazla kimlik sağlayıcısından gelen kullanıcıları kabul etmenizi sağlayan yeni kimlik ve erişim aracı. Bu WIF aracını şu URL'den indirin: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) veya doğrudan Visual Studio 11 uzantılar Yöneticisi'nde "kimlik" için arama yapın. Daha fazla bilgi için [kimlik ve erişim aracı Visual Studio 2012 için](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+-   Visual Studio 11 için uygulamanızı beyana dayalı kimlik ile güvenli hale getirmenizi ve birden fazla kimlik sağlayıcısından gelen kullanıcıları kabul etmenizi sağlayan yeni kimlik ve erişim aracı. Bu WIF aracını şu URL'den indirin: <https://go.microsoft.com/fwlink/?LinkID=245849> veya doğrudan Visual Studio 11 uzantılar Yöneticisi'nde "kimlik" için arama yapın. Daha fazla bilgi için [kimlik ve erişim aracı Visual Studio 2012 için](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
  WIF aşağıdaki ana senaryoları destekler:  
   

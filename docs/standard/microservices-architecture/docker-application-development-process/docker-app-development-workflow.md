@@ -4,12 +4,12 @@ description: Docker tabanlı uygulamalar geliştirmek için iş akışının ayr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 3fb5c06f8ed58b45a3ee669931d8c3118b3dc314
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553881"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613375"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -64,7 +64,7 @@ Uygulamanızda Docker'ı etkinleştirme ve Docker sınama dağıtımı önce (ge
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **İçin Docker CE Windows ile çalışmaya başlama** \
-  [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
+  <https://docs.docker.com/docker-for-windows/>
 
 - **Visual Studio 2017** \
   [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
@@ -122,7 +122,7 @@ Dil ve çerçeve kullanmakta olduğunuz bağlı olarak bir Dockerfile içinde ek
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 - **Kendi görüntünüzü**. Resmi Docker belgelerinde. \
-  [https://docs.docker.com/engine/tutorials/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)
+  <https://docs.docker.com/engine/tutorials/dockerimages/>
 
 - **.NET ile kapsayıcı görüntülerini güncel kalma** \
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
@@ -290,10 +290,10 @@ Kendi Docker temel görüntüsünde sıfırdan oluşturabilirsiniz. Bu senaryo i
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **.NET Core görüntüleri çok yay**. \
-  [https://github.com/dotnet/announcements/issues/14](https://github.com/dotnet/announcements/issues/14)
+  <https://github.com/dotnet/announcements/issues/14>
 
 - **Temel görüntü oluşturma**. Resmi Docker belgelerine. \
-  [https://docs.docker.com/engine/userguide/eng-image/baseimages/](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
+  <https://docs.docker.com/develop/develop-images/baseimages/>
 
 ![3 - dockerfile'ları tanımlanan görüntüleri oluşturma](./media/image7.png)
 
@@ -485,7 +485,7 @@ Burada önemli olan nokta Şekil 5-12'de gösterildiği gibi Visual Studio 2017'
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **ASP.NET kapsayıcısını uzak Docker konağı için dağıtma** \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+  <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Test etme ve dağıtma düzenleyicilerle hakkında bir Not
 
@@ -522,10 +522,10 @@ Düzenleyici/CLI yaklaşımı kullanarak geliştiriyorsanız kapsayıcılarında
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Yerel bir Docker kapsayıcısı uygulamalarında hata ayıklama** \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+  [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
 
 - **Steve Lasker. Derleme, hata ayıklama, Docker ile ASP.NET Core uygulamaları dağıtın.** Video. \
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115>
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Visual Studio ile kapsayıcıları geliştirirken basitleştirilmiş bir iş akışı
 
@@ -540,7 +540,7 @@ Ayrıca, yalnızca bir kez (Docker desteği ekleme projelerinize) 2. adım gerç
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Steve Lasker. Visual Studio 2017 ile .NET docker geliştirme** \
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows kapsayıcıları ayarlamak için bir Dockerfile içinde PowerShell komutlarını kullanarak 
 
@@ -562,7 +562,7 @@ RUN powershell add-windowsfeature web-asp-net45
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **aspnet-docker/Dockerfile.** Windows özellikleri içerecek şekilde dockerfile'ları için örnek PowerShell komutları. \
-  [https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
+  <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)

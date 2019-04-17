@@ -4,12 +4,12 @@ description: Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamala
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2b987d43f476f261bfdbd1b2af6ca7f792178cf8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f9ff19c8e346560960a09d3b7c52976c478f2f3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266630"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612881"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Kaldırma ve var olan .NET uygulamalarını Azure Iaas (bulut altyapısını kullanıma hazır) için kaydırma
 
@@ -85,27 +85,27 @@ Site kurtarma kısmen özellikle karma ortamlar için de yapılan şirket içind
 
 - **Azure veri geçişi**
 
-    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
+    <https://aka.ms/azuremigration\_datasheet>
 
 - **Azure geçişi**
 
-    [https://aka.ms/azuremigrate](https://aka.ms/azuremigrate)
+    <https://aka.ms/azuremigrate>
 
 - **Azure geçiş Merkezi**
 
-    [https://azure.microsoft.com/migration/](https://azure.microsoft.com/migration/)
+    <https://azure.microsoft.com/migration/>
 
 - **Site Recovery ile azure'a geçirme**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure>
 
 - **Azure Site Recovery hizmetine genel bakış**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-overview>
 
 - **Azure VM'ler için AWS VM geçirme**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure>
 
 >[!div class="step-by-step"]
 >[Önceki](index.md)

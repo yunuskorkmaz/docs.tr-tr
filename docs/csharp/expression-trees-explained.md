@@ -3,12 +3,12 @@ title: İfade ağaçları açıklaması
 description: İfade ağaçları ve nasıl yürütmeden önce dış yürütme ve İnceleme kod çevirme algoritmaları yararlı oldukları hakkında bilgi edinin.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 012ea0dec85e6fba7581f4bc46a5e78da8c64708
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481437"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613427"
 ---
 # <a name="expression-trees-explained"></a>İfade ağaçları açıklaması
 
@@ -23,6 +23,7 @@ Bir kod satırı aşağıda verilmiştir:
 ```csharp
 var sum = 1 + 2;
 ```
+
 Bu bir ifade ağacı çözümlemek için olsaydı, birkaç düğüm ağacı içerir.
 Bir değişken bildirimi deyimiyle atama en dıştaki düğümüdür (`var sum = 1 + 2;`) en dıştaki düğüm birkaç alt düğümleri içerir: bir değişken bildirimi, bir atama işleci ve sağ tarafında eşittir işareti temsil eden bir ifade. İfade başka toplama işlemi ve ayrıca sol ve sağ işleneni temsil eden ifadelere alt bölümlere.
 

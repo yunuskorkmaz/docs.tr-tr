@@ -3,12 +3,12 @@ title: .NET Core araçları bağımlılıkları yönetme
 description: .NET Core araçları ile bağımlılıklarınızı yönetmesini açıklanmaktadır.
 ms.date: 03/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: 701100476b8b08aa4b0229bd0de30d02c54ddce9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ef2de666ee3e6a06ab62f45afe3c624bbbb44ac4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673879"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611933"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>.NET Core SDK'sı 1.0 ile bağımlılık Yönetimi
 
@@ -46,6 +46,7 @@ Bu örnekte bırakılan tarafından varsayılan şablonu kullanacağız `dotnet 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
+
 Bundan sonra biz projeyi kaydedin ve çalıştırın `dotnet restore` bağımlılık yüklemek için komutu. 
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

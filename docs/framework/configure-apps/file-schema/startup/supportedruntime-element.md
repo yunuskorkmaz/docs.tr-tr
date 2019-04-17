@@ -9,16 +9,16 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 93e69290062e1b82dddbb68f7a139763695a42fb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 98284b09c4f2b88cd434d66740ea068a7244e26d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271778"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614002"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > öğesi
 
-Uygulamanın hangi ortak dil çalışma zamanı sürümünü desteklediğini belirtir. Bu öğe, .NET Framework'ün 1.1 veya sonraki bir sürümüyle oluşturulan tüm uygulamaları tarafından kullanılmalıdır.  
+Hangi ortak dil çalışma zamanı sürüm ve isteğe bağlı olarak, uygulama .NET Framework sürümünü belirtir destekler.  
   
 [\<Yapılandırma >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
 &nbsp;&nbsp;[\<Başlangıç >](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
@@ -46,7 +46,9 @@ Varsa  **\<supportedRuntime >** öğesi uygulama yapılandırma dosyasında yoks
 > [!NOTE]
 >  Kullanırsanız [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) yapılandırma dosyasını belirtmek için işlev, kullanmanız gereken `<requiredRuntime>` çalışma zamanının tüm sürümleri için öğesi. `<supportedRuntime>` Öğesi yok sayıldı kullandığınızda [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
   
-Birden çok çalışma zamanı sürümleri desteklenir, ilk öğeyi çalışma zamanının en çok tercih edilen sürümü belirtmelidir ve son öğe en az belirtmeniz gerekir çalışma zamanını şuradan aracılığıyla 3.5, .NET Framework 1.1 sürümlerini destekleyen uygulamalar için tercih edilen sürümü. .NET Framework 4.0 veya sonraki sürümleri destekleyen uygulamalar için `version` öznitelik, bir .NET Framework 4 ve sonraki sürümler için ortak olan, CLR sürümünü gösterir ve `sku` öznitelik, tek bir .NET Framework sürümünü gösterir, uygulama hedefler.  
+Birden çok çalışma zamanı sürümleri desteklenir, ilk öğeyi çalışma zamanının en çok tercih edilen sürümü belirtmelidir ve son öğe en az belirtmeniz gerekir çalışma zamanını şuradan aracılığıyla 3.5, .NET Framework 1.1 sürümlerini destekleyen uygulamalar için tercih edilen sürümü. .NET Framework 4.0 veya sonraki sürümleri destekleyen uygulamalar için `version` öznitelik, bir .NET Framework 4 ve sonraki sürümler için ortak olan, CLR sürümünü gösterir ve `sku` öznitelik, tek bir .NET Framework sürümünü gösterir, Uygulama hedefler. 
+
+Varsa  **\<supportedRuntime >** öğeyle `sku` özniteliği yapılandırma dosyasında yoksa ve alt sonra belirtilen desteklenen sürümü, uygulama yüklenen .NET Framework sürümü değil çalıştırılacak başarısız olur ve bunun yerine'nın desteklenen sürümünü yüklemek soran bir ileti görüntüler. Aksi takdirde, uygulamanın yüklü tüm sürümlerde çalışır dener, ancak bu sürüm ile tam olarak uyumlu değilse, beklenmedik şekilde davranabilir. (.NET Framework sürümleri arasındaki uyumluluk farkları için bkz: [.NET Framework'te uygulama uyumluluğu](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility).) Bu nedenle, bu öğe daha kolay hata tanılama için uygulama yapılandırma dosyasında dahil öneririz. (Bunu otomatik olarak yeni bir proje oluştururken Visual Studio tarafından oluşturulan yapılandırma dosyası içerir.)
   
 > [!NOTE]
 >  Uygulamanız eski etkinleştirme yollarını gibi kullanıp kullanmadığını [CorBindToRuntimeEx işlevi](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), ve daha önceki bir sürümü yerine CLR'nin sürüm 4 etkinleştirmek için bu yollar istediğiniz veya uygulamanızı ileoluşturulmuşsa[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]bağımlılık vardır, ancak .NET Framework'ün önceki bir sürümüyle oluşturulmuş bir karma mod derleme üzerinde bu belirtmek yeterli değil [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] desteklenen çalışma zamanları listesinde. Buna ek olarak [ \<başlangıç > öğesi](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) yapılandırma dosyanızda ayarlamalısınız `useLegacyV2RuntimeActivationPolicy` özniteliğini `true`. Ancak, bu öznitelik ayarını `true` .NET Framework'ün önceki sürümleriyle oluşturulan tüm bileşenlerin kullanarak çalıştırıldığı anlamına gelir [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] birlikte oluşturuldukları çalışma zamanları yerine.  

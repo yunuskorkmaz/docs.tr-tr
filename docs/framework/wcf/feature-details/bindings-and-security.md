@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122154"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611922"
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
 Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağlamalar program WCF uygulamaları için hızlı bir yol sunar. Bunun tek istisnası, etkin bir varsayılan güvenlik düzeni tüm bağlamaları vardır. Bu konuda güvenlik ihtiyaçları için doğru bağlama seçmenize yardımcı olur.  
@@ -39,7 +39,7 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
 -   Web hizmeti geliştirmeleri (WSE) uygulamaları.  
   
--   Web hizmetlerini birlikte çalışabilirlik tanımlandığı gibi temel profilini (WS-ı) belirtimi ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955)).  
+-   Web hizmetlerini birlikte çalışabilirlik tanımlandığı gibi temel profilini (WS-ı) belirtimi (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
 -   WS içinde tanımlandığı gibi temel güvenlik profili-ediyorum.  
   
@@ -204,9 +204,9 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|Yok.|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
-|Temel|Temel kimlik doğrulaması. Daha fazla bilgi için HTTP kimlik doğrulaması RFC 2617 – bakın: Temel ve Özet kimlik doğrulaması, kullanılabilir [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Özet|Özet kimlik doğrulaması. Daha fazla bilgi için HTTP kimlik doğrulaması RFC 2617 – bakın: Temel ve Özet kimlik doğrulaması, kullanılabilir [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
+|None|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
+|Temel|Temel kimlik doğrulaması. Daha fazla bilgi için HTTP kimlik doğrulaması RFC 2617 – bakın: Temel ve Özet kimlik doğrulaması, kullanılabilir <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
+|Özet|Özet kimlik doğrulaması. Daha fazla bilgi için HTTP kimlik doğrulaması RFC 2617 – bakın: Temel ve Özet kimlik doğrulaması, kullanılabilir <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
 |NTLM|NT LAN Manager (NTLM) kimlik doğrulaması.|  
 |Windows|Windows kimlik doğrulaması.|  
 |Sertifika|Kimlik doğrulaması, bir sertifika kullanılarak gerçekleştirilir.|  
@@ -217,7 +217,7 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
 |Tür|Açıklama|  
 |----------|-----------------|  
-|Yok.|Anonim istemci ile etkileşim kurmak hizmet sağlar.|  
+|None|Anonim istemci ile etkileşim kurmak hizmet sağlar.|  
 |Windows|Windows kimlik bilgisi kimliği doğrulanmış bağlamında yapılması SOAP ileti alışverişlerinde sağlar.|  
 |UserName|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir kullanıcı adı kimlik bilgisi. Güvenlik modu ayarlandığında unutmayın `TransportWithMessageCredential`, WCF parola ve bu anahtarları kullanarak ileti modu güvenliği için Özet veya türetme anahtarı parola gönderme desteklemez. Bu nedenle, WCF aktarma kullanıcı adı kimlik bilgilerini kullanarak güvenli zorlar.|  
 |Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir sertifika.|  
@@ -225,7 +225,7 @@ Windows Communication Foundation (WCF) dahil sistem tarafından sağlanan bağla
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Kimlik Bilgisi Türü Seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Özel Bağlamalarla Güvenlik Özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)

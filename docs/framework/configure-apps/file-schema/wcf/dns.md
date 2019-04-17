@@ -2,12 +2,12 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: ce12d0a82c8a443994559ed772496897f359b4e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 26b45b17ecd7bbd3fffb5d03553834ec22eedc62
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166679"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611178"
 ---
 # <a name="dns"></a>\<dns>
 Sunucunun beklenen kimliğini belirtir. Bu kimlik için X509 geçerli sunucu sertifikasının aynı değere sahip bir DNS içeriyorsa, sertifika kimlik doğrulama modu. SPN aynı değere sahipse, ayrıca Windows kimlik doğrulama modu için geçerlidir.  
@@ -30,7 +30,7 @@ Sunucunun beklenen kimliğini belirtir. Bu kimlik için X509 geçerli sunucu ser
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|value|Sertifika DNS'i. DNS, IP tabanlı bir ağda bilgisayarların yerini bulmak için kullanılan bir endüstri standardı protokolüdür. Kullanıcılar unutmayın görünen adları gibi [ https://go.microsoft.com/fwlink/?prd=10929 ](https://go.microsoft.com/fwlink/?prd=10929) veya [ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165), 207.46.131.137 gibi sayı tabanlı adreslerini daha kolay.|  
+|value|Sertifika DNS'i. DNS, IP tabanlı bir ağda bilgisayarların yerini bulmak için kullanılan bir endüstri standardı protokolüdür. Kullanıcılar unutmayın görünen adları gibi <https://go.microsoft.com/fwlink/?prd=10929> veya [ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165), 207.46.131.137 gibi sayı tabanlı adreslerini daha kolay.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

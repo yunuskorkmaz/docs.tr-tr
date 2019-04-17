@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 257fa2cf03a62ea888b76519aa5c9f9e84038045
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8b468d40ef8eb523ba8881627fae15cf9b7c7b80
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126509"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614028"
 ---
 # <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess::GetAppDomainByUniqueId Method
 
@@ -29,7 +29,8 @@ Alır bir `AppDomain` bir işlemde kendi benzersiz tanımlayıcısına göre.
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="syntax"></a>Sözdizimi
-```
+
+```cpp
 HRESULT GetAppDomainByUniqueID(
     [in] ULONG64               id,
     [out] IXCLRDataAppDomain **appDomain
@@ -49,12 +50,11 @@ HRESULT GetAppDomainByUniqueID(
 Sağlanan yöntem parçasıdır `IXCLRDataProcess` arabirim ve sanal yöntem tablosunu 20 yuvaya karşılık gelir. `IXCLRDataAppDomain*` Döndürülen diğer API'ler ile etkileşim için kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** Yok.  
-**Kitaplığı:** Yok.  
-**.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+
+**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Üst bilgi:** Hiçbiri **kitaplığı:** Hiçbiri **.NET Framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hata Ayıklama](index.md)
-- [IXCLRDataProcess Arabirimi](ixclrdataprocess-interface.md)
+- [IXCLRDataProcess arabirimi](ixclrdataprocess-interface.md)

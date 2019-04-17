@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 086be4649f4e7e27ff98df6f26d08856683865c8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341731"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611789"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Önizleme 2) yenilikler
 
@@ -63,7 +63,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -166,20 +166,20 @@ Sırasında `dotnet build` veya `dotnet publish`, kullanmakta olduğunuz SDK pla
 
 ## <a name="build-copies-dependencies"></a>Derleme bağımlılıkları kopyalar.
 
-`dotnet build` artık uygulamanız için NuGet bağımlılıklarını NuGet önbellekten yapı çıktı klasörüne kopyalar. Daha önce bağımlılıkları parçası olarak yalnızca kopyalanan `dotnet publish`. 
+`dotnet build` artık uygulamanız için NuGet bağımlılıklarını NuGet önbellekten yapı çıktı klasörüne kopyalar. Daha önce bağımlılıkları parçası olarak yalnızca kopyalanan `dotnet publish`.
 
 Yayımlama, yayınlama, bağlama ve razor sayfası hala gerektirir gibi bazı işlemler vardır.
 
 ## <a name="local-dotnet-tools"></a>Yerel dotnet araçları
 
->[!WARNING]
->.NET Core 3.0 Önizleme 2 ile .NET Core 3.0 Önizleme 1 ila yerel .NET Core Araçları'nda bir değişiklik yoktu.  Yerel araçları Preview 1'çıkış gibi bir komut çalıştırarak çalıştığınız varsa `dotnet tool restore` veya `dotnet tool install`, yerel araçları Önizleme 2'de doğru çalışmadan önce yerel Araçlar önbellek klasörünü silin gerekir. Bu klasör şu konumdadır:
+> [!WARNING]
+> .NET Core 3.0 Önizleme 2 ile .NET Core 3.0 Önizleme 1 ila yerel .NET Core Araçları'nda bir değişiklik yoktu.  Yerel araçları Preview 1'çıkış gibi bir komut çalıştırarak çalıştığınız varsa `dotnet tool restore` veya `dotnet tool install`, yerel araçları Önizleme 2'de doğru çalışmadan önce yerel Araçlar önbellek klasörünü silin gerekir. Bu klasör şu konumdadır:
 >
->Mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
+> Mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
 >
->Windows'da: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+> Windows üzerinde: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
->Bu klasör silmezseniz, hata alırsınız.
+> Bu klasör silmezseniz, hata alırsınız.
 
 .NET Core 2.1 genel araçları destekleniyorsa, .NET Core 3.0 artık yerel araçlara sahiptir. Yerel Araçlar genel araçları benzerdir, ancak disk üzerindeki belirli bir konum ile ilişkilidir. Bu, proje başına ve havuz başına araçlar sağlar. Yerel olarak yüklü herhangi bir aracı genel olarak kullanılabilir değil. Araçlar NuGet paketleri olarak dağıtılır.
 
@@ -309,10 +309,12 @@ Geri bildiriminizi Lütfen paylaşım [dotnet/winforms](https://github.com/dotne
 
 [Windows uygulaması paketleme projesi](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), Visual Studio 2019 bulunan MSIX paketlerle oluşturmanıza olanak tanır [müstakil](../deploying/index.md#self-contained-deployments-scd) .NET Core uygulamaları.
 
->Not: .NET Core proje dosyası içinde desteklenen çalışma zamanları belirtmelisiniz `<RuntimeIdentifiers>` özelliği:
-```xml
-<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-```
+> [!NOTE]
+> .NET Core proje dosyası içinde desteklenen çalışma zamanları belirtmelisiniz `<RuntimeIdentifiers>` özelliği:
+>
+> ```xml
+> <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+> ```
 
 ## <a name="fast-built-in-json-support"></a>Hızlı yerleşik JSON desteği
 
@@ -421,7 +423,7 @@ static int WriteJson(IBufferWriter<byte> output, long[] extraData)
 }
 ```
 
-`Utf8JsonWriter` Kabul `IBufferWriter<byte>` zaman uyumlu olarak json verilerini yazmak için çıkış konumunu ve çağıran olarak gibi somut bir uygulama sunmak amacıyla gerekir. Platform şu anda bu arabirimi uygulaması içermez. Bir örneği `IBufferWriter<byte>`, bkz: [https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35](https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35)
+`Utf8JsonWriter` Kabul `IBufferWriter<byte>` zaman uyumlu olarak json verilerini yazmak için çıkış konumunu ve çağıran olarak gibi somut bir uygulama sunmak amacıyla gerekir. Platform şu anda bu arabirimi uygulaması içermez. Bir örneği `IBufferWriter<byte>`, bkz: <https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35>.
 
 ### <a name="jsondocument"></a>JsonDocument
 
@@ -466,7 +468,7 @@ Derleme unloadability, yeni bir özellik olan `AssemblyLoadContext`. Bu yeni öz
 
 Bu yeni özellik, benzer senaryoları için kullanılabilir:
 
-* Yükleme ve kaldırma dinamik eklenti gerekli olduğu senaryolar eklentisi. 
+* Yükleme ve kaldırma dinamik eklenti gerekli olduğu senaryolar eklentisi.
 * Dinamik derleme, çalışan ve sonra kodu temizleme. Web siteleri, komut dosyası motorları, vb. için kullanışlıdır.
 * Derlemeler için iç denetim (gibi ReflectionOnlyLoad), ancak Yükleniyor [MetadataLoadContext](#type-metadataloadcontext) (Önizleme 1'de yayımlanan) daha iyi bir seçenek çoğu durumda olacaktır.
 
@@ -484,7 +486,7 @@ COM ile kullanma örneği gördüğünüz [Excel Demo kaynak kodu](https://githu
 
 ## <a name="type-sequencereader"></a>Tür: SequenceReader
 
-.NET Core 3. 0'da, `System.Buffers.SequenceReader` Okuyucu için olarak kullanılabilecek eklendi `ReadOnlySequence<T>`. Hızlı, yüksek performanslı, böylece düşük ayırma çözümlenmesi `System.IO.Pipelines` birden çok yedekleme arabellekler çapraz veri. 
+.NET Core 3. 0'da, `System.Buffers.SequenceReader` Okuyucu için olarak kullanılabilecek eklendi `ReadOnlySequence<T>`. Hızlı, yüksek performanslı, böylece düşük ayırma çözümlenmesi `System.IO.Pipelines` birden çok yedekleme arabellekler çapraz veri.
 
 Aşağıdaki örnek bir girişi sonu `Sequence` geçerli içine `CR/LF` satırları ayrılmış:
 
@@ -663,7 +665,7 @@ namespace rsakeyprint
             {
                 byte[] keyBytes = File.ReadAllBytes(args[0]);
                 rsa.ImportRSAPrivateKey(keyBytes, out int bytesRead);
- 
+
                 Console.WriteLine($"Read {bytesRead} bytes, {keyBytes.Length-bytesRead} extra byte(s) in file.");
                 RSAParameters rsaParameters = rsa.ExportParameters(true);
                 Console.WriteLine(BitConverter.ToString(rsaParameters.D));
@@ -709,7 +711,7 @@ Daha önce yalnızca kullanarak desteklenen .NET Core `SerialPort` Windows tür�
 
 ## <a name="more-bcl-improvements"></a>Daha fazla BCL geliştirmeleri
 
-`Span<T>`, `Memory<T>`, Ve .NET Core 2.1 içinde tanıtılan ilgili türleri de .NET Core 3.0 için iyileştirilmiş. Sık kullanılan işlemler gibi yapı span, dilimleme, ayrıştırma ve biçimlendirme artık daha iyi gerçekleştirin. 
+`Span<T>`, `Memory<T>`, Ve .NET Core 2.1 içinde tanıtılan ilgili türleri de .NET Core 3.0 için iyileştirilmiş. Sık kullanılan işlemler gibi yapı span, dilimleme, ayrıştırma ve biçimlendirme artık daha iyi gerçekleştirin.
 
 Ayrıca, türleri ister `String` anahtarlarla olarak kullanıldığında daha verimli hale getirmek için altında--kapak geliştirmeleri gördünüz `Dictionary<TKey, TValue>` ve diğer koleksiyonları. Kod değişikliği olmadan bu iyileştirmeleri yararlanmak için gereklidir.
 
@@ -751,7 +753,7 @@ Sisteminizde ek yapılandırdıktan sonra yüklemek için aşağıdaki komutu ç
 ```console
 sudo snap install dotnet-sdk --beta --classic
 ```
- 
+
 Ek paket yüklü kullanarak .NET Core, varsayılan .NET Core komut olduğunda `dotnet-sdk.dotnet`tam olarak `dotnet`. Namespaced komutun etkinleştirmiş olabilirsiniz genel olarak yüklenmiş bir .NET Core sürümle çakışmayacağı avantajdır. Bu komut için diğer adlı olarak `dotnet` ile:
 
 ```console

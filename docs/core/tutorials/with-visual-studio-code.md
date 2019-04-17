@@ -4,12 +4,12 @@ description: Oluşturma ve C# Visual Studio Code kullanarak ilk .NET Core uygula
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890559"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613453"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# ve Visual Studio Code kullanmaya başlama
 
@@ -93,6 +93,7 @@ ms.locfileid: "58890559"
 1. Yeni bir sınıf sağ tıklatın VSCode Gezgini'nde ekleyin ve seçmek için **yeni dosya**. Bu, VSCode içinde açtığınız klasöre yeni bir dosya ekler.
 2. Dosyanızın adı `MyClass.cs`. İle kaydetmelisiniz bir `.cs` uzantısı için bir csharp dosyası olarak tanınması için sonunda.
 3. İlk sınıfınıza oluşturmak için aşağıdaki kodu ekleyin. Buradan başvurabilmeniz için doğru ad alanını eklediğinizden emin olun, `Program.cs` dosya.
+
 ``` csharp
 using System;
 
@@ -127,6 +128,7 @@ namespace HelloWorld
 ```
 
 5. Yaptığınız değişiklikleri kaydedin ve programınızı tekrar çalıştırın. Eklenen dize ile yeni iletinin görüntülenmesi gerekir.
+
 ```console
 > dotnet run
 Hello World! Happy coding!

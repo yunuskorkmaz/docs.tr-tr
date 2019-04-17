@@ -2,12 +2,12 @@
 title: DotNet Paketi komutu
 description: Dotnet paketi komut, .NET Core projesi için NuGet paketlerini oluşturur.
 ms.date: 12/04/2018
-ms.openlocfilehash: 4b665140f7c660c5851fb68b07ecec2d9391b925
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 6ee987576e29d366bd6821d2757965454411adea
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464482"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611971"
 ---
 # <a name="dotnet-pack"></a>DotNet paketi
 
@@ -20,17 +20,21 @@ ms.locfileid: "58464482"
 ## <a name="synopsis"></a>Synopsis
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
     [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>Açıklama
@@ -109,6 +113,7 @@ MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işlemi için komutu.
 
 > [!NOTE]
 > Web projeleri, varsayılan olarak packable değildir. Varsayılan davranışı geçersiz kılmak için aşağıdaki özelliği ekleyin, *.csproj* dosyası:
+>
 > ```xml
 > <PropertyGroup>
 >    <IsPackable>true</IsPackable>

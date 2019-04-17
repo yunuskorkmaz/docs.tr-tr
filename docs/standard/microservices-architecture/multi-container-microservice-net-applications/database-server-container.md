@@ -1,17 +1,17 @@
 ---
-title: Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
+title: Kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Bir kapsayıcı olarak çalışan bir veritabanı sunucusu mi kullanıyorsunuz? yalnızca geliştirme için! Nedenini anlamak.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463351"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611282"
 ---
-# <a name="using-a-database-server-running-as-a-container"></a>Bir kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
+# <a name="using-a-database-server-running-as-a-container"></a>Kapsayıcı olarak çalışan bir veritabanı sunucusu kullanma
 
 Normal bir tek başına sunucular, şirket içi kümelerle ya da Azure SQL DB gibi bir bulut PaaS Hizmetleri, veritabanları (SQL Server, PostgreSQL, MySQL vb.) olabilir. Ancak, geliştirme ve test ortamları için kapsayıcı olarak kullanışlı, herhangi bir dış bağımlılık olmadığı için çalışan ve yalnızca çalışan veritabanlarınızı sahip `docker-compose up` komut tüm uygulamayı başlatır. Veritabanı kapsayıcısında başlatıldı ve testler daha öngörülebilir olabilir. Bu nedenle her zaman aynı örnek verilerle doldurulur kapsayıcıları olarak bu veritabanına sahip olmanın da tümleştirme testleri için harika olmasıdır.
 
@@ -48,10 +48,10 @@ Bir kapsayıcı çalışan SQL Server sahip olduğu SQL Server örneğine erişi
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Linux, Mac veya Windows üzerinde SQL Server Docker görüntüsünü çalıştırma** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
 - **Bağlanma ve Linux'ta SQL Server sqlcmd ile sorgulama** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Web uygulama başlatma verileriyle test üretme
 
@@ -165,7 +165,7 @@ Ancak, üretim ortamında Redis çalıştırdığınızda, Redis Microsoft bir P
 
 Redis, Redis ile bir Docker görüntüsü sağlar. Bu görüntüyü Docker hub'dan bu URL'de kullanılabilir:
 
-[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
+<https://hub.docker.com/\_/redis/>
 
 Doğrudan komut isteminde aşağıdaki Docker CLI komutunu yürüterek bir Redis Docker kapsayıcısı çalıştırabilirsiniz:
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309491"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613258"
 ---
 # <a name="com-callable-wrapper"></a>COM Aranabilir Sarmalayıcısı
 
@@ -53,7 +53,7 @@ Açıkça yönetilen bir ortamda bir sınıf tarafından uygulanan arabirimler g
 |---------------|-----------------|
 |**IDispatch**|Geç bağlama türü bir mekanizma sağlar.|
 |**IErrorInfo**|Hata, kaynağı, bir Yardım dosyası, Yardım bağlamı ve hata tanımlı arabiriminin GUID'si değerinin metinsel bir açıklaması verilmiştir (her zaman **GUID_NULL** .NET sınıfları için).|
-|**Iprovideclassınfo**|Erişim elde etmek COM istemcileri etkinleştirir **ITypeInfo** yönetilen bir sınıf tarafından uygulanan arabirimi.|
+|**IProvideClassInfo**|Erişim elde etmek COM istemcileri etkinleştirir **ITypeInfo** yönetilen bir sınıf tarafından uygulanan arabirimi.|
 |**ISupportErrorInfo**|Yönetilen Nesne destekleyip desteklemediğini belirlemek üzere bir COM istemcisi sağlayan **IErrorInfo** arabirimi. Bu durumda, istemcinin en son özel durum nesnesine bir işaretçi alma sağlar. Tüm yönetilen türleri desteği **IErrorInfo** arabirimi.|
 |**ITypeInfo**|Tlbexp.exe tarafından üretilen tür bilgilerini tam olarak aynıdır bir sınıf için tür bilgisini sağlar.|
 |**IUnknown**|Standart uygulamasını sağlar **IUnknown** arabirimi hangi COM istemcisi CCW ömrünü yönetir ve türü zorlama sağlar.|
@@ -182,7 +182,7 @@ DISPID arabirim üyesini çalışma zamanında almak için COM istemcileri çağ
 
 Çift arabirimler COM istemcileri tarafından arabirim üyeleri erken ve geç bağlama etkinleştirin. Tasarım zamanında ve test sırasında sınıf arabirimi için çift ayarlamak yararlı olabilir. Yönetilen bir sınıf (ve temel sınıfları) hiçbir zaman olacak değiştirilmiş, bu da kabul edilebilir bir seçenektir. Diğer tüm durumlarda, sınıf arabirimi çift ayarlamaktan kaçının.
 
-Otomatik olarak oluşturulan bir çift arabirim nadir durumlarda uygun olabilir; Ancak, daha sık bu sürümü ile ilgili karmaşıklığı oluşturur. Örneğin, türetilmiş bir sınıfın sınıf arabirimi kullanarak COM istemcilerinde değişikliklerle kolayca temel sınıfa bozabilir. Bir üçüncü taraf taban sınıfı sağlar, sınıf arabirimi düzenini denetiminiz dışında değildir. Daha fazla, yalnızca gönderme arabirimi çift arabirim (**ClassInterfaceType.AutoDual**) sınıf arabirimi dışarı aktarılan Tür Kitaplığı'nda bir açıklaması verilmiştir. Böyle bir açıklamasını, çalışma zamanında önbelleğe DISPID değeri geç bağlanan istemciler teşvik eder.
+Otomatik olarak oluşturulan bir çift arabirim nadir durumlarda uygun olabilir; Ancak, daha sık bu sürümü ile ilgili karmaşıklığı oluşturur. Örneğin, türetilmiş bir sınıfın sınıf arabirimi kullanarak COM istemcilerinde değişikliklerle kolayca temel sınıfa bozabilir. Bir üçüncü taraf taban sınıfı sağlar, sınıf arabirimi düzenini denetiminiz dışında değildir. Daha fazla, yalnızca gönderme arabirimi çift arabirim (**ClassInterfaceType.AutoDual**) sınıf arabirimi dışarı aktarılan Tür Kitaplığı'nda bir açıklaması verilmiştir. Böyle bir açıklamasını, geç bağlanan istemciler DISPID değeri, derleme zamanı önbelleğe teşvik eder.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Tüm COM olay bildirimleri geç bağlanan olduğundan emin olun.
 
@@ -199,5 +199,5 @@ Uygulamanıza erken bağlanan çağrılar COM olay arabirim yöntemleri için ge
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [COM Sarmalayıcıları](com-wrappers.md)
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
-- [Birlikte Çalışma için Niteleyici .NET Türleri](qualifying-net-types-for-interoperation.md)
-- [Çalışma Zamanı Aranabilir Sarmalayıcısı](runtime-callable-wrapper.md)
+- [Birlikte Çalışma için .NET Türlerini Niteleme](qualifying-net-types-for-interoperation.md)
+- [Çalışma Zamanında Çağrılabilir Sarmalayıcı](runtime-callable-wrapper.md)

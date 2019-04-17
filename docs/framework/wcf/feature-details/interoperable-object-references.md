@@ -1,21 +1,21 @@
 ---
-title: Birlikte Çalışabilir Nesne Başvuruları
-ms.date: 03/30/2017
+title: Birlikte çalışabilir nesne başvuruları
+ms.date: 04/15/2019
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: 9cbbd5a34269a7c4a5c33d72487a02df21f2f0fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ada9084f6ac3c97dc641571c0cb8379a2fac68a8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222711"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610645"
 ---
-# <a name="interoperable-object-references"></a>Birlikte Çalışabilir Nesne Başvuruları
-Varsayılan olarak <xref:System.Runtime.Serialization.DataContractSerializer> nesneleri değerine göre serileştirir. Kullanabileceğiniz <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> türe ait nesneleri serileştirilirken nesne başvuruları korumak için veri sözleşmesi serileştiricisi istemek için özellik.  
+# <a name="interoperable-object-references"></a>Birlikte çalışabilir nesne başvuruları
+Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> nesneleri değerine göre serileştirir. Kullanabileceğiniz <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> bildirmesine nesne serileştirilirken nesne başvuruları korumak için veri sözleşmesi serileştiricisi özelliği.  
   
 ## <a name="generated-xml"></a>Oluşturulan XML  
  Örneğin, şu nesne göz önünde bulundurun:  
   
-```  
+```csharp  
 [DataContract]  
 public class X  
 {  
@@ -45,58 +45,47 @@ public class SomeClass
 ```xml  
 <X>  
    <A id="1">contents of someInstance</A>  
-   <B ref="1" />  
+   <B ref="1"></B>  
 </X>  
 ```  
   
- Ancak, <xref:System.Runtime.Serialization.XsdDataContractExporter> açıklanmayan `id` ve `ref` ve şeması özniteliklerinde bile `preserveObjectReferences` özelliği `true`.  
+ Ancak, <xref:System.Runtime.Serialization.XsdDataContractExporter> açıklanmamaktadır `id` ve `ref` ve şeması özniteliklerinde bile `preserveObjectReferences` özelliği `true`.  
   
 ## <a name="using-isreference"></a>IsReference kullanma  
- Tanımladığı şemaya göre geçerli nesne başvuru bilgisi oluşturmak için uygulama <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği bir türe ve ayarlama <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> bayrak `true`. Kullanarak `IsReference` önceki örnek sınıfında `X`:  
+ Tanımladığı şemaya göre geçerli nesne başvuru bilgisi oluşturmak için uygulama <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği bir türe ve ayarlama <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> bayrak `true`. Aşağıdaki örnek, sınıf değiştirir `X` ekleyerek önceki örnekte `IsReference`:  
   
- `[DataContract(IsReference=true)] public class X`  
+```csharp
+[DataContract(IsReference=true)]
+public class X   
+{  
+     SomeClass someInstance = new SomeClass(); 
+     [DataMember]
+     public SomeClass A = someInstance;
+     [DataMember] 
+     public SomeClass B = someInstance;
+}
   
- `{`  
-  
- `SomeClass someInstance = new SomeClass();`  
-  
- `[DataMember]`  
-  
- `public SomeClass A = someInstance;`  
-  
- `[DataMember]`  
-  
- `public SomeClass B = someInstance;`  
-  
- `}`  
-  
- `public class SomeClass`  
-  
- `{`  
-  
- `}`  
-  
+public class SomeClass 
+{   
+}  
+````
+
  Oluşturulan XML aşağıdaki gibidir:  
+
+```xml
+<X>  
+    <A id="1">
+        <Value>contents of A</Value>  
+    </A> 
+    <B ref="1"></B>  
+</X>
+```  
   
- `<X>`  
-  
- `<A id="1">`  
-  
- `<Value>contents of A</Value>`  
-  
- `</A>`  
-  
- `<B ref="1">`  
-  
- `</B>`  
-  
- `</X>`  
-  
- Kullanarak `IsReference` ileti gidiş dönüşü üzerinde uyumluluğu güvence altına alır. Bir türü şemadan oluşturulduğunda bu olmadan ne için XML olarak geri türü mutlaka başlangıçta kabul şemasıyla uyumlu değil gönderilir. Diğer bir deyişle, ancak `id` ve `ref` öznitelikleri seri hale getirilmiş, özgün şema bu öznitelikler (veya tüm öznitelikler) XML'de oluşmasını barred. İle `IsReference` veri üyesi uygulanan, üye "başvurulabilir" olduğunda tanınması devam roundtripped.  
+ Kullanarak `IsReference` ileti gidiş dönüşü üzerinde uyumluluğu güvence altına alır. Bir türü şemadan oluşturulduğunda bu olmadan XML için türü mutlaka başlangıçta kabul şemasıyla uyumlu değil çıktı. Diğer bir deyişle, ancak `id` ve `ref` öznitelikleri seri hale getirilmiş, özgün şema bu öznitelikler (veya tüm öznitelikler) XML'de oluşmasını barred. İle `IsReference` veri üyesi uygulanan, üye olarak tanınması devam *başvurulabilir* olduğunda gidiş dönüşlü.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
-- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
-- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference?displayProperty=nameWithType>
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference?displayProperty=nameWithType>

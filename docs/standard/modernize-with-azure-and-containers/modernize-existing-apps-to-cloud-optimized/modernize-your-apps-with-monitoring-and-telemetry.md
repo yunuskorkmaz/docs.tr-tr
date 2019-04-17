@@ -1,17 +1,17 @@
 ---
-title: İzleme ve telemetri ile uygulamalarınızı modernleştirin
+title: İzleme ve telemetri ile uygulamalarınızı modernleştirme
 description: Azure Bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme | İzleme ve telemetri ile uygulamalarınızı modernleştirin
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147482"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613882"
 ---
-# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>İzleme ve telemetri ile uygulamalarınızı modernleştirin
+# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>İzleme ve telemetri ile uygulamalarınızı modernleştirme
 
 Üretim ortamında bir uygulamayı çalıştırdığınızda, uygulamanızın performansıyla ilgili içgörüler olması önemlidir. Bu, yüksek bir düzeyde çalışıyor mu? Kullanıcılar hataları alıyorsanız veya düzenli ve güvenilir uygulamasıdır? Zengin performans izleme, güçlü uyarı ve uygulamanızın kullanılabilir ve beklendiği gibi olduğunu sağlamak için panolar ihtiyacınız var. Ayrıca, hızlı bir şekilde bir sorun olup olmadığını görmek için kaç müşterinin etkilendiğini ve bulmak ve sorunu düzeltmek için bir kök neden analizi gerçekleştirmek belirlemek mümkün olması gerekir.
 
@@ -69,31 +69,31 @@ Log Analytics kapsayıcı izleme çözümü kullanabilirsiniz:
 
 -   **Microsoft Azure'da izlemeye genel bakış**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **Application Insights nedir?**
 
-[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+<https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 -   **Log Analytics nedir?**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+<https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Log analytics'te kapsayıcı izleme çözümü**
+-   **Azure İzleyici'de kapsayıcı izleme çözümü**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+<https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 -   **Azure İzleyicisi'ne genel bakış**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **Operations Management Suite (OMS) nedir?**
 
-[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+<https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
 -   **Windows Server kapsayıcıları Service fabric'te OMS ile izleme**
 
-[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[Önceki](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

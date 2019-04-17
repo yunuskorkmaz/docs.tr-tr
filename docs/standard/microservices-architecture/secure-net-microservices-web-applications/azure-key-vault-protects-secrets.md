@@ -1,15 +1,15 @@
 ---
-title: Üretim zamanında gizli dizileri korumak için Azure anahtar Kasası'nı kullanma
+title: Üretim zamanında gizli dizileri korumak için Azure Key Vault kullanma
 description: .NET mikro Hizmetleri ve Web uygulamaları - Azure Key Vault güvenlik tamamen yöneticiler tarafından denetlenen bir uygulama gizli dizilerini işlemek için mükemmel bir yoldur. Yöneticiler, bile atayın ve geliştirme değerleri geliştiricileri kendilerini işlemek zorunda iptal edebilir.
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 99049dca3d127f82ba5312c94d5246940bb71ba8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 6addede70ddee3168d4612aab80b0edd28e804c6
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466133"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613778"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Üretim zamanında gizli dizileri korumak için Azure Key Vault'u kullanma
 
@@ -50,7 +50,7 @@ Ortam değişkenleri olarak depolanan veya gizli dizi Yöneticisi araç tarafın
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - **Microsoft.Extensions.Configuration.KeyPerFile** GitHub deposu. \
-  [https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
+  <https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile>
 
 >[!div class="step-by-step"]
 >[Önceki](developer-app-secrets-storage.md)

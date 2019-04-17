@@ -2,21 +2,20 @@
 title: Makine öğrenimi görevlerini - ML.NET
 description: Farklı makine öğrenimi görevlerini ve ML.NET içinde desteklenen ilişkili görevleri keşfedin.
 ms.custom: seodec18
-ms.date: 01/15/2019
-author: jralexander
-ms.openlocfilehash: 02b454d18eca36c94c27ae15665af5df2ec87905
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.date: 04/12/2019
+author: natke
+ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415708"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613167"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET Machine learning görevleri
 
-Bir machine learning modeli oluştururken ilk verilerinizle elde etmek umarak tanımlamanız gerekir. Ardından, sizin durumunuz için doğru machine learning görev seçebilirsiniz. Aşağıdaki listede, aralarından seçim yapabileceğiniz görevleri öğrenme farklı makine açıklar ve bazı yaygın kullanım örnekleri.
+Bir machine learning modeli oluştururken ilk verilerinizle elde etmek umarak tanımlamanız gerekir. Bu görev durumunuza öğrenme doğru makine seçmenize olanak sağlar. Aşağıdaki listede, aralarından seçim yapabileceğiniz görevleri öğrenme farklı makine açıklar ve bazı yaygın kullanım örnekleri.
 
-> [!NOTE]
-> ML.NET şu anda Önizleme aşamasındadır. Tüm makine öğrenimi görevlerini şu anda desteklenmiyor. Belirli bir görevi bir isteği göndermek için bir sorun açın [dotnet/machinelearning depo](https://github.com/dotnet/machinelearning/issues).
+Senaryonuz için hangi görev çalışır karar verdikten sonra modeli eğitmek için en iyi algoritmayı seçin gerekir. Kullanılabilir algoritmalar, her görev için bölümünde listelenir.
 
 ## <a name="binary-classification"></a>İkili sınıflandırma
 
@@ -29,30 +28,22 @@ A [denetimli makine öğrenimi](glossary.md#supervised-machine-learning) veri ö
 
 Daha fazla bilgi için [ikili sınıflandırma](https://en.wikipedia.org/wiki/Binary_classification) wikipedia makalesi.
 
-Önerilen öğrencileriyle ikili sınıflandırma:
+### <a name="binary-classification-training-algorithms"></a>İkili sınıflandırma eğitim algoritmaları
 
-* AveragedPerceptronTrainer
-* StochasticGradientDescentClassificationTrainer
-* LightGbmBinaryTrainer
-* FastTreeBinaryClassificationTrainer
-* SymSgdClassificationTrainer
+Aşağıdaki algoritmaları kullanarak bir ikili sınıflandırma modelinde eğitebilirsiniz:
 
-### <a name="binary-classification-learners"></a>İkili sınıflandırma Öğrencileriyle
-
-Aşağıdaki öğrencileriyle ikili sınıflandırma görevleri için kullanılabilir:
-
-* [AveragedPerceptronTrainer](xref:Microsoft.ML.Trainers.Online.AveragedPerceptronTrainer)
-* [BinaryClassificationGamTrainer](xref:Microsoft.ML.Trainers.FastTree.BinaryClassificationGamTrainer)
-* [FastForestClassification](xref:Microsoft.ML.Trainers.FastTree.FastForestClassification)
-* [FastTreeBinaryClassificationTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryClassificationTrainer)
-* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.FactorizationMachine.FieldAwareFactorizationMachineTrainer)
-* [LightGbmBinaryTrainer](xref:Microsoft.ML.LightGBM.LightGbmBinaryTrainer)
-* [LinearSvmTrainer](xref:Microsoft.ML.Trainers.Online.LinearSvmTrainer)
-* [LogisticRegression](xref:Microsoft.ML.Learners.LogisticRegression)
-* [PriorTrainer](xref:Microsoft.ML.Trainers.PriorTrainer)
-* [RandomTrainer](xref:Microsoft.ML.Trainers.RandomTrainer)
-* [StochasticGradientDescentClassificationTrainer](xref:Microsoft.ML.Trainers.StochasticGradientDescentClassificationTrainer)
-* [SymSgdClassificationTrainer](xref:Microsoft.ML.Trainers.SymSgd.SymSgdClassificationTrainer)
+* <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.PriorTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
 
 ## <a name="multiclass-classification"></a>Sınıflı sınıflandırma
 
@@ -64,26 +55,20 @@ A [denetimli makine öğrenimi](glossary.md#supervised-machine-learning) veri ö
 
 Daha fazla bilgi için [sınıflı sınıflandırma](https://en.wikipedia.org/wiki/Multiclass_classification) wikipedia makalesi.
 
-Önerilen öğrencileriyle çok sınıflı için:
-
-* OVA AveragedPerceptronTrainer
-* SdcaMultiClassTrainer
-* LightGbmMulticlassTrainer
-* OVA FastTreeBinaryClassificationTrainer
-
 >[!NOTE]
->OVA ve PKPD yükseltir herhangi [ikili sınıflandırma learner](#binary-classification) çok sınıflı veri kümelerinde yapacak. Daha fazla bilgi [Vikipedi] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
+>Herhangi bir vs tüm yükseltmeleri [ikili sınıflandırma learner](#binary-classification) çok sınıflı veri kümelerinde yapacak. Daha fazla bilgi [Vikipedi] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
 
-### <a name="multiclass-classification-learners"></a>Sınıflı sınıflandırma Öğrencileriyle
+### <a name="multiclass-classification-training-algorithms"></a>Çok sınıflı sınıflandırma eğitim algoritmaları
 
-Aşağıdaki öğrencileriyle sınıflı sınıflandırma görevleri için kullanılabilir:
+Aşağıdaki eğitim algoritmalarını kullanarak bir çok sınıflı sınıflandırma modeli eğitmek:
 
-* [LightGbmMulticlassTrainer](xref:Microsoft.ML.LightGBM.LightGbmMulticlassTrainer)
-* [MetaMulticlassTrainer < TTransformer, TModel >](xref:Microsoft.ML.Learners.MetaMulticlassTrainer%602)
-* [MultiClassNaiveBayesTrainer](xref:Microsoft.ML.Trainers.MultiClassNaiveBayesTrainer)
-* [Ova](xref:Microsoft.ML.Trainers.Ova)
-* [Pkpd](xref:Microsoft.ML.Trainers.Pkpd)
-* [SdcaMultiClassTrainer](xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer)
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
 
 ## <a name="regression"></a>Regresyon
 
@@ -93,27 +78,19 @@ A [denetimli makine öğrenimi](glossary.md#supervised-machine-learning) ilgili 
 * Geçmiş verileri ve geçerli pazar eğilimlerine göre gelecekteki hisse senedi fiyatlarını tahmin etme.
 * Bütçelerini reklam üzerinde temel bir ürün satışları tahmin etme.
 
-Önerilen öğrencileriyle regresyon için:
+### <a name="regression-training-algorithms"></a>Regresyon eğitim algoritmaları
 
-* FastTreeTweedieTrainer 
-* LightGbmRegressorTrainer 
-* SdcaRegressionTrainer 
-* FastTreeRegressionTrainer
+Aşağıdaki algoritmaları kullanarak bir regresyon modeli eğitmek:
 
-### <a name="regression-learners"></a>Regresyon Öğrencileriyle
-
-Aşağıdaki öğrencileriyle regresyon görevleri için kullanılabilir:
-
-* [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer)
-* [FastTreeTweedieTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer)
-* [LightGbmRegressorTrainer](xref:Microsoft.ML.LightGBM.LightGbmRegressorTrainer)
-* [OlsLinearRegressionTrainer](xref:Microsoft.ML.Trainers.HalLearners.OlsLinearRegressionTrainer)
-* [OnlineGradientDescentTrainer](xref:Microsoft.ML.Trainers.Online.OnlineGradientDescentTrainer)
-* [PoissonRegression](xref:Microsoft.ML.Trainers.PoissonRegression)
-* [RegressionGamTrainer](xref:Microsoft.ML.Trainers.FastTree.RegressionGamTrainer)
-* [SdcaRegressionTrainer](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)
-* [FastTree.SingleTrainer](xref:Microsoft.ML.Trainers.FastTree.SingleTrainer)
-* [LightGBM.SingleTrainer](xref:Microsoft.ML.LightGBM.SingleTrainer)
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
 
 ## <a name="clustering"></a>Kümeleme
 
@@ -123,11 +100,11 @@ Bir [Denetimsiz machine learning](glossary.md#unsupervised-machine-learning) ben
 * Müşteri kesimleri ve demografik bilgilere bağlı hedeflenen reklam kampanyaları oluşturmanıza yardımcı olmak için tanımlayıcı.
 * Üretim ölçümleri temel alarak envanteri halinde kategorilere ayrılması.
 
-### <a name="clustering-learners"></a>Kümeleme Öğrencileriyle
+### <a name="clustering-training-algorithms"></a>Kümeleme eğitim algoritmaları
 
-Aşağıdaki öğrencileriyle görevleri kümeleme için kullanılabilir:
+Aşağıdaki algoritması kullanarak bir kümeleme modeli eğitmek:
 
-* [KMeansPlusPlusTrainer](xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer)
+* <xref:Microsoft.ML.Trainers.KMeansTrainer>
 
 ## <a name="anomaly-detection"></a>Anomali algılama
 
@@ -144,30 +121,29 @@ Anomali algılama machine learning'de birçok önemli görevleri kapsar:
 
 Anomalileri tanımına göre nadir olayları olduğundan, temsili bir örnek model için kullanılacak veri toplamak zor olabilir. Bu kategoride bulunan algoritmaları özellikle imbalanced veri kümelerini kullanarak oluşturma ve eğitim modeli çekirdek sorunları gidermek üzere tasarlanmıştır.
 
-### <a name="anomaly-detection-learners"></a>Anomali algılama öğrencileriyle
+### <a name="anomaly-detection-training-algorithms"></a>Anomali algılama eğitim algoritmaları
 
-Aşağıdaki öğrencileriyle anomali algılama görevler için kullanılabilir:
+Aşağıdaki algoritması kullanarak bir anomali algılama modeli eğitmek:
 
-* [RandomizedPcaTrainer](xref:Microsoft.ML.Trainers.PCA.RandomizedPcaTrainer)
+* <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
 
 ## <a name="ranking"></a>Derecelendirme
 
 Derecelendirme görev derecelendiricisini etiketli örnekleri bir dizi oluşturur. Bu örnek kümesi ile puanlanmış örnek grupları oluşan bir tetikleyicisi. {0, 1, 2, 3, 4} her örneği için olan derecelendirme etiketleri.  Derecelendiricisini bilinmeyen puanlarının her örneği için yeni derece örneği gruplara eğitildi. ML.NET derecelendirme öğrencileriyle olan [öğrenilen makine derecelendirme](https://en.wikipedia.org/wiki/Learning_to_rank) bağlı.
 
-### <a name="ranking-learners"></a>Öğrencileriyle sıralaması
+### <a name="ranking-training-algorithms"></a>Sıralama eğitim algoritmaları
 
-Aşağıdaki öğrencileriyle görevleri sıralaması için kullanılabilir:
+Aşağıdaki algoritmaları ile bir derecelendirme modeli eğitmek:
 
-* [FastTreeRankingTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer)
-* [LightGbmRankingTrainer](xref:Microsoft.ML.LightGBM.LightGbmRankingTrainer)
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
 
 ## <a name="recommendation"></a>Öneri
 
 Bir öneri görevi önerilen ürünleri veya hizmetleri listesi oluşturmayı etkinleştirir. ML.NET kullanan [matris factorization (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29), [işbirliğine dayalı filtreleme](https://en.wikipedia.org/wiki/Collaborative_filtering) geçmiş ürün derecelendirmesi veri Kataloğu'nda varsa önerileri için algoritma. Örneğin, kullanıcılarınız için geçmiş film derecelendirmesi verilere sahip ve sonraki izleyin okunduğunun diğer filmler önermek istediğiniz.
 
-### <a name="recommendation-learners"></a>Öneri öğrencileriyle
+### <a name="recommendation-training-algorithms"></a>Öneri eğitim algoritmaları
 
-Aşağıdaki öğrencileriyle öneri görevleri için kullanılabilir:
+Aşağıdaki algoritması ile bir öneri modeli eğitmek:
 
-* [MatrixFactorizationTrainer](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer)
-* [MatrixFactorizationPredictionTransformer](xref:Microsoft.ML.Trainers.Recommender.MatrixFactorizationPredictionTransformer)
+* <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>

@@ -4,12 +4,12 @@ description: Kaldırma ve kaydırma ve bu e-kitap kapsayıcılarla ve Azure bulu
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 8484bf554df2de47121b99272355181e3842517d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7e56238e129cadd128240d51f03a5926e6de3e6b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324701"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613102"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure Bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme (2 sürümü)
 
@@ -97,7 +97,7 @@ Tablo 1-1, başlıca avantajları ve her geçiş veya modernizasyonu yaklaşım�
 | Azure'da sanal makineler için dağıtılan uygulamalar | Tek parça veya kapsayıcılar, Azure Service Fabric ve AKS (Azure Kubernetes hizmeti) ile Azure App Service, Azure Container örneği (ACI), Vm'leri dağıtılan N katmanlı uygulamalar | Kapsayıcılı mikro hizmetler Azure Kubernetes Service (AKS), Service Fabric ve/veya Azure işlevleri temel sunucusuz mikro hizmetler. |
 | **Verileri hedefi** |
 | SQL veya bir VM üzerinde herhangi bir ilişkisel veritabanı | Azure SQL veritabanı yönetilen örneğine veya başka bir yönetilen veritabanı bulutta. | Azure SQL veritabanı, Azure Cosmos DB veya başka bir yönetilen veritabanı bulut tabanlı bir mikro hizmet, başına fined dilimi veritabanı |
-| **Yararları**|
+| **Avantajlar**|
 | <li>Hiçbir bütçeden, yeni kodu <li> Hızlı geçiş için en az çaba <li> Azure'da desteklenen en küçük ortak paydası <li> Temel kullanılabilirliği garanti eder <li> Buluta taşıdıktan sonra bunu daha da fazla modernleştirin kolaydır | <li> Hiçbir bütçeden <li> Çok az kod/yapılandırma değişiklikleri <li> Geliştirilmiş dağıtım ve DevOps çevikliği kapsayıcıları nedeniyle serbest bırakmak için <li> Yoğunluğu ve dağıtım maliyetlerini düşürün <li> Uygulamalar ve bağımlılıklar için taşınabilirlik <li> Ana hedef esneklik: Yaklaşım PaaS veya Iaas | <li> Mimarı bulut için buluttan en iyi avantajlarından yararlanın, ancak yeni kodu gereklidir <li> Mikro hizmetler bulutta yerel yaklaşımları <li> Modern iş açısından kritik uygulamalar, dayanıklı bulut ölçeklenebilir <li> Tam olarak yönetilen hizmetler <li> Ölçek için en iyi duruma getirilmiş <li> Alt sistemi tarafından otonom Çeviklik için en iyi duruma getirilmiş <li> Dağıtım ve DevOps üzerinde oluşturulmuş |
 | **Zorlukları** |
 | <li> Shift gider işletim ya da veri merkezleri kapatma dışında daha küçük bulut değer <li> Az yönetilir: Hiçbir işletim sistemi veya bir ara yazılım düzeltme eki uygulama; Terraform, Spinnaker veya Puppet gibi altyapı çözümlerini kullanıyor olabilir | <li> Kapsayıcılı hale getirmek geliştiricilerin ve BT işlemleri için öğrenme eğrisini içinde ek bir adım olduğunu <li> DevOps ve CI/CD işlem hatları 'şart' Bu yaklaşım genellikle olur. Aksi takdirde şu anda kuruluşun kültüründeki varsa, ek bir zorluğu olması olabilir| <li> Bulutta yerel uygulamalar ve mikro hizmet mimarileri için rearchitecture gerektirir ve genellikle yeniden düzenleme ya da modernleştirme olduğunda yeniden yazma önemli kod (daha fazla zaman ve bütçe) gerektirir <li> DevOps ve CI/CD işlem hatları 'şart' Bu yaklaşım genellikle olur. Aksi takdirde şu anda kuruluşun kültüründeki varsa, ek bir zorluğu olması olabilir|
@@ -170,13 +170,13 @@ Bu kılavuzda bir mikro hizmet mimarisi için geliştirilebilen nasıl gibi bulu
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Docker uygulaması yaşam döngüsü Microsoft Platformu ve araçları ile kapsayıcılı hale** (indirilebilir e-kitap) \
-  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+  <https://aka.ms/dockerlifecycleebook>
 
 - **.NET Mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi** (indirilebilir e-kitap) \
-  [https://aka.ms/microservicesebook](https://aka.ms/microservicesebook)
+  <https://aka.ms/microservicesebook>
 
 - **ASP.NET Core ve Azure ile modern web uygulamaları oluşturmaya** (indirilebilir e-kitap) \
-  [https://aka.ms/webappebook](https://aka.ms/webappebook)
+  <https://aka.ms/webappebook>
 
 ## <a name="who-should-use-this-guide"></a>Bu kılavuzda kullanan
 

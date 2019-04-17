@@ -4,12 +4,12 @@ description: Genel bir aracı oluşturmayı açıklar. Genel aracı ile .NET Cor
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: a54cb0a8c32da6a89ab1c3b7757df10fd9adf5cf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3d0a64d0473f51d73892cd40633e2982c1130469
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677870"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612673"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Bir .NET Core genel .NET Core CLI'yı kullanarak aracı oluşturma
 
@@ -162,7 +162,7 @@ Ardından, uygulamanız için bir NuGet paketi oluşturun.
 dotnet pack
 ```
 
-`botsay.1.0.0.nupkg` Dosyası tarafından tanımlanan klasöründe oluşturulur `<PackageOutputPath>` XML değerinden `botsay.csproj` olan bu örnekte dosyası `./nupkg` klasör. Bu, yükleme ve test etmek kolaylaştırır. Bir aracı genel olarak yayınlamak istediğinizde, karşıya [ https://www.nuget.org ](https://www.nuget.org). Aracı üzerinde NuGet kullanılabilir olduğunda, geliştiricilerin aracını kullanarak bir kullanıcı genelinde yükleme gerçekleştirebilirsiniz `--global` seçeneği [dotnet aracı yükleme](dotnet-tool-install.md) komutu.
+`botsay.1.0.0.nupkg` Dosyası tarafından tanımlanan klasöründe oluşturulur `<PackageOutputPath>` XML değerinden `botsay.csproj` olan bu örnekte dosyası `./nupkg` klasör. Bu, yükleme ve test etmek kolaylaştırır. Bir aracı genel olarak yayınlamak istediğinizde, karşıya <https://www.nuget.org>. Aracı üzerinde NuGet kullanılabilir olduğunda, geliştiricilerin aracını kullanarak bir kullanıcı genelinde yükleme gerçekleştirebilirsiniz `--global` seçeneği [dotnet aracı yükleme](dotnet-tool-install.md) komutu.
 
 Bir paket olduğuna göre bu paketten aracını yükleyin:
 

@@ -1,17 +1,17 @@
 ---
-title: Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
+title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Gerçek üretimde uygulamaların dağıtılması ve sistem durumu, iş yükü ve tüm kapsayıcıların yaşam döngüsü işleyen düzenleyicilerle yönetilen gerekir.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 834e0b91a596f489c10e4eb11b0de2b5eaeb9f1c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 148eab941644667c803c5613b8815f50263fc0fb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466406"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613710"
 ---
-# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Mikro hizmetler ve yüksek ölçeklenebilirlik ve kullanılabilirlik için birden çok kapsayıcılı uygulamaları yönetme
+# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
 Uygulamanız üzerinde mikro hizmet tabanlı ya da birden çok kapsayıcıya bölme düzenleyicileri kullanarak üretime hazır uygulamalar için gereklidir. Böylece bir geliştirme ve dağıtım açısından otonom mikro hizmet tabanlı bir yaklaşım, daha önce tanıtılan her mikro hizmet kendi modeli ve veri sahibi. Ancak oluşan daha geleneksel bir uygulama (SOA gibi) birden çok Hizmetleri olsa da birden çok kapsayıcı veya hizmet dağıtılmış bir sistemde dağıtılması gereken bir tek iş uygulaması oluşturan olursunuz. Ölçeği genişletme ve yönetmek için bu tür sistemler karmaşıktır; Bu nedenle, üretime hazır ve ölçeklenebilir çok kapsayıcılı bir uygulama istiyorsanız kesinlikle bir orchestrator gerekir.
 
@@ -115,15 +115,15 @@ Daha fazla bilgi için makaleye bakın [Azure geliştirme alanları ile takım g
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Azure Kubernetes Service (AKS) ile çalışmaya başlama** \
-  [https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+  <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure geliştirme alanları** \
-  [https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
+  <https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces>
 
 - **Kubernetes.** Resmi sitesi. \
-  [https://kubernetes.io/](https://kubernetes.io/)
+  <https://kubernetes.io/>
 
-## <a name="using-azure-service-fabric"></a>Azure Service Fabric kullanma
+## <a name="using-azure-service-fabric"></a>Azure Service Fabric Kullanma
 
 Azure Service Fabric, Microsoft'un geçiş stili genellikle tek parçalı, "kutu" ürünleri, hizmetleri sunmak için teslim öğesinden gelen çıkan. Service Fabric oluşturma ve büyük hizmetlerini uygun ölçekte, Azure SQL veritabanı, Azure Cosmos DB, Azure Service Bus veya Cortana'nın arka uç, gibi işletim deneyimini şeklinde. Bunu daha da fazla Hizmetleri benimsenen gibi platform zaman içinde gelişerek. Önemlisi, yalnızca Azure aynı zamanda tek başına Windows Server dağıtımlarındaki çalıştırmak Service Fabric vardı.
 

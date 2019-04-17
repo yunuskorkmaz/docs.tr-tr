@@ -1,17 +1,17 @@
 ---
-title: Mikro hizmet mimarisi
+title: Mikro hizmetler mimarisi
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | 30.000 ayak mikro hizmet mimarisini görüntüleyin.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6a3262c65fb221f3b9e058a581b5dc6bfed92076
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 10d00ddc6255e6897bed3e826becff9aa8397e4e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465197"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611921"
 ---
-# <a name="microservices-architecture"></a>Mikro hizmet mimarisi
+# <a name="microservices-architecture"></a>Mikro hizmetler mimarisi
 
 Adından da anlaşılacağı gibi mikro hizmetler mimarisi küçük bir hizmetler kümesi olarak sunucu uygulaması oluşturmaya yönelik bir yaklaşım ' dir. Yaklaşım, ön uç için kullanılıyor olsa da, bir mikro hizmet mimarisi arka uca çoğunlukla yönelimli olduğu anlamına gelir. Her hizmet kendi işleminde çalışır ve diğer işlemler gibi HTTP/HTTPS ve WebSockets, protokoller kullanarak iletişim kurar veya [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Her mikro hizmet belirli bir uçtan uca etki alanı ya da belirli bir bağlam sınırında bir iş özelliğini uygular ve her otonom olarak geliştirilmiş olmalıdır ve bağımsız olarak dağıtılabilir. Son olarak, her bir mikro hizmet etki alanı mantığı (özerkliği ve merkezi olmayan veri yönetimi) ve ilgili etki alanı veri modeline ait olması ve farklı veri depolama teknolojileri (SQL, NoSQL) ve farklı programlama dillerini temel alabilir.
 
@@ -46,19 +46,19 @@ Bu yalnızca ilk üç ele veya bu kılavuzda sunulan. Uygulama yaşam döngüsü
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Mark Russinovich'e. Mikro hizmetler: Bulut tarafından desteklenen bir uygulama Devrimi** \
-  [https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
+  <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
 - **Martin Fowler. Mikro hizmetler** \
-  [https://www.martinfowler.com/articles/microservices.html](https://www.martinfowler.com/articles/microservices.html)
+  <https://www.martinfowler.com/articles/microservices.html>
 
 - **Martin Fowler. Mikro hizmet önkoşulları** \
-  [https://martinfowler.com/bliki/MicroservicePrerequisites.html](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
+  <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
 - **Jimmy Nilsson. Öbek bulut bilgi işlem** \
-  [https://www.infoq.com/articles/CCC-Jimmy-Nilsson](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
+  <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
 - **Cesar de la Torre. Docker uygulaması yaşam döngüsü Microsoft Platformu ve araçları ile kapsayıcılı hale** (indirilebilir e-kitap) \
-  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+  <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]
 >[Önceki](service-oriented-architecture.md)

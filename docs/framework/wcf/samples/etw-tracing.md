@@ -2,12 +2,12 @@
 title: ETW İzleme
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: b445606677fba23ec81e896cce564330cedd6a19
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: a5c2f173978f514aa4627caa476a595d8d45d4f9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300690"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613752"
 ---
 # <a name="etw-tracing"></a>ETW İzleme
 Bu örnek olay izleme için Windows (ETW) kullanarak uçtan uca (E2E) izleme uygulamak nasıl gösterir ve `ETWTraceListener` Bu örnek ile sağlanır. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ve ETW İzleme içerir.  
@@ -50,7 +50,7 @@ Bu örnek olay izleme için Windows (ETW) kullanarak uçtan uca (E2E) izleme uyg
  Bu dinleyicisi kullanmadan önce bir ETW izleme oturumunu başlatılması gerekir. Bu oturumda Logman.exe veya Tracelog.exe kullanılarak başlatılabilir. Oturum kapatma ve günlük dosyası tamamlamak için bir CleanupETW.bat dosyasıyla birlikte ETW izleme oturumunu ayarlayabilirsiniz böylece bu örnekle SetupETW.bat dosya dahildir.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır. Bu araçlar hakkında daha fazla bilgi için bkz. [https://go.microsoft.com/fwlink/?LinkId=56580](https://go.microsoft.com/fwlink/?LinkId=56580)  
+>  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır. Bu araçlar hakkında daha fazla bilgi için bkz. <https://go.microsoft.com/fwlink/?LinkId=56580>  
   
  ETWTraceListener kullanırken, izlemeleri ikili .etl dosyaları günlüğe kaydedilir. Açık ServiceModel izleme ile oluşturulan tüm izlemeleri aynı dosyada görünür. Kullanım [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) .etl ve .svclog günlük dosyalarını görüntülemek için. Görüntüleyici, bir ileti hedefine kaynağından izlemenizi olanaklı kılan sistem bir uçtan uca görünümünü ve tüketim noktası oluşturur.  
   

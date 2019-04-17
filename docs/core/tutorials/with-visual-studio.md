@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: df91d9da1f743e17072ad6106d0c4e06d751c2ea
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362806"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612827"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Derleme bir C# Hello World uygulaması Visual Studio 2017'de .NET Core SDK'sı
 
@@ -29,7 +29,7 @@ Basit bir "Hello World" konsol uygulaması oluşturarak başlayın. Aşağıdaki
 1. Visual Studio 2017'yi başlatın. Seçin **dosya** > **yeni** > **proje** menü çubuğundan. İçinde *yeni proje** iletişim kutusunda **Visual C#** düğümünü ve ardından **.NET Core** düğümü. Ardından **konsol uygulaması (.NET Core)** proje şablonu. İçinde **adı** metin kutusunda, "HelloWorld" yazın. **Tamam** düğmesini seçin.
 
    ![Seçilen konsol uygulaması ile yeni proje iletişim kutusu](./media/with-visual-studio/visual-studio-new-project.png)
-   
+
 1. Visual Studio, projenizi oluşturmak için şablon kullanır. .NET Core için C# konsol uygulaması şablonu otomatik olarak bir sınıf tanımlar `Program`, tek bir yöntemi olan `Main`, alan bir <xref:System.String> bağımsız değişken olarak bir dizi. `Main` uygulama başlatıldığında otomatik olarak çalışma zamanı tarafından çağrılır yöntemi uygulama giriş noktası niteliğindedir. Uygulama başlatıldığında sağlanan komut satırı bağımsız değişkenleri kullanılabilir *args* dizisi.
 
    ![Visual Studio ve yeni HelloWorld proje](./media/with-visual-studio/visual-studio-main-window.png)
@@ -42,6 +42,7 @@ Basit bir "Hello World" konsol uygulaması oluşturarak başlayın. Aşağıdaki
    Console.Write("Press any key to continue...");
    Console.ReadKey(true);
    ```
+
    Bu kod, herhangi bir tuşa basın ister ve daha sonra bir tuşa basıldığında kadar program duraklatılır.
 
 1. Menü çubuğunda, seçin **derleme** > **Çözümü Derle**. Bu, just-in-time (JIT) derleyici tarafından ikili koda dönüştürülür bir ara dile (IL) programınızı derler.

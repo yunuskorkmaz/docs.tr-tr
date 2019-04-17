@@ -1,17 +1,17 @@
 ---
-title: Dayanıklılık ve yüksek kullanılabilirlik mikro hizmetler
+title: Mikro hizmetlerde esneklik ve yüksek kullanılabilirlik
 description: Mikro hizmetler, geçici ağ ve yüksek kullanılabilirlik elde etmek için dayanıklı olması gereken bağımlılıklar hataları dayanacak şekilde tasarlanmış olması gerekir.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: ebf3a81718cd3423d3c80edb9c2f5b10f4ef47da
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c1881392532231bc83227776a647f4dde0a196ad
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465821"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614044"
 ---
-# <a name="resiliency-and-high-availability-in-microservices"></a>Dayanıklılık ve yüksek kullanılabilirlik mikro hizmetler
+# <a name="resiliency-and-high-availability-in-microservices"></a>Mikro hizmetlerde esneklik ve yüksek kullanılabilirlik
 
 Beklenmeyen hatalar uğraşmanızı uygulamalarınızdaki sorunları çözmeye özellikle dağıtılmış bir sistemde biridir. Özel durumları işleme geliştiriciler yazdığınız kod çoğunu içerir ve ayrıca test en çok zaman nerede harcandığını budur. Sorun, hataları işlemek için kod yazmaktan daha karmaşıktır. Mikro hizmet çalıştırıldığı makine başarısız olduğunda ne olur? Yalnızca bu mikro hizmet hatası (sabit sorun kendi kendine) algılamak ihtiyacınız, ancak ayrıca bir şey, mikro hizmet yeniden başlatmanız gerekir.
 
@@ -59,22 +59,22 @@ Mikro hizmet tabanlı bir uygulama oluşturduğunuzda, karmaşıklığı ile uğ
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **On iki Faktörlü uygulama. XI. Günlükleri: Günlükleri, olay akışları olarak değerlendir** \
-  [https://12factor.net/logs](https://12factor.net/logs)
+  <https://12factor.net/logs>
 
 - **Microsoft tanılama EventFlow Kitaplığı** GitHub deposu. \
-  [https://github.com/Azure/diagnostics-eventflow](https://github.com/Azure/diagnostics-eventflow)
+  <https://github.com/Azure/diagnostics-eventflow>
 
 - **Azure tanılama nedir** \
-  [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
+  <https://docs.microsoft.com/azure/azure-diagnostics>
 
 - **Windows bilgisayarları Azure Log Analytics hizmetine bağlayın** \
-  [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+  <https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents>
 
 - **Ne anlama gelir günlüğü: Semantik günlük uygulama bloğu kullanma** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** resmi sitesi. \
-  [https://www.splunk.com/](https://www.splunk.com/)
+  <https://www.splunk.com/>
 
 - **EventSource sınıfı** izleme için Windows (ETW) olayları için API \
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)

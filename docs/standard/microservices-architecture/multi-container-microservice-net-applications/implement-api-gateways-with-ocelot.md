@@ -1,15 +1,15 @@
 ---
-title: API ağ geçitleri Ocelot ile uygulama
+title: Ocelot ile API Ağ Geçitlerini uygulama
 description: API ağ geçitleri ile Ocelot uygular ve kapsayıcı tabanlı bir ortamda Ocelot kullanmayı öğrenin.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b7ef0e7a172337f32f625bd65261b6577decd223
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5d4f2a3b2551f8da83359b26578d45559721f7df
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464547"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613726"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>API ağ geçitleri ile Ocelot uygular
 
@@ -85,6 +85,7 @@ public async Task<IActionResult> GetItemById(int id)
     return NotFound();
 }
 ```
+
 HTTP isteği, tür çalışan sona erecek C# kod mikro hizmet veritabanı ve gerekli herhangi bir ek eylem erişme.
 
 Mikro hizmet URL'si ile ilgili kapsayıcıları, yerel geliştirme bilgisayar (yerel Docker konağı) dağıtıldığında, her bir mikro hizmetin ait kapsayıcı her zaman dahili bir bağlantı vardır. (genellikle, bağlantı noktası 80) aşağıdaki dockerfile olduğu gibi ilgili dockerfile içinde belirtilen:
@@ -564,16 +565,16 @@ Kubernetes için dağıtırken her Ocelot API ağ geçidi farklı "configuration
 Araştırma ve aşağıdaki bağlantıları açıklanan bir Ocelot API Gateway kullanırken, diğer önemli özellikleri vardır.
 
 - **Ocelot Consul veya Eureka tümleştirmek istemci tarafı hizmet bulmayı** \
-  [https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+  <https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html>
 
 - **API ağ geçidi katmanında önbelleğe alma** \
-  [https://ocelot.readthedocs.io/en/latest/features/caching.html](https://ocelot.readthedocs.io/en/latest/features/caching.html)
+  <https://ocelot.readthedocs.io/en/latest/features/caching.html>
 
 - **API ağ geçidi katmanında günlüğe kaydetme** \
-  [https://ocelot.readthedocs.io/en/latest/features/logging.html](https://ocelot.readthedocs.io/en/latest/features/logging.html)
+  <https://ocelot.readthedocs.io/en/latest/features/logging.html>
 
 - **API ağ geçidi katmanında (yeniden denemeler ve devre Kesiciler) hizmet kalitesi** \
-  [https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+  <https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html>
 
 - **Oran sınırlandırma** \
   [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )

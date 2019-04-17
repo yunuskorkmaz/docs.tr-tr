@@ -3,12 +3,12 @@ title: Hello World .NET Core uygulamanızı Visual Studio 2017 ile hata ayıklam
 description: C# veya Visual Basic, Visual Studio 2017 ile yazılmış bir Hello World uygulamasında hata ayıklama hakkında bilgi edinin.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463429"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610723"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Hata ayıklama, C# veya Visual Studio 2017'yi kullanarak Visual Basic .NET Core Merhaba Dünya uygulaması
 
@@ -154,6 +154,7 @@ Koşullu kesme noktası ayarlayın ve bir dize girmek kullanıcının başarıs�
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
+
   ![Deyim sonra yürütülen - Visual Basic true değerini döndüren bir komut penceresi](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. Seçin **devam** program yürütme devam etmek için araç çubuğunda.

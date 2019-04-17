@@ -3,16 +3,16 @@ title: Yineleyiciler
 description: Yerleşik kullanmayı öğrenin C# yineleyiciler ve kendi özel yineleyici yöntemleri oluşturma.
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: f1be4e9a8b67f0e71615c730af4316253224b888
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e816af698a39a4b44aefa92017efdbc9e3c8cc1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155226"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613440"
 ---
 # <a name="iterators"></a>Yineleyiciler
 
-Yazdığınız hemen hemen her program bir koleksiyon üzerinde yinelemek için bazı ihtiyacı olacaktır. Bir koleksiyondaki her öğe inceler kod yazacaksınız. 
+Yazdığınız hemen hemen her program bir koleksiyon üzerinde yinelemek için bazı ihtiyacı olacaktır. Bir koleksiyondaki her öğe inceler kod yazacaksınız.
 
 Ayrıca, söz konusu sınıfın öğeler için bir yineleyici oluşturur yöntemler olan yineleyici yöntemleri oluşturacaksınız. Bunlar için kullanılabilir:
 
@@ -28,7 +28,7 @@ Bu öğreticide, birden fazla adım vardır. Her adımdan sonra uygulamayı çal
 ## <a name="iterating-with-foreach"></a>Foreach ile yineleme
 
 Koleksiyon numaralandırma basittir: `foreach` Anahtar sözcüğü, koleksiyondaki her öğe için bir kez katıştırılmış deyimi yürütülürken, bir koleksiyon numaralandırır:
- 
+
 ```csharp
 foreach (var item in collection)
 {
@@ -42,7 +42,7 @@ Bu arabirimlerin her ikisi de genel olmayan karşılıkları vardır: `IEnumerab
 
 ## <a name="enumeration-sources-with-iterator-methods"></a>Yineleyici yöntemleri kaynaklarıyla numaralandırması
 
-Bir diğer harika özelliği C# dil numaralandırması için bir kaynağı oluşturan yöntemleri oluşturmanıza olanak sağlar. Bunlar olarak adlandırılır *yineleyici metotları*. İstendiğinde bir sırayla nesneleri oluşturmak nasıl bir yineleyici yöntemini tanımlar. Kullandığınız `yield return` yineleyici yöntemini tanımlamak için bağlamsal anahtar sözcükler. 
+Bir diğer harika özelliği C# dil numaralandırması için bir kaynağı oluşturan yöntemleri oluşturmanıza olanak sağlar. Bunlar olarak adlandırılır *yineleyici metotları*. İstendiğinde bir sırayla nesneleri oluşturmak nasıl bir yineleyici yöntemini tanımlar. Kullandığınız `yield return` yineleyici yöntemini tanımlamak için bağlamsal anahtar sözcükler.
 
 0 ile 9 arasında bir tamsayı dizisi oluşturmak için bu yöntemi yazabilirsiniz:
 
@@ -82,9 +82,9 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-    
+
     index = 100;
     while (index++ < 110)
         yield return index;
@@ -113,12 +113,12 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
-    // generates a compile time error: 
+
+    // generates a compile time error:
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
-    return items;  
+    return items;
 }
 ```
 
@@ -132,15 +132,15 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
+
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
     foreach (var item in items)
         yield return item;
 }
 ```
- 
+
 Bazen, bir yineleyici yöntem içinde iki farklı yöntemle bölmek için doğru yanıtı olabilir. Kullanan bir `return`ve kullandığı ikinci `yield return`. Boş bir koleksiyon ya da bir Boole bağımsız değişkenine göre ilk 5 tek sayıları döndürmek için isteyebileceğiniz bir durum düşünün. Bu iki yöntem, yazabilirsiniz:
 
 ```csharp
@@ -160,12 +160,12 @@ private IEnumerable<int> IteratorMethod()
             yield return index;
 }
 ```
- 
+
 Yöntemleri yukarıdaki arayın. İlk standardını kullanan `return` deyimini boş bir koleksiyon ya da ikinci yöntemi tarafından oluşturulan bir yineleyici döndürür. İkinci yöntem kullanan `yield return` istenen dizisi oluşturmak için deyimi.
 
 ## <a name="deeper-dive-into-foreach"></a>Derinlemesine `foreach`
 
-`foreach` Deyimi kullanan standart bir deyim genişler `IEnumerable<T>` ve `IEnumerator<T>` bir koleksiyonun tüm öğeler arasında yineleme yapmak için gereken arabirimler. Ayrıca geliştiricilerin kaynaklar düzgün şekilde yöneterek olun hataları en aza indirir. 
+`foreach` Deyimi kullanan standart bir deyim genişler `IEnumerable<T>` ve `IEnumerator<T>` bir koleksiyonun tüm öğeler arasında yineleme yapmak için gereken arabirimler. Ayrıca geliştiricilerin kaynaklar düzgün şekilde yöneterek olun hataları en aza indirir.
 
 Derleyici çevirir `foreach` bu yapı için benzer bir şeyi ilk örnekte gösterilen döngü:
 
@@ -198,14 +198,14 @@ Derleyici tarafından oluşturulan tam kod biraz daha karmaşıktır ve burada n
 ```csharp
 {
     var enumerator = collection.GetEnumerator();
-    try 
+    try
     {
         while (enumerator.MoveNext())
         {
             var item = enumerator.Current;
             Console.WriteLine(item.ToString());
         }
-    } finally 
+    } finally
     {
         // dispose of enumerator.
     }
@@ -215,26 +215,27 @@ Derleyici tarafından oluşturulan tam kod biraz daha karmaşıktır ve burada n
 İçinde Numaralandırıcı, şekilde türünün özelliklerine bağlıdır `enumerator`. Genel durumda `finally` yan tümcesini genişletir:
 
 ```csharp
-finally 
+finally
 {
    (enumerator as IDisposable)?.Dispose();
-} 
+}
 ```
 
 Ancak, varsa türünü `enumerator` mühürlenmiş bir tür olduğu ve hiç örtük dönüştürme türünden `enumerator` için `IDisposable`, `finally` yan tümcesi için boş bir blok genişletir:
+
 ```csharp
-finally 
+finally
 {
-} 
+}
 ```
 
 Örtük bir dönüştürme türü olup olmadığını `enumerator` için `IDisposable`, ve `enumerator` bir NULL olmayan değer türü `finally` yan tümcesini genişletir:
 
 ```csharp
-finally 
+finally
 {
    ((IDisposable)enumerator).Dispose();
-} 
+}
 ```
 
-Ne bu ayrıntıları unutmayın gerek yoktur. `foreach` Deyimi sizin için söz konusu farklılıklarına işler. Derleyici herhangi birini bu yapıları için doğru kodu oluşturur. 
+Ne bu ayrıntıları unutmayın gerek yoktur. `foreach` Deyimi sizin için söz konusu farklılıklarına işler. Derleyici herhangi birini bu yapıları için doğru kodu oluşturur.

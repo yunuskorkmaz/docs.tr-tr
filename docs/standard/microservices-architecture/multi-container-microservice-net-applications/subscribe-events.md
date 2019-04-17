@@ -4,12 +4,12 @@ description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: afd3148f77dc4222a077f7ce020260ee889e92cb
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 962d12c054bed3b2623283e17f83b8466ab2811b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466146"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613284"
 ---
 # <a name="subscribing-to-events"></a>Olaylara abone olma
 
@@ -325,16 +325,16 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Çatalı hizmetine NServiceBus (yazılım) kullanma** \
-    [https://go.particular.net/eShopOnContainers](https://go.particular.net/eShopOnContainers)
+    <https://go.particular.net/eShopOnContainers>
 
 - **Mesajlaşma typu EventDriven** \
     [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 - **Jimmy Bogard. Doğru dayanıklılığı yeniden düzenleme: Bağlantı değerlendirme** \
-    [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+    <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **Kanal Yayımla-abone ol** \
-    [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Sınırlanmış Bağlamlar arasında iletişim kurma** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
@@ -343,19 +343,19 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 - **Philip Brown. Tümleştirmeye yönelik stratejiler sınırlanmış bağlamlar** \
-    [https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
+    <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
 - **Chris Richardson. Toplamlar, olay kaynağını belirleme ve CQRS - bölüm 2 kullanarak işlem mikro Hizmetleri Geliştirme** \
-    [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
+    <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
 - **Chris Richardson. Olay kaynağını belirleme düzeni** \
-    [https://microservices.io/patterns/data/event-sourcing.html](https://microservices.io/patterns/data/event-sourcing.html)
+    <https://microservices.io/patterns/data/event-sourcing.html>
 
 - **Olay kaynağını belirleme ile tanışın** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Olay Store veritabanı**. Resmi sitesi. \
-    [https://geteventstore.com/](https://geteventstore.com/)
+    <https://geteventstore.com/>
 
 - **Patrick Nommensen. Mikro hizmetlere yönelik olay odaklı veri yönetimi** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
@@ -364,25 +364,25 @@ Aralıklı ağ hataları meydana geldiğinde iletileri çoğaltılabilir ve ilet
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
 - **CAP Teoremi nedir?** \
-    [https://www.quora.com/What-Is-CAP-Theorem-1](https://www.quora.com/What-Is-CAP-Theorem-1)
+    <https://www.quora.com/What-Is-CAP-Theorem-1>
 
 - **Veri tutarlılığı temel bilgileri** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Saling rick. CAP Teoremi: "Her şey farklı Bulut ve Internet ile budur"** \
-    [https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
+    <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewer. CAP on yıl: "Kurallar" nasıl değişti** \
-    [https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
+    <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
 - **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama**  \
-    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Güvenilirlik Kılavuzu** (RabbitMQ belgeleri) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
 - **Azure hizmet veri yolu. Aracılı Mesajlaşma: Yinelenen algılama** \
-    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Güvenilirlik Kılavuzu** (RabbitMQ belgeleri) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)

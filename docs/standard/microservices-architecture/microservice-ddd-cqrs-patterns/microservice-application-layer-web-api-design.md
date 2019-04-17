@@ -1,15 +1,15 @@
 ---
-title: Mikro hizmet uygulama katmanı ve Web API'sini tasarlama
+title: Mikro hizmet uygulama katmanı ve Web API’sini tasarlama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmet mimarisi | Uygulama katmanı tasarlamaya yönelik KATI ilkeler, kısa bir Bahsetme.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 4a6a7faac6d0419d88e613ca23d9862475659918
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9177ac9a79afaea01f0ec21b0a64bad5a94e9966
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464209"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612244"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Mikro hizmet uygulama katmanı ve Web API'sini tasarlama
 
@@ -38,13 +38,13 @@ Bunu başka bir kılavuz DÜZ ayrıntılı olarak ele alır. Bu nedenle, bu kıl
 #### <a name="additional-resources"></a>Ek kaynaklar
 
 - **DÜZ: Temel OOP ilkeleri** \
-  [https://deviq.com/solid/](https://deviq.com/solid/)
+  <https://deviq.com/solid/>
 
 - **Tersine çevirme denetimi kapsayıcıları ve bağımlılık ekleme deseni** \
-  [https://martinfowler.com/articles/injection.html](https://martinfowler.com/articles/injection.html)
+  <https://martinfowler.com/articles/injection.html>
 
 - **Steve Smith. Birleştirici yenilikler** \
-  [https://ardalis.com/new-is-glue](https://ardalis.com/new-is-glue)
+  <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]
 > [Önceki](nosql-database-persistence-infrastructure.md)

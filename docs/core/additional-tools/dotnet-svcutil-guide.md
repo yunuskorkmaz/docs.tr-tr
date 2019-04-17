@@ -4,12 +4,12 @@ description: .NET Core ve ASP.NET Core projeleri için .NET Framework projeleri 
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: a1361c30e6b529d68dc93a65c645d31ca6c8e564
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b5dfb84f19c3748daa303c828cbe881f1582eb76
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747242"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612829"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core için WCF dotnet svcutil aracı
 
@@ -66,6 +66,7 @@ dotnet new web
 
 3. Yükleme [ `dotnet-svcutil` NuGet paketini](https://nuget.org/packages/dotnet-svcutil) CLI aracı olarak:
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet tool install --global dotnet-svcutil
 ```
@@ -89,14 +90,17 @@ dotnet restore
 
 4. Çalıştırma _dotnet svcutil_ gibi web hizmeti başvurusu dosyası oluşturmak için komutu:
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet-svcutil http://contoso.com/SayHello.svc
 ```
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 ```console
 dotnet svcutil http://contoso.com/SayHello.svc
 ```
+
 ---
 
 Oluşturulan dosyası olarak kaydedilen _HelloSvcutil/ServiceReference/Reference.cs_. _Dotnet svcutil_ aracı gerekli proxy kodu tarafından uygun WCF paketleri paket başvuruları projeye de ekler.
@@ -149,14 +153,17 @@ Aşağıdaki çıktıyı görmeniz gerekir: "Hello dotnet-svcutil!"
 
 Ayrıntılı bir açıklaması için `dotnet-svcutil` aracı parametreleri, help parametresini aşağıdaki şekilde geçirme aracı Çağır:
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet-svcutil --help
 ```
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 ```console
 dotnet svcutil --help
 ```
+
 ---
 
 ## <a name="feedback--questions"></a>Geri bildirim ve sorular

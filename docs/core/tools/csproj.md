@@ -2,12 +2,12 @@
 title: .NET Core csproj biçimine eklemeler
 description: Varolan ve .NET Core csproj dosyalarına arasındaki farklar hakkında bilgi edinin
 ms.date: 04/08/2019
-ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517336"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611100"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core csproj biçimine eklemeler
 
@@ -325,8 +325,10 @@ Etiketleri noktalı virgülle ayrılmış bir listesini, paketi belirler.
 Paketlenmiş paket bırakılır çıkış yolu belirler. Varsayılan değer `$(OutputPath)`.
 
 ### <a name="includesymbols"></a>IncludeSymbols
+Proje dolu olduğunda paketi bir ek sembol paketi oluşturmak bu Boolean değerini gösterir. Semboller paket biçimi tarafından denetlenir `SymbolPackageFormat` özelliği.
 
-Proje dolu olduğunda paketi bir ek sembol paketi oluşturmak bu Boolean değerini gösterir. Bu paket olacaktır bir *. symbols.nupkg* uzantısı ve PDB dosyaları DLL ile birlikte ve diğer çıktı dosyalarını kopyalar.
+### <a name="symbolpackageformat"></a>SymbolPackageFormat
+Semboller paket biçimi belirtir. "Symbols.nupkg" eski sembolleri paket oluşturulur, bir *. symbols.nupkg* pdb, DLL'ler ve diğer çıkış dosyalarını içeren bir uzantı. "Snupkg" snupkg sembol paketi içeren taşınabilir pdb oluşturulacak durumunda. "Symbols.nupkg" varsayılandır.
 
 ### <a name="includesource"></a>IncludeSource
 

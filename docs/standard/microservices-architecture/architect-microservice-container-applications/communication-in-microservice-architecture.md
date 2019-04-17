@@ -4,12 +4,12 @@ description: Zaman uyumlu ve zaman uyumsuz yöntemler etkilerini anlama, mikro h
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4b57607897e42ff68ff7566120bc3c932040a2a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 364bd4eb82907fcf0fbcc850eca839f676a2dbf8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466198"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613245"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Mikro hizmet mimarisinde iletişim
 
@@ -90,10 +90,10 @@ HTTP REST Hizmetleri, arabirim tanımı dili olarak kullanılırken ek değer yo
 ### <a name="additional-resources"></a>Ek kaynaklar
 
 - **Martin Fowler. Uludağ olgunluk modelini** REST modeli açıklaması. \
-  [https://martinfowler.com/articles/richardsonMaturityModel.html](https://martinfowler.com/articles/richardsonMaturityModel.html)
+  <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - **Swagger** resmi sitesi. \
-  [https://swagger.io/](https://swagger.io/)
+  <https://swagger.io/>
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Anında iletme ve HTTP tabanlı gerçek zamanlı iletişim
 
