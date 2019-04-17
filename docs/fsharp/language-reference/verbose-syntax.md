@@ -2,30 +2,30 @@
 title: Ayrıntılı Sözdizimi
 description: Kapsamlı ve basit sözdiziminde arasındaki farkı öğrenin F# programlama dilidir.
 ms.date: 05/16/2016
-ms.openlocfilehash: 05b909d438e9844ad5adcb2a4087ce04f8999751
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c770f2843276619cb2878198a537dcfb9c054b6b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610898"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613791"
 ---
-# <a name="verbose-syntax"></a><span data-ttu-id="607fa-103">Ayrıntılı Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="607fa-103">Verbose Syntax</span></span>
+# <a name="verbose-syntax"></a><span data-ttu-id="76e76-103">Ayrıntılı Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="76e76-103">Verbose Syntax</span></span>
 
-<span data-ttu-id="607fa-104">İki tür sözdizimi için birçok yapılardan kullanılabilir F# dil: *ayrıntılı sözdizimi* ve *basit söz dizimi*.</span><span class="sxs-lookup"><span data-stu-id="607fa-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="607fa-105">Ayrıntılı sözdizimi gibi yaygın olarak kullanılmaz, ancak için girinti daha az duyarlı olan, avantajına sahiptir.</span><span class="sxs-lookup"><span data-stu-id="607fa-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="607fa-106">Basit sözdizimi daha kısadır ve girinti başlangıcını ve bitişini yapıları göstermek için kullandığı yerine ek anahtar sözcükler gibi `begin`, `end`, `in`ve benzeri.</span><span class="sxs-lookup"><span data-stu-id="607fa-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="607fa-107">Basit sözdizimi varsayılan sözdizimidir.</span><span class="sxs-lookup"><span data-stu-id="607fa-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="607fa-108">Bu konuda sözdizimi anlatılmaktadır F# basit söz dizimi etkinleştirilmediğinde oluşturur.</span><span class="sxs-lookup"><span data-stu-id="607fa-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="607fa-109">Basit sözdizimi etkinleştirseniz bile bazı yapıları için ayrıntılı sözdizimi hala kullanabilmeniz için ayrıntılı sözdizimi her zaman etkindir.</span><span class="sxs-lookup"><span data-stu-id="607fa-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="607fa-110">Kullanarak basit söz dizimi devre dışı bırakabilirsiniz `#light "off"` yönergesi.</span><span class="sxs-lookup"><span data-stu-id="607fa-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
+<span data-ttu-id="76e76-104">İki tür sözdizimi için birçok yapılardan kullanılabilir F# dil: *ayrıntılı sözdizimi* ve *basit söz dizimi*.</span><span class="sxs-lookup"><span data-stu-id="76e76-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="76e76-105">Ayrıntılı sözdizimi gibi yaygın olarak kullanılmaz, ancak için girinti daha az duyarlı olan, avantajına sahiptir.</span><span class="sxs-lookup"><span data-stu-id="76e76-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="76e76-106">Basit sözdizimi daha kısadır ve girinti başlangıcını ve bitişini yapıları göstermek için kullandığı yerine ek anahtar sözcükler gibi `begin`, `end`, `in`ve benzeri.</span><span class="sxs-lookup"><span data-stu-id="76e76-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="76e76-107">Basit sözdizimi varsayılan sözdizimidir.</span><span class="sxs-lookup"><span data-stu-id="76e76-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="76e76-108">Bu konuda sözdizimi anlatılmaktadır F# basit söz dizimi etkinleştirilmediğinde oluşturur.</span><span class="sxs-lookup"><span data-stu-id="76e76-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="76e76-109">Basit sözdizimi etkinleştirseniz bile bazı yapıları için ayrıntılı sözdizimi hala kullanabilmeniz için ayrıntılı sözdizimi her zaman etkindir.</span><span class="sxs-lookup"><span data-stu-id="76e76-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="76e76-110">Kullanarak basit söz dizimi devre dışı bırakabilirsiniz `#light "off"` yönergesi.</span><span class="sxs-lookup"><span data-stu-id="76e76-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
 
-## <a name="table-of-constructs"></a><span data-ttu-id="607fa-111">Yapıları tablosu</span><span class="sxs-lookup"><span data-stu-id="607fa-111">Table of Constructs</span></span>
+## <a name="table-of-constructs"></a><span data-ttu-id="76e76-111">Yapıları tablosu</span><span class="sxs-lookup"><span data-stu-id="76e76-111">Table of Constructs</span></span>
 
-<span data-ttu-id="607fa-112">Aşağıdaki tabloda, basit ve ayrıntılı sözdizimi gösterilmektedir F# dil yapıları bağlamlarda iki biçim arasında bir fark olduğunda.</span><span class="sxs-lookup"><span data-stu-id="607fa-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="607fa-113">Bu tabloda, açı köşeli ayraçlar (&lt;&gt;) kullanıcı tarafından sağlanan söz dizimi öğeleri alın.</span><span class="sxs-lookup"><span data-stu-id="607fa-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="607fa-114">Her dil yapısı içinde bu yapıları kullanılan söz dizimi hakkında daha ayrıntılı bilgi için belgelere bakın.</span><span class="sxs-lookup"><span data-stu-id="607fa-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
+<span data-ttu-id="76e76-112">Aşağıdaki tabloda, basit ve ayrıntılı sözdizimi gösterilmektedir F# dil yapıları bağlamlarda iki biçim arasında bir fark olduğunda.</span><span class="sxs-lookup"><span data-stu-id="76e76-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="76e76-113">Bu tabloda, açı köşeli ayraçlar (&lt;&gt;) kullanıcı tarafından sağlanan söz dizimi öğeleri alın.</span><span class="sxs-lookup"><span data-stu-id="76e76-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="76e76-114">Her dil yapısı içinde bu yapıları kullanılan söz dizimi hakkında daha ayrıntılı bilgi için belgelere bakın.</span><span class="sxs-lookup"><span data-stu-id="76e76-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="607fa-115">Dil yapısı</span><span class="sxs-lookup"><span data-stu-id="607fa-115">Language construct</span></span></th>
-<th><span data-ttu-id="607fa-116">Basit sözdizimi</span><span class="sxs-lookup"><span data-stu-id="607fa-116">Lightweight syntax</span></span></th>
-<th><span data-ttu-id="607fa-117">Ayrıntılı sözdizimi</span><span class="sxs-lookup"><span data-stu-id="607fa-117">Verbose syntax</span></span></th>
+<th><span data-ttu-id="76e76-115">Dil yapısı</span><span class="sxs-lookup"><span data-stu-id="76e76-115">Language construct</span></span></th>
+<th><span data-ttu-id="76e76-116">Basit sözdizimi</span><span class="sxs-lookup"><span data-stu-id="76e76-116">Lightweight syntax</span></span></th>
+<th><span data-ttu-id="76e76-117">Ayrıntılı sözdizimi</span><span class="sxs-lookup"><span data-stu-id="76e76-117">Verbose syntax</span></span></th>
 </tr>
 <tr>
 <td>
-<span data-ttu-id="607fa-118">Bileşik deyimler</span><span class="sxs-lookup"><span data-stu-id="607fa-118">compound expressions</span></span>
+<span data-ttu-id="76e76-118">Bileşik deyimler</span><span class="sxs-lookup"><span data-stu-id="76e76-118">compound expressions</span></span>
 </td>
 <td>
 
@@ -33,6 +33,7 @@ ms.locfileid: "53610898"
 <expression1>
 <expression2>
 ```
+
 </td><td>
 
 ```fsharp
@@ -43,7 +44,7 @@ ms.locfileid: "53610898"
 </tr>
 <tr><td>
 
-<span data-ttu-id="607fa-119">iç içe geçmiş `let` bağlamaları</span><span class="sxs-lookup"><span data-stu-id="607fa-119">nested `let` bindings</span></span>
+<span data-ttu-id="76e76-119">iç içe geçmiş `let` bağlamaları</span><span class="sxs-lookup"><span data-stu-id="76e76-119">nested `let` bindings</span></span>
 
 </td><td>
 
@@ -66,7 +67,7 @@ let f x =
 </td>
 </tr>
 <tr><td>
-<span data-ttu-id="607fa-120">kod bloğu</span><span class="sxs-lookup"><span data-stu-id="607fa-120">code block</span></span>
+<span data-ttu-id="76e76-120">kod bloğu</span><span class="sxs-lookup"><span data-stu-id="76e76-120">code block</span></span>
 </td><td>
 
 ```fsharp
@@ -84,6 +85,7 @@ begin
     <expression2>;
 end
 ```
+
 </td>
 </tr>
 <tr><td>
@@ -162,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="607fa-121">Kaydı</span><span class="sxs-lookup"><span data-stu-id="607fa-121">record</span></span>
+<tr><td><span data-ttu-id="76e76-121">Kaydı</span><span class="sxs-lookup"><span data-stu-id="76e76-121">record</span></span>
 </td><td>
 
 ```fsharp
@@ -187,7 +189,7 @@ type <record-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="607fa-122">sınıf</span><span class="sxs-lookup"><span data-stu-id="607fa-122">class</span></span>
+<tr><td><span data-ttu-id="76e76-122">sınıf</span><span class="sxs-lookup"><span data-stu-id="76e76-122">class</span></span>
 </td><td>
 
 ```fsharp
@@ -206,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="607fa-123">yapı</span><span class="sxs-lookup"><span data-stu-id="607fa-123">structure</span></span></td><td>
+<tr><td><span data-ttu-id="76e76-123">yapı</span><span class="sxs-lookup"><span data-stu-id="76e76-123">structure</span></span></td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -225,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="607fa-124">ayrılmış birleşim</span><span class="sxs-lookup"><span data-stu-id="607fa-124">discriminated union</span></span></td><td>
+<tr><td><span data-ttu-id="76e76-124">ayrılmış birleşim</span><span class="sxs-lookup"><span data-stu-id="76e76-124">discriminated union</span></span></td><td>
 
 ```fsharp
 type <union-name> =
@@ -244,17 +246,18 @@ type <union-name> =
     ...
     with
         <value-or-member-definitions>
-    end    
+    end
 ```
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="607fa-125">arabirim</span><span class="sxs-lookup"><span data-stu-id="607fa-125">interface</span></span></td><td>
+<tr><td><span data-ttu-id="76e76-125">arabirim</span><span class="sxs-lookup"><span data-stu-id="76e76-125">interface</span></span></td><td>
 
 ```fsharp
 type <interface-name> =
     ...
 ```
+
 </td><td>
 
 ```fsharp
@@ -266,7 +269,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="607fa-126">nesne ifadesi</span><span class="sxs-lookup"><span data-stu-id="607fa-126">object expression</span></span></td><td>
+<tr><td><span data-ttu-id="76e76-126">nesne ifadesi</span><span class="sxs-lookup"><span data-stu-id="76e76-126">object expression</span></span></td><td>
 
 ```fsharp
 { new <type-name>
@@ -289,7 +292,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="607fa-127">arabirim uygulaması</span><span class="sxs-lookup"><span data-stu-id="607fa-127">interface implementation</span></span></td><td>
+<tr><td><span data-ttu-id="76e76-127">arabirim uygulaması</span><span class="sxs-lookup"><span data-stu-id="76e76-127">interface implementation</span></span></td><td>
 
 ```fsharp
 interface <interface-name>
@@ -308,7 +311,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="607fa-128">tür uzantısı</span><span class="sxs-lookup"><span data-stu-id="607fa-128">type extension</span></span></td><td>
+<tr><td><span data-ttu-id="76e76-128">tür uzantısı</span><span class="sxs-lookup"><span data-stu-id="76e76-128">type extension</span></span></td><td>
 
 ```fsharp
 type <type-name>
@@ -327,7 +330,7 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="607fa-129">modül</span><span class="sxs-lookup"><span data-stu-id="607fa-129">module</span></span></td><td>
+<tr><td><span data-ttu-id="76e76-129">modül</span><span class="sxs-lookup"><span data-stu-id="76e76-129">module</span></span></td><td>
 
 ```fsharp
 module <module-name> =
@@ -347,8 +350,8 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a><span data-ttu-id="607fa-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="607fa-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="76e76-130">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="76e76-130">See also</span></span>
 
-- [<span data-ttu-id="607fa-131">F# Dili Başvurusu</span><span class="sxs-lookup"><span data-stu-id="607fa-131">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="607fa-132">Derleyici Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="607fa-132">Compiler Directives</span></span>](compiler-directives.md)
-- [<span data-ttu-id="607fa-133">Kod Biçimlendirme Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="607fa-133">Code Formatting Guidelines</span></span>](code-formatting-guidelines.md)
+- [<span data-ttu-id="76e76-131">F# Dili Başvurusu</span><span class="sxs-lookup"><span data-stu-id="76e76-131">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="76e76-132">Derleyici Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="76e76-132">Compiler Directives</span></span>](compiler-directives.md)
+- [<span data-ttu-id="76e76-133">Kod Biçimlendirme Yönergeleri</span><span class="sxs-lookup"><span data-stu-id="76e76-133">Code Formatting Guidelines</span></span>](code-formatting-guidelines.md)
