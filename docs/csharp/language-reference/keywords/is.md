@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480839"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672465"
 ---
 # <a name="is-c-reference"></a>is (C# Başvurusu)
 
@@ -144,7 +144,7 @@ Aşağıdaki örnek, bir karşılaştırmasını gösterir `null` denetler:
  
 ### <a name="var" /> değişken deseni </a>
 
-Değişken desen ile bir desen eşleşmesi için null olmayan ifadeler her zaman başarılı; varsa *expr* olduğu `null`, `is` ifade `false`. Null olmayan değeri *expr* her zaman aynı türde çalışma zamanı süresi yerel bir değişkene atanan *expr*.  Kendi sözdizimi aşağıdaki gibidir:
+`var` Herhangi bir türü veya değer için bir catch tüm modelidir. Değerini *expr* derleme zamanı türünü aynı türe her zaman yerel bir değişkene atanan *expr*. Sonucu `is` ifadesidir her zaman `true`. Kendi sözdizimi aşağıdaki gibidir:
 
 ```csharp 
    expr is var varname
@@ -160,7 +160,7 @@ Aşağıdaki örnek, bir ifade adlı bir değişkene atayın için değişken de
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../../../csharp/language-reference/index.md)
+- [C# başvurusu](../../../csharp/language-reference/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)
 - [as](../../../csharp/language-reference/keywords/as.md)
