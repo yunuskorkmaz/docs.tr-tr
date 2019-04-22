@@ -10,43 +10,43 @@ helpviewer_keywords:
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
 ms.openlocfilehash: 0550e4ad700494c8773a5d9b5b282dfa116adfed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58813372"
 ---
-# <a name="-baseaddress"></a><span data-ttu-id="7b562-102">-baseaddress</span><span class="sxs-lookup"><span data-stu-id="7b562-102">-baseaddress</span></span>
-<span data-ttu-id="7b562-103">DLL oluştururken varsayılan temel adresini belirtir.</span><span class="sxs-lookup"><span data-stu-id="7b562-103">Specifies a default base address when creating a DLL.</span></span>  
+# <a name="-baseaddress"></a><span data-ttu-id="3291e-102">-baseaddress</span><span class="sxs-lookup"><span data-stu-id="3291e-102">-baseaddress</span></span>
+<span data-ttu-id="3291e-103">DLL oluştururken varsayılan temel adresini belirtir.</span><span class="sxs-lookup"><span data-stu-id="3291e-103">Specifies a default base address when creating a DLL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7b562-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7b562-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3291e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3291e-104">Syntax</span></span>  
   
 ```  
 -baseaddress:address  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="7b562-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="7b562-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="3291e-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="3291e-105">Arguments</span></span>  
   
-|<span data-ttu-id="7b562-106">Terim</span><span class="sxs-lookup"><span data-stu-id="7b562-106">Term</span></span>|<span data-ttu-id="7b562-107">Tanım</span><span class="sxs-lookup"><span data-stu-id="7b562-107">Definition</span></span>|  
+|<span data-ttu-id="3291e-106">Terim</span><span class="sxs-lookup"><span data-stu-id="3291e-106">Term</span></span>|<span data-ttu-id="3291e-107">Tanım</span><span class="sxs-lookup"><span data-stu-id="3291e-107">Definition</span></span>|  
 |---|---|  
-|`address`|<span data-ttu-id="7b562-108">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="7b562-108">Required.</span></span> <span data-ttu-id="7b562-109">DLL için temel adres.</span><span class="sxs-lookup"><span data-stu-id="7b562-109">The base address for the DLL.</span></span> <span data-ttu-id="7b562-110">Bu adres, onaltılık bir sayı olarak belirtilmelidir.</span><span class="sxs-lookup"><span data-stu-id="7b562-110">This address must be specified as a hexadecimal number.</span></span>|  
+|`address`|<span data-ttu-id="3291e-108">Gerekli.</span><span class="sxs-lookup"><span data-stu-id="3291e-108">Required.</span></span> <span data-ttu-id="3291e-109">DLL için temel adres.</span><span class="sxs-lookup"><span data-stu-id="3291e-109">The base address for the DLL.</span></span> <span data-ttu-id="3291e-110">Bu adres, onaltılık bir sayı olarak belirtilmelidir.</span><span class="sxs-lookup"><span data-stu-id="3291e-110">This address must be specified as a hexadecimal number.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7b562-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7b562-111">Remarks</span></span>  
- <span data-ttu-id="7b562-112">Bir DLL için varsayılan taban adresi belirlediği [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7b562-112">The default base address for a DLL is set by the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3291e-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3291e-111">Remarks</span></span>  
+ <span data-ttu-id="3291e-112">Bir DLL için varsayılan taban adresi belirlediği [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3291e-112">The default base address for a DLL is set by the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span>  
   
- <span data-ttu-id="7b562-113">Bu adres alt sıra Word'de yuvarlanır dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="7b562-113">Be aware that the lower-order word in this address is rounded.</span></span> <span data-ttu-id="7b562-114">Örneğin, 0x11110001 belirtirseniz 0x11110000 için yuvarlanır.</span><span class="sxs-lookup"><span data-stu-id="7b562-114">For example, if you specify 0x11110001, it is rounded to 0x11110000.</span></span>  
+ <span data-ttu-id="3291e-113">Bu adres alt sıra Word'de yuvarlanır dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="3291e-113">Be aware that the lower-order word in this address is rounded.</span></span> <span data-ttu-id="3291e-114">Örneğin, 0x11110001 belirtirseniz 0x11110000 için yuvarlanır.</span><span class="sxs-lookup"><span data-stu-id="3291e-114">For example, if you specify 0x11110001, it is rounded to 0x11110000.</span></span>  
   
- <span data-ttu-id="7b562-115">Bir DLL için imzalama işlemini tamamlamak için kullanın `–R` seçeneği tanımlayıcı adlandırma aracı (Sn.exe).</span><span class="sxs-lookup"><span data-stu-id="7b562-115">To complete the signing process for a DLL, use the `–R` option of the Strong Naming tool (Sn.exe).</span></span>  
+ <span data-ttu-id="3291e-115">Bir DLL için imzalama işlemini tamamlamak için kullanın `–R` seçeneği tanımlayıcı adlandırma aracı (Sn.exe).</span><span class="sxs-lookup"><span data-stu-id="3291e-115">To complete the signing process for a DLL, use the `–R` option of the Strong Naming tool (Sn.exe).</span></span>  
   
- <span data-ttu-id="7b562-116">Hedef DLL değilse, bu seçenek göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="7b562-116">This option is ignored if the target is not a DLL.</span></span>  
+ <span data-ttu-id="3291e-116">Hedef DLL değilse, bu seçenek göz ardı edilir.</span><span class="sxs-lookup"><span data-stu-id="3291e-116">This option is ignored if the target is not a DLL.</span></span>  
   
-|<span data-ttu-id="7b562-117">-Baseaddress Visual Studio IDE'de ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="7b562-117">To set -baseaddress in the Visual Studio IDE</span></span>|  
+|<span data-ttu-id="3291e-117">-Baseaddress Visual Studio IDE'de ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="3291e-117">To set -baseaddress in the Visual Studio IDE</span></span>|  
 |---|  
-|<span data-ttu-id="7b562-118">1.  Seçili bir projeyi **Çözüm Gezgini**.</span><span class="sxs-lookup"><span data-stu-id="7b562-118">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="7b562-119">Üzerinde **proje** menüsünü tıklatın **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="7b562-119">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="7b562-120">2.  Tıklayın **derleme** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="7b562-120">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="7b562-121">3.  **Gelişmiş**'e tıklayın.</span><span class="sxs-lookup"><span data-stu-id="7b562-121">3.  Click **Advanced**.</span></span><br /><span data-ttu-id="7b562-122">4.  Değer değiştirme **DLL temel adresi:** kutusu.</span><span class="sxs-lookup"><span data-stu-id="7b562-122">4.  Modify the value in the **DLL base address:** box.</span></span> <span data-ttu-id="7b562-123">**Not:**      **DLL temel adresi:** kutusu, salt okunur bir DLL hedef olmadığı sürece.</span><span class="sxs-lookup"><span data-stu-id="7b562-123">**Note:**      The **DLL base address:** box is read-only unless the target is a DLL.</span></span>|  
+|<span data-ttu-id="3291e-118">1.  Seçili bir projeyi **Çözüm Gezgini**.</span><span class="sxs-lookup"><span data-stu-id="3291e-118">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="3291e-119">Üzerinde **proje** menüsünü tıklatın **özellikleri**.</span><span class="sxs-lookup"><span data-stu-id="3291e-119">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="3291e-120">2.  Tıklayın **derleme** sekmesi.</span><span class="sxs-lookup"><span data-stu-id="3291e-120">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="3291e-121">3.  **Gelişmiş**'e tıklayın.</span><span class="sxs-lookup"><span data-stu-id="3291e-121">3.  Click **Advanced**.</span></span><br /><span data-ttu-id="3291e-122">4.  Değer değiştirme **DLL temel adresi:** kutusu.</span><span class="sxs-lookup"><span data-stu-id="3291e-122">4.  Modify the value in the **DLL base address:** box.</span></span> <span data-ttu-id="3291e-123">**Not:**      **DLL temel adresi:** kutusu, salt okunur bir DLL hedef olmadığı sürece.</span><span class="sxs-lookup"><span data-stu-id="3291e-123">**Note:**      The **DLL base address:** box is read-only unless the target is a DLL.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="7b562-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7b562-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3291e-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3291e-124">See also</span></span>
 
-- [<span data-ttu-id="7b562-125">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="7b562-125">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="7b562-126">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b562-126">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)
-- [<span data-ttu-id="7b562-127">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="7b562-127">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- <span data-ttu-id="7b562-128">[Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md))</span><span class="sxs-lookup"><span data-stu-id="7b562-128">[Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md))</span></span>
+- [<span data-ttu-id="3291e-125">Visual Basic komut satırı derleyicisi</span><span class="sxs-lookup"><span data-stu-id="3291e-125">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="3291e-126">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3291e-126">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)
+- [<span data-ttu-id="3291e-127">Örnek Derleme Komut Satırları</span><span class="sxs-lookup"><span data-stu-id="3291e-127">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- <span data-ttu-id="3291e-128">[Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md))</span><span class="sxs-lookup"><span data-stu-id="3291e-128">[Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md))</span></span>
