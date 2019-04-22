@@ -3,10 +3,10 @@ title: İşlev ve eylem genel temsilcileri (Visual Basic) için varyans kullanma
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
 ms.openlocfilehash: f2f45a9b6536859499f882b4cd585595176208f2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814312"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>İşlev ve eylem genel temsilcileri (Visual Basic) için varyans kullanma
