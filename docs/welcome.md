@@ -6,10 +6,10 @@ ms.author: mairaw
 ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 5084aaa745d714184ae644ef8e9fe140c522a70d
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920538"
 ---
 # <a name="welcome-to-net"></a>.NET için Hoş Geldiniz
@@ -35,9 +35,9 @@ Ayrıca en son .NET olayları izleyin:
 
 En son özellikler hakkında bilgi için .NET uygulamaları eklendi ve desteklenen diller için aşağıdaki makalelere bakın:
 
-- [' De .NET Core yenilikleri](core/whats-new/index.md)
+- [​.NET Core'daki Yenilikler](core/whats-new/index.md)
 - [.NET Framework'teki yenilikler](framework/whats-new/index.md)
-- [C# yenilikleri](csharp/whats-new/index.md)
+- [C# Yenilikleri](csharp/whats-new/index.md)
 - [Visual Basic'teki yenilikler](visual-basic/getting-started/whats-new.md)
 
 ## <a name="documentation"></a>Belgeler
@@ -61,7 +61,7 @@ Bu belge tamamen olduğu [açık kaynak](https://github.com/dotnet/docs). Belgel
 - [.NET core giriş](https://github.com/dotnet/core)
 - [.NET kitaplıkları](https://github.com/dotnet/corefx)
 - [.NET core çalışma zamanı](https://github.com/dotnet/coreclr)
-- [.NET core CLI](https://github.com/dotnet/cli)
+- [.NET Core CLI](https://github.com/dotnet/cli)
 - [(C# ve Visual Basic) Roslyn derleyici platformu ve IDE araçları](https://github.com/dotnet/roslyn)
 - [F#Derleyici ve IDE araçları](https://github.com/microsoft/visualfsharp)
 - [Windows Forms](https://github.com/dotnet/winforms)

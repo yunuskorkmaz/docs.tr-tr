@@ -5,10 +5,10 @@ helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
 ms.openlocfilehash: e4c78a12d6ba66ea88573e6ef2e5b4cc04c1121a
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890790"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log Nesnesi
@@ -23,7 +23,7 @@ Bir özellik ve olay ve özel durum bilgileri için uygulamanın günlük dinley
 >  Uygulamanızdan bilgileri günlüğe kaydetmek için .NET Framework sınıfları da kullanabilirsiniz. Daha fazla bilgi için [izleme ve İşaretleme uygulamaları](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Ad alanı:** <xref:Microsoft.VisualBasic.Logging>  
+ **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
   
  **Sınıf:** <xref:Microsoft.VisualBasic.Logging.Log>  
   

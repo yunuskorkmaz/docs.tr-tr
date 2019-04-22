@@ -3,10 +3,10 @@ title: C# 6 - C# Kılavuzu yenilikler nelerdir?
 description: C# sürüm 6'daki yeni özelliklerin öğrenin
 ms.date: 12/12/2018
 ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920681"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 yenilikleri

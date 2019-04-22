@@ -28,10 +28,10 @@ helpviewer_keywords:
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
 ms.openlocfilehash: fbb7b4e118598157e2005469f89831df50de6576
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58838345"
 ---
 # <a name="declare-statement"></a>Declare Deyimi
@@ -63,7 +63,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`Lib`|Gerekli. Tanıtır bir `Lib` bir dış yordam içeren dış dosyayı (DLL veya kod kaynağı) tanımlayan yan tümcesi.|  
 |`libname`|Gerekli. Bildirilen yordam içeren dosyanın adı.|  
 |`Alias`|İsteğe bağlı. Bildirilen yordamı kendi dosyası içinde belirtilen adla tanımlanamıyor gösterir `name`. Kendi Kimliği'nde belirttiğiniz `aliasname`.|  
-|`aliasname`|İfadesini kullanıyorsanız gereklidir `Alias` anahtar sözcüğü. İki yoldan biriyle yordamı tanımlayan dize:<br /><br /> Tırnak içinde bir dosya içinde yordam giriş noktası adı (`""`)<br /><br /> veya<br /><br /> Sayı işareti (`#`), dosya içinde yordam giriş noktasının bir sıra numarası belirten bir tamsayı ardından|  
+|`aliasname`|İfadesini kullanıyorsanız gereklidir `Alias` anahtar sözcüğü. İki yoldan biriyle yordamı tanımlayan dize:<br /><br /> Tırnak içinde bir dosya içinde yordam giriş noktası adı (`""`)<br /><br /> -veya-<br /><br /> Sayı işareti (`#`), dosya içinde yordam giriş noktasının bir sıra numarası belirten bir tamsayı ardından|  
 |`parameterlist`|Yordamın kullandığı parametreler gereklidir. Bkz: [parametre listesi](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Gerekli if `Function` belirtilir ve `Option Strict` olduğu `On`. Yordamın döndürdüğü değerin veri türü.|  
   
