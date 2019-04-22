@@ -3,17 +3,17 @@ title: 'Nasıl yapılır: LINQ to XML (Visual Basic) kullanarak sözlükleri ile
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
 ms.openlocfilehash: def00fcd356472825ebc4b9f5c306cf3547991e1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820774"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a><span data-ttu-id="a79f3-102">Nasıl yapılır: LINQ to XML (Visual Basic) kullanarak sözlükleri ile çalışma</span><span class="sxs-lookup"><span data-stu-id="a79f3-102">How to: Work with Dictionaries Using LINQ to XML (Visual Basic)</span></span>
-<span data-ttu-id="a79f3-103">Genellikle, diğer veri yapılarını XML ve XML veri yapılarını çeşitleri dönüştürmek uygundur.</span><span class="sxs-lookup"><span data-stu-id="a79f3-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="a79f3-104">Bu konuda dönüştürerek genel bu yaklaşım, belirli bir uygulama gösterilmektedir. bir <xref:System.Collections.Generic.Dictionary%602> XML ve geri.</span><span class="sxs-lookup"><span data-stu-id="a79f3-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a><span data-ttu-id="f6572-102">Nasıl yapılır: LINQ to XML (Visual Basic) kullanarak sözlükleri ile çalışma</span><span class="sxs-lookup"><span data-stu-id="f6572-102">How to: Work with Dictionaries Using LINQ to XML (Visual Basic)</span></span>
+<span data-ttu-id="f6572-103">Genellikle, diğer veri yapılarını XML ve XML veri yapılarını çeşitleri dönüştürmek uygundur.</span><span class="sxs-lookup"><span data-stu-id="f6572-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="f6572-104">Bu konuda dönüştürerek genel bu yaklaşım, belirli bir uygulama gösterilmektedir. bir <xref:System.Collections.Generic.Dictionary%602> XML ve geri.</span><span class="sxs-lookup"><span data-stu-id="f6572-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a79f3-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="a79f3-105">Example</span></span>  
- <span data-ttu-id="a79f3-106">Bu örnek, XML değişmez değerleri ve bir sorgu katıştırılmış bir ifadede kullanır.</span><span class="sxs-lookup"><span data-stu-id="a79f3-106">This example uses XML literals and a query in an embedded expression.</span></span> <span data-ttu-id="a79f3-107">Yeni sorgu projeleri <xref:System.Xml.Linq.XElement> nesneleri, hangi, daha sonra yeni içeriği haline `Root` <xref:System.Xml.Linq.XElement> nesne.</span><span class="sxs-lookup"><span data-stu-id="a79f3-107">The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="f6572-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="f6572-105">Example</span></span>  
+ <span data-ttu-id="f6572-106">Bu örnek, XML değişmez değerleri ve bir sorgu katıştırılmış bir ifadede kullanır.</span><span class="sxs-lookup"><span data-stu-id="f6572-106">This example uses XML literals and a query in an embedded expression.</span></span> <span data-ttu-id="f6572-107">Yeni sorgu projeleri <xref:System.Xml.Linq.XElement> nesneleri, hangi, daha sonra yeni içeriği haline `Root` <xref:System.Xml.Linq.XElement> nesne.</span><span class="sxs-lookup"><span data-stu-id="f6572-107">The query projects new <xref:System.Xml.Linq.XElement> objects, which then become the new content for the `Root` <xref:System.Xml.Linq.XElement> object.</span></span>  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -29,7 +29,7 @@ Dim root As XElement = _
 Console.WriteLine(root)  
 ```  
   
- <span data-ttu-id="a79f3-108">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="a79f3-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="f6572-108">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="f6572-108">This code produces the following output:</span></span>  
   
 ```xml  
           <Root>  
@@ -40,8 +40,8 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="a79f3-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="a79f3-109">Example</span></span>  
- <span data-ttu-id="a79f3-110">Aşağıdaki kod, XML'den bir sözlük oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a79f3-110">The following code creates a dictionary from XML.</span></span>  
+## <a name="example"></a><span data-ttu-id="f6572-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="f6572-109">Example</span></span>  
+ <span data-ttu-id="f6572-110">Aşağıdaki kod, XML'den bir sözlük oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f6572-110">The following code creates a dictionary from XML.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -61,7 +61,7 @@ For Each str As String In dict.Keys
 Next  
 ```  
   
- <span data-ttu-id="a79f3-111">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="a79f3-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="f6572-111">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="f6572-111">This code produces the following output:</span></span>  
   
 ```  
 Child1:Value1  
@@ -70,6 +70,6 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a79f3-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a79f3-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6572-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f6572-112">See also</span></span>
 
-- [<span data-ttu-id="a79f3-113">Projeksiyonlar ve Dönüşümler (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a79f3-113">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="f6572-113">Projeksiyonlar ve Dönüşümler (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f6572-113">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
