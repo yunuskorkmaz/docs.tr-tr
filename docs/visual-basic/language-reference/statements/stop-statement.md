@@ -13,34 +13,34 @@ helpviewer_keywords:
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
 ms.openlocfilehash: 80d6734945324f3f517b256051486273f6b687ec
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827997"
 ---
-# <a name="stop-statement-visual-basic"></a><span data-ttu-id="cf13a-102">Stop Deyimi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf13a-102">Stop Statement (Visual Basic)</span></span>
-<span data-ttu-id="cf13a-103">Yürütmeyi askıya alır.</span><span class="sxs-lookup"><span data-stu-id="cf13a-103">Suspends execution.</span></span>  
+# <a name="stop-statement-visual-basic"></a><span data-ttu-id="06c57-102">Stop Deyimi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06c57-102">Stop Statement (Visual Basic)</span></span>
+<span data-ttu-id="06c57-103">Yürütmeyi askıya alır.</span><span class="sxs-lookup"><span data-stu-id="06c57-103">Suspends execution.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf13a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cf13a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="06c57-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="06c57-104">Syntax</span></span>  
   
 ```  
 Stop  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="cf13a-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cf13a-105">Remarks</span></span>  
- <span data-ttu-id="cf13a-106">Koyabilirsiniz `Stop` deyimleri yürütmeyi askıya almak için herhangi bir yordamda.</span><span class="sxs-lookup"><span data-stu-id="cf13a-106">You can place `Stop` statements anywhere in procedures to suspend execution.</span></span> <span data-ttu-id="cf13a-107">Kullanarak `Stop` kodda bir kesme noktası ayarlamak ifade benzerdir.</span><span class="sxs-lookup"><span data-stu-id="cf13a-107">Using the `Stop` statement is similar to setting a breakpoint in the code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="06c57-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="06c57-105">Remarks</span></span>  
+ <span data-ttu-id="06c57-106">Koyabilirsiniz `Stop` deyimleri yürütmeyi askıya almak için herhangi bir yordamda.</span><span class="sxs-lookup"><span data-stu-id="06c57-106">You can place `Stop` statements anywhere in procedures to suspend execution.</span></span> <span data-ttu-id="06c57-107">Kullanarak `Stop` kodda bir kesme noktası ayarlamak ifade benzerdir.</span><span class="sxs-lookup"><span data-stu-id="06c57-107">Using the `Stop` statement is similar to setting a breakpoint in the code.</span></span>  
   
- <span data-ttu-id="cf13a-108">`Stop` Deyimi askıya alır, ancak yürütme `End`, tüm dosyaları kapatın veya desteklemez derlenmiş yürütülebilir (.exe) dosyasında karşılaşılanaa sürece herhangi bir değişkeni temizleyin.</span><span class="sxs-lookup"><span data-stu-id="cf13a-108">The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.</span></span>  
+ <span data-ttu-id="06c57-108">`Stop` Deyimi askıya alır, ancak yürütme `End`, tüm dosyaları kapatın veya desteklemez derlenmiş yürütülebilir (.exe) dosyasında karşılaşılanaa sürece herhangi bir değişkeni temizleyin.</span><span class="sxs-lookup"><span data-stu-id="06c57-108">The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cf13a-109">Varsa `Stop` deyimi tümleşik geliştirme ortamı (IDE) dışında çalışan kodu ile karşılaşıldı, hata ayıklayıcı çağrılır.</span><span class="sxs-lookup"><span data-stu-id="cf13a-109">If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked.</span></span> <span data-ttu-id="cf13a-110">Bu, perakende veya hata ayıklama modunda kod olup olmadığını derlenen bağımsız olarak geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="cf13a-110">This is true regardless of whether the code was compiled in debug or retail mode.</span></span>  
+>  <span data-ttu-id="06c57-109">Varsa `Stop` deyimi tümleşik geliştirme ortamı (IDE) dışında çalışan kodu ile karşılaşıldı, hata ayıklayıcı çağrılır.</span><span class="sxs-lookup"><span data-stu-id="06c57-109">If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked.</span></span> <span data-ttu-id="06c57-110">Bu, perakende veya hata ayıklama modunda kod olup olmadığını derlenen bağımsız olarak geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="06c57-110">This is true regardless of whether the code was compiled in debug or retail mode.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cf13a-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="cf13a-111">Example</span></span>  
- <span data-ttu-id="cf13a-112">Bu örnekte `Stop` her yineleme için yürütmeyi askıya almak için deyimi `For...Next` döngü.</span><span class="sxs-lookup"><span data-stu-id="cf13a-112">This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.</span></span>  
+## <a name="example"></a><span data-ttu-id="06c57-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="06c57-111">Example</span></span>  
+ <span data-ttu-id="06c57-112">Bu örnekte `Stop` her yineleme için yürütmeyi askıya almak için deyimi `For...Next` döngü.</span><span class="sxs-lookup"><span data-stu-id="06c57-112">This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.</span></span>  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   
-## <a name="see-also"></a><span data-ttu-id="cf13a-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cf13a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06c57-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="06c57-113">See also</span></span>
 
-- [<span data-ttu-id="cf13a-114">End Deyimi</span><span class="sxs-lookup"><span data-stu-id="cf13a-114">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)
+- [<span data-ttu-id="06c57-114">End Deyimi</span><span class="sxs-lookup"><span data-stu-id="06c57-114">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)

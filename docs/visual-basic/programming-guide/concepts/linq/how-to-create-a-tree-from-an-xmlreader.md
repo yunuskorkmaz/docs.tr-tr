@@ -3,19 +3,19 @@ title: "Nasıl yapılır: (Visual Basic) Xmlreader'dan ağaç oluşturma"
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
 ms.openlocfilehash: d0826112821394ac6a81ba03e7803187aaec2796
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836473"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a><span data-ttu-id="5df29-102">Nasıl yapılır: (Visual Basic) Xmlreader'dan ağaç oluşturma</span><span class="sxs-lookup"><span data-stu-id="5df29-102">How to: Create a Tree from an XmlReader (Visual Basic)</span></span>
-<span data-ttu-id="5df29-103">Bu konuda, doğrudan bir XML ağacı oluşturma işlemi gösterilmektedir bir <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="5df29-103">This topic shows how to create an XML tree directly from an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="5df29-104">Oluşturmak için bir <xref:System.Xml.Linq.XElement> gelen bir <xref:System.Xml.XmlReader>, siz de getirmelisiniz <xref:System.Xml.XmlReader> bir öğe düğümü üzerinde.</span><span class="sxs-lookup"><span data-stu-id="5df29-104">To create an <xref:System.Xml.Linq.XElement> from an <xref:System.Xml.XmlReader>, you must position the <xref:System.Xml.XmlReader> on an element node.</span></span> <span data-ttu-id="5df29-105"><xref:System.Xml.XmlReader> Açıklamaları atlar ve işleme talimatları, ancak <xref:System.Xml.XmlReader> konumlandırılmış bir metin düğümü üzerinde bir hata oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="5df29-105">The <xref:System.Xml.XmlReader> will skip comments and processing instructions, but if the <xref:System.Xml.XmlReader> is positioned on a text node, an error will be thrown.</span></span> <span data-ttu-id="5df29-106">Bu tür hataları önlemek için her zaman konumlandırma <xref:System.Xml.XmlReader> XML ağacından oluşturmadan önce bir öğede <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="5df29-106">To avoid such errors, always position the <xref:System.Xml.XmlReader> on an element before you create an XML tree from the <xref:System.Xml.XmlReader>.</span></span>  
+# <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a><span data-ttu-id="e2ce4-102">Nasıl yapılır: (Visual Basic) Xmlreader'dan ağaç oluşturma</span><span class="sxs-lookup"><span data-stu-id="e2ce4-102">How to: Create a Tree from an XmlReader (Visual Basic)</span></span>
+<span data-ttu-id="e2ce4-103">Bu konuda, doğrudan bir XML ağacı oluşturma işlemi gösterilmektedir bir <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="e2ce4-103">This topic shows how to create an XML tree directly from an <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="e2ce4-104">Oluşturmak için bir <xref:System.Xml.Linq.XElement> gelen bir <xref:System.Xml.XmlReader>, siz de getirmelisiniz <xref:System.Xml.XmlReader> bir öğe düğümü üzerinde.</span><span class="sxs-lookup"><span data-stu-id="e2ce4-104">To create an <xref:System.Xml.Linq.XElement> from an <xref:System.Xml.XmlReader>, you must position the <xref:System.Xml.XmlReader> on an element node.</span></span> <span data-ttu-id="e2ce4-105"><xref:System.Xml.XmlReader> Açıklamaları atlar ve işleme talimatları, ancak <xref:System.Xml.XmlReader> konumlandırılmış bir metin düğümü üzerinde bir hata oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="e2ce4-105">The <xref:System.Xml.XmlReader> will skip comments and processing instructions, but if the <xref:System.Xml.XmlReader> is positioned on a text node, an error will be thrown.</span></span> <span data-ttu-id="e2ce4-106">Bu tür hataları önlemek için her zaman konumlandırma <xref:System.Xml.XmlReader> XML ağacından oluşturmadan önce bir öğede <xref:System.Xml.XmlReader>.</span><span class="sxs-lookup"><span data-stu-id="e2ce4-106">To avoid such errors, always position the <xref:System.Xml.XmlReader> on an element before you create an XML tree from the <xref:System.Xml.XmlReader>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5df29-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="5df29-107">Example</span></span>  
- <span data-ttu-id="5df29-108">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Kitaplar (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="5df29-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="e2ce4-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="e2ce4-107">Example</span></span>  
+ <span data-ttu-id="e2ce4-108">Bu örnek aşağıdaki XML belgesi kullanır: [Örnek XML dosyası: Kitaplar (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="e2ce4-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="5df29-109">Aşağıdaki kod oluşturur bir `T:System.Xml.XmlReader` nesnesi ve ilk öğe düğümü bulana kadar okuma düğümleri.</span><span class="sxs-lookup"><span data-stu-id="5df29-109">The following code creates an `T:System.Xml.XmlReader` object, and then reads nodes until it finds the first element node.</span></span> <span data-ttu-id="5df29-110">Ardından yükler <xref:System.Xml.Linq.XElement> nesne.</span><span class="sxs-lookup"><span data-stu-id="5df29-110">It then loads the <xref:System.Xml.Linq.XElement> object.</span></span>  
+ <span data-ttu-id="e2ce4-109">Aşağıdaki kod oluşturur bir `T:System.Xml.XmlReader` nesnesi ve ilk öğe düğümü bulana kadar okuma düğümleri.</span><span class="sxs-lookup"><span data-stu-id="e2ce4-109">The following code creates an `T:System.Xml.XmlReader` object, and then reads nodes until it finds the first element node.</span></span> <span data-ttu-id="e2ce4-110">Ardından yükler <xref:System.Xml.Linq.XElement> nesne.</span><span class="sxs-lookup"><span data-stu-id="e2ce4-110">It then loads the <xref:System.Xml.Linq.XElement> object.</span></span>  
   
 ```vb  
 Dim r As XmlReader = XmlReader.Create("books.xml")  
@@ -26,7 +26,7 @@ Dim e As XElement = XElement.Load(r)
 Console.WriteLine(e)  
 ```  
   
- <span data-ttu-id="5df29-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="5df29-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="e2ce4-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="e2ce4-111">This example produces the following output:</span></span>  
   
 ```xml  
 <Catalog>  
@@ -52,6 +52,6 @@ Console.WriteLine(e)
 </Catalog>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5df29-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5df29-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2ce4-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e2ce4-112">See also</span></span>
 
-- [<span data-ttu-id="5df29-113">Ayrıştırma XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5df29-113">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [<span data-ttu-id="e2ce4-113">Ayrıştırma XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2ce4-113">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
