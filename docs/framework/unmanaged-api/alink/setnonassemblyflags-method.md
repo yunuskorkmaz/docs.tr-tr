@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c7716db814e86258c4cb81047b39142f33798782
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143201"
 ---
-# <a name="setnonassemblyflags-method"></a><span data-ttu-id="24875-102">SetNonAssemblyFlags Yöntemi</span><span class="sxs-lookup"><span data-stu-id="24875-102">SetNonAssemblyFlags Method</span></span>
-<span data-ttu-id="24875-103">Derleme özgü olmayan bayrağı ayarlar.</span><span class="sxs-lookup"><span data-stu-id="24875-103">Sets flags that are not assembly-specific.</span></span>  
+# <a name="setnonassemblyflags-method"></a><span data-ttu-id="97c75-102">SetNonAssemblyFlags Yöntemi</span><span class="sxs-lookup"><span data-stu-id="97c75-102">SetNonAssemblyFlags Method</span></span>
+<span data-ttu-id="97c75-103">Derleme özgü olmayan bayrağı ayarlar.</span><span class="sxs-lookup"><span data-stu-id="97c75-103">Sets flags that are not assembly-specific.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24875-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="24875-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="97c75-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="97c75-104">Syntax</span></span>  
   
 ```  
 HRESULT SetNonAssemblyFlags(  
@@ -34,18 +34,18 @@ HRESULT SetNonAssemblyFlags(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="24875-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="24875-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="97c75-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="97c75-105">Parameters</span></span>  
  `afFlags`  
- <span data-ttu-id="24875-106">ALINK bayraklar.</span><span class="sxs-lookup"><span data-stu-id="24875-106">ALink flags.</span></span>  
+ <span data-ttu-id="97c75-106">ALINK bayraklar.</span><span class="sxs-lookup"><span data-stu-id="97c75-106">ALink flags.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="24875-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="24875-107">Return Value</span></span>  
- <span data-ttu-id="24875-108">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="24875-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="97c75-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="97c75-107">Return Value</span></span>  
+ <span data-ttu-id="97c75-108">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="97c75-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="24875-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="24875-109">Requirements</span></span>  
- <span data-ttu-id="24875-110">ALink.h gerektirir</span><span class="sxs-lookup"><span data-stu-id="24875-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="97c75-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="97c75-109">Requirements</span></span>  
+ <span data-ttu-id="97c75-110">ALink.h gerektirir</span><span class="sxs-lookup"><span data-stu-id="97c75-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24875-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="24875-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97c75-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="97c75-111">See also</span></span>
 
-- [<span data-ttu-id="24875-112">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="24875-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="24875-113">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="24875-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="24875-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="24875-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="97c75-112">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="97c75-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="97c75-113">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="97c75-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="97c75-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="97c75-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

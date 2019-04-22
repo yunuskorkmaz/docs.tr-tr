@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9017eeaf8e80c3dc0b546c1f3c2fb54634b3e949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186439"
 ---
-# <a name="isymunmanagednamespacegetname-method"></a><span data-ttu-id="93b83-102">ISymUnmanagedNamespace::GetName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="93b83-102">ISymUnmanagedNamespace::GetName Method</span></span>
-<span data-ttu-id="93b83-103">Bu ad alanının adını alır.</span><span class="sxs-lookup"><span data-stu-id="93b83-103">Gets the name of this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetname-method"></a><span data-ttu-id="4d524-102">ISymUnmanagedNamespace::GetName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4d524-102">ISymUnmanagedNamespace::GetName Method</span></span>
+<span data-ttu-id="4d524-103">Bu ad alanının adını alır.</span><span class="sxs-lookup"><span data-stu-id="4d524-103">Gets the name of this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93b83-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="93b83-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d524-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4d524-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName(  
@@ -37,22 +37,22 @@ HRESULT GetName(
         length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="93b83-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="93b83-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4d524-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4d524-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="93b83-106">[in] A `ULONG32` boyutunu gösteren `szName` arabellek.</span><span class="sxs-lookup"><span data-stu-id="93b83-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="4d524-106">[in] A `ULONG32` boyutunu gösteren `szName` arabellek.</span><span class="sxs-lookup"><span data-stu-id="4d524-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="93b83-107">[out] Bir işaretçi bir `ULONG32` karakter null sonlandırma dahil olmak üzere ad alanı adını içerecek şekilde gerekli arabellek boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="93b83-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span></span>  
+ <span data-ttu-id="4d524-107">[out] Bir işaretçi bir `ULONG32` karakter null sonlandırma dahil olmak üzere ad alanı adını içerecek şekilde gerekli arabellek boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="4d524-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="93b83-108">[out] Ad alanı adını içeren arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="93b83-108">[out] A pointer to a buffer that contains the namespace name.</span></span>  
+ <span data-ttu-id="4d524-108">[out] Ad alanı adını içeren arabellek için işaretçi.</span><span class="sxs-lookup"><span data-stu-id="4d524-108">[out] A pointer to a buffer that contains the namespace name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="93b83-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="93b83-109">Return Value</span></span>  
- <span data-ttu-id="93b83-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="93b83-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4d524-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="4d524-109">Return Value</span></span>  
+ <span data-ttu-id="4d524-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="4d524-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="93b83-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="93b83-111">Requirements</span></span>  
- <span data-ttu-id="93b83-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="93b83-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d524-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4d524-111">Requirements</span></span>  
+ <span data-ttu-id="4d524-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4d524-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93b83-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="93b83-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d524-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4d524-113">See also</span></span>
 
-- [<span data-ttu-id="93b83-114">ISymUnmanagedNamespace Arabirimi</span><span class="sxs-lookup"><span data-stu-id="93b83-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [<span data-ttu-id="4d524-114">ISymUnmanagedNamespace Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4d524-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

@@ -15,16 +15,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b43ab8cdeff3866bb51e8634f367cf86ee483d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089237"
 ---
-# <a name="iclrdatatarget3getexceptioncontextrecord-method"></a><span data-ttu-id="5d900-102">ICLRDataTarget3::GetExceptionContextRecord Metodu</span><span class="sxs-lookup"><span data-stu-id="5d900-102">ICLRDataTarget3::GetExceptionContextRecord Method</span></span>
-<span data-ttu-id="5d900-103">Hedef işlemle ilişkilendirilmiş bağlam kaydını almak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="5d900-103">Called by the common language runtime (CLR) data access services to retrieve the context record associated with the target process.</span></span> <span data-ttu-id="5d900-104">Örneğin, bir döküm hedef için bu aracılığıyla iletilen bağlam kaydı eşdeğer olacaktır `ExceptionParam` bağımsız değişkeni [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) işlev kitaplığında Windows hata ayıklama yardımcı (DbgHelp).</span><span class="sxs-lookup"><span data-stu-id="5d900-104">For example, for a dump target, this would be equivalent to the context record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
+# <a name="iclrdatatarget3getexceptioncontextrecord-method"></a><span data-ttu-id="24612-102">ICLRDataTarget3::GetExceptionContextRecord Metodu</span><span class="sxs-lookup"><span data-stu-id="24612-102">ICLRDataTarget3::GetExceptionContextRecord Method</span></span>
+<span data-ttu-id="24612-103">Hedef işlemle ilişkilendirilmiş bağlam kaydını almak için ortak dil çalışma zamanı (CLR) veri erişim Hizmetleri tarafından çağrılır.</span><span class="sxs-lookup"><span data-stu-id="24612-103">Called by the common language runtime (CLR) data access services to retrieve the context record associated with the target process.</span></span> <span data-ttu-id="24612-104">Örneğin, bir döküm hedef için bu aracılığıyla iletilen bağlam kaydı eşdeğer olacaktır `ExceptionParam` bağımsız değişkeni [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) işlev kitaplığında Windows hata ayıklama yardımcı (DbgHelp).</span><span class="sxs-lookup"><span data-stu-id="24612-104">For example, for a dump target, this would be equivalent to the context record passed in via the `ExceptionParam` argument to the [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) function in the Windows Debug Help Library (DbgHelp).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5d900-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5d900-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24612-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="24612-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExceptionContextRecord(  
@@ -34,41 +34,41 @@ HRESULT GetExceptionContextRecord(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5d900-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5d900-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="24612-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="24612-106">Parameters</span></span>  
  `bufferSize`  
- <span data-ttu-id="5d900-107">[in] Giriş arabelleği bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="5d900-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="5d900-108">Bu bağlam kaydı tutabilecek kadar büyük olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="5d900-108">This must be large enough to accommodate the context record.</span></span>  
+ <span data-ttu-id="24612-107">[in] Giriş arabelleği bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="24612-107">[in] The input buffer size, in bytes.</span></span> <span data-ttu-id="24612-108">Bu bağlam kaydı tutabilecek kadar büyük olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="24612-108">This must be large enough to accommodate the context record.</span></span>  
   
  `bufferUsed`  
- <span data-ttu-id="5d900-109">[out] Bir işaretçi bir `ULONG32` gerçekte arabelleğe yazılan bayt sayısı alan türü.</span><span class="sxs-lookup"><span data-stu-id="5d900-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
+ <span data-ttu-id="24612-109">[out] Bir işaretçi bir `ULONG32` gerçekte arabelleğe yazılan bayt sayısı alan türü.</span><span class="sxs-lookup"><span data-stu-id="24612-109">[out] A pointer to a `ULONG32` type that receives the number of bytes actually written to the buffer.</span></span>  
   
  `buffer`  
- <span data-ttu-id="5d900-110">[out] Bağlam kaydını bir kopyasını alır bir ara belleğe yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5d900-110">[out] A pointer to a memory buffer that receives a copy of the context record.</span></span> <span data-ttu-id="5d900-111">Özel durum kaydını olarak döndürülen bir [bağlam](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) türü.</span><span class="sxs-lookup"><span data-stu-id="5d900-111">The exception record is returned as a [CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) type.</span></span>  
+ <span data-ttu-id="24612-110">[out] Bağlam kaydını bir kopyasını alır bir ara belleğe yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="24612-110">[out] A pointer to a memory buffer that receives a copy of the context record.</span></span> <span data-ttu-id="24612-111">Özel durum kaydını olarak döndürülen bir [bağlam](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) türü.</span><span class="sxs-lookup"><span data-stu-id="24612-111">The exception record is returned as a [CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5d900-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="5d900-112">Return Value</span></span>  
- <span data-ttu-id="5d900-113">Dönüş değeri `S_OK` başarı veya hata üzerinde `HRESULT` kodu.</span><span class="sxs-lookup"><span data-stu-id="5d900-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="5d900-114">`HRESULT` Kodları içerebilir ancak şu şekilde sınırlı değildir:</span><span class="sxs-lookup"><span data-stu-id="5d900-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="24612-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="24612-112">Return Value</span></span>  
+ <span data-ttu-id="24612-113">Dönüş değeri `S_OK` başarı veya hata üzerinde `HRESULT` kodu.</span><span class="sxs-lookup"><span data-stu-id="24612-113">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="24612-114">`HRESULT` Kodları içerebilir ancak şu şekilde sınırlı değildir:</span><span class="sxs-lookup"><span data-stu-id="24612-114">The `HRESULT` codes can include but are not limited to the following:</span></span>  
   
-|<span data-ttu-id="5d900-115">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="5d900-115">Return code</span></span>|<span data-ttu-id="5d900-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5d900-116">Description</span></span>|  
+|<span data-ttu-id="24612-115">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="24612-115">Return code</span></span>|<span data-ttu-id="24612-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="24612-116">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="5d900-117">Yöntem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="5d900-117">Method succeeded.</span></span> <span data-ttu-id="5d900-118">Bağlam kaydı için çıkış arabelleği kopyalandı.</span><span class="sxs-lookup"><span data-stu-id="5d900-118">The context record has been copied to the output buffer.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="5d900-119">Hedefle ilişkili hiçbir bağlam kaydıdır.</span><span class="sxs-lookup"><span data-stu-id="5d900-119">No context record is associated with the target.</span></span>|  
-|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="5d900-120">Giriş arabelleği boyutu, bağlam kaydı tutabilecek kadar büyük değil.</span><span class="sxs-lookup"><span data-stu-id="5d900-120">The input buffer size is not large enough to accommodate the context record.</span></span>|  
+|`S_OK`|<span data-ttu-id="24612-117">Yöntem başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="24612-117">Method succeeded.</span></span> <span data-ttu-id="24612-118">Bağlam kaydı için çıkış arabelleği kopyalandı.</span><span class="sxs-lookup"><span data-stu-id="24612-118">The context record has been copied to the output buffer.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_NOT_FOUND)`|<span data-ttu-id="24612-119">Hedefle ilişkili hiçbir bağlam kaydıdır.</span><span class="sxs-lookup"><span data-stu-id="24612-119">No context record is associated with the target.</span></span>|  
+|`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|<span data-ttu-id="24612-120">Giriş arabelleği boyutu, bağlam kaydı tutabilecek kadar büyük değil.</span><span class="sxs-lookup"><span data-stu-id="24612-120">The input buffer size is not large enough to accommodate the context record.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5d900-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5d900-121">Remarks</span></span>  
- <span data-ttu-id="5d900-122">[BAĞLAM](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) olan Windows SDK'sı tarafından sağlanan üstbilgileri içinde tanımlanan bir platforma özgü yapısı.</span><span class="sxs-lookup"><span data-stu-id="5d900-122">[CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) is a platform-specific structure defined in headers provided by the Windows SDK.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="24612-121">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="24612-121">Remarks</span></span>  
+ <span data-ttu-id="24612-122">[BAĞLAM](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) olan Windows SDK'sı tarafından sağlanan üstbilgileri içinde tanımlanan bir platforma özgü yapısı.</span><span class="sxs-lookup"><span data-stu-id="24612-122">[CONTEXT](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) is a platform-specific structure defined in headers provided by the Windows SDK.</span></span>  
   
- <span data-ttu-id="5d900-123">Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="5d900-123">This method is implemented by the writer of the debugging application.</span></span>  
+ <span data-ttu-id="24612-123">Bu yöntem, hata ayıklama uygulamanın yazıcı tarafından uygulanır.</span><span class="sxs-lookup"><span data-stu-id="24612-123">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5d900-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5d900-124">Requirements</span></span>  
- <span data-ttu-id="5d900-125">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d900-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="24612-124">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="24612-124">Requirements</span></span>  
+ <span data-ttu-id="24612-125">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="24612-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5d900-126">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="5d900-126">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="24612-126">**Üst bilgi:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="24612-126">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="5d900-127">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5d900-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="24612-127">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="24612-127">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="5d900-128">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="5d900-128">.NET Framework Versions:</span></span>** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
+ <span data-ttu-id="24612-128">**.NET framework sürümleri:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span><span class="sxs-lookup"><span data-stu-id="24612-128">**.NET Framework Versions:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5d900-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5d900-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24612-129">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="24612-129">See also</span></span>
 
-- [<span data-ttu-id="5d900-130">ICLRDataTarget3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5d900-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [<span data-ttu-id="5d900-131">GetExceptionRecord Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5d900-131">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)
-- [<span data-ttu-id="5d900-132">GetExceptionThreadID Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5d900-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+- [<span data-ttu-id="24612-130">ICLRDataTarget3 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="24612-130">ICLRDataTarget3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
+- [<span data-ttu-id="24612-131">GetExceptionRecord Yöntemi</span><span class="sxs-lookup"><span data-stu-id="24612-131">GetExceptionRecord Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionrecord-method.md)
+- [<span data-ttu-id="24612-132">GetExceptionThreadID Yöntemi</span><span class="sxs-lookup"><span data-stu-id="24612-132">GetExceptionThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)

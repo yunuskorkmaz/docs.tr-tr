@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 69db53c03d68e30507ff3ab2b11b663970d59af0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090816"
 ---
-# <a name="icorprofilerinfogetmoduleinfo-method"></a><span data-ttu-id="06bfa-102">ICorProfilerInfo::GetModuleInfo Yöntemi</span><span class="sxs-lookup"><span data-stu-id="06bfa-102">ICorProfilerInfo::GetModuleInfo Method</span></span>
-<span data-ttu-id="06bfa-103">Bir modül kimliği söz konusu modülün dosya adı ve modülün üst derleme Kimliğini döndürür.</span><span class="sxs-lookup"><span data-stu-id="06bfa-103">Given a module ID, returns the file name of the module and the ID of the module's parent assembly.</span></span>  
+# <a name="icorprofilerinfogetmoduleinfo-method"></a><span data-ttu-id="5034e-102">ICorProfilerInfo::GetModuleInfo Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5034e-102">ICorProfilerInfo::GetModuleInfo Method</span></span>
+<span data-ttu-id="5034e-103">Bir modül kimliği söz konusu modülün dosya adı ve modülün üst derleme Kimliğini döndürür.</span><span class="sxs-lookup"><span data-stu-id="5034e-103">Given a module ID, returns the file name of the module and the ID of the module's parent assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06bfa-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="06bfa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5034e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5034e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModuleInfo(  
@@ -40,46 +40,46 @@ HRESULT GetModuleInfo(
     [out] AssemblyID *pAssemblyId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="06bfa-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="06bfa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5034e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5034e-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="06bfa-106">[in] Bilgileri alınır modül kimliği.</span><span class="sxs-lookup"><span data-stu-id="06bfa-106">[in] The ID of the module for which information will be retrieved.</span></span>  
+ <span data-ttu-id="5034e-106">[in] Bilgileri alınır modül kimliği.</span><span class="sxs-lookup"><span data-stu-id="5034e-106">[in] The ID of the module for which information will be retrieved.</span></span>  
   
  `ppBaseLoadAddress`  
- <span data-ttu-id="06bfa-107">[out] Modülün yüklendiği temel adres.</span><span class="sxs-lookup"><span data-stu-id="06bfa-107">[out] The base address at which the module is loaded.</span></span>  
+ <span data-ttu-id="5034e-107">[out] Modülün yüklendiği temel adres.</span><span class="sxs-lookup"><span data-stu-id="5034e-107">[out] The base address at which the module is loaded.</span></span>  
   
  `cchName`  
- <span data-ttu-id="06bfa-108">[in] Karakter cinsinden uzunluğu, `szName` dönüş arabelleği.</span><span class="sxs-lookup"><span data-stu-id="06bfa-108">[in] The length, in characters, of the `szName` return buffer.</span></span>  
+ <span data-ttu-id="5034e-108">[in] Karakter cinsinden uzunluğu, `szName` dönüş arabelleği.</span><span class="sxs-lookup"><span data-stu-id="5034e-108">[in] The length, in characters, of the `szName` return buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="06bfa-109">[out] Bir işaretçi döndürülür modülün dosya adının toplam karakter uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="06bfa-109">[out] A pointer to the total character length of the module's file name that is returned.</span></span>  
+ <span data-ttu-id="5034e-109">[out] Bir işaretçi döndürülür modülün dosya adının toplam karakter uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="5034e-109">[out] A pointer to the total character length of the module's file name that is returned.</span></span>  
   
  `szName`  
- <span data-ttu-id="06bfa-110">[out] Bir çağıran tarafından sağlanan geniş karakter arabelleği.</span><span class="sxs-lookup"><span data-stu-id="06bfa-110">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="06bfa-111">Yöntem döndürüldüğünde bu arabellek modülü dosya adını içerir.</span><span class="sxs-lookup"><span data-stu-id="06bfa-111">When the method returns, this buffer contains the file name of the module.</span></span>  
+ <span data-ttu-id="5034e-110">[out] Bir çağıran tarafından sağlanan geniş karakter arabelleği.</span><span class="sxs-lookup"><span data-stu-id="5034e-110">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="5034e-111">Yöntem döndürüldüğünde bu arabellek modülü dosya adını içerir.</span><span class="sxs-lookup"><span data-stu-id="5034e-111">When the method returns, this buffer contains the file name of the module.</span></span>  
   
  `pAssemblyId`  
- <span data-ttu-id="06bfa-112">[out] Modülün üst derleme kimliği için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="06bfa-112">[out] A pointer to the ID of the module's parent assembly.</span></span>  
+ <span data-ttu-id="5034e-112">[out] Modülün üst derleme kimliği için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="5034e-112">[out] A pointer to the ID of the module's parent assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="06bfa-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="06bfa-113">Remarks</span></span>  
- <span data-ttu-id="06bfa-114">Dinamik modüller için `szName` parametresi boş bir dize ve 0 (sıfır) taban adresidir.</span><span class="sxs-lookup"><span data-stu-id="06bfa-114">For dynamic modules, the `szName` parameter is an empty string, and the base address is 0 (zero).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5034e-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5034e-113">Remarks</span></span>  
+ <span data-ttu-id="5034e-114">Dinamik modüller için `szName` parametresi boş bir dize ve 0 (sıfır) taban adresidir.</span><span class="sxs-lookup"><span data-stu-id="5034e-114">For dynamic modules, the `szName` parameter is an empty string, and the base address is 0 (zero).</span></span>  
   
- <span data-ttu-id="06bfa-115">Ancak `GetModuleInfo` yöntemi çağrıldığında modülün kimliği var. hemen sonra Profil Oluşturucu alıncaya kadar üst derlemesinin kimliği kullanılabilir olmayacak [Icorprofilercallback::moduleattachedtoassembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="06bfa-115">Although the `GetModuleInfo` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.</span></span>  
+ <span data-ttu-id="5034e-115">Ancak `GetModuleInfo` yöntemi çağrıldığında modülün kimliği var. hemen sonra Profil Oluşturucu alıncaya kadar üst derlemesinin kimliği kullanılabilir olmayacak [Icorprofilercallback::moduleattachedtoassembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="5034e-115">Although the `GetModuleInfo` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.</span></span>  
   
- <span data-ttu-id="06bfa-116">Zaman `GetModuleInfo` döndürür, doğrulamalısınız `szName` arabellek modülün tam dosya adını içerecek şekilde büyük.</span><span class="sxs-lookup"><span data-stu-id="06bfa-116">When `GetModuleInfo` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module.</span></span> <span data-ttu-id="06bfa-117">Bunu yapmak için değeri ile karşılaştırmak, `pcchName` değeriyle işaret `cchName` parametresi.</span><span class="sxs-lookup"><span data-stu-id="06bfa-117">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="06bfa-118">Varsa `pcchName` işaret değerinden daha büyük bir değere `cchName`, daha büyük bir ayırma `szName` arabellek, güncelleştirme `cchName` yeni, daha büyük bir boyut ve çağrı `GetModuleInfo` yeniden.</span><span class="sxs-lookup"><span data-stu-id="06bfa-118">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo` again.</span></span>  
+ <span data-ttu-id="5034e-116">Zaman `GetModuleInfo` döndürür, doğrulamalısınız `szName` arabellek modülün tam dosya adını içerecek şekilde büyük.</span><span class="sxs-lookup"><span data-stu-id="5034e-116">When `GetModuleInfo` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module.</span></span> <span data-ttu-id="5034e-117">Bunu yapmak için değeri ile karşılaştırmak, `pcchName` değeriyle işaret `cchName` parametresi.</span><span class="sxs-lookup"><span data-stu-id="5034e-117">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="5034e-118">Varsa `pcchName` işaret değerinden daha büyük bir değere `cchName`, daha büyük bir ayırma `szName` arabellek, güncelleştirme `cchName` yeni, daha büyük bir boyut ve çağrı `GetModuleInfo` yeniden.</span><span class="sxs-lookup"><span data-stu-id="5034e-118">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo` again.</span></span>  
   
- <span data-ttu-id="06bfa-119">Alternatif olarak, ilk çağırabilirsiniz `GetModuleInfo` sıfır uzunluklu ile `szName` arabellek doğru arabellek boyutu elde edilir.</span><span class="sxs-lookup"><span data-stu-id="06bfa-119">Alternatively, you can first call `GetModuleInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="06bfa-120">Arabellek boyutu döndürülen değere ayarlayabilirsiniz `pcchName` ve çağrı `GetModuleInfo` yeniden.</span><span class="sxs-lookup"><span data-stu-id="06bfa-120">You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo` again.</span></span>  
+ <span data-ttu-id="5034e-119">Alternatif olarak, ilk çağırabilirsiniz `GetModuleInfo` sıfır uzunluklu ile `szName` arabellek doğru arabellek boyutu elde edilir.</span><span class="sxs-lookup"><span data-stu-id="5034e-119">Alternatively, you can first call `GetModuleInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="5034e-120">Arabellek boyutu döndürülen değere ayarlayabilirsiniz `pcchName` ve çağrı `GetModuleInfo` yeniden.</span><span class="sxs-lookup"><span data-stu-id="5034e-120">You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="06bfa-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="06bfa-121">Requirements</span></span>  
- <span data-ttu-id="06bfa-122">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06bfa-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5034e-121">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5034e-121">Requirements</span></span>  
+ <span data-ttu-id="5034e-122">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5034e-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="06bfa-123">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="06bfa-123">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="5034e-123">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5034e-123">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="06bfa-124">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="06bfa-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5034e-124">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5034e-124">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="06bfa-125">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="06bfa-125">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="5034e-125">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5034e-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="06bfa-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="06bfa-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5034e-126">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5034e-126">See also</span></span>
 
-- [<span data-ttu-id="06bfa-127">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="06bfa-127">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="06bfa-128">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="06bfa-128">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="06bfa-129">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="06bfa-129">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
-- [<span data-ttu-id="06bfa-130">GetModuleInfo2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="06bfa-130">GetModuleInfo2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md)
+- [<span data-ttu-id="5034e-127">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5034e-127">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="5034e-128">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="5034e-128">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="5034e-129">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="5034e-129">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="5034e-130">GetModuleInfo2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="5034e-130">GetModuleInfo2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md)
