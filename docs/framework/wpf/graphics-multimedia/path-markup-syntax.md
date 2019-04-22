@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082496"
 ---
 # <a name="path-markup-syntax"></a>Yol Biçimlendirme Sözdizimi
@@ -47,7 +47,7 @@ Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışınd
   
 |StreamGeometry XAML öznitelik kullanımı|  
 |-----------------------------------------|  
-|`<` *Nesne* *özelliği* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Özniteliği için kullanım söz dizimine bir <xref:System.Windows.Media.PathFigureCollection> bir veya daha fazla şekil açıklamalarını oluşur.  
   
@@ -57,7 +57,7 @@ Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışınd
   
 |Terim|Açıklama|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Belirtir olup olmadığını <xref:System.Windows.Media.StreamGeometry> kullanan <xref:System.Windows.Media.FillRule.EvenOdd> veya <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` belirtir <xref:System.Windows.Media.FillRule.EvenOdd> doldurma kuralı.<br />-   `F1` belirtir <xref:System.Windows.Media.FillRule.Nonzero> doldurma kuralı.<br /><br /> Bu komut atlarsanız, yükleme kökü olan varsayılan davranışı kullanan <xref:System.Windows.Media.FillRule.EvenOdd>. Bu komut belirtirseniz, bu ilk yerleştirmeniz gerekir.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Belirtir olup olmadığını <xref:System.Windows.Media.StreamGeometry> kullanan <xref:System.Windows.Media.FillRule.EvenOdd> veya <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` belirtir <xref:System.Windows.Media.FillRule.EvenOdd> doldurma kuralı.<br />-   `F1` belirtir <xref:System.Windows.Media.FillRule.Nonzero> doldurma kuralı.<br /><br /> Bu komut atlarsanız, yükleme kökü olan varsayılan davranışı kullanan <xref:System.Windows.Media.FillRule.EvenOdd>. Bu komut belirtirseniz, bu ilk yerleştirmeniz gerekir.|  
 |*figureDescription*|Taşı komutu, oluşan bir şekil, komutlar ve isteğe bağlı bir Kapat komut çizin.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Şekil başlangıç noktasını belirten bir taşıma komutu. Bkz: [Taşı komutunu](#themovecommand) bölümü.|  
 |*drawCommands*|Şekil'ın içeriğini açıklayan bir veya daha fazla çizim komutları. Bkz: [çizim komutları](#drawcommands) bölümü.|  
@@ -88,11 +88,11 @@ Yolları açıklanmıştır [şekiller ve temel çizimlere WPF genel bakışınd
   
 |Sözdizimi|  
 |------------|  
-|`L` *uç noktası*<br /><br /> - veya -<br /><br /> `l` *uç noktası*|  
+|`L` *endPoint*<br /><br /> - veya -<br /><br /> `l` *endPoint*|  
   
 |Terim|Açıklama|  
 |----------|-----------------|  
-|*uç noktası*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Çizginin bitiş noktası.|  
+|*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Çizginin bitiş noktası.|  
 
 Bir büyük harf `L` gösterir `endPoint` mutlak bir değerdir; bir küçük harf `l` belirten `endPoint` bir uzaklık önceki noktaya veya yoksa (0,0).
 
@@ -118,7 +118,7 @@ Bir büyük harf `H` gösterir `x` mutlak bir değerdir; bir küçük harf `h` b
   
 |Terim|Açıklama|  
 |----------|-----------------|  
-|*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Y koordinatını çizginin bitiş noktası.|  
+|*Y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Y koordinatını çizginin bitiş noktası.|  
 
 Bir büyük harf `V` gösterir `y` mutlak bir değerdir; bir küçük harf `v` belirten `y` bir uzaklık önceki noktaya veya yoksa (0,0).  
     
@@ -131,7 +131,7 @@ Bir büyük harf `V` gösterir `y` mutlak bir değerdir; bir küçük harf `v` b
   
 |Terim|Açıklama|  
 |----------|-----------------|  
-|`controlPoint`1.|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> İlk denetim noktası eğrisinin eğri başlangıç tanjantını belirler.|  
+|`controlPoint`1|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> İlk denetim noktası eğrisinin eğri başlangıç tanjantını belirler.|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> İkinci denetim noktası eğrisinin eğri bitiş tanjantını belirler.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Noktası çizilen eğri için.|  
   
@@ -200,7 +200,7 @@ Bir büyük harf `V` gösterir `y` mutlak bir değerdir; bir küçük harf `v` b
   
 |Sözdizimi|  
 |------------|  
-|`x` `,` `y`<br /><br /> - veya -<br /><br /> `x` `y`|  
+|`x` `,` `y`<br /><br /> - veya -<br /><br /> `x``y`|  
   
 |Terim|Açıklama|  
 |----------|-----------------|  
@@ -228,6 +228,6 @@ Bir büyük harf `V` gösterir `y` mutlak bir değerdir; bir küçük harf `v` b
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
-- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Geometriye Genel Bakış](geometry-overview.md)
 - [Nasıl Yapılır Konuları](geometries-how-to-topics.md)

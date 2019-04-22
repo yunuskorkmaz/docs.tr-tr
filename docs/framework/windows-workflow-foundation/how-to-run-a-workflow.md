@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319930"
 ---
 # <a name="how-to-run-a-workflow"></a>Nasıl yapılır: İş Akışı Çalıştırma
@@ -165,7 +165,7 @@ Bu konu, Windows Workflow Foundation çalışmaya başlama Öğreticisi devamı 
 - <xref:System.Activities.Bookmark>
 - [Windows Workflow Foundation Programlama](programming.md)
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
-- [Nasıl yapılır: İş Akışı Oluşturma](how-to-create-a-workflow.md)
-- [Nasıl yapılır: Uzun Süre Çalışan İş Akışı Oluşturma ve Çalıştırma](how-to-create-and-run-a-long-running-workflow.md)
+- [Nasıl yapılır: Bir iş akışı oluşturma](how-to-create-a-workflow.md)
+- [Nasıl yapılır: Oluşturma ve uzun süre çalışan iş akışı](how-to-create-and-run-a-long-running-workflow.md)
 - [Bir iş akışında giriş bekleme](waiting-for-input-in-a-workflow.md)
 - [İş Akışları Barındırma](hosting-workflows.md)

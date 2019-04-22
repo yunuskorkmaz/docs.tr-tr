@@ -20,10 +20,10 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
 ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192216"
 ---
 # <a name="how-to-draw-an-outlined-shape"></a>Nasıl yapılır: Anahatlı Şekil Çizme
@@ -47,4 +47,4 @@ Bu örnek, bir form üzerinde Anahatlı elips ve dikdörtgen çizer.
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
 - [Grafik Programlamaya Başlarken](getting-started-with-graphics-programming.md)
 - [Çizgiler ve Şekiller Çizmek için Kalem Kullanma](using-a-pen-to-draw-lines-and-shapes.md)
-- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166250"
 ---
 # <a name="sorting-and-filtering-data"></a>Verileri Sıralama ve Filtreleme
@@ -31,10 +31,10 @@ ms.locfileid: "59166250"
     |------------------------------|-----------------|  
     |**CurrentRows**|**Geçerli** satır sürümü tüm **Unchanged**, **eklenen**, ve **değiştirilen** satır. Bu varsayılandır.|  
     |**Eklendi**|**Geçerli** satır sürümü tüm **eklenen** satır.|  
-    |**Silindi**|**Özgün** satır sürümü tüm **silinmiş** satır.|  
+    |**silindi**|**Özgün** satır sürümü tüm **silinmiş** satır.|  
     |**ModifiedCurrent**|**Geçerli** satır sürümü tüm **değiştirilen** satır.|  
     |**ModifiedOriginal**|**Özgün** satır sürümü tüm **değiştirilen** satır.|  
-    |**None**|Satır yok.|  
+    |**Yok.**|Satır yok.|  
     |**OriginalRows**|**Özgün** satır sürümü tüm **Unchanged**, **değiştirilen**, ve **silinmiş** satır.|  
     |**değişmedi**|**Geçerli** satır sürümü tüm **Unchanged** satır.|  
   

@@ -1,12 +1,12 @@
 ---
-title: <Uri> Öğesi (Uri ayarları)
+title: <Uri> Öğesi (Uri Ayarları)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 ms.openlocfilehash: 1f3573babd2e363a78f0ad454f0ba36c87ba6390
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212150"
 ---
 # <a name="uri-element-uri-settings"></a>\<URI > öğesi (Uri ayarları)
@@ -42,7 +42,7 @@ ms.locfileid: "59212150"
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[yapılandırma](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
+|[Yapılandırma](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Tüm ad alanları için ayarları içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `uri` Ögesinin üyeleri için ayarları <xref:System.Uri> sınıfları tarafından kullanılan sınıf <xref:System.Net> ad alanı. IRI ve IDN desteğini ayarlarını yapılandırın.  

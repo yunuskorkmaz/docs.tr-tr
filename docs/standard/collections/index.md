@@ -13,10 +13,10 @@ ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083848"
 ---
 # <a name="collections-and-data-structures"></a>Koleksiyonlar ve Veri Yapıları
@@ -77,12 +77,12 @@ Benzer veri genellikle daha verimli bir şekilde depolanır ve bir koleksiyonu o
 |Başlık|Açıklama|  
 |-----------|-----------------|  
 |[Koleksiyon Sınıfı Seçme](../../../docs/standard/collections/selecting-a-collection-class.md)|Farklı koleksiyonlarda açıklar ve bir senaryonuz için seçmenize yardımcı olur.|  
-|[Çok Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)|Gibi yaygın olarak kullanılan jenerik ve jenerik olmayan koleksiyon türlerini açıklar <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
-|[Genel Koleksiyonları Ne Zaman Kullanılacağı](../../../docs/standard/collections/when-to-use-generic-collections.md)|Genel koleksiyon türlerinin kullanımını açıklar.|  
+|[Yaygın Olarak Kullanılan Koleksiyon Türleri](../../../docs/standard/collections/commonly-used-collection-types.md)|Gibi yaygın olarak kullanılan jenerik ve jenerik olmayan koleksiyon türlerini açıklar <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, ve <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
+|[Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../docs/standard/collections/when-to-use-generic-collections.md)|Genel koleksiyon türlerinin kullanımını açıklar.|  
 |[Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Eşitlik karşılaştırma ve sıralama karşılaştırmaları koleksiyonlardaki kullanmayı açıklar.|  
 |[Sıralanmış Koleksiyon Türleri](../../../docs/standard/collections/sorted-collection-types.md)|Sıralanmış koleksiyon performans ve özelliklerini açıklar.|  
-|[Karma Tablo ve Sözlük Koleksiyon Türleri](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Genel ve genel olmayan karma tabanlı sözlük türleri özelliklerini açıklar.|  
-|[İş Parçacığı Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)|Gibi koleksiyon türlerini açıklar <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> ve <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> birden çok iş parçacığından güvenli ve verimli eş zamanlı erişimi destekler.|  
+|[Hashtable ve Sözlük Koleksiyon Türleri](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Genel ve genel olmayan karma tabanlı sözlük türleri özelliklerini açıklar.|  
+|[İş Parçacığı Güvenli Koleksiyonları](../../../docs/standard/collections/thread-safe/index.md)|Gibi koleksiyon türlerini açıklar <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> ve <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> birden çok iş parçacığından güvenli ve verimli eş zamanlı erişimi destekler.|  
 |Gt;System.Collections.Immutable|Değişmez koleksiyonları tanıtır ve koleksiyon türlerine bağlantılar sağlar.|  
   
 <a name="BKMK_Reference"></a>   

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 ms.openlocfilehash: dbe460888400735e0950e7a34372d8540e236303
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210717"
 ---
 # <a name="security-guidance-and-best-practices"></a>Güvenlik Kılavuzu ve En İyi Uygulamalar
@@ -18,10 +18,10 @@ Bu bölümdeki konular için rehberlik ve güvenli bir Windows Communication Fou
  [Güvenlik için En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
  Uygulamalarınızın güvenliğini sağlamanıza yardımcı olacak öneriler sunar.  
   
- [Güvenlik Değerlendirmeleri](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  WCF uygulaması oluştururken dikkate alınması gereken öğeler.  
   
- [Başarım Değerlendirmeleri](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
+ [Performans Konuları](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
  Performans ve güvenlik ile ilgili girişler içeriyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

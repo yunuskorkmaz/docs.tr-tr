@@ -5,10 +5,10 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162887"
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
@@ -184,5 +184,5 @@ Bu konuda nasıl izlemeyi etkinleştirmek, izlemeleri ve küme izleme düzeyleri
 
 - [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Nasıl yapılır: İz Dinleyicileri Oluşturma ve Başlatma](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Nasıl yapılır: Oluşturma ve izleme dinleyicilerini başlatma](https://go.microsoft.com/fwlink/?LinkId=94648)
 - [Özel TraceListener oluşturma](https://go.microsoft.com/fwlink/?LinkId=96239)

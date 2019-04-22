@@ -9,10 +9,10 @@ ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086071"
 ---
 # <a name="specifying-an-entry-point"></a>Giriş Noktası Belirtme
@@ -99,4 +99,4 @@ extern "C" int MsgBox(
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Yönetilen Kodda Prototipler Oluşturma](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [Platform Çağırma Örnekleri](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Platform Çağırma ile Veri Sıralama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [Platform Çağırma ile Veri Hazırlama](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)

@@ -9,19 +9,19 @@ ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146581"
 ---
 # <a name="ialink-interface"></a>IALink Arabirimi
 .NET Framework derlemeleri oluştururken yardımcı olur. Diğerlerinin yanı sıra arabirimi birden çok modül derlemeler için derleme bildirimleri yazma, derlemeleri tanımlayıcı adlarla imzalama ve netmodule'ler oluşturmaya yardımcı yöntemler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [AddFile Metodu](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+ [AddFile yöntemi](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
   
- [AddImport Metodu](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [Addımport yöntemi](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
   
  [CloseAssembly Yöntemi](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "59146581"
   
  [ExportNestedType Yöntemi](../../../../docs/framework/unmanaged-api/alink/exportnestedtype-method.md)  
   
- [ExportNestedTypeForwarder Metodu](../../../../docs/framework/unmanaged-api/alink/exportnestedtypeforwarder-method.md)  
+ [ExportNestedTypeForwarder Yöntemi](../../../../docs/framework/unmanaged-api/alink/exportnestedtypeforwarder-method.md)  
   
  [ExportType Yöntemi](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)  
   
@@ -51,13 +51,13 @@ ms.locfileid: "59146581"
   
  [GetAssemblyRefHash Yöntemi](../../../../docs/framework/unmanaged-api/alink/getassemblyrefhash-method.md)  
   
- [GetResolutionScope Metodu](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
+ [GetResolutionScope Yöntemi](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
   
- [GetScope Metodu](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [GetScope metodu](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
   
- [GetWin32ResBlob Metodu](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
+ [GetWin32ResBlob Yöntemi](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
   
- [ImportFile Metodu](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)  
+ [ImportFile Yöntemi](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)  
   
  [ImportFile2 Yöntemi](../../../../docs/framework/unmanaged-api/alink/importfile2-method.md)  
   
@@ -79,4 +79,4 @@ ms.locfileid: "59146581"
 
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Al.exe (Derleme Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

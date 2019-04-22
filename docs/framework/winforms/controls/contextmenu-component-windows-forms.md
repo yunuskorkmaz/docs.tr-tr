@@ -11,10 +11,10 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
 ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207961"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu Bileşeni (Windows Forms)
@@ -27,7 +27,7 @@ ms.locfileid: "59207961"
  [ContextMenu Bileşenine Genel Bakış](contextmenu-component-overview-windows-forms.md)  
  Genel konseptlerini tanıtan `ContextMenu` seçilen bir nesneyle ilişkili sık kullanılan komutlar, menüler oluşturma olanağı tanıyan bir bileşen.  
   
- [Nasıl yapılır: Windows Forms ContextMenu Bileşeni ile Menü Öğesi Ekleme ve Kaldırma](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [Nasıl yapılır: Windows Forms ContextMenu bileşeni ile menü öğelerini ekleyip](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Kısayol menüsü öğelerini Windows Forms'ta ekleyip açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
@@ -35,7 +35,7 @@ ms.locfileid: "59207961"
  Başvuru bilgileri sağlar <xref:System.Windows.Forms.ContextMenu> sınıfını ve üyelerini.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
+ [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
  Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

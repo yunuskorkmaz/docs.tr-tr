@@ -6,29 +6,29 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088411"
 ---
 # <a name="data-transfer-and-serialization"></a>Veri Aktarma ve Seri Hale Getirme
 Bağlı bir sistemde, hizmetler ve istemcileri üzerinde herhangi bir görevi tamamlamak için veri alışverişi bağlıdır. Bir hizmet veya istemci bir geliştirici olarak, Windows Communication Foundation (WCF) veri ve veri seri hale getirme verimli ve sürdürmek daha kolay olan uygulamalar oluşturmak için işleme biçimini de anlamanız gerekir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Hizmet Sözleşmelerinde Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
+ [Hizmet Anlaşmalarında Veri Aktarımını Belirtme](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
  Veri aktarımı Hizmetleri temel kavramlarını açıklar.  
   
- [Veri Sözleşmelerini Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  Hangi veri sözleşmeleri açıklar olan ve oluşturma ve bunları kullanın.  
   
- [Veri Sözleşmesi Seri Hale Getirici](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+ [Veri Anlaşması Seri Hale Getirici](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
  Verilerle serileştirmek nasıl yapılacağını anlatmaktadır <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı veya herhangi bir uzantısına <xref:System.Runtime.Serialization.XmlObjectSerializer> sınıfı.  
   
  [XmlSerializer Sınıfını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
  Neden ve nasıl açıklar kullanılacak <xref:System.Xml.Serialization.XmlSerializer> sınıfı, alternatif <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı.  
   
- [İleti Sözleşmeleri Kullanılıyor](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
+ [İleti Anlaşmaları Kullanma](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)  
  İleti sözleşmeleri SOAP iletilerini üzerinde ayrıntılı denetim nasıl izin açıklar.  
   
  [İleti Sınıfını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)  
@@ -62,5 +62,5 @@ Bağlı bir sistemde, hizmetler ve istemcileri üzerinde herhangi bir görevi ta
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [En iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
 - [Hizmet Sürümü Oluşturma](../../../../docs/framework/wcf/service-versioning.md)

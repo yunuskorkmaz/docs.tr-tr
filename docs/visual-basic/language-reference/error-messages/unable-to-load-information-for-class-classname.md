@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
 ms.openlocfilehash: 42f31df7f4bc849374d8beb09e17394c3cdd5ec4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318207"
 ---
 # <a name="unable-to-load-information-for-class-classname"></a>Sınıf için bilgileri yüklenemiyor\<SınıfAdı >'
@@ -27,4 +27,4 @@ Kullanılabilir olmayan bir sınıfa bir başvuru yapıldı.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da Hata Ayıklama](/visualstudio/debugger/debugging-in-visual-studio)
+- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio)
