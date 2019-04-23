@@ -7,10 +7,10 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320065"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama
@@ -170,9 +170,9 @@ ms.locfileid: "59320065"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyon Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Sunucu Tarafı UI Otomasyon Sağlayıcıyı Gösterme](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
-- [UI Otomasyon Sağlayıcı Dönüş Özellikleri](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [UI Otomasyon Sağlayıcıda Olay Tetikleme](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Gösterme](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcı Dönüş Özellikleri](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcıda Olay Tetikleme](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
 - [UI Otomasyonu Parça Sağlayıcıyıda Gezinmeyi Etkinleştirme](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
-- [UI Otomasyon Sağlayıcısında Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)

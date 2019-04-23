@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
 ms.openlocfilehash: c8a16dc0269fbd768a73e99f15f53e38c207a8d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326846"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Nasıl yapılır: Akış Çizelgesi İş Akışı Oluşturma
@@ -164,5 +164,5 @@ ms.locfileid: "59326846"
 - [Windows Workflow Foundation Programlama](programming.md)
 - [İş Akışları Tasarlama](designing-workflows.md)
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
-- [Nasıl yapılır: Etkinlik Oluşturma](how-to-create-an-activity.md)
-- [Nasıl yapılır: İş Akışı Çalıştırma](how-to-run-a-workflow.md)
+- [Nasıl yapılır: Bir etkinlik oluşturma](how-to-create-an-activity.md)
+- [Nasıl yapılır: İş akışı çalıştırma](how-to-run-a-workflow.md)

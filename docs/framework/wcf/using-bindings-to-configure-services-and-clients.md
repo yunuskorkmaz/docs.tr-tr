@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323154"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma
@@ -58,8 +58,8 @@ Bağlamaları bir uç noktaya bağlanmak için gereken iletişim ayrıntıların
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uç Noktası Oluşturma Genel Bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Nasıl yapılır: Yapılandırmada Hizmet Bağlama Belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Nasıl yapılır: Kodda Hizmet Bağlama Belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
-- [Nasıl yapılır: Yapılandırmada İstemci Bağlama Belirtme](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
-- [Nasıl yapılır: Kodda İstemci Bağlama Belirtme](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+- [Uç Nokta Oluşturmaya Genel Bakış](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Nasıl yapılır: Yapılandırmada hizmet bağlaması belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Nasıl yapılır: Kodda hizmet bağlama belirtme](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [Nasıl yapılır: Yapılandırmada istemci bağlama belirtme](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [Nasıl yapılır: Kodda istemci bağlama belirtme](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

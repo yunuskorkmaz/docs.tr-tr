@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
 ms.openlocfilehash: b7e8e4a750aadd8a84a57cdf22c01f6b91e6256c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296556"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767740"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma
 Bu konuda, özel bir sertifika Doğrulayıcı uygulama ve varsayılan sertifika doğrulama mantığı ile özel bir sertifika Doğrulayıcı değiştirmek için istemci veya hizmet kimlik bilgilerinin nasıl yapılandırılacağı gösterilmektedir.  

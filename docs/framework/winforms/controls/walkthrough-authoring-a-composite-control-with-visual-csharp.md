@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
 ms.openlocfilehash: 67fecb95ea373e88e5428251151cc30bfeb580a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321046"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>İzlenecek yol: Visual C ile bileşik denetim yazma\#
@@ -370,7 +370,7 @@ Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir y
     |`label1`|**Metin**|`(blank space)`|  
     ||**Ad**|`lblTest`|  
     |`dateTimePicker1`|**Ad**|`dtpTest`|  
-    ||**Biçimi**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
+    ||**Biçim**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 10. Tasarımcıda çift **dtpTest**.  
   
@@ -407,5 +407,5 @@ Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir y
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)
-- [Nasıl yapılır: Araç Kutusu Öğelerini Seç İletişim Kutusunda bir Denetimi Görüntüleme](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [İzlenecek yol: C# ile beraber Windows Forms Denetimi'nden Devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Nasıl yapılır: Bir denetimi görüntüleme araç kutusu öğelerini Seç iletişim kutusu](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [İzlenecek yol: Visual C# ile Windows Forms Denetimi'nden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

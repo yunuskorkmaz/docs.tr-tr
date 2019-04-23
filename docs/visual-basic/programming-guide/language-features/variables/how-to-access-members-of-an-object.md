@@ -6,10 +6,10 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322764"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Nasıl yapılır: Erişim üyeleri bir nesnenin (Visual Basic)
@@ -77,5 +77,5 @@ Bir nesneye başvuruda bulunan bir nesne değişkeni varsa, genellikle o nesneni
 - <xref:System.MemberAccessException>
 - [Nesne Değişkenleri](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Nesne Değişken Bildirimi](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Nesne Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

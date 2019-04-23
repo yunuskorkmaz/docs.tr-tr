@@ -3,10 +3,10 @@ title: Başlatmayı Örneklendirme
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
 ms.openlocfilehash: 1414908025416f4cdd6e5b51c052799631ab52cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322192"
 ---
 # <a name="instancing-initialization"></a>Başlatmayı Örneklendirme
@@ -154,7 +154,7 @@ if (activeObjectsCount == 0)
   
  Bu örnek bir özel öznitelik kullanır. Zaman <xref:System.ServiceModel.ServiceHost> olan yapılandırılmış, hizmetin türü tanımında kullanılan öznitelikler inceler ve kullanılabilir davranışlar hizmet açıklaması'nın davranışları koleksiyonuna ekler.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> Arabirim üç yöntem vardır: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Bu yöntem de WCF tarafından çağrıldığında, <xref:System.ServiceModel.ServiceHost> Başlatılmakta olan. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> ilk olarak adlandırılır; Bu tutarsızlıkları denetlenecek hizmeti sağlar. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> sonraki çağrılır; Bu yöntem, yalnızca çok Gelişmiş senaryolar gereklidir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> Son olarak adlandırılır ve çalışma zamanı yapılandırma sorumludur. Aşağıdaki parametre olarak geçirilen <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
+ <xref:System.ServiceModel.Description.IServiceBehavior> Arabirim üç yöntem vardır: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` ve <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Bu yöntem de WCF tarafından çağrıldığında, <xref:System.ServiceModel.ServiceHost> Başlatılmakta olan. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> ilk olarak adlandırılır; Bu tutarsızlıkları denetlenecek hizmeti sağlar. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> sonraki çağrılır; Bu yöntem, yalnızca çok Gelişmiş senaryolar gereklidir. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> Son olarak adlandırılır ve çalışma zamanı yapılandırma sorumludur. Aşağıdaki parametre olarak geçirilen <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
 -   `Description`: Bu parametre, tüm hizmet hizmet açıklamasını sağlar. Bu hizmet uç noktaları, sözleşmeler, bağlamalar ve hizmetiyle ilişkili diğer veri hakkında açıklama verilerini incelemek için kullanılabilir.  
   

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
 ms.openlocfilehash: ae2aa4c5629096ee7d888e7c4e334c3b6696db3f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323323"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama
@@ -91,5 +91,5 @@ Bir Windows etki alanı bilgisayardaki kaynaklara erişimi denetleme temel güve
 - <xref:System.Security.Permissions.SecurityAction.Demand>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
 - [Hizmet İşlemlerine Erişimi Yetkilendirme](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [Güvenlik Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Hizmet Sözleşmelerini Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Hizmet Anlaşmalarını Uygulama](../../../docs/framework/wcf/implementing-service-contracts.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
 ms.openlocfilehash: 6421171072f72764927b1a449c0257a29e8e82d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326560"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Nasıl yapılır: Tasarım Zamanında Mevcut Bir Ayarın Değerini Değiştirme
@@ -34,5 +34,5 @@ Visual Studio, projenizdeki mevcut ayarların değerlerini düzenlemek için kul
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma](using-application-settings-and-user-settings.md)
-- [Nasıl yapılır: Tasarım Zamanında Yeni Ayar Oluşturma](how-to-create-a-new-setting-at-design-time.md)
+- [Nasıl yapılır: Tasarım zamanında yeni ayar oluşturma](how-to-create-a-new-setting-at-design-time.md)
 - [Uygulama Ayarlarına Genel Bakış](application-settings-overview.md)

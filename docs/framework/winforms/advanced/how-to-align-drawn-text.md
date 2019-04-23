@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
 ms.openlocfilehash: 0e77e4d8eeb9d7a07115b89525ac80074afeb6e8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323277"
 ---
 # <a name="how-to-align-drawn-text"></a>Nasıl yapılır: Çizilmiş Metni Hizalama
@@ -33,10 +33,10 @@ ms.locfileid: "59323277"
      [!code-vb[System.Drawing.AlignDrawnText#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Önceki kod örnekleri Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirdikleri <xref:System.Windows.Forms.PaintEventArgs>`e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+ Önceki kod örnekleri Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirdikleri <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: GDI ile Metin Çizme](how-to-draw-text-with-gdi.md)
+- [Nasıl yapılır: GDI ile metin çizme](how-to-draw-text-with-gdi.md)
 - [Yazı Tipleri ve Metin Kullanma](using-fonts-and-text.md)
-- [Nasıl yapılır: Yazı Tipi Aileleri ve Yazı Tipleri Oluşturma](how-to-construct-font-families-and-fonts.md)
+- [Nasıl yapılır: Yazı tipi aileleri ve yazı tipleri](how-to-construct-font-families-and-fonts.md)

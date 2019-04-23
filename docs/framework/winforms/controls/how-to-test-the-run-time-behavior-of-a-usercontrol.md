@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
 ms.openlocfilehash: 15b37c71e6643b588c0378510965a9a3e7cb56e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321776"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Nasıl yapılır: Bir UserControl Denetiminin Çalışma Zamanı Davranışını Sınama
@@ -69,7 +69,7 @@ Geliştirirken bir <xref:System.Windows.Forms.UserControl>, çalışma zamanı d
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.UserControl>
-- [Nasıl yapılır: Bileşik Denetimler Yazma](how-to-author-composite-controls.md)
-- [İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [İzlenecek yol: C# ile Bileşik Denetim Yazma](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Kullanıcı Denetimi Tasarımcısı](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))
+- [Nasıl yapılır: Bileşik denetimler yazma](how-to-author-composite-controls.md)
+- [İzlenecek yol: Visual Basic ile bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [İzlenecek yol: Visual C# ile bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Kullanıcı denetimi Tasarımcısı](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

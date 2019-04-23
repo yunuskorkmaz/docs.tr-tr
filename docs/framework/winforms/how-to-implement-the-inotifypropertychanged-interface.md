@@ -8,10 +8,10 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], implementing
 ms.assetid: eac428af-b43b-46ac-80d9-1a5f88658725
 ms.openlocfilehash: cfdfb22fd854a8f630243e0f612761c71cb778d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225605"
 ---
 # <a name="how-to-implement-the-inotifypropertychanged-interface"></a>Nasıl yapılır: INotifyPropertyChanged Arabirimini Uygulama
@@ -23,7 +23,7 @@ Aşağıdaki kod örneğinde nasıl uygulanacağını gösterir <xref:System.Com
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: PropertyNameChanged Desenini Uygulama](how-to-apply-the-propertynamechanged-pattern.md)
+- [Nasıl yapılır: PropertyNameChanged desenini uygulama](how-to-apply-the-propertynamechanged-pattern.md)
 - [Windows Forms Veri Bağlama](windows-forms-data-binding.md)
-- [Nasıl yapılır: BindingSource ve INotifyPropertyChanged Arabirimini Kullanarak Değişiklik Bildirimleri Verme](./controls/raise-change-notifications--bindingsource.md)
+- [Nasıl yapılır: BindingSource ve INotifyPropertyChanged arabirimini kullanarak değişiklik bildirimleri Yükselt](./controls/raise-change-notifications--bindingsource.md)
 - [Windows Forms Veri Bağlamada Bildirimi Değiştirme](change-notification-in-windows-forms-data-binding.md)

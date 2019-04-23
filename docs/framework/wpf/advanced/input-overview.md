@@ -25,10 +25,10 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320021"
 ---
 # <a name="input-overview"></a>Girişe Genel Bakış
@@ -110,7 +110,7 @@ ms.locfileid: "59320021"
  [!code-vb[InputOvw#Input_OvwMouseExampleLeaveHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleleavehandler)]
 
 <a name="text_input"></a>
-## <a name="text-input"></a>Metin girişi
+## <a name="text-input"></a>Metin Girişi
  <xref:System.Windows.ContentElement.TextInput> Olay metin girişi için bir CİHAZDAN bağımsız şekilde dinleme olanak sağlar. Klavye metin girişi, ancak okuma, el yazısı birincil yoludur ve diğer giriş cihazları metin de girişi oluşturabilir.
 
  Klavye girişi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] önce uygun gönderir <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> olayları. Bu olayları işlenmeyen ve anahtarı (Denetim anahtar yönlü ok gibi) veya işlev tuşlarını yerine metinsel ise bir <xref:System.Windows.ContentElement.TextInput> olayı oluşturulur.  Yok her zaman basit bire bir eşleme arasında <xref:System.Windows.ContentElement.KeyDown> / <xref:System.Windows.ContentElement.KeyUp> ve <xref:System.Windows.ContentElement.TextInput> olayları çünkü birden çok tuş vuruşları tek bir karakter, metin girişi oluşturabilir ve tek bir tuş vuruşları çok karakter üretebilir dizeleri.  Bu kullandığınız diller için Çince, Japonca ve Korece gibi özellikle doğrudur [!INCLUDE[TLA#tla_ime#plural](../../../../includes/tlasharptla-imesharpplural-md.md)] karşılık gelen kendi alfabelerde mümkün karakterlerin binlerce oluşturulacak.
@@ -287,9 +287,9 @@ ms.locfileid: "59320021"
 
 |İptal Olayı çağrılma yeri|Zaten oluşan giriş gerçekleşen fare olayları|
 |----------------------------------------|-----------------------------------------------------------------|
-|<xref:System.Windows.UIElement.ManipulationStarting> and <xref:System.Windows.UIElement.ManipulationStarted>|Olayları fare.|
+|<xref:System.Windows.UIElement.ManipulationStarting> ve <xref:System.Windows.UIElement.ManipulationStarted>|Olayları fare.|
 |<xref:System.Windows.UIElement.ManipulationDelta>|Fare aşağı ve fare olayları taşıyın.|
-|<xref:System.Windows.UIElement.ManipulationInertiaStarting> and <xref:System.Windows.UIElement.ManipulationCompleted>|Fare aşağı, fare taşıma ve fare olayları.|
+|<xref:System.Windows.UIElement.ManipulationInertiaStarting> ve <xref:System.Windows.UIElement.ManipulationCompleted>|Fare aşağı, fare taşıma ve fare olayları.|
 
  Çağırırsanız unutmayın <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A> düzenlenmesini Eylemsizliği içinde olduğunda, yöntemin döndürür `false` ve fare olayları giriş oluşturmaz.
 
@@ -393,6 +393,6 @@ ms.locfileid: "59320021"
 
 - [Odağa Genel Bakış](focus-overview.md)
 - [Komut Vermeye Genel Bakış](commanding-overview.md)
-- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)
 - [Temel Öğelere Genel Bakış](base-elements-overview.md)
 - [Özellikler](properties-wpf.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320059"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Nasıl yapılır: Uzun Süre Çalışan İş Akışı Oluşturma ve Çalıştırma
@@ -95,11 +95,11 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
     |Denetim|Özellik: Değer|  
     |-------------|---------------------|  
     |**Düğme**|Ad: NewGame<br /><br /> Konum: 13, 13<br /><br /> Boyut: 75, 23<br /><br /> Metin: Yeni bir oyun|  
-    |**Etiketle**|Konum: 94, 18<br /><br /> Metin: Tahmin için 1 arasında bir sayı|  
+    |**Etiket**|Konum: 94, 18<br /><br /> Metin: Tahmin için 1 arasında bir sayı|  
     |**ComboBox**|Ad: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Öğeler: 10, 100, 1000<br /><br /> Konum: 228, 12<br /><br /> Boyut: 143, 21|  
-    |**Etiketle**|Konum: 13, 43<br /><br /> Metin: İş akışı türü|  
+    |**Etiket**|Konum: 13, 43<br /><br /> Metin: İş akışı türü|  
     |**ComboBox**|Ad: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Öğeler: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Konum: 94, 40<br /><br /> Boyut: 277, 21|  
-    |**Etiketle**|Ad: WorkflowVersion<br /><br /> Konum: 13, 362<br /><br /> Metin: İş akışı sürümü|  
+    |**Etiket**|Ad: WorkflowVersion<br /><br /> Konum: 13, 362<br /><br /> Metin: İş akışı sürümü|  
     |**GroupBox**|Konum: 13, 67<br /><br /> Boyut: 358, 287<br /><br /> Metin: Oyun|  
   
     > [!NOTE]
@@ -107,9 +107,9 @@ Windows Workflow Foundation (WF) merkezi özelliklerinin kalıcı hale getirmek 
   
     |Denetim|Özellik: Değer|  
     |-------------|---------------------|  
-    |**Etiketle**|Konum: 7, 20<br /><br /> Metin: İş akışı örnek kimliği|  
+    |**Etiket**|Konum: 7, 20<br /><br /> Metin: İş akışı örnek kimliği|  
     |**ComboBox**|Ad: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Konum: 121, 17<br /><br /> Boyut: 227, 21|  
-    |**Etiketle**|Konum: 7, 47<br /><br /> Metin: Tahmin|  
+    |**Etiket**|Konum: 7, 47<br /><br /> Metin: Tahmin|  
     |**TextBox**|Ad: Tahmin<br /><br /> Konum: 50, 44<br /><br /> Boyut: 65, 20|  
     |**Düğme**|Ad: EnterGuess<br /><br /> Konum: 121, 42<br /><br /> Boyut: 75, 23<br /><br /> Metin: Tahmin girin|  
     |**Düğme**|Ad: QuitGame<br /><br /> Konum: 274, 42<br /><br /> Boyut: 75, 23<br /><br /> Metin: Çık|  

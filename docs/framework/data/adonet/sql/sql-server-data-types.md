@@ -3,10 +3,10 @@ title: SQL Server Veri Türleri ve ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
 ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326313"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server Veri Türleri ve ADO.NET
@@ -18,7 +18,7 @@ SQL Server ve .NET Framework, olası veri kaybına neden farklı tür sistemlerd
   
  Uygulamanızda kullanmak için mevcut SQL Server veri türleri, kullanmakta olduğunuz SQL Server'ın sürümüne bağlıdır. SQL Server Books Online'nın ilgili sürümü aşağıdaki tabloda daha fazla bilgi için bkz.  
   
- **SQL Server Çevrimiçi Kitaplar**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 1. [Veri türleri (veritabanı altyapısı)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   

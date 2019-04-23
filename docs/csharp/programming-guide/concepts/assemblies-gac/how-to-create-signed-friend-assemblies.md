@@ -3,10 +3,10 @@ title: 'Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325208"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Nasıl yapılır: İmzalı arkadaş derlemeleri oluşturma (C#)
@@ -91,10 +91,10 @@ Bu örnek, arkadaş derlemeleri tanımlayıcı adlara sahip derlemeler ile kulla
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [.NET derlemeleri](../../../../standard/assembly/index.md)
+- [.NET’te bütünleştirilmiş kodlar](../../../../standard/assembly/index.md)
 - [Arkadaş Bütünleştirilmiş Kodları](../../../../standard/assembly/friend-assemblies.md)
 - [Nasıl yapılır: İmzasız arkadaş derlemeleri oluşturma (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe (Tanımlayıcı Ad Aracı)](../../../../framework/tools/sn-exe-strong-name-tool.md)
-- [Tanımlayıcı Adlı Derlemeler Oluşturma ve Kullanma](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [C# Programlama Kılavuzu](../../../../csharp/programming-guide/index.md)

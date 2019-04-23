@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
 ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322647"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Nasıl yapılır: Değiştiricileri ve GenerateMember Özelliklerini Kullanma
@@ -63,5 +63,5 @@ Bir Windows formunda bir bileşen yerleştirdiğinizde, iki özellik tasarım or
 
 - <xref:System.Windows.Forms.Button>
 - [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)
-- [İzlenecek yol: Görsel Devralmayı Gösterme](walkthrough-demonstrating-visual-inheritance.md)
-- [Nasıl yapılır: Windows Formlarını Devralma](how-to-inherit-windows-forms.md)
+- [İzlenecek yol: Görsel devralmayı gösterme](walkthrough-demonstrating-visual-inheritance.md)
+- [Nasıl yapılır: Windows Form devralma](how-to-inherit-windows-forms.md)

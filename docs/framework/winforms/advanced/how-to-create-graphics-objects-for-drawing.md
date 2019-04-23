@@ -11,10 +11,10 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324207"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma
@@ -165,14 +165,14 @@ ms.locfileid: "59324207"
   
     |İşlemek için|Bkz. |  
     |---------------|---------|  
-    |satırları|[Nasıl yapılır: Windows Formunda Çizgi Çizme](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Şekiller|[Nasıl yapılır: Anahatlı Şekil Çizme](how-to-draw-an-outlined-shape.md)|  
-    |Metin|[Nasıl yapılır: Bir Windows Formunda Metin Çizme](how-to-draw-text-on-a-windows-form.md)|  
-    |Görüntüler|[Nasıl yapılır: GDI+ ile Resim İşleme](how-to-render-images-with-gdi.md)|  
+    |satırları|[Nasıl yapılır: Bir Windows formunda çizgi çizme](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Şekiller|[Nasıl yapılır: Anahatlı şekil çizme](how-to-draw-an-outlined-shape.md)|  
+    |Metin|[Nasıl yapılır: Bir Windows formunda metin çizme](how-to-draw-text-on-a-windows-form.md)|  
+    |Görüntüler|[Nasıl yapılır: GDI + ile görüntü işleme](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Grafik Programlamaya Başlarken](getting-started-with-graphics-programming.md)
-- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
-- [Nasıl yapılır: GDI+ ile Resim İşleme](how-to-render-images-with-gdi.md)
+- [Nasıl yapılır: GDI + ile görüntü işleme](how-to-render-images-with-gdi.md)

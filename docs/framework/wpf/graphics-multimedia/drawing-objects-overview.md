@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325520"
 ---
 # <a name="drawing-objects-overview"></a>Çizim Nesnelerine Genel Bakış
@@ -238,7 +238,7 @@ GeometryDrawing DrawingBrush ile kullanılan
 - [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)
 - [Geometriye Genel Bakış](geometry-overview.md)
-- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
 - [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)
 - [Freezable Nesnelerine Genel Bakış](../advanced/freezable-objects-overview.md)
 - [Nasıl Yapılır Konuları](drawings-how-to-topics.md)

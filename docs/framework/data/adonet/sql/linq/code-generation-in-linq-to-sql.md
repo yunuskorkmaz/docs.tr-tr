@@ -3,10 +3,10 @@ title: LINQ to SQL’de Kod Oluşturma
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
 ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321594"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL’de Kod Oluşturma
@@ -273,6 +273,6 @@ elementFormDefault="qualified" >
 
 - [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Nasıl yapılır: Nesne Modelini Dış Dosya Olarak Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Nasıl yapılır: Nesne modelini dış dosya oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
 - [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

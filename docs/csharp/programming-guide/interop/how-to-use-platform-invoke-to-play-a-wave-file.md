@@ -9,10 +9,10 @@ helpviewer_keywords:
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
 ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323817"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Nasıl yapılır: Wave dosyasını oynatmak için Platform çağırma kullanma (C# Programlama Kılavuzu)
@@ -48,5 +48,5 @@ Aşağıdaki C# kod örneği platform kullanılması gösterilmektedir Windows i
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Birlikte Çalışabilirliğe Genel Bakış](../../../csharp/programming-guide/interop/interoperability-overview.md)
-- [Platform Çağırmaya Daha Yakından Bakış](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
-- [Platform Çağırma ile Veri Sıralama](../../../framework/interop/marshaling-data-with-platform-invoke.md)
+- [Yakından Platform çağırma](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
+- [Platform Çağırma ile Veri Hazırlama](../../../framework/interop/marshaling-data-with-platform-invoke.md)

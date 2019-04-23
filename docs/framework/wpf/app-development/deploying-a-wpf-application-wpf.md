@@ -6,10 +6,10 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320658"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
@@ -69,7 +69,7 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
   
 -   Yalnızca işaretleme [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulamalar.  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]biçimindeki telefon numarasıdır.  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Tek başına uygulamaları dağıtma  
@@ -124,5 +124,5 @@ Windows Presentation Foundation (WPF) uygulamaları tasarlandıktan sonra bunlar
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WPF Uygulaması Oluşturma](building-a-wpf-application-wpf.md)
+- [WPF Uygulaması Derleme](building-a-wpf-application-wpf.md)
 - [Güvenlik](../security-wpf.md)

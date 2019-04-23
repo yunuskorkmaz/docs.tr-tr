@@ -8,16 +8,16 @@ helpviewer_keywords:
 - BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
 ms.openlocfilehash: b8c67c2390df91c6a4af66e020365544e6bf369b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323830"
 ---
 # <a name="addressof-operand-must-be-the-name-of-a-method-without-parentheses"></a>'AddressOf' işleneni bir metot adı olmalıdır (parantezler olmadan)
 `AddressOf` İşleci, belirli bir yordam başvuran bir yordam temsilci örneği oluşturur. Söz dizimi aşağıdaki gibidir.  
   
- `AddressOf` `procedurename`  
+ `AddressOf``procedurename`  
   
  Bağımsız değişkeni aşağıdaki parantez içine eklenen `AddressOf`, burada Hiçbiri gereklidir.  
   

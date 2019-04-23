@@ -13,10 +13,10 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
 ms.openlocfilehash: f0a5805561509501ca38a7fec6b4731af190e3c3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322023"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Nasıl yapılır: Windows Forms LinkLabel Denetiminin Görünüşünü Değiştirme
@@ -128,5 +128,5 @@ Tarafından görüntülenen metni değiştirebilirsiniz <xref:System.Windows.For
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
 - [LinkLabel Denetimine Genel Bakış](linklabel-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms LinkLabel Denetimi ile Bir Nesneye veya Web Sayfasına Bağlama](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Nasıl yapılır: Bir nesneye bağlayın veya Web sayfası Windows Forms LinkLabel denetimi ile](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [LinkLabel Denetimi](linklabel-control-windows-forms.md)

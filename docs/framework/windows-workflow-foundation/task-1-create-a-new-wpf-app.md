@@ -3,10 +3,10 @@ title: 'Görev 1: Yeni Bir Windows Presentation Foundation Uygulaması Oluşturm
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320386"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Görev 1: Yeni Bir Windows Presentation Foundation Uygulaması Oluşturma
@@ -45,4 +45,4 @@ Bu görevde, WPF uygulaması Visual Studio şablonu kullanarak boş bir Windows 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İş Akışı Tasarımcısını Yeniden Barındırma](rehosting-the-workflow-designer.md)
-- [Görev 2: İş Akışı Tasarımcısını Barındırma](task-2-host-the-workflow-designer.md)
+- [2. Görev: İş akışı tasarımcısını barındırma](task-2-host-the-workflow-designer.md)

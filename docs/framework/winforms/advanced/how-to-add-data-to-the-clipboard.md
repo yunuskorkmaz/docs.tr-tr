@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
 ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325689"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Nasıl yapılır: Panoya Veri Ekleme
@@ -63,4 +63,4 @@ ms.locfileid: "59325689"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sürükle ve Bırak İşlemleri ve Pano Desteği](drag-and-drop-operations-and-clipboard-support.md)
-- [Nasıl yapılır: Panodan Veri Alma](how-to-retrieve-data-from-the-clipboard.md)
+- [Nasıl yapılır: Panodan veri alma](how-to-retrieve-data-from-the-clipboard.md)

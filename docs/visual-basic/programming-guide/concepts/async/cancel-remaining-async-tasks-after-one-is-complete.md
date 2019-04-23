@@ -3,10 +3,10 @@ title: Tam (Visual Basic) biridir sonra geri kalan zaman uyumsuz görevleri ipta
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
 ms.openlocfilehash: 5dd9a99b96dc1e599fc2bde3a796beadf33f8147
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324519"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Tam (Visual Basic) biridir sonra geri kalan zaman uyumsuz görevleri iptal etme
@@ -78,7 +78,7 @@ End Function
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4. Çağrı `WhenAny` üzerinde bir görev koleksiyonu. `WhenAny` Döndürür bir `Task(Of Task(Of Integer))` veya `Task<Task<int>>`.  Diğer bir deyişle, `WhenAny` değerlendiren bir görev için tek bir döndüren `Task(Of Integer)` veya `Task<int>` beklendiği zaman. Bu tek görev tamamlamak için koleksiyondaki ilk görevdir. İlk önce Tamamlanan görevin atandığı `firstFinishedTask`. Türünü `firstFinishedTask` olduğu <xref:System.Threading.Tasks.Task%601> burada `TResult` dönüş türü olan bir tamsayı çünkü `ProcessURLAsync`.  
+4. Çağrı `WhenAny` üzerinde bir görev koleksiyonu. `WhenAny` döndürür bir `Task(Of Task(Of Integer))` veya `Task<Task<int>>`.  Diğer bir deyişle, `WhenAny` değerlendiren bir görev için tek bir döndüren `Task(Of Integer)` veya `Task<int>` beklendiği zaman. Bu tek görev tamamlamak için koleksiyondaki ilk görevdir. İlk önce Tamamlanan görevin atandığı `firstFinishedTask`. Türünü `firstFinishedTask` olduğu <xref:System.Threading.Tasks.Task%601> burada `TResult` dönüş türü olan bir tamsayı çünkü `ProcessURLAsync`.  
   
 ```vb  
 ' ***Call WhenAny and then await the result. The task that finishes   
