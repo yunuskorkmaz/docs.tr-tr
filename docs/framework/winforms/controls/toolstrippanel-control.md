@@ -9,10 +9,10 @@ helpviewer_keywords:
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
 ms.openlocfilehash: 8dc45e1cedca6a4c73ada057168e0d3194bef741
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192283"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel Denetimi
@@ -24,10 +24,10 @@ ms.locfileid: "59192283"
  [ToolStripPanel Denetimine Genel Bakış](toolstrippanel-control-overview.md)  
  Amacı ve Windows Forms ana kavramları açıklayan konuları sağlar <xref:System.Windows.Forms.ToolStripContainer> denetimi.  
   
- [Nasıl yapılır: ToolStripPanels'ni birleştirme](how-to-join-toolstrippanels.md)  
+ [Nasıl yapılır: ToolStripPanels katılın](how-to-join-toolstrippanels.md)  
  Ekleme gösterir <xref:System.Windows.Forms.ToolStrip> için denetimleri bir `ToolStripPanel`.  
   
- [Nasıl yapılır: MDI için ToolStripPanels Kullanma](how-to-use-toolstrippanels-for-mdi.md)  
+ [Nasıl yapılır: MDI için ToolStripPanels kullanma](how-to-use-toolstrippanels-for-mdi.md)  
  Tarafından gösterilen esneklik gösterir `ToolStripPanel` denetimlerinde Çoklu belge arayüzü uygulaması.  
   
 ## <a name="reference"></a>Başvuru  
@@ -36,4 +36,4 @@ ms.locfileid: "59192283"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

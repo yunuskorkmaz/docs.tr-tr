@@ -3,10 +3,10 @@ title: <add> WCF
 ms.date: 03/30/2017
 ms.assetid: c196f6d7-77f6-4266-973c-305b2b4dd8a2
 ms.openlocfilehash: e9ece03ec9376e6a428ac6a82a3f26020f64d744
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186621"
 ---
 # <a name="add-of-wcf"></a>\<Ekle > WCF
@@ -40,7 +40,7 @@ ms.locfileid: "59186621"
 |-------------|-----------------|  
 |name|İzleme katılımcı adını belirten dize.|  
 |ProfilAdı|İzleme kayıtları tanımlayan izleme profilinin adını belirten bir dize için izleme katılımcı abone oldu.|  
-| türü|İzleme katılımcı türünü belirten bir dize.|  
+|türü|İzleme katılımcı türünü belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - cursor [WPF], positioning
 ms.assetid: c771a0b8-c6b4-4240-aecd-a21d0ba51a2e
 ms.openlocfilehash: 3d7da5daf09e06938b8366e0f5f98a599cae4571
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186231"
 ---
 # <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>Nasıl yapılır: TextBox Denetiminde İmleci Metnin Başlangıcında veya Sonunda Konumlandırma
@@ -38,5 +38,5 @@ Bu örnek başına veya sonuna metin içeriğini imleci konumlandırma nasıl g�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [TextBox Genel Bakışı](textbox-overview.md)
-- [RichTextBox Genel Bakışı](richtextbox-overview.md)
+- [TextBox Genel Bakış](textbox-overview.md)
+- [RichTextBox Genel Bakış](richtextbox-overview.md)

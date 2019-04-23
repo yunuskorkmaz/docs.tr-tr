@@ -3,10 +3,10 @@ title: (WCF Veri Hizmetleri) veri hizmeti bağlamını yönetme
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
 ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184749"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>(WCF Veri Hizmetleri) veri hizmeti bağlamını yönetme

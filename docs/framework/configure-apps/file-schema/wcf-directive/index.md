@@ -3,10 +3,10 @@ title: WCF Yönerge Söz Dizimi
 ms.date: 03/30/2017
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
 ms.openlocfilehash: 65c972067d5c2869a9dd130d285566db81dbc0d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183358"
 ---
 # <a name="wcf-directive-syntax"></a>WCF Yönerge Söz Dizimi
@@ -17,10 +17,10 @@ Derleyiciler yönlendirmek için Windows Communication Foundation (WCF) yönerge
  .Svc derleyici tarafından kullanılan bir sayfaya özgü öznitelikleri tanımlar. Yalnızca .svc dosyalarında dahil edilebilir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Nasıl yapılır: IIS'de WCF Hizmeti Barındırma](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
+ [Nasıl yapılır: IIS'de WCF Hizmeti barındırma](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
  Açıklayan nasıl @ServiceHost yönergesi, bir hizmeti Internet Information Services (IIS) barındırırken kullanılır  
   
- [Nasıl yapılır: WAS'de WCF Hizmeti Barındırma](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
+ [Nasıl yapılır: Was'ta WCF Hizmeti barındırma](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
  Açıklayan nasıl @ServiceHost yönergesi, bir hizmet Windows İşlem Etkinleştirme Hizmeti (WAS) barındırırken kullanılır  
   
 ## <a name="see-also"></a>Ayrıca bkz.

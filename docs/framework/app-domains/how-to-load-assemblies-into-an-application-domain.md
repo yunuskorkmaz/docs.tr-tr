@@ -12,10 +12,10 @@ ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188532"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanına Derlemeler Yükleme
@@ -49,8 +49,8 @@ Uygulama etki alanına bir derlemeyi yüklemek için birkaç yolu vardır. Kulla
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
-- [Uygulama Etki Alanlarıyla Programlama](application-domains.md#programming-with-application-domains)
+- [Uygulama etki alanlarıyla programlama](application-domains.md#programming-with-application-domains)
 - [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)
-- [Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
-- [Uygulama Etki Alanları ve derlemeler](application-domains.md#application-domains-and-assemblies)
+- [Nasıl yapılır: Salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Uygulama etki alanları ve derlemeler](application-domains.md#application-domains-and-assemblies)

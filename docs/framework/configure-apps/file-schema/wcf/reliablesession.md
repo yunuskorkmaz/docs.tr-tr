@@ -3,10 +3,10 @@ title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
 ms.openlocfilehash: 324c46d88d084605dc2b873c65d2a7e7c7a2c4fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188389"
 ---
 # <a name="reliablesession"></a>\<reliableSession >
@@ -48,7 +48,7 @@ WS-Reliable Mesajlaşma için ayarını tanımlar. Bu öğe için özel bir bağ
 |ReliableMessagingVersion|Geçerli bir değer <xref:System.ServiceModel.ReliableMessagingVersion> kullanılacak WS-ReliableMessaging sürümünü belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -124,7 +124,7 @@ WS-Reliable Mesajlaşma için ayarını tanımlar. Bu öğe için özel bir bağ
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
-- [Güvenilir oturumlar](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
+- [Güvenilir Oturumlar](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
 - [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
 - [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)

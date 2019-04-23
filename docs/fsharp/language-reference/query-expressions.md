@@ -3,10 +3,10 @@ title: Sorgu İfadeleri
 description: Sorgu ifadesi içinde LINQ desteği hakkında bilgi edinin F# programlama dilidir.
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e5be7f81d7e15953142186be3aca64e68ded2a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191574"
 ---
 # <a name="query-expressions"></a>Sorgu İfadeleri
@@ -819,7 +819,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> örneklerini şununla değiştirin: <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> ile <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection

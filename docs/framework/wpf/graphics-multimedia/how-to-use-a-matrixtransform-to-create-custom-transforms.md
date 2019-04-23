@@ -5,10 +5,10 @@ helpviewer_keywords:
 - graphics [WPF], custom Transforms
 ms.assetid: 919381ca-989f-47cf-86b4-1094060236e4
 ms.openlocfilehash: aeccb961db539d4cc6dea75fb487fba06e59d6de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182318"
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Nasıl yapılır: Özel Dönüşümler Oluşturmak için MatrixTransform Kullanma
@@ -26,4 +26,4 @@ Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Media.M
 - <xref:System.Windows.Media.Transform>
 - [Dönüşümlere Genel Bakış](transforms-overview.md)
 - [Nasıl Yapılır Konuları](transformations-how-to-topics.md)
-- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)

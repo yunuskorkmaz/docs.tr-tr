@@ -11,10 +11,10 @@ helpviewer_keywords:
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
 ms.openlocfilehash: 75f5d8faa4dc4b7e022cd6de2e6db49f4fa9030c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190229"
 ---
 # <a name="how-to-create-vertical-text"></a>Nasıl yapılır: Dikey Metin Oluşturma
@@ -32,8 +32,8 @@ Kullanabileceğiniz bir <xref:System.Drawing.StringFormat> metin dikey yerine ya
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
--   Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs>`e` , parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+-   Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e` , parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: GDI ile Metin Çizme](how-to-draw-text-with-gdi.md)
+- [Nasıl yapılır: GDI ile metin çizme](how-to-draw-text-with-gdi.md)

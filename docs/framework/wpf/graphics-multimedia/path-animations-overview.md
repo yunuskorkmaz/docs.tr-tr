@@ -9,10 +9,10 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182474"
 ---
 # <a name="path-animations-overview"></a>Yol Animasyonlarına Genel Bakış
@@ -92,7 +92,7 @@ ms.locfileid: "59182474"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yol animasyonu örneği](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Yol Biçimlendirme Sözdizimi](path-markup-syntax.md)
+- [Yol İşaretleme Söz Dizimi](path-markup-syntax.md)
 - [Yol Animasyonu ile İlgili Nasıl Yapılır Konuları](path-animation-how-to-topics.md)
 - [Animasyona Genel bakış](animation-overview.md)
 - [Özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md)

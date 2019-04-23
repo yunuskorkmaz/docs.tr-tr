@@ -10,10 +10,10 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182305"
 ---
 # <a name="lazy-initialization"></a>Yavaş Başlatma
@@ -75,7 +75,7 @@ ms.locfileid: "59182305"
   
  Bazı <xref:System.Lazy%601> oluşturuculara sahip bir <xref:System.Threading.LazyThreadSafetyMode> adlı parametre `mode`. Bu oluşturucular bir ek iş parçacığı güvenlik modu sağlar. Aşağıdaki tabloda nasıl, iş parçacığı güvenliği bir <xref:System.Lazy%601> nesne iş parçacığı güvenliği belirtin Oluşturucusu parametrelerin etkilenir. Her Oluşturucu en fazla bir tür parametresi vardır.  
   
-|Nesne iş parçacığı güvenliği|`LazyThreadSafetyMode` `mode` parametre|Boole `isThreadSafe` parametresi|İş parçacığı güvenliği parametre yok|  
+|Nesne iş parçacığı güvenliği|`LazyThreadSafetyMode` `mode` Parametre|Boole `isThreadSafe` parametresi|İş parçacığı güvenliği parametre yok|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Tam iş parçacığı açısından güvenli; aynı anda yalnızca tek bir iş parçacığı değeriyle dener.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Evet.|  
 |İş parçacığı-güvenli değildir.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Geçerli değildir.|  
@@ -157,4 +157,4 @@ ms.locfileid: "59182305"
 - [Yönetilen İş Parçacığı Oluşturma Temelleri](../../../docs/standard/threading/managed-threading-basics.md)
 - [İş Parçacıkları ve İş Parçacığı Oluşturma](../../../docs/standard/threading/threads-and-threading.md)
 - [Görev Paralel Kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Nasıl yapılır: Nesnelerin geç başlatılmasını gerçekleştirme](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

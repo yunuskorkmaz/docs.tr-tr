@@ -3,10 +3,10 @@ title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
 ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191919"
 ---
 # <a name="adonet"></a>ADO.NET
@@ -31,7 +31,7 @@ ADO.NET, .NET Framework programcılarına veri erişim Hizmetleri açığa çık
  [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Oluşturma ve kullanma işlemini açıklamaktadır `DataSets`, belirlenmiş `DataSets`, `DataTables`, ve `DataViews`.  
   
- [LINQ - DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
  Programlama örnekleri dahil olmak üzere veri kümesi için LINQ hakkında bilgi sağlar.  
   
  [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
@@ -53,7 +53,7 @@ ADO.NET, .NET Framework programcılarına veri erişim Hizmetleri açığa çık
  [WCF Veri Hizmetleri 4.5](../../../../docs/framework/data/wcf/index.md)  
  Nasıl kullanılacağını açıklar [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] açık veri Protokolü (OData) uygulayan veri hizmetlerini Web veya intranet üzerinde dağıtmak için.  
   
- [.NET Framework Geliştirme Kılavuzu](../../development-guide.md)  
+ [.NET framework geliştirme Kılavuzu](../../development-guide.md)  
  .NET Framework'teki standart geliştirme görevleri hakkında daha fazla bilgi için bağlantılar sağlar.  
   
  [Örnekler ve öğreticiler](../../../samples-and-tutorials/index.md)  
@@ -61,5 +61,5 @@ ADO.NET, .NET Framework programcılarına veri erişim Hizmetleri açığa çık
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da verilere erişme](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Visual Studio'da verilere erişime](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
