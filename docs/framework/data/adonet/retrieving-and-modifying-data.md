@@ -3,10 +3,10 @@ title: ADO.NET’te Veri Alma ve Değiştirme
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097634"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET’te Veri Alma ve Değiştirme
@@ -52,7 +52,7 @@ Herhangi bir veritabanı uygulama birincil işlevi bir veri kaynağına bağlanm
  [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)  
  İçin kullanılabilen performans sayaçlarının açıklar `SqlClient` ve `OracleClient`.  
   
- [Zaman Uyumsuz Programlama](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
+ [Zaman uyumsuz programlama](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
  Açıklar [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zaman uyumsuz programlama için destek.  
   
  [SqlClient Akış Desteği](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  

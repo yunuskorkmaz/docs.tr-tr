@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4eb64fc0badf94c93182e7bd6875337c411bcdef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098513"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum Arabirimi
@@ -31,7 +31,7 @@ Bir dizi için bir numaralandırıcı temsil `IAssemblyName` nesneleri.
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[Clone Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-clone-method.md)|Bu basit bir kopyasını oluşturur `IAssemblyEnum` nesne.|  
-|[GetNextAssembly Metodu](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Sonraki bir işaretçi alır `IAssemblyName` bu konuda yer alan `IAssemblyEnum` nesne.|  
+|[GetNextAssembly Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-getnextassembly-method.md)|Sonraki bir işaretçi alır `IAssemblyName` bu konuda yer alan `IAssemblyEnum` nesne.|  
 |[Reset Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-reset-method.md)|Bu sıfırlar `IAssemblyEnum` başlangıç konumuna nesne.|  
   
 ## <a name="requirements"></a>Gereksinimler  

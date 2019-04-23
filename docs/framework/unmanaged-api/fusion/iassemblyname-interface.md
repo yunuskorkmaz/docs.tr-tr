@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d8d59ef282818dd9852d0ff8d2ec2abd40986d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097141"
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName Arabirimi
@@ -31,10 +31,10 @@ Açıklayan ve bir derlemenin benzersiz kimliği ile çalışmak için yöntemle
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[Clone Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|Bu basit bir kopyasını oluşturur `IAssemblyName` nesne.|  
-|[Finalize Metodu](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|Böylece `IAssemblyName` kaynakları serbest bırakmak ve yok edici çağrılmadan önce diğer temizleme işlemleri gerçekleştirmek için nesne.|  
+|[Finalize Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|Böylece `IAssemblyName` kaynakları serbest bırakmak ve yok edici çağrılmadan önce diğer temizleme işlemleri gerçekleştirmek için nesne.|  
 |[GetDisplayName Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|Okunabilir bu başvurduğu derlemenin adını alır `IAssemblyName` nesne.|  
 |[GetName Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|Basit, şifrelenmemiş bu başvurduğu derlemenin adını alır `IAssemblyName` nesne.|  
-|[GetProperty Metodu](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|Başvurulan tarafından belirtilen özellik için bir işaretçi alır `PropertyId`.|  
+|[GetProperty Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|Başvurulan tarafından belirtilen özellik için bir işaretçi alır `PropertyId`.|  
 |[GetVersion Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getversion-method.md)|Bu tarafından başvurulan derlemenin sürüm bilgilerini alır `IAssemblyName` nesne.|  
 |[IsEqual Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|Belirtilen bir olup olmadığını belirler `IAssemblyName` nesnedir şuna eşit `IAssemblyName`bağlı olarak belirtilen karşılaştırma bayrakları.|  
 |[SetProperty Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|Belirtilen tarafından başvurulan özelliğin değerini ayarlar `PropertyId`.|  

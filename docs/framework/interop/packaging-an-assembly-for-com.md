@@ -19,10 +19,10 @@ ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc02178223e48c7c578d10ba92123d9436d4f439
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097271"
 ---
 # <a name="packaging-an-assembly-for-com"></a>COM için Derlemeyi Paketleme
@@ -50,7 +50,7 @@ COM geliştiricilerin uygulamalarında birleştirmek planladıkları yönetilen 
   
      Çoğu türleri COM uygulama tarafından kullanılan, bir tür kitaplığı gerektirir. Bir tür kitaplığı oluşturabilir veya bu görevi gerçekleştirmek COM geliştiriciler. [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Bir tür kitaplığı oluşturmak için aşağıdaki seçenekleri sağlar:  
   
-    -   [Tür Kitaplığı Dışarı Aktarıcı](#cpconpackagingassemblyforcomanchor1)  
+    -   [Tür kitaplığı dışarı Aktarıcı](#cpconpackagingassemblyforcomanchor1)  
   
     -   [TypeLibConverter sınıfı](#cpconpackagingassemblyforcomanchor2)  
   
@@ -85,9 +85,9 @@ COM geliştiricilerin uygulamalarında birleştirmek planladıkları yönetilen 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
-- [Birlikte Çalışma için Niteleyici .NET Türleri](qualifying-net-types-for-interoperation.md)
+- [Birlikte Çalışma için .NET Türlerini Niteleme](qualifying-net-types-for-interoperation.md)
 - [Sınıf arabirimine giriş](com-callable-wrapper.md#introducing-the-class-interface)
-- [Derleme Güvenliği Konuları](../app-domains/assembly-security-considerations.md)
+- [Bütünleştirilmiş Kod Güvenliği Konuları](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](../tools/tlbexp-exe-type-library-exporter.md)
-- [Derlemeleri COM ile Kaydetme](registering-assemblies-with-com.md)
+- [Bütünleştirilmiş Kodları COM ile Kaydetme](registering-assemblies-with-com.md)
 - [Nasıl yapılır: Tür kitaplıklarını uygulamalarda Win32 kaynakları olarak katıştırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

@@ -13,10 +13,10 @@ ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097544"
 ---
 # <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Nasıl yapılır: Bir Derlemenin Tam Olarak Nitelenmiş Adını Belirleme
@@ -44,9 +44,9 @@ Genel Derleme Önbelleği Aracı genel bütünleştirilmiş kod önbelleğindeki
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme Adları](../../../docs/framework/app-domains/assembly-names.md)
-- [Derlemeler Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)
-- [Tanımlayıcı Adlı Derlemeler Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Bütünleştirilmiş Kod Adları](../../../docs/framework/app-domains/assembly-names.md)
+- [Bütünleştirilmiş Kodlar Oluşturma](../../../docs/framework/app-domains/create-assemblies.md)
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar Oluşturma ve Kullanma](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Genel Derleme Önbelleği](../../../docs/framework/app-domains/gac.md)
-- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Derlemelerle Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
