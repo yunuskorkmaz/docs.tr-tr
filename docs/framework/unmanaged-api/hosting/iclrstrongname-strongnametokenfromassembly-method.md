@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a2931c16e13d08c1e3e7d5b62e6583102a1b8cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229257"
 ---
-# <a name="iclrstrongnamestrongnametokenfromassembly-method"></a><span data-ttu-id="67827-102">ICLRStrongName::StrongNameTokenFromAssembly Yöntemi</span><span class="sxs-lookup"><span data-stu-id="67827-102">ICLRStrongName::StrongNameTokenFromAssembly Method</span></span>
-<span data-ttu-id="67827-103">Belirtilen derleme dosyasından bir güçlü ad simgesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="67827-103">Creates a strong name token from the specified assembly file.</span></span>  
+# <a name="iclrstrongnamestrongnametokenfromassembly-method"></a><span data-ttu-id="f25ac-102">ICLRStrongName::StrongNameTokenFromAssembly Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f25ac-102">ICLRStrongName::StrongNameTokenFromAssembly Method</span></span>
+<span data-ttu-id="f25ac-103">Belirtilen derleme dosyasından bir güçlü ad simgesi oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f25ac-103">Creates a strong name token from the specified assembly file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67827-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="67827-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f25ac-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f25ac-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameTokenFromAssembly (  
@@ -37,34 +37,34 @@ HRESULT StrongNameTokenFromAssembly (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="67827-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="67827-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f25ac-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f25ac-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="67827-106">[in] Derleme için taşınabilir yürütülebilir (PE) dosya yolu.</span><span class="sxs-lookup"><span data-stu-id="67827-106">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
+ <span data-ttu-id="f25ac-106">[in] Derleme için taşınabilir yürütülebilir (PE) dosya yolu.</span><span class="sxs-lookup"><span data-stu-id="f25ac-106">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
   
  `ppbStrongNameToken`  
- <span data-ttu-id="67827-107">[out] Döndürülen tanımlayıcı ad belirteç.</span><span class="sxs-lookup"><span data-stu-id="67827-107">[out] The returned strong name token.</span></span>  
+ <span data-ttu-id="f25ac-107">[out] Döndürülen tanımlayıcı ad belirteç.</span><span class="sxs-lookup"><span data-stu-id="f25ac-107">[out] The returned strong name token.</span></span>  
   
  `pcbStrongNameToken`  
- <span data-ttu-id="67827-108">[out] Tanımlayıcı ad belirtecinin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="67827-108">[out] The size, in bytes, of the strong name token.</span></span>  
+ <span data-ttu-id="f25ac-108">[out] Tanımlayıcı ad belirtecinin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="f25ac-108">[out] The size, in bytes, of the strong name token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="67827-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="67827-109">Return Value</span></span>  
- `S_OK` <span data-ttu-id="67827-110">yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="67827-110">if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f25ac-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="f25ac-109">Return Value</span></span>  
+ <span data-ttu-id="f25ac-110">`S_OK` yöntemi başarıyla tamamlandı Aksi takdirde hata olduğunu gösteren HRESULT değerini (bkz [ortak HRESULT değerlerini](https://go.microsoft.com/fwlink/?LinkId=213878) bir listesi için).</span><span class="sxs-lookup"><span data-stu-id="f25ac-110">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="67827-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="67827-111">Remarks</span></span>  
- <span data-ttu-id="67827-112">Genel anahtar kısaltılmış bir tanımlayıcı ad belirtecidir.</span><span class="sxs-lookup"><span data-stu-id="67827-112">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="67827-113">Oluşturulan derlemeyi imzalamak için kullanılacak ortak anahtarı bir 64-bit karma belirtecidir.</span><span class="sxs-lookup"><span data-stu-id="67827-113">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="67827-114">Belirteç, tanımlayıcı ad bütünleştirilmiş kodun bir parçası olan ve derleme meta verileri okuyabilir.</span><span class="sxs-lookup"><span data-stu-id="67827-114">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f25ac-111">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f25ac-111">Remarks</span></span>  
+ <span data-ttu-id="f25ac-112">Genel anahtar kısaltılmış bir tanımlayıcı ad belirtecidir.</span><span class="sxs-lookup"><span data-stu-id="f25ac-112">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="f25ac-113">Oluşturulan derlemeyi imzalamak için kullanılacak ortak anahtarı bir 64-bit karma belirtecidir.</span><span class="sxs-lookup"><span data-stu-id="f25ac-113">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="f25ac-114">Belirteç, tanımlayıcı ad bütünleştirilmiş kodun bir parçası olan ve derleme meta verileri okuyabilir.</span><span class="sxs-lookup"><span data-stu-id="f25ac-114">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
   
- <span data-ttu-id="67827-115">Belirteç oluşturulduktan sonra çağırmalısınız [Iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) ayrılan belleği serbest bırakmak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="67827-115">After the token is created, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
+ <span data-ttu-id="f25ac-115">Belirteç oluşturulduktan sonra çağırmalısınız [Iclrstrongname::strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) ayrılan belleği serbest bırakmak için yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f25ac-115">After the token is created, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="67827-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="67827-116">Requirements</span></span>  
- <span data-ttu-id="67827-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67827-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f25ac-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f25ac-116">Requirements</span></span>  
+ <span data-ttu-id="f25ac-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f25ac-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="67827-118">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="67827-118">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="f25ac-118">**Üst bilgi:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f25ac-118">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="67827-119">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="67827-119">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f25ac-119">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="f25ac-119">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="67827-120">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="67827-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="f25ac-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f25ac-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="67827-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="67827-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f25ac-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f25ac-121">See also</span></span>
 
-- [<span data-ttu-id="67827-122">StrongNameTokenFromAssemblyEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="67827-122">StrongNameTokenFromAssemblyEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
-- [<span data-ttu-id="67827-123">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="67827-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="f25ac-122">StrongNameTokenFromAssemblyEx Yöntemi</span><span class="sxs-lookup"><span data-stu-id="f25ac-122">StrongNameTokenFromAssemblyEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
+- [<span data-ttu-id="f25ac-123">ICLRStrongName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="f25ac-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

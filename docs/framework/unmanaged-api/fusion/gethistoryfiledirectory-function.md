@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b60dde31707175a27d2dc6c50484d6089adaeaa6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229634"
 ---
-# <a name="gethistoryfiledirectory-function"></a><span data-ttu-id="fb890-102">GetHistoryFileDirectory İşlevi</span><span class="sxs-lookup"><span data-stu-id="fb890-102">GetHistoryFileDirectory Function</span></span>
-<span data-ttu-id="fb890-103">Uygulama geçmişi dizininin yolunu alır.</span><span class="sxs-lookup"><span data-stu-id="fb890-103">Retrieves the path of the application history directory.</span></span>  
+# <a name="gethistoryfiledirectory-function"></a><span data-ttu-id="40f68-102">GetHistoryFileDirectory İşlevi</span><span class="sxs-lookup"><span data-stu-id="40f68-102">GetHistoryFileDirectory Function</span></span>
+<span data-ttu-id="40f68-103">Uygulama geçmişi dizininin yolunu alır.</span><span class="sxs-lookup"><span data-stu-id="40f68-103">Retrieves the path of the application history directory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb890-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fb890-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40f68-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="40f68-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHistoryFileDirectory (  
@@ -35,35 +35,35 @@ HRESULT GetHistoryFileDirectory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fb890-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="fb890-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="40f68-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="40f68-105">Parameters</span></span>  
  `wzDir`  
- <span data-ttu-id="fb890-106">[out] Yol uygulama geçmiş dizinine tutan bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="fb890-106">[out] A buffer to hold the path to the application history directory.</span></span>  
+ <span data-ttu-id="40f68-106">[out] Yol uygulama geçmiş dizinine tutan bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="40f68-106">[out] A buffer to hold the path to the application history directory.</span></span>  
   
  `pdwSize`  
- <span data-ttu-id="fb890-107">[out içinde] Arabellek uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="fb890-107">[in, out] The length of the buffer.</span></span>  
+ <span data-ttu-id="40f68-107">[out içinde] Arabellek uzunluğu.</span><span class="sxs-lookup"><span data-stu-id="40f68-107">[in, out] The length of the buffer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fb890-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="fb890-108">Return Value</span></span>  
- <span data-ttu-id="fb890-109">Bu yöntem, aşağıdaki değerlere ek olarak Wınerror dosyasında tanımlanan standart COM hata kodlarını döndürür.</span><span class="sxs-lookup"><span data-stu-id="fb890-109">This method returns standard COM error codes, as defined in the WinError.h file in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="40f68-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="40f68-108">Return Value</span></span>  
+ <span data-ttu-id="40f68-109">Bu yöntem, aşağıdaki değerlere ek olarak Wınerror dosyasında tanımlanan standart COM hata kodlarını döndürür.</span><span class="sxs-lookup"><span data-stu-id="40f68-109">This method returns standard COM error codes, as defined in the WinError.h file in addition to the following values.</span></span>  
   
-|<span data-ttu-id="fb890-110">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="fb890-110">Return code</span></span>|<span data-ttu-id="fb890-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="fb890-111">Description</span></span>|  
+|<span data-ttu-id="40f68-110">Dönüş kodu</span><span class="sxs-lookup"><span data-stu-id="40f68-110">Return code</span></span>|<span data-ttu-id="40f68-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="40f68-111">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="fb890-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="fb890-112">S_OK</span></span>|<span data-ttu-id="fb890-113">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="fb890-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="fb890-114">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="fb890-114">E_INVALIDARG</span></span>|`wzDir` <span data-ttu-id="fb890-115">veya `pdwSize` null ya da sürüm dizesi yanlış.</span><span class="sxs-lookup"><span data-stu-id="fb890-115">or `pdwSize` is null, or the version string is incorrect.</span></span>|  
+|<span data-ttu-id="40f68-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="40f68-112">S_OK</span></span>|<span data-ttu-id="40f68-113">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="40f68-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="40f68-114">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="40f68-114">E_INVALIDARG</span></span>|<span data-ttu-id="40f68-115">`wzDir` veya `pdwSize` null ya da sürüm dizesi yanlış.</span><span class="sxs-lookup"><span data-stu-id="40f68-115">`wzDir` or `pdwSize` is null, or the version string is incorrect.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fb890-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fb890-116">Remarks</span></span>  
- <span data-ttu-id="fb890-117">Başarıyla tamamlandığında, `pdwSize` bağımsız değişkeni yol dizesini uzunluğunu ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="fb890-117">On successful completion, the `pdwSize` argument is set to the length of the path string.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="40f68-116">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="40f68-116">Remarks</span></span>  
+ <span data-ttu-id="40f68-117">Başarıyla tamamlandığında, `pdwSize` bağımsız değişkeni yol dizesini uzunluğunu ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="40f68-117">On successful completion, the `pdwSize` argument is set to the length of the path string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fb890-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fb890-118">Requirements</span></span>  
- <span data-ttu-id="fb890-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fb890-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="40f68-118">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="40f68-118">Requirements</span></span>  
+ <span data-ttu-id="40f68-119">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="40f68-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fb890-120">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="fb890-120">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="40f68-120">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="40f68-120">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="fb890-121">**Kitaplığı:** Fusion.dll ve kullanımda olan mscorwks.dll'ye.</span><span class="sxs-lookup"><span data-stu-id="fb890-121">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="fb890-122">Fusion.dll yerine Mscorwks.dll doğru .NET Framework sürümünü hedefleyen emin olmak için kullanın.</span><span class="sxs-lookup"><span data-stu-id="fb890-122">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
+ <span data-ttu-id="40f68-121">**Kitaplığı:** Fusion.dll ve kullanımda olan mscorwks.dll'ye.</span><span class="sxs-lookup"><span data-stu-id="40f68-121">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="40f68-122">Fusion.dll yerine Mscorwks.dll doğru .NET Framework sürümünü hedefleyen emin olmak için kullanın.</span><span class="sxs-lookup"><span data-stu-id="40f68-122">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
   
- **<span data-ttu-id="fb890-123">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="fb890-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ <span data-ttu-id="40f68-123">**.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40f68-123">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fb890-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fb890-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="40f68-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="40f68-124">See also</span></span>
 
-- [<span data-ttu-id="fb890-125">CreateHistoryReader İşlevi</span><span class="sxs-lookup"><span data-stu-id="fb890-125">CreateHistoryReader Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [<span data-ttu-id="fb890-126">NukeDownloadedCache İşlevi</span><span class="sxs-lookup"><span data-stu-id="fb890-126">NukeDownloadedCache Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
-- [<span data-ttu-id="fb890-127">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="fb890-127">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="40f68-125">CreateHistoryReader İşlevi</span><span class="sxs-lookup"><span data-stu-id="40f68-125">CreateHistoryReader Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
+- [<span data-ttu-id="40f68-126">NukeDownloadedCache İşlevi</span><span class="sxs-lookup"><span data-stu-id="40f68-126">NukeDownloadedCache Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
+- [<span data-ttu-id="40f68-127">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="40f68-127">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

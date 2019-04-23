@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1b33b50e53c454f2b62253d12943ea044240d8cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230518"
 ---
-# <a name="cortokentype-enumeration"></a><span data-ttu-id="4cce2-102">CorTokenType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="4cce2-102">CorTokenType Enumeration</span></span>
-<span data-ttu-id="4cce2-103">Meta veri belirteci türünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="4cce2-103">Indicates the type of a metadata token.</span></span>  
+# <a name="cortokentype-enumeration"></a><span data-ttu-id="b83d1-102">CorTokenType Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="b83d1-102">CorTokenType Enumeration</span></span>
+<span data-ttu-id="b83d1-103">Meta veri belirteci türünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="b83d1-103">Indicates the type of a metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4cce2-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4cce2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b83d1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b83d1-104">Syntax</span></span>  
   
 ```  
 typedef enum CorTokenType {  
@@ -61,47 +61,47 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4cce2-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="4cce2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b83d1-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="b83d1-105">Members</span></span>  
   
-|<span data-ttu-id="4cce2-106">Üye</span><span class="sxs-lookup"><span data-stu-id="4cce2-106">Member</span></span>|<span data-ttu-id="4cce2-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4cce2-107">Description</span></span>|  
+|<span data-ttu-id="b83d1-106">Üye</span><span class="sxs-lookup"><span data-stu-id="b83d1-106">Member</span></span>|<span data-ttu-id="b83d1-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="b83d1-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdtModule`|<span data-ttu-id="4cce2-108">Bir `mdModule` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-108">An `mdModule` token.</span></span>|  
-|`mdtTypeRef`|<span data-ttu-id="4cce2-109">Bir `mdTypeRef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-109">An `mdTypeRef` token.</span></span>|  
-|`mdtTypeDef`|<span data-ttu-id="4cce2-110">Bir `mdTypeDef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-110">An `mdTypeDef` token.</span></span>|  
-|`mdtFieldDef`|<span data-ttu-id="4cce2-111">Bir `mdFieldDef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-111">An `mdFieldDef` token.</span></span>|  
-|`mdtMethodDef`|<span data-ttu-id="4cce2-112">Bir `mdMethodDef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-112">An `mdMethodDef` token.</span></span>|  
-|`mdtParamDef`|<span data-ttu-id="4cce2-113">Bir `mdParamDef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-113">An `mdParamDef` token.</span></span>|  
-|`mdtInterfaceImpl`|<span data-ttu-id="4cce2-114">Bir `mdInterfaceImpl` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-114">An `mdInterfaceImpl` token.</span></span>|  
-|`mdtMemberRef`|<span data-ttu-id="4cce2-115">Bir `mdMemberRef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-115">An `mdMemberRef` token.</span></span>|  
-|`mdtCustomAttribute`|<span data-ttu-id="4cce2-116">Bir `mdCustomAttribute` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-116">An `mdCustomAttribute` token.</span></span>|  
-|`mdtPermission`|<span data-ttu-id="4cce2-117">Bir `mdPermission` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-117">An `mdPermission` token.</span></span>|  
-|`mdtSignature`|<span data-ttu-id="4cce2-118">Bir `mdSignature` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-118">An `mdSignature` token.</span></span>|  
-|`mdtEvent`|<span data-ttu-id="4cce2-119">Bir `mdEvent` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-119">An `mdEvent` token.</span></span>|  
-|`mdtProperty`|<span data-ttu-id="4cce2-120">Bir `mdProperty` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-120">An `mdProperty` token.</span></span>|  
-|`mdtModuleRef`|<span data-ttu-id="4cce2-121">Bir `mdModuleRef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-121">An `mdModuleRef` token.</span></span>|  
-|`mdtTypeSpec`|<span data-ttu-id="4cce2-122">Bir `mdTypeSpec` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-122">An `mdTypeSpec` token.</span></span>|  
-|`mdtAssembly`|<span data-ttu-id="4cce2-123">Bir `mdAssembly` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-123">An `mdAssembly` token.</span></span>|  
-|`mdtAssemblyRef`|<span data-ttu-id="4cce2-124">Bir `mdAssemblyRef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-124">An `mdAssemblyRef` token.</span></span>|  
-|`mdtFile`|<span data-ttu-id="4cce2-125">Bir `mdFile` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-125">An `mdFile` token.</span></span>|  
-|`mdtExportedType`|<span data-ttu-id="4cce2-126">Bir `mdExportedType` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-126">An `mdExportedType` token.</span></span>|  
-|`mdtManifestResource`|<span data-ttu-id="4cce2-127">Bir `mdManifestResource` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-127">An `mdManifestResource` token.</span></span>|  
-|`mdtGenericParam`|<span data-ttu-id="4cce2-128">Bir `mdGenericParam` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-128">An `mdGenericParam` token.</span></span>|  
-|`mdtMethodSpec`|<span data-ttu-id="4cce2-129">Bir `mdMethodSpec` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-129">An `mdMethodSpec` token.</span></span>|  
-|`mdtGenericParamConstraint`|<span data-ttu-id="4cce2-130">Bir `mdGenericParamConstraint` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-130">An `mdGenericParamConstraint` token.</span></span>|  
-|`mdtString`|<span data-ttu-id="4cce2-131">Bir `mdString` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-131">An `mdString` token.</span></span>|  
-|`mdtName`|<span data-ttu-id="4cce2-132">Bir `mdName` belirteci.</span><span class="sxs-lookup"><span data-stu-id="4cce2-132">An `mdName` token.</span></span>|  
-|`mdtBaseType`|<span data-ttu-id="4cce2-133">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="4cce2-133">Not used.</span></span>|  
+|`mdtModule`|<span data-ttu-id="b83d1-108">Bir `mdModule` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-108">An `mdModule` token.</span></span>|  
+|`mdtTypeRef`|<span data-ttu-id="b83d1-109">Bir `mdTypeRef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-109">An `mdTypeRef` token.</span></span>|  
+|`mdtTypeDef`|<span data-ttu-id="b83d1-110">Bir `mdTypeDef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-110">An `mdTypeDef` token.</span></span>|  
+|`mdtFieldDef`|<span data-ttu-id="b83d1-111">Bir `mdFieldDef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-111">An `mdFieldDef` token.</span></span>|  
+|`mdtMethodDef`|<span data-ttu-id="b83d1-112">Bir `mdMethodDef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-112">An `mdMethodDef` token.</span></span>|  
+|`mdtParamDef`|<span data-ttu-id="b83d1-113">Bir `mdParamDef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-113">An `mdParamDef` token.</span></span>|  
+|`mdtInterfaceImpl`|<span data-ttu-id="b83d1-114">Bir `mdInterfaceImpl` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-114">An `mdInterfaceImpl` token.</span></span>|  
+|`mdtMemberRef`|<span data-ttu-id="b83d1-115">Bir `mdMemberRef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-115">An `mdMemberRef` token.</span></span>|  
+|`mdtCustomAttribute`|<span data-ttu-id="b83d1-116">Bir `mdCustomAttribute` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-116">An `mdCustomAttribute` token.</span></span>|  
+|`mdtPermission`|<span data-ttu-id="b83d1-117">Bir `mdPermission` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-117">An `mdPermission` token.</span></span>|  
+|`mdtSignature`|<span data-ttu-id="b83d1-118">Bir `mdSignature` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-118">An `mdSignature` token.</span></span>|  
+|`mdtEvent`|<span data-ttu-id="b83d1-119">Bir `mdEvent` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-119">An `mdEvent` token.</span></span>|  
+|`mdtProperty`|<span data-ttu-id="b83d1-120">Bir `mdProperty` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-120">An `mdProperty` token.</span></span>|  
+|`mdtModuleRef`|<span data-ttu-id="b83d1-121">Bir `mdModuleRef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-121">An `mdModuleRef` token.</span></span>|  
+|`mdtTypeSpec`|<span data-ttu-id="b83d1-122">Bir `mdTypeSpec` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-122">An `mdTypeSpec` token.</span></span>|  
+|`mdtAssembly`|<span data-ttu-id="b83d1-123">Bir `mdAssembly` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-123">An `mdAssembly` token.</span></span>|  
+|`mdtAssemblyRef`|<span data-ttu-id="b83d1-124">Bir `mdAssemblyRef` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-124">An `mdAssemblyRef` token.</span></span>|  
+|`mdtFile`|<span data-ttu-id="b83d1-125">Bir `mdFile` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-125">An `mdFile` token.</span></span>|  
+|`mdtExportedType`|<span data-ttu-id="b83d1-126">Bir `mdExportedType` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-126">An `mdExportedType` token.</span></span>|  
+|`mdtManifestResource`|<span data-ttu-id="b83d1-127">Bir `mdManifestResource` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-127">An `mdManifestResource` token.</span></span>|  
+|`mdtGenericParam`|<span data-ttu-id="b83d1-128">Bir `mdGenericParam` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-128">An `mdGenericParam` token.</span></span>|  
+|`mdtMethodSpec`|<span data-ttu-id="b83d1-129">Bir `mdMethodSpec` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-129">An `mdMethodSpec` token.</span></span>|  
+|`mdtGenericParamConstraint`|<span data-ttu-id="b83d1-130">Bir `mdGenericParamConstraint` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-130">An `mdGenericParamConstraint` token.</span></span>|  
+|`mdtString`|<span data-ttu-id="b83d1-131">Bir `mdString` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-131">An `mdString` token.</span></span>|  
+|`mdtName`|<span data-ttu-id="b83d1-132">Bir `mdName` belirteci.</span><span class="sxs-lookup"><span data-stu-id="b83d1-132">An `mdName` token.</span></span>|  
+|`mdtBaseType`|<span data-ttu-id="b83d1-133">Kullanılmadı.</span><span class="sxs-lookup"><span data-stu-id="b83d1-133">Not used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4cce2-134">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4cce2-134">Remarks</span></span>  
- <span data-ttu-id="4cce2-135">Her değer karşılık gelen meta veri belirteci üstteki bayt değerine eşittir.</span><span class="sxs-lookup"><span data-stu-id="4cce2-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b83d1-134">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b83d1-134">Remarks</span></span>  
+ <span data-ttu-id="b83d1-135">Her değer karşılık gelen meta veri belirteci üstteki bayt değerine eşittir.</span><span class="sxs-lookup"><span data-stu-id="b83d1-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4cce2-136">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4cce2-136">Requirements</span></span>  
- <span data-ttu-id="4cce2-137">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4cce2-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b83d1-136">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b83d1-136">Requirements</span></span>  
+ <span data-ttu-id="b83d1-137">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b83d1-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4cce2-138">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="4cce2-138">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="b83d1-138">**Üst bilgi:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b83d1-138">**Header:** CorHdr.h</span></span>  
   
- **<span data-ttu-id="4cce2-139">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="4cce2-139">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="b83d1-139">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b83d1-139">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4cce2-140">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4cce2-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b83d1-140">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b83d1-140">See also</span></span>
 
-- [<span data-ttu-id="4cce2-141">Meta Veri Numaralandırmalar</span><span class="sxs-lookup"><span data-stu-id="4cce2-141">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="b83d1-141">Meta Veri Sabit Listeleri</span><span class="sxs-lookup"><span data-stu-id="b83d1-141">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
