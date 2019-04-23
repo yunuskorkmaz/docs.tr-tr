@@ -11,10 +11,10 @@ ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119203"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)
@@ -38,18 +38,18 @@ aximp [options]{file.dll | file.ocx}
   
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
-|*dosyası*|Dönüştürülecek ActiveX denetimini içeren kaynak dosyanın adı. Dosya bağımsız değişkeni, .dll veya .ocx uzantısına sahip olmalıdır.|  
+|*Dosya*|Dönüştürülecek ActiveX denetimini içeren kaynak dosyanın adı. Dosya bağımsız değişkeni, .dll veya .ocx uzantısına sahip olmalıdır.|  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
 |`/delaysign`|Sonuç olarak oluşan denetimi gecikmeli imzalamayı kullanarak imzalamasını Aximp.exe'ye belirtir. Bu seçeneği ile birlikte belirtmelisiniz `/keycontainer:`, `/keyfile:`, veya `/publickey:` seçeneği. Gecikmeli imzalama işlemi hakkında daha fazla bilgi için bkz. [derlemeyi imzalamayı geciktirme](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |`/keycontainer:` *kapsayıcı adı*|Sonuç olarak oluşan denetimi tarafından belirtilen anahtar kapsayıcısında bulunan ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar *containerName*.|  
-|`/keyfile:` *filename*|Sonuç olarak oluşan denetimi bulunan yayımcının resmi ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar *filename*.|  
+|`/keyfile:` *Dosya adı*|Sonuç olarak oluşan denetimi bulunan yayımcının resmi ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar *filename*.|  
 |`/nologo`|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
-|`/out:` *filename*|Oluşturulacak derlemenin adını belirtir.|  
-|`/publickey:` *filename*|Sonuç olarak oluşan denetimi tarafından belirtilen dosyada bulunan genel anahtarı kullanarak tanımlayıcı bir adla imzalar *filename*.|  
-|`/rcw:` *filename*|Yeni birini üretmek yerine, belirtilen çalışma zamanı çağrılabilir sarmalayıcısını kullanır. Birden çok örnek belirtebilirsiniz. Geçerli dizin, göreli yollar için kullanılır. Daha fazla bilgi için [çalışma zamanı çağrılabilir sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md).|  
+|`/out:` *Dosya adı*|Oluşturulacak derlemenin adını belirtir.|  
+|`/publickey:` *Dosya adı*|Sonuç olarak oluşan denetimi tarafından belirtilen dosyada bulunan genel anahtarı kullanarak tanımlayıcı bir adla imzalar *filename*.|  
+|`/rcw:` *Dosya adı*|Yeni birini üretmek yerine, belirtilen çalışma zamanı çağrılabilir sarmalayıcısını kullanır. Birden çok örnek belirtebilirsiniz. Geçerli dizin, göreli yollar için kullanılır. Daha fazla bilgi için [çalışma zamanı çağrılabilir sarmalayıcı](../../../docs/framework/interop/runtime-callable-wrapper.md).|  
 |`/silent`|Başarı iletilerinin görüntülenmesini bastırır.|  
 |`/source`|Windows Formları sarmalayıcısı için C# kaynak kodu üretir.|  
 |`/verbose`|Ayrıntılı modu belirtir; ek ilerleme bilgilerini görüntüler.|  

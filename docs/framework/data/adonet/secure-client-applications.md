@@ -3,10 +3,10 @@ title: Güvenli İstemci Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119620"
 ---
 # <a name="secure-client-applications"></a>Güvenli İstemci Uygulamaları
@@ -27,7 +27,7 @@ Uygulamalar genellikle tüm veri kaybına neden veya aksi halde sistemden güven
  [Windows Forms'ta Kullanıcı Girdisi](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  Fare ve klavye bir Windows Forms uygulaması'nda doğrulamak için bilgi ve bağlantılar sağlanmıştır.  
   
- [.NET Framework Normal İfadeleri](../../../../docs/standard/base-types/regular-expressions.md)  
+ [.NET framework normal ifadeleri](../../../../docs/standard/base-types/regular-expressions.md)  
  Nasıl kullanılacağını açıklar <xref:System.Text.RegularExpressions.Regex> kullanıcı girişi geçerliliğini denetlemek için sınıf.  
   
 ## <a name="windows-applications"></a>Windows uygulamaları  
@@ -63,7 +63,7 @@ Uygulamalar genellikle tüm veri kaybına neden veya aksi halde sistemden güven
 |--------------|-----------------|  
 |[Uzak uygulama yapılandırması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Ortak sorunları önlemek için uzaktan iletişim uygulamalarını yapılandırmak nasıl ele alınmaktadır.|  
 |[Uzaktan iletişim güvenlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Kimlik doğrulaması ve şifreleme hem de uzaktan iletişim için ilgili ek güvenlik konuları açıklanmaktadır.|  
-|[Güvenlik ve Uzaktan Yönetim Konuları](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Korumalı nesneler ve uygulama etki alanı kesişimi ile ilgili güvenlik konuları açıklanmaktadır.|  
+|[Güvenlik ve uzaktan yönetim konuları](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Korumalı nesneler ve uygulama etki alanı kesişimi ile ilgili güvenlik konuları açıklanmaktadır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
