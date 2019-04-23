@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cb6cd8d31e01ea2f1749a6cb4d17173679f0c06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104123"
 ---
-# <a name="iclrerrorreportingmanagerbegincustomdump-method"></a><span data-ttu-id="7bf84-102">ICLRErrorReportingManager::BeginCustomDump Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7bf84-102">ICLRErrorReportingManager::BeginCustomDump Method</span></span>
-<span data-ttu-id="7bf84-103">Hata bildirimi için özel bir yığın dökümlerini yapılandırmasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="7bf84-103">Specifies the configuration of custom heap dumps for error reporting.</span></span>  
+# <a name="iclrerrorreportingmanagerbegincustomdump-method"></a><span data-ttu-id="41082-102">ICLRErrorReportingManager::BeginCustomDump Yöntemi</span><span class="sxs-lookup"><span data-stu-id="41082-102">ICLRErrorReportingManager::BeginCustomDump Method</span></span>
+<span data-ttu-id="41082-103">Hata bildirimi için özel bir yığın dökümlerini yapılandırmasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="41082-103">Specifies the configuration of custom heap dumps for error reporting.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7bf84-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7bf84-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41082-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="41082-104">Syntax</span></span>  
   
 ```  
 HRESULT BeginCustomDump (  
@@ -38,47 +38,47 @@ HRESULT BeginCustomDump (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7bf84-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7bf84-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="41082-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="41082-105">Parameters</span></span>  
  `dwFlavor`  
- <span data-ttu-id="7bf84-106">[in] A [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) alacağı özel yığının döküm oluşturmak yığın dökümü türünü belirten değer.</span><span class="sxs-lookup"><span data-stu-id="7bf84-106">[in] A [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) value that indicates the kind of heap dump upon which to build the custom heap dump.</span></span>  
+ <span data-ttu-id="41082-106">[in] A [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) alacağı özel yığının döküm oluşturmak yığın dökümü türünü belirten değer.</span><span class="sxs-lookup"><span data-stu-id="41082-106">[in] A [ECustomDumpFlavor](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) value that indicates the kind of heap dump upon which to build the custom heap dump.</span></span>  
   
  `dwNumItems`  
- <span data-ttu-id="7bf84-107">[in] Uzunluğunu `items` dizisi.</span><span class="sxs-lookup"><span data-stu-id="7bf84-107">[in] The length of the `items` array.</span></span> <span data-ttu-id="7bf84-108">Varsa `dwFlavor` DUMP_FLAVOR_Mini, değil `dwNumItems` sıfır olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7bf84-108">If `dwFlavor` is not DUMP_FLAVOR_Mini, `dwNumItems` should be zero.</span></span>  
+ <span data-ttu-id="41082-107">[in] Uzunluğunu `items` dizisi.</span><span class="sxs-lookup"><span data-stu-id="41082-107">[in] The length of the `items` array.</span></span> <span data-ttu-id="41082-108">Varsa `dwFlavor` DUMP_FLAVOR_Mini, değil `dwNumItems` sıfır olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="41082-108">If `dwFlavor` is not DUMP_FLAVOR_Mini, `dwNumItems` should be zero.</span></span>  
   
  `items`  
- <span data-ttu-id="7bf84-109">[in] Bir dizi [Customdumpıtem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) örnekleri, mini döküm için eklenecek öğeleri belirtme.</span><span class="sxs-lookup"><span data-stu-id="7bf84-109">[in] An array of [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) instances, specifying the items to add to the mini-dump.</span></span> <span data-ttu-id="7bf84-110">Varsa `dwFlavor` DUMP_FLAVOR_Mini, değil `items` null olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7bf84-110">If `dwFlavor` is not DUMP_FLAVOR_Mini, `items` should be null.</span></span>  
+ <span data-ttu-id="41082-109">[in] Bir dizi [Customdumpıtem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) örnekleri, mini döküm için eklenecek öğeleri belirtme.</span><span class="sxs-lookup"><span data-stu-id="41082-109">[in] An array of [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) instances, specifying the items to add to the mini-dump.</span></span> <span data-ttu-id="41082-110">Varsa `dwFlavor` DUMP_FLAVOR_Mini, değil `items` null olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="41082-110">If `dwFlavor` is not DUMP_FLAVOR_Mini, `items` should be null.</span></span>  
   
  `dwReserved`  
- <span data-ttu-id="7bf84-111">[in] Gelecekte kullanılmak üzere ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="7bf84-111">[in] Reserved for future use.</span></span>  
+ <span data-ttu-id="41082-111">[in] Gelecekte kullanılmak üzere ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="41082-111">[in] Reserved for future use.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7bf84-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="7bf84-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="41082-112">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="41082-112">Return Value</span></span>  
   
-|<span data-ttu-id="7bf84-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7bf84-113">HRESULT</span></span>|<span data-ttu-id="7bf84-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="7bf84-114">Description</span></span>|  
+|<span data-ttu-id="41082-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="41082-113">HRESULT</span></span>|<span data-ttu-id="41082-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="41082-114">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="7bf84-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="7bf84-115">S_OK</span></span>|<span data-ttu-id="7bf84-116">Yöntemi başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="7bf84-116">The method returned successfully.</span></span>|  
-|<span data-ttu-id="7bf84-117">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="7bf84-117">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="7bf84-118">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="7bf84-118">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="7bf84-119">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="7bf84-119">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="7bf84-120">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="7bf84-120">The call timed out.</span></span>|  
-|<span data-ttu-id="7bf84-121">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="7bf84-121">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="7bf84-122">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="7bf84-122">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="7bf84-123">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="7bf84-123">HOST_E_ABANDONED</span></span>|<span data-ttu-id="7bf84-124">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="7bf84-124">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="7bf84-125">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="7bf84-125">E_FAIL</span></span>|<span data-ttu-id="7bf84-126">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="7bf84-126">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="7bf84-127">CLR, artık E_FAIL bir yöntemin dönüşünün ardından, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="7bf84-127">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="7bf84-128">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="7bf84-128">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="41082-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="41082-115">S_OK</span></span>|<span data-ttu-id="41082-116">Yöntemi başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="41082-116">The method returned successfully.</span></span>|  
+|<span data-ttu-id="41082-117">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="41082-117">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="41082-118">Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.</span><span class="sxs-lookup"><span data-stu-id="41082-118">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="41082-119">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="41082-119">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="41082-120">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="41082-120">The call timed out.</span></span>|  
+|<span data-ttu-id="41082-121">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="41082-121">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="41082-122">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="41082-122">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="41082-123">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="41082-123">HOST_E_ABANDONED</span></span>|<span data-ttu-id="41082-124">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="41082-124">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="41082-125">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="41082-125">E_FAIL</span></span>|<span data-ttu-id="41082-126">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="41082-126">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="41082-127">CLR, artık E_FAIL bir yöntemin dönüşünün ardından, işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="41082-127">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="41082-128">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="41082-128">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7bf84-129">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7bf84-129">Remarks</span></span>  
- <span data-ttu-id="7bf84-130">`BeginCustomDump` Yöntemi özel yığının döküm yapılandırmasını ayarlar.</span><span class="sxs-lookup"><span data-stu-id="7bf84-130">The `BeginCustomDump` method sets custom heap dump configuration.</span></span> <span data-ttu-id="7bf84-131">[EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) yöntemi özel yığının döküm yapılandırmasını temizler ve herhangi bir ilişkili durumu serbest bırakır.</span><span class="sxs-lookup"><span data-stu-id="7bf84-131">The [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) method clears the custom heap dump configuration and frees any associated state.</span></span> <span data-ttu-id="7bf84-132">Özel yığının döküm tamamlandıktan sonra çağrılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="7bf84-132">It should be called after the custom heap dump is complete.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="41082-129">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="41082-129">Remarks</span></span>  
+ <span data-ttu-id="41082-130">`BeginCustomDump` Yöntemi özel yığının döküm yapılandırmasını ayarlar.</span><span class="sxs-lookup"><span data-stu-id="41082-130">The `BeginCustomDump` method sets custom heap dump configuration.</span></span> <span data-ttu-id="41082-131">[EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) yöntemi özel yığının döküm yapılandırmasını temizler ve herhangi bir ilişkili durumu serbest bırakır.</span><span class="sxs-lookup"><span data-stu-id="41082-131">The [EndCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) method clears the custom heap dump configuration and frees any associated state.</span></span> <span data-ttu-id="41082-132">Özel yığının döküm tamamlandıktan sonra çağrılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="41082-132">It should be called after the custom heap dump is complete.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="7bf84-133">Aranacak hata `EndCustomDump` bellek sızıntısı neden olur.</span><span class="sxs-lookup"><span data-stu-id="7bf84-133">Failure to call `EndCustomDump` causes memory to leak.</span></span>  
+>  <span data-ttu-id="41082-133">Aranacak hata `EndCustomDump` bellek sızıntısı neden olur.</span><span class="sxs-lookup"><span data-stu-id="41082-133">Failure to call `EndCustomDump` causes memory to leak.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7bf84-134">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7bf84-134">Requirements</span></span>  
- <span data-ttu-id="7bf84-135">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7bf84-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41082-134">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="41082-134">Requirements</span></span>  
+ <span data-ttu-id="41082-135">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="41082-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7bf84-136">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7bf84-136">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="41082-136">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="41082-136">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7bf84-137">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="7bf84-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="41082-137">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="41082-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="7bf84-138">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="7bf84-138">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="41082-138">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="41082-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7bf84-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7bf84-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41082-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="41082-139">See also</span></span>
 
-- [<span data-ttu-id="7bf84-140">CustomDumpItem Yapısı</span><span class="sxs-lookup"><span data-stu-id="7bf84-140">CustomDumpItem Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)
-- [<span data-ttu-id="7bf84-141">ECustomDumpFlavor Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="7bf84-141">ECustomDumpFlavor Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)
-- [<span data-ttu-id="7bf84-142">ICLRErrorReportingManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7bf84-142">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [<span data-ttu-id="41082-140">CustomDumpItem Yapısı</span><span class="sxs-lookup"><span data-stu-id="41082-140">CustomDumpItem Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)
+- [<span data-ttu-id="41082-141">ECustomDumpFlavor Sabit Listesi</span><span class="sxs-lookup"><span data-stu-id="41082-141">ECustomDumpFlavor Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md)
+- [<span data-ttu-id="41082-142">ICLRErrorReportingManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="41082-142">ICLRErrorReportingManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
