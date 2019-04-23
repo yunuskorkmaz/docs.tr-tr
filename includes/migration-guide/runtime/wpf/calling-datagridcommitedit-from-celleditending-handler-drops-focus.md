@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: e2d63d85adce64db6e00b62ec17f55ae71ce3052
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235939"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59805290"
 ---
 ### <a name="calling-datagridcommitedit-from-a-celleditending-handler-drops-focus"></a>Odak bıraktığı CellEditEnding işleyicisinden DataGrid.CommitEdit çağırma
 

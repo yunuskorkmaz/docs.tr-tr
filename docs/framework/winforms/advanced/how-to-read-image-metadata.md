@@ -9,10 +9,10 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173621"
 ---
 # <a name="how-to-read-image-metadata"></a>Nasıl yapılır: Görüntü Meta Verilerini Okuma
@@ -40,7 +40,7 @@ Bazı görüntü dosyaları, görüntü özelliklerini belirlemek için okuyabil
   
 |Sayısal değer|Açıklama|  
 |-------------------|-----------------|  
-|1.|BİR `Byte`|  
+|1.|A `Byte`|  
 |2|Bir dizi `Byte` ASCII kodlamalı nesneler|  
 |3|Bir 16 bit tam sayı|  
 |4|Bir 32 bit tamsayı|  
@@ -125,5 +125,5 @@ Bazı görüntü dosyaları, görüntü özelliklerini belirlemek için okuyabil
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Resimler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
-- [Resimler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)
+- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
+- [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)

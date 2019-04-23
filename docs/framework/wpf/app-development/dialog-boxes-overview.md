@@ -11,10 +11,10 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177417"
 ---
 # <a name="dialog-boxes-overview"></a>İletişim Kutularına Genel Bakış
@@ -45,7 +45,7 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Bir ileti kutusu görüntülemek için çağrı `static`<xref:System.Windows.MessageBox.Show%2A> yöntemi, aşağıdaki kodda gösterildiği gibi.  
+ Bir ileti kutusu görüntülemek için çağrı `static` <xref:System.Windows.MessageBox.Show%2A> yöntemi, aşağıdaki kodda gösterildiği gibi.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -344,6 +344,6 @@ Tek başına uygulamalar genellikle her ikisi de, uygulama üzerinden çalışı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Açılır Pencereye Genel Bakış](../controls/popup-overview.md)
+- [Açılan Pencereye Genel Bakış](../controls/popup-overview.md)
 - [İletişim kutusu örneği](https://go.microsoft.com/fwlink/?LinkID=159984)
 - [ColorPicker özel denetim örneği](https://go.microsoft.com/fwlink/?LinkID=159977)

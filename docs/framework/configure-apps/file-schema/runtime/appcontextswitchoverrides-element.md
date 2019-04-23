@@ -1,7 +1,7 @@
 ---
 title: <AppContextSwitchOverrides> Öğesi
 ms.custom: updateeachrelease
-ms.date: 03/07/2019
+ms.date: 04/18/2019
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136467"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978256"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > öğesi
 Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.AppContext> yeni işlevselliği için bir geri çevirme mekanizma sağlar sınıfını.  
@@ -98,6 +98,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Denetimleri olmadığını değerini [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) özelliği bir [IntPtr](xref:System.IntPtr) pencere bellek konumunu temsil işlemek veya bir pencere tutucu (HWND) olup. Daha fazla bilgi için [azaltma: HWND CspParameters.ParentWindowHandle bekliyor](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Bazı SignedCMS işlemleri için varsayılan, SHA1 veya SHA256 olup olmadığını belirler.<br>Microsoft, çakışma sorunları nedeniyle SHA1, SHA256 önerir.|.NET framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Bazı SignedXML işlemleri için varsayılan, SHA1 veya SHA256 olup olmadığını belirler.<br>Microsoft, çakışma sorunları nedeniyle SHA1, SHA256 önerir.|.NET framework 4.7.1|
+|`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|Yönetilen bir şifreleme kullanımını FIPS modunda oluşturur sınıfları olup olmadığını denetleyen bir <xref:System.Security.Cryptography.CryptographicException> (`true`) veya sistem kitaplıkları uygulamasına bağlıdır (`false`).|.NET Framework 4.8|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Belirler olmadığını `TransportWithMessageCredential` güvenlik modu sağlar imzasız iletilerle "Kime" üst bilgisinde. Katılımı anahtar budur. Daha fazla bilgi için [.NET Framework 4.6.1 çalışma zamanı değişiklikleri](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Denetimleri olmadığını <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> Oluşturucusu oluşturur bir <xref:System.ArgumentException> öğeler ise `null`.|.NET framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|İle X509 kullanma girişimi sertifikaları olmadığını CSG anahtar depolama sağlayıcısı, bir özel durum oluşturur. belirler. Daha fazla bilgi için [WCF aktarım güvenliği destekleyen CNG kullanarak depolanan sertifikaları](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
@@ -109,6 +110,7 @@ Tarafından kullanılan bir veya daha fazla anahtarları tanımlar <xref:System.
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|WCF için adlandırılmış kanallar rastgele adı oluşturmada kullanılacak bir SHA1 veya SHA256 karma kullanıp kullanmadığını denetler.<br>Microsoft, çakışma sorunları nedeniyle SHA1, SHA256 önerir.|.NET framework 4.7.1|
 |`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|Throw verilip verilmeyeceğini denetler bir [NullReferenceException](xref:System.NullReferenceException) özel durum iletisi olduğunda null.|.NET framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Hizmet başlangıç sırasında oluşturulan özel durumlar çağıran yayılır denetimleri <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> yöntemi.|.NET framework 4.7.1|
+|`Switch.System.Threading.UseNetCoreTimer`|Denetimleri olmadığını <xref:System.Threading.Timer> örnekleri performans iyileştirmeleri yüksek ölçekli ortamlarda özelliğinden yararlanın. Varsa `true`, performans iyileştirmeleri; kullanıyorsanız etkinleştirildiğinden `false` (varsayılan değer) devre dışı bırakılır.|.NET Framework 4.8|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|Bazen kodu belirli yüzde olarak kodlanmış karakterler artık tutarlı bir şekilde sol kodlanmış olup olmadığını belirler. Varsa `true`, bunlar kodu çözülmüş; Aksi takdirde `false`.|.NET Framework 4.7.2|
 |`Switch.System.Uri.`<br/>`DontKeepUnicodeBidiFormattingCharacters`|Unicode çift yönlü karakter URI'ler işlenmesini belirler. `true` bir URI'leri Şerit bunları çoğaltmak; `false` koruyabilir ve bunları yüzde olarak kodlamak için.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Windows Presentation Foundation eski bir algoritma geçerli olup olmadığını belirler (`true`) veya yeni bir algoritma (`false`) için alan ayırma, \*-sütun. Daha fazla bilgi için [azaltma: Kılavuz denetim alanı ayırma yıldız sütunlara](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns). |.NET framework 4.7 |

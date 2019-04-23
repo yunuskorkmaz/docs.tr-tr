@@ -3,10 +3,10 @@ title: F# Etkileşimli (fsi.exe) Başvurusu
 description: Bilgi nasıl F# etkileşimli (fsi.exe) çalıştırmak için kullanılan F# etkileşimli olarak konsolda veya yürütülecek kodu F# betikler.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172269"
 ---
 # <a name="interactive-programming-with-f"></a>Etkileşimli F ile programlama\#
@@ -97,5 +97,5 @@ test
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[F# Etkileşimli Seçenekleri](../../language-reference/fsharp-interactive-options.md)|Komut satırı söz dizimini açıklar ve seçenekleri F# etkileşimli, fsi.exe.|
-|[F# Etkileşimli Kitaplık Başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Kitaplık işlevleri kullanılabilir kod yürütülürken açıklanmaktadır F# etkileşimli.|
+|[F# Interactive Seçenekleri](../../language-reference/fsharp-interactive-options.md)|Komut satırı söz dizimini açıklar ve seçenekleri F# etkileşimli, fsi.exe.|
+|[F#Etkileşimli Kitaplık Başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Kitaplık işlevleri kullanılabilir kod yürütülürken açıklanmaktadır F# etkileşimli.|

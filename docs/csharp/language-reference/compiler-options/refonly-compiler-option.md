@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
-ms.openlocfilehash: 24f5cba5650777f4844923844708d287798c445c
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 97245b50881d687572c1ae1df649651831822094
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409269"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978490"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly (C# Derleyici Seçenekleri)
 
-**- Refonly** seçeneği, bir başvuru bütünleştirilmiş kodu çıkış birincil çıktı olarak bir uygulama derleme yerine olması gerektiğini gösterir. `-refonly` Parametre sessiz bir şekilde devre dışı bırakır pdb, çıktısı olarak başvuru bütünleştirilmiş kodları yürütülemez.
+**- Refonly** seçeneği, bir başvuru bütünleştirilmiş kodu çıkış birincil çıktı olarak bir uygulama derleme yerine olması gerektiğini gösterir. `-refonly` Parametre sessiz bir şekilde devre dışı bırakır pdb, çıktısı olarak başvuru bütünleştirilmiş kodları yürütülemez. Bu seçenek karşılık gelen [ProduceOnlyReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) proje MSBuild özelliği.
 
 ## <a name="syntax"></a>Sözdizimi
 

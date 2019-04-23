@@ -1,12 +1,12 @@
 ---
-title: <security> , <wsDualHttpBinding>
+title: <security> / <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
 ms.openlocfilehash: c6f9e34724ccc3a0d05da3e1886b4f0bcbaae064
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171515"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<Güvenlik >, \<wsDualHttpBinding >

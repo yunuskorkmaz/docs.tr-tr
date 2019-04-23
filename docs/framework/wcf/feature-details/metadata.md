@@ -5,17 +5,17 @@ helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
 ms.openlocfilehash: 10b93f94a5a5193513e20eed4571aaf8f6c882a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174024"
 ---
 # <a name="metadata"></a>Meta Veriler
 Windows Communication Foundation (WCF) hizmet meta verileri içeri dışarı aktarma, yayımlama, alma ve bir altyapı sağlar. WCF hizmetleri, böylece Svcutil.exe gibi araçları otomatik olarak hizmete erişim için istemci kodu oluşturmak hizmet uç noktaları ile etkileşim kurmayı açıklamak için meta verileri kullanın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Meta Veri Mimarisi Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
+ [Meta Veri Mimarisine Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
  Meta veri mimarisine üst düzey bir bakış.  
   
  [Meta Veri Biçimleri](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  

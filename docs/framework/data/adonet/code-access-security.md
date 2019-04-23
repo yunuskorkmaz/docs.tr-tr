@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
 ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174115"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod Erişimi Güvenliği ve ADO.NET
@@ -49,7 +49,7 @@ ms.locfileid: "59174115"
   
  Oluşturmakta olduğunuz uygulama türüne bağlı olarak, rol tabanlı izinlere veritabanında uygulama düşünmelisiniz. SQL Server rol tabanlı güvenlik hakkında daha fazla bilgi için bkz. [SQL Server güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
-## <a name="assemblies"></a>Derlemeleri  
+## <a name="assemblies"></a>Bütünleştirilmiş kodlar  
  Derlemeler dağıtım, sürüm denetimi, yeniden kullanma, aktivasyon kapsamı ve .NET Framework uygulaması için güvenlik izinleri temel birimini oluşturur. Derleme türleri ve birlikte çalışan ve mantıksal bir işlevsellik birimi oluşturacak biçimde oluşturulan kaynakları koleksiyonu sağlar. CLR, bir derleme bağlamı dışında bir tür yok. Oluşturma ve derlemeleri dağıtma hakkında daha fazla bilgi için bkz. [Derlemelerle programlama](../../../../docs/framework/app-domains/programming-with-assemblies.md).  
   
 ### <a name="strong-naming-assemblies"></a>Derlemelerin tanımlayıcı adlandırma  
@@ -197,6 +197,6 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Yerelde ve .NET Framework Kodunda Güvenlik](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [Yerelde ve .NET Framework kodunda güvenlik](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Rol Tabanlı Güvenlik](../../../../docs/standard/security/role-based-security.md)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

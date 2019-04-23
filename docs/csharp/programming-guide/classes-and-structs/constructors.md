@@ -7,19 +7,19 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: e88cc9b36f64a559105620359f4c163978cf9d8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: becc3fc8a75cd4d2d5e0c1db2858b15b8b61ae20
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692265"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978581"
 ---
 # <a name="constructors-c-programming-guide"></a>Oluşturucular (C# Programlama Kılavuzu)
 Her bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md) olan oluşturulan, kendi Oluşturucu çağrılır. Farklı bağımsız değişkenler almayan birden çok Oluşturucu, bir sınıf veya yapı olabilir. Oluşturucular, esnek ve kolay okunur kod yazma, örnekleme sınırlandırmak ve varsayılan değerlerini ayarlamak Programcı etkinleştirin. Daha fazla bilgi ve örnekler için bkz. [oluşturucuları kullanarak](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) ve [örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
 
-## <a name="default-constructors"></a>Varsayılan Oluşturucu
+## <a name="parameterless-constructors"></a>Parametresiz oluşturucular
   
-Sınıfınız için bir oluşturucu sağlamazsanız, C# nesnesini başlatır ve üye değişkenleri için varsayılan değerleri, bağlantısında listelendiği gibi ayarlar. varsayılan olarak bir tane oluşturur [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). Yapınızı için bir oluşturucu sağlamazsanız, C# dayanan bir *örtülü varsayılan bir oluşturucuya* listelenen her alanda bir değer türü varsayılan değerine otomatik olarak başlatmak için [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). Daha fazla bilgi ve örnekler için bkz. [örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+Sınıfınız için bir oluşturucu sağlamazsanız, C# nesnesini başlatır ve üye değişkenleri için varsayılan değerleri, bağlantısında listelendiği gibi ayarlar. varsayılan olarak bir tane oluşturur [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). Yapınızı için bir oluşturucu sağlamazsanız C# dayanan bir *parametresiz bir oluşturucu örtük* listelenen her alanda bir değer türü varsayılan değerine otomatik olarak başlatmak için [varsayılan değerler Tablo](../../../csharp/language-reference/keywords/default-values-table.md). Daha fazla bilgi ve örnekler için bkz. [örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Oluşturucu sözdizimi
 

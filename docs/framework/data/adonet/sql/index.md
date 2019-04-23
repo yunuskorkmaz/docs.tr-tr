@@ -3,10 +3,10 @@ title: SQL Server ve ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.openlocfilehash: f30d9d715a2d94deee788f92cfc8eed0cba706de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172776"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server ve ADO.NET
@@ -33,12 +33,12 @@ Bu bölümde, özellikler ve SQL Server için .NET Framework veri sağlayıcıs�
  [SQL Server Özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
  ADO.NET uygulama geliştiricileri için yararlı olan SQL Server özelliklerini açıklar.  
   
- [LINQ - SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  Temel yapı taşlarını, süreçleri ve LINQ SQL uygulamaları oluşturmak için gereken teknikleri açıklar.  
   
  SQL Server veritabanı altyapısı tam belgelerine, kullanmakta olduğunuz SQL Server sürümü için SQL Server Books Online'a bakın.  
   
- [SQL Server Çevrimiçi Kitaplar](/sql/sql-server/sql-server-technical-documentation)  
+ [SQL Server Çevrimiçi Kitapları](/sql/sql-server/sql-server-technical-documentation)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

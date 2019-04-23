@@ -3,56 +3,52 @@ title: Windows 10 üzerinde .NET Framework yükleme
 description: Windows 10 veya Windows Server 2016 üzerinde .NET Framework'ü yüklemeyi öğrenin.
 author: rlander
 ms.author: mairaw
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: db5c6a45db299d716b2fdd115086e0dbc5952a59
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
-ms.translationtype: MT
+ms.openlocfilehash: c9499e44a6074525c634959e385ee91c03cdf9d4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204307"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978542"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 ve Windows Server 2016 ve sonraki sürümleri .NET Framework yükleme
 
-.NET Framework, Windows üzerinde birçok uygulama çalıştırmak için gereklidir. Bu makaledeki yönergeleri gereken .NET Framework sürümlerini yüklemenize yardımcı olması. [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) kullanılabilir en son sürümü.
+.NET Framework, Windows üzerinde birçok uygulama çalıştırmak için gereklidir. Bu makaledeki yönergeleri gereken .NET Framework sürümlerini yüklemenize yardımcı olması. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) kullanılabilir en son sürümü.
 
 Bir uygulama çalıştırmaya ve makinenizde aşağıdakine benzer bir iletişim kutusu görmesini sonra bu sayfada gelmedi:
 
 ![Bu uygulama başlatılamadı](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-472"></a>.NET Framework 4.7.2
+## <a name="net-framework-48"></a>.NET Framework 4.8
 
-.NET Framework 4.7.2 bulunur:
+.NET Framework 4.8 ile birlikte gelir:
 
-* [Windows 10 Ekim 2018 güncelleştirmesi](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
-
-* [Windows 10 Nisan 2018 güncelleştirmesi](https://www.microsoft.com/software-download/windows10)
-
-* Windows Server 2019
-
-* Windows Server sürüm 1809
-
-* Windows Server sürüm 1803
+* [Windows 10 Mayıs 2019 güncelleştirme](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [.NET Framework'ün 4.7.2 indirin](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)
+> [.NET Framework'ün 4.8 indirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) 4.7.1 aracılığıyla .NET Framework 4.0 için oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
+[.NET framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) 4.7.2 aracılığıyla .NET Framework 4.0 için oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
 
-Yükleyebileceğiniz [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) üzerinde:
+Yükleyebileceğiniz [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) üzerinde:
 
+* Windows 10 Ekim 2018 Güncelleştirmesi (sürüm 1809)
+* Windows 10 Nisan 2018 Updae (sürüm 1803)
 * Windows 10 Fall Creators Update (1709 sürümü)
 * Windows 10 Creators Update (sürüm 1703)
 * Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607)
-* Windows Server 1709 sürümü
+* Windows Server 2019
+* Windows Server sürüm 1809
+* Windows Server sürüm 1803
 * Windows Server 2016
 
-.NET Framework 4.7.2 desteklenmiyor:
+.NET Framework 4.8 desteklenmez:
 
 * Windows 10 1507
 * Windows 10 1511
 
-Windows 10 1507 veya 1511 kullanıyorsanız ve .NET Framework'ü 4.7.2 yüklemek istiyorsanız, önce daha sonraki bir Windows 10 sürümüne yükseltmek gerekir.
+Windows 10 1507 veya 1511 kullanıyorsanız ve .NET Framework 4.8 yüklemek istediğiniz, ilk daha yeni bir Windows 10 sürümüne yükseltmeniz gerekir.
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
@@ -74,11 +70,11 @@ Yüklemek için yönergeleri izleyin [Windows 10 üzerinde .NET Framework 3.5](d
 
 - Sonraki bir sürümü zaten yüklü değilse, makinenizde .NET Framework'ün önceki bir sürümünü yükleyemezsiniz.
 
-- .NET Framework 4.x sürümleri, .NET Framework 4.0 bu sürümü ile oluşturulmuş uygulamaları çalıştırmak için kullanılabilir. Örneğin, .NET Framework 4.7, .NET Framework 4.0 4.7 aracılığıyla oluşturulan uygulamalarını çalıştırmak için kullanılabilir. En son sürümünü (.NET Framework 4.7.2), .NET Framework 4.0 ile başlayan tüm sürümleri ile oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
+- .NET Framework 4.x sürümleri, .NET Framework 4.0 bu sürümü ile oluşturulmuş uygulamaları çalıştırmak için kullanılabilir. Örneğin, .NET Framework 4.7, .NET Framework 4.0 4.7 aracılığıyla oluşturulan uygulamalarını çalıştırmak için kullanılabilir. En son sürümünü (.NET Framework 4.8), .NET Framework 4.0 ile başlayan tüm sürümleri ile oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
 
 İndirmek kullanılabilir .NET Framework'ün tüm sürümleri listesi için bkz. [.NET indirir](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) sayfası.
 
-## <a name="help"></a>Yardım
+## <a name="help"></a>Help
 
 Yüklü .NET Framework'ün doğru sürümü alınamıyor. Yapabiliyorsanız [Yardım için Microsoft ile iletişime geçin](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).
 

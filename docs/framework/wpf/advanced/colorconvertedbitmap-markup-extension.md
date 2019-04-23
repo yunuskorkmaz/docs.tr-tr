@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ColorConvertedBitmap markup extension [WPF]
 ms.assetid: 18321c18-c898-4470-93fa-a702b47770c1
 ms.openlocfilehash: e8a36a1b8592146eb2474805638cdc3697adb0c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172945"
 ---
 # <a name="colorconvertedbitmap-markup-extension"></a>ColorConvertedBitmap Biçimlendirme Uzantısı
@@ -39,5 +39,5 @@ Katıştırılmış bir profili olmayan bir bit eşlem kaynağını belirtmek i�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A>
-- [Biçimlendirme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [Görüntülemeye Genel Bakış](../graphics-multimedia/imaging-overview.md)

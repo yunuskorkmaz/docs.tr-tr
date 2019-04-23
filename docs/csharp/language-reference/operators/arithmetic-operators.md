@@ -27,19 +27,19 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.openlocfilehash: dc817fdb9684f794efc6599444e80be1ef7f9654
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59301132"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978048"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# Başvurusu)
 
 Aşağıdaki işleçleri ile sayısal türleri aritmetik işlemleri gerçekleştirin:
 
-- Birli [ `++` (artırma)](#increment-operator-), [ `--` (azaltma)](#decrement-operator---), [ `+` (artı)](#unary-plus-and-minus-operators), ve [ `-` (eksi)](#unary-plus-and-minus-operators) işleçleri.
-- İkili [ `*` (çarpma)](#multiplication-operator-), [ `/` (bölme)](#division-operator-), [ `%` (kalanını)](#remainder-operator-), [ `+` () ek olarak)](#addition-operator-), ve [ `-` (çıkarma)](#subtraction-operator--) işleçleri.
+- Birli [ `++` (artırma)](#increment-operator-), [ `--` (azaltma)](#decrement-operator---), [ `+` (artı)](#unary-plus-and-minus-operators), ve [ `-` (eksi)](#unary-plus-and-minus-operators) işleçleri
+- İkili [ `*` (çarpma)](#multiplication-operator-), [ `/` (bölme)](#division-operator-), [ `%` (kalanını)](#remainder-operator-), [ `+` () ek olarak)](#addition-operator-), ve [ `-` (çıkarma)](#subtraction-operator--) işleçleri
 
 Tüm bu işleçleri destekler [integral](../keywords/integral-types-table.md) ve [kayan nokta](../keywords/floating-point-types-table.md) sayısal türler.
 
@@ -167,10 +167,10 @@ Ayrıca `-` temsilci kaldırma işleci. Daha fazla bilgi için [ `-` işleci](su
 
 Aşağıdaki liste, en yüksek öncelikten en düşük başlangıç aritmetik işleçler sıralar:
 
-- Sonek artırma `x++` ve azaltma `x--` işleçleri.
-- Önek artırma `++x` ve azaltma `--x` ve birli `+` ve `-` işleçleri.
-- Çarpma `*`, `/`, ve `%` işleçleri.
-- Eklenebilir `+` ve `-` işleçleri.
+- Sonek artırma `x++` ve azaltma `x--` işleçleri
+- Önek artırma `++x` ve azaltma `--x` ve birli `+` ve `-` işleçleri
+- Çarpma `*`, `/`, ve `%` işleçleri
+- Eklenebilir `+` ve `-` işleçleri
 
 İkili aritmetik işleçler ilişkilendirilebilir. Diğer bir deyişle, aynı öncelik düzeyine sahip işleçler, soldan sağa doğru değerlendirilir.
 
@@ -199,6 +199,10 @@ dışında `x` yalnızca bir kez değerlendirilir.
 Aşağıdaki örnek, aritmetik işleçlere sahip bileşik atama kullanımını göstermektedir:
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
+
+Nedeniyle [sayısal promosyonlar](~/_csharplang/spec/expressions.md#numeric-promotions), sonucunu `op` işlemi olabilir değil türe örtük olarak dönüştürülebilir `T` , `x`. Böyle bir durumda ise `op` önceden tanımlanmış bir işleç ve işlemin sonucu türüne açıkça dönüştürülebilir ise `T` , `x`, formun bir bileşik atama ifadesi `x op= y` eşdeğerdir `x = (T)(x op y)`, dışında `x` yalnızca bir kez değerlendirilir. Aşağıdaki örnek, bu davranış gösterir:
+
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
 Ayrıca `+=` ve `-=` abone ve aboneliği iptal edin işleçleri [olayları](../keywords/event.md). Daha fazla bilgi için [nasıl yapılır: abone olma ve aboneliği olaylardan](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
@@ -247,7 +251,7 @@ Daha fazla bilgi için aşağıdaki bölümlere bakın [ C# dil belirtimi](~/_cs
 
 - [Sonek artırma ve azaltma işleçleri](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators)
 - [Önek artırma ve azaltma işleçleri](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)
-- [Tekli artı işleci](~/_csharplang/spec/expressions.md#unary-plus-operator)
+- [Birli artı işleci](~/_csharplang/spec/expressions.md#unary-plus-operator)
 - [Birli eksi işleci](~/_csharplang/spec/expressions.md#unary-minus-operator)
 - [Çarpma işleci](~/_csharplang/spec/expressions.md#multiplication-operator)
 - [Bölme işleci](~/_csharplang/spec/expressions.md#division-operator)
@@ -256,12 +260,13 @@ Daha fazla bilgi için aşağıdaki bölümlere bakın [ C# dil belirtimi](~/_cs
 - [Çıkarma işleci](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Bileşik atama](~/_csharplang/spec/expressions.md#compound-assignment)
 - [Checked ve unchecked işleçleri](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [Sayısal promosyonlar](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>
-- [.NET sayısal değerleri](../../../standard/numerics.md)
+- [.NET Sayısal Değerleri](../../../standard/numerics.md)

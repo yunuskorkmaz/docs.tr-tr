@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352831"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978932"
 ---
 # <a name="data-binding"></a>Veri Bağlama
 
@@ -42,9 +42,9 @@ Toplama kuşakları genel uygulanan <xref:System.Data.Linq.Table%601> ve genel `
 
 - Veri kaynağı bir <xref:System.Linq.IQueryable%601>. İki senaryo vardır:
 
-    - Varsa [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] temel bulur <xref:System.Data.Linq.Table%601> gelen <xref:System.Linq.IQueryable%601>, kaynak sürümü için izin verir ve ilk madde işaretinde olduğu gibi bir durumdur.
+  - Varsa [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] temel bulur <xref:System.Data.Linq.Table%601> gelen <xref:System.Linq.IQueryable%601>, kaynak sürümü için izin verir ve ilk madde işaretinde olduğu gibi bir durumdur.
 
-    - Varsa [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] temel bulunamıyor <xref:System.Data.Linq.Table%601>, kaynak sürümü için izin vermez (örneğin, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Genel doldurmak için sorgu gözatar `SortableBindingList`, basit olduğu <xref:System.ComponentModel.BindingList%601> , belirli bir özellik için T varlıklar için sıralama özelliği uygular.
+  - Varsa [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] temel bulunamıyor <xref:System.Data.Linq.Table%601>, kaynak sürümü için izin vermez (örneğin, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Genel doldurmak için sorgu gözatar `SortableBindingList`, basit olduğu <xref:System.ComponentModel.BindingList%601> , belirli bir özellik için T varlıklar için sıralama özelliği uygular.
 
 ## <a name="specialized-collections"></a>Özelleştirilmiş Koleksiyonlar
 

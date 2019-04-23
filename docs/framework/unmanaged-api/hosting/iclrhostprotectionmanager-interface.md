@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd096344c987d8901f0baab86e370abbb03528e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177781"
 ---
 # <a name="iclrhostprotectionmanager-interface"></a>ICLRHostProtectionManager Arabirimi
@@ -44,5 +44,5 @@ Yönetilen sınıflar, yöntemler, özellikler ve alanları kısmen güvenilen k
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [EApiCategories Numaralandırması](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)
+- [EApiCategories Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)
 - [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)

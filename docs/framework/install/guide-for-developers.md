@@ -1,7 +1,7 @@
 ---
 title: .NET Framework Geliştirici paketi yükleyin veya yeniden dağıtılabilir
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 helpviewer_keywords:
 - .NET Framework redistributable package, downloading
 - .NET Framework, installing
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.openlocfilehash: d3839848aec47edef63a0080bf649f452b9d662a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327873"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978295"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework'ü yükleme
 
@@ -24,7 +24,7 @@ ms.locfileid: "59327873"
 > [!NOTE]
 > Bu konuda yöneliktir **geliştiriciler** ya da isteyen kendi sisteminde veya kendi uygulamaları ile kurmak isteyen .NET Framework'ü yüklemek. İçin **kullanıcılar** .NET Framework'ü yükleme ilgileniyor .NET Framework gibi belirli işletim sistemlerine yükleme tartışmak bireysel konulara bakın [Windows 10 ve Windows üzerinde .NET Framework yükleme Server 2016](on-windows-10.md).
 
-Bu makalede .NET Framework'ün tüm sürümler için .NET Framework 4.5 yükleme için bağlantılar sağlar. [!INCLUDE[net_current](../../../includes/net-current-version.md)] bilgisayarınızda. Bir geliştiriciyseniz, bu bağlantıları karşıdan yüklemek ve .NET Framework ile uygulamalarınızı yeniden dağıtmak için kullanabilirsiniz. Uygulamanızı .NET Framework sürümünü dağıtma hakkında daha fazla bilgi için bkz. [geliştiriciler için .NET Framework Dağıtım Kılavuzu](../deployment/deployment-guide-for-developers.md).
+Bu makalede, tüm .NET Framework sürümlerini .NET Framework 4. 5 ' .NET Framework 4.8 için bilgisayarınıza yüklemek için bağlantılar sağlar. Bir geliştiriciyseniz, bu bağlantıları karşıdan yüklemek ve .NET Framework ile uygulamalarınızı yeniden dağıtmak için kullanabilirsiniz. Uygulamanızı .NET Framework sürümünü dağıtma hakkında daha fazla bilgi için bkz. [geliştiriciler için .NET Framework Dağıtım Kılavuzu](../deployment/deployment-guide-for-developers.md).
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
@@ -37,6 +37,7 @@ Hızlı bağlantılar veya ayrıntılar için okumaya devam için aşağıdaki t
 
 |.NET Framework sürümü|Geliştirici yükleme|Yeniden dağıtılabilir yükleme|Platform desteği|
 |----------------------------|----------------------------|----------------------------------|----------------------|
+|**4.8**|[.NET framework 4.8 Geliştirici paketi](https://go.microsoft.com/fwlink/?linkid=2088517)|[4.8 İndirme Merkezi web yükleyicisi](http://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[İndirme Merkezi 4.8 çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?linkid=2088631)|**Dahil:**<br/><br/>Windows 10 Mayıs 2019 güncelleştirme<br /><br /> **Üzerinde yükleyebilirsiniz:**<br/><br/>Windows 10 Ekim 2018 güncelleştirmesi<br/>Windows 10 Nisan 2018 güncelleştirmesi<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümleri<br /> Windows Server 2019<br/>Windows Server sürüm 1809<br/>Windows Server sürüm 1803<br /><br/> (tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))||
 |**4.7.2**|[.NET framework 4.7.2 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=874338)|[İndirme Merkezi 4.7.2 web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[İndirme Merkezi 4.7.2 çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?LinkId=863265)|**Dahil:** <br/><br/>Windows 10 Ekim 2018 güncelleştirmesi<br/>Windows 10 Nisan 2018 güncelleştirmesi<br/>Windows Server 2019<br/>Windows Server sürüm 1809<br/>Windows Server sürüm 1803<br /><br /> **Üzerinde yükleyebilirsiniz:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümleri<br /> Windows Server sürüm 1709 ve öncesi<br /><br/> (tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))||
 |**4.7.1**|[NET Framework 4.7.1 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=852105)|[4.7.1 için indirme sayfası web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [4.7.1 için indirme sayfası çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?LinkId=852107)|**Dahil:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server 1709 sürümü<br /><br /> **Üzerinde yükleyebilirsiniz:**<br/><br/> Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümleri<br /> Windows Server 2016 ve önceki sürümleri<br /> (tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))||
 |**4.7**|[NET Framework 4.7 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=825319)|[4.7 web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [4.7 çevrimdışı Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=825303)|**Dahil:** <br/><br/>Windows 10 Creators Update<br /><br /> **Üzerinde yükleyebilirsiniz:**<br /><br/> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümleri<br /> Windows Server 2016 ve önceki sürümleri<br /> (tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))||
@@ -45,7 +46,7 @@ Hızlı bağlantılar veya ayrıntılar için okumaya devam için aşağıdaki t
 |**4.6**|Visual Studio 2015'te dahil.<br /><br /> [Microsoft .NET Framework 4.6 targeting pack](https://go.microsoft.com/fwlink/?LinkId=528261)|[4.6 web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [4.6 çevrimdışı Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/?LinkId=528233)|**Dahil:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Üzerinde yükleyebilirsiniz:**<br /><br/> Windows 8.1 ve önceki sürümleri<br /> Windows Server 2012 R2 ve önceki sürümleri<br /> (tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))|
 |**4.5.2**|[Microsoft .NET Framework 4.5.2 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Visual Studio 2013, Visual Studio 2012 veya diğer Ide'leri ile kullanmak için|[4.5.2 için indirme sayfası web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [4.5.2 için indirme sayfası çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**Üzerinde yükleyebilirsiniz:**<br /><br/> Windows 8.1 ve önceki sürümleri<br /> Windows Server 2012 R2 ve önceki sürümleri<br /> (tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))|
 |**4.5.1**|[Microsoft .NET Framework 4.5.1 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Visual Studio 2013, Visual Studio 2012 veya diğer Ide'leri ile kullanmak için|[4.5.1 için sayfayı karşıdan yükleme web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [4.5.1 için sayfayı karşıdan yükleme çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Dahil:**<br /> <br/>[!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Üzerinde yükleyebilirsiniz:**<br /><br/> [!INCLUDE[win8](../../../includes/win8-md.md)] ve önceki sürümleri<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] ve önceki sürümleri<br />(tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))|
-|**4,5**|Visual Studio 2012'de dahil<br /><br /> Ayrıca kullanılabilir Windows 8 SDK'ın bir parçası olarak|[4.5 web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Dahil:** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Üzerinde yükleyebilirsiniz:**<br/><br /> Windows 7 ve öncesi<br /> Windows Server 2008 SP2 ve önceki sürümleri<br />(tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))|
+|**4.5**|Visual Studio 2012'de dahil<br /><br /> Ayrıca kullanılabilir Windows 8 SDK'ın bir parçası olarak|[4.5 web Yükleyicisi için indirme sayfası](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Dahil:** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Üzerinde yükleyebilirsiniz:**<br/><br /> Windows 7 ve öncesi<br /> Windows Server 2008 SP2 ve önceki sürümleri<br />(tam listesi için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md))|
 
 Yükleyebileceğiniz **Geliştirici paketi** tüm desteklenen platformlarda kullanılabilir ise .NET Framework, belirli bir sürümü için.
 
@@ -67,7 +68,9 @@ Visual Studio veya başka bir geliştirme ortamında .NET Framework'ün en son s
 
 A *targeting pack* uygulamanızı Visual Studio hem de diğer geliştirme ortamlarında geliştirirken .NET Framework'ün belirli bir sürümü hedeflemesini sağlar. A *Geliştirici paketi* .NET Framework ve eşlik eden SDK'si, karşılık gelen hedefleme paketiyle birlikte, belirli bir sürümünü içerir.
 
-.NET Framework 4.5.2 ya da 4.5.1 Geliştirici paketi, .NET Framework 4.6 targeting pack ve .NET Framework 4.6.1, 4.6.2, 4.7, 4.7.1 veya 4.7.2 Geliştirici paketi bir belirli .NET Framework'ün sürümü başvuru derlemelerini sağlar, dil paketlerini ve IntelliSense dosyaları için Visual Studio gibi bir tümleşik geliştirme ortamında kullanın.  Ayrıca Visual Studio Geliştirici paketi kullanarak veya targeting pack, yeni bir proje oluşturduğunuzda, .NET Framework'ün yüklü sürümü hedef seçenekleri ekler.  Aşağıdakilerden birini seçin:
+.NET Framework 4.5.2 ya da 4.5.1 Geliştirici paketi, .NET Framework 4.6 targeting pack ve .NET Framework 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 veya 4.8 için geliştirici paketi dil başvuru derlemelerini bir belirli .NET Framework'ün sürümü sağlar Visual Studio gibi bir tümleşik geliştirme ortamında paketleri ile IntelliSense dosyaları için kullanın.  Ayrıca Visual Studio Geliştirici paketi kullanarak veya targeting pack, yeni bir proje oluşturduğunuzda, .NET Framework'ün yüklü sürümü hedef seçenekleri ekler.  Aşağıdakilerden birini seçin:
+
+- [Microsoft .NET Framework 4.8 Geliştirici paketi](https://go.microsoft.com/fwlink/?linkid=2088517)
 
 - [Microsoft .NET Framework 4.7.2 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=874338)
 
@@ -109,23 +112,25 @@ Hem web hem de çevrimdışı yükleyiciler x86 ve x64 tabanlı bilgisayarlar i�
 
 1. Yüklemek istediğiniz .NET Framework sürümü için indirme sayfayı açın:
 
-    - .NET framework 4.7.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=863262) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=863265))
+   - .NET framework 4.8 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=2085155) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?linkid=2088631))
 
-    - .NET framework 4.7.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=852095) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=852107))
+   - .NET framework 4.7.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=863262) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
-    - .NET framework 4.7 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=825299) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=825303))
+   - .NET framework 4.7.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=852095) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=852107))
 
-    - .NET framework 4.6.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=780597) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=780601))
+   - .NET framework 4.7 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=825299) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=825303))
 
-    - .NET framework 4.6.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=671729) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=671744))
+   - .NET framework 4.6.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=780597) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=780601))
 
-    - .NET framework 4.6 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=528259) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=528233))
+   - .NET framework 4.6.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=671729) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=671744))
 
-    - .NET framework 4.5.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=397703) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=397706))
+   - .NET framework 4.6 ([web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=528259) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=528233))
 
-    - .NET framework 4.5.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=310158) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=310159))
+   - .NET framework 4.5.2 ([web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=397703) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=397706))
 
-    - [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
+   - .NET framework 4.5.1 ([web yükleyicisi](https://go.microsoft.com/fwlink/p/?LinkId=310158) veya [çevrimdışı yükleyici](https://go.microsoft.com/fwlink/p/?LinkId=310159))
+
+   - [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
 
 1. İndirme sayfası dilini seçin. Bu seçenek, .NET Framework'ün yerelleştirilmiş kaynaklarını karşıdan yüklemez; yalnızca karşıdan yükleme sayfasında görüntülenen metni etkiler.
 
@@ -146,13 +151,13 @@ Hem web hem de çevrimdışı yükleyiciler x86 ve x64 tabanlı bilgisayarlar i�
 
 **Yükleme notları:**
 
-- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] Ve 4.5.2, hem de [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2, 4.7, 4.7.1 ve 4.7.2 yerinde güncelleştirmeleri olan [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+- .NET Framework 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 ve 4.8 yanı sıra .NET framework 4.5.1 ve 4.5.2'yi .NET Framework 4.5 için yerinde güncelleştirmelerdir.
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Kendi noktası sürümler [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ve sürümler ve .NET Framework 4.7 ve onun nokta sürümleri Değiştir noktasını [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Bulunan bir sistemde bu sürümleri yüklediğinizde [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] yüklediğinizde derlemeler değiştirilir.
+- .NET Framework 4, .NET framework 4.5, onun nokta sürümleri, .NET Framework 4.6 ve onun nokta sürümleri, .NET Framework 4.7 ve onun nokta sürümleri ve .NET Framework 4.8 değiştirin. .NET Framework 4'ün yüklü olduğu bir sisteme bu sürümleri yüklediğinizde derlemeler değiştirilir.
 
-- Kaldırma [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kendi noktası sürümler [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ve onun nokta sürümleri, veya .NET Framework 4.7 ve onun nokta sürümleri de önceden var olan kaldırır [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] dosyaları. Geri dönmek istiyorsanız [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], onu ve tüm güncellemelerini yeniden yüklemeniz gerekir. (Bkz [.NET Framework 4'ü yükleme](https://go.microsoft.com/fwlink/p/?LinkId=230665).)
+- .NET Framework 4.5 kaldırma, nokta sürümlerini, .NET Framework 4.6 ve noktasını sürümleri, .NET Framework 4.7 ve onun nokta sürümleri veya .NET Framework 4.8 önceden mevcut olan .NET Framework 4 dosyalarını da kaldırır. .NET Framework 4'e geri dönmek istiyorsanız, bunu ve tüm güncellemelerini yeniden yüklemeniz gerekir. (Bkz [.NET Framework 4'ü yükleme](https://go.microsoft.com/fwlink/p/?LinkId=230665).)
 
-- Yüklemek için yönetici kimlik bilgileriniz olmalıdır [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], sürümler, .NET Framework 4.6 ve onun nokta sürümleri ve .NET Framework 4.7 ve onun nokta yayın gelin.
+- .NET Framework 4.5, onun nokta sürümleri, .NET Framework 4.6 ve onun nokta sürümleri, .NET Framework 4.7 ve noktası yayın ve .NET Framework 4.8 yüklemek için yönetici kimlik bilgileriniz olmalıdır.
 
 - .NET Framework 4.5 yeniden dağıtılabilir 2012'de 9 Ekim, dijital imzanın süresinin zamanından önce dolmasına Microsoft tarafından imzalanmış ve üretilen dosyaları neden bir dijital sertifika üzerinde hatalı zaman damgasıyla ilgili sorunu gidermek için güncelleştirildi. Daha önce yeniden dağıtılabilir paket 16 Ağustos 2012 tarihli .NET Framework 4.5 yüklü değilse kopyanızı ile en son yeniden dağıtılabilir Paketle güncelleştirmenizi öneririz [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484). Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Security Advisory 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) ve [Knowledge Base makalesi 2770445](https://support.microsoft.com/kb/2770445).
 
@@ -164,6 +169,8 @@ Dil paketleri, desteklenen diller için yerelleştirilmiş kaynaklar (örneğin,
 > Dil paketlerini, dil paketi yüklemeden önce web veya çevrimdışı yükleyiciyi çalıştırmanız gerekir böylece bir uygulamayı çalıştırmak için gerekli olan .NET Framework bileşenlerini içermezler. Bir dil paketi yüklediyseniz, bunu kaldırın, .NET Framework'ü yüklemek ve dil paketini yeniden yükleyin.
 
 1. Yüklediğiniz .NET Framework sürümü için dil paketi indirme sayfasını açın:
+
+    - [.NET framework 4.8 dil paketleri](http://go.microsoft.com/fwlink/?LinkId=2053984)
 
     - [.NET framework 4.7.2 dil paketleri](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -226,9 +233,9 @@ Aşağıdaki tabloda desteklenen diller listelenmiştir.
 
 - Uygulamanızla birlikte .NET Framework dağıtımını etkileyen değişiklikler için bkz: [azaltma sistemi yeniden sırasında .NET Framework 4.5 yüklemeleri](~/docs/framework/deployment/reducing-system-restarts.md).
 
-- Uygulamanızı .NET Framework 4'e geçiş hakkında bilgi için [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] veya onun nokta sürümleri birine bakın [Geçiş Kılavuzu](~/docs/framework/migration-guide/index.md).
+- Uygulamanızı .NET Framework 4.5 veya onun nokta sürümleri için .NET Framework 4'ten geçiş hakkında daha fazla bilgi için bkz: [Geçiş Kılavuzu](~/docs/framework/migration-guide/index.md).
 
-- Bkz: [.NET Framework başvuru kaynağı](https://referencesource.microsoft.com/) .NET Framework kaynak kodu çevrimiçi gidin. Başvuru kaynağı de kullanılabilir [GitHub](https://github.com/Microsoft/referencesource). Yapabilecekleriniz [başvuru kaynağı indir](https://referencesource.microsoft.com/download.html) çevrimdışı izleme ve hata ayıklama sırasında (düzeltme eklerini ve güncelleştirmeleri gibi) kaynakları adımlayın. Daha fazla bilgi için blog girişine bakın [.NET başvuru kaynağı için yeni bir görünüm](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
+- Bkz: [.NET Framework başvuru kaynağı](https://referencesource.microsoft.com/) çevrimiçi .NET Framework kaynak kodu gidin. Başvuru kaynağı de kullanılabilir [GitHub](https://github.com/Microsoft/referencesource). Yapabilecekleriniz [başvuru kaynağı indir](https://referencesource.microsoft.com/download.html) çevrimdışı izleme ve hata ayıklama sırasında (düzeltme eklerini ve güncelleştirmeleri gibi) kaynakları adımlayın. Daha fazla bilgi için blog girişine bakın [.NET başvuru kaynağı için yeni bir görünüm](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

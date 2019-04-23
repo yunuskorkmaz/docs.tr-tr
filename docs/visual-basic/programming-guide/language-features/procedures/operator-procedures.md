@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175025"
 ---
 # <a name="operator-procedures-visual-basic"></a>İşleç Yordamları (Visual Basic)
@@ -44,7 +44,7 @@ Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basi
 ## <a name="declaration-syntax"></a>Bildirim Sözdizimi  
  Bir işleç yordamı bildirmek için sözdizimi aşağıdaki gibidir:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *işlecin* `(` *işlenen1*`[,`*işlenen2* `]) As` *veri türü*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *işlecin* `(` *işlenen1*`[,`*işlenen2* `]) As` *veri türü*  
   
  `' Statements of the operator procedure.`  
   
@@ -68,7 +68,7 @@ Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basi
   
  `Dim testStruct As`  *structurename*  
   
- `Dim testNewStruct As`  *structurename*`= testStruct`*işlecin*   `10`  
+ `Dim testNewStruct As`  *structurename*`= testStruct`*işlecin*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Bildirim ve çağrı gösterimi  
  Aşağıdaki yapıya bağlı yüksek ve düşük düzey parçaları olarak 128-bit imzalı bir tamsayı değeri depolar. Tanımladığı `+` işleci iki eklemek için `veryLong` değerleri ve bir sonuç üretmek `veryLong` değeri.  
@@ -87,7 +87,7 @@ Bir işleç yordamı standart işlecinin davranışını tanımlayan Visual Basi
 - [Özellik Yordamları](./property-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Operator Deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Nasıl yapılır: İşleç Tanımlama](./how-to-define-an-operator.md)
-- [Nasıl yapılır: Dönüştürme İşleci Tanımlama](./how-to-define-a-conversion-operator.md)
-- [Nasıl yapılır: Bir İşleç Yordamı Çağırma](./how-to-call-an-operator-procedure.md)
-- [Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma](./how-to-use-a-class-that-defines-operators.md)
+- [Nasıl yapılır: Bir işleci tanımlama](./how-to-define-an-operator.md)
+- [Nasıl yapılır: Bir dönüşüm işleci tanımlama](./how-to-define-a-conversion-operator.md)
+- [Nasıl yapılır: Bir işleç yordamı çağırma](./how-to-call-an-operator-procedure.md)
+- [Nasıl yapılır: İşleçleri tanımlayan bir sınıf kullanma](./how-to-use-a-class-that-defines-operators.md)

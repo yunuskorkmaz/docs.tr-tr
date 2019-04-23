@@ -3,10 +3,10 @@ title: Güvenlik Görüşmeleri ve Zaman Aşımları
 ms.date: 03/30/2017
 ms.assetid: 02a428f1-84e5-4d28-a11f-53ce31d63196
 ms.openlocfilehash: a02c9d7b42eadf9a5ce9af8022fe292d6c23249c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180654"
 ---
 # <a name="security-negotiation-and-timeouts"></a>Güvenlik Görüşmeleri ve Zaman Aşımları
@@ -15,4 +15,4 @@ ms.locfileid: "59180654"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
-- [Nasıl yapılır: Maksimum Saat Eğriltme Ayarlama](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)
+- [Nasıl yapılır: Maksimum saat eğriltme ayarlama](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175922"
 ---
 # <a name="wcf-syndication"></a>WCF Dağıtımı
@@ -24,13 +24,13 @@ Windows Communication Foundation (WCF) okuyun ve bunları oluşturduğunuz yanı
  [WCF Dağıtım Nesnesi Modeli Atom ve RSS Eşlemelerini Nasıl Yapar?](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
  WCF dağıtım nesnesi modeli içinde akışları nasıl temsil edildiğini ve bunların RSS akışına dönüştürülür ve Atom akışları açıklanır.  
   
- [Nasıl yapılır: Temel Bir RSS Akışı Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [Nasıl yapılır: Temel bir RSS akışı oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
  Temel bir RSS akışı kullanıma sunduğu bir hizmetin nasıl oluşturulacağını gösterir.  
   
- [Nasıl yapılır: Temel Bir Atom Akışı Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [Nasıl yapılır: Temel bir Atom akışı oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
  Temel bir ATOM akışı kullanıma sunduğu bir hizmetin nasıl oluşturulacağını gösterir.  
   
- [Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
+ [Nasıl yapılır: Bir akışı hem Atom olarak kullanıma sunmak ve RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
  Akışın ATOM ve RSS kullanılabilir bir hizmet oluşturma işlemi gösterilmektedir.  
   
  [Dağıtım Genişletilebilirliği](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)  

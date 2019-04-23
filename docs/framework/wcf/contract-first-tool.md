@@ -3,11 +3,11 @@ title: Önce Anlaşma Aracı
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
 ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819625"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978919"
 ---
 # <a name="contract-first-tool"></a>Önce Anlaşma Aracı
 Hizmet sözleşmeleri, genellikle var olan hizmetlerden oluşturulan gerekir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], veri sözleşme sınıfları oluşturulabilir otomatik olarak önce anlaşma aracı kullanarak mevcut hizmetlerden. Önce anlaşma aracı kullanmak için XML şema tanımı dosyası (XSD) yerel olarak indirilmelidir; aracın HTTP üzerinden uzak veri sözleşmeleri içeri aktarılamıyor.

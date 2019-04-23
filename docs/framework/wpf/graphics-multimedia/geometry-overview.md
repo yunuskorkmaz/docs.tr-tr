@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180004"
 ---
 # <a name="geometry-overview"></a>Geometriye Genel Bakış
@@ -222,8 +222,8 @@ PathGeometry birden çok şekil ile
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
 - [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Yol Biçimlendirme Sözdizimi](path-markup-syntax.md)
+- [Yol İşaretleme Söz Dizimi](path-markup-syntax.md)
 - [Nasıl Yapılır Konuları](geometries-how-to-topics.md)
 - [Animasyona Genel bakış](animation-overview.md)
-- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Çizim Nesnelerine Genel Bakış](drawing-objects-overview.md)

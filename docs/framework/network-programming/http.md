@@ -14,10 +14,10 @@ helpviewer_keywords:
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
 ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170605"
 ---
 # <a name="http"></a>HTTP
@@ -35,4 +35,4 @@ ms.locfileid: "59170605"
 
 - [Ara Sunucu Üzerinden İnternet Erişimi](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
 - [Uygulama Protokolleri Kullanma](../../../docs/framework/network-programming/using-application-protocols.md)
-- [Nasıl yapılır: HTTP’ye Özgü Özelliklere Erişim](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+- [Nasıl yapılır: HTTP'ye özgü özelliklere erişim](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)

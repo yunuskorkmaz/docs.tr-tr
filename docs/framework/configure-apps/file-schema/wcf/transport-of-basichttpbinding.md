@@ -1,12 +1,12 @@
 ---
-title: <transport> , <basicHttpBinding>
+title: <transport> / <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
 ms.openlocfilehash: 5d1ef059f8fde7c41e333571d1c025a9c0c7e03f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170644"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<Aktarım >, \<basicHttpBinding >
@@ -56,7 +56,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|None|İleti aktarımı sırasında sağlanmaz.|  
+|Yok.|İleti aktarımı sırasında sağlanmaz.|  
 |Temel|Temel kimlik doğrulaması belirtir.|  
 |Özet|Özet kimlik doğrulaması belirtir.|  
 |NTLM|Mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa, NTLM kimlik doğrulaması belirtir.|  
@@ -66,7 +66,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|None|-Sıradaki iletiler, aktarım sırasında sağlanmaz.|  
+|Yok.|-Sıradaki iletiler, aktarım sırasında sağlanmaz.|  
 |Temel|Temel kimlik doğrulaması, RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlanan belirtir: Temel ve Özet kimlik doğrulama.|  
 |Özet|Özet kimlik doğrulaması, RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlanan belirtir: Temel ve Özet kimlik doğrulama.|  
 |NTLM|Mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa, NTLM kimlik doğrulaması belirtir.|  
@@ -74,7 +74,7 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
 |Sertifika|Bir sertifika kullanarak bir istemci kimlik doğrulaması gerçekleştirir. Bu seçenek yalnızca çalışır `Mode` üst öğenin özniteliğini `security` öğe taşıma imkanı kullanılarak ayarlanır ve TransportCredentialOnly için ayarlanmışsa çalışmaz.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

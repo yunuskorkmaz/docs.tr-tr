@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
 ms.openlocfilehash: ebb53e7df979a553ed4a44deba34345c9ecac772
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171684"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>Nasıl yapılır: Tek bir B çizmek&#233;zier eğri
@@ -34,5 +34,5 @@ Bézier eğri dört noktaları tarafından tanımlanır: bir başlangıç noktas
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
-- [GDI+ içinde Bézier Eğrileri](bezier-splines-in-gdi.md)
-- [Nasıl yapılır: Bir Sıra Bézier Eğrisi Çizme](how-to-draw-a-sequence-of-bezier-splines.md)
+- [GDI+'daki Bézier Eğrileri](bezier-splines-in-gdi.md)
+- [Nasıl yapılır: Bir dizi Bézier eğrileri çizme](how-to-draw-a-sequence-of-bezier-splines.md)

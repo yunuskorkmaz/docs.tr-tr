@@ -17,10 +17,10 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
 ms.openlocfilehash: b99720b9653b8454419acd35085bfe9a7ac4b5af
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171398"
 ---
 # <a name="using-client-sockets"></a>İstemci Yuvaları Kullanma
@@ -81,5 +81,5 @@ try {
 
 - [Zaman Uyumlu İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [Zaman Uyumsuz İstemci Yuvası Kullanma](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [Nasıl yapılır: Yuva Oluşturma](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [Nasıl yapılır: Yuva oluşturun](../../../docs/framework/network-programming/how-to-create-a-socket.md)
 - [Yuvalar](../../../docs/framework/network-programming/sockets.md)

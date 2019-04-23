@@ -25,10 +25,10 @@ helpviewer_keywords:
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
 ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175801"
 ---
 # <a name="object-lifetime-events"></a>Nesne Yaşam Süresi Olayları
@@ -75,4 +75,4 @@ Bu konu, söz konusu açıklar [!INCLUDE[TLA2#tla_winclient](../../../../include
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağımlılık Özelliği Değer Önceliği](dependency-property-value-precedence.md)
-- [Gönderilmiş Olaylara Genel Bakış](routed-events-overview.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](routed-events-overview.md)

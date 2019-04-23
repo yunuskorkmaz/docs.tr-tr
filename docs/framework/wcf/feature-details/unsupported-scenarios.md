@@ -3,10 +3,10 @@ title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178782"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar
@@ -110,9 +110,9 @@ ms.locfileid: "59178782"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenlik Değerlendirmeleri](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Bilgileri Açıklama](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Ayrıcalık Yükseltme](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

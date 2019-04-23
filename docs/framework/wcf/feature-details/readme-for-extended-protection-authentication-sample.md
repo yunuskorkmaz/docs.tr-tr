@@ -3,11 +3,11 @@ title: Genişletilmiş Koruma Kimlik Doğrulama için Beni Oku Örnek
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59319358"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979128"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Genişletilmiş Koruma Kimlik Doğrulama için Beni Oku Örnek
 Genişletilmiş koruma, bir saldırgan ("adam-in--middle") istemci kimlik bilgileri yakalar ve bunları istemcinin hedeflenen sunucusundaki güvenli kaynaklara erişmek için kullandığı adam-de-adam (MITM) saldırılarına karşı korumak için bir güvenlik girişimidir.  
