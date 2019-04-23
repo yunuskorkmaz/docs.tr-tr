@@ -1,0 +1,76 @@
+- name: ML.NET Kılavuzu
+  href: index.yml
+- name: Genel Bakış
+  expanded: true
+  items:
+    - name: ML.NET nedir?
+      href: what-is-mldotnet.md
+    - name: Model eğitimi kavramları
+      href: basic-concepts-model-training-in-mldotnet.md
+- name: Öğreticiler
+  href: null
+  items:
+    - name: Genel Bakış
+      href: tutorials/index.md
+    - name: Yaklaşım analizi (ikili sınıflandırma)
+      href: tutorials/sentiment-analysis.md
+    - name: Sorun sınıflandırması (çok sınıflı sınıflandırma)
+      href: tutorials/github-issue-classification.md
+    - name: Fiyat tahmini (gerileme)
+      href: tutorials/taxi-fare.md
+    - name: Süsen çiçekleri (kümeleme)
+      href: tutorials/iris-clustering.md
+    - name: Film önerisi (öneri)
+      href: tutorials/movie-recommmendation.md
+    - name: Görüntü Sınıflandırması (öğrenme aktarımı)
+      href: tutorials/image-classification.md
+- name: Nasıl yapılır kılavuzları
+  items:
+    - name: Veri yükleme
+      href: how-to-guides/load-data-ml-net.md
+    - name: Verileri hazırlama
+      href: how-to-guides/index.md
+      items:
+        - name: Kategorik özellik mühendisliği uygulama
+          href: how-to-guides/train-model-categorical-ml-net.md
+        - name: Metin temelli özellik mühendisliği uygulama
+          href: how-to-guides/train-model-textual-ml-net.md
+        - name: Normalleştiriciler ile verileri ön işleme
+          href: how-to-guides/normalizers-preprocess-data-ml-net.md
+    - name: 'Modeli eğitme, değerlendirme ve açıklama'
+      items:
+        - name: Çapraz doğrulama kullanarak model eğitimi
+          href: how-to-guides/train-cross-validation-ml-net.md
+        - name: Ara işlem hattı veri değerlerini inceleme
+          href: how-to-guides/inspect-intermediate-data-ml-net.md
+        - name: Gerileme modeli eğitimi
+          href: how-to-guides/train-regression-model-ml-net.md
+        - name: PFI ile model özelliği önemini belirleme
+          href: how-to-guides/determine-global-feature-importance-in-model.md
+    - name: Eğitilen modeli kullanma
+      items:
+        - name: PredictionEngine ile birer birer tahmin
+          href: how-to-guides/single-predict-model-ml-net.md
+        - name: Eğitilen bir modeli kullanıma hazır hale getirme
+          href: how-to-guides/consuming-model-ml-net.md
+        - name: Hizmet Modeli Azure İşlevleri
+          href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
+        - name: Web API'de Hizmet Modeli
+          href: how-to-guides/serve-model-web-api-ml-net.md
+        - name: Infer.NET
+          items: null
+        - name: Infer.NET ile olasılığa dayalı programlama
+          href: how-to-guides/matchup-app-infer-net.md
+- name: Başvuru
+  items:
+    - name: API Başvurusu
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+- name: Kaynaklar
+  href: resources/index.md
+  items:
+    - name: Makine öğrenimi sözlüğü
+      href: resources/glossary.md
+    - name: Makine öğrenimi görevleri
+      href: resources/tasks.md
+    - name: Veri dönüşümleri
+      href: resources/transforms.md
