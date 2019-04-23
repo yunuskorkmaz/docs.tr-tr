@@ -3,10 +3,10 @@ title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
 ms.openlocfilehash: 384a1cdb6d39f4d6ecd2353a15c0da7c6d2e82bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224149"
 ---
 # <a name="servicesecurityaudit"></a>\<serviceSecurityAudit>
@@ -84,5 +84,5 @@ Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleşti
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Denetim](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Nasıl yapılır: Güvenlik Olaylarını Denetleme](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Nasıl yapılır: Güvenlik olaylarını denetleme](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [Hizmet Denetleme Davranışı](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

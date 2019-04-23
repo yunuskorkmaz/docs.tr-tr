@@ -10,10 +10,10 @@ helpviewer_keywords:
 - server-side UI Automation provider, exposing
 ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
 ms.openlocfilehash: 61515c4c87638d7e2bde63f0ca9faac58128f2e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225033"
 ---
 # <a name="expose-a-server-side-ui-automation-provider"></a>Sunucu Tarafı UI Otomasyon Sağlayıcıyı Gösterme
@@ -30,5 +30,5 @@ ms.locfileid: "59225033"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyon Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

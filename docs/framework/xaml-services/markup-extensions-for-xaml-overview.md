@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224929"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML Biçimlendirme Uzantılarına Genel Bakış
@@ -31,7 +31,7 @@ Biçimlendirme uzantıları, basit bir tür ya da özel bir XAML türü bir değ
  `x:Static` doğrudan bir özelliğin değerinin türü değildir, ancak bu türe hesaplanan değer türü kodu varlıkları statik değerlerini üretir. Bu, bir tür tanımı iyi bilinen sabitleri olarak zaten mevcut değerleri belirtmek için kullanışlıdır. Daha fazla bilgi için [x: Static işaretleme uzantısı](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` Belirtir `null` XAML üyesi için bir değer olarak. Belirli türlerini ya da daha büyük framework kavramlarını tasarımına `null` her zaman bir özellik için varsayılan değer veya zımni bir boş dize özniteliğinin değerini değil. Daha fazla bilgi için [x: Null işaretleme uzantısı](x-null-markup-extension.md).  
+ `x:Null` belirtir `null` XAML üyesi için bir değer olarak. Belirli türlerini ya da daha büyük framework kavramlarını tasarımına `null` her zaman bir özellik için varsayılan değer veya zımni bir boş dize özniteliğinin değerini değil. Daha fazla bilgi için [x: Null işaretleme uzantısı](x-null-markup-extension.md).  
   
 ### <a name="xarray"></a>x: Array  
  `x:Array` XAML söz dizimi temel öğeleri ve denetim modelleri tarafından sağlanan koleksiyon desteğiyle kasıtlı olarak değil kullanıldığı durumlarda genel diziler oluşturulmasını destekler. Daha fazla bilgi için [x: Array işaretleme uzantısı](x-array-markup-extension.md). XAML 2009 dil temelleri yerine bir uzantısı olarak diziler özellikle erişilir. Daha fazla bilgi için [XAML 2009 dil özellikleri](xaml-2009-language-features.md).  
@@ -158,4 +158,4 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 
 - <xref:System.Windows.Markup.MarkupExtension>
 - [XAML İçin Tür Dönüştürücüleri ve İşaretleme Uzantıları](type-converters-and-markup-extensions-for-xaml.md)
-- [Biçimlendirme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [İşaretleme Uzantıları ve WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
