@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303498"
 ---
 # <a name="flow-document-overview"></a>Akış Belgesine Genel Bakış
@@ -130,7 +130,7 @@ Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanm
   
  ![Akış içeriği bir UIElement gösteren ekran görüntüsü katıştırılmış.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **List**  
+ **Liste**  
   
  <xref:System.Windows.Documents.List> Madde işaretli veya sayısal bir liste oluşturmak için kullanılır. Ayarlama <xref:System.Windows.Documents.List.MarkerStyle%2A> özelliğini bir <xref:System.Windows.TextMarkerStyle> liste stilini belirlemek için sabit listesi değeri. Aşağıdaki örnek, basit bir listesi oluşturma işlemi gösterilmektedir.  
   
@@ -352,7 +352,7 @@ Akış belgeleri görüntüleme ve okunabilirliği iyileştirmek için tasarlanm
 - [WPF'de Tipografi](typography-in-wpf.md)
 - [Nasıl Yapılır Konuları](flow-content-elements-how-to-topics.md)
 - [TextElement İçerik Modeline Genel Bakış](textelement-content-model-overview.md)
-- [RichTextBox Genel Bakışı](../controls/richtextbox-overview.md)
+- [RichTextBox Genel Bakış](../controls/richtextbox-overview.md)
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Tabloya Genel Bakış](table-overview.md)
-- [Ek açıklamalara Genel Bakış](annotations-overview.md)
+- [Ek Açıklamalara Genel Bakış](annotations-overview.md)
