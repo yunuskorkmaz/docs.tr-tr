@@ -3,10 +3,10 @@ title: Varlık Veri Modeli
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197925"
 ---
 # <a name="entity-data-model"></a>Varlık Veri Modeli
@@ -21,11 +21,11 @@ Varlık veri modeli (EDM) depolanan hâli ne olursa olsun, veri yapısını aç�
   
  [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [Varlık Veri Modeli: Ad Alanları](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [Varlık veri modeli: Ad alanları](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Varlık Veri Modeli: Basit Veri Türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Varlık veri modeli: Basit veri türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [Varlık Veri Modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [Varlık veri modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
  [association end](../../../../docs/framework/data/adonet/association-end.md)  
   
@@ -57,12 +57,12 @@ Varlık veri modeli (EDM) depolanan hâli ne olursa olsun, veri yapısını aç�
   
  [navigation property](../../../../docs/framework/data/adonet/navigation-property.md)  
   
- [özellik](../../../../docs/framework/data/adonet/property.md)  
+ [property](../../../../docs/framework/data/adonet/property.md)  
   
  [referential integrity constraint](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Varlık Veri Modeli Araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [ADO.NET varlık veri modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [.edmx dosyasını genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [CSDL belirtimi](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)
+- [CSDL Belirtimi](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
 ms.openlocfilehash: 68dbebfc4fab773fe749f9443d0c61883099d2ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197496"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>Nasıl yapılır: Çizilmiş Metinde Sekme Durakları Ayarlama
@@ -40,4 +40,4 @@ Metin için sekme durakları çağırarak ayarlayabilirsiniz <xref:System.Drawin
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yazı Tipleri ve Metin Kullanma](using-fonts-and-text.md)
-- [Nasıl yapılır: GDI ile Metin Çizme](how-to-draw-text-with-gdi.md)
+- [Nasıl yapılır: GDI ile metin çizme](how-to-draw-text-with-gdi.md)

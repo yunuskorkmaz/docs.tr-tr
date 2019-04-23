@@ -8,10 +8,10 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195065"
 ---
 # <a name="sending-and-receiving-faults"></a>Hataları Gönderme ve Alma
@@ -110,4 +110,4 @@ SOAP hatalarının hata durum bilgisini bir hizmetten istemci ve hizmet için bi
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [Beklenen Özel Durumlar](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Kapat ve Durdur seçeneklerini kullanarak WCF istemci kaynaklarını serbest bırakma](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [WCF istemci kaynakları serbest bırakmak için iptal etmek ve kapatmak kullanın](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

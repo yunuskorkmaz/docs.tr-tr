@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
 ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197392"
 ---
 # <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları
@@ -56,7 +56,7 @@ ms.locfileid: "59197392"
   
 |Özellik|Katman 1|Katman 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] sürüm|Büyüktür veya eşittir 9.0 olmalıdır.|Büyüktür veya eşittir 9.0 olmalıdır.|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Sürüm|Büyüktür veya eşittir 9.0 olmalıdır.|Büyüktür veya eşittir 9.0 olmalıdır.|  
 |Video RAM|Büyüktür veya eşittir 60 MB olmalıdır.|Büyüktür veya eşittir 120 MB olmalıdır.|  
 |Piksel gölgelendirici|Büyüktür veya eşittir 2.0 için sürüm düzeyi gerekir.|Büyüktür veya eşittir 2.0 için sürüm düzeyi gerekir.|  
 |Köşe gölgelendirici|Gereksinimi yoktur.|Büyüktür veya eşittir 2.0 için sürüm düzeyi gerekir.|  
@@ -132,6 +132,6 @@ DirectX Tanılama Aracı ana penceresi
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [WPF Uygulama Performansını İyileştirme](optimizing-wpf-application-performance.md)
-- [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
+- [WPF Performans paketi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [Grafik İşleme Kayıt Defteri Ayarları](../graphics-multimedia/graphics-rendering-registry-settings.md)
 - [Animasyon İpuçları ve Püf Noktaları](../graphics-multimedia/animation-tips-and-tricks.md)
