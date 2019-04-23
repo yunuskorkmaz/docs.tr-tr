@@ -14,10 +14,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
 ms.openlocfilehash: 6404e5933f886578b4ad8afd0d3da324541fc3f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299988"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma
@@ -361,7 +361,7 @@ Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir y
     |`label1`|**Metin**|`(blank space)`|  
     ||**Ad**|`lblTest`|  
     |`dateTimePicker1`|**Ad**|`dtpTest`|  
-    ||**Biçimi**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
+    ||**Biçim**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. Tasarımcıda çift **dtpTest**.  
   
@@ -398,5 +398,5 @@ Bileşik denetimler, özel bir grafik arabirim oluşturulabilir yeniden ve bir y
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)
-- [Nasıl yapılır: Bileşik Denetimler Yazma](how-to-author-composite-controls.md)
-- [Nasıl yapılır: Araç Kutusu Öğelerini Seç İletişim Kutusunda bir Denetimi Görüntüleme](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Nasıl yapılır: Bileşik denetimler yazma](how-to-author-composite-controls.md)
+- [Nasıl yapılır: Bir denetimi görüntüleme araç kutusu öğelerini Seç iletişim kutusu](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

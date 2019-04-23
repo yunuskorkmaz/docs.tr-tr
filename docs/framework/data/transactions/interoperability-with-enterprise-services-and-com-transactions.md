@@ -3,10 +3,10 @@ title: Kurumsal Hizmetler ve COM+ İşlemleri ile Birlikte Çalışabilirlik
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301912"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Kurumsal Hizmetler ve COM+ İşlemleri ile Birlikte Çalışabilirlik
@@ -27,7 +27,7 @@ ms.locfileid: "59301912"
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Full> belirtir ortam işlemleri için <xref:System.Transactions> ve <xref:System.EnterpriseServices> her zaman aynıdır. Yeni bir oluşturma sonuçlarını <xref:System.EnterpriseServices> işlem bağlamını ve uygulama için geçerli olan işlem <xref:System.Transactions.TransactionScope> bu bağlamı için geçerli olacak. Gibi işlemde olarak <xref:System.Transactions.Transaction.Current%2A> işlem sırasında ile eşitleme tamamen yer <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>. Bu değer, oluşturulacak yeni COM + bağlamları gerekebileceğinden performans cezası tanıtır.  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> aşağıdaki gereksinimleri belirtir.  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>aşağıdaki gereksinimleri belirtir.  
   
 -   Zaman <xref:System.Transactions.Transaction.Current%2A> tabanlıysa <xref:System.Transactions> işlemleri varsayılan bağlamı dışındaki bir bağlamda çalışır olduğunu algılarsa COM + bağlamında desteklemelidir. Not varsayılan bağlamı bir işlem içeremez. Varsayılan bağlamında, bu nedenle, hatta ile <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, tarafından kullanılan iş parçacığı yerel depolama alanında depolanan işlem <xref:System.Transactions> için döndürülen <xref:System.Transactions.Transaction.Current%2A>.  
   

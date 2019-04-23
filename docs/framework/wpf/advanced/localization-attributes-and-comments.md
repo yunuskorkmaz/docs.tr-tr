@@ -6,10 +6,10 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301860"
 ---
 # <a name="localization-attributes-and-comments"></a>Yerelleştirme Öznitelikleri ve Yorumlar
@@ -23,7 +23,7 @@ ms.locfileid: "59301860"
   
 2. Derleme işlemi sırasında .proj dosyasında serbest biçimli yerelleştirme derleme, Yorumlar parçası atmak veya tüm yorumları atmak yorumlarında verilip verilmeyeceğini belirtebilirsiniz. Çıkarılan yorumlar, ayrı bir dosyada yer alır. Seçeneğini kullanarak belirttiğiniz bir `LocalizationDirectivesToLocFile` etiketi, örneğin:  
   
-     `<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` *Değer* `</LocalizationDirectivesToLocFile>`  
   
 3. Atanabilecek değerleri şunlardır:  
   

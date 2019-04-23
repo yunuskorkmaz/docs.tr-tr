@@ -37,10 +37,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301236"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
@@ -151,11 +151,11 @@ A *genel tür* uyum sağlayan çeşitli veri türleri için aynı işlevi gerçe
 - [Veri Türleri](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Tür Karakterleri](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Değer Türleri ve Başvuru Türleri](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic'de Tür Dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Veri Türleri Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Visual Basic'de tür dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Veri Türü Sorunlarını Giderme](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Veri Türleri](../../../../visual-basic/language-reference/data-types/index.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Nesne Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [,](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [olarak](../../../../visual-basic/language-reference/statements/as-clause.md)
+- [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Kovaryans ve Kontravaryans](../../concepts/covariance-contravariance/index.md)
 - [Yineleyiciler](../../../../visual-basic/programming-guide/concepts/iterators.md)

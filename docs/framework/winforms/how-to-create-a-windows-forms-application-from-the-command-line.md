@@ -12,10 +12,10 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299881"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Nasıl yapılır: Komut satırından bir Windows Forms uygulaması oluşturma
@@ -65,7 +65,7 @@ Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygul
   
     -   Visual Basic kullanıyorsanız yazın: `vbc form1.vb`  
   
-3. Komut isteminde, şunları yazın: `Form1.exe`  
+3. Komut isteminde aşağıdakini yazın: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Denetim ekleme ve bir olay işleme  
  Önceki yordamdaki adımları yalnızca derleyen ve çalışan temel bir Windows Form oluşturma gösterilmektedir. Sonraki yordam oluşturmak ve forma denetim ekleme ve denetim için bir olayı işlemek nasıl gösterir. Windows Forms ekleyebileceğiniz denetimler hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri](./controls/index.md).  
@@ -117,6 +117,6 @@ Aşağıdaki yordamlar oluşturmak ve komut satırından bir Windows Forms uygul
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [Windows Formlarının Görünüşünü Değiştirme](changing-the-appearance-of-windows-forms.md)
+- [Windows Forms’un Görünüşünü Değiştirme](changing-the-appearance-of-windows-forms.md)
 - [Windows Forms Uygulamalarını Geliştirme](./advanced/index.md)
 - [Windows Forms'a Başlarken](getting-started-with-windows-forms.md)

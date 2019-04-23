@@ -10,10 +10,10 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
 ms.openlocfilehash: 8e5c7cab1f977bef0570b2e540d7bf3a630aceb0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301936"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Nasıl yapılır: Dikdörtgende Sarmalanmış Metin
@@ -46,7 +46,7 @@ Kullanarak bir dikdörtgende sarmalanmış metin çizebilirsiniz <xref:System.Dr
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: GDI ile Metin Çizme](how-to-draw-text-with-gdi.md)
+- [Nasıl yapılır: GDI ile metin çizme](how-to-draw-text-with-gdi.md)
 - [Yazı Tipleri ve Metin Kullanma](using-fonts-and-text.md)
-- [Nasıl yapılır: Yazı Tipi Aileleri ve Yazı Tipleri Oluşturma](how-to-construct-font-families-and-fonts.md)
-- [Nasıl yapılır: Belirtilen bir Konuma Metin Çizme](how-to-draw-text-at-a-specified-location.md)
+- [Nasıl yapılır: Yazı tipi aileleri ve yazı tipleri](how-to-construct-font-families-and-fonts.md)
+- [Nasıl yapılır: Belirtilen bir konuma metin çizme](how-to-draw-text-at-a-specified-location.md)
