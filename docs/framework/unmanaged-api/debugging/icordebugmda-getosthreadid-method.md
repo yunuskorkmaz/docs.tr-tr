@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51d29fed3d53611daa0042251ce09638399f7ed5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195806"
 ---
-# <a name="icordebugmdagetosthreadid-method"></a><span data-ttu-id="2043c-102">ICorDebugMDA::GetOSThreadId Metodu</span><span class="sxs-lookup"><span data-stu-id="2043c-102">ICorDebugMDA::GetOSThreadId Method</span></span>
-<span data-ttu-id="2043c-103">Yönetilen hata ayıklama Yardımcısı (MDA) temsil ettiği bağlı işletim sistemi (OS) iş parçacığı tanımlayıcısını alır [Icordebugmda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) yürütüyor.</span><span class="sxs-lookup"><span data-stu-id="2043c-103">Gets the operating system (OS) thread identifier upon which the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) is executing.</span></span>  
+# <a name="icordebugmdagetosthreadid-method"></a><span data-ttu-id="838cf-102">ICorDebugMDA::GetOSThreadId Metodu</span><span class="sxs-lookup"><span data-stu-id="838cf-102">ICorDebugMDA::GetOSThreadId Method</span></span>
+<span data-ttu-id="838cf-103">Yönetilen hata ayıklama Yardımcısı (MDA) temsil ettiği bağlı işletim sistemi (OS) iş parçacığı tanımlayıcısını alır [Icordebugmda](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) yürütüyor.</span><span class="sxs-lookup"><span data-stu-id="838cf-103">Gets the operating system (OS) thread identifier upon which the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) is executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2043c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2043c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="838cf-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="838cf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetOSThreadId (  
@@ -35,23 +35,23 @@ HRESULT GetOSThreadId (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2043c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2043c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="838cf-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="838cf-105">Parameters</span></span>  
  `pOsTid`  
- <span data-ttu-id="2043c-106">[out] İşletim sistemi iş parçacığı tanımlayıcısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="2043c-106">[out] A pointer to the OS thread identifier.</span></span>  
+ <span data-ttu-id="838cf-106">[out] İşletim sistemi iş parçacığı tanımlayıcısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="838cf-106">[out] A pointer to the OS thread identifier.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2043c-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="2043c-107">Remarks</span></span>  
- <span data-ttu-id="2043c-108">İşletim sistemi iş parçacığı bir Icordebugthread yerine bir MDA yerel bir iş parçacığı veya bir yönetilen iş parçacığı henüz yönetilen kod girmedi tetiklenir durumlarda izin vermek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2043c-108">The OS thread is used instead of an ICorDebugThread to allow for situations in which an MDA is fired either on a native thread or on a managed thread that has not yet entered managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="838cf-107">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="838cf-107">Remarks</span></span>  
+ <span data-ttu-id="838cf-108">İşletim sistemi iş parçacığı bir Icordebugthread yerine bir MDA yerel bir iş parçacığı veya bir yönetilen iş parçacığı henüz yönetilen kod girmedi tetiklenir durumlarda izin vermek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="838cf-108">The OS thread is used instead of an ICorDebugThread to allow for situations in which an MDA is fired either on a native thread or on a managed thread that has not yet entered managed code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2043c-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2043c-109">Requirements</span></span>  
- <span data-ttu-id="2043c-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2043c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="838cf-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="838cf-109">Requirements</span></span>  
+ <span data-ttu-id="838cf-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="838cf-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2043c-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2043c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="838cf-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="838cf-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2043c-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2043c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="838cf-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="838cf-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="2043c-113">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="2043c-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="838cf-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="838cf-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2043c-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2043c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="838cf-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="838cf-114">See also</span></span>
 
-- [<span data-ttu-id="2043c-115">ICorDebugMDA Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2043c-115">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="2043c-116">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="2043c-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="838cf-115">ICorDebugMDA Arabirimi</span><span class="sxs-lookup"><span data-stu-id="838cf-115">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="838cf-116">Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama</span><span class="sxs-lookup"><span data-stu-id="838cf-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
