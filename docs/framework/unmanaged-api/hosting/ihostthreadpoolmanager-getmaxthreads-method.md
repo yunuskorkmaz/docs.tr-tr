@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4dce4efeb82f44e2c0d19e95551696b16e9f07ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157553"
 ---
-# <a name="ihostthreadpoolmanagergetmaxthreads-method"></a><span data-ttu-id="98910-102">IHostThreadPoolManager::GetMaxThreads Yöntemi</span><span class="sxs-lookup"><span data-stu-id="98910-102">IHostThreadPoolManager::GetMaxThreads Method</span></span>
-<span data-ttu-id="98910-103">Konak tutan iş parçacığı sayısı, iş parçacığı havuzundaki eşzamanlı olarak alır.</span><span class="sxs-lookup"><span data-stu-id="98910-103">Gets the maximum number of threads that the host maintains concurrently in the thread pool.</span></span>  
+# <a name="ihostthreadpoolmanagergetmaxthreads-method"></a><span data-ttu-id="eba04-102">IHostThreadPoolManager::GetMaxThreads Yöntemi</span><span class="sxs-lookup"><span data-stu-id="eba04-102">IHostThreadPoolManager::GetMaxThreads Method</span></span>
+<span data-ttu-id="eba04-103">Konak tutan iş parçacığı sayısı, iş parçacığı havuzundaki eşzamanlı olarak alır.</span><span class="sxs-lookup"><span data-stu-id="eba04-103">Gets the maximum number of threads that the host maintains concurrently in the thread pool.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98910-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="98910-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eba04-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="eba04-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMaxThreads (  
@@ -35,40 +35,40 @@ HRESULT GetMaxThreads (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="98910-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="98910-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eba04-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="eba04-105">Parameters</span></span>  
  `pdwMaxWorkerThreads`  
- <span data-ttu-id="98910-106">[out] Ana iş parçacığı havuzundaki tutan iş parçacığı sayısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="98910-106">[out] A pointer to the maximum number of threads that the host maintains in the thread pool.</span></span>  
+ <span data-ttu-id="eba04-106">[out] Ana iş parçacığı havuzundaki tutan iş parçacığı sayısı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="eba04-106">[out] A pointer to the maximum number of threads that the host maintains in the thread pool.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="98910-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="98910-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="eba04-107">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="eba04-107">Return Value</span></span>  
   
-|<span data-ttu-id="98910-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="98910-108">HRESULT</span></span>|<span data-ttu-id="98910-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="98910-109">Description</span></span>|  
+|<span data-ttu-id="eba04-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="eba04-108">HRESULT</span></span>|<span data-ttu-id="eba04-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="eba04-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="98910-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="98910-110">S_OK</span></span>|`GetMaxThreads` <span data-ttu-id="98910-111">başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="98910-111">returned successfully.</span></span>|  
-|<span data-ttu-id="98910-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="98910-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="98910-113">Ortak dil çalışma zamanı (CLR (bir işleme, yüklenmemiş veya CLR bir durumda, BT başarıyla yönetilen kod veya çağrı işlemi çalıştırılamıyor.</span><span class="sxs-lookup"><span data-stu-id="98910-113">The common language runtime (CLR( has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="98910-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="98910-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="98910-115">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="98910-115">The call timed out.</span></span>|  
-|<span data-ttu-id="98910-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="98910-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="98910-117">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="98910-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="98910-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="98910-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="98910-119">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="98910-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="98910-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="98910-120">E_FAIL</span></span>|<span data-ttu-id="98910-121">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="98910-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="98910-122">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="98910-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="98910-123">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="98910-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="98910-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="98910-124">E_NOTIMPL</span></span>|<span data-ttu-id="98910-125">Ana bilgisayar uygulaması sağlamaz `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="98910-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
+|<span data-ttu-id="eba04-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="eba04-110">S_OK</span></span>|<span data-ttu-id="eba04-111">`GetMaxThreads` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="eba04-111">`GetMaxThreads` returned successfully.</span></span>|  
+|<span data-ttu-id="eba04-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="eba04-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="eba04-113">Ortak dil çalışma zamanı (CLR (bir işleme, yüklenmemiş veya CLR bir durumda, BT başarıyla yönetilen kod veya çağrı işlemi çalıştırılamıyor.</span><span class="sxs-lookup"><span data-stu-id="eba04-113">The common language runtime (CLR( has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="eba04-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="eba04-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="eba04-115">Arama zaman aşımına uğradı.</span><span class="sxs-lookup"><span data-stu-id="eba04-115">The call timed out.</span></span>|  
+|<span data-ttu-id="eba04-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="eba04-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="eba04-117">Arayan bir kilide sahip değil.</span><span class="sxs-lookup"><span data-stu-id="eba04-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="eba04-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="eba04-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="eba04-119">Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.</span><span class="sxs-lookup"><span data-stu-id="eba04-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="eba04-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="eba04-120">E_FAIL</span></span>|<span data-ttu-id="eba04-121">Bilinmeyen geri dönülemez bir hata oluştu.</span><span class="sxs-lookup"><span data-stu-id="eba04-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="eba04-122">Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="eba04-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="eba04-123">Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.</span><span class="sxs-lookup"><span data-stu-id="eba04-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="eba04-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="eba04-124">E_NOTIMPL</span></span>|<span data-ttu-id="eba04-125">Ana bilgisayar uygulaması sağlamaz `GetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="eba04-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="98910-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="98910-126">Remarks</span></span>  
- <span data-ttu-id="98910-127">CLR çağrıları `GetMaxThreads` toplam iş parçacığı havuzundaki iş parçacığı sayısını belirlemek için.</span><span class="sxs-lookup"><span data-stu-id="98910-127">The CLR calls `GetMaxThreads` to determine the total number of threads in the thread pool.</span></span> <span data-ttu-id="98910-128">[GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md) yöntemi iş öğeleri şu anda işleme değil iş parçacığı sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="98910-128">The [GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md) method gets the number of threads that are not currently processing work items.</span></span> <span data-ttu-id="98910-129">Tüm istekleri yukarıda döndürülen değeri `pdwMaxWorkerThreads` iş parçacığı kullanılabilir hale kadar parametre sıraya alınan kalır.</span><span class="sxs-lookup"><span data-stu-id="98910-129">All requests above the returned value of the `pdwMaxWorkerThreads` parameter remain queued until threads become available.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eba04-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="eba04-126">Remarks</span></span>  
+ <span data-ttu-id="eba04-127">CLR çağrıları `GetMaxThreads` toplam iş parçacığı havuzundaki iş parçacığı sayısını belirlemek için.</span><span class="sxs-lookup"><span data-stu-id="eba04-127">The CLR calls `GetMaxThreads` to determine the total number of threads in the thread pool.</span></span> <span data-ttu-id="eba04-128">[GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md) yöntemi iş öğeleri şu anda işleme değil iş parçacığı sayısını alır.</span><span class="sxs-lookup"><span data-stu-id="eba04-128">The [GetAvailableThreads](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getavailablethreads-method.md) method gets the number of threads that are not currently processing work items.</span></span> <span data-ttu-id="eba04-129">Tüm istekleri yukarıda döndürülen değeri `pdwMaxWorkerThreads` iş parçacığı kullanılabilir hale kadar parametre sıraya alınan kalır.</span><span class="sxs-lookup"><span data-stu-id="eba04-129">All requests above the returned value of the `pdwMaxWorkerThreads` parameter remain queued until threads become available.</span></span>  
   
- <span data-ttu-id="98910-130">Ana bilgisayar uygulaması sağlamıyorsa `GetMaxThreads`, E_NOTIMPL bir HRESULT değerini döndürmelidir.</span><span class="sxs-lookup"><span data-stu-id="98910-130">If the host does not provide an implementation of `GetMaxThreads`, it should return an HRESULT value of E_NOTIMPL.</span></span>  
+ <span data-ttu-id="eba04-130">Ana bilgisayar uygulaması sağlamıyorsa `GetMaxThreads`, E_NOTIMPL bir HRESULT değerini döndürmelidir.</span><span class="sxs-lookup"><span data-stu-id="eba04-130">If the host does not provide an implementation of `GetMaxThreads`, it should return an HRESULT value of E_NOTIMPL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98910-131">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="98910-131">Requirements</span></span>  
- <span data-ttu-id="98910-132">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="98910-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eba04-131">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="eba04-131">Requirements</span></span>  
+ <span data-ttu-id="eba04-132">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eba04-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="98910-133">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="98910-133">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="eba04-133">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="eba04-133">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="98910-134">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="98910-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="eba04-134">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="eba04-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="98910-135">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="98910-135">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="eba04-135">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eba04-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98910-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="98910-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eba04-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eba04-136">See also</span></span>
 
 - <xref:System.Threading.ThreadPool.GetMaxThreads%2A>
 - <xref:System.Threading.ThreadPool>
-- [<span data-ttu-id="98910-137">GetMinThreads Yöntemi</span><span class="sxs-lookup"><span data-stu-id="98910-137">GetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)
-- [<span data-ttu-id="98910-138">SetMaxThreads Yöntemi</span><span class="sxs-lookup"><span data-stu-id="98910-138">SetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)
-- [<span data-ttu-id="98910-139">IHostThreadPoolManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="98910-139">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [<span data-ttu-id="eba04-137">GetMinThreads Yöntemi</span><span class="sxs-lookup"><span data-stu-id="eba04-137">GetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)
+- [<span data-ttu-id="eba04-138">SetMaxThreads Yöntemi</span><span class="sxs-lookup"><span data-stu-id="eba04-138">SetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setmaxthreads-method.md)
+- [<span data-ttu-id="eba04-139">IHostThreadPoolManager Arabirimi</span><span class="sxs-lookup"><span data-stu-id="eba04-139">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
