@@ -3,10 +3,10 @@ title: Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient 
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307627"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
@@ -79,7 +79,7 @@ Bu konuda ele alınmıştır SqlClient desteği (eklenen [!INCLUDE[net_v45](../.
   
  `ApplicationIntent` Anahtar sözcüğü, eski, salt okunur veritabanları ile çalışmaz.  
   
- Bir veritabanı izin verebilir veya hedeflenen AlwaysOn veritabanı üzerindeki okuma iş yükleri izin vermeyin. (Bunun `ALLOW_CONNECTIONS` yan tümcesi `PRIMARY_ROLE` ve `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri.)  
+ Bir veritabanı izin verebilir veya hedeflenen AlwaysOn veritabanı üzerindeki okuma iş yükleri izin vermeyin. (Bunun `ALLOW_CONNECTIONS` yan tümcesi `PRIMARY_ROLE` ve `SECONDARY_ROLE` [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] deyimleri.)  
   
  `ApplicationIntent` Anahtar sözcüğü, salt okunur yönlendirme etkinleştirmek için kullanılır.  
   

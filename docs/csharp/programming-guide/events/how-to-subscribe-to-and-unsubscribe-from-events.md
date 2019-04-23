@@ -8,10 +8,10 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306605"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Nasıl yapılır: Abone olaylara ve aboneliği kaldırma (C# Programlama Kılavuzu)
@@ -102,7 +102,7 @@ Olay ortaya çıktığında çağrılan özel kod yazmak istediğiniz zaman, ba�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Olaylar](../../../csharp/programming-guide/events/index.md)
-- [olay](../../../csharp/language-reference/keywords/event.md)
-- [Nasıl yapılır: .NET Framework Yönergeleriyle Uyumlu Olayları Yayımlama](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [event](../../../csharp/language-reference/keywords/event.md)
+- [Nasıl yapılır: .NET Framework yönergeleriyle uyumlu olayları yayımlama](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [-= İşleci (C# Başvurusu)](../../language-reference/operators/subtraction-assignment-operator.md)
 - [+= İşleci](../../../csharp/language-reference/operators/addition-assignment-operator.md)

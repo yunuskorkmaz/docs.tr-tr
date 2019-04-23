@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307631"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>İzlenecek yol: Görsel Devralmayı Gösterme
@@ -165,6 +165,6 @@ Görsel devralma temel form üzerinde denetimleri görmek için ve yeni denetiml
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Windows Formlarını Devralma](how-to-inherit-windows-forms.md)
+- [Nasıl yapılır: Windows Form devralma](how-to-inherit-windows-forms.md)
 - [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)

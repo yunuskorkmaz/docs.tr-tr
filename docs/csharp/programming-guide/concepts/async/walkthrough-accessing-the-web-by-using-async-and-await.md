@@ -3,10 +3,10 @@ title: "İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)"
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306735"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve await (C#)
@@ -235,7 +235,7 @@ Sayıları görüntülemek için birkaç saniye sürer dikkat edin. İstenen kay
     using (WebResponse response = webReq.GetResponseAsync())
     ```
 
-2. `GetResponseAsync` Döndürür bir <xref:System.Threading.Tasks.Task%601>. Bu durumda, *görev dönüş değişkeni*, `TResult`, türünde <xref:System.Net.WebResponse>. Görev bir gerçek üretmek için bir vaattir `WebResponse` istenen veri indirildi ve görevin çalıştırılıp tamamlandıktan sonra nesne.
+2. `GetResponseAsync` döndürür bir <xref:System.Threading.Tasks.Task%601>. Bu durumda, *görev dönüş değişkeni*, `TResult`, türünde <xref:System.Net.WebResponse>. Görev bir gerçek üretmek için bir vaattir `WebResponse` istenen veri indirildi ve görevin çalıştırılıp tamamlandıktan sonra nesne.
 
      Alınacak `WebResponse` görevden değer, geçerli bir [await](../../../../csharp/language-reference/keywords/await.md) işleci çağrısına `GetResponseAsync`aşağıdaki kodda gösterildiği gibi.
 
@@ -692,7 +692,7 @@ namespace AsyncExampleWPF
 
 - [Zaman uyumsuz örneği: İzlenecek yol erişme (C# ve Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../../csharp/language-reference/keywords/async.md)
-- [bekleme](../../../../csharp/language-reference/keywords/await.md)
+- [await](../../../../csharp/language-reference/keywords/await.md)
 - [Zaman uyumsuz programlama ile async ve await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Zaman uyumsuz dönüş türleri (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [Görev tabanlı zaman uyumsuz desen (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
