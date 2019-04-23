@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
 ms.openlocfilehash: ecb8f7ef74f1f0625454eb2d6cebf9d282a5ece3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327106"
 ---
 # <a name="how-to-specify-client-credential-values"></a>Nasıl yapılır: İstemci Kimlik Bilgileri Değerlerini Belirtme
@@ -100,9 +100,9 @@ Windows Communication Foundation (WCF) kullanarak, hizmet, bir istemci için hiz
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [WCF Güvenliğini Programlama](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Kimlik Bilgisi Türü Seçme](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Sertifikalarla Çalışma](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Nasıl yapılır: İstemci Oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Nasıl yapılır: Bir istemci oluşturma](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
 - [\<Güvenlik >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
 - [\<İleti >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)

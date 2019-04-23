@@ -5,10 +5,10 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
 ms.openlocfilehash: 9aac3a0efd6359c25a6972f0e0b52dd489ec31db
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327535"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Nasıl yapılır: Uygulamalar Arasında Sürükle ve Bırak İşlemleri Gerçekleştirme
@@ -40,6 +40,6 @@ Uygulamalar arasında sürükle ve bırak işlemleri gerçekleştirme Bu eylem, 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Panoya Veri Ekleme](how-to-add-data-to-the-clipboard.md)
-- [Nasıl yapılır: Panodan Veri Alma](how-to-retrieve-data-from-the-clipboard.md)
+- [Nasıl yapılır: Panoya veri ekleme](how-to-add-data-to-the-clipboard.md)
+- [Nasıl yapılır: Panodan veri alma](how-to-retrieve-data-from-the-clipboard.md)
 - [Sürükle ve Bırak İşlemleri ve Pano Desteği](drag-and-drop-operations-and-clipboard-support.md)

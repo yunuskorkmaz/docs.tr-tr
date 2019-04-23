@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
 ms.openlocfilehash: 1f46d6594c249db394a5493ad9cdbbb1937a5d45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328458"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
@@ -192,21 +192,21 @@ Bu izlenecek yolu tamamlamak için Microsoft Office Excel ve Microsoft Office Wo
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Otomatik Uygulanan Özellikler (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [Otomatik Uygulanan Özellikler (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
-- [Koleksiyon Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [Otomatik uygulanan özellikler (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [Otomatik uygulanan özellikler (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [Öğe Başlatıcıları](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
 - [Nesne ve Koleksiyon Başlatıcıları](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
 - [İsteğe Bağlı Parametreler](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
 - [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
 - [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Erken ve Geç Bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dinamik](../../../csharp/language-reference/keywords/dynamic.md)
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
 - [Tür dinamiği kullanma](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [Lambda İfadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Lambda ifadeleri (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [Nasıl yapılır: COM Birlikte Çalışma Programlamada Dizin Oluşturulmuş Özellikleri Kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [Lambda ifadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Lambda Expressions (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Nasıl yapılır: COM birlikte çalışma programlamada dizin oluşturulmuş özellikleri kullanma](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [İzlenecek yol: Visual Studio'da Microsoft Office derlemelerinden tür bilgilerini katıştırma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [İzlenecek yol: Yönetilen Bütünleştirilmiş Kodlardan Türler Katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [İzlenecek yol: Excel için İlk VSTO Eklentinizi Oluşturma](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
+- [İzlenecek yol: Yönetilen derlemelerden türler katıştırma](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [İzlenecek yol: Excel için ilk VSTO eklentinizi oluşturma](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Birlikte Çalışabilirlik](../../../csharp/programming-guide/interop/index.md)
+- [Birlikte çalışabilirlik](../../../csharp/programming-guide/interop/index.md)

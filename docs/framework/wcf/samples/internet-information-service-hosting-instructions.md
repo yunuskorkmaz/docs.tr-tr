@@ -3,10 +3,10 @@ title: Internet Information Service Barındırma Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328965"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet Information Service Barındırma Yönergeleri
@@ -50,9 +50,9 @@ Internet Information Services (IIS) tarafından barındırılan örnekleri çal�
   
     2.  **ASP.NET**  
   
-    3.  **ISAPI uzantıları**  
+    3.  **ISAPI Uzantıları**  
   
-    4.  **ISAPI filtreleri**  
+    4.  **ISAPI Filtreleri**  
   
 9. Öğe altında etiketli **World Wide Web Hizmetleri**, genişletme **genel Http özellikleri**.  
   
@@ -108,9 +108,9 @@ Internet Information Services (IIS) tarafından barındırılan örnekleri çal�
   
     2.  **ASP.NET**  
   
-    3.  **ISAPI uzantıları**  
+    3.  **ISAPI Uzantıları**  
   
-    4.  **ISAPI filtreleri**  
+    4.  **ISAPI Filtreleri**  
   
 9. Öğeyi etiketli genişletin **Web yönetimi araçları**ve ardından **IIS Yönetim Konsolu**.  
   

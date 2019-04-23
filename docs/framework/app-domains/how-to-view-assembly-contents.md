@@ -17,10 +17,10 @@ ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e33fc98f12c1b49d6fe2b1dc187615e2dc9b1768
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330083"
 ---
 # <a name="how-to-view-assembly-contents"></a>Nasıl yapılır: Derleme İçeriklerini Görüntüleme
@@ -90,6 +90,6 @@ Kullanabileceğiniz [Ildasm.exe (IL ayrıştırıcı)](../../../docs/framework/t
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama Etki Alanları ve derlemeler](application-domains.md#application-domains-and-assemblies)
-- [Uygulama Etki Alanları ve Derlemeler Nasıl Yapılır Konuları](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
+- [Uygulama etki alanları ve derlemeler](application-domains.md#application-domains-and-assemblies)
+- [Uygulama Etki Alanları ve Bütünleştirilmiş Kodlar için Nasıl Yapılır Konuları](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
 - [Ildasm.exe (IL Ayrıştırıcı)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

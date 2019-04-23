@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
 ms.openlocfilehash: a676f03b4e6f9dd210b843a6f3bf00c735889500
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330161"
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile Boşta Davranışı Yapılandırma
@@ -43,6 +43,6 @@ ms.locfileid: "59330161"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
+- [İş Akışı Hizmeti Konak Genişletilebilirliği](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [Basitleştirilmiş Yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md)
 - [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
 ms.openlocfilehash: 869eeab6515340b2f1884ab7206979e83654a10b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328250"
 ---
 # <a name="true-and-false-operators-c-reference"></a>TRUE ve false işleçleri (C# Başvurusu)
@@ -37,7 +37,7 @@ Wait!
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [C# İşleçleri](../operators/index.md)

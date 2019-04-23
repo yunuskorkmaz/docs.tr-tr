@@ -10,10 +10,10 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327314"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>İzlenecek yol: Windows Forms'da Tasarım Zamanında WPF İçeriğini Düzenleme
@@ -151,9 +151,9 @@ Bu izlenecek yol sabitleme ve dayama çizgileri, gibi Windows Forms düzeni öze
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Nasıl yapılır: TableLayoutPanel Denetiminde Alt Denetimleri Sabitleme ve Yerleştirme](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Nasıl yapılır: Tasarım Zamanında Denetimi Formların Kenarlarına Hizalama](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Nasıl yapılır: Sabitleme ve TableLayoutPanel denetiminde alt denetimleri yerleştirme](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Nasıl yapılır: Tasarım zamanında denetimi formların kenarlarına hizalama](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Geçiş ve Birlikte Çalışabilirlik](../../wpf/advanced/migration-and-interoperability.md)
 - [WPF Denetimlerini Kullanma](using-wpf-controls.md)
 - [Visual Studio’da XAML tasarlama](/visualstudio/designers/designing-xaml-in-visual-studio)

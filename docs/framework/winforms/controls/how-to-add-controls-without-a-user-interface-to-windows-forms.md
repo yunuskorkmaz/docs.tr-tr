@@ -15,10 +15,10 @@ helpviewer_keywords:
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
 ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330109"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Nasıl yapılır: Windows Forms’a Kullanıcı Arabirimi Olmadan Denetimler Ekleme
@@ -82,10 +82,10 @@ Görsel olmayan denetim (veya bileşen) uygulamanıza işlevsellik sağlar. Diğ
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Forms Denetimleri](index.md)
-- [Nasıl yapılır: Windows Forms’a Denetimler Ekleme](how-to-add-controls-to-windows-forms.md)
-- [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](how-to-add-activex-controls-to-windows-forms.md)
-- [Nasıl yapılır: Windows Formları Arasında Denetimleri Kopyalama](how-to-copy-controls-between-windows-forms.md)
-- [Windows Formlarına Denetimler Koyma](putting-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md)
+- [Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](how-to-add-activex-controls-to-windows-forms.md)
+- [Nasıl yapılır: Windows Forms arasında denetimleri kopyalama](how-to-copy-controls-between-windows-forms.md)
+- [Windows Forms’a Denetimler Yerleştirme](putting-controls-on-windows-forms.md)
 - [Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
-- [İşlevlere Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327379"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunda Windows Gezgini Stilinde bir Arabirim Oluşturma
@@ -52,7 +52,7 @@ Windows Gezgini bir ortak kullanıcı arabirimi uygulamalar için kendi hazır b
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Nasıl yapılır: Windows Forms'da Çok Bölmeli Kullanıcı Arabirimi Oluşturma](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Nasıl yapılır: Bölünmüş Pencerede Yeniden Boyutlandırma ve Konumlama Davranışını Tanımlama](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [Nasıl yapılır: Pencereyi Yatay Bölme](how-to-split-a-window-horizontally.md)
+- [Nasıl yapılır: Windows Forms ile çok bölmeli kullanıcı arabirimi oluşturma](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Nasıl yapılır: Yeniden boyutlandırma ve konumlama davranışını bölünmüş pencerede tanımlama](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Nasıl yapılır: Pencereyi yatay bölme](how-to-split-a-window-horizontally.md)
 - [SplitContainer Denetimi](splitcontainer-control-windows-forms.md)

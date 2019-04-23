@@ -12,10 +12,10 @@ ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328315"
 ---
 # <a name="memory-mapped-files"></a>Bellek Eşlemeli Dosyalar
@@ -147,4 +147,4 @@ Process C says: True
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dosya ve Akış G/Ç](../../../docs/standard/io/index.md)
+- [Dosya ve Akış G/Ç'si](../../../docs/standard/io/index.md)

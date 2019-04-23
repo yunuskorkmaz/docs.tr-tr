@@ -1,5 +1,5 @@
 ---
-title: <nameEntry> Öğe
+title: <nameEntry> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225332"
 ---
 # <a name="nameentry-element"></a>\<nameEntry > öğesi
@@ -37,8 +37,8 @@ ms.locfileid: "59225332"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**name**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfına uygulayan algoritma kolay adı belirtir.|  
-|**sınıf**|Gerekli öznitelik.<br /><br /> Değeri belirtir **adı** özniteliğini [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) öğesi.|  
+|**Adı**|Gerekli öznitelik.<br /><br /> Şifreleme sınıfına uygulayan algoritma kolay adı belirtir.|  
+|**class**|Gerekli öznitelik.<br /><br /> Değeri belirtir **adı** özniteliğini [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) öğesi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

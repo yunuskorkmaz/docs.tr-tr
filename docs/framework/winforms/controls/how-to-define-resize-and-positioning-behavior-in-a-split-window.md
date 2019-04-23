@@ -10,10 +10,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
 ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328679"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Nasıl yapılır: Bölünmüş Pencerede Yeniden Boyutlandırma ve Konumlama Davranışını Tanımlama
@@ -23,9 +23,9 @@ Bölmelerden <xref:System.Windows.Forms.SplitContainer> denetim kiralamak kendil
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> özellik|Bölümlendirici klavye veya fare yoluyla taşınabilir olup olmadığını belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> özellik|Taşınabilir ayırıcıyı için sol veya üst kenarından piksel cinsinden uzaklığı belirler.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> özellik|Bölümlendirici kullanıcı tarafından taşınabilir piksel cinsinden en düşük bir uzaklık belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> Özelliği|Bölümlendirici klavye veya fare yoluyla taşınabilir olup olmadığını belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> Özelliği|Taşınabilir ayırıcıyı için sol veya üst kenarından piksel cinsinden uzaklığı belirler.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Özelliği|Bölümlendirici kullanıcı tarafından taşınabilir piksel cinsinden en düşük bir uzaklık belirler.|  
   
  Aşağıdaki örnekte değiştirir <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> özelliği bir "Bölücü Yaslama" etkisi; oluşturmak için bir kullanıcı bir ayırıcıyı sürüklediğinde, 1 varsayılan değer yerine 10 piksel birimleri cinsinden artırır.  
   

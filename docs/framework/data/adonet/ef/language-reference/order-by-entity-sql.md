@@ -3,10 +3,10 @@ title: Sipariş (varlık tarafından SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
 ms.openlocfilehash: 4cf65637603fd6c20a33b1ae6ecd8b6ded36a246
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328484"
 ---
 # <a name="order-by-entity-sql"></a>Sipariş (varlık tarafından SQL)
@@ -38,10 +38,10 @@ Bir SELECT deyiminde döndürülen nesneler üzerinde kullanılan sıralama düz
  DESC  
  Belirtilen özellik değerleri, en yüksek değerinden düşük bir değere azalan sırada sıralanması gerektiğini belirtir.  
   
- LIMIT `n`  
+ SINIRI `n`  
  Yalnızca ilk `n` öğe seçilir.  
   
- SKIP `n`  
+ ATLA `n`  
  İlk atlar `n` öğeleri.  
   
 ## <a name="remarks"></a>Açıklamalar  

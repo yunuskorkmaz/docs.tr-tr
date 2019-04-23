@@ -3,10 +3,10 @@ title: 'İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
 ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329056"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma 
@@ -45,7 +45,7 @@ Bu konuda izleme verilerinin biçimini tanımlar ve uygulamanızda sorun giderme
   
 -   `<SubType>` (izleme düzeyi).  
   
--   `<TimeCreated>`biçimindeki telefon numarasıdır.  
+-   `<TimeCreated>`.  
   
 -   `<Source>` (izleme kaynak adı).  
   
@@ -53,7 +53,7 @@ Bu konuda izleme verilerinin biçimini tanımlar ve uygulamanızda sorun giderme
   
 -   `<Execution>` (kimlik) işlem ve iş parçacığı.  
   
--   `<Computer>`biçimindeki telefon numarasıdır.  
+-   `<Computer>`.  
   
 -   `<ExtendedData>`, dahil olmak üzere `<Action>`, `<MessageID>` ve `<ActivityId>` ileti üstbilgisinde bir ileti gönderirken ayarlayın.  
   
