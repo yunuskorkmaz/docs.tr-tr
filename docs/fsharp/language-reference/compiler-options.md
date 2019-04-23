@@ -4,7 +4,7 @@ description: Kullanım F# derlemesini denetlemek için derleyici komut satırı 
 ms.date: 12/10/2018
 ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
 ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089763"

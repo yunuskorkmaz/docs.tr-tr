@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9981e97e3be58f6646612dc5c3a50a9e7650e376
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108452"
 ---
-# <a name="fexecuteinappdomaincallback-function-pointer"></a><span data-ttu-id="4619c-102">FExecuteInAppDomainCallback İşlev İşaretçisi</span><span class="sxs-lookup"><span data-stu-id="4619c-102">FExecuteInAppDomainCallback Function Pointer</span></span>
-<span data-ttu-id="4619c-103">Yönetilen kodu yürütmek için ortak dil çalışma zamanı tarafından (CLR) adlı bir işleve işaret eder.</span><span class="sxs-lookup"><span data-stu-id="4619c-103">Points to a function that is called by the common language runtime (CLR) to execute managed code.</span></span>  
+# <a name="fexecuteinappdomaincallback-function-pointer"></a><span data-ttu-id="df384-102">FExecuteInAppDomainCallback İşlev İşaretçisi</span><span class="sxs-lookup"><span data-stu-id="df384-102">FExecuteInAppDomainCallback Function Pointer</span></span>
+<span data-ttu-id="df384-103">Yönetilen kodu yürütmek için ortak dil çalışma zamanı tarafından (CLR) adlı bir işleve işaret eder.</span><span class="sxs-lookup"><span data-stu-id="df384-103">Points to a function that is called by the common language runtime (CLR) to execute managed code.</span></span>  
   
- <span data-ttu-id="4619c-104">Bu işlev işaretçisi içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4619c-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="df384-104">Bu işlev işaretçisi içinde kullanımdan kalkmış [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="df384-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4619c-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4619c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df384-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="df384-105">Syntax</span></span>  
   
 ```  
 typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (  
@@ -36,21 +36,21 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4619c-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4619c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="df384-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="df384-106">Parameters</span></span>  
  `cookie`  
- <span data-ttu-id="4619c-107">[in] Yönetilen kodda yürütülecek içeren donuk arayana ayrılan belleğe yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="4619c-107">[in] A pointer to opaque caller-allocated memory that contains the managed code to be executed.</span></span>  
+ <span data-ttu-id="df384-107">[in] Yönetilen kodda yürütülecek içeren donuk arayana ayrılan belleğe yönelik işaretçi.</span><span class="sxs-lookup"><span data-stu-id="df384-107">[in] A pointer to opaque caller-allocated memory that contains the managed code to be executed.</span></span>  
   
- <span data-ttu-id="4619c-108">Ayırma ve yaşam süresini bu bellek (CLR) arayan tarafından denetlenir.</span><span class="sxs-lookup"><span data-stu-id="4619c-108">The allocation and lifetime of this memory are controlled by the caller (that is, the CLR).</span></span> <span data-ttu-id="4619c-109">CLR Yönetilen yığın bellek değil.</span><span class="sxs-lookup"><span data-stu-id="4619c-109">This is not CLR managed-heap memory.</span></span>  
+ <span data-ttu-id="df384-108">Ayırma ve yaşam süresini bu bellek (CLR) arayan tarafından denetlenir.</span><span class="sxs-lookup"><span data-stu-id="df384-108">The allocation and lifetime of this memory are controlled by the caller (that is, the CLR).</span></span> <span data-ttu-id="df384-109">CLR Yönetilen yığın bellek değil.</span><span class="sxs-lookup"><span data-stu-id="df384-109">This is not CLR managed-heap memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4619c-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4619c-110">Requirements</span></span>  
- <span data-ttu-id="4619c-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4619c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="df384-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="df384-110">Requirements</span></span>  
+ <span data-ttu-id="df384-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="df384-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4619c-112">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4619c-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="df384-112">**Üst bilgi:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="df384-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4619c-113">**Kitaplığı:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="4619c-113">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="df384-113">**Kitaplığı:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="df384-113">**Library:** MSCorWks.dll</span></span>  
   
- **<span data-ttu-id="4619c-114">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="4619c-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="df384-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="df384-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4619c-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4619c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df384-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="df384-115">See also</span></span>
 
-- [<span data-ttu-id="4619c-116">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="4619c-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="df384-116">Kullanım Dışı CLR Barındırma İşlevleri</span><span class="sxs-lookup"><span data-stu-id="df384-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

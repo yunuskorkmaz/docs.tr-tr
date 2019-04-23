@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 18099e6e658391d6dae7a666cd0cebefa5859b1a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110540"
 ---
-# <a name="icorprofilerinfo4getfunctionfromip2-method"></a><span data-ttu-id="96c6e-102">ICorProfilerInfo4::GetFunctionFromIP2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="96c6e-102">ICorProfilerInfo4::GetFunctionFromIP2 Method</span></span>
-<span data-ttu-id="96c6e-103">Yönetilen kod yönerge işaretçisi bir işlevin JIT yeniden derlenen sürümüne eşler.</span><span class="sxs-lookup"><span data-stu-id="96c6e-103">Maps a managed code instruction pointer to the JIT-recompiled version of a function.</span></span>  
+# <a name="icorprofilerinfo4getfunctionfromip2-method"></a><span data-ttu-id="09f19-102">ICorProfilerInfo4::GetFunctionFromIP2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="09f19-102">ICorProfilerInfo4::GetFunctionFromIP2 Method</span></span>
+<span data-ttu-id="09f19-103">Yönetilen kod yönerge işaretçisi bir işlevin JIT yeniden derlenen sürümüne eşler.</span><span class="sxs-lookup"><span data-stu-id="09f19-103">Maps a managed code instruction pointer to the JIT-recompiled version of a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="96c6e-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="96c6e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="09f19-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="09f19-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionFromIP2(  
@@ -36,31 +36,31 @@ HRESULT GetFunctionFromIP2(
     [out] ReJITID *pReJitId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="96c6e-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="96c6e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="09f19-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="09f19-105">Parameters</span></span>  
  `ip`  
- <span data-ttu-id="96c6e-106">[in] Yönetilen kodda yönerge işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="96c6e-106">[in] The instruction pointer in managed code.</span></span>  
+ <span data-ttu-id="09f19-106">[in] Yönetilen kodda yönerge işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="09f19-106">[in] The instruction pointer in managed code.</span></span>  
   
  `pFunctionId`  
- <span data-ttu-id="96c6e-107">[out] İşlev kimliği.</span><span class="sxs-lookup"><span data-stu-id="96c6e-107">[out] The function ID.</span></span>  
+ <span data-ttu-id="09f19-107">[out] İşlev kimliği.</span><span class="sxs-lookup"><span data-stu-id="09f19-107">[out] The function ID.</span></span>  
   
  `pReJitId`  
- <span data-ttu-id="96c6e-108">[out] İşlev JIT yeniden derlenen sürümü kimliği.</span><span class="sxs-lookup"><span data-stu-id="96c6e-108">[out] The identity of the JIT-recompiled version of the function.</span></span>  
+ <span data-ttu-id="09f19-108">[out] İşlev JIT yeniden derlenen sürümü kimliği.</span><span class="sxs-lookup"><span data-stu-id="09f19-108">[out] The identity of the JIT-recompiled version of the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="96c6e-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="96c6e-109">Remarks</span></span>  
- `GetFunctionFromIP2` <span data-ttu-id="96c6e-110">benzer `GetFunctionFromIP`dışında belirtilen IP adresi içeren işlev işlevi kimliği yerine JIT yeniden derlenen Kimliğini alır.</span><span class="sxs-lookup"><span data-stu-id="96c6e-110">is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="09f19-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="09f19-109">Remarks</span></span>  
+ <span data-ttu-id="09f19-110">`GetFunctionFromIP2` benzer `GetFunctionFromIP`dışında belirtilen IP adresi içeren işlev işlevi kimliği yerine JIT yeniden derlenen Kimliğini alır.</span><span class="sxs-lookup"><span data-stu-id="09f19-110">`GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.</span></span>  
   
 > [!NOTE]
->  `GetFunctionFromIP2` <span data-ttu-id="96c6e-111">bir çöp toplama ise tetikleyebilirsiniz `GetFunctionFromIP` erişemez.</span><span class="sxs-lookup"><span data-stu-id="96c6e-111">can trigger a garbage collection, whereas `GetFunctionFromIP` will not.</span></span>  <span data-ttu-id="96c6e-112">Daha fazla bilgi için [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).</span><span class="sxs-lookup"><span data-stu-id="96c6e-112">For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).</span></span>  
+>  <span data-ttu-id="09f19-111">`GetFunctionFromIP2` bir çöp toplama ise tetikleyebilirsiniz `GetFunctionFromIP` erişemez.</span><span class="sxs-lookup"><span data-stu-id="09f19-111">`GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.</span></span>  <span data-ttu-id="09f19-112">Daha fazla bilgi için [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).</span><span class="sxs-lookup"><span data-stu-id="09f19-112">For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="96c6e-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="96c6e-113">Requirements</span></span>  
- <span data-ttu-id="96c6e-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="96c6e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="09f19-113">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="09f19-113">Requirements</span></span>  
+ <span data-ttu-id="09f19-114">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="09f19-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="96c6e-115">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="96c6e-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="09f19-115">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="09f19-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="96c6e-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="96c6e-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="09f19-116">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="09f19-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="96c6e-117">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="96c6e-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="09f19-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09f19-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="96c6e-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="96c6e-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09f19-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="09f19-118">See also</span></span>
 
-- [<span data-ttu-id="96c6e-119">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="96c6e-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="09f19-119">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="09f19-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
