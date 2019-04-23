@@ -3,10 +3,10 @@ title: Native Etkinliği Kullanan Özel Bileşik
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
 ms.openlocfilehash: 41a823ab00a2be0772a07b15d1292dbb4e8d1a6b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340301"
 ---
 # <a name="custom-composite-using-native-activity"></a>Native Etkinliği Kullanan Özel Bileşik
@@ -25,7 +25,7 @@ Bu örnek nasıl yazılacağını gösterir. bir <xref:System.Activities.NativeA
 
  Alt etkinlik tamamlandığında <xref:System.Activities.CompletionCallback> yürütülür. Döngü En üstten devam eder. Gibi `Execute`, <xref:System.Activities.CompletionCallback> alır bir <xref:System.Activities.NativeActivityContext>, çalışma zamanına uygulayan erişim sağlar.
 
- `MyWhile` farklıdır `MySequence` içeren tek bir zamanlar <xref:System.Activities.Activity> sürekli olarak nesne ve kullanan bir <xref:System.Activities.Activity%601>< bool\> adlı `Condition` Bu zamanlama gerçekleşip gerçekleşmediğini belirleme. Gibi `MySequence`, `MyWhile` kullanan bir `InternalExecute` zamanlama mantığını merkezileştirmek için yöntemi. Bu zamanlamaları `Condition`<xref:System.Activities.Activity>< bool\> ile bir <xref:System.Activities.CompletionCallback%601> \<bool > adlı `OnEvaluationCompleted`. Zaman yürütülmesini `Condition` olan tamamlandı, sonuç bu kullanılabilir duruma <xref:System.Activities.CompletionCallback> adlı kesin türü belirtilmiş bir parametre içinde `result`. Varsa `true`, `MyWhile` çağrıları <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, içinde geçen `Body`<xref:System.Activities.Activity> nesne ve `InternalExecute` olarak <xref:System.Activities.CompletionCallback>. Zaman yürütülmesini `Body` tamamlanır `Condition` yeniden zamanlanmış `InternalExecute`, döngü yeniden başlatılıyor. Zaman `Condition` döndürür `false`, örneği `MyWhile` verir denetimi yeniden çalışma zamanı zamanlama olmadan `Body` ve çalışma zamanı taşır <xref:System.Activities.ActivityInstanceState.Closed> durumu.
+ `MyWhile` farklıdır `MySequence` içeren tek bir zamanlar <xref:System.Activities.Activity> sürekli olarak nesne ve kullanan bir <xref:System.Activities.Activity%601>< bool\> adlı `Condition` Bu zamanlama gerçekleşip gerçekleşmediğini belirleme. Gibi `MySequence`, `MyWhile` kullanan bir `InternalExecute` zamanlama mantığını merkezileştirmek için yöntemi. Bu zamanlamaları `Condition` <xref:System.Activities.Activity>< bool\> ile bir <xref:System.Activities.CompletionCallback%601> \<bool > adlı `OnEvaluationCompleted`. Zaman yürütülmesini `Condition` olan tamamlandı, sonuç bu kullanılabilir duruma <xref:System.Activities.CompletionCallback> adlı kesin türü belirtilmiş bir parametre içinde `result`. Varsa `true`, `MyWhile` çağrıları <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, içinde geçen `Body` <xref:System.Activities.Activity> nesne ve `InternalExecute` olarak <xref:System.Activities.CompletionCallback>. Zaman yürütülmesini `Body` tamamlanır `Condition` yeniden zamanlanmış `InternalExecute`, döngü yeniden başlatılıyor. Zaman `Condition` döndürür `false`, örneği `MyWhile` verir denetimi yeniden çalışma zamanı zamanlama olmadan `Body` ve çalışma zamanı taşır <xref:System.Activities.ActivityInstanceState.Closed> durumu.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
 

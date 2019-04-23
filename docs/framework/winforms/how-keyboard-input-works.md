@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342180"
 ---
 # <a name="how-keyboard-input-works"></a>Klavye Girdisi Nasıl Çalışır
@@ -63,9 +63,9 @@ Windows Forms klavye girdisi Windows iletilere yanıt olarak klavye olayları y�
 |Görev|Yöntem|  
 |----------|------------|  
 |Bir gezinti anahtar kesebilir ve yükseltmek bir <xref:System.Windows.Forms.Control.KeyDown> olay. Örneğin sekme ve dönüş metin kutusunda işlenecek isteyebilirsiniz.|Geçersiz kılma <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Not:**  Alternatif olarak, işleyebileceği <xref:System.Windows.Forms.Control.PreviewKeyDown> olay ve kümesi <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> , <xref:System.Windows.Forms.PreviewKeyDownEventArgs> için `true` anahtar veya anahtarlarının istediğiniz.|  
-|Özel giriş veya gezinti işleme bir denetim üzerinde gerçekleştirin. Örneğin, seçili öğeyi değiştirmek için liste denetimi ok tuşlarını kullanımını isteyebilirsiniz.|Geçersiz kıl <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Özel giriş veya gezinti işleme bir denetim üzerinde gerçekleştirin. Örneğin, seçili öğeyi değiştirmek için liste denetimi ok tuşlarını kullanımını isteyebilirsiniz.|geçersiz kılma <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |Bir gezinti anahtar kesebilir ve yükseltmek bir <xref:System.Windows.Forms.Control.KeyPress> olay. Örneğin bir döndürme kutusu denetiminde öğeleri aracılığıyla ilerlemeyi hızlandırmak için birden çok ok tuşuna bastığında isteyebilirsiniz.|Geçersiz kılma <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Özel giriş veya gezinti işleme sırasında gerçekleştirmek bir <xref:System.Windows.Forms.Control.KeyPress> olay. Örneğin, bir listede r harfi ile başlayan öğeleri arasında "r" tuşunu basılı tutarak denetimi atlar.|Geçersiz kıl <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Özel giriş veya gezinti işleme sırasında gerçekleştirmek bir <xref:System.Windows.Forms.Control.KeyPress> olay. Örneğin, bir listede r harfi ile başlayan öğeleri arasında "r" tuşunu basılı tutarak denetimi atlar.|geçersiz kılma <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |Özel anımsatıcı işlemeyi gerçekleştirir; Örneğin, araç çubuğunda yer alan özelleştirilmiş olarak çizilen düğme üzerinde anımsatıcıları işlemek istersiniz.|Geçersiz kılma <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
 ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341393"
 ---
 # <a name="where-clause-c-reference"></a>where tümcesi (C# Başvurusu)
@@ -47,9 +47,9 @@ Derleme zamanında `where` anahtar sözcüğü, bir çağrı biçimine dönüşt
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu Anahtar Sözcükleri (LINQ)](query-keywords.md)
+- [Query Keywords (LINQ)](query-keywords.md)
 - [from yan tümcesi](from-clause.md)
-- [select tümcesi](select-clause.md)
+- [select yan tümcesi](select-clause.md)
 - [Verileri Filtreleme](../../programming-guide/concepts/linq/filtering-data.md)
-- [LINQ Sorgu İfadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [C#'de LINQ'e Başlarken](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ Sorgu ifadeleri](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C#'de LINQ Kullanmaya Başlama](../../programming-guide/concepts/linq/getting-started-with-linq.md)

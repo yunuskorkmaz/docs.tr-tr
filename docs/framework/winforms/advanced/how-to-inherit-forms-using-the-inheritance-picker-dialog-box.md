@@ -7,10 +7,10 @@ helpviewer_keywords:
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
 ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342100"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Nasıl yapılır: Devralma Seçici İletişim Kutusunu Kullanarak Form Devralma
@@ -59,6 +59,6 @@ Bir form veya diğer nesne devral en kolay yolu kullanmaktır **devralma Seçici
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Inherits Deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [kullanma](~/docs/csharp/language-reference/keywords/using.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
 - [Taban Formun Görünüşünü Değiştirmenin Etkileri](effects-of-modifying-base-form-appearance.md)
 - [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)

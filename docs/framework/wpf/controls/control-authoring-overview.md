@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340028"
 ---
 # <a name="control-authoring-overview"></a>Denetim Yazımına Genel Bakış
@@ -182,7 +182,7 @@ Genişletilmesinde [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 -   Bir çift uygulamak `public` `static` adlı CLR yöntemlerinde `Set` *PropertyName* ve `Get` *PropertyName*. Her iki yöntem, türetilen bir sınıf kabul etmelidir <xref:System.Windows.DependencyProperty> , ilk bağımsız değişken olarak. `Set` *PropertyName* yöntemi de türü özelliği için kayıtlı veri türü ile eşleşen bir bağımsız değişkeni kabul eder. `Get` *PropertyName* yöntemi, aynı türde bir değer döndürmelidir. Varsa `Set` *PropertyName* yöntemi eksik, özellik salt okunur olarak işaretlenir.  
   
--   `Set` **PropertyName* ve `Get` *PropertyName* doğrudan yönlendirmesi gerekirse <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> hedef bağımlılık yöntemlerde nesnesi, sırasıyla.DTasarımcılar tarafından yöntemi sarmalayıcı çağrı yapma veya bir hedef bağımlılık nesneye doğrudan çağırmak ekli özellik erişebilir.  
+-   `Set` *PropertyName* ve `Get` *PropertyName* doğrudan yönlendirmesi gerekirse <xref:System.Windows.DependencyObject.GetValue%2A> ve <xref:System.Windows.DependencyObject.SetValue%2A> hedef bağımlılık yöntemlerde nesnesi, sırasıyla. Tasarımcılar tarafından yöntemi sarmalayıcı çağrı yapma veya bir hedef bağımlılık nesneye doğrudan çağırmak ekli özellik erişebilir.  
   
  Ekli özellikler hakkında daha fazla bilgi için bkz. [ekli özelliklere genel bakış](../advanced/attached-properties-overview.md).  
   

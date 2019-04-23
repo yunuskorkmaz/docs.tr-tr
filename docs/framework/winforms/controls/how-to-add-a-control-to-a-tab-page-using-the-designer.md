@@ -7,10 +7,10 @@ helpviewer_keywords:
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
 ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340977"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak bir Sekme Sayfasına Denetim Ekleme
@@ -31,6 +31,6 @@ Windows Forms kullanımını <xref:System.Windows.Forms.TabControl> düzenli bir
 
 - [TabControl Denetimi](tabcontrol-control-windows-forms.md)
 - [TabControl Denetimine Genel Bakış](tabcontrol-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms TabControl Görünümünü Değiştirme](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [Nasıl yapılır: Sekme Sayfalarını Devre Dışı Bırakma](how-to-disable-tab-pages.md)
-- [Nasıl yapılır: Windows Forms TabControl ile Sekme Ekleme ve Kaldırma](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Nasıl yapılır: Windows Forms Tabcontrol'un görünüşünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Nasıl yapılır: Sekme sayfalarını devre dışı bırak](how-to-disable-tab-pages.md)
+- [Nasıl yapılır: Windows Forms TabControl ile sekme ekleyip](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340496"
 ---
 # <a name="multimedia-overview"></a>Multimedyaya Genel Bakış
@@ -77,11 +77,11 @@ Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasha
   
  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> Ve <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> özellikleri medya kayıttan yürütmeyi denetlemek için tek yolu değil. Saatin saat modunda denetleyebilirsiniz <xref:System.Windows.Controls.MediaElement> ve etkileşimli denetim yöntemleri olduğunu kontrol <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> olduğu <xref:System.Windows.Controls.MediaState.Manual>. <xref:System.Windows.Controls.MediaElement> Bu yarışmaya denetimi aşağıdaki öncelikleri değerlendirerek işler.  
   
-1. <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>biçimindeki telefon numarasıdır. Ortam kaldırıldığında yerinde. Bu, tüm ortam kaynakları varsayılan olarak, yayımlanan sağlar bile bir <xref:System.Windows.Media.MediaClock> ilişkili olduğu <xref:System.Windows.Controls.MediaElement>.  
+1. <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. Ortam kaldırıldığında yerinde. Bu, tüm ortam kaynakları varsayılan olarak, yayımlanan sağlar bile bir <xref:System.Windows.Media.MediaClock> ilişkili olduğu <xref:System.Windows.Controls.MediaElement>.  
   
-2. <xref:System.Windows.Media.MediaClock>biçimindeki telefon numarasıdır. Medya bulunduğunda bir yerde bir <xref:System.Windows.Controls.MediaElement.Clock%2A>. Ortam kaldırılırsa <xref:System.Windows.Media.MediaClock> sürece etkili <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> olduğu <xref:System.Windows.Controls.MediaState.Manual>. Saat modu her zaman yüklü davranışını geçersiz kılar <xref:System.Windows.Controls.MediaElement>.  
+2. <xref:System.Windows.Media.MediaClock>. Medya bulunduğunda bir yerde bir <xref:System.Windows.Controls.MediaElement.Clock%2A>. Ortam kaldırılırsa <xref:System.Windows.Media.MediaClock> sürece etkili <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> olduğu <xref:System.Windows.Controls.MediaState.Manual>. Saat modu her zaman yüklü davranışını geçersiz kılar <xref:System.Windows.Controls.MediaElement>.  
   
-3. <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>biçimindeki telefon numarasıdır. Medya yüklendiğinde yerinde.  
+3. <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>. Medya yüklendiğinde yerinde.  
   
 4. Etkileşimli denetim yöntemleri. Yerleştirin ne zaman <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> olduğu <xref:System.Windows.Controls.MediaState.Manual>. Kullanılabilir denetim yöntemleri <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, ve <xref:System.Windows.Controls.MediaElement.Stop%2A>.  
   
@@ -99,9 +99,9 @@ Multimedya özellikleri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasha
 ### <a name="controlling-mediaplayer"></a>MediaPlayer denetleme  
  Çünkü <xref:System.Windows.Media.MediaPlayer> olduğu durum bilgisiz, yalnızca iki yolu vardır medya kayıttan yürütmeyi denetlemek için.  
   
-1. Etkileşimli denetim yöntemleri. Bağımsız modda bir yerde (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> özelliği).  
+1. Etkileşimli denetim yöntemleri. Bağımsız modda bir yerde (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> özelliği).  
   
-2. <xref:System.Windows.Media.MediaClock>biçimindeki telefon numarasıdır. Medya bulunduğunda bir yerde bir <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
+2. <xref:System.Windows.Media.MediaClock>. Medya bulunduğunda bir yerde bir <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
 ### <a name="displaying-a-mediaplayer"></a>MediaPlayer görüntüleme  
  Teknik olarak, bir <xref:System.Windows.Media.MediaPlayer> fiziksel bir temsili olduğundan görüntülenemiyor. Ancak, bu ortama sunmak için kullanılabilir bir <xref:System.Windows.Media.Drawing> kullanarak <xref:System.Windows.Media.VideoDrawing> sınıfı. Aşağıdaki örnek kullanımını gösterir. bir <xref:System.Windows.Media.VideoDrawing> ortamı görüntülemek için.  

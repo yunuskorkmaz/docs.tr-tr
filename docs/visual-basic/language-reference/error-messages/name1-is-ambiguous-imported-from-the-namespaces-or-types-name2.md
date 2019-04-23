@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
 ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339066"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1 >' ad alanlarından veya türlerinden içe belirsiz\<name2 >'
@@ -28,5 +28,5 @@ Belirsiz ve bu nedenle çakışan bir ad başka bir adla sağladınız. Visual B
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Visual Basic'de Ad Alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Namespace Deyimi](../../../visual-basic/language-reference/statements/namespace-statement.md)

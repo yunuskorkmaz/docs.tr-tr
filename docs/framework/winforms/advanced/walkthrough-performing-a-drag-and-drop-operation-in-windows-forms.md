@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
 ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340730"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>İzlenecek yol: Windows Forms'da Sürükle ve Bırak İşlemi Gerçekleştirme
@@ -108,6 +108,6 @@ Windows tabanlı uygulamalar sürükle-bırak işlemlerini gerçekleştirmek iç
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Panoya Veri Ekleme](how-to-add-data-to-the-clipboard.md)
-- [Nasıl yapılır: Panodan Veri Alma](how-to-retrieve-data-from-the-clipboard.md)
+- [Nasıl yapılır: Panoya veri ekleme](how-to-add-data-to-the-clipboard.md)
+- [Nasıl yapılır: Panodan veri alma](how-to-retrieve-data-from-the-clipboard.md)
 - [Sürükle ve Bırak İşlemleri ve Pano Desteği](drag-and-drop-operations-and-clipboard-support.md)

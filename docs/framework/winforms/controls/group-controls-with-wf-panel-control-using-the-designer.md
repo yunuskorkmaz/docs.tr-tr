@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
 ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341406"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms Panel Denetimi ile Denetimleri Gruplandırma
@@ -33,4 +33,4 @@ Windows Forms <xref:System.Windows.Forms.Panel> denetimleri başka denetimler gr
 
 - [Panel Denetimi](panel-control-windows-forms.md)
 - [Panel Denetimine Genel Bakış](panel-control-overview-windows-forms.md)
-- [Nasıl yapılır: Bir Panelin Arka Planını Ayarlama](how-to-set-the-background-of-a-windows-forms-panel.md)
+- [Nasıl yapılır: Bir panelin arka planını ayarlama](how-to-set-the-background-of-a-windows-forms-panel.md)

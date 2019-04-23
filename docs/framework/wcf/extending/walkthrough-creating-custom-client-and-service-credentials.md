@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
 ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343057"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma
@@ -40,9 +40,9 @@ Bu konu nasıl uygulanacağı özel istemci ve hizmet kimlik bilgilerini ve uygu
 ## <a name="first-in-a-series"></a>Serideki ilk  
  Kimlik bilgileri özelleştirme nedenini kimlik bilgileri sağlama, güvenlik belirteci serileştirme veya kimlik doğrulaması ile ilgili WCF davranışı değiştirmek için özel kimlik bilgilerini sınıfı oluşturma yalnızca ilk adım, olduğundan. Bu bölümdeki diğer konulara özel seri hale getiricileri genişletme ve Doğrulayıcı nasıl oluşturulacağını açıklar. Bu bağlamda, özel kimlik bilgisi sınıfını oluşturmak, serideki ilk konu olur. Özel kimlik bilgileri yalnızca oluşturduktan sonra sonraki eylemleri (özel seri hale getiricileri genişletme ve Doğrulayıcı oluşturma) yapılabilir. Bu konu yapı ek konular şunlardır:  
   
--   [Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+-   [Nasıl yapılır: Özel güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+-   [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
 -   [Nasıl yapılır: Özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
@@ -186,6 +186,6 @@ Bu konu nasıl uygulanacağı özel istemci ve hizmet kimlik bilgilerini ve uygu
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Nasıl yapılır: Özel Güvenlik Belirteci Kimlik Doğrulayıcı Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Nasıl yapılır: Özel Belirteç Oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Nasıl yapılır: Özel güvenlik belirteci sağlayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Nasıl yapılır: Özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

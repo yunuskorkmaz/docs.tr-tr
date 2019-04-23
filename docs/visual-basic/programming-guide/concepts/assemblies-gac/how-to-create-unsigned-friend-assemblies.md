@@ -3,10 +3,10 @@ title: 'Nasıl yapılır: (Visual Basic) imzasız arkadaş derlemeleri oluşturm
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
 ms.openlocfilehash: 4771d0fe116d1532c270cf41b209665d5403a9b8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339183"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Nasıl yapılır: (Visual Basic) imzasız arkadaş derlemeleri oluşturma
@@ -87,7 +87,7 @@ Bu örnek, işaretsiz derlemeleri ile arkadaş derlemeleri kullanmayı gösterir
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [.NET derlemeleri](../../../../standard/assembly/index.md)
+- [.NET’te bütünleştirilmiş kodlar](../../../../standard/assembly/index.md)
 - [Arkadaş Bütünleştirilmiş Kodları](../../../../standard/assembly/friend-assemblies.md)
 - [Nasıl yapılır: (Visual Basic) imzalı arkadaş derlemeleri oluşturma](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [Programlama Kılavuzu kavramları](../../../../visual-basic/programming-guide/concepts/index.md)

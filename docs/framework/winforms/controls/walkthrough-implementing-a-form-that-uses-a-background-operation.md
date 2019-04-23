@@ -16,10 +16,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343408"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>İzlenecek yol: Arka Plan İşlemi Kullanan Bir Form Uygulama
@@ -166,9 +166,9 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve yanıt vermemesine, kul
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
-- [Yönetilen İş Parçacığı Oluşturma](../../../standard/threading/index.md)
+- [Yönetilen iş parçacığı oluşturma](../../../standard/threading/index.md)
 - [Yönetilen İş Parçacığı Oluşturma En İyi Yöntemleri](../../../standard/threading/managed-threading-best-practices.md)
 - [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [İzlenecek yol: Arka Planda İşlem Çalıştırma](walkthrough-running-an-operation-in-the-background.md)
+- [Nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [İzlenecek yol: Arka planda işlem çalıştırma](walkthrough-running-an-operation-in-the-background.md)
 - [BackgroundWorker Bileşeni](backgroundworker-component.md)

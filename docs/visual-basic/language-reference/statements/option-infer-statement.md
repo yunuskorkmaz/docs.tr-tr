@@ -12,10 +12,10 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338572"
 ---
 # <a name="option-infer-statement"></a>Option Infer Deyimi
@@ -98,7 +98,7 @@ Option Infer { On | Off }
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Yerel Tür Arabirimi](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Yerel Çıkarım](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Compare Deyimi](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Option Explicit Deyimi](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Option Strict Deyimi](../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
 ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342862"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Nasıl yapılır: Tek Bir Rengi Dönüştürmek için Renk Matrisi Kullanma
@@ -65,5 +65,5 @@ ms.locfileid: "59342862"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Resimleri Yeniden Renklendirme](recoloring-images.md)
+- [Görüntüleri Yeniden Renklendirme](recoloring-images.md)
 - [Koordinat Sistemleri ve Dönüştürmeler](coordinate-systems-and-transformations.md)

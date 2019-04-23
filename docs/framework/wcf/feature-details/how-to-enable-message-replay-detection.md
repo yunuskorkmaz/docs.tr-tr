@@ -11,10 +11,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
 ms.openlocfilehash: a7bdfc244b0ff1c2ed625235df7e74ced026c542
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343616"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Nasıl yapılır: İleti Yeniden Yürütme Algılamayı Etkinleştirme
@@ -30,13 +30,13 @@ Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri a
   
 2. Kullanım <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> bir başvuru döndürmek için özellik <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> sınıfı ve aşağıdaki özellikleri uygun şekilde ayarlayın:  
   
-    1.  `DetectReplay`biçimindeki telefon numarasıdır. Bir Boole değeri. Bu, istemcinin sunucudan olumsuzlukları algılanmalıdır olmadığını yönetir. Varsayılan, `true` değeridir.  
+    1.  `DetectReplay`. Bir Boole değeri. Bu, istemcinin sunucudan olumsuzlukları algılanmalıdır olmadığını yönetir. Varsayılan, `true` değeridir.  
   
-    2.  `MaxClockSkew`biçimindeki telefon numarasıdır. A <xref:System.TimeSpan> değeri. Yeniden yürütme mekanizması istemci ve sunucu arasında tolere edebilen ne kadar zaman eğimi yönetir. Güvenlik mekanizması, zaman damgası gönderilen ve bu çok kadar geri geçmişte gönderilip gönderilmediğini belirler inceler. Varsayılan değer 5 dakikadır.  
+    2.  `MaxClockSkew`. A <xref:System.TimeSpan> değeri. Yeniden yürütme mekanizması istemci ve sunucu arasında tolere edebilen ne kadar zaman eğimi yönetir. Güvenlik mekanizması, zaman damgası gönderilen ve bu çok kadar geri geçmişte gönderilip gönderilmediğini belirler inceler. Varsayılan değer 5 dakikadır.  
   
-    3.  `ReplayWindow`biçimindeki telefon numarasıdır. A `TimeSpan` değeri. Bu ne kadar iletiye yöneten sunucu (aracılar) üzerinden istemci ulaşmadan önce gönderdikten sonra ağdaki Canlı çalıştırabilirsiniz. En son gönderilen iletilerin imzalarını istemci izler `ReplayWindow` yeniden yürütme algılaması amaçları için.  
+    3.  `ReplayWindow`. A `TimeSpan` değeri. Bu ne kadar iletiye yöneten sunucu (aracılar) üzerinden istemci ulaşmadan önce gönderdikten sonra ağdaki Canlı çalıştırabilirsiniz. En son gönderilen iletilerin imzalarını istemci izler `ReplayWindow` yeniden yürütme algılaması amaçları için.  
   
-    4.  `ReplayCacheSize`biçimindeki telefon numarasıdır. Bir tamsayı değeri. İstemci, iletinin imzalarını bir önbellekte depolar. Bu ayar önbellekte saklayabilirsiniz kaç imzaları belirtir. Son yeniden yürütme penceresine gönderilen ileti sayısını önbellek sınırı ulaşırsa, en eski önbelleğe alınmış imzaları süre ulaşana kadar yeni iletileri reddedilir. 500000 varsayılandır.  
+    4.  `ReplayCacheSize`. Bir tamsayı değeri. İstemci, iletinin imzalarını bir önbellekte depolar. Bu ayar önbellekte saklayabilirsiniz kaç imzaları belirtir. Son yeniden yürütme penceresine gönderilen ileti sayısını önbellek sınırı ulaşırsa, en eski önbelleğe alınmış imzaları süre ulaşana kadar yeni iletileri reddedilir. 500000 varsayılandır.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>Kod kullanarak hizmet yeniden yürütme algılamayı denetlemek için  
   
@@ -88,7 +88,7 @@ Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri a
   
  Güvenli konuşma oturumları kullanıyorsanız değil, yeniden yürütme algılaması olumsuzlukları sunucu grubu senaryolarını ve ne zaman işlem geri dönüştürülmeden algılama garanti etmez. Bu, aşağıdaki sistem tarafından sağlanan bağlamalar için geçerlidir:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>biçimindeki telefon numarasıdır.  
+-   <xref:System.ServiceModel.BasicHttpBinding>.  
   
 -   <xref:System.ServiceModel.WSHttpBinding> ile <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliğini `false`.  
   
@@ -108,4 +108,4 @@ Yeniden yürütme saldırı bir saldırganın iki taraflar arasında iletileri a
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - [Güvenli İletişimler ve Güvenli Oturumlar](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
 - [\<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

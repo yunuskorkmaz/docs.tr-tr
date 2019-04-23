@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342556"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Nasıl yapılır: GDI+ ile Resim İşleme
@@ -84,9 +84,9 @@ Kullanabileceğiniz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Grafik Programlamaya Başlarken](getting-started-with-graphics-programming.md)
-- [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](how-to-create-graphics-objects-for-drawing.md)
+- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md)
 - [GDI+'da Kalemler, Çizgiler ve Dikdörtgenler](pens-lines-and-rectangles-in-gdi.md)
-- [Nasıl yapılır: Bir Windows Formunda Metin Çizme](how-to-draw-text-on-a-windows-form.md)
-- [Windows Formlarında Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
-- [Çizgi veya Kapalı Şekiller Çizme](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
-- [Simgeler İçin Görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons)
+- [Nasıl yapılır: Bir Windows formunda metin çizme](how-to-draw-text-on-a-windows-form.md)
+- [Windows Forms’da Grafikler ve Çizim](graphics-and-drawing-in-windows-forms.md)
+- [Çizim çizgi veya kapalı şekiller](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
+- [Simgeler için Görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons)

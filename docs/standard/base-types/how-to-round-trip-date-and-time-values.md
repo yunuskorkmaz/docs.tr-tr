@@ -15,10 +15,10 @@ ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340613"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Nasıl yapılır: Gidiş Dönüş Tarih ve Saat Değerleri
@@ -87,13 +87,13 @@ Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kes
   
     -   <xref:System> (Yalnızca C#).  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>biçimindeki telefon numarasıdır.  
+    -   <xref:System.Globalization?displayProperty=nameWithType>.  
   
     -   <xref:System.IO?displayProperty=nameWithType>.  
   
     -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>biçimindeki telefon numarasıdır.  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
   
 -   Bir System.Core.dll başvurusu.  
   
@@ -102,5 +102,5 @@ Birçok uygulamada, bir tarih ve saat değerini, tek bir nokta zaman içinde kes
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [DateTime, DateTimeOffset, TimeSpan ve TimeZoneInfo Arasında Seçim Yapma ](../../../docs/standard/datetime/choosing-between-datetime.md)
+- [DateTime, DateTimeOffset, TimeSpan ve Timezoneınfo arasında seçim](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
