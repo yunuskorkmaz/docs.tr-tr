@@ -11,10 +11,10 @@ helpviewer_keywords:
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
 ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121972"
 ---
 # <a name="how-to-print-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunu Yazdırma
@@ -40,5 +40,5 @@ Geliştirme sürecinin bir parçası olarak, genellikle Windows formunuza bir ko
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Nasıl yapılır: GDI+ ile Resim İşleme](how-to-render-images-with-gdi.md)
-- [Nasıl yapılır: Windows Forms'da Grafik Yazdırma](how-to-print-graphics-in-windows-forms.md)
+- [Nasıl yapılır: GDI + ile görüntü işleme](how-to-render-images-with-gdi.md)
+- [Nasıl yapılır: Windows Forms'ta grafik yazdırma](how-to-print-graphics-in-windows-forms.md)

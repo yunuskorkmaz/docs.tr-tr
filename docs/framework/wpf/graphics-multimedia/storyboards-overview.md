@@ -10,10 +10,10 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124845"
 ---
 # <a name="storyboards-overview"></a>Görsel Taslaklara Genel Bakış
@@ -64,7 +64,7 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
 |<xref:System.Windows.Media.Animation.BeginStoryboard> ve <xref:System.Windows.EventTrigger>|Evet|Evet|Evet|Evet|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> ve bir özelliği <xref:System.Windows.Trigger>|Hayır|Evet|Evet|Evet|[Özellik Değeri Değiştiğinde bir Animasyonu Tetikleme](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> ve <xref:System.Windows.DataTrigger>|Hayır|Evet|Evet|Evet|[Nasıl yapılır: Veriler değiştiğinde bir animasyonu tetikleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> yöntemi|Evet|Hayır|Hayır|Hayır|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Yöntemi|Evet|Hayır|Hayır|Hayır|[Görsel Taslak Kullanarak Özelliğe Animasyon Ekleme](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Aşağıdaki örnekte bir <xref:System.Windows.Media.Animation.Storyboard> animasyon uygulamak için <xref:System.Windows.FrameworkElement.Width%2A> , bir <xref:System.Windows.Shapes.Rectangle> öğesi ve <xref:System.Windows.Media.SolidColorBrush.Color%2A> , bir <xref:System.Windows.Media.SolidColorBrush> , boyamak için kullanılan <xref:System.Windows.Shapes.Rectangle>.  
   
@@ -276,7 +276,7 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
   
 -   Belirtemezsiniz bir <xref:System.Windows.EventTrigger.SourceName%2A> için bir <xref:System.Windows.EventTrigger> veya <xref:System.Windows.Trigger>.  
   
--   Dinamik kaynak başvuruları veya veri bağlama ifadeleri ayarlamak için kullanamazsınız <xref:System.Windows.Media.Animation.Storyboard> veya animasyon özellik değerleri. Çünkü içindeki her şey bir <xref:System.Windows.Style> iş parçacığı açısından güvenli olmalıdır ve zamanlama sistemi <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> bunları iş parçacığı açısından güvenli hale getirmek için nesneleri. A <xref:System.Windows.Media.Animation.Storyboard> veya onun alt öğe zaman çizelgelerini dinamik kaynak başvuruları veya veri bağlama ifadeleri içeriyorsa nelze zmrazit. Dondurma ve diğer hakkında daha fazla bilgi için <xref:System.Windows.Freezable> özellikler bkz [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
+-   Dinamik kaynak başvuruları veya veri bağlama ifadeleri ayarlamak için kullanamazsınız <xref:System.Windows.Media.Animation.Storyboard> veya animasyon özellik değerleri. Çünkü içindeki her şey bir <xref:System.Windows.Style> iş parçacığı açısından güvenli olmalıdır ve zamanlama sistemi <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> bunları iş parçacığı açısından güvenli hale getirmek için nesneleri. A <xref:System.Windows.Media.Animation.Storyboard> veya onun alt öğe zaman çizelgelerini dinamik kaynak başvuruları veya veri bağlama ifadeleri içeriyorsa nelze zmrazit. Dondurma ve diğer hakkında daha fazla bilgi için <xref:System.Windows.Freezable> özellikler bkz [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
   
 -   İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], için olay işleyicileri bildiremezsiniz <xref:System.Windows.Media.Animation.Storyboard> veya animasyon olayları.  
   
@@ -290,7 +290,7 @@ Bu konu nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animatio
   
 -   <xref:System.Windows.EventTrigger.SourceName%2A> İçin bir <xref:System.Windows.EventTrigger> veya <xref:System.Windows.Trigger> alt nesneler için yalnızca yönlendirebiliriz <xref:System.Windows.Controls.ControlTemplate>.  
   
--   Dinamik kaynak başvuruları veya veri bağlama ifadeleri ayarlamak için kullanamazsınız <xref:System.Windows.Media.Animation.Storyboard> veya animasyon özellik değerleri. Çünkü içindeki her şey bir <xref:System.Windows.Controls.ControlTemplate> iş parçacığı açısından güvenli olmalıdır ve zamanlama sistemi <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> bunları iş parçacığı açısından güvenli hale getirmek için nesneleri. A <xref:System.Windows.Media.Animation.Storyboard> veya onun alt öğe zaman çizelgelerini dinamik kaynak başvuruları veya veri bağlama ifadeleri içeriyorsa nelze zmrazit. Dondurma ve diğer hakkında daha fazla bilgi için <xref:System.Windows.Freezable> özellikler bkz [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
+-   Dinamik kaynak başvuruları veya veri bağlama ifadeleri ayarlamak için kullanamazsınız <xref:System.Windows.Media.Animation.Storyboard> veya animasyon özellik değerleri. Çünkü içindeki her şey bir <xref:System.Windows.Controls.ControlTemplate> iş parçacığı açısından güvenli olmalıdır ve zamanlama sistemi <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> bunları iş parçacığı açısından güvenli hale getirmek için nesneleri. A <xref:System.Windows.Media.Animation.Storyboard> veya onun alt öğe zaman çizelgelerini dinamik kaynak başvuruları veya veri bağlama ifadeleri içeriyorsa nelze zmrazit. Dondurma ve diğer hakkında daha fazla bilgi için <xref:System.Windows.Freezable> özellikler bkz [Freezable nesnelerine genel bakış](../advanced/freezable-objects-overview.md).  
   
 -   İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], için olay işleyicileri bildiremezsiniz <xref:System.Windows.Media.Animation.Storyboard> veya animasyon olayları.  
   

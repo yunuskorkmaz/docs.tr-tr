@@ -14,10 +14,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
 ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124325"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView Denetimi (Windows Forms)
@@ -52,7 +52,7 @@ ms.locfileid: "59124325"
  [Windows Forms DataGridView Denetimindeki Verileri Sıralama](sorting-data-in-the-windows-forms-datagridview-control.md)  
  Denetiminde sıralama özellikleri açıklayan konuları sağlar.  
   
- [Windows Forms DataGridView Denetimindeki Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetiminde Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)  
  Kullanıcıların değiştirme açıklayan konulara ekleyin ve denetimi veri değiştirme sağlar.  
   
  [Windows Forms DataGridView Denetimi ile Seçim ve Pano Kullanımı](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
@@ -84,4 +84,4 @@ ms.locfileid: "59124325"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129941"
 ---
 # <a name="using-data-contracts"></a>Veri Sözleşmelerini Kullanma
@@ -71,13 +71,13 @@ A *veri anlaşması* hizmet bağlamalarında değiştirilebilmesi için verileri
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - [Seri Hale Getirilebilir Türler](../../../../docs/framework/wcf/feature-details/serializable-types.md)
-- [Veri Sözleşmesi Adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
-- [Veri Sözleşmesi Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Veri Anlaşması Adları](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [Veri Anlaşması Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Veri Üye Sırası](../../../../docs/framework/wcf/feature-details/data-member-order.md)
-- [Veri Sözleşmesi Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [İleri Uyumlu Veri Sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
-- [Veri Sözleşmesi Sürümü Oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Veri Anlaşması Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [İleri Uyumlu Veri Anlaşmaları](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Veri Anlaşması Sürümü Oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
 - [Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
 - [Veri Üyesi Varsayılan Değerler](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
-- [Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
-- [Nasıl yapılır: Bir Sınıf veya Yapı için Temel Bir Veri Sözleşmesi Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Nasıl yapılır: Bir sınıf veya yapı için temel veri sözleşmesi oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

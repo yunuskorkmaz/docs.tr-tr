@@ -14,10 +14,10 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
 ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126119"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Nasıl yapılır: (Visual Basic) bir işleci tanımlama
@@ -39,10 +39,10 @@ Bir sınıf veya yapı tanımladıysanız, standart bir işleç davranışını 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İşleç Yordamları](./operator-procedures.md)
-- [Nasıl yapılır: Dönüştürme İşleci Tanımlama](./how-to-define-a-conversion-operator.md)
-- [Nasıl yapılır: Bir İşleç Yordamı Çağırma](./how-to-call-an-operator-procedure.md)
-- [Nasıl yapılır: İşleçleri Tanımlayan Bir Sınıf Kullanma](./how-to-use-a-class-that-defines-operators.md)
+- [Nasıl yapılır: Bir dönüşüm işleci tanımlama](./how-to-define-a-conversion-operator.md)
+- [Nasıl yapılır: Bir işleç yordamı çağırma](./how-to-call-an-operator-procedure.md)
+- [Nasıl yapılır: İşleçleri tanımlayan bir sınıf kullanma](./how-to-use-a-class-that-defines-operators.md)
 - [Operator Deyimi](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Structure Yapısı](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Nasıl yapılır: Bir yapıyı bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Structure Deyimi](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Nasıl yapılır: Yapıyı Bildirme](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Mod İşleci](../../../../visual-basic/language-reference/operators/mod-operator.md)

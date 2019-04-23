@@ -11,10 +11,10 @@ helpviewer_keywords:
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
 ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125165"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData İç XAML Türü
@@ -53,4 +53,4 @@ XAML üretim içinde XML veri Adaları yerleşimini sağlar. XML öğeleri için
 
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Veri Bağlamaya Genel Bakış](../wpf/data/data-binding-overview.md)
-- [Biçimlendirme Uzantısı Bağlama](../wpf/advanced/binding-markup-extension.md)
+- [İşaretleme Uzantısı Bağlama](../wpf/advanced/binding-markup-extension.md)

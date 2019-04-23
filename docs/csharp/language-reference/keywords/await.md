@@ -9,10 +9,10 @@ helpviewer_keywords:
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
 ms.openlocfilehash: 91d76309fedb2a6f3d877a47f230fda74060107e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122895"
 ---
 # <a name="await-c-reference"></a>await (C# Başvurusu)
@@ -69,6 +69,6 @@ Aşağıdaki örnek, URL'leri için komut satırı bağımsız değişkenleri ge
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Async ve await ile Zaman Uyumsuz Programlama](../../../csharp/programming-guide/concepts/async/index.md)
-- [İzlenecek yol: Async ve Await Kullanarak Web'e Erişme](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async ve Await ile Zaman Uyumsuz Programlama](../../../csharp/programming-guide/concepts/async/index.md)
+- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

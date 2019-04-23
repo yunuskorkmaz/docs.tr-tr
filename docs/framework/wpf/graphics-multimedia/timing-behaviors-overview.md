@@ -6,10 +6,10 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129603"
 ---
 # <a name="timing-behaviors-overview"></a>Zamanlama Davranışlarına Genel Bakış

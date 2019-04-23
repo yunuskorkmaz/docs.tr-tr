@@ -12,10 +12,10 @@ ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8373ed288ff3e8e3f7992729e57b366a4c0043a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126756"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework İstemci Profili
@@ -32,4 +32,4 @@ Bir alt kümesi ile birlikte sağlanan .NET Framework'ün .NET istemci profilidi
 - [.NET framework istemci profili (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Visual Studio Çoklu Sürüm Desteğine Genel Bakış](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [.NET Framework Hedefleme Hatalarının Sorunlarını Giderme](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [Nasıl yapılır: .NET Framework sürümü hedefleme](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+- [Nasıl yapılır: .NET Framework’ün Bir Sürümünü Hedefleme](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

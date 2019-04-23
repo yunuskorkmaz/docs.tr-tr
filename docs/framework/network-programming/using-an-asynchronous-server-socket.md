@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
 ms.openlocfilehash: 32a2a99d5f71cb500dca467433f138a893d01e5b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119931"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Zaman Uyumsuz Sunucu Yuvası Kullanma
@@ -272,5 +272,5 @@ public static void ReadCallback(IAsyncResult ar)
 
 - [Zaman Uyumlu Sunucu Yuvası Kullanma](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Zaman Uyumsuz Sunucu Yuvası Örneği](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
-- [İş Parçacığı Oluşturma](../../../docs/standard/threading/index.md)
+- [İş parçacığı oluşturma](../../../docs/standard/threading/index.md)
 - [Yuvalarla Dinleme](../../../docs/framework/network-programming/listening-with-sockets.md)

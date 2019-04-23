@@ -15,10 +15,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
 ms.openlocfilehash: af5a607b4800635d096e83b55a5bd5a912c8538d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128784"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Nasıl yapılır: Arka Planda Dosya İndirme
@@ -68,5 +68,5 @@ Dosya indirme genel bir görevdir ve genellikle ayrı bir iş parçacığı üze
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Nasıl yapılır: Arka Planda İşlem Çalıştırma](how-to-run-an-operation-in-the-background.md)
-- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Nasıl yapılır: Arka planda işlem çalıştırma](how-to-run-an-operation-in-the-background.md)
+- [Nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)

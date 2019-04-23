@@ -11,10 +11,10 @@ helpviewer_keywords:
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120750"
 ---
 # <a name="filter-element-for-add-for-sharedlisteners"></a>\<Filtre > öğesi için \<Ekle > için \<sharedListeners >
@@ -40,7 +40,7 @@ Bir dinleyicisi için bir filtre ekler `sharedListeners` koleksiyonu.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|** türü**|Gerekli öznitelik.<br /><br /> Filtre türünü belirtir. Türünün tam adını kullanabilirsiniz (biçimi <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliği), veya derleme bilgiler dahil olmak üzere tam olarak nitelenmiş tür adını kullanabilirsiniz (biçimi <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> özelliği). Tam nitelikli tür adı oluşturma hakkında daha fazla bilgi için bkz. [belirtme tam olarak nitelenmiş tür adlarını](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**type**|Gerekli öznitelik.<br /><br /> Filtre türünü belirtir. Türünün tam adını kullanabilirsiniz (biçimi <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliği), veya derleme bilgiler dahil olmak üzere tam olarak nitelenmiş tür adını kullanabilirsiniz (biçimi <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> özelliği). Tam nitelikli tür adı oluşturma hakkında daha fazla bilgi için bkz. [belirtme tam olarak nitelenmiş tür adlarını](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Belirtilen sınıf için oluşturucuya geçirilen dizesi.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  

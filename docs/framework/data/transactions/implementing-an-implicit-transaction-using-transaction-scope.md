@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120984"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>İşlem Kapsamı Kullanarak Örtük İşlem Uygulama
@@ -121,7 +121,7 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- Örnek kod bloğu yeni bir kapsam oluşturma ortam işlem gösterir (`scope1`) ile <xref:System.Transactions.TransactionScopeOption.Required>. Kapsam `scope1` (bir işlem) yeni bir işlem oluşturur ve işlem yapar gibi bir kök kapsamı olan ortam işlem. `Scope1` Daha sonra her farklı bir ile üç daha fazla nesne oluşturur <xref:System.Transactions.TransactionScopeOption> değeri. Örneğin, `scope2` ile oluşturulan <xref:System.Transactions.TransactionScopeOption.Required>, ve bir ortam işlem olduğundan, onu oluşturan ilk işlem birleştirir `scope1`. Unutmayın `scope3` yeni bir işlem ve kök kapsamı `scope4` ortam hiçbir işlem sahiptir.  
+ Örnek kod bloğu yeni bir kapsam oluşturma ortam işlem gösterir (`scope1`) ile <xref:System.Transactions.TransactionScopeOption.Required>. Kapsam `scope1` (bir işlem) yeni bir işlem oluşturur ve işlem yapar gibi bir kök kapsamı olan ortam işlem. `Scope1`Daha sonra her farklı bir ile üç daha fazla nesne oluşturur <xref:System.Transactions.TransactionScopeOption> değeri. Örneğin, `scope2` ile oluşturulan <xref:System.Transactions.TransactionScopeOption.Required>, ve bir ortam işlem olduğundan, onu oluşturan ilk işlem birleştirir `scope1`. Unutmayın `scope3` yeni bir işlem ve kök kapsamı `scope4` ortam hiçbir işlem sahiptir.  
   
  Değerini varsayılan ve en sık kullanılan olsa da <xref:System.Transactions.TransactionScopeOption> olan <xref:System.Transactions.TransactionScopeOption.Required>, her diğer değerlerinin benzersiz amacı vardır.  
   

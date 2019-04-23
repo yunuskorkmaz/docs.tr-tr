@@ -8,10 +8,10 @@ ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa44090e589e7a2a70b8fb7dbd8d5e6967c1ed19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126651"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Derlemeler ve Yan Yana Yürütme
@@ -23,5 +23,5 @@ Yan yana yürütme, aynı bilgisayarda bir uygulama veya bileşenin birden çok 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Ortak Dil Çalışma Zamanındaki Derlemeler](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

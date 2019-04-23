@@ -1,5 +1,5 @@
 ---
-title: <add> öğe için <switches>
+title: <switches> için <add> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120100"
 ---
 # <a name="add-element-for-switches"></a>\<Ekle > öğesi için \<anahtarlar >
@@ -36,7 +36,7 @@ Bir izleme anahtarı ayarlandığı düzeyini belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**name**|Gerekli öznitelik.<br /><br /> Anahtar adını belirtir. Bu özniteliğin değeri karşılık gelen *displayName* Oluşturucusu geçiş yapmak için geçirilen parametre.|  
+|**Adı**|Gerekli öznitelik.<br /><br /> Anahtar adını belirtir. Bu özniteliğin değeri karşılık gelen *displayName* Oluşturucusu geçiş yapmak için geçirilen parametre.|  
 |**value**|Gerekli öznitelik.<br /><br /> Anahtar düzeyini belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  

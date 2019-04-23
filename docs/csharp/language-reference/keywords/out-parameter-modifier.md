@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
 ms.openlocfilehash: 769d1ac0b6266c87e99605c76a25e016f15eb11c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125761"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out parametresi değiştiricisi (C# Başvurusu)
@@ -73,7 +73,7 @@ C# 7.0 ile başlayarak, bildirebilirsiniz `out` değişkeni yöntem çağrısın
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../../../csharp/language-reference/index.md)
+- [C# başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
 - [Yöntem Parametreleri](../../../csharp/language-reference/keywords/method-parameters.md)

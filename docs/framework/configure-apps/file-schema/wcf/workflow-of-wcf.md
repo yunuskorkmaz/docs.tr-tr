@@ -3,10 +3,10 @@ title: <workflow> WCF
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
 ms.openlocfilehash: 190e66096cf2dfa2028c95b22526fc3c84712ab8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122076"
 ---
 # <a name="workflow-of-wcf"></a>\<İş akışı > WCF
@@ -40,7 +40,7 @@ ms.locfileid: "59122076"
 |-------------|-----------------|  
 |name|İzleme katılımcı adını belirten dize.|  
 |ProfilAdı|İzleme kayıtları tanımlayan izleme profilinin adını belirten bir dize için izleme katılımcı abone oldu.|  
-| türü|İzleme katılımcı türünü belirten bir dize.|  
+|türü|İzleme katılımcı türünü belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

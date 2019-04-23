@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cf9d903b4e44ea7a185ad8b3b71b7a5da2f2bda3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126353"
 ---
 # <a name="ihostpolicymanager-interface"></a>IHostPolicyManager Arabirimi
@@ -45,8 +45,8 @@ Ana bilgisayarının durumunda, ortak dil çalışma zamanı (CLR) gerçekleşti
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [EClrFailure Numaralandırması](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
-- [EClrOperation Numaralandırması](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [EPolicyAction Numaralandırması](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
+- [EClrFailure Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
+- [EClrOperation Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
+- [EPolicyAction Sabit Listesi](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
 - [ICLRPolicyManager Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
 - [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

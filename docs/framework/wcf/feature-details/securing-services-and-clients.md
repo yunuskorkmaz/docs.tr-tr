@@ -5,10 +5,10 @@ helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 ms.openlocfilehash: e455c7a48e1484d5acdcc5f6cdc9098997a3ba83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120737"
 ---
 # <a name="securing-services-and-clients"></a>Hizmet ve İstemcileri Güvenli Hale Getirme
@@ -18,7 +18,7 @@ Bu bölümdeki bilgiler, Windows Communication Foundation (WCF) güvenlik progra
  [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  İletileri güvenli hale getirmek için kullanılan programlama modeli genel bakış.  
   
- [Taşıma Güvenliği Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [Aktarım Güvenliğine Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
  Aktarım katmanı aracılığıyla iletileri güvenli hale getirmeyi genel bakış.  
   
  [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  

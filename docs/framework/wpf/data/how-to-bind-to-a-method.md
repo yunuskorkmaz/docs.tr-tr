@@ -7,10 +7,10 @@ helpviewer_keywords:
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
 ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123246"
 ---
 # <a name="how-to-bind-to-a-method"></a>Nasıl yapılır: Bir Yönteme Bağlama

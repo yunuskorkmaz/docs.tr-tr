@@ -3,10 +3,10 @@ title: WCF'de Kuyruğa Alma
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128771"
 ---
 # <a name="queuing-in-wcf"></a>WCF'de Kuyruğa Alma
@@ -105,9 +105,9 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
 ### <a name="sample-code"></a>Örnek Kod  
  WCF yazmaya yönelik adım adım yönergeler için MSMQ kullanan hizmetler aşağıdaki konulara bakın:  
   
--   [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Nasıl yapılır: WCF uç noktaları ve ileti uygulamaları ile Exchange ileti](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Nasıl yapılır: WCF uç noktaları ile kuyruğa alınmış iletiler gönderip alır](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Wcf'de MSMQ kullanımını gösteren tamamlanmış kod örneği için aşağıdaki konulara bakın:  
   
@@ -123,7 +123,7 @@ Bu bölümde, Windows Communication Foundation (WCF) kuyruğa alınan iletişim 
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [İleti Kuyruğa Alma ile İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+-   [Message Queuing Üzerinden İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,12 +1,12 @@
 ---
-title: <add> , <filters>
+title: <add> / <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
 ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128706"
 ---
 # <a name="add-of-filters"></a>\<Ekle >, \<filtreleri >
@@ -79,5 +79,5 @@ Günlüğe kaydedilecek ileti türünü belirten bir XPath filtresi.
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [İleti Günlüğe Kaydetmeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [Günlüğe İleti Kaydetmeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
 - [\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)

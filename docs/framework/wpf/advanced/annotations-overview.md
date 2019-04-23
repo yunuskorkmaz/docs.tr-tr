@@ -10,10 +10,10 @@ helpviewer_keywords:
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
 ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122453"
 ---
 # <a name="annotations-overview"></a>Ek açıklamalara Genel Bakış
@@ -72,7 +72,7 @@ Not yazma veya kağıt belge açıklamalarını biz neredeyse sorgulamadan kabul
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Annotations.IAnchorInfo>
 - [Ek Açıklamalar Şeması](annotations-schema.md)
-- [ContextMenu Genel Bakışı](../controls/contextmenu-overview.md)
+- [ContextMenu Genel Bakış](../controls/contextmenu-overview.md)
 - [Komut Vermeye Genel Bakış](commanding-overview.md)
 - [Akış Belgesine Genel Bakış](flow-document-overview.md)
 - [Nasıl yapılır: MenuItem için bir komut ekleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

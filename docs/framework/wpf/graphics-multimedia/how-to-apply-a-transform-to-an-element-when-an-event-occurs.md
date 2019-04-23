@@ -12,10 +12,10 @@ helpviewer_keywords:
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
 ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126444"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Nasıl yapılır: Bir Olay Oluştuğunda Öğeye Dönüşüm Uygulama
@@ -41,4 +41,4 @@ Bu örnek nasıl uygulanacağını gösterir. bir <xref:System.Windows.Media.Sca
 - <xref:System.Windows.Media.ScaleTransform>
 - [Dönüşümlere Genel Bakış](transforms-overview.md)
 - [Nasıl Yapılır Konuları](transformations-how-to-topics.md)
-- [Gönderilmiş Olaylara Genel Bakış](../advanced/routed-events-overview.md)
+- [Yönlendirilmiş Olaylara Genel Bakış](../advanced/routed-events-overview.md)

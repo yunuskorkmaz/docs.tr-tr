@@ -6,10 +6,10 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126366"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI Otomasyon Denetim Düzenlerine Genel Bakış
@@ -74,8 +74,8 @@ ms.locfileid: "59126366"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İstemciler İçin UI Otomasyon Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI Otomasyon İstemcileri İçin Denetim Düzeni Eşleştirmesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [UI Otomasyonu İstemcileri İçin Denetim Düzeni Eşlemesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
 - [UI Otomasyonuna Genel Bakış](../../../docs/framework/ui-automation/ui-automation-overview.md)
-- [İstemciler İçin UI Otomasyon Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [İstemciler İçin UI Otomasyon Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [İstemciler İçin UI Otomasyonu Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
+- [İstemciler İçin UI Otomasyonu Olayları](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)

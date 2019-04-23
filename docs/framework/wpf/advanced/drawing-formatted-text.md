@@ -11,10 +11,10 @@ helpviewer_keywords:
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
 ms.openlocfilehash: a61031c36dea84449ad07175287bf834544df886
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129096"
 ---
 # <a name="drawing-formatted-text"></a>Biçimlendirilmiş Metin Çizme
@@ -93,26 +93,26 @@ Metin yolu geometri izleyen küre
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Height%2A> uygun bir işlem için özellik [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 'y' konumu.|  
 |DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Height%2A> ve <xref:System.Windows.Media.FormattedText.Width%2A> çıktı dikdörtgeni hesaplamak için özellikler.|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Kullanım <xref:System.Windows.Media.FormattedText.TextAlignment%2A> özelliği ayarlanan değer ile <xref:System.Windows.TextAlignment.Center>.|  
-|DT_EDITCONTROL|None|Gerekli değildir. Alan genişliği ve son satırı işleme framework olduğu gibi aynı Denetim Düzenle ' dir.|  
+|DT_EDITCONTROL|Yok.|Gerekli değildir. Alan genişliği ve son satırı işleme framework olduğu gibi aynı Denetim Düzenle ' dir.|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Trimming%2A> özellik değeriyle <xref:System.Windows.TextTrimming.CharacterEllipsis>.<br /><br /> Kullanım <xref:System.Windows.TextTrimming.WordEllipsis> almak için [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DT_END_ELLIPSIS DT_WORD_ELIPSIS ile son üç nokta — bu durumda, üç nokta karakteri yalnızca tek bir satıra sığmayacak sözcükler ortaya çıkar.|  
 |DT_EXPAND_TABS|Yok.|Gerekli değildir. Sekmeleri otomatik olarak durdurur her 4 ems yaklaşık 8 dilden bağımsız karakter genişliği olduğu genişletilir.|  
-|DT_EXTERNALLEADING|Yok.|Gerekli değildir. Başlıca dış her zaman satır aralığı içinde bulunur. Kullanım <xref:System.Windows.Media.FormattedText.LineHeight%2A> kullanıcı tanımlı satır aralığı oluşturmak için özellik.|  
-|DT_HIDEPREFIX|None|Desteklenmez. '&' Dizesinden oluşturmadan önce Kaldır <xref:System.Windows.Media.FormattedText> nesne.|  
+|DT_EXTERNALLEADING|None|Gerekli değildir. Başlıca dış her zaman satır aralığı içinde bulunur. Kullanım <xref:System.Windows.Media.FormattedText.LineHeight%2A> kullanıcı tanımlı satır aralığı oluşturmak için özellik.|  
+|DT_HIDEPREFIX|Yok.|Desteklenmez. '&' Dizesinden oluşturmadan önce Kaldır <xref:System.Windows.Media.FormattedText> nesne.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Varsayılan metin hizalamasını budur. Kullanım <xref:System.Windows.Media.FormattedText.TextAlignment%2A> özelliği ayarlanan değer ile <xref:System.Windows.TextAlignment.Left>. (Yalnızca WPF)|  
 |DT_MODIFYSTRING|Yok.|Desteklenmez.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|Kırpma otomatik olarak gerçekleştirilmez. Metni kırpmak isterseniz kullanın <xref:System.Windows.Media.Visual.VisualClip%2A> özelliği.|  
 |DT_NOFULLWIDTHCHARBREAK|Yok.|Desteklenmez.|  
 |DT_NOPREFIX|Yok.|Gerekli değildir. Dizelerdeki '&' karakteri, her zaman normal bir karakter olarak kabul edilir.|  
 |DT_PATHELLIPSIS|None|Kullanım <xref:System.Windows.Media.FormattedText.Trimming%2A> özellik değeriyle <xref:System.Windows.TextTrimming.WordEllipsis>.|  
-|DT_PREFIX|Yok.|Desteklenmez. Bir kısayol tuşu ya da bağlantı gibi metin için alt çizgi kullanmak istiyorsanız kullanın <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> yöntemi.|  
-|DT_PREFIXONLY|Yok.|Desteklenmez.|  
+|DT_PREFIX|None|Desteklenmez. Bir kısayol tuşu ya da bağlantı gibi metin için alt çizgi kullanmak istiyorsanız kullanın <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> yöntemi.|  
+|DT_PREFIXONLY|None|Desteklenmez.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Kullanım <xref:System.Windows.Media.FormattedText.TextAlignment%2A> özelliği ayarlanan değer ile <xref:System.Windows.TextAlignment.Right>. (Yalnızca WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Ayarlama <xref:System.Windows.Media.FormattedText.FlowDirection%2A> özelliğini <xref:System.Windows.FlowDirection.RightToLeft>.|  
 |DT_SINGLELINE|Yok.|Gerekli değildir. <xref:System.Windows.Media.FormattedText> nesneleri sürece bir tek satır denetimi gibi davranırlar ya da <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> özelliği veya satır başı/satır besleme (CR/LF) metin içeriyor.|  
 |DT_TABSTOP|Yok.|Kullanıcı tanımlı sekme durağı pozisyonlar için destek yok.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Gerekli değildir. Üst gerekçe varsayılandır. Diğer dikey konumlandırma değerleri kullanılarak tanımlanabilir <xref:System.Windows.Media.FormattedText.Height%2A> uygun bir işlem için özellik [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 'y' konumu.|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Height%2A> uygun bir işlem için özellik [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 'y' konumu.|  
-|DT_WORDBREAK|None|Gerekli değildir. Sözcük bölme ile otomatik olarak gerçekleşir <xref:System.Windows.Media.FormattedText> nesneleri. Bunu devre dışı bırakamaz.|  
+|DT_WORDBREAK|Yok.|Gerekli değildir. Sözcük bölme ile otomatik olarak gerçekleşir <xref:System.Windows.Media.FormattedText> nesneleri. Bunu devre dışı bırakamaz.|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Kullanım <xref:System.Windows.Media.FormattedText.Trimming%2A> özellik değeriyle <xref:System.Windows.TextTrimming.WordEllipsis>.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

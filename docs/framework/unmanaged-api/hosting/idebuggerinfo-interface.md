@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94dfeaaa4ae917540c8030034959ad2f693bb025
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123744"
 ---
 # <a name="idebuggerinfo-interface"></a>IDebuggerInfo Arabirimi
@@ -44,4 +44,4 @@ Hata Ayıklama Hizmetleri durumuyla ilgili bilgileri almak için yöntemler sağ
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CorRuntimeHost Ortak Sınıfı](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
