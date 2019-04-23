@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5b94987631f7dbbe39e585a8ea2c2252b9427613
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079610"
 ---
-# <a name="imetadatadispenseropenscope-method"></a><span data-ttu-id="7b6ea-102">IMetaDataDispenser::OpenScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="7b6ea-102">IMetaDataDispenser::OpenScope Method</span></span>
-<span data-ttu-id="7b6ea-103">Var olan ve disk üzerindeki bir dosya açılır ve meta verileri belleğe eşler.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-103">Opens an existing, on-disk file and maps its metadata into memory.</span></span>  
+# <a name="imetadatadispenseropenscope-method"></a><span data-ttu-id="0de94-102">IMetaDataDispenser::OpenScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0de94-102">IMetaDataDispenser::OpenScope Method</span></span>
+<span data-ttu-id="0de94-103">Var olan ve disk üzerindeki bir dosya açılır ve meta verileri belleğe eşler.</span><span class="sxs-lookup"><span data-stu-id="0de94-103">Opens an existing, on-disk file and maps its metadata into memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7b6ea-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="7b6ea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0de94-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0de94-104">Syntax</span></span>  
   
 ```  
 HRESULT OpenScope (  
@@ -38,46 +38,46 @@ HRESULT OpenScope (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7b6ea-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="7b6ea-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0de94-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0de94-105">Parameters</span></span>  
  `szScope`  
- <span data-ttu-id="7b6ea-106">[in] Açılması için dosyanın adı.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-106">[in] The name of the file to be opened.</span></span> <span data-ttu-id="7b6ea-107">Dosyanın ortak dil çalışma zamanı (CLR) meta verileri içermelidir.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-107">The file must contain common language runtime (CLR) metadata.</span></span>  
+ <span data-ttu-id="0de94-106">[in] Açılması için dosyanın adı.</span><span class="sxs-lookup"><span data-stu-id="0de94-106">[in] The name of the file to be opened.</span></span> <span data-ttu-id="0de94-107">Dosyanın ortak dil çalışma zamanı (CLR) meta verileri içermelidir.</span><span class="sxs-lookup"><span data-stu-id="0de94-107">The file must contain common language runtime (CLR) metadata.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="7b6ea-108">[in] Değerini [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) açmak için (okuma, yazma ve benzeri) modunu belirtmek için sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-108">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.</span></span>  
+ <span data-ttu-id="0de94-108">[in] Değerini [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) açmak için (okuma, yazma ve benzeri) modunu belirtmek için sabit listesi.</span><span class="sxs-lookup"><span data-stu-id="0de94-108">[in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.</span></span>  
   
  `riid`  
- <span data-ttu-id="7b6ea-109">[in] Döndürülecek istenen meta veri arayüzü Laboratuvardaki; çağıran, (okuma) alma ya da (yazma) meta verileri yayma arabirimini kullanır.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-109">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.</span></span>  
+ <span data-ttu-id="0de94-109">[in] Döndürülecek istenen meta veri arayüzü Laboratuvardaki; çağıran, (okuma) alma ya da (yazma) meta verileri yayma arabirimini kullanır.</span><span class="sxs-lookup"><span data-stu-id="0de94-109">[in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.</span></span>  
   
- <span data-ttu-id="7b6ea-110">Değerini `riid` "Al" veya "Yayımla" arabirimlerinden birini belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-110">The value of `riid` must specify one of the "import" or "emit" interfaces.</span></span> <span data-ttu-id="7b6ea-111">IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 veya IID_IMetaDataImport2 değerler geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-111">Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.</span></span>  
+ <span data-ttu-id="0de94-110">Değerini `riid` "Al" veya "Yayımla" arabirimlerinden birini belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="0de94-110">The value of `riid` must specify one of the "import" or "emit" interfaces.</span></span> <span data-ttu-id="0de94-111">IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 veya IID_IMetaDataImport2 değerler geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="0de94-111">Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="7b6ea-112">[out] Döndürülen arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-112">[out] The pointer to the returned interface.</span></span>  
+ <span data-ttu-id="0de94-112">[out] Döndürülen arabirim işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="0de94-112">[out] The pointer to the returned interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7b6ea-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="7b6ea-113">Remarks</span></span>  
- <span data-ttu-id="7b6ea-114">Bellek içi kopyayı meta verilerin yöntemleri "Al" arabirimlerinden birini kullanarak veya eklenen "Yayımla" arabirimleri birinden yöntemleri kullanarak sorgulanabilir.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-114">The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0de94-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0de94-113">Remarks</span></span>  
+ <span data-ttu-id="0de94-114">Bellek içi kopyayı meta verilerin yöntemleri "Al" arabirimlerinden birini kullanarak veya eklenen "Yayımla" arabirimleri birinden yöntemleri kullanarak sorgulanabilir.</span><span class="sxs-lookup"><span data-stu-id="0de94-114">The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.</span></span>  
   
- <span data-ttu-id="7b6ea-115">Hedef dosyanın CLR meta veriler içermiyorsa `OpenScope` yöntemi başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-115">If the target file does not contain CLR metadata, the `OpenScope` method will fail.</span></span>  
+ <span data-ttu-id="0de94-115">Hedef dosyanın CLR meta veriler içermiyorsa `OpenScope` yöntemi başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="0de94-115">If the target file does not contain CLR metadata, the `OpenScope` method will fail.</span></span>  
   
- <span data-ttu-id="7b6ea-116">.NET Framework sürüm 1.0 ve sürüm 1.1, bir kapsam ise açıldığında ile `dwOpenFlags` için ofRead ayarlanırsa, bunu paylaşmak için uygundur.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-116">In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing.</span></span> <span data-ttu-id="7b6ea-117">Diğer bir deyişle, varsa sonraki çağrılar `OpenScope` oluşturdular. daha önce açıldı bir dosya, var olan kapsamı yeniden ve yeni bir veri yapılarını kümesi oluşturulmaz.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-117">That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created.</span></span> <span data-ttu-id="7b6ea-118">Ancak, sorunlar, bu paylaşım nedeniyle ortaya çıkabilir.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-118">However, problems can arise due to this sharing.</span></span>  
+ <span data-ttu-id="0de94-116">.NET Framework sürüm 1.0 ve sürüm 1.1, bir kapsam ise açıldığında ile `dwOpenFlags` için ofRead ayarlanırsa, bunu paylaşmak için uygundur.</span><span class="sxs-lookup"><span data-stu-id="0de94-116">In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing.</span></span> <span data-ttu-id="0de94-117">Diğer bir deyişle, varsa sonraki çağrılar `OpenScope` oluşturdular. daha önce açıldı bir dosya, var olan kapsamı yeniden ve yeni bir veri yapılarını kümesi oluşturulmaz.</span><span class="sxs-lookup"><span data-stu-id="0de94-117">That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created.</span></span> <span data-ttu-id="0de94-118">Ancak, sorunlar, bu paylaşım nedeniyle ortaya çıkabilir.</span><span class="sxs-lookup"><span data-stu-id="0de94-118">However, problems can arise due to this sharing.</span></span>  
   
- <span data-ttu-id="7b6ea-119">.NET Framework sürüm 2. 0'da, kapsamları ile açılır. `dwOpenFlags` ofRead kümesine artık paylaşılır.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-119">In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared.</span></span> <span data-ttu-id="7b6ea-120">Paylaşılan kapsam için ofReadOnly değeri kullanın.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-120">Use the ofReadOnly value to allow the scope to be shared.</span></span> <span data-ttu-id="7b6ea-121">Bir kapsam paylaşıldığında "meta veri arabirimleri okuma/yazma" kullanan sorguları başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-121">When a scope is shared, queries that use "read/write" metadata interfaces will fail.</span></span>  
+ <span data-ttu-id="0de94-119">.NET Framework sürüm 2. 0'da, kapsamları ile açılır. `dwOpenFlags` ofRead kümesine artık paylaşılır.</span><span class="sxs-lookup"><span data-stu-id="0de94-119">In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared.</span></span> <span data-ttu-id="0de94-120">Paylaşılan kapsam için ofReadOnly değeri kullanın.</span><span class="sxs-lookup"><span data-stu-id="0de94-120">Use the ofReadOnly value to allow the scope to be shared.</span></span> <span data-ttu-id="0de94-121">Bir kapsam paylaşıldığında "meta veri arabirimleri okuma/yazma" kullanan sorguları başarısız olur.</span><span class="sxs-lookup"><span data-stu-id="0de94-121">When a scope is shared, queries that use "read/write" metadata interfaces will fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7b6ea-122">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="7b6ea-122">Requirements</span></span>  
- <span data-ttu-id="7b6ea-123">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7b6ea-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0de94-122">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0de94-122">Requirements</span></span>  
+ <span data-ttu-id="0de94-123">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0de94-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7b6ea-124">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="7b6ea-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0de94-124">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="0de94-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7b6ea-125">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="7b6ea-125">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0de94-125">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="0de94-125">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="7b6ea-126">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="7b6ea-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="0de94-126">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0de94-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b6ea-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7b6ea-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0de94-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0de94-127">See also</span></span>
 
-- [<span data-ttu-id="7b6ea-128">IMetaDataDispenser Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7b6ea-128">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [<span data-ttu-id="7b6ea-129">IMetaDataDispenserEx Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7b6ea-129">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="7b6ea-130">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7b6ea-130">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="7b6ea-131">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7b6ea-131">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [<span data-ttu-id="7b6ea-132">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7b6ea-132">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="7b6ea-133">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7b6ea-133">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="7b6ea-134">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7b6ea-134">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="7b6ea-135">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="7b6ea-135">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="0de94-128">IMetaDataDispenser Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0de94-128">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="0de94-129">IMetaDataDispenserEx Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0de94-129">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="0de94-130">IMetaDataAssemblyEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0de94-130">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="0de94-131">IMetaDataAssemblyImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0de94-131">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="0de94-132">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0de94-132">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="0de94-133">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0de94-133">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="0de94-134">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0de94-134">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="0de94-135">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="0de94-135">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
