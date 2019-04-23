@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
 ms.openlocfilehash: 3a82642c985b7ec1cee885cdda7b054adbe3dfee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115485"
 ---
 # <a name="windows-forms-controls-by-function"></a>İşlevlere Göre Windows Forms Denetimleri
@@ -23,54 +23,54 @@ Windows Forms denetimleri ve İşlevler bir dizi yerine bileşenleri sunar. Aşa
   
 |İşlev|Denetim|Açıklama|  
 |--------------|-------------|-----------------|  
-|Verileri görüntüleme|<xref:System.Windows.Forms.DataGridView>  denetimi|<xref:System.Windows.Forms.DataGridView> Denetim verileri görüntülemek için özelleştirilebilir bir tablo sağlar. <xref:System.Windows.Forms.DataGridView> Sınıfı hücreler, satırlar, sütunlar ve Kenarlıklar özelleştirmesini sağlar. **Not:**  <xref:System.Windows.Forms.DataGridView> Denetim eksik olan çok sayıda temel ve gelişmiş özellikler sağlar <xref:System.Windows.Forms.DataGrid> denetimi. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
-|Veri bağlama ve gezinti|<xref:System.Windows.Forms.BindingSource> bileşenleri|Bir forma veri bağlama denetimleri, para birimi yönetimi, değişiklik bildirimi ve diğer hizmetleri sunarak basitleştirir.|  
-||<xref:System.Windows.Forms.BindingNavigator>  denetimi|Gidin ve bir form üzerinde verileri işlemek için bir araç çubuğu türü arabirimi sağlar.|  
-|Metin düzenleme|<xref:System.Windows.Forms.TextBox>  denetimi|Tasarım zamanında çalışma zamanında kullanıcı tarafından düzenlenebilir veya program aracılığıyla değiştirdiğiniz girilen metni görüntüler.|  
-||<xref:System.Windows.Forms.RichTextBox>  denetimi|İle düz metin veya zengin metin biçimi (RTF) biçimlendirme görüntülenecek metni sağlar.|  
-||<xref:System.Windows.Forms.MaskedTextBox>  denetimi|Kullanıcı girişi biçimi kısıtlar|  
-|Bilgi görüntüle (salt okunur)|<xref:System.Windows.Forms.Label>  denetimi|Kullanıcıların doğrudan düzenleyemeyeceği metin görüntüler.|  
-||<xref:System.Windows.Forms.LinkLabel>  denetimi|Metin stili Web bağlantı olarak görüntüler ve kullanıcının özel metin tıkladığında bir olay tetikler. Genellikle başka bir pencere veya bir Web sitesi bağlantı metindir.|  
-||<xref:System.Windows.Forms.StatusStrip>  denetimi|Çerçeveli bir alanı kullanmak genellikle en üst form altında uygulamanın geçerli durumu hakkında bilgileri görüntüler.|  
-||<xref:System.Windows.Forms.ProgressBar>  denetimi|Kullanıcı için geçerli bir işlemin ilerlemesini görüntüler.|  
-|Web sayfası görüntüleme|<xref:System.Windows.Forms.WebBrowser>  denetimi|Kullanıcının formunuzun içinden Web sayfalarında gezinmek sağlar.|  
-|Bir listeden seçim|<xref:System.Windows.Forms.CheckedListBox>  denetimi|Öğeleri, bir onay kutusu her eşlik kaydırılabilir bir listesini görüntüler.|  
-||<xref:System.Windows.Forms.ComboBox>  denetimi|Öğeleri açılan listesini görüntüler.|  
-||<xref:System.Windows.Forms.DomainUpDown>  denetimi|Kullanıcılar ile yukarı ve aşağı düğmeleri kaydırma yapmasına metin öğelerinin bir listesini görüntüler.|  
-||<xref:System.Windows.Forms.ListBox>  denetimi|Metin ve grafik öğeleri (simge) bir listesini görüntüler.|  
-||<xref:System.Windows.Forms.ListView>  denetimi|Öğeleri dört farklı görünümleri görüntüler. Görünüm yalnızca metin, metin küçük simgelerle, büyük simgeler metinle ve Ayrıntılar görünümü içerir.|  
-||<xref:System.Windows.Forms.NumericUpDown>  denetimi|Kullanıcılar ile yukarı ve aşağı düğmeleri kaydırma yapmasına sayı listesini görüntüler.|  
-||<xref:System.Windows.Forms.TreeView>  denetimi|İsteğe bağlı onay kutularını markaları ve simgelerini metinle oluşabilir düğüm nesneleri hiyerarşik koleksiyonu görüntüler.|  
-|Grafik görüntüleme|<xref:System.Windows.Forms.PictureBox>  denetimi|Grafik dosyaları, bit eşlemler ve simgeleri gibi bir çerçeve içinde görüntüler.|  
-|Grafik depolama|<xref:System.Windows.Forms.ImageList>  denetimi|Görüntüler için bir depo olarak görev yapar. <xref:System.Windows.Forms.ImageList> denetimleri ve içerdikleri görüntüleri bir uygulamadan diğerine yeniden kullanılabilir.|  
-|Değer ayarı|<xref:System.Windows.Forms.CheckBox>  denetimi|Bir kutuyu ve metin etiketini görüntüler. Genellikle seçeneklerini ayarlamak için kullanılır.|  
-||<xref:System.Windows.Forms.CheckedListBox>  denetimi|Öğeleri, bir onay kutusu her eşlik kaydırılabilir bir listesini görüntüler.|  
-||<xref:System.Windows.Forms.RadioButton>  denetimi|Açılıp kapatılabilir bir düğme görüntülenir.|  
-||<xref:System.Windows.Forms.TrackBar>  denetimi|Bir ölçek boyunca bir "tutacağı" taşıyarak bir ölçekte değerlerini ayarlamak kullanıcıların sağlar.|  
-|Tarih ayarı|<xref:System.Windows.Forms.DateTimePicker>  denetimi|Kullanıcıların bir tarih veya saat seçmesine izin vermek için bir grafik Takvim görüntüler.|  
-||<xref:System.Windows.Forms.MonthCalendar>  denetimi|Tarih aralığı seçmek kullanıcılara izin vermek için bir grafik Takvim görüntüler.|  
-|İletişim kutuları|<xref:System.Windows.Forms.ColorDialog>  denetimi|Kullanıcılara arabirimi öğenin rengini ayarlamak Renk Seçici iletişim kutusu görüntüler.|  
-||<xref:System.Windows.Forms.FontDialog>  denetimi|Kullanıcıların ve bir yazı tipi özniteliklerini ayarlama izin veren bir iletişim kutusu görüntüler.|  
-||<xref:System.Windows.Forms.OpenFileDialog>  denetimi|Kullanıcıların gidin ve bir dosya seçin izin veren bir iletişim kutusu görüntüler.|  
-||<xref:System.Windows.Forms.PrintDialog>  denetimi|Kullanıcıların bir yazıcı seçin ve özniteliklerini ayarlayın izin veren bir iletişim kutusu görüntüler.|  
-||<xref:System.Windows.Forms.PrintPreviewDialog>  denetimi|Bir denetimi nasıl görüntüleyen bir iletişim kutusu görüntüler <xref:System.Drawing.Printing.PrintDocument> bileşen yazdırıldığında görünür.|  
-||<xref:System.Windows.Forms.FolderBrowserDialog>  denetimi|Kullanıcıların göz atın, oluşturun ve sonunda bir klasör seçin izin veren bir iletişim kutusu görüntüler.|  
-||<xref:System.Windows.Forms.SaveFileDialog>  denetimi|Bir dosyaya kaydedin açmasına izin veren bir iletişim kutusu görüntüler.|  
-|Menü denetimleri|<xref:System.Windows.Forms.MenuStrip>  denetimi|Özel menü oluşturur. **Not:**  <xref:System.Windows.Forms.MenuStrip> Değiştirmek için tasarlanmış <xref:System.Windows.Forms.MainMenu> denetimi.|  
-||<xref:System.Windows.Forms.ContextMenuStrip>  denetimi|Özel bağlam menüleri oluşturur. **Not:**  <xref:System.Windows.Forms.ContextMenuStrip> Değiştirmek için tasarlanmış <xref:System.Windows.Forms.ContextMenu> denetimi.|  
-|Komutlar|<xref:System.Windows.Forms.Button>  denetimi|Başlatır, durdurur veya bir işlemi kesintiye uğratır.|  
-||<xref:System.Windows.Forms.LinkLabel>  denetimi|Metin stili Web bağlantı olarak görüntüler ve kullanıcının özel metin tıkladığında bir olay tetikler. Genellikle başka bir pencere veya bir Web sitesi bağlantı metindir.|  
-||<xref:System.Windows.Forms.NotifyIcon>  denetimi|Arka planda çalışan bir uygulamayı temsil eden bir görev durumu bildirim alanındaki simge görüntüler.|  
-||<xref:System.Windows.Forms.ToolStrip>  denetimi|Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer veya özel görünüm, ile veya olmadan temalar ve taşma ve çalışma zamanı öğesi yeniden sıralama desteği olabilir araç çubukları oluşturur. **Not:**  <xref:System.Windows.Forms.ToolStrip> Denetimi değiştirmek üzere tasarlanan <xref:System.Windows.Forms.ToolBar> denetimi.|  
-|Kullanıcı Yardımı|<xref:System.Windows.Forms.HelpProvider> bileşenleri|Açılan veya çevrimiçi Yardım denetimleri sağlar.|  
-||<xref:System.Windows.Forms.ToolTip> bileşenleri|Kullanıcı işaretçiyi denetimin üzerine getirildiğinde, bir denetimin amacını kısa bir açıklamasını görüntüleyen bir pencere sağlar.|  
-|Diğer denetimleri gruplandırma|<xref:System.Windows.Forms.Panel>  denetimi|Etiketlenmemiş, kaydırılabilir bir çerçeve denetimleri kümesini gruplar.|  
-||<xref:System.Windows.Forms.GroupBox>  denetimi|Bir etiketlenmiş, nonscrollable karesinde denetimler (örneğin, radyo düğmeleri) kümesini gruplar.|  
-||<xref:System.Windows.Forms.TabControl>  denetimi|Düzenleme ve bunlara erişmek için bir sekmeli sayfada gruplanmış nesneleri verimli bir şekilde sağlar.|  
-||<xref:System.Windows.Forms.SplitContainer>  denetimi|Taşınabilir bir çubukla ayırarak iki bölme sağlar. **Not:**  <xref:System.Windows.Forms.SplitContainer> Denetimi değiştirmek üzere tasarlanan <xref:System.Windows.Forms.Splitter> denetimi.|  
-||<xref:System.Windows.Forms.TableLayoutPanel>  denetimi|Satırları ve sütunları oluşan bir kılavuzda içeriği dışarı dinamik olarak yerleştirir bir panel temsil eder.|  
-||<xref:System.Windows.Forms.FlowLayoutPanel>  denetimi|Dinamik olarak, içeriğini yatay veya dikey olarak yerleştirir bir panel temsil eder.|  
-|Ses|<xref:System.Media.SoundPlayer>  denetimi|Ses dosyalarını .wav biçimde çalar. Sesler yüklenmedi veya zaman uyumsuz olarak yürütülen.|  
+|Verileri görüntüleme|<xref:System.Windows.Forms.DataGridView> Denetimi|<xref:System.Windows.Forms.DataGridView> Denetim verileri görüntülemek için özelleştirilebilir bir tablo sağlar. <xref:System.Windows.Forms.DataGridView> Sınıfı hücreler, satırlar, sütunlar ve Kenarlıklar özelleştirmesini sağlar. **Not:**  <xref:System.Windows.Forms.DataGridView> Denetim eksik olan çok sayıda temel ve gelişmiş özellikler sağlar <xref:System.Windows.Forms.DataGrid> denetimi. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|Veri bağlama ve gezinti|<xref:System.Windows.Forms.BindingSource> bileşeni|Bir forma veri bağlama denetimleri, para birimi yönetimi, değişiklik bildirimi ve diğer hizmetleri sunarak basitleştirir.|  
+||<xref:System.Windows.Forms.BindingNavigator> Denetimi|Gidin ve bir form üzerinde verileri işlemek için bir araç çubuğu türü arabirimi sağlar.|  
+|Metin düzenleme|<xref:System.Windows.Forms.TextBox> Denetimi|Tasarım zamanında çalışma zamanında kullanıcı tarafından düzenlenebilir veya program aracılığıyla değiştirdiğiniz girilen metni görüntüler.|  
+||<xref:System.Windows.Forms.RichTextBox> Denetimi|İle düz metin veya zengin metin biçimi (RTF) biçimlendirme görüntülenecek metni sağlar.|  
+||<xref:System.Windows.Forms.MaskedTextBox> Denetimi|Kullanıcı girişi biçimi kısıtlar|  
+|Bilgi görüntüle (salt okunur)|<xref:System.Windows.Forms.Label> Denetimi|Kullanıcıların doğrudan düzenleyemeyeceği metin görüntüler.|  
+||<xref:System.Windows.Forms.LinkLabel> Denetimi|Metin stili Web bağlantı olarak görüntüler ve kullanıcının özel metin tıkladığında bir olay tetikler. Genellikle başka bir pencere veya bir Web sitesi bağlantı metindir.|  
+||<xref:System.Windows.Forms.StatusStrip> Denetimi|Çerçeveli bir alanı kullanmak genellikle en üst form altında uygulamanın geçerli durumu hakkında bilgileri görüntüler.|  
+||<xref:System.Windows.Forms.ProgressBar> Denetimi|Kullanıcı için geçerli bir işlemin ilerlemesini görüntüler.|  
+|Web sayfası görüntüleme|<xref:System.Windows.Forms.WebBrowser> Denetimi|Kullanıcının formunuzun içinden Web sayfalarında gezinmek sağlar.|  
+|Bir listeden seçim|<xref:System.Windows.Forms.CheckedListBox> Denetimi|Öğeleri, bir onay kutusu her eşlik kaydırılabilir bir listesini görüntüler.|  
+||<xref:System.Windows.Forms.ComboBox> Denetimi|Öğeleri açılan listesini görüntüler.|  
+||<xref:System.Windows.Forms.DomainUpDown> Denetimi|Kullanıcılar ile yukarı ve aşağı düğmeleri kaydırma yapmasına metin öğelerinin bir listesini görüntüler.|  
+||<xref:System.Windows.Forms.ListBox> Denetimi|Metin ve grafik öğeleri (simge) bir listesini görüntüler.|  
+||<xref:System.Windows.Forms.ListView> Denetimi|Öğeleri dört farklı görünümleri görüntüler. Görünüm yalnızca metin, metin küçük simgelerle, büyük simgeler metinle ve Ayrıntılar görünümü içerir.|  
+||<xref:System.Windows.Forms.NumericUpDown> Denetimi|Kullanıcılar ile yukarı ve aşağı düğmeleri kaydırma yapmasına sayı listesini görüntüler.|  
+||<xref:System.Windows.Forms.TreeView> Denetimi|İsteğe bağlı onay kutularını markaları ve simgelerini metinle oluşabilir düğüm nesneleri hiyerarşik koleksiyonu görüntüler.|  
+|Grafik görüntüleme|<xref:System.Windows.Forms.PictureBox> Denetimi|Grafik dosyaları, bit eşlemler ve simgeleri gibi bir çerçeve içinde görüntüler.|  
+|Grafik depolama|<xref:System.Windows.Forms.ImageList> Denetimi|Görüntüler için bir depo olarak görev yapar. <xref:System.Windows.Forms.ImageList> denetimleri ve içerdikleri görüntüleri bir uygulamadan diğerine yeniden kullanılabilir.|  
+|Değer ayarı|<xref:System.Windows.Forms.CheckBox> Denetimi|Bir kutuyu ve metin etiketini görüntüler. Genellikle seçeneklerini ayarlamak için kullanılır.|  
+||<xref:System.Windows.Forms.CheckedListBox> Denetimi|Öğeleri, bir onay kutusu her eşlik kaydırılabilir bir listesini görüntüler.|  
+||<xref:System.Windows.Forms.RadioButton> Denetimi|Açılıp kapatılabilir bir düğme görüntülenir.|  
+||<xref:System.Windows.Forms.TrackBar> Denetimi|Bir ölçek boyunca bir "tutacağı" taşıyarak bir ölçekte değerlerini ayarlamak kullanıcıların sağlar.|  
+|Tarih ayarı|<xref:System.Windows.Forms.DateTimePicker> Denetimi|Kullanıcıların bir tarih veya saat seçmesine izin vermek için bir grafik Takvim görüntüler.|  
+||<xref:System.Windows.Forms.MonthCalendar> Denetimi|Tarih aralığı seçmek kullanıcılara izin vermek için bir grafik Takvim görüntüler.|  
+|İletişim kutuları|<xref:System.Windows.Forms.ColorDialog> Denetimi|Kullanıcılara arabirimi öğenin rengini ayarlamak Renk Seçici iletişim kutusu görüntüler.|  
+||<xref:System.Windows.Forms.FontDialog> Denetimi|Kullanıcıların ve bir yazı tipi özniteliklerini ayarlama izin veren bir iletişim kutusu görüntüler.|  
+||<xref:System.Windows.Forms.OpenFileDialog> Denetimi|Kullanıcıların gidin ve bir dosya seçin izin veren bir iletişim kutusu görüntüler.|  
+||<xref:System.Windows.Forms.PrintDialog> Denetimi|Kullanıcıların bir yazıcı seçin ve özniteliklerini ayarlayın izin veren bir iletişim kutusu görüntüler.|  
+||<xref:System.Windows.Forms.PrintPreviewDialog> Denetimi|Bir denetimi nasıl görüntüleyen bir iletişim kutusu görüntüler <xref:System.Drawing.Printing.PrintDocument> bileşen yazdırıldığında görünür.|  
+||<xref:System.Windows.Forms.FolderBrowserDialog> Denetimi|Kullanıcıların göz atın, oluşturun ve sonunda bir klasör seçin izin veren bir iletişim kutusu görüntüler.|  
+||<xref:System.Windows.Forms.SaveFileDialog> Denetimi|Bir dosyaya kaydedin açmasına izin veren bir iletişim kutusu görüntüler.|  
+|Menü denetimleri|<xref:System.Windows.Forms.MenuStrip> Denetimi|Özel menü oluşturur. **Not:**  <xref:System.Windows.Forms.MenuStrip> Değiştirmek için tasarlanmış <xref:System.Windows.Forms.MainMenu> denetimi.|  
+||<xref:System.Windows.Forms.ContextMenuStrip> Denetimi|Özel bağlam menüleri oluşturur. **Not:**  <xref:System.Windows.Forms.ContextMenuStrip> Değiştirmek için tasarlanmış <xref:System.Windows.Forms.ContextMenu> denetimi.|  
+|Komutlar|<xref:System.Windows.Forms.Button> Denetimi|Başlatır, durdurur veya bir işlemi kesintiye uğratır.|  
+||<xref:System.Windows.Forms.LinkLabel> Denetimi|Metin stili Web bağlantı olarak görüntüler ve kullanıcının özel metin tıkladığında bir olay tetikler. Genellikle başka bir pencere veya bir Web sitesi bağlantı metindir.|  
+||<xref:System.Windows.Forms.NotifyIcon> Denetimi|Arka planda çalışan bir uygulamayı temsil eden bir görev durumu bildirim alanındaki simge görüntüler.|  
+||<xref:System.Windows.Forms.ToolStrip> Denetimi|Microsoft Windows XP, Microsoft Office, Microsoft Internet Explorer veya özel görünüm, ile veya olmadan temalar ve taşma ve çalışma zamanı öğesi yeniden sıralama desteği olabilir araç çubukları oluşturur. **Not:**  <xref:System.Windows.Forms.ToolStrip> Denetimi değiştirmek üzere tasarlanan <xref:System.Windows.Forms.ToolBar> denetimi.|  
+|Kullanıcı Yardımı|<xref:System.Windows.Forms.HelpProvider> bileşeni|Açılan veya çevrimiçi Yardım denetimleri sağlar.|  
+||<xref:System.Windows.Forms.ToolTip> bileşeni|Kullanıcı işaretçiyi denetimin üzerine getirildiğinde, bir denetimin amacını kısa bir açıklamasını görüntüleyen bir pencere sağlar.|  
+|Diğer denetimleri gruplandırma|<xref:System.Windows.Forms.Panel> Denetimi|Etiketlenmemiş, kaydırılabilir bir çerçeve denetimleri kümesini gruplar.|  
+||<xref:System.Windows.Forms.GroupBox> Denetimi|Bir etiketlenmiş, nonscrollable karesinde denetimler (örneğin, radyo düğmeleri) kümesini gruplar.|  
+||<xref:System.Windows.Forms.TabControl> Denetimi|Düzenleme ve bunlara erişmek için bir sekmeli sayfada gruplanmış nesneleri verimli bir şekilde sağlar.|  
+||<xref:System.Windows.Forms.SplitContainer> Denetimi|Taşınabilir bir çubukla ayırarak iki bölme sağlar. **Not:**  <xref:System.Windows.Forms.SplitContainer> Denetimi değiştirmek üzere tasarlanan <xref:System.Windows.Forms.Splitter> denetimi.|  
+||<xref:System.Windows.Forms.TableLayoutPanel> Denetimi|Satırları ve sütunları oluşan bir kılavuzda içeriği dışarı dinamik olarak yerleştirir bir panel temsil eder.|  
+||<xref:System.Windows.Forms.FlowLayoutPanel> Denetimi|Dinamik olarak, içeriğini yatay veya dikey olarak yerleştirir bir panel temsil eder.|  
+|Ses|<xref:System.Media.SoundPlayer> Denetimi|Ses dosyalarını .wav biçimde çalar. Sesler yüklenmedi veya zaman uyumsuz olarak yürütülen.|  
   
 ## <a name="superseded-controls-and-components-by-function"></a>Denetimleri ve bileşenleri işlevi tarafından değiştirilen  
   
@@ -86,5 +86,5 @@ Windows Forms denetimleri ve İşlevler bir dizi yerine bileşenleri sunar. Aşa
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
 - [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
 ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115316"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+'da Fırçalar ve Dolgulu Şekiller
@@ -83,5 +83,5 @@ Kapalı şekil, bir elips ya da dikdörtgen gibi bir anahat ve bir iç oluşur. 
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
 - [Çizgiler, Eğriler ve Şekiller](lines-curves-and-shapes.md)
-- [Nasıl yapılır: Bir Windows Formunda Doldurulmuş Dikdörtgen Çizme](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [Nasıl yapılır: Bir Windows Formunda Doldurulmuş Elips Çizme](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [Nasıl yapılır: Bir Windows formunda doldurulmuş dikdörtgen çizme](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Nasıl yapılır: Bir Windows formunda doldurulmuş elips çizme](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

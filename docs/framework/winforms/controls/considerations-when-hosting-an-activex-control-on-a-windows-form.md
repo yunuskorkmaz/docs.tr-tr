@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
 ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108764"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular
@@ -30,8 +30,8 @@ Windows Forms ana bilgisayar Windows Forms denetimleri için optimize edilmişti
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](how-to-add-activex-controls-to-windows-forms.md)
-- [Kod Erişimi Güvenliği](../../misc/code-access-security.md)
-- [Çeşitli Dillerde ve Kitaplıklarda Karşılaştırılan Denetimler ve Programlanabilir Nesneler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [Windows Formlarına Denetimler Koyma](putting-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](how-to-add-activex-controls-to-windows-forms.md)
+- [Kod erişimi güvenliği](../../misc/code-access-security.md)
+- [Denetimler ve programlanabilir nesneler çeşitli dillerde ve kitaplıklarda karşılaştırılan](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
+- [Windows Forms’a Denetimler Yerleştirme](putting-controls-on-windows-forms.md)
 - [Windows Forms Denetimleri](index.md)

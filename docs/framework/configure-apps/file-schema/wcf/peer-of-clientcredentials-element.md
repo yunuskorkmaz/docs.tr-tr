@@ -3,10 +3,10 @@ title: <peer> ' ın <clientCredentials> öğesi
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
 ms.openlocfilehash: 7074ee992755557d7e5503035c89bdbefd678792
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107243"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<Eş >, \<clientCredentials > öğesi

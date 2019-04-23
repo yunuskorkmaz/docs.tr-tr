@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118202"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation Güvenliği
@@ -19,7 +19,7 @@ Bu bölümdeki konularda, Windows Communication Foundation (WCF) güvenlik özel
  Windows Server AppFabric ve güvenlik hakkında daha fazla bilgi için bkz. [Windows Server AppFabric güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  Wcf'de güvenlik özelliklerini açıklar.  
   
  [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
@@ -37,7 +37,7 @@ Bu bölümdeki konularda, Windows Communication Foundation (WCF) güvenlik özel
  [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  WCF güvenlik özellikleri kullanarak iletileri güvenli hale getirmek açıklar.  
   
- [Kimlik doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Kimlik Doğrulaması](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Genel kimlik doğrulama görevlerini gösterir.  
   
  [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  

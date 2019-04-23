@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
 ms.openlocfilehash: a33cf4cd865921c04ef10c7fccf3a67c3d22de73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115680"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Türleri
@@ -91,6 +91,6 @@ ms.locfileid: "59115680"
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
 - [DataGridView Denetimi](datagridview-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms DataGridView Denetiminin Hücrelerinde Resim Görüntüleme](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Görüntü Sütunlarıyla Çalışma](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminin hücrelerinde görüntü görüntüleme](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminde görüntü sütunlarıyla çalışma](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetimini Özelleştirme](customizing-the-windows-forms-datagridview-control.md)

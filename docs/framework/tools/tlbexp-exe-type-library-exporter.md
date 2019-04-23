@@ -11,10 +11,10 @@ ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bcf1773cfe839d9a4ac197d701d155b68cdb949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109428"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)
@@ -34,12 +34,12 @@ tlbexp assemblyName [options]
   
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
-|*derlemeAdı*|Bir tür kitaplığının kendisi için dışarı aktarılacağı derleme.|  
+|*AssemblyName*|Bir tür kitaplığının kendisi için dışarı aktarılacağı derleme.|  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
 |**/ asmpath:** *dizini*|Derlemelerin aranacağı konumu belirtir. Bu seçeneği kullanırsanız, geçerli dizini de dahil olmak üzere, başvurulan derlemelerin aranacağı konumları açıkça belirtmeniz gerekir.<br /><br /> Kullanırken **asmpath** seçeneği, tür kitaplığı dışarı Aktarıcı aramaz bir derlemeyi genel derleme önbelleğinde (GAC).|  
-|**/help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/ adları:** *dosya adı*|Bir tür kitaplığındaki adların büyük küçük harfle nasıl yazılacağını belirtir. *Filename* bağımsız değişkeni bir metin dosyasıdır. Dosyadaki her bir satır, tür kitaplığındaki bir adın büyük küçük harfle nasıl yazılacağını belirtir.|  
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |**/oldnames**|Bir tür adı çakışması varsa, Tlbexp.exe'yi donatılmış tür adlarını dışarı aktarmaya zorlar. .NET Framework sürüm 2.0'dan önceki sürümlerde varsayılan davranışın bu olduğunu unutmayın.|  
@@ -49,7 +49,7 @@ tlbexp assemblyName [options]
 |**/tlbreference:** *typelibraryname*|Tlbexp.exe'yi, kayıt defterine danışmadan tür kitaplığı başvurularını açıkça çözmeye zorlar. Örneğin, derleme B derleme A'ya başvurursa, kayıt defterinde belirtilen tür kitaplığına güvenmek yerine, bir açık tür kitaplığı başvurusu sağlamak için bu seçeneği kullanabilirsiniz. Tlbexp.exe, tür kitaplığı sürümünün derleme sürümüyle eşleşmesini sağlamak için bir sürüm denetimi yapar; tersi durumda, bir hata üretir.<br /><br /> Unutmayın **defterine başvurduğunu** seçeneği hala kayıt durumlarda danışır burada <xref:System.Runtime.InteropServices.ComImportAttribute> özniteliği, ardından başka bir tür tarafından gerçekleştirilen bir arabirime uygulanır.|  
 |**/tlbrefpath:** *yolu*|Başvurulan tür kitaplığının tam olarak belirtilen yolu.|  
 |**/win32**|64 bit'lik bir bilgisayarda derleme yaparken, bu seçenek Tlbexp.exe'nin bir 32 bit tür kitaplığı ürettiğini belirtir.|  
-|**/win64**|32-bit bir bilgisayarda derleme yaparken, bu seçenek Tlbexp.exe'nin bir 64 bit tür kitaplığı ürettiğini belirtir.|  
+|**/Win64**|32-bit bir bilgisayarda derleme yaparken, bu seçenek Tlbexp.exe'nin bir 64 bit tür kitaplığı ürettiğini belirtir.|  
 |**/verbose**|Ayrıntılı modu belirtir; kendileri için bir tür kitaplığı üretilmesi gereken tüm başvurulan derlemelerin listesini görüntüler.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
@@ -134,6 +134,6 @@ tlbexp Sample.dll
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [Araçlar](../../../docs/framework/tools/index.md)
 - [Regasm.exe (Derleme Kayıt Aracı)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Derlemeden Tür Kitaplığına Dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
+- [Derlemeden tür kitaplığına dönüştürme özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
 - [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
 ms.openlocfilehash: f1e4257804b6ce77eeb1bed7b984e90e90cc2752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113795"
 ---
 # <a name="richtextbox"></a>RichTextBox
 <xref:System.Windows.Controls.RichTextBox> Kes ve Yapıştır, zengin belge sunumu ve içerik seçimi gibi özellikleri için yerleşik destek ile düzenleme denetimi öğe tanımlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [RichTextBox Genel Bakışı](richtextbox-overview.md)  
+ [RichTextBox Genel Bakış](richtextbox-overview.md)  
  [Nasıl Yapılır Konuları](richtextbox-how-to-topics.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.

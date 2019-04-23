@@ -5,10 +5,10 @@ ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 610e46d5cb550a266c5558c49239d1818c1e85de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107282"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKey yöntemi

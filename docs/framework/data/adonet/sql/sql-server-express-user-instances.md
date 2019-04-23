@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111156"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express Kullanıcı Örnekleri
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  Ağ Protokolü kullanıcı örnekleri için adlandırılmış kanallar yerel olması gerekir. Bir kullanıcı örneği bir SQL Server'ın uzak örneğinde başlatılamıyor ve SQL Server oturumları izin verilmez.  
   
 ## <a name="connecting-to-a-user-instance"></a>Bir kullanıcı örneğine bağlanma  
- `User Instance` Ve `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> anahtar sözcüklere izin bir <xref:System.Data.SqlClient.SqlConnection> bir kullanıcı örneğine bağlanmak için. Kullanıcı örnekleri tarafından da desteklenir <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` ve `AttachDBFilename` özellikleri.  
+ `User Instance` Ve `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> anahtar sözcüklere izin bir <xref:System.Data.SqlClient.SqlConnection> bir kullanıcı örneğine bağlanmak için. Kullanıcı örnekleri tarafından da desteklenir <xref:System.Data.SqlClient.SqlConnectionStringBuilder> `UserInstance` ve `AttachDBFilename` özellikleri.  
   
  Aşağıda gösterilen örnek bağlantı dizesi hakkında aşağıdakileri unutmayın:  
   
@@ -58,7 +58,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Ayrıca <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> ve <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> özellikler zamanında bağlantı dizenizi oluşturmak için çalışma zamanında.  
+>  Ayrıca <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> ve <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> özellikler zamanında bağlantı dizenizi oluşturmak için çalışma zamanında.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Kullanarak &#124;DataDirectory&#124; değiştirme dizesi  
  `AttachDbFileName` ADO.NET 2. 0'sunulmasıyla birlikte genişletilmişse `|DataDirectory|` (kanal sembolleri alınmış) değiştirme dizesi. `DataDirectory` ile birlikte kullanılan `AttachDbFileName` bir veri dosyası için göreli bir yol belirtmek için göreli bir yol olan yerine veri kaynağına dayalı bağlantı dizesi oluşturmak, geliştiricilerin tam yolunu belirtmeniz gerekir.  

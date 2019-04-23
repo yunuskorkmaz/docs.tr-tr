@@ -6,16 +6,16 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
 ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106672"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Sütun Sıralama Modları
 <xref:System.Windows.Forms.DataGridView> Sütun sıralama modları üç sahip. Her bir sütunun sıralama modu aracılığıyla belirtilen <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> aşağıdakilerden birini ayarlanabilir sütunun özelliği <xref:System.Windows.Forms.DataGridViewColumnSortMode> sabit listesi değerleri.  
   
-|`DataGridViewColumnSortMode` value|Açıklama|  
+|`DataGridViewColumnSortMode` Değer|Açıklama|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|Metin kutusu sütunları için varsayılan. Sütun üst bilgilerini seçimi için kullanılmıyorsa, otomatik olarak sütun başlığına tıklayarak sıralar <xref:System.Windows.Forms.DataGridView> bu sütuna göre sıralama düzenini belirten bir simge görüntüler.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|Varsayılan olmayan – metin kutusu sütunlar için. Bu sütun programlamayla sıralama; Sıralama glif boşluk ayrılmış şekilde ancak bu sıralama için tasarlanmamıştır.|  
@@ -67,5 +67,5 @@ ms.locfileid: "59106672"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [Windows Forms DataGridView Denetimindeki Verileri Sıralama](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunlar için Sıralama Modlarını Ayarlama](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Sıralamayı Özelleştirme](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminde sütunlar için sıralama modlarını ayarlama](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminde sıralamayı özelleştirme](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

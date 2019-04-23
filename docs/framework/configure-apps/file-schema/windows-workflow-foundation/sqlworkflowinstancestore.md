@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
 ms.openlocfilehash: 8601f1c7f4e1dbf911020c328652c371bf039124
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119086"
 ---
 # <a name="sqlworkflowinstancestore"></a>\<sqlWorkflowInstanceStore >
@@ -43,7 +43,7 @@ Yapılandırmanıza olanak tanıyan bir hizmet davranışını <xref:System.Acti
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|bağlantı dizesi|Temel alınan bir Kalıcılık veritabanına bağlanmak için kullanılan bir bağlantı dizesi içeren bir dize.|  
+|connectionString|Temel alınan bir Kalıcılık veritabanına bağlanmak için kullanılan bir bağlantı dizesi içeren bir dize.|  
 |connectionStringName|Veritabanı sunucusu için bir adlandırılmış bağlantı dizesi içeren bir dize. Bir adlandırılmış bağlantı dizesi "DefaultConnectionString" örneğidir.|  
 |honstLockRenewalPeriod|Ana bilgisayar örneği kilidi yenilemeniz gerekir süre belirten bir Timespan değeri. Ana bilgisayar belirli bir süre içinde kilidi yenileme değil, örnek kilidi açılmış ve başka bir ana bilgisayar tarafından çekilmesi.<br /><br /> Bir iş akışı kaldırılırken ayrıca kalıcı anlamına gelir. Bu öznitelik iş akışı örneği kalıcı ve hemen sonra kaldırıldığında sıfır olarak ayarlanırsa, iş akışı boş olur. Bu öznitelik için TimeSpan.MaxValue etkili bir şekilde ayarlanması kaldırma işlemi devre dışı bırakır. Boş iş akışı örnekleri hiçbir zaman kaldırılır.|  
 |instanceCompletionAction|İş akışı örneği tamamlandıktan sonra iş akışı örneği verileri sürdürme deposunda olup tutulur veya bu noktada silinmiş varsa belirten bir değer. Bu değer türünde <xref:System.Activities.DurableInstancing.InstanceCompletionAction>.<br /><br /> Numaralandırılan eylemleri sürdürme deposundan örneği verileri silme veya örnek kendi işlemi tamamlandığında örneği veri sürdürme deposundan silme değil oluşur.<br /><br /> Örnekleri engel olmak sonra tamamlama Kalıcılık oluşturuyorsa veritabanına neden olur ve bu veritabanı performansı etkiler. Performans gereksinimlerinize uygun düzenli aralıklarla veritabanının performans düzeyinde olduğundan emin olmak için bu kayıtları silmek için bir veritabanı temizleme İlkesi yapılandırmanız gerekir.|  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107269"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma
@@ -18,27 +18,27 @@ ms.locfileid: "59107269"
  Bu bölümdeki konular, tasarım zamanında ve çalışma zamanı ayarları nasıl kullanılacağını açıklar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Tasarım Zamanında Yeni Ayar Oluşturma](how-to-create-a-new-setting-at-design-time.md)  
+ [Nasıl yapılır: Tasarım zamanında yeni ayar oluşturma](how-to-create-a-new-setting-at-design-time.md)  
   
  Bir uygulama için yeni bir ayar oluşturmak için Visual Studio kullanmayı açıklar.  
   
- [Nasıl yapılır: Tasarım Zamanında Mevcut Bir Ayarın Değerini Değiştirme](how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
+ [Nasıl yapılır: Tasarım zamanında mevcut bir ayarın değerini değiştirme](how-to-change-the-value-of-an-existing-setting-at-design-time.md)  
   
  Mevcut bir ayarın değerini değiştirmek için Visual Studio kullanmayı açıklar.  
   
- [Nasıl yapılır: Uygulama Oturumları Arasında Bir Ayarın Değerini Değiştirme](how-to-change-the-value-of-a-setting-between-application-sessions.md)  
+ [Nasıl yapılır: Uygulama oturumları arasında bir ayarın değerini değiştirme](how-to-change-the-value-of-a-setting-between-application-sessions.md)  
   
  Uygulama oturumları arasında derlenmiş bir uygulamada bir ayarın değerini değiştirme işlemi açıklanmaktadır.  
   
- [Nasıl yapılır: Çalışma Zamanında C# ile Ayarları Okuma](how-to-read-settings-at-run-time-with-csharp.md)  
+ [Nasıl yapılır: Çalışma zamanında ile ayarları okumaC#](how-to-read-settings-at-run-time-with-csharp.md)  
   
  Ayarlarla okumayı kod kullanmayı açıklar C#.  
   
- [Nasıl yapılır: Çalışma Zamanında C# ile Kullanıcı Ayarlarını Yazma](how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [Nasıl yapılır: Çalışma zamanında ile kullanıcı ayarlarını yazmaC#](how-to-write-user-settings-at-run-time-with-csharp.md)  
   
  Kod yazma ve değerleri ile kullanıcı ayarlarını kaydetmek için kullanmayı açıklar C#.  
   
- [Nasıl yapılır: Uygulamanıza C#'de Birden Çok Ayar Kümesi Ekleme](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
+ [Nasıl yapılır: Uygulamanızda birden çok ayar kümesi eklemeC#](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
   
  Bir uygulama ile birden çok ayar kümesi ekleme hakkında ayrıntılı C#.  
   

@@ -3,10 +3,10 @@ title: BindingElement Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
 ms.openlocfilehash: 600bf9b394078ffc1b1bc97390bd0de406d64338
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115173"
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement Oluşturma
@@ -59,11 +59,11 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="encoding-binding-elements"></a>Kodlama bağlama öğeleri  
  Yeni kodlama bağlama öğeleri oluşturmak için başlangıç genişleterek <xref:System.ServiceModel.Channels.BindingElement> sınıfı ve uygulama <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType> sınıfı. En azından, ardından uygulamalıdır <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> yöntemleri ve <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType> özelliği.  
   
--   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>biçimindeki telefon numarasıdır. Bu bağlama öğesi yeni bir kopyasını döndürür. En iyi uygulama, bu bağlama öğesi Uygulama yazarlarına olan öneririz <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> temel Kopyala oluşturucusunu çağırır bir kopya Oluşturucu kullanarak, ardından bu sınıftaki herhangi bir ek alanlar kopyalar.  
+-   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. Bu bağlama öğesi yeni bir kopyasını döndürür. En iyi uygulama, bu bağlama öğesi Uygulama yazarlarına olan öneririz <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> temel Kopyala oluşturucusunu çağırır bir kopya Oluşturucu kullanarak, ardından bu sınıftaki herhangi bir ek alanlar kopyalar.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>biçimindeki telefon numarasıdır. Döndürür bir <xref:System.ServiceModel.Channels.MessageEncoderFactory>, gerçek sınıfı için bir tanıtıcı, sağlayan yeni kodlayıcınız ve hangi genişletmelidir uygulayan <xref:System.ServiceModel.Channels.MessageEncoder>. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Channels.MessageEncoderFactory> ve <xref:System.ServiceModel.Channels.MessageEncoder>.  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. Döndürür bir <xref:System.ServiceModel.Channels.MessageEncoderFactory>, gerçek sınıfı için bir tanıtıcı, sağlayan yeni kodlayıcınız ve hangi genişletmelidir uygulayan <xref:System.ServiceModel.Channels.MessageEncoder>. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Channels.MessageEncoderFactory> ve <xref:System.ServiceModel.Channels.MessageEncoder>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>biçimindeki telefon numarasıdır. Döndürür <xref:System.ServiceModel.Channels.MessageVersion> bu kodlama kullanıldığında, temsil eden SOAP ve WS-Addressing sürümlerini kullanılıyor.  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. Döndürür <xref:System.ServiceModel.Channels.MessageVersion> bu kodlama kullanıldığında, temsil eden SOAP ve WS-Addressing sürümlerini kullanılıyor.  
   
  İsteğe bağlı yöntemler ve özellikler kullanıcı tanımlı kodlama bağlama öğeleri için tam bir listesi için bkz. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
