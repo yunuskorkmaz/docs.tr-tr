@@ -8,37 +8,37 @@ helpviewer_keywords:
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
 ms.openlocfilehash: 6b4f5de92f19223a6692236fb3496a1dbbddef5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226436"
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="18111-102">Anahtar Çerçeve Animasyonu ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="18111-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="18111-103">Bu bölümdeki konular ana kare animasyonları iki özellik değerleri ve denetim ilişkilendirme birden fazla animasyon eklemek için nasıl kullanılacağını göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="18111-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="e684a-102">Anahtar Çerçeve Animasyonu ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="e684a-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="e684a-103">Bu bölümdeki konular ana kare animasyonları iki özellik değerleri ve denetim ilişkilendirme birden fazla animasyon eklemek için nasıl kullanılacağını göstermektedir.</span><span class="sxs-lookup"><span data-stu-id="e684a-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="18111-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="18111-104">In This Section</span></span>  
- [<span data-ttu-id="18111-105">Anahtar Çerçeveler Kullanarak bir Nesneye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="18111-105">Animate an Object by Using Key Frames</span></span>](how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="18111-106">Anahtar Çerçeveler Kullanarak bir Boole Değerine Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="18111-106">Animate a Boolean by Using Key Frames</span></span>](how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="18111-107">Anahtar Çerçeveler Kullanarak bir Çifte Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="18111-107">Animate a Double by Using Key Frames</span></span>](how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="18111-108">Anahtar Çerçeveler Kullanarak bir Matrise Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="18111-108">Animate a Matrix by Using Key Frames</span></span>](how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="18111-109">Anahtar Çerçeveler Kullanarak bir Noktaya Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="18111-109">Animate a Point by Using Key Frames</span></span>](how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="18111-110">Anahtar Çerçeveler Kullanarak Dikdörtgen Geometriye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="18111-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="18111-111">Anahtar Çerçeveler Kullanarak bir Dizeye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="18111-111">Animate a String by Using Key Frames</span></span>](how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="18111-112">Anahtar Çerçeveler Kullanarak Renge Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="18111-112">Animate Color by Using Key Frames</span></span>](how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="18111-113">Anahtar Çerçeveler Kullanarak Boyut Değişikliklerine Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="18111-113">Animate Size Changes by Using Key Frames</span></span>](how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="18111-114">Anahtar Çerçeveler Kullanarak Kenarlık Kalınlığına Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="18111-114">Animate the Thickness of a Border by Using Key Frames</span></span>](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="18111-115">Anahtar Çerçeve Animasyonu Zamanlamasını Denetleme</span><span class="sxs-lookup"><span data-stu-id="18111-115">Control Key-Frame Animation Timing</span></span>](how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e684a-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e684a-104">In This Section</span></span>  
+ [<span data-ttu-id="e684a-105">Anahtar Çerçeveler Kullanarak bir Nesneye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="e684a-105">Animate an Object by Using Key Frames</span></span>](how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="e684a-106">Anahtar Çerçeveler Kullanarak bir Boole Değerine Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="e684a-106">Animate a Boolean by Using Key Frames</span></span>](how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="e684a-107">Anahtar Çerçeveler Kullanarak bir Çifte Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="e684a-107">Animate a Double by Using Key Frames</span></span>](how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="e684a-108">Anahtar Çerçeveler Kullanarak bir Matrise Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="e684a-108">Animate a Matrix by Using Key Frames</span></span>](how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="e684a-109">Anahtar Çerçeveler Kullanarak bir Noktaya Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="e684a-109">Animate a Point by Using Key Frames</span></span>](how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="e684a-110">Anahtar Çerçeveler Kullanarak Dikdörtgen Geometriye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="e684a-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="e684a-111">Anahtar Çerçeveler Kullanarak bir Dizeye Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="e684a-111">Animate a String by Using Key Frames</span></span>](how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="e684a-112">Anahtar Çerçeveler Kullanarak Renge Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="e684a-112">Animate Color by Using Key Frames</span></span>](how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="e684a-113">Anahtar Çerçeveler Kullanarak Boyut Değişikliklerine Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="e684a-113">Animate Size Changes by Using Key Frames</span></span>](how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="e684a-114">Anahtar Çerçeveler Kullanarak Kenarlık Kalınlığına Animasyon Ekleme</span><span class="sxs-lookup"><span data-stu-id="e684a-114">Animate the Thickness of a Border by Using Key Frames</span></span>](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="e684a-115">Anahtar Çerçeve Animasyonu Zamanlamasını Denetleme</span><span class="sxs-lookup"><span data-stu-id="e684a-115">Control Key-Frame Animation Timing</span></span>](how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="18111-116">Başvuru</span><span class="sxs-lookup"><span data-stu-id="18111-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e684a-116">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e684a-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="18111-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="18111-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e684a-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e684a-117">See also</span></span>
 
-- [<span data-ttu-id="18111-118">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="18111-118">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="18111-119">Animasyona Genel bakış</span><span class="sxs-lookup"><span data-stu-id="18111-119">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="18111-120">Anahtar-Çerçeve Animasyonlara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="18111-120">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+- [<span data-ttu-id="e684a-118">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="e684a-118">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="e684a-119">Animasyona Genel bakış</span><span class="sxs-lookup"><span data-stu-id="e684a-119">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="e684a-120">Anahtar-Çerçeve Animasyonlara Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="e684a-120">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)

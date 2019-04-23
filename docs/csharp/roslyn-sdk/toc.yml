@@ -1,48 +1,25 @@
-items:
 - name: .NET Compiler Platform SDK’sı (Roslyn API’leri)
   href: index.md
   items:
-  - name: Derleyici API modelini anlama
-    href: compiler-api-model.md
-  - name: Söz dizimi ile çalışma
-    href: work-with-syntax.md
-  - name: Semantik ile çalışma
-    href: work-with-semantics.md
-  - name: Bir çalışma alanı ile çalışma
-    href: work-with-workspace.md
-  - name: Söz dizimi görselleştiricisi ile kod bulma
-    href: syntax-visualizer.md
-  - name: Hızlı Başlangıçlar
-    items:
-    - name: Söz dizimi analizi
-      href: get-started/syntax-analysis.md
-    - name: Anlam analizi
-      href: get-started/semantic-analysis.md
-    - name: Söz Dizimi Dönüşümü
-      href: get-started/syntax-transformation.md
-  - name: Öğreticiler
-    items:
-    - name: İlk çözümleyicinizi oluşturma ve kod düzeltmesi uygulama
-      href: tutorials/how-to-write-csharp-analyzer-code-fix.md
-    - name: Özel çözümleyiciler ve kod düzeltmeleri yazmaya başlayın
-  - name: Öğreticiler
-    items:
-    - name: İlk çözümleyicinizi derleyin
-    - name: İlk kod düzeltmenizi derleyin
-    - name: Çözümleyicinizi VSIX olarak dağıtma
-    - name: Çözümleyicinizi NuGet paketi olarak dağıtma
-- name: Örnekler
-  items:
-  - name: Zaman uyumsuz paketler
-  - name: Konsol sınıflandırıcısı
-  - name: Otomatik özelliğe dönüştürme
-  - name: Biçim çözümü
-  - name: Uygulama bildirim özelliği değiştirildi
-  - name: Const yapma
-  - name: Nasıl yapılır kılavuzları
-ms.openlocfilehash: cd4a028bc393f99ef3da5277430276b1094682a8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471761"
+    - name: Derleyici API modelini anlama
+      href: compiler-api-model.md
+    - name: Söz dizimi ile çalışma
+      href: work-with-syntax.md
+    - name: Semantik ile çalışma
+      href: work-with-semantics.md
+    - name: Bir çalışma alanı ile çalışma
+      href: work-with-workspace.md
+    - name: Söz dizimi görselleştiricisi ile kod bulma
+      href: syntax-visualizer.md
+    - name: Hızlı Başlangıçlar
+      items:
+        - name: Söz dizimi analizi
+          href: get-started/syntax-analysis.md
+        - name: Anlam analizi
+          href: get-started/semantic-analysis.md
+        - name: Söz Dizimi Dönüşümü
+          href: get-started/syntax-transformation.md
+    - name: Öğreticiler
+      items:
+        - name: İlk çözümleyicinizi oluşturma ve kod düzeltmesi uygulama
+          href: tutorials/how-to-write-csharp-analyzer-code-fix.md
