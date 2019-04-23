@@ -3,10 +3,10 @@ title: Kurallı Matematik İşlevleri
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
 ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228776"
 ---
 # <a name="math-canonical-functions"></a>Kurallı Matematik İşlevleri
@@ -17,11 +17,11 @@ Entity SQL aşağıdaki kurallı matematik işlevleri içerir:
 
 Mutlak değerini döndürür `value`.
 
-**Arguments**
+**Bağımsız Değişkenler**
 
 Bir `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, ve `Decimal`.
 
-**Dönüş Değeri**
+**Dönüş değeri**
 
 Türünü `value`.
 
@@ -33,11 +33,11 @@ Türünü `value`.
 
 Küçük olmayan en küçük tamsayı döndürür daha `value`.
 
-**Arguments**
+**Bağımsız Değişkenler**
 
 A `Single`, `Double`, ve `Decimal`.
 
-**Dönüş Değeri**
+**Dönüş değeri**
 
 Türünü `value`.
 
@@ -50,11 +50,11 @@ Türünü `value`.
 
 Değerinden büyük olmayan en büyük tamsayı döndürür `value`.
 
-**Arguments**
+**Bağımsız Değişkenler**
 
 A `Single`, `Double`, ve `Decimal`.
 
-**Dönüş Değeri**
+**Dönüş değeri**
 
 Türünü `value`.
 
@@ -67,14 +67,14 @@ Türünü `value`.
 
 Belirtilen sonuç döndüren `value` belirtilen `exponent`.
 
-**Arguments**
+**Bağımsız Değişkenler**
 
 |  |  |
 |--|--|
 |`value` | Bir `Int32, Int64, Double`, veya `Decimal`. |
 |`exponent` | Bir `Int64`, `Double`, veya `Decimal`. |
 
-**Dönüş Değeri**
+**Dönüş değeri**
 
 Türünü `value`.
 
@@ -86,11 +86,11 @@ Türünü `value`.
 
 Tamsayı bölümünü döndürür `value`, en yakın tamsayıya yuvarlanır.
 
-**Arguments**
+**Bağımsız Değişkenler**
 
 A `Single`, `Double`, ve `Decimal`.
 
-**Dönüş Değeri**
+**Dönüş değeri**
 
 Türünü `value`.
 
@@ -102,14 +102,14 @@ Türünü `value`.
 
 Döndürür `value`, yuvarlanır yakın belirtilen `digits`.
 
-**Arguments**
+**Bağımsız Değişkenler**
 
 |  |  |
 |--|--|
 |`value`|`Double` veya `Decimal`.|
 |`digits`|`Int16` veya `Int32`.|
 
-**Dönüş Değeri**
+**Dönüş değeri**
 
 Türünü `value`.
 
@@ -121,14 +121,14 @@ Türünü `value`.
 
 Döndürür `value`, kesilmiş yakın belirtilen `digits`.
 
-**Arguments**
+**Bağımsız Değişkenler**
 
 |  |  |
 |--|--|
 |`value`|`Double` veya `Decimal`.|
 |`digits`|`Int16` veya `Int32`.|
 
-**Dönüş Değeri**
+**Dönüş değeri**
 
 Türünü `value`.
 

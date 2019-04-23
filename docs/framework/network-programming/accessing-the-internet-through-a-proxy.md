@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 ms.openlocfilehash: 14e5a7f47c1c1f2cbaf0457be34019454ff041f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230570"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Ara Sunucu Üzerinden İnternet Erişimi
@@ -28,9 +28,9 @@ Sitenizin Internet'e erişim sağlamak için bir ara sunucu kullanıyorsa, Web a
   
 -   [Otomatik Ara Sunucu Algılama](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
   
--   [Nasıl yapılır: İnternet ile İletişim Kurmak Üzere Ara Sunucu Kullanan bir WebRequest’i Etkinleştirme](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+-   [Nasıl yapılır: Internet ile iletişim kurmak için bir ara sunucu kullanan bir Webrequest'i etkinleştirme](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
--   [Nasıl yapılır: Genel Ara Sunucu Seçimini Geçersiz Kılma](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+-   [Nasıl yapılır: Genel Ara sunucu seçimini geçersiz kılma](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

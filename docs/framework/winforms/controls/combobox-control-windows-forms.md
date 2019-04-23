@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
 ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227132"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox Denetimi (Windows Forms)
@@ -24,11 +24,11 @@ Windows Forms `ComboBox` denetimi bir açılan kutudaki verileri görüntülemek
  [ComboBox Denetimine Genel Bakış](combobox-control-overview-windows-forms.md)  
  Bu denetimi nedir ve önemli özellikler ve özellikleri açıklar.  
   
- [Nasıl yapılır: ComboBox Denetiminde Değişken Boyutlu Metin Oluşturma](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ [Nasıl yapılır: Bir ComboBox denetiminde değişken boyutlu metin oluşturma](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  Özel çizim metin gösteren bir `ComboBox` denetimi.  
   
 ## <a name="reference"></a>Başvuru  
- <xref:System.Windows.Forms.ComboBox> sınıf  
+ <xref:System.Windows.Forms.ComboBox> Sınıfı  
  Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
@@ -37,4 +37,4 @@ Windows Forms `ComboBox` denetimi bir açılan kutudaki verileri görüntülemek
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

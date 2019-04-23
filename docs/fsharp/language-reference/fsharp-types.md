@@ -3,10 +3,10 @@ title: F# Türleri
 description: Kullanılan türleri hakkında bilgi edinin F# ve nasıl F# türleri adlı ve açıklanmıştır.
 ms.date: 05/16/2016
 ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193596"
 ---
 # <a name="f-types"></a>F# Türleri
@@ -67,6 +67,6 @@ Aşağıdaki tablo türü sözdizimi yönlerini gösterir F# türleri.
 |[Yapılar](structures.md)|Açıklar `struct` türü, bir .NET değer türüne karşılık gelen bir nesne türü. `struct` Türü genellikle veri küçük bir toplamasını temsil eder.|
 |[Arabirimler](interfaces.md)|Bazı işlevler sağlar, ancak hiçbir veri içeren üyelerin kümesini temsil eden türler arabirim türleri açıklanmaktadır. Bir arabirim türü kullanışlı olması için bir nesne türüne göre uygulanmalıdır.|
 |[Temsilciler](delegates.md)|Bir işlev nesnesi olarak temsil eden bir temsilci türü açıklar.|
-|[Numaralandırmalar](enumerations.md)|Numaralandırma türleri, değerleri bir adlandırılmış değerler kümesine ait açıklar.|
+|[Sabit Listeleri](enumerations.md)|Numaralandırma türleri, değerleri bir adlandırılmış değerler kümesine ait açıklar.|
 |[Öznitelikler](attributes.md)|Başka bir türü için meta verilerini belirtmek için kullanılan öznitelikleri açıklanmaktadır.|
 |[Özel Durum Türleri](exception-handling/exception-types.md)|Hata bilgilerini belirten özel durumlar açıklanmaktadır.|

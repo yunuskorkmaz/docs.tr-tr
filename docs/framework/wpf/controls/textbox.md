@@ -8,17 +8,17 @@ helpviewer_keywords:
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
 ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226977"
 ---
 # <a name="textbox"></a>TextBox
 <xref:System.Windows.Controls.TextBox> Denetimi, temel metin girişi WPF uygulamaları için destek sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [TextBox Genel Bakışı](textbox-overview.md)  
+ [TextBox Genel Bakış](textbox-overview.md)  
  [Nasıl Yapılır Konuları](textbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Başvuru  

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - PageSetupDialog component
 ms.assetid: 791caacb-a5ca-4fca-bad9-1a5721ad697c
 ms.openlocfilehash: 30ac782cae830ac996132046cbbc57392067c0ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228321"
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog Bileşenine Genel Bakış (Windows Forms)
@@ -25,4 +25,4 @@ Windows Forms <xref:System.Windows.Forms.PageSetupDialog> sayfa ayrıntıları y
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [PageSetupDialog Bileşeni](pagesetupdialog-component-windows-forms.md)
+- [PageSetupDialog bileşeni](pagesetupdialog-component-windows-forms.md)

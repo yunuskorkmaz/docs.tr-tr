@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193102"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet işlevi
@@ -47,7 +47,7 @@ HRESULT GetQualifierSet (
 [in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
 
 `ppQualSet`  
-[out] Niteleyiciler sınıf nesnesi erişimi sağlayan bir arabirim işaretçisi alır. `ppQualSet` Olamaz `null`. Bir hata gerçekleşirse, yeni bir nesne döndürülmez ve işaretçi solda değiştirilmemiş. 
+[out] Niteleyiciler sınıf nesnesi erişimi sağlayan bir arabirim işaretçisi alır. `ppQualSet` olamaz `null`. Bir hata gerçekleşirse, yeni bir nesne döndürülmez ve işaretçi solda değiştirilmemiş. 
 
 ## <a name="return-value"></a>Dönüş değeri
 

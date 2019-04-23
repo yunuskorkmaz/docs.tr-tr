@@ -16,10 +16,10 @@ ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83afabf58048620b3b9936560f2b3fdf1e2039d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226943"
 ---
 # <a name="applying-interop-attributes"></a>Birlikte Çalışma Özniteliklerini Uygulama
@@ -72,5 +72,5 @@ ms.locfileid: "59226943"
 - <xref:System.Runtime.InteropServices>
 - [.NET Framework Bileşenlerini COM'da Gösterme](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [Öznitelikler](../../../docs/standard/attributes/index.md)
-- [Birlikte Çalışma için Niteleyici .NET Türleri](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
-- [COM için Derlemeyi Paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Birlikte Çalışma için .NET Türlerini Niteleme](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
+- [COM için Bütünleştirilmiş Kod Paketleme](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

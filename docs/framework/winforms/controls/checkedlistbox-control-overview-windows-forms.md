@@ -9,10 +9,10 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229062"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox Denetimine Genel Bakış (Windows Forms)
@@ -27,4 +27,4 @@ Windows Forms <xref:System.Windows.Forms.CheckedListBox> denetim genişletir <xr
 - <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>
 - [ListBox Denetimine Genel Bakış](listbox-control-overview-windows-forms.md)
 - [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](windows-forms-controls-used-to-list-options.md)
-- [Nasıl yapılır: Windows Forms CheckedListBox Denetimindeki İşaretli Öğeleri Belirleme](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)
+- [Nasıl yapılır: Windows Forms CheckedListBox denetimindeki işaretli öğeleri belirleme](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)

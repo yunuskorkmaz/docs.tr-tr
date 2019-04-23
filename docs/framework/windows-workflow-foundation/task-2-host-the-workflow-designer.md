@@ -3,10 +3,10 @@ title: 'Görev 2: İş Akışı Tasarımcısını Barındırma'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299273"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Görev 2: İş Akışı Tasarımcısını Barındırma
@@ -124,5 +124,5 @@ Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İş Akışı Tasarımcısını Yeniden Barındırma](rehosting-the-workflow-designer.md)
-- [Görev 1: Yeni Bir Windows Presentation Foundation Uygulaması Oluşturma](task-1-create-a-new-wpf-app.md)
-- [Görev 3: Araç Kutusu ve PropertyGrid Bölmeleri Oluşturma](task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [1. Görev: Yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md)
+- [3. Görev: Araç kutusu ve PropertyGrid bölmeleri oluşturma](task-3-create-the-toolbox-and-propertygrid-panes.md)

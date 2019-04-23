@@ -14,10 +14,10 @@ helpviewer_keywords:
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
 ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298350"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Özelleştirilebilir Görünümü olan Denetim Oluşturma
@@ -47,7 +47,7 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
 -   [Denetim sözleşmesi sağlama](#providing_the_control_contract)  
   
--   [Tam Örnek](#complete_example)  
+-   [Tam örnek](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
@@ -121,7 +121,7 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
 ### <a name="use-the-visualstatemanager-to-manage-states"></a>VisualStateManager durumları yönetmek için kullanma  
  <xref:System.Windows.VisualStateManager> Denetim durumlarını izlemek ve durumlar arasında geçiş için gereken mantığı gerçekleştirir. Eklediğinizde <xref:System.Windows.VisualState> nesneleri için <xref:System.Windows.Controls.ControlTemplate>, bunları Ekle bir <xref:System.Windows.VisualStateGroup> ve ekleme <xref:System.Windows.VisualStateGroup> için <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> ekli özellik böylece <xref:System.Windows.VisualStateManager> bunlara erişebilir.  
   
- Aşağıdaki örnek gösteren önceki örnek yineler <xref:System.Windows.VisualState> karşılık gelen nesneleri `Positive` ve `Negative` durumları denetimi. <xref:System.Windows.Media.Animation.Storyboard> İçinde `Negative`<xref:System.Windows.VisualState> kapatır <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> kırmızı.   Zaman `NumericUpDown` denetimi `Negative` durumunda, film şeridi `Negative` durum başlar.  Ardından <xref:System.Windows.Media.Animation.Storyboard> içinde `Negative` denetim döndüğünde durakları durum `Positive` durumu.  `Positive`<xref:System.Windows.VisualState> İçermesi gerekmez bir <xref:System.Windows.Media.Animation.Storyboard> çünkü zaman <xref:System.Windows.Media.Animation.Storyboard> için `Negative` durdurur, <xref:System.Windows.Controls.TextBlock.Foreground%2A> özgün rengini döndürür.  
+ Aşağıdaki örnek gösteren önceki örnek yineler <xref:System.Windows.VisualState> karşılık gelen nesneleri `Positive` ve `Negative` durumları denetimi. <xref:System.Windows.Media.Animation.Storyboard> İçinde `Negative` <xref:System.Windows.VisualState> kapatır <xref:System.Windows.Controls.TextBlock.Foreground%2A> , <xref:System.Windows.Controls.TextBlock> kırmızı.   Zaman `NumericUpDown` denetimi `Negative` durumunda, film şeridi `Negative` durum başlar.  Ardından <xref:System.Windows.Media.Animation.Storyboard> içinde `Negative` denetim döndüğünde durakları durum `Positive` durumu.  `Positive` <xref:System.Windows.VisualState> İçermesi gerekmez bir <xref:System.Windows.Media.Animation.Storyboard> çünkü zaman <xref:System.Windows.Media.Animation.Storyboard> için `Negative` durdurur, <xref:System.Windows.Controls.TextBlock.Foreground%2A> özgün rengini döndürür.  
   
  [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   
@@ -156,7 +156,7 @@ Bir özel denetim şablonunu kullanan bir onay kutusu
   
  Bir durum adına geçirirseniz <xref:System.Windows.VisualStateManager.GoToState%2A> denetim bu durumda olduğunda <xref:System.Windows.VisualStateManager.GoToState%2A> hiçbir şey yapmaz, bu nedenle, denetimin geçerli durumunu denetlemek gerekmez.  Örneğin, varsa `Value` başka bir negatif sayı, film şeridi bir negatif sayıdan değişiklikleri `Negative` durumu kesintiye ve kullanıcı denetiminde bir değişikliği görmez.  
   
- <xref:System.Windows.VisualStateManager> Kullanan <xref:System.Windows.VisualStateGroup> çağırdığınızda çıkmak için hangi durumu belirlemek için nesneleri <xref:System.Windows.VisualStateManager.GoToState%2A>. Denetimin her zaman her bir durumda olduğundan <xref:System.Windows.VisualStateGroup> içinde tanımlandığından, <xref:System.Windows.Controls.ControlTemplate> ve başka bir duruma aynı geçtiğinde yalnızca bir durumda bırakır <xref:System.Windows.VisualStateGroup>. Örneğin, <xref:System.Windows.Controls.ControlTemplate> , `NumericUpDown` denetimini tanımlar `Positive` ve `Negative`<xref:System.Windows.VisualState> birindeki nesnelerin <xref:System.Windows.VisualStateGroup> ve `Focused` ve `Unfocused`<xref:System.Windows.VisualState> başka bir nesne. (Gördüğünüz `Focused` ve `Unfocused`<xref:System.Windows.VisualState> tanımlanan [tam bir örnek](#complete_example) denetim geçerse, bu konudaki bölüm `Positive` durumunu `Negative` durumu veya tam tersi de denetim kalır ya da `Focused` veya `Unfocused` durumu.  
+ <xref:System.Windows.VisualStateManager> Kullanan <xref:System.Windows.VisualStateGroup> çağırdığınızda çıkmak için hangi durumu belirlemek için nesneleri <xref:System.Windows.VisualStateManager.GoToState%2A>. Denetimin her zaman her bir durumda olduğundan <xref:System.Windows.VisualStateGroup> içinde tanımlandığından, <xref:System.Windows.Controls.ControlTemplate> ve başka bir duruma aynı geçtiğinde yalnızca bir durumda bırakır <xref:System.Windows.VisualStateGroup>. Örneğin, <xref:System.Windows.Controls.ControlTemplate> , `NumericUpDown` denetimini tanımlar `Positive` ve `Negative` <xref:System.Windows.VisualState> birindeki nesnelerin <xref:System.Windows.VisualStateGroup> ve `Focused` ve `Unfocused` <xref:System.Windows.VisualState> başka bir nesne. (Gördüğünüz `Focused` ve `Unfocused` <xref:System.Windows.VisualState> tanımlanan [tam bir örnek](#complete_example) denetim geçerse, bu konudaki bölüm `Positive` durumunu `Negative` durumu veya tam tersi Denetim ya da kalır `Focused` veya `Unfocused` durumu.  
   
  Bir denetimin durumunu burada değişebilir üç tipik yerler şunlardır:  
   

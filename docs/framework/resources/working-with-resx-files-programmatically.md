@@ -11,10 +11,10 @@ ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18a8748c3175ec7e251116f478069d313ab28d7c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299247"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Program aracılığıyla .resx dosyalarıyla çalışma
@@ -87,6 +87,6 @@ Bir çalışma zamanı içinde yürütülebilir bir .resx dosyası ekleme veya b
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kaynak Dosyalar Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Kaynak Dosyaları Oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
 - [Resgen.exe (Kaynak Dosya Oluşturucu)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (Derleme Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)

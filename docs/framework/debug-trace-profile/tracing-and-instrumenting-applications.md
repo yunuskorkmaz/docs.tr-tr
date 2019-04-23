@@ -16,10 +16,10 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298918"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>İzleme Uygulamaları
@@ -122,9 +122,9 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 |Yöntem|Çıkış|  
 |------------|------------|  
-|**Onayla**|Belirtilen metin; ya da hiçbiri belirtilmezse, çağrı yığını. Çıktı, yalnızca koşul bir bağımsız değişken olarak belirttiyseniz yazılır **Assert** deyimi **false**.|  
+|**Assert**|Belirtilen metin; ya da hiçbiri belirtilmezse, çağrı yığını. Çıktı, yalnızca koşul bir bağımsız değişken olarak belirttiyseniz yazılır **Assert** deyimi **false**.|  
 |**Başarısız**|Belirtilen metin; ya da hiçbiri belirtilmezse, çağrı yığını.|  
-|**Write**|Belirtilen metin.|  
+|**Yazma**|Belirtilen metin.|  
 |**Writeıf**|Belirtilen metin bağımsız değişkeni olarak bir koşul belirtilmişse, **Writeıf** deyimi karşılandığında.|  
 |**WriteLine**|Belirtilen metni ve bir satır başı.|  
 |**Writelineıf**|Bir bağımsız değişken olarak bir koşul belirtilmişse belirtilen metin bir satır başı, dönüş ve **Writelineıf** deyimi karşılandığında.|  
@@ -145,12 +145,12 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
-- [Kod Sözleşmeleri](../../../docs/framework/debug-trace-profile/code-contracts.md)
+- [Kod Anlaşmaları](../../../docs/framework/debug-trace-profile/code-contracts.md)
 - [C#, F# ve Visual Basic Proje Türleri](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Nasıl yapılır: İz Dinleyicileri ile TraceSource ve Filtreler Kullanma](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
-- [İz Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Nasıl yapılır: Uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Nasıl yapılır: İzleme ve hata ayıklama ile koşullu derleme](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Nasıl yapılır: Oluşturma, başlatma ve izleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Nasıl yapılır: Oluşturma ve izleme kaynaklarını başlatma](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Nasıl yapılır: İzleme dinleyicileri ile TraceSource ve filtreler kullanma](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)

@@ -3,10 +3,10 @@ title: Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229075"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Oturumlar, Örnek Oluşturma ve Eşzamanlılık
@@ -110,8 +110,8 @@ public class CalculatorService : ICalculatorConcurrency
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Oturumları Kullanma](../../../../docs/framework/wcf/using-sessions.md)
-- [Nasıl yapılır: Oturum Gerektiren Bir Hizmet Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [Nasıl yapılır: Hizmet Örneği Oluşturmayı Denetleme](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Nasıl yapılır: Oturumlarının gerektiren bir hizmet oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Nasıl yapılır: Hizmet örneği oluşturmayı denetleme](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [Eşzamanlılık](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Örnek Oluşturma](../../../../docs/framework/wcf/samples/instancing.md)
 - [Oturum](../../../../docs/framework/wcf/samples/session.md)

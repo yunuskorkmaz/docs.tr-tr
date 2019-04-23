@@ -11,10 +11,10 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
 ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193154"
 ---
 # <a name="glyphs"></a>Karakterler
@@ -22,7 +22,7 @@ Alt düzey bir ekrandaki çizilecek karakter gösterimi karakterlerdir. [!INCLUD
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [GlyphRun Nesnesi ve Karakter Öğesine Giriş](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [Nasıl yapılır: Karakterleri Kullanarak Metin Çizme](draw-text-using-glyphs.md)  
+  [Nasıl yapılır: Karakterleri kullanarak metin çizme](draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
