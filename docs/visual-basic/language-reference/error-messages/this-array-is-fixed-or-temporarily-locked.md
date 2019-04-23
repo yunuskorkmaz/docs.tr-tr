@@ -5,29 +5,29 @@ f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
 ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337974"
 ---
-# <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a><span data-ttu-id="f9e54-102">Bu dizi sabit veya geçici olarak kilitli (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9e54-102">This array is fixed or temporarily locked (Visual Basic)</span></span>
-<span data-ttu-id="f9e54-103">Bu hata, aşağıdaki olası nedenleri vardır:</span><span class="sxs-lookup"><span data-stu-id="f9e54-103">This error has the following possible causes:</span></span>  
+# <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a><span data-ttu-id="a7d3f-102">Bu dizi sabit veya geçici olarak kilitli (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a7d3f-102">This array is fixed or temporarily locked (Visual Basic)</span></span>
+<span data-ttu-id="a7d3f-103">Bu hata, aşağıdaki olası nedenleri vardır:</span><span class="sxs-lookup"><span data-stu-id="a7d3f-103">This error has the following possible causes:</span></span>  
   
--   <span data-ttu-id="f9e54-104">Kullanarak `ReDim` sabit boyutlu dizi öğelerinin sayısını değiştirmek için.</span><span class="sxs-lookup"><span data-stu-id="f9e54-104">Using `ReDim` to change the number of elements of a fixed-size array.</span></span>  
+-   <span data-ttu-id="a7d3f-104">Kullanarak `ReDim` sabit boyutlu dizi öğelerinin sayısını değiştirmek için.</span><span class="sxs-lookup"><span data-stu-id="a7d3f-104">Using `ReDim` to change the number of elements of a fixed-size array.</span></span>  
   
--   <span data-ttu-id="f9e54-105">İçinde bir öğe bağımsız değişken olarak bir yordamına geçirildi bir modül düzeyinde dinamik dizi redimensioning.</span><span class="sxs-lookup"><span data-stu-id="f9e54-105">Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure.</span></span> <span data-ttu-id="f9e54-106">Bir öğe iletilmezse, dizi önlemek için kilitli yordamdaki başvuru parametresi bellek ayırma.</span><span class="sxs-lookup"><span data-stu-id="f9e54-106">If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.</span></span>  
+-   <span data-ttu-id="a7d3f-105">İçinde bir öğe bağımsız değişken olarak bir yordamına geçirildi bir modül düzeyinde dinamik dizi redimensioning.</span><span class="sxs-lookup"><span data-stu-id="a7d3f-105">Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure.</span></span> <span data-ttu-id="a7d3f-106">Bir öğe iletilmezse, dizi önlemek için kilitli yordamdaki başvuru parametresi bellek ayırma.</span><span class="sxs-lookup"><span data-stu-id="a7d3f-106">If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.</span></span>  
   
--   <span data-ttu-id="f9e54-107">Bir değere atanmaya çalışılırken bir `Variant` içeren bir dizi değişkenini ancak `Variant` şu anda kilitli.</span><span class="sxs-lookup"><span data-stu-id="f9e54-107">Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.</span></span>  
+-   <span data-ttu-id="a7d3f-107">Bir değere atanmaya çalışılırken bir `Variant` içeren bir dizi değişkenini ancak `Variant` şu anda kilitli.</span><span class="sxs-lookup"><span data-stu-id="a7d3f-107">Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f9e54-108">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="f9e54-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a7d3f-108">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="a7d3f-108">To correct this error</span></span>  
   
-1. <span data-ttu-id="f9e54-109">Özgün dizinin kendisiyle bildirerek sabit yerine dinamik hale getirmek `ReDim` (diziyi bir yordam içinde bildirilirse), ya da (diziyi Modül düzeyinde bildirilirse. öğe sayısını belirtmeden bildirme</span><span class="sxs-lookup"><span data-stu-id="f9e54-109">Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.</span></span>  
+1. <span data-ttu-id="a7d3f-109">Özgün dizinin kendisiyle bildirerek sabit yerine dinamik hale getirmek `ReDim` (diziyi bir yordam içinde bildirilirse), ya da (diziyi Modül düzeyinde bildirilirse. öğe sayısını belirtmeden bildirme</span><span class="sxs-lookup"><span data-stu-id="a7d3f-109">Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.</span></span>  
   
-2. <span data-ttu-id="f9e54-110">Modüldeki tüm yordamları içinde görünür olduğundan, öğeyi geçirilecek ihtiyacınız olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="f9e54-110">Determine whether you really need to pass the element, since it is visible within all procedures in the module.</span></span>  
+2. <span data-ttu-id="a7d3f-110">Modüldeki tüm yordamları içinde görünür olduğundan, öğeyi geçirilecek ihtiyacınız olup olmadığını belirler.</span><span class="sxs-lookup"><span data-stu-id="a7d3f-110">Determine whether you really need to pass the element, since it is visible within all procedures in the module.</span></span>  
   
-3. <span data-ttu-id="f9e54-111">Ne kilitleme belirlemek `Variant` ve çözüm.</span><span class="sxs-lookup"><span data-stu-id="f9e54-111">Determine what is locking the `Variant` and remedy it.</span></span>  
+3. <span data-ttu-id="a7d3f-111">Ne kilitleme belirlemek `Variant` ve çözüm.</span><span class="sxs-lookup"><span data-stu-id="a7d3f-111">Determine what is locking the `Variant` and remedy it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9e54-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f9e54-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7d3f-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a7d3f-112">See also</span></span>
 
-- [<span data-ttu-id="f9e54-113">Diziler</span><span class="sxs-lookup"><span data-stu-id="f9e54-113">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="a7d3f-113">Diziler</span><span class="sxs-lookup"><span data-stu-id="a7d3f-113">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

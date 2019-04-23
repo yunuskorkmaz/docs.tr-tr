@@ -6,7 +6,7 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: 9b9ac1f1f15b4003a19a3d30d6cadf3e86946376
 ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517973"
