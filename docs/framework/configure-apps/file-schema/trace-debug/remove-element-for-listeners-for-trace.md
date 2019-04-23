@@ -8,10 +8,10 @@ helpviewer_keywords:
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
 ms.openlocfilehash: adf00394bc0bfe808836e74214003cd2078204e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164261"
 ---
 # <a name="remove-element-for-listeners-for-trace"></a>\<kaldırma > öğesi için \<dinleyicileri > için \<İzleme >
@@ -36,7 +36,7 @@ Bir dinleyicisinden kaldırır **dinleyicileri** koleksiyonu.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**name**|Gerekli öznitelik.<br /><br /> Dinleyiciyi kaldırmak için adını **dinleyicileri** koleksiyonu.|  
+|**Adı**|Gerekli öznitelik.<br /><br /> Dinleyiciyi kaldırmak için adını **dinleyicileri** koleksiyonu.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  

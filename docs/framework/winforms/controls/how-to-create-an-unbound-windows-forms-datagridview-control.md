@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
 ms.openlocfilehash: 9bfffac3d6970aceea3842df95f4bcae970b42e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167914"
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>Nasıl yapılır: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma
@@ -35,6 +35,6 @@ Aşağıdaki kod örneğinde nasıl doldurulacağını gösterir bir <xref:Syste
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.DataGridView>
-- [İzlenecek yol: Bağlantısız Bir Windows Forms DataGridView Denetimi Oluşturma](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [İzlenecek yol: Bağlantısız bir Windows Forms DataGridView denetimi](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Verileri Görüntüleme](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları](data-display-modes-in-the-windows-forms-datagridview-control.md)

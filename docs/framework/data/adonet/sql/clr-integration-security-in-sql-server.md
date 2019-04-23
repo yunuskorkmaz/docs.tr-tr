@@ -3,10 +3,10 @@ title: SQL Server’da CLR Tümleştirme Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
 ms.openlocfilehash: 946401211d515df9ba5b9e38d7cfd10730973b64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165821"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>SQL Server’da CLR Tümleştirme Güvenliği
@@ -19,7 +19,7 @@ Microsoft SQL Server ortak dil çalışma zamanı (CLR) bileşen .NET Framework'
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Kod Erişimi Güvenliği](../../../../../docs/framework/misc/code-access-security.md)|.NET Framework'teki CAS açıklayan konuları içerir.|  
+|[Kod erişimi güvenliği](../../../../../docs/framework/misc/code-access-security.md)|.NET Framework'teki CAS açıklayan konuları içerir.|  
 |[CLR tümleştirme güvenliği](/sql/relational-databases/clr-integration/security/clr-integration-security)|Yönetilen kod içinde SQL Server çalıştırmak için güvenlik modeli açıklanır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

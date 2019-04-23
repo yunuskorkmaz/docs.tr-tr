@@ -3,10 +3,10 @@ title: ADO.NET’e Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
 ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170071"
 ---
 # <a name="adonet-overview"></a>ADO.NET’e Genel Bakış
@@ -60,5 +60,5 @@ ADO.NET veri kaynağına OLE DB ve ODBC kullanıma sunulan ve SQL Server ve XML 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Visual Studio'da verilere erişme](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Visual Studio'da verilere erişime](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

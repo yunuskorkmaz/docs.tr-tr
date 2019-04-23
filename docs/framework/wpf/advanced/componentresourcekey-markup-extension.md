@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
 ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169760"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey Biçimlendirme Uzantısı
@@ -80,4 +80,4 @@ Tanımlar ve dış derlemelerden yüklü olan kaynaklar için anahtarları başv
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Denetim Yazımına Genel Bakış](../controls/control-authoring-overview.md)
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
-- [Biçimlendirme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)

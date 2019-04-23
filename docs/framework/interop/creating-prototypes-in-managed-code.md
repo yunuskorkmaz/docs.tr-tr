@@ -20,10 +20,10 @@ ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59168174"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Yönetilen Kodda Prototipler Oluşturma
@@ -111,7 +111,7 @@ extern "C" int MessageBox(
 ### <a name="platform-invoke-examples"></a>Platform Çağırma Örnekleri  
  Platform çağırma örnekleri bu bölümde kullanımını gösteren `RegistryPermission` yığın ilerlemesi değiştiricileri ile özniteliği.  
   
- Aşağıdaki kod örneğinde, <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny`, ve `PermitOnly` değiştiricileri yoksayılır.  
+ Aşağıdaki kod örneğinde, <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny`, ve `PermitOnly` değiştiricileri yoksayılır.  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -240,7 +240,7 @@ interface IDemandStubsItf
 - [Giriş Noktası Belirtme](specifying-an-entry-point.md)
 - [Karakter Kümesi Belirtme](specifying-a-character-set.md)
 - [Platform Çağırma Örnekleri](platform-invoke-examples.md)
-- [Platform Çağırmayla İlgili Güvenlik Konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
+- [Platform çağırmayla ilgili güvenlik konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [DLL'lerde İşlevleri Tanımlama](identifying-functions-in-dlls.md)
 - [DLL İşlevleri için bir Sınıf Oluşturma](creating-a-class-to-hold-dll-functions.md)
 - [DLL İşlevini Çağırma](calling-a-dll-function.md)

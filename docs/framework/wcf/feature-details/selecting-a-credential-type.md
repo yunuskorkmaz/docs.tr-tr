@@ -3,10 +3,10 @@ title: Kimlik Bilgisi Türü Seçme
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167849"
 ---
 # <a name="selecting-a-credential-type"></a>Kimlik Bilgisi Türü Seçme
@@ -38,7 +38,7 @@ ms.locfileid: "59167849"
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|Yok.|İstemci mevcut bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
+|None|İstemci mevcut bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
 |Windows|SOAP ileti alışverişlerinde bir Windows kimlik bilgileri ile oluşturulan güvenlik bağlamı altında gerçekleşmesini sağlar.|  
 |Kullanıcı adı|Bir kullanıcı adı kimlik bilgisi ile istemcinin kimliğinin doğrulanmasını gerektiren hizmet sağlar. WCF ile kullanıcı adlarını, imza oluşturma veya verileri şifreleme gibi şifreleme işlemleri izin vermediğini unutmayın. WCF aktarma kullanıcı adı kimlik bilgilerini kullanarak güvenli sağlar.|  
 |Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir X.509 sertifikası.|  
@@ -114,4 +114,4 @@ ms.locfileid: "59167849"
 - [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
-- [HTTP Taşıma Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+- [HTTP Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

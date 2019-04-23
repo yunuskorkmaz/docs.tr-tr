@@ -1,12 +1,12 @@
 ---
-title: <message> , <ws2007HttpBinding>
+title: <message> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
 ms.openlocfilehash: bf0ed2de73505d5634d6c7d26881f9800a0bf1f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166744"
 ---
 # <a name="message-of-ws2007httpbinding"></a>\<İleti >, \<ws2007HttpBinding >

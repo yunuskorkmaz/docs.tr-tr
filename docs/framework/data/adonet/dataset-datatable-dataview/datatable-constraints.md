@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165184"
 ---
 # <a name="datatable-constraints"></a>DataTable Kısıtlamaları
@@ -61,7 +61,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 |Kural ayarı|Açıklama|  
 |------------------|-----------------|  
 |**Basamakla**|Veya alt satırlara değişiklikler reddedebilirsiniz.|  
-|**None**|Alt satırlar üzerinde eylem yok. Bu varsayılandır.|  
+|**Yok.**|Alt satırlar üzerinde eylem yok. Bu varsayılandır.|  
   
 ### <a name="example"></a>Örnek  
  Aşağıdaki örnek, oluşturur bir <xref:System.Data.ForeignKeyConstraint>, birkaç dahil olmak üzere özellikleri ayarlar <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>ve bu gruba ekler <xref:System.Data.ConstraintCollection> , bir <xref:System.Data.DataTable> nesne.  

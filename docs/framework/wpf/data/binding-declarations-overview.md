@@ -13,10 +13,10 @@ helpviewer_keywords:
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
 ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165275"
 ---
 # <a name="binding-declarations-overview"></a>Bağlama Bildirimlerine Genel Bakış
@@ -128,4 +128,4 @@ Bu konuda bir bağlama bildirebilirsiniz farklı yolları açıklanmaktadır.
 - [Veri Bağlamaya Genel Bakış](data-binding-overview.md)
 - [Nasıl Yapılır Konuları](data-binding-how-to-topics.md)
 - [Veri Bağlama](../advanced/optimizing-performance-data-binding.md)
-- [PropertyPath XAML Sözdizimi](../advanced/propertypath-xaml-syntax.md)
+- [PropertyPath XAML Söz Dizimi](../advanced/propertypath-xaml-syntax.md)

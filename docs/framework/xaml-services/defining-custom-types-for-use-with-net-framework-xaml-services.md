@@ -5,10 +5,10 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164443"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>.NET Framework XAML Hizmetlerinde Kullanılacak Özel Türleri Tanımlama
@@ -70,7 +70,7 @@ ms.locfileid: "59164443"
 #### <a name="the-getpropertyname-accessor"></a>GetPropertyName erişimcisi  
  İmzası `Get` *PropertyName* erişimcisi olmalıdır:  
   
- `public static object Get` *ÖzellikAdı* `(object`  `target` `)`  
+ `public static object Get` *PropertyName* `(object`  `target` `)`  
   
 -   `target` Nesnesi, uygulamanızdaki daha belirli bir tür olarak belirtilebilir. İliştirilebilir üyelik kullanımını kapsamını belirlemek için kullanabilirsiniz; hedeflenen Kapsamınız dışında kullanımları, ardından bir XAML ayrıştırma hatası ortaya çıkmış geçersiz dönüştürme özel durumlar. Parametre adı `target` bir gereksinim değildir, ancak adlı `target` çoğu uygulamalarında kural tarafından.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59164443"
 #### <a name="the-setpropertyname-accessor"></a>SetPropertyName erişimcisi  
  Küme için imza*PropertyName* erişimcisi olmalıdır:  
   
- `public static void Set` *ÖzellikAdı* `(object`  `target` `, object`  `value` `)`  
+ `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
 -   `target` Nesne belirtilebilir, uygulamanızda aynı mantığı ve sonuçları daha belirli bir tür olarak önceki bölümde açıklandığı gibi.  
   
@@ -116,5 +116,5 @@ ms.locfileid: "59164443"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel Türler ve Kitaplıkar İçin XAML İlişkili CLR Öznitelikleri](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
+- [Özel Türler ve Kitaplıklar İçin XAML İlişkili CLR Öznitelikleri](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
 - [XAML Hizmetleri](index.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - 3-D translations [WPF], animating
 ms.assetid: d4eece1f-0cd2-4a2c-8370-293354c380e4
 ms.openlocfilehash: 3e27c2d5f0cd44235a1d897b1b8f057808ae6bd8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59168278"
 ---
 # <a name="how-to-animate-3-d-translations"></a>Nasıl yapılır: 3B Çevirilerine Animasyon Ekleme

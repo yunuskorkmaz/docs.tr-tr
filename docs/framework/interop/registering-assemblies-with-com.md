@@ -10,10 +10,10 @@ ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169032"
 ---
 # <a name="registering-assemblies-with-com"></a>Derlemeleri COM ile Kaydetme
@@ -46,6 +46,6 @@ Adlı bir komut satırı aracını çalıştırdığınız [derleme Kayıt Arac�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
-- [Nasıl yapılır: COM'dan .NET Türlerine Başvurma](how-to-reference-net-types-from-com.md)
-- [.NET Nesnesini Çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [COM Erişimi için Bir Uygulamayı Dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [Nasıl yapılır: COM başvurusu .NET türlerinden](how-to-reference-net-types-from-com.md)
+- [Bir .NET nesnesini çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [COM erişimi için bir uygulama dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

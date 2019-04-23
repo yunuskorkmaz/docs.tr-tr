@@ -5,10 +5,10 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163143"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
@@ -99,7 +99,7 @@ ms.locfileid: "59163143"
   
 -   [HttpClient](#HttpClient)  
   
--   [Birlikte çalışma](#Interop)  
+-   [Interop](#Interop)  
   
 -   [Desteklenmeyen API'leri](#APIs)  
   
@@ -153,7 +153,7 @@ ms.locfileid: "59163143"
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Yöntemi .NET Native kısa tarihler içeren dizeleri doğru bir şekilde ayrıştırılır. Ancak, tarih değişikliği uyumluluk saklamaz ve zaman ayrıştırma Microsoft Bilgi Bankası makalelerinde açıklandığı [KB2803771](https://support.microsoft.com/kb/2803771) ve [KB2803755](https://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is corredoğru .NET Native yuvarlanır. CLR'nin bazı sürümleri, sonuç dizesine yerine kesilmiş yuvarlanır.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` doğru .NET Native yuvarlanır. CLR'nin bazı sürümleri, sonuç dizesine yerine kesilmiş yuvarlanır.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient farkları  
@@ -177,11 +177,11 @@ ms.locfileid: "59163143"
   
  .NET için Windows Store apps ayarlamanıza olanak tanır <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> özelliğini <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>hem <xref:System.Net.DecompressionMethods.Deflate> ve <xref:System.Net.DecompressionMethods.GZip>, veya <xref:System.Net.DecompressionMethods.None>.  Yalnızca .NET native destekler <xref:System.Net.DecompressionMethods.Deflate> ile birlikte <xref:System.Net.DecompressionMethods.GZip>, veya <xref:System.Net.DecompressionMethods.None>.  Ayarlanmaya çalışılırken <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> ya da özellik <xref:System.Net.DecompressionMethods.Deflate> veya <xref:System.Net.DecompressionMethods.GZip> tek başına sessizce hem de ayarlar <xref:System.Net.DecompressionMethods.Deflate> ve <xref:System.Net.DecompressionMethods.GZip>.  
   
- **Tanımlama bilgileri**  
+ **Çerezler**  
   
  Tanımlama bilgisi işleme ile aynı anda gerçekleştirilen <xref:System.Net.Http.HttpClient> ve WinINet.  Tanımlama bilgilerine <xref:System.Net.CookieContainer> WinINet tanımlama bilgisi önbelleğinde tanımlama bilgileri ile birleştirilir.  Tanımlama bilgisinden kaldırma <xref:System.Net.CookieContainer> engeller <xref:System.Net.Http.HttpClient> tanımlama bilgisi, zaten WinINet tarafından görülen ve tanımlama bilgileri, kullanıcı tarafından silinmiş olmayan ancak tanımlama bilgisi göndermesini WinINet gönderir.  Program aracılığıyla kullanarak bir tanımlama bilgisi WinINet kaldırmak mümkün değildir <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler>, veya <xref:System.Net.CookieContainer> API.  Ayarı <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> özelliğini `false` yalnızca neden <xref:System.Net.Http.HttpClient> tanımlama bilgileri göndermeyi durdurun WinINet, yine de isteğinde, tanımlama bilgileri içerebilir.  
   
- **Kimlik Bilgileri**  
+ **Kimlik bilgileri**  
   
  .NET için Windows Store uygulamalarında <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> ve <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> özellikleri bağımsız olarak çalışır.  Ayrıca, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği uygulayan nesne kabul eden <xref:System.Net.ICredentials> arabirimi.  Ayarı .NET Native içinde <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> özelliğini `true` neden <xref:System.Net.Http.HttpClientHandler.Credentials%2A> olacak özelliği `null`.  Ayrıca, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği yalnızca ayarlanabilir `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>, veya bir nesne türü <xref:System.Net.NetworkCredential>.  Diğer atama <xref:System.Net.ICredentials> en popüler olan nesne, <xref:System.Net.CredentialCache>, <xref:System.Net.Http.HttpClientHandler.Credentials%2A> özelliği oluşturur bir <xref:System.PlatformNotSupportedException>.  
   

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164997"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters ve XAML
@@ -111,5 +111,5 @@ Bu konu, genel XAML dil özelliği olarak dizeden tür dönüştürme amacı tan
 
 - <xref:System.ComponentModel.TypeConverter>
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
-- [Biçimlendirme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [İşaretleme Uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [Ayrıntılı XAML Sözdizimi](xaml-syntax-in-detail.md)
