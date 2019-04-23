@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: ccdc3777-b2c2-44e3-a627-abef8d79a555
 ms.openlocfilehash: dca917b3c12b0f9923cc9ea34a2568c412a09831
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081845"
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>Dizideki İlk Öğeyi Döndürme
@@ -23,7 +23,7 @@ Kullanım <xref:System.Linq.Enumerable.First%2A> işlecini bir dizideki ilk öğ
   
  Northwind örnek veritabanına karşı bu sorguyu çalıştırmak, sonuçları vardır.  
   
- `ID = 1, Company = Speedy Express`biçimindeki telefon numarasıdır.  
+ `ID = 1, Company = Speedy Express`.  
   
  [!code-csharp[DLinqQueryExamples#14](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#14)]
  [!code-vb[DLinqQueryExamples#14](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#14)]  

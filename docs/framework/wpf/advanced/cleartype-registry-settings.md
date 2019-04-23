@@ -6,14 +6,14 @@ helpviewer_keywords:
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
 ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080000"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType Kayıt Defteri Ayarları
-Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] tarafından kullanılan kayıt defteri ayarları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
+Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] tarafından kullanılan kayıt defteri ayarları [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Teknoloji genel bakış  
@@ -31,17 +31,17 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] düzey|Düzeyini açıklayan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renk anlaşılabilir.|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] düzeyi|Düzeyini açıklayan [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renk anlaşılabilir.|  
 |Gama düzeyi|Piksel renk bileşeni görüntüleme cihazı için düzeyini açıklar.|  
 |Piksel yapısı|Piksel görüntüleme cihazı için düzenlemeyi açıklar.|  
 |Metin Karşıtlık düzeyi|Görüntülenen metin karşıtlık düzeyini açıklar.|  
   
- Bu ayarlar, tanımlanan başvurmak nasıl bilen bir dış yapılandırma yardımcı programı tarafından erişilebilen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] kayıt defteri ayarları. Bu ayarlar da oluşturulabilir veya değerleri kullanarak doğrudan erişerek [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Kayıt Defteri Düzenleyicisi.  
+ Bu ayarlar, tanımlanan başvurmak nasıl bilen bir dış yapılandırma yardımcı programı tarafından erişilebilen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] kayıt defteri ayarları. Bu ayarlar da oluşturulabilir veya değerleri kullanarak doğrudan erişerek [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Kayıt Defteri Düzenleyicisi.  
   
- Varsa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] kayıt defteri ayarları ayarlanmadı (olan varsayılan durumu), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama sorguları [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] sistem parametreleri bilgi yazı tipi düzeltmeye ayarları için.  
+ Varsa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] kayıt defteri ayarları ayarlanmadı (olan varsayılan durumu), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama sorguları [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] sistem parametreleri bilgi yazı tipi düzeltmeye ayarları için.  
   
 > [!NOTE]
->  Görüntü cihaz adları listelendirmek hakkında daha fazla bilgi için bkz: `SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işlevi.  
+>  Görüntü cihaz adları listelendirmek hakkında daha fazla bilgi için bkz: `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işlevi.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType düzeyi  
@@ -89,7 +89,7 @@ Bu konu, genel bir bakış sağlar. [!INCLUDE[TLA2#tla_winclient](../../../../in
  Piksel yapısı, 0'dan 2 arasında bir tamsayı değerine karşılık gelir. Varsayılan düzey düz piksel yapısını temsil eden 0 ' dır.  
   
 > [!NOTE]
->  Görüntü cihaz adları listelendirmek hakkında daha fazla bilgi için bkz: `EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işlevi.  
+>  Görüntü cihaz adları listelendirmek hakkında daha fazla bilgi için bkz: `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] işlevi.  
   
 ### <a name="registry-setting"></a>Kayıt defteri ayarı  
  Kayıt defteri ayarı piksel yapısı için konum, özel bir görüntü cihaz adına karşılık gelen bir yerel makine ayarı şöyle olur:  

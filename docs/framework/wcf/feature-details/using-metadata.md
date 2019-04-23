@@ -3,10 +3,10 @@ title: Meta Verileri Kullanma
 ms.date: 03/30/2017
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
 ms.openlocfilehash: 78005f68512e62c667b59c3cec5841a37723b973
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082717"
 ---
 # <a name="using-metadata"></a>Meta Verileri Kullanma
@@ -16,7 +16,7 @@ Hizmet meta verileri, makine tarafından okunabilir hizmet açıklamasını içe
  [Oluşturulmuş İstemci Kodlarını Anlama](../../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
  Farklı sınıfları açıklar ve aracının oluşturduğu Svcutil.exe arabirimleri.  
   
- [Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
+ [Nasıl yapılır: Meta veri alma ve uyumlu bir hizmet ekleme](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
  Svcutil.exe kullanarak meta verileri alma ve uyumlu bir hizmet ekleme işlemi gösterilmektedir.  
   
  [Hizmet Meta Verilerinden WCF İstemcisi Oluşturma](../../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)  

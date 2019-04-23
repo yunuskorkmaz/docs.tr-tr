@@ -7,10 +7,10 @@ helpviewer_keywords:
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
 ms.openlocfilehash: f945d8e6918c271eeb5fdf3cf9c357b1c2bbca66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079649"
 ---
 # <a name="application-settings-attributes"></a>Uygulama Ayarları Öznitelikleri
@@ -42,4 +42,4 @@ Uygulama ayarları mimarisi, uygulama ayarlarını sarmalayıcı sınıfı veya 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - [Uygulama Ayarları Mimarisi](application-settings-architecture.md)
-- [Nasıl yapılır: Uygulama Ayarları Oluşturma](how-to-create-application-settings.md)
+- [Nasıl yapılır: Uygulama ayarları oluşturma](how-to-create-application-settings.md)
