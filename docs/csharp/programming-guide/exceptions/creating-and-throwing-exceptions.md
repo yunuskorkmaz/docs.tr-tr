@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2a15fade1beb8f3da0d9b6f48a216dda81e669fd
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 7a99afa92c7b2cc19933eded8e06e6d8f2ce7562
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202697"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979374"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Özel Durumlar Oluşturma ve Atma (C# Programlama Kılavuzu)
 Özel durumlar programı çalıştırılırken bir hata oluştu belirtmek için kullanılır. Bir hata açıklayan özel durum nesneleri oluşturulur ve ardından *durum* ile [throw](../../../csharp/language-reference/keywords/throw.md) anahtar sözcüğü. Çalışma zamanı sonra en uyumlu özel durum işleyicisi arar.  
@@ -56,7 +56,7 @@ ms.locfileid: "57202697"
 -   Hata ayıklama modunda oluşturulur ancak yayınlama modunda değil, özel durumlar oluşturmayın. Çalışma zamanı hataları geliştirme aşamasında tanımlamak için hata ayıklama onaylama işlemi kullanın.  
   
 ## <a name="defining-exception-classes"></a>Özel durum sınıfları tanımlama  
- Programlar throw önceden tanımlanmış özel durum sınıfı <xref:System> (daha önce belirtilenler dışında), ad alanı veya kendi özel durum sınıfları türeterek oluşturma <xref:System.Exception>. En az dört oluşturucuları türetilmiş sınıfları tanımlamanız gerekir: bir varsayılan oluşturucu, ileti özelliği ayarlayan, diğeri her ikisi de ayarlayan <xref:System.Exception.Message%2A> ve <xref:System.Exception.InnerException%2A> özellikleri. Dördüncü Oluşturucu, özel durum seri hale getirmek için kullanılır. Yeni özel durum sınıfları seri hale getirilebilir olması. Örneğin:  
+ Programlar throw önceden tanımlanmış özel durum sınıfı <xref:System> (daha önce belirtilenler dışında), ad alanı veya kendi özel durum sınıfları türeterek oluşturma <xref:System.Exception>. En az dört oluşturucuları türetilmiş sınıfları tanımlamanız gerekir: Parametresiz bir oluşturucu, ileti özelliği ayarlayan, diğeri her ikisi de ayarlayan <xref:System.Exception.Message%2A> ve <xref:System.Exception.InnerException%2A> özellikleri. Dördüncü Oluşturucu, özel durum seri hale getirmek için kullanılır. Yeni özel durum sınıfları seri hale getirilebilir olması. Örneğin:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   

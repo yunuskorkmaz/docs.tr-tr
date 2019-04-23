@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
 ms.openlocfilehash: 14942157429b029147d47e2f88428c56e66523d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146360"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979959"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Nasıl yapılır: Parmak Kullanarak Tuvali Yeniden Boyutlandırma
 Bu örnek nasıl kullanılacağını gösterir. bir <xref:System.Windows.Controls.Primitives.Thumb> yeniden boyutlandırmak için denetimi bir <xref:System.Windows.Controls.Canvas> denetimi.  

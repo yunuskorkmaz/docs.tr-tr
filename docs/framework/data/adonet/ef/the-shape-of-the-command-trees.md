@@ -1,15 +1,15 @@
 ---
-title: Komut ağaçlarının şekli
+title: Komut Ağaçlarının Şekli
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: aba5511b8baa395714bde315d9542932e854c98b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378554"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980089"
 ---
-# <a name="the-shape-of-the-command-trees"></a>Komut ağaçlarının şekli
+# <a name="the-shape-of-the-command-trees"></a>Komut Ağaçlarının Şekli
 
 SQL üretimi modülü, belirli bir giriş sorgu komut ağacı ifadeye göre bir arka uç belirli SQL sorgusu oluşturmak için sorumludur. Bu bölüm, özellikleri, özellikler ve sorgu komut ağaçlarının yapısını açıklar.
 
@@ -85,9 +85,9 @@ Dbnewınstanceexpression, yalnızca aşağıdaki iki durumlarda oluşabilir:
 
 - Projeksiyon DbProjectExpression özelliği.  Bu şekilde kullanıldığında aşağıdaki kısıtlamalar uygulanır:
 
-    - Sonuç türü satır türünde olmalıdır.
+  - Sonuç türü satır türünde olmalıdır.
 
-    - Her bağımsız değişkenlerinden biri, bir basit türü ile bir sonuç üretir bir ifadedir. Genellikle, her bağımsız değişken bir DbVariableReferenceExpression veya bir işlev çağrısını bir DbVariableReferenceExpression, bir işlev çağırma veya bir aritmetik hesaplaması DbPropertyExpression üzerinden bir PropertyExpression gibi skaler bir ifade. . Ancak, skaler bir sorgu temsil eden bir ifade bir Dbnewınstanceexpression için bağımsız değişken listesinde de oluşabilir. Skaler bir sorgu temsil eden bir ifade olan tam olarak bir satır ve tek sütunlu bir DbElementExpression nesne kök ile temel bir tür döndüren sorgu temsil eden bir ifade ağacı
+  - Her bağımsız değişkenlerinden biri, bir basit türü ile bir sonuç üretir bir ifadedir. Genellikle, her bağımsız değişken bir DbVariableReferenceExpression veya bir işlev çağrısını bir DbVariableReferenceExpression, bir işlev çağırma veya bir aritmetik hesaplaması DbPropertyExpression üzerinden bir PropertyExpression gibi skaler bir ifade. . Ancak, skaler bir sorgu temsil eden bir ifade bir Dbnewınstanceexpression için bağımsız değişken listesinde de oluşabilir. Skaler bir sorgu temsil eden bir ifade olan tam olarak bir satır ve tek sütunlu bir DbElementExpression nesne kök ile temel bir tür döndüren sorgu temsil eden bir ifade ağacı
 
 - Bir koleksiyon dönüş türüyle bu durumda, yeni bir bağımsız değişken olarak sağlanan ifadeleri koleksiyonunu tanımlar.
 

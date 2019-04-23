@@ -3,12 +3,12 @@ title: Yapılar - C# Kılavuzu
 description: Yapı türü ve bunları nasıl oluşturacağınız hakkında bilgi edinin
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fcd30907880be9159b3cc2e3ab10659ddec248b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506985"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979491"
 ---
 # <a name="structs"></a>Yapılar
 A *yapı* bir değer türüdür. Bir yapı oluşturulduğunda yapının atanmış olduğu değişken yapının gerçek verilerini tutar. Struct için yeni bir değişken atandığında kopyalanır. Bu nedenle yeni değişken ve özgün değişken aynı verilerin iki ayrı kopyasını içerir. Bir kopyaya yapılan değişiklikler diğer kopyayı etkilemez.
@@ -37,7 +37,7 @@ Yapılar sınıfları daha sınırlı olmasına karşın yapılar sınıfları, 
   
 -   Alanlar olarak bildirilmedikleri sürece bir yapının bildirimi içinde başlatılamaz `const` veya `static`.  
   
--   Bir yapı varsayılan (parametresiz bir oluşturucu) bir oluşturucu ya da bir sonlandırıcı bildiremezsiniz.  
+-   Bir yapı, parametresiz bir oluşturucu (parametresiz bir oluşturucu) veya bir sonlandırıcı bildiremezsiniz.  
   
 -   Yapılar, atamaya bağlı kopyalanır. Bir yapı için yeni bir değişken atandığında, tüm verileri kopyalanır ve yeni bir kopyasını değişiklik özgün kopya verileri değiştirmez. Bu, sözlük < string, myStruct > gibi değer türlerinin koleksiyonları ile çalışırken unutmamak önemlidir.  
   

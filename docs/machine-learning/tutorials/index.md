@@ -3,16 +3,16 @@ title: .NET makine öğreticiler - ML.NET öğrenme
 description: Özel yapay ZEKA çözümleri oluşturmanıza ve bunları .NET uygulamalarınızla tümleştirin hakkında bilgi edinmek için ML.NET öğreticileri keşfedin.
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 1f3824e409c21514bfb0c5743c6d9f36419ecb06
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 45534e196c2dc0cd1994445eeb482474b32aaa41
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427607"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980401"
 ---
 # <a name="net-machine-learning-tutorials---mlnet"></a>.NET makine öğreticiler - ML.NET öğrenme
 
-Aşağıdaki öğreticilerde nasıl kullanılacağını anlamak etkinleştirmeniz [ML.NET](../index.md) özel makine öğrenimi çözümleri oluşturmanıza ve bunları .NET uygulamalarınızla tümleştirmek için:
+Aşağıdaki öğreticilerde nasıl kullanılacağını anlamak etkinleştirmeniz [ML.NET](../index.yml) özel makine öğrenimi çözümleri oluşturmanıza ve bunları .NET uygulamalarınızla tümleştirmek için:
 
 - [Yaklaşım analizi](sentiment-analysis.md): nasıl uygulanacağını gösterir bir **ikili sınıflandırma** ML.NET kullanarak görev.
 - [GitHub sorun sınıflandırmasını](github-issue-classification.md): nasıl uygulanacağını gösterir bir **sınıflı sınıflandırma** ML.NET kullanarak görev.

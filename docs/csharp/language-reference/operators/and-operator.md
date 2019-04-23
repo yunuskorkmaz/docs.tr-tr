@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-ms.openlocfilehash: 67d60709e1c6c76071ecfb7aac74c83dec6f372a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.openlocfilehash: 7aac0af93efb3d72496df13a64afb7840993b22c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310050"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980648"
 ---
 # <a name="amp-operator-c-reference"></a>&amp; İşleci (C# Başvurusu)
 
@@ -60,11 +60,9 @@ Daha fazla bilgi için [address-of işlecini](~/_csharplang/spec/unsafe-code.md#
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# İşleçleri](index.md)
-- [Boole mantıksal işleçleri](boolean-logical-operators.md)
+- [Boolean mantıksal işleçler](boolean-logical-operators.md)
+- [Bit düzeyinde ve kaydırma işleçleri](bitwise-and-shift-operators.md)
 - [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [| işleci](or-operator.md)
-- [^ işleci](xor-operator.md)
-- [~ işleci](bitwise-complement-operator.md)

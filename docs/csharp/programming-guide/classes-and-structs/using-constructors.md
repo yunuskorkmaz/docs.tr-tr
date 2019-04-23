@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7422267d6ce067ed30d0fbd4be8de2fd122b4a90
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 1f47459fc5002118d94cc8d389f35c18fa2c611a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200643"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979829"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Oluşturucular Kullanma (C# Programlama Kılavuzu)
 Olduğunda bir [sınıfı](../../../csharp/language-reference/keywords/class.md) veya [yapı](../../../csharp/language-reference/keywords/struct.md) olan oluşturulan, kendi Oluşturucu çağrılır. Oluşturucular sınıf veya yapının aynı ada sahip ve bunlar genellikle yeni nesnenin veri üyeleri başlatılamıyor.  
@@ -19,9 +19,9 @@ Olduğunda bir [sınıfı](../../../csharp/language-reference/keywords/class.md)
   
  [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
- Herhangi bir parametre alan bir oluşturucu olarak adlandırılan bir *varsayılan oluşturucu*. Varsayılan Oluşturucu çağrılır kullanarak bir nesne örneği her `new` işleci ve herhangi bir bağımsız değişken için sağlanan `new`. Daha fazla bilgi için [örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+ Herhangi bir parametre alan bir oluşturucu olarak adlandırılan bir *parametresiz oluşturucu*. Varsayılan Oluşturucu çağrılır kullanarak bir nesne örneği her `new` işleci ve herhangi bir bağımsız değişken için sağlanan `new`. Daha fazla bilgi için [örnek oluşturucuları](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
- Bir sınıf olmadığı sürece [statik](../../../csharp/language-reference/keywords/static.md), Oluşturucular, sınıf örnekleme etkinleştirmek için C# derleyicisi tarafından genel bir varsayılan oluşturucu verilen olmayan sınıflar. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Bir sınıf olmadığı sürece [statik](../../../csharp/language-reference/keywords/static.md), Oluşturucular, genel bir parametresiz oluşturucusu tarafından verilen olmadan sınıfları C# sınıfı örneğini oluşturmada etkinleştirmek için derleyici. Daha fazla bilgi için [statik sınıflar ve statik sınıf üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
  Bir sınıf oluşturucu özel gibi yaparak oluşturulmasını engelleyebilir:  
   
@@ -29,7 +29,7 @@ Olduğunda bir [sınıfı](../../../csharp/language-reference/keywords/class.md)
   
  Daha fazla bilgi için [özel oluşturucular](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).  
   
- Oluşturucular için [yapı](../../../csharp/language-reference/keywords/struct.md) türleri sınıf oluşturucuları, benzer ancak `structs` bir derleyici tarafından otomatik olarak sağlandığından, açık bir varsayılan oluşturucu içeremez. Bu oluşturucu her alanda başlatır `struct` için varsayılan değerleri. Daha fazla bilgi için [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). Ancak, bu varsayılan oluşturucu yalnızca, çağrılan `struct` ile örneği `new`. Örneğin, bu kod için varsayılan oluşturucu kullanan <xref:System.Int32>, böylece tamsayı başlatıldığından emin olabilirsiniz:  
+ Oluşturucular için [yapı](../../../csharp/language-reference/keywords/struct.md) türleri sınıf oluşturucuları, benzer ancak `structs` bir derleyici tarafından otomatik olarak sağlandığından, açık parametresiz oluşturucu içeremez. Bu oluşturucu her alanda başlatır `struct` için varsayılan değerleri. Daha fazla bilgi için [varsayılan değerler tablosu](../../../csharp/language-reference/keywords/default-values-table.md). Ancak, bu parametresiz oluşturucu yalnızca, çağrılan `struct` ile örneği `new`. Örneğin, bu kod için parametresiz oluşturucu kullanan <xref:System.Int32>, böylece tamsayı başlatıldığından emin olabilirsiniz:  
   
 ```csharp  
 int i = new int();  
@@ -52,9 +52,9 @@ b = 33;      // Or assign it before using it.
 Console.WriteLine("{0}, {1}", a, b);  
 ```  
   
- Varsayılan Oluşturucu için bir değer türü yöntemini çağırır; dolayısıyla, gerekli değildir.  
+ Parametresiz oluşturucusu için bir değer türü yöntemini çağırır; dolayısıyla, gerekli değildir.  
   
- Her iki sınıfları ve `structs` parametre oluşturucular tanımlayabilirsiniz. Parametre oluşturucular çağırılır, aracılığıyla bir `new` deyimi veya bir [temel](../../../csharp/language-reference/keywords/base.md) deyimi. Sınıfları ve `structs` birden çok oluşturucular da tanımlayabilirsiniz ve bunların hiçbiri varsayılan oluşturucuyu tanımlamak için gereklidir. Örneğin:  
+ Her iki sınıfları ve `structs` parametre oluşturucular tanımlayabilirsiniz. Parametre oluşturucular çağırılır, aracılığıyla bir `new` deyimi veya bir [temel](../../../csharp/language-reference/keywords/base.md) deyimi. Sınıfları ve `structs` birden çok oluşturucular da tanımlayabilirsiniz ve bunların hiçbiri parametresiz bir oluşturucu tanımlamak için gereklidir. Örneğin:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -68,13 +68,13 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Blok Oluşturucu için yürütülmeden önce bu örnekte, temel sınıf için oluşturucu çağrılır. `base` Parametrelerle veya parametresiz anahtar sözcüğü kullanılabilir. Oluşturucu herhangi bir parametre için parametre olarak kullanılan `base`, veya bir ifade parçası olarak. Daha fazla bilgi için [temel](../../../csharp/language-reference/keywords/base.md).  
   
- Bir temel sınıf oluşturucusu kullanarak açıkça çağrılmaz, türetilmiş bir sınıf içinde `base` anahtar sözcüğü, varsayılan oluşturucusu varsa, çağrıldığında örtük olarak. Bu aşağıdaki Oluşturucusu bildirimleri etkili bir şekilde aynı anlamına gelir:  
+ Bir temel sınıf oluşturucusu kullanarak açıkça çağrılmaz, türetilmiş bir sınıf içinde `base` anahtar sözcüğü, parametresiz bir oluşturucusu varsa, çağrıldığında örtük olarak. Bu aşağıdaki Oluşturucusu bildirimleri etkili bir şekilde aynı anlamına gelir:  
   
  [!code-csharp[csProgGuideObjects#58](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#58)]  
   
  [!code-csharp[csProgGuideObjects#57](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#57)]  
   
- Bir temel sınıf varsayılan bir oluşturucu sağlamaz, türetilen sınıfın temel oluşturucu için açık çağrı kullanarak yapmalısınız `base`.  
+ Bir temel sınıf parametresiz bir oluşturucu sağlamaz, türetilen sınıfın temel oluşturucu için açık çağrı kullanarak yapmalısınız `base`.  
   
  Bir kurucu kullanarak aynı nesnede başka bir oluşturucu çağırabilirsiniz [bu](../../../csharp/language-reference/keywords/this.md) anahtar sözcüğü. Gibi `base`, `this` parametrelerle veya parametresiz kullanılabilir ve oluşturucu içinde herhangi bir parametre için parametre olarak kullanılabilir `this`, veya bir ifade parçası olarak. Örneğin, önceki örnekte ikinci oluşturucu kullanılarak yazılabilir `this`:  
   

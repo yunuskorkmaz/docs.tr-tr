@@ -3,10 +3,10 @@ title: Güvenlik konuları (varlık çerçevesi)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
 ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161376"
 ---
 # <a name="security-considerations-entity-framework"></a>Güvenlik konuları (varlık çerçevesi)
@@ -69,7 +69,7 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
   
 -   <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> Entities sorgularında LINQ desteklemek için.  
   
--   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> listeleme için bir <xref:System.Transactions><xref:System.Transactions.Transaction>.  
+-   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> listeleme için bir <xref:System.Transactions> <xref:System.Transactions.Transaction>.  
   
 -   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> özel durumları kullanarak seri hale getirmek için <xref:System.Runtime.Serialization.ISerializable> arabirimi.  
   
@@ -164,5 +164,5 @@ Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konu
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Dağıtım Hakkında Önemli Noktalar](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
 - [Geçiş Konuları](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 109298a7945a6b76b35970b7b9c42e159bad8f90
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307481"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979387"
 ---
 # <a name="operators-c-programming-guide"></a>İşleçler (C# Programlama Kılavuzu)
 
@@ -38,7 +38,7 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
   
  Aşağıdaki tablo, yaptıkları işleme dayalı olarak, işleçleri kategorilere ayırır. Kategoriler, öncelik sırasına göre listelenir.  
   
- **Birincil Operatörler**  
+ **Birincil operatörler**  
   
 |İfade|Açıklama|  
 |----------------|-----------------|  
@@ -57,19 +57,19 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
 |[Varsayılan](../../../csharp/language-reference/keywords/default.md) (T)|T türü varsayılan değerini elde etme|  
 |[Temsilci](../../../csharp/language-reference/keywords/delegate.md) {}|Anonim işlevi (anonim yöntemi)|  
   
- **Birli İşleçler**  
+ **Birli işleçler**  
   
 |İfade|Açıklama|  
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|Kimlik|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Olumsuzlama|  
 |[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Mantıksal olumsuzlama|  
-|[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Bitwise olumsuzlama|  
+|[~](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#bitwise-complement-operator-)x|Bitwise olumsuzlama|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Artırım öncesi|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Azaltım öncesi|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|x'i açıkça T türüne dönüştürme|  
   
- **Çarpma İşleçleri**  
+ **Çarpma işleçleri**  
   
 |İfade|Açıklama|  
 |----------------|-----------------|  
@@ -77,21 +77,21 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
 |[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|Bölme|  
 |[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|Kalan|  
   
- **Toplama İşleçleri**  
+ **Toplama işleçleri**  
   
 |İfade|Açıklama|  
 |----------------|-----------------|  
 |x [ + ](../../../csharp/language-reference/operators/addition-operator.md) y|Toplama, dize bitiştirme, temsilci birleşimi|  
 |x [ - ](../../../csharp/language-reference/operators/subtraction-operator.md) y|Çıkarma, temsilci kaldırma|  
   
- **Kaydırma İşleçleri**  
+ **Kaydırma işleçleri**  
   
-|İfade|Açıklama|  
-|----------------|-----------------|  
-|x [ < \< ](../../../csharp/language-reference/operators/left-shift-operator.md) y|Sola kaydırma|  
-|x [ >> ](../../../csharp/language-reference/operators/right-shift-operator.md) y|Sağa kaydırma|  
+|İfade|Açıklama|
+|----------------|-----------------|
+|x [ < \< ](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#left-shift-operator-) y|Sola kaydırma|
+|x [ >> ](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#right-shift-operator-) y|Sağa kaydırma|
   
- **İlişkisel ve Tür İşleçleri**  
+ **İlişkisel ve tür işleçleri**  
   
 |İfade|Açıklama|  
 |----------------|-----------------|  
@@ -109,25 +109,25 @@ C# ' ta, bir *işleci* uygulanan bir program öğesi için bir veya daha fazla o
 |x [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Eşittir|  
 |x [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Eşit değildir|  
   
- **Mantıksal, Koşullu ve Null İşleçleri**  
+ **Mantıksal, koşullu ve Null işleçleri**  
   
-|Kategori|İfade|Açıklama|  
-|--------------|----------------|-----------------|  
-|Mantıksal VE|x [ & ](../../../csharp/language-reference/operators/and-operator.md) y|Tamsayı bitwise VE, Boolean mantıksal VE|  
-|Mantıksal XOR|x [ ^ ](../../../csharp/language-reference/operators/xor-operator.md) y|Tamsayı bitwise XOR, Boolean mantıksal XOR|  
-|Mantıksal VEYA|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Tamsayı bitwise veya, Boolean mantıksal veya|  
-|Koşullu VE|x [ && ](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Yalnızca x doğruysa y değerlendirilir|  
-|Koşullu VEYA|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Yalnızca x yanlışsa y değerlendirilir|  
-|Null birleşim|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|x null ise y olarak değerlendirilir, tersi durumda x olarak değerlendirilir|  
-|Koşullu|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y: z|x doğruysa Y olarak değerlendirilir, x yanlışsa z olarak değerlendirilir|  
+|Kategori|İfade|Açıklama|
+|--------------|----------------|-----------------|
+|Mantıksal VE|`x & y`|[Tamsayı bitwise ve](../../language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), [Boolean mantıksal ve](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)|
+|Mantıksal XOR|`x ^ y`|[Tamsayı bitwise XOR](../../language-reference/operators/bitwise-and-shift-operators.md#logical-exclusive-or-operator-), [Boolean mantıksal XOR](../../language-reference/operators/boolean-logical-operators.md#logical-exclusive-or-operator-)|
+|Mantıksal VEYA|`x | y`|[Tamsayı bitwise OR](../../language-reference/operators/bitwise-and-shift-operators.md#logical-or-operator-), [Boolean mantıksal veya](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)|
+|Koşullu VE|x [ && ](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Yalnızca x doğruysa y değerlendirilir|
+|Koşullu VEYA|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Yalnızca x yanlışsa y değerlendirilir|
+|Null birleşim|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|x null ise y olarak değerlendirilir, tersi durumda x olarak değerlendirilir|
+|Koşullu|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y: z|x doğruysa Y olarak değerlendirilir, x yanlışsa z olarak değerlendirilir|
   
- **Atama ve Anonim İşleçleri**  
+ **Atama ve anonim işleçleri**  
   
-|İfade|Açıklama|  
-|----------------|-----------------|  
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|Atama|  
-|x iş= y|Bileşen atama Bu işleçleri destekler: [ += ](../../../csharp/language-reference/operators/addition-assignment-operator.md), [ -= ](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [ *= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ /= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ %= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment) , [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
-|(T x) [ => ](../../../csharp/language-reference/operators/lambda-operator.md) y|Anonim işlevi (lambda ifadesi)|  
+|İfade|Açıklama|
+|----------------|-----------------|
+|[=](../../../csharp/language-reference/operators/assignment-operator.md)|Atama|
+|x iş= y|Bileşen atama Bu işleçleri destekler: [ += ](../../../csharp/language-reference/operators/addition-assignment-operator.md), [ -= ](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [ *= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ /= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ %= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment) , [&=](../../../csharp/language-reference/operators/boolean-logical-operators.md#compound-assignment), [&#124;=](../../../csharp/language-reference/operators/boolean-logical-operators.md#compound-assignment), [^=](../../../csharp/language-reference/operators/boolean-logical-operators.md#compound-assignment), [<\<=](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#compound-assignment), [>>=](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#compound-assignment)|
+|(T x) [ => ](../../../csharp/language-reference/operators/lambda-operator.md) y|Anonim işlevi (lambda ifadesi)|
   
 ## <a name="associativity"></a>İlişkilendirilebilirlik
 

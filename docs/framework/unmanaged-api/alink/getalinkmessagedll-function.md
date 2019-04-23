@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: edd83e62b08aa7892c01577cd8c46f9d965c0894
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163026"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll İşlevi
@@ -40,4 +40,4 @@ HINSTANCE WINAPI GetALinkMessageDll();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Al.exe (Derleme Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

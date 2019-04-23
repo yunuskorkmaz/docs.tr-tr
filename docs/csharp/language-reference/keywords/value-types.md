@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 77aed78e7822e06b3b1e6c48b07790d93e09559c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
+ms.openlocfilehash: 5ff883e541c614832286b4027bc1574952f8fd3d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612731"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979917"
 ---
 # <a name="value-types-c-reference"></a>Değer türleri (C# Başvurusu)
 
@@ -34,7 +34,7 @@ Farklı başvuru türleri ile yeni bir tür bir değer türünden türetilemez. 
 
 Değer türü değişkenler olamaz `null` varsayılan olarak. Ancak, karşılık gelen değişkenleri [boş değer atanabilir türler](../../../csharp/programming-guide/nullable-types/index.md) olabilir `null`.
 
-Her değer türü varsayılan değer türü başlatan örtülü varsayılan bir oluşturucuya sahiptir. Değer türleri varsayılan değerler hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).
+Varsayılan değer türü başlatan örtük parametresiz bir oluşturucu her değer türünde. Değer türleri varsayılan değerler hakkında daha fazla bilgi için bkz. [varsayılan değerler tablosu](default-values-table.md).
 
 ## <a name="simple-types"></a>Basit türler
 
@@ -67,7 +67,7 @@ int myInt;
 Bunu başlatılmadan önce kullanamazsınız. Aşağıdaki deyimi kullanarak başlatabilirsiniz:
 
 ```csharp
-myInt = new int();  // Invoke default constructor for int type.
+myInt = new int();  // Invoke parameterless constructor for int type.
 ```
 
 Bu ifade, aşağıdaki deyime eşdeğerdir:
@@ -88,12 +88,12 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Kullanarak [yeni](new.md) işleci belirli türdeki varsayılan oluşturucuyu çağırır ve varsayılan değer değişkenine atar. Önceki örnekte, varsayılan oluşturucu değer atanmış `0` için `myInt`. Varsayılan Oluşturucu çağırarak atanan değerler hakkında daha fazla bilgi için bkz: [varsayılan değerler tablosu](default-values-table.md).
+Kullanarak [yeni](new.md) işleci belirli türün parametresiz oluşturucu çağırır ve varsayılan değer değişkenine atar. Önceki örnekte, parametresiz bir oluşturucu değer atanmış `0` için `myInt`. Varsayılan Oluşturucu çağırarak atanan değerler hakkında daha fazla bilgi için bkz: [varsayılan değerler tablosu](default-values-table.md).
 
-Kullanıcı tanımlı türler ile kullanın [yeni](new.md) varsayılan oluşturucuyu çağırmak için. Örneğin, aşağıdaki deyim olan varsayılan oluşturucusunu çağırır `Point` yapısı:
+Kullanıcı tanımlı türler ile kullanın [yeni](new.md) parametresiz bir oluşturucu çağırmak için. Örneğin, aşağıdaki deyim, parametresiz oluşturucu çağırır `Point` yapısı:
 
 ```csharp
-Point p = new Point(); // Invoke default constructor for the struct.
+Point p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 Bu çağrıdan sonra kesinlikle atanacak yapı olarak kabul edilir; diğer bir deyişle, tüm üyeleri varsayılan değerlerine başlatılır.

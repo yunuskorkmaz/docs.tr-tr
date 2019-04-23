@@ -3,12 +3,12 @@ title: LINQ ile çalışma
 description: Bu öğreticide LINQ ile dizileri oluşturmak, yöntemleri kullanmak için LINQ sorguları yazma ve eager ve geç değerlendirme arasında ayrım öğretir.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d6dbe158c5f9b474dbd2cc61982ab8e23e584ec7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815594"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979686"
 ---
 # <a name="working-with-linq"></a>LINQ ile çalışma
 
@@ -340,9 +340,9 @@ LINQ yanı sıra, biraz teknik magicians kullanımı için kart püf noktaları 
 
 LINQ hakkında daha fazla bilgi için bkz:
 - [Dil ile Tümleşik Sorgu (LINQ)](../programming-guide/concepts/linq/index.md)
-    - [LINQ'e Giriş](../programming-guide/concepts/linq/introduction-to-linq.md)
-    - [' De Lınq'e BaşlarkenC#](../programming-guide/concepts/linq/getting-started-with-linq.md)
-        - [Temel LINQ Sorgu işlemleri (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-        - [LINQ ile veri dönüştürmeler (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-        - [Sorgu sözdizimi ve yöntem sözdizimi LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-        - [LINQ'i Destekleyen C# Özellikleri](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [LINQ'e Giriş](../programming-guide/concepts/linq/introduction-to-linq.md)
+  - [' De Lınq'e BaşlarkenC#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+    - [Temel LINQ Sorgu işlemleri (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+    - [LINQ ile veri dönüştürmeler (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+    - [Sorgu sözdizimi ve yöntem sözdizimi LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+    - [LINQ'i Destekleyen C# Özellikleri](../programming-guide/concepts/linq/features-that-support-linq.md)
