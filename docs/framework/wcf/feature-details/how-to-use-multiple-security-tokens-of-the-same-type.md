@@ -3,48 +3,48 @@ title: 'Nasıl yapılır: Aynı Türde Birden Fazla Belirteç Kullanma'
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
 ms.openlocfilehash: 7de5d52587e1796ecfa05048024f8847a555655c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309283"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976449"
 ---
-# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="dd16e-102">Nasıl yapılır: Aynı Türde Birden Fazla Belirteç Kullanma</span><span class="sxs-lookup"><span data-stu-id="dd16e-102">How to: Use Multiple Security Tokens of the Same Type</span></span>
--   <span data-ttu-id="dd16e-103">İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, belirtilen her türlü istemci iletisi yalnızca kapsanan bir belirteç.</span><span class="sxs-lookup"><span data-stu-id="dd16e-103">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, a client message only contained one token of any given type.</span></span> <span data-ttu-id="dd16e-104">Artık istemci iletileri birden çok belirteç türü içerebilir.</span><span class="sxs-lookup"><span data-stu-id="dd16e-104">Now client messages can contain multiple tokens of a type.</span></span> <span data-ttu-id="dd16e-105">Bu konuda, bir istemci iletiye aynı türde birden çok belirteç gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="dd16e-105">This topic shows how to include multiple tokens of the same type in a client message.</span></span>  
+# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="b69b2-102">Nasıl yapılır: Aynı Türde Birden Fazla Belirteç Kullanma</span><span class="sxs-lookup"><span data-stu-id="b69b2-102">How to: Use Multiple Security Tokens of the Same Type</span></span>
+-   <span data-ttu-id="b69b2-103">İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, belirtilen her türlü istemci iletisi yalnızca kapsanan bir belirteç.</span><span class="sxs-lookup"><span data-stu-id="b69b2-103">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, a client message only contained one token of any given type.</span></span> <span data-ttu-id="b69b2-104">Artık istemci iletileri birden çok belirteç türü içerebilir.</span><span class="sxs-lookup"><span data-stu-id="b69b2-104">Now client messages can contain multiple tokens of a type.</span></span> <span data-ttu-id="b69b2-105">Bu konuda, bir istemci iletiye aynı türde birden çok belirteç gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b69b2-105">This topic shows how to include multiple tokens of the same type in a client message.</span></span>  
   
--   <span data-ttu-id="dd16e-106">Bu şekilde bir hizmet yapılandıramazsınız Not: hizmet yalnızca bir destekleme belirteci içerebilir.</span><span class="sxs-lookup"><span data-stu-id="dd16e-106">Note that you cannot configure a service in this way: a service can contain only one supporting token.</span></span>  
+-   <span data-ttu-id="b69b2-106">Bu şekilde bir hizmet yapılandıramazsınız Not: hizmet yalnızca bir destekleme belirteci içerebilir.</span><span class="sxs-lookup"><span data-stu-id="b69b2-106">Note that you cannot configure a service in this way: a service can contain only one supporting token.</span></span>  
   
-### <a name="to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="dd16e-107">Aynı türde birden fazla belirteç kullanmak için</span><span class="sxs-lookup"><span data-stu-id="dd16e-107">To use multiple security tokens of the same type</span></span>  
+### <a name="to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="b69b2-107">Aynı türde birden fazla belirteç kullanmak için</span><span class="sxs-lookup"><span data-stu-id="b69b2-107">To use multiple security tokens of the same type</span></span>  
   
-1. <span data-ttu-id="dd16e-108">Doldurulacak bir boş bağlama öğesi koleksiyonu oluşturun.</span><span class="sxs-lookup"><span data-stu-id="dd16e-108">Create an empty binding element collection to be populated.</span></span>  
+1. <span data-ttu-id="b69b2-108">Doldurulacak bir boş bağlama öğesi koleksiyonu oluşturun.</span><span class="sxs-lookup"><span data-stu-id="b69b2-108">Create an empty binding element collection to be populated.</span></span>  
   
      [!code-csharp[C_CustomBinding#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#9)]  
   
-2. <span data-ttu-id="dd16e-109">Oluşturma bir <xref:System.ServiceModel.Channels.SecurityBindingElement> çağırarak <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span><span class="sxs-lookup"><span data-stu-id="dd16e-109">Create a <xref:System.ServiceModel.Channels.SecurityBindingElement> by calling <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span></span>  
+2. <span data-ttu-id="b69b2-109">Oluşturma bir <xref:System.ServiceModel.Channels.SecurityBindingElement> çağırarak <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span><span class="sxs-lookup"><span data-stu-id="b69b2-109">Create a <xref:System.ServiceModel.Channels.SecurityBindingElement> by calling <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span></span>  
   
      [!code-csharp[C_CustomBinding#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#10)]  
   
-3. <span data-ttu-id="dd16e-110">Oluşturma bir <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters> koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="dd16e-110">Create a <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters> collection.</span></span>  
+3. <span data-ttu-id="b69b2-110">Oluşturma bir <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters> koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="b69b2-110">Create a <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters> collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#11)]  
   
-4. <span data-ttu-id="dd16e-111">SAML belirteçlerini koleksiyona ekleyin.</span><span class="sxs-lookup"><span data-stu-id="dd16e-111">Add SAML tokens to the collection.</span></span>  
+4. <span data-ttu-id="b69b2-111">SAML belirteçlerini koleksiyona ekleyin.</span><span class="sxs-lookup"><span data-stu-id="b69b2-111">Add SAML tokens to the collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#12)]  
   
-5. <span data-ttu-id="dd16e-112">Koleksiyona ekleme <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="dd16e-112">Add the collection to the <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span></span>  
+5. <span data-ttu-id="b69b2-112">Koleksiyona ekleme <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="b69b2-112">Add the collection to the <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span></span>  
   
      [!code-csharp[C_CustomBinding#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#13)]  
   
-6. <span data-ttu-id="dd16e-113">Bağlama öğeleri bağlama öğesi koleksiyona ekleyin.</span><span class="sxs-lookup"><span data-stu-id="dd16e-113">Add binding elements to the binding element collection.</span></span>  
+6. <span data-ttu-id="b69b2-113">Bağlama öğeleri bağlama öğesi koleksiyona ekleyin.</span><span class="sxs-lookup"><span data-stu-id="b69b2-113">Add binding elements to the binding element collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#14)]  
   
-7. <span data-ttu-id="dd16e-114">Bağlama öğesi koleksiyonundan oluşturulan yeni bir özel bağlama döndürür.</span><span class="sxs-lookup"><span data-stu-id="dd16e-114">Return a new custom binding created from the binding element collection.</span></span>  
+7. <span data-ttu-id="b69b2-114">Bağlama öğesi koleksiyonundan oluşturulan yeni bir özel bağlama döndürür.</span><span class="sxs-lookup"><span data-stu-id="b69b2-114">Return a new custom binding created from the binding element collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#15)]  
   
-## <a name="example"></a><span data-ttu-id="dd16e-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="dd16e-115">Example</span></span>  
- <span data-ttu-id="dd16e-116">Yukarıdaki yordamı tarafından tanımlanan tüm yöntemi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="dd16e-116">The following is the entire method described by the preceding procedure.</span></span>  
+## <a name="example"></a><span data-ttu-id="b69b2-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="b69b2-115">Example</span></span>  
+ <span data-ttu-id="b69b2-116">Yukarıdaki yordamı tarafından tanımlanan tüm yöntemi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="b69b2-116">The following is the entire method described by the preceding procedure.</span></span>  
   
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  

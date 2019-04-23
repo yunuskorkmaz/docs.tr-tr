@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 785defaa69609fc30852be9996531e6063586ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092389"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977749"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="94ed0-102">ICorDebugCode::GetEnCRemapSequencePoints Yöntemi</span><span class="sxs-lookup"><span data-stu-id="94ed0-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="94ed0-103">Bu yöntem .NET Framework'ün geçerli sürümde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="94ed0-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="bfb01-102">ICorDebugCode::GetEnCRemapSequencePoints Yöntemi</span><span class="sxs-lookup"><span data-stu-id="bfb01-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="bfb01-103">Bu yöntem .NET Framework'ün geçerli sürümde uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="bfb01-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="94ed0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="94ed0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bfb01-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bfb01-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEnCRemapSequencePoints(  
@@ -38,4 +38,4 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="94ed0-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="94ed0-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bfb01-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bfb01-105">See also</span></span>

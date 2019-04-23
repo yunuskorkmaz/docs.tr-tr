@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 252a65c66764d60f5e307ba1eaad4ded34d9744d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162156"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975747"
 ---
-# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="79c2a-102">ICorDebugObjectValue2::GetVirtualMethodAndType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="79c2a-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
-<span data-ttu-id="79c2a-103">Bu yöntem henüz uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="79c2a-103">This method is not yet implemented.</span></span>  
+# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="4c20d-102">ICorDebugObjectValue2::GetVirtualMethodAndType Yöntemi</span><span class="sxs-lookup"><span data-stu-id="4c20d-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
+<span data-ttu-id="4c20d-103">Bu yöntem henüz uygulanmadı.</span><span class="sxs-lookup"><span data-stu-id="4c20d-103">This method is not yet implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79c2a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="79c2a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4c20d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4c20d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVirtualMethodAndType (  
@@ -37,7 +37,7 @@ HRESULT GetVirtualMethodAndType (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="79c2a-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="79c2a-105">Remarks</span></span>  
- <span data-ttu-id="79c2a-106">Alır, işaretçiler en çok türetilen yöntemi ve belirtilen üyenin başvurusu için türünü temsil eden "ICorDebugFunction" ve "ICorDebugType" örnekleri için arabirim.</span><span class="sxs-lookup"><span data-stu-id="79c2a-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4c20d-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4c20d-105">Remarks</span></span>  
+ <span data-ttu-id="4c20d-106">Alır, işaretçiler en çok türetilen yöntemi ve belirtilen üyenin başvurusu için türünü temsil eden "ICorDebugFunction" ve "ICorDebugType" örnekleri için arabirim.</span><span class="sxs-lookup"><span data-stu-id="4c20d-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79c2a-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="79c2a-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4c20d-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4c20d-107">See also</span></span>
