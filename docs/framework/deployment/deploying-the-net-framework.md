@@ -8,10 +8,10 @@ ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 096c818c1103835110478953d0a0d9082b33569e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180667"
 ---
 # <a name="deploying-the-net-framework"></a>.NET Framework'ü dağıtma
@@ -27,13 +27,13 @@ ms.locfileid: "59180667"
  [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](../../../docs/framework/deployment/reducing-system-restarts.md)  
  Yeniden başlatma Yöneticisi önleyen mümkün olduğunda yeniden başlatır ve .NET Framework yükleme uygulamaları bu Avantajdan nasıl alabilir açıklanmaktadır.  
   
- [Nasıl yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
+ [Nasıl yapılır: .NET Framework 4.5 yükleyicisinden ilerleme durumunu Al](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
  Sessizce başlatmak ve kendi görünüm Kurulum sürecinizin gösterirken .NET Framework Kurulum sürecini izlemek açıklar.  
   
- [.NET Framework Başlatma Hataları: Kullanıcı Deneyimini Yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
+ [.NET framework başlatma hataları: Kullanıcı deneyimini yönetme](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)  
  Bir .NET Framework uygulaması geçersiz veya kullanıcının bilgisayarında yüklü değil bir CLR sürümü gerektirdiğinde neler olacağını açıklayan bu hataları gidermek nasıl ve kullanıcıya görüntülenen hata iletisini kontrol etme.  
   
- [Nasıl yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
+ [Nasıl yapılır: CLR etkinleştirme sorunlarında hata ayıklama](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  Görüntüleyebilir ve hata ayıklama CLR doğru sürümü ile çalışması için uygulamanızı alınırken karşılaşabileceğiniz sorunları gidermek için CLR etkinleştirme günlüklerini nasıl açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
