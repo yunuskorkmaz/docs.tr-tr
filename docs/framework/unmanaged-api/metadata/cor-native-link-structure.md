@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7024140ed9b870b5db38dba7e9b13321dd37386a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157592"
 ---
 # <a name="cornativelink-structure"></a>COR_NATIVE_LINK Yapısı
@@ -57,5 +57,5 @@ typedef struct
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Meta Veri Yapıları](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [CorNativeLinkType Numaralandırması](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
-- [CorNativeLinkFlags Numaralandırması](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)
+- [CorNativeLinkType Sabit Listesi](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
+- [CorNativeLinkFlags Sabit Listesi](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)

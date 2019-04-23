@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157878"
 ---
 # <a name="panels-overview"></a>Panellere Genel Bakış
@@ -254,7 +254,7 @@ ms.locfileid: "59157878"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF Düzen Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Düzen](../advanced/layout.md)
 - [WPF denetimleri Galerisi örneği](https://go.microsoft.com/fwlink/?LinkID=160053)

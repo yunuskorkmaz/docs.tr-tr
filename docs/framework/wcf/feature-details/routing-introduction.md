@@ -3,10 +3,10 @@ title: Yönlendirme Tanıtımı
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158684"
 ---
 # <a name="routing-introduction"></a>Yönlendirme Tanıtımı
@@ -404,5 +404,5 @@ using (ServiceHost serviceHost =
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İleti Filtreleri](message-filters.md)
-- [Sözleşmeleri Yönlendirme](routing-contracts.md)
+- [Anlaşmaları Yönlendirme](routing-contracts.md)
 - [Filtre Seçme](choosing-a-filter.md)

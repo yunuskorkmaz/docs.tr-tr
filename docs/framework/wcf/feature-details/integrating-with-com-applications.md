@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
 ms.openlocfilehash: 51626da6e97e346f43cfe606a5164024580a2ac7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155330"
 ---
 # <a name="integrating-with-com-applications"></a>COM Uygulamaları ile Tümleştirme
@@ -23,19 +23,19 @@ Windows Communication Foundation (WCF) Hizmetleri, WCF Hizmeti bilinen adını k
  [COM Uygulamaları ile Tümleştirme Genel Bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)  
  Tümleştirme işlemi ana parçalarını genel bir bakış sağlar.  
   
- [Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)  
+ [Nasıl yapılır: Kaydetme ve hizmet bilinen adı yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)  
  WCF hizmet bilinen adını COM uygulaması içinde kullanmak için gerekli öznitelik türleri COM ile kaydetme ve COM uygulaması ve ad gerekli bağlama yapılandırması ile yapılandırın.  
   
- [Nasıl yapılır: Windows Communication Foundation Hizmeti Bilinen Adını Kaydolmadan Kullanma](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
+ [Nasıl yapılır: Windows Communication Foundation Hizmeti bilinen adını kaydolmadan kullanma](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
  Web Hizmetleri tanım dili (WSDL) belgenin veya WS-MetadataExchange uç noktasından biçiminde sözleşme tanımı elde açıklanmaktadır.  
   
- [Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)  
+ [Nasıl yapılır: WSDL sözleşmeleriyle hizmet bilinen adı kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)  
  Bir WSDL WCF bilinen adını kullanarak bir WCF örnek çağrı açıklar.  
   
- [Nasıl yapılır: Meta Veri Değişimi Sözleşmeleriyle Hizmet Bilinen Adı Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-metadata-exchange-contracts.md)  
+ [Nasıl yapılır: Meta veri değişimi sözleşmeleriyle hizmet bilinen adı kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-metadata-exchange-contracts.md)  
  Mex uç noktasını belirtir bir WCF bilinen adını kullanarak bir WCF örnek çağrı açıklar.  
   
- [Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme](../../../../docs/framework/wcf/feature-details/how-to-specify-channel-security-credentials.md)  
+ [Nasıl yapılır: Kanal güvenliği kimlik bilgilerini belirtin](../../../../docs/framework/wcf/feature-details/how-to-specify-channel-security-credentials.md)  
  WCF hizmet bilinen adı destekler `IChannelCredentials` kanal kimlik bilgilerini belirtmek için alternatif yöntemler çeşitli arabirimi.  
   
 ## <a name="reference"></a>Başvuru  
@@ -43,4 +43,4 @@ Windows Communication Foundation (WCF) Hizmetleri, WCF Hizmeti bilinen adını k
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [COM Uygulamaları ile Tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [COM+ Uygulamaları ile Tümleştirme](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

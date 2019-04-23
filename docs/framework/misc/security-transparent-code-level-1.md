@@ -12,10 +12,10 @@ ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161076"
 ---
 # <a name="security-transparent-code-level-1"></a>Güvenliği saydam kod, düzey 1
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenliği Saydam Kod, 2. Düzey](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Güvenliği saydam kod, Düzey 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
 - [Güvenlik Değişiklikleri](../../../docs/framework/security/security-changes.md)

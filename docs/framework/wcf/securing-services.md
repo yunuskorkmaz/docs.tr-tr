@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157683"
 ---
 # <a name="securing-services"></a>Hizmetleri Güvenli Hale Getirme
@@ -109,11 +109,11 @@ Bir Windows Communication Foundation (WCF) hizmetinin güvenlik iki birincil ger
 - [Temsilcilik ve Kimliğe Bürünme](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
 - [Hizmet Sözleşmeleri Tasarlama](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Güvenlik](../../../docs/framework/wcf/feature-details/security.md)
-- [Güvenlik Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Nasıl yapılır: Güvenlik Modunu Ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [Nasıl yapılır: İstemci Kimlik Bilgileri Türünü Belirtme](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
-- [Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [Nasıl yapılır: Güvenlik Bağlamını İnceleme](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+- [Güvenliğe Genel Bakış](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Nasıl yapılır: ProtectionLevel özelliğini ayarlama](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Nasıl yapılır: Windows kimlik bilgileri ile bir hizmeti güvenli hale getirme](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Nasıl yapılır: Güvenlik modunu ayarlama](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Nasıl yapılır: İstemci kimlik bilgileri türünü belirtme](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Nasıl yapılır: Bir hizmette istemci kimliğine bürünme](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Nasıl yapılır: Güvenlik bağlamını İnceleme](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

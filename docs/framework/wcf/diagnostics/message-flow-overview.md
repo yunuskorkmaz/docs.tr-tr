@@ -3,11 +3,11 @@ title: İleti Akışı Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312650"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772670"
 ---
 # <a name="message-flow-overview"></a>İleti Akışı Genel Bakış
 Birbirine bağlı hizmetleri içeren dağıtılmış bir sistemde hizmetler arasında nedensel ilişkilerini belirlemek gereklidir. Kök neden analizi ve izleme, sorun giderme durumu gibi önemli senaryoları desteklemek için bir istek akışının bir parçası olan çeşitli bileşenleri anlamak önemlidir. İzlemeler, .NET Framework 4'te çeşitli hizmetler arasındaki bağıntıyı etkinleştirmek için aşağıdaki özellikler sayesinde desteği ekledik:

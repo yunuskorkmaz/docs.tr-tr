@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
 ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159529"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Yansıma sağlayıcısı (WCF Data Services)
@@ -51,7 +51,7 @@ Entity Framework Veri modeliyle verileri kullanıma sunduğundan yanı sıra [!I
   
 |.NET framework veri türü|Veri modeli türü|  
 |------------------------------|---------------------|  
-|<xref:System.Byte> `[]`|`Edm.Binary`|  
+|<xref:System.Byte>`[]`|`Edm.Binary`|  
 |<xref:System.Boolean>|`Edm.Boolean`|  
 |<xref:System.Byte>|`Edm.Byte`|  
 |<xref:System.DateTime>|`Edm.DateTime`|  

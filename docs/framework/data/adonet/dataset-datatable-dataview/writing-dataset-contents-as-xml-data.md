@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158958"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>XML Verileri Olarak DataSet İçeriği Yazma
@@ -71,7 +71,7 @@ xmlSW.Close();
 |**Öğe**|Bu varsayılandır. Sütun, burada ColumnName öğe adı, sütunun içeriğine öğenin metin olarak yazılmış bir XML öğesi olarak yazılır. Örneğin:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**Öznitelik**|Sütun XML öğesi geçerli satıra burada ColumnName özniteliğin adını ve sütun içeriğini öznitelik değeri olarak yazılmış bir XML özniteliği olarak yazılır. Örneğin:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
 |**SimpleContent**|Bir sütunun içeriğine metin XML öğesi geçerli satır olarak yazılır. Örneğin:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Unutmayın **SimpleContent** sahip bir tablo için bir sütun ayarlanamaz **öğesi** sütunları veya iç içe geçmiş ilişkileri.|  
-|**Hidden**|Sütun XML çıktısında yazılmaz.|  
+|**Gizli**|Sütun XML çıktısında yazılmaz.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

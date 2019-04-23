@@ -3,11 +3,11 @@ title: XmlSerializer Hataları
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
 ms.openlocfilehash: a64a28e7a0105f5133ba2b0cd3abf72d97d5a3e3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298012"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773219"
 ---
 # <a name="xmlserializer-faults"></a>XmlSerializer Hataları
 <xref:System.Xml.Serialization.XmlSerializer> Hata sözleşme örnek gösterir kullanarak istemciye bir hizmetten hata bilgileri iletişim kurma <xref:System.Xml.Serialization.XmlSerializer>. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), bazı ek kod bir hata için iç özel durum dönüştürmek için hizmet eklenir. İstemci bir hata koşulu hizmette zorlamak için sıfır ile bölme gerçekleştirmeye çalışır.  

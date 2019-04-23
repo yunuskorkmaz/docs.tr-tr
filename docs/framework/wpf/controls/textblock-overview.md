@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TextBlock control [WPF]
 ms.assetid: 24720bca-341a-4b03-8a6b-7a678023b10a
 ms.openlocfilehash: ce7da2b9c9c8e2a3a24d3acf18396ca447ac3f27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203476"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772738"
 ---
 # <a name="textblock-overview"></a>TextBlock Genel Bakışı
 <xref:System.Windows.Controls.TextBlock> Denetim sağlayan esnek metin desteği [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalar. Öğe, öncelikli olarak doğru temel hedeflenen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] metnin birden fazla paragraf gerektirmeyen senaryolar. Bir dizi gibi sunum, kesin bir denetim sağlayan özellikleri destekleyen <xref:System.Windows.Controls.TextBlock.FontFamily%2A>, <xref:System.Windows.Controls.TextBlock.FontSize%2A>, <xref:System.Windows.Controls.TextBlock.FontWeight%2A>, <xref:System.Windows.Controls.TextBlock.TextEffects%2A>, ve <xref:System.Windows.Controls.TextBlock.TextWrapping%2A>. Metin içeriğini kullanarak eklenebilir <xref:System.Windows.Controls.TextBlock.Text%2A> özelliği. Kullanıldığında [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], içeriği açma ve kapatma etiketi arasında örtük olarak öğenin metin olarak eklenir.  
