@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
 ms.openlocfilehash: bf1f88f6efcedd740bff92dda391470391f16ce5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094063"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768676"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Windows Forms Denetimlerinde Kenar Boşluğu Bırakma ve Doldurma
 Formunuzdaki denetimleri kesin yerleşimini birçok uygulama için yüksek öncelik taşır. <xref:System.Windows.Forms?displayProperty=nameWithType> Ad alanı bunu gerçekleştirmek için çok sayıda düzen özelliklerini sağlar. En önemli iki <xref:System.Windows.Forms.Control.Margin%2A> ve <xref:System.Windows.Forms.Control.Padding%2A> özellikleri.  

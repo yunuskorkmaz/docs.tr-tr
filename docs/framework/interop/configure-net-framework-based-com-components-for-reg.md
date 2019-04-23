@@ -11,10 +11,10 @@ ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336583"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma
@@ -175,6 +175,6 @@ Kayıtsız etkinleştirme için .NET Framework tabanlı bileşenler, yalnızca C
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kayıtsız COM Birlikte Çalışma](registration-free-com-interop.md)
-- [Kayıtsız COM Birlikte Çalışma için Gereksinimler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [Kayıtsız Etkinleştirme için COM Bileşenlerini Yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [Kayıtsız COM birlikte çalışma için gereksinimler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [Kayıtsız etkinleştirme için COM bileşenlerini yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
 - [Kayıtsız etkinleştirme. AĞ tabanlı bileşenler: İzlenecek yollar](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

@@ -7,10 +7,10 @@ description: C#, Visual Basic ve F# kullanarak herhangi bir platformda çeşitli
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
 ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427493"
 ---
 <!-- markdownlint-disable MD033 -->
@@ -77,7 +77,7 @@ ms.locfileid: "59427493"
         <h1>.NET Belgeleri</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">Belgeler</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">Başlarken</a>
@@ -214,7 +214,7 @@ ms.locfileid: "59427493"
                                                 <h3><a href="/dotnet/visual-basic">Visual Basic Kılavuzu</a></h3>
                                                 <p><a href="/dotnet/visual-basic/getting-started">Başlarken</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Visual Basic Turu</a></p>
-                                                <p><a href="/dotnet/visual-basic/language-reference">Visual Basic Dil Başvurusu</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference">Visual Basic Dili Başvurusu</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -663,7 +663,7 @@ ms.locfileid: "59427493"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">Makine Öğrenmesi ve AI</a>
+                        <a href="#ml-ai">Makine Öğrenimi ve AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
                                 <a href="/dotnet/machine-learning">

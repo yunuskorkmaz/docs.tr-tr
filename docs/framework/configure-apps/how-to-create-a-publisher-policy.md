@@ -8,10 +8,10 @@ helpviewer_keywords:
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344669"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Nasıl yapılır: Yayımcı İlkesi Oluşturma
@@ -102,9 +102,9 @@ Derleme satıcıları, uygulamaları yükseltilen derlemeye bir yayımcı ilkesi
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derlemelerle Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
-- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma](../../../docs/framework/configure-apps/index.md)
+- [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Yapılandırma dosyalarını kullanarak uygulamaları yapılandırma](../../../docs/framework/configure-apps/index.md)
 - [Çalışma Zamanı Ayarları Şeması](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Derleme Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

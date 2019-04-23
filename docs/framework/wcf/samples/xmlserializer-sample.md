@@ -3,11 +3,11 @@ title: XMLSerializer Örneği
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
 ms.openlocfilehash: 70c6eb07780296672d663c7d5b9259192b189aad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59330551"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769651"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer Örneği
 Bu örnek ile uyumlu olan türler seri hale getrime ve yapmayı gösteren <xref:System.Xml.Serialization.XmlSerializer>. Windows Communication Foundation (WCF) varsayılan biçimlendiricidir <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı. <xref:System.Xml.Serialization.XmlSerializer> Sınıfı seri hale getirmek ve seri halinden dağıtmak için kullanılabilir olduğunda türleri <xref:System.Runtime.Serialization.DataContractSerializer> sınıfı kullanılamaz. XML üzerinde kesin denetim gibi - gerektiğinde bir XML özniteliği ve bir XML öğesi bir veri parçasını olması gerekiyorsa genellikle böyledir. Ayrıca, <xref:System.Xml.Serialization.XmlSerializer> genellikle otomatik olarak olmayan WCF hizmetleri için istemci oluşturulurken seçilir.  

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 ms.openlocfilehash: 6b9fe9994b7bdf2259dcdb1ecef906e0f9955c8f
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480631"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>XML ile Kodunuzu Belgeleme (Visual Basic)
@@ -45,11 +45,11 @@ Belge açıklamaları bir XML dosyası oluşturma hakkında daha fazla bilgi edi
 
 - [XML Dosyasını İşleme](../../../visual-basic/programming-guide/program-structure/processing-the-xml-file.md)
 
-- [Nasıl yapılır: XML Belgesi Oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Nasıl yapılır: XML belgesi oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 
 - [Visual Studio'daki XML Araçları](/visualstudio/xml-tools/xml-tools-in-visual-studio)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic ile Uygulama Geliştirme](../../../visual-basic/developing-apps/index.md)
-- [Visual Basic Programlama Kılavuzu](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic ile uygulama geliştirme](../../../visual-basic/developing-apps/index.md)
+- [Visual Basic programlama kılavuzu](../../../visual-basic/programming-guide/index.md)

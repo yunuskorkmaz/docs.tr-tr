@@ -13,10 +13,10 @@ ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337701"
 ---
 # <a name="applying-attributes"></a>Öznitelikleri Uygulama
@@ -56,6 +56,6 @@ Kodunuzdaki bir öğeye bir öznitelik uygulamak için aşağıdaki işlemi kull
 
 - [Öznitelikler](../../../docs/standard/attributes/index.md)
 - [Özniteliklerde Depolanan Bilgileri Alma](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
-- [Kavramlar](/cpp/windows/attributed-programming-concepts)
+- [Kavramları](/cpp/windows/attributed-programming-concepts)
 - [Öznitelikler (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [Öznitelikler genel bakış (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

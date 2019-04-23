@@ -3,10 +3,10 @@ title: Nesne odaklı programlama (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
 ms.openlocfilehash: a7a3ce1b33d040b337087dfede90b58906c95cbd
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481177"
 ---
 # <a name="object-oriented-programming-c"></a>Nesne odaklı programlama (C#)
@@ -23,7 +23,7 @@ Bu bölüm aşağıdaki kavramları açıklar:
 
 - [Sınıflar ve nesneler](#Classes)
 
-  - [Sınıf Üyeleri](#Members)
+  - [Sınıf üyeleri](#Members)
 
         [Properties and Fields](#Properties)
 
@@ -43,7 +43,7 @@ Bu bölüm aşağıdaki kavramları açıklar:
 
   - [Statik sınıflar ve Üyeler](#Static)
 
-  - [Anonim Türler](#AnonymousTypes)
+  - [Anonim Tipler](#AnonymousTypes)
 
 - [Devralma](#Inheritance)
 
@@ -79,9 +79,9 @@ struct SampleStruct
 
 Daha fazla bilgi için bkz.:
 
-- [sınıf](../../../csharp/language-reference/keywords/class.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
 
-- [struct ](../../../csharp/language-reference/keywords/struct.md)
+- [struct](../../../csharp/language-reference/keywords/struct.md)
 
 ### <a name="Members"></a> Sınıf üyeleri
 
@@ -340,7 +340,7 @@ public abstract class B { }
 
 Daha fazla bilgi için bkz.:
 
-- [korumalı](../../../csharp/language-reference/keywords/sealed.md)
+- [sealed](../../../csharp/language-reference/keywords/sealed.md)
 
 - [abstract](../../../csharp/language-reference/keywords/abstract.md)
 
@@ -386,7 +386,7 @@ Daha fazla bilgi için bkz.:
 
 [Arabirimler](../../../csharp/programming-guide/interfaces/index.md)
 
-[arabirim](../../../csharp/language-reference/keywords/interface.md)
+[interface](../../../csharp/language-reference/keywords/interface.md)
 
 ## <a name="Generics"></a> Genel türler
 
@@ -450,7 +450,7 @@ Daha fazla bilgi için bkz.:
 
 - [Temsilciler](../../../csharp/programming-guide/delegates/index.md)
 
-- [temsilci](../../../csharp/language-reference/keywords/delegate.md)
+- [delegate](../../../csharp/language-reference/keywords/delegate.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

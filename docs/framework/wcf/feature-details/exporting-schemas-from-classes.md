@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
 ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336882"
 ---
 # <a name="exporting-schemas-from-classes"></a>Sınıflardan Şemaları Dışa Aktarma
@@ -43,9 +43,9 @@ Veri sözleşmesi modeli kullandığınız sınıflardan XML Şeması Tanım Dil
 ## <a name="export-options"></a>Dışarı aktarma seçenekleri  
  Ayarlayabileceğiniz <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> özelliği <xref:System.Runtime.Serialization.XsdDataContractExporter> örneğine <xref:System.Runtime.Serialization.ExportOptions> dışarı aktarma işlemini çeşitli yönlerini denetlemek için sınıf. Özellikle, aşağıdaki seçenekleri ayarlayabilirsiniz:  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>biçimindeki telefon numarasıdır. Bu koleksiyonu `Type` dışarı aktarılan türler için bilinen türleri temsil eder. (Daha fazla bilgi için [veri sözleşme bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Bu bilinen türleri dışarı aktarılır her `Export` geçirilen türlerine ek olarak çağrı `Export` yöntemi.  
+-   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Bu koleksiyonu `Type` dışarı aktarılan türler için bilinen türleri temsil eder. (Daha fazla bilgi için [veri sözleşme bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Bu bilinen türleri dışarı aktarılır her `Export` geçirilen türlerine ek olarak çağrı `Export` yöntemi.  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>biçimindeki telefon numarasıdır. Bir <xref:System.Runtime.Serialization.IDataContractSurrogate> dışarı aktarma işlemini özelleştireceğim bu özelliği aracılığıyla sağlanabilir. Daha fazla bilgi için [veri anlaşması yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir vekil kullanılır.  
+-   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. Bir <xref:System.Runtime.Serialization.IDataContractSurrogate> dışarı aktarma işlemini özelleştireceğim bu özelliği aracılığıyla sağlanabilir. Daha fazla bilgi için [veri anlaşması yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir vekil kullanılır.  
   
 ## <a name="helper-methods"></a>Yardımcı yöntemler  
  Şema, verme birincil rolü yanı sıra `XsdDataContractExporter` türleri hakkında bilgi sağlayan çeşitli yararlı yardımcı yöntemler sağlar. Bu güncelleştirmeler şunlardır:  
@@ -64,4 +64,4 @@ Veri sözleşmesi modeli kullandığınız sınıflardan XML Şeması Tanım Dil
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
 - [Şema İçeri ve Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
-- [Sınıf Oluşturmak için Şemayı İçe Aktarma](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
+- [Sınıf Oluşturmak için Şemayı İçeri Aktarma](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
 ms.openlocfilehash: cc777da65ce1c0d425404b1cc8d47e8189684a7f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337012"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Nasıl yapılır: Tek Yönlü Sözleşme Oluşturma
@@ -36,6 +36,6 @@ Bu konu, tek yönlü sözleşme kullanan yöntemleri oluşturmak için temel ad�
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [Hizmetleri Tasarlama ve Uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Nasıl yapılır: Bir hizmet sözleşmesini tanımlama](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
 - [Oturum](../../../../docs/framework/wcf/samples/session.md)
-- [Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Nasıl yapılır: Çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

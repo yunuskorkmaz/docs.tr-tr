@@ -3,11 +3,11 @@ title: Seçin C# dil sürümü - C# Kılavuzu
 description: Belirli bir derleyici sürümü kullanarak söz dizimi doğrulama gerçekleştirmek için derleyici yapılandırma
 ms.date: 02/28/2019
 ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480748"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770886"
 ---
 # <a name="select-the-c-language-version"></a>Seçin C# dil sürümü
 

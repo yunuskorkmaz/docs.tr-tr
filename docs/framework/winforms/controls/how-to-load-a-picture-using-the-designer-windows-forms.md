@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
 ms.openlocfilehash: 6bdf7c3df0ffd97dd88a4c442a8a73593a0447ee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336388"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Nasıl yapılır: (Windows Forms) tasarımcıyı kullanarak resim yükleme
@@ -47,6 +47,6 @@ Windows Forms ile <xref:System.Windows.Forms.PictureBox> denetimi, yüklemek ve 
 
 - <xref:System.Windows.Forms.PictureBox>
 - [PictureBox Denetimine Genel Bakış](picturebox-control-overview-windows-forms.md)
-- [Nasıl yapılır: Çalışma Zamanında Resmin Boyutunu veya Konumunu Değiştirme](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [Nasıl yapılır: Çalışma Zamanında Resimleri Ayarlama](how-to-set-pictures-at-run-time-windows-forms.md)
+- [Nasıl yapılır: Çalışma zamanında resmin yerleştirme ve boyutunu değiştirme](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Nasıl yapılır: Çalışma zamanında resimleri ayarlama](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox Denetimi](picturebox-control-windows-forms.md)

@@ -21,10 +21,10 @@ ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481268"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
@@ -118,8 +118,8 @@ Aşağıdaki tabloda her söz dizimi görülmektedir `action`. Ayrı bölümleri
 
 |Yapılandırma|Açıklama|
 |-------------------|-----------------|
-|`/ExeConfig:` `exePath`|Belirtilen çalıştırılabilir derlemesinin yapılandırmasını kullan.<br /><br /> Ngen.exe, bağımlılıklara bağlarken yükleyici ile aynı kararları almalıdır. Paylaşılan bir bileşen çalışma zamanında yüklendiğinde kullanarak <xref:System.Reflection.Assembly.Load%2A> yöntemi, uygulamanın yapılandırma dosyası paylaşılan bileşen için yüklenen bağımlılıkları belirler — örneğin, yüklenen bir bağımlılığın sürümü. `/ExeConfig` Anahtar üzerinde bağımlılıkları yüklenemeyen çalışma zamanında Ngen.exe rehberlik sağlar.|
-|`/AppBase:` `directoryPath`|Bağımlılıkları bulurken, uygulama tabanı olarak belirtilen dizini kullan.|
+|`/ExeConfig:``exePath`|Belirtilen çalıştırılabilir derlemesinin yapılandırmasını kullan.<br /><br /> Ngen.exe, bağımlılıklara bağlarken yükleyici ile aynı kararları almalıdır. Paylaşılan bir bileşen çalışma zamanında yüklendiğinde kullanarak <xref:System.Reflection.Assembly.Load%2A> yöntemi, uygulamanın yapılandırma dosyası paylaşılan bileşen için yüklenen bağımlılıkları belirler — örneğin, yüklenen bir bağımlılığın sürümü. `/ExeConfig` Anahtar üzerinde bağımlılıkları yüklenemeyen çalışma zamanında Ngen.exe rehberlik sağlar.|
+|`/AppBase:``directoryPath`|Bağımlılıkları bulurken, uygulama tabanı olarak belirtilen dizini kullan.|
 
 <a name="OptionTable"></a>
 
@@ -189,7 +189,7 @@ Bu açıklamalar bölümünde:
 
 - [Sorun giderme](#Troubleshooting)
 
-  - [Derleme Bağlaması Günlük Görüntüleyici](#Fusion)
+  - [Derleme bağlaması Günlük Görüntüleyici](#Fusion)
 
   - [Jıtcompilationstart yönetilen hata ayıklama Yardımcısı](#MDA)
 
@@ -638,5 +638,5 @@ Zaman uyumlu komutları tarafından Ngen.exe yürütüldüğü, yerel görüntü
 
 - [Araçlar](../../../docs/framework/tools/index.md)
 - [Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)
-- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

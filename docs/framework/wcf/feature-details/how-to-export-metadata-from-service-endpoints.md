@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
 ms.openlocfilehash: 6bf2eb3d295f9cbf6a7e13a612d5846ceaa75ab4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345514"
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>Nasıl yapılır: Hizmet Uç Noktalarından Meta Verileri Dışa Aktarma
@@ -57,6 +57,6 @@ Bu konu, hizmet uç noktalarından meta verileri dışarı aktarma açıklar.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Meta Veri Mimarisi Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [Meta Veri Mimarisine Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Uç Noktalar: Adresler, Bağlamalar ve Sözleşmeler](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Uç noktalar: Adresleri, bağlamalar ve sözleşmeler](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

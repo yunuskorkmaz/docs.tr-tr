@@ -13,10 +13,10 @@ helpviewer_keywords:
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
 ms.openlocfilehash: 58ee58577b9ff71112103abb4d33c8b85d3c806f
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481359"
 ---
 # <a name="graphics-and-multimedia"></a>Grafikler ve Multimedya
@@ -167,9 +167,9 @@ Daha fazla bilgi için [multimedya genel bakış](multimedia-overview.md).
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Media3D>
 - [2B Grafikleri ve Görüntüleme](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Düz Renkler ve Gradyanlar ile Boyamaya Genel Bakış](painting-with-solid-colors-and-gradients-overview.md)
 - [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)
-- [Animasyon ve Zamanlama ile İlgili Nasıl Yapılır Konuları](animation-and-timing-how-to-topics.md)
+- [Animasyon ve zamanlama ile ilgili nasıl yapılır konuları](animation-and-timing-how-to-topics.md)
 - [3B Grafiklere Genel Bakış](3-d-graphics-overview.md)
 - [Multimedyaya Genel Bakış](multimedia-overview.md)

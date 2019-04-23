@@ -5,10 +5,10 @@ author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
 ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481237"
 ---
 # <a name="using-attributes-in-c"></a>Öznitelikleri kullanarak C\#
@@ -134,12 +134,12 @@ Ayrıca her zaman örneği oluşturulur. Çağırma `GetCustomAttributes` arka a
 
 .NET Core temel sınıf kitaplığına yerleşik birkaç önemli öznitelikleri şunlardır:
 
-* `[Obsolete]`biçimindeki telefon numarasıdır. Bu, Yukarıdaki örneklerde kullanılan ve kendini `System` ad alanı. Bildirim temelli belgelerine değişen bir kod temeli sağlamak kullanışlıdır. Bir dize biçiminde bir ileti sağlanabilir ve başka bir Boole parametresi için bir derleyici hatası derleyici uyarıdan ilerletmek için kullanılabilir.
+* `[Obsolete]`. Bu, Yukarıdaki örneklerde kullanılan ve kendini `System` ad alanı. Bildirim temelli belgelerine değişen bir kod temeli sağlamak kullanışlıdır. Bir dize biçiminde bir ileti sağlanabilir ve başka bir Boole parametresi için bir derleyici hatası derleyici uyarıdan ilerletmek için kullanılabilir.
 
-* `[Conditional]`biçimindeki telefon numarasıdır. Bu öznitelik bulunduğu `System.Diagnostics` ad alanı. Bu öznitelik, yöntemler (veya öznitelik sınıflarında) uygulanabilir. Oluşturucuya bir dize geçmesi gerekir.
+* `[Conditional]`. Bu öznitelik bulunduğu `System.Diagnostics` ad alanı. Bu öznitelik, yöntemler (veya öznitelik sınıflarında) uygulanabilir. Oluşturucuya bir dize geçmesi gerekir.
 Bu dize eşleşmiyorsa bir `#define` yönergesi, ardından bu yöntem (ancak yöntemin kendisi değil) yapılan her çağrı tarafından kaldırılacak C# derleyici. Genellikle bu hata ayıklama (tanılama) amacıyla kullanılır.
 
-* `[CallerMemberName]`biçimindeki telefon numarasıdır. Bu öznitelik parametreleri ve canlı kullanılabilir `System.Runtime.CompilerServices` ad alanı. Başka bir yöntemi çağıran yöntemin adı ekleme için kullanılan bir özniteliği budur. Bu genellikle bir şekilde 'dizeleri Sihirli' ortadan kaldırmak için kullanılan çeşitli UI çerçeveleri alanında INotifyPropertyChanged uygularken. Örneğin:
+* `[CallerMemberName]`. Bu öznitelik parametreleri ve canlı kullanılabilir `System.Runtime.CompilerServices` ad alanı. Başka bir yöntemi çağıran yöntemin adı ekleme için kullanılan bir özniteliği budur. Bu genellikle bir şekilde 'dizeleri Sihirli' ortadan kaldırmak için kullanılan çeşitli UI çerçeveleri alanında INotifyPropertyChanged uygularken. Örneğin:
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 

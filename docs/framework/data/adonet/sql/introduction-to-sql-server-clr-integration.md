@@ -3,10 +3,10 @@ title: SQL Server CLR Tümleştirmesine Giriş
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
 ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336817"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR Tümleştirmesine Giriş
@@ -18,7 +18,7 @@ Ortak dil çalışma zamanı (CLR), Microsoft .NET Framework kalbidir ve tüm .N
   
  Bu bölümde, SQL Server CLR Tümleştirmesi ile programlamaya başlamak için yeterli bilgi yalnızca sağlamaya yöneliktir ve kapsamlı olacak şekilde tasarlanmamıştır. Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü kullandığınız SQL Server sürümü için bkz.  
   
- **SQL Server Çevrimiçi Kitaplar**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 -   [Ortak dil çalışma zamanı (CLR) tümleştirme genel bakış](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
@@ -36,14 +36,14 @@ GO
   
  Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü kullandığınız SQL Server sürümü için bkz.  
   
- **SQL Server Çevrimiçi Kitaplar**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 -   [CLR tümleştirmesini etkinleştirme](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>Bir CLR derlemesi dağıtma  
  CLR yöntemleri test ve test sunucusunda doğrulandı sonra dağıtım betiğini kullanarak üretim sunucularına dağıtılabilir. Dağıtım betiği, el ile veya SQL Server Management Studio kullanılarak oluşturulabilir. Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü kullandığınız SQL Server sürümü için bkz.  
   
- **SQL Server Çevrimiçi Kitaplar**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 1. [CLR veritabanı nesneleri dağıtma](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
@@ -52,7 +52,7 @@ GO
   
  Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü kullandığınız SQL Server sürümü için bkz.  
   
- **SQL Server Çevrimiçi Kitaplar**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 -   [CLR tümleştirme güvenliği](https://go.microsoft.com/fwlink/?LinkId=115234)  
   
@@ -61,7 +61,7 @@ GO
   
  Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü kullandığınız SQL Server sürümü için bkz.  
   
- **SQL Server Çevrimiçi Kitaplar**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 -   [Hata ayıklama CLR veritabanı nesneleri](https://go.microsoft.com/fwlink/?LinkId=115236)  
   

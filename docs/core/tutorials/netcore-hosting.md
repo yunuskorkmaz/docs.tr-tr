@@ -5,10 +5,10 @@ author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
 ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481151"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Yerel koddan .NET çalışma zamanı denetlemek için özel bir .NET Core konak yazma
@@ -68,10 +68,8 @@ CoreCLR kitaplığı yüklendikten sonra sonraki adıma kullanarak bu işlevlere
 
 Ortak özellikler şunlardır:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  Bu bir bütünleştirilmiş kodu yolları listesidir (Windows üzerinde ';' ile ayrılmış ve ':' Linux üzerinde), çalışma zamanı varsayılan olarak çözümleyebilmesi. Bazı ana bilgisayarlar, sabit kodlanmış bildirimlerinin derlemeleri yüklemek listesi vardır. Diğer tüm kitaplık belirli konumlara koyduğunuzdan (yanındaki *coreclr.dll*, örneğin) bu listede.
-* `APP_PATHS`
-  Bu araştırma için bir derleme'da güvenilir platform derlemeleri (TPA) listesinde bulunamazsa yollarının bir listesidir. Daha fazla denetim TPA listesini kullanarak derlemeleri üzerinde yüklü olan konak olduğundan, yüklemek ve bunları doğrudan belirterek listelemek için beklediği hangi derlemelerin belirlemek ana bilgisayarlar için en iyi yöntem var. Ancak, çalışma zamanında yoklama gerekirse bu özellik bu senaryonun etkinleştirebilirsiniz.
+* `TRUSTED_PLATFORM_ASSEMBLIES` Bu bir bütünleştirilmiş kodu yolları listesidir (Windows üzerinde ';' ile ayrılmış ve ':' Linux üzerinde), çalışma zamanı varsayılan olarak çözümleyebilmesi. Bazı ana bilgisayarlar, sabit kodlanmış bildirimlerinin derlemeleri yüklemek listesi vardır. Diğer tüm kitaplık belirli konumlara koyduğunuzdan (yanındaki *coreclr.dll*, örneğin) bu listede.
+* `APP_PATHS` Bu araştırma için bir derleme'da güvenilir platform derlemeleri (TPA) listesinde bulunamazsa yollarının bir listesidir. Daha fazla denetim TPA listesini kullanarak derlemeleri üzerinde yüklü olan konak olduğundan, yüklemek ve bunları doğrudan belirterek listelemek için beklediği hangi derlemelerin belirlemek ana bilgisayarlar için en iyi yöntem var. Ancak, çalışma zamanında yoklama gerekirse bu özellik bu senaryonun etkinleştirebilirsiniz.
 *  `APP_NI_PATHS` Bu liste, yerel görüntüler için araştırıldığı yolları olacak şekilde hazırlanmıştır dışında APP_PATHS için benzerdir.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Bu özellik, p/Invoke yerel kitaplıklar aranıyor çağrıldığı zaman yükleyici araştırma yolları bir listesidir.
 *  `PLATFORM_RESOURCE_ROOTS` Bu liste, kaynak uydu derlemelerine (kültüre özgü alt dizinlerde) için araştırmaya yolları içerir.
@@ -166,10 +164,8 @@ Hangi kullanılacak AppDomain bayrakları karar verdikten sonra AppDomain özell
 
 Ortak AppDomain özellikler şunlardır:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  Bu bir bütünleştirilmiş kodu yolları listesidir (tarafından ayrılmış `;` Windows üzerinde ve `:` Linux/Mac üzerinde), AppDomain (kısmen güvenilen etki alanlarında çift için), yükleme ve verin tam güven öncelik vermelisiniz. Bu liste 'Framework' derlemeleri ve diğer güvenilen modüller, .NET Framework senaryoları GAC'de benzer içerecek şekilde tasarlanmıştır. Bazı konakların kitaplık yanındaki sokar *coreclr.dll* bu listede, diğer sabit kodlanmış bildirimleri kendi amaçları için güvenilir bütünleştirilmiş kodların listesi vardır.
-* `APP_PATHS`
-  Bu araştırma için bir derleme'da güvenilir platform derlemeleri (TPA) listesinde bulunamazsa yollarının bir listesidir. Daha fazla denetim TPA listesini kullanarak derlemeleri üzerinde yüklü olan konak olduğundan, yüklemek ve bunları doğrudan belirterek listelemek için beklediği hangi derlemelerin belirlemek ana bilgisayarlar için en iyi yöntem var. Ancak, çalışma zamanında yoklama gerekirse bu özellik bu senaryonun etkinleştirebilirsiniz.
+* `TRUSTED_PLATFORM_ASSEMBLIES` Bu bir bütünleştirilmiş kodu yolları listesidir (tarafından ayrılmış `;` Windows üzerinde ve `:` Linux/Mac üzerinde), AppDomain (kısmen güvenilen etki alanlarında çift için), yükleme ve verin tam güven öncelik vermelisiniz. Bu liste 'Framework' derlemeleri ve diğer güvenilen modüller, .NET Framework senaryoları GAC'de benzer içerecek şekilde tasarlanmıştır. Bazı konakların kitaplık yanındaki sokar *coreclr.dll* bu listede, diğer sabit kodlanmış bildirimleri kendi amaçları için güvenilir bütünleştirilmiş kodların listesi vardır.
+* `APP_PATHS` Bu araştırma için bir derleme'da güvenilir platform derlemeleri (TPA) listesinde bulunamazsa yollarının bir listesidir. Daha fazla denetim TPA listesini kullanarak derlemeleri üzerinde yüklü olan konak olduğundan, yüklemek ve bunları doğrudan belirterek listelemek için beklediği hangi derlemelerin belirlemek ana bilgisayarlar için en iyi yöntem var. Ancak, çalışma zamanında yoklama gerekirse bu özellik bu senaryonun etkinleştirebilirsiniz.
 *  `APP_NI_PATHS` Yerel görüntüler için araştırıldığı yolları olacak şekilde hazırlanmıştır dışında bu liste için APP_PATHS çok benzer.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Bu özellik, p/Invoke Yerel DLL'leri çağrıldığı zaman yükleyici araştırma yolları bir listesidir.
 *  `PLATFORM_RESOURCE_ROOTS` Bu liste, kaynak uydu derlemelerine (kültüre özgü alt dizinlerde) için araştırmaya yolları içerir.

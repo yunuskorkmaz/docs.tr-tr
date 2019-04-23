@@ -3,11 +3,11 @@ title: Bilinen Türler
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
 ms.openlocfilehash: f2a5e6d5f5755d15bdc642ea3e64fb44af05cdab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327743"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768702"
 ---
 # <a name="known-types"></a>Bilinen Türler
 Bu örnek, bir veri sözleşmesi türetilmiş türleri hakkında bilgi belirtmek nasıl gösterir. Veri sözleşmeleri, yapılandırılmış veriler için ve hizmetlerden geçmesine izin verin. Nesne yönelimli programlama, başka bir türünden devralan bir tür, özgün türü yerine kullanılabilir. Hizmet yönelimli programlama, türleri yerine şemaları iletildiği ve bu nedenle, türleri arasındaki ilişkiyi korunmaz. <xref:System.Runtime.Serialization.KnownTypeAttribute> Özniteliği veri sözleşmesi içerisinde bulunan için türetilmiş türleri hakkında bilgi sağlar. Bu mekanizma kullanılmıyorsa, türetilmiş bir tür gönderilen veya olamaz bir taban türü beklenirken aldı.  

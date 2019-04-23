@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344929"
 ---
 # <a name="xaml-resources"></a>XAML Kaynakları
@@ -128,7 +128,7 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
   
 -   Bir özellik olmalıdır ayarlanan özelliğin bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>. Özelliği tarafından yedeklenmesi gereken bir <xref:System.Windows.DependencyProperty>.  
   
--   Başvuru arasında bir değer için olan bir <xref:System.Windows.Style><xref:System.Windows.Setter>.  
+-   Başvuru arasında bir değer için olan bir <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
 -   Ayarlanan özelliğin üzerinde bir özelliği olmalıdır bir <xref:System.Windows.Freezable> değerlerinden birine sağlanan bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> özelliği veya <xref:System.Windows.Setter> değeri.  
   
@@ -144,7 +144,7 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Stil gerçekten bir anahtarı yok: örtük anahtarı `typeof(`<xref:System.Windows.Controls.Button>`)`. Biçimlendirme içinde belirttiğiniz bir <xref:System.Windows.Style.TargetType%2A> doğrudan türü olarak adı (veya isteğe bağlı olarak kullanabileceğiniz [{... x: Type}](../../xaml-services/x-type-markup-extension.md) döndürülecek bir <xref:System.Type>.  
+ Stil gerçekten bir anahtarı yok: örtük anahtarı `typeof(` <xref:System.Windows.Controls.Button> `)`. Biçimlendirme içinde belirttiğiniz bir <xref:System.Windows.Style.TargetType%2A> doğrudan türü olarak adı (veya isteğe bağlı olarak kullanabileceğiniz [{... x: Type}](../../xaml-services/x-type-markup-extension.md) döndürülecek bir <xref:System.Type>.  
   
  Tarafından kullanılan varsayılan tema stil mekanizmaları aracılığıyla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], stil ve çalışma zamanı stil olarak uygulanır bir <xref:System.Windows.Controls.Button> sayfasında olsa bile <xref:System.Windows.Controls.Button> kendisini belirtmek çalışmaz, <xref:System.Windows.FrameworkElement.Style%2A> özelliği veya belirli bir kaynak Stil başvuru. Sayfada tanımlı stil kodunuzu daha önce arama sırası tema sözlük stilde aynı anahtarı kullanarak tema sözlük stili daha bulunur. Yalnızca belirtebilirsiniz `<Button>Hello</Button>` sayfası ve stil ile tanımlanan yerinde <xref:System.Windows.Style.TargetType%2A> , `Button` için bu düğmeyi uygular. İsterseniz, aynı türü değere stiliyle hala açıkça anahtarlayabilirsiniz <xref:System.Windows.Style.TargetType%2A>, anlaşılabilir olması adına, biçimlendirme, ancak bu isteğe bağlıdır.  
   
@@ -160,5 +160,5 @@ Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir n
 - [Kaynağı Tanımlama ve Kaynağa Başvurma](how-to-define-and-reference-a-resource.md)
 - [Uygulama Yönetimine Genel Bakış](../app-development/application-management-overview.md)
 - [x:Type İşaretleme Uzantısı](../../xaml-services/x-type-markup-extension.md)
-- [StaticResource Biçimlendirme Uzantısı](staticresource-markup-extension.md)
-- [DynamicResource Biçimlendirme Uzantısı](dynamicresource-markup-extension.md)
+- [StaticResource İşaretleme Uzantısı](staticresource-markup-extension.md)
+- [DynamicResource İşaretleme Uzantısı](dynamicresource-markup-extension.md)

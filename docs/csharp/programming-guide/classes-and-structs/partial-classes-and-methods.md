@@ -8,10 +8,10 @@ helpviewer_keywords:
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
 ms.openlocfilehash: 0d54101badab297457e8d8ecf277898fc6908779
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481061"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Kısmi Sınıflar ve Yöntemler (C# Programlama Kılavuzu)
@@ -101,7 +101,7 @@ Kısmi sınıf tanımları ile çalışırken yordamları izlemek için çeşitl
 
   - [abstract](../../../csharp/language-reference/keywords/abstract.md)
 
-  - [korumalı](../../../csharp/language-reference/keywords/sealed.md)
+  - [sealed](../../../csharp/language-reference/keywords/sealed.md)
 
   - taban sınıfı
 

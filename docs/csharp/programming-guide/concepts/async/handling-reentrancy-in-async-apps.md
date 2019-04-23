@@ -3,17 +3,17 @@ title: (C#) zaman uyumsuz uygulamalarda yeniden girişi işleme
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
 ms.openlocfilehash: 5774aab9357c5af58cd1ee664066ba5e4ee9b1f6
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480878"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>(C#) zaman uyumsuz uygulamalarda yeniden girişi işleme
 
 Zaman uyumsuz kod uygulamanıza eklediğinizde, göz önünde bulundurun ve tamamlanmadan önce zaman uyumsuz bir işlem engellemelisiniz yeniden giriş muhtemelen önlemek gerekir. Olasılıklarını tanımlamaz ve yönetmezseniz, beklenmedik sonuçlara neden olabilir.
 
-**Bu konuda**
+**Bu konudaki**
 
 - [Yeniden giriş tanıma](#BKMK_RecognizingReentrancy)
 

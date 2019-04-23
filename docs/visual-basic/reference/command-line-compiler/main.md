@@ -7,10 +7,10 @@ helpviewer_keywords:
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
 ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337246"
 ---
 # <a name="-main"></a>-main
@@ -54,7 +54,7 @@ vbc t2.vb t3.vb -main:Test2
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Komut Satırı Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Visual Basic'de Ana Yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic'de ana yordam](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

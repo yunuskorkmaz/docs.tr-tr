@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345098"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# Derleyici Seçenekleri)
@@ -28,13 +28,13 @@ Bu seçenek, bir C# derleyici iç hatası Microsoft'a bildirmek için kullanış
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **yok**  
+ **Yok**  
  Derleyici iç hatalarıyla ilgili raporlar toplanmaz ve Microsoft'a gönderilir.  
   
  **istemi**  
  Derleyici iç hatası aldığınızda rapor göndermek isteyip istemediğinizi sorar. **İstemi** geliştirme ortamında bir uygulama derlediğinizde varsayılandır.  
   
- **sıra**  
+ **Kuyruk**  
  Hata raporunu kuyruğa alır. Yönetici kimlik bilgileriyle oturum açtığında günlüğe kaydedilen son Time hatalar bildirebilir. Üç günde birden çok kez hata raporu göndermek için istenmez. **Kuyruk** , komut satırında bir uygulama derlerken varsayılandır.  
   
  **Gönder**  

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481463"
 ---
 # <a name="switch-c-reference"></a>geçiş (C# Başvurusu)
@@ -199,7 +199,7 @@ Daha fazla bilgi için [switch deyimi](~/_csharplang/spec/statements.md#the-swit
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [if-else](if-else.md)

@@ -3,11 +3,11 @@ title: Beklenen Özel Durumlar
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
 ms.openlocfilehash: 3add9faa9a07249639c1ff3e83469d0634008472
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317096"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770080"
 ---
 # <a name="expected-exceptions"></a>Beklenen Özel Durumlar
 Bu örnek, türü belirlenmiş istemci kullanırken beklenen özel durumları yakalamak nasıl gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan. Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
 ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343694"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>Nasıl yapılır: Bir ToolBar Denetimine Düğme Ekleme
@@ -151,7 +151,7 @@ ms.locfileid: "59343694"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Nasıl yapılır: ToolBar Düğmesi için Simge Tanımlama](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Nasıl yapılır: Araç Çubuğu Düğmeleri için Menü Olaylarını Tetikleme](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Nasıl yapılır: ToolBar düğmesi için simge tanımlama](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Nasıl yapılır: Araç çubuğu düğmeleri için menü olaylarını tetikleme](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar Denetimine Genel Bakış](toolbar-control-overview-windows-forms.md)
 - [ToolBar Denetimi](toolbar-control-windows-forms.md)

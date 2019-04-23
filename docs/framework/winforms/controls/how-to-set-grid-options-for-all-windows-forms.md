@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336063"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Nasıl yapılır: Tüm Windows Formları için Kılavuz Seçeneklerini Ayarlama
@@ -31,13 +31,13 @@ Visual Studio geliştirme ortamında çalışmaya kullanılan hale tercihleri fo
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Genel, Windows Form Tasarımcısı, Seçenekler İletişim Kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Windows Forms Denetimleri](index.md)
-- [Nasıl yapılır: Windows Forms’a Denetimler Ekleme](how-to-add-controls-to-windows-forms.md)
-- [Windows Formlarında Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
-- [Nasıl yapılır: Windows Forms’da Sekme Sırasını Ayarlama](how-to-set-the-tab-order-on-windows-forms.md)
-- [Nasıl yapılır: Windows Forms Denetimi Tarafından Görüntülenen Metni Ayarlama](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Windows Formlarına Denetimler Koyma](putting-controls-on-windows-forms.md)
-- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
-- [İşlevlere Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)
+- [Nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md)
+- [Windows Forms’da Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows formlarında sekme sırasını ayarlama](how-to-set-the-tab-order-on-windows-forms.md)
+- [Nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Windows Forms’a Denetimler Yerleştirme](putting-controls-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)

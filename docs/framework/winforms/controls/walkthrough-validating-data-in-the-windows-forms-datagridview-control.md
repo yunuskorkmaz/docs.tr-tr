@@ -13,10 +13,10 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
 ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346060"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>İzlenecek yol: Windows Forms DataGridView Denetimindeki Verileri Doğrulama
@@ -92,7 +92,7 @@ Kullanıcılara veri girişi işlevi görüntülediğinizde, sık formunuza giri
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Windows Forms DataGridView Denetimindeki Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Nasıl yapılır: Windows Forms DataGridView Denetimindeki Verileri Doğrulama](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [İzlenecek yol: Windows Forms DataGridView Denetimine Veri Girişi Sırasında Oluşan Hataları Ele Alma](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Windows Forms DataGridView Denetiminde Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Nasıl yapılır: Windows Forms DataGridView denetiminde verileri doğrulama](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [İzlenecek yol: Windows Forms DataGridView denetimine veri girişi sırasında oluşan hataları ele alma](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Bağlantı Bilgilerini Koruma](../../data/adonet/protecting-connection-information.md)

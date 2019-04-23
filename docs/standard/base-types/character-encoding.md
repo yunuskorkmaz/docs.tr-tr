@@ -15,10 +15,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346112"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde Karakter Kodlaması
@@ -39,13 +39,13 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
   
 -   [. NET'te kodlamaları](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
--   [Bir Kodlama Sınıfı Seçme](../../../docs/standard/base-types/character-encoding.md#Selecting)  
+-   [Bir kodlama sınıfı seçme](../../../docs/standard/base-types/character-encoding.md#Selecting)  
   
 -   [Using an Encoding Object](../../../docs/standard/base-types/character-encoding.md#Using)  
   
--   [Choosing a Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
+-   [Bir geri dönüş stratejisini seçme](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
   
--   [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
+-   [Özel bir geri dönüş stratejisi uygulamak](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
 ## <a name="encodings-in-net"></a>. NET'te kodlamaları  
@@ -235,7 +235,7 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
   
  Bir kodlayıcı veya kod çözücü için özel bir geri dönüş çözümü oluşturduğunuzda, aşağıdaki üyeleri uygulamanız gerekir:  
   
--   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> yöntemi. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> geri dönüş arabelleğine, kodlayamadığı karakter hakkında bilgi vermek için Kodlayıcı tarafından çağrılır. Kodlanacak karakter bir yedek çifti olabileceği için bu yöntem aşırı yüklüdür. Aşırı yüklemelerden birine kodlanacak karakter ve dizedeki dizini geçirilir. İkinci aşırı yüklemeye, dizedeki dizini ile birlikte yüksek ve düşük yedek geçirilir. <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> yöntemi, geri dönüş arabelleğine kodu çözülemeyen baytlar hakkında bilgi vermek için kod çözücü tarafından çağrılır. Bu yönteme, ilk baytın dizini ile birlikte kodunu çözemediği bir bayt dizisi geçirilir. Geri dönüş metodu, eğer geri dönüş arabelleği karakterler için bir en uygun veya değiştirme karakteri veya karakterleri sağlayabiliyorsa `true`'i, aksi halde `false`'i döndürmelidir. Bir özel durum geri dönüşü için, geri dönüş yönteminin bir özel durum oluşturması gerekir.  
+-   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> yöntemi. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType>, kodlayamadığı karakter hakkında geri dönüş arabelleğine bilgi vermek için kodlayıcı tarafından çağrılır. Kodlanacak karakter bir yedek çifti olabileceği için bu yöntem aşırı yüklüdür. Aşırı yüklemelerden birine kodlanacak karakter ve dizedeki dizini geçirilir. İkinci aşırı yüklemeye, dizedeki dizini ile birlikte yüksek ve düşük yedek geçirilir. <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> yöntemi, geri dönüş arabelleğine kodu çözülemeyen baytlar hakkında bilgi vermek için kod çözücü tarafından çağrılır. Bu yönteme, ilk baytın dizini ile birlikte kodunu çözemediği bir bayt dizisi geçirilir. Geri dönüş metodu, eğer geri dönüş arabelleği karakterler için bir en uygun veya değiştirme karakteri veya karakterleri sağlayabiliyorsa `true`'i, aksi halde `false`'i döndürmelidir. Bir özel durum geri dönüşü için, geri dönüş yönteminin bir özel durum oluşturması gerekir.  
   
 -   Geri dönüş arabelleğinden sonraki karakteri almak için kodlayıcı veya kod çözücü tarafından tekrar tekrar çağrılan <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> veya <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> yöntemi. Tüm geri dönüş karakterleri döndürüldükten sonra yöntem U+0000'ı döndürmelidir.  
   

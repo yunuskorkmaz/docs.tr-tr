@@ -4,20 +4,20 @@ description: Yeni özelliklere genel bakış sürümünü 7.0 almak C# dili.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481307"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 yenilikleri
 
 C# 7.0 C# dili için yeni özellikler ekler:
-* [`out` değişkenler](#out-variables)
+* [`out` Değişkenleri](#out-variables)
   - Bildirebilirsiniz `out` kullanıldıkları yöntemi için bağımsız değişkeni olarak satır içi değerleri.
 * [Demetler](#tuples)
   - Birden çok ortak alanları içeren basit, adsız türleri oluşturabilirsiniz. Bu tür semantikleri, derleyiciler ve Araçlar IDE anlayın.
-* [Atar](#discards)
+* [Atılanlar](#discards)
   - İptali atanan değer hakkında umursamaz atamalarını kullanılan geçici, salt yazılır değişkenlerdir. Diziler ve kullanıcı tanımlı türler Ayrıştırma sırasında yanı sıra ile yöntemleri çağrılırken en yararlı oldukları `out` parametreleri.
 * [Desen Eşleştirme](#pattern-matching)
   - Rastgele türler ve bu türlerin üyelerinin değerlerini göre dallanma mantığı oluşturabilirsiniz.
@@ -27,7 +27,7 @@ C# 7.0 C# dili için yeni özellikler ekler:
   - İşlevler, kapsam ve görünürlük sınırlamak için diğer işlevler içinde iç içe yerleştirebilirsiniz.
 * [Daha fazla ifade gövdeli üyeler](#more-expression-bodied-members)
   - İfadeleri kullanarak yazılabilir üye listesini geldi.
-* [`throw` İfadeler](#throw-expressions)
+* [`throw` İfadeleri](#throw-expressions)
   - Daha önce olduğundan izin vermediği kod yapıları özel durumlar oluşturabilecek `throw` bir ifadesi.
 * [Genelleştirilmiş bir zaman uyumsuz dönüş türleri](#generalized-async-return-types)
   - Yöntemleri ile bildirilmiş `async` değiştiricisi, ek olarak diğer türleri döndürebilir `Task` ve `Task<T>`.

@@ -3,10 +3,10 @@ title: İçindeki yenilikler C# 8.0 - C# Kılavuzu
 description: Uygulamasında kullanılabilen yeni özellikleri genel bakış C# 8.0. Bu makalede, preview 2'ile güncel durumda.
 ms.date: 02/12/2019
 ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427285"
 ---
 # <a name="whats-new-in-c-80"></a>İçindeki yenilikler C# 8.0
@@ -14,7 +14,7 @@ ms.locfileid: "59427285"
 İçin birçok geliştirme vardır C# Önizleme 2 ile deneyebileceğiniz dili. Preview 2 sürümünde eklenen yeni özellikleri şunlardır:
 
 - [Desen eşleştirme geliştirmeleri](#more-patterns-in-more-places):
-  * [Anahtar ifadeler](#switch-expressions)
+  * [anahtar ifadeler](#switch-expressions)
   * [Özellik desenleri](#property-patterns)
   * [Kayıt düzenleri](#tuple-patterns)
   * [Konumsal desenleri](#positional-patterns)
@@ -24,7 +24,7 @@ ms.locfileid: "59427285"
 
 Aşağıdaki dil özellikleri ilk göründüğü C# 8.0 Önizleme 1:
 
-- [Null başvuru türleri](#nullable-reference-types)
+- [Boş değer atanabilir başvuru türleri](#nullable-reference-types)
 - [Zaman uyumsuz akışlar](#asynchronous-streams)
 - [Dizinleri ve aralıkları](#indices-and-ranges)
 

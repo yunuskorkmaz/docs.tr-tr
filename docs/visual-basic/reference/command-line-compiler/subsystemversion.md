@@ -7,10 +7,10 @@ helpviewer_keywords:
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 ms.openlocfilehash: 0eca7918e5e4b8702858f972003faef1274e56e3
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480865"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
@@ -70,6 +70,6 @@ Ayarlanacak **- subsystemversion** derleyici seçeneğini Visual Studio'da .vbpr
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Komut Satırı Derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 
 - [MSBuild Özellikleri](/visualstudio/msbuild/msbuild-properties)

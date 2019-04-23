@@ -3,10 +3,10 @@ title: Keşif Bulma ve FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345787"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Keşif Bulma ve FindCriteria
@@ -66,7 +66,7 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Keşif Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [Keşif İstemcisi Kanalını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
 - [Kapsamlarla Bulma](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
 - [Temel](../../../../docs/framework/wcf/samples/basic-sample.md)

@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 7eb50bcb-38d8-4afb-86aa-2573586697c2
 author: BrucePerlerMS
 ms.openlocfilehash: 36f7687f42c6e0d6f865a025f09c4ead6f79960c
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481411"
 ---
 # <a name="windows-identity-foundation"></a>Windows Identity Foundation
@@ -36,31 +36,31 @@ ms.locfileid: "59481411"
 
   - [WIF ve Web Grupları](../../../docs/framework/security/wif-and-web-farms.md)
 
-  - [WSFederation Kimlik Doğrulaması Modülüne Genel Bakış](../../../docs/framework/security/wsfederation-authentication-module-overview.md)
+  - [WSFederation Kimlik Doğrulama Modülüne Genel Bakış](../../../docs/framework/security/wsfederation-authentication-module-overview.md)
 
   - [WSTrustChannelFactory ve WSTrustChannel](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)
 
 - [WIF Nasıl Yapılır Dizini](../../../docs/framework/security/wif-how-tos-index.md)
 
-  - [Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET MVC Web Uygulaması Derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
+  - [Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET MVC Web uygulaması derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
 
-  - [Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET Web Forms Uygulaması Derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+  - [Nasıl yapılır: WIF kullanarak talep kullanan ASP.NET Web Forms uygulaması derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
 
-  - [Nasıl yapılır: Forms Tabanlı Kimlik Doğrulaması Kullanarak Talep Kullanan ASP.NET Uygulaması Derleme](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
+  - [Nasıl yapılır: Form tabanlı kimlik doğrulaması kullanarak talep kullanan ASP.NET uygulaması derleme](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
 
-  - [Nasıl yapılır: Windows Kimlik Doğrulaması Kullanarak Talep Kullanan ASP.NET Uygulaması Derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
+  - [Nasıl yapılır: Windows kimlik doğrulaması kullanarak talep kullanan ASP.NET uygulaması derleme](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
 
-  - [Nasıl yapılır: WIF İzleme Kullanarak Talep Kullanan Uygulama ve Hizmetlerde Hata Ayıklama](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)
+  - [Nasıl yapılır: Talep kullanan uygulamalar ve hizmetler WIF izleme kullanarak hata ayıklama](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)
 
-  - [Nasıl yapılır: WIF Kullanarak Oturum Açmış Durumu Gösterme](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
+  - [Nasıl yapılır: WIF kullanarak oturum açmış durumu görüntüleme](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
 
-  - [Nasıl yapılır: Belirteç Yeniden Yürütme Algılamasını Etkinleştirme](../../../docs/framework/security/how-to-enable-token-replay-detection.md)
+  - [Nasıl yapılır: Belirteç yeniden yürütme algılamayı etkinleştirme](../../../docs/framework/security/how-to-enable-token-replay-detection.md)
 
-  - [Nasıl yapılır: WIF İzlemeyi Etkinleştirme](../../../docs/framework/security/how-to-enable-wif-tracing.md)
+  - [Nasıl yapılır: WIF izlemeyi etkinleştirme](../../../docs/framework/security/how-to-enable-wif-tracing.md)
 
-  - [Nasıl yapılır: WCF Web Hizmeti Uygulaması için WIF Etkinleştirme](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)
+  - [Nasıl yapılır: WCF Web hizmeti uygulaması için WIF etkinleştirme](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)
 
-  - [Nasıl yapılır: Gelen Talepleri Dönüştürme](../../../docs/framework/security/how-to-transform-incoming-claims.md)
+  - [Nasıl yapılır: Gelen talepleri dönüştürme](../../../docs/framework/security/how-to-transform-incoming-claims.md)
 
 - [WIF Yönergeleri](../../../docs/framework/security/wif-guidelines.md)
 

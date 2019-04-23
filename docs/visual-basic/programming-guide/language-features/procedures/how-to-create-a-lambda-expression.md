@@ -6,10 +6,10 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344552"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Nasıl yapılır: Bir Lambda ifadesi (Visual Basic) oluşturma
@@ -113,4 +113,4 @@ A *lambda ifadesi* bir işlev veya bir ada sahip bir alt yordam. Bir lambda ifad
 - [Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Nasıl yapılır: Visual Basic'de başka bir yordama yordam geçirin](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
 - [Delegate Deyimi](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Visual Basic'de LINQ'e Giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

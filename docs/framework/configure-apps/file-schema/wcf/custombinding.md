@@ -3,10 +3,10 @@ title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
 ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481125"
 ---
 # <a name="custombinding"></a>\<customBinding >
@@ -190,12 +190,12 @@ Kullanıcı için Mesajlaşma yığını üzerinde tam denetim sağlar.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<compositeDuplex >](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Özel bağlama için iki yönlü Mesajlaşma belirtir. Çift yönlü iletişim, izin vermeyen aktarımları ile Örneğin, HTTP kullanılır. TCP, aksine, yerel olarak çift yönlü iletişimler sağlar ve hizmetin istemciye geri göndermek bu bağlama öğesi kullanımı gerektirmez.<br /><br /> İstemci hizmetinin başvurun ve bağlantı kurmak bir adres kullanıma sunması gerekir. Bu istemci adresi tarafından sağlanan `ClientBaseAddress` özniteliği.<br /><br /> Bu öğe türünde <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
+|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Özel bağlama için iki yönlü Mesajlaşma belirtir. Çift yönlü iletişim, izin vermeyen aktarımları ile Örneğin, HTTP kullanılır. TCP, aksine, yerel olarak çift yönlü iletişimler sağlar ve hizmetin istemciye geri göndermek bu bağlama öğesi kullanımı gerektirmez.<br /><br /> İstemci hizmetinin başvurun ve bağlantı kurmak bir adres kullanıma sunması gerekir. Bu istemci adresi tarafından sağlanan `ClientBaseAddress` özniteliği.<br /><br /> Bu öğe türünde <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
 |[\<pnrpPeerResolver >](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Bir Eş Adı Çözümleme Protokolü (PNRP) eş ad çözümleyici belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
 |[\<reliableSession >](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|WS-Reliable Mesajlaşma için ayarını belirtir. Bu öğe için özel bir bağlama eklendiğinde, sonuçta elde edilen kanal tam olarak destekler-bir kez teslim Güvenceleri. Bu öğe türünde <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
 |[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Özel bağlama güvenliği için seçenekleri belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.SecurityElement>.|
 |[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|SSL akışı bağlama için güvenlik ayarlarını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
-|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Bağlama tarafından kullanılacak protokolü ve işlem akışı desteklediğini belirtir `transactionProtocol` özniteliği. Bu öğe türünde <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
+|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Bağlama tarafından kullanılacak protokolü ve işlem akışı desteklediğini belirtir `transactionProtocol` özniteliği. Bu öğe türünde <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
 |[\<windowsStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Özel bağlama güvenliği akış seçeneklerini belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
 
 ### <a name="parent-elements"></a>Üst Öğeler

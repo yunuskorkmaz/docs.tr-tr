@@ -10,10 +10,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
 ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344357"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF İçinde URI'leri Paketleme
@@ -80,7 +80,7 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
 <a name="Resource_File_Pack_URIs___Local_Assembly"></a>   
 ## <a name="resource-file-pack-uris"></a>Kaynak dosya paketi URI'ler  
- Kaynak dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Resource` öğeleri ve derlemeleri haline getirilebilen. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Paketi oluşumu destekler [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] yerel bütünleştirilmiş kod içine derlenmiş veya yerel bütünleştirilmiş koddan başvurulan bir derleme içinde derlenen kaynak dosyaları belirlemek için kullanılabilir.  
+ Kaynak dosyaları olarak yapılandırılmış [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` öğeleri ve derlemeleri haline getirilebilen. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Paketi oluşumu destekler [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] yerel bütünleştirilmiş kod içine derlenmiş veya yerel bütünleştirilmiş koddan başvurulan bir derleme içinde derlenen kaynak dosyaları belirlemek için kullanılabilir.  
   
 <a name="Local_Assembly_Resource_File"></a>   
 ### <a name="local-assembly-resource-file"></a>Yerel bütünleştirilmiş kod kaynak dosyası  
@@ -171,9 +171,9 @@ Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../
   
 <a name="Page_Files"></a>   
 ## <a name="page-files"></a>Sayfa dosyası  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak yapılandırılmış olan dosyaları [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` öğeleri derlemelerine kaynak dosyaları aynı şekilde derlenir. Sonuç olarak, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` öğeleri paketi kullanarak belirlenebilir [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kaynak dosyaları için.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak yapılandırılmış olan dosyaları [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri derlemelerine kaynak dosyaları aynı şekilde derlenir. Sonuç olarak, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` öğeleri paketi kullanarak belirlenebilir [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kaynak dosyaları için.  
   
- Tür [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yaygın olarak yapılandırılmış olan dosyaları [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` aşağıdaki kendi kök öğe olarak birine sahip öğeleri:  
+ Tür [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yaygın olarak yapılandırılmış olan dosyaları [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` aşağıdaki kendi kök öğe olarak birine sahip öğeleri:  
   
 -   <xref:System.Windows.Window?displayProperty=nameWithType>  
   

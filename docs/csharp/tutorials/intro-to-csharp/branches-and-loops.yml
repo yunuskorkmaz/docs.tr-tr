@@ -12,10 +12,10 @@ metadata:
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Liste koleksiyonu
   ms.openlocfilehash: 62cc52e22406c6c19dad6cc800078e0d8f34f0d6
-  ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
-  ms.translationtype: MT
+  ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+  ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/09/2019
+  ms.lasthandoff: 04/18/2019
   ms.locfileid: "59427532"
 items:
 - durationInMinutes: 1
@@ -217,4 +217,4 @@ items:
 
     > Bu çevrimiçi kodlama deneyimi Önizleme modundadır. Sorunlarla karşılaşırsanız, Lütfen bunları rapor [dotnet/try deposunda](https://github.com/dotnet/try/issues).
 - title: Tebrikler!
-  content: "\"Dallar ve döngüler\" Etkileşimli öğreticisini tamamladınız. Tıklayabilirsiniz **Ara değerli dizeler** etkileşimli bir sonraki öğreticiye başlatmak için aşağıdaki bağlantı ya da ziyaret edebilirsiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. \"Öğrenme tut\" adımı bu öğreticilere geri getirir.\n\nAşağıdaki konulardan Bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:\n\n- [Varsa ve else deyimi](../../language-reference/keywords/if-else.md)\n- [While deyimi](../../language-reference/keywords/while.md)\n- [Do deyimi](../../language-reference/keywords/do.md)\n- [For deyimi](../../language-reference/keywords/for.md)"
+  content: "\"Dallar ve döngüler\" Etkileşimli öğreticisini tamamladınız. Tıklayabilirsiniz **Ara değerli dizeler** etkileşimli bir sonraki öğreticiye başlatmak için aşağıdaki bağlantı ya da ziyaret edebilirsiniz [.NET site](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) .NET Core SDK'sını indirmek için makinenizde bir proje oluşturun ve kodlama tutun. \"Öğrenme tut\" adımı bu öğreticilere geri getirir.\n\nAşağıdaki konulardan Bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:\n\n- [Varsa ve else deyimi](../../language-reference/keywords/if-else.md)\n- [while deyimi](../../language-reference/keywords/while.md)\n- [do deyimi](../../language-reference/keywords/do.md)\n- [For deyimi](../../language-reference/keywords/for.md)"

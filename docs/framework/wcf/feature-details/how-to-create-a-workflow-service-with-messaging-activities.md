@@ -3,10 +3,10 @@ title: 'Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Olu�
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
 ms.openlocfilehash: f5bb8df5936be1890bf744300daa7ccb68e341e3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337779"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma
@@ -92,5 +92,5 @@ Bu konuda, Mesajlaşma etkinlikleri kullanarak basit bir iş akışı hizmeti ol
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [İş Akışı Hizmetlerini Barındırma Genel Bakış](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [İş Akışı Hizmetlerini Barındırmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
 - [Mesajlaşma Etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

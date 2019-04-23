@@ -3,11 +3,11 @@ title: Etkinlik Uzantıları Kullanma
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
 ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59321295"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768968"
 ---
 # <a name="using-activity-extensions"></a>Etkinlik Uzantıları Kullanma
 Etkinlikler, ana iş akışında açıkça modellenmiş değil ek işlevler sağlamasına olanak tanıyan bir iş akışı uygulama uzantıları ile etkileşim kurabilir.  Bu konu, bir etkinliği yürütür sayısını saymak için bir uzantı oluşturup kullanacağınızı açıklar.

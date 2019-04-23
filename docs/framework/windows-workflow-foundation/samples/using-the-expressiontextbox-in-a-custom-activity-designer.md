@@ -3,10 +3,10 @@ title: Özel Etkinlik Tasarımcısında ExpressionTextBox Kullanma
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
 ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344981"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Özel Etkinlik Tasarımcısında ExpressionTextBox Kullanma
@@ -49,4 +49,4 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Activities.Presentat
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Activities.Presentation.View.ExpressionTextBox>
-- [İş Akışı Tasarımcısı ile uygulama geliştirme](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [İş Akışı Tasarımcısı ile Uygulama Geliştirme](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

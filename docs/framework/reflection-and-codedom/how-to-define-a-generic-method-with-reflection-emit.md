@@ -12,10 +12,10 @@ ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49c490b57574f8c9c9c93e3e0da2089cec95481f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344240"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Nasıl yapılır: Yansıma Yayma ile Genel Yöntem Tanımlama
@@ -78,7 +78,7 @@ ms.locfileid: "59344240"
 10. Yöntem yaymak kullanarak, gövde <xref:System.Reflection.Emit.ILGenerator>. Ayrıntılar için yöntem gövdesini yayma için eşlik eden yordamına bakın.  
   
     > [!IMPORTANT]
-    >  Genel türlerin yöntemlere yapılan çağrılar yayma ve bu türlerin tür bağımsız değişkenlerini yöntemin genel tür parametrelerini olduğunda kullanmalısınız `static`<xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29>, <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>, ve <xref:System.Reflection.Emit.TypeBuilder.GetField%28System.Type%2CSystem.Reflection.FieldInfo%29> yöntemi aşırı yüklemeleri <xref:System.Reflection.Emit.TypeBuilder> almak için oluşturulmuş formları yöntemleri. Bu yöntem gövdesini yayma eşlik eden yordamı gösterir.  
+    >  Genel türlerin yöntemlere yapılan çağrılar yayma ve bu türlerin tür bağımsız değişkenlerini yöntemin genel tür parametrelerini olduğunda kullanmalısınız `static` <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29>, <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>, ve <xref:System.Reflection.Emit.TypeBuilder.GetField%28System.Type%2CSystem.Reflection.FieldInfo%29> yöntemi aşırı yüklemeleri <xref:System.Reflection.Emit.TypeBuilder> sınıfı oluşturulan form yöntemlerin edinin. Bu yöntem gövdesini yayma eşlik eden yordamı gösterir.  
   
 11. Yöntemi içeren türünü tamamlamak ve bütünleştirilmiş kodu kaydedin. Genel yöntem çağırma için eşlik eden yordamı tamamlanmış yöntemini çağırmak için iki yolunu gösterir.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "59344240"
      [!code-csharp[GenericMethodHowTo#31](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#31)]
      [!code-vb[GenericMethodHowTo#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#31)]  
   
-4. Alma bir <xref:System.Reflection.MethodInfo> temsil eden <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> yöntemi. Yöntem üzerinde çalışan bir `ICollection(Of TInput)` (`ICollection<TInput>` içinde C#) almak gerekli olan bu nedenle `Add` yöntemi için belirli bir yapıda türü. Kullanamazsınız <xref:System.Type.GetMethod%2A> için bu yöntemi <xref:System.Reflection.MethodInfo> doğrudan `icollOfTInput`, çünkü <xref:System.Type.GetMethod%2A> ile oluşturulmuş bir türü desteklenmiyor bir <xref:System.Reflection.Emit.GenericTypeParameterBuilder>. Bunun yerine çağrı <xref:System.Type.GetMethod%2A> üzerinde `icoll`, genel tür tanımı içeren <xref:System.Collections.Generic.ICollection%601> genel arabirim. Ardından <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>`static` üretmek için yöntemi <xref:System.Reflection.MethodInfo> için yapılandırılmış türdedir. Aşağıdaki kod bunu gösterir.  
+4. Alma bir <xref:System.Reflection.MethodInfo> temsil eden <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> yöntemi. Yöntem üzerinde çalışan bir `ICollection(Of TInput)` (`ICollection<TInput>` içinde C#) almak gerekli olan bu nedenle `Add` yöntemi için belirli bir yapıda türü. Kullanamazsınız <xref:System.Type.GetMethod%2A> için bu yöntemi <xref:System.Reflection.MethodInfo> doğrudan `icollOfTInput`, çünkü <xref:System.Type.GetMethod%2A> ile oluşturulmuş bir türü desteklenmiyor bir <xref:System.Reflection.Emit.GenericTypeParameterBuilder>. Bunun yerine çağrı <xref:System.Type.GetMethod%2A> üzerinde `icoll`, genel tür tanımı içeren <xref:System.Collections.Generic.ICollection%601> genel arabirim. Ardından <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29> `static` üretmek için yöntemi <xref:System.Reflection.MethodInfo> için yapılandırılmış türdedir. Aşağıdaki kod bunu gösterir.  
   
      [!code-csharp[GenericMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#12)]
      [!code-vb[GenericMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#12)]  
@@ -173,4 +173,4 @@ ms.locfileid: "59344240"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [Nasıl yapılır: Yansıma ile genel tür tanımlama yayma](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

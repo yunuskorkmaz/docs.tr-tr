@@ -3,10 +3,10 @@ title: Koleksiyonlar (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481112"
 ---
 # <a name="collections-c"></a>Koleksiyonlar (C#)
@@ -24,7 +24,7 @@ Koleksiyonunuz tek bir veri türünde öğeler içeriyorsa, sınıflarda birini 
 > [!NOTE]
 > Bu konudaki örnekler için dahil [kullanarak](../../../csharp/language-reference/keywords/using-directive.md) yönergeleri `System.Collections.Generic` ve `System.Linq` ad alanları.
 
- **Bu konuda**
+ **Bu konudaki**
 
 - [Basit bir koleksiyon kullanma](#BKMK_SimpleCollection)
 
@@ -186,11 +186,11 @@ Ortak koleksiyonların çoğu .NET Framework tarafından sağlanır. Her koleksi
 
 Bazı ortak koleksiyon sınıfları, bu bölümde açıklanan:
 
-- <xref:System.Collections.Generic>  sınıfları
+- <xref:System.Collections.Generic> Sınıfları
 
-- <xref:System.Collections.Concurrent>  sınıfları
+- <xref:System.Collections.Concurrent> Sınıfları
 
-- <xref:System.Collections>  sınıfları
+- <xref:System.Collections> Sınıfları
 
 <a name="BKMK_Generic"></a>
 
@@ -606,4 +606,4 @@ private static IEnumerable<int> EvenSequence(
 - [Koleksiyonlar ve Veri Yapıları](../../../standard/collections/index.md)
 - [Koleksiyon Sınıfı Seçme](../../../standard/collections/selecting-a-collection-class.md)
 - [Koleksiyonlardaki Karşılaştırmalar ve Sıralamalar](../../../standard/collections/comparisons-and-sorts-within-collections.md)
-- [Genel Koleksiyonları Ne Zaman Kullanılacağı](../../../standard/collections/when-to-use-generic-collections.md)
+- [Genel Koleksiyonlar Ne Zaman Kullanılır?](../../../standard/collections/when-to-use-generic-collections.md)

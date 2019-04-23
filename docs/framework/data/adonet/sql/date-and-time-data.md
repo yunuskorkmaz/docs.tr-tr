@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344187"
 ---
 # <a name="date-and-time-data"></a>Tarih ve Saat Verileri
@@ -19,7 +19,7 @@ SQL Server 2008, tarih ve saat bilgilerini işlemek için yeni veri türlerini t
   
  SQL Server veri türleri için kapsamlı belgeler, SQL Server Books Online içinde kullanılabilir. Aşağıdaki tablo, tarih ve saat verileri için sürüme özgü giriş düzeyi konuları listeler.  
   
- **SQL Server Çevrimiçi Kitaplar**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 1. [Tarih ve saat verilerini kullanma](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
@@ -99,7 +99,7 @@ Veri türünü belirleyebileceğiniz bir <xref:System.Data.SqlClient.SqlParamete
 >  Sıfır veya daha büyük veya eşittir 24 saat daha az zaman değerler oluşturur bir <xref:System.ArgumentException>.  
   
 ### <a name="creating-parameters"></a>Parametreleri oluşturma  
- Oluşturabileceğiniz bir <xref:System.Data.SqlClient.SqlParameter> nesnesi oluşturucusuna kullanarak ya da ekleyerek bir <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> çağırarak koleksiyonu `Add` yöntemi <xref:System.Data.SqlClient.SqlParameterCollection>. `Add` Yöntemi olarak alacağınız oluşturucu bağımsız değişkenleri veya var olan bir parametre nesnesi girin.  
+ Oluşturabileceğiniz bir <xref:System.Data.SqlClient.SqlParameter> nesnesi oluşturucusuna kullanarak ya da ekleyerek bir <xref:System.Data.SqlClient.SqlCommand> <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> çağırarak koleksiyonu `Add` yöntemi <xref:System.Data.SqlClient.SqlParameterCollection>. `Add` Yöntemi olarak alacağınız oluşturucu bağımsız değişkenleri veya var olan bir parametre nesnesi girin.  
   
  Bu konunun sonraki bölümlerinde, tarih ve saat parametreleri belirtmek örnekler sağlar. Parametreler ile çalışmaya ilişkin ek örnekler için bkz. [yapılandırma parametreleri ve parametre veri türlerini](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) ve [DataAdapter parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   

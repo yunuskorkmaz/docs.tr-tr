@@ -10,10 +10,10 @@ ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3fda2af84ff74e129c36dc966bad247bdf9e20
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427142"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Nasıl yapılır: Tür Kitaplıklarına Başvurular Ekleme
@@ -46,9 +46,9 @@ Visual Studio, bir tür kitaplığına bir başvuru eklediğinizde, meta veriler
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tür Kitaplığını Derleme Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
+- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
 - [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)
 - [İzlenecek yol: Yönetilen derlemeler Visual Studio'da türler katıştırma (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
 - [İzlenecek yol: Visual Studio'da (Visual Basic) yönetilen derlemelerden türler katıştırma](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
-- [/link (C# Derleyici Seçenekleri)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [/ Link (C# Derleyici Seçenekleri)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [/ Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

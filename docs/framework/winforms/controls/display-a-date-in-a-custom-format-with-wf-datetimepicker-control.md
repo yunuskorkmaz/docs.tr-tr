@@ -11,10 +11,10 @@ helpviewer_keywords:
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
 ms.openlocfilehash: 08d5a505229cd434dbf82e8ae4624bb418efd379
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335946"
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Özel Biçimde Tarih Görüntüleme
@@ -66,4 +66,4 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> denetim görüntülenme
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DateTimePicker Denetimi](datetimepicker-control-windows-forms.md)
-- [Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Tarihleri Ayarlama ve Döndürme](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [Nasıl yapılır: Windows Forms DateTimePicker denetimi ile ayarlanmış ve dönüş tarihleri](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

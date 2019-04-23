@@ -4,10 +4,10 @@ description: Dallar ve döngüler hakkındaki Bu öğreticide, yazdığınız C#
 ms.date: 10/31/2017
 ms.custom: mvc
 ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427259"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dal ve döngü deyimleriyle koşullu mantık öğrenin
@@ -258,6 +258,6 @@ Kendiniz deneyin. Ardından olup olmadığınıza bakın. 63 için bir yanıt al
 Aşağıdaki konulardan Bu kavramlar hakkında daha fazla bilgi edinebilirsiniz:
 
 - [Varsa ve else deyimi](../../language-reference/keywords/if-else.md)
-- [While deyimi](../../language-reference/keywords/while.md)
-- [Do deyimi](../../language-reference/keywords/do.md)
+- [while deyimi](../../language-reference/keywords/while.md)
+- [do deyimi](../../language-reference/keywords/do.md)
 - [For deyimi](../../language-reference/keywords/for.md)
