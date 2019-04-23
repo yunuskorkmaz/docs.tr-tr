@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296218"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip Denetim Mimarisi
@@ -316,7 +316,7 @@ ms.locfileid: "59296218"
  <xref:System.Windows.Forms.ToolStripMenuItem> olan bir <xref:System.Windows.Forms.ToolStripDropDownItem> ile çalışan <xref:System.Windows.Forms.ToolStripDropDownMenu> ve <xref:System.Windows.Forms.ContextMenuStrip> menüleri özel vurgulama, Düzen ve sütun düzenlemeyi işlemek için.  
   
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> ifadesine benzer <xref:System.Windows.Forms.ToolStripButton>, ancak kullanıcı tıkladığında bir açılan alan gösterir. Açılan liste okunu ayarlayarak göstermek veya gizlemek <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> özelliği. <xref:System.Windows.Forms.ToolStripDropDownButton> Ana bilgisayarlar bir <xref:System.Windows.Forms.ToolStripOverflowButton> overflow öğeleri görüntüleyen <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStripDropDownButton> ifadesine benzer <xref:System.Windows.Forms.ToolStripButton>, ancak kullanıcı tıkladığında bir açılan alan gösterir. Açılan liste okunu ayarlayarak göstermek veya gizlemek <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> özelliği. <xref:System.Windows.Forms.ToolStripDropDownButton> ana bilgisayarlar bir <xref:System.Windows.Forms.ToolStripOverflowButton> overflow öğeleri görüntüleyen <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripsplitbutton"></a>Verileceğini  
  <xref:System.Windows.Forms.ToolStripSplitButton> düğme ve açılan düğmeyi işlevselliğini bir araya getirir.  
@@ -379,7 +379,7 @@ ms.locfileid: "59296218"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ToolStrip Denetimine Genel Bakış](toolstrip-control-overview-windows-forms.md)
-- [ToolStrip Teknoloiji Özeti](toolstrip-technology-summary.md)
+- [ToolStrip Teknoloji Özeti](toolstrip-technology-summary.md)
 - [ToolStrip Denetimi](toolstrip-control-windows-forms.md)
 - [MenuStrip Denetimi](menustrip-control-windows-forms.md)
 - [StatusStrip Denetimi](statusstrip-control.md)

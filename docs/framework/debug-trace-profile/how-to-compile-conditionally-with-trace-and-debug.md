@@ -13,10 +13,10 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298584"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Nasıl yapılır: İzleme ve Hata Ayıklama ile Koşullu Derleme
@@ -78,8 +78,8 @@ Uygulama geliştirme sırasında hata ayıklama sırasında Visual Studio çıkt
     |**Visual Basic**|**#CONST izleme = true**|İzleme sağlar|  
     ||**#CONST izleme = false**|İzleme devre dışı bırakır|  
     ||**#CONST hata ayıklama = true**|Hata ayıklamayı etkinleştirir|  
-    ||**#CONST hata ayıklama = false**|Hata ayıklama devre dışı bırakır|  
-    |**C#**|**#define izleme**|İzleme sağlar|  
+    ||**#CONST DEBUG = false**|Hata ayıklama devre dışı bırakır|  
+    |**C#**|**#define TRACE**|İzleme sağlar|  
     ||**#undef izleme**|İzleme devre dışı bırakır|  
     ||**#define hata ayıklama**|Hata ayıklamayı etkinleştirir|  
     ||**#undef hata ayıklama**|Hata ayıklama devre dışı bırakır|  
@@ -97,10 +97,10 @@ Out derleyici yönergesi yorum.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Nasıl yapılır: Oluşturma, başlatma ve izleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [İz Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Nasıl yapılır: Visual Studio Komut Satırı için Ortam Değişkenlerini Ayarlama](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Nasıl yapılır: Komut satırı derleyicisini çağırma](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Nasıl yapılır: Uygulama koduna izleme deyimleri ekleme](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Nasıl yapılır: Visual Studio komut satırı için ortam değişkenlerini ayarlama](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Nasıl yapılır: Komut Satırı Derleyicisini Çağırma](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

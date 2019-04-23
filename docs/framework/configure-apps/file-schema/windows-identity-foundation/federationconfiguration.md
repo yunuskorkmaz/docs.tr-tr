@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
 ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297493"
 ---
 # <a name="federationconfiguration"></a>\<Federationconfiguration'a >
@@ -39,9 +39,9 @@ Yapılandırır <xref:System.IdentityModel.Services.WSFederationAuthenticationMo
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|SAM tarafından kullanılan tanımlama bilgisi işleyicisi yapılandırır. İsteğe bağlı.|  
+|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|SAM tarafından kullanılan tanımlama bilgisi işleyicisi yapılandırır. İsteğe bağlı.|  
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Şifreleme ve belirteç şifre çözme için kullanılan sertifikayı yapılandırır. İsteğe bağlı.|  
-|[\<wsFederation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|WS-Federasyon kimlik doğrulama Modülü (WSFAM) yapılandırır. İsteğe bağlı.|  
+|[\<wsFederation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|WS-Federasyon kimlik doğrulama Modülü (WSFAM) yapılandırır. İsteğe bağlı.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

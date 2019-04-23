@@ -7,10 +7,10 @@ helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
 ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296114"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>İzlenecek yol: WPF İçeriğini Win32 içinde Barındırma
@@ -22,7 +22,7 @@ ms.locfileid: "59296114"
 ## <a name="requirements"></a>Gereksinimler  
  Bu öğretici hem de temel bir bilindiğini varsayar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama. Temel bir giriş için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programlama, bkz: [Başlarken](../getting-started/index.md). Giriş konulu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlama, herhangi bir konu çok sayıda kitaplar özellikle başvurmalısınız *Windows programlama* Charles Petzold ile.  
   
- Bu öğreticide eşlik eden örnek uygulandığından [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], Bu öğretici kullanımını bilindiğini varsayar [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] programa [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] yönetilen kod programlama anlayarak artı. Konusunda [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] yararlı ancak temel değildir.  
+ Bu öğreticide eşlik eden örnek uygulandığından [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], Bu öğretici kullanımını bilindiğini varsayar [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] programa [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] yönetilen kod programlama anlayarak artı. Konusunda [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] yararlı ancak temel değildir.  
   
 > [!NOTE]
 >  Bu öğreticide ilişkili örnekteki kod örnekleri içerir. Ancak, okunabilirlik için tam örnek kod içermez. Tam örnek kod için bkz: [barındıran WPF içeriğini Win32 penceresinde örnek](https://go.microsoft.com/fwlink/?LinkID=160004).  

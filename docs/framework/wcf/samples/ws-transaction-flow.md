@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296101"
 ---
 # <a name="ws-transaction-flow"></a>WS İşlem Akışı
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   İkinci `Subtract` isteği ile bildirilen yeni bir işlem kapsamı içinde gerçekleştirilir `TransactionScopeOption.Suppress` seçeneği. Bu istemcinin başlangıç dış işlem engeller ve isteğin bir işlem hizmetine akmaz. Bu yaklaşım, bir istemcinin açıkça, çevirme ve gerekli olmadığında, bir işlem hizmetine akan karşı koruma sağlar. Hizmetin Eylemler, yeni ve bağlantısız bir işlem kapsamında gerçekleşir.  
   
--   `Multiply` İsteği akan bir işlem hizmetine istemci tanımını üretilmiş çünkü `ICalculator` arabirimi içeren bir <xref:System.ServiceModel.TransactionFlowAttribute> kümesine <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
+-   `Multiply` İsteği akan bir işlem hizmetine istemci tanımını üretilmiş çünkü `ICalculator` arabirimi içeren bir <xref:System.ServiceModel.TransactionFlowAttribute> kümesine <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
   
 -   `Divide` İsteği akan bir işlem hizmetine istemci tanımını yeniden üretilmiş çünkü `ICalculator` arabirimi içermez bir `TransactionFlowAttribute`. Hizmetin Eylemler, yeni ve bağlantısız başka bir işlem kapsamında yeniden gerçekleşir.  
   

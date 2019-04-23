@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 ms.openlocfilehash: 5950779e1f0d1e76b933b83135a8bf516161aced
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295087"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Nasıl yapılır: ActiveX denetimleri (Visual Basic) ile çalışma
@@ -33,7 +33,7 @@ ActiveX denetimleri COM bileşenlerini veya bir Web sayfası veya başkasının 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [COM Birlikte Çalışma](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [Nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
 - [Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
 - [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

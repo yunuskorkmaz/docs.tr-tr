@@ -3,10 +3,10 @@ title: SQL Server Ortak Dil Çalışma Zamanı Modülü Tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297506"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server Ortak Dil Çalışma Zamanı Modülü Tümleştirmesi
@@ -16,7 +16,7 @@ SQL Server 2005, ortak dil çalışma zamanı (CLR) bileşeni .NET Framework'ün
   
  Bu bölümde, SQL Server CLR Tümleştirmesi ile programlamaya başlamak için yeterli bilgi yalnızca sağlamaya yöneliktir ve kapsamlı olacak şekilde tasarlanmamıştır. Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü kullandığınız SQL Server sürümü için bkz.  
   
- **SQL Server Çevrimiçi Kitaplar**  
+ **SQL Server Çevrimiçi Kitapları**  
   
 1. [Ortak dil çalışma zamanı (CLR) tümleştirme programlama kavramları](https://go.microsoft.com/fwlink/?LinkId=115240)  
   

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
 ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295958"
 ---
 # <a name="animation-tips-and-tricks"></a>Animasyon İpuçları ve Püf Noktaları
@@ -75,10 +75,10 @@ ms.locfileid: "59295958"
   
 2. İkinci film şeridi etkili olur ve artık geçerli konumundan canlandırır 500 0.  
   
- **Ancak neler değil.** Bunun yerine, rectangle geri dönmez; sağa doğru ilerlendiğinde devam eder. Bunun nedeni, ikinci animasyonun başlangıç değeri geçerli değerin ilk animasyonun kullanır ve bu değeri 500'e canlandırır olmasıdır. Ne zaman ikinci animasyon değiştirir ilk çünkü <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> kullanılan <xref:System.Windows.Media.Animation.FillBehavior> ilk animasyon önemli değildir.  
+ **Ancak neler değil.** Bunun yerine, rectangle geri dönmez; sağa doğru ilerlendiğinde devam eder. Bunun nedeni, ikinci animasyonun başlangıç değeri geçerli değerin ilk animasyonun kullanır ve bu değeri 500'e canlandırır olmasıdır. Ne zaman ikinci animasyon değiştirir ilk çünkü <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> <xref:System.Windows.Media.Animation.HandoffBehavior> kullanılan <xref:System.Windows.Media.Animation.FillBehavior> ilk animasyon önemli değildir.  
   
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior ve tamamlanan olay  
- Sonraki örneklerde, başka bir senaryoyu göstermek <xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> hiçbir etkisi yok gibi görünüyor. Yeniden animasyon uygulamak için bir görsel taslak örnek kullanır <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği <xref:System.Windows.Media.TranslateTransform> 350 için 0. Ancak bu kez örnek için kayıtları <xref:System.Windows.Media.Animation.Timeline.Completed> olay.  
+ Sonraki örneklerde, başka bir senaryoyu göstermek <xref:System.Windows.Media.Animation.FillBehavior.Stop> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> hiçbir etkisi yok gibi görünüyor. Yeniden animasyon uygulamak için bir görsel taslak örnek kullanır <xref:System.Windows.Media.TranslateTransform.X%2A> özelliği <xref:System.Windows.Media.TranslateTransform> 350 için 0. Ancak bu kez örnek için kayıtları <xref:System.Windows.Media.Animation.Timeline.Completed> olay.  
   
  [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "59295958"
  Özelliklerine animasyon uygulamak için farklı yollar hakkında daha fazla bilgi için bkz. [özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md).  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>Kullanarak Compose HandoffBehavior kullanmak sistem kaynakları  
- Uyguladığınızda bir <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, veya <xref:System.Windows.Media.Animation.AnimationClock> kullanarak bir özelliğe <xref:System.Windows.Media.Animation.HandoffBehavior.Compose><xref:System.Windows.Media.Animation.HandoffBehavior>, <xref:System.Windows.Media.Animation.Clock> daha önce bu özellik ile ilişkilendirilen nesneleri sistem kaynaklarının kullanılmasına devam; Bu saatler zamanlama sistemi kaldırmaz otomatik olarak.  
+ Uyguladığınızda bir <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, veya <xref:System.Windows.Media.Animation.AnimationClock> kullanarak bir özelliğe <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>, <xref:System.Windows.Media.Animation.Clock> daha önce bu özellik ile ilişkilendirilen nesneleri sistem kaynaklarının kullanılmasına devam; zamanlama sistemi sağlamaz Bu saatler otomatik olarak kaldırın.  
   
  Çok sayıda kullanarak saatler uyguladığınızda, performans sorunlarını önlemek için <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, tamamlandıktan sonra animasyonlu özelliğinden çıktısından saatler kaldırmanız gerekir. Bir saat kaldırmak için birkaç yol vardır.  
   
