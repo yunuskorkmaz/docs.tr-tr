@@ -3,11 +3,11 @@ title: Temel HTTP Hizmeti
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
 ms.openlocfilehash: 247fedac339ebb22a6ef3b3e84f557451ecaaf1a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59337116"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773356"
 ---
 # <a name="basic-http-service"></a>Temel HTTP Hizmeti
 Bu örnek, bu özellik Windows Communication Foundation (WCF) REST programlama modeli kullanarak "POX" (düz eski XML) hizmet olarak – başvurulan bir HTTP tabanlı, RPC tabanlı hizmeti - uygulama gösterilmiştir. Bu örnek iki bileşenden oluşur: şirket içinde barındırılan bir WCF HTTP hizmet (adını da) ve hizmet oluşturur ve bu çağrıları yapan bir konsol uygulaması (Program.cs).  

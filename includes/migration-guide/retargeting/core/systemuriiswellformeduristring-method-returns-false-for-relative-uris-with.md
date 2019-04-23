@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 734041f5921571cd11225a359e794526cbd8d0e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234776"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774475"
 ---
 ### <a name="systemuriiswellformeduristring-method-returns-false-for-relative-uris-with-a-colon-char-in-first-segment"></a>System.Uri.IsWellFormedUriString yöntemi, bir iki nokta üst üste char ilk kesimdeki ile göreli URI'ler için false değerini döndürür
 

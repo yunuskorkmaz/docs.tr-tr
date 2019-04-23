@@ -6,10 +6,10 @@ helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
 ms.openlocfilehash: 2d3f6ec66a13638f0106537ad8b21bff801a53b3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303342"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Nasıl yapılır: Uygulama ve özel uzantı metodu çağırma (C# Programlama Kılavuzu)
@@ -46,10 +46,10 @@ Bu konu, kendi herhangi bir .NET türü için genişletme yöntemlerini gösteri
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [Genişletme Yöntemleri](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [LINQ (Dil ile Tümleşik Sorgu)](../../../csharp/linq/linq-in-csharp.md)
+- [LINQ (dil ile tümleşik sorgu)](../../../csharp/linq/linq-in-csharp.md)
 - [Statik Sınıflar ve Statik Sınıf Üyeleri](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [protected](../../../csharp/language-reference/keywords/protected.md)
 - [internal](../../../csharp/language-reference/keywords/internal.md)
 - [public](../../../csharp/language-reference/keywords/public.md)
 - [this](../../../csharp/language-reference/keywords/this.md)
-- [ad alanı](../../../csharp/language-reference/keywords/namespace.md)
+- [namespace](../../../csharp/language-reference/keywords/namespace.md)

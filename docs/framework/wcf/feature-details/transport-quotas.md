@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299312"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773273"
 ---
 # <a name="transport-quotas"></a>Taşıma Kotaları
 Taşıma kotaları bağlantı aşırı kaynakları tüketen ne zaman karar için bir ilke mekanizmasıdır. Kota kota değeri aşıldı sonra ek kaynaklar kullanımını engelleyen bir sınıra sahiptir. Taşıma kotaları kötü amaçlı veya istenmeyen hizmet reddi saldırılarını engeller.  

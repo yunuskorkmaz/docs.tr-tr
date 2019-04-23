@@ -4,10 +4,10 @@ description: Bu yana nasıl geliştirildiğini ve önceki sürümlerde dil göz 
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303368"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
@@ -45,7 +45,7 @@ C# 1.0 önemli özelliklere yer:
 - [İfadeler](../programming-guide/statements-expressions-operators/expressions.md)
 - [Deyimler](../programming-guide/statements-expressions-operators/statements.md)
 - [Öznitelikler](../programming-guide/concepts/attributes/index.md)
-- [Sabit değerler](../language-reference/keywords/literal-keywords.md)
+- [Değişmez Değerler](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# sürüm 1.2
 
@@ -58,7 +58,7 @@ Artık ilgi çekici şeyler başlatın. Bir C# 2005, Visual Studio 2005 ile birl
 - [Genel Türler](../programming-guide/generics/index.md)
 - [Kısmi türler](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Anonim yöntemler](../programming-guide/statements-expressions-operators/anonymous-methods.md)
-- [Boş değer atanabilir tipler](../programming-guide/nullable-types/index.md)
+- [Boş değer atanabilir türler](../programming-guide/nullable-types/index.md)
 - [Yineleyiciler](../programming-guide/concepts/iterators.md)
 - [Kovaryans ve kontravaryans](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -166,7 +166,7 @@ En son ana sürüm C# 7.0 sürümü var. Bu sürüm bazı gelişime ve harika ş
 
 Diğer özellikler dahil:
 
-- [Atar](./csharp-7.md#discards)
+- [Atılanlar](./csharp-7.md#discards)
 - [İkili sabit değerler ve basamak ayırıcılar](./csharp-7.md#numeric-literal-syntax-improvements)
 - [Throw ifadeleri](./csharp-7.md#throw-expressions)
 

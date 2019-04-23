@@ -12,10 +12,10 @@ ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302990"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock'u Kullanma
@@ -34,7 +34,7 @@ TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.Bat
   
  Bu izlenecek yol aşağıdaki bölümleri içerir:  
   
--   [Konsol Uygulaması Oluşturma](#creating)  
+-   [Konsol uygulaması oluşturma](#creating)  
   
 -   [Çalışan sınıfı tanımlama](#employeeClass)  
   
@@ -46,7 +46,7 @@ TPL veri akışı kitaplığı sağlar <xref:System.Threading.Tasks.Dataflow.Bat
   
 -   [Veritabanından çalışan verilerini okumak için arabelleğe alınmış birleşim kullanma](#bufferedJoin)  
   
--   [Tam Örnek](#complete)  
+-   [Tam örnek](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>Konsol Uygulaması Oluşturma  
