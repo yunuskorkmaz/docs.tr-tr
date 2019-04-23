@@ -1,5 +1,5 @@
 ---
-title: <add> Bypasslist (ağ ayarları) için
+title: bypasslist için <add> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098292"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a><span data-ttu-id="9fcf2-102">\<Ekle > bypasslist (ağ ayarları) için</span><span class="sxs-lookup"><span data-stu-id="9fcf2-102">\<add> Element for bypasslist (Network Settings)</span></span>
-<span data-ttu-id="9fcf2-103">Bir IP adresi veya DNS adı için proxy atlama listesi ekler.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  
+# <a name="add-element-for-bypasslist-network-settings"></a><span data-ttu-id="08957-102">\<Ekle > bypasslist (ağ ayarları) için</span><span class="sxs-lookup"><span data-stu-id="08957-102">\<add> Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="08957-103">Bir IP adresi veya DNS adı için proxy atlama listesi ekler.</span><span class="sxs-lookup"><span data-stu-id="08957-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  
   
- <span data-ttu-id="9fcf2-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="9fcf2-104">\<configuration></span></span>  
-<span data-ttu-id="9fcf2-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="9fcf2-105">\<system.net></span></span>  
-<span data-ttu-id="9fcf2-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="9fcf2-106">\<defaultProxy></span></span>  
-<span data-ttu-id="9fcf2-107">\<bypasslist></span><span class="sxs-lookup"><span data-stu-id="9fcf2-107">\<bypasslist></span></span>  
-<span data-ttu-id="9fcf2-108">\<Ekle ></span><span class="sxs-lookup"><span data-stu-id="9fcf2-108">\<add></span></span>  
+ <span data-ttu-id="08957-104">\<Yapılandırma ></span><span class="sxs-lookup"><span data-stu-id="08957-104">\<configuration></span></span>  
+<span data-ttu-id="08957-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="08957-105">\<system.net></span></span>  
+<span data-ttu-id="08957-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="08957-106">\<defaultProxy></span></span>  
+<span data-ttu-id="08957-107">\<bypasslist></span><span class="sxs-lookup"><span data-stu-id="08957-107">\<bypasslist></span></span>  
+<span data-ttu-id="08957-108">\<Ekle ></span><span class="sxs-lookup"><span data-stu-id="08957-108">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9fcf2-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9fcf2-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08957-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="08957-109">Syntax</span></span>  
   
 ```xml  
 <add   
@@ -34,38 +34,38 @@ ms.locfileid: "59098292"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9fcf2-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="9fcf2-110">Attributes and Elements</span></span>  
- <span data-ttu-id="9fcf2-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="08957-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="08957-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="08957-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="08957-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9fcf2-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="9fcf2-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="08957-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="08957-112">Attributes</span></span>  
   
-|**<span data-ttu-id="9fcf2-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="9fcf2-113">Attribute</span></span>**|**<span data-ttu-id="9fcf2-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9fcf2-114">Description</span></span>**|  
+|<span data-ttu-id="08957-113">**Öznitelik**</span><span class="sxs-lookup"><span data-stu-id="08957-113">**Attribute**</span></span>|<span data-ttu-id="08957-114">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="08957-114">**Description**</span></span>|  
 |-------------------|---------------------|  
-|**<span data-ttu-id="9fcf2-115">adres</span><span class="sxs-lookup"><span data-stu-id="9fcf2-115">address</span></span>**|<span data-ttu-id="9fcf2-116">Bir IP adresi veya DNS adını tanımlayan bir normal ifade.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-116">A regular expression describing an IP address or DNS name.</span></span>|  
+|<span data-ttu-id="08957-115">**Adresi**</span><span class="sxs-lookup"><span data-stu-id="08957-115">**address**</span></span>|<span data-ttu-id="08957-116">Bir IP adresi veya DNS adını tanımlayan bir normal ifade.</span><span class="sxs-lookup"><span data-stu-id="08957-116">A regular expression describing an IP address or DNS name.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9fcf2-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="9fcf2-117">Child Elements</span></span>  
- <span data-ttu-id="9fcf2-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="08957-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="08957-117">Child Elements</span></span>  
+ <span data-ttu-id="08957-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="08957-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="9fcf2-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="9fcf2-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="08957-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="08957-119">Parent Elements</span></span>  
   
-|**<span data-ttu-id="9fcf2-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="9fcf2-120">Element</span></span>**|**<span data-ttu-id="9fcf2-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9fcf2-121">Description</span></span>**|  
+|<span data-ttu-id="08957-120">**Öğe**</span><span class="sxs-lookup"><span data-stu-id="08957-120">**Element**</span></span>|<span data-ttu-id="08957-121">**Açıklama**</span><span class="sxs-lookup"><span data-stu-id="08957-121">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="9fcf2-122">bypasslist</span><span class="sxs-lookup"><span data-stu-id="9fcf2-122">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="9fcf2-123">Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-123">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
+|[<span data-ttu-id="08957-122">bypasslist</span><span class="sxs-lookup"><span data-stu-id="08957-122">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="08957-123">Bir proxy sunucu kullanmaması adresleri açıklayan normal bir ifade kümesi sağlar.</span><span class="sxs-lookup"><span data-stu-id="08957-123">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9fcf2-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9fcf2-124">Remarks</span></span>  
- <span data-ttu-id="9fcf2-125">`add` IP adresleri veya DNS sunucu adları için proxy sunucusunu atla adreslerinin listesini açıklayan normal ifadeler öğe ekler.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-125">The `add` element inserts regular expressions describing IP addresses or DNS server names to the list of addresses that bypass a proxy server.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="08957-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="08957-124">Remarks</span></span>  
+ <span data-ttu-id="08957-125">`add` IP adresleri veya DNS sunucu adları için proxy sunucusunu atla adreslerinin listesini açıklayan normal ifadeler öğe ekler.</span><span class="sxs-lookup"><span data-stu-id="08957-125">The `add` element inserts regular expressions describing IP addresses or DNS server names to the list of addresses that bypass a proxy server.</span></span>  
   
- <span data-ttu-id="9fcf2-126">Değerini `address` öznitelik, bir dizi IP adresi veya ana bilgisayar adları açıklayan bir normal ifade olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-126">The value of the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>  
+ <span data-ttu-id="08957-126">Değerini `address` öznitelik, bir dizi IP adresi veya ana bilgisayar adları açıklayan bir normal ifade olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="08957-126">The value of the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>  
   
- <span data-ttu-id="9fcf2-127">Bu öğe için normal bir ifade belirtirken dikkatli olmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-127">You should use caution when specifying a regular expression for this element.</span></span> <span data-ttu-id="9fcf2-128">Normal ifade "[a-z] +\\.contoso\\.com" eşleşme barındıran tüm contoso.com etki alanı, ancak bunu ayrıca contoso.com.cpandl.com etki alanındaki herhangi bir ana bilgisayara eşleşen.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-128">The regular expression "[a-z]+\\.contoso\\.com" matches any host in the contoso.com domain, but it also matches any host in the contoso.com.cpandl.com domain.</span></span> <span data-ttu-id="9fcf2-129">Contoso.com etki alanındaki bir konak eşleştirmek için bir yer işareti ("$") kullanın: "[a-z] +\\.contoso\\.com$".</span><span class="sxs-lookup"><span data-stu-id="9fcf2-129">To match only a host in the contoso.com domain, use an anchor ("$"): "[a-z]+\\.contoso\\.com$".</span></span>  
+ <span data-ttu-id="08957-127">Bu öğe için normal bir ifade belirtirken dikkatli olmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="08957-127">You should use caution when specifying a regular expression for this element.</span></span> <span data-ttu-id="08957-128">Normal ifade "[a-z] +\\.contoso\\.com" eşleşme barındıran tüm contoso.com etki alanı, ancak bunu ayrıca contoso.com.cpandl.com etki alanındaki herhangi bir ana bilgisayara eşleşen.</span><span class="sxs-lookup"><span data-stu-id="08957-128">The regular expression "[a-z]+\\.contoso\\.com" matches any host in the contoso.com domain, but it also matches any host in the contoso.com.cpandl.com domain.</span></span> <span data-ttu-id="08957-129">Contoso.com etki alanındaki bir konak eşleştirmek için bir yer işareti ("$") kullanın: "[a-z] +\\.contoso\\.com$".</span><span class="sxs-lookup"><span data-stu-id="08957-129">To match only a host in the contoso.com domain, use an anchor ("$"): "[a-z]+\\.contoso\\.com$".</span></span>  
   
- <span data-ttu-id="9fcf2-130">Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET framework normal ifadelerinde](../../../../../docs/standard/base-types/regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="9fcf2-130">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../../docs/standard/base-types/regular-expressions.md).</span></span>  
+ <span data-ttu-id="08957-130">Normal ifadeler hakkında daha fazla bilgi için bkz. [.NET framework normal ifadelerinde](../../../../../docs/standard/base-types/regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="08957-130">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../../docs/standard/base-types/regular-expressions.md).</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="9fcf2-131">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="9fcf2-131">Configuration Files</span></span>  
- <span data-ttu-id="9fcf2-132">Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="08957-131">Yapılandırma Dosyaları</span><span class="sxs-lookup"><span data-stu-id="08957-131">Configuration Files</span></span>  
+ <span data-ttu-id="08957-132">Bu öğe, uygulama yapılandırma dosyası veya makine yapılandırma dosyası (Machine.config) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="08957-132">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9fcf2-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="9fcf2-133">Example</span></span>  
- <span data-ttu-id="9fcf2-134">Aşağıdaki örnek iki adres atlama listesine ekler.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-134">The following example adds two addresses to the bypass list.</span></span> <span data-ttu-id="9fcf2-135">İlk contoso.com etki alanındaki tüm sunucular için proxy atlar; İkinci proxy 192.168 tüm sunucularıyla başlar, IP adresi için atlar.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-135">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
+## <a name="example"></a><span data-ttu-id="08957-133">Örnek</span><span class="sxs-lookup"><span data-stu-id="08957-133">Example</span></span>  
+ <span data-ttu-id="08957-134">Aşağıdaki örnek iki adres atlama listesine ekler.</span><span class="sxs-lookup"><span data-stu-id="08957-134">The following example adds two addresses to the bypass list.</span></span> <span data-ttu-id="08957-135">İlk contoso.com etki alanındaki tüm sunucular için proxy atlar; İkinci proxy 192.168 tüm sunucularıyla başlar, IP adresi için atlar.</span><span class="sxs-lookup"><span data-stu-id="08957-135">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
   
 ```xml  
 <configuration>  
@@ -80,7 +80,7 @@ ms.locfileid: "59098292"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9fcf2-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9fcf2-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08957-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="08957-136">See also</span></span>
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [<span data-ttu-id="9fcf2-137">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="9fcf2-137">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="08957-137">Ağ Ayarları Şeması</span><span class="sxs-lookup"><span data-stu-id="08957-137">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

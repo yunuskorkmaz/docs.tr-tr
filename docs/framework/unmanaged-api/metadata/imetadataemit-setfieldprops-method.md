@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 94ba607669b4b1ca68294470cf1cc4fb27464d28
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097661"
 ---
-# <a name="imetadataemitsetfieldprops-method"></a><span data-ttu-id="ee394-102">IMetaDataEmit::SetFieldProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="ee394-102">IMetaDataEmit::SetFieldProps Method</span></span>
-<span data-ttu-id="ee394-103">Belirtilen alan belirteci tarafından başvurulan alan için varsayılan değer güncelleştirir veya ayarlar.</span><span class="sxs-lookup"><span data-stu-id="ee394-103">Sets or updates the default value for the field referenced by the specified field token.</span></span>  
+# <a name="imetadataemitsetfieldprops-method"></a><span data-ttu-id="c2cae-102">IMetaDataEmit::SetFieldProps Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c2cae-102">IMetaDataEmit::SetFieldProps Method</span></span>
+<span data-ttu-id="c2cae-103">Belirtilen alan belirteci tarafından başvurulan alan için varsayılan değer güncelleştirir veya ayarlar.</span><span class="sxs-lookup"><span data-stu-id="c2cae-103">Sets or updates the default value for the field referenced by the specified field token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ee394-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ee394-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c2cae-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c2cae-104">Syntax</span></span>  
   
 ```  
 HRESULT SetFieldProps (  
@@ -39,32 +39,32 @@ HRESULT SetFieldProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ee394-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ee394-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c2cae-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c2cae-105">Parameters</span></span>  
  `fd`  
- <span data-ttu-id="ee394-106">[in] Hedef alan belirteci.</span><span class="sxs-lookup"><span data-stu-id="ee394-106">[in] The token for the target field.</span></span>  
+ <span data-ttu-id="c2cae-106">[in] Hedef alan belirteci.</span><span class="sxs-lookup"><span data-stu-id="c2cae-106">[in] The token for the target field.</span></span>  
   
  `dwFieldFlags`  
- <span data-ttu-id="ee394-107">[in] Alan öznitelikleri.</span><span class="sxs-lookup"><span data-stu-id="ee394-107">[in] Field attributes.</span></span> <span data-ttu-id="ee394-108">Bu, bir bit maskesi, `CorFieldAttr` değerleri.</span><span class="sxs-lookup"><span data-stu-id="ee394-108">This is a bitmask of `CorFieldAttr` values.</span></span>  
+ <span data-ttu-id="c2cae-107">[in] Alan öznitelikleri.</span><span class="sxs-lookup"><span data-stu-id="c2cae-107">[in] Field attributes.</span></span> <span data-ttu-id="c2cae-108">Bu, bir bit maskesi, `CorFieldAttr` değerleri.</span><span class="sxs-lookup"><span data-stu-id="c2cae-108">This is a bitmask of `CorFieldAttr` values.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="ee394-109">[in] `ELEMENT_TYPE_` *\** Sabit değer.</span><span class="sxs-lookup"><span data-stu-id="ee394-109">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="ee394-110">Bu bir `CorElementType` değeri.</span><span class="sxs-lookup"><span data-stu-id="ee394-110">This is a `CorElementType` value.</span></span> <span data-ttu-id="ee394-111">Bir sabit tanımlı değilse, bu değeri ayarlamak `ELEMENT_TYPE_END`.</span><span class="sxs-lookup"><span data-stu-id="ee394-111">If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.</span></span>  
+ <span data-ttu-id="c2cae-109">[in] `ELEMENT_TYPE_` *\** Sabit değer.</span><span class="sxs-lookup"><span data-stu-id="c2cae-109">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="c2cae-110">Bu bir `CorElementType` değeri.</span><span class="sxs-lookup"><span data-stu-id="c2cae-110">This is a `CorElementType` value.</span></span> <span data-ttu-id="c2cae-111">Bir sabit tanımlı değilse, bu değeri ayarlamak `ELEMENT_TYPE_END`.</span><span class="sxs-lookup"><span data-stu-id="c2cae-111">If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.</span></span>  
   
  `pValue`  
- <span data-ttu-id="ee394-112">[in] Alan için sabit bir değer.</span><span class="sxs-lookup"><span data-stu-id="ee394-112">[in] The constant value for the field.</span></span>  
+ <span data-ttu-id="c2cae-112">[in] Alan için sabit bir değer.</span><span class="sxs-lookup"><span data-stu-id="c2cae-112">[in] The constant value for the field.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="ee394-113">[in] Unicode karakter cinsinden boyutu, `pValue`.</span><span class="sxs-lookup"><span data-stu-id="ee394-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
+ <span data-ttu-id="c2cae-113">[in] Unicode karakter cinsinden boyutu, `pValue`.</span><span class="sxs-lookup"><span data-stu-id="c2cae-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ee394-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ee394-114">Requirements</span></span>  
- <span data-ttu-id="ee394-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ee394-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c2cae-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c2cae-114">Requirements</span></span>  
+ <span data-ttu-id="c2cae-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2cae-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ee394-116">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="ee394-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c2cae-116">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c2cae-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ee394-117">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="ee394-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c2cae-117">**Kitaplığı:** Bir kaynak olarak MSCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="c2cae-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="ee394-118">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="ee394-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="c2cae-118">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c2cae-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee394-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ee394-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2cae-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c2cae-119">See also</span></span>
 
-- [<span data-ttu-id="ee394-120">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ee394-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="ee394-121">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ee394-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="c2cae-120">IMetaDataEmit Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c2cae-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="c2cae-121">IMetaDataEmit2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c2cae-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
