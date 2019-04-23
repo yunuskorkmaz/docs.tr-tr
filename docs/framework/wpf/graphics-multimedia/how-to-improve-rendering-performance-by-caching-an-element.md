@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
 ms.openlocfilehash: 118e8b0cca52c44788c9d5b291d710f765e7af2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153380"
 ---
 # <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>Nasıl yapılır: Öğeyi Önbelleğe Alarak İşleme Performansını Artırma
@@ -28,4 +28,4 @@ Kullanım <xref:System.Windows.Media.BitmapCache> karmaşık bir işleme perform
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [Nasıl yapılır: Önbelleğe Alınan Öğeyi Fırça Olarak Kullanma](how-to-use-a-cached-element-as-a-brush.md)
+- [Nasıl yapılır: Önbelleğe alınan öğeyi fırça olarak kullanma](how-to-use-a-cached-element-as-a-brush.md)

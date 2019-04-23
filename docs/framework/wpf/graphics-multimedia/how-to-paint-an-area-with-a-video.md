@@ -10,10 +10,10 @@ helpviewer_keywords:
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
 ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151183"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Nasıl yapılır: Video ile bir Alanı Boyama
@@ -41,5 +41,5 @@ Bu örnekte, medya ile bir alanı boyama gösterilmektedir. Medya ile bir alanı
 
 - <xref:System.Windows.Media.VisualBrush>
 - [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)
-- [TileBrush Genel Bakışı](tilebrush-overview.md)
+- [TileBrush’a Genel Bakış](tilebrush-overview.md)
 - [Multimedyaya Genel Bakış](multimedia-overview.md)

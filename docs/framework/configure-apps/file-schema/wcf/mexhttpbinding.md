@@ -3,10 +3,10 @@ title: <mexHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
 ms.openlocfilehash: 1aa9512c3d0d52f8cc3c7bd7b82bcfd37c418ce7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151248"
 ---
 # <a name="mexhttpbinding"></a>\<mexHttpBinding>
@@ -58,7 +58,7 @@ HTTP üzerinde WS-MetadataExchange (WS-MEX) ileti değişimi için kullanılan b
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpBindingElement>
-- [Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Nasıl yapılır: Bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [Meta Veriler](../../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)

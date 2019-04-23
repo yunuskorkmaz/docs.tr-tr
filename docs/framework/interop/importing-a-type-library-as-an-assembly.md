@@ -18,10 +18,10 @@ ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151274"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Tür Kitaplığını Derleme Olarak İçeri Aktarma
@@ -50,7 +50,7 @@ COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna k
   
      Tür kitaplığı içeri Aktarıcı meta verileri elde edilen birlikte çalışma dosyasındaki ayarlamak için komut satırı seçenekleri sağlar, türleri, varolan bir tür kitaplığından içeri aktarır ve birlikte çalışma derlemesi ve bir ad alanı oluşturur. Yönergeler için [nasıl yapılır: Tür kitaplıklarından birlikte çalışma derlemeleri oluşturma](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).  
   
--   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> sınıf  
+-   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> Sınıfı  
   
      Bu sınıfı coclass'ları ve arabirimler tür kitaplığında bir derleme içindeki meta verileri dönüştürmek için yöntemler sağlar. Bu, Tlbimp.exe aynı meta veri çıkışı üretir. Ancak, Tlbimp.exe, aksine <xref:System.Runtime.InteropServices.TypeLibConverter> sınıfı bir bellek içi tür kitaplığı için meta verileri dönüştürebilir.  
   
@@ -74,11 +74,11 @@ COM tür tanımları, genellikle bir tür kitaplığı içinde yer alır. Buna k
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [COM Bileşenlerini .NET Framework'te Gösterme](../../../docs/framework/interop/exposing-com-components.md)
-- [Tür Kitaplığından Derlemeye Dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Tür kitaplığını derlemeye dönüştürme özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Standart Sarmalayıcıları Özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [Yönetilen Kodda COM Türlerini Kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [Standart sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
+- [Yönetilen kodda COM türlerini kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Birlikte Çalışma Projesi Derleme](../../../docs/framework/interop/compiling-an-interop-project.md)
 - [Birlikte Çalışma Uygulamasını Dağıtma](../../../docs/framework/interop/deploying-an-interop-application.md)
-- [Nasıl yapılır: Tür Kitaplıklarına Başvurular Ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
-- [Nasıl yapılır: Tür Kitaplıklarından Birlikte Çalışma Derlemeleri Oluşturma](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Nasıl yapılır: Tür kitaplıklarına başvurular ekleme](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
+- [Nasıl yapılır: Tür kitaplıklarından birlikte çalışma derlemeleri oluşturma](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)

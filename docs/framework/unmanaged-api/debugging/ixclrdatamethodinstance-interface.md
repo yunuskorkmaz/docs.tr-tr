@@ -16,10 +16,10 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: f62cbdc4b3e73f0c27492f7ed20b35378654d399
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152964"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance Arabirimi
@@ -42,8 +42,8 @@ Bu arabirim, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler v
 ## <a name="requirements"></a>Gereksinimler
 
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
-**Üst bilgi:** None  
-**Kitaplığı:** None  
+**Üst bilgi:** Yok.  
+**Kitaplığı:** Yok.  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.

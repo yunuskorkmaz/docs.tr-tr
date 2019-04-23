@@ -3,10 +3,10 @@ title: Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151443"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Taşıma Güvenliği ile Kimliğe Bürünme Kullanma
@@ -17,7 +17,7 @@ ms.locfileid: "59151443"
   
 |Kimliğe bürünme düzeyi|Açıklama|  
 |-------------------------|-----------------|  
-|Yok.|Sunucu uygulaması istemci kimliğine bürünme çalışmaz.|  
+|None|Sunucu uygulaması istemci kimliğine bürünme çalışmaz.|  
 |Anonim|Sunucu uygulaması istemci kimlik bilgilerine yönelik erişim denetimleri gerçekleştirebilirsiniz, ancak istemcinin kimliği hakkında hiçbir bilgi almaz. Bu kimliğe bürünme düzeyi yalnızca adlandırılmış kanallar gibi makinede iletişim için anlamlıdır. Kullanarak `Anonymous` ile bir uzak bağlantı tanımlayın kimliğe bürünme düzeyini yükseltir.|  
 |Tanımlayın|Sunucu uygulaması istemci kimliğini bilir ve istemcinin kimlik bilgilerine yönelik erişim doğrulama yapabilirsiniz, ancak istemci kimliğine bürünülemedi. Tanımlamak WCF SSPI kimlik bilgileri ile farklı kimliğe bürünme düzeyi belirteç sağlayıcısı sağlamadığı sürece kullanılan varsayılan kimliğe bürünme düzeyi.|  
 |Impersonate|Sunucu uygulaması istemci erişim denetimlerini biçimlendirebilir server makinesinde kaynaklarına erişim sağlayabilir. Sunucu uygulaması başkasının kimliğine bürünülerek gerçekleştirilen belirteç ağ kimlik bilgilerine sahip olmadığından, istemcinin kimliğini kullanarak uzak makinelerde kaynaklarına erişemiyor|  
@@ -58,5 +58,5 @@ ms.locfileid: "59151443"
 
 - [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
 - [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Nasıl yapılır: Bir Hizmette İstemci Kimliğine Bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Nasıl yapılır: Bir hizmette istemci kimliğine bürünme](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [HTTP Kimlik Doğrulamasını Anlama](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

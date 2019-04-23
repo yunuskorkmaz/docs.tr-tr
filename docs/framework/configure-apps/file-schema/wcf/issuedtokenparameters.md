@@ -3,10 +3,10 @@ title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
 ms.openlocfilehash: 6bdf56e3d2084dec8d44e1c4d3f0c1e50b711b92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153146"
 ---
 # <a name="issuedtokenparameters"></a>\<İssuermetadata >
@@ -80,7 +80,7 @@ Bir federe güvenlik senaryosundaki güvenlik belirteci için parametreleri beli
 - [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
 - [Kimlik Doğrulama ile Hizmet Kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Federasyon ve Verilen Belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

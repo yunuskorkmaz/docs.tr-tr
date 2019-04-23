@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154420"
 ---
 # <a name="controls"></a>Denetimler
@@ -106,5 +106,5 @@ ms.locfileid: "59154420"
 - [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
 - [Giriş](../advanced/input-wpf.md)
 - [Komutu Etkinleştirme](../advanced/how-to-enable-a-command.md)
-- [İzlenecek yollar: Özel Animasyonlu Düğme Oluşturma](walkthroughs-create-a-custom-animated-button.md)
+- [İzlenecek yollar: Özel Animasyonlu Düğme oluşturma](walkthroughs-create-a-custom-animated-button.md)
 - [Denetim Özelleştirme](control-customization.md)

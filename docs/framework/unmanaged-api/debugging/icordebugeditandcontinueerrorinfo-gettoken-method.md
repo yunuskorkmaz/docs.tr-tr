@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ab2a1c0c3f280f115a408adc81a46196eb5a804c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152587"
 ---
 # <a name="icordebugeditandcontinueerrorinfogettoken-method"></a>ICorDebugEditAndContinueErrorInfo::GetToken Yöntemi
