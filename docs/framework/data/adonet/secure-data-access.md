@@ -3,10 +3,10 @@ title: Güvenli Veri Erişimi
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
 ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137260"
 ---
 # <a name="secure-data-access"></a>Güvenli Veri Erişimi
@@ -55,7 +55,7 @@ Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenl
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Özel Durum İşleme Temelleri](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Try/catch/finally yapılandırılmış özel durum işleme temel forms açıklar.|  
+|[Özel durum işleme temelleri](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Try/catch/finally yapılandırılmış özel durum işleme temel forms açıklar.|  
 |[Özel Durumlar için En İyi Yöntemler](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Özel durum işleme için en iyi uygulamaları açıklar.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Microsoft Access ve Excel veri kaynakları koruma  
@@ -85,7 +85,7 @@ Güvenli ADO.NET kod yazmak için alttaki veri deposuna veya veritabanı güvenl
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)|COM bileşenlerini .NET Framework'te nasıl sunacağınızı öğrenin ve .NET Framework bileşenlerini vystavit kullanıma sunmak nasıl eklendiğini açıklayan konulara içerir|
-|[Gelişmiş COM Birlikte Çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Birincil birlikte çalışma derlemelerini, iş parçacığı oluşturma ve özel sıralama gibi gelişmiş konular içerir.|
+|[Gelişmiş COM birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Birincil birlikte çalışma derlemelerini, iş parçacığı oluşturma ve özel sıralama gibi gelişmiş konular içerir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

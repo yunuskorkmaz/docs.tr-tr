@@ -3,10 +3,10 @@ title: Metot tabanlı sorgu örnekleri (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
 ms.openlocfilehash: 9419bd664a0e918b1ed40e5d468d01cf724f054d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139808"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Metot tabanlı sorgu örnekleri (LINQ to DataSet)
@@ -25,7 +25,7 @@ Bu bölüm, standart sorgu işleçleri kullanmak metot tabanlı sorgu söz dizim
  [Ayarlama İşleçleri](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
  Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, ve <xref:System.Linq.Enumerable.Union%2A> veri satırları kümelerinin değer tabanlı karşılaştırma işlemleri gerçekleştirmek için işleçler.  
   
- [Dönüşüm İşleçleri](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
+ [Dönüştürme İşleçleri](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
  Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A>, ve <xref:System.Linq.Enumerable.ToList%2A> hemen bir sorgu ifadesini yürütmek için yöntemler.  
   
  [Öğe İşleçleri](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  

@@ -5,10 +5,10 @@ ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dd02320f9b899f339efa149838547fd05d1b4079
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139184"
 ---
 # <a name="net-native-and-compilation"></a>.NET Yerel ve Derleme
@@ -104,5 +104,5 @@ Windows 8.1 uygulamaları ve.NET Framework belirli bir programlama diliyle yazı
 
 - [Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../../docs/standard/metadata-and-self-describing-components.md)
 - [İçinde .NET yerel (kanal 9 videosu)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [Yansıma ve .NET Yerel](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [.NET Yerel Genel Sorun Giderme](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+- [Yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [.NET Native Genel Sorun Giderme](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

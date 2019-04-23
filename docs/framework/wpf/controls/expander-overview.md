@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
 ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130409"
 ---
 # <a name="expander-overview"></a>Genişleticiye Genel Bakış
@@ -28,7 +28,7 @@ Bir <xref:System.Windows.Controls.Expander> denetim bir pencere benzer ve üst b
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>Genişleyen bir içerik alanı yönü ayarlama  
- Pencerenin içerik alanı ayarlayabileceğiniz bir <xref:System.Windows.Controls.Expander> dört yönergeleri birini genişletmek için denetim (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, veya <xref:System.Windows.Controls.ExpandDirection.Right>) kullanarak <xref:System.Windows.Controls.ExpandDirection> özelliği. Ne zaman içerik alanı daraltıldığında, yalnızca <xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A> ve iki durumlu düğmesi görünür. A <xref:System.Windows.Controls.Button> tek yönlü bir ok görüntüler denetimi, içerik alanını genişletmek veya daraltmak için iki durumlu düğme olarak kullanılır. Genişletildiğinde, <xref:System.Windows.Controls.Expander> penceresi gibi bir alanda içeriğini görüntülemek çalışır.  
+ Pencerenin içerik alanı ayarlayabileceğiniz bir <xref:System.Windows.Controls.Expander> dört yönergeleri birini genişletmek için denetim (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, veya <xref:System.Windows.Controls.ExpandDirection.Right>) kullanarak <xref:System.Windows.Controls.ExpandDirection> özelliği. Ne zaman içerik alanı daraltıldığında, yalnızca <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> ve iki durumlu düğmesi görünür. A <xref:System.Windows.Controls.Button> tek yönlü bir ok görüntüler denetimi, içerik alanını genişletmek veya daraltmak için iki durumlu düğme olarak kullanılır. Genişletildiğinde, <xref:System.Windows.Controls.Expander> penceresi gibi bir alanda içeriğini görüntülemek çalışır.  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Bir Panel içinde bir genişletici boyutunu denetleme  

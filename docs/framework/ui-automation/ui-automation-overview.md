@@ -7,10 +7,10 @@ helpviewer_keywords:
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
 ms.openlocfilehash: 06cbc82f3636c4063b445a0ccbe871e0be1dd847
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134679"
 ---
 # <a name="ui-automation-overview"></a>UI Otomasyonuna Genel Bakış
@@ -46,11 +46,11 @@ ms.locfileid: "59134679"
 |Bölüm|Konu|Hedef Kitle|  
 |-------------|--------------------|--------------|  
 |[UI Otomasyon Temelleri](../../../docs/framework/ui-automation/index.md) (Bu bölüm)|Kavramları genel bakış.|Tüm.|  
-|[Yönetilen Kod İçin UI Otomasyon Sağlayıcılar](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|Genel bakışlar ve API sağlayıcısı kullanmanıza yardımcı olması için nasıl yapılır konuları.|Denetim geliştiriciler.|  
-|[Yönetilen Kod İçin UI Otomasyon İstemcileri](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|Genel bakışlar ve istemci API'si kullanmanıza yardımcı olması için nasıl yapılır konuları.|İstemci uygulaması geliştiricileri.|  
-|[UI Otomasyon Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|Denetim desenlerini sağlayıcıları tarafından nasıl uygulanması gerekir ve istemciler için kullanılabilir işlevler hakkında bilgiler.|Tüm.|  
-|[UI Otomasyon Metin Düzeni](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|Metin denetim düzeni sağlayıcıları tarafından nasıl uygulanması gerekir ve istemciler için kullanılabilir işlevler hakkında bilgiler.|Tüm.|  
-|[UI Otomasyon Denetim Türleri](../../../docs/framework/ui-automation/ui-automation-control-types.md)|Farklı denetim türleri tarafından desteklenen özellikler ve denetim desenleri hakkında bilgi.|Tüm.|  
+|[Yönetilen Kod İçin UI Otomasyonu Sağlayıcıları](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|Genel bakışlar ve API sağlayıcısı kullanmanıza yardımcı olması için nasıl yapılır konuları.|Denetim geliştiriciler.|  
+|[Yönetilen Kod İçin UI Otomasyonu İstemcileri](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|Genel bakışlar ve istemci API'si kullanmanıza yardımcı olması için nasıl yapılır konuları.|İstemci uygulaması geliştiricileri.|  
+|[UI Otomasyonu Denetim Desenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|Denetim desenlerini sağlayıcıları tarafından nasıl uygulanması gerekir ve istemciler için kullanılabilir işlevler hakkında bilgiler.|Tüm.|  
+|[UI Otomasyonu Metin Deseni](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|Metin denetim düzeni sağlayıcıları tarafından nasıl uygulanması gerekir ve istemciler için kullanılabilir işlevler hakkında bilgiler.|Tüm.|  
+|[UI Otomasyonu Denetim Türleri](../../../docs/framework/ui-automation/ui-automation-control-types.md)|Farklı denetim türleri tarafından desteklenen özellikler ve denetim desenleri hakkında bilgi.|Tüm.|  
   
  Aşağıdaki tabloda [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanları, bunları ve bunları kullanan İzleyici içeren dll.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "59134679"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI Otomasyon Denetim Düzenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI Otomasyon Özelliklerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
+- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [UI Otomasyonu Özelliklerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
 - [UI Otomasyonu Olaylarına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
-- [UI Otomasyon Güvenliğine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md)
+- [UI Otomasyonu Güvenliğine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-security-overview.md)

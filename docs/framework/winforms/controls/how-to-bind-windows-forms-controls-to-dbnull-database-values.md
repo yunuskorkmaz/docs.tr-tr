@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
 ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137767"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Nasıl yapılır: Windows Forms Denetimlerini DBNull Veritabanı Değerlerine Bağlama
@@ -37,5 +37,5 @@ Bir veri kaynağı ve veri kaynağı için Windows Forms denetimleri bağladığ
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [BindingSource Bileşeni](bindingsource-component.md)
-- [Nasıl yapılır: Veri Bağlamada Oluşan Hataları ve Özel Durumları İşleme](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Nasıl yapılır: Hataları ve ortaya çıkan özel durumlar veri bağlama ile işleme](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Nasıl yapılır: Bir Windows Forms denetimini bir türe bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)

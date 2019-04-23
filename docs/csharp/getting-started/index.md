@@ -9,10 +9,10 @@ ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130980"
 ---
 # <a name="get-started-with-c"></a>C ile çalışmaya başlama\#
@@ -21,17 +21,17 @@ Bu bölümde kısa, hızlı bir şekilde olanak tanıyan basit öğreticiler C# 
 
 Aşağıdaki konular da mevcuttur:
 
-* [C# Diline ve.NET Framework'e Giriş](introduction-to-the-csharp-language-and-the-net-framework.md)
+* [C# dili ve .NET Framework Giriş](introduction-to-the-csharp-language-and-the-net-framework.md)
 
      C# dili ve .NET genel bir bakış sağlar.
 
-* [Visual Studio 2017'de .NET Core ile bir C# Merhaba Dünya uygulaması derleme](../../core/tutorials/with-visual-studio.md)
+* [Visual Studio 2017’de .NET Core ile bir C# Merhaba Dünya uygulaması derleme](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio 2017, Visual Studio'nun en son sürümü, kodu, derleme, çalıştırma, hata ayıklama, profil ve Windows için bir tümleşik geliştirme ortamından uygulamalarınızı yayımlamanızı sağlar.
 
    Konu oluşturma ve basit bir Hello World uygulaması çalıştırın ve ardından biraz daha etkileşimli bir Hello World uygulaması çalıştırmak için değiştirme sağlar. Oluşturma ve uygulamanızı çalıştıran bitirdiğinizde, da bilgi edinebilirsiniz nasıl [ayıklama](../../core/tutorials/debugging-with-visual-studio.md) ve nasıl [yayımlamadan](../../core/tutorials/publishing-with-visual-studio.md) böylece .NET Core tarafından desteklenen tüm platformlarda çalıştırılabilir.
 
-* [C# ve Visual Studio 2017'de .NET Core ile bir sınıf kitaplığı oluşturma](../../core/tutorials/library-with-visual-studio.md)
+* [Visual Studio 2017’de C# ve .NET Core ile bir sınıf kitaplığı derleme](../../core/tutorials/library-with-visual-studio.md)
 
    Bir sınıf kitaplığı türleri ve başka bir uygulamadan çağrılabilir tür üyeleri tanımlamanıza olanak sağlar. Bu konuda bir dizeyi büyük harfli bir karakterle başlayıp başlamayacağını belirleyen tek bir yöntemi olan bir sınıf kitaplığı oluşturmanıza olanak sağlar. Kitaplığı oluşturmaya bitirdiğinizde, geliştirebilirsiniz bir [birim testi](../../core/tutorials/testing-library-with-visual-studio.md) beklendiği gibi çalıştığından ve ardından, kullanılabilir hale getirmek emin olmak için [tüketicilerimizin kullanmak istediği uygulamaları](../../core/tutorials/consuming-library-with-visual-studio.md).
 
@@ -47,7 +47,7 @@ Aşağıdaki konular da mevcuttur:
 
     C# programlama kavramları hakkında bilgi sağlar ve C# ' de çeşitli görevler gerçekleştirmeyi açıklar.
 
-* [C# Başvurusu](../../csharp/language-reference/index.md)
+* [C# başvurusu](../../csharp/language-reference/index.md)
 
     C# anahtar sözcükleri, işleçler, önişlemci yönergeleri, derleyici seçenekleri ve derleyici hataları ve Uyarıları hakkında ayrıntılı başvuru bilgileri sağlar.
 

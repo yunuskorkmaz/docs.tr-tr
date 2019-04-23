@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139535"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms'ta Ek Güvenlik Konuları
@@ -52,7 +52,7 @@ ms.locfileid: "59139535"
 |<xref:System.Windows.Forms.Control>|-Başlarken <xref:System.Windows.Forms.Control.Parent%2A> özelliği.<br />-Ayarlama `Region` özelliği.<br />-Çağırma <xref:System.Windows.Forms.Control.FindForm%2A> , <xref:System.Windows.Forms.Control.Focus%2A>, <xref:System.Windows.Forms.Control.FromChildHandle%2A> ve <xref:System.Windows.Forms.Control.FromHandle%2A>, <xref:System.Windows.Forms.Control.PreProcessMessage%2A>, <xref:System.Windows.Forms.Control.ReflectMessage%2A>, veya <xref:System.Windows.Forms.Control.SetTopLevel%2A> yöntemi.<br />-Çağırma <xref:System.Windows.Forms.Control.GetChildAtPoint%2A> denetim döndürdüyse yöntemi çağıran denetiminin alt değil.<br />-Bir kapsayıcı denetimi içinde denetim odağı değiştirin.|  
 |<xref:System.Windows.Forms.Cursor>|-Ayarlama <xref:System.Windows.Forms.Cursor.Clip%2A> özelliği.<br />-Çağırma <xref:System.Windows.Forms.Control.Hide%2A> yöntemi.|  
 |<xref:System.Windows.Forms.DataGrid>|-Çağırma <xref:System.Windows.Forms.ContainerControl.ProcessTabKey%2A> yöntemi.|  
-|<xref:System.Windows.Forms.Form>|-Başlarken <xref:System.Windows.Forms.Form.ActiveForm%2A> veya <xref:System.Windows.Forms.Form.MdiParent%2A> özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, veya <xref:System.Windows.Forms.Form.TopMost%2A> özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.Opacity%2A> % 50 aşağıda özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.WindowState%2A> özelliğini <xref:System.Windows.Forms.FormWindowState.Minimized> programlı olarak.<br />-Çağırma <xref:System.Windows.Forms.Form.Activate%2A> yöntemi.<br />-Kullanarak <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, ve <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow><xref:System.Windows.Forms.FormBorderStyle> sabit listesi değerleri.|  
+|<xref:System.Windows.Forms.Form>|-Başlarken <xref:System.Windows.Forms.Form.ActiveForm%2A> veya <xref:System.Windows.Forms.Form.MdiParent%2A> özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, veya <xref:System.Windows.Forms.Form.TopMost%2A> özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.Opacity%2A> % 50 aşağıda özelliği.<br />-Ayarlama <xref:System.Windows.Forms.Form.WindowState%2A> özelliğini <xref:System.Windows.Forms.FormWindowState.Minimized> programlı olarak.<br />-Çağırma <xref:System.Windows.Forms.Form.Activate%2A> yöntemi.<br />-Kullanarak <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, ve <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow> <xref:System.Windows.Forms.FormBorderStyle> sabit listesi değerleri.|  
 |<xref:System.Windows.Forms.NotifyIcon>|-Kullanarak <xref:System.Windows.Forms.NotifyIcon> bileşen tamamen kısıtlıdır.|  
   
  <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> Değeri sınırlar aşağıdaki tabloda, tarafından uygulanan kısıtlamalara ek olarak listelenen eylemleri <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> değeri.  

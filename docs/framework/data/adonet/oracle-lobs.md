@@ -3,10 +3,10 @@ title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135674"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
@@ -17,7 +17,7 @@ Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.Oracl
 |Veri türü|Açıklama|  
 |---------------|-----------------|  
 |**Blob**|Oracle **BLOB** boyut sınırı 4 gigabayt ile ikili verileri içeren veri türü. Bu eşleyen bir **dizi** türü **bayt**.|  
-|**Clob**|Oracle **CLOB** sunucusuyla boyut sınırı 4 gigabayt kümesinde varsayılan karakter tabanlı, karakter verileri içeren veri türü. Bu eşlendiği **dize**.|  
+|**CLOB**|Oracle **CLOB** sunucusuyla boyut sınırı 4 gigabayt kümesinde varsayılan karakter tabanlı, karakter verileri içeren veri türü. Bu eşlendiği **dize**.|  
 |**NClob**|Oracle **NCLOB** Ulusal karakter boyut sınırı 4 gigabayt sunucusu üzerinde kümesini temel karakter verileri içeren veri türü. Bu eşlendiği **dize**.|  
   
  Bir **OracleLob** farklıdır bir <xref:System.Data.OracleClient.OracleBFile> içeren veriler yerine sunucunun işletim sistemini fiziksel bir dosyasında depolanır. Farklı bir okuma-yazma nesnesi ayrıca olabilir bir **OracleBFile**, bu değer her zaman salt okunur.  

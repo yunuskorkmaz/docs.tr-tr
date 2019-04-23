@@ -3,10 +3,10 @@ title: İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
 ms.openlocfilehash: fa6dc74a26f6a76591a15c549a892f31a65c521e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132372"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar
@@ -114,4 +114,4 @@ logman stop mytrace -ets
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama için Windows Yönetim İzlemesini Kullanma](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Tanılama için Windows Yönetim Araçlarını Kullanma](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

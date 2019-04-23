@@ -6,10 +6,10 @@ helpviewer_keywords:
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132068"
 ---
 # <a name="distributed-application-security"></a>Dağıtılan Uygulama Güvenliği
@@ -40,7 +40,7 @@ Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanlar�
   
 |Mod|Açıklama|  
 |----------|-----------------|  
-|None|Güvenlik aktarım katmanında veya ileti katmanında sağlanır. Önceden tanımlanmış bağlamaları hiçbiri dışında varsayılan olarak bu modu kullanın [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) öğesi veya kodun kullanırken <xref:System.ServiceModel.BasicHttpBinding> sınıfı.|  
+|Yok.|Güvenlik aktarım katmanında veya ileti katmanında sağlanır. Önceden tanımlanmış bağlamaları hiçbiri dışında varsayılan olarak bu modu kullanın [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) öğesi veya kodun kullanırken <xref:System.ServiceModel.BasicHttpBinding> sınıfı.|  
 |Taşıma|HTTPS gibi güvenli aktarım bütünlüğü, gizliliği ve karşılıklı kimlik doğrulaması için kullanır.|  
 |İleti|SOAP ileti güvenliği bütünlüğü, gizliliği ve karşılıklı kimlik doğrulaması için kullanır. SOAP iletilerini göre WS-güvenlik standartları güvenlidir.|  
 |Karma mod|Kullanan bütünlüğü, gizliliği ve sunucu kimlik doğrulaması için güvenlik taşıma. Güvenlik (WS-güvenlik ve diğer standartların) istemci kimlik doğrulaması için kullandığı ileti.<br /><br /> (Bu modu için bu numaralandırma `TransportWithMessageCredential`.)|  
@@ -96,7 +96,7 @@ Windows Communication Foundation (WCF) güvenlik üç önemli işlevsel alanlar�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uç Noktası Oluşturma Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
