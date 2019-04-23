@@ -3,11 +3,11 @@ title: Özel etkinlik kullanma
 ms.date: 03/30/2017
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
 ms.openlocfilehash: 47ddd42168445aa23eaaded6fd19ffe4698e4117
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309621"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973362"
 ---
 # <a name="using-a-custom-activity"></a>Özel etkinlik kullanma
 Öğesinden türetilen etkinlikleri <xref:System.Activities.Activity> veya alt sınıflara daha büyük iş akışlarına oluşan veya doğrudan kod içinde oluşturulur. Bu konuda, kod veya Tasarımcısı'nda oluşturulan iş akışlarında özel etkinlikler kullanma açıklar.  

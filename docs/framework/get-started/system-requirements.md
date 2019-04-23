@@ -2,7 +2,7 @@
 title: .NET framework sistem gereksinimleri
 description: Donanım, işletim sistemi ve .NET Framework 4.5 ve sonraki sürümler yüklemek için yazılım gereksinimleri ne olduğunu bulabilirsiniz.
 ms.custom: updateeachrelease
-ms.date: 10/01/2018
+ms.date: 04/18/2019
 helpviewer_keywords:
 - software requirements
 - .NET Framework, system requirements
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cbc639c9fed90b25c034964b5a504e880876b54
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: 5d4b335c9b196aec2873f8f663e82ee461748de3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091844"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973869"
 ---
 # <a name="net-framework-system-requirements"></a>.NET framework sistem gereksinimleri
 
@@ -26,6 +26,7 @@ Bu başlıktaki tablolar, donanım, işletim sistemi ve yazılım gereksinimleri
 * .NET framework 4.5 ve nokta sürümleri (4.5.1 ve 4.5.2'yi).
 * .NET framework 4.6 ve onun nokta sürümleri (4.6.1 ve 4.6.2).
 * .NET framework 4.7 ve onun nokta sürümleri (4.7.1 ve 4.7.2).
+* .NET Framework 4.8
 
 İçin .NET Framework sürümlerinde .NET Framework 4. 5'den önceki bilgi [.NET Framework sürümleri ve bağımlılıkları](../migration-guide/versions-and-dependencies.md).
 
@@ -55,26 +56,27 @@ Bu başlıktaki tablolar, donanım, işletim sistemi ve yazılım gereksinimleri
 
 | İşletim sistemi | Desteklenen sürümler | İşletim sistemi ile önceden | Yüklenebilir ayrı olarak |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Windows 10 Ekim 2018 güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.7.2 |--|
-| Windows 10 Nisan 2018 güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.7.2 |--|
-| Windows 10 Fall Creators Update | 32 bit ve 64 bit | .NET framework 4.7.1 | .NET Framework 4.7.2 |
-| Windows 10 Creators Update | 32 bit ve 64 bit | .NET framework 4.7 | .NET framework 4.7.1<br/><br/>.NET Framework 4.7.2 | 
-| Windows 10 Yıldönümü Güncelleştirmesi | 32 bit ve 64 bit | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|.NET framework 4.7<br/><br/>.NET framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
+| Windows 10 Mayıs 2019 güncelleştirme | 32 bit ve 64 bit | .NET Framework 4.8 | -- |
+| Windows 10 Ekim 2018 güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| Windows 10 Nisan 2018 güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.7.2 |.NET Framework 4.8|
+| Windows 10 Fall Creators Update | 32 bit ve 64 bit | .NET framework 4.7.1 | .NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 10 Creators Update | 32 bit ve 64 bit | .NET framework 4.7 | .NET framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 10 Yıldönümü Güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.6.2 |.NET framework 4.7<br/><br/>.NET framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8  |
 | Windows 10 Kasım güncelleştirmesi | 32 bit ve 64 bit | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
 | Windows 10 | 32 bit ve 64 bit | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
-| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32-bit, 64 bit ve ARM | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/>.NET framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| [!INCLUDE[win8](../../../includes/win8-md.md)] | 32-bit, 64 bit ve ARM | [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |
-| Windows 7 SP1|32 bit ve 64 bit | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/>.NET framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Vista SP2|32 bit ve 64 bit | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |
+| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32-bit, 64 bit ve ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| [!INCLUDE[win8](../../../includes/win8-md.md)] | 32-bit, 64 bit ve ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
+| Windows 7 SP1|32 bit ve 64 bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Vista SP2|32 bit ve 64 bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 | Windows XP |32 bit ve 64 bit | -- | .NET Framework 4 |
 
  **Notlar:**
 
 - Windows 7 sistemlerde, Windows 7 SP1 .NET Framework gerektirir. Windows 7'de yaptığınız ve Service Pack 1 henüz yüklemediyseniz, .NET Framework'ü yüklemeden önce bunu yapmanız gerekir.
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Windows Önyükleme Ortamı (Windows PE) desteklenir. Tüm özellikler Windows PE'de desteklenmez.
+- .NET framework 4.5, Windows Önyükleme Ortamı (Windows PE) desteklenir. Tüm özellikler Windows PE'de desteklenmez.
 
-- .NET Framework 4, IA64 platformu da destekler.
+- .NET framework 4, IA64 platformu da destekler.
 
 - Tüm platformlar için en son Windows hizmet paketine yükseltin ve kullanılabilir olan kritik güncelleştirmeleri yükleyin öneririz [Windows Update Web sitesini](https://go.microsoft.com/fwlink/?LinkId=168461) sağlamak en iyi uyumluluk ve güvenlik.
 
@@ -84,19 +86,19 @@ Bu başlıktaki tablolar, donanım, işletim sistemi ve yazılım gereksinimleri
 
 | İşletim sistemi | Desteklenen sürümler | İşletim sistemi ile önceden | Yüklenebilir ayrı olarak |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Windows Server 2019 | 64 bit | .NET Framework 4.7.2 | -- |
-| Windows Server sürüm 1809 | 64 bit | .NET Framework 4.7.2 | -- |
-| Windows Server sürüm 1803 | 64 bit | .NET Framework 4.7.2 | -- |
-| Windows Server 1709 sürümü | 64 bit | .NET framework 4.7.1 | .NET Framework 4.7.2 | 
-| Windows Server 2016 | 64 bit | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] | .NET framework 4.7<br/><br/> .NET framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2012 R2 | 64 bit | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/> .NET framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2012 (64-bit sürüm) | 64 bit| [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/>.NET framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2008 R2 SP1|64 bit | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/>.NET framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2008 SP2|32 bit ve 64 bit | -- | .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |
+| Windows Server 2019 | 64 bit | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| Windows Server sürüm 1809 | 64 bit | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| Windows Server sürüm 1803 | 64 bit | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| Windows Server 1709 sürümü | 64 bit | .NET framework 4.7.1 | .NET Framework 4.7.2|
+| Windows Server 2016 | 64 bit | .NET Framework 4.6.2 | .NET framework 4.7<br/><br/> .NET framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2012 R2 | 64 bit | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/> .NET framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2012 (64-bit sürüm) | 64 bit| .NET Framework 4.5 | .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2008 R2 SP1|64 bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2008 SP2|32 bit ve 64 bit | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 
  **Notlar:**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] içerir [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ayrı olarak yüklemeniz gerekmez. Benzer şekilde, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] içerir [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] .NET Framework 4.5 içerir, böylece ayrı olarak yüklemeniz gerekmez. Benzer şekilde, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] .NET Framework 4.5.1 içerir.
 
 - .NET Framework, Windows Server 2008 R2 SP1 veya daha sonra Sunucu Çekirdeği rolü için destek sınırlıdır. Bkz: [Server Core .NET işlevselliği](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)) desteklenmeyen API listesi.
 

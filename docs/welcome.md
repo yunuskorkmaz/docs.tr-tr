@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 04/02/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5084aaa745d714184ae644ef8e9fe140c522a70d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4d4edc146efa12fc29c2c7e65727bf5a5b664eb8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920538"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974720"
 ---
 # <a name="welcome-to-net"></a>.NET için Hoş Geldiniz
 
@@ -50,7 +50,7 @@ Bu belge, platformlar ve diller arasında .NET kapsamını ele alır. .NET ve a�
 - [C# Kılavuzu](csharp/index.md)
 - [F# Kılavuzu](fsharp/index.md)
 - [Visual Basic Kılavuzu](visual-basic/index.md)
-- [ML.NET Kılavuzu](machine-learning/index.md)
+- [ML.NET Kılavuzu](machine-learning/index.yml)
 
 Ayrıca, göz atabilirsiniz [.NET API Başvurusu](/dotnet/api).
 

@@ -4,30 +4,30 @@ ms.custom: updateeachrelease
 description: Windows 8'de .NET Framework'ü yüklemek hakkında bilgi edinin
 author: rlander
 ms.author: mairaw
-ms.date: 04/10/2018
-ms.openlocfilehash: 46f0401075f434a5406d7ba19e6ef4b7a6639caf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.date: 04/18/2019
+ms.openlocfilehash: 9f3d3aa35e69ab850ca6d6f564796fe43c65fbd1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542801"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975539"
 ---
-# <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Windows 8 ve Windows Server 2012'de .NET Framework yükleme
+# <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Windows 8 ve Windows Server 2012’de .NET Framework Yükleme
 
 .NET Framework, Windows üzerinde birçok uygulama çalıştırmak için gereklidir. Yüklemek için aşağıdaki yönergeleri kullanabilirsiniz. Bu sayfada bir uygulama çalıştırmaya ve makinenizde aşağıdaki iletişim kutusu görmesini sonra gelmiş.
 
 ![Bu uygulama başlatılamadı](./media/this-application-could-not-be-started.png)
 
-Bu yönergeler ihtiyacınız .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) en son sürüm. Windows Server 2012'de desteklenir, ancak Windows 8'de desteklenmez. İle birlikte gelir [Windows 10 Ekim 2018 güncelleştirmesi](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) ve [Windows 10 Nisan 2018 güncelleştirmesi](https://www.microsoft.com/software-download/windows10).
+Bu yönergeler ihtiyacınız .NET Framework sürümlerini yüklemenize yardımcı olur. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) en son sürüm. Windows Server 2012'de desteklenir, ancak Windows 8'de desteklenmez. İle birlikte gelir [Windows 10 güncelleştirme 2019](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update)).
 
-## <a name="net-framework-472"></a>.NET Framework 4.7.2
+## <a name="net-framework-48"></a>.NET Framework 4.8
 
 > [!div class="button"]
-> [.NET Framework'ün 4.7.2 indirin](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [.NET Framework'ün 4.7.2 indirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-.NET Framework 4.7.2 Windows Server 2012'de desteklenir. Windows 8'de desteklenmiyor.
+.NET Framework 4.8, Windows Server 2012'de desteklenir. Windows 8'de desteklenmiyor.
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) .NET Framework 4.0 veya daha sonra oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
+[.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) .NET Framework 4.0 veya daha sonra oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
@@ -41,7 +41,7 @@ Yüklemek için yönergeleri izleyin [Windows 8 ve 10 üzerinde .NET Framework 3
 
 .NET Framework 3.5, .NET Framework 1.0 için 3.5 oluşturulan uygulamaları destekler.
 
-## <a name="help"></a>Yardım
+## <a name="help"></a>Help
 
 Yapabilecekleriniz [Yardım için Microsoft ile iletişime geçin](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) , .NET Framework'ün doğru sürümü alınamıyor.
 

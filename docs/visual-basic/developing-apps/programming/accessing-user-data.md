@@ -12,11 +12,11 @@ helpviewer_keywords:
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
 ms.openlocfilehash: e5d18adcb331162a72da0adb4018d1d59ecc072e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825306"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59972907"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Kullanıcı Verilerine Erişme (Visual Basic)
 Bu bölüm ile ilgili konuları içerir `My.User` nesne ve ile gerçekleştirebileceğiniz görevler.  

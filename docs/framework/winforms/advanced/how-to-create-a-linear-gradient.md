@@ -10,21 +10,24 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125027"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977281"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Nasıl yapılır: Doğrusal Gradyan Oluşturma
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Yatay, dikey ve Çapraz doğrusal gradyanlar sağlar. Varsayılan olarak, aynı şekilde doğrusal gradyan rengi değişir. Ancak, Tekdüzen olmayan biçimde rengini değiştirir, böylece doğrusal gradyan özelleştirebilirsiniz.  
+GDI +'da yatay, dikey ve Çapraz doğrusal gradyanlar sağlar. Varsayılan olarak, aynı şekilde doğrusal gradyan rengi değişir. Ancak, Tekdüzen olmayan biçimde rengini değiştirir, böylece doğrusal gradyan özelleştirebilirsiniz.  
+
+> [!NOTE]
+> Bu makaledeki örneklerde bir denetimin çağrılan yöntemlerdir <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
+
+Aşağıdaki örnek, bir satır, bir elips ve dikdörtgen Yatay doğrusal gradyan fırçası ile doldurur.  
   
- Aşağıdaki örnek, bir satır, bir elips ve dikdörtgen Yatay doğrusal gradyan fırçası ile doldurur.  
+<xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Oluşturucusu dört bağımsız değişken alır: iki nokta ve iki rengi. İlk noktası (0, 10) ilk rengi (kırmızı) ile ilişkilendirilir ve ikinci bir nokta (200, 10) ikinci rengi (mavi) ile ilişkilendirilir. Gelen çizgi beklediğiniz gibi (0, 10) için (200, 10) değişiklikleri aşamalı olarak mavi ve kırmızı.  
   
- <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Oluşturucusu dört bağımsız değişken alır: iki nokta ve iki rengi. İlk noktası (0, 10) ilk rengi (kırmızı) ile ilişkilendirilir ve ikinci bir nokta (200, 10) ikinci rengi (mavi) ile ilişkilendirilir. Gelen çizgi beklediğiniz gibi (0, 10) için (200, 10) değişiklikleri aşamalı olarak mavi ve kırmızı.  
-  
- 10'luk bloklar noktaları (50, 10) ve (200, 10) önemli değildir. Önemli olan, iki nokta aynı ikinci koordinat sahip olabilir; bunları bağlayan bir çizgi yataydır. Elips ve dikdörtgen de aşamalı olarak kırmızı, mavi ve yatay koordinatı 0 ile 200'e gider gibi değiştirin.  
+ 10'luk bloklar noktaları (0, 10) ve (200, 10) önemli değildir. Önemli olan, iki nokta aynı ikinci koordinat sahip olabilir; bunları bağlayan bir çizgi yataydır. Elips ve dikdörtgen de aşamalı olarak kırmızı, mavi ve yatay koordinatı 0 ile 200'e gider gibi değiştirin.  
   
  Aşağıdaki çizimde, çizgi, elips ve dikdörtgen gösterilir. Yatay koordinat 200 arttıkça renk gradyanı kendisini tekrarlar olduğunu unutmayın.  
   
@@ -39,7 +42,7 @@ ms.locfileid: "59125027"
   
  Önceki örnekte, 200 yatay koordinat için 0 yatay bir Koordinattan geçerken renk bileşenlerine doğrusal olarak değiştirin. Örneğin, bir nokta olan ilk koordinatı 0 ile 200 arasında olan sürenin yarısına ulaşıldığında, 0 ile 255 arasında ortasında ise mavi bir bileşen olacaktır.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bir renk gradyan kenarından değişir şekilde ayarlamanızı sağlar. Siyahtan kırmızı aşağıdaki tabloya göre değiştiren bir gradyan fırçası oluşturmak istediğinizi varsayalım.  
+ GDI +'da, bir renk gradyan kenarından değişir şekilde ayarlamanıza olanak sağlar. Siyahtan kırmızı aşağıdaki tabloya göre değiştiren bir gradyan fırçası oluşturmak istediğinizi varsayalım.  
   
 |Yatay koordinatı|RGB bileşenleri|  
 |---------------------------|--------------------|  
@@ -49,12 +52,12 @@ ms.locfileid: "59125027"
   
  Yatay koordinatı 0 ile 200 biçimini yüzde 20'sinden yalnızca olduğunda kırmızı bileşeni yarım yoğunlukta olduğunu unutmayın.  
   
- Aşağıdaki örnek kümeleri <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> özelliği bir <xref:System.Drawing.Drawing2D.LinearGradientBrush> üç göreli yoğunluklarını üç göreli konum ile ilişkilendirilecek bir nesne. Yukarıdaki tabloda olduğu gibi bir göreli 0,5 yoğunluğunu 0.2 göreli bir konum ilişkilidir. Kod, bir elips ve dikdörtgen gradyan fırçası ile doldurur.  
+ Aşağıdaki örnek kümeleri <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A?displayProperty=nameWithType> üç göreli yoğunluklarını üç göreli konum ile ilişkilendirilecek özellik. Yukarıdaki tabloda olduğu gibi bir göreli 0,5 yoğunluğunu 0.2 göreli bir konum ilişkilidir. Kod, bir elips ve dikdörtgen gradyan fırçası ile doldurur.  
   
  Aşağıdaki çizimde, sonuçta elde edilen elips ve dikdörtgen gösterilir.  
   
  ![Doğrusal gradyan](./media/cslineargradient2.png "cslineargradient2")  
-  
+
 ### <a name="to-customize-linear-gradients"></a>Doğrusal gradyanlar özelleştirmek için  
   
 -   Donuk siyah ve donuk kırmızı renkte üçüncü ve dördüncü bağımsız değişken olarak, sırasıyla geçirin.  

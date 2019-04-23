@@ -1,7 +1,6 @@
 ---
-title: Ortak Dil Çalışma Zamanı (CLR)
-ms.custom: updateeachrelease
-ms.date: 04/16/2018
+title: Ortak dil çalışma zamanı (CLR) genel bakış - .NET Framework
+ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 740c804dae32a79dd06f951751bd0980fb34ca07
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
-ms.translationtype: MT
+ms.custom: updateeachrelease
+ms.openlocfilehash: 798b3d29a13434511f64dfc358fb7690948cacfa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904111"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59972959"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Ortak dil çalışma zamanı (CLR) genel bakış
 
@@ -64,7 +64,7 @@ Dil derleyicileri ve araçları, kullanışlı ve geliştiriciler için kullanı
 
 ## <a name="clr-versions"></a>CLR sürümleri
 
-.NET Framework sürüm numarasını mutlaka içerdiği CLR sürüm numarasını gelmiyor. Aşağıdaki tabloda, iki sürüm numarasının nasıl ilişkilendirmek gösterilmektedir.
+.NET Framework sürüm numarasını mutlaka içerdiği CLR sürüm numarasını gelmiyor. Aşağıdaki tabloda, iki sürüm numarasının nasıl ilişkilendirmek gösterilmektedir:
 
 |.NET Framework sürümü|CLR sürümünü içerir.|
 |----------------------------|--------------------------|
@@ -77,6 +77,7 @@ Dil derleyicileri ve araçları, kullanışlı ve geliştiriciler için kullanı
 |4.5 (4.5.1 ve 4.5.2'yi dahil)|4|
 |4.6 (4.6.1 ve 4.6.2 dahil)|4|
 |4.7 (4.7.1 ve 4.7.2 dahil)|4|
+|4.8|4|
 
 ## <a name="related-topics"></a>İlgili konular
 

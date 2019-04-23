@@ -3,12 +3,12 @@ title: Güncelleştirilmiş .NET Core olay deseni
 description: Nasıl .NET Core olay deseni esneklik ile geriye dönük uyumluluk sağlar ve nasıl güvenli bir olay işleme ile zaman uyumsuz aboneleri uygulanacağını öğrenin.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.openlocfilehash: 5c7b9b4cb9bc22a73b865c45e225ce5c382380b1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188488"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975500"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Güncelleştirilmiş .NET Core olay deseni
 
@@ -25,7 +25,7 @@ Ayrıca değişebilir `SearchDirectoryArgs` bir daha fazla değişiklik yaparsan
 
 [!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
 
-Ek değişiklik varsayılan oluşturucu tüm alanları başlatır Oluşturucusu girmeden önce çağırmaktır. Ayrıca, kurallarına olmadan C# özellikleri, atanmış önce erişildiği rapor.
+Ek değişiklik parametresiz bir oluşturucu tüm alanları başlatır Oluşturucusu girmeden önce çağırmaktır. Ayrıca, kurallarına olmadan C# özellikleri, atanmış önce erişildiği rapor.
 
 Değil değiştirmelisiniz `FileFoundArgs` yapı (değer türü) için sınıfından (başvuru türü). Olay bağımsız değişkenleri başvuruya göre iletilir iptal işlemek için bir protokol gerektiren olmasıdır. Aynı değişikliği yaptıysanız, dosya arama sınıfı hiçbir zaman herhangi bir olay aboneler tarafından yapılan değişiklikler mümkün. Her abone için yeni bir kopyasını yapısı kullanılacaktır ve bu kopyayı dosya arama nesne tarafından görülen olandan farklı bir kopyasını olacaktır.
 
@@ -37,7 +37,7 @@ Benzer mantığı, tüm izleme olay bağımsız değişkeni oluşturulan türü 
 
 ## <a name="events-with-async-subscribers"></a>Zaman uyumsuz abonelere olayları
 
-Bilgi edinmek için bir son desenine sahiptir: doğru zaman uyumsuz kodu çağıran etkinlik abonelerinden yazma. Sınama üzerinde makalesinde açıklanan [async ve await](async.md). Zaman uyumsuz yöntemlerin dönüş türü void olabilir, ancak kesinlikle önerilmez. Olay abonesi kodunuz bir zaman uyumsuz yöntemini çağırdığında oluşturmak için seçim yok ancak sahip bir `async void` yöntemi. Olay işleyicisinin imzası gerektiriyor.
+Bilgi edinmek için bir son deseni aşağıdakiler: Zaman uyumsuz kodu çağıran etkinlik abonelerinden doğru şekilde yazmak nasıl. Sınama üzerinde makalesinde açıklanan [async ve await](async.md). Zaman uyumsuz yöntemlerin dönüş türü void olabilir, ancak kesinlikle önerilmez. Olay abonesi kodunuz bir zaman uyumsuz yöntemini çağırdığında oluşturmak için seçim yok ancak sahip bir `async void` yöntemi. Olay işleyicisinin imzası gerektiriyor.
 
 Kpı'lere bu kılavuz mutabakat sağlamak gerekir. Güvenli bir şekilde, oluşturmalısınız `async void` yöntemi. Desen uygulamak için gereken temel aşağıda verilmiştir:
 

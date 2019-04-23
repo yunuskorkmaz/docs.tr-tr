@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
 ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185698"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973726"
 ---
 # <a name="data-member-default-values"></a>Veri Üyesi Varsayılan Değerler
 İçinde [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], türlerine sahip bir kavramı *varsayılan değerler*. Örneğin, varsayılan değer: bir başvuru türü için `null`, ve isteğe bağlı olarak bir tamsayı türü için sıfır ise. Seri hale getirilmiş verilerden veri üyesi varsayılan değerine ayarlandığında atlamak için zaman zaman istenen bir durumdur. Varsayılan değer üyesine sahip olduğundan, gerçek bir değer seri hale yok; Bu, bir performans avantajı vardır.  

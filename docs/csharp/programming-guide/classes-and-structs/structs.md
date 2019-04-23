@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 6c260408b7cdbb7bd55477a57ca879d89c3c0144
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.openlocfilehash: 0c0faf9fe6d9752cafa03ee054f669334f56090d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977038"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977307"
 ---
 # <a name="structs-c-programming-guide"></a>Yapılar (C# Programlama Kılavuzu)
 
@@ -22,7 +22,7 @@ Yapılar kullanarak tanımlanmış [yapı](../../language-reference/keywords/str
 Yapılar sınıflar olarak aynı sözdizimini çoğunu paylaşır. Struct'ın adı geçerli C# olmalıdır [tanımlayıcı adı](../inside-a-program/identifier-names.md). Yapılar aşağıdaki yollarla sınıfları daha büyük/küçük harf sınırlıdır:  
   
 - Const veya statik olarak bildirilirler sürece bir yapının bildirimi içinde alanları başlatılamıyor.  
-- Bir yapı varsayılan (parametresiz bir oluşturucu) bir oluşturucu ya da bir sonlandırıcı bildiremezsiniz.  
+- Bir yapı, parametresiz bir oluşturucu (parametresiz bir oluşturucu) veya bir sonlandırıcı bildiremezsiniz.  
 - Yapılar, atamaya bağlı kopyalanır. Bir yapı için yeni bir değişken atandığında, tüm verileri kopyalanır ve yeni bir kopyasını değişiklik özgün kopya verileri değiştirmez. Bu ne zaman değerinin koleksiyonlar ile çalışma gibi türleri unutmamak önemlidir `Dictionary<string, myStruct>`.  
 - Başvuru türleri sınıflar, aksine, değer türleri birimleridir.  
 - Sınıflardan farklı olarak, yapılar kullanmadan oluşturulabilir bir `new` işleci.  

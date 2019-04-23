@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
 ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312117"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975682"
 ---
 # <a name="custom-token-handlers"></a>Özel Belirteç İşleyicileri
 Bu konu, belirteç işleyicileri WIF ve belirteçleri işlemek için nasıl kullanılacağını açıklar. Özel belirteç işleyicileri için varsayılan olarak WIF desteklenmeyen belirteç türleri oluşturmak gerekli konu da kapsar.  

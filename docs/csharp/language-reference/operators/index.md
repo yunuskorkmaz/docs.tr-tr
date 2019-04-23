@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672296"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977385"
 ---
 # <a name="c-operators"></a>C# işleçleri
 
@@ -77,7 +77,7 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 [\!x](boolean-logical-operators.md#logical-negation-operator-) – mantıksal olumsuzlama.
 
-[~ x](bitwise-complement-operator.md) – bit düzeyinde tamamlayıcı.
+[~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-) – bit düzeyinde tamamlayıcı.
 
 [++ x](arithmetic-operators.md#increment-operator-) – önek artırma. Depolama konumu bir x değeriyle güncelleştirdikten sonra x değerini büyük döndürür (genellikle 1 tamsayı ekler).
 
@@ -90,6 +90,10 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 [& x](and-operator.md) – adresidir.
 
 [* x](multiplication-operator.md) – başvurusunu kaldırma.
+
+[true işleci](../keywords/true-false-operators.md) -döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle doğru olduğunu belirtmek için.
+
+[false işleci](../keywords/true-false-operators.md) -döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle false olduğunu belirtmek için.
 
 ## <a name="multiplicative-operators"></a>Çarpma işleçleri
 
@@ -113,9 +117,9 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahip.
 
-[x <\< y](left-shift-operator.md) – bitlerini sola kaydırma ve sağ taraftaki sıfır ile doldurun.
+[x <\< y](bitwise-and-shift-operators.md#left-shift-operator-) – bitlerini sola kaydırma ve sağ taraftaki sıfır ile doldurun.
 
-[x >> y](right-shift-operator.md) – sağ shift bitleri. Sol işlenen ise `int` veya `long`, sonra da sol bit imza biti ile doldurulur. Sol işlenen ise `uint` veya `ulong`, sonra da sol bitler sıfır ile doldurulur.
+[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) – sağ shift bitleri. Sol işlenen ise `int` veya `long`, sonra da sol bit imza biti ile doldurulur. Sol işlenen ise `uint` veya `ulong`, sonra da sol bitler sıfır ile doldurulur.
 
 ## <a name="relational-and-type-testing-operators"></a>İlişkisel ve tür testi işleçleri
 
@@ -145,27 +149,19 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
 
-[x ve y](and-operator.md) – mantıksal ve bit düzeyinde and Bu genellikle tamsayı türleri ile kullanabilirsiniz ve `enum` türleri.
+`x & y` – [mantıksal AND](boolean-logical-operators.md#logical-and-operator-) için `bool` işlenenler veya [mantıksal bit düzeyinde AND](bitwise-and-shift-operators.md#logical-and-operator-) işleneni de integral türleri için.
 
 ## <a name="logical-xor-operator"></a>Mantıksal XOR işleci
 
 Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
 
-[x ^ y](xor-operator.md) – mantıksal ve bit düzeyinde XOR. Bu genellikle tamsayı türleri ile kullanabilirsiniz ve `enum` türleri.
+`x ^ y` – [mantıksal XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) için `bool` işlenenler veya [mantıksal bit düzeyinde XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) işleneni de integral türleri için.
 
 ## <a name="logical-or-operator"></a>Mantıksal OR işleci
 
 Bu işleç, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümde daha düşük önceliğe sahiptir.
 
-[x &#124; y](or-operator.md) – mantıksal ve bit düzeyinde OR. Bu genellikle tamsayı türleri ile kullanabilirsiniz ve `enum` türleri.
-
-## <a name="true-operator"></a>true işleci
-
-[True](../keywords/true-false-operators.md) işleci döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle doğru olduğunu belirtmek için. 
-
-## <a name="false-operator"></a>false işleci
-
-[False](../keywords/true-false-operators.md) işleci döndürür [bool](../keywords/bool.md) değer `true` işleneni kesinlikle false olduğunu belirtmek için. 
+`x | y` – [mantıksal OR](boolean-logical-operators.md#logical-or-operator-) için `bool` işlenenler veya [mantıksal bit düzeyinde OR](bitwise-and-shift-operators.md#logical-or-operator-) işleneni de integral türleri için.
 
 ## <a name="conditional-and-operator"></a>Koşullu AND işleci
 
@@ -199,23 +195,23 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 
 [x += y](addition-assignment-operator.md) – artırma. Değerini ekleme `y` değerine `x`, sonuçta depolamak `x`ve yeni bir değer. Varsa `x` atayan bir `event`, ardından `y` C# bir olay işleyicisi ekler uygun bir işlev olmalıdır.
 
-[x-= y](subtraction-assignment-operator.md) – azaltma. Değerini çıkarma `y` değerinden `x`, sonuçta depolamak `x`ve yeni bir değer. Varsa `x` atayan bir `event`, ardından `y` C# kaldıran bir olay işleyicisi uygun bir işlev olmalıdır
+[x-= y](subtraction-assignment-operator.md) – azaltma. Değerini çıkarma `y` değerinden `x`, sonuçta depolamak `x`ve yeni bir değer. Varsa `x` atayan bir `event`, ardından `y` uygun bir işlev olmalıdır C# bir olay işleyicisi kaldırır.
 
-[x * y =](multiplication-assignment-operator.md) – çarpma atama. Çarp değeri `y` değerine `x`, sonuçta depolamak `x`ve yeni bir değer.
+[x * y =](arithmetic-operators.md#compound-assignment) – çarpma atama. Çarp değeri `y` değerine `x`, sonuçta depolamak `x`ve yeni bir değer.
 
 [x / y =](arithmetic-operators.md#compound-assignment) – bölme ataması. Değerini ayırmak `x` değeriyle `y`, sonuçta depolamak `x`ve yeni bir değer.
 
 [%x y =](arithmetic-operators.md#compound-assignment) – kalanını atama. Değerini ayırmak `x` değeriyle `y`, kalanı depolamak `x`ve yeni bir değer.
 
-[x & y =](and-assignment-operator.md) – ve atama. DEĞERİ `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer.
+[x & y =](boolean-logical-operators.md#compound-assignment) – ve atama. DEĞERİ `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer.
 
-[x &#124;y =](or-assignment-operator.md) – OR ataması. YA da değerini `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer.
+[x &#124;y =](boolean-logical-operators.md#compound-assignment) – OR ataması. YA da değerini `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer.
 
-[x ^ y =](xor-assignment-operator.md) – XOR atama. XOR değeri, `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer.
+[x ^ y =](boolean-logical-operators.md#compound-assignment) – XOR atama. XOR değeri, `y` değeriyle `x`, sonuçta depolamak `x`ve yeni bir değer.
 
-[x << y =](left-shift-assignment-operator.md) – sola kaydırma ataması. Değerini kaydırma `x` sol tarafından `y` yerde depolamak sonucunda `x`ve yeni bir değer.
+[x << y =](bitwise-and-shift-operators.md#compound-assignment) – sola kaydırma ataması. Değerini kaydırma `x` sol tarafından `y` yerde depolamak sonucunda `x`ve yeni bir değer.
 
-[x >> y =](right-shift-assignment-operator.md) – sağa kaydırma ataması. Değerini kaydırma `x` sağa `y` yerde depolamak sonucunda `x`ve yeni bir değer.
+[x >> y =](bitwise-and-shift-operators.md#compound-assignment) – sağa kaydırma ataması. Değerini kaydırma `x` sağa `y` yerde depolamak sonucunda `x`ve yeni bir değer.
 
 [=>](lambda-operator.md) – lambda bildirimi.
 
@@ -224,5 +220,5 @@ Bu işleçler, sonraki bölümde daha yüksek bir önceliğe ve önceki bölümd
 - [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C#](../../index.md)
-- [Aşırı Yüklenebilir İşleçler](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
+- [Fazla yüklenebilir işleçler](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
 - [C# Anahtar Sözcükleri](../keywords/index.md)

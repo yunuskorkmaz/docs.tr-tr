@@ -4,12 +4,12 @@ description: Bu makalede kapsayan temel kavramları açıklar *model eğitim* ML
 ms.date: 03/05/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 78554cfd1dfdb3dba82a325d47245aeb313bb6fe
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: d29f6b901b0296f4d9a75b470a84dc087fb50e5d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675569"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973843"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>ML.NET eğitim modeli için temel kavramlar
 
@@ -37,7 +37,7 @@ Bu belge ML.NET modeli eğitimi ilgili aşağıdaki kavramları kapsar:
 - [*Tahmin işlevi* ](#prediction-function) olarak temsil edilen bir `PredictionEngine<TSrc, TDst>` sınıfı.
   - Tahmin işlevi uygulayan bir bir satır için gibi tahmin zaman makine olarak görülebilir.
 
-## <a name="data"></a>Veri
+## <a name="data"></a>Veri 
 
 ML.NET verileri bir SQL görünümüne benzer: Bu bir gevşek, değerlendirilir cursorable, heterojen, şema veri kümesi.
 

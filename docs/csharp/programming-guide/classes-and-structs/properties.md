@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 260c9e362281ba7996dc834ab47d7beb2755b636
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676828"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977099"
 ---
 # <a name="properties-c-programming-guide"></a>Özellikler (C# Programlama Kılavuzu)
 
@@ -54,7 +54,7 @@ Aşağıdaki örnek, bu düzen gösterilmiştir. Bu örnekte, `TimePeriod` sın�
 
 Bazı durumlarda, özellik `get` ve `set` erişimciler yalnızca bir değer atayın veya ilave bir mantık dahil olmak üzere yedekleme alanından bir değer almak. Otomatik uygulanan özellikler kullanarak, yedekleme alanını şeffaf bir şekilde sağlar C# derleyicisini yaparken kodunuzu basitleştirebilirsiniz. 
 
-Bir özellik hem de varsa bir `get` ve `set` erişimci gerekir hem de otomatik olarak uygulanan. Otomatik uygulanan bir özellik kullanarak tanımladığınız `get` ve `set` herhangi bir uygulama sağlamadan anahtar sözcükleri. Aşağıdaki örnek dışında Öncekine yineler `Name` ve `Price` otomatik uygulanan özellikler. Örnek ayrıca parametreli bir kurucu kaldırır Not böylece `SaleItem` nesneleri varsayılan oluşturucu çağrısı ile artık başlatılır ve bir [nesne Başlatıcı](object-and-collection-initializers.md).
+Bir özellik hem de varsa bir `get` ve `set` erişimci gerekir hem de otomatik olarak uygulanan. Otomatik uygulanan bir özellik kullanarak tanımladığınız `get` ve `set` herhangi bir uygulama sağlamadan anahtar sözcükleri. Aşağıdaki örnek dışında Öncekine yineler `Name` ve `Price` otomatik uygulanan özellikler. Bu örnek ayrıca parametreli bir kurucu kaldırır Not böylece `SaleItem` nesneleri parametresiz bir oluşturucu çağrısı ile artık başlatılır ve bir [nesne Başlatıcı](object-and-collection-initializers.md).
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 

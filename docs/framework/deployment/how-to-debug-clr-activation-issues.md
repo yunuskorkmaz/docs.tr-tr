@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e552f7014c21e2ead61b83ca9909655def6333b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
-ms.translationtype: MT
+ms.openlocfilehash: e38e3e2b0f28b7f1eb36dd3c5b2888712b1c807c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221082"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974704"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>CLR etkinleştirme sorunlarında hata ayıklama
 
@@ -35,17 +35,17 @@ Dize değeri kaldırana kadar etkinleştirme günlük kaydı etkin olarak kalır
 
 - Ayarlama `COMPLUS_CLRLoadLogDir` ortam değişkenine istediğiniz CLR etkinleştirme günlüklerini depolamak için mevcut bir dizinin tam yolu temsil eden bir dize.
 
-     Ortam değişkenini nasıl kapsamı belirler:
+    Ortam değişkenini nasıl kapsamı belirler:
 
-    - Sistem düzeyinde ayarlarsanız, ortam değişkenini kaldırılana kadar etkinleştirme günlük kaydı o bilgisayardaki tüm .NET Framework uygulamaları için etkindir.
+  - Sistem düzeyinde ayarlarsanız, ortam değişkenini kaldırılana kadar etkinleştirme günlük kaydı o bilgisayardaki tüm .NET Framework uygulamaları için etkindir.
 
-    - Kullanıcı düzeyinde ayarlarsanız, etkinleştirme günlüğü yalnızca geçerli kullanıcı hesabı için etkinleştirilir. Ortam değişkenini kaldırılana kadar günlüğe kaydetmeye devam eder.
+  - Kullanıcı düzeyinde ayarlarsanız, etkinleştirme günlüğü yalnızca geçerli kullanıcı hesabı için etkinleştirilir. Ortam değişkenini kaldırılana kadar günlüğe kaydetmeye devam eder.
 
-    - Gelen işlem dahilinde CLR yüklemeden önce ayarlarsanız, işlem sonlanana kadar etkinleştirme günlük kaydı etkindir.
+  - Gelen işlem dahilinde CLR yüklemeden önce ayarlarsanız, işlem sonlanana kadar etkinleştirme günlük kaydı etkindir.
 
-    - Bir uygulamayı çalıştırmadan önce bir komut isteminde ayarlarsanız, bu komut istemi'nden çalıştırmak herhangi bir uygulama için etkinleştirme günlük kaydı etkindir.
+  - Bir uygulamayı çalıştırmadan önce bir komut isteminde ayarlarsanız, bu komut istemi'nden çalıştırmak herhangi bir uygulama için etkinleştirme günlük kaydı etkindir.
 
-     Örneğin, işlem düzeyinde kapsamlı c:\clrloadlogs dizinde etkinleştirme günlüklerini depolamak için bir komut istemi penceresi açın ve uygulamayı çalıştırmadan önce aşağıdaki komutu yazın:
+    Örneğin, işlem düzeyinde kapsamlı c:\clrloadlogs dizinde etkinleştirme günlüklerini depolamak için bir komut istemi penceresi açın ve uygulamayı çalıştırmadan önce aşağıdaki komutu yazın:
 
     ```
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs
@@ -66,31 +66,31 @@ Günlük barındırma API'leri CLR sırayı yansıtır adı veriliyordu. Ayrıca
 Etkinleştirme günlüğünün aşağıdaki örnekte, en yararlı bilgiler vurgulanır ve sonra günlük açıklanmaktadır.
 
 ```
-532,205950.367,CLR Loading log for C:\Tests\myapp.exe 
-532,205950.367,Log started at 4:26:12 PM on 10/6/2011 
-532,205950.367,----------------------------------- 
-532,205950.382,FunctionCall: _CorExeMain 
-532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593} 
-532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891} 
-532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0 
-532,205950.382,Input values for ComputeVersionString follow this line 
-532,205950.382,----------------------------------- 
-532,205950.382,Default Application Name: C:\Tests\myapp.exe 
-532,205950.382,IsLegacyBind is: 0 
-532,205950.382,IsCapped is 0 
-532,205950.382,SkuCheckFlags are 0 
-532,205950.382,ShouldEmulateExeLaunch is 0 
-532,205950.382,LegacyBindRequired is 0 
-532,205950.382,----------------------------------- 
-532,205950.382,Parsing config file: C:\Tests\myapp.exe 
-532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe 
-532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727 
-532,205950.382,ERROR: Version v2.0.50727 is not present on the machine. 
-532,205950.398,SEM_FAILCRITICALERRORS is set to 0 
-532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3 
-532,205950.398,FunctionCall: RealDllMain. Reason: 0 
+532,205950.367,CLR Loading log for C:\Tests\myapp.exe
+532,205950.367,Log started at 4:26:12 PM on 10/6/2011
+532,205950.367,-----------------------------------
+532,205950.382,FunctionCall: _CorExeMain
+532,205950.382,FunctionCall: ClrCreateInstance, Clsid: {2EBCD49A-1B47-4A61-B13A-4A03701E594B}, Iid: {E2190695-77B2-492E-8E14-C4B3A7FDD593}
+532,205950.382,MethodCall: ICLRMetaHostPolicy::GetRequestedRuntime. Version: (null), Metahost Policy Flags: 0x168, Binary: (null), Iid: {BD39D1D2-BA2F-486A-89B0-B4B0CB466891}
+532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0
+532,205950.382,Input values for ComputeVersionString follow this line
+532,205950.382,-----------------------------------
+532,205950.382,Default Application Name: C:\Tests\myapp.exe
+532,205950.382,IsLegacyBind is: 0
+532,205950.382,IsCapped is 0
+532,205950.382,SkuCheckFlags are 0
+532,205950.382,ShouldEmulateExeLaunch is 0
+532,205950.382,LegacyBindRequired is 0
+532,205950.382,-----------------------------------
+532,205950.382,Parsing config file: C:\Tests\myapp.exe
+532,205950.382,UseLegacyV2RuntimeActivationPolicy is set to 0
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,LegacyFunctionCall: GetFileVersion. Filename: C:\Tests\myapp.exe
+532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
+532,205950.382,ERROR: Version v2.0.50727 is not present on the machine.
+532,205950.398,SEM_FAILCRITICALERRORS is set to 0
+532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
+532,205950.398,FunctionCall: RealDllMain. Reason: 0
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0
 ```
 

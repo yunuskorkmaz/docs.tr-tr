@@ -10,41 +10,43 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: cf82481c02fec152b7b4d4b8ce89bf0f707ef8d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2d896708c702f5261239eb74f925c10eacd89619
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655159"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974337"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Deyimler, İfadeler ve İşleçler (C# Programlama Kılavuzu)
-Bir uygulamayı oluşturan C# kodu anahtar sözcükler, ifadeler ve işleçler oluşan deyimlerden oluşur. Bu bölümde, C# programının temel bu öğeleri ile ilgili bilgiler içerir.  
-  
- Daha fazla bilgi için bkz.:  
-  
--   [Deyimler](statements.md)  
-  
--   [İfadeler](expressions.md)  
-  
-    -   [İfade gövdeli üyeler](expression-bodied-members.md)
- 
--   [İşleçler](operators.md)  
-  
--   [Anonim İşlevler](anonymous-functions.md)  
-  
--   [Aşırı Yüklenebilir İşleçler](overloadable-operators.md)  
-  
--   [Dönüştürme İşleçleri](conversion-operators.md)  
-  
-    -   [Dönüştürme İşleçleri Kullanma](using-conversion-operators.md)  
-  
-    -   [Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama](how-to-implement-user-defined-conversions-between-structs.md)  
-  
--   [Eşitlik Karşılaştırmaları](equality-comparisons.md)  
-  
-## <a name="c-language-specification"></a>C# Dil Belirtimi  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Bir uygulamayı oluşturan C# kodu anahtar sözcükler, ifadeler ve işleçler oluşan deyimlerden oluşur. Bu bölümde, C# programının temel bu öğeleri ile ilgili bilgiler içerir.
+
+ Daha fazla bilgi için bkz.:
+
+- [Deyimler](statements.md)
+
+- [İfadeler](expressions.md)
+
+  - [İfade gövdeli üyeler](expression-bodied-members.md)
+
+- [İşleçler](operators.md)
+
+- [Anonim İşlevler](anonymous-functions.md)
+
+- [Aşırı Yüklenebilir İşleçler](overloadable-operators.md)
+
+- [Dönüştürme İşleçleri](conversion-operators.md)
+
+  - [Dönüştürme İşleçleri Kullanma](using-conversion-operators.md)
+
+  - [Nasıl yapılır: Yapılar arasında kullanıcı tanımlı Dönüşümler Uygulama](how-to-implement-user-defined-conversions-between-structs.md)
+
+- [Eşitlik Karşılaştırmaları](equality-comparisons.md)
+
+## <a name="c-language-specification"></a>C# Dil Belirtimi
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)

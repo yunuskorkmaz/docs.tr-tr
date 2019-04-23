@@ -1,19 +1,19 @@
 ---
 title: .NET Framework ile çalışmaya başlama
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/02/2019
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314977"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975058"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework ile çalışmaya başlama
 
@@ -22,8 +22,7 @@ ms.locfileid: "59314977"
 > [!NOTE] 
 > .NET Framework, yalnızca Windows sistemlerinde kullanılabilir. Kullanabileceğiniz [.NET Core](../../core/index.md) uygulamaları Windows, MacOS ve Linux üzerinde çalıştırılacak. 
 
-<a name="Introducing"></a>
-## <a name="what-is-the-net-framework"></a>.NET Framework nedir?
+## <a name="Introducing"></a> .NET Framework nedir?
 
 .NET Framework, hizmetleri, çalışan uygulamalarına çeşitli sağlayan Windows için bir yönetilen yürütme ortamıdır. İki ana bileşenden oluşur: uygulamalar ve kitaplığı sınanmış, .NET Framework sınıf kitaplığı, çalışan işleyen yürütme motoru ortak dil çalışma zamanı (CLR), geliştiricilerin kendi uygulamalardan arayabileceğiniz yeniden kullanılabilir bir kod. .NET Framework uygulamalarını çalıştırmak için sağladığı hizmetler şunları içerir:
 
@@ -39,7 +38,7 @@ ms.locfileid: "59314977"
 
 - Sürüm uyumluluğu. Nadir istisnalar ile .NET Framework'ün belirli bir sürümü kullanılarak geliştirilen uygulamalar, sonraki bir sürümü üzerinde hiçbir değişikliğe gerek olmadan çalıştırın.
 
-- Yan yana yürütme. .NET Framework sürüm çakışmaları birden çok sürümünü aynı bilgisayarda ortak dil çalışma zamanı sağlayarak yardımcı olur. Bu uygulamalar birden çok sürümünü bulunabilir ve uygulama ile oluşturulan .NET Framework sürümünde çalıştırabileceğiniz anlamına gelir. Yan yana yürütme, .NET Framework sürüm grupları 1.0/1.1, 2.0/3.0/3.5 ve 4/4.5.x/4.6.x/4.7.x uygulanır.
+- Yan yana yürütme. .NET Framework sürüm çakışmaları birden çok sürümünü aynı bilgisayarda ortak dil çalışma zamanı sağlayarak yardımcı olur. Bu uygulamalar birden çok sürümünü bulunabilir ve uygulama ile oluşturulan .NET Framework sürümünde çalıştırabileceğiniz anlamına gelir. Yan yana yürütme, .NET Framework sürüm grupları 1.0/1.1, 2.0/3.0/3.5 ve 4/4.5.x/4.6.x/4.7.x/4.8 uygulanır.
 
 - Çoklu sürüm desteği. Hedefleyerek [.NET Standard](../../standard/net-standard.md), geliştiricilerin üzerinde standart'ın bu sürümü tarafından desteklenen birden çok .NET Framework platformunda çalışan sınıf kitaplıkları oluşturun. Örneğin, .NET Standard 2.0 hedefleyen kitaplıklar, .NET Framework 4.6.1, .NET Core 2.0 ve UWP 10.0.16299 hedefleyen uygulamalar tarafından kullanılabilir. 
 
@@ -54,20 +53,19 @@ Genel olarak, bilgisayarınızda yüklü .NET Framework sürümlerini kaldırman
 
 - Kullandığınız uygulama .NET Framework'ün belirli bir sürüme bağlı olduğu durumlarda, uygulama o sürüm kaldırılırsa kesilmesine neden olabilir.
 
-- .NET Framework'ün bazı sürümleri, önceki sürümlerin yerinde güncelleştirmelerdir. Örneğin, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] sürüm 2.0 bir yerinde güncelleştirmedir ve 4.7.2 .NET Framework sürüm 4 4.7.1 aracılığıyla için bir yerinde güncelleştirmedir. Daha fazla bilgi için [.NET Framework sürümleri ve bağımlılıkları](../migration-guide/versions-and-dependencies.md).
+- .NET Framework'ün bazı sürümleri, önceki sürümlerin yerinde güncelleştirmelerdir. Örneğin, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] sürüm 2.0 bir yerinde güncelleştirmedir ve .NET Framework 4.8 sürüm 4 4.7.2 aracılığıyla için bir yerinde güncelleştirmedir. Daha fazla bilgi için [.NET Framework sürümleri ve bağımlılıkları](../migration-guide/versions-and-dependencies.md).
 
 Windows 8 öncesi Windows sürümlerinde .NET Framework'ü seçerseniz, her zaman kullanın **programlar ve Özellikler** kaldırmak için Denetim Masası'ndan. Hiçbir zaman bir .NET Framework sürümünü el ile kaldırın. Windows 8 ve üzeri, .NET Framework, işletim sisteminin bir bileşeni olan ve bağımsız olarak kaldırılamaz.
 
 .NET Framework'ün birden çok sürümü aynı anda tek bir bilgisayarda bulunabilir unutmayın. Başka bir deyişle, sonraki bir sürümünü yüklemek için önceki sürümlerini kaldırmanız gerekmez.
 
-<a name="ForDevelopers"></a> 
-## <a name="the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework
+## <a name="ForDevelopers"></a> Geliştiriciler için .NET Framework
 
 Bir geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework'ü destekleyen herhangi bir programlama dilini seçin. .NET Framework dil bağımsızlığı ve birlikte çalışabilirliği sağladığından, diğer .NET Framework uygulamaları ve bileşenleri ile bunların geliştirilen diline bakılmaksızın ile etkileşim kurun.
 
 .NET Framework uygulamaları veya bileşenleri geliştirmek için aşağıdakileri yapın:
 
-1. İşletim sisteminize göre önceden değil, uygulamanızı hedefleyen .NET Framework sürümünü yükleyin. En son üretim sürümü, .NET Framework 4.7.2 ' dir. Windows üzerinde önceden yüklenmiş olarak 10 Nisan 2018 güncelleştirmesi ve Windows 10 Ekim 2018 güncelleştirmesi ve Windows işletim sisteminin önceki sürümlerinde indirme için kullanılabilir. .NET Framework sistem gereksinimleri için bkz: [sistem gereksinimleri](system-requirements.md). .NET Framework'ın diğer sürümlerinin yüklenmesi hakkında daha fazla bilgi için bkz: [Yükleme Kılavuzu](../install/guide-for-developers.md). Ek .NET Framework paketleri, sıralı olarak dışında tüm normal veya zamanlanmış sürüm döngüsü yayımlandıktan, yani bant dışı bırakılır. Bu paketler hakkında daha fazla bilgi için bkz: [.NET Framework ve bant dışı yayınlar](the-net-framework-and-out-of-band-releases.md).
+1. İşletim sisteminize göre önceden değil, uygulamanızı hedefleyen .NET Framework sürümünü yükleyin. En son üretim sürümü, .NET Framework 4.8 ' dir. Bunu önceden yüklenmiş Windows 10 güncelleştirme 2019 ve Windows işletim sisteminin önceki sürümlerinde indirme için kullanılabilir. .NET Framework sistem gereksinimleri için bkz: [sistem gereksinimleri](system-requirements.md). .NET Framework'ın diğer sürümlerinin yüklenmesi hakkında daha fazla bilgi için bkz: [Yükleme Kılavuzu](../install/guide-for-developers.md). Ek .NET Framework paketleri, sıralı olarak dışında tüm normal veya zamanlanmış sürüm döngüsü yayımlandıktan, yani bant dışı bırakılır. Bu paketler hakkında daha fazla bilgi için bkz: [.NET Framework ve bant dışı yayınlar](the-net-framework-and-out-of-band-releases.md).
 
 2. Uygulamalarınızı geliştirmek için kullanmak istediğiniz .NET Framework tarafından desteklenen diller ve dil seçin. Çok sayıda dil kullanılabilir dahil olmak üzere [Visual Basic](../../visual-basic/index.md), [ C# ](../../csharp/index.md), [ F# ](../../fsharp/index.md), ve [ C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) gelen Microsoft. (Aynılarını .NET Framework için uygulamalar geliştirmenizi sağlayan bir programlama dili [ortak dil altyapısı (CLI) belirtimi](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).)
 
@@ -75,7 +73,7 @@ Bir geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework'ü 
 
 .NET Framework'ü hedefleyen uygulamaları geliştirme hakkında daha fazla bilgi için bkz. [geliştirme Kılavuzu](../development-guide.md).
 
-## <a name="related-topics"></a>İlgili konular
+## <a name="related-articles"></a>İlgili makaleler
 
 | Başlık | Açıklama |
 | ----- |------------ |

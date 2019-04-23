@@ -1,7 +1,7 @@
 ---
 title: .NET Framework'teki yenilikler
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
@@ -10,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d67626a72e04cd1163e749339d8d5fac22959a3a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613765"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975786"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework'teki yenilikler
 
 Bu makalede, önemli yeni özellikler ve geliştirmeler aşağıdaki .NET Framework sürümlerinde özetlenmektedir:
 
+- [.NET framework 4.8](#v48)
 - [.NET framework 4.7.2](#v472)
 - [.NET framework 4.7.1](#v471)
 - [.NET framework 4.7](#v47)
@@ -34,44 +35,177 @@ Bu makalede, önemli yeni özellikler ve geliştirmeler aşağıdaki .NET Framew
 Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve değiştirilebilir. .NET Framework hakkında genel bilgi için bkz. [Başlarken](../get-started/index.md). Desteklenen platformlar için bkz: [sistem gereksinimleri](~/docs/framework/get-started/system-requirements.md). Yükleme yönergeleri ve indirme bağlantıları [Yükleme Kılavuzu](../install/guide-for-developers.md).
 
 > [!NOTE]
-> .NET Framwork takımındaki özellikleri ile NuGet platform desteğini artırmak ve değişmez koleksiyonlar ve SIMD etkin vektör türlerinin gibi yeni işlevleri tanıtmak için bant dışı da serbest bırakır. Daha fazla bilgi için [ek sınıf kitaplıkları ve API'ler](../additional-apis/index.md) ve [.NET Framework ve bant dışı yayınlar](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Bkz: bir [NuGet paketlerini tam listesi](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/) .NET Framework veya abone [veri akışımıza](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
+> .NET framwork takımındaki özellikleri ile NuGet platform desteğini artırmak ve değişmez koleksiyonlar ve SIMD etkin vektör türlerinin gibi yeni işlevleri tanıtmak için bant dışı da serbest bırakır. Daha fazla bilgi için [ek sınıf kitaplıkları ve API'ler](../additional-apis/index.md) ve [.NET Framework ve bant dışı yayınlar](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Bkz: bir [NuGet paketlerini tam listesi](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/) .NET Framework veya abone [veri akışımıza](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
+
+<a name="v48" />
+
+## <a name="introducing-net-framework-48"></a>.NET Framework 4.8 ile tanışın
+
+.NET framework 4.8 derlemeler .NET Framework'ün önceki sürümlerinde çok kararlı bir ürüne kalan sırasında birçok yeni düzeltmeyi ve çeşitli yeni özellikler ekleyerek 4.x.
+
+### <a name="downloading-and-installing-net-framework-48"></a>.NET Framework 4.8 yükleyip
+
+.NET Framework 4.8 aşağıdaki konumlardan indirebilirsiniz:
+
+- [.NET framework 4.8 Web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=2085155)
+
+- [4.8 NET Framework çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?linkid=2088631)
+
+.NET framework 4.8 Windows 10, Windows 8.1, Windows 7 SP1 ve Windows Server 2008 R2 SP1 ile başlayarak, karşılık gelen sunucu platformları yüklenebilir. Web yükleyicisini veya çevrimdışı yükleyiciyi kullanarak .NET Framework 4.8 yükleyebilirsiniz. Çoğu kullanıcı için önerilen yol, web yükleyicisi kullanmaktır.
+
+.NET Framework 4.8 Visual Studio 2012 veya daha sonra yükleyerek hedefleyebilir [.NET Framework 4.8 Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=2085167).
+
+### <a name="whats-new-in-net-framework-48"></a>.NET Framework 4.8 yenilikler
+
+.NET framework 4.8 aşağıdaki alanlarda yeni özellik bulunmaktadır:
+
+- [Temel sınıflar](#core48)
+- [Windows Communication Foundation (WCF)](#wcf48)
+- [Windows Presentation Foundation (WPF)](#wpf48)
+- [Ortak dil çalışma zamanı](#clr48) 
+
+Yardımcı teknoloji kullanıcılar için uygun bir deneyim sağlamak için uygulamanın veren geliştirilmiş Erişilebilirlik önemli bir .NET Framework 4.8 odağı olmaya devam eder. .NET Framework 4.8'teki erişilebilirlik geliştirmeleri hakkında daha fazla bilgi için bkz: [erişilebilirlik .NET Framework'teki yenilikler](whats-new-in-accessibility.md).
+
+<a name="core48" />
+
+#### <a name="base-classes"></a>Temel sınıflar
+
+**Şifreleme için FIPS etkisi azaltılmış**. Önceki .NET Framework sürümlerinde şifreleme sağlayıcısı sınıfları gibi yönetilen <xref:System.Security.Cryptography.SHA256Managed> throw bir <xref:System.Security.Cryptography.CryptographicException> sistem şifreleme kitaplıklarını "FIPS modunda" yapılandırılmış zaman. Sistem şifreleme kitaplıkları, farklı bir şifreleme sağlayıcısı sınıfları yönetilen sürümleri (Federal Bilgi işleme standartları) FIPS 140-2 sertifikası yapılmamıştır çünkü bu özel durumlar. Bazı geliştiriciler, geliştirme makinelerinde FIPS modunda olduğundan, yaygın olarak üretim sistemlerine özel durumlar.
+
+.NET Framework 4.8 hedefleyen uygulamalarda varsayılan olarak, artık aşağıdaki yönetilen şifreleme sınıflarını throw bir <xref:System.Security.Cryptography.CryptographicException> bu durumda:
+
+- <xref:System.Security.Cryptography.MD5Cng>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RIPEMD160Managed>
+- <xref:System.Security.Cryptography.SHA256Managed> 
+
+Bunun yerine, bu sınıflar, sistem şifreleme kitaplığa şifreleme işlemleri yönlendirin. Bu değişikliğin etkili bir şekilde olası karmaşık birbirinden Geliştirici ortamlarını ve üretim ortamlarını kaldırır ve yerel bileşenlerin yapar ve yönetilen bileşenleri aynı şifreleme ilkesi altında çalışır. Bu özel durumları bağlı uygulamalar geri yükleyebilir, önceki davranışı AppContext anahtarı ayarlayarak `Switch.System.Security.Cryptography.UseLegacyFipsThrow` için `true`. Daha fazla bilgi için [yönetilen şifreleme sınıflarını değil throw bir CryptographyException FIPS modunda](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode).
+
+**ZLib güncelleştirilmiş sürümünü kullan**
+
+.NET Framework 4.5 ile başlayarak, clrcompression.dll derlemeyi kullanacak [ZLib](https://www.zlib.net), veri sıkıştırma, deflate algoritmasını için bir uygulama sağlamak için yerel bir dış kitaplık. .NET Framework 4.8 clrcompression.dll ZLib birkaç önemli geliştirmeleri ve düzeltmeleri içeren sürümünü 1.2.11, kullanacak şekilde güncelleştirilir.
+
+<a name="wcf48" />
+
+#### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
+
+**ServiceHealthBehavior giriş**
+
+Sistem durumu uç noktaları, düzenleme araçları tarafından sistem durumlarına göre hizmetleri yönetmek için yaygın olarak kullanılır. Sistem durumu denetimleri de izleme araçları tarafından izlemek ve hizmetin performans ve kullanılabilirlik ile ilgili bildirimleri sağlamak için kullanılabilir. 
+
+**ServiceHealthBehavior** genişleten bir WCF Hizmeti davranış <xref:System.ServiceModel.Description.IServiceBehavior>.  Eklenen <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> koleksiyonu, bir hizmet davranışını şunları yapar:
+
+- HTTP yanıt kodları ile sistem durumu hizmeti, döndürür. Bir sorgu dizesinde HTTP/GET sistem durumu araştırması isteği için HTTP durum kodu belirtebilirsiniz.
+
+- Hizmet durumu hakkında bilgileri yayımlar. Hizmet durumu dahil olmak üzere, hizmete özgü ayrıntıları kısıtlama sayıları ve kapasite ile bir HTTP/GET isteği kullanılarak görüntülenebilir `?health` sorgu dizesi. Bu bilgilere erişim kolaylığı davranan bir WCF hizmeti sorunlarını giderirken önemlidir.
+
+Sistem durumu uç noktasını ortaya çıkarır ve WCF hizmet durumu bilgilerini yayımlamak için iki yolu vardır:
+
+- Kod. Örneğin:
+
+  ```csharp
+  ServiceHost host = new ServiceHost(typeof(Service1), 
+                     new Uri("http://contoso:81/Service1")); 
+  ServiceHealthBehavior healthBehavior =
+      host.Description.Behaviors.Find<ServiceHealthBehavior>(); 
+  if (healthBehavior == null)
+  { 
+     healthBehavior = new ServiceHealthBehavior(); 
+  } 
+   host.Description.Behaviors.Add(healthBehavior); 
+  ```
+
+- Bir yapılandırma dosyası kullanarak. Örneğin:
+
+  ```xml
+  <behaviors>
+    <serviceBehaviors>
+      <behavior name="DefaultBehavior">
+        <serviceHealth httpsGetEnabled="true"/>
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+  ```
+
+Bir hizmetin sistem durumu gibi sorgu parametrelerini kullanarak sorgulanabilir `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`), ve her bir sorgu parametresi için bir HTTP yanıt kodu belirtilebilir. 503 bir HTTP yanıt kodu, HTTP yanıt kodu için bir sorgu parametresi atlanırsa, varsayılan olarak kullanılır. Örneğin:
+
+- OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
+
+  Ne zaman 450 bir HTTP yanıtı durum kodu döndürülür [ServiceHost.State](xref:System.ServiceModel.Channels.CommunicationObject.State) büyüktür <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
+Sorgu parametreleri ve örnekleri:
+
+- OnDispatcherFailure: `https://contoso:81/Service1?health&OnDispatcherFailure=455`
+  
+  Herhangi bir kanal dağıtıcıları durumunu daha büyük olduğunda 455 bir HTTP yanıtı durum kodu döndürülür <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
+
+- OnListenerFailure: `https://contoso:81/Service1?health&OnListenerFailure=465`
+
+  Herhangi bir kanal dinleyicileri durumunu daha büyük olduğunda 465 bir HTTP yanıtı durum kodu döndürülür <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
+
+- OnThrottlePercentExceeded: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
+
+  Yanıt ve HTTP yanıt kodunu {200-599} tetikleyen {1: 100} yüzdesini belirtir. Bu örnekte:
+  
+    - Yüzde 95'ten büyükse, 500 bir HTTP yanıt kodu döndürülür.
+    
+    - Varsa yüzdesi veya 70 ila 95 arasında 350 döndürülür.
+    
+    - Aksi takdirde, 200 döndürülür.
+
+Hizmet durumu olabilir ya da HTML gibi bir sorgu dizesi belirterek görüntülenen `https://contoso:81/Service1?health` veya XML gibi bir sorgu dizesi belirterek `https://contoso:81/Service1?health&Xml`. Bir sorgu dizesi ister `https://contoso:81/Service1?health&NoContent` boş HTML sayfası döndürür.
+
+<a name="wpf48" />
+
+#### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+**Yüksek DPI geliştirmeleri**
+
+.NET Framework 4.8 WPF, Windows V2 İzleyici başına DPI tanıma ve karma mod DPI ölçeklendirme desteği ekler. Bkz: [Windows üzerinde yüksek DPI Masaüstü uygulama geliştirme](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) yüksek DPI geliştirme hakkında ek bilgi için. 
+
+.NET framework 4.8 artırır, karışık modlu DPI ölçeklendirme destekleyen platformlarda yüksek DPI WPF uygulamalarında barındırılan Cwnd'lerden ve Windows Forms olan birlikte çalışma için destek (başlatma ile Windows 10 Nisan 2018 güncelleştirmesi). Barındırılan Cwnd'lerden ya da Windows Formları denetimleri oluştururken karışık mod DPI ölçeklendirilmiş olarak windows çağırarak [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) ve [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), içinde barındırılabilen bir İzleyici başına V2 WPF uygulaması ve bu boyutlandırıldığından ve uygun şekilde ölçeklendirilebilir. Bu tür barındırılan içeriğin Yerel DPİ'de işlenmez; Bunun yerine, işletim sistemi barındırılan içerik uygun boyuta ölçeklendirir. Monitör başına v2 DPI tanıma modu desteği de barındırılacak bir WPF denetimleri sağlar (yani, shapemap) yerel bir yüksek DPI uygulama penceresinde. 
+
+Karma mod yüksek DPI ölçeklendirmesini desteğini etkinleştirmek için aşağıdakileri ayarlayabilirsiniz [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) uygulama yapılandırma dosyasına geçer:
+
+```xml
+<runtime>
+   <AppContextSwitchOverrides value = "Switch.System.Windows.DoNotScaleForDpiChanges=false; Switch.System.Windows.DoNotUsePresentationDpiCapabilityTier2OrGreater=false"/>
+</runtime>
+```
+
+<a name="clr48" />
+
+#### <a name="common-language-runtime"></a>Ortak dil çalışma zamanı
+
+Çalışma zamanı'nda .NET Framework 4.8 aşağıdaki değişiklikleri ve geliştirmeleri içerir:
+
+**JIT derleyicisine yönelik geliştirmeler**. .NET Framework 4.8 olarak Just-ın-time (JIT) derleyici, JIT derleyicisi, .NET Core 2.1 dayanır. Birçok iyileştirmeleri ve hata düzeltmeleri için .NET Core 2.1 JIT derleyicisi yapılan tüm .NET Framework 4.8 JIT Derleyici dahil edilir. 
+
+**NGEN geliştirmeleri**. Çalışma zamanı için kendi bellek yönetimini geliştirdi [Native Image Generator](../tools/ngen-exe-native-image-generator.md) NGEN görüntülerinin eşlenen verilerin bellekte böylece (NGEN) görüntüler. Bu da, yürütülecek bellek değiştirerek rastgele kod yürütmek için deneyen saldırıları için kullanılabilir'ın yüzey alanını azaltır.
+
+**Kötü amaçlı yazılımdan koruma için tüm bütünleştirilmiş kodları taranıyor**. Önceki .NET Framework sürümlerinde, Windows Defender'ı veya üçüncü taraf kötü amaçlı yazılımdan koruma yazılımları kullanarak diskten yüklenen tüm derlemeler çalışma zamanı tarar. Ancak, yüklenen derlemeleri diğer kaynaklardan gelen, gibi tarafından <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> yöntemi değil taranır ve potansiyel olarak algılanmayan kötü amaçlı yazılım içerebilir. Windows 10 üzerinde .NET Framework 4.8 ile başlayarak, çalışma zamanı bir tarama uygulayan kötü amaçlı yazılımdan koruma çözümleri tarafından tetikler [kötü amaçlı yazılımdan koruma tarama arabirimi (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal).  
 
 <a name="v472" />
 
-## <a name="introducing-the-net-framework-472"></a>.NET Framework 4.7.2 ile tanışın
+## <a name="whats-new-in-net-framework-472"></a>4.7.2 .NET Framework'teki yenilikler
 
-.NET Framework'ün önceki sürümlerinde .NET Framework 4.7.2 yapılar çok kararlı bir ürüne kalan sırasında birçok yeni düzeltmeyi ve çeşitli yeni özellikler ekleyerek 4.x.
+.NET framework 4.7.2 aşağıdaki alanlarda yeni özellikler içerir:
 
-### <a name="downloading-and-installing-the-net-framework-472"></a>.NET Framework'ü 4.7.2 yükleme ve indirme
-
-.NET Framework 4.7.2 aşağıdaki konumlardan indirebilirsiniz:
-
-- [.NET framework 4.7.2 Web yükleyicisi](https://go.microsoft.com/fwlink/?LinkId=863262)
-
-- [NET Framework 4.7.2 çevrimdışı yükleyici](https://go.microsoft.com/fwlink/?LinkId=863265)
-
-.NET Framework 4.7.2 Windows 10, Windows 8.1, Windows 7 SP1 ve Windows Server 2008 R2 SP1 ile başlayarak, karşılık gelen sunucu platformları yüklenebilir. Web yükleyicisini veya çevrimdışı yükleyiciyi kullanarak .NET Framework 4.7.2 yükleyebilirsiniz. Çoğu kullanıcı için önerilen yol, web yükleyicisi kullanmaktır.
-
-.NET Framework 4.7.2 Visual Studio 2012 veya daha sonra yükleyerek hedefleyebilir [4.7.2 .NET Framework Geliştirici paketi](https://go.microsoft.com/fwlink/?LinkId=874338).
-
-### <a name="whats-new-in-the-net-framework-472"></a>4.7.2 .NET Framework'teki yenilikler
-
-.NET Framework 4.7.2 aşağıdaki alanlarda yeni özellikler içerir:
-
-- [Çekirdek](#core-472)
+- [Temel sınıflar](#core-472)
 - [ASP.NET](#asp-net472)
 - [Ağ](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
 
-.NET Framework'teki 4.7.2 devam eden bir odak yardımcı teknoloji kullanıcılar için uygun bir deneyim sağlamak için uygulamanın veren geliştirilmiş erişilebilirlik olur. .NET Framework'teki 4.7.2 erişilebilirlik geliştirme hakkında daha fazla bilgi için bkz: [erişilebilirlik .NET Framework'teki yenilikler](whats-new-in-accessibility.md).
+Bir akışta 4.7.2 .NET Framework'teki yardımcı teknoloji kullanıcılar için uygun bir deneyim sağlamak için uygulamanın veren geliştirilmiş erişilebilirlik biridir. .NET Framework'teki 4.7.2 erişilebilirlik geliştirmeleri hakkında daha fazla bilgi için bkz: [erişilebilirlik .NET Framework'teki yenilikler](whats-new-in-accessibility.md).
 
 <a name="core-472" />
 
-#### <a name="core"></a>Çekirdek
+#### <a name="base-classes"></a>Temel sınıflar
 
-.NET Framework 4.7.2 çok sayıda şifreleme geliştirmelerinden, ZIP arşivlerini ve ek koleksiyon API'leri daha iyi sıkıştırma desteği sunar.
+.NET framework 4.7.2 çok sayıda şifreleme geliştirmelerinden, ZIP arşivlerini ve ek koleksiyon API'leri daha iyi sıkıştırma desteği sunar.
 
 **RSA yeni aşırı yüklemeleri. Oluşturma ve DSA. Oluşturma**
 
@@ -199,7 +333,7 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 
 **DeflateStream açma değişiklikleri**
 
-4.7.2, .NET Framework uygulamasını açma işlemlerinde başlayarak <xref:System.IO.Compression.DeflateStream> sınıfı, varsayılan olarak yerel Windows API'ları kullanacak şekilde değiştirildi. Genellikle, bu önemli performans geliştirmeyle sonuçlanır.
+.NET Framework 4.7.2, açma işlemleri uygulamasını başlayarak <xref:System.IO.Compression.DeflateStream> sınıfı, varsayılan olarak yerel Windows API'ları kullanacak şekilde değiştirildi. Genellikle, bu önemli performans geliştirmeyle sonuçlanır.
 
 Windows API'leri kullanarak açma desteği, .NET Framework 4.7.2 hedefleyen uygulamalar için varsayılan olarak etkindir. .NET Framework'ün önceki sürümlerini hedefleyen ancak .NET Framework 4.7.2 altında çalışan uygulamalar özelliğini bu davranışı aşağıdakileri ekleyerek [AppContext anahtar](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) için uygulama yapılandırma dosyası:
 
@@ -209,7 +343,7 @@ Windows API'leri kullanarak açma desteği, .NET Framework 4.7.2 hedefleyen uygu
 
 **Ek koleksiyon API'leri**
 
-Bir dizi yeni API için .NET Framework 4.7.2 ekler <xref:System.Collections.Generic.SortedSet%601> ve <xref:System.Collections.Generic.HashSet%601> türleri. Bu güncelleştirmeler şunlardır:
+.NET framework 4.7.2 ekler için yeni API'ler birkaç <xref:System.Collections.Generic.SortedSet%601> ve <xref:System.Collections.Generic.HashSet%601> türleri. Bu güncelleştirmeler şunlardır:
 
 - `TryGetValue` Bu iki tür diğer koleksiyon türlerine kullanılan deneyin deseni genişletme yöntemleri. Yöntemler şunlardır:
 
@@ -256,7 +390,7 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 **Aynı sitede tanımlama bilgileri için destek**
 
-[SameSite](https://tools.ietf.org/html/draft-west-first-party-cookies-07) bir tarayıcı siteler arası istek birlikte bir tanımlama bilgisi göndermesini engeller. .NET Framework 4.7.2 ekler bir <xref:System.Web.HttpCookie.SameSite?displayProperty=nameWithType> özellik değeri olan bir <xref:System.Web.SameSiteMode?displayProperty=nameWithType> numaralandırma üyesi. Öğenin değeri ise <xref:System.Web.SameSiteMode.Strict?displayProperty=nameWithType> veya <xref:System.Web.SameSiteMode.Lax?displayProperty=nameWithType>, ASP.NET ekler `SameSite` özniteliği için set-cookie üstbilgisi. SameSite destek uygulandığı <xref:System.Web.HttpCookie> , de olarak nesneleri için <xref:System.Web.Security.FormsAuthentication> ve <xref:System.Web.SessionState> tanımlama bilgileri.
+[SameSite](https://tools.ietf.org/html/draft-west-first-party-cookies-07) bir tarayıcı siteler arası istek birlikte bir tanımlama bilgisi göndermesini engeller. .NET framework 4.7.2 ekler bir <xref:System.Web.HttpCookie.SameSite?displayProperty=nameWithType> özellik değeri olan bir <xref:System.Web.SameSiteMode?displayProperty=nameWithType> numaralandırma üyesi. Öğenin değeri ise <xref:System.Web.SameSiteMode.Strict?displayProperty=nameWithType> veya <xref:System.Web.SameSiteMode.Lax?displayProperty=nameWithType>, ASP.NET ekler `SameSite` özniteliği için set-cookie üstbilgisi. SameSite destek uygulandığı <xref:System.Web.HttpCookie> , de olarak nesneleri için <xref:System.Web.Security.FormsAuthentication> ve <xref:System.Web.SessionState> tanımlama bilgileri.
 
 SameSite için ayarlayabileceğiniz bir <xref:System.Web.HttpCookie> gibi nesnesi:
 
@@ -297,7 +431,7 @@ SameSite için ekleyebilirsiniz <xref:System.Web.Security.FormsAuthentication> v
 
 **Uygulama HttpClientHandler özellikleri**
 
-.NET Framework 4.7.1 sekiz özelliklerine eklenen <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> sınıfı. Ancak, iki oluşturdu bir <xref:System.PlatformNotSupportedException>. .NET Framework 4.7.2, artık bu özellikleri bir uygulamasını sağlar. Özellikler şunlardır:
+.NET framework 4.7.1 eklenen sekiz özelliklerine <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> sınıfı. Ancak, iki oluşturdu bir <xref:System.PlatformNotSupportedException>. .NET framework 4.7.2, artık bu özellikleri bir uygulamasını sağlar. Özellikler şunlardır:
 
 - <xref:System.Net.Http.HttpClientHandler.CheckCertificateRevocationList>
 - <xref:System.Net.Http.HttpClientHandler.SslProtocols>
@@ -433,11 +567,11 @@ Windows Forms uygulaması için uygulama yapılandırma dosyası uygulama bildir
 
 <a name="v471" />
 
-## <a name="whats-new-in-the-net-framework-471"></a>.NET Framework 4.7.1 yenilikler
+## <a name="whats-new-in-net-framework-471"></a>.NET Framework 4.7.1 yenilikler
 
-.NET Framework 4.7.1 aşağıdaki alanlarda yeni özellikler içerir:
+.NET framework 4.7.1 aşağıdaki alanlarda yeni özellikler içerir:
 
-- [Çekirdek](#core471)
+- [Temel sınıflar](#core471)
 - [Ortak dil çalışma zamanı (CLR)](#clr)
 - [Ağ](#net471)
 - [ASP.NET](#asp-net471)
@@ -446,11 +580,11 @@ Ayrıca, bir önemli .NET Framework 4.7.1 yardımcı teknoloji kullanıcılar i�
 
 <a name="core471" />
 
-#### <a name="core"></a>Çekirdek
+#### <a name="base-classes"></a>Temel sınıflar
 
 **.NET Standard 2.0 desteği**
 
-[.NET standard](~/docs/standard/net-standard.md) bir standart sürümünün desteklediği her .NET uygulamasında kullanılabilir olması gereken bir API kümesi tanımlar. .NET Framework 4.7.1 tam .NET Standard 2.0 destekler ve ekler [yaklaşık 200 API'leri](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) .NET Standard 2.0 içinde tanımlanır ve .NET Framework 4.6.1, 4.6.2 ve 4.7 eksik. (Yalnızca .NET Standard ek destek dosyalarını hedef sistem üzerinde de dağıtılıyorsa, .NET Framework'ün bu sürümlerini .NET Standard 2.0 desteklediğini unutmayın.) Daha fazla bilgi için "BCL – .NET Standard 2.0 desteği" bölümüne bakın. [.NET Framework 4.7.1 çalışma zamanı ve derleyici özelliklerini](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog gönderisi.
+[.NET standard](~/docs/standard/net-standard.md) bir standart sürümünün desteklediği her .NET uygulamasında kullanılabilir olması gereken bir API kümesi tanımlar. .NET framework 4.7.1 tam .NET Standard 2.0 destekler ve ekler [yaklaşık 200 API'leri](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) .NET Standard 2.0 içinde tanımlanır ve .NET Framework 4.6.1, 4.6.2 ve 4.7 eksik. (Yalnızca .NET Standard ek destek dosyalarını hedef sistem üzerinde de dağıtılıyorsa, .NET Framework'ün bu sürümlerini .NET Standard 2.0 desteklediğini unutmayın.) Daha fazla bilgi için "BCL – .NET Standard 2.0 desteği" bölümüne bakın. [.NET Framework 4.7.1 çalışma zamanı ve derleyici özelliklerini](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog gönderisi.
 
 **Yapılandırma oluşturucular için destek**
 
@@ -468,7 +602,7 @@ Yapılandırma oluşturucular ekleme ve uygulamaları için yapılandırma ayarl
 
 **Salt okunur başvurular için destek**
 
-.NET Framework 4.7.1 ekler <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Bu öznitelik, dil derleyiciler tarafından salt okunur başvuru dönüş türleri veya parametreleri sahip üyeler işaretlemek için kullanılır. Daha fazla bilgi için bkz: "Derleyici--desteği için ReadOnlyReferences" [.NET Framework 4.7.1 çalışma zamanı ve derleyici özelliklerini](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog gönderisi. Başvuru dönüş değerleri hakkında daha fazla bilgi için bkz: [Ref yerel öğeler (C# Kılavuzu) dönüş değerleri ve ref](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) ve [başvuru dönüş değerleri (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
+.NET framework 4.7.1 ekler <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Bu öznitelik, dil derleyiciler tarafından salt okunur başvuru dönüş türleri veya parametreleri sahip üyeler işaretlemek için kullanılır. Daha fazla bilgi için bkz: "Derleyici--desteği için ReadOnlyReferences" [.NET Framework 4.7.1 çalışma zamanı ve derleyici özelliklerini](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog gönderisi. Başvuru dönüş değerleri hakkında daha fazla bilgi için bkz: [Ref yerel öğeler (C# Kılavuzu) dönüş değerleri ve ref](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) ve [başvuru dönüş değerleri (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
 
 <a name="clr" />
 
@@ -496,11 +630,11 @@ ASP.NET 23 olayları içeren önceden tanımlanmış bir işlem hattı istekleri
 
 **ASP.NET HttpCookie ayrıştırma**
 
-Yeni bir yöntem .NET Framework 4.7.1 içerir <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType>, oluşturmak için standartlaştırılmış bir yol sağlayan bir <xref:System.Web.HttpCookie> nesnesi bir dizeden ve doğru bir şekilde sona erme tarihi ve yol gibi tanımlama bilgisi değerleri atayın. Daha fazla bilgi için bkz: "ASP.NET ayrıştırma HttpCookie" [.NET Framework 4.7.1 ASP.NET ve yapılandırma özelliklerine](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) blog gönderisi.
+.NET framework 4.7.1 içeren yeni bir yöntem <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType>, oluşturmak için standartlaştırılmış bir yol sağlayan bir <xref:System.Web.HttpCookie> nesnesi bir dizeden ve doğru bir şekilde sona erme tarihi ve yol gibi tanımlama bilgisi değerleri atayın. Daha fazla bilgi için bkz: "ASP.NET ayrıştırma HttpCookie" [.NET Framework 4.7.1 ASP.NET ve yapılandırma özelliklerine](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) blog gönderisi.
 
 **ASP.NET formları kimlik doğrulama bilgileri için SHA-2 karma seçenekleri**
 
-ASP.NET .NET Framework 4.7 ve önceki sürümlerle geliştiriciler yapılandırma dosyalarında MD5 veya SHA1 kullanarak kullanıcı kimlik bilgileriyle karma parolaları depolamak izin verilen. ASP.NET .NET Framework 4.7.1 ile başlayarak, SHA256, SHA384 ve SHA512 gibi yeni güvenli SHA-2 karma seçenekleri de destekler. Varsayılan olarak SHA1 kalır ve varsayılan olmayan karma algoritma web yapılandırma dosyası içinde tanımlanabilir. Örneğin:
+.NET Framework 4.7 ve önceki sürümlerinde, ASP.NET geliştiricileri, yapılandırma dosyalarında MD5 veya SHA1 kullanarak kullanıcı kimlik bilgileriyle karma parolaları depolamak izin. .NET Framework 4.7.1 ile başlayarak, ASP.NET SHA256, SHA384 ve SHA512 gibi yeni güvenli SHA-2 karma seçeneklerini de destekler. Varsayılan olarak SHA1 kalır ve varsayılan olmayan karma algoritma web yapılandırma dosyası içinde tanımlanabilir. Örneğin:
 
 ```xml
 <system.web>
@@ -516,11 +650,11 @@ ASP.NET .NET Framework 4.7 ve önceki sürümlerle geliştiriciler yapılandırm
 
 <a name="v47" />
 
-## <a name="whats-new-in-the-net-framework-47"></a>İçinde .NET Framework 4.7 yenilikler nelerdir?
+## <a name="whats-new-in-net-framework-47"></a>.NET Framework 4.7 yenilikler
 
-.NET Framework 4.7, aşağıdaki alanlarda yeni özellikler içerir:
+.NET framework 4.7, aşağıdaki alanlarda yeni özellikler içerir:
 
-- [Çekirdek](#Core47)
+- [Temel sınıflar](#Core47)
 - [Ağ](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
@@ -531,27 +665,27 @@ Yeni API'lerin bir listesi için .NET Framework 4.7 eklediğiniz için bkz: [.NE
 
 <a name="Core47" />
 
-#### <a name="core"></a>Çekirdek
+#### <a name="base-classes"></a>Temel sınıflar
 
-.NET Framework 4.7 seri hale getirme tarafından artırır <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
+.NET framework 4.7 artırır seri hale getirme tarafından <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
 **Gelişmiş işlevler Eliptik Eğri Şifrelemesi (ECC)***
 
 .NET Framework 4.7, `ImportParameters(ECParameters)` yöntemler eklendi <xref:System.Security.Cryptography.ECDsa> ve <xref:System.Security.Cryptography.ECDiffieHellman> zaten yerleşik bir anahtarını temsil eden bir nesne için izin vermek için sınıflar. Bir `ExportParameters(Boolean)` yöntemi, açık eğri parametreleri kullanarak anahtarı dışa aktarmak için de eklenmiştir.
 
-.NET Framework 4.7 ayrıca ek eğrileri (Brainpool eğri paketine dahil) için destek ekler ve kolay olan oluşturma yeni aracılığıyla önceden tanımlanmış tanımlarında eklemiştir <xref:System.Security.Cryptography.ECDsa.Create%2A> ve <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A> Fabrika yöntemleri.
+.NET framework 4.7 ayrıca ek eğrileri (Brainpool eğri paketine dahil) için destek ekler ve kolay olan oluşturma yeni aracılığıyla önceden tanımlanmış tanımlarında eklemiştir <xref:System.Security.Cryptography.ECDsa.Create%2A> ve <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A> Fabrika yöntemleri.
 
 Gördüğünüz bir [.NET Framework 4.7 şifreleme geliştirmeleri örneği](https://gist.github.com/richlander/5a182899895a87a296c21ada97f7a54e) GitHub üzerinde.
 
 **DataContractJsonSerializer denetim karakterleriyle için daha iyi destek**
 
-.NET Framework 4.7, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> denetim karakterleri ECMAScript 6 standart in conformity with serileştirir. Bu davranış, .NET Framework 4.7 hedefleyen uygulamalar için varsayılan olarak etkindir ve katılım özelliği, .NET Framework 4.7 altında çalışıyor ancak .NET Framework'ün önceki bir sürümü hedeflemesini uygulamalar için. Daha fazla bilgi için [.NET Framework 4.7 yeniden hedefleme değişiklikleri](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+.NET Framework 4.7, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> denetim karakterleri ECMAScript 6 standart in conformity with serileştirir. Bu davranış, .NET Framework 4.7 hedefleyen uygulamalar için varsayılan olarak etkindir ve katılım özelliği, .NET Framework 4.7 altında çalışan ancak .NET Framework'ün önceki bir sürümünü hedefleyen uygulamalar için. Daha fazla bilgi için [.NET Framework 4.7 yeniden hedefleme değişiklikleri](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="net47" />
 
 #### <a name="networking"></a>Ağ Oluşturma
 
-.NET Framework 4.7, aşağıdaki ağ ile ilgili özellik ekler:
+.NET framework 4.7, aşağıdaki ağ ile ilgili özellik ekler:
 
 **TLS protokolleri için varsayılan işletim sistemi desteği***
 
@@ -561,7 +695,7 @@ Tarafından kullanılan TLS yığın <xref:System.Net.Security.SslStream?display
 
 #### <a name="aspnet"></a>ASP.NET
 
-ASP.NET, .NET Framework 4.7 aşağıdaki yeni özellikler içerir:
+.NET Framework 4.7 ASP.NET, aşağıdaki yeni özellikler içerir:
 
 **Nesne önbelleği genişletilebilirliği**
 
@@ -626,7 +760,7 @@ WPF API'leri yazdırmak <xref:System.Printing.PrintQueue?displayProperty=nameWit
 
 <a name="v462" />
 
-## <a name="whats-new-in-the-net-framework-462"></a>.NET Framework 4.6.2 yenilikler
+## <a name="whats-new-in-net-framework-462"></a>.NET Framework 4.6.2 yenilikler
 
 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Aşağıdaki alanlarda yeni özellikler içerir:
 
@@ -752,7 +886,7 @@ Unicode 6.0 karakter kategorilerden Unicode 7.0 değişiklikler için bkz: [Unic
 
 FIPS 186-3, daha büyük anahtar boyutunu destekleme yanı sıra [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] imzaları SHA-2 karma algoritma ailesi, (SHA256, SHA384 ve SHA512) ile bilgi işlem sağlar. FIPS 186 3 desteği sağlanır yeni <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> sınıfı.
 
-Yakın zamanda yapılan değişiklikler mantığıyla <xref:System.Security.Cryptography.RSA> sınıfı .NET Framework 4.6 ve <xref:System.Security.Cryptography.ECDsa> .NET Framework 4.6.1, sınıfta <xref:System.Security.Cryptography.DSA> soyut temel sınıf [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] bunu kullanmayı arayanlara izin vermek için ek yöntemler işlevselliği olmadan. Çağırabilirsiniz <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> aşağıdaki örnekte gösterildiği gibi verileri imzalamak için genişletme yöntemi.
+Yakın zamanda yapılan değişiklikler mantığıyla <xref:System.Security.Cryptography.RSA> sınıfı .NET Framework 4.6 ve <xref:System.Security.Cryptography.ECDsa> .NET Framework 4.6.1, sınıfta <xref:System.Security.Cryptography.DSA> soyut temel sınıf [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] bu işlevselliği kullanmak arayanlara izin vermek için ek yöntemler atama olmadan. Çağırabilirsiniz <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> aşağıdaki örnekte gösterildiği gibi verileri imzalamak için genişletme yöntemi.
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -794,7 +928,7 @@ End Function
 
 **Artan açıklık için girişleri ECDiffieHellman anahtar türetme rutinleri**
 
-.NET Framework 3.5 ile üç farklı anahtar türetme işlevi (KDF) yordamlarını Eliptik Eğri Diffie-Hellman anahtar anlaşması için destek eklendi. Özellikleri aracılığıyla girişleri yordamları ve yordamları kendileri için yapılandırılmış <xref:System.Security.Cryptography.ECDiffieHellmanCng> nesne. Ancak her yordam, her giriş özelliği okuma olduğundan, Karışıklığı önlemek için geçmişteki üzerinde geliştiricinin bol miktarda odası vardı.
+.NET framework 3.5 ile üç farklı anahtar türetme işlevi (KDF) yordamlarını Eliptik Eğri Diffie-Hellman anahtar anlaşması için destek eklendi. Özellikleri aracılığıyla girişleri yordamları ve yordamları kendileri için yapılandırılmış <xref:System.Security.Cryptography.ECDiffieHellmanCng> nesne. Ancak her yordam, her giriş özelliği okuma olduğundan, Karışıklığı önlemek için geçmişteki üzerinde geliştiricinin bol miktarda odası vardı.
 
 Bu adres için [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], aşağıdaki üç yöntemi eklenmiş <xref:System.Security.Cryptography.ECDiffieHellman> temel sınıfı daha net bir şekilde bu KDF yordamları ve bunların girişleri göstermek için:
 
@@ -1087,7 +1221,7 @@ Dönüştürülen Masaüstü uygulamaları, UWP API'lerine Canlı kutucukları v
 
 <a name="v461" />
 
-## <a name="whats-new-in-the-net-framework-461"></a>.NET Framework 4.6.1 yenilikler
+## <a name="whats-new-in-net-framework-461"></a>.NET Framework 4.6.1 yenilikler
 
 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Aşağıdaki alanlarda yeni özellikler içerir:
 
@@ -1105,17 +1239,17 @@ Dönüştürülen Masaüstü uygulamaları, UWP API'lerine Canlı kutucukları v
 
 Daha fazla bilgi için [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], aşağıdaki konulara bakın:
 
-- [Değişikliklerin listesi .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=622964)
+- [.NET framework 4.6.1 değişikliklerin listesi](https://go.microsoft.com/fwlink/?LinkId=622964)
 
 - [4.6.1 uygulama uyumluluğu](../migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
 
-- [.NET Framework API diff](https://go.microsoft.com/fwlink/?LinkId=622989) (github'da)
+- [.NET framework API diff](https://go.microsoft.com/fwlink/?LinkId=622989) (github'da)
 
 <a name="Crypto" />
 
 ### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Şifreleme: X509 desteği içeren ECDSA sertifikaları
 
-.NET Framework 4.6 X509 RSACng desteği eklendi sertifikaları. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ECDSA (Eliptik Eğri Dijital imza algoritması) X509 için destek ekler sertifikaları.
+.NET framework 4.6 X509 RSACng desteği eklendi sertifikaları. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ECDSA (Eliptik Eğri Dijital imza algoritması) X509 için destek ekler sertifikaları.
 
 ECDSA daha iyi performans sunar ve RSA, Aktarım Katmanı Güvenliği (TLS) performans ve ölçeklenebilirlik olduğu önemli bir mükemmel seçim sağlayarak daha daha güvenli bir şifreleme algoritması. .NET Framework uygulaması mevcut Windows işlevselliğine çağrılarını sarmalar.
 
@@ -1291,7 +1425,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
     - **Rastgele dize karma algoritmaları**
 
-         .NET Framework 4.5 sunulan bir [rastgele dize karma algoritması](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). Ancak, ASP.NET tarafından nedeniyle bazı ASP.NET desteklenmiyordu özellikleri bağımlı bir kararlı karma kodu. İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], rastgele dize karma algoritmaları artık desteklenmektedir. Bu özelliği etkinleştirmek için `aspnet:UseRandomizedStringHashAlgorithm` yapılandırma ayarı.
+         .NET framework 4.5 sunulan bir [rastgele dize karma algoritması](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). Ancak, ASP.NET tarafından nedeniyle bazı ASP.NET desteklenmiyordu özellikleri bağımlı bir kararlı karma kodu. İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], rastgele dize karma algoritmaları artık desteklenmektedir. Bu özelliği etkinleştirmek için `aspnet:UseRandomizedStringHashAlgorithm` yapılandırma ayarı.
 
         ```xml
         <appSettings>
@@ -1305,7 +1439,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
 - **yönetilen kod için 64 bit JIT Derleyici**
 
-     64 bit JIT Derleyici (başlangıçta eskiden Ryujıt) yeni bir sürümü .NET Framework 4.6 özellikleri. Yeni 64 bit derleyici eski 64 bit JIT Derleyici üzerinde önemli performans geliştirmeleri sunar. Yeni 64 bit Derleyici, .NET Framework 4.6 üzerinde çalışan 64-bit işlemler için etkinleştirilir. Uygulamanızı bir 64 bit işlem olarak 64-bit derlenirse veya AnyCPU çalışır ve bir 64-bit işletim sisteminde çalışır. Yeni derleyici geçişi mümkün olduğu kadar şeffaf hale getirmek için dikkatli alınmış olsa da davranışında değişiklik yapılamaz. Doğrudan yeni JIT derleyicisi kullanılırken karşılaşılan sorunları hakkında görüşlerinizi almak isteriz. Lütfen bize başvurun [Microsoft Connect](https://connect.microsoft.com/) yeni 64 bit JIT Derleyici için ilgili bir sorunla karşılaşırsanız.
+     64 bit JIT Derleyici (başlangıçta eskiden Ryujıt) yeni bir sürümü .NET framework 4.6 özellikleri. Yeni 64 bit derleyici eski 64 bit JIT Derleyici üzerinde önemli performans geliştirmeleri sunar. Yeni 64 bit Derleyici, .NET Framework 4.6 üzerinde çalışan 64-bit işlemler için etkinleştirilir. Uygulamanızı bir 64 bit işlem olarak 64-bit derlenirse veya AnyCPU çalışır ve bir 64-bit işletim sisteminde çalışır. Yeni derleyici geçişi mümkün olduğu kadar şeffaf hale getirmek için dikkatli alınmış olsa da davranışında değişiklik yapılamaz. Doğrudan yeni JIT derleyicisi kullanılırken karşılaşılan sorunları hakkında görüşlerinizi almak isteriz. Lütfen bize başvurun [Microsoft Connect](https://connect.microsoft.com/) yeni 64 bit JIT Derleyici için ilgili bir sorunla karşılaşırsanız.
 
      Yeni 64 bit JIT Derleyici ayrıca SIMD etkin türleri ile birlikte, donanım SIMD hızlandırma özellikleri içerir <xref:System.Numerics> ad alanı iyi performans artışı sağlayabilir.
 
@@ -1341,7 +1475,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
          <xref:System.Security.Cryptography?displayProperty=nameWithType> API güncelleştiriliyor desteklemek için [Windows CNG şifreleme API'leri](/windows/desktop/SecCNG/cng-reference). .NET Framework'ün önceki sürümlerini yararlandı tamamen açık bir [önceki sürümünü Windows şifreleme API'leri](/windows/desktop/SecCrypto/cryptography-portal) temeli olarak <xref:System.Security.Cryptography?displayProperty=nameWithType> uygulaması. Bu desteklediğinden CNG API desteklemek için istekleri bizde [modern şifreleme algoritmalarını](/windows/desktop/SecCNG/cng-features#suite-b-support), hangi belirli türdeki uygulamalar için önemli.
 
-         .NET Framework 4.6 Windows CNG şifreleme API'lerini destekleyen aşağıdaki yeni iyileştirmeleri içerir:
+         .NET framework 4.6 Windows CNG şifreleme API'lerini destekleyen aşağıdaki yeni iyileştirmeleri içerir:
 
         - Bir dizi X509 için genişletme yöntemleri sertifikalarını `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` ve `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)`, CAPI tabanlı uygulama mümkün olduğunda yerine CNG tabanlı bir uygulama döndürür. (Bazı akıllı kartlar, vs. hala CAPI gerektirir ve geri dönüş API'leri işlemek).
 
@@ -1421,9 +1555,9 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
     - **EventSource olay günlüğüne yazma artık desteklemektedir.**
 
-         Artık <xref:System.Diagnostics.Tracing.EventSource> yönetim veya işlem günlüğüne sınıfı iletileri olay günlüğüne, ayrıca makinede oluşturulmuş var olan tüm ETW oturumlarına. Geçmişte, bu işlev için gt;Microsoft.Diagnostics.tracing.EventSource NuGet paketini kullanmanız gerekiyordu. Bu işlevsellik artık yerleşik olarak .NET Framework 4.6.
+         Artık <xref:System.Diagnostics.Tracing.EventSource> yönetim veya işlem günlüğüne sınıfı iletileri olay günlüğüne, ayrıca makinede oluşturulmuş var olan tüm ETW oturumlarına. Geçmişte, bu işlev için gt;Microsoft.Diagnostics.tracing.EventSource NuGet paketini kullanmanız gerekiyordu. Bu işlevsellik, .NET Framework 4.6'nda yerleşik olarak sunulmuştur.
 
-         NuGet paketi hem de .NET Framework 4.6 aşağıdaki özelliklerle güncelleştirilmiştir:
+         NuGet paketi ve .NET Framework 4.6 aşağıdaki özelliklerle güncelleştirilmiştir:
 
         - **Dinamik olayları**
 
@@ -1536,7 +1670,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
     - **Yuva yeniden kullanma**
 
-         Windows 10 giden TCP bağlantıları için yerel bağlantı noktaları yeniden kullanarak makine kaynakları daha iyi kullanılmasını sağlayan yeni bir ağ yüksek ölçeklenebilirlik algoritma içerir. .NET Framework 4.6, yeni algoritma, yeni davranış yararlanmak .NET uygulamaları etkinleştirme destekler. Önceki Windows sürümlerinde, bir hizmetin ölçeklenebilirlik, yük altında bağlantı noktası tükenmesi neden olarak kısıtlayacaktır bir yapay eş zamanlı bağlantı sınırı (genellikle 16,384, dinamik bağlantı noktası aralığı varsayılan boyutu), vardı.
+         Windows 10 giden TCP bağlantıları için yerel bağlantı noktaları yeniden kullanarak makine kaynakları daha iyi kullanılmasını sağlayan yeni bir ağ yüksek ölçeklenebilirlik algoritma içerir. .NET framework 4.6, yeni algoritma, yeni davranış yararlanmak .NET uygulamaları etkinleştirme destekler. Önceki Windows sürümlerinde, bir hizmetin ölçeklenebilirlik, yük altında bağlantı noktası tükenmesi neden olarak kısıtlayacaktır bir yapay eş zamanlı bağlantı sınırı (genellikle 16,384, dinamik bağlantı noktası aralığı varsayılan boyutu), vardı.
 
          İçinde [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], eş zamanlı bağlantı 64 K sınırı etkili bir şekilde kaldıran bağlantı noktası yeniden etkinleştirmek için iki yeni API'ler eklenmiştir:
 
@@ -1566,7 +1700,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
 - **Kod sayfası kodlamaları için destek**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] öncelikle Unicode kodlamaları destekler ve varsayılan olarak, kod sayfası kodlamaları için sınırlı destek sağlar. Desteklenmeyen ancak .NET Framework içindeki kullanılabilir kod sayfası kodlamaları için destek ekleyebilirsiniz [!INCLUDE[net_core](../../../includes/net-core-md.md)] ile kod sayfası kodlamalarını kaydederek <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> yöntemi. Daha fazla bilgi için bkz. <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)] öncelikle Unicode kodlamaları destekler ve varsayılan olarak, kod sayfası kodlamaları için sınırlı destek sağlar. .NET Framework içinde desteklenmeyen ancak kullanılabilir kod sayfası kodlamaları için destek ekleyebilirsiniz [!INCLUDE[net_core](../../../includes/net-core-md.md)] ile kod sayfası kodlamalarını kaydederek <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> yöntemi. Daha fazla bilgi için bkz. <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
@@ -1582,7 +1716,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
 <a name="v452" />
 
-## <a name="whats-new-in-the-net-framework-452"></a>.NET Framework 4.5.2'deki yenilikler
+## <a name="whats-new-in-net-framework-452"></a>.NET Framework 4.5.2 yenilikler
 
 - **ASP.NET uygulamaları için yeni API'ler sağlar.** Yeni <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> ve <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> yöntemleri inceleyin ve yanıtı istemci uygulamasına Temizlenen olarak yanıt üst bilgileri ve durum kodunu değiştirmenizi sağlar. Yerine bu yöntemleri kullanmayı <xref:System.Web.HttpApplication.PreSendRequestHeaders> ve <xref:System.Web.HttpApplication.PreSendRequestContent> olayları; daha etkili ve güvenilir.
 
@@ -1635,7 +1769,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
     - [GetActiveReJitRequestILCode Yöntemi](../unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
     - [GetInstrumentedILMap Yöntemi](../unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
 
-- **Değişiklik izleme olayı.** .NET Framework 4.5.2 için daha geniş bir yüzey alanını işlem dışı, olay izleme için Windows ETW tabanlı Etkinlik izleme sağlar. Bu, tek tek isteklerin ve iş parçacıkları arası etkinlikleri maliyetlerini doğru şekilde izleyen basit Araçlar sağlamak güç yönetimi (APM) satıcıları sağlar.  Yalnızca ETW denetleyicileri bunları etkinleştirdiğinizde, bu olaylar oluşturulur; Bu nedenle, önceden yazılmış ETW kodu veya devre dışı ETW ile çalışan kod değişiklikleri etkilemez.
+- **Değişiklik izleme olayı.** .NET framework 4.5.2 için daha geniş bir yüzey alanını işlem dışı, olay izleme için Windows ETW tabanlı Etkinlik izleme sağlar. Bu, tek tek isteklerin ve iş parçacıkları arası etkinlikleri maliyetlerini doğru şekilde izleyen basit Araçlar sağlamak güç yönetimi (APM) satıcıları sağlar.  Yalnızca ETW denetleyicileri bunları etkinleştirdiğinizde, bu olaylar oluşturulur; Bu nedenle, önceden yazılmış ETW kodu veya devre dışı ETW ile çalışan kod değişiklikleri etkilemez.
 
 - **İşlem yükseltme ve kalıcı bir liste dönüştürme**
 
@@ -1653,7 +1787,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
 <a name="v451" />
 
-## <a name="whats-new-in-the-net-framework-451"></a>.NET Framework 4.5.1'teki yenilikler
+## <a name="whats-new-in-net-framework-451"></a>.NET Framework 4.5.1'teki yenilikler
 
 **Nisan 2014 güncelleştirmeleri**:
 
@@ -1673,7 +1807,7 @@ Ngen Pdb'lerin ile NGen IL PDB bağımlılığı olmadan IL yerel eşleme içere
 
 - [.NET Framework başvuru kaynağı](https://referencesource.microsoft.com/) yeni gözatma deneyimi ve geliştirilmiş işlevselliği sağlar. Artık .NET Framework kaynak kodu çevrimiçi olarak göz atabilirsiniz [başvuru indirme](https://referencesource.microsoft.com/download.html) çevrimdışı izleme ve hata ayıklama sırasında (düzeltme eklerini ve güncelleştirmeleri gibi) kaynakları adımlayın. Daha fazla bilgi için blog girişine bakın [.NET başvuru kaynağı için yeni bir görünüm](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 
-Çekirdek yeni özellikler ve .NET Framework 4.5.1'deki geliştirmeler şunları içerir:
+Yeni özellikler ve temel sınıfları .NET Framework 4.5.1'deki geliştirmeler şunları içerir:
 
 - Derlemeler için otomatik bağlama yeniden yönlendirme. Visual Studio 2013 ile başlayarak, derleme yaptığınızda hedefleyen bir uygulama [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], bağlama yönlendirmeleri eklenebilir uygulama yapılandırma dosyasına uygulamanız veya bileşenleri aynı derlemenin birden çok sürümüne başvuruyorsa. Bu özellik .NET Framework'ün eski sürümlerini hedefleyen projeler için de etkinleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Enable ve Disable otomatik bağlama yeniden yönlendirme](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
@@ -1715,9 +1849,9 @@ ASP.NET 4.5.1'deki yeni özellikler için bkz: [için ASP.NET and Web Tools Visu
 
 <a name="v45" />
 
-## <a name="whats-new-in-the-net-framework-45"></a>.NET Framework 4. 5 ' yenilikler nelerdir?
+## <a name="whats-new-in-net-framework-45"></a>.NET Framework 4. 5 ' yenilikler nelerdir?
 
-### <a name="core-new-features-and-improvements"></a>Çekirdek yeni özellikler ve iyileştirmeler
+### <a name="base-classes"></a>Temel sınıflar
 
 - Reduce sistemi olanağı algılayarak ve dağıtım sırasında .NET Framework 4 uygulamaları kapatarak yeniden başlatır. Bkz: [sistem yeniden başlatmalarını azaltma .NET Framework 4.5 yüklemeleri sırasında](../deployment/reducing-system-restarts.md).
 

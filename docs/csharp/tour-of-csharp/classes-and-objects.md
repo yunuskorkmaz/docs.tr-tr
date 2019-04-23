@@ -3,12 +3,12 @@ title: Sınıflar ve nesneler C# -Turu C# dil
 description: Yeni C#? Bu sınıflar, nesneleri ve devralma bakış okuyun
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 6f06a43b60a1101e5583ffa85bd948c69679943b
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
-ms.translationtype: MT
+ms.openlocfilehash: 36def74888f67dfa216cea7c093d80724e452c7b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921253"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976410"
 ---
 # <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
@@ -33,42 +33,42 @@ Statik üye veya örnek üyeleri bir sınıf üyeleridir. Statik üyeleri sını
 Aşağıdaki türde üye bir sınıf içeren genel bir bakış sağlar.
 
 * Sabitler
-    - Sınıf ile ilişkili olan sabit değerler
+  - Sınıf ile ilişkili olan sabit değerler
 * Alanlar
-    - Sınıfın değişkenleri
+  - Sınıfın değişkenleri
 * Yöntemler
-    - Sınıfı tarafından gerçekleştirilen eylemler ve hesaplamaları
+  - Sınıfı tarafından gerçekleştirilen eylemler ve hesaplamaları
 * Özellikler
-    - Okuma ve adlandırılmış sınıfın özelliklerini yazma ile ilişkili eylemler
+  - Okuma ve adlandırılmış sınıfın özelliklerini yazma ile ilişkili eylemler
 * Dizin Oluşturucular
-    - Dizin oluşturma sınıfına bir dizi gibi örnekleriyle ilişkili eylemler
+  - Dizin oluşturma sınıfına bir dizi gibi örnekleriyle ilişkili eylemler
 * Olaylar
-    - Sınıfı tarafından oluşturulan bildirimleri
+  - Sınıfı tarafından oluşturulan bildirimleri
 * İşleçler
-    - Dönüşümler ve sınıfı tarafından desteklenen ifade işleçleri
+  - Dönüşümler ve sınıfı tarafından desteklenen ifade işleçleri
 * Oluşturucular
-    - Sınıfın veya sınıf örneği başlatmak için gerekli eylemleri
+  - Sınıfın veya sınıf örneği başlatmak için gerekli eylemleri
 * Sonlandırıcılar
-    - Sınıf örneğini kalıcı olarak atılmadan önce gerçekleştirilecek eylemler
+  - Sınıf örneğini kalıcı olarak atılmadan önce gerçekleştirilecek eylemler
 * Türler
-    - Sınıfı tarafından bildirilen iç içe geçmiş türler
+  - Sınıfı tarafından bildirilen iç içe geçmiş türler
 
 ## <a name="accessibility"></a>Erişilebilirlik
 
 Bir sınıfın her üyesine erişebilir üyeyi program metni bölümlerine denetleyen bir ilişkili erişilebilirlik sahiptir. Erişilebilirlik altı olası biçimi vardır. Bunlar aşağıda özetlenmiştir.
 
 * `public`
-    - Olmayan sınırlı erişim
+  - Olmayan sınırlı erişim
 * `protected`
-    - Bu sınıf veya sınıfların sınırlı erişim, bu sınıftan türetilen
+  - Bu sınıf veya sınıfların sınırlı erişim, bu sınıftan türetilen
 * `internal`
-    - Geçerli derleme (.exe, .dll, vb.) için sınırlı erişim
+  - Geçerli derleme (.exe, .dll, vb.) için sınırlı erişim
 * `protected internal`
-    - İçeren sınıfı, kapsayan sınıftan türetilmiş sınıflar veya aynı derleme içindeki sınıf sınırlı erişim
+  - İçeren sınıfı, kapsayan sınıftan türetilmiş sınıflar veya aynı derleme içindeki sınıf sınırlı erişim
 * `private`
-    - Bu sınıf için sınırlı erişim
+  - Bu sınıf için sınırlı erişim
 * `private protected`
-    - Aynı bütünleştirilmiş kod içinde kapsayan tür içeren sınıf veya sınıfların sınırlı erişim türetilen
+  - Aynı bütünleştirilmiş kod içinde kapsayan tür içeren sınıf veya sınıfların sınırlı erişim türetilen
 
 ## <a name="type-parameters"></a>Tür parametreleri
 

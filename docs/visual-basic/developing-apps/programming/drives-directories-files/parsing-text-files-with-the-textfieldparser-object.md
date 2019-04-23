@@ -7,11 +7,11 @@ helpviewer_keywords:
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
 ms.openlocfilehash: 70848e2d53ec4bdb031f73286f2c5be9a7e19387
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813502"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976787"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>(Visual Basic) TextFieldParser nesnesiyle metin dosyalarını ayrıştırma
 `TextFieldParser` Ayrıştırmak için ve günlük dosyaları veya eski bir veritabanı bilgileri gibi bir metin ayrılmış genişlikte sütun olarak yapılandırılmış çok büyük bir dosya işlem nesnesi sağlar. Bir metin dosyası ayrıştırma `TextFieldParser` parse metodunu metin alanlarını ayıklamak için kullanılan ayrılmış dizeleri simgeleştirilecek dize işleme yöntemlerini benzer olmakla birlikte, bir metin dosyası içinde yineleme için benzer.  

@@ -3,11 +3,11 @@ title: ASMX Web Hizmetleri ile Birlikte Çalışma
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
 ms.openlocfilehash: 327cb3f376ef37278d8ea58f32fdb8eeb7b67c51
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303108"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974509"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>ASMX Web Hizmetleri ile Birlikte Çalışma
 Bu örnek, bir Windows Communication Foundation (WCF) istemci uygulaması ile mevcut bir ASMX Web hizmetini tümleştirmek nasıl gösterir.  

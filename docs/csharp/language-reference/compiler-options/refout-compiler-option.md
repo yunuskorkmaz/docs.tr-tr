@@ -7,16 +7,16 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: 06d21843c6e2d7aeb1858c3ce72426d080f73595
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 34f7b62c0d9a14c52dde0ddd4ac0d5c29a3b5b75
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410218"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976618"
 ---
 # <a name="-refout-c-compiler-options"></a>-refonly (C# Derleyici Seçenekleri)
 
-**- Refonly** seçeneği, başvuru bütünleştirilmiş kodu çıkış olmalıdır nerede bir dosya yolu belirtir. Bu şekilde dönüşür `metadataPeStream` yayma API.
+**- Refonly** seçeneği, başvuru bütünleştirilmiş kodu çıkış olmalıdır nerede bir dosya yolu belirtir. Bu şekilde dönüşür `metadataPeStream` yayma API. Bu seçenek karşılık gelen [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) proje MSBuild özelliği.
 
 ## <a name="syntax"></a>Sözdizimi
 

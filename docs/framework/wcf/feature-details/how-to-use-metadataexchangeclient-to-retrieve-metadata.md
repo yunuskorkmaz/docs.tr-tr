@@ -3,11 +3,11 @@ title: 'Nasıl yapılır: Meta Verileri Almak için MetadataExchangeClient Kulla
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
 ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327886"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977680"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Nasıl yapılır: Meta Verileri Almak için MetadataExchangeClient Kullanma
 Kullanım <xref:System.ServiceModel.Description.MetadataExchangeClient> sınıfı WS-MetadataExchange (MEX) protokolünü kullanarak meta verileri indirilemedi. Alınan meta veri dosyaları olarak döndürülen bir <xref:System.ServiceModel.Description.MetadataSet> nesne. Döndürülen <xref:System.ServiceModel.Description.MetadataSet> nesneyi içeren koleksiyonu <xref:System.ServiceModel.Description.MetadataSection> nesneleri, her birinin içerdiği belirli meta veriler diyalekti ve bir tanımlayıcı. Döndürülen meta verilere dosyalara yazmak veya döndürülen meta verilere Web Hizmetleri Açıklama Dili (WSDL) belgeleri içeriyorsa, meta verileri kullanarak içeri aktarabilirsiniz <xref:System.ServiceModel.Description.WsdlImporter>.  

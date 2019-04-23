@@ -5,12 +5,12 @@ ms.date: 03/15/2018
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: e528771d7afeec705f35fa3093a3e4f534b3a1e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
+ms.openlocfilehash: 1c14d50e31b89f4c77c94e5899e8207766a3540f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239858"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977177"
 ---
 # <a name="new-operator-c-reference"></a>New işleci (C# Başvurusu)
 
@@ -27,7 +27,7 @@ var query = from cust in customers
             select new { Name = cust.Name, Address = cust.PrimaryAddress };
 ```
 
-`new` İşleci değer türleri için varsayılan oluşturucuyu çağırmak için de kullanılır. Örneğin:
+`new` İşleci değer türleri için parametresiz oluşturucu çağırmak için de kullanılır. Örneğin:
 
 ```csharp
 int i = new int();
@@ -41,7 +41,7 @@ int i = 0;
 
 Varsayılan değerlerin tam listesi için bkz. [varsayılan değerler tablosu](default-values-table.md).
 
-İçin varsayılan oluşturucu bildirmek için bir hata olduğunu unutmayın bir [yapı](struct.md) her değer türü örtük olarak bir genel varsayılan oluşturucuya sahip olduğundan. Parametreli oluşturucular ilk değerleri ayarlamak için bir yapı türü bildirmek mümkündür, ancak bu yalnızca varsayılan dışındaki değerler gerekiyorsa gereklidir.
+Parametresiz bir oluşturucu için bildirmek için bir hata olduğunu unutmayın bir [yapı](struct.md) her değer türü örtük olarak genel parametresiz oluşturucusu olmadığından. Parametreli oluşturucular ilk değerleri ayarlamak için bir yapı türü bildirmek mümkündür, ancak bu yalnızca varsayılan dışındaki değerler gerekiyorsa gereklidir.
 
 Hem yapılar gibi değer türü nesneler ve sınıflar gibi başvuru türü nesneleri otomatik olarak edilir, ancak içeren bağlamları kaldırıldığında, bu başvuru türü nesneler çöp tarafından yok ise değer türü nesneler yok edilir Toplayıcı bunları son başvuruysa kaldırıldıktan sonra belirtilmeyen bir zaman. Dosya tanıtıcıları veya ağ bağlantıları gibi kaynakları içeren türleri için içerdikleri kaynakları hemen serbest emin olmak için belirleyici temizleme kullanmayı tercih edilir. Daha fazla bilgi için [using deyimi](using-statement.md).
 

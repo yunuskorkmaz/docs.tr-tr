@@ -15,11 +15,11 @@ ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8dc05d27b0316c82c5314a766fcad929dc5f3698
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331058"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976748"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Nasıl yapılır: Salt Yansıma Bağlamına Derlemeleri Yükleme
 Yalnızca yansıma yükleme bağlamı, diğer platformlar için veya .NET Framework'ün diğer sürümleri için derlenmiş derlemeleri incelemenize olanak tanır. Bu bağlamı yüklenen kodunu yalnızca incelenebilir; yürütülemez. Oluşturucular yürütülemiyor çünkü bu nesneler oluşturulamayacağını, anlamına gelir. Kod olarak yürütülemiyor çünkü bağımlılıkları otomatik olarak yüklenmez. Bunları incelemeniz gerekiyorsa, bunları kendiniz yüklemelisiniz.  

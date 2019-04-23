@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 088faaf454d3b188cff681fb7c41f3966b2e93fd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.openlocfilehash: ca42512daa35d7efd7296c277a575bf131749ad2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989869"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975669"
 ---
 # <a name="cancellation-in-managed-threads"></a>Yönetilen İş Parçacıklarında İptal
 İle başlayarak [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework, ortak iptali zaman uyumsuz veya uzun süre çalışan zaman uyumlu işlemler için birleşik bir modeli kullanır. Bu model, bir iptal belirteci adlı basit bir nesne üzerinde temel alır. Yeni iş parçacıkları veya görevleri oluşturarak iptal edilebilir işlemleri, bir veya daha fazla örneğin çağıran nesnesi belirteç her işlem için iletir. Tek işlemler, diğer işlemler için belirteç kopyalarını sırayla geçirebilirsiniz. Bazı daha sonraki bir zamanda belirteci oluşturan nesnesini bu işlemler neler yaptıklarını durdurma isteği için kullanabilirsiniz. İstekte bulunan nesne yalnızca iptal isteği gönderebilir ve her dinleyici isteği fark ve uygun ve hızlı bir şekilde yanıt sorumludur.  
@@ -66,7 +66,7 @@ ms.locfileid: "45989869"
  Aşağıdaki örnekte, istekte bulunan nesneyi oluşturur bir <xref:System.Threading.CancellationTokenSource> nesne ve geçişleri kendi <xref:System.Threading.CancellationTokenSource.Token%2A> iptal edilebilir işleme özelliği. İsteği aldığında işlemi değerini izler <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> yoklama belirteç özelliği. Değer olduğunda `true`, uygun herhangi bir şekilde dinleyicinin sonlandırabilirsiniz. Bu örnekte, yöntem yalnızca, çoğu durumda gerekli olduğu çıkar.  
   
 > [!NOTE]
->  Örnekte <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> yeni iptalini çerçevesi eski API'leri ile uyumlu olduğunu göstermek için yöntemi. Yeni kullanan bir örnek için tercih edilen <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> yazın, bkz: [nasıl yapılır: bir görevi ve kendi alt öğelerini iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+>  Örnekte <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> yeni iptalini çerçevesi eski API'leri ile uyumlu olduğunu göstermek için yöntemi. Yeni kullanan bir örnek için tercih edilen <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> yazın, bkz: [nasıl yapılır: Bir görevi ve alt öğelerini iptal](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
@@ -94,7 +94,7 @@ ms.locfileid: "45989869"
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
  [!code-vb[Cancellation#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex11.vb#3)]  
   
- Daha eksiksiz bir örnek için bkz: [nasıl yapılır: yoklama ile iptal isteklerini dinleme](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-by-polling.md).  
+ Daha eksiksiz bir örnek için bkz: [nasıl yapılır: Yoklama ile iptal isteklerini dinleme](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-by-polling.md).  
   
 ### <a name="listening-by-registering-a-callback"></a>Bir geri çağırma kaydederek dinleme  
  Bazı işlemler, iptal belirteci değeri zamanında denetleyemiyor şekilde engellenmiş olur. Bu durumlarda, bir iptal isteğine alındığında, yöntem engellemesinin kaldırıldığı bir geri çağırma yöntemi kaydedebilirsiniz.  
@@ -114,7 +114,7 @@ ms.locfileid: "45989869"
   
 -   Geri çağırmaları el ile herhangi bir iş parçacığı değil gerçekleştirmesi gereken veya <xref:System.Threading.SynchronizationContext> kullanımı bir geri çağırma. Bir geri çağırma belirli bir iş parçacığı üzerinde çalışması gerekiyorsa kullanın <xref:System.Threading.CancellationTokenRegistration?displayProperty=nameWithType> hedef syncContext, belirtmenize olanak tanıyan Oluşturucusu olan etkin <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType>. El ile bir geri çağırma iş parçacığı gerçekleştirme kilitlenmeye neden olabilir.  
   
- Daha eksiksiz bir örnek için bkz: [nasıl yapılır: geri aramaları kaydetme ile iptal isteklerini](../../../docs/standard/threading/how-to-register-callbacks-for-cancellation-requests.md).  
+ Daha eksiksiz bir örnek için bkz: [nasıl yapılır: İptal isteklerini geri aramaları kaydetme](../../../docs/standard/threading/how-to-register-callbacks-for-cancellation-requests.md).  
   
 ### <a name="listening-by-using-a-wait-handle"></a>Bekleme tanıtıcısı kullanarak dinleme  
  İptal edilebilir bir işlemi engelliyken eşitleme gibi basit beklerken bir <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> veya <xref:System.Threading.Semaphore?displayProperty=nameWithType>, kullanabileceğiniz <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType> olay hem iptal isteğini beklemeye işlemi etkinleştirmek için özelliği. İptal belirteci bekleme tanıtıcısı bir iptal isteğine yanıt olarak sinyal haline ve yöntemin dönüş değerini kullanabilirsiniz <xref:System.Threading.WaitHandle.WaitAny%2A> işareti belirteç iptal olup olmadığını belirlemek için yöntemi. İşlemi daha sonra yalnızca çıkış throw veya bir <xref:System.OperationCanceledException>uygun şekilde.  
@@ -127,7 +127,7 @@ ms.locfileid: "45989869"
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  
   
- Daha eksiksiz bir örnek için bkz: [nasıl yapılır: iptal isteklerini sahip bekleyin işleme için dinleme](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-that-have-wait-handles.md).  
+ Daha eksiksiz bir örnek için bkz: [nasıl yapılır: Bekleme tanıtıcıları içeren iptal isteklerini dinleme](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-that-have-wait-handles.md).  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>Aynı anda birden çok belirteç için dinleme  
  Bazı durumlarda, aynı anda birden çok iptal belirteçleri dinlemek bir dinleyici olabilir. Örneğin, iptal edilebilir bir işlemi bir iç iptal belirteci bir belirteç dışarıdan bağımsız değişken olarak bir yöntem parametresi için geçirilen ek olarak izlemek zorunda kalabilirsiniz. Bunu yapmak için aşağıdaki örnekte gösterildiği gibi iki veya daha fazla belirteç bir belirteç katılabilir bağlantılı bir belirteç kaynağı oluşturun.  
@@ -135,7 +135,7 @@ ms.locfileid: "45989869"
  [!code-csharp[Cancellation#7](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#7)]
  [!code-vb[Cancellation#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex13.vb#7)]  
   
- Çağırmalısınız bildirimi `Dispose` ile işiniz bittiğinde bağlı belirteç kaynağı. Daha eksiksiz bir örnek için bkz: [nasıl yapılır: birden çok iptal isteğini dinleme](../../../docs/standard/threading/how-to-listen-for-multiple-cancellation-requests.md).  
+ Çağırmalısınız bildirimi `Dispose` ile işiniz bittiğinde bağlı belirteç kaynağı. Daha eksiksiz bir örnek için bkz: [nasıl yapılır: Birden çok iptal isteğini dinleme](../../../docs/standard/threading/how-to-listen-for-multiple-cancellation-requests.md).  
   
 ## <a name="cooperation-between-library-code-and-user-code"></a>Kitaplık kodu ve kullanıcı kodu arasında işbirliği  
  Birleşik iptalini çerçevesi, kullanıcı kodu çalışılabilir bir kitaplık kodu iptal etmek ve kullanıcı kodu iptal etmek kitaplık kodu için mümkün kılar. Sorunsuz bir işbirliği yaparak bu yönergeleri izleyerek her bir tarafta bağlıdır:  
@@ -146,7 +146,7 @@ ms.locfileid: "45989869"
   
 -   Kullanıcı temsilcilerinde iptal isteklerine kitaplığı koddan zamanında yanıt vermek denemelidir.  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ve <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> bu yönergeleri izleyen sınıfların verilebilir. Daha fazla bilgi için [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md)ve [nasıl yapılır: PLINQ sorgusunu iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ve <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> örnekler sınıflarının aşağıdaki yönergeleri izleyin. Daha fazla bilgi için [görev iptali](../../../docs/standard/parallel-programming/task-cancellation.md) ve [nasıl yapılır: PLINQ sorgusunu iptal etme](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

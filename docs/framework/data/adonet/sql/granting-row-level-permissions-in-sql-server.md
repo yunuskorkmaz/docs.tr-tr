@@ -1,15 +1,15 @@
 ---
-title: SQL Server'da satır düzeyinde izinler verme
+title: SQL Server’da Satır Düzeyinde İzinler Verme
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: acd4a8962e0c4cd3504b9912a4de66d2a461805a
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844775"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973089"
 ---
-# <a name="granting-row-level-permissions-in-sql-server"></a>SQL Server'da satır düzeyinde izinler verme
+# <a name="granting-row-level-permissions-in-sql-server"></a>SQL Server’da Satır Düzeyinde İzinler Verme
 
 Bazı senaryolarda, hangi yalnızca verme, iptal etme veya reddetme izinleri sağlar. daha fazla ayrıntılı bir düzeyde verilere erişimi denetlemek için bir gereksinim yoktur. Örneğin, bir hastane veritabanı uygulaması tek Doktorlar hastaların için yalnızca ilgili bilgiler erişimle sınırlı olmasını gerektirebilir. Benzer gereksinimleri, Finans, yasa, resmi ve Askeri uygulamalar dahil, birçok ortamlarında mevcut. Bu senaryolara yardımcı olmak için SQL Server 2016 sağlar. bir [satır düzeyi güvenlik](/sql/relational-databases/security/row-level-security) basitleştirir ve satır düzeyinde erişim mantığı güvenlik ilkesinde otomatik özelliği. Satır düzeyinde filtreleme geçireceğini görünümlerini kullanarak SQL Server'ın önceki sürümleri için benzer bir işlevsellik gerçekleştirilebilir.
 
@@ -23,35 +23,35 @@ Aşağıdaki örnek, satır düzeyinde bir kullanıcı veya oturum açma adına 
 
 - Satır düzeyinde filtreleme etkinleştir:
 
-    - SQL Server 2016 veya sonraki bir sürümünü kullanıyorsanız veya [Azure SQL veritabanı](https://docs.microsoft.com/azure/sql-database/), satırları kısıtlama tablosunda bir koşul döndürülen ya da eşleşen olanlar (CURRENT_USER() kullanarak geçerli bir veritabanı kullanıcısı ekleyen bir güvenlik ilkesi oluşturma Yerleşik işlev) veya (SUSER_SNAME() yerleşik işlevi kullanılarak), geçerli oturum açma adı:
+  - SQL Server 2016 veya sonraki bir sürümünü kullanıyorsanız veya [Azure SQL veritabanı](https://docs.microsoft.com/azure/sql-database/), satırları kısıtlama tablosunda bir koşul döndürülen ya da eşleşen olanlar (CURRENT_USER() kullanarak geçerli bir veritabanı kullanıcısı ekleyen bir güvenlik ilkesi oluşturma Yerleşik işlev) veya (SUSER_SNAME() yerleşik işlevi kullanılarak), geçerli oturum açma adı:
 
-        ```sql
-        CREATE SCHEMA Security
-        GO
+      ```sql
+      CREATE SCHEMA Security
+      GO
 
-        CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
-            RETURNS TABLE
-            WITH SCHEMABINDING
-        AS
-            RETURN SELECT 1 AS accessResult
-            WHERE @UserName = SUSER_SNAME()
-        GO
+      CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
+          RETURNS TABLE
+          WITH SCHEMABINDING
+      AS
+          RETURN SELECT 1 AS accessResult
+          WHERE @UserName = SUSER_SNAME()
+      GO
 
-        CREATE SECURITY POLICY Security.userAccessPolicy
-            ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
-            ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
-        GO
-        ```
+      CREATE SECURITY POLICY Security.userAccessPolicy
+          ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
+          ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
+      GO
+      ```
 
-    - SQL Server 2016'dan önce bir sürümü kullanıyorsanız benzer işlevselliği bir görüntü kullanarak elde edebilirsiniz:
+  - SQL Server 2016'dan önce bir sürümü kullanıyorsanız benzer işlevselliği bir görüntü kullanarak elde edebilirsiniz:
 
-        ```sql
-        CREATE VIEW vw_MyTable
-        AS
-            RETURN SELECT * FROM MyTable
-            WHERE UserName = SUSER_SNAME()
-        GO
-        ```
+      ```sql
+      CREATE VIEW vw_MyTable
+      AS
+          RETURN SELECT * FROM MyTable
+          WHERE UserName = SUSER_SNAME()
+      GO
+      ```
 
 - Seçin, ekleme, güncelleştirme ve verileri silmek için saklı yordamlar oluşturun. Güvenlik İlkesi tarafından filtreleme geçirilmeden, saklı yordamları doğrudan temel tablo bu işlemleri gerçekleştirmeniz gerekir; Aksi takdirde, filtre tarafından bir görünümü geçirilmeden, saklı yordamları yerine karşı görünümü çalışması. Güvenlik İlkesi veya Görünüm otomatik olarak döndürülen veya kullanıcı sorgular tarafından değiştirilen satırları filtreleyen ve saklı yordam doğrudan sorgu erişimi olan kullanıcılar başarıyla çıkarımını sorgular çalıştırılmasını engellemek için daha zor bir güvenlik sınırı sağlar filtrelenmiş veri varlığını.
 
