@@ -1,12 +1,12 @@
 ---
-title: <add> , <contractTypeNames>
+title: <add> / <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
 ms.openlocfilehash: 856298cb0639cf19b941f326b5b9a25aa6663088
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091323"
 ---
 # <a name="add-of-contracttypenames"></a>\<Ekle >, \<contractTypeNames >
@@ -52,7 +52,7 @@ Sözleşme adı Aranan Hizmetleri ve genellikle bir hizmet için ararken kullan�
 |ad alanı|Sözleşme türünün ad alanını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

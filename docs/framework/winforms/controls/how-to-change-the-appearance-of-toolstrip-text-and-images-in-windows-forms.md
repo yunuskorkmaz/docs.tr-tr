@@ -14,10 +14,10 @@ helpviewer_keywords:
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
 ms.openlocfilehash: 5c326c8f6a56c934d317305f85f4c88e95e75f8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088489"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da ToolStrip Metni ve Resimlerinin Görünüşünü Değiştirme
@@ -79,5 +79,5 @@ Metin ve görüntüleri üzerinde görüntülenip görüntülenmeyeceğini denet
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip Denetimine Genel Bakış](toolstrip-control-overview-windows-forms.md)
-- [ToolStrip Denetim Mimarisi](toolstrip-control-architecture.md)
-- [ToolStrip Teknoloiji Özeti](toolstrip-technology-summary.md)
+- [ToolStrip Denetim, Mimarisi](toolstrip-control-architecture.md)
+- [ToolStrip Teknoloji Özeti](toolstrip-technology-summary.md)

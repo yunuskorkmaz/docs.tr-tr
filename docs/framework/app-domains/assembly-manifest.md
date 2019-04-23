@@ -11,10 +11,10 @@ ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087540"
 ---
 # <a name="assembly-manifest"></a>Derleme Bildirimi
@@ -55,7 +55,7 @@ Statik veya dinamik tüm derlemeler, derleme içindeki öğelerin birbirleriyle 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme İçerikleri](../../../docs/framework/app-domains/assembly-contents.md)
-- [Derleme Sürümü Oluşturma](../../../docs/framework/app-domains/assembly-versioning.md)
+- [Bütünleştirilmiş Kod İçerikleri](../../../docs/framework/app-domains/assembly-contents.md)
+- [Bütünleştirilmiş Kod Sürümü Oluşturma](../../../docs/framework/app-domains/assembly-versioning.md)
 - [Uydu Derlemeleri Oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-- [Tanımlayıcı Adlı Derlemeler](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/strong-named-assemblies.md)

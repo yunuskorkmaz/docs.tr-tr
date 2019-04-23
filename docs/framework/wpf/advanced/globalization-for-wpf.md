@@ -8,10 +8,10 @@ helpviewer_keywords:
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
 ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084173"
 ---
 # <a name="globalization-for-wpf"></a>WPF için Genelleştirme
@@ -152,7 +152,7 @@ Aşağıdaki örnek, bir onaltılık karakter başvurusu gösterir. Sahip olduğ
  Bir kaynak açısından, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dile bağlı tanımlamak için tasarlanan dosya [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kaynak öğesi ve bu nedenle, son dağıtım biçimi uluslararası dilleri desteklemek için yerelleştirilebilir olmalıdır. Çünkü [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olayları birçok işleyemez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uygulamalar bunu yapmak için kod blokları içerir. Daha fazla bilgi için [XAML genel bakış (WPF)](xaml-overview-wpf.md). Kod çıkarılır ve farklı ikili dosyalar derlenir, bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dosya XAML BAML forma simgeleştirilmiş. XAML dosyaları, görüntüler ve diğer yönetilen kaynak nesne türlerini BAML formu katıştırıldığı diğer dillere yerelleştirilmesi, uydu kaynak derlemesi veya ana derleme yerelleştirme gerekli olmadığında.
 
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları destekleyen tüm [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)][!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] dize tabloları, görüntüler ve diğerleri dahil olmak üzere kaynakları.
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları destekleyen tüm [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] dize tabloları, görüntüler ve diğerleri dahil olmak üzere kaynakları.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Yerelleştirilebilir Uygulamalar Oluşturma

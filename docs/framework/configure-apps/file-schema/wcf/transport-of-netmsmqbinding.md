@@ -1,12 +1,12 @@
 ---
-title: <transport> , <netMsmqBinding>
+title: <transport> / <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
 ms.openlocfilehash: ec726c4b39fedbf63a7ecc9e685a86367609fa43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085018"
 ---
 # <a name="transport-of-netmsmqbinding"></a>\<Aktarım >, \<netMsmqBinding >

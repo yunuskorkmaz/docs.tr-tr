@@ -9,10 +9,10 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
 ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087189"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Yerleşik Sahip Çizimi Destekli Denetimler
@@ -86,7 +86,7 @@ Sahip çizim olarak da bilinen özel çizim olduğundan, Windows Forms içinde b
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Nasıl yapılır: ComboBox Denetiminde Değişken Boyutlu Metin Oluşturma](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [Nasıl yapılır: Bir ComboBox denetiminde değişken boyutlu metin oluşturma](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem bileşeni  
  <xref:System.Windows.Forms.MenuItem> Bileşenini temsil eder, bir tek menü öğesi bir <xref:System.Windows.Forms.MainMenu> veya <xref:System.Windows.Forms.ContextMenu> bileşeni.  
@@ -172,9 +172,9 @@ Sahip çizim olarak da bilinen özel çizim olduğundan, Windows Forms içinde b
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Nasıl yapılır: Windows Forms DataGridView Denetiminde Hücrelerin Görünüşünü Özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [Nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Nasıl yapılır: Windows Forms DataGridView Denetiminde Satırların Görünüşünü Özelleştirme](customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [Nasıl yapılır: Windows Forms DataGridView denetiminde satırların görünüşünü özelleştirme](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip Denetimi  
  <xref:System.Windows.Forms.ToolStrip> ve türetilen denetimler görünümlerini herhangi bir özelliği özelleştirmenize olanak sağlar.  
@@ -185,10 +185,10 @@ Sahip çizim olarak da bilinen özel çizim olduğundan, Windows Forms içinde b
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Nasıl yapılır: Windows Forms'da ToolStrip Denetimi için Özel Oluşturucu Oluşturma ve Ayarlama](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [Nasıl yapılır: Windows Forms'ta ToolStrip denetimi için özel Oluşturucu Oluşturma ve](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Nasıl yapılır: Bir ToolStrip Denetimini Özel Olarak Çizme](how-to-custom-draw-a-toolstrip-control.md)  
+-   [Nasıl yapılır: Bir ToolStrip denetimini özel olarak çizme](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

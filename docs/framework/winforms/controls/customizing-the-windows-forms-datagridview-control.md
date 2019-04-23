@@ -6,10 +6,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], customization
 ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
 ms.openlocfilehash: ab8d1f07c608aca4f14f5e73860f8c3e263a4610
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091388"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetimini Özelleştirme
@@ -18,19 +18,19 @@ ms.locfileid: "59091388"
  Hücre ve satırları kendiniz boyamak için çeşitli işleyebilir `DataGridView` boyama olayları. Mevcut işlevselliğini değiştirmenize veya yeni işlevsellik sağlamak için mevcut türetilen kendi türlerinizi oluşturabilirsiniz `DataGridViewCell`, `DataGridViewColumn`, ve `DataGridViewRow` türleri. Bir hücre düzenleme modunda olduğunda, seçtiğiniz bir denetimi görüntüleme türetilmiş türleri oluşturarak yeni düzenleme özellikleri de sağlayabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Hücrelerin Görünüşünü Özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md)  
+ [Nasıl yapılır: Windows Forms DataGridView denetiminde hücrelerin görünüşünü özelleştirme](customize-the-appearance-of-cells-in-the-datagrid.md)  
  Nasıl yapılacağını açıklar <xref:System.Windows.Forms.DataGridView.CellPainting> boyamak için olay hücreleri el ile.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Satırların Görünüşünü Özelleştirme](customize-the-appearance-of-rows-in-the-datagrid.md)  
+ [Nasıl yapılır: Windows Forms DataGridView denetiminde satırların görünüşünü özelleştirme](customize-the-appearance-of-rows-in-the-datagrid.md)  
  Nasıl yapılacağını açıklar <xref:System.Windows.Forms.DataGridView.RowPrePaint> ve <xref:System.Windows.Forms.DataGridView.RowPostPaint> satırlarla gradyan, özel bir arka plan boyama ve içerik için olayları yayılan birden çok sütun.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Davranış ve Görünümünü Genişleterek Hücre ve Sütunları Özelleştirme](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+ [Nasıl yapılır: Davranış ve görünümünü genişleterek hücre ve sütunları Windows Forms DataGridView denetiminde özelleştirme](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
  Öğesinden türetilen özel türler oluşturmayı açıklar `DataGridViewCell` ve `DataGridViewColumn` için fare işaretçisi üzerinde getirildiğinde hücreleri vurgulayın.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetimindeki Bir Düğme Sütununda Düğmeleri Devre Dışı Bırakma](disable-buttons-in-a-button-column-in-the-datagrid.md)  
+ [Nasıl yapılır: Windows Forms DataGridView denetimindeki bir düğme sütununda düğmeleri devre dışı bırak](disable-buttons-in-a-button-column-in-the-datagrid.md)  
  Öğesinden türetilen özel türler oluşturmayı açıklar <xref:System.Windows.Forms.DataGridViewButtonCell> ve <xref:System.Windows.Forms.DataGridViewButtonColumn> bir düğme sütununda düğmeleri devre dışı görüntülemek için.  
   
- [Nasıl yapılır: Windows Forms DataGridView Hücrelerinde Denetimleri Barındırma](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+ [Nasıl yapılır: Windows Forms DataGridView hücrelerinde konak denetimleri](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
  Nasıl uygulanacağını açıklar `IDataGridViewEditingControl` arabirim ve türetilen özel türler oluşturma `DataGridViewCell` ve `DataGridViewColumn` görüntülemek için bir <xref:System.Windows.Forms.DateTimePicker> bir hücre düzenleme modunda olduğunda denetim.  
   
 ## <a name="reference"></a>Başvuru  

@@ -3,10 +3,10 @@ title: Derleyici Seçenekleri
 description: Kullanım F# derlemesini denetlemek için derleyici komut satırı seçenekleri, F# uygulamalar ve kitaplıklar.
 ms.date: 12/10/2018
 ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089763"
 ---
 # <a name="compiler-options"></a>Derleyici Seçenekleri
@@ -70,5 +70,5 @@ Alfabetik listelenmiş derleyici seçenekleri aşağıdaki tabloda gösterilmekt
 
 |Başlık|Açıklama|
 |-----|-----------|
-|[F# Etkileşimli Seçenekleri](fsharp-interactive-options.md)|Tarafından desteklenen komut satırı seçeneklerini açıklar F# Yorumlayıcı, fsi.exe.|
+|[F# Interactive Seçenekleri](fsharp-interactive-options.md)|Tarafından desteklenen komut satırı seçeneklerini açıklar F# Yorumlayıcı, fsi.exe.|
 |[Proje Özellikleri Başvurusu](/visualstudio/ide/reference/project-properties-reference)|Yapı seçeneklerini sağlayan proje özellik sayfaları dahil olmak üzere, projeler için kullanıcı arabirimini açıklar.|

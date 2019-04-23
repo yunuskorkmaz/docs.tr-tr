@@ -10,10 +10,10 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
 ms.openlocfilehash: d76c2e5882c9df94674294da00ba446dfbfd2b3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086526"
 ---
 # <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Nasıl yapılır: Windows Forms BindingNavigator Denetimi ile DataSet içinde Hareket Etme
@@ -42,4 +42,4 @@ Veri odaklı uygulamalar oluşturmalarını gibi genellikle veri koleksiyonları
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingNavigator Denetimi](bindingnavigator-control-windows-forms.md)
 - [BindingSource Bileşeni](bindingsource-component.md)
-- [Nasıl yapılır: Windows Forms Denetimini Bir Türe Bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Nasıl yapılır: Bir Windows Forms denetimini bir türe bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)

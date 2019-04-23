@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
 ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087839"
 ---
 # <a name="optimizing-performance-data-binding"></a>Performansı iyileştirme: Veri Bağlama
@@ -83,4 +83,4 @@ ms.locfileid: "59087839"
 - [Metin](optimizing-performance-text.md)
 - [Diğer Performans Önerileri](optimizing-performance-other-recommendations.md)
 - [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
-- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma](walkthrough-caching-application-data-in-a-wpf-application.md)

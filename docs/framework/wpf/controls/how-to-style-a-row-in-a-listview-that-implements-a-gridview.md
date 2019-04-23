@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
 ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091466"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Nasıl yapılır: GridView Uygulayan ListView İçinde bir Satıra Stil Ekleme
-Bu örnekte, içinde bir satıra stil ekleme işlemi gösterilmektedir bir <xref:System.Windows.Controls.ListView> uygulayan denetimi bir <xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A> modu.  
+Bu örnekte, içinde bir satıra stil ekleme işlemi gösterilmektedir bir <xref:System.Windows.Controls.ListView> uygulayan denetimi bir <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> modu.  
   
 ## <a name="example"></a>Örnek  
  Bir satıra stil uygulayabilirsiniz bir <xref:System.Windows.Controls.ListView> ayarlayarak denetimi bir <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> üzerinde <xref:System.Windows.Controls.ListView> denetimi. Olarak temsil edilen öğeleri stilini ayarlayın <xref:System.Windows.Controls.ListViewItem> nesneleri. <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Başvuruları <xref:System.Windows.Controls.ControlTemplate> satır içeriği görüntülemek için kullanılan nesneleri.  
@@ -38,5 +38,5 @@ Bu örnekte, içinde bir satıra stil ekleme işlemi gösterilmektedir bir <xref
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [Nasıl Yapılır Konuları](listview-how-to-topics.md)
-- [ListView Genel Bakışı](listview-overview.md)
+- [ListView Genel Bakış](listview-overview.md)
 - [Stil ve Şablon Oluşturma](styling-and-templating.md)

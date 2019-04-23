@@ -5,10 +5,10 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086218"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Özel Türler ve Kitaplıkar İçin XAML İlişkili CLR Öznitelikleri
@@ -24,7 +24,7 @@ Bu konuda, .NET Framework XAML hizmetlerinde tarafından tanımlanan ortak dil �
   
  **Uygulama hedefi:** Sınıfı, özelliği veya `get` iliştirilebilir özellikleri için destek erişimci üyeleri.  
   
- **Bağımsız değişkenleri:** None  
+ **Bağımsız değişkenleri:** Yok.  
   
  <xref:System.Windows.Markup.AmbientAttribute> özellik veya alan öznitelikli türü tüm özellikleri XAML içinde ortam özelliği kavramı altında yorumlanması gerektiğini gösterir. XAML işlemci türü sahipleri üyelerinin nasıl belirlemek için ortam kavramı ilişkilendirir. Ortam özellikleri, burada değeri bir nesne grafiğinin oluştururken, ancak tipik türü üye araması oluşturulan hemen XAML düğüm kümesi için askıya alındı ayrıştırıcı bağlamda kullanılabilir olması beklenen bir özelliktir.  
   

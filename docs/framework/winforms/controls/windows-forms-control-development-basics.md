@@ -7,10 +7,10 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
 ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086448"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Forms Denetimi Geliştirmenin Esasları
@@ -32,7 +32,7 @@ Bir Windows Forms denetimi doğrudan veya dolaylı olarak türetildiği bir sın
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Basit Bir Windows Forms Denetimi Geliştirme](how-to-develop-a-simple-windows-forms-control.md)
+- [Nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](how-to-develop-a-simple-windows-forms-control.md)
 - [Bileşik Windows Forms Denetimi Geliştirme](developing-a-composite-windows-forms-control.md)
-- [Nasıl yapılır: İlerleme Durumunu Gösteren Windows Forms Denetimi Oluşturma](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Nasıl yapılır: İlerleme durumunu gösteren Windows Forms denetimi oluşturma](how-to-create-a-windows-forms-control-that-shows-progress.md)
 - [Özel Denetim Çeşitleri](varieties-of-custom-controls.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087995"
 ---
 # <a name="3-d-graphics-overview"></a>3B Grafiklere Genel Bakış
@@ -117,7 +117,7 @@ Perspektif ve Ortografik projeksiyonlar
   
 -   <xref:System.Windows.Media.Media3D.PointLight>: Yakındaki bir ışık kaynağına gibi gösterir. PointLights bir konuma sahiptir ve söz konusu konumdan açık tür dönüştürme. Sahnedeki nesneler, konumlarını ve ışık göre daha fazla mesafe bağlı olarak ışıklı. <xref:System.Windows.Media.Media3D.PointLightBase> kullanıma sunan bir <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> özelliği dışında modelleri değil ışıklı ışık tarafından bir uzaklığı belirler. PointLight nasıl mesafeli ışığın yoğunluğu azalır belirleyen zayıflama özellikleri de sunar. Işığın zayıflama için sabit, doğrusal veya ikinci dereceden ilişkilendirme belirtebilirsiniz.  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>: Devralınan <xref:System.Windows.Media.Media3D.PointLight>. Projektör gibi PointLight karanl ve hem konumuna ve yönüne sahip. Bunlar belirlediği bir Koni şeklinde alanında açık proje <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> ve <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> derece cinsinden belirtilen özellikleri.  
+-   <xref:System.Windows.Media.Media3D.SpotLight>: devralınan <xref:System.Windows.Media.Media3D.PointLight>. Projektör gibi PointLight karanl ve hem konumuna ve yönüne sahip. Bunlar belirlediği bir Koni şeklinde alanında açık proje <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> ve <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> derece cinsinden belirtilen özellikleri.  
   
  Işıklar, <xref:System.Windows.Media.Media3D.Model3D> nesnelerine dönüştürmek ve konumu, renk, yönü ve aralığı dahil olmak üzere açık özelliklerine animasyon uygulamak için.  
   
@@ -177,5 +177,5 @@ Perspektif ve Ortografik projeksiyonlar
 - [3B Dönüşümlere Genel Bakış](3-d-transformations-overview.md)
 - [WPF 3B Performansını En Üst Düzeye Çıkarma](maximize-wpf-3d-performance.md)
 - [Nasıl Yapılır Konuları](3-d-graphics-how-to-topics.md)
-- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Görüntüler, Çizimler ve Görsellerle Boyama](painting-with-images-drawings-and-visuals.md)

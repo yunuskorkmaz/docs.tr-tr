@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 ms.openlocfilehash: 540c0fe5c4d06ea341b9cc8be9755cc67fe9bbc2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085187"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Intranet Güvenli Olmayan Hizmet ve İstemci
@@ -19,12 +19,12 @@ WCF uygulaması için özel bir güvenli ağ üzerinden bilgi sağlamak için ge
   
 |Özelliği|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik modu|None|  
+|Güvenlik modu|Yok.|  
 |Taşıma|TCP|  
 |Bağlama|<xref:System.ServiceModel.NetTcpBinding>|  
 |Birlikte Çalışabilirlik|Yalnızca WCF|  
 |Kimlik doğrulaması|Yok.|  
-|Bütünlüğü|None|  
+|Bütünlüğü|Yok.|  
 |Gizliliği|Yok.|  
   
 ## <a name="service"></a>Hizmet  
@@ -115,5 +115,5 @@ WCF uygulaması için özel bir güvenli ağ üzerinden bilgi sağlamak için ge
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.NetTcpBinding>
-- [Güvenlik Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

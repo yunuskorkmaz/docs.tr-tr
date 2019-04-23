@@ -3,10 +3,10 @@ title: Güvenlik Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089867"
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
@@ -67,7 +67,7 @@ Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. H
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Kod Erişimi Güvenliği ve ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Kod erişimi güvenliği, rol tabanlı güvenlik ve ADO.NET uygulamanın perspektifinden kısmen güvenilir ortamlar arasındaki etkileşimler açıklanmaktadır.|  
-|[Kod Erişimi Güvenliği](../../../../docs/framework/misc/code-access-security.md)|.NET Framework'teki CAS açıklayan ek konulara bağlantılar içerir.|  
+|[Kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md)|.NET Framework'teki CAS açıklayan ek konulara bağlantılar içerir.|  
   
 ## <a name="database-security"></a>Veritabanı güvenliği  
  En düşük öncelik ilkesini veri kaynağınız için de geçerlidir. Veritabanı güvenliği için bazı genel yönergeleri içerir:  

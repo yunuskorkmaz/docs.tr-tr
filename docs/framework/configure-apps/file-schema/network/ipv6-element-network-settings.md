@@ -1,5 +1,5 @@
 ---
-title: <ipv6> Öğesi (ağ ayarları)
+title: <ipv6> Öğesi (Ağ Ayarları)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 ms.openlocfilehash: b8969cecf8ffb2ef23522f193bb322b1170e6111
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089218"
 ---
 # <a name="ipv6-element-network-settings"></a>\<IPv6 > öğesi (ağ ayarları)
@@ -47,7 +47,7 @@ Internet Protokolü sürüm 6 (IPv6) sağlar eski üyeler alınan yanıtları <x
   
 |**Öğe**|**Açıklama**|  
 |-----------------|---------------------|  
-|[ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
+|[Ayarlar](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Temel ağ seçeneklerini yapılandırır <xref:System.Net> ad alanı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Bu ayar eski üyeler için IPv6 desteğini etkinleştirir <xref:System.Net.Dns> sınıfı: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, ve <xref:System.Net.Dns.Resolve%2A>. Diğer üyeleriyle ilgili <xref:System.Net?displayProperty=nameWithType> ad alanı, IPv6 adresleri döndürülecek IPv6 işletim sistemi içinde etkinleştirilir.  

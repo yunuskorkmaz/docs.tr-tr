@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
 ms.openlocfilehash: 6b5e0e4e0a14410c23833db6cc90d23e7959ad22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087733"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>UI Otomasyon Seçim Denetim Düzenini Uygulama
@@ -60,9 +60,9 @@ Renk örneği dize eşleme örneği
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyon Denetim Düzenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
-- [UI Otomasyon Sağlayıcısında Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
-- [İstemciler İçin UI Otomasyon Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI Otomasyon SelectionItem Denetim Düzeni Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)
+- [UI Otomasyonu Denetim Desenlerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [UI Otomasyonu SelectionItem Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-selectionitem-control-pattern.md)
 - [UI Otomasyon Ağacına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI Otomasyonda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI Otomasyonunda Önbelleğe Almayı Kullanma](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

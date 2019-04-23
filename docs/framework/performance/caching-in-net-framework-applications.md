@@ -7,10 +7,10 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085786"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework Uygulamalarında Önbelleğe Alma
@@ -79,5 +79,5 @@ ms.locfileid: "59085786"
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [İzlenecek yol: Bir WPF uygulamasında uygulama verilerini önbelleğe alma](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [İzlenecek yol: ASP.NET'te uygulama verilerini önbelleğe alma](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

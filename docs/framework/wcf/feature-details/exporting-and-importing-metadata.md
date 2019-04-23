@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
 ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091947"
 ---
 # <a name="exporting-and-importing-metadata"></a>Meta Verileri Dışarı ve İçeri Aktarma
@@ -48,16 +48,16 @@ Windows Communication Foundation (WCF) meta verileri dışarı aktarma, hizmet u
  <xref:System.ServiceModel.Description.WsdlExporter> Beklerseniz dışarı aktarma işlemi sırasında yakalanan özel durumların türü. Hata olarak bu özel durumları yakalanmaz `Errors` özelliği. Bir kez <xref:System.ServiceModel.Description.WsdlExporter> özel durumu oluşturur, hatalı bir durumda olduğundan ve kullanılamayacak. <xref:System.ServiceModel.Description.WsdlExporter> Uyarıları ekleyin, `Errors` özelliğine bir işlem joker Eylemler ve yinelenen bağlama adları ne zaman karşılaşılan kullandığından dışarı aktarılamaz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Hizmet Uç Noktalarına Meta Verileri İçe Aktarma](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Nasıl yapılır: Hizmet uç noktalarına meta verileri alma](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Açıklama nesnelerini indirilen meta verileri içe aktarmayı açıklar.  
   
- [Nasıl yapılır: Hizmet Uç Noktalarından Meta Verileri Dışa Aktarma](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Nasıl yapılır: Hizmet uç noktalarından meta verileri dışarı aktarma](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Meta verilere açıklama nesneleri dışa aktarmayı açıklar.  
   
  [ServiceDescription ve WSDL Başvurusu](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  WSDL ve açıklama nesneler arasındaki eşlemeyi tanımlar.  
   
- [Nasıl yapılır: Meta Verileri Derlenmiş Hizmet Kodundan Dışarı Aktarmak için Svcutil.exe Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Nasıl yapılır: Meta verileri derlenmiş hizmet kodundan dışarı aktarmak için svcutil.exe kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Hizmetleri, sözleşmeler ve derlenmiş bütünleştirilmiş kodlar içindeki veri türleri için meta verileri dışarı aktarmak için Svcutil.exe kullanımı açıklanmaktadır.  
   
  [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  

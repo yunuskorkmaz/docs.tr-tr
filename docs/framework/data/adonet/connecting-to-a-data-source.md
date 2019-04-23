@@ -3,10 +3,10 @@ title: ADO.NET'te veri kaynağına bağlanma
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083718"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>ADO.NET'te veri kaynağına bağlanma
@@ -18,7 +18,7 @@ ADO.NET kullandığınız bir **bağlantı** bağlantı dizesinde gerekli kimlik
  [Bağlantı Kurma](../../../../docs/framework/data/adonet/establishing-the-connection.md)  
  Nasıl kullanılacağını açıklayan bir **bağlantı** bir veri kaynağına bağlantı kurmak için nesne.  
   
- [Bağlantı Olayları](../../../../docs/framework/data/adonet/connection-events.md)  
+ [Bağlantı Olayları ](../../../../docs/framework/data/adonet/connection-events.md)  
  Nasıl kullanılacağını açıklayan bir **InfoMessage** bir veri kaynağından bilgi iletilerini almak için olay.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
