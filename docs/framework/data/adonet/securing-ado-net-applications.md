@@ -3,10 +3,10 @@ title: ADO.NET Uygulamalarının Güvenliğini Sağlama
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149389"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET Uygulamalarının Güvenliğini Sağlama
@@ -17,7 +17,7 @@ Güvenli bir ADO.NET uygulama yazma birden fazla kullanıcı girişini doğrulam
  Güvenli kod yazma kendini güvenlik açıkları karşı veritabanları gibi yönetilmeyen kaynaklar ile çalışırken koruma sağlamaz. Çoğu server veritabanları, SQL Server gibi doğru bir şekilde uygulandığında güvenliğini kendi güvenlik sistemlerinde vardır. Ancak, uygun şekilde yapılandırılmamışsa, sağlam güvenlik sistemi bile veri kaynağıyla bir saldırı kurban.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Güvenlik Genel Bakış](../../../../docs/framework/data/adonet/security-overview.md)  
+ [Güvenliğe Genel Bakış](../../../../docs/framework/data/adonet/security-overview.md)  
  ADO.NET güvenli uygulamalar tasarlamaya yönelik öneriler sağlar.  
   
  [Güvenli Veri Erişimi](../../../../docs/framework/data/adonet/secure-data-access.md)  
@@ -36,13 +36,13 @@ Güvenli bir ADO.NET uygulama yazma birden fazla kullanıcı girişini doğrulam
  [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  Bir geliştiricinin bakış açısından SQL Server güvenlik özellikleri açıklar.  
   
- [Güvenlik Değerlendirmeleri](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+ [Güvenlik Konuları](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
  Entity Framework uygulamaları için güvenliği açıklar.  
   
  [Güvenlik](../../../../docs/standard/security/index.md)  
  . NET'te güvenliği tüm yönleriyle açıklayan konulara bağlantılar içerir.  
   
- [Güvenlik Araçları](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
+ [Güvenlik araçları](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
  Güvenlik İlkesi'ni yönetme ve güvenliğini sağlamak için .NET framework Araçları'nı tıklatın.  
   
  [Güvenli uygulamalar oluşturmak için kaynaklar](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
 ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150546"
 ---
 # <a name="how-to-repeat-an-animation"></a>Nasıl yapılır: Animasyonu Yineleme
@@ -32,6 +32,6 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.Animat
 
 - [Yineleme Döngüsü Sırasında Animasyon Değerlerini Biriktirme](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Zaman Çizelgesinin Otomatik Olarak Ters Çevrilip Çevrilmeyeceğini Belirtme](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [Animasyon ve Zamanlama ile İlgili Nasıl Yapılır Konuları](animation-and-timing-how-to-topics.md)
+- [Animasyon ve zamanlama ile ilgili nasıl yapılır konuları](animation-and-timing-how-to-topics.md)
 - [Animasyona Genel bakış](animation-overview.md)
 - [Animasyon zamanlama davranışı örneği](https://go.microsoft.com/fwlink/?LinkID=159970)

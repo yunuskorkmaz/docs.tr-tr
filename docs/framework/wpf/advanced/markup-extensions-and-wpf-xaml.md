@@ -16,10 +16,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
 ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148103"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Biçimlendirme Uzantıları ve WPF XAML
@@ -119,9 +119,9 @@ Bu konu, kendi sözdizimi kurallarını, amacı ve bunları altını sınıfı n
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XAML'ye Genel Bakış (WPF)](xaml-overview-wpf.md)
-- [XAML Ad Alanı (x:) Dil Özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML Namespace (x:) Dil özellikleri](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML Uzantıları](wpf-xaml-extensions.md)
-- [StaticResource Biçimlendirme Uzantısı](staticresource-markup-extension.md)
-- [Biçimlendirme Uzantısı Bağlama](binding-markup-extension.md)
-- [DynamicResource Biçimlendirme Uzantısı](dynamicresource-markup-extension.md)
+- [StaticResource İşaretleme Uzantısı](staticresource-markup-extension.md)
+- [İşaretleme Uzantısı Bağlama](binding-markup-extension.md)
+- [DynamicResource İşaretleme Uzantısı](dynamicresource-markup-extension.md)
 - [x:Type İşaretleme Uzantısı](../../xaml-services/x-type-markup-extension.md)

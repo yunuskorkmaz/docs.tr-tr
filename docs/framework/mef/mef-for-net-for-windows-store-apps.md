@@ -5,10 +5,10 @@ ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b47af2955d0ad8e618d0143d7eedff7c74278fbd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151001"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Windows Mağazası uygulamaları için .NET için MEF
@@ -28,6 +28,6 @@ ms.locfileid: "59151001"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Mağazası uygulamaları için .NET'e genel bakış](https://go.microsoft.com/fwlink/p/?LinkID=238312)
+- [.NET için Windows Store uygulamalarına genel bakış](https://go.microsoft.com/fwlink/p/?LinkID=238312)
 - [.NET için Windows Store uygulamaları – desteklenen API'ler](https://go.microsoft.com/fwlink/p/?LinkID=247912)
 - [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)

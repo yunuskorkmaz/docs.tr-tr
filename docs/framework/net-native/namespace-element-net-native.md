@@ -5,10 +5,10 @@ ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150754"
 ---
 # <a name="namespace-element-net-native"></a>\<Namespace > öğesi (.NET yerel)

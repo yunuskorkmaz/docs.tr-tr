@@ -1,12 +1,12 @@
 ---
-title: <scopedCertificates> Öğe
+title: <scopedCertificates> Öğesi
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
 ms.openlocfilehash: 73e78a6ca27ed45e1eadc7121987b75f79bc6aa5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145206"
 ---
 # <a name="scopedcertificates-element"></a>\<scopedCertificates > öğesi
@@ -81,7 +81,7 @@ endpointBehaviors bölümü
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
 - [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Nasıl yapılır: Federe İstemci Oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Nasıl yapılır: Federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
 - [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

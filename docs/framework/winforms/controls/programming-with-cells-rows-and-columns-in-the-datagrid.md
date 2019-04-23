@@ -9,32 +9,32 @@ helpviewer_keywords:
 - rows [Windows Forms], data grids
 ms.assetid: 0d76f7e4-4149-42c6-9118-bb37d6669dc5
 ms.openlocfilehash: 085fcd0114742e787c8cbcaabf89a354b0e3e830
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144631"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Hücreler, Satırlar ve Sütunlarla Programlama
 Bu bölümde, hücre, satır ve sütun nesneleri ile ilgili çeşitli programlama görevlerini gösteren konuları sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Bir Windows Forms DataGridView Denetiminde Ayrı Hücrelere ToolTips Ekleme](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+ [Nasıl yapılır: Bir Windows Forms DataGridView denetiminde ayrı hücrelere ToolTips ekleme](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  Nasıl yapılacağını açıklar <xref:System.Windows.Forms.DataGridView.CellFormatting> farklı araç ipuçları için tek tek hücrelere sağlamak için olay.  
   
- [Nasıl yapılır: Bir Windows Forms DataGridView Denetiminin Bir Hücresindeki Değişikliklere Dayalı Olarak Özel Eylem Gerçekleştirme](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ [Nasıl yapılır: Bir Windows Forms DataGridView denetiminin bir hücresindeki değişikliklere dayalı olarak özel eylem gerçekleştirme](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
  Nasıl yapılacağını açıklar <xref:System.Windows.Forms.DataGridView.CellValueChanged> ve <xref:System.Windows.Forms.DataGridView.CellStateChanged> olayları.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Bantları Yönlendirme](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView denetiminde bantları yönlendirme](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
  Nesne türü ile programlamayı açıklar <xref:System.Windows.Forms.DataGridViewBand>, satırlar ve sütunlar için temel türü.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Satırları Yönlendirme](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView denetiminde satırları yönlendirme](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
  Nesne türü ile programlamayı açıklar `DataGridViewRow`.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunları Yönlendirme](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView denetiminde sütunları yönlendirme](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
  Nesne türü ile programlamayı açıklar `DataGridViewColumn`.  
   
- [Nasıl yapılır: Windows Forms DataGridView Denetiminde Görüntü Sütunlarıyla Çalışma](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ [Nasıl yapılır: Windows Forms DataGridView denetiminde görüntü sütunlarıyla çalışma](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
  İle programlamayı açıklar `DataGridViewImageColumn` sınıfı.  
   
 ## <a name="reference"></a>Başvuru  

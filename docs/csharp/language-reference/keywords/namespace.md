@@ -10,10 +10,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148765"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# Başvurusu)
@@ -28,15 +28,15 @@ Ad alanı içinde sıfır veya daha fazla türlerinden birini bildirebilirsiniz:
 
 - başka bir ad alanı
 
-- [sınıf](class.md)
+- [class](class.md)
 
-- [arabirim](interface.md)
+- [interface](interface.md)
 
-- [struct ](struct.md)
+- [struct](struct.md)
 
 - [enum](enum.md)
 
-- [temsilci](delegate.md)
+- [delegate](delegate.md)
 
 Açıkça bir C# kaynak dosyası içinde bir ad alanı bildirimini olsun veya olmasın, derleyici varsayılan bir ad alanı ekler. Bazen genel ad alanı adlandırılır, bu adlandırılmamış ad, her bir dosyanın yok. Genel ad alanındaki herhangi bir tanımlayıcı adlandırılmış bir ad alanında kullanılabilir.
 
@@ -60,7 +60,7 @@ Ad alanlarını kullanma hakkında daha fazla bilgi için aşağıdaki konulara 
 
 - [Ad Alanlarını Kullanma](../../programming-guide/namespaces/using-namespaces.md)
 
-- [Nasıl yapılır: Genel Ad Alanı Diğer Adlarını Kullanma](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+- [Nasıl yapılır: Genel Namespace diğer adlarını kullanma](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -68,9 +68,9 @@ Ad alanlarını kullanma hakkında daha fazla bilgi için aşağıdaki konulara 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../../language-reference/index.md)
+- [C# başvurusu](../../language-reference/index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [Ad Alanı Anahtar Sözcükleri](namespace-keywords.md)
-- [kullanma](using-directive.md)
+- [using](using-directive.md)
 - [' Using static](using-static.md)

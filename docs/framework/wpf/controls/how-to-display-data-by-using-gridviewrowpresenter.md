@@ -6,10 +6,10 @@ helpviewer_keywords:
 - GridViewRowPresenter [WPF]
 ms.assetid: bdb785a5-a262-44d5-a517-ea14383e5f70
 ms.openlocfilehash: 0e471df3ab6fd10417fc58ece4cdb8ff1c457c95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149155"
 ---
 # <a name="how-to-display-data-by-using-gridviewrowpresenter"></a>Nasıl yapılır: GridViewRowPresenter Kullanarak Veri Görüntüleme
@@ -25,4 +25,4 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.Gri
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewColumnCollection>
-- [GridView Genel Bakışı](gridview-overview.md)
+- [GridView Genel Bakış](gridview-overview.md)

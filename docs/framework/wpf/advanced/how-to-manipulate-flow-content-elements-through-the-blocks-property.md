@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
 ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150143"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Nasıl yapılır: Akış İçeriği Öğelerini Blokların Özelliği ile Düzenleme

@@ -10,10 +10,10 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143773"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Yönetilmeyen Kod İçin Güvenli Kodlama Yönergeleri
@@ -48,7 +48,7 @@ Yönetilmeyen kod (örneğin, yerel kod API'leri, Win32 gibi) çağırmak bazı 
 |Anahtar sözcüğü|Güvenlik konuları|  
 |-------------|-----------------------------|  
 |**Güvenli**|Tamamen herhangi kod için çağrılacak bile kötü amaçlı kod zararsız. Yalnızca diğer yönetilen kod gibi kullanılabilir. Örneğin, günün saatini alır bir işlev genellikle güvenlidir.|  
-|**yerel**|Güvenlik-nötr; diğer bir deyişle, gerektiren yönetilmeyen kod çağırmak için kod iznini yönetilmeyen. Güvenlik, yetkisiz bir çağıranın vermemeye denetlenir.|  
+|**Yerel**|Güvenlik-nötr; diğer bir deyişle, gerektiren yönetilmeyen kod çağırmak için kod iznini yönetilmeyen. Güvenlik, yetkisiz bir çağıranın vermemeye denetlenir.|  
 |**unsafe**|Giriş noktasıyla gizlenen güvenlik tehlikeli yönetilmeyen kod. Geliştiricilerin en dikkat gibi yönetilmeyen kod kullanarak başka bir güvenlik açığını önlemek için korumaların emin emin kullanması gerekir. Bu anahtar sözcük güvenlik sistemi geçersiz kılar. geliştiriciler sorumlu olması gerekir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147114"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma
@@ -101,19 +101,19 @@ ms.locfileid: "59147114"
 -   Kullanıcı İlkesi yapılandırma dosyası: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: DEVPATH Kullanarak Derlemelerin Konumunu Bulma](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [Nasıl yapılır: DEVPATH kullanarak derlemelerin bulun](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  Derlemeler ararken DEVPATH ortam değişkenini kullanmak için çalışma zamanının açıklar.  
   
- [Derleme Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
+ [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
  Bir derlemenin konumunu belirtme ve kullanmak için bir derleme sürümünü açıklar.  
   
- [Derlemenin Konumunu Belirtme](../../../docs/framework/configure-apps/specify-assembly-location.md)  
+ [Bütünleştirilmiş Kodun Konumunu Belirtme](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  Çalışma zamanının bir derlemeyi araması gereken yeri belirtmek açıklar.  
   
  [Şifreleme Sınıflarını Yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  Bir şifreleme sınıfına ve bir nesne tanımlayıcısının bir şifreleme algoritması için algoritma adı eşlemeyle ilgili bilgi açıklar.  
   
- [Nasıl yapılır: Yayımcı İlkesi Oluşturma](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [Nasıl yapılır: Yayımcı ilkesi oluşturma](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
  Derleme yeniden yönlendirmesini ve kod tabanlı ayarları belirtmek için bir yayımcı ilkesi dosyası ne zaman ve nasıl eklemeniz gerektiğini açıklar.  
   
  [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)  
@@ -122,9 +122,9 @@ ms.locfileid: "59147114"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yapılandırma Dosyası Şeması](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Derlemenin Konumunu Belirtme](../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Derleme Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Bütünleştirilmiş Kodun Konumunu Belirtme](../../../docs/framework/configure-apps/specify-assembly-location.md)
+- [Bütünleştirilmiş Kod Sürümlerini Yönlendirme](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
 - [ASP.NET Web sitesi yönetimi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
-- [Ortak Dil Çalışma Zamanındaki Derlemeler](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

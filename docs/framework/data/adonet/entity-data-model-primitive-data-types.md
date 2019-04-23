@@ -3,10 +3,10 @@ title: 'Varlık Veri Modeli: Basit Veri Türleri'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
 ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142655"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Varlık Veri Modeli: Basit Veri Türleri
@@ -29,7 +29,7 @@ Varlık veri modeli (EDM) (örneğin, dize, Boolean, Int32 vb.) tanımlamak içi
 |DateTimeOffset|Bir tarih ve saat olarak GMT'den dakikalar içinde bir uzaklık içerir.|Duyarlık, null, varsayılan|  
 |Ondalık|Sabit kesinlik ve ölçek ile sayısal bir değer içeriyor.|Duyarlık, null, varsayılan|  
 |Çift|Kayan nokta numarası ile 15 basamaklı duyarlık içerir.|Duyarlık, null, varsayılan|  
-|Kayan|Kayan noktalı sayı yedi basamaklı duyarlık içerir.|Duyarlık, null, varsayılan|  
+|Float|Kayan noktalı sayı yedi basamaklı duyarlık içerir.|Duyarlık, null, varsayılan|  
 |Guid|16 baytlık benzersiz bir tanımlayıcı içerir.|Duyarlık, null, varsayılan|  
 |Int16|İşaretli 16 bit tam sayı değeri içerir.|Duyarlık, null, varsayılan|  
 |Int32|İşaretli 32-bit tamsayı değeri içerir.|Duyarlık, null, varsayılan|  

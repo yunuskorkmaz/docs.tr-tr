@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
 ms.openlocfilehash: 7f7cf24f7883553329de3761ff0670e8e3a09463
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151014"
 ---
 # <a name="how-to-animate-a-rectangle"></a>Nasıl yapılır: Bir Dikdörtgene Animasyon Ekleme
@@ -31,5 +31,5 @@ Bu örnekte, boyut ve konum bir dikdörtgenin değişikliklerine animasyon eklem
 - <xref:System.Windows.Media.RectangleGeometry>
 - [Animasyona Genel bakış](animation-overview.md)
 - [Grafikler ve Multimedya](index.md)
-- [Grafikler ile İlgili Nasıl Yapılır Konuları](graphics-how-to-topics.md)
-- [Animasyon ve Zamanlama ile İlgili Nasıl Yapılır Konuları](animation-and-timing-how-to-topics.md)
+- [Grafikler ile ilgili nasıl yapılır konuları](graphics-how-to-topics.md)
+- [Animasyon ve zamanlama ile ilgili nasıl yapılır konuları](animation-and-timing-how-to-topics.md)

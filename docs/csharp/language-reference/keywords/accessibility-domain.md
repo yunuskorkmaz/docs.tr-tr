@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
 ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141758"
 ---
 # <a name="accessibility-domain-c-reference"></a>Erişilebilirlik Etki Alanı (C# Başvurusu)
@@ -27,7 +27,7 @@ Hangi program bölümlerde üyesi başvurulabilir üyesi erişilebilirlik etki a
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Başvurusu](../../../csharp/language-reference/index.md)
+- [C# başvurusu](../../../csharp/language-reference/index.md)
 - [C# Programlama Kılavuzu](../../../csharp/programming-guide/index.md)
 - [C# Anahtar Sözcükleri](../../../csharp/language-reference/keywords/index.md)
 - [Erişim Değiştiricileri](../../../csharp/language-reference/keywords/access-modifiers.md)

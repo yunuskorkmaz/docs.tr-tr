@@ -5,10 +5,10 @@ helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
 ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147803"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Tür Dönüştürücülerinde ve İşaretleme Uzantılarında Kullanılabilir Hizmet Bağlamları
@@ -190,5 +190,5 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [XAML Biçimlendirme Uzantılarına Genel Bakış](markup-extensions-for-xaml-overview.md)
+- [XAML İşaretleme Uzantılarına Genel Bakış](markup-extensions-for-xaml-overview.md)
 - [XAML Tür Dönüştürücülerine Genel Bakış](type-converters-for-xaml-overview.md)

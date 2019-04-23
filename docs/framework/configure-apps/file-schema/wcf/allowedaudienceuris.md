@@ -3,10 +3,10 @@ title: <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 0f4dc73d-d95d-4193-9755-7df4cf2b8e1c
 ms.openlocfilehash: f758fc8e0934f56f9593246497d8aba5084c4a79
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143357"
 ---
 # <a name="allowedaudienceuris"></a>\<allowedAudienceUris >
@@ -70,4 +70,4 @@ Koleksiyonunu temsil eder hedef URI, <xref:System.IdentityModel.Tokens.SamlSecur
 - [\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)
 - [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

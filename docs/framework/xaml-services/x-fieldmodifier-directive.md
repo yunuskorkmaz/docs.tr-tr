@@ -7,10 +7,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144553"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier Yönergesi
@@ -26,7 +26,7 @@ Adlandırılmış nesne başvuruları için alanları ile tanımlanan şekilde X
   
 |||  
 |-|-|  
-|*Ortak*|Geçirdiğiniz belirtmek için tam dizeyi <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> karşı <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> , kullanılan arka plan kod programlama diline bağlı olarak değişir. Açıklamalara bakın.|  
+|*Public*|Geçirdiğiniz belirtmek için tam dizeyi <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> karşı <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> , kullanılan arka plan kod programlama diline bağlı olarak değişir. Açıklamalara bakın.|  
   
 ## <a name="dependencies"></a>Bağımlılıklar  
  XAML üretim kullanıyorsa `x:FieldModifier` her yerden bu XAML üretim kök öğesi bildirmelidir bir [x: Class yönergesi](x-class-directive.md).  
@@ -55,5 +55,5 @@ Adlandırılmış nesne başvuruları için alanları ile tanımlanan şekilde X
 - [WPF için XAML ve Özel Sınıflar](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [Arka Plan Kod ve WPF İçindeki XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:Name Yönergesi](x-name-directive.md)
-- [WPF Uygulaması Oluşturma (WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
+- [WPF uygulaması (WPF) oluşturma](../wpf/app-development/building-a-wpf-application-wpf.md)
 - [x:ClassModifier Yönergesi](x-classmodifier-directive.md)
