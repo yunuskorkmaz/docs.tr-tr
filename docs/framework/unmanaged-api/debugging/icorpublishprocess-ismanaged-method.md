@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 29c5f96bab374d6e2d43424370bff2a4a2ab6df3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218296"
 ---
-# <a name="icorpublishprocessismanaged-method"></a><span data-ttu-id="44cf8-102">ICorPublishProcess::IsManaged Yöntemi</span><span class="sxs-lookup"><span data-stu-id="44cf8-102">ICorPublishProcess::IsManaged Method</span></span>
-<span data-ttu-id="44cf8-103">İşlem bu tarafından başvurulan olup olmadığını gösteren bir değer alır [Icorpublishprocess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) yönetilen kod adı verilir.</span><span class="sxs-lookup"><span data-stu-id="44cf8-103">Gets a value that indicates whether the process referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) is known to have managed code.</span></span>  
+# <a name="icorpublishprocessismanaged-method"></a><span data-ttu-id="a5cb5-102">ICorPublishProcess::IsManaged Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a5cb5-102">ICorPublishProcess::IsManaged Method</span></span>
+<span data-ttu-id="a5cb5-103">İşlem bu tarafından başvurulan olup olmadığını gösteren bir değer alır [Icorpublishprocess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) yönetilen kod adı verilir.</span><span class="sxs-lookup"><span data-stu-id="a5cb5-103">Gets a value that indicates whether the process referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) is known to have managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44cf8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="44cf8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5cb5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a5cb5-104">Syntax</span></span>  
   
 ```  
 HRESULT IsManaged (  
@@ -35,22 +35,22 @@ HRESULT IsManaged (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="44cf8-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="44cf8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a5cb5-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a5cb5-105">Parameters</span></span>  
  `pbManaged`  
- <span data-ttu-id="44cf8-106">[out] İşlem yönetilen kod olup olmadığını gösteren bir Boole değeri için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="44cf8-106">[out] A pointer to a Boolean value that indicates whether the process has managed code.</span></span> <span data-ttu-id="44cf8-107">Değer `true` işlem kodu; yönetiliyorsa Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="44cf8-107">The value is `true` if the process has managed code; otherwise, `false`.</span></span>  
+ <span data-ttu-id="a5cb5-106">[out] İşlem yönetilen kod olup olmadığını gösteren bir Boole değeri için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a5cb5-106">[out] A pointer to a Boolean value that indicates whether the process has managed code.</span></span> <span data-ttu-id="a5cb5-107">Değer `true` işlem kodu; yönetiliyorsa Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="a5cb5-107">The value is `true` if the process has managed code; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="44cf8-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="44cf8-108">Remarks</span></span>  
- <span data-ttu-id="44cf8-109">Geçerli sürümü bu yana `ICorPublishProcess` erişimine yalnızca yönetilen kod, işlemleri izin veren `IsManaged` her zaman döndürür `true`.</span><span class="sxs-lookup"><span data-stu-id="44cf8-109">Since the current version of `ICorPublishProcess` allows access only to processes that have managed code, `IsManaged` always returns `true`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a5cb5-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a5cb5-108">Remarks</span></span>  
+ <span data-ttu-id="a5cb5-109">Geçerli sürümü bu yana `ICorPublishProcess` erişimine yalnızca yönetilen kod, işlemleri izin veren `IsManaged` her zaman döndürür `true`.</span><span class="sxs-lookup"><span data-stu-id="a5cb5-109">Since the current version of `ICorPublishProcess` allows access only to processes that have managed code, `IsManaged` always returns `true`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="44cf8-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="44cf8-110">Requirements</span></span>  
- <span data-ttu-id="44cf8-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44cf8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5cb5-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a5cb5-110">Requirements</span></span>  
+ <span data-ttu-id="a5cb5-111">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5cb5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="44cf8-112">**Üst bilgi:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="44cf8-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="a5cb5-112">**Üst bilgi:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="a5cb5-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="44cf8-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="44cf8-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a5cb5-113">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5cb5-113">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="44cf8-114">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="44cf8-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="a5cb5-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5cb5-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44cf8-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="44cf8-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5cb5-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a5cb5-115">See also</span></span>
 
-- [<span data-ttu-id="44cf8-116">ICorPublishProcess Arabirimi</span><span class="sxs-lookup"><span data-stu-id="44cf8-116">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+- [<span data-ttu-id="a5cb5-116">ICorPublishProcess Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a5cb5-116">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
