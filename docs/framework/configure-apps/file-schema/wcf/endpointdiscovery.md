@@ -3,22 +3,22 @@ title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
 ms.openlocfilehash: 125baba917a49135aaa426df2cfa1a4dbe8ac1e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119502"
 ---
-# <a name="endpointdiscovery"></a><span data-ttu-id="a3bee-101">\<endpointDiscovery ></span><span class="sxs-lookup"><span data-stu-id="a3bee-101">\<endpointDiscovery></span></span>
-<span data-ttu-id="a3bee-102">Bir uç nokta bulunabilirliği, kapsamı ve meta verilerine özel uzantıları gibi çeşitli bulma ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3bee-102">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>  
+# <a name="endpointdiscovery"></a><span data-ttu-id="9b71f-101">\<endpointDiscovery ></span><span class="sxs-lookup"><span data-stu-id="9b71f-101">\<endpointDiscovery></span></span>
+<span data-ttu-id="9b71f-102">Bir uç nokta bulunabilirliği, kapsamı ve meta verilerine özel uzantıları gibi çeşitli bulma ayarlarını belirtir.</span><span class="sxs-lookup"><span data-stu-id="9b71f-102">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>  
   
-<span data-ttu-id="a3bee-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="a3bee-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="a3bee-104">\<davranışlar ></span><span class="sxs-lookup"><span data-stu-id="a3bee-104">\<behaviors></span></span>  
-<span data-ttu-id="a3bee-105">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="a3bee-105">\<endpointBehaviors></span></span>  
-<span data-ttu-id="a3bee-106">\<davranışı ></span><span class="sxs-lookup"><span data-stu-id="a3bee-106">\<behavior></span></span>  
-<span data-ttu-id="a3bee-107">\<endpointDiscovery ></span><span class="sxs-lookup"><span data-stu-id="a3bee-107">\<endpointDiscovery></span></span>  
+<span data-ttu-id="9b71f-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="9b71f-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="9b71f-104">\<davranışlar ></span><span class="sxs-lookup"><span data-stu-id="9b71f-104">\<behaviors></span></span>  
+<span data-ttu-id="9b71f-105">\<endpointBehaviors></span><span class="sxs-lookup"><span data-stu-id="9b71f-105">\<endpointBehaviors></span></span>  
+<span data-ttu-id="9b71f-106">\<davranışı ></span><span class="sxs-lookup"><span data-stu-id="9b71f-106">\<behavior></span></span>  
+<span data-ttu-id="9b71f-107">\<endpointDiscovery ></span><span class="sxs-lookup"><span data-stu-id="9b71f-107">\<endpointDiscovery></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3bee-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a3bee-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9b71f-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9b71f-108">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -35,37 +35,37 @@ ms.locfileid: "59119502"
 </behaviors>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a3bee-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="a3bee-109">Attributes and Elements</span></span>  
- <span data-ttu-id="a3bee-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="a3bee-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9b71f-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="9b71f-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="9b71f-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="9b71f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a3bee-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="a3bee-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="9b71f-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="9b71f-111">Attributes</span></span>  
   
-|<span data-ttu-id="a3bee-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="a3bee-112">Attribute</span></span>|<span data-ttu-id="a3bee-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a3bee-113">Description</span></span>|  
+|<span data-ttu-id="9b71f-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="9b71f-112">Attribute</span></span>|<span data-ttu-id="9b71f-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9b71f-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="a3bee-114">Etkin</span><span class="sxs-lookup"><span data-stu-id="a3bee-114">enabled</span></span>|<span data-ttu-id="a3bee-115">Bu uç noktada bulunabilirliği etkin olup olmadığını belirten bir Boole değeri.</span><span class="sxs-lookup"><span data-stu-id="a3bee-115">A Boolean value that specifies whether discoverability is enabled on this endpoint.</span></span> <span data-ttu-id="a3bee-116">Varsayılan, `false` değeridir.</span><span class="sxs-lookup"><span data-stu-id="a3bee-116">The default is `false`.</span></span>|  
+|<span data-ttu-id="9b71f-114">Etkin</span><span class="sxs-lookup"><span data-stu-id="9b71f-114">enabled</span></span>|<span data-ttu-id="9b71f-115">Bu uç noktada bulunabilirliği etkin olup olmadığını belirten bir Boole değeri.</span><span class="sxs-lookup"><span data-stu-id="9b71f-115">A Boolean value that specifies whether discoverability is enabled on this endpoint.</span></span> <span data-ttu-id="9b71f-116">Varsayılan, `false` değeridir.</span><span class="sxs-lookup"><span data-stu-id="9b71f-116">The default is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a3bee-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="a3bee-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="9b71f-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="9b71f-117">Child Elements</span></span>  
   
-|<span data-ttu-id="a3bee-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="a3bee-118">Element</span></span>|<span data-ttu-id="a3bee-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a3bee-119">Description</span></span>|  
+|<span data-ttu-id="9b71f-118">Öğe</span><span class="sxs-lookup"><span data-stu-id="9b71f-118">Element</span></span>|<span data-ttu-id="9b71f-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9b71f-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a3bee-120">\<kapsamları ></span><span class="sxs-lookup"><span data-stu-id="a3bee-120">\<scopes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|<span data-ttu-id="a3bee-121">Uç nokta için URI kapsam koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="a3bee-121">A collection of scope URIs for the endpoint.</span></span> <span data-ttu-id="a3bee-122">Birden fazla kapsam URI'leri tek bir uç nokta ile ilişkilendirilebilir.</span><span class="sxs-lookup"><span data-stu-id="a3bee-122">More than one scope Uris can be associated with a single endpoint.</span></span>|  
-|<span data-ttu-id="a3bee-123">[\<Uzantılar >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [, \<endpointDiscovery >]</span><span class="sxs-lookup"><span data-stu-id="a3bee-123">[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]</span></span>|<span data-ttu-id="a3bee-124">Yayımlanması için bir uç nokta için özel meta verileri belirtmenizi sağlayan XML öğeleri koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="a3bee-124">A collection of XML elements that allows you to specify custom metadata to be published for an endpoint.</span></span>|  
-|<span data-ttu-id="a3bee-125">\<Tür ></span><span class="sxs-lookup"><span data-stu-id="a3bee-125">\<types></span></span>|<span data-ttu-id="a3bee-126">Aranacak arayüzler koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="a3bee-126">A collection of interfaces to search for.</span></span>|  
+|[<span data-ttu-id="9b71f-120">\<kapsamları ></span><span class="sxs-lookup"><span data-stu-id="9b71f-120">\<scopes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|<span data-ttu-id="9b71f-121">Uç nokta için URI kapsam koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="9b71f-121">A collection of scope URIs for the endpoint.</span></span> <span data-ttu-id="9b71f-122">Birden fazla kapsam URI'leri tek bir uç nokta ile ilişkilendirilebilir.</span><span class="sxs-lookup"><span data-stu-id="9b71f-122">More than one scope Uris can be associated with a single endpoint.</span></span>|  
+|<span data-ttu-id="9b71f-123">[\<Uzantılar >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [, \<endpointDiscovery >]</span><span class="sxs-lookup"><span data-stu-id="9b71f-123">[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [of \<endpointDiscovery>]</span></span>|<span data-ttu-id="9b71f-124">Yayımlanması için bir uç nokta için özel meta verileri belirtmenizi sağlayan XML öğeleri koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="9b71f-124">A collection of XML elements that allows you to specify custom metadata to be published for an endpoint.</span></span>|  
+|<span data-ttu-id="9b71f-125">\<Tür ></span><span class="sxs-lookup"><span data-stu-id="9b71f-125">\<types></span></span>|<span data-ttu-id="9b71f-126">Aranacak arayüzler koleksiyonu.</span><span class="sxs-lookup"><span data-stu-id="9b71f-126">A collection of interfaces to search for.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="a3bee-127">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="a3bee-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="9b71f-127">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="9b71f-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="a3bee-128">Öğe</span><span class="sxs-lookup"><span data-stu-id="a3bee-128">Element</span></span>|<span data-ttu-id="a3bee-129">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a3bee-129">Description</span></span>|  
+|<span data-ttu-id="9b71f-128">Öğe</span><span class="sxs-lookup"><span data-stu-id="9b71f-128">Element</span></span>|<span data-ttu-id="9b71f-129">Açıklama</span><span class="sxs-lookup"><span data-stu-id="9b71f-129">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a3bee-130">\<davranışı ></span><span class="sxs-lookup"><span data-stu-id="a3bee-130">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="a3bee-131">Bir davranış öğesi belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3bee-131">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="9b71f-130">\<davranışı ></span><span class="sxs-lookup"><span data-stu-id="9b71f-130">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="9b71f-131">Bir davranış öğesi belirtir.</span><span class="sxs-lookup"><span data-stu-id="9b71f-131">Specifies a behavior element.</span></span>|  
 |||  
   
-## <a name="remarks"></a><span data-ttu-id="a3bee-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a3bee-132">Remarks</span></span>  
- <span data-ttu-id="a3bee-133">Uç noktanın davranışı yapılandırmasına ve ile eklendiğinde `enabled` özniteliğini `true`, bu yapılandırma öğesi bulunabilirliği sağlar.</span><span class="sxs-lookup"><span data-stu-id="a3bee-133">When added to the endpoint’s behavior configuration and with the `enabled` attribute set to `true`, this configuration element enables its discoverability.</span></span> <span data-ttu-id="a3bee-134">Ayrıca, kullanabileceğiniz [ \<kapsamları >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)özel kapsam sorgu sırasında hizmet bitiş noktası süzmek için kullanılan bir URI'leri belirtmek için alt öğesi hem de [ \<uzantıları >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) standart bulunabilirlik meta veriler ile birlikte (EPR, ContractTypeName, BindingName, kapsam ve ListenURI) yayımlanmasına özel meta verileri belirtmek için alt öğesi.</span><span class="sxs-lookup"><span data-stu-id="a3bee-134">In addition, you can use the [\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)child element to specifying custom scope Uris that can be used to filter service endpoints during query, as well as the [\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) child element to specify custom metadata that should be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9b71f-132">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9b71f-132">Remarks</span></span>  
+ <span data-ttu-id="9b71f-133">Uç noktanın davranışı yapılandırmasına ve ile eklendiğinde `enabled` özniteliğini `true`, bu yapılandırma öğesi bulunabilirliği sağlar.</span><span class="sxs-lookup"><span data-stu-id="9b71f-133">When added to the endpoint’s behavior configuration and with the `enabled` attribute set to `true`, this configuration element enables its discoverability.</span></span> <span data-ttu-id="9b71f-134">Ayrıca, kullanabileceğiniz [ \<kapsamları >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)özel kapsam sorgu sırasında hizmet bitiş noktası süzmek için kullanılan bir URI'leri belirtmek için alt öğesi hem de [ \<uzantıları >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) standart bulunabilirlik meta veriler ile birlikte (EPR, ContractTypeName, BindingName, kapsam ve ListenURI) yayımlanmasına özel meta verileri belirtmek için alt öğesi.</span><span class="sxs-lookup"><span data-stu-id="9b71f-134">In addition, you can use the [\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)child element to specifying custom scope Uris that can be used to filter service endpoints during query, as well as the [\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) child element to specify custom metadata that should be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span>  
   
- <span data-ttu-id="a3bee-135">Bu yapılandırma öğesi bağlıdır [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) öğesi bulunabilirliği hizmet düzeyi denetim sağlar.</span><span class="sxs-lookup"><span data-stu-id="a3bee-135">This configuration element is dependent on the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element that provides the service level control of discoverability.</span></span> <span data-ttu-id="a3bee-136">Bu, bu öğenin ayarları yoksayıldığı anlamına gelir [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) yapılandırmada mevcut değil.</span><span class="sxs-lookup"><span data-stu-id="a3bee-136">This means that this element’s settings are ignored if [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) is not present in the configuration.</span></span>  
+ <span data-ttu-id="9b71f-135">Bu yapılandırma öğesi bağlıdır [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) öğesi bulunabilirliği hizmet düzeyi denetim sağlar.</span><span class="sxs-lookup"><span data-stu-id="9b71f-135">This configuration element is dependent on the [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) element that provides the service level control of discoverability.</span></span> <span data-ttu-id="9b71f-136">Bu, bu öğenin ayarları yoksayıldığı anlamına gelir [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) yapılandırmada mevcut değil.</span><span class="sxs-lookup"><span data-stu-id="9b71f-136">This means that this element’s settings are ignored if [\<serviceDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) is not present in the configuration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a3bee-137">Örnek</span><span class="sxs-lookup"><span data-stu-id="a3bee-137">Example</span></span>  
- <span data-ttu-id="a3bee-138">Aşağıdaki yapılandırma örnek filtreleme kapsamları ve bir uç nokta için yayımlanacak uzantı meta verileri belirtir.</span><span class="sxs-lookup"><span data-stu-id="a3bee-138">The following configuration example specifies filtering scopes and extension metadata to be published for an endpoint.</span></span>  
+## <a name="example"></a><span data-ttu-id="9b71f-137">Örnek</span><span class="sxs-lookup"><span data-stu-id="9b71f-137">Example</span></span>  
+ <span data-ttu-id="9b71f-138">Aşağıdaki yapılandırma örnek filtreleme kapsamları ve bir uç nokta için yayımlanacak uzantı meta verileri belirtir.</span><span class="sxs-lookup"><span data-stu-id="9b71f-138">The following configuration example specifies filtering scopes and extension metadata to be published for an endpoint.</span></span>  
   
 ```xml  
 <services>
@@ -104,6 +104,6 @@ ms.locfileid: "59119502"
 </behaviors>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a3bee-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a3bee-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9b71f-139">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9b71f-139">See also</span></span>
 
 - <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
