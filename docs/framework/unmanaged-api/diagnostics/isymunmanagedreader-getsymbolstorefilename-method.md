@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 147b33a3f49f9163daea776779ca26f62561a84e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170384"
 ---
-# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="c45c7-102">ISymUnmanagedReader::GetSymbolStoreFileName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="c45c7-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
-<span data-ttu-id="c45c7-103">Sembol deposundaki disk dosya adı sağlar.</span><span class="sxs-lookup"><span data-stu-id="c45c7-103">Provides the on-disk file name of the symbol store.</span></span>  
+# <a name="isymunmanagedreadergetsymbolstorefilename-method"></a><span data-ttu-id="b1b52-102">ISymUnmanagedReader::GetSymbolStoreFileName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b1b52-102">ISymUnmanagedReader::GetSymbolStoreFileName Method</span></span>
+<span data-ttu-id="b1b52-103">Sembol deposundaki disk dosya adı sağlar.</span><span class="sxs-lookup"><span data-stu-id="b1b52-103">Provides the on-disk file name of the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c45c7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c45c7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b1b52-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b1b52-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSymbolStoreFileName (  
@@ -37,22 +37,22 @@ HRESULT GetSymbolStoreFileName (
         length_is (*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c45c7-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c45c7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b1b52-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b1b52-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="c45c7-106">[in] Boyutu `szName` arabellek.</span><span class="sxs-lookup"><span data-stu-id="c45c7-106">[in] The size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="b1b52-106">[in] Boyutu `szName` arabellek.</span><span class="sxs-lookup"><span data-stu-id="b1b52-106">[in] The size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="c45c7-107">[out] Döndürülen adının uzunluğu alan değişken işaretçisi `szName`, null sonlandırma dahil.</span><span class="sxs-lookup"><span data-stu-id="c45c7-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
+ <span data-ttu-id="b1b52-107">[out] Döndürülen adının uzunluğu alan değişken işaretçisi `szName`, null sonlandırma dahil.</span><span class="sxs-lookup"><span data-stu-id="b1b52-107">[out] A pointer to the variable that receives the length of the name returned in `szName`, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="c45c7-108">[out] Bir işaretçi değişkenine sembol deposunun dosya adını alır.</span><span class="sxs-lookup"><span data-stu-id="c45c7-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
+ <span data-ttu-id="b1b52-108">[out] Bir işaretçi değişkenine sembol deposunun dosya adını alır.</span><span class="sxs-lookup"><span data-stu-id="b1b52-108">[out] A pointer to the variable that receives the file name of the symbol store.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c45c7-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="c45c7-109">Return Value</span></span>  
- <span data-ttu-id="c45c7-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="c45c7-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b1b52-109">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="b1b52-109">Return Value</span></span>  
+ <span data-ttu-id="b1b52-110">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="b1b52-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c45c7-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c45c7-111">Requirements</span></span>  
- <span data-ttu-id="c45c7-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c45c7-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b1b52-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b1b52-111">Requirements</span></span>  
+ <span data-ttu-id="b1b52-112">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b1b52-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c45c7-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c45c7-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1b52-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b1b52-113">See also</span></span>
 
-- [<span data-ttu-id="c45c7-114">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c45c7-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="b1b52-114">ISymUnmanagedReader Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b1b52-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
