@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b880358ed0d7bce4896217bc07c6ef6268d62962
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076282"
 ---
-# <a name="icordebugdebugactiveprocess-method"></a><span data-ttu-id="94a2d-102">ICorDebug::DebugActiveProcess Yöntemi</span><span class="sxs-lookup"><span data-stu-id="94a2d-102">ICorDebug::DebugActiveProcess Method</span></span>
-<span data-ttu-id="94a2d-103">Hata ayıklayıcı, varolan bir sürece ekler.</span><span class="sxs-lookup"><span data-stu-id="94a2d-103">Attaches the debugger to an existing process.</span></span>  
+# <a name="icordebugdebugactiveprocess-method"></a><span data-ttu-id="3d276-102">ICorDebug::DebugActiveProcess Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3d276-102">ICorDebug::DebugActiveProcess Method</span></span>
+<span data-ttu-id="3d276-103">Hata ayıklayıcı, varolan bir sürece ekler.</span><span class="sxs-lookup"><span data-stu-id="3d276-103">Attaches the debugger to an existing process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="94a2d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="94a2d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d276-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3d276-104">Syntax</span></span>  
   
 ```  
 HRESULT DebugActiveProcess (  
@@ -37,28 +37,28 @@ HRESULT DebugActiveProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="94a2d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="94a2d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3d276-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3d276-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="94a2d-106">[in] Hata ayıklayıcı eklenmiş olduğu işlem kimliği.</span><span class="sxs-lookup"><span data-stu-id="94a2d-106">[in] The ID of the process to which the debugger is to be attached.</span></span>  
+ <span data-ttu-id="3d276-106">[in] Hata ayıklayıcı eklenmiş olduğu işlem kimliği.</span><span class="sxs-lookup"><span data-stu-id="3d276-106">[in] The ID of the process to which the debugger is to be attached.</span></span>  
   
  `win32Attach`  
- <span data-ttu-id="94a2d-107">[in] Ayarlanmış bir Boole değeri `true` hata ayıklayıcı Win32 hata ayıklayıcı işlemi gibi davranır ve yönetilmeyen geri çağırmaları; gönderme, aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="94a2d-107">[in] Boolean value that is set to `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
+ <span data-ttu-id="3d276-107">[in] Ayarlanmış bir Boole değeri `true` hata ayıklayıcı Win32 hata ayıklayıcı işlemi gibi davranır ve yönetilmeyen geri çağırmaları; gönderme, aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="3d276-107">[in] Boolean value that is set to `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="94a2d-108">[out] Hata ayıklayıcı eklendikten işlemini temsil eden bir "ICorDebugProcess" nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="94a2d-108">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
+ <span data-ttu-id="3d276-108">[out] Hata ayıklayıcı eklendikten işlemini temsil eden bir "ICorDebugProcess" nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="3d276-108">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="94a2d-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="94a2d-109">Remarks</span></span>  
- <span data-ttu-id="94a2d-110">Birlikte çalışma hata ayıklama gibi IA-64 tabanlı ve AMD64 tabanlı platformlarda, Win9x ve x86 olmayan platformda desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="94a2d-110">Interop debugging is not supported on Win9x and non-x86 platforms, such as IA-64-based and AMD64-based platforms.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3d276-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3d276-109">Remarks</span></span>  
+ <span data-ttu-id="3d276-110">Birlikte çalışma hata ayıklama gibi IA-64 tabanlı ve AMD64 tabanlı platformlarda, Win9x ve x86 olmayan platformda desteklenmiyor.</span><span class="sxs-lookup"><span data-stu-id="3d276-110">Interop debugging is not supported on Win9x and non-x86 platforms, such as IA-64-based and AMD64-based platforms.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="94a2d-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="94a2d-111">Requirements</span></span>  
- <span data-ttu-id="94a2d-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94a2d-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d276-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3d276-111">Requirements</span></span>  
+ <span data-ttu-id="3d276-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d276-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="94a2d-113">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="94a2d-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3d276-113">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3d276-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="94a2d-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="94a2d-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3d276-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3d276-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="94a2d-115">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="94a2d-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="3d276-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d276-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="94a2d-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="94a2d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3d276-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3d276-116">See also</span></span>
 
-- [<span data-ttu-id="94a2d-117">ICorDebug Arabirimi</span><span class="sxs-lookup"><span data-stu-id="94a2d-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [<span data-ttu-id="3d276-117">ICorDebug Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3d276-117">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: b4a97c97-7f88-4a89-b1d1-cf2c0d087955
 ms.openlocfilehash: b0f5ebdd6884c541c5d4c96cfeea33d378eeeca3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078517"
 ---
-# <a name="fonts-how-to-topics"></a><span data-ttu-id="9c7df-102">Yazı Tipleri ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="9c7df-102">Fonts How-to Topics</span></span>
-<span data-ttu-id="9c7df-103">Bu bölümdeki konular, birlikte yazı tipi özelliklerinin nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9c7df-103">The topics in this section demonstrate how to use the font features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="fonts-how-to-topics"></a><span data-ttu-id="cfa85-102">Yazı Tipleri ile İlgili Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="cfa85-102">Fonts How-to Topics</span></span>
+<span data-ttu-id="cfa85-103">Bu bölümdeki konular, birlikte yazı tipi özelliklerinin nasıl kullanılacağını gösteren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cfa85-103">The topics in this section demonstrate how to use the font features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9c7df-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="9c7df-104">In This Section</span></span>  
- [<span data-ttu-id="9c7df-105">Sistem Yazı Tiplerini Numaralandırma</span><span class="sxs-lookup"><span data-stu-id="9c7df-105">Enumerate System Fonts</span></span>](how-to-enumerate-system-fonts.md)  
- [<span data-ttu-id="9c7df-106">FontSizeConverter Sınıfını Kullanma</span><span class="sxs-lookup"><span data-stu-id="9c7df-106">Use the FontSizeConverter Class</span></span>](how-to-use-the-fontsizeconverter-class.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cfa85-104">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="cfa85-104">In This Section</span></span>  
+ [<span data-ttu-id="cfa85-105">Sistem Yazı Tiplerini Numaralandırma</span><span class="sxs-lookup"><span data-stu-id="cfa85-105">Enumerate System Fonts</span></span>](how-to-enumerate-system-fonts.md)  
+ [<span data-ttu-id="cfa85-106">FontSizeConverter Sınıfını Kullanma</span><span class="sxs-lookup"><span data-stu-id="cfa85-106">Use the FontSizeConverter Class</span></span>](how-to-use-the-fontsizeconverter-class.md)  
   
-## <a name="see-also"></a><span data-ttu-id="9c7df-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9c7df-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cfa85-107">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cfa85-107">See also</span></span>
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="9c7df-108">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="9c7df-108">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="9c7df-109">WPF'de Tipografi</span><span class="sxs-lookup"><span data-stu-id="9c7df-109">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="cfa85-108">WPF'deki Belgeler</span><span class="sxs-lookup"><span data-stu-id="cfa85-108">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="cfa85-109">WPF'de Tipografi</span><span class="sxs-lookup"><span data-stu-id="cfa85-109">Typography in WPF</span></span>](typography-in-wpf.md)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b9f95a404ce7124a76ee527cdc70ccccf103838b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076802"
 ---
-# <a name="icorprofilerinfo2setenterleavefunctionhooks2-method"></a><span data-ttu-id="e3f85-102">ICorProfilerInfo2::SetEnterLeaveFunctionHooks2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e3f85-102">ICorProfilerInfo2::SetEnterLeaveFunctionHooks2 Method</span></span>
-<span data-ttu-id="e3f85-103">Profil Oluşturucu uygulanan işlevleri güncelleştirilmiş sürümlerine ilişkin "enter", "Ayrıl" ve "tailcall" hooks yönetilen işlevlerin çağrılmasına belirtir.</span><span class="sxs-lookup"><span data-stu-id="e3f85-103">Specifies profiler-implemented functions to be called on the updated versions of the "enter", "leave", and "tailcall" hooks of managed functions.</span></span>  
+# <a name="icorprofilerinfo2setenterleavefunctionhooks2-method"></a><span data-ttu-id="3d737-102">ICorProfilerInfo2::SetEnterLeaveFunctionHooks2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3d737-102">ICorProfilerInfo2::SetEnterLeaveFunctionHooks2 Method</span></span>
+<span data-ttu-id="3d737-103">Profil Oluşturucu uygulanan işlevleri güncelleştirilmiş sürümlerine ilişkin "enter", "Ayrıl" ve "tailcall" hooks yönetilen işlevlerin çağrılmasına belirtir.</span><span class="sxs-lookup"><span data-stu-id="3d737-103">Specifies profiler-implemented functions to be called on the updated versions of the "enter", "leave", and "tailcall" hooks of managed functions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e3f85-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e3f85-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d737-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3d737-104">Syntax</span></span>  
   
 ```  
 HRESULT SetEnterLeaveFunctionHooks2(  
@@ -36,33 +36,33 @@ HRESULT SetEnterLeaveFunctionHooks2(
     [in] FunctionTailcall2 *pFuncTailcall);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e3f85-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e3f85-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3d737-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3d737-105">Parameters</span></span>  
  `pFuncEnter`  
- <span data-ttu-id="e3f85-106">[in] Bir işaretçi olarak kullanılmak üzere uygulamaya [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="e3f85-106">[in] A pointer to the implementation to be used as the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) callback.</span></span>  
+ <span data-ttu-id="3d737-106">[in] Bir işaretçi olarak kullanılmak üzere uygulamaya [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="3d737-106">[in] A pointer to the implementation to be used as the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) callback.</span></span>  
   
  `pFuncLeave`  
- <span data-ttu-id="e3f85-107">[in] Bir işaretçi olarak kullanılmak üzere uygulamaya [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="e3f85-107">[in] A pointer to the implementation to be used as the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback.</span></span>  
+ <span data-ttu-id="3d737-107">[in] Bir işaretçi olarak kullanılmak üzere uygulamaya [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="3d737-107">[in] A pointer to the implementation to be used as the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback.</span></span>  
   
  `pFuncTailcall`  
- <span data-ttu-id="e3f85-108">[in] Bir işaretçi olarak kullanılmak üzere uygulamaya [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="e3f85-108">[in] A pointer to the implementation to be used as the [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) callback.</span></span>  
+ <span data-ttu-id="3d737-108">[in] Bir işaretçi olarak kullanılmak üzere uygulamaya [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="3d737-108">[in] A pointer to the implementation to be used as the [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) callback.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e3f85-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e3f85-109">Remarks</span></span>  
- <span data-ttu-id="e3f85-110">`SetEnterLeaveFunctionHooks2` Yöntemi benzer [Icorprofilerınfo::setenterleavefunctionhooks](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="e3f85-110">The `SetEnterLeaveFunctionHooks2` method is similar to the [ICorProfilerInfo::SetEnterLeaveFunctionHooks](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md) method.</span></span> <span data-ttu-id="e3f85-111">Önceki eski sürümleri enter/bırakma/tailcall geri çağırmaları kullanılacak işlevleri belirtmek için daha yeni sürümleri enter/bırakma/tailcall geri çağrıları ve ikinci kullanılacak işlevleri belirtmek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="e3f85-111">Use the former to specify functions to be used as the newer versions of the enter/leave/tailcall callbacks, and the latter to specify functions to be used as the older versions of the enter/leave/tailcall callbacks.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3d737-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3d737-109">Remarks</span></span>  
+ <span data-ttu-id="3d737-110">`SetEnterLeaveFunctionHooks2` Yöntemi benzer [Icorprofilerınfo::setenterleavefunctionhooks](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="3d737-110">The `SetEnterLeaveFunctionHooks2` method is similar to the [ICorProfilerInfo::SetEnterLeaveFunctionHooks](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setenterleavefunctionhooks-method.md) method.</span></span> <span data-ttu-id="3d737-111">Önceki eski sürümleri enter/bırakma/tailcall geri çağırmaları kullanılacak işlevleri belirtmek için daha yeni sürümleri enter/bırakma/tailcall geri çağrıları ve ikinci kullanılacak işlevleri belirtmek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="3d737-111">Use the former to specify functions to be used as the newer versions of the enter/leave/tailcall callbacks, and the latter to specify functions to be used as the older versions of the enter/leave/tailcall callbacks.</span></span>  
   
- <span data-ttu-id="e3f85-112">Bir kerede yalnızca bir dizi geri çağırmaları etkin olabilir.</span><span class="sxs-lookup"><span data-stu-id="e3f85-112">Only one set of callbacks may be active at a time.</span></span> <span data-ttu-id="e3f85-113">Bu nedenle, her ikisi de bir profil oluşturucu çağırırsa `ICorProfilerInfo::SetEnterLeaveFunctionHooks` ve `SetEnterLeaveFunctionHooks2`, `SetEnterLeaveFunctionHooks2` kullanılır.</span><span class="sxs-lookup"><span data-stu-id="e3f85-113">Thus, if a profiler calls both `ICorProfilerInfo::SetEnterLeaveFunctionHooks` and `SetEnterLeaveFunctionHooks2`, `SetEnterLeaveFunctionHooks2` is used.</span></span>  
+ <span data-ttu-id="3d737-112">Bir kerede yalnızca bir dizi geri çağırmaları etkin olabilir.</span><span class="sxs-lookup"><span data-stu-id="3d737-112">Only one set of callbacks may be active at a time.</span></span> <span data-ttu-id="3d737-113">Bu nedenle, her ikisi de bir profil oluşturucu çağırırsa `ICorProfilerInfo::SetEnterLeaveFunctionHooks` ve `SetEnterLeaveFunctionHooks2`, `SetEnterLeaveFunctionHooks2` kullanılır.</span><span class="sxs-lookup"><span data-stu-id="3d737-113">Thus, if a profiler calls both `ICorProfilerInfo::SetEnterLeaveFunctionHooks` and `SetEnterLeaveFunctionHooks2`, `SetEnterLeaveFunctionHooks2` is used.</span></span>  
   
- <span data-ttu-id="e3f85-114">`SetEnterLeaveFunctionHooks2` Yöntemi yalnızca profil oluşturucuyu 's adlı [Icorprofilercallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="e3f85-114">The `SetEnterLeaveFunctionHooks2` method may be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
+ <span data-ttu-id="3d737-114">`SetEnterLeaveFunctionHooks2` Yöntemi yalnızca profil oluşturucuyu 's adlı [Icorprofilercallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) geri çağırma.</span><span class="sxs-lookup"><span data-stu-id="3d737-114">The `SetEnterLeaveFunctionHooks2` method may be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e3f85-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e3f85-115">Requirements</span></span>  
- <span data-ttu-id="e3f85-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3f85-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3d737-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3d737-115">Requirements</span></span>  
+ <span data-ttu-id="3d737-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d737-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e3f85-117">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e3f85-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="3d737-117">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3d737-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e3f85-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e3f85-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3d737-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3d737-118">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="e3f85-119">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="e3f85-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="3d737-119">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d737-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3f85-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e3f85-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3d737-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3d737-120">See also</span></span>
 
-- [<span data-ttu-id="e3f85-121">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e3f85-121">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="e3f85-122">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e3f85-122">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="3d737-121">ICorProfilerInfo Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3d737-121">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="3d737-122">ICorProfilerInfo2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3d737-122">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

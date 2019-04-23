@@ -18,18 +18,18 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dc6581fc21b975ff5f50db62a571881606765c54
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076607"
 ---
-# <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="3556e-102">ICeeGen::GetIMapTokenIface Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3556e-102">ICeeGen::GetIMapTokenIface Method</span></span>
-<span data-ttu-id="3556e-103">Belirtilen belirteç tarafından başvurulan arabirimi alır.</span><span class="sxs-lookup"><span data-stu-id="3556e-103">Gets the interface referenced by the specified token.</span></span>  
+# <a name="iceegengetimaptokeniface-method"></a><span data-ttu-id="fd854-102">ICeeGen::GetIMapTokenIface Yöntemi</span><span class="sxs-lookup"><span data-stu-id="fd854-102">ICeeGen::GetIMapTokenIface Method</span></span>
+<span data-ttu-id="fd854-103">Belirtilen belirteç tarafından başvurulan arabirimi alır.</span><span class="sxs-lookup"><span data-stu-id="fd854-103">Gets the interface referenced by the specified token.</span></span>  
   
- <span data-ttu-id="3556e-104">Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="3556e-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="fd854-104">Bu yöntem artık kullanılmıyor ve kullanılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="fd854-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3556e-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3556e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fd854-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fd854-105">Syntax</span></span>  
   
 ```  
 HRESULT GetIMapTokenIface (  
@@ -37,19 +37,19 @@ HRESULT GetIMapTokenIface (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3556e-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3556e-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fd854-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="fd854-106">Parameters</span></span>  
  `pIMapToken`  
- <span data-ttu-id="3556e-107">[out içinde] Döndürülecek arabirimi için meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="3556e-107">[in, out] The metadata token for the interface to be returned.</span></span>  
+ <span data-ttu-id="fd854-107">[out içinde] Döndürülecek arabirimi için meta veri belirteci.</span><span class="sxs-lookup"><span data-stu-id="fd854-107">[in, out] The metadata token for the interface to be returned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3556e-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3556e-108">Requirements</span></span>  
- <span data-ttu-id="3556e-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3556e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fd854-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fd854-108">Requirements</span></span>  
+ <span data-ttu-id="fd854-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd854-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3556e-110">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="3556e-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fd854-110">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="fd854-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="3556e-111">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="3556e-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fd854-111">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan</span><span class="sxs-lookup"><span data-stu-id="fd854-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="3556e-112">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="3556e-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="fd854-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd854-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3556e-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3556e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fd854-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fd854-113">See also</span></span>
 
-- [<span data-ttu-id="3556e-114">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3556e-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="fd854-114">ICeeGen Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fd854-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eb5820087001a207af0c2552f91b4c17f5f78ff7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074839"
 ---
-# <a name="imetadataimportgetnestedclassprops-method"></a><span data-ttu-id="be081-102">IMetaDataImport::GetNestedClassProps Metodu</span><span class="sxs-lookup"><span data-stu-id="be081-102">IMetaDataImport::GetNestedClassProps Method</span></span>
-<span data-ttu-id="be081-103">TypeDef üst belirtecini alır <xref:System.Type> türü belirtilen iç içe geçmiş.</span><span class="sxs-lookup"><span data-stu-id="be081-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span></span>  
+# <a name="imetadataimportgetnestedclassprops-method"></a><span data-ttu-id="444dc-102">IMetaDataImport::GetNestedClassProps Metodu</span><span class="sxs-lookup"><span data-stu-id="444dc-102">IMetaDataImport::GetNestedClassProps Method</span></span>
+<span data-ttu-id="444dc-103">TypeDef üst belirtecini alır <xref:System.Type> türü belirtilen iç içe geçmiş.</span><span class="sxs-lookup"><span data-stu-id="444dc-103">Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="be081-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="be081-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="444dc-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="444dc-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNestedClassProps (  
@@ -36,23 +36,23 @@ HRESULT GetNestedClassProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="be081-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="be081-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="444dc-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="444dc-105">Parameters</span></span>  
  `tdNestedClass`  
- <span data-ttu-id="be081-106">[in] TypeDef belirteci temsil eden bir <xref:System.Type> üst sınıfın döndürülecek belirteci.</span><span class="sxs-lookup"><span data-stu-id="be081-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span></span>  
+ <span data-ttu-id="444dc-106">[in] TypeDef belirteci temsil eden bir <xref:System.Type> üst sınıfın döndürülecek belirteci.</span><span class="sxs-lookup"><span data-stu-id="444dc-106">[in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.</span></span>  
   
  `ptdEnclosingClass`  
- <span data-ttu-id="be081-107">[out] TypeDef belirteç için bir işaretçiye <xref:System.Type> , `tdNestedClass` iç içe yerleştirilmiş.</span><span class="sxs-lookup"><span data-stu-id="be081-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span></span>  
+ <span data-ttu-id="444dc-107">[out] TypeDef belirteç için bir işaretçiye <xref:System.Type> , `tdNestedClass` iç içe yerleştirilmiş.</span><span class="sxs-lookup"><span data-stu-id="444dc-107">[out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="be081-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="be081-108">Requirements</span></span>  
- <span data-ttu-id="be081-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="be081-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="444dc-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="444dc-108">Requirements</span></span>  
+ <span data-ttu-id="444dc-109">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="444dc-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="be081-110">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="be081-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="444dc-110">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="444dc-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="be081-111">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="be081-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="444dc-111">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="444dc-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="be081-112">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="be081-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="444dc-112">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="444dc-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be081-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="be081-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="444dc-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="444dc-113">See also</span></span>
 
-- [<span data-ttu-id="be081-114">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="be081-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="be081-115">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="be081-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="444dc-114">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="444dc-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="444dc-115">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="444dc-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

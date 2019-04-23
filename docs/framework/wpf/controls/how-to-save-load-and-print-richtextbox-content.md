@@ -13,27 +13,27 @@ helpviewer_keywords:
 - RichTextBox control [WPF], loading
 ms.assetid: ffb113d3-c68a-47ca-8ac0-882283f38326
 ms.openlocfilehash: 90581bee7815dafd44c3cae18a8af7394fee1e9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072473"
 ---
-# <a name="how-to-save-load-and-print-richtextbox-content"></a><span data-ttu-id="dac89-102">Nasıl yapılır: RichTextBox İçeriğini Kaydetme, Yükleme ve Yazdırma</span><span class="sxs-lookup"><span data-stu-id="dac89-102">How to: Save, Load, and Print RichTextBox Content</span></span>
-<span data-ttu-id="dac89-103">Aşağıdaki örnek nasıl kaydedileceğini içeriğini gösterir bir <xref:System.Windows.Controls.RichTextBox> , içerik tekrar içine bir dosyaya yük <xref:System.Windows.Controls.RichTextBox>ve içeriği yazdır.</span><span class="sxs-lookup"><span data-stu-id="dac89-103">The following example shows how to save content of a <xref:System.Windows.Controls.RichTextBox> to a file, load that content back into the <xref:System.Windows.Controls.RichTextBox>, and print the contents.</span></span>  
+# <a name="how-to-save-load-and-print-richtextbox-content"></a><span data-ttu-id="38ba7-102">Nasıl yapılır: RichTextBox İçeriğini Kaydetme, Yükleme ve Yazdırma</span><span class="sxs-lookup"><span data-stu-id="38ba7-102">How to: Save, Load, and Print RichTextBox Content</span></span>
+<span data-ttu-id="38ba7-103">Aşağıdaki örnek nasıl kaydedileceğini içeriğini gösterir bir <xref:System.Windows.Controls.RichTextBox> , içerik tekrar içine bir dosyaya yük <xref:System.Windows.Controls.RichTextBox>ve içeriği yazdır.</span><span class="sxs-lookup"><span data-stu-id="38ba7-103">The following example shows how to save content of a <xref:System.Windows.Controls.RichTextBox> to a file, load that content back into the <xref:System.Windows.Controls.RichTextBox>, and print the contents.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dac89-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="dac89-104">Example</span></span>  
- <span data-ttu-id="dac89-105">Bu örnek için biçimlendirme aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="dac89-105">Below is the markup for the example.</span></span>  
+## <a name="example"></a><span data-ttu-id="38ba7-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="38ba7-104">Example</span></span>  
+ <span data-ttu-id="38ba7-105">Bu örnek için biçimlendirme aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="38ba7-105">Below is the markup for the example.</span></span>  
   
  [!code-xaml[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml#saveloadprintrtbexamplewholepage)]  
   
-## <a name="example"></a><span data-ttu-id="dac89-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="dac89-106">Example</span></span>  
- <span data-ttu-id="dac89-107">Arka plan kod örnek için aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="dac89-107">Below is the code behind for the example.</span></span>  
+## <a name="example"></a><span data-ttu-id="38ba7-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="38ba7-106">Example</span></span>  
+ <span data-ttu-id="38ba7-107">Arka plan kod örnek için aşağıda verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="38ba7-107">Below is the code behind for the example.</span></span>  
   
  [!code-csharp[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml.cs#saveloadprintrtbcodeexamplewholepage)]
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="dac89-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dac89-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38ba7-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="38ba7-108">See also</span></span>
 
-- [<span data-ttu-id="dac89-109">RichTextBox Genel Bakışı</span><span class="sxs-lookup"><span data-stu-id="dac89-109">RichTextBox Overview</span></span>](richtextbox-overview.md)
-- [<span data-ttu-id="dac89-110">TextBox Genel Bakışı</span><span class="sxs-lookup"><span data-stu-id="dac89-110">TextBox Overview</span></span>](textbox-overview.md)
+- [<span data-ttu-id="38ba7-109">RichTextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="38ba7-109">RichTextBox Overview</span></span>](richtextbox-overview.md)
+- [<span data-ttu-id="38ba7-110">TextBox Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="38ba7-110">TextBox Overview</span></span>](textbox-overview.md)
