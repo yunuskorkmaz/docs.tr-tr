@@ -6,43 +6,43 @@ dev_langs:
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
 ms.openlocfilehash: eea1439337b29fee51c422238425491fc2345211
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095093"
 ---
-# <a name="return-the-average-value-from-a-numeric-sequence"></a><span data-ttu-id="719a0-102">Sayısal Diziden Ortalama Değer Döndürme</span><span class="sxs-lookup"><span data-stu-id="719a0-102">Return the Average Value From a Numeric Sequence</span></span>
-<span data-ttu-id="719a0-103"><xref:System.Linq.Enumerable.Average%2A> İşleci bir dizi sayısal değerlerin ortalamasını hesaplar.</span><span class="sxs-lookup"><span data-stu-id="719a0-103">The <xref:System.Linq.Enumerable.Average%2A> operator computes the average of a sequence of numeric values.</span></span>  
+# <a name="return-the-average-value-from-a-numeric-sequence"></a><span data-ttu-id="32994-102">Sayısal Diziden Ortalama Değer Döndürme</span><span class="sxs-lookup"><span data-stu-id="32994-102">Return the Average Value From a Numeric Sequence</span></span>
+<span data-ttu-id="32994-103"><xref:System.Linq.Enumerable.Average%2A> İşleci bir dizi sayısal değerlerin ortalamasını hesaplar.</span><span class="sxs-lookup"><span data-stu-id="32994-103">The <xref:System.Linq.Enumerable.Average%2A> operator computes the average of a sequence of numeric values.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="719a0-104">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Çevirisi `Average` tamsayı değerleri, bir çift olarak değil, bir tamsayı olarak hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="719a0-104">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translation of `Average` of integer values is computed as an integer, not as a double.</span></span>  
+>  <span data-ttu-id="32994-104">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Çevirisi `Average` tamsayı değerleri, bir çift olarak değil, bir tamsayı olarak hesaplanır.</span><span class="sxs-lookup"><span data-stu-id="32994-104">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translation of `Average` of integer values is computed as an integer, not as a double.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="719a0-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="719a0-105">Example</span></span>  
- <span data-ttu-id="719a0-106">Aşağıdaki örnek, ortalamasını döndürür. `Freight` değerler `Orders` tablo.</span><span class="sxs-lookup"><span data-stu-id="719a0-106">The following example returns the average of `Freight` values in the `Orders` table.</span></span>  
+## <a name="example"></a><span data-ttu-id="32994-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="32994-105">Example</span></span>  
+ <span data-ttu-id="32994-106">Aşağıdaki örnek, ortalamasını döndürür. `Freight` değerler `Orders` tablo.</span><span class="sxs-lookup"><span data-stu-id="32994-106">The following example returns the average of `Freight` values in the `Orders` table.</span></span>  
   
- <span data-ttu-id="719a0-107">Northwind örnek veritabanından sonuçları olacak `78.2442`.</span><span class="sxs-lookup"><span data-stu-id="719a0-107">Results from the sample Northwind database would be `78.2442`.</span></span>  
+ <span data-ttu-id="32994-107">Northwind örnek veritabanından sonuçları olacak `78.2442`.</span><span class="sxs-lookup"><span data-stu-id="32994-107">Results from the sample Northwind database would be `78.2442`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#1)]
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="719a0-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="719a0-108">Example</span></span>  
- <span data-ttu-id="719a0-109">Aşağıdaki örnek, tüm birim fiyatı ortalamasını döndürür. `Products` içinde `Products` tablo.</span><span class="sxs-lookup"><span data-stu-id="719a0-109">The following example returns the average of the unit price of all `Products` in the `Products` table.</span></span>  
+## <a name="example"></a><span data-ttu-id="32994-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="32994-108">Example</span></span>  
+ <span data-ttu-id="32994-109">Aşağıdaki örnek, tüm birim fiyatı ortalamasını döndürür. `Products` içinde `Products` tablo.</span><span class="sxs-lookup"><span data-stu-id="32994-109">The following example returns the average of the unit price of all `Products` in the `Products` table.</span></span>  
   
- <span data-ttu-id="719a0-110">Northwind örnek veritabanından sonuçları olacak `28.8663`.</span><span class="sxs-lookup"><span data-stu-id="719a0-110">Results from the sample Northwind database would be `28.8663`.</span></span>  
+ <span data-ttu-id="32994-110">Northwind örnek veritabanından sonuçları olacak `28.8663`.</span><span class="sxs-lookup"><span data-stu-id="32994-110">Results from the sample Northwind database would be `28.8663`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#2)]
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
-## <a name="example"></a><span data-ttu-id="719a0-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="719a0-111">Example</span></span>  
- <span data-ttu-id="719a0-112">Aşağıdaki örnekte `Average` bulmak için işleci `Products` ortalama birim fiyatı ait kategorisi daha yüksek olan birim fiyatı.</span><span class="sxs-lookup"><span data-stu-id="719a0-112">The following example uses the `Average` operator to find those `Products` whose unit price is higher than the average unit price of the category it belongs to.</span></span> <span data-ttu-id="719a0-113">Örnek sonuçları gruplarında görüntüler.</span><span class="sxs-lookup"><span data-stu-id="719a0-113">The example then displays the results in groups.</span></span>  
+## <a name="example"></a><span data-ttu-id="32994-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="32994-111">Example</span></span>  
+ <span data-ttu-id="32994-112">Aşağıdaki örnekte `Average` bulmak için işleci `Products` ortalama birim fiyatı ait kategorisi daha yüksek olan birim fiyatı.</span><span class="sxs-lookup"><span data-stu-id="32994-112">The following example uses the `Average` operator to find those `Products` whose unit price is higher than the average unit price of the category it belongs to.</span></span> <span data-ttu-id="32994-113">Örnek sonuçları gruplarında görüntüler.</span><span class="sxs-lookup"><span data-stu-id="32994-113">The example then displays the results in groups.</span></span>  
   
- <span data-ttu-id="719a0-114">Bu örnek kullanımını gerektirdiğini unutmayın `var` anahtar sözcüğünü C#, dönüş türü anonim olduğundan.</span><span class="sxs-lookup"><span data-stu-id="719a0-114">Note that this example requires the use of the `var` keyword in C#, because the return type is anonymous.</span></span>  
+ <span data-ttu-id="32994-114">Bu örnek kullanımını gerektirdiğini unutmayın `var` anahtar sözcüğünü C#, dönüş türü anonim olduğundan.</span><span class="sxs-lookup"><span data-stu-id="32994-114">Note that this example requires the use of the `var` keyword in C#, because the return type is anonymous.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
   
- <span data-ttu-id="719a0-115">Bu sorgu, Northwind örnek veritabanıyla çalıştırırsanız, sonuçları aşağıdakilere benzemelidir:</span><span class="sxs-lookup"><span data-stu-id="719a0-115">If you run this query against the Northwind sample database, the results should resemble of the following:</span></span>  
+ <span data-ttu-id="32994-115">Bu sorgu, Northwind örnek veritabanıyla çalıştırırsanız, sonuçları aşağıdakilere benzemelidir:</span><span class="sxs-lookup"><span data-stu-id="32994-115">If you run this query against the Northwind sample database, the results should resemble of the following:</span></span>  
   
  `1`  
   
@@ -114,6 +114,6 @@ ms.locfileid: "59095093"
   
  `Gravad lax`  
   
-## <a name="see-also"></a><span data-ttu-id="719a0-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="719a0-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32994-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="32994-116">See also</span></span>
 
-- [<span data-ttu-id="719a0-117">Toplu Sorgular</span><span class="sxs-lookup"><span data-stu-id="719a0-117">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [<span data-ttu-id="32994-117">Toplu Sorgular</span><span class="sxs-lookup"><span data-stu-id="32994-117">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

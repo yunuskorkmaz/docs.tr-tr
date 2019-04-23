@@ -18,32 +18,32 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7c77be0dde950693d3943e41c392dcdcd9bc995e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096081"
 ---
-# <a name="isymunmanagedmethodgetrootscope-method"></a><span data-ttu-id="a31a6-102">ISymUnmanagedMethod::GetRootScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="a31a6-102">ISymUnmanagedMethod::GetRootScope Method</span></span>
-<span data-ttu-id="a31a6-103">Bu yöntem kök sözlü kapsamda alır.</span><span class="sxs-lookup"><span data-stu-id="a31a6-103">Gets the root lexical scope within this method.</span></span> <span data-ttu-id="a31a6-104">Bu kapsam tüm yöntemi alır.</span><span class="sxs-lookup"><span data-stu-id="a31a6-104">This scope encloses the entire method.</span></span>  
+# <a name="isymunmanagedmethodgetrootscope-method"></a><span data-ttu-id="62ac0-102">ISymUnmanagedMethod::GetRootScope Yöntemi</span><span class="sxs-lookup"><span data-stu-id="62ac0-102">ISymUnmanagedMethod::GetRootScope Method</span></span>
+<span data-ttu-id="62ac0-103">Bu yöntem kök sözlü kapsamda alır.</span><span class="sxs-lookup"><span data-stu-id="62ac0-103">Gets the root lexical scope within this method.</span></span> <span data-ttu-id="62ac0-104">Bu kapsam tüm yöntemi alır.</span><span class="sxs-lookup"><span data-stu-id="62ac0-104">This scope encloses the entire method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a31a6-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a31a6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62ac0-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="62ac0-105">Syntax</span></span>  
   
 ```  
 HRESULT GetRootScope(  
     [out, retval] ISymUnmanagedScope** pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a31a6-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a31a6-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="62ac0-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="62ac0-106">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="a31a6-107">[out] Ayarlanmış bir işaretçi ve döndürülen [Isymunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="a31a6-107">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
+ <span data-ttu-id="62ac0-107">[out] Ayarlanmış bir işaretçi ve döndürülen [Isymunmanagedscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) arabirimi.</span><span class="sxs-lookup"><span data-stu-id="62ac0-107">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a31a6-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="a31a6-108">Return Value</span></span>  
- <span data-ttu-id="a31a6-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="a31a6-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="62ac0-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="62ac0-108">Return Value</span></span>  
+ <span data-ttu-id="62ac0-109">Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.</span><span class="sxs-lookup"><span data-stu-id="62ac0-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a31a6-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a31a6-110">Requirements</span></span>  
- <span data-ttu-id="a31a6-111">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a31a6-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="62ac0-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="62ac0-110">Requirements</span></span>  
+ <span data-ttu-id="62ac0-111">**Üst bilgi:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="62ac0-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a31a6-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a31a6-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62ac0-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="62ac0-112">See also</span></span>
 
-- [<span data-ttu-id="a31a6-113">ISymUnmanagedMethod Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a31a6-113">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="62ac0-113">ISymUnmanagedMethod Yöntemi</span><span class="sxs-lookup"><span data-stu-id="62ac0-113">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
