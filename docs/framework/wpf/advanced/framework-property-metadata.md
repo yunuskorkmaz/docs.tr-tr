@@ -6,10 +6,10 @@ helpviewer_keywords:
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
 ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314704"
 ---
 # <a name="framework-property-metadata"></a>Çerçeve Özelliği Meta Verileri
@@ -27,7 +27,7 @@ ms.locfileid: "59314704"
   
 -   Bir öğenin üst öğesi etkileyen düzen özelliklerini raporlama (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>). Bu bayrak varsayılan olarak ayarlanmış olduğu bazı örnekler <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> ve <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>.  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>biçimindeki telefon numarasıdır. Varsayılan olarak, bağımlılık özellikleri değerlerini devralmaz. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> Ayrıca bazı denetim birleştirme senaryolar için gerekli olan bir görsel ağacında seyahat Devralmanın yol sağlar.  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Varsayılan olarak, bağımlılık özellikleri değerlerini devralmaz. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> Ayrıca bazı denetim birleştirme senaryolar için gerekli olan bir görsel ağacında seyahat Devralmanın yol sağlar.  
   
     > [!NOTE]
     >  Terim "özellik değerleri anlamına gelir bağımlılık özellikleri için özel bir durum bağlamında devralır"; alt öğeleri nedeniyle WPF çerçeve düzeyi özelliği üst öğelerden gerçek bağımlılık özelliği değer devralabilir geldiğini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi. Yönetilen kod türü ve üyeleri devralma yoluyla türetilmiş türler ile doğrudan yapılacak bir şey yok sahiptir. Ayrıntılar için bkz [özellik değeri kalıtımı](property-value-inheritance.md).  

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
 ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314418"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF ve Win32 Birlikte Çalışması
@@ -29,7 +29,7 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF birlikte çalışabilirlik projeleri  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] are managed code, but most existing [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2syönetilen kod, ancak çoğu mevcut [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlar yazılır yönetilmeyen [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].enÇağıramazsınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] gerçek bir program yönetilmeyen.nKullanarak ancak `/clr` seçeneğini [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] derleyici, yönetilen ve yönetilmeyen Burada, sorunsuz bir şekilde karışık bir karışık yönetilen-yönetilmeyen program oluşturabilirsiniz [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] çağırır.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] yönetilen kod, ancak çoğu mevcut [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programlar yazılır yönetilmeyen [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Çağıramazsınız [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] gerçek bir program yönetilmeyen. Kullanarak ancak `/clr` seçeneğini [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] derleyici, yönetilen ve yönetilmeyen Burada, sorunsuz bir şekilde karışık bir karışık yönetilen-yönetilmeyen program oluşturabilirsiniz [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] çağırır.  
   
  Bir proje düzeyi komplikasyon olduğundan, derlenemez [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dosyalarınızı bir [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] proje.  Bunu düzeltmek için birçok proje bölme teknikler vardır.  
   
@@ -159,5 +159,5 @@ Bu konuda çalışmak bir bakış sunulmaktadır [!INCLUDE[TLA2#tla_winclient](.
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>
-- [İzlenecek yol: WPF içinde Win32 Denetimini Barındırma](walkthrough-hosting-a-win32-control-in-wpf.md)
-- [İzlenecek yol: WPF İçeriğini Win32 içinde Barındırma](walkthrough-hosting-wpf-content-in-win32.md)
+- [İzlenecek yol: WPF içinde Win32 denetimini barındırma](walkthrough-hosting-a-win32-control-in-wpf.md)
+- [İzlenecek yol: Win32'de WPF barındırma](walkthrough-hosting-wpf-content-in-win32.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
 ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314550"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Nasıl yapılır: Windows Formlarını Devralma
@@ -44,6 +44,6 @@ Temel forms devralarak yeni Windows form oluşturmaya, ihtiyaç duyduğunuz her 
 
 - [Inherits Deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [kullanma](~/docs/csharp/language-reference/keywords/using.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
 - [Taban Formun Görünüşünü Değiştirmenin Etkileri](effects-of-modifying-base-form-appearance.md)
 - [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)

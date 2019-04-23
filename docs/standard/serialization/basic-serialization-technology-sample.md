@@ -3,10 +3,10 @@ title: Temel Serileştirme Teknolojisi Örneği
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315016"
 ---
 # <a name="basic-serialization-technology-sample"></a>Temel Serileştirme Teknolojisi Örneği
@@ -46,13 +46,13 @@ ms.locfileid: "59315016"
   
  Örneğin:  
   
- **Serialize.exe - sx Test.xml 10**  
+ **Serialize.exe -sx Test.xml 10**  
   
  Seri durumdan çıkarılacak **Test.xml** dosya önceki örnekteki, parametrelerini **dx Test.xml**.  
   
  Örneğin:  
   
- **Serialize.exe - dx Test.xml**  
+ **Serialize.exe -dx Test.xml**  
   
  İki Yukarıdaki örneklerde, komut satırı anahtarı "x", XML SOAP serileştirme istediğinizi gösterir. İkili serileştirme kullanmak için "b" yerinde kullanabilirsiniz. Serileştirme çok büyük bir düğüm sayısı ile deneyin istiyorsanız, bir dosyaya konsol çıkışı yönlendirmek isteyebilirsiniz.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59315016"
   
 -   Çalışma zamanı seri hale getirme  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> Ya da başvurmak için kullanılan bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> veya <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> nesne.  
+    -   <xref:System.Runtime.Serialization.IFormatter>Ya da başvurmak için kullanılan bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> veya bir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> nesne.  
   
     -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> İkili biçimde bir akışa bağlı bir liste serileştirmek için kullanılır. İkili biçimlendirici, yalnızca bir biçimi kullanıp <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> anladığı türü. Ancak, veri kısa olabilir.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "59315016"
   
 -   Akış G/Ç  
   
-    -   <xref:System.IO.Stream> Seri hale getirmek ve seri halinden dağıtmak için kullanılır. Bu örnekte kullanılan belirli akış türü <xref:System.IO.FileStream> türü. Ancak, serileştirme türetilen her türlü kullanılabilir <xref:System.IO.Stream>.  
+    -   <xref:System.IO.Stream>Serileştirme ve seri halinden dağıtmak için kullanılır. Bu örnekte kullanılan belirli akış türü <xref:System.IO.FileStream> türü. Ancak, serileştirme türetilen her türlü kullanılabilir <xref:System.IO.Stream>.  
   
     -   <xref:System.IO.File> Oluşturmak için kullanılan <xref:System.IO.FileStream> nesneler için okuma ve disk üzerindeki dosyalar oluşturuluyor.  
   

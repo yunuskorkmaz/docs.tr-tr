@@ -8,10 +8,10 @@ helpviewer_keywords:
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309231"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>İzlenecek yol: C#'de Sorgu Yazma (LINQ)
@@ -174,9 +174,9 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
 ## <a name="next-steps"></a>Sonraki Adımlar  
  Sorgular, C# ile çalışmanın temel özellikleri hakkında bilgi sahibi olduktan sonra belgelere ve örneklere LINQ sağlayıcısı, ilgilendiğiniz belirli türünün okumaya hazırsınız:  
   
- [LINQ - SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
   
- [LINQ - DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
  [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   
@@ -185,5 +185,5 @@ Bu yönerge, LINQ Sorgu ifadeleri yazmak için kullanılan C# dili özellikleri 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dil ile tümleşik sorgu (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [C#'de LINQ'e Başlarken](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [LINQ Sorgu İfadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C#'de LINQ Kullanmaya Başlama](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ Sorgu ifadeleri](../../../../csharp/programming-guide/linq-query-expressions/index.md)

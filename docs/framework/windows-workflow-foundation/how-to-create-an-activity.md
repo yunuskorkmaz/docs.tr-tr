@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315146"
 ---
 # <a name="how-to-create-an-activity"></a>Nasıl yapılır: Etkinlik Oluşturma
@@ -108,5 +108,5 @@ Etkinlikleri olan çekirdek birimi davranış [!INCLUDE[wf1](../../../includes/w
 - <xref:System.Activities.NativeActivity%601>
 - [Özel Etkinlikler Tasarlama ve Uygulama](designing-and-implementing-custom-activities.md)
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
-- [Nasıl yapılır: İş Akışı Oluşturma](how-to-create-a-workflow.md)
+- [Nasıl yapılır: Bir iş akışı oluşturma](how-to-create-a-workflow.md)
 - [Özel Etkinlik Tasarımcısında ExpressionTextBox Kullanma](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

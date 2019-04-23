@@ -10,24 +10,24 @@ helpviewer_keywords:
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
 ms.openlocfilehash: 73cb9249343b02c937c3e4e652021c7a6dbb4386
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311480"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Nasıl yapılır: Tür için değer eşitliği tanımlama (C# Programlama Kılavuzu)
 Tanımladığınız bir sınıf veya yapı zamanı türü için değer eşitliği (veya eşdeğer) özel bir tanımı oluşturmak için mantıklı olup olmadığını belirleyin. Genellikle, değer eşitliği çeşit bir koleksiyona eklenmesi olması beklenen nesne türü veya alanlar ve özellikler kümesi saklamak için birincil amaçları olduğunda uygulayın. Tüm alanlar ve Özellikler türü karşılaştırması, değer eşitliği tanımınız temel alabilir veya tanımı bir alt kümesi üzerinde temel alabilir. Ancak, her iki durumda da ve sınıflar ve yapılar, uygulamanız beş garantileri denkliğin izlemelidir:  
   
-1. `x.Equals(x)` Döndürür `true`. Bu yansıma özelliğin çağırılır.  
+1. `x.Equals(x)` döndürür `true`. Bu yansıma özelliğin çağırılır.  
   
-2. `x.Equals(y)` Aynı değeri döndürür `y.Equals(x)`. Bu simetrik özelliğin çağırılır.  
+2. `x.Equals(y)` aynı değeri döndürür `y.Equals(x)`. Bu simetrik özelliğin çağırılır.  
   
 3. Varsa `(x.Equals(y) && y.Equals(z))` döndürür `true`, ardından `x.Equals(z)` döndürür `true`. Bu geçişli özelliğin çağırılır.  
   
 4. Art arda gelen çağrıları `x.Equals(y)` nesneleri başvurulan x ve y değiştirilmez sürece aynı değeri döndürür.  
   
-5. `x.Equals(null)` Döndürür `false`. Ancak, `null.Equals(null)` ; aykırı Yukarıdaki iki kural numara uymaz.  
+5. `x.Equals(null)` döndürür `false`. Ancak, `null.Equals(null)` ; aykırı Yukarıdaki iki kural numara uymaz.  
   
  Önceden tanımladığınız herhangi bir yapının devraldığı değer eşitliği varsayılan bir uygulama sahip <xref:System.ValueType?displayProperty=nameWithType> , geçersiz kılma <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> yöntemi. Bu uygulama, tüm alanları ve tür özellikleri incelemek için yansıtma kullanır. Bu uygulama doğru sonuçlar ürettiğinden olsa da, bu özellikle tür için yazdığınız özel bir uygulama ile karşılaştırıldığında yavaştır.  
   

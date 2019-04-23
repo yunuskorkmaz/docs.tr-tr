@@ -9,10 +9,10 @@ ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310570"
 ---
 # <a name="garbage-collection-and-performance"></a>Çöp Toplama ve Performans
@@ -20,13 +20,13 @@ ms.locfileid: "59310570"
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
--   [Performans Analiz Araçları](#performance_analysis_tools)  
+-   [Performans analiz araçları](#performance_analysis_tools)  
   
--   [Performans Sorunlarını Giderme](#troubleshooting_performance_issues)  
+-   [Performans sorunlarını giderme](#troubleshooting_performance_issues)  
   
--   [Sorun Giderme Kılavuzları](#troubleshooting_guidelines)  
+-   [Sorun giderme kılavuzları](#troubleshooting_guidelines)  
   
--   [Performans Denetim Prosedürleri](#performance_check_procedures)  
+-   [Performans Denetim prosedürleri](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
 ## <a name="performance-analysis-tools"></a>Performans Analiz Araçları  
@@ -69,17 +69,17 @@ ms.locfileid: "59310570"
 ## <a name="troubleshooting-performance-issues"></a>Performans Sorunlarını Giderme  
  İlk adım [sorunun çöp toplamadan olup](#IsGC). Eğer sorunun bu olduğunu belirlerseniz, aşağıdaki listeden sorunu gidermeyi seçin.  
   
--   [Bir yetersiz bellek özel durumu oluşturuldu](#Issue_OOM)  
+-   [Bellek durum](#Issue_OOM)  
   
 -   [İşlem çok fazla bellek kullanıyor](#Issue_TooMuchMemory)  
   
--   [Çöp toplayıcısı nesneleri yeterince hızlı geri kazanmıyor](#Issue_NotFastEnough)  
+-   [Çöp Toplayıcısı nesneleri yeterince hızlı kazanmıyor](#Issue_NotFastEnough)  
   
 -   [Yönetilen yığın çok parçalanmış](#Issue_Fragmentation)  
   
--   [Çöp toplama duraklamaları çok uzun](#Issue_LongPauses)  
+-   [Atık toplama duraksamaları çok uzun](#Issue_LongPauses)  
   
--   [0 nesli çok büyük](#Issue_Gen0)  
+-   [Nesil 0 çok büyük.](#Issue_Gen0)  
   
 -   [Bir çöp toplama sırasındaki CPU kullanımı çok yüksek](#Issue_HighCPU)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "59310570"
   
 |Performans denetimleri|  
 |------------------------|  
-|[Yetersiz bellek özel durumunun yönetilip yönetilmediğini belirleyin.](#OOMIsManaged)<br /><br /> [Ne kadar sanal bellek ayrılabileceğini belirleyin.](#GetVM)<br /><br /> [Yeterince fiziksel belleğin olup olmadığını belirleyin.](#Physical)|  
+|[Bellek yetersiz özel yönetilip yönetilmediğini belirleyin.](#OOMIsManaged)<br /><br /> [Ne kadar sanal bellek ayrılabileceğini belirleyin.](#GetVM)<br /><br /> [Yeterli fiziksel bellek olup olmadığını belirler.](#Physical)|  
   
  Özel durumun meşru olmadığını belirlerseniz, aşağıdaki bilgilerle Microsoft Müşteri Hizmetleri ve Destek birimiyle iletişime geçin:  
   
@@ -115,7 +115,7 @@ ms.locfileid: "59310570"
   
 |Performans denetimleri|  
 |------------------------|  
-|[Ne kadar sanal bellek ayrılabileceğini belirleyin.](#GetVM)<br /><br /> [Yönetilen yığının ne kadar bellek kullandığını belirleyin.](#ManagedHeapCommit)<br /><br /> [Yönetilen yığının ne kadar bellek ayırdığını belirleyin.](#ManagedHeapReserve)<br /><br /> [Nesil 2 içindeki büyük nesneleri belirleyin.](#ExamineGen2)<br /><br /> [Nesnelere yapılan atıfları belirleyin.](#ObjRef)|  
+|[Ne kadar sanal bellek ayrılabileceğini belirleyin.](#GetVM)<br /><br /> [Yönetilen yığının ne kadar bellek kullandığını belirleyin.](#ManagedHeapCommit)<br /><br /> [Ne kadar bellek yönetilen yığında ayırdığını belirleyin.](#ManagedHeapReserve)<br /><br /> [Büyük nesneler, kuşak 2 belirleyin.](#ExamineGen2)<br /><br /> [Nesnelere yapılan atıfları belirleyin.](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
 ### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>Sorun: Çöp Toplayıcısı nesneleri yeterince hızlı Kazanmıyor  
@@ -125,7 +125,7 @@ ms.locfileid: "59310570"
   
 |Performans denetimleri|  
 |------------------------|  
-|[Nesnelere yapılan atıfları kontrol edin.](#ObjRef)<br /><br /> [Bir sonlandırıcının çalıştırılıp çalıştırılmadığını belirleyin.](#Induce)<br /><br /> [Sonlandırılmayı bekleyen nesneler olup olmadığını belirleyin.](#Finalize)|  
+|[Nesnelere başvurular denetleyin.](#ObjRef)<br /><br /> [Bir sonlandırıcının çalıştırılıp çalıştırılmadığını belirleyin.](#Induce)<br /><br /> [Sonlandırılmayı bekleyen nesneler olup olmadığını belirler.](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
 ### <a name="issue-the-managed-heap-is-too-fragmented"></a>Sorun: Yönetilen yığın çok parçalanmış  
@@ -151,7 +151,7 @@ ms.locfileid: "59310570"
   
 |Performans denetimleri|  
 |------------------------|  
-|[Yönetilen yığında ne kadar boş alan olduğunu belirleyin.](#Fragmented)<br /><br /> [Sabitlenen nesne sayısını belirleyin.](#Pinned)|  
+|[Yönetilen yığında boş alan miktarını belirler.](#Fragmented)<br /><br /> [Sabitlenen nesne sayısını belirleyin.](#Pinned)|  
   
  Eğer parçalanma için meşru bir neden olmadığını düşünüyorsanız, Microsoft Müşteri Hizmetleri ve Destek'le iletişime geçin.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "59310570"
   
 |Performans denetimleri|  
 |------------------------|  
-|[Bir çöp toplamadaki sürenin uzunluğunu belirleyin.](#TimeInGC)<br /><br /> [Çöp toplamaya neyin sebep olduğunu belirleyin.](#Triggered)|  
+|[Bir çöp Toplamadaki sürenin uzunluğunu belirleyin.](#TimeInGC)<br /><br /> [Çöp toplamaya neyin belirleyin.](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
 ### <a name="issue-generation-0-is-too-big"></a>Sorun: Nesil 0 çok büyük.  
@@ -185,7 +185,7 @@ ms.locfileid: "59310570"
   
 |Performans denetimleri|  
 |------------------------|  
-|[Yüksek CPU kullanımına çöp toplamanın neden olup olmadığını belirleyin.](#HighCPU)<br /><br /> [Çöp toplamanın sonunda bir kesme noktası ayarlayın.](#GenBreak)|  
+|[Yüksek CPU kullanımına çöp toplamanın neden olup olmadığını belirler.](#HighCPU)<br /><br /> [Çöp toplamanın sonunda bir kesme noktası ayarlayın.](#GenBreak)|  
   
  [Başa dön](#top)  
   
@@ -236,33 +236,33 @@ ms.locfileid: "59310570"
   
 -   [Sorunun çöp toplamadan kaynaklanıp kaynaklanmadığını belirleyin.](#IsGC)  
   
--   [Yetersiz bellek özel durumunun yönetilip yönetilmediğini belirleyin.](#OOMIsManaged)  
+-   [Bellek yetersiz özel yönetilip yönetilmediğini belirleyin.](#OOMIsManaged)  
   
 -   [Ne kadar sanal bellek ayrılabileceğini belirleyin.](#GetVM)  
   
--   [Yeterince fiziksel belleğin olup olmadığını belirleyin.](#Physical)  
+-   [Yeterli fiziksel bellek olup olmadığını belirler.](#Physical)  
   
 -   [Yönetilen yığının ne kadar bellek kullandığını belirleyin.](#ManagedHeapCommit)  
   
--   [Yönetilen yığının ne kadar bellek ayırdığını belirleyin.](#ManagedHeapReserve)  
+-   [Ne kadar bellek yönetilen yığında ayırdığını belirleyin.](#ManagedHeapReserve)  
   
--   [Nesil 2 içindeki büyük nesneleri belirleyin.](#ExamineGen2)  
+-   [Büyük nesneler, kuşak 2 belirleyin.](#ExamineGen2)  
   
 -   [Nesnelere yapılan atıfları belirleyin.](#ObjRef)  
   
 -   [Bir sonlandırıcının çalıştırılıp çalıştırılmadığını belirleyin.](#Induce)  
   
--   [Sonlandırılmayı bekleyen nesneler olup olmadığını belirleyin.](#Finalize)  
+-   [Sonlandırılmayı bekleyen nesneler olup olmadığını belirler.](#Finalize)  
   
--   [Yönetilen yığında ne kadar boş alan olduğunu belirleyin.](#Fragmented)  
+-   [Yönetilen yığında boş alan miktarını belirler.](#Fragmented)  
   
 -   [Sabitlenen nesne sayısını belirleyin.](#Pinned)  
   
--   [Bir çöp toplamadaki sürenin uzunluğunu belirleyin.](#TimeInGC)  
+-   [Bir çöp Toplamadaki sürenin uzunluğunu belirleyin.](#TimeInGC)  
   
 -   [Bir çöp toplama işlemini neyin tetiklediğini belirleyin.](#Triggered)  
   
--   [Yüksek CPU kullanımına çöp toplamanın sebep olup olmadığını belirleyin.](#HighCPU)  
+-   [Yüksek CPU kullanımına çöp toplamanın sebep olup olmadığını belirler.](#HighCPU)  
   
 <a name="IsGC"></a>   
 ##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>Sorunun çöp toplamadan kaynaklanıp kaynaklanmadığını belirlemek için  
@@ -294,7 +294,7 @@ ms.locfileid: "59310570"
   
 2. Eğer çıktıda bir özel durum belirtilmezse, bellek yetmezliği özel durumunun hangi iş parçacığından kaynaklandığını belirlemeniz gerekir. Bütün iş parçacıklarını çağrı yığınlarıyla birlikte göstermek için hata ayıklayıcısına aşağıdaki komutu yazın:  
   
-     **~\*KB**  
+     **~\*kb**  
   
      Özel durum çağrısı yapan yığınlı iş parçacığı, `RaiseTheException` bağımsız değişkeni tarafından belirtilir. Bu yönetilen özel durum nesnesidir.  
   
@@ -304,7 +304,7 @@ ms.locfileid: "59310570"
   
 3. İç içe özel durumların dökümünü almak için aşağıdaki komutu kullanabilirsiniz.  
   
-     **! pe -iç içe geçmiş**  
+     **! pe-iç içe geçmiş**  
   
      Eğer herhangi bir özel durum bulamazsanız, bellek yetmezliği özel durumu, yönetilmeyen koddan kaynaklanmıştır.  
   
@@ -554,7 +554,7 @@ ms.locfileid: "59310570"
   
 -   Nesil 0 tarafından kullanılan alanı hesaplayın:  
   
-     **? 49e05d04 0x49521f8c**  
+     **? 49e05d04-0x49521f8c**  
   
      Sonuç aşağıdaki gibidir. Nesil 0 yaklaşık olarak 9 MB.  
   
@@ -698,7 +698,7 @@ ms.locfileid: "59310570"
   
 -   Hata ayıklama uzantısının yüklendiği WinDbg veya Visual Studio hata ayıklayıcısında, bütün iş parçacıklarını çağrı yığınlarıyla birlikte görmek için aşağıdaki komutu yazın:  
   
-     **~\*KB**  
+     **~\*kb**  
   
      Bu komut, aşağıdakine benzer bir çıktı gösterir.  
   
@@ -780,4 +780,4 @@ ms.locfileid: "59310570"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çöp Toplama](../../../docs/standard/garbage-collection/index.md)
+- [Atık Toplama](../../../docs/standard/garbage-collection/index.md)

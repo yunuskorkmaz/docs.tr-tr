@@ -12,10 +12,10 @@ ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315770"
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Sıralama Davranışı
@@ -378,8 +378,8 @@ interface _Graphics {
   
 |Sistem değer türü|IDL türü|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**TARİH**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**ONDALIK**|  
 |<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
@@ -443,6 +443,6 @@ interface IValueTypes : IDispatch {
 
 - [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](blittable-and-non-blittable-types.md)
 - [Kopyalama ve Sabitleme](copying-and-pinning.md)
-- [Diziler için Varsayılan Sıralama](default-marshaling-for-arrays.md)
+- [Diziler için Varsayılan Hazırlama](default-marshaling-for-arrays.md)
 - [Nesneler için Varsayılan Hazırlama](default-marshaling-for-objects.md)
 - [Dizeler için Varsayılan Hazırlama](default-marshaling-for-strings.md)

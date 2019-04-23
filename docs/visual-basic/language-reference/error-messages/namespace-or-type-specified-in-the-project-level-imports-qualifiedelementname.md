@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
 ms.openlocfilehash: 105fa8da838938d13022c210c1f65cdafd251003
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308490"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Belirtilen proje düzeyi Imports Namespace veya tür\<qualifiedelementname >', genel üye içermiyor veya bulunamıyor
@@ -41,6 +41,6 @@ Belirtilen proje düzeyi Imports Namespace veya tür\<qualifiedelementname >', g
 
 - [Başvurular Sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
-- [Ortak](../../../visual-basic/language-reference/modifiers/public.md)
-- [Visual Basic'de Ad Alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Visual Basic'de ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Bildirilmiş Öğelere Başvurular](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

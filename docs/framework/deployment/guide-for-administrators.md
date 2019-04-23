@@ -8,10 +8,10 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 41cdc3db069ecf7ea854b76ac45d4b268a357459
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309517"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
@@ -27,8 +27,8 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
  [Dağıtım işlemi](#the_deployment_process)  
  [.NET Framework'ü dağıtma](#deploying_in_a_test_environment)  
  [Koleksiyon oluşturma](#creating_a_collection)  
- [Paket ve program oluşturma](#creating_a_package)  
- [Dağıtım noktası seçme](#select_dist_point)  
+ [Bir paket ve program oluşturma](#creating_a_package)  
+ [Bir dağıtım noktası seçin](#select_dist_point)  
  [Paketi dağıtma](#deploying_package)  
 [Kaynaklar](#resources)  
 [Sorun giderme](#troubleshooting)  
@@ -98,7 +98,7 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
 4. Üzerinde **paket** sayfasının **paket ve Program Sihirbazı Oluştur**, aşağıdaki bilgileri girin:  
   
-    -   Ad: `.NET Framework 4.5`  
+    -   Adı: `.NET Framework 4.5`  
   
     -   Üretici: `Microsoft`  
   
@@ -110,7 +110,7 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
 7. Üzerinde **Program** sayfasının **paket ve Program Sihirbazı Oluştur**, aşağıdaki bilgileri girin:  
   
-    1.  **Ad:** `.NET Framework 4.5`  
+    1.  **Adı:** `.NET Framework 4.5`  
   
     2.  **Komut satırı:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (komut satırı seçenekleri açıklanmıştır tabloda Bu adımlardan sonra)  
   
@@ -191,11 +191,11 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
  **Active Directory, DNS, DHCP:**  
   
--   [Active Directory Etki Alanı Hizmetleri](/windows/desktop/ad/active-directory-domain-services)  
+-   [Active Directory etki alanı Hizmetleri](/windows/desktop/ad/active-directory-domain-services)  
   
--   [Etki Alanı Adı Sistemi (DNS)](/windows-server/networking/dns/dns-top)  
+-   [Domain Name System (DNS)](/windows-server/networking/dns/dns-top)  
   
--   [Dinamik Ana Bilgisayar Yapılandırma Protokolü (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
+-   [Dinamik konak Yapılandırma Protokolü (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
  **SQL Server 2008:**  
   
@@ -203,15 +203,15 @@ Bu makalede bir sistem yöneticisi nasıl dağıtacağınız açıklanmıştır 
   
 -   [Veritabanı yöneticileri için SQL Server 2008 Güvenliğe genel bakış](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
- **Sistem Merkezi 2012 Yapılandırma Yöneticisi (Yönetim Noktası, Dağıtım Noktası):**  
+ **System Center 2012 Configuration Manager (yönetim noktası, dağıtım noktası):**  
   
 -   [System Center 2012 Configuration Manager için Site Yönetimi](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
 -   [Yapılandırma Yöneticisi tek Site planlama ve dağıtım](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
   
- **Windows bilgisayarları için Sistem Merkezi 2012 Yapılandırma Yöneticisi istemcisi:**  
+ **Windows bilgisayarlar için System Center 2012 Configuration Manager istemcisi:**  
   
--   [System Center 2012 Configuration Manager için istemci dağıtma](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
+-   [System Center 2012 Configuration Manager için İstemci Dağıtma](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Sorun giderme  

@@ -9,10 +9,10 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314977"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework ile çalışmaya başlama
@@ -79,7 +79,7 @@ Bir geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework'ü 
 
 | Başlık | Açıklama |
 | ----- |------------ |
-| [Genel Bakış](overview.md) | .NET Framework'ü hedefleyen uygulamalar oluşturan geliştiriciler için ayrıntılı bilgi sağlar. |
+| [Genel bakış](overview.md) | .NET Framework'ü hedefleyen uygulamalar oluşturan geliştiriciler için ayrıntılı bilgi sağlar. |
 | [Yükleme kılavuzu](../install/index.md) | .NET Framework'ü yükleme hakkında bilgi sağlar. |  
 | [.NET Framework ve Bant Dışı Yayınlar](the-net-framework-and-out-of-band-releases.md) | .NET Framework bant dışı yayınlar ve bunları uygulamanızda nasıl kullanacağınızı açıklar. |
 | [Sistem Gereksinimleri](system-requirements.md) | .NET Framework çalıştırmak için donanım ve yazılım gereksinimleri listelenmiştir. |
@@ -91,5 +91,5 @@ Bir geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework'ü 
 
 - [.NET Framework Kılavuzu](../index.md)
 - [Yenilikler](../whats-new/index.md)
-- [.NET API Tarayıcısı](../../../api/index.md)
+- [.NET API tarayıcısı](../../../api/index.md)
 - [Geliştirme Kılavuzu](../development-guide.md)

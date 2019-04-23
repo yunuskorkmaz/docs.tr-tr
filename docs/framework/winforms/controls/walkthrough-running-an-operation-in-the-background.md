@@ -14,10 +14,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308451"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>İzlenecek yol: Arka Planda İşlem Çalıştırma
@@ -34,8 +34,8 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve kullanıcı arabirimini
   
     |Düğme|Ad|Metin|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Başlat**|  
-    |`button2`|`cancelBtn`|**İptal**|  
+    |`button1`|`startBtn`|**Start**|  
+    |`button2`|`cancelBtn`|**İptal Etme**|  
   
 2. Açık **araç kutusu**, tıklayın **bileşenleri** sekmesine ve ardından sürükleyin <xref:System.ComponentModel.BackgroundWorker> formunuza bileşen.  
   
@@ -104,6 +104,6 @@ Sahip olduğunuz işleminin tamamlanması uzun sürer ve kullanıcı arabirimini
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Nasıl yapılır: Arka Planda İşlem Çalıştırma](how-to-run-an-operation-in-the-background.md)
+- [Nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Nasıl yapılır: Arka planda işlem çalıştırma](how-to-run-an-operation-in-the-background.md)
 - [BackgroundWorker Bileşeni](backgroundworker-component.md)

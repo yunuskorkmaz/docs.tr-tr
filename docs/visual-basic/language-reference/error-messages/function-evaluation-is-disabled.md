@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
 ms.openlocfilehash: bc4d05e52434cf62fa90671d29b407c83114b5d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315783"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>Önceki bir işlev değerlendirmesi zaman aşımına uğradığından işlev değerlendirmesi devre dışı bırakıldı
@@ -33,5 +33,5 @@ Bir önceki İşlev değerlendirmesi zaman aşımına uğradığından İşlev d
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da Hata Ayıklama](/visualstudio/debugger/debugging-in-visual-studio)
+- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio)
 - [Hata Ayıklayıcısı ile Kodlarda gezinme](/visualstudio/debugger/navigating-through-code-with-the-debugger)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
 ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312728"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Nasıl yapılır: Bir Windows Uygulamasında Yardım Sağlama
@@ -57,7 +57,7 @@ Kullanabileceğiniz <xref:System.Windows.Forms.HelpProvider> Yardım konuları i
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Açılır Yardımı Görüntüleme](how-to-display-pop-up-help.md)
+- [Nasıl yapılır: Açılır Yardımı görüntüleme](how-to-display-pop-up-help.md)
 - [ToolTips Kullanarak Denetim Yardımı](control-help-using-tooltips.md)
 - [Windows Forms'ta Kullanıcı Yardımını Tümleştirme](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

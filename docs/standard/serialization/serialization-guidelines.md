@@ -9,10 +9,10 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317343"
 ---
 # <a name="serialization-guidelines"></a>Serileştirme yönergeleri
@@ -140,9 +140,9 @@ Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Sözleşmelerini Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Veri Sözleşmesi Seri Hale Getirici](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Veri Anlaşmalarını Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Anlaşması Seri Hale Getirici](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
+- [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [İkili Serileştirme](binary-serialization.md)
 - [.NET uzaktan iletişim](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML ve SOAP Serileştirme](xml-and-soap-serialization.md)

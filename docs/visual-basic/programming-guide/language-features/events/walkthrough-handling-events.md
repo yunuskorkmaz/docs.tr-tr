@@ -10,10 +10,10 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308568"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olaylarını işleme (Visual Basic)
@@ -118,5 +118,5 @@ Olaylar ile çalışmaya nasıl gösteren iki konuları saniyedir. İlk konu [iz
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Olay Bildirme ve Oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
+- [İzlenecek yol: Olay bildirme ve oluşturma](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [Olaylar](../../../../visual-basic/programming-guide/language-features/events/index.md)

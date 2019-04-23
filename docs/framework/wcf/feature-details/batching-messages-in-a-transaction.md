@@ -5,10 +5,10 @@ helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310531"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Bir İşlemde Toplu İleti İşleme
@@ -20,11 +20,11 @@ Sıraya alınan uygulamaları, doğruluk ve iletilerin güvenilir teslim emin ol
 ## <a name="committing-a-transaction"></a>Bir işlemi yürütülüyor  
  Toplu işlem taahhüt aşağıdakilere bağlıdır:  
   
--   `MaxBatchSize`biçimindeki telefon numarasıdır. Bir özelliği <xref:System.ServiceModel.Description.TransactedBatchingBehavior> davranışı. Bu özellik, bir toplu iş içine yerleştirilmesi iletileri maksimum sayısını belirler. Bu sayıya ulaşıldığında, toplu işlem taahhüt eder. Bu değeri kesin bir sınır değil, bu ileti sayısı almadan önce bir toplu iş yürütme mümkündür.  
+-   `MaxBatchSize`. Bir özelliği <xref:System.ServiceModel.Description.TransactedBatchingBehavior> davranışı. Bu özellik, bir toplu iş içine yerleştirilmesi iletileri maksimum sayısını belirler. Bu sayıya ulaşıldığında, toplu işlem taahhüt eder. Bu değeri kesin bir sınır değil, bu ileti sayısı almadan önce bir toplu iş yürütme mümkündür.  
   
--   `Transaction Timeout`biçimindeki telefon numarasıdır. İşlem zaman aşımı yüzde 80'i geçtikten sonra toplu işlem taahhüt eder ve yeni bir toplu iş oluşturulur. Yüzde 20, yani veya küçük bir hareketi tamamlamak verilen zaman olarak kalır, toplu işlem taahhüt eder.  
+-   `Transaction Timeout`. İşlem zaman aşımı yüzde 80'i geçtikten sonra toplu işlem taahhüt eder ve yeni bir toplu iş oluşturulur. Yüzde 20, yani veya küçük bir hareketi tamamlamak verilen zaman olarak kalır, toplu işlem taahhüt eder.  
   
--   `TransactionScopeRequired`biçimindeki telefon numarasıdır. Toplu iletiler, WCF, içeren bulursa işlerken `TransactionScopeRequired`  =  `false`, toplu işleme ve ilk iletinin alınması üzerine yeni bir batch açana `TransactionScopeRequired`  =  `true` ve `TransactionAutoComplete`  = `true`.  
+-   `TransactionScopeRequired`. Toplu iletiler, WCF, içeren bulursa işlerken `TransactionScopeRequired`  =  `false`, toplu işleme ve ilk iletinin alınması üzerine yeni bir batch açana `TransactionScopeRequired`  =  `true` ve `TransactionAutoComplete`  = `true`.  
   
 -   Daha fazla ileti kuyrukta kayıtlı sonra geçerli toplu kararlıdır bile `MaxBatchSize` değil ulaşıldı veya işlem zaman aşımı yüzde 80'i değil geçti.  
   
@@ -84,5 +84,5 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kuyruklar Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
+- [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

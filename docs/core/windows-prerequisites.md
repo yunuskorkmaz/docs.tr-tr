@@ -4,10 +4,10 @@ description: Windows üzerinde gereken bağımlılıklar geliştirin ve .NET Cor
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
 ms.openlocfilehash: 2941721dfa4b87d4113e4f4b529845e47f3dc1b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313716"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows üzerinde .NET Core önkoşulları
@@ -73,7 +73,7 @@ Aşağıdaki makaleler sürüm başına .NET Core desteklenen işletim sistemler
 
 Daha fazla Visual Studio 2017'deki değişiklikler hakkında [sürüm notları](/visualstudio/releasenotes/vs2017-relnotes).
 
-# [<a name="net-core-2x"></a>.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 .NET Core 2.2 SDK'sını kullanarak Visual Studio 2017'de .NET Core uygulamaları geliştirmek için:
 
@@ -101,7 +101,7 @@ Visual Studio ile .NET Core 2.2 SDK yapılandırılmış oluşturduktan sonra a�
 * .NET Core 2.2, derleme, .NET Core 1.x ve 2.x'i projeleri yeniden hedefle ve çalıştırın.
 * Yeni .NET Core 2.2 projeleri oluşturun.
 
-# [<a name="net-core-1x"></a>.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 Visual Studio'da .NET Core 1.x uygulamalar geliştirmek için [Visual Studio 2017'yi indirip](/visualstudio/install/install-visual-studio) ile **".NET Core çoklu platform geliştirme"** iş yükü (içinde **diğer araç takımları**bölümü) seçili.
 
