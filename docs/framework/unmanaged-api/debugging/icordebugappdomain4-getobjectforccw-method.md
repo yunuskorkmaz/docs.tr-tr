@@ -5,16 +5,16 @@ ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 973442a969746671e4d85c5d7881f51c5dfba535
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222269"
 ---
-# <a name="icordebugappdomain4getobjectforccw-method"></a><span data-ttu-id="fd84f-102">ICorDebugAppDomain4::GetObjectForCCW Metodu</span><span class="sxs-lookup"><span data-stu-id="fd84f-102">ICorDebugAppDomain4::GetObjectForCCW Method</span></span>
-<span data-ttu-id="fd84f-103">COM çağrılabilir sarmalayıcı (CCW) işaretçisinden bir yönetilen bir nesne alır.</span><span class="sxs-lookup"><span data-stu-id="fd84f-103">Gets a managed object from a COM callable wrapper (CCW) pointer.</span></span>  
+# <a name="icordebugappdomain4getobjectforccw-method"></a><span data-ttu-id="43028-102">ICorDebugAppDomain4::GetObjectForCCW Metodu</span><span class="sxs-lookup"><span data-stu-id="43028-102">ICorDebugAppDomain4::GetObjectForCCW Method</span></span>
+<span data-ttu-id="43028-103">COM çağrılabilir sarmalayıcı (CCW) işaretçisinden bir yönetilen bir nesne alır.</span><span class="sxs-lookup"><span data-stu-id="43028-103">Gets a managed object from a COM callable wrapper (CCW) pointer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fd84f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="fd84f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43028-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="43028-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObjectForCCW(  
@@ -23,25 +23,25 @@ HRESULT GetObjectForCCW(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fd84f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="fd84f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="43028-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="43028-105">Parameters</span></span>  
  `ccwPointer`  
- <span data-ttu-id="fd84f-106">[in] COM çağrılabilir sarmalayıcı (CCW) işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="fd84f-106">[in] A COM callable wrapper (CCW) pointer.</span></span>  
+ <span data-ttu-id="43028-106">[in] COM çağrılabilir sarmalayıcı (CCW) işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="43028-106">[in] A COM callable wrapper (CCW) pointer.</span></span>  
   
  `ppManagedObject`  
- <span data-ttu-id="fd84f-107">[out] Verilen CCW işaretçisi karşılık gelen yönetilen nesneyi temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="fd84f-107">[out] A pointer to the address of an "ICorDebugValue" object that represents the managed object that corresponds to the given CCW pointer.</span></span>  
+ <span data-ttu-id="43028-107">[out] Verilen CCW işaretçisi karşılık gelen yönetilen nesneyi temsil eden bir "ICorDebugValue" nesnenin adresi için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="43028-107">[out] A pointer to the address of an "ICorDebugValue" object that represents the managed object that corresponds to the given CCW pointer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fd84f-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fd84f-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="43028-108">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="43028-108">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fd84f-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fd84f-109">Requirements</span></span>  
- <span data-ttu-id="fd84f-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd84f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43028-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="43028-109">Requirements</span></span>  
+ <span data-ttu-id="43028-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43028-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd84f-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fd84f-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="43028-111">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="43028-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fd84f-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fd84f-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="43028-112">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="43028-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="fd84f-113">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="fd84f-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ <span data-ttu-id="43028-113">**.NET framework sürümleri:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43028-113">**.NET Framework Versions:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd84f-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fd84f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43028-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="43028-114">See also</span></span>
 
-- [<span data-ttu-id="fd84f-115">ICorDebugAppDomain4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="fd84f-115">ICorDebugAppDomain4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)
-- [<span data-ttu-id="fd84f-116">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="fd84f-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="43028-115">ICorDebugAppDomain4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="43028-115">ICorDebugAppDomain4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)
+- [<span data-ttu-id="43028-116">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="43028-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

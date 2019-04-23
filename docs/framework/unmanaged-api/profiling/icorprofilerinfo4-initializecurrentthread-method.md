@@ -18,38 +18,38 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9fd0900e61c57d105439d83430284dc8634d2a1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223608"
 ---
-# <a name="icorprofilerinfo4initializecurrentthread-method"></a><span data-ttu-id="041d1-102">ICorProfilerInfo4::InitializeCurrentThread Yöntemi</span><span class="sxs-lookup"><span data-stu-id="041d1-102">ICorProfilerInfo4::InitializeCurrentThread Method</span></span>
-<span data-ttu-id="041d1-103">Geçerli iş parçacığı sonraki profil oluşturucu bu kilitlenme önlenebilir şekilde aynı iş parçacığında API çağrılarının tarifelerindeki başlatır.</span><span class="sxs-lookup"><span data-stu-id="041d1-103">Initializes the current thread in advance of subsequent profiler API calls on the same thread, so that deadlock can be avoided.</span></span>  
+# <a name="icorprofilerinfo4initializecurrentthread-method"></a><span data-ttu-id="b3523-102">ICorProfilerInfo4::InitializeCurrentThread Yöntemi</span><span class="sxs-lookup"><span data-stu-id="b3523-102">ICorProfilerInfo4::InitializeCurrentThread Method</span></span>
+<span data-ttu-id="b3523-103">Geçerli iş parçacığı sonraki profil oluşturucu bu kilitlenme önlenebilir şekilde aynı iş parçacığında API çağrılarının tarifelerindeki başlatır.</span><span class="sxs-lookup"><span data-stu-id="b3523-103">Initializes the current thread in advance of subsequent profiler API calls on the same thread, so that deadlock can be avoided.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="041d1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="041d1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3523-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b3523-104">Syntax</span></span>  
   
 ```  
 HRESULT InitializeCurrentThread ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="041d1-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="041d1-105">Remarks</span></span>  
- <span data-ttu-id="041d1-106">Çağırmanızı öneririz `InitializeCurrentThread` bir profil oluşturucu çağıran herhangi bir iş parçacığı üzerinde varken API iş parçacıkları askıya alındı.</span><span class="sxs-lookup"><span data-stu-id="041d1-106">We recommend that you call `InitializeCurrentThread` on any thread that will call a profiler API while there are suspended threads.</span></span> <span data-ttu-id="041d1-107">Bu yöntem çağırmak için kendi iş parçacığı oluşturma örnekleme profil oluşturucular tarafından genellikle kullanılan [Icorprofilerınfo2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yığın gerçekleştirmek için yöntemi hedef iş parçacığını askıya alındığında size yol gösterir.</span><span class="sxs-lookup"><span data-stu-id="041d1-107">This method is typically used by sampling profilers that create their own thread to call the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method to perform stack walks while the target thread is suspended.</span></span> <span data-ttu-id="041d1-108">Çağırarak `InitializeCurrentThread` zaman profil oluşturucu örnekleme iş parçacığı ilk oluşturulduktan sonra profil Oluşturucular, CLR Aksi takdirde ilk çağrı sırasında gerçekleştirecek yavaş iş parçacığı başına başlatmanın sağlayabilirsiniz `DoStackSnapshot` artık güvenli bir şekilde başka bir iş parçacığı olduğunda ortaya çıkabilir askıya alındı.</span><span class="sxs-lookup"><span data-stu-id="041d1-108">By calling `InitializeCurrentThread` once when the profiler first creates the sampling thread, profilers can ensure that lazy per-thread initialization that the CLR would otherwise perform during the first call to `DoStackSnapshot` can now occur safely when no other threads are suspended.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b3523-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="b3523-105">Remarks</span></span>  
+ <span data-ttu-id="b3523-106">Çağırmanızı öneririz `InitializeCurrentThread` bir profil oluşturucu çağıran herhangi bir iş parçacığı üzerinde varken API iş parçacıkları askıya alındı.</span><span class="sxs-lookup"><span data-stu-id="b3523-106">We recommend that you call `InitializeCurrentThread` on any thread that will call a profiler API while there are suspended threads.</span></span> <span data-ttu-id="b3523-107">Bu yöntem çağırmak için kendi iş parçacığı oluşturma örnekleme profil oluşturucular tarafından genellikle kullanılan [Icorprofilerınfo2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) yığın gerçekleştirmek için yöntemi hedef iş parçacığını askıya alındığında size yol gösterir.</span><span class="sxs-lookup"><span data-stu-id="b3523-107">This method is typically used by sampling profilers that create their own thread to call the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method to perform stack walks while the target thread is suspended.</span></span> <span data-ttu-id="b3523-108">Çağırarak `InitializeCurrentThread` zaman profil oluşturucu örnekleme iş parçacığı ilk oluşturulduktan sonra profil Oluşturucular, CLR Aksi takdirde ilk çağrı sırasında gerçekleştirecek yavaş iş parçacığı başına başlatmanın sağlayabilirsiniz `DoStackSnapshot` artık güvenli bir şekilde başka bir iş parçacığı olduğunda ortaya çıkabilir askıya alındı.</span><span class="sxs-lookup"><span data-stu-id="b3523-108">By calling `InitializeCurrentThread` once when the profiler first creates the sampling thread, profilers can ensure that lazy per-thread initialization that the CLR would otherwise perform during the first call to `DoStackSnapshot` can now occur safely when no other threads are suspended.</span></span>  
   
 > [!NOTE]
->  `InitializeCurrentThread` <span data-ttu-id="041d1-109">önceden kilit alın ve kilitlenme görevleri tamamlamak için başlatma yapar.</span><span class="sxs-lookup"><span data-stu-id="041d1-109">does the initialization in advance to finish tasks that take locks, and may deadlock.</span></span> <span data-ttu-id="041d1-110">Çağrı `InitializeCurrentThread` askıya alınan iş parçacığı olmadığında.</span><span class="sxs-lookup"><span data-stu-id="041d1-110">Call `InitializeCurrentThread` only when there are no suspended threads.</span></span>  
+>  <span data-ttu-id="b3523-109">`InitializeCurrentThread` önceden kilit alın ve kilitlenme görevleri tamamlamak için başlatma yapar.</span><span class="sxs-lookup"><span data-stu-id="b3523-109">`InitializeCurrentThread` does the initialization in advance to finish tasks that take locks, and may deadlock.</span></span> <span data-ttu-id="b3523-110">Çağrı `InitializeCurrentThread` askıya alınan iş parçacığı olmadığında.</span><span class="sxs-lookup"><span data-stu-id="b3523-110">Call `InitializeCurrentThread` only when there are no suspended threads.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="041d1-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="041d1-111">Requirements</span></span>  
- <span data-ttu-id="041d1-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="041d1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3523-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b3523-111">Requirements</span></span>  
+ <span data-ttu-id="b3523-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b3523-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="041d1-113">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="041d1-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b3523-113">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b3523-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="041d1-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="041d1-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b3523-114">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3523-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="041d1-115">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="041d1-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="b3523-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3523-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="041d1-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="041d1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3523-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b3523-116">See also</span></span>
 
-- [<span data-ttu-id="041d1-117">ICorProfilerInfo4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="041d1-117">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [<span data-ttu-id="041d1-118">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="041d1-118">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="041d1-119">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="041d1-119">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="b3523-117">ICorProfilerInfo4 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b3523-117">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [<span data-ttu-id="b3523-118">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="b3523-118">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="b3523-119">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="b3523-119">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

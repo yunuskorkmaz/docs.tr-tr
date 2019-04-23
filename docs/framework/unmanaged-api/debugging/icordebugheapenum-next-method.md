@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4bd993eb26f26818117a20d376c3331f88c46b26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214357"
 ---
-# <a name="icordebugheapenumnext-method"></a><span data-ttu-id="85279-102">ICorDebugHeapEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="85279-102">ICorDebugHeapEnum::Next Method</span></span>
-<span data-ttu-id="85279-103">Belirtilen sayıda alır [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığındaki nesneler hakkında bilgi içeren örnekleri.</span><span class="sxs-lookup"><span data-stu-id="85279-103">Gets the specified number of [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instances that contain information about objects on the managed heap.</span></span>  
+# <a name="icordebugheapenumnext-method"></a><span data-ttu-id="30b54-102">ICorDebugHeapEnum::Next Yöntemi</span><span class="sxs-lookup"><span data-stu-id="30b54-102">ICorDebugHeapEnum::Next Method</span></span>
+<span data-ttu-id="30b54-103">Belirtilen sayıda alır [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığındaki nesneler hakkında bilgi içeren örnekleri.</span><span class="sxs-lookup"><span data-stu-id="30b54-103">Gets the specified number of [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) instances that contain information about objects on the managed heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="85279-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="85279-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="30b54-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="30b54-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -36,29 +36,29 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="85279-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="85279-105">Parameters</span></span>  
- <span data-ttu-id="85279-106">celt</span><span class="sxs-lookup"><span data-stu-id="85279-106">celt</span></span>  
- <span data-ttu-id="85279-107">[in] Alınacak nesne sayısı.</span><span class="sxs-lookup"><span data-stu-id="85279-107">[in] The number of objects to be retrieved.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="30b54-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="30b54-105">Parameters</span></span>  
+ <span data-ttu-id="30b54-106">celt</span><span class="sxs-lookup"><span data-stu-id="30b54-106">celt</span></span>  
+ <span data-ttu-id="30b54-107">[in] Alınacak nesne sayısı.</span><span class="sxs-lookup"><span data-stu-id="30b54-107">[in] The number of objects to be retrieved.</span></span>  
   
- <span data-ttu-id="85279-108"> nesneleri</span><span class="sxs-lookup"><span data-stu-id="85279-108">objects</span></span>  
- <span data-ttu-id="85279-109">[out] Bir dizi işaretçileri, her biri için işaret eden bir [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığındaki bir nesneyle ilgili bilgileri sağlayan nesne.</span><span class="sxs-lookup"><span data-stu-id="85279-109">[out] An array of pointers, each of which points to a [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) object that provides information about an object on the managed heap.</span></span>  
+ <span data-ttu-id="30b54-108"> nesneleri</span><span class="sxs-lookup"><span data-stu-id="30b54-108">objects</span></span>  
+ <span data-ttu-id="30b54-109">[out] Bir dizi işaretçileri, her biri için işaret eden bir [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) yönetilen yığındaki bir nesneyle ilgili bilgileri sağlayan nesne.</span><span class="sxs-lookup"><span data-stu-id="30b54-109">[out] An array of pointers, each of which points to a [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) object that provides information about an object on the managed heap.</span></span>  
   
- <span data-ttu-id="85279-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="85279-110">pceltFetched</span></span>  
- <span data-ttu-id="85279-111">[out] Bir işaretçi sayısına [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) gerçekte döndürülen nesneleri `objects`.</span><span class="sxs-lookup"><span data-stu-id="85279-111">[out] A pointer to the number of [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) objects actually returned in `objects`.</span></span> <span data-ttu-id="85279-112">Bu değer olabilir `null` varsa `celt` 1'dir.</span><span class="sxs-lookup"><span data-stu-id="85279-112">This value may be `null` if `celt` is 1.</span></span>  
+ <span data-ttu-id="30b54-110">pceltFetched</span><span class="sxs-lookup"><span data-stu-id="30b54-110">pceltFetched</span></span>  
+ <span data-ttu-id="30b54-111">[out] Bir işaretçi sayısına [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) gerçekte döndürülen nesneleri `objects`.</span><span class="sxs-lookup"><span data-stu-id="30b54-111">[out] A pointer to the number of [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) objects actually returned in `objects`.</span></span> <span data-ttu-id="30b54-112">Bu değer olabilir `null` varsa `celt` 1'dir.</span><span class="sxs-lookup"><span data-stu-id="30b54-112">This value may be `null` if `celt` is 1.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="85279-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="85279-113">Remarks</span></span>  
- <span data-ttu-id="85279-114">`COR_HEAPOBJECT.type` Alanı, iç içe geçmiş bir başvuru sayılan COM arabirimi tanımlayıcısıdır.</span><span class="sxs-lookup"><span data-stu-id="85279-114">The `COR_HEAPOBJECT.type` field is the identifier of a nested reference-counted COM interface.</span></span> <span data-ttu-id="85279-115">Bu başvuru çağıran tarafından serbest bırakılması `ICorDebugHeapEnum::Next`.</span><span class="sxs-lookup"><span data-stu-id="85279-115">This reference must be released by the caller of `ICorDebugHeapEnum::Next`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="30b54-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="30b54-113">Remarks</span></span>  
+ <span data-ttu-id="30b54-114">`COR_HEAPOBJECT.type` Alanı, iç içe geçmiş bir başvuru sayılan COM arabirimi tanımlayıcısıdır.</span><span class="sxs-lookup"><span data-stu-id="30b54-114">The `COR_HEAPOBJECT.type` field is the identifier of a nested reference-counted COM interface.</span></span> <span data-ttu-id="30b54-115">Bu başvuru çağıran tarafından serbest bırakılması `ICorDebugHeapEnum::Next`.</span><span class="sxs-lookup"><span data-stu-id="30b54-115">This reference must be released by the caller of `ICorDebugHeapEnum::Next`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="85279-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="85279-116">Requirements</span></span>  
- <span data-ttu-id="85279-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="85279-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="30b54-116">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="30b54-116">Requirements</span></span>  
+ <span data-ttu-id="30b54-117">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="30b54-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="85279-118">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="85279-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="30b54-118">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="30b54-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="85279-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="85279-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="30b54-119">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30b54-119">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="85279-120">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="85279-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="30b54-120">**.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30b54-120">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="85279-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="85279-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="30b54-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="30b54-121">See also</span></span>
 
-- [<span data-ttu-id="85279-122">ICorDebugHeapEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="85279-122">ICorDebugHeapEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)
-- [<span data-ttu-id="85279-123">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="85279-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="30b54-122">ICorDebugHeapEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="30b54-122">ICorDebugHeapEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)
+- [<span data-ttu-id="30b54-123">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="30b54-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
