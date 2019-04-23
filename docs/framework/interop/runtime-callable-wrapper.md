@@ -11,10 +11,10 @@ ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210145"
 ---
 # <a name="runtime-callable-wrapper"></a>Çalışma Zamanı Aranabilir Sarmalayıcısı
@@ -47,7 +47,7 @@ Aşağıdaki görüntüde, çalışma zamanı çağrılabilir sarmalayıcı COM 
 |---------------|-----------------|  
 |**IDispatch**|COM nesnelerine üzerinden erişiyorsanız geç bağlama için.|  
 |**IErrorInfo**|Hata, kaynağı, bir Yardım dosyası, Yardım bağlamı ve hata tanımlı arabiriminin GUID'si değerinin metinsel bir açıklaması verilmiştir (her zaman **GUID_NULL** .NET sınıfları için).|  
-|**Iprovideclassınfo**|COM Nesne uygulayan sarılan, **Iprovideclassınfo**, RCW, daha iyi tür kimlik sağlamak için bu arabirimden tür bilgilerini ayıklar.|  
+|**IProvideClassInfo**|COM Nesne uygulayan sarılan, **Iprovideclassınfo**, RCW, daha iyi tür kimlik sağlamak için bu arabirimden tür bilgilerini ayıklar.|  
 |**IUnknown**|Nesne kimliği, türü zorlama ve ömür yönetimi için:<br /><br /> -Nesne Kimliği<br />     Çalışma zamanı değerini karşılaştırarak COM nesneleri ayırt **IUnknown** her nesne için arabirim.<br />-Type zorlama<br />     Dinamik tür bulma tarafından gerçekleştirilen RCW tanır **QueryInterface** yöntemi.<br />-Ömür Yönetimi<br />     Kullanarak **QueryInterface** yöntemi, RCW alır ve çalışma zamanının çöp toplama, yönetilmeyen nesneyi serbest sarmalayıcı başarılı olana dek, yönetilmeyen bir nesneye bir başvuru içerir.|  
   
  RCW, aşağıdaki tabloda listelenen arabirimler sarmaladığı nesne tarafından sunulan isteğe bağlı olarak kullanır.  
@@ -61,6 +61,6 @@ Aşağıdaki görüntüde, çalışma zamanı çağrılabilir sarmalayıcı COM 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [COM Sarmalayıcıları](com-wrappers.md)
-- [COM Aranabilir Sarmalayıcısı](com-callable-wrapper.md)
-- [Tür Kitaplığından Derlemeye Dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tür Kitaplığını Derleme Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)
+- [COM Çağrılabilir Sarmalayıcısı](com-callable-wrapper.md)
+- [Tür kitaplığını derlemeye dönüştürme özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](importing-a-type-library-as-an-assembly.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
 ms.openlocfilehash: c176f7f470cc65bb135e5f92935102e09c7e8485
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209833"
 ---
 # <a name="systemservicemodel"></a>\<system.serviceModel>
@@ -64,7 +64,7 @@ Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) Service
 |[\<davranışlar >](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)|Bu bölümde adlı iki alt öğe koleksiyonlarını tanımlar `endpointBehaviors` ve `serviceBehaviors`.  Her koleksiyon sırasıyla uç noktaları ve hizmetler tarafından kullanılan davranışı öğeleri tanımlar. Her davranışı öğesi kendi benzersiz tarafından tanımlanır `name` özniteliği.|  
 |[\<bağlamaları >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Bu bölümde, standart ve özel bağlamalar koleksiyonunu tutar. Her giriş kendi benzersiz tarafından tanımlanır `name`. Hizmetlerini kullanan bağlamaları bağlayarak kullanarak `name`.|  
 |[\<İstemci >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Bu bölüm, bir istemcinin bir hizmete bağlanmak için kullandığı uç noktaları listesini içerir.|  
-|[\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|Bu bölümde, WCF ve COM birlikte çalışması için etkin COM sözleşmeleri tanımlar.|  
+|[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|Bu bölümde, WCF ve COM birlikte çalışması için etkin COM sözleşmeleri tanımlar.|  
 |[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Bu bölümü sadece machine.config dosyasında tanımlanabilir. Adlı iki alt öğe koleksiyonlarını tanımlar `endpointBehaviors` ve `serviceBehaviors`.  Her koleksiyon, sırasıyla tüm WCF uç noktaları ve makinede hizmetler tarafından kullanılan davranışı öğeleri tanımlar.  Hem de bir davranış tanımlanmışsa `<commonBehaviors>` ve `<behaviors>` bölümler, davranış \<davranışları > bölüm tercih verilir.|  
 |[\<Tanılama >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Bu bölümde, WCF tanılama özelliklerini ayarlarını içerir. Kullanıcı etkinleştirebilir/izleme, performans sayaçları ve WMI sağlayıcısı devre dışı bırakabilir ve özel ileti filtreleri ekleyebilirsiniz.|  
 |[\<Uzantıları >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|Bu bölüm, kullanıcı tanımlı bağlamalar, davranışları ve diğer yönleri uzantıları oluşturmak kullanıcı olanak tanıyan uzantılar koleksiyonunu içerir.|  

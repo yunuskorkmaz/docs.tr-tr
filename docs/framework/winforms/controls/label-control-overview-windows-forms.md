@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
 ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210099"
 ---
 # <a name="label-control-overview-windows-forms"></a>Etiket Denetimine Genel Bakış (Windows Forms)
@@ -26,5 +26,5 @@ Windows Forms <xref:System.Windows.Forms.Label> denetimleri, metin veya kullanı
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Label>
-- [Nasıl yapılır: Windows Forms Etiket Denetimini İçeriğini Sığdıracak Şekilde Boyutlandırma](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [Nasıl yapılır: Bir Windows Forms etiket denetimini içeriğini sığdıracak şekilde boyutlandırma](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Nasıl yapılır: Windows Forms etiket denetimleri ile erişim tuşları oluşturma](how-to-create-access-keys-with-windows-forms-label-controls.md)

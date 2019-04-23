@@ -10,10 +10,10 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
 ms.openlocfilehash: 80056771744c9b97828a024adf32638e545a839e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211588"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>ComboBox Denetimine Genel Bakış (Windows Forms)
@@ -28,9 +28,9 @@ Windows Forms <xref:System.Windows.Forms.ComboBox> denetimi bir açılan kutudak
 - <xref:System.Windows.Forms.ComboBox>
 - [ListBox Denetimine Genel Bakış](listbox-control-overview-windows-forms.md)
 - [ListBox Yerine Ne Zaman Windows Forms ComboBox Kullanılır?](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Öğe Ekleme ve Kaldırma](add-and-remove-items-from-a-wf-combobox.md)
-- [Nasıl yapılır: Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminin İçeriğini Sıralama](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Belirli Öğelere Erişme](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
-- [Nasıl yapılır: Windows Forms ComboBox veya ListBox Denetimini Verilere Bağlama](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Nasıl yapılır: Ekleme ve kaldırma öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](add-and-remove-items-from-a-wf-combobox.md)
+- [Nasıl yapılır: Sıralama içeriği bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Nasıl yapılır: Özel erişim öğeleri bir Windows Forms ComboBox, ListBox veya CheckedListBox denetimi](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
+- [Nasıl yapılır: Bir Windows Forms ComboBox veya ListBox denetimini verilere bağlama](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [Seçenekleri Listelemede Kullanılan Windows Forms Denetimleri](windows-forms-controls-used-to-list-options.md)
-- [Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetimi için Arama Tablosu Oluşturma](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Nasıl yapılır: ComboBox, ListBox veya CheckedListBox denetiminde bir Windows Forms için arama tablosu oluşturma](create-a-lookup-table-for-a-wf-combobox-listbox.md)

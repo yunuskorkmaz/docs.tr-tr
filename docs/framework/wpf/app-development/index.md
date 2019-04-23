@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
 ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211068"
 ---
 # <a name="application-development"></a>Uygulama Geliştirme
@@ -125,6 +125,6 @@ ms.locfileid: "59211068"
 |[WPF’de Windows](windows-in-wpf-applications.md)|Uygulamanızda nasıl kullanılacağını dahil olmak üzere windows yönetme ayrıntıları sağlar <xref:System.Windows.Window> sınıfı ve iletişim kutuları.|  
 |[Gezintiye Genel Bakış](navigation-overview.md)|Uygulamanızın sayfalar arasında gezinti yönetmeye genel bakış sağlar.|  
 |[Barındırma](hosting-wpf-applications.md)|Genel bir bakış sağlar [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
-|[Yapılandırma ve Dağıtma](building-and-deploying-wpf-applications.md)|WPF uygulaması derleme ve dağıtma işlemini açıklamaktadır.|  
+|[Derleme ve Dağıtma](building-and-deploying-wpf-applications.md)|WPF uygulaması derleme ve dağıtma işlemini açıklamaktadır.|  
 |[Visual Studio’da WPF’ye Giriş](../getting-started/introduction-to-wpf-in-vs.md)|WPF ana özelliklerini açıklar.|  
-|[İzlenecek yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Uygulamayı kullanarak bir WPF oluşturmak için sayfa gezinti, düzen, denetimler, resim, nasıl gösterir stilleri bir kılavuz ve bağlama.|
+|[İzlenecek yol: İlk WPF Masaüstü Uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Uygulamayı kullanarak bir WPF oluşturmak için sayfa gezinti, düzen, denetimler, resim, nasıl gösterir stilleri bir kılavuz ve bağlama.|

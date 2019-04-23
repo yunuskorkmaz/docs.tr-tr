@@ -7,10 +7,10 @@ helpviewer_keywords:
 - resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
 ms.openlocfilehash: f743e9ccf8a984a646a4b8f05ee99162e5bc73ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210444"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>Nasıl yapılır: GridSplitter ile Sütunları Yeniden Boyutlandırma

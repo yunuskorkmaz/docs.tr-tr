@@ -1,5 +1,5 @@
 ---
-title: <probing> Öğe
+title: <probing> Öğesi
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing
@@ -12,10 +12,10 @@ ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210275"
 ---
 # <a name="probing-element"></a>\<yoklama > öğesi
@@ -69,5 +69,5 @@ Derlemeler yüklenirken aramak ortak dil çalışma zamanı için uygulama temel
 
 - [Çalışma Zamanı Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Yapılandırma Dosyası Şeması](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Derlemenin Konumunu Belirtme](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Bütünleştirilmiş Kodun Konumunu Belirtme](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
+- [Çalışma Zamanının Bütünleştirilmiş Kodların Konumunu Bulması](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

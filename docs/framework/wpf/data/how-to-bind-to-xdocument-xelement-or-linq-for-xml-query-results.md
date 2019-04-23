@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
 ms.openlocfilehash: afecb87dcfce1a8c48f1b2108edeae3cfd2aa16f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209664"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Nasıl yapılır: XML Sorgu Sonuçları için XDocument, XElement veya LINQ'ya Bağlama
@@ -41,7 +41,7 @@ Bu örnek XML verilerine bağlama yapmayı gösteren bir <xref:System.Windows.Co
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kaynakların Bağlanmasına Genel Bakış](binding-sources-overview.md)
-- [LINQ to XML genel bakış ile WPF verilerini bağlama](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
-- [LINQ to XML örneği kullanarak WPF verilerini bağlama](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)
-- [LINQ to XML dinamik özellikleri](/visualstudio/designers/linq-to-xml-dynamic-properties)
+- [Bağlama Kaynaklarına Genel Bakış](binding-sources-overview.md)
+- [LINQ to XML ile WPF Verilerini Bağlamaya Genel Bakış](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
+- [LINQ to XML Kullanarak WPF Verilerini Bağlama Örneği](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)
+- [LINQ to XML Dinamik Özellikleri](/visualstudio/designers/linq-to-xml-dynamic-properties)

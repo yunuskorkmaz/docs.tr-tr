@@ -8,10 +8,10 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 368d5f7fa2eec8f3526a10b4777a862e8334617c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210236"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 geçiş sorunları
@@ -84,7 +84,7 @@ Namespace: <xref:System>; derleme: (mscorlib.dll) içindeki mscorlib
 | Özellik | 3.5 SP1 arasındaki farklar | Önerilen değişiklikler |
 | ------- | ------------------------ | ------------------- |
 | **Gün ışığından tasarruf** | Sistem saati ile tutarlı olacak şekilde zaman özellikleri (gibi <xref:System.TimeZoneInfo.Local> ve <xref:System.DateTime.Now>) artık diğer .NET Framework veri yerine işletim sistemi kuralları Yaz Saati işlemleri için kullanın. | Yok. |
-| **Dizeleri biçimlendirme** | Kültüre duyarlı biçimlendirme, desteklemek için <xref:System.TimeSpan> yapısı yeni aşırı yüklemeleri içerir `ToString`, `Parse`, ve `TryParse` yöntemleri ayrıca yeni `ParseExact` ve `TryParseExact` yöntemleri. | Yok. |
+| **Biçimlendirme dizeleri** | Kültüre duyarlı biçimlendirme, desteklemek için <xref:System.TimeSpan> yapısı yeni aşırı yüklemeleri içerir `ToString`, `Parse`, ve `TryParse` yöntemleri ayrıca yeni `ParseExact` ve `TryParseExact` yöntemleri. | Yok. |
 
 ### <a name="globalization"></a>Genelleştirme
 
@@ -190,8 +190,8 @@ Ad alanları: <xref:System.Data.Services>, <xref:System.Data.Services.Client>, <
 | **Üst bilgileri** | Üst bilgiler için aşağıdaki geliştirmeler yapılmıştır:<br><br>* WCF Veri Hizmetleri artık doğru şekilde reddeder bir `eTag` belirtilmeyen bir değere sahip bir üstbilgi.<br>* WCF Veri Hizmetleri artık bir hata döndürür ve bir silme isteği için bir bağlantı isteği yürütülmüyor olduğunda bir `if-*` istekte başlığıdır.<br>* WCF Veri Hizmetleri istemci, istemci bir Accept üst bilgisinde belirtilen biçimde (Atom, JSON) artık bir hata döndürür. |
 | **JSON okuyucusu** | Tek bir ters eğik çizgi okuduğunda JavaScript nesne gösterimi (JSON) okuyucu artık doğru bir şekilde bir hata döndürür ("\\") bir WCF veri hizmetine gönderilen JSON yükü işlerken kaçış karakteri. |
 | **Birleştirir** | Aşağıdaki iyileştirmeler yapılmıştır <xref:System.Data.Services.Client.MergeOption> sabit listesi:<br><br>* <xref:System.Data.Services.Client.MergeOption> Birleştirme seçeneği artık sonraki herhangi bir veri hizmeti yanıtından istemci varlıkta değiştirir.<br>* <xref:System.Data.Services.Client.MergeOption> Seçeneği dinamik SQL saklı yordamı tabanlı güncelleştirmeleri arasında tutarlı sunuldu. |
-| **İstekler** | <xref:System.Data.Services.DataService%601.OnStartProcessingRequest%2A> Yöntemi artık veri hizmetleri için bir istek işlenmeden önce çağrılır. Bu istek için düzgün çalışması sağlar <xref:System.Data.Services.Providers.ServiceOperation> Hizmetleri. |
-| **Akışlar** | WCF Veri Hizmetleri artık için temel akışı kapatır okuma ve yazma işlemleri. |
+| **İstekleri** | <xref:System.Data.Services.DataService%601.OnStartProcessingRequest%2A> Yöntemi artık veri hizmetleri için bir istek işlenmeden önce çağrılır. Bu istek için düzgün çalışması sağlar <xref:System.Data.Services.Providers.ServiceOperation> Hizmetleri. |
+| **Akışları** | WCF Veri Hizmetleri artık için temel akışı kapatır okuma ve yazma işlemleri. |
 | **URI'ler** | WCF Veri Hizmetleri istemci tarafından bir URI'leri kaçış düzeltildi. |
 
 ## <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
@@ -215,7 +215,7 @@ Ad alanları: <xref:System.Windows>, <xref:System.Windows.Controls>; derleme: Pr
 | **Bağlı kaynaklar** | Uygulama oluşturulduğunda bağlama daha kolay, kaynak yapmak için projenin klasör yapısını dışında bir konumda bulunan dosyaları (örneğin, görüntüleri) kaynak dosyanın tam yolu yalnızca dosya adı yerine kaynak kimliği kullanın. Uygulama çalışma zamanında dosyalarını bulmak mümkün olacaktır. | Yok. |
 | **Kısmi güven uygulamaları** | Kısmi çalışan Windows tabanlı uygulamalar için güvenlik konuları, güven ve içeren bir <xref:System.Windows.Controls.WebBrowser> denetim veya <xref:System.Windows.Controls.Frame> içeren HTML denetimi oluşturur bir <xref:System.Security.SecurityException> denetimi zaman oluşturulur.<br><br>Tarayıcı uygulamaları, bir özel durum ve aşağıdaki koşulların tümü karşılandığında bir ileti görüntüler:<br><br>* Uygulama Firefox'ta çalışıyor.<br>* Güvenilir olmayan sitelerden, kısmi güven Internet bölgesi uygulama çalışıyor.<br>* Uygulamayı içeren bir <xref:System.Windows.Controls.WebBrowser> denetim veya <xref:System.Windows.Controls.Frame> içeren HTML denetimi.<br><br>Güvenilen siteler veya intranet bölgeden çalışan uygulamalar etkilenmez unutmayın. | Aşağıdakilerden birini yaparak bu değişiklik, tarayıcı uygulamalarında kolaylaştırabilir:<br><br>* Tam güvende tarayıcı uygulamayı çalıştırın.<br>* Sahip müşteriler uygulamanın siteyi Güvenilen siteler bölgesine ekleyin.<br>* Sahip müşteriler Internet Explorer'da uygulamayı çalıştırın. |
 | **Kaynak sözlükleri** | Tema düzeyinde kaynak sözlükleri geliştirmek ve bunları değiştirmesini önlemek için bir kaynak sözlüğünde tanımlanan ve birleştirilmiş bir tema düzeyinde sözlüğe freezable kaynaklar artık her zaman donuk olarak işaretlendi ve sabittir. Freezable kaynaklar için beklenen davranışı budur. | Bir tema düzey birleştirilmiş sözlükte tanımlı bir kaynağı değiştirme uygulamaları, kaynak kopyalama ve kopyaladığınız değiştirin. Alternatif olarak, kaynak işaretlenebilir `x:Shared="false"` böylece <xref:System.Windows.ResourceDictionary> kaynağı sorgulanır her seferinde yeni bir kopyasını oluşturur. |
-| **Windows 7** | WPF uygulamaları Windows 7'de daha iyi çalışır hale getirmek için bir pencere davranışı düzeltmek için aşağıdaki geliştirmeler yapılmıştır:<br><br>* Dock ve durumları şimdi iş beklenen temel alınarak Kullanıcı etkileşimlerine hareket.<br>* Görev komutları **basamaklı windows, windows Yığılmış Göster**, ve **windows yan yana göster** artık doğru davranışa sahip ve uygun özelliklerini güncelleştirir.<br>* `Top`, `Left`, `Width`, Ve `Height` ekranı veya simge durumuna küçültülmüş pencerenin özellikleri penceresi İzleyici bağlı olarak diğer değerleri yerine doğru geri yükleme konumunu içerir. | Yok. |
+| **Windows 7** | WPF uygulamaları Windows 7'de daha iyi çalışır hale getirmek için bir pencere davranışı düzeltmek için aşağıdaki geliştirmeler yapılmıştır:<br><br>* Dock ve durumları şimdi iş beklenen temel alınarak Kullanıcı etkileşimlerine hareket.<br>* Görev komutları **basamaklı windows, windows Yığılmış Göster**, ve **windows yan yana göster** artık doğru davranışa sahip ve uygun özelliklerini güncelleştirir.<br>* `Top`, `Left`, `Width`, Ve `Height` ekranı veya simge durumuna küçültülmüş pencerenin özellikleri penceresi İzleyici bağlı olarak diğer değerleri yerine doğru geri yükleme konumunu içerir. | Yok. |
 | **Windows stili ve saydamlık** | Bir <xref:System.InvalidOperationException> ayarlamaya çalışırsanız durum <xref:System.Windows.Window.WindowStyle> dışında bir değere <xref:System.Windows.WindowStyle> olduğunda <xref:System.Windows.Window.AllowsTransparency> olduğu `true` ve <xref:System.Windows.WindowState> olduğu <xref:System.Windows.WindowState>. | Değiştirmeniz gerekiyorsa <xref:System.Windows.Window.WindowStyle> olduğunda <xref:System.Windows.Window.AllowsTransparency> olduğu `true`, Win32 çağırabilirsiniz `SetWindowLongPtr` işlevi. |
 | **XPS Viewer** | WPF Microsoft XML Kağıt Belirtimi Essentials paketi (XPSEP) içermez. Windows 7 ve Windows Vista ile XPSEP dahildir.<br><br>.NET Framework 3.5 yüklü SP1 Windows XP çalıştıran bir bilgisayarda dışındaki bir WPF API'sini kullanarak yazdırma <xref:System.Windows.Controls.PrintDialog> üzerinde WINSPOOL güvenirsiniz. Bazı yazıcı özellikleri bildirilmez ve yazdırma sırasında bazı yazıcı ayarları uygulanmaz. | Gerekirse, yükleme [Microsoft XML Kağıt Belirtimi Essentials paketi](https://go.microsoft.com/fwlink/?LinkId=178895). |
 
@@ -324,9 +324,9 @@ Ad alanları: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:System.Xml
 
 - [.NET Framework 4 Geçiş Kılavuzu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
 - [.NET Framework 4 yenilikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
-- [.NET Framework'te Sürüm Uyumluluğu](../../../docs/framework/migration-guide/version-compatibility.md)
+- [.NET Framework'te sürüm uyumluluğu](../../../docs/framework/migration-guide/version-compatibility.md)
 - [Office çözümlerini .NET Framework 4 geçirme](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
 
 ### <a name="other-resources"></a>Diğer kaynaklar
 
-- [.NET Framework Sınıf Kitaplığı'nda Artık Kullanılmayanlar](../whats-new/whats-obsolete.md)
+- [.NET Framework sınıf kitaplığında artık Kullanılmayanlar](../whats-new/whats-obsolete.md)
