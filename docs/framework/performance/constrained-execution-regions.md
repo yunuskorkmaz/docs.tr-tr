@@ -8,10 +8,10 @@ ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097180"
 ---
 # <a name="constrained-execution-regions"></a>Kısıtlı Yürütme Bölgeleri
@@ -49,9 +49,9 @@ Kısıtlı yürütme bölge (CER) güvenilir yönetilen kod yazmak için bir mek
 ### <a name="reliability-guarantees"></a>Güvenilirlik garantisi  
  Güvenilirlik garantisi, tarafından temsil edilen <xref:System.Runtime.ConstrainedExecution.Cer> sabit listesi değerleri, belirli bir yöntemin güvenilirliğini derecesini gösterir:  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>biçimindeki telefon numarasıdır. Olağanüstü durumlarda, yöntem başarısız olabilir. Bu durumda, yöntem başarılı veya başarısız olmadığını çağıran Metoda bildirir. Yöntemin dönüş değeri bildirebilirsiniz emin olmak için bir CER yer almalıdır.  
+-   <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. Olağanüstü durumlarda, yöntem başarısız olabilir. Bu durumda, yöntem başarılı veya başarısız olmadığını çağıran Metoda bildirir. Yöntemin dönüş değeri bildirebilirsiniz emin olmak için bir CER yer almalıdır.  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.None>biçimindeki telefon numarasıdır. Yöntemi, türün veya derlemenin bir CER kavramı vardır ve en büyük olasılıkla önemli bir risk azaltma durumu Bozulması olmadan bir CER içinde çağırmak güvenli. CER garanti avantajlarından almaz. Bu, aşağıdaki gelir:  
+-   <xref:System.Runtime.ConstrainedExecution.Cer.None>. Yöntemi, türün veya derlemenin bir CER kavramı vardır ve en büyük olasılıkla önemli bir risk azaltma durumu Bozulması olmadan bir CER içinde çağırmak güvenli. CER garanti avantajlarından almaz. Bu, aşağıdaki gelir:  
   
     1.  Olağanüstü durumlarda, yöntem başarısız olabilir.  
   
@@ -61,18 +61,18 @@ Kısıtlı yürütme bölge (CER) güvenilir yönetilen kod yazmak için bir mek
   
     4.  Yöntemi, tür veya derleme açıkça başarılı olması için tanımlanmamışsa, örtük olarak tanımlandığını <xref:System.Runtime.ConstrainedExecution.Cer.None>.  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.Success>biçimindeki telefon numarasıdır. Olağanüstü durumlarda, yöntem başarılı olması garanti edilir. Bu düzeyde güvenilirlik elde etmek için her zaman, hatta zaman bunu CER olmayan bölge içinde çağrılır çağrılan yöntem etrafında bir CER oluşturmak. Bir yöntem başarı subjectively görüntülenebilir ancak amaçlanan, gerçekleştirir başarılı olur. Örneğin, sayısı ile işaretlemeyi `ReliabilityContractAttribute(Cer.Success)` bir CER altında çalışırken, her zaman öğelerin sayısını döndürür, gelir <xref:System.Collections.ArrayList> ve hiçbir zaman iç alanların belirsiz bir durumda bırakılabilir.  Ancak, <xref:System.Threading.Interlocked.CompareExchange%2A> yöntemi başarı değeri değil yerine bir yarış durumu nedeniyle yeni bir değerle gelebilir anlama ile de başarılı işaretlenir.  Anahtar yöntemi davranmaya belirtildiği şekilde davranan ve CER kodu, doğru ancak güvenilir olmayan kod gibi görünür ötesinde herhangi bir olağan dışı davranış beklenir yazılması gerekmez. noktasıdır.  
+-   <xref:System.Runtime.ConstrainedExecution.Cer.Success>. Olağanüstü durumlarda, yöntem başarılı olması garanti edilir. Bu düzeyde güvenilirlik elde etmek için her zaman, hatta zaman bunu CER olmayan bölge içinde çağrılır çağrılan yöntem etrafında bir CER oluşturmak. Bir yöntem başarı subjectively görüntülenebilir ancak amaçlanan, gerçekleştirir başarılı olur. Örneğin, sayısı ile işaretlemeyi `ReliabilityContractAttribute(Cer.Success)` bir CER altında çalışırken, her zaman öğelerin sayısını döndürür, gelir <xref:System.Collections.ArrayList> ve hiçbir zaman iç alanların belirsiz bir durumda bırakılabilir.  Ancak, <xref:System.Threading.Interlocked.CompareExchange%2A> yöntemi başarı değeri değil yerine bir yarış durumu nedeniyle yeni bir değerle gelebilir anlama ile de başarılı işaretlenir.  Anahtar yöntemi davranmaya belirtildiği şekilde davranan ve CER kodu, doğru ancak güvenilir olmayan kod gibi görünür ötesinde herhangi bir olağan dışı davranış beklenir yazılması gerekmez. noktasıdır.  
   
 ### <a name="corruption-levels"></a>Bozulma düzeyleri  
  Bozulma düzeyi temsil ettiği <xref:System.Runtime.ConstrainedExecution.Consistency> numaralandırma değerlerini göstermek verilen ortamda ne kadar durumu bozulmuş olabilir:  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>biçimindeki telefon numarasıdır. Olağanüstü durumlarda, ortak dil çalışma zamanı (CLR) geçerli uygulama etki alanında ilgili durum tutarlılık garantisi sağlar.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. Olağanüstü durumlarda, ortak dil çalışma zamanı (CLR) geçerli uygulama etki alanında ilgili durum tutarlılık garantisi sağlar.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>biçimindeki telefon numarasıdır. Olağanüstü durumlarda yöntem geçerli örneğe durumu Bozulması sınırlamak için sağlanır.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. Olağanüstü durumlarda yöntem geçerli örneğe durumu Bozulması sınırlamak için sağlanır.  
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, Özel koşullar altında CLR durumu tutarlılık; ilgili garanti sağlar. diğer bir deyişle, koşul, işlemin bozulmasına neden olabilir.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>biçimindeki telefon numarasıdır. Olağanüstü durumlarda, yöntem durumunun bozulmasına neden olmayan garanti edilir.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. Olağanüstü durumlarda, yöntem durumunun bozulmasına neden olmayan garanti edilir.  
   
 ## <a name="reliability-trycatchfinally"></a>Güvenilirlik try/catch/finally  
  Güvenilirlik `try/catch/finally` olan bir özel durum işleme mekanizmasını ile yönetilmeyen sürümü aynı düzeyde öngörülebilirlik garanti eder. `catch/finally` CER bloğudur. Yöntem bloğunda ön hazırlık gerektirir ve noninterruptible olmalıdır.  

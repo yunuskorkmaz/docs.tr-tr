@@ -13,10 +13,10 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095496"
 ---
 # <a name="data-binding-and-windows-forms"></a>Veri Bağlama ve Windows Forms
@@ -57,5 +57,5 @@ Windows Forms'ta yalnızca geleneksel veri kaynaklarına da bağlayabilirsiniz, 
 
 - <xref:System.Windows.Forms.Binding>
 - [Windows Forms Veri Bağlama](windows-forms-data-binding.md)
-- [Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [BindingSource Bileşeni](./controls/bindingsource-component.md)

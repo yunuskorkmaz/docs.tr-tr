@@ -11,10 +11,10 @@ ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092273"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Yalıtılmış Depolama Aracı)
@@ -35,11 +35,11 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 |Seçenek|Açıklama|  
 |------------|-----------------|  
 |**/h**[**elp**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|**/list**|Geçerli kullanıcı için varolan tüm depoları görüntüler. Buna, kullanıcı tarafından çalıştırılan tüm uygulamaların veya derlemelerin depoları dahildir.|  
+|**/ List**|Geçerli kullanıcı için varolan tüm depoları görüntüler. Buna, kullanıcı tarafından çalıştırılan tüm uygulamaların veya derlemelerin depoları dahildir.|  
 |**/ MACHINE**|Makine deposunu seçer. Bu seçeneği kullanın **/list** veya **/remove** işlemin makine deposuna da uygulanacağını belirtmek için seçeneği.<br /><br /> .NET Framework 2.0'da yeni bir özelliktir|  
 |**/quiet**|Sessiz mod kullanılacağını belirtir; yalnızca hata iletileri görünecek şekilde bilgilendirici çıktıyı engeller.|  
-|**/remove**|Geçerli kullanıcı için varolan tüm depoları kalıcı olarak kaldırır.|  
-|**/roaming**|Dolaşım deposunu seçer. Bu seçeneği kullanın **/list** veya **/remove** işlemin Dolaşım deposuna uygulanacağını belirtmek için Seçenekler.|  
+|**/ Remove**|Geçerli kullanıcı için varolan tüm depoları kalıcı olarak kaldırır.|  
+|**/ roaming**|Dolaşım deposunu seçer. Bu seçeneği kullanın **/list** veya **/remove** işlemin Dolaşım deposuna uygulanacağını belirtmek için Seçenekler.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  

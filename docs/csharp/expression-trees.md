@@ -4,10 +4,10 @@ description: İfade ağaçlarında .NET Core ve bunları kodunu incelemek, deği
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
 ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096621"
 ---
 # <a name="expression-trees"></a>İfade Ağaçları
@@ -24,27 +24,27 @@ Etkinleştiren [Entity Framework](/ef/) içinde yazdığınız sorgu çevrilecek
 
 Bu öğreticinin geri kalan bölümlerini ifade ağaçları nelerdir keşfedin, ifade ağaçlarını destekleyen ve ifade ağaçları ile nasıl Göster framework sınıfları inceleyin. İfade ağaçları okuma, ifade ağaçları oluşturma, değiştirilen ifade ağaçları oluşturma ve ifade ağaçları tarafından temsil edilen kodunun nasıl çalıştırılacağını öğreneceksiniz. Okuma sonra bu yapıları zengin bir Uyarlamalı algoritmalar oluşturmak için kullanılmaya hazır olacaktır.
 
-1. [İfade ağaçları açıklaması](expression-trees-explained.md)
+1. [İfade Ağaçları Açıklaması](expression-trees-explained.md)
 
     Yapı ve kavramları anlama *ifade ağaçları*.
     
-2. [İfade ağaçlarını destekleyen çerçeve türleri](expression-classes.md)
+2. [İfade Ağaçlarını Destekleyen Çerçeve Türleri](expression-classes.md)
     
     Yapılar ve sınıflar tanımlayın ve ifade ağaçları işlemek hakkında bilgi edinin.
     
-3. [İfade yürütme](expression-trees-execution.md)
+3. [İfade Yürütme](expression-trees-execution.md)
 
     Bir temsilciye Lambda ifadesiyle temsil edilen bir ifade ağacı dönüştürme hakkında bilgi alın ve sonuç olarak oluşan temsilci yürütün.
 
-4. [İfade yorumlama](expression-trees-interpreting.md)
+4. [İfade Yorumlama](expression-trees-interpreting.md)
 
     Geçiş ve incelemek öğrenin *ifade ağaçları* ne ifade ağacı kod anlamak için temsil eder.
 
-5. [İfade derleme](expression-trees-building.md)
+5. [İfade Derleme](expression-trees-building.md)
 
     İfade ağacı düğümleri oluşturmak ve ifade ağaçları oluşturma hakkında bilgi edinin.
 
-6. [İfade çevirme](expression-trees-translating.md)
+6. [İfade Çevirme](expression-trees-translating.md)
 
     İfade ağacı değiştirilmiş bir kopyasını oluşturun veya bir ifade ağacı farklı bir biçime çevir öğrenin.
 

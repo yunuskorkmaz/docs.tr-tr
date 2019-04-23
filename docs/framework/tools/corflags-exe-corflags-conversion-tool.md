@@ -9,10 +9,10 @@ ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ee801a5af214e2306e6f1667b5e4ee067683fdb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093117"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags Dönüştürme Aracı)
@@ -42,7 +42,7 @@ CorFlags.exe assembly [options]
 |**/32BITPREF-**|32BITPREFERRED bayrağını kaldırır.<br /><br /> Yeni [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/ Force**|Derleme bir tanımlayıcı adla adlandırılmış olsa da bir güncelleştirmenin yapılmasını sağlar. **Önemli:**  Tanımlayıcı bir adla adlandırılmış bir derlemeyi güncelleştirirseniz, kodunu yürütülmeden önce onu tekrar imzalamanız gerekir.|  
-|**/help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/ILONLY+**|ILONLY bayrağını ayarlar.|  
 |**/ILONLY-**|ILONLY bayrağını kaldırır.|  
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
@@ -55,5 +55,5 @@ CorFlags.exe assembly [options]
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](../../../docs/framework/tools/index.md)
-- [64 bitlik Uygulamalar](../../../docs/framework/64-bit-apps.md)
+- [64 bit Uygulamalar](../../../docs/framework/64-bit-apps.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092286"
 ---
 # <a name="administration-and-diagnostics"></a>Yönetim ve Tanılama
@@ -42,14 +42,14 @@ Windows Communication Foundation (WCF) zengin bir uygulamanın ömrü farklı a�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uygulamanızı Yapılandırma](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
-- [Dağıtma Hizmetleri](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
+- [Hizmet Dağıtma](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [Özel Durum Başvurusu](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
-- [Etkinlikleri Günlüğe Kaydetme](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [İleti Günlüğe Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Günlüğe Olay Kaydetme](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Yapılandırma Düzenleme Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [ServiceModel Kayıt Aracı](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [İzleme](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Tanılama için Windows Yönetim İzlemesini Kullanma](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Tanılama için Windows Yönetim Araçlarını Kullanma](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
 - [Performans Sayaçları](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
 - [Windows Communication Foundation Araçları](../../../../docs/framework/wcf/tools.md)

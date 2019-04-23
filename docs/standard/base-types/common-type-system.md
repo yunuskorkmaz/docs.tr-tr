@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096270"
 ---
 # <a name="common-type-system"></a>Ortak Tür Sistemi
@@ -61,7 +61,7 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
 -   [Yapılar](#Structures)  
   
--   [Numaralandırmalar](#Enumerations)  
+-   [Sabit Listeleri](#Enumerations)  
   
 -   [Arabirimler](#Interfaces)  
   
@@ -318,6 +318,6 @@ Ortak tür sistemi nasıl türleri bildirilen kullanılan ve ortak dil çalışm
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET API Tarayıcısı](/dotnet/api)
-- [Ortak Dil Çalışma Zamanı](../../../docs/standard/clr.md)
+- [.NET API tarayıcısı](/dotnet/api)
+- [Ortak dil çalışma zamanı](../../../docs/standard/clr.md)
 - [.NET içinde Tür Dönüştürme](../../../docs/standard/base-types/type-conversion.md)
