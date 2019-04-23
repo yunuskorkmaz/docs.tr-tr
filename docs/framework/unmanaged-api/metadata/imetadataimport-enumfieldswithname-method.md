@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cf624695136a9397937f05b28dec18493c8e12d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153666"
 ---
-# <a name="imetadataimportenumfieldswithname-method"></a><span data-ttu-id="aad2d-102">IMetaDataImport::EnumFieldsWithName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="aad2d-102">IMetaDataImport::EnumFieldsWithName Method</span></span>
-<span data-ttu-id="aad2d-103">Belirtilen ada sahip belirtilen türün fieldDef simgesi belirteçleri numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="aad2d-103">Enumerates FieldDef tokens of the specified type with the specified name.</span></span>  
+# <a name="imetadataimportenumfieldswithname-method"></a><span data-ttu-id="25450-102">IMetaDataImport::EnumFieldsWithName Yöntemi</span><span class="sxs-lookup"><span data-stu-id="25450-102">IMetaDataImport::EnumFieldsWithName Method</span></span>
+<span data-ttu-id="25450-103">Belirtilen ada sahip belirtilen türün fieldDef simgesi belirteçleri numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="25450-103">Enumerates FieldDef tokens of the specified type with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aad2d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="aad2d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25450-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="25450-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumFieldsWithName (  
@@ -40,45 +40,45 @@ HRESULT EnumFieldsWithName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aad2d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="aad2d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="25450-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="25450-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="aad2d-106">[out içinde] Numaralandırıcı bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="aad2d-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="25450-106">[out içinde] Numaralandırıcı bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="25450-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `cl`  
- <span data-ttu-id="aad2d-107">[in] Numaralandırılacak alanları olan türde bir belirteç.</span><span class="sxs-lookup"><span data-stu-id="aad2d-107">[in] The token of the type whose fields are to be enumerated.</span></span>  
+ <span data-ttu-id="25450-107">[in] Numaralandırılacak alanları olan türde bir belirteç.</span><span class="sxs-lookup"><span data-stu-id="25450-107">[in] The token of the type whose fields are to be enumerated.</span></span>  
   
  `szName`  
- <span data-ttu-id="aad2d-108">[in] Numaralandırma kapsamını sınırlayan alan adı.</span><span class="sxs-lookup"><span data-stu-id="aad2d-108">[in] The field name that limits the scope of the enumeration.</span></span>  
+ <span data-ttu-id="25450-108">[in] Numaralandırma kapsamını sınırlayan alan adı.</span><span class="sxs-lookup"><span data-stu-id="25450-108">[in] The field name that limits the scope of the enumeration.</span></span>  
   
  `rFields`  
- <span data-ttu-id="aad2d-109">[out] Dizi fieldDef simgesi simgeleri depolamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="aad2d-109">[out] Array used to store the FieldDef tokens.</span></span>  
+ <span data-ttu-id="25450-109">[out] Dizi fieldDef simgesi simgeleri depolamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="25450-109">[out] Array used to store the FieldDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="aad2d-110">[in] En büyük boyutunu `rFields` dizisi.</span><span class="sxs-lookup"><span data-stu-id="aad2d-110">[in] The maximum size of the `rFields` array.</span></span>  
+ <span data-ttu-id="25450-110">[in] En büyük boyutunu `rFields` dizisi.</span><span class="sxs-lookup"><span data-stu-id="25450-110">[in] The maximum size of the `rFields` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="aad2d-111">[out] Döndürülen fieldDef simgesi belirteçleri gerçek sayısını `rFields`.</span><span class="sxs-lookup"><span data-stu-id="aad2d-111">[out] The actual number of FieldDef tokens returned in `rFields`.</span></span>  
+ <span data-ttu-id="25450-111">[out] Döndürülen fieldDef simgesi belirteçleri gerçek sayısını `rFields`.</span><span class="sxs-lookup"><span data-stu-id="25450-111">[out] The actual number of FieldDef tokens returned in `rFields`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="aad2d-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="aad2d-112">Remarks</span></span>  
- <span data-ttu-id="aad2d-113">Farklı [Imetadataımport::enumfields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` belirtilen ada sahip olmayan tüm alan belirteçleri atar.</span><span class="sxs-lookup"><span data-stu-id="aad2d-113">Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="25450-112">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="25450-112">Remarks</span></span>  
+ <span data-ttu-id="25450-113">Farklı [Imetadataımport::enumfields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` belirtilen ada sahip olmayan tüm alan belirteçleri atar.</span><span class="sxs-lookup"><span data-stu-id="25450-113">Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="aad2d-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="aad2d-114">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="25450-114">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="25450-114">Return Value</span></span>  
   
-|<span data-ttu-id="aad2d-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="aad2d-115">HRESULT</span></span>|<span data-ttu-id="aad2d-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="aad2d-116">Description</span></span>|  
+|<span data-ttu-id="25450-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="25450-115">HRESULT</span></span>|<span data-ttu-id="25450-116">Açıklama</span><span class="sxs-lookup"><span data-stu-id="25450-116">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` <span data-ttu-id="aad2d-117">başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="aad2d-117">returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="aad2d-118">Numaralandırılacak alan yok.</span><span class="sxs-lookup"><span data-stu-id="aad2d-118">There are no fields to enumerate.</span></span> <span data-ttu-id="aad2d-119">Bu durumda, `pcTokens` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="aad2d-119">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="25450-117">`EnumFieldsWithName` başarıyla döndürüldü.</span><span class="sxs-lookup"><span data-stu-id="25450-117">`EnumFieldsWithName` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="25450-118">Numaralandırılacak alan yok.</span><span class="sxs-lookup"><span data-stu-id="25450-118">There are no fields to enumerate.</span></span> <span data-ttu-id="25450-119">Bu durumda, `pcTokens` sıfırdır.</span><span class="sxs-lookup"><span data-stu-id="25450-119">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="aad2d-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="aad2d-120">Requirements</span></span>  
- <span data-ttu-id="aad2d-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aad2d-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25450-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="25450-120">Requirements</span></span>  
+ <span data-ttu-id="25450-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="25450-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aad2d-122">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="aad2d-122">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="25450-122">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="25450-122">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="aad2d-123">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="aad2d-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="25450-123">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="25450-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="aad2d-124">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="aad2d-124">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="25450-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25450-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aad2d-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="aad2d-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25450-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="25450-125">See also</span></span>
 
-- [<span data-ttu-id="aad2d-126">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aad2d-126">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="aad2d-127">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="aad2d-127">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="25450-126">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="25450-126">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="25450-127">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="25450-127">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

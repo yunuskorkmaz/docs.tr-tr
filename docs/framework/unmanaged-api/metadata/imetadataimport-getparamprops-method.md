@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 05ac8efed8c0a905d2cfad433348a99fe578eeae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153185"
 ---
-# <a name="imetadataimportgetparamprops-method"></a><span data-ttu-id="a156d-102">IMetaDataImport::GetParamProps Metodu</span><span class="sxs-lookup"><span data-stu-id="a156d-102">IMetaDataImport::GetParamProps Method</span></span>
-<span data-ttu-id="a156d-103">Meta veri değerleri tarafından belirtilen ParamDef başvurulan parametresi için belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="a156d-103">Gets metadata values for the parameter referenced by the specified ParamDef token.</span></span>  
+# <a name="imetadataimportgetparamprops-method"></a><span data-ttu-id="c27b1-102">IMetaDataImport::GetParamProps Metodu</span><span class="sxs-lookup"><span data-stu-id="c27b1-102">IMetaDataImport::GetParamProps Method</span></span>
+<span data-ttu-id="c27b1-103">Meta veri değerleri tarafından belirtilen ParamDef başvurulan parametresi için belirteç alır.</span><span class="sxs-lookup"><span data-stu-id="c27b1-103">Gets metadata values for the parameter referenced by the specified ParamDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a156d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="a156d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c27b1-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c27b1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetParamProps (  
@@ -44,51 +44,51 @@ HRESULT GetParamProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a156d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="a156d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c27b1-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c27b1-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="a156d-106">[in] Meta verileri döndürmek için parametre temsil eden bir ParamDef belirteci.</span><span class="sxs-lookup"><span data-stu-id="a156d-106">[in] A ParamDef token that represents the parameter to return metadata for.</span></span>  
+ <span data-ttu-id="c27b1-106">[in] Meta verileri döndürmek için parametre temsil eden bir ParamDef belirteci.</span><span class="sxs-lookup"><span data-stu-id="c27b1-106">[in] A ParamDef token that represents the parameter to return metadata for.</span></span>  
   
  `pmd`  
- <span data-ttu-id="a156d-107">[out] Yönteminin parametresi alan temsil eden bir MethodDef belirteç için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a156d-107">[out] A pointer to a MethodDef token representing the method that takes the parameter.</span></span>  
+ <span data-ttu-id="c27b1-107">[out] Yönteminin parametresi alan temsil eden bir MethodDef belirteç için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c27b1-107">[out] A pointer to a MethodDef token representing the method that takes the parameter.</span></span>  
   
  `pulSequence`  
- <span data-ttu-id="a156d-108">[out] Sıralı konumu parametresi yöntemi bağımsız değişken listesi.</span><span class="sxs-lookup"><span data-stu-id="a156d-108">[out] The ordinal position of the parameter in the method argument list.</span></span>  
+ <span data-ttu-id="c27b1-108">[out] Sıralı konumu parametresi yöntemi bağımsız değişken listesi.</span><span class="sxs-lookup"><span data-stu-id="c27b1-108">[out] The ordinal position of the parameter in the method argument list.</span></span>  
   
  `szName`  
- <span data-ttu-id="a156d-109">[out] Parametrenin adını tutan bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="a156d-109">[out] A buffer to hold the name of the parameter.</span></span>  
+ <span data-ttu-id="c27b1-109">[out] Parametrenin adını tutan bir arabellek.</span><span class="sxs-lookup"><span data-stu-id="c27b1-109">[out] A buffer to hold the name of the parameter.</span></span>  
   
  `cchName`  
- <span data-ttu-id="a156d-110">[in] Geniş karakter cinsinden istenen boyuta `szName`.</span><span class="sxs-lookup"><span data-stu-id="a156d-110">[in] The requested size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="c27b1-110">[in] Geniş karakter cinsinden istenen boyuta `szName`.</span><span class="sxs-lookup"><span data-stu-id="c27b1-110">[in] The requested size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="a156d-111">[out] Geniş karakter cinsinden döndürülen boyutu `szName`.</span><span class="sxs-lookup"><span data-stu-id="a156d-111">[out] The returned size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="c27b1-111">[out] Geniş karakter cinsinden döndürülen boyutu `szName`.</span><span class="sxs-lookup"><span data-stu-id="c27b1-111">[out] The returned size in wide characters of `szName`.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="a156d-112">[out] Parametresi ile ilişkili herhangi bir öznitelik bayrağı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="a156d-112">[out] A pointer to any attribute flags associated with the parameter.</span></span> <span data-ttu-id="a156d-113">Bu, bir bit maskesi, `CorParamAttr` değerleri.</span><span class="sxs-lookup"><span data-stu-id="a156d-113">This is a bitmask of `CorParamAttr` values.</span></span>  
+ <span data-ttu-id="c27b1-112">[out] Parametresi ile ilişkili herhangi bir öznitelik bayrağı için bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="c27b1-112">[out] A pointer to any attribute flags associated with the parameter.</span></span> <span data-ttu-id="c27b1-113">Bu, bir bit maskesi, `CorParamAttr` değerleri.</span><span class="sxs-lookup"><span data-stu-id="c27b1-113">This is a bitmask of `CorParamAttr` values.</span></span>  
   
  `pdwCPlusTypeFlag`  
- <span data-ttu-id="a156d-114">[out] Parametre belirten bir bayrak için bir işaretçi bir <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="a156d-114">[out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.</span></span>  
+ <span data-ttu-id="c27b1-114">[out] Parametre belirten bir bayrak için bir işaretçi bir <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="c27b1-114">[out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="a156d-115">[out] Parametresi tarafından döndürülen bir sabit dize işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="a156d-115">[out] A pointer to a constant string returned by the parameter.</span></span>  
+ <span data-ttu-id="c27b1-115">[out] Parametresi tarafından döndürülen bir sabit dize işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="c27b1-115">[out] A pointer to a constant string returned by the parameter.</span></span>  
   
  `pcchValue`  
- <span data-ttu-id="a156d-116">[out] Boyutu `ppValue` geniş karakterler ya da sıfır `ppValue` bir dize tutmaz.</span><span class="sxs-lookup"><span data-stu-id="a156d-116">[out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.</span></span>  
+ <span data-ttu-id="c27b1-116">[out] Boyutu `ppValue` geniş karakterler ya da sıfır `ppValue` bir dize tutmaz.</span><span class="sxs-lookup"><span data-stu-id="c27b1-116">[out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a156d-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a156d-117">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="c27b1-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c27b1-117">Remarks</span></span>
 
-<span data-ttu-id="a156d-118">Sıralı değerleri `pulSequence` parametreleri için 1 ile başlar.</span><span class="sxs-lookup"><span data-stu-id="a156d-118">The sequence values in `pulSequence` begin with 1 for parameters.</span></span> <span data-ttu-id="a156d-119">Dönüş değeri bir sıra numarası 0 sahiptir.</span><span class="sxs-lookup"><span data-stu-id="a156d-119">A return value has a sequence number of 0.</span></span>
+<span data-ttu-id="c27b1-118">Sıralı değerleri `pulSequence` parametreleri için 1 ile başlar.</span><span class="sxs-lookup"><span data-stu-id="c27b1-118">The sequence values in `pulSequence` begin with 1 for parameters.</span></span> <span data-ttu-id="c27b1-119">Dönüş değeri bir sıra numarası 0 sahiptir.</span><span class="sxs-lookup"><span data-stu-id="c27b1-119">A return value has a sequence number of 0.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a156d-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="a156d-120">Requirements</span></span>  
- <span data-ttu-id="a156d-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a156d-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c27b1-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c27b1-120">Requirements</span></span>  
+ <span data-ttu-id="c27b1-121">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c27b1-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a156d-122">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="a156d-122">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c27b1-122">**Üst bilgi:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c27b1-122">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a156d-123">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="a156d-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c27b1-123">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="c27b1-123">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="a156d-124">.NET framework sürümleri:</span><span class="sxs-lookup"><span data-stu-id="a156d-124">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="c27b1-124">**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c27b1-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a156d-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a156d-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c27b1-125">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c27b1-125">See also</span></span>
 
-- [<span data-ttu-id="a156d-126">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a156d-126">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="a156d-127">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="a156d-127">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="c27b1-126">IMetaDataImport Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c27b1-126">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="c27b1-127">IMetaDataImport2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="c27b1-127">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
