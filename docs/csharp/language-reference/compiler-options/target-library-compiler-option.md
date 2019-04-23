@@ -9,48 +9,48 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 ms.openlocfilehash: 2e0935965e9225ab524290429803fe4c9ccc80c6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313651"
 ---
-# <a name="-targetlibrary-c-compiler-options"></a><span data-ttu-id="d5b68-102">-target: library (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="d5b68-102">-target:library (C# Compiler Options)</span></span>
-<span data-ttu-id="d5b68-103">**-Target: library** seçeneği bir yürütülebilir dosya (EXE) yerine bir dinamik bağlantı kitaplığı (DLL) oluşturmak derleyicinin neden olur.</span><span class="sxs-lookup"><span data-stu-id="d5b68-103">The **-target:library** option causes the compiler to create a dynamic-link library (DLL) rather than an executable file (EXE).</span></span>  
+# <a name="-targetlibrary-c-compiler-options"></a><span data-ttu-id="e84f8-102">-target: library (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="e84f8-102">-target:library (C# Compiler Options)</span></span>
+<span data-ttu-id="e84f8-103">**-Target: library** seçeneği bir yürütülebilir dosya (EXE) yerine bir dinamik bağlantı kitaplığı (DLL) oluşturmak derleyicinin neden olur.</span><span class="sxs-lookup"><span data-stu-id="e84f8-103">The **-target:library** option causes the compiler to create a dynamic-link library (DLL) rather than an executable file (EXE).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5b68-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d5b68-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e84f8-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e84f8-104">Syntax</span></span>  
   
 ```console  
 -target:library  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="d5b68-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="d5b68-105">Remarks</span></span>  
- <span data-ttu-id="d5b68-106">DLL, .dll uzantısıyla oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="d5b68-106">The DLL will be created with the .dll extension.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e84f8-105">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e84f8-105">Remarks</span></span>  
+ <span data-ttu-id="e84f8-106">DLL, .dll uzantısıyla oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="e84f8-106">The DLL will be created with the .dll extension.</span></span>  
   
- <span data-ttu-id="d5b68-107">İle aksi belirtilmediği sürece [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) seçeneği, çıkış dosyası adı ilk giriş dosyasının adını alır.</span><span class="sxs-lookup"><span data-stu-id="d5b68-107">Unless otherwise specified with the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the first input file.</span></span>  
+ <span data-ttu-id="e84f8-107">İle aksi belirtilmediği sürece [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) seçeneği, çıkış dosyası adı ilk giriş dosyasının adını alır.</span><span class="sxs-lookup"><span data-stu-id="e84f8-107">Unless otherwise specified with the [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the first input file.</span></span>  
   
- <span data-ttu-id="d5b68-108">Tüm komut satırında belirtildiğinde kadar sonraki dosyalar **-out** veya **-target: module** seçeneği .dll dosyası oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="d5b68-108">When specified at the command line, all files up to the next **-out** or **-target:module** option are used to create the .dll file.</span></span>  
+ <span data-ttu-id="e84f8-108">Tüm komut satırında belirtildiğinde kadar sonraki dosyalar **-out** veya **-target: module** seçeneği .dll dosyası oluşturmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="e84f8-108">When specified at the command line, all files up to the next **-out** or **-target:module** option are used to create the .dll file.</span></span>  
   
- <span data-ttu-id="d5b68-109">Bir .dll dosyası oluştururken bir [ana](../../../csharp/programming-guide/main-and-command-args/index.md) yöntemi gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="d5b68-109">When building a .dll file, a [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method is not required.</span></span>  
+ <span data-ttu-id="e84f8-109">Bir .dll dosyası oluştururken bir [ana](../../../csharp/programming-guide/main-and-command-args/index.md) yöntemi gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="e84f8-109">When building a .dll file, a [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method is not required.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="d5b68-110">Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="d5b68-110">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="e84f8-110">Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için</span><span class="sxs-lookup"><span data-stu-id="e84f8-110">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1. <span data-ttu-id="d5b68-111">Projenin açın **özellikleri** sayfası.</span><span class="sxs-lookup"><span data-stu-id="d5b68-111">Open the project's **Properties** page.</span></span>  
+1. <span data-ttu-id="e84f8-111">Projenin açın **özellikleri** sayfası.</span><span class="sxs-lookup"><span data-stu-id="e84f8-111">Open the project's **Properties** page.</span></span>  
   
-2. <span data-ttu-id="d5b68-112">Tıklayın **uygulama** özellik sayfası.</span><span class="sxs-lookup"><span data-stu-id="d5b68-112">Click the **Application** property page.</span></span>  
+2. <span data-ttu-id="e84f8-112">Tıklayın **uygulama** özellik sayfası.</span><span class="sxs-lookup"><span data-stu-id="e84f8-112">Click the **Application** property page.</span></span>  
   
-3. <span data-ttu-id="d5b68-113">Değiştirme **çıkış türü** özelliği.</span><span class="sxs-lookup"><span data-stu-id="d5b68-113">Modify the **Output type** property.</span></span>  
+3. <span data-ttu-id="e84f8-113">Değiştirme **çıkış türü** özelliği.</span><span class="sxs-lookup"><span data-stu-id="e84f8-113">Modify the **Output type** property.</span></span>  
   
- <span data-ttu-id="d5b68-114">Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span><span class="sxs-lookup"><span data-stu-id="d5b68-114">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
+ <span data-ttu-id="e84f8-114">Bu derleyici seçeneğini program üzerinden ayarlamak konusunda daha fazla bilgi için bkz: <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span><span class="sxs-lookup"><span data-stu-id="e84f8-114">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d5b68-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="d5b68-115">Example</span></span>  
- <span data-ttu-id="d5b68-116">Derleme `in.cs`, oluşturma `in.dll`:</span><span class="sxs-lookup"><span data-stu-id="d5b68-116">Compile `in.cs`, creating `in.dll`:</span></span>  
+## <a name="example"></a><span data-ttu-id="e84f8-115">Örnek</span><span class="sxs-lookup"><span data-stu-id="e84f8-115">Example</span></span>  
+ <span data-ttu-id="e84f8-116">Derleme `in.cs`, oluşturma `in.dll`:</span><span class="sxs-lookup"><span data-stu-id="e84f8-116">Compile `in.cs`, creating `in.dll`:</span></span>  
   
 ```console  
 csc -target:library in.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d5b68-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d5b68-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e84f8-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e84f8-117">See also</span></span>
 
-- [<span data-ttu-id="d5b68-118">-target (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="d5b68-118">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [<span data-ttu-id="d5b68-119">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="d5b68-119">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="e84f8-118">-target (C# Derleyici Seçenekleri)</span><span class="sxs-lookup"><span data-stu-id="e84f8-118">-target (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
+- [<span data-ttu-id="e84f8-119">C# Derleyici Seçenekleri</span><span class="sxs-lookup"><span data-stu-id="e84f8-119">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
