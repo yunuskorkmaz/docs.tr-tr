@@ -6,10 +6,10 @@ helpviewer_keywords:
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
 ms.openlocfilehash: 9028f9f99ee22dd480d817bc8aa94c7113a15c9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223010"
 ---
 # <a name="ui-automation-properties-overview"></a>UI Otomasyon Özelliklerine Genel Bakış
@@ -20,9 +20,9 @@ ms.locfileid: "59223010"
   
  Bu bölüm, kapsamlı bir genel bakış sağlar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] özellikleri. Aşağıdaki konularda daha ayrıntılı bilgi verilmiştir:  
   
--   [İstemciler İçin UI Otomasyon Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+-   [İstemciler İçin UI Otomasyonu Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
   
--   [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+-   [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>Özellik tanımlayıcıları  
@@ -30,7 +30,7 @@ ms.locfileid: "59223010"
   
  <xref:System.Windows.Automation.AutomationProperty> belirli özellikleri temsil eden nesneleri, sınıfları çeşitli alanlar olarak kullanılabilir. Güvenlik nedenleriyle, UI Otomasyon sağlayıcıları ayrı UIAutomationTypes.dll içinde bulunan sınıfları kümesinden bu nesneler edinin.  
   
- Aşağıdaki tablo, Özellikler içeren sınıflar tarafından kategorilere ayırır <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
+ Aşağıdaki tablo, Özellikler içeren sınıflar tarafından kategorilere ayırır <xref:System.Windows.Automation.AutomationProperty> [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
   
 |Tür özellikleri|İstemciler kimlikleri alma|Kimlikleri sağlayıcıları Al|  
 |-------------------------|--------------------------|----------------------------|  
@@ -161,9 +161,9 @@ ms.locfileid: "59223010"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonda Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [İstemciler İçin UI Otomasyon Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [Özellik Koşulunu Temel Alan UI Otomasyon Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
-- [UI Otomasyon Sağlayıcı Dönüş Özellikleri](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
-- [UI Otomasyon Sağlayıcıda Olay Tetikleme](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [UI Otomasyonu İstemcilerinde Önbelleğe Alma](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [İstemciler İçin UI Otomasyonu Özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Özellik Koşulunu Temel Alan UI Otomasyonu Öğesi Bulma](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [UI Otomasyonu Sağlayıcı Dönüş Özellikleri](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [UI Otomasyonu Sağlayıcıda Olay Tetikleme](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)

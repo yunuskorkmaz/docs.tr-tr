@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 46d96d66f16cd956d8fab1afe00486d564e37953
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216801"
 ---
 # <a name="icordebugprocess-interface"></a>ICorDebugProcess Arabirimi
@@ -37,7 +37,7 @@ Yönetilen bir kodu yürüten bir işlemi temsil eder. Icordebugcontroller öğe
 |[GetHandle Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethandle-method.md)|İşlem için bir tanıtıcı alır.|  
 |[GetHelperThreadID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethelperthreadid-method.md)|Hata Ayıklayıcı'nın iç yardımcı iş parçacığı için işletim sistemi (OS) iş parçacığı Kimliğini alır.|  
 |[GetID Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md)|İşletim sistemi (OS) işlem Kimliğini alır.|  
-|[GetObject Metodu](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getobject-method.md)|Henüz uygulanmadı.|  
+|[GetObject Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getobject-method.md)|Henüz uygulanmadı.|  
 |[GetThread Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthread-method.md)|Belirtilen işletim sistemi iş parçacığı Icordebugthread örneği alır kimliği|  
 |[GetThreadContext Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)|Verilen iş parçacığı için bağlamı alır.|  
 |[IsOSSuspended Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-isossuspended-method.md)|İşlem durdurulurken bir hata ayıklayıcı sonucunda iş parçacığını askıya olup olmadığını belirler.|  

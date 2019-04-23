@@ -3,10 +3,10 @@ title: <message> öğesi <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
 ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223820"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<İleti > öğesi \<wsFederationHttpBinding >
@@ -119,7 +119,7 @@ ms.locfileid: "59223820"
 |[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Bu bağlama için talep türlerinin koleksiyonunu belirtir. Her öğe türünde <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
 |yayınlayan|Bir güvenlik belirteci veren bir uç noktasını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
 |issuerMetadata|Verenin uç nokta adresini belirtir.|  
-|[\<tokenRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Belirteç isteği parametreleri koleksiyonu. Her bir XML öğesi parametredir.|  
+|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Belirteç isteği parametreleri koleksiyonu. Her bir XML öğesi parametredir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

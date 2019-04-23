@@ -3,10 +3,10 @@ title: <pnrpPeerResolver>
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
 ms.openlocfilehash: 2404f00b2a3ba03e89c1e21fb25e13cabb8feed3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214059"
 ---
 # <a name="pnrppeerresolver"></a>\<pnrpPeerResolver >
@@ -34,7 +34,7 @@ PNRP (Eş Adı Çözümleme Protokolü) çözümleyici olrak kullanılacak oldu�
 |resolverType|Kullanılacak çözümleyici belirten bir dize. Bu öznitelik isteğe bağlıdır. Ayarlı değil veya boş dize olarak ayarlarsanız, PNRP kullanılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a9a647a9c77a3c1f82ae3691e2a5e5b2f544cad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221970"
 ---
 # <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue Arabirimi
@@ -31,7 +31,7 @@ Paketlenmiş değer sınıf nesnesini temsil eder "Icordebugheapvalue" öğesini
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetObject Metodu](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Paketlenmiş "ICorDebugObjectValue" örneği için bir arabirim işaretçisi alır.|  
+|[GetObject Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Paketlenmiş "ICorDebugObjectValue" örneği için bir arabirim işaretçisi alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   

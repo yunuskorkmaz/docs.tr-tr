@@ -9,10 +9,10 @@ helpviewer_keywords:
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
 ms.openlocfilehash: fdd3a56ab9a267990bb0e832c0d4cc2af9334034
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214046"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Anahtarlanmış Koleksiyonlara Erişim
@@ -54,4 +54,4 @@ ms.locfileid: "59214046"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Forms'a Başlarken](getting-started-with-windows-forms.md)
-- [Nasıl yapılır: Windows Forms ImageList Bileşeni ile Resim Ekleme veya Kaldırma](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [Nasıl yapılır: Windows Forms ImageList bileşeni ile görüntüleri eklemek veya kaldırmak](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

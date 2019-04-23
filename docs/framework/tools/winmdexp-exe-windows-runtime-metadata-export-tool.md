@@ -8,10 +8,10 @@ ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216352"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
@@ -34,13 +34,13 @@ winmdexp [options] winmdmodule
 |Bağımsız değişken veya seçenek|Açıklama|  
 |------------------------|-----------------|  
 |`winmdmodule`|Dışarı aktarılacak modülü (.winmdobj) belirtir. Yalnızca tek bir modüle izin verilir. Bu modülü oluşturmak için kullanın `/target` derleyici seçeneğiyle `winmdobj` hedef. Bkz: [/target: winmdobj (C# Derleyici Seçenekleri)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) veya [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
-|`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Winmdexp.exe'nin üreteceği çıktı XML belgesi dosyasını belirtir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], çıktı dosyası temelde girdi XML belgeleme dosyasıyla aynıdır.|  
-|`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|Derleyici ile ürettiği XML belgeleme dosyasının adını belirtir `winmdmodule`.|  
-|`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|İçin simgeler içeren program veritabanı (PDB) dosyasının adını belirtir `winmdmodule`.|  
-|`/nowarn:` `warning`|Belirtilen uyarı sayısını gizler. İçin *uyarı*, başta sıfır bulunmadan tamsayıyı hata kodunun yalnızca sayısal bölümünü sağlayın.|  
-|`/out:` `file`<br /><br /> `/o:` `file`|Windows meta veri (.winmd) çıktı dosyasının adını belirtir.|  
-|`/pdb:` `symbolfile`<br /><br /> `/p:` `symbolfile`|Dışarı aktarılan Windows meta veri (.winmd) dosyası için sembolleri içeren çıktı program veritabanı (PDB) dosyasının adını belirtir.|  
-|`/reference:` `winmd`<br /><br /> `/r:` `winmd`|Dışarı aktarma sırasında başvurulacak bir meta veri dosyasını (.winmd veya derleme) belirtir. Başvuru bütünleştirilmiş kodları içinde kullanıyorsanız "\Program dosyaları (x86) \Reference Assemblies\Microsoft\Framework\\. NETCore\v4.5 "(" \Program dosyaları\\... "32-bit bilgisayarlarda), hem System.Runtime.dll hem de mscorlib.dll için başvuruları içerir.|  
+|`/docfile:``docfile`<br /><br /> `/d:``docfile`|Winmdexp.exe'nin üreteceği çıktı XML belgesi dosyasını belirtir. İçinde [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], çıktı dosyası temelde girdi XML belgeleme dosyasıyla aynıdır.|  
+|`/moduledoc:``docfile`<br /><br /> `/md:``docfile`|Derleyici ile ürettiği XML belgeleme dosyasının adını belirtir `winmdmodule`.|  
+|`/modulepdb:``symbolfile`<br /><br /> `/mp:``symbolfile`|İçin simgeler içeren program veritabanı (PDB) dosyasının adını belirtir `winmdmodule`.|  
+|`/nowarn:``warning`|Belirtilen uyarı sayısını gizler. İçin *uyarı*, başta sıfır bulunmadan tamsayıyı hata kodunun yalnızca sayısal bölümünü sağlayın.|  
+|`/out:``file`<br /><br /> `/o:``file`|Windows meta veri (.winmd) çıktı dosyasının adını belirtir.|  
+|`/pdb:``symbolfile`<br /><br /> `/p:``symbolfile`|Dışarı aktarılan Windows meta veri (.winmd) dosyası için sembolleri içeren çıktı program veritabanı (PDB) dosyasının adını belirtir.|  
+|`/reference:``winmd`<br /><br /> `/r:``winmd`|Dışarı aktarma sırasında başvurulacak bir meta veri dosyasını (.winmd veya derleme) belirtir. Başvuru bütünleştirilmiş kodları içinde kullanıyorsanız "\Program dosyaları (x86) \Reference Assemblies\Microsoft\Framework\\. NETCore\v4.5 "(" \Program dosyaları\\... "32-bit bilgisayarlarda), hem System.Runtime.dll hem de mscorlib.dll için başvuruları içerir.|  
 |`/utf8output`|Çıktı iletilerinde UTF-8 kodlamasının kullanılması gerektiğini belirtir.|  
 |`/warnaserror+`|Tüm uyarıların hata sayılması gerektiğini belirtir.|  
 |**@** `responsefile`|Seçenekleri içeren bir yanıt (.rsp) dosyasını belirtir (ve isteğe bağlı olarak `winmdmodule`). Her satırda `responsefile` tek bağımsız değişken veya seçenek bulunmalıdır.|  
@@ -55,4 +55,4 @@ winmdexp [options] winmdmodule
 - [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [C# ve Visual Basic'te Windows çalışma zamanı bileşenleri oluşturma](https://go.microsoft.com/fwlink/p/?LinkID=238313)
 - [Winmdexp.exe Hata İletileri](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
-- [Oluşturma, Dağıtım ve Yapılandırma Araçları (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))
+- [Derleme, dağıtım ve yapılandırma araçları (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d13d8226d944b170bd84ce3d069ca79099c6417d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220571"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach Arabirimi
@@ -37,4 +37,4 @@ Hata ayıklayıcı sunucu çağrılan otomatik iliştirme için arabirimi tanım
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama Sembol Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Tanılama Simge Deposu Arabirimleri](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

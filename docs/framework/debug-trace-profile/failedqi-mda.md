@@ -11,10 +11,10 @@ ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217633"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
@@ -54,4 +54,4 @@ ms.locfileid: "59217633"
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma Hazırlama](../../../docs/framework/interop/interop-marshaling.md)
+- [Birlikte Çalışma için Hazırlama](../../../docs/framework/interop/interop-marshaling.md)

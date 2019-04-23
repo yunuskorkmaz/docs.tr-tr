@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
 ms.openlocfilehash: 160d1b5f0604cff96549c9d94dc5d8ddc7e39f09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217165"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>Nasıl yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)
@@ -53,4 +53,4 @@ Bu örnekte <xref:System.ServiceProcess.ServiceController> IIS Yönetici Hizmeti
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
-- [Nasıl yapılır: Windows Hizmetini Duraklatma (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+- [Nasıl yapılır: (Visual Basic) bir Windows hizmetini duraklatma](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

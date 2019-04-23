@@ -12,10 +12,10 @@ ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215046"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET Hizmetleri Yükleme Aracı)
@@ -50,11 +50,11 @@ ms.locfileid: "59215046"
 |**/appdir:** *yolu*|Uygulamanın kök dizinini belirtir.|  
 |**yüklemede:** *applicationName*|Bulunacak veya oluşturulacak COM+ uygulamasının adını belirtir.|  
 |**/c**|Hedef uygulamayı oluşturur.|  
-|**/componly**|Yalnızca bileşenleri yapılandırır; yöntemleri ve arabirimleri yoksayar.|  
+|**/ componly**|Yalnızca bileşenleri yapılandırır; yöntemleri ve arabirimleri yoksayar.|  
 |**/exapp**|Varolan bir uygulamayı beklemek üzere aracı belirtir.|  
 |**/extlb**|Varolan bir tür kitaplığını kullanır.|  
-|**/fc**|Hedef uygulamayı bulur veya oluşturur.|  
-|**/help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|**/FC**|Hedef uygulamayı bulur veya oluşturur.|  
+|**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/noreconfig**|Varolan bir hedef uygulamayı yeniden yapılandırmaz.|  
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |**/parname:** *adı*|Bulunacak veya oluşturulacak COM+ uygulamasının adını veya kimliğini belirtir.|  
@@ -89,5 +89,5 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](../../../docs/framework/tools/index.md)
-- [Nasıl yapılır: Derlemeyi Tanımlayıcı Adla İmzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Nasıl yapılır: Derlemeyi tanımlayıcı bir adla imzalama](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

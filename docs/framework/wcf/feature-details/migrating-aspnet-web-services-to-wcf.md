@@ -3,10 +3,10 @@ title: ASP.NET Web Hizmetlerini WCF'ye Taşıma
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
 ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211094"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET Web Hizmetlerini WCF'ye Taşıma
@@ -37,8 +37,8 @@ ASP.NET barındırma Hizmetleri Internet Information Services (IIS) içinde olan
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Geçişi Kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
-- [Windows Communication Foundation'ı Benimsemeyi Bekleme: Gelecekteki Tümleştirmeyi Kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+- [Windows Communication Foundation'ı benimsemeyi bekleme: Gelecekteki taşınmayı kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [Windows Communication Foundation'ı benimsemeyi bekleme: Gelecekteki tümleştirmeyi kolaylaştırma](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
 - [Windows Communication Foundation'ı Benimseme](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
 - [ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
 - [ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

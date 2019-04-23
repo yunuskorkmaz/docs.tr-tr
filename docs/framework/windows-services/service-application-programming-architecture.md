@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
 ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216398"
 ---
 # <a name="service-application-programming-architecture"></a>Hizmet Uygulaması Programlama Mimarisi
@@ -68,5 +68,5 @@ Windows hizmet uygulamaları öğesinden devralınan bir sınıf temel <xref:Sys
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Hizmet Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Nasıl yapılır: Windows Hizmetleri Oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Windows Hizmeti Uygulamalarına Giriş](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Nasıl yapılır: Windows Hizmetleri oluşturma](../../../docs/framework/windows-services/how-to-create-windows-services.md)

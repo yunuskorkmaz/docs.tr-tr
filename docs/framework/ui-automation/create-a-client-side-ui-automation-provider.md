@@ -9,10 +9,10 @@ helpviewer_keywords:
 - client-side UI Automation provider, creating
 ms.assetid: d91edaf2-be28-41ec-a508-af421cb43c3d
 ms.openlocfilehash: 03f64386271565b3494b9dac42cf969fc777e40b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211315"
 ---
 # <a name="create-a-client-side-ui-automation-provider"></a>İstemci Tarafı UI Otomasyon Sağlayıcı Oluşturma
@@ -29,5 +29,5 @@ ms.locfileid: "59211315"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyon Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [İstemci Tarafı Sağlayıcı Derlemesini Kaydetme](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)
+- [UI Otomasyonu Sağlayıcılara Genel Bakış](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [İstemci Tarafı Sağlayıcı Bütünleştirilmiş Kodunu Kaydetme](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)

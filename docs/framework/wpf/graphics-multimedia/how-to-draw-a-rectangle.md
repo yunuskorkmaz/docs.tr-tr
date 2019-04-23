@@ -7,10 +7,10 @@ helpviewer_keywords:
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
 ms.openlocfilehash: 261026b994b432565928b38ff1657115ff7cbe4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217360"
 ---
 # <a name="how-to-draw-a-rectangle"></a>Nasıl yapılır: Dikdörtgen Çizme
@@ -33,5 +33,5 @@ Bu örnek gösterir kullanarak bir dikdörtgen çizmek nasıl <xref:System.Windo
 
 - <xref:System.Windows.Shapes.Rectangle>
 - [Şekil öğeleri örneği](https://go.microsoft.com/fwlink/?LinkID=160037)
-- [WPF Genel Bakışı İçinde Şekiller ve Temel Çizimler](shapes-and-basic-drawing-in-wpf-overview.md)
+- [WPF’de Şekiller ve Temel Çizimlere Genel Bakış](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Tabloya Genel Bakış](../advanced/table-overview.md)

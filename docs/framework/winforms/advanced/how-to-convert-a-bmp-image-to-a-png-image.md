@@ -9,10 +9,10 @@ helpviewer_keywords:
 - image formats [Windows Forms], converting between
 ms.assetid: 9d4a692d-73ac-4ce3-9e05-9ec321e8fbd6
 ms.openlocfilehash: 3072c07781a8e8e57b64b48e5b4c304c2a0a0efb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217022"
 ---
 # <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>Nasıl yapılır: BMP Resmini PNG Resmine Dönüştürme
@@ -33,6 +33,6 @@ Bunun aktardığınızda genellikle, bir görüntü dosyası biçiminden dönü�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Yüklenen Kodlayıcıları Listeleme](how-to-list-installed-encoders.md)
+- [Nasıl yapılır: Yüklenen Kodlayıcıları listeleme](how-to-list-installed-encoders.md)
 - [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](using-image-encoders-and-decoders-in-managed-gdi.md)
 - [Bit Eşlem Türleri](types-of-bitmaps.md)

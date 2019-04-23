@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7cb1f55e1d8643feb2750e8ea468f608dc3d5d40
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212069"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx Yöntemi

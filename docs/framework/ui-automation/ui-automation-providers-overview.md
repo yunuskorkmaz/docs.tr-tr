@@ -6,10 +6,10 @@ helpviewer_keywords:
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222750"
 ---
 # <a name="ui-automation-providers-overview"></a>UI Otomasyon Sağlayıcılara Genel Bakış
@@ -78,4 +78,4 @@ ms.locfileid: "59222750"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sunucu Tarafı UI Otomasyonu Sağlayıcıyı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Sunucu Tarafı UI Otomasyonu Sağlayıcısı Uygulama](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

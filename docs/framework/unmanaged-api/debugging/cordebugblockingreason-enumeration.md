@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 54652727b4684d71068a19eb5eeb2e862f413f25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215085"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason Numaralandırması
@@ -43,7 +43,7 @@ Typedef enum CorDebugBlockingReason
 |------------|-----------------|  
 |`BLOCKING_NONE`|Yalnızca iç kullanım.|  
 |`BLOCKING_MONITOR_CRITICAL_SECTION`|Bir iş parçacığı, bir nesne izleme kilidi ile ilişkili olan kritik bölümü almaya çalışıyor. Biri çağırdığınızda genelde böyle <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> veya <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> yöntemleri.|  
-|`BLOCKING_MONITOR_EVENT`|Bir iş parçacığı, bir nesne için İzleyici kilit ile ilişkili olay bekleniyor. Biri çağırdığınızda genelde böyle <xref:System.Threading.Monitor?displayProperty=nameWithType>`Wait` yöntemleri.|  
+|`BLOCKING_MONITOR_EVENT`|Bir iş parçacığı, bir nesne için İzleyici kilit ile ilişkili olay bekleniyor. Biri çağırdığınızda genelde böyle <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` yöntemleri.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Zaman `BLOCKING_MONITOR_CRITICAL_SECTION` veya `BLOCKING_MONITOR_EVENT` üyesi kullanılan bir [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) yapısını `pBlockingObject` yapısı noktalarına giriliyor nesnesini temsil eden bir "ICorDebugValue" arabirim üyesi . Uygulamak için de garanti [Icordebugheapvalue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) arabirimi.  
@@ -59,5 +59,5 @@ Typedef enum CorDebugBlockingReason
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Numaralandırmaları](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Hata Ayıklama Sabit Listeleri](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Hata Ayıklama](../../../../docs/framework/unmanaged-api/debugging/index.md)

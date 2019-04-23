@@ -16,10 +16,10 @@ ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221107"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Sertifika Yönetim Aracı)
@@ -53,17 +53,17 @@ Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven list
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/add**|Bir sertifika deposuna sertifikalar, CTL'ler ve CRL'ler ekler.|  
-|**/all**|İle kullanıldığında tüm girdileri ekler **/ add**. İle kullanıldığında tüm girdileri siler **/del**. Olmadan kullanıldığında tüm girdileri görüntüler **/ add** veya **/del** seçenekleri. **/All** seçeneği ile kullanılamaz **/put**.|  
+|**/ add**|Bir sertifika deposuna sertifikalar, CTL'ler ve CRL'ler ekler.|  
+|**/ all**|İle kullanıldığında tüm girdileri ekler **/ add**. İle kullanıldığında tüm girdileri siler **/del**. Olmadan kullanıldığında tüm girdileri görüntüler **/ add** veya **/del** seçenekleri. **/All** seçeneği ile kullanılamaz **/put**.|  
 |**/c**|İle kullanıldığında sertifikaları ekler **/ add**. İle kullanıldığında sertifikaları siler **/del**. İle kullanıldığında sertifikaları kaydeder **/put**. Görüntüler olmadan kullanıldığında sertifikaları **/ add**, **/del**, veya **/put** seçeneği.|  
 |**/CRL**|İle kullanıldığında CRL'leri ekler **/ add**. İle kullanıldığında CRL'leri siler **/del**. İle kullanıldığında CRL'leri kaydeder **/put**. Görüntüler olmadan kullanıldığında CRL'leri **/ add**, **/del**, veya **/put** seçeneği.|  
-|**/CTL**|İle kullanıldığında CTL'leri ekler **/ add**. İle kullanıldığında CTL'leri siler **/del**. İle kullanıldığında CTL'leri kaydeder **/put**. Görüntüler olmadan kullanıldığında CTL'leri **/ add**, **/del**, veya **/put** seçeneği.|  
-|**/del**|Bir sertifika deposundan sertifikaları, CTL'leri ve CRL'leri siler.|  
+|**/ CTL**|İle kullanıldığında CTL'leri ekler **/ add**. İle kullanıldığında CTL'leri siler **/del**. İle kullanıldığında CTL'leri kaydeder **/put**. Görüntüler olmadan kullanıldığında CTL'leri **/ add**, **/del**, veya **/put** seçeneği.|  
+|**/ DEL**|Bir sertifika deposundan sertifikaları, CTL'leri ve CRL'leri siler.|  
 |**/e** *encodingType*|Sertifika kodlama türünü belirtir. Varsayılan, `X509_ASN_ENCODING` değeridir.|  
 |**/f** *CertOpenStore*|Depo açık bayrağını belirtir. Bu *CertOpenStore* geçirilen **Dwflags**. Varsayılan değer CERT_SYSTEM_STORE_CURRENT_USER değeridir. Bu seçenek yalnızca değerlendirilir **/y** seçeneği kullanılır.|  
 |**/h**[**elp**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/n** *adı*|Eklenecek, silinecek veya kaydedilecek sertifika için ortak adı belirtir. Bu seçenek yalnızca sertifikalarla kullanılabilir; CTL'ler veya CRL'ler ile kullanılamaz.|  
-|**/put**|Bir sertifika deposundan bir X.509 sertifikasını, CTL'yi veya CRL'yi dosyaya kaydeder. Dosya X.509 biçiminde kaydedilir. Kullanabileceğiniz **/7** seçeneğini **/put** dosyayı PKCS #7 biçiminde kaydetmek için seçeneği. **/Put** seçeneği tarafından gelmelidir **/c**, **/CTL**, veya **/CRL**. **/All** seçeneği ile kullanılamaz **/put**.|  
+|**/ put**|Bir sertifika deposundan bir X.509 sertifikasını, CTL'yi veya CRL'yi dosyaya kaydeder. Dosya X.509 biçiminde kaydedilir. Kullanabileceğiniz **/7** seçeneğini **/put** dosyayı PKCS #7 biçiminde kaydetmek için seçeneği. **/Put** seçeneği tarafından gelmelidir **/c**, **/CTL**, veya **/CRL**. **/All** seçeneği ile kullanılamaz **/put**.|  
 |**/r** *konumu*|Sistem deposu için kayıt defteri konumunu tanımlar. Bu seçenek yalnızca belirtirseniz değerlendirilir **/s** seçeneği. *Konum* aşağıdakilerden biri olmalıdır:<br /><br /> -   `currentUser` Sertifika deposunun HKEY_CURRENT_USER anahtarı altında olduğunu gösterir. Bu varsayılandır.<br />-   `localMachine` Sertifika deposunun HKEY_LOCAL_MACHINE anahtarı altında olduğunu gösterir.|  
 |**/s**|Sertifika deposunun bir sistem deposu olduğunu gösterir. Bu seçeneği belirtmezseniz, depo olarak kabul edilir bir **StoreFile**.|  
 |**{1** *sha1Hash*|Eklenecek, silinecek veya kaydedilecek sertifikanın, CTL'nin veya CRL'nin SHA1 karmasını belirtir.|  
@@ -140,5 +140,5 @@ certmgr /put /c /s my newFile
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](../../../docs/framework/tools/index.md)
-- [Makecert.exe (Sertifika Oluşturma Aracı)](/windows/desktop/SecCrypto/makecert)
+- [MakeCert.exe (sertifika oluşturma aracı)](/windows/desktop/SecCrypto/makecert)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

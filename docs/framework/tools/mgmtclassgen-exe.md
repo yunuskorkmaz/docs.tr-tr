@@ -14,10 +14,10 @@ ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213135"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Yönetim Türü Kesin Belirlenmiş Sınıf Oluşturucu)
@@ -32,7 +32,7 @@ WMIClass [options]
   
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
-|*WMIClass*|Kendisi için erken bağlı yönetilen bir sınıf oluşturulacak Windows Yönetim Araçları sınıfı.|  
+|*Wmıclass*|Kendisi için erken bağlı yönetilen bir sınıf oluşturulacak Windows Yönetim Araçları sınıfı.|  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
@@ -63,7 +63,7 @@ WMIClass [options]
 |CIM_SINT64|**Int64**|  
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Tek**|  
-|CIM_REAL64|**Çift**|  
+|CIM_REAL64|**çift**|  
 |CIM_BOOLEAN|**Boole değeri**|  
 |CIM_String|**Dize**|  
 |CIM_DATETIME|**DateTime** veya **TimeSpan**|  

@@ -8,10 +8,10 @@ dev_langs:
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214747"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil bağımsızlığı ve dilden bağımsız bileşenler
@@ -39,7 +39,7 @@ Bu makalede:
 
     * [Arabirimler](#interfaces)
 
-    * [Numaralandırmalar](#enumerations)
+    * [Sabit Listeleri](#enumerations)
 
     * [Genel olarak tür üyeleri](#type-members-in-general)
 
@@ -53,7 +53,7 @@ Bu makalede:
 
     * [Olaylar](#events)
 
-    * [Aşırı Yüklemeler](#overloads)
+    * [Overloads](#overloads)
 
     * [Özel Durumlar](#exceptions)
 
@@ -61,7 +61,7 @@ Bu makalede:
 
 * [CLSCompliantAttribute özniteliği](#the-clscompliantattribute-attribute)
 
-* [Diller Arası Birlikte Çalışabilirlik](#cross-language-interoperability)
+* [Diller arası birlikte çalışabilirlik](#cross-language-interoperability)
 
 ## <a name="cls-compliance-rules"></a>CLS uyumluluğu kuralları
 
@@ -162,9 +162,9 @@ Diziler | [Diziler](#arrays) | Diziler CLS uyumlu türü olan öğeleri olmalıd
 Öznitelikler | [Öznitelikler](#attributes) | CLS ortak olarak görünür gerekli değiştiricilere izin vermiyor (`modreq`, bkz. Bölüm II), isteğe bağlı değiştiricilere izin vermez ancak (`modopt`, bkz. Bölüm II) anlamadığı. | 35
 Oluşturucular | [Oluşturucular](#constructors) | Devralınan örnek verilerine herhangi bir erişim oluşmadan önce nesne Oluşturucu, temel sınıfının bazı örnek oluşturucusu oluşturucularını çağırmalıdır (Bu oluşturuculara sahip olmak zorunda olmayan değer türleri için geçerli değildir.)  | 21
 Oluşturucular | [Oluşturucular](#constructors) | Nesne Oluşturucu dışında bir nesnenin oluşturmanın bir parçası çağrılmamalıdır ve nesne iki kez başlatılmamış. | 22
-Numaralandırmalar | [Numaralandırmalar](#enumerations) | Temel bir enum türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" olacaktır ve bu alanın işaretlenmesi `RTSpecialName`. |  7
-Numaralandırmalar | [Numaralandırmalar](#enumerations) | Bir varlığı veya yokluğu ile gösterilen iki ayrı türü vardır [System.FlagsAttribute](xref:System.FlagsAttribute) (bkz: bölüm IV kitaplığı) özel öznitelik. Biri, adlandırılmış tamsayı değerlerini temsil eder; diğer temsil eder, adlandırılmamış değer üretmek için birleştirilebilen bit bayrakları adı. Değerini bir `enum` belirtilen değerlerle sınırlı değildir. |  8
-Numaralandırmalar | [Numaralandırmalar](#enumerations) | Bir enumun değişmez statik alanları numaralandırma türüne sahip olamaz. |  9
+Numaralandırmalar | [Sabit Listeleri](#enumerations) | Temel bir enum türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" olacaktır ve bu alanın işaretlenmesi `RTSpecialName`. |  7
+Numaralandırmalar | [Sabit Listeleri](#enumerations) | Bir varlığı veya yokluğu ile gösterilen iki ayrı türü vardır [System.FlagsAttribute](xref:System.FlagsAttribute) (bkz: bölüm IV kitaplığı) özel öznitelik. Biri, adlandırılmış tamsayı değerlerini temsil eder; diğer temsil eder, adlandırılmamış değer üretmek için birleştirilebilen bit bayrakları adı. Değerini bir `enum` belirtilen değerlerle sınırlı değildir. |  8
+Numaralandırmalar | [Sabit Listeleri](#enumerations) | Bir enumun değişmez statik alanları numaralandırma türüne sahip olamaz. |  9
 Olaylar | [Olaylar](#events) | Bir olay uygulayan yöntemler olarak işaretlenmeyecektir `SpecialName` meta verilerinde. |29
 Olaylar | [Olaylar](#events) | Bir olay ve onun erişimcilerinin erişilebilirliği aynı olacaktır. |30
 Olaylar | [Olaylar](#events) | `add` Ve `remove` yöntemleri için bir olay ya da her ikisini de gelecektir mevcut olmalı veya olmamalıdır. |31
@@ -187,8 +187,8 @@ Arabirimler | [Arabirimler](#interfaces) | CLS uyumlu arabirimler statik yöntem
 Adlandırma kuralları | [Adlandırma kuralları](#naming-conventions) | Derlemeleri Annex 7, teknik rapor 15, başlatmak ve tanımlayıcıları, kullanılabilir adresindeki çevrimiçi eklenmesi için izin verilen karakter kümesini yöneten Unicode Standard3.0 izleyin [Unicode normalleştirme formları](https://www.unicode.org/unicode/reports/tr15/tr15-18.html). Tanımlayıcıları Unicode normalleştirme Form c tarafından tanımlanan kurallı biçimde olmalıdır Harfli eşlemeler (Unicode yerel ayara duyarlı, bire bir küçük harf eşlemeler tarafından belirtildiği gibi) aynıysa CLS amacıyla, iki tanımlayıcı aynıdır. Diğer bir deyişle, iki tanımlayıcı CLS altında farklı kabul edilmesi için daha çok, farklı olacaktır. Ancak, devralınan bir tanımı geçersiz kılmak için CLI'yı özgün bildirimin kesin kodlama kullanılmasını gerektirir. | 4
 Aşırı Yükleme | [Adlandırma kuralları](#naming-conventions) | CLS uyumlu kapsamda sunulan tüm adlar, ayrı bağımsız tür adları aynı ve aşırı yükleme olduğu dışında tutulamaz. CTS sağlar, ancak bir yöntem ve bir alan için aynı adı kullanmak tek bir türü diğer bir deyişle, buna izin vermez. | 5
 Aşırı Yükleme | [Adlandırma kuralları](#naming-conventions) | CTS sağlayan ayrı imzaların ayırt edici olarak rağmen alanlar ve iç içe geçmiş türler yalnızca, tanımlayıcı karşılaştırması ile farklı olacaktır. Yöntemler, özellikler ve olaylar (tanımlayıcı karşılaştırmasına göre) aynı ada sahip yalnızca dönüş türüne göre farklı olmalıdır da CLS kuralı 39'da belirtilen hariç | 6
-Aşırı Yükleme | [Aşırı Yüklemeler](#overloads) | Özellikler ve yöntemler aşırı yüklenebilir. | 37
-Aşırı Yükleme | [Aşırı Yüklemeler](#overloads) |Özellikler ve yöntemler aşırı yüklenebilir yalnızca sayı ve dönüştürme işleçleri dışında parametre türleri temel `op_Implicit` ve `op_Explicit`, kendi dönüş türüne bağlı olarak, aynı zamanda aşırı yüklenebilir. | 38
+Aşırı Yükleme | [Overloads](#overloads) | Özellikler ve yöntemler aşırı yüklenebilir. | 37
+Aşırı Yükleme | [Overloads](#overloads) |Özellikler ve yöntemler aşırı yüklenebilir yalnızca sayı ve dönüştürme işleçleri dışında parametre türleri temel `op_Implicit` ve `op_Explicit`, kendi dönüş türüne bağlı olarak, aynı zamanda aşırı yüklenebilir. | 38
 Aşırı Yükleme | -- | Bir türde bildirilen iki veya daha fazla CLS uyumlu yöntem aynı ada sahip ve belirli bir tür örneklemeleri kümesi, aynı parametre ve dönüş türleri, tüm bu yöntemleri bu tür anlamsal olarak eşdeğer olacaktır. | 48
 Özellikler | [Özellikler](#properties) | Bir özelliğin alıcı ve ayarlayıcı yöntemleri uygulayan yöntemler olarak işaretlenmeyecektir `SpecialName` meta verilerinde. | 24
 Özellikler | [Özellikler](#properties) | Özelliğin erişimcileri tüm statik olmalıdır, tüm sanal ya da tamamen örnek olmalıdır. | 26
@@ -322,7 +322,7 @@ CLS uyumlu türü | Açıklama
 [Int32](xref:System.Int32) | 32 bitlik işaretli tamsayı
 [Int64](xref:System.Int64) | 64-bit işaretli tamsayı
 [Tek](xref:System.Single) | Tek duyarlıklı kayan nokta değeri
-[Çift](xref:System.Double) | Çift duyarlıklı kayan nokta değeri
+[çift](xref:System.Double) | Çift duyarlıklı kayan nokta değeri
 [Boole değeri](xref:System.Boolean) | TRUE veya false değeri türü
 [Char](xref:System.Char) | UTF-16 kodlu kod birimi
 [Ondalık](xref:System.Decimal) | Ondalık sayı olmayan kayan nokta
@@ -2570,7 +2570,7 @@ Oluşturucu veya CLS uyumlu bir özniteliğin özellikleri sadece aşağıdaki t
 
 * [Char](xref:System.Char)
 
-* [Çift](xref:System.Double)
+* [çift](xref:System.Double)
 
 * [Int16](xref:System.Int16)
 
