@@ -10,10 +10,10 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206427"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Kod Üretme Aracı)
@@ -41,7 +41,7 @@ sqlmetal [options] [<input file>]
 ## <a name="options"></a>Seçenekler  
  En yeni seçenek listesini görüntülemek için şunu yazın `sqlmetal /?` konumda bir komut isteminde.  
   
- **Bağlantı Seçenekleri**  
+ **Bağlantı seçenekleri**  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
@@ -60,7 +60,7 @@ sqlmetal [options] [<input file>]
 |**/Functions**|Veritabanı işlevlerini ayıklar.|  
 |**/sprocs**|Saklı yordamları ayıklar.|  
   
- **Çıkış seçenekleri**  
+ **Çıkış Seçenekleri**  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
@@ -79,7 +79,7 @@ sqlmetal [options] [<input file>]
 |**/ pluralize**|Sınıf ve üye adlarını otomatik olarak çoğullaştırır veya tekilleştirir.<br /><br /> Bu seçenek yalnızca ABD bölgesinde kullanılabilir İngilizce sürümü.|  
 |**/Serialization:**  *\<seçeneği >*|Seri hale getirilebilir sınıflar oluşturur.<br /><br /> Geçerli  *\<seçeneği >*: Hiçbiri, tek yönlü. Varsayılan değer: Yok.<br /><br /> Daha fazla bilgi için [serileştirme](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
- **Giriş Dosyası**  
+ **Giriş dosyası**  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
@@ -134,6 +134,6 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Visual Basic veya C# içinde Nesne Modeli Oluşturma](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veyaC#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [LINQ to SQL’de Kod Oluşturma](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [Dış Eşleme](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

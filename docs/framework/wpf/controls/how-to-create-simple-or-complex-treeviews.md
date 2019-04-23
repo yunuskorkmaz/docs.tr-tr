@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
 ms.openlocfilehash: 7edb4933ebcc0f0d2cb02754238c2342ee9dd4a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59205153"
 ---
 # <a name="how-to-create-simple-or-complex-treeviews"></a>Nasıl yapılır: Basit veya Karmaşık TreeViews Oluşturma
@@ -44,5 +44,5 @@ Bu örnek, basit veya karmaşık oluşturma işlemi gösterilmektedir <xref:Syst
 
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [TreeView Genel Bakışı](treeview-overview.md)
+- [TreeView Genel Bakış](treeview-overview.md)
 - [Nasıl Yapılır Konuları](treeview-how-to-topics.md)

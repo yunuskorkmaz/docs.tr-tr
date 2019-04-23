@@ -3,10 +3,10 @@ title: Başlarken (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
 ms.openlocfilehash: cb9e2ddc3fa667d93d724740281fb61974e623a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208338"
 ---
 # <a name="getting-started-linq-to-dataset"></a>Başlarken (LINQ to DataSet)
@@ -22,7 +22,7 @@ Bu bölümde ile programlama hakkında giriş bilgileri sağlanmaktadır [!INCLU
  [Örnek Veritabanları İndirme](../../../../docs/framework/data/adonet/downloading-sample-databases-linq-to-dataset.md)  
  Örneklerdeki kullanılan AdventureWorks örnek veritabanını yükleme hakkında bilgi sağlar [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] bölümü.  
   
- [Nasıl yapılır: Visual Studio'da bir LINQ to DataSet Projesi Oluşturma](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)  
+ [Nasıl yapılır: Visual Studio'da bir LINQ to DataSet projesi oluşturma](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)  
  Oluşturma hakkında bilgi sağlayan bir [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Visual Studio'da proje.  
   
 ## <a name="reference"></a>Başvuru  

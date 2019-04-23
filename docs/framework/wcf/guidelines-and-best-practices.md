@@ -9,23 +9,23 @@ helpviewer_keywords:
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
 ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181360"
 ---
 # <a name="guidelines-and-best-practices"></a>Yönergeler ve En İyi Yöntemler
 Bu bölüm, Windows Communication Foundation (WCF) uygulamaları oluşturmak için yönergeleri sağlayan konuları içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [En İyi Yöntemler: Veri Sözleşmesi Sürümü Oluşturma](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [En iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Nasıl ve ne zaman açıklayan yeni sürümler oluşturulduğunda, kesintiye uğratmadığından veri sözleşmeleri oluşturmak için.  
   
  [Hizmet Sürümü Oluşturma](../../../docs/framework/wcf/service-versioning.md)  
  Wcf'de sürüm kullanmayı açıklar. Dağıtımdan sonra Hizmetleri (ve bunlar ortaya uç noktaları) gerekebilir, örneğin değiştirilmesi, karşılamak için iş gereksinimlerini veya BT gereksinimlerini veya sorunlarını düzeltmek için. Her değişikliği hizmetinin yeni bir sürümünü içeriyor.  
   
- [YükDengeleme](../../../docs/framework/wcf/load-balancing.md)  
+ [Yük Dengeleme](../../../docs/framework/wcf/load-balancing.md)  
  İle bir Web grubu Yük Dengelemesi için yönergeleri listeler.  
   
  [Kaynak Tüketimini Denetleme ve Performansı Geliştirme](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  

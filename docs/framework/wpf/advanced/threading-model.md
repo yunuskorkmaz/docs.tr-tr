@@ -19,10 +19,10 @@ helpviewer_keywords:
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
 ms.openlocfilehash: 0bcb0e7369345aaae39d99a005a07304aaad7043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200356"
 ---
 # <a name="threading-model"></a>İş Parçacığı Modeli
@@ -97,7 +97,7 @@ ms.locfileid: "59200356"
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
- Bu yöntem, asal sonraki tek sayı olup olmadığını denetler. Asal ise, yöntem doğrudan güncelleştirmeleri `bigPrime`<xref:System.Windows.Controls.TextBlock> keşfi yansıtacak şekilde. Hesaplama bileşeni oluşturmak için kullanılan aynı iş parçacığında gerçekleştirilmekte olduğundan bunu yapabilirsiniz. Ki seçilen hesaplama için ayrı bir iş parçacığı kullanmak, size daha karmaşık bir eşitleme mekanizmasının kullanılması ve güncelleştirme yürütme gerekirdi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Biz bu durum sonraki kazandırabileceğinizi göstereceğiz.  
+ Bu yöntem, asal sonraki tek sayı olup olmadığını denetler. Asal ise, yöntem doğrudan güncelleştirmeleri `bigPrime` <xref:System.Windows.Controls.TextBlock> keşfi yansıtacak şekilde. Hesaplama bileşeni oluşturmak için kullanılan aynı iş parçacığında gerçekleştirilmekte olduğundan bunu yapabilirsiniz. Ki seçilen hesaplama için ayrı bir iş parçacığı kullanmak, size daha karmaşık bir eşitleme mekanizmasının kullanılması ve güncelleştirme yürütme gerekirdi [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Biz bu durum sonraki kazandırabileceğinizi göstereceğiz.  
   
  Bu örnek için tam kaynak kodunu görmek [uzun süre çalışan hesaplama örneğiyle Single-Threaded uygulama](https://go.microsoft.com/fwlink/?LinkID=160038)  
   
@@ -143,7 +143,7 @@ ms.locfileid: "59200356"
   
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Gezgini bu şekilde çalışır. Her yeni Gezgini penceresi özgün işleme ait olduğu, ancak bunu bağımsız bir iş parçacığı denetimi altında oluşturulur.  
   
- Kullanarak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Frame> denetimi, Web sayfaları görüntüleriz. Basit bir kolayca oluşturabiliriz [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] değiştirin. Biz önemli bir özelliği ile Başlat: yeni bir Gezgini penceresi açmak için yeteneği. Kullanıcı, "Yeni Pencere" tıkladığında düğmesi, biz bir kopyasını ayrı bir iş parçacığı bizim penceresi başlatın. Bu şekilde, diğer tüm windows uzun süreli veya engelleme işlemleri windows biriyle kilitlenmez.  
+ Kullanarak bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame> denetimi, Web sayfaları görüntüleriz. Basit bir kolayca oluşturabiliriz [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] değiştirin. Biz önemli bir özelliği ile Başlat: yeni bir Gezgini penceresi açmak için yeteneği. Kullanıcı, "Yeni Pencere" tıkladığında düğmesi, biz bir kopyasını ayrı bir iş parçacığı bizim penceresi başlatın. Bu şekilde, diğer tüm windows uzun süreli veya engelleme işlemleri windows biriyle kilitlenmez.  
   
  Gerçekte, kendi karmaşık iş parçacığı modeli Web tarayıcı modeline sahiptir. Çoğu okuyucularına tanıyor olmalıdır çünkü bunu seçtik.  
   

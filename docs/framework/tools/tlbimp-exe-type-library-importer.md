@@ -13,10 +13,10 @@ ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 314977cb55d9c927ddf96a9279ebb83d8f69e936
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200928"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Tür Kitaplığı İçeri Aktarıcı)
@@ -44,7 +44,7 @@ tlbimp tlbFile [options]
 |**/Company:** `companyinformation`|Şirket bilgilerini çıktı derlemesine ekler.|  
 |**/Copyright:** `copyrightinformation`|Çıktı derlemesine telif hakkı bilgileri ekler. Bu bilgiler görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
 |**/delaysign**|Elde edilen ve tanımlayıcı bir ada sahip olan derlemeyi gecikmeli imzalama yöntemiyle imzalamak için kullanılacak Tlbimp.exe'yi belirtir. Bu seçeneği ile birlikte belirtmelisiniz **/keycontainer:**, **/keyfile:**, veya **/publickey:** seçeneği. Gecikmeli imzalama işlemi hakkında daha fazla bilgi için bkz. [derlemeyi imzalamayı geciktirme](../app-domains/delay-sign-assembly.md).|  
-|**/help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|**/ Help**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
 |**/ keycontainer:** *containername*|Oluşturulan derleme tarafından belirtilen anahtar kapsayıcısında bulunan ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar *containername*.|  
 |**/ keyfile:** *dosya adı*|Elde edilen derlemeyi bulunan yayımcının resmi ortak/özel anahtar çiftini kullanarak tanımlayıcı bir adla imzalar *filename*.|  
 |**/ Machine:** `machinetype`|Belirtilen makine türünü (mikro işlemci) hedefleyen bir derleme oluşturur. Desteklenen makine türleri: x86, x64, Itanium ve Belirsiz.|  
@@ -52,7 +52,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|Tlbimp.exe'nin sınıflara üye eklemesini önler. Bu olası önler <xref:System.TypeLoadException>.|  
 |**/nologo**|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |**/ out:** *dosya adı*|İçine meta veri tanımlarının yazılacağı çıktı dosyasının, derlemenin ve ad alanının adını belirtir. **/Out** seçeneği varsa derlemenin ad alanı üzerinde hiçbir etkisi açıkça derlemenin ad alanını denetleyen arabirim tanımlama dili (IDL) özel özniteliği tür kitaplığını belirtir. Bu seçeneği belirtmezseniz, Tlbimp.exe, girdi dosyasında tanımlanan asıl tür kitaplığıyla aynı ada sahip bir dosyaya meta verileri yazar ve ona bir .dll uzantısı atar. Çıktı dosyasının adı girdi dosyasının adıyla aynı ise, araç tür kitaplığı üzerine yazılmasını engellemek için bir hata üretir.|  
-|**/primary**|Belirtilen tür kitaplığı için bir birincil birlikte çalışma derlemesi oluşturur. Derlemeyi tür kitaplığı yayıncısının oluşturduğunu belirten bilgiler derlemeye eklenir. Birincil birlikte çalışma derlemesi belirterek, bir yayıncının derlemesini, Tlbimp.exe kullanarak tür kitaplığından oluşturulan diğer derlemelerden ayırt edersiniz. Yalnızca kullanmalısınız **/birincil** Tlbimp.exe ile içeri aktardığınız tür kitaplığının yayıncısı iseniz. Bir birincil birlikte çalışma derlemesi ile imzalamanız gerektiğini unutmayın bir [tanımlayıcı ad](../app-domains/strong-named-assemblies.md). Daha fazla bilgi için [birincil birlikte çalışma derlemelerini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).|  
+|**/ birincil**|Belirtilen tür kitaplığı için bir birincil birlikte çalışma derlemesi oluşturur. Derlemeyi tür kitaplığı yayıncısının oluşturduğunu belirten bilgiler derlemeye eklenir. Birincil birlikte çalışma derlemesi belirterek, bir yayıncının derlemesini, Tlbimp.exe kullanarak tür kitaplığından oluşturulan diğer derlemelerden ayırt edersiniz. Yalnızca kullanmalısınız **/birincil** Tlbimp.exe ile içeri aktardığınız tür kitaplığının yayıncısı iseniz. Bir birincil birlikte çalışma derlemesi ile imzalamanız gerektiğini unutmayın bir [tanımlayıcı ad](../app-domains/strong-named-assemblies.md). Daha fazla bilgi için [birincil birlikte çalışma derlemelerini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).|  
 |**/Product:** `productinformation`|Çıktı derlemesine ürün bilgileri ekler. Bu bilgiler görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
 |**/ProductVersion:** `productversioninformation`|Çıktı derlemesine ürün sürümü ile ilgili bilgiler ekler. Biçim kısıtlamaları yoktur. Bu bilgiler görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
 |**/PublicKey:** *dosya adı*|Elde edilen derlemeyi imzalamak için kullanılacak ortak anahtarı içeren dosyayı belirtir. Belirtirseniz **/keyfile:** veya **/keycontainer:** yerine seçeneği **/publickey:**, Tlbimp.exe ile sağlanan ortak/özel anahtar çifti öğesinden ortak anahtarı oluşturur **/keyfile:** veya **/keycontainer:**. **/Publickey:** test anahtarını ve Gecikmeli imzalama senaryolarını seçeneği destekler. Dosya, Sn.exe tarafından üretilen biçimdedir. Daha fazla bilgi için **-p** seçeneği sn.exe [tanımlayıcı ad Aracı (Sn.exe)](sn-exe-strong-name-tool.md).|  
@@ -65,7 +65,7 @@ tlbimp tlbFile [options]
 |**/tlbreference:** *dosya adı*|Kayıt defterine danışmadan tür kitaplığı başvurularını çözümlemek için kullanılacak tür kitaplığı dosyasını belirtir.<br /><br /> Bu seçeneğin bazı eski tür kitaplığı biçimlerini yüklenmediğini unutmayın.  Ancak, kayıt defteri veya geçerli dizin aracılığıyla, eski tür kitaplığı biçimlerini dolaylı olarak yine yükleyebilirsiniz.|  
 |**/trademark:** `trademarkinformation`|Çıktı derlemesine ticari marka bilgileri ekler. Bu bilgiler görüntülenebilir **dosya özelliklerini** derleme için iletişim kutusu.|  
 |**/ dönüştürme:** *transformname*|Tarafından belirtilen meta veri dönüşümleri *transformname* parametresi.<br /><br /> Belirtin **dispret** için *transformname* yöntemlerin yalnızca gönderme (görüntüleme arabirimleri) dönüş değerlerine dönüştürme [out, retval] parametrelerini parametre.<br /><br /> Bu seçenek hakkında daha fazla bilgi için bu konunun ilerleyen bölümlerindeki örneklere bakın.|  
-|**/unsafe**|Arabirimleri, .NET Framework güvenlik denetimleri olmadan üretir. Bu şekilde sunulan bir yöntemi çağırmak güvenlik riski oluşturabilir. Bu tür kodları ortaya çıkarmanın getireceği riskleri bilmiyorsanız bu seçeneği kullanmamalısınız.|  
+|**/ unsafe**|Arabirimleri, .NET Framework güvenlik denetimleri olmadan üretir. Bu şekilde sunulan bir yöntemi çağırmak güvenlik riski oluşturabilir. Bu tür kodları ortaya çıkarmanın getireceği riskleri bilmiyorsanız bu seçeneği kullanmamalısınız.|  
 |**/verbose**|Ayrıntılı modu belirtir; içeri aktarılan tür kitaplığı hakkında daha fazla bilgi görüntüler.|  
 |**/VariantBoolFieldToBool**|Dönüştürür `VARIANT_BOOL` yapılarını alanlarında <xref:System.Boolean>.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
@@ -129,10 +129,10 @@ void SomeMethod(out bool x);
 
 - [Araçlar](index.md)
 - [Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)](tlbexp-exe-type-library-exporter.md)
-- [Tür Kitaplığını Derleme Olarak İçeri Aktarma](../interop/importing-a-type-library-as-an-assembly.md)
-- [Tür Kitaplığından Derlemeye Dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Tür Kitaplığını Bütünleştirilmiş Kod Olarak İçeri Aktarma](../interop/importing-a-type-library-as-an-assembly.md)
+- [Tür kitaplığını derlemeye dönüştürme özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Ildasm.exe (IL Ayrıştırıcı)](ildasm-exe-il-disassembler.md)
 - [Sn.exe (Tanımlayıcı Ad Aracı)](sn-exe-strong-name-tool.md)
-- [Tanımlayıcı Adlı Derlemeler](../app-domains/strong-named-assemblies.md)
-- [Tür Kitaplıklarını Birlikte Çalışma Derlemelerine İçeri Aktarma için Öznitelikler ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
+- [Kesin Adlandırılmış Bütünleştirilmiş Kodlar](../app-domains/strong-named-assemblies.md)
+- [Tür kitaplıklarını birlikte çalışma derlemelerine içeri aktarma için öznitelikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
 - [Komut İstemleri](developer-command-prompt-for-vs.md)

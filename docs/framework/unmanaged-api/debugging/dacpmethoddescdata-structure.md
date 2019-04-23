@@ -16,10 +16,10 @@ topic_type:
 author: hoyosjs
 ms.author: juhoyosa
 ms.openlocfilehash: 567dc3942f79b6bfd29338b9103083aa64e66451
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203203"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData Yapısı
@@ -80,7 +80,7 @@ Bu yapı, çalışma zamanı içinde yer alan ve herhangi bir üst bilgiler veya
 ## <a name="requirements"></a>Gereksinimler
 **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
 **Üst bilgi:** Yok.  
-**Kitaplığı:** None  
+**Kitaplığı:** Yok.  
 **.NET framework sürümleri:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Ayrıca bkz.
